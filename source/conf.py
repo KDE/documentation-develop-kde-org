@@ -165,5 +165,14 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+# Adding global substitutions
+rst_epilog = """
+.. |devicon| image:: /img/DevIcon.svg
+             :width: 32px
+             :height: 32px
 
+.. |designicon| image:: /img/DesignerIcon.svg
+                :width: 32px
+                :height: 32px
+"""
 

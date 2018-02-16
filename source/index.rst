@@ -7,30 +7,24 @@ KDE Human Interface Guidelines (Desktop Platform)
 =================================================
 
 .. toctree::
-   :maxdepth: 1
    :caption: Contents:
    :titlesonly:
-   :hidden:
-   
-   introduction/vision
-   layout/units
-   style/typography
 
+   introduction/vision
+   layout/index
+   style/index
+   components/index
 
 
 .. Indices and tables
    ==================
-   
+
    * :ref:`genindex`
    * :ref:`modindex`
    * :ref:`search`
-   
-.. |devicon| image:: /img/DevIcon.svg
-             :width: 32px
-             :height: 32px
 
 
-The Classic KDE Human Interface Guidelines (HIG) offer application designers and developers a set of recommendations for designing and developing user interfaces for QWidget-based, desktop-only applictions. Their aim is to improve the experience for users by making application interfaces more consistent and hence more intuitive and learnable. 
+The Classic KDE Human Interface Guidelines (HIG) offer application designers and developers a set of recommendations for designing and developing user interfaces for QWidget-based, desktop-only applictions. Their aim is to improve the experience for users by making application interfaces more consistent and hence more intuitive and learnable.
 
 For applications which are supposed to run on both desktop and mobile systems, consult the [[../KirigamiHIG | Kirigami Human Interface Guidelines (HIG)]]
 

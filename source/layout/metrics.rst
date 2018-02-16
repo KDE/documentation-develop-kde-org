@@ -75,9 +75,9 @@ units.largeSpacing for margins and paddings when ever possible. See
 
 .. hint::
    |designicon| For mockup and design you can use these values:
-   -  units.smallSpacing = 4px
-   -  units.largeSpacing = 18px
-   -  units.gridUnit = 18px
+    -  units.smallSpacing = 4px
+    -  units.largeSpacing = 18px
+    -  units.gridUnit = 18px
 
 
 Use Multiples of units.smallSpacing or units.largeSpacing, where more spacing is required.
