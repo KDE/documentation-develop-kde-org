@@ -14,6 +14,7 @@ KDE Human Interface Guidelines (Desktop Platform)
    layout/index
    style/index
    components/index
+   resources/contribute
 
 
 .. Indices and tables
@@ -22,7 +23,6 @@ KDE Human Interface Guidelines (Desktop Platform)
    * :ref:`genindex`
    * :ref:`modindex`
    * :ref:`search`
-
 
 The Classic KDE Human Interface Guidelines (HIG) offer application designers and developers a set of recommendations for designing and developing user interfaces for QWidget-based, desktop-only applictions. Their aim is to improve the experience for users by making application interfaces more consistent and hence more intuitive and learnable.
 
