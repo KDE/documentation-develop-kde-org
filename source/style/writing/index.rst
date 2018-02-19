@@ -2,7 +2,6 @@ Writing
 =======
 
 .. toctree::
-   :caption: Contents:
    :titlesonly:
    :hidden:
 

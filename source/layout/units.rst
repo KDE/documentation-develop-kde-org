@@ -1,7 +1,7 @@
 Units & measurements
 ====================
 
-             
+
 Purpose
 -------
 
@@ -13,7 +13,7 @@ Pixel
 
 A (physical) pixel or dot is a physical point in a raster image, or the
 smallest addressable element in an all points addressable display
-device. 
+device.
 
 .. caution::
    Be careful not to confuse it with DPI independent pixels
@@ -26,14 +26,14 @@ Pixel density is the number of (physical) pixels or dots that fit into an inch. 
 .. figure:: /img/Pixel.qml.png
    :scale: 50 %
    :alt: Different DPIs on desktop and mobile
-   
+
    Different DPIs on desktop and mobile
 
 
 DPI is often used interchangeably with PPI, pixel per inch.
 
 .. hint::
-   |designicon| Don't confuse this with the DPI setting in photoshop, krita, ... . For mockups you can just ignore this setting or choose a what ever value you like. 
+   |designicon| Don't confuse this with the DPI setting in photoshop, krita, ... . For mockups you can just ignore this setting or choose a what ever value you like.
 
 
 PPI / DPI independent pixels
@@ -50,9 +50,9 @@ pixels used in Qt or QML apps are DPI independent.
 .. figure:: /img/DPI.qml.png
    :scale: 50 %
    :alt: Different DPIs on desktop and mobile
-   
+
    Different DPIs on desktop and mobile
-   
+
 A rectangle defined with physical pixels and DPI independent pixels.
 
 .. hint::
@@ -63,7 +63,7 @@ DPI independent pixels in KDE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. hint::
-   |devicon| As a developer, if you want to use DPI independent pixels use units.devicePixelRatio as a multiplier on physical pixels. Since units.devicePixelRatio is a float, make sure to round the results. Most of the time you want to floor it. 
+   |devicon| As a developer, if you want to use DPI independent pixels use units.devicePixelRatio as a multiplier on physical pixels. Since units.devicePixelRatio is a float, make sure to round the results. Most of the time you want to floor it.
 
 Fonts
 ~~~~~
@@ -72,11 +72,11 @@ Since KDE allows the user to change the font settings any dimensions
 defined with px, no matter if they are DPI independent or not, make
 problems together with text.
 
-.. figure:: /img/Font.qml.png 
+.. figure:: /img/Font.qml.png
    :scale: 50 %
    :alt: Using DPI independet pixel with different font setting
-   
-   Using DPI independet pixel with different font setting  
+
+   Using DPI independet pixel with different font setting
 
 base units in plasma
 --------------------
@@ -92,6 +92,12 @@ settings too. While designing, be careful not to rely on the ratio
 between units.smallSpacing and units.largeSpacing because these change
 depending on font setting
 
+.. hint::
+   |designicon| For mockup and design you can use these values:
+
+   * units.smallSpacing = 4px
+   * units.largeSpacing = 18px
+   * units.gridUnit = 18px
 
 From design to code
 -------------------
@@ -104,19 +110,21 @@ format that would allow exact measurements, don't expect the developer
 to know how to do it.
 
 .. container:: flex
-   
+
    .. container::
-   
+
       .. figure:: /img/Design.qml.png
-      
+
          *BAD*
+
          There are no measures.
-         
+
    .. container::
-   
+
       .. figure:: /img/Design_Good.qml.png
-      
+
          *GOOD*
+
          Try to be as detailed as necessary, but you don't have to provide measurement for objects that can be easily calculated. For example the size of the dark rectangle can be easily obtained.
 
 
@@ -129,7 +137,7 @@ details.
 
 .. figure:: /img/Margin.qml.png
    :alt: Use of base units
-   
+
    Use of base units
 
 .. code:: qml
@@ -167,9 +175,9 @@ DPI independent.
 
 .. figure:: /img/Arbitrary.qml.png
    :alt: Use of arbitrary px values
-   
+
    Use of arbitrary px values
-   
+
 .. code:: qml
    :number-lines:
 
