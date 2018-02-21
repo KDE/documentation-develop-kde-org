@@ -1,3 +1,6 @@
+Icons and text
+==============
+
 Purpose
 -------
 
