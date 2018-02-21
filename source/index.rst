@@ -10,7 +10,7 @@ KDE Human Interface Guidelines (Desktop Platform)
    :caption: Contents:
    :titlesonly:
 
-   introduction/vision
+   introduction/index
    layout/index
    style/index
    components/index
@@ -34,7 +34,7 @@ Getting Started
 * :doc:`introduction/vision` - The overall vision and principles that guide the design and development of user interfaces for KDE software.
 * :ref:`Concept` -  Creating a project vision, determining the users, and the scenarios of use.
 *  :ref:`Organization` - Guidelines on how an application’s content and functionality are ordered and categorized.
-* :ref:`Architecture` Architecture of KDE
+* :doc:`introduction/architecture` Architecture of KDE
 * :ref:`Contribute` Contribute to the HIG]]
 
 Behaviour
