@@ -34,15 +34,17 @@ Labels
    .. container::
 
       .. figure:: /img/Form_Align_KDE3.qml.png
+         :scale: 80%
 
-         *BAD*
+         :iconred:`BAD` |br|
          KDE3 form alignment
 
    .. container::
 
       .. figure:: /img/Form_Align_KDE5.qml.png
+         :scale: 80%
 
-         *GOOD*
+         :noblefir:`GOOD` |br|
          Plasma 5 form alignment
 
 Controls
@@ -59,15 +61,17 @@ Controls
    .. container::
 
       .. figure:: /img/Form_Align_OSX.qml.png
+         :scale: 80%
 
-         *BAD*
+         :iconred:`BAD` |br| 
          OSX form alignment
 
    .. container::
 
       .. figure:: /img/Form_Align_KDE5.qml.png
+         :scale: 80%
 
-         *GOOD*
+         :noblefir:`GOOD` |br|
          Plasma 5 form alignment
 
 -  Left align controls over multiple groups (in case of right-to-left
@@ -80,15 +84,17 @@ Controls
    .. container::
 
       .. figure:: /img/Form_Align_NO.qml.png
+         :scale: 80%
 
-         *BAD*
+         :iconred:`BAD` |br|
          no alignment over controls
 
    .. container::
 
       .. figure:: /img/Form_Align_YES.qml.png
+         :scale: 80%
 
-         *GOOD*
+         :noblefir:`GOOD` |br|
          left aligned controls
 
 -  Keep track on label size; avoid big differences in text length (even
@@ -96,8 +102,9 @@ Controls
    multiple aligned controls.
 
    .. figure:: /img/Form_Align_Long.qml.png
+      :scale: 80%
 
-      *BAD*
+      :iconred:`BAD` |br|
       Avoid very long captions
 
 -  In some cases it may be useful to visually separate groups of related

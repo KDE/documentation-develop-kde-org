@@ -174,5 +174,19 @@ rst_epilog = """
 .. |designicon| image:: /img/DesignerIcon.svg
                 :width: 32px
                 :height: 32px
+
+.. |br| raw:: html
+
+   <br />
+
 """
 
+rst_prolog = """
+.. role:: iconred
+.. role:: plasmablue
+.. role:: noblefir
+"""
+
+# add css file
+def setup(app):
+    app.add_stylesheet('css/breeze.css')
