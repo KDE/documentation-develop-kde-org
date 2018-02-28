@@ -11,7 +11,9 @@ A selection of typeface styles are allocated throughout the user interface as fo
 
 .. image:: /img/Typography-noto.png
 
-* ''Note'' - For developers, it is recommended to use the system fonts available via ''QFontDatabase::systemFont''.
+.. hint::
+   |devicon| It is recommended to use the system fonts available via ''QFontDatabase::systemFont''.
+
 * A monospace version of the ''Content Body 1'' typeface should be used for code content.
 * Typography is treated like any other visual element when considering [[KDE_Visual_Design_Group/HIG/Placement|spacing]] and [[KDE_Visual_Design_Group/HIG/Alignment| alignment]].
 * Limit the number of typeface style variations to about three in any single design.
