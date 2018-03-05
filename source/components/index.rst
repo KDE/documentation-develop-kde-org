@@ -7,7 +7,15 @@ Components
    :hidden:
 
    combobox
+   groupbox
+   lineedit
    slider
+   spinbox
+   tableview
 
-* :doc:`slider`
 * :doc:`combobox`
+* :doc:`groupbox`
+* :doc:`lineedit`
+* :doc:`slider`
+* :doc:`spinbox`
+* :doc:`tableview`

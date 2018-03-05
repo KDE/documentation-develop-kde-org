@@ -1,5 +1,5 @@
-Combo boxe
-==========
+Combo box
+=========
 
 Purpose
 -------
