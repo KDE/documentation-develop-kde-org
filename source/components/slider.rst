@@ -28,7 +28,7 @@ Is this the right control
 -  Use a slider when it is useful for the user to control the rate of
    change of the value in real time.
 -  If the value is open-ended on one or both ends, consider using a
-   `Spin Box`_ instead.
+   :doc:`Spin Box <spinbox>` instead.
 
 Behavior
 ~~~~~~~~
@@ -46,7 +46,7 @@ Appearance
 -  Align the label horizontally in line with the slider.
 -  You can show the current value on the right of the slider or if space
    is very dense show it only as a tooltip when the slider is moved
-   
+
    .. figure:: /img/Slider.value.qml.png
       :alt: Show value always or as tooltip
 
@@ -60,7 +60,7 @@ eg screen size, symbol-size
 
 .. figure:: /img/Slider.qml.png
    :alt: Spacing
-   
+
    Spacing of slider components
 
 -  Mark significant values along the length of the slider with text or
@@ -78,7 +78,7 @@ eg volume control, mouse speed, brightness
 
 .. figure:: /img/Slider.Volume.qml.png
    :alt: Exact value is not important
-   
+
    Exact value is not important
 
 -  Don't show checkmarks if the exact value is not important
@@ -89,5 +89,5 @@ eg volume control, mouse speed, brightness
 
 .. figure:: /img/Slider.Speed.qml.png
    :alt: Offer text input for exact value
-   
+
    Offer text input for exact value
