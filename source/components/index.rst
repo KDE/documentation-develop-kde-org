@@ -6,9 +6,12 @@ Components
    :titlesonly:
    :hidden:
 
+   actionbutton
    combobox
+   contextdrawer
    contextmenu
    dropdown
+   globaldrawer
    groupbox
    lineedit
    menubar
@@ -17,9 +20,12 @@ Components
    splitter
    tableview
 
+* :doc:`actionbutton`
 * :doc:`combobox`
+* :doc:`contextdrawer`
 * :doc:`contextmenu`
 * :doc:`dropdown`
+* :doc:`globaldrawer`
 * :doc:`groupbox`
 * :doc:`lineedit`
 * :doc:`menubar`
