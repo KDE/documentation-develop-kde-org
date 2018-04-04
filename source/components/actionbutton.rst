@@ -14,7 +14,7 @@ executed frequently. Typical primary actions are "Create New", "Edit,",
 "Save" or "Send".
 
 The Primary Action Button also serves as an additional handle to open
-the :doc:`Drawers </patterns/drawer>`.
+the :doc:`drawers </patterns/command/drawer>`.
 
 If there is no primary action, you may opt to use the Primary Action
 Button as a shortcut to navigate back to the application's main page
@@ -44,7 +44,7 @@ How to use
 Desktop-specific
 ~~~~~~~~~~~~~~~~
 
-If your application is using :doc:`Column-based navigation </patterns/columns>`
+If your application is using :doc:`column-based navigation </patterns/navigation/column>`
 
 -  If there is a global Primary Action, associate it with the first
    column

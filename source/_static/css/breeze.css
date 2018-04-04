@@ -129,13 +129,6 @@ a.icon {
 }
 
 .btn {
-    background-color: #eff0f1;
-    box-shadow: none; /*0 1px 1px 0 rgba(35,38,39,.17);*/
-    border-color: #bdc3c7;
-    border-radius: 3px
-}
-
-.btn {
     background-color: #eff0f1 !important;
     box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(35,38,39,.1);
     border-color: #bdc3c7;
@@ -143,13 +136,47 @@ a.icon {
     padding: 8px;
 }
 .btn:hover {
-	border-color: #93cee9;
-	background-color: #eff0f1 !important;
+    border-color: #93cee9;
+    background-color: #eff0f1 !important;
 }
-
 .btn:active {
     box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(35,38,39,.1);
     padding: 8px;
+}
+
+
+[itemprop='articleBody'] {
+    position: relative;
+}
+
+.intend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #7f8c8d;
+}
+.intend:before {
+    content: "For "
+}
+
+.intend a + a:before {
+    content: " and ";
+    color: #7f8c8d;
+}
+
+.available {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    color: #da4453;
+}
+
+.available.qwidgets:before {
+    content: 'Pattern is not available for qWidgets'
+}
+
+.available.plasma:before {
+    content: 'Pattern is not available for Plasma'
 }
 
 @font-face {
@@ -176,5 +203,5 @@ a.icon {
 
 .icon-home:before {
     font-family:"icons";
-	content:"\f104";
+    content:"\f104";
 }

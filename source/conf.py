@@ -175,9 +175,26 @@ rst_epilog = """
                 :width: 32px
                 :height: 32px
 
+.. |touchicon| image:: /img/transform-browse.svg
+                :width: 32px
+                :height: 32px
+                
+.. |desktopicon| image:: /img/computer.svg
+             :width: 32px
+             :height: 32px
+
+.. |mobileicon| image:: /img/smartphone.svg
+             :width: 32px
+             :height: 32px
+
+
 .. |br| raw:: html
 
    <br />
+
+.. |nbsp| raw:: html
+
+   &#160;
 
 """
 
@@ -185,6 +202,7 @@ rst_prolog = """
 .. role:: iconred
 .. role:: plasmablue
 .. role:: noblefir
+.. role:: intend
 """
 
 # add css file
