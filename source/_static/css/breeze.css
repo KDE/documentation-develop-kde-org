@@ -57,6 +57,11 @@ a.icon {
     background-color: #27ae60 !important;
 }
 
+.wy-side-nav-search .icon-home:before {
+    vertical-align: middle;
+    font-size: 350%
+}
+
 .wy-side-nav-search > div.version {
     color: rgba(255,255,255,0.7);
 }
@@ -128,4 +133,48 @@ a.icon {
     box-shadow: none; /*0 1px 1px 0 rgba(35,38,39,.17);*/
     border-color: #bdc3c7;
     border-radius: 3px
+}
+
+.btn {
+    background-color: #eff0f1 !important;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(35,38,39,.1);
+    border-color: #bdc3c7;
+    border-radius: 3px;
+    padding: 8px;
+}
+.btn:hover {
+	border-color: #93cee9;
+	background-color: #eff0f1 !important;
+}
+
+.btn:active {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(35,38,39,.1);
+    padding: 8px;
+}
+
+@font-face {
+    font-family:"icons";
+    src:url("icons.eot?842739648e48d469142df14af06c1a3c");
+    src:url("icons.eot?#iefix") format("embedded-opentype"),
+        url("icons.woff2?842739648e48d469142df14af06c1a3c") format("woff2"),
+        url("icons.woff?842739648e48d469142df14af06c1a3c") format("woff"),
+        url("icons.ttf?842739648e48d469142df14af06c1a3c") format("truetype"),
+        url("icons.svg?842739648e48d469142df14af06c1a3c#icons") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+.fa-arrow-circle-left:before {
+    font-family:"icons";
+    content:"\f101";
+}
+
+.fa-arrow-circle-right:before {
+    font-family:"icons";
+    content:"\f102";
+}
+
+.icon-home:before {
+    font-family:"icons";
+	content:"\f104";
 }
