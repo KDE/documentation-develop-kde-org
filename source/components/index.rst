@@ -10,6 +10,7 @@ Components
    combobox
    contextdrawer
    contextmenu
+   dialog
    dropdown
    globaldrawer
    groupbox
@@ -18,12 +19,17 @@ Components
    slider
    spinbox
    splitter
+   statusbar
    tableview
+   textedit
+   toolbar
+   tooltip
 
 * :doc:`actionbutton`
 * :doc:`combobox`
 * :doc:`contextdrawer`
 * :doc:`contextmenu`
+* :doc:`dialog`
 * :doc:`dropdown`
 * :doc:`globaldrawer`
 * :doc:`groupbox`
@@ -32,4 +38,8 @@ Components
 * :doc:`slider`
 * :doc:`spinbox`
 * :doc:`splitter`
+* :doc:`statusbar`
 * :doc:`tableview`
+* :doc:`textedit`
+* :doc:`toolbar`
+* :doc:`tooltip`
