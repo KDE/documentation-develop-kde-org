@@ -42,6 +42,7 @@ a.icon {
 }
 .flex > * {
     margin-right: 18px;
+    max-width: 340px;
 }
 
 .flex > *:last-child {
@@ -59,7 +60,8 @@ a.icon {
 
 .wy-side-nav-search .icon-home:before {
     vertical-align: middle;
-    font-size: 350%
+    font-size: 350%;
+    display: "block";
 }
 
 .wy-side-nav-search > div.version {
@@ -169,6 +171,10 @@ a.icon {
     top: 30px;
     right: 0;
     color: #da4453;
+}
+
+.border img {
+    border: 1px solid #bdc3c7;
 }
 
 .available.qwidgets:before {

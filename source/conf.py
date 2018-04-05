@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = '<br/>Human Interface Guidelines'
+project = 'Human Interface Guidelines'
 copyright = '2018, KDE. Licensed under Creative Commons License SA 4.0'
 author = 'KDE'
 
