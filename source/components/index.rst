@@ -7,6 +7,7 @@ Components
    :hidden:
 
    actionbutton
+   checkbox
    combobox
    contextdrawer
    contextmenu
@@ -16,6 +17,7 @@ Components
    groupbox
    lineedit
    menubar
+   radiobutton
    slider
    spinbox
    splitter
@@ -26,6 +28,7 @@ Components
    tooltip
 
 * :doc:`actionbutton`
+* :doc:`checkbox`
 * :doc:`combobox`
 * :doc:`contextdrawer`
 * :doc:`contextmenu`
@@ -35,6 +38,7 @@ Components
 * :doc:`groupbox`
 * :doc:`lineedit`
 * :doc:`menubar`
+* :doc:`radiobutton`
 * :doc:`slider`
 * :doc:`spinbox`
 * :doc:`splitter`

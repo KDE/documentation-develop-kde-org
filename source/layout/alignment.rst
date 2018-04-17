@@ -120,4 +120,4 @@ Controls
 Check boxes and Radio buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For more details on alignment of :doc:`radio buttons </controls/radio>` and :doc:`checkboxes </controls/checkbox>` see the detailed HIG pages.
+For more details on alignment of :doc:`radio buttons </components/radio>` and :doc:`checkboxes </components/checkbox>` see the detailed HIG pages.
