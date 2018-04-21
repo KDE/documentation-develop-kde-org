@@ -15,8 +15,8 @@ KDE Human Interface Guidelines (Desktop Platform)
    style/index
    components/index
    patterns/command/index
+   patterns/content/index
    patterns/navigation/index
-   patterns/iconandtext
    resources/contribute
 
 
