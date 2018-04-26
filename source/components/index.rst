@@ -15,8 +15,10 @@ Components
    dropdown
    globaldrawer
    groupbox
+   inline
    lineedit
    menubar
+   message
    radiobutton
    slider
    spinbox
@@ -36,8 +38,10 @@ Components
 * :doc:`dropdown`
 * :doc:`globaldrawer`
 * :doc:`groupbox`
+* :doc:`inline`
 * :doc:`lineedit`
 * :doc:`menubar`
+* :doc:`message`
 * :doc:`radiobutton`
 * :doc:`slider`
 * :doc:`spinbox`
