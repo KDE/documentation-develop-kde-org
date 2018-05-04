@@ -53,7 +53,7 @@ pixels used in Qt or QML apps are DPI independent.
 
    Different DPIs on desktop and mobile
 
-A rectangle defined with physical pixels and DPI independent pixels.
+A rectangle defined with :iconred:`physical pixels` and :noblefir:`DPI independent pixels`.
 
 .. hint::
    |devicon| Except explicilty stated otherwise, all HIG pages, draft, mockups, ... pixels/px are always DPI independent pixels.
@@ -62,8 +62,16 @@ A rectangle defined with physical pixels and DPI independent pixels.
 DPI independent pixels in KDE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. hint::
-   |devicon| As a developer, if you want to use DPI independent pixels use units.devicePixelRatio as a multiplier on physical pixels. Since units.devicePixelRatio is a float, make sure to round the results. Most of the time you want to floor it.
+|devicon| As a developer, if you want to use DPI independent pixels in Plasma
+use units.devicePixelRatio or Units.devicePixelRatio in Kirigami.
+
+.. caution::
+   The use of devicePixelRatio should be avoided, but if you must, check the
+   `documentation <http://doc.qt.io/qt-5/highdpi.html>`_ and 
+   ask for more information in 
+   `Plasma <https://telegram.me/vdgmainroom>`_ or 
+   `Kirigami <https://telegram.me/joinchat/BbOuVj6l7b5aZ_WbupyFFw>`_ channel.
+   
 
 Fonts
 ~~~~~
@@ -76,28 +84,69 @@ problems together with text.
    :scale: 50 %
    :alt: Using DPI independet pixel with different font setting
 
-   Using DPI independet pixel with different font setting
+   Using :noblefir:`DPI independet pixel` with different font setting
 
-base units in plasma
---------------------
+Base units in Plasma and Kirigami
+---------------------------------
+There a two types of dpi independent base units in Kirigami:
 
-There are special base units in plasma:
+-  Units.gridUnit, is the height needed to display one line of text. 
+   Use this for defining height and width of an element. 
+-  Units.smallSpacing and Units.largeSpacing are used to define paddings and margins.
 
--  units.smallSpacing
--  units.largeSpacing
--  units.gridUnit
+These base units are not only DPI independent, but scale according to the font
+settings too. 
+While designing, be careful not to rely on the ratio
+between Units.gridUnit and Units.smallSpacing / Units.largeSpacing because these change depending on font setting.
 
-These are not only DPI independent but scale according to the font
-settings too. While designing, be careful not to rely on the ratio
-between units.smallSpacing and units.largeSpacing because these change
-depending on font setting
+.. figure:: /img/Units.qml.png
+   :scale: 50 %
+   :alt: Using DPI independet pixel with different font setting
 
-.. hint::
-   |designicon| For mockup and design you can use these values:
+   A rectangle defined with :plasmablue:`Units.gridUnit`.
+   
+.. attention::
+   The px values are only for design and mockup, don't use them for development.
 
-   * units.smallSpacing = 4px
-   * units.largeSpacing = 18px
-   * units.gridUnit = 18px
+These are the base units in Kirigami:
+
+- Units.smallSpacing, 4px
+- Units.largeSpacing, 8px
+- Units.gridUnit, 18px
+   
+And in Plasma:
+
+- units.smallSpacing, 4px
+- units.largeSpacing, 18px
+- units.gridUnit, 18px
+
+
+Icon sizes in Plasma and Kirigami
+---------------------------------
+There are several predefined icon sizes in Plasma and Kirigami. You should always use these icon sizes.
+
+.. attention::
+   The px values are only for design and mockup, don't use them for development.
+
+Kirigami:
+
+- Units.iconSizes.small, 16px
+- Units.iconSizes.smallMedium, 22px
+- Units.iconSizes.medium, 32px
+- Units.iconSizes.large, 48px
+- Units.iconSizes.huge, 64px
+- Units.iconSizes.enormous, 128px
+
+Plasma:
+
+- units.iconSizes.tiny, 8px
+- units.iconSizes.small, 16px
+- units.iconSizes.smallMedium, 22px
+- units.iconSizes.medium, 32px
+- units.iconSizes.large, 48px
+- units.iconSizes.huge, 64px
+- units.iconSizes.enormous, 128px
+
 
 From design to code
 -------------------
@@ -114,25 +163,26 @@ to know how to do it.
    .. container::
 
       .. figure:: /img/Design.qml.png
+         :scale: 80%
 
-         *BAD*
-
+         :iconred:`BAD` |br|
          There are no measures.
 
    .. container::
 
       .. figure:: /img/Design_Good.qml.png
+         :scale: 80%
 
-         *GOOD*
+         :noblefir:`GOOD` |br|
+         Try to be as detailed as necessary.
 
-         Try to be as detailed as necessary, but you don't have to provide measurement for objects that can be easily calculated. For example the size of the dark rectangle can be easily obtained.
+You don't have to provide measurement for objects that can be easily calculated. For example the size of the dark rectangle can be easily obtained.
 
-
-recomended spacings
+Recomended spacings
 ~~~~~~~~~~~~~~~~~~~
 
 If you design try to use the recomended values for margin and paddings,
-to ensure a uniform appearance. See `Placement and Spacing`_ for more
+to ensure a uniform appearance. See :doc:`placement and spacing <metrics>` for more
 details.
 
 .. figure:: /img/Margin.qml.png
@@ -144,7 +194,7 @@ details.
    :number-lines:
 
     Row {
-        spacing: units.largeSpacing
+        spacing: Units.largeSpacing
         Rectangle {
             ...
         }
@@ -157,7 +207,7 @@ details.
    :number-lines:
 
     Row {
-        spacing: 2 * units.smallSpacing
+        spacing: 2 * Units.smallSpacing
         Rectangle {
             ...
         }
@@ -166,31 +216,31 @@ details.
         }
     }
 
-arbitrary px values
-~~~~~~~~~~~~~~~~~~~
+.. Arbitrary px values
+   ~~~~~~~~~~~~~~~~~~~
+   
+   When needed, you can use arbitrary px values for your mockups. As a
+   developer you need to use Units.devicePixelRatio to make these values
+   DPI independent.
 
-When needed, you can use arbitrary px values for your mockups. As a
-developer you need to use units.devicePixelRatio to make these values
-DPI independent.
+   .. figure:: /img/Arbitrary.qml.png
+      :alt: Use of arbitrary px values
+   
+      Use of arbitrary px values
 
-.. figure:: /img/Arbitrary.qml.png
-   :alt: Use of arbitrary px values
+   .. code:: qml
+      :number-lines:
 
-   Use of arbitrary px values
-
-.. code:: qml
-   :number-lines:
-
-    Row {
-        spacing: units.smallSpacing
-        Rectangle {
-            height: units.largeSpacing
-            width: Math.floor(2 * units.devicePixelRatio)
-        }
-        Text {
-            ...
-        }
-    }
+       Row {
+           spacing: Units.smallSpacing
+           Rectangle {
+               height: Units.largeSpacing
+               width: Math.floor(2 * Units.devicePixelRatio)
+           }
+           Text {
+               ...
+           }
+       }
 
 ratio
 ~~~~~
