@@ -7,6 +7,7 @@ Writing
 
    wording
    capitalization
+   contraction
    labels
    static
    localization
@@ -15,6 +16,7 @@ Text includes all the written, language-based elements of the interface. This in
 
 * :doc:`wording`
 * :doc:`capitalization`
+* :doc:`contraction`
 * :doc:`labels`
 * :doc:`static`
 * :doc:`localization`

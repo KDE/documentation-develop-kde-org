@@ -7,6 +7,8 @@ Intoduction
 
    vision
    architecture
+   convergence
 
 * :doc:`vision`
 * :doc:`architecture`
+* :doc:`convergence`
