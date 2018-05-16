@@ -30,6 +30,7 @@ Components
    spinbox
    splitter
    statusbar
+   swipelistitem
    tab
    tableview
    textedit
@@ -62,6 +63,7 @@ Components
 * :doc:`spinbox`
 * :doc:`splitter`
 * :doc:`statusbar`
+* :doc:`swipelistitem`
 * :doc:`tab`
 * :doc:`tableview`
 * :doc:`textedit`

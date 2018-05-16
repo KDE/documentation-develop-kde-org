@@ -9,8 +9,8 @@ Command patterns
    content
    drawer
    menubar
+   ondemand
    simple
-   slide
    toolbar
 
 Command patterns are determined by the command structure chosen for the
@@ -43,6 +43,6 @@ structure should be.
 - :doc:`content`
 - :doc:`drawer`
 - :doc:`menubar`
+- :doc:`ondemand`
 - :doc:`simple`
-- :doc:`slide`
 - :doc:`toolbar`
