@@ -42,5 +42,5 @@ Guidelines
    -  Try to keep the content of the context drawer in one page. If
       there two distinct "modes" of contextual actions (for example
       navigating through a PDF either by table of contents or
-      thumbnails), consider using two :doc:`Tabs <tabs>` to separate them, but
+      thumbnails), consider using two :doc:`Tabs <tab>` to separate them, but
       never use more than two tabs.

@@ -32,7 +32,7 @@ Is this the right control
 -  Use a table to arrange data in two dimensions.
 -  Use a table for a concise layout with inline editing feature.
 -  Do not use a table for read only purpose. In this case use a simple
-   :doc:`list view <listview>` or a :doc:`tree view <treeview>` with multiple columns.
+   :doc:`list view <list>` or a :doc:`tree view <tree>` with multiple columns.
 
 Behavior
 ~~~~~~~~

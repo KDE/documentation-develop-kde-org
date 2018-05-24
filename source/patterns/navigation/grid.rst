@@ -17,7 +17,8 @@ Use a grid to show a set of elements which can best be represented
 graphically (as images with or without text), such as a gallery of
 pictures or video thumbnails, or the content of a store.
 
-For elements that are better represented by text, use a :doc:`list <List>`.
+For elements that are better represented by text, use a 
+:doc:`list </components/list>`.
 
 How to use
 ----------

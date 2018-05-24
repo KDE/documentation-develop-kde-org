@@ -5,7 +5,7 @@ Purpose
 -------
 
 A *menu bar* appears at the top of the main window of applications with
-a :doc:`very complex command structure <complexcommand>`. It provides access to all commands
+a :doc:`very complex command structure </patterns/command/index>`. It provides access to all commands
 and most of the settings available in an application. It contains of a
 list of functions or options (respectively menu items), submenus or
 cascading menus that is a secondary menu displayed on demand from within
@@ -27,7 +27,7 @@ Is this the right control
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Provide a menu bar in the main window of applications with a
-   :doc:`very complex command structure <complexcommand>`
+   :doc:`very complex command structure </patterns/command/index>`
 -  Do not display a menu bar in secondary or internal windows.
 
 Behavior

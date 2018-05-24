@@ -37,7 +37,7 @@ How to use it
 -  Make the whole area of each list item clickable to select the item
    (unless there is a "Slide to reveal" handle, see next bullet)
 -  If you want actions to be available directly on a list item, use the
-   :doc:`slide to reveal pattern </patterns/command/slide>`.
+   :doc:`slide to reveal pattern </patterns/command/ondemand>`.
 -  Add enough free space at the beginning and end of the list to allow
    users to scroll both the first and last item on the list to the
    center of the screen for easy interaction with it.

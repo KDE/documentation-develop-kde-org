@@ -42,7 +42,7 @@ Guidelines
 -  Icons of a similar type share a consistent visual language
    (mimetypes, folders, devices, etc.).
 -  Follow the guidelines for presenting 
-   :doc:`icons with text </patterns/content/icon>`
+   :doc:`icons with text </patterns/content/iconandtext>`
 -  Test your icon set on strength of association, discriminatory power,
    conspicuousness, and, if applicable, on accessibility.
 

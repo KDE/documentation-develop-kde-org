@@ -32,7 +32,7 @@ the other direction or tapping outside of it.
 
 A Global Drawer may contain the following controls:
 
--  :doc:`Tabs <tabs>`
+-  :doc:`Tabs <tab>`
 -  A main menu
 -  :doc:`Push Buttons <pushbutton>` to execute non-contextual actions
 -  :doc:`Checkboxes <checkbox>` or :doc:`Radio Buttons <radiobutton>` 
@@ -42,7 +42,7 @@ The main menu
 
 -  Must not have more than three levels
 -  Should if possible not contain more elements than fit on the screen
--  Should contain an entry :doc:`Settings </pattern/settings>` in the last position if the
+-  Should contain an entry :doc:`Settings </patterns/content/settings>` in the last position if the
    application has settings which are not commonly changed
 -  Selecting an entry in the menu either executes an action or goes down
    one level, replacing the menu with the items in the selected submenu

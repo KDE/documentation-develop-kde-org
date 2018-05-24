@@ -4,7 +4,7 @@ Swipe list item
 When to use
 -----------
 
-This uses an :doc:`on-demand pattern </patterns/navigation/ondemand.rst>` as
+This uses an :doc:`on-demand pattern </patterns/command/ondemand>` as
 alternative to always visible controls in lists. If the user
 often performs tasks on single items of a list, add a handle on the side
 the list item (next to the context drawer's edge, defined by a
@@ -20,7 +20,7 @@ Example
 How to use
 ----------
 
--  See :doc:`on-demand pattern </patterns/navigation/ondemand.rst>` for
+-  See :doc:`on-demand pattern </patterns/command/ondemand>` for
    general recomendations.
 -  |desktopicon| If only one action is available, most the time it's better 
    to not use the on-demand pattern, but show the action right away.

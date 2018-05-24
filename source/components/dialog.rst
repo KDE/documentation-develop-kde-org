@@ -24,7 +24,7 @@ Is this the right control?
 -  Do not use dialogs if the flow must not get interrupted. In this case
    prefer inline controls.
 -  Consider to use alternative ways for communication with users like
-   :doc:`tooltip <tooltip>` or :doc:`message panel <messagewidget>`.
+   :doc:`tooltip <tooltip>` or a :doc:`inline message <inline>`.
 -  Always use standard dialogs, if available.
 
 Behavior
@@ -44,7 +44,7 @@ Behavior
 -  Do not use dialogs to display non-critical messages which do not
    require any further user interaction (typically dialogs with a single
    "OK" or "Close" button). Consider to use :doc:`tooltip <tooltip>` or a 
-   :doc:`message panel <messagewidget>`.
+   :doc:`inline message <inline>`.
 -  Use modal dialogs only if allowing interaction with other parts of
    the application while the window is opened could cause data loss or
    some other serious problem.

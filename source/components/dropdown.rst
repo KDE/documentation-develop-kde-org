@@ -35,7 +35,7 @@ Is this the right control
    If users should be able to add items use a :doc:`combo box <combobox>`.
 -  For only a few options, consider to use a set of :doc:`radio buttons <radiobutton>`.
 -  For a single selection out of a large number of items (n>20), use a
-   :doc:`list view <listview>`.
+   :doc:`list view <list>`.
 -  Prefer controls that show the options without further user
    interaction, except for the following cases:
 
@@ -74,7 +74,7 @@ Appearance
    certain item is selected (i.e. they are dependent controls), disable
    them instead of hiding.
 -  Label the drop down with a descriptive caption to the left (cf.
-   :doc:`alignment </layout/alignment>)`.
+   :doc:`alignment </layout/alignment>`).
 -  Create a buddy relation so access keys are assigned.
 -  End each label with a colon.
 -  Use :doc:`sentence style capitalization </style/writing/capitalization>` for items.

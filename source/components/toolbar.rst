@@ -33,9 +33,9 @@ Behavior
    most frequently functions should be add to the tool bar.
 -  Execute operations immediately; do not require additional input from
    user.
--  Do not use :doc:`menu buttons <button>` in tool bars. 
+-  Do not use :doc:`menu buttons <pushbutton>` in tool bars. 
    They do not fit well the concept of fast access.
--  Try to avoid using :doc:`split buttons <button>` 
+-  Try to avoid using :doc:`split buttons <pushbutton>` 
    or :doc:`toggle buttons <togglebutton>` in order to
    keep the interaction with all buttons in the tool bar consistent.
 -  Do not hide tool bars by default. If configurable, users should

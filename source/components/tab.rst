@@ -92,7 +92,7 @@ Appearance
    property of the Qt tab bar, unfortunately true by default).
 -  Avoid long tab names. Use a compelling, easy to understand label.
    Phrases not sentences.
--  Do not use :doc:`abbreviations </style/writing/abbreviation>` 
+-  Do not use :doc:`abbreviations </style/writing/wording>` 
    (acronyms such as HTML are allowed).
 -  Do not use triangular shape of tabs.
 
