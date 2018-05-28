@@ -16,6 +16,12 @@ The source files are hosted in a `Git repo <https://cgit.kde.org/websites/hig-kd
 
 .. note:: On every page of the HIG, there is a *View page source* link in the top right corner.
 
+For more information and help you can find us on 
+`Matrix <https://matrix.to/#/#kde_vdg:matrix.org>`_, 
+`IRC <irc://chat.freenode.net/kde-vdg>`_ or 
+`Telegram <https://telegram.me/vdgmainroom>`_
+.
+
 If you are new to KDE devlopment, make sure to read `how to become a kde developer <https://community.kde.org/Get_Involved/development>`_ first.
 
 Getting started
