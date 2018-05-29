@@ -1,7 +1,7 @@
 Architecture
 ============
 
-There are three different UI toolkits you can use to development for `KDE Application <https://www.kde.org/applications/>`_ or the `Plasma Workspace <https://www.kde.org/plasma-desktop.php>`_. Due to technical limitations the toolkits have slight visual differences, but the recomended interaction patterns to be used are consistent regardless of the toolkit.
+There are three different UI toolkits you can use to development for `KDE Application <https://www.kde.org/applications/>`_ or the `Plasma Workspace <https://www.kde.org/plasma-desktop.php>`_. Due to technical limitations the toolkits have slight visual differences, but the recommended interaction patterns to be used are consistent regardless of the toolkit.
 
 KDE Applications
 ----------------
