@@ -1,6 +1,13 @@
 Drop-down
 =========
 
+.. figure:: /img/Dropdown1.png
+   :alt:  Dropdown
+   :figclass: border
+   
+   Control which allows the user to choose one value from a list.
+
+
 Purpose
 -------
 

@@ -1,6 +1,13 @@
 Combo box
 =========
 
+.. figure:: /img/Combobox1.png
+   :alt: Combobox
+   :figclass: border
+   
+   A combination of a drop-down list and an edit control.
+
+
 Purpose
 -------
 

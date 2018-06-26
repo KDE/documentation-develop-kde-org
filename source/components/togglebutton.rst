@@ -1,6 +1,13 @@
 Toggle button
 =============
 
+.. figure:: /img/Togglebutton1.png
+   :alt:  Togglebutton
+   :figclass: border
+   
+   Control to show a change of state.
+
+
 Purpose
 -------
 

@@ -1,6 +1,13 @@
 Line edit
 =========
 
+.. figure:: /img/Lineedit1.png
+   :alt:  Lineedit
+   :figclass: border
+   
+   Single line control to enter unconstrained text.
+
+
 Purpose
 -------
 

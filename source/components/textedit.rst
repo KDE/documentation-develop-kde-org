@@ -1,6 +1,13 @@
 Text edit
 =========
 
+.. figure:: /img/Textedit1.png
+   :alt:  Textedit
+   :figclass: border
+   
+   Control to enter multiple lines of text.
+
+
 Purpose
 -------
 

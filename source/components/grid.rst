@@ -1,10 +1,11 @@
 Grid
 ====
 
-Purpose
--------
+.. image:: /img/Grid1.png
+   :alt:  Grid
 
-Example
+
+Purpose
 -------
 
 Guidelines

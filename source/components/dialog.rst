@@ -1,6 +1,11 @@
 Dialog
 ======
 
+.. image:: /img/Dialog1.png
+   :alt:  Dialog
+   :scale: 50%
+
+
 Purpose
 -------
 

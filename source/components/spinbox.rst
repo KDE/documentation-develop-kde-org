@@ -1,6 +1,13 @@
 Spin box
 ========
 
+.. figure:: /img/Spinbox1.png
+   :alt:  Spinbox
+   :figclass: border
+   
+   Control that accepts a range of values.
+
+
 Purpose
 -------
 
