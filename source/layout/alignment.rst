@@ -22,12 +22,12 @@ theory.
 Guidelines
 ----------
 
-Labels
-~~~~~~
 
--  Align labels to the right and connected widgets to the left, making a
-   group of form widgets appear to be center aligned. In Qt5, using a
-   QFormLayout handles this correctly for you.
+Labels on the left
+~~~~~~~~~~~~~~~~~~
+
+On |desktopicon| Desktop it is recomended to place the labels to the left
+of the connected widgets.
 
 .. container:: flex
 
@@ -46,6 +46,10 @@ Labels
 
          :noblefir:`GOOD` |br|
          Plasma 5 form alignment
+
+-  The labels that are to the left of their connected widgets should be right-aligned.
+   This makes the whole group of form widgets appear to be center-aligned.
+   In Qt5, using a QFormLayout handles this correctly for you.
 
 Controls
 ~~~~~~~~
@@ -98,7 +102,7 @@ Controls
          left aligned controls
 
 -  Keep track on label size; avoid big differences in text length (even
-   after translation), that could result in much white space for
+   after translation), that could result in much whitespace for
    multiple aligned controls.
 
    .. figure:: /img/Form_Align_Long.qml.png
@@ -107,17 +111,21 @@ Controls
       :iconred:`BAD` |br|
       Avoid very long captions
 
--  In some cases it may be useful to visually separate groups of related
-   options within one group box to facilitate scanning of the dialog. In
-   that case, put a vertical, fixed-size spacer of 16px height between
-   the options.
+Labels on top
+~~~~~~~~~~~~~
 
-.. figure:: /img/Form_Align_Space.qml.png
-   :alt: Separating groups of related options with a vertical spacer.
+For |mobileicon| mobile, or if only narrow space is available, it is
+recomended to place the labels above the connected widgets.
 
-   Separating groups of related options with a vertical spacer.
+.. image:: /img/Form_Align_YES_Mobile.qml.png
+         :scale: 80%
+
+-  Labels and widgets align left
+-  Minimize label length. Avoid multi-line labels.
 
 Check boxes and Radio buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For more details on alignment of :doc:`radio buttons </components/radio>` and :doc:`checkboxes </components/checkbox>` see the detailed HIG pages.
+For more details on alignment of 
+:doc:`radio buttons </components/radiobutton>` and 
+:doc:`checkboxes </components/checkbox>`, see the detailed HIG pages.

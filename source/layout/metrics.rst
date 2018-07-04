@@ -1,5 +1,5 @@
-Metrics, placement & keylines
-=============================
+Metrics and placement
+=====================
 
 Purpose
 -------
@@ -16,11 +16,11 @@ impression and supports layout. Space between controls indicates their
 relatedness. Objects with smaller distances are mentally associated
 according to the Gestalt theory. *Whitespace* is an important element of
 design which enables the objects in it to exist at all. The balance
-between content and white spaces is key to *grouping*.
+between content and whitespace is key to *grouping*.
 
 Please read :doc:`units` for more information which and how
-different units as px, dpi independent pixels, units.smallSpacing,
-units.largeSpacing are used.
+different units such as px, dpi independent pixels, smallSpacing and
+largeSpacing are used.
 
 Guidelines
 ----------
@@ -60,54 +60,63 @@ Size
 Space
 ~~~~~
 
-qwidgets
-^^^^^^^^
+Qt widgets
+^^^^^^^^^^
 
-If you are using qwidgets you should use one of Qt's Layout Classes like
-, that will take care of lay outing and spacing of your controls.
+If you are using Qt widgets you should use one of 
+`Qt's Layout Classes <http://doc.qt.io/qt-5/layout.html>`_, 
+which will take care of laying out and spacing of your controls.
 
 QML
 ^^^
 
-For consistency you should try to use plasmas units.smallSpacing and
-units.largeSpacing for margins and paddings when ever possible. See
-:doc:`units` for more details.
+For consistency you should try to use Kirigami and Plasma's 
+smallSpacing and largeSpacing for margins and paddings whenever possible. 
+See :doc:`units` for more details.
 
-.. hint::
-   |designicon| For mockup and design you can use these values:
-    -  units.smallSpacing = 4px
-    -  units.largeSpacing = 18px
-    -  units.gridUnit = 18px
-
-
-Use Multiples of units.smallSpacing or units.largeSpacing, where more spacing is required.
+Use multiples of smallSpacing or largeSpacing, where more spacing is required.
 
 .. figure:: /img/Margin.qml.png
    :alt: Use of base units
    
    Use of base units
 
-Recomended minimum paddings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Recommended minimum paddings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  A units.smallSpacing padding is the minimum recommended padding inside elements (buttons, drop boxes, text fields, etc.)
--  An 2 * units.smallSpacing padding is the minimum recommended padding inside grouping frames (group boxes, tabs, etc.)
+-  A smallSpacing padding is the minimum recommended padding inside 
+   elements (buttons, drop boxes, text fields, etc.)
+-  An 2 * smallSpacing padding is the minimum recommended padding 
+   inside grouping frames (group boxes, tabs, etc.)
 -  Use default spacing of
 
-   -  related items within groups: 2 * units.smallSpacing
-   -  label and item: units.smallSpacing
-   -  related controls with same type (check boxes / radio buttons): units.smallSpacing
-   -  related controls with different type (check box / button): units.smallSpacing
-   -  unrelated controls: ≥ 2 * units.smallSpacing
+   -  related items within groups: 2 * smallSpacing
+   -  label and item: smallSpacing
+   -  related controls with same type (check boxes / radio buttons): smallSpacing
+   -  related controls with different type (check box / button): smallSpacing
+   -  unrelated controls: ≥ 3 * smallSpacing
 
-.. figure:: /img/Spacing_Padding.qml.png
+.. figure:: /img/SpacingPadding.qml.png
    :alt: Sample spacing
    
    Sample spacing
+   
+-  In some cases it may be useful to visually separate groups of related
+   options within one group to facilitate scanning of the dialog. In
+   that case, put a vertical, fixed-size spacer of 18px height between
+   the options.
+
+.. figure:: /img/SpacingSeperate.qml.png
+   :alt: Separating groups of related options with a vertical spacer.
+
+   Separating groups of related options with a vertical spacer.
 
    
 .. hint::
-   |designicon| It oftens helps to use a soft grid of 18px (units.gridUnit), when creating mockups. But only use this as a visual hint, since plasma components and icon size are not multiple of the gridUnit, you wont be able to align everything to the grid.
+   |designicon| It often helps to use a soft grid of 18px (gridUnit), when creating
+   mockups. But only use this as a visual hint, since plasma components and icon
+   size are not multiples of the gridUnit, you won't be able to align everything to the
+   grid.
 
 Resize
 ~~~~~~
@@ -115,7 +124,8 @@ Resize
 -  Provide resizing for all primary and mode-less windows.
 -  If form resizing is not provided disable border icons and adjust form style.
 -  Define a minimum size for resizable forms.
--  Make the content area scrollable if size is too small for all controls; do not scale controls.
+-  Make the content area scrollable if size is too small for all controls; 
+   do not scale controls.
 
 .. figure:: /img/Resize.qml.png
    :alt: Give hints how to resize

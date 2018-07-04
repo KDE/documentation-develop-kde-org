@@ -149,8 +149,9 @@ Behavior
 Appearance
 ~~~~~~~~~~
 
-If you are using qt widgets you should use one of Qt's Layout Classes
-like , that will take care of lay outing and spacing of your controls.
+If you are using Qt widgets you should use one of 
+`Qt's Layout Classes <http://doc.qt.io/qt-5/layout.html>`_, 
+which will take care of laying out and spacing of your controls.
 
 -  When options are subordinate to a radio box, this relation should be
    visualized by indenting the sub-options by using a horizontal spacer
@@ -165,7 +166,6 @@ like , that will take care of lay outing and spacing of your controls.
    certain radio button is toggled on (i.e. they are dependent
    controls), disable them instead of hiding them if that radio button
    is toggled off.
-
 -  Do not separate radio button and label. Clicking on both the button
    and the label should toggle the option.
 -  Do not add line breaks. If necessary place an additional label below
@@ -173,6 +173,7 @@ like , that will take care of lay outing and spacing of your controls.
 -  Label a group of radio buttons with a descriptive caption to the top
    left of the group (cf. :doc:`alignment </layout/alignment>`).
 -  Create a buddy relation so access keys are assigned.
--  Use :doc:`sentence style capitalization </style/writing/capitalization>` for radio buttons.
+-  Use :doc:`sentence style capitalization </style/writing/capitalization>`
+   for radio buttons.
 -  Do not use ending punctuation (neither dot nor colon) for group
    label.

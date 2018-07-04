@@ -132,14 +132,6 @@ like , that will take care of lay outing and spacing of your controls.
       .. image:: /img/Grouped_checkboxes.qml.png
         :alt: Grouped checkboxes
 
-
-   -  Make the check boxes span the two columns, but keep them at the
-      bottom of the form. Remark: This interferes with other layout
-      guidelines
-
-      .. image:: /img/Two_column_checkboxes.qml.png
-        :alt: Checkboxes spanning two columns
-
    -  If all else fails, add a label describing the checkbox on the left
       side of the checkbox, then set the text of the checkbox to
       "Enabled", "On", or similar.
@@ -200,6 +192,7 @@ like , that will take care of lay outing and spacing of your controls.
 -  Label a group of check box with a descriptive caption to the top left
    of the group (cf. :doc:`alignment </layout/alignment>`).
 -  Create a buddy relation so access keys are assigned.
--  Use :doc:`sentence style capitalization </style/writing/capitalization>` for check box items.
+-  Use :doc:`sentence style capitalization </style/writing/capitalization>`
+   for check box items.
 -  Do not use ending punctuation (neither dot nor colon) for group
    label.
