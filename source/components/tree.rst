@@ -64,13 +64,13 @@ Behavior
 
    Multi selection:
 
--  Use check boxes to indicate multiple selections.
--  For check boxes, use the mixed state to indicate that an option is
+-  Use checkboxes to indicate multiple selections.
+-  For checkboxes, use the mixed state to indicate that an option is
    set for some, but not all, child objects. Users should not be able to
-   set a mixed state directly (cf. :doc:`check boxes <checkbox>`).
--  Clicking a mixed state check box selects all child objects and the
-   parent check box.
--  Don’t use check boxes in single selection trees.
+   set a mixed state directly (cf. :doc:`checkboxes <checkbox>`).
+-  Clicking a mixed state checkbox selects all child objects and the
+   parent checkbox.
+-  Don’t use checkboxes in single selection trees.
 
 Appearance
 ~~~~~~~~~~

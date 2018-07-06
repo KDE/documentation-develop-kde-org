@@ -17,7 +17,7 @@ states, set and unset, are shown by its appearing "pushed in" or "popped
 out" respectively.
 
 Toggle buttons are a valid option to indicate a state with the advance
-of using an icon. Compared to the related radio button or check box they
+of using an icon. Compared to the related radio button or checkbox they
 are an efficient way to save screen space. But toggle buttons should be
 used with care outside a toolbar because the state is not clearly
 indicated.
@@ -33,7 +33,7 @@ Is this the right control
 
 -  Use a toggle button to indicate a state if no other control apply,
    i.e. in case of the :doc:`toolbar <toolbar>`.
--  Prefer :doc:`radio buttons <radiobutton>` or :doc:`check boxes <checkbox>`
+-  Prefer :doc:`radio buttons <radiobutton>` or :doc:`checkboxes <checkbox>`
    outside the toolbar.
 
 Behavior

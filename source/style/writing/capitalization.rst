@@ -68,7 +68,7 @@ Use sentence style capitalization in the following cases:
 -  List box labels
 -  Combo box labels
 -  Spin box labels
--  Check box labels
+-  Checkbox labels
 -  Option button labels
 -  Slider labels
 -  Pop-up hint text

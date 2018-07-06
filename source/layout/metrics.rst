@@ -40,7 +40,7 @@ Size
    -  Line edits, Drop-downs, Combo boxes: ≥80 x 32 px
    -  Text edits: ≥80 x ≥36 px (text should not exceed 80 characters per
       line)
-   -  Check box, Radio button including label: ≥80 x 24 px
+   -  Checkbox, Radio button including label: ≥80 x 24 px
    -  Group boxes: ≥120 x ≥96 px
    -  Tree view: ≥120 x ≥96 px
    -  List view: ≥80 px (per column) x ≥96
@@ -92,8 +92,8 @@ Recommended minimum paddings
 
    -  related items within groups: 2 * smallSpacing
    -  label and item: smallSpacing
-   -  related controls with same type (check boxes / radio buttons): smallSpacing
-   -  related controls with different type (check box / button): smallSpacing
+   -  related controls with same type (checkboxes / radio buttons): smallSpacing
+   -  related controls with different type (checkbox / button): smallSpacing
    -  unrelated controls: ≥ 3 * smallSpacing
 
 .. figure:: /img/SpacingPadding.qml.png

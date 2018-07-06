@@ -60,7 +60,7 @@ Behavior
 -  When possible apply changes immediately but do not initiate an action
    (like print, send, delete) when the user selects an item from a
    drop-down list.
--  Do not add controls to the drop-down (e.g. check boxes for each
+-  Do not add controls to the drop-down (e.g. checkboxes for each
    item).
 -  Place options that represent general options (e.g. all, none) at the
    beginning of the list.

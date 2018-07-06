@@ -39,7 +39,7 @@ Behavior
 
    -  When setting a new password, have it entered twice to prevent
       typos in passwords.
-   -  Provide a "Show password" check box to unmask the password both
+   -  Provide a "Show password" checkbox to unmask the password both
       when setting new and when entering existing passwords.
 
 -  Consider to use auto-complete feature to help users when entering

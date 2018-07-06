@@ -123,7 +123,7 @@ recomended to place the labels above the connected widgets.
 -  Labels and widgets align left
 -  Minimize label length. Avoid multi-line labels.
 
-Check boxes and Radio buttons
+Checkboxes and Radio buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For more details on alignment of 

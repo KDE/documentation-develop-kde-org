@@ -43,7 +43,7 @@ Is this the right control
 
 -  If there are only two options where one is the negation of the other
    (e.g. "apply" vs. "do not apply"), consider replacing the radio
-   buttons by one :doc:`check box <checkbox>`.
+   buttons by one :doc:`checkbox <checkbox>`.
    
 .. container:: flex
 
@@ -169,7 +169,7 @@ which will take care of laying out and spacing of your controls.
 -  Do not separate radio button and label. Clicking on both the button
    and the label should toggle the option.
 -  Do not add line breaks. If necessary place an additional label below
-   the check box.
+   the checkbox.
 -  Label a group of radio buttons with a descriptive caption to the top
    left of the group (cf. :doc:`alignment </layout/alignment>`).
 -  Create a buddy relation so access keys are assigned.

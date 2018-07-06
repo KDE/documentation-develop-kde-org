@@ -71,10 +71,10 @@ Tabs
 -  Do not assign an access key. Tabs are accessible through their
    shortcut keys (Ctrl+Tab, Ctrl+Shift+Tab).
 
-Check boxes and Radio buttons
+Checkboxes and Radio buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Label every check box or radio button. Do not leave check boxes or
+-  Label every checkbox or radio button. Do not leave checkboxes or
    radio buttons unlabeled.
 -  Assign a unique access key to each label.
 -  Labels must start with an active verb clearly defining the state to
