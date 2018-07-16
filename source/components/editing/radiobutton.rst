@@ -81,7 +81,7 @@ Is this the right control
             :noblefir:`GOOD`
 
 -  Do not use a radio button to initiate an action. Consider using a
-   :doc:`push button <pushbutton>` instead.
+   :doc:`push button <../navigation/pushbutton>` instead.
 
 .. container:: flex
 
@@ -99,7 +99,7 @@ Is this the right control
             :figclass: border
 
             :noblefir:`GOOD` |br|
-            Consider using a :doc:`push button <pushbutton>`.
+            Consider using a :doc:`push button <../navigation/pushbutton>`.
 
 Behavior
 ~~~~~~~~

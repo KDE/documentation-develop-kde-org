@@ -127,5 +127,5 @@ Checkboxes and Radio buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For more details on alignment of 
-:doc:`radio buttons </components/radiobutton>` and 
-:doc:`checkboxes </components/checkbox>`, see the detailed HIG pages.
+:doc:`radio buttons </components/editing/radiobutton>` and 
+:doc:`checkboxes </components/editing/checkbox>`, see the detailed HIG pages.

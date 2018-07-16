@@ -63,4 +63,4 @@ to reveal them. As soon as the user taps anywhere else, the
 handle is slid back.
 
 
-For futher guidelines see :doc:`swipe list item </components/swipelistitem>`.
+For futher guidelines see :doc:`swipe list item </components/editing/swipelistitem>`.

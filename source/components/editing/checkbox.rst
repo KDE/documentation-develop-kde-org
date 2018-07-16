@@ -42,8 +42,9 @@ Is this the right control
         Using two radio buttons removes the need to guess.
 
 
--  For more than five options, use either a :doc:`list view <list>` or the
-   :doc:`dual-list pattern <duallist>` in case of multiple selections.
+-  For more than five options, use either a :doc:`list view <list>` or 
+   the :doc:`dual-list pattern </patterns/content/duallist>` in case of
+   multiple selections.
 -  Do not use the selection to perform commands.
 
 .. container:: flex
@@ -62,7 +63,7 @@ Is this the right control
         :figclass: border
 
         :noblefir:`GOOD` |br|         
-        Consider using a :doc:`push button <pushbutton>` instead.
+        Consider using a :doc:`push button <../navigation/pushbutton>` instead.
 
 Behavior
 ~~~~~~~~

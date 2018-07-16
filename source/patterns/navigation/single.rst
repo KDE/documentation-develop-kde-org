@@ -26,4 +26,5 @@ Pattern for a flat content structure.
    single-page web browser.
 -  Display properties of the currently shown object which are essential
    for the application's main task below the object, show additional
-   properties on demand in the :doc:`context drawer </components/contextdrawer>`.
+   properties on demand in the 
+   :doc:`context drawer </components/navigation/contextdrawer>`.

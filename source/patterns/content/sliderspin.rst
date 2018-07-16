@@ -4,10 +4,10 @@ Slider and spin box
 Purpose
 -------
 
-:doc:`Spin boxes </components/spinbox>` allow a user to enter a specific
+:doc:`Spin boxes </components/editing/spinbox>` allow a user to enter a specific
 value, and gives users fine control over which value is chosen, 
 but are slow when moving over large ranges of values. 
-:doc:`Sliders </components/slider>` allow for quickly changing values 
+:doc:`Sliders </components/editing/slider>` allow for quickly changing values 
 over long ranges, but make it harder to select very specific values. In
 cases where both are necessary, combing the two is sometimes a good
 approach.

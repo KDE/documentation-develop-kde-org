@@ -35,7 +35,8 @@ A Global Drawer may contain the following controls:
 -  :doc:`Tabs <tab>`
 -  A main menu
 -  :doc:`Push Buttons <pushbutton>` to execute non-contextual actions
--  :doc:`Checkboxes <checkbox>` or :doc:`Radio Buttons <radiobutton>` 
+-  :doc:`Checkboxes <../editing/checkbox>` 
+   or :doc:`Radio Buttons <../editing/radiobutton>` 
    to change settings which are commonly changed
 
 The main menu

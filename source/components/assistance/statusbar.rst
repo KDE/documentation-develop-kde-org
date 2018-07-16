@@ -29,7 +29,7 @@ Is this the right control
 
 -  Do not display a status bar in secondary or internal windows.
 -  If a status bar is really necessary in your application consider to
-   use a :doc:`toolbar <toolbar>` with all customization features.
+   use a :doc:`toolbar <../navigation/toolbar>` with all customization features.
 
 Behavior
 ~~~~~~~~

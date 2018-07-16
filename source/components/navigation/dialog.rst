@@ -29,7 +29,8 @@ Is this the right control?
 -  Do not use dialogs if the flow must not get interrupted. In this case
    prefer inline controls.
 -  Consider to use alternative ways for communication with users like
-   :doc:`tooltip <tooltip>` or a :doc:`inline message <inline>`.
+   :doc:`tooltip <../assistance/tooltip>` or a 
+   :doc:`inline message <../assistance/inline>`.
 -  Always use standard dialogs, if available.
 
 Behavior
@@ -48,15 +49,17 @@ Behavior
    direct selection or inline-editing instead.
 -  Do not use dialogs to display non-critical messages which do not
    require any further user interaction (typically dialogs with a single
-   "OK" or "Close" button). Consider to use :doc:`tooltip <tooltip>` or a 
-   :doc:`inline message <inline>`.
+   "OK" or "Close" button). Consider to use 
+   :doc:`tooltip <../assistance/tooltip>` or a 
+   :doc:`inline message <../assistance/inline>`.
 -  Use modal dialogs only if allowing interaction with other parts of
    the application while the window is opened could cause data loss or
    some other serious problem.
 -  Provide a clear way of leaving the modal dialog, such as a Cancel
    button.
 -  When the dialog is used to inform about an unexpected condition that
-   needs interaction, follow the guidelines for :doc:`message dialogs <message>`.
+   needs interaction, follow the guidelines for
+   :doc:`message dialogs <../assistance/message>`.
 
 Appearance
 ~~~~~~~~~~
@@ -78,7 +81,7 @@ Appearance
 -  Consider the common reading direction from left to right and top to
    bottom.
 -  Dialogs are grouped in meaningful sections, for instance by 
-   :doc:`group boxes <groupbox>`. The actions are grouped along their context of use, not
+   :doc:`group boxes <../formating/groupbox>`. The actions are grouped along their context of use, not
    along technical relations.
 -  Provide a title to each section.
 -  Follow the guidelines for :doc:`alignment </layout/alignment>`.

@@ -25,7 +25,7 @@ Command button
 
 -  Use a command button to initiate an immediate action.
 -  Do not use a command button for navigation to another page (prefer a
-   `link`_ in this case).
+   :doc:`link <commandlink>` in this case).
 -  Do not use a command button embedded in a body of text.
 -  Do not use command buttons for a group of actions. Consider to use
    radio buttons with one 'Apply' option or a menu button.
@@ -68,7 +68,7 @@ Toggle button
 ^^^^^^^^^^^^^
 
 -  A toggle button is not a push button. Guidelines can be found
-   :doc:`here <togglebutton>`.
+   :doc:`here <../editing/togglebutton>`.
 
 Behavior
 ~~~~~~~~
@@ -78,7 +78,7 @@ Behavior
 -  Do not initiate an action on right-click or double-click.
 -  Provide feedback when user is not aware to results or when results
    are not available instantaneous. Display a busy pointer or present a
-   progress bar to users (see :doc:`progress indicator <progress>`).
+   progress bar to users (see :doc:`progress indicator <../assistance/progress>`).
 -  Denote the relationship between buttons with other controls by
    placing them logically together.
 -  Do not use the delayed (menu) button pattern.

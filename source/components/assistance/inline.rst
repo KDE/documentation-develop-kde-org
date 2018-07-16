@@ -116,7 +116,7 @@ Appearance
 ----------
 
 A basic inline messages consists of an icon and text. It can contain an optional 
-close button and :doc:`buttons <pushbutton>`. 
+close button and :doc:`buttons <../navigation/pushbutton>`. 
 
 .. figure:: /img/Message1.qml.png
    :alt: Inline message with a custom icon and a close button.

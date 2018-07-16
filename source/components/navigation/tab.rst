@@ -49,7 +49,7 @@ Behavior
    one row.
 -  Do not use vertically stacked tabs. Tabs are drawn above the pages
    only (QTabWidget::TabPosition = North).
--  Do not use too many tabs. Use a :doc:`list view <list>` with icons and
+-  Do not use too many tabs. Use a :doc:`list view <../editing/list>` with icons and
    associated pages if there are many pages or if you want to group
    static pages, e.g. in case of configuration content. This also gives
    ability to present hierarchy of pages as a tree.

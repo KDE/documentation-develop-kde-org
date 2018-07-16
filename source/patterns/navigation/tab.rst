@@ -14,4 +14,4 @@ Pattern for a 2-deep structure.
    -  The other is for viewing multiple documents (e.g. websites in a
       browser) in the same application instance
 
--  See the :doc:`tab </components/tab>` for details.
+-  See the :doc:`tab </components/navigation/tab>` for details.

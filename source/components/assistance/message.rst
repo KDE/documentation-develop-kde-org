@@ -47,7 +47,7 @@ Is this the right control
 -  Provide only a short error message and complement it by a Details
    button that provides more a detailed explanation in the same error
    dialog.
--  Follow the guidelines of :doc:`dialogs <dialog>` in general.
+-  Follow the guidelines of :doc:`dialogs <../navigation/dialog>` in general.
 
 Behavior
 ~~~~~~~~

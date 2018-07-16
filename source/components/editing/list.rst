@@ -36,7 +36,8 @@ Is this the right control
 
 -  Do *not* provide extended multiple selections with Shift+Click or
    Ctrl+Click to select groups of contiguous or non-adjacent values,
-   respectively. Instead, use the :doc:`dual-list pattern <duallist>` if multiple items
+   respectively. Instead, use the 
+   :doc:`dual-list pattern </patterns/content/duallist>` if multiple items
    have to be selected, because it allows users to easily see which
    items are selected at any point, without having to scroll through the
    available options, and it can be used with only the mouse. (Once the

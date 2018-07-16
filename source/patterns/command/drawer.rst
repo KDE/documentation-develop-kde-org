@@ -18,7 +18,7 @@ The global drawer is used for global, context-independent controls.
    and closed by swiping in the other direction or tapping outside of
    the panel
 -  For the guidelines regarding its content, see 
-   :doc:`global drawer </components/globaldrawer>`.
+   :doc:`global drawer </components/navigation/globaldrawer>`.
 
 Context drawer
 --------------
@@ -34,7 +34,7 @@ context-specific controls that affect only the currently selected object
 -  The drawer is opened by an edge-swipe and closed by swiping in 
    the other direction or tapping outside of the panel
 -  For the guidelines regarding its content, see the 
-   :doc:`context drawer </components/contextdrawer>`.
+   :doc:`context drawer </components/navigation/contextdrawer>`.
 
 Bottom drawer and dialog sheet
 ------------------------------
@@ -43,5 +43,7 @@ Bottom drawer and dialog sheet
    :alt:  Bottom drawer
    :scale: 40 %
 
-For a full modal dialog, use a :doc:`dialog sheet </components/dialogsheet>`.
-For a quick choice, use a :doc:`bottom drawer </components/bottomdrawer>`.
+For a full modal dialog, use a 
+:doc:`dialog sheet </components/navigation/dialogsheet>`.
+For a quick choice, use a 
+:doc:`bottom drawer </components/navigation/bottomdrawer>`.
