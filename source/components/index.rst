@@ -56,6 +56,8 @@ Editing and Manipulation considers the behaviors that result in persistent chang
 
 Selection
 ~~~~~~~~~
+
+* :doc:`editing/card`
 * :doc:`editing/checkbox`
 * :doc:`editing/combobox`
 * :doc:`editing/dropdown`

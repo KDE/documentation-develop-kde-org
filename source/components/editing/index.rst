@@ -6,6 +6,7 @@ Editing and manipulation
    :titlesonly:
    :hidden:
 
+   card
    checkbox
    combobox
    date
@@ -27,6 +28,8 @@ Editing and Manipulation considers the behaviors that result in persistent chang
 
 Selection
 ~~~~~~~~~
+
+* :doc:`card`
 * :doc:`checkbox`
 * :doc:`combobox`
 * :doc:`dropdown`
