@@ -102,6 +102,7 @@ Rectangle {
 
             a.find("qquickrectangle").eq(2).draw({
                 outline: {aspectratio: true},
+                ruler: {horizontal: true}
             });
 
             a.find("qquickrectangle").eq(3).draw({

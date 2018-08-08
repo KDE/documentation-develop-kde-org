@@ -19,6 +19,7 @@
 
 import QtQuick 2.7
 import QtQuick.Controls 2.2
+import org.kde.kirigami 2.4 as Kirigami
 import "tools.js" as T
 
 // Draw a frame around an element

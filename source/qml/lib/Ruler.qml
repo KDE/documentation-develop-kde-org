@@ -26,15 +26,14 @@ import "tools.js" as T
 Item {
     id: canvas
     anchors.fill: parent;
-    property int rx;
-    property int ry;
+    property int offset;
     property bool horizontal: true;
     property string stroke: "rgba(41,128,185, 1)"
     property double scale: T.getScale(canvas)
 
     // using Rectangles because they scale smooth
     Row {
-        y: canvas.ry
+        y: canvas.offset
         x: 0
         id: hackRow
         visible: canvas.horizontal
@@ -49,7 +48,7 @@ Item {
         }
     }
     Column {
-        x: canvas.rx
+        x: canvas.offset
         y: 0
         id: hackColumn
         visible: !canvas.horizontal

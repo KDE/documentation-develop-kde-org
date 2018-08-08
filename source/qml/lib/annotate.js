@@ -14,6 +14,14 @@ function getClassName(obj) {
     return str.toLowerCase();
 }
 
+// Merge 2 objects of options
+function getOpts(opts, choices) {
+    for (var choice in choices) {
+        opts[choice] = choices[choice];
+    }
+    return opts;
+}
+
 // An extended array of QML elements
 function An(node) {
     this.nodes = [];
@@ -165,7 +173,11 @@ An.prototype._draw = function(node, type, opt) {
             outline.createObject(root, {item: node, label: opt.label, aspectratio: opt.aspectratio});
         break
         case "ruler":
-            ruler.createObject(root, {rx: node.mapToItem(null, 0, 0).x, horizontal: false});
+            var options = getOpts({
+                offset: opt.horizontal ? node.mapToItem(null, 0, 0).y : node.mapToItem(null, 0, 0).x,
+                horizontal: false
+            }, opt);
+            ruler.createObject(root, options);
         break
         case "padding":
             padding.createObject(root, {item: node});
