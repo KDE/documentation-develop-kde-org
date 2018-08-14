@@ -100,18 +100,12 @@ Group box
 
 Using Ellipses in Labels
 ~~~~~~~~~~~~~~~~~~~~~~~~
+Ellipses are used to indicate that a button or menu item will perform an action that always requires additional user input before completing. Use an ellipsis at the end of a menu item or button's label only when the following circumstances apply:
 
--  Use an ellipsis (...) after menu items and button labels which
-   require user’s input before completing their action.
--  Do not use an ellipsis if no further user input is required to
-   complete the action
--  Do not use an ellipsis for selections which result in actions (such
-   as Save or Print Preview) or do not require user input (such as
-   configuration dialogs).
--  Do not use an ellipsis for an action which may require confirmation
-   before it is completed (such as a Deletion confirmation), but no
-   other input.
--  Use an ellipsis for the following menu items and buttons:
+   - The menu item or button must perform an action. Actions always begin with a verb, (e.g. "Show", "Configure", "Adjust") and have a definite start and end
+   - That action must always require additional user input to complete
+
+Here are examples of menu items and buttons whose labels typically have ellipses:
 
    -  Find...
    -  Find and Replace...
@@ -120,17 +114,15 @@ Using Ellipses in Labels
    -  Replace...
    -  Save As...
    -  Send To...
+   -  Configure [something]...
 
--  Do not use an ellipsis for the following menu items and buttons:
+Here are examples of menu items and buttons whose labels typically do not have ellipses, along with the reason why:
 
-   -  About
-   -  Advanced Options
-   -  Check Spelling
-   -  Close or Quit
-   -  Configure [something]
-   -  Delete or Remove
-   -  Help
-   -  Preferences
-   -  Print Preview
-   -  Properties
-   -  Toolboxes
+   -  About — *not an action*
+   -  Advanced Options — *not an action*
+   -  Close or Quit — *action does not always require additional user input*
+   -  Delete or Remove — *action does not always require additional user input*
+   -  Help — *not an action*
+   -  Print Preview — *not an action*
+   -  Properties — *not an action*
+   -  Toolboxes — *not an action*
