@@ -43,7 +43,7 @@ You only need to install Sphinx, if you want to preview changes on your local ma
 #. Install Spinx with your distro's package manager
 
    * openSuse ``sudo zypper in git python3-Sphinx python3-sphinx_rtd_theme``
-   * Debian/Ubuntu/KDE Neon ``sudo apt install git build-essential python3-sphinx``
+   * Debian/Ubuntu/KDE Neon ``sudo apt install git build-essential python3-sphinx python3-sphinx-rtd-theme``
 
 #. Clone HIG repositories into an empty folder
    ``git clone https://anongit.kde.org/websites/hig-kde-org.git``
