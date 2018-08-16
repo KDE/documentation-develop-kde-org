@@ -1,4 +1,4 @@
-Lables
+Labels
 ======
 
 Purpose
