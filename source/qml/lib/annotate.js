@@ -71,6 +71,15 @@ An.prototype.find = function(selector) {
     return result;
 }
 
+An.prototype.inspect = function() {
+    for (var member in this.nodes[0]) {
+        if (typeof this[member] !== "function") {
+            console.log(member + ": " + this[member]);
+        }
+    }
+    return this;
+}
+
 // Search only direct children
 An.prototype.children = function(selector) {
     var result = new An();
