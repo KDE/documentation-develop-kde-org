@@ -12,7 +12,7 @@ For example the chapter heading together with the first paragraph looks like thi
 
 The restructuredText of the full HIG is organized into several source files. You can view and modify these source files with any text editor.
 
-The source files are hosted in a `Git repo <https://cgit.kde.org/websites/hig-kde-org.git/>`_. `Sphinx <http://www.sphinx-doc.org>`_ is used to generate HTML pages from these source files. Tasks and changes are organized via `Phabricator <https://phabricator.kde.org/project/profile/264/>`_.
+The source files are hosted in a `Git repo <https://cgit.kde.org/websites/hig-kde-org.git/>`_. `Sphinx <http://www.sphinx-doc.org>`_ is used to generate HTML pages from these source files. Tasks and changes are organized via `Phabricator <https://phabricator.kde.org/project/board/264/>`_.
 
 .. note:: On every page of the HIG, there is a *View page source* link in the top right corner.
 
