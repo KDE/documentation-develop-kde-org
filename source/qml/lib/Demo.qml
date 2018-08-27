@@ -51,6 +51,9 @@ Rectangle {
                 color: "#27ae60"
                 anchors.top: parent.top;
             }
+            ComboBox {
+                model: [ "Item1", "Item2", "Item3" ]
+            }
         }
 
         Row {
@@ -108,6 +111,8 @@ Rectangle {
             a.find("qquickrectangle").eq(3).draw({
                 messure: { to: a.find("qquickrectangle").eq(4)}
             });
+
+            a.find("qquickcombobox").click();
         }
     }
 

@@ -3,6 +3,7 @@ var brace = Qt.createComponent("Brace.qml");
 var outline = Qt.createComponent("Outline.qml");
 var messure = Qt.createComponent("Messure.qml");
 var padding = Qt.createComponent("Padding.qml");
+var mouse = Qt.createComponent("Mouse.qml");
 
 // get classname and strip _QML of the name
 function getClassName(obj) {
@@ -113,6 +114,20 @@ An.prototype.eq = function(n) {
         return new An(this.nodes[n]);
     }
     return new An();
+}
+
+/**
+ * Drawing annotation on the nodes
+ */
+An.prototype.click = function(obj) {
+    for (var n = 0; n < this.nodes.length; n++) {
+        var node = this.nodes[n];
+        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2);
+        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2);
+        var m = mouse.createObject(root, {px: x, py: y});
+        m.click();
+    }
+    return this;
 }
 
 
