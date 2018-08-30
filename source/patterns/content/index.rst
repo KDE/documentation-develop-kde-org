@@ -8,6 +8,7 @@ Content patterns
 
    breadcrumb
    duallist
+   form
    iconandtext
    help
    settings
@@ -16,6 +17,7 @@ Content patterns
 
 - :doc:`breadcrumb`
 - :doc:`duallist`
+- :doc:`form`
 - :doc:`iconandtext`
 - :doc:`help`
 - :doc:`settings`

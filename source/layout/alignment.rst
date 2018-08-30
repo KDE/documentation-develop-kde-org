@@ -5,7 +5,7 @@ Purpose
 -------
 
 One of the most important aspects of presentation is *alignment* and
-*placement* of controls. Its theoretical foundation is based on Gestalt
+*placement* of objects. Its theoretical foundation is based on Gestalt
 psychology. Human perception tends to order experience in a manner that
 is regular, orderly, symmetric, and simple. Visual impression is
 generated to an emergent whole based on several principles, called
@@ -16,116 +16,90 @@ Gestalt laws. Two basic laws are:
 -  Law of similarity: objects will be perceptually grouped together if
    they are similar to each other
 
-Placement of controls should be carefully done according to Gestalt
+Placement of objects should be carefully done according to Gestalt
 theory.
 
-Guidelines
+.. raw:: html
+
+   <video src="https://cdn.kde.org/hig/video/20180620-1/Alignment1.webm" loop="true" playsinline="true" width="536" controls="true" onended="this.play()" class="border"></video>
+
+Principles
 ----------
+Alignment pertains to the common-sense usage of visual positioning 
+of text, images, controls in user interfaces. Alignment is an element of 
+visual design that is easy to miss when done properly and easy to spot 
+when it is not. Plasma seeks to achieve strong visual alignment in 
+applications so that users do not have to wonder where elements on a page
+should go. Plasma seeks simplicity in alignment first.
 
+Alignment in Plasma is:
+-----------------------
 
-Labels on the left
-~~~~~~~~~~~~~~~~~~
+-  Simple: good alignment improves visual understanding and speed, and allows
+   less thinking.  Developers should strive to run alignment that is reduced 
+   to a minimum and build more of the UI from there on.
 
-On |desktopicon| Desktop it is recomended to place the labels to the left
-of the connected widgets.
+-  Coherent: Users will see elements aligned in a way that follows common, 
+   natural, human-like behavior. This can be likened to taking notes. Titles
+   will go first, then sub-headings, etc. The objective is that ideas follow
+   a natural progression. Developers must prioritize their UI to meet these
+   ideas.
 
-.. container:: flex
+-  Reliable: Users will expect elements to be aligned the same across
+   multiple applications. Users will come to expect that similar elements 
+   are grouped in a predictable fashion.
 
-   .. container::
+-  Powerful: Users will expect powerful controls close together that will
+   allow them to complete complex operations with only a few clicks and low
+   visual travel of the UI to locate such controls.
 
-      .. figure:: /img/Form_Align_KDE3.qml.png
-         :scale: 80%
+General Alignment
+-----------------
 
-         :iconred:`BAD` |br|
-         KDE3 form alignment
+-  Guides and Margins
+   In Plasma, alignment behaves like most with a horizontal, vertical, top,
+   bottom, and center guides. As developers look to place controls or UI
+   elements on their applications, they must set their guides or margins first.
 
-   .. container::
+-  Limits
+   Using the note paradigm for aligning elements, developers should not go more
+   than 3 layers with left justification. Beyond 3 layers seems messy and less
+   clear to the user.
 
-      .. figure:: /img/Form_Align_KDE5.qml.png
-         :scale: 80%
+Good
 
-         :noblefir:`GOOD` |br|
-         Plasma 5 form alignment
+Title
+  Label
+     Sub-label
 
--  The labels that are to the left of their connected widgets should be right-aligned.
-   This makes the whole group of form widgets appear to be center-aligned.
-   In Qt5, using a QFormLayout handles this correctly for you.
+Bad
 
-Controls
-~~~~~~~~
+Title
+   Label
+      Sub-label
+         Sub-label
+            Sub-label
 
--  Align groups of items vertically rather than horizontally, as this
-   makes them easier to scan visually. Use horizontal or rectangular
-   alignments only if they greatly improve the layout of the window.
--  Align a group of widgets to the left. This makes use of space more
-   efficiently.
+This same structure should apply to controls.
 
-.. container:: flex
+A General Note of Caution
+-------------------------
 
-   .. container::
+When working with elements on a page and text, it is tempting to maximize
+the use of space by placing as many controls and labels as possible within
+the UI. The Plasma team recommends that you first:
 
-      .. figure:: /img/Form_Align_OSX.qml.png
-         :scale: 80%
+-  Organize your controls 
+-  Prioritize them, 
+-  Remove redundancy
+-  Simplify your set
 
-         :iconred:`BAD` |br| 
-         OSX form alignment
+And then work in the fashion previously suggested using verticality for
+your controls. If your controls do not fit in one page because of the
+vertical alignment chosen, consider options such as:
 
-   .. container::
+-  Using Tabs
+-  Create an "Advanced" window with extra controls
+-  Split your UI into smaller groups and categories
 
-      .. figure:: /img/Form_Align_KDE5.qml.png
-         :scale: 80%
-
-         :noblefir:`GOOD` |br|
-         Plasma 5 form alignment
-
--  Left align controls over multiple groups (in case of right-to-left
-   languages mirror the alignment). The visual anchor facilitates
-   scanning of content, and left-hand alignment fits as well forms that
-   have been oversized individually.
-
-.. container:: flex
-
-   .. container::
-
-      .. figure:: /img/Form_Align_NO.qml.png
-         :scale: 80%
-
-         :iconred:`BAD` |br|
-         no alignment over controls
-
-   .. container::
-
-      .. figure:: /img/Form_Align_YES.qml.png
-         :scale: 80%
-
-         :noblefir:`GOOD` |br|
-         left aligned controls
-
--  Keep track on label size; avoid big differences in text length (even
-   after translation), that could result in much whitespace for
-   multiple aligned controls.
-
-   .. figure:: /img/Form_Align_Long.qml.png
-      :scale: 80%
-
-      :iconred:`BAD` |br|
-      Avoid very long captions
-
-Labels on top
-~~~~~~~~~~~~~
-
-For |mobileicon| mobile, or if only narrow space is available, it is
-recomended to place the labels above the connected widgets.
-
-.. image:: /img/Form_Align_YES_Mobile.qml.png
-         :scale: 80%
-
--  Labels and widgets align left
--  Minimize label length. Avoid multi-line labels.
-
-Checkboxes and Radio buttons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-For more details on alignment of 
-:doc:`radio buttons </components/editing/radiobutton>` and 
-:doc:`checkboxes </components/editing/checkbox>`, see the detailed HIG pages.
+This should be done in order to preserve alignment conventions.
