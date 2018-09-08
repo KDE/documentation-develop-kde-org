@@ -97,5 +97,5 @@ There are instances, however, where this structure cannot be avoided.
 Examples include file systems and archives.
 
 
--  :doc:`Breadcrumb <breadcrumb>`
+-  :doc:`Breadcrumbs <breadcrumb>`
 -  :doc:`Column-based navigation <column>`

@@ -91,3 +91,23 @@ eg volume control, mouse speed, brightness
    :alt: Offer text input for exact value
 
    Offer text input for exact value
+
+Slider and Spinbox together
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-  Use both a slider and spin box when the value is constrained at both
+   ends, and when there is a large range of values (more than 20 steps)
+   but precise control over the value is needed nevertheless.
+-  Consider using only a slider *or* a spin box if a well-defined workflow
+   makes the other redundant.
+-  The values of the slider and spin box should be linked so changes to
+   one are immediately reflect in another.
+-  The spin box should be aligned with the long axis of the slider: if
+   the slider is horizontal, the spin box should be to the right of the
+   slider and aligned vertically with the center of the slider; if
+   the slider is vertical, the spin box should be below the slider and
+   aligned horizontally with the center of the slider.
+-  Provide a single label using a text label above it or to the left of
+   the widgets, using sentence capitalization. Provide an access key in
+   the label that should give focus directly to the spin box.
+-  Mark significant values along the length of the slider with text or
+   tick marks.
