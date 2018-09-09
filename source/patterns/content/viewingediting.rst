@@ -1,16 +1,23 @@
 Viewing vs editing 
 ==================
 
-Purpose
--------
-
-In most cases information should be presented for viewing not editing.
-Presenting input controls to the user when they are not needed creates
-unnecessary clutter and distraction, interfering with effective
+In most cases, information should be presented by default for viewing,
+not editing. Presenting input controls to the user when they are not needed
+creates unnecessary clutter and distraction, interfering with effective
 presentation of the information.
 
-Guideline
----------
+When to use
+-----------
+
+Only show editing controls when appropriate. Examples include:
+
+-  When an item is selected, contextually-appropriate editing controls can be
+   shown in a toolbar or panel.
+-  If an explicit editing mode is appropriate, then editing controls should
+   not be shown until that mode is activated.
+
+How to use
+----------
 
 .. image:: /img/ViewMode.png
    :alt: Viewing
@@ -24,13 +31,16 @@ Guideline
    layout and the contact name is set in large type to direct the users
    eye to next piece of information.
 -  Provide a separate mode for editing the data when requested by the
-   user (via a button, toolbutton or menu item).
+   user (via a button, toolbutton or menu item):
 
 .. image:: /img/EditMode.png
    :alt: Editing
 
 -  Alternatively, in-line editing can be provided to edit a single data
-   element at a time.
+   element at a time when it is clicked on or selected:
 
 .. image:: /img/PartialEditMode.png
    :alt: Line-in editing
+
+Implementation
+--------------

@@ -1,87 +1,83 @@
 Settings
 ========
 
-Purpose
--------
+A *settings page* provides the ability to customize how an application or
+Plasma widget should behave. It is intended for settings that are persistent but not changed very frequently. Following KDE's "Simple by
+default, powerful when needed" :doc:`design mantra </introduction/vision>`,
+settings are split into common and advanced groups. Advanced settings are
+not important to most users but essential for some, and therefore can't be
+removed. Those settings are hidden by default to reduce the mental overhead
+of using the settings page, but with easy access.
 
-The settings dialog provides user-customizable options how an
-application or plasma (KCM) should behave. The dialog is intended for
-options that are not accessed frequently and are persitent. Following
-KDE's "Simple by default, powerful when needed" 
-:doc:`design mantra </introduction/vision>`, settings are split 
-into simple vs. advanced ones. Advanced settings are
-options that are not important to most users but essential for some, and
-can't removed therefore. Those options are hidden by default, but with
-an easy access in order to improve learnability.
+When to use
+-----------
 
-Guidelines
+-  Use the settings page to display settings that are persistent but not
+   accessed or changed very frequently. A the toolbar or the main menu (and optionally context menus) are more appropriate places for settings that
+   are frequently accessed and changed, such as icon view style or sort order.
+-  Do not use settings pages to change the properties of a selected item.
+   Instead, use a properties dialog or a contextual editing panel.
+-  Do not use the settings page for potentially dangerous developer settings
+   like the name of an SQL table. Instead, use configuration files or separate
+   dialogs.
+
+How to use
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  Use this pattern for all settings that are relevant to change for
-   users.
--  Do not use the settings dialog for frequently accessed properties
-   like, for instance, details vs. icon view. Use the toolbar or main
-   menu (and optionally context menu) for these options.
--  Do not use the settings dialog for rarely changed or developer
-   options like the sql table name. Use extra configuration files or
-   dialogs for those options.
-
-General recommendations
-~~~~~~~~~~~~~~~~~~~~~~~
-
--  Simple by default: Define smart and polite defaults. Set the defaults
-   in a way that most users don't have to alter them at all.
--  Powerful when needed: Provide enough options for the perfect
+-  **Simple by default**: Define smart and polite defaults so that your target
+   :doc:`personas </introduction/personas>` don't have to alter them at all.
+-  **Powerful when needed**: Provide enough settings for the perfect
    customization according individual needs and preferences. But even
    though customizability is very important for KDE software, try to
-   keep your settings dialog as small and simple as possible. Remember:
-   every option requires more code and more testing!
+   keep your settings page as small and simple as possible. Remember:
+   every option requires more code and more testing, and makes the settings
+   page slower to use.
 -  Respect the privacy of the users: Always use opt-in, never an opt-out
    model for features that transmit potentially private data (e.g. usage
    statistics).
 
-Layout
-~~~~~~
+Implementation
+--------------
 
--  Organize your settings in logical groups. (#1 in the example).
--  Split options per group into standard and advanced. Make the standard
-   easy to use for everyone. (#5)
--  Offer several pre-defined profiles or schemes, and let the user
-   decide what type of configuration should be active. (#3)
--  Consider to add access to third-party profiles/schemes via Get Hot
-   New Stuff! (use the label "Get New [term used for profile in your
-   case]s"), if available for this group. (#4)
--  Show a live preview for visual features. Omit this section if it's
-   not relevant.
--  Provide functions to export/import all settings. (#7) If splitting
-   the options into app-related (such as colors, fonts, etc.) and
-   account-related (for instance personal settings, mail accounts...)
-   make sense, let the user decide what to export. Import has to as
-   straightforward as possible; let the user just confirm when data are
-   being overwritten.
+-  For a desktop app, put your settings page inside a dialog window and do not
+   allow it to have a vertical or horizontal scrollbar because all of the
+   content will not fit. Instead, separate your controls into more groups and
+   make use of :doc:`tabbed views </components/navigation/tab>`. This does not apply to scrollbars within inline tables and grid views, which are
+   acceptable.
+-  On mobile, use a full-screen view for your settings page. Vertical scrolling
+   is acceptable.
+-  Lay out your settings page according to the
+   :doc:`alignment </layout/alignment>` guidelines. The overall layout
+   should appear to be centered, with with section labels on the left side,
+   and controls on the right. Tables and grid views are the exception, and
+   should span the window width.
+-  Organize your settings into logical groups, with more important groups
+   appearing higher up on the page. Separate the groups with whitespace or
+   put them into different tabs of a
+   :doc:`tabbed view </components/navigation/tab>` (if appropriate).
+   Try to avoid the use of group boxes to distinguish sections.
+   (#1 in the example)
+-  Separate common and advanced settings into different groups. If necessary,
+   hide the advanced settings behind a collapsible group box. Make the
+   standard settings comprehensible and easy to use. (#5)
+-  Consider adding access to third-party add-ons via Get Hot New Stuff!,
+   if available for this group. Use the label "Get New [term used for
+   add-on content]s" (#4)
 
-Behavior
-~~~~~~~~
-
--  When the user changes the default switch to a special profile ("User"
-   or "Current"). This profile cannot be applied unless it is renamed
-   individually. Access to rename (and delete) is done per context menu.
-   Indicate user-defined profiles by using italic font for the name.
--  Sort your options and groups by importance.
 -  When a change is applied, the application should adopt it immediately
    without the need to restart it.
--  Do not change the settings dialog depending on the context. You
+-  Do not change the settings page depending on the context. It
    should always start with the same landing page regardless of the
    application context.
--  Do not use a wizard to edit options. Only use a wizard to set options
-   if actually a group of options all have to be edited at once, eg
-   creating an account or a first run wizard.
--  Do not hide options conditionally. Don't make a user guess what
-   options need to be changed to have other options available. Disable
-   options instead and hint the user why the options are disabled.
+-  Do not use a wizard to change settings. Only use a wizard if a group of
+   settings are all interrelated and must be edited all at once, e.g.
+   setting up an email account.
+-  If some of the program's settings are only applicable in certain contexts,
+   do not hide the inapplicable ones. Instead, disable them and hint to the
+   user why they're disabled.
+   **Exception:** it is acceptable to hide settings for non-existent hardware.
+   For example, it's okay to hide the touchpad configuration when no touchpad
+   is present.
 
 Mockup
 ~~~~~~
@@ -105,8 +101,8 @@ Mockup
    Organize the setting in a way that GHNS access is per group and not
    global.
 #. Provide access to the most relevant settings at the Standard section.
-   Make sure that these options are easy to understand.
-#. Indicate that Advanced options are available but keep this section
+   Make sure that these settings are easy to understand.
+#. Indicate that Advanced settings are available but keep this section
    collapsed by default. Use a descriptive label so that it reflects the
    functionality.
 #. Allow users to export the current settings to a file that can be
