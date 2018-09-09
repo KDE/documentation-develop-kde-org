@@ -34,11 +34,10 @@ Size
    time the user opens this dialog, set its dimensions to those that the
    user last resized it to.
 -  Size controls with a minimum of
-
-   -  Icon: 16x16px
-   -  Buttons: 72 x 32px
-   -  Line edits, Drop-downs, Combo boxes: ≥80 x 32 px
-   -  Text edits: ≥80 x ≥36 px (text should not exceed 80 characters per
+   - Icon:16x16px
+   - Buttons: 72 x 32px
+   - Line edits, Drop-downs, Combo boxes ≥80 x 32 px
+   - Text edits: ≥80 x ≥36 px (text should not exceed 80 characters per
       line)
    -  Checkbox, Radio button including label: ≥80 x 24 px
    -  Group boxes: ≥120 x ≥96 px

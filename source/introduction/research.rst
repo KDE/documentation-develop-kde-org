@@ -86,3 +86,10 @@ More Information
 .. _Short introduction to user personas on Usability.gov: http://www.usability.gov/analyze/personas.html
 .. _In-depth discussion about creating personas on Boxes and Arrows: http://www.boxesandarrows.com/view/making_personas_more_powerful_details_to_drive_strategic_and_tactical_design
 
+Still Need Help?
+----------------
+
+CFor more information and help you can find us on 
+`Matrix <https://matrix.to/#/#kde_vdg:matrix.org>`_, 
+`IRC <irc://chat.freenode.net/kde-vdg>`_ or 
+`Telegram <https://telegram.me/vdgmainroom>`_
