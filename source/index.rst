@@ -29,13 +29,13 @@ KDE Human Interface Guidelines
    * :ref:`search`
 
 The KDE Human Interface Guidelines (HIG) offer application designers and developers
-a set of recommendations for designing and developing user interfaces for mobile, 
-desktop, convergent applictions and workspace widgets. Their aim is to improve the 
-experience for users by making application and widget interfaces more consistent 
+a set of recommendations for designing and developing user interfaces for mobile,
+desktop, convergent applications and workspace widgets. Their aim is to improve the 
+experience for users by making application and widget interfaces more consistent
 and hence more intuitive and learnable.
 
 .. figure:: /img/HIGDesignVisionFullBleed.png
    :scale: 50 %
    :alt: Different DPIs on desktop and mobile
-   
+
    ''Simple by default, powerful when needed.''
