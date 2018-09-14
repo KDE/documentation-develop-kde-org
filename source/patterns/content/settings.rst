@@ -13,7 +13,7 @@ When to use
 -----------
 
 -  Use the settings page to display settings that are persistent but not
-   accessed or changed very frequently. A the toolbar or the main menu (and optionally context menus) are more appropriate places for settings that
+   accessed or changed very frequently. The toolbar or the main menu (and optionally context menus) are more appropriate places for settings that
    are frequently accessed and changed, such as icon view style or sort order.
 -  Do not use settings pages to change the properties of a selected item.
    Instead, use a properties dialog or a contextual editing panel.

@@ -5,8 +5,8 @@ Purpose
 -------
 
 Icons are pictorial representations of functions and objects. Icons are
-important not for aesthetic reasons as part of the visual identity of a
-program, and also for utilitarian reasons. They are a shorthand for
+important not only for aesthetic reasons as part of the visual identity of a
+program, but also for utilitarian reasons. They are a shorthand for
 conveying meaning that users perceive almost instantaneously.
 Well-designed icons improve the visual communication and strongly impact
 users' overall impression of visual design. Icons are space-saving
