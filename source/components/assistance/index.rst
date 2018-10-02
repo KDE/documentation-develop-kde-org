@@ -11,6 +11,7 @@ User assistance
    progress
    statusbar
    tooltip
+   emblem
 
 User assistance
 ---------------
@@ -24,6 +25,7 @@ Notification
 * :doc:`message`
 * :doc:`progress`
 * :doc:`statusbar`
+* :doc:`emblem`
 
 Help
 ~~~~
