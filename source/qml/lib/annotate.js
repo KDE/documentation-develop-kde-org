@@ -4,6 +4,7 @@ var outline = Qt.createComponent("Outline.qml");
 var messure = Qt.createComponent("Messure.qml");
 var padding = Qt.createComponent("Padding.qml");
 var mouse = Qt.createComponent("Mouse.qml");
+var touch = Qt.createComponent("Touch.qml");
 
 // get classname and strip _QML of the name
 function getClassName(obj) {
@@ -126,7 +127,7 @@ An.prototype.eq = function(n) {
 }
 
 /**
- * Drawing annotation on the nodes
+ * Simulate a mouse click on the nodes
  */
 An.prototype.click = function(obj) {
     for (var n = 0; n < this.nodes.length; n++) {
@@ -139,6 +140,38 @@ An.prototype.click = function(obj) {
     return this;
 }
 
+/**
+ * Simulate a mouse hover on the nodes
+ */
+An.prototype.hover = function(opt) {
+    var options = getOpts({
+        x: 0,
+        y: 0
+    }, opt);
+
+    for (var n = 0; n < this.nodes.length; n++) {
+        var node = this.nodes[n];
+        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + options.x;
+        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) + options.y;
+        var m = mouse.createObject(root, {px: x, py: y});
+        m.hover();
+    }
+    return this;
+}
+
+/**
+ * Simulate a touch
+ */
+An.prototype.swipe = function(obj) {
+    for (var n = 0; n < this.nodes.length; n++) {
+        var node = this.nodes[n];
+        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + obj.fromX;
+        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) - Kirigami.Units.iconSizes.smallMedium / 2 + obj.fromY;
+        var t = touch.createObject(root, {fromX: x, fromY: y, toX: x + obj.toX, toY: y + obj.toY});
+        t.swipe();
+    }
+    return this;
+}
 
 /**
  * Draw a tree of all the elements

@@ -24,41 +24,32 @@ import org.kde.kirigami 2.4 as Kirigami
 Item {
     id: canvas
     anchors.fill: parent;
-    property int px
-    property int py
+    property int fromX
+    property int fromY
+    property int toX
+    property int toY
+    property int dur: 600
 
     Rectangle {
         id: ind
-        x: cursor.x - width / 2
-        y: cursor.y - width / 2 + 5
         z: 1
-        width: Kirigami.Units.iconSizes.small
-        height: width
-        color: "#9911d116"
-        radius: width / 2
+        width: height
+        height: Kirigami.Units.iconSizes.smallMedium
+        color: "#331d99f3"
+        radius: height / 2
         visible: false
+        x: cursor.x
 
         NumberAnimation on width {
             id: indAnim
-            duration: 300
+            duration: dur
             running: false
-
-            onStopped: {
-                ind.visible = false;
-                if (qmlControler) {
-                    qmlControler.click(px, py);
-                }
-                else {
-                   console.error("Can't find qmlControler.");
-                }
-
-            }
         }
     }
 
     Image {
         id: cursor
-        source: "../../img/left_ptr.png"
+        source: "../../img/transform-browse.svg"
         visible: false
         width: Kirigami.Units.iconSizes.smallMedium
         height: Kirigami.Units.iconSizes.smallMedium
@@ -66,43 +57,46 @@ Item {
 
         NumberAnimation on x {
             id: xAnim
-            duration: 1000
+            duration: dur
             running: false
         }
         NumberAnimation on y {
             id: yAnim
             running: false
-            duration: 1000
+            duration: dur
             onStopped: {
-                ind.visible = true;
-                indAnim.to = Kirigami.Units.iconSizes.smallMedium;
-                indAnim.start();
+                timer.start()
             }
         }
     }
 
-
-    // Animate mouse to x/y and then click
-    function click() {
-        cursor.x = px - 60;
-        cursor.y = py + 60;
-        cursor.visible = true;
-
-        xAnim.to = px;
-        xAnim.start();
-        yAnim.to = py;
-        yAnim.start();
+    Timer {
+        id: timer
+        interval: 1000
+        repeat: false
+        running: false
+        onTriggered: {
+            ind.visible = false;
+            cursor.visible = false;
+        }
     }
 
-    function hover() {
-        cursor.x = px;
-        cursor.y = py;
+    // Animate swipe
+    function swipe() {
+        cursor.x = fromX - Kirigami.Units.iconSizes.smallMedium;
+        cursor.y = fromY;
         cursor.visible = true;
-        if (qmlControler) {
-            qmlControler.hover(px, py);
-        }
-        else {
-           console.error("Can't find qmlControler.");
-        }
+
+        ind.y = fromY;
+        ind.visible = true;
+
+        xAnim.to = toX;
+        xAnim.start();
+        yAnim.to = toY;
+        yAnim.start();
+        indAnim.to = Math.abs(fromX - toX);
+        indAnim.start();
+
+        qmlControler.swipe(fromX, fromY, toX, toY);
     }
 }
