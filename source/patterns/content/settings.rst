@@ -34,7 +34,9 @@ How to use
    page slower to use.
 -  Respect the privacy of the users: Always use opt-in, never an opt-out
    model for features that transmit potentially private data (e.g. usage
-   statistics).
+   statistics). See KDE's 
+   `Telemetry Policy <https://community.kde.org/Policies/Telemetry_Policy>`_
+   for details.
 
 Implementation
 --------------
