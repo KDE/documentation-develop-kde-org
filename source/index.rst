@@ -19,6 +19,7 @@ KDE Human Interface Guidelines
    patterns/navigation/index
    resources/about
    resources/contribute
+   resources/glossary
 
 
 .. Indices and tables
