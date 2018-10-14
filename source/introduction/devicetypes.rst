@@ -1,5 +1,5 @@
-Device Type UX
-==============
+Device Types
+============
 
 A Device Type corresponds to the UX Context of a specific user experience (UX).
 So for each Device Type the UX Context and the optimal UX are defined here. An
