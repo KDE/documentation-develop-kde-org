@@ -14,12 +14,6 @@ Device Types
 The KDE HIG defines an optimal user experience for each device type, as
 described in :doc:`devicetypes`.
 
-Some devices are adaptable, e.g. a tablet with a keyboard plugged in, or a
-convertible laptop with only the touchscreen in use. These types of devices
-will require the user interface to adapt as necessary for each usage mode.
-If minimal changes are needed, this can be achieved with a "responsive" design,
-as described in :doc:`responsive`. For more extensive changes, an entirely
-different user interface may paradigm need to be presented.
 
 Common Components
 -----------------
