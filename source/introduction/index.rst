@@ -8,6 +8,7 @@ Introduction
    vision
    architecture
    convergence
+   devicetypeUX
    responsive
    concept
    personas
@@ -16,6 +17,7 @@ Introduction
 * :doc:`vision`
 * :doc:`architecture`
 * :doc:`convergence`
+* :doc:`devicetypeUX`
 * :doc:`responsive`
 * :doc:`concept`
 * :doc:`personas`
