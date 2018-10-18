@@ -19,6 +19,7 @@
 
 import QtQuick 2.2
 import org.kde.kirigami 2.4 as Kirigami
+import QtTest 1.2
 
 // Drawing a brace between to obejcts to show the distance between them
 Item {
@@ -28,7 +29,7 @@ Item {
     property int fromY
     property int toX
     property int toY
-    property int dur: 600
+    property int dur: 300
 
     Rectangle {
         id: ind
@@ -70,9 +71,13 @@ Item {
         }
     }
 
+    TestEvent {
+        id: event
+    }
+
     Timer {
         id: timer
-        interval: 1000
+        interval: 300
         repeat: false
         running: false
         onTriggered: {
@@ -97,6 +102,28 @@ Item {
         indAnim.to = Math.abs(fromX - toX);
         indAnim.start();
 
-        qmlControler.swipe(fromX, fromY, toX, toY);
+        timer.triggered.connect(function() {
+            var sequence = event.touchEvent(canvas);
+            sequence.press(1, canvas, fromX, fromY);
+            sequence.commit();
+
+            sequence.move(1, canvas, toX, toY);
+            sequence.commit();
+        });
+    }
+
+    function touch() {
+        cursor.x = toX;
+        cursor.y = toY;
+        cursor.visible = true;
+        console.log(toX + " " + toY);
+        timer.start()
+        timer.triggered.connect(function() {
+            var sequence = event.touchEvent(canvas);
+            sequence.press(1, canvas,  toX, toY);
+            sequence.commit();
+            sequence.release(1, canvas,  toX, toY);
+            sequence.commit();
+        });
     }
 }

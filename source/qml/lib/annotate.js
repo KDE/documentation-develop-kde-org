@@ -141,6 +141,20 @@ An.prototype.click = function(obj) {
 }
 
 /**
+ * Simulate a touch the nodes
+ */
+An.prototype.touch = function(obj) {
+    for (var n = 0; n < this.nodes.length; n++) {
+        var node = this.nodes[n];
+        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2);
+        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2);
+        var m = touch.createObject(root, {toX: x, toY: y});
+        m.touch();
+    }
+    return this;
+}
+
+/**
  * Simulate a mouse hover on the nodes
  */
 An.prototype.hover = function(opt) {
