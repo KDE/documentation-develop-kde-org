@@ -62,23 +62,35 @@ Breeze Icon Design - Color
 -  Breeze monochrome icons use primarily color #1 and #2 but also use
    other colors to indicate a different state.
 
-   #. |icongrey| :doc:`Icon Grey - Color <color>` used for icons in a normal
+   #. |icongrey| :doc:`Icon Grey - Color <color/index>` used for icons in a normal
       state and non destructive actions e.g.: back, forward, ok, home.
-   #. |iconred| :doc:`Icon Red - Color <color>` used for icons in a normal state
+   #. |iconred| :doc:`Icon Red - Color <color/index>` used for icons in a normal state
       and for destructive actions e.g.: close, delete, remove, stop. 
       Also used in addition with color #1.
-   #. |iconorange| :doc:`Icon Orange - Color <color>` used in addition to 
+   #. |iconorange| :doc:`Icon Orange - Color <color/index>` used in addition to 
       color #1. Used to distinguish icons that involve "user input", also
       used as the color for the "busy" state in IM software.
-   #. |iconblue| :doc:`Icon Blue - Color <color>` used in addition to 
+   #. |iconblue| :doc:`Icon Blue - Color <color/index>` used in addition to 
       color #1. Used to distinguish icons that involve the action "select"
       or "insert".
-   #. |iconyellow| :doc:`Icon Yellow - Color <color>` used in addition to
+   #. |iconyellow| :doc:`Icon Yellow - Color <color/index>` used in addition to
       color #1. Used to distinguish icons that involve a "warning", also 
       used as the color for the "away" state in IM software.
-   #. |icongreen| :doc:`Icon Yellow - Color <color>` used in addition to
+   #. |icongreen| :doc:`Icon Green - Color <color/index>` used in addition to
       color #1. Used to distinguish icons that involve "connected", "secure"
       or "successful" actions.
+
+.. |icongrey| image:: /img/Breeze-icon-grey.svg
+
+.. |iconred| image:: /img/Breeze-icon-red.svg
+
+.. |iconorange| image:: /img/Breeze-icon-orange.svg
+
+.. |iconblue| image:: /img/Breeze-icon-blue.svg
+
+.. |iconyellow| image:: /img/Breeze-icon-yellow.svg
+
+.. |icongreen| image:: /img/Breeze-icon-green.svg
 
 For more technical details of how to use colors in icons see 
 `this blog post <http://notmart.org/blog/2016/05/icon-colors/>`_
