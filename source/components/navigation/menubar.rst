@@ -34,38 +34,41 @@ Behavior
 ~~~~~~~~
 
 -  Do not have more than nine menu categories within a menu bar. Too
-   many categories are overwhelming and make the menu bar difficult to
+   many categories are overwhelming and makes the menu bar difficult to
    use.
 -  Do not put more than 12 items within a single level of a menu. Add
    separators between logical groups within a menu. Organize the menu
    items into groups of seven or fewer strongly related items.
 -  Use these standard menu categories if they apply to your application:
    File, Edit, View, Insert, Format, Tools, Settings, Window, Help.
--  If an application does not have options under one of the standard
-   menu items, do not include it in the menu. At the minimum, all
-   windows should have a File (or File equivalent, such as in the case
+-  If an application would not have any items options under one of the standard
+   menu categories, do not include that category in the menu. At the minimum,
+   all windows should have a File (or File equivalent, such as in the case
    if Konqueror and Amarok) and Help menu.
--  Do not hide the menu bar by default. If configurable, users should
+-  Assign shortcut keys to the most frequently used menu
+   items. Use `KStandardAction <https://api.kde.org/frameworks/kconfigwidgets/html/namespaceKStandardAction.html>`_
+   and `KStandardShortcut <https://api.kde.org/frameworks/kconfig/html/namespaceKStandardShortcut.html>`_ items for common functions, which will
+   result in menu items automatically receiving consistent names, icons, and
+   shortcut keys.
+-  Any tool or function that is accessible using a keyboard shortcut must have
+   an item in the menu bar so that people can discover the shortcut.
+-  Do not hide the menu bar by default. If this is configurable, users should
    easily be able to make the menu bar viewable again.
--  Do not change labels of menu item dynamically.
 
 Appearance
 ~~~~~~~~~~
-
+-  Follow the general :doc:`label-writing guidelines </style/writing/labels>`
+   for menu item labels.
 -  Choose single word names for menu categories. Using multiple words
    makes the separation between categories confusing.
--  Disable menu items that don't apply to the current context, instead
-   of removing them.
--  Assign :doc:`shortcut keys <shortcuts>` to the most frequently used menu items
-   (Ctrl+). For well-known shortcut keys, use standard assignments. Use
-   function keys for commands that have a small-scale effect (F2 =
-   Rename) and ctrl key for large-scale effect (Ctrl+S = Save).
--  Indicate a function that needs additional information (including a
-   confirmation) by adding an ellipsis at the end of the label (e.g.
-   Save as…).
--  Provide menu item icons for the most commonly used menu items.
--  Turning on an item in the menu should always enable the option.
-   Negative options create a double negative which can be confusing. For
-   example, use 'Show hidden files' instead of 'Hide hidden files'.
--  Do not use compound words (e.g. ToolOptions), and hyphens (e.g. Tool-Options)
+-  Disable menu items that don't apply to the current context instead of
+   removing them.
+-  For menu items that toggle some state on or off, always use the positive form 
+   and do not change the text. For example, use the text 'Show hidden files'
+   instead of 'Hide hidden files', and do not change the text when hidden files
+   are shown.
+-  Do not change menu items' labels dynamically.
+-  Do not use compound words (e.g. ToolOptions) or hyphens (e.g. Tool-Options)
    in label names; they make words harder to read and recognize.
+-  Provide icons wherever possible, but do not re-use the same icon for multiple
+   menu items.
