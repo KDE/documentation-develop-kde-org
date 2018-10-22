@@ -6,12 +6,12 @@ User assistance
    :titlesonly:
    :hidden:
 
+   emblem
    inline
    message
    progress
    statusbar
    tooltip
-   emblem
 
 User assistance
 ---------------
@@ -21,11 +21,11 @@ User Assistance guidance considers interface elements that inform users of the a
 Notification
 ~~~~~~~~~~~~
 
+* :doc:`emblem`
 * :doc:`inline`
 * :doc:`message`
 * :doc:`progress`
 * :doc:`statusbar`
-* :doc:`emblem`
 
 Help
 ~~~~

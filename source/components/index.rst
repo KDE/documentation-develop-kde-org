@@ -39,6 +39,7 @@ User Assistance guidance considers interface elements that inform users of the a
 Notification
 ~~~~~~~~~~~~
 
+* :doc:`assistance/emblem`
 * :doc:`assistance/inline`
 * :doc:`assistance/message`
 * :doc:`assistance/progress`
