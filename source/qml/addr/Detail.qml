@@ -143,36 +143,36 @@ Flickable  {
         anchors.leftMargin: Kirigami.Units.largeSpacing
     }
 
-    ListView {
+    Column {
         anchors.top: history.bottom
         anchors.topMargin: Kirigami.Units.largeSpacing
         width: root.width
-        model: root.model.history
-        height: 200
-        interactive: false
+        Repeater {
+            model: root.model.history
 
-        delegate: Kirigami.SwipeListItem {
-            Row {
-                spacing: Kirigami.Units.largeSpacing * 2
-                anchors.verticalCenter: parent.verticalCenter
+            delegate: Kirigami.SwipeListItem {
+                Row {
+                    spacing: Kirigami.Units.largeSpacing * 2
+                    anchors.verticalCenter: parent.verticalCenter
 
-                Kirigami.Icon {
-                    width: Kirigami.Units.iconSizes.smallMedium
-                    height: width
-                    source: model.icon
-                    color: "#232627"
-                    anchors.verticalCenter: parent.verticalCenter
-                }
-                Column {
-                    anchors.verticalCenter: parent.verticalCenter
-                    Label {
-                        text: model.text
+                    Kirigami.Icon {
+                        width: Kirigami.Units.iconSizes.smallMedium
+                        height: width
+                        source: model.icon
                         color: "#232627"
+                        anchors.verticalCenter: parent.verticalCenter
                     }
-                    Label {
-                        text: model.date
-                        font.pointSize: 8
-                        color: "#7f8c8d"
+                    Column {
+                        anchors.verticalCenter: parent.verticalCenter
+                        Label {
+                            text: model.text
+                            color: "#232627"
+                        }
+                        Label {
+                            text: model.date
+                            font.pointSize: 8
+                            color: "#7f8c8d"
+                        }
                     }
                 }
             }
