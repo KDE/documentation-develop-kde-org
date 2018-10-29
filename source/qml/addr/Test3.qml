@@ -20,7 +20,7 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.5 as Kirigami
 import "../models/" as Models
 import "../lib/annotate.js" as A
 
@@ -39,7 +39,7 @@ Kirigami.ApplicationItem {
     pageStack.initialPage: ListPage {
         id: list
     }
-
+    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
     pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
 
     DetailPage {
