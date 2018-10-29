@@ -51,7 +51,7 @@ Flickable  {
                 anchors.verticalCenter: parent.verticalCenter
             }
             Kirigami.Icon {
-                source: "view-barcode"
+                source: "document-share"
                 width: Kirigami.Units.iconSizes.smallMedium
                 height: width
                 anchors.verticalCenter: parent.verticalCenter

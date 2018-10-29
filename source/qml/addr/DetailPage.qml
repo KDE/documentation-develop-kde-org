@@ -43,18 +43,42 @@ Kirigami.ScrollablePage {
         }
         main: Kirigami.Action {
             iconName: "call-start"
-            //onTriggered: d.state = "large"
+            onTriggered: sheet.open()
         }
         right: Kirigami.Action {
             iconName: "kmouth-phrase-new"
         }
     }
 
-    /*contextualActions: [
+    contextualActions: [
         Kirigami.Action {
-            iconName: "edit"
-            text: "Action text"
+            iconName: "favorite"
+            text: "Select as favorite"
+        },
+        Kirigami.Action {
+            iconName: "document-share"
+            text: "Share"
+        },
+        Kirigami.Action {
+            iconName: "document-edit"
+            text: "Edit"
+        },
+        Kirigami.Action {
+            iconName: "edit-image-face-add"
+            text: "Choose photo"
+        },
+        Kirigami.Action {
+            iconName: "im-kick-user"
+            text: "Block number"
+        },
+        Kirigami.Action {
+            iconName: "delete"
+            text: "Delete contact"
+        },
+        Kirigami.Action {
+            iconName: "edit-clear-history"
+            text: "Delete history"
         }
-    ]*/
+    ]
 
 }
