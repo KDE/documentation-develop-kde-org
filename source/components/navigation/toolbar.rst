@@ -1,6 +1,12 @@
 Tool bar
 ========
 
+.. figure:: /img/Actionbutton3.png
+   :figclass: border
+   :alt:  Primary Action Buttons on Desktop
+   
+   Toolbar with the most important actions :doc:`toolbar <toolbar>`
+   
 Purpose
 -------
 

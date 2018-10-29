@@ -30,6 +30,8 @@ Item {
     property int toX
     property int toY
     property int dur: 300
+    property var sequence;
+    property int i: 0
 
     Rectangle {
         id: ind
@@ -83,6 +85,21 @@ Item {
         onTriggered: {
             ind.visible = false;
             cursor.visible = false;
+            swipeTimer.stop();
+        }
+    }
+
+    Timer {
+        id: swipeTimer
+        interval: 30
+        repeat: true
+        running: false
+        onTriggered: {
+            i++;
+            var stepX = (toX - fromX) / timer.interval * swipeTimer.interval
+            var stepY = (toY - fromY) / timer.interval * swipeTimer.interval
+            sequence.move(1, canvas, fromX + i * stepX, toY + i * stepY);
+            sequence.commit();
         }
     }
 
@@ -102,12 +119,14 @@ Item {
         indAnim.to = Math.abs(fromX - toX);
         indAnim.start();
 
-        timer.triggered.connect(function() {
-            var sequence = event.touchEvent(canvas);
-            sequence.press(1, canvas, fromX, fromY);
-            sequence.commit();
+        sequence = event.touchEvent(canvas);
+        sequence.press(1, canvas, fromX, fromY);
+        sequence.commit();
+        i = 0;
+        swipeTimer.start();
 
-            sequence.move(1, canvas, toX, toY);
+        timer.triggered.connect(function() {    
+            sequence.release(1, canvas,  toX, toY);
             sequence.commit();
         });
     }
@@ -116,10 +135,9 @@ Item {
         cursor.x = toX;
         cursor.y = toY;
         cursor.visible = true;
-        console.log(toX + " " + toY);
         timer.start()
         timer.triggered.connect(function() {
-            var sequence = event.touchEvent(canvas);
+            sequence = event.touchEvent(canvas);
             sequence.press(1, canvas,  toX, toY);
             sequence.commit();
             sequence.release(1, canvas,  toX, toY);

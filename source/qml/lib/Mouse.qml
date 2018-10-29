@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.2
+import QtTest 1.2
 import org.kde.kirigami 2.4 as Kirigami
 
 // Drawing a brace between to obejcts to show the distance between them
@@ -26,13 +27,14 @@ Item {
     anchors.fill: parent;
     property int px
     property int py
+    z: 2
 
     Rectangle {
         id: ind
         x: cursor.x - width / 2
         y: cursor.y - width / 2 + 5
-        z: 1
-        width: Kirigami.Units.iconSizes.small
+        z: 2
+        width: Kirigami.Units.iconSizes.medium
         height: width
         color: "#9911d116"
         radius: width / 2
@@ -45,38 +47,38 @@ Item {
 
             onStopped: {
                 ind.visible = false;
-                if (qmlControler) {
-                    qmlControler.click(px, py);
-                }
-                else {
-                   console.error("Can't find qmlControler.");
-                }
-
+                event.mouseClick(canvas.parent, px, py, Qt.LeftButton, Qt.NoModifier, 0)
             }
         }
     }
+
+    TestEvent {
+        id: event
+    }
+
 
     Image {
         id: cursor
         source: "../../img/left_ptr.png"
         visible: false
-        width: Kirigami.Units.iconSizes.smallMedium
-        height: Kirigami.Units.iconSizes.smallMedium
-        z: 2
+        width: Kirigami.Units.iconSizes.medium
+        height: Kirigami.Units.iconSizes.medium
+        z: 3
 
-        NumberAnimation on x {
-            id: xAnim
-            duration: 1000
+        ParallelAnimation {
             running: false
-        }
-        NumberAnimation on y {
-            id: yAnim
-            running: false
-            duration: 1000
-            onStopped: {
-                ind.visible = true;
-                indAnim.to = Kirigami.Units.iconSizes.smallMedium;
-                indAnim.start();
+            id: cursorAnimation
+            NumberAnimation {
+                id: cursorAnimationX
+                target: cursor
+                property: "x"
+                duration: 1000
+            }
+            NumberAnimation {
+                id: cursorAnimationY
+                target: cursor
+                property: "y"
+                duration: 1000
             }
         }
     }
@@ -88,21 +90,28 @@ Item {
         cursor.y = py + 60;
         cursor.visible = true;
 
-        xAnim.to = px;
-        xAnim.start();
-        yAnim.to = py;
-        yAnim.start();
+        cursorAnimation.onStopped.connect(function() {
+            ind.visible = true;
+            indAnim.to = Kirigami.Units.iconSizes.smallMedium;
+            indAnim.start();
+        });
+
+        cursorAnimationX.to = px;
+        cursorAnimationY.to = py;
+        cursorAnimation.start();
     }
 
     function hover() {
-        cursor.x = px;
-        cursor.y = py;
+        cursor.x = px - 60;
+        cursor.y = py + 60;
         cursor.visible = true;
-        if (qmlControler) {
-            qmlControler.hover(px, py);
-        }
-        else {
-           console.error("Can't find qmlControler.");
-        }
+
+        cursorAnimation.onStopped.connect(function() {
+            event.mouseMove(canvas.parent, px, py, 0, Qt.NoButton);
+        });
+
+        cursorAnimationX.to = px;
+        cursorAnimationY.to = py;
+        cursorAnimation.start();
     }
 }
