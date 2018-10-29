@@ -129,11 +129,16 @@ An.prototype.eq = function(n) {
 /**
  * Simulate a mouse click on the nodes
  */
-An.prototype.click = function(obj) {
+An.prototype.click = function(opt) {
+    var options = getOpts({
+        x: 0,
+        y: 0
+    }, opt);
+
     for (var n = 0; n < this.nodes.length; n++) {
         var node = this.nodes[n];
-        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2);
-        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2);
+        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + options.x;
+        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) + options.y;
         var m = mouse.createObject(root, {px: x, py: y});
         m.click();
     }
@@ -143,11 +148,16 @@ An.prototype.click = function(obj) {
 /**
  * Simulate a touch the nodes
  */
-An.prototype.touch = function(obj) {
+An.prototype.touch = function(opt) {
+    var options = getOpts({
+        x: 0,
+        y: 0
+    }, opt);
+
     for (var n = 0; n < this.nodes.length; n++) {
         var node = this.nodes[n];
-        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2);
-        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2);
+        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + options.x;
+        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) + options.y;
         var m = touch.createObject(root, {toX: x, toY: y});
         m.touch();
     }
@@ -176,12 +186,19 @@ An.prototype.hover = function(opt) {
 /**
  * Simulate a touch
  */
-An.prototype.swipe = function(obj) {
+An.prototype.swipe = function(opt) {
+    var options = getOpts({
+        fromX: 0,
+        fromY: 0,
+        toX: 0,
+        toY: 0
+    }, opt);
+
     for (var n = 0; n < this.nodes.length; n++) {
         var node = this.nodes[n];
-        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + obj.fromX;
-        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) - Kirigami.Units.iconSizes.smallMedium / 2 + obj.fromY;
-        var t = touch.createObject(root, {fromX: x, fromY: y, toX: x + obj.toX, toY: y + obj.toY});
+        var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + options.fromX;
+        var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) - Kirigami.Units.iconSizes.smallMedium / 2 + options.fromY;
+        var t = touch.createObject(root, {fromX: x, fromY: y, toX: x + options.toX, toY: y + options.toY});
         t.swipe();
     }
     return this;

@@ -15,6 +15,14 @@ structures (e.g. home > documents > business). It provides information about
 the current position within the hierarchy, and offers shortcut links to jump
 to previous positions without using the Back button.
 
+.. raw:: html
+
+   <video src="https://cdn.kde.org/hig/video/20181026-1/Breadcrumb1.webm" 
+   loop="true" playsinline="true" width="320" controls="true" 
+   onended="this.play()" class="border"></video>
+
+Use of breadcrumb navigation in Plasma Mobile.
+
 When to use
 -----------
 
