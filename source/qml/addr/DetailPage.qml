@@ -40,13 +40,16 @@ Kirigami.ScrollablePage {
     actions {
         left: Kirigami.Action {
             iconName: "mail-message"
+            text: "Write mail"
         }
         main: Kirigami.Action {
             iconName: "call-start"
+            text: "Make call"
             onTriggered: sheet.open()
         }
         right: Kirigami.Action {
             iconName: "kmouth-phrase-new"
+            text: "Write SMS"
         }
     }
 

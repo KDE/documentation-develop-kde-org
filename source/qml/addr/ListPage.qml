@@ -61,6 +61,7 @@ Kirigami.ScrollablePage {
     actions {
         main: Kirigami.Action {
             iconName: "contact-new"
+            text: "Create contact"
         }
         /*right: Kirigami.Action {
             iconName: "system-search"
