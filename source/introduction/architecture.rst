@@ -29,6 +29,14 @@ Use Qt Widgets only if you plan to develop a desktop-only application with a com
 
    Discover, a convergent application build using Kirigami
 
+.. hint::
+   |devicon| To test qml scenes use
+   
+   * ``QT_QUICK_CONTROLS_MOBILE=1`` and ``QT_QUICK_CONTROLS_STYLE=Plasma``
+     for mobile
+   * ``QT_QUICK_CONTROLS_MOBILE=0`` and 
+     ``QT_QUICK_CONTROLS_STYLE=org.kde.desktop`` for desktop
+
 Plasma Workspace
 ----------------
 Plasma is built on widgets, allowing you to move, mix, add, and remove just about everything to perfect your personal workflow. Use `plasma components v3 <https://api.kde.org/frameworks/plasma-framework/html/plasmacomponents.html>`_ to develop widgets for the Plasma Mobile and Plasma Desktop workspace.
