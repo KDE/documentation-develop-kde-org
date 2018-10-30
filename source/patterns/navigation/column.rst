@@ -15,9 +15,11 @@ Examples of column-based navigation in a phone and a desktop UI
    :alt: Column-based navigation on the desktop
    :scale: 40%
 
-.. image:: /img/PageRow.png
-   :alt: Column-based navigation on mobile
-   :scale: 20%
+.. raw:: html
+
+   <video src="https://cdn.kde.org/hig/video/20181031-1/Column1.webm" 
+   loop="true" playsinline="true" width="320" controls="true" 
+   onended="this.play()" class="border"></video>
 
 When to use
 -----------
