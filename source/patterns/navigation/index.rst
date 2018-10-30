@@ -1,5 +1,5 @@
-Navigation Pattern
-==================
+Navigation patterns
+===================
 
 .. toctree::
    :maxdepth: 1
