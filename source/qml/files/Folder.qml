@@ -60,7 +60,6 @@ Kirigami.ScrollablePage {
 
         delegate: Kirigami.BasicListItem {
             onClicked: {
-                console.log(list.currentIndex)
                 pageroot.pageStack.push(Qt.resolvedUrl("Folder.qml"), {"pagemodel": pagemodel.subfolder.get(index), "pageroot": pageroot});
             }
 

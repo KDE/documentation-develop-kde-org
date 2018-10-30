@@ -53,7 +53,29 @@ ListModel {
                     }, {
                         "firstname": "Santiago",
                         "lastname": "Thorne",
-                        "image": "SantiagoFace.jpg"
+                        "image": "SantiagoFace.jpg",
+                        "communication": [{
+                                "icon": "call-start",
+                                "type": "phone",
+                                "text": "+12 34 1234 5678",
+                                "description": "Mobile private",
+                                "default": true,
+                                "actions": [{
+                                        "icon": "kmouth-phrase-new",
+                                        "text": "SMS"
+                                    }]
+                            }, {
+                                "icon": "",
+                                "type": "phone",
+                                "text": "+12 34 1234 5678",
+                                "description": "VOIP"
+                            }, {
+                                "type": "email",
+                                "icon": "mail-message",
+                                "text": "susan@kde.org",
+                                "default": true,
+                                "description": "E-Mail private"
+                            }]
                     }, {
                         "firstname": "Susan",
                         "lastname": "Hoffman",
