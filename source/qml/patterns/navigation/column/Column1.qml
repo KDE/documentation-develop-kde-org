@@ -70,7 +70,16 @@ Kirigami.ApplicationItem {
         running: true
         onTriggered: {
             var b = new A.An(root);
-            b.find("pagerowglobaltoolbarui").find("heading").first().touch();
+            b.swipe({fromX: -100, toX: 250});
+        }
+    }
+    Timer {
+        interval: 11000
+        repeat: false
+        running: true
+        onTriggered: {
+            var b = new A.An(root);
+            b.swipe({fromX: -50, toX: -100});
         }
     }
 }
