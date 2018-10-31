@@ -25,16 +25,16 @@ import QtGraphicalEffects 1.0
 import "../lib/" as HIG
 
 
-Flickable  {
+Item  {
     id: root
     property var model;
+    height: childrenRect.height
 
-    HIG.Header {
+    /*HIG.Header {
         id: header
         content.anchors.leftMargin: Kirigami.Units.largeSpacing
         content.anchors.topMargin: Kirigami.Units.largeSpacing
         content.anchors.bottomMargin: Kirigami.Units.largeSpacing
-        //status: root.contentY == 0 ? 1 : Math.min(1, Math.max(2 / 11, 1 - root.contentY / Kirigami.Units.gridUnit))
         source: "../../img/" + model.image
 
 
@@ -57,12 +57,21 @@ Flickable  {
             color: "#fcfcfc"
             font.pointSize: 12
         }
+    }*/
+
+    Label {
+        id: header
+        text: "Edit details"
+        font.pointSize: 16
     }
 
     Kirigami.FormLayout {
+        id: form
         anchors.top: header.bottom
         anchors.topMargin: Kirigami.Units.largeSpacing
         width: root.width
+
+
 
         TextField {
             Kirigami.FormData.label: "Firstname:"
@@ -73,6 +82,7 @@ Flickable  {
             text: model.lastname
         }
         Kirigami.Separator {
+            Kirigami.FormData.isSection: true
             Kirigami.FormData.label: "Phone"
         }
         Repeater {
@@ -84,6 +94,7 @@ Flickable  {
             }
         }
         Kirigami.Separator {
+            Kirigami.FormData.isSection: true
             Kirigami.FormData.label: "Email"
         }
         Repeater {
@@ -94,6 +105,21 @@ Flickable  {
                 text: model.text
             }
         }
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+        }
+
+        Switch {
+            Kirigami.FormData.label: "Additional fields"
+        }
+
+    }
+    Button {
+        text: "Save"
+        anchors.top: form.bottom
+        anchors.right: parent.right
+        anchors.rightMargin: Kirigami.Units.largeSpacing
+        anchors.topMargin: 4 * Kirigami.Units.largeSpacing
     }
 
 }

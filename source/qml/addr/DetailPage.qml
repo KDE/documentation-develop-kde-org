@@ -35,6 +35,12 @@ Kirigami.ScrollablePage {
 
     Detail {
         model: page.model
+        onEditClicked: form.open();
+    }
+
+    FormPage {
+        id: form
+        model: page.model
     }
 
     actions {
@@ -83,5 +89,4 @@ Kirigami.ScrollablePage {
             text: "Delete history"
         }
     ]
-
 }

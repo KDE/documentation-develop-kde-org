@@ -21,29 +21,35 @@ import QtQuick 2.6
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
-import "../models/" as Models
-import "../lib/annotate.js" as A
+import "../../../models/" as Models
+import "../../../addr/" as Addr
+import "../../../lib/annotate.js" as A
 
 Kirigami.ApplicationItem {
-    width: 320
+    width: 800
     height: 600
     id: root
 
     property var mydata : Models.Contacts {
         Component.onCompleted: {
-            detail.model =  mydata.get(3)
+            detail.model =  mydata.get(0)
             detail.visible = true
         }
     }
 
-    pageStack.initialPage: ListPage {
+    pageStack.initialPage: Addr.ListPage {
         id: list
+        onCurrentIndexChanged: {
+            detail.model =  mydata.get(list.currentIndex)
+            root.pageStack.push(detail)
+            detail.visible = true
+        }
     }
 
-    pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
+     pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
+    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
 
-    DetailPage {
+    Addr.DetailPage {
         id: detail
         visible: false
     }
@@ -52,41 +58,27 @@ Kirigami.ApplicationItem {
         id: contextDrawer
      }
 
-    /*globalDrawer: Kirigami.GlobalDrawer {
-        actions: [Kirigami.Action {
-                iconName: "call-start"
-            },
-            Kirigami.Action {
-                iconName: "mail-message"
-            }
-        ]
-    }*/
-
     Component.onCompleted: {
         root.pageStack.push(detail)
     }
 
 
-
     // HACK
     Timer {
-        interval: 2000
+        interval: 1000
         repeat: false
         running: true
         onTriggered: {
-            var a = new A.An(list);
-             //a.find("swipelistitem").eq(3).swipe({fromX: +140, fromY: 0, toX: -80, toY: 0});
-            //a.find("swipelistitem").eq(3).find("qquickimage").touch();
+            var a = new A.An(detail);
+            a.find("abstractpageheader").find("privateactiontoolbutton").last().click();
         }
     }
-
     Timer {
         interval: 5000
         repeat: false
         running: true
         onTriggered: {
-            var b = new A.An(root);
-            //b.find("pagerowglobaltoolbarui").find("heading").first().touch();
+            qmlControler.start();
         }
     }
 }

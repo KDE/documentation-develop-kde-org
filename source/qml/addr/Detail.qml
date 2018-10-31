@@ -28,6 +28,7 @@ import "../lib/" as HIG
 Flickable  {
     id: root
     property var model;
+    signal editClicked()
 
     HIG.Header {
         id: header
@@ -61,6 +62,10 @@ Flickable  {
                 width: Kirigami.Units.iconSizes.smallMedium
                 height: width
                 anchors.verticalCenter: parent.verticalCenter
+                MouseArea {
+                    onClicked: root.editClicked()
+                    anchors.fill: parent
+                }
             }
         }
 

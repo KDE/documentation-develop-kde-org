@@ -22,12 +22,10 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
 
-Kirigami.ScrollablePage {
+Kirigami.OverlaySheet {
     property var model;
-    visible: false
-    id: page
-    title: "Edit"
     Kirigami.Theme.colorSet: Kirigami.Theme.View
+    id: page
 
     background: Rectangle {
         color: Kirigami.Theme.backgroundColor
@@ -37,7 +35,7 @@ Kirigami.ScrollablePage {
         model: page.model
     }
 
-    actions {
+    /*actions {
         main: Kirigami.Action {
             iconName: "dialog-ok-apply"
             //onTriggered: d.state = "large"
