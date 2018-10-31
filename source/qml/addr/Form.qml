@@ -25,10 +25,10 @@ import QtGraphicalEffects 1.0
 import "../lib/" as HIG
 
 
-Item  {
+ColumnLayout  {
     id: root
     property var model;
-    height: childrenRect.height
+    spacing: 2 * Kirigami.Units.largeSpacing
 
     /*HIG.Header {
         id: header
@@ -67,11 +67,7 @@ Item  {
 
     Kirigami.FormLayout {
         id: form
-        anchors.top: header.bottom
-        anchors.topMargin: Kirigami.Units.largeSpacing
         width: root.width
-
-
 
         TextField {
             Kirigami.FormData.label: "Firstname:"
@@ -116,10 +112,8 @@ Item  {
     }
     Button {
         text: "Save"
-        anchors.top: form.bottom
         anchors.right: parent.right
         anchors.rightMargin: Kirigami.Units.largeSpacing
-        anchors.topMargin: 4 * Kirigami.Units.largeSpacing
     }
 
 }
