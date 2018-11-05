@@ -50,3 +50,119 @@ You only need to install Sphinx, if you want to preview changes on your local ma
 #. ``cd hig-kde-org.git``
 #. Run ``make html`` to create the HTML pages
 #. Open ``build/html/index.html`` in your browser
+
+Page structure
+--------------
+
+This defines the structure that should be used for writing pattern and 
+component pages for the HIG.
+
+Pattern
+^^^^^^^
+
+::
+    
+    Pattern name
+    ==============
+    
+    Give a short into into the pattern.
+    
+    Examples
+    --------
+    
+    Showcase the pattern with videos or images.
+    
+    When to use
+    -----------
+    
+    Describe when to use this pattern and when not to use it.
+    
+    How to use
+    ----------
+    
+    Describe how to use this pattern.
+    
+Pages about patterns should not include any details on implementation, about 
+behavior or appearance, but rather link to the corresponding components needed 
+to implement a pattern.
+
+Optional you can add subsections for desktop and mobile
+
+::
+
+    When to use
+    -----------
+    
+    Desktop
+    ^^^^^^^
+    
+    Mobile
+    ^^^^^^
+
+Component
+^^^^^^^^^
+
+::
+
+    Component name
+    ==============
+
+    Purpose
+    -------
+    
+    A very short description on why and how to use the component. This should 
+    primarily link to the corresponding pattern pages.
+    
+    Example
+    -------
+    
+    Showcase the component with a video or image.
+    
+    Guidelines
+    ----------
+
+    Is this the right control
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    Describe when to use a component and when not.
+    
+    Behavior
+    ~~~~~~~~
+    
+    Describe the behavior of the component.
+    
+    Appearance
+    ~~~~~~~~~~
+
+    Describe the appearance of the component.
+    
+    Code
+    ----
+    
+    Kirigami
+    ~~~~~~~~
+    
+    Example code how to use the component with QML and Kirigami.
+    
+    Qt Widgets
+    ~~~~~~~~~~
+    
+    Example code how to use the component with Qt Widgets.
+    
+    API
+    ~~~
+    
+    Link to KDE and Qt API pages.
+    
+Optional you can add subsections for desktop and mobile
+
+::
+
+    Behavior
+    ~~~~~~~~
+    
+    Desktop
+    """""""
+    
+    Mobile
+    """"""
