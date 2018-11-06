@@ -86,7 +86,7 @@ Pages about patterns should not include any details on implementation, about
 behavior or appearance, but rather link to the corresponding components needed 
 to implement a pattern.
 
-Optional you can add subsections for desktop and mobile
+Optional: you can add subsections for desktop and mobile.
 
 ::
 
@@ -154,7 +154,7 @@ Component
     
     Link to KDE and Qt API pages.
     
-Optional you can add subsections for desktop and mobile
+Optional: you can add subsections for desktop and mobile.
 
 ::
 
