@@ -20,11 +20,12 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
+import QtQuick.Controls 1.4
 import org.kde.kirigami 2.5 as Kirigami
 import "../models/" as Models
 import "../lib/annotate.js" as A
 
-Kirigami.ApplicationItem {
+Kirigami.ApplicationWindow {
     width: 800
     height: 600
     id: root
@@ -45,6 +46,25 @@ Kirigami.ApplicationItem {
     DetailPage {
         id: detail
         visible: false
+    }
+
+    globalDrawer: Kirigami.GlobalDrawer {
+        actions: [Kirigami.Action {
+                text: "Import"
+            },
+            Kirigami.Action {
+                text: "Export"
+            },
+            Kirigami.Action {
+                text: "Merge contacts"
+            },
+            Kirigami.Action {
+                text: "Search dupplicate contacts"
+            },
+            Kirigami.Action {
+                text: "Settings"
+            }
+        ]
     }
 
     Component.onCompleted: {
