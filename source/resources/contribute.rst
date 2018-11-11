@@ -26,30 +26,22 @@ If you are new to KDE devlopment, make sure to read `how to become a kde develop
 
 Getting started
 ---------------
-#. Install git with your distro's package manager
+#. Install some tools with your distro's package manager:
 
-   * openSuse ``sudo zypper in git``
-   * Debian/Ubuntu/KDE Neon ``sudo apt install git``
-
-#. Clone HIG repositories into an empty folder
-   ``git clone https://anongit.kde.org/websites/hig-kde-org.git``
-
-Now you are ready to contribute to the HIG!
-
-Spinx
-^^^^^
-You only need to install Sphinx, if you want to preview changes on your local machine.
-
-#. Install Spinx with your distro's package manager
-
-   * openSuse ``sudo zypper in git python3-Sphinx python3-sphinx_rtd_theme``
-   * Debian/Ubuntu/KDE Neon ``sudo apt install git build-essential python3-sphinx python3-sphinx-rtd-theme``
+   * Arch/Antergos/Manjaro: ``sudo pacman -S git python-sphinx python-sphinx_rtd_theme``
+   * Debian/Ubuntu/Kubuntu/KDE Neon: ``sudo apt install git build-essential python3-sphinx python3-sphinx-rtd-theme``
+   * openSUSE: ``sudo zypper in git python3-Sphinx python3-sphinx_rtd_theme``
 
 #. Clone HIG repositories into an empty folder
    ``git clone https://anongit.kde.org/websites/hig-kde-org.git``
-#. ``cd hig-kde-org.git``
+
+Now you are ready to contribute to the HIG! To preview changes on your local
+machine, do the following:
+
+#. ``cd`` to your git checkout of the HIG repository
 #. Run ``make html`` to create the HTML pages
-#. Open ``build/html/index.html`` in your browser
+#. Open ``build/html/index.html`` in your browser (e.g. run
+   ``firefox build/html/index.html``)
 
 Page structure
 --------------
