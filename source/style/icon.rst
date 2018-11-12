@@ -1,397 +1,389 @@
-Icons
-=====
+Icon Design
+===========
 
 Purpose
 -------
 
-Icons are pictorial representations of functions and objects. Icons are
-important not only for aesthetic reasons as part of the visual identity of a
-program, but also for utilitarian reasons. They are a shorthand for
-conveying meaning that users perceive almost instantaneously.
-Well-designed icons improve the visual communication and strongly impact
-users' overall impression of visual design. Icons are space-saving
-mechanisms and improve usability by making programs, objects, and
-actions easier to identify and learn. Icon use should be consistent
-throughout the interface.
+Icons are pictorial representations of functions and objects. They convey
+meaning that users perceive almost instantaneously and are an important part of
+a program's visual identity.
 
-Guidelines
-----------
+Well-designed icons strongly impact users' overall impression of the design.
+Consistent use of icons also improves usability by making programs, objects,
+and actions easier to identify and learn.
 
--  Design icons with a small number of metaphors [1].
+If you would like to request help designing icons for your application, you can
+ask the `KDE Visual Design Group <https://community.kde.org/Get_Involved/design#Communication_and_workflow>`_ for help.
 
-   -  Apply metaphors only once (e.g. do not use a brush twice for
-      different options).
-   -  Rethink conventionally used metaphors (e.g. the clipboard icon of
-      paste).
-   -  Antiquated metaphors might work well (e.g. a floppy disk is not
-      necessarily outdated to represent save).
-   -  Adjust the degree of abstractness according to familiarity of the
-      metaphor.
-   -  Use arrows only if they can easily be related to spatial features
-      such as *Previous/Next* in a sequence or *Up/Down* in a hierarchy.
-      Avoid using arrows metaphorically (such as for *Reply/Forward* or
-      *Undo/Redo*).
-   -  Use metaphors understandable independent of language and culture.
-   -  Simplify your icons.
 
--  Icons that lose details when shrunk may need a special version that
-   preserves meaning even at smaller sizes. Critical details may become
-   unrecognizable when scaled down.
--  Avoid using text in icon designs; it may not scale well to smaller
-   sizes.
--  Icons of a similar type share a consistent visual language
-   (mimetypes, folders, devices, etc.).
--  Follow the guidelines for presenting 
-   :doc:`icons with text </patterns/content/iconandtext>`
--  Test your icon set on strength of association, discriminatory power,
-   conspicuousness, and, if applicable, on accessibility.
 
-Breeze Icon Design - Color
-~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Monochrome Icons**
+General Guidelines
+------------------
 
-.. image:: /img/HIGMonoIcons.png
-   :alt: Monochome icons
-
--  Used for application toolbar and button actions, menus, sidebars and
-   status and notifications. Also may be used for small (16x16) devices
-   and places icons (folders, usb drives, etc.).
--  Rely on a distinct shapes instead of fine details to distinguish
-   between them.
--  Breeze monochrome icons use primarily color #1 and #2 but also use
-   other colors to indicate a different state.
-
-   #. |icongrey| :doc:`Icon Grey - Color <color/index>` used for icons in a normal
-      state and non destructive actions e.g.: back, forward, ok, home.
-   #. |iconred| :doc:`Icon Red - Color <color/index>` used for icons in a normal state
-      and for destructive actions e.g.: close, delete, remove, stop. 
-      Also used in addition with color #1.
-   #. |iconorange| :doc:`Icon Orange - Color <color/index>` used in addition to 
-      color #1. Used to distinguish icons that involve "user input", also
-      used as the color for the "busy" state in IM software.
-   #. |iconblue| :doc:`Icon Blue - Color <color/index>` used in addition to 
-      color #1. Used to distinguish icons that involve the action "select"
-      or "insert".
-   #. |iconyellow| :doc:`Icon Yellow - Color <color/index>` used in addition to
-      color #1. Used to distinguish icons that involve a "warning", also 
-      used as the color for the "away" state in IM software.
-   #. |icongreen| :doc:`Icon Green - Color <color/index>` used in addition to
-      color #1. Used to distinguish icons that involve "connected", "secure"
-      or "successful" actions.
-
-.. |icongrey| image:: /img/Breeze-icon-grey.svg
-
-.. |iconred| image:: /img/Breeze-icon-red.svg
-
-.. |iconorange| image:: /img/Breeze-icon-orange.svg
-
-.. |iconblue| image:: /img/Breeze-icon-blue.svg
-
-.. |iconyellow| image:: /img/Breeze-icon-yellow.svg
-
-.. |icongreen| image:: /img/Breeze-icon-green.svg
-
-For more technical details of how to use colors in icons see 
-`this blog post <http://notmart.org/blog/2016/05/icon-colors/>`_
-
-**Colorful icons**
-
-.. image:: /img/Sample_color_icons.png
-   :alt: Colorful icons
-
--  Use colorful icons for applications, folders, mimetypes and devices.
--  For Breeze icons, use colors from the `full Breeze color palette`_ as
-   a starting point.
--  Breeze icons use smooth linear gradients (bottom to top/dark to
-   light); they are not flat.
--  Application icons should be unique and easily recognizable.
--  When creating an system icon theme, respect trademarks by avoiding
-   significant alterations to application icons.
-
-Breeze Icon Design - Sizes
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Breeze icons come in a variety of sizes depending on their context. The
-following lists the current sizes in use:
-
--  Breeze/
-
-   -  actions/
-
-      -  toolbar/ - 22x22
-      -  toolbar-small/ - 16x16
-
-   -  apps/
-
-      -  preferences/ - 32x32
-      -  software/ - 48x48
-      -  software-medium/ - 22x22
-      -  software-small/ - 16x16
-      -  system-power-actions/ - 48x48
-      -  system-session-actions / - 48x48
-
-   -  categories/
-
-      -  start-menu/ - 32x32
-      -  start-menu-small/ - not used in Plasma
-
-   -  devices/
-
-      -  hardware/ - 48x48
-      -  sidebars/ - 16x16
-
-   -  mimetypes/
-
-      -  file-types/ - 64x64
-      -  file-types-small/ - 16x16
-
-   -  status/
-
-      -  dialogs/ - 64x64
-      -  im-status/ - 16x16
-      -  panel/ - 22x22
-
-   -  places/
-
-      -  user-folders/ - 64x64
-      -  user-folders-small/ - 16x16
-
-Breeze Icon Design - Basics
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-There are two main styles for Breeze icons. When creating a new icon for
-Breeze make sure to follow these rules as it's important to keep
-consistency within all the elements in the theme. With Breeze we'd like
-to keep things simple, most monochromatic icons must fit within a
-squared area set by guides though the graphics don't need to be squares
-themselves. Icons should be pixel perfect, this simply means that all
-objects must be aligned to the grid (as in the Inkscape grid), this
-results in crisp icons once in use.
-
-.. image:: /img/Breeze-icon-design-1.png
-   :alt: A pixel perfect icon on the canvas.
-
-.. image:: /img/Breeze-icon-design-2.png
-   :alt: A pixel perfect icon in the app.
-
-*A pixel perfect icon. On the canvas and in the app.*
-
-In the above list, we have the sizes for the icons set up. However, the
-icons, or rather, the graphics themselves do not fill the entirety of
-the canvas (the document/workspace). Everyday objects may not always fit
-the canvas area or be perfectly aligned to the canvas or pixels. As a
-designer, you may choose to use everyday objects in your icons to make
-them memorable and recognizable. However, keep a correct aspect ratio of
-the final graphic and what it should represent.
-
-.. image:: /img/Breeze-icon-design-3.png
-   :alt: Newspaper icon
-
-.. image:: /img/Breeze-icon-design-4.png
-   :alt: Envelope icon
-
-*A newspaper icon can perfectly fit within the set area of the guides.
-But not an envelope.*
-
-As you see in the images above we have guides in place, this is so that
-the graphics you see in the apps are all at the same height though some
-may have a different width. The guides are in place for all the icons,
-the image below illustrates this:
+-  Use icons from the system icon theme whenever possible. Avoid using custom
+   icons. New icons should be added to an icon theme.
+-  Design icons with a small number of metaphors that are understandable
+   independent of language and culture. Apply metaphors only once (e.g. do not
+   use a brush twice for different actions).
+-  Simplify, but don't go overboard. Breeze icons are **not** "flat".
+-  Avoid using text in icon designs; it cannot be localized and tends to look
+   bad at small sizes.
+-  Many icons come in multiple sizes. Each version should be visually optimized
+   and pixel-perfect for its particular size. Larger sizes offer more
+   opportunity for detail and visual pizazz, while smaller version should be
+   stripped of everything not absolutely necessary.
+-  Breeze icons always have some padding:
 
 .. image:: /img/Breeze-icon-design-5.png
    :alt: Canvas and graphic sizes
 
-*Visual representation of the area defined by the guides. Icons don't
-necessarily have to be squares, they simply need to have a proper aspect
-ratio. Vertically aligned icons are narrower but have the same height as
-wider icons.*
 
-.. image:: /img/Breeze-icon-design-6.png
-   :alt: Narrow icon
 
-.. image:: /img/Breeze-icon-design-7.png
-   :alt: Wide icon
 
-*Whether the graphics are narrower they have the same height. Placed in
-a taskbar or a dock this results in a seamless app list presentation.*
+Monochrome icon style
+---------------------
+.. image:: /img/HIGMonoIcons.png
+   :alt: Monochrome icons
 
-Breeze Icon Design - for 22 and 16 px
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Many Breeze icons employ a monochrome art style for their small 16px and 22px
+versions. This style should be avoided for icons larger than 22px. The
+monochrome style relies on distinct shapes and outlines instead of fine details
+and vibrant colors, and employs an intentionally limited color palette:
 
-These are the simplest of icons in terms of labor. When doing these
-icons check the file index.theme located in the root of the Breeze
-folder for hints of where the icon will be used.
+   #. |shadeblack| :doc:`Shade Black <color/index>`: Used for icons in a
+      normal state and non-destructive actions: back, forward, ok, home, etc.
+      This is the most commonly used color. When in doubt, choose Shade Black.
+   #. |iconred| :doc:`Icon Red<color/index>`: Used for icons that depict
+      actions: delete, remove, stop, etc.
+   #. |bewareorange| :doc:`Beware Orange <color/index>`: Used for icons that
+      involve user input of some kind.
+   #. |plasmablue| :doc:`Plasma Blue <color/index>`: Used for icons that
+      involve the action "select" or "insert".
+   #. |iconyellow| :doc:`Icon Yellow <color/index>`: Used for icons that
+      involve a "warning" state or some sort.
+   #. |noblefir| :doc:`Noble Fir <color/index>`: Used to for icons that
+      involve "connected", "secure" or "successful" actions.
 
--  These icons don't have any details other than their shapes.
+.. |shadeblack| image:: /img/Breeze-shade-black.svg
 
-Icons in these sizes use 1 px strokes and sometimes fill on some areas
-depending on the graphic.
+.. |iconred| image:: /img/Breeze-icon-red.svg
+
+.. |bewareorange| image:: /img/Breeze-beware-orange.svg
+
+.. |plasmablue| image:: /img/Breeze-plasma-blue.svg
+
+.. |iconyellow| image:: /img/Breeze-icon-yellow.svg
+
+.. |noblefir| image:: /img/Breeze-noble-fir.svg
+
+Because monochrome icons are so small and simple, it is important that they be
+pixel-perfect, with their lines and objects aligned to a regular grid:
+
+.. image:: /img/Breeze-icon-design-3.png
+   :alt: Newspaper icon
+
+.. image:: /img/Breeze-icon-design-1.png
+   :alt: A pixel-perfect icon on the canvas.
+
+.. image:: /img/Breeze-icon-design-2.png
+   :alt: A pixel-perfect icon in the app.
+
+*Pixel-perfect icons: On the canvas and in the app*
+
+Because monochrome icons usually depict actions, many include status or action
+emblems. These are always located in the bottom-right corner. The emblem should
+be a minimum of 5px wide and tall, and there must be 1px of blank space between
+the emblem and the rest of the icon.
 
 .. image:: /img/Breeze-icon-design-8.png
-   :alt: Design for a 22px or 16px icon
+   :alt: Design for a 22px or 16px icon with an emblem in the bottom-right corner
 
-*Mix of 1 px strokes and fill areas plus symbol indicating an action or
-status.*
+*A perfect monochrome icon with an emblem in the corner*
 
-Generally when adding symbols to graphics such as "+", "-", etc. they
-should be placed at the bottom right corner of the bigger graphic and
-there must be 1 px of blank space between each element.
 
--  The symbol should have a size of 5 px minimum.
 
-Breeze Icon Design - 32 and 48 px
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Most of the icons this size (32 px) were used for System Settings but
-they're also used by Kickoff for the app categories. These icons make
-use of smooth, vibrant, fresh and aligned elements colored by gradients
-and they mostly consist of three parts: a background, a front symbol and
-a long shadow.
+Colorful icon style
+-------------------
+.. image:: /img/Sample_color_icons.png
+   :alt: Colorful icons
 
-.. image:: /img/Breeze-icon-design-9.png
-   :alt: Different icons at a size of 32px
+Colorful Breeze icons make full use the
+:doc:`Breeze color palette <color/index>`. They are **not** "flat" and
+incorporate shadows and smooth linear gradients going from darker on the bottom
+to lighter on top. Don't be afraid to add detail, vibrancy, and depth!
 
-*These icons don't have a particular shape, they simply fit together
-despite their differences. Shapes can be either squares, rectangles,
-circles, have resemblance of real-life objects, etc.*
+Colorful Breeze icons generally consist of three parts:
 
--  Icons do have a particular element in common: a long shadow.
+Background
+~~~~~~~~~~
+The background is a container and gives structure to the icon. It can have any
+shape or color in the Breeze color palette. Don't be afraid to get creative with the background shape!
 
-The front symbol is what dictates the long shadow, the shadow always has
-the same gradient, no exception. And it takes up the whole object even
-if said object has only strokes and no fill.
+.. image:: /img/Breeze-icon-design-creative-backgrounds.png
+   :alt: Creative backgrounds
 
-The angle of the long shadow is 45° towards the bottom right of the
-symbol.
+Foreground symbol
+~~~~~~~~~~~~~~~~~
+The foreground symbol offers contrast with its background and works with it to
+provide the bulk of the icon's meaning. The foreground symbol is optional; feel
+free to omit it if the background provides enough meaning on its own.
+
+Shadows
+~~~~~~~
+If present, the foreground symbol casts a long shadow angled 45°
+towards the bottom-right corner. This shadow always has the same gradient and
+takes up the whole object.
 
 .. image:: /img/Breeze-icon-design-10.png
    :alt: Using the grid for shadows
 
-*Always use the grid when doing these shadows, this is very important.*
-
-The difference between 32 and 48 px icons is a shadow at the bottom of
-the 48 px icons and a bit more of detail. Since there more space for
-more pixels we've used them. 48 px icons can have more long shadows, and
-they also have a 1 px hard shadow at the bottom, whether they're
-rectangular/squares or circles.
-
-.. image:: /img/Breeze-icon-design-11.png
-   :alt: 48px icons can have shadows
+In addition, colorful icons have a 1 px hard shadow on the bottom:
 
 .. image:: /img/Breeze-icon-design-12.png
    :alt: 48px icons can have more details
 
-*48 px icons have a bit more detail to them.*
 
-Application icons are at 48x48 px, an important thing though is that
-when doing an application icon you want to keep established brands
-mostly intact or at least that they don't differ too much from the
-original.
 
-.. image:: /img/Breeze-icon-design-13.png
-   :alt: Keep established brands for app icons
 
-And for apps that are free software try to come up with something
-creative, a better representation of what the software does, a feature
-an UI element, etc. The last thing we want is to keep using the same old
-unrepresentative icon.
+Application icons
+-----------------
+Application icons come in a single size: 48px. They always use the colorful
+style.
+
+All application icons should have the same height: 40px tall, with four pixels
+of padding on the top and bottom.
+
+.. image:: /img/Breeze-icon-design-15.png
+   :alt: KDE app icon for Konsole
+
+*KDE app icon for Konsole*
+
+.. image:: /img/Breeze-icon-design-Kolourpaint.png
+   :alt: KDE app icon for Kolourpaint
+
+*KDE app icon for Kolourpaint*
+
+.. image:: /img/Breeze-icon-design-11.png
+   :alt: KDE app icon for Discover
+
+*KDE app icon for Discover*
+
+When creating a Breeze theme version of a 3rd-party app's icon, is critically
+important that the icon's existing brand and visual style be preserved. The
+goal is to create a Breeze version of the icon, not something completely new
+and different.
 
 .. image:: /img/Breeze-icon-design-14.png
-   :alt: VLC refreshed
-   
-.. image:: /img/Breeze-icon-design-15.png
-   :alt: Konsole refreshed
+   :alt: 3rd party app icon for VLC
 
-*VLC and Konsole. Classics, refreshed.*
+*3rd party app icon for VLC*
 
-Breeze Icon Design - 64 px
+.. image:: /img/Breeze-icon-design-Telegram.png
+   :alt: 3rd party app icon for Telegram
+
+*3rd party app icon for Telegram*
+
+.. image:: /img/Breeze-icon-design-Virtualbox.png
+   :alt: 3rd party app icon for Virtualbox
+
+*3rd party app icon for Virtualbox*
+
+
+
+
+Places icons
+------------
+Places icons come in four sizes: 16px, 22px, 32px, and 64px. They use the
+colorful style for 32px and 64px sizes and the monochrome style for 22px and
+16px sizes.
+
+Monochrome Places icons
+~~~~~~~~~~~~~~~~~~~~~~~
+Places icons are monochrome for their 16px and 22px versions. For these
+versions, the whole icon depicts the place itself or its typical contents.
+Beyond that, simply follow the general monochrome icon guidelines for 16px and
+22px icons.
+
+.. image:: /img/Breeze-icon-design-places-monochrome.png
+   :alt: Small monochrome Places icons
+
+*Small monochrome Places icons in Dolphin's Places panel*
+
+Colorful places icons
+~~~~~~~~~~~~~~~~~~~~~
+.. image:: /img/Breeze-icon-design-places.png
+   :alt: Colorful Places icons
+
+For the colorful versions, the monochrome icon becomes the foreground symbol on
+top of a background depicting a folder. The foreground symbol's color is a
+darkened version of the background folder's color, and can consist of 1px lines,
+or filled-in areas. The foreground symbol should be centered within the folder
+background and take up 10x10px for the 32px icon size, and 20x20px for the 64px
+size.
+
+Note that for places icons, the foreground symbol does **not** cast a shadow.
+
+.. image:: /img/Breeze-icon-design-places-colorful.png
+   :alt: Large colorful Places icons
+
+*20x20px foreground symbol in the center of a 64x64px Places icon*
+
+
+
+
+MIME type icons
+---------------
+Like Places icons, MIME type icons come in four sizes: 16px, 22px, 32px, and
+64px. They use the colorful style for 32px and 64px sizes, and the monochrome
+style for 22px and 16px sizes.
+
+Monochrome MIME type icons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Folders and mimetypes use this size the most but so do dialog icons.
-Folders follow the same principle of a background and a symbol, but no
-long shadow under the symbol. The symbol however does not use a gradient
-but a contrasting color to that of the background. It's not transparent.
-
-The symbol (when using a stroke-based design) uses 1 px strokes, it can
-be mixed with fill areas or it can be completely fill.
-
-.. image:: /img/Breeze-icon-design-16.png
-   :alt: Different types of symbols on folders.
-
-*Different types of symbols.*
-
-The size of the symbol is 20x20 px and is centered to the front of the
-folder.
-
-.. image:: /img/Breeze-icon-design-17.png
-   :alt: Design details of a folder icon
-
-*Folder dimensions: 52x58 px - smooth gradient on the front, a long
-shadow on the back, a darker gradient also on the back and light details
-at the top of the front and back areas.*
-
-Mimetypes have a common shape, these shapes and combinations are
-included in the folder resources/mime_combinations. The symbols that
-define each mimetype should be related to the files or the software that
-generates these files.
-
-.. image:: /img/Breeze-icon-design-18.png
-   :alt: Design details of a XML file type icon
-
-*An XML tag for XML type files.*
-
-
-Symbols use 1 px strokes too, just like folders.
-
-Small sized mimetypes use the same symbol (only redrawn for 16 px) as
-the bigger icon. The color combination is also within the
-resources/mime_combinations folder files. Rules for 16 px icons (as seen
-above) apply for these too.
+Like Places icons, the 16px and 22px monochrome versions of MIME type icons
+have no background image and consist entirely of a monochrome line-art depiction
+of the file type.
 
 .. image:: /img/Breeze-icon-design-19.png
-   :alt: Example of an 16px mimetype icon
+   :alt: Small monochrome MIME type icon
+
+Monochrome MIME type icons are drawn with the primary color of the large
+colorful version rather than following the general monochrome icon color
+guidelines.
+
+.. image:: /img/Breeze-icon-design-mimetype-small.png
+   :alt: Small monochrome document MIME types
+
+*Small MIME type icons use 1 px strokes and follow the colors of the larger
+versions*
+
+Colorful MIME type icons
+~~~~~~~~~~~~~~~~~~~~~~~~
+Like Places icons, the colorful versions consist of the monochrome icon used as
+a foreground symbol on top of a background.
+
+For archives, packages, compressed files, and disk images, the background is a
+square with a zipper going halfway down:
+
+.. image:: /img/Breeze-icon-design-mimetype-archive.png
+   :alt: Large colorful archive MIME types
+
+For images, the background is a horizontal rectangle with the top-right corner
+folded over, and the fold casts a shadow:
+
+.. image:: /img/Breeze-icon-design-mimetype-image.png
+   :alt: Large colorful image MIME types
+
+For video files, the background is a horizontal rectangle that looks like a
+filmstrip:
+
+.. image:: /img/Breeze-icon-design-mimetype-video.png
+   :alt: Large colorful video MIME types
+
+For audio files, the background is a CD sleeve with a CD partially visible:
+
+.. image:: /img/Breeze-icon-design-mimetype-audio.png
+   :alt: Large colorful video MIME types
+
+For documents and everything else, the background is a vertical rectangle with
+the top-right corner folded over, and the fold casts a shadow:
+
+.. image:: /img/Breeze-icon-design-mimetype-document.png
+   :alt: Large colorful document MIME types
+
+As with the Places icons, the foreground symbol does not cast a shadow.
 
 
-*16 px mimetypes use 1 px strokes and follow the colors of the bigger
-graphics.*
 
-Dialog icons are used on .. well dialogs such as:
 
-.. image:: /img/Breeze-icon-design-20.png
-   :alt: Example of an icon in a dialog
+Action and status icons
+-----------------------
+Action and status icons come in two sizes: 16px and 22px. They always use the
+monochrome style. Action items should use Shade Black as much as possible:
 
-Or occasionally in Dolphin's preview sidebar (dialog-information).
+.. image:: /img/Breeze-icon-design-action.png
+   :alt: Action icons
 
-With the exception of *dialog-password* the other icons use the same
-shape, 1 px strokes, long shadows and vibrant gradients.
+Status icons can use a bit more color in their composition to connote status
+information:
 
-The symbol is centered to the rectangular area of the speech bubble.
+.. image:: /img/Breeze-icon-design-status.png
+   :alt: Status icons
 
-.. image:: /img/Breeze-icon-design-21.png
-   :alt: Example of a speech bubble
 
-Implementation
---------------
+Action and status icons dynamically change their colors when the user changes
+the system's color. To accomplish this, a special CSS stylesheet is embedded
+in the SVG, and then the actual shape definitions are tagged with the
+appropriate class. It looks like this: ::
 
--  Use icons available from the system icon theme whenever possible.
-   Avoid using custom icons.
--  Follow the :doc:`Icon theme usage guidelines <icontheme>`.
--  For standard actions (back forward, open, save, refresh, etc.) use an
-   icon from the platform-provided set. The KDE Platform 4.x uses the
-   `Oxygen icon set`_. The KDE Plasma 5.x desktop and applications use
-   the Breeze icon set.
--  If you would like to request help designing icons unique to your
-   application, you can ask for help on the 
-   `KDE Visual Design Group Forum`_.
+    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16">
+        <style
+        type="text/css"
+        id="current-color-scheme">
+        .ColorScheme-Text {
+            color:#232629;
+        }
+        .ColorScheme-Background {
+            color:#eff0f1;
+        }
+        .ColorScheme-Highlight {
+            color:#3daee9;
+        }
+        .ColorScheme-HighlightedText {
+            color:#eff0f1;
+        }
+        .ColorScheme-PositiveText {
+            color:#27ae60;
+        }
+        .ColorScheme-NeutralText {
+            color:#f67400;
+        }
+        .ColorScheme-NegativeText {
+            color:#da4453;
+        }
+        </style>
+        <g style="fill:currentColor;fill-opacity:1;stroke:none" class="ColorScheme-Text">
+            <path d="M10 2h-2L2 14h2z"/>
+            <rect height="1" width="6" x="8" y="13"/>
+        </g>
+    </svg>
 
-References
-----------
+For more technical details, see `this blog post <http://notmart.org/blog/2016/05/icon-colors/>`_.
 
-[1]
-http://user-prompt.com/semiotics-in-usability-guidelines-for-the-development-of-icon-metaphors/
 
-.. _Icon theme usage guidelines: KDE_Visual_Design_Group/HIG/IconTheme
-.. _Oxygen icon set: http://websvn.kde.org/trunk/kdesupport/oxygen-icons/
-.. _KDE Visual Design Group Forum: http://forum.kde.org/viewforum.php?f=285
-.. _full Breeze color palette: KDE_Visual_Design_Group/HIG/Color
+
+
+Emblems
+-------
+Emblems come in three sizes: 8px, 16px, and 22px and always use the colorful
+style. However, their color palette is limited to that of the monochromatic
+style. Unlike other icons, they are drawn with zero margins and touch the edges
+of the canvas.
+
+Emblem icons always have a colored background shape and a monochrome foreground
+symbol. Because of the extremely limited space available, it is critical that
+the foreground symbol be aligned to the pixel grid:
+
+.. image:: /img/Breeze-icon-design-emblem.png
+   :alt: Pixel-perfect emblem icon
+
+16px and 22px Emblems get a 60% opacity outline to ensure adequate contrast
+against whatever icon they are drawn on top of:
+
+.. image:: /img/Breeze-icon-design-emblem-16px.png
+   :alt: 16px emblem icons
+
+*16px emblems*
+
+.. image:: /img/Breeze-icon-design-emblem-22px.png
+   :alt: 22px emblem icons
+
+*22px emblems*
+
+8px emblems do not have an outline, because there simply isn't enough room:
+
+.. image:: /img/Breeze-icon-design-emblem-8px.png
+   :alt: 8px emblem icons
+
+*8px emblems*
