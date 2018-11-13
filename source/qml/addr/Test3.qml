@@ -18,9 +18,8 @@
  */
 
 import QtQuick 2.6
-import QtQuick.Controls 2.2
+import QtQuick.Controls 2.3
 import QtQuick.Layouts 1.2
-import QtQuick.Controls 1.4
 import org.kde.kirigami 2.5 as Kirigami
 import "../models/" as Models
 import "../lib/annotate.js" as A
@@ -42,6 +41,29 @@ Kirigami.ApplicationWindow {
     }
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
     pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
+
+    /*menuBar: MenuBar {
+        Menu {
+            title: qsTr("&File")
+            Action { text: qsTr("&New...") }
+            Action { text: qsTr("&Import") }
+            Action { text: qsTr("&Export") }
+        }
+        Menu {
+            title: qsTr("&Edit")
+            Action { text: qsTr("&Merge contacts") }
+            Action { text: qsTr("&Search dupplicate contacts") }
+            Action { text: qsTr("&Export") }
+        }
+        Menu {
+            title: qsTr("&Settings")
+            Action { text: qsTr("&About") }
+        }
+        Menu {
+            title: qsTr("&Help")
+            Action { text: qsTr("&About") }
+        }
+    }*/
 
     DetailPage {
         id: detail

@@ -32,7 +32,7 @@ Flickable  {
 
     HIG.Header {
         id: header
-        content.anchors.leftMargin: Kirigami.Units.largeSpacing
+        content.anchors.leftMargin: root.width > 400 ? 100 : Kirigami.Units.largeSpacing
         content.anchors.topMargin: Kirigami.Units.largeSpacing
         content.anchors.bottomMargin: Kirigami.Units.largeSpacing
         //status: root.contentY == 0 ? 1 : Math.min(1, Math.max(2 / 11, 1 - root.contentY / Kirigami.Units.gridUnit))
