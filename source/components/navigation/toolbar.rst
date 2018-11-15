@@ -52,6 +52,7 @@ Behavior
 -  Disable buttons that do not apply to the current context.
 -  Consider to provide customization for toolbars in respect to
    position and content.
+-  Providing a label for each action is a good practice but define a meaningful icon too because the label could be hidden in mobile mode or if there isn't enough space when the window is resized.
 
    
 Guidelines for components
