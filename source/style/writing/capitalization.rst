@@ -5,11 +5,9 @@ Purpose
 -------
 
 *Capitalization* is a feature of case-sensitive languages to foster
-relevance. In terms of software it draws attention to words with capital
-letters. For a consistent look and feel of the software it is important
-to implement capitalization consistently. On the other hand,
-capitalization slows down translation and increases the risk of
-inconsistent terminology.
+relevance by drawing attention to words with capital letters. For a consistent
+look and feel of the software, it is important to implement capitalization
+consistently.
 
 Guidelines
 ----------
@@ -21,38 +19,23 @@ Title Capitalization
 ~~~~~~~~~~~~~~~~~~~~
 
 Title capitalization is when every word in a sentence, statement,
-phrase, or label are capitalized except for certain words. Words with
-less than five letters are generally lowercase in titles, unless they
-are the first or last words in a title.
+phrase, or label is capitalized except for certain words. Use title
+capitalization primarily for titles and headers, but also for command labels.
+For example:
+
+-  Titles and headers on windows, dialog boxes, tabs, lists, group boxes, tree
+   views, etc.
+-  Menu titles and menu item labels
+-  Button labels
 
 Do not capitalize:
 
 -  Articles: a, an, the
--  Coordinating Conjunctions: and, but, or, for, nor, etc.
+-  Coordinating conjunctions: and, but, or, for, nor, etc.
 -  Prepositions (fewer than five letters): on, at, to, from, by, etc.
 
-Always capitalize
+Capitalize everything else.
 
--  Nouns (man, bus, book)
--  Adjectives (angry, lovely, small)
--  Verbs (run, eat, sleep)
--  Adverbs (slowly, quickly, quietly)
--  Pronouns (he, she, it)
--  Subordinating conjunctions (as, because, that)
-
-Use title capitalization in the following cases:
-
--  Window and dialog box titles
--  Group box / group line labels
--  Button labels
--  Tab labels
--  Listview column headers
--  Menu titles / menu items
--  Derivatives of KCommand
--  Combobox items
--  Listbox items
--  Tree list items
--  Other heading/title text
 
 Sentence Style Capitalization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,18 +45,15 @@ statement, phrase, or label is capitalized and all other words are lower
 case. The only exception to this is proper nouns which are always
 capitalized.
 
-Use sentence style capitalization in the following cases:
+Use sentence style capitalization for text that is or could be read as a
+sentence, or that is part of a sentence in conjunction with other elements.
+For example:
 
--  Edit box labels
--  List box labels
--  Combo box labels
--  Spin box labels
+-  Tooltip text
+-  Placeholder text in text fields
 -  Checkbox labels
--  Option button labels
--  Slider labels
--  Pop-up hint text
--  Dialog header/description
--  Other non heading/title text
+-  Labels to the left of controls in a Form Layout
+-  Descriptions of anything
 
 Acronyms/Initialisms, Internet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
