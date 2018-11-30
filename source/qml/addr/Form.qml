@@ -67,7 +67,7 @@ ColumnLayout  {
 
     Kirigami.FormLayout {
         id: form
-        width: root.width
+        Layout.fillWidth: true
 
         TextField {
             Kirigami.FormData.label: "Firstname:"

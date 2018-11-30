@@ -26,6 +26,7 @@ Kirigami.OverlaySheet {
     property var model;
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     id: page
+    Layout.fillWidth: true
 
     background: Rectangle {
         color: Kirigami.Theme.backgroundColor

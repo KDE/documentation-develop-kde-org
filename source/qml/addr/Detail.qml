@@ -69,10 +69,10 @@ Flickable  {
             }
         }
 
-        Label {
+        Kirigami.Heading {
             text: model.firstname + " " + model.lastname
             color: "#fcfcfc"
-            font.pointSize: 12
+            level: 1
         }
     }
 
@@ -138,7 +138,8 @@ Flickable  {
     }
     }
 
-    Label {
+    Kirigami.Heading {
+        level: 4
         visible: typeof root.model.history !== "undefined" && root.model.history.count
         text: "History"
         id: history
