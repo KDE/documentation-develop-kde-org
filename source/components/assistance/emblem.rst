@@ -43,15 +43,6 @@ Guidelines
 
 Appearance
 ----------
-
-An emblem that indicates status should take the form of a light-colored symbol
-on top of a brightly-colored shape.
-
-.. figure:: /img/emblem-warning.png
-   :alt:
-
-   Warning emblem
-
 An emblem that indicates unread notifications should take the form of a
 light-colored number inside a blue circle. The circle can become "pill-shaped"
 if the number is very large.
@@ -65,3 +56,6 @@ if the number is very large.
    :alt:
 
    Notification emblem with a large number
+
+For symbolic icon emblems, see the :doc:`Breeze icon guidelines </style/icon>`.
+
