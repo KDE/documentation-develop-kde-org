@@ -94,3 +94,66 @@ Appearance
    depiction is crucial. Follow the advices for :doc:`icon design </style/icon>`.
 -  Do not simulate Microsoft's ribbon controls. KDE stays plain and
    simple.Microsoft's ribbon controls. KDE stays plain and simple.
+
+Code
+----
+
+Kirigami
+~~~~~~~~
+
+Application toolbar
+^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: qml
+
+    ...
+    import QtQuick.Controls 2.2 as Controls
+    import org.kde.kirigami 2.4 as Kirigami
+    ...
+    
+    Kirigami.ApplicationWindow {
+        ...
+        pageStack.initialPage: Kirigami.ScrollablePage {
+            ...
+            actions {
+                left: Kirigami.Action {
+                    iconName: "mail-message"
+                    text: i18n("&Write mail")
+                }
+                main: Kirigami.Action {
+                    iconName: "call-start"
+                    text: i18n("&Make call")
+                }
+                right: Kirigami.Action {
+                    iconName: "kmouth-phrase-new"
+                    text: i18n("&Write SMS")
+                }
+            }
+        }
+        ...
+    }
+
+Component toolbar
+^^^^^^^^^^^^^^^^^
+
+.. code-block:: qml
+
+    ...
+    import QtQuick.Controls 2.2 as Controls
+    import org.kde.kirigami 2.4 as Kirigami
+    ...
+        Kirigami.ActionToolBar {
+            ...
+            actions: [
+                Kirigami.Action {
+                    iconName: "favorite"
+                    text: i18n("&Select as favorite")
+                },
+                Kirigami.Action {
+                    iconName: "document-share"
+                    text: i18n("&Share")
+                }
+            ]
+            ...
+        }
+    ...

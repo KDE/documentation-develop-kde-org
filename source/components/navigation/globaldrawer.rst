@@ -51,3 +51,45 @@ The main menu
    one level.
 
 Do not use the Menu Drawer for navigation purposes.
+
+Code
+----
+
+Kirigami
+^^^^^^^^
+
+.. code-block:: qml
+
+    ...
+    import QtQuick.Controls 2.2 as Controls
+    import org.kde.kirigami 2.4 as Kirigami
+    ...
+    
+    Kirigami.ApplicationWindow {
+        ...
+        globalDrawer: Kirigami.GlobalDrawer {
+            actions: [
+                Kirigami.Action {
+                    iconName: "list-import-user"
+                    text: i18n("&Import")
+                },
+                Kirigami.Action {
+                    iconName: "list-export-user"
+                    text: i18n("&Export")
+                },
+                Kirigami.Action {
+                    iconName: "user-group-delete"
+                    text: i18n("&Merge contacts")
+                },
+                Kirigami.Action {
+                    iconName: "user-group-new"
+                    text: i18n("&Search dupplicate contacts")
+                },
+                Kirigami.Action {
+                    iconName: "configure"
+                    text: i18n("&Settings")
+                }
+            ]
+        }
+        ...
+    }
