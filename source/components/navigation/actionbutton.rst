@@ -65,3 +65,38 @@ If your application is using :doc:`column-based navigation </patterns/navigation
    :alt:  Primary Action Buttons on Desktop
    
    Primary Action Buttons are placed in a :doc:`toolbar <toolbar>`
+
+Code
+----
+
+Kirigami
+^^^^^^^^
+
+.. code-block:: qml
+
+    ...
+    import QtQuick.Controls 2.2 as Controls
+    import org.kde.kirigami 2.4 as Kirigami
+    ...
+    
+    Kirigami.ApplicationWindow {
+        ...
+        pageStack.initialPage: Kirigami.ScrollablePage {
+            ...
+            actions {
+                left: Kirigami.Action {
+                    iconName: "mail-message"
+                    text: i18n("&Write mail")
+                }
+                main: Kirigami.Action {
+                    iconName: "call-start"
+                    text: i18n("&Make call")
+                }
+                right: Kirigami.Action {
+                    iconName: "kmouth-phrase-new"
+                    text: i18n("&Write SMS")
+                }
+            }
+        }
+        ...
+    }

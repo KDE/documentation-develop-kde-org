@@ -80,3 +80,46 @@ Appearance
    form. For example, use the text 'Show hidden files' instead of 'Hide hidden
    files', and do not change the text when hidden files are shown.
 
+Code
+----
+
+Kirigami
+^^^^^^^^
+
+.. code-block:: qml
+
+    ...
+    import QtQuick.Controls 2.2 as Controls
+    import org.kde.kirigami 2.4 as Kirigami
+    ...
+    
+    Kirigami.ApplicationWindow {
+        ...
+        menuBar: MenuBar {
+            Menu {
+                title: i18n("&File")
+                Action { text: i18n("&New...") }
+                Action { text: i18n("&Import") }
+                Action { text: i18n("&Export") }
+            }
+            Menu {
+                title: i18n("&Edit")
+                Action { text: i18n("&Merge contacts") }
+                Action { text: i18n("&Search dupplicate contacts") }
+                Action { text: i18n("&Export") }
+            }
+            Menu {
+                title: i18n("&Settings")
+                Action { text: i18n("&Settings") }
+                Action { text: i18n("&Configure shortcuts") }
+            }
+            Menu {
+                title: i18n("&Help")
+                Action { text: i18n("&Report Bug...") }
+                Action { text: i18n("&Donate") }
+                Action { text: i18n("&About Addressbook") }
+                Action { text: i18n("&About KDE") }
+            }
+        }
+        ...
+    }
