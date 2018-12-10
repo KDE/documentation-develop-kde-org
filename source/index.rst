@@ -40,3 +40,8 @@ and hence more intuitive and learnable.
    :alt: Different DPIs on desktop and mobile
 
    ''Simple by default, powerful when needed.''
+
+KDE encourages developing and designing for customization, while providing good 
+default settings. Integrating into other desktop environments is also a virtue, 
+but ultimately we aim for perfection within our own Plasma desktop environment 
+with the default themes and settings. This aim should not be compromised.
