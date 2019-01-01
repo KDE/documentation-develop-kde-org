@@ -155,6 +155,11 @@ style.
 All application icons should have the same height: 40px tall, with four pixels
 of padding on the top and bottom.
 
+When creating a Breeze theme version of an existing app's icon, is critically
+important that the icon's existing brand and visual style be preserved. The
+goal is to create a Breeze version of the icon, not something completely new
+and different.
+
 .. image:: /img/Breeze-icon-design-15.png
    :alt: KDE app icon for Konsole
 
@@ -169,11 +174,6 @@ of padding on the top and bottom.
    :alt: KDE app icon for Discover
 
 *KDE app icon for Discover*
-
-When creating a Breeze theme version of a 3rd-party app's icon, is critically
-important that the icon's existing brand and visual style be preserved. The
-goal is to create a Breeze version of the icon, not something completely new
-and different.
 
 .. image:: /img/Breeze-icon-design-14.png
    :alt: 3rd party app icon for VLC
