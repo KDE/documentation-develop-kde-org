@@ -76,6 +76,10 @@ Behavior
    should be used as a corner widget placed on the right hand of the tab bar.
    Have keyboard shortcuts or menu items for easy access, but do not displayed
    the 'add tab' function in the application toolbar.
+-  Provide keyboard navigation to switch between tabs with Ctrl + Tab (Ctrl 
+   + Shift + Tab for backward navigation). For compatibility reasons it 
+   is recommended to also support Ctrl + PgDown (Ctrl + PgUp for backward 
+   navigation).
 
 Appearance
 ~~~~~~~~~~
