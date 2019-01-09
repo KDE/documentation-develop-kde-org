@@ -72,7 +72,7 @@ overuse the larger headings.
 
 When the visual design calls for an area of exceptional focus, a larger 
 typeface size may be used. In this case use a Light typeface weight to keep the 
-stroke width similar to other styles throughout the interface . All other 
+stroke width similar to other styles throughout the interface. All other 
 typeface characteristics for the typographic category should be maintained. For 
 such exceptions to be effective, they must be very rare.
 
