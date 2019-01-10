@@ -65,16 +65,16 @@ Behavior
 Tabs with pages containing documents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Special behavior for tabs, if their pages contain documents, but not if their 
-pages contain static application's user interface.
+Special considerations apply for tabs that contain documents rather than 
+settings or controls.
    
--  Make tabs movable (possible to reorder).
+-  Make it possible to re-order tabs.
 -  Make tabs closable
 -  Provide a context menu on each tab if their pages contain documents.
    This menu should only include actions for manipulating the tab
    itself, such as Move Left, Move Right, Move to New Window, Close,
    Close All, Reload.
--  Do not resize tabs when adding a status icon or the content of the page 
+-  Do not resize tabs when adding a status icon or when the content of the page 
    changes. For applications where the tab title changes, like Dolphin or 
    Konsole,  it is recommended to have a fixed tab size for all tabs.
 -  Consider to provide 'add new tab' function if their pages contain
