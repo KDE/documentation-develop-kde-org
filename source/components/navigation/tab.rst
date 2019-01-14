@@ -59,18 +59,24 @@ Behavior
 -  Make content from one page independent and differentiated from
    another through the use of tabs.
 -  Do not nest tabs.
--  Make tabs movable (possible to reorder), if their pages contain
-   documents, but not if their pages contain static application's user
-   interface.
--  Make tabs closable, if their pages contain documents, but not if
-   their pages contain application's user interface.
 -  Make the tabs use scroll buttons, to scroll tabs when there are too
    many tabs.
+
+Tabs with pages containing documents
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Special considerations apply for tabs that contain documents rather than 
+settings or controls.
+   
+-  Make it possible to re-order tabs.
+-  Make tabs closable.
 -  Provide a context menu on each tab if their pages contain documents.
    This menu should only include actions for manipulating the tab
    itself, such as Move Left, Move Right, Move to New Window, Close,
    Close All, Reload.
-
+-  Do not resize tabs when adding a status icon or when the content of the page 
+   changes. For applications where the tab title changes, like Dolphin or 
+   Konsole,  it is recommended to have a fixed tab size for all tabs.
 -  Consider to provide 'add new tab' function if their pages contain
    documents, not for static content. In this case the 'Add Tab' button 
    should be used as a corner widget placed on the right hand of the tab bar.
@@ -126,16 +132,16 @@ Behavior
       separate windows", the default of which is specified by the gobal
       setting, if it is set, otherwise the default is new windows
       unless users are used to tabs from existing apps of the same type
-      (e.g. for web browsers)
+      (e.g. for web browsers).
    -  Swiping on a tab away from the screen edge that the menu drawer is
       attached to (e.g. to the right if the drawer is on the left side)
-      closes the tab
+      closes the tab.
 
 Appearance
 ~~~~~~~~~~
 
--  Use short labels for tabs that group controls
--  Use descriptive names for tabs, e.g. page titles for browser tabs
+-  Use short labels for tabs that group controls.
+-  Use descriptive names for tabs, e.g. page titles for browser tabs.
 
-   -  Put a control to open a new tab below the list of tabs
+   -  Put a control to open a new tab below the list of tabs.
    
