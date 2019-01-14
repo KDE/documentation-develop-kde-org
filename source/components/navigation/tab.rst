@@ -69,7 +69,7 @@ Special considerations apply for tabs that contain documents rather than
 settings or controls.
    
 -  Make it possible to re-order tabs.
--  Make tabs closable
+-  Make tabs closable.
 -  Provide a context menu on each tab if their pages contain documents.
    This menu should only include actions for manipulating the tab
    itself, such as Move Left, Move Right, Move to New Window, Close,
@@ -132,16 +132,16 @@ Behavior
       separate windows", the default of which is specified by the gobal
       setting, if it is set, otherwise the default is new windows
       unless users are used to tabs from existing apps of the same type
-      (e.g. for web browsers)
+      (e.g. for web browsers).
    -  Swiping on a tab away from the screen edge that the menu drawer is
       attached to (e.g. to the right if the drawer is on the left side)
-      closes the tab
+      closes the tab.
 
 Appearance
 ~~~~~~~~~~
 
--  Use short labels for tabs that group controls
--  Use descriptive names for tabs, e.g. page titles for browser tabs
+-  Use short labels for tabs that group controls.
+-  Use descriptive names for tabs, e.g. page titles for browser tabs.
 
-   -  Put a control to open a new tab below the list of tabs
+   -  Put a control to open a new tab below the list of tabs.
    
