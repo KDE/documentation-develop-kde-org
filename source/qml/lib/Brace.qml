@@ -49,6 +49,7 @@ Item {
             font.pointSize: 8
             lineHeight: 8
             height: 8
+            renderType: Text.QtRendering
         }
     }
 
