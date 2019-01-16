@@ -3,7 +3,7 @@ Settings
 
 A *settings page* provides the ability to customize how an application or
 Plasma widget should behave. It is intended for settings that are persistent but not changed very frequently. Following KDE's "Simple by
-default, powerful when needed" :doc:`design mantra </introduction/vision>`,
+default, powerful when needed" :doc:`design mantra <../../index>`,
 settings are split into common and advanced groups. Advanced settings are
 not important to most users but essential for some, and therefore can't be
 removed. Those settings are hidden by default to reduce the mental overhead

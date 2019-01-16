@@ -5,7 +5,6 @@ Introduction
    :titlesonly:
    :hidden:
 
-   vision
    architecture
    convergence
    devicetypes
@@ -14,7 +13,6 @@ Introduction
    personas
    research
 
-* :doc:`vision`
 * :doc:`architecture`
 * :doc:`convergence`
 * :doc:`devicetypes`
