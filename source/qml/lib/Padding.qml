@@ -28,7 +28,7 @@ Item {
     property bool label: false
     property Item item
     property Item root : container.parent
-    property string padding: ""
+    property var padding: []
     z: 10
     id: container
 
@@ -39,6 +39,7 @@ Item {
         lineHeight: 8
         height: 8
         z: 2
+        renderType: Text.QtRendering
     }
     Text {
         id: right
@@ -47,6 +48,7 @@ Item {
         lineHeight: 8
         height: 8
         z: 2
+        renderType: Text.QtRendering
     }
     Text {
         id: bottom
@@ -55,6 +57,7 @@ Item {
         lineHeight: 8
         height: 8
         z: 2
+        renderType: Text.QtRendering
     }
     Text {
         id: left
@@ -63,6 +66,7 @@ Item {
         lineHeight: 8
         height: 8
         z: 2
+        renderType: Text.QtRendering
     }
 
     Canvas {
@@ -71,13 +75,31 @@ Item {
 
         onPaint: {
             // Determen padding
-            var padding = {
-                "top": item.topPadding,
-                "right": item.rightPadding,
-                "bottom": item.bottomPadding,
-                "left": item.leftPadding
+            var padding;
+            if (typeof container.padding === "number") {
+                padding = {
+                    "top": container.padding,
+                    "right": container.padding,
+                    "bottom": container.padding,
+                    "left": container.padding
+                }
             }
-
+            else if (typeof container.padding === "Array" && container.padding.length == 4) {
+                padding = {
+                    "top": container.padding[0],
+                    "right": container.padding[1],
+                    "bottom": container.padding[2],
+                    "left": container.padding[3]
+                }
+            }
+            else {
+                padding = {
+                    "top": item.topPadding,
+                    "right": item.rightPadding,
+                    "bottom": item.bottomPadding,
+                    "left": item.leftPadding
+                }
+            }
             // setup drawing context
             var offset;
             var cItem = item.mapToItem(container.root, 0, 0);
@@ -115,7 +137,7 @@ Item {
 
             right.text = padding.right;
             right.x = cItem.x + item.width - right.width;
-            right.y = cItem.y + item.height / 2;
+            right.y = cItem.y + item.height / 2 - right.height;
 
             bottom.text = padding.bottom;
             bottom.x = cItem.x + item.width / 2;
@@ -123,7 +145,7 @@ Item {
 
             left.text = padding.left;
             left.x = cItem.x;
-            left.y = cItem.x + item.height / 2;
+            left.y = cItem.x + item.height / 2 - left.height;
 
         }
     }
