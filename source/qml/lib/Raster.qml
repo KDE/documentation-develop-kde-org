@@ -94,7 +94,6 @@ Item {
         anchors.rightMargin: base
         color: "#da4453"
         font.pixelSize: 10
-        renderType: Text.QtRendering
     }
 
     Row {
