@@ -28,7 +28,7 @@ Item {
     property bool label: false
     property Item item
     property Item root : container.parent
-    property string padding: ""
+    property var padding: []
     z: 10
     id: container
 
@@ -71,13 +71,31 @@ Item {
 
         onPaint: {
             // Determen padding
-            var padding = {
-                "top": item.topPadding,
-                "right": item.rightPadding,
-                "bottom": item.bottomPadding,
-                "left": item.leftPadding
+            var padding;
+            if (typeof container.padding === "number") {
+                padding = {
+                    "top": container.padding,
+                    "right": container.padding,
+                    "bottom": container.padding,
+                    "left": container.padding
+                }
             }
-
+            else if (Array.isArray(container.padding) && container.padding.length == 4) {
+                padding = {
+                    "top": container.padding[0],
+                    "right": container.padding[1],
+                    "bottom": container.padding[2],
+                    "left": container.padding[3]
+                }
+            }
+            else {
+                padding = {
+                    "top": item.topPadding,
+                    "right": item.rightPadding,
+                    "bottom": item.bottomPadding,
+                    "left": item.leftPadding
+                }
+            }
             // setup drawing context
             var offset;
             var cItem = item.mapToItem(container.root, 0, 0);
@@ -111,19 +129,19 @@ Item {
             // Write labels
             top.text = padding.top;
             top.x = cItem.x + item.width / 2;
-            top.y = cItem.y - 4;
+            top.y = cItem.y - 4 - padding.top / 2;
 
             right.text = padding.right;
-            right.x = cItem.x + item.width - right.width;
-            right.y = cItem.y + item.height / 2;
+            right.x = cItem.x + item.width - right.width + padding.right / 2;
+            right.y = cItem.y + item.height / 2 - right.height;
 
             bottom.text = padding.bottom;
             bottom.x = cItem.x + item.width / 2;
-            bottom.y = cItem.y + item.height - bottom.height - 4;
+            bottom.y = cItem.y + item.height - bottom.height - 4 + padding.bottom / 2;
 
             left.text = padding.left;
-            left.x = cItem.x;
-            left.y = cItem.x + item.height / 2;
+            left.x = cItem.x - padding.left / 2;
+            left.y = cItem.x + item.height / 2 - left.height;
 
         }
     }

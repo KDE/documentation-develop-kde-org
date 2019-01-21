@@ -268,7 +268,10 @@ An.prototype._draw = function(node, type, opt) {
             ruler.createObject(root, options);
         break
         case "padding":
-            padding.createObject(root, {item: node});
+            var options = getOpts({
+                padding: opt.padding
+            }, opt);
+            padding.createObject(root, {item: node, padding: options.padding});
         break
         case "brace":
             brace.createObject(root, {"from": node, "to": opt.to.nodes[0], "text": opt.text, "center": opt.center, "horizontal": opt.horizontal});
