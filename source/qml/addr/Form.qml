@@ -112,8 +112,7 @@ ColumnLayout  {
     }
     Button {
         text: "Save"
-        anchors.right: parent.right
-        anchors.rightMargin: Kirigami.Units.largeSpacing
+        Layout.alignment: Qt.AlignRight
     }
 
 }

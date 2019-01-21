@@ -25,11 +25,56 @@ import "../../models/" as Models
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
-Rectangle {
-    width: 800
+Kirigami.ApplicationItem {
+    width: 320
     height: 600
+    id: app
 
-    ContextdrawerDesktop {
+    property var mydata : Models.Contacts {
+        Component.onCompleted: {
+            detail.model =  mydata.get(3)
+            detail.visible = true
+        }
+    }
 
+    pageStack.initialPage: Addr.ListPage {
+        id: list
+    }
+
+    pageStack.defaultColumnWidth: app.width < 320 ? app.width : 320
+    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
+
+    Addr.DetailPage {
+        id: detail
+        visible: false
+    }
+
+    contextDrawer: Kirigami.ContextDrawer {
+        id: contextDrawer
+     }
+
+    Component.onCompleted: {
+        app.pageStack.push(detail)
+        //app.pageStack.push(form)
+    }
+
+
+
+    // HACK
+    Timer {
+        interval: 1000
+        repeat: false
+        running: true
+        onTriggered: {
+            contextDrawer.open();
+        }
+    }
+    Timer {
+        interval: 1500
+        repeat: false
+        running: true
+        onTriggered: {
+            qmlControler.start();
+        }
     }
 }
