@@ -39,7 +39,6 @@ Item {
         lineHeight: 8
         height: 8
         z: 2
-        renderType: Text.QtRendering
     }
     Text {
         id: right
@@ -48,7 +47,6 @@ Item {
         lineHeight: 8
         height: 8
         z: 2
-        renderType: Text.QtRendering
     }
     Text {
         id: bottom
@@ -57,7 +55,6 @@ Item {
         lineHeight: 8
         height: 8
         z: 2
-        renderType: Text.QtRendering
     }
     Text {
         id: left
@@ -66,7 +63,6 @@ Item {
         lineHeight: 8
         height: 8
         z: 2
-        renderType: Text.QtRendering
     }
 
     Canvas {
@@ -84,7 +80,7 @@ Item {
                     "left": container.padding
                 }
             }
-            else if (typeof container.padding === "Array" && container.padding.length == 4) {
+            else if (Array.isArray(container.padding) && container.padding.length == 4) {
                 padding = {
                     "top": container.padding[0],
                     "right": container.padding[1],
@@ -133,18 +129,18 @@ Item {
             // Write labels
             top.text = padding.top;
             top.x = cItem.x + item.width / 2;
-            top.y = cItem.y - 4;
+            top.y = cItem.y - 4 - padding.top / 2;
 
             right.text = padding.right;
-            right.x = cItem.x + item.width - right.width;
+            right.x = cItem.x + item.width - right.width + padding.right / 2;
             right.y = cItem.y + item.height / 2 - right.height;
 
             bottom.text = padding.bottom;
             bottom.x = cItem.x + item.width / 2;
-            bottom.y = cItem.y + item.height - bottom.height - 4;
+            bottom.y = cItem.y + item.height - bottom.height - 4 + padding.bottom / 2;
 
             left.text = padding.left;
-            left.x = cItem.x;
+            left.x = cItem.x - padding.left / 2;
             left.y = cItem.x + item.height / 2 - left.height;
 
         }

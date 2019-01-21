@@ -49,7 +49,6 @@ Item {
             font.pointSize: 8
             lineHeight: 8
             height: 8
-            renderType: Text.QtRendering
         }
     }
 
@@ -100,8 +99,8 @@ Item {
                 }
                 dim.text = aspect
                 prot.visible = true;
-                prot.x = cItem.x + item.width / 2 - prot.width / 2
-                prot.y = cItem.y + item.height / 2 - prot.height / 2
+                prot.x = Math.round(cItem.x + item.width / 2 - prot.width / 2)
+                prot.y = Math.round(cItem.y + item.height / 2 - prot.height / 2)
 
             }
             else {
@@ -109,8 +108,8 @@ Item {
                 if (container.label) {
                     dim.text = Math.round(item.width * 100) / 100 + " x " + Math.round(item.height * 100) / 100;
                     prot.visible = true;
-                    prot.x = cItem.x + item.width / 2 - prot.width / 2
-                    prot.y = cItem.y + item.height / 2 - prot.height / 2
+                    prot.x = Math.round(cItem.x + item.width / 2 - prot.width / 2)
+                    prot.y = Math.round(cItem.y + item.height / 2 - prot.height / 2)
                 }
             }
 
