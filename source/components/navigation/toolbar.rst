@@ -1,11 +1,12 @@
 Toolbar
 =======
 
-.. figure:: /img/Actionbutton3.png
+.. figure:: /img/Toolbar1.png
    :figclass: border
    :alt:  Primary Action Buttons on Desktop
    
-   Toolbar with the most important actions :doc:`toolbar <toolbar>`
+   Toolbar with the most important actions :doc:`toolbar <toolbar>` and an 
+   overflow menu
    
 Purpose
 -------

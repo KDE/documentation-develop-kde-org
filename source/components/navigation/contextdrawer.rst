@@ -1,11 +1,12 @@
 Context drawer
 ==============
 
-.. figure:: /img/Context_drawer.jpg
+.. figure:: /img/Contextdrawer1.png
+   :figclass: border
    :scale: 50 %
-   :alt: Examples of a context drawer
+   :alt: Examples of a context drawer on mobile
 
-   Examples of a context drawer
+   Examples of a context drawer on mobile
 
 Purpose
 -------
@@ -45,6 +46,13 @@ Guidelines
       thumbnails), consider using two :doc:`Tabs <tab>` to separate them, but
       never use more than two tabs.
 
+.. figure:: /img/Contextdrawer2.png
+   :figclass: border
+   :scale: 50 %
+   :alt: Examples of a context drawer on desktop
+
+   Examples of a context drawer on desktop
+   
 Code
 ----
 
