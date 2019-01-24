@@ -110,3 +110,64 @@ the left.
 Labels are vertical center aligned to the item. If you have an icon in 
 the item, add a :doc:`2 * Units.largeSpacing </layout/units>` margin between 
 the icon and the label.
+
+Code
+----
+
+
+Kirigami
+^^^^^^^^
+
+.. code-block:: qml
+
+    ...
+    ListView {
+        ...
+
+        delegate: Kirigami.SwipeListItem {
+            contentItem: Row {
+                spacing: Kirigami.Settings.tabletMode ? 2 * 
+                    Kirigami.Units.largeSpacing : 
+                    2 * Kirigami.Units.smallSpacing
+
+                Item {
+                    width: Kirigami.Units.iconSizes.medium
+                    height: width
+
+                    Image {
+                        id: avatar
+                        width: parent.width
+                        height: width
+                        source: "..."
+                        visible: false
+                    }
+                    OpacityMask {
+                        anchors.fill: avatar
+                        source: avatar
+                        maskSource: Rectangle {
+                            height: avatar.width
+                            width: height
+                            radius: height / 2
+                        }
+                    }
+                }
+                Label {
+                    anchors.verticalCenter: parent.verticalCenter
+                    text: "..."
+                }
+            }
+            actions: [
+                Kirigami.Action {
+                    text: i18n("&Make call")
+                    iconName: "call-start"
+                },
+                Kirigami.Action {
+                    text: i18n("&Write mail")
+                    iconName: "mail-message"
+                }
+            ]
+        }
+        
+        ...
+    }
+    ...
