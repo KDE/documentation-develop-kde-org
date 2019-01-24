@@ -1,6 +1,14 @@
 Swipe list item
 ===============
 
+.. container:: intend
+
+   |desktopicon| |mobileicon|
+
+.. container:: available plasma qwidgets
+
+   |nbsp|
+
 Purpose
 -------
 
@@ -114,9 +122,8 @@ the icon and the label.
 Code
 ----
 
-
 Kirigami
-^^^^^^^^
+~~~~~~~~
 
 .. code-block:: qml
 
