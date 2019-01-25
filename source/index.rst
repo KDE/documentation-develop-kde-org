@@ -7,6 +7,7 @@ KDE Human Interface Guidelines
 ==============================
 
 .. toctree::
+   :titlesonly:
    :hidden:
 
    introduction/index
