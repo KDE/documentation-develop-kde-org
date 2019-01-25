@@ -1,10 +1,12 @@
 Global drawer
 =============
 
-.. figure:: /img/Menu_Drawer.png
-   :alt: Examples of different global drawers
+.. figure:: /img/Globaldrawer1.png
+   :alt: Global drawer on mobile
+   :figclass: border
+   :scale: 40 %
 
-   Examples of different global drawers
+   Global drawer on mobile
 
 Purpose
 -------
@@ -17,6 +19,13 @@ current context either.
 Is this the right control?
 --------------------------
 
+.. figure:: /img/Globaldrawer3.png
+   :figclass: border
+   :alt: Global drawer on desktop
+   :scale: 40 %
+
+   Global drawer on desktop
+   
 Use a Global Drawer whenever your application has any functions which
 are not central enough to the application's main purpose to put them in
 the main user interface, and which are not dependent on the current
@@ -26,9 +35,16 @@ item), use the :doc:`Context Drawer <contextdrawer>`
 Guidelines
 ----------
 
-The Global Drawer is opened by swiping in from the left or right edge of
-the screen (depending on a system-wide setting) and closed by swiping in
-the other direction or tapping outside of it.
+.. figure:: /img/Globaldrawer2.png
+   :alt: Global drawer on desktop
+   :scale: 40 %
+   :figclass: border
+
+   Global drawer on desktop
+
+The Global Drawer is either opened by clicking on the hamburger button in the 
+toolbar or by swipe from the left edge of the screen. It can be closed by 
+swiping the other direction, clicking the close button or tapping outside of it.
 
 A Global Drawer may contain the following controls:
 
@@ -68,6 +84,13 @@ Kirigami
     Kirigami.ApplicationWindow {
         ...
         globalDrawer: Kirigami.GlobalDrawer {
+            title: "..."
+            titleIcon: "..."
+            
+            topContent: [
+                ...
+            ]
+            
             actions: [
                 Kirigami.Action {
                     iconName: "list-import-user"
