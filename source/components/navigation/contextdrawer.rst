@@ -1,6 +1,15 @@
 Context drawer
 ==============
 
+.. container:: intend
+
+   |desktopicon| |mobileicon|
+
+.. container:: available plasma qwidgets
+
+   |nbsp|
+
+
 .. figure:: /img/Contextdrawer1.png
    :figclass: border
    :scale: 50 %

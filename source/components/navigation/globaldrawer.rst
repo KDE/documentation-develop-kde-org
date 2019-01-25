@@ -1,6 +1,15 @@
 Global drawer
 =============
 
+.. container:: intend
+
+   |desktopicon| |mobileicon|
+
+.. container:: available plasma qwidgets
+
+   |nbsp|
+
+
 .. figure:: /img/Globaldrawer1.png
    :alt: Global drawer on mobile
    :figclass: border
