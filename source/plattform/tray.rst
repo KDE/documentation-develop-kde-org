@@ -29,7 +29,8 @@ Behavior
 ~~~~~~~~
 
 -  On left click open an panel or the application.
--  On right click open a contect menu.
+-  On right click open a 
+   :doc:`context menu </components/navigation/contextmenu>`.
 -  For application like media players, enable the user to change the volume 
    while scrolling over the icon.
 
