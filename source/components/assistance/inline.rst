@@ -158,19 +158,19 @@ Kirigami
     
     Kirigami.InlineMessage {
         visible: true
-        text: "Remember password?"
+        text: i18n("&Remember password?")
         type: Kirigami.MessageType.Positive
         showCloseButton: true
         ...
         
         actions: [
             Kirigami.Action {
-                text: "Remember"
-                icon.name: i18n("&"dialog-ok-apply")
+                text: i18n("&Remember")
+                icon.name: "dialog-ok-apply"
             },
             Kirigami.Action {
-                text: "Do not remember"
-                icon.name: i18n("&"dialog-cancel")
+                text: i18n("&Do not remember")
+                icon.name: "dialog-cancel"
             }
         ]
     }
