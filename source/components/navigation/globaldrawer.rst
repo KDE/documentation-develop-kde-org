@@ -49,11 +49,12 @@ Guidelines
    :scale: 40 %
    :figclass: border
 
-   Global drawer on desktop
+   Hamburger button on the toolbar on desktop.
 
-The Global Drawer is either opened by clicking on the hamburger button in the 
-toolbar or by swipe from the left edge of the screen. It can be closed by 
-swiping the other direction, clicking the close button or tapping outside of it.
+The Global Drawer is either opened by clicking on the hamburger button on the 
+toolbar or by swiping from the left edge of the screen. It can be closed by 
+swiping in the other direction, clicking the close button or tapping outside of 
+it.
 
 A Global Drawer may contain the following controls:
 
