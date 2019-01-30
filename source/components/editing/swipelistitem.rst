@@ -78,18 +78,18 @@ Appearance
       
       Default padding of a swipelistitem on desktop
 
-Items have a padding of :doc:`Units.smallSpacing </layout/units>` to the top 
-and bottom and a padding of :doc:`2 * Units.smallSpacing </layout/units>` at 
+Items have a padding of :doc:`Units.smallSpacing </layout/units>` on the top 
+and bottom and a padding of :doc:`2 * Units.smallSpacing </layout/units>` on 
 the left.
 
    .. figure:: /img/Listview4.png
-      :alt: Label is vertical center aligned
+      :alt: Label is vertically centered
       :scale: 60 %
       :figclass: border
       
-      Label is vertical center aligned
+      Label is vertically centered
 
-Labels are vertical center aligned to the item. If you have an icon in 
+Labels are vertically centered within the list item. If you have an icon in 
 the item, add a :doc:`2 * Units.smallSpacing </layout/units>` margin between 
 the icon and the label.
 
@@ -104,18 +104,18 @@ the icon and the label.
       
       Default padding of a swipelistitem on mobile
 
-Items have a padding of :doc:`Units.largeSpacing </layout/units>` to the top 
-and bottom and a padding of :doc:`2 * Units.largeSpacing </layout/units>` at 
+Items have a padding of :doc:`Units.largeSpacing </layout/units>` on the top 
+and bottom and a padding of :doc:`2 * Units.largeSpacing </layout/units>` on 
 the left.
 
    .. figure:: /img/Listview2.png
-      :alt: Label is vertical center aligned
+      :alt: Label is vertically centered
       :scale: 60 %
       :figclass: border
       
-      Label is vertical center aligned
+      Label is vertically centered
 
-Labels are vertical center aligned to the item. If you have an icon in 
+Labels are vertically centered within the list item. If you have an icon in 
 the item, add a :doc:`2 * Units.largeSpacing </layout/units>` margin between 
 the icon and the label.
 
