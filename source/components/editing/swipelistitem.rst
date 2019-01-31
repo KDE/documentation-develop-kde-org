@@ -132,10 +132,10 @@ Kirigami
         ...
 
         delegate: Kirigami.SwipeListItem {
+            id: lineItem
+            
             contentItem: Row {
-                spacing: Kirigami.Settings.tabletMode ? 2 * 
-                    Kirigami.Units.largeSpacing : 
-                    2 * Kirigami.Units.smallSpacing
+                spacing: lineItem.leftPadding
 
                 Item {
                     width: Kirigami.Units.iconSizes.medium
