@@ -89,8 +89,8 @@ the left.
       
       Label is vertically centered
 
-Labels are vertically centered within the list item. If you have an icon in 
-the item, add a :doc:`2 * Units.smallSpacing </layout/units>` margin between 
+Labels are vertically centered within the list item. If the list item includes 
+an icon, add a :doc:`2 * Units.smallSpacing </layout/units>` margin between 
 the icon and the label.
 
 
