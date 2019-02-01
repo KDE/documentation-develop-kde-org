@@ -1,4 +1,4 @@
-Plattform
+Platform
 =========
 
 .. toctree::
