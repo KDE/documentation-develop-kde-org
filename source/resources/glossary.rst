@@ -32,3 +32,8 @@ Glossary
     product.
     
     *Source:*: `<https://en.wikipedia.org/wiki/User_experience>`_
+    
+- **Get New Stuff **, **GNS**
+
+    :doc:`/plattform/getnew`
+
