@@ -81,7 +81,7 @@ Do not use the Menu Drawer for navigation purposes.
 |desktopicon| Collapsible
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-On the desktop, if the elements in the Global Drawer need to be acces more 
+On the desktop, if the elements in the Global Drawer need to be accessed more 
 often and enough space is available, the Global Drawer can be displayed 
 collapsed. All the actions are available as icons. Pressing the hamburger menu 
 button expands then Global Drawer, clicking the close button or tapping outside 
