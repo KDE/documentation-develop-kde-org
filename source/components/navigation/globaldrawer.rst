@@ -78,6 +78,21 @@ The main menu
 
 Do not use the Menu Drawer for navigation purposes.
 
+|desktopicon| Collapsible
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On the desktop, if the elements in the Global Drawer need to be acces more 
+often and enough space is available, the Global Drawer can be displayed 
+collapsed. All the actions are available as icons. Pressing the hamburger menu 
+button expands then Global Drawer, clicking the close button or tapping outside 
+of it collapses the sidebar.
+
+.. raw:: html
+
+   <video src="https://cdn.kde.org/hig/video/20181031-1/Globaldrawer4.webm" 
+   loop="true" playsinline="true" width="640" controls="true" 
+   onended="this.play()" class="border"></video>
+
 Code
 ----
 
