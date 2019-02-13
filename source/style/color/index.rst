@@ -25,9 +25,26 @@ in the same way that most people will.
 A consistent color set helps create a familiar visual language
 throughout the user interface.
 
+.. container:: flex
+
+   .. container::
+
+      .. figure:: /img/Systemsettings.png
+         :alt: System settings with Breeze color theme
+         :scale: 30%
+
+         System settings with Breeze color theme
+         
+   .. container::
+
+      .. figure:: /img/Systemsettings-dark.png
+         :alt: System settings with Breeze Dark color theme
+         :scale: 30%
+
+         System settings with Breeze Dark color theme
+         
 Guidelines
 ----------
-
 
 -  While the system color theme can be selected by the user, the 
    :doc:`Breeze color palette <default>` is used for the reference 
@@ -52,6 +69,8 @@ Guidelines
    blindness simulators to ensure colors intended to be distinguishable
    remain distinguishable for color-blind users.
 
+
+   
 Implementation
 --------------
 
