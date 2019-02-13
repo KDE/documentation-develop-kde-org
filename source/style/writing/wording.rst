@@ -28,3 +28,6 @@ Guidelines
    *this year* unless it is algorithmically determined.
 -  Follow system-wide wording conventions for basic functions to keep
    wording consistent.
+-  In general, exclamation points should be used sparingly in user-interface 
+   strings. In particular, they should not be used for error messages, to 
+   avoid an effect upon the user similar to WRITING IN ALL-CAPS.
