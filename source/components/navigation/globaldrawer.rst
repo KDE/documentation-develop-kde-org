@@ -78,6 +78,23 @@ The main menu
 
 Do not use the Menu Drawer for navigation purposes.
 
+|desktopicon| Collapsible
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On the desktop, if the elements in the Global Drawer need to be accessed more 
+often and enough space is available, the Global Drawer can default to showing a 
+collapsed state, where the labels disappear but all actions continue to be 
+available via icons-only ToolButtons. Pressing the hamburger menu button 
+expands the Global Drawer to its full width and shows the actions' text 
+labels. Pressing the close button or anywhere outside of it collapses it to its 
+collapsed icons-only state.
+
+.. raw:: html
+
+   <video src="https://cdn.kde.org/hig/video/20181031-1/Globaldrawer4.webm" 
+   loop="true" playsinline="true" width="640" controls="true" 
+   onended="this.play()" class="border"></video>
+
 Code
 ----
 
