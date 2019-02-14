@@ -26,43 +26,43 @@ import "../../models/" as Models
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
-Kirigami.ApplicationItem {
+Rectangle {
     width: 320
-    height: 600
+    height: 160
     id: root
 
-    property var mydata : Models.Contacts {
-    }
+    ListviewMobile {
 
-    pageStack.initialPage: Addr.ListPage {
-        id: list
-    }
-
-    pageStack.defaultColumnWidth: root.width
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
-
-
-    // HACK
-    TestEvent {
-        id: event
-    }
-    Timer {
-        interval: 2000
-        repeat: false
-        running: true
-        onTriggered: {
-            var a = new A.An(list);
-            a.find("swipelistitem").eq(3).swipe({fromX: +140, fromY: 9, toX: -80, toY: 0});
-        }
     }
 
     Timer {
-        interval: 4000
+        interval: 1000
         repeat: false
         running: true
         onTriggered: {
-            var a = new A.An(list);
-            a.find("swipelistitem").eq(3).touch({});
+            var a = new A.An(root);
+            console.log(a.find("swipelistitem").nodes.length);
+            var item = a.find("swipelistitem").first();
+            var label = item.find("qquicklabel").first();
+
+            label.draw({
+                "outline": {label: false},
+                "ruler": {horizontal: true, offset: "center"}
+            });
+            var icon = item.find("qquickimage").first();
+            icon.draw({
+                "outline": {label: false},
+                "brace": {to: label}
+            });
         }
     }
+    Timer {
+        interval: 1500
+        repeat: false
+        running: true
+        onTriggered: {
+            qmlControler.start();
+        }
+    }
+
 }

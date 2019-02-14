@@ -81,6 +81,7 @@ Item {
                 }
             }
             else if (Array.isArray(container.padding) && container.padding.length == 4) {
+                console.log("array")
                 padding = {
                     "top": container.padding[0],
                     "right": container.padding[1],
@@ -101,47 +102,58 @@ Item {
             var cItem = item.mapToItem(container.root, 0, 0);
             var ctx = getContext("2d");
             ctx.strokeStyle = container.color;
-            ctx.beginPath();
+
 
             // Draw top
+            ctx.beginPath();
             ctx.lineWidth = padding.top;
             offset = ctx.lineWidth / 2;
             ctx.moveTo(cItem.x + offset,  cItem.y + offset);
-            ctx.lineTo(cItem.x + item.width -  offset, cItem.y + offset);
+            ctx.lineTo(cItem.x + item.width, cItem.y + offset);
+            ctx.stroke();
 
             // Draw right
+            ctx.beginPath();
             ctx.lineWidth = padding.right;
             offset = ctx.lineWidth / 2;
-            ctx.lineTo(cItem.x + item.width - offset, cItem.y + item.height - offset);
+            ctx.moveTo(cItem.x + item.width - offset,  cItem.y);
+            ctx.lineTo(cItem.x + item.width - offset, cItem.y + item.height);
+            ctx.stroke();
 
             // Draw bottom
+            ctx.beginPath();
             ctx.lineWidth = padding.bottom;
             offset = ctx.lineWidth / 2;
-            ctx.lineTo(cItem.x + offset, cItem.y + item.height - offset);
+            ctx.moveTo(cItem.x + item.width,  cItem.y + item.height - offset);
+            ctx.lineTo(cItem.x, cItem.y + item.height - offset);
+            ctx.stroke();
 
             // Draw left
-            ctx.lineWidth = padding.bottom;
+            ctx.beginPath();
+            ctx.lineWidth = padding.left;
             offset = ctx.lineWidth / 2;
-            ctx.lineTo(cItem.x + offset, cItem.y + offset);
+            ctx.moveTo(cItem.x + offset, cItem.y + item.height);
+            ctx.lineTo(cItem.x + offset, cItem.y);
+            ctx.stroke();
 
             ctx.stroke();
 
             // Write labels
             top.text = padding.top;
             top.x = cItem.x + item.width / 2;
-            top.y = cItem.y - 4 - padding.top / 2;
+            top.y = Math.max(cItem.y - top.height + padding.top / 2, 0);
 
             right.text = padding.right;
-            right.x = cItem.x + item.width - right.width + padding.right / 2;
+            right.x = Math.min(cItem.x + item.width - right.width / 2 - padding.right / 2, root.width - right.width);
             right.y = cItem.y + item.height / 2 - right.height;
 
             bottom.text = padding.bottom;
             bottom.x = cItem.x + item.width / 2;
-            bottom.y = cItem.y + item.height - bottom.height - 4 + padding.bottom / 2;
+            bottom.y = Math.min(cItem.y + item.height - bottom.height - padding.bottom / 2, root.height);
 
             left.text = padding.left;
-            left.x = cItem.x - padding.left / 2;
-            left.y = cItem.x + item.height / 2 - left.height;
+            left.x = Math.max(cItem.x - padding.left / 2 - left.width / 2, 0);
+            left.y = cItem.y + item.height / 2 - left.height;
 
         }
     }

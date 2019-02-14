@@ -33,6 +33,13 @@ Item {
     property var sequence;
     property int i: 0
 
+    /*MouseArea {
+        anchors.fill: parent
+        onPressed: {
+            console.log(mouse.x + "x" + mouse.y)
+        }
+    }*/
+
     Rectangle {
         id: ind
         z: 1
@@ -98,7 +105,8 @@ Item {
             i++;
             var stepX = (toX - fromX) / timer.interval * swipeTimer.interval
             var stepY = (toY - fromY) / timer.interval * swipeTimer.interval
-            sequence.move(1, canvas, fromX + i * stepX, toY + i * stepY);
+            sequence.move(1, canvas.parent, fromX + i * stepX, toY + i * stepY);
+            //console.log("move: " + (fromX + i * stepX) + "x" + (toY + i * stepY))
             sequence.commit();
         }
     }
@@ -106,7 +114,7 @@ Item {
     // Animate swipe
     function swipe() {
         cursor.x = fromX - Kirigami.Units.iconSizes.smallMedium;
-        cursor.y = fromY;
+        cursor.y = fromY - Kirigami.Units.iconSizes.smallMedium;
         cursor.visible = true;
 
         ind.y = fromY;
@@ -119,16 +127,21 @@ Item {
         indAnim.to = Math.abs(fromX - toX);
         indAnim.start();
 
-        sequence = event.touchEvent(canvas);
-        sequence.press(1, canvas, fromX, fromY);
+        sequence = event.touchEvent(canvas.parent);
+        sequence.press(1, canvas.parent, fromX, fromY);
+        //console.log("press: " + fromX + "x" + fromY)
         sequence.commit();
         i = 0;
+
         swipeTimer.start();
+        timer.start();
 
         timer.triggered.connect(function() {    
-            sequence.release(1, canvas,  toX, toY);
+            sequence.release(1, canvas.parent,  toX, toY);
+            //console.log("release: " + toX + "x" + toY)
             sequence.commit();
         });
+
     }
 
     function touch() {

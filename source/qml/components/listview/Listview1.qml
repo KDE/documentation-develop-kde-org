@@ -18,36 +18,47 @@
  */
 
 import QtQuick 2.6
+import QtTest 1.2
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
+import "../../models/" as Models
+import "../../addr/" as Addr
+import "../../lib/annotate.js" as A
 
-Kirigami.OverlaySheet {
-    property var model;
-    Kirigami.Theme.colorSet: Kirigami.Theme.View
-    id: sheet
-    Layout.preferredWidth: Math.round(page.width * 0.9)
+Rectangle {
+    width: 320
+    height: 160
+    id: root
 
-    background: Rectangle {
-        color: Kirigami.Theme.backgroundColor
+    ListviewMobile {
+
     }
 
-    header: Kirigami.Heading {
-        text: "Edit details"
-        level: 1
+    Timer {
+        interval: 1000
+        repeat: false
+        running: true
+        onTriggered: {
+            var a = new A.An(root);
+            var item = a.find("swipelistitem").first();
+            //console.log(item.nodes.length)
+            item.draw({
+                "padding": {}
+            });
+            var icon = item.find("qquickimage").first();
+            icon.draw({
+                "outline": {label: false}
+            });
+        }
     }
-
-    showCloseButton: true
-
-    footer: Row {
-        height: childrenRect.height
-        layoutDirection: Qt.RightToLeft
-        Button {
-            text: "Save"
+    Timer {
+        interval: 1500
+        repeat: false
+        running: true
+        onTriggered: {
+            qmlControler.start();
         }
     }
 
-    Form {
-        model: sheet.model
-    }
 }

@@ -18,36 +18,45 @@
  */
 
 import QtQuick 2.6
+import QtTest 1.2
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
+import "../../models/" as Models
+import "../../addr/" as Addr
+import "../../lib/annotate.js" as A
 
-Kirigami.OverlaySheet {
-    property var model;
-    Kirigami.Theme.colorSet: Kirigami.Theme.View
-    id: sheet
-    Layout.preferredWidth: Math.round(page.width * 0.9)
+Kirigami.ApplicationItem {
+    width: 800
+    height: 600
+    id: root
 
-    background: Rectangle {
-        color: Kirigami.Theme.backgroundColor
-    }
-
-    header: Kirigami.Heading {
-        text: "Edit details"
-        level: 1
-    }
-
-    showCloseButton: true
-
-    footer: Row {
-        height: childrenRect.height
-        layoutDirection: Qt.RightToLeft
-        Button {
-            text: "Save"
+    property var mydata : Models.Contacts {
+        Component.onCompleted: {
+            detail.model =  mydata.get(0)
+            detail.visible = true
         }
     }
 
-    Form {
-        model: sheet.model
+    pageStack.initialPage: Addr.ListPage {
+        id: list
     }
+
+    pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
+    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
+
+    Addr.DetailPage {
+        id: detail
+        visible: false
+    }
+
+    contextDrawer: Kirigami.ContextDrawer {
+        id: contextDrawer
+     }
+
+    Component.onCompleted: {
+        root.pageStack.push(detail)
+        root.pageStack.push(form)
+    }
+
 }

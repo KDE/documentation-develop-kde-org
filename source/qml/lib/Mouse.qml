@@ -27,6 +27,7 @@ Item {
     anchors.fill: parent;
     property int px
     property int py
+    property bool animate: true
     z: 2
 
     Rectangle {
@@ -102,16 +103,26 @@ Item {
     }
 
     function hover() {
-        cursor.x = px - 60;
-        cursor.y = py + 60;
-        cursor.visible = true;
 
-        cursorAnimation.onStopped.connect(function() {
+
+        if (canvas.animate) {
+            cursor.x = px - 60;
+            cursor.y = py + 60;
+            cursor.visible = true;
+
+            cursorAnimation.onStopped.connect(function() {
+                event.mouseMove(canvas.parent, px, py, 0, Qt.NoButton);
+            });
+
+            cursorAnimationX.to = px;
+            cursorAnimationY.to = py;
+            cursorAnimation.start();
+        }
+        else {
+            cursor.x = px;
+            cursor.y = py;
+            cursor.visible = true;
             event.mouseMove(canvas.parent, px, py, 0, Qt.NoButton);
-        });
-
-        cursorAnimationX.to = px;
-        cursorAnimationY.to = py;
-        cursorAnimation.start();
+        }
     }
 }

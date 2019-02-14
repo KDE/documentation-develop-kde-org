@@ -26,43 +26,54 @@ import "../../models/" as Models
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
-Kirigami.ApplicationItem {
-    width: 320
-    height: 600
+Rectangle {
+    width: 400
+    height: 200
     id: root
 
-    property var mydata : Models.Contacts {
+    ListviewDesktop {
+
     }
 
-    pageStack.initialPage: Addr.ListPage {
-        id: list
+    Timer {
+        interval: 1500
+        repeat: false
+        running: true
+        onTriggered: {
+            var a = new A.An(root);
+            var item = a.find("swipelistitem").first();
+            //console.log(item.nodes.length)
+            item.draw({
+                "padding": {}
+            });
+            /*item.find("qquickrow").draw({
+                "outline": {}
+            });
+            item.find("qquicklabel").draw({
+                "outline": {}
+            });*/
+            var icon = item.find("qquickimage").first();
+            icon.draw({
+                "outline": {label: false}
+            });
+        }
     }
-
-    pageStack.defaultColumnWidth: root.width
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
-
-
-    // HACK
-    TestEvent {
-        id: event
+    Timer {
+        interval: 1000
+        repeat: false
+        running: true
+        onTriggered: {
+            var a = new A.An(root);
+            //a.find("swipelistitem").first().hover({"animate": false});
+        }
     }
     Timer {
         interval: 2000
         repeat: false
         running: true
         onTriggered: {
-            var a = new A.An(list);
-            a.find("swipelistitem").eq(3).swipe({fromX: +140, fromY: 9, toX: -80, toY: 0});
+            qmlControler.start();
         }
     }
 
-    Timer {
-        interval: 4000
-        repeat: false
-        running: true
-        onTriggered: {
-            var a = new A.An(list);
-            a.find("swipelistitem").eq(3).touch({});
-        }
-    }
 }

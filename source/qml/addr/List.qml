@@ -17,7 +17,7 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-import QtQuick 2.2
+import QtQuick 2.10
 import QtQuick.Controls 2.2
 import org.kde.kirigami 2.4 as Kirigami
 import QtGraphicalEffects 1.0
@@ -31,9 +31,10 @@ ListView {
     delegate: Kirigami.SwipeListItem {
         property alias image: img
         onClicked: list.currentIndex = index
+        id: listItem
 
         contentItem: Row {
-            spacing: 2 * Kirigami.Units.largeSpacing
+            spacing:  listItem.leftPadding //Kirigami.Settings.tabletMode ? 2 * Kirigami.Units.largeSpacing : 2 * Kirigami.Units.smallSpacing
 
             Item {
                 width: Kirigami.Units.iconSizes.medium
@@ -41,7 +42,7 @@ ListView {
 
                 Image {
                     id: img
-                    width: Kirigami.Units.iconSizes.medium
+                    width: parent.width
                     height: width
                     source: "../../img/" + model.image
                     visible: false

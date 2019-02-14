@@ -29,6 +29,9 @@ Kirigami.ScrollablePage {
     title: "Address book"
     id: page
 
+    //Kirigami.Theme.inherit: false
+    //Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+
     background: Rectangle {
         color: Kirigami.Theme.backgroundColor
     }
@@ -41,6 +44,7 @@ Kirigami.ScrollablePage {
         width: root.width
         //border.width: 1
         //border.color: "#bdc3c7"
+        color: Kirigami.Theme.backgroundColor
 
         TextField {
             id: searchField
@@ -60,8 +64,10 @@ Kirigami.ScrollablePage {
 
     actions {
         main: Kirigami.Action {
-            iconName: "contact-new"
+            id: add
+            iconName: "list-add-user"
             text: "Create contact"
+            //icon.color: Kirigami.Theme.positiveTextColor
         }
         /*right: Kirigami.Action {
             iconName: "system-search"

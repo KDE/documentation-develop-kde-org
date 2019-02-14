@@ -84,27 +84,11 @@ Rectangle {
                 id: content
                 height: childrenRect.height
                 anchors.left: img.right
+                anchors.right: parent.right
                 anchors.leftMargin: Kirigami.Units.gridUnit
                 anchors.bottom: img.bottom
             }
         }
-
-        /*
-          TODO show on desktop only
-        Rectangle {
-            color: "#eff0f1"
-            anchors.top: parent.top;
-            anchors.right: parent.right;
-            anchors.margins: Kirigami.Units.largeSpacing
-            radius: 12
-            width: 24
-            height: 24
-            Kirigami.Icon {
-                source: "application-menu"
-                anchors.fill: parent
-                anchors.margins: Kirigami.Units.smallSpacing
-            }
-        }*/
     }
 
     Rectangle {
@@ -115,22 +99,4 @@ Rectangle {
         width: parent.width
         visible: children.length > 0
     }
-
-    /*states: [
-        State {
-            name: "small"
-            PropertyChanges {
-                target: root;
-                height:  2 * Kirigami.Units.gridUnit
-            }
-
-        },
-        State {
-            name: "default"
-        },
-        State {
-            name: "large"
-            PropertyChanges { target: myRect; color: "red" }
-        }
-    ]*/
 }

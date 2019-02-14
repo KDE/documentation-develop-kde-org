@@ -71,8 +71,11 @@ Flickable  {
 
         Kirigami.Heading {
             text: model.firstname + " " + model.lastname
-            color: "#fcfcfc"
+            //color: Kirigami.Theme.textColor
+            color: "#fcfcfc" // Hard coded because of the ColorOverlay
             level: 1
+            width: parent.width
+            wrapMode: Text.WordWrap
         }
     }
 
@@ -89,7 +92,7 @@ Flickable  {
             //height: Kirigami.Units.gridUnit * 2
             id: delegate
             contentItem: RowLayout {
-                spacing: Kirigami.Units.largeSpacing * 2
+                spacing: delegate.leftPadding
                 anchors.verticalCenter: parent.verticalCenter
 
                 Kirigami.Icon {
@@ -97,19 +100,19 @@ Flickable  {
                     width: Kirigami.Units.iconSizes.smallMedium
                     height: width
                     source: model.icon
-                    color: "#232627"
+                    color: Kirigami.Theme.textColor
                     Layout.alignment: Qt.AlignVCenter
                 }
                 Column {
                     Layout.alignment: Qt.AlignVCenter
                     Label {
                         text: model.text
-                        color: model.default ? "#2980b9" : "#232627"
+                        color: model.default ? Kirigami.Theme.linkColor : Kirigami.Theme.textColor //"#2980b9" : "#232627"
                     }
                     Label {
                         text: model.description
                         font.pointSize: 8
-                        color: "#7f8c8d"
+                        color: Kirigami.Theme.textColor //"#7f8c8d"
                     }
                 }
                 Rectangle {
@@ -157,27 +160,28 @@ Flickable  {
             model: root.model.history
 
             delegate: Kirigami.SwipeListItem {
+                id: listItem
                 Row {
-                    spacing: Kirigami.Units.largeSpacing * 2
+                    spacing: listItem.leftPadding
                     anchors.verticalCenter: parent.verticalCenter
 
                     Kirigami.Icon {
                         width: Kirigami.Units.iconSizes.smallMedium
                         height: width
                         source: model.icon
-                        color: "#232627"
+                        color: Kirigami.Theme.disabledTextColor //"#232627"
                         anchors.verticalCenter: parent.verticalCenter
                     }
                     Column {
                         anchors.verticalCenter: parent.verticalCenter
                         Label {
                             text: model.text
-                            color: "#232627"
+                            color: Kirigami.Theme.textColor //"#232627"
                         }
                         Label {
                             text: model.date
                             font.pointSize: 8
-                            color: "#7f8c8d"
+                            color: Kirigami.Theme.disabledTextColor // "#7f8c8d"
                         }
                     }
                 }

@@ -26,8 +26,9 @@ Kirigami.ScrollablePage {
     property var model;
     visible: false
     id: page
-    title: model.firstname
+    title: Kirigami.Settings.tabletMode ? model.firstname : ""
     Kirigami.Theme.colorSet: Kirigami.Theme.View
+    property alias form: formOverlay
 
     background: Rectangle {
         color: Kirigami.Theme.backgroundColor
@@ -39,7 +40,7 @@ Kirigami.ScrollablePage {
     }
 
     FormPage {
-        id: form
+        id: formOverlay
         model: page.model
     }
 

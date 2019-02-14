@@ -30,44 +30,10 @@ ColumnLayout  {
     property var model;
     spacing: 2 * Kirigami.Units.largeSpacing
 
-    /*HIG.Header {
-        id: header
-        content.anchors.leftMargin: Kirigami.Units.largeSpacing
-        content.anchors.topMargin: Kirigami.Units.largeSpacing
-        content.anchors.bottomMargin: Kirigami.Units.largeSpacing
-        source: "../../img/" + model.image
-
-
-        stripContent: Row {
-            anchors.fill: parent
-            spacing: (header.width - 3 * Kirigami.Units.iconSizes.medium) / 4
-            anchors.leftMargin: spacing
-
-
-            Kirigami.Icon {
-                source: "view-preview"
-                width: Kirigami.Units.iconSizes.smallMedium
-                height: width
-                anchors.verticalCenter: parent.verticalCenter
-            }
-        }
-
-        Label {
-            text: model.firstname + " " + model.lastname
-            color: "#fcfcfc"
-            font.pointSize: 12
-        }
-    }*/
-
-    Label {
-        id: header
-        text: "Edit details"
-        font.pointSize: 16
-    }
 
     Kirigami.FormLayout {
         id: form
-        Layout.fillWidth: true
+        Layout.preferredWidth: Math.round(page.width * 0.9)
 
         TextField {
             Kirigami.FormData.label: "Firstname:"
@@ -108,11 +74,5 @@ ColumnLayout  {
         Switch {
             Kirigami.FormData.label: "Additional fields"
         }
-
     }
-    Button {
-        text: "Save"
-        Layout.alignment: Qt.AlignRight
-    }
-
 }
