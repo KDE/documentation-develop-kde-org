@@ -9,11 +9,11 @@ Inline message
 Purpose
 -------
 
-A *inline message* is a small pop-up panel shown at top of the current
-form that informs users of a non-critical problem or special condition.
-The panel shows information on four levels indicated by different colors
-and icons, and provides standard action that users might want to
-initiate.
+A *inline message* is a small panel shown in current form that informs users of
+a non-critical problem or special condition. It is embedded in the content
+and should not overlap content or controls. The panel shows information on four 
+levels indicated by different colors and icons, and provides standard action 
+that users might want to initiate.
 
 .. figure:: /img/Message5.qml.png
    :alt: Different levels of inline messages.
