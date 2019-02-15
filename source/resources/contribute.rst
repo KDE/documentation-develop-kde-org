@@ -1,18 +1,27 @@
 Contribute
 ==========
 
-The HIG is written in `reStructuredText <http://www.sphinx-doc.org/en/stable/rest.html>`_, a lightweight markup language.
-For example the chapter heading together with the first paragraph looks like this in reStructuredText::
+The HIG is written in 
+`reStructuredText <http://www.sphinx-doc.org/en/stable/rest.html>`_, a 
+lightweight markup language. For example the chapter heading together with the 
+first paragraph looks like this in reStructuredText::
 
    Contribute
    ==========
 
-   The HIG is written in `reStructuredText <http://www.sphinx-doc.org/en/stable/rest.html>`_, a light weight markup language.
-   For example the chapter heading together with the first paragraph look in reStructuredText like this
+   The HIG is written in 
+   `reStructuredText <http://www.sphinx-doc.org/en/stable/rest.html>`_, a light 
+   weight markup language. For example the chapter heading together with the 
+   first paragraph looks like this in reStructuredText
 
-The restructuredText of the full HIG is organized into several source files. You can view and modify these source files with any text editor.
+The restructuredText of the full HIG is organized into several source files. 
+You can view and modify these source files with any text editor.
 
-The source files are hosted in a `Git repo <https://cgit.kde.org/websites/hig-kde-org.git/>`_. `Sphinx <http://www.sphinx-doc.org>`_ is used to generate HTML pages from these source files. Tasks and changes are organized via `Phabricator <https://phabricator.kde.org/project/board/264/>`_.
+The source files are hosted in a 
+`Git repo <https://cgit.kde.org/websites/hig-kde-org.git/>`_. 
+`Sphinx <http://www.sphinx-doc.org>`_ is used to generate HTML pages from these 
+source files. Tasks and changes are organized via 
+`https://invent.kde.org <https://invent.kde.org/websites/hig-kde-org>`_.
 
 .. note:: On every page of the HIG, there is a *View page source* link in the top right corner.
 
@@ -22,7 +31,9 @@ For more information and help you can find us on
 `Telegram <https://telegram.me/vdgmainroom>`_
 .
 
-If you are new to KDE devlopment, make sure to read `how to become a kde developer <https://community.kde.org/Get_Involved/development>`_ first.
+If you are new to KDE devlopment, make sure to read 
+`how to become a kde developer 
+<https://community.kde.org/Get_Involved/development>`_ first.
 
 Getting started
 ---------------
