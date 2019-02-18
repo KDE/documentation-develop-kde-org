@@ -24,72 +24,13 @@ import org.kde.kirigami 2.5 as Kirigami
 import "../models/" as Models
 import "../lib/annotate.js" as A
 
-Kirigami.ApplicationWindow {
-    width: 800
+
+Rectangle {
+    width: 1200
     height: 600
     id: root
 
-    property var mydata : Models.Contacts {
-        Component.onCompleted: {
-            detail.model =  mydata.get(3)
-            detail.visible = true
-        }
-    }
-
-    pageStack.initialPage: ListPage {
-        id: list
-    }
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
-    pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
-
-    /*menuBar: MenuBar {
-        Menu {
-            title: qsTr("&File")
-            Action { text: qsTr("&New...") }
-            Action { text: qsTr("&Import") }
-            Action { text: qsTr("&Export") }
-        }
-        Menu {
-            title: qsTr("&Edit")
-            Action { text: qsTr("&Merge contacts") }
-            Action { text: qsTr("&Search dupplicate contacts") }
-            Action { text: qsTr("&Export") }
-        }
-        Menu {
-            title: qsTr("&Settings")
-            Action { text: qsTr("&About") }
-        }
-        Menu {
-            title: qsTr("&Help")
-            Action { text: qsTr("&About") }
-        }
-    }*/
-
-    DetailPage {
-        id: detail
-        visible: false
-    }
-
-    globalDrawer: Kirigami.GlobalDrawer {
-        actions: [Kirigami.Action {
-                text: "Import"
-            },
-            Kirigami.Action {
-                text: "Export"
-            },
-            Kirigami.Action {
-                text: "Merge contacts"
-            },
-            Kirigami.Action {
-                text: "Search dupplicate contacts"
-            },
-            Kirigami.Action {
-                text: "Settings"
-            }
-        ]
-    }
-
-    Component.onCompleted: {
-        root.pageStack.push(detail)
+    Addressbook {
+        index: 3
     }
 }

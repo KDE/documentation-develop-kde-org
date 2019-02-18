@@ -30,8 +30,8 @@ Rectangle {
     height: 600
     id: root
 
-    Globaldrawer {
-        id: drawer
+    Addr.Addressbook {
+        id: addrbook
     }
 
     // HACK
@@ -40,7 +40,7 @@ Rectangle {
         repeat: false
         running: true
         onTriggered: {
-            drawer.gDrawer.open();
+            addrbook.gDrawer.open();
         }
     }
     Timer {

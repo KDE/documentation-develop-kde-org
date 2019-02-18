@@ -21,38 +21,25 @@ import QtQuick 2.6
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
-import "../../models/" as Models
-import "../../addr/" as Addr
-import "../../lib/annotate.js" as A
 
-Rectangle {
-    width: 800
-    height: 600
-    id: root
+Kirigami.ScrollablePage {
+    property var model;
+    visible: false
+    id: page
+    title: "History"
+    Kirigami.Theme.colorSet: Kirigami.Theme.View
+    width: 300
 
-    Addr.Addressbook {
-        id: addrbook
-        index: 2
-        Component.onCompleted: {
-            addrbook.pageStack.push(addrbook.detailPage)
+    background: Rectangle {
+        color: Kirigami.Theme.backgroundColor
+    }
+
+    Flickable  {
+        History {
+            anchors.fill: parent;
+            width: page.width
+            model: page.model
         }
     }
 
-    // HACK
-    Timer {
-        interval: 1000
-        repeat: false
-        running: true
-        onTriggered: {
-            addrbook.gDrawer.open();
-        }
-    }
-    Timer {
-        interval: 1500
-        repeat: false
-        running: true
-        onTriggered: {
-            qmlControler.start();
-        }
-    }
 }

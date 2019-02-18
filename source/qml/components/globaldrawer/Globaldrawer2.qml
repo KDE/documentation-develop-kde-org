@@ -30,8 +30,12 @@ Rectangle {
     height: 600
     id: root
 
-    Globaldrawer {
-        id: drawer
+    Addr.Addressbook {
+        id: addrbook
+        index: 2
+        Component.onCompleted: {
+            addrbook.pageStack.push(addrbook.detailPage)
+        }
     }
 
     Timer {
@@ -40,6 +44,10 @@ Rectangle {
         running: true
         onTriggered: {
             var b = new A.An(root);
+            b.find("pagerowglobaltoolbarui").tree();
+            b.find("pagerowglobaltoolbarui").find("desktopicon").draw({
+                                                      outline: {label: false}
+                                                  });
             b.find("pagerowglobaltoolbarui").find("qquicktoolbutton").draw({
                 outline: {label: false}
             });

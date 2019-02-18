@@ -25,35 +25,14 @@ import "../../../models/" as Models
 import "../../../addr/" as Addr
 import "../../../lib/annotate.js" as A
 
-Kirigami.ApplicationItem {
+Rectangle {
     width: 320
     height: 600
     id: root
 
-    property var mydata : Models.Contacts {
+    Addr.Addressbook {
+        id: addrbook
     }
-
-    pageStack.initialPage: Addr.ListPage {
-        id: list
-        onCurrentIndexChanged: {
-            detail.model =  mydata.get(list.currentIndex)
-            root.pageStack.push(detail)
-            detail.visible = true
-        }
-    }
-
-    pageStack.defaultColumnWidth: root.width
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
-
-    Addr.DetailPage {
-        id: detail
-        visible: false
-    }
-
-    contextDrawer: Kirigami.ContextDrawer {
-        id: contextDrawer
-     }
-
 
     // HACK
     Timer {
@@ -61,7 +40,7 @@ Kirigami.ApplicationItem {
         repeat: false
         running: true
         onTriggered: {
-            var a = new A.An(list);
+            var a = new A.An(addrbook);
             a.find("swipelistitem").eq(3).find("qquickimage").touch();
         }
     }
@@ -71,7 +50,7 @@ Kirigami.ApplicationItem {
         repeat: false
         running: true
         onTriggered: {
-            var b = new A.An(root);
+            var b = new A.An(addrbook);
             b.find("pagerowglobaltoolbarui").find("heading").first().touch();
         }
     }

@@ -25,31 +25,17 @@ import "../../models/" as Models
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
-Kirigami.ApplicationItem {
+Rectangle {
     width: 800
     height: 600
     id: root
 
-    property var mydata : Models.Contacts {
+    Addr.Addressbook {
+        id: addrbook
+        index: 3
         Component.onCompleted: {
-            detail.model =  mydata.get(3)
-            detail.visible = true
+            addrbook.pageStack.push(addrbook.detailPage)
+            qmlControler.start();
         }
-    }
-
-    pageStack.initialPage: Addr.ListPage {
-        id: list
-    }
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
-    pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
-
-    Addr.DetailPage {
-        id: detail
-        visible: false
-    }
-
-    Component.onCompleted: {
-        root.pageStack.push(detail)
-        qmlControler.start();
     }
 }

@@ -25,19 +25,13 @@ import "../../models/" as Models
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
-Kirigami.ApplicationItem {
+Rectangle {
     width: 320
     height: 600
     id: root
 
-    property var mydata : Models.Contacts {
+    Addr.Addressbook {
+        id: addrbook
     }
-
-    pageStack.initialPage: Addr.ListPage {
-        id: list
-    }
-
-    pageStack.defaultColumnWidth: root.width
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
 
 }

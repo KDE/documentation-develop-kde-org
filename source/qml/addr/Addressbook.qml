@@ -21,10 +21,7 @@ import QtQuick 2.6
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
-import "../../models/" as Models
-import "../../addr/" as Addr
-import "../../lib/annotate.js" as A
-import QtGraphicalEffects 1.0
+import "../models/" as Models
 
 Kirigami.ApplicationItem {
     width: parent.width
@@ -32,43 +29,65 @@ Kirigami.ApplicationItem {
     id: root
 
     property alias gDrawer: global
+    property alias cDrawer: context
+    property alias detailPage: detail
+    property alias listPage: list
+    property int index: -1
 
     property var mydata : Models.Contacts {
         Component.onCompleted: {
-            detail.model =  mydata.get(2)
-            detail.visible = true
+            if (root.index >= 0) {
+                detail.model =  mydata.get(root.index)
+                detail.visible = true
+            }
         }
     }
 
-    pageStack.initialPage: Addr.ListPage {
+    pageStack.initialPage: ListPage {
         id: list
+        onCurrentIndexChanged: {
+            detail.model =  mydata.get(list.currentIndex)
+            root.pageStack.push(detail)
+            detail.visible = true
+
+            if (root.width > 900) {
+                history.model =  mydata.get(list.currentIndex)
+                root.pageStack.push(history)
+            }
+        }
     }
 
     pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
 
-    Addr.DetailPage {
+    DetailPage {
         id: detail
         visible: false
+        showHistory: root.width <= 900
     }
 
-    Component.onCompleted: {
-        root.pageStack.push(detail)
+    HistoryPage {
+        id: history
+        visible: false
     }
 
     globalDrawer: Kirigami.GlobalDrawer {
         id: global
         title: "Joanne Doe"
-        titleIcon: "../../../img/BernaFace.jpg"
+        titleIcon: "../../img/BernaFace.jpg"
 
-        //Kirigami.Theme.inherit: false
-        //Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+        /*modal: root.width <= 1000;
+        collapsible: root.width > 1000;
+        collapsed: root.width > 1000;
+
+        Kirigami.Theme.inherit: root.width <= 1000
+        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary*/
 
         topContent: [
             Row {
-                anchors.right: parent.right
+                Layout.alignment: Qt.AlignRight | Qt.AlignBottom
+                //anchors.right: parent.right
                 anchors.rightMargin: Kirigami.Settings.tabletMode ? Kirigami.Units.largeSpacing : Kirigami.Units.smallSpacing
-                anchors.bottom: parent.bottom
                 spacing: Kirigami.Settings.tabletMode ? 2 * Kirigami.Units.largeSpacing : 2 * Kirigami.Units.smallSpacing
                 //anchors.bottomMargin: 4 * Kirigami.Units.largeSpacing
 
@@ -109,4 +128,8 @@ Kirigami.ApplicationItem {
             }
         ]
     }
+
+    contextDrawer: Kirigami.ContextDrawer {
+        id: context
+     }
 }

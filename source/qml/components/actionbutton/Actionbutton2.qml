@@ -25,36 +25,17 @@ import "../../models/" as Models
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
-Kirigami.ApplicationItem {
+Rectangle {
     width: 320
     height: 600
     id: root
 
-    property var mydata : Models.Contacts {
+    Addr.Addressbook {
+        id: addrbook
+        index: 3
         Component.onCompleted: {
-            detail.model = mydata.get(3)
-            root.pageStack.push(detail)
-            detail.visible = true
+            addrbook.pageStack.push(addrbook.detailPage)
         }
-    }
-
-    pageStack.initialPage: Addr.ListPage {
-        id: list
-        onCurrentIndexChanged: {
-
-        }
-    }
-
-    pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
-
-    contextDrawer: Kirigami.ContextDrawer {
-        id: contextDrawer
-     }
-
-    Addr.DetailPage {
-        id: detail
-        visible: false
     }
 
     // HACK
@@ -66,15 +47,4 @@ Kirigami.ApplicationItem {
             qmlControler.start();
         }
     }
-    /*Timer {
-        interval: 3000
-        repeat: false
-        running: true
-        onTriggered: {
-            var a = new A.An(root);
-            //a.tree();
-            a.find("actionbutton").last().find("qquickrectangle").eq(1).touch({x: -28, y: -12});
-
-        }
-    }*/
 }

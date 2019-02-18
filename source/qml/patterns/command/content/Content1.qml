@@ -27,56 +27,48 @@ import "../../../lib/annotate.js" as A
 
 Rectangle {
     width: 320
-    height: 380
+    height: 600
     id: root
 
-    property var mydata : Models.Contacts {
+    Addr.Addressbook {
+        id: addrbook
+        index: 2
         Component.onCompleted: {
-            detail.model =  mydata.get(2)
-            detail.visible = true
+            addrbook.pageStack.push(addrbook.detailPage)
         }
     }
 
-    Kirigami.ApplicationItem {
-        x: 0
-        y: 0
-        width: 320
-        height: 600
-        id: app
-
-
-
-        pageStack.initialPage: Addr.DetailPage {
-            id: detail
-            visible: false
+    // HACK
+    Timer {
+        interval: 1000
+        repeat: false
+        running: true
+        onTriggered: {
+            qmlControler.start();
         }
-        pageStack.defaultColumnWidth: app.width
-        pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
+    }
 
-
-
-        // HACK
-        Timer {
-            interval: 1000
-            repeat: false
-            running: true
-            onTriggered: {
-                var a = new A.An(detail);
-                a.find("header").find("qquickrow").find("desktopicon").first().draw({
-                    "outline": {label: false}
-                });
-                a.find("qquickcolumn").first().find("basiclistitem").first().find("qquickrectangle").find("desktopicon").draw({
-                                                                                               "outline": {label: false}
-                                                                                           });
-            }
+    // HACK
+    Timer {
+        interval: 1000
+        repeat: false
+        running: true
+        onTriggered: {
+            var a = new A.An(addrbook.detailPage);
+            a.find("header").find("qquickrow").find("desktopicon").first().draw({
+                "outline": {label: false}
+            });
+            a.find("qquickcolumn").first().find("basiclistitem").first().find("qquickrectangle").find("desktopicon").draw({
+                                                                                           "outline": {label: false}
+                                                                                       });
         }
-        Timer {
-            interval: 1500
-            repeat: false
-            running: true
-            onTriggered: {
-                qmlControler.start();
-            }
+    }
+    Timer {
+        interval: 1500
+        repeat: false
+        running: true
+        onTriggered: {
+            qmlControler.start();
         }
     }
 }

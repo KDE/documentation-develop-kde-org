@@ -30,13 +30,17 @@ Rectangle {
     height: 600
     id: root
 
-    Globaldrawer {
-        id: drawer
-
+    Addr.Addressbook {
+        id: addrbook
+        index: 2
         gDrawer {
             modal: false;
             collapsible: true;
             collapsed: true;
+        }
+
+        Component.onCompleted: {
+            addrbook.pageStack.push(addrbook.detailPage)
         }
     }
 
@@ -46,7 +50,7 @@ Rectangle {
         repeat: false
         running: true
         onTriggered: {
-            drawer.gDrawer.collapsed = false;
+            addrbook.gDrawer.collapsed = false;
         }
     }
     Timer {
@@ -54,7 +58,7 @@ Rectangle {
         repeat: false
         running: true
         onTriggered: {
-            drawer.gDrawer.collapsed = true;
+            addrbook.gDrawer.collapsed = true;
         }
     }
     Timer {

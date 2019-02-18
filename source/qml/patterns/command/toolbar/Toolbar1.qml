@@ -25,43 +25,18 @@ import "../../../models/" as Models
 import "../../../addr/" as Addr
 import "../../../lib/annotate.js" as A
 
-Kirigami.ApplicationItem {
+Rectangle {
     width: 800
     height: 600
     id: root
 
-    property var mydata : Models.Contacts {
+    Addr.Addressbook {
+        id: addrbook
+        index: 0
         Component.onCompleted: {
-            detail.model =  mydata.get(0)
-            detail.visible = true
+            addrbook.pageStack.push(addrbook.detailPage)
         }
     }
-
-    pageStack.initialPage: Addr.ListPage {
-        id: list
-        onCurrentIndexChanged: {
-            detail.model =  mydata.get(list.currentIndex)
-            root.pageStack.push(detail)
-            detail.visible = true
-        }
-    }
-
-     pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
-
-    Addr.DetailPage {
-        id: detail
-        visible: false
-    }
-
-    contextDrawer: Kirigami.ContextDrawer {
-        id: contextDrawer
-     }
-
-    Component.onCompleted: {
-        root.pageStack.push(detail)
-    }
-
 
     // HACK
     Timer {
@@ -69,7 +44,7 @@ Kirigami.ApplicationItem {
         repeat: false
         running: true
         onTriggered: {
-            var a = new A.An(detail);
+            var a = new A.An(addrbook.detailPage);
             a.find("abstractpageheader").find("privateactiontoolbutton").last().click();
         }
     }

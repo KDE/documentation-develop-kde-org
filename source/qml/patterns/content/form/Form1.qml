@@ -18,47 +18,20 @@
  */
 
 import QtQuick 2.6
-import QtQuick.Controls 2.2
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
-import "../../models/" as Models
-import "../../addr/" as Addr
-import "../../lib/annotate.js" as A
+import "../../../addr/" as Addr
 
-Kirigami.ApplicationItem {
-    width: 320
+Rectangle {
+    width: 800
     height: 600
-    id: app
+    id: root
 
-    property var mydata : Models.Contacts {
+    Addr.Addressbook {
+        id: addrbook
+        index: 0
         Component.onCompleted: {
-            detail.model =  mydata.get(3)
-            detail.visible = true
+            addrbook.pageStack.push(addrbook.detailPage)
         }
     }
-
-    pageStack.initialPage: Addr.ListPage {
-        id: list
-    }
-
-    pageStack.defaultColumnWidth: app.width < 320 ? app.width : 320
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
-
-    Addr.DetailPage {
-        id: detail
-        visible: false
-    }
-
-    contextDrawer: Kirigami.ContextDrawer {
-        id: contextDrawer
-     }
-
-    Component.onCompleted: {
-        app.pageStack.push(detail)
-        //app.pageStack.push(form)
-    }
-
-
 
     // HACK
     Timer {
@@ -66,11 +39,12 @@ Kirigami.ApplicationItem {
         repeat: false
         running: true
         onTriggered: {
-            contextDrawer.open();
+            addrbook.detailPage.form.open();
+            //contextDrawer.open();
         }
     }
     Timer {
-        interval: 1500
+        interval: 2500
         repeat: false
         running: true
         onTriggered: {

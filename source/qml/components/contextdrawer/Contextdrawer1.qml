@@ -30,7 +30,30 @@ Rectangle {
     height: 600
     id: root
 
-    ContextdrawerMobile {
+    Addr.Addressbook {
+        id: addrbook
+        index: 3
 
+        Component.onCompleted: {
+            addrbook.pageStack.push(addrbook.detailPage)
+        }
+    }
+
+    // HACK
+    Timer {
+        interval: 1000
+        repeat: false
+        running: true
+        onTriggered: {
+            addrbook.cDrawer.open();
+        }
+    }
+    Timer {
+        interval: 1500
+        repeat: false
+        running: true
+        onTriggered: {
+            qmlControler.start();
+        }
     }
 }

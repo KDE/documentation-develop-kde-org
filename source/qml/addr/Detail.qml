@@ -28,6 +28,7 @@ import "../lib/" as HIG
 Flickable  {
     id: root
     property var model;
+    property alias history: history
     signal editClicked()
 
     HIG.Header {
@@ -38,6 +39,25 @@ Flickable  {
         //status: root.contentY == 0 ? 1 : Math.min(1, Math.max(2 / 11, 1 - root.contentY / Kirigami.Units.gridUnit))
         source: "../../img/" + model.image
 
+
+        /*Kirigami.ActionToolBar {
+            anchors.fill: parent
+            //spacing: (header.width - 3 * Kirigami.Units.iconSizes.medium) / 4
+            //anchors.leftMargin: spacing
+            actions: [
+                Kirigami.Action {
+                    iconName: "favorite"
+                    text: "Save as favorite"
+                },
+                Kirigami.Action {
+                    iconName: "favorite"
+                    text: "Save as favorite"
+                },
+                Kirigami.Action {
+                    iconName: "favorite"
+                    text: "Save as favorite"
+                }
+         ]}*/
 
         stripContent: Row {
             anchors.fill: parent
@@ -143,49 +163,20 @@ Flickable  {
 
     Kirigami.Heading {
         level: 4
-        visible: typeof root.model.history !== "undefined" && root.model.history.count
+        visible: typeof root.model.history !== "undefined" && root.model.history.count && history.visible
         text: "History"
-        id: history
+        id: hTitle
         anchors.top: comm.bottom
         anchors.left: parent.left
         anchors.topMargin: 2 * Kirigami.Units.largeSpacing
         anchors.leftMargin: Kirigami.Units.largeSpacing
     }
 
-    Column {
-        anchors.top: history.bottom
+    History {
+        id: history
+        anchors.top: hTitle.bottom
         anchors.topMargin: Kirigami.Units.largeSpacing
         width: root.width
-        Repeater {
-            model: root.model.history
-
-            delegate: Kirigami.SwipeListItem {
-                id: listItem
-                Row {
-                    spacing: listItem.leftPadding
-                    anchors.verticalCenter: parent.verticalCenter
-
-                    Kirigami.Icon {
-                        width: Kirigami.Units.iconSizes.smallMedium
-                        height: width
-                        source: model.icon
-                        color: Kirigami.Theme.disabledTextColor //"#232627"
-                        anchors.verticalCenter: parent.verticalCenter
-                    }
-                    Column {
-                        anchors.verticalCenter: parent.verticalCenter
-                        Label {
-                            text: model.text
-                            color: Kirigami.Theme.textColor //"#232627"
-                        }
-                        Label {
-                            text: model.date
-                            font.pointSize: 8
-                            color: Kirigami.Theme.disabledTextColor // "#7f8c8d"
-                        }
-                    }
-                }
-            }
-        }
+        model: root.model
     }
 }

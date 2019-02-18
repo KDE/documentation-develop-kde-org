@@ -26,20 +26,14 @@ import "../../models/" as Models
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
-Kirigami.ApplicationItem {
+Rectangle {
     width: 320
     height: 600
     id: root
 
-    property var mydata : Models.Contacts {
+    Addr.Addressbook {
+        id: addrbook
     }
-
-    pageStack.initialPage: Addr.ListPage {
-        id: list
-    }
-
-    pageStack.defaultColumnWidth: root.width
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
 
 
     // HACK
@@ -51,7 +45,7 @@ Kirigami.ApplicationItem {
         repeat: false
         running: true
         onTriggered: {
-            var a = new A.An(list);
+            var a = new A.An(addrbook);
             a.find("swipelistitem").eq(3).swipe({fromX: +140, fromY: 9, toX: -80, toY: 0});
         }
     }
@@ -61,7 +55,7 @@ Kirigami.ApplicationItem {
         repeat: false
         running: true
         onTriggered: {
-            var a = new A.An(list);
+            var a = new A.An(addrbook);
             a.find("swipelistitem").eq(3).touch({});
         }
     }
