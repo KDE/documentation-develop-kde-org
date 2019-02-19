@@ -81,7 +81,6 @@ Item {
                 }
             }
             else if (Array.isArray(container.padding) && container.padding.length == 4) {
-                console.log("array")
                 padding = {
                     "top": container.padding[0],
                     "right": container.padding[1],
@@ -154,7 +153,6 @@ Item {
             left.text = padding.left;
             left.x = Math.max(cItem.x - padding.left / 2 - left.width / 2, 0);
             left.y = cItem.y + item.height / 2 - left.height;
-
         }
     }
 }
