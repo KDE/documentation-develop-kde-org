@@ -9,13 +9,13 @@ Inline message
 Purpose
 -------
 
-A *inline message* is a small pop-up panel shown at top of the current
-form that informs users of a non-critical problem or special condition.
-The panel shows information on four levels indicated by different colors
-and icons, and provides standard action that users might want to
-initiate.
+A *inline message* is a small panel that informs users of a non-critical problem 
+or special condition. It is embedded in the content and should not overlap 
+content or controls. The panel has four visual style options which can be used 
+for neutral messages, success conditions, warnings, and errors. It can also be 
+given buttons.
 
-.. figure:: /img/Message5.qml.png
+.. figure:: /img/Message5.png
    :alt: Different levels of inline messages.
    :scale: 80%
    
@@ -120,24 +120,26 @@ Example use cases:
 Appearance
 ----------
 
-A basic inline messages consists of an icon and text. It can contain an optional 
+A basic inline messages consists of an icon and text. It can contain an 
+optional 
 close button and :doc:`buttons <../navigation/pushbutton>`. 
 
-.. figure:: /img/Message1.qml.png
+.. figure:: /img/Message1.png
    :alt: Inline message with a custom icon and a close button.
    :scale: 80%
    
    Inline message with a custom icon and a close button.
 
-.. figure:: /img/Message2.qml.png
+.. figure:: /img/Message2.png
    :alt: Inline message with two buttons.
    :scale: 80%
    
    Inline message with two buttons.
    
-If there is not enough space to display all the buttons, an overflow menu is shown instead.
+If there is not enough space to display all the buttons, an overflow menu is 
+shown instead.
 
-.. figure:: /img/Message3.qml.png
+.. figure:: /img/Message3.png
    :alt: Inline message with overflow menu.
    :scale: 80%
    
