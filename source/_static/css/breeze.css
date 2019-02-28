@@ -215,3 +215,44 @@ a.icon {
     font-family:"icons";
     content:"\f104";
 }
+
+/*
+ * Add more spacing and a 1px seperator between sections */
+div[itemprop="articleBody"] .section:not(:first-of-type) {
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+div[itemprop="articleBody"] > .section > .section:not(:first-of-type) {
+	border-top: 1px solid #bdc3c7;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+/* Increase font sized to have more visual difference */
+h1 {
+	font-size: 300%;
+	margin-bottom: 8px;
+	font-weight: normal;
+}
+h2 {
+	font-size: 240%;
+	margin-bottom: 8px;
+	font-weight: normal;
+}
+h3 {
+	font-size: 180%;
+	margin-bottom: 8px;
+	font-weight: normal;
+}
+h4 {
+	font-size: 140%;
+	margin-bottom: 8px;
+	font-weight: normal;
+}
+h5 {
+	font-size: 120%;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+
