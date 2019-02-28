@@ -1,6 +1,11 @@
 Typography
 ==========
-The guideline helps ensure that typography is always in harmony with the overall visual design.
+
+The guideline helps ensure that typography is always in harmony with the overall 
+visual design. These guidelines apply to application and widgets, but not to 
+documents.
+It is fine to use a wider range of different font sizes and formatings in 
+documents.
 
 Typeface Styles
 ---------------
