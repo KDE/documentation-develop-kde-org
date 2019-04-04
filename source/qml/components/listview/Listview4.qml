@@ -17,22 +17,19 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.6
-import QtTest 1.2
-import QtQuick.Controls 2.2
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
-import "../../models/" as Models
+import QtQuick 2.10
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
 Rectangle {
-    width: 400
+    width: 320
     height: 200
     id: root
 
-    ListviewDesktop {
-
+    Addr.Addressbook {
+        width: 800
+        height: 600
+        index: 1
     }
 
     Timer {

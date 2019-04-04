@@ -84,6 +84,16 @@ Item {
         }
     }
 
+    Timer {
+        id: moveMouse
+        interval: 50
+        repeat: true
+        running: false
+        onTriggered: {
+            event.mouseMove(canvas.parent, cursor.x, cursor.y, 0, Qt.NoButton);
+        }
+    }
+
 
     // Animate mouse to x/y and then click
     function click() {
@@ -95,16 +105,16 @@ Item {
             ind.visible = true;
             indAnim.to = Kirigami.Units.iconSizes.smallMedium;
             indAnim.start();
+            moveMouse.stop();
         });
 
         cursorAnimationX.to = px;
         cursorAnimationY.to = py;
         cursorAnimation.start();
+        moveMouse.start();
     }
 
     function hover() {
-
-
         if (canvas.animate) {
             cursor.x = px - 60;
             cursor.y = py + 60;
@@ -112,11 +122,13 @@ Item {
 
             cursorAnimation.onStopped.connect(function() {
                 event.mouseMove(canvas.parent, px, py, 0, Qt.NoButton);
+                moveMouse.stop();
             });
 
             cursorAnimationX.to = px;
             cursorAnimationY.to = py;
             cursorAnimation.start();
+            moveMouse.start();
         }
         else {
             cursor.x = px;

@@ -17,18 +17,16 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.6
-import QtTest 1.2
-import QtQuick.Controls 2.2
+import QtQuick 2.10
+import QtQuick.Controls 2.3
 import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
-import "../../models/" as Models
+import org.kde.kirigami 2.7 as Kirigami
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
 Rectangle {
     width: 320
-    height: 160
+    height: 200
     id: root
 
     ListviewMobile {
@@ -36,15 +34,14 @@ Rectangle {
     }
 
     Timer {
-        interval: 1000
+        interval: 2000
         repeat: false
         running: true
         onTriggered: {
             var a = new A.An(root);
-            console.log(a.find("swipelistitem").nodes.length);
             var item = a.find("swipelistitem").first();
-            var label = item.find("qquicklabel").first();
-
+            var label = item.find("qquicklabel").last();
+            
             label.draw({
                 "outline": {label: false},
                 "ruler": {horizontal: true, offset: "center"}
@@ -57,12 +54,11 @@ Rectangle {
         }
     }
     Timer {
-        interval: 1500
+        interval: 2500
         repeat: false
         running: true
         onTriggered: {
             qmlControler.start();
         }
     }
-
 }

@@ -18,9 +18,9 @@
  */
 
 import QtQuick 2.6
-import QtQuick.Controls 2.2
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick.Controls 2.3
+import QtQuick.Layouts 1.3
+import org.kde.kirigami 2.7 as Kirigami
 import "../models/" as Models
 
 Kirigami.ApplicationItem {
@@ -34,11 +34,12 @@ Kirigami.ApplicationItem {
     property alias listPage: list
     property int index: -1
 
+    property bool wide: false
+
     property var mydata : Models.Contacts {
         Component.onCompleted: {
             if (root.index >= 0) {
-                detail.model =  mydata.get(root.index)
-                detail.visible = true
+                setIndex(root.index)
             }
         }
     }
@@ -46,14 +47,22 @@ Kirigami.ApplicationItem {
     pageStack.initialPage: ListPage {
         id: list
         onCurrentIndexChanged: {
-            detail.model =  mydata.get(list.currentIndex)
-            root.pageStack.push(detail)
-            detail.visible = true
+            setIndex(list.currentIndex)
+        }
+        Kirigami.ColumnView.fillWidth: false
+    }
 
-            if (root.width > 900) {
-                history.model =  mydata.get(list.currentIndex)
-                root.pageStack.push(history)
-            }
+    function setIndex(i) {
+        console.log("setIndex")
+        detail.model =  mydata.get(i)
+        detail.visible = true
+        root.pageStack.push(detail)
+
+        console.log(root.wide)
+        if (root.wide) {
+            history.model =  mydata.get(i)
+            history.visible = true
+            root.pageStack.push(history)
         }
     }
 
@@ -63,12 +72,65 @@ Kirigami.ApplicationItem {
     DetailPage {
         id: detail
         visible: false
-        showHistory: root.width <= 900
+        showHistory: root.wide
+        Kirigami.ColumnView.fillWidth: true
+        //Kirigami.ColumnView.reservedSpace: pageStack.defaultColumnWidth * 2
+
+        Share {
+            id: share
+            sheetOpen: true
+            model: mydata
+        }
     }
 
     HistoryPage {
         id: history
         visible: false
+        //Kirigami.ColumnView.fillWidth: false
+    }
+
+
+    onWidthChanged: {
+        console.log()
+        if (width >= 1050 && !root.wide) {
+            root.wide = true
+            detail.Kirigami.ColumnView.reservedSpace = pageStack.defaultColumnWidth * 2
+            if (list.currentIndex >= 0) {
+                console.log("onWidthChanged wide")
+                history.model =  mydata.get(list.currentIndex)
+                history.visible = true
+                root.pageStack.push(history)
+            }
+        }
+
+        if (width < 1050 && root.wide) {
+            console.log("onWidthChanged narrow")
+            console.log(list.currentIndex)
+            root.wide = false
+            detail.Kirigami.ColumnView.reservedSpace = pageStack.defaultColumnWidth
+            //if (list.currentIndex >= 0) {
+                console.log("removing")
+                root.pageStack.removePage(history);
+                list.Kirigami.ColumnView.fillWidth = true
+            //}
+        }
+
+
+        // Change drawer to collapsible if there is enough space
+        if (width >= 1100 && !global.collapsible) {
+            console.log("onWidthChanged collapsible")
+            global.modal = false;
+            global.collapsible = true
+            global.collapsed = true;
+            global.drawerOpen = true
+        }
+
+        if (width < 1100 && global.collapsible) {
+            console.log("onWidthChanged not collapsible")
+            global.drawerOpen = false
+            global.collapsible = false
+            global.modal = true
+        }
     }
 
     globalDrawer: Kirigami.GlobalDrawer {
@@ -76,12 +138,8 @@ Kirigami.ApplicationItem {
         title: "Joanne Doe"
         titleIcon: "../../img/BernaFace.jpg"
 
-        /*modal: root.width <= 1000;
-        collapsible: root.width > 1000;
-        collapsed: root.width > 1000;
-
-        Kirigami.Theme.inherit: root.width <= 1000
-        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary*/
+        Kirigami.Theme.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
 
         topContent: [
             Row {

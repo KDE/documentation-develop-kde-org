@@ -18,18 +18,26 @@
  */
 
 import QtQuick 2.10
-import "../../addr/" as Addr
+import QtQuick.Controls 2.3
+import QtQuick.Layouts 1.2
+import org.kde.kirigami 2.4 as Kirigami
 import "../../lib/annotate.js" as A
 
 Rectangle {
     width: 320
-    height: 200
+    height: 220
     id: root
 
-    Addr.Addressbook {
-        width: 800
-        height: 600
-        index: 1
+    ListView {
+        anchors.fill: parent
+        model: [1,2,3,4]
+
+        delegate: Kirigami.BasicListItem {
+            icon: "folder"
+            iconColor: "#27ae60"
+            iconSize: Kirigami.Units.iconSizes.medium
+            label: "Folder " + (index + 1)
+        }
     }
 
     Timer {
@@ -38,37 +46,27 @@ Rectangle {
         running: true
         onTriggered: {
             var a = new A.An(root);
-            var item = a.find("swipelistitem").first();
-            //console.log(item.nodes.length)
-            item.draw({
+            var item0 = a.find("basiclistitem").first();
+            item0.draw({
                 "padding": {}
             });
-            /*item.find("qquickrow").draw({
-                "outline": {}
+
+            var item1 = a.find("basiclistitem").eq(1);
+            var icon1 = item1.find("desktopicon");
+            icon1.draw({
+                "outline": {label: false},
+                "ruler": {horizontal: true, offset: "center"}
             });
-            item.find("qquicklabel").draw({
-                "outline": {}
-            });*/
-            var icon = item.find("qquickimage").first();
-            icon.draw({
+            item1.find("qquicklabel").draw({
                 "outline": {label: false}
             });
-        }
-    }
-    Timer {
-        interval: 1000
-        repeat: false
-        running: true
-        onTriggered: {
-            var a = new A.An(root);
-            //a.find("swipelistitem").first().hover({"animate": false});
-        }
-    }
-    Timer {
-        interval: 2000
-        repeat: false
-        running: true
-        onTriggered: {
+
+            var item2 = a.find("basiclistitem").eq(3);
+            var label2 = item2.find("qquicklabel");
+            item2.find("desktopicon").draw({
+                "outline": {},
+                "brace": {to: label2, center: false}
+            });
             qmlControler.start();
         }
     }

@@ -17,36 +17,12 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.6
+import QtQuick 2.10
 import QtQuick.Controls 2.3
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.5 as Kirigami
-import "../models/" as Models
-import "../lib/" as HIG
-import "../lib/annotate.js" as A
+import org.kde.kirigami 2.7 as Kirigami
 
-
-Rectangle {
-    width: 1600
-    height: 1000
-    id: root
-
-    HIG.Desktop {
-        id: desktop
-        x: 40
-        y: 40
-        width: 800
-        Addressbook {
-            index: 3
-        }
-    }
-
-    /*Timer {
-        interval: 1000
-        repeat: false
-        running: true
-        onTriggered: {
-            desktop.width = 800
-        }
-    }*/
+Kirigami.BasicListItem {
+    id: item
+    icon: "folder"
+    label: "Folder " + (index + 1)
 }

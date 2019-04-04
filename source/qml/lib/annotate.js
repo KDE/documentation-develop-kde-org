@@ -259,9 +259,11 @@ An.prototype._draw = function(node, type, opt) {
     //console.log("drawing " + type)
     switch (type) {
         case "outline":
+            // Create outline object
             outline.createObject(root, {item: node, label: opt.label, aspectratio: opt.aspectratio});
         break
         case "ruler":
+            // Draw ruler to show alignment
             if (opt.offset) {
                 // No need for left or top since these are the defaults
                 switch (opt.offset) {
@@ -284,15 +286,18 @@ An.prototype._draw = function(node, type, opt) {
             ruler.createObject(root, options);
         break
         case "padding":
+            // Show padding around an object
             var options = getOpts({
                 padding: opt.padding
             }, opt);
             padding.createObject(root, {item: node, padding: options.padding});
         break
         case "brace":
+            // Create a brace between two objects
             brace.createObject(root, {"from": node, "to": opt.to.nodes[0], "text": opt.text, "center": opt.center, "horizontal": opt.horizontal});
         break
         case "messure":
+            // Messure distance between two objects
             messure.createObject(root, {"from": node, "to": opt.to.nodes[0], "type": opt.type});
         break
     }
