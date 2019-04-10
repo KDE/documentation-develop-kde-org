@@ -17,7 +17,6 @@ Editing and manipulation
    radiobutton
    slider
    spinbox
-   swipelistitem
    tableview
    textedit
    togglebutton
@@ -36,7 +35,6 @@ Selection
 * :doc:`grid`
 * :doc:`list`
 * :doc:`radiobutton`
-* :doc:`swipelistitem`
 * :doc:`togglebutton`
 * :doc:`tree`
 

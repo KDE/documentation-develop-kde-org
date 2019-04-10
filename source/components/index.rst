@@ -65,7 +65,6 @@ Selection
 * :doc:`editing/grid`
 * :doc:`editing/list`
 * :doc:`editing/radiobutton`
-* :doc:`editing/swipelistitem`
 * :doc:`editing/togglebutton`
 * :doc:`editing/tree`
 
