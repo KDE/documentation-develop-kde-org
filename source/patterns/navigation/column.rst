@@ -64,5 +64,7 @@ General
 Implementation
 --------------
 
-If you use `org::kde::kirigami::ApplicationWindow`_ for your
+If you use `ApplicationWindow 
+<https://api.kde.org/frameworks/kirigami/html/
+classorg_1_1kde_1_1kirigami_1_1ApplicationWindow.html>`_ for your
 application, it automatically uses PageRow for its content.
