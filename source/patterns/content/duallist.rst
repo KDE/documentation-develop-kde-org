@@ -1,24 +1,24 @@
 Dual-list
 =========
 
-.. image:: /img/TwoLists.png
-   :alt: twoLists.png
+.. image:: /img/DualListOrdering.png
+   :alt: Dual-list pattern 
 
-Multiple selection in lists with more than a few items might become
-difficult because selected as well as available items are not visible at
-once. As an alternative approach, the *dual-list pattern* (also known as
-list builder, or paired lists) was introduced. It consists of two
-standard list boxes with the option to move items from one list to the
-other and back. Dual-lists are useful for extended multiple selection in
-general, especially for huge sets of items or in case of elaborate
-selections. The trade-off is the rather large amount of space that is
-needed to show two adjoining lists.
+Multiple selection in :doc:`lists </components/editing/list>` with more than a 
+few items might become difficult because selected as well as available items are 
+not visible at once. As an alternative approach, the *dual-list pattern* (also 
+known as list builder, or paired lists) was introduced. It consists of two
+standard :doc:`list </components/editing/list>` boxes with the option to move 
+items from one :doc:`list </components/editing/list>` to the other and back. 
+Dual-lists are useful for extended multiple selection in general, especially for 
+huge sets of items or in case of elaborate selections. The trade-off is the 
+rather large amount of space that is needed to show two adjoining lists.
 
 When to use
 -----------
 
--  Use a dual-list pattern for multiple selection and in case of large
-   lists.
+-  Use a dual-list pattern for multiple selection and in case of 
+   :doc:`large lists </components/editing/list>`.
 -  In case of limited screen real estate, consider changing the workflow
    into repeated selections of smaller lists or by applying a hierarchy
    to the data.
@@ -39,8 +39,8 @@ How to use
    (rather than move) the item from the available pool of items to the
    list of current items.
 -  If the list of current items can be reordered, place up/down buttons
-   to the right of the list of current items. Only enable the up/down
-   buttons when an item is selected and can be moved.
+   in between the two lists, above and below the left and right buttons. Only 
+   enable the up/down buttons when an item is selected and can be moved.
 -  Do not have blank list items; use meta-options, (e.g. "None") instead.
 -  Place options that represent general options (e.g. "All", "None") at the
    beginning of the list.

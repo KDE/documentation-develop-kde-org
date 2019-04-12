@@ -10,6 +10,7 @@ Content patterns
    form
    iconandtext
    help
+   picker
    settings
    viewingediting
 
@@ -17,5 +18,6 @@ Content patterns
 - :doc:`form`
 - :doc:`iconandtext`
 - :doc:`help`
+- :doc:`picker`
 - :doc:`settings`
 - :doc:`viewingediting`
