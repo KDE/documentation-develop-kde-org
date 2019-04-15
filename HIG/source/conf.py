@@ -17,9 +17,10 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('../..'))
 
 
 # -- General configuration ------------------------------------------------
@@ -47,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Human Interface Guidelines'
-copyright = '2018, KDE. Licensed under Creative Commons License SA 4.0'
+copyright = '2019, KDE. Licensed under Creative Commons License SA 4.0'
 author = 'KDE'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -165,8 +166,11 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+# Adding common substitions between Kirigami and HIG
+from epilog import rst_epilog
+
 # Adding global substitutions
-rst_epilog = """
+rst_epilog += """
 .. |devicon| image:: /img/DevIcon.svg
              :width: 32px
              :height: 32px
