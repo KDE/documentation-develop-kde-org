@@ -209,6 +209,11 @@ rst_prolog = """
 .. role:: intend
 """
 
+# -- Options for intersphinx extension ---------------------------------------
+
+# Example configuration for intersphinx: refer to the Python standard library.
+intersphinx_mapping = {'kirigami': ('https://kirigami.kde.org/', None)}
+
 # add css file
 def setup(app):
     app.add_stylesheet('css/breeze.css')
