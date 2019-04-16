@@ -28,8 +28,11 @@ Kirigami.ScrollablePage {
     id: page
     title: Kirigami.Settings.tabletMode ? model.firstname : ""
     Kirigami.Theme.colorSet: Kirigami.Theme.View
-    property alias form: formOverlay
     property bool showHistory;
+    
+    function showForm() {
+        
+    }
 
     background: Rectangle {
         color: Kirigami.Theme.backgroundColor
@@ -37,7 +40,7 @@ Kirigami.ScrollablePage {
 
     Detail {
         model: page.model
-        onEditClicked: form.open()
+        onEditClicked: formOverlay.open()
         history.visible: showHistory
     }
 

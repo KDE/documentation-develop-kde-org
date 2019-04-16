@@ -24,7 +24,7 @@ import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.ScrollablePage {
     property alias currentIndex: list.currentIndex;
-
+    property var model;
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     title: "Address book"
     id: page
@@ -59,7 +59,7 @@ Kirigami.ScrollablePage {
         id: list
         width: page.width
         height: page.height
-        model: root.mydata
+        model: page.model
     }
 
     actions {

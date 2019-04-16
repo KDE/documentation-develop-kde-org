@@ -30,46 +30,61 @@ Kirigami.ApplicationItem {
 
     property alias gDrawer: global
     property alias cDrawer: context
-    property alias detailPage: detail
-    property alias listPage: list
+    property Item detailPage;
+    property Item listPage;
+    property Item historyPage;
     property int index: -1
 
     property bool wide: false
 
     property var mydata : Models.Contacts {
         Component.onCompleted: {
+            adjustGlobalDrawer();
+            root.pageStack.push(Qt.resolvedUrl("ListPage.qml"), {model: root.mydata});
+            listPage = root.pageStack.lastItem;
             if (root.index >= 0) {
                 setIndex(root.index)
             }
+            listPage.currentIndexChanged.connect(function() {
+                setIndex(listPage.currentIndex);
+            });
         }
     }
 
-    pageStack.initialPage: ListPage {
+    /*pageStack.initialPage: ListPage {
         id: list
         onCurrentIndexChanged: {
             setIndex(list.currentIndex)
         }
         Kirigami.ColumnView.fillWidth: false
-    }
+    }*/
 
     function setIndex(i) {
-        console.log("setIndex")
-        detail.model =  mydata.get(i)
-        detail.visible = true
-        root.pageStack.push(detail)
+        //return;
+        console.log("setIndex")       
+        if (root.pageStack.depth == 1) {
+            root.pageStack.push(Qt.resolvedUrl("DetailPage.qml"), {model: root.mydata.get(i)});
+            detailPage = root.pageStack.lastItem;
+        }
+        detailPage.model =  mydata.get(i)
 
-        console.log(root.wide)
         if (root.wide) {
-            history.model =  mydata.get(i)
-            history.visible = true
-            root.pageStack.push(history)
+            if (root.pageStack.depth == 2) {
+                root.pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {model: root.mydata.get(i)})
+                historyPage = root.pageStack.lastItem;
+            }
+            historyPage.model =  mydata.get(i)
+            show3Columns();
+        }
+        else {
+            show2Columns();
         }
     }
 
     pageStack.defaultColumnWidth: root.width < 320 ? root.width : 320
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
 
-    DetailPage {
+    /*DetailPage {
         id: detail
         visible: false
         showHistory: root.wide
@@ -87,35 +102,32 @@ Kirigami.ApplicationItem {
         id: history
         visible: false
         //Kirigami.ColumnView.fillWidth: false
+    }*/
+    function show3Columns() {
+        if (listPage) {
+            listPage. Kirigami.ColumnView.fillWidth = false
+        }
+        if (detailPage) {
+            detailPage.Kirigami.ColumnView.reservedSpace = pageStack.defaultColumnWidth * 2
+            detailPage.Kirigami.ColumnView.fillWidth = true
+        }
+        if (historyPage) {
+            historyPage.Kirigami.ColumnView.fillWidth =  false
+        }
     }
-
-
-    onWidthChanged: {
-        console.log()
-        if (width >= 1050 && !root.wide) {
-            root.wide = true
-            detail.Kirigami.ColumnView.reservedSpace = pageStack.defaultColumnWidth * 2
-            if (list.currentIndex >= 0) {
-                console.log("onWidthChanged wide")
-                history.model =  mydata.get(list.currentIndex)
-                history.visible = true
-                root.pageStack.push(history)
-            }
+    
+    function show2Columns() {
+        //listPage. Kirigami.ColumnView.fillWidth = true
+        if (detailPage) {
+            detailPage.Kirigami.ColumnView.reservedSpace = pageStack.defaultColumnWidth
+            detailPage.Kirigami.ColumnView.fillWidth = true
         }
-
-        if (width < 1050 && root.wide) {
-            console.log("onWidthChanged narrow")
-            console.log(list.currentIndex)
-            root.wide = false
-            detail.Kirigami.ColumnView.reservedSpace = pageStack.defaultColumnWidth
-            //if (list.currentIndex >= 0) {
-                console.log("removing")
-                root.pageStack.removePage(history);
-                list.Kirigami.ColumnView.fillWidth = true
-            //}
+        while (root.pageStack.depth > 2) {
+            root.pageStack.pop()
         }
-
-
+    }
+    
+    function adjustGlobalDrawer() {
         // Change drawer to collapsible if there is enough space
         if (width >= 1100 && !global.collapsible) {
             console.log("onWidthChanged collapsible")
@@ -131,6 +143,25 @@ Kirigami.ApplicationItem {
             global.collapsible = false
             global.modal = true
         }
+    }
+
+
+    onWidthChanged: {
+        // Show 3 columns
+        if (width >= 1050 && !root.wide) {
+            console.log("onWidthChanged wide")
+            root.wide = true
+            show3Columns();
+        }
+
+        // Show 2 columns
+        if (width < 1050 && root.wide) {
+            console.log("onWidthChanged narrow")
+            root.wide = false
+            show2Columns()
+        }
+
+        adjustGlobalDrawer();
     }
 
     globalDrawer: Kirigami.GlobalDrawer {

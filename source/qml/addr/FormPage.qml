@@ -26,7 +26,7 @@ Kirigami.OverlaySheet {
     property var model;
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     id: sheet
-    Layout.preferredWidth: Math.round(page.width * 0.9)
+    //Layout.preferredWidth: Math.round(page.width * 0.9)
 
     background: Rectangle {
         color: Kirigami.Theme.backgroundColor

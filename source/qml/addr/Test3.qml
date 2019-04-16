@@ -33,20 +33,21 @@ Rectangle {
 
     HIG.Desktop {
         id: desktop
-        x: 40
+        x: 200
         y: 40
-        width: 800
+        width: parent.width * 0.8
         Addressbook {
             index: 3
         }
     }
 
-    /*Timer {
-        interval: 1000
-        repeat: false
-        running: true
-        onTriggered: {
-            desktop.width = 800
-        }
-    }*/
+//     Timer {
+//         interval: 2000
+//         repeat: false
+//         running: true
+//         onTriggered: {
+//             desktop.width = 800
+//             desktop.state = "LAPTOP"
+//         }
+//     }
 }

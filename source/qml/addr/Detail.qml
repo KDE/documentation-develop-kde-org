@@ -109,56 +109,56 @@ Flickable  {
             model: root.model.communication
 
             delegate: Kirigami.BasicListItem {
-            //height: Kirigami.Units.gridUnit * 2
-            id: delegate
-            contentItem: RowLayout {
-                spacing: delegate.leftPadding
-                anchors.verticalCenter: parent.verticalCenter
-
-                Kirigami.Icon {
-                    id: icon
-                    width: Kirigami.Units.iconSizes.smallMedium
-                    height: width
-                    source: model.icon
-                    color: Kirigami.Theme.textColor
-                    Layout.alignment: Qt.AlignVCenter
-                }
-                Column {
-                    Layout.alignment: Qt.AlignVCenter
-                    Label {
-                        text: model.text
-                        color: model.default ? Kirigami.Theme.linkColor : Kirigami.Theme.textColor //"#2980b9" : "#232627"
-                    }
-                    Label {
-                        text: model.description
-                        font.pointSize: 8
-                        color: Kirigami.Theme.textColor //"#7f8c8d"
-                    }
-                }
-                Rectangle {
-                    Layout.fillWidth: true
-                    Layout.alignment: Qt.AlignVCenter
+                //height: Kirigami.Units.gridUnit * 2
+                id: delegate
+                contentItem: RowLayout {
+                    spacing: delegate.leftPadding
+                    anchors.verticalCenter: parent.verticalCenter
 
                     Kirigami.Icon {
-                        visible: typeof model.actions !== "undefined"
-                        source: "kmouth-phrase-new"
+                        id: icon
                         width: Kirigami.Units.iconSizes.smallMedium
                         height: width
-                        anchors.right: parent.right
-                        anchors.rightMargin: Kirigami.Units.largeSpacing
-                        anchors.verticalCenter: parent.verticalCenter
-                        id: call
+                        source: model.icon
+                        color: Kirigami.Theme.textColor
+                        Layout.alignment: Qt.AlignVCenter
+                    }
+                    Column {
+                        Layout.alignment: Qt.AlignVCenter
+                        Label {
+                            text: model.text
+                            color: model.default ? Kirigami.Theme.linkColor : Kirigami.Theme.textColor //"#2980b9" : "#232627"
+                        }
+                        Label {
+                            text: model.description
+                            font.pointSize: 8
+                            color: Kirigami.Theme.textColor //"#7f8c8d"
+                        }
+                    }
+                    Rectangle {
+                        Layout.fillWidth: true
+                        Layout.alignment: Qt.AlignVCenter
+
+                        Kirigami.Icon {
+                            visible: typeof model.actions !== "undefined"
+                            source: "kmouth-phrase-new"
+                            width: Kirigami.Units.iconSizes.smallMedium
+                            height: width
+                            anchors.right: parent.right
+                            anchors.rightMargin: Kirigami.Units.largeSpacing
+                            anchors.verticalCenter: parent.verticalCenter
+                            id: call
+                        }
                     }
                 }
-            }
 
-            Component.onCompleted: {
-                if (typeof model.actions !== "undefined") {
-                    delegate.actions = model.actions
-                }
+                /*Component.onCompleted: {
+                    if (typeof model.actions !== "undefined") {
+                        delegate.actions = model.actions
+                    }
+                }*/
             }
         }
-    }
     }
 
     Kirigami.Heading {

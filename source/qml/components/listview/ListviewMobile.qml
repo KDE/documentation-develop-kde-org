@@ -36,6 +36,7 @@ Kirigami.ApplicationItem {
 
     pageStack.initialPage: Addr.ListPage {
         id: list
+        model: root.mydata
     }
 
     pageStack.defaultColumnWidth: root.width

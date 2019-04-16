@@ -34,12 +34,10 @@ Kirigami.ScrollablePage {
         color: Kirigami.Theme.backgroundColor
     }
 
-    Flickable  {
-        History {
-            anchors.fill: parent;
-            width: page.width
-            model: page.model
-        }
+    
+    History {
+        anchors.fill: parent;
+        width: page.width
+        model: page.model
     }
-
 }
