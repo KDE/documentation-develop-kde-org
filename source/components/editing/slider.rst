@@ -115,7 +115,7 @@ Slider and Spinbox together
 Code
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - `QML: Slider <https://doc.qt.io/qt-5/qml-qtquick-controls-slider.html>`_

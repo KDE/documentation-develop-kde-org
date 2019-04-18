@@ -38,8 +38,8 @@ Appearance
 Code
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - `QML: GridView <https://doc.qt.io/qt-5/qml-qtquick-gridview.html>`_
  - :kirigamiapi:`Kirigami: CardsGridView <CardsGridView>`

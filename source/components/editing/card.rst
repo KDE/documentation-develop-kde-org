@@ -88,8 +88,8 @@ Here are some general recommendations for card layouts:
 Code
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - :kirigamiapi:`Kirigami: Card <Card>`
  - :kirigamiapi:`Kirigami: CardsGridView <CardsGridView>`

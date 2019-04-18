@@ -1,6 +1,14 @@
 Global drawer
 =============
 
+Purpose
+-------
+
+The Global Drawer is a standard element in KDE mobile applications. It
+contains an application's main menu, and any functions which are not
+part of the application's main usecases but are not specific to the
+current context either.
+
 .. container:: intend
 
    |desktopicon| |mobileicon|
@@ -17,16 +25,11 @@ Global drawer
 
    Global drawer on mobile
 
-Purpose
--------
-
-The Global Drawer is a standard element in KDE mobile applications. It
-contains an application's main menu, and any functions which are not
-part of the application's main usecases but are not specific to the
-current context either.
+Guidelines
+----------
 
 Is this the right control?
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /img/Globaldrawer3.png
    :figclass: border
@@ -41,8 +44,8 @@ the main user interface, and which are not dependent on the current
 context. For context-specific actions (e.g. those affecting a selected
 item), use the :doc:`Context Drawer <contextdrawer>`
 
-Guidelines
-----------
+Behavior
+~~~~~~~~
 
 .. figure:: /img/Globaldrawer2.png
    :alt: Global drawer on desktop
@@ -79,7 +82,7 @@ The main menu
 Do not use the Menu Drawer for navigation purposes.
 
 |desktopicon| Collapsible
-^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 
 On the desktop, if the elements in the Global Drawer need to be accessed more 
 often and enough space is available, the Global Drawer can default to showing a 
@@ -98,13 +101,10 @@ collapsed icons-only state.
 Code
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - :kirigamiapi:`Kirigami: GlobalDrawer <GlobalDrawer>`
-
-Kirigami
-^^^^^^^^
 
 .. code-block:: qml
 

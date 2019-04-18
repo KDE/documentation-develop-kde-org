@@ -83,14 +83,11 @@ Appearance
 Code
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - :kirigamiapi:`Kirigami: ApplicationWindow <ApplicationWindow>`
  - `QML: MenuBar <https://doc.qt.io/qt-5/qml-qtquick-controls-menubar.html>`_
-
-Kirigami
-^^^^^^^^
 
 .. code-block:: qml
 

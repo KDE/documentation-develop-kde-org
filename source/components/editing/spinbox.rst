@@ -67,7 +67,7 @@ Appearance
 Code
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - `QML: SpinBox <https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html>`_

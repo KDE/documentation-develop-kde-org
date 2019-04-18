@@ -99,18 +99,16 @@ Appearance
 Code
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - :kirigamiapi:`Kirigami: Action <Action>`
  - :kirigamiapi:`Kirigami: ScrollablePage <ScrollablePage>`
  - :kirigamiapi:`Kirigami: ActionToolBar <ActionToolBar>`
  
-Kirigami
-~~~~~~~~
-
+ 
 Application toolbar
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 .. code-block:: qml
 
