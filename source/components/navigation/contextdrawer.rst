@@ -65,6 +65,9 @@ Guidelines
 Code
 ----
 
+ - :kirigamiapi:`Kirigami: Action <Action>`
+ - :kirigamiapi:`Kirigami: ScrollablePage <ScrollablePage>`
+
 Kirigami
 ^^^^^^^^
 

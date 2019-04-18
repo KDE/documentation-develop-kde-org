@@ -287,6 +287,15 @@ Ordering
 Code
 ----
 
+API
+~~~
+
+ - `QML: ListView <https://doc.qt.io/qt-5/qml-qtquick-listview.html>`_
+ - :kirigamiapi:`Kirigami: CardsListView <CardsListView>`
+ - :kirigamiapi:`Kirigami: AbstractListItem <AbstractListItem>`
+ - :kirigamiapi:`Kirigami: BasicListItem <BasicListItem>`
+ - :kirigamiapi:`Kirigami: SwipeListItem <SwipeListItem>`
+ 
 Kirigami
 ~~~~~~~~
 

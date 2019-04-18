@@ -69,6 +69,13 @@ If your application is using :doc:`column-based navigation </patterns/navigation
 Code
 ----
 
+API
+~~~
+
+ - :kirigamiapi:`Kirigami: Action <Action>`
+ - :kirigamiapi:`Kirigami: ScrollablePage <ScrollablePage>`
+
+
 Kirigami
 ^^^^^^^^
 

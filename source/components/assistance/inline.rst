@@ -148,6 +148,12 @@ shown instead.
 Code 
 ----
 
+API
+~~~
+
+ - :kirigamiapi:`Kirigami: InlineMessage <InlineMessage>`
+ - :kwidgetsaddons:`QtWidgets:  KMessageWidget <KMessageWidget>`
+
 Kirigami
 ~~~~~~~~
 

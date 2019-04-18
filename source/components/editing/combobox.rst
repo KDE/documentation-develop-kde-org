@@ -78,3 +78,11 @@ Appearance
 -  Create a buddy relation so access keys are assigned.
 -  End each label with a colon.
 -  Use :doc:`sentence style capitalization </style/writing/capitalization>` for items.
+
+Code
+----
+
+API
+~~~
+
+ - `QML: ComboBox <https://doc.qt.io/qt-5/qml-qtquick-controls-combobox.html>`_

@@ -98,6 +98,11 @@ collapsed icons-only state.
 Code
 ----
 
+API
+~~~
+
+ - :kirigamiapi:`Kirigami: GlobalDrawer <GlobalDrawer>`
+
 Kirigami
 ^^^^^^^^
 

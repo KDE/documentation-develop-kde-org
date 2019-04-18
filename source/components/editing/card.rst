@@ -84,3 +84,14 @@ Here are some general recommendations for card layouts:
    
    .. image:: /img/Card2.qml.png
       :alt: Padding for text and buttons
+
+Code
+----
+
+API
+~~~
+
+ - :kirigamiapi:`Kirigami: Card <Card>`
+ - :kirigamiapi:`Kirigami: CardsGridView <CardsGridView>`
+ - :kirigamiapi:`Kirigami: CardsLayout <CardsLayout>`
+ - :kirigamiapi:`Kirigami: CardsListView <CardsListView>`

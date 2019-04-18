@@ -63,3 +63,11 @@ Appearance
    the user might want to compare two numerical values in the same
    column of controls. In this case, ensure the right edges of the
    relevant controls are also aligned.
+
+Code
+----
+
+API
+~~~
+
+ - `QML: SpinBox <https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html>`_
