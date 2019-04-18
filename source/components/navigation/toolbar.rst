@@ -99,6 +99,13 @@ Appearance
 Code
 ----
 
+API
+~~~
+
+ - :kirigamiapi:`Kirigami: Action <Action>`
+ - :kirigamiapi:`Kirigami: ScrollablePage <ScrollablePage>`
+ - :kirigamiapi:`Kirigami: ActionToolBar <ActionToolBar>`
+ 
 Kirigami
 ~~~~~~~~
 

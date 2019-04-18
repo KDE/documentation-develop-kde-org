@@ -34,3 +34,12 @@ Appearance
 -  Overlay buttons are placed at the bottom right corner
 -  Grid has a PaperWhite background on desktop, an no background on
    mobile
+
+Code
+----
+
+API
+~~~
+
+ - `QML: GridView <https://doc.qt.io/qt-5/qml-qtquick-gridview.html>`_
+ - :kirigamiapi:`Kirigami: CardsGridView <CardsGridView>`

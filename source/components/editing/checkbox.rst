@@ -197,3 +197,11 @@ like , that will take care of lay outing and spacing of your controls.
    for checkbox items.
 -  Do not use ending punctuation (neither dot nor colon) for group
    label.
+
+Code
+----
+
+API
+~~~
+
+ - `QML: CheckBox <https://doc.qt.io/qt-5/qml-qtquick-controls-checkbox.html>`_
