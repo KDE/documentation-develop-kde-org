@@ -82,7 +82,7 @@ Appearance
 Code
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - `QML: ComboBox <https://doc.qt.io/qt-5/qml-qtquick-controls-combobox.html>`_

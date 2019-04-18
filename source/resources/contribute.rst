@@ -145,17 +145,13 @@ Component
     Kirigami
     ~~~~~~~~
     
-    Example code how to use the component with QML and Kirigami.
+    Link to the API and example code how to use the component with QML and 
+    Kirigami.
     
     Qt Widgets
     ~~~~~~~~~~
     
-    Example code how to use the component with Qt Widgets.
-    
-    API
-    ~~~
-    
-    Link to KDE and Qt API pages.
+    Link to the API and example code how to use the component with Qt Widgets.
     
 Optional: you can add subsections for desktop and mobile.
 

@@ -181,8 +181,8 @@ which will take care of laying out and spacing of your controls.
 Code
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - `QML: RadioButton 
    <https://doc.qt.io/qt-5/qml-qtquick-controls-radiobutton.html>`_

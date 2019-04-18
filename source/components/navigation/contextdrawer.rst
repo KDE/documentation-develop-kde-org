@@ -24,16 +24,19 @@ The Context Drawer is used to access controls that depend on the current
 context. This can be, for example, controls that affect a selected
 element in a list or that navigate through an opened document.
 
-Is this the right control?
---------------------------
+Guidelines
+----------
+
+Is this the right control
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use a Context Drawer if your application has any functions which are
 only relevant in specific contexts, and which are not central enough to
 the application's main purpose to put them in the main user interface or
 in a toolbar. For actions which are always available, use the :doc:`Global Drawer <globaldrawer>`.
 
-Guidelines
-----------
+Behavior
+~~~~~~~~
 
 -  The Context Drawer is opened by swiping in from the left or right
    edge of the screen (depending on a system-wide setting) and closed by
@@ -65,11 +68,11 @@ Guidelines
 Code
 ----
 
+Kirigami
+~~~~~~~~
+
  - :kirigamiapi:`Kirigami: Action <Action>`
  - :kirigamiapi:`Kirigami: ScrollablePage <ScrollablePage>`
-
-Kirigami
-^^^^^^^^
 
 .. code-block:: qml
 

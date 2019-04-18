@@ -148,14 +148,11 @@ shown instead.
 Code 
 ----
 
-API
-~~~
+Kirigami
+~~~~~~~~
 
  - :kirigamiapi:`Kirigami: InlineMessage <InlineMessage>`
  - :kwidgetsaddons:`QtWidgets:  KMessageWidget <KMessageWidget>`
-
-Kirigami
-~~~~~~~~
 
 .. code-block:: qml
 
