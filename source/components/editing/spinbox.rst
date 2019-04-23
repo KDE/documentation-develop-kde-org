@@ -71,3 +71,8 @@ Kirigami
 ~~~~~~~~
 
  - `QML: SpinBox <https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html>`_
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma SpinBox <SpinBox>`

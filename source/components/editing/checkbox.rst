@@ -205,3 +205,8 @@ Kirigami
 ~~~~~~~~
 
  - `QML: CheckBox <https://doc.qt.io/qt-5/qml-qtquick-controls-checkbox.html>`_
+ 
+ Plasma components
+ ~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma CheckBox <CheckBox>`

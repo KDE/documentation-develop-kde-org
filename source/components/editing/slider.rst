@@ -119,3 +119,8 @@ Kirigami
 ~~~~~~~~
 
  - `QML: Slider <https://doc.qt.io/qt-5/qml-qtquick-controls-slider.html>`_
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma Slider <Slider>`

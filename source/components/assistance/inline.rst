@@ -152,7 +152,6 @@ Kirigami
 ~~~~~~~~
 
  - :kirigamiapi:`Kirigami: InlineMessage <InlineMessage>`
- - :kwidgetsaddons:`QtWidgets:  KMessageWidget <KMessageWidget>`
 
 .. code-block:: qml
 
@@ -179,3 +178,8 @@ Kirigami
             }
         ]
     }
+
+Qt Widgets
+~~~~~~~~~~
+
+ - :kwidgetsaddonsapi:`QtWidgets:  KMessageWidget <KMessageWidget>`

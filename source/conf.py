@@ -200,7 +200,8 @@ rst_epilog = """
 
 doxylink = {
     'kirigamiapi' : ('Kirigami2.tags.xml', 'https://api.kde.org/frameworks/kirigami/html/'), # https://api.kde.org/frameworks/kirigami/html/Kirigami2.tags
-    'kwidgetsaddons' : ('KWidgetsAddons.tags.xml', 'https://api.kde.org/frameworks/kwidgetsaddons/html/') # https://api.kde.org/frameworks/kwidgetsaddons/html/KWidgetsAddons.tags
+    'kwidgetsaddonsapi' : ('KWidgetsAddons.tags.xml', 'https://api.kde.org/frameworks/kwidgetsaddons/html/'), # https://api.kde.org/frameworks/kwidgetsaddons/html/KWidgetsAddons.tags
+    'plasmaapi' : ('Plasma.tags.xml', 'https://api.kde.org/frameworks/plasma-framework/html/') # https://api.kde.org/frameworks/plasma-framework/html/Plasma.tags
 }
 
 rst_prolog = """

@@ -186,3 +186,8 @@ Kirigami
 
  - `QML: RadioButton 
    <https://doc.qt.io/qt-5/qml-qtquick-controls-radiobutton.html>`_
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma RadioButton <RadioButton>`
