@@ -70,7 +70,7 @@ Code
 ----
 
 Kirigami
-^^^^^^^^
+~~~~~~~~
 
 .. code-block:: qml
 
