@@ -36,4 +36,4 @@ Actions
 .. figure:: /img/Krunner-1.png
        :alt: Krunner showing a placeholder instead of a label with an action.
 
-       .. Krunner showing a placeholder instead of a label with an action.
+       Krunner showing a placeholder instead of a label with an action.

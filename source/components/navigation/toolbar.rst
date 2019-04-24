@@ -88,7 +88,7 @@ Appearance
 ----------
 
 -  Do not change the button style from the default, which is 
-   :doc:`text beside icons </content/iconandtext>`.
+   :doc:`text beside icons </patterns/content/iconandtext>`.
 -  Use and design toolbar icons with special care. Users remember
    location of an object but rely as well on icon properties.
 -  A distinct association between the underlying function and its visual
