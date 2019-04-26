@@ -10,6 +10,7 @@ Introducing Kirigami UI
    :maxdepth: 2
    :caption: Contents:
 
+   style/index
 
 Build apps that adapt beautifully to mobile, desktop, and everything in between.
 
