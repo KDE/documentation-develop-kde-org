@@ -212,7 +212,10 @@ rst_prolog = """
 # -- Options for intersphinx extension ---------------------------------------
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'kirigami': ('https://kirigami.kde.org/', None)}
+intersphinx_mapping = {
+    'kirigami': ('https://kirigami.kde.org/', None),
+    'pm': ('https://docs.plasma-mobile.org', None)
+}
 
 # add css file
 def setup(app):
