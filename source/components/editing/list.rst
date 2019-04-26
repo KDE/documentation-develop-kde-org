@@ -349,3 +349,8 @@ Kirigami
         ...
     }
     ...
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma ListItem <ListItem>`
