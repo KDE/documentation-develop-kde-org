@@ -163,3 +163,8 @@ Component toolbar
             ...
         }
     ...
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma ToolBar <ToolBar>`
