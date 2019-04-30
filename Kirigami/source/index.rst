@@ -22,7 +22,7 @@ Convergent
 The line between desktop and mobile is blurring, and users expect the same 
 quality experience on every device. Applications using Kirigami adapt 
 brilliantly to mobile, desktop, and everything in between.
-See :doc:`convergence in the HIG <hig:convergence>` for more 
+See :doc:`convergence in the HIG <hig:introduction/convergence>` for more 
 details.
 
 

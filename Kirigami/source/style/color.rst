@@ -1,5 +1,5 @@
 Color
-=======================
+=====
 
 .. toctree::
    :maxdepth: 2
@@ -26,7 +26,7 @@ an hardcoded "black" foreground can't be used over a
 dark color scheme the result will bea poor contrasting black over almost black.
 
 Theme
------------------------
+-----
 For more information about the Kirigami Thmeme class, see the 
 `API docs 
 <https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1PlatformTheme.
@@ -55,7 +55,7 @@ Example:
 color
 
 Color Set
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^
 Depending where a control is, it should use a different color set: for 
 instance, (with the Breeze light color theme) in itemviews, the normal 
 background is almost white, while in other regions, such as toolbars or 
@@ -165,7 +165,7 @@ doesn't
 
 
 Using Custom Colors
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 Altough is discouraged to use hardcoded colors, Kirigami offers a more 
 maintainable way to assign a custom hardcoded palette to an item and all its 
 children, that will allow to define such custom colors in one place and one 
