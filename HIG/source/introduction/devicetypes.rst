@@ -170,8 +170,8 @@ useful to support two-handed use, especially when typing.
 
 Example
 ^^^^^^^
-This example shows how the Smartphone UX can be applied in the Plasma Mobile
-workspace:
+This example shows how the Smartphone UX can be applied in the 
+:doc:`Plasma Mobile <pm:Introduction>` workspace:
 
 - **Workspace**: Has multiple home screens (similar to Virtual Desktops)
 

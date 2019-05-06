@@ -74,6 +74,9 @@ Guidelines
 Implementation
 --------------
 
+Qt Widgets
+~~~~~~~~~~
+
 -  When implementing colors in your application, select the appropriate
    theme color or system color from the palette provided by the Qt or
    KDE Platform/Frameworks library. You can use the `CheckColorRoles`_
@@ -81,20 +84,32 @@ Implementation
    application.
 -  `KColorScheme`_ provides methods to pick the colors from the system
    color scheme to avoid hardcoding colors where possible.
--  For QML use:
+   
+Kirigami
+~~~~~~~~
 
-   -  in applications use `Kirigami.Theme`_ to pick theme colors
-   -  in Plasmoids use `PlasmaCore.Theme`_ to pick theme colors
+See :doc:`color in Kirigami <kirigami:style/color>` for details on how to use 
+colors and palettes.
 
--  Color Mapping - The Breeze color palettes maps to the KColorScheme
-   color roles as shown as follow:
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+In Plasmoids use `PlasmaCore.Theme`_ to pick theme colors
+
+Color Mapping
+-------------
+
+The Breeze color palettes maps to the KColorScheme color roles as shown as 
+follow:
 
    -  :doc:`Breeze <default>`
    -  :doc:`Breeze Dark <dark>`
    -  :doc:`Breeze Light <light>`
    -  :doc:`Breeze High Contrast <high>`
 
-.. _CheckColorRoles: http://kde-look.org/content/show.php/CheckColorRoles?content=90034
+
 .. _KColorScheme: http://api.kde.org/frameworks-api/frameworks5-apidocs/kconfigwidgets/html/classKColorScheme.html
-.. _Kirigami.Theme: https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1PlatformTheme.html
-.. _PlasmaCore.Theme: https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1QuickTheme.html
+.. _PlasmaCore.Theme: 
+https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1QuickTheme.
+html

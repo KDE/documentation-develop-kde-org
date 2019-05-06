@@ -39,7 +39,11 @@ Use Qt Widgets only if you plan to develop a desktop-only application with a com
 
 Plasma Workspace
 ----------------
-Plasma is built on widgets, allowing you to move, mix, add, and remove just about everything to perfect your personal workflow. Use `plasma components v3 <https://api.kde.org/frameworks/plasma-framework/html/plasmacomponents.html>`_ to develop widgets for the Plasma Mobile and Plasma Desktop workspace.
+Plasma is built on widgets, allowing you to move, mix, add, and remove just 
+about everything to perfect your personal workflow. Use `plasma components v3 
+<https://api.kde.org/frameworks/plasma-framework/html/plasmacomponents.html>`_ 
+to develop widgets for the :doc:`Plasma Mobile <pm:Introduction>` and Plasma 
+Desktop workspace.
 
 .. figure:: /img/plasma-workspace.jpg
    :scale: 25%
