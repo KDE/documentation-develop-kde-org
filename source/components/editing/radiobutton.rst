@@ -177,3 +177,17 @@ which will take care of laying out and spacing of your controls.
    for radio buttons.
 -  Do not use ending punctuation (neither dot nor colon) for group
    label.
+
+Code
+----
+
+Kirigami
+~~~~~~~~
+
+ - `QML: RadioButton 
+   <https://doc.qt.io/qt-5/qml-qtquick-controls-radiobutton.html>`_
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma RadioButton <RadioButton>`

@@ -102,8 +102,13 @@ Code
 Kirigami
 ~~~~~~~~
 
+ - :kirigamiapi:`Kirigami: Action <Action>`
+ - :kirigamiapi:`Kirigami: ScrollablePage <ScrollablePage>`
+ - :kirigamiapi:`Kirigami: ActionToolBar <ActionToolBar>`
+ 
+ 
 Application toolbar
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 .. code-block:: qml
 
@@ -158,3 +163,8 @@ Component toolbar
             ...
         }
     ...
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma ToolBar <ToolBar>`
