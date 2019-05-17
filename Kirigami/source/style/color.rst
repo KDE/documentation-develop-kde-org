@@ -37,17 +37,8 @@ palette to use, as the ``colorSet`` property.
 
 Example:
 
-.. code-block:: qml
-
-    import QtQuick 2.11
-    import org.kde kirigami 2.9 as Kirigami
-
-    ...
-    Rectangle {
-        ...
-        color: Kirigami.Theme.backgroundColor
-    }
-
+.. literalinclude:: /../../examples/kirigami/useTheme.qml
+   :language: qml
 
 [TODO]: screenshot of a qml file with an annotated UI showing all the available 
 color
