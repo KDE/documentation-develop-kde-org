@@ -55,3 +55,17 @@ Appearance
    -  if tips describe comprehensive functions,
    -  when content is lengthy and formatting improves readability
    -  for tips that are implemented primarily for joy of use.
+
+Code
+----
+
+Kirigami
+~~~~~~~~
+
+ - :kirigamiapi:`Kirigami: ApplicationWindow <ApplicationWindow>`
+ - `QML: MenuBar <https://doc.qt.io/qt-5/qml-qtquick-controls-menubar.html>`_
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma ToolTip <ToolTip>`

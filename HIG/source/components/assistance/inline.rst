@@ -151,6 +151,8 @@ Code
 Kirigami
 ~~~~~~~~
 
+ - :kirigamiapi:`Kirigami: InlineMessage <InlineMessage>`
+
 .. code-block:: qml
 
     ...
@@ -176,3 +178,8 @@ Kirigami
             }
         ]
     }
+
+Qt Widgets
+~~~~~~~~~~
+
+ - :kwidgetsaddonsapi:`QtWidgets:  KMessageWidget <KMessageWidget>`

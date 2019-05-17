@@ -88,7 +88,7 @@ Appearance
 ----------
 
 -  Do not change the button style from the default, which is 
-   :doc:`text beside icons </content/iconandtext>`.
+   :doc:`text beside icons </patterns/content/iconandtext>`.
 -  Use and design toolbar icons with special care. Users remember
    location of an object but rely as well on icon properties.
 -  A distinct association between the underlying function and its visual
@@ -102,8 +102,13 @@ Code
 Kirigami
 ~~~~~~~~
 
+ - :kirigamiapi:`Kirigami: Action <Action>`
+ - :kirigamiapi:`Kirigami: ScrollablePage <ScrollablePage>`
+ - :kirigamiapi:`Kirigami: ActionToolBar <ActionToolBar>`
+ 
+ 
 Application toolbar
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 .. code-block:: qml
 
@@ -158,3 +163,8 @@ Component toolbar
             ...
         }
     ...
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma ToolBar <ToolBar>`

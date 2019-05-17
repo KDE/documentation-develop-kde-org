@@ -111,3 +111,16 @@ Slider and Spinbox together
    the label that should give focus directly to the spin box.
 -  Mark significant values along the length of the slider with text or
    tick marks.
+
+Code
+----
+
+Kirigami
+~~~~~~~~
+
+ - `QML: Slider <https://doc.qt.io/qt-5/qml-qtquick-controls-slider.html>`_
+
+Plasma components
+~~~~~~~~~~~~~~~~~
+
+ - :plasmaapi:`Plasma Slider <Slider>`

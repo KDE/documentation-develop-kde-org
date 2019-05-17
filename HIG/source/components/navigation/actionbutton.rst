@@ -70,7 +70,10 @@ Code
 ----
 
 Kirigami
-^^^^^^^^
+~~~~~~~~
+
+ - :kirigamiapi:`Kirigami: Action <Action>`
+ - :kirigamiapi:`Kirigami: ScrollablePage <ScrollablePage>`
 
 .. code-block:: qml
 

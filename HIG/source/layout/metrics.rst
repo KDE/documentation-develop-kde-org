@@ -34,10 +34,11 @@ Size
    time the user opens this dialog, set its dimensions to those that the
    user last resized it to.
 -  Size controls with a minimum of
-   - Icon:16x16px
-   - Buttons: 72 x 32px
-   - Line edits, Drop-downs, Combo boxes ≥80 x 32 px
-   - Text edits: ≥80 x ≥36 px (text should not exceed 80 characters per
+
+   -  Icon:16x16px
+   -  Buttons: 72 x 32px
+   -  Line edits, Drop-downs, Combo boxes ≥80 x 32 px
+   -  Text edits: ≥80 x ≥36 px (text should not exceed 80 characters per
       line)
    -  Checkbox, Radio button including label: ≥80 x 24 px
    -  Group boxes: ≥120 x ≥96 px
@@ -46,15 +47,15 @@ Size
 
 -  KDE seeks to support XGA (1024x768px) or WXGA (1280x768px) at least.
 
-   -  Keep in mind that not everyone is provided with a high resolution
-      display.
-   -  Avoid to have a large number of controls visible at once, which in
-      turn requires a huge minimal size.
-   -  Keep in mind that the available screen area typically also will be
-      shrunk by panels and the window titlebar. Also, user's font might
-      be bigger than yours (e.g. for accessibility reason).
-   -  You therefore should ideally preserve ~10% to catch those
-      variables and try to not exceed 920x690px.
+   - Keep in mind that not everyone is provided with a high resolution
+     display.
+   - Avoid to have a large number of controls visible at once, which in
+     turn requires a huge minimal size.
+   - Keep in mind that the available screen area typically also will be
+     shrunk by panels and the window titlebar. Also, user's font might
+     be bigger than yours (e.g. for accessibility reason).
+   - You therefore should ideally preserve ~10% to catch those
+     variables and try to not exceed 920x690px.
 
 Space
 ~~~~~
