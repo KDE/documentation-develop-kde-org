@@ -28,9 +28,7 @@ dark color scheme the result will bea poor contrasting black over almost black.
 Theme
 -----
 For more information about the Kirigami Thmeme class, see the 
-`API docs 
-<https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1PlatformTheme.
-html>`_.
+:kirigamiapi:`API docs <PlatformTheme>`.
 
 ``Kirigami.Theme`` is an attached property, therefore is available to use in 
 any QML item, it contains as properties all the colors available in the 
