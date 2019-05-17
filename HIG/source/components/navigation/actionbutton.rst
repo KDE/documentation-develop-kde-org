@@ -75,31 +75,5 @@ Kirigami
  - :kirigamiapi:`Kirigami: Action <Action>`
  - :kirigamiapi:`Kirigami: ScrollablePage <ScrollablePage>`
 
-.. code-block:: qml
-
-    ...
-    import QtQuick.Controls 2.2 as Controls
-    import org.kde.kirigami 2.4 as Kirigami
-    ...
-    
-    Kirigami.ApplicationWindow {
-        ...
-        pageStack.initialPage: Kirigami.ScrollablePage {
-            ...
-            actions {
-                left: Kirigami.Action {
-                    iconName: "mail-message"
-                    text: i18n("&Write mail")
-                }
-                main: Kirigami.Action {
-                    iconName: "call-start"
-                    text: i18n("&Make call")
-                }
-                right: Kirigami.Action {
-                    iconName: "kmouth-phrase-new"
-                    text: i18n("&Write SMS")
-                }
-            }
-        }
-        ...
-    }
+.. literalinclude:: /../../examples/kirigami/ActionButton.qml
+   :language: qml

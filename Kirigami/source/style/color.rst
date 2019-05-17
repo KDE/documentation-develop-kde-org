@@ -37,7 +37,7 @@ palette to use, as the ``colorSet`` property.
 
 Example:
 
-.. literalinclude:: /../../examples/kirigami/useTheme.qml
+.. literalinclude:: /../../examples/kirigami/UseTheme.qml
    :language: qml
 
 [TODO]: screenshot of a qml file with an annotated UI showing all the available 
