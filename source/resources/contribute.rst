@@ -37,19 +37,40 @@ If you are new to KDE devlopment, make sure to read
 
 Getting started
 ---------------
-#. Install some tools with your distro's package manager:
-
-   * Arch/Antergos/Manjaro: ``sudo pacman -S git python-sphinx python-sphinx_rtd_theme``
-   * Debian/Ubuntu/Kubuntu/KDE Neon: ``sudo apt install git build-essential python3-sphinx python3-sphinx-rtd-theme``
-   * openSUSE: ``sudo zypper in git python3-Sphinx python3-sphinx_rtd_theme``
 
 #. Clone HIG repositories into an empty folder
-   ``git clone https://anongit.kde.org/websites/hig-kde-org.git``
 
+   .. code-block:: sh
+
+      git clone https://anongit.kde.org/websites/hig-kde-org.git
+      cd hig-kde-org
+
+#. Install some tools with `pythons package manager pip 
+   <https://pip.pypa.io/en/stable/>`_: 
+   
+   either globally
+   
+   .. code-block:: sh
+
+      sudo pip -r requirements.txt
+
+   or in your home directory
+    
+   .. code-block:: sh
+
+      sudo pip -r requirements.txt --user
+       
+   If you install it in you home directory, make sure you have the 
+   installed packages in your path, by adding it to your .profile
+   
+   .. code-block:: sh
+
+      echo "PATH=~/.local/lib:\$PATH" >> ~/.profile
+      source ~/.profile
+   
 Now you are ready to contribute to the HIG! To preview changes on your local
 machine, do the following:
 
-#. ``cd`` to your git checkout of the HIG repository
 #. Run ``make html`` to create the HTML pages
 #. Open ``build/html/index.html`` in your browser (e.g. run
    ``firefox build/html/index.html``)
