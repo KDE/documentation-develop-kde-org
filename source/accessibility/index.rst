@@ -12,10 +12,10 @@ Introduction
     
     *Source*: `<https://en.wikipedia.org/wiki/Accessibility>`_
 
-But good accessibility benefits all users. A working keyboard navigation, well 
-choosen colors and fonts setting, not only help people with low vision, 
+But good accessibility benefits all users. A working keyboard navigation and 
+well choosen colors and fonts setting not only help people with low vision, 
 blindness, deafness, cognitive or motor impairments or 
-situational disabilities, like a broken hand, but improve the workflow and the 
+situational disabilities, like a broken hand, but also improve the workflow and 
 usability for all users.
 
 Fonts and Colors
@@ -77,18 +77,15 @@ with a screen reader.
 
 
 Once you have an application running with the screen reader: Make sure Orca says 
-something intelligible for all elements. When it reads a gui element it should 
+something intelligible for all elements. When it reads a GUI element it should 
 say the label and type, eg: "File, Menu" or "OK, Button". When you have a button 
-that does not have a label, maybe because it shows a picture only, that's 
-something to fix. Try navigating the more troublesome elements - comboboxes and 
-lists and such. Trees need a bit of love in the bridge still.
+that does not have a label, maybe because it shows a picture only, add 
+accessibility hints. Try navigating the more troublesome elements - comboboxes 
+and lists and such.
 
 
 Fixing missing information
 --------------------------
-
-Once you found a bug it's usually quite easy to fix. This section explains how 
-to go about improving applications.
 
 For many things there are usually easy fixes involving no advanced programming 
 skills but just fixing some details.
@@ -150,6 +147,7 @@ Currently there is no support for accessibility in QGraphicsView.
 Qt Quick (QML)
 --------------
 
-For Qt 5, refer to the documentation on how to create accessible QML 
-applications. The concepts are generally the same as for QWidget based 
-applications.
+For Qt 5, refer to the 
+`documentation <https://doc.qt.io/qt-5/accessible.html>`_ on how to create 
+accessible QML applications. The concepts are generally the same as for QWidget 
+based applications.

@@ -33,7 +33,11 @@ Glossary
     
     *Source:*: `<https://en.wikipedia.org/wiki/User_experience>`_
     
-- **Get New Stuff **, **GNS**
+- **Get New Stuff**, **GNS**
 
     :doc:`/plattform/getnew`
+    
+- **Aassistive technology**, **AT**
+
+    Screen readers and other assistive technology is often refered as AT
 
