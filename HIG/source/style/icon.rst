@@ -33,10 +33,8 @@ General Guidelines
    and pixel-perfect for its particular size. Larger sizes offer more
    opportunity for detail and visual pizazz, while smaller version should be
    stripped of everything not absolutely necessary.
--  Breeze icons always have some padding:
 
-.. image:: /img/Breeze-icon-design-5.png
-   :alt: Canvas and graphic sizes
+
 
 
 
@@ -102,7 +100,12 @@ the emblem and the rest of the icon.
 *A perfect monochrome icon with an emblem in the corner*
 
 
+Margins
+~~~~~~~
+.. image:: /img/icon_margins-monochrome-4x.png
+   :alt: Canvas and graphic sizes
 
+:download:`Larger size </img/icon_margins-monochrome-8x.png>`
 
 Colorful icon style
 -------------------
@@ -144,8 +147,12 @@ In addition, colorful icons have a 1 px hard shadow on the bottom:
 .. image:: /img/Breeze-icon-design-12.png
    :alt: 48px icons can have more details
 
+Margins
+~~~~~~~
+.. image:: /img/icon_margins-color-4x.png
+   :alt: Canvas and graphic sizes
 
-
+:download:`Larger size </img/icon_margins-color-8x.png>`
 
 Application icons
 -----------------
