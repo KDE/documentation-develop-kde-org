@@ -40,8 +40,10 @@ Example:
 .. literalinclude:: /../../examples/kirigami/UseTheme.qml
    :language: qml
 
-[TODO]: screenshot of a qml file with an annotated UI showing all the available 
-color
+.. TODO:: 
+
+   screenshot of a qml file with an annotated UI showing all the 
+   available color
 
 Color Set
 ^^^^^^^^^
@@ -70,87 +72,21 @@ entire hierarchy if items without touching any of the items themselves.
 
 Example:
 
-.. code-block:: qml
-
-    import QtQuick 2.11
-    import QtQuick.Controls 2.2 as Controls
-    import org.kde kirigami 2.9 as Kirigami
-
-    // The comments assume the system uses the Breeze Light color theme 
-    ...
-    Rectangle {
-        // A gray color will be used, as the default color set is Window
-        color: Kirigami.Theme.backgroundColor
-
-        Controls.Label {
-            // The text will be near-black, as is defined in the Window 
-            // color set
-            text: i18n("hello")
-        }
-
-        Rectangle {
-            ...
-            // Use the set for ItemViews
-            Kirigami.Theme.colorSet: Kirigami.Theme.View  
-
-            // Don't inherit from the parent
-            Kirigami.Theme.inherit: false
-
-            // This will be a near-white color
-            color: Kirigami.Theme.backgroundColor
-
-            Rectangle {
-                ...
-                // This will be a near-white color too, as the colorSet 
-                // is inherited from the parent and will be View
-                color: Kirigami.Theme.backgroundColor
-
-                Controls.Label {
-                    // The text will be near-black, as is defined in the View 
-                    // color set
-                    text: i18n("hello")
-                }
-            }
-            Rectangle {
-                ...
-                // Use the Complementary set
-                Kirigami.Theme.colorSet: Kirigami.Theme.Complementary  
-
-                // Don't inherit from the parent
-                Kirigami.Theme.inherit: false
-
-                // This will be near-black as in the Complementary color set 
-                // the background color is dark.
-                color: Kirigami.Theme.backgroundColor  
-
-                Controls.Label {
-                    // The text will be near-white, as is defined in the 
-                    // Complementary color set
-                    text: i18n("hello")
-                }
-            }
-        }
-    }
+.. literalinclude:: /../../examples/kirigami/UseColorsets.qml
+   :language: qml
 
 Some components such as Labels will automatically inherit by default the color 
 set, some other components have a fixed color set, for instance Buttons 
 are fixed to the ``Button`` color set. If is desired for the button to inherit 
 the parent color set, the inherit property should be explicitly set to true:
 
-.. code-block:: qml
+.. literalinclude:: /../../examples/kirigami/InheritTheme.qml
+   :language: qml
 
-    import QtQuick 2.11
-    import QtQuick.Controls 2.2 as Controls
-    import org.kde kirigami 2.9 as Kirigami
+.. TODO:: 
 
-    ...
-    Controls.Button {
-        Kirigami.Theme.inherit: true
-        text: i18n("ok")
-    }
-
-[TODO]: screenshot of a comparison between a button that inherits and one that 
-doesn't    
+   screenshot of a comparison between a button that inherits and one 
+   that doesn't
 
 
 Using Custom Colors
@@ -160,30 +96,10 @@ maintainable way to assign a custom hardcoded palette to an item and all its
 children, that will allow to define such custom colors in one place and one 
 only:
 
-.. code-block:: qml
+.. literalinclude:: /../../examples/kirigami/CustomColors.qml
+   :language: qml  
 
-    import QtQuick 2.11
-    import QtQuick.Controls 2.2 as Controls
-    import org.kde kirigami 2.9 as Kirigami
+.. TODO:: 
 
-    Rectangle {
-        Kirigami.Theme.inherit: false
-        // NOTE: regardless of the color set used, it's recommended to replace 
-        // all available colors in Theme, to avoid badly contrasting colors
-        Kirigami.Theme.colorSet: Kirigami.Theme.Window
-        Kirigami.Theme.backgroundColor: "#b9d795"
-        Kirigami.Theme.textColor: "#465c2b"
-        Kirigami.Theme.highlightColor: "#89e51c"
-        ... // Redefine all the others
-
-        // This will be "#b9d795"
-        color: Kirigami.Theme.backgroundColor
-
-        Rectangle {
-            // This will be "#465c2b"
-            color: Kirigami.Theme.textColor
-        }
-    }
-
-[TODO] Screenshot
+   Screenshot
 

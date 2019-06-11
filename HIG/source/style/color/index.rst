@@ -91,6 +91,9 @@ Kirigami
 See :doc:`color in Kirigami <kirigami:style/color>` for details on how to use 
 colors and palettes.
 
+.. literalinclude:: /../../examples/kirigami/UseTheme.qml
+   :language: qml
+
 
 Plasma components
 ~~~~~~~~~~~~~~~~~
