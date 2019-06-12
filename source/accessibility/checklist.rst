@@ -70,6 +70,9 @@ Graphical elements
    elements.
 -  An option to hide non-essential graphics is provided.
 
+See :doc:`units </layout/units>` for more information on how to use KDE's base 
+units to avoid hardcoded size values.
+
 Testing
 ^^^^^^^
 
@@ -93,6 +96,10 @@ Fonts and text
 -  An alternative to WYSIWYG is provided. For example, the ability to 
    specify different screen and printer fonts in a text editor. 
 
+See :doc:`typography </style/typography>` for more information on how to 
+avoid hardcoded font sizes and :doc:`labels </style/writing/labels>` for more 
+details about labels.
+   
 Testing
 ^^^^^^^
 
@@ -111,10 +118,13 @@ Color and contrast
    current desktop theme or an application setting.
 -  Color is only used as an enhancement, and not as the only means to 
    convey information or actions.
--  The application supports all available high-contrast themes and 
-   settings.
--  The software is not dependent on any particular high-contrast themes or 
-   settings.
+-  The application supports all available 
+   :doc:`high contrast themes </style/color/high>` and settings.
+-  The software is not dependent on any particular 
+   :doc:`high contrast themes </style/color/high>` or settings.
+   
+See :doc:`the HIG's page about color </style/color/index>` and 
+:doc:`colors in Kirigami <kirigami:style/color>`for more information.
    
 Testing
 ^^^^^^^
@@ -194,6 +204,7 @@ Keyboard focus
    presses an inappropriate key.
 -  There is sufficient audio information for the visual focus that the user 
    can figure out what to do next.
+-  Set the focus to the actual control, don't just highlight an area.
 -  When using assistive technologies, such as a screen reader or braille 
    device, the current program indicates the position and content of the visual 
    focus indicator.
