@@ -5,12 +5,12 @@ Introduction
 ------------
 
 This is a list of common things you should check for to have great 
-:doc:`accessibility <index>` in you application or plasmoids.
+:doc:`accessibility <index>` for your application or widgets.
 
 Keyboard navigation
 -------------------
 
--  Efficient keyboard access is provided to all application features.
+-  Efficient keyboard access is provided for all application features.
 -  All windows have a logical keyboard navigation order.
 -  The correct tab order is used for controls whose enabled state is 
    dependent on checkboxes, radio buttons or toggle buttons.
@@ -18,18 +18,16 @@ Keyboard navigation
    existing system accessibility features.
 -  The application provides more than one method to perform keyboard tasks 
    whenever possible.
--  There are alternative key combinations wherever possible.
--  There are no awkward reaches for frequently performed keyboard 
-   operations.
--  The application does not use repetitive, simultaneous keypresses.
+-  There are alternative keyboard shortcuts wherever possible.
+-  Frequently-accessed keyboard shortcuts should be physically easy to access 
+   and not require awkwardly bending the wrist or fingers.
+-  The application does not require repetitive, simultaneous keypresses.
 -  The application provides keyboard equivalents for all mouse functions.
--  Any text or object that can be selected with the mouse can also be 
-   selected with the keyboard alone.
--  Any object that can be resized or moved with the mouse can also be 
-   resized or moved with the keyboard alone.
+-  The application provides keyboard equivalents for all mouse-based functions, 
+   including selecting, moving, and resizing items.
 -  The application does not use any general navigation functions to 
    trigger operations.
--  All keyboard-invoked menus, windows and tooltips appear near the object 
+-  All keyboard-invoked menus, windows, and tooltips appear near the object 
    they relate to.
 
 Testing
@@ -42,10 +40,10 @@ part of this test.
    application.
 -  Confirm that:
    
-   -  Context sensitive menus display correctly.
-   -  Any functions listed on the toolbar can be performed using the keyboard.
-   -  You can operate every control in the client area of the application 
-      and dialog boxes.
+   -  Context-sensitive menus display correctly.
+   -  Any functions listed on the toolbar can be triggered using the keyboard.
+   -  Every control in the client area of the application can be focused and 
+      activated.
    -  Text and objects within the client area can be selected.
    -  Any keyboard enhancements or shortcuts are working as designed.
 
@@ -56,7 +54,7 @@ Mouse interaction
 -  No operations depend on input from the right or middle mouse buttons.
 -  All mouse operations can be cancelled before they are complete.
 -  Visual feedback is provided throughout drag and drop operations
--  The mouse pointer is never warped under application control, or its 
+-  The mouse pointer is never moved by the application, or its 
    movement restricted to part of the screen by the application.
 
 Graphical elements
@@ -114,7 +112,7 @@ Testing
 Color and contrast
 ------------------
 
--  Application colors are not hard-coded, but are drawn either from the 
+-  Application colors are not hard-coded, but either use colors from 
    current desktop theme or an application setting.
 -  Color is only used as an enhancement, and not as the only means to 
    convey information or actions.
@@ -131,7 +129,7 @@ Testing
 
 -  Print screenshots to a black and white printer and confirm that all 
    information is visible.
--  Test applications using only black and white, high-contrast settings and 
+-  Test applications using only black and white high-contrast settings and 
    confirm that all information is conveyed correctly.
 -  Test that the application provides at least three combinations of color 
    schemes and that high-contrast schemes are available (e.g. white on black or 
@@ -145,8 +143,7 @@ Testing
 Magnification
 -------------
 
--  The application provides the ability to magnify the work area.
--  The application provides the option to scale the work area.
+-  The application provides the ability to scale or magnify the work area.
 -  The application's functionality is not affected by changing the 
    magnification or scale settings. 
 
@@ -197,7 +194,7 @@ Keyboard focus
 
 -  When a window is opened, focus starts at the most commonly-used control.
 -  Current input focus position is clearly displayed at all times.
--  Input focus is shown in exactly one window at all times.
+-  Input focus is shown in exactly one window or view at all times.
 -  Appropriate audio or visual feedback is provided when the user attempts 
    to navigate past either end of a group of related objects.
 -  The default audio or visual warning signal is played when the user 
@@ -212,7 +209,7 @@ Keyboard focus
 Testing
 ^^^^^^^
 
--  Verify that when moving among objects that the visual focus indicator is 
+-  Verify when moving among objects that the visual focus indicator is 
    easy to identify.
 -  Keyboard navigation through the software and menus should be clearly visible 
    when the focus moves.
