@@ -122,7 +122,7 @@ Color and contrast
    :doc:`high contrast themes </style/color/high>` or settings.
    
 See :doc:`the HIG's page about color </style/color/index>` and 
-:doc:`colors in Kirigami <kirigami:style/color>`for more information.
+:doc:`colors in Kirigami <kirigami:style/color>` for more information.
    
 Testing
 ^^^^^^^
