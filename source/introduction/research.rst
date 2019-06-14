@@ -89,7 +89,7 @@ More Information
 Still Need Help?
 ----------------
 
-CFor more information and help you can find us on 
+For more information and help you can find us on 
 `Matrix <https://matrix.to/#/#kde_vdg:matrix.org>`_, 
 `IRC <irc://chat.freenode.net/kde-vdg>`_ or 
 `Telegram <https://telegram.me/vdgmainroom>`_
