@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+/* color definitions */
+.iconred {
+    color: #da4453;
+}
+.plasmablue {
+    color: #3daee9;
+}
+.noblefir {
+    color: #27ae60;
+}
+
+body {
+    font-family: "Noto Sans","Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    color: #232627;
+}
+
+h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
+    margin-top: 0;
+    font-weight: 700;
+    font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+p, ul > li, a {
+    font-size: 14px;
+}
+
+a.reference, a:visited {
+    color: #2980b9;
+}
+
+a.icon {
+    color: #fcfcfc;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.flex > * {
+    margin-right: 18px;
+    max-width: 340px;
+}
+
+.flex > *:last-child {
+    margin-right: 0;
+}
+
+.wy-nav-side {
+    background-color: #eff0f1 !important;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+}
+
+.wy-side-nav-search {
+    background-color: #27ae60 !important;
+}
+
+.wy-side-nav-search .icon-home:before {
+    vertical-align: middle;
+    font-size: 350%;
+    display: "block";
+}
+
+.wy-side-nav-search > div.version {
+    color: rgba(255,255,255,0.7);
+}
+
+.wy-side-nav-search input[type="text"] {
+    border-radius: 4px;
+    border: 0 solid transparent;
+}
+
+.wy-nav-content-wrap {
+    background-color: #fcfcfc;
+}
+
+.wy-menu-vertical a {
+    color: #232627;
+}
+
+.wy-menu-vertical .current a {
+    color: #232627;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: #93cee9;
+    cursor: pointer;
+}
+
+.wy-menu-vertical li.toctree-l2 > a:hover {
+    background: #93cee9;
+}
+
+.wy-menu-vertical li.toctree-l2.current > a {
+    background-color: #fcfcfc;
+    color: #232627;
+}
+
+.wy-menu-vertical li a.current:last-of-type {
+    background: #3daee9;
+    color: #fcfcfc;
+}
+
+.wy-menu-vertical li.current a {
+    color: #232627;
+    border-top: none;
+    border-bottom: none;
+}
+
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3.current > a {
+    background: #3daee9;
+    color: #fcfcfc;
+}
+
+.wy-menu-vertical li.toctree-l2 li.toctree-l3 > a:hover {
+    background: #93cee9;
+}
+
+.admonition {
+    box-shadow: 1px 1px 2px 2px rgba(0,0,0,.17);
+}
+
+.admonition.caution .admonition-title {
+    background-color: #fdbc4b;
+}
+.admonition.hint .admonition-title {
+    background-color: #27ae60;
+}
+
+.btn {
+    background-color: #eff0f1 !important;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(35,38,39,.1);
+    border-color: #bdc3c7;
+    border-radius: 3px;
+    padding: 8px;
+}
+.btn:hover {
+    border-color: #93cee9;
+    background-color: #eff0f1 !important;
+}
+.btn:active {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(35,38,39,.1);
+    padding: 8px;
+}
+
+
+[itemprop='articleBody'] {
+    position: relative;
+}
+
+.intend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #7f8c8d;
+}
+.intend:before {
+    content: "For "
+}
+
+.intend a + a:before {
+    content: " and ";
+    color: #7f8c8d;
+}
+
+.available {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    color: #da4453;
+}
+
+.border img {
+    border: 1px solid #bdc3c7;
+}
+
+.available.qwidgets:before {
+    content: 'Not available for qWidgets'
+}
+
+.available.plasma:before {
+    content: 'Not available for Plasma'
+}
+
+.available.plasma.qwidgets:before {
+    content: 'Not available for Plasma and qWidgets'
+}
+
+@font-face {
+    font-family:"icons";
+    src:url("icons.eot?842739648e48d469142df14af06c1a3c");
+    src:url("icons.eot?#iefix") format("embedded-opentype"),
+        url("icons.woff2?842739648e48d469142df14af06c1a3c") format("woff2"),
+        url("icons.woff?842739648e48d469142df14af06c1a3c") format("woff"),
+        url("icons.ttf?842739648e48d469142df14af06c1a3c") format("truetype"),
+        url("icons.svg?842739648e48d469142df14af06c1a3c#icons") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+.fa-arrow-circle-left:before {
+    font-family:"icons";
+    content:"\f101";
+}
+
+.fa-arrow-circle-right:before {
+    font-family:"icons";
+    content:"\f102";
+}
+
+.icon-home:before {
+    font-family:"icons";
+    content:"\f104";
+}
+
+/*
+ * Add more spacing and a 1px seperator between sections */
+div[itemprop="articleBody"] .section:not(:first-of-type) {
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+div[itemprop="articleBody"] > .section > .section:not(:first-of-type) {
+	border-top: 1px solid #bdc3c7;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+/* Increase font sized to have more visual difference */
+h1 {
+	font-size: 300%;
+	margin-bottom: 8px;
+	font-weight: normal;
+}
+h2 {
+	font-size: 240%;
+	margin-bottom: 8px;
+	font-weight: normal;
+}
+h3 {
+	font-size: 180%;
+	margin-bottom: 8px;
+	font-weight: normal;
+}
+h4 {
+	font-size: 140%;
+	margin-bottom: 8px;
+	font-weight: normal;
+}
+h5 {
+	font-size: 120%;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+
