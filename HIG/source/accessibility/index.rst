@@ -1,6 +1,13 @@
 Accessibility
 =============
 
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+   :hidden:
+
+   checklist
+   
 Introduction
 ------------
 

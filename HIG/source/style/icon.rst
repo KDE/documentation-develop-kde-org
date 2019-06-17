@@ -12,8 +12,14 @@ Well-designed icons strongly impact users' overall impression of the design.
 Consistent use of icons also improves usability by making programs, objects,
 and actions easier to identify and learn.
 
-If you would like to request help designing icons for your application, you can
-ask the `KDE Visual Design Group <https://community.kde.org/Get_Involved/design#Communication_and_workflow>`_ for help.
+.. note:: 
+   
+   See the `workflow tips on how to create an icon \
+   <https://community.kde.org/Guidelines_and_HOWTOs/Icon_Workflow_Tips>`_ if 
+   you are interested in designing icons for your application. Or you can
+   ask the `KDE Visual Design Group \
+   <https://community.kde.org/Get_Involved/design#Communication_and_workflow>`_ 
+   for help.
 
 
 
