@@ -4,7 +4,9 @@ Contribute
 The HIG is written in 
 `reStructuredText <http://www.sphinx-doc.org/en/stable/rest.html>`_, a 
 lightweight markup language. For example the chapter heading together with the 
-first paragraph looks like this in reStructuredText::
+first paragraph looks like this in reStructuredText
+
+.. code-block:: rst
 
    Contribute
    ==========
@@ -194,3 +196,16 @@ Optional: you can add subsections for desktop and mobile.
     
     Mobile
     """"""
+
+Code examples
+-------------
+
+Adding examples to the HIG is very easy.
+
+#. Add a file with source code in the ``./examples/`` folder.
+#. Add the following markup at the point you want to insert the example:
+
+   .. code-block:: rst
+   
+      .. literalinclude:: /../../examples/kirigami/InlineMessage.qml
+         :language: qml
