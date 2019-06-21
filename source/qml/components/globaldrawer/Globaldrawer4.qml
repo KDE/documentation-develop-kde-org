@@ -26,7 +26,7 @@ import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
 
 Rectangle {
-    width: 800
+    width: 1100
     height: 600
     id: root
 
@@ -40,7 +40,7 @@ Rectangle {
         }
 
         Component.onCompleted: {
-            addrbook.pageStack.push(addrbook.detailPage)
+            //addrbook.pageStack.push(addrbook.detailPage)
         }
     }
 
@@ -54,7 +54,7 @@ Rectangle {
         }
     }
     Timer {
-        interval: 7000
+        interval: 6000
         repeat: false
         running: true
         onTriggered: {

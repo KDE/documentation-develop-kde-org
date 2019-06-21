@@ -122,6 +122,31 @@ ListModel {
                                 "text": "susan@kde.org",
                                 "default": true,
                                 "description": "E-Mail private"
+                            }],
+                        "history": [{
+                                "icon": "call-start",
+                                "text": "+12 34 1234 5678",
+                                "date": "2018-10-10"
+                            }, {
+                                "icon": "mail-message",
+                                "text": "Lorem ipsum",
+                                "date": "2018-10-10"
+                            }, {
+                                "icon": "call-start",
+                                "text": "+12 34 1234 5678",
+                                "date": "2018-10-10"
+                            }, {
+                                "icon": "mail-message",
+                                "text": "Lorem ipsum",
+                                "date": "2018-10-10"
+                            },{
+                                "icon": "call-start",
+                                "text": "+12 34 1234 5678",
+                                "date": "2018-10-10"
+                            }, {
+                                "icon": "mail-message",
+                                "text": "Lorem ipsum",
+                                "date": "2018-10-10"
                             }]
                     }, {
                         "firstname": "Susan",
