@@ -27,6 +27,7 @@ Item {
     anchors.fill: parent;
     property int px
     property int py
+    property bool animate: true
     z: 2
 
     Rectangle {
@@ -83,6 +84,16 @@ Item {
         }
     }
 
+    Timer {
+        id: moveMouse
+        interval: 50
+        repeat: true
+        running: false
+        onTriggered: {
+            event.mouseMove(canvas.parent, cursor.x, cursor.y, 0, Qt.NoButton);
+        }
+    }
+
 
     // Animate mouse to x/y and then click
     function click() {
@@ -94,24 +105,36 @@ Item {
             ind.visible = true;
             indAnim.to = Kirigami.Units.iconSizes.smallMedium;
             indAnim.start();
+            moveMouse.stop();
         });
 
         cursorAnimationX.to = px;
         cursorAnimationY.to = py;
         cursorAnimation.start();
+        moveMouse.start();
     }
 
     function hover() {
-        cursor.x = px - 60;
-        cursor.y = py + 60;
-        cursor.visible = true;
+        if (canvas.animate) {
+            cursor.x = px - 60;
+            cursor.y = py + 60;
+            cursor.visible = true;
 
-        cursorAnimation.onStopped.connect(function() {
+            cursorAnimation.onStopped.connect(function() {
+                event.mouseMove(canvas.parent, px, py, 0, Qt.NoButton);
+                moveMouse.stop();
+            });
+
+            cursorAnimationX.to = px;
+            cursorAnimationY.to = py;
+            cursorAnimation.start();
+            moveMouse.start();
+        }
+        else {
+            cursor.x = px;
+            cursor.y = py;
+            cursor.visible = true;
             event.mouseMove(canvas.parent, px, py, 0, Qt.NoButton);
-        });
-
-        cursorAnimationX.to = px;
-        cursorAnimationY.to = py;
-        cursorAnimation.start();
+        }
     }
 }

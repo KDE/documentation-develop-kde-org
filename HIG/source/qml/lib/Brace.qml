@@ -71,23 +71,24 @@ Item {
             // Determine direction
             // draw either horizontal or vertical
             if (horizontal) {
+                // If no label was provided calulate it
+                if (canvas.text == "") {
+                    if (cfrom.x > cto.x) {
+                        canvas.text = cfrom.x - cto.x - to.width;
+                    }
+                    else {
+                        canvas.text = cto.x - cfrom.x - from.width;
+                    }
+                }
 
                 // Calculate anchor points for braces
                 if (!canvas.center) {
                     // Draw from closest borders
                     if (cfrom.x > cto.x) {
-                        // If no label was provided calulate it
-                        if (canvas.text == "") {
-                            canvas.text = cfrom.x - cto.x - to.width;
-                        }
                         cfrom.x = cfrom.x + Math.min(Math.floor(from.width / 2), 2 * Kirigami.Units.smallSpacing)
                         cto.x = cto.x + to.width - Math.min(Math.floor(to.width / 2), 2 * Kirigami.Units.smallSpacing)
                     }
                     else {
-                        // If no label was provided calulate it
-                        if (canvas.text == "") {
-                            canvas.text = (cto.x - cfrom.x - from.width);
-                        }
                         cfrom.x = cfrom.x + from.width - Math.min(Math.floor(from.width / 2), 2 * Kirigami.Units.smallSpacing)
                         cto.x = cto.x + Math.min(Math.floor(to.width / 2), 2 * Kirigami.Units.smallSpacing)
                     }
@@ -109,22 +110,24 @@ Item {
                 prot.y = cfrom.y - prot.height - 2 * Kirigami.Units.smallSpacing
             }
             else {
+                // If no label was provided calulate it
+                if (canvas.text == "") {
+                    if (cfrom.y > cto.y) {
+                        canvas.text = cfrom.y - cto.y - to.height;
+                    }
+                    else {
+                        canvas.text = cto.y - cfrom.y - from.height;
+                    }
+                }
+
                 if (!canvas.center) {
                     // Draw from closest borders
                     if (cfrom.y > cto.y) {
-                        // If no label was provided calulate it
-                        if (canvas.text == "") {
-                            canvas.text = (cto.y - cfrom.y + from.height);
-                        }
                         cfrom.y = cfrom.y + Math.min(Math.floor(from.height / 2), 2 * Kirigami.Units.smallSpacing)
                         cto.y = cto.y + to.height - Math.min(Math.floor(to.height / 2), 2 * Kirigami.Units.smallSpacing)
 
                     }
                     else {
-                        // If no label was provided calulate it
-                        if (canvas.text == "") {
-                            canvas.text = (cto.y - cfrom.y - from.height);
-                        }
                         cfrom.y = cfrom.y + from.height - Math.min(Math.floor(from.height / 2), 2 * Kirigami.Units.smallSpacing)
                         cto.y = cto.y + Math.min(Math.floor(to.height / 2), 2 * Kirigami.Units.smallSpacing)
                     }
