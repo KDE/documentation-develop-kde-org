@@ -46,6 +46,13 @@ Getting started
    * Debian/Ubuntu/Kubuntu/KDE Neon: ``sudo apt install git build-essential``
    * openSUSE: ``sudo zypper install git``
 
+#. Clone the HIG source code repository into an empty folder:
+
+   .. code-block:: sh
+
+      git clone https://anongit.kde.org/websites/hig-kde-org.git
+      cd hig-kde-org
+      
 #. Install some tools with Python's package manager, Pip. Pip should already be
    Installed, but if for some reason it is not, here are instructions for
    getting it: https://pip.pypa.io/en/stable/installing/
@@ -54,13 +61,13 @@ Getting started
    
    .. code-block:: sh
 
-      sudo pip -r requirements.txt
+      sudo pip install -r requirements.txt
 
    ...or in your home directory:
     
    .. code-block:: sh
 
-      pip -r requirements.txt --user
+      pip install -r requirements.txt --user
        
    If you install it in you home directory, make sure you have the 
    installed packages in your path by adding it to your .profile:
@@ -69,13 +76,6 @@ Getting started
 
       echo "PATH=~/.local/lib:\$PATH" >> ~/.profile
       source ~/.profile
-
-#. Clone the HIG source code repository into an empty folder:
-
-   .. code-block:: sh
-
-      git clone https://anongit.kde.org/websites/hig-kde-org.git
-      cd hig-kde-org
 
    
 Now you are ready to contribute to the HIG! To preview changes on your local
