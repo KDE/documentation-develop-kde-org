@@ -11,7 +11,7 @@ PlasmaExtras.Heading {
     text: "Header 4"
 }
 PlasmaComponents.Label {
-    font.pointSize: 24
+    font.pointSize: PlasmaComponents.theme.defaultFont.pointSize * 3
     text: "Extra large title"
 }
 PlasmaComponents.Label {

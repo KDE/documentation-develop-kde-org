@@ -11,7 +11,7 @@ Kirigami.Heading {
     text: "Header 4"
 }
 Controls.Label {
-    font.pointSize: 24
+    font.pointSize: Kirigami.Theme.defaultFont.pointSize * 3
     text: "Extra large title"
 }
 Controls.Label {
