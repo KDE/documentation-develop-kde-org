@@ -50,7 +50,7 @@ Getting started
 
    .. code-block:: sh
 
-      git clone https://anongit.kde.org/websites/hig-kde-org.git
+      git clone https://invent.kde.org/websites/hig-kde-org.git
       cd hig-kde-org
       
 #. Install some tools with Python's package manager, Pip. Pip should already be
