@@ -49,9 +49,9 @@ See :doc:`here <index>` for more information about usage of colors.
 |              |                        |                                                                               |         |              |                   |
 |              |                        |       <div style='background-color: #f67400;'>&#160;</div>                    |         |              |                   |
 |              +------------------------+-------------------------------------------------------------------------------+---------+--------------+-------------------+
-|              | ForegroundNormal       | .. raw:: html                                                                 | #232627 | 35,38,39     | Shade Black       |
+|              | ForegroundNormal       | .. raw:: html                                                                 | #232629 | 35,38,39     | Shade Black       |
 |              |                        |                                                                               |         |              |                   |
-|              |                        |       <div style='background-color: #232627;'>&#160;</div>                    |         |              |                   |
+|              |                        |       <div style='background-color: #232629;'>&#160;</div>                    |         |              |                   |
 |              +------------------------+-------------------------------------------------------------------------------+---------+--------------+-------------------+
 |              | ForegroundPositive     | .. raw:: html                                                                 | #27ae60 | 39,174,96    | Noble Fir         |
 |              |                        |                                                                               |         |              |                   |
@@ -113,9 +113,9 @@ See :doc:`here <index>` for more information about usage of colors.
 |              |                        |                                                                               |         |              |                   |
 |              |                        |       <div style='background-color: #4d4d4d;'>&#160;</div>                    |         |              |                   |
 |              +------------------------+-------------------------------------------------------------------------------+---------+--------------+-------------------+
-|              | BackgroundNormal       | .. raw:: html                                                                 | #232627 | 35,38,39     | Shade Black       |
+|              | BackgroundNormal       | .. raw:: html                                                                 | #232629 | 35,38,39     | Shade Black       |
 |              |                        |                                                                               |         |              |                   |
-|              |                        |       <div style='background-color: #232627;'>&#160;</div>                    |         |              |                   |
+|              |                        |       <div style='background-color: #232629;'>&#160;</div>                    |         |              |                   |
 |              +------------------------+-------------------------------------------------------------------------------+---------+--------------+-------------------+
 |              | DecorationFocus        | .. raw:: html                                                                 | #3daee9 | 61,174,233   | Plasma Blue       |
 |              |                        |                                                                               |         |              |                   |
@@ -193,9 +193,9 @@ See :doc:`here <index>` for more information about usage of colors.
 |              |                        |                                                                               |         |              |                   |
 |              |                        |       <div style='background-color: #f67400;'>&#160;</div>                    |         |              |                   |
 |              +------------------------+-------------------------------------------------------------------------------+---------+--------------+-------------------+
-|              | ForegroundNormal       | .. raw:: html                                                                 | #232627 | 35,38,39     | Shade Black       |
+|              | ForegroundNormal       | .. raw:: html                                                                 | #232629 | 35,38,39     | Shade Black       |
 |              |                        |                                                                               |         |              |                   |
-|              |                        |       <div style='background-color: #232627;'>&#160;</div>                    |         |              |                   |
+|              |                        |       <div style='background-color: #232629;'>&#160;</div>                    |         |              |                   |
 |              +------------------------+-------------------------------------------------------------------------------+---------+--------------+-------------------+
 |              | ForegroundPositive     | .. raw:: html                                                                 | #27ae60 | 39,174,96    | Noble Fir         |
 |              |                        |                                                                               |         |              |                   |
@@ -241,9 +241,9 @@ See :doc:`here <index>` for more information about usage of colors.
 |              |                        |                                                                               |         |              |                   |
 |              |                        |       <div style='background-color: #f67400;'>&#160;</div>                    |         |              |                   |
 |              +------------------------+-------------------------------------------------------------------------------+---------+--------------+-------------------+
-|              | ForegroundNormal       | .. raw:: html                                                                 | #232627 | 35,38,39     | Shade Black       |
+|              | ForegroundNormal       | .. raw:: html                                                                 | #232629 | 35,38,39     | Shade Black       |
 |              |                        |                                                                               |         |              |                   |
-|              |                        |       <div style='background-color: #232627;'>&#160;</div>                    |         |              |                   |
+|              |                        |       <div style='background-color: #232629;'>&#160;</div>                    |         |              |                   |
 |              +------------------------+-------------------------------------------------------------------------------+---------+--------------+-------------------+
 |              | ForegroundPositive     | .. raw:: html                                                                 | #27ae60 | 39,174,96    | Noble Fir         |
 |              |                        |                                                                               |         |              |                   |

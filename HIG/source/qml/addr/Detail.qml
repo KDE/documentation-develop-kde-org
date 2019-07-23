@@ -127,7 +127,7 @@ Flickable  {
                         Layout.alignment: Qt.AlignVCenter
                         Label {
                             text: model.text
-                            color: model.default ? Kirigami.Theme.linkColor : Kirigami.Theme.textColor //"#2980b9" : "#232627"
+                            color: model.default ? Kirigami.Theme.linkColor : Kirigami.Theme.textColor //"#2980b9" : "#232629"
                         }
                         Label {
                             text: model.description

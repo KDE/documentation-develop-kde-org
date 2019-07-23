@@ -63,7 +63,7 @@ ItemDelegate {
         verticalOffset: elevation < 2 ? 1 : 3
         radius: root.elevation  * 4
         samples: root.elevation * 10
-        color: "#92232627"
+        color: "#232629"
         source: background
     }
 

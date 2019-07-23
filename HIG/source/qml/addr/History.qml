@@ -38,7 +38,7 @@ Column {
                     width: Kirigami.Units.iconSizes.smallMedium
                     height: width
                     source: model.icon
-                    color: Kirigami.Theme.disabledTextColor //"#232627"
+                    color: Kirigami.Theme.disabledTextColor //"#232629"
                     anchors.verticalCenter: parent.verticalCenter
                 }
                 Column {
