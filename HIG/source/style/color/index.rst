@@ -98,7 +98,7 @@ colors and palettes.
 Plasma components
 ~~~~~~~~~~~~~~~~~
 
-In Plasmoids use `PlasmaCore.Theme`_ to pick theme colors
+In Plasmoids use `PlasmaCore.Theme`_ to pick theme colors.
 
 Color Mapping
 -------------
@@ -113,6 +113,4 @@ follow:
 
 
 .. _KColorScheme: http://api.kde.org/frameworks-api/frameworks5-apidocs/kconfigwidgets/html/classKColorScheme.html
-.. _PlasmaCore.Theme: 
-https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1QuickTheme.
-html
+.. _PlasmaCore.Theme: https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1QuickTheme.html

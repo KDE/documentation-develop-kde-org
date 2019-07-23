@@ -1,4 +1,4 @@
-Patterns for a simple command structure
+Patterns for a Simple Command Structure
 =======================================
 
 .. image:: /img/CP-Simple.png

@@ -1,10 +1,10 @@
-Table view
+Table View
 ==========
 
 Purpose
 -------
 
-A *table* (also known as *grid* or spreadsheet) is a graphical control
+A table (also known as grid or spreadsheet) is a graphical control
 to present data in an ordered arrangement of rows and columns. The
 intersection of a row and a column is a cell. The elements of a table
 may be grouped, segmented, or arranged in many different ways, and even
@@ -20,18 +20,15 @@ clicks). The drawback is reduced discoverability for lists with
 restricted editing function, at least when only a few cells can be
 changed. User does not know which cell is editable and which is not.
 
-Example
--------
-
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use a table to arrange data in two dimensions.
 -  Use a table for a concise layout with inline editing feature.
--  Do not use a table for read only purpose. In this case use a simple
+-  Don't use a table for read-only data. In this case use a simple
    :doc:`list view <list>` or a :doc:`tree view <tree>` with multiple columns.
 
 Behavior
@@ -46,7 +43,7 @@ Behavior
 -  Define keyboard navigation within the table since the control
    receives focus as a whole. By pressing arrow-down key the next row is
    focused; respectively arrow-up for previous row. The arrow-left or
-   arrow-right key navigates to adjacent columns if available. Do not
+   arrow-right key navigates to adjacent columns if available. Don't
    change tab key navigation to allow users to switch to other controls.
 -  Use the appropriate control for constrained input. Show the control’s
    UI (e.g. arrow for :doc:`drop-down list <dropdown>`) not until the cell is in edit

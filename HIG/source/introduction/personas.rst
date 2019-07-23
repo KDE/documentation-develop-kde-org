@@ -37,7 +37,7 @@ motivation in the KDE development base. We don't want to be *simple and
 limited*, we want to develop a smart desktop with rich functionality!
 
 To avoid misunderstandings: KDE will still be an option for educational,
-governmental or large enterprise usage – but it won't be the main focus
+governmental or large enterprise usage – but it will not be the main focus
 when developing the default desktop. KDE as a configurable set of tools can
 still be adjusted to meet the needs of any other user base.
 
@@ -56,8 +56,8 @@ Berna's biggest daily task is to check on the details of insurance claims. She w
 reports for her boss suggesting compensation payouts for the cases she
 deals with. Berna is a very detail oriented individual, and always resolves her tasks accurately.
 
-Berna lost several hours of work twice because she didn't understand the
-options she was offered with technology. Since then, she has been very careful when testing new functionality in the software she uses. She prefers to keep things simple.
+On a few occassions, Berna has lost work because she misunderstood how a piece of technology worked. 
+Since then, she has been very careful when testing new functionality in the software she uses. She prefers to keep things simple.
 
 Matt
 ----
@@ -91,7 +91,7 @@ creative and spread this creativity to the world.
 
 She chats with her friends, shares music, playlists and other media,
 creates videos and uploads them to her web space, and runs a blog with
-her own style. She can't imagine a life without her laptop.
+her own style. She can't imagine life without her laptop.
 
 She is a fun person and does not want to worry about technical
 details. She expects her machine to work.

@@ -10,7 +10,7 @@ Pattern for a flat content structure.
 .. image:: /img/Grid.png
    :alt: Grid of items
 
-When to use
+When to Use
 -----------
 
 Use a grid to show a set of elements which can best be represented
@@ -20,7 +20,7 @@ pictures or video thumbnails, or the content of a store.
 For elements that are better represented by text, use a 
 :doc:`list </components/editing/list>`.
 
-How to use
+How to Use
 ----------
 
 -  Make sure that the grid items are big enough and/or there is enough

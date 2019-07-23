@@ -4,7 +4,7 @@ Capitalization
 Purpose
 -------
 
-*Capitalization* is a feature of case-sensitive languages to foster
+Capitalization is a feature of case-sensitive languages to foster
 relevance by drawing attention to words with capital letters. For a consistent
 look and feel of the software, it is important to implement capitalization
 consistently.
@@ -28,7 +28,7 @@ For example:
 -  Menu titles and menu item labels
 -  Button labels
 
-Do not capitalize:
+Don't capitalize:
 
 -  Articles: a, an, the
 -  Coordinating conjunctions: and, but, or, for, nor, etc.

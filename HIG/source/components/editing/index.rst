@@ -1,4 +1,4 @@
-Editing and manipulation
+Editing and Manipulation
 ========================
 
 .. toctree::
@@ -38,14 +38,14 @@ Selection
 * :doc:`togglebutton`
 * :doc:`tree`
 
-Unconstrained input
+Unconstrained Input
 ~~~~~~~~~~~~~~~~~~~
 
 * :doc:`lineedit`
 * :doc:`tableview`
 * :doc:`textedit`
 
-Constrained input
+Constrained Input
 ~~~~~~~~~~~~~~~~~
 * :doc:`date`
 * :doc:`slider`

@@ -1,4 +1,4 @@
-Global drawer
+Global Drawer
 =============
 
 Purpose
@@ -79,7 +79,7 @@ The main menu
 -  In lower menu levels, below the entries there is a button to go up
    one level.
 
-Do not use the Menu Drawer for navigation purposes.
+Don't use the Menu Drawer for navigation purposes.
 
 |desktopicon| Collapsible
 """""""""""""""""""""""""

@@ -11,8 +11,8 @@ Guidelines
 ----------
 
 -  Ensure images have the appropriate resolution for their containers.
-   Do not scale images beyond their native resolution; this will result
-   will be fuzzy or pixelated losing polish.
+   Don't scale images beyond their native resolution; they will end up
+   fuzzy or pixelated.
 -  Don't be afraid of larger image sizes. Images are most effective when
    they can be seen. Tiny images lose much of their meaning (unless they
    are specifically crafted for small sizes).
@@ -31,7 +31,7 @@ Guidelines
 .. image:: /img/ImageCaption1.png
    :alt: ImageCaption1.png
 
--  Use a semi-transparent background behind the caption text to preserve
+-  Use a :doc:`scrim </components/navigation/scrim>` behind the caption text to preserve
    contrast for legibility.
 -  Try to preserve the image aspect ratio. If preserving the aspect
    ratio is a challenge, consider cropping the image to fill the

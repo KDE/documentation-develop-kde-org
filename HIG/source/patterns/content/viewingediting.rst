@@ -1,12 +1,12 @@
-Viewing vs editing 
-==================
+Viewing vs. Editing
+===================
 
 In most cases, information should be presented by default for viewing,
 not editing. Presenting input controls to the user when they are not needed
 creates unnecessary clutter and distraction, interfering with effective
 presentation of the information.
 
-When to use
+When to Use
 -----------
 
 Only show editing controls when appropriate. Examples include:
@@ -16,13 +16,13 @@ Only show editing controls when appropriate. Examples include:
 -  If an explicit editing mode is appropriate, then editing controls should
    not be shown until that mode is activated.
 
-How to use
+How to Use
 ----------
 
 .. image:: /img/ViewMode.png
    :alt: Viewing
 
--  Do not use input controls to show information unless there is an
+-  Don't use input controls to show information unless there is an
    explicit request to edit the information.
 -  Follow the typography, alignment, and spacing guidelines to layout
    information in a way that is easy to understand.
@@ -41,6 +41,3 @@ How to use
 
 .. image:: /img/PartialEditMode.png
    :alt: Line-in editing
-
-Implementation
---------------

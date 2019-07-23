@@ -12,7 +12,7 @@ Pattern for a flat content structure.
    :alt: List of items
    :scale: 30%
 
-When to use
+When to Use
 -----------
 
 Use a list to present a set of elements which are best presented in a
@@ -26,7 +26,7 @@ textual manner (e.g. a list of emails).
    consider using an expandable list
 
 
-How to use it
+How to Use It
 -------------
 
 -  Sort list items the way they make most sense for the user. For

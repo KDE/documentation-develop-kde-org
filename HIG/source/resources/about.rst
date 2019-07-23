@@ -76,9 +76,9 @@ layers:
       guidelines for aspects which can be changed by the developer, to
       keep them as concise as possible.
       If you feel your application needs something which the referenced
-      standard KDE or Qt widget does not provide, do not create you own
-      custom replacement, because it might violate best practice which
-      is implemented in the standard widget. Instead, ask the KDE HIG
+      standard KDE or Qt widget does not provide, don't create your own
+      custom replacement, because it might violate the best practices which
+      are implemented in the standard widget. Instead, ask the KDE HIG
       team for advice on how to solve your specific problem.
 
    #. Viewing and Navigation

@@ -1,27 +1,27 @@
 Settings
 ========
 
-A *settings page* provides the ability to customize how an application or
+A settings page provides the ability to customize how an application or
 Plasma widget should behave. It is intended for settings that are persistent but not changed very frequently. Following KDE's "Simple by
 default, powerful when needed" :doc:`design mantra <../../index>`,
 settings are split into common and advanced groups. Advanced settings are
-not important to most users but essential for some, and therefore can't be
+not important to most users but essential for some, and therefore cannot be
 removed. Those settings are hidden by default to reduce the mental overhead
 of using the settings page, but with easy access.
 
-When to use
+When to Use
 -----------
 
 -  Use the settings page to display settings that are persistent but not
    accessed or changed very frequently. The toolbar or the main menu (and optionally context menus) are more appropriate places for settings that
    are frequently accessed and changed, such as icon view style or sort order.
--  Do not use settings pages to change the properties of a selected item.
+-  Don't use settings pages to change the properties of a selected item.
    Instead, use a properties dialog or a contextual editing panel.
--  Do not use the settings page for potentially dangerous developer settings
+-  Don't use the settings page for potentially dangerous developer settings
    like the name of an SQL table. Instead, use configuration files or separate
    dialogs.
 
-How to use
+How to Use
 ----------
 
 -  **Simple by default**: Define smart and polite defaults so that your target
@@ -41,7 +41,7 @@ How to use
 Implementation
 --------------
 
--  For a desktop app, put your settings page inside a dialog window and do not
+-  For a desktop app, put your settings page inside a dialog window and don't
    allow it to have a vertical or horizontal scrollbar because all of the
    content will not fit. Instead, separate your controls into more groups and
    make use of :doc:`tabbed views </components/navigation/tab>`. This does not apply to scrollbars within inline tables and grid views, which are
@@ -68,14 +68,14 @@ Implementation
 
 -  When a change is applied, the application should adopt it immediately
    without the need to restart it.
--  Do not change the settings page depending on the context. It
+-  Don't change the settings page depending on the context. It
    should always start with the same landing page regardless of the
    application context.
--  Do not use a wizard to change settings. Only use a wizard if a group of
+-  Don't use a wizard to change settings. Only use a wizard if a group of
    settings are all interrelated and must be edited all at once, e.g.
    setting up an email account.
 -  If some of the program's settings are only applicable in certain contexts,
-   do not hide the inapplicable ones. Instead, disable them and hint to the
+   don't hide the inapplicable ones. Instead, disable them and hint to the
    user why they're disabled.
    **Exception:** it is acceptable to hide settings for non-existent hardware.
    For example, it's okay to hide the touchpad configuration when no touchpad

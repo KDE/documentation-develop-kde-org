@@ -1,4 +1,4 @@
-Spin box
+Spin Box
 ========
 
 .. figure:: /img/Spinbox1.png
@@ -11,7 +11,7 @@ Spin box
 Purpose
 -------
 
-A *spin box* is a line edit that accepts a range of values. It
+A spin box is a line edit that accepts a range of values. It
 incorporates two arrow buttons that allow the user to increase or
 decrease the current value by a fixed amount. Spins are efficient for
 small changes of numeric values in a contiguous range.
@@ -19,8 +19,8 @@ small changes of numeric values in a contiguous range.
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use spin boxes for numerical input only. Use a list or option menu
    when you need the user to select from fixed data sets of other types.
@@ -46,8 +46,8 @@ Behavior
 -  If the input data is inconsistent with other controls on the window,
    give an error message when the entire input is complete, such as when
    users click OK for a modal dialog box.
--  Don't clear invalid input data unless users aren't able to correct
-   errors easily. Doing so allows users to correct mistakes without
+-  Only clear invalid input data when users are not able to correct errors 
+   easily. Doing so allows users to correct mistakes without
    starting over.
 
 Appearance
@@ -72,7 +72,7 @@ Kirigami
 
  - `QML: SpinBox <https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html>`_
 
-Plasma components
+Plasma Components
 ~~~~~~~~~~~~~~~~~
 
  - :plasmaapi:`Plasma SpinBox <SpinBox>`

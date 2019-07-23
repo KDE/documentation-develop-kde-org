@@ -4,7 +4,7 @@ Slider
 Purpose
 -------
 
-A *slider* is a widget with which a user may set a value by moving an
+A slider is a widget with which a user may set a value by moving an
 indicator, usually in a horizontal fashion. The user may also click on a
 point on the slider to change the setting. It is different from a
 scrollbar in that it is typically used to adjust a value without
@@ -20,8 +20,8 @@ are almost solely operable by mouse.
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use a slider when adjusting the value relative to its current value
    is more important than choosing an absolute value.
@@ -35,7 +35,7 @@ Behavior
 
 -  Try to give immediate feedback while the user makes a selection.
 -  Size the control so that a user can easily set the desired value.
--  Do not use a non-linear scale, e.g. logarithmic.
+-  Don't use a non-linear scale, e.g. logarithmic.
 
 Appearance
 ~~~~~~~~~~
@@ -83,7 +83,7 @@ eg volume control, mouse speed, brightness
 
 -  Don't show checkmarks if the exact value is not important
 -  Don't show min/max label if the values don't give the user additional
-   information, eg. don't label them 0%, 100%
+   information, (eg. don't label them 0%, 100% when obvious)
 -  If the exact value might be important to the user offer an input
    field instead of the current value label
 
@@ -97,7 +97,7 @@ Slider and Spinbox together
 -  Use both a slider and spin box when the value is constrained at both
    ends, and when there is a large range of values (more than 20 steps)
    but precise control over the value is needed nevertheless.
--  Consider using only a slider *or* a spin box if a well-defined workflow
+-  Consider using only a slider or a spin box if a well-defined workflow
    makes the other redundant.
 -  The values of the slider and spin box should be linked so changes to
    one are immediately reflect in another.
@@ -120,7 +120,7 @@ Kirigami
 
  - `QML: Slider <https://doc.qt.io/qt-5/qml-qtquick-controls-slider.html>`_
 
-Plasma components
+Plasma Components
 ~~~~~~~~~~~~~~~~~
 
  - :plasmaapi:`Plasma Slider <Slider>`

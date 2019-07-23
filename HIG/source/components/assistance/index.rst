@@ -1,4 +1,4 @@
-User assistance
+User Assistance
 ===============
 
 .. toctree::

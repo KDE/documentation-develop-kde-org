@@ -28,7 +28,7 @@ Actions
 -  Show visiual feedback as soon as the user types, e.g. trigger the 
    action or show a menu with autocompletion suggestions.
 -  Keep the text as short as possible.
--  Since the placeholder won't be visible anymore as soon as the user types, 
+-  Since the placeholder will not be visible anymore as soon as the user types, 
    you should only use it on standalone input elements, not in groups of
    input elements such as forms. 
 -  Use :doc:`sentence style capitalization </style/writing/capitalization>`.

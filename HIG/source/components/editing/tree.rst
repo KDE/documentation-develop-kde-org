@@ -1,4 +1,4 @@
-Tree view
+Tree View
 =========
 
 Purpose
@@ -13,23 +13,15 @@ container node is called the *root node*.
 .. image:: /img/TreeView.png
    :alt: TreeView.png
 
-A tree view is an appropriate control for items that have a single,
-natural, hierarchical categorization that's familiar to most users with
-more than two levels (not including the root node). But having
-hierarchical data doesn't mean a tree view must be used. Very often a
-list view or a combination of list view and drop-down list is a simpler
-and a more powerful choice. Tree views can present a challenge for users
-when the level of complexity is not visually understood and users may
-take longer to familiarize themselves with the tree and each item's
-location. This can to confusion. Designers and developers must balance
-the user's ability to easily discover contact with a predictable tree
-view model that minimizes confusion.
+A tree view is an appropriate control for data best represented as a tree,
+such as nodes in HTML/XML and code outlines. If your data is not best represented
+as a tree, consider using a list view or a dropdown list instead.
 
 Guidelines
 ----------
 
-Ask yourself "Is this the right control?"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Apply a tree view to large data sets that can be categorized into two
    or more levels.

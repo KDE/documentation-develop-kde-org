@@ -1,14 +1,14 @@
-Combination patterns
-====================
+3-Deep Combination Patterns
+===========================
 
 .. container:: intend
 
    |desktopicon|
 
-Patterns for a 3-deep content .
+.. figure:: /img/NP-3-deep.png
+   :alt: Patterns for 3-deep content.
 
-.. image:: /img/NP-3-deep.png
-   :alt: Combination patterns
+   Patterns for 3-deep content.
 
 -  Navigation patterns could be combined to create a 3-deep
    navigation pattern. However, to maintain consistency across

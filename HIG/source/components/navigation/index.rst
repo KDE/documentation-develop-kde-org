@@ -14,6 +14,7 @@ Navigation
    globaldrawer
    menubar
    pushbutton
+   scrim
    tab
    toolbar
 
@@ -25,5 +26,6 @@ Navigation
 * :doc:`globaldrawer`
 * :doc:`menubar`
 * :doc:`pushbutton`
+* :doc:`scrim`
 * :doc:`tab`
 * :doc:`toolbar`

@@ -4,7 +4,7 @@ Emblem
 Purpose
 -------
 
-An *emblem* displays unusual or non-default status information about an icon
+An emblem displays unusual or non-default status information about an icon
 or image. For example, an emblem could indicate that a folder is shared, that a
 disk is unmounted, or that an app has unread notifications.
 
@@ -28,7 +28,7 @@ Guidelines
    in a file manager, system tray, task manager, dock, image view, etc. Emblems
    should not be applied to textual content.
 -  Use emblems to display that an icon or image has some unusual status
-   associated with it, or that there are unread notifications. Do not use
+   associated with it, or that there are unread notifications. Don't use
    emblems to display an element's normal, common, or typical status. For
    example, an emblem could indicate that a folder is read-only or is a symlink,
    or that a disk is unmounted or encrypted. An emblem should not be used to
@@ -38,7 +38,7 @@ Guidelines
    in a clockwise order.
 -  Emblems that indicate unread notifications should be located in the
    top-right corner.
--  Use the minimum number of emblems and do not overwhelm the icon itself.
+-  Use the minimum number of emblems and don't overwhelm the icon itself.
    Three is usually too many.
 
 Appearance

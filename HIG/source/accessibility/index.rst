@@ -28,8 +28,8 @@ usability for all users.
 Fonts and Colors
 ----------------
 
-Many users have some deficiencies when it comes to seeing. This doesn't always 
-mean that they are blind. For some people it is enough when 
+Many users have some deficiencies when it comes to seeing. This does not always 
+mean that they are blind. For some people it's enough when 
 :doc:`fonts </style/typography>` are clear and the 
 :doc:`color scheme </style/color/index>` can be adjusted. This is something 
 every application should do in any case, so here is the list:
@@ -50,7 +50,7 @@ Keyboard
 --------
 
 When you have problems seeing, the mouse is quite hard to use. The keyboard is a 
-lot more reliable. Therefor it is important that applications can be used with 
+lot more reliable. Therefore it is important that applications can be used with 
 the keyboard. For some users, using a mouse is difficult because of motor skill 
 issues. Making applications keyboard accessible benefits everyone, since it 
 allows us to use shortcuts to use the applications more efficiently.
@@ -105,10 +105,10 @@ and an "Accessible Description". The name is short, for example the label on a
 button. It should always be short. The description on the other hand is the more 
 verbose "this button does foo and then bar". Qt will try hard to return 
 something for the name. In case of a button, usually the text on the button is 
-returned. But if your button has text that makes only sense when seeing the 
-arrangement of buttons, or only has an image as label, you need to help the AT 
+returned. But if your button has text that only makes sense when seeing the 
+arrangement of buttons, or only has an image as label, then you need to help the AT 
 read the button. If you don't, it will only say the type of the widget, "Button" 
-is not a very helpful information.
+which is not very helpful information.
 
 
 Fixing Accessible Name and Description
@@ -118,8 +118,8 @@ Fire up Qt designer if the app uses .ui files. You'll find the properties and
 can type the name/description right in. After saving the file, rebuild and 
 install the application. You are done, submit a patch to fix the ui file.
 
-If the widget is created in the code, just need to find where. Once you found 
-the widget, usually where it's created, add some code to it:
+If the widget is created in the code, you just need to find where it's initialized. 
+Once you find it (usually where it's created), add some code to it:
 
 .. code-block:: c++
    

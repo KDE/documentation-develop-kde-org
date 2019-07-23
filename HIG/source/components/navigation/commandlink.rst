@@ -1,4 +1,4 @@
-Command link
+Command Link
 ============
 
 Purpose
@@ -13,9 +13,6 @@ to command buttons, command links are used for navigation to other
 places. Links behave similar to buttons but have always a clean,
 lightweight appearance without stimulative nature.
 
-Example
--------
-
 Guidelines
 ----------
 
@@ -24,7 +21,7 @@ Is this the right control
 
 -  Use command links for a set of mutually exclusive responses like
    navigation from hub to spoke pages.
--  Do not present single command links.
+-  Don't present single command links.
 -  Consider to use a :doc:`push button <pushbutton>` for single commands 
    or if the action does not contain navigation.
 
@@ -34,7 +31,7 @@ Behavior
 -  Provide feedback when result is not aware to user or not available
    instantaneous. Display a busy pointer or present a progress bar to
    users.
--  Do not mix command links and command buttons at one place.
+-  Don't mix command links and command buttons at one place.
 
 Appearance
 ~~~~~~~~~~
@@ -45,4 +42,4 @@ Appearance
 -  Icons should have a size of 48x48 pixels.
 -  Choose a concise, self-explanatory label that clearly communicates
    and differentiates what the command link does.
--  Do not use ellipsis.
+-  Don't use ellipsis.

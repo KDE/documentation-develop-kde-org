@@ -13,7 +13,7 @@ Guidelines
 
 -  Keep labels short; be aware that :doc:`translated <localization>` English text can
    expand up to 30% in some languages.
--  Do not shorten your labels to the point of losing meaning. However, a
+-  Don't shorten your labels to the point of losing meaning. However, a
    three-word label that provides clear information is better than a
    one-word label that is ambiguous or vague. Try to find the fewest
    possible words to satisfactorily convey the meaning of your label.
@@ -30,7 +30,7 @@ Dialogs
 -  If it is application- or system-initiated (and therefore out of
    context), label it using the program or feature name to provide
    context.
--  Do not use the title to explain what to do in the dialog – that's the
+-  Don't use the title to explain what to do in the dialog – that is the
    purpose of the main instruction.
 
 Menus
@@ -50,7 +50,7 @@ Buttons
 ~~~~~~~
 
 -  Label command buttons with an imperative verb.
--  Do not use ending punctuation for labels.
+-  Don't use ending punctuation for labels.
 -  Describe the action that the button performs in a tooltip.
 -  End the label with an ellipsis if the command requires additional
    information to execute.
@@ -61,20 +61,20 @@ Links
 
 -  Choose a concise, self-explanatory label that clearly communicates
    and differentiates what the command link does.
--  Do not use ellipses.
+-  Don't use ellipses.
 
 Tabs
 ~~~~
 
 -  Label tabs based on their pattern. Use nouns rather than verbs,
    without ending punctuation.
--  Do not assign an access key. Tabs are accessible through their
+-  Don't assign an access key. Tabs are accessible through their
    shortcut keys (Ctrl+Tab, Ctrl+Shift+Tab).
 
 Checkboxes and Radio buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Label every checkbox or radio button. Do not leave checkboxes or
+-  Label every checkbox or radio button. Don't leave checkboxes or
    radio buttons unlabeled.
 -  Assign a unique access key to each label.
 -  Labels must start with an active verb clearly defining the state to
@@ -83,9 +83,9 @@ Checkboxes and Radio buttons
    the same for all labels.
 -  For a group, focus the label text on the differences among the
    options.
--  Use affirmative phrases. Do not use negative phrases such as "Don't
-   enable wifi". Use rather "Enable wifi".
--  Describe just the option with the label. Keep labels brief so it's
+-  Use affirmative phrases. Don't use negative phrases such as "Don't
+   enable wifi". Instead, write "Enable Wifi".
+-  Describe just the option with the label. Keep labels brief so it is
    easy to refer to them in messages and documentation.
 
 Group box
@@ -94,7 +94,7 @@ Group box
 -  Use group labels to explain the purpose of the group, not how to make
    the selection.
 -  End each label with a colon to show a relationship.
--  Do not assign an access key to the label.
+-  Don't assign an access key to the label.
 -  For a selection of one or more dependent choices, explain the
    requirement on the label.
 
@@ -116,7 +116,7 @@ Here are examples of menu items and buttons whose labels typically have ellipses
    -  Send To...
    -  Configure [something]...
 
-Here are examples of menu items and buttons whose labels typically do not have ellipses, along with the reason why:
+Here are examples of menu items and buttons whose labels typically don't have ellipses, along with the reason why:
 
    -  About — *not an action*
    -  Advanced Options — *not an action*

@@ -1,4 +1,4 @@
-Modal message dialog
+Modal Message Dialog
 ====================
 
 Purpose
@@ -6,7 +6,7 @@ Purpose
 
 If the processing has reached an unexpected or potentially dangerous condition,
 the user must make a decision. The correct presentation for this kind of
-disruptive question is a *modal message dialog*: a secondary window that
+disruptive question is a modal message dialog: a secondary window that
 interrupts user's current activity and blocks interaction until the user decides
 how to proceed.
 
@@ -14,17 +14,11 @@ Use modal message dialogs sparingly. Users will learn to reflexively dismiss
 commonly-encountered modal message dialog without even reading them, defeating
 the purpose.
 
-
-
-
-Examples
---------
-
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  Use modal message dialogs only for critical or infrequent tasks that require
    completion before continuing. Avoid disrupting the user; workflow maintenance
    and, therefore, the prevention of errors should be the primary objective.
@@ -35,7 +29,7 @@ Is this the right control
 Behavior
 ~~~~~~~~
 -  Dialogs should be modal, and block user interaction with the rest of the
-   application until a choice has been made. Do not block the entire user
+   application until a choice has been made. Don't block the entire user
    interface for the whole system, though.
 -  Create specific, actionable, user-centered error messages. Users should
    either perform an action or change their behavior as a result.

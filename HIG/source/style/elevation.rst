@@ -18,10 +18,10 @@ The default shadow details should be:
 - Shadow color: Black (``#000000``)
 - Shadow opacity: 100%
 - Window shadow size: 48px
-- Menu & tooltip shadows size: 20px
+- Menu and tooltip shadows size: 20px
 
 .. image:: /img/Shadows_with_background.png
    :alt: Example for a shadows of window and menu
 
-REMINDER: Shadows inside apps should use a size of 20px or below, so as not to 
-compete with the window shadows.
+.. hint::
+   Reminder: Shadows inside apps should use a size of 20px or below, so as not to compete with the window shadows.

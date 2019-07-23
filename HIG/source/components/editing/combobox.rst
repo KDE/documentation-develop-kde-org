@@ -1,4 +1,4 @@
-Combo box
+Combo Box
 =========
 
 .. figure:: /img/Combobox1.png
@@ -11,8 +11,8 @@ Combo box
 Purpose
 -------
 
-A *combo box* is a combination of a drop-down list and an edit control,
-thus allowing users to enter a value that isn't in the list. It behaves
+A combo box is a combination of a drop-down list and an edit control,
+thus allowing users to enter a value that is not in the list. It behaves
 like a drop-down list and allows the user to choose from a list of
 existing items but adds the option to type a value directly into the
 control. Newly typed items are usually added to the list and can be
@@ -35,8 +35,8 @@ completion.
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use a combo box for single selection of one out of many items of
    lists that can be extended by the user. Prefer a simple :doc:`drop-down list <dropdown>` in case of read-only interaction.
@@ -46,10 +46,10 @@ Behavior
 ~~~~~~~~
 
 -  Show a maximum of eight items at once.
--  When possible apply changes immediately but do not initiate an action
+-  When possible apply changes immediately but don't initiate an action
    (like print, send, delete) when the user selects an item from the
    list.
--  Do not add controls to the drop-down (e.g. checkboxes for each
+-  Don't add controls to the drop-down (e.g. checkboxes for each
    item).
 -  Place options that represent general options (e.g. all, none) at the
    beginning of the list.
@@ -59,13 +59,13 @@ Behavior
    distinctive letters to the beginning of each option. For example, in
    a list of countries on continents, write "Germany (Europe)" instead
    of "Europe/Germany".
--  Do not have blank list items; use meta-options, e.g. (None) instead
+-  Don't have blank list items; use meta-options, e.g. (None) instead.
 
 Appearance
 ~~~~~~~~~~
 
 -  Combo boxes are distinguished visually from drop-down lists (normally
-   by the raised or lowered bevel). Do not override the common
+   by the raised or lowered bevel). Don't override the common
    processing, e.g. by using a combo box and making it read only in
    order to simulate a simple drop-down list.
 -  If activating a choice affects the appearance or the enabled state of

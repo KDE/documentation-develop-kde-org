@@ -1,4 +1,4 @@
-Dual-list
+Dual-List
 =========
 
 .. image:: /img/DualListOrdering.png
@@ -14,7 +14,7 @@ Dual-lists are useful for extended multiple selection in general, especially for
 huge sets of items or in case of elaborate selections. The trade-off is the 
 rather large amount of space that is needed to show two adjoining lists.
 
-When to use
+When to Use
 -----------
 
 -  Use a dual-list pattern for multiple selection and in case of 
@@ -22,9 +22,9 @@ When to use
 -  In case of limited screen real estate, consider changing the workflow
    into repeated selections of smaller lists or by applying a hierarchy
    to the data.
--  Do not use a dual-list to show data primarily.
+-  Don't use a dual-list to show data primarily.
 
-How to use
+How to Use
 ----------
 
 -  Label both lists view with a descriptive caption to the top. End each list
@@ -41,7 +41,7 @@ How to use
 -  If the list of current items can be reordered, place up/down buttons
    in between the two lists, above and below the left and right buttons. Only 
    enable the up/down buttons when an item is selected and can be moved.
--  Do not have blank list items; use meta-options, (e.g. "None") instead.
+-  Don't have blank list items; use meta-options, (e.g. "None") instead.
 -  Place options that represent general options (e.g. "All", "None") at the
    beginning of the list.
 -  Sort list items in a logical order. Alphabetical sorting should be able

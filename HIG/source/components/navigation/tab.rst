@@ -21,48 +21,48 @@ clutter.
 General Guidelines
 ------------------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Use tabs
+-  Use tabs:
 
    -  for many controls that can be organized within a few categories,
       like extended configuration settings
    -  for a variable number of sections, like browser pages
    -  to manage multiple documents
 
--  Do not use tabs
+-  Don't use tabs:
 
-   -  for only one page (but do not hide the tab when more pages are
-      expected, for example in web browser).
+   -  for only one page (but show the tab bar when more pages are
+      expected, for example in a web browser).
    -  for global application controls.
    -  for sequential steps, like wizards.
 
-Guidelines for desktop user interfaces
+Guidelines for Desktop User Interfaces
 --------------------------------------
 
 Behavior
 ~~~~~~~~
 
--  Do not abuse other controls to simulate tab behavior.
+-  Don't abuse other controls to simulate tab behavior.
 -  Use horizontal tabs with seven or fewer tabs and all the tabs fit on
    one row.
--  Do not use vertically stacked tabs. Tabs are drawn above the pages
+-  Don't use vertically stacked tabs. Tabs are drawn above the pages
    only (QTabWidget::TabPosition = North).
--  Do not use too many tabs. Use a :doc:`list view <../editing/list>` with icons and
+-  Don't use too many tabs. Use a :doc:`list view <../editing/list>` with icons and
    associated pages if there are many pages or if you want to group
    static pages, e.g. in case of configuration content. This also gives
    ability to present hierarchy of pages as a tree.
--  Do not use multiple tab rows. It leads to disorientation.
--  Do not disable a tab when it doesn't apply to the current context;
-   disable the controls on the page.
+-  Don't use multiple tab bars.
+-  Don't disable a tab when it does not apply to the current context.
+   Instead, disable the controls on the page.
 -  Make content from one page independent and differentiated from
    another through the use of tabs.
--  Do not nest tabs.
--  Make the tabs use scroll buttons, to scroll tabs when there are too
-   many tabs.
+-  Don't nest tabs.
+-  Display scroll buttons in the tab bar to allow navigating tabs when there
+   are too many to see at once.
 
-Tabs with pages containing documents
+Tabs with Pages Containing Documents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Special considerations apply for tabs that contain documents rather than 
@@ -74,14 +74,14 @@ settings or controls.
    This menu should only include actions for manipulating the tab
    itself, such as Move Left, Move Right, Move to New Window, Close,
    Close All, Reload.
--  Do not resize tabs when adding a status icon or when the content of the page 
+-  Don't resize tabs when adding a status icon or when the content of the page 
    changes. For applications where the tab title changes, like Dolphin or 
    Konsole,  it is recommended to have a fixed tab size for all tabs.
--  Consider to provide 'add new tab' function if their pages contain
-   documents, not for static content. In this case the 'Add Tab' button 
-   should be used as a corner widget placed on the right hand of the tab bar.
-   Have keyboard shortcuts or menu items for easy access, but do not displayed
-   the 'add tab' function in the application toolbar.
+-  Consider providing an 'Add New Tab' button on the right side of the tab bar
+   for tabs that contain documents or other user-editable content. In this case the 
+   'Add Tab' button should be used as a corner widget placed on the right hand 
+   of the tab bar. Display keyboard shortcuts or menu items for easy access, 
+   but don't show the 'Add Tab' function in the application toolbar.
 -  Provide keyboard navigation to switch between tabs with Ctrl + Tab (Ctrl 
    + Shift + Tab for backward navigation). For compatibility reasons it 
    is recommended to also support Ctrl + PgDown (Ctrl + PgUp for backward 
@@ -92,21 +92,20 @@ Appearance
 
 -  Make last used tab persistent. Otherwise, select the first page by
    default.
--  Do not assign effects to changing tabs; tabs must be accessible in
+-  Don't assign effects to changing tabs; tabs must be accessible in
    any order.
 -  Only use text in horizontal tabs and not icons.
 -  Provide a label with an access key for each tab. Use nouns with
    :doc:`title capitalization </style/writing/capitalization>` to 
    describe the content.
--  Do not expand tabs to use empty space of the widget (see `expanding`_
+-  Don't expand tabs to use empty space of the widget (see `expanding`_
    property of the Qt tab bar, unfortunately true by default).
 -  Avoid long tab names. Use a compelling, easy to understand label.
    Phrases not sentences.
--  Do not use :doc:`abbreviations </style/writing/wording>` 
+-  Don't use :doc:`abbreviations </style/writing/wording>` 
    (acronyms such as HTML are allowed).
--  Do not use triangular shape of tabs.
 
-Guidelines for phone user interfaces
+Guidelines for Phone User Interfaces
 ------------------------------------
 
 .. image:: /img/Tabs_in_drawer.png
@@ -115,12 +114,12 @@ Guidelines for phone user interfaces
 Behavior
 ~~~~~~~~
 
--  Do not abuse other controls to simulate tab behavior.
--  Do not nest tabs.
+-  Don't abuse other controls to simulate tab behavior.
+-  Don't nest tabs.
 -  When the tabs are used to group controls, put them at the top of the
-   screen. Do not use more than three tabs.
+   screen. Don't use more than three tabs.
 
-   -  Do not disable a tab when it doesn't apply to the current context;
+   -  Don't disable a tab when it does not apply to the current context;
       disable the controls on the page.
    -  Keep interdependent elements in the same tab.
 

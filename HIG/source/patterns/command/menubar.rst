@@ -12,7 +12,8 @@ Menubar
    Consider using a context panel or a context menu for commands that
    are specific to the current selection.
 
-**Examples**
+Examples
+--------
 
 IDE, Text Editor, Image editor, Audio/video editor, Document editor, 
 Spreadsheet editor

@@ -1,5 +1,5 @@
-Formating
-=========
+Formatting
+==========
 
 .. toctree::
    :maxdepth: 1

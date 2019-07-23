@@ -1,16 +1,16 @@
 Form
 ====
 
-A *Form layout* is used to help align and structure a layout containing many
+A form layout is used to help align and structure a layout containing many
 control and input fields.
 
-When to use
+When to Use
 -----------
 
 -  Use a Form layout when there are many related controls and input fields.
 -  Form layouts are ideal for :doc:`settings dialogs </patterns/content/settings>`.
 
-How to use
+How to Use
 ----------
 
 -  On |desktopicon| Desktop it is recommended to place the labels to the left
@@ -30,16 +30,16 @@ How to use
       .. figure:: /img/Form_Align_KDE3.qml.png
          :scale: 80%
 
-         :iconred:`BAD` |br|
-         KDE3 form alignment
+         :iconred:`Don't.` |br|
+         Don't use KDE3-style form alignment
 
    .. container::
 
       .. figure:: /img/Form_Align_KDE5.qml.png
          :scale: 80%
 
-         :noblefir:`GOOD` |br|
-         Plasma 5 form alignment
+         :noblefir:`Do.` |br|
+         Use Plasma 5-style form alignment.
 
 .. container:: flex
 
@@ -48,16 +48,16 @@ How to use
       .. figure:: /img/Form_Align_OSX.qml.png
          :scale: 80%
 
-         :iconred:`BAD` |br| 
-         OSX form alignment
+         :iconred:`Don't.` |br| 
+         Don't use macOS-style form alignment.
 
    .. container::
 
       .. figure:: /img/Form_Align_KDE5.qml.png
          :scale: 80%
 
-         :noblefir:`GOOD` |br|
-         Plasma 5 form alignment
+         :noblefir:`Do.` |br|
+         Use Plasma 5-style form alignment.
 
 -  Position groups of items vertically rather than horizontally, as this
    makes them easier to scan visually. Use horizontal or rectangular
@@ -73,16 +73,16 @@ How to use
       .. figure:: /img/Form_Align_NO.qml.png
          :scale: 80%
 
-         :iconred:`BAD` |br|
-         no alignment over controls
+         :iconred:`Don't.` |br|
+         Don't misalign controls.
 
    .. container::
 
       .. figure:: /img/Form_Align_YES.qml.png
          :scale: 80%
 
-         :noblefir:`GOOD` |br|
-         left aligned controls
+         :noblefir:`Do.` |br|
+         Align controls to the left.
 
 -  Keep track of label sizes; avoid big differences in text length that could
    result in too much whitespace for multiple aligned controls. Keep
@@ -92,8 +92,8 @@ How to use
    .. figure:: /img/Form_Align_Long.qml.png
       :scale: 80%
 
-      :iconred:`BAD` |br|
-      Avoid very long captions
+      :iconred:`Don't.` |br|
+      Don't use very long captions.
 
 -  For |mobileicon| mobile, or if only narrow space is available, it is
    recommended to place the labels above the connected widgets.

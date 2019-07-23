@@ -5,10 +5,10 @@ Primary Action Button
    :figclass: border
    :alt:  Primary Action Button
    
-   Primary action, create a new address book entry.
+   Primary action - create a new address book entry.
 
 
-When to use
+When to Use
 -----------
 
 Use a Primary Action Button whenever there is a primary action for a
@@ -40,7 +40,7 @@ instead of omitting it completely. Do that if
 If the primary action is clearly associated with a specific element on
 the user interface, place controls within the content instead.
 
-How to use
+How to Use
 ----------
 
 -  Provide a clear icon for the Primary Action Button since it has no
@@ -50,7 +50,7 @@ How to use
 -  If you use the Primary Action Button as a shortcut for going to the
    main page, use the "go-home" icon from the actions category for it.
 
-Desktop-specific
+Desktop-Specific
 ~~~~~~~~~~~~~~~~
 
 If your application is using :doc:`column-based navigation </patterns/navigation/column>`

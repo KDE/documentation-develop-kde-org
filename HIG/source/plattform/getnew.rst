@@ -16,12 +16,12 @@ Examples
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Add a GNS button to an application or a KCM, if the user can install aditional 
-content from the integrated data service. You might want to accompany it by a 
-button that allows the user to install content from the local file system.
+If the user can install additional content to customize the behavior or appearance of the software
+(e.g. plugins, themes, scripts, etc.), use the GNS system and add a "Get New <Thing>" button. Consider 
+adding a companion button to allow installation of additional content from the filesystem.
 
 Appearance
 ~~~~~~~~~~

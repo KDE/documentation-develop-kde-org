@@ -1,4 +1,4 @@
-Single item
+Single Item
 ===========
 
 .. container:: intend

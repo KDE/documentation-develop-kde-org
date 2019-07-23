@@ -1,4 +1,4 @@
-Command patterns
+Command Patterns
 ================
 
 .. toctree::

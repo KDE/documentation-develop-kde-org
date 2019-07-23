@@ -9,7 +9,7 @@ Column-based navigation
 
    |nbsp|
 
-Examples of column-based navigation in a phone and a desktop UI
+Examples of column-based navigation in a phone and a desktop UI.
 
 .. image:: /img/Desktop.png
    :alt: Column-based navigation on the desktop
@@ -17,11 +17,11 @@ Examples of column-based navigation in a phone and a desktop UI
 
 .. raw:: html
 
-   <video src="https://cdn.kde.org/hig/video/20181031-1/Column1.webm" 
+   <video autoplay src="https://cdn.kde.org/hig/video/20181031-1/Column1.webm" 
    loop="true" playsinline="true" width="320" controls="true" 
    onended="this.play()" class="border"></video>
 
-When to use
+When to Use
 -----------
 
 Column-based navigation is ideal for navigating through a hierarchically
@@ -43,7 +43,7 @@ A header with the title of the current page doubles as a breadcrumb
 trail which the user can scroll through and tap to go to a specific
 page.
 
-How to use it
+How to Use It
 -------------
 
 General

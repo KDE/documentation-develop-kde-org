@@ -1,10 +1,10 @@
-Date and time picker
+Date and Time Picker
 ====================
 
 Purpose
 -------
 
-The *date/time picker* is a control that provides a convenient way to
+The date/time picker is a control that provides a convenient way to
 select a certain date or time. The time picker works just like a 
 :doc:`spin box <spinbox>` with an adopted mask. 
 The date picker shows all days of a month in weekly columns, has small
@@ -38,7 +38,7 @@ Guidelines
    start date, switch the end date at least to the same date.
 -  Avoid wrong input by restricting the period to a reasonable range
    (for instance when a range is being selected).
--  Do not modify localization settings (i.e. first day of week, date
+-  Don't modify localization settings (i.e. first day of week, date
    label etc.)
 -  Use controls consistently; either all date input should be done by
    date picker or none.

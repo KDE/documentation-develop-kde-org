@@ -4,20 +4,17 @@ Checkbox
 Purpose
 -------
 
-A *checkbox* is a control that permits the user to make multiple
+A checkbox is a control that permits the user to make multiple
 selections from a number of options. Checkboxes are used to toggle an
 option on or off, or to select or deselect an item. Users make a
 decision between two clearly opposite choices, e.g. 'on vs. off', 'apply
 vs. don't apply', 'show vs. hide'.
 
-Example
--------
-
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use checkboxes for non-exclusive options that have clear
    alternatives. Mutually exclusive options should use a set of 
@@ -30,22 +27,22 @@ Is this the right control
       .. figure:: /img/Ambiguous_Opposite_Bad.qml.png
         :figclass: border
 
-        :iconred:`BAD` |br|
-        Do not use a checkbox if the opposite is ambiguous.
+        :iconred:`Don't.` |br|
+        Don't use a checkbox if the opposite is ambiguous.
 
    .. container::
 
       .. figure:: /img/Ambiguous_Opposite_Good.qml.png
         :figclass: border
 
-        :noblefir:`GOOD` |br|
-        Using two radio buttons removes the need to guess.
+        :noblefir:`Do.` |br|
+        Use two radio buttons to remove the need to guess.
 
 
 -  For more than five options, use either a :doc:`list view <list>` or 
    the :doc:`dual-list pattern </patterns/content/duallist>` in case of
    multiple selections.
--  Do not use the selection to perform commands.
+-  Don't use the selection to perform commands.
 
 .. container:: flex
 
@@ -54,15 +51,15 @@ Is this the right control
       .. figure:: /img/No_Command_2_Bad.qml.png
         :figclass: border
 
-        :iconred:`BAD` |br|
-        Do not use the selection to perform commands.
+        :iconred:`Don't.` |br|
+        Don't use the selection to perform commands.
 
    .. container::
 
       .. figure:: /img/No_Command_2_Good.qml.png
         :figclass: border
 
-        :noblefir:`GOOD` |br|         
+        :noblefir:`Do.` |br|         
         Consider using a :doc:`push button <../navigation/pushbutton>` instead.
 
 Behavior
@@ -79,14 +76,16 @@ Behavior
       .. figure:: /img/Checkbox_Enable_Bad.qml.png
         :figclass: border
 
-        :iconred:`BAD`
+        :iconred:`Don't.` |br|
+        Don't use checkboxes for negatives.
 
    .. container::
 
       .. figure:: /img/Checkbox_Enable_Good.qml.png
         :figclass: border
 
-        :noblefir:`GOOD`
+        :noblefir:`Do.` |br|
+        Use checkboxes for positives.
 
 -  Use the mixed state only to indicate that an option is set for some,
    but not all, child objects. Mixed state must not be used to represent
@@ -98,7 +97,7 @@ Behavior
    
 -  Users must not be able to set a mixed state directly.
 -  Clicking a mixed state checkbox enables all child objects.
--  Do not use sliding switches in Desktop applications. They only offer
+-  Don't use sliding switches in Desktop applications. They only offer
    good user interaction on touch screens, so they should only be used
    in applications for mobile devices.
 
@@ -108,19 +107,21 @@ Behavior
 
         .. figure:: /img/Checkbox_Switch_Desktop.qml.png
 
-            :iconred:`BAD`
+            :iconred:`Don't.` |br|
+            Don't use sliding switches on desktop.
 
     .. container::
 
         .. figure:: /img/Checkbox_Switch_Mobile.qml.png
 
-            :noblefir:`GOOD`
+            :noblefir:`Do.` |br|
+            Do use sliding switches on mobile.
 
 Appearance
 ~~~~~~~~~~
 
-If you are using qt widgets you should use one of Qt's Layout Classes
-like , that will take care of lay outing and spacing of your controls.
+If you are using Qt Widgets you should use one of Qt's Layout classes,
+which will take care of the layout and spacing of your controls.
 
 -  The text of a checkbox is on the right of its tick rectangle, which
    can make it difficult to avoid blank areas on the left side of the
@@ -166,14 +167,9 @@ like , that will take care of lay outing and spacing of your controls.
 -  If certain controls in a configuration dialog are only relevant if a
    certain checkbox is checked (i.e. they are dependent controls),
    disable them instead of hiding them if that checkbox is unchecked.
-
--  Do not separate checkbox and label. Clicking on both the box and the
+-  Don't separate checkbox and label. Clicking on both the box and the
    label should toggle the option.
-   
-    .. image:: /img/HIG_Checkbox5.png
-        :alt: Separate checkbox and label
-
--  Do not add line breaks. If necessary place an additional label below
+-  Don't add line breaks. If necessary, place an additional label below
    the checkbox.
 
 .. container:: flex
@@ -181,22 +177,24 @@ like , that will take care of lay outing and spacing of your controls.
     .. container::
 
         .. figure:: /img/Checkbox_Alignment_Bad.qml.png
+           :figclass: border
 
-            :iconred:`BAD`
+           :iconred:`Don't.` |br|
+           Don't use linebreaks in a checkbox's label.
 
     .. container::
 
         .. figure:: /img/Checkbox_Alignment_Good.qml.png
+           :figclass: border
 
-            :noblefir:`GOOD`
+           :noblefir:`Do.` |br|
+           Add another label if more explanation is required.
 
 -  Label a group of checkbox with a descriptive caption to the top left
    of the group (cf. :doc:`alignment </layout/alignment>`).
 -  Create a buddy relation so access keys are assigned.
 -  Use :doc:`sentence style capitalization </style/writing/capitalization>` 
    for checkbox items.
--  Do not use ending punctuation (neither dot nor colon) for group
-   label.
 
 Code
 ----

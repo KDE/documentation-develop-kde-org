@@ -4,7 +4,7 @@ Tooltip
 Purpose
 -------
 
-A *tooltip* is a small pop-up window that provides more information on
+A tooltip is a small pop-up window that provides more information on
 an element under the mouse cursor, such as toolbar controls without
 caption or command buttons. Tooltips provide additional descriptive text
 including formatting and icons. Tips eliminate the need to always have
@@ -17,8 +17,8 @@ expectation and foster predictability.
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use tips to label unlabeled controls and to provide additional
    information.
@@ -49,7 +49,7 @@ Appearance
       self-explanatory control labels or in-place supplemental text
    -  static: tips should not change from one instance to the next
 
--  Do not use icons and formattings for tips of unlabeled controls.
+-  Don't use icons and formattings for tips of unlabeled controls.
 -  Use tool-tips with icons and formatting
 
    -  if tips describe comprehensive functions,

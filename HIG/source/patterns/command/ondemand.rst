@@ -1,4 +1,4 @@
-On-Demand controls
+On-Demand Controls
 ==================
 
 .. container:: intend
@@ -19,19 +19,19 @@ On-Demand controls
          :alt:  240px
          :scale: 80 %
 
-When to use
+When to Use
 -----------
 
 Use on-demand controls for actions which directly relate to an element
 in a list or a grid, so they can be executed without selecting the element first
 (for example deleting or replying to an email right from the list).
 
-How to use
+How to Use
 ----------
 
--  Do not use on-demand controls as the only means to execute an action,
+-  Don't use on-demand controls as the only means to execute an action;
    they are only shortcuts.
--  Do not use more than five (ideally not more than three) actions in
+-  Don't use more than five (ideally not more than three) actions in
    on-demand controls. If you need more actions, choose a different 
    :doc:`command pattern <index>`.
 -  Only use on-demand controls, if the actions are the same for each item.

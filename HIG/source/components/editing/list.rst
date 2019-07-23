@@ -4,7 +4,7 @@ List View
 Purpose
 -------
 
-A *list view* offers orientation, organization, and allows navigation
+A list view offers orientation, organization, and allows navigation
 without the need for more controls. Additionally, a list view may be
 used for single selection (users select one item from a list of mutually
 exclusive values) or multiple selections (selections in combination with
@@ -19,8 +19,8 @@ should be used for single selection only.
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Prefer a list view to show items that belong together and in case
    there is enough space.
@@ -37,13 +37,13 @@ Is this the right control
 Behavior
 ~~~~~~~~
 
--  Do not have blank list items; use meta-options, e.g. (None) instead.
+-  Don't have blank list items; use meta-options, e.g. (None) instead.
 -  Place options that represent general options (e.g. All, None) at the
    beginning of the list.
 -  Sort list items in a logical order. Make sure sorting fits
    translation.
 
-On demand actions
+On-Demand Actions
 ^^^^^^^^^^^^^^^^^
 
 List items can uses an :doc:`on-demand pattern </patterns/command/ondemand>` as
@@ -58,12 +58,12 @@ these.
 |desktopicon| Desktop
 """""""""""""""""""""
 
-If only one action is available, most the time it's better to not use the 
+If only one action is available, most the time it is better to not use the 
 on-demand pattern and instead show the action right away.
 
 .. raw:: html
 
-   <video src="https://cdn.kde.org/hig/video/20181031-1/Swipelistitem2.webm" 
+   <video autoplay src="https://cdn.kde.org/hig/video/20181031-1/Swipelistitem2.webm" 
    loop="true" playsinline="true" width="320" controls="true" 
    onended="this.play()" class="border"></video>
 
@@ -78,7 +78,7 @@ hovering over the item, the handle is slid back.
 
 .. raw:: html
 
-   <video src="https://cdn.kde.org/hig/video/20181031-1/Swipelistitem1.webm" 
+   <video autoplay src="https://cdn.kde.org/hig/video/20181031-1/Swipelistitem1.webm" 
    loop="true" playsinline="true" width="320" controls="true" 
    onended="this.play()" class="border"></video>
 
@@ -104,7 +104,7 @@ state.
    
    Multiple selected items in a picker overlay.
 
--  Do *not* provide extended multiple selections with Shift+Click or
+-  Don't provide extended multiple selections with Shift+Click or
    Ctrl+Click to select groups of contiguous or non-adjacent values,
    respectively. Instead, use the 
    :doc:`dual-list pattern </patterns/content/duallist>` or the 

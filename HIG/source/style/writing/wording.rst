@@ -21,10 +21,10 @@ Guidelines
 -  Use an informal and friendly tone, but not too informal or humorous.
 -  Avoid popular, but transient, words and phrases.
 -  Keep information short and consistent; avoid redundancy or wordiness.
-   e.g. Do not repeat the dialog title in the dialog text.
+   e.g. Don't repeat the dialog title in the dialog text.
 -  Don't abuse :doc:`capitalization` because it draws people’s attention.
 -  For date and time information, consider that your app may potentially
-   be used for several years; do not use immutable date references like
+   be used for several years; don't use immutable date references like
    *this year* unless it is algorithmically determined.
 -  Follow system-wide wording conventions for basic functions to keep
    wording consistent.

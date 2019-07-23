@@ -77,7 +77,7 @@ The KDE HIG defines a set of common components which are independent of any
   applications that are directly used by the user.
 
 - **Workspace Tools**: Provides quick access to functionality integrated
-  into the workspace that's both highly visible to the user and frequently
+  into the workspace that is both highly visible to the user and frequently
   changed, like enabling/disabling WiFi and Bluetooth, or whether or not to
   show notifications.
 

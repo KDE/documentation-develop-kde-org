@@ -4,20 +4,16 @@ Splitter
 Purpose
 -------
 
-A *splitter* is a visual separator between two element groups. It allows
+A splitter is a visual separator between two element groups. It allows
 the user to resize the adjacent groups.
-
-Example
--------
 
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Always put a splitter between aligned, resizable grouping controls to
-   allow individualization for users.
+-  Always put a splitter between adjacent resizable views.
 
 Behavior
 ~~~~~~~~

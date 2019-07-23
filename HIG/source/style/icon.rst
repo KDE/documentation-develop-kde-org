@@ -30,7 +30,7 @@ General Guidelines
 -  Use icons from the system icon theme whenever possible. Avoid using custom
    icons. New icons should be added to an icon theme.
 -  Design icons with a small number of metaphors that are understandable
-   independent of language and culture. Apply metaphors only once (e.g. do not
+   independent of language and culture. Apply metaphors only once (e.g. don't
    use a brush twice for different actions).
 -  Simplify, but don't go overboard. Breeze icons are **not** "flat".
 -  Avoid using text in icon designs; it cannot be localized and tends to look
@@ -394,7 +394,7 @@ against whatever icon they are drawn on top of:
 
 *22px emblems*
 
-8px emblems do not have an outline, because there simply isn't enough room:
+8px emblems don't have an outline, because there simply is not enough room:
 
 .. image:: /img/Breeze-icon-design-emblem-8px.png
    :alt: 8px emblem icons

@@ -1,14 +1,14 @@
-Combination patterns
-====================
+2-Deep Combination Patterns
+===========================
 
 .. container:: intend
 
    |desktopicon|
 
-Pattern for a 2-deep content structure.
+.. figure:: /img/NP-2-deep-2.png
+   :alt: Pattern for a 2-deep content structure.
 
-.. image:: /img/NP-2-deep-2.png
-   :alt: Combination patterns
+   Pattern for a 2-deep content structure.
 
 -  Any two flat navigation patterns could be combined to create a 2-deep
    navigation pattern. However, to maintain visual consistency across

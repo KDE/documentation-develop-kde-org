@@ -1,4 +1,4 @@
-Unique 2-deep patterns
+Unique 2-Deep Patterns
 ======================
 
 .. container:: intend

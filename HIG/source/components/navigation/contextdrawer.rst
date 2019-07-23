@@ -1,4 +1,4 @@
-Context drawer
+Context Drawer
 ==============
 
 .. container:: intend
@@ -27,8 +27,8 @@ element in a list or that navigate through an opened document.
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use a Context Drawer if your application has any functions which are
 only relevant in specific contexts, and which are not central enough to

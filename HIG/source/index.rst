@@ -78,7 +78,7 @@ The following design principles are used in support of the Design Vision.
       currently happening, and what has just happened. The user should never
       feel at the mercy of the tool. Give the user the final say.
    -  *Be flexible.* - Provide sensible defaults but consider optional
-      functionality and customization options that do not interfere with the
+      functionality and customization options that don't interfere with the
       primary task.
 
 .. note::

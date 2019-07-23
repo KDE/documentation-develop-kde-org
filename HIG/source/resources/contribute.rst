@@ -37,14 +37,20 @@ If you are new to KDE devlopment, make sure to read
 `how to become a kde developer 
 <https://community.kde.org/Get_Involved/development>`_ first.
 
-Getting started
+Getting Started
 ---------------
 
 #. Install some tools with your distro's package manager:
 
-   * Arch/Antergos/Manjaro: ``sudo pacman -S git``
-   * Debian/Ubuntu/Kubuntu/KDE Neon: ``sudo apt install git build-essential``
-   * openSUSE: ``sudo zypper install git``
+================================== ================================
+Distribution                       Command
+================================== ================================
+Arch, Manjaro                      ``sudo pacman -S git make``
+Debian, Ubuntu, KDE Neon           ``sudo apt install git make``
+openSUSE                           ``sudo zypper install git make``
+Fedora                             ``sudo dnf install git make``
+CentOS/RHEL                        ``sudo yum install git make``
+================================== ================================
 
 #. Clone the HIG source code repository into an empty folder:
 
@@ -85,7 +91,7 @@ machine, do the following:
 #. Open ``build/html/index.html`` in your browser (e.g. run
    ``firefox build/html/index.html``)
 
-Page structure
+Page Structure
 --------------
 
 This defines the structure that should be used for writing pattern and 
@@ -197,7 +203,7 @@ Optional: you can add subsections for desktop and mobile.
     Mobile
     """"""
 
-Code examples
+Code Examples
 -------------
 
 Adding examples to the HIG is very easy.

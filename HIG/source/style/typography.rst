@@ -24,6 +24,8 @@ Typeface settings can be adjusted by the user and have
 :doc:`great influence on sizing and spacing  </layout/units>` in KDE's 
 workspace and applications.
 
+Summary
+^^^^^^^
 * The monospace typeface should be used for code content, filenames, file paths.
 * Typography is treated like any other visual element when considering 
   :doc:`spacing </layout/metrics>` and 
@@ -33,13 +35,13 @@ workspace and applications.
 * Limit the range of any dynamic type resizing to preserve the intended visual 
   hierarchy. For example, don't resize body text to be bigger than 
   the heading text. Or don't resize the section heading text to fit more words 
-  so that it's smaller than the body text. Or don't resize text of relatively 
-  lesser importance so that it's bigger than text or other visual elements that 
+  so that it is smaller than the body text. Or don't resize text of relatively 
+  lesser importance so that it is bigger than text or other visual elements that 
   should be of relatively greater importance.
 
 .. warning::
-   |devicon| Never use **Text{}** in Kirigami or Plasma, because it  
-   doesn't follow the system font rendering settings. See :ref:`typography-code` 
+   |devicon| Never use ``Text { }`` in Kirigami or Plasma, because it  
+   does not follow the system font settings. See :ref:`typography-code` 
    for implemntation.
    
 .. warning::
@@ -81,6 +83,26 @@ stroke width similar to other styles throughout the interface. All other
 typeface characteristics for the typographic category should be maintained. For 
 such exceptions to be effective, they must be very rare.
 
+.. container:: flex
+
+   .. container::
+
+      .. figure:: /img/Typography-Heading-Dont.png
+         :scale: 80%
+
+         :iconred:`Don't.` |br|
+         Don't use the same type scale for everything in your application.
+
+   .. container::
+
+      .. figure:: /img/Typography-Heading-Do.png
+         :scale: 80%
+
+         :noblefir:`Do.` |br|
+         Vary the type scale appropriately in your application.
+
+
+
 Text Color and Contrast
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -89,7 +111,7 @@ The text :doc:`color <./color/index>` and
 hierarchical hints (e.g. selected text). However, the contrast between the text 
 and background color must be sufficient to preserve legibility of the text.
 
-Words per line
+Words per Line
 ^^^^^^^^^^^^^^
 
 Unless the content is long-form text like a book or a report, try to keep line 

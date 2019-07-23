@@ -15,8 +15,8 @@ Examples
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use notifications to inform the user of events that are of interest, even if 
 your app is not in foreground, but don't spam the user with notifications.

@@ -19,7 +19,7 @@ Rectangle {
         // Use the set for ItemViews
         Kirigami.Theme.colorSet: Kirigami.Theme.View  
 
-        // Don't inherit from the parent
+        // Do not inherit from the parent
         Kirigami.Theme.inherit: false
 
         // This will be a near-white color
@@ -42,7 +42,7 @@ Rectangle {
             // Use the Complementary set
             Kirigami.Theme.colorSet: Kirigami.Theme.Complementary  
 
-            // Don't inherit from the parent
+            // Do not inherit from the parent
             Kirigami.Theme.inherit: false
 
             // This will be near-black as in the Complementary color set 

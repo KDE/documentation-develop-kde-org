@@ -1,4 +1,4 @@
-Push button
+Push Button
 ===========
 
 Purpose
@@ -15,22 +15,22 @@ Buttons have the benefit of affordance, i.e. their visual properties
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Buttons are available in several flavors:
 
-Command button
+Command Button
 ^^^^^^^^^^^^^^
 
 -  Use a command button to initiate an immediate action.
--  Do not use a command button for navigation to another page (prefer a
+-  Don't use a command button for navigation to another page (prefer a
    :doc:`link <commandlink>` in this case).
--  Do not use a command button embedded in a body of text.
--  Do not use command buttons for a group of actions. Consider to use
+-  Don't use a command button embedded in a body of text.
+-  Don't use command buttons for a group of actions. Consider using
    radio buttons with one 'Apply' option or a menu button.
 
-Menu button
+Menu Button
 ^^^^^^^^^^^
 
 .. container:: flex
@@ -49,9 +49,9 @@ Menu button
    set of related functions.
 -  Indicate the menu by a single downward-pointing triangle.
 -  Clicking the button will drop down the menu only.
--  Do not use the delayed menu button pattern.
+-  Don't use the delayed menu button pattern.
 
-Split button
+Split Button
 ^^^^^^^^^^^^
 
 .. image:: /img/Button_SplitButton.png
@@ -64,7 +64,7 @@ Split button
 -  Change the default item to the last action when the user is likely to
    repeat the command.
 
-Toggle button
+Toggle Button
 ^^^^^^^^^^^^^
 
 -  A toggle button is not a push button. Guidelines can be found
@@ -75,24 +75,24 @@ Behavior
 
 -  Buttons are not dynamic: their icon and label should not change
    depending on the context (except special split buttons).
--  Do not initiate an action on right-click or double-click.
+-  Don't initiate an action on right-click or double-click.
 -  Provide feedback when user is not aware to results or when results
    are not available instantaneous. Display a busy pointer or present a
    progress bar to users (see :doc:`progress indicator <../assistance/progress>`).
 -  Denote the relationship between buttons with other controls by
    placing them logically together.
--  Do not use the delayed (menu) button pattern.
+-  Don't use the delayed (menu) button pattern.
 
 Appearance
 ~~~~~~~~~~
 
 -  Indicate a command that needs additional information (including
    confirmation) by adding an ellipsis at the end of the button label.
--  Buttons have an elevated appearance; do not make buttons flat (except
+-  Buttons have an elevated appearance; don't make buttons flat (except
    in :doc:`toolbars <toolbar>`).
--  Do not use icons for confirmation buttons like OK, Apply, or Cancel.
+-  Don't use icons for confirmation buttons like OK, Apply, or Cancel.
 -  Passive actions like those in the "System Settings => Application
-   Appearance => Fonts" do not have icons (does not apply to toolbar
+   Appearance => Fonts" don't have icons (does not apply to toolbar
    buttons that always have an icon).
 -  If icons are applied (or not), this style should be used consistently
    for a group of buttons.

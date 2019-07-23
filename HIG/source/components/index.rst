@@ -30,8 +30,9 @@ Navigation
 * :doc:`navigation/pushbutton`
 * :doc:`navigation/tab`
 * :doc:`navigation/toolbar`
+* :doc:`navigation/scrim`
 
-User assistance
+User Assistance
 ---------------
 
 User Assistance guidance considers interface elements that inform users of the application’s activity and status, as well as elements dedicated to user education. This includes online help, error alerts, and status alerts.
@@ -50,7 +51,7 @@ Help
 
 * :doc:`assistance/tooltip`
 
-Editing and manipulation
+Editing and Manipulation
 ------------------------
 
 Editing and Manipulation considers the behaviors that result in persistent changes to user’s stored information.
@@ -68,14 +69,14 @@ Selection
 * :doc:`editing/togglebutton`
 * :doc:`editing/tree`
 
-Unconstrained input
+Unconstrained Input
 ~~~~~~~~~~~~~~~~~~~
 
 * :doc:`editing/lineedit`
 * :doc:`editing/tableview`
 * :doc:`editing/textedit`
 
-Constrained input
+Constrained Input
 ~~~~~~~~~~~~~~~~~
 * :doc:`editing/date`
 * :doc:`editing/slider`

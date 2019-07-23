@@ -42,7 +42,7 @@ Rectangle {
                     icon.name: "dialog-ok-apply"
                 },
                 Kirigami.Action {
-                    text: "Do not remember"
+                    text: "Don't remember"
                     icon.name: "dialog-cancel"
                 }
             ]

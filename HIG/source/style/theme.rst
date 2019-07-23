@@ -1,11 +1,13 @@
 Theme
 =====
 
-Application specific theme
+Application-Specific Theme
 --------------------------
 
--  Only set a custom color scheme, never set a custom widget theme.
--  It's recommended to use the global color theme.
+Summary
+^^^^^^^
+- Never set a custom widget theme.
+- It is recommended to use the global color theme.
 
 If your application focuses on visual content, e.g. creating or working
 with images or videos, you might switch the app to a dark color theme
@@ -23,4 +25,4 @@ Place the option to switch theme in Settings > Designs.
    :alt: kritas theme switcher
    :scale: 50%
 
-   Kritas theme switcher.
+   Krita's theme switcher.

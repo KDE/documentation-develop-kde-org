@@ -1,22 +1,22 @@
-Metrics and placement
+Metrics and Placement
 =====================
 
 Purpose
 -------
 
-All controls have a default *height and width* to establish a harmonic
-overall picture. Nevertheless, size is used to direct users' attention.
+All controls should be sized and positioned to establish a harmonic
+overall picture and direct users' attention.
 For instance, a list that captures most of screen’s space points to its
-central role in the current work flow. And, size can be used to indicate
-possible interactions. Smaller edits are probably constrained, for
-instance.
+central role in the current workflow. And, size can be used to indicate
+possible interactions. For instance, most smaller text fields are constrained
+in what data they can take.
 
-Similar to size, the *space* between controls generates a visual
+Similar to size, the space between controls generates a visual
 impression and supports layout. Space between controls indicates their
 relatedness. Objects with smaller distances are mentally associated
-according to the Gestalt theory. *Whitespace* is an important element of
+according to `Gestalt psychology <https://en.wikipedia.org/wiki/Gestalt_psychology>`_. Whitespace is an important element of
 design which enables the objects in it to exist at all. The balance
-between content and whitespace is key to *grouping*.
+between content and whitespace is key to grouping.
 
 Please read :doc:`units` for more information which and how
 different units such as px, dpi independent pixels, smallSpacing and
@@ -33,17 +33,6 @@ Size
    choose how many items are visible at a time without scrolling. Each
    time the user opens this dialog, set its dimensions to those that the
    user last resized it to.
--  Size controls with a minimum of
-
-   -  Icon:16x16px
-   -  Buttons: 72 x 32px
-   -  Line edits, Drop-downs, Combo boxes ≥80 x 32 px
-   -  Text edits: ≥80 x ≥36 px (text should not exceed 80 characters per
-      line)
-   -  Checkbox, Radio button including label: ≥80 x 24 px
-   -  Group boxes: ≥120 x ≥96 px
-   -  Tree view: ≥120 x ≥96 px
-   -  List view: ≥80 px (per column) x ≥96
 
 -  KDE seeks to support XGA (1024x768px) or WXGA (1280x768px) at least.
 
@@ -52,49 +41,69 @@ Size
    - Avoid to have a large number of controls visible at once, which in
      turn requires a huge minimal size.
    - Keep in mind that the available screen area typically also will be
-     shrunk by panels and the window titlebar. Also, user's font might
+     shrunk by panels and the window titlebar. Also, the user's font might
      be bigger than yours (e.g. for accessibility reason).
    - You therefore should ideally preserve ~10% to catch those
      variables and try to not exceed 920x690px.
 
+Minimum Control Sizes
+^^^^^^^^^^^^^^^^^^^^^
+========================================================== ========================
+Control                                                    Size
+========================================================== ========================
+Icons                                                      16 × 16px
+Buttons                                                    72 × 32px
+Line edits, drop-downs, combo boxes                        ≥80 × 32px
+Text edits (text should not exceed 80 characters per line) ≥80 × ≥36px 
+Checkboxes, radio buttons including label                  ≥80 × 24px
+Group boxes                                                ≥120 × ≥96px
+Tree views                                                 ≥120 × ≥96px
+List views                                                 ≥80px (per column) × ≥96
+========================================================== ========================
+
 Space
 ~~~~~
 
-Qt widgets
+Qt Widgets
 ^^^^^^^^^^
 
 If you are using Qt widgets you should use one of 
-`Qt's Layout Classes <http://doc.qt.io/qt-5/layout.html>`_, 
+`Qt's layout classes <http://doc.qt.io/qt-5/layout.html>`_, 
 which will take care of laying out and spacing of your controls.
 
 QML
 ^^^
 
 For consistency you should try to use Kirigami and Plasma's 
-smallSpacing and largeSpacing for margins and paddings whenever possible. 
+``smallSpacing`` and ``largeSpacing`` for margins and paddings whenever possible. 
 See :doc:`units` for more details.
 
-Use multiples of smallSpacing or largeSpacing, where more spacing is required.
+When more spacing is required, use multiples of ``smallSpacing`` or ``largeSpacing``.
 
 .. figure:: /img/Margin.qml.png
    :alt: Use of base units
    
    Use of base units
 
-Recommended minimum paddings
+Recommended Minimum Paddings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  A smallSpacing padding is the minimum recommended padding inside 
+-  A ``smallSpacing`` padding is the minimum recommended padding inside 
    elements (buttons, drop boxes, text fields, etc.)
--  An 2 * smallSpacing padding is the minimum recommended padding 
+-  A ``2 * smallSpacing`` padding is the minimum recommended padding 
    inside grouping frames (group boxes, tabs, etc.)
--  Use default spacing of
 
-   -  related items within groups: 2 * smallSpacing
-   -  label and item: smallSpacing
-   -  related controls with same type (checkboxes / radio buttons): smallSpacing
-   -  related controls with different type (checkbox / button): smallSpacing
-   -  unrelated controls: ≥ 3 * smallSpacing
+Default Minimum Paddings
+^^^^^^^^^^^^^^^^^^^^^^^^
+============================================================ ======================
+Item                                                         Spacing
+============================================================ ======================
+Related items within groups                                  ``2 * smallSpacing``
+Labels and items                                             ``smallSpacing``
+Related controls with same type (checkboxes / radio buttons) ``smallSpacing``
+Related controls with different type (checkbox / button)     ``smallSpacing``
+Unrelated controls                                           ≥ ``3 * smallSpacing``
+============================================================ ======================
 
 .. figure:: /img/SpacingPadding.qml.png
    :alt: Sample spacing
@@ -115,19 +124,20 @@ Recommended minimum paddings
 .. hint::
    |designicon| It often helps to use a soft grid of 18px (gridUnit), when creating
    mockups. But only use this as a visual hint, since plasma components and icon
-   size are not multiples of the gridUnit, you won't be able to align everything to the
+   size are not multiples of the gridUnit, so you will not be able to align everything to the
    grid.
 
-Resize
-~~~~~~
+Resizing
+~~~~~~~~
 
 -  Provide resizing for all primary and mode-less windows.
 -  If form resizing is not provided disable border icons and adjust form style.
 -  Define a minimum size for resizable forms.
 -  Make the content area scrollable if size is too small for all controls; 
-   do not scale controls.
+   don't scale controls.
 
 .. figure:: /img/Resize.qml.png
-   :alt: Give hints how to resize
+   :alt: Add hints on how to resize to your mockups.
    
-   Give hints how to resize
+   :noblefir:`Do.` |br|
+   Add hints on how to resize to your mockups.

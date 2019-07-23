@@ -1,7 +1,7 @@
-Icons and text
+Icons and Text
 ==============
 
-When to use
+When to Use
 -----------
 
 Combining icons and text can be used to identify data and actions in a
@@ -9,7 +9,7 @@ user interface. Examples include toolbar actions, file and folder
 displays in a file manager, application listings, and notifications. The
 layout should be consistent.
 
-How to use
+How to Use
 ----------
 
 .. image:: /img/HIGPatternIconsAndText.png

@@ -1,11 +1,11 @@
 Drawers
 =======
 
-Drawers do not take away any room from the content, but need an extra
-action to access, and should therefore not be used for controls that are
+Drawers don't take away any room from the content, but they do require
+user interaction to become visible, and should therefore not be used for controls that are
 part of an application's main tasks.
 
-Global drawer
+Global Drawer
 -------------
 
 .. figure:: /img/Globaldrawer1.png
@@ -23,7 +23,7 @@ The global drawer is used for global, context-independent controls.
 -  For the guidelines regarding its content, see 
    :doc:`global drawer </components/navigation/globaldrawer>`.
 
-Context drawer
+Context Drawer
 --------------
 
 .. figure:: /img/Contextdrawer1.png
@@ -42,7 +42,7 @@ context-specific controls that affect only the currently selected object
 -  For the guidelines regarding its content, see the 
    :doc:`context drawer </components/navigation/contextdrawer>`.
 
-Bottom drawer and dialog sheet
+Bottom Drawer and Dialog Sheet
 ------------------------------
 
 .. image:: /img/Bottom_Drawer.png

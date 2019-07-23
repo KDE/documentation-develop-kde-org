@@ -1,4 +1,4 @@
-Navigation patterns
+Navigation Patterns
 ===================
 
 .. toctree::
@@ -23,10 +23,10 @@ Navigation patterns can be combined with
 :doc:`command patterns </patterns/command/index>` and content
 patterns to design the complete layout for your application.
 
-Patterns for desktop user interfaces
+Patterns for Desktop User Interfaces
 ------------------------------------
 
-Patterns for a flat content structure
+Patterns for a Flat Content Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /img/IS-flat.png
@@ -45,7 +45,7 @@ contacts.
 -  :doc:`Grid <grid>`
 -  :doc:`Master detail <master>`
 
-Patterns for a 2-deep content structure
+Patterns for a 2-Deep Content Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /img/IS-2-deep.png
@@ -61,7 +61,7 @@ Examples include picture albums, music albums, email folders or tags.
 -  :doc:`Tabs <tab>`
 -  :doc:`Unique 2-deep patterns <unique>`
 
-Patterns for a 3-deep content structure
+Patterns for a 3-Deep Content Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /img/IS-3-deep.png
@@ -80,7 +80,7 @@ Examples include a full music or video library or system settings.
 
 -  :doc:`Combination patterns <combination-3>`
 
-Patterns for n-deep content structures
+Patterns for N-Deep Content Structures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /img/IS-n-deep.png

@@ -1,12 +1,12 @@
-Help system
+Help System
 ===========
 
-The *help system* should be used as a secondary mechanism to support
+The help system should be used as a secondary mechanism to support
 users’ complete and better understanding of tasks — the primary
 mechanism should be the user interface itself. Users consult the help
-system only if they can't accomplish a task with the UI.
+system only if they cannot accomplish a task with the UI.
 
-When to use
+When to Use
 -----------
 Try to make Help unnecessary in the first place:
 
@@ -20,7 +20,7 @@ Try to make Help unnecessary in the first place:
 -  Write error messages that provide a clear solution or action for the
    user to take.
 
-How to use
+How to Use
 ----------
 
 -  Usually, the help system is activated by F1 respectively Ctrl+F1 for

@@ -1,4 +1,4 @@
-Text edit
+Text Edit
 =========
 
 .. figure:: /img/Textedit1.png
@@ -11,7 +11,7 @@ Text edit
 Purpose
 -------
 
-The *text edit* control displays multiple lines of text to the user and
+The text edit control displays multiple lines of text to the user and
 allow the user to enter unconstrained text. In contrast to a line edit
 that is used to enter only one line of text the text edit is the right
 control for more than one line.
@@ -19,20 +19,20 @@ control for more than one line.
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use text edits for input of unconstrained text with more than one
    line.
--  Do not use a text edit for input of a few words. Use a :doc:`line edit <lineedit>`
+-  Don't use a text edit for input of a few words. Use a :doc:`line edit <lineedit>`
    to enter single lines of text.
 
 Behavior
 ~~~~~~~~
 
--  Do not make users scroll unnecessarily; size text boxes to eliminate
+-  Don't make users scroll unnecessarily; size text boxes to eliminate
    the need for scrolling.
--  Do not put horizontal scroll bars on multi-line text boxes.
+-  Don't put horizontal scroll bars on multi-line text boxes.
 
 Appearance
 ~~~~~~~~~~

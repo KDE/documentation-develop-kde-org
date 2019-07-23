@@ -68,8 +68,8 @@ use case which describes how the task use scenario can be completed in
 the application. There may be branching or multiple ways to complete the
 task, and this is a good way to document it.
 
-Environment Conditions & Requirements
--------------------------------------
+Environmental Conditions and Requirements
+-----------------------------------------
 
 -  List of environmental conditions for the user or the application to
    consider

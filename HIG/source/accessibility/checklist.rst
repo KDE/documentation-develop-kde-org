@@ -1,4 +1,4 @@
-Accessibility checklist
+Accessibility Checklist
 =======================
 
 Introduction
@@ -7,7 +7,7 @@ Introduction
 This is a list of common things you should check for to have great 
 :doc:`accessibility <index>` for your application or widgets.
 
-Keyboard navigation
+Keyboard Navigation
 -------------------
 
 -  Efficient keyboard access is provided for all application features.
@@ -33,7 +33,7 @@ Keyboard navigation
 Testing
 ^^^^^^^
 
-The following keyboard operations should be tested. Do not use the mouse in any 
+The following keyboard operations should be tested. Don't use the mouse in any 
 part of this test.
 
 -  Using only keyboard commands, move the focus through all menu bars in the 
@@ -48,7 +48,7 @@ part of this test.
    -  Any keyboard enhancements or shortcuts are working as designed.
 
 
-Mouse interaction
+Mouse Interaction
 -----------------
 
 -  No operations depend on input from the right or middle mouse buttons.
@@ -57,7 +57,7 @@ Mouse interaction
 -  The mouse pointer is never moved by the application, or its 
    movement restricted to part of the screen by the application.
 
-Graphical elements
+Graphical Elements
 ------------------
 
 -  There are no hard-coded graphical attributes such as line, border or 
@@ -80,7 +80,7 @@ Test the application using a screen reader and confirm that:
 -  Object information is read correctly.
 
 
-Fonts and text
+Fonts and Text
 --------------
 
 -  No font styles or sizes are hard-coded.
@@ -109,7 +109,7 @@ Testing
    magnification option.
 
    
-Color and contrast
+Color and Contrast
 ------------------
 
 -  Application colors are not hard-coded, but either use colors from 
@@ -189,7 +189,7 @@ designed.
 Turn the animation off. Confirm that all information is still conveyed 
 correctly. 
 
-Keyboard focus
+Keyboard Focus
 --------------
 
 -  When a window is opened, focus starts at the most commonly-used control.
@@ -201,7 +201,7 @@ Keyboard focus
    presses an inappropriate key.
 -  There is sufficient audio information for the visual focus that the user 
    can figure out what to do next.
--  Set the focus to the actual control, don't just highlight an area.
+-  Set the focus to the actual control. Don't just highlight an area.
 -  When using assistive technologies, such as a screen reader or braille 
    device, the current program indicates the position and content of the visual 
    focus indicator.

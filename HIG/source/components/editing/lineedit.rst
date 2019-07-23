@@ -1,4 +1,4 @@
-Line edit
+Line Edit
 =========
 
 .. figure:: /img/Lineedit1.png
@@ -11,25 +11,22 @@ Line edit
 Purpose
 -------
 
-The *line edit* control displays a single line of text to the user and
+The line edit control displays a single line of text to the user and
 allow the user to enter unconstrained text. If more than one line is
 required a text edit is the right control. Because line edits are
 unconstrained and don’t accept valid data only, input validation and
 problem handling should be handled carefully.
 
-Examples
---------
-
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use edits for input of single lines of unconstrained text.
 -  In case of multiple lines of text or more than a few words, use a
    :doc:`text edit <textedit>`
--  Do not use a line edit if only a specific type of data is valid. Use
+-  Don't use a line edit if only a specific type of data is valid. Use
    a control for constrained input.
 
 Behavior
@@ -53,7 +50,7 @@ Behavior
 -  If the input data is inconsistent with other controls on the window,
    give an error message when the entire input is complete, such as when
    users click OK for a modal dialog box.
--  Don't clear invalid input data unless users aren't able to correct
+-  Don't clear invalid input data unless users are not able to correct
    errors easily. Doing so allows users to correct mistakes without
    starting over.
 

@@ -1,29 +1,26 @@
-Progress indicator
+Progress Indicator
 ==================
 
 Purpose
 -------
 
 If a foreground task lasts longer than expected or when calculation
-takes some time a *feedback on progress* should be given by the system.
+takes some time, the system should provide some feedback on the task's progress.
 Users are aware of response times of over one second and shorter.
 Consequently, operations that take two seconds or longer to complete
 should be considered to be lengthy and need of some type of progress
 feedback. But even in cases of short delays the user should be assured
 that the system is not hung or waiting for user input. Such a feedback
-is done by changing the mouse cursor to a *busy pointer* (aka throbber
+is done by changing the mouse cursor to a busy pointer (aka throbber
 or spinner). When operation lasts longer the user should be able to
 anticipate when it’s finished. The appropriate graphical control for
-this task is a *progress bar*.
-
-Examples
---------
+this task is a progress bar.
 
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Provide progress feedback when performing a lengthy operation. Users
    should never have to guess if progress is being made.

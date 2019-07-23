@@ -1,4 +1,4 @@
-Context menu
+Context Menu
 ============
 
 Purpose
@@ -13,23 +13,20 @@ Many mouse users don't think to right-click on things. The right-click gesture
 required to show a context menus can be difficult to perform on many laptops,
 and it is flat-out impossible on a touch device.
 
-Examples
---------
-
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Provide a context menu for any item with actions that can be performed on it.
 -  Provide a context menu for common actions like 'Copy' and 'Paste' for
    textual controls, or navigation actions like 'Forward' and 'Backward.
--  Do not use context menus as the only way to access functionality. Every item
+-  Don't use context menus as the only way to access functionality. Every item
    in a context menu must be available via a method that is somehow visible by
    default--typically the app's main :doc:`menu bar <menubar>`, but also
    via toolbar buttons.
 
-Behavior & Appearance
-~~~~~~~~~~~~~~~~~~~~~
+Behavior and Appearance
+~~~~~~~~~~~~~~~~~~~~~~~
 See the guidelines for :doc:`menu bars <menubar>`.

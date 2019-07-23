@@ -6,8 +6,8 @@ Color
    :caption: Contents:
 
 Kirigami has a color palette that follow the system colors, to better integrate 
-on the platform it's running in, for instance Plasma Desktop, Plasma Mobile, 
-GNOME or Android.
+on the platform it is running on (i.e. Plasma Desktop, Plasma Mobile, 
+GNOME, Android, etc.).
 
 All the default controls available as QML comoponents provided by Kirigami and 
 all the components available in the  QtQuickControls2 QML plugin will already 
@@ -18,10 +18,10 @@ Primitive components such as ``Rectangle`` should always be colored with the
 color palette provided by Kirigami via the ``Theme`` attached property.
 
 Hardcoded colors in QML, such as ``#32b2fa`` or ``red`` should usually be 
-avoided; if it's really necessary to have elements with custom colors, it should 
-be an area where only custom colors are used (usually in the *content* area 
-of the app, and never in the *crome* such as toolbars or dialogs), for instance 
-an hardcoded "black" foreground can't be used over a 
+avoided; if it is really necessary to have elements with custom colors, it should 
+be an area where only custom colors are used (usually in the content area 
+of the app, and never in the chrome such as toolbars or dialogs), for instance 
+an hardcoded "black" foreground cannot be used over a 
 ``Kirigami.Theme.backgroundColor`` background, because if the platform uses a 
 dark color scheme the result will bea poor contrasting black over almost black.
 
@@ -55,7 +55,7 @@ dialogs, the normal background color is gray.
 If you set a color set for an item, all of child items (as well as granchildren 
 and so on) will inherit it automatically (unless the property ``inherit`` has 
 explicitly been set to ``false``, which should always be done when the developer 
-wants to force a specific color set) so it's easy to change colors for an 
+wants to force a specific color set) so it is easy to change colors for an 
 entire hierarchy if items without touching any of the items themselves.
 
 ``Kirigami.Theme`` supports 5 different color sets:
@@ -86,7 +86,7 @@ the parent color set, the inherit property should be explicitly set to true:
 .. TODO:: 
 
    screenshot of a comparison between a button that inherits and one 
-   that doesn't
+   that does not
 
 
 Using Custom Colors

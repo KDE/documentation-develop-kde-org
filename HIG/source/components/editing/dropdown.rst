@@ -1,4 +1,4 @@
-Drop-down
+Drop-Down
 =========
 
 .. figure:: /img/Dropdown1.png
@@ -57,10 +57,10 @@ Behavior
 ~~~~~~~~
 
 -  Show a maximum of eight items at once (maxVisibleItems=8).
--  When possible apply changes immediately but do not initiate an action
+-  When possible apply changes immediately but don't initiate an action
    (like print, send, delete) when the user selects an item from a
    drop-down list.
--  Do not add controls to the drop-down (e.g. checkboxes for each
+-  Don't add controls to the drop-down (e.g. checkboxes for each
    item).
 -  Place options that represent general options (e.g. all, none) at the
    beginning of the list.
@@ -70,7 +70,7 @@ Behavior
    distinctive letters to the beginning of each option. For example, in
    a list of countries on continents, write "Germany (Europe)" instead
    of "Europe/Germany".
--  Do not have blank list items; use meta-options, e.g. (None) instead
+-  Don't have blank list items; use meta-options, e.g. (None) instead
 
 Appearance
 ~~~~~~~~~~

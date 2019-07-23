@@ -26,41 +26,40 @@ As part of another component, like a card or an inline mesage, it is used
 to allow quick access to the most important commands for a single, focused
 content item.
 
-Guidelines for application
---------------------------
+Guidelines for Applications
+---------------------------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  For standard applications, show a toolbar by default.
--  Provide a toolbar in addition to the menu bar, but do not replace
+-  Provide a toolbar in addition to the menu bar, but don't replace
    the menu bar. 
 
 Behavior
 ~~~~~~~~
 
--  A toolbar should contain only a few, frequently used operations. If
+-  A toolbar should contain only a few frequently used operations. If
    the number of operations is above 5 they have to be grouped with
    separators. Not more than 3 of those sections should be implemented.
--  Do not abuse the toolbar to expose application's features. Only the
-   most frequently functions should be add to the toolbar.
--  Execute operations immediately; do not require additional input.
+-  Don't abuse the toolbar to expose hidden or esoteric features. Only the
+   most frequently-used functions should be accessible from the toolbar.
+-  Execute operations immediately; don't require additional input.
 -  Try to avoid using :doc:`split buttons <pushbutton>` 
    or :doc:`toggle buttons <../editing/togglebutton>` in order to
    keep the interaction with all buttons in the toolbar consistent.
--  Do not hide toolbars by default. If configurable, users should
+-  Don't hide toolbars by default. If a toolbar can be hidden, users should
    easily be able to make the toolbar viewable again.
--  Disable buttons that do not apply to the current context.
--  Consider to provide customization for toolbars in respect to
-   position and content.
--  Providing a label for each action is a good practice but define a meaningful icon too because the label could be hidden in mobile mode or if there isn't enough space when the window is resized.
+-  Disable buttons that don't apply to the current context.
+-  Consider making toolbar content and position customizable.
+-  Provide both a label and an icon for actions.
 
    
-Guidelines for components
+Guidelines for Components
 -------------------------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use a toolbar only if an item has few actions or few frequently used
    actions.
@@ -73,9 +72,9 @@ Behavior
 
 -  A toolbar should contain only a few, frequently used operations. 
    The number of operations should not exceed 3.
--  Do not group with separators. 
--  Execute operations immediately; do not require additional input.
--  Do not hide toolbars or make them configurable.
+-  Don't group with separators. 
+-  Execute operations immediately; don't require additional input.
+-  Don't hide toolbars or make them configurable.
 -  Toolbars can be responsive. If there is not enough space to display all 
    the buttons, an overflow menu is shown instead.
 
@@ -87,14 +86,13 @@ Behavior
 Appearance
 ----------
 
--  Do not change the button style from the default, which is 
+-  Don't change the button style from the default, which is 
    :doc:`text beside icons </patterns/content/iconandtext>`.
 -  Use and design toolbar icons with special care. Users remember
    location of an object but rely as well on icon properties.
 -  A distinct association between the underlying function and its visual
    depiction is crucial. Follow the advices for :doc:`icon design </style/icon>`.
--  Do not simulate Microsoft's ribbon controls. KDE stays plain and
-   simple.Microsoft's ribbon controls. KDE stays plain and simple.
+-  Don't simulate Microsoft's ribbon controls.
 
 Code
 ----
@@ -107,19 +105,19 @@ Kirigami
  - :kirigamiapi:`Kirigami: ActionToolBar <ActionToolBar>`
  
  
-Application toolbar
+Application Toolbar
 """""""""""""""""""
 
  .. literalinclude:: /../../examples/kirigami/ApplicationToolbar.qml
    :language: qml
 
-Component toolbar
+Component Toolbar
 ^^^^^^^^^^^^^^^^^
 
  .. literalinclude:: /../../examples/kirigami/ComponentToolbar.qml
    :language: qml   
 
-Plasma components
+Plasma Components
 ~~~~~~~~~~~~~~~~~
 
  - :plasmaapi:`Plasma ToolBar <ToolBar>`

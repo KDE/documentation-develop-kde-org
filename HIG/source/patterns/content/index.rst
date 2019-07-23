@@ -1,4 +1,4 @@
-Content patterns
+Content Patterns
 ================
 
 .. toctree::

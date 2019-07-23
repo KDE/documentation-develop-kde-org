@@ -4,7 +4,7 @@ import org.kde kirigami 2.9 as Kirigami
 
 Rectangle {
     Kirigami.Theme.inherit: false
-    // NOTE: regardless of the color set used, it's recommended to replace 
+    // NOTE: regardless of the color set used, it is recommended to replace 
     // all available colors in Theme, to avoid badly contrasting colors
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
     Kirigami.Theme.backgroundColor: "#b9d795"

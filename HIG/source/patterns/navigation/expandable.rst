@@ -1,4 +1,4 @@
-Expandable list
+Expandable List
 ===============
 
 .. container:: intend

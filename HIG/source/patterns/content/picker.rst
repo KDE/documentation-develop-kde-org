@@ -18,17 +18,17 @@ Example
    
    Use of a picker to select aditional languages.
 
-When to use
+When to Use
 -----------
 
 -  Use a picker for multiple selection and in case of large lists.
 -  Don't use it if both selected and unselected items need to be visible at 
    once. Use a dual list instead.
--  Do not use a picker to show data primarily.
+-  Don't use a picker to show data primarily.
 -  If selection state needs to change often, think about using a list with 
    checkboxes or similar instead.
 
-How to use
+How to Use
 ----------
 
 .. figure:: /img/PickerOverlay.png
@@ -46,7 +46,7 @@ How to use
 -  If the list of selected items can be reordered, place up/down buttons
    to the right of the list of current items. Only enable the up/down
    buttons when an item is selected and can be moved.
--  Do not have blank list items; use meta-options, (e.g. "None") instead.
+-  Don't have blank list items; use meta-options, (e.g. "None") instead.
 -  Place options that represent general options (e.g. "All", "None") at the
    beginning of the list.
 -  Sort list items in a logical order. Alphabetical sorting should be able

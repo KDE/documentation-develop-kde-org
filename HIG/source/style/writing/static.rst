@@ -1,9 +1,9 @@
-Static text
+Static Text
 ===========
 
 Users tend to read only interactive control labels, especially those
 that appear relevant to completing the task at hand. By contrast, users
-read *static text* when they think they need to.
+read static text when they think they need to.
 
 Guidelines
 ----------

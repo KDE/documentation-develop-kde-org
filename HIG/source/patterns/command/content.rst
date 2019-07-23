@@ -1,4 +1,4 @@
-Controls within content
+Controls within Content
 =======================
 
 .. image:: /img/Content1.png
