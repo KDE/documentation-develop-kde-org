@@ -132,6 +132,7 @@ a.icon {
 
 .btn {
     background-color: #eff0f1 !important;
+    background-image: linear-gradient(to bottom, #f2f2f3, #e8e9ea);
     box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(35,38,39,.1);
     border-color: #bdc3c7;
     border-radius: 3px;
@@ -142,8 +143,15 @@ a.icon {
     background-color: #eff0f1 !important;
 }
 .btn:active {
+    background-image: linear-gradient(to bottom, #9cd2eb, #76c1e3);
     box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(35,38,39,.1);
     padding: 8px;
+    transform: translate(1px,1px);
+}
+.btn:focus:not(:active) {
+    color: #fcfcfc !important;
+    border-color: #3daee9;
+    background-image: linear-gradient(to bottom, #45b1ea, #25a4e6);
 }
 
 
