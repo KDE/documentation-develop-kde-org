@@ -26,7 +26,7 @@ Is this the right control?
     .. container::
 
         .. figure:: /img/Radiobutton_Many_Bad.qml.png
-            :figclass: border
+            :figclass: border dont
 
             :iconred:`Don't.` |br|
             Don't use radio buttons for more than five options.
@@ -34,7 +34,7 @@ Is this the right control?
     .. container::
 
         .. figure:: /img/Radiobutton_Many_Good.qml.png
-            :figclass: border
+            :figclass: border do
 
             :noblefir:`Do.` |br|
             Use a combobox instead.
@@ -49,7 +49,7 @@ Is this the right control?
     .. container::
 
         .. figure:: /img/Radiobutton_Negation_Bad.qml.png
-            :figclass: border
+            :figclass: border dont
 
             :iconred:`Don't.` |br|
             Don't use radio buttons for do/don't operations.
@@ -57,7 +57,7 @@ Is this the right control?
     .. container::
 
         .. figure:: /img/Radiobutton_Negation_Good.qml.png
-            :figclass: border
+            :figclass: border do
 
             :noblefir:`Do.` |br|
             Use a checkbox instead.
@@ -70,7 +70,7 @@ Is this the right control?
     .. container::
 
         .. figure:: /img/Radiobutton_Visible_Bad.qml.png
-            :figclass: border
+            :figclass: border dont
 
             :iconred:`Don't.` |br|
             Don't hide choices that the user should see from the start
@@ -79,7 +79,7 @@ Is this the right control?
     .. container::
 
         .. figure:: /img/Radiobutton_Visible_Good.qml.png
-            :figclass: border
+            :figclass: border do
 
             :noblefir:`Do.` |br|
             Use radio buttons instead.
@@ -92,7 +92,7 @@ Is this the right control?
     .. container::
 
         .. figure:: /img/Radiobutton_Command_Bad.qml.png
-            :figclass: border
+            :figclass: border dont
 
             :iconred:`Don't.` |br|
             Don't use the selection to perform commands.
@@ -100,7 +100,7 @@ Is this the right control?
     .. container::
 
         .. figure:: /img/No_Command_2_Good.qml.png
-            :figclass: border
+            :figclass: border do
 
             :noblefir:`Do.` |br|
             Consider using a :doc:`push button <../navigation/pushbutton>`.
@@ -117,7 +117,7 @@ Behavior
     .. container::
 
         .. figure:: /img/Radiobutton_Default_Bad.qml.png
-            :figclass: border
+            :figclass: border dont
 
             :iconred:`Don't.` |br|
             Don't forget a default option.
@@ -125,7 +125,7 @@ Behavior
     .. container::
 
         .. figure:: /img/Radiobutton_Default_Good.qml.png
-            :figclass: border
+            :figclass: border do
 
             :noblefir:`Do.` |br|
             Set a default option.
@@ -137,7 +137,7 @@ Behavior
     .. container::
 
         .. figure:: /img/Radiobutton_First_Bad.qml.png
-            :figclass: border
+            :figclass: border dont
 
             :iconred:`Don't.` |br|
             Don't have an option besides the first as the default.
@@ -145,7 +145,7 @@ Behavior
     .. container::
 
         .. figure:: /img/Radiobutton_First_Good.qml.png
-            :figclass: border
+            :figclass: border do
 
             :noblefir:`Do.` |br|
             Set the first option as default. Reorder your items if necessary.

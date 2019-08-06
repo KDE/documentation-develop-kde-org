@@ -89,6 +89,7 @@ such exceptions to be effective, they must be very rare.
 
       .. figure:: /img/Typography-Heading-Dont.png
          :scale: 80%
+         :figclass: dont
 
          :iconred:`Don't.` |br|
          Don't use the same type scale for everything in your application.
@@ -97,6 +98,7 @@ such exceptions to be effective, they must be very rare.
 
       .. figure:: /img/Typography-Heading-Do.png
          :scale: 80%
+         :figclass: do
 
          :noblefir:`Do.` |br|
          Vary the type scale appropriately in your application.

@@ -25,7 +25,7 @@ Is this the right control?
    .. container::
 
       .. figure:: /img/Ambiguous_Opposite_Bad.qml.png
-        :figclass: border
+        :figclass: border dont
 
         :iconred:`Don't.` |br|
         Don't use a checkbox if the opposite is ambiguous.
@@ -33,7 +33,7 @@ Is this the right control?
    .. container::
 
       .. figure:: /img/Ambiguous_Opposite_Good.qml.png
-        :figclass: border
+        :figclass: border do
 
         :noblefir:`Do.` |br|
         Use two radio buttons to remove the need to guess.
@@ -49,7 +49,7 @@ Is this the right control?
    .. container::
 
       .. figure:: /img/No_Command_2_Bad.qml.png
-        :figclass: border
+        :figclass: border dont
 
         :iconred:`Don't.` |br|
         Don't use the selection to perform commands.
@@ -57,7 +57,7 @@ Is this the right control?
    .. container::
 
       .. figure:: /img/No_Command_2_Good.qml.png
-        :figclass: border
+        :figclass: border do
 
         :noblefir:`Do.` |br|         
         Consider using a :doc:`push button <../navigation/pushbutton>` instead.
@@ -74,7 +74,7 @@ Behavior
    .. container::
 
       .. figure:: /img/Checkbox_Enable_Bad.qml.png
-        :figclass: border
+        :figclass: border dont
 
         :iconred:`Don't.` |br|
         Don't use checkboxes for negatives.
@@ -82,7 +82,7 @@ Behavior
    .. container::
 
       .. figure:: /img/Checkbox_Enable_Good.qml.png
-        :figclass: border
+        :figclass: border do
 
         :noblefir:`Do.` |br|
         Use checkboxes for positives.
@@ -106,16 +106,18 @@ Behavior
     .. container::
 
         .. figure:: /img/Checkbox_Switch_Desktop.qml.png
+           :figclass: dont
 
-            :iconred:`Don't.` |br|
-            Don't use sliding switches on desktop.
+           :iconred:`Don't.` |br|
+           Don't use sliding switches on desktop.
 
     .. container::
 
         .. figure:: /img/Checkbox_Switch_Mobile.qml.png
-
-            :noblefir:`Do.` |br|
-            Do use sliding switches on mobile.
+           :figclass: do
+           
+           :noblefir:`Do.` |br|
+           Do use sliding switches on mobile.
 
 Appearance
 ~~~~~~~~~~
@@ -177,7 +179,7 @@ which will take care of the layout and spacing of your controls.
     .. container::
 
         .. figure:: /img/Checkbox_Alignment_Bad.qml.png
-           :figclass: border
+           :figclass: border dont
 
            :iconred:`Don't.` |br|
            Don't use linebreaks in a checkbox's label.
@@ -185,7 +187,7 @@ which will take care of the layout and spacing of your controls.
     .. container::
 
         .. figure:: /img/Checkbox_Alignment_Good.qml.png
-           :figclass: border
+           :figclass: border do
 
            :noblefir:`Do.` |br|
            Add another label if more explanation is required.

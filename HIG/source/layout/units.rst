@@ -177,6 +177,7 @@ to know how to measure it.
 
       .. figure:: /img/Design.qml.png
          :scale: 80%
+         :figclass: dont
 
          :iconred:`Don't.` |br|
          Don't create mockups without measurements.
@@ -185,6 +186,7 @@ to know how to measure it.
 
       .. figure:: /img/Design_Good.qml.png
          :scale: 80%
+         :figclass: do
 
          :noblefir:`Do.` |br|
          Create mockups with detailed measurements.

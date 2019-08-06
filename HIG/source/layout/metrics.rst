@@ -138,6 +138,7 @@ Resizing
 
 .. figure:: /img/Resize.qml.png
    :alt: Add hints on how to resize to your mockups.
-   
+   :figclass: do
+
    :noblefir:`Do.` |br|
    Add hints on how to resize to your mockups.

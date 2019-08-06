@@ -29,6 +29,7 @@ How to Use
 
       .. figure:: /img/Form_Align_KDE3.qml.png
          :scale: 80%
+         :figclass: dont
 
          :iconred:`Don't.` |br|
          Don't use KDE3-style form alignment
@@ -37,6 +38,7 @@ How to Use
 
       .. figure:: /img/Form_Align_KDE5.qml.png
          :scale: 80%
+         :figclass: do
 
          :noblefir:`Do.` |br|
          Use Plasma 5-style form alignment.
@@ -47,6 +49,7 @@ How to Use
 
       .. figure:: /img/Form_Align_OSX.qml.png
          :scale: 80%
+         :figclass: dont
 
          :iconred:`Don't.` |br| 
          Don't use macOS-style form alignment.
@@ -55,6 +58,7 @@ How to Use
 
       .. figure:: /img/Form_Align_KDE5.qml.png
          :scale: 80%
+         :figclass: do
 
          :noblefir:`Do.` |br|
          Use Plasma 5-style form alignment.
@@ -72,6 +76,7 @@ How to Use
 
       .. figure:: /img/Form_Align_NO.qml.png
          :scale: 80%
+         :figclass: dont
 
          :iconred:`Don't.` |br|
          Don't misalign controls.
@@ -80,6 +85,7 @@ How to Use
 
       .. figure:: /img/Form_Align_YES.qml.png
          :scale: 80%
+         :figclass: do
 
          :noblefir:`Do.` |br|
          Align controls to the left.
@@ -91,6 +97,7 @@ How to Use
 
    .. figure:: /img/Form_Align_Long.qml.png
       :scale: 80%
+      :figclass: dont
 
       :iconred:`Don't.` |br|
       Don't use very long captions.
