@@ -67,13 +67,13 @@ CentOS/RHEL                        ``sudo yum install git make``
    
    .. code-block:: sh
 
-      sudo pip install -r requirements.txt
+      sudo pip install -r HIG/requirements.txt
 
    ...or in your home directory:
     
    .. code-block:: sh
 
-      pip install -r requirements.txt --user
+      pip install -r HIG/requirements.txt --user
        
    If you install it in you home directory, make sure you have the 
    installed packages in your path by adding it to your .profile:
@@ -87,6 +87,7 @@ CentOS/RHEL                        ``sudo yum install git make``
 Now you are ready to contribute to the HIG! To preview changes on your local
 machine, do the following:
 
+#. Enter the HIG directory with ``cd HIG``
 #. Run ``make html`` to create the HTML pages
 #. Open ``build/html/index.html`` in your browser (e.g. run
    ``firefox build/html/index.html``)
