@@ -5,7 +5,7 @@ Purpose
 -------
 
 Labels clarify technical features of the software. It is therefore of paramount
-importance that they be human-readable, comprehensible, and descriptive
+importance that they be human-readable, comprehensible, and descriptive.
 
 Guidelines
 ----------
