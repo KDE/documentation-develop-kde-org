@@ -11,12 +11,12 @@ font should not be applied to control labels.
 Guidelines
 ----------
 
--  Keep labels short; be aware that :doc:`translated <localization>` English text can
-   expand up to 30% in some languages.
--  Don't shorten your labels to the point of losing meaning. However, a
-   three-word label that provides clear information is better than a
-   one-word label that is ambiguous or vague. Try to find the fewest
-   possible words to satisfactorily convey the meaning of your label.
+-  Keep labels short; be aware that :doc:`translated <localization>` English
+   text can expand up to 30% in some languages.
+-  Don't shorten your labels to the point of losing meaning. A three-word
+   label that provides clear information is better than a one-word label that
+   is ambiguous or vague. Try to find the fewest possible words to
+   satisfactorily convey the meaning of your label.
 -  When the label is associated with another control, like a line edit,
    be sure to set the the line edit as the
    `buddy <https://doc.qt.io/qt-5/qlabel.html#setBuddy>`_ of
@@ -72,7 +72,7 @@ Tabs
    shortcut keys (Ctrl+Tab, Ctrl+Shift+Tab).
 
 Checkboxes and Radio buttons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Label every checkbox or radio button. Don't leave checkboxes or
    radio buttons unlabeled.
@@ -88,8 +88,8 @@ Checkboxes and Radio buttons
 -  Describe just the option with the label. Keep labels brief so it is
    easy to refer to them in messages and documentation.
 
-Group box
-~~~~~~~~~
+Group boxes
+~~~~~~~~~~~
 
 -  Use group labels to explain the purpose of the group, not how to make
    the selection.
