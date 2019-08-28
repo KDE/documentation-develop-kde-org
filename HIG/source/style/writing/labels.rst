@@ -4,9 +4,8 @@ Labels
 Purpose
 -------
 
-Common controls should behave ‘common’ and look like everyday controls.
-Therefore, it is much recommended to use standard font. Bold or italic
-font should not be applied to control labels.
+Labels clarify technical features of the software. It is therefore of paramount
+importance that they be human-readable, comprehensible, and descriptive
 
 Guidelines
 ----------
@@ -21,6 +20,8 @@ Guidelines
    be sure to set the the line edit as the
    `buddy <https://doc.qt.io/qt-5/qlabel.html#setBuddy>`_ of
    the label.
+-  Use the standard font and size. Do not use Bold or italic text in controls'
+   labels.
 
 Dialogs
 ~~~~~~~
