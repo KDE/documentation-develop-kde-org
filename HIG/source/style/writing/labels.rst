@@ -10,94 +10,106 @@ importance that they be human-readable, comprehensible, and descriptive.
 Guidelines
 ----------
 
+-  Craft labels based on user goals and tasks, not on the underlying technology.
 -  Keep labels short; be aware that :doc:`translated <localization>` English
-   text can expand up to 30% in some languages.
--  Don't shorten your labels to the point of losing meaning. A three-word
+   text can expand up to 50% in some languages.
+-  ...But don't shorten your labels to the point of losing meaning. A three-word
    label that provides clear information is better than a one-word label that
    is ambiguous or vague. Try to find the fewest possible words to
    satisfactorily convey the meaning of your label.
+-  Use the default systemwide font, size, and styling. Avoid using bold or
+   italic text in controls' labels. Nonstandard styling is only ever appropriate
+   for title or header text, and even then, must be used sparingly to avoid
+   overwhelming the content.
 -  When the label is associated with another control, like a line edit,
    be sure to set the the line edit as the
    `buddy <https://doc.qt.io/qt-5/qlabel.html#setBuddy>`_ of
    the label.
--  Use the standard font and size. Do not use Bold or italic text in controls'
-   labels.
 
-Dialogs
-~~~~~~~
+Labels in Dialogs
+~~~~~~~~~~~~~~~~~
 
--  If a dialog is user-initiated, identify it using the command or
+-  If a dialog is user-initiated, title it using the command or
    feature name.
 -  If it is application- or system-initiated (and therefore out of
-   context), label it using the program or feature name to provide
+   context), title it using the program or feature name to provide
    context.
--  Don't use the title to explain what to do in the dialog – that is the
-   purpose of the main instruction.
+-  Don't use the title to explain what to do in the dialog. Ideally this should
+   be self-explanatory; if it is not, consider simplifying the dialog's user
+   interface. If absolutely necessary, instructions should be provided with
+   labels in the dialog itself.
 
-Menus
-~~~~~
+Labels in Menus
+~~~~~~~~~~~~~~~
 
--  Prefer verb-based names; Avoid generic, unhelpful verbs, such as
-   *Change* or *Manage*.
--  Use singular nouns for commands that apply to a single object,
-   otherwise use plural nouns.
+-  Begin menu items that perform actions with imperative verbs, followed up with
+   a noun if additional clarity is warranted. Examples: *Save*, *Change User*,
+   or *Manage Services*.
+   Menu items that contain sub-menus may begin with a noun instead, if
+   appropriate.
+-  Use singular nouns for commands that apply to a single object; otherwise
+   use plural nouns.
 -  For pairs of complementary commands, choose clearly complementary
-   names. Examples: *Add/Remove*, *Show/Hide*, or *Insert/Delete*.
--  Choose menu item names based on user goals and tasks, not on
-   technology.
--  Assign access keys to all menu items (Alt+Letter).
+   verbs. Examples: *Add/Remove*, *Show/Hide*, or *Insert/Delete*.
+-  Don't assign accelerator keys; Qt assigns them automatically based on the
+   contents of the whole menu.
 
-Buttons
-~~~~~~~
+Labels on Buttons
+~~~~~~~~~~~~~~~~~
 
--  Label command buttons with an imperative verb.
--  Don't use ending punctuation for labels.
+-  Begin button labels with an imperative verb. It is appropriate to use a
+   single-word label if the context dictates that this is clear enough.
+-  Don't use ending punctuation for button labels.
 -  Describe the action that the button performs in a tooltip.
 -  End the label with an ellipsis if the command requires additional
-   information to execute.
--  Assign access keys to all buttons (Alt+Letter).
+   user interaction to complete.
+-  Manually assign accelerator keys.
 
-Links
-~~~~~
+Labels for Links
+~~~~~~~~~~~~~~~~
 
 -  Choose a concise, self-explanatory label that clearly communicates
-   and differentiates what the command link does.
+   where the command link will take the user when clicked on.
 -  Don't use ellipses.
+-  Manually assign accelerator keys.
 
-Tabs
-~~~~
+Labels on Tabs
+~~~~~~~~~~~~~~
 
--  Label tabs based on their pattern. Use nouns rather than verbs,
-   without ending punctuation.
--  Don't assign an access key. Tabs are accessible through their
-   shortcut keys (Ctrl+Tab, Ctrl+Shift+Tab).
+-  Tab labels should be identical to the title of their contents, if any.
+   Otherwise, craft an appropriate title using nouns rather than verbs, and
+   without any ending punctuation.
+-  Don't assign accelerator keys; tabs are already accessible through their
+   shortcut keys (Ctrl+Tab & Ctrl+Shift+Tab).
 
-Checkboxes and Radio buttons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Labels for Checkboxes and Radio buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Label every checkbox or radio button. Don't leave checkboxes or
-   radio buttons unlabeled.
+-  Label every checkbox or radio button.
 -  Assign a unique access key to each label.
--  Labels must start with an active verb clearly defining the state to
-   be enabled or disabled.
--  For a group, use parallel phrasing and try to keep the length about
-   the same for all labels.
--  For a group, focus the label text on the differences among the
-   options.
--  Use affirmative phrases. Don't use negative phrases such as "Don't
-   enable wifi". Instead, write "Enable Wifi".
--  Describe just the option with the label. Keep labels brief so it is
-   easy to refer to them in messages and documentation.
+-  Start the label with an active verb clearly defining the state to
+   be enabled or disabled, and use affirmative phrases rather than use negative
+   phrases. For example, "Enable Wifi" is better than "Don't enable Wifi" or
+   "Disable Wifi"
+-  When there are multiple adjacent related checkboxes or radio buttons, focus
+   their label text on the differences between the options, and try to keep the
+   labels all roughly the same length.
+-  Manually assign accelerator keys.
+-  When using a FormLayout-style user interface, give each logical group of
+   checkboxes or radio buttons a label to the left of the first one that to
+   provide a title or action directive for the group.
 
-Group boxes
-~~~~~~~~~~~
+.. figure:: /img/dolphin-settings-dialog.png
+   :alt: Appropriately-labeled logical groups of radio buttons and checkboxes
 
--  Use group labels to explain the purpose of the group, not how to make
-   the selection.
--  End each label with a colon to show a relationship.
--  Don't assign an access key to the label.
--  For a selection of one or more dependent choices, explain the
-   requirement on the label.
+   Appropriately-labeled logical groups of radio buttons and checkboxes
+
+Labels for Group boxes
+~~~~~~~~~~~~~~~~~~~~~~
+
+-  Use group labels to explain the purpose of the group, ended with a colon to
+   show a relationship.
+-  Don't assign accelerator keys.
 
 Using Ellipses in Labels
 ~~~~~~~~~~~~~~~~~~~~~~~~
