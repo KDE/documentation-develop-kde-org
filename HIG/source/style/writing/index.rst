@@ -9,7 +9,6 @@ Writing
    capitalization
    contraction
    labels
-   static
    localization
    placeholder
 
@@ -19,6 +18,5 @@ Text includes all the written, language-based elements of the interface. This in
 * :doc:`capitalization`
 * :doc:`contraction`
 * :doc:`labels`
-* :doc:`static`
 * :doc:`localization`
 * :doc:`placeholder`

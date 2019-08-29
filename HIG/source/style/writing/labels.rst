@@ -25,6 +25,9 @@ Guidelines
    be sure to set the the line edit as the
    `buddy <https://doc.qt.io/qt-5/qlabel.html#setBuddy>`_ of
    the label.
+-  Avoid *static text*: long instructions or explanations within the user
+   interface. Being tempted to add static text is a good sign that the
+   software's user interface is too complex and should be simplified.
 
 Labels in Dialogs
 ~~~~~~~~~~~~~~~~~
