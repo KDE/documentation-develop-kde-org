@@ -8,7 +8,7 @@ Style
 
    color/index
    elevation
-   icon
+   icons/index
    imagery
    theme
    typography
@@ -18,7 +18,7 @@ The Style layer is concerned with emotion, tone, and visual vocabulary. Because 
 
 * :doc:`color/index`
 * :doc:`elevation`
-* :doc:`icon`
+* :doc:`icons/index`
 * :doc:`imagery`
 * :doc:`theme`
 * :doc:`typography`
