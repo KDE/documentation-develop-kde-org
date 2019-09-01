@@ -90,13 +90,14 @@ details and vibrant colors, and employs an intentionally limited color palette:
       home, etc.This is the most commonly used color. When in doubt, choose
       Shade Black.
    #. |iconred| :doc:`Icon Red<../color/index>` (``#da4453``): Used for icons
-      that depict actions: delete, remove, stop, etc.
+      that depict negative or destructive actions: "delete," "remove," "stop,"
+      etc.
    #. |bewareorange| :doc:`Beware Orange <../color/index>` (``#f67400``): Used
       for icons that involve warnings and user input of some kind.
    #. |plasmablue| :doc:`Plasma Blue <../color/index>` (``#3daee9``): Used for
       icons that involve the action "select" or "insert".
    #. |noblefir| :doc:`Noble Fir <../color/index>` (``#27ae60``): Used for icons
-      that involve "connected", "secure" or "successful" actions.
+      that involve positive or successful actions: "connected", "secure", etc.
 
 .. |shadeblack| image:: /img/Breeze-shade-black.svg
 
