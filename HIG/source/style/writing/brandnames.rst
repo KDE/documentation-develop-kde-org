@@ -31,11 +31,11 @@ Creating a good brand name
 -  Don't use common words like "Files" or "Videos." If your brand name is too
    generic, its identity will be diluted and users will have a hard time finding
    it in web searches.
--  Each brand name needs an :doc:`icon or logo </style/icon>`. The logo should
-   reinforce the name. For more abstractly-named brands, the logo should provide
-   visual information regarding the software's purpose that is not contained
-   within the name (e.g. Dolphin's logo looks like a folder, providing a clue
-   that it's a file manager).
+-  Each brand name needs an :doc:`icon or logo </style/icons/index>`. The logo
+   should reinforce the name. For more abstractly-named brands, the logo should
+   provide visual information regarding the software's purpose that is not
+   contained within the name (e.g. Dolphin's logo looks like a folder, providing
+   a clue that it's a file manager).
 
 Examples
 --------
