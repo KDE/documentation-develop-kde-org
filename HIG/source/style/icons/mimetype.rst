@@ -14,8 +14,7 @@ monochrome icon color guidelines:
 .. image:: /img/Breeze-icon-design-mimetype-small.png
    :alt: Small monochrome document MIME types
 
-Margins for monochrome MIME type icons are the same as for monochrome Places
-icons in that the icon itself must fill a perfect square:
+Margins for monochrome MIME type icons are the same as most other monochrome icons:
 
 .. figure:: /img/icon-margins-mimetype-monochrome.png
    :alt: Margins for monochrome MIME type icons
