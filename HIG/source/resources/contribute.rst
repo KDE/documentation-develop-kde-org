@@ -216,3 +216,8 @@ Adding examples to the HIG is very easy.
    
       .. literalinclude:: /../../examples/kirigami/InlineMessage.qml
          :language: qml
+
+Creating media
+-------------
+
+See :doc:`media` on how to create media files for the HIG.
