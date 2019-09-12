@@ -58,17 +58,21 @@ It is recomended that you use the standard card layout for consistency, but card
 a lot of different layouts.
 
    .. figure:: /img/Card6.qml.png
-      :alt: Default card layout with a header image, text content, and optional actions.
+      :alt: Default card layout with a header image, text content, and optional 
+            actions.
       
-      Default card layout with a header image, text content, and optional actions.
+      Default card layout with a header image, text content, and optional 
+      actions.
 
-The only common requirement is the container around it. While cards can have a lot of
+The only common requirement is the container around it. While cards can have a 
+lot of
 different layouts, each should focus only on one bit of information or content.
 
 Here are some general recommendations for card layouts:
 
 -  Use images, icons or video elements to create visually immersive cards. 
-   Feel free to use different text sizes, cards are not a control for plain text.
+   Feel free to use different text sizes, cards are not a control for plain 
+   text.
 
 -  Use a well known aspect ratio for a header image
    
@@ -96,3 +100,6 @@ Kirigami
  - :kirigamiapi:`Kirigami: CardsGridView <CardsGridView>`
  - :kirigamiapi:`Kirigami: CardsLayout <CardsLayout>`
  - :kirigamiapi:`Kirigami: CardsListView <CardsListView>`
+ 
+.. literalinclude:: /../../examples/kirigami/Card.qml
+   :language: qml
