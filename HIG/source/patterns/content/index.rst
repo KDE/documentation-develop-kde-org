@@ -11,7 +11,6 @@ Content Patterns
    iconandtext
    help
    picker
-   settings
    viewingediting
 
 - :doc:`duallist`
@@ -19,5 +18,4 @@ Content Patterns
 - :doc:`iconandtext`
 - :doc:`help`
 - :doc:`picker`
-- :doc:`settings`
 - :doc:`viewingediting`
