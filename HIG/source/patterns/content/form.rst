@@ -41,8 +41,8 @@ Alignment
    right-to-left languages, mirror the alignment). This makes the whole group
    of form widgets appear to be center-aligned. In Qt 5, using a QFormLayout 
    handles all of this for you automatically.
--  Align the form in the top center of the window or view the form is placed 
-   in, but below the title.
+-  Align the form in the top center of the window or view in which it is 
+   located, but below the title.
 
 
 
