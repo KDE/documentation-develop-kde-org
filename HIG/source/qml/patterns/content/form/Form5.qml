@@ -36,12 +36,11 @@ Kirigami.ApplicationItem {
         
         property size sizeHint: Qt.size(formLayout.width, Math.round(1.1 * formLayout.height))
         property size minimumSizeHint: Qt.size(formLayout.width, Math.round(1.1 * formLayout.height))
-    
         property bool loading: false
     
         Kirigami.FormLayout {
             id: formLayout
-    
+            
             // General
             Controls.CheckBox {
                 Kirigami.FormData.label: i18nd("kcmmouse", "General:")
@@ -56,6 +55,7 @@ Kirigami.ApplicationItem {
     
             Kirigami.Separator {
                 Kirigami.FormData.isSection: true
+                Kirigami.FormData.label: "Geschwindigkeit"
             }
     
             // Acceleration
@@ -103,13 +103,7 @@ Kirigami.ApplicationItem {
             console.log(Kirigami.Units.smallSpacing);
             var a = new A.An(formLayout);
             //a.tree();
-            a.find("qquickcheckbox").eq(1).draw({
-                brace: {to: a.find("qquickslider"), horizontal: false}
-            })
-            
-//             a.find("qquickradiobutton").eq(1).draw({
-//                 brace: {to: a.find("qquickcheckbox").eq(2), horizontal: false}
-//             })
+            a.find("heading").eq(3).draw({ruler: {}})
             
             qmlControler.start();
         }

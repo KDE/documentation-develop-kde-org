@@ -41,6 +41,8 @@ Alignment
    right-to-left languages, mirror the alignment). This makes the whole group
    of form widgets appear to be center-aligned. In Qt 5, using a QFormLayout 
    handles all of this for you automatically.
+-  Align the form in the top center of the window or view the form is placed 
+   in, but below the title.
 
 
 
@@ -139,6 +141,24 @@ Alignment
 .. image:: /img/Form_Align_YES_Mobile.png
          :scale: 80%
 
+Titles
+""""""
+
+.. figure:: /img/Settings-Notification-dark.png
+   :alt: Notifications settings in a form layout
+   :scale: 40%
+   
+   Notifications settings
+
+Place the main title at the top left corner of the window or view your form is 
+placed in.
+
+
+.. figure:: /img/Form5.png
+
+   Alignment of Subtitles
+   
+Subtitles are left aligned with the longest label of their group.
 
 Spacing and Grouping
 ^^^^^^^^^^^^^^^^^^^^
