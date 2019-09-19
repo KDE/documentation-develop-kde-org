@@ -150,15 +150,6 @@ Titles
    
    Notifications settings
 
-Place the main title at the top left corner of the window or view your form is 
-placed in.
-
-
-.. figure:: /img/Form5.png
-
-   Alignment of Subtitles
-   
-Subtitles are left aligned with the longest label of their group.
 
 Spacing and Grouping
 ^^^^^^^^^^^^^^^^^^^^
@@ -175,7 +166,15 @@ Alternatively, you can use separators for a stronger separation.
 .. figure:: /img/Form4.png
 
    Using a separator to group controls
-   
+
+To create even stronger separation, you can add subtiles for groups of 
+controls. Subtitles are left aligned with the longest label of their group.
+
+.. figure:: /img/Form5.png
+
+   Alignment of subtitles
+
+
 Code
 ----
 

@@ -85,6 +85,8 @@ Behavior
 Appearance
 ~~~~~~~~~~
 
+-  Place the main title at the top left corner of the window or view your form 
+   is placed in.
 -  For a desktop app, put your settings page inside a dialog window.
 -  Place Help, Defaults, Reset, OK, Apply, and Cancel buttons on the bottom of
    the dialog window.
