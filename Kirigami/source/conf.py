@@ -12,8 +12,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-from sphinx.util.console import bold
-import requests
+
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
@@ -189,17 +188,8 @@ epub_exclude_files = ['search.html']
 
 # -- Extension configuration -------------------------------------------------
 
-doxylink = {
-    'kirigamiapi' : ('Kirigami2.tags', 'https://api.kde.org/frameworks/kirigami/html/'), # https://api.kde.org/frameworks/kirigami/html/Kirigami2.tags
-    'kwidgetsaddonsapi' : ('KWidgetsAddons.tags', 'https://api.kde.org/frameworks/kwidgetsaddons/html/'), # https://api.kde.org/frameworks/kwidgetsaddons/html/KWidgetsAddons.tags
-    'plasmaapi' : ('Plasma.tags', 'https://api.kde.org/frameworks/plasma-framework/html/') # https://api.kde.org/frameworks/plasma-framework/html/Plasma.tags
-}
-
-for doc in doxylink.values():
-    print(bold("Downloading file {} to {}".format(doc[1] + "/" + doc[0], doc[0])))
-    tagFile = open("../" + doc[0], "w")
-    tagFile.write(requests.get(doc[1] + "/" + doc[0]).text)
-    tagFile.close()
+from globalconf import get_doxylink
+doxylink = get_doxylink()
     
 # -- Options for intersphinx extension ---------------------------------------
 
