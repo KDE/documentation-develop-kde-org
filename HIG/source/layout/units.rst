@@ -87,7 +87,7 @@ can have issues with text.
 
 Base Units in Plasma and Kirigami
 ---------------------------------
-There a two types of DPI independent base units in Kirigami:
+There are two types of DPI independent base units in Kirigami:
 
 -  ``Units.gridUnit`` is the height needed to display one line of text. 
    Use this for defining height and width of an element. 
