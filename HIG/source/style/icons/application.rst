@@ -5,7 +5,7 @@ Application Icons
 
    Application icons
 
-Application icons hey always use the `colorful style \
+Application icons always use the `colorful style \
 <index.html#colorful-icon-style>`__ and come in a single size: 48px. They have
 4px margins on the top and bottom:
 
