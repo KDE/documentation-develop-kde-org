@@ -1,5 +1,13 @@
+"""Helpers and values for Sphinx configuration settings that are shared by two
+or more Sphinx projects within this repository."""
+
 import requests
 from sphinx.util.console import bold
+
+
+html_theme_options = {
+    'navigation_with_keys': True,
+}
 
 
 _DOXYLINK = {
