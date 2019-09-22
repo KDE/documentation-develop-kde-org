@@ -38,20 +38,20 @@ How to Use
    Using an overlay to pick aditional items.
    
 -  Use a :doc:`grid </components/editing/grid>` or a 
-   :doc:`list </components/editing/list>` to display the selected elemets.
--  Open list of additional items to choose in a overlay sheet or a dialog
+   :doc:`list </components/editing/list>` to display the selected elements.
+-  Open a list of additional items to choose in an overlay sheet or a dialog.
 -  Allow the user to select multiple items at once.
--  Use either an on-demand control or display an button to allow the user 
+-  Use either an on-demand control or display a button to allow the user
    to deselect items.
 -  If the list of selected items can be reordered, place up/down buttons
    to the right of the list of current items. Only enable the up/down
    buttons when an item is selected and can be moved.
--  Don't have blank list items; use meta-options, (e.g. "None") instead.
+-  Don't have blank list items; use meta-options (e.g. "None") instead.
 -  Place options that represent general options (e.g. "All", "None") at the
    beginning of the list.
 -  Sort list items in a logical order. Alphabetical sorting should be able
    to change when the text is translated.
--  If the lists or grids appears in a dialog, consider making the window and 
+-  If the lists or grids appear in a dialog, consider making the window and
    the lists or grids within it resizeable so that the user can choose how 
    many list items are visible at a time without scrolling.
 -  Use :doc:`sentence style capitalization </style/writing/capitalization>`
