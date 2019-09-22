@@ -6,7 +6,7 @@ Purpose
 
 A group box is a labeled rectangular area that surrounds a set of
 related controls. A frame is an unlabeled rectangular area that
- can be used to mark relationships.
+can be used to mark relationships.
 
 Group box and frame are a way to show visual relationships; it provides
 no additional functionality.

@@ -98,7 +98,7 @@ Appearance
 -  Provide a label with an access key for each tab. Use nouns with
    :doc:`title capitalization </style/writing/capitalization>` to 
    describe the content.
--  Don't expand tabs to use empty space of the widget (see `expanding`_
+-  Don't expand tabs to use empty space of the widget (see the ``expanding``
    property of the Qt tab bar, unfortunately true by default).
 -  Avoid long tab names. Use a compelling, easy to understand label.
    Phrases not sentences.

@@ -179,7 +179,7 @@ Code
 ----
 
 Kirigami
-~~~~~~~~
+^^^^^^^^
 
  - :kirigamiapi:`Kirigami: FormLayout <FormLayout>`
 

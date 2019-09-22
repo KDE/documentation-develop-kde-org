@@ -101,5 +101,5 @@ Code
     SLOT(slotOpenChat()) );
     notification->sendEvent();
 
-Use :knotificationsapi:`<KNotification>` to send notifications to the
+Use :knotificationsapi:`KNotification` to send notifications to the
 :doc:`Plasma Workspaces </introduction/architecture>`.

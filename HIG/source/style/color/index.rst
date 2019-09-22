@@ -112,5 +112,6 @@ follow:
    -  :doc:`Breeze High Contrast <high>`
 
 
+.. _CheckColorRoles: https://store.kde.org/p/1001640/
 .. _KColorScheme: http://api.kde.org/frameworks-api/frameworks5-apidocs/kconfigwidgets/html/classKColorScheme.html
 .. _PlasmaCore.Theme: https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1QuickTheme.html

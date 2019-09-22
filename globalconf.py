@@ -6,6 +6,7 @@ from sphinx.util.console import bold
 
 _FRAMEWORKS = {
     'Kirigami2': {},
+    'KNotifications': {},
     'KWidgetsAddons': {},
     'Plasma': {'url_slug': 'plasma-framework'},
 }

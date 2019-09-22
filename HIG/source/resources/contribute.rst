@@ -218,6 +218,6 @@ Adding examples to the HIG is very easy.
          :language: qml
 
 Creating media
--------------
+--------------
 
 See :doc:`media` on how to create media files for the HIG.
