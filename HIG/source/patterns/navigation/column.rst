@@ -26,12 +26,12 @@ When to Use
 
 Column-based navigation is ideal for navigating through a hierarchically
 organized information space, where users often go back and forth between
-different levels of the hierarchy 
+different levels of the hierarchy.
 For example:
 
--  Accounts ->Folders -> (Sub-Folders) -> Mails -> Invidual mail
+-  Accounts ->Folders -> (Sub-Folders) -> Mails -> Individual mail
 -  Folders -> RSS Feeds -> Feed items -> Individual item
--  File system hirachy
+-  File system hierarchy
 
 Kirigami implements this pattern in the form of a PageRow, which allows
 users to scroll horizontally through pages and allows the application to
@@ -57,7 +57,7 @@ General
    a useful breadcrumb trail.
 -  When on the lowest level, showing the content of an individual list
    item, use a swipe beyond the top/bottom of the content to jump to the
-   previous/next item in the list
+   previous/next item in the list.
 
 -  For the command structure, see the :doc:`command patterns </patterns/command/index>`.
 
