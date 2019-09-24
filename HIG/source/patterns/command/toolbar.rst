@@ -41,9 +41,10 @@ On mobile, a toolbar is diplayed as a group of
 
 -  If there are controls that need to be accessed often within the
    application's primary tasks but the content needs as much space to be
-   available as possible, you can add up to three primary action buttons
--  The primary action buttons are at the bottom of the user interface and 
-    there cannot be more then three buttons.
--  If more than three actions are required, put the remaining ones in the
+   available as possible, you can add up to three primary action buttons.
+-  The primary action buttons are at the bottom of the user interface and there
+   cannot be more then three buttons.
+-  If more than three actions are required,
+   put the remaining ones in the
    :doc:`global drawer </components/navigation/globaldrawer>` 
    or :doc:`context drawer </components/navigation/contextdrawer>`.
