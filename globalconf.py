@@ -1,14 +1,26 @@
-from string import digits
+"""Helpers and values for Sphinx configuration settings that are shared by two
+or more Sphinx projects within this repository."""
 
 import requests
 from sphinx.util.console import bold
-
+from string import digits
 
 _FRAMEWORKS = {
     'Kirigami2': {},
     'KNotifications': {},
     'KWidgetsAddons': {},
     'Plasma': {'url_slug': 'plasma-framework'},
+}
+
+html_theme_options = {
+    'navigation_with_keys': True,
+}
+
+
+_DOXYLINK = {
+    'kirigamiapi' : ('Kirigami2.tags', 'https://api.kde.org/frameworks/kirigami/html/'), # https://api.kde.org/frameworks/kirigami/html/Kirigami2.tags
+    'kwidgetsaddonsapi' : ('KWidgetsAddons.tags', 'https://api.kde.org/frameworks/kwidgetsaddons/html/'), # https://api.kde.org/frameworks/kwidgetsaddons/html/KWidgetsAddons.tags
+    'plasmaapi' : ('Plasma.tags', 'https://api.kde.org/frameworks/plasma-framework/html/') # https://api.kde.org/frameworks/plasma-framework/html/Plasma.tags
 }
 
 
