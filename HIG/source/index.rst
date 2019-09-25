@@ -21,6 +21,7 @@ KDE Human Interface Guidelines
    plattform/index
    resources/about
    resources/contribute
+   resources/media
    resources/glossary
 
 

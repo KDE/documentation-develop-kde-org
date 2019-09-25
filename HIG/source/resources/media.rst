@@ -51,10 +51,8 @@ CentOS/RHEL                        ``sudo yum install ffmpeg``
    
 Now you are ready to create media files for the the HIG!
 
+#.  Change to a directory containing qml source files. E.g.
+    ``cd HIG/source/qml/components/actionbutton``
 
-#. Change to a directory containing qml source files. E.g. 
-   ``cd HIG/source/qml/components/actionbutton``
-#. Run ``makemedia.php Actionbutton1.qml`` or 
-   ``makemedia.php . `` to create media files.
-
-
+#.  Run ``makemedia.php Actionbutton1.qml`` or  ``makemedia.php .`` to create
+    media files.
