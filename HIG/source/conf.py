@@ -216,7 +216,7 @@ rst_prolog = """
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    'kirigami': ('https://kirigami.kde.org/', None),
+    'kirigami': ('https://kirigami.kde.org', None),
     'pm': ('https://docs.plasma-mobile.org', None)
 }
 

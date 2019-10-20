@@ -8,7 +8,7 @@ When to Use
 -----------
 
 -  Use a Form layout when there are many related controls and input fields.
--  Form layouts are often used for :doc:`settings </plattform/settings>`.
+-  Form layouts are often used for :doc:`settings </platform/settings>`.
 
 How to Use
 ----------

@@ -69,7 +69,7 @@ Appearance
    of removing them from view. **Exception:** It is acceptable to hide menu
    items completely if they are permanently unavailable on the user's system
    due to missing hardware capabilities.
--  Assign :doc:`shortcut keys <shortcuts>` to the most frequently used menu items
+-  Assign shortcut keys to the most frequently used menu items
    (Ctrl+). For well-known shortcut keys, use standard assignments. Use
    function keys for commands that have a small-scale effect (F2 =
    Rename) and ctrl key for large-scale effect (Ctrl+S = Save).

@@ -35,7 +35,7 @@ Glossary
     
 - **Get New Stuff**, **GNS**
 
-    :doc:`/plattform/getnew`
+    :doc:`/platform/getnew`
     
 - **Aassistive technology**, **AT**
 

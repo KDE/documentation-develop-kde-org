@@ -49,7 +49,5 @@ Bottom Drawer and Dialog Sheet
    :alt:  Bottom drawer
    :scale: 40 %
 
-For a full modal dialog, use a 
-:doc:`dialog sheet </components/navigation/dialogsheet>`.
-For a quick choice, use a 
-:doc:`bottom drawer </components/navigation/bottomdrawer>`.
+For a full modal dialog, use a dialog sheet. For a quick choice, use a bottom
+drawer.

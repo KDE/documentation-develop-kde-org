@@ -40,7 +40,8 @@ Is this the right control?
 
 -  Use a combo box for single selection of one out of many items of
    lists that can be extended by the user. Prefer a simple :doc:`drop-down list <dropdown>` in case of read-only interaction.
--  Consider to replace the combo box by a :doc:`list view <list>` with a connected :doc:`edit control <editcontrol>`.
+-  Consider to replace the combo box by a :doc:`list view <list>` with a
+   connected :doc:`line edit control <lineedit>`.
 
 Behavior
 ~~~~~~~~

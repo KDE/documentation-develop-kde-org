@@ -1,5 +1,5 @@
 Platform
-=========
+========
 
 .. toctree::
    :titlesonly:

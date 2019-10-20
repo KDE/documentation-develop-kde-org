@@ -121,7 +121,7 @@ Color and Contrast
 -  The software is not dependent on any particular 
    :doc:`high contrast themes </style/color/high>` or settings.
    
-See :doc:`the HIG's page about color </style/color/index>` and 
+See :doc:`the HIG's page about color </style/color/index>` and
 :doc:`colors in Kirigami <kirigami:style/color>` for more information.
    
 Testing

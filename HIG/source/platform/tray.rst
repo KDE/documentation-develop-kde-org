@@ -39,5 +39,5 @@ Behavior
 Appearance
 ~~~~~~~~~~
 
-Use a :doc:`monochrome, Shade Black, icon </style/icon>` and use color only to 
-communicate state.
+Use a :doc:`monochrome, shade black icon </style/icons/index>` and use color
+only to communicate state.

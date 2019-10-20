@@ -91,7 +91,8 @@ Appearance
 -  Use and design toolbar icons with special care. Users remember
    location of an object but rely as well on icon properties.
 -  A distinct association between the underlying function and its visual
-   depiction is crucial. Follow the advices for :doc:`icon design </style/icon>`.
+   depiction is crucial. Follow the advices for :doc:`icon design
+   </style/icons/index>`.
 -  Don't simulate Microsoft's ribbon controls.
 
 Code

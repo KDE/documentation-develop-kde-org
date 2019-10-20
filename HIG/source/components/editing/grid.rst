@@ -80,7 +80,7 @@ See :doc:`cards <card>` for more information on how to use cards in a grid view.
 KCM
 ^^^
 
-Use the :doc:`KCMGrid </plattform/kcmgrid>` for grids in KCMs.
+Use the :doc:`KCMGrid </platform/kcmgrid>` for grids in KCMs.
 
 Code
 ----

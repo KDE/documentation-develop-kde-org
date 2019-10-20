@@ -53,8 +53,8 @@ Guidelines
    any other side effect.
 -  Don't add controls to the inline message other than action buttons
    for opportunistic interaction.
--  Consider to show a :doc:`notification` if information does not concern
-   the current workflow.
+-  Consider to show a :doc:`notification </platform/notification>` if
+   information does not concern the current workflow.
 
 Is this the right control? / Behavior
 -------------------------------------

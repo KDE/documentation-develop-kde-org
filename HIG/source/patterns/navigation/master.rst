@@ -16,11 +16,14 @@ Pattern for a flat content structure.
 -  These patterns are useful when multiple pieces of content are
    intended to be shown at once, alongside a larger, more complete
    presentation of the selected item.
--  See the :doc:`wizard </patterns/navigation/wizard>` pattern guidelines for 
-   more details on using that pattern.
+-  See the `draft for wizard pattern guidelines
+   <https://community.kde.org/KDE_Visual_Design_Group/HIG/Layout/Wizard>`_  for
+   more details on using
+   that pattern.
 -  Examples include a contact list that shows the full details of the
    selected contact, a slideshow with a "film-strip" to select
    photographs, or setup for newly installed software.
+
 
 |mobileicon| Mobile
 -------------------
