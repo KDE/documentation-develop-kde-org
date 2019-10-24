@@ -1,5 +1,5 @@
 ...
-import org.kde kirigami 2.9 as Kirigami
+import org.kde.kirigami 2.9 as Kirigami
 ...
 
 Kirigami.InlineMessage {
