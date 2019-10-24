@@ -25,9 +25,9 @@ Use Qt Widgets only if you plan to develop a desktop-only application with a com
 
 .. figure:: /img/kirigami.jpg
    :scale: 25%
-   :alt: Discover, a convergent application build with Kirigami
+   :alt: Discover, a convergent application built with Kirigami
 
-   Discover, a convergent application build using Kirigami
+   Discover, a convergent application built using Kirigami
 
 .. hint::
    |devicon| To test qml scenes use

@@ -35,8 +35,8 @@ One can repeatedly type a letter to cycle through items of the
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use a drop-down list for single selection of one out of many items.
    If users should be able to add items use a :doc:`combo box <combobox>`.

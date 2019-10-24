@@ -37,7 +37,7 @@ Glossary
 
     :doc:`/platform/getnew`
     
-- **Aassistive technology**, **AT**
+- **Assistive technology**, **AT**
 
-    Screen readers and other assistive technology is often refered as AT
+    Screen readers and other assistive technologies are often referred to as AT.
 

@@ -16,8 +16,8 @@ lightweight appearance without stimulative nature.
 Guidelines
 ----------
 
-Is this the right control
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Is this the right control?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Use command links for a set of mutually exclusive responses like
    navigation from hub to spoke pages.

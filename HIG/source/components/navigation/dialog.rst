@@ -29,7 +29,7 @@ Is this the right control?
 -  Don't use dialogs if the flow must not be interrupted. In this case
    prefer inline controls.
 -  Consider to use alternative ways for communication with users like
-   :doc:`tooltip <../assistance/tooltip>` or a 
+   :doc:`tooltip <../assistance/tooltip>` or an
    :doc:`inline message <../assistance/inline>`.
 -  Always use standard dialogs, if available.
 

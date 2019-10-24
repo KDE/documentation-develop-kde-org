@@ -30,11 +30,10 @@ source files. Tasks and changes are organized via
 For more information and help you can find us on 
 `Matrix <https://matrix.to/#/#kde_vdg:matrix.org>`_, 
 `IRC <irc://chat.freenode.net/kde-vdg>`_ or 
-`Telegram <https://telegram.me/vdgmainroom>`_
-.
+`Telegram <https://telegram.me/vdgmainroom>`_.
 
-If you are new to KDE devlopment, make sure to read 
-`how to become a kde developer 
+If you are new to KDE development, make sure to read
+`how to become a KDE developer
 <https://community.kde.org/Get_Involved/development>`_ first.
 
 Getting Started
@@ -162,8 +161,8 @@ Component
     Guidelines
     ----------
 
-    Is this the right control
-    ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Is this the right control?
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     Describe when to use a component and when not.
     
