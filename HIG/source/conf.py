@@ -32,7 +32,11 @@ sys.path.insert(0, os.path.abspath('../..'))
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.todo', 'sphinxcontrib.doxylink']
+extensions = [
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinxcontrib.doxylink',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -216,7 +220,6 @@ rst_prolog = """
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    'kirigami': ('https://kirigami.kde.org', None),
     'pm': ('https://docs.plasma-mobile.org', None)
 }
 
