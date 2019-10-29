@@ -44,11 +44,11 @@ Getting Started
 ================================== ================================
 Distribution                       Command
 ================================== ================================
-Arch, Manjaro                      ``sudo pacman -S git make``
-Debian, Ubuntu, KDE Neon           ``sudo apt install git make``
-openSUSE                           ``sudo zypper install git make``
-Fedora                             ``sudo dnf install git make``
-CentOS/RHEL                        ``sudo yum install git make``
+Arch, Manjaro                      ``sudo pacman -S git make python``
+Debian, Ubuntu, KDE Neon           ``sudo apt install git make python3``
+openSUSE                           ``sudo zypper install git make python3``
+Fedora                             ``sudo dnf install git make python3``
+CentOS/RHEL                        ``sudo yum install git make python3``
 ================================== ================================
 
 #. Clone the HIG source code repository into an empty folder:
@@ -57,39 +57,29 @@ CentOS/RHEL                        ``sudo yum install git make``
 
       git clone https://invent.kde.org/websites/hig-kde-org.git
       cd hig-kde-org
-      
-#. Install some tools with Python's package manager, Pip. Pip should already be
-   Installed, but if for some reason it is not, here are instructions for
-   getting it: https://pip.pypa.io/en/stable/installing/
-   
-   You can use Pip to install the required python modules either globally:
-   
-   .. code-block:: sh
 
-      sudo pip install -r HIG/requirements.txt
+#.  Create a Python 3 virtual environment, enable it and install the
+    requirements from ``requirements.lock`` into it:
 
-   ...or in your home directory:
-    
-   .. code-block:: sh
+    .. code-block:: sh
 
-      pip install -r HIG/requirements.txt --user
-       
-   If you install it in you home directory, make sure you have the 
-   installed packages in your path by adding it to your .profile:
-   
-   .. code-block:: sh
-
-      echo "PATH=~/.local/lib:\$PATH" >> ~/.profile
-      source ~/.profile
-
+        python3 -m venv venv
+        . venv/bin/activate
+        pip install -r requirements.lock
    
 Now you are ready to contribute to the HIG! To preview changes on your local
-machine, do the following:
+machine, enter the directory of a website (``HIG`` or ``Kirigami``) and use
+``make`` to generate the HTML version of the documentation. For example:
 
-#. Enter the HIG directory with ``cd HIG``
-#. Run ``make html`` to create the HTML pages
-#. Open ``build/html/index.html`` in your browser (e.g. run
-   ``firefox build/html/index.html``)
+.. code-block:: sh
+
+    cd HIG
+    make html
+
+You will find the documentation inside ``build/html`` within the corresponding
+website directory. Open ``build/html/index.html`` in your browser (e.g. run
+``xdg-open build/html/index.html``)
+
 
 Page Structure
 --------------
