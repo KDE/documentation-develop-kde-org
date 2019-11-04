@@ -6,6 +6,8 @@ from datetime import datetime
 from os import makedirs, path
 from string import digits
 
+import dateparser
+from pytz import utc
 import requests
 from sphinx.util.console import bold
 
@@ -28,10 +30,9 @@ def _download_doxylink(base_url, filename):
     url = base_url + filename
 
     if path.exists(file_path):
-        local_modified = datetime.fromtimestamp(path.getmtime(file_path))
+        local_modified = datetime.fromtimestamp(path.getmtime(file_path), utc)
         response = requests.head(url)
-        date_string = response.headers['Last-Modified']
-        remote_modified = datetime.strptime(date_string, '%a, %d %b %Y %X %Z')
+        remote_modified = dateparser.parse(response.headers['Last-Modified'])
         if local_modified > remote_modified:
             print(bold("{} is up to date".format(url, file_path)))
             return file_path
