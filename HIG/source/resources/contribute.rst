@@ -46,7 +46,8 @@ Distribution                       Command
 ================================== ================================
 Arch, Manjaro                      ``sudo pacman -S git make python``
 Debian, Ubuntu, KDE Neon           ``sudo apt install git make python3``
-openSUSE                           ``sudo zypper install git make python3``
+openSUSE                           ``sudo zypper install git-core python3
+                                   python3-devel``
 Fedora                             ``sudo dnf install git make python3``
 CentOS/RHEL                        ``sudo yum install git make python3``
 ================================== ================================
