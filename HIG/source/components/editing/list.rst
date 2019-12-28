@@ -150,8 +150,6 @@ down buttons.
 Appearance
 ~~~~~~~~~~
 
--  Alternate row color (use theme settings). Use different keys (e.g.
-   page up/down) when more lists should be accessible.
 -  Show at least four list view items at any time without the need for
    scrolling.
 -  Make windows and the list within a dialog or utility window
@@ -168,6 +166,29 @@ Appearance
 -  End each label with a colon. ":"
 -  Use :doc:`sentence style capitalization </style/writing/capitalization>`
    for list view items.
+-  You can use alternate row colors (use theme settings).
+
+For section headers use :doc:`120% font size </style/typography>` and the 
+:doc:`alternate background color </style/color/index>`. Don't place a border 
+below the section header.
+
+.. container:: flex
+
+    .. container::
+
+        .. figure:: /img/Listview8.png
+            :alt: Section header on desktop
+            :figclass: border
+            
+            Section header on desktop
+            
+    .. container::
+
+        .. figure:: /img/Listview9.png
+            :alt: Section header on mobile
+            :figclass: border
+            
+            Section header on mobile
 
 |desktopicon| Desktop
 ^^^^^^^^^^^^^^^^^^^^^
@@ -284,9 +305,6 @@ the add button or use an icon on the list item.
         
          Using an on-demand pattern to display a "Remove" icon.
 
-Ordering
-^^^^^^^^
-
 
 Code
 ----
@@ -299,6 +317,7 @@ Kirigami
  - :kirigamiapi:`Kirigami: AbstractListItem <AbstractListItem>`
  - :kirigamiapi:`Kirigami: BasicListItem <BasicListItem>`
  - :kirigamiapi:`Kirigami: SwipeListItem <SwipeListItem>`
+ - :kirigamiapi:`Kirigami: ListSectionHeader <ListSectionHeader>`
 
 .. literalinclude:: /../../examples/kirigami/AddressbookListView.qml
    :language: qml
