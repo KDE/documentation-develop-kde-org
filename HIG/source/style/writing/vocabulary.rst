@@ -19,6 +19,6 @@ If a folder *A* contains a folder *B*:
 
 -   *B* is a **subfolder** of *A*. Avoid *child folder* or *sub-folder*.
 
-A folder that does not have a parent folder is known as the **root folder**.
+A folder that does not have a containing folder is known as the **root folder**.
 Avoid using simply *root*, except for contexts where the term is already
 accompanied by a folder icon.
