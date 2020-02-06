@@ -11,9 +11,11 @@ Layout
    metrics
    alignment
    onehand
+   gestures
 
 * :doc:`units`
 * :doc:`metrics`
 * :doc:`alignment`
 * :doc:`onehand`
+* :doc:`gestures`
 

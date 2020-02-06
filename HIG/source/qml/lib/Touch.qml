@@ -21,7 +21,7 @@ import QtQuick 2.2
 import org.kde.kirigami 2.4 as Kirigami
 import QtTest 1.2
 
-// Drawing a brace between to obejcts to show the distance between them
+// Show a touch event
 Item {
     id: canvas
     anchors.fill: parent;
@@ -31,130 +31,88 @@ Item {
     property int toY
     property int dur: 300
     property var sequence;
-    property int i: 0
+    property int touchId: 0
+    property int frames: 0
+    z: 10000000000
 
-    /*MouseArea {
-        anchors.fill: parent
-        onPressed: {
-            console.log(mouse.x + "x" + mouse.y)
-        }
-    }*/
-
-    Rectangle {
-        id: ind
-        z: 1
-        width: height
-        height: Kirigami.Units.iconSizes.smallMedium
-        color: "#331d99f3"
-        radius: height / 2
-        visible: false
-        x: cursor.x
-
-        NumberAnimation on width {
-            id: indAnim
-            duration: dur
-            running: false
-        }
-    }
-
-    Image {
-        id: cursor
-        source: "../../img/transform-browse.svg"
-        visible: false
-        width: Kirigami.Units.iconSizes.smallMedium
-        height: Kirigami.Units.iconSizes.smallMedium
-        z: 2
-
-        NumberAnimation on x {
-            id: xAnim
-            duration: dur
-            running: false
-        }
-        NumberAnimation on y {
-            id: yAnim
-            running: false
-            duration: dur
-            onStopped: {
-                timer.start()
-            }
-        }
+    VisualTouchPoint {
+        x: fromX;
+        y: fromY;
+        id: touchPoint
     }
 
     TestEvent {
         id: event
     }
 
-    Timer {
-        id: timer
-        interval: 300
-        repeat: false
-        running: false
-        onTriggered: {
-            ind.visible = false;
-            cursor.visible = false;
-            swipeTimer.stop();
-        }
-    }
-
-    Timer {
+    // needs to be synced with the animations of the touchPoint
+    FTimer {
         id: swipeTimer
-        interval: 30
-        repeat: true
-        running: false
-        onTriggered: {
-            i++;
-            var stepX = (toX - fromX) / timer.interval * swipeTimer.interval
-            var stepY = (toY - fromY) / timer.interval * swipeTimer.interval
-            sequence.move(1, canvas.parent, fromX + i * stepX, toY + i * stepY);
-            //console.log("move: " + (fromX + i * stepX) + "x" + (toY + i * stepY))
+        onTick: function(frameCounter) {
+            // Move the touch pointer
+            var stepX = (toX - fromX) / frames;
+            var stepY = (toY - fromY) / frames;
+            sequence.move(touchId, canvas.parent, fromX + frameCounter * stepX, toY + frameCounter * stepY);
             sequence.commit();
+            //console.log("M " + (fromX + frameCounter * stepX) + " x " + ( toY + frameCounter * stepY));
+            
+            if (frameCounter >= frames) {
+                swipeTimer.stop();
+                touchPoint.moved();
+            }
         }
     }
 
     // Animate swipe
     function swipe() {
-        cursor.x = fromX - Kirigami.Units.iconSizes.smallMedium;
-        cursor.y = fromY - Kirigami.Units.iconSizes.smallMedium;
-        cursor.visible = true;
-
-        ind.y = fromY;
-        ind.visible = true;
-
-        xAnim.to = toX;
-        xAnim.start();
-        yAnim.to = toY;
-        yAnim.start();
-        indAnim.to = Math.abs(fromX - toX);
-        indAnim.start();
-
-        sequence = event.touchEvent(canvas.parent);
-        sequence.press(1, canvas.parent, fromX, fromY);
-        //console.log("press: " + fromX + "x" + fromY)
-        sequence.commit();
-        i = 0;
-
-        swipeTimer.start();
-        timer.start();
-
-        timer.triggered.connect(function() {    
-            sequence.release(1, canvas.parent,  toX, toY);
-            //console.log("release: " + toX + "x" + toY)
+        // Calculate how many frames the animation is running
+        frames = Math.floor(60 / 1000 * dur);
+        
+        touchPoint.animate = true;
+        // Start swipe after animation is done
+        touchPoint.pressed.connect(function() {
+            touchPoint.x = toX;
+            touchPoint.y = toY;
+            if (!sequence) {
+                // Only create a new sequence if not 1 exists already
+                sequence = event.touchEvent(canvas.parent);
+            }
+            sequence.press(touchId, canvas.parent, fromX, fromY);
             sequence.commit();
+            //console.log("P " + fromX + " x " + fromY);
+            
+            swipeTimer.start();
         });
-
+        
+        // Finish touch event
+        // Release touch pointer
+        touchPoint.moved.connect(function() {
+            sequence.release(touchId, canvas.parent,  toX, toY);
+            sequence.commit();
+            //console.log("R " + toX + " x " + toY);
+            touchPoint.state = "RELEASED";
+        });
+        touchPoint.state = "PRESSED"
     }
 
     function touch() {
-        cursor.x = toX;
-        cursor.y = toY;
-        cursor.visible = true;
-        timer.start()
-        timer.triggered.connect(function() {
-            sequence = event.touchEvent(canvas);
-            sequence.press(1, canvas,  toX, toY);
+        touchPoint.x = toX;
+        touchPoint.y = toY;
+        
+        // Emit touch event after animation is done
+        touchPoint.pressed.connect(function() {
+            if (!sequence) {
+                sequence = event.touchEvent(canvas);
+            }
+            sequence.press(touchId, canvas,  toX, toY);
             sequence.commit();
-            sequence.release(1, canvas,  toX, toY);
+            touchPoint.state = "RELEASED"
+        });
+        
+        touchPoint.released.connect(function() {
+            sequence.release(touchId, canvas,  toX, toY);
             sequence.commit();
         });
+        touchPoint.state = "PRESSED"
     }
 }

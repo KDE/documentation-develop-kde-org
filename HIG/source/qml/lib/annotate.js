@@ -5,6 +5,8 @@ var messure = Qt.createComponent("Messure.qml");
 var padding = Qt.createComponent("Padding.qml");
 var mouse = Qt.createComponent("Mouse.qml");
 var touch = Qt.createComponent("Touch.qml");
+var pinch = Qt.createComponent("Pinch.qml");
+var rotate = Qt.createComponent("Rotate.qml");
 
 // get classname and strip _QML of the name
 function getClassName(obj) {
@@ -146,20 +148,83 @@ An.prototype.click = function(opt) {
 }
 
 /**
- * Simulate a touch the nodes
+ * Simulate a swipe the nodes
  */
 An.prototype.touch = function(opt) {
     var options = getOpts({
         x: 0,
         y: 0
     }, opt);
-
     for (var n = 0; n < this.nodes.length; n++) {
         var node = this.nodes[n];
         var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + options.x;
         var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) + options.y;
         var m = touch.createObject(root, {toX: x, toY: y});
         m.touch();
+    }
+    return this;
+}
+
+/**
+ * Simulate a pinch the nodes
+ */
+An.prototype.pinch = function(opt) {
+    for (var n = 0; n < this.nodes.length; n++) {
+        var node = this.nodes[n];
+        // Translate rectangle to center of node
+        var oX = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2);
+        var oY = node.mapToItem(null, 0, 0).x + Math.floor(node.height / 2);
+        var width = opt.from.right - opt.from.left;
+        var height = opt.from.bottom - opt.from.top;
+        
+        var from =  Qt.rect(
+            opt.from.left + oX, 
+            opt.from.top + oY, 
+            width, 
+            height
+        );
+        // Calculate to from the distance
+        var dig = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+        var x = (opt.distance + dig) / dig;
+        var to =  Qt.rect(
+            from.left - (width * x) / 2,
+            from.top - (height * x) / 2,
+            width * x,
+            height * x
+        );
+        // TODO add option for explicit to
+//         var to =  Qt.rect(
+//             opt.to.left + oX, 
+//             opt.to.top + oY, 
+//             opt.to.right - opt.to.left, 
+//             opt.to.bottom - opt.to.top
+//         );
+        var m = pinch.createObject(root, {from: from, to: to});
+        m.pinch();
+    }
+    return this;
+}
+
+/**
+ * Simulate a pinch/rotate the nodes
+ */
+An.prototype.rotate = function(opt) {
+    for (var n = 0; n < this.nodes.length; n++) {
+        var node = this.nodes[n];
+        // Translate rectangle to center of node
+        var oX = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2);
+        var oY = node.mapToItem(null, 0, 0).x + Math.floor(node.height / 2);
+        var width = opt.from.right - opt.from.left;
+        var height = opt.from.bottom - opt.from.top;
+        
+        var from =  Qt.rect(
+            oX - 40, 
+            oY - 40, 
+            80, 
+            80
+        );
+        var m = rotate.createObject(root, {from: from, angle: opt.angle});
+        m.rotate();
     }
     return this;
 }

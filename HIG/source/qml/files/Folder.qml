@@ -60,27 +60,14 @@ Kirigami.ScrollablePage {
 
         delegate: Kirigami.BasicListItem {
             onClicked: {
-                pageroot.pageStack.push(Qt.resolvedUrl("Folder.qml"), {"pagemodel": pagemodel.subfolder.get(index), "pageroot": pageroot});
+               loadSubFolder(index);
             }
-
-            contentItem: Row {
-                spacing: 2 * Kirigami.Units.largeSpacing
-
-                Item {
-                    width: Kirigami.Units.iconSizes.medium
-                    height: width
-
-                    Kirigami.Icon {
-                        width: Kirigami.Units.iconSizes.medium
-                        height: width
-                        source: model.icon
-                    }
-                }
-                Label {
-                    anchors.verticalCenter: parent.verticalCenter
-                    text: model.name
-                }
-            }
+            icon: model.icon
+            label: model.name
         }
+    }
+    
+    function loadSubFolder(index) {
+         pageroot.pageStack.push(Qt.resolvedUrl("Folder.qml"), {"pagemodel": pagemodel.subfolder.get(index), "pageroot": pageroot});
     }
 }

@@ -25,7 +25,7 @@ import "tools.js" as T
 import "annotate.js" as A
 
 Rectangle {
-    width: 380
+    width: 640
     height: 320
     color: "white"
     id: root

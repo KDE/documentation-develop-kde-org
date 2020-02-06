@@ -56,7 +56,14 @@ ListModel {
                         "icon": "folder-development",
                         "subfolder": [{
                                 "name": "build",
-                                "icon": "folder-blue"
+                                "icon": "folder",
+                                 "subfolder": [{
+                                        "name": "doctrees",
+                                        "icon": "folder-text"
+                                    }, {
+                                        "name": "html",
+                                        "icon": "folder-internet"
+                                }]
                             }, {
                                 "name": "source",
                                 "icon": "folder-development",
@@ -77,7 +84,7 @@ ListModel {
                                         "icon": "folder-text"
                                     }, {
                                         "name": "qml",
-                                        "icon": "folder-blue",
+                                        "icon": "folder",
                                         "subfolder": [{
                                                 "name": "ui",
                                                 "icon": "folder-text"
@@ -93,7 +100,7 @@ ListModel {
                                         "icon": "folder-text"
                                     }, {
                                         "name": "style",
-                                        "icon": "folder-blue"
+                                        "icon": "folder"
                                     }, {
                                         "name": "video",
                                         "icon": "folder-video"
