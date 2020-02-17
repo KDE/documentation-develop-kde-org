@@ -52,6 +52,8 @@ Making a notification persistent will prevent it from closing after a timeout.
 Your app must revoke the persistent notification, if the reason for the 
 notification no longer applies, like a power adapter was plugged after a 
 "Laptop battery is almost empty" notification.
+Use this if the notification requires user interaction, e.g. a device is
+asking for pairing confirmation. 
 
 Urgency
 """""""
