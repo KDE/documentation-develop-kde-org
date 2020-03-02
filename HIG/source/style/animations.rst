@@ -16,7 +16,7 @@ Guidelines
 
 Default animations should be as follows:
 
- - Items animating from visible to invisible should be InQuad
+ - Items animating from visible to invisible should be InCubic
  
    .. raw:: html
 
@@ -24,7 +24,7 @@ Default animations should be as follows:
      loop="true" playsinline="true" width="540" controls="true" 
      onended="this.play()" class="border"></video>
    
- - Items animating from invisible to visible should be OutQuad
+ - Items animating from invisible to visible should be OutCubic
  
    .. raw:: html
 
@@ -32,7 +32,7 @@ Default animations should be as follows:
      loop="true" playsinline="true" width="540" controls="true" 
      onended="this.play()" class="border"></video>
 
- - Items animating from visible to visible should be InOutQuad
+ - Items animating from visible to visible should be InOutCubic
 
    .. raw:: html
 
