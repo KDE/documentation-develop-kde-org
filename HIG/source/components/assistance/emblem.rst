@@ -57,5 +57,5 @@ if the number is very large.
 
    Notification emblem with a large number
 
-For symbolic icon emblems, see :doc:`/style/icons/emblem`.
+For symbolic icon emblems, see :doc:`/style/icons/monochrome/emblem`.
 

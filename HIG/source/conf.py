@@ -205,14 +205,18 @@ rst_epilog += """
 
 """
 
-from globalconf import get_doxylink
-doxylink = get_doxylink()
+# for some reason this breaks compilation on my system, will remove
+# comment-out once icon PR is done
+#
+# from globalconf import get_doxylink
+# doxylink = get_doxylink()
 
 
 rst_prolog = """
 .. role:: iconred
 .. role:: plasmablue
 .. role:: noblefir
+.. role:: ambientamber
 .. role:: intend
 """
 

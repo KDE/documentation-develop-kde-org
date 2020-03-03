@@ -10,7 +10,12 @@
 .noblefir {
     color: #27ae60;
 }
-
+.ambientamber {
+    color: #e9643a;
+}
+.rst-content .caution.figure {
+    background-color: transparent;
+}
 body {
     font-family: "Noto Sans","Helvetica Neue", Arial, sans-serif;
     font-size: 14px;
@@ -284,10 +289,10 @@ h5 {
     height: auto !important;
     max-width: 100%;
 }
-.do *, .dont * {
+.do *, .dont *, .caution * {
     font-style: normal;
 }
-.do img, .dont img {
+.do img, .dont img, .caution img {
     display: block;
     margin: 0 auto;
 }
@@ -305,8 +310,33 @@ h5 {
     border-radius: 4px;
     padding: 10px;
 }
-.dont .iconred, .do .noblefir {
+.caution .caption {
+    margin-top: 7.5px;
+    border: 2px solid #e9643a;
+    background-color: rgba(233, 99, 58, 0.2);
+    border-radius: 4px;
+    padding: 10px;
+}
+.dont .iconred, .do .noblefir, .caution .ambientamber {
     font-weight: bold;
+}
+.dont .caption {
+    background-position: top right;
+    background-image: url("dialog-error.svg");
+    background-size: 44px 44px;
+    background-repeat: no-repeat;
+}
+.do .caption {
+    background-position: top right;
+    background-image: url("dialog-positive.svg");
+    background-size: 44px 44px;
+    background-repeat: no-repeat;
+}
+.caution .caption {
+    background-position: top right;
+    background-image: url("dialog-warning.svg");
+    background-size: 44px 44px;
+    background-repeat: no-repeat;
 }
 .flex.docutils.container {
     margin: 0 auto;

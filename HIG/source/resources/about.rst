@@ -108,7 +108,7 @@ layers:
       Presentation deals with visual design of the user interface -
       layout, style and text. It’s all about the appearance of the
       application including the platform style’s margins and spacing,
-      colours, fonts, icon designs, etc. These questions primarily
+      Colors, fonts, icon designs, etc. These questions primarily
       concern designers, developers, translators and the promotion team.
 
    #. Layout
