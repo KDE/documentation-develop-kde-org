@@ -205,11 +205,8 @@ rst_epilog += """
 
 """
 
-# for some reason this breaks compilation on my system, will remove
-# comment-out once icon PR is done
-#
-# from globalconf import get_doxylink
-# doxylink = get_doxylink()
+from globalconf import get_doxylink
+doxylink = get_doxylink()
 
 
 rst_prolog = """
