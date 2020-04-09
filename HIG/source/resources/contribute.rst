@@ -211,3 +211,10 @@ Creating media
 --------------
 
 See :doc:`media` on how to create media files for the HIG.
+
+Submitting your changes
+-----------------------
+The HIG uses GitLab for patch
+submissions: https://invent.kde.org/websites/hig-kde-org/-/merge_requests.
+
+For more information, see https://community.kde.org/Infrastructure/GitLab.
