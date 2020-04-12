@@ -193,3 +193,66 @@ This example shows how the Smartphone UX can be applied in the
    shortcuts
  - **Application Content**: Needs to conform to the KDE HIG in order to display
    content in a way that's suitable for this device type
+
+TV
+--
+
+Characteristics
+^^^^^^^^^^^^^^^
+- Primary Input method:
+
+  - *Remote control from long range (~3m)*
+  - *Voice control*
+- Input device precision:
+
+  - *High: Remote control provides precise input but only with a limited number
+    of buttons*
+  - *Moderate: Remote control may provide rough cursor control.*
+  - *Low: Voice control allows executing any action directly but can be
+    difficult to interpret correctly*
+- Screen size: *Typically: 81 - 140cm measured diagonally*
+- Screen orientation: *Typically landscape mode*
+- Learning curve:
+
+  - *Low: Intuitive remote control navigation on-screen*
+  - *Moderate: Voice control trigger phrases may take some time to learn*
+
+Optimal user experience
+^^^^^^^^^^^^^^^^^^^^^^^
+Viewing the device from a long range requires the user interface elements to be
+very clear and large enough to easily distinguish. This means that the
+information density should also not be too high.
+
+The main focus is the Application Content but some other components can be shown
+if it does not increase the information density too much. Hidden components can
+be shown and accessed by navigating to them using the remote control.
+
+Navigating the Application Content can be done using only 4 directional arrow
+buttons, an OK button and a Back button. This is the set of buttons that is
+available on almost all remote controls. Common tools and actions for both the
+workspace and applications can be accessed through voice control actions.
+
+Example
+^^^^^^^
+This example shows how the Smart TV UX can be applied in the Plasma Bigscreen
+workspace:
+
+- **Workspace**: Has a single home screen.
+
+ - **Application Launcher**: A fullscreen launcher that is always open
+ - **Application Shortcuts**: None (use Application Launcher only)
+ - **Active Application Overview**: A fullscreen application accessible from the
+   Application Launcher as a normal application (no Workspace shortcut)
+ - **Workspace Actions**: A minimal top panel that is automatically hidden
+ - **Application-Workspace Interaction**: Available from the Active Application
+   Overview, and allows closing apps
+
+- **Application**: Always runs fullscreen
+
+ - **Application Tools**: The absolute minimum possible assortment of tools
+   are available from large and clear user interface elements. These elements
+   may be be smaller or hidden by default and are shown or made bigger when
+   navigating to them. No desktop-style menubars are used. Commonly-used tools
+   can be accessed through voice control.
+ - **Application Content**: Needs to conform to the KDE HIG in order to display
+   content in a way that's suitable for this device type.
