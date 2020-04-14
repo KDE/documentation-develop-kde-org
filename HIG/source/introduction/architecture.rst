@@ -1,27 +1,37 @@
 Architecture
 ============
 
-There are three different UI toolkits you can use to development for `KDE 
-Application <https://www.kde.org/applications/>`_ or the `Plasma Workspace 
-<https://www.kde.org/plasma-desktop.php>`_ (Due to technical limitations, the 
-toolkits have slight visual differences, but the recommended interaction 
-patterns to be used are consistent regardless of the toolkit).
+All KDE software is built using the Qt toolkit. You will be using different
+components depending on whether you are developing an
+`application <https://www.kde.org/applications/>`_ or
+`Plasma <https://www.kde.org/plasma-desktop.php>`_ and the nature of your
+application. The interaction patterns of the HIG apply regardless of the
+components you use.
 
 KDE Applications
 ----------------
-There are two UI toolkits that can be used to develop KDE Applications:
 
-* `Kirigami <https://www.kde.org/products/kirigami/>`_
-* `Qt Widgets <http://doc.qt.io/qt-5/qtwidgets-index.html>`_
+Qt offers two ways of defining the application UI. Which
+one to choose depends on the nature of your application. The application logic
+is written in C++ (or other supported languages) regardless of that.
 
-Kirigami is KDE’s lightweight user interface framework for mobile and 
-convergent applications. It allows Qt developers to easily create applications 
-that run on most major mobile and desktop platforms without modification (though 
-adapted user interfaces for different form-factors are supported and recommended 
-for optimal user experience). It extends the touch-friendly Qt Quick Controls 
-with larger application building blocks.
+Qt Widgets
+^^^^^^^^^^
 
-Use Qt Widgets only if you plan to develop a desktop-only application with a complex UI, like KDevelop.
+`Qt Widgets <http://doc.qt.io/qt-5/qtwidgets-index.html>`_ is the traditional
+way of writing Qt applications. It is best suited for traditional desktop
+applications with complex UI, e.g. KDevelop.
+
+QML/QtQuick/Kirigami
+^^^^^^^^^^^^^^^^^^^^
+
+QML/QtQuick is the modern way of developing Qt applications. It features a
+declarative approach to writing touch and mobile friendly UIs with fluent
+gestures. It is best suited for mobile and convergent applications.
+
+`Kirigami <https://www.kde.org/products/kirigami/>`_ builds on top of QtQuick
+and helps you write convergent applications. It features controls that adapt
+their presentation according to the device's form factor.
 
 .. figure:: /img/kirigami.jpg
    :scale: 25%
@@ -31,25 +41,26 @@ Use Qt Widgets only if you plan to develop a desktop-only application with a com
 
 .. hint::
    |devicon| To test qml scenes use
-   
+
    * ``QT_QUICK_CONTROLS_MOBILE=1`` and ``QT_QUICK_CONTROLS_STYLE=Plasma``
      for mobile
-   * ``QT_QUICK_CONTROLS_MOBILE=0`` and 
+   * ``QT_QUICK_CONTROLS_MOBILE=0`` and
      ``QT_QUICK_CONTROLS_STYLE=org.kde.desktop`` for desktop
 
-Plasma Workspace
-----------------
-Plasma is built on widgets, allowing you to move, mix, add, and remove just 
-about everything to perfect your personal workflow. Use `plasma components v3 
-<https://api.kde.org/frameworks/plasma-framework/html/plasmacomponents.html>`_ 
-to develop widgets for the :doc:`Plasma Mobile <pm:Introduction>` and Plasma 
-Desktop workspace.
+Plasma
+------
+Plasma is built out of widgets (also called Plasmoids), allowing you to move,
+mix, add, and remove just
+about everything to perfect your personal workflow.` Those are built
+using Plasma Components 3
+<https://api.kde.org/frameworks/plasma-framework/html/plasmacomponents
+.html>`_, which are based on Qt Quick Controls 2.
 
 .. figure:: /img/plasma-workspace.jpg
    :scale: 25%
-   :alt: Plasma desktop and mobile workspace
+   :alt: Plasma desktop and mobile
 
-   Plasma desktop and mobile workspace.
+   Plasma desktop and mobile.
 
 
 Common Components
