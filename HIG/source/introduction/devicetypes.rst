@@ -18,6 +18,10 @@ in :doc:`responsive`. For more extensive changes (for example, a tablet
 plugged into a docking station with a mouse and keyboard attached), an entirely
 different user interface paradigm may need to be presented.
 
+.. contents::
+  :depth: 1
+  :local:
+  :backlinks: none
 
 Desktop/Laptop
 --------------
