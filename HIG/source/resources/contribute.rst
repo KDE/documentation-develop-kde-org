@@ -36,6 +36,11 @@ If you are new to KDE development, make sure to read
 `how to become a KDE developer
 <https://community.kde.org/Get_Involved/development>`_ first.
 
+.. contents::
+  :depth: 1
+  :local:
+  :backlinks: none
+
 Getting Started
 ---------------
 
