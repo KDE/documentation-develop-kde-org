@@ -30,7 +30,7 @@ and actions easier to identify and learn.
    <https://community.kde.org/Guidelines_and_HOWTOs/Icon_Workflow_Tips>`_ if 
    you are interested in designing icons for your application. Or you can
    ask the `KDE Visual Design Group \
-   <https://community.kde.org/Get_Involved/design#Communication_and_workflow>`_ 
+   <https://community.kde.org/Get_Involved/design#Communication_and_Workflow>`_ 
    for help.
 
 General Guidelines
