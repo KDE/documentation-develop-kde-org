@@ -65,13 +65,13 @@ CentOS/RHEL                        ``sudo yum install git make python3``
       cd hig-kde-org
 
 #.  Create a Python 3 virtual environment, enable it and install the
-    requirements from ``requirements.lock`` into it:
+    requirements from ``requirements.txt`` into it:
 
     .. code-block:: sh
 
         python3 -m venv venv
         . venv/bin/activate
-        pip install -r requirements.lock
+        pip install -r requirements.txt
    
 Now you are ready to contribute to the HIG! To preview changes on your local
 machine, enter the directory of a website (``HIG`` or ``Kirigami``) and use
