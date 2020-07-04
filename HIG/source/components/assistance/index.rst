@@ -12,6 +12,7 @@ User Assistance
    progress
    statusbar
    tooltip
+   aboutview
 
 User assistance
 ---------------
@@ -31,3 +32,7 @@ Help
 ~~~~
 
 * :doc:`tooltip`
+
+Information
+~~~~~~~~~~~
+* :doc:`aboutview`

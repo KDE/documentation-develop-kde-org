@@ -17,6 +17,7 @@ _FRAMEWORKS = {
     'KNotifications': {},
     'KWidgetsAddons': {},
     'Plasma': {'url_slug': 'plasma-framework'},
+    'KCoreAddons': {},
 }
 
 html_theme_options = {
