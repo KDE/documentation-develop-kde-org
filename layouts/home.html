@@ -1,0 +1,57 @@
+{{ define "head_extension" }}
+  {{ $sass := resources.Get "scss/home.scss" }}
+  {{ $style := $sass | resources.ToCSS }}
+  <link href="{{ $style.Permalink }}" rel="stylesheet" />
+{{ end }}
+
+{{ define "main" }}
+  <section id="top">
+    <div class="container text-center">
+      <span class="kde-logo-big">K</span>
+      <h1>KDE developer platform</h1>
+      <p>Design, build and distribute beautiful, usable applications with KDE technologies</p>
+    </div>
+  </section>
+
+  {{ partial "develop_menu.html" . }}
+
+  <section>
+    <div class="container text-center">
+      <h2>Multi-platform</h2>
+      <p>Develop once, deploy everywhere. Build ontop of Qt, KDE technology works one every platforms.</p>
+      <ul class="list-inline text-center">
+        <li class="list-inline-item"><a href="" class="learn-more">Linux</a></li>
+        <li class="list-inline-item"><a href="" class="learn-more">Linux Mobile</a></li>
+        <li class="list-inline-item"><a href="" class="learn-more">Android</a></li>
+        <li class="list-inline-item"><a href="" class="learn-more">Windows</a></li>
+        <li class="list-inline-item"><a href="" class="learn-more">macOS</a></li>
+      </ul>
+        <div class="plasma-and-android position-relative row align-items-center w-75 mx-auto">
+          <div class="phone-with-overlay">
+             <img class="phone img-fluid mb-3" src="https://kde.org/content/plasma-desktop/phone.png" alt="empty phone with an overlay">
+             <div class="phone-overlay">
+               <img class="img-fluid mb-3" src="https://kde.org/content/plasma-desktop/kde-connect-android-notification.png" alt="KDE Connect menu" />
+             </div>
+          </div>
+          <div class="laptop-with-overlay">
+             <img class="laptop img-fluid mb-3" src="https://kde.org/content/plasma-desktop/laptop.png" alt="empty laptop with an overlay">
+             <div class="laptop-overlay">
+               <img class="w-100 img-fluid mb-3" src="https://kde.org/content/plasma-desktop/kde-connect-laptop-notification.png" />
+             </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="develop-hero" style="padding: 20px; height: auto;">
+    <div class="container text-center p-5" style="background-color: #333">
+      <h1 style="color: #EEE; font-size: 22px; font-weight: bold;">KDE Frameworks, enhance the Qt experience</h1>
+      <p style="color: #CCC; padding: 10px; max-width: 500px; margin: 0px auto;">80 add-on libraries for programming with Qt. Well tested and documented. Licensed under LGPL or MIT.</p>
+      <a class="learn-more" href="/products/frameworks/">Learn more</a>
+    </div>
+  </section>
+
+  {{ with .Content }}
+    {{ . }}
+  {{ end }}
+{{ end }}

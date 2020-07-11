@@ -1,0 +1,229 @@
+
+.bottomAlignRow div {
+  position: relative;
+  padding-bottom: 50px;
+}
+.bottomAlignRow div>a {
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  right: 15px;
+}
+#develop-plateforms {
+  background-color: rgba(61,174,233,.1)
+}
+#kirigami {
+  background-color: rgba(218,68,83,.07);
+}
+main section {
+  margin-top: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#top {
+  background: rgb(1,212,134);
+  background: linear-gradient(128deg, rgba(1,212,134,1) 0%, rgba(61,174,232,1) 100%); 
+  text-shadow: 0 0 0px #fff;
+  color: white;
+  padding-bottom: 100px;
+}
+
+#top p {
+  font-size: 24px;
+}
+
+.kde-logo-big {
+  background-color: inherit;
+  font-family: glyph;
+  font-size: 7em;
+}
+
+.block-navs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.tools {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-size: 20px;
+}
+
+.tool {
+  padding: 40px 10px;
+  flex-basis: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.tool, .block-nav {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.tool:hover, .block-nav:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.tool > img, .tool > div {
+  flex-basis: 50%;
+  color: black;
+}
+
+.tool .img {
+  vertical-align: middle;  
+}
+.tool img {
+  width: 128px;
+  height: auto;
+}
+
+.block-nav {
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 250px;
+  padding: 10px;
+  position: relative;
+  top: -30px;
+  background-color: white;
+}
+
+a.block-nav:hover {
+  transform: translateY(-1vh);
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+}
+
+.block-nav *, .block-nav *:hover {
+  color: black;
+}
+
+.block-nav i {
+  font-size: 3em;
+}
+
+.block-nav:nth-child(2) {
+  top: -70px;
+}
+
+.phone-with-overlay {
+  position: absolute;
+  z-index: 33;
+  width: 20%;
+  left: -70px;
+  bottom: 0px;
+}
+
+.list-inline-item .learn-more::after {
+  padding-left: 0.3em;
+  margin-right: 0.7em;
+}
+
+main h1 {
+  font-size:36px;
+}
+
+main h2 {
+  font-size:32px;
+}
+
+main h3 {
+  font-size:26px;
+}
+
+.more-apps {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.more-apps a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+
+.more-apps img {
+  width: 64px;
+  max-widht: 100%;
+}
+
+@media (max-width:768px) {
+  .block-navs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .block-nav:nth-child(2), .block-nav {
+    top: -90px;
+    margin-top: 40px;
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .phone-with-overlay {
+    width: 30%;
+    left: -70px;
+  }
+
+  .tools {
+    flex-direction: column;
+  }
+
+  .tools .tool {
+    margin-top: 3rem !important;
+  }
+
+  .tool div:nth-child(2) {
+    order: -1;
+  }
+}
+
+@media(prefers-color-scheme:dark) {
+  .tool,
+  .block-nav {
+    background-color: #31363b;
+  }
+  main h1,
+  .block-nav *,
+  .tool * {
+    color: #f1f1f1 !important;
+  }
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  grid-gap: 2rem;
+}
+
+.icons-grid-small {
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+}
+.icons-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.icons-grid i {
+  font-size: 300%;
+}
+
+#develop-hero {
+  background-image: url(https://kde.org/content/develop/devApps.png)
+}

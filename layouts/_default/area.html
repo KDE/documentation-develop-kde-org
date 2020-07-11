@@ -1,0 +1,15 @@
+{{ define "head_extension" }}
+  {{ $sass := resources.Get "scss/home.scss" }}
+  {{ $style := $sass | resources.ToCSS }}
+  <link href="{{ $style.Permalink }}" rel="stylesheet" />
+{{ end }}
+
+{{ define "main" }}
+  <section id="top" class="small-top p-5">
+    <div class="container text-center">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.subtitle }}</p>
+    </div>
+  </section>
+  {{ .Content }}
+{{ end }}
