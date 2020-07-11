@@ -11,7 +11,7 @@ Since KDE 1.0, KDE supports the legacy X11R4 and ICCCM session management protoc
 
 Since KDE 2.0, KDE also supports the standard X11R6 session management protocol XSMP and uses it. You can download the official documentation of the standard from the X Consortium's FTP server [ftp.x.org](http://stuff.mit.edu/afs/sipb/contrib/doc/X11/hardcopy/SM/xsmp.PS.gz). Unlike the legacy protocols, the new X11R6 session management gives a chance to save application dependent settings when you log out. A text editor, for instance, would save the names of the loaded files and would reload them when you log in again. Another major advantage of the new protocol is the support for a clean and safe logout procedure even if the users decides not to restore the session next time. The protocol gives applications the possibility to interact with the user if they are in danger to lose some data, and to cancel the shutdown process if necessary. 
 
-## Further Reading
+### Further Reading
 
 An introductory overview of session management functionality and the Qt API for it is available from [Qt documentation](https://doc.qt.io/qt-5/session.html).
 
