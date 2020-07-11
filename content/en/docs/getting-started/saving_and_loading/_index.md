@@ -2,6 +2,7 @@
 title: Saving and loading 
 description: >
   Introduces the KIO library while adding loading and saving support to our application.
+weight: 4
 ---
 
 ## Introduction

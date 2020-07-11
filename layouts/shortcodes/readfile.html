@@ -2,7 +2,16 @@
 {{- if eq (.Get "markdown") "true" -}}
 {{- $file  | readFile | markdownify -}}
 {{- else if  (.Get "highlight") -}}
-{{-  highlight ($file  | readFile) (.Get "highlight") "" -}}
+  {{- if (or (.Get "start") (.Get "lines")) -}}
+    {{- $fileContent := $file  | readFile -}}
+    {{- $fileContent = split $fileContent "\n" -}}
+    {{- $fileContent = first ((default 9999 (.Get "lines"))) (after (default 0 (.Get "start")) $fileContent) -}}
+    {{- $fileContent = delimit $fileContent "\n" -}}
+    {{- $args := (print "linenos=table,linenostart=" (default 0 (add (int (.Get "start")) 1))) -}}
+    {{-  highlight ($fileContent) (.Get "highlight") $args -}}
+  {{- else -}}
+    {{-  highlight ($file  | readFile) (.Get "highlight") "linenos=table" -}}
+  {{- end -}}
 {{- else -}}
 {{ $file  | readFile | safeHTML }}
 {{- end -}}
