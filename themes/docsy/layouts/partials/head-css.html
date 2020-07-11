@@ -1,11 +1,2 @@
-
-{{ $scssMain := "scss/main.scss"}}
-{{ if .Site.IsServer }}
-{{/* Note the missing postCSS. This makes it snappier to develop in Chrome, but makes it look sub-optimal in other browsers. */}}
-{{ $css := resources.Get $scssMain | toCSS (dict "enableSourceMap" true) }}
-<link href="{{ $css.RelPermalink }}" rel="stylesheet">
-{{ else }}
-{{ $css := resources.Get $scssMain | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
-<link rel="preload" href="{{ $css.RelPermalink }}" as="style">
-<link href="{{ $css.RelPermalink }}" rel="stylesheet" integrity="{{ $css.Data.integrity }}">
-{{ end }}
+<link href="https://cdn.kde.org/aether-devel/version/aether-docsy.4bd70baf.css" rel="stylesheet" />
+<link href="https://cdn.kde.org/breeze-icons/icons.css" rel="stylesheet" />
