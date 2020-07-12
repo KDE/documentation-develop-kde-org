@@ -18,7 +18,7 @@ These configuration objects are broken down into a two level hierarchy: groups a
 
 Values stored may be of any number of data types. They are stored and retrieved as the objects themselves. For example, a QColor object is passed to a config object directly when storing a color value and when retrieved a QColor object is returned. Applications themselves therefore generally do not have to perform serialization and deserialization of objects themselves. 
 
-## The KConfig Class
+### The KConfig Class
 
 The [KConfig](https://api.kde.org/frameworks/kconfig/html/classKConfig.html) object is used to access a given configuration object. There are a number of ways to create a config object: 
 
@@ -31,10 +31,10 @@ KConfig config("myapprc");
 KConfig fullPath("/etc/kderc");
 
 // not merged with global values
-KConfig globalFree( "localsrc", KConfig::NoGlobals );
+KConfig globalFree("localsrc", KConfig::NoGlobals);
 
 // not merged with globals or the $KDEDIRS hierarchy
-KConfig simpleConfig( "simplerc", KConfig::SimpleConfig );
+KConfig simpleConfig("simplerc", KConfig::SimpleConfig);
 
 // outside the standard config resource
 KConfig dataResource("data", KConfig::SimpleConfig, QStandardPaths::AppDataLocation);
@@ -52,7 +52,7 @@ Line 9 sees the creation of a configuration object that is not merged with the g
 
 Finally on line 18 we see the creation of a configuration object that does not exist in the config resource but rather in the application data resource. You may use any StandardLocation that QStandardPaths contains.
 
-## Special Configuration Objects
+### Special Configuration Objects
 
 Each application has its own configuration object that uses the name provided to [KAboutData](https://api.kde.org/frameworks/kcoreaddons/html/classKAboutData.html) appended with "rc" as its name. So an app named "myapp" would have the default configuration object of "myapprc" (located in $HOME/.local/config/). This configuration file can be retrieved in this way: 
 
@@ -82,11 +82,68 @@ MyClass::MyClass()
 
 Finally there is a global configuration object, `kdeglobals`, that is shared by every application. It holds such information as the default application shortcuts for various actions. It is "blended" into the configuration object if the `KConfig::IncludeGlobals` flag is passed to the KConfig constructor, which is the default. 
 
-## Commonly Useful Methods
+### Commonly Useful Methods
 
 To save the current state of the configuration object we call the `sync()` method. This method is also called when the object is destroyed. If no changes have been made or the resource reports itself as non-writable (such as in the case of the user not having write permissions to the file) then no disk activity occurs. `sync()` merges changes performed concurrently by other processes - local changes have priority, though. 
 
+If we want to make sure that we have the latest values from disk we can call `reparseConfiguration()` which calls `sync()` and then reloads the data from disk. 
 
+If we need to prevent the config object from saving already made modifications to disk we need to call `markAsClean()`. A particular use case for this is rolling back the configuration to the on-disk state by calling `markAsClean()` followed by `reparseConfiguration()`. 
 
+Listing all groups in a configuration object is as simple as calling `groupList()` as in this code snippet: 
 
+```cpp
+const KSharedConfigPtr config = KGlobal::mainComponent().config();
 
+for (const QString& group: qAsConst(config->groupList())) {
+    kDebug() << "next group:" << group;
+}
+```
+
+## KSharedConfig
+
+The [KSharedConfig](https://api.kde.org/frameworks/kconfig/html/classKSharedConfig.html) class is a reference counted pointer to a [KConfig](https://api.kde.org/frameworks/kconfig/html/classKConfig.html). It thus provides a way to reference the same configuration object from multiple places in your application without the extra overhead of separate objects or concerns about synchronizing writes to disk even if the configuration object is updated from multiple code paths. 
+
+Accessing a [KSharedConfig](https://api.kde.org/frameworks/kconfig/html/classKSharedConfig.html) object is as easy as this: 
+
+```cpp
+KSharedConfigPtr config = KSharedConfig::openConfig("ksomefilerc");
+```
+
+`openConfig()` take the same parameters as `KConfig`'s constructors do, allowing one to define which configuration file to open, flags to control merging and non-config resources. 
+
+`KSharedConfig` is generally recommended over using `KConfig` itself.
+
+## KConfigGroup
+
+Now that we have a configuration object, the next step is to actually use it. The first thing we must do is to define which group of key/value pairs we wish to access in the object. We do this by creating a `KConfigGroup` object: 
+
+```cpp
+KConfig config;
+KConfigGroup generalGroup( &config, "General" );
+KConfigGroup colorsGroup = config.group( "Colors" ); // ... or a bit differently ...
+```
+
+You can pass [KConfig](https://api.kde.org/frameworks/kconfig/html/classKConfig.html) or [KSharedConfig](https://api.kde.org/frameworks/kconfig/html/classKSharedConfig.html) objects to [KConfigGroup](https://api.kde.org/frameworks/kconfig/html/classKConfigGroup.html). 
+
+Config groups can be nested as well: 
+
+```cpp
+KConfigGroup subGroup1(&generalGroup, "LessGeneral");
+KConfigGroup subGroup2 = colorsGroup.group("Dialogs");
+```
+
+## Reading Entries
+
+With a [KConfigGroup](https://api.kde.org/frameworks/kconfig/html/classKConfigGroup.html) object in hand reading entries is now quite straight forward: 
+
+```cpp
+QString accountName = generalGroup.readEntry("Account",
+                                             QString());
+QColor color = colorsGroup.readEntry("background",
+                                      Qt::white);
+QStringList list = generalGroup.readEntry("List",
+                                          QStringList());
+QString path = generalGroup.readPathEntry("SaveTo",
+                                          defaultPath);
+```
