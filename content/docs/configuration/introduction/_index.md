@@ -147,3 +147,59 @@ QStringList list = generalGroup.readEntry("List",
 QString path = generalGroup.readPathEntry("SaveTo",
                                           defaultPath);
 ```
+
+As can be seen from the above, you can mix reads from different `KConfigGroup` objects created on the same `KConfig` object. The read methods take the key, which is case sensitive, as the first argument and the default value as the second argument. This argument controls what kind of data, e.g. a color in line 3 above, is to be expected as well as the type of object returned. The returned object is wrapped in a `QVariant` to make this magic happen. 
+
+There are a couple of special read methods, including `readPathEntry` which returns a file system path. It is vital that one uses `readPathEntry` if it is a path as this enables such features as roaming profiles to work properly. 
+
+If no such key currently exists in the configuration object, the default value is returned instead. If there is a localized (e.g. translated into another language) entry for the key that matches the current locale, that is returned. 
+
+## Writing Entries
+
+Setting new values is similarly straightforward: 
+
+```cpp
+generalGroup.writeEntry("Account", accountName);
+generalGroup.writePathEntry("SaveTo", savePath);
+colorGroup.writeEntry("background", color);
+generalGroup.config()->sync();
+```
+
+Note the use of `writePathEntry` and how the type of object we use, such as [QColor](https://doc.qt.io/qt-5/qcolor.html) on line 3, dictates how the data is serialized. Additionally, once we are done writing entries, `sync()` must be called on the config object for it to be saved to disk. We can also simply wait for the object to be destroyed, which triggers an automatic `sync()` if necessary. 
+
+## KDesktopFile: A Special Case
+
+When is a configuration file not a configuration file? When it is a [desktop](http://freedesktop.org/wiki/Specifications/desktop-entry-spec) file. These files, which are essentially configuration files at their heart, are used to describe entries for application menus, mimetypes, plugins and various services. 
+
+When accessing a .desktop file, one should instead use the [KDesktopFile](https://api.kde.org/frameworks/kconfig/html/classKDesktopFile.html) class which, while a [KConfig](https://api.kde.org/frameworks/kconfig/html/classKConfig.html) class offering all the capabilities described above, offers a set of methods designed to make accessing standard attributes of these files consistent and reliable. 
+
+## Kiosk: Lockdown and User/Group Profiles
+
+KConfig provides a powerful set of lockdown and configuration definition capabilities, collectively known as "Kiosk", that many system administrators and system integrators rely on. While most of this framework is provided transparently to the application, there is occassion when an application will want to check on the read/write status of a configuration object. 
+
+Entries in configuration objects that are locked down using the kiosk facilities are said to be immutable. An application can check for immutability of entire configuration objects, groups or keys as shown in this example: 
+
+```cpp
+KSharedConfigPtr config = KGlobal::config();
+
+if (config->isImmutable()) {
+    kDebug() << "configuration object is immutable";
+}
+
+KConfigGroup group(config, "General");
+if (group.isImmutable()) {
+    kDebug() << "group General is immutable";
+}
+
+if (group.isEntryImmutable("URL")) {
+    kDebug() << "URL entry in group General is immutable";
+}
+```
+
+This can be useful in particular situations where an action should be taken when an item is immutable. For instance, the KDE panels will not offer configuration options to the user or allow them to otherwise change the order of applets and icons when the panel's configuration object is marked as immutable. 
+
+## KConfig XT
+
+There is a way to make certain use cases of KConfig easier, faster and more reliable: KConfig XT. In particular, for main application or plugin configuration objects and when syncing configuration dialogs and other interfaces with these values, KConfig XT can help immensely. It also simultaneously documents the configuration options available, which makes every sys admin and system integrator that uses KDE that much more happy. 
+
+[The next tutorial in the KConfig series covers what KConfig XT is and how to use it.](../kconfig_xt)
