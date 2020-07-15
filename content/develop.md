@@ -18,7 +18,7 @@ menu:
     <p>
       Use KDE Frameworks to solve common problems. Write your applications inside
       KDevelop, the powerful KDE IDE. Improve the performace of your apps using 
-      KDE profilers and ananalyse your application for common problems with the
+      KDE profilers and analyse your application for common problems with the
       Clazy static code analyser.
     </p>
   </div>
