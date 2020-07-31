@@ -1,7 +1,7 @@
 ---
 title: Distribute
 titleLink: Distribute
-subtitle: Get your applications to your user
+subtitle: Get your applications to your users
 weight: 30
 menu:
   main:
@@ -9,16 +9,9 @@ menu:
 layout: area
 ---
 
-<section>
+<section class="py-2">
   <div class="container text-center">
-    <h2>Get your application to the Linux distributions</h2>
-    <p>Learn how to <a href="https://community.kde.org/ReleasingSoftware">release your software</a> and <a href="https://community.kde.org/ReleasingSoftware#Announcing_the_Release">announce the new release</a>, so that it get picked up by Linux distributions.</p>
-  </div>
-</section>
-
-<section>
-  <div class="container text-center">
-    <h2>Release your software yourself</h2>
+    <h2 class="mb-3">Release your software</h2>
     <div class="tools">
       <a class="tool" href="https://kdevelop.org">
         <div>
@@ -48,7 +41,7 @@ layout: area
   </div>
 </section>
 
-<section>
+<!-- <section>
   <div class="container text-center">
     <h2>TODO Windows</h2>
   </div>
@@ -64,14 +57,14 @@ layout: area
   <div class="container text-center">
     <h2>TODO Android</h2>
   </div>
-</section>
+</section> -->
 
 <section>
   <div class="container text-center">
     <h2>KNewStuff</h2>
     <p><a href="https://api.kde.org/frameworks/knewstuff/html/index.html">KNewStuff</a> let your users create and distribute addons for your application via <a href="https://store.kde.org">store.kde.org</a></p>
-    <img src="/develop/knewstuff.png" class="img-fluid" />
     <a class="d-block learn-more" href="https://api.kde.org/frameworks/knewstuff/html/index.html">Learn more</a>
+    <img src="/develop/knewstuff.png" class="img-fluid" />
   </div>
 </section>
 
