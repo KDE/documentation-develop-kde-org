@@ -7,7 +7,7 @@ description: >
 ---
 
 The main idea behind KConfigXT is to provide a more convenient way to manage
-your application's configurations for the developers but also for the system
+your application's configurations for both for developers and system
 administrators who manage large KDE installations.
 
 KConfigXT generates a ready-to-use C++ class from an XML definition file
