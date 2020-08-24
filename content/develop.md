@@ -7,10 +7,11 @@ weight: 20
 ---
 
 <section class="container">
-  <div style="max-width: 800px" class="mx-auto">
+  <div class="mx-auto">
     <p>
-      Focused on speed and multiplatform technologies, Qt is the fastest and smartest
-      way to produce industry-leading software that users love.
+      Focused on speed and multiplatform technologies, Qt and KDE technologies is
+      the fastest and smartest way to produce industry-leading software that users
+      love.
     </p>
     <p>
       Use KDE Frameworks to solve common problems. Write your applications inside
@@ -54,8 +55,8 @@ weight: 20
 <section id="kirigami">
   <div class="text-center pl-5 pr-5 img-fluid container">
     <h2>Develop Convergent Apps with Kirigami</h2>
-    <p>Kirigami is a new, convergent, responsive, elegant, and open cross-platform toolkit using QML.</p>
-    <div class="laptop-with-overlay text-center">
+    <p class="mb-5">Kirigami is a new, convergent, responsive, elegant, and open cross-platform toolkit using QML.</p>
+    <div class="laptop-with-overlay text-center position-relative">
       <img class="laptop img-fluid mb-3" src="https://kde.org/content/plasma-desktop/laptop.png" alt="">
       <div class="laptop-overlay">
         <img class="img-fluid mb-3" src="/develop/kirigami_code_view.png" alt="Kirigami application with source code" />
