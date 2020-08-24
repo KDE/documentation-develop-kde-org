@@ -35,7 +35,7 @@ GenericName=Some Generic Name
 GenericName[fr]=Un nom générique
 ```
 
-If you are using KDE infrastructure, this is done automatically by the `scripy`.
+If you are using KDE infrastructure, this is done automatically by `scripy`, the KDE translation script.
 
 ## Install the .desktop file
 
