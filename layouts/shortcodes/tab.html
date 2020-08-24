@@ -1,0 +1,3 @@
+<div class="tab-pane show{{ if eq "python" "python" }}active{{ end }}" id="{{ .Get 0 }}" role="tabpanel" aria-labelledby="{{ .Get 0 }}-tab">
+  {{ highlight .Inner (.Get 0) "linenos=table" }}
+</div>

@@ -4,9 +4,6 @@ subtitle: Develop featurful applications with KDE and Qt technologies
 layout: area
 linkTitle: Develop
 weight: 20
-menu:
-  main:
-    weight: 10
 ---
 
 <section class="container">
