@@ -2,18 +2,21 @@
   {{ $sass := resources.Get "scss/home.scss" }}
   {{ $style := $sass | resources.ToCSS }}
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
+  {{ with .Params.scss }}
+    {{ $sass := resources.Get . }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link href="{{ $style.Permalink }}" rel="stylesheet" />
+  {{ end }}
 {{ end }}
 
 {{ define "main" }}
   <section id="top" class="small-top p-5">
     <div class="container text-center">
+      {{ with .Params.logo }}
+        <img src="{{ . }}" class="text-center img-fluid mt-5" width=100 height=100 />
+      {{ end }}
       <h1>{{ .Title }}</h1>
       <p>{{ .Params.subtitle }}</p>
-      <div class="row justify-content-center">
-        <a class="text-white mx-3" href="/design">Design</a>
-        <a class="text-white mx-3" href="/develop">Develop</a>
-        <a class="text-white mx-3" href="/distribute">Distribute</a>
-      </div>
     </div>
   </section>
   {{ .Content }}

@@ -92,17 +92,21 @@ p {
   height: auto;
 }
 
-.block-nav {
-  margin-left: 20px;
-  margin-right: 20px;
-  max-width: 250px;
-  padding: 10px;
+.block-nav, .shadow {
+  display: block;
   position: relative;
+}
+
+.block-nav {
   top: -30px;
+  margin-left: 20px;
+  padding: 10px;
+  max-width: 250px;
+  margin-right: 20px;
   background-color: white;
 }
 
-a.block-nav:hover {
+a.block-nav:hover, a.shadow:hover {
   transform: translateY(-1vh);
   box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
 }
@@ -221,8 +225,14 @@ main h3 {
 }
 
 .plasma-and-android {
-  height: 500px;
+  height: 400px;
   overflow: hidden;
+}
+
+@media (min-width: 800px) {
+  .plasma-and-android {
+    height: 500px;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -234,6 +244,16 @@ main h3 {
 @media (min-width: 1400px) {
   .plasma-and-android {
     height: 700px;
+  }
+}
+@media (min-width: 1700px) {
+  .plasma-and-android {
+    height: 800px;
+  }
+}
+@media (min-width: 2000px) {
+  .plasma-and-android {
+    height: 900px;
   }
 }
 
@@ -259,4 +279,5 @@ main h3 {
   left: 15%;
   bottom: -10px;
   z-index: 33;
+  max-width: 200px
 }

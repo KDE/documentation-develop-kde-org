@@ -6,22 +6,6 @@ linkTitle: Develop
 weight: 20
 ---
 
-<section class="container">
-  <div class="mx-auto">
-    <p>
-      Focused on speed and multiplatform technologies, Qt and KDE technologies is
-      the fastest and smartest way to produce industry-leading software that users
-      love.
-    </p>
-    <p>
-      Use KDE Frameworks to solve common problems. Write your applications inside
-      KDevelop, the powerful KDE IDE. Improve the performace of your apps using 
-      KDE profilers and analyse your application for common problems with the
-      Clazy static code analyser.
-    </p>
-  </div>
-</section>
-
 <section>
   <div class="container">
     <h2 class="text-center">KDE Frameworks</h2>
@@ -115,6 +99,45 @@ weight: 20
         </a>
       </div>
       <a href="/applications/development" class="learn-more mt-3">See All Tools</a>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="text-center">
+    <h2>Start building your first KDE application</h2>
+    <p></p>
+  </div>
+  <div class="row ">
+    <div class="col-12 col-sm-6 p-3 d-flex">
+      <a href="#" class="shadow p-4">
+        <h3>Getting started with QtWidgets and KXmlGui</h3>
+      </a>
+    </div>
+    <div class="col-12 col-sm-6 p-3 d-flex">
+      <a href="#" class="shadow p-4">
+        <h3>Getting started with QtQuick and Kirigami</h3>
+      </a>
+    </div>
+    <div class="col-12 col-sm-3 p-3 d-flex">
+      <a href="https://kdevelop.org" class="shadow p-3 w-100">
+        <h3>KDevelop</h3>
+      </a>
+    </div>
+    <div class="col-12 col-sm-3 p-3 d-flex">
+      <a href="https://kde.org/applications/en/development/org.kde.clazy" class="shadow p-3 w-100">
+        <h3>Clazy</h3>
+      </a>
+    </div>
+    <div class="col-12 col-sm-3 p-3 d-flex">
+      <a href="#" class="shadow p-3 w-100">
+        <h3>KDevelop1</h3>
+      </a>
+    </div>
+    <div class="col-12 col-sm-3 p-3 d-flex">
+      <a href="#" class="shadow p-3 w-100">
+        <h3>KDevelop2</h3>
+      </a>
     </div>
   </div>
 </section>
