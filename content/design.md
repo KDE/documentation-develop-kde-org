@@ -40,17 +40,20 @@ layout: area
      <i class="icon icon_format-text-code"></i>
     </div>
     </div>
-    <div class="text-align"><a href="https://cgit.kde.org/breeze-icons.git/about/" class="learn-more">Learn more</a>
+    <div class="text-align"><a href="/frameworks/breeze-icons" class="learn-more">Learn more</a>
   </div>
 </section>
 
 <section>
   <div class="container text-center">
     <h2>Cuttelfish</h2>
-    <p>Help you find the right icons for your applications</p>
+    <p>Cuttelfish is the app helping you find the perfect icons for your applications.</p>
     <div class="text-center">
-      <img class="w-75 img-fluid shadow" src="https://origin.cdn.kde.org/screenshots/cuttlefish/cuttlefish.png" />
+      <img class="w-75 mx-auto img-fluid shadow" src="https://origin.cdn.kde.org/screenshots/cuttlefish/cuttlefish.png" />
     </div>
+    <a class="noblefir ml-auto align-self-center mt-4" id="install-button" href="appstream://org.kde.cuttelfish.desktop" data-windows="">
+      <span id="install-msg">Install on Linux</span>
+    </a>
   </div>
 </section>
 
@@ -59,7 +62,7 @@ layout: area
     <h2>KDE Human Interface Guidelines</h2>
     <p>The KDE Human Interface Guidelines (HIG) offer designers and developers a set of recommendations for producing beautiful, usable, and consistent user interfaces for convergent desktop and mobile applications and workspace widgets. Their aim is to improve the experience for users by making application and widget interfaces more consistent and hence more intuitive and learnable.</p>
     <div class="text-center mt-3 mb-4">
-      <a href="https://hig.kde.org" class="learn-more">Learn More</a> 
+      <a href="https://hig.kde.org" class="learn-more">Read KDE HIG</a> 
     </div>
     <a href="https://hig.kde.org"><img class="w-100 img-fluid" src="https://hig.kde.org/_images/HIGDesignVisionFullBleed.png" /></a>
   </div>

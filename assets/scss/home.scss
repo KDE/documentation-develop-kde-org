@@ -203,21 +203,24 @@ main h3 {
 }
 
 .icons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
-  grid-gap: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 1rem;
+  }
+
+  i {
+    font-size: 300%;
+  }
 }
 
-.icons-grid-small {
-  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
-}
-.icons-grid img {
-  width: 100%;
-  height: auto;
-}
-
-.icons-grid i {
-  font-size: 300%;
+.icons-grid-small img {
+  width: 64px;
+  height: 64px;
 }
 
 #develop-hero {
