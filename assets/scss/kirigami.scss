@@ -1,0 +1,53 @@
+.kirigami-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-image: none;
+  background: url('/kirigami/kirigami-icon.svg') no-repeat,
+    linear-gradient(144.64deg, #E93A9A 0%, #E9643A 64.86%, #EF973C 100%);
+  background-position: bottom left, right;
+  background-size: contain;
+  background-origin: border-box ;
+  min-height: 500px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  text-align: center;
+  text-shadow: 2px 2px 7px #222;
+
+  h1 {
+    color: #fafafa !important;
+    font-size: 32px !important;
+    line-height: 120%;
+    background-image: none !important;
+  }
+
+  .header-logo{
+    font-family: glyph;
+    font-size: 4rem !important;
+    margin-bottom: 0px;
+    width: 100%
+  }
+
+  p {
+    color: #fcfcfc !important;
+    line-height: 120% !important;
+    @media (max-width: 1000px) {
+      font-weight: semi-bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  p:not(.header-logo){
+    width: 40% !important;
+  }
+}
+
+.kirigami-devices {
+  align-self: center;
+  height: 400px;
+  @media (max-width: 700px) {
+    height: 200px;
+  }
+}

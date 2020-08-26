@@ -1,118 +1,103 @@
 ---
 layout: single
+scss: "scss/kirigami.scss"
+layout: framework
 ---
-<link href="https://cdn.kde.org/aether-devel/products/kirigami.css?2" rel="stylesheet" />
-<link href="https://cdn.kde.org/aether-devel/products.css?2" rel="stylesheet" />
 
-<main>
-<article class="splashLogo">
+<section class="kirigami-header">
   <h1><p class="header-logo">K</p>Kirigami UI Framework</h1>
   <p>Build beautiful, convergent apps that run on phones to televisions, and everything in between.</p>
-</article>
+</section>
 
-
-<article class="section-links">
-<div class="getstarted"> 
-  <div class="getstarted-cards row">
-    <div class="col-md">
-      <div class="card text-center d-flex align-items-stretch">
-        <a href="http://kde.carlschwan.eu/docs/kirigami/" target="_blank">
-          <h1><i class="icon icon_document-share"></i></h1>
-          <h3>Learn</h3>
-          Learn how to build beautiful apps with Kirigami
-        </a>
-      </div>      
-    </div>
-    <div class="col-md">
-      <div class="card text-center d-flex align-items-stretch">
-        <a href="https://hig.kde.org/" target="_blank">
-          <h1><i class="icon icon_draw-watercolor"></i></h1>
-          <h3>HIG</h3>
-          Learn about the design underlying Kirigami apps
-        </a>
-      </div>  
-    </div>
-    <div class="col-md">
-      <div class="card text-center d-flex align-items-stretch">
-        <a href="https://api.kde.org/frameworks/kirigami/html/index.html" target="_blank">
-          <h1><i class="icon icon_anchor"></i></h1>
-          <h3>API Reference</h3>
-          See what Kirigami has to offer for your app
-        </a>
-      </div>  
-    </div>
-  </div>
-  <div class="getstarted-text">
-    <h3>Apps built with Kirigami</h3>
-    Developers around the world the world have used Kirigami to build stunning applications.    
+<div>
+  <div class="container text-center block-navs">
+    <a href="/docs/kirigami/" target="_blank" class="block-nav">
+      <i class="icon icon_document-share"></i>
+      <h2>Learn</h2>
+      <p>Learn how to build beautiful apps with Kirigami</p>
+    </a>
+    <a href="https://hig.kde.org/" target="_blank" class="block-nav">
+      <i class="icon icon_draw-watercolor"></i>
+      <h2>HIG</h2>
+      <p>Learn about the design underlying Kirigami apps</p>
+    </a>
+    <a href="https://api.kde.org/frameworks/kirigami/html/index.html" class="block-nav">
+      <i class="icon icon_anchor"></i>
+      <h2>API Reference</h2>
+      <p>See what Kirigami has to offer for your app</p>
+    </a>
   </div>
 </div>
-</article>
 
-<div class="kirigami-apps">
-  <article class="section-koko columns">
-      <div class="image img-fluid"></div>
-      <div>
-        <h1>Koko</h1>
-        <p>
-          A convergent photo gallery built using Kirigami and KDE frameworks
-        </p>
-      </div>
-  </article>
-  <article class="section-subsurface columns">
-    <div class="image img-fluid"></div>
-      <div>
-        <h1>Subsurface</h1>
-        <p>
-          A dive log application created by Linus Torvalds built using Kirigami with support for Linux, Windows, macOS, iOS, Android, and iPadOS.
-        </p>
-      </div>
-  </article>
-</div>
-  <article class="section-convergent columns">
-    <div class="image"></div>
-    <div>
-      <h1>Convergent.</h1>
-      <p>
-        The line between desktop and mobile is blurring, and users expect the same quality
-        experience on every device. Applications using Kirigami adapt brilliantly to
-        mobile, desktop, and everything in between.
-      </p>
+<section class="section-green">
+  <div class="container d-flex flex-column flex-md-row">
+    <img class="img-fluid order-2 order-md-0" src="koko.png" />
+    <div class="order-1 order-md-1">
+      <h2>Koko</h2>
+      <p>A convergent photo gallery built using Kirigami and KDE frameworks</p>
     </div>
-  </article>
-  <article class="section-responsive">
-    <div class="image"></div>
+  </div>
+</section>
+
+<section class="section-blue">
+  <div class="container d-flex flex-column flex-md-row">
     <div>
-      <h1>Responsive.</h1>
+      <h2 class="mt-0">Subsurface</h2>
+      <p>A dive log application created by Linus Torvalds with <br />
+        Kirigami with support for Linux, Windows, macOS, iOS, Android, and iPadOS.</p>
+    </div>
+    <img class="img-fluid" src="subsurface-desktop.png" />
+  </div>
+</section>
+
+<section class="d-flex">
+  <img src="kirigami-devices.png" class="img-fluid kirigami-devices"/>
+  <div class="align-self-center container">
+    <h2>Convergent.</h2>
+    <p>
+      The line between desktop and mobile is blurring, and users expect the same quality
+      experience on every device. Applications using Kirigami adapt brilliantly to
+      mobile, desktop, and everything in between.
+    </p>
+  </div>
+</section>
+
+<section class="section-blue">
+  <div class="container">
+    <div class="text-center order-1 order-md-0">
+      <img src="kirigami-adapt.png" class="img-fluid" style="width: 600px" />
+    </div>
+    <div class="order-0 order-md-2">
+      <h2 class="text-center">Responsive.</h2>
       <p>
         Kirigami apps adapt to more than just the devices we use them on, always
         offering the optimal layout depending on how they are used by your audience.
       </p>
     </div>
-  </article>
-  <article class="section-elegant columns">
-    <div class="image"></div>
-    <div>
-      <h1>Elegant.</h1>
-      <p>
-        Kirigami is smooth and animated, uses consistent components,
-        and a clearly defined workflow. People using Kirigami will appreciate the
-        smart workflow and no-gimmick design.
-      </p>
-    </div>
-  </article>
-  <article class="section-open columns">
-    <div class="image"></div>
-    <div>
-      <h1>Open.</h1>
-      <p>
-        Kirigami is built entirely on open technologies by the KDE community,
-        developers will never need to pay fees for it, nor will they be locked into
-        a specific platform. Be confident knowing that Kirigami gives control back
-        to developers,
-      </p>
-      <p>Kirigami is one of the 70 <a href="/products/frameworks">KDE Frameworks</a>, a collection of high quality add on libraries for Qt apps.</p>
-    </div>
-  </article>
+  </div>
+</section>
 
-</main>
+<article class="d-flex container flex-column flex-md-row">
+  <div class="align-self-center">
+    <h2>Elegant.</h2>
+    <p>
+      Kirigami is smooth and animated, uses consistent components,
+      and provides a clearly defined workflow. Users of Kirigami apps will appreciate the
+      smart workflow and no-gimmick design.
+    </p>
+  </div>
+  <img src="subsurface.png" class="img-fluid" style="width: 600px" />
+</article>
+
+<article class="container">
+  <div>
+    <h2>Open.</h2>
+    <p>
+      Kirigami is built entirely on open technologies by the KDE community,
+      developers will never need to pay fees for it, nor will they be locked into
+      a specific platform. Be confident knowing that Kirigami gives control back
+      to developers and users.
+    </p>
+    <p>Kirigami is one of the 70 <a href="/products/frameworks">KDE Frameworks</a>, a collection of high quality add on libraries for Qt apps.</p>
+  </div>
+</article>
