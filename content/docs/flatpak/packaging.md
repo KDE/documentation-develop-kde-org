@@ -2,6 +2,7 @@
 title: Distributing KDE Software as Flatpak
 description: The new decentralized packaging standard for Linux applications
 weight: 1
+---
 
 Flatpak is a new package format in the Linux world that works on many Linux
 distributions and give back control to the application developers. Many Flatpak
@@ -25,24 +26,24 @@ Building flatpaks is pretty easy, and consists mostly of three steps:
   A list of all posible keys for a flatpak manifest can be found in the official [flatpak documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html#flatpak-manifest), but in most cases a simple recipe can be enough.
   
   This is a minimal manifest for Kate:
-  ```JSON
-  {
-    "id": "org.kde.kate",
-    "runtime": "org.kde.Platform",
-    "runtime-version": "5.14",
-    "sdk": "org.kde.Sdk",
-    "command": "kate",
-    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
 
-    "modules": [
-        { 
-            "name": "kate",
-            "buildsystem": "cmake-ninja",
-            "sources": [ { "type": "git", "url": "https://invent.kde.org/utilities/kate.git"} ]
-        }
-    ]
-  }
-  ```
+{{< code-toggle prefix="kate" >}}id: org.kde.kate
+runtime: org.kde.Platform
+runtime-version: "5.14"
+sdk: org.kde.Sdk
+command: kate
+finish-args:
+  - "--share=ipc"
+  - "--socket=x11"
+  - "--socket=wayland"
+modules:
+  - name: kate
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://invent.kde.org/utilities/kate.git
+{{< /code-toggle >}}
+
 * Building the binary. Although the final binary will be built on a CI system, you'll need to test your manifest locally.
   A useful command for that is `flatpak-builder build --force-clean --ccache org.kde.kate.json`. It will build the application in a directory called "build", clean the directory if needed and cache the build files so later builds will be faster.
   
