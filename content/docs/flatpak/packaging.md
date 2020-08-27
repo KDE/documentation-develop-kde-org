@@ -1,6 +1,14 @@
 # Distributing KDE Software as Flatpak
 
-Flatpak is a new package format in the Linux world, and it differs from traditional packages in areas like dependency management.
+Flatpak is a new package format in the Linux world that works on many Linux
+distributions and give back control to the application developers. Many Flatpak
+applications are distributed via [Flathub](https://flathub.org), but Flatpaks is
+decentralized by nature and applications can be provided using alternatives sources.
+
+Flatpak applications can be downloaded using Discover (KDE Software Center) GNOME 
+Software and another software center compatible with Flatpak.
+
+One of the key deference with traditional packages is dependency management.
 Instead of depending on many other packages and unpacking all of them into one system directory, flatpak uses so called runtimes.
 Runtimes collect common frameworks and libraries used for a specific kind of application. In our case, that's the KDE Flatpak Runtime.
 Once users installed the common KDE runtime, applications don't have any further dependencies, and can be distributed together with their more special library requirements (like a protocol implementation for an instant messenger) in one flatpak package.
