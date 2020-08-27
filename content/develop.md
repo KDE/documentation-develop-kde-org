@@ -6,51 +6,7 @@ linkTitle: Develop
 weight: 20
 ---
 
-<section>
-  <div class="container">
-    <h2 class="text-center">KDE Frameworks</h2>
-    <p>
-      The KDE Frameworks build on the Qt framework, providing everything from
-      simple utility classes (such as those in KCoreAddons) to integrated
-      solutions for common requirements of desktop applications (such as
-      KNewStuff, for fetching downloadable add-on content in an application,
-      or the powerful KIO multi-protocol file access framework).
-    <p>
-    <p>
-      The KDE Frameworks can be used in CMake-based and QMake-based projects,
-      and most of them are portable to at least Windows, Mac and Linux. The
-      documentation of each framework has code snippets that show how to
-      include the framework in a QMake or CMake project.
-    </p>
-    <p>
-      The frameworks are divided into four tiers, based on the kind of
-      dependencies that they have. For instance, Tier 1 frameworks depend
-      on Qt and possibly some third-party libraries, but not on other
-      frameworks. This makes them easy to integrate into existing
-      applications.
-    </p>
-    <div class="d-flex justify-content-center">
-      <a href="/product/framework" class="button learn-more ml-2 mr-2">Learn More</a>
-      <a href="https://api.kde.org/frameworks/" class="ml-2 mr-2 button learn-more">Documentation</a>
-    </div>
-  </div>
-</section>
-
-<section id="kirigami">
-  <div class="text-center pl-5 pr-5 img-fluid container">
-    <h2>Develop Convergent Apps with Kirigami</h2>
-    <p class="mb-5">Kirigami is a new, convergent, responsive, elegant, and open cross-platform toolkit using QML.</p>
-    <div class="laptop-with-overlay text-center position-relative">
-      <img class="laptop img-fluid mb-3" src="https://kde.org/content/plasma-desktop/laptop.png" alt="">
-      <div class="laptop-overlay">
-        <img class="img-fluid mb-3" src="/develop/kirigami_code_view.png" alt="Kirigami application with source code" />
-      </div>
-    </div>
-    <a class="learn-more" href="https://kde.org/products/kirigami/">Learn more</a>
-  </div>
-</section>
-
-<section>
+<section class="pt-2">
   <div class="container text-center">
     <h2>Tools</h2> 
     <p>KDE develops a variety of tools to help you develop the best applications you possibly can.</p>
@@ -102,6 +58,44 @@ weight: 20
     </div>
   </div>
 </section>
+
+<section id="develop-hero" class="p-4 d-flex align-items-center" style="height: 600px">
+  <div class="container text-center p-5" style="background-color: #333">
+    <h1 class="h2" style="color: #EEE;">KDE Frameworks, enhance the Qt experience</h1>
+    <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">80 add-on libraries for programming with Qt. Well tested and documented. Licensed under LGPL or MIT.</p>
+    <a class="learn-more h5" href="/products/frameworks/">Discover the Frameworks</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="text-center">Lorem impsum</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a metus nec ex egestas porta. Nam suscipit nulla sit amet nisl feugiat, at dapibus ex maximus. Etiam enim tortor, condimentum facilisis venenatis ut, rhoncus in neque. Nunc eget porta enim. Praesent luctus dapibus congue. Nullam nec turpis ac lectus mollis ullamcorper. Nullam felis arcu, feugiat eu gravida vel, lacinia eu nibh. Vestibulum lacus sapien, fringilla quis lacus vitae, ornare consectetur justo. Etiam venenatis quis metus vitae aliquet. Donec tincidunt leo vel ex molestie, a suscipit tellus vehicula.
+    </p>
+    <p>Nam consectetur tristique nisl ac ultrices. Nulla pretium urna enim, eu iaculis massa commodo vel. Nam ultrices, dui ut tempus sodales, mi mauris egestas metus, eget auctor erat sem in dui. Ut efficitur mollis dictum. Sed eget ipsum faucibus, eleifend lectus at, vestibulum lacus. In ut magna fermentum, laoreet odio id, iaculis magna. Suspendisse aliquam diam mi, in sodales risus lobortis et. Cras non odio magna. Duis vitae justo ac ante suscipit volutpat. Nunc urna tortor, tincidunt sed aliquet sed, consequat id diam. Curabitur eu urna eget elit tincidunt pharetra vel a magna. Nam ut eros sed magna fringilla porttitor. In rutrum ipsum a ligula varius gravida.</p>
+    <p>Quisque maximus sit amet nulla vitae mollis. Curabitur ac ex lectus. Vestibulum feugiat nec lectus sed ultricies. Donec hendrerit egestas nisi non consequat. Maecenas fermentum facilisis magna, id tempor leo pharetra a. Integer congue sapien nisi. Vestibulum et pellentesque nulla, vel faucibus massa. Praesent at lacus et quam feugiat consequat.</p>
+    <div class="d-flex justify-content-center">
+      <a href="/product/framework" class="button learn-more ml-2 mr-2">Learn More</a>
+      <a href="https://api.kde.org/frameworks/" class="ml-2 mr-2 button learn-more">Documentation</a>
+    </div>
+  </div>
+</section>
+
+<section id="kirigami">
+  <div class="text-center pl-5 pr-5 img-fluid container">
+    <h2>Develop Convergent Apps with Kirigami</h2>
+    <p class="mb-5">Kirigami is a new, convergent, responsive, elegant, and open cross-platform toolkit using QML.</p>
+    <div class="laptop-with-overlay text-center position-relative w-100 w-md-75" style="left: 0">
+      <img class="laptop img-fluid mb-3" src="https://kde.org/content/plasma-desktop/laptop.png" alt="" width="1600" height="890" >
+      <div class="laptop-overlay">
+        <img class="img-fluid mb-3" src="/develop/kirigami_code_view.png" alt="Kirigami application with source code" />
+      </div>
+    </div>
+    <a class="learn-more h4" href="/frameworks/kirigami/">Discover Kirigami</a>
+  </div>
+</section>
+
 
 <section class="container">
   <div class="text-center">

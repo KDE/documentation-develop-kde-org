@@ -7,22 +7,24 @@ logo: https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg
 scss: "scss/framework.scss"
 ---
 
-<article class="section-links">
+<article class="section-links container">
   <h2 class="h1">Get Started</h2>
-  <div class="section-links-content columns">
-    <div>
-     <h2>Developer Documentation</h2>
-     <p>
-       Code an application in C++ with Qt and QML.
-     </p>
-     <a href="https://api.kde.org/frameworks/index.html" target="_blank">Learn more</a>
+  <div class="row">
+    <div class="p-3 col-12 col-md-6">
+      <a href="https://api.kde.org/frameworks/index.html" class="shadow p-3 h-100">
+        <h2>Developer Documentation</h2>
+        <p>
+          Code an application in C++ with Qt and QML.
+        </p>
+      </a>
     </div>
-    <div>
-      <h2>Design Guidelines</h2>
-      <p>
-        Use our UI standards to their fullest for a flexible and consistent user experience if you are creating an app for the Linux desktop.
-      </p>
-      <a href="https://hig.kde.org/" target="_blank">Learn more</a>
+    <div class="p-3 col-12 col-md-6 h-100">
+      <a class="shadow p-3" href="https://hig.kde.org/">
+        <h2>Design Guidelines</h2>
+        <p>
+          Use our UI standards to their fullest for a flexible and consistent user experience if you are creating an app for the Linux desktop.
+        </p>
+      </a>
     </div>
   </div>
 </article>
