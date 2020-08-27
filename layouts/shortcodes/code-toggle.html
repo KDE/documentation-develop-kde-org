@@ -1,0 +1,34 @@
+{{/* Copied from https://github.com/gohugoio/hugoDocs/blob/master/layouts/shortcodes/code-toggle.html */}}
+
+{{ $file := .Get "file" }}
+{{ $code := "" }}
+{{ with .Get "config" }}
+{{ $file = $file | default "config" }}
+{{ $sections := (split . ".") }}
+{{ $configSection := index $.Site.Data.docs.config $sections }}
+{{ $code = dict $sections $configSection  }}
+{{ else }}
+{{ $code = $.Inner }}
+{{ end  }}
+{{ $prefix := .Get "prefix" | default "config" }}
+{{ $langs := (slice "yaml" "json") }}
+<div class="code relative" {{ with $file }} id="{{ . | urlize}}"{{ end }}>
+  <ul class="code-nav flex flex-nowrap items-stretch nav nav-tabs">
+    {{ range $langs }}
+      <li class="nav-item">
+          <a class="nav-link {{ cond (eq . "yaml") "active" ""}}" id="{{ $prefix }}-{{ . }}-tab" data-toggle="tab" href="#{{ $prefix }}-{{ . }}" role="tab" aria-controls="{{ $prefix }}-{{ . }}" aria-selected="{{ cond (eq . "yaml") "true" "false"}}">{{ . }}</a>
+      </li>
+    {{ end }}
+  </ul>
+  <div class="tab-content code-content">
+    {{ range $langs }}
+    <div class="tab-pane {{ cond (eq . "yaml") "active" ""}}" id="{{ $prefix }}-{{ . }}" role="tabpanel" aria-labelledby="{{ $prefix }}-{{ . }}-tab">
+        {{ if eq . "json" }}
+            {{ highlight ($code | transform.Remarshal . | safeHTML) . ""}}
+        {{ else }}
+            {{ highlight $code . ""}}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>
