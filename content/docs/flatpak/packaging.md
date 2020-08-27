@@ -1,4 +1,7 @@
-# Distributing KDE Software as Flatpak
+---
+title: Distributing KDE Software as Flatpak
+description: The new decentralized packaging standard for Linux applications
+weight: 1
 
 Flatpak is a new package format in the Linux world that works on many Linux
 distributions and give back control to the application developers. Many Flatpak
