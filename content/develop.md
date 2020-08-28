@@ -1,6 +1,6 @@
 ---
 title: Develop
-subtitle: Develop featurful applications with KDE and Qt technologies
+subtitle: Develop Featureful Applications with KDE and Qt Technologies
 layout: area
 linkTitle: Develop
 weight: 20
@@ -9,12 +9,12 @@ weight: 20
 <section class="pt-2">
   <div class="container text-center">
     <h2>Tools</h2> 
-    <p>KDE develops a variety of tools to help you develop the best applications you possibly can.</p>
+    <p>KDE provides a variety of tools to help you develop the best applications.</p>
     <div class="tools">
       <a class="tool tool-one" href="https://kdevelop.org">
         <div>
           <h3>KDevelop</h3>
-          <p>KDE's full-fledged development environment</p>
+          <p>KDE's full-fledged development environment.</p>
         </div>
         <div>
           <img class="img-fluid" src="https://kde.org/applications/icons/org.kde.kdevelop.svg">
@@ -23,7 +23,7 @@ weight: 20
       <a class="tool tool-one" href="https://kate-editor.org">
         <div>
           <h3>Kate</h3>
-          <p>KDE's lightweight but feature-rich text editor</p>
+          <p>KDE's lightweight, but feature-rich text editor</p>
         </div>
         <div>
           <img class="img-fluid" src="https://kde.org/applications/icons/org.kde.kate.svg">
@@ -31,7 +31,7 @@ weight: 20
       </a>
     </div>
     <div class="tool tool-multiple flex-column  mt-5">
-      <h3 class="mt-1">And a lot more tools</h3>
+      <h3 class="mt-1">And many more tools</h3>
       <div class="more-apps">
         <a href="https://umbrello.kde.org">
           <img src="https://kde.org/applications/icons/org.kde.umbrello.svg" />
@@ -62,7 +62,7 @@ weight: 20
 <section id="develop-hero" class="p-4 d-flex align-items-center" style="height: 600px">
   <div class="container text-center p-5" style="background-color: #333">
     <h2 style="color: #EEE;">KDE Frameworks, enhance the Qt experience</h2>
-    <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">80 add-on libraries for programming with Qt. Well tested and documented. Licensed under LGPL or MIT.</p>
+    <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">80 add-on libraries for programming with Qt. Well-tested and documented. Licensed under LGPL or MIT.</p>
     <a class="learn-more h5" href="/products/frameworks/">Discover the Frameworks</a>
   </div>
 </section>
@@ -93,18 +93,18 @@ weight: 20
           </g>
         </g>
       </svg>
-      <h2 class="text-center">Extend Qt with new posibilities</h2>
+      <h2 class="text-center">Extend Qt with New Posibilities</h2>
       <p>
-        KDE's development tools and frameworks are build on top of the Qt, the standard
-        cross platform framework for developing beautiful applications.
+        KDE's development tools and frameworks are built on top of Qt, the standard
+        cross-platform framework for developing beautiful applications.
       </p>
-      <h3>Stop rewriting the wheel</h3>
+      <h3>Stop Reinventing the Wheel</h3>
       <p>
         Tired of writing your own widgets for your Qt project? Use <a href="https://api.kde.org/frameworks/kwidgetsaddons/html/">
         KWidgetsAddons</a>! Want a flexible configuration system? Use <a href="https://api.kde.org/frameworks/kconfig/html/">
-        KConfig</a>! The <a href="/products/frameworks/">KDE Framworks</a> solve many problems that
-        you can encounter when building a Qt applications and integrate perfectely in
-        your Qt project. There are using a familiar API and used by many existing Qt applications.
+        KConfig</a>! <a href="/products/frameworks/">KDE Frameworks</a> solve many problems that you can encounter when building
+        Qt applications and integrate perfectely in your Qt project. Use a familiar API and used by many existing Qt
+        applications.
       </p>
       <h3>Network transparancy</h3>
       <p>
