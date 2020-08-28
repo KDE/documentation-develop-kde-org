@@ -6,7 +6,7 @@ layout: framework
 
 <section class="kirigami-header">
   <h1><p class="header-logo">K</p>Kirigami UI Framework</h1>
-  <p>Build beautiful, convergent apps that run on phones to televisions, and everything in between.</p>
+  <p>Build beautiful, convergent apps that run on from phones to televisions, and everything in between.</p>
 </section>
 
 <div>
