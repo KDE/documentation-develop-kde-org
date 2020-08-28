@@ -113,9 +113,9 @@ weight: 20
         user's computers. Supporting ftp, ssh, http, webdav, fish, samba, and many
         more.
       </p>
-      <div class="d-flex justify-content-center">
-        <a href="/product/framework" class="learn-more ml-2 mr-2 h4">Discover Qt</a>
-        <a href="https://api.kde.org/frameworks/" class="ml-2 mr-2 h4 learn-more">Discover KDE Frameworks</a>
+      <div class="d-flex justify-content-center mt-5">
+        <a href="https://www.qt.io/" class="learn-more ml-2 mr-2 h4">Discover Qt</a>
+        <a href="/products/frameworks/" class="ml-2 mr-2 h4 learn-more">Discover KDE Frameworks</a>
       </div>
     </div>
   </div>
@@ -143,64 +143,58 @@ weight: 20
   </div>
   <div class="row ">
     <div class="col-12 col-sm-6 p-3 d-flex">
-      <a href="#" class="shadow p-4">
-        <h3>Getting started with QtWidgets and KXmlGui</h3>
+      <a href="/docs/getting-started" class="shadow p-4 w-100">
+        <h3>Getting started with KXmlGui</h3>
+        <p>Create a small text editor</p>
       </a>
     </div>
     <div class="col-12 col-sm-6 p-3 d-flex">
-      <a href="#" class="shadow p-4">
-        <h3>Getting started with QtQuick and Kirigami</h3>
+      <a href="/docs/kirigami" class="shadow p-4 w-100">
+        <h3>Getting started with Kirigami</h3>
+        <p>Create a convergent application using QtQuick</p>
       </a>
     </div>
     <div class="col-12 col-sm-3 p-3 d-flex">
-      <a href="https://kdevelop.org" class="shadow p-3 w-100">
-        <h3>KDevelop</h3>
+      <a href="/docs/configuration/" class="shadow p-3 w-100">
+        <h3>KConfig</h3>
+        <p>Manage your application settings</p>
       </a>
     </div>
     <div class="col-12 col-sm-3 p-3 d-flex">
-      <a href="https://kde.org/applications/en/development/org.kde.clazy" class="shadow p-3 w-100">
-        <h3>Clazy</h3>
+      <a href="/docs/akonadi/" class="shadow p-3 w-100">
+        <h3>Akonadi</h3>
+        <p>Integrated Personal Information manager</p>
       </a>
     </div>
     <div class="col-12 col-sm-3 p-3 d-flex">
-      <a href="#" class="shadow p-3 w-100">
-        <h3>KDevelop1</h3>
+      <a href="/docs/d-bus" class="shadow p-3 w-100">
+        <h3>D-Bus</h3>
+        <p>Inter-process communication made easy</p>
       </a>
     </div>
     <div class="col-12 col-sm-3 p-3 d-flex">
-      <a href="#" class="shadow p-3 w-100">
-        <h3>KDevelop2</h3>
+      <a href="/docs" class="shadow p-3 w-100">
+        <h3>And more</h3>
+        <p>See all the tutorials</p>
       </a>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <h2 style="margin-bottom: -20px;">Resources</h2>
-    <div class="row bottomAlignRow" style="border-bottom: solid 1px #EEE; padding-bottom: 20px;">
-      <div class="col-sm">
-        <h3>Getting Started tutorial</h3>
-        <p>
-          Learn how to develop a KDE application. From a simple dialog to a full featured application
-          integrated with Plasma and with translations.
-        </p>
-        <a href="/docs/" class="learn-more button">View documentation</a>
-      </div>
-      <div class="col-sm">
-        <h3>Kirigami Documentation</h3>
-        <p>
-          Want to create a convergent application for mobile and desktop? Learn how to do it here
-        </p>
-        <a href="/kirigami" class="learn-more button">View Documentation</a>
-      </div>
-      <div class="col-sm">
-        <h3>API Documentation</h3>
-        <p>
-          Api Documentation for each class and component in KDE Frameworks.
-        </p>
-        <a href="https://api.kde.org" class="learn-more button">View API</a>
-      </div>
+<section class="container py-2">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <h2>KDE e.V. Trusted IT Consulting Firms</h2>
+      <p>In KDE we take pride in being a free software community and having an open, free and fair development process.</p>
+      <p>
+        However, we also understand that sometimes companies and institutions main priority is not learning the
+        processes of our community and they just want issue solved or a feature implemented.
+      </p>
+      <p>
+        For this reason, we are offering here a list of consultants that have expertise in dealing with the KDE
+        Community and we know will help get your project landed in KDE as best as possible.
+      </p>
+      <p class="text-center mt-5"><a class="learn-more" href="https://ev.kde.org/consultants/">See the list of consultants</a></p>
     </div>
   </div>
 </section>

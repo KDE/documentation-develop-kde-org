@@ -25,19 +25,19 @@ layout: area
     <div class="mx-auto mb-4">
     <div class="icons-grid icons-grid-small">
      <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
-     <i class="icon icon_format-text-code"></i>
+     <i class="icon icon_media-repeat-album-amarok"></i>
+     <i class="icon icon_text_vert_kern"></i>
+     <i class="icon icon_help-about"></i>
+     <i class="icon icon_news-subscribe"></i>
+     <i class="icon icon_noisereduction"></i>
+     <i class="icon icon_filename-filetype-amarok"></i>
+     <i class="icon icon_color-picker"></i>
+     <i class="icon icon_food"></i>
+     <i class="icon icon_document-print"></i>
+     <i class="icon icon_mail-mark-read"></i>
+     <i class="icon icon_edit-cut"></i>
+     <i class="icon icon_edit-copy"></i>
+     <i class="icon icon_gnumeric-protection-yes"></i>
     </div>
     </div>
     <div class="text-align"><a href="/frameworks/breeze-icons" class="learn-more">Learn more</a>
