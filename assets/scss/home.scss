@@ -141,6 +141,7 @@ main h3 {
 
 .more-apps {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
 }
@@ -150,6 +151,7 @@ main h3 {
   flex-direction: column;
   align-items: center;
   width: 200px;
+  margin-top: 2rem;
 }
 
 
@@ -176,7 +178,7 @@ main h3 {
     left: -70px;
   }
 
-  .tools {
+  .tools, .tool-one {
     flex-direction: column;
   }
 
@@ -184,7 +186,7 @@ main h3 {
     margin-top: 3rem !important;
   }
 
-  .tool div:nth-child(2) {
+  .tool:not(.tool-multiple) div:nth-child(2) {
     order: -1;
   }
 }
@@ -262,9 +264,18 @@ main h3 {
 .laptop-with-overlay {
   position: absolute;
   width: 50%;
-  left: 25%;
+  left: 20%;
   z-index: 32;
   bottom: 20px;
+}
+
+.laptop-with-overlay .laptop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 3%;
+  margin-left: 8.5%;
+  width: 84%;
 }
 
 .bigscreen {

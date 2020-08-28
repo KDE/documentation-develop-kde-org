@@ -11,7 +11,7 @@ weight: 20
     <h2>Tools</h2> 
     <p>KDE develops a variety of tools to help you develop the best applications you possibly can.</p>
     <div class="tools">
-      <a class="tool" href="https://kdevelop.org">
+      <a class="tool tool-one" href="https://kdevelop.org">
         <div>
           <h3>KDevelop</h3>
           <p>KDE's full-fledged development environment</p>
@@ -20,7 +20,7 @@ weight: 20
           <img class="img-fluid" src="https://kde.org/applications/icons/org.kde.kdevelop.svg">
         </div>
       </a>
-      <a class="tool" href="https://kate-editor.org">
+      <a class="tool tool-one" href="https://kate-editor.org">
         <div>
           <h3>Kate</h3>
           <p>KDE's lightweight but feature-rich text editor</p>
@@ -30,8 +30,8 @@ weight: 20
         </div>
       </a>
     </div>
-    <div class="tool flex-column  mt-5">
-      <h3>And a lot more tools</h3>
+    <div class="tool tool-multiple flex-column  mt-5">
+      <h3 class="mt-1">And a lot more tools</h3>
       <div class="more-apps">
         <a href="https://umbrello.kde.org">
           <img src="https://kde.org/applications/icons/org.kde.umbrello.svg" />
@@ -61,23 +61,27 @@ weight: 20
 
 <section id="develop-hero" class="p-4 d-flex align-items-center" style="height: 600px">
   <div class="container text-center p-5" style="background-color: #333">
-    <h1 class="h2" style="color: #EEE;">KDE Frameworks, enhance the Qt experience</h1>
+    <h2 style="color: #EEE;">KDE Frameworks, enhance the Qt experience</h2>
     <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">80 add-on libraries for programming with Qt. Well tested and documented. Licensed under LGPL or MIT.</p>
     <a class="learn-more h5" href="/products/frameworks/">Discover the Frameworks</a>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <h2 class="text-center">Lorem impsum</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a metus nec ex egestas porta. Nam suscipit nulla sit amet nisl feugiat, at dapibus ex maximus. Etiam enim tortor, condimentum facilisis venenatis ut, rhoncus in neque. Nunc eget porta enim. Praesent luctus dapibus congue. Nullam nec turpis ac lectus mollis ullamcorper. Nullam felis arcu, feugiat eu gravida vel, lacinia eu nibh. Vestibulum lacus sapien, fringilla quis lacus vitae, ornare consectetur justo. Etiam venenatis quis metus vitae aliquet. Donec tincidunt leo vel ex molestie, a suscipit tellus vehicula.
-    </p>
-    <p>Nam consectetur tristique nisl ac ultrices. Nulla pretium urna enim, eu iaculis massa commodo vel. Nam ultrices, dui ut tempus sodales, mi mauris egestas metus, eget auctor erat sem in dui. Ut efficitur mollis dictum. Sed eget ipsum faucibus, eleifend lectus at, vestibulum lacus. In ut magna fermentum, laoreet odio id, iaculis magna. Suspendisse aliquam diam mi, in sodales risus lobortis et. Cras non odio magna. Duis vitae justo ac ante suscipit volutpat. Nunc urna tortor, tincidunt sed aliquet sed, consequat id diam. Curabitur eu urna eget elit tincidunt pharetra vel a magna. Nam ut eros sed magna fringilla porttitor. In rutrum ipsum a ligula varius gravida.</p>
-    <p>Quisque maximus sit amet nulla vitae mollis. Curabitur ac ex lectus. Vestibulum feugiat nec lectus sed ultricies. Donec hendrerit egestas nisi non consequat. Maecenas fermentum facilisis magna, id tempor leo pharetra a. Integer congue sapien nisi. Vestibulum et pellentesque nulla, vel faucibus massa. Praesent at lacus et quam feugiat consequat.</p>
-    <div class="d-flex justify-content-center">
-      <a href="/product/framework" class="button learn-more ml-2 mr-2">Learn More</a>
-      <a href="https://api.kde.org/frameworks/" class="ml-2 mr-2 button learn-more">Documentation</a>
+<section class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <h2 class="text-center">Extend Qt with new posibilities</h2>
+      <p>
+        KDE's development tools and frameworks are build on top of the Qt, the standard
+        cross platform framework for developing beautiful applications.
+      </p>
+      <p>
+        TODO praise Qt more
+      </p>
+      <div class="d-flex justify-content-center">
+        <a href="/product/framework" class="button learn-more ml-2 mr-2">Learn More</a>
+        <a href="https://api.kde.org/frameworks/" class="ml-2 mr-2 button learn-more">Documentation</a>
+      </div>
     </div>
   </div>
 </section>
