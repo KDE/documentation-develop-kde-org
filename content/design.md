@@ -9,7 +9,7 @@ layout: area
   <div class="container text-center">
     <h2>Breeze Icons</h2>
     <p>A collection of modern icons for your applications. Licensed under LGPL.</p>
-    <h3 class="mb-4">Collorful icons</h3>
+    <h3 class="mb-4">Colorful icons</h3>
     <div class="mx-auto mb-4">
     <div class="icons-grid">
       <img src="https://kde.org/applications/icons/org.kde.Help.svg" alt="help icon" /> 
