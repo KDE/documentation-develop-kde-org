@@ -100,18 +100,19 @@ weight: 20
       </p>
       <h3>Stop Reinventing the Wheel</h3>
       <p>
-        Tired of writing your own widgets for your Qt project? Use <a href="https://api.kde.org/frameworks/kwidgetsaddons/html/">
-        KWidgetsAddons</a>! Want a flexible configuration system? Use <a href="https://api.kde.org/frameworks/kconfig/html/">
-        KConfig</a>! <a href="/products/frameworks/">KDE Frameworks</a> solve many problems that you can encounter when building
-        Qt applications and integrate perfectely in your Qt project. Use a familiar API and used by many existing Qt
-        applications.
+        Tired of writing your own widgets for your Qt projects? Use
+        <a href="https://api.kde.org/frameworks/kwidgetsaddons/html/">KWidgetsAddons</a>! Want a flexible configuration system?
+        Use <a href="https://api.kde.org/frameworks/kconfig/html/">KConfig</a>! The <a href="/products/frameworks/">KDE Frameworks</a>
+        suite solves most of the problems you have had deal with when building Qt applications. It will also integrate perfectly into
+        your Qt projects and the API will be all too familiar as it based on the same interfaces that make up the majority of existing
+        Qt applications.
       </p>
-      <h3>Network transparancy</h3>
+      <h3>Network Transparancy</h3>
       <p>
-        With today world increasingly connected together with the Internet, <a href="https://api.kde.org/frameworks/kio/html/">KIO</a>
-        allows Qt application to connect to many remote files as if they were on your
-        user's computers. Supporting ftp, ssh, http, webdav, fish, samba, and many
-        more.
+        The increase in connectivity of today's world makes <a href="https://api.kde.org/frameworks/kio/html/">KIO</a> an essential
+        part of your toolset. KIO allows Qt applications to connect to remote shares as if they were on local computers, making
+        accessing server hosted files and directories transparent and easy for your users. KIO supports ftp, ssh, http, webdav,
+        fish, samba, and many more protocols.
       </p>
       <div class="d-flex justify-content-center mt-5">
         <a href="https://www.qt.io/" class="learn-more ml-2 mr-2 h4">Discover Qt</a>
@@ -124,7 +125,7 @@ weight: 20
 <section id="kirigami">
   <div class="text-center pl-5 pr-5 img-fluid container">
     <h2>Develop Convergent Apps with Kirigami</h2>
-    <p class="mb-5">Kirigami is a new, convergent, responsive, elegant, and open cross-platform toolkit using QML.</p>
+    <p class="mb-5">Kirigami is a new, convergent, responsive, elegant, and open cross-platform toolkit that uses QML.</p>
     <div class="laptop-with-overlay text-center position-relative w-100 w-md-75" style="left: 0">
       <img class="laptop img-fluid mb-3" src="https://kde.org/content/plasma-desktop/laptop.png" alt="" width="1600" height="890" >
       <div class="laptop-overlay">
@@ -138,19 +139,19 @@ weight: 20
 
 <section class="container">
   <div class="text-center">
-    <h2>Start building your first KDE application</h2>
+    <h2>Start Building your First KDE Application</h2>
     <p></p>
   </div>
   <div class="row ">
     <div class="col-12 col-sm-6 p-3 d-flex">
       <a href="/docs/getting-started" class="shadow p-4 w-100">
-        <h3>Getting started with KXmlGui</h3>
+        <h3>Getting Started with KXmlGui</h3>
         <p>Create a small text editor</p>
       </a>
     </div>
     <div class="col-12 col-sm-6 p-3 d-flex">
       <a href="/docs/kirigami" class="shadow p-4 w-100">
-        <h3>Getting started with Kirigami</h3>
+        <h3>Getting Started with Kirigami</h3>
         <p>Create a convergent application using QtQuick</p>
       </a>
     </div>
@@ -174,7 +175,7 @@ weight: 20
     </div>
     <div class="col-12 col-sm-3 p-3 d-flex">
       <a href="/docs" class="shadow p-3 w-100">
-        <h3>And more</h3>
+        <h3>And More</h3>
         <p>See all the tutorials</p>
       </a>
     </div>
@@ -185,14 +186,14 @@ weight: 20
   <div class="row justify-content-center">
     <div class="col-12 col-md-10 col-lg-8">
       <h2>KDE e.V. Trusted IT Consulting Firms</h2>
-      <p>In KDE we take pride in being a free software community and having an open, free and fair development process.</p>
+      <p>In KDE we take pride in being a Free Software community and having an open, free and fair development process.</p>
       <p>
-        However, we also understand that sometimes companies and institutions main priority is not learning the
-        processes of our community and they just want issue solved or a feature implemented.
+        However, we also understand that sometimes companies' and institutions' main priorities do not include learning the
+        processes of our community and they just want issues solved or features implemented.
       </p>
       <p>
-        For this reason, we are offering here a list of consultants that have expertise in dealing with the KDE
-        Community and we know will help get your project landed in KDE as best as possible.
+        For this reason, we provide a list of professional consultants that have a profound knowledge of KDE technologies and
+        who will help you make your project reach its goals.
       </p>
       <p class="text-center mt-5"><a class="learn-more" href="https://ev.kde.org/consultants/">See the list of consultants</a></p>
     </div>
