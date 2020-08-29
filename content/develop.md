@@ -14,7 +14,7 @@ weight: 20
       <a class="tool tool-one" href="https://kdevelop.org">
         <div>
           <h3>KDevelop</h3>
-          <p>KDE's full-fledged development environment.</p>
+          <p>Kate is KDE's full-fledged development environment.</p>
         </div>
         <div>
           <img class="img-fluid" src="https://kde.org/applications/icons/org.kde.kdevelop.svg">
@@ -23,7 +23,7 @@ weight: 20
       <a class="tool tool-one" href="https://kate-editor.org">
         <div>
           <h3>Kate</h3>
-          <p>KDE's lightweight, but feature-rich text editor</p>
+          <p>Kate is KDE's lightweight, but feature-rich text editor</p>
         </div>
         <div>
           <img class="img-fluid" src="https://kde.org/applications/icons/org.kde.kate.svg">
@@ -62,7 +62,9 @@ weight: 20
 <section id="develop-hero" class="p-4 d-flex align-items-center" style="height: 600px">
   <div class="container text-center p-5" style="background-color: #333">
     <h2 style="color: #EEE;">KDE Frameworks, enhance the Qt experience</h2>
-    <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">80 add-on libraries for programming with Qt. Well-tested and documented. Licensed under LGPL or MIT.</p>
+    <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">KDE Frameworks encompasses 80 add-on libraries for programming
+    with Qt. They have all been well-tested in real-world scenarios and are extensively documented. All libraries are licensed under
+    LGPL or MIT.</p>
     <a class="learn-more h5" href="/products/frameworks/">Discover the Frameworks</a>
   </div>
 </section>
@@ -95,7 +97,7 @@ weight: 20
       </svg>
       <h2 class="text-center">Extend Qt with New Posibilities</h2>
       <p>
-        KDE's development tools and frameworks are built on top of Qt, the standard
+        KDE's development tools and frameworks are built on top of Qt, the popular
         cross-platform framework for developing beautiful applications.
       </p>
       <h3>Stop Reinventing the Wheel</h3>
@@ -104,7 +106,7 @@ weight: 20
         <a href="https://api.kde.org/frameworks/kwidgetsaddons/html/">KWidgetsAddons</a>! Want a flexible configuration system?
         Use <a href="https://api.kde.org/frameworks/kconfig/html/">KConfig</a>! The <a href="/products/frameworks/">KDE Frameworks</a>
         suite solves most of the problems you have had deal with when building Qt applications. It will also integrate perfectly into
-        your Qt projects and the API will be all too familiar as it based on the same interfaces that make up the majority of existing
+        your Qt projects and the API will be familiar as it based on the same interfaces that make up the majority of existing
         Qt applications.
       </p>
       <h3>Network Transparancy</h3>
