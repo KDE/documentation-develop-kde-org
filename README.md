@@ -11,6 +11,26 @@ Once you've cloned the site repo, from the repo root folder, run:
 hugo server
 ```
 
+## Extract icon metadata
+
+Data for the icon galleries (i.e. `/frameworks/breeze-icons/`) must be downloaded and extracted via `scripts/icon_extractor.py`.
+The script is configured with the correct paths for this repository and therefore may be executed without additional arguments.
+
+```
+usage: icon_extractor.py [-h] [-j OUTPUT_METADATA_DIR] [-d OUTPUT_ICONS_DIR] [-w WORK_DIR] [-p] [-v]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -j OUTPUT_METADATA_DIR, --output-metadata-dir OUTPUT_METADATA_DIR
+                        Path to directory where to write json metadata (default: data/icons)
+  -d OUTPUT_ICONS_DIR, --output-icons-dir OUTPUT_ICONS_DIR
+                        Path to directory where to copy icons (default: assets/icons)
+  -w WORK_DIR, --work-dir WORK_DIR
+                        Path to directory used as script workdir (default: ./workdir)
+  -p, --pretty          Pretty write output json metadata (default: False)
+  -v, --verbose         Increase logging to debug (default: False)
+```
+
 ## Creating an new article
 
 Your accept that your contribution are licensed under the CC-BY-SA-4.0.
