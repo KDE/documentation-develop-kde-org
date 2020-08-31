@@ -1,0 +1,132 @@
+{{ define "main" }}
+
+<main class="container">
+    <h1>{{ .Title }}</h1>
+
+    {{ .Content }}
+
+    {{ $iconTheme := dict }}
+    {{ if not (eq $.Site.Data.icons nil) }}
+        {{ $iconTheme = (index $.Site.Data.icons .Params.iconTheme) }}
+    {{ end }}
+
+    <div class="d-flex mb-4 mt-5">
+        <h2 id="icons" class="mt-0">{{ T "icons" }}</h2>
+
+        <div class="ml-auto dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ T "categories" }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                {{ range $category, $category_icons := $iconTheme}}
+                    <div class="dropdown-item form-check">
+                        <input type="checkbox" class="form-check-input" id="{{ $category }}-check" checked data-category="{{ $category }}">
+                        <label class="form-check-label" for="{{ $category }}-check">
+                            {{ humanize $category }}
+                        </label>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+
+        <form class="d-flex flex-nowrap ml-3">
+            <label for="search" class="sr-only">{{ T "search-for-icons" }}</label>
+            <input class="form-control search mb-0" id="search" placeholder="{{ T "start-typing-filter" }}" autocomplete="off">
+        </form>
+    </div>
+
+    <ul class="row list-unstyled">
+        {{- range $category, $category_icons := $iconTheme -}}
+            {{ range $icon_file, $icon := $category_icons }}
+                {{ $icon_resource := (resources.Get (printf "icons/%s/%s" $.Params.iconTheme $icon.preview_path)) }}
+                    {{ if not (eq $icon_resource nil) }}
+                        <li data-category="{{ $category }}" class="icon-holder col-sm-4 col-md-2 mb-4">
+                            <a class="d-block text-dark text-decoration-none" href="{{ $icon_resource.Permalink }}">
+                                <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+                                    <img loading="lazy" width="48em" src='{{ $icon_resource.Permalink }}'>
+                                </div>
+                                <div class="icon-name text-muted text-decoration-none text-center pt-1">
+                                    {{ $icon.name }}
+                                </div>
+                            </a>
+                        </li>
+                    {{ end }}
+            {{ end }}
+        {{- end -}}
+    </ul>
+
+    <p id="no-result-warning" class="text-center {{ if not (eq (len $iconTheme) 0) }}d-none{{ end }}">
+        {{ T "icon-search-no-results" }}
+    </p>
+</main>
+
+<script type="text/javascript">
+    const categoryCheckboxes = document.querySelectorAll('input[data-category]');
+    for (let checkbox of categoryCheckboxes) {
+        checkbox.addEventListener("change", search, false);
+    }
+
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('input', search);
+
+    function search() {
+        // Build list of enabled and disabled categories, necessary for building
+        // an icon query selector
+        const categoryCheckboxes = document.querySelectorAll('input[data-category]');
+        let enabledCategories = [];
+        let disabledCategories = [];
+        for (let checkbox of categoryCheckboxes) {
+            const checked = checkbox.checked;
+            const category = checkbox.dataset.category;
+            if (checked) {
+                enabledCategories.push(category);
+            }
+            else {
+                disabledCategories.push(category);
+            }
+        }
+
+        let hasAnyResult = false;
+        if (enabledCategories.length > 0) {
+            const enabledIconsSelector = '.icon-holder[data-category="' + enabledCategories.join('"], .icon-holder[data-category="') + '"]';
+            const icons = document.querySelectorAll(enabledIconsSelector);
+            const keyword = document.getElementById("search").value;
+            if (keyword) {
+                const regex = new RegExp(keyword, 'i');
+                icons.forEach(function(icon) {
+                    const nameContainsRegex = icon.querySelector('.icon-name').innerText.search(regex) !== -1;
+                    if (nameContainsRegex) {
+                        icon.classList.remove('d-none');
+                        hasAnyResult = true;
+                    }
+                    else {
+                        icon.classList.add('d-none');
+                    }
+                });
+            }
+            else {
+                icons.forEach(function(icon) {
+                    icon.classList.remove('d-none');
+                });
+                hasAnyResult = true;
+            }
+        }
+
+        if (disabledCategories.length > 0) {
+            const disabledIconsSelector = '.icon-holder[data-category="' + disabledCategories.join('"], .icon-holder[data-category="') + '"]';
+            const icons = document.querySelectorAll(disabledIconsSelector);
+            icons.forEach(function(icon) {
+                icon.classList.add('d-none');
+            });
+        }
+
+        const noResultWarning = document.getElementById('no-result-warning');
+        if (hasAnyResult) {
+            noResultWarning.classList.add('d-none');
+        }
+        else {
+            noResultWarning.classList.remove('d-none');
+        }
+    }
+</script>
+{{ end }}
