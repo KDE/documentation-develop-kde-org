@@ -39,7 +39,7 @@ Kirigami.Icon {
 
 ## Other platforms than Linux
 
-On other plateform, the icon theme is not available.
+On other plateforms, the icon theme is not available.
 
 ### Android
 
