@@ -1,6 +1,7 @@
 ---
 title: Getting Started with Kirigami
 weight: 0
+description: Hello world in Kirigami
 ---
 
 In this tutorial, you will be able to learn how to create a convergent

@@ -1,7 +1,7 @@
 ---
 title: "Integrate your application with Plasma"
 linkTitle: "Plasma Integration"
-weight: 1
+weight: 3
 description: >
   Discover KDE Frameworks and start building your first application
 ---
