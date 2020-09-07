@@ -124,8 +124,8 @@ scss: "scss/framework.scss"
 </article>
 <article class="section-links">
     <h1>Get The Frameworks</h1>
-    <div class="section-links-content columns">
-        <div class="p-2">
+    <div class="row">
+        <div class="p-2 col-12 col-md-4">
           <div class="shadow">
             <h2>Latest Version</h2>
             <p>
@@ -134,7 +134,7 @@ scss: "scss/framework.scss"
             <a href="https://www.kde.org/announcements/" target="_blank">Release Announcements</a>
           </div>
         </div>
-        <div class="p-2">
+        <div class="p-2 col-12 col-md-4">
           <div class="shadow">
             <h2>Find more Qt Addons</h2>
             <p>
@@ -143,7 +143,7 @@ scss: "scss/framework.scss"
             <a href="https://inqlude.org/" target="_blank">Inqlude</a>
           </div>
         </div>
-        <div class="p-2">
+        <div class="p-2 col-12 col-md-4">
           <div class="shadow">
             <h2>Build it Yourself</h2>
             <p>
@@ -152,7 +152,7 @@ scss: "scss/framework.scss"
             <a href="https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source" target="_blank">kdesrc-build</a>
           </div>
         </div>
-        <div class="p-2">
+        <div class="p-2 col-12 col-md-4">
           <div class="shadow">
             <h2>Linux Packages</h2>
             <p>
@@ -161,7 +161,7 @@ scss: "scss/framework.scss"
             <a href="https://community.kde.org/Get_KDE_Software_on_Your_Linux_Distro" target="_blank">Binary Packages</a>
           </div>
         </div>
-        <div class="p-2">
+        <div class="p-2 col-12 col-md-4">
           <div class="shadow">
             <h2>Windows</h2>
             <p>
@@ -171,7 +171,7 @@ scss: "scss/framework.scss"
           </div>
           </div>
         </div>
-        <div class="p-2">
+        <div class="p-2 col-12 col-md-4">
           <div class="shadow">
             <h2>Android</h2>
             <p>
