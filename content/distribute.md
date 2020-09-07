@@ -10,7 +10,7 @@ layout: area
   <div class="container text-center">
     <h2 class="mb-3">Release your software</h2>
     <div class="tools">
-      <a class="tool tool-one" href="https://kdevelop.org">
+      <a class="tool tool-one" href="/docs/flatpak/packaging/">
         <div>
           <h3>Flatpak and Flathub</h3>
           <p>
