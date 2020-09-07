@@ -30,9 +30,9 @@ layout: framework
 </div>
 
 <section class="section-green">
-  <div class="container d-flex flex-column flex-md-row">
-    <img class="img-fluid order-2 order-md-0" src="koko.png" />
-    <div class="order-1 order-md-1 align-self-centert">
+  <div class="container d-flex flex-column flex-lg-row">
+    <img class="img-fluid order-2 order-lg-0" src="koko.png" />
+    <div class="order-1 order-lg-1 align-self-centert">
       <h2>Koko</h2>
       <p>A convergent photo gallery built using Kirigami and KDE frameworks</p>
     </div>
@@ -40,7 +40,7 @@ layout: framework
 </section>
 
 <section class="section-blue">
-  <div class="container d-flex flex-column flex-md-row">
+  <div class="container d-flex flex-column flex-lg-row">
     <div class="align-self-center">
       <h2 class="mt-0">Subsurface</h2>
       <p>A dive log application created by Linus Torvalds with <br />
