@@ -126,16 +126,16 @@ scss: "scss/framework.scss"
   <h1>Get The Frameworks</h1>
   <div class="row">
     <div class="p-2 col-12 col-md-4">
-      <div class="shadow">
+      <div class="shadow p-3">
         <h2>Latest Version</h2>
         <p>
-            Download the latest release
+          Download the latest release
         </p>
         <a href="https://www.kde.org/announcements/" target="_blank">Release Announcements</a>
       </div>
     </div>
     <div class="p-2 col-12 col-md-4">
-      <div class="shadow">
+      <div class="shadow p-3">
         <h2>Find more Qt Addons</h2>
         <p>
             The Qt library archive.
@@ -144,7 +144,7 @@ scss: "scss/framework.scss"
       </div>
     </div>
     <div class="p-2 col-12 col-md-4">
-      <div class="shadow">
+      <div class="shadow p-3">
         <h2>Build it Yourself</h2>
         <p>
             Our tool to compile KDE software
@@ -153,7 +153,7 @@ scss: "scss/framework.scss"
       </div>
     </div>
     <div class="p-2 col-12 col-md-4">
-      <div class="shadow">
+      <div class="shadow p-3">
         <h2>Linux Packages</h2>
         <p>
             Linux distros already package KDE Frameworks
@@ -162,17 +162,16 @@ scss: "scss/framework.scss"
       </div>
     </div>
     <div class="p-2 col-12 col-md-4">
-      <div class="shadow">
+      <div class="shadow p-3">
         <h2>Windows</h2>
         <p>
             Our Craft tool builds KDE software on Windows and other platforms
         </p>
         <a href="https://community.kde.org/Craft" target="_blank">Craft</a>
       </div>
-      </div>
     </div>
     <div class="p-2 col-12 col-md-4">
-      <div class="shadow">
+      <div class="shadow p-3">
         <h2>Android</h2>
         <p>
             Use KDE Frameworks on mobile
