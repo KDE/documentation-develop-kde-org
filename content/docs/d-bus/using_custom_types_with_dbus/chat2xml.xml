@@ -1,0 +1,18 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="demo.Chat">
+    <property name="users" type="as" access="read"/>
+    <signal name="userAdded">
+      <arg name="user" type="s" direction="out"/>
+    </signal>
+    <signal name="userRemoved">
+      <arg name="user" type="s" direction="out"/>
+    </signal>
+    <method name="addUser">
+      <arg name="user" type="s" direction="in"/>
+    </method>
+    <method name="removeUser">
+      <arg name="user" type="s" direction="in"/>
+    </method>
+  </interface>
+</node>

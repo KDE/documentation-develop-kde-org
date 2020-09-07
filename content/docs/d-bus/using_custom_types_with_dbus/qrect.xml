@@ -1,0 +1,14 @@
+<property name="rectangle" type="(iiii)" access="readwrite">
+  <annotation name="org.qtproject.QtDBus.QtTypeName" value="QRect"/>
+</property>
+
+<signal name="rectangleChanged">
+  <arg name="rect" type="(iiii)" direction="out"/>
+  <!-- to support also Qt < 5.6.3 & 5.7.0, use instead "org.qtproject.QtDBus.QtTypeName.In0" -->
+  <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QRect"/>
+</signal>
+
+<method name="changeRectangle">
+  <arg name="message" type="(iiii)" direction="in"/>
+  <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="QRect"/>
+</method>

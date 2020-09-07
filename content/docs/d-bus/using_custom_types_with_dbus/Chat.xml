@@ -1,0 +1,27 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="demo.Chat">
+    <property name="users" type="as" access="read"/>
+    <signal name="userAdded">
+      <arg name="user" type="s" direction="out"/>
+    </signal>
+    <signal name="userRemoved">
+      <arg name="user" type="s" direction="out"/>
+    </signal>
+    <signal name="messageSent">
+      <arg name="message" type="a(ii)" direction="out"/>
+      <!-- to support also Qt < 5.6.3 & 5.7.0, use instead "org.qtproject.QtDBus.QtTypeName.In0" -->
+      <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="Message"/>
+    </signal>
+    <method name="addUser">
+      <arg name="user" type="s" direction="in"/>
+    </method>
+    <method name="removeUser">
+      <arg name="user" type="s" direction="in"/>
+    </method>
+    <method name="sendMessage">
+      <arg name="message" type="a(ii)" direction="in"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.In0" value="Message"/>
+    </method>
+  </interface>
+</node>
