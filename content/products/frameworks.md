@@ -125,47 +125,60 @@ scss: "scss/framework.scss"
 <article class="section-links">
     <h1>Get The Frameworks</h1>
     <div class="section-links-content columns">
-        <div>
+        <div class="p-2">
+          <div class="shadow">
             <h2>Latest Version</h2>
             <p>
                 Download the latest release
             </p>
             <a href="https://www.kde.org/announcements/" target="_blank">Release Announcements</a>
+          </div>
         </div>
-        <div>
+        <div class="p-2">
+          <div class="shadow">
             <h2>Find more Qt Addons</h2>
             <p>
                 The Qt library archive.
             </p>
             <a href="https://inqlude.org/" target="_blank">Inqlude</a>
+          </div>
         </div>
-        <div>
+        <div class="p-2">
+          <div class="shadow">
             <h2>Build it Yourself</h2>
             <p>
                 Our tool to compile KDE software
             </p>
             <a href="https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source" target="_blank">kdesrc-build</a>
+          </div>
         </div>
-        <div>
+        <div class="p-2">
+          <div class="shadow">
             <h2>Linux Packages</h2>
             <p>
                 Linux distros already package KDE Frameworks
             </p>
             <a href="https://community.kde.org/Get_KDE_Software_on_Your_Linux_Distro" target="_blank">Binary Packages</a>
+          </div>
         </div>
-        <div>
+        <div class="p-2">
+          <div class="shadow">
             <h2>Windows</h2>
             <p>
                 Our Craft tool builds KDE software on Windows and other platforms
             </p>
             <a href="https://community.kde.org/Craft" target="_blank">Craft</a>
+          </div>
+          </div>
         </div>
-        <div>
+        <div class="p-2">
+          <div class="shadow">
             <h2>Android</h2>
             <p>
                 Use KDE Frameworks on mobile
             </p>
             <a href="https://community.kde.org/Android" target="_blank">Android Tutorial</a>
+          </div>
         </div>
     </div>
 </article>
