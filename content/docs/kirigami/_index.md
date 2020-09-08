@@ -1,6 +1,6 @@
 ---
-title: "Kirigami Tutorial"
-linkTitle: "Kirigami Tutorial"
+title: "Getting started with Kirigami"
+linkTitle: "Kirigami"
 weight: 2
 description: >
   Learn the Kirigami framework by creating your first convergent application

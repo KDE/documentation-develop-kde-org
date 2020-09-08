@@ -3,8 +3,8 @@ title: Basic Controls
 weight: 2
 ---
 
-In the first part of this tutorial, you created a stub Python/Kirigami app that
-doesn’t do anything. Time to change that! In this post you will be filling the
+In the first part of this tutorial, you created a stub C++/Kirigami app that
+doesn’t do much yet. Time to change that! In this post you will be filling the
 screen with some controls.
 
 ## Kirigami Pages
@@ -53,8 +53,9 @@ Starting the app gives us an empty page
 
 ## Basic controls
 
-Remember the original goal, building a application that check departures and routes
-for public transport. So on the start page you need need a way to enter start and
+In the following, we will use the example of an application that check departures
+and routesfor public transport.
+So on the start page you need need a way to enter start and
 destination of our journey as well as the date and time of our travel. For start
 and destination you can use simple TextFields from QtQuick Controls 2. Note that
 the older version 1 of QtQuick Controls is still around for the foreseable future,
@@ -115,7 +116,7 @@ true, resulting in each one getting 50% of the space.
 The buttons look a bit weird, don’t they? That’s because they are using the built-in
 QtQuick Controls style. If you are using Plasma you are probably used to the
 `org.kde.desktop` style which emulates the active Qt Widgets style. You can force your
-app to use the org.kde.desktop style by running `QT_QUICK_CONTROLS_STYLE=”org.kde.desktop” ./main.py`.
+app to use the org.kde.desktop style by running `QT_QUICK_CONTROLS_STYLE="org.kde.desktop" <app name>`.
 
 ![Application screenshot](style2.png)
 
