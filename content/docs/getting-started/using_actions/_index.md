@@ -10,7 +10,7 @@ Introduction
 
 This tutorial introduces the concept of actions. Actions are a unified way of supplying the user with ways to interact with your program.
 
-For example, if we wanted to let the user of your [window](main_window) clear the text box by clicking a button in the toolbar, from an option in the File menu or through a keyboard shortcut, it could all be done with one [QAction](https://doc.qt.io/qt-5/qaction.html). 
+For example, if we wanted to let the user of your [window](../main_window) clear the text box by clicking a button in the toolbar, from an option in the File menu or through a keyboard shortcut, it could all be done with one [QAction](https://doc.qt.io/qt-5/qaction.html). 
 
 ![](result.png)
 
@@ -112,7 +112,7 @@ They are very simple to use. Once the library has been included (`#include <KSta
 KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
 ```
 
-Here we call the QApplicaton's [quit ](https://doc.qt.io/qt-5/qapplication.html#quit) method whenever the :kconfigwidgetsapi:`KStandardAction` quit is triggered. We are able to access that QApplication method via the [qApp](https://doc.qt.io/qt-5/qapplication.html#qApp>) macro. 
+Here we call the QApplicaton's [quit ](https://doc.qt.io/qt-5/qapplication.html#quit) method whenever the :kconfigwidgetsapi:`KStandardAction` quit is triggered. We are able to access that QApplication method via the [qApp](https://doc.qt.io/qt-5/qapplication.html#qApp) macro. 
 
 In the end, this creates a QAction with the correct icon, text and shortcut and even adds it to the File menu.
 
@@ -160,7 +160,7 @@ Finally, the `texteditorui.rc` needs to go somewhere where the system can find i
    :language: cmake
    :linenos:
 
-This file is almost identical to the one for :doc`previous tutorial<main_window>`, but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the `KDE_INSTALL_TARGETS_DEFAULT_ARGS` then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory under `KDE_INSTALL_KXMLGUI5DIR`. 
+This file is almost identical to the one for [previous tutorial](../main_window), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the `KDE_INSTALL_TARGETS_DEFAULT_ARGS` then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory under `KDE_INSTALL_KXMLGUI5DIR`. 
 
 ## Make, Install And Run
 

@@ -35,7 +35,7 @@ We'll get into the details of mainwindow.cpp in a while.
 
 ### savingloadingui.rc
 
-This is identical to usingactionsui.rc from the [previours tutorial](using_actions) except the name has changed to 'savingloading'. We do not need to add any information about any of the {{< api-link module="kconfigwidgets" link="KStandardAction" >}} since the placement of those actions is handled automatically by XMLGUI system. 
+This is identical to usingactionsui.rc from the [previous tutorial](../using_actions) except the name has changed to 'savingloading'. We do not need to add any information about any of the {{< api-link module="kconfigwidgets" link="KStandardAction" >}} since the placement of those actions is handled automatically by XMLGUI system. 
 
 ## Explanation
 
@@ -45,7 +45,7 @@ The first thing we do is add `fileName(QString())` to the MainWindow constructor
 
 ### Adding the actions
 
-The first thing we are going to do is provide the outward interface for the user so they can tell the application to load and save. Like with the quit action in [previous tutorial](using_actions), we will use {{< api-link module="kconfigwidgets" link="KStandardAction" >}}. We add the actions in the same way as for the quit action and, for each one, we connect it to the appropriate slot that we declared in the header file. 
+The first thing we are going to do is provide the outward interface for the user so they can tell the application to load and save. Like with the quit action in [previous tutorial](../using_actions), we will use {{< api-link module="kconfigwidgets" link="KStandardAction" >}}. We add the actions in the same way as for the quit action and, for each one, we connect it to the appropriate slot that we declared in the header file. 
 
 ### Creating a new document
 
@@ -59,7 +59,7 @@ void MainWindow::newFile()
 }
 ```
 
-`fileName.clear()` sets the `fileName` QString to be empty to reflect the fact that this document does not yet have a presence on storage. `textArea->clear()` then clears the central text area using the same function that we connected the clear QAction to in [previous tutorial](using_actions).
+`fileName.clear()` sets the `fileName` QString to be empty to reflect the fact that this document does not yet have a presence on storage. `textArea->clear()` then clears the central text area using the same function that we connected the clear QAction to in [previous tutorial](../using_actions).
 
 {{< alert title="Warning" color="warning" >}}
 This simple example simply clears the text area without checking if the file has been saved first. It's only meant as a demonstration of file I/O and not as an example of best programming practices.
@@ -146,7 +146,7 @@ First we must ask the user for the name of the file they wish to open. We do thi
 const QUrl fileNameFromDialog = QFileDialog::getOpenFileUrl(this, i18n("Open File"));
 ```
 
-Here we use the QUrl class to handle files from remote locations. 
+Here we use the [QUrl](https://doc.qt.io/qt-5/qurl.html) class to handle files from remote locations. 
 
 Then we use the KIO library to retrieve our file. This allows us to open the file normally even if it's stored in a remote location like an FTP site. We make the following call to the {{< api-link module="kio" link="KIO::storedGet" >}} function with an argument for the file you wish to open or download: 
 
@@ -185,7 +185,7 @@ Again, for simplicity's sake, this tutorial only saves text files to local disk.
 
 Since we are now using the KIO library, we must tell CMake to link against it. We do this by passing `KIO` to the `find_package()` function and `KF5::KIOCore` to `target_link_libraries()` function. 
 
-With this file, the tutorial can be built and run in the same way as the [previous tutorial](using_actions).
+With this file, the tutorial can be built and run in the same way as the [previous tutorial](../using_actions).
 
 ```bash
 mkdir build && cd build

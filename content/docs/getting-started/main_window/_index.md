@@ -7,7 +7,7 @@ description: >
 
 ## Summary
 
-This tutorial carries on from [First Program Tutorial](hello_world) and will introduce the {{< api-link module="kxmlgui" link="KXmlGuiWindow" >}} class. 
+This tutorial carries on from [First Program Tutorial](../hello_world) and will introduce the {{< api-link module="kxmlgui" link="KXmlGuiWindow" >}} class. 
 
 In the previous tutorial, the program caused a dialog box to pop up but we're going to take steps towards a functioning application.
 
@@ -66,4 +66,4 @@ mkdir build && cd build && cmake .. && make && ./mainwindow
 Moving On
 ---------
 
-Now you can move on to [Using Actions](using_actions).
+Now you can move on to [Using Actions](../using_actions).
