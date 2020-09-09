@@ -167,5 +167,5 @@ Kirigami.Page
 }
 ```
 
-<!-- Right now it’s just an empty page, you’re going to fill it with life in the [next part of this turorial](search_page). -->
-
+Now that you know how to add elements to the user interface of your application, you will probably want them to have useful functionality.
+[Continue to the next page](../connect_backend) on how to do that.
