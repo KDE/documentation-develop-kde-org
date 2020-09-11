@@ -3,7 +3,7 @@ SPDX-FileCopyrightText: 2006 Zack Rusin <zack@kde.org>
 SPDX-LicenseRef: CC-BY-SA-4.0
 title: Using KConfig XT
 description: >
-  This tutorial introduces the main concepts of the KconfigXT configuration framework and shows how to efficiently use it in applications.
+  This tutorial introduces the main concepts of the KConfigXT configuration framework and shows how to efficiently use it in applications.
 ---
 
 The main idea behind KConfigXT is to provide a more convenient way to manage
