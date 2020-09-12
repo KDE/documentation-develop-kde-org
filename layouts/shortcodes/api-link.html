@@ -1,1 +1,25 @@
-<a href="#">{{ .Get "Link" }}</a>
+/**
+ * SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+{{ $module := .Get "module" }}
+{{ $link := .Get "link" }}
+
+{{ $filename := "false" }}
+
+{{ $url := printf "_data/%s.json" $module }}
+{{ $data := getJSON $url }}
+
+{{ range $data.tagfile.compound }}
+  {{ if (eq (index .name "$") $link) }}
+    {{ $filename = (index .filename "$") }}
+  {{ end }}
+{{ end }}
+
+<a href="https://api.kde.org/frameworks/{{ $module }}/html/{{ $filename }}">
+  {{ if .Get "name" }}
+    {{ .Get "name" }}
+  {{ else }}
+    {{ .Get "link" }}
+  {{ end }}
+</a>
