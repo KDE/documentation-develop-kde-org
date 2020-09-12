@@ -14,7 +14,7 @@ weight: 20
       <a class="tool tool-one" href="https://kdevelop.org">
         <div>
           <h3>KDevelop</h3>
-          <p>Kate is KDE's full-fledged development environment.</p>
+          <p>KDevelop is KDE's full-fledged development environment.</p>
         </div>
         <div>
           <img class="img-fluid" src="https://kde.org/applications/icons/org.kde.kdevelop.svg">
