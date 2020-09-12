@@ -69,7 +69,7 @@ The interface will now be known as `org.foo.Background`.
 ## Camera: Generating the Interface
 
 ### The Simple Way
-The simplest way of generating interfaces is to use your class as interface directly. Just make sure your class has `Q_CLASSINFO("D-Bus Interface", "org.foo.Background")` under the `Q_OBJECT` macro. Now you can skip the next section and head to [Instantiating the Interface At Runtime](#action-instantiating-the-interface-at-runtime)
+The simplest way of generating interfaces is to use your class as interface directly. Just make sure your class has `Q_CLASSINFO("D-Bus Interface", "org.foo.Background")` under the `Q_OBJECT` macro. Now you can skip the next section and head to [Instantiating the Interface At Runtime](#the-simple-way-1)
 
 ### The Complex But Portable Way
 This way requires a more complicated build procedure, but if your project will be used by many other applications, this is probably the better way. It installs an XML file in the system, which other applications can use to generate their own adapter class. Anyone with your project installed can refer to this file without having to go to your project source.
@@ -107,7 +107,7 @@ This produces a file named `org.foo.Background.xml` which contains this:
 
 This file should be shipped with your project's source distribution.
 
-### Solution two: Call qdbuscpp2xml using CMake
+### Solution two: Call qdbuscpp2xml using CMake (Preferred)
 
 Add the following code to your project's `CMakeLists.txt`:
 
@@ -139,23 +139,14 @@ This will cause two files, in this case `backgroundadaptor.h` and `backgroundada
 
 The D-Bus XML description file will also be installed. This allows users to examine it as a reference and other applications to use this file to generate interface classes using `qdbusxml2cpp` as seen in the tutorial on [accessing D-Bus interfaces](/docs/d-bus/accessing_dbus_interfaces).
 
+You can use the generated adaptor to [Instantiating the Interface At Runtime](#the-complex-way)
+
 ## Action: Instantiating the Interface At Runtime
 
 ### The Simple Way
 You can use [`QDBusConnection::registerObject`](https://doc.qt.io/qt-5/qdbusconnection.html#registerObject) to register your class. Normally you'd do this in the constructor of your class, but if you have more than one instance of the same class, you need to ensure there is no DBus path conflict. For a singleton class, you may have something like this in the constructor:
 
-```cpp
-#include <QDBusConnection>
-Background::Background(QObject* parent)
-    : QObject(parent)
-{
-    // register DBus object at org.kde.myapp/foobar
-    QDBusConnection::sessionBus().registerService("org.kde.myapp");
-    QDBusConnection::sessionBus().registerObject("/foobar", this, QDBusConnection::ExportScriptableContents);
-
-    ... // the rest of constructor
-}
-```
+{{< readfile file="/content/docs/d-bus/creating_dbus_interfaces/instantiating_interface_simple.cpp" highlight="cpp" >}}
 
 In line 6 we register the service path with DBus. This name should not be used by any other project. Note that if you have
 
@@ -172,19 +163,7 @@ However, if you have multiple instances of this class, we need to edit above exa
 ### The Complex Way
 Now that we have our interface created for us, all we need to do is create it at runtime. We do this by including the generated header file and instantiating an object, as seen in this example:
 
-```cpp
-#include "background.h"
-#include "backgroundadaptor.h"
-
-Background::Background(QObject* parent)
-    : QObject(parent)
-{
-    new BackgroundAdaptor(this);
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject("/Background", this);
-    dbus.registerService("org.foo.Background");
-}
-```
+{{< readfile file="/content/docs/d-bus/creating_dbus_interfaces/instantiating_interface_complex.cpp" highlight="cpp" >}}
 
 Since the generated adaptor is a QObject, when we pass the constructor `this` it not only will be deleted when our Background object is deleted but it will bind itself to `this` for the purposes of forwarding D-Bus calls.
 
