@@ -34,7 +34,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   {{ end }}
 {{ end }}
 
-<a href="https://api.kde.org/frameworks/{{ $module }}/html/{{ $filename }}{{ $anchor }}">
+<a class="api-link" href="https://api.kde.org/frameworks/{{ $module }}/html/{{ $filename }}{{ $anchor }}">
   {{ if .Get "name" }}
     {{ .Get "name" }}
   {{ else }}
