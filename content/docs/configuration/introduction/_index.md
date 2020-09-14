@@ -2,6 +2,7 @@
 title: Introduction To KConfig
 description: >
   An overview of the KConfig classes and how to use them in your application code
+weight: 1
 ---
 
 ## Abstract

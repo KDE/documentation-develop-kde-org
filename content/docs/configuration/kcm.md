@@ -1,6 +1,6 @@
 ---
 title: Settings module development
-subtitle: This tutorial will guide you into creating a Plasma configuration modul.
+description: This tutorial will guide you into creating a Plasma configuration module.
 weight: 3
 ---
 
