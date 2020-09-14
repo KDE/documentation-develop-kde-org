@@ -21,7 +21,7 @@ Values stored may be of any number of data types. They are stored and retrieved 
 
 ### The KConfig Class
 
-The [KConfig](https://api.kde.org/frameworks/kconfig/html/classKConfig.html) object is used to access a given configuration object. There are a number of ways to create a config object: 
+The {{< api-link module="kconfig" link="KConfig" >}} object is used to access a given configuration object. There are a number of ways to create a config object: 
 
 {{< highlight cpp >}}
 // a plain old read/write config object
@@ -55,7 +55,7 @@ Finally on line 18 we see the creation of a configuration object that does not e
 
 ### Special Configuration Objects
 
-Each application has its own configuration object that uses the name provided to [KAboutData](https://api.kde.org/frameworks/kcoreaddons/html/classKAboutData.html) appended with "rc" as its name. So an app named "myapp" would have the default configuration object of "myapprc" (located in $HOME/.local/config/). This configuration file can be retrieved in this way: 
+Each application has its own configuration object that uses the name provided to {{< api-link module="kcoreaddons" link="KAboutData" >}} appended with "rc" as its name. So an app named "myapp" would have the default configuration object of "myapprc" (located in $HOME/.config/). This configuration file can be retrieved in this way: 
 
 ```cpp
 #include <KComponentData>
@@ -103,9 +103,9 @@ for (const QString& group: qAsConst(config->groupList())) {
 
 ## KSharedConfig
 
-The [KSharedConfig](https://api.kde.org/frameworks/kconfig/html/classKSharedConfig.html) class is a reference counted pointer to a [KConfig](https://api.kde.org/frameworks/kconfig/html/classKConfig.html). It thus provides a way to reference the same configuration object from multiple places in your application without the extra overhead of separate objects or concerns about synchronizing writes to disk even if the configuration object is updated from multiple code paths. 
+The {{< module="kconfig" link="KSharedConfig" >}} class is a reference counted pointer to a {{< module="kconfig" link="KConfig" >}}. It thus provides a way to reference the same configuration object from multiple places in your application without the extra overhead of separate objects or concerns about synchronizing writes to disk even if the configuration object is updated from multiple code paths. 
 
-Accessing a [KSharedConfig](https://api.kde.org/frameworks/kconfig/html/classKSharedConfig.html) object is as easy as this: 
+Accessing a {{< module="kconfig" link="KSharedConfig" >}} object is as easy as this: 
 
 ```cpp
 KSharedConfigPtr config = KSharedConfig::openConfig("ksomefilerc");
@@ -172,7 +172,7 @@ Note the use of `writePathEntry` and how the type of object we use, such as [QCo
 
 When is a configuration file not a configuration file? When it is a [desktop](http://freedesktop.org/wiki/Specifications/desktop-entry-spec) file. These files, which are essentially configuration files at their heart, are used to describe entries for application menus, mimetypes, plugins and various services. 
 
-When accessing a .desktop file, one should instead use the [KDesktopFile](https://api.kde.org/frameworks/kconfig/html/classKDesktopFile.html) class which, while a [KConfig](https://api.kde.org/frameworks/kconfig/html/classKConfig.html) class offering all the capabilities described above, offers a set of methods designed to make accessing standard attributes of these files consistent and reliable. 
+When accessing a .desktop file, one should instead use the {{< module="kconfig" link="KDesktopFile" >}} class which, while a {{< module="kconfig" link="KConfig" >}} class offering all the capabilities described above, offers a set of methods designed to make accessing standard attributes of these files consistent and reliable. 
 
 ## Kiosk: Lockdown and User/Group Profiles
 
