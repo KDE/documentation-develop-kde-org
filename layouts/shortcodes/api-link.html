@@ -6,17 +6,35 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 {{ $link := .Get "link" }}
 
 {{ $filename := "false" }}
+{{ $anchor := "" }}
 
 {{ $url := printf "_data/%s.json" $module }}
 {{ $data := getJSON $url }}
 
-{{ range $data.tagfile.compound }}
-  {{ if (eq (index .name "$") $link) }}
-    {{ $filename = (index .filename "$") }}
+{{ if in $link "::" }}
+  {{ $class := (index (split $link "::") 0) }}
+  {{ $member := (index (split $link "::") 1) }}
+  {{ range $data.tagfile.compound }}
+    {{ if (eq (index .name "$") $class) }}
+      {{ $filename = (index .filename "$") }}
+      {{ if .member }}
+        {{ range .member }}
+          {{ if (eq (index .name "$") $member) }}
+            {{ $anchor = (printf "#%s" (index .anchor "$")) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ range $data.tagfile.compound }}
+    {{ if (eq (index .name "$") $link) }}
+      {{ $filename = (index .filename "$") }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
-<a href="https://api.kde.org/frameworks/{{ $module }}/html/{{ $filename }}">
+<a href="https://api.kde.org/frameworks/{{ $module }}/html/{{ $filename }}{{ $anchor }}">
   {{ if .Get "name" }}
     {{ .Get "name" }}
   {{ else }}
