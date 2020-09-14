@@ -103,9 +103,9 @@ for (const QString& group: qAsConst(config->groupList())) {
 
 ## KSharedConfig
 
-The {{< module="kconfig" link="KSharedConfig" >}} class is a reference counted pointer to a {{< module="kconfig" link="KConfig" >}}. It thus provides a way to reference the same configuration object from multiple places in your application without the extra overhead of separate objects or concerns about synchronizing writes to disk even if the configuration object is updated from multiple code paths. 
+The {{< api-link module="kconfig" link="KSharedConfig" >}} class is a reference counted pointer to a {{< api-link module="kconfig" link="KConfig" >}}. It thus provides a way to reference the same configuration object from multiple places in your application without the extra overhead of separate objects or concerns about synchronizing writes to disk even if the configuration object is updated from multiple code paths. 
 
-Accessing a {{< module="kconfig" link="KSharedConfig" >}} object is as easy as this: 
+Accessing a {{< api-link module="kconfig" link="KSharedConfig" >}} object is as easy as this: 
 
 ```cpp
 KSharedConfigPtr config = KSharedConfig::openConfig("ksomefilerc");
@@ -125,7 +125,7 @@ KConfigGroup generalGroup( &config, "General" );
 KConfigGroup colorsGroup = config.group( "Colors" ); // ... or a bit differently ...
 ```
 
-You can pass [KConfig](https://api.kde.org/frameworks/kconfig/html/classKConfig.html) or [KSharedConfig](https://api.kde.org/frameworks/kconfig/html/classKSharedConfig.html) objects to [KConfigGroup](https://api.kde.org/frameworks/kconfig/html/classKConfigGroup.html). 
+You can pass {{< api-link module="kconfig" link="KConfig" >}} or {{< api-link module="kconfig" link="KSharedConfig" >}} objects to {{< api-link module="kconfig" link="KConfigGroup" >}}. 
 
 Config groups can be nested as well: 
 
@@ -136,7 +136,7 @@ KConfigGroup subGroup2 = colorsGroup.group("Dialogs");
 
 ## Reading Entries
 
-With a [KConfigGroup](https://api.kde.org/frameworks/kconfig/html/classKConfigGroup.html) object in hand reading entries is now quite straight forward: 
+With a {{< api-link module="kconfig" link="KConfigGroup" >}} object in hand reading entries is now quite straight forward: 
 
 ```cpp
 QString accountName = generalGroup.readEntry("Account",
@@ -172,7 +172,7 @@ Note the use of `writePathEntry` and how the type of object we use, such as [QCo
 
 When is a configuration file not a configuration file? When it is a [desktop](http://freedesktop.org/wiki/Specifications/desktop-entry-spec) file. These files, which are essentially configuration files at their heart, are used to describe entries for application menus, mimetypes, plugins and various services. 
 
-When accessing a .desktop file, one should instead use the {{< module="kconfig" link="KDesktopFile" >}} class which, while a {{< module="kconfig" link="KConfig" >}} class offering all the capabilities described above, offers a set of methods designed to make accessing standard attributes of these files consistent and reliable. 
+When accessing a .desktop file, one should instead use the {{< api-link module="kconfig" link="KDesktopFile" >}} class which, while a {{< api-link module="kconfig" link="KConfig" >}} class offering all the capabilities described above, offers a set of methods designed to make accessing standard attributes of these files consistent and reliable. 
 
 ## Kiosk: Lockdown and User/Group Profiles
 
