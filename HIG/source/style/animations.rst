@@ -20,7 +20,7 @@ Default animations should be as follows:
  
    .. raw:: html
 
-     <video autoplay src="https://cdn.kde.org/hig/video/20200122/Hide.webm" 
+     <video autoplay src="https://cdn.kde.org/hig/video/20200916/Hide.webm" 
      loop="true" playsinline="true" width="540" controls="true" 
      onended="this.play()" class="border"></video>
    
@@ -28,7 +28,7 @@ Default animations should be as follows:
  
    .. raw:: html
 
-     <video autoplay src="https://cdn.kde.org/hig/video/20200122/Show.webm" 
+     <video autoplay src="https://cdn.kde.org/hig/video/20200916/Show.webm" 
      loop="true" playsinline="true" width="540" controls="true" 
      onended="this.play()" class="border"></video>
 
@@ -36,7 +36,7 @@ Default animations should be as follows:
 
    .. raw:: html
 
-     <video autoplay src="https://cdn.kde.org/hig/video/20200122/Move.webm" 
+     <video autoplay src="https://cdn.kde.org/hig/video/20200916/Move.webm" 
      loop="true" playsinline="true" width="480" controls="true" 
      onended="this.play()" class="border"></video>
 
