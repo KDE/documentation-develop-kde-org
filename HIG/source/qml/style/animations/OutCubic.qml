@@ -49,10 +49,18 @@ Rectangle {
             ctx.beginPath();
             ctx.strokeStyle = "#F00";
             ctx.moveTo(0, 200);
-            //ctx.bezierCurveTo(150, 192, 150, 8, 300, 0);
-            ctx.quadraticCurveTo(150, 200, 300, 0);
+            let steps = 300;
+            let toY = 200;
+            let toX = 300;
+            for (var i = 0; i < steps; i++) {   
+                ctx.lineTo(i * (toX / steps), toY - outCubic(i / steps) * toY) ;
+            }
             ctx.stroke();
         }
+    }
+    
+    function outCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
     }
     
     Rectangle {
@@ -85,7 +93,7 @@ Rectangle {
             target: point
             property: "y"
             duration: root.duration
-            easing.type: Easing.InQuad
+            easing.type: Easing.OutCubic
         }
     }
 }

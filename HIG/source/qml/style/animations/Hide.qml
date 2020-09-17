@@ -31,7 +31,7 @@ Rectangle {
     height: 260
     property int duration: 600
 
-    InQuad {
+    InCubic {
         id: diagram
         x: 80;
         y: 10;
@@ -71,7 +71,7 @@ Rectangle {
             id: dotAnimation
             to: 10 - dot.height / 2
             duration: root.duration
-            easing.type: Easing.InQuad
+            easing.type: Easing.InCubic
         }
     }
     

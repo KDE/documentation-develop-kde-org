@@ -29,7 +29,7 @@ Rectangle {
     width: 480
     height: 260
 
-    InOutQuad {
+    InOutCubic {
         id: diagram
         x: 80;
         y: 10;
@@ -66,7 +66,7 @@ Rectangle {
             id: dotAnimation
             to: 10 - dot.height / 2
             duration: 2000
-            easing.type: Easing.InOutQuad
+            easing.type: Easing.InOutCubic
         }
     }
     

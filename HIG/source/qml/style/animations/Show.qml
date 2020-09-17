@@ -31,7 +31,7 @@ Rectangle {
     height: 260
     property int duration: 600
 
-    OutQuad {
+    OutCubic {
         id: diagram
         x: 80;
         y: 30;
@@ -71,7 +71,7 @@ Rectangle {
             id: dotAnimation
             to: 30 - dot.height / 2
             duration: root.duration
-            easing.type: Easing.OutQuad
+            easing.type: Easing.OutCubic
         }
     }
     
