@@ -42,7 +42,7 @@ I've listed the more common usecases. More can be found on the wiki:
 
 ---
 
-I personally don't recommend using `Color` if you want the default color from the color scheme (eg: `theme.textColor`). I would instead suggest using a `String` that defaults to empty. You can then use the following in the QML:
+I personally don't recommend using `Color` if you want to default to a color from the color scheme (eg: `PlasmaCore.ColorScope.textColor`). I would instead suggest using a `String` that is empty by default. You can then use the following in the QML:
 
 ```xml
 <entry name="labelColor" type="String">
@@ -52,7 +52,7 @@ I personally don't recommend using `Color` if you want the default color from th
 
 ```qml
 PlasmaComponents.Label {
-    color: plasmoid.configruation.labelColor || theme.textColor
+    color: plasmoid.configruation.labelColor || PlasmaCore.ColorScope.textColor
 }
 ```
 
@@ -447,10 +447,13 @@ I have written a few files that apply the above pattern of skipping "Apply" and 
 * [ConfigCheckBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigCheckBox.qml) for on/off booleans values.
 * [ConfigSpinBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigSpinBox.qml) for Integer or Real numbers.
 * [ConfigString.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigString.qml) for a single line of text.
-* [ConfigColor.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigColor.qml) for use with a `String` or `Color` config data type. If you use use a `String` data type, you can treat an empty string as a certain color theme color. Eg: ```qmlConfigColor {
-  configKey: 'labelColor'
-  defaultColor: theme.textColor
-}```
+* [ConfigColor.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigColor.qml) for use with a `String` or `Color` config data type. If you use use a `String` data type, you can treat an empty string as a certain color theme color. Eg:
+  ```qml
+  ConfigColor {
+    configKey: 'labelColor'
+    defaultColor: PlasmaCore.ColorScope.textColor
+  }
+  ```
 * [ConfigIcon.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigIcon.qml) based on the Application Launcher icon selector.
 * [ConfigStringList.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigStringList.qml) Instead of a [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls-textfield.html), it uses a [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls-textarea.html) using a new line as the seperator.
 * [ConfigComboBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigComboBox.qml) is useful for creating enums using the `String` config data type. KConfig comes with a enum datatype as well, but you have to use hardcoded integers (with comments) in your QML code, rather than using strings.
