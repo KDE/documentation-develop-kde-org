@@ -5,10 +5,10 @@ description: >
   Create a new plasma widget from scratch.
 ---
 
+## Folder Structure
+
 {{< sections >}}
 {{< section-left >}}
-
-## Folder Structure
 
 To start a new widget from scratch, first create a folder for your new widget somewhere in you coding directory (eg: `~/Code/plasmoid-helloworld`).
 
@@ -36,9 +36,10 @@ Note that you don't *need* the 3 config files. You can get away with just the `m
 {{< /section-right >}}
 {{< /sections >}}
 
+## metadata.desktop
+
 {{< sections >}}
 {{< section-left >}}
-## metadata.desktop
 
 Inside the `metadata.desktop` file we need to set the `Name` of the widget. The `Type` should be `Service` since the `.desktop` file is not an app launcher and we don't want this to appear in the app menu.
 
