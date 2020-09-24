@@ -5,6 +5,9 @@ description: >
   Create a new plasma widget from scratch.
 ---
 
+{{< sections >}}
+{{< section-left >}}
+
 ## Folder Structure
 
 To start a new widget from scratch, first create a folder for your new widget somewhere in you coding directory (eg: `~/Code/plasmoid-helloworld`).
@@ -18,19 +21,23 @@ Inside `contents`, we will create the `ui` and `config` folders. `ui` is the fol
 Inside the `config` folder we have the `main.xml` which contains the schema of all our serialized configuration keys+values. The `config.qml` is used to define the tabs in the configuration window. Each tab will open a QML layout file (like `ui/configGeneral.qml`).
 
 Note that you don't *need* the 3 config files. You can get away with just the `main.qml` and `metadata.desktop` for a barebones widget.
+{{< /section-left >}}
 
-* `~/Code/plasmoid-helloworld/`
-    * `package/`
-        * `contents/`
-            * `config/`
-                * `config.qml`
-                * `main.xml`
-            * `ui/`
-                * `configGeneral.qml`
-                * `main.qml`
-        * `metadata.desktop`
+{{< section-right highlight="bash">}}
+└── package/
+    ├── contents
+    │   ├── ui
+    │   │   ├── main.qml
+    │   │   └── configGeneral.qml
+    │   └── config
+    │       ├── config.qml
+    │       └── main.xml
+    └── metadata.desktop
+{{< /section-right >}}
+{{< /sections >}}
 
-
+{{< sections >}}
+{{< section-left >}}
 ## metadata.desktop
 
 Inside the `metadata.desktop` file we need to set the `Name` of the widget. The `Type` should be `Service` since the `.desktop` file is not an app launcher and we don't want this to appear in the app menu.
@@ -46,8 +53,9 @@ Widgets installed by the user (without root) like when you "Install New Widgets"
 `X-KDE-ServiceTypes`, `X-Plasma-API`, and `X-Plasma-MainScript` are also needed to just define that this package is a plasma widget, and where it's entry point is.
 
 For more, read the [Getting Started](https://techbase.kde.org/Development/Tutorials/Plasma5/QML2/GettingStarted#The_.desktop_file) tutorial on the KDE wiki.
+{{< /section-left >}}
 
-```ini
+{{< section-right highlight="ini">}}
 [Desktop Entry]
 Name=Hello World
 Comment=A widget to take over the world!
@@ -65,8 +73,8 @@ X-KDE-PluginInfo-Name=com.github.zren.helloworld
 X-KDE-PluginInfo-Version=1
 X-KDE-PluginInfo-Website=https://github.com/Zren/plasmoid-helloworld
 X-KDE-PluginInfo-Category=System Information
-```
-
+{{< /section-right >}}
+{{< /sections >}}
 
 ## contents/ui/main.qml
 
