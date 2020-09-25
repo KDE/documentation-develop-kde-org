@@ -1,6 +1,5 @@
 ---
 title: "Plasma Widget Tutorial"
-linkTitle: "Plasma Widget Tutorial"
 weight: 2
 description: >
   Leard how to create a KDE Plasma Widget.
