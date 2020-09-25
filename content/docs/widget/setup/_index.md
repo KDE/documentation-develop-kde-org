@@ -56,7 +56,6 @@ Widgets installed by the user (without root) like when you "Install New Widgets"
 
 For more, read the [Getting Started](https://techbase.kde.org/Development/Tutorials/Plasma5/QML2/GettingStarted#The_.desktop_file) tutorial on the KDE wiki.
 {{< /section-left >}}
-
 {{< section-right highlight="ini">}}
 [Desktop Entry]
 Name=Hello World
@@ -79,6 +78,9 @@ X-KDE-PluginInfo-Category=System Information
 {{< /sections >}}
 
 ## contents/ui/main.qml
+
+{{< sections >}}
+{{< section-left >}}
 
 This is the entry point. Various properties are available to be set. You should know that widgets have several ways of being represented. 
 
@@ -107,6 +109,8 @@ You can set the tooltip contents and various other things in the `main.qml`.
 * [colorpicker/package/contents/ui/main.qml](https://github.com/KDE/kdeplasma-addons/blob/master/applets/colorpicker/package/contents/ui/main.qml)
 * [fifteenPuzzle/package/contents/ui/main.qml](https://github.com/KDE/kdeplasma-addons/blob/master/applets/fifteenPuzzle/package/contents/ui/main.qml)
 
+{{< /section-left >}}
+{{< section-right >}}
 ```qml
 // main.qml
 import QtQuick 2.0
@@ -167,4 +171,5 @@ Item {
     }
 }
 ```
-
+{{< /section-right >}}
+{{< /sections >}}
