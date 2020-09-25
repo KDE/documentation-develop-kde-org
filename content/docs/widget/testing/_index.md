@@ -93,7 +93,6 @@ plasmoidviewer -a package -l topedge -f horizontal
 By setting the `QT_SCALE_FACTOR=2` we can double the DPI value from `96` to `192` just for the `plasmoidviewer` window. This is great for testing if your code will support a HiDPI screen.
 
 If you're testing a very high DPI, you'll probably find the default `plasmoidviewer` window is too small to show the widget, so we'll set the size and position of the window. Note that the window will go maximized if you set a size larger than you screen has available.
-{% endcapture %}{% capture sectionRight %}
 
 ```bash
 QT_SCALE_FACTOR=2 plasmoidviewer -a package
