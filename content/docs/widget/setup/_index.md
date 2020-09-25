@@ -24,15 +24,16 @@ Note that you don't *need* the 3 config files. You can get away with just the `m
 {{< /section-left >}}
 
 {{< section-right highlight="bash">}}
-└── package/
-    ├── contents
-    │   ├── ui
-    │   │   ├── main.qml
-    │   │   └── configGeneral.qml
-    │   └── config
-    │       ├── config.qml
-    │       └── main.xml
-    └── metadata.desktop
+└── ~/Code/plasmoid-helloworld/
+    └── package
+        ├── contents
+        │   ├── ui
+        │   │   ├── main.qml
+        │   │   └── configGeneral.qml
+        │   └── config
+        │       ├── config.qml
+        │       └── main.xml
+        └── metadata.desktop
 {{< /section-right >}}
 {{< /sections >}}
 
