@@ -127,7 +127,7 @@ PlasmaComponents3.ComboBox {
 To control Integer or Real numbers, QML ships with [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html) and [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html). For Plasma's specific changes, you can read the QML source code for each:
 
 * [`SpinBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/SpinBox.qml)
-* [`Slider.qml`]https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Slider.qml)
+* [`Slider.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Slider.qml)
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -280,15 +280,14 @@ To add a scrollbar to manage overflow, QML ships with [ScrollView](https://doc.q
 {{< section-right highlight="qml">}}
 // main.qml
 import QtQuick 2.0
-import QtQuick.Layouts 1.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 PlasmaComponents3.ScrollView {
-    id: scrollArea
+    id: scrollView
 
-     ListView {
+    ListView {
         model: 100
-        PlasmaComponents3.CheckBox {
+        delegate: PlasmaComponents3.CheckBox {
             text: i18n("CheckBox #%1", index+1)
         }
     }
