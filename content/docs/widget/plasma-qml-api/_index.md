@@ -9,19 +9,18 @@ description: >
 
 KDE Frameworks ships with a number of useful extensions to Qt's QML. The [API documentation](https://api.kde.org/frameworks/plasma-framework/html/index.html) is a good start if you need to know what a specific property does. If you want to browse any of the sources easier, it's also [available on GitLab](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/declarativeimports).
 
-## PlasmaComponents 3 Controls
-
-PlasmaComponents 3 are [Qt Quick Controls 2 components](https://doc.qt.io/qt-5/qtquickcontrols-index.html)
-which supports Plasma themes and with default adapted to fit into Plasma. Because PlasmaComponents 3
-inherits from Qt Quick Controls 2, they have the same API.
 
 ## PlasmaComponents Controls
 
-QML ships with various controls, like [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html), [RadioButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html), [ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html) (DropDown Menu), [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html), [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html), [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html), [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html), [Button](https://doc.qt.io/qt-5/qml-qtquick-controls2-button.html), [ToolButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-toolbutton.html). Plasma extends these controls to style them using the SVGs from the [Plasma Theme](https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails). It also assigns a number of default settings like setting the text color to follow the panel's color scheme.
+QML ships with various controls, like [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html), [RadioButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html), [ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html) (dropdown menu), [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html), [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html), [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html), [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html), [Button](https://doc.qt.io/qt-5/qml-qtquick-controls2-button.html), [ToolButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-toolbutton.html). Plasma extends these controls to style them using the SVGs from the [Plasma Theme](https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails). It also assigns a number of default settings like setting the text color to follow the panel's color scheme.
 
-Because PlasmaComponents 3 inherits from Qt Quick Controls 2, they have the same API, so the [Qt documentation](https://doc.qt.io/qt-5/qtquickcontrols-index.html) can be followed. For Plasma's specific behaviour changes, you can read the QML source code for each control in:
+PlasmaComponents 3 is QML library that extends the [Qt Quick Controls 2 components](https://doc.qt.io/qt-5/qtquickcontrols-index.html) with defaults adapted to fit into Plasma widgets. Because PlasmaComponents 3 inherits from Qt Quick Controls 2, they have the same API, so the [Qt documentation](https://doc.qt.io/qt-5/qtquickcontrols-index.html) can be followed. For Plasma's specific behaviour changes, you can read the QML source code for each control in:
 
 [`plasma-framework`/src/declarativeimports/plasmacomponents3/](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/declarativeimports/plasmacomponents3)
+
+You may see leftover imports to PlasmaComponents 2 in some widgets. It uses the older [Qt Quick Controls 1](https://doc.qt.io/qt-5/qtquickcontrols1-index.html) components which are deprecated. The source code for the older controls can also be found in the `plasma-frameworks` repo:
+
+[`plasma-framework`/src/declarativeimports/plasmacomponents/qml/](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/declarativeimports//plasmacomponents/qml)
 
 
 ### Label
@@ -40,14 +39,14 @@ follow the panel's color scheme. For the specifics, you can read the
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-PlasmaComponents.Label {
+PlasmaComponents3.Label {
     text: i18n("Hello World")
 }
 {{< /section-right >}}
 {{< /sections >}}
 
 
-## CheckBox - Toggle
+### CheckBox - Toggle
 
 {{< sections >}}
 {{< section-left >}}
@@ -68,7 +67,7 @@ PlasmaComponents3.CheckBox {
 {{< /section-right >}}
 {{< /sections >}}
 
-## RadioButton, ComboBox - Multiple Choice
+### RadioButton, ComboBox - Multiple Choice
 
 {{< sections >}}
 {{< section-left >}}
@@ -92,7 +91,7 @@ ColumnLayout {
         checked: true
         autoExclusive: true
     }
-    PlasmaComponents.RadioButton {
+    PlasmaComponents3.RadioButton {
         text: i18n("Bottom")
         autoExclusive: true
     }
@@ -121,7 +120,7 @@ PlasmaComponents3.ComboBox {
 
 
 
-## SpinBox, Slider - Numbers
+### SpinBox, Slider - Numbers
 
 {{< sections >}}
 {{< section-left >}}
@@ -187,7 +186,7 @@ RowLayout {
 {{< /sections >}}
 
 
-## TextField, TextArea - Input
+### TextField, TextArea - Input
 
 {{< sections >}}
 {{< section-left >}}
@@ -230,8 +229,7 @@ PlasmaComponents3.TextArea {
 {{< /sections >}}
 
 
-
-## Button, ToolButton
+### Button, ToolButton
 
 {{< sections >}}
 {{< section-left >}}
@@ -298,7 +296,8 @@ PlasmaComponents3.ScrollView {
 {{< /section-right >}}
 {{< /sections >}}
 
-## PlasmaExtra
+
+## PlasmaExtras
 
 To be consistent with elsewhere in Plasma, Plasma ships with a couple of special components.
 These components have their own API and are particulary helpful when creating a Plama Widget.
