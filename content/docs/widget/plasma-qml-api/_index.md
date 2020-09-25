@@ -67,24 +67,16 @@ PlasmaComponents3.CheckBox {
 {{< /section-right >}}
 {{< /sections >}}
 
-### RadioButton, ComboBox - Multiple Choice
+
+### RadioButton - Multiple Choice
 
 {{< sections >}}
 {{< section-left >}}
-For mutiple choices, QML ships with [RadioButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html) and [ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html) (DropDown Menu). For Plasma's specific changes, you can read the QML source code for each:
+For mutiple choices, QML ships with [RadioButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html). For Plasma's specific changes, you can read the QML source code at:
 
 * [`RadioButton.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/RadioButton.qml)
-* [`ComboBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ComboBox.qml)
 
-Note that [`ComboBox.valueRole`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#valueRole-prop) and [`ComboBox.currentValue`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#currentValue-prop) was introduced in Qt 5.14. [Ubuntu 20.04 only has Qt 5.12](https://repology.org/project/qt/versions) so you will need to use the following until Ubuntu 22.04. Make sure to not define a `currentValue` property or it will break when your users upgrade to Qt 5.14.
-
-```
-PlasmaComponents3.ComboBox {
-    textRole: "text"
-    property string _valueRole: "value"
-    readonly property var _currentValue: _valueRole && currentIndex >= 0 ? model[currentIndex][_valueRole] : null
-}
-```
+Note the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/radiobutton.html) suggest using a ComboBox (dropdown menu) when you list is greater than 5 options.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -107,9 +99,30 @@ ColumnLayout {
     }
 }
 ```
+{{< /section-right >}}
+{{< /sections >}}
 
----
 
+### ComboBox - Multiple Choice
+
+{{< sections >}}
+{{< section-left >}}
+For mutiple choices, QML ships with [RadioButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html) and [ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html) (dropdown menu). For Plasma's specific changes, you can read the QML source code for each:
+
+* [`ComboBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ComboBox.qml)
+
+Note that [`ComboBox.valueRole`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#valueRole-prop) and [`ComboBox.currentValue`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#currentValue-prop) was introduced in Qt 5.14. [Ubuntu 20.04 only has Qt 5.12](https://repology.org/project/qt/versions) so you will need to use the following properties until Ubuntu 22.04. Make sure to not define a `currentValue` property or it will break when your users upgrade to Qt 5.14.
+
+```
+PlasmaComponents3.ComboBox {
+    textRole: "text"
+    property string _valueRole: "value"
+    readonly property var _currentValue: _valueRole && currentIndex >= 0 ? model[currentIndex][_valueRole] : null
+}
+```
+
+{{< /section-left >}}
+{{< section-right >}}
 ```qml
 // main.qml
 import QtQuick 2.0
