@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Kirigami
-weight: 0
+weight: 1
 description: Hello world in Kirigami
 ---
 

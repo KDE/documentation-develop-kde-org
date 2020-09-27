@@ -1,6 +1,6 @@
 ---
 title: Basic Controls
-weight: 1
+weight: 2
 ---
 
 In the first part of this tutorial, you created a stub Python/Kirigami app that
