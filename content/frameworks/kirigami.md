@@ -29,27 +29,6 @@ layout: framework
   </div>
 </div>
 
-<section class="section-green">
-  <div class="container d-flex flex-column flex-lg-row">
-    <img class="img-fluid order-2 order-lg-0" src="koko.png" />
-    <div class="order-1 order-lg-1 align-self-centert">
-      <h2>Koko</h2>
-      <p>A convergent photo gallery built using Kirigami and KDE frameworks</p>
-    </div>
-  </div>
-</section>
-
-<section class="section-blue">
-  <div class="container d-flex flex-column flex-lg-row">
-    <div class="align-self-center">
-      <h2 class="mt-0">Subsurface</h2>
-      <p>A dive log application created by Linus Torvalds with <br />
-        Kirigami with support for Linux, Windows, macOS, iOS, Android, and iPadOS.</p>
-    </div>
-    <img class="img-fluid" src="subsurface-desktop.png" />
-  </div>
-</section>
-
 <section class="d-flex">
   <img src="kirigami-devices.png" class="img-fluid kirigami-devices"/>
   <div class="align-self-center container">
@@ -101,3 +80,25 @@ layout: framework
     <p>Kirigami is one of the 70 <a href="/products/frameworks">KDE Frameworks</a>, a collection of high quality add on libraries for Qt apps.</p>
   </div>
 </article>
+
+<section class="section-green">
+  <div class="container d-flex flex-column flex-lg-row">
+    <img class="img-fluid order-2 order-lg-0" src="koko.png" />
+    <div class="order-1 order-lg-1 align-self-centert">
+      <h2>Koko</h2>
+      <p>A convergent photo gallery built using Kirigami and KDE frameworks</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-blue">
+  <div class="container d-flex flex-column flex-lg-row">
+    <div class="align-self-center">
+      <h2 class="mt-0">Subsurface</h2>
+      <p>A dive log application created by Linus Torvalds with <br />
+        Kirigami with support for Linux, Windows, macOS, iOS, Android, and iPadOS.</p>
+    </div>
+    <img class="img-fluid" src="subsurface-desktop.png" />
+  </div>
+</section>
+
