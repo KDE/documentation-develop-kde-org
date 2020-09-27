@@ -1,3 +1,30 @@
 {{ define "main" }}
-{{ .Render "content" }}
+  {{ .Render "content" }}
+  {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
+  <div class="row mt-5">
+    <div class="col-6 d-flex">
+      {{with .NextInSection }}
+        <a class="shadow p-3 h-100 d-flex w-100 align-items-center"
+           href="{{ .Permalink }}">
+          <i class="icon icon_go-previous h1"></i>
+          <div class="ml-3">
+            <div class="h4">Previous</div>
+            {{ .Title }}
+          </div>
+        </a>
+      {{ end }}
+    </div>
+    <div class="col-6 d-flex">
+      {{with .PrevInSection }}
+        <a class="shadow p-3 h-100 d-flex w-100 align-items-center"
+           href="{{ .Permalink }}">
+          <div class="mr-3">
+            <div class="h4">Next</div>
+            {{ .Title }}
+          </div>
+          <i class="icon icon_go-next h1 ml-auto"></i>
+        </a>
+      {{ end }}
+    </div>
+  </div>
 {{ end }}
