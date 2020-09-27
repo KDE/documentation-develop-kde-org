@@ -107,7 +107,7 @@ ColumnLayout {
 
 {{< sections >}}
 {{< section-left >}}
-For mutiple choices, QML ships with [RadioButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html) and [ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html) (dropdown menu). For Plasma's specific changes, you can read the QML source code for each:
+For mutiple choices, QML also ships with [ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html) (dropdown menu). For Plasma's specific changes, you can read the QML source code at:
 
 * [`ComboBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ComboBox.qml)
 
