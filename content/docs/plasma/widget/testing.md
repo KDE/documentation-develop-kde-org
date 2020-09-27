@@ -35,11 +35,16 @@ Arguments:
   args              Arguments to pass to the plasmoid.
 ```
 
+Run the following to test the Application Launcher widget:
+
+```bash
+plasmawindowed org.kde.plasma.kickoff
+```
 
 
 ## plasmoidviewer
 
-With `metadata.desktop` and `main.qml`, we now have enough to test our widget. If you haven't yet, install the `plasma-sdk` package with `sudo apt install plasma-sdk`.
+If you haven't yet, install the `plasma-sdk` package with `sudo apt install plasma-sdk`.
 
 ```bash
 plasmoidviewer --help
@@ -69,6 +74,18 @@ Options:
   -h, --help                       Displays this help.
 ```
 
+You can test an installed widget by using it's plugin id.
+
+```bash
+plasmoidviewer -a org.kde.plasma.kickoff
+```
+
+Or use it to run a widget in a specific folder. This is particularly useful for development as you can now skip the install step.
+
+```bash
+plasmoidviewer -a ~/Code/plasmoid-helloworld/package
+```
+
 
 ## Test as Desktop Widget
 
@@ -90,7 +107,7 @@ plasmoidviewer -a package -l topedge -f horizontal
 
 ## Testing DPI Scaling
 
-By setting the `QT_SCALE_FACTOR=2` we can double the DPI value from `96` to `192` just for the `plasmoidviewer` window. This is great for testing if your code will support a HiDPI screen.
+By setting the `QT_SCALE_FACTOR=2` environment variable we can double the DPI value from `96` to `192` just for the `plasmoidviewer` window. This is great for testing if your code will support a HiDPI screen.
 
 If you're testing a very high DPI, you'll probably find the default `plasmoidviewer` window is too small to show the widget, so we'll set the size and position of the window. Note that the window will go maximized if you set a size larger than you screen has available.
 
@@ -107,6 +124,14 @@ By default in Qt 5.9, `console.log()`, which used to write a string to stdout (t
 kwriteconfig5 --file ~/.config/QtProject/qtlogging.ini --group "Rules" --key "qml.debug" "true"
 ```
 
+```ini
+# ~/.config/QtProject/qtlogging.ini
+[Rules]
+qml.debug=true
+```
+
+You should now see output when you add `console.log()` statements to your widget. You can place them in any function like the `Component.onCompleted` signal handler.
+
 ```qml
 // main.qml
 Item {
@@ -115,8 +140,24 @@ Item {
     }
 }
 ```
-```ini
-# ~/.config/QtProject/qtlogging.ini
-[Rules]
-qml.debug=true
+
+Or in a `onPropertyChanged` signal. The following example will print a log message when you click the button.
+
+```qml
+// main.qml
+import QtQuick 2.0
+import QtQuick.Layouts 1.0
+import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.plasmoid 2.0
+PlasmaComponents.Button {
+    id: widget
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    Layout.minimumWidth: implicitWidth
+
+    property int num: 1
+    onNumChanged: console.log('num', num)
+
+    text: i18n("Add 1")
+    onClicked: num += 1
+}
 ```
