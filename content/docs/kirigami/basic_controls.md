@@ -166,5 +166,5 @@ Kirigami.Page
 }
 ```
 
-Right now it’s just an empty page, you’re going to fill it with life in the [next part of this turorial](search_page).
+<!-- Right now it’s just an empty page, you’re going to fill it with life in the [next part of this turorial](search_page). -->
 
