@@ -14,7 +14,7 @@ is a set of QtQuick components designed for creating convergent
 mobile/desktop apps.
 
 While the ui code is done in QML in a declarative way, the buisness logic
-is ussually created in C++ for performance reasons.
+is usually created in C++ for performance reasons.
 
 First of all you will need to install Kirigami on your system, this can
 usually be done with your Linux distribution package manager.
