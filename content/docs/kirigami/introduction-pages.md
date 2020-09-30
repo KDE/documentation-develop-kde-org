@@ -1,21 +1,20 @@
 ---
-title: Introduction to Kirigami Pages
+title: Kirigami Pages
 weight: 3
 description: Pages are containers for your content
 ---
 
-## Kirigami Pages
+## `Kirigami.Page`
 
-Kirigami apps are typically organized in {{< api-link module="kirigami2"
-link="org::kde::kirigami::Page" name="Page" >}}
-  Pages. Those are the different ‘Screens’
+Kirigami apps are typically organized in [Pages](docs:kirigami2;org::kde::kirigami::Page)
+Those are the different ‘Screens’
 of an app. If you come from the Android world you can think of them as the view
 part of activities. In our case we want to have an initial page that offers to
 enter a stop or a destination and opens a new page that shows a list of possible
 routes. Clicking on one of the list items opens a new page with a detailed view
 about the connections.
 
-Pages are organized in a pagestack where pages can be pushed and popped. On a phone
+Pages are organized in a pagestack where they can be pushed and popped. On a phone
 only the topmost page is shown, whereas on a larger screen (desktop or tablet)
 multiple pages can be shown next to each other.
 
@@ -24,8 +23,8 @@ multiple pages can be shown next to each other.
 {{< figure src="desktop.png" title="Two pages next to each other on the desktop" class="text-center" >}}
 
 So let’s create some pages! To simplify the QML code, you are going to put each
-page in its own .qml file and let the name end with Page. The first version of
-StartPage.qml looks like this:
+page in its own `.qml` file and let the name end with `Page`. The first version of
+`StartPage.qml` looks like this:
 
 ```json
 import QtQuick 2.2
@@ -40,7 +39,7 @@ Kirigami.Page
 ```
 
 It produces an empty page with a title. Before we can actually see it we need to add
-it to the pageStack. Replace the `Label {}` declaration in main.qml with
+it to the pageStack. Replace the `Label {}` declaration in `main.qml` with
 
 ```js
 pageStack.initialPage: Qt.resolvedUrl("StartPage.qml")
@@ -48,7 +47,6 @@ pageStack.initialPage: Qt.resolvedUrl("StartPage.qml")
 
 `pageStack.initialPage` is, well, setting the initial Page of the Page stack.
 `Qt.resolveUrl` is converting the relative URL of the QML file into an absolute one.
-Starting the app gives us an empty page
 
 You will also need to add the new page into the .qrc file, so that it can be bundled
 into the binary.
@@ -62,9 +60,9 @@ into the binary.
 </RCC>
 ```
 
-## ScrollablePages
+## `Kirigami.ScrollablePage`
 
-{{< api-link module="kirigami2" link="org::kde::kirigami::ScrollablePage" name="ScrollablePage" >}}
+A [ScrollablePage](docs:kirigami2;org::kde::kirigami::ScrollablePage)
 is a Page that holds scrollable content, such as ListViews. Scrolling and scrolling indicators will
 be automatically managed.
 
@@ -83,13 +81,11 @@ ScrollablePage {
 Do not put a ScrollView inside of a ScrollablePage; children of a ScrollablePage are already inside a ScrollView.
 {{< /alert >}}
 
-Another behavior added by this class is a "scroll down to refresh" behavior It also can give the
-contents of the flickable to have more top margins in order to make possible to scroll down the list
-to reach it with the thumb while using the phone with a single hand.
+Another behavior added by this class is a "pull to refresh" behavior.
+To use this, activate it as follows:
 
-Implementations should handle the refresh themselves as follows:
 
-```
+```json
 Kirigami.ScrollablePage {
     id: view
     supportsRefreshing: true
@@ -111,8 +107,10 @@ Kirigami.ScrollablePage {
 }
 ```
 
+By pulling down, you can also activate a special mode with a larger top margin making single-handed usage of the application easier.
+
 ## More on pages
 
-A Kirigami {{< api-link module="kirigami2" link="org::kde::kirigami::Page"
-name="Page" >}} inherit from a [QQC2 Page](https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html)
-and as such, you can add an header and footer to the Page.
+A Kirigami [Page](docs:kirigami2;org::kde::kirigami::Page)
+name="Page" >}} inherits from a [QQC2 Page](https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html)
+and as such, you can add a header and footer to the Page.

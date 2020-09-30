@@ -4,18 +4,21 @@ weight: 1
 description: Hello world in Kirigami
 ---
 
-First of all you will need to install Kirigami on your system, this can
-usually be done with your Linux distribution package manager.
-
 ## Basic application
 
-Before getting started you  need to install a few things. First of all we need
-a C++ compiler, the Qt development package and Kirigami. On Ubuntu, Debian and
-Neon you can install it via `sudo apt install build-essential extra-cmake-modules cmake qtbase5-dev qtdeclarative5-dev libqt5svg5-dev qtquickcontrols2-5-dev qml-module-org-kde-kirigami2 kirigami2-dev libkf5i18n-dev`.
+Before getting started you need to install a few things. First of all we need
+a C++ compiler, the Qt development packages and Kirigami. On Ubuntu, Debian and
+Neon you can install these with your package manager:
+
+```bash
+sudo apt install build-essential extra-cmake-modules cmake qtbase5-dev \
+                 qtdeclarative5-dev libqt5svg5-dev qtquickcontrols2-5-dev \
+                 qml-module-org-kde-kirigami2 kirigami2-dev libkf5i18n-dev
+```
 
 <!-- Todo cover kdesrc-build somewhere and link to it -->
 
-We will also use KAppTemplate to generate a suitable project to start from.
+We will also use [KAppTemplate](https://kde.org/applications/kapptemplate) to generate a suitable project to start from.
 On Debian-based distributions, it can be installed using `sudo apt install kapptemplate`.
 
 After starting KAppTemplate, skip through to the page that lets you choose
@@ -24,7 +27,7 @@ and then *Kirigami Application*. If you can't find the Kirigami template,
 your installed Kirigami version might be too old.
 
 After choosing the template, follow through the wizard to create your project.
-Once the wizard finish, you should get the following folder hierarchy:
+Once the wizard finishes, you should get the following folder hierarchy:
 
 ```
 ├── CMakeLists.txt
@@ -41,9 +44,9 @@ Once the wizard finish, you should get the following folder hierarchy:
 
 `org.kde.myapp.appdata.xml` contains the [AppStream](https://www.freedesktop.org/software/appstream/docs/sect-Metadata-Application.html)
 metadata. These are the data that are displayed on Linux software stores
-and this should be filled with care before releasing an application.
+and should be filled with care before releasing an application.
 
-`org.kde.myapp.desktop` contains the so called `.desktop`-file that
+`org.kde.myapp.desktop` is the so called `.desktop` file that
 contains information about how the application should be displayed
 in a linux application launcher.
 
@@ -57,11 +60,30 @@ time a new qml file is added in the application.
 `main.cpp` is the entrypoint to your application. The two parts of your
 project, the backend and the user interface are both set up and started
 here. Currently there is only a basic user interface, in the file called
-`main.qml` that is being load into the QML engine to the end of the
+`main.qml` that is being loaded into the QML engine at the end of the
 `main` function.
 
 Open the generated folder in an editor or Integrated Development Enviroment
 of your choice, like QtCreator or [KDevelop](https://kdevelop.org).
+
+
+## Anatomy of `main.qml`
+
+{{< readfile file="/content/docs/kirigami/getting_started/main.qml" highlight="json" >}}
+
+The base element is a [Kirigami.ApplicationWindow](docs:kirigami2;org::kde::kirigami::ApplicationWindow)
+and it provides some basic features
+needed for all Kirigami applications.
+
+The [Kirigami.GlobalDrawer](docs:kirigami2;org::kde::kirigami::GlobalDrawer)
+is the left sidebar of the application
+and will contain your application's navigation. The right sidebar is
+provided by the [Kirigami.ContextDrawer](docs:kirigami2;org::kde::kirigami::ContextDrawer)
+and it contains all your context specific actions on mobile.
+
+The last and most important part of `main.qml` is the [Kirigami.Page](docs:kirigami2;org::kde::kirigami::Page)
+and contains your content. This is also that we will see in the next part
+of this tutorial.
 
 ## Compiling and running the application
 
@@ -74,5 +96,4 @@ The resulting binary can be found in `./build/src/<project name>` or
 `./build/bin/<project name>` if you are using a recent version of the
 template.
 
-To learn more about the controls you can use in your new QML application,
-follow to the [next tutorial](../basic_controls).
+![Screenshot of the generated Kirigami application](template.png)

@@ -4,11 +4,11 @@ weight: 10
 description: Connect a backend to do calculations and supply your user interface with data to display
 ---
 
-To integrate logic into the application, we need C++ backend classes that can do the important calculation. Writing logic in the QML files is discouraged, so try to move as much as possible to the backend, so QML is purely used for displaying the user interface, which is what it is best at.
+To integrate logic into the application, we need C++ backend classes that can do the important calculations. Writing logic in the QML files is discouraged, so try to move as much as possible to the backend, so QML is purely used for displaying the user interface, which is what it is best at.
 
 For your new backend class, create two new files called `backend.cpp` and `backend.h`. Don't forget to add the new cpp file to the executable in `src/CMakeLists.txt`, next to main.cpp.
 
-to the new header file (the one with the `.h` extension), add the following content:
+Add the following content to the new header file (the one with the `.h` extension):
 ```C++
 #pragma once
 
@@ -34,17 +34,17 @@ Backend::Backend(QObject *parent)
 }
 ```
 
-Currently the user interface doesn't know about your backend class. To change that, we need to register the new type in main.cpp. The backend will be created as a singleton, that means it will only be created once and exist through the whole time from starting the application to closing it.
+Currently the user interface doesn't know about your backend class. To change that, we need to register the new type in `main.cpp`. The backend will be created as a singleton, that means it will only be created once and exist through the whole time from starting the application to closing it.
 
 To `main.cpp`, right after creating the `QQmlApplicationEngine`, add the type registration as follows:
-```
+```C++
     Backend backend;
     qmlRegisterSingletonInstance<Backend>("org.kde.example", 1, 0, "Backend", &backend);
 ```
 
-Don't forget to include the new header file at the top of main.cpp
+Don't forget to include the new header file at the top of `main.cpp`.
 
-From now on, the backend will be known to QML as "Backend". It is contained in a module called "org.kde.example". Since the module is part of the application, you don't need to worry about versioning it, just stay to the 1.0 and use it consistently throughout the application.
+From now on, the backend will be known to QML as `Backend`. It is contained in a module called `org.kde.example`. Since the module is part of the application, you don't need to worry about versioning it, just stay with 1.0 and use it consistently throughout the application.
 
 In `main.qml`, import the new module:
 ```QML
@@ -69,7 +69,7 @@ private:
 ```
 
 To the public section, add
-```
+```C++
     QString introductionText() const;
     void setIntroductionText(const QString &introductionText);
     Q_SIGNAL void introductionTextChanged();

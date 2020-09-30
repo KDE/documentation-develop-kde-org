@@ -18,7 +18,7 @@ convertible laptop with only the touchscreen in use. These types of devices
 will require the user interface to adapt as necessary for each usage mode.
 If minimal changes are needed (for example, a laptop plugged into a large
 external screen) this can be achieved with a "responsive" design, as described
-in [responsive in the HIG](https://hig.kde.org/introduction/responsive.html).
+in [responsiveness](https://hig.kde.org/introduction/responsive.html) in the HIG.
 For more extensive changes (for example, a tablet plugged into a docking
 station with a mouse and keyboard attached), an entirely different user
 interface paradigm may need to be presented.
@@ -28,17 +28,17 @@ with convergence in mind. *Convergence* means that a piece of software's user
 interface can immediately adapt its user experience to the particularities of
 each type of device that it can run on (desktop, laptop, tablet, phone, etc).
 
-This tutorial should guide you into creating your own convergent application
+This tutorial will guide you into creating your own convergent application
 using the [Kirigami framework](/frameworks/kirigami). 
 
-Kirigami is build on top of the QML language provided by Qt project and Qt Quick
+Kirigami is build on top of the QML language provided by the Qt project and Qt Quick
 Controls 2 components. QML is the declarative UI language from the Qt project
 and unlike the older QWidgets it is designed with (embedded) touch systems in
 mind and thus is ideal for mobile apps.
 
 Kirigami is a set of QtQuick components designed for creating convergent
-mobile/desktop apps.
+appslications.
 
-While the ui code is done in QML in a declarative way, the buisness logic
+While the ui code is done in QML in a declarative way, the buissness logic
 is usually created in C++ for performance reasons.
 
