@@ -22,7 +22,7 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
     * System/Default `/usr/share/kwin/tabbox/`
     * User Installed `~/.local/share/kwin/tabbox/` ([KDE Store Category](https://store.kde.org/browse/cat/211/order/latest/))
     * Can also be bundled in a Global Theme [like Breeze does](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/lookandfeel/contents/windowswitcher/WindowSwitcher.qml).
-    * Tutorial: https://techbase.kde.org/Development/Tutorials/KWin/WindowSwitcher
+    * Tutorial: [techbase.kde.org/Development/Tutorials/KWin/WindowSwitcher](https://techbase.kde.org/Development/Tutorials/KWin/WindowSwitcher)
 * **Plasma Widget** (aka Plasmoid) is a small visual plugin in the panel or desktop. 
     * System/Default `/usr/share/plasma/plasmoids/`
     * User Installed `~/.local/share/plasma/plasmoids/` ([KDE Store Category](https://store.kde.org/browse/cat/418/order/latest/))
