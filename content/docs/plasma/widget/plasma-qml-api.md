@@ -76,7 +76,7 @@ For mutiple choices, QML ships with [RadioButton](https://doc.qt.io/qt-5/qml-qtq
 
 * [`RadioButton.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/RadioButton.qml)
 
-Note the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/radiobutton.html) suggest using a ComboBox (dropdown menu) when you list is greater than 5 options.
+Note the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/radiobutton.html) suggest using a ComboBox (dropdown menu) when your list is greater than 5 options.
 
 {{< /section-left >}}
 {{< section-right >}}
