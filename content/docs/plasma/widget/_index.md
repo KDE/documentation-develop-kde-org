@@ -2,7 +2,7 @@
 title: "Plasma Widget Tutorial"
 weight: 2
 description: >
-  Leard how to create a KDE Plasma Widget.
+  Learn how to create a KDE Plasma Widget.
 ---
 
 The KDE wiki has a [Getting Started and Hello World](https://techbase.kde.org/Development/Tutorials/Plasma5) tutorial which you can read as well.
