@@ -4,18 +4,6 @@ weight: 1
 description: Hello world in Kirigami
 ---
 
-In this tutorial, you will be able to learn how to create a convergent
-application that adapts to smartphones, tablets, desktop PCs and even larger screens
-
-You are going to use QML/QtQuick and Kirigami. QML is the declarative UI
-language from the Qt project. Unlike the older QWidgets it is designed with
-(embedded) touch systems in mind and thus is ideal for mobile apps. Kirigami
-is a set of QtQuick components designed for creating convergent
-mobile/desktop apps.
-
-While the ui code is done in QML in a declarative way, the buisness logic
-is usually created in C++ for performance reasons.
-
 First of all you will need to install Kirigami on your system, this can
 usually be done with your Linux distribution package manager.
 
