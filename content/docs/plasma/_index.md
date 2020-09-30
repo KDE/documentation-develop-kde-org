@@ -1,5 +1,6 @@
 ---
 title: "Plasma Themes and Plugins"
+group: "getting-started"
 description: >
   How to customize plasma with widgets, themes and icons
 ---

@@ -4,6 +4,7 @@ linkTitle: "Getting Started"
 weight: 1
 description: >
   Discover KDE Frameworks and start building your first application
+group: "getting-started"
 ---
 
 This tutorial will guide you in creating a small text editor using

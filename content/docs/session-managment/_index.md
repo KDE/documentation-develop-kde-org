@@ -2,7 +2,8 @@
 title: Session Management
 description: >
   Make your application aware of X sessions
-weight: 1
+weight: 4
+group: "features"
 ---
 
 ## About KDE and X11 session management

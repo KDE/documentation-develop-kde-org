@@ -2,6 +2,7 @@
 title: Distributing KDE Software as Flatpak
 description: The new decentralized packaging standard for Linux applications
 weight: 20
+group: "packaging"
 ---
 
 Flatpak is a new package format in the Linux world that works on many Linux
