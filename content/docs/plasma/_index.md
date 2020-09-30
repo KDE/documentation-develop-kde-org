@@ -9,11 +9,11 @@ The KDE wiki also has a [few tutorials](https://techbase.kde.org/Development/Tut
 
 Plasma is very modular. Plasma is shipped with preinstalled modules in your root directory `/usr/share/plasma/`, however you can also download themes/widgets to the user's home directory `~/.local/share/plasma/`.
 
-* **Plasma Style** (formerly called Desktop Theme) controls the Panel/Widget look.
+* **Plasma Style** (formerly called Desktop Theme) controls the panel/widget look.
     * System/Default `/usr/share/plasma/desktoptheme/`
     * User Installed `~/.local/share/plasma/desktoptheme/` ([KDE Store Category](https://store.kde.org/browse/cat/104/order/latest/))
 * **Color Theme** (misc colors for Qt5 apps)
-    * Usually set in the `colors` file in a desktop theme.
+    * Usually set in the `colors` file in a plasma style (desktop theme).
     * When a color theme is applied, it's values are copied to `~/.config/kdeglobals`
 * **Icon Theme**
     * System/Default `/usr/share/icons/`
