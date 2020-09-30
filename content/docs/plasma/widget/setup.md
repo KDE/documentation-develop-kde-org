@@ -23,7 +23,8 @@ Inside the `config` folder we have the `main.xml` which contains the schema of a
 Note that you don't *need* the 3 config files. You can get away with just the `main.qml` and `metadata.desktop` for a barebones widget.
 {{< /section-left >}}
 
-{{< section-right highlight="bash">}}
+{{< section-right >}}
+```bash
 └── ~/Code/plasmoid-helloworld/
     └── package
         ├── contents
@@ -34,6 +35,7 @@ Note that you don't *need* the 3 config files. You can get away with just the `m
         │       ├── config.qml
         │       └── main.xml
         └── metadata.desktop
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -56,7 +58,8 @@ Widgets installed by the user (without root) like when you "Install New Widgets"
 
 For more, read the [Getting Started](https://techbase.kde.org/Development/Tutorials/Plasma5/QML2/GettingStarted#The_.desktop_file) tutorial on the KDE wiki.
 {{< /section-left >}}
-{{< section-right highlight="ini">}}
+{{< section-right >}}
+```ini
 [Desktop Entry]
 Name=Hello World
 Comment=A widget to take over the world!
@@ -74,6 +77,7 @@ X-KDE-PluginInfo-Name=com.github.zren.helloworld
 X-KDE-PluginInfo-Version=1
 X-KDE-PluginInfo-Website=https://github.com/Zren/plasmoid-helloworld
 X-KDE-PluginInfo-Category=System Information
+```
 {{< /section-right >}}
 {{< /sections >}}
 

@@ -34,7 +34,8 @@ follow the panel's color scheme. For the specifics, you can read the
 [`Label.qml` source code](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Label.qml).
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -42,6 +43,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 PlasmaComponents3.Label {
     text: i18n("Hello World")
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -55,7 +57,8 @@ For a simple toggle, QML ships with [CheckBox](https://doc.qt.io/qt-5/qml-qtquic
 * [`CheckBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/CheckBox.qml)
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```
 // main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -64,6 +67,7 @@ PlasmaComponents3.CheckBox {
     text: i18n("Hello World")
     checked: true
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -300,7 +304,8 @@ To add a scrollbar to manage overflow, QML ships with [ScrollView](https://doc.q
 * [`ScrollView.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ScrollView.qml)
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -315,6 +320,7 @@ PlasmaComponents3.ScrollView {
         }
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -338,7 +344,8 @@ To be consistent with elsewhere in Plasma, Plasma ships with a couple different 
   Justified Alignment, Wraps with `Layout.fillWidth: true`
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0

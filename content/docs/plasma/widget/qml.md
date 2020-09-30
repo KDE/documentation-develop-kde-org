@@ -17,7 +17,8 @@ The official QML tutorial can be found in the [QML Documentation](http://doc.qt.
 An [Item](http://doc.qt.io/qt-5/qml-qtquick-item.html) is a simple visible object. It can have children as well. Item's have a default width and height of 0px, and will not grow to fit their contents. So unlike the HTML box model, you'll need to use layouts mentioned below.
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right>}}
+```qml
 // main.qml
 import QtQuick 2.0
 
@@ -32,6 +33,7 @@ Item {
         id: childItemB
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -44,13 +46,15 @@ Item {
 If we want to draw a colored rectangle, we can easily do so with [Rectangle](http://doc.qt.io/qt-5/qml-qtquick-rectangle.html). For other properties of the Rectangle, like border color and width, read it's [page in the QML Documentation](http://doc.qt.io/qt-5/qml-qtquick-rectangle.html).
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 
 Rectangle {
     color: "#0ff" // Teal
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -67,7 +71,8 @@ By default, an [Item](http://doc.qt.io/qt-5/qml-qtquick-item.html) will not expa
 In the this example, only the Teal Rectangle will be visible, since the Green Rectangle has the default width of 0px and height of 0px. The Teal Rectangle is only visible since the root item in a widget's `main.qml` has a default size which will be explained later.
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 
@@ -78,6 +83,7 @@ Rectangle { // Unlike everything else, the widget's main item will have a defaul
         color: "#0f0" // Green
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -94,7 +100,8 @@ In this second example, we make the Green Rectangle resize to the parent item, t
 ![Green QML Rectangle completely covering the teal rectangle](anchorsfill.png)
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 
@@ -106,6 +113,7 @@ Rectangle { // Unlike everything else, the widget's main item will have a defaul
         anchors.fill: parent // Make sure we're the same size as the parent.
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -122,7 +130,8 @@ In this third example, we anchor the Green Rectangle to the bottom right, and ma
 Other ways to use `anchors` properties can be read in the QML Documentation page on [Positioning with Anchors](https://doc.qt.io/qt-5/qtquick-positioning-anchors.html) and the [`Item.anchors` property group](https://doc.qt.io/qt-5/qml-qtquick-item.html#anchors-prop).
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 
@@ -137,6 +146,7 @@ Rectangle {
         height: parent.height / 2
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -155,7 +165,8 @@ Note that if the `ColumnLayout` is taller than it's contents, the children will 
 ![QML Label above another QML Label](columnlayout.png)
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
@@ -169,6 +180,7 @@ ColumnLayout {
         text: "Item 2"
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -187,7 +199,8 @@ Within a [Layout](http://doc.qt.io/qt-5/qml-qtquick-layouts-layout.html) however
 The other Layout related properties can be [read here](http://doc.qt.io/qt-5/qml-qtquick-layouts-layout.html).
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
@@ -216,6 +229,7 @@ ColumnLayout {
         // anchors in a ColumnLayout throws a "undefined behavior" warning.
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -230,7 +244,8 @@ If you want one item (or several) in a Layout to expand to take up the unused sp
 ![](layoutfillheight.png)
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
@@ -257,6 +272,7 @@ ColumnLayout {
         Layout.fillWidth: true
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -271,7 +287,8 @@ In the last screenshot you might have noticed how there is still spacing between
 ![](layoutspacing.png)
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
@@ -300,6 +317,7 @@ ColumnLayout {
         Layout.fillWidth: true
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
 
@@ -314,7 +332,8 @@ There's also [RowLayout](http://doc.qt.io/qt-5/qml-qtquick-layouts-rowlayout.htm
 ![](https://i.imgur.com/qrDdw8L.png)
 
 {{< /section-left >}}
-{{< section-right highlight="qml">}}
+{{< section-right >}}
+```qml
 // main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
@@ -328,5 +347,6 @@ RowLayout {
         text: "Item 2"
     }
 }
+```
 {{< /section-right >}}
 {{< /sections >}}
