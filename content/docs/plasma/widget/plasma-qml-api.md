@@ -175,16 +175,21 @@ RowLayout {
     }
     PlasmaComponents3.Label {
         id: sliderValueLabel
-        Layout.minimumWidth: textMetrics.width
-        text: i18n("%1%", value)
+        function formatText(value) {
+            return i18n("%1%", value)
+        }
+        text: formatText(slider.value)
+
         TextMetrics {
             id: textMetrics
             font.family: sliderValueLabel.font.family
             font.pointSize: sliderValueLabel.font.pointSize
-            text: sliderValueLabel.formatText(slider.maximumValue)
+            text: sliderValueLabel.formatText(slider.to)
         }
+        Layout.minimumWidth: textMetrics.width
     }
 }
+
 ```
 {{< /section-right >}}
 {{< /sections >}}
