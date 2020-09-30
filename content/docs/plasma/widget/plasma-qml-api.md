@@ -146,41 +146,18 @@ PlasmaComponents3.ComboBox {
 {{< /sections >}}
 
 
-
-### SpinBox, Slider - Numbers
+### Slider - Numbers
 
 {{< sections >}}
 {{< section-left >}}
-To control Integer or Real numbers, QML ships with [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html) and [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html). For Plasma's specific changes, you can read the QML source code for each:
+To control Integer or Real numbers, QML ships with [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html) and [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html). For Plasma's specific changes, you can read the QML source code at:
 
-* [`SpinBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/SpinBox.qml)
 * [`Slider.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Slider.qml)
+
+See the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/slider.html) to determine wither to use a Slider or a SpinBox.
 
 {{< /section-left >}}
 {{< section-right >}}
-```qml
-// main.qml
-import QtQuick 2.0
-import QtQuick.Controls 1.0
-import QtQuick.Layouts 1.0
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-
-RowLayout {
-    PlasmaComponents3.Label {
-        text: i18n("Label:")
-        Layout.alignment: Qt.AlignRight
-    }
-    PlasmaComponents3.SpinBox {
-        from: 0
-        to: 100
-        value: 25
-        stepSize: 1
-    }
-}
-```
-
----
-
 ```qml
 // main.qml
 import QtQuick 2.4
@@ -213,6 +190,43 @@ RowLayout {
 {{< /sections >}}
 
 
+
+### SpinBox - Numbers
+
+{{< sections >}}
+{{< section-left >}}
+To control Integer or Real numbers, QML ships with [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html) and [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html). For Plasma's specific changes, you can read the QML source code at:
+
+* [`SpinBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/SpinBox.qml)
+
+See the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/spinbox.html) to determine wither to use a SpinBox or a Slider.
+
+{{< /section-left >}}
+{{< section-right >}}
+```qml
+// main.qml
+import QtQuick 2.0
+import QtQuick.Controls 1.0
+import QtQuick.Layouts 1.0
+import org.kde.plasma.components 3.0 as PlasmaComponents3
+
+RowLayout {
+    PlasmaComponents3.Label {
+        text: i18n("Label:")
+        Layout.alignment: Qt.AlignRight
+    }
+    PlasmaComponents3.SpinBox {
+        from: 0
+        to: 100
+        value: 25
+        stepSize: 1
+    }
+}
+```
+{{< /section-right >}}
+{{< /sections >}}
+
+
 ### TextField, TextArea - Input
 
 {{< sections >}}
@@ -221,6 +235,8 @@ To enter text, QML ships with [TextField](https://doc.qt.io/qt-5/qml-qtquick-con
 
 * [`TextField.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/TextField.qml)
 * [`TextArea.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/TextArea.qml)
+
+See the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/lineedit.html) to determine wither to use a TextField (HIG calls it a Line Edit) or a TextArea.
 
 {{< /section-left >}}
 {{< section-right >}}
