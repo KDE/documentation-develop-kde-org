@@ -1,0 +1,118 @@
+---
+title: Introduction to Kirigami Pages
+weight: 3
+description: Pages are containers for your content
+---
+
+## Kirigami Pages
+
+Kirigami apps are typically organized in {{< api-link module="kirigami2"
+link="org::kde::kirigami::Page" name="Page" >}}
+  Pages. Those are the different ‘Screens’
+of an app. If you come from the Android world you can think of them as the view
+part of activities. In our case we want to have an initial page that offers to
+enter a stop or a destination and opens a new page that shows a list of possible
+routes. Clicking on one of the list items opens a new page with a detailed view
+about the connections.
+
+Pages are organized in a pagestack where pages can be pushed and popped. On a phone
+only the topmost page is shown, whereas on a larger screen (desktop or tablet)
+multiple pages can be shown next to each other.
+
+{{< figure src="mobile.png" title="A single page on the phone" class="text-center" >}}
+
+{{< figure src="desktop.png" title="Two pages next to each other on the desktop" class="text-center" >}}
+
+So let’s create some pages! To simplify the QML code, you are going to put each
+page in its own .qml file and let the name end with Page. The first version of
+StartPage.qml looks like this:
+
+```json
+import QtQuick 2.2
+import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.4
+import org.kde.kirigami 2.0 as Kirigami
+
+Kirigami.Page
+{
+    title: "Start journey"
+}
+```
+
+It produces an empty page with a title. Before we can actually see it we need to add
+it to the pageStack. Replace the `Label {}` declaration in main.qml with
+
+```js
+pageStack.initialPage: Qt.resolvedUrl("StartPage.qml")
+```
+
+`pageStack.initialPage` is, well, setting the initial Page of the Page stack.
+`Qt.resolveUrl` is converting the relative URL of the QML file into an absolute one.
+Starting the app gives us an empty page
+
+You will also need to add the new page into the .qrc file, so that it can be bundled
+into the binary.
+
+```xml
+<RCC>
+    <qresource prefix="/">
+        <file alias="main.qml">contents/ui/main.qml</file>
+        <file alias="StartPage.qml">contents/ui/StartPage.qml</file>
+    </qresource>
+</RCC>
+```
+
+## ScrollablePages
+
+{{< api-link module="kirigami2" link="org::kde::kirigami::ScrollablePage" name="ScrollablePage" >}}
+is a Page that holds scrollable content, such as ListViews. Scrolling and scrolling indicators will
+be automatically managed.
+
+```json
+ScrollablePage {
+    id: root
+    //The rectangle will automatically be scrollable
+    Rectangle {
+        width: root.width
+        height: 99999
+    }
+}
+```
+
+{{< alert color="danger" title="Warning" >}}
+Do not put a ScrollView inside of a ScrollablePage; children of a ScrollablePage are already inside a ScrollView.
+{{< /alert >}}
+
+Another behavior added by this class is a "scroll down to refresh" behavior It also can give the
+contents of the flickable to have more top margins in order to make possible to scroll down the list
+to reach it with the thumb while using the phone with a single hand.
+
+Implementations should handle the refresh themselves as follows:
+
+```
+Kirigami.ScrollablePage {
+    id: view
+    supportsRefreshing: true
+    onRefreshingChanged: {
+        if (refreshing) {
+            myModel.refresh();
+        }
+    }
+    ListView {
+        // NOTE: MyModel doesn't come from the components,
+        // it's purely an example on how it can be used together
+        // some application logic that can update the list model
+        // and signals when it's done.
+        model: MyModel {
+            onRefreshDone: view.refreshing = false;
+        }
+        delegate: BasicListItem {}
+    }
+}
+```
+
+## More on pages
+
+A Kirigami {{< api-link module="kirigami2" link="org::kde::kirigami::Page"
+name="Page" >}} inherit from a [QQC2 Page](https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html)
+and as such, you can add an header and footer to the Page.

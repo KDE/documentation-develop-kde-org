@@ -3,53 +3,9 @@ title: Basic Controls
 weight: 2
 ---
 
-In the first part of this tutorial, you created a stub C++/Kirigami app that
+In the first part of this tutorial, you generated a sample Kirigami application that
 doesn’t do much yet. Time to change that! In this post you will be filling the
 screen with some controls.
-
-## Kirigami Pages
-
-Kirigami apps are typically organized in Pages. Those are the different ‘Screens’
-of an app. If you come from the Android world you can think of them as the view
-part of activities. In our case we want to have an initial page that offers to
-enter a stop or a destination and opens a new page that shows a list of possible
-routes. Clicking on one of the list items opens a new page with a detailed view
-about the connections.
-
-Pages are organized in a pagestack where pages can be pushed and popped. On a phone
-only the topmost page is shown, whereas on a larger screen (desktop or tablet)
-multiple pages can be shown next to each other.
-
-{{< figure src="mobile.png" title="A single page on the phone" >}}
-
-{{< figure src="desktop.png" title="Two pages next to each other on the desktop" >}}
-
-So let’s create some pages! To simplify the QML code, you are going to put each
-page in its own .qml file and let the name end with Page. The first version of
-StartPage.qml looks like this:
-
-```json
-import QtQuick 2.2
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.4
-import org.kde.kirigami 2.0 as Kirigami
-
-Kirigami.Page
-{
-    title: "Start journey"
-}
-```
-
-It produces an empty page with a title. Before we can actually see it we need to add
-it to the pageStack. Replace the `Label {}` declaration in main.qml with
-
-```js
-pageStack.initialPage: Qt.resolvedUrl("StartPage.qml")
-```
-
-`pageStack.initialPage` is, well, setting the initial Page of the Page stack.
-`Qt.resolveUrl` is converting the relative URL of the QML file into an absolute one.
-Starting the app gives us an empty page
 
 ## Basic controls
 
