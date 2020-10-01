@@ -7,18 +7,14 @@
 {{ $gl_branch := (default "master" ($.Param "gitlab_branch")) }}
 
 {{ if $gl_repo }}
-  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-  {{ $editURL := printf "%s/-/edit/%s/content/%s" $gl_repo $gl_branch $pathFormatted }}
-  {{ if $gl_subdir }}
-    {{ $editURL = printf "%s/-/edit/%s/%s/content/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
-  {{ end }}
-  {{ $issuesURL := printf "%s/-/issues/new?title=%s" $gl_repo (htmlEscape $.Title )}}
-  <a href="{{ $editURL }}" target="_blank"><i class="icon icon_document-edit"></i> {{ T "post_edit_this" }}</a>
-  <a href="{{ $issuesURL }}" target="_blank"><i class="icon  icon_document-send"></i> {{ T "post_create_issue" }}</a>
-  {{ if $gl_project_repo }}
-    {{ $project_issueURL := printf "%s/issues/new" $gl_project_repo }}
-    <a href="{{ $project_issueURL }}" target="_blank"><i class="fas fa-tasks fa-fw"></i> {{ T "post_create_project_issue" }}</a>
-  {{ end }}
+  <div class="td-page-meta py-1 mb-0">
+    {{ $editURL := printf "%s/-/edit/%s/content/%s" $gl_repo $gl_branch $pathFormatted }}
+    {{ if $gl_subdir }}
+      {{ $editURL = printf "%s/-/edit/%s/%s/content/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
+    {{ end }}
+    {{ $issuesURL := printf "%s/-/issues/new?title=%s" $gl_repo (htmlEscape $.Title )}}
+    <a href="{{ $editURL }}" target="_blank"><i class="icon icon_document-edit mr-2"></i> {{ T "post_edit_this" }}</a>
+    <a href="{{ $issuesURL }}" target="_blank"><i class="icon  icon_document-send mr-2"></i> {{ T "post_create_issue" }}</a>
   </div>
   {{ end }}
 {{ end }}
