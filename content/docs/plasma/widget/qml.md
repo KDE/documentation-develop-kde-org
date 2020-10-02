@@ -1,5 +1,5 @@
 ---
-title: "Qml"
+title: "QML"
 weight: 3
 description: >
   Learn the basics of QML
