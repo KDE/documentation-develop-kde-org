@@ -5,6 +5,157 @@ description: >
   Resizable popup, clock, bundle icon and other simple examples
 ---
 
+## Configurable icon
+
+{{< sections >}}
+{{< section-left >}}
+
+To get your panel icon to be configurable like the [Application Lancher widget](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/applets/kickoff/package/contents/ui) we need to:
+
+* Create a new string config key (`plasmoid.configuration.icon`)
+* Set [`Plasmoid.icon`]() to `plasmoid.configuration.icon`
+* Copy the icon selector control from the Application Lancher widget to a reuseable `ConfigIcon.qml` file.
+* Add a `ConfigIcon` button to our `ConfigGeneral.qml` tab, and bind it to a `cfg_icon` property.
+
+
+
+
+{{< /section-left >}}
+{{< section-right >}}
+```xml
+<!-- config/main.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+
+    <group name="General">
+        <entry name="icon" type="string">
+            <default>plasma</default>
+        </entry>
+    </group>
+</kcfg>
+```
+
+-----
+
+```qml
+// ui/main.qml
+import QtQuick 2.0
+import org.kde.plasma.plasmoid 2.0
+
+Item {
+    id: widget
+    Plasmoid.icon: plasmoid.configuration.icon
+}
+```
+
+-----
+
+```qml
+// ui/ConfigIcon.qml
+import QtQuick 2.5
+import QtQuick.Controls 2.5
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+
+Button {
+    id: configIcon
+
+    property string defaultValue: ''
+    property string value: ''
+
+    implicitWidth: previewFrame.width + PlasmaCore.Units.smallSpacing * 2
+    implicitHeight: previewFrame.height + PlasmaCore.Units.smallSpacing * 2
+
+    KQuickAddons.IconDialog {
+        id: iconDialog
+        onIconNameChanged: configIcon.value = iconName || configIcon.defaultValue
+    }
+
+    onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
+
+    PlasmaCore.FrameSvgItem {
+        id: previewFrame
+        anchors.centerIn: parent
+        imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
+                 ? "widgets/panel-background" : "widgets/background"
+        width: PlasmaCore.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
+        height: PlasmaCore.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
+
+        PlasmaCore.IconItem {
+            anchors.centerIn: parent
+            width: PlasmaCore.Units.iconSizes.large
+            height: width
+            source: configIcon.value
+        }
+    }
+
+    Menu {
+        id: iconMenu
+
+        // Appear below the button
+        y: +parent.height
+
+        MenuItem {
+            text: i18ndc("plasma_applet_org.kde.plasma.kickoff", "@item:inmenu Open icon chooser dialog", "Choose...")
+            icon.name: "document-open-folder"
+            onClicked: iconDialog.open()
+        }
+        MenuItem {
+            text: i18ndc("plasma_applet_org.kde.plasma.kickoff", "@item:inmenu Reset icon to default", "Clear Icon")
+            icon.name: "edit-clear"
+            onClicked: configIcon.value = configIcon.defaultValue
+        }
+    }
+}
+```
+
+-----
+
+```qml
+// ui/ConfigGeneral.qml
+import QtQuick 2.0
+import QtQuick.Controls 2.5
+import org.kde.kirigami 2.4 as Kirigami
+
+Item {
+    id: page
+    width: childrenRect.width
+    height: childrenRect.height
+
+    property alias cfg_icon: configIcon.value
+
+    Kirigami.FormLayout {
+        anchors.left: parent.left
+        anchors.right: parent.right
+
+        ConfigIcon {
+            id: configIcon
+            Kirigami.FormData.label: i18nd("plasma_applet_org.kde.plasma.kickoff", "Icon:")
+        }
+    }
+}
+```
+
+-----
+
+```qml
+// config/config.qml
+import QtQuick 2.0
+import org.kde.plasma.configuration 2.0
+
+ConfigModel {
+    ConfigCategory {
+        name: i18n("General")
+        icon: "configure"
+        source: "ConfigGeneral.qml"
+    }
+}
+```
+{{< /section-right >}}
+{{< /sections >}}
+
+
 ## Configurable panel widget width/height
 
 {{< sections >}}
