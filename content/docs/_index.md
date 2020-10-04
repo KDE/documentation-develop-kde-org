@@ -10,6 +10,8 @@ groups:
     key: features
   - name: "Packaging"
     key: "packaging"
+  - name: "Application Extensions"
+    key: "applications"
   
 menu:
   main:
