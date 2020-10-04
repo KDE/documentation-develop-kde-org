@@ -156,7 +156,7 @@ Note the use of semicolons rather than commas in that line. Next, we'll add a ne
 [Desktop Action tileAsWallpaper]
 Name=Use As Wallpaper Tile
 Icon=background
-Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("FillMode", "3")}';d.writeConfig("Image", "%u")}';
+Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("FillMode", "3")};d.writeConfig("Image", "%u")}';
 ```
 Note that "tileAsWallpaper" appears in the action section's heading. This is what tells Dolphin which action it is. In addition, we have a slightly different Name and a very slightly different Exec line. Now when we right-click on an image we have another option, this time to tile the image across our desktop. We didn't even have to restart Dolphin, since it automatically rereads the file when it changes!
 
@@ -189,5 +189,5 @@ Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
 [Desktop Action tileAsWallpaper]
 Name=Tiled
 Icon=background
-Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("FillMode", "3")}';d.writeConfig("Image", "%u")}';
+Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("FillMode", "3")};d.writeConfig("Image", "%u")}';
 ```
