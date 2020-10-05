@@ -8,7 +8,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     {{ $module := (index (split $dest ";") 0) }}
     {{ $link := (index (split $dest ";") 1) }}
 
-    {{ $filename := $link }}
+    {{ $filename := "false" }}
     {{ $anchor := "" }}
     
     {{ $url := printf "_data/%s.json" $module }}
@@ -16,6 +16,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     {{ $dataMap := getJSON "_data/components_map.json" }}
     
     {{ $found := 0 }}
+    {{/* Search for complete name first */}}
     {{ range $data.tagfile.compound }}
       {{ if (eq (index .name "$") $link) }}
         {{ $filename = (index .filename "$") }}
@@ -24,8 +25,20 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     {{ end }}
 
     {{ if (and (eq $found 0) (in $link "::")) }}
-      {{ $class := (index (split $link "::") 0) }}
-      {{ $member := (index (split $link "::") 1) }}
+      {{ $class := "" }} 
+      {{ $member := "" }}
+      {{ $len := len (split $link "::") }}
+      {{ range $index, $element := (split $link "::") }}
+        {{ if (eq (add $index 1) $len) }}
+          {{ $member = $element }}
+        {{ else }}
+          {{ if eq $class "" }}
+            {{ $class = $element }}
+          {{ else }}
+            {{ $class = printf "%s::%s" $class $element }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
       {{ range $data.tagfile.compound }}
         {{ if (eq (index .name "$") $class) }}
           {{ $filename = (index .filename "$") }}
@@ -40,6 +53,9 @@ SPDX-License-Identifier: LGPL-3.0-or-later
       {{ end }}
     {{ end }}
 
+    {{ if (and (eq $filename "false") (not (in $link ".html"))) }}
+      {{ errorf "missing value for param 'name': %s" .Position }}
+    {{ end }}
 
     <a href="{{ (index $dataMap $module) }}{{ $filename }}{{ $anchor }}" class="api-link"> 
       {{ .Text | safeHTML }}
