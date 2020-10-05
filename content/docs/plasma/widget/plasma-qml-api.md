@@ -395,4 +395,84 @@ ColumnLayout {
 
 
 
+## Plasmoid property group
+
+As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contentsuimainqml" >}}), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` property group has properties from [`AppletInterface`](docs:plasma;AppletInterface) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h).
+
+
+### Plasmoid.compactRepresentation
+
+The compact representation uses [`DefaultCompactRepresentation.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/desktoppackage/contents/applet/DefaultCompactRepresentation.qml) by default. To summarize, it:
+
+* Draws the `plasmoid.icon` using a [`PlasmaCore.IconItem`](docs:plasma;IconItem)
+* Defines a [`MouseArea`](https://doc.qt.io/qt-5/qml-qtquick-mousearea.html) to toggle the `expanded` property which displays the full representation.
+
+
+https://invent.kde.org/plasma/plasma-desktop/-/blob/master/desktoppackage/contents/applet/CompactApplet.qml
+
+
+### Plasmoid.fullRepresentation
+
+{{< sections >}}
+{{< section-left >}}
+
+If there's enough room (more than [`Plasmoid.switchHeight`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h#L49-50)) then the widget's full representation can be drawn directly in the panel or on the desktop. If you want to force this behaviour you can set [`Plasmoid.preferredRepresentation`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h#L58-61).
+
+```qml
+Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+```
+
+If there isn't enough room, then the widget will display `Plasmoid.compactRepresentation` instead, and the full representation will be visible when [`plasmoid.expanded`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h#L63-67) is `true`.
+
+In a plasma widget, the full representation will be shown in a [`PlasmaCore.Dialog`](docs:plasma;PlasmaQuick::Dialog) which you cannot access directly. You can manipulate the dialog with:
+
+* Set `Layout.preferredWidth` and `Layout.preferredHeight` in your full representation `Item` to change to dialog size.
+* Set `Plasmoid.hideOnWindowDeactivate` to prevent the dialog from closing. You can use this to have a configurable "pin" [like the digital clock widget does](https://invent.kde.org/plasma/plasma-workspace/-/blob/333e8ef54733bb764d6cebf4b03ab794d139684c/applets/digital-clock/package/contents/ui/CalendarView.qml#L240-244).
+
+The dialog's source code can be found in [`CompactApplet.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/desktoppackage/contents/applet/CompactApplet.qml) to see the exact behavior.
+
+{{< /section-left >}}
+{{< section-right >}}
+
+{{< readfile file="/content/docs/plasma/widget/snippet/popup-size.qml" highlight="qml" >}}
+
+{{< /section-right >}}
+{{< /sections >}}
+
+
+### Plasmoid.icon
+
+{{< sections >}}
+{{< section-left >}}
+
+As discussed in [the `metadata.desktop` setup widget section]({{< ref "setup.md#metadatadesktop" >}}), by default the plasmoid icon is populated with `Icon=` in `metadata.desktop`.
+
+To set a dynamic or user configurable icon, you will need to assign an icon name to `Plasmoid.icon`.
+
+You can search for icon names in the `/usr/share/icon` folder. You can also look for an icon name by right clicking your app launcher widget then editing the icon in its settings. It uses a searchable interface and lists them by category. Plasma's SDK also has the Cuttlefish app ([screenshot](https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png)) which you can install with `sudo apt install plasma-sdk`.
+
+Also checkout the [configurable panel icon example]({{< ref "examples.md#configurable-icon" >}})
+
+{{< /section-left >}}
+{{< section-right >}}
+```qml
+// main.qml
+import QtQuick 2.0
+import org.kde.plasma.plasmoid 2.0
+
+Item {
+    id: widget
+    property bool hasUnread: true
+    Plasmoid.icon: hasUnread ? "mail-unread" : "mail-message"
+
+    Timer {
+        interval: 1000
+        repeat: true
+        running: true
+        onTriggered: widget.hasUnread = !widget.hasUnread
+    }
+}
+```
+{{< /section-right >}}
+{{< /sections >}}
 
