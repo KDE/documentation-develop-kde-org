@@ -7,7 +7,7 @@ weight: 2
 
 When you create your own KDE application you will probably want to have icons in it respecting your users icon theme. 
 
-This is possible with the help of [QIcon::fromTheme](https://doc.qt.io/qt-5/qicon.html#fromTheme) for QtWidgets application or [Kirigami](https://api.kde.org/frameworks/kirigami/html/classIcon.html) for QtQuick application. Both function take as argument, the name of the icon in the icon theme.
+This is possible with the help of [QIcon::fromTheme](https://doc.qt.io/qt-5/qicon.html#fromTheme) for QtWidgets application or [Kirigami's Icon](docs:kirigami2;Icon) for QtQuick application. Both function take as argument, the name of the icon in the icon theme.
 
 Plasma and all the other major Linux deskops follow the [freedesktop icon specification](http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html) and [naming specification](http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html). A fallback mechanism is also present so that if the `document-open-recent` icon is not present, the `document-open` icon will be displayed instead and if the `document-open` icon is also not present the `document` icon will be displayed.
 

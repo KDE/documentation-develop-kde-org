@@ -8,7 +8,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     {{ $module := (index (split $dest ";") 0) }}
     {{ $link := (index (split $dest ";") 1) }}
 
-    {{ $filename := "false" }}
+    {{ $filename := $link }}
     {{ $anchor := "" }}
     
     {{ $url := printf "_data/%s.json" $module }}

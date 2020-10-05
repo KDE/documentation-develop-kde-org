@@ -38,9 +38,9 @@ The basic structure of a hypothetical time settings module is the following:
 
 {{< readfile file="/content/docs/configuration/kcm/timesettings.h" highlight="cpp" >}}
 
-[`KQuickAddons::ConfigModule`](https://api.kde.org/frameworks/kdeclarative/html/classKQuickAddons_1_1ConfigModule.html)
+[KQuickAddons::ConfigModule](docs:kdeclarative;KQuickAddons::ConfigModule)
 serves as the base class for all QML-based KCMs. The
-[`KQuickAddons::ManagedConfigModule`](https://api.kde.org/frameworks/kdeclarative/html/classKQuickAddons_1_1ManagedConfigModule.html) inherits `ConfigModule` and adds the [KConfigXt](kconfig_xt) integration.
+[KQuickAddons::ManagedConfigModule](docs:kdeclarative;KQuickAddons::ManagedConfigModule) inherits `ConfigModule` and adds the [KConfigXt](kconfig_xt) integration.
 Please consult the API documentation for a full description.
 
 ## timesettings.cpp
@@ -69,9 +69,9 @@ Basic KCM QML file
 
 Depending on the content use one of the following root type:
 
- - Use {{< api-link module="kdeclarative" link="org::kde::kcm::ScrollViewKCM" name="ScrollViewK" >}} for content that is vertically scrollable, such as ListView.
- - Use {{< api-link module="kdeclarative" link="org::kde::kcm::GridViewKCM" name="GridViewKCM" >}} for arranging selectable items in a grid.
- - Use {{< api-link module="kdeclarative" link="org::kde::kcm::SimpleKCM" name="SimpleKCM" >}} otherwise.
+ - Use [ScrollViewKCM](docs:kdeclarative;org::kde::kcm::ScrollViewKCM) for content that is vertically scrollable, such as ListView.
+ - Use [GridViewKCM](docs:kdeclarative;org::kde::kcm::GridViewKCM) for arranging selectable items in a grid.
+ - Use [SimpleKCM](docs:kdeclarative;org::kde::kcm::SimpleKCM) otherwise.
 
 ## Run it!
 

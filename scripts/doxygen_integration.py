@@ -30,7 +30,7 @@ TAG_FILES = [
     },
     {
         'tags': 'https://api.kde.org/frameworks/kxmlgui/html/KXmlGui.tags',
-        'base_url': 'https://api.kde.org/frameworks/kXmlGui/html/'
+        'base_url': 'https://api.kde.org/frameworks/kxmlgui/html/'
     },
     {
         'tags': 'https://api.kde.org/frameworks/kconfigwidgets/html/KConfigWidgets.tags',
@@ -39,6 +39,22 @@ TAG_FILES = [
     {
         'tags': 'https://api.kde.org/frameworks/kwidgetsaddons/html/KWidgetsAddons.tags',
         'base_url': 'https://api.kde.org/frameworks/kwidgetsaddons/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/ktexteditor/html/KTextEditor.tags',
+        'base_url': 'https://api.kde.org/frameworks/ktexteditor/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/kconfig/html/KConfig.tags',
+        'base_url': 'https://api.kde.org/frameworks/kconfig/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/plasma-framework/html/Plasma.tags',
+        'base_url': 'https://api.kde.org/frameworks/plasma-framework/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/kdecoration/html/KDecoration2.tags',
+        'base_url': 'https://api.kde.org/kdecoration/html/'
     },
     {
         'tags': 'https://api.kde.org/frameworks/kirigami/html/Kirigami2.tags',
