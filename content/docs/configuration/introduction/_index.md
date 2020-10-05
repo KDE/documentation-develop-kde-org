@@ -140,7 +140,7 @@ With a {{< api-link module="kconfig" link="KConfigGroup" >}} object in hand read
 
 ```cpp
 QString accountName = generalGroup.readEntry("Account", QString());
-QColor color = colorsGroup.readEntry("background", Qt::white);
+QColor color = colorsGroup.readEntry("background", QColor(Qt::white));
 QStringList list = generalGroup.readEntry("List", QStringList());
 QString path = generalGroup.readPathEntry("SaveTo", defaultPath);
 ```
