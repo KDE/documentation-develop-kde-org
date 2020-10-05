@@ -2,5 +2,5 @@
 {{ $color := .Get "color" | default "primary" }}
 <div class="alert alert-{{ $color }}" role="alert">
 {{ with .Get "title" }}<h4 class="alert-heading mt-0">{{ . | safeHTML }}</h4>{{ end }}
-{{ .Inner | markdownify }}
+{{ .Inner | $.Page.RenderString }}
 </div>
