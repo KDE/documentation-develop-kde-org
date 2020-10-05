@@ -96,8 +96,8 @@ Listing all groups in a configuration object is as simple as calling `groupList(
 ```cpp
 const KSharedConfigPtr config = KGlobal::mainComponent().config();
 
-for (const QString& group: qAsConst(config->groupList())) {
-    kDebug() << "next group:" << group;
+for (const QString &group: config->groupList()) {
+    qDebug() << "next group:" << group;
 }
 ```
 
@@ -121,8 +121,8 @@ Now that we have a configuration object, the next step is to actually use it. Th
 
 ```cpp
 KConfig config;
-KConfigGroup generalGroup( &config, "General" );
-KConfigGroup colorsGroup = config.group( "Colors" ); // ... or a bit differently ...
+KConfigGroup generalGroup(&config, "General");
+KConfigGroup colorsGroup = config.group("Colors"); // ... or a bit differently ...
 ```
 
 You can pass {{< api-link module="kconfig" link="KConfig" >}} or {{< api-link module="kconfig" link="KSharedConfig" >}} objects to {{< api-link module="kconfig" link="KConfigGroup" >}}. 
@@ -139,14 +139,10 @@ KConfigGroup subGroup2 = colorsGroup.group("Dialogs");
 With a {{< api-link module="kconfig" link="KConfigGroup" >}} object in hand reading entries is now quite straight forward: 
 
 ```cpp
-QString accountName = generalGroup.readEntry("Account",
-                                             QString());
-QColor color = colorsGroup.readEntry("background",
-                                      Qt::white);
-QStringList list = generalGroup.readEntry("List",
-                                          QStringList());
-QString path = generalGroup.readPathEntry("SaveTo",
-                                          defaultPath);
+QString accountName = generalGroup.readEntry("Account", QString());
+QColor color = colorsGroup.readEntry("background", Qt::white);
+QStringList list = generalGroup.readEntry("List", QStringList());
+QString path = generalGroup.readPathEntry("SaveTo", defaultPath);
 ```
 
 As can be seen from the above, you can mix reads from different `KConfigGroup` objects created on the same `KConfig` object. The read methods take the key, which is case sensitive, as the first argument and the default value as the second argument. This argument controls what kind of data, e.g. a color in line 3 above, is to be expected as well as the type of object returned. The returned object is wrapped in a `QVariant` to make this magic happen. 
@@ -184,16 +180,16 @@ Entries in configuration objects that are locked down using the kiosk facilities
 KSharedConfigPtr config = KGlobal::config();
 
 if (config->isImmutable()) {
-    kDebug() << "configuration object is immutable";
+    qDebug() << "configuration object is immutable";
 }
 
 KConfigGroup group(config, "General");
 if (group.isImmutable()) {
-    kDebug() << "group General is immutable";
+    qDebug() << "group General is immutable";
 }
 
 if (group.isEntryImmutable("URL")) {
-    kDebug() << "URL entry in group General is immutable";
+    qDebug() << "URL entry in group General is immutable";
 }
 ```
 
