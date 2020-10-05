@@ -15,7 +15,15 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     {{ $data := getJSON $url }}
     {{ $dataMap := getJSON "_data/components_map.json" }}
     
-    {{ if in $link "::" }}
+    {{ $found := 0 }}
+    {{ range $data.tagfile.compound }}
+      {{ if (eq (index .name "$") $link) }}
+        {{ $filename = (index .filename "$") }}
+        {{ $found = 1 }}
+      {{ end }}
+    {{ end }}
+
+    {{ if (and (eq $found 0) (in $link "::")) }}
       {{ $class := (index (split $link "::") 0) }}
       {{ $member := (index (split $link "::") 1) }}
       {{ range $data.tagfile.compound }}
@@ -30,14 +38,10 @@ SPDX-License-Identifier: LGPL-3.0-or-later
           {{ end }}
         {{ end }}
       {{ end }}
-    {{ else }}
-      {{ range $data.tagfile.compound }}
-        {{ if (eq (index .name "$") $link) }}
-          {{ $filename = (index .filename "$") }}
-        {{ end }}
-      {{ end }}
     {{ end }}
-    <a href="{{ (index $dataMap $module)  }}{{ $filename }}{{ $anchor }}" class="api-link">
+
+
+    <a href="{{ (index $dataMap $module) }}{{ $filename }}{{ $anchor }}" class="api-link">
       {{ .Text | safeHTML }}
     </a>
   {{ else }}

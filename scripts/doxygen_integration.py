@@ -41,6 +41,10 @@ TAG_FILES = [
         'base_url': 'https://api.kde.org/frameworks/kwidgetsaddons/html/'
     },
     {
+        'tags': 'https://api.kde.org/frameworks/kirigami/html/Kirigami2.tags',
+        'base_url': 'https://api.kde.org/frameworks/kirigami/html/'
+    },
+    {
         'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtquickcontrols.tags',
         'base_url': 'https://doc.qt.io/qt-5/'
     }
