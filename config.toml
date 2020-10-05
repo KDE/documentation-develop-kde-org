@@ -22,13 +22,6 @@ pygmentsStyle = "tango"
 [permalinks]
 blog = "/:section/:year/:month/:day/:slug/"
 
-## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
-[blackfriday]
-plainIDAnchors = true
-hrefTargetBlank = true
-angledQuotes = false
-latexDashes = true
-
 # Image processing configuration.
 [imaging]
 resampleFilter = "CatmullRom"
@@ -51,6 +44,7 @@ languageName ="English"
 weight = 1
 
 [markup]
+  defaultMarkdownHandler = "goldmark"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true

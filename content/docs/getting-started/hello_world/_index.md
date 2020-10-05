@@ -8,7 +8,7 @@ description: >
 
 ## Abstract
 
-Your first program shall greet the world with a friendly "Hello World!", what else? For that, we will use a {{< api-link module="kwidgetsaddons" link="KMessageBox" >}} and customise one of the buttons. 
+Your first program shall greet the world with a friendly "Hello World!", what else? For that, we will use a [KMessageBox](docs:kwidgetsaddons;KMessageBox) and customise one of the buttons. 
 
 ![](result.png)
 

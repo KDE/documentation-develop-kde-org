@@ -11,18 +11,54 @@ from xml.etree.ElementTree import fromstring
 import os
 import requests
 
-for tag_file in [
-        'https://api.kde.org/frameworks/kdeclarative/html/KDeclarative.tags',
-        'https://api.kde.org/frameworks/ki18n/html/KI18n.tags',
-        'https://api.kde.org/frameworks/kcoreaddons/html/KCoreAddons.tags',
-        'https://api.kde.org/frameworks/kio/html/KIO.tags',
-        'https://api.kde.org/frameworks/kxmlgui/html/KXmlGui.tags',
-        'https://api.kde.org/frameworks/kconfigwidgets/html/KConfigWidgets.tags',
-        'https://api.kde.org/frameworks/kwidgetsaddons/html/KWidgetsAddons.tags',
-        ]:
-    r = requests.get(tag_file)
+TAG_FILES = [
+    {
+        'tags': 'https://api.kde.org/frameworks/kdeclarative/html/KDeclarative.tags',
+        'base_url': 'https://api.kde.org/frameworks/kdeclarative/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/ki18n/html/KI18n.tags',
+        'base_url': 'https://api.kde.org/frameworks/ki18n/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/kcoreaddons/html/KCoreAddons.tags',
+        'base_url': 'https://api.kde.org/frameworks/kcoreaddons/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/kio/html/KIO.tags',
+        'base_url': 'https://api.kde.org/frameworks/kio/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/kxmlgui/html/KXmlGui.tags',
+        'base_url': 'https://api.kde.org/frameworks/kXmlGui/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/kconfigwidgets/html/KConfigWidgets.tags',
+        'base_url': 'https://api.kde.org/frameworks/kconfigwidgets/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/kwidgetsaddons/html/KWidgetsAddons.tags',
+        'base_url': 'https://api.kde.org/frameworks/kwidgetsaddons/html/'
+    },
+    {
+        'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtquickcontrols.tags',
+        'base_url': 'https://doc.qt.io/qt-5/'
+    }
+]
+
+components_map = {}
+
+for tag_file in TAG_FILES:
+    r = requests.get(tag_file['tags'])
     Path("_data").mkdir(parents=True, exist_ok=True)
-    with open('_data/' + os.path.basename(os.path.splitext(tag_file)[0]).lower() + '.json', 'w') as f:
+    component_name = os.path.basename(os.path.splitext(tag_file['tags'])[0]).lower()
+    with open('_data/' + component_name + '.json', 'w') as f:
         dump(bf.data(fromstring(r.content)), f)
+
+    components_map[component_name] = tag_file['base_url']
+
+
+with open('_data/components_map.json', 'w') as f:
+    dump(components_map, f)
 
 

@@ -1,0 +1,47 @@
+{{/*
+SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
+SPDX-License-Identifier: LGPL-3.0-or-later
+*/}}
+{{ if hasPrefix .Destination  "docs:" }}
+  {{ $dest := substr .Destination 5 }}
+  {{ $module := (index (split $dest ";") 0) }}
+  {{ $link := (index (split $dest ";") 1) }}
+
+  {{ $filename := $link }}
+  {{ $anchor := "" }}
+  
+  {{ $url := printf "_data/%s.json" $module }}
+  {{ $data := getJSON $url }}
+  {{ $dataMap := getJSON "_data/components_map.json" }}
+  
+  {{ if in $link "::" }}
+    {{ $class := (index (split $link "::") 0) }}
+    {{ $member := (index (split $link "::") 1) }}
+    {{ range $data.tagfile.compound }}
+      {{ if (eq (index .name "$") $class) }}
+        {{ $filename = (index .filename "$") }}
+        {{ if .member }}
+          {{ range .member }}
+            {{ if (eq (index .name "$") $member) }}
+              {{ $anchor = (printf "#%s" (index .anchor "$")) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{ range $data.tagfile.compound }}
+      {{ if (eq (index .name "$") $link) }}
+        {{ $filename = (index .filename "$") }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  <a href="{{ (index $dataMap $module)  }}{{ $filename }}{{ $anchor }}" class="api-link">
+    {{ .Text | safeHTML }}
+  </a>
+{{ else }}
+  <a href="{{ .Destination | safeURL }}" {{ with .Title}}title="{{ . }}"{{ end }}>
+    {{ .Text | safeHTML }}
+  </a>
+{{ end }}
