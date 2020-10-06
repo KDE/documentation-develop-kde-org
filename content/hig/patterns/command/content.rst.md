@@ -1,7 +1,9 @@
-Controls within Content
+---
+title: Controls within Content
+---
 =======================
 
-![Controls within content](/img/Content1.png)
+![Controls within content](/hig/Content1.png)
 
 If controls are directly necessary for the primary tasks of an
 application (e.g. the \"send message\" button in a address book app) and

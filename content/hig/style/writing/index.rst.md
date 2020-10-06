@@ -1,4 +1,6 @@
-Writing
+---
+title: Writing
+---
 =======
 
 ::: {.toctree titlesonly="" hidden=""}

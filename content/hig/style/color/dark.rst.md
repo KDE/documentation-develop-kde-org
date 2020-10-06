@@ -1,4 +1,6 @@
-Breeze Dark
+---
+title: Breeze Dark
+---
 ===========
 
 See `here <index>`{.interpreted-text role="doc"} for more information

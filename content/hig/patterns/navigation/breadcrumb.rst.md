@@ -1,10 +1,12 @@
-Breadcrumbs
+---
+title: Breadcrumbs
+---
 ===========
 
 ::: {.container .intend}
 :::
 
-![Breadcrumb patterns](/img/NP-n-deep.png)
+![Breadcrumb patterns](/hig/NP-n-deep.png)
 
 The *breadcrumbs* pattern is a navigation aid for hierarchical content
 structures (e.g. home \> documents \> business). It provides information

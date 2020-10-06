@@ -1,4 +1,6 @@
-Radio Button
+---
+title: Radio Button
+---
 ============
 
 Purpose
@@ -23,13 +25,13 @@ Guidelines
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use radio buttons
-for more than five options.](/img/Radiobutton_Many_Bad.qml.png){.border
+for more than five options.](/hig/Radiobutton_Many_Bad.qml.png){.border
 .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use a combobox
-instead.](/img/Radiobutton_Many_Good.qml.png){.border .do}
+instead.](/hig/Radiobutton_Many_Good.qml.png){.border .do}
 :::
 :::
 
@@ -41,12 +43,12 @@ instead.](/img/Radiobutton_Many_Good.qml.png){.border .do}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use radio buttons
 for do/don\'t
-operations.](/img/Radiobutton_Negation_Bad.qml.png){.border .dont}
+operations.](/hig/Radiobutton_Negation_Bad.qml.png){.border .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use a checkbox
-instead.](/img/Radiobutton_Negation_Good.qml.png){.border .do}
+instead.](/hig/Radiobutton_Negation_Good.qml.png){.border .do}
 :::
 :::
 
@@ -57,12 +59,12 @@ instead.](/img/Radiobutton_Negation_Good.qml.png){.border .do}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t hide choices that
 the user should see from the start in
-comboboxes.](/img/Radiobutton_Visible_Bad.qml.png){.border .dont}
+comboboxes.](/hig/Radiobutton_Visible_Bad.qml.png){.border .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use radio buttons
-instead.](/img/Radiobutton_Visible_Good.qml.png){.border .do}
+instead.](/hig/Radiobutton_Visible_Good.qml.png){.border .do}
 :::
 :::
 
@@ -73,13 +75,13 @@ instead.](/img/Radiobutton_Visible_Good.qml.png){.border .do}
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use the selection to
-perform commands.](/img/Radiobutton_Command_Bad.qml.png){.border .dont}
+perform commands.](/hig/Radiobutton_Command_Bad.qml.png){.border .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Consider using a
 `push button <../navigation/pushbutton>`{.interpreted-text
-role="doc"}.](/img/No_Command_2_Good.qml.png){.border .do}
+role="doc"}.](/hig/No_Command_2_Good.qml.png){.border .do}
 :::
 :::
 
@@ -92,12 +94,12 @@ role="doc"}.](/img/No_Command_2_Good.qml.png){.border .do}
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t forget a default
-option.](/img/Radiobutton_Default_Bad.qml.png){.border .dont}
+option.](/hig/Radiobutton_Default_Bad.qml.png){.border .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Set a default
-option.](/img/Radiobutton_Default_Good.qml.png){.border .do}
+option.](/hig/Radiobutton_Default_Good.qml.png){.border .do}
 :::
 :::
 
@@ -107,13 +109,13 @@ option.](/img/Radiobutton_Default_Good.qml.png){.border .do}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t have an option
 besides the first as the
-default.](/img/Radiobutton_First_Bad.qml.png){.border .dont}
+default.](/hig/Radiobutton_First_Bad.qml.png){.border .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Set the first option as
 default. Reorder your items if
-necessary.](/img/Radiobutton_First_Good.qml.png){.border .do}
+necessary.](/hig/Radiobutton_First_Good.qml.png){.border .do}
 :::
 :::
 

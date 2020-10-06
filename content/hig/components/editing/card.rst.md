@@ -1,4 +1,6 @@
-Card
+---
+title: Card
+---
 ====
 
 Purpose
@@ -50,7 +52,7 @@ each other depending on the available space.
 It is recomended that you use the standard card layout for consistency,
 but cards can have a lot of different layouts.
 
-> ![](/img/Card6.qml.png)
+> ![](/hig/Card6.qml.png)
 
 The only common requirement is the container around it. While cards can
 have a lot of different layouts, each should focus only on one bit of
@@ -65,13 +67,13 @@ Here are some general recommendations for card layouts:
 -   Use a well known aspect ratio for a header image
 
     ![Cards with 16×9, 4×3, 1×1 header image aspect
-    ratio.](/img/Card5.qml.png)
+    ratio.](/hig/Card5.qml.png)
 
 -   Add a padding of at least largeSpacing to the card, except for
     videos and images. These can ignore the padding and span the entire
     width or height of a card.
 
-    ![Padding for text and buttons.](/img/Card2.qml.png)
+    ![Padding for text and buttons.](/hig/Card2.qml.png)
 
 Code
 ----

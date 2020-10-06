@@ -1,4 +1,6 @@
-Get New Stuff
+---
+title: Get New Stuff
+---
 =============
 
 Get New Stuff (GNS) is an integrated data service which allows users to
@@ -9,7 +11,7 @@ Examples
 --------
 
 ![Get New Stuff button in \"Choose the Look and Feel theme\"
-KCM](/img/Systemsettings-LookAndFeel.png)
+KCM](/hig/Systemsettings-LookAndFeel.png)
 
 Guidelines
 ----------
@@ -28,7 +30,7 @@ The text of a GNS button should be made of these parts:
 
 -   Use the get-hot-new-stuff.png icon
 
-    ![image](/img/get-hot-new-stuff.svg){width="32px" height="32px"}
+    ![image](/hig/get-hot-new-stuff.svg){width="32px" height="32px"}
 
 -   Label the button with \"Get New\" and the type of content the user
     will download
@@ -43,4 +45,4 @@ grid that can be ammended. If you want a button to install from the
 local file system, place it to the left og the GNS button.
 
 ![Button placement at the bottom of the content
-grid](/img/Systemsettings-PlasmaTheme.png)
+grid](/hig/Systemsettings-PlasmaTheme.png)

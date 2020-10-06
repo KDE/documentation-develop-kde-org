@@ -1,4 +1,6 @@
-Expandable List
+---
+title: Expandable List
+---
 ===============
 
 ::: {.container .intend}

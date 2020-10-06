@@ -1,4 +1,6 @@
-Notification
+---
+title: Notification
+---
 ============
 
 Notifications are a way to inform users of your app about events, even
@@ -8,7 +10,7 @@ the background.
 Examples
 --------
 
-![Update notification](/img/Notification.png)
+![Update notification](/hig/Notification.png)
 
 Guidelines
 ----------
@@ -72,7 +74,7 @@ user to react to the event without having to go to the app itself.
 You can specify a URL to an image associated with the notification. The
 image will be displayed as a preview in the notification.
 
-![Notification with a preview image](/img/Notification2.png)
+![Notification with a preview image](/hig/Notification2.png)
 
 Code
 ----

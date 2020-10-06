@@ -1,4 +1,6 @@
-Tooltip
+---
+title: Tooltip
+---
 =======
 
 Purpose

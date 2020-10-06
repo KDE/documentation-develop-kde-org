@@ -1,4 +1,6 @@
-Wording
+---
+title: Wording
+---
 =======
 
 Purpose

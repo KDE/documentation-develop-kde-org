@@ -1,7 +1,9 @@
-Menubar
+---
+title: Menubar
+---
 =======
 
-![Menubar](/img/CP-MenuBar.png)
+![Menubar](/hig/CP-MenuBar.png)
 
 -   Use the Menubar pattern when access to the full command structure is
     necessary to complete the primary tasks of the application.

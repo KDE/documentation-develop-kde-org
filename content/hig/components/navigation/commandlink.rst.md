@@ -1,4 +1,6 @@
-Command Link
+---
+title: Command Link
+---
 ============
 
 Purpose

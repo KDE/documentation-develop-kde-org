@@ -1,4 +1,6 @@
-Global Drawer
+---
+title: Global Drawer
+---
 =============
 
 Purpose
@@ -15,14 +17,14 @@ current context either.
 ::: {.container .available .plasma .qwidgets}
 :::
 
-![Global drawer on mobile](/img/Globaldrawer1.png){.border}
+![Global drawer on mobile](/hig/Globaldrawer1.png){.border}
 
 Guidelines
 ----------
 
 ### Is this the right control?
 
-![Global drawer on desktop](/img/Globaldrawer3.png){.border}
+![Global drawer on desktop](/hig/Globaldrawer3.png){.border}
 
 Use a Global Drawer whenever your application has any functions which
 are not central enough to the application\'s main purpose to put them in
@@ -34,7 +36,7 @@ role="doc"}
 ### Behavior
 
 ![Hamburger button on the toolbar on
-desktop.](/img/Globaldrawer2.png){.border}
+desktop.](/hig/Globaldrawer2.png){.border}
 
 The Global Drawer is either opened by clicking on the hamburger button
 on the toolbar or by swiping from the left edge of the screen. It can be

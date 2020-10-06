@@ -1,4 +1,6 @@
-Icons and Text
+---
+title: Icons and Text
+---
 ==============
 
 When to Use
@@ -12,7 +14,7 @@ layout should be consistent.
 How to Use
 ----------
 
-![Alignment of text and icons.](/img/HIGPatternIconsAndText.png)
+![Alignment of text and icons.](/hig/HIGPatternIconsAndText.png)
 
 ::: {.attention}
 ::: {.title}

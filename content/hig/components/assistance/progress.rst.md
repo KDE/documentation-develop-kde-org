@@ -1,4 +1,6 @@
-Progress Indicator
+---
+title: Progress Indicator
+---
 ==================
 
 Purpose

@@ -1,11 +1,13 @@
-Toolbar
+---
+title: Toolbar
+---
 =======
 
 Desktop
 -------
 
 ![Toolbar with the most common actions and a menu button for additional
-actions](/img/Toolbar1.png)
+actions](/hig/Toolbar1.png)
 
 -   Use Toolbar + Menu Button command pattern when the number of
     frequently used commands are about 8 or less, and the remaining
@@ -27,7 +29,7 @@ Music player, Archiver
 Mobile
 ------
 
-![Toolbar](/img/Actionbutton2.png)
+![Toolbar](/hig/Actionbutton2.png)
 
 On mobile, a toolbar is diplayed as a group of
 `primary action buttons </components/navigation/actionbutton>`{.interpreted-text

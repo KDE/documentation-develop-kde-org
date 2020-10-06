@@ -1,4 +1,6 @@
-Single Item
+---
+title: Single Item
+---
 ===========
 
 ::: {.container .intend}
@@ -6,7 +8,7 @@ Single Item
 
 Pattern for a flat content structure.
 
-![Single item](/img/NP-flat-1b.png)
+![Single item](/hig/NP-flat-1b.png)
 
 -   These patterns are useful when each piece of content is meant to be
     shown one at a time.

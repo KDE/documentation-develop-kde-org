@@ -1,4 +1,6 @@
-Placeholder
+---
+title: Placeholder
+---
 ===========
 
 Purpose
@@ -18,7 +20,7 @@ Guidelines
     should give the user only an additional hint about what kind of data
     is expected.
 
-![Placeholders showing an example of what to enter in fields](/img/Placeholder-1.png)
+![Placeholders showing an example of what to enter in fields](/hig/Placeholder-1.png)
 
 ### Actions
 
@@ -35,4 +37,4 @@ Guidelines
     role="doc"}.
 
 ![Krunner showing a placeholder instead of a label with an
-action.](/img/Krunner-1.png)
+action.](/hig/Krunner-1.png)

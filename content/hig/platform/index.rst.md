@@ -1,4 +1,6 @@
-Platform
+---
+title: Platform
+---
 ========
 
 ::: {.toctree titlesonly="" hidden=""}

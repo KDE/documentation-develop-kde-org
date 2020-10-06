@@ -1,4 +1,6 @@
-Column-based navigation
+---
+title: Column-based navigation
+---
 =======================
 
 ::: {.container .intend}
@@ -9,7 +11,7 @@ Column-based navigation
 
 Examples of column-based navigation in a phone and a desktop UI.
 
-![Column-based navigation on the desktop](/img/Desktop.png)
+![Column-based navigation on the desktop](/hig/Desktop.png)
 
 ```{=html}
 <video autoplay src="https://cdn.kde.org/hig/video/20181031-1/Column1.webm" 

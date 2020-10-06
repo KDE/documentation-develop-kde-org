@@ -1,4 +1,6 @@
-Form
+---
+title: Form
+---
 ====
 
 A form layout is used to help align and structure a layout that contains
@@ -59,24 +61,24 @@ reasons\"\"
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use KDE3-style form
-alignment](/img/Form_Align_KDE3.png){.dont}
+alignment](/hig/Form_Align_KDE3.png){.dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use Plasma 5-style form
-alignment.](/img/Form_Align_KDE5.png){.do}
+alignment.](/hig/Form_Align_KDE5.png){.do}
 :::
 :::
 
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use macOS-style form
-alignment.](/img/Form_Align_OSX.png){.dont}
+alignment.](/hig/Form_Align_OSX.png){.dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use Plasma 5-style form
-alignment.](/img/Form_Align_KDE5.png){.do}
+alignment.](/hig/Form_Align_KDE5.png){.do}
 :::
 :::
 
@@ -91,12 +93,12 @@ alignment.](/img/Form_Align_KDE5.png){.do}
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t misalign
-controls.](/img/Form_Align_NO.png){.dont}
+controls.](/hig/Form_Align_NO.png){.dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Align controls to the
-left.](/img/Form_Align_YES.png){.do}
+left.](/hig/Form_Align_YES.png){.do}
 :::
 :::
 
@@ -106,7 +108,7 @@ left.](/img/Form_Align_YES.png){.do}
     languages such as German and Brazilian Portuguese.
 
     ![`Don't.`{.interpreted-text role="iconred"} Don\'t use very long
-    captions.](/img/Form_Align_Long.png){.dont}
+    captions.](/hig/Form_Align_Long.png){.dont}
 
 #### Mobile and narrow space
 
@@ -115,28 +117,28 @@ left.](/img/Form_Align_YES.png){.do}
     widgets.
 -   When using labels on top, labels and widgets should be left-aligned.
 
-![image](/img/Form_Align_YES_Mobile.png)
+![image](/hig/Form_Align_YES_Mobile.png)
 
 #### Titles
 
-![Notifications settings](/img/Settings-Notification-dark.png)
+![Notifications settings](/hig/Settings-Notification-dark.png)
 
 ### Spacing and Grouping
 
 Use `spacing </layout/metrics>`{.interpreted-text role="doc"} to group
 and separate controls in your forms.
 
-![Spacing used to create three groups of controls](/img/Form3.png)
+![Spacing used to create three groups of controls](/hig/Form3.png)
 
 Alternatively, you can use separators for a stronger separation.
 
-![Using a separator to group controls](/img/Form4.png)
+![Using a separator to group controls](/hig/Form4.png)
 
 To create even stronger separation, you can add subtiles for groups of
 controls. Subtitles are left aligned with the longest label of their
 group.
 
-![Alignment of subtitles](/img/Form5.png)
+![Alignment of subtitles](/hig/Form5.png)
 
 Code
 ----

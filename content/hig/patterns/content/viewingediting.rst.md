@@ -1,4 +1,6 @@
-Viewing vs. Editing
+---
+title: Viewing vs. Editing
+---
 ===================
 
 In most cases, information should be presented by default for viewing,
@@ -19,7 +21,7 @@ Only show editing controls when appropriate. Examples include:
 How to Use
 ----------
 
-![Viewing](/img/ViewMode.png)
+![Viewing](/hig/ViewMode.png)
 
 -   Don\'t use input controls to show information unless there is an
     explicit request to edit the information.
@@ -32,9 +34,9 @@ How to Use
 -   Provide a separate mode for editing the data when requested by the
     user (via a button, toolbutton or menu item):
 
-![Editing](/img/EditMode.png)
+![Editing](/hig/EditMode.png)
 
 -   Alternatively, in-line editing can be provided to edit a single data
     element at a time when it is clicked on or selected:
 
-![Line-in editing](/img/PartialEditMode.png)
+![Line-in editing](/hig/PartialEditMode.png)

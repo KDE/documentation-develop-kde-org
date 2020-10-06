@@ -1,4 +1,6 @@
-List
+---
+title: List
+---
 ====
 
 ::: {.container .intend}
@@ -6,7 +8,7 @@ List
 
 Pattern for a flat content structure.
 
-![List of items](/img/List.png)
+![List of items](/hig/List.png)
 
 When to Use
 -----------

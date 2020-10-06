@@ -1,4 +1,6 @@
-List View
+---
+title: List View
+---
 =========
 
 Purpose
@@ -13,7 +15,7 @@ visual clue whether a list box' mode is single or multiple and since
 other controls are more efficient for single selection, a list box
 should be used for single selection only.
 
-![ListView.png](/img/ListView.png)
+![ListView.png](/hig/ListView.png)
 
 Guidelines
 ----------
@@ -56,7 +58,7 @@ role="doc"} as an alternative to always-visible controls. If the user
 often performs tasks on single items of a list, you can add on-demand
 controls to the list item for these.
 
-![Slide to reveal actions](/img/Slide_to_reveal.jpg)
+![Slide to reveal actions](/hig/Slide_to_reveal.jpg)
 
 ##### Desktop
 
@@ -96,7 +98,7 @@ If the selection is the only action a user can execute on the items,
 there is no need for a checkbox. Change the background item color to
 toggle selection state.
 
-![Multiple selected items in a picker overlay.](/img/PickerOverlay.png)
+![Multiple selected items in a picker overlay.](/hig/PickerOverlay.png)
 
 -   Don\'t provide extended multiple selections with Shift+Click or
     Ctrl+Click to select groups of contiguous or non-adjacent values,
@@ -130,7 +132,7 @@ If you use a
 role="doc"} and want to be able to re-order the items in the selected
 list you can add aditional up and down buttons.
 
-![Dual-list pattern with up and down buttons](/img/DualListOrdering.png)
+![Dual-list pattern with up and down buttons](/hig/DualListOrdering.png)
 
 ### Appearance
 
@@ -160,17 +162,17 @@ role="doc"}. Don\'t place a border below the section header.
 
 ::: {.container .flex}
 ::: {.container}
-![Section header on desktop](/img/Listview8.png){.border}
+![Section header on desktop](/hig/Listview8.png){.border}
 :::
 
 ::: {.container}
-![Section header on mobile](/img/Listview9.png){.border}
+![Section header on mobile](/hig/Listview9.png){.border}
 :::
 :::
 
 #### Desktop
 
-![List items with and without icons](/img/Listview6.png){.border}
+![List items with and without icons](/hig/Listview6.png){.border}
 
 List items can have a lot of different styles and sizes, but should
 always be coherent in a list.
@@ -178,7 +180,7 @@ always be coherent in a list.
 ::: {.container .flex}
 ::: {.container}
 ![Default padding of a SwipeListItem on
-desktop](/img/Listview3.png){.border}
+desktop](/hig/Listview3.png){.border}
 
 Items have a padding of
 `Units.smallSpacing </layout/units>`{.interpreted-text role="doc"} on
@@ -188,7 +190,7 @@ on the left.
 :::
 
 ::: {.container}
-![Label is vertically centered](/img/Listview4.png){.border}
+![Label is vertically centered](/hig/Listview4.png){.border}
 
 Labels are vertically centered within the list item. If the list item
 includes an icon, add a
@@ -202,7 +204,7 @@ margin between the icon and the label.
 ::: {.container .flex}
 ::: {.container}
 ![Default padding of a SwipeListItem on
-mobile](/img/Listview1.png){.border}
+mobile](/hig/Listview1.png){.border}
 
 Items have a padding of
 `Units.largeSpacing </layout/units>`{.interpreted-text role="doc"} on
@@ -212,7 +214,7 @@ on the left.
 :::
 
 ::: {.container}
-![Label is vertically centered](/img/Listview2.png){.border}
+![Label is vertically centered](/hig/Listview2.png){.border}
 
 Labels are vertically centered within the list item. If the list item
 includes an icon, add a
@@ -226,7 +228,7 @@ margin between the icon and the label.
 Checkboxes should be placed to the left of the item.
 
 ![List items with checkboxes for multi
-selection.](/img/Listview5.png){.border}
+selection.](/hig/Listview5.png){.border}
 
 Add a `2 * Units.largeSpacing </layout/units>`{.interpreted-text
 role="doc"} margin between the checkbox and the icon or the label.
@@ -239,13 +241,13 @@ Kirigami.Theme.highlightColor to indicate an active item.
 Place the button to add items to the bottom right of list.
 
 ![Add button at the bottom right of a
-list](/img/ListPicker.png){.border}
+list](/hig/ListPicker.png){.border}
 
 For deselection you can either add a remove button for seleted icons
 next to the add button or use an icon on the list item.
 
 ![Using an on-demand pattern to display a \"Remove\"
-icon.](/img/ListPickerRemoveItem.png){.border}
+icon.](/hig/ListPickerRemoveItem.png){.border}
 
 Code
 ----

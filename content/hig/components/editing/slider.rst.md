@@ -1,4 +1,6 @@
-Slider
+---
+title: Slider
+---
 ======
 
 Purpose
@@ -47,7 +49,7 @@ Guidelines
     space is very dense show it only as a tooltip when the slider is
     moved
 
-    ![Show value always or as tooltip](/img/Slider.value.qml.png)
+    ![Show value always or as tooltip](/hig/Slider.value.qml.png)
 
 -   Add the unit to the current value caption, if appropriate.
 
@@ -55,7 +57,7 @@ Guidelines
 
 eg screen size, symbol-size
 
-![Spacing of slider components](/img/Slider.qml.png)
+![Spacing of slider components](/hig/Slider.qml.png)
 
 -   Mark significant values along the length of the slider with text or
     checkmarks. Checkmark have a height of 4 px or 8 if you want to
@@ -69,7 +71,7 @@ eg screen size, symbol-size
 
 eg volume control, mouse speed, brightness
 
-![Exact value is not important](/img/Slider.Volume.qml.png)
+![Exact value is not important](/hig/Slider.Volume.qml.png)
 
 -   Don\'t show checkmarks if the exact value is not important
 -   Don\'t show min/max label if the values don\'t give the user
@@ -78,7 +80,7 @@ eg volume control, mouse speed, brightness
 -   If the exact value might be important to the user offer an input
     field instead of the current value label
 
-![Offer text input for exact value](/img/Slider.Speed.qml.png)
+![Offer text input for exact value](/hig/Slider.Speed.qml.png)
 
 #### Slider and Spinbox together
 

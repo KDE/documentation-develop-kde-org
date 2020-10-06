@@ -1,4 +1,6 @@
-Units and Measurements
+---
+title: Units and Measurements
+---
 ======================
 
 Purpose
@@ -29,7 +31,7 @@ square inch on the screen. Different screens have different DPIs. Screen
 density = screen width (or height) in pixels / screen width (or height)
 in inches.
 
-![Different DPIs on desktop and mobile.](/img/Pixel.qml.png)
+![Different DPIs on desktop and mobile.](/hig/Pixel.qml.png)
 
 DPI is often used interchangeably with PPI, pixels per inch.
 
@@ -53,7 +55,7 @@ pixels. Qt (and QML) support DPI independent pixels in newer versions,
 but because KDE and software supports older versions of Qt as well, one
 can not assume that pixels used in Qt or QML apps are DPI independent.
 
-![Different DPIs on desktop and mobile](/img/DPI.qml.png)
+![Different DPIs on desktop and mobile](/hig/DPI.qml.png)
 
 A rectangle defined with `physical pixels`{.interpreted-text
 role="iconred"} and `DPI independent pixels`{.interpreted-text
@@ -91,7 +93,7 @@ with dimensions defined with px (DPI independent or not) can have issues
 with text.
 
 ![Using `DPI independet pixels`{.interpreted-text role="noblefir"} with
-different font settings](/img/Font.qml.png)
+different font settings](/hig/Font.qml.png)
 
 Base Units in Plasma and Kirigami
 ---------------------------------
@@ -110,7 +112,7 @@ ratio between `Units.gridUnit` and
 on the user\'s font settings.
 
 ![A rectangle defined with `Units.gridUnit`{.interpreted-text
-role="plasmablue"}.](/img/Units.qml.png)
+role="plasmablue"}.](/hig/Units.qml.png)
 
 ::: {.attention}
 ::: {.title}
@@ -188,12 +190,12 @@ to measure it.
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t create mockups
-without measurements.](/img/Design.qml.png){.dont}
+without measurements.](/hig/Design.qml.png){.dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Create mockups with detailed
-measurements.](/img/Design_Good.qml.png){.do}
+measurements.](/hig/Design_Good.qml.png){.do}
 :::
 :::
 
@@ -208,7 +210,7 @@ paddings, to ensure a uniform appearance. See
 `Metrics and Placement <metrics>`{.interpreted-text role="doc"} for more
 details.
 
-![Use of base units](/img/Margin.qml.png)
+![Use of base units](/hig/Margin.qml.png)
 
 ``` {.qml .numberLines}
 Row {
@@ -239,7 +241,7 @@ Row {
 Sometimes the ratio between dimensions is more important then the
 actually values.
 
-![](/img/Ratio.qml.png)
+![](/hig/Ratio.qml.png)
 
 ``` {.qml .numberLines}
 Grid {

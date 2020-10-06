@@ -1,12 +1,7 @@
-KDE Human Interface Guidelines
-==============================
-
-::: {.toctree titlesonly="" hidden=""}
-introduction/index layout/index style/index components/index
-patterns/command/index patterns/content/index patterns/navigation/index
-accessibility/index platform/index resources/about resources/contribute
-resources/media resources/glossary
-:::
+---
+title: KDE Human Interface Guidelines
+layout: home
+---
 
 The KDE Human Interface Guidelines (HIG) offer designers and developers
 a set of recommendations for producing beautiful, usable, and consistent
@@ -15,8 +10,7 @@ workspace widgets. Their aim is to improve the experience for users by
 making application and widget interfaces more consistent and hence more
 intuitive and learnable.
 
-![\'\'Simple by default, powerful when
-needed.\'\'](/img/HIGDesignVisionFullBleed.png)
+![Simple by default, powerful when needed.](/hig/HIGDesignVisionFullBleed.png)
 
 Design Vision
 -------------
@@ -24,7 +18,7 @@ Design Vision
 KDE\'s design vision focuses on two attributes of KDE software that
 connect its future to its history:
 
-### **Simple by default\...**
+### Simple by default...
 
 *Simple and inviting. KDE software is pleasant to experience and easy to
 use.*
@@ -40,7 +34,7 @@ use.*
     novices feel like experts. Create ways in which your users can
     naturally feel empowered by your software.
 
-### **\...Powerful when needed**
+### ...Powerful when needed
 
 *Power and flexibility. KDE software allows users to be effortlessly
 creative and efficiently productive.*
@@ -55,14 +49,10 @@ creative and efficiently productive.*
     functionality and customization options that don\'t interfere with
     the primary task.
 
-::: {.note}
-::: {.title}
-Note
-:::
-
-Note: KDE encourages developing and designing for customization, while
+{{< alert color="info" title="Note" >}}
+KDE encourages developing and designing for customization, while
 providing good default settings. Integrating into other desktop
 environments is also a virtue, but ultimately we aim for perfection
 within our own Plasma desktop environment with the default themes and
 settings. This aim should not be compromised.
-:::
+{{< /alert >}}

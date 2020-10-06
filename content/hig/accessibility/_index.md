@@ -1,9 +1,6 @@
-Accessibility
-=============
-
-::: {.toctree maxdepth="1" titlesonly="" hidden=""}
-checklist
-:::
+---
+title: Accessibility
+---
 
 Introduction
 ------------
@@ -118,7 +115,7 @@ If the widget is created in the code, you just need to find where it\'s
 initialized. Once you find it (usually where it\'s created), add some
 code to it:
 
-``` {.c++}
+```.c++
 button->setAccessibleName(i18n("Open"));
 button->setAccessibleDescription(i18n("Opens a file dialog to select a new 
 foo"));

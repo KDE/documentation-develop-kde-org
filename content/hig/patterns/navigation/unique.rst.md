@@ -1,4 +1,6 @@
-Unique 2-Deep Patterns
+---
+title: Unique 2-Deep Patterns
+---
 ======================
 
 ::: {.container .intend}
@@ -6,7 +8,7 @@ Unique 2-Deep Patterns
 
 Pattern for a 2-deep content structure.
 
-![](/img/NP-2-deep-1a.png)
+![](/hig/NP-2-deep-1a.png)
 
 -   The Collapsible List pattern is a space-efficient way of showing
     2-deep content. This pattern is useful for plasmoids and

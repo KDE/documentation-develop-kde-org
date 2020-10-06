@@ -1,5 +1,6 @@
-Accessibility Checklist
-=======================
+---
+title: Accessibility Checklist
+---
 
 Introduction
 ------------
@@ -264,12 +265,10 @@ Confirm the following information is included in the documentation:
 -   If an action is documented for the mouse, make sure there is an
     alternative for using the keyboard.
 
-::: {.note}
-::: {.title}
-Note
-:::
+{{< alert color="info" title="Note" >}}
 
 The content of this page is based on
 [\<https://developer.gnome.org/accessibility-devel-guide/3.32/\\
 accessibility-devel-guide.html\>]()
-:::
+
+{{< /alert >}}

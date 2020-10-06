@@ -1,4 +1,6 @@
-Monochromatic Icons
+---
+title: Monochromatic Icons
+---
 ===================
 
 ::: {.toctree caption="Contents:" titlesonly="" hidden=""}
@@ -11,7 +13,7 @@ action emblem mimetype places status
 -   `places`{.interpreted-text role="doc"}
 -   `status`{.interpreted-text role="doc"}
 
-![Monochrome icons](/img/HIGMonoIcons.png)
+![Monochrome icons](/hig/HIGMonoIcons.png)
 
 Monochrome icons come in two sizes: 16px and 22px. 16px monochrome icons
 are commonly seen in menu items, tabs, and push buttons that have a
@@ -34,31 +36,31 @@ color palette:
 ::: {.container .flex}
 ::: {.container}
 ![Color for non-destructive actions and states: navigation, acceptance,
-etc.](/img/Shade-Black.png)
+etc.](/hig/Shade-Black.png)
 :::
 
 ::: {.container}
 ![Color for destructive actions and states: delete, remove, error,
-etc.](/img/Icon-Red.png)
+etc.](/hig/Icon-Red.png)
 :::
 :::
 
 ::: {.container .flex}
 ::: {.container}
 ![Color for warning actions and states: warning, unsure, user
-interaction, etc.](/img/Beware-Orange.png)
+interaction, etc.](/hig/Beware-Orange.png)
 :::
 
 ::: {.container}
 ![Color for manipulative actions and states: selection, insertion, focus
-feedback, etc.](/img/Plasma-Blue.png)
+feedback, etc.](/hig/Plasma-Blue.png)
 :::
 :::
 
 ::: {.container .flex}
 ::: {.container}
 ![Color for successful actions and states: completion, connection,
-security, etc.](/img/Noble-Fir.png)
+security, etc.](/hig/Noble-Fir.png)
 :::
 :::
 
@@ -70,11 +72,11 @@ Margins and alignment
 
 ::: {.container .flex}
 ::: {.container}
-![2px margins for a 16px icon.](/img/margins-16.png)
+![2px margins for a 16px icon.](/hig/margins-16.png)
 :::
 
 ::: {.container}
-![3px margins for a 22px icon.](/img/margins-22.png)
+![3px margins for a 22px icon.](/hig/margins-22.png)
 :::
 :::
 
@@ -90,13 +92,13 @@ grid:
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Make sure your icon is
 aligned to the pixel grid---use grids and guides to assist you when
-designing it.](/img/pixel-align-do.png){.do}
+designing it.](/hig/pixel-align-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t misalign your icon
 to the pixel grid---this makes it look blurry when scaled and can make
-it look wonky.](/img/pixel-align-dont.png){.dont}
+it look wonky.](/hig/pixel-align-dont.png){.dont}
 :::
 :::
 
@@ -111,11 +113,11 @@ of blank space between the emblem and the rest of the icon.
 ::: {.container .flex}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Clear out some space for your
-icon\'s emblem.](/img/emblem-do.png){.do}
+icon\'s emblem.](/hig/emblem-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t overlay your icon\'s
-emblem on its corner.](/img/emblem-dont.png){.dont}
+emblem on its corner.](/hig/emblem-dont.png){.dont}
 :::
 :::

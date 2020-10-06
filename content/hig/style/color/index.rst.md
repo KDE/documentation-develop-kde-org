@@ -1,4 +1,6 @@
-Color
+---
+title: Color
+---
 =====
 
 ::: {.toctree caption="Contents:" titlesonly="" hidden=""}
@@ -20,12 +22,12 @@ throughout the user interface.
 
 ::: {.container .flex}
 ::: {.container}
-![System settings with Breeze color theme](/img/Systemsettings.png)
+![System settings with Breeze color theme](/hig/Systemsettings.png)
 :::
 
 ::: {.container}
 ![System settings with Breeze Dark color
-theme](/img/Systemsettings-dark.png)
+theme](/hig/Systemsettings-dark.png)
 :::
 :::
 

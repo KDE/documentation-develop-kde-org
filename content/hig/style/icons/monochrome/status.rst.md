@@ -1,4 +1,6 @@
-Status Icons
+---
+title: Status Icons
+---
 ============
 
 Status icons are used to indicate the status of hardware and software.
@@ -26,7 +28,7 @@ the icon represents.
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use a simple and recognizable
 icon base that leaves room for additions to indicate
-state.](/img/status-base-do.png){.do}
+state.](/hig/status-base-do.png){.do}
 :::
 
 ::: {.container}
@@ -34,7 +36,7 @@ state.](/img/status-base-do.png){.do}
 base---this makes it hard for the user to identify what an icon
 represents. Additionally, don\'t use more details than you need to make
 something recognizable--- this doesn\'t leave you room for indicating
-states.](/img/status-base-dont.png){.dont}
+states.](/hig/status-base-dont.png){.dont}
 :::
 :::
 
@@ -47,14 +49,14 @@ the icon represents is in.
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use a simple and recognizable
 overlay with appropriately used color to clue in the user to an icon\'s
-status.](/img/status-overlay-do.png){.do}
+status.](/hig/status-overlay-do.png){.do}
 :::
 
 ::: {.container}
 ![`Caution.`{.interpreted-text role="ambientamber"} Some overlays can be
 hard to identify on their own---provide appropriate context to allow a
 user to identify what a simple icon
-represents.](/img/status-caution.png){.caution}
+represents.](/hig/status-caution.png){.caution}
 :::
 :::
 
@@ -62,13 +64,13 @@ represents.](/img/status-caution.png){.caution}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t exclusively rely on
 colour to indicate state---this is an accessibility problem and makes it
-hard to discern state.](/img/status-overlay-dont-color.png){.dont}
+hard to discern state.](/hig/status-overlay-dont-color.png){.dont}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use too-generic
 details to represent state---this makes it hard for a user to identify
 what an icon\'s state
-represents.](/img/status-overlay-dont-detail.png){.dont}
+represents.](/hig/status-overlay-dont-detail.png){.dont}
 :::
 :::

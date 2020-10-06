@@ -1,9 +1,11 @@
-Toolbar
+---
+title: Toolbar
+---
 =======
 
 ![Toolbar with the most important actions
 `toolbar <toolbar>`{.interpreted-text role="doc"} and an overflow
-menu](/img/Toolbar1.png){.border}
+menu](/hig/Toolbar1.png){.border}
 
 Purpose
 -------

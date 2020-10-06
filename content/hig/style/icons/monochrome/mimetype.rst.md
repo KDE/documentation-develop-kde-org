@@ -1,4 +1,6 @@
-MIME Type Icons
+---
+title: MIME Type Icons
+---
 ===============
 
 MIME type icons are used to depict documents and files. They come in
@@ -28,13 +30,13 @@ determine the filetype at a glance.
 ::: {.container .flex}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use a bold and recognizable
-icon.](/img/mono-mime-do.png){.do}
+icon.](/hig/mono-mime-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use an overly
 generic icon--- this makes it hard for users to determine
-filetype.](/img/mono-mime-dont.png){.dont}
+filetype.](/hig/mono-mime-dont.png){.dont}
 :::
 :::
 
@@ -44,11 +46,11 @@ to make it easier for users to connect the icon to its filetype.
 ::: {.container .flex}
 ::: {.container}
 ![The usage of the RSS icon allows users to recognize the RSS feed MIME
-type.](/img/mono-mimebrand-rss.png)
+type.](/hig/mono-mimebrand-rss.png)
 :::
 
 ::: {.container}
 ![The usage of the Debian logo allows users to recognize the deb package
-MIME type.](/img/mono-mimebrand-deb.png)
+MIME type.](/hig/mono-mimebrand-deb.png)
 :::
 :::

@@ -1,4 +1,6 @@
-Command Patterns
+---
+title: Command Patterns
+---
 ================
 
 ::: {.toctree maxdepth="1" titlesonly="" hidden=""}

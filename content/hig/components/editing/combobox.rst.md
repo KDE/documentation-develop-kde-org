@@ -1,8 +1,10 @@
-Combo Box
+---
+title: Combo Box
+---
 =========
 
 ![A combination of a drop-down list and an edit
-control.](/img/Combobox1.png){.border}
+control.](/hig/Combobox1.png){.border}
 
 Purpose
 -------

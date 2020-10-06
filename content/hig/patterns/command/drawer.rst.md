@@ -1,4 +1,6 @@
-Drawers
+---
+title: Drawers
+---
 =======
 
 Drawers don\'t take away any room from the content, but they do require
@@ -8,7 +10,7 @@ controls that are part of an application\'s main tasks.
 Global Drawer
 -------------
 
-![Global drawer on mobile](/img/Globaldrawer1.png){.border}
+![Global drawer on mobile](/hig/Globaldrawer1.png){.border}
 
 The global drawer is used for global, context-independent controls.
 
@@ -22,7 +24,7 @@ The global drawer is used for global, context-independent controls.
 Context Drawer
 --------------
 
-![Context drawer on mobile](/img/Contextdrawer1.png){.border}
+![Context drawer on mobile](/hig/Contextdrawer1.png){.border}
 
 The context drawer (the side is system-defined) is used for
 context-specific controls that affect only the currently selected object
@@ -37,7 +39,7 @@ context-specific controls that affect only the currently selected object
 Bottom Drawer and Dialog Sheet
 ------------------------------
 
-![Bottom drawer](/img/Bottom_Drawer.png)
+![Bottom drawer](/hig/Bottom_Drawer.png)
 
 For a full modal dialog, use a dialog sheet. For a quick choice, use a
 bottom drawer.

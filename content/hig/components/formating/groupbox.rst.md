@@ -1,4 +1,6 @@
-Group Box
+---
+title: Group Box
+---
 =========
 
 Purpose

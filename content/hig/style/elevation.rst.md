@@ -1,4 +1,6 @@
-Depth, Elevation and Shadows
+---
+title: Depth, Elevation and Shadows
+---
 ============================
 
 Athough in recent years \"flat\" design has taken over the mobile
@@ -21,7 +23,7 @@ The default shadow details should be:
 -   Window shadow size: 48px
 -   Menu and tooltip shadows size: 20px
 
-![Example for a shadows of window and menu](/img/Shadows_with_background.png)
+![Example for a shadows of window and menu](/hig/Shadows_with_background.png)
 
 ::: {.hint}
 ::: {.title}

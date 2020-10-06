@@ -1,4 +1,6 @@
-Responsiveness
+---
+title: Responsiveness
+---
 ==============
 
 Introduction

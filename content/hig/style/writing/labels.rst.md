@@ -1,4 +1,6 @@
-Labels
+---
+title: Labels
+---
 ======
 
 Purpose
@@ -101,7 +103,7 @@ Guidelines
     first one that to provide a title or action directive for the group.
 
 ![Appropriately-labeled logical groups of radio buttons and
-checkboxes](/img/dolphin-settings-dialog.png)
+checkboxes](/hig/dolphin-settings-dialog.png)
 
 ### Labels for Group boxes
 

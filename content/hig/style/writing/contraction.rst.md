@@ -1,4 +1,6 @@
-Contractions
+---
+title: Contractions
+---
 ============
 
 Short version

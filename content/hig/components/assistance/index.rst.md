@@ -1,4 +1,6 @@
-User Assistance
+---
+title: User Assistance
+---
 ===============
 
 ::: {.toctree maxdepth="1" titlesonly="" hidden=""}

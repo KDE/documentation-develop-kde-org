@@ -1,4 +1,6 @@
-Brand Names
+---
+title: Brand Names
+---
 ===========
 
 Purpose
@@ -43,4 +45,4 @@ Creating a good brand name
 Examples
 --------
 
-![Brand names and logos for Dolphin, Okular, and Spectacle](/img/app-brand-names.png)
+![Brand names and logos for Dolphin, Okular, and Spectacle](/hig/app-brand-names.png)

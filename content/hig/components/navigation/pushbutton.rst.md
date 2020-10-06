@@ -1,4 +1,6 @@
-Push Button
+---
+title: Push Button
+---
 ===========
 
 Purpose
@@ -6,7 +8,7 @@ Purpose
 
 A *push button* initiates an action when the user clicks it.
 
-![Button-HIG.png](/img/Button-HIG.png)
+![Button-HIG.png](/hig/Button-HIG.png)
 
 Buttons have the benefit of affordance, i.e. their visual properties
 (they look like they can be pushed) suggest how they are used.
@@ -31,11 +33,11 @@ Buttons are available in several flavors:
 
 ::: {.container .flex}
 ::: {.container}
-![MenuButton closed](/img/MenuButton-closed.png)
+![MenuButton closed](/hig/MenuButton-closed.png)
 :::
 
 ::: {.container}
-![MenuButton open](/img/MenuButton-open.png)
+![MenuButton open](/hig/MenuButton-open.png)
 :::
 :::
 
@@ -47,7 +49,7 @@ Buttons are available in several flavors:
 
 #### Split Button
 
-![Split Button](/img/Button_SplitButton.png)
+![Split Button](/hig/Button_SplitButton.png)
 
 -   Apply a split button when one of the commands is used by default.
 -   Clicking the left part (or right in case of RTL alignment) of a

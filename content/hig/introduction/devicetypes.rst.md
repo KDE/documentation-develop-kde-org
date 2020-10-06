@@ -1,4 +1,6 @@
-Device Types
+---
+title: Device Types
+---
 ============
 
 In today\'s world, there are many types of digital devices: desktop and
@@ -90,7 +92,7 @@ This describes the existing Plasma Desktop:
 > -   **Application Content**: Most applications are already optimized
 >     for this device type
 
-![](/img/Desktop_UX.png)
+![](/hig/Desktop_UX.png)
 
 Tablet
 ------

@@ -1,4 +1,6 @@
-Master-Detail
+---
+title: Master-Detail
+---
 =============
 
 ::: {.container .intend}
@@ -6,7 +8,7 @@ Master-Detail
 
 Pattern for a flat content structure.
 
-![Master-Detail](/img/NP-flat-3a.png)
+![Master-Detail](/hig/NP-flat-3a.png)
 
 Desktop
 -------

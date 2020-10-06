@@ -1,4 +1,6 @@
-Vocabulary
+---
+title: Vocabulary
+---
 ==========
 
 Consistenly using the same words to refer to the same concepts avoids
@@ -8,7 +10,7 @@ concepts.
 Directories and Folders
 -----------------------
 
-![image](/img/folder.svg){.align-right}
+![image](/hig/folder.svg){.align-right}
 
 For containers of files and other containers, use **folder**. Avoid
 *dir* or *directory*.

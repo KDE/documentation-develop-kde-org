@@ -1,9 +1,11 @@
-Category and Preferences Icons
+---
+title: Category and Preferences Icons
+---
 ==============================
 
-![](/img/icon-category.png)
+![](/hig/icon-category.png)
 
-![](/img/icon-preferences.png)
+![](/hig/icon-preferences.png)
 
 Purpose
 -------
@@ -31,14 +33,14 @@ choices.
 ::: {.container .flex}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use symbols that evoke the
-metaphor of your icon\'s category.](/img/category-metaphor-do.png){.do}
+metaphor of your icon\'s category.](/hig/category-metaphor-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use icons just for
 the sake of having different visuals per categry---use meaningful
 metaphors that inform the user about their
-category.](/img/category-metaphor-dont.png){.dont}
+category.](/hig/category-metaphor-dont.png){.dont}
 :::
 :::
 
@@ -50,13 +52,13 @@ Category and preferences icons should be recognisable, yet connected.
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Keep icons unique, yet
 connected. This allows users to easily identify icons as unique members
-in a set.](/img/category-unique-do.png){.do}
+in a set.](/hig/category-unique-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t make icons too
 similar to eachother--- this impairs the ability of users to distinguish
-them.](/img/category-unique-dont.png){.dont}
+them.](/hig/category-unique-dont.png){.dont}
 :::
 :::
 
@@ -65,6 +67,6 @@ them.](/img/category-unique-dont.png){.dont}
 ![`Caution.`{.interpreted-text role="ambientamber"} Be careful when
 making icons extremely unique from eachother---they may not appear in
 contexts that inform users that they\'re
-related.](/img/category-unique-caution.png){.caution}
+related.](/hig/category-unique-caution.png){.caution}
 :::
 :::

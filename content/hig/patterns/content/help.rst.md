@@ -1,4 +1,6 @@
-Help System
+---
+title: Help System
+---
 ===========
 
 The help system should be used as a secondary mechanism to support

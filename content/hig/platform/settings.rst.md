@@ -1,4 +1,6 @@
-Settings
+---
+title: Settings
+---
 ========
 
 Settings provide the ability to customize the appearance and behavior of
@@ -13,7 +15,7 @@ or as standalone configuration dialogs.
 Example
 -------
 
-![](/img/Settings-dark.png)
+![](/hig/Settings-dark.png)
 
 Guidelines
 ----------
@@ -98,7 +100,7 @@ set the focus to focused controls and don\'t just highlight it.
 -   If there is a `Get New Stuff! <getnew>`{.interpreted-text
     role="doc"} button, place it above the bottom row of buttons.
 
-    ![](/img/SettingsButtons.png){.border}
+    ![](/hig/SettingsButtons.png){.border}
 
     The *Help*, *Defaults*, *Reset* buttons on the left side.
 
@@ -118,7 +120,7 @@ throughout KDE software:**
 #### Forms
 
 ![Notifications settings in a form
-layout](/img/Settings-Notification-dark.png)
+layout](/hig/Settings-Notification-dark.png)
 
 Use a `form </patterns/content/form>`{.interpreted-text role="doc"} if
 your settings have many controls and input fields.
@@ -138,7 +140,7 @@ your settings have many controls and input fields.
 
 #### Grid
 
-![Choose a new wallpaper](/img/Wallpaper-dark.png)
+![Choose a new wallpaper](/hig/Wallpaper-dark.png)
 
 Use a `grid </components/editing/grid>`{.interpreted-text role="doc"}
 for a selection of a single item when all items are visually
@@ -147,7 +149,7 @@ distinctive. To implement a grid in a KCM, use the
 
 #### Lists
 
-![Language settings](/img/LanguagePicker.png)
+![Language settings](/hig/LanguagePicker.png)
 
 Use a `picker </patterns/content/picker>`{.interpreted-text role="doc"}
 for selection and configuration of list based settings where the items

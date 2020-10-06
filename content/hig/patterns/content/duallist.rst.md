@@ -1,7 +1,9 @@
-Dual-List
+---
+title: Dual-List
+---
 =========
 
-![Dual-list pattern](/img/DualListOrdering.png)
+![Dual-list pattern](/hig/DualListOrdering.png)
 
 Multiple selection in
 `lists </components/editing/list>`{.interpreted-text role="doc"} with

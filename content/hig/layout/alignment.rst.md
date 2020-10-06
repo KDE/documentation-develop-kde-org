@@ -1,4 +1,6 @@
-Alignment
+---
+title: Alignment
+---
 =========
 
 Purpose

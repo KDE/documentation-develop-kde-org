@@ -1,7 +1,9 @@
-Application Icons
+---
+title: Application Icons
+---
 =================
 
-![](/img/icon-applications.png)
+![](/hig/icon-applications.png)
 
 Purpose
 -------
@@ -30,14 +32,14 @@ Your application\'s icon should be distinct and recognisable.
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use a distinct silhouette and
 set of colors. You can sample motifs from other icons where appropriate
-to help with recognizability.](/img/distinct-do.png){.do}
+to help with recognizability.](/hig/distinct-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t solely base your
 application\'s icon off of another icon. This can confuse users, and
 tarnish both the reputation of your app and the app whose icon you
-use.](/img/distinct-dont.png){.dont}
+use.](/hig/distinct-dont.png){.dont}
 :::
 :::
 
@@ -50,13 +52,13 @@ what your app does.
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use an appropriate metaphor
 for your icon; this will inform users as to what your app
-does.](/img/metaphor-do.png){.do}
+does.](/hig/metaphor-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use inappropriate
 metaphors for your icon; this will confuse users as to what your app
-does.](/img/metaphor-dont.png){.dont}
+does.](/hig/metaphor-dont.png){.dont}
 :::
 :::
 
@@ -71,13 +73,13 @@ something completely new and different.
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Retain the silhouette of an
 app\'s icon to preserve its core branding and recognizability for
-users.](/img/gimp-do.png){.do}
+users.](/hig/gimp-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t dramatically change
 the shape of an app\'s icon; this will make the application hard to
-recognize.](/img/gimp-dont-silhouette.png){.dont}
+recognize.](/hig/gimp-dont-silhouette.png){.dont}
 :::
 :::
 
@@ -85,12 +87,12 @@ recognize.](/img/gimp-dont-silhouette.png){.dont}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Retain the general branding
 colors of an app\'s icon to preserve branding
-recognizability.](/img/telegram-do.png){.do}
+recognizability.](/hig/telegram-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use a radically
 different color palette from an app\'s icon; this will make it hard to
-recognize, especially at small sizes.](/img/telegram-dont.png){.dont}
+recognize, especially at small sizes.](/hig/telegram-dont.png){.dont}
 :::
 :::

@@ -1,8 +1,10 @@
-Line Edit
+---
+title: Line Edit
+---
 =========
 
 ![Single line control to enter unconstrained
-text.](/img/Lineedit1.png){.border}
+text.](/hig/Lineedit1.png){.border}
 
 Purpose
 -------

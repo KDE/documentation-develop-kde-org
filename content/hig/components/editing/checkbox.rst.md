@@ -1,4 +1,6 @@
-Checkbox
+---
+title: Checkbox
+---
 ========
 
 Purpose
@@ -23,13 +25,13 @@ Guidelines
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use a checkbox if
-the opposite is ambiguous.](/img/Ambiguous_Opposite_Bad.qml.png){.border
+the opposite is ambiguous.](/hig/Ambiguous_Opposite_Bad.qml.png){.border
 .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use two radio buttons to
-remove the need to guess.](/img/Ambiguous_Opposite_Good.qml.png){.border
+remove the need to guess.](/hig/Ambiguous_Opposite_Good.qml.png){.border
 .do}
 :::
 :::
@@ -43,13 +45,13 @@ remove the need to guess.](/img/Ambiguous_Opposite_Good.qml.png){.border
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use the selection to
-perform commands.](/img/No_Command_2_Bad.qml.png){.border .dont}
+perform commands.](/hig/No_Command_2_Bad.qml.png){.border .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Consider using a
 `push button <../navigation/pushbutton>`{.interpreted-text role="doc"}
-instead.](/img/No_Command_2_Good.qml.png){.border .do}
+instead.](/hig/No_Command_2_Good.qml.png){.border .do}
 :::
 :::
 
@@ -62,12 +64,12 @@ instead.](/img/No_Command_2_Good.qml.png){.border .do}
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use checkboxes for
-negatives.](/img/Checkbox_Enable_Bad.qml.png){.border .dont}
+negatives.](/hig/Checkbox_Enable_Bad.qml.png){.border .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use checkboxes for
-positives.](/img/Checkbox_Enable_Good.qml.png){.border .do}
+positives.](/hig/Checkbox_Enable_Good.qml.png){.border .do}
 :::
 :::
 
@@ -75,7 +77,7 @@ positives.](/img/Checkbox_Enable_Good.qml.png){.border .do}
     but not all, child objects. Mixed state must not be used to
     represent a third state.
 
-![Example for mixed state.](/img/Checkbox_Mixed_State.qml.png)
+![Example for mixed state.](/hig/Checkbox_Mixed_State.qml.png)
 
 -   Users must not be able to set a mixed state directly.
 -   Clicking a mixed state checkbox enables all child objects.
@@ -86,12 +88,12 @@ positives.](/img/Checkbox_Enable_Good.qml.png){.border .do}
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use sliding switches
-on desktop.](/img/Checkbox_Switch_Desktop.qml.png){.dont}
+on desktop.](/hig/Checkbox_Switch_Desktop.qml.png){.dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Do use sliding switches on
-mobile.](/img/Checkbox_Switch_Mobile.qml.png){.do}
+mobile.](/hig/Checkbox_Switch_Mobile.qml.png){.do}
 :::
 :::
 
@@ -107,13 +109,13 @@ which will take care of the layout and spacing of your controls.
     -   Group checkboxes together in the widget column and add a label
         describing the group in the label column.
 
-        ![Grouped checkboxes](/img/Grouped_checkboxes.qml.png)
+        ![Grouped checkboxes](/hig/Grouped_checkboxes.qml.png)
 
     -   If all else fails, add a label describing the checkbox on the
         left side of the checkbox, then set the text of the checkbox to
         \"Enabled\", \"On\", or similar.
 
-        ![Using a separate title label for the checkbox.](/img/Checkbox_separate_label.qml.png)
+        ![Using a separate title label for the checkbox.](/hig/Checkbox_separate_label.qml.png)
 -   When options are subordinate to a checkbox (e.g. Audio level can
     only be set if the Activate Audio option is selected), this relation
     should be visualized by indenting the sub-options. There are two
@@ -122,14 +124,14 @@ which will take care of the layout and spacing of your controls.
         sub-options by using a horizontal spacer of SizeType
         \"Minimum\".
 
-        ![Aligning sub-options with a horizontal spacer of SizeType \"Minimum\".](/img/Suboption_spacer.qml.png)
+        ![Aligning sub-options with a horizontal spacer of SizeType \"Minimum\".](/hig/Suboption_spacer.qml.png)
 
     -   When you are using a checkbox that is placed right to its label,
         indent the sub-options in the same vertical axis as the
         checkbox.
 
         ![Aligning sub-options with the same vertical axis as the
-        checkbox itself.\|](/img/Suboption_right.qml.png)
+        checkbox itself.\|](/hig/Suboption_right.qml.png)
 -   If activating a choice affects the appearance or the enabled state
     of other controls, place them next to the checkbox (group).
 -   Align checkboxes vertically rather than horizontally, as this makes
@@ -146,12 +148,12 @@ which will take care of the layout and spacing of your controls.
 ::: {.container .flex}
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use linebreaks in a
-checkbox\'s label.](/img/Checkbox_Alignment_Bad.qml.png){.border .dont}
+checkbox\'s label.](/hig/Checkbox_Alignment_Bad.qml.png){.border .dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Add another label if more
-explanation is required.](/img/Checkbox_Alignment_Good.qml.png){.border
+explanation is required.](/hig/Checkbox_Alignment_Good.qml.png){.border
 .do}
 :::
 :::

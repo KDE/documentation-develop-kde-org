@@ -1,4 +1,6 @@
-Optimized Convergence
+---
+title: Optimized Convergence
+---
 =====================
 
 The design of KDE software, and by extension the KDE HIG, is made with

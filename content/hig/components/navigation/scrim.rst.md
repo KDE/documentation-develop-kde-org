@@ -1,4 +1,6 @@
-Scrim
+---
+title: Scrim
+---
 =====
 
 A scrim is a temporary effect applied to a surface for the purpose of
@@ -8,10 +10,10 @@ Examples
 --------
 
 ![A scrim being used to indicate that a drawer is
-modal.](/img/drawer-scrim.png)
+modal.](/hig/drawer-scrim.png)
 
 ![A scrim being overlaid on an image to allow a readable caption on top
-of it.](/img/ImageCaption1.png)
+of it.](/hig/ImageCaption1.png)
 
 Is this the right control?
 --------------------------

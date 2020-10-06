@@ -1,4 +1,6 @@
-Menu Bar
+---
+title: Menu Bar
+---
 ========
 
 Purpose

@@ -1,4 +1,6 @@
-Modal Message Dialog
+---
+title: Modal Message Dialog
+---
 ====================
 
 Purpose

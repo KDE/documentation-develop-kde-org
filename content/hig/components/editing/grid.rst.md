@@ -1,11 +1,13 @@
-Grid
+---
+title: Grid
+---
 ====
 
 Like a table, a grid is a structure to distribute items into rows and
 columns. Unlike a table, a grid doesn\'t have a fixed structure; rather,
 the rows and columns are determent by the available space.
 
-![Choose a new wallpaper](/img/Wallpaper-dark.png)
+![Choose a new wallpaper](/hig/Wallpaper-dark.png)
 
 Guidelines
 ----------

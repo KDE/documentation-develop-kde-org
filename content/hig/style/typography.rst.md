@@ -1,4 +1,6 @@
-Typography
+---
+title: Typography
+---
 ==========
 
 The guideline helps ensure that typography is always in harmony with the
@@ -13,7 +15,7 @@ KDE\'s default font is *Hack* for monospace and *Noto Sans* for
 everything else. The default font size is 10pt. KDE Plasma and
 Applications display seven variants of this typeface.
 
-![The seven default typeface styles](/img/Typography1.png){.border}
+![The seven default typeface styles](/hig/Typography1.png){.border}
 
 Typeface settings can be adjusted by the user and have
 `great influence on sizing and spacing  </layout/units>`{.interpreted-text
@@ -98,12 +100,12 @@ rare.
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use the same type
 scale for everything in your
-application.](/img/Typography-Heading-Dont.png){.dont}
+application.](/hig/Typography-Heading-Dont.png){.dont}
 :::
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Vary the type scale
-appropriately in your application.](/img/Typography-Heading-Do.png){.do}
+appropriately in your application.](/hig/Typography-Heading-Do.png){.do}
 :::
 :::
 

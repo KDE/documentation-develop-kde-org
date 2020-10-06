@@ -1,7 +1,9 @@
-Text Edit
+---
+title: Text Edit
+---
 =========
 
-![Control to enter multiple lines of text.](/img/Textedit1.png){.border}
+![Control to enter multiple lines of text.](/hig/Textedit1.png){.border}
 
 Purpose
 -------

@@ -1,4 +1,6 @@
-Content Patterns
+---
+title: Content Patterns
+---
 ================
 
 ::: {.toctree maxdepth="1" titlesonly="" hidden=""}

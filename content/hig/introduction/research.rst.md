@@ -1,4 +1,6 @@
-Project User Research Profile
+---
+title: Project User Research Profile
+---
 =============================
 
 Short summary description of the purpose of the application, who it is

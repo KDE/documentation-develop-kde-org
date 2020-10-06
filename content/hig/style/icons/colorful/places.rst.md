@@ -1,4 +1,6 @@
-Places Icons
+---
+title: Places Icons
+---
 ============
 
 Places icons are used to depict folders, network locations, and other
@@ -22,7 +24,7 @@ Design
 Colorful places icons consist of two elements---the monochromatic
 counterpart of the colorful places icon overlaid on a folder background.
 
-![](/img/place-anatomy.png)
+![](/hig/place-anatomy.png)
 
 1.  Folder
 2.  Monochromatic Foreground
@@ -30,12 +32,12 @@ counterpart of the colorful places icon overlaid on a folder background.
 ::: {.container .flex}
 ::: {.container}
 ![The base of a places icon indicates that it\'s a folder that can be
-navigated to.](/img/place-anatomy-base.png)
+navigated to.](/hig/place-anatomy-base.png)
 :::
 
 ::: {.container}
 ![The foreground of a places icon indicates the folder\'s landmark
-location.](/img/place-anatomy-fg.png)
+location.](/hig/place-anatomy-fg.png)
 :::
 :::
 
@@ -43,7 +45,7 @@ location.](/img/place-anatomy-fg.png)
 
 The base of a places icon is always a blue folder.
 
-![](/img/place-blank.png)
+![](/hig/place-blank.png)
 
 ### Foreground
 
@@ -55,12 +57,12 @@ always centered within the folder, and does not cast a shadow.
 ::: {.container .flex}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} The foreground of a places
-icon does not cast a shadow.](/img/place-fg-do.png){.do}
+icon does not cast a shadow.](/hig/place-fg-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t have the foreground
-of a places icon cast a shadow.](/img/place-fg-dont.png){.dont}
+of a places icon cast a shadow.](/hig/place-fg-dont.png){.dont}
 :::
 :::
 
@@ -72,11 +74,11 @@ places icons have a top and bottom margin of 3 pixels.
 ::: {.container .flex}
 ::: {.container}
 ![64px icons should have a top and bottom margin of 6
-pixels.](/img/place-margin-64.png)
+pixels.](/hig/place-margin-64.png)
 :::
 
 ::: {.container}
 ![32px icons should have a top and bottom margin of 3
-pixels.](/img/place-margin-32.png)
+pixels.](/hig/place-margin-32.png)
 :::
 :::

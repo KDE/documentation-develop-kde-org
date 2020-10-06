@@ -1,4 +1,6 @@
-Emblem
+---
+title: Emblem
+---
 ======
 
 Purpose
@@ -13,10 +15,10 @@ Examples
 --------
 
 ![An emblem indicating that a folder is shared on the
-network](/img/emblem-public-on-folder.png)
+network](/hig/emblem-public-on-folder.png)
 
 ![An emblem indicating that a mail program has 15 unread
-emails](/img/emblem-notification-kmail.png)
+emails](/hig/emblem-notification-kmail.png)
 
 Guidelines
 ----------
@@ -46,10 +48,10 @@ An emblem that indicates unread notifications should take the form of a
 light-colored number inside a blue circle. The circle can become
 \"pill-shaped\" if the number is very large.
 
-![Notification emblem](/img/emblem-notification-small.png)
+![Notification emblem](/hig/emblem-notification-small.png)
 
 ![Notification emblem with a large
-number](/img/emblem-notification-large.png)
+number](/hig/emblem-notification-large.png)
 
 For symbolic icon emblems, see
 `/style/icons/monochrome/emblem`{.interpreted-text role="doc"}.

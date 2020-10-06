@@ -1,4 +1,6 @@
-Action Icons
+---
+title: Action Icons
+---
 ============
 
 Action icons are used to depict actions. They come in two sizes: 16px
@@ -22,32 +24,32 @@ can indicate information about an action to a user.
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use Shade Black as your
 icon\'s base--- this color is neutral and has the most contrast against
-a white background.](/img/action-colour-do.png){.do}
+a white background.](/hig/action-colour-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use a bright color
 for your icon\'s base---this distracts the user without adding extra
-information to your icon.](/img/action-colour-dont.png){.dont}
+information to your icon.](/hig/action-colour-dont.png){.dont}
 :::
 :::
 
 ::: {.container .flex}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use red to indicate
-destructive actions.](/img/action-colour-destructive-do.png){.do}
+destructive actions.](/hig/action-colour-destructive-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use red to indicate
 other types of actions--- this will confuse the user as to what the
-actions do.](/img/action-colour-destructive-dont.png){.dont}
+actions do.](/hig/action-colour-destructive-dont.png){.dont}
 :::
 :::
 
 ![Action icons are able to dynamically change their color based on
 context. Implementation details can be found at
-[community.kde.org](https://community.kde.org/Guidelines_and_HOWTOs/Icon_Workflow_Tips#Embedding_stylesheets_in_SVGs).](/img/action-colour-adaptable.png)
+[community.kde.org](https://community.kde.org/Guidelines_and_HOWTOs/Icon_Workflow_Tips#Embedding_stylesheets_in_SVGs).](/hig/action-colour-adaptable.png)
 
 ### Metaphor
 
@@ -57,13 +59,13 @@ about the action an icon represents.
 ::: {.container .flex}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Use appropriate metaphors to
-indicate what an action does.](/img/action-metaphor-do.png){.do}
+indicate what an action does.](/hig/action-metaphor-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use inaccurate or
 conflicting metaphors--- this will mislead your user and lead to
-frustration.](/img/action-metaphor-dont.png){.dont}
+frustration.](/hig/action-metaphor-dont.png){.dont}
 :::
 :::
 
@@ -82,13 +84,13 @@ ways---not everyone is able to distinguish between all colors.
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Provide a name and
 description that describe what an icon\'s action
-does.](/img/action-accessibility-do.png){.do}
+does.](/hig/action-accessibility-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t describe the icon\'s
 appearance---this is useless information that will make your application
-harder to use.](/img/action-accessibility-dont.png){.dont}
+harder to use.](/hig/action-accessibility-dont.png){.dont}
 :::
 :::
 
@@ -96,13 +98,13 @@ harder to use.](/img/action-accessibility-dont.png){.dont}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Reinforce information in
 multiple ways to allow users with conditions such as colorblindness to
-get the message.](/img/action-accessibility-color-do.png){.do}
+get the message.](/hig/action-accessibility-color-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t only rely on color
 to convey information--- this makes it harder for users with
 colorblindness to distinguish two like icons
-apart.](/img/action-accessibility-color-dont.png){.dont}
+apart.](/hig/action-accessibility-color-dont.png){.dont}
 :::
 :::

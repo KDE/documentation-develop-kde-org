@@ -1,4 +1,6 @@
-On-Demand Controls
+---
+title: On-Demand Controls
+---
 ==================
 
 ::: {.container .intend}
@@ -6,11 +8,11 @@ On-Demand Controls
 
 ::: {.container .flex}
 ::: {.container}
-![240px](/img/Slide_to_reveal.jpg)
+![240px](/hig/Slide_to_reveal.jpg)
 :::
 
 ::: {.container}
-![240px](/img/Dolphin_hover.png)
+![240px](/hig/Dolphin_hover.png)
 :::
 :::
 

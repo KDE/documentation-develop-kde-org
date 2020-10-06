@@ -1,7 +1,9 @@
-Breeze
+---
+title: Breeze
+---
 ======
 
-![Breeze Color Palette](/img/Breeze_Color_Palette.png)
+![Breeze Color Palette](/hig/Breeze_Color_Palette.png)
 
 See `here <index>`{.interpreted-text role="doc"} for more information
 about usage of colors.

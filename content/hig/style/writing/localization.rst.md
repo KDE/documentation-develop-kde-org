@@ -1,4 +1,6 @@
-Localization
+---
+title: Localization
+---
 ============
 
 Purpose

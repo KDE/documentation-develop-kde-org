@@ -1,4 +1,6 @@
-System Tray Icon
+---
+title: System Tray Icon
+---
 ================
 
 The system tray provides quick access to functionality integrated into
@@ -11,7 +13,7 @@ role="doc"} for an overview of plasma workspace components.
 Examples
 --------
 
-![Tray icons with an open volume control panel.](/img/TrayWithPanel.png)
+![Tray icons with an open volume control panel.](/hig/TrayWithPanel.png)
 
 Guidelines
 ----------

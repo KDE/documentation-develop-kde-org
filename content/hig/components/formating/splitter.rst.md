@@ -1,4 +1,6 @@
-Splitter
+---
+title: Splitter
+---
 ========
 
 Purpose

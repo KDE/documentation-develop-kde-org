@@ -1,4 +1,6 @@
-Personas
+---
+title: Personas
+---
 ========
 
 > Personas are a simple way of grounding your design toward the type of
@@ -26,7 +28,7 @@ adopt new technology.
 Looking at the \"Technology Adoption Lifecycle\", you\'ll find the
 following user groups:
 
-![Technology Adoption Lifecycle](/img/Introduction_KDE4_Vision_tal.png)
+![Technology Adoption Lifecycle](/hig/Introduction_KDE4_Vision_tal.png)
 
 We suggest to move away from the *KDE is for everybody* approach to *KDE
 is for the more sophisticated 50% of computer users out there, who
@@ -50,7 +52,7 @@ tools can still be adjusted to meet the needs of any other user base.
 Berna
 -----
 
-![Berna](/img/Berna_small.jpg){.align-right}
+![Berna](/hig/Berna_small.jpg){.align-right}
 
 Berna works as an office clerk in a big insurance company. Although she
 is a very smart person, she is very often unsure how technology can help
@@ -69,7 +71,7 @@ things simple.
 Matt
 ----
 
-![Matt](/img/Matt_small.jpg){.align-right}
+![Matt](/hig/Matt_small.jpg){.align-right}
 
 Matt is a geology student in the last year of his undergraduate studies.
 For him, technology is meant to simplify annoying and repetitive tasks.
@@ -86,7 +88,7 @@ on finding information.
 Susan
 -----
 
-![Susan](/img/Susan_small.jpg){.align-right}
+![Susan](/hig/Susan_small.jpg){.align-right}
 
 While Susan seldom uses her computer for work, it has become an
 essential part of her social life. With her computer, she can be
@@ -102,7 +104,7 @@ She expects her machine to work.
 Santiago
 --------
 
-![Santiago](/img/Santiago_small.jpg){.align-right}
+![Santiago](/hig/Santiago_small.jpg){.align-right}
 
 Santiago runs a medium-sized electric installations business. For him,
 technology needs to be comfortable and make him feel smart.
@@ -120,7 +122,7 @@ employees get along with it.
 Philip
 ------
 
-![Philip](/img/Philip_small.jpg){.align-right}
+![Philip](/hig/Philip_small.jpg){.align-right}
 
 Philip is a high-school student in his last year. He wants to go to
 college to study computer science. He loves the challenge of making

@@ -1,4 +1,6 @@
-Table View
+---
+title: Table View
+---
 ==========
 
 Purpose

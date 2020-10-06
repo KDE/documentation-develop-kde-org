@@ -1,7 +1,9 @@
-Patterns for a Simple Command Structure
+---
+title: Patterns for a Simple Command Structure
+---
 =======================================
 
-![Simple command structure](/img/CP-Simple.png)
+![Simple command structure](/hig/CP-Simple.png)
 
 -   Use Menu Button command pattern when there are few globally
     applicable commands. The menu button can overlay content.

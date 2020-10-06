@@ -1,10 +1,12 @@
-3-Deep Combination Patterns
+---
+title: 3-Deep Combination Patterns
+---
 ===========================
 
 ::: {.container .intend}
 :::
 
-![Patterns for 3-deep content.](/img/NP-3-deep.png)
+![Patterns for 3-deep content.](/hig/NP-3-deep.png)
 
 -   Navigation patterns could be combined to create a 3-deep navigation
     pattern. However, to maintain consistency across applications, we

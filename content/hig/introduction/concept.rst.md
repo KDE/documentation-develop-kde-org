@@ -1,4 +1,6 @@
-Concept
+---
+title: Concept
+---
 =======
 
 The conceptual model is the most fundamental aspect of the interface,

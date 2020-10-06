@@ -1,4 +1,6 @@
-Picker
+---
+title: Picker
+---
 ======
 
 Pickers implement a pattern to select multiple items from a list of
@@ -12,7 +14,7 @@ Example
 -------
 
 ![Use of a picker to select aditional
-languages.](/img/LanguagePicker.png)
+languages.](/hig/LanguagePicker.png)
 
 When to Use
 -----------
@@ -27,7 +29,7 @@ When to Use
 How to Use
 ----------
 
-![Using an overlay to pick aditional items.](/img/PickerOverlay.png)
+![Using an overlay to pick aditional items.](/hig/PickerOverlay.png)
 
 -   Use a `grid </components/editing/grid>`{.interpreted-text
     role="doc"} or a `list </components/editing/list>`{.interpreted-text

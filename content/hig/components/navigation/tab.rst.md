@@ -1,4 +1,6 @@
-Tabs
+---
+title: Tabs
+---
 ====
 
 Purpose
@@ -9,7 +11,7 @@ pages. Tabs are used for dynamic window surface to increase the surface,
 to manage multiple documents within a single window, or as a view of
 exclusive options.
 
-![Tabs-HIG.png](/img/Tabs-HIG.png)
+![Tabs-HIG.png](/hig/Tabs-HIG.png)
 
 Tabs have several advantages. Users can easily access available options
 or see which forms have been opened. Because foreground tabs are
@@ -106,7 +108,7 @@ settings or controls.
 Guidelines for Phone User Interfaces
 ------------------------------------
 
-![Tabs in global drawer](/img/Tabs_in_drawer.png)
+![Tabs in global drawer](/hig/Tabs_in_drawer.png)
 
 ### Behavior
 

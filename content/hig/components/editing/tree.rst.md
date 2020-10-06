@@ -1,4 +1,6 @@
-Tree View
+---
+title: Tree View
+---
 =========
 
 Purpose
@@ -10,7 +12,7 @@ selections. Objects containing data are called *leaf nodes* and objects
 contianing sub-objects are called *container nodes*. The top-most
 container node is called the *root node*.
 
-![TreeView.png](/img/TreeView.png)
+![TreeView.png](/hig/TreeView.png)
 
 A tree view is an appropriate control for data best represented as a
 tree, such as nodes in HTML/XML and code outlines. If your data is not

@@ -1,7 +1,9 @@
-Dialog
+---
+title: Dialog
+---
 ======
 
-![Dialog](/img/Dialog1.png)
+![Dialog](/hig/Dialog1.png)
 
 Purpose
 -------

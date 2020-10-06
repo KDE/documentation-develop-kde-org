@@ -1,7 +1,9 @@
-Toggle Button
+---
+title: Toggle Button
+---
 =============
 
-![Control to show a change of state.](/img/Togglebutton1.png){.border}
+![Control to show a change of state.](/hig/Togglebutton1.png){.border}
 
 Purpose
 -------

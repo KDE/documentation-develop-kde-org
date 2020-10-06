@@ -1,4 +1,6 @@
-Formatting
+---
+title: Formatting
+---
 ==========
 
 ::: {.toctree maxdepth="1" titlesonly="" hidden=""}

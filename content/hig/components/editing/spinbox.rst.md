@@ -1,7 +1,9 @@
-Spin Box
+---
+title: Spin Box
+---
 ========
 
-![Control that accepts a range of values.](/img/Spinbox1.png){.border}
+![Control that accepts a range of values.](/hig/Spinbox1.png){.border}
 
 Purpose
 -------

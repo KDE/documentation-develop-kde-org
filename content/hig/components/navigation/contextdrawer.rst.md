@@ -1,4 +1,6 @@
-Context Drawer
+---
+title: Context Drawer
+---
 ==============
 
 ::: {.container .intend}
@@ -8,7 +10,7 @@ Context Drawer
 :::
 
 ![Examples of a context drawer on
-mobile](/img/Contextdrawer1.png){.border}
+mobile](/hig/Contextdrawer1.png){.border}
 
 Purpose
 -------
@@ -48,7 +50,7 @@ or in a toolbar. For actions which are always available, use the
         role="doc"} to separate them, but never use more than two tabs.
 
 ![Examples of a context drawer on
-desktop](/img/Contextdrawer2.png){.border}
+desktop](/hig/Contextdrawer2.png){.border}
 
 Code
 ----

@@ -1,4 +1,6 @@
-Navigation
+---
+title: Navigation
+---
 ==========
 
 ::: {.toctree maxdepth="1" titlesonly="" hidden=""}

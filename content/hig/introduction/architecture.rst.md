@@ -1,4 +1,6 @@
-Architecture
+---
+title: Architecture
+---
 ============
 
 All KDE software is built using the Qt toolkit. You will be using
@@ -34,7 +36,7 @@ controls that adapt their presentation according to the device\'s form
 factor.
 
 ![Discover, a convergent application built using
-Kirigami](/img/kirigami.jpg)
+Kirigami](/hig/kirigami.jpg)
 
 ::: {.hint}
 ::: {.title}
@@ -58,7 +60,7 @@ personal workflow.[ Those are built using Plasma Components 3
 \<https://api.kde.org/frameworks/plasma-framework/html/plasmacomponents
 .html\>](), which are based on Qt Quick Controls 2.
 
-![Plasma desktop and mobile.](/img/plasma-workspace.jpg)
+![Plasma desktop and mobile.](/hig/plasma-workspace.jpg)
 
 Common Components
 -----------------
@@ -66,7 +68,7 @@ Common Components
 The KDE HIG defines a set of common components which are independent of
 any `device type <devicetypes>`{.interpreted-text role="doc"}.
 
-![](/img/Desktop_UX.png)
+![](/hig/Desktop_UX.png)
 
 -   **Workspace**: The top-level container of the whole user interface.
     Often called \"desktop\", \"home screen\", or \"shell\", it shows
@@ -98,7 +100,7 @@ any `device type <devicetypes>`{.interpreted-text role="doc"}.
     contextually-appropriate tools that operate directly on the active
     or selected content.
 
-![](/img/Mobile-UX.png)
+![](/hig/Mobile-UX.png)
 
 Theme
 -----
@@ -121,4 +123,4 @@ Only *Breeze*, *Breeze dark*, *Breeze Light*, *Breeze Highcontrast* are
 covered by the HIG, all other themes are not covered.
 :::
 
-![Overview of breeze controls](/img/breeze.jpeg)
+![Overview of breeze controls](/hig/breeze.jpeg)

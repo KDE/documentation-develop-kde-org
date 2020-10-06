@@ -1,4 +1,6 @@
-Grid
+---
+title: Grid
+---
 ====
 
 ::: {.container .intend}
@@ -6,7 +8,7 @@ Grid
 
 Pattern for a flat content structure.
 
-![Grid of items](/img/Grid.png)
+![Grid of items](/hig/Grid.png)
 
 When to Use
 -----------

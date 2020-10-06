@@ -1,4 +1,6 @@
-KCMGrid
+---
+title: KCMGrid
+---
 =======
 
 Code

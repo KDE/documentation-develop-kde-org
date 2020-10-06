@@ -1,4 +1,6 @@
-Emblem Icons
+---
+title: Emblem Icons
+---
 ============
 
 Emblem icons are used to indicate state. They come in three sizes: 8px,
@@ -26,12 +28,12 @@ than at other sizes.
 ::: {.container .flex}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Pixel-align your icon and use
-the entire canvas.](/img/8px-emblem-do.png){.do}
+the entire canvas.](/hig/8px-emblem-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t misalign your icon
-or use margins.](/img/8px-emblem-dont.png){.dont}
+or use margins.](/hig/8px-emblem-dont.png){.dont}
 :::
 :::
 
@@ -42,12 +44,12 @@ outline because of their limited canvas size.
 ::: {.container .flex}
 ::: {.container}
 ![16px and 22px emblem icons get an outline to increase visiblity on
-various backgrounds.](/img/22-emblem-outline.png)
+various backgrounds.](/hig/22-emblem-outline.png)
 :::
 
 ::: {.container}
 ![8px emblem icons need to rely on bold shapes and bright colours for
 visiblity, as they don\'t have room for an
-outline.](/img/8-emblem-outline.png)
+outline.](/hig/8-emblem-outline.png)
 :::
 :::

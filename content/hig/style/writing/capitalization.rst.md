@@ -1,4 +1,6 @@
-Capitalization
+---
+title: Capitalization
+---
 ==============
 
 Purpose

@@ -1,4 +1,6 @@
-Breeze High Contrast
+---
+title: Breeze High Contrast
+---
 ====================
 
 See `here <index>`{.interpreted-text role="doc"} for more information

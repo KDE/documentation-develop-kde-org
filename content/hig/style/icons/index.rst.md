@@ -1,4 +1,6 @@
-Icon Design
+---
+title: Icon Design
+---
 ===========
 
 ::: {.toctree caption="Contents:" titlesonly="" hidden=""}

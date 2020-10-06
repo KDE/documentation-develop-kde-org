@@ -1,4 +1,6 @@
-Editing and Manipulation
+---
+title: Editing and Manipulation
+---
 ========================
 
 ::: {.toctree maxdepth="1" titlesonly="" hidden=""}

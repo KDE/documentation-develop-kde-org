@@ -1,4 +1,6 @@
-Status Bars
+---
+title: Status Bars
+---
 ===========
 
 Purpose

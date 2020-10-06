@@ -1,4 +1,6 @@
-Components
+---
+title: Components
+---
 ==========
 
 ::: {.toctree maxdepth="1" titlesonly="" hidden=""}

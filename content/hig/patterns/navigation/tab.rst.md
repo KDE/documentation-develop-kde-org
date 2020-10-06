@@ -1,4 +1,6 @@
-Tab
+---
+title: Tab
+---
 ===
 
 ::: {.container .intend}

@@ -1,4 +1,6 @@
-Metrics and Placement
+---
+title: Metrics and Placement
+---
 =====================
 
 Purpose
@@ -75,7 +77,7 @@ possible. See `units`{.interpreted-text role="doc"} for more details.
 When more spacing is required, use multiples of `smallSpacing` or
 `largeSpacing`.
 
-![Use of base units](/img/Margin.qml.png)
+![Use of base units](/hig/Margin.qml.png)
 
 ### Recommended Minimum Paddings
 
@@ -94,7 +96,7 @@ When more spacing is required, use multiples of `smallSpacing` or
   Related controls with different type (checkbox / button)       `smallSpacing`
   Unrelated controls                                             ≥ `3 * smallSpacing`
 
-![Sample spacing](/img/SpacingPadding.qml.png)
+![Sample spacing](/hig/SpacingPadding.qml.png)
 
 -   In some cases it may be useful to visually separate groups of
     related options within one group to facilitate scanning of the
@@ -102,7 +104,7 @@ When more spacing is required, use multiples of `smallSpacing` or
     height between the options.
 
 ![Separating groups of related options with a vertical
-spacer.](/img/SpacingSeperate.qml.png)
+spacer.](/hig/SpacingSeperate.qml.png)
 
 ::: {.hint}
 ::: {.title}
@@ -125,4 +127,4 @@ align everything to the grid.
     controls; don\'t scale controls.
 
 ![`Do.`{.interpreted-text role="noblefir"} Add hints on how to resize to
-your mockups.](/img/Resize.qml.png){.do}
+your mockups.](/hig/Resize.qml.png){.do}

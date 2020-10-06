@@ -1,4 +1,6 @@
-One-Handed Use
+---
+title: One-Handed Use
+---
 ==============
 
 Purpose
@@ -17,10 +19,10 @@ Kirigami
 --------
 
 ![Reachability of screen regions in one-handed use. *Source:*
-[UXmatters](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php)](/img/HoldPhones_Figure-2.png)
+[UXmatters](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php)](/hig/HoldPhones_Figure-2.png)
 
 ![Reachability of screen regions in two-thumbed use. *Source:*
-[UXmatters](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php)](/img/HoldPhones_Figure-4.png)
+[UXmatters](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php)](/hig/HoldPhones_Figure-4.png)
 
 As shown in the examples above, the green areas of the phone are the
 most reachable.

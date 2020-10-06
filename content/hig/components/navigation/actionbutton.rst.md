@@ -1,8 +1,10 @@
-Primary Action Button
+---
+title: Primary Action Button
+---
 =====================
 
 ![Primary action - create a new address book
-entry.](/img/Actionbutton1.png){.border}
+entry.](/hig/Actionbutton1.png){.border}
 
 When to Use
 -----------
@@ -16,7 +18,7 @@ Aditionally you can opt to define two secondary primary actions that are
 placed left and right to the main primary button.
 
 ![Call, message and write an email as primary
-actions](/img/Actionbutton2.png){.border}
+actions](/hig/Actionbutton2.png){.border}
 
 If there is no primary action, you may opt to use the Primary Action
 Button as a shortcut to navigate back to the application\'s main page
@@ -55,7 +57,7 @@ If your application is using `column-based navigation
 
 ![Primary Action Buttons are placed in a
 `toolbar <toolbar>`{.interpreted-text
-role="doc"}](/img/Actionbutton3.png){.border}
+role="doc"}](/hig/Actionbutton3.png){.border}
 
 Code
 ----

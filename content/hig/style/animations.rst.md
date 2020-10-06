@@ -1,4 +1,6 @@
-Animations
+---
+title: Animations
+---
 ==========
 
 Purpose

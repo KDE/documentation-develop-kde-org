@@ -1,4 +1,6 @@
-Style
+---
+title: Style
+---
 =====
 
 ::: {.toctree caption="Contents:" titlesonly="" hidden=""}

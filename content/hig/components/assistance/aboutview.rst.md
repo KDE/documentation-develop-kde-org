@@ -1,4 +1,6 @@
-About Application
+---
+title: About Application
+---
 =================
 
 Every application should have a view that contains basic information

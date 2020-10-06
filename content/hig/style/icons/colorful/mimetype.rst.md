@@ -1,4 +1,6 @@
-MIME Type Icons
+---
+title: MIME Type Icons
+---
 ===============
 
 MIME type icons are used to depict documents and files. They come in
@@ -25,12 +27,12 @@ MIME type icons have a top and bottom margin of 2 pixels.
 ::: {.container .flex}
 ::: {.container}
 ![64px icons should have a top and bottom margin of 3
-pixels.](/img/mime-margin-64.png)
+pixels.](/hig/mime-margin-64.png)
 :::
 
 ::: {.container}
 ![32px icons should have a top and bottom margin of 2
-pixels.](/img/mime-margin-32.png)
+pixels.](/hig/mime-margin-32.png)
 :::
 :::
 
@@ -40,7 +42,7 @@ Colorful MIME type icons consist of two elements---the monochromatic
 counterpart of the colorful MIME type icon overlaid on a background
 relating to the icon\'s type.
 
-![](/img/mime-anatomy.png)
+![](/hig/mime-anatomy.png)
 
 1.  Monochromatic Foreground
 2.  Base
@@ -48,12 +50,12 @@ relating to the icon\'s type.
 ::: {.container .flex}
 ::: {.container}
 ![The foreground of a MIME type icon indicates the specific type of file
-it is.](/img/mime-monochromatic-layer.png)
+it is.](/hig/mime-monochromatic-layer.png)
 :::
 
 ::: {.container}
 ![The background of a MIME type icon indicates the general type of file
-it is.](/img/mime-base-layer.png)
+it is.](/hig/mime-base-layer.png)
 :::
 :::
 
@@ -70,12 +72,12 @@ a zipper going halfway down.
 ::: {.container .flex}
 ::: {.container}
 ![For archive icons without a foreground, the zipper goes through the
-center.](/img/mime-archive.png)
+center.](/hig/mime-archive.png)
 :::
 
 ::: {.container}
 ![For archive icons with a foreground, the zipper is offset to give the
-foreground some space.](/img/mime-archive-symbol.png)
+foreground some space.](/hig/mime-archive-symbol.png)
 :::
 :::
 
@@ -84,32 +86,32 @@ foreground some space.](/img/mime-archive-symbol.png)
 Images use a horizontal rectangle with the top right corner folded and
 casting a shadow.
 
-![The base for image type icons.](/img/mime-image.png)
+![The base for image type icons.](/hig/mime-image.png)
 
 #### Videos
 
 Videos use a horizontal rectangle styled to look like a filmstrip.
 
-![The base for video type icons.](/img/mime-video.png)
+![The base for video type icons.](/hig/mime-video.png)
 
 #### Audio
 
 Audio files use a CD sleeve with a partially visible CD sticking out.
 
-![The base for audio type icons.](/img/mime-audio.png)
+![The base for audio type icons.](/hig/mime-audio.png)
 
 #### Books
 
 Book files use a vertical rectangle with a book spine.
 
-![The base for book type icons.](/img/mime-book.png)
+![The base for book type icons.](/hig/mime-book.png)
 
 #### Other
 
 Documents and other icons use a rectangle with a fold in the top right
 corner casting a shadow.
 
-![The base for document and other type icons.](/img/mime-document.png)
+![The base for document and other type icons.](/hig/mime-document.png)
 
 ### Foreground
 
@@ -120,13 +122,13 @@ monochromatic icon of the MIME type.
 ::: {.container .flex}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} The foreground decoration of
-a MIME type icon does not cast a shadow.](/img/mime-fg-do.png){.do}
+a MIME type icon does not cast a shadow.](/hig/mime-fg-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t have the foreground
 decoration of a MIME type icon cast a
-shadow.](/img/mime-fg-dont.png){.dont}
+shadow.](/hig/mime-fg-dont.png){.dont}
 :::
 :::
 
@@ -140,12 +142,12 @@ colors of that brand identity.
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} The usage of Android brand
 colors helps users identify the icon as that of an Android
-package.](/img/mime-color-do.png){.do}
+package.](/hig/mime-color-do.png){.do}
 :::
 
 ::: {.container}
 ![`Don't.`{.interpreted-text role="iconred"} Don\'t use radically
 different brand colors---users will not recognise the icon as one of a
-filetype from that brand.](/img/mime-color-dont.png){.dont}
+filetype from that brand.](/hig/mime-color-dont.png){.dont}
 :::
 :::

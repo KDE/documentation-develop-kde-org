@@ -1,4 +1,6 @@
-Imagery
+---
+title: Imagery
+---
 =======
 
 Purpose
@@ -21,13 +23,13 @@ Guidelines
     therefore, making an image bigger, will connect with the user faster
     and make it more recognizable.
 
-![ImageSIze1.png](/img/ImageSIze1.png)
+![ImageSIze1.png](/hig/ImageSIze1.png)
 
 -   Captions can be placed on the image (left) instead of outside of the
     image (right) allowing the image to be larger and the content to be
     more immersive showing belonging.
 
-![ImageCaption1.png](/img/ImageCaption1.png)
+![ImageCaption1.png](/hig/ImageCaption1.png)
 
 -   Use a `scrim </components/navigation/scrim>`{.interpreted-text
     role="doc"} behind the caption text to preserve contrast for

@@ -1,8 +1,10 @@
-Drop-Down
+---
+title: Drop-Down
+---
 =========
 
 ![Control which allows the user to choose one value from a
-list.](/img/Dropdown1.png){.border}
+list.](/hig/Dropdown1.png){.border}
 
 Purpose
 -------

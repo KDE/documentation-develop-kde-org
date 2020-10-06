@@ -1,4 +1,6 @@
-Navigation Patterns
+---
+title: Navigation Patterns
+---
 ===================
 
 ::: {.toctree maxdepth="1" titlesonly="" hidden=""}
@@ -17,7 +19,7 @@ Patterns for Desktop User Interfaces
 
 ### Patterns for a Flat Content Structure
 
-![Flat structure](/img/IS-flat.png)
+![Flat structure](/hig/IS-flat.png)
 
 When pieces of application content are not grouped, the content
 structure is flat.
@@ -33,7 +35,7 @@ contacts.
 
 ### Patterns for a 2-Deep Content Structure
 
-![Patterns for a 2-deep content structure](/img/IS-2-deep.png)
+![Patterns for a 2-deep content structure](/hig/IS-2-deep.png)
 
 When all application content are grouped into top-level categories, the
 content structure is 2-deep.
@@ -46,7 +48,7 @@ Examples include picture albums, music albums, email folders or tags.
 
 ### Patterns for a 3-Deep Content Structure
 
-![Patterns for a 3-deep content structure](/img/IS-3-deep.png)
+![Patterns for a 3-deep content structure](/hig/IS-3-deep.png)
 
 When all application content are grouped into categories, which are
 themselves be grouped into top-level categories, the content structure
@@ -67,7 +69,7 @@ Examples include a full music or video library or system settings.
 
 ### Patterns for N-Deep Content Structures
 
-![Patterns for n-deep content structures](/img/IS-n-deep.png)
+![Patterns for n-deep content structures](/hig/IS-n-deep.png)
 
 When content is infinitely groupable, the content is n-deep.
 

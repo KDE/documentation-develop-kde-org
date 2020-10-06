@@ -1,4 +1,6 @@
-Layout
+---
+title: Layout
+---
 ======
 
 ::: {.toctree maxdepth="1" caption="Contents:" titlesonly="" hidden=""}

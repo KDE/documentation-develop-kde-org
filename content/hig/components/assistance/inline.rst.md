@@ -1,4 +1,6 @@
-Inline Message
+---
+title: Inline Message
+---
 ==============
 
 ::: {.container .intend}
@@ -13,13 +15,13 @@ not overlap content or controls. The panel has four visual style options
 which can be used for neutral messages, success conditions, warnings,
 and errors. It can also be given buttons.
 
-![The four different levels of inline messages.](/img/Message5.png)
+![The four different levels of inline messages.](/hig/Message5.png)
 
 Examples
 --------
 
 ![An inline message is used for feeback after an upload has been
-completed.](/img/Message-example.png)
+completed.](/hig/Message-example.png)
 
 Guidelines
 ----------
@@ -116,14 +118,14 @@ optional close button and
 `buttons <../navigation/pushbutton>`{.interpreted-text role="doc"}.
 
 ![Inline message with a custom icon and a close
-button.](/img/Message1.png)
+button.](/hig/Message1.png)
 
-![Inline message with two buttons.](/img/Message2.png)
+![Inline message with two buttons.](/hig/Message2.png)
 
 If there is not enough space to display all the buttons, an overflow
 menu is shown instead.
 
-![Inline message with overflow menu.](/img/Message3.png)
+![Inline message with overflow menu.](/hig/Message3.png)
 
 Code
 ----
