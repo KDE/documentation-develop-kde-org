@@ -1,4 +1,0 @@
-Deploying on Android
-====================
-
-[TODO]

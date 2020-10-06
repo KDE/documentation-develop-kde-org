@@ -1,9 +1,0 @@
-{%- extends "sphinx_rtd_theme/breadcrumbs.html" %}
-
-{% block breadcrumbs %}
-  <li><a href="{{ pathto(master_doc) }}">Docs</a> <img class="breeze-icon" src="{{ pathto('_static/css/go-next.svg', 1)}}"> </li>
-    {% for doc in parents %}
-      <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> <img class="breeze-icon" src="{{ pathto('_static/css/go-next.svg', 1)}}"> </li>
-    {% endfor %}
-  <li><span>{{ title }}</span></li>
-{% endblock %}

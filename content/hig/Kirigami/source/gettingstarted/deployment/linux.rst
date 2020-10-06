@@ -1,4 +1,0 @@
-Deploying on Linux
-==================
-
-[TODO]
