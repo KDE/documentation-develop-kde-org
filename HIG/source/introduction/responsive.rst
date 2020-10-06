@@ -52,4 +52,31 @@ by selecting different
 It is recommended to test your user interface against the most common  
 screen sizes of the targeted form factor.
 
+Folding points
+--------------
 
+As window size changes, e.g. becauce screen orientation changes on mobile 
+devices, windows are used in a splitt screen, or manual resizing from the user, 
+it is recommended to react to the window width at special points, the 
+predefined folding points. Depending on the application, it might make sense to 
+change the user interface on one or on multiple folding points.
+
+=== ======================= ===========================
+FP  Window size             Examples
+=== ======================= ===========================
+xs  <= 360 px               A typical mobile phone, 
+                            application in small splitt 
+                            screen
+s   <= 600 px               A large mobile phone, TVs
+m   <= 800 px               A phablet, small tablet, 
+                            a mobile phone in landscape
+l   <= 1024 px              A large tablet, or tablet 
+                            in landscape
+xl  <= 1600 px              Laptop screen
+xxl > 1600 px               Wide desktop screen
+=== ======================= ===========================
+
+
+.. caution::
+   These are not physical pixels of a device or window, but DPI independent 
+   pixels, see :doc:`/layout/units` for more information.
