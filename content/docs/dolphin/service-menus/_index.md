@@ -192,14 +192,14 @@ Icon=background
 Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("FillMode", "3")};d.writeConfig("Image", "%u")}';
 ```
 ## Advanced Properties
-This is a collection of advances properties. You might not need them for your project, but it is useful
+This is a collection of advanced properties. You might not need them for your project, but it is useful
 to know that they exist.
 
 | Property | Explanation |
 | --------------- | --------------- |
 | X-KDE-Protocol | Requires scheme of the Urls to be equal, for example on a samba share this would be `smb` |
 | X-KDE-Protocols | Requires scheme of the Urls to be contained in the list, for example `file,smb` |
-| X-KDE-RequiredNumberOfUrls | Number of Urls that can be selected in order for this menu to be displayed. To allow multiple combinations you can seperate the numbers with a comma, for example `2,4,6` |
+| X-KDE-RequiredNumberOfUrls | Number of Urls that can be selected in order for this menu to be displayed. To allow multiple combinations you can separate the numbers with a comma, for example `2,4,6` |
 | X-KDE-MinNumberOfUrls | Minimum number of Urls that can be selected in order for this menu to be displayed. This property is available since version 5.76 |
 | X-KDE-MaxNumberOfUrls | Maximum number of Urls that can be selected in order for this menu to be displayed. This property is available since version 5.76 |
 
