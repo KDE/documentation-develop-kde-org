@@ -1,0 +1,61 @@
+{{ define "main" }}
+  {{ .Render "content" }}
+  <table class="table">
+    <thead>
+      <th>Color Set</th>
+      <th>Color Role</th>
+      <th>Color</th>
+      <th>HEX</th>
+      <th>RGB</th>
+      <th>Name</th>
+    </thead>
+    <tbody>
+      {{ range .Params.colorsets }}
+        <tr>
+          <th rowspan="{{ len .colors }}">{{ .name }}</th>
+          <th>{{ (index .colors 0).role }}</th>
+          <th style="background-color: #{{ printf "%x%x%x" (index .colors 0).r (index .colors 0).g (index .colors 0).b }}; border: 1px solid white;"></th>
+          <th>{{ printf "#%x%x%x" (index .colors 0).r (index .colors 0).g (index .colors 0).b }}</th>
+          <th>{{ printf "%d,%d,%d" (index .colors 0).r (index .colors 0).g (index .colors 0).b }}</th>
+          <th>{{ (index .colors 0).name }}</th>
+        </tr>
+        {{ range last (sub (len .colors) 1) .colors }} 
+          <tr>
+            <th>{{ .role }}</th>
+          <th style="background-color: #{{ printf "%02x%02x%02x" .r .g .b }}; border: 1px solid white;"></th>
+          <th>{{ printf "#%02x%02x%02x" .r .g .b }}</th>
+          <th>{{ printf "%d,%d,%d" .r .g .b }}</th>
+          <th>{{ .name }}</th>
+          </tr>
+        {{ end }}
+      {{ end }}
+    </tbody>
+  </table>
+  {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
+  <div class="row mt-5">
+    <div class="col-6 d-flex">
+      {{with .NextInSection }}
+        <a class="shadow p-3 h-100 d-flex w-100 align-items-center"
+           href="{{ .Permalink }}">
+          <i class="icon icon_go-previous h1"></i>
+          <div class="ml-3">
+            <div class="h4">Previous</div>
+            {{ .Title }}
+          </div>
+        </a>
+      {{ end }}
+    </div>
+    <div class="col-6 d-flex">
+      {{with .PrevInSection }}
+        <a class="shadow p-3 h-100 d-flex w-100 align-items-center"
+           href="{{ .Permalink }}">
+          <div class="mr-3">
+            <div class="h4">Next</div>
+            {{ .Title }}
+          </div>
+          <i class="icon icon_go-next h1 ml-auto"></i>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
