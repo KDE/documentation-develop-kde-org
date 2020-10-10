@@ -53,10 +53,6 @@ SPDX-License-Identifier: LGPL-3.0-or-later
       {{ end }}
     {{ end }}
 
-    {{ if (and (eq $filename "false") (not (in $link ".html"))) }}
-      {{ errorf "missing value for param 'name': %s" .Position }}
-    {{ end }}
-
     <a href="{{ (index $dataMap $module) }}{{ $filename }}{{ $anchor }}" class="api-link"> 
       {{ .Text | safeHTML }}
     </a>
