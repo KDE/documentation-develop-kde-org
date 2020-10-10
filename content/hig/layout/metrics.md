@@ -1,13 +1,13 @@
 ---
 title: Metrics and Placement
+weight: 2
 ---
-=====================
 
 Purpose
 -------
 
 All controls should be sized and positioned to establish a harmonic
-overall picture and direct users\' attention. For instance, a list that
+overall picture and direct users' attention. For instance, a list that
 captures most of screen's space points to its central role in the
 current workflow. And, size can be used to indicate possible
 interactions. For instance, most smaller text fields are constrained in
@@ -22,7 +22,7 @@ Whitespace is an important element of design which enables the objects
 in it to exist at all. The balance between content and whitespace is key
 to grouping.
 
-Please read `units`{.interpreted-text role="doc"} for more information
+Please read [Units and Measurements](../units) for more information
 which and how different units such as px, dpi independent pixels,
 smallSpacing and largeSpacing are used.
 
@@ -42,37 +42,37 @@ Guidelines
     -   Avoid to have a large number of controls visible at once, which
         in turn requires a huge minimal size.
     -   Keep in mind that the available screen area typically also will
-        be shrunk by panels and the window titlebar. Also, the user\'s
+        be shrunk by panels and the window titlebar. Also, the user's
         font might be bigger than yours (e.g. for accessibility reason).
-    -   You therefore should ideally preserve \~10% to catch those
+    -   You therefore should ideally preserve ~10% to catch those
         variables and try to not exceed 920x690px.
 
 #### Minimum Control Sizes
 
-  Control                                                      Size
-  ------------------------------------------------------------ --------------------------
-  Icons                                                        16 × 16px
-  Buttons                                                      72 × 32px
-  Line edits, drop-downs, combo boxes                          ≥80 × 32px
-  Text edits (text should not exceed 80 characters per line)   ≥80 × ≥36px
-  Checkboxes, radio buttons including label                    ≥80 × 24px
-  Group boxes                                                  ≥120 × ≥96px
-  Tree views                                                   ≥120 × ≥96px
-  List views                                                   ≥80px (per column) × ≥96
+Control                                                     | Size
+------------------------------------------------------------|---------------------------
+Icons                                                       | 16 × 16px
+Buttons                                                     | 72 × 32px
+Line edits, drop-downs, combo boxes                         | ≥80 × 32px
+Text edits (text should not exceed 80 characters per line)  | ≥80 × ≥36px
+Checkboxes, radio buttons including label                   | ≥80 × 24px
+Group boxes                                                 | ≥120 × ≥96px
+Tree views                                                  | ≥120 × ≥96px
+List views                                                  | ≥80px (per column) × ≥96
 
 ### Space
 
 #### Qt Widgets
 
-If you are using Qt widgets you should use one of [Qt\'s layout
-classes](http://doc.qt.io/qt-5/layout.html), which will take care of
+If you are using Qt widgets you should use one of [Qt's layout
+classes](https://doc.qt.io/qt-5/layout.html), which will take care of
 laying out and spacing of your controls.
 
 #### QML
 
-For consistency you should try to use Kirigami and Plasma\'s
+For consistency you should try to use Kirigami and Plasma's
 `smallSpacing` and `largeSpacing` for margins and paddings whenever
-possible. See `units`{.interpreted-text role="doc"} for more details.
+possible. See [Units and Measurments](../units) for more details.
 
 When more spacing is required, use multiples of `smallSpacing` or
 `largeSpacing`.
@@ -88,13 +88,13 @@ When more spacing is required, use multiples of `smallSpacing` or
 
 #### Default Minimum Paddings
 
-  Item                                                           Spacing
-  -------------------------------------------------------------- ----------------------
-  Related items within groups                                    `2 * smallSpacing`
-  Labels and items                                               `smallSpacing`
-  Related controls with same type (checkboxes / radio buttons)   `smallSpacing`
-  Related controls with different type (checkbox / button)       `smallSpacing`
-  Unrelated controls                                             ≥ `3 * smallSpacing`
+Item                                                          | Spacing
+--------------------------------------------------------------|-----------------------
+Related items within groups                                   | `2 * smallSpacing`
+Labels and items                                              | `smallSpacing`
+Related controls with same type (checkboxes / radio buttons)  | `smallSpacing`
+Related controls with different type (checkbox / button)      | `smallSpacing`
+Unrelated controls                                            | ≥ `3 * smallSpacing`
 
 ![Sample spacing](/hig/SpacingPadding.qml.png)
 
@@ -106,16 +106,15 @@ When more spacing is required, use multiples of `smallSpacing` or
 ![Separating groups of related options with a vertical
 spacer.](/hig/SpacingSeperate.qml.png)
 
-::: {.hint}
-::: {.title}
-Hint
-:::
+
+{{< alert title="Hint" color="success" >}}
 
 It often helps to use a soft grid of 18px (gridUnit), when creating
 mockups. But only use this as a visual hint, since plasma components and
 icon size are not multiples of the gridUnit, so you will not be able to
 align everything to the grid.
-:::
+
+{{< /alert >}}
 
 ### Resizing
 
@@ -124,7 +123,8 @@ align everything to the grid.
     form style.
 -   Define a minimum size for resizable forms.
 -   Make the content area scrollable if size is too small for all
-    controls; don\'t scale controls.
+    controls; don't scale controls.
 
-![`Do.`{.interpreted-text role="noblefir"} Add hints on how to resize to
-your mockups.](/hig/Resize.qml.png){.do}
+{{< do src="/hig/Resize.qml.png" >}}
+Add hints on how to resize to your mockups.
+{{< /do >}}

@@ -1,11 +1,7 @@
 ---
 title: Color
+weight: 1
 ---
-=====
-
-::: {.toctree caption="Contents:" titlesonly="" hidden=""}
-default dark light high
-:::
 
 Purpose
 -------
@@ -20,22 +16,16 @@ in the same way that most people will.
 A consistent color set helps create a familiar visual language
 throughout the user interface.
 
-::: {.container .flex}
-::: {.container}
+{{< compare >}}
 ![System settings with Breeze color theme](/hig/Systemsettings.png)
-:::
-
-::: {.container}
-![System settings with Breeze Dark color
-theme](/hig/Systemsettings-dark.png)
-:::
-:::
+![System settings with Breeze Dark color theme](/hig/Systemsettings-dark.png)
+{{< /compare >}}
 
 Guidelines
 ----------
 
 -   While the system color theme can be selected by the user, the
-    `Breeze color palette <default>`{.interpreted-text role="doc"} is
+    [Breeze color palette](../default) is
     used for the reference visual design of KDE Applications and
     Workspaces, and make up the default system color theme.
     -   Primary colors are used throughout the main interface of the
@@ -71,9 +61,7 @@ Implementation
 
 ### Kirigami
 
-::: {.literalinclude language="qml"}
-/../../examples/kirigami/UseTheme.qml
-:::
+{{< readfile file="/content/hig//examples/kirigami/UseTheme.qml" highlight="qml" >}}
 
 ### Plasma components
 
@@ -87,7 +75,3 @@ Color Mapping
 The Breeze color palettes maps to the KColorScheme color roles as shown
 as follow:
 
-> -   `Breeze <default>`{.interpreted-text role="doc"}
-> -   `Breeze Dark <dark>`{.interpreted-text role="doc"}
-> -   `Breeze Light <light>`{.interpreted-text role="doc"}
-> -   `Breeze High Contrast <high>`{.interpreted-text role="doc"}

@@ -1,7 +1,7 @@
 ---
 title: One-Handed Use
+weight: 4
 ---
-==============
 
 Purpose
 -------
@@ -27,12 +27,12 @@ Kirigami
 As shown in the examples above, the green areas of the phone are the
 most reachable.
 
-Accordingly, Kirigami\'s phone components are optimized to favor the
+Accordingly, Kirigami's phone components are optimized to favor the
 center or bottom of the screen for primary interactive elements, while
 placing secondary elements into drawers which can be opened from up to
 three different points of the screen.
 
-Kirigami also features the \"overscroll\" feature, which allows you pull
+Kirigami also features the "overscroll" feature, which allows you pull
 down the top part of the screen in case you have to reach e.g. the
 topmost items of a list.
 

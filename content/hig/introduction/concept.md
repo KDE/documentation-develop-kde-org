@@ -1,7 +1,8 @@
 ---
 title: Concept
+weight: 5
 ---
-=======
+
 
 The conceptual model is the most fundamental aspect of the interface,
 describing the relationship between the interface and the outside world.
@@ -15,7 +16,7 @@ Project vision
 A vision describes the goal of the project. It can be emotive and a
 source of inspiration. For instance, by outlining how the final product
 makes the world a better place you can draw upon inspiration to create
-the end goal of your project. Describe the project\'s final goals.
+the end goal of your project. Describe the project's final goals.
 Explain who will use the product, and how he or she will take advantage
 from it. Make sure your vision is shared between all project
 stakeholders. Leave room in your vision for creativity and changes. Keep
@@ -38,14 +39,14 @@ Personas can help identify the target users of your application and
 provide a common understanding among the design and development team. A
 persona is the representation of a user, based on empirical data.
 Personas describe the target users, giving a clear picture of how
-they\'re likely to use the system, and what they'll expect from it. The
+they're likely to use the system, and what they'll expect from it. The
 description includes a concise summary of characteristics of the user,
 their experience, goals and tasks, pain points, environmental conditions
 and even name.
 
 The KDE usability team has created
-`predefined personas <personas>`{.interpreted-text role="doc"} which we
-highly recommended using for your project.
+[predefined personas](../personas) which we highly recommended using for
+your project.
 
 If you choose to create your own personas, consider the following:
 
@@ -92,11 +93,10 @@ class(es) the personas would use in that scenario. Currently, Plasma and
 (some) KDE applications target the following device classes:
 Desktop/laptop, media center (TV), phone and tablet/convertible. Your
 application may target other device classes (like eg. in-vehicle
-entertainment systems, kiosk systems, \...) as well.
+entertainment systems, kiosk systems, ...) as well.
 
 Documenting Your Concept
 ------------------------
 
 A useful template for documenting your personas and scenarios is the
-`Project User Research Template <research>`{.interpreted-text
-role="doc"}.
+[Project User Research Template](../research).

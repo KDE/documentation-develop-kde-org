@@ -1,7 +1,8 @@
 ---
 title: Responsiveness
+weight: 4
 ---
-==============
+
 
 Introduction
 ------------
@@ -9,18 +10,17 @@ Introduction
 Responsiveness means that the user interface adjusts to changes in
 screen or window size. While Plasma and especially Kirigami are highly
 responsive, this is not a replacement for
-`optimized convegence <convergence>`{.interpreted-text role="doc"}. It
+[optimized convegence](../convergence). It
 is not supposed to be used as a replacement for different UI and UX for
-different ​interaction methods (mouse, touch, pointer, remote, \...) or
-different ​form factors like mobiles and televisions. Instead, it means
+different interaction methods (mouse, touch, pointer, remote, \...) or
+different form factors like mobiles and televisions. Instead, it means
 to adapt to different screen sizes in the same form factor class, like
-different window sizes and screen resolutions in ​desktops and laptops.
+different window sizes and screen resolutions in desktops and laptops.
 
-```{=html}
 <video src="https://cdn.kde.org/hig/video/20180620-1/CardLayout1.webm" 
 loop="true" playsinline="true" width="536" controls="true" 
 onended="this.play()" class="border"></video>
-```
+
 Examples of responsive behavior:
 
 -   Components can display more or less content, depending on the
@@ -34,11 +34,10 @@ Although elements can resize vertically, horizontal or in both
 directions, it is recommended that row-like elements such as menu bars
 only shrink or grow horizontally.
 
-```{=html}
 <video src="https://cdn.kde.org/hig/video/20180620-1/Responsive1.webm" 
 loop="true" playsinline="true" width="536" controls="true" 
 onended="this.play()" class="border"></video>
-```
+
 Action bar shrinking only in the horizontal direction.
 
 Keep in mind that not all controls or parts of a layout can and should

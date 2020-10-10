@@ -1,7 +1,8 @@
 ---
 title: Project User Research Profile
+weight: 7
 ---
-=============================
+
 
 Short summary description of the purpose of the application, who it is
 for, and what those people can do with it.
@@ -10,7 +11,7 @@ Purpose
 =======
 
 **About the Project User Research Template:** The purpose of this
-template is to provide a place to document an application\'s user
+template is to provide a place to document an application's user
 research information for reference during development. Top level items
 are information everyone in the project should be aware of. Some of the
 details in the lower sections may take some work and discussion within
@@ -32,7 +33,7 @@ Who is the application for?
 
 User Profile 1: For each group of users identified (or primary groups,
 or particularly special groups if many groups are defined), write a
-description of that user\'s characteristics based on a real user you
+description of that user's characteristics based on a real user you
 know.
 
 What kinds of tasks will they complete

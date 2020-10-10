@@ -1,7 +1,8 @@
 ---
 title: Architecture
+weight: 1
 ---
-============
+
 
 All KDE software is built using the Qt toolkit. You will be using
 different components depending on whether you are developing an
@@ -38,10 +39,7 @@ factor.
 ![Discover, a convergent application built using
 Kirigami](/hig/kirigami.jpg)
 
-::: {.hint}
-::: {.title}
-Hint
-:::
+{{< alert title="Hint" color="info" >}}
 
 To test qml scenes use
 
@@ -49,7 +47,7 @@ To test qml scenes use
     for mobile
 -   `QT_QUICK_CONTROLS_MOBILE=0` and
     `QT_QUICK_CONTROLS_STYLE=org.kde.desktop` for desktop
-:::
+{{< /alert >}}
 
 Plasma
 ------
@@ -114,13 +112,9 @@ look-and-feel of KDE applications and the Plasma workspace.
 
 The default for all there of them is *Breeze*.
 
-::: {.note}
-::: {.title}
-Note
-:::
-
+{{< alert title="Note" color="info" >}}
 Only *Breeze*, *Breeze dark*, *Breeze Light*, *Breeze Highcontrast* are
 covered by the HIG, all other themes are not covered.
-:::
+{{< /alert >}}
 
 ![Overview of breeze controls](/hig/breeze.jpeg)

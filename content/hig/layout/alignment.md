@@ -1,7 +1,7 @@
 ---
 title: Alignment
+weight: 3
 ---
-=========
 
 Purpose
 -------
@@ -22,9 +22,8 @@ basic laws are:
 Placement of objects should be carefully done according to Gestalt
 theory.
 
-```{=html}
 <video src="https://cdn.kde.org/hig/video/20180620-1/Alignment1.webm" loop="true" playsinline="true" width="536" controls="true" onended="this.play()" class="border"></video>
-```
+
 Principles
 ----------
 
@@ -32,7 +31,7 @@ Alignment pertains to the common-sense usage of visual positioning of
 text, images, controls in user interfaces. Alignment is an element of
 visual design that is easy to miss when done properly and easy to spot
 when it is not. Plasma seeks to achieve strong visual alignment in
-applications so that users don\'t have to wonder where elements on a
+applications so that users don't have to wonder where elements on a
 page should go. Plasma seeks simplicity in alignment first.
 
 Alignment in Plasma is:
@@ -64,37 +63,27 @@ General Alignment
     should not go more than 3 layers with left justification. Beyond 3
     layers seems messy and less clear to the user.
 
-### `Do:`{.interpreted-text role="noblefir"}
+{{< do >}}{{< /do >}}
 
+```
 Title
-
-:   
-
     Label
-
-    :   Sub-label
+        Sub-label
+```
 
 *Limit hierarchy to three levels or less.*
 
-### `Don't:`{.interpreted-text role="iconred"}
+{{< dont >}}{{< /dont >}}
 
+```
 Title
-
-:   
-
     Label
-
-    :   
-
         Sub-label
-
-        :   
-
             Sub-label
+                Sub-label
+```
 
-            :   Sub-label
-
-*Don\'t use more than three levels of hierarchy.*
+*Don't use more than three levels of hierarchy.*
 
 This same structure should apply to controls.
 
@@ -110,11 +99,11 @@ possible within the UI. The Plasma team recommends that you first:
 -   Remove redundancy
 
 And then work in the fashion previously suggested using verticality for
-your controls. If your controls don\'t fit on one page because of the
+your controls. If your controls don't fit on one page because of the
 vertical alignment chosen, consider options such as:
 
 -   Using Tabs
--   Create an \"Advanced\" window with extra controls
+-   Create an "Advanced" window with extra controls
 -   Split your UI into smaller groups and categories
 
 This should be done in order to preserve alignment conventions.
