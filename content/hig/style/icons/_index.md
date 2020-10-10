@@ -1,14 +1,7 @@
 ---
 title: Icon Design
+weight: 3
 ---
-===========
-
-::: {.toctree caption="Contents:" titlesonly="" hidden=""}
-colorful/index monochrome/index
-:::
-
--   `colorful/index`{.interpreted-text role="doc"}
--   `monochrome/index`{.interpreted-text role="doc"}
 
 Purpose
 -------
@@ -21,10 +14,7 @@ Well-designed icons strongly impact users\' overall impression of the
 design. Consistent use of icons also improves usability by making
 programs, objects, and actions easier to identify and learn.
 
-::: {.note}
-::: {.title}
-Note
-:::
+{{< alert color="info" title="Note" >}}
 
 See the [workflow tips on how to create an
 icon](https://community.kde.org/Guidelines_and_HOWTOs/Icon_Workflow_Tips)
@@ -32,7 +22,7 @@ if you are interested in designing icons for your application. Or you
 can ask the [KDE Visual Design
 Group](https://community.kde.org/Get_Involved/design#Communication_and_Workflow)
 for help.
-:::
+{{< /alert >}}
 
 General Guidelines
 ------------------

@@ -2,7 +2,7 @@
   {{ if .Get "src" }}
     <figure {{ with .Parent }}class="col-12 col-md-6 text-center" {{ else }} class="col-12"{{ end }}>
       <img src="{{ .Get "src" }}" alt="{{ .Inner }}" class="img-fluid" />
-      <figcaption style="color: #2ecc71;" class="mt-2">{{ .Inner }}</figcaption>
+      <figcaption class="alert alert-success">{{ .Inner }}</figcaption>
     </figure>
   {{ else }}
     <span style="color: #2ecc71;">{{ .Inner }}</span>

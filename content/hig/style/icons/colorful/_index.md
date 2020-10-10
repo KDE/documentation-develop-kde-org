@@ -1,30 +1,24 @@
 ---
 title: Colorful Icons
+weight: 1
 ---
-==============
 
-::: {.toctree caption="Contents:" titlesonly="" hidden=""}
-application mimetype places category_preferences
-:::
 
 ![Colorful icons](/hig/Sample_color_icons.png)
 
 Colorful icons make full use of the
-`Breeze color palette <../../color/index>`{.interpreted-text
-role="doc"}. Colorful icons are not flat and incorporate elevation,
+[Breeze color palette](../../color/). Colorful icons are not flat and incorporate elevation,
 shadows, and lighting.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Use a variety of techniques
-to give your icon depth.](/hig/anjuta-deep.png){.do}
-:::
+{{< compare >}}
+{{< do src="/hig/anjuta-deep.png" >}}
+Use a variety of techniques to give your icon depth.
+{{< /do >}}
 
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t make your icon flat
-- this makes it visually bland.](/hig/anjuta-flat.png){.dont}
-:::
-:::
+{{< dont src="/hig/anjuta-flat.png" >}}
+Don't make your icon flat - this makes it visually bland.
+{{< /dont >}}
+{{< /compare >}}
 
 There are a variety of colorful icon types:
 
@@ -46,29 +40,26 @@ not put any details here whatsoever.
 the margins.](/hig/anjuta-margin-horiz.png)
 
 ### Horizontal
-
 Colorful icons also have a left and right margin of 4 pixels. Minor
 details can extend here as necessary.
 
-![Anjuta icon with 4px left and right margins. The circle\'s edges
+![Anjuta icon with 4px left and right margins. The circle's edges
 extend into the margin.](/hig/anjuta-margin-vert.png)
 
 ### 32px Colorful Icons
 
 32px colorful icons have a 2px margin instead of 4px margins.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Use 2px margins on 32px
-colorful icons.](/hig/small-margin-do.png){.do}
-:::
+{{< compare >}}
+{{< do src="/hig/small-margin-do.png" >}}
+Use 2px margins on 32px colorful icons.
+{{< /do >}}
 
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t use 4px margins on
-32px colorful icons; this reduces the canvas size too
-much.](/hig/small-margin-dont.png){.dont}
-:::
-:::
+{{< dont src="/hig/small-margin-dont.png" >}}
+Don't use 4px margins on 32px colorful icons; this reduces the canvas
+size too much
+{{< /dont >}}
+{{< /compare >}}
 
 Anatomy
 -------
@@ -82,29 +73,13 @@ All colorful icons share the same basic anatomy.
 3.  Base
 4.  Base Shadow
 
-::: {.container .flex}
-::: {.container}
-![The foreground of an icon is the distinctive part that conveys the
-most branding.](/hig/anjuta-foreground.png)
-:::
+{{< compare >}}
+{{< figure class="col-12 col-md-6" src="/hig/anjuta-foreground.png" caption="The foreground of an icon is the distinctive part that conveys the most branding." >}}
+{{< figure class="col-12 col-md-6" src="/hig/anjuta-foreground-shadow.png" caption="Foregrounds on a background have a 45° shadow to the bottom right that spans the entire background." >}}
+{{< figure class="col-12 col-md-6" src="/hig/anjuta-background.png" caption="Icons can have a background to serve as a base for their foreground." >}}
+{{< figure class="col-12 col-md-6" src="/hig/anjuta-background-shadow.png" caption="The foreground, or the background if there is one, has a 1px hard  shadow on the bottom." >}}
+{{< /compare >}}
 
-::: {.container}
-![Foregrounds on a background have a 45° shadow to the bottom right that
-spans the entire background.](/hig/anjuta-foreground-shadow.png)
-:::
-:::
-
-::: {.container .flex}
-::: {.container}
-![Icons can have a background to serve as a base for their
-foreground.](/hig/anjuta-background.png)
-:::
-
-::: {.container}
-![The foreground, or the background if there is one, has a 1px hard
-shadow on the bottom.](/hig/anjuta-background-shadow.png)
-:::
-:::
 
 Elements
 --------
@@ -114,34 +89,27 @@ Elements
 Icons can have a variety of shapes, which when combined with color,
 produce numerous unique arrangements.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Color can be used to add
-variety to an otherwise bland surface.](/hig/color-do.png){.do}
-:::
-
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t give color shadows;
-color is not shape and should not be treated as
-such.](/hig/color-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/color-do.png" >}}
+Color can be used to add variety to an otherwise bland surface.
+{{< /do >}}
+{{< dont src="/hig/color-dont.png" >}}
+Don't give color shadows; color is not shape and should not be treated as
+such.
+{{< /dont >}}
+{{< /compare >}}
 
 ### Layers
 
 Icons are composed of layers that cast shadows.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Give icons at most two or
-three major layers.](/hig/layer-do.png){.do}
-:::
-
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t give icons too many
-layers.](/hig/layer-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/layer-do.png" >}}
+Give icons at most two or three major layers.
+{{< /do >}}
+{{< dont src="/hig/layer-dont.png" >}}
+Don't give icons too many layers.
+{{< /dont >}}
 
 ### Lighting and Shadows
 
@@ -158,7 +126,7 @@ icon.](/hig/lighting-gradient-do.png){.do}
 :::
 
 ::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t have gradients
+![`Don't.`{.interpreted-text role="iconred"} Don't have gradients
 behave like light is coming from below the
 icon.](/hig/lighting-gradient-dont.png){.dont}
 :::
@@ -167,7 +135,7 @@ icon.](/hig/lighting-gradient-dont.png){.dont}
 #### Hard Shadow
 
 Every icon should have a 1px solid hard shadow. A good baseline color to
-overlay is 10% black (\#000000).
+overlay is 10% black (#000000).
 
 ::: {.container .flex}
 ::: {.container}
@@ -176,7 +144,7 @@ your icon depth.](/hig/hardshadow-do.png){.do}
 :::
 
 ::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t forego a hard
+![`Don't.`{.interpreted-text role="iconred"} Don't forego a hard
 shadow; this makes your icon seem
 flat.](/hig/hardshadow-dont.png){.dont}
 :::
@@ -193,7 +161,7 @@ shadows from passing through.](/hig/45shadow-do.png){.do}
 :::
 
 ::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t have shadows pass
+![`Don't.`{.interpreted-text role="iconred"} Don't have shadows pass
 through objects; they are not glass.](/hig/45shadow-dont.png){.dont}
 :::
 :::
