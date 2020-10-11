@@ -1,7 +1,9 @@
 ---
 title: Getting Started with Kirigami
 weight: 1
-description: Hello world in Kirigami
+group: introduction
+description: >
+  Create your first application in Kirigami: "Hello World!"
 ---
 
 ## Basic application

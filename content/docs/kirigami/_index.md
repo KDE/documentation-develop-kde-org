@@ -2,6 +2,14 @@
 title: "Getting started with Kirigami"
 linkTitle: "Kirigami"
 weight: 2
+layout: home
+groups:
+  - name: "Introduction"
+    key: "introduction"
+  - name: "Components"
+    key: "components"
+  - name: "Advanced"
+    key: "advanced"
 description: >
   Learn the Kirigami framework by creating your first convergent application
 group: "getting-started"

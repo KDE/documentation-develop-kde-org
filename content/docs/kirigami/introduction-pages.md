@@ -1,7 +1,8 @@
 ---
-title: Kirigami Pages
+title: Pages
 weight: 3
-description: Pages are containers for your content
+group: components
+description: Pages allow you to organize your application content
 ---
 
 ## `Kirigami.Page`

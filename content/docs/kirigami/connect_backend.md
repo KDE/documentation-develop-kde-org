@@ -2,6 +2,7 @@
 title: Connect logic to your QML user interface
 weight: 10
 description: Connect a backend to do calculations and supply your user interface with data to display
+group: advanced
 ---
 
 To integrate logic into the application, we need C++ backend classes that can do the important calculations. Writing logic in the QML files is discouraged, so try to move as much as possible to the backend, so QML is purely used for displaying the user interface, which is what it is best at.

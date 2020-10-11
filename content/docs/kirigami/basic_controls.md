@@ -1,6 +1,9 @@
 ---
 title: Basic Controls
 weight: 2
+group: introduction
+description: >
+  Learn how to add some basic components to your application
 ---
 
 In the first part of this tutorial, you generated a sample Kirigami application that
