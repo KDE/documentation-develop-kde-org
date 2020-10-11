@@ -1,11 +1,17 @@
 ---
 title: Components
+weight: 4
+layout: home
+groups:
+  - name: "Formating"
+    key: formating
+  - name: "Navigation"
+    key: navigation
+  - name: "Packaging"
+    key: "packaging"
+  - name: "Application Extensions"
+    key: "applications"
 ---
-==========
-
-::: {.toctree maxdepth="1" titlesonly="" hidden=""}
-formating/index navigation/index assistance/index editing/index
-:::
 
 Formating
 ---------

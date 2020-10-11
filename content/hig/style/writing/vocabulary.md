@@ -1,7 +1,7 @@
 ---
 title: Vocabulary
+weight: 8
 ---
-==========
 
 Consistenly using the same words to refer to the same concepts avoids
 confusion. See below word choice recommendations for common computing
@@ -10,7 +10,7 @@ concepts.
 Directories and Folders
 -----------------------
 
-![image](/hig/folder.svg){.align-right}
+![image](/hig/folder.svg)
 
 For containers of files and other containers, use **folder**. Avoid
 *dir* or *directory*.

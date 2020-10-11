@@ -1,7 +1,7 @@
 ---
 title: Places Icons
+weigt: 4
 ---
-============
 
 Places icons are used to depict folders, network locations, and other
 places. They come in four sizes: 16px, 22px, 32px, and 64px. Places
@@ -29,17 +29,12 @@ counterpart of the colorful places icon overlaid on a folder background.
 1.  Folder
 2.  Monochromatic Foreground
 
-::: {.container .flex}
-::: {.container}
-![The base of a places icon indicates that it\'s a folder that can be
+{{< compare md="true" >}}
+![The base of a places icon indicates that it's a folder that can be
 navigated to.](/hig/place-anatomy-base.png)
-:::
-
-::: {.container}
-![The foreground of a places icon indicates the folder\'s landmark
+![The foreground of a places icon indicates the folder's landmark
 location.](/hig/place-anatomy-fg.png)
-:::
-:::
+{{< /compare >}}
 
 ### Base
 
@@ -50,35 +45,27 @@ The base of a places icon is always a blue folder.
 ### Foreground
 
 The foreground of a places icon indicates the landmark location an icon
-represents. Its color is a darker variant of the base\'s color. For 32px
+represents. Its color is a darker variant of the base's color. For 32px
 icons, its size is 10×10px. For 64px icons, its size is 20×20px. It is
 always centered within the folder, and does not cast a shadow.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} The foreground of a places
-icon does not cast a shadow.](/hig/place-fg-do.png){.do}
-:::
-
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t have the foreground
-of a places icon cast a shadow.](/hig/place-fg-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/place-fg-do.png" >}}
+The foreground of a places icon does not cast a shadow.
+{{< /do >}}
+{{< dont src="/hig/place-fg-dont.png" >}}
+Don't have the foreground of a places icon cast a shadow.
+{{< /dont >}}
+{{< /compare >}}
 
 ### Margins
 
 64px places icons have a top and bottom margin of 6 pixels, and 32px
 places icons have a top and bottom margin of 3 pixels.
 
-::: {.container .flex}
-::: {.container}
+{{< compare md="true" >}}
 ![64px icons should have a top and bottom margin of 6
 pixels.](/hig/place-margin-64.png)
-:::
-
-::: {.container}
 ![32px icons should have a top and bottom margin of 3
 pixels.](/hig/place-margin-32.png)
-:::
-:::
+{{< /compare >}}

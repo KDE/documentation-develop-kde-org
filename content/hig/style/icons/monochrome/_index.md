@@ -1,17 +1,6 @@
 ---
 title: Monochromatic Icons
 ---
-===================
-
-::: {.toctree caption="Contents:" titlesonly="" hidden=""}
-action emblem mimetype places status
-:::
-
--   `action`{.interpreted-text role="doc"}
--   `emblem`{.interpreted-text role="doc"}
--   `mimetype`{.interpreted-text role="doc"}
--   `places`{.interpreted-text role="doc"}
--   `status`{.interpreted-text role="doc"}
 
 ![Monochrome icons](/hig/HIGMonoIcons.png)
 
@@ -21,7 +10,7 @@ raised, buttonlike appearance. 22px monochrome icons are used in
 ToolButtons. Monochrome icons at both sizes are used to represent small
 file types and entries in the Places panel in Dolphin and file dialogs.
 
-Don\'t use the monochrome style for larger icon sizes.
+Don't use the monochrome style for larger icon sizes.
 
 The Monochrome style is used for [Action](action.html), Status, small
 [Places,](places.html) and small [MIME type](mimetype.html) icons.
@@ -96,7 +85,7 @@ designing it.](/hig/pixel-align-do.png){.do}
 :::
 
 ::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t misalign your icon
+![`Don't.`{.interpreted-text role="iconred"} Don't misalign your icon
 to the pixel grid---this makes it look blurry when scaled and can make
 it look wonky.](/hig/pixel-align-dont.png){.dont}
 :::
@@ -113,11 +102,11 @@ of blank space between the emblem and the rest of the icon.
 ::: {.container .flex}
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Clear out some space for your
-icon\'s emblem.](/hig/emblem-do.png){.do}
+icon's emblem.](/hig/emblem-do.png){.do}
 :::
 
 ::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t overlay your icon\'s
+![`Don't.`{.interpreted-text role="iconred"} Don't overlay your icon's
 emblem on its corner.](/hig/emblem-dont.png){.dont}
 :::
 :::

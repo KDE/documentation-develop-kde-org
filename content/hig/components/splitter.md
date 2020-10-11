@@ -1,7 +1,8 @@
 ---
 title: Splitter
+weight: 2
+group: formating
 ---
-========
 
 Purpose
 -------

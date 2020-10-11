@@ -1,7 +1,7 @@
 ---
 title: Placeholder
+weight: 7
 ---
-===========
 
 Purpose
 -------
@@ -25,16 +25,14 @@ Guidelines
 ### Actions
 
 -   A placeholder with an action replaces the label.
--   Use an ellipsis (\...) after the text.
+-   Use an ellipsis (...) after the text.
 -   Show visiual feedback as soon as the user types, e.g. trigger the
     action or show a menu with autocompletion suggestions.
 -   Keep the text as short as possible.
 -   Since the placeholder will not be visible anymore as soon as the
     user types, you should only use it on standalone input elements, not
     in groups of input elements such as forms.
--   Use
-    `sentence style capitalization </style/writing/capitalization>`{.interpreted-text
-    role="doc"}.
+-   Use [sentence style capitalization](/hig/style/writing/capitalization).
 
 ![Krunner showing a placeholder instead of a label with an
 action.](/hig/Krunner-1.png)

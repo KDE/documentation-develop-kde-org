@@ -110,6 +110,7 @@ Give icons at most two or three major layers.
 {{< dont src="/hig/layer-dont.png" >}}
 Don't give icons too many layers.
 {{< /dont >}}
+{{< /compare >}}
 
 ### Lighting and Shadows
 
@@ -118,75 +119,56 @@ Don't give icons too many layers.
 Icon fills should reflect ambient lighting---go from a lighter top to a
 darker bottom.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Do have gradients behave like
-light is coming from above the
-icon.](/hig/lighting-gradient-do.png){.do}
-:::
-
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don't have gradients
-behave like light is coming from below the
-icon.](/hig/lighting-gradient-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/lighting-gradient-do.png" >}}
+Do have gradients behave like light is coming from above the icon.
+{{< /do >}}
+{{< dont src="/hig/lighting-gradient-dont.png" >}}
+Don't have gradients behave like light is coming from below the icon.
+{{< /dont >}}
+{{< /compare >}}
 
 #### Hard Shadow
 
 Every icon should have a 1px solid hard shadow. A good baseline color to
 overlay is 10% black (#000000).
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Add a 1px hard shadow to give
-your icon depth.](/hig/hardshadow-do.png){.do}
-:::
-
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don't forego a hard
-shadow; this makes your icon seem
-flat.](/hig/hardshadow-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/hardshadow-do.png" >}}
+Add a 1px hard shadow to give your icon depth.
+{{< /do >}}
+{{< dont src="/hig/hardshadow-dont.png" >}}
+Don't forget to add a hard shadow; this makes your icon seem flat.
+{{< /dont >}}
+{{< /compare >}}
 
 #### 45° Shadows
 
 Foregrounds should have a 45° shadow to the bottom right.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Objects are solid, and block
-shadows from passing through.](/hig/45shadow-do.png){.do}
-:::
+{{< compare >}}
+{{< do src="/hig/45shadow-do.png" >}}
+Objects are solid, and block shadows from passing through.
+{{< /do >}}
+{{< dont src="/hig/45shadow-dont.png" >}}
+Don't have shadows pass through objects; they are not glass.
+{{< /dont >}}
+{{< /compare >}}
 
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don't have shadows pass
-through objects; they are not glass.](/hig/45shadow-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/bound-do.png" >}}
+45° shadows are bounded to their parent elements.
+{{< /do >}}
+{{< dont src="/hig/bound-dont.png" >}}
+45° shadows should not exceed the bounds of their parents.
+{{< /dont >}}
+{{< /compare >}}
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} 45° shadows are bounded to
-their parent elements.](/hig/bound-do.png){.do}
-:::
-
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} 45° shadows should not
-exceed the bounds of their parents.](/hig/bound-dont.png){.dont}
-:::
-:::
-
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} 45° shadows have a gradient
-that fades out before they hit an edge.](/hig/gradient-do.png){.do}
-:::
-
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} 45° shadows are not solid
-and do not extend to the edge of their
-parents.](/hig/gradient-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/gradient-do.png" >}}
+45° shadows have a gradient that fades out before they hit an edge.
+{{< /do >}}
+{{< dont src="/hig/gradient-dont.png" >}}
+45° shadows are not solid and do not extend to the edge of their parents.
+{{< /dont >}}
+{{< /compare >}}

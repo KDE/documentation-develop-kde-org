@@ -1,7 +1,7 @@
 ---
 title: Imagery
+weight: 4
 ---
-=======
 
 Purpose
 -------
@@ -13,9 +13,9 @@ Guidelines
 ----------
 
 -   Ensure images have the appropriate resolution for their containers.
-    Don\'t scale images beyond their native resolution; they will end up
+    Don't scale images beyond their native resolution; they will end up
     fuzzy or pixelated.
--   Don\'t be afraid of larger image sizes. Images are most effective
+-   Don't be afraid of larger image sizes. Images are most effective
     when they can be seen. Tiny images lose much of their meaning
     (unless they are specifically crafted for small sizes).
 -   For example, consider a large contact photo (left) instead of a tiny
@@ -31,9 +31,8 @@ Guidelines
 
 ![ImageCaption1.png](/hig/ImageCaption1.png)
 
--   Use a `scrim </components/navigation/scrim>`{.interpreted-text
-    role="doc"} behind the caption text to preserve contrast for
-    legibility.
+-   Use a [scrim](/hig/components/navigation/scrim) behind the caption
+    text to preserve contrast for legibility.
 -   Try to preserve the image aspect ratio. If preserving the aspect
     ratio is a challenge, consider cropping the image to fill the
     container instead.

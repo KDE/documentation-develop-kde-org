@@ -1,7 +1,7 @@
 ---
 title: Capitalization
+weight: 2
 ---
-==============
 
 Purpose
 -------
@@ -29,7 +29,7 @@ labels. For example:
 -   Menu titles and menu item labels
 -   Button labels
 
-Don\'t capitalize:
+Don't capitalize:
 
 -   Articles: a, an, the
 -   Coordinating conjunctions: and, but, or, for, nor, etc.

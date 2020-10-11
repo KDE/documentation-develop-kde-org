@@ -16,7 +16,7 @@ in the same way that most people will.
 A consistent color set helps create a familiar visual language
 throughout the user interface.
 
-{{< compare >}}
+{{< compare md="true">}}
 ![System settings with Breeze color theme](/hig/Systemsettings.png)
 ![System settings with Breeze Dark color theme](/hig/Systemsettings-dark.png)
 {{< /compare >}}

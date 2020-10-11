@@ -1,18 +1,18 @@
 ---
 title: Contractions
+weight: 4
 ---
-============
 
 Short version
 -------------
 
 Instead of:
 
-don\'t, won\'t, it\'s, can\'t, there\'s, \...
+don't, won't, it's, can't, there's, ...
 
-\...use:
+...use:
 
-do not, will not, it is, cannot, there is, \...
+do not, will not, it is, cannot, there is, ...
 
 Longer version
 --------------
@@ -27,5 +27,5 @@ when writing user-interface strings, for two main reasons:
     no translation exists)
 
 For further discussion on this issue, in general, see the following blog
-post: [Don\'t Use
+post: [Don't Use
 Contractions?](http://www.businesswritingblog.com/business_writing/2006/04/dont_use_contra.html)
