@@ -111,6 +111,5 @@ By pulling down, you can also activate a special mode with a larger top margin m
 
 ## More on pages
 
-A Kirigami [Page](docs:kirigami2;Page)
-name="Page" >}} inherits from a [QQC2 Page](https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html)
+A Kirigami [Page](docs:kirigami2;Page) inherits from a [QQC2 Page](https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html)
 and as such, you can add a header and footer to the Page.
