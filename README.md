@@ -84,10 +84,21 @@ Read a file and apply syntax highlight on it. There is two option argument:
 {{< readfile file="/content/docs/getting-started/main_window/mainwindow.h" highlight="cpp" start="41" lines="13" >}}
 ```
 
-### api-link
+### Api links
 
-Currently does nothing but in the future should be able to create a link to the api documentation.
+Links to `api.kde.org` and `doc.qt.io` can be generated as follows:
 
 ```
-{{< api-link module="kxmlgui" link="KXmlGuiWindow" >}}
+[text](docs:component;link)
 ```
+
+where `text` is the text for the link, `component` is the component (e.g. `kirigami2`, `qtquickcontrols`) and `link` is the item to link to (e.g. `QtQuick.Controls.Label`, `org::kde::kirigami::BasicListItem`, `KMessageBox`)
+
+When you want to link to the main page of a component's documentation, you can omit the `link`, as in `[Kirigami](docs:kirigami2)`.
+
+If the component you want to link to isn't added to `scripts/doxygen_integration.py` yet, add it there and execute `python scripts/doxygen_integration.py`.
+
+Examples:
+ - `[AbstractCard](docs:kirigami2;AbstractCard)`
+ - `[KMessageBox](docs:kwidgetsaddons;KMessageBox)`
+ - `[Label](docs:qtquickcontrols;QtQuick.Controls.Label)`
