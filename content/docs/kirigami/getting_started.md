@@ -71,17 +71,17 @@ of your choice, like QtCreator or [KDevelop](https://kdevelop.org).
 
 {{< readfile file="/content/docs/kirigami/getting_started/main.qml" highlight="json" >}}
 
-The base element is a [Kirigami.ApplicationWindow](docs:kirigami2;org::kde::kirigami::ApplicationWindow)
+The base element is a [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow)
 and it provides some basic features
 needed for all Kirigami applications.
 
-The [Kirigami.GlobalDrawer](docs:kirigami2;org::kde::kirigami::GlobalDrawer)
+The [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer)
 is the left sidebar of the application
 and will contain your application's navigation. The right sidebar is
-provided by the [Kirigami.ContextDrawer](docs:kirigami2;org::kde::kirigami::ContextDrawer)
+provided by the [Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer)
 and it contains all your context specific actions on mobile.
 
-The last and most important part of `main.qml` is the [Kirigami.Page](docs:kirigami2;org::kde::kirigami::Page)
+The last and most important part of `main.qml` is the [Kirigami.Page](docs:kirigami2;Page)
 and contains your content. This is also that we will see in the next part
 of this tutorial.
 

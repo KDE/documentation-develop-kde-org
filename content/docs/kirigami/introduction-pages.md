@@ -6,7 +6,7 @@ description: Pages are containers for your content
 
 ## `Kirigami.Page`
 
-Kirigami apps are typically organized in [Pages](docs:kirigami2;org::kde::kirigami::Page)
+Kirigami apps are typically organized in [Pages](docs:kirigami2;Page)
 Those are the different ‘Screens’
 of an app. If you come from the Android world you can think of them as the view
 part of activities. In our case we want to have an initial page that offers to
@@ -62,7 +62,7 @@ into the binary.
 
 ## `Kirigami.ScrollablePage`
 
-A [ScrollablePage](docs:kirigami2;org::kde::kirigami::ScrollablePage)
+A [ScrollablePage](docs:kirigami2;ScrollablePage)
 is a Page that holds scrollable content, such as ListViews. Scrolling and scrolling indicators will
 be automatically managed.
 
@@ -111,6 +111,6 @@ By pulling down, you can also activate a special mode with a larger top margin m
 
 ## More on pages
 
-A Kirigami [Page](docs:kirigami2;org::kde::kirigami::Page)
+A Kirigami [Page](docs:kirigami2;Page)
 name="Page" >}} inherits from a [QQC2 Page](https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html)
 and as such, you can add a header and footer to the Page.
