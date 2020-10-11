@@ -18,9 +18,9 @@ Pages are organized in a pagestack where they can be pushed and popped. On a pho
 only the topmost page is shown, whereas on a larger screen (desktop or tablet)
 multiple pages can be shown next to each other.
 
-{{< figure src="mobile.png" title="A single page on the phone" class="text-center" >}}
+![A single page on the phone](mobile.png)
 
-{{< figure src="desktop.png" title="Two pages next to each other on the desktop" class="text-center" >}}
+![Two pages next to each other on the desktop](desktop.png)
 
 So let’s create some pages! To simplify the QML code, you are going to put each
 page in its own `.qml` file and let the name end with `Page`. The first version of
