@@ -33,12 +33,12 @@ optional arguments:
 
 ## Creating an new article
 
-Your accept that your contribution are licensed under the CC-BY-SA-4.0.
+You accept that your contributions are licensed under the CC-BY-SA-4.0.
 
-Each page of the website is located in `content`, for the documentation specific pages, there are
-located at `content/docs`. To add a new articles just create a new makrdown file called `_index.md`
-there at the location there you want to have it. e.g. for
-https://developer.kde.org/docs/getting-started/installation, you need to create a file called
+Each page of the website is located in `content`, for the documentation specific pages, they are
+located at `content/docs`. To add a new article just create a new markdown file called `_index.md`
+at the location you want it to have, e.g. for
+`https://developer.kde.org/docs/getting-started/installation`, you need to create a file called
 `content/docs/getting-started/installation/_index.md`.
 
 This is the structure of a file:
@@ -59,7 +59,7 @@ Normal markdown content
 
 ## Hugo shortcodes
 
-There is also some custom commands that can be used to create more complex content. For the moment there is three of them available,
+There are also some custom commands that can be used to create more complex content. For the moment there are three of them available,
 but more can be added if needed.
 
 ### alert
@@ -70,7 +70,7 @@ Text you want to display in the alert
 {{< /alert >}}
 ```
 
-Availble colors are `success`, `warning`, `error` and `info`.
+Available colors are `success`, `warning`, `error` and `info`.
 
 ### readfile
 
