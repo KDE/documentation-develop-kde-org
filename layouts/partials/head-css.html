@@ -1,3 +1,3 @@
-{{ $manifest := getJSON "https://cdn.kde.org/aether-devel/version/manifest.json" }}
+{{ $manifest := getJSON "https://cdn.kde.org/aether-devel/version/manifest.json?cache_force=1" }}
 <link href="https://cdn.kde.org/{{ index $manifest "aether-devel/version/aether-docsy.css" }}" rel="stylesheet" />
 <link href="https://cdn.kde.org/breeze-icons/icons.css" rel="stylesheet" />
