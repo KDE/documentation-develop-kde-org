@@ -55,14 +55,14 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     {{ end }}
 
     <a href="{{ (index $dataMap $module).url }}{{ $filename }}{{ $anchor }}" class="api-link"> 
-      {{ .Text | safeHTML }}&nbsp;
+      {{ .Text | safeHTML }}
     </a>
   {{ else }}
     {{ $url := printf "_data/%s.json" $dest }}
     {{ $data := getJSON $url }}
     {{ $dataMap := getJSON "_data/components_map.json" }}
     <a href="{{ (index $dataMap $dest).url }}" class="api-link"> 
-      {{ .Text | safeHTML }}&nbsp;
+      {{ .Text | safeHTML }}
     </a>
   {{ end }}
 {{- else -}}
