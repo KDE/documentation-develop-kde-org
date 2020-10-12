@@ -2,7 +2,7 @@
 SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
 SPDX-License-Identifier: LGPL-3.0-or-later
 */}}
-{{ if hasPrefix .Destination  "docs:" }}
+{{- if hasPrefix .Destination  "docs:" -}}
   {{ $dest := substr .Destination 5 }}
   {{ if in $dest ";" }}
     {{ $module := (index (split $dest ";") 0) }}
@@ -65,8 +65,8 @@ SPDX-License-Identifier: LGPL-3.0-or-later
       {{ .Text | safeHTML }}&nbsp;
     </a>
   {{ end }}
-{{ else }}
+{{- else -}}
   <a href="{{ .Destination | safeURL }}" {{ with .Title}}title="{{ . }}"{{ end }}>
-    {{ .Text | safeHTML }}
+    {{- .Text | safeHTML -}}
   </a>
-{{ end }}
+{{- end -}}
