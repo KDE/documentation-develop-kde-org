@@ -33,7 +33,7 @@ Now we've done all the necessary setup, we can move on to doing interesting thin
 
 Now we have our item, we can create our popup. We call the [KMessageBox::questionYesNo](docs:kwidgetsaddons;KMessageBox::questionYesNo) function which, by default, creates a message box with a "Yes" and a "No" button. The second argument is the text that will appear in the message box above the buttons. The third is the caption the window will have and finally, we set the KGuiItem for (what would normally be) the "Yes" button to the KGuiItem yesButton we created.
 
-Note that all user-visible text is passed through the `i18n()` function; this is necessary for the UI to be translatable. More information on internalization can be found in the :doc:`../i18n/index` tutorial. 
+Note that all user-visible text is passed through the `i18n()` function; this is necessary for the UI to be translatable. More information on internalization can be found in the [i18n](https://techbase.kde.org/Localization) tutorial. 
 
 We're all done as far as the code is concerned. Now to build it and try it out.
 
