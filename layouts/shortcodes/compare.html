@@ -1,0 +1,8 @@
+<div class="row flex-column flex-md-row">
+  {{ if eq (.Get "md") "true" }}
+    {{ .Inner | $.Page.RenderString }}
+  {{ else }}
+    {{ .Inner }}
+  {{ end }}
+</div>
+
