@@ -33,7 +33,7 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
     * System/Default `/usr/share/plasma/wallpapers/`
     * User Installed `~/.local/share/plasma/wallpapers/`
 * **Application Style** (aka Window Decoration) is the window titlebar.
-    * Window Decorations are C++ plugins implementing the [KDecoration2 API](https://api.kde.org/kdecoration/html/index.html). You will be unable to easily fork the default Breeze decoration as it's C++, however there is a preinstalled Aurorae plugin that can be themed with SVGs.
+    * Window Decorations are C++ plugins implementing the [KDecoration2 API](docs:kdecoration2). You will be unable to easily fork the default Breeze decoration as it's C++, however there is a preinstalled Aurorae plugin that can be themed with SVGs.
     * System/Default `/usr/share/aurorae/themes/` (empty usually)
     * User Installed `~/.local/share/aurorae/themes/` ([KDE Store Category](https://store.kde.org/browse/cat/114/order/latest/))
     * Tutorial: [techbase.kde.org/User:Mgraesslin/Aurorae](https://techbase.kde.org/User:Mgraesslin/Aurorae)

@@ -36,7 +36,7 @@ Only a function void `setupActions()` has been added which will do all the work 
 
 ## Explanation
 
-This builds upon the {{< api-link module="kxmlgui" link="KXmlGuiWindow" >}} code from [the main window](main_window). Most of the changes are to mainwindow.cpp, an important structural change being that the constructor for MainWindow now calls `setupActions()` instead of `setupGUI()`. `setupActions()` is where the new QAction code goes before finally calling `setupGUI()` itself. 
+This builds upon the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) code from [the main window](main_window). Most of the changes are to mainwindow.cpp, an important structural change being that the constructor for MainWindow now calls `setupActions()` instead of `setupGUI()`. `setupActions()` is where the new QAction code goes before finally calling `setupGUI()` itself.
 
 ### Creating the QAction object
 
@@ -94,7 +94,7 @@ Here, the `clearAction` QAction is added to the collection and given a name of `
 
 ### Connecting the action
 
-Now that the action is fully set up, it needs to be connected to something useful. In this case (because we want to clear the text area), we connect our action to the clear() action belonging to a KTextEdit (which, unsurprisingly, clears the KTextEdit) 
+Now that the action is fully set up, it needs to be connected to something useful. In this case (because we want to clear the text area), we connect our action to the clear() action belonging to a KTextEdit (which, unsurprisingly, clears the KTextEdit)
 
 
 ```c++
@@ -122,11 +122,11 @@ At the moment, the new "Clear" action has been created but it hasn't been associ
 
 ### Defining your own help menu
 
-The Help menu has been standardized to ease the lives of both developers and users, which is why all KDE software Help menus look the same. If you want to create your own help menu, search for the explanation around `showAboutApplication()` in from the {{< api-link module="kxmlgui" link="KHelpMenu" >}} class in XMLGUI. 
+The Help menu has been standardized to ease the lives of both developers and users, which is why all KDE software Help menus look the same. If you want to create your own help menu, search for the explanation around `showAboutApplication()` in from the [KHelpMenu](docs:kxmlgui;KHelpMenu) class in XMLGUI.
 
 ### XMLGUI
 
-The `setupGUI()` function in {{< api-link module="kxmlgui" link="KXmlGuiWindow" >}} depends on the XMLGUI system to construct the GUI, which XMLGUI does by parsing an XML file description of the interface. 
+The `setupGUI()` function in [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) depends on the XMLGUI system to construct the GUI, which XMLGUI does by parsing an XML file description of the interface.
 
 The rule for naming this XML file is `appnameui.rc`, where appname is the name you set in :kcorewidgetsapi:`KAboutData` (in this case, tutorial3). So in our example, the file is called `texteditorui.rc`, and is located in the build directory. Where the file will ultimately be placed is handled by CMake. 
 

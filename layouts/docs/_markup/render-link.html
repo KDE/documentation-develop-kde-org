@@ -2,23 +2,24 @@
 SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
 SPDX-License-Identifier: LGPL-3.0-or-later
 */}}
-{{ if hasPrefix .Destination  "docs:" }}
+{{- if hasPrefix .Destination  "docs:" -}}
   {{ $dest := substr .Destination 5 }}
   {{ if in $dest ";" }}
     {{ $module := (index (split $dest ";") 0) }}
     {{ $link := (index (split $dest ";") 1) }}
 
-    {{ $filename := "false" }}
+    {{ $filename := $link }}
     {{ $anchor := "" }}
     
     {{ $url := printf "_data/%s.json" $module }}
     {{ $data := getJSON $url }}
     {{ $dataMap := getJSON "_data/components_map.json" }}
-    
+    {{ $prefix := (index $dataMap $module).default_prefix }}
+
     {{ $found := 0 }}
     {{/* Search for complete name first */}}
     {{ range $data.tagfile.compound }}
-      {{ if (eq (index .name "$") $link) }}
+      {{ if (or (eq (index .name "$") (printf "%s%s" $prefix $link)) (eq (index .name "$") $link)) }}
         {{ $filename = (index .filename "$") }}
         {{ $found = 1 }}
       {{ end }}
@@ -40,7 +41,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
         {{ end }}
       {{ end }}
       {{ range $data.tagfile.compound }}
-        {{ if (eq (index .name "$") $class) }}
+        {{ if (or (eq (index .name "$") (printf "%s%s" $prefix $class)) (eq (index .name "$") $class)) }}
           {{ $filename = (index .filename "$") }}
           {{ if .member }}
             {{ range .member }}
@@ -53,23 +54,19 @@ SPDX-License-Identifier: LGPL-3.0-or-later
       {{ end }}
     {{ end }}
 
-    {{ if (and (eq $filename "false") (not (in $link ".html"))) }}
-      {{ errorf "missing value for param 'name': %s" .Position }}
-    {{ end }}
-
-    <a href="{{ (index $dataMap $module) }}{{ $filename }}{{ $anchor }}" class="api-link"> 
+    <a href="{{ (index $dataMap $module).url }}{{ $filename }}{{ $anchor }}" class="api-link"> 
       {{ .Text | safeHTML }}
     </a>
   {{ else }}
     {{ $url := printf "_data/%s.json" $dest }}
     {{ $data := getJSON $url }}
     {{ $dataMap := getJSON "_data/components_map.json" }}
-    <a href="{{ (index $dataMap $dest)  }}" class="api-link"> 
+    <a href="{{ (index $dataMap $dest).url }}" class="api-link"> 
       {{ .Text | safeHTML }}
     </a>
   {{ end }}
-{{ else }}
+{{- else -}}
   <a href="{{ .Destination | safeURL }}" {{ with .Title}}title="{{ . }}"{{ end }}>
-    {{ .Text | safeHTML }}
+    {{- .Text | safeHTML -}}
   </a>
-{{ end }}
+{{- end -}}

@@ -30,7 +30,7 @@ TAG_FILES = [
     },
     {
         'tags': 'https://api.kde.org/frameworks/kxmlgui/html/KXmlGui.tags',
-        'base_url': 'https://api.kde.org/frameworks/kXmlGui/html/'
+        'base_url': 'https://api.kde.org/frameworks/kxmlgui/html/'
     },
     {
         'tags': 'https://api.kde.org/frameworks/kconfigwidgets/html/KConfigWidgets.tags',
@@ -41,8 +41,25 @@ TAG_FILES = [
         'base_url': 'https://api.kde.org/frameworks/kwidgetsaddons/html/'
     },
     {
+        'tags': 'https://api.kde.org/frameworks/ktexteditor/html/KTextEditor.tags',
+        'base_url': 'https://api.kde.org/frameworks/ktexteditor/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/kconfig/html/KConfig.tags',
+        'base_url': 'https://api.kde.org/frameworks/kconfig/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/plasma-framework/html/Plasma.tags',
+        'base_url': 'https://api.kde.org/frameworks/plasma-framework/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/kdecoration/html/KDecoration2.tags',
+        'base_url': 'https://api.kde.org/kdecoration/html/'
+    },
+    {
         'tags': 'https://api.kde.org/frameworks/kirigami/html/Kirigami2.tags',
-        'base_url': 'https://api.kde.org/frameworks/kirigami/html/'
+        'base_url': 'https://api.kde.org/frameworks/kirigami/html/',
+        'default_prefix': 'org::kde::kirigami::',
     },
     {
         'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtquickcontrols.tags',
@@ -59,7 +76,9 @@ for tag_file in TAG_FILES:
     with open('_data/' + component_name + '.json', 'w') as f:
         dump(bf.data(fromstring(r.content)), f)
 
-    components_map[component_name] = tag_file['base_url']
+    components_map[component_name] = {'url': tag_file['base_url']}
+    if 'default_prefix' in tag_file:
+        components_map[component_name]['default_prefix'] = tag_file['default_prefix']
 
 
 with open('_data/components_map.json', 'w') as f:

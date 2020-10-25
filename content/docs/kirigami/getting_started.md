@@ -1,81 +1,101 @@
 ---
 title: Getting Started with Kirigami
 weight: 1
-description: Hello world in Kirigami
+group: introduction
+description: >
+  Create your first application in Kirigami: "Hello World!"
 ---
-
-In this tutorial, you will be able to learn how to create a convergent
-application that allow to check departure and routes from public
-transport, that works on mobile operating system and on your desktop.
-
-You are going to use QML/QtQuick and Kirigami. QML is the declarative UI
-language from the Qt project. Unlike the older QWidgets it is designed with
-(embedded) touch systems in mind and thus is ideal for mobile apps. Kirigami
-is a set of QtQuick components designed for creating convergent
-mobile/desktop apps.
-
-First of all you will need to install Kirigami on your system, this can
-usually be done with your Linux distribution package manager. It is also
-possible to use a statically build version of Kirigami but this tutorial
-won't cover this usecase.
-
-While the ui code is done in QML in a declarative way, the buisness code
-is created in either C++ or Python. In this tutorial, we will only cover
-the Python usecase with the offical Qt for Python bindings (also called
-pyside2).
 
 ## Basic application
 
-Before getting started you  need to install a few things. First of all we
-need Python (obviously) and Qt for Python. Qt for Python was formerly known
-as PySide2. You can install it via `pip install pyside2 --user`. Next there is
-Kirigami. On Ubuntu you can install it via `sudo apt install qml-module-org-kde-kirigami2`. 
+Before getting started you need to install a few things. First of all we need
+a C++ compiler, the Qt development packages and Kirigami. On Ubuntu, Debian and
+Neon you can install these with your package manager:
 
-After that you can start coding. The following main.py file is creating an
-app and loading the UI from a .qml file. The exact details are not too
-important at this point.
-
-```python
-#!/usr/bin/env python3
-
-from PySide2.QtGui import QGuiApplication
-from PySide2.QtQml import QQmlApplicationEngine
-
-if __name__ == "__main__":
-    app = QGuiApplication()
-    engine = QQmlApplicationEngine()
-
-    context = engine.rootContext()
-    engine.load("qml/main.qml")
-
-    if len(engine.rootObjects()) == 0:
-        quit()
-    app.exec_()
+```bash
+sudo apt install build-essential extra-cmake-modules cmake qtbase5-dev \
+                 qtdeclarative5-dev libqt5svg5-dev qtquickcontrols2-5-dev \
+                 qml-module-org-kde-kirigami2 kirigami2-dev libkf5i18n-dev
 ```
 
-Next you need to define our UI in a QML file. To keep things organized you are
-going to put your QML files in a qml/ subfolder. Your first main.qml is rather
-simple.
+<!-- Todo cover kdesrc-build somewhere and link to it -->
 
-```json
-import QtQuick 2.2
-import QtQuick.Controls 2.4
-import org.kde.kirigami 2.0 as Kirigami
+We will also use [KAppTemplate](https://kde.org/applications/kapptemplate) to generate a suitable project to start from.
+On Debian-based distributions, it can be installed using `sudo apt install kapptemplate`.
 
-Kirigami.ApplicationWindow
-{
-    width: 480
-    height: 720
+After starting KAppTemplate, skip through to the page that lets you choose
+a template for your new project. From the Qt category, choose *Graphical*
+and then *Kirigami Application*. If you can't find the Kirigami template,
+your installed Kirigami version might be too old.
 
-    Label {
-        text: "Hello world!"
-        anchors.centerIn: parent
-    }
-}
+After choosing the template, follow through the wizard to create your project.
+Once the wizard finishes, you should get the following folder hierarchy:
+
+```
+├── CMakeLists.txt
+├── org.kde.myapp.appdata.xml
+├── org.kde.myapp.desktop
+└── src
+    ├── CMakeLists.txt
+    ├── contents
+    │   └── ui
+    │       └── main.qml
+    ├── main.cpp
+    └── resources.qrc
 ```
 
-width and height are a bit arbitrary since the window will always be maximized on the phone, but this way we get a somewhat realistic window on the desktop. Executing the python file should result in something like this.
+`org.kde.myapp.appdata.xml` contains the [AppStream](https://www.freedesktop.org/software/appstream/docs/sect-Metadata-Application.html)
+metadata. These are the data that are displayed on Linux software stores
+and should be filled with care before releasing an application.
 
-In the [next part of this tutorial](../basic_controls) we are going to fill this window with more life using QtQuick and Kirigami components. 
+`org.kde.myapp.desktop` is the so called `.desktop` file that
+contains information about how the application should be displayed
+in a linux application launcher.
+
+The two `CMakeLists.txt` files contains all the information about how the
+application will be compiled and installed.
+
+`resources.qrc` contains the list of all the qml files and other files
+that will be included in the binary. It is important to update it each
+time a new qml file is added in the application.
+
+`main.cpp` is the entrypoint to your application. The two parts of your
+project, the backend and the user interface are both set up and started
+here. Currently there is only a basic user interface, in the file called
+`main.qml` that is being loaded into the QML engine at the end of the
+`main` function.
+
+Open the generated folder in an editor or Integrated Development Enviroment
+of your choice, like QtCreator or [KDevelop](https://kdevelop.org).
 
 
+## Anatomy of `main.qml`
+
+{{< readfile file="/content/docs/kirigami/getting_started/main.qml" highlight="json" >}}
+
+The base element is a [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow)
+and it provides some basic features
+needed for all Kirigami applications.
+
+The [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer)
+is the left sidebar of the application
+and will contain your application's navigation. The right sidebar is
+provided by the [Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer)
+and it contains all your context specific actions on mobile.
+
+The last and most important part of `main.qml` is the [Kirigami.Page](docs:kirigami2;Page)
+and contains your content. This is also that we will see in the next part
+of this tutorial.
+
+## Compiling and running the application
+
+In case you are not using a graphical development environment that supports this out of the box, you can build it using:
+```
+cmake -B build/ . && cmake --build build/
+```
+
+The resulting binary can be found in `./build/src/<project name>` or 
+`./build/bin/<project name>` if you are using a recent version of the
+template.
+
+![Screenshot of the generated Kirigami application](template.png)

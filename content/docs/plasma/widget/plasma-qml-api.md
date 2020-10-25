@@ -7,7 +7,7 @@ description: >
 
 ## Intro
 
-KDE Frameworks ships with a number of useful extensions to Qt's QML. The [API documentation](https://api.kde.org/frameworks/plasma-framework/html/index.html) is a good start if you need to know what a specific property does. If you want to browse any of the sources easier, it's also [available on GitLab](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/declarativeimports).
+KDE Frameworks ships with a number of useful extensions to Qt's QML. The [API documentation](docs:plasma) is a good start if you need to know what a specific property does. If you want to browse any of the sources easier, it's also [available on GitLab](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/declarativeimports).
 
 
 ## PlasmaComponents Controls

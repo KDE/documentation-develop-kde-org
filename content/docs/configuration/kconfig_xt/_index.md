@@ -148,11 +148,11 @@ the generation of the yourconfigclassname.{h,cpp} files where your configuration
 reside.
 
 There are additional optional entries, which your application might need. The full list is
-available on the [kconfig_compiler](https://api.kde.org/frameworks/kconfig/html/kconfig_compiler.html).
+available on the [kconfig_compiler](docs:kconfig;kconfig_compiler.html).
 
 {{< alert title="Note" color="info" >}}
 You can find more information about all the available options in the
-[kconfig_compiler documentation](https://api.kde.org/frameworks/kconfig/html/kconfig_compiler.html).
+[kconfig_compiler documentation](docs:kconfig;kconfig_compiler.html).
 {{< /alert >}}
 
 ## Adjusting the CMakeLists.txt file

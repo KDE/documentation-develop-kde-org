@@ -7,7 +7,7 @@ description: >
 
 ## Summary
 
-This tutorial carries on from [First Program Tutorial](../hello_world) and will introduce the {{< api-link module="kxmlgui" link="KXmlGuiWindow" >}} class. 
+This tutorial carries on from [First Program Tutorial](../hello_world) and will introduce the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) class.
 
 In the previous tutorial, the program caused a dialog box to pop up but we're going to take steps towards a functioning application.
 
@@ -15,7 +15,7 @@ In the previous tutorial, the program caused a dialog box to pop up but we're go
 
 ## KXmlGuiWindow
 
-{{< api-link module="kxmlgui" link="KXmlGuiWindow" >}} provides a full main window view with menubars, toolbars, a statusbar and a main area in the centre for a large widget. For example, the help-menu is predefined. Most KDE applications will derive from this class as it provides an easy way to define menu and toolbar layouts through XML files (this technology is called XMLGUI and is part of the KF5::XmlGui framework). While we will not be using XMLGUI in this tutorial, we will use it in the next.
+[KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) provides a full main window view with menubars, toolbars, a statusbar and a main area in the centre for a large widget. For example, the help-menu is predefined. Most KDE applications will derive from this class as it provides an easy way to define menu and toolbar layouts through XML files (this technology is called XMLGUI and is part of the KF5::XmlGui framework). While we will not be using XMLGUI in this tutorial, we will use it in the next.
 
 In order to have a useful KXmlGuiWindow, we must subclass it. So we create two files, a `mainwindow.cpp` and a `mainwindow.h` which will contain our code.
 
@@ -36,7 +36,7 @@ First, of course, we have to include the header file containing the class declar
 
 We initialise our text editor with an object and use KXmlGuiWindow's built-in `setCentralWidget()` function on it which tells the KXmlGuiWindow what should appear in the central section of the window. 
 
-Finally, {{< api-link module="kxmlgui" link="KXmlGuiWindow::setupGUI" >}} is called which does a lot of behind-the-scenes stuff and creates the default menu bars (Settings, Help). 
+Finally, [KXmlGuiWindow::setupGUI](docs:kxmlgui;KXmlGuiWindow::setupGUI) is called which does a lot of behind-the-scenes stuff and creates the default menu bars (Settings, Help).
 
 ### Back to main.cpp
 

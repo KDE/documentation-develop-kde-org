@@ -23,9 +23,9 @@ Nothing changed here.
 
 {{< readfile file="/content/docs/getting-started/saving_and_loading/mainwindow.h" highlight="cpp" >}}
 
-Since we want to add the ability to load and save files, we must add the functions which will do the work. Since the functions will be called through [Qt's signal/slot ](http://doc.qt.io/qt-5/signalsandslots.html) mechanism we must specify that these functions are slots. Since we are using slots in this header file, we must also add the [Q_OBJECT ](http://doc.qt.io/qt-5/qobject.html#Q_OBJECT) macro. 
+Since we want to add the ability to load and save files, we must add the functions which will do the work. Since the functions will be called through [Qt's signal/slot](http://doc.qt.io/qt-5/signalsandslots.html) mechanism we must specify that these functions are slots. Since we are using slots in this header file, we must also add the [Q_OBJECT](http://doc.qt.io/qt-5/qobject.html#Q_OBJECT) macro.
 
-We also want to keep track of the filename of the currently opened file so we declare a [QString ](https://doc.qt.io/qt-5/qstring.html) `fileName`. 
+We also want to keep track of the filename of the currently opened file so we declare a [QString](https://doc.qt.io/qt-5/qstring.html) `fileName`.
 
 ### mainwindow.cpp
 
@@ -35,7 +35,7 @@ We'll get into the details of mainwindow.cpp in a while.
 
 ### savingloadingui.rc
 
-This is identical to usingactionsui.rc from the [previous tutorial](../using_actions) except the name has changed to 'savingloading'. We do not need to add any information about any of the {{< api-link module="kconfigwidgets" link="KStandardAction" >}} since the placement of those actions is handled automatically by XMLGUI system. 
+This is identical to usingactionsui.rc from the [previous tutorial](../using_actions) except the name has changed to 'savingloading'. We do not need to add any information about any of the [KStandardAction](docs:kconfigwidgets;KStandardAction) since the placement of those actions is handled automatically by XMLGUI system.
 
 ## Explanation
 
@@ -45,7 +45,7 @@ The first thing we do is add `fileName(QString())` to the MainWindow constructor
 
 ### Adding the actions
 
-The first thing we are going to do is provide the outward interface for the user so they can tell the application to load and save. Like with the quit action in [previous tutorial](../using_actions), we will use {{< api-link module="kconfigwidgets" link="KStandardAction" >}}. We add the actions in the same way as for the quit action and, for each one, we connect it to the appropriate slot that we declared in the header file. 
+The first thing we are going to do is provide the outward interface for the user so they can tell the application to load and save. Like with the quit action in [previous tutorial](../using_actions), we will use [KStandardAction](docs:kconfigwidgets;KStandardAction). We add the actions in the same way as for the quit action and, for each one, we connect it to the appropriate slot that we declared in the header file.
 
 ### Creating a new document
 
@@ -148,13 +148,13 @@ const QUrl fileNameFromDialog = QFileDialog::getOpenFileUrl(this, i18n("Open Fil
 
 Here we use the [QUrl](https://doc.qt.io/qt-5/qurl.html) class to handle files from remote locations. 
 
-Then we use the KIO library to retrieve our file. This allows us to open the file normally even if it's stored in a remote location like an FTP site. We make the following call to the {{< api-link module="kio" link="KIO::storedGet" >}} function with an argument for the file you wish to open or download: 
+Then we use the KIO library to retrieve our file. This allows us to open the file normally even if it's stored in a remote location like an FTP site. We make the following call to the [KIO::storedGet](docs:kio;KIO::storedGet) function with an argument for the file you wish to open or download:
 
 ```c++
 const KIO::Job *job = KIO::storedGet(fileNameFromDialog);
 ```
 
-The function returns a handle to a {{< api-link module="kio" link="KIO::Job" >}}, which we first connect to our `downloadFinished()` slot before "running" the job. 
+The function returns a handle to a [KIO::Job](docs:kio;KIO::Job), which we first connect to our `downloadFinished()` slot before "running" the job.
 
 ```c++
 connect(job, &KJob::result, this, &KJob::downloadFinished);
@@ -170,7 +170,7 @@ fileName.clear();
 
 Otherwise, we continue with opening the file.
 
-The data that `storedGet()` successfully downloaded, in this case the contents of our text file, is stored in the data member of a {{< api-link module="kio" link="KIO::StoredTransferJob" >}} class. But in order to display the contents of the file at text, we must use a [QTextStream](https://doc.qt.io/qt-5/qtextstream.html). We create one by passing the the data of the `StoredTransferJob` to its constructor and then call its `readAll()` function to get the text from the file. This is then passed to the `setPlainText()` function of our text area. 
+The data that `storedGet()` successfully downloaded, in this case the contents of our text file, is stored in the data member of a [KIO::StoredTransferJob](docs:kio;KIO::StoredTransferJob) class. But in order to display the contents of the file at text, we must use a [QTextStream](https://doc.qt.io/qt-5/qtextstream.html). We create one by passing the the data of the `StoredTransferJob` to its constructor and then call its `readAll()` function to get the text from the file. This is then passed to the `setPlainText()` function of our text area.
 
 
 {{< alert title="Note" color="info" >}}
@@ -183,7 +183,7 @@ Again, for simplicity's sake, this tutorial only saves text files to local disk.
 
 {{< readfile file="/content/docs/getting-started/saving_and_loading/CMakeLists.txt" highlight="cmake" >}}
 
-Since we are now using the KIO library, we must tell CMake to link against it. We do this by passing `KIO` to the `find_package()` function and `KF5::KIOCore` to `target_link_libraries()` function. 
+Since we are now using the KIO library, we must tell CMake to link against it. We do this by passing `KIO` to the `find_package()` function and `KF5::KIOCore` to `target_link_libraries()` function.
 
 With this file, the tutorial can be built and run in the same way as the [previous tutorial](../using_actions).
 

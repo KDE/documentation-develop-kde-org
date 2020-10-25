@@ -28,7 +28,7 @@ Every widget by default has a configure action when you right click the widget c
 
 `main.xml` is where you define the properties that will be serialized into `~/.config/plasma-org.kde.plasma.desktop-appletsrc`. All properties will be accesible with `plasmoid.configuration.variableName` reguardless of was group it's in.
 
-[KConfig](https://api.kde.org/frameworks/kconfig/html/annotated.html) has a variety of data types:
+[KConfig](docs:kconfig;annotated.html) has a variety of data types:
 
 * `Int` for an Integer number
 * `Double` for a double precision floating point number (Real)

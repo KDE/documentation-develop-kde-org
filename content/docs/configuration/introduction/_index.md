@@ -21,7 +21,7 @@ Values stored may be of any number of data types. They are stored and retrieved 
 
 ### The KConfig Class
 
-The {{< api-link module="kconfig" link="KConfig" >}} object is used to access a given configuration object. There are a number of ways to create a config object: 
+The [KConfig](docs:kconfig;KConfig) object is used to access a given configuration object. There are a number of ways to create a config object:
 
 {{< highlight cpp >}}
 // a plain old read/write config object
@@ -55,7 +55,7 @@ Finally on line 18 we see the creation of a configuration object that does not e
 
 ### Special Configuration Objects
 
-Each application has its own configuration object that uses the name provided to {{< api-link module="kcoreaddons" link="KAboutData" >}} appended with "rc" as its name. So an app named "myapp" would have the default configuration object of "myapprc" (located in $HOME/.config/). This configuration file can be retrieved in this way: 
+Each application has its own configuration object that uses the name provided to [KAboutData](docs:kcoreaddons;KAboutData) appended with "rc" as its name. So an app named "myapp" would have the default configuration object of "myapprc" (located in $HOME/.config/). This configuration file can be retrieved in this way:
 
 ```cpp
 #include <KComponentData>
@@ -103,9 +103,9 @@ for (const QString &group: config->groupList()) {
 
 ## KSharedConfig
 
-The {{< api-link module="kconfig" link="KSharedConfig" >}} class is a reference counted pointer to a {{< api-link module="kconfig" link="KConfig" >}}. It thus provides a way to reference the same configuration object from multiple places in your application without the extra overhead of separate objects or concerns about synchronizing writes to disk even if the configuration object is updated from multiple code paths. 
+The [KSharedConfig](docs:kconfig;KSharedConfig) class is a reference counted pointer to a [KConfig](docs:kconfig;KConfig). It thus provides a way to reference the same configuration object from multiple places in your application without the extra overhead of separate objects or concerns about synchronizing writes to disk even if the configuration object is updated from multiple code paths.
 
-Accessing a {{< api-link module="kconfig" link="KSharedConfig" >}} object is as easy as this: 
+Accessing a [KSharedConfig](docs:kconfig;KSharedConfig) object is as easy as this:
 
 ```cpp
 KSharedConfigPtr config = KSharedConfig::openConfig("ksomefilerc");
@@ -125,7 +125,7 @@ KConfigGroup generalGroup(&config, "General");
 KConfigGroup colorsGroup = config.group("Colors"); // ... or a bit differently ...
 ```
 
-You can pass {{< api-link module="kconfig" link="KConfig" >}} or {{< api-link module="kconfig" link="KSharedConfig" >}} objects to {{< api-link module="kconfig" link="KConfigGroup" >}}. 
+You can pass [KConfig](docs:kconfig;KConfig) or [KSharedConfig](docs:kconfig;KSharedConfig) objects to [KConfigGroup](docs:kconfig;KConfigGroup).
 
 Config groups can be nested as well: 
 
@@ -136,7 +136,7 @@ KConfigGroup subGroup2 = colorsGroup.group("Dialogs");
 
 ## Reading Entries
 
-With a {{< api-link module="kconfig" link="KConfigGroup" >}} object in hand reading entries is now quite straight forward: 
+With a [KConfigGroup](docs:kconfig;KConfigGroup) object in hand reading entries is now quite straight forward:
 
 ```cpp
 QString accountName = generalGroup.readEntry("Account", QString());
@@ -168,7 +168,7 @@ Note the use of `writePathEntry` and how the type of object we use, such as [QCo
 
 When is a configuration file not a configuration file? When it is a [desktop](http://freedesktop.org/wiki/Specifications/desktop-entry-spec) file. These files, which are essentially configuration files at their heart, are used to describe entries for application menus, mimetypes, plugins and various services. 
 
-When accessing a .desktop file, one should instead use the {{< api-link module="kconfig" link="KDesktopFile" >}} class which, while a {{< api-link module="kconfig" link="KConfig" >}} class offering all the capabilities described above, offers a set of methods designed to make accessing standard attributes of these files consistent and reliable. 
+When accessing a .desktop file, one should instead use the [KDesktopFile](docs:kconfig;KDesktopFile) class which, while a [KConfig](docs:kconfig;KConfig) class offering all the capabilities described above, offers a set of methods designed to make accessing standard attributes of these files consistent and reliable.
 
 ## Kiosk: Lockdown and User/Group Profiles
 

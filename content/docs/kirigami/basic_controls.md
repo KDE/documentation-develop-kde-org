@@ -1,64 +1,24 @@
 ---
 title: Basic Controls
 weight: 2
+group: introduction
+description: >
+  Learn how to add some basic components to your application
 ---
 
-In the first part of this tutorial, you created a stub Python/Kirigami app that
-doesn’t do anything. Time to change that! In this post you will be filling the
+In the first part of this tutorial, you generated a sample Kirigami application that
+doesn’t do much yet. Time to change that! In this part you will be filling the
 screen with some controls.
-
-## Kirigami Pages
-
-Kirigami apps are typically organized in Pages. Those are the different ‘Screens’
-of an app. If you come from the Android world you can think of them as the view
-part of activities. In our case we want to have an initial page that offers to
-enter a stop or a destination and opens a new page that shows a list of possible
-routes. Clicking on one of the list items opens a new page with a detailed view
-about the connections.
-
-Pages are organized in a pagestack where pages can be pushed and popped. On a phone
-only the topmost page is shown, whereas on a larger screen (desktop or tablet)
-multiple pages can be shown next to each other.
-
-{{< figure src="mobile.png" title="A single page on the phone" >}}
-
-{{< figure src="desktop.png" title="Two pages next to each other on the desktop" >}}
-
-So let’s create some pages! To simplify the QML code, you are going to put each
-page in its own .qml file and let the name end with Page. The first version of
-StartPage.qml looks like this:
-
-```json
-import QtQuick 2.2
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.4
-import org.kde.kirigami 2.0 as Kirigami
-
-Kirigami.Page
-{
-    title: "Start journey"
-}
-```
-
-It produces an empty page with a title. Before we can actually see it we need to add
-it to the pageStack. Replace the `Label {}` declaration in main.qml with
-
-```js
-pageStack.initialPage: Qt.resolvedUrl("StartPage.qml")
-```
-
-`pageStack.initialPage` is, well, setting the initial Page of the Page stack.
-`Qt.resolveUrl` is converting the relative URL of the QML file into an absolute one.
-Starting the app gives us an empty page
 
 ## Basic controls
 
-Remember the original goal, building a application that check departures and routes
-for public transport. So on the start page you need need a way to enter start and
+In the following, we will use the example of an application that checks departures
+and routes for public transport.
+On the start page, there needs to be a way to enter start and 
 destination of our journey as well as the date and time of our travel. For start
-and destination you can use simple TextFields from QtQuick Controls 2. Note that
+and destination you can use the `TextField` component from QtQuick Controls 2. Note that
 the older version 1 of QtQuick Controls is still around for the foreseable future,
-but you want to avoid using that. We’re extending StartPage.qml with our controls
+but you want to avoid using that. We’re extending `StartPage.qml` with our controls
 
 ```json
 ColumnLayout {
@@ -115,7 +75,7 @@ true, resulting in each one getting 50% of the space.
 The buttons look a bit weird, don’t they? That’s because they are using the built-in
 QtQuick Controls style. If you are using Plasma you are probably used to the
 `org.kde.desktop` style which emulates the active Qt Widgets style. You can force your
-app to use the org.kde.desktop style by running `QT_QUICK_CONTROLS_STYLE=”org.kde.desktop” ./main.py`.
+app to use the `org.kde.desktop` style by running `QT_QUICK_CONTROLS_STYLE="org.kde.desktop" <app name>`.
 
 ![Application screenshot](style2.png)
 
@@ -166,5 +126,5 @@ Kirigami.Page
 }
 ```
 
-<!-- Right now it’s just an empty page, you’re going to fill it with life in the [next part of this turorial](search_page). -->
-
+Now that you know how to add elements to the user interface of your application, you will probably want them to have useful functionality.
+[Continue to the next page](../connect_backend) on how to do that.
