@@ -38,7 +38,7 @@ weight: 20
           Umbrello
         </a>
         <a href="https://apps.kde.org/clazy">
-          <img src="https://app.kde.org/applications/icons/org.kde.clazy.svg" />
+          <img src="https://apps.kde.org/app-icons/org.kde.clazy.svg" />
           Clazy
         </a>
         <a href="https://apps.kde.org/kcachegrind">
@@ -50,7 +50,7 @@ weight: 20
           Heaptrack
         </a>
         <a href="https://apps.kde.org/massif-visualizer">
-          <img src="https://app.skde.org/app-icons/org.kde.massif-visualizer.svg" />
+          <img src="https://apps.kde.org/app-icons/org.kde.massif-visualizer.svg" />
           Massif-Visualizer
         </a>
       </div>
