@@ -17,7 +17,7 @@ weight: 20
           <p>KDevelop is KDE's full-fledged development environment.</p>
         </div>
         <div>
-          <img class="img-fluid" src="https://kde.org/applications/icons/org.kde.kdevelop.svg">
+          <img class="img-fluid" src="https://apps.kde.org/app-icons/org.kde.kdevelop.svg">
         </div>
       </a>
       <a class="tool tool-one" href="https://kate-editor.org">
@@ -26,7 +26,7 @@ weight: 20
           <p>Kate is KDE's lightweight, but feature-rich text editor</p>
         </div>
         <div>
-          <img class="img-fluid" src="https://kde.org/applications/icons/org.kde.kate.svg">
+          <img class="img-fluid" src="https://apps.kde.org/app-icons/org.kde.kate.svg">
         </div>
       </a>
     </div>
@@ -34,27 +34,27 @@ weight: 20
       <h3 class="mt-1">And many more tools</h3>
       <div class="more-apps">
         <a href="https://umbrello.kde.org">
-          <img src="https://kde.org/applications/icons/org.kde.umbrello.svg" />
+          <img src="https://apps.kde.org/app-icons/org.kde.umbrello.svg" />
           Umbrello
         </a>
-        <a href="https://kde.org/applications/development/org.kde.clazy">
-          <img src="https://kde.org/applications/icons/org.kde.clazy.svg" />
+        <a href="https://apps.kde.org/clazy">
+          <img src="https://app.kde.org/applications/icons/org.kde.clazy.svg" />
           Clazy
         </a>
-        <a href="https://kde.org/applications/development/org.kde.kcachegrind">
-          <img src="https://kde.org/applications/icons/org.kde.kcachegrind.svg" />
+        <a href="https://apps.kde.org/kcachegrind">
+          <img src="https://apps.kde.org/app-icons/org.kde.kcachegrind.svg" />
           KCacheGrind
         </a>
-        <a href="https://kde.org/applications/development/org.kde.heaptrack">
-          <img src="https://kde.org/applications/icons/org.kde.heaptrack.svg" />
+        <a href="https://apps.kde.org/heaptrack">
+          <img src="https://apps.kde.org/app-icons/org.kde.heaptrack.svg" />
           Heaptrack
         </a>
-        <a href="https://kde.org/applications/development/org.kde.massif-visualizer">
-          <img src="https://kde.org/applications/icons/org.kde.massif-visualizer.svg" />
+        <a href="https://apps.kde.org/massif-visualizer">
+          <img src="https://app.skde.org/app-icons/org.kde.massif-visualizer.svg" />
           Massif-Visualizer
         </a>
       </div>
-      <a href="https://kde.org/applications/development" class="learn-more mt-3">See All Tools</a>
+      <a href="https://apps.kde.org/development" class="learn-more mt-3">See All Tools</a>
     </div>
   </div>
 </section>
