@@ -62,7 +62,7 @@ Code
 
 ### Kirigami
 
--  [Kirigami: Action](docs:kirigami;Action)
--  [Kirigami: ScrollablePage](docs:kirigami;ScrollablePage)
+-  [Kirigami: Action](docs:kirigami2;Action)
+-  [Kirigami: ScrollablePage](docs:kirigami2;ScrollablePage)
 
 {{< readfile file="/content/hig/examples/kirigami/ActionButton.qml" highlight="qml" >}}

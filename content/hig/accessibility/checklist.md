@@ -1,5 +1,6 @@
 ---
 title: Accessibility Checklist
+weight: 1
 ---
 
 Introduction

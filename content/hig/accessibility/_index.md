@@ -1,5 +1,6 @@
 ---
 title: Accessibility
+weight: 8
 ---
 
 Introduction
@@ -24,17 +25,15 @@ Fonts and Colors
 
 Many users have some deficiencies when it comes to seeing. This does not
 always mean that they are blind. For some people it\'s enough when
-`fonts </style/typography>`{.interpreted-text role="doc"} are clear and
-the `color scheme </style/color/index>`{.interpreted-text role="doc"}
+[fonts](/hig/style/typography>) are clear and the [color scheme](/hig/style/color/)
 can be adjusted. This is something every application should do in any
 case, so here is the list:
 
 -   Follow the user interface guidelines! This will get you quite far.
 -   Check that color scheme changes apply Try switching to a
-    `dark color scheme </style/color/dark>`{.interpreted-text
-    role="doc"} and see that your application is still usable
--   Test changing the `font size </style/typography>`{.interpreted-text
-    role="doc"}
+    [dark color scheme](/hig/style/color/dark) and see that your
+    application is still usable
+-   Test changing the [font size](/hig/style/typography)
     -   Switch to different fonts and see that they apply
     -   Increase the font size and make sure that the application layout
         still works
@@ -65,10 +64,10 @@ There is a lot you can help with to make applications accessible to
 screen reader users. We refer to screen readers and other assistive
 technology often as AT.
 
-::: {.todo}
+{{< alert color="warning" title="TODO" >}}
 Setup Screen Readers with KDE Gives detailed setup instructions for
 screen readers.
-:::
+{{< /alert >}}
 
 Testing
 -------
