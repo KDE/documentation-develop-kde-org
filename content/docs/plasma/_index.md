@@ -10,16 +10,16 @@ The KDE wiki also has a [few tutorials](https://techbase.kde.org/Development/Tut
 Plasma is very modular. Plasma is shipped with preinstalled modules in your root directory `/usr/share/plasma/`, however you can also download themes/widgets to the user's home directory `~/.local/share/plasma/`.
 
 * **Plasma Style** (formerly called Desktop Theme) controls the panel/widget look.
-    * System/Default `/usr/share/plasma/desktoptheme/`
+    * System/Default `/usr/share/plasma/desktoptheme/` ([GitLab](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/desktoptheme))
     * User Installed `~/.local/share/plasma/desktoptheme/` ([KDE Store Category](https://store.kde.org/browse/cat/104/order/latest/))
 * **Color Theme** (misc colors for Qt5 apps)
     * Usually set in the `colors` file in a plasma style (desktop theme).
     * When a color theme is applied, it's values are copied to `~/.config/kdeglobals`
 * **Icon Theme**
-    * System/Default `/usr/share/icons/`
+    * System/Default `/usr/share/icons/` ([GitLab](https://invent.kde.org/frameworks/breeze-icons))
     * User Installed `~/.local/share/icons/` ([KDE Store Category](https://store.kde.org/browse/cat/132/order/latest/))
 * **Task Switcher** (Alt+Tab)
-    * System/Default `/usr/share/kwin/tabbox/`
+    * System/Default `/usr/share/kwin/tabbox/` ([GitLab](https://invent.kde.org/plasma/kdeplasma-addons/-/tree/master/windowswitchers))
     * User Installed `~/.local/share/kwin/tabbox/` ([KDE Store Category](https://store.kde.org/browse/cat/211/order/latest/))
     * Can also be bundled in a Global Theme [like Breeze does](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/lookandfeel/contents/windowswitcher/WindowSwitcher.qml).
     * Tutorial: [techbase.kde.org/Development/Tutorials/KWin/WindowSwitcher](https://techbase.kde.org/Development/Tutorials/KWin/WindowSwitcher)
@@ -27,10 +27,10 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
     * System/Default `/usr/share/plasma/plasmoids/`
     * User Installed `~/.local/share/plasma/plasmoids/` ([KDE Store Category](https://store.kde.org/browse/cat/418/order/latest/))
 * **Panel Layout Template** is a [Plasma Script](https://userbase.kde.org/KDE_System_Administration/PlasmaDesktopScripting) that generate a panel like "Add Panel > Default Panel".
-    * System/Default `/usr/share/plasma/layout-templates/`
+    * System/Default `/usr/share/plasma/layout-templates/` ([GitLab](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/layout-templates))
     * User Installed `~/.local/share/plasma/layout-templates/`
 * **Wallpaper Plugin** is a plugin that draws the desktop wallpaper.
-    * System/Default `/usr/share/plasma/wallpapers/`
+    * System/Default `/usr/share/plasma/wallpapers/` ([GitLab](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/wallpapers))
     * User Installed `~/.local/share/plasma/wallpapers/`
 * **Window Decoration** is the window titlebar.
     * Window Decorations are C++ plugins implementing the [KDecoration2 API](docs:kdecoration2). You will be unable to easily fork the default Breeze decoration as it's C++, however there is a preinstalled Aurorae plugin that can be themed with SVGs.
@@ -38,12 +38,12 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
     * User Installed `~/.local/share/aurorae/themes/` ([KDE Store Category](https://store.kde.org/browse/cat/114/order/latest/))
     * Tutorial: [techbase.kde.org/User:Mgraesslin/Aurorae](https://techbase.kde.org/User:Mgraesslin/Aurorae)
 * **KWin Effect** applies an animation during window events (eg: minimize).
-    * System/Default `/usr/share/kwin/effects/`
+    * System/Default `/usr/share/kwin/effects/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/effects))
     * User Installed `~/.local/share/kwin/effects/` ([KDE Store Category](https://store.kde.org/browse/cat/209/order/latest/))
 * **KWin Script** manages windows using [KWin Scripting](https://techbase.kde.org/Development/Tutorials/KWin/Scripting) to [arrange windows in a grid](https://store.kde.org/p/1281790/), or [display all windows at a glance](https://store.kde.org/p/1370195/).
-    * System/Default `/usr/share/kwin/scripts/`
+    * System/Default `/usr/share/kwin/scripts/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/scripts))
     * User Installed `~/.local/share/kwin/scripts/` ([KDE Store Category](https://store.kde.org/browse/cat/210/order/latest/))
     * API: [techbase.kde.org/Development/Tutorials/KWin/Scripting/API_4.9](https://techbase.kde.org/Development/Tutorials/KWin/Scripting/API_4.9)
 * **Global Theme** (formerly called Look and Feel) can switch a panel layout, Icon Theme, Plasma Style, etc.
-    * System/Default `/usr/share/plasma/look-and-feel/`
+    * System/Default `/usr/share/plasma/look-and-feel/` ([GitLab](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/lookandfeel))
     * User Installed `~/.local/share/plasma/look-and-feel/` ([KDE Store Category](https://store.kde.org/browse/cat/121/order/latest/))
