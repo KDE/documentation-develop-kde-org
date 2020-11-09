@@ -15,7 +15,8 @@ Neon you can install these with your package manager:
 ```bash
 sudo apt install build-essential extra-cmake-modules cmake qtbase5-dev \
                  qtdeclarative5-dev libqt5svg5-dev qtquickcontrols2-5-dev \
-                 qml-module-org-kde-kirigami2 kirigami2-dev libkf5i18n-dev
+                 qml-module-org-kde-kirigami2 kirigami2-dev libkf5i18n-dev \
+                 gettext
 ```
 
 <!-- Todo cover kdesrc-build somewhere and link to it -->
