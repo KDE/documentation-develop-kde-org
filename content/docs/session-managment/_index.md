@@ -43,7 +43,7 @@ For every other data that your application needs to restore a session, you have 
 Furthermore, the function [queryClose()](docs:kxmlgui;KMainWindow::queryClose) could be interesting for you. This function is called always before the window is closed, either by the user or indirectly by the session manager. (Note that this is not the case for a call of [QApplication::quit()](https://doc.qt.io/qt-5/qcoreapplication.html#quit) because this function will exit the event loop without causing a close event for the main windows. It will even not destroy them.) Typically, here you can warn the user that the application or some windows have unsaved data on close or logout (example: show a dialog with the buttons "Save changes" and "Discard changes"). However, for session management it isn't nice to need a user interaction before closing, so you better avoid this. Note that it is not determined if `saveProperties()` is called before or after `queryClose()`!
 
 {{< alert color="info" title="Note" >}}
-To save your application-wide properties (data that is only needed once per application, and not for each main window instance) reimplement [saveGlobalProperties()](docs:kxmlgui;KMainWindow::saveGlobalProperties) and it's counterpart [readGlobalProperties()](docs:kxmlgui;KMainWindow::saveGlobalProperties). Normally, you don't need these functions.
+To save your application-wide properties (data that is only needed once per application, and not for each main window instance) reimplement [saveGlobalProperties()](docs:kxmlgui;KMainWindow::saveGlobalProperties) and its counterpart [readGlobalProperties()](docs:kxmlgui;KMainWindow::saveGlobalProperties). Normally, you don't need these functions.
 {{< /alert >}}
 
 ## Add session management support to your main() function

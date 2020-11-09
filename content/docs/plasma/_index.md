@@ -14,7 +14,7 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
     * User Installed `~/.local/share/plasma/desktoptheme/` ([KDE Store Category](https://store.kde.org/browse/cat/104/order/latest/))
 * **Color Theme** (misc colors for Qt5 apps)
     * Usually set in the `colors` file in a plasma style (desktop theme).
-    * When a color theme is applied, it's values are copied to `~/.config/kdeglobals`
+    * When a color theme is applied, its values are copied to `~/.config/kdeglobals`
 * **Icon Theme**
     * System/Default `/usr/share/icons/` ([GitLab](https://invent.kde.org/frameworks/breeze-icons))
     * User Installed `~/.local/share/icons/` ([KDE Store Category](https://store.kde.org/browse/cat/132/order/latest/))

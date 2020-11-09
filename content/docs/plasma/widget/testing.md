@@ -74,7 +74,7 @@ Options:
   -h, --help                       Displays this help.
 ```
 
-You can test an installed widget by using it's plugin id.
+You can test an installed widget by using its plugin id.
 
 ```bash
 plasmoidviewer -a org.kde.plasma.kickoff

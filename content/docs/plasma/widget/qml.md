@@ -43,7 +43,7 @@ Item {
 {{< sections >}}
 {{< section-left >}}
 
-If we want to draw a colored rectangle, we can easily do so with [Rectangle](http://doc.qt.io/qt-5/qml-qtquick-rectangle.html). For other properties of the Rectangle, like border color and width, read it's [page in the QML Documentation](http://doc.qt.io/qt-5/qml-qtquick-rectangle.html).
+If we want to draw a colored rectangle, we can easily do so with [Rectangle](http://doc.qt.io/qt-5/qml-qtquick-rectangle.html). For other properties of the Rectangle, like border color and width, read its [page in the QML Documentation](http://doc.qt.io/qt-5/qml-qtquick-rectangle.html).
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -66,7 +66,7 @@ Rectangle {
 {{< sections >}}
 {{< section-left >}}
 
-By default, an [Item](http://doc.qt.io/qt-5/qml-qtquick-item.html) will not expand to fit it's contents. Nor will it expand to fit the width of it's parent (like a `<div>` in HTML).
+By default, an [Item](http://doc.qt.io/qt-5/qml-qtquick-item.html) will not expand to fit its contents. Nor will it expand to fit the width of its parent (like a `<div>` in HTML).
 
 In the this example, only the Teal Rectangle will be visible, since the Green Rectangle has the default width of 0px and height of 0px. The Teal Rectangle is only visible since the root item in a widget's `main.qml` has a default size which will be explained later.
 
@@ -160,7 +160,7 @@ If you want to stack a number of items on top of each other, you should use a [`
 
 Labels (which are just fancy Text items which follow Plasma's colors) have a default font size, which means they have their own default height. So they will be stacked on top of each other.
 
-Note that if the `ColumnLayout` is taller than it's contents, the children will have spacing between them.
+Note that if the `ColumnLayout` is taller than its contents, the children will have spacing between them.
 
 ![QML Label above another QML Label](columnlayout.png)
 
@@ -327,7 +327,7 @@ ColumnLayout {
 {{< sections >}}
 {{< section-left >}}
 
-There's also [RowLayout](http://doc.qt.io/qt-5/qml-qtquick-layouts-rowlayout.html) and [GridLayout](http://doc.qt.io/qt-5/qml-qtquick-layouts-gridlayout.html). Lastly there's [Flow](http://doc.qt.io/qt-5/qml-qtquick-flow.html) which will treat it's contents as if they all had the CSS `display: inline-block`.
+There's also [RowLayout](http://doc.qt.io/qt-5/qml-qtquick-layouts-rowlayout.html) and [GridLayout](http://doc.qt.io/qt-5/qml-qtquick-layouts-gridlayout.html). Lastly there's [Flow](http://doc.qt.io/qt-5/qml-qtquick-flow.html) which will treat its contents as if they all had the CSS `display: inline-block`.
 
 ![](https://i.imgur.com/qrDdw8L.png)
 

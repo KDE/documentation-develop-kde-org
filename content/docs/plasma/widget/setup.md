@@ -46,7 +46,7 @@ Note that you don't *need* the 3 config files. You can get away with just the `m
 
 Inside the `metadata.desktop` file we need to set the `Name` of the widget. The `Type` should be `Service` since the `.desktop` file is not an app launcher and we don't want this to appear in the app menu.
 
-`Icon` is the icon name associated with the widget. You can search for icon names in the `/usr/share/icon` folder. You can also look for an icon name by right clicking your app launcher widget then editing the icon in it's settings. It uses a searchable interface and lists them by category. Plasma's SDK also has the Cuttlefish app ([screenshot](https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png)) which you can install with `sudo apt install plasma-sdk`.
+`Icon` is the icon name associated with the widget. You can search for icon names in the `/usr/share/icon` folder. You can also look for an icon name by right clicking your app launcher widget then editing the icon in its settings. It uses a searchable interface and lists them by category. Plasma's SDK also has the Cuttlefish app ([screenshot](https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png)) which you can install with `sudo apt install plasma-sdk`.
 
 `X-KDE-PluginInfo-Name` needs to be a unique name, since it's used for the folder name it's installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you're planning on contributing the widget to KDE.  
 
@@ -54,7 +54,7 @@ Widgets installed by the user (without root) like when you "Install New Widgets"
 
 `X-KDE-PluginInfo-Category` is the category the widget can be filtered with in the widget list. A list of category names can be found [here](https://techbase.kde.org/Projects/Plasma/PIG).
 
-`X-KDE-ServiceTypes`, `X-Plasma-API`, and `X-Plasma-MainScript` are also needed to just define that this package is a plasma widget, and where it's entry point is.
+`X-KDE-ServiceTypes`, `X-Plasma-API`, and `X-Plasma-MainScript` are also needed to just define that this package is a plasma widget, and where its entry point is.
 
 For more, read the [Getting Started](https://techbase.kde.org/Development/Tutorials/Plasma5/QML2/GettingStarted#The_.desktop_file) tutorial on the KDE wiki.
 {{< /section-left >}}
@@ -91,7 +91,7 @@ This is the entry point. Various properties are available to be set. You should 
 * You can have a widget in the panel, which is just an icon that will show a popup window when clicked.
 * You can also have it on the desktop as a desktop widget which can be resized by the user. As a desktop widget it can switch between the "icon view" when smaller (which opens a popup), and directly showing the contents of the popup on the desktop when there's enough room.
 * You can also have the widget inside another widget (a containment) like the system tray or the panel itself.
-* The widget can also be run like an application in it's own window (Calculator).
+* The widget can also be run like an application in its own window (Calculator).
 
 `plasmoid.location` and `plasmoid.formFactor` can tell you how the widget is placed. `plasmoid` is a global variable which is defined when you `import org.kde.plasma.plasmoid 2.0`. Read more below.
 
@@ -99,7 +99,7 @@ This is the entry point. Various properties are available to be set. You should 
 
 If you change the compact representation, you will need to use a [`MouseArea`](https://doc.qt.io/qt-5/qml-qtquick-mousearea.html) to toggle the `plasmoid.expanded` property. See the [`DefaultCompactRepresentation.qml`](https://github.com/KDE/plasma-desktop/blob/master/desktoppackage/contents/applet/DefaultCompactRepresentation.qml) for an example.
 
-`Layout.preferredWidth` can be used to define the default width of a panel widget, or the size of the popup window (unless it is in the system tray). The system tray has a fixed hardcoded size for it's popups. `Layout.preferredWidth` can also define the width of the compact "icon" view in the horizontal panel, not just the full "popup" width. Note that the `Layout.preferredWidth`/`Layout.preferredHeight` of the `Plasmoid.compactRepresentation` will automatically scale to the thickness of the panel depending on if it's a vertical or horizontal panel.
+`Layout.preferredWidth` can be used to define the default width of a panel widget, or the size of the popup window (unless it is in the system tray). The system tray has a fixed hardcoded size for its popups. `Layout.preferredWidth` can also define the width of the compact "icon" view in the horizontal panel, not just the full "popup" width. Note that the `Layout.preferredWidth`/`Layout.preferredHeight` of the `Plasmoid.compactRepresentation` will automatically scale to the thickness of the panel depending on if it's a vertical or horizontal panel.
 
 `Layout.minimumWidth` can be used to define the minimum size for a desktop widget / popup.
 
