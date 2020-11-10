@@ -5,10 +5,10 @@ import QtQuick.Controls 2.0 as Controls
 Kirigami.ApplicationWindow {
     id: root
 
-    title: i18n("testes")
+    title: i18n("tests")
 
     globalDrawer: Kirigami.GlobalDrawer {
-        title: i18n("testes")
+        title: i18n("tests")
         titleIcon: "applications-graphics"
         actions: [
             ...
@@ -25,7 +25,7 @@ Kirigami.ApplicationWindow {
         id: mainPageComponent
 
         Kirigami.Page {
-            title: i18n("testes")
+            title: i18n("tests")
 
             actions {
                 ...
