@@ -40,7 +40,7 @@ The basic structure of a hypothetical time settings module is the following:
 
 [KQuickAddons::ConfigModule](docs:kdeclarative;KQuickAddons::ConfigModule)
 serves as the base class for all QML-based KCMs. The
-[KQuickAddons::ManagedConfigModule](docs:kdeclarative;KQuickAddons::ManagedConfigModule) inherits `ConfigModule` and adds the [KConfigXt](kconfig_xt) integration.
+[KQuickAddons::ManagedConfigModule](docs:kdeclarative;KQuickAddons::ManagedConfigModule) inherits `ConfigModule` and adds the [KConfigXt](../kconfig_xt) integration.
 Please consult the API documentation for a full description.
 
 ## timesettings.cpp
