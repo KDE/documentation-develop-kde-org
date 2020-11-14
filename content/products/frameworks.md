@@ -1,7 +1,7 @@
 ---
 title: KDE Frameworks
-subtitle: The KDE Frameworks are a set of 80 add-on libraries for programming with Qt.
-description: The KDE Frameworks are a set of 80 add-on libraries for programming with Qt.
+subtitle: The KDE Frameworks are a set of 83 add-on libraries for programming with Qt.
+description: The KDE Frameworks are a set of 83 add-on libraries for programming with Qt.
 layout: products
 logo: https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg
 scss: "scss/framework.scss"
@@ -149,7 +149,7 @@ scss: "scss/framework.scss"
         <p>
             Our tool to compile KDE software
         </p>
-        <a href="https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source" target="_blank">kdesrc-build</a>
+        <a href="https://kdesrc-build.kde.org" target="_blank">kdesrc-build</a>
       </div>
     </div>
     <div class="p-2 col-12 col-md-4">
