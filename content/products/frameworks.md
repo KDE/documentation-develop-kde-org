@@ -94,7 +94,7 @@ scss: "scss/framework.scss"
         <b>KI18n</b> adds Gettext support to applications, making it easier to integrate the translation workflow of Qt applications in the general translation infrastructure of many projects.
       </p>
       <p>
-        <a href="/products/kirigami"><b>Kirigami</b></a> is a responsive UI framework for QML.
+        <a href="/frameworks/kirigami"><b>Kirigami</b></a> is a responsive UI framework for QML.
       </p>
     </div>
   </div>
