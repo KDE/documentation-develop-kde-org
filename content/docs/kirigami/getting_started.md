@@ -72,7 +72,7 @@ of your choice, like QtCreator or [KDevelop](https://kdevelop.org).
 
 ## Anatomy of `main.qml`
 
-{{< readfile file="/content/docs/kirigami/getting_started/main.qml" highlight="json" >}}
+{{< readfile file="/content/docs/kirigami/getting_started/main.qml" highlight="qml" >}}
 
 The base element is a [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow)
 and it provides some basic features

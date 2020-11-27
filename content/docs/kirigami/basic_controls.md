@@ -20,7 +20,7 @@ and destination you can use the `TextField` component from QtQuick Controls 2. N
 the older version 1 of QtQuick Controls is still around for the foreseable future,
 but you want to avoid using that. We’re extending `StartPage.qml` with our controls
 
-```json
+```qml
 ColumnLayout {
     width: parent.width
 
@@ -53,7 +53,7 @@ Next you need some way to enter a departure date and time. Creating a time and d
 picker requires the need of the Kirigami Addons, so for the time being two simple
 placeholder buttons shall be enough. Let’s add them to our ColumnLayout
 
-```json
+```qml
 RowLayout {
     width: parent.width
     Button {
@@ -86,7 +86,7 @@ style that follows Android’s material guidelines
 
 Next we need a way to press “Search”. We could solve that with yet another button, but Kirigami offers another way. Pages in Kirigami can have Actions associated with them. The presentation differes from the phone to the desktop. On the phone actions are displayed on the bottom where they are easily reachable while on the desktop they are displayed in form of a toolbar at the top of the page. Let’s add an action to our page.
 
-```json
+```qml
 Kirigami.Page
 {
     id: root
@@ -114,7 +114,7 @@ You can force the mobile view on the desktop by setting the `QT_QUICK_CONTROLS_M
 
 Triggering the action pushes ConnectionsPage.qml on the pageStack. Of cource you need to create that one now:
 
-```json
+```qml
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.4

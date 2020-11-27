@@ -38,7 +38,7 @@ palette to use, as the `colorSet` property.
 
 Example:
 
-```json
+```qml
 import QtQuick 2.11
 import org.kde.kirigami 2.9 as Kirigami
 
@@ -79,7 +79,7 @@ entire hierarchy of items without touching any of the items themselves.
 
 Example:
 
-```json
+```qml
 import QtQuick 2.11
 import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.9 as Kirigami
@@ -146,7 +146,7 @@ set, some other components have a fixed color set, for instance Buttons
 are fixed to the `Button` color set. If it's desired for the button to inherit 
 the parent color set, the `inherit` property should be explicitly set to `true`:
 
-```json
+```qml
 import QtQuick 2.11
 import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.9 as Kirigami
@@ -166,7 +166,7 @@ maintainable way to assign a custom hardcoded palette to an item and all its
 children, that will allow to define such custom colors in one place and one 
 only:
 
-{{< readfile file="/content/docs/kirigami/colors/CustomColors.qml" highlight="json" >}}
+{{< readfile file="/content/docs/kirigami/colors/CustomColors.qml" highlight="qml" >}}
 
 
 ![Screenshot showing the code above with qmlscene, we can see two rectangles with two different colors](customcolors.png)

@@ -29,7 +29,7 @@ QIcon undoicon = QIcon::fromTheme("edit-undo");
 
 In a QtQuick application:
 
-{{< highlight json >}}
+{{< highlight qml >}}
 import org.kde.kirigami 2.14 as Kirigami
 
 Kirigami.Icon {

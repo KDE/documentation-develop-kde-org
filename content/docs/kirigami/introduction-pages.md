@@ -27,7 +27,7 @@ So let’s create some pages! To simplify the QML code, you are going to put eac
 page in its own `.qml` file and let the name end with `Page`. The first version of
 `StartPage.qml` looks like this:
 
-```json
+```qml
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.4
@@ -67,7 +67,7 @@ A [ScrollablePage](docs:kirigami2;ScrollablePage)
 is a Page that holds scrollable content, such as ListViews. Scrolling and scrolling indicators will
 be automatically managed.
 
-```json
+```qml
 ScrollablePage {
     id: root
     //The rectangle will automatically be scrollable
@@ -86,7 +86,7 @@ Another behavior added by this class is a "pull to refresh" behavior.
 To use this, activate it as follows:
 
 
-```json
+```qml
 Kirigami.ScrollablePage {
     id: view
     supportsRefreshing: true
