@@ -257,11 +257,11 @@ Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored
 
 * /dialogs**: elements for dialogs
   * **/background.svg**: generic dialog background used by the screensaver password dialog, etc. See the section on backgrounds above for information on the required elements in this file.
-    * **hint-left-shadow**: optional hints that say how big the shadow is
-    * **hint-top-shadow**
-    * **hint-right-shadow**
-    * **hint-bottom-shadow**
-    */widgets**: generic desktop widget background
+    * *hint-left-shadow*: optional hints that say how big the shadow is
+    * *hint-top-shadow*
+    * *hint-right-shadow*
+    * *hint-bottom-shadow*
+* /widgets**: generic desktop widget background
   * **/action-overlays.svg**: overlays for icons to indicate actions
     * *add-normal*: icon used to add the parent icon to a selection of elements (used for instance in folderview), normal state, there are also *add-hover* and *add-pressed*
     * *remove-normal*: icon used to remove the parent icon to a selection of elements, normal state, there are also *remove-hover* and *remove-pressed*
@@ -274,11 +274,11 @@ Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored
     * *label0*: the rect for the first label
     * *label1*: the rect for the second label
   * **/arrows.svg**: arrows that match the theme. Four elements should exist in this SVG: up-arrow, down-arrow, left-arrow, right-arrow.
-    **/background.svg**: a background image for plasmoids. See the section on backgrounds above for information on the required elements in this file.
-    * **hint-left-shadow**: optional hints that say how big the shadow is
-    * **hint-top-shadow**
-    * **hint-right-shadow**
-    * **hint-bottom-shadow**
+  * **/background.svg**: a background image for plasmoids. See the section on backgrounds above for information on the required elements in this file.
+    * *hint-left-shadow*: optional hints that say how big the shadow is
+    * *hint-top-shadow*
+    * *hint-right-shadow*
+    * *hint-bottom-shadow*
   * **/bar_meter_horizontal.svg**: an horizontal meter like a progressbar
     * *background*: background of the progressbar
     * *foreground*: overlay in the foreground of the progressbar
@@ -323,7 +323,7 @@ Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored
     * *hint-hands-shadow-offset-to-west* or *hint-hands-shadows-offset-to-east*: horizontal offset of the hands shadows, default is 0 offset (since Plasma 5.16)
     * *hint-hands-shadow-offset-to-north* or *hint-hands-shadow-offset-to-south*: vertical offset of the hands shadows, default is 0 offset (since Plasma 5.16)
     * Note: In the SVG, the Hand elements as well as their optional Shadow counterparts must be oriented in a direction as the one indicating the time 6:30:30. The relative position of the Hand elements as well as their optional Shadow counterparts with respect to the center of ClockFace does not matter.
-  * **/configuration-icons**: it's a set of simple icons that are meant to be shortcuts for configuration actions. Must contain the following elements:
+  * **/configuration-icons.svg**: it's a set of simple icons that are meant to be shortcuts for configuration actions. Must contain the following elements:
     * *close*: a close icon
     * *configure*: a setup action
     * *move*
@@ -369,7 +369,7 @@ Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored
     * *normal* : all virtual desktops
     * *active* : active virtual desktop
     * *hover* : virtual desktop under mouse
-    **/panel-background.svg**: the background image for panels.
+  * **/panel-background.svg**: the background image for panels.
     * If you want to create different background for panels located at the top, bottom, left or right, then also create sets of background elements with the following prefixes: *north*, *south*, *west* and *east* respectively. For example the center element of the left positioned panel's background should be named *west-center*.
     <!--*** When the panel is not 100% wide/tall the north, south etc. prefixes becomes *north-mini*, *south-mini* etc. . Please note that if KRunner <menuchoice>Positioning</menuchoice> is set to <menuchoice>Top edge of screen</menuchoice> (which is default), then Plasma treats it as not 100% wide north panel.-->
     * All prefixes fallback to a no prefix version when not available
@@ -381,7 +381,7 @@ Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored
     * *sunken-slider*
     * *background-vertical*
     * *background-horizontal*
-  * **/scrollwidget**: used by Plasma::ScrollWidget, it has a single prefix
+  * **/scrollwidget.svg**: used by Plasma::ScrollWidget, it has a single prefix
     * *border*: a border used when the scrollbar is enabled
   * **/slider.svg**: used to theme sliders, it must have the following elements:
     * *vertical-slider-line*: the background for vertical sliders, it indicates how much the indicator can scroll
@@ -394,12 +394,12 @@ Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored
     * *horizontal-slider-handle*: the handle for horizontal sliders
     * *horizontal-slider-focus*: background for the handle when it has input focus
     * *horizontal-slider-hover*: background for the handle when it is under the mouse
-    **/tabbar.svg**: graphics elements for tabbars: contains 4 frames, each one for tabs in the possible orientations a tabbar can be relative to its contents, with the prefixes:
+  * **/tabbar.svg**: graphics elements for tabbars: contains 4 frames, each one for tabs in the possible orientations a tabbar can be relative to its contents, with the prefixes:
     * *north*
     * *west*
     * *south*
     * *east*
-    **/tasks.svg**: task item backgrounds for tasks. See the section on backgrounds above for information on the required elements in this file.  The following element prefixes are required:
+  * **/tasks.svg**: task item backgrounds for tasks. See the section on backgrounds above for information on the required elements in this file.  The following element prefixes are required:
     * *focus*: background of focused task item
     * *hover*: background when the pointer hovers the task item. Focus and hover can have ticker borders that will be painted outside the task button, useful to make a glow effect.
     * *attention*: background when tasks item is trying to get attention
