@@ -1,5 +1,5 @@
 ---
-title: Actions
+title: Actions based components
 group: components
 weight: 4
 description: >
