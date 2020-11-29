@@ -1,7 +1,7 @@
 ---
 title: "Colors and Themes in Kirigami"
 linkTitle: "Colors "
-weight: 6
+weight: 201
 group: advanced
 description: >
   Make your app follow you user color scheme

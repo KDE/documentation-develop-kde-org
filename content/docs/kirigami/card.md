@@ -1,6 +1,6 @@
 ---
 title: Cards
-weight: 4
+weight: 102
 group: "components"
 description: >
   A card serves as overview and an entry point for more detailed information and can offer direct access to the most important actions on an item.

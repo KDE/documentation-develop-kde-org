@@ -1,6 +1,6 @@
 ---
 title: Basic Controls
-weight: 3
+weight: 4
 group: introduction
 description: >
   Learn how to add some basic components to your application

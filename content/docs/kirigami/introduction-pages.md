@@ -61,55 +61,6 @@ into the binary.
 </RCC>
 ```
 
-## `Kirigami.ScrollablePage`
-
-A [ScrollablePage](docs:kirigami2;ScrollablePage)
-is a Page that holds scrollable content, such as ListViews. Scrolling and scrolling indicators will
-be automatically managed.
-
-```qml
-ScrollablePage {
-    id: root
-    //The rectangle will automatically be scrollable
-    Rectangle {
-        width: root.width
-        height: 99999
-    }
-}
-```
-
-{{< alert color="danger" title="Warning" >}}
-Do not put a ScrollView inside of a ScrollablePage; children of a ScrollablePage are already inside a ScrollView.
-{{< /alert >}}
-
-Another behavior added by this class is a "pull to refresh" behavior.
-To use this, activate it as follows:
-
-
-```qml
-Kirigami.ScrollablePage {
-    id: view
-    supportsRefreshing: true
-    onRefreshingChanged: {
-        if (refreshing) {
-            myModel.refresh();
-        }
-    }
-    ListView {
-        // NOTE: MyModel doesn't come from the components,
-        // it's purely an example on how it can be used together
-        // some application logic that can update the list model
-        // and signals when it's done.
-        model: MyModel {
-            onRefreshDone: view.refreshing = false;
-        }
-        delegate: BasicListItem {}
-    }
-}
-```
-
-By pulling down, you can also activate a special mode with a larger top margin making single-handed usage of the application easier.
-
 ## More on pages
 
 A Kirigami [Page](docs:kirigami2;Page) inherits from a [QQC2 Page](https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html)
