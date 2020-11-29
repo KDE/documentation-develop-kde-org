@@ -1,7 +1,7 @@
 ---
 title: Pages
-weight: 3
-group: components
+weight: 2
+group: introductions
 description: Pages allow you to organize your application content
 ---
 
