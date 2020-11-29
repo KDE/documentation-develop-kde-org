@@ -1,7 +1,7 @@
 ---
 title: Pages
 weight: 2
-group: introductions
+group: introduction
 description: Pages allow you to organize your application content
 ---
 
