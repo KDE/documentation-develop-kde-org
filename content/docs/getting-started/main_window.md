@@ -62,8 +62,3 @@ The best way to compile, link and run it is to [set up a correct build environme
 ```bash
 mkdir build && cd build && cmake .. && make && ./mainwindow
 ```
-
-Moving On
----------
-
-Now you can move on to [Using Actions](../using_actions).

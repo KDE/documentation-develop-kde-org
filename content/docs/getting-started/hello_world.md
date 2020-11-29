@@ -77,8 +77,3 @@ And launch it with:
 ```bash
 ./helloworld
 ```
-    
-Moving On
----------
-
-Now you can move on to using [Creating the Main Window](../main_window).

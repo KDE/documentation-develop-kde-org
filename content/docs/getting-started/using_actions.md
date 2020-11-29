@@ -185,6 +185,3 @@ texteditor
 ```
 
 This temporarily adds (prepends) the newly created "share" location to `XDG_DATA_DIRS`, the standard path for application data files and change the `PATH` and other Qt environement variables.
-
-## Moving On
-

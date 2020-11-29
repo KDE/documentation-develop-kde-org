@@ -194,7 +194,3 @@ make install
 source prefix.sh # located in the build directory
 savingloading
 ```
-
-## Moving On
-
-
