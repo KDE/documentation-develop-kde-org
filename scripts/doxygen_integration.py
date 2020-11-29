@@ -63,7 +63,8 @@ TAG_FILES = [
     },
     {
         'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtquickcontrols.tags',
-        'base_url': 'https://doc.qt.io/qt-5/'
+        'base_url': 'https://doc.qt.io/qt-5/',
+        'default_prefix': 'QtQuick.Controls',
     }
 ]
 

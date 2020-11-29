@@ -12,7 +12,7 @@ KDE Frameworks ships with a number of useful extensions to Qt's QML. The [API do
 
 ## PlasmaComponents Controls
 
-QML ships with various controls, like [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html), [RadioButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html), [ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html) (dropdown menu), [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html), [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html), [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html), [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html), [Button](https://doc.qt.io/qt-5/qml-qtquick-controls2-button.html), [ToolButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-toolbutton.html). Plasma extends these controls to style them using the SVGs from the [Plasma Theme](https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails). It also assigns a number of default settings like setting the text color to follow the panel's color scheme.
+QML ships with various controls, like [CheckBox](docs:qtquickcontrols;Checkbox), [RadioButton](docs:qtquickcontrols;RadioButton), [ComboBox](docs:qtquickcontrols;Combobox) (dropdown menu), [SpinBox](docs:qtquickcontrols;Spinbox), [Slider](docs:qtquickcontrols;Slider), [TextField](docs:qtquickcontrols;TextField), [TextArea](docs:qtquickcontrols;TextArea), [Button](docs:qtquickcontrols;Button), [ToolButton](docs:qtquickcontrols;ToolButton). Plasma extends these controls to style them using the SVGs from the [Plasma Theme](https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails). It also assigns a number of default settings like setting the text color to follow the panel's color scheme.
 
 PlasmaComponents 3 is a QML library that extends the [Qt Quick Controls 2 components](https://doc.qt.io/qt-5/qtquickcontrols-index.html) with defaults adapted to fit into Plasma widgets. Because PlasmaComponents 3 inherits from Qt Quick Controls 2, they have the same API, so the [Qt documentation](https://doc.qt.io/qt-5/qtquickcontrols-index.html) can be followed. For Plasma's specific behaviour changes, you can read the QML source code for each control in:
 
@@ -27,12 +27,11 @@ You may see leftover imports to PlasmaComponents 2 in some widgets. It uses the 
 
 {{< sections >}}
 {{< section-left >}}
+[Labels](docs:qtquickcontrols;Label) are used for displaying text to the user.
+Plasma's Label are assigned a number of defaults. One thing
+is it sets the text color to follow the panel's color scheme.
 
-[Labels](https://doc.qt.io/qt-5/qml-qtquick-controls2-label.html) are used for displaying text to
-the user. Plasma's Label are assigned a number of defaults. One thing is it sets the text color to
-follow the panel's color scheme. For the specifics, you can read the
-[`Label.qml` source code](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Label.qml).
-
+For the specifics, you can read the [`Label.qml` source code](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Label.qml).
 {{< /section-left >}}
 {{< section-right >}}
 ```qml
@@ -52,7 +51,7 @@ PlasmaComponents3.Label {
 
 {{< sections >}}
 {{< section-left >}}
-For a simple toggle, QML ships with [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html). For Plasma's specific changes, you can read the QML source code at:
+For a simple toggle, QML ships with [CheckBox](docs:qtquickcontrols;CheckBox). For Plasma's specific changes, you can read the QML source code at:
 
 * [`CheckBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/CheckBox.qml)
 
@@ -76,7 +75,7 @@ PlasmaComponents3.CheckBox {
 
 {{< sections >}}
 {{< section-left >}}
-For mutiple choices, QML ships with [RadioButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html). For Plasma's specific changes, you can read the QML source code at:
+For mutiple choices, QML ships with [RadioButton](docs:qtquickcontrols;RadioButton). For Plasma's specific changes, you can read the QML source code at:
 
 * [`RadioButton.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/RadioButton.qml)
 
@@ -111,11 +110,12 @@ ColumnLayout {
 
 {{< sections >}}
 {{< section-left >}}
-For mutiple choices, QML also ships with [ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html) (dropdown menu). For Plasma's specific changes, you can read the QML source code at:
+
+For mutiple choices, QML also ships with [ComboBox](docs:qtquickcontrols;Combobox) (dropdown menu). For Plasma's specific changes, you can read the QML source code at:
 
 * [`ComboBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ComboBox.qml)
 
-Note that [`ComboBox.valueRole`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#valueRole-prop) and [`ComboBox.currentValue`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#currentValue-prop) was introduced in Qt 5.14. [Ubuntu 20.04 only has Qt 5.12](https://repology.org/project/qt/versions) so you will need to use the following properties until Ubuntu 22.04. Make sure to not define a `currentValue` property or it will break when your users upgrade to Qt 5.14.
+Note that [`ComboBox.valueRole`](lhttps://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#valueRole-prop) and [`ComboBox.currentValue`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#currentValue-prop) was introduced in Qt 5.14. [Ubuntu 20.04 only has Qt 5.12](https://repology.org/project/qt/versions) so you will need to use the following properties until Ubuntu 22.04. Make sure to not define a `currentValue` property or it will break when your users upgrade to Qt 5.14.
 
 ```
 PlasmaComponents3.ComboBox {
@@ -150,7 +150,8 @@ PlasmaComponents3.ComboBox {
 
 {{< sections >}}
 {{< section-left >}}
-To control Integer or Real numbers, QML ships with [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html) and [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html). For Plasma's specific changes, you can read the QML source code at:
+
+To control Integer or Real numbers, QML ships with [Spinbox](docs:qtquickcontrols;Spinbox) and [Slider](docs:qtquickcontrols;Slider). For Plasma's specific changes, you can read the QML source code at:
 
 * [`Slider.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Slider.qml)
 
@@ -200,7 +201,7 @@ RowLayout {
 
 {{< sections >}}
 {{< section-left >}}
-To control Integer or Real numbers, QML ships with [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html) and [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html). For Plasma's specific changes, you can read the QML source code at:
+To control Integer or Real numbers, QML ships with [SpinBox](docs:qtquickcontrols;Spinbox) and [Slider](docs:qtquickcontrols;Slider). For Plasma's specific changes, you can read the QML source code at:
 
 * [`SpinBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/SpinBox.qml)
 
@@ -236,7 +237,7 @@ RowLayout {
 
 {{< sections >}}
 {{< section-left >}}
-To enter text, QML ships with [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html) and [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html). For Plasma's specific changes, you can read the QML source code for each:
+To enter text, QML ships with [TextField](docs:qtquickcontrols;TextField) and [TextArea](docs:qtquickcontrols;TextArea). For Plasma's specific changes, you can read the QML source code for each:
 
 * [`TextField.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/TextField.qml)
 * [`TextArea.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/TextArea.qml)
@@ -265,7 +266,6 @@ RowLayout {
 ---
 
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -281,7 +281,7 @@ PlasmaComponents3.TextArea {
 
 {{< sections >}}
 {{< section-left >}}
-For buttons, QML ships with [Button](https://doc.qt.io/qt-5/qml-qtquick-controls2-button.html) and the flat [ToolButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-toolbutton.html) version. For Plasma's specific changes, you can read the QML source code for each:
+For buttons, QML ships with [Button](docs:qtquickcontrols;Button) and the flat [ToolButton](docs:qtquickcontrols;ToolButton) version. For Plasma's specific changes, you can read the QML source code for each:
 
 * [`Button.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Button.qml)
 * [`ToolButton.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ToolButton.qml)
@@ -320,7 +320,7 @@ PlasmaComponents3.ToolButton {
 
 {{< sections >}}
 {{< section-left >}}
-To add a scrollbar to manage overflow, QML ships with [ScrollView](https://doc.qt.io/qt-5/qml-qtquick-controls2-scrollview.html). For Plasma's specific changes, you can read the QML source code at:
+To add a scrollbar to manage overflow, QML ships with [ScrollView](docs:qtquickcontrols;ScrollView). For Plasma's specific changes, you can read the QML source code at:
 
 * [`ScrollView.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ScrollView.qml)
 
@@ -357,12 +357,12 @@ You will need to import `PlasmaExtras` to use them.
 
 {{< sections >}}
 {{< section-left >}}
-To be consistent with elsewhere in Plasma, Plasma ships with a couple different Label/Text types with preset default sizes. 
+To be consistent with elsewhere in Plasma, Plasma ships with a couple different Label/Text
+types with preset default sizes. The first one is [Heading](docs:plasma;org::kde::plasma::extras::Heading)
+for subsections of texts and the second one is [Paragraph](docs:plasma;org::kde::plasma::extras::Paragraph).
+Both wraps by default with `Layout.fillWidth: true`.
 
-* [`Heading.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmaextracomponents/qml/Heading.qml)  
-  Various Font Size levels, Wraps with `Layout.fillWidth: true`
-* [`Paragraph.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmaextracomponents/qml/Paragraph.qml)  
-  Justified Alignment, Wraps with `Layout.fillWidth: true`
+![Screenshot Paragraph and Heading](paragraphs.png)
 
 {{< /section-left >}}
 {{< section-right >}}
