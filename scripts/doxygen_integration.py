@@ -9,6 +9,7 @@ from pathlib import Path
 from json import dump
 from xml.etree.ElementTree import fromstring
 import os
+from shutil import copyfile
 import requests
 
 TAG_FILES = [
@@ -66,6 +67,10 @@ TAG_FILES = [
         'base_url': 'https://api.kde.org/frameworks/kitemmodels/html/',
     },
     {
+        'path': '/path',
+        'base_url': 'https://api.kde.org/frameworks/kitemmodels/html/',
+    },
+    {
         'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtquickcontrols.tags',
         'base_url': 'https://doc.qt.io/qt-5/',
         'default_prefix': 'QtQuick.Controls',
@@ -75,11 +80,18 @@ TAG_FILES = [
 components_map = {}
 
 for tag_file in TAG_FILES:
-    r = requests.get(tag_file['tags'])
-    Path("_data").mkdir(parents=True, exist_ok=True)
-    component_name = os.path.basename(os.path.splitext(tag_file['tags'])[0]).lower()
-    with open('_data/' + component_name + '.json', 'w') as f:
-        dump(bf.data(fromstring(r.content)), f)
+    if 'path' in tag_file:
+        Path("_data").mkdir(parents=True, exist_ok=True)
+        component_name = os.path.basename(os.path.splitext(tag_file['tags'])[0]).lower()
+        with open(tag_file['path'], "r") as r:
+            with open('_data/' + component_name + '.json', 'w') as f:
+                dump(bf.data(fromstring(r.read())), f)
+    else:
+        r = requests.get(tag_file['tags'])
+        Path("_data").mkdir(parents=True, exist_ok=True)
+        component_name = os.path.basename(os.path.splitext(tag_file['tags'])[0]).lower()
+        with open('_data/' + component_name + '.json', 'w') as f:
+            dump(bf.data(fromstring(r.content)), f)
 
     components_map[component_name] = {'url': tag_file['base_url']}
     if 'default_prefix' in tag_file:
