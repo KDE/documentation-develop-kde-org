@@ -1,0 +1,81 @@
+{{ define "main" }}
+  {{ .Render "content" }}
+  {{ range .Params.applications }}
+    <h2>{{ .name }}</h2>
+    {{ with .description }}
+      {{ . | markdownify }}
+    {{ end }}
+
+    {{ $hasmenu := .hasmenu }}
+    {{ with .keys }}
+    <table class="table">
+      <thead>
+        <tr>
+          <td>Key</td>
+          {{ if $hasmenu }}
+          <td>Menu</td>
+          {{ end }}
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range . }}
+          <tr>
+            <td>{{ .key }}</td>
+            {{ if $hasmenu }}
+            <td>{{ .menu }}</td>
+            {{ end }}
+            <td>{{ .action | markdownify }}</td>
+          </tr>
+        {{ end }}
+      </tbody>
+    </table>
+    {{ end }}
+    {{ with .directories }}
+    <table class="table">
+      <thead>
+        <tr>
+          <td>Key</td>
+          <td>Directory</td>
+          <td>Provides</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range . }}
+          <tr>
+            <td>{{ .key }}</td>
+            <td>{{ .directory }}</td>
+            <td>{{ .provides | markdownify }}</td>
+          </tr>
+        {{ end }}
+      </tbody>
+    </table>
+    {{ end }}
+  {{ end }}
+  <div class="row mt-5">
+    <div class="col-6 d-flex">
+      {{with .NextInSection }}
+        <a class="shadow p-3 h-100 d-flex w-100 align-items-center"
+           href="{{ .Permalink }}">
+          <i class="icon icon_go-previous h1"></i>
+          <div class="ml-3">
+            <div class="h4">Previous</div>
+            {{ .Title }}
+          </div>
+        </a>
+      {{ end }}
+    </div>
+    <div class="col-6 d-flex">
+      {{with .PrevInSection }}
+        <a class="shadow p-3 h-100 d-flex w-100 align-items-center"
+           href="{{ .Permalink }}">
+          <div class="mr-3">
+            <div class="h4">Next</div>
+            {{ .Title }}
+          </div>
+          <i class="icon icon_go-next h1 ml-auto"></i>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
