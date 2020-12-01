@@ -44,6 +44,10 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
     * System/Default `/usr/share/kwin/scripts/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/scripts))
     * User Installed `~/.local/share/kwin/scripts/` ([KDE Store Category](https://store.kde.org/browse/cat/210/order/latest/))
     * API: [techbase.kde.org/Development/Tutorials/KWin/Scripting/API_4.9](https://techbase.kde.org/Development/Tutorials/KWin/Scripting/API_4.9)
-* **Global Theme** (formerly called Look and Feel) can switch a panel layout, Icon Theme, Plasma Style, etc.
+* **Global Theme** (formerly called Look and Feel) can switch a panel layout, Icon Theme, Plasma Style, etc. It also contains the splash screen on login, and the lock screen.
     * System/Default `/usr/share/plasma/look-and-feel/` ([GitLab](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/lookandfeel))
     * User Installed `~/.local/share/plasma/look-and-feel/` ([KDE Store Category](https://store.kde.org/browse/cat/121/order/latest/))
+* **Login Screen (SDDM)** is the screen you see before you login to Plasma in most KDE distros. [SDDM](https://github.com/sddm/sddm) is not the lock screen.
+    * System/Default `/usr/share/sddm/themes/`
+    * Breeze Theme: [GitLab Link](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/sddm-theme)
+    * Testing: `sddm-greeter --test-mode --theme /usr/share/sddm/themes/breeze`
