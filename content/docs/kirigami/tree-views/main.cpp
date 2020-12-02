@@ -11,7 +11,7 @@
 class FileSystemModel : public QFileSystemModel {
     Q_OBJECT
 public:
-    explicit DisplayFileSystemModel(QObject *parent = Q_NULLPTR)
+    explicit FileSystemModel(QObject *parent = Q_NULLPTR)
         : QFileSystemModel(parent) {
             setRootPath(QDir::homePath());
             setResolveSymlinks(true);
