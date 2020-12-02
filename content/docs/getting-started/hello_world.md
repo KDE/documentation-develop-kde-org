@@ -39,7 +39,7 @@ We're all done as far as the code is concerned. Now to build it and try it out.
 
 ## Build
 
-You want to use :doc:`cmake` for your build environment. You provide a file `CMakeLists.txt`, CMake uses this file to generate all Makefiles out of it. 
+You want to use `cmake` for your build environment. You provide a file `CMakeLists.txt`, CMake uses this file to generate all Makefiles out of it. Learn more about why [KDE uses CMake from Alexander Neundorf](https://lwn.net/Articles/188693/).
 
 ### CMakeLists.txt
 
