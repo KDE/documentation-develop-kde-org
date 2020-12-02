@@ -47,6 +47,6 @@ mind and thus is ideal for mobile apps.
 Kirigami is a set of QtQuick components designed for creating convergent
 appslications.
 
-While the ui code is done in QML in a declarative way, the buissness logic
+While the UI code is done in QML in a declarative way, the business logic
 is usually created in C++ for performance reasons.
 
