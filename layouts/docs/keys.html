@@ -1,0 +1,40 @@
+{{ define "main" }}
+  {{ .Render "content" }}
+  {{ range $.Site.Data.keys }}
+    <h2>{{ .id }}<h2>
+    {{ range .groups }}
+      <h3>{{ .name }}</h3>
+      <ul>
+        {{ range .entries }}
+        <li><b>{{ .name }}:</b> ({{ .type }}, default: {{ .default }}) {{ .description }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  {{ end }}
+  <div class="row mt-5">
+    <div class="col-6 d-flex">
+      {{with .NextInSection }}
+        <a class="shadow p-3 h-100 d-flex w-100 align-items-center"
+           href="{{ .Permalink }}">
+          <i class="icon icon_go-previous h1"></i>
+          <div class="ml-3">
+            <div class="h4">Previous</div>
+            {{ .Title }}
+          </div>
+        </a>
+      {{ end }}
+    </div>
+    <div class="col-6 d-flex">
+      {{with .PrevInSection }}
+        <a class="shadow p-3 h-100 d-flex w-100 align-items-center"
+           href="{{ .Permalink }}">
+          <div class="mr-3">
+            <div class="h4">Next</div>
+            {{ .Title }}
+          </div>
+          <i class="icon icon_go-next h1 ml-auto"></i>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
