@@ -452,9 +452,15 @@ echo "[build] Done building messages"
 {{< section-left >}}
 First make sure you run our `build.sh` translation script.
 
+Next we need to install the language pack we want to test. We'll be testing with `fr_CA` (Canadian French).
+
+* **Kubuntu:** You'll need to [install the `language-pack-fr` package](https://packages.ubuntu.com/focal/language-pack-fr).
+* **Manjaro:** You'll need to go to System Settings > Locale > Add > Français > Canada. Click Apply, enter your password, then wait for it to generate the language pack.
+* **OpenSUSE:** You'll need to [install a secondary language using YaST](https://doc.opensuse.org/documentation/leap/archive/42.2/startup/html/book.opensuse.startup/cha.y2.lang.html#sec.y2.lang.primsec).
+
 Then we need to override the locale environment variables just for our `plasmoidviewer` instance. If you run the `locale` command, it should list all the environment variables available to override.
 
-In practice, we only need to override `LANG="fr_CA.UTF-8"` and another variable it didn't list `LANGUAGE="fr_CA:fr"`. If your widget is a clock, then you might also need to override `LC_TIME="fr_FR.UTF-8"`.
+In practice, we only need to override `LANG="fr_CA.UTF-8"` and another variable it didn't list `LANGUAGE="fr_CA:fr"`. If your widget is a clock, then you might also need to override `LC_TIME="fr_CA.UTF-8"`.
 {{< /section-left >}}
 {{< section-right >}}
 ```bash
