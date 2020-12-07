@@ -434,7 +434,9 @@ The dialog's source code can be found in [`CompactApplet.qml`](https://invent.kd
 {{< /section-left >}}
 {{< section-right >}}
 
-{{< readfile file="/content/docs/plasma/widget/snippet/popup-size.qml" highlight="qml" >}}
+```qml
+{{< readfile file="/content/docs/plasma/widget/snippet/popup-size.qml" >}}
+```
 
 {{< /section-right >}}
 {{< /sections >}}
