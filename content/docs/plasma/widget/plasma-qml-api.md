@@ -57,7 +57,7 @@ For a simple toggle, QML ships with [CheckBox](docs:qtquickcontrols;CheckBox). F
 
 {{< /section-left >}}
 {{< section-right >}}
-```
+```qml
 // main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
