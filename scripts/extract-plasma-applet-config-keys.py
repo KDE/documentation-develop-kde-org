@@ -123,6 +123,8 @@ if __name__ == "__main__":
     download_file('frameworks/karchive', 'examples/helloworld/main.cpp')
     download_file('frameworks/karchive', 'examples/bzip2gzip/main.cpp')
 
+    download_file('frameworks/kidletime', 'examples/KIdleTest.cpp')
+
     projects = os.listdir("./tmp/")
     keys = []
     for project in projects:
