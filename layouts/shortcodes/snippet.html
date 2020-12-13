@@ -1,0 +1,26 @@
+{{ $file := printf "files/%s/%s" (.Get "repo") (.Get "file") }}
+{{- if fileExists $file -}}
+  {{- $fileContent := $file  | readFile -}}
+  {{- $fileContent = split $fileContent "\n" -}}
+  {{- $line := 1 -}}
+  {{- $line_start := 0 -}}
+  {{- $line_end := false -}}
+  {{- $part := .Get "part" -}}
+  {{- range $fileContent -}}
+    {{- if not $line_end -}}
+      {{- if in . (printf "snippet_begin(%s)" $part) -}}
+        {{ $line_start = $line -}}
+      {{- end -}}
+      {{- if and (in . "//@@snippet_end") (not (eq $line_start 0)) -}}
+        {{- $line_end = true -}}
+        {{- $line = sub $line 2 -}}
+      {{- end -}}
+      {{- $line = add $line 1 -}}
+    {{ end }}
+  {{- end -}}
+  {{- $fileContent = first (sub $line $line_start) (after (default 0 $line_start) $fileContent) -}}
+  {{- $fileContent = delimit $fileContent "\n" -}}
+  {{- highlight ($fileContent) (.Get "lang") "" -}}
+{{ else -}}
+  {{- errorf "Run python3 scripts/extract-plasma-applet-config-keys.py first" -}}
+{{- end -}}

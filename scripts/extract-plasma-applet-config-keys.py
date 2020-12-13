@@ -5,6 +5,7 @@ import sys
 import xml.dom.minidom
 from xml.dom.minidom import parse
 import configparser
+import requests
 import tarfile
 import urllib.request as request
 
@@ -108,10 +109,19 @@ def parseConfig(path, plasmoid, keys):
             sys.stderr.write("No config in " + plasmoid +"\n")
     #abort on other errors so we can find them
 
+def download_file(repo: str, path: str):
+    content = requests.get('https://invent.kde.org/{}/-/raw/master/{}'.format(repo, path)).text
+    os.makedirs(os.path.dirname('files/{}/{}'.format(repo, path)), exist_ok=True)
+    with open('files/{}/{}'.format(repo, path), 'w+') as f:
+        f.write(content)
+
 if __name__ == "__main__":
     extractProjectDir('https://invent.kde.org/plasma/plasma-desktop/-/archive/master/plasma-desktop-master.tar.gz?path=applets')
     extractProjectDir('https://invent.kde.org/plasma/plasma-workspace/-/archive/master/plasma-workspace-master.tar.gz?path=applets')
     extractProjectDir('https://invent.kde.org/plasma/kdeplasma-addons/-/archive/master/kdeplasma-addons-master.tar.gz?path=applets')
+
+    download_file('frameworks/karchive', 'examples/helloworld/main.cpp')
+    download_file('frameworks/karchive', 'examples/bzip2gzip/main.cpp')
 
     projects = os.listdir("./tmp/")
     keys = []
