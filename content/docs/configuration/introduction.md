@@ -43,9 +43,7 @@ KConfig dataResource("data", KConfig::SimpleConfig, QStandardPaths::AppDataLocat
 
 The KConfig object create on line 2 is a regular config object. We can read values from it, write new entries and ask for various properties of the object. This object will be loaded from the config resource as determined by [QStandardPaths](https://doc.qt.io/qt-5/qstandardpaths.html), meaning that every instance of the myapprc object in each of the directories in the config resource hierarchy will be merged to create the values seen in this object. This is how system wide and per-user/group profiles are generated and supported and it all happens transparently to the application itself. 
 
-{{< alert title="Tip" color="success" >}}
-For more information on how the merging works, see the [KDE Filesystem Hierarchy](https://userbase.kde.org/KDE_System_Administration/KDE_Filesystem_Hierarchy) article.
-{{< /alert >}}
+The hierarchy of directories which is searched for configuration is defined by $XDG_CONFIG_DIRS, which is defined in the [XDG Base Directory Specification](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html). Qt supports this specification in `QStandardPaths`.
 
 On line 6 we open a specific local file, this case `/etc/kderc`. This performs no merging of values and expects an INI style file. 
 
@@ -58,15 +56,11 @@ Finally on line 18 we see the creation of a configuration object that does not e
 Each application has its own configuration object that uses the name provided to [KAboutData](docs:kcoreaddons;KAboutData) appended with "rc" as its name. So an app named "myapp" would have the default configuration object of "myapprc" (located in $HOME/.config/). This configuration file can be retrieved in this way:
 
 ```cpp
-#include <KComponentData>
-#include <KConfig>
-#include <KGlobal>
+#include <KSharedConfig>
 
 MyClass::MyClass()
 {
-    // note that this is actually a KSharedConfig
-    // more on that class in a bit!
-    KConfig *config = KGlobal::config();
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
 }
 ```
 
@@ -94,9 +88,10 @@ If we need to prevent the config object from saving already made modifications t
 Listing all groups in a configuration object is as simple as calling `groupList()` as in this code snippet: 
 
 ```cpp
-const KSharedConfigPtr config = KGlobal::mainComponent().config();
+KSharedConfig::Ptr config = KSharedConfig::openConfig();
 
-for (const QString &group: config->groupList()) {
+const auto groupList = config->groupList();
+for (const QString& group : groupList) {
     qDebug() << "next group:" << group;
 }
 ```
@@ -145,7 +140,7 @@ QStringList list = generalGroup.readEntry("List", QStringList());
 QString path = generalGroup.readPathEntry("SaveTo", defaultPath);
 ```
 
-As can be seen from the above, you can mix reads from different `KConfigGroup` objects created on the same `KConfig` object. The read methods take the key, which is case sensitive, as the first argument and the default value as the second argument. This argument controls what kind of data, e.g. a color in line 3 above, is to be expected as well as the type of object returned. The returned object is wrapped in a `QVariant` to make this magic happen. 
+In the example above, one can mix reads from different `KConfigGroup` objects created on the same `KConfig` object. The read methods take the key, which is case sensitive, as the first argument and the default value as the second argument. This argument controls what kind of data, e.g. a color in line 3 above, is to be expected as well as the type of object returned. The returned object is wrapped in a `QVariant` to make this magic happen. 
 
 There are a couple of special read methods, including `readPathEntry` which returns a file system path. It is vital that one uses `readPathEntry` if it is a path as this enables such features as roaming profiles to work properly. 
 
@@ -198,5 +193,3 @@ This can be useful in particular situations where an action should be taken when
 ## KConfig XT
 
 There is a way to make certain use cases of KConfig easier, faster and more reliable: KConfig XT. In particular, for main application or plugin configuration objects and when syncing configuration dialogs and other interfaces with these values, KConfig XT can help immensely. It also simultaneously documents the configuration options available, which makes every sys admin and system integrator that uses KDE that much more happy. 
-
-[The next tutorial in the KConfig series covers what KConfig XT is and how to use it.](../kconfig_xt)
