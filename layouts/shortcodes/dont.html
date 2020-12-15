@@ -1,0 +1,12 @@
+{{ if gt (len .Inner) 0 }}
+  {{ if .Get "src" }}
+    <figure {{ with .Parent }}class="col-12 col-md-6 text-center" {{ else }} class="col-12"{{ end }}>
+      <img src="{{ .Get "src" }}" alt="{{ .Inner }}" class="img-fluid" />
+      <figcaption class="alert alert-error">{{ .Inner }}</figcaption>
+    </figure>
+  {{ else }}
+    <span style="color: #da4453;">{{ .Inner }}</span>
+  {{ end }}
+{{ else }}
+  <h3 style="color: #da4453;">Don't</h3>
+{{ end }}
