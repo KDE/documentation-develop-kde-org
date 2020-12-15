@@ -117,7 +117,7 @@ def download_file(repo: str, path: str):
     content = requests.get('https://invent.kde.org/{}/-/raw/master/{}'.format(repo, path)).text
     os.makedirs(os.path.dirname('files/{}/{}'.format(repo, path)), exist_ok=True)
     with open('files/{}/{}'.format(repo, path), 'w+') as f:
-        f.write(content)
+        f.write(content, encoding="UTF-8")
 
 if __name__ == "__main__":
     extractProjectDir('https://invent.kde.org/plasma/plasma-desktop/-/archive/master/plasma-desktop-master.tar.gz?path=applets')
