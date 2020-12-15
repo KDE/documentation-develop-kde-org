@@ -68,7 +68,7 @@ Supposing that you want to use KAuth to perform a privileged operation and the a
 
 This is how, concept-proof, KAuth works. However, please note that in your implementation you will have to deal with the pre-authorization phase only, since everything else is handled internally.
 
-# Creating Actions with KAuth
+## Creating Actions with KAuth
 
 To increase the level of security, authorization systems require to register the actions together with the application installation, so that the authorized actions are all known to the system administrator. This means that if you're using KAuth you probably want to register some new actions in the system.
 
@@ -82,7 +82,7 @@ Many authorization systems are quite strict about action naming, hence staying c
 * ''org.kde.auth.example.readFile'' **NOT OK**
 * ''org.kde.auth.example.readfile'' **OK**
 
-# The basic .actions file
+## The basic .actions file
 
 This is done by creating a ''.actions'' file, which is a standard INI files containing a set of new actions. This file is translatable, and if you're developing your project in KDE git, scripty will take care of updating it.
 
