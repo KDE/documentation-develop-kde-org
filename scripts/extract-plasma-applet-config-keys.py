@@ -38,7 +38,7 @@ def nameForId(path, plasmoid):
         return "BUG"
 
     config = configparser.ConfigParser()
-    config.read(configPath)
+    config.read(configPath, encoding='UTF-8')
 
     return config['Desktop Entry']['X-KDE-PluginInfo-Name']
 
