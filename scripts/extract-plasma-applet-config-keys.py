@@ -132,6 +132,11 @@ if __name__ == "__main__":
     download_file('frameworks/kauth', 'examples/client.cpp')
     download_file('frameworks/kauth', 'examples/helper.cpp')
 
+    download_file('frameworks/kconfig', 'examples/all.cpp')
+
+    download_file('frameworks/sonnet', 'examples/textedit.cpp')
+    download_file('frameworks/sonnet', 'examples/dialogexample.cpp')
+
     projects = os.listdir("./tmp/")
     keys = []
     for project in projects:
