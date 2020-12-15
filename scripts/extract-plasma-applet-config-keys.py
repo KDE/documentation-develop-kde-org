@@ -57,6 +57,7 @@ def parseConfig(path, plasmoid, keys):
         if "private" in nameForId(path, plasmoid):
             return
 
+
         applet_config = {}
         applet_config['id'] = str(nameForId(path, plasmoid))
         applet_config['groups'] = []
@@ -107,6 +108,9 @@ def parseConfig(path, plasmoid, keys):
     except IOError:
         if DEBUG:
             sys.stderr.write("No config in " + plasmoid +"\n")
+    except UnicodeDecodeError:
+        sys.stderr.write("Wrong encoding in " + plasmoid +"\n")
+
     #abort on other errors so we can find them
 
 def download_file(repo: str, path: str):
