@@ -12,9 +12,9 @@
     {{ if $gl_subdir }}
       {{ $editURL = printf "%s/-/edit/%s/%s/content/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
     {{ end }}
-    {{ $sourceURL := printf "%s/-blob/%s/content/%s" $gl_repo $gl_branch $pathFormatted }}
+    {{ $sourceURL := printf "%s/-/blob/%s/content/%s" $gl_repo $gl_branch $pathFormatted }}
     {{ if $gl_subdir }}
-      {{ $sourceURL = printf "%s/-tree/%s/%s/content/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
+      {{ $sourceURL = printf "%s/-/tree/%s/%s/content/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
     {{ end }}
     {{ $issuesURL := printf "%s/-/issues/new?title=%s" $gl_repo (htmlEscape $.Title )}}
     <a href="{{ $editURL }}" target="_blank"><i class="icon icon_document-edit mr-2"></i> {{ T "post_edit_this" }}</a>
