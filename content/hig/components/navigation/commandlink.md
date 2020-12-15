@@ -1,7 +1,7 @@
 ---
 title: Command Link
 group: navigation
-weight 2
+weight: 2
 ---
 
 Purpose
