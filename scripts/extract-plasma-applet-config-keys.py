@@ -129,6 +129,9 @@ if __name__ == "__main__":
 
     download_file('frameworks/kidletime', 'examples/KIdleTest.cpp')
 
+    download_file('frameworks/kauth', 'examples/client.cpp')
+    download_file('frameworks/kauth', 'examples/helper.cpp')
+
     projects = os.listdir("./tmp/")
     keys = []
     for project in projects:

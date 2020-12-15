@@ -10,12 +10,12 @@
   {{- $part := .Get "part" -}}
   {{- range $fileContent -}}
     {{- if not $line_end -}}
-      {{- if in . (printf "snippet_begin(%s)" $part) -}}
-        {{ $line_start = $line -}}
-      {{- end -}}
-      {{- if and (in . "//@@snippet_end") (not (eq $line_start 0)) -}}
+      {{- if and (in . (printf "//! [%s]" $part)) (not (eq $line_start 0)) -}}
         {{- $line_end = true -}}
         {{- $line = sub $line 2 -}}
+      {{- end -}}
+      {{- if and (in . (printf "//! [%s]" $part)) (eq $line_start 0) -}}
+        {{ $line_start = $line -}}
       {{- end -}}
       {{- $line = add $line 1 -}}
     {{ end }}
