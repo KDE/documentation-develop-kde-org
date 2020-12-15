@@ -6,14 +6,14 @@ title: Dual-List
 ![Dual-list pattern](/hig/DualListOrdering.png)
 
 Multiple selection in
-`lists </components/editing/list>`{.interpreted-text role="doc"} with
+`lists </components/editing/list>` with
 more than a few items might become difficult because selected as well as
 available items are not visible at once. As an alternative approach, the
 *dual-list pattern* (also known as list builder, or paired lists) was
 introduced. It consists of two standard
-`list </components/editing/list>`{.interpreted-text role="doc"} boxes
+`list </components/editing/list>` boxes
 with the option to move items from one
-`list </components/editing/list>`{.interpreted-text role="doc"} to the
+`list </components/editing/list>` to the
 other and back. Dual-lists are useful for extended multiple selection in
 general, especially for huge sets of items or in case of elaborate
 selections. The trade-off is the rather large amount of space that is

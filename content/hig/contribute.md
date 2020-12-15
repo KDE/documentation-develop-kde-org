@@ -210,7 +210,7 @@ Adding examples to the HIG is very easy.
 Creating media
 --------------
 
-See `media`{.interpreted-text role="doc"} on how to create media files
+See `media` on how to create media files
 for the HIG.
 
 Submitting your changes

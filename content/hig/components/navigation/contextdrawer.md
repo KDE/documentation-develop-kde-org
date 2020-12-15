@@ -45,7 +45,7 @@ or in a toolbar. For actions which are always available, use the
         role="doc"} to separate them, but never use more than two tabs.
 
 ![Examples of a context drawer on
-desktop](/hig/Contextdrawer2.png){.border}
+desktop](/hig/Contextdrawer2.png)
 
 Code
 ----

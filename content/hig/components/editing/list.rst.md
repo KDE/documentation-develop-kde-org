@@ -147,7 +147,7 @@ list you can add aditional up and down buttons.
 -   Disable controls in a dialog if not in use rather than hide, or
     remove them from the list (i.e. they are dependent controls),
 -   Label the list view with a descriptive caption to the top left (cf.
-    `alignment </layout/alignment>`{.interpreted-text role="doc"}).
+    `alignment </layout/alignment>`).
 -   Create a buddy relation so access keys are assigned.
 -   End each label with a colon. \":\"
 -   Use
@@ -156,23 +156,23 @@ list you can add aditional up and down buttons.
 -   You can use alternate row colors (use theme settings).
 
 For section headers use
-`120% font size </style/typography>`{.interpreted-text role="doc"} and
+`120% font size </style/typography>` and
 the `alternate background color </style/color/index>`{.interpreted-text
 role="doc"}. Don\'t place a border below the section header.
 
 ::: {.container .flex}
 ::: {.container}
-![Section header on desktop](/hig/Listview8.png){.border}
+![Section header on desktop](/hig/Listview8.png)
 :::
 
 ::: {.container}
-![Section header on mobile](/hig/Listview9.png){.border}
+![Section header on mobile](/hig/Listview9.png)
 :::
 :::
 
 #### Desktop
 
-![List items with and without icons](/hig/Listview6.png){.border}
+![List items with and without icons](/hig/Listview6.png)
 
 List items can have a lot of different styles and sizes, but should
 always be coherent in a list.
@@ -180,21 +180,21 @@ always be coherent in a list.
 ::: {.container .flex}
 ::: {.container}
 ![Default padding of a SwipeListItem on
-desktop](/hig/Listview3.png){.border}
+desktop](/hig/Listview3.png)
 
 Items have a padding of
-`Units.smallSpacing </layout/units>`{.interpreted-text role="doc"} on
+`Units.smallSpacing </layout/units>` on
 the top and bottom and a padding of
-`2 * Units.smallSpacing </layout/units>`{.interpreted-text role="doc"}
+`2 * Units.smallSpacing </layout/units>`
 on the left.
 :::
 
 ::: {.container}
-![Label is vertically centered](/hig/Listview4.png){.border}
+![Label is vertically centered](/hig/Listview4.png)
 
 Labels are vertically centered within the list item. If the list item
 includes an icon, add a
-`2 * Units.smallSpacing </layout/units>`{.interpreted-text role="doc"}
+`2 * Units.smallSpacing </layout/units>`
 margin between the icon and the label.
 :::
 :::
@@ -204,21 +204,21 @@ margin between the icon and the label.
 ::: {.container .flex}
 ::: {.container}
 ![Default padding of a SwipeListItem on
-mobile](/hig/Listview1.png){.border}
+mobile](/hig/Listview1.png)
 
 Items have a padding of
-`Units.largeSpacing </layout/units>`{.interpreted-text role="doc"} on
+`Units.largeSpacing </layout/units>` on
 the top and bottom and a padding of
-`2 * Units.largeSpacing </layout/units>`{.interpreted-text role="doc"}
+`2 * Units.largeSpacing </layout/units>`
 on the left.
 :::
 
 ::: {.container}
-![Label is vertically centered](/hig/Listview2.png){.border}
+![Label is vertically centered](/hig/Listview2.png)
 
 Labels are vertically centered within the list item. If the list item
 includes an icon, add a
-`2 * Units.largeSpacing </layout/units>`{.interpreted-text role="doc"}
+`2 * Units.largeSpacing </layout/units>`
 margin between the icon and the label.
 :::
 :::
@@ -228,7 +228,7 @@ margin between the icon and the label.
 Checkboxes should be placed to the left of the item.
 
 ![List items with checkboxes for multi
-selection.](/hig/Listview5.png){.border}
+selection.](/hig/Listview5.png)
 
 Add a `2 * Units.largeSpacing </layout/units>`{.interpreted-text
 role="doc"} margin between the checkbox and the icon or the label.
@@ -241,13 +241,13 @@ Kirigami.Theme.highlightColor to indicate an active item.
 Place the button to add items to the bottom right of list.
 
 ![Add button at the bottom right of a
-list](/hig/ListPicker.png){.border}
+list](/hig/ListPicker.png)
 
 For deselection you can either add a remove button for seleted icons
 next to the add button or use an icon on the list item.
 
 ![Using an on-demand pattern to display a \"Remove\"
-icon.](/hig/ListPickerRemoveItem.png){.border}
+icon.](/hig/ListPickerRemoveItem.png)
 
 Code
 ----

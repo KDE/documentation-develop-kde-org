@@ -8,7 +8,7 @@ Purpose
 
 A *context menu* displays a list of actions applicable to the current
 context. It is normally hidden from view (except
-`menu bars <menubar>`{.interpreted-text role="doc"}) and drops down when
+`menu bars <menubar>`) and drops down when
 the user right-clicks on something.
 
 Context menus should be considered accelerators for advanced desktop
@@ -30,7 +30,7 @@ Guidelines
 -   Don\'t use context menus as the only way to access functionality.
     Every item in a context menu must be available via a method that is
     somehow visible by default\--typically the app\'s main
-    `menu bar <menubar>`{.interpreted-text role="doc"}, but also via
+    `menu bar <menubar>`, but also via
     toolbar buttons.
 
 ### Behavior and Appearance

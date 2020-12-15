@@ -4,7 +4,7 @@ title: Drop-Down
 =========
 
 ![Control which allows the user to choose one value from a
-list.](/hig/Dropdown1.png){.border}
+list.](/hig/Dropdown1.png)
 
 Purpose
 -------
@@ -37,11 +37,11 @@ Guidelines
 
 -   Use a drop-down list for single selection of one out of many items.
     If users should be able to add items use a
-    `combo box <combobox>`{.interpreted-text role="doc"}.
+    `combo box <combobox>`.
 -   For only a few options, consider to use a set of
-    `radio buttons <radiobutton>`{.interpreted-text role="doc"}.
+    `radio buttons <radiobutton>`.
 -   For a single selection out of a large number of items (n\>20), use a
-    `list view <list>`{.interpreted-text role="doc"}.
+    `list view <list>`.
 -   Prefer controls that show the options without further user
     interaction, except for the following cases:
     -   the list of options may change over time,
@@ -77,7 +77,7 @@ Guidelines
     certain item is selected (i.e. they are dependent controls), disable
     them instead of hiding.
 -   Label the drop down with a descriptive caption to the left (cf.
-    `alignment </layout/alignment>`{.interpreted-text role="doc"}).
+    `alignment </layout/alignment>`).
 -   Create a buddy relation so access keys are assigned.
 -   End each label with a colon.
 -   Use

@@ -46,7 +46,7 @@ Guidelines for Desktop User Interfaces
 -   Don\'t use vertically stacked tabs. Tabs are drawn above the pages
     only (QTabWidget::TabPosition = North).
 -   Don\'t use too many tabs. Use a
-    `list view <../editing/list>`{.interpreted-text role="doc"} with
+    `list view <../editing/list>` with
     icons and associated pages if there are many pages or if you want to
     group static pages, e.g. in case of configuration content. This also
     gives ability to present hierarchy of pages as a tree.
@@ -121,7 +121,7 @@ Guidelines for Phone User Interfaces
     -   Keep interdependent elements in the same tab.
 -   When using tabs to open multiple documents (e.g. websites) in the
     same instance of an application, show them as a list at the top of
-    the `global drawer <globaldrawer>`{.interpreted-text role="doc"}
+    the `global drawer <globaldrawer>`
     -   Offer the user the option to choose between \"Use tabs\" and
         \"Use separate windows\", the default of which is specified by
         the gobal setting, if it is set, otherwise the default is new

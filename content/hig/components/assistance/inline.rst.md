@@ -115,7 +115,7 @@ Appearance
 
 A basic inline messages consists of an icon and text. It can contain an
 optional close button and
-`buttons <../navigation/pushbutton>`{.interpreted-text role="doc"}.
+`buttons <../navigation/pushbutton>`.
 
 ![Inline message with a custom icon and a close
 button.](/hig/Message1.png)

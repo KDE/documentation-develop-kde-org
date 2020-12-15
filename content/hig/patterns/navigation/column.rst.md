@@ -47,7 +47,7 @@ How to Use It
 -   Use one page/column for each level of the hierarchy (or more
     generally, for each step of the navigation).
 -   Pages can for example be `lists <list>`{.interpreted-text
-    role="doc"} or `grids <grid>`{.interpreted-text role="doc"}, or a
+    role="doc"} or `grids <grid>`, or a
     detail view of a particular item.
 -   Make sure to set meaningful but short page titles, so they can
     create a useful breadcrumb trail.

@@ -39,5 +39,5 @@ Guidelines
     bar.
 -   Don\'t use the status bar or any kind of replacement to display
     advisory messages in place of standard
-    `tooltips <tooltip>`{.interpreted-text role="doc"}.
+    `tooltips <tooltip>`.
 -   Keep the status information plain; e.g. don\'t add icons.

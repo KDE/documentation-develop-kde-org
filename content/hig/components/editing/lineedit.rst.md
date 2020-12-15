@@ -4,7 +4,7 @@ title: Line Edit
 =========
 
 ![Single line control to enter unconstrained
-text.](/hig/Lineedit1.png){.border}
+text.](/hig/Lineedit1.png)
 
 Purpose
 -------
@@ -22,7 +22,7 @@ Guidelines
 
 -   Use edits for input of single lines of unconstrained text.
 -   In case of multiple lines of text or more than a few words, use a
-    `text edit <textedit>`{.interpreted-text role="doc"}
+    `text edit <textedit>`
 -   Don\'t use a line edit if only a specific type of data is valid. Use
     a control for constrained input.
 
@@ -53,5 +53,5 @@ Guidelines
 -   When disabling the line edit, also disable any associated labels and
     buttons.
 -   Label every line edit with a descriptive caption to the left (cf.
-    `/layout/alignment`{.interpreted-text role="doc"}).
+    `/layout/alignment`).
 -   Create a buddy relation so access keys are assigned.

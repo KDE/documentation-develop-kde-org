@@ -17,16 +17,16 @@ alerts.
 
 ### Notification
 
--   `emblem`{.interpreted-text role="doc"}
--   `inline`{.interpreted-text role="doc"}
--   `message`{.interpreted-text role="doc"}
--   `progress`{.interpreted-text role="doc"}
--   `statusbar`{.interpreted-text role="doc"}
+-   `emblem`
+-   `inline`
+-   `message`
+-   `progress`
+-   `statusbar`
 
 ### Help
 
--   `tooltip`{.interpreted-text role="doc"}
+-   `tooltip`
 
 ### Information
 
--   `aboutview`{.interpreted-text role="doc"}
+-   `aboutview`

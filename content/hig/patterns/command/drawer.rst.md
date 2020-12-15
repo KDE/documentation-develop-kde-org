@@ -10,7 +10,7 @@ controls that are part of an application\'s main tasks.
 Global Drawer
 -------------
 
-![Global drawer on mobile](/hig/Globaldrawer1.png){.border}
+![Global drawer on mobile](/hig/Globaldrawer1.png)
 
 The global drawer is used for global, context-independent controls.
 
@@ -24,7 +24,7 @@ The global drawer is used for global, context-independent controls.
 Context Drawer
 --------------
 
-![Context drawer on mobile](/hig/Contextdrawer1.png){.border}
+![Context drawer on mobile](/hig/Contextdrawer1.png)
 
 The context drawer (the side is system-defined) is used for
 context-specific controls that affect only the currently selected object

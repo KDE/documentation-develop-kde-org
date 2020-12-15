@@ -27,11 +27,11 @@ structure is flat.
 Examples include a playlist, a slideshow or a list of documents or
 contacts.
 
--   `Single item <single>`{.interpreted-text role="doc"}
--   `List <list>`{.interpreted-text role="doc"}
--   `Expandable list <expandable>`{.interpreted-text role="doc"}
--   `Grid <grid>`{.interpreted-text role="doc"}
--   `Master detail <master>`{.interpreted-text role="doc"}
+-   `Single item <single>`
+-   `List <list>`
+-   `Expandable list <expandable>`
+-   `Grid <grid>`
+-   `Master detail <master>`
 
 ### Patterns for a 2-Deep Content Structure
 
@@ -42,9 +42,9 @@ content structure is 2-deep.
 
 Examples include picture albums, music albums, email folders or tags.
 
--   `Combination patterns <combination>`{.interpreted-text role="doc"}
--   `Tabs <tab>`{.interpreted-text role="doc"}
--   `Unique 2-deep patterns <unique>`{.interpreted-text role="doc"}
+-   `Combination patterns <combination>`
+-   `Tabs <tab>`
+-   `Unique 2-deep patterns <unique>`
 
 ### Patterns for a 3-Deep Content Structure
 
@@ -65,7 +65,7 @@ Content structures this deep should generally be avoided.
 There are instances, however, where it may be difficult to avoid.
 Examples include a full music or video library or system settings.
 
--   `Combination patterns <combination-3>`{.interpreted-text role="doc"}
+-   `Combination patterns <combination-3>`
 
 ### Patterns for N-Deep Content Structures
 
@@ -86,5 +86,5 @@ relative to other content.
 There are instances, however, where this structure cannot be avoided.
 Examples include file systems and archives.
 
--   `Breadcrumbs <breadcrumb>`{.interpreted-text role="doc"}
--   `Column-based navigation <column>`{.interpreted-text role="doc"}
+-   `Breadcrumbs <breadcrumb>`
+-   `Column-based navigation <column>`

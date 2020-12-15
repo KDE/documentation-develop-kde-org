@@ -43,7 +43,7 @@ Action bar shrinking only in the horizontal direction.
 Keep in mind that not all controls or parts of a layout can and should
 be responsive. Often it is more important to retain the size for
 usability, familiarity and alignment and aim for `optimized convergence 
-<convergence>`{.interpreted-text role="doc"} by selecting different
+<convergence>` by selecting different
 `navigation <../patterns/navigation/index>`{.interpreted-text
 role="doc"}, `command </patterns/command/index>`{.interpreted-text
 role="doc"} and `content </patterns/content/index>`{.interpreted-text

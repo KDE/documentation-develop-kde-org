@@ -4,7 +4,7 @@ title: Combo Box
 =========
 
 ![A combination of a drop-down list and an edit
-control.](/hig/Combobox1.png){.border}
+control.](/hig/Combobox1.png)
 
 Purpose
 -------
@@ -37,11 +37,11 @@ Guidelines
 
 -   Use a combo box for single selection of one out of many items of
     lists that can be extended by the user. Prefer a simple
-    `drop-down list <dropdown>`{.interpreted-text role="doc"} in case of
+    `drop-down list <dropdown>` in case of
     read-only interaction.
 -   Consider to replace the combo box by a
-    `list view <list>`{.interpreted-text role="doc"} with a connected
-    `line edit control <lineedit>`{.interpreted-text role="doc"}.
+    `list view <list>` with a connected
+    `line edit control <lineedit>`.
 
 ### Behavior
 
@@ -73,7 +73,7 @@ Guidelines
     certain item is selected (i.e. they are dependent controls), disable
     them instead of hiding.
 -   Label the combo box with a descriptive caption to the left (cf.
-    `alignment </layout/alignment>`{.interpreted-text role="doc"}).
+    `alignment </layout/alignment>`).
 -   Create a buddy relation so access keys are assigned.
 -   End each label with a colon.
 -   Use

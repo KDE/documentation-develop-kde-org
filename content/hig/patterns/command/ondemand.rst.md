@@ -31,7 +31,7 @@ How to Use
     action; they are only shortcuts.
 -   Don\'t use more than five (ideally not more than three) actions in
     on-demand controls. If you need more actions, choose a different
-    `command pattern <index>`{.interpreted-text role="doc"}.
+    `command pattern <index>`.
 -   Only use on-demand controls, if the actions are the same for each
     item.
 -   Since the actions don\'t have a label, don\'t use the on-demand
@@ -63,4 +63,4 @@ to reveal them. As soon as the user taps anywhere else, the handle is
 slid back.
 
 For futher guidelines see
-`list item </components/editing/list>`{.interpreted-text role="doc"}.
+`list item </components/editing/list>`.

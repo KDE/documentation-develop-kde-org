@@ -12,7 +12,7 @@ When to Use
 -   Use a Form layout when there are many related controls and input
     fields.
 -   Form layouts are often used for
-    `settings </platform/settings>`{.interpreted-text role="doc"}.
+    `settings </platform/settings>`.
 
 How to Use
 ----------
@@ -28,7 +28,7 @@ Attention
 If for some reason you must create your own FormLayout style layout
 without using one of the aforementioned controls, there are several very
 important things to take into account for
-`accessibility </accessibility/index>`{.interpreted-text role="doc"}
+`accessibility </accessibility/index>`
 reasons\"\"
 
 -   Form labels need to be connected with input fields.
@@ -125,7 +125,7 @@ left.](/hig/Form_Align_YES.png){.do}
 
 ### Spacing and Grouping
 
-Use `spacing </layout/metrics>`{.interpreted-text role="doc"} to group
+Use `spacing </layout/metrics>` to group
 and separate controls in your forms.
 
 ![Spacing used to create three groups of controls](/hig/Form3.png)

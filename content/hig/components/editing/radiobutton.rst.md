@@ -37,7 +37,7 @@ instead.](/hig/Radiobutton_Many_Good.qml.png){.border .do}
 
 -   If there are only two options where one is the negation of the other
     (e.g. \"apply\" vs. \"don\'t apply\"), consider replacing the radio
-    buttons by one `checkbox <checkbox>`{.interpreted-text role="doc"}.
+    buttons by one `checkbox <checkbox>`.
 
 ::: {.container .flex}
 ::: {.container}
@@ -147,7 +147,7 @@ layout and spacing of your controls.
     the checkbox.
 -   Label a group of radio buttons with a descriptive caption to the top
     left of the group (cf.
-    `alignment </layout/alignment>`{.interpreted-text role="doc"}).
+    `alignment </layout/alignment>`).
 -   Create a buddy relation so access keys are assigned.
 -   Use
     `sentence style capitalization </style/writing/capitalization>`{.interpreted-text

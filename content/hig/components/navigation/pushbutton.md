@@ -24,7 +24,7 @@ Buttons are available in several flavors:
 
 -   Use a command button to initiate an immediate action.
 -   Don\'t use a command button for navigation to another page (prefer a
-    `link <commandlink>`{.interpreted-text role="doc"} in this case).
+    `link <commandlink>` in this case).
 -   Don\'t use a command button embedded in a body of text.
 -   Don\'t use command buttons for a group of actions. Consider using
     radio buttons with one \'Apply\' option or a menu button.
@@ -61,7 +61,7 @@ Buttons are available in several flavors:
 #### Toggle Button
 
 -   A toggle button is not a push button. Guidelines can be found
-    `here <../editing/togglebutton>`{.interpreted-text role="doc"}.
+    `here <../editing/togglebutton>`.
 
 ### Behavior
 
@@ -82,7 +82,7 @@ Buttons are available in several flavors:
 -   Indicate a command that needs additional information (including
     confirmation) by adding an ellipsis at the end of the button label.
 -   Buttons have an elevated appearance; don\'t make buttons flat
-    (except in `toolbars <toolbar>`{.interpreted-text role="doc"}).
+    (except in `toolbars <toolbar>`).
 -   Don\'t use icons for confirmation buttons like OK, Apply, or Cancel.
 -   Passive actions like those in the \"System Settings =\> Application
     Appearance =\> Fonts\" don\'t have icons (does not apply to toolbar

@@ -41,9 +41,9 @@ always a trade-off between accessibility of controls and space available
 for the content.
 :::
 
--   `content`{.interpreted-text role="doc"}
--   `drawer`{.interpreted-text role="doc"}
--   `menubar`{.interpreted-text role="doc"}
--   `ondemand`{.interpreted-text role="doc"}
--   `simple`{.interpreted-text role="doc"}
--   `toolbar`{.interpreted-text role="doc"}
+-   `content`
+-   `drawer`
+-   `menubar`
+-   `ondemand`
+-   `simple`
+-   `toolbar`

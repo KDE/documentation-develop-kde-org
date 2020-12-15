@@ -17,7 +17,7 @@ a convertible laptop with only the touchscreen in use. These types of
 devices will require the user interface to adapt as necessary for each
 usage mode. If minimal changes are needed (for example, a laptop plugged
 into a large external screen) this can be achieved with a "responsive"
-design, as described in `responsive`{.interpreted-text role="doc"}. For
+design, as described in `responsive`. For
 more extensive changes (for example, a tablet plugged into a docking
 station with a mouse and keyboard attached), an entirely different user
 interface paradigm may need to be presented.
@@ -178,7 +178,7 @@ be useful to support two-handed use, especially when typing.
 ### Example
 
 This example shows how the Smartphone UX can be applied in the
-`Plasma Mobile <pm:Introduction>`{.interpreted-text role="doc"}
+`Plasma Mobile <pm:Introduction>`
 workspace:
 
 - **Workspace**: Has multiple home screens (similar to Virtual

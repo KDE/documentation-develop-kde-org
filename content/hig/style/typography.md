@@ -15,7 +15,7 @@ KDE's default font is *Hack* for monospace and *Noto Sans* for
 everything else. The default font size is 10pt. KDE Plasma and
 Applications display seven variants of this typeface.
 
-![The seven default typeface styles](/hig/Typography1.png){.border}
+![The seven default typeface styles](/hig/Typography1.png)
 
 Typeface settings can be adjusted by the user and have
 great influence on sizing and spacing [Units and Measurements](/hig/layout/units)

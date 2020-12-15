@@ -54,4 +54,4 @@ light-colored number inside a blue circle. The circle can become
 number](/hig/emblem-notification-large.png)
 
 For symbolic icon emblems, see
-`/style/icons/monochrome/emblem`{.interpreted-text role="doc"}.
+`/style/icons/monochrome/emblem`.

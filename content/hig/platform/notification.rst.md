@@ -34,7 +34,7 @@ Don\'t use a notification for:
 > -   Advertising, rating or feedback requests, or other annoyances
 > -   If an unexpected or potentially dangerous condition has been
 >     reached and the user must make a decision. Use an
->     `/components/assistance/message`{.interpreted-text role="doc"}
+>     `/components/assistance/message`
 >     instead.
 > -   Don\'t send notifications if an user has never opened your
 >     application

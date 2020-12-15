@@ -3,7 +3,7 @@ title: Toggle Button
 ---
 =============
 
-![Control to show a change of state.](/hig/Togglebutton1.png){.border}
+![Control to show a change of state.](/hig/Togglebutton1.png)
 
 Purpose
 -------
@@ -26,9 +26,9 @@ Guidelines
 
 -   Use a toggle button to indicate a state if no other control apply,
     i.e. in case of the
-    `toolbar <../navigation/toolbar>`{.interpreted-text role="doc"}.
--   Prefer `radio buttons <radiobutton>`{.interpreted-text role="doc"}
-    or `checkboxes <checkbox>`{.interpreted-text role="doc"} outside the
+    `toolbar <../navigation/toolbar>`.
+-   Prefer `radio buttons <radiobutton>`
+    or `checkboxes <checkbox>` outside the
     toolbar.
 
 ### Behavior

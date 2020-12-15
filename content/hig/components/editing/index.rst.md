@@ -17,26 +17,26 @@ operation; and they typically require validation of the input data.
 Selection
 ---------
 
--   `card`{.interpreted-text role="doc"}
--   `checkbox`{.interpreted-text role="doc"}
--   `combobox`{.interpreted-text role="doc"}
--   `dropdown`{.interpreted-text role="doc"}
--   `grid`{.interpreted-text role="doc"}
--   `list`{.interpreted-text role="doc"}
--   `radiobutton`{.interpreted-text role="doc"}
--   `togglebutton`{.interpreted-text role="doc"}
--   `tree`{.interpreted-text role="doc"}
+-   `card`
+-   `checkbox`
+-   `combobox`
+-   `dropdown`
+-   `grid`
+-   `list`
+-   `radiobutton`
+-   `togglebutton`
+-   `tree`
 
 Unconstrained Input
 -------------------
 
--   `lineedit`{.interpreted-text role="doc"}
--   `tableview`{.interpreted-text role="doc"}
--   `textedit`{.interpreted-text role="doc"}
+-   `lineedit`
+-   `tableview`
+-   `textedit`
 
 Constrained Input
 -----------------
 
--   `date`{.interpreted-text role="doc"}
--   `slider`{.interpreted-text role="doc"}
--   `spinbox`{.interpreted-text role="doc"}
+-   `date`
+-   `slider`
+-   `spinbox`

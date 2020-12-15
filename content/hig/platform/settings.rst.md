@@ -51,7 +51,7 @@ Guidelines
     Policy](https://community.kde.org/Policies/Telemetry_Policy) for
     details.
 -   Following KDE\'s \"Simple by default, powerful when needed\"
-    `design mantra </index>`{.interpreted-text role="doc"}, settings can
+    `design mantra </index>`, settings can
     be split into common and advanced groups. Advanced settings are not
     important to most users but essential for some. There therefore
     cannot be removed, but they can be de-emphasized in visual weight.
@@ -74,7 +74,7 @@ Guidelines
     present, or hide multi-screen controls when only one screen is
     connected.
 -   Consider adding access to third-party add-ons via
-    `Get New Stuff! <getnew>`{.interpreted-text role="doc"}.
+    `Get New Stuff! <getnew>`.
 -   Ctrl + Tab should switch between logical groups of controls.
 
 ::: {.attention}
@@ -82,7 +82,7 @@ Guidelines
 Attention
 :::
 
-For `accessiblity </accessibility/index>`{.interpreted-text role="doc"}
+For `accessiblity </accessibility/index>`
 make sure to test keyboard navigation with the settings. Make sure to
 set the focus to focused controls and don\'t just highlight it.
 :::
@@ -100,7 +100,7 @@ set the focus to focused controls and don\'t just highlight it.
 -   If there is a `Get New Stuff! <getnew>`{.interpreted-text
     role="doc"} button, place it above the bottom row of buttons.
 
-    ![](/hig/SettingsButtons.png){.border}
+    ![](/hig/SettingsButtons.png)
 
     The *Help*, *Defaults*, *Reset* buttons on the left side.
 
@@ -122,11 +122,11 @@ throughout KDE software:**
 ![Notifications settings in a form
 layout](/hig/Settings-Notification-dark.png)
 
-Use a `form </patterns/content/form>`{.interpreted-text role="doc"} if
+Use a `form </patterns/content/form>` if
 your settings have many controls and input fields.
 
 -   Lay out your settings page according to the
-    `alignment </layout/alignment>`{.interpreted-text role="doc"}
+    `alignment </layout/alignment>`
     guidelines.
 -   Organize your settings into logical groups, with more important
     groups appearing higher up on the page. Separate the groups with
@@ -142,15 +142,15 @@ your settings have many controls and input fields.
 
 ![Choose a new wallpaper](/hig/Wallpaper-dark.png)
 
-Use a `grid </components/editing/grid>`{.interpreted-text role="doc"}
+Use a `grid </components/editing/grid>`
 for a selection of a single item when all items are visually
 distinctive. To implement a grid in a KCM, use the
-`KCMGrid <kcmgrid>`{.interpreted-text role="doc"}.
+`KCMGrid <kcmgrid>`.
 
 #### Lists
 
 ![Language settings](/hig/LanguagePicker.png)
 
-Use a `picker </patterns/content/picker>`{.interpreted-text role="doc"}
+Use a `picker </patterns/content/picker>`
 for selection and configuration of list based settings where the items
 are not visually distinctive.

@@ -3,7 +3,7 @@ title: Text Edit
 ---
 =========
 
-![Control to enter multiple lines of text.](/hig/Textedit1.png){.border}
+![Control to enter multiple lines of text.](/hig/Textedit1.png)
 
 Purpose
 -------
@@ -21,7 +21,7 @@ Guidelines
 -   Use text edits for input of unconstrained text with more than one
     line.
 -   Don\'t use a text edit for input of a few words. Use a
-    `line edit <lineedit>`{.interpreted-text role="doc"} to enter single
+    `line edit <lineedit>` to enter single
     lines of text.
 
 ### Behavior
@@ -35,5 +35,5 @@ Guidelines
 -   When disabling the text edit, also disable any associated labels and
     buttons.
 -   Label every text edit with a descriptive caption to the top left
-    (cf. `alignment </layout/alignment>`{.interpreted-text role="doc"}).
+    (cf. `alignment </layout/alignment>`).
 -   Create a buddy relation so access keys are assigned.

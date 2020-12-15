@@ -19,8 +19,8 @@ Guidelines
 
 -   Use checkboxes for non-exclusive options that have clear
     alternatives. Mutually exclusive options should use a set of
-    `radio buttons <radiobutton>`{.interpreted-text role="doc"} or a
-    `combo box <combobox>`{.interpreted-text role="doc"}.
+    `radio buttons <radiobutton>` or a
+    `combo box <combobox>`.
 
 ::: {.container .flex}
 ::: {.container}
@@ -37,7 +37,7 @@ remove the need to guess.](/hig/Ambiguous_Opposite_Good.qml.png){.border
 :::
 
 -   For more than five options, use either a
-    `list view <list>`{.interpreted-text role="doc"} or the
+    `list view <list>` or the
     `dual-list pattern </patterns/content/duallist>`{.interpreted-text
     role="doc"} in case of multiple selections.
 -   Don\'t use the selection to perform commands.
@@ -50,7 +50,7 @@ perform commands.](/hig/No_Command_2_Bad.qml.png){.border .dont}
 
 ::: {.container}
 ![`Do.`{.interpreted-text role="noblefir"} Consider using a
-`push button <../navigation/pushbutton>`{.interpreted-text role="doc"}
+`push button <../navigation/pushbutton>`
 instead.](/hig/No_Command_2_Good.qml.png){.border .do}
 :::
 :::

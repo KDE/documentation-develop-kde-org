@@ -7,7 +7,7 @@ Introduction
 ------------
 
 This is a list of common things you should check for to have great
-`accessibility <index>`{.interpreted-text role="doc"} for your
+`accessibility <index>` for your
 application or widgets.
 
 Keyboard Navigation
@@ -72,7 +72,7 @@ Graphical Elements
     GUI elements.
 -   An option to hide non-essential graphics is provided.
 
-See `units </layout/units>`{.interpreted-text role="doc"} for more
+See `units </layout/units>` for more
 information on how to use KDE\'s base units to avoid hardcoded size
 values.
 
@@ -99,9 +99,9 @@ Fonts and Text
 -   An alternative to WYSIWYG is provided. For example, the ability to
     specify different screen and printer fonts in a text editor.
 
-See `typography </style/typography>`{.interpreted-text role="doc"} for
+See `typography </style/typography>` for
 more information on how to avoid hardcoded font sizes and
-`labels </style/writing/labels>`{.interpreted-text role="doc"} for more
+`labels </style/writing/labels>` for more
 details about labels.
 
 ### Testing

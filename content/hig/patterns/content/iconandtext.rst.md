@@ -22,7 +22,7 @@ Attention
 :::
 
 Make sure to read about how
-`units and measurements </layout/units>`{.interpreted-text role="doc"}
+`units and measurements </layout/units>`
 are used for design and development.
 :::
 

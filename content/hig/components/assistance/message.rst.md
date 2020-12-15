@@ -27,7 +27,7 @@ Guidelines
     be the primary objective.
 -   Modal message dialogs must offer choices regarding how to proceed;
     don't use them dialogs simply to inform or warn the user. Instead,
-    use an `inline message  <inline>`{.interpreted-text role="doc"}.
+    use an `inline message  <inline>`.
 
 ### Behavior
 
@@ -57,4 +57,4 @@ Guidelines
     read the message text. Never use \"Yes\" and \"No\" as button
     titles.
 -   Follow the general guidelines for
-    `dialogs <../navigation/dialog>`{.interpreted-text role="doc"}.
+    `dialogs <../navigation/dialog>`.

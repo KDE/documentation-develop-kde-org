@@ -14,7 +14,7 @@ Guidelines
 
 ### Is this the right control?
 
-Like `lists <list>`{.interpreted-text role="doc"}, Grids are used to
+Like `lists <list>`, Grids are used to
 display a sorted or unsorted set of items. All items should be of the
 same kind.
 
@@ -40,7 +40,7 @@ playsinline="true" width="536" onended="this.play()" class="border"></video>
 Attention
 :::
 
-For `accessibility </accessibility/index>`{.interpreted-text role="doc"}
+For `accessibility </accessibility/index>`
 make sure to test keyboard navigation with the grid.
 :::
 
@@ -76,12 +76,12 @@ re-ordering via drag-and-drop.
 
 #### Cards
 
-See `cards <card>`{.interpreted-text role="doc"} for more information on
+See `cards <card>` for more information on
 how to use cards in a grid view.
 
 #### KCM
 
-Use the `KCMGrid </platform/kcmgrid>`{.interpreted-text role="doc"} for
+Use the `KCMGrid </platform/kcmgrid>` for
 grids in KCMs.
 
 Code

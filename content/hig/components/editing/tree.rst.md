@@ -69,7 +69,7 @@ Guidelines
 -   For checkboxes, use the mixed state to indicate that an option is
     set for some, but not all, child objects. Users should not be able
     to set a mixed state directly (cf.
-    `checkboxes <checkbox>`{.interpreted-text role="doc"}).
+    `checkboxes <checkbox>`).
 
 -   Clicking a mixed state checkbox selects all child objects and the
     parent checkbox.
@@ -86,7 +86,7 @@ Guidelines
 -   Make controls large enough that it can show at least eight list
     items at a time without scrolling.
 -   Label the tree view with a descriptive caption to the top left (cf.
-    `alignment </layout/alignment>`{.interpreted-text role="doc"}).
+    `alignment </layout/alignment>`).
 -   Create a buddy relation so access keys are assigned.
 -   Make use of punctuation (Except for dot \".\" or colon \":\") for a
     caption.

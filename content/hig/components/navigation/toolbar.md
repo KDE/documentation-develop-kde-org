@@ -86,7 +86,7 @@ Appearance
     location of an object but rely as well on icon properties.
 -   A distinct association between the underlying function and its
     visual depiction is crucial. Follow the advices for `icon design
-    </style/icons/index>`{.interpreted-text role="doc"}.
+    </style/icons/index>`.
 -   Don\'t simulate Microsoft\'s ribbon controls.
 
 Code

@@ -64,7 +64,7 @@ Common Components
 -----------------
 
 The KDE HIG defines a set of common components which are independent of
-any `device type <devicetypes>`{.interpreted-text role="doc"}.
+any `device type <devicetypes>`.
 
 ![](/hig/Desktop_UX.png)
 
@@ -93,7 +93,7 @@ any `device type <devicetypes>`{.interpreted-text role="doc"}.
 -   **Application Content**: The actual content of an application. This
     depends on the application itself, but conformance to the KDE HIG
     should make it easier to allow
-    `convergence <convergence>`{.interpreted-text role="doc"} for this
+    `convergence <convergence>` for this
     component. This part of the application can also contain
     contextually-appropriate tools that operate directly on the active
     or selected content.

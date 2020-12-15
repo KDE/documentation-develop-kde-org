@@ -29,7 +29,7 @@ Guidelines
 -   Use a slider when it is useful for the user to control the rate of
     change of the value in real time.
 -   If the value is open-ended on one or both ends, consider using a
-    `Spin Box <spinbox>`{.interpreted-text role="doc"} instead.
+    `Spin Box <spinbox>` instead.
 
 ### Behavior
 

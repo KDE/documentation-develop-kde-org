@@ -17,23 +17,23 @@ groups:
 Formating
 ---------
 
--   `formating/groupbox`{.interpreted-text role="doc"}
--   `formating/splitter`{.interpreted-text role="doc"}
+-   `formating/groupbox`
+-   `formating/splitter`
 
 Navigation
 ----------
 
--   `navigation/actionbutton`{.interpreted-text role="doc"}
--   `navigation/commandlink`{.interpreted-text role="doc"}
--   `navigation/contextdrawer`{.interpreted-text role="doc"}
--   `navigation/contextmenu`{.interpreted-text role="doc"}
--   `navigation/dialog`{.interpreted-text role="doc"}
--   `navigation/globaldrawer`{.interpreted-text role="doc"}
--   `navigation/menubar`{.interpreted-text role="doc"}
--   `navigation/pushbutton`{.interpreted-text role="doc"}
--   `navigation/tab`{.interpreted-text role="doc"}
--   `navigation/toolbar`{.interpreted-text role="doc"}
--   `navigation/scrim`{.interpreted-text role="doc"}
+-   `navigation/actionbutton`
+-   `navigation/commandlink`
+-   `navigation/contextdrawer`
+-   `navigation/contextmenu`
+-   `navigation/dialog`
+-   `navigation/globaldrawer`
+-   `navigation/menubar`
+-   `navigation/pushbutton`
+-   `navigation/tab`
+-   `navigation/toolbar`
+-   `navigation/scrim`
 
 User Assistance
 ---------------
@@ -45,15 +45,15 @@ alerts.
 
 ### Notification
 
--   `assistance/emblem`{.interpreted-text role="doc"}
--   `assistance/inline`{.interpreted-text role="doc"}
--   `assistance/message`{.interpreted-text role="doc"}
--   `assistance/progress`{.interpreted-text role="doc"}
--   `assistance/statusbar`{.interpreted-text role="doc"}
+-   `assistance/emblem`
+-   `assistance/inline`
+-   `assistance/message`
+-   `assistance/progress`
+-   `assistance/statusbar`
 
 ### Help
 
--   `assistance/tooltip`{.interpreted-text role="doc"}
+-   `assistance/tooltip`
 
 Editing and Manipulation
 ------------------------
@@ -63,24 +63,24 @@ persistent changes to user's stored information.
 
 ### Selection
 
--   `editing/card`{.interpreted-text role="doc"}
--   `editing/checkbox`{.interpreted-text role="doc"}
--   `editing/combobox`{.interpreted-text role="doc"}
--   `editing/dropdown`{.interpreted-text role="doc"}
--   `editing/grid`{.interpreted-text role="doc"}
--   `editing/list`{.interpreted-text role="doc"}
--   `editing/radiobutton`{.interpreted-text role="doc"}
--   `editing/togglebutton`{.interpreted-text role="doc"}
--   `editing/tree`{.interpreted-text role="doc"}
+-   `editing/card`
+-   `editing/checkbox`
+-   `editing/combobox`
+-   `editing/dropdown`
+-   `editing/grid`
+-   `editing/list`
+-   `editing/radiobutton`
+-   `editing/togglebutton`
+-   `editing/tree`
 
 ### Unconstrained Input
 
--   `editing/lineedit`{.interpreted-text role="doc"}
--   `editing/tableview`{.interpreted-text role="doc"}
--   `editing/textedit`{.interpreted-text role="doc"}
+-   `editing/lineedit`
+-   `editing/tableview`
+-   `editing/textedit`
 
 ### Constrained Input
 
--   `editing/date`{.interpreted-text role="doc"}
--   `editing/slider`{.interpreted-text role="doc"}
--   `editing/spinbox`{.interpreted-text role="doc"}
+-   `editing/date`
+-   `editing/slider`
+-   `editing/spinbox`
