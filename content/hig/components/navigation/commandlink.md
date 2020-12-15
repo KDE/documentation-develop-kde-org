@@ -1,7 +1,8 @@
 ---
 title: Command Link
+group: navigation
+weight 2
 ---
-============
 
 Purpose
 -------
@@ -22,17 +23,16 @@ Guidelines
 
 -   Use command links for a set of mutually exclusive responses like
     navigation from hub to spoke pages.
--   Don\'t present single command links.
--   Consider to use a `push button <pushbutton>`{.interpreted-text
-    role="doc"} for single commands or if the action does not contain
-    navigation.
+-   Don't present single command links.
+-   Consider to use a [push button](../pushbutton) for single commands
+    or if the action does not contain navigation.
 
 ### Behavior
 
 -   Provide feedback when result is not aware to user or not available
     instantaneous. Display a busy pointer or present a progress bar to
     users.
--   Don\'t mix command links and command buttons at one place.
+-   Don't mix command links and command buttons at one place.
 
 ### Appearance
 
@@ -42,4 +42,4 @@ Guidelines
 -   Icons should have a size of 48x48 pixels.
 -   Choose a concise, self-explanatory label that clearly communicates
     and differentiates what the command link does.
--   Don\'t use ellipsis.
+-   Don't use ellipsis.

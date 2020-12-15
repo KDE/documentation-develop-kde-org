@@ -1,11 +1,11 @@
 ---
 title: Toolbar
+group: navigation
+weight: 10
 ---
-=======
 
-![Toolbar with the most important actions
-`toolbar <toolbar>`{.interpreted-text role="doc"} and an overflow
-menu](/hig/Toolbar1.png){.border}
+![Toolbar with the most important actions and an overflow
+menu](/hig/Toolbar1.png)
 
 Purpose
 -------

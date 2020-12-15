@@ -1,16 +1,11 @@
 ---
 title: Context Drawer
+weight: 3
+group: navigation
+available: ['desktop', 'mobile']
 ---
-==============
 
-::: {.container .intend}
-:::
-
-::: {.container .available .plasma .qwidgets}
-:::
-
-![Examples of a context drawer on
-mobile](/hig/Contextdrawer1.png){.border}
+![Examples of a context drawer on mobile](/hig/Contextdrawer1.png)
 
 Purpose
 -------
@@ -26,9 +21,9 @@ Guidelines
 
 Use a Context Drawer if your application has any functions which are
 only relevant in specific contexts, and which are not central enough to
-the application\'s main purpose to put them in the main user interface
+the application's main purpose to put them in the main user interface
 or in a toolbar. For actions which are always available, use the
-`Global Drawer <globaldrawer>`{.interpreted-text role="doc"}.
+[Global Drawer](../globaldrawer).
 
 ### Behavior
 
@@ -36,7 +31,7 @@ or in a toolbar. For actions which are always available, use the
     edge of the screen (depending on a system-wide setting) and closed
     by swiping in the other direction or tapping outside of it.
 -   At the top of the drawer, state which object the controls affect
-    (e.g. \"Selected email\")
+    (e.g. "Selected email")
 -   By default, the Context Drawer simply contains a vertical list of
     action buttons which affect the currently selected/opened element
     -   Center the list vertically instead of top-aligning, to allow an
@@ -44,7 +39,7 @@ or in a toolbar. For actions which are always available, use the
 -   If needed, other controls related to the current context can be put
     in the Context Drawer
     -   Try to keep the content of the context drawer in one page. If
-        there two distinct \"modes\" of contextual actions (for example
+        there two distinct "modes" of contextual actions (for example
         navigating through a PDF either by table of contents or
         thumbnails), consider using two `Tabs <tab>`{.interpreted-text
         role="doc"} to separate them, but never use more than two tabs.
@@ -57,10 +52,7 @@ Code
 
 ### Kirigami
 
-> -   `Kirigami: Action <Action>`{.interpreted-text role="kirigamiapi"}
-> -   `Kirigami: ScrollablePage <ScrollablePage>`{.interpreted-text
->     role="kirigamiapi"}
+- [Kirigami: Action](docs:kirigami2;Action)
+- [Kirigami: ScrollablePage](docs:kirigami2;ScrollablePage)
 
-::: {.literalinclude language="qml"}
-/../../examples/kirigami/AddressbookContextDrawer.qml
-:::
+{{< readfile file="/content/hig/examples/kirigami/AddressbookContextDrawer.qml" highlight="qml" >}}

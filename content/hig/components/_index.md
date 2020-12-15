@@ -2,6 +2,7 @@
 title: Components
 weight: 4
 layout: home
+recursive: true
 groups:
   - name: "Formating"
     key: formating
