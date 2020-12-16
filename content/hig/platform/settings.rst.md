@@ -37,8 +37,7 @@ Guidelines
 ### How to Use
 
 -   **Simple by default**: Define smart and polite defaults so that your
-    target `personas </introduction/personas>`{.interpreted-text
-    role="doc"} don\'t have to alter them at all.
+    target users don\'t have to alter them at all.
 -   **Powerful when needed**: Provide enough settings for the perfect
     customization according to individual needs and preferences. But
     even though customizability is very important for KDE software, try
