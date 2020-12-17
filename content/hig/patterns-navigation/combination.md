@@ -1,10 +1,10 @@
 ---
 title: 2-Deep Combination Patterns
+weight: 6
+available:
+  - desktop
+  - mobile
 ---
-===========================
-
-::: {.container .intend}
-:::
 
 ![Pattern for a 2-deep content structure.](/hig/NP-2-deep-2.png)
 

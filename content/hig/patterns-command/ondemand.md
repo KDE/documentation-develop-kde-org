@@ -1,20 +1,15 @@
 ---
 title: On-Demand Controls
+weight: 4
+available:
+ - computer
+ - phone
 ---
-==================
 
-::: {.container .intend}
-:::
-
-::: {.container .flex}
-::: {.container}
-![240px](/hig/Slide_to_reveal.jpg)
-:::
-
-::: {.container}
-![240px](/hig/Dolphin_hover.png)
-:::
-:::
+<div class="d-flex justify-content-around">
+<img src="/hig/Slide_to_reveal.jpg" alt="Slide to reveal" class="w-50" />
+<img src="/hig/Dolphin_hover.png" alt="Dolphin hover" class="w-50" />
+</div>
 
 When to Use
 -----------
@@ -37,14 +32,10 @@ How to Use
 -   Since the actions don\'t have a label, don\'t use the on-demand
     pattern, if the actions are not clearly identifiable.
 
-::: {.caution}
-::: {.title}
-Caution
-:::
-
+{{< alert color="warning" title="Caution" >}}
 Especially if only one action is available, it is often better to show
 the action directly or have the action as default on the item.
-:::
+{{< /alert >}}
 
 Behavior
 --------
@@ -62,5 +53,4 @@ On-demand controls are revealed by sliding a handle from right to left
 to reveal them. As soon as the user taps anywhere else, the handle is
 slid back.
 
-For futher guidelines see
-`list item </components/editing/list>`.
+For futher guidelines see [list item](/components/editing/list>).

@@ -1,10 +1,10 @@
 ---
 title: List
+weight: 2
+available:
+  - desktop
+  - mobile
 ---
-====
-
-::: {.container .intend}
-:::
 
 Pattern for a flat content structure.
 
@@ -28,19 +28,18 @@ How to Use It
 
 -   Sort list items the way they make most sense for the user. For
     example, chronologically or alphabetically
--   If a list is populated from an online source, use the \"Pull to
-    refresh\" feature that allows users to update it simply by pulling
+-   If a list is populated from an online source, use the "Pull to
+    refresh" feature that allows users to update it simply by pulling
     it down beyond the first (i.e. newest) list item
 -   Make the whole area of each list item clickable to select the item
-    (unless there is a \"Slide to reveal\" handle, see next bullet)
+    (unless there is a "Slide to reveal" handle, see next bullet)
 -   If you want actions to be available directly on a list item, use the
-    `slide to reveal pattern </patterns/command/ondemand>`{.interpreted-text
-    role="doc"}.
+    [slide to reveal pattern](/patterns-command/ondemand).
 
 Implementation
 --------------
 
 -   Use a ListView within a Page or ScrollablePage (if the list can
     contain more items than fit on the screen) to implement this pattern
--   Set supportsRefreshing: true on the ScrollablePage to allow \"Pull
-    to refresh\"
+-   Set supportsRefreshing: true on the ScrollablePage to allow "Pull
+    to refresh"

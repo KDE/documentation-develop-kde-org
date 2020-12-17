@@ -1,7 +1,7 @@
 ---
 title: Viewing vs. Editing
+weight: 7
 ---
-===================
 
 In most cases, information should be presented by default for viewing,
 not editing. Presenting input controls to the user when they are not
@@ -23,7 +23,7 @@ How to Use
 
 ![Viewing](/hig/ViewMode.png)
 
--   Don\'t use input controls to show information unless there is an
+-   Don't use input controls to show information unless there is an
     explicit request to edit the information.
 -   Follow the typography, alignment, and spacing guidelines to layout
     information in a way that is easy to understand.

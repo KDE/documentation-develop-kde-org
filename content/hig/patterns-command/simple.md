@@ -1,7 +1,7 @@
 ---
 title: Patterns for a Simple Command Structure
+weight: 5
 ---
-=======================================
 
 ![Simple command structure](/hig/CP-Simple.png)
 

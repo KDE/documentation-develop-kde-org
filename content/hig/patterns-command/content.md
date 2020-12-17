@@ -1,7 +1,7 @@
 ---
 title: Controls within Content
+weight: 1
 ---
-=======================
 
 ![Controls within content](/hig/Content1.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Icons and Text
+weight: 3
 ---
-==============
 
 When to Use
 -----------
@@ -16,15 +16,10 @@ How to Use
 
 ![Alignment of text and icons.](/hig/HIGPatternIconsAndText.png)
 
-::: {.attention}
-::: {.title}
-Attention
-:::
-
-Make sure to read about how
-`units and measurements </layout/units>`
+{{< alert color="warning" title="Attention" >}}
+Make sure to read about how [units and measurements](/layout/units)
 are used for design and development.
-:::
+{{< /alert >}}
 
 -   Where icons are shown with text, use the layout guidelines above.
 

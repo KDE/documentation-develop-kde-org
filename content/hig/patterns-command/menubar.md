@@ -1,7 +1,7 @@
 ---
 title: Menubar
+weight: 3
 ---
-=======
 
 ![Menubar](/hig/CP-MenuBar.png)
 

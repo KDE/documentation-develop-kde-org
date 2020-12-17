@@ -1,7 +1,7 @@
 ---
 title: Drawers
+weight: 2
 ---
-=======
 
 Drawers don\'t take away any room from the content, but they do require
 user interaction to become visible, and should therefore not be used for

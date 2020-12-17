@@ -1,10 +1,10 @@
 ---
 title: Tab
+weight: 8
+available:
+  - desktop
+  - mobile
 ---
-===
-
-::: {.container .intend}
-:::
 
 Pattern for a 2-deep structure.
 
@@ -13,5 +13,4 @@ Pattern for a 2-deep structure.
         into several groups
     -   Viewing multiple documents (e.g. websites in a browser) in the
         same application instance
--   See the `tab </components/navigation/tab>`{.interpreted-text
-    role="doc"} for details.
+-   See the [tab](/components/navigation/tab) for details.

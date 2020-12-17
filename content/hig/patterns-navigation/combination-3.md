@@ -1,10 +1,10 @@
 ---
 title: 3-Deep Combination Patterns
+weight: 9
+available:
+  - desktop
+  - mobile
 ---
-===========================
-
-::: {.container .intend}
-:::
 
 ![Patterns for 3-deep content.](/hig/NP-3-deep.png)
 

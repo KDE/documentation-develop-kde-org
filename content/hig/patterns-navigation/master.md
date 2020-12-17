@@ -1,10 +1,10 @@
 ---
 title: Master-Detail
+weight: 5
+available:
+  - desktop
+  - mobile
 ---
-=============
-
-::: {.container .intend}
-:::
 
 Pattern for a flat content structure.
 
@@ -20,7 +20,7 @@ Desktop
     guidelines](https://community.kde.org/KDE_Visual_Design_Group/HIG/Layout/Wizard)
     for more details on using that pattern.
 -   Examples include a contact list that shows the full details of the
-    selected contact, a slideshow with a \"film-strip\" to select
+    selected contact, a slideshow with a "film-strip" to select
     photographs, or setup for newly installed software.
 
 Mobile

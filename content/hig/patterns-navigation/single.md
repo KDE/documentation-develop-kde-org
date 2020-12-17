@@ -1,10 +1,10 @@
 ---
 title: Single Item
+weight: 1
+available:
+  - desktop
+  - mobile
 ---
-===========
-
-::: {.container .intend}
-:::
 
 Pattern for a flat content structure.
 
@@ -24,7 +24,5 @@ Pattern for a flat content structure.
 -   Examples include a slideshow, or a video or music playlist, or a
     single-page web browser.
 -   Display properties of the currently shown object which are essential
-    for the application\'s main task below the object, show additional
-    properties on demand in the
-    `context drawer </components/navigation/contextdrawer>`{.interpreted-text
-    role="doc"}.
+    for the application's main task below the object, show additional
+    properties on demand in the [context drawer](/components/navigation/contextdrawer).

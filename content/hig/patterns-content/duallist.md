@@ -1,19 +1,19 @@
 ---
 title: Dual-List
+weight: 1
 ---
-=========
 
 ![Dual-list pattern](/hig/DualListOrdering.png)
 
 Multiple selection in
-`lists </components/editing/list>` with
+[lists](/components/editing/list) with
 more than a few items might become difficult because selected as well as
 available items are not visible at once. As an alternative approach, the
 *dual-list pattern* (also known as list builder, or paired lists) was
 introduced. It consists of two standard
-`list </components/editing/list>` boxes
+[list](/components/editing/list) boxes
 with the option to move items from one
-`list </components/editing/list>` to the
+[list](/components/editing/list) to the
 other and back. Dual-lists are useful for extended multiple selection in
 general, especially for huge sets of items or in case of elaborate
 selections. The trade-off is the rather large amount of space that is
@@ -23,12 +23,11 @@ When to Use
 -----------
 
 -   Use a dual-list pattern for multiple selection and in case of
-    `large lists </components/editing/list>`{.interpreted-text
-    role="doc"}.
+    [large lists](/components/editing/list).
 -   In case of limited screen real estate, consider changing the
     workflow into repeated selections of smaller lists or by applying a
     hierarchy to the data.
--   Don\'t use a dual-list to show data primarily.
+-   Don't use a dual-list to show data primarily.
 
 How to Use
 ----------
@@ -48,10 +47,10 @@ How to Use
     in between the two lists, above and below the left and right
     buttons. Only enable the up/down buttons when an item is selected
     and can be moved.
--   Don\'t have blank list items; use meta-options, (e.g. \"None\")
+-   Don't have blank list items; use meta-options, (e.g. "None")
     instead.
--   Place options that represent general options (e.g. \"All\",
-    \"None\") at the beginning of the list.
+-   Place options that represent general options (e.g. "All",
+    "None") at the beginning of the list.
 -   Sort list items in a logical order. Alphabetical sorting should be
     able to change when the text is translated.
 
@@ -71,6 +70,5 @@ Implementation
     Each time the user opens this dialog, set its dimensions to those
     that the user last resized it to.
 -   Create a buddy relation so access keys are assigned.
--   Use
-    `sentence style capitalization </style/writing/capitalization>`{.interpreted-text
-    role="doc"} for list view items.
+-   Use [sentence style capitalization](/style/writing/capitalization)
+    for list view items.

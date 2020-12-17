@@ -1,7 +1,7 @@
 ---
 title: Form
+weight: 2
 ---
-====
 
 A form layout is used to help align and structure a layout that contains
 many controls and input fields.
@@ -12,32 +12,29 @@ When to Use
 -   Use a Form layout when there are many related controls and input
     fields.
 -   Form layouts are often used for
-    `settings </platform/settings>`.
+    [settings](/platform/settings>).
 
 How to Use
 ----------
 
--   Use Qt\'s QFormLayout or Kirigami.FormLayout wherever possible.
+-   Use Qt's QFormLayout or Kirigami.FormLayout wherever possible.
 -   Do not synthesize your own FormLayout-style layout using a grid.
 
-::: {.attention}
-::: {.title}
-Attention
-:::
+{{< alert color="warning" title="Attention" >}}
 
 If for some reason you must create your own FormLayout style layout
 without using one of the aforementioned controls, there are several very
 important things to take into account for
-`accessibility </accessibility/index>`
-reasons\"\"
+[accessibility](/accessibility/) reasons""
 
 -   Form labels need to be connected with input fields.
 -   Headlines for groupings need to be connected.
 -   Make sure to test keyboard navigation with the form.
 -   Ctrl + Tab should switch between logical groups of controls.
--   Make sure to set the focus to focused controls; don\'t just
+-   Make sure to set the focus to focused controls; don't just
     highlight them.
-:::
+
+{{< /alert >}}
 
 ### Alignment
 
@@ -51,36 +48,28 @@ reasons\"\"
     QFormLayout handles all of this for you automatically.
 -   Align the form in the top center of the window or view in which it
     is located, but below the title.
--   See the pages on
-    `radio buttons </components/editing/radiobutton>`{.interpreted-text
-    role="doc"} and
-    `checkboxes </components/editing/checkbox>`{.interpreted-text
-    role="doc"} for detailed information regarding how to align these
-    tricky controls in a Form layout.
+-   See the pages on [radio buttons](/components/editing/radiobutton)
+    and [checkboxes](/components/editing/checkbox) for detailed
+    information regarding how to align these tricky controls in a Form
+    layout.
 
-::: {.container .flex}
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t use KDE3-style form
-alignment](/hig/Form_Align_KDE3.png){.dont}
-:::
+{{< compare >}}
+{{< do src="/hig/Form_Align_KDE5.png" >}}
+Use Plasma 5-style form alignment.
+{{< /do >}}
+{{< dont src="/hig/Form_Align_KDE3.png" >}}
+ Don't use KDE3-style form alignment.
+{{< /dont >}}
+{{< /compare >}}
 
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Use Plasma 5-style form
-alignment.](/hig/Form_Align_KDE5.png){.do}
-:::
-:::
-
-::: {.container .flex}
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t use macOS-style form
-alignment.](/hig/Form_Align_OSX.png){.dont}
-:::
-
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Use Plasma 5-style form
-alignment.](/hig/Form_Align_KDE5.png){.do}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/Form_Align_KDE5.png" >}}
+Use Plasma 5-style form alignment.
+{{< /do >}}
+{{< dont src="/hig/Form_Align_OSX.png" >}}
+Don't use macOS-style form alignment.
+{{< /dont >}}
+{{< /compare >}}
 
 -   Position groups of items vertically rather than horizontally, as
     this makes them easier to scan visually. Use horizontal or
@@ -90,25 +79,23 @@ alignment.](/hig/Form_Align_KDE5.png){.do}
     facilitates scanning of content, and left-hand alignment fits as
     well forms that have been oversized individually.
 
-::: {.container .flex}
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t misalign
-controls.](/hig/Form_Align_NO.png){.dont}
-:::
-
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Align controls to the
-left.](/hig/Form_Align_YES.png){.do}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/Form_Align_YES.png" >}}
+Align controls to the left.
+{{< /do >}}
+{{< dont src="/hig/Form_Align_NO.png" >}}
+Don't misalign controls.
+{{< /dont >}}
+{{< /compare >}}
 
 -   Keep track of label sizes; avoid large differences in text length
     that could result in too much whitespace. Keep translation in mind
     too; existing length differences will be exaggerated for wordy
     languages such as German and Brazilian Portuguese.
 
-    ![`Don't.`{.interpreted-text role="iconred"} Don\'t use very long
-    captions.](/hig/Form_Align_Long.png){.dont}
+    {{< dont src="/hig/Form_Align_Long.png" >}}
+    Don't use very long captions.
+    {{< /dont >}}
 
 #### Mobile and narrow space
 
@@ -125,7 +112,7 @@ left.](/hig/Form_Align_YES.png){.do}
 
 ### Spacing and Grouping
 
-Use `spacing </layout/metrics>` to group
+Use [spacing](/layout/metrics) to group
 and separate controls in your forms.
 
 ![Spacing used to create three groups of controls](/hig/Form3.png)
@@ -145,9 +132,6 @@ Code
 
 ### Kirigami
 
-> -   `Kirigami: FormLayout <FormLayout>`{.interpreted-text
->     role="kirigamiapi"}
+- [Kirigami: FormLayout](docs:kirigami2;FormLayout)
 
-::: {.literalinclude language="qml"}
-/../../examples/kirigami/FormLayout.qml
-:::
+{{< readfile file="/content/hig/examples/kirigami/FormLayout.qml" highlight="qml" >}}

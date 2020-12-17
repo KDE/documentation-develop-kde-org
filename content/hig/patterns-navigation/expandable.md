@@ -1,10 +1,10 @@
 ---
 title: Expandable List
+weight: 3
+available:
+  - desktop
+  - mobile
 ---
-===============
-
-::: {.container .intend}
-:::
 
 -   The expandable list is useful when additional details for individual
     elements in a list/group are to be shown alongside the other

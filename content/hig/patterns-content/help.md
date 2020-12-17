@@ -1,7 +1,7 @@
 ---
 title: Help System
+weight: 4
 ---
-===========
 
 The help system should be used as a secondary mechanism to support
 users' complete and better understanding of tasks --- the primary
@@ -32,4 +32,4 @@ How to Use
 Implementation
 --------------
 
--   <http://www.kde.org/support/>
+- [kde.org/support](https://kde.org/support/
