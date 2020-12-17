@@ -14,15 +14,16 @@
       {{ partial "navbar-lang-selector.html" . }}
     </div>
     {{ end }}
-    {{ template "section-tree-nav-section" (dict "page" . "section" .FirstSection "delayActive" $shouldDelayActive)  }}
+    {{ template "section-tree-nav-section" (dict "page" . "section" .FirstSection "delayActive" $shouldDelayActive "depth" 0) }}
   </nav>
 </div>
 {{ define "section-tree-nav-section" }}
 {{ $s := .section }}
 {{ $p := .page }}
+{{ $d := .depth }}
 {{ $shouldDelayActive := .delayActive }}
 {{ $active := eq $p.CurrentSection $s }}
-{{ $show := or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s) }}
+{{ $show := and (or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s)) (or (not (eq .page.LinkTitle "KDE Human Interface Guidelines" )) (eq $d 0)) }}
 {{ $sid := $s.RelPermalink | anchorize }}
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
@@ -38,7 +39,7 @@
       {{ $active := eq . $p }}
       <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
       {{ else }}
-      {{ template "section-tree-nav-section" (dict "page" $p "section" .) }}
+      {{ template "section-tree-nav-section" (dict "page" $p "section" . "depth" (add $d 1) ) }}
       {{ end }}
       {{ end }}
     </li>
