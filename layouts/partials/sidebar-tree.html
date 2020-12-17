@@ -23,7 +23,7 @@
 {{ $d := .depth }}
 {{ $shouldDelayActive := .delayActive }}
 {{ $active := eq $p.CurrentSection $s }}
-{{ $show := and (or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s)) (or (not (eq .page.LinkTitle "KDE Human Interface Guidelines" )) (eq $d 0)) }}
+{{ $show := and (or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s)) (or (not (or (eq .page.LinkTitle "KDE Human Interface Guidelines" ) (eq .page.LinkTitle "Documentation" ))) (eq $d 0)) }}
 {{ $sid := $s.RelPermalink | anchorize }}
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
