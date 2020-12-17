@@ -137,6 +137,8 @@ if __name__ == "__main__":
     download_file('frameworks/sonnet', 'examples/textedit.cpp')
     download_file('frameworks/sonnet', 'examples/dialogexample.cpp')
 
+    download_file('frameworks/threadweaver', 'examples/HelloWorld/HelloWorld.cpp')
+
     projects = os.listdir("./tmp/")
     keys = []
     for project in projects:
