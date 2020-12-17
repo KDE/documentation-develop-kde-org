@@ -132,7 +132,7 @@ ConfigModel {
 
 Please note that your should not use `PlasmaComponents.*` controls in the config window, as those are styled and colored for the panel. The normal `QtQuick.Controls` are styled using your application window style + colors.
 
-`Kirigami.FormLayout` is used to layout the controls in the center of the page. The `Kirigami.FormData.label` attached property is used to place labels in front of the controls. CheckBoxes have their own labels, so you don't need to set a Kirigami label. You can use it for CheckBoxes as a section seperator though. You do not need to set a Kirigami label.
+`Kirigami.FormLayout` is used to layout the controls in the center of the page. The `Kirigami.FormData.label` attached property is used to place labels in front of the controls. Kirigami labels are optional, so you do not need to use them for CheckBoxes which have their own labels on the right.
 
 ![](configgeneral.png)
 
