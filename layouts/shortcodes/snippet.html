@@ -24,5 +24,5 @@
   {{- $fileContent = delimit $fileContent "\n" -}}
   {{- highlight ($fileContent) (.Get "lang") "" -}}
 {{ else -}}
-  {{- errorf "Run python3 scripts/extract-plasma-applet-config-keys.py first" -}}
+  {{- errorf "Run python3 scripts/extract-plasma-applet-config-keys.py first %1 %1" (.Get "repo") (.Get "file") -}}
 {{- end -}}
