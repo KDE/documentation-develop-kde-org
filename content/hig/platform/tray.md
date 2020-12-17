@@ -1,14 +1,14 @@
 ---
 title: System Tray Icon
+weight: 5
 ---
-================
 
 The system tray provides quick access to functionality integrated into
 the workspace that's both highly visible to the user and frequently
 changed, like enabling/disabling WiFi and Bluetooth, or whether or not
 to show notifications. See
-`architecture </introduction/architecture>`{.interpreted-text
-role="doc"} for an overview of plasma workspace components.
+[architecture](/introduction/architecture) for an overview of plasma
+workspace components.
 
 Examples
 --------
@@ -28,14 +28,11 @@ in status changes within the application.
 
 -   On left click, open the application itself, or a panel that allows
     quick access to common features.
--   On right click, open a
-    `context menu </components/navigation/contextmenu>`{.interpreted-text
-    role="doc"}.
+-   On right click, open a [context menu](/components/navigation/contextmenu).
 -   For application like media players, enable the user to change the
     volume while scrolling over the icon.
 
 ### Appearance
 
-Use a
-`monochrome, shade black icon </style/icons/index>`{.interpreted-text
-role="doc"} and use color only to communicate state.
+Use a [monochrome, shade black icon](/style/icons/) and use color only
+to communicate state.

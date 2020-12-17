@@ -1,7 +1,7 @@
 ---
 title: Settings
+weight: 4
 ---
-========
 
 Settings provide the ability to customize the appearance and behavior of
 an application, a Plasma widget, or the Plasma Workspace. Dedicated
@@ -9,7 +9,7 @@ settings views are intended for settings that are persistent but not
 changed very frequently.
 
 A settings page for the Plasma Desktop is referred to as a KCM (KDE
-Config Module). KCMs can either appear in Plasma\'s System Settings app,
+Config Module). KCMs can either appear in Plasma's System Settings app,
 or as standalone configuration dialogs.
 
 Example
@@ -24,20 +24,20 @@ Guidelines
 
 -   Use a settings page to display settings that are persistent but
     infrequently accessed or changed. Settings that are frequently
-    accessed and changed (e.g. an icon view style or list\'s sort order)
+    accessed and changed (e.g. an icon view style or list's sort order)
     should be located close to the views or tools that they affect, such
-    as in the window\'s toolbar.
--   Don\'t use a settings page to change the properties of a selected
+    as in the window's toolbar.
+-   Don't use a settings page to change the properties of a selected
     item. Instead, use a properties dialog or a contextual editing
     panel.
--   Don\'t use a settings page for potentially dangerous developer
+-   Don't use a settings page for potentially dangerous developer
     settings like the name of an SQL table. Instead, use configuration
     files or separate dialogs.
 
 ### How to Use
 
 -   **Simple by default**: Define smart and polite defaults so that your
-    target users don\'t have to alter them at all.
+    target users don't have to alter them at all.
 -   **Powerful when needed**: Provide enough settings for the perfect
     customization according to individual needs and preferences. But
     even though customizability is very important for KDE software, try
@@ -46,11 +46,11 @@ Guidelines
     makes the settings page slower to use.
 -   Respect the privacy of the users: Always use opt-in, never an
     opt-out model for features that transmit potentially private data
-    (e.g. usage statistics). See KDE\'s [Telemetry
+    (e.g. usage statistics). See KDE's [Telemetry
     Policy](https://community.kde.org/Policies/Telemetry_Policy) for
     details.
--   Following KDE\'s \"Simple by default, powerful when needed\"
-    `design mantra </index>`, settings can
+-   Following KDE's "Simple by default, powerful when needed"
+    [design mantra](..), settings can
     be split into common and advanced groups. Advanced settings are not
     important to most users but essential for some. There therefore
     cannot be removed, but they can be de-emphasized in visual weight.
@@ -59,32 +59,28 @@ Guidelines
 
 -   When a change is applied, the application should adopt it
     immediately without the need to restart it.
--   Don\'t change the settings page depending on the context. It should
+-   Don't change the settings page depending on the context. It should
     always start with the same landing page regardless of the
     application context.
--   Don\'t use a wizard to change settings. Only use a wizard if a group
+-   Don't use a wizard to change settings. Only use a wizard if a group
     of settings are all interrelated and must be edited all at once,
     e.g. setting up an email account.
--   If some of the program\'s settings are only applicable in certain
-    contexts, don\'t hide the inapplicable ones. Instead, disable them
-    and hint to the user why they\'re disabled. **Exception:** it is
+-   If some of the program's settings are only applicable in certain
+    contexts, don't hide the inapplicable ones. Instead, disable them
+    and hint to the user why they're disabled. **Exception:** it is
     acceptable to hide settings for non-existent hardware. For example,
-    it\'s okay to hide the touchpad configuration when no touchpad is
+    it's okay to hide the touchpad configuration when no touchpad is
     present, or hide multi-screen controls when only one screen is
     connected.
 -   Consider adding access to third-party add-ons via
-    `Get New Stuff! <getnew>`.
+    [Get New Stuff!](../getnew).
 -   Ctrl + Tab should switch between logical groups of controls.
 
-::: {.attention}
-::: {.title}
-Attention
-:::
-
-For `accessiblity </accessibility/index>`
+{{< alert title="Attention" color="warning" >}}
+For [accessiblity](/accessibility/)
 make sure to test keyboard navigation with the settings. Make sure to
-set the focus to focused controls and don\'t just highlight it.
-:::
+set the focus to focused controls and don't just highlight it.
+{{< /alert >}}
 
 ### Appearance
 
