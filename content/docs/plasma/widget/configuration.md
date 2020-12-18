@@ -144,33 +144,26 @@ import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.12
 import org.kde.kirigami 2.4 as Kirigami
 
-Item {
+Kirigami.FormLayout {
     id: page
-    width: childrenRect.width
-    height: childrenRect.height
-
+  
     property alias cfg_showLabel: showLabel.checked
     property alias cfg_showIcon: showIcon.checked
     property alias cfg_labelText: labelText.text
 
-    Kirigami.FormLayout {
-        anchors.left: parent.left
-        anchors.right: parent.right
-
-        CheckBox {
-            id: showLabel
-            Kirigami.FormData.label: i18n("Section:")
-            text: i18n("Show label")
-        }
-        CheckBox {
-            id: showIcon
-            text: i18n("Show icon")
-        }
-        TextField {
-            id: labelText
-            Kirigami.FormData.label: i18n("Label:")
-            placeholderText: i18n("Placeholder")
-        }
+    CheckBox {
+        id: showLabel
+        Kirigami.FormData.label: i18n("Section:")
+        text: i18n("Show label")
+    }
+    CheckBox {
+        id: showIcon
+        text: i18n("Show icon")
+    }
+    TextField {
+        id: labelText
+        Kirigami.FormData.label: i18n("Label:")
+        placeholderText: i18n("Placeholder")
     }
 }
 ```
