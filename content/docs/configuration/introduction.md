@@ -60,7 +60,7 @@ Each application has its own configuration object that uses the name provided to
 
 MyClass::MyClass()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
 }
 ```
 
@@ -88,7 +88,7 @@ If we need to prevent the config object from saving already made modifications t
 Listing all groups in a configuration object is as simple as calling `groupList()` as in this code snippet: 
 
 ```cpp
-KSharedConfig::Ptr config = KSharedConfig::openConfig();
+KSharedConfigPtr config = KSharedConfig::openConfig();
 
 const auto groupList = config->groupList();
 for (const QString& group : groupList) {
