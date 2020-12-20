@@ -41,6 +41,7 @@ main section {
   display: flex;
   justify-content: space-between;
   position: relative;
+  margin-bottom: -100px;
 }
 
 .tools {
@@ -164,6 +165,7 @@ main h3 {
   .block-navs {
     flex-direction: column;
     align-items: center;
+    margin-bottom: -150px;
   }
 
   .block-nav:nth-child(2), .block-nav {
@@ -228,73 +230,6 @@ main h3 {
   background-image: url(https://kde.org/content/develop/devApps.png)
 }
 
-.plasma-and-android {
-  height: 400px;
-  overflow: hidden;
-}
-
-@media (min-width: 800px) {
-  .plasma-and-android {
-    height: 500px;
-  }
-}
-
-@media (min-width: 1150px) {
-  .plasma-and-android {
-    height: 600px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .plasma-and-android {
-    height: 700px;
-  }
-}
-@media (min-width: 1700px) {
-  .plasma-and-android {
-    height: 800px;
-  }
-}
-@media (min-width: 2000px) {
-  .plasma-and-android {
-    height: 900px;
-  }
-}
-
-.laptop-with-overlay {
-  position: absolute;
-  width: 50%;
-  left: 20%;
-  z-index: 32;
-  bottom: 20px;
-}
-
-.laptop-with-overlay .laptop-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 3%;
-  margin-left: 8.5%;
-  width: 84%;
-}
-
-.bigscreen {
-  position: absolute;
-  z-index: 31;
-  width: 60%;
-  right: -10%;
-  bottom: 20px;
-}
-
-.phone-with-overlay {
-  position: absolute;
-  width: 15%;
-  left: 15%;
-  bottom: -10px;
-  z-index: 33;
-  max-width: 200px
-}
-
 .kirigami-devices {
   align-self: center;
   height: 500px;
@@ -307,3 +242,39 @@ main h3 {
   background-color: #232627;
   color: #fcfcfc;
 }
+
+.kirigami-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-image: none;
+  background: url('/kirigami/kirigami-icon.svg') no-repeat,
+    linear-gradient(144.64deg, #E93A9A 0%, #E9643A 64.86%, #EF973C 100%);
+  background-position: bottom left, right;
+  background-size: contain;
+  background-origin: border-box ;
+  min-height: 150px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  text-align: center;
+  text-shadow: 2px 2px 7px #222;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  h1 {
+    color: #fafafa !important;
+    font-size: 32px !important;
+    line-height: 120%;
+    background-image: none !important;
+  }
+
+  .header-logo{
+    font-family: glyph;
+    font-size: 4rem !important;
+    margin-bottom: 1rem;
+    width: 100%
+  }
+}
+
