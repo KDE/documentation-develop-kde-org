@@ -116,7 +116,7 @@ QQC2.Label {
         <li>Orange</li>
         <li><del>Banana</del></li>
     </ul>
-    <p>Don't eat Banana, there are <strong>evil</strong></p>"
+    <p>Don't eat Banana, they are <strong>evil</strong></p>"
 }
 ```
 
