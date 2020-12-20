@@ -1,0 +1,16 @@
+{{/* get file that matches the filename as specified as src="" in shortcode */}}
+
+<figure class="{{ .Get "class" }} img-fluid">
+  <picture class="img-fluid">
+    {{ $basename := substr (.Get "src") 0 -4 }}
+    {{ if (fileExists (printf "content%s%s-dark.png" $.Page.RelPermalink $basename)) }}
+      <source srcset="{{ printf "%s-dark.png" $basename }}" media="(prefers-color-scheme: dark)">
+    {{ end }}
+    <img src="{{ .Get "src" }}" class="img-fluid" alt="{{ .Get "alt" }}" loading="lazy" />
+  </picture>
+  {{ with .Get "caption" }}
+  <figcaption class="text-center">
+    {{ . }}
+  </figcaption>
+  {{ end }}
+</figure>
