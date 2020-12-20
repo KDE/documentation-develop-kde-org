@@ -35,7 +35,7 @@ Kirigami.Heading {
 }
 ```
 
-![Heading](heading.png)
+{{< img alt="Heading" src="heading.png" >}}
 
 ## Labels
 
@@ -74,7 +74,7 @@ ColumnLayout {
 }
 ```
 
-![Text centered](center-text.png)
+{{< img alt="Text centered" src="center-text.png" >}}
 
 ```qml
 import QtQuick.Layouts 1.15 
@@ -97,7 +97,7 @@ ColumnLayout {
 }
 ```
 
-![Text right aligned](right-text.png)
+{{< img alt="Text right aligned" src="right-text.png" >}}
 
 ## Rich Text
 
@@ -120,4 +120,9 @@ QQC2.Label {
 }
 ```
 
-![Rich text editing](rich-text.png)
+{{< img alt="Displaying rich text" src="rich-text.png" >}}
+
+## Theme
+
+The font size of the Kirigami [Theme](docs:kirigami2;Theme) is available
+as `Kirigami.Theme.defaultFont.pointSize` in your application.
