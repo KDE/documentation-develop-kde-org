@@ -1,10 +1,10 @@
 ---
 title: Action Icons
+weight: 2
 ---
-============
 
 Action icons are used to depict actions. They come in two sizes: 16px
-and 22px, and always use the [monochrome style](index.html).
+and 22px, and always use the [monochrome style](..).
 
 Purpose
 -------
