@@ -6,8 +6,8 @@ weight: 1
 
 All KDE software is built using the Qt toolkit. You will be using
 different components depending on whether you are developing an
-[application](https://www.kde.org/applications/) or
-[Plasma](https://www.kde.org/plasma-desktop.php) and the nature of your
+[application](https://apps.kde.org/) or
+[Plasma](https://kde.org/plasma-desktop) and the nature of your
 application. The interaction patterns of the HIG apply regardless of the
 components you use.
 
@@ -54,9 +54,7 @@ Plasma
 
 Plasma is built out of widgets (also called Plasmoids), allowing you to
 move, mix, add, and remove just about everything to perfect your
-personal workflow.[ Those are built using Plasma Components 3
-\<https://api.kde.org/frameworks/plasma-framework/html/plasmacomponents
-.html\>](), which are based on Qt Quick Controls 2.
+personal workflow. [Those are built using Plasma Components 3](https://api.kde.org/frameworks/plasma-framework/html/plasmacomponents.html), which are based on Qt Quick Controls 2.
 
 ![Plasma desktop and mobile.](/hig/plasma-workspace.jpg)
 
@@ -64,12 +62,12 @@ Common Components
 -----------------
 
 The KDE HIG defines a set of common components which are independent of
-any `device type <devicetypes>`.
+any [device type](../devicetypes).
 
 ![](/hig/Desktop_UX.png)
 
 -   **Workspace**: The top-level container of the whole user interface.
-    Often called \"desktop\", \"home screen\", or \"shell\", it shows
+    Often called "desktop", "home screen", or "shell", it shows
     the wallpaper and allows users to add widgets, app launchers, files
     or folders.
 -   **Application Launcher**: Provides an overview of installed
@@ -83,7 +81,7 @@ any `device type <devicetypes>`.
     user and frequently changed, like enabling/disabling WiFi and
     Bluetooth, or whether or not to show notifications.
 -   **Application-Workspace Interaction**: Displays information about
-    each application\'s windows, and provides ways to move or close them
+    each application's windows, and provides ways to move or close them
     and change how they run within the workspace.
 -   **Application**: The top-level container of a single application.
 -   **Application Tools**: Provides access to an application\'s
@@ -93,7 +91,7 @@ any `device type <devicetypes>`.
 -   **Application Content**: The actual content of an application. This
     depends on the application itself, but conformance to the KDE HIG
     should make it easier to allow
-    `convergence <convergence>` for this
+    [convergence](../convergence) for this
     component. This part of the application can also contain
     contextually-appropriate tools that operate directly on the active
     or selected content.
