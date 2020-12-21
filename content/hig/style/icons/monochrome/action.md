@@ -20,54 +20,55 @@ Design
 Action icons should use a base color of Shade Black. Additional colors
 can indicate information about an action to a user.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Use Shade Black as your
-icon\'s base--- this color is neutral and has the most contrast against
-a white background.](/hig/action-colour-do.png){.do}
-:::
+{{< compare >}}
+{{< do src="/hig/action-colour-do.png" >}}
+Use Shade Black as your icon's base--- this color is neutral and has the
+most contrast against a white background.
+{{< /do >}}
+{{< dont src="/hig/action-colour-do.png" >}}
+Don’t use a bright color for your icon’s base—this distracts the user
+without adding extra information to your icon.
+{{< /dont >}}
+{{< /compare >}}
 
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t use a bright color
-for your icon\'s base---this distracts the user without adding extra
-information to your icon.](/hig/action-colour-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/action-colour-dont.png" >}}
+Don't use a bright color for your icon's base---this distracts the user
+without adding extra information to your icon.
+{{< /do >}}
+{{< dont src="/hig/action-colour-destructive-do.png" >}}
+Use red to indicate destructive actions.
+{{< /dont >}}
+{{< /compare >}}
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Use red to indicate
-destructive actions.](/hig/action-colour-destructive-do.png){.do}
-:::
+{{< compare >}}
+{{< do src="/hig/action-colour-destructive-do.png" >}}
+Use red to indicate destructive actions.
+{{< /do >}}
+{{< dont src="/hig/action-colour-destructive-dont.png" >}}
+Don't use red to indicate other types of actions--- this will confuse the
+user as to what the actions do.
+{{< /dont >}}
+{{< /compare >}}
 
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t use red to indicate
-other types of actions--- this will confuse the user as to what the
-actions do.](/hig/action-colour-destructive-dont.png){.dont}
-:::
-:::
+![Action icons are able to dynamically change their color based on context.](/hig/action-colour-adaptable.png)
 
-![Action icons are able to dynamically change their color based on
-context. Implementation details can be found at
-[community.kde.org](https://community.kde.org/Guidelines_and_HOWTOs/Icon_Workflow_Tips#Embedding_stylesheets_in_SVGs).](/hig/action-colour-adaptable.png)
+Implementation details can be found at [community.kde.org](https://community.kde.org/Guidelines_and_HOWTOs/Icon_Workflow_Tips#Embedding_stylesheets_in_SVGs).
 
 ### Metaphor
 
 Appropriate and consistent metaphors should be used to inform a user
 about the action an icon represents.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Use appropriate metaphors to
-indicate what an action does.](/hig/action-metaphor-do.png){.do}
-:::
-
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t use inaccurate or
-conflicting metaphors--- this will mislead your user and lead to
-frustration.](/hig/action-metaphor-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/action-metaphor-do.png" >}}
+Use appropriate metaphors to indicate what an action does.
+{{< /do >}}
+{{< dont src="/hig/action-metaphor-dont.png" >}}
+Don't use inaccurate or conflicting metaphors--- this will mislead your
+user and lead to frustration.
+{{< /dont >}}
+{{< /compare >}}
 
 Accessibility
 -------------
@@ -80,31 +81,24 @@ that your application meet accessibility standards. Care should also be
 taken to reinforce information conveyed by an icon in multiple
 ways---not everyone is able to distinguish between all colors.
 
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Provide a name and
-description that describe what an icon\'s action
-does.](/hig/action-accessibility-do.png){.do}
-:::
+{{< compare >}}
+{{< do src="/hig/action-accessibility-do.png" >}}
+Provide a name and description that describe what an icon's action
+does.
+{{< /do >}}
+{{< dont src="/hig/action-accessibility-dont.png" >}}
+Don't describe the icon's appearance---this is useless information that
+will make your application harder to use.
+{{< /dont >}}
+{{< /compare >}}
 
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t describe the icon\'s
-appearance---this is useless information that will make your application
-harder to use.](/hig/action-accessibility-dont.png){.dont}
-:::
-:::
-
-::: {.container .flex}
-::: {.container}
-![`Do.`{.interpreted-text role="noblefir"} Reinforce information in
-multiple ways to allow users with conditions such as colorblindness to
-get the message.](/hig/action-accessibility-color-do.png){.do}
-:::
-
-::: {.container}
-![`Don't.`{.interpreted-text role="iconred"} Don\'t only rely on color
-to convey information--- this makes it harder for users with
-colorblindness to distinguish two like icons
-apart.](/hig/action-accessibility-color-dont.png){.dont}
-:::
-:::
+{{< compare >}}
+{{< do src="/hig/action-accessibility-color-do.png" >}}
+Reinforce information in multiple ways to allow users with conditions
+such as colorblindness to get the message.
+{{< /do >}}
+{{< dont src="/hig/action-accessibility-color-dont.png" >}}
+Don't only rely on color to convey information--- this makes it harder
+for users with colorblindness to distinguish two like icons apart.
+{{< /dont >}}
+{{< /compare >}}
