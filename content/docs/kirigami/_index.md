@@ -45,7 +45,7 @@ and unlike the older QWidgets it is designed with (embedded) touch systems in
 mind and thus is ideal for mobile apps.
 
 Kirigami is a set of QtQuick components designed for creating convergent
-appslications.
+applications.
 
 While the UI code is done in QML in a declarative way, the business logic
 is usually created in C++ for performance reasons.
