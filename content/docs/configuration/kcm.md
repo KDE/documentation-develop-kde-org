@@ -80,6 +80,7 @@ mkdir build
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=~/.local/kde
 make -j8 install
+source prefix.sh
 kcmshell5 kcm_time
 ```
 
