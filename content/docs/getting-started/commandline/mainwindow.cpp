@@ -37,7 +37,7 @@ void MainWindow::setupActions()
     KStandardAction::saveAs(this, &MainWindow::saveFileAs, actionCollection());
     KStandardAction::openNew(this, &MainWindow::newFile, actionCollection());
 
-    setupGUI(Default, "savingloadingui.rc");
+    setupGUI(Default, "texteditorui.rc");
 }
 
 void MainWindow::newFile()

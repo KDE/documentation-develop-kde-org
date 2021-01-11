@@ -27,5 +27,5 @@ void MainWindow::setupActions()
     
     KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
     
-    setupGUI(Default, "usingactionsui.rc");
+    setupGUI(Default, "texteditorui.rc");
 }

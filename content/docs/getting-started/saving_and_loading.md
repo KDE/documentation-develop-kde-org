@@ -33,9 +33,9 @@ We also want to keep track of the filename of the currently opened file so we de
 
 We'll get into the details of mainwindow.cpp in a while. 
 
-### savingloadingui.rc
+### texteditorui.rc
 
-This is identical to usingactionsui.rc from the [previous tutorial](../using_actions) except the name has changed to 'savingloading'. We do not need to add any information about any of the [KStandardAction](docs:kconfigwidgets;KStandardAction) since the placement of those actions is handled automatically by XMLGUI system.
+This is identical to texteditorui.rc from the [previous tutorial](../using_actions). We do not need to add any information about any of the [KStandardAction](docs:kconfigwidgets;KStandardAction) since the placement of those actions is handled automatically by XMLGUI system.
 
 ## Explanation
 
@@ -192,5 +192,5 @@ mkdir build && cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/.local-kde
 make install
 source prefix.sh # located in the build directory
-savingloading
+texteditor
 ```
