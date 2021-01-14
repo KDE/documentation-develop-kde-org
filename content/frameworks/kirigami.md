@@ -4,10 +4,12 @@ scss: "scss/kirigami.scss"
 layout: framework
 ---
 
+<div class="container-fluid">
 <section class="kirigami-header">
   <h1><p class="header-logo">K</p>Kirigami UI Framework</h1>
   <p>Build beautiful, convergent apps that run on phones, TVs and everything in between.</p>
 </section>
+</div>
 
 <div>
   <div class="container text-center block-navs">
@@ -43,8 +45,11 @@ layout: framework
 
 <section class="section-blue">
   <div class="container">
-    <div class="text-center order-1 order-md-0">
-      <img src="kirigami-adapt.png" class="img-fluid" style="width: 600px" />
+    <div class="laptop-with-overlay d-block my-3 mx-auto w-100" style="max-width: 1000px">
+      <img class="laptop img-fluid mt-3" src="https://kde.org/content/plasma-desktop/laptop.png" alt="">
+      <div class="laptop-overlay">
+        <img class="img-fluid mt-3" src="kirigami-adapt.png" alt="Kirigami in a mobile and desktop form factor">
+      </div>
     </div>
     <div class="order-0 order-md-2">
       <h2 class="text-center">Responsive.</h2>
@@ -65,10 +70,10 @@ layout: framework
       smart workflow and no-gimmick design.
     </p>
   </div>
-  <img src="subsurface.png" class="img-fluid" style="width: 600px" />
+  <img src="subsurface.png" class="img-fluid" style="width: 400px" />
 </article>
 
-<article class="container">
+<article class="container pb-5">
   <div>
     <h2>Open.</h2>
     <p>
@@ -81,24 +86,33 @@ layout: framework
   </div>
 </article>
 
+<section class="section-blue">
+  <div class="container d-flex flex-column flex-lg-row">
+    <div class="align-self-center">
+      <h2 class="mt-0">Subsurface</h2>
+      <p>A dive log application created by Linus Torvalds with Kirigami
+      with support for Linux, Windows, macOS, iOS, Android, and iPadOS.</p>
+    </div>
+    <img class="img-fluid" src="subsurface-desktop.png" />
+  </div>
+</section>
+
 <section class="section-green">
   <div class="container d-flex flex-column flex-lg-row">
-    <img class="img-fluid order-2 order-lg-0" src="koko.png" />
+    <img class="img-fluid order-2 order-lg-0" src="koko.png" style="width: 600px" />
     <div class="order-1 order-lg-1 align-self-centert">
       <h2>Koko</h2>
-      <p>A convergent photo gallery built using Kirigami and KDE frameworks</p>
+      <p>A convergent photo gallery built using Kirigami and KDE frameworks.</p>
     </div>
   </div>
 </section>
 
 <section class="section-blue">
   <div class="container d-flex flex-column flex-lg-row">
-    <div class="align-self-center">
-      <h2 class="mt-0">Subsurface</h2>
-      <p>A dive log application created by Linus Torvalds with <br />
-        Kirigami with support for Linux, Windows, macOS, iOS, Android, and iPadOS.</p>
+    <div class="align-self-centert">
+      <h2>NeoChat</h2>
+      <p>A matrix client that works on Plasma, Plasma Mobile and Android.</p>
     </div>
-    <img class="img-fluid" src="subsurface-desktop.png" />
+    <img class="img-fluid" src="https://cdn.kde.org/screenshots/neochat/application.png" style="width: 600px" />
   </div>
 </section>
-
