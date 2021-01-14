@@ -2,14 +2,26 @@
 
 ## Running the website locally
 
-Download the latest Hugo release (extended version) from [here](https://github.com/gohugoio/hugo/releases)
- and clone this repo.
+Download the latest Hugo release (extended version) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
 
-Once you've cloned the site repo, from the repo root folder, run:
+Before running the server locally, you'll need to run a Python script. Make sure you have PyYaml installed on your system:
+
+```
+pip install pyyaml
+```
+
+Then, run this Python script:
+
+```
+python3 scripts/extract-plasma-applet-config-keys.py
+```
+
+You are now ready to start the server. Run:
 
 ```
 hugo server
 ```
+
 
 ## Extract icon metadata
 
