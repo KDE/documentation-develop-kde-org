@@ -1,0 +1,825 @@
+- groups:
+  - entries:
+    - default: start-here-kde
+      description: The name of the icon to use for the compact representation (e.g.
+        on a small panel).
+      name: icon
+      type: String
+    - default: 'false'
+      description: Whether to use a custom image instead of an icon in the compact
+        representation (e.g. on a small panel).
+      name: useCustomButtonImage
+      type: Bool
+    - default: 'null'
+      description: The URL of the custtom image to use instead of an icon in the compact
+        representation (e.g. on a small panel).
+      name: customButtonImage
+      type: Url
+    - default: '0'
+      description: 'The format used in the display of application names: 0 = NameOnly,
+        1 = GenericNameOnly, 2 = NameAndGenericName, 3 = GenericNameAndName'
+      name: appNameFormat
+      type: Int
+    - default: 'false'
+      description: Whether to flatten top-level menu categories to a single level
+        instead of displaying sub-categories.
+      name: limitDepth
+      type: Bool
+    - default: 'false'
+      description: Whether to sort menu contents alphabetically or use manual/system
+        sort order.
+      name: alphaSort
+      type: Bool
+    - default: '0'
+      description: 'How should the previously used apps/docs/contacts be ordered:
+        0 = RecentFirst, 1 = PopularFirst'
+      name: recentOrdering
+      type: Int
+    - default: preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover
+      description: List of general favorites. Supported values are menu id's (usually
+        .desktop file names), special URLs that expand into default applications (e.g.
+        preferred://browser), document URLs and KPeople contact URIs.
+      name: favoriteApps
+      type: StringList
+    - default: logout,reboot,shutdown
+      description: List of system action favorites.
+      name: favoriteSystemActions
+      type: StringList
+    - default: 'false'
+      description: Are the favorites ported to use KActivitiesStats to allow per-activity
+        favorites
+      name: favoritesPortedToKAstats
+      type: Bool
+    - default: empty list
+      description: List of menu id's (usually .desktop file names) of apps that should
+        not be shown in the menu.
+      name: hiddenApplications
+      type: StringList
+    - default: 'true'
+      description: Whether to show the "Recent Applications" category.
+      name: showRecentApps
+      type: Bool
+    - default: 'true'
+      description: Whether to show the "Recent Files" category.
+      name: showRecentDocs
+      type: Bool
+    - default: 'false'
+      description: Whether to show the "Recent Contacts" category.
+      name: showRecentContacts
+      type: Bool
+    - default: 'true'
+      description: Whether to use additional KRunner plugins to produce results in
+        the search.
+      name: useExtraRunners
+      type: Bool
+    - default: shell,bookmarks,baloosearch,locations
+      description: The plugin id's of additional KRunner plugins to use. Only used
+        if useExtraRunners is true.
+      name: extraRunners
+      type: StringList
+    - default: 'true'
+      description: Whether to align search results to the bottom of the menu representation
+        (e.g. panel popup) instead of the top.
+      name: alignResultsToBottom
+      type: Bool
+    - default: 'false'
+      description: Whether to show icons on the root level of the menu.
+      name: showIconsRootLevel
+      type: Bool
+    name: General
+  id: org.kde.plasma.kicker
+- groups:
+  - entries:
+    - default: 'true'
+      description: Whether to switch between menu tabs by hovering them.
+      name: switchTabsOnHover
+      type: Bool
+    - default: 'true'
+      description: Whether to display specific application names instead of their
+        generic names (e.g. Dolphin instead of File Manager).
+      name: showAppsByName
+      type: Bool
+    - default: start-here-kde
+      description: The name of the icon used in the compact representation (e.g. on
+        a small panel).
+      name: icon
+      type: String
+    - default: preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover.desktop
+      description: List of general favorites. Supported values are menu id's (usually
+        .desktop file names), special URLs that expand into default applications (e.g.
+        preferred://browser), document URLs and KPeople contact URIs.
+      name: favorites
+      type: StringList
+    - default: 'false'
+      description: Are the favorites ported to use KActivitiesStats to allow per-activity
+        favorites
+      name: favoritesPortedToKAstats
+      type: Bool
+    - default: systemsettings.desktop,org.kde.kinfocenter.desktop,org.kde.discover.desktop
+      description: List of applications at the top of the "Computer" tab.
+      name: systemApplications
+      type: StringList
+    - default: bookmark:t,application:t,computer:t,used:t,oftenUsed:f,leave:t
+      description: The menu tabs to show.
+      name: menuItems
+      type: StringList
+    - default: 'false'
+      description: Whether to sort menu contents alphabetically or use manual/system
+        sort order.
+      name: alphaSort
+      type: Bool
+    name: General
+  id: org.kde.plasma.kickoff
+- groups:
+  - entries:
+    - default: 'false'
+      description: ''
+      name: vertical_lookup_table
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: use_default_font
+      type: Bool
+    - default: 'null'
+      description: ''
+      name: font
+      type: Font
+    - default: empty list
+      description: ''
+      name: hiddenList
+      type: StringList
+    name: Appearance
+  id: org.kde.plasma.kimpanel
+- groups:
+  - entries:
+    - default: user-desktop
+      description: ''
+      name: icon
+      type: String
+    name: General
+  id: org.kde.plasma.marginsseparator
+- groups:
+  - entries:
+    - default: user-desktop
+      description: ''
+      name: icon
+      type: String
+    name: General
+  id: org.kde.plasma.minimizeall
+- groups:
+  - entries:
+    - default: '2'
+      description: The text to show inside the desktop rectangles.
+      name: displayedText
+      type: Enum
+    - default: 'false'
+      description: Whether to show window icons inside the window rectangles.
+      name: showWindowIcons
+      type: Bool
+    - default: 'false'
+      description: Whether to limit the Pager to the set of windows and the geometry
+        of the screen the widget resides on.
+      name: showOnlyCurrentScreen
+      type: Bool
+    - default: 'false'
+      description: Whether to wrap page when navigating with pager
+      name: wrapPage
+      type: Bool
+    - default: '0'
+      description: What to do on left-mouse click on a desktop rectangle.
+      name: currentDesktopSelected
+      type: Enum
+    - default: '0'
+      description: The layout style used for the presentation.
+      name: pagerLayout
+      type: Enum
+    name: General
+  id: org.kde.plasma.pager
+- groups:
+  - entries:
+    - default: 'true'
+      description: Show the current activity name
+      name: showActivityName
+      type: Bool
+    - default: 'true'
+      description: Show the current activity icon instead of the applet icon
+      name: showActivityIcon
+      type: Bool
+    name: General
+  id: org.kde.plasma.showActivityManager
+- groups:
+  - entries:
+    - default: user-desktop
+      description: ''
+      name: icon
+      type: String
+    name: General
+  id: org.kde.plasma.showdesktop
+- groups:
+  - entries:
+    - default: 'false'
+      description: Whether to show only window tasks that are on the same screen as
+        the widget.
+      name: showOnlyCurrentScreen
+      type: Bool
+    - default: 'true'
+      description: Whether to only show tasks that are on the current virtual desktop.
+      name: showOnlyCurrentDesktop
+      type: Bool
+    - default: 'true'
+      description: Whether to show only tasks that are on the current activity.
+      name: showOnlyCurrentActivity
+      type: Bool
+    - default: 'false'
+      description: Whether to show only window tasks that are minmized.
+      name: showOnlyMinimized
+      type: Int
+    - default: '1'
+      description: 'How tasks are grouped: 0 = Do Not Group, 1 = By Program Name'
+      name: groupingStrategy
+      type: Enum
+    - default: '0'
+      description: 'What happens when clicking on a grouped task: 0 = cycle through
+        grouped tasks, 1 = try to show tooltips, 2 = try to show present Windows effect,
+        3 = show textual list (AKA group dialog)'
+      name: groupedTaskVisualization
+      type: Enum
+    - default: 'true'
+      description: Whether groups are to be reduced to a single task button and expand
+        into a popup or task buttons are grouped on the widget itself.
+      name: groupPopups
+      type: Bool
+    - default: 'true'
+      description: Whether to group always or only when the widget runs out of space
+        to show additional task buttons comfortably.
+      name: onlyGroupWhenFull
+      type: Bool
+    - default: empty list
+      description: The id's (usually .desktop file names) of applications that should
+        not have their tasks grouped.
+      name: groupingAppIdBlacklist
+      type: StringList
+    - default: empty list
+      description: The launcher URLs (usually .desktop file or executable URLs) of
+        applications that should not have their tasks grouped.
+      name: groupingLauncherUrlBlacklist
+      type: StringList
+    - default: '1'
+      description: 'How to sort tasks: 0 = Do Not Sort, 1 = Manually, 2 = Alphabetically,
+        3 = By Desktop, 4 = By Activity'
+      name: sortingStrategy
+      type: Int
+    - default: 'true'
+      description: Whether launcher tasks are sorted separately at the left side of
+        the widget or can be mixed with other tasks.
+      name: separateLaunchers
+      type: Bool
+    - default: '2'
+      description: The maximum number of rows (in a horizontal-orientation containment,
+        i.e. panel) or columns (in a vertical-orientation containment) to layout task
+        buttons in.
+      name: maxStripes
+      type: Int
+    - default: 'false'
+      description: Whether to try and always layout task buttons in as many rows/columns
+        as set via maxStripes.
+      name: forceStripes
+      type: Bool
+    - default: 'true'
+      description: Whether to show tooltips when hovering task buttons.
+      name: showToolTips
+      type: Bool
+    - default: 'true'
+      description: Whether using the mouse wheel with the mouse pointer above the
+        widget should switch between tasks.
+      name: wheelEnabled
+      type: Bool
+    - default: 'false'
+      description: Whether to request the window manager highlight windows when hovering
+        corresponding task buttons.
+      name: highlightWindows
+      type: Bool
+    - default: applications:systemsettings.desktop,applications:org.kde.discover.desktop,preferred://filemanager,preferred://browser
+      description: The list of launcher tasks on the widget. Usually .desktop file
+        or executable URLs. Special URLs such as preferred://browser that expand to
+        default applications are supported.
+      name: launchers
+      type: StringList
+    - default: '2'
+      description: What to do on middle-mouse click on a task button.
+      name: middleClickAction
+      type: Enum
+    - default: 'true'
+      description: Whether to indicate applications that are playing audio including
+        an option to mute them.
+      name: indicateAudioStreams
+      type: Bool
+    - default: 'true'
+      description: Whether task buttons should change in appearance when the mouse
+        pointer is above them.
+      name: taskHoverEffect
+      type: Bool
+    - default: '0'
+      description: The maximum number of text lines to show in a task button. 0 means
+        no limit.
+      name: maxTextLines
+      type: Int
+    - default: '3'
+      description: The preferred size of task button icons in a vertical task manager.
+      name: iconSize
+      type: Enum
+    - default: 'true'
+      description: Whether to minimize the currently-active task when clicked. If
+        false, clicking on the currently-active task will do nothing.
+      name: minimizeActiveTaskOnClick
+      type: Bool
+    name: General
+  id: org.kde.plasma.taskmanager
+- groups:
+  - entries:
+    - default: 'false'
+      description: ''
+      name: showSecondHand
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: showTimezoneString
+      type: Bool
+    name: General
+  id: org.kde.plasma.analogclock
+- groups:
+  - entries:
+    - default: 'false'
+      description: If true it only shows a button for the application menu.
+      name: compactView
+      type: Bool
+    name: Appearance
+  id: org.kde.plasma.appmenu
+- groups:
+  - entries:
+    - default: 'false'
+      description: If true, the battery will display a little charge percentage label
+        inside.
+      name: showPercentage
+      type: bool
+    name: General
+  id: org.kde.plasma.battery
+- groups:
+  - entries:
+    - default: '9'
+      description: ''
+      name: startOfWorkingDay
+      type: int
+    - default: '17'
+      description: ''
+      name: endOfWorkingDay
+      type: int
+    - default: 'false'
+      description: ''
+      name: showWeekNumbers
+      type: Bool
+    - default: d
+      description: ''
+      name: compactDisplay
+      type: String
+    name: Agenda
+  id: org.kde.plasma.calendar
+- groups:
+  - entries:
+    - default: 'true'
+      description: If true it lists removable devices, such as USB thumbdrives. Only
+        one between removableDevices, nonRemovableDevices and allDevices should be
+        set.
+      name: removableDevices
+      type: Bool
+    - default: 'false'
+      description: If true it lists non removable devices, such as internal harddrives.
+        Only one between removableDevices, nonRemovableDevices and allDevices should
+        be set.
+      name: nonRemovableDevices
+      type: Bool
+    - default: 'false'
+      description: If true it lists all kind of devices. Only one between removableDevices,
+        nonRemovableDevices and allDevices should be set.
+      name: allDevices
+      type: Bool
+    - default: 'true'
+      description: If true it tries to open the plasmoid when a new device is inserted,
+        as a kind of notification.
+      name: popupOnNewDevice
+      type: Bool
+    name: General
+  id: org.kde.plasma.devicenotifier
+- groups:
+  - entries:
+    - default: 'false'
+      description: Whether the timezone should be displayed when the clock is showing
+        the local timezone.
+      name: showLocalTimezone
+      type: Bool
+    - default: 'false'
+      description: Whether seconds should be shown in the clock.
+      name: showSeconds
+      type: Bool
+    - default: 'true'
+      description: Whether the date should be shown next to the clock.
+      name: showDate
+      type: Bool
+    - default: shortDate
+      description: 'The date format to display. Options are: shortDate, longDate,
+        isoDate or custom.'
+      name: dateFormat
+      type: string
+    - default: ddd d
+      description: Custom date format string.
+      name: customDateFormat
+      type: string
+    - default: 'null'
+      description: Font family. e.g "arial". The system font is used if this is not
+        set.
+      name: fontFamily
+      type: string
+    - default: 'false'
+      description: Sets the font to bold.
+      name: boldText
+      type: Bool
+    - default: 'false'
+      description: Sets the font to italic.
+      name: italicText
+      type: Bool
+    - default: default
+      description: ''
+      name: timeFormat
+      type: string
+    - default: Local
+      description: A list of the configured time zones. Format is "Europe/London".
+        Special entry "Local" indicates system time zone.
+      name: selectedTimeZones
+      type: StringList
+    - default: Local
+      description: When multiple time zones are configured, this is the one shown
+        on widget restore. Typically the system's current timezone.
+      name: lastSelectedTimezone
+      type: String
+    - default: 'true'
+      description: Whether the timezone is displayed as a code i.e. "GMT" or full
+        text i.e. "London".
+      name: displayTimezoneAsCode
+      type: Bool
+    - default: 'false'
+      description: Whether the calendar should show week numbers.
+      name: showWeekNumbers
+      type: Bool
+    - default: '1'
+      description: Force the clock to use 12/24 hour time, instead of following the
+        user locale.
+      name: use24hFormat
+      type: UInt
+    - default: '-1'
+      description: Force the calendar to use a specific week day as first day of a
+        week. -1 means follow user locale, 0 is Sunday, 1 is Monday, etc.
+      name: firstDayOfWeek
+      type: Int
+    - default: empty list
+      description: A list of plugins where additional calendar event data can be sourced.
+      name: enabledCalendarPlugins
+      type: StringList
+    - default: 'false'
+      description: Whether the popup should remain open when another window is activated
+      name: pin
+      type: Bool
+    name: Appearance
+  id: org.kde.plasma.digitalclock
+- groups:
+  - entries:
+    - default: empty string
+      description: ''
+      name: url
+      type: String
+    - default: empty string
+      description: ''
+      name: localPath
+      type: String
+    name: General
+  id: org.kde.plasma.icon
+- groups:
+  - entries:
+    - default: 'true'
+      description: Show an option to shut down the system.
+      name: show_requestShutDown
+      type: Bool
+    - default: 'true'
+      description: Show an option to lock the system.
+      name: show_lockScreen
+      type: Bool
+    - default: 'false'
+      description: Show an option to switch user.
+      name: show_switchUser
+      type: Bool
+    - default: 'false'
+      description: Show an option to suspend the system to disk (hibernate).
+      name: show_suspendToDisk
+      type: Bool
+    - default: 'false'
+      description: Show an option to suspend the system suspend.
+      name: show_suspendToRam
+      type: Bool
+    name: General
+  id: org.kde.plasma.lock_logout
+- groups:
+  - entries:
+    - default: 'true'
+      description: If true, the spacer tries to take all the available space in the
+        panel.
+      name: expanding
+      type: bool
+    - default: '-1'
+      description: length in pixels of the spacer. Configuration effective only if
+        expanding is set to false. A negative value means an invalid value that should
+        be completely ignored.
+      name: length
+      type: Int
+    name: General
+  id: org.kde.plasma.panelspacer
+- groups:
+  - entries:
+    - default: 'true'
+      description: ''
+      name: showGrid
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showOffLeds
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showSeconds
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: showBcdFormat
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: useCustomColorForActive
+      type: Bool
+    - default: green
+      description: ''
+      name: customColorForActive
+      type: Color
+    - default: 'false'
+      description: ''
+      name: useCustomColorForInactive
+      type: Bool
+    - default: red
+      description: ''
+      name: customColorForInactive
+      type: Color
+    - default: 'false'
+      description: ''
+      name: useCustomColorForGrid
+      type: Bool
+    - default: blue
+      description: ''
+      name: customColorForGrid
+      type: Color
+    name: General
+  id: org.kde.plasma.binaryclock
+- groups:
+  - entries:
+    - default: empty list
+      description: ''
+      name: history
+      type: StringList
+    - default: 'true'
+      description: ''
+      name: autoClipboard
+      type: Bool
+    - default: '#RRGGBB'
+      description: ''
+      name: defaultFormat
+      type: String
+    - default: 'true'
+      description: ''
+      name: pickOnActivate
+      type: Bool
+    name: General
+  id: org.kde.plasma.colorpicker
+- groups:
+  - entries:
+    - default: empty string
+      description: ''
+      name: imagePath
+      type: String
+    - default: 'false'
+      description: ''
+      name: useImage
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showNumerals
+      type: Bool
+    - default: '#333333'
+      description: ''
+      name: boardColor
+      type: Color
+    - default: '#ffffff'
+      description: ''
+      name: numberColor
+      type: Color
+    - default: '4'
+      description: ''
+      name: boardSize
+      type: Int
+    name: Appearance
+  id: org.kde.plasma.fifteenpuzzle
+- groups:
+  - entries:
+    - default: '1'
+      description: ''
+      name: fuzzyness
+      type: Int
+    - default: 'false'
+      description: ''
+      name: boldText
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: italicText
+      type: Bool
+    name: Appearance
+  id: org.kde.plasma.fuzzyclock
+- groups:
+  - entries:
+    - default: Caps Lock
+      description: ''
+      name: key
+      type: StringList
+    name: General
+  id: org.kde.plasma.keyboardindicator
+- groups:
+  - entries:
+    - default: '10.0'
+      description: ''
+      name: interval
+      type: Double
+    - default: 'true'
+      description: ''
+      name: randomize
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: pauseOnMouseOver
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: useBackground
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: leftClickOpenImage
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showCountdown
+      type: Bool
+    - default: '1'
+      description: ''
+      name: fillMode
+      type: int
+    name: General
+  - entries:
+    - default: empty list
+      description: ''
+      name: pathList
+      type: StringList
+    name: Paths
+  id: org.kde.plasma.mediaframe
+- groups:
+  - entries:
+    - default: yellow
+      description: ''
+      name: color
+      type: String
+    - default: empty string
+      description: ''
+      name: noteId
+      type: String
+    name: General
+  id: org.kde.plasma.notes
+- groups:
+  - entries:
+    - default: '1'
+      description: ''
+      name: maxSectionCount
+      type: Int
+    - default: 'false'
+      description: ''
+      name: showLauncherNames
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: enablePopup
+      type: Bool
+    - default: empty string
+      description: ''
+      name: title
+      type: String
+    - default: empty list
+      description: ''
+      name: launcherUrls
+      type: StringList
+    - default: empty list
+      description: ''
+      name: popupUrls
+      type: StringList
+    name: General
+  id: org.kde.plasma.quicklaunch
+- groups:
+  - entries:
+    - default: 30,60,120,300,450,600,900,1200,1500,1800,2700,3600
+      description: ''
+      name: predefinedTimers
+      type: StringList
+    - default: '0'
+      description: ''
+      name: running
+      type: int
+    - default: '0'
+      description: ''
+      name: seconds
+      type: int
+    - default: 'null'
+      description: ''
+      name: savedAt
+      type: DateTime
+    - default: 'false'
+      description: ''
+      name: showTitle
+      type: Bool
+    - default: Timer
+      description: ''
+      name: title
+      type: String
+    - default: 'true'
+      description: ''
+      name: showSeconds
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showNotification
+      type: Bool
+    - default: Timer finished
+      description: ''
+      name: notificationText
+      type: String
+    - default: 'false'
+      description: ''
+      name: runCommand
+      type: Bool
+    - default: empty string
+      description: ''
+      name: command
+      type: String
+    name: General
+  id: org.kde.plasma.timer
+- groups:
+  - entries:
+    - default: 'false'
+      description: ''
+      name: showFace
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showName
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showFullName
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: showTechnicalInfo
+      type: Bool
+    name: General
+  id: org.kde.plasma.userswitcher
+- groups:
+  - entries:
+    - default: https://www.kde.org/
+      description: ''
+      name: url
+      type: String
+    - default: 'true'
+      description: ''
+      name: useMinViewWidth
+      type: Bool
+    - default: '600'
+      description: ''
+      name: minViewWidth
+      type: Int
+    - default: '100'
+      description: ''
+      name: constantZoomFactor
+      type: Int
+    name: General
+  id: org.kde.plasma.webbrowser
