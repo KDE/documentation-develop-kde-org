@@ -1,6 +1,6 @@
 ---
 title: Basic Controls
-weight: 4
+weight: 2
 group: introduction
 description: >
   Learn how to add some basic components to your application
@@ -18,7 +18,8 @@ On the start page, there needs to be a way to enter start and
 destination of our journey as well as the date and time of our travel. For start
 and destination you can use the `TextField` component from QtQuick Controls 2. Note that
 the older version 1 of QtQuick Controls is still around for the foreseable future,
-but you want to avoid using that. We’re extending `StartPage.qml` with our controls
+but you want to avoid using that. We’re extending the `Kirigami.Page` element in
+`main.qml` with our controls
 
 ```qml
 ColumnLayout {

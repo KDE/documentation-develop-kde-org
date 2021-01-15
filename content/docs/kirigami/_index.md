@@ -6,6 +6,8 @@ layout: home
 groups:
   - name: "Introduction"
     key: "introduction"
+  - name: "Style"
+    key: "style"
   - name: "Components"
     key: "components"
   - name: "Advanced"

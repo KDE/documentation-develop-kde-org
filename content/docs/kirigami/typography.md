@@ -1,7 +1,7 @@
 ---
 title: Typography
-weight: 7
-group: introduction
+weight: 102
+group: style
 description: Laying out your content
 ---
 
