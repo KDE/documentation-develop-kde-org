@@ -1,8 +1,8 @@
 {{/* SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu> */}}
 {{/* SPDX-License-Identifier: LGPL-3.0-or-later */}}
-{{ $file := printf "files/%s/%s" (.Get "repo") (.Get "file") }}
-{{- if fileExists $file -}}
-  {{- $fileContent := $file  | readFile -}}
+{{ $filePath := printf "files/%s/%s" (.Get "repo") (.Get "file") }}
+{{- if fileExists $filePath -}}
+  {{- $fileContent := $filePath  | readFile -}}
   {{- $fileContent = split $fileContent "\n" -}}
   {{- $line := 1 -}}
   {{- $line_start := 0 -}}
@@ -24,5 +24,9 @@
   {{- $fileContent = delimit $fileContent "\n" -}}
   {{- highlight ($fileContent) (.Get "lang") "" -}}
 {{ else -}}
-  {{- errorf "Run python3 scripts/extract-plasma-applet-config-keys.py first %s %s" (.Get "repo") (.Get "file") -}}
+  {{- warnf "Missing %s (Run: python3 scripts/extract-plasma-applet-config-keys.py)" $filePath -}}
+  <div class="alert alert-error" role="alert">
+    Website is missing <code>{{ $filePath }}</code><br>
+    Run <code>python3 scripts/extract-plasma-applet-config-keys.py</code> to fix.
+  </div>
 {{- end -}}
