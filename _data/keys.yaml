@@ -1,5 +1,13 @@
 - groups:
   - entries:
+    - default: 'false'
+      description: ''
+      name: showFlag
+      type: Bool
+    name: General
+  id: org.kde.plasma.keyboardlayout
+- groups:
+  - entries:
     - default: start-here-kde
       description: The name of the icon to use for the compact representation (e.g.
         on a small panel).
@@ -94,11 +102,6 @@
       description: Whether to switch between menu tabs by hovering them.
       name: switchTabsOnHover
       type: Bool
-    - default: 'true'
-      description: Whether to display specific application names instead of their
-        generic names (e.g. Dolphin instead of File Manager).
-      name: showAppsByName
-      type: Bool
     - default: start-here-kde
       description: The name of the icon used in the compact representation (e.g. on
         a small panel).
@@ -110,6 +113,15 @@
         preferred://browser), document URLs and KPeople contact URIs.
       name: favorites
       type: StringList
+    - default: suspend,hibernate,reboot,shutdown
+      description: List of system action favorites.
+      name: systemFavorites
+      type: StringList
+    - default: '0'
+      description: 'Which actions should be displayed in the footer: 0 = Power, 1
+        = Session, 2 = Custom'
+      name: primaryActions
+      type: Int
     - default: 'false'
       description: Are the favorites ported to use KActivitiesStats to allow per-activity
         favorites
@@ -119,10 +131,14 @@
       description: List of applications at the top of the "Computer" tab.
       name: systemApplications
       type: StringList
-    - default: bookmark:t,application:t,computer:t,used:t,oftenUsed:f,leave:t
-      description: The menu tabs to show.
-      name: menuItems
-      type: StringList
+    - default: '0'
+      description: 'How to display favorites: 0 = Grid, 1 = List'
+      name: favoritesDisplay
+      type: Int
+    - default: 'true'
+      description: Whether to allow showing two lines in grid view.
+      name: gridAllowTwoLines
+      type: Bool
     - default: 'false'
       description: Whether to sort menu contents alphabetically or use manual/system
         sort order.
@@ -148,6 +164,12 @@
       description: ''
       name: hiddenList
       type: StringList
+    - default: 'false'
+      description: Whether to automatically scale System Tray icons to fix the available
+        thickness of the panel. If false, tray icons will be capped at the smallMedium
+        size (22px) and become a two-row/column layout when the panel is thick.
+      name: scaleIconsToFit
+      type: bool
     name: Appearance
   id: org.kde.plasma.kimpanel
 - groups:
@@ -507,6 +529,14 @@
     - default: 'true'
       description: Show an option to shut down the system.
       name: show_requestShutDown
+      type: Bool
+    - default: 'false'
+      description: Show an option to reboot the system.
+      name: show_requestReboot
+      type: Bool
+    - default: 'false'
+      description: Show an option to logout.
+      name: show_requestLogout
       type: Bool
     - default: 'true'
       description: Show an option to lock the system.
