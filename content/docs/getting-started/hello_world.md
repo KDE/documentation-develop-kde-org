@@ -8,12 +8,12 @@ description: >
 
 ## Abstract
 
-Your first program shall greet the world with a friendly "Hello World!", what else? For that, we will use a [KMessageBox](docs:kwidgetsaddons;KMessageBox) and customise one of the buttons. 
+Your first program shall greet the world with a friendly "Hello World!". For that, we will use a [KMessageBox](docs:kwidgetsaddons;KMessageBox) and customise one of its buttons. 
 
 ![](result.png)
 
 {{< alert title="Note" color="info" >}}
-To get more information about any class you come across, you can use the ‘kde’ search engine. For example, to look for information about KMessageBox, just type "kde:kmessagebox" into Konqueror, or KRunner, and you’ll be taken to the documentation.
+To get more information about any class you come across, you can use [KDE's API Reference site](https://api.kde.org/index.html). It can be quickly accessed via KRunner with the 'kde:' search keyword (e.g. 'kde: KMessageBox'). You may also find it useful to consult Qt's documentation with `qt:`, since much of KDE's Frameworks builds upon it.
 {{< /alert >}}
 
 

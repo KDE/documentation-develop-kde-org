@@ -16,7 +16,7 @@ For example, if we wanted to let the user of your [window](../main_window) clear
 
 ## QAction
 
-A [QAction ](https://doc.qt.io/qt-5/qaction.html) is an object which contains all the information about the icon and shortcuts that is associated with a certain action. The action is then connected to a slot which carries out the work of your action. 
+A [QAction ](https://doc.qt.io/qt-5/qaction.html) is an object which contains all the information about the icon and shortcuts that are associated with a certain action. The action is then connected to a [slot](https://doc.qt.io/qt-5/signalsandslots.html) which carries out the work of your action. 
 
 ## The Code
 
@@ -36,7 +36,7 @@ Only a function void `setupActions()` has been added which will do all the work 
 
 ## Explanation
 
-This builds upon the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) code from [the main window](main_window). Most of the changes are to mainwindow.cpp, an important structural change being that the constructor for MainWindow now calls `setupActions()` instead of `setupGUI()`. `setupActions()` is where the new QAction code goes before finally calling `setupGUI()` itself.
+This builds upon the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) code from our previous [main window](main_window). Most of the changes are to mainwindow.cpp, an important structural change being that the constructor for MainWindow now calls `setupActions()` instead of `setupGUI()`. `setupActions()` is where the new QAction code goes before finally calling `setupGUI()` itself.
 
 ### Creating the QAction object
 
@@ -58,9 +58,13 @@ Now that we have our QAction object, we can start setting its properties. The fo
 clearAction->setText(i18n("&Clear"));
 ```
 
-Note that the text is passed through the i18n() function; this is necessary for the UI to be translatable (more information on this can be found in the :doc:`i18n tutorial<../i18n/index>`). 
+Note that the text is passed through the i18n() function; this is necessary for the UI to be translatable (more information on this can be found in the [docs](docs:ki18n). 
 
-The text of the action should contain a & because that makes it easier to translate in non-latin1 languages. In Japanese, the translation might be ソース(&S) and without the & in the english text the translators cannot know if they have to add a & or not.
+The ampersand (&) in the action text denotes which letter will be used as an accelerator for said action. If the user opens a menu and presses the 'Alt' key, this will highlight the first letter of 'Clear', denoting the key they can press to perform said action. In this case, they would press 'Alt+C' to clear the textbox when the 'file' menu is open.
+
+![](accelerator-highlight.png)
+
+The ampersand is also useful for internationalisation: in non-latin languages such as Japanese (where 'copy' is コピー), using the first letter of that language to accelerate the action could be cumbersome. The ampersand lets translators know whether they should include the latin character in parentheses, allowing non-English users to use the same accelerator key even if the translated string is completely different.
 
 ### Icon
 
@@ -104,7 +108,7 @@ connect(clearAction, &QAction::triggered),
 
 ### KStandardAction
 
-For actions which would likely appear in almost every KDE application such as 'quit', 'save', and 'load' there are pre-created convenience QActions, accessed through :kconfigwidgetsapi:`KStandardAction`. 
+For actions which would likely appear in almost every KDE application such as 'quit', 'save', and 'load' there are pre-created convenience QActions, accessed through [`KStandardAction`](docs:kconfigwidgets;KStandardAction). 
 
 They are very simple to use. Once the library has been included (`#include <KStandardAction>`), simply supply it with what you want the function to do and which QActionCollection to add it to. For example: 
 
@@ -112,13 +116,13 @@ They are very simple to use. Once the library has been included (`#include <KSta
 KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
 ```
 
-Here we call the QApplicaton's [quit ](https://doc.qt.io/qt-5/qapplication.html#quit) method whenever the :kconfigwidgetsapi:`KStandardAction` quit is triggered. We are able to access that QApplication method via the [qApp](https://doc.qt.io/qt-5/qapplication.html#qApp) macro. 
+Here we call the QApplicaton's [quit ](https://doc.qt.io/qt-5/qapplication.html#quit) method whenever [`KStandardAction::quit`](docs:kconfigwidgets;KStandardAction::quit) is triggered. We are able to access that QApplication method via the [qApp](https://doc.qt.io/qt-5/qapplication.html#qApp) macro, which returns a pointer to the specific QApplication object in question. 
 
 In the end, this creates a QAction with the correct icon, text and shortcut and even adds it to the File menu.
 
 ### Adding the action to menus and toolbars
 
-At the moment, the new "Clear" action has been created but it hasn't been associated with any menus or toolbars. This is done with a KDE technology called XMLGUI, which does nice things like movable toolbars for you.
+At the moment, the new "Clear" action has been created but it hasn't been associated with any menus or toolbars. This is done with a KDE technology called XMLGUI, which does nice things like create movable toolbars for you.
 
 ### Defining your own help menu
 
@@ -128,11 +132,11 @@ The Help menu has been standardized to ease the lives of both developers and use
 
 The `setupGUI()` function in [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) depends on the XMLGUI system to construct the GUI, which XMLGUI does by parsing an XML file description of the interface.
 
-The rule for naming this XML file is `appnameui.rc`, where appname is the name you set in :kcorewidgetsapi:`KAboutData` (in this case, tutorial3). So in our example, the file is called `texteditorui.rc`, and is located in the build directory. Where the file will ultimately be placed is handled by CMake. 
+The rule for naming this XML file is `appnameui.rc`, where appname is the name you set in [`KAboutData`](docs:kcorewidgetsapi;KAboutData) (in this case, TextEditor). So in our example, the file is called `texteditorui.rc`, and is placed in the same folder as our other files. Where the file will ultimately be placed is handled by CMake. 
 
 #### appnameui.rc file
 
-Since the description of the UI is defined with XML, the layout must follow strict rules. This tutorial will not go into great depth on this topic, but for more information, see the detailed :doc:`XMLGUI` page. 
+Since the description of the UI is defined with XML, the layout must follow strict rules. This tutorial will not go into great depth on this topic, but for more information, see the detailed [`XMLGUI`](docs:kxmlgui) page. 
 
 #### texteditorui.rc
 
@@ -148,19 +152,17 @@ Change the 'version' attribute of the `<gui>` tag if you changed .rc file since 
 The version attribute must always be an integer number.
 {{< /alert >}}
 
-Some notes on the interaction between code and the .rc file: Menus appear automatically and should have a `<text/>` child tag unless they refer to standard menus. Actions need to be created manually and inserted into the `actionCollection()` using the name in the .rc file. Actions can be hidden or disabled, whereas menus can't. 
+Some notes on the interaction between code and the .rc file: menus appear automatically and should have a `<text/>` child tag unless they refer to standard menus. Actions need to be created manually and inserted into the `actionCollection()` using the same name as in the .rc file. Actions can be hidden or disabled, whereas menus can't. 
 
 ## CMake
 
-Finally, the `texteditorui.rc` needs to go somewhere where the system can find it (can't just leave it in the source directory!). **This means the project needs to be installed somewhere**, unlike in the previous tutorials. 
+Finally, the `texteditorui.rc` needs to go somewhere where the system can find it (you can't just leave it in the source directory!). **This means the project needs to be installed somewhere**, unlike in the previous tutorials. 
 
 ### CMakeLists.txt
 
-.. literalinclude:: using_actions/CMakeLists.txt
-   :language: cmake
-   :linenos:
+{{< readfile file="/content/docs/getting-started/using_actions/CMakeLists.txt" highlight="cmake" >}}
 
-This file is almost identical to the one for [previous tutorial](../main_window), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the `KDE_INSTALL_TARGETS_DEFAULT_ARGS` then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory under `KDE_INSTALL_KXMLGUI5DIR`. 
+This file is almost identical to the one for [previous tutorial](../main_window), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the `KDE_INSTALL_TARGETS_DEFAULT_ARGS` then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory under `KDE_INSTALL_KXMLGUI5DIR`.
 
 ## Make, Install And Run
 
@@ -184,4 +186,4 @@ source prefix.sh # located in the build directory
 texteditor
 ```
 
-This temporarily adds (prepends) the newly created "share" location to `XDG_DATA_DIRS`, the standard path for application data files and change the `PATH` and other Qt environement variables.
+This temporarily adds (prepends) the newly created "share" location to [`XDG_DATA_DIRS`](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html), the standard path for application data files, and changes the `PATH` and other Qt environment variables.

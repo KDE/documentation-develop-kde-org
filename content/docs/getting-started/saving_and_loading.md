@@ -17,7 +17,7 @@ The KDE Frameworks provides a number of classes for working with files that make
 
 ### main.cpp
 
-Nothing changed here.
+We don't need to change anything in here.
 
 ### mainwindow.h
 
@@ -35,17 +35,21 @@ We'll get into the details of mainwindow.cpp in a while.
 
 ### texteditorui.rc
 
-This is identical to texteditorui.rc from the [previous tutorial](../using_actions). We do not need to add any information about any of the [KStandardAction](docs:kconfigwidgets;KStandardAction) since the placement of those actions is handled automatically by XMLGUI system.
+This is identical to texteditorui.rc from the [previous tutorial](../using_actions). We do not need to add any information about any of the [KStandardAction](docs:kconfigwidgets;KStandardAction) since the placement of those actions is handled automatically by the XMLGUI system.
 
 ## Explanation
 
 Okay, now to implement the code that will do the loading and saving. This will all be happening in `mainwindow.cpp`.
 
+```cpp
+MainWindow::MainWindow(QWidget *parent) : KXmlGuiWindow(parent), fileName(QString())
+```
+
 The first thing we do is add `fileName(QString())` to the MainWindow constructor list to make sure that fileName is empty right from the beginning. 
 
 ### Adding the actions
 
-The first thing we are going to do is provide the outward interface for the user so they can tell the application to load and save. Like with the quit action in [previous tutorial](../using_actions), we will use [KStandardAction](docs:kconfigwidgets;KStandardAction). We add the actions in the same way as for the quit action and, for each one, we connect it to the appropriate slot that we declared in the header file.
+The first thing we are going to do is provide the outward interface for the user so they can tell the application to load and save. Like with the quit action in the [previous tutorial](../using_actions), we will use [KStandardAction](docs:kconfigwidgets;KStandardAction). We add the actions in the same way we did for the quit action and, for each one, we connect it to the appropriate slot that we declared in the header file.
 
 ### Creating a new document
 
@@ -59,10 +63,10 @@ void MainWindow::newFile()
 }
 ```
 
-`fileName.clear()` sets the `fileName` QString to be empty to reflect the fact that this document does not yet have a presence on storage. `textArea->clear()` then clears the central text area using the same function that we connected the clear QAction to in [previous tutorial](../using_actions).
+`fileName.clear()` sets the `fileName` QString to be empty to reflect the fact that this document does not yet have a presence on storage. `textArea->clear()` then clears the central text area using the same function that we connected the 'clear' QAction to in the [previous tutorial](../using_actions).
 
 {{< alert title="Warning" color="warning" >}}
-This simple example simply clears the text area without checking if the file has been saved first. It's only meant as a demonstration of file I/O and not as an example of best programming practices.
+This example simply clears the text area without checking if the file has been saved first. It's only meant as a demonstration of file I/O and is *not* an example of best programming practices.
 {{< /alert >}}
 
 ### Saving a file
@@ -73,15 +77,15 @@ To make this tutorial simple, this example program can only save to local storag
 
 ### saveFileToDisk(const QString &)
 
-Now we get onto our first file handling code. We're going to implement a function which will save the contents of the text area to the file name given as a parameter. Qt provides a class for safely saving a file called [QSaveFile ](https://doc.qt.io/qt-5/qsavefile.html).
+Now we get onto our first file handling code. We're going to implement a function which will save the contents of the text area to the file name given as a parameter. Qt provides a class for safely saving a file called [QSaveFile](https://doc.qt.io/qt-5/qsavefile.html).
 
-The function's prototype is
+The function's prototype is:
 
 ```cpp
 void MainWindow::saveFileAs(const QString &outputFileName)
 ```
 
-We then create our QSaveFile object and open it with
+We then create our QSaveFile object and open it with:
 
 ```cpp
 QSaveFile file(outputFileName);
@@ -140,7 +144,7 @@ There's nothing exciting or new in this function, just the logic to decide wheth
 
 Finally, we get round to being able to load a file, from local storage or from a remote location like an FTP server. The code for this is all contained in `MainWindow::openFile()`.
 
-First we must ask the user for the name of the file they wish to open. We do this using another one of the QFileDialog functions, this time `getOpenFileName()`: 
+First we must ask the user for the name of the file they wish to open. We do this using another one of the QFileDialog functions, this time `getOpenFileUrl()`: 
 
 ```c++
 const QUrl fileNameFromDialog = QFileDialog::getOpenFileUrl(this, i18n("Open File"));

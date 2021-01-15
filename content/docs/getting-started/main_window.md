@@ -9,7 +9,7 @@ description: >
 
 This tutorial carries on from [First Program Tutorial](../hello_world) and will introduce the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) class.
 
-In the previous tutorial, the program caused a dialog box to pop up but we're going to take steps towards a functioning application.
+In the previous tutorial, the program caused a dialog box to pop up. Now we're going to take steps towards creating a functioning application with a more advanced window structure.
 
 ![](result.png)
 
@@ -24,9 +24,9 @@ In order to have a useful KXmlGuiWindow, we must subclass it. So we create two f
 
 {{< readfile file="/content/docs/getting-started/main_window/mainwindow.h" highlight="cpp" >}}
 
-First we subclass KXmlGuiWindow with `class MainWindow : public KXmlGuiWindow` then we declare the constructor with `MainWindow(QWidget *parent = nullptr);`.
+First we [subclass](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming#Subclasses_and_superclasses) KXmlGuiWindow with `class MainWindow : public KXmlGuiWindow` then we declare the [constructor](https://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)) with `MainWindow(QWidget *parent = nullptr);`.
 
-And finally, we declare a pointer to the object that will make up the bulk of our program. :ktextwidgetsapi:`KTextEdit` is a generic rich text editing widget with some niceties like cursor auto-hiding. 
+And finally, we declare a pointer to the object that will make up the bulk of our program. [`KTextEdit`](docs:ktextwidgets;KTextEdit) is a generic rich text editing widget with some niceties like cursor auto-hiding. 
 
 ### mainwindow.cpp
 
@@ -34,7 +34,7 @@ And finally, we declare a pointer to the object that will make up the bulk of ou
 
 First, of course, we have to include the header file containing the class declaration. 
 
-We initialise our text editor with an object and use KXmlGuiWindow's built-in `setCentralWidget()` function on it which tells the KXmlGuiWindow what should appear in the central section of the window. 
+We initialise our text editor with a [QWidget](https://doc.qt.io/qt-5/qwidget.html) object and use KXmlGuiWindow's built-in `setCentralWidget()` function on it which tells the KXmlGuiWindow what should appear in the central section of the window. 
 
 Finally, [KXmlGuiWindow::setupGUI](docs:kxmlgui;KXmlGuiWindow::setupGUI) is called which does a lot of behind-the-scenes stuff and creates the default menu bars (Settings, Help).
 
@@ -45,7 +45,7 @@ In order to actually run this window, we need to add a few lines in main.cpp:
 
 {{< readfile file="/content/docs/getting-started/main_window/main.cpp" highlight="cpp" >}}
 
-Again, we include our new header file in order to create our MainWindow object which we then display. 
+Again, we include our new header file ´mainwindow.h´. This lets us create our new MainWindow object which we then display near the end of the main function (by default, new window objects are hidden). 
 
 ## CMake
 

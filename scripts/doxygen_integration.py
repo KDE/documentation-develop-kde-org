@@ -42,6 +42,10 @@ TAG_FILES = [
         'base_url': 'https://api.kde.org/frameworks/kwidgetsaddons/html/'
     },
     {
+        'tags': 'https://api.kde.org/frameworks/ktextwidgets/html/KTextWidgets.tags',
+        'base_url': 'https://api.kde.org/frameworks/ktextwidgets/html/'
+    },
+    {
         'tags': 'https://api.kde.org/frameworks/ktexteditor/html/KTextEditor.tags',
         'base_url': 'https://api.kde.org/frameworks/ktexteditor/html/'
     },

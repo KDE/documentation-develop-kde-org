@@ -180,7 +180,7 @@ Kirigami.CardsListView {
 
 ## CardsGridView
 
-Use a [CardsGridView](docs:kirigami;org::kde::kirigami::CardsGridView] for displaying cards in a grid.
+Use a [CardsGridView](docs:kirigami;org::kde::kirigami::CardsGridView) for displaying cards in a grid.
 
 The behavior is the same as a CardsLayout, and it allows cards to be put in one or two columns depending on the available width.
 

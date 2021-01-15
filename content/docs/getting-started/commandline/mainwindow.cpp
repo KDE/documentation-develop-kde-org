@@ -78,7 +78,7 @@ void MainWindow::saveFile()
 
 void MainWindow::openFile()
 {
-    openFile(QFileDialog::getOpenFileUrl(this, i18n("Open File")));
+    openFileFromUrl(QFileDialog::getOpenFileUrl(this, i18n("Open File")));
 }
 
 void MainWindow::openFileFromUrl(const QUrl &inputFileName)

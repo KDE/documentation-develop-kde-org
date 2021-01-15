@@ -7,7 +7,7 @@ weight: 6
 
 ## Introduction
 
-Now that we have a text editor that can open and save files. We will now make the editor act more like a desktop application by enabling it to open files from command line arguments or even using Open with from within Dolphin.
+We now have a working text editor that can open and save files. We might, however, want to extend its utility by enabling users to more quickly and efficiently use it to edit files. In this tutorial we will make the editor act more like a desktop application by enabling it to open files from command line arguments or even using Open with from within Dolphin.
 
 ![](result.png)
 
@@ -15,15 +15,15 @@ Now that we have a text editor that can open and save files. We will now make th
 
 ### mainwindow.h
 
-Here we have done nothing but add a new `openFile` function which takes a `QUrl`. Again, we use a `QUrl` instead of a `QString` so that we can also work with remote files as if they were local.
+Here we have done nothing but add a new `openFileFromUrl` function which takes a `QUrl`. Again, we use a `QUrl` instead of a `QString` so that we can also work with remote files as if they were local.
 
 {{< readfile file="/content/docs/getting-started/commandline/mainwindow.h" highlight="cpp" >}}
 
 ### mainwindow.cpp
 
-There's no new code here, only rearranging. Everything from void `openFile()` has been moved into void `openFile(const QUrl &inputFileName)` except the call to `QFileDialog::getOpenFileUrl()`.
+There's no new code here, only rearranging. Everything from `void openFile()` has been moved into `void openFile(const QUrl &inputFileName)` except the call to `QFileDialog::getOpenFileUrl()`.
 
-This way, we can call `openFile()` if we want to display a dialog, or we can call `openFile(const QUrl &)` if we know the name of the file already. Which will be the case when we feed the file name through the command line.
+This way, we can call `openFile()` if we want to display a dialog, or we can call `openFileFromUrl(const QUrl &)` if we know the name of the file already. Which will be the case when we feed the file name through the command line.
 
 {{< readfile file="/content/docs/getting-started/commandline/mainwindow.cpp" highlight="cpp" >}}
 
@@ -37,7 +37,7 @@ First, we tell `QCommandLineParser` that we want to add a new positional argumen
 parser.addPositionalArgument(QStringLiteral("file"), i18n("Document to open"));
 ```
 
-Later on, we start processing positional arguments, but only if there is one. Otherwise, we proceed as usual. In our case we can only open one file at a time, so only the first file is of interest to us. We call the openFile() function and feed it the URL of the file we want to open, whether it is a local file like $HOME/foo or a remote one like ftp.mydomain.com/bar. We use the overloaded form of QUrl::fromUserInput() in order to set the current path. This is needed in order to work with relative paths like "../baz".
+Later on, we start processing positional arguments, but only if there is one. Otherwise, we proceed as usual. In our case we can only open one file at a time, so only the first file is of interest to us. We call the `openFileFromUrl()` function and feed it the URL of the file we want to open, whether it is a local file like "$HOME/foo" or a remote one like "ftp.mydomain.com/bar". We use the overloaded form of `QUrl::fromUserInput()` in order to set the current path. This is needed in order to work with relative paths like "../baz".
 
 ```c++
 if (parser.positionalArguments().count() > 0) {
