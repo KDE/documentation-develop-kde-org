@@ -132,7 +132,7 @@ The Help menu has been standardized to ease the lives of both developers and use
 
 The `setupGUI()` function in [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) depends on the XMLGUI system to construct the GUI, which XMLGUI does by parsing an XML file description of the interface.
 
-The rule for naming this XML file is `appnameui.rc`, where appname is the name you set in [`KAboutData`](docs:kcorewidgetsapi;KAboutData) (in this case, TextEditor). So in our example, the file is called `texteditorui.rc`, and is placed in the same folder as our other files. Where the file will ultimately be placed is handled by CMake. 
+The rule for naming this XML file is `appnameui.rc`, where appname is the name you set in [`KAboutData`](docs:kcoreaddons;KAboutData) (in this case, TextEditor). So in our example, the file is called `texteditorui.rc`, and is placed in the same folder as our other files. Where the file will ultimately be placed is handled by CMake. 
 
 #### appnameui.rc file
 
