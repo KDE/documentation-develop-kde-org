@@ -1,7 +1,7 @@
 ---
 title: Scrollable Pages
 weight: 3
-group: introduction
+group: components
 description: Scrollable page are special Kirigami Pages that can contains scrollable content.
 ---
 

@@ -5,10 +5,14 @@ weight: 101
 description: >
   Kirigami's Actions are used to add functionality to components.
 ---
+## Actions
 
-A Kirigami Action encapsulates a user interface action.
+A Kirigami Action encapsulates a user interface action. We can use these to provide our applications with easy-to-reach actions that are essential to its functionality.
+
+{{< alert title="Note" color="info" >}}
 It inherits from [Qt Quick Controls 2 Action](docs:qtquickcontrols;QtQuick.Controls.Action) and
 can be assigned shortcuts. 
+{{< /alert >}}
 
 Like QtQuick Controls Actions, they can be assigned to menu items and toolbar buttons,
 but also to multiple other Kirigami components.
@@ -275,4 +279,4 @@ Kirigami.ActionToolBar {
 
 ### Cards
 
-The cards components can also take an action. For more information consult the next part of this tutorial about Card.
+The cards components can also take an action. For more information consult the component page for Cards.

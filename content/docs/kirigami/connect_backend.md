@@ -1,6 +1,6 @@
 ---
 title: Connect logic to your QML user interface
-weight: 202
+weight: 203
 description: Connect a backend to do calculations and supply your user interface with data to display
 group: advanced
 ---
