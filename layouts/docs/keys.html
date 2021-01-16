@@ -1,5 +1,13 @@
 {{ define "main" }}
   {{ .Render "content" }}
+  {{ $filePath := "data/keys.yaml" }}
+  {{- if not (fileExists $filePath) -}}
+    {{- warnf "Missing %s (Run: python3 scripts/extract-plasma-applet-config-keys.py)" $filePath -}}
+    <div class="alert alert-error" role="alert">
+      Website is missing <code>{{ $filePath }}</code><br>
+      Run <code>python3 scripts/extract-plasma-applet-config-keys.py</code> to fix.
+    </div>
+  {{- end -}}
   {{ range $.Site.Data.keys }}
     <h2>{{ .id }}<h2>
     {{ range .groups }}

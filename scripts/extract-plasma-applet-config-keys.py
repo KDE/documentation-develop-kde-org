@@ -147,6 +147,6 @@ if __name__ == "__main__":
         for plasmoid in plasmoids:
             path = "./tmp/{}/applets/{}".format(project, plasmoid)
             parseConfig(path, plasmoid, keys)
-    with open('_data/keys.yaml', 'w+') as keys_file:
+    with open('data/keys.yaml', 'w+') as keys_file:
         keys_file.write(dump(keys, default_flow_style=False, allow_unicode=True))
 
