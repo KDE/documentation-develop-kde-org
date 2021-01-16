@@ -9,12 +9,12 @@
     </div>
   {{- end -}}
   {{ range $.Site.Data.keys }}
-    <h2>{{ .id }}<h2>
+    <h2>{{ .id }}</h2>
     {{ range .groups }}
       <h3>{{ .name }}</h3>
       <ul>
         {{ range .entries }}
-        <li><b>{{ .name }}:</b> ({{ .type }}, default: {{ .default }}) {{ .description }}</li>
+        <li><b>{{ .name }}:</b> (<code>{{ .type }}</code>, default: <code>{{ .default }}</code>) {{ .description }}</li>
         {{ end }}
       </ul>
     {{ end }}
