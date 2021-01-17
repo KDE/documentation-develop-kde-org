@@ -37,8 +37,7 @@ Every widget by default has a configure action when you right click the widget c
 * `Path` is a string that is specially treated as a file-path. In particular paths in the home directory are prefixed with `$HOME` when being stored in the configuration file.
 * `StringList` for a comma seperated list of Strings
 
-I've listed the more common usecases. More can be found on the wiki:  
-<https://techbase.kde.org/Development/Tutorials/Using_KConfig_XT>
+I've listed the more common usecases. More can be found in [KConfigXT's documentation]({{< ref "/docs/configuration/kconfig_xt" >}}).
 
 ---
 
