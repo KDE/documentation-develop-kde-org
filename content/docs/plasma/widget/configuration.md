@@ -186,13 +186,16 @@ Note that you can use a property [alias](http://doc.qt.io/qt-5/qtqml-syntax-obje
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
 
-Item {
+Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.checked
 
     CheckBox {
         id: variableName
+        Kirigami.FormData.label: i18n("Icon:")
+        text: i18n("Show")
     }
 }
 ```
@@ -221,8 +224,9 @@ A [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html) is used
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
 
-Item {
+Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.checked
 
@@ -259,8 +263,9 @@ If you want decimal places, a [`QtQuick.Controls 1.0` SpinBox](https://doc.qt.io
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
 
-Item {
+Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.value
 
@@ -296,8 +301,9 @@ import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Controls 1.0 as QtControls1
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
 
-Item {
+Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.value
 
@@ -333,8 +339,9 @@ A [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html) is us
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
 
-Item {
+Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.text
 
@@ -369,8 +376,9 @@ A [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html) is used
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
 
-Item {
+Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.value
 
@@ -398,8 +406,9 @@ You can also assign directly to `plasmoid.configuration.variableName` if necessa
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
 
-Item {
+Kirigami.FormLayout {
     id: page
 
     CheckBox {
@@ -476,8 +485,9 @@ QtControls1.CheckBox {
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
 
-Item {
+Kirigami.FormLayout {
     id: page
 
     ConfigCheckBox {
