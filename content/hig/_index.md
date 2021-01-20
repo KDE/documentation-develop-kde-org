@@ -15,7 +15,7 @@ making application and widget interfaces more consistent, intuitive and learnabl
 
 KDE adopted a motto to encapsulate the main ideas around its design: **"Simple by default, powerful when needed"**.
 
-## "Simple by default..."
+### "Simple by default..."
 
 KDE software removes elements not crucial to complete a primary or main task. Use good spacing to keep things organized and show hierarchy. Use color to draw attention but not as the primary way to communicate information to the user. Keep the default information small and targeted.
 
