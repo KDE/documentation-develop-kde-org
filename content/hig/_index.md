@@ -26,7 +26,7 @@ KDE makes complex tasks simple and makes novices feel like experts. Create ways 
 
 ## "...Powerful when needed"
 
-KDE software should help users resolve difficult problems. Users should identify what is needed and how to address a given situation. Users should always have a clear understanding of what can be done in the system, what is currently happening in the system, and what has just happened in the system. KDE users should never feel at the mercy of the application. Give the user the final say.
+KDE software should help users resolve difficult problems. It should give them a clear understanding of what can be done, what is currently happening, and what has just happened. Users users should never feel at the mercy of the application.
 
 As you design and develop for KDE, provide sensible defaults but consider optional functionality and customization options that don't interfere with the primary task.
 
