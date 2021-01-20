@@ -13,7 +13,7 @@ making application and widget interfaces more consistent, intuitive and learnabl
 
 # Design Vision
 
-KDE adopted a motto to encapsulate the main ideas around its design. The motto is **"Simple by default, powerful when needed"**. This motto provides direction in design. A more thorough explantion follows.
+KDE adopted a motto to encapsulate the main ideas around its design: **"Simple by default, powerful when needed"**.
 
 ## "Simple by default..."
 
