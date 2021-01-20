@@ -11,7 +11,7 @@ making application and widget interfaces more consistent, intuitive and learnabl
 
 ![Simple by default, powerful when needed.](/hig/HIGDesignVisionFullBleed.png)
 
-# Design Vision
+## Design Vision
 
 KDE adopted a motto to encapsulate the main ideas around its design: **"Simple by default, powerful when needed"**.
 
