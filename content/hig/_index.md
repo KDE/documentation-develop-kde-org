@@ -7,52 +7,27 @@ The KDE Human Interface Guidelines (HIG) offer designers and developers
 a set of recommendations for producing beautiful, usable, and consistent
 user interfaces for convergent desktop and mobile applications and
 workspace widgets. Their aim is to improve the experience for users by
-making application and widget interfaces more consistent and hence more
-intuitive and learnable.
+making application and widget interfaces more consistent, intuitive and learnable.
 
 ![Simple by default, powerful when needed.](/hig/HIGDesignVisionFullBleed.png)
 
-Design Vision
--------------
+# Design Vision
 
-KDE\'s design vision focuses on two attributes of KDE software that
-connect its future to its history:
+KDE adopted a motto to encapsulate the main ideas around its design. The motto is **"Simple by default, powerful when needed"**. This motto provides direction in design. A more thorough explantion follows.
 
-### Simple by default...
+## "Simple by default..."
 
-*Simple and inviting. KDE software is pleasant to experience and easy to
-use.*
+KDE software removes elements not crucial to complete a primary or main task. Use good spacing to keep things organized and show hierarchy. Use color to draw attention but not as the primary way to communicate information to the user. Keep the default information small and targeted.
 
--   **Make it easy to focus on what matters** --- Remove or minimize
-    elements not crucial to the primary or main task. Use spacing to
-    keep things organized. Use color to draw attention. Reveal
-    additional information or optional functions only when needed.
--   **I know how to do that!** --- Make things easier to learn by
-    reusing design patterns from other applications. Other applications
-    that use good design are a precedent to follow.
--   **Do the heavy lifting for me** --- Make complex tasks simple. Make
-    novices feel like experts. Create ways in which your users can
-    naturally feel empowered by your software.
+KDE makes things easier to learn by reusing design patterns from other applications and recognizable action patterns used in everyday devices. KDE follows [Jakob's Law](https://lawsofux.com/jakobs-law.html).
 
-### ...Powerful when needed
+KDE makes complex tasks simple and makes novices feel like experts. Create ways in which users feel naturally empowered by KDE software.
+<br>
 
-*Power and flexibility. KDE software allows users to be effortlessly
-creative and efficiently productive.*
+## "...Powerful when needed"
 
--   **Solve a problem** --- Identify and make very clear to the user
-    what need is addressed and how.
--   **Always in control** --- It should always be clear what can be
-    done, what is currently happening, and what has just happened. The
-    user should never feel at the mercy of the tool. Give the user the
-    final say.
--   **Be flexible** --- Provide sensible defaults but consider optional
-    functionality and customization options that don\'t interfere with
-    the primary task.
+KDE software should help users resolve difficult problems. Users should identify what is needed and how to address a given situation. Users should always have a clear understanding of what can be done in the system, what is currently happening in the system, and what has just happened in the system. KDE users should never feel at the mercy of the application. Give the user the final say.
 
-{{< alert color="info" title="Note" >}}
-KDE encourages developing and designing for customization, while
-providing good default settings. Integrating into other desktop
-environments is also a virtue, but ultimately we aim for perfection
-within our own Plasma desktop environment with the default themes and
-settings. This aim should not be compromised.
-{{< /alert >}}
+As you design and develop for KDE, provide sensible defaults but consider optional functionality and customization options that don't interfere with the primary task.
+
+> KDE encourages developing and designing for customization, while providing good default settings. Integrating into other desktop environments is also a virtue, but ultimately we aim for perfection within our own Plasma desktop environment with the default themes and settings. This aim should not be compromised.
