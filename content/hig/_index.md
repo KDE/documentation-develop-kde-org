@@ -28,6 +28,6 @@ KDE makes complex tasks simple and makes novices feel like experts. Create ways 
 
 KDE software should help users resolve difficult problems. It should give them a clear understanding of what can be done, what is currently happening, and what has just happened. Users users should never feel at the mercy of the application.
 
-As you design and develop for KDE, provide sensible defaults but consider optional functionality and customization options that don't interfere with the primary task.
+Provide sensible defaults, but consider optional functionality and customization options that don't interfere with the software's primary functionality.
 
 > KDE encourages developing and designing for customization, while providing good default settings. Integrating into other desktop environments is also a virtue, but ultimately we aim for perfection within our own Plasma desktop environment with the default themes and settings. This aim should not be compromised.
