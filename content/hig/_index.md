@@ -24,7 +24,7 @@ KDE makes things easier to learn by reusing design patterns from other applicati
 KDE makes complex tasks simple and makes novices feel like experts. Create ways in which users feel naturally empowered by KDE software.
 <br>
 
-## "...Powerful when needed"
+### "...Powerful when needed"
 
 KDE software should help users resolve difficult problems. It should give them a clear understanding of what can be done, what is currently happening, and what has just happened. Users users should never feel at the mercy of the application.
 
