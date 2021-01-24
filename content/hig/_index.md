@@ -7,52 +7,31 @@ The KDE Human Interface Guidelines (HIG) offer designers and developers
 a set of recommendations for producing beautiful, usable, and consistent
 user interfaces for convergent desktop and mobile applications and
 workspace widgets. Their aim is to improve the experience for users by
-making application and widget interfaces more consistent and hence more
-intuitive and learnable.
+making application and widget interfaces more consistent, intuitive, and learnable.
 
 ![Simple by default, powerful when needed.](/hig/HIGDesignVisionFullBleed.png)
 
-Design Vision
--------------
+## Design Vision
 
-KDE\'s design vision focuses on two attributes of KDE software that
-connect its future to its history:
+**"Simple by default, powerful when needed"** encapsulates KDE software's design principles. We encourage KDE software enthusiasts to follow this model. Using this idea while creating applications will deliver a compliant experience for all our users.
 
-### Simple by default...
+Let's review this two-part motto more closely:
 
-*Simple and inviting. KDE software is pleasant to experience and easy to
-use.*
+### "Simple by default..."
 
--   **Make it easy to focus on what matters** --- Remove or minimize
-    elements not crucial to the primary or main task. Use spacing to
-    keep things organized. Use color to draw attention. Reveal
-    additional information or optional functions only when needed.
--   **I know how to do that!** --- Make things easier to learn by
-    reusing design patterns from other applications. Other applications
-    that use good design are a precedent to follow.
--   **Do the heavy lifting for me** --- Make complex tasks simple. Make
-    novices feel like experts. Create ways in which your users can
-    naturally feel empowered by your software.
+KDE software removes elements not crucial to complete a primary or main task. Use good spacing to keep things organized and show hierarchy. Use color to draw attention but not as the primary way to communicate information to the user. Keep the default information small and targeted.
 
-### ...Powerful when needed
+Our software is easy to learn by reusing design patterns and action patterns used in everyday devices. KDE software follows [Jakob's Law](https://lawsofux.com/jakobs-law.html).
 
-*Power and flexibility. KDE software allows users to be effortlessly
-creative and efficiently productive.*
+KDE applications make complex tasks simple. It makes novices feel like experts and creates ways for users to feel naturally empowered.
+<br>
 
--   **Solve a problem** --- Identify and make very clear to the user
-    what need is addressed and how.
--   **Always in control** --- It should always be clear what can be
-    done, what is currently happening, and what has just happened. The
-    user should never feel at the mercy of the tool. Give the user the
-    final say.
--   **Be flexible** --- Provide sensible defaults but consider optional
-    functionality and customization options that don\'t interfere with
-    the primary task.
+### "...Powerful when needed"
 
-{{< alert color="info" title="Note" >}}
-KDE encourages developing and designing for customization, while
-providing good default settings. Integrating into other desktop
-environments is also a virtue, but ultimately we aim for perfection
-within our own Plasma desktop environment with the default themes and
-settings. This aim should not be compromised.
-{{< /alert >}}
+KDE software should help users resolve difficult problems. Users receive software tools to identify what is needed and address a given situation.
+
+KDE software also provides integration with other desktop environments. However, our team ultimately aims for perfection within our own Plasma Desktop environment. Our default themes and settings have priority over integration with other environments.
+
+KDE software provides users a clear understanding of the system's capabilities, what is currently happening, and what has just happened. KDE users should never feel at the mercy of the application. KDE software users should have the final say.
+
+As you design and develop for KDE, applications should provide sensible defaults and powerful customization. These default settings should not interfere with the application's primary task.
