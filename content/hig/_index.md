@@ -24,7 +24,6 @@ KDE software removes elements not crucial to complete a primary or main task. Us
 Our software is easy to learn by reusing design patterns and action patterns used in everyday devices. KDE software follows [Jakob's Law](https://lawsofux.com/jakobs-law.html).
 
 KDE applications make complex tasks simple. It makes novices feel like experts and creates ways for users to feel naturally empowered.
-<br>
 
 ### "...Powerful when needed"
 
