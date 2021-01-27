@@ -49,7 +49,7 @@ layout: area
     <h2>Cuttlefish</h2>
     <p>Cuttlefish is the app helping you find the perfect icons for your applications.</p>
     <div class="text-center">
-      <img class="w-75 mx-auto img-fluid shadow" src="https://origin.cdn.kde.org/screenshots/cuttlefish/cuttlefish.png" />
+      <img class="w-75 mx-auto img-fluid shadow" src="https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png" />
     </div>
     <a class="noblefir ml-auto align-self-center mt-4" id="install-button" href="appstream://org.kde.cuttlefish.desktop" data-windows="">
       <span id="install-msg">Install on Linux</span>
