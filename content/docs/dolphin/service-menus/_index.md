@@ -204,3 +204,9 @@ to know that they exist.
 | X-KDE-MaxNumberOfUrls | Maximum number of Urls that can be selected in order for this menu to be displayed. This property is available since version 5.76 |
 
 If you need more dynamic options please check out [KAbstractFileItemActionPlugin](docs:kio;KAbstractFileItemActionPlugin) on how to write such plugins in C++.
+
+## Examples
+
+This is a list of user contributed service menus. Feel free to add your own custom service menus here, if you feel they could be used by others.
+
+* [KDE Service Menus from Z-Ray Entertainment](https://gitlab.com/z-ray-entertainment/kde-service-menus)
