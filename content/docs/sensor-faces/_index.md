@@ -215,7 +215,7 @@ Faces.SensorFace {
 
 ### Adding a Legend
 A legend is generally useful since it allows matching colors to a chart and precise reading of the
-current value. [ExtendedLegend] (docs:libksysguard;org::kde::ksysguard::sensorfaces::ExtendedLegend) is a premade
+current value. [ExtendedLegend](docs:libksysguard;org::kde::ksysguard::sensorfaces::ExtendedLegend) is a premade
 Component that displays a legend that is a generated from a `SensorDataModel` assigned to its
 [sourceModel](docs:libksysguard;org::kde::ksysguard::sensorfaces::ExtendedLegend::sourceModel) property. The
 [sensorIds]() property holds the ids  ids of additional sensors that should be included in the
