@@ -36,18 +36,16 @@
           </div>
         {{ end }}
       {{ else }}
-        {{ $pages := (where (where $allPages "Section" $section) ".Params.group" .key ).ByWeight  }}
+        {{ $pages := (where $allPages ".Params.group" .key ).ByWeight  }}
         {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
         <div class="row">
           {{ range $pages }}
-            {{ if eq .Parent $parent }}
-              <div class="col-6 my-3">
-                <a href="{{ .RelPermalink }}" class="shadow p-3 h-100 d-block">
-                  <h2 class="h4 mt-0">{{- .Title -}}</h2>
-                  <p>{{ .Description | markdownify }}</p>
-                </a>
-              </div>
-            {{ end }}
+            <div class="col-6 my-3">
+              <a href="{{ .RelPermalink }}" class="shadow p-3 h-100 d-block">
+                <h2 class="h4 mt-0">{{- .Title -}}</h2>
+                <p>{{ .Description | markdownify }}</p>
+              </a>
+            </div>
           {{ end }}
         </div>
       {{ end }}

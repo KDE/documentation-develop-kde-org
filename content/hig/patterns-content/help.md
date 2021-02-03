@@ -32,4 +32,4 @@ How to Use
 Implementation
 --------------
 
-- [kde.org/support](https://kde.org/support/
+- [kde.org/support](https://kde.org/support/)

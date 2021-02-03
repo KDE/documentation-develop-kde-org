@@ -31,7 +31,7 @@ How to Use
 
 ![Using an overlay to pick aditional items.](/hig/PickerOverlay.png)
 
--   Use a [grid](/components/editing/grid) or a [list][/components/editing/list)
+-   Use a [grid](/components/editing/grid) or a [list](/components/editing/list)
     to display the selected elements.
 -   Open a list of additional items to choose in an overlay sheet or a
     dialog.

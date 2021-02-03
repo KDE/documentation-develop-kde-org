@@ -1,7 +1,9 @@
 ---
 title: Slider
+weight: 14
+group: editing
+subgroup: constrained
 ---
-======
 
 Purpose
 -------
@@ -29,13 +31,13 @@ Guidelines
 -   Use a slider when it is useful for the user to control the rate of
     change of the value in real time.
 -   If the value is open-ended on one or both ends, consider using a
-    `Spin Box <spinbox>` instead.
+    [Spin Box](../spinbox) instead.
 
 ### Behavior
 
 -   Try to give immediate feedback while the user makes a selection.
 -   Size the control so that a user can easily set the desired value.
--   Don\'t use a non-linear scale, e.g. logarithmic.
+-   Don't use a non-linear scale, e.g. logarithmic.
 
 ### Appearance
 
@@ -63,8 +65,8 @@ eg screen size, symbol-size
     checkmarks. Checkmark have a height of 4 px or 8 if you want to
     emphasize them.
 -   Min/max labels are optional. Label min/max with real values, eg
-    \'640x480\' and \'5120×2880\' in case of screen resolution.
--   Label the range of values; use checkmark and value label; don\'t
+    '640x480' and '5120×2880' in case of screen resolution.
+-   Label the range of values; use checkmark and value label; don't
     label every checkmark.
 
 #### Slider with many steps
@@ -73,9 +75,9 @@ eg volume control, mouse speed, brightness
 
 ![Exact value is not important](/hig/Slider.Volume.qml.png)
 
--   Don\'t show checkmarks if the exact value is not important
--   Don\'t show min/max label if the values don\'t give the user
-    additional information, (eg. don\'t label them 0%, 100% when
+-   Don't show checkmarks if the exact value is not important
+-   Don't show min/max label if the values don't give the user
+    additional information, (eg. don't label them 0%, 100% when
     obvious)
 -   If the exact value might be important to the user offer an input
     field instead of the current value label
@@ -107,9 +109,8 @@ Code
 
 ### Kirigami
 
-> -   [QML:
->     Slider](https://doc.qt.io/qt-5/qml-qtquick-controls-slider.html)
+- QML: [Slider](https://doc.qt.io/qt-5/qml-qtquick-controls-slider.html)
 
 ### Plasma Components
 
-> -   `Plasma Slider <Slider>`{.interpreted-text role="plasmaapi"}
+- [Plasma Slider](../Slider)

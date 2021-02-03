@@ -3,9 +3,9 @@ title: Drawers
 weight: 2
 ---
 
-Drawers don\'t take away any room from the content, but they do require
+Drawers don't take away any room from the content, but they do require
 user interaction to become visible, and should therefore not be used for
-controls that are part of an application\'s main tasks.
+controls that are part of an application's main tasks.
 
 Global Drawer
 -------------
@@ -18,8 +18,7 @@ The global drawer is used for global, context-independent controls.
     and closed by swiping in the other direction or tapping outside of
     the panel
 -   For the guidelines regarding its content, see
-    `global drawer </components/navigation/globaldrawer>`{.interpreted-text
-    role="doc"}.
+    [global drawer](/hig/components/navigation/globaldrawer).
 
 Context Drawer
 --------------
@@ -33,8 +32,7 @@ context-specific controls that affect only the currently selected object
 -   The drawer is opened by an edge-swipe and closed by swiping in the
     other direction or tapping outside of the panel
 -   For the guidelines regarding its content, see the
-    `context drawer </components/navigation/contextdrawer>`{.interpreted-text
-    role="doc"}.
+    [context drawer](/hig/components/navigation/contextdrawer).
 
 Bottom Drawer and Dialog Sheet
 ------------------------------

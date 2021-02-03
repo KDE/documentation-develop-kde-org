@@ -1,7 +1,9 @@
 ---
 title: Tree View
+weight: 9
+group: editing
+subgroup: selection
 ---
-=========
 
 Purpose
 -------
@@ -33,9 +35,8 @@ Guidelines
     Balance discoverability with a predictable user model that minimizes
     confusion.
 -   Consider breaking down the hierarchical data. For example, into a
-    selection by a `drop-down list <dropdown>`{.interpreted-text
-    role="doc"} with an associated `list view <list>`{.interpreted-text
-    role="doc"}.
+    selection by a [drop-down list](../dropdown) with an associated 
+    [list view](../list).
 
 ### Behavior
 
@@ -68,8 +69,7 @@ Guidelines
 
 -   For checkboxes, use the mixed state to indicate that an option is
     set for some, but not all, child objects. Users should not be able
-    to set a mixed state directly (cf.
-    `checkboxes <checkbox>`).
+    to set a mixed state directly (cf. [checkboxes](../checkbox)).
 
 -   Clicking a mixed state checkbox selects all child objects and the
     parent checkbox.
@@ -86,10 +86,9 @@ Guidelines
 -   Make controls large enough that it can show at least eight list
     items at a time without scrolling.
 -   Label the tree view with a descriptive caption to the top left (cf.
-    `alignment </layout/alignment>`).
+    [alignment](../layout/alignment)).
 -   Create a buddy relation so access keys are assigned.
--   Make use of punctuation (Except for dot \".\" or colon \":\") for a
+-   Make use of punctuation (Except for dot "." or colon ":") for a
     caption.
--   Use
-    `sentence style capitalization </style/writing/capitalization>`{.interpreted-text
-    role="doc"} for tree view items.
+-   Use [sentence style capitalization](/hig/style/writing/capitalization)
+    for tree view items.

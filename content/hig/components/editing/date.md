@@ -1,6 +1,6 @@
 ---
 title: Date and Time Picker
-weight: 3
+weight: 13
 group: editing
 subgroup: constrained
 ---

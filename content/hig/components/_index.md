@@ -25,42 +25,15 @@ groups:
     key: editing
     description: >
         Editing and Manipulation considers the behaviors that result in persistent
-        changes to user’s stored information.
+        changes to user’s stored information. Behaviors in this layer can often be
+        recognized by the following traits: they result in persistent, stored changes;
+        they require an implicit or explicit save operation; and they typically require
+        validation of the input data.
     subgroups:
       - name: Selection
         key: selection
       - name: Unconstrained Input
-        key: unconstrined
+        key: unconstrained
       - name: Constrained Input
         key: constrained
 ---
-
-Editing and Manipulation
-------------------------
-
-Editing and Manipulation considers the behaviors that result in
-persistent changes to user's stored information.
-
-### Selection
-
--   `editing/card`
--   `editing/checkbox`
--   `editing/combobox`
--   `editing/dropdown`
--   `editing/grid`
--   `editing/list`
--   `editing/radiobutton`
--   `editing/togglebutton`
--   `editing/tree`
-
-### Unconstrained Input
-
--   `editing/lineedit`
--   `editing/tableview`
--   `editing/textedit`
-
-### Constrained Input
-
--   `editing/date`
--   `editing/slider`
--   `editing/spinbox`

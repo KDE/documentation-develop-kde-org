@@ -1,7 +1,9 @@
 ---
 title: Spin Box
+group: editing
+subgroup: constrained
+weight: 15
 ---
-========
 
 ![Control that accepts a range of values.](/hig/Spinbox1.png)
 
@@ -27,11 +29,11 @@ Guidelines
     iterations of some action, or a time-out value.
 -   If the range is fixed at both ends, or the numerical values are
     arbitrary (for example, a volume control), use a
-    `Slider <slider>` control instead.
+    [Slider](../slider) control instead.
 -   For cases where the values are constrained at both ends and there
     large ranges of integers (more than about 20) or floating-point
     values that require precise control, consider providing both a
-    `Slider and Spin Box <slider>`. This
+    [Slider and Spin Box](../slider). This
     allows the user to quickly set or fine-tune the setting more easily
     than they could with the slider control alone.
 
@@ -50,11 +52,11 @@ Guidelines
 
 -   Label the spin box with a text label to its left, using sentence
     capitalization.
--   Always append a suffix with the value\'s unit to the right.
+-   Always append a suffix with the value's unit to the right.
 -   Provide an access key in the label that allows the user to give
     focus directly to the spin box.
 -   Right-justify the contents of spin boxes, unless the convention in
-    the user\'s locale demands otherwise. This is useful in windows
+    the user's locale demands otherwise. This is useful in windows
     where the user might want to compare two numerical values in the
     same column of controls. In this case, ensure the right edges of the
     relevant controls are also aligned.
@@ -64,9 +66,8 @@ Code
 
 ### Kirigami
 
-> -   [QML:
->     SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html)
+- QML: [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html)
 
 ### Plasma Components
 
-> -   `Plasma SpinBox <SpinBox>`{.interpreted-text role="plasmaapi"}
+- [Plasma SpinBox](../SpinBox)
