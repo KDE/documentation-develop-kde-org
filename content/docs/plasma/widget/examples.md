@@ -169,8 +169,8 @@ So we change to our hardcoded sizes:
 Item {
     id: widget
     Plasmoid.fullRepresentation: Item {
-        Layout.preferredWidth: 640 * units.devicePixelRatio
-        Layout.preferredHeight: 480 * units.devicePixelRatio
+        Layout.preferredWidth: 640 * PlasmaCore.Units.devicePixelRatio
+        Layout.preferredHeight: 480 * PlasmaCore.Units.devicePixelRatio
     }
 }
 ```
@@ -182,8 +182,8 @@ into this:
 Item {
     id: widget
     Plasmoid.fullRepresentation: Item {
-        Layout.preferredWidth: plasmoid.configuration.width * units.devicePixelRatio
-        Layout.preferredHeight: plasmoid.configuration.height * units.devicePixelRatio
+        Layout.preferredWidth: plasmoid.configuration.width * PlasmaCore.Units.devicePixelRatio
+        Layout.preferredHeight: plasmoid.configuration.height * PlasmaCore.Units.devicePixelRatio
     }
 }
 ```
@@ -207,8 +207,8 @@ Item {
     id: widget
     Plasmoid.fullRepresentation: Item {
         id: popupView
-        Layout.preferredWidth: plasmoid.configuration.width * units.devicePixelRatio
-        Layout.preferredHeight: plasmoid.configuration.height * units.devicePixelRatio
+        Layout.preferredWidth: plasmoid.configuration.width * PlasmaCore.Units.devicePixelRatio
+        Layout.preferredHeight: plasmoid.configuration.height * PlasmaCore.Units.devicePixelRatio
         Plasmoid.hideOnWindowDeactivate: false
         ColumnLayout {
             id: layout
@@ -331,8 +331,8 @@ Item {
 
     readonly property date currentDateTime: dataSource.data.Local ? dataSource.data.Local.DateTime : new Date()
 
-    width: units.gridUnit * 10
-    height: units.gridUnit * 4
+    width: PlasmaCore.Units.gridUnit * 10
+    height: PlasmaCore.Units.gridUnit * 4
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
@@ -350,8 +350,8 @@ Item {
     Plasmoid.compactRepresentation: FuzzyClock { }
 
     Plasmoid.fullRepresentation: PlasmaCalendar.MonthView {
-        Layout.minimumWidth: units.gridUnit * 20
-        Layout.minimumHeight: units.gridUnit * 20
+        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 20
+        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 20
 
         today: currentDateTime
     }
