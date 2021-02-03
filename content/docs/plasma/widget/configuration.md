@@ -446,6 +446,78 @@ Kirigami.FormLayout {
 
 
 
+## FileDialog - Path
+
+{{< sections >}}
+{{< section-left >}}
+
+When we need to store a filepath in the config, we should use the `Path` or `PathList` config type. It will substitute `/home/user/...` with `$HOME/...`. To properly layout the file selector, we need a `RowLayout` with a `TextField` and `Button` which opens a [`FileDialog`](https://doc.qt.io/qt-5/qml-qtquick-dialogs-filedialog.html). We can specify the default folder the dialog opens to with `FileDialog`'s [`shortcuts` property](https://doc.qt.io/qt-5/qml-qtquick-dialogs-filedialog.html#shortcuts-prop) (eg: `shortcuts.pictures`).
+
+Note that we place the `Kirigami.FormData.label` in the `RowLayout` as it is the direct child of `Kirigami.FormLayout`.
+
+```xml
+<!-- config/main.xml -->
+<entry name="variableName" type="Path">
+    <default>/usr/share/sounds/freedesktop/stereo/message.oga</default>
+</entry>
+```
+
+{{< /section-left >}}
+{{< section-right >}}
+```qml
+// configGeneral.qml
+import QtQuick 2.0
+import QtQuick.Controls 2.5
+import QtQuick.Dialogs 1.0
+import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
+
+Kirigami.FormLayout {
+    id: page
+    property alias cfg_variableName: variableName.value
+
+    RowLayout {
+        Kirigami.FormData.label: i18n("Sound File:")
+
+        TextField {
+            id: variableName
+            placeholderText: i18n("No file selected.")
+        }
+        Button {
+            text: i18n("Browse")
+            icon.name: "folder-symbolic"
+            onClicked: fileDialogLoader.active = true
+
+            Loader {
+                id: fileDialogLoader
+                active: false
+
+                sourceComponent: FileDialog {
+                    id: fileDialog
+                    folder: shortcuts.music
+                    nameFilters: [
+                        i18n("Sound files (%1)", "*.wav *.mp3 *.oga *.ogg"),
+                        i18n("All files (%1)", "*"),
+                    ]
+                    onAccepted: {
+                        variableName.text = fileUrl
+                        fileDialogLoader.active = false
+                    }
+                    onRejected: {
+                        fileDialogLoader.active = false
+                    }
+                    Component.onCompleted: open()
+                }
+            }
+        }
+    }
+}
+```
+{{< /section-right >}}
+{{< /sections >}}
+
+
+
 ## Assigning to plasmoid.configuration.varName
 
 {{< sections >}}
