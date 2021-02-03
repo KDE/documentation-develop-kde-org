@@ -27,7 +27,7 @@
           <div class="row">
             {{ range $pages }}
               <div class="col-6 my-3">
-                <a href="{{ .RelPermalink }}" class="shadow p-3 h-100 d-block">
+                <a href="{{ .RelPermalink }}" class="ae-card d-block">
                   <h2 class="h4 mt-0">{{- .Title -}}</h2>
                   <p>{{ .Description | markdownify }}</p>
                 </a>
@@ -41,7 +41,7 @@
         <div class="row">
           {{ range $pages }}
             <div class="col-6 my-3">
-              <a href="{{ .RelPermalink }}" class="shadow p-3 h-100 d-block">
+              <a href="{{ .RelPermalink }}" class="ae-card d-block">
                 <h2 class="h4 mt-0">{{- .Title -}}</h2>
                 <p>{{ .Description | markdownify }}</p>
               </a>
