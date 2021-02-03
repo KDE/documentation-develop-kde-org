@@ -1,6 +1,9 @@
 ---
 title: KDE Human Interface Guidelines
 layout: home
+menu:
+  main:
+    weight: 30
 ---
 
 The KDE Human Interface Guidelines (HIG) offer designers and developers
