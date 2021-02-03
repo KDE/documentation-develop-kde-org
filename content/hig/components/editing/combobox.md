@@ -1,7 +1,8 @@
 ---
 title: Combo Box
+group: editing
+subgroup: selection
 ---
-=========
 
 ![A combination of a drop-down list and an edit
 control.](/hig/Combobox1.png)
@@ -19,14 +20,14 @@ auto-complete or auto-type functionality in a convenient way to the
 user.
 
 The list provides auto-complete feature for the whole string,
-independently of the \"editable\" property. Given the items of \"bike\",
-\"boat\", and \"car\":
+independently of the "editable" property. Given the items of "bike",
+"boat", and "car":
 
--   If one types \"b\", the list selects \"bike\".
--   If one (rapidly) types \"bo\", it selects \"boat\".
--   If one types \"c\", it selects \"car\".
+-   If one types "b", the list selects "bike".
+-   If one (rapidly) types "bo", it selects "boat".
+-   If one types "c", it selects "car".
 
-The input field of the combo box (\"editable\" is true) marks the
+The input field of the combo box ("editable" is true) marks the
 completed part of the item as selected, making it easy to change the
 completion.
 
@@ -37,19 +38,19 @@ Guidelines
 
 -   Use a combo box for single selection of one out of many items of
     lists that can be extended by the user. Prefer a simple
-    `drop-down list <dropdown>` in case of
+    [drop-down list](../dropdown) in case of
     read-only interaction.
 -   Consider to replace the combo box by a
-    `list view <list>` with a connected
-    `line edit control <lineedit>`.
+    [list view](../list) with a connected
+    [line edit control](../lineedit).
 
 ### Behavior
 
 -   Show a maximum of eight items at once.
--   When possible apply changes immediately but don\'t initiate an
+-   When possible apply changes immediately but don't initiate an
     action (like print, send, delete) when the user selects an item from
     the list.
--   Don\'t add controls to the drop-down (e.g. checkboxes for each
+-   Don't add controls to the drop-down (e.g. checkboxes for each
     item).
 -   Place options that represent general options (e.g. all, none) at the
     beginning of the list.
@@ -57,14 +58,14 @@ Guidelines
     translation.
 -   Make sure the items are easily accessible via keyboard by moving
     distinctive letters to the beginning of each option. For example, in
-    a list of countries on continents, write \"Germany (Europe)\"
-    instead of \"Europe/Germany\".
--   Don\'t have blank list items; use meta-options, e.g. (None) instead.
+    a list of countries on continents, write "Germany (Europe)"
+    instead of "Europe/Germany".
+-   Don't have blank list items; use meta-options, e.g. (None) instead.
 
 ### Appearance
 
 -   Combo boxes are distinguished visually from drop-down lists
-    (normally by the raised or lowered bevel). Don\'t override the
+    (normally by the raised or lowered bevel). Don't override the
     common processing, e.g. by using a combo box and making it read only
     in order to simulate a simple drop-down list.
 -   If activating a choice affects the appearance or the enabled state
@@ -73,21 +74,19 @@ Guidelines
     certain item is selected (i.e. they are dependent controls), disable
     them instead of hiding.
 -   Label the combo box with a descriptive caption to the left (cf.
-    `alignment </layout/alignment>`).
+    [alignment](/hig/layout/alignment)).
 -   Create a buddy relation so access keys are assigned.
 -   End each label with a colon.
--   Use
-    `sentence style capitalization </style/writing/capitalization>`{.interpreted-text
-    role="doc"} for items.
+-   Use [sentence style capitalization](/hig/style/writing/capitalization)
+    for items.
 
 Code
 ----
 
 ### Kirigami
 
-> -   [QML:
->     ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls-combobox.html)
+- QML: [ComboBox](https://doc.qt.io/qt-5/qml-qtquick-controls-combobox.html)
 
 ### Plasma components
 
-> -   `Plasma ComboBox <ComboBox>`{.interpreted-text role="plasmaapi"}
+- [Plasma ComboBox](docs:plasma;org::kde::plasma::components::ComboBox)

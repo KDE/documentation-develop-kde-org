@@ -8,52 +8,32 @@ groups:
     key: formating
   - name: "Navigation"
     key: navigation
-  - name: "Packaging"
-    key: "packaging"
-  - name: "Application Extensions"
-    key: "applications"
+  - name: "User Assistance"
+    key: assistance
+    description: >
+        User Assistance guidance considers interface elements that inform users
+        of the application's activity and status, as well as elements dedicated
+        to user education. This includes online help, error alerts, and status alerts.
+    subgroups:
+      - name: "Notifications"
+        key: notifications
+      - name: "Help"
+        key: help
+      - name: "Information"
+        key: information
+  - name: "Editing and Manipulation"
+    key: editing
+    description: >
+        Editing and Manipulation considers the behaviors that result in persistent
+        changes to user’s stored information.
+    subgroups:
+      - name: Selection
+        key: selection
+      - name: Unconstrained Input
+        key: unconstrined
+      - name: Constrained Input
+        key: constrained
 ---
-
-Formating
----------
-
--   `formating/groupbox`
--   `formating/splitter`
-
-Navigation
-----------
-
--   `navigation/actionbutton`
--   `navigation/commandlink`
--   `navigation/contextdrawer`
--   `navigation/contextmenu`
--   `navigation/dialog`
--   `navigation/globaldrawer`
--   `navigation/menubar`
--   `navigation/pushbutton`
--   `navigation/tab`
--   `navigation/toolbar`
--   `navigation/scrim`
-
-User Assistance
----------------
-
-User Assistance guidance considers interface elements that inform users
-of the application's activity and status, as well as elements dedicated
-to user education. This includes online help, error alerts, and status
-alerts.
-
-### Notification
-
--   `assistance/emblem`
--   `assistance/inline`
--   `assistance/message`
--   `assistance/progress`
--   `assistance/statusbar`
-
-### Help
-
--   `assistance/tooltip`
 
 Editing and Manipulation
 ------------------------

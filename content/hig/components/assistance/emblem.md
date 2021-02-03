@@ -1,7 +1,9 @@
 ---
 title: Emblem
+group: assistance
+subgroup: notifications
+weight: 1
 ---
-======
 
 Purpose
 -------
@@ -27,8 +29,8 @@ Guidelines
     elements in a file manager, system tray, task manager, dock, image
     view, etc. Emblems should not be applied to textual content.
 -   Use emblems to display that an icon or image has some unusual status
-    associated with it, or that there are unread notifications. Don\'t
-    use emblems to display an element\'s normal, common, or typical
+    associated with it, or that there are unread notifications. Don't
+    use emblems to display an element's normal, common, or typical
     status. For example, an emblem could indicate that a folder is
     read-only or is a symlink, or that a disk is unmounted or encrypted.
     An emblem should not be used to indicate that a folder is read-write
@@ -38,7 +40,7 @@ Guidelines
     placed in other corners in a clockwise order.
 -   Emblems that indicate unread notifications should be located in the
     top-right corner.
--   Use the minimum number of emblems and don\'t overwhelm the icon
+-   Use the minimum number of emblems and don't overwhelm the icon
     itself. Three is usually too many.
 
 Appearance
@@ -46,7 +48,7 @@ Appearance
 
 An emblem that indicates unread notifications should take the form of a
 light-colored number inside a blue circle. The circle can become
-\"pill-shaped\" if the number is very large.
+"pill-shaped" if the number is very large.
 
 ![Notification emblem](/hig/emblem-notification-small.png)
 
@@ -54,4 +56,4 @@ light-colored number inside a blue circle. The circle can become
 number](/hig/emblem-notification-large.png)
 
 For symbolic icon emblems, see
-`/style/icons/monochrome/emblem`.
+[Emblem icons](/hig/style/icons/monochrome/emblem).

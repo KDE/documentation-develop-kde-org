@@ -1,12 +1,12 @@
 ---
 title: Architecture
 weight: 1
+description: All KDE software is built using the Qt toolkit. 
 ---
 
 
-All KDE software is built using the Qt toolkit. You will be using
-different components depending on whether you are developing an
-[application](https://apps.kde.org/) or
+You will be using different components depending on whether you
+are developing an [application](https://apps.kde.org/) or
 [Plasma](https://kde.org/plasma-desktop) and the nature of your
 application. The interaction patterns of the HIG apply regardless of the
 components you use.

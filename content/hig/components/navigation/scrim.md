@@ -1,7 +1,8 @@
 ---
 title: Scrim
+group: navigation
+weight: 11
 ---
-=====
 
 A scrim is a temporary effect applied to a surface for the purpose of
 making content below it less prominent.

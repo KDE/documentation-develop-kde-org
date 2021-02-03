@@ -1,7 +1,9 @@
 ---
 title: About Application
+group: assistance
+subgroup: information
+weight: 10
 ---
-=================
 
 Every application should have a view that contains basic information
 about the application. This includes a short description of the
@@ -17,30 +19,32 @@ QML/Kirigami
 ------------
 
 Kirigami apps should use the
-`Kirigami.AboutPage <AboutPage>`{.interpreted-text role="kirigamiapi"}
-component. It consumes the data set by `KAboutData`{.interpreted-text
-role="kcoreaddonsapi"}. It should cover all existing pages and must have
+[Kirigami.AboutPage](docs:kirigami2;AboutPage)
+component. It consumes the data set by [KAboutData](docs:kcoreaddons;KAboutData).
+It should cover all existing pages and must have
 a way to close it again. This can be achieved by using the
-`pageStack.layers <PageRow>`{.interpreted-text role="kirigamiapi"}
+[pageStack.layers](docs:kirigami2;PageRow)
 mechanism. It should not be possible to open the AboutPage more than
 once. :
 
-    Component {
-        id: aboutPage
-        Kirigami.AboutPage {
-            aboutData: theAboutData
-        }
+```qml
+Component {
+    id: aboutPage
+    Kirigami.AboutPage {
+        aboutData: theAboutData
     }
+}
 
-    Kirigami.Action {
-        text: i18n("About MyApplication")
-        iconName: "help-about"
-        onTriggered: {
-            if (window.pageStack.layers.depth < 2) {
-                window.pageStack.layers.push(aboutPage)
-            }
+Kirigami.Action {
+    text: i18n("About MyApplication")
+    iconName: "help-about"
+    onTriggered: {
+        if (window.pageStack.layers.depth < 2) {
+            window.pageStack.layers.push(aboutPage)
         }
     }
+}
+```
 
 Usage example
 

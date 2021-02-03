@@ -1,6 +1,8 @@
 ---
 title: Global Drawer
 available: ['plasma', 'qwidgets']
+group: navigation
+weight: 6
 ---
 
 Purpose

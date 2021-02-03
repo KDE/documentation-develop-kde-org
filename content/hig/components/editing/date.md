@@ -1,19 +1,21 @@
 ---
 title: Date and Time Picker
+weight: 3
+group: editing
+subgroup: constrained
 ---
-====================
 
 Purpose
 -------
 
 The date/time picker is a control that provides a convenient way to
 select a certain date or time. The time picker works just like a
-`spin box <spinbox>` with an adopted mask.
+[spin box](../spinbox) with an adopted mask.
 The date picker shows all days of a month in weekly columns, has small
 navigation buttons to access previous and next month or years as well as
 interactive controls to chose month and year directly. The user
-\'picks\' the date per single click on a particular day. An additional
-\'today\' button can be used to navigate back. The benefit of date/time
+'picks' the date per single click on a particular day. An additional
+'today' button can be used to navigate back. The benefit of date/time
 picker is that these controls prevent format error and provide feedback
 on wrong input.
 
@@ -33,13 +35,13 @@ Guidelines
         KTimeComboBox.
     -   If users want to browse through dates (for example when viewing
         a calendar or browsing a history based on the date), use a
-        KDatePicker for convenient switching with a single click.\"
+        KDatePicker for convenient switching with a single click."
 -   When user must select both start and end date/times, make the
     default end date/time aware of the start date/time: when the user
     sets a start date, switch the end date at least to the same date.
 -   Avoid wrong input by restricting the period to a reasonable range
     (for instance when a range is being selected).
--   Don\'t modify localization settings (i.e. first day of week, date
+-   Don't modify localization settings (i.e. first day of week, date
     label etc.)
 -   Use controls consistently; either all date input should be done by
     date picker or none.

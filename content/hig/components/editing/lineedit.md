@@ -1,7 +1,9 @@
 ---
 title: Line Edit
+weight: 10
+group: editing
+subgroup: unconstrained
 ---
-=========
 
 ![Single line control to enter unconstrained
 text.](/hig/Lineedit1.png)
@@ -22,8 +24,8 @@ Guidelines
 
 -   Use edits for input of single lines of unconstrained text.
 -   In case of multiple lines of text or more than a few words, use a
-    `text edit <textedit>`
--   Don\'t use a line edit if only a specific type of data is valid. Use
+    [text edit](../textedit)
+-   Don't use a line edit if only a specific type of data is valid. Use
     a control for constrained input.
 
 ### Behavior
@@ -31,7 +33,7 @@ Guidelines
 -   Mask letters if edit is used to enter passwords.
     -   When setting a new password, have it entered twice to prevent
         typos in passwords.
-    -   Provide a \"Show password\" checkbox to unmask the password both
+    -   Provide a "Show password" checkbox to unmask the password both
         when setting new and when entering existing passwords.
 -   Consider to use auto-complete feature to help users when entering
     data that is likely to be used repeatedly.
@@ -44,7 +46,7 @@ Guidelines
 -   If the input data is inconsistent with other controls on the window,
     give an error message when the entire input is complete, such as
     when users click OK for a modal dialog box.
--   Don\'t clear invalid input data unless users are not able to correct
+-   Don't clear invalid input data unless users are not able to correct
     errors easily. Doing so allows users to correct mistakes without
     starting over.
 
@@ -53,5 +55,5 @@ Guidelines
 -   When disabling the line edit, also disable any associated labels and
     buttons.
 -   Label every line edit with a descriptive caption to the left (cf.
-    `/layout/alignment`).
+    [Alignment](/hig/layout/alignment)).
 -   Create a buddy relation so access keys are assigned.

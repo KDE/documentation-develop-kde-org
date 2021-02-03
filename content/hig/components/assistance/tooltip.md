@@ -1,7 +1,8 @@
 ---
 title: Tooltip
+group: assistance
+subgroup: help
 ---
-=======
 
 Purpose
 -------
@@ -32,9 +33,9 @@ Guidelines
     values.
 -   Tooltips for a disabled control should include information regarding
     the disabled state of the control. Include this information even if
-    the control is enabled. For instance: \'Go to the next unread
-    message\' in the case of enabled controls and \'Go to the next
-    unread message (No unread messages left)\' when disabled.
+    the control is enabled. For instance: 'Go to the next unread
+    message' in the case of enabled controls and 'Go to the next
+    unread message (No unread messages left)' when disabled.
 -   Consider adding small informational buttons for touch screen use.
 
 ### Appearance
@@ -47,7 +48,7 @@ Guidelines
     -   supplemental: important information should be communicated using
         self-explanatory control labels or in-place supplemental text
     -   static: tips should not change from one instance to the next
--   Don\'t use icons and formattings for tips of unlabeled controls.
+-   Don't use icons and formattings for tips of unlabeled controls.
 -   Use tool-tips with icons and formatting
     -   if tips describe comprehensive functions,
     -   when content is lengthy and formatting improves readability
@@ -58,11 +59,9 @@ Code
 
 ### Kirigami
 
-> -   `Kirigami: ApplicationWindow <ApplicationWindow>`{.interpreted-text
->     role="kirigamiapi"}
-> -   [QML:
->     MenuBar](https://doc.qt.io/qt-5/qml-qtquick-controls-menubar.html)
+- Kirigami: [ApplicationWindow](docs:kirigami2;ApplicationWindow)
+- QML: [MenuBar](https://doc.qt.io/qt-5/qml-qtquick-controls-menubar.html)
 
 ### Plasma components
 
-> -   `Plasma ToolTip <ToolTip>`{.interpreted-text role="plasmaapi"}
+- [Plasma ToolTip](docs:plasma;ToolTip)

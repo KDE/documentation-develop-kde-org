@@ -8,24 +8,49 @@
   {{ .Content }}
   <div class="section-index">
     {{ $parent := .Page }}
-    {{ $allPages := .Site.Pages }}
+    {{ $allPages := .RegularPagesRecursive }}
     {{ $section := .Section }}
     {{ range .Params.groups }}
       <h2>{{ .name }}</h2>
-      {{ $pages := (where (where $allPages "Section" $section) ".Params.group" .key ).ByWeight  }}
-      {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
-      <div class="row">
-        {{ range $pages }}
-          {{ if eq .Parent $parent }}
-            <div class="col-6 my-3">
-              <a href="{{ .RelPermalink }}" class="shadow p-3 h-100 d-block">
-                <h2 class="h4 mt-0">{{- .Title -}}</h2>
-                <p>{{ .Description | markdownify }}</p>
-              </a>
-            </div>
+      {{ with .description }}
+         {{ . }}
+      {{ end }}
+      {{ if .subgroups }}
+        {{ $key := .key }}
+        {{ range .subgroups }}
+          <h3>{{ .name }}</h3>
+          {{ with .description }}
+             {{ . }}
           {{ end }}
+          {{ $pages := (where (where $allPages ".Params.group" $key ) ".Params.subgroup" .key).ByWeight  }}
+          {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
+          <div class="row">
+            {{ range $pages }}
+              <div class="col-6 my-3">
+                <a href="{{ .RelPermalink }}" class="shadow p-3 h-100 d-block">
+                  <h2 class="h4 mt-0">{{- .Title -}}</h2>
+                  <p>{{ .Description | markdownify }}</p>
+                </a>
+              </div>
+            {{ end }}
+          </div>
         {{ end }}
-      </div>
+      {{ else }}
+        {{ $pages := (where (where $allPages "Section" $section) ".Params.group" .key ).ByWeight  }}
+        {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
+        <div class="row">
+          {{ range $pages }}
+            {{ if eq .Parent $parent }}
+              <div class="col-6 my-3">
+                <a href="{{ .RelPermalink }}" class="shadow p-3 h-100 d-block">
+                  <h2 class="h4 mt-0">{{- .Title -}}</h2>
+                  <p>{{ .Description | markdownify }}</p>
+                </a>
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
     {{ end }}
   </div>
   <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>

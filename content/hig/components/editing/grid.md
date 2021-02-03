@@ -1,10 +1,12 @@
 ---
 title: Grid
+group: editing
+subgroup: selection
+weight: 5
 ---
-====
 
 Like a table, a grid is a structure to distribute items into rows and
-columns. Unlike a table, a grid doesn\'t have a fixed structure; rather,
+columns. Unlike a table, a grid doesn't have a fixed structure; rather,
 the rows and columns are determent by the available space.
 
 ![Choose a new wallpaper](/hig/Wallpaper-dark.png)
@@ -24,37 +26,31 @@ Grids adjust the number of columns dynamically to distribute the items
 according to the available horizontal space without making the grid
 horizontally scrollable. Grids can be vertically scrollable though.
 
-```{=html}
 <video autoplay controls 
 src="https://cdn.kde.org/hig/video/20180620-1/CardLayout2.webm" loop="true"
 playsinline="true" width="536" onended="this.play()" class="border"></video>
-```
--   Don\'t have blank grid items; use meta-options, e.g. (None) instead.
+
+-   Don't have blank grid items; use meta-options, e.g. (None) instead.
 -   Place options that represent general options (e.g. All, None) at the
     beginning of the grid.
 -   Sort grid items in a logical order. Make sure sorting fits
     translation.
 
-::: {.attention}
-::: {.title}
-Attention
-:::
-
-For `accessibility </accessibility/index>`
+{{< alert title="Attention" color="warning" >}}
+For [accessibility](/hig/accessibility)
 make sure to test keyboard navigation with the grid.
-:::
+{{< /alert >}}
 
 #### On-Demand Actions
 
 Grid items can use the
-`on-demand pattern </patterns/command/ondemand>`{.interpreted-text
-role="doc"} for inline actions.
+[on-demand pattern](/hig/patterns/command/ondemand) for inline actions.
 
 #### Picker
 
 Grids can be used for the
-`picker pattern </patterns/content/picker>`{.interpreted-text
-role="doc"}. Place a button below the grid to add items to the grid. To
+[picker pattern](/hig/patterns/content/picker). Place a button
+below the grid to add items to the grid. To
 remove items from the grid, either add a remove action on the item, or
 give the user the possibility to select items and add a global remove
 button at the bottom of the grid.
@@ -70,9 +66,8 @@ re-ordering via drag-and-drop.
     through user input or as a response to changes of the available
     space for the grid.
 -   All rows, except the last one, must have the same number of items.
--   Use
-    `sentence style capitalization </style/writing/capitalization>`{.interpreted-text
-    role="doc"} for grid view items.
+-   Use [sentence style capitalization](/hig/style/writing/capitalization)
+    for grid view items.
 
 #### Cards
 
@@ -81,7 +76,7 @@ how to use cards in a grid view.
 
 #### KCM
 
-Use the `KCMGrid </platform/kcmgrid>` for
+Use the [KCMGrid](/hig/platform/kcmgrid) for
 grids in KCMs.
 
 Code
@@ -89,4 +84,4 @@ Code
 
 ### Kirigami
 
-> -   [QML: GridView](https://doc.qt.io/qt-5/qml-qtquick-gridview.html)
+- QML: [GridView](https://doc.qt.io/qt-5/qml-qtquick-gridview.html)

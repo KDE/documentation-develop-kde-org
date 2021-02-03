@@ -1,7 +1,9 @@
 ---
 title: Modal Message Dialog
+group: assistance
+subgroup: notifications
+weight: 3
 ---
-====================
 
 Purpose
 -------
@@ -9,7 +11,7 @@ Purpose
 If the processing has reached an unexpected or potentially dangerous
 condition, the user must make a decision. The correct presentation for
 this kind of disruptive question is a modal message dialog: a secondary
-window that interrupts user\'s current activity and blocks interaction
+window that interrupts user's current activity and blocks interaction
 until the user decides how to proceed.
 
 Use modal message dialogs sparingly. Users will learn to reflexively
@@ -32,7 +34,7 @@ Guidelines
 ### Behavior
 
 -   Dialogs should be modal, and block user interaction with the rest of
-    the application until a choice has been made. Don\'t block the
+    the application until a choice has been made. Don't block the
     entire user interface for the whole system, though.
 -   Create specific, actionable, user-centered error messages. Users
     should either perform an action or change their behavior as a
@@ -49,12 +51,12 @@ Guidelines
     how to solve the problem.
 -   Phrase your messages clearly, in non-technical terms. Avoid obscure
     error codes.
--   Avoid wording that terrifies the user (\"killed\", \"fatal\",
-    \"illegal\") or blames them for their behavior. Be polite.
+-   Avoid wording that terrifies the user ("killed", "fatal",
+    "illegal") or blames them for their behavior. Be polite.
 -   Buttons should clearly indicate the available options using action
-    verbs (\"Delete\", \"Rename\", \"Close\", \"Accept\", etc.) and
+    verbs ("Delete", "Rename", "Close", "Accept", etc.) and
     allow the user to make an informed decision even if they have not
-    read the message text. Never use \"Yes\" and \"No\" as button
+    read the message text. Never use "Yes" and "No" as button
     titles.
 -   Follow the general guidelines for
-    `dialogs <../navigation/dialog>`.
+    [dialogs](../../navigation/dialog).
