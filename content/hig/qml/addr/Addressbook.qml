@@ -167,10 +167,8 @@ Kirigami.ApplicationItem {
     globalDrawer: Kirigami.GlobalDrawer {
         id: global
         title: "Joanne Doe"
-        titleIcon: "../../img/BernaFace.jpg"
-
-        Kirigami.Theme.inherit: false
-        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+        bannerVisible: true
+        bannerImageSource: "../../img/BernaFace-16x9.jpg"
 
         topContent: [
             Row {

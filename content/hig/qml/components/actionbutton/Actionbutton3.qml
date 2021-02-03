@@ -33,8 +33,5 @@ Rectangle {
     Addr.Addressbook {
         id: addrbook
         index: 3
-        Component.onCompleted: {
-            qmlControler.start();
-        }
     }
 }

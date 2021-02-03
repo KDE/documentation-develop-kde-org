@@ -31,6 +31,7 @@ Kirigami.ApplicationItem {
     
     Kirigami.ScrollablePage {
         id: root
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
         anchors.fill: parent
         spacing: Kirigami.Units.smallSpacing
         
@@ -55,7 +56,7 @@ Kirigami.ApplicationItem {
     
             Kirigami.Separator {
                 Kirigami.FormData.isSection: true
-                Kirigami.FormData.label: "Geschwindigkeit"
+                Kirigami.FormData.label: "Speed"
             }
     
             // Acceleration
@@ -94,18 +95,13 @@ Kirigami.ApplicationItem {
     HIG.Raster {
     }
     
-    // HACK
-    Timer {
-        interval: 500
-        repeat: false
+    HIG.FTimer {
         running: true
-        onTriggered: {
-            console.log(Kirigami.Units.smallSpacing);
-            var a = new A.An(formLayout);
-            //a.tree();
-            a.find("heading").eq(3).draw({ruler: {}})
-            
-            qmlControler.start();
+        onTick: function(frameCounter) {
+            if (frameCounter == 30) {
+                var a = new A.An(formLayout);
+                a.find("heading").eq(4).draw({ruler: {}})
+            }
         }
     }
 }

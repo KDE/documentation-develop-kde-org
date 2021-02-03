@@ -37,14 +37,4 @@ Rectangle {
             addrbook.pageStack.push(addrbook.detailPage)
         }
     }
-
-    // HACK
-    Timer {
-        interval: 1000
-        repeat: false
-        running: true
-        onTriggered: {
-            qmlControler.start();
-        }
-    }
 }

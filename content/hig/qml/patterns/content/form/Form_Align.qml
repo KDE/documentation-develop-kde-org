@@ -30,6 +30,7 @@ Kirigami.ApplicationItem {
 
     Kirigami.ScrollablePage {
         id: formLayout
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
         anchors.fill: parent
         spacing: Kirigami.Units.smallSpacing
         
@@ -68,9 +69,5 @@ Kirigami.ApplicationItem {
                 text: "Check me"
             }
         }
-    }
-
-    HIG.Raster {
-        desktop: true
     }
 }

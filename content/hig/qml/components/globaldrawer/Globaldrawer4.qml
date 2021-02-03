@@ -24,6 +24,7 @@ import org.kde.kirigami 2.4 as Kirigami
 import "../../models/" as Models
 import "../../addr/" as Addr
 import "../../lib/annotate.js" as A
+import "../../lib" as HIG
 
 Rectangle {
     width: 1100
@@ -45,28 +46,14 @@ Rectangle {
     }
 
     // HACK
-    Timer {
-        interval: 3000
-        repeat: false
-        running: true
-        onTriggered: {
-            addrbook.gDrawer.collapsed = false;
-        }
-    }
-    Timer {
-        interval: 6000
-        repeat: false
-        running: true
-        onTriggered: {
-            addrbook.gDrawer.collapsed = true;
-        }
-    }
-    Timer {
-        interval: 500
-        repeat: false
-        running: true
-        onTriggered: {
-            qmlControler.start();
+    HIG.FAnimation {
+        actions: {
+            180: function() {
+                addrbook.gDrawer.collapsed = false;
+            },
+            360: function () {
+                addrbook.gDrawer.collapsed = true;
+            }
         }
     }
 }

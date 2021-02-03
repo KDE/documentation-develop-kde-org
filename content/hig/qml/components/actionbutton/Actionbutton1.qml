@@ -33,5 +33,4 @@ Rectangle {
     Addr.Addressbook {
         id: addrbook
     }
-
 }

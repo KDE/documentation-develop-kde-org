@@ -28,9 +28,7 @@ filesystem.
 
 The text of a GNS button should be made of these parts:
 
--   Use the get-hot-new-stuff.png icon
-
-    ![image](/hig/get-hot-new-stuff.svg)
+-   Use the get-hot-new-stuff.png icon ![image](/hig/get-hot-new-stuff.svg)
 
 -   Label the button with "Get New" and the type of content the user
     will download

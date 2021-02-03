@@ -71,7 +71,7 @@ hamburger menu button expands the Global Drawer to its full width and
 shows the actions' text labels. Pressing the close button or anywhere
 outside of it collapses it to its collapsed icons-only state.
 
-<video src="https://cdn.kde.org/hig/video/20181031-1/Globaldrawer4.webm" 
+<video src="https://cdn.kde.org/hig/video/20201214/Globaldrawer4.webm"
 loop="true" playsinline="true" width="640" controls="true" 
 onended="this.play()" class="border"></video>
 

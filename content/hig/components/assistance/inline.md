@@ -120,7 +120,9 @@ button.](/hig/Message1.png)
 If there is not enough space to display all the buttons, an overflow
 menu is shown instead.
 
-![Inline message with overflow menu.](/hig/Message3.png)
+<video autoplay controls 
+src="https://cdn.kde.org/hig/video/20201125/Message3.webm" loop="true" 
+playsinline="true" width="420" onended="this.play()" class="border"></video>
 
 Code
 ----

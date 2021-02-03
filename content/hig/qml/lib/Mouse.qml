@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
+import QtQuick 2.15
 import QtTest 1.2
 import org.kde.kirigami 2.4 as Kirigami
 
@@ -28,7 +28,7 @@ Item {
     property int px
     property int py
     property bool animate: true
-    z: 2
+    z: 1000000
 
     Rectangle {
         id: ind
@@ -48,6 +48,7 @@ Item {
 
             onStopped: {
                 ind.visible = false;
+                cursor.visible = false;
                 event.mouseClick(canvas.parent, px, py, Qt.LeftButton, Qt.NoModifier, 0)
             }
         }

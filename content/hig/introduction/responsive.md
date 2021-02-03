@@ -51,3 +51,29 @@ role="doc"} patterns for different formfactors.
 
 It is recommended to test your user interface against the most common
 screen sizes of the targeted form factor.
+
+Folding points
+--------------
+
+An application's window size can change because of screen rotation on mobile 
+devices, activating a split view feature, or manual resizing. It is recommended 
+to react to the window these changes at specific widths, called "folding 
+points".
+
+Depending on the application, it might make sense to change the user interface 
+on one or on multiple folding points.
+
+| FP | Window size | Kirigami columns | Examples                                                        |
+|----|-------------|------------------|-----------------------------------------------------------------|
+| xs | <= 360 px   | 1                | A typical mobile phone, application in small split screen       |
+| s  | <= 720 px   | 2                | A large mobile phone, TVs, Phablet, a mobile phone in landscape |
+| m  | <= 1080 px  | 3                | Most tablets or laptops                                         |
+| l  | <= 1440 px  | 4                | Nearly maximised windows on desktops                            |
+| xl | > 1440 px   | 5                | Full screen windows on desktops                                 |
+
+
+{{< alert color="warning" >}}
+These are not physical pixels of a device or window, but DPI independent 
+pixels, see [Units](/hig/layout/units) for more information.
+{{< /alert >}}
+

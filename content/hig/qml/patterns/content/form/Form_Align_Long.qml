@@ -32,6 +32,7 @@ Kirigami.ApplicationItem {
         id: root
         anchors.fill: parent
         spacing: Kirigami.Units.smallSpacing
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
         
         property size sizeHint: Qt.size(formLayout.width, Math.round(1.1 * formLayout.height))
         property size minimumSizeHint: Qt.size(formLayout.width, Math.round(1.1 * formLayout.height))

@@ -17,37 +17,34 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.6
-import QtQuick.Controls 2.2
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 import org.kde.kirigami 2.4 as Kirigami
+import "../../lib" as HIG
+import "../../lib/annotate.js" as A
 
-Rectangle {
+Kirigami.ApplicationItem {
     width: 320
     height: 180
+    id: root
 
-    Row {
-        x: Kirigami.Units.gridUnit
-        y: Kirigami.Units.gridUnit
-        spacing: 4 * Kirigami.Units.largeSpacing
-
+    pageStack.initialPage: Kirigami.Page {
         ComboBox {
+            id: cbx1
             model: [ "Item1", "Item2", "Item3" ]
         }
-        ComboBox {
-            id: cbx
-            model: [ "Item1", "Item2", "Item3" ]
-            focus: true
-        }
-
     }
 
-    // HACK __popup is internal and might change in future versions
-    Timer {
-        interval: 1000
-        repeat: false
-        running: true
-        onTriggered: {
-            cbx.popup.open()
+    HIG.FAnimation {
+        actions: {
+            60: function() {
+                var a = new A.An(cbx1);
+                a.click();
+            },
+            180: function() {
+                var a = new A.An(root);
+                a.click({fromX: 140});
+            }
         }
     }
 }

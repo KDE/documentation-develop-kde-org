@@ -32,7 +32,7 @@ Rectangle {
             ]
             banner {
                 fillMode: Image.Pad
-                imageSource: "../../../img/coastal-fog/coastal-fog-400x300.png"
+                imageSource: "../../../img/wallpaper/BytheWater.jpg"
                 title: "Title"
             }
             contentItem: Controls.Label {
@@ -47,23 +47,22 @@ Rectangle {
     }
 
     // HACK coordinates are only final after a small delay
-    Timer {
-        interval: 1000
-        repeat: false
+    HIG.FTimer {
         running: true
-        onTriggered: {
-            var a = new A.An(root);
-            a.find("privateactiontoolbutton").draw({
-                "outline": {},
-            }).first().draw({
-                "ruler": {},
-            });
-            a.find("bannerimage").draw({
-                "outline": {
-                   "aspectratio": true
-                }
-            });
-            qmlControler.start();
+        onTick: function(frameCounter) {
+            if (frameCounter == 60) {
+                var a = new A.An(root);
+                a.find("privateactiontoolbutton").draw({
+                    "outline": {},
+                }).first().draw({
+                    "ruler": {},
+                });
+                a.find("bannerimage").draw({
+                    "outline": {
+                    "aspectratio": true
+                    }
+                });
+            }
         }
     }
 }

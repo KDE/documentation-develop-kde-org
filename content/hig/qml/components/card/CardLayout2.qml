@@ -1,18 +1,19 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import org.kde.kirigami 2.4 as Kirigami
+import "../../lib" as HIG
 
 Rectangle {
     id: root
-    width: 400 + Kirigami.Units.gridUnit * 2
-    height: 300 + Kirigami.Units.gridUnit * 2
+    width: 640
+    height: 480
 
     Rectangle {
         color: "#444"
-        x: Kirigami.Units.gridUnit * 1
-        y: Kirigami.Units.gridUnit * 1
-        width: 400
-        height: 300
+        x: Kirigami.Units.gridUnit
+        y: Kirigami.Units.gridUnit
+        width: root.width - Kirigami.Units.gridUnit * 2
+        height: root.height - Kirigami.Units.gridUnit * 2
         clip: true
 
         Kirigami.CardsLayout {
@@ -24,38 +25,38 @@ Rectangle {
 
             Kirigami.Card {
                 banner {
-                    imageSource: "../../../img/coastal-fog/coastal-fog-40x30.png"
+                    imageSource: "../../../img/wallpaper/Autumn.jpg"
                 }
                 contentItem: Controls.Label {
                     wrapMode: Text.WordWrap
-                    text: "This is an instance of the Card type."
+                    text: "Autumn"
                 }
             }
             Kirigami.Card {
                 banner {
-                    imageSource: "../../../img/coastal-fog/coastal-fog-40x30.png"
+                    imageSource: "../../../img/wallpaper/BytheWater.jpg"
                 }
                 contentItem: Controls.Label {
                     wrapMode: Text.WordWrap
-                    text: "This is an instance of the Card type."
+                    text: "By the water"
                 }
             }
             Kirigami.Card {
                 banner {
-                    imageSource: "../../../img/coastal-fog/coastal-fog-40x30.png"
+                    imageSource: "../../../img/wallpaper/ColdRipple.jpg"
                 }
                 contentItem: Controls.Label {
                     wrapMode: Text.WordWrap
-                    text: "This is an instance of the Card type."
+                    text: "Cold ripple"
                 }
             }
             Kirigami.Card {
                 banner {
-                    imageSource: "../../../img/coastal-fog/coastal-fog-40x30.png"
+                    imageSource: "../../../img/wallpaper/Canopee.png"
                 }
                 contentItem: Controls.Label {
                     wrapMode: Text.WordWrap
-                    text: "This is an instance of the Card type."
+                    text: "Canopee"
                 }
             }
             Behavior on columns {
@@ -65,13 +66,17 @@ Rectangle {
 
         SequentialAnimation on width {
             id: anim
-            PropertyAnimation { to: 150; duration: 3500 }
-            PropertyAnimation { to: 400; duration: 3500  }
+            PropertyAnimation { to: 150; duration: 4000 }
+            PropertyAnimation { to: root.width - Kirigami.Units.gridUnit * 2; duration: 4000  }
             running: false;
         }
-        Component.onCompleted: function() {
-            anim.start();
-            qmlControler.start();
+        HIG.FTimer {
+            running: true
+            onTick: function(frameCounter) {
+                if (frameCounter == 120) {
+                    anim.start();
+                }
+            }
         }
     }
 }

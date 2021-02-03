@@ -34,6 +34,7 @@ Kirigami.ApplicationItem {
     Kirigami.ScrollablePage {
         id: root
         anchors.fill: parent
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
         spacing: Kirigami.Units.smallSpacing
         
         property size sizeHint: Qt.size(formLayout.width, Math.round(1.1 * formLayout.height))
@@ -53,20 +54,11 @@ Kirigami.ApplicationItem {
                 Kirigami.FormData.label: i18nd("kcmmouse", "General:")
                 id: leftHanded
                 text: i18nd("kcmmouse", "Left handed mode")
-
-    
-//                 ToolTip {
-//                     text: i18nd("kcmmouse", "Swap left and right buttons.")
-//                 }
             }
     
             Controls.CheckBox {
                 id: middleEmulation
                 text: i18nd("kcmmouse", "Press left and right buttons for middle-click")
-    
-//                 ToolTip {
-//                     text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
-//                 }
             }
     
             Item {
@@ -92,20 +84,12 @@ Kirigami.ApplicationItem {
                 Controls.RadioButton {
                     id: accelProfileFlat
                     text: i18nd("kcmmouse", "Flat")
-    
-//                     ToolTip {
-//                         text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
-//                     }
                     onCheckedChanged: accelProfile.syncCurrent()
                 }
     
                 Controls.RadioButton {
                     id: accelProfileAdaptive
                     text: i18nd("kcmmouse", "Adaptive")
-    
-//                     ToolTip {
-//                         text: i18nd("kcmmouse", "Cursor travel distance depends on the mouse movement speed.")
-//                     }
                     onCheckedChanged: accelProfile.syncCurrent()
                 }
             }
@@ -119,10 +103,6 @@ Kirigami.ApplicationItem {
                 Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling:")
                 id: naturalScroll
                 text: i18nd("kcmmouse", "Invert scroll direction")
-    
-//                 ToolTip {
-//                     text: i18nd("kcmmouse", "Touchscreen like scrolling.")
-//                 }
             }
         }
     }
@@ -131,20 +111,15 @@ Kirigami.ApplicationItem {
     }
     
     // HACK
-    Timer {
-        interval: 1000
-        repeat: false
+    HIG.FTimer {
         running: true
-        onTriggered: {
-            var a = new A.An(formLayout);
-            a.find("qquickcheckbox").eq(1).draw({
-                brace: {to: a.find("qquickslider"), horizontal: false}
-            })
-            
-//             a.find("qquickradiobutton").eq(1).draw({
-//                 brace: {to: a.find("qquickcheckbox").eq(2), horizontal: false}
-//             })
-            qmlControler.start();
+        onTick: function(frameCounter) {
+            if (frameCounter == 30) {
+                var a = new A.An(formLayout);
+                a.find("checkbox").eq(1).draw({
+                    brace: {to: a.find("slider"), horizontal: false}
+                })
+            }
         }
     }
 }

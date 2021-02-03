@@ -23,6 +23,7 @@ import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
 import "../../../models/" as Models
 import "../../../addr/" as Addr
+import "../../../lib/" as HIG
 import "../../../lib/annotate.js" as A
 
 Rectangle {
@@ -31,6 +32,7 @@ Rectangle {
     id: root
 
     Addr.Addressbook {
+        
         id: addrbook
         index: 0
         Component.onCompleted: {
@@ -38,22 +40,17 @@ Rectangle {
         }
     }
 
-    // HACK
-    Timer {
-        interval: 1000
-        repeat: false
-        running: true
-        onTriggered: {
-            var a = new A.An(addrbook.detailPage);
-            a.find("abstractpageheader").find("privateactiontoolbutton").last().click();
-        }
-    }
-    Timer {
-        interval: 5000
-        repeat: false
-        running: true
-        onTriggered: {
-            qmlControler.start();
+    
+    HIG.FAnimation {
+        actions: {
+            120: function() {
+                var a = new A.An(addrbook.detailPage);
+                a.find("actiontoolbar").click({x: 210, y: -3});
+            },
+            300: function() {
+                var a = new A.An(addrbook.detailPage);
+                a.touch({y: 200});
+            },
         }
     }
 }

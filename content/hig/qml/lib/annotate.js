@@ -26,6 +26,19 @@ function getOpts(opts, choices) {
     return opts;
 }
 
+function getRoot() {
+    var r = root;
+    if (root.Overlay && root.Overlay.overlay) {
+        // root must be an Kirigami.ApplicationItem
+        // And QtQuick and QtQuick.Controls must be new enough
+        r = root.Overlay.overlay;
+    }
+    else {
+        console.warn("You should use Kirigami.ApplicationItem as root object");
+    }
+    return r;
+}
+
 // An extended array of QML elements
 function An(node) {
     this.nodes = [];
@@ -141,7 +154,7 @@ An.prototype.click = function(opt) {
         var node = this.nodes[n];
         var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + options.x;
         var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) + options.y;
-        var m = mouse.createObject(root, {px: x, py: y});
+        var m = mouse.createObject(getRoot(), {px: x, py: y});
         m.click();
     }
     return this;
@@ -159,7 +172,7 @@ An.prototype.touch = function(opt) {
         var node = this.nodes[n];
         var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + options.x;
         var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) + options.y;
-        var m = touch.createObject(root, {toX: x, toY: y});
+        var m = touch.createObject(getRoot(), {toX: x, toY: y});
         m.touch();
     }
     return this;
@@ -199,7 +212,7 @@ An.prototype.pinch = function(opt) {
 //             opt.to.right - opt.to.left, 
 //             opt.to.bottom - opt.to.top
 //         );
-        var m = pinch.createObject(root, {from: from, to: to});
+        var m = pinch.createObject(getRoot(), {from: from, to: to});
         m.pinch();
     }
     return this;
@@ -223,7 +236,7 @@ An.prototype.rotate = function(opt) {
             80, 
             80
         );
-        var m = rotate.createObject(root, {from: from, angle: opt.angle});
+        var m = rotate.createObject(getRoot(), {from: from, angle: opt.angle});
         m.rotate();
     }
     return this;
@@ -243,7 +256,7 @@ An.prototype.hover = function(opt) {
         var node = this.nodes[n];
         var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + options.x;
         var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) + options.y;
-        var m = mouse.createObject(root, {px: x, py: y, animate: options.animate});
+        var m = mouse.createObject(getRoot(), {px: x, py: y, animate: options.animate});
         m.hover();
     }
     return this;
@@ -264,7 +277,7 @@ An.prototype.swipe = function(opt) {
         var node = this.nodes[n];
         var x = node.mapToItem(null, 0, 0).x + Math.floor(node.width / 2) + options.fromX;
         var y = node.mapToItem(null, 0, 0).y + Math.floor(node.height / 2) - Kirigami.Units.iconSizes.smallMedium / 2 + options.fromY;
-        var t = touch.createObject(root, {fromX: x, fromY: y, toX: x + options.toX, toY: y + options.toY});
+        var t = touch.createObject(getRoot(), {fromX: x, fromY: y, toX: x + options.toX, toY: y + options.toY});
         t.swipe();
     }
     return this;

@@ -23,7 +23,8 @@ import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
 import "../../models/" as Models
 import "../../addr/" as Addr
-import "../../lib/annotate.js" as A
+import "../../lib/" as HIG
+
 
 Rectangle {
     width: 320
@@ -40,20 +41,12 @@ Rectangle {
     }
 
     // HACK
-    Timer {
-        interval: 1000
-        repeat: false
+    HIG.FTimer {
         running: true
-        onTriggered: {
-            addrbook.cDrawer.open();
-        }
-    }
-    Timer {
-        interval: 1500
-        repeat: false
-        running: true
-        onTriggered: {
-            qmlControler.start();
+        onTick: function(frameCounter) {
+            if (frameCounter == 60) {
+                addrbook.cDrawer.open();
+            }
         }
     }
 }

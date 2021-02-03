@@ -30,7 +30,7 @@ Rectangle {
                 }
             ]
             banner {
-                imageSource: "../../../img/coastal-fog/coastal-fog-160x90.png"
+                imageSource: "../../../img/wallpaper/BytheWater.jpg"
                 title: "This is a title"
             }
             contentItem: Controls.Label {
@@ -39,29 +39,28 @@ Rectangle {
             }
         }
     }
-    /*HIG.Grid {
-        z: 1
-    }*/
+    //HIG.Raster {
+        //z: 1
+    //}
 
     // HACK coordinates are only final after a small delay
-    Timer {
-        interval: 1000
-        repeat: false
+    HIG.FTimer {
         running: true
-        onTriggered: {
-            var a = new A.An(root);
-            a.find("privateactiontoolbutton").draw({
-                "outline": {},
-            });
-            a.find("bannerimage").draw({
-                "outline": {
-//                    "aspectratio": true
-                }
-            });
-            a.find("card").draw({
-                "padding": {}
-            });
-            qmlControler.start();
+        onTick: function(frameCounter) {
+            if (frameCounter == 60) {
+                var a = new A.An(root);
+                var label = a.find("label");
+                var toolbar = a.find("toolbarlayout");
+                toolbar.draw({
+                    "outline": {label: false},
+                });
+                label.draw({
+                    "outline": {label: false},
+                });
+                a.find("card").draw({
+                    "padding": {}
+                });
+            }
         }
     }
 }

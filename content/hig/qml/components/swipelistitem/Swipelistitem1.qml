@@ -18,12 +18,11 @@
  */
 
 import QtQuick 2.6
-import QtTest 1.2
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
-import "../../models/" as Models
 import "../../addr/" as Addr
+import "../../lib" as HIG
 import "../../lib/annotate.js" as A
 
 Rectangle {
@@ -36,27 +35,17 @@ Rectangle {
     }
 
 
-    // HACK
-    TestEvent {
-        id: event
-    }
-    Timer {
-        interval: 2000
-        repeat: false
-        running: true
-        onTriggered: {
-            var a = new A.An(addrbook);
-            a.find("swipelistitem").eq(3).swipe({fromX: +140, fromY: 9, toX: -80, toY: 0});
-        }
-    }
-
-    Timer {
-        interval: 4000
-        repeat: false
-        running: true
-        onTriggered: {
-            var a = new A.An(addrbook);
-            a.find("swipelistitem").eq(3).touch({});
+    HIG.FAnimation {
+        actions: {
+            
+            120: function() {
+                var a = new A.An(addrbook);
+                a.find("swipelistitem").eq(3).swipe({fromX: +140, fromY: 9, toX: -80, toY: 0});
+            },
+            240: function() {
+                var a = new A.An(addrbook);
+                a.find("swipelistitem").eq(3).touch({});
+            }
         }
     }
 }

@@ -32,6 +32,7 @@ Kirigami.ApplicationItem {
     Kirigami.ScrollablePage {
         id: root
         anchors.fill: parent
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
         spacing: Kirigami.Units.smallSpacing
         
         property size sizeHint: Qt.size(formLayout.width, Math.round(1.1 * formLayout.height))
@@ -95,23 +96,16 @@ Kirigami.ApplicationItem {
     }
     
     // HACK
-    Timer {
-        interval: 500
-        repeat: false
+    HIG.FTimer {
         running: true
-        onTriggered: {
-            console.log(Kirigami.Units.smallSpacing);
-            var a = new A.An(formLayout);
-            //a.tree();
-            a.find("qquickcheckbox").eq(1).draw({
-                brace: {to: a.find("qquickslider"), horizontal: false}
-            })
-            
-//             a.find("qquickradiobutton").eq(1).draw({
-//                 brace: {to: a.find("qquickcheckbox").eq(2), horizontal: false}
-//             })
-            
-            qmlControler.start();
+        onTick: function(frameCounter) {
+            if (frameCounter == 30) {
+                var a = new A.An(formLayout);
+                //a.tree();
+                a.find("checkbox").eq(1).draw({
+                    brace: {to: a.find("slider"), horizontal: false}
+                });
+            }
         }
     }
 }

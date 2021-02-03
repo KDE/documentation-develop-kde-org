@@ -10,6 +10,10 @@ available: ['desktop', 'mobile']
 Purpose
 -------
 
+<video src="https://cdn.kde.org/hig/video/20200122/ShowContentDrawer.webm" 
+    loop="true" playsinline="true" width="320" controls="true" 
+    onended="this.play()" class="border"></video>
+
 The Context Drawer is used to access controls that depend on the current
 context. This can be, for example, controls that affect a selected
 element in a list or that navigate through an opened document.

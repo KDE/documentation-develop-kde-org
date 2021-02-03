@@ -34,6 +34,9 @@ Item {
         duration: 800
         loops: Animation.Infinite
     }
+    // 1 tick per frame, 
+    // Since we are recording with exact 60 frames/sec
+    // 60 ticks are 1 sec
     onRotationChanged: function() {
         if (running) {
             frameCounter++;

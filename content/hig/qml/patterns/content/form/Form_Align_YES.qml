@@ -33,18 +33,18 @@ Rectangle {
     }
 
     HIG.Raster {
+        z: 2
         desktop: true
     }
 
     // HACK
-    Timer {
-        interval: 500
-        repeat: false
+    HIG.FTimer {
         running: true
-        onTriggered: {
-            var a = new A.An(align);
-            a.find("qquicktextfield").eq(1).draw({ruler: {}})
-            qmlControler.start();
+        onTick: function(frameCounter) {
+            if (frameCounter == 30) {
+                var a = new A.An(align);
+                a.find("combobox").first().draw({ruler: {}})
+            }
         }
     }
 }

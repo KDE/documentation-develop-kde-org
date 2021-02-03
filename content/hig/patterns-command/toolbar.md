@@ -6,8 +6,12 @@ weight: 6
 Desktop
 -------
 
-![Toolbar with the most common actions and a menu button for additional
-actions](/hig/Toolbar1.png)
+<video src="https://cdn.kde.org/hig/video/20201125/Toolbar1.webm" 
+    loop="true" playsinline="true" width="800" controls="true" 
+    onended="this.play()" class="border"></video>
+
+Toolbar with the most common actions and a menu button for additional
+actions
 
 -   Use Toolbar + Menu Button command pattern when the number of
     frequently used commands are about 8 or less, and the remaining

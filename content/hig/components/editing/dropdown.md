@@ -4,8 +4,12 @@ group: editing
 subgroup: selection
 ---
 
-![Control which allows the user to choose one value from a
-list.](/hig/Dropdown1.png)
+<video autoplay controls 
+   src="https://cdn.kde.org/hig/video/20201211/Dropdown1.webm" loop="true" 
+   playsinline="true" width="320" onended="this.play()" class="border"></video>
+
+Control which allows the user to choose one value from a
+list.
 
 Purpose
 -------

@@ -23,32 +23,69 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.2
 import org.kde.kirigami 2.4 as Kirigami
 import "../../lib" as HIG
+import QtTest 1.2
 
 import "../../lib/annotate.js" as A
 
 Rectangle {
     id: root
-    width: 200
+    width: 420
     height: 220
-
-    ColumnLayout {
+        
+    Kirigami.InlineMessage {
+        id: msg
         x: Kirigami.Units.gridUnit * 2
         y: Kirigami.Units.gridUnit * 2
         width: parent.width - 2 * Kirigami.Units.gridUnit * 2
-        Kirigami.InlineMessage {
-            Layout.fillWidth: true
-            visible: true
-            text: "Do you want to rip this CD?"
-            actions: [
-                Kirigami.Action {
-                    text: "Rip CD"
-                    icon.name: "dialog-ok-apply"
-                }
-            ]
+        
+        visible: true
+        text: "Found new audio CD"
+        actions: [
+            Kirigami.Action {
+                text: "Play"
+                icon.name: "media-playback-start"
+            },
+            Kirigami.Action {
+                text: "Append to playlist"
+                icon.name: "media-playlist-append"
+            }
+        ]
+        
+        states: State {
+            name: "small"
+            PropertyChanges { target: msg; width: 200 }
+        }
+
+        transitions: Transition {
+            PropertyAnimation { properties: "width"; easing.type: Easing.InOutQuad; duration: 2000 }
         }
     }
 
     HIG.Raster {
         z: 1
+    }
+    
+    HIG.FAnimation {
+        actions: {
+            120: function() {
+                msg.state = "small"
+            },
+            // open popup
+            240: function() {
+                var a = new A.An(msg);
+                a.find("privateactiontoolbutton").eq(2).click();
+            },
+            // Close popup
+            420: function() {
+                event.mouseClick(root.parent, 1, 1, Qt.LeftButton, Qt.NoModifier, 0)
+            },
+            480: function() {
+                msg.state = "";
+            }
+        }
+    }
+    
+    TestEvent {
+        id: event
     }
 }

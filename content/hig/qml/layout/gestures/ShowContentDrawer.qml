@@ -36,14 +36,16 @@ Rectangle {
         index: 2
     }
 
-    HIG.FTimer {
-        running: true
-        onTick: function(frameCounter) {
-            if (frameCounter == 120) {
+    // Define animation
+    HIG.FAnimation {
+        actions: {
+            // Swipe to show contextdrawer
+            120: function() {
                 var a = new A.An(root);
                 a.swipe({fromX: 160, fromY: 120, toX: -160, toY: 0});
-            }
-            if (frameCounter == 240) {
+            },
+            // Touch to close comntext drawer
+            240: function() {
                 var a = new A.An(root);
                 a.touch({x: -120, y: 120});
             }

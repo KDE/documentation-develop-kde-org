@@ -35,12 +35,17 @@ Guidelines
 
 Cards are responsive. They resize to fit into the available space.
 
-<video autoplay controls src="https://cdn.kde.org/hig/video/20180620-1/CardLayout1.webm" loop="true" playsinline="true" width="536" onended="this.play()" class="border"></video>
+<video autoplay controls 
+   src="https://cdn.kde.org/hig/video/20201125/CardLayout1.webm" loop="true" 
+   playsinline="true" width="536" onended="this.play()" class="border"></video>
+
 
 It is recommended that you adjust the number of cards displayed next to
 each other depending on the available space.
 
-<video autoplay controls src="https://cdn.kde.org/hig/video/20180620-1/CardLayout2.webm" loop="true" playsinline="true" width="536" onended="this.play()" class="border"></video>
+<video autoplay controls 
+   src="https://cdn.kde.org/hig/video/20201125/CardLayout2.webm" loop="true" 
+   playsinline="true" width="536" onended="this.play()" class="border"></video>
 
 #### Mobile
 
@@ -52,7 +57,7 @@ each other depending on the available space.
 It is recomended that you use the standard card layout for consistency,
 but cards can have a lot of different layouts.
 
-![](/hig/Card6.qml.png)
+![](/hig/Card6.png)
 
 The only common requirement is the container around it. While cards can
 have a lot of different layouts, each should focus only on one bit of
@@ -67,13 +72,15 @@ Here are some general recommendations for card layouts:
 -   Use a well known aspect ratio for a header image
 
     ![Cards with 16×9, 4×3, 1×1 header image aspect
-    ratio.](/hig/Card5.qml.png)
+    ratio.](/hig/Card5.png)
 
 -   Add a padding of at least largeSpacing to the card, except for
     videos and images. These can ignore the padding and span the entire
     width or height of a card.
 
-    ![Padding for text and buttons.](/hig/Card2.qml.png)
+    ![Padding for text and buttons.](/hig/Card2.png)
+
+    ![Spacing between banner image, text and buttons.](/img/Card7.png)
 
 Code
 ----

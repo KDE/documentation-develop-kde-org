@@ -1,6 +1,7 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.0 as Controls
 import org.kde.kirigami 2.4 as Kirigami
+import "../../lib" as HIG
 
 Rectangle {
     id: root
@@ -34,7 +35,7 @@ Rectangle {
                     }
                 ]
                 banner {
-                    imageSource: "../../../img/coastal-fog/coastal-fog-160x90.png"
+                    imageSource: "../../../img/wallpaper/Autumn.jpg"
                 }
                 contentItem: Controls.Label {
                     wrapMode: Text.WordWrap
@@ -53,7 +54,7 @@ Rectangle {
                     }
                 ]
                 banner {
-                    imageSource: "../../../img/coastal-fog/coastal-fog-160x90.png"
+                    imageSource: "../../../img/wallpaper/ColdRipple.jpg"
                 }
                 contentItem: Controls.Label {
                     wrapMode: Text.WordWrap
@@ -68,9 +69,13 @@ Rectangle {
             PropertyAnimation { to: 600; duration: 3000  }
             running: false;
         }
-        Component.onCompleted: function() {
-            anim.start();
-            qmlControler.start();
+        HIG.FTimer {
+            running: true
+            onTick: function(frameCounter) {
+                if (frameCounter == 60) {
+                    anim.start();
+                }
+            }
         }
     }
 }

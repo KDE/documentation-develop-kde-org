@@ -62,15 +62,6 @@ Use Plasma 5-style form alignment.
 {{< /dont >}}
 {{< /compare >}}
 
-{{< compare >}}
-{{< do src="/hig/Form_Align_KDE5.png" >}}
-Use Plasma 5-style form alignment.
-{{< /do >}}
-{{< dont src="/hig/Form_Align_OSX.png" >}}
-Don't use macOS-style form alignment.
-{{< /dont >}}
-{{< /compare >}}
-
 -   Position groups of items vertically rather than horizontally, as
     this makes them easier to scan visually. Use horizontal or
     rectangular positioning only if it would greatly improve the layout

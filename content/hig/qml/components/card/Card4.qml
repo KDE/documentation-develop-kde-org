@@ -72,34 +72,33 @@ Rectangle {
     }
 
     // HACK coordinates are only final after a small delay
-    Timer {
-        interval: 1000
-        repeat: false
+    HIG.FTimer {
         running: true
-        onTriggered: {
-            var a = new A.An(root);
-            //a.tree();
-            a.find("card").draw({
-                "padding": {},
-                "messure": [{
-                    "to": a.find('qquickrectangle{"color": "#4682b4"}'),
-                    "type": "top"
-                }, {
-                    "to": a.find('qquickrectangle{"color": "#4682b4"}'),
-                    "type": "left"
-                }, {
-                    "to": a.find('qquickrectangle{"color": "#4682b4"}'),
-                    "type": "right"
-                }]
+        onTick: function(frameCounter) {
+            if (frameCounter == 60) {
+                var a = new A.An(root);
+                //a.tree();
+                a.find("card").draw({
+                    "padding": {},
+                    "messure": [{
+                        "to": a.find('qquickrectangle{"color": "#4682b4"}'),
+                        "type": "top"
+                    }, {
+                        "to": a.find('qquickrectangle{"color": "#4682b4"}'),
+                        "type": "left"
+                    }, {
+                        "to": a.find('qquickrectangle{"color": "#4682b4"}'),
+                        "type": "right"
+                    }]
 
-            });
-            a.find('qquickrectangle{"color": "#4682b4"}').draw({
-                "outline": {},
-            });
-            a.find("qquickrowlayout").last().draw({
-                "outline": {}
-            });
-            qmlControler.start();
+                });
+                a.find('qquickrectangle{"color": "#4682b4"}').draw({
+                    "outline": {},
+                });
+                a.find("qquickrowlayout").last().draw({
+                    "outline": {}
+                });
+            }
         }
     }
 }

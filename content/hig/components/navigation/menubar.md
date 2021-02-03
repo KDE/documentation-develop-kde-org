@@ -90,6 +90,6 @@ Code
 ### Kirigami
 
 - [Kirigami: ApplicationWindow](docs:kirigami2;ApplicationWindow).
-- [QML: MenuBar](https://doc.qt.io/qt-5/qml-qtquick-controls-menubar.html)
+- [QML: MenuBar](https://doc.qt.io/qt-5/qml-qtquick-controls2-menubar.html)
 
 {{< readfile file="/content/hig/examples/kirigami/AddressbookMenubar.qml" highlight="qml" >}}

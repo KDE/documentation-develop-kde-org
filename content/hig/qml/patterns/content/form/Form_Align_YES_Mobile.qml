@@ -21,6 +21,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.3 as Layouts
 import org.kde.kirigami 2.4 as Kirigami
+import "../../../lib/annotate.js" as A
 
 import "../../../lib/" as HIG
 
@@ -38,5 +39,15 @@ Rectangle {
     HIG.Raster {
         desktop: true
         mobile: true
+    }
+    
+    HIG.FTimer {
+        running: true
+        onTick: function(frameCounter) {
+            if (frameCounter == 30) {
+                var a = new A.An(align);
+                a.find("combobox").first().draw({ruler: {}})
+            }
+        }
     }
 }

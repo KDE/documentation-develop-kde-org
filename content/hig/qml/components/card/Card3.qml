@@ -48,24 +48,23 @@ Rectangle {
     }
 
     // HACK coordinates are only final after a small delay
-    Timer {
-        interval: 1000
-        repeat: false
+    HIG.FTimer {
         running: true
-        onTriggered: {
-            var a = new A.An(root);
-            a.find("privateactiontoolbutton").draw({
-                "outline": {},
-            }).first().draw({
-                "brace": {
-                    "to": a.find("privateactiontoolbutton").last(),
-                    "center": false
-                },
-            });
-            a.find("bannerimage").draw({
-                "outline": {label: false}
-            });
-            qmlControler.start();
+        onTick: function(frameCounter) {
+            if (frameCounter == 60) {
+                var a = new A.An(root);
+                a.find("privateactiontoolbutton").draw({
+                    "outline": {},
+                }).first().draw({
+                    "brace": {
+                        "to": a.find("privateactiontoolbutton").last(),
+                        "center": false
+                    },
+                });
+                a.find("bannerimage").draw({
+                    "outline": {label: false}
+                });
+            }
         }
     }
 }
