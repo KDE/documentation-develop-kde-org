@@ -392,6 +392,60 @@ Kirigami.FormLayout {
 
 
 
+## ColorButton - Color
+
+{{< sections >}}
+{{< section-left >}}
+
+KDE Frameworks has [`ColorButton`](https://api.kde.org/frameworks/kdeclarative/html/classorg_1_1kde_1_1kquickcontrols_1_1ColorButton.html) which provides a preview of the selected color and will open QtQuick's [`ColorDialog`](https://doc.qt.io/qt-5/qml-qtquick-dialogs-colordialog.html) for selecting a color.
+
+```xml
+<!-- config/main.xml -->
+<entry name="variableName" type="Color">
+    <default>#336699</default>
+</entry>
+```
+
+I personally don't recommend using the `Color` data type in `main.xml` if you want the default color to be a color from the color scheme (eg: `PlasmaCore.ColorScope.textColor`). I would instead suggest using a `String` that is empty by default. You can then use the following:
+
+```xml
+<entry name="labelColor" type="String">
+    <default></default>
+</entry>
+```
+
+```qml
+PlasmaComponents.Label {
+    color: plasmoid.configruation.labelColor || PlasmaCore.ColorScope.textColor
+}
+```
+
+Unfortunately KDE Framework's `ColorButton` doesn't easily support this pattern as it stores the value in a QML `color` property which will read the empty string and cast it as the default color `#000000` (black). I worked around this issue in the [No-Apply Control Library]({{< ref "#no-apply-control-library" >}})'s [`ConfigColor.qml`](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigColor.qml). I used a `TextField` to store the value as a string, and displayed the default color scheme color as `placeholderText`.
+
+{{< /section-left >}}
+{{< section-right >}}
+```qml
+// configGeneral.qml
+import QtQuick 2.0
+import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kquickcontrols 2.0 as KQControls
+
+Kirigami.FormLayout {
+    id: page
+    property alias cfg_variableName: variableName.value
+
+    KQControls.ColorButton {
+        id: variableName
+        showAlphaChannel: true
+    }
+}
+```
+{{< /section-right >}}
+{{< /sections >}}
+
+
+
 ## Assigning to plasmoid.configuration.varName
 
 {{< sections >}}
