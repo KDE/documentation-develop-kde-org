@@ -37,7 +37,7 @@ controls that adapt their presentation according to the device\'s form
 factor.
 
 ![Discover, a convergent application built using
-Kirigami](/hig/kirigami.jpg)
+Kirigami](/frameworks/kirigami/kirigami-adapt.png)
 
 {{< alert title="Hint" color="info" >}}
 
