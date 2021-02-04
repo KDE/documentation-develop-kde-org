@@ -518,6 +518,23 @@ Kirigami.FormLayout {
 
 
 
+## IconDialog - Icon
+
+{{< sections >}}
+{{< section-left >}}
+
+[`KQuickAddons.IconDialog`](https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kquickcontrolsaddons/icondialog.h) makes it easy to seach and preview icons.
+
+See the [configurable icon example]({{< ref "examples.md#configurable-icon" >}}) for an example of [KQuickAddons.IconDialog](https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kquickcontrolsaddons/icondialog.h) based on the Application Launcher's (aka kickoff) [icon selector code](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/package/contents/ui/ConfigGeneral.qml#L39-87).
+
+{{< /section-left >}}
+{{< section-right >}}
+
+{{< /section-right >}}
+{{< /sections >}}
+
+
+
 ## Assigning to plasmoid.configuration.varName
 
 {{< sections >}}
