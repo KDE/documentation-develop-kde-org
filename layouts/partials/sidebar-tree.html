@@ -22,7 +22,7 @@
 {{ $p := .page }}
 {{ $d := .depth }}
 {{ $shouldDelayActive := .delayActive }}
-{{ $active := eq $p.CurrentSection $s }}
+{{ $active := (and (eq $p.CurrentSection $s) (not (eq $d 0))) }}
 {{ $show := and (or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s)) (or (not (or (eq .page.LinkTitle "KDE Human Interface Guidelines" ) (eq .page.LinkTitle "Documentation" ))) (eq $d 0)) }}
 {{ $sid := $s.RelPermalink | anchorize }}
 <ul class="td-sidebar-nav__section {{ if $active}} active{{ end }}">
