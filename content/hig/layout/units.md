@@ -83,7 +83,7 @@ Since Plasma allows the user to change the font settings, any objects
 with dimensions defined with px (DPI independent or not) can have issues
 with text.
 
-![Using `DPI independet pixels` with
+![Using DPI independet pixels with
 different font settings](/hig/Font.qml.png)
 
 Base Units in Plasma and Kirigami
