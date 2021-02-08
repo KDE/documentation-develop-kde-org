@@ -83,7 +83,7 @@ Since Plasma allows the user to change the font settings, any objects
 with dimensions defined with px (DPI independent or not) can have issues
 with text.
 
-![Using `DPI independet pixels`{.interpreted-text role="noblefir"} with
+![Using `DPI independet pixels` with
 different font settings](/hig/Font.qml.png)
 
 Base Units in Plasma and Kirigami
@@ -102,8 +102,7 @@ ratio between `Units.gridUnit` and
 `Units.smallSpacing`/`Units.largeSpacing` because these change depending
 on the user's font settings.
 
-![A rectangle defined with `Units.gridUnit`{.interpreted-text
-role="plasmablue"}.](/hig/Units.qml.png)
+![A rectangle defined with `Units.gridUnit`.](/hig/Units.qml.png)
 
 {{< alert color="warning" title="Attention" >}}
 These px values are only for design and mockup purposes. Don't use them
@@ -222,7 +221,7 @@ actually values.
 
 ![](/hig/Ratio.qml.png)
 
-``` {.qml .numberLines}
+```qml
 Grid {
     columns: 3
     ...
