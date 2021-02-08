@@ -178,7 +178,7 @@ be useful to support two-handed use, especially when typing.
 ### Example
 
 This example shows how the Smartphone UX can be applied in the
-`Plasma Mobile <pm:Introduction>`
+[Plasma mobile](https://www.plasma-mobile.org/)
 workspace:
 
 - **Workspace**: Has multiple home screens (similar to Virtual
