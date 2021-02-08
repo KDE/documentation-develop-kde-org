@@ -102,7 +102,7 @@ ratio between `Units.gridUnit` and
 `Units.smallSpacing`/`Units.largeSpacing` because these change depending
 on the user's font settings.
 
-![A rectangle defined with `Units.gridUnit`.](/hig/Units.qml.png)
+![A rectangle defined with Units.gridUnit.](/hig/Units.qml.png)
 
 {{< alert color="warning" title="Attention" >}}
 These px values are only for design and mockup purposes. Don't use them
