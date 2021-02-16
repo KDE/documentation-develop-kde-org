@@ -22,7 +22,17 @@ A [QAction ](https://doc.qt.io/qt-5/qaction.html) is an object which contains al
 
 ### main.cpp
 
-This time, nothing changed in `main.cpp`.
+We are going to install our UI .rc file under the component `texteditor`, so `main.cpp` should be changed to reflect that change in name.
+
+```c++
+    // ...
+    KLocalizedString::setApplicationDomain("texteditor");
+    
+    KAboutData aboutData(
+                         // The program name used internally. (componentName)
+                         QStringLiteral("texteditor"),
+    // ...
+```
 
 ### mainwindow.h
 
