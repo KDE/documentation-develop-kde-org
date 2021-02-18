@@ -62,8 +62,8 @@ layout: area
     <h2>KDE Human Interface Guidelines</h2>
     <p>The KDE Human Interface Guidelines (HIG) offer designers and developers a set of recommendations for producing beautiful, usable, and consistent user interfaces for convergent desktop and mobile applications and workspace widgets. Their aim is to improve the experience for users by making application and widget interfaces more consistent and hence more intuitive and learnable.</p>
     <div class="text-center mt-3 mb-4">
-      <a href="https://hig.kde.org" class="learn-more">Read KDE HIG</a> 
+      <a href="/hig" class="learn-more">Read KDE HIG</a> 
     </div>
-    <a href="https://hig.kde.org"><img class="w-100 img-fluid" src="https://hig.kde.org/_images/HIGDesignVisionFullBleed.png" /></a>
+    <a href="/hig"><img class="w-100 img-fluid" src="/hig/HIGDesignVisionFullBleed.png" /></a>
   </div>
 </section>
