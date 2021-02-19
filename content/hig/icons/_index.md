@@ -1,5 +1,5 @@
 ---
-title: Icon Design
+title: Iconography
 weight: 3
 ---
 
