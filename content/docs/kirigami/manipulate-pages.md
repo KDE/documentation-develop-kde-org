@@ -1,7 +1,7 @@
 ---
 title: Pages manipulation
 description: "Add flow to your application: Add, remove and replace pages"
-weight: 3
+weight: 103
 group: introduction
 ---
 
