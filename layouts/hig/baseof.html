@@ -4,6 +4,9 @@
     {{ partial "head.html" . }}
   </head>
   <body class="td-{{ .Kind }}">
+    <a class="skip-to-content-link" href="#main">
+      Skip to content
+    </a>
     <div class="container-fluid td-outer">
       <header class="header row">
         {{ partial "navbar.html" . }}
@@ -16,7 +19,7 @@
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
             {{ partial "toc.html" . }}
           </div>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main" id="main">
             {{ partial "version-banner.html" . }}
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
             {{ block "main" . }}{{ end }}
