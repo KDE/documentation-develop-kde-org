@@ -26,7 +26,7 @@ For Fedora, we use DNF:
 
 ```bash
 sudo dnf groupinstall "Development Tools" "Development Libraries"
-sudo dnf install extra-cmake-modules cmake qt5-devel qt5-qtdeclarative-devel qtquickcontrols2-5-dev kf5-kirigami2 kf5-kirigami2-devel gettext
+sudo dnf install extra-cmake-modules cmake qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel kf5-kirigami2 kf5-kirigami2-devel gettext
 ```
 
 Further information for other distributions can be found [here](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Install_the_dependencies).
