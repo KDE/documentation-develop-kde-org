@@ -18,7 +18,7 @@
     {{ end }}
     {{ $issuesURL := printf "%s/-/issues/new?title=%s" $gl_repo (htmlEscape $.Title )}}
     <a href="{{ $editURL }}" target="_blank"><i class="icon icon_document-edit mr-2"></i> {{ T "post_edit_this" }}</a>
-    <a href="{{ $sourceURL }}" target="_blank"><i class="icon icon_document-edit mr-2"></i> See source code</a>
+    <a href="{{ $sourceURL }}" target="_blank"><i class="icon icon_redeyes mr-2"></i> See source code</a>
     <a href="{{ $issuesURL }}" target="_blank"><i class="icon  icon_document-send mr-2"></i> {{ T "post_create_issue" }}</a>
   </div>
   {{ end }}
