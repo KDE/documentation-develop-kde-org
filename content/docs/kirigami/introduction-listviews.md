@@ -62,6 +62,8 @@ Component {
     id: kountdownDelegate
     Kirigami.AbstractCard {
         contentItem: Item {
+            // implicitWidth/Height define the natural width/height of an item if no width or height is specified
+            // The setting below defines a component's preferred size based on its content
             implicitWidth: delegateLayout.implicitWidth
             implicitHeight: delegateLayout.implicitHeight
             GridLayout {
@@ -78,7 +80,7 @@ Component {
                 Kirigami.Heading {
                     Layout.fillHeight: true
                     level: 1
-                    text: i18n("%1 days", Math.round((date.getTime()-nowDate.getTime())/86400000))
+                    text: date
                 }
 
                 ColumnLayout {
