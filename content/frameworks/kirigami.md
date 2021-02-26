@@ -46,7 +46,7 @@ layout: framework
 <section class="section-blue">
   <div class="container">
     <div class="laptop-with-overlay d-block my-3 mx-auto w-100" style="max-width: 1000px">
-      <img class="laptop img-fluid mt-3" src="https://kde.org/content/plasma-desktop/laptop.png" alt="">
+      <img class="laptop img-fluid mt-3" src="https://kde.org/reusable-assets/laptop.svg" alt="">
       <div class="laptop-overlay">
         <img class="img-fluid mt-3" src="kirigami-adapt.png" alt="Kirigami in a mobile and desktop form factor">
       </div>
