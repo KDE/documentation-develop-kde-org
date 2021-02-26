@@ -18,9 +18,7 @@ Instead, we'll be using an overlay sheet.
 
 ## Countdown-adding sheet
 
-{{< readfile file="/content/docs/kirigami/introduction-overlaysheets/main.qml" highlight="qml" >}}
-
-The new component we have added is `Kirigami.OverlaySheet`. Overlay sheets hover above the contents of the window and can be used for a variety of purposes, such as providing extra information relevant to the current content. They are sort of like fancy pop-up windows, except they can't be moved.
+The new component we add is `Kirigami.OverlaySheet`. Overlay sheets hover above the contents of the window and can be used for a variety of purposes, such as providing extra information relevant to the current content. They are sort of like fancy pop-up windows, except they can't be moved.
 
 ```qml
 Kirigami.OverlaySheet {
@@ -91,7 +89,7 @@ actions.main: Kirigami.Action {
 	id: addAction
 	icon.name: "list-add"
 	text: i18nc("@action:button", "Add kountdown")
-	onTriggered: loadedAddSheet.item.open()
+	onTriggered: addSheet.open()
 }
 ```
 

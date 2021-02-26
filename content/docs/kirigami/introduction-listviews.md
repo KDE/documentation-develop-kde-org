@@ -102,7 +102,7 @@ Component {
                     Layout.alignment: Qt.AlignRight
                     Layout.columnSpan: 2
                     text: i18n("Edit")
-                    onClicked: openPopulateEditSheet(name, description, date)
+                    // onClicked: to be done... soon!
                 }
             }
         }
