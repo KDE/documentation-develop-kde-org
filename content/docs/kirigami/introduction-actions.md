@@ -34,8 +34,8 @@ pageStack.initialPage: Kirigami.ScrollablePage {
 		icon.name: "list-add"
 		text: i18nc("@action:button", "Add kountdown")
 		onTriggered: kountdownModel.append({
-			name: "Kirigami Action added card!"
-			description: "Congratulations, your Kirigami Action works!"
+			name: "Kirigami Action added card!",
+			description: "Congratulations, your Kirigami Action works!",
 			date: 1000
 		})
 	}
