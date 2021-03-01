@@ -54,6 +54,7 @@ Kirigami.OverlaySheet {
 				kountdownModel.append({
 					name: nameField.text, 
 					description: descriptionField.text, 
+					//The parse() method parses a string and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
 					date: Date.parse(dateField.text)
 				});
 				nameField.text = ""
