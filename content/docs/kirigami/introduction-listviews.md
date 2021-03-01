@@ -80,7 +80,7 @@ Component {
                 Kirigami.Heading {
                     Layout.fillHeight: true
                     level: 1
-                    text: date
+                    text: (date < 100000) ? date : i18n("%1 days", Math.round((date-Date.now())/86400000))
                 }
 
                 ColumnLayout {
