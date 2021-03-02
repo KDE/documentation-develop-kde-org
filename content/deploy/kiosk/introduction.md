@@ -281,7 +281,7 @@ framework.
 As an example, a way of preventing users from changing their mouse
 settings would be to lock down that system settings module:
 
-Add the following to the global kde5rc file, in the heirachy listed
+Add the following to the global kde5rc file, in the hierarchy listed
 above.
 
 ```ini
