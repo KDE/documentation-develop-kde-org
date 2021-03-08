@@ -22,14 +22,14 @@ the list).
 How to Use
 ----------
 
--   Don\'t use on-demand controls as the only means to execute an
+-   Don't use on-demand controls as the only means to execute an
     action; they are only shortcuts.
--   Don\'t use more than five (ideally not more than three) actions in
+-   Don't use more than five (ideally not more than three) actions in
     on-demand controls. If you need more actions, choose a different
-    `command pattern <index>`.
+    [command pattern](..).
 -   Only use on-demand controls, if the actions are the same for each
     item.
--   Since the actions don\'t have a label, don\'t use the on-demand
+-   Since the actions don't have a label, don't use the on-demand
     pattern, if the actions are not clearly identifiable.
 
 {{< alert color="warning" title="Caution" >}}
