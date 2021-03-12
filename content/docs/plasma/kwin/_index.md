@@ -224,7 +224,7 @@ function manageKeepAbove(client, h, v) {
 In the end, our entire script looks like:
 
 ```js
-ar keepAboveMaximized = new Array();
+var keepAboveMaximized = new Array();
 
 function manageKeepAbove(client, h, v) {
   if (h && v) {
