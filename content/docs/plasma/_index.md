@@ -40,10 +40,10 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
 * **KWin Effect** applies an animation during window events (eg: minimize).
     * System/Default `/usr/share/kwin/effects/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/effects))
     * User Installed `~/.local/share/kwin/effects/` ([KDE Store Category](https://store.kde.org/browse/cat/209/order/latest/))
-* **KWin Script** manages windows using [KWin Scripting](https://techbase.kde.org/Development/Tutorials/KWin/Scripting) to [arrange windows in a grid](https://store.kde.org/p/1281790/), or [display all windows at a glance](https://store.kde.org/p/1370195/).
+* **KWin Script** manages windows using [KWin Scripting](kwin) to [arrange windows in a grid](https://store.kde.org/p/1281790/), or [display all windows at a glance](https://store.kde.org/p/1370195/).
     * System/Default `/usr/share/kwin/scripts/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/scripts))
     * User Installed `~/.local/share/kwin/scripts/` ([KDE Store Category](https://store.kde.org/browse/cat/210/order/latest/))
-    * API: [techbase.kde.org/Development/Tutorials/KWin/Scripting/API_4.9](https://techbase.kde.org/Development/Tutorials/KWin/Scripting/API_4.9)
+    * [API](kwin/api)
 * **Global Theme** (formerly called Look and Feel) can switch a panel layout, Icon Theme, Plasma Style, etc. It also contains the splash screen on login, and the lock screen.
     * System/Default `/usr/share/plasma/look-and-feel/` ([GitLab](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/lookandfeel))
     * User Installed `~/.local/share/plasma/look-and-feel/` ([KDE Store Category](https://store.kde.org/browse/cat/121/order/latest/))
