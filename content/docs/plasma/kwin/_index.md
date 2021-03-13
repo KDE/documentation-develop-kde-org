@@ -102,7 +102,7 @@ for (var i = 0; i < clients.length; i++) {
 The following example illustrates how to get informed about newly managed clients and prints out
 the window id of the new client:
 
-``js
+```js
 workspace.clientAdded.connect(function(client) {
   print(client.windowId);
 });
