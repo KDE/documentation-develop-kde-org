@@ -12,7 +12,7 @@ Inkscape, The GIMP, etc.). Depending on your prowess with such tools, a great
 looking Plasma theme can be created in under an hour.
 
 If you prefer video explaination, an alternative
-[video tutorial](https://www.youtube.com/watch?v=XrNWYt_vciA) is also available.
+[video tutorial](https://www.youtube.com/playlist?list=PLX3_anRd8Mp7ibLDlSEJHNzSBaTslFp-x) is also available.
 
 See also [Plasma Theme Details](../theme-details).
 
