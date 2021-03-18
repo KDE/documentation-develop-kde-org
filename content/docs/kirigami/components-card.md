@@ -1,19 +1,18 @@
 ---
 title: Cards
-weight: 102
+weight: 104
 group: "components"
 description: >
   A card serves as overview and an entry point for more detailed information and can offer direct access to the most important actions on an item.
 ---
 
+The Kirigami types [`Kirigami.AbstractCard`](docs:kirigami2;org::kde::kirigami::AbstractCard) and [`Kirigami.Card`](docs:kirigami2;org::kde::kirigami::Card) are used to implement the popular card component used on many mobile and web platforms. Cards can be used to display a collection of information or actions in an attractive and distinctive way.
 
-The Kirigami types [AbstractCard](docs:kirigami2;org::kde::kirigami::AbstractCard) and [Card](docs:kirigami2;org::kde::kirigami::Card) are used to implement the popular Card pattern used on many mobile and web platforms that is used to display a collection of information or actions.
-
-Besides the Card components, Kirigami offers also 3 kinds of views and positioners to help to present cards with beautiful and responsive layouts.
+Kirigami also offers 3 kinds of views and positioners to aid you in presenting your cards with beautiful and responsive layouts.
 
 ## AbstractCard
 
-An [AbstractCard](docs:kirigami2;org::kde::kirigami::Card) is the simplest form of card. It's just a rectangle with a shadow, which can contain any Item in it. It can also have items assigned to the Header or Footer properties. In this case a [Heading](docs:kirigami2;org::kde::kirigami::Heading) is its header and a [Label](docs:qtquickcontrols;QtQuick.Controls.Label) with WordWrap is the contentItem.
+A [`Kirigami.AbstractCard`](docs:kirigami2;Card) is the simplest type of card. It's just a rectangle with a shadow, which can contain any `Item` in it. It can also have items assigned to its `header` or `footer` properties. In this case a [`Kirigami.Heading`](docs:kirigami2;Heading) is its header and a [`Controls.Label`](docs:qtquickcontrols;QtQuick.Controls.Label) with `wrapMode` set to `Text.WordWrap` is the card's `contentItem`.
 
 {{< sections >}}
 {{< section-left >}}
@@ -40,7 +39,7 @@ Kirigami.AbstractCard {
 
 ## Card
 
-A [Card](docs:kirigami2;org::kde::kirigami::Card) inherits from [AbstractCard](docs:kirigami2;org::kde::kirigami::AbstractCard) and provides more features out of the box. A card has a header composed of a banner, a footer composed of [Actions](docs:kirigami2;org::kde::kirigami::Action) and the main content.
+A [`Kirigami.Card`](docs:kirigami2;Card) inherits from [`Kirigami.AbstractCard`](docs:kirigami2;AbstractCard) and provides more features out of the box. A card has a header composed of a `banner` and a footer composed of [`Kirigami.Action`](docs:kirigami2;Action) objects alongside its main content.
 
 {{< sections >}}
 {{< section-left >}}
@@ -79,11 +78,15 @@ Kirigami.Card {
 
 ## CardsLayout
 
-Use a [CardsLayout](docs:kirigami2;org::kde::kirigami::CardsLayout) when the cards are not instantiated by a model or by a model which has always very few items (In the case of a big model [CardsListView](docs:kirigami2;org::kde::kirigami::CardsListView) or [CardsGridView](docs:kirigami2;org::kde::kirigami::CardsGridView) should be used instead). They are presented as a grid of two columns which will remain centered if the application is really wide, or become a single column if there is not enough space for two columns, such as a mobile phone screen.
+A [`Kirigami.CardsLayout`](docs:kirigami2;CardsLayout) is most useful when the cards being presented are not instantiated by a model or by a model which always has very few items. They are presented as a grid of two columns which will remain centered if the application is really wide, or become a single column if there is not enough space for two columns, such as a mobile phone screen.
 
-A CardsLayout should always be contained within a ColumnLayout.
+{{< alert title="Note" color="info" >}}
+[`Kirigami.CardsListView`](docs:kirigami2;CardsListView) or [`Kirigami.CardsGridView`](docs:kirigami2;CardsGridView) are better suited for larger models.
+{{< /alert >}}
 
-A card can optionally be oriented horizontally. In this case it will be wider than tall, so is fit to be used in a ColumnLayout. If you need to put it in a CardsLayout, it will have a columnSpan of 2 by default.
+**A CardsLayout should always be contained within a ColumnLayout.**
+
+A card can optionally be oriented horizontally. In this case it will be wider than tall, and is better suited to being placed in a ColumnLayout. If you must put it in a CardsLayout, it will have a columnSpan of 2 by default.
 
 {{< sections >}}
 {{< section-left >}}
@@ -121,13 +124,11 @@ ColumnLayout {
 
 ## CardsListView
 
-A [CardsListView](docs:kirigami2;org::kde::kirigami::CardsListView) is a list view of [AbstractCard](docs:kirigami2;org::kde::kirigami::AbstractCard) subclasses with a custom layout inside is needed.
+A [`Kirigami.CardsListView`](docs:kirigami2;CardsListView) is a list view that can be used with [`Kirigami.AbstractCard`](docs:kirigami2;AbstractCard) components.
 
-CardsListView should be used only with cards which can look good at any horizontal size, so it is recommended to use directly AbstractCard with an appropriate layout inside, because they are stretching for the whole list width.
+A `Kirigami.CardsListView` will stretch child cards to its own width. This component should therefore only be used with cards which will look good at any horizontal size. Using a `Kirigami.CardsListView` the `Kirigami.Card` component is discouraged, unless it has `Qt.Horizontal` as its `headerOrientation` property.
 
-Therefore it's discouraged to use it with the Card type, unless it has `Horizontal` as `headerOrientation`.
-
-The choice between using this view with AbstractCard or a normal ListView with [AbstractListItem](docs:kirigami2;org::kde::kirigami::AbstractListItem)/[BasicListItem](docs:kirigami2;org::kde::kirigami::BasicListItem) is purely aesthetical.
+The choice between using this view with `Kirigami.AbstractCard` components or a conventional `ListView` with [`AbstractListItem`](docs:kirigami2;AbstractListItem)/[BasicListItem](docs:kirigami2;BasicListItem) components is purely an aesthetic one.
 
 {{< sections >}}
 {{< section-left >}}
@@ -180,13 +181,13 @@ Kirigami.CardsListView {
 
 ## CardsGridView
 
-Use a [CardsGridView](docs:kirigami2;org::kde::kirigami::CardsGridView) for displaying cards in a grid.
+Use a [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::CardsGridView) to display cards in a grid.
 
-The behavior is the same as a CardsLayout, and it allows cards to be put in one or two columns depending on the available width.
+Its behavior is the same as a `Kirigami.CardsLayout`, and it allows cards to be put in one or two columns depending on the available width.
 
-CardsGridView has the limitation that every Card must have the same exact height, so `cellHeight` must be manually set to a value for which the content fits for every item.
+CardsGridView has the limitation that every card must have the same exact height, so `cellHeight` must be manually set to a value for which the content must fit for every child card.
 
-If possible use CardsGridView only when you need to instantiate many cards. If you only instantiate a few cards, use CardsLayout with a Repeater instead.
+If possible use `Kirigami.CardsGridView` only when you need to instantiate many cards. If you are only going to instantiate a few cards, opt for a `Kirigami.CardsLayout` with a `Repeater` instead.
 
 {{< sections >}}
 {{< section-left >}}

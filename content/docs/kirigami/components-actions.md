@@ -7,10 +7,10 @@ description: >
 ---
 ## Actions
 
-A Kirigami Action encapsulates a user interface action. We can use these to provide our applications with easy-to-reach actions that are essential to its functionality.
+A Kirigami Action encapsulates a user interface action. We can use these to provide our applications with easy-to-reach actions that are essential to their functionality.
 
 {{< alert title="Note" color="info" >}}
-It inherits from [Qt Quick Controls 2 Action](docs:qtquickcontrols;QtQuick.Controls.Action) and
+Kirigami actions inherit from [Qt Quick Controls 2 Action](docs:qtquickcontrols;QtQuick.Controls.Action) and
 can be assigned shortcuts. 
 {{< /alert >}}
 
@@ -28,6 +28,12 @@ Kirigami.Action {
     onTriggered: { ... }
 }
 ```
+
+{{< alert title="Note" color="info" >}}
+
+The `icon.name` property takes names for system-wide icons per the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application, or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
+
+{{< /alert >}}
 
 One feature offered by Kirigami Actions on top of QtQuick Actions is the possibility
 to nest actions.
@@ -70,12 +76,11 @@ Kirigami.Action {
 }
 ```
 
-## Using actions
+## Using actions in other components
 
 ### Page
 
-In the [previous tutorial](../introduction-pages), we learned about pages, and one of
-the features of pages is that Actions can be added to them.
+One of the features of pages is that Actions can be added to them.
 
 You can add a main action, a left and right action and additional context actions
 that are displayed on the toolbar if there is enough place or in a hamburger menu
@@ -180,6 +185,8 @@ Kirigami.ApplicationWindow {
 {{< figure class="text-center" caption="Global Drawers actions on a mobile device" src="mobile_global_drawers.png" >}}
 {{< /compare >}}
 
+You can read more about Global Drawers in the [documentation page for drawers](../components-drawers/).
+
 ### ActionTextFields
 
 A [Kirigami ActionTextField](docs:kirigami2;ActionTextField) is used to add some contextual
@@ -277,6 +284,8 @@ Kirigami.ActionToolBar {
 
 ![](action_tool_bar.png)
 
+You can read more about ActionToolBar components in their [dedicated documentation page](../components-actiontoolbar/).
+
 ### Cards
 
-The cards components can also take an action. For more information consult the component page for Cards.
+The cards components can also take an action. For more information consult the [component page for Cards](../components-card/).

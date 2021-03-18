@@ -1,14 +1,14 @@
 ---
 title: Next steps
 group: introduction
-weight: 6
+weight: 7
 description: >
   What to do after finishing your first simple Kirigami application
 ---
 
 ## What we have built
 
-Over the past few tutorials we have built a basic but functional Kirigami application that lets you add, edit, and delete date countdowns. In doing so we have learned about Kirigami and QtQuick components, some of QML's systems, basic application layouts, and more. Not bad at all! 
+Over the past few tutorials you have built a basic but functional Kirigami application that lets you add, edit, and delete date countdowns. In doing so we have learned about Kirigami and QtQuick components, some of QML's systems, basic application layouts, and more. Not bad at all! 
 
 You now have a grasp of the basics that make up many of KDE's most popular applications. You might be asking yourself: what now? 
 
@@ -89,6 +89,12 @@ The Qt project is extensive, and so are QML and QtQuick. There is a lot of funct
 
 - If you want to look up what specific components do, look no further than [Qt's official QML documentation.](https://doc.qt.io/qt-5/qtquick-index.html)
 - If you are looking for a more guided approach to learning, [the QMLBook](https://qmlbook.github.io/) is a great place to start.
+
+### More Kirigami
+
+This documentation includes a lot more about Kirigami. You can poke through some of the Components pages to find out more about some of the QML components that Kirigami provides for you to use.
+
+We recommend you also take a look at Kirigami Gallery (`kirigami2gallery`), an application designed by KDE developers to demonstrate kirigami's tools and capabilities. It provides both interactive examples of Kirigami components and easy links to the source code of these examples so you can see how they were built.
 
 # The sky is the limit!
 

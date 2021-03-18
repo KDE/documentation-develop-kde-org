@@ -1,9 +1,9 @@
 ---
 title: "Getting Started with KDE Frameworks"
 linkTitle: "Getting Started"
-weight: 1
+weight: 2
 description: >
-  Discover KDE Frameworks and start building your first application
+  Discover KDE Frameworks and start building your first classic KDE desktop application.
 group: "getting-started"
 ---
 
