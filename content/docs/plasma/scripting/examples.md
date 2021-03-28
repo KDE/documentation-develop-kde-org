@@ -102,9 +102,13 @@ function logWidget(widget) {
     }
 }
 
-//------
+//--- Log all widgets
+// forEachWidget(function(widget){
+//     logWidget(widget);
+// });
 
-forEachWidget(function(widget){
+//--- Log only digitalclock widgets
+forEachWidgetByType("org.kde.plasma.digitalclock", function(widget){
     logWidget(widget);
 });
 ```
@@ -149,44 +153,45 @@ function forEachWidget(callback) { ... }
 function forEachWidgetByType(type, callback) { ... }
 
 function widgetSetProperty(args) {
-    if (!(args.widgetType && args.configKey)) {
+    if (!(args.widgetType && args.configGroup && args.configKey)) {
         return;
     }
 
-    forEachWidgetByType(args.widgetType, function(widget){        
-        var configGroups = widget.configGroups.slice(); // slice is used to clone the array
-        for (var groupIndex = 0; groupIndex < configGroups.length; groupIndex++) {
-            var configGroup = configGroups[groupIndex];
+    forEachWidgetByType(args.widgetType, function(widget){
+        widget.currentConfigGroup = [args.configGroup];
 
-            widget.currentConfigGroup = [configGroup];
+        //--- Delete when done debugging
+        var oldValue = widget.readConfig(args.configKey);
+        print("" + widget.type + " (id: " + widget.id + "):");
+        print("\t[" + args.configGroup + "] " + args.configKey + ": " + oldValue + " => " + args.configValue);
+        //--- End Debug
 
-            if (args.configGroup && args.configGroup != configGroup) {
-                continue;
-            }
-
-            for (var keyIndex = 0; keyIndex < widget.configKeys.length; keyIndex++) {
-                var configKey = widget.configKeys[keyIndex];
-                if (args.configKey != configKey) {
-                    continue;
-                }
-
-                // Delete when done debugging
-                var configValue = widget.readConfig(configKey);
-                var valueType = typeof configValue;
-                print("" + widget.type + " (id: " + widget.id + "):");
-                print("\t[" + configGroup + "] " + configKey + ": " + configValue + " (" + valueType + ") => " + args.configValue);
-                // End debugging
-
-                widget.writeConfig(configKey, args.configValue);
-            }
-        }
+        widget.writeConfig(args.configKey, args.configValue);
     });
 }
 
 widgetSetProperty({
-    widgetType: "org.kde.plasma.taskmanager",
-    configGroup: "", // Optional, will search all groups for configKey if empty.
-    configKey: "separateLaunchers",
-    configValue: "false",
+    widgetType: "org.kde.plasma.digitalclock",
+    configGroup: "Appearance",
+    configKey: "showDate",
+    configValue: "true",
 });
+```
+
+## Panel Creation / Manipulation
+
+The items in Plasma's "New Panel" submenu will run a Plasma Script. They can be found at:
+
+* `/usr/share/plasma/layout-templates/`
+* `/usr/share/plasma/layout-templates/org.kde.plasma.desktop.defaultPanel/contents/layout.js`
+
+Here's `org.kde.plasma.desktop.appmenubar/contents/layout.js` as a simple example.
+
+```js
+var panel = new Panel
+panel.location = "top";
+panel.height = Math.round(gridUnit * 1.5);
+
+panel.addWidget("org.kde.plasma.appmenu");
+
 ```
