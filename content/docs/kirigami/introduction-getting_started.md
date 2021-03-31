@@ -67,8 +67,7 @@ The final line, `add_subdirectory(src)`, points CMake into the 'src' directory, 
 
 This one's a lot shorter! Let's go through what it does:
 
-- `set` is used to set `helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to create additional C++ files we'll need to add them here too)
-- `add_executable` takes care of naming our executable and grabbing the files needed to create it
+- `add_executable` creates an executable from the given source files.
 - `target_link_libraries` links the libraries used in our code to our executable. 
 
 {{< alert title="Note" color="info" >}}
