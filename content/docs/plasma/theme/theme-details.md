@@ -16,21 +16,30 @@ See also [Creating a Plasma Theme](../quickstart).
 
 ## Theme Location, Structure and Definition
 
-Themes are stored in respective subfolders of `share/plasma/desktoptheme`.
+Themes are stored in:
+
+* **System/Default:** `/usr/share/plasma/desktoptheme/`
+* **User Installed:** `~/.local/share/plasma/desktoptheme/` ([KDE Store Category](https://store.kde.org/browse/cat/104/order/latest/))
+
+Each theme is stored in an own sub-folder by the name of the theme.  
+Eg: `~/.local/share/plasma/desktoptheme/electrostorm/`
+
 A theme is described by a `metadata.desktop` file in the top-level directory of
 such a subfolder.
 
 Beneath this directory one will find the following file structure:
 
-* **colors:** optional a configuration file defining a color scheme that blends
-well with the images.
-* **dialogs/:** images for dialogs.
-* **widgets/:** images for widgets.
-* **opaque/:** optional directory containing images appropriate for non-compositing
-environments.
-* **translucent/:** optional directory containing images appropriate for when
+* **`dialogs/`**: images for dialogs.
+* **`icons/`**: optional directory images for icons.
+* **`widgets/`:** images for widgets.
+* **`opaque/`:** optional directory containing images appropriate for non-compositing environments.
+* **`translucent/`:** optional directory containing images appropriate for when
 background contrast and blur effect is supported.
-* **wallpapers/:** wallpaper image packages.
+* **`wallpapers/`:** wallpaper image packages.
+* **`colors`**: optional a configuration file defining a color scheme that blends
+* **`metadata.desktop`**: theme name, version, and properties
+
+All `.svg` images are optional. If a theme is missing an svg file, it will fallback to the default Breeze theme.
 
 ## Theme Metadata
 
@@ -52,6 +61,8 @@ X-Plasma-API=5.0
 
 The `X-KDE-PluginInfo-Name` entry should match the name of the sub-folder
 in `share/plasma/desktoptheme` where the SVG files for this theme exist.
+
+Eg: `~/.local/share/plasma/desktoptheme/electrostorm/metadata.desktop`
 
 If the theme should inherit from another theme than the "default" one, this
 can be defined by a section like this (where the folder name resp. the
@@ -253,9 +264,15 @@ In the Plasma-framework source repository, two useful tools are present:
 
 ##  Current Theme Elements
 
-Themes get installed to `share/plasma/desktoptheme`. Each theme is stored in an own sub-folder by the name of the theme with the following file structure (all files can be in either `.svg` or `.svgz` format):
+Themes get installed to:
 
-Each theme is stored in an own sub-folder by the name of the theme with the following file structure (all files can be in either .svg or .svgz format).
+* **System/Default:** `/usr/share/plasma/desktoptheme/`
+* **User Installed:** `~/.local/share/plasma/desktoptheme/` ([KDE Store Category](https://store.kde.org/browse/cat/104/order/latest/))
+
+Each theme is stored in an own sub-folder by the name of the theme.  
+Eg: `~/.local/share/plasma/desktoptheme/electrostorm/`
+
+Each theme contains following file structure. All files can be in either `.svg` or `.svgz` format.
 
 * **/dialogs**: elements for dialogs
   * **/background.svg**: generic dialog background used by the screensaver password dialog, etc. See the section on backgrounds above for information on the required elements in this file.
