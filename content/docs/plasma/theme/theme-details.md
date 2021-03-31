@@ -255,13 +255,13 @@ In the Plasma-framework source repository, two useful tools are present:
 
 Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored in an own sub-folder by the name of the theme with the following file structure (all files can be in either .svg or .svgz format):
 
-* /dialogs**: elements for dialogs
+* **/dialogs**: elements for dialogs
   * **/background.svg**: generic dialog background used by the screensaver password dialog, etc. See the section on backgrounds above for information on the required elements in this file.
     * *hint-left-shadow*: optional hints that say how big the shadow is
     * *hint-top-shadow*
     * *hint-right-shadow*
     * *hint-bottom-shadow*
-* /widgets**: generic desktop widget background
+* **/widgets**: generic desktop widget background
   * **/action-overlays.svg**: overlays for icons to indicate actions
     * *add-normal*: icon used to add the parent icon to a selection of elements (used for instance in folderview), normal state, there are also *add-hover* and *add-pressed*
     * *remove-normal*: icon used to remove the parent icon to a selection of elements, normal state, there are also *remove-hover* and *remove-pressed*
@@ -411,11 +411,11 @@ Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored
     * All the frames can be prefixed with "north-", "west-", "south-" or "east-" if the taskbar should have a different look at the 4 sides of the screen
     * The svg should contain elements of all five prefixes, if a prefix is missing that element will be not be drawn.
     * *panel-north*, *panel-south*, *panel-west*, *panel-east* : elements for the panel toolbox.
+  * **/toolbar.svg**: used in the ToolBar QML component, can be used in custom applications in a similar way, contains a single frame without prefix.
   * **/tooltip.svg**: background for tooltips used for instance in the taskbar and with icons. See the section on backgrounds above for information on the required elements in this file.
   * **/translucentbackground.svg**: a standard background image for plasmoids that for their nature are bigger and with not much text. In this case a translucent background looks better. It needs the same elements of background.svg in it. If this file is not present, the plasmoids that uses this will use background.svg instead.
   * **/media-delegate.svg**: intended to be used as delegate for media types: it contains a single prefix: picture.
   * **/viewitem.svg**: controls the background look of selections (results in KRunner, networks in network applet), it can have 4 elements of 9 parts each with prefix *normal*, *hover*, *selected*, *selected+hover*.
-  * **/toolbar.svg**: used in the ToolBar QML component, can be used in custom applications in a similar way, contains a single frame without prefix.
 
 ## "Opaque" folder
 
