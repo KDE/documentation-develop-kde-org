@@ -31,7 +31,7 @@ and as such, you can add a number of extra elements to them. The Qt docs are ano
 
 Let's go back to the `main.qml` file we created in our previous tutorial:
 
-{{< readfile file="/content/docs/kirigami/getting_started/src/contents/ui/main.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/kirigami/introduction-getting_started/src/contents/ui/main.qml" highlight="qml" >}}
 
 We make our application start to our `Kirigami.Page`. All we have included in it is a label containing 'Hello World', but we're going to spruce things up a little.
 

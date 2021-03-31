@@ -55,7 +55,7 @@ This is KDE convention, but not all KDE projects use this structure. You are fre
 
 `CMakeLists.txt` files are needed to use KDE's build system of choice, [CMake](https://cmake.org/). The CMakeLists.txt file in our top-level folder is going to specify some of our application's characteristics. It also includes some of the dependencies we need to compile it.
 
-{{< readfile file="/content/docs/kirigami/getting_started/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" >}}
 
 The CMakeLists.txt defines how to build your projects. Most of the content here is just to bootstrap your project. You can read a line-by-line, in-depth explanation of what this CMakeLists file does [here](https://develop.kde.org/docs/kirigami/understanding-cmakelists/). 
 
@@ -63,7 +63,7 @@ The most important thing to keep in mind is that the Qt and KDE Frameworks depen
 
 The final line, `add_subdirectory(src)`, points CMake into the 'src' directory, where our source code is located. Let's delve into the CMakeLists.txt file in there.
 
-{{< readfile file="/content/docs/kirigami/getting_started/src/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/kirigami/introduction-getting_started/src/CMakeLists.txt" highlight="cmake" >}}
 
 This one's a lot shorter! Let's go through what it does:
 
@@ -79,7 +79,7 @@ Now that CMake has been taken care of, let's look at the files we are going to s
 ### resources.qrc
 `resources.qrc` contains the list of all QML files as well as other files (like custom icons) that will be included in the binary.
 
-{{< readfile file="/content/docs/kirigami/getting_started/src/resources.qrc" highlight="xml" >}}
+{{< readfile file="/content/docs/kirigami/introduction-getting_started/src/resources.qrc" highlight="xml" >}}
 
 Notice the line `<file alias="main.qml">contents/ui/main.qml</file>`. It details which QML files are going to be included in the compilation process. In our case we are only using `main.qml`, but if we were to add more QML files to our code, we'd need to make sure we include it in `resources.qrc` file by adding another line like this one.
 
@@ -91,13 +91,13 @@ You can read more about the specifics of how the Qt resource system works [in Qt
 
 `main.cpp` is also the entrypoint to our application. The two parts of our project, the backend and the user interface, are both set up and started here. 
 
-{{< readfile file="/content/docs/kirigami/getting_started/src/main.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/kirigami/introduction-getting_started/src/main.cpp" highlight="cpp" >}}
 
 For now, we don't need to go into too much detail regarding what our `main.cpp` code does, but its role will grow significantly more important once we decide to add more complex functionality to our application in the future. If you want to get ahead, you can read more about how this `main.cpp` works [in this page](/content/docs/kirigami/maincpp/).
 
 ### main.qml
 
-{{< readfile file="/content/docs/kirigami/getting_started/src/contents/ui/main.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/kirigami/introduction-getting_started/src/contents/ui/main.qml" highlight="qml" >}}
 
 We finally reach our QML file, where we will be handling our application's frontend.
 

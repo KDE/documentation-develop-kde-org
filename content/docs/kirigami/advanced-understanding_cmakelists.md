@@ -15,7 +15,7 @@ CMake is useful because it allows us to automate much of the stuff that needs to
 
 You might remember this CMakeLists file from the first tutorial:
 
-{{< readfile file="/content/docs/kirigami/getting_started/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" >}}
 
 The first line, `project(helloworld)` defines the name of the project.
 
@@ -38,7 +38,7 @@ Pay close attention to your included components, as omitting ones used in our co
 
 The final line, `add_subdirectory(src)`, points CMake into the 'src' directory.
 
-{{< readfile file="/content/docs/kirigami/getting_started/src/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/kirigami/introduction-getting_started/src/CMakeLists.txt" highlight="cmake" >}}
 
 Since most of the heavy lifting is done by the first file, this one is a lot shorter.
 

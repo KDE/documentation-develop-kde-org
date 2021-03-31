@@ -166,7 +166,6 @@ maintainable way to assign a custom hardcoded palette to an item and all its
 children, that will allow to define such custom colors in one place and one 
 only:
 
-{{< readfile file="/content/docs/kirigami/colors/CustomColors.qml" highlight="qml" >}}
-
+{{< readfile file="/content/docs/kirigami/style-colors/CustomColors.qml" highlight="qml" >}}
 
 ![Screenshot showing the code above with qmlscene, we can see two rectangles with two different colors](customcolors.png)
