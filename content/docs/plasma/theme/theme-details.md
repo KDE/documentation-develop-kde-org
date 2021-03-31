@@ -17,7 +17,7 @@ See also [Creating a Plasma Theme](../quickstart).
 ## Theme Location, Structure and Definition
 
 Themes are stored in respective subfolders of `share/plasma/desktoptheme`.
-A theme is described by a metadata.desktop file in the top-level directory of
+A theme is described by a `metadata.desktop` file in the top-level directory of
 such a subfolder.
 
 Beneath this directory one will find the following file structure:
@@ -50,7 +50,7 @@ X-KDE-PluginInfo-License=GPL
 X-Plasma-API=5.0
 ```
 
-The **X-KDE-PluginInfo-Name** entry should match the name of the sub-folder
+The `X-KDE-PluginInfo-Name` entry should match the name of the sub-folder
 in `share/plasma/desktoptheme` where the SVG files for this theme exist.
 
 If the theme should inherit from another theme than the "default" one, this
@@ -63,7 +63,7 @@ FallbackTheme=oxygen
 ```
 
 If you do changes to SVG files in your theme, make sure to **update the version
-number X-KDE-PluginInfo-Version** so Plasma can properly refresh its cache.
+number in `X-KDE-PluginInfo-Version`** so Plasma can properly refresh its cache.
 
 If your theme is not fully opaque, to improve readability of text or other
 elements, there are two options to ask the window manager to apply some effect
@@ -93,7 +93,7 @@ enabled=false
 
 Theme elements are accessed by path. Whether this maps to literal paths on disk
 or not is not guaranteed and considered an implementation detail of
-[Plasma::Theme](docs:plasma;Plasma::Theme).
+[`Plasma::Theme`](docs:plasma;Plasma::Theme).
 
 Therefore, to access the dialog background, one might create an SVG in this
 manner:
@@ -103,9 +103,9 @@ Plasma::Theme theme;
 QSvgRenderer svg(theme.image("dialogs/background"));
 ```
 
-It is **generally recommended** to use [Plasma::Svg](docs:plasma;Plasma::Svg) instead
-of QSvgRenderer directly, however. This is because Plasma::Svg uses caching where it
-can. Remember to call resize() on the Plasma::Svg before painting with it!
+It is **generally recommended** to use [`Plasma::Svg`](docs:plasma;Plasma::Svg) instead
+of `QSvgRenderer` directly, however. This is because `Plasma::Svg` uses caching where it
+can. Remember to call `resize()` on the `Plasma::Svg` before painting with it!
 
 ```cpp
 Plasma::Svg svg("dialogs/background");
@@ -115,7 +115,7 @@ svg.resize(size());
 ## Wallpaper Access
 
 Themes may optionally provide wallpaper image packages to be used with the theme.
-These wallpaper image packages must appear in the wallpapers/ directory within the theme.
+These wallpaper image packages must appear in the `wallpapers/` directory within the theme.
 
 A theme may also define a default wallpaper image, image size and image file extension
 to be used in conjunction with the theme. It will then be automatically used as wallpaper
@@ -135,9 +135,9 @@ defaultHeight=<height in pixels of default wallpaper file>
 
 ##  Reaction to Theme Changes
 
-If you use Plasma::Svg, changes to the theme are automatically picked up.
-Otherwise, you can connect to the ``changed()`` signal in the
-Plasma::Theme class. This signal is emitted whenever the theme is changed,
+If you use `Plasma::Svg`, changes to the theme are automatically picked up.
+Otherwise, you can connect to the `changed()` signal in the
+`Plasma::Theme` class. This signal is emitted whenever the theme is changed,
 which may be triggered by the user switching the theme used or system changes
 such as a composite manager becoming available.
 
@@ -160,13 +160,13 @@ The most common use of the colors file is to ensure that text is readable on var
 Here is a list of color entries in the colors file that are currently actively used in a Plasma theme:
 
 * **[Colors:Window]**
-  * **ForegroundNormal** the text color applied to text on the standard background elements; maps to Theme::TextColor
-  * **DecorationHover** the color used for text highlighting; maps to Theme::HighlightColor
-  * **BackgroundNormal** the default background color, for items that paint a background themselves, allowing them to blend in with the theme; maps to Theme::BackgroundColor
+  * **ForegroundNormal** the text color applied to text on the standard background elements; maps to `Theme::TextColor`
+  * **DecorationHover** the color used for text highlighting; maps to `Theme::HighlightColor`
+  * **BackgroundNormal** the default background color, for items that paint a background themselves, allowing them to blend in with the theme; maps to `Theme::BackgroundColor`
 * **[Colors:Button]**
-  * **ForegroundNormal** the text color to use on push buttons; maps to Theme::ButtonTextColor
-  * **BackgroundNormal** used for hinting buttons; maps to Theme::ButtonBackgroundColor
-  * **ForegroundActive** color used to tint BackgroundNormal for final button hinting color
+  * **ForegroundNormal** the text color to use on push buttons; maps to `Theme::ButtonTextColor`
+  * **BackgroundNormal** used for hinting buttons; maps to `Theme::ButtonBackgroundColor`
+  * **ForegroundActive** color used to tint `BackgroundNormal` for final button hinting color
 * **[Colors:View]**
   * **ForegroundLink** clickable text link font color
   * **ForegroundVisited** visited clickable text link font color
@@ -183,7 +183,7 @@ Currently also used by individual widgets, which should give a good idea of addi
 * **[Colors:Complementary]**
 Same roles as Colors:Window, those are used in areas such as the logout screen, the screen locker etc, in order for them to have independent colors compared to normal plasmoids.
 
-Note that some of these may end up folded back into Plasma::Theme properly at some point.
+Note that some of these may end up folded back into `Plasma::Theme` properly at some point.
 
 ##  Backgrounds format
 
@@ -221,7 +221,7 @@ Next there can be optionally another element called **overlay** (or **[prefix]-o
 ### Inkscape extension
 An Inkscape extension exists to automatically rename SVG elements with the above naming spec.
 * download the two files at https://websvn.kde.org/trunk/playground/artwork/Oxygen/notmart/inkscapeextensions/
-* copy them to $HOME/.config/inkscape/extensions
+* copy them to `$HOME/.config/inkscape/extensions`
 * restart inkscape
 * select the 9 items of a frame (or the 4 items of an hint) and go to Extension->Plasma menu entry.
 * put the optional prefix in the dialog
@@ -253,7 +253,9 @@ In the Plasma-framework source repository, two useful tools are present:
 
 ##  Current Theme Elements
 
-Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored in an own sub-folder by the name of the theme with the following file structure (all files can be in either .svg or .svgz format):
+Themes get installed to `share/plasma/desktoptheme`. Each theme is stored in an own sub-folder by the name of the theme with the following file structure (all files can be in either `.svg` or `.svgz` format):
+
+Each theme is stored in an own sub-folder by the name of the theme with the following file structure (all files can be in either .svg or .svgz format).
 
 * **/dialogs**: elements for dialogs
   * **/background.svg**: generic dialog background used by the screensaver password dialog, etc. See the section on backgrounds above for information on the required elements in this file.
@@ -419,7 +421,7 @@ Themes get installed to {{path|share/plasma/desktoptheme}}. Each theme is stored
 
 ## "Opaque" folder
 
-In the special subfolder {{path|opaque/}} the same hierarchy can be found again: when compositing is disabled files in this folder are preferred over the corresponding ones listed above. Only background for top level windows are appropriate to go in this folder.
+In the special subfolder `opaque/` the same hierarchy can be found again: when compositing is disabled files in this folder are preferred over the corresponding ones listed above. Only background for top level windows are appropriate to go in this folder.
 
 Since top-level windows will be shaped according to the transparency of the SVG and window shapes don't support alpha-blending, if the SVG has rounded borders they should have a shape that don't require anti-aliasing, like the following example.
 
@@ -427,11 +429,11 @@ Since top-level windows will be shaped according to the transparency of the SVG 
 
 ## "translucent" folder
 
-In the special folder {{path|translucent/}} the same hierarchy is used as well: when the KWin *Background Contrast* effect is enabled the file under this folder will be used if found. As the opaque folder, only elements that will be rendered as window backgrounds should be present in this folder, so the dialogs folder, plus the panel and tooltip backgrounds. When is possible to blur the background of the window, the graphics can be more transparent, keeping the window text readable.
+In the special folder `translucent/` the same hierarchy is used as well: when the KWin *Background Contrast* effect is enabled the file under this folder will be used if found. As the opaque folder, only elements that will be rendered as window backgrounds should be present in this folder, so the dialogs folder, plus the panel and tooltip backgrounds. When is possible to blur the background of the window, the graphics can be more transparent, keeping the window text readable.
 
 ## "icons" folder
 
-In the folder {{path|icons/}}, SVG files that contain scalable icons for use with application status items (e.g. icons in the system tray) are contained.
+In the folder `icons/`, SVG files that contain scalable icons for use with application status items (e.g. icons in the system tray) are contained.
 
 Some of the common icons:
 
@@ -452,7 +454,7 @@ The files are named the same as the icon theme name or their prefix, e.g. "audio
 
 ##  Theming Application Icons in the System Tray
 
-Applications that use a function called setIconByName can have their icon in the system tray themed. Applications can have more than one icon (for example Konversation flashes between two different icons to highlight when your username is mentioned and Kpackagekit changes it's icon depending on the status of it's upgrade / installs). Theming these icons requires firstly that an application has been coded to use setIconByName, and secondly that you call your SVG object by the same name (use Ctrl+Shift-O in Inkscape). Then you can just put your .svg in {{path|share/plasma/desktoptheme/[themename]/icons}}.
+Applications that use a function called `setIconByName` can have their icon in the system tray themed. Applications can have more than one icon (for example Konversation flashes between two different icons to highlight when your username is mentioned and Kpackagekit changes it's icon depending on the status of it's upgrade / installs). Theming these icons requires firstly that an application has been coded to use `setIconByName`, and secondly that you call your SVG object by the same name (use `Ctrl+Shift-O` in Inkscape). Then you can just put your .svg in `share/plasma/desktoptheme/[themename]/icons`.
 
 The following is an attempt to list known icon names that may be themed by this method. Please add any other known icon names and the object ID here to help other people making themes:
 
