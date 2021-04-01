@@ -21,7 +21,7 @@ See also [Plasma Theme Details](../theme-details).
 1. Copy and rename an existing Plasma theme folder. The new folder name should
 be the name of the theme. Installed themes are stored in `share/plasma/desktoptheme/`
 in either your user's `.local` directory or your Plasma installation directory.
-You can also find Plasma themes on store.kde.org. Edit the `metadata.desktop` file
+You can also find [Plasma Themes on the KDE Store](https://store.kde.org/browse/cat/104/order/latest/). Edit the `metadata.desktop` file
 in the theme folder to match your theme name. See [Theme Storage](../theme-details#theme-storage)
 if you need help.
 
