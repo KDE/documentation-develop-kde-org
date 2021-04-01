@@ -85,7 +85,7 @@ scss: "scss/framework.scss"
         <b>ThreadWeaver</b> offers a high-level API to manage threads using job- and queue-based interfaces. It allows easy scheduling of thread execution by specifying dependencies between the threads and executing them satisfying these dependencies, greatly simplifying the use of multiple threads.
       </p>
       <p>
-        <b>Breeze Icons</b>. KDE Frameworks includes two icon themes for your applications.  Breeze icons is a modern, recogniseable theme which fits in with all form factors.
+        <b>Breeze Icons</b>. KDE Frameworks includes two icon themes for your applications.  Breeze icons is a modern, recognisable theme which fits in with all form factors.
       </p>
       <p>
         <b>KConfig</b> is a Framework to deal with storing and retrieving configuration settings. It features a group-oriented API. It works with INI files and XDG-compliant cascading directories. It generates code based on XML files.
