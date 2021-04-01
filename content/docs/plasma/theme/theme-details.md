@@ -196,9 +196,9 @@ Same roles as Colors:Window, those are used in areas such as the logout screen, 
 
 Note that some of these may end up folded back into `Plasma::Theme` properly at some point.
 
-##  Backgrounds format
+##  Background SVG format
 
-All background SVG's (except for wallpaper images) must have the following named elements, all of which will be painted at the *native* size (and can therefore be bitmaps), except for the center which will be scaled:
+All background SVGs (except for wallpaper images) must have the following named elements, all of which will be painted at the *native* size (and can therefore be bitmaps), except for the center which will be scaled:
 
 * **topleft**: the top left corner
 * **topright**: the top right corner

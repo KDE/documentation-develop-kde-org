@@ -22,7 +22,7 @@ See also [Plasma Theme Details](../theme-details).
 be the name of the theme. Installed themes are stored in `share/plasma/desktoptheme/`
 in either your user's `.local` directory or your Plasma installation directory.
 You can also find [Plasma Themes on the KDE Store](https://store.kde.org/browse/cat/104/order/latest/). Edit the `metadata.desktop` file
-in the theme folder to match your theme name. See [Theme Storage](../theme-details#theme-storage)
+in the theme folder to match your theme name. See [Theme Details](../theme-details)
 if you need help.
 
 2. Open the SVG file associated with the Plasma element you would like to theme
@@ -53,7 +53,7 @@ object and choosing Object Properties.
 
 6. Add or remove any hint element you desire. It doesn't matter how these look,
 just that objects with the element ids matching the hint elements either exist or
-don't exist. See [Backgrounds format][../theme-details#background-format) for a
+don't exist. See [Backgrounds format](../theme-details#background-svg-format) for a
 description of available hint elements.
 
 7. Save the SVG file.
