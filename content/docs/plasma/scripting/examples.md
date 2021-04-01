@@ -161,7 +161,7 @@ function widgetSetProperty(args) {
         widget.currentConfigGroup = [args.configGroup];
 
         //--- Delete when done debugging
-        var oldValue = widget.readConfig(args.configKey);
+        const oldValue = widget.readConfig(args.configKey);
         print("" + widget.type + " (id: " + widget.id + "):");
         print("\t[" + args.configGroup + "] " + args.configKey + ": " + oldValue + " => " + args.configValue);
         //--- End Debug
@@ -188,7 +188,7 @@ The items in Plasma's "New Panel" submenu will run a Plasma Script. They can be 
 Here's `org.kde.plasma.desktop.appmenubar/contents/layout.js` as a simple example.
 
 ```js
-var panel = new Panel
+const panel = new Panel
 panel.location = "top";
 panel.height = Math.round(gridUnit * 1.5);
 
