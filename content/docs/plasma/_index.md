@@ -38,10 +38,10 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
     * User Installed `~/.local/share/aurorae/themes/` ([KDE Store Category](https://store.kde.org/browse/cat/114/order/latest/))
     * Tutorial: [techbase.kde.org/User:Mgraesslin/Aurorae](https://techbase.kde.org/User:Mgraesslin/Aurorae)
 * **KWin Effect** applies an animation during window events (eg: minimize).
-    * System/Default `/usr/share/kwin/effects/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/effects))
+    * System/Default `/usr/share/kwin/effects/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/src/effects))
     * User Installed `~/.local/share/kwin/effects/` ([KDE Store Category](https://store.kde.org/browse/cat/209/order/latest/))
 * **KWin Script** manages windows using [KWin Scripting](kwin) to [arrange windows in a grid](https://store.kde.org/p/1281790/), or [display all windows at a glance](https://store.kde.org/p/1370195/).
-    * System/Default `/usr/share/kwin/scripts/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/scripts))
+    * System/Default `/usr/share/kwin/scripts/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/src/scripts))
     * User Installed `~/.local/share/kwin/scripts/` ([KDE Store Category](https://store.kde.org/browse/cat/210/order/latest/))
     * [API](kwin/api)
 * **Global Theme** (formerly called Look and Feel) can switch a panel layout, Icon Theme, Plasma Style, etc. It also contains the splash screen on login, and the lock screen.
