@@ -25,6 +25,27 @@ You can also find [Plasma Themes on the KDE Store](https://store.kde.org/browse/
 in the theme folder to match your theme name. See [Theme Details](../theme-details)
 if you need help.
 
+```bash
+# Create theme directory in home if it doesn't exist
+mkdir -p ~/.local/share/plasma/desktoptheme
+# Copy default theme to home directory so we can modify it
+cp -r /usr/share/plasma/desktoptheme/default ~/.local/share/plasma/desktoptheme/
+# Rename theme
+cd ~/.local/share/plasma/desktoptheme
+mv ./default ./mytheme
+# Edit metadata.desktop with new name
+cd ./mytheme
+kwriteconfig5 --file="$PWD/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Name" "mytheme"
+kwriteconfig5 --file="$PWD/metadata.desktop" --group="Desktop Entry" --key="Name" "My Theme"
+# Remove wrong translations (Name[fr]=Breeze)
+sed -i '/^Name\[/ d' ./metadata.desktop
+sed -i '/^Comment\[/ d' ./metadata.desktop
+```
+
+{{< alert color="info" title="Note" >}}
+The `default` theme is the base `Breeze` theme with all the default SVGs. `breeze-dark` only has a `colors` file and inherits everything else from the `default` theme.
+{{< /alert >}}
+
 2. Open the SVG file associated with the Plasma element you would like to theme
 (panel background, clock, etc.) in an SVG editor (e.g. Inkscape). See
 [Current Theme Elements](../theme-details#current-theme-elements) if you need
