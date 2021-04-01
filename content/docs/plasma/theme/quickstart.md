@@ -30,8 +30,8 @@ if you need help.
 [Current Theme Elements](../theme-details#current-theme-elements) if you need
 help understand what each SVG file does.
 
-3. Each SVG file may have several elements (e.g. objects with element id = left,
-right, top, topright, center, clock face, etc.). Modify existing elements OR delete
+3. Each SVG file may have several elements (e.g. objects with element id = `left`,
+`right`, `top`, `topright`, `center`, `ClockFace`, etc.). Modify existing elements OR delete
 and create replacement elements. Elements can be any SVG primitive or object group.
 
 {{< alert color="info" title="Hint" >}}
@@ -68,14 +68,13 @@ create a new theme.
 Plasma install folder.
 
 * Choose the theme from the System Settings > Workspace Theme > Plasma Theme dialog
-(may require Plasma restart) or edit your user's plasmarc file in the `.config`
-folder to point to the new theme.
+(may require Plasma restart) or edit your `~/.config/plasmarc` to point to the new theme.
 
 * Carefully check the appearance of all new theme elements.
 
-* If you created separate non-composite themes (SVGs in the opaque/ folder), remember
+* If you created separate non-composite themes (SVGs in the `opaque/` folder), remember
 to test your theme with compositing (Desktop Effects) turned off (with KWin toggle
-with <kdb>Alt</kdb>+<kdb>Shift</kdb> <kdb>F12</kdb>).
+with `Alt+Shift+F12`).
 
 When you update the theme, you need to battle with Plasma's caching. So to make sure
 to run the latest version of your theme code, after updating it first clear the cache,
@@ -98,7 +97,7 @@ other items to blend well with your theme by supplying a colors file in your the
 See the colors file in the default theme for an example.
 
 * If the colors file is omitted, Plasma will take on the current Plasma system colors.
-Note: Theme SVGs will not be colorized unless they contain the 'hint-apply-color-scheme'
+Note: Theme SVGs will not be colorized unless they contain the `hint-apply-color-scheme`
 element.)
 
 ## Hints and Tips
@@ -113,24 +112,23 @@ Plasma theme as thin, barely-there, lines you can't seem to get rid of.
 
 * If you prefer raster editors like Krita and GIMP, create your particular theme in these
 programs first, then import them into Inkscape (drag and drop of the files works fine). If
-you're working on a background with multiple elements (e.g. panel-background, widget
-background, etc.) crop the raster image into the different elements (top, bottom, right,
+you're working on a background with multiple elements, like `widgets/panel-background.svg` or `widgets/background.svg`, crop the raster image into the different elements (top, bottom, right,
 etc.) and save as separate files before importing into Inkscape.
 
 * Don't forget to **embed imported raster images**. By default Inkscape will import these
 as linked images which will not show up in Plasma (to embed the images, go to Effects >
 Images > Embed All Images).
 
-* Remember that border elements of backgrounds (top, right, bottom, left) are tiled if the
-hint-stretch-borders element is not present in the SVG.
+* Remember that the border elements of backgrounds (`top`, `right`, `bottom`, `left`) are tiled if the
+`hint-stretch-borders` element is not present in the SVG.
 
 * Remember that the center element of backgrounds are stretched if the hint-tile center
 element is not present in the SVG.
 
 * To control how much colorization will be applied by Plasma when using the
-hint-apply-color-scheme element, make sure the color (HSV) Value/Intensity is closer to 0
-or 255 for less colorization, and closer to 127 for more colorization. So, for example, to
-keep shadows from being colorized, use color (HSV) Value/Intesity of 0.
+`hint-apply-color-scheme` element, make sure the color (HSV) Value/Intensity is closer to `0`
+or `255` for less colorization, and closer to `127` for more colorization. So, for example, to
+keep shadows from being colorized, use color (HSV) Value/Intesity of `0`.
 
 * When testing the theme, if it looks like portions of a multi-element SVG is missing
 (missing borders, etc.) check the SVG again to **make sure the element ids are correct**.
@@ -142,8 +140,8 @@ PNG into the final SVG file.
 * Perform this quick sanity check for background SVGs to help troubleshoot annoying lines
 and gaps between elements:
 
-  * topleft, top and topright elements should have the same height
-  * topright, right and bottomright elements should have the same width
-  * bottomleft, bottom and bottomright elements should have the same height
-  * topleft, left and bottomleft elements should have the same width
+  * `topleft`, `top` and `topright` elements should have the same height
+  * `topright`, `right` and `bottomright` elements should have the same width
+  * `bottomleft`, `bottom` and `bottomright` elements should have the same height
+  * `topleft`, `left` and `bottomleft` elements should have the same width
 
