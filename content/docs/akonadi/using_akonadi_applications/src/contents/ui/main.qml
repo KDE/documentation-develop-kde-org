@@ -33,9 +33,7 @@ Kirigami.ApplicationWindow {
         id: mainPageComponent
 
         Kirigami.ScrollablePage {
-            id: folderListView
             title: i18n("KMailQuick")
-            property var mailListPage: null
 
             ListView {
                 model: QuickMail.descendantsProxyModel
@@ -59,8 +57,6 @@ Kirigami.ApplicationWindow {
         id: folderPageComponent
 
         Kirigami.ScrollablePage {
-            id: folderView
-            property var mailViewer: null;
             ListView {
                 id: mails
                 model: QuickMail.folderModel
