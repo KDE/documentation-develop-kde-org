@@ -61,10 +61,7 @@ limitations under the License.
         });
     });
 
-    const ul = document.querySelector('.td-sidebar-nav__section.active')
-    if (ul && ul.scrollIntoView) {
-      ul.scrollIntoView()
-    }
+
 }(jQuery));
 
 function getOffsetSum(elem) {
