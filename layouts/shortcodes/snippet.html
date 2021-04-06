@@ -1,7 +1,7 @@
 {{/* SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu> */}}
 {{/* SPDX-License-Identifier: LGPL-3.0-or-later */}}
 {{ $filePath := "" }}
-{{ with .Get "repo" }}
+{{ if .Get "repo" }}
   {{ $filePath = printf "files/%s/%s" (.Get "repo") (.Get "file") }}
 {{ else }}
   {{ $filePath = printf "content/docs/%s" (.Get "file") }}
