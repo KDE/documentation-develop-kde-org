@@ -23,4 +23,4 @@ themes.
 
 Place the option to switch theme in Settings > Designs.
 
-![Krita's theme switcher.](/hig/Switch-theme.jpeg)
+![Krita\'s theme switcher.](/hig/Switch-theme.jpeg)
