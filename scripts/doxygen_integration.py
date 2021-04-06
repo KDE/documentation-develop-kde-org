@@ -79,6 +79,21 @@ TAG_FILES = [
         'tags': 'https://api.kde.org/libksysguard/html/Libksysguard.tags',
         'base_url': 'https://api.kde.org/libksysguard/html/',
         'default_prefix': 'KSysGuard',
+    },
+    {
+        'tags': 'https://api.kde.org/kdepim/akonadi/html/Akonadi.tags',
+        'base_url': 'https://api.kde.org/kdepim/akonadi/html/',
+        'default_prefix': 'Akonadi::',
+    },
+    {
+        'tags': 'https://api.kde.org/kdepim/kmime/html/KMime.tags',
+        'base_url': 'https://api.kde.org/kdepim/kmime/html/',
+        'default_prefix': 'KMime::',
+    },
+    {
+        'tags': 'https://api.kde.org/kdepim/mailcommon/html/Mailcommon.tags',
+        'base_url': 'https://api.kde.org/kdepim/mailcommon/html/',
+        'default_prefix': 'MailCommon::',
     }
 ]
 
