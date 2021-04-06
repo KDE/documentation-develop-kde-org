@@ -44,15 +44,9 @@ Kirigami.ApplicationWindow {
                     leftPadding: Kirigami.Units.gridUnit * model.kDescendantLevel
                     onClicked: {
                         QuickMail.loadMailCollection(model.index);
-                        if (folderListView.mailListPage) {
-                            folderListView.mailListPage.title = model.display
-                            folderListView.mailListPage.forceActiveFocus();
-                            applicationWindow().pageStack.currentIndex = 1;
-                        } else {
-                            folderListView.mailListPage = root.pageStack.push(folderPageComponent, {
-                                title: model.display
-                            });
-                        }
+                        root.pageStack.push(folderPageComponent, {
+                            title: model.display
+                        });
                     }
                 }
             }
@@ -74,14 +68,9 @@ Kirigami.ApplicationWindow {
                     label: model.title
                     subtitle: sender
                     onClicked: {
-                        if (!folderView.mailViewer) {
-                            folderView.mailViewer = root.pageStack.push(mailComponent, {
-                                'mail': model.mail
-                            });
-                        } else {
-                            folderView.mailViewer.mail = model.mail;
-                            applicationWindow().pageStack.currentIndex = applicationWindow().pageStack.depth - 1;
-                        }
+                        root.pageStack.push(mailComponent, {
+                            'mail': model.mail
+                        });
                     }
                 }
             }
