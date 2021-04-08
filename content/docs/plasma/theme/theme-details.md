@@ -283,9 +283,9 @@ Eg: `/usr/share/icons/breeze/actions/16/go-down.svg`
 </svg>
 ```
 
-In the Plasma-framework source repository, two useful tools are present:
-* `currentColorFix.sh`: fixes an error in the file format that inkscape often does that would break the coorect application of the stylesheet
-* `apply-stylesheet.sh`: looks in the SVG file for certain colors (by default from the Breeze palette) and replaces them with the corresponfing stylesheet class, automating a potential long and tedious job
+In the [`plasma-framework` source repository](https://invent.kde.org/frameworks/plasma-framework/), two useful tools are present:
+* [`currentColorFillFix.sh`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/tools/currentColorFillFix.sh): fixes an error in the file format that inkscape often does that would break the coorect application of the stylesheet
+* [`apply-stylesheet.sh`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/tools/apply-stylesheet.sh): looks in the SVG file for certain colors (by default from the Breeze palette) and replaces them with the corresponfing stylesheet class, automating a potential long and tedious job
 
 ##  Current Theme Elements
 
