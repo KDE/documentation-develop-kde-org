@@ -243,7 +243,7 @@ It is possible to apply colors from the color scheme to a graphic. A very easy w
 
 ![Editing xml directly](EditingSvgIcon.png)
 
-A more flexible solution is available by using CSS-styling. For this to work the SVG must have a style-element with the id **current-color-scheme**. Before the graphic is rendered this element gets replaced by a style containing classes where the color attribute is set to the corresponding system color. Currently the following classes are defined:
+A more flexible solution is available by using CSS-styling. For this to work the SVG must have a style-element with the `id="current-color-scheme"`. Before the graphic is rendered this element gets replaced by a style containing classes where the color attribute is set to the corresponding system color. Currently the following classes are defined:
 * ColorScheme-Text
 * ColorScheme-Background
 * ColorScheme-Highlight
@@ -256,7 +256,32 @@ A more flexible solution is available by using CSS-styling. For this to work the
 * ColorScheme-ButtonHover
 * ColorScheme-ButtonFocus
 
-In order to apply a color from a class to an element, its fill or stroke attribute must be **currentColor** and of course the name of the wanted class has to be in the class-attribute. Special attention is needed on gradients, as neither the gradient-tags themselves nor the stop-tags accept classes. To still get the wanted result one can put a g-tag around them and apply the class to this.
+In order to apply a color from a class to an element, its `fill` or `stroke` attribute must be `currentColor` and of course the name of the wanted class has to be in the class-attribute. Special attention is needed on gradients, as neither the gradient-tags themselves nor the stop-tags accept classes. To still get the wanted result one can put a g-tag around them and apply the class to this.
+
+* `<path class="ColorScheme-Text" fill="currentColor">`
+* `<path class="ColorScheme-Text" stroke="currentColor">`
+* `<path class="ColorScheme-Text" style="fill:currentColor">`
+* `<path class="ColorScheme-Text" style="stroke:currentColor">`
+
+Eg: `/usr/share/icons/breeze/actions/16/go-down.svg`
+
+```xml
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <style
+        id="current-color-scheme"
+        type="text/css"
+    >
+        .ColorScheme-Text {
+            color:#232629;
+        }
+    </style>
+    <path
+        class="ColorScheme-Text"
+        fill="currentColor"
+        d="M8 11.707l-6-6L2.707 5 8 10.293 13.293 5l.707.707-6 6z"
+    />
+</svg>
+```
 
 In the Plasma-framework source repository, two useful tools are present:
 * `currentColorFix.sh`: fixes an error in the file format that inkscape often does that would break the coorect application of the stylesheet
