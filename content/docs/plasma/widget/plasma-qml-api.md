@@ -79,7 +79,7 @@ For mutiple choices, QML ships with [RadioButton](docs:qtquickcontrols;RadioButt
 
 * [`RadioButton.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/RadioButton.qml)
 
-Note the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/radiobutton.html) suggest using a ComboBox (dropdown menu) when your list is greater than 5 options.
+Note the [KDE Human Interface Guidelines](/hig/components/editing/radiobutton) suggest using a ComboBox (dropdown menu) when your list is greater than 5 options.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -155,7 +155,7 @@ To control Integer or Real numbers, QML ships with [Spinbox](docs:qtquickcontrol
 
 * [`Slider.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Slider.qml)
 
-See the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/slider.html) to determine wither to use a Slider or a SpinBox.
+See the [KDE Human Interface Guidelines](/hig/components/editing/slider) to determine wither to use a Slider or a SpinBox.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -205,7 +205,7 @@ To control Integer or Real numbers, QML ships with [SpinBox](docs:qtquickcontrol
 
 * [`SpinBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/SpinBox.qml)
 
-See the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/spinbox.html) to determine wither to use a SpinBox or a Slider.
+See the [KDE Human Interface Guidelines](/hig/components/editing/spinbox) to determine wither to use a SpinBox or a Slider.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -242,7 +242,7 @@ To enter text, QML ships with [TextField](docs:qtquickcontrols;TextField) and [T
 * [`TextField.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/TextField.qml)
 * [`TextArea.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/TextArea.qml)
 
-See the [KDE Human Interface Guidelines](https://hig.kde.org/components/editing/lineedit.html) to determine wither to use a TextField (HIG calls it a Line Edit) or a TextArea.
+See the [KDE Human Interface Guidelines](/hig/components/editing/lineedit) to determine wither to use a TextField (HIG calls it a Line Edit) or a TextArea.
 
 {{< /section-left >}}
 {{< section-right >}}
