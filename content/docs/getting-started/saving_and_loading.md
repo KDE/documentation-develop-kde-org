@@ -119,7 +119,7 @@ This is the function that the saveAs slot is connected to. It simply calls the g
 ```cpp
 void MainWindow::saveFileAs()
 {
-    saveFileAs(QFileDialog::getSaveFileName(this, i18n("Save File As")));
+    saveFileToDisk(QFileDialog::getSaveFileName(this, i18n("Save File As")));
 }
 ```
 
