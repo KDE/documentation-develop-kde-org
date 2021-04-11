@@ -49,7 +49,7 @@ int main (int argc, char *argv[])
     window->show();
 
     if (parser.positionalArguments().count() > 0) {
-        window->openFile(QUrl::fromUserInput(parser.positionalArguments().at(0), QDir::currentPath()));
+        window->openFileFromUrl(QUrl::fromUserInput(parser.positionalArguments().at(0), QDir::currentPath()));
     }
     
     return app.exec();

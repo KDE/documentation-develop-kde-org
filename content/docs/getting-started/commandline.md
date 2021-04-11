@@ -41,7 +41,7 @@ Later on, we start processing positional arguments, but only if there is one. Ot
 
 ```c++
 if (parser.positionalArguments().count() > 0) {
-    window->openFile(QUrl::fromUserInput(parser.positionalArguments().at(0), QDir::currentPath()));
+    window->openFileFromUrl(QUrl::fromUserInput(parser.positionalArguments().at(0), QDir::currentPath()));
 }
 ```
 
