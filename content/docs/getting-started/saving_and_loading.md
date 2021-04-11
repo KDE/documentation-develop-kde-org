@@ -131,7 +131,7 @@ void MainWindow::saveFileAs()
 void MainWindow::saveFile()
 {
     if(!fileName.isEmpty()) {
-        saveFileAs(fileName);
+        saveFileToDisk(fileName);
     } else {
         saveFileAs();
     }
@@ -155,13 +155,13 @@ Here we use the [QUrl](https://doc.qt.io/qt-5/qurl.html) class to handle files f
 Then we use the KIO library to retrieve our file. This allows us to open the file normally even if it's stored in a remote location like an FTP site. We make the following call to the [KIO::storedGet](docs:kio;KIO::storedGet) function with an argument for the file you wish to open or download:
 
 ```c++
-const KIO::Job *job = KIO::storedGet(fileNameFromDialog);
+KIO::Job *job = KIO::storedGet(fileNameFromDialog);
 ```
 
 The function returns a handle to a [KIO::Job](docs:kio;KIO::Job), which we first connect to our `downloadFinished()` slot before "running" the job.
 
 ```c++
-connect(job, &KJob::result, this, &KJob::downloadFinished);
+connect(job, &KJob::result, this, &MainWindow::downloadFinished);
 job->exec();
 ```
 
