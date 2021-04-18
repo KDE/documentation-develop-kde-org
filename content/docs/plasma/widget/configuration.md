@@ -540,7 +540,7 @@ See the [configurable icon example]({{< ref "examples.md#configurable-icon" >}})
 {{< sections >}}
 {{< section-left >}}
 
-You can also assign directly to `plasmoid.configuration.variableName` if necessary in the configruation window or anywhere else in your widget. If you do this in the configuration page, you will skip the "apply" process and the property will be applied right away. I leave this up to the reader wither this is a pro or con.
+You can also assign directly to `plasmoid.configuration.variableName` if necessary in the configruation window or anywhere else in your widget. If you do this in the configuration page, you will skip the "apply" process and the property will be applied right away. I leave this up to the reader whether this is a pro or con.
 
 {{< /section-left >}}
 {{< section-right >}}
