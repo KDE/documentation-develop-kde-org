@@ -293,6 +293,8 @@ If you want decimal places, a [`QtQuick.Controls 1.0` SpinBox](https://doc.qt.io
 </entry>
 ```
 
+If you really want to use `QtQuick.Controls 2.0`, look at Zren's [libconfig/SpinBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/SpinBox.qml) for an example on implementing the `decimals` property.
+
 {{< /section-left >}}
 {{< section-right >}}
 ```qml
@@ -420,7 +422,7 @@ PlasmaComponents.Label {
 }
 ```
 
-Unfortunately KDE Framework's `ColorButton` doesn't easily support this pattern as it stores the value in a QML `color` property which will read the empty string and cast it as the default color `#000000` (black). I worked around this issue in the [No-Apply Control Library]({{< ref "#no-apply-control-library" >}})'s [`ConfigColor.qml`](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigColor.qml). I used a `TextField` to store the value as a string, and displayed the default color scheme color as `placeholderText`.
+Unfortunately KDE Framework's `ColorButton` doesn't easily support this pattern as it stores the value in a QML `color` property which will read the empty string and cast it as the default color `#000000` (black). I worked around this issue in the [No-Apply Control Library]({{< ref "#no-apply-control-library" >}})'s [`libconfig/ColorField.qml`](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/ColorField.qml). I used a `TextField` to store the value as a string, and displayed the default color scheme color as `placeholderText`.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -586,35 +588,40 @@ To learn by example, we can look at a couple widgets:
 {{< sections >}}
 {{< section-left >}}
 
-I have written a few files that apply the above pattern of skipping "Apply" and updating right after you change the value. It still uses the `QtQuick.Controls 1.0` controls at the moment however.
+Zren has written a few files that apply the above pattern of skipping "Apply" and updating right after you change the value.
 
-* [ConfigCheckBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigCheckBox.qml) for on/off booleans values.
-* [ConfigSpinBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigSpinBox.qml) for Integer or Real numbers.
-* [ConfigString.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigString.qml) for a single line of text.
-* [ConfigColor.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigColor.qml) for use with a `String` or `Color` config data type. If you use use a `String` data type, you can treat an empty string as a certain color theme color. Eg:
-  ```qml
-  ConfigColor {
-    configKey: 'labelColor'
-    defaultColor: PlasmaCore.ColorScope.textColor
-  }
-  ```
-* [ConfigIcon.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigIcon.qml) based on the Application Launcher icon selector.
-* [ConfigStringList.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigStringList.qml) Instead of a [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls-textfield.html), it uses a [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls-textarea.html) using a new line as the seperator.
-* [ConfigComboBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigComboBox.qml) is useful for creating enums using the `String` config data type. KConfig comes with a enum datatype as well, but you have to use hardcoded integers (with comments) in your QML code, rather than using strings.
-    * [ConfigFontFamily.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigFontFamily.qml) inherits `ConfigComboBox.qml` and is populated with all available fonts.
-* [ConfigRadioButtonGroup.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigRadioButtonGroup.qml) uses a similar model as `ConfigComboBox.qml` but displays the enum values differently.
-* [ConfigTextAlign.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigTextAlign.qml) for use with an `Int` config data type. It has your typical 4 buttons for left/center/right/justify alignment. It serializes the `Text.AlignHCenter` enum, which is an Integer.
-    * [ConfigTextFormat.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/lib/ConfigTextFormat.qml) is used to config bold, italic, underline, and embeds the text alignment. For use with 3 `Bool` config keys and 1 `Int` config key (used for the embeded `ConfigTextAlign.qml`).
+[https://github.com/Zren/plasma-applet-lib/.../libconfig/](https://github.com/Zren/plasma-applet-lib/tree/master/package/contents/ui/libconfig)
+
+* [libconfig/CheckBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/CheckBox.qml) for on/off booleans values.
+* [libconfig/ColorField.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/ColorField.qml) for use with a `String` or `Color` config data type. If you use use a `String` data type, you can treat an empty string as a certain color theme color. Eg:
+* [libconfig/ComboBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/ComboBox.qml) is useful for creating enums using the `String` config data type. KConfig comes with a enum datatype as well, but you have to either use hardcoded integers (with comments), or [declare the enum](https://stackoverflow.com/a/48460159/947742) in your QML code and keep it in sync. String comparison is less efficient but is easier to program with.
+    * [FontFamily.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/FontFamily.qml) inherits `ComboBox.qml` and is populated with all available fonts.
+* [libconfig/IconField.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/IconField.qml) based on the Application Launcher icon selector.
+* [libconfig/RadioButtonGroup.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/RadioButtonGroup.qml) takes a similar model as `ComboBox.qml` but will display the options as [`RadioButton`](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html).
+* [libconfig/SpinBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/SpinBox.qml) for Integer or Real numbers.
+* [libconfig/TextAlign.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextAlign.qml) for use with an `Int` config data type. It has your typical 4 buttons for left/center/right/justify alignment. It serializes the `Text.AlignHCenter` enum.
+    * [TextFormat.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextFormat.qml) is used to toggle bold, italic, underline, and embeds the text alignment. For use with 3 `Bool` config keys and 1 `Int` config key (used for the embeded `TextAlign.qml`).
+* [libconfig/TextArea.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextArea.qml) for a string with multiple lines of text.
+    * [TextAreaStringList.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextAreaStringList.qml) overloads `TextArea.qml`'s `valueToText(value)` and `textToValue(text)` functions to treat a new line as the seperator for the `StringList` type.
+* [libconfig/TextField.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextField.qml) for a single line of text.
 
 {{< /section-left >}}
 {{< section-right >}}
-```qml
-// ConfigCheckBox.qml
-import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls1
-import QtQuick.Layouts 1.0
+```bash
+cd ~/Code/plasmoid-helloworld/package/contents/ui
+mkdir -p ./libconfig
+cd ./libconfig
+wget https://github.com/Zren/plasma-applet-lib/archive/master.zip
+unzip -j master.zip plasma-applet-lib-master/package/contents/ui/libconfig/*
+rm master.zip
+```
 
-QtControls1.CheckBox {
+```qml
+// libconfig/CheckBox.qml
+import QtQuick 2.0
+import QtQuick.Controls 2.0 as QQC2
+
+QQC2.CheckBox {
     id: configCheckBox
 
     property string configKey: ''
@@ -629,13 +636,27 @@ import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.4 as Kirigami
+import "./libconfig" as LibConfig
 
 Kirigami.FormLayout {
     id: page
 
-    ConfigCheckBox {
-        id: variableName
-        configKey: 'variableName'
+    LibConfig.CheckBox {
+        configKey: 'showVariable'
+    }
+
+    LibConfig.ColorField {
+        configKey: 'labelColor'
+        defaultColor: PlasmaCore.ColorScope.textColor
+    }
+
+    LibConfig.ComboBox {
+        configKey: "variableName"
+        model: [
+            { value: "a", text: i18n("A") },
+            { value: "b", text: i18n("B") },
+            { value: "c", text: i18n("C") },
+        ]
     }
 }
 ```
