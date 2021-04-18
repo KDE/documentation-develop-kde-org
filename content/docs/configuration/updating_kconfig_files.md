@@ -1,5 +1,6 @@
 ---
 title: Updating KConfig Files
+draft: true
 ---
 
 ## Introduction
