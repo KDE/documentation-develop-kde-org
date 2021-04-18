@@ -13,7 +13,7 @@ Before getting started, we must install a few things. We need a C++ compiler, Qt
 On Ubuntu, Debian and Neon we can install these with APT:
 
 ```bash
-sudo apt install build-essential extra-cmake-modules cmake qtbase5-dev qtdeclarative5-dev libqt5svg5-dev qtquickcontrols2-5-dev qml-module-org-kde-kirigami2 kirigami2-dev libkf5i18n-dev gettext libkf5coreaddons-dev
+sudo apt install build-essential extra-cmake-modules cmake qtbase5-dev qtdeclarative5-dev libqt5svg5-dev qtquickcontrols2-5-dev qml-module-org-kde-kirigami2 kirigami2-dev libkf5i18n-dev gettext libkf5coreaddons-dev qml-module-qtquick-layouts
 ```
 
 On Arch-based distributions (like Manjaro) we can use Pacman:
