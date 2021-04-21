@@ -35,7 +35,7 @@ The basic structure of this hypothetical time settings module is the following:
 
 {{< readfile file="/content/docs/configuration/kcm/CMakeLists.txt" highlight="cpp" >}}
 
-This CMake file contains a few packages of note: `KCMUtils` provides various classes that allow us to work with KCModules, and `Config` includes the KConfig classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](../kirigami/understanding-cmakelists) which goes through a similar CMakeLists file line by line.
+This CMake file contains a few packages of note: `KCMUtils` provides various classes that allow us to work with KCModules, and `Config` includes the KConfig classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](../../kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
 
 What's different here is that we are using C++ code as a plugin for our QML code. This is why we don't have a `main.cpp`: we only need the class that will provide the backend functionality for our KCM.
 
