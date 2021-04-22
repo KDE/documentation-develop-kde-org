@@ -123,6 +123,9 @@ Kirigami.FormLayout {
 
 A handy feature of `Kirigami.FormLayout` is that you can add checkboxes to its children. This can be useful in settings pages where you might want to let the user enable or disable a setting, and also want the user to provide some extra information in a component such as a textfield.
 
+{{< sections >}}
+{{< section-left >}}
+
 ```qml
 Kirigami.FormLayout {
     id: layout
