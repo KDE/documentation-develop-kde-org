@@ -1,17 +1,17 @@
 ---
-title: Pagerows and page stacks
+title: Page rows and page stacks
 description: "Add flow to your application: Add, remove and replace pages in different ways"
 weight: 102
-group: introduction
+group: components
 ---
 
 ## The PageRow
 
 The [PageRow](docs:kirigami2;PageRow) is a container that lays out items
-horizontally in a row. If all child items don't fit in the PageRow, it will behave
-like a `Flickable` surface and will become a horizontal scrollable view of columns.
+horizontally in a row. If all child items don't fit in the [PageRow](docs:kirigami2;PageRow), it will behave
+like a [`Flickable`](https://doc.qt.io/qt-5/qml-qtquick-flickable.html) surface and will become a horizontal scrollable view of columns.
 
-A PageRow can show a single page or several of them as columns, depending on
+A [PageRow](docs:kirigami2;PageRow) can show a single page or several of them as columns, depending on
 the window width. On a phone, a single column will be viewable, while on
 a tablet or a desktop more than one column should be visible at once.
 
@@ -34,7 +34,7 @@ Kirigami.ApplicationWindow {
 }
 ```
 
-Once the user logged into the application, you would need to replace the login
+Once the user has logged into the application, you would need to replace the login
 page with the home page of the application. To do this, you would use
 `pageStack.replace`, removing the LoginPage and replacing it with a HomePage.
 
@@ -59,7 +59,7 @@ Kirigami.Page {
 ```
 
 {{< alert color="info" title="Note" >}}
-`pageStack.replace` accepts either a QML Component or aurl to a QML file.
+`pageStack.replace` accepts either a QML Component or a url to a QML file.
 {{< /alert >}}
 
 Now let's imagine you had a configuration page you wanted the user to
