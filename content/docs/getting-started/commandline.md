@@ -21,7 +21,7 @@ Here we have done nothing but add a new `openFileFromUrl` function which takes a
 
 ### mainwindow.cpp
 
-There's no new code here, only rearranging. Everything from `void openFile()` has been moved into `void openFile(const QUrl &inputFileName)` except the call to `QFileDialog::getOpenFileUrl()`.
+There's no new code here, only rearranging. Everything from `void openFile()` has been moved into `void openFileFromUrl(const QUrl &inputFileName)` except the call to `QFileDialog::getOpenFileUrl()`.
 
 This way, we can call `openFile()` if we want to display a dialog, or we can call `openFileFromUrl(const QUrl &)` if we know the name of the file already. Which will be the case when we feed the file name through the command line.
 
