@@ -93,7 +93,7 @@ You can read more about the specifics of how the Qt resource system works [in Qt
 
 {{< readfile file="/content/docs/kirigami/introduction-getting_started/src/main.cpp" highlight="cpp" >}}
 
-For now, we don't need to go into too much detail regarding what our `main.cpp` code does, but its role will grow significantly more important once we decide to add more complex functionality to our application in the future. If you want to get ahead, you can read more about how this `main.cpp` works [in this page](/content/docs/kirigami/maincpp/).
+For now, we don't need to go into too much detail regarding what our `main.cpp` code does, but its role will grow significantly more important once we decide to add more complex functionality to our application in the future. If you want to get ahead, you can read more about how this `main.cpp` works [in this page](/docs/kirigami/advanced-maincpp/).
 
 ### main.qml
 
