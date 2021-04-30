@@ -7,34 +7,13 @@ description: >
 weight: 2
 ---
 
-The main idea behind KConfigXT is to provide a more convenient way to manage
-your application's configurations for both for developers and system
-administrators who manage large KDE installations.
-
-KConfigXT generates a ready-to-use C++ class from an XML definition file
-with state management and all the other features that you would expect from any
-good configuration management system.
+KConfigXT generates a C++ class for your configuration based on an XML description of the config schema.
+This allows to have a single source of truth for the configuration structure and helps avoiding common issues such as misspelled configuration keys.
 
 ## The .kcfg file
 
 A `.kcfg` file is an XML file describing the configuration keys for your
-application. Let's create a simple `.kcfg` file.
-
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
-                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-</kcfg>
-```
-
-For the moment, this `.kcfg` file does nothing, so let's add a config group, `general`,
-and two config entries. The first entry, `SplitterSizes`, will store the sizes of the
-application's QSplitter widgets. The second entry, `Width`, will store the width of the
-main window. The last entry, `Platform`, will store the last operating system used, this
-is an enum, and the value can be either Linux, FreeBSD or Windows.
+application. Let's create a `.kcfg` file with a single group and a few entries.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -69,12 +48,17 @@ is an enum, and the value can be either Linux, FreeBSD or Windows.
 </kcfg>
 ```
 
+The first entry, `SplitterSizes`, will store the sizes of the
+application's QSplitter widgets. The second entry, `Width`, will store the width of the
+main window. The last entry, `Platform`, will store the last operating system used, this
+is an enum, and the value can be either Linux, FreeBSD or Windows.
+
 The individual entries must have at least a name or a key attribute. The key is used
 as the key in the config file. The name is used to create accessor and modifier
 functions.  If `key` is not given, the name is used as the key in the config file. If `key` is
 given, but not `name`, the name is constructed by removing all spaces from the `key`.
 
-An entry must also have a type. The supported basic types are: `String`, `Url`,
+All entries have a type. The supported basic types are: `String`, `Url`,
 `StringList`, `Font`, `Rect`, `Size`, `Color`, `Point`, `Int`, `UInt`, `Bool`, `Double`,
 `DateTime`, `Int64`, `UInt64` and `Password`. Besides those basic types the following
 special types are supported: 
@@ -113,9 +97,8 @@ values.
 
 ### Compute the default value
 
-This is often not needed, but it is also possible to have the default value computed
-from a C++ expression. This is done by adding the `code=true` atribute to the
-`<default>` tag.
+Sometimes it is useful to dynamically compute a default value from a C++ expression.
+This can be done by adding the `code=true` atribute to the `<default>` tag.
 
 In case you need to import a C++ header to compute the default value, you can add an
 `<include>` tag to the .kcfg file which contains the header file that is needed.
@@ -127,8 +110,7 @@ compute a common default value which can then be referenced by subsequent entrie
 
 ## The .kcfgc files
 
-KConfigXT options are stored in a `.kcfgc` file which describes the C++ file generation
-options. The .kcfgc file is a simple ini file with the typical "entry=value" format.
+The behavior of KConfigXT is controlled by a `.kcfgc` file.
 
 ```ini
 File=config.kcfg
@@ -141,39 +123,30 @@ The first line `File=config.kcfg` specifies where the configuration options for 
 application are stored.
 
 The second line `ClassName=YourConfigClassName` specifies the name of the class
-that will be generated from the .kcfg file. The generated class will be derived from
-KConfigSkeleton. Please make sure that `YourConfigClassName` is not a class name already
-used in your application. Save this file under yourconfigclassname.kcfgc. This will ensure
-the generation of the yourconfigclassname.{h,cpp} files where your configuration class will
-reside.
-
-There are additional optional entries, which your application might need. The full list is
-available on the [kconfig_compiler](docs:kconfig;kconfig_compiler.html).
+that will be generated from the .kcfg file. Save this file under yourconfigclassname.kcfgc.
+This will result in the yourconfigclassname.{h,cpp} files being generated.
 
 {{< alert title="Note" color="info" >}}
-You can find more information about all the available options in the
-[kconfig_compiler documentation](docs:kconfig;kconfig_compiler.html).
+KConfigXT offers a variety of options. The full list can be seen in the [kconfig_compiler documentation](docs:kconfig;kconfig_compiler.html).
 {{< /alert >}}
 
 ## Adjusting the CMakeLists.txt file
 
-After creating the .kcfg and .kcfgc files, the next step is to adjust the build system to let
-`kconfig_compiler` generate the required class at compile time. For in-source builds,
-doing this is trivial and requires only one step, adding these two lines to the `CMakeLists.txt`
-file (assuming your files are named `settings.kcfg` and `settings.kcfgc`): 
-
-```cmake
-kconfig_add_kcfg_files(<project name>_SRCS settings.kcfgc)
-```
-
-Since version 5.67 a target based variant is available: 
+To use KConfigXT in a CMake project use the kconfig_add_kcfg_files function.
 
 ```cmake
 add_executable(<target name> [source files])
 kconfig_add_kcfg_files(<target name> settings.kcfgc)
 ```
+or
 
-Use optional `GENERATE_MOC` to generate moc if you use signals in your `kcfg` files.
+```cmake
+kconfig_add_kcfg_files(<project name>_SRCS settings.kcfgc)
+```
+
+Since version 5.67 a target based variant is available:
+
+Use the `GENERATE_MOC` option when using signals in your `kcfg` files.
 This is the case for example you want to have your setting exposed to QML and setting
 `GenerateProperties` to true.
 
