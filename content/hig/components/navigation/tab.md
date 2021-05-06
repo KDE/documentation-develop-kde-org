@@ -47,7 +47,7 @@ Guidelines for Desktop User Interfaces
 -   Don't use vertically stacked tabs. Tabs are drawn above the pages
     only (QTabWidget::TabPosition = North).
 -   Don't use too many tabs. Use a
-    [list view][../../editing/list) with
+    [list view](../../editing/list) with
     icons and associated pages if there are many pages or if you want to
     group static pages, e.g. in case of configuration content. This also
     gives ability to present hierarchy of pages as a tree.
