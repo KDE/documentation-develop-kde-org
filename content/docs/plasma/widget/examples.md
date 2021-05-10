@@ -160,7 +160,7 @@ ConfigModel {
 
 {{< sections >}}
 {{< section-left >}}
-While the user can resize the popup window temporarily with `Alt+RightClick+Drag`, it will reset on when the user relogs. To allow the user to permanently configure the popup size in a panel widget, or the size of the compact view in the panel, we'll need a store the width/height in the config.
+While the user can resize the popup window temporarily with `Alt+RightClick+Drag`, it will reset when the user relogs. To allow the user to permanently configure the popup size in a panel widget, or the size of the compact view in the panel, we'll need a store the width/height in the config.
 
 So we change to our hardcoded sizes:
 
