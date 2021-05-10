@@ -188,7 +188,7 @@ Item {
 }
 ```
 
-Make sure you still multiply the stored width/height by `units.devicePixelRatio`, otherwise your popup will look smaller by default on HiDPI/4k monitors.
+Make sure you still multiply the stored width/height by [`PlasmaCore.Units.devicePixelRatio`](docs:plasma;Units::devicePixelRatio), otherwise your popup will look smaller by default on HiDPI/4k monitors.
 
 To simplify testing, I added `Plasmoid.hideOnWindowDeactivate: false` to prevent the popup from closing when you focus the config window.
 
@@ -371,6 +371,7 @@ We use [`TextMetrics`](https://doc.qt.io/qt-5/qml-qtquick-textmetrics.html) to c
 ```qml
 import QtQuick 2.4
 import QtQuick.Layouts 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.plasmoid 2.0
 
@@ -410,8 +411,8 @@ Item {
     }
 
     Plasmoid.fullRepresentation: Item {
-        Layout.preferredWidth: 640 * units.devicePixelRatio
-        Layout.preferredHeight: 480 * units.devicePixelRatio
+        Layout.preferredWidth: 640 * PlasmaCore.Units.devicePixelRatio
+        Layout.preferredHeight: 480 * PlasmaCore.Units.devicePixelRatio
 
         Rectangle {
             id: popup
@@ -419,7 +420,7 @@ Item {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: parent.width * (widget.value / 100)
-            color: theme.highlightColor
+            color: PlasmaCore.Theme.highlightColor
         }
     }
 
