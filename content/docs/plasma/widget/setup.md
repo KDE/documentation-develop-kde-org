@@ -52,11 +52,12 @@ Inside the `metadata.desktop` file we need to set the `Name` of the widget. The 
 
 Widgets installed by the user (without root) like when you "Install New Widgets" will be installed to `~/.local/share/plasma/plasmoids/` (which may not yet exist). The default widgets shipped with KDE are installed to `/usr/share/plasma/plasmoids/`.
 
-`X-KDE-PluginInfo-Category` is the category the widget can be filtered with in the widget list. A list of category names can be found [here](https://techbase.kde.org/Projects/Plasma/PIG).
+`X-KDE-PluginInfo-Category` is the category the widget can be filtered with in the widget list. A list of category names can be found [here]({{< ref "plasma-qml-api.md#x-kde-plugininfo-category" >}}).
 
 `X-KDE-ServiceTypes`, `X-Plasma-API`, and `X-Plasma-MainScript` are also needed to just define that this package is a plasma widget, and where its entry point is.
 
-For more, read the [Getting Started](https://techbase.kde.org/Development/Tutorials/Plasma5/QML2/GettingStarted#The_.desktop_file) tutorial on the KDE wiki.
+For the other properties, read the [`metadata.desktop` section on the Plasma QML API page]({{< ref "plasma-qml-api.md#metadatadesktop" >}}).
+
 {{< /section-left >}}
 {{< section-right >}}
 ```ini
