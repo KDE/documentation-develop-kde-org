@@ -245,7 +245,7 @@ Our config class will now be instance throughout our QML as `Config`. All of our
 import org.kde.myapp.private 1.0
 
 Kirigami.ApplicationWindow {
-  width = Config.width
+  width: Config.width
 
   onWidthChanged {
     Config.width = applicationWindow().width
