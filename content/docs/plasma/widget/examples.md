@@ -361,6 +361,44 @@ Item {
 {{< /sections >}}
 
 
+## Solar DataSource
+
+{{< sections >}}
+{{< section-left >}}
+
+Solar is part of the "time" dataengine. It provides the sun's [Azimuth](https://en.wikipedia.org/wiki/Azimuth), [Zenith](https://en.wikipedia.org/wiki/Zenith), and "Corrected Elevation" for a longitude and latitude at a specific time of day.
+
+* Install `plasma-sdk` then open the Plasma Engine Explorer.
+* Select the `time` dataengine.
+* Enter something like the following into the source name:  
+  `UTC-04:00|Solar|Latitude=43.68|Longitude=79.63|DateTime=2021-03-23T19:00:00`  
+  Above is example is for Toronto, Canada.
+* Click "Request Source", then scroll down to the bottom to find the new data.
+
+Examples: 
+
+* The [EnvCanada Weather Source uses](https://invent.kde.org/plasma/plasma-workspace/-/blame/master/dataengines/weather/ions/envcan/ion_envcan.cpp#L733) the Solar dataengine to check if the "Corrected Elevation" [is below zero](https://invent.kde.org/plasma/plasma-workspace/-/blame/master/dataengines/weather/ions/envcan/ion_envcan.cpp#L1627) to start using nighttime icons.
+
+{{< /section-left >}}
+{{< section-right >}}
+
+[![](plasmaengineexplorer-solar.png)](plasmaengineexplorer-solar.png)
+
+| Type | Key | Value |
+|------|-----|-------|
+|`double`|`Azimuth`|69.6342657428925|
+|`double`|`Corrected Elevation`|-18.092120068676486|
+|`QDateTime`|`DateTime`|Tue Mar 23 19:00:00 2021|
+|`int`|`Offset`|UTC-04:00|
+|`QString`|`Timezone`|UTC-04:00|
+|`QString`|`Timezone Abbreviation`|UTC-04:00|
+|`QString`|`Timezone City`|UTC-04:00|
+|`double`|`Zenith`|108.10976492154272|
+{{< /section-right >}}
+{{< /sections >}}
+
+
+
 ## Avoid widget resize on text change
 
 {{< sections >}}
@@ -434,5 +472,4 @@ Item {
 ```
 {{< /section-right >}}
 {{< /sections >}}
-
 
