@@ -401,6 +401,42 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 ```
 
 
+### PlasmaCore.Theme
+
+`PlasmaCore.Theme` contains the [Plasma Style]({{< ref "../theme/_index.md" >}}) color palette.
+
+* `PlasmaCore.Theme.textColor`
+* `PlasmaCore.Theme.highlightColor`
+* `PlasmaCore.Theme.highlightedTextColor`
+* `PlasmaCore.Theme.backgroundColor`
+* `PlasmaCore.Theme.linkColor`
+* `PlasmaCore.Theme.visitedLinkColor`
+* `PlasmaCore.Theme.positiveTextColor`
+* `PlasmaCore.Theme.neutralTextColor`
+* `PlasmaCore.Theme.negativeTextColor`
+* `PlasmaCore.Theme.disabledTextColor`
+
+There is also properties for the various color groups using a prefix.
+
+* `PlasmaCore.Theme.buttonTextColor`
+* `PlasmaCore.Theme.viewTextColor`
+* `PlasmaCore.Theme.complementaryTextColor`
+* `PlasmaCore.Theme.headerTextColor`
+
+The full list of `PlasmaCore.Theme` color properties can be found in the `QuickTheme` class definition:  
+[`plasma-framework/src/declarativeimports/core/quicktheme.h`](https://invent.kde.org/frameworks/plasma-framework/blob/master/src/declarativeimports/core/quicktheme.h)
+
+The `QuickTheme` class extends [Plasma::Theme](docs:plasma;Units::devicePixelRatio) which also contains:
+
+* `defaultFont` [`font`](https://doc.qt.io/qt-5/qml-font.html)
+* `palette` [`palette`](https://doc.qt.io/qt-5/qml-palette.html)
+* `smallestFont` [`font`](https://doc.qt.io/qt-5/qml-font.html)
+* `styleSheet` [`string`](https://doc.qt.io/qt-5/qml-string.html)
+* `themeName` [`string`](https://doc.qt.io/qt-5/qml-string.html)
+* `useGlobalSettings` [`bool`](https://doc.qt.io/qt-5/qml-bool.html)
+* `wallpaperPath` [`string`](https://doc.qt.io/qt-5/qml-string.html)
+
+
 ### PlasmaCore.Units.devicePixelRatio
 
 In order to scale an Item by display scaling to support HiDPI monitors, you will need to multiply a pixel value by [`PlasmaCore.Units.devicePixelRatio`](docs:plasma;Units::devicePixelRatio). Plasma also ships with a few preset values for consitent spacing throughout Plasma.
