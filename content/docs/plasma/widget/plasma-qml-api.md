@@ -394,6 +394,79 @@ ColumnLayout {
 {{< /sections >}}
 
 
+## PlasmaCore
+
+```qml
+import org.kde.plasma.core 2.0 as PlasmaCore
+```
+
+
+### PlasmaCore.Units.devicePixelRatio
+
+In order to scale an Item by display scaling to support HiDPI monitors, you will need to multiply a pixel value by [`PlasmaCore.Units.devicePixelRatio`](docs:plasma;Units::devicePixelRatio). Plasma also ships with a few preset values for consitent spacing throughout Plasma.
+
+* [`PlasmaCore.Units.devicePixelRatio`](docs:plasma;Units::devicePixelRatio) `=` [`QScreen::logicalDotsPerInchX`](https://doc.qt.io/qt-5/qscreen.html#logicalDotsPerInchX-prop) `/ 96` (Primary Screen)
+* [`PlasmaCore.Units.smallSpacing`](docs:plasma;Units::smallSpacing) `= max(2, gridUnit/4)`
+* [`PlasmaCore.Units.largeSpacing`](docs:plasma;Units::largeSpacing) `= gridUnit`
+* [`PlasmaCore.Units.gridUnit`](docs:plasma;Units::gridUnit) (width of the capital letter M)
+
+Note that [`Kirigami.Units`](https://invent.kde.org/frameworks/kirigami/blob/master/src/controls/Units.qml) does not use the exact same logic as `PlasmaCore.Units`.
+
+```qml
+import QtQuick 2.0
+import QtQuick.Layouts 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 3.0 as PlasmaComponents3
+RowLayout {
+    spacing: PlasmaCore.Units.smallSpacing
+    Rectangle {
+        implicitWidth: 4 * PlasmaCore.Units.devicePixelRatio
+        Layout.fillHeight: true
+        color: PlasmaCore.Theme.highlightColor
+    }
+    PlasmaComponents3.Label {
+        text: i18n("Label")
+    }
+}
+```
+
+
+### PlasmaCore.Units.iconSizes
+
+{{< sections >}}
+{{< section-left >}}
+
+[`PlasmaCore.Units.iconSizes`](docs:plasma;Units::iconSizes) is scaled by DPI.
+
+* `PlasmaCore.Units.iconSizes.small` `= 16px`
+* `PlasmaCore.Units.iconSizes.smallMedium` `= 22px`
+* `PlasmaCore.Units.iconSizes.medium` `= 32px`
+* `PlasmaCore.Units.iconSizes.large` `= 48px`
+* `PlasmaCore.Units.iconSizes.huge` `= 64px`
+* `PlasmaCore.Units.iconSizes.enormous` `= 128px`
+
+{{< /section-left >}}
+{{< section-right >}}
+
+![](iconsizes.png)
+
+{{< /section-right >}}
+{{< /sections >}}
+
+
+### PlasmaCore.Units.shortDuration
+
+These properties are scaled by the Animation Speed in System Settings.
+
+* [`PlasmaCore.Units.veryShortDuration`](docs:plasma;Units::devicePixelRatio) `= 50ms`
+* [`PlasmaCore.Units.shortDuration`](docs:plasma;Units::devicePixelRatio) `= 100ms`
+* [`PlasmaCore.Units.longDuration`](docs:plasma;Units::devicePixelRatio) `= 200ms`
+* [`PlasmaCore.Units.veryLongDuration`](docs:plasma;Units::devicePixelRatio) `= 400ms`
+
+This property is a hardcoded value.
+
+* [`PlasmaCore.Units.humanMoment`](docs:plasma;Units::humanMoment) `= 2000ms`
+
 
 ## Plasmoid property group
 
