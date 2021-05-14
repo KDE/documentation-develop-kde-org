@@ -38,7 +38,7 @@ let activityId = createActivity("org.kde.plasma.folderview")
 ```
 
 it returns the activity string Id (to not be confused from the numerical
-id of the Deskop object) The string passed into the constructor maps to
+id of the Desktop object) The string passed into the constructor maps to
 the ``X-KDE-PluginInfo-Name=`` entry in the plugin's .desktop file). See the
 documentation on the Containment object class below.
 
@@ -63,13 +63,13 @@ by its id.
 - `void setCurrentActivity(string activityId)`: Set the current activity
 using its id.
 - `array<Desktop> desktopsForActivity(string id)`: return all the
-  desktops associated to a specific activity id (one per phisical
+  desktops associated to a specific activity id (one per physical
   screen).
 - `array<Desktop> desktops()`: returns an array of all desktops
   that currently exist.
 - `Desktop desktopById(int id)`: return an object representing
   the activity with the given id
-- `Desktop desktopForScreen(number screen[, number dekstop])**:
+- `Desktop desktopForScreen(number screen[, number desktop])**:
   returns an object representing the activity currently associated with
   the given screen and, optionally, the given desktop.
 
@@ -179,7 +179,7 @@ and the following methods:
    type is specified, only widgets matching that type will be returned.
 
 In addition to all of the above properties and functions, Panel objects
-also provide the folowing read/write properties:
+also provide the following read/write properties:
 
 -  `number length`: the number of pixels along the screen edge used
 -  `number minimumLength`: (scriptingVersion >= 7) the minimum
@@ -191,7 +191,7 @@ also provide the folowing read/write properties:
 -  `string hiding`: the hiding mode of the panel, one of "none" (for
    no hiding), "autohide", "windowscover" or "windowsbelow"
 -  `string alignment`: right, left or center alignment of the panel
-   (for vertical panels, right corrsponds to top and left to bottom)
+   (for vertical panels, right corresponds to top and left to bottom)
 -  `string location`: returns the location of the activity (only
    relevant for Panels); valid values include "top", "bottom", "left",
    "right" and "floating"
@@ -468,7 +468,7 @@ Functions:
 A rectangle class is also provided for use with Widget, Panel and screen
 geometry properties and functions.
 
-Read-only properites:
+Read-only properties:
 
 -  `boolean empty`: true if the rectangle's width or height is less
    than, or equal to, 0; an empty rectangle is also invalid

@@ -222,7 +222,7 @@ Additionally, the following elements can be used to control the rendering of the
 * **[prefix]-hint-[direction]-margin**: Use this optional hints if you want different margins than the borders size. The [prefix]- part is optional and identifies the prefix of the panel you want to specify the margins. [direction] can be either top, bottom, left or right and indicates the border you want to configure. For top and bottom margins the height of these hints are used, for left and right margins the width.
 * **[prefix]-hint-compose-over-border**: if this element is resent, the center element will be drawn with the same size as the total image, composed under the borders and shaped with the alpha mask frame, that has to be present in order to make work this hint(Optional).
 
-Next there can be optionally another element called **overlay** (or **[prefix]-overlay** if to be appled to a frame with a different prefix) it will be rendered over the frame as a filigrane effects, with the rules given from the following mutually exclusive hints:
+Next there can be optionally another element called **overlay** (or **[prefix]-overlay** if to be applied to a frame with a different prefix) it will be rendered over the frame as a filigrane effects, with the rules given from the following mutually exclusive hints:
 * **hint-overlay-random-pos** it will be put at a random position, this works just for applet backgrounds
 * **hint-overlay-tile** tile the overlay
 * **hint-overlay-stretch** the overlay will be stretched
@@ -284,8 +284,8 @@ Eg: `/usr/share/icons/breeze/actions/16/go-down.svg`
 ```
 
 In the [`plasma-framework` source repository](https://invent.kde.org/frameworks/plasma-framework/), two useful tools are present:
-* [`currentColorFillFix.sh`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/tools/currentColorFillFix.sh): fixes an error in the file format that inkscape often does that would break the coorect application of the stylesheet
-* [`apply-stylesheet.sh`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/tools/apply-stylesheet.sh): looks in the SVG file for certain colors (by default from the Breeze palette) and replaces them with the corresponfing stylesheet class, automating a potential long and tedious job
+* [`currentColorFillFix.sh`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/tools/currentColorFillFix.sh): fixes an error in the file format that inkscape often does that would break the correct application of the stylesheet
+* [`apply-stylesheet.sh`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/tools/apply-stylesheet.sh): looks in the SVG file for certain colors (by default from the Breeze palette) and replaces them with the corresponding stylesheet class, automating a potential long and tedious job
 
 ##  Current Theme Elements
 
@@ -398,7 +398,7 @@ Each theme contains following file structure. All files can be in either `.svg` 
     * `plain`
     * `raised`
   * **/glowbar.svg** : a frame without a prefix, it represents a glow, it's used for instance in Plasma Desktop for the panel autohide unhide hint.
-  * **/line.svg** : a simple line use to separate items in layouts, containe `vertical-line` and `horizontal-line` elements
+  * **/line.svg** : a simple line use to separate items in layouts, contains `vertical-line` and `horizontal-line` elements
   * **/lineedit.svg**: it's a framesvg, used to style line edits, spinboxes and other similar fields, it must have the following prefixes
     * `base`: the background of the line edit
     * `focus`: will be drawn outside base, when the line edit has input focus
@@ -422,7 +422,7 @@ Each theme contains following file structure. All files can be in either `.svg` 
     * `header`: most widgets have the heading at the top
     * `footer`: popups originating from a top panel usually
   * **/plot-background.svg**: a background for plotter (graph) widgets, such as the plots in ksysguard
-  * **/scrollbar.svg** : the classical `elevator` scrollbar, must have the following elemens : `arrow-up`, `mouseover-arrow-up`, `sunken-arrow-up`, same 3 elements for `arrow-left`, `arrow-right` and `arrow-bottom`. It can have an element called `hint-scrollbar-size` that says at what size the scrollbar should be rendered (width if vertical, height if horizontal). It must also have frames with the following prefixes:
+  * **/scrollbar.svg** : the classical `elevator` scrollbar, must have the following elements : `arrow-up`, `mouseover-arrow-up`, `sunken-arrow-up`, same 3 elements for `arrow-left`, `arrow-right` and `arrow-bottom`. It can have an element called `hint-scrollbar-size` that says at what size the scrollbar should be rendered (width if vertical, height if horizontal). It must also have frames with the following prefixes:
     * `slider`
     * `mouseover-slider`
     * `sunken-slider`
@@ -535,7 +535,7 @@ The following is an attempt to list known icon names that may be themed by this 
 * Konversation
   * filename: **konversation**
     * ID: **konversation**
-  * filename: **konv_message.svg** (new incomming message)
+  * filename: **konv_message.svg** (new incoming message)
     * ID: **konv_message**
 * Kopete
   * filename: **kopete.svg**

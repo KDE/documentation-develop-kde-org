@@ -26,18 +26,18 @@ Every widget by default has a configure action when you right click the widget c
 {{< sections >}}
 {{< section-left >}}
 
-`main.xml` is where you define the properties that will be serialized into `~/.config/plasma-org.kde.plasma.desktop-appletsrc`. All properties will be accesible with `plasmoid.configuration.variableName` reguardless of was group it's in.
+`main.xml` is where you define the properties that will be serialized into `~/.config/plasma-org.kde.plasma.desktop-appletsrc`. All properties will be accessible with `plasmoid.configuration.variableName` reguardless of was group it's in.
 
 [KConfig](docs:kconfig;annotated.html) has a variety of data types:
 
 * `Int` for an Integer number
 * `Double` for a double precision floating point number (Real)
 * `String` for a string of characters to represent text
-* `Color` for a hexidecimal color. The color defaults to `#000000` (black) if the default is left empty.
+* `Color` for a hexadecimal color. The color defaults to `#000000` (black) if the default is left empty.
 * `Path` is a string that is specially treated as a file-path. In particular paths in the home directory are prefixed with `$HOME` when being stored in the configuration file.
-* `StringList` for a comma seperated list of Strings
+* `StringList` for a comma separated list of Strings
 
-I've listed the more common usecases. More can be found in [KConfigXT's documentation]({{< ref "/docs/configuration/kconfig_xt" >}}).
+I've listed the more common use cases. More can be found in [KConfigXT's documentation]({{< ref "/docs/configuration/kconfig_xt" >}}).
 
 ---
 
@@ -51,7 +51,7 @@ I personally don't recommend using `Color` if you want to default to a color fro
 
 ```qml
 PlasmaComponents.Label {
-    color: plasmoid.configruation.labelColor || PlasmaCore.ColorScope.textColor
+    color: plasmoid.configuration.labelColor || PlasmaCore.ColorScope.textColor
 }
 ```
 
@@ -525,7 +525,7 @@ Kirigami.FormLayout {
 {{< sections >}}
 {{< section-left >}}
 
-[`KQuickAddons.IconDialog`](https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kquickcontrolsaddons/icondialog.h) makes it easy to seach and preview icons.
+[`KQuickAddons.IconDialog`](https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kquickcontrolsaddons/icondialog.h) makes it easy to search and preview icons.
 
 See the [configurable icon example]({{< ref "examples.md#configurable-icon" >}}) for an example of [KQuickAddons.IconDialog](https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kquickcontrolsaddons/icondialog.h) based on the Application Launcher's (aka kickoff) [icon selector code](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/package/contents/ui/ConfigGeneral.qml#L39-87).
 
@@ -542,7 +542,7 @@ See the [configurable icon example]({{< ref "examples.md#configurable-icon" >}})
 {{< sections >}}
 {{< section-left >}}
 
-You can also assign directly to `plasmoid.configuration.variableName` if necessary in the configruation window or anywhere else in your widget. If you do this in the configuration page, you will skip the "apply" process and the property will be applied right away. I leave this up to the reader whether this is a pro or con.
+You can also assign directly to `plasmoid.configuration.variableName` if necessary in the configuration window or anywhere else in your widget. If you do this in the configuration page, you will skip the "apply" process and the property will be applied right away. I leave this up to the reader whether this is a pro or con.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -600,9 +600,9 @@ Zren has written a few files that apply the above pattern of skipping "Apply" an
 * [libconfig/RadioButtonGroup.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/RadioButtonGroup.qml) takes a similar model as `ComboBox.qml` but will display the options as [`RadioButton`](https://doc.qt.io/qt-5/qml-qtquick-controls2-radiobutton.html).
 * [libconfig/SpinBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/SpinBox.qml) for Integer or Real numbers.
 * [libconfig/TextAlign.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextAlign.qml) for use with an `Int` config data type. It has your typical 4 buttons for left/center/right/justify alignment. It serializes the `Text.AlignHCenter` enum.
-    * [TextFormat.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextFormat.qml) is used to toggle bold, italic, underline, and embeds the text alignment. For use with 3 `Bool` config keys and 1 `Int` config key (used for the embeded `TextAlign.qml`).
+    * [TextFormat.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextFormat.qml) is used to toggle bold, italic, underline, and embeds the text alignment. For use with 3 `Bool` config keys and 1 `Int` config key (used for the embedded `TextAlign.qml`).
 * [libconfig/TextArea.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextArea.qml) for a string with multiple lines of text.
-    * [TextAreaStringList.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextAreaStringList.qml) overloads `TextArea.qml`'s `valueToText(value)` and `textToValue(text)` functions to treat a new line as the seperator for the `StringList` type.
+    * [TextAreaStringList.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextAreaStringList.qml) overloads `TextArea.qml`'s `valueToText(value)` and `textToValue(text)` functions to treat a new line as the separator for the `StringList` type.
 * [libconfig/TextField.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/TextField.qml) for a single line of text.
 
 {{< /section-left >}}

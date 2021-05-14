@@ -103,7 +103,7 @@ modify config values.
 
 ## Global theme dependent default setup for applets
 
-The globale theme (also know as look and feel package) can contain JavaScript
+The global theme (also know as look and feel package) can contain JavaScript
 files to override the default configuration for applets, if distributions or system
 integrators want to have a different default setup. The JS files are
 located under the  package folder, for instance

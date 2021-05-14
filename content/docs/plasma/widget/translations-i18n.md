@@ -35,7 +35,7 @@ CheckBox {
 {{< sections >}}
 {{< section-left >}}
 
-The `i18n(...)` is an overloaded function which allows you to pass values into the translation `i18n(format, variable1, variable2)`. Just place `%1` where you want the first variable to be substitued, and `%2` where the second should go.
+The `i18n(...)` is an overloaded function which allows you to pass values into the translation `i18n(format, variable1, variable2)`. Just place `%1` where you want the first variable to be substituted, and `%2` where the second should go.
 
 {{< /section-left >}}
 {{< section-right >}}

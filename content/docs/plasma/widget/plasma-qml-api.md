@@ -111,7 +111,7 @@ ColumnLayout {
 {{< sections >}}
 {{< section-left >}}
 
-For mutiple choices, QML also ships with [ComboBox](docs:qtquickcontrols;QtQuick.Controls.ComboBox) (dropdown menu). For Plasma's specific changes, you can read the QML source code at:
+For multiple choices, QML also ships with [ComboBox](docs:qtquickcontrols;QtQuick.Controls.ComboBox) (dropdown menu). For Plasma's specific changes, you can read the QML source code at:
 
 * [`ComboBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ComboBox.qml)
 
@@ -349,7 +349,7 @@ PlasmaComponents3.ScrollView {
 ## PlasmaExtras
 
 To be consistent with elsewhere in Plasma, Plasma ships with a couple of special components.
-These components have their own API and are particulary helpful when creating a Plama Widget.
+These components have their own API and are particularly helpful when creating a Plasma Widget.
 
 You will need to import `PlasmaExtras` to use them.
 
@@ -447,7 +447,7 @@ The `QuickTheme` class extends [Plasma::Theme](docs:plasma;Units::devicePixelRat
 
 ### PlasmaCore.Units.devicePixelRatio
 
-In order to scale an Item by display scaling to support HiDPI monitors, you will need to multiply a pixel value by [`PlasmaCore.Units.devicePixelRatio`](docs:plasma;Units::devicePixelRatio). Plasma also ships with a few preset values for consitent spacing throughout Plasma.
+In order to scale an Item by display scaling to support HiDPI monitors, you will need to multiply a pixel value by [`PlasmaCore.Units.devicePixelRatio`](docs:plasma;Units::devicePixelRatio). Plasma also ships with a few preset values for consistent spacing throughout Plasma.
 
 * [`PlasmaCore.Units.devicePixelRatio`](docs:plasma;Units::devicePixelRatio) `=` [`QScreen::logicalDotsPerInchX`](https://doc.qt.io/qt-5/qscreen.html#logicalDotsPerInchX-prop) `/ 96` (Primary Screen)
 * [`PlasmaCore.Units.smallSpacing`](docs:plasma;Units::smallSpacing) `= max(2, gridUnit/4)`
