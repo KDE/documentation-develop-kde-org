@@ -1,7 +1,7 @@
 ---
 title: KWin Scripting Tutorial
-weith: 4
-description: Learn how to programically manipulate windows with KWin scripts.
+weight: 4
+description: Learn how to programmatically manipulate windows with KWin scripts.
 ---
 
 ## Quick Start: Desktop Console
@@ -197,10 +197,10 @@ workspace.clientMaximizeSet.connect(manageKeepAbove);
 
 ### Restoring it all
 
-Now the last and most important part of it all. Whenver the client is restored, we must set it’s `‘Keep Above’`
+Now the last and most important part of it all. Whenever the client is restored, we must set it’s `‘Keep Above’`
 property if it was set earlier. To do this, we must simply extend our manageKeepAbove code to handle this
 scenario. In case the client is not maximized both vertically and horizontally, we check if the client is
-in our keepAboveMaximized arrray and if it is, we set its ‘Keep Above’ property, otherwise we don’t bother:
+in our keepAboveMaximized array and if it is, we set its ‘Keep Above’ property, otherwise we don’t bother:
 
 ```js
 function manageKeepAbove(client, h, v) {

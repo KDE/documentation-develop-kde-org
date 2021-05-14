@@ -66,9 +66,9 @@ Methods and properties added to the global JavaScript object.
 * `int workspaceWidth`
 * `int workspaceHeight`
 * `QSize workspaceSize`
-* `QSize displaySize`: The same of the display, that is all screens. Deprecatedsince 5.0 use virtualScreenSize
-* `int displayWidth`: The width of the display, that is width of all combined screens. Deprecatedsince 5.0 use virtualScreenSize
-* `int displayHeight`: The height of the display, that is height of all combined screens. Deprecatedsince 5.0 use virtualScreenSize
+* `QSize displaySize`: The same of the display, that is all screens. Deprecated since 5.0 use virtualScreenSize
+* `int displayWidth`: The width of the display, that is width of all combined screens. Deprecated since 5.0 use virtualScreenSize
+* `int displayHeight`: The height of the display, that is height of all combined screens. Deprecated since 5.0 use virtualScreenSize
 * `int activeScreen`
 * `int numScreens`
 * `QStringList activities`
@@ -187,7 +187,7 @@ Methods and properties added to the global JavaScript object.
 
 * `ClickToFocus`: Clicking into a window activates it. This is also the default.
 * `FocusFollowsMouse`: Moving the mouse pointer actively onto a normal window activates it. For convenience, the desktop and windows on the dock are excluded. They require clicking.
-* `FocusUnderMouse`: The window that happens to be under the mouse pointer becomes active. The invariant is: no window can have focus that is not under the mouse. This also means that Alt-Tab won't work properly and popup dialogs are usually unsable with the keyboard. Note that the desktop and windows on the dock are excluded for convenience. They get focus only when clicking on it.
+* `FocusUnderMouse`: The window that happens to be under the mouse pointer becomes active. The invariant is: no window can have focus that is not under the mouse. This also means that `Alt+Tab` won't work properly and popup dialogs are usually unusable with the keyboard. Note that the desktop and windows on the dock are excluded for convenience. They get focus only when clicking on it.
 * `FocusStrictlyUnderMouse`: This is even worse than FocusUnderMouse. Only the window under the mouse pointer is active. If the mouse points nowhere, nothing has the focus. If the mouse points onto the desktop, the desktop has focus. The same holds for windows on the dock.
 
 #### WindowOperation
@@ -281,7 +281,7 @@ Methods and properties added to the global JavaScript object.
 * `int delayFocusInterval`: Delayed focus interval.
 * `bool shadeHover`: Whether shade hover is enabled or not.
 * `int shadeHoverInterval`: Shade hover interval.
-* `bool separateScreenFocus`: Whether to see Xinerama screens separately for focus (in Alt+Tab, when activating next client)
+* `bool separateScreenFocus`: Whether to see Xinerama screens separately for focus (in `Alt+Tab`, when activating next client)
 * `int placement`
 * `int borderSnapZone`: The size of the zone that triggers snapping on desktop borders.
 * `int windowSnapZone`: The size of the zone that triggers snapping with other windows.
@@ -456,7 +456,7 @@ Methods and properties added to the global JavaScript object.
 * `opacityChanged(KWin::Toplevel *toplevel, qreal oldOpacity)`
 * `damaged(KWin::Toplevel *toplevel, const QRegion &damage)`
 * `inputTransformationChanged()`
-* `geometryChanged()`: This signal is emitted when the Toplevel's frame geometry changes. Deprecatedsince 5.19, use frameGeometryChanged instead
+* `geometryChanged()`: This signal is emitted when the Toplevel's frame geometry changes. Deprecated since 5.19, use frameGeometryChanged instead
 * `geometryShapeChanged(KWin::Toplevel *toplevel, const QRect &old)`
 * `paddingChanged(KWin::Toplevel *toplevel, const QRect &old)`
 * `windowClosed(KWin::Toplevel *toplevel, KWin::Deleted *deleted)`
