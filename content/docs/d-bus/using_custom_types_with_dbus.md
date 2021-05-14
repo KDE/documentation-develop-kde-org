@@ -55,7 +55,7 @@ This is done by specifying annotations:
 value="*customType*"/>
 ```
 
-The syntax differs slightly depending on wheter you're using it in a signal/method or in a property (the `.In0` is omitted for properties), but it is fairly straightforward. The following is an example dealing with the QRect type (it has no relation with the example):
+The syntax differs slightly depending on whether you're using it in a signal/method or in a property (the `.In0` is omitted for properties), but it is fairly straightforward. The following is an example dealing with the QRect type (it has no relation with the example):
 
 {{< readfile file="/content/docs/d-bus/using_custom_types_with_dbus/qrect.xml" highlight="xml" >}}
 
@@ -64,7 +64,7 @@ Don't worry too much about what type to specify; any type that is somewhat too c
 
 If any of your methods returns a complex result, you need to add an annotation for `org.qtproject.QtDBus.QtTypeName.Out0` as well.
 
-If any of your signals have arguments with complex types, agaiin you need to add an annotation for `org.qtproject.QtDBus.QtTypeName.Out0`. For backward-compatibility with Qt < 5.6.3 & 5.7.0 though you can use `org.qtproject.QtDBus.QtTypeName.In0` as with the arguments of a normal method. `qdbusxml2cpp` supports that still in later versions, but will emit a warning.
+If any of your signals have arguments with complex types, again you need to add an annotation for `org.qtproject.QtDBus.QtTypeName.Out0`. For backward-compatibility with Qt < 5.6.3 & 5.7.0 though you can use `org.qtproject.QtDBus.QtTypeName.In0` as with the arguments of a normal method. `qdbusxml2cpp` supports that still in later versions, but will emit a warning.
 Note
 The XML above uses QRects. QRect is supported by default, so the code above would be generated for you by `qdbuscpp2xml`.
 
@@ -247,7 +247,7 @@ This is where the boost library comes to our aid. With some magic, it supports c
 
 That way, we can provide `QDBusArgument` marshaling and unmarshalling implementations that will be used only in situations when such a conditional is true.
 
-This is what the marshaling and unmarshaling code actually looks like:
+This is what the marshaling and unmarshalling code actually looks like:
 
 {{< readfile file="/content/docs/d-bus/using_custom_types_with_dbus/marshaling.cpp" highlight="cpp" >}}
 

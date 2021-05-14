@@ -120,7 +120,7 @@ The fields are defined as follows:
 [Domain]
 Name=The KAuth example series
 Icon=kauth-example
-URL=http://techbase.kde.org/
+URL=https://techbase.kde.org/
 ```
 
 The fields are defined as follows:

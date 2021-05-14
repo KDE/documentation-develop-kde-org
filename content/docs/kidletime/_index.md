@@ -12,7 +12,7 @@ notified upon idle time events, such as custom timeouts or user activity. It fea
 
 * current idling time
 * timeout notifications, to be emitted if the system idled for a specified time
-* activity notifications, if the user resumes acting after an idling periode
+* activity notifications, if the user resumes acting after an idling period
 
 ## Using It
 

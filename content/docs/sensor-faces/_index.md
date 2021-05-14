@@ -9,7 +9,7 @@ SPDX-FileCopyrightText: 2020 David Redondo <kde@david-redondo.de>
 ---
 ## Folder structure
 A sensor face consists of multiple parts of which some are required and others are optional. The 
-folder structure looks like this and is similiar to the one of Plasma widgets:
+folder structure looks like this and is similar to the one of Plasma widgets:
 
  ```
 rootdir
@@ -35,13 +35,13 @@ face and tells the system about it.
 
 
 
-## The visual represenations
-Both represenations follow the same schema but are used in different contextes. The full represenation
+## The visual representations
+Both representations follow the same schema but are used in different contexts. The full representation
 is the one that is normally used and contains additional elements like for example a legend or a title.
-The compact represenation on the other hand is used when something that takes much less space is required.
+The compact representation on the other hand is used when something that takes much less space is required.
 One instance of this is when the systemmonitor widget is added to a panel in Plasma.
 
-The root item of both represenations has to be [SensorFace](docs:libksysguard;KSysGuard::SensorFace). Assign the
+The root item of both representations has to be [SensorFace](docs:libksysguard;KSysGuard::SensorFace). Assign the
 root of your custom visualization to its `contentItem` property. `SensorFace` also allows to access
 the face controller via the `controller` property. It tells the face which sensors to display and in
 which way this should be done. The most important property of it is
@@ -97,7 +97,7 @@ Other interesting properties of the face controller are:<a name="controllerProps
 
 For a list of all available properties see [SensorFaceController](docs:libksysguard;KSysGuard::SensorFaceController).
 
-Using some of the above properties the basic sensor frace from above can be iterated upon to also show
+Using some of the above properties the basic sensor face from above can be iterated upon to also show
 a title and the color for each sensor:
 {{< sections >}}
 {{< section-left >}}
@@ -391,7 +391,7 @@ SupportsSensorsColors=false
 SupportsTotalSensors=true
 MaxTotalSensors=2
 ```
-This face does not support sensor colors which is declared explicitely and also does not support
+This face does not support sensor colors which is declared explicitly and also does not support
 low priority sensors because the default is  `false`. It however supports display of two total sensors
 ### Installation
 To enable applications finding a face it needs to be installed into a specific directory. This is typically

@@ -19,7 +19,7 @@ kconf_update is started automatically when KDED detects a new update file in the
 
 If you overwrite an existing update file with a new version that contains a new section, only the update instructions from this new section will be processed.
 
-If your application does not depend explicitely on KDED (e. g. if your target platform isn’t Linux or FreeBSD), kconf_update may not be started automatically. You can start it manually using KConfig::checkUpdate(). Note that kconf_update might process your update multiple times simultaneously in this case. This can cause problems if your update file uses the Script= command. See Development/Tools/Using_kconf_update#Note on side effects for more details.
+If your application does not depend explicitly on KDED (e. g. if your target platform isn’t Linux or FreeBSD), kconf_update may not be started automatically. You can start it manually using KConfig::checkUpdate(). Note that kconf_update might process your update multiple times simultaneously in this case. This can cause problems if your update file uses the Script= command. See Development/Tools/Using_kconf_update#Note on side effects for more details.
 How to use[edit]
 
 To use kconf_update in your application, you only need to write an update file and install it in the right place. An example update file is in the section #Moving configuration data around.
@@ -232,7 +232,7 @@ find_package(KF5 ${KF5_REQUIRED_VERSION} REQUIRED COMPONENTS
 install(FILES conf/update/myApp_configFiles.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(FILES conf/update/myApp_no_more_double_negation_2020.py DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 
-Don’t forget that your appliation now depends on python3.
+Don’t forget that your application now depends on python3.
 Example compiled update script[edit]
 
 Imagine your application made the state of a KActionMenu user configurable. Because you changed to the new QToolButton::ToolButtonPopupMode API, you need to migrate from the old delayed and stickyMenu entries to the new popupMode entry. You can do that with the following compiled update script, which uses the KConfig framework directly:

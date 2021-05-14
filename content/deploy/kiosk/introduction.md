@@ -122,7 +122,7 @@ user's KDE configuration directory.
 
 Setting default configuration options for KDE applications is just as
 easy as fixing the desktop background. We could lock Dolphin settings to
-always show the available space insicator in its statusbar by setting
+always show the available space indicator in its statusbar by setting
 the following in a file called `dolphinrc` in one of the system
 directory trees:
 

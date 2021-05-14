@@ -188,9 +188,9 @@ custom data you want.
 
 In this example code, the loop exits when the `HelperSupport::isStopped()`
 returns true. This happens when the application calls the `HelperProxy::stopAction()`
-method on the correponding action object.
+method on the corresponding action object.
 The `stopAction()` method, this way, asks the helper to
-stop the action execution. It's up to the helper to obbey to this request, and
+stop the action execution. It's up to the helper to obey to this request, and
 if it does so, it should return from the slot, _not_ exit.
 
 ## Other features
@@ -211,11 +211,11 @@ You'll see something like this in the <i>application</i>'s output:
 Debug message from the helper: I'm in the helper
 ```
 
-Remember that the debug level is preserved, so if you use qFatal() you won't
+Remember that the debug level is preserved, so if you use `qFatal()` you won't
 only abort the helper (which isn't suggested anyway), but also the application.
 
 
 
 <!-- TODO ## Getting data back -->
 
-These code examples are licencied under the LGPL-2.1-or-later licence.
+These code examples are licenced under the LGPL-2.1-or-later licence.

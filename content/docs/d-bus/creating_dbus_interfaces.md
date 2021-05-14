@@ -124,7 +124,7 @@ qt5_generate_dbus_interface(
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.foo.Background.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
 ```
 
-This will generate `org.foo.Background.xml` from `background.h` and install it in `${DBUS_INTERFACES_INSTALL_DIR}` (wich usally means `/usr/share/dbus-1/interfaces`).
+This will generate `org.foo.Background.xml` from `background.h` and install it in `${DBUS_INTERFACES_INSTALL_DIR}` (which usually means `/usr/share/dbus-1/interfaces`).
 
 ### Export the interface using CMake
 
@@ -156,7 +156,7 @@ In line 6 we register the service path with DBus. This name should not be used b
 ```
 in your `main` function, the service name `org.kde.myapp` is auto registered and you can safely omit line 6.
 
-In line 7 we register this class as an object at `org.kde.myapp/foobar/org.foo.Background`. Note that other than the case of `/` which is the root path, the first argument should never end with `/`. The second argument is the pointer to the class you want to expose to DBus, this class should be a subclass of `QObject` and have `Q_CLASSINFO("D-Bus Interface", "org.foo.Background")`. The third argument is the methods you want to exposed to DBus, for detailed infomation, head to [Qt's documentation on QDBusConnection](https://doc.qt.io/qt-5/qdbusconnection.html#RegisterOption-enum).
+In line 7 we register this class as an object at `org.kde.myapp/foobar/org.foo.Background`. Note that other than the case of `/` which is the root path, the first argument should never end with `/`. The second argument is the pointer to the class you want to expose to DBus, this class should be a subclass of `QObject` and have `Q_CLASSINFO("D-Bus Interface", "org.foo.Background")`. The third argument is the methods you want to exposed to DBus, for detailed information, head to [Qt's documentation on QDBusConnection](https://doc.qt.io/qt-5/qdbusconnection.html#RegisterOption-enum).
 
 However, if you have multiple instances of this class, we need to edit above example to avoid path conflict. Replace `QDBusConnection::sessionBus().registerObject("/foobar", this, QDBusConnection::ExportScriptableContents);` with `QDBusConnection::sessionBus().registerObject("/foobar/" + QString("YOUR UNIQUE INSTANCE IDENTIFIER"), this, QDBusConnection::ExportScriptableContents);`
 

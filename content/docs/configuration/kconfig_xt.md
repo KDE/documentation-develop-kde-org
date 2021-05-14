@@ -98,7 +98,7 @@ values.
 ### Compute the default value
 
 Sometimes it is useful to dynamically compute a default value from a C++ expression.
-This can be done by adding the `code=true` atribute to the `<default>` tag. Please be
+This can be done by adding the `code=true` attribute to the `<default>` tag. Please be
 aware that the code inside of a `default` tag will be used as parameter of a function call.
 This is a valid code for the `default` tag:
 

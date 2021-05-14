@@ -9,7 +9,7 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 
 Sonnet is a useful framework provided by KDE for software developers who
 want to solve the problem of spellchecking in text editors. It has a plugin
-based architechture with support for HSpell, Enchant, ASpell and HUNSPELL
+based architecture with support for HSpell, Enchant, ASpell and HUNSPELL
 plugins. It even supports automated language detection, based on a combination
 of different algorithms.
 
@@ -31,7 +31,7 @@ will ignore quoted parts of a email.
 ## Language Detection in Sonnet
 
 Sonnet can determine the difference between ~75 languages for a given string.
-It is based off a perl script origionaly written by Maciej Ceglowski called
+It is based off a perl script originally written by Maciej Ceglowski called
 Languid. His script used a two-part heuristic to determine language. First
 the text is checked for the scripts it contains, next for each set of languages
 using those scripts a n-gram frequency model of a given language is compared to

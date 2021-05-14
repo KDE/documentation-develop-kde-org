@@ -167,7 +167,7 @@ When accessing a .desktop file, one should instead use the [KDesktopFile](docs:k
 
 ## Kiosk: Lockdown and User/Group Profiles
 
-KConfig provides a powerful set of lockdown and configuration definition capabilities, collectively known as "Kiosk", that many system administrators and system integrators rely on. While most of this framework is provided transparently to the application, there is occassion when an application will want to check on the read/write status of a configuration object. 
+KConfig provides a powerful set of lockdown and configuration definition capabilities, collectively known as "Kiosk", that many system administrators and system integrators rely on. While most of this framework is provided transparently to the application, there is occasion when an application will want to check on the read/write status of a configuration object. 
 
 Entries in configuration objects that are locked down using the kiosk facilities are said to be immutable. An application can check for immutability of entire configuration objects, groups or keys as shown in this example: 
 
