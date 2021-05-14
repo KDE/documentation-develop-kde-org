@@ -507,7 +507,7 @@ These properties are scaled by the Animation Speed in System Settings.
 * [`PlasmaCore.Units.longDuration`](docs:plasma;Units::devicePixelRatio) `= 200ms`
 * [`PlasmaCore.Units.veryLongDuration`](docs:plasma;Units::devicePixelRatio) `= 400ms`
 
-This property is a hardcoded value.
+This property is a hardcoded value and shouldn't be used for animations. Instead, it can be used to measure how long to wait until the user should be informed of something, or can be used as the limit for how long something should wait before being automatically initiated.
 
 * [`PlasmaCore.Units.humanMoment`](docs:plasma;Units::humanMoment) `= 2000ms`
 
