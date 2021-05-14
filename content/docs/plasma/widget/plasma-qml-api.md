@@ -604,7 +604,7 @@ The common `metadata.desktop` properties are covered in the [setup widget sectio
 The full list of custom `.desktop` file properties for widgets is defined in the [`Plasma/Applet` service type](
 https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasma/data/servicetypes/plasma-applet.desktop).
 
-`metadata.desktop` is the original format while `metadata.json` is the newer replacement format. The `.desktop` file is simpler to script with using `kreadconfig5` which is the reason why this tutorial prefers it. You can read up on [`metadata.json` in the API Documentation](docs:kcoreaddons;KPluginMetaData).
+`metadata.desktop` is the original format while `metadata.json` is the newer replacement format. The `.desktop` file is simpler to script using `kreadconfig5` which is the reason why this tutorial prefers it. You can read up on [`metadata.json` in the API Documentation](docs:kcoreaddons;KPluginMetaData).
 
 ### Name, Comment
 
@@ -651,7 +651,7 @@ Icon=office-calendar
 {{< sections >}}
 {{< section-left >}}
 
-`X-KDE-PluginInfo-Name` needs to be a unique name, since it's used for the folder name its installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you're planning on contributing the widget to KDE. You should consider this the widget's namespace.
+`X-KDE-PluginInfo-Name` needs to be a unique name, since it's used for the folder name it's installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you're planning on contributing the widget to KDE. You should consider this the widget's namespace.
 
 
 {{< /section-left >}}
@@ -665,7 +665,7 @@ Icon=office-calendar
 
 ### X-KDE-PluginInfo-Category
 
-`X-KDE-PluginInfo-Category` is the category the widget can be filtered with in the widget list.
+`X-KDE-PluginInfo-Category` is the category the widget can be filtered within the widget list.
 
 ```ini
 [Desktop Entry]
@@ -696,9 +696,9 @@ This list was taken from: <https://techbase.kde.org/Projects/Plasma/PIG>
 
 ### X-KDE-ServiceTypes
 
-`X-KDE-ServiceTypes` is a comma seperated list of types. For a plasma widget, it should be `Plasma/Applet`. You may encounter widgets with `Plasma/Containment` as well, like [the System Tray widget](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/systemtray/package/metadata.desktop#L93).
+`X-KDE-ServiceTypes` is a comma-separated list of types. For a plasma widget, it should be `Plasma/Applet`. You may encounter widgets with `Plasma/Containment` as well, like [the System Tray widget](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/systemtray/package/metadata.desktop#L93).
 
-The defined plasma sevice types and their custom `.desktop` file properties are found in:  
+The defined plasma service types and their custom `.desktop` file properties are found in:  
 [`plasma-framework/src/plasma/data/servicetypes`](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/plasma/data/servicetypes)
 
 
@@ -766,7 +766,7 @@ X-Plasma-NotificationAreaCategory=ApplicationStatus
 X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
 ```
 
-By specifiying `X-Plasma-NotificationArea`, this widget will be found by the systemtray widget.
+By specifying `X-Plasma-NotificationArea`, this widget will be found by the systemtray widget.
 
 `X-KDE-PluginInfo-EnabledByDefault` will make sure it's enabled in the systemtray by default.
 
@@ -785,7 +785,7 @@ You can search plasma's code for more examples:
 
 ### X-Plasma-DBusActivationService
 
-`X-Plasma-DBusActivationService` will load and unload widgets in the systemtray automatically when a DBus service becomes avaiable or is stopped. This is very convenient to load widgets automatically, so the user doesn't have to explicitely go to the notification area settings and enable or remove a widget.
+`X-Plasma-DBusActivationService` will load and unload widgets in the systemtray automatically when a DBus service becomes available or is stopped. This is very convenient to load widgets automatically, so the user doesn't have to explicitly go to the notification area settings and enable or remove a widget.
 
 An example of this is the Media Controller widget, which is auto-loaded as soon as an application starts offering the `org.mpris.MediaPlayer2` DBus service in the session. As you can see [in its `metadata.desktop` file](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/mediacontroller/metadata.desktop#L123), `X-Plasma-DBusActivationService` accepts wildcards which makes it a bit easier to match DBus names. This key can also be very useful to avoid having a widget loaded when it's unnecessary, so it can help to avoid visual clutter and wasted memory.
 

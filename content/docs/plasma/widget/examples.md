@@ -372,7 +372,7 @@ Solar is part of the "time" dataengine. It provides the sun's [Azimuth](https://
 * Select the `time` dataengine.
 * Enter something like the following into the source name:  
   `UTC-04:00|Solar|Latitude=43.68|Longitude=79.63|DateTime=2021-03-23T19:00:00`  
-  Above is example is for Toronto, Canada.
+  The above example is for Toronto, Canada.
 * Click "Request Source", then scroll down to the bottom to find the new data.
 
 Examples: 
