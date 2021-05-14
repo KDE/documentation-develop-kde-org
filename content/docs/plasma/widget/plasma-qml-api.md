@@ -428,13 +428,13 @@ The full list of `PlasmaCore.Theme` color properties can be found in the `QuickT
 
 The `QuickTheme` class extends [Plasma::Theme](docs:plasma;Units::devicePixelRatio) which also contains:
 
-* `defaultFont` [`font`](https://doc.qt.io/qt-5/qml-font.html)
-* `palette` [`palette`](https://doc.qt.io/qt-5/qml-palette.html)
-* `smallestFont` [`font`](https://doc.qt.io/qt-5/qml-font.html)
-* `styleSheet` [`string`](https://doc.qt.io/qt-5/qml-string.html)
-* `themeName` [`string`](https://doc.qt.io/qt-5/qml-string.html)
-* `useGlobalSettings` [`bool`](https://doc.qt.io/qt-5/qml-bool.html)
-* `wallpaperPath` [`string`](https://doc.qt.io/qt-5/qml-string.html)
+* `PlasmaCore.Theme.defaultFont` [`font`](https://doc.qt.io/qt-5/qml-font.html)
+* `PlasmaCore.Theme.palette` [`palette`](https://doc.qt.io/qt-5/qml-palette.html)
+* `PlasmaCore.Theme.smallestFont` [`font`](https://doc.qt.io/qt-5/qml-font.html)
+* `PlasmaCore.Theme.styleSheet` [`string`](https://doc.qt.io/qt-5/qml-string.html)
+* `PlasmaCore.Theme.themeName` [`string`](https://doc.qt.io/qt-5/qml-string.html)
+* `PlasmaCore.Theme.useGlobalSettings` [`bool`](https://doc.qt.io/qt-5/qml-bool.html)
+* `PlasmaCore.Theme.wallpaperPath` [`string`](https://doc.qt.io/qt-5/qml-string.html)
 
 
 ### PlasmaCore.Units.devicePixelRatio
