@@ -10,7 +10,7 @@ Introduction
 Responsiveness means that the user interface adjusts to changes in
 screen or window size. While Plasma and especially Kirigami are highly
 responsive, this is not a replacement for
-[optimized convegence](../convergence). It
+[optimized convergence](../convergence). It
 is not supposed to be used as a replacement for different UI and UX for
 different interaction methods (mouse, touch, pointer, remote, \...) or
 different form factors like mobiles and televisions. Instead, it means

@@ -54,7 +54,7 @@ each other depending on the available space.
 
 ### Appearance
 
-It is recomended that you use the standard card layout for consistency,
+It is recommended that you use the standard card layout for consistency,
 but cards can have a lot of different layouts.
 
 ![](/hig/Card6.png)

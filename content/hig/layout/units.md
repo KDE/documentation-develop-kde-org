@@ -43,7 +43,7 @@ mockups you can just ignore this setting.
 PPI / DPI Independent Pixels
 ----------------------------
 
-A DPI independet pixel is scaled to look uniform on any screen
+A DPI independent pixel is scaled to look uniform on any screen
 regardless of its DPI. A lot of platforms, eg iOS, Android, the web,
 replaced the old physical px with a DPI px. So most of the time you read
 about pixel/px they're most likely talking about DPI independent
@@ -83,7 +83,7 @@ Since Plasma allows the user to change the font settings, any objects
 with dimensions defined with px (DPI independent or not) can have issues
 with text.
 
-![Using DPI independet pixels with
+![Using DPI independent pixels with
 different font settings](/hig/Font.qml.png)
 
 Base Units in Plasma and Kirigami
@@ -182,9 +182,9 @@ You don't have to provide measurement for objects that can be easily
 calculated. For example the size of the dark rectangle in the above
 example can be easily obtained.
 
-### Recomended Spacings
+### Recommended Spacings
 
-When you design, try to use the recomended values for margin and
+When you design, try to use the recommended values for margin and
 paddings, to ensure a uniform appearance. See
 [Metrics and Placement](../metrics) for more details.
 

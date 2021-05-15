@@ -38,8 +38,8 @@ The text of a GNS button should be made of these parts:
     user must provide additional input to complete the task.
 
 The button should always be placed on the bottom right of the list or
-grid that can be ammended. If you want a button to install from the
-local file system, place it to the left og the GNS button.
+grid that can be amended. If you want a button to install from the
+local file system, place it to the left of the GNS button.
 
 ![Button placement at the bottom of the content
 grid](/hig/Systemsettings-PlasmaTheme.png)

@@ -57,7 +57,7 @@ pairing confirmation.
 
 #### Urgency
 
-It is recommended that a notification carrys an urgency hint:
+It is recommended that a notification carries an urgency hint:
 
 -   0 -- Low, "Matt is now online", "You just plugged in your AC
     adapter"

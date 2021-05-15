@@ -8,12 +8,12 @@ available choices. The main component only displays the selected items,
 and more items can be added by choosing them from a list or grid in a
 dialog or overlay.
 
-In compairison to dual lists, they work well on desktop and mobile.
+In comparison to dual lists, they work well on desktop and mobile.
 
 Example
 -------
 
-![Use of a picker to select aditional
+![Use of a picker to select additional
 languages.](/hig/LanguagePicker.png)
 
 When to Use
@@ -29,7 +29,7 @@ When to Use
 How to Use
 ----------
 
-![Using an overlay to pick aditional items.](/hig/PickerOverlay.png)
+![Using an overlay to pick additional items.](/hig/PickerOverlay.png)
 
 -   Use a [grid](/components/editing/grid) or a [list](/components/editing/list)
     to display the selected elements.

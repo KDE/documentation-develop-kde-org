@@ -72,7 +72,7 @@ laying out and spacing of your controls.
 
 For consistency you should try to use Kirigami and Plasma's
 `smallSpacing` and `largeSpacing` for margins and paddings whenever
-possible. See [Units and Measurments](../units) for more details.
+possible. See [Units and Measurements](../units) for more details.
 
 When more spacing is required, use multiples of `smallSpacing` or
 `largeSpacing`.

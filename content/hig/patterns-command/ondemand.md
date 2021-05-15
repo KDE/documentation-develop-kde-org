@@ -45,7 +45,7 @@ Behavior
 On-demand controls are shown when hovering over the item with the
 cursor. A handle can be added to enable touch screen support. As soon as
 the user taps anywhere else or the pointer is not any longer hovering
-the item, the on-demand controls are hiden again.
+the item, the on-demand controls are hidden again.
 
 ### Mobile
 
@@ -53,4 +53,4 @@ On-demand controls are revealed by sliding a handle from right to left
 to reveal them. As soon as the user taps anywhere else, the handle is
 slid back.
 
-For futher guidelines see [list item](/components/editing/list>).
+For further guidelines see [list item](/components/editing/list>).

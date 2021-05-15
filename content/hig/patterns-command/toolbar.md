@@ -34,7 +34,7 @@ Mobile
 
 ![Toolbar](/hig/Actionbutton2.png)
 
-On mobile, a toolbar is diplayed as a group of
+On mobile, a toolbar is displayed as a group of
 [primary action buttons](/components/navigation/actionbutton).
 
 -   If there are controls that need to be accessed often within the

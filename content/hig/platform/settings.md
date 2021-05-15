@@ -77,7 +77,7 @@ Guidelines
 -   Ctrl + Tab should switch between logical groups of controls.
 
 {{< alert title="Attention" color="warning" >}}
-For [accessiblity](/accessibility/)
+For [accessibility](/accessibility/)
 make sure to test keyboard navigation with the settings. Make sure to
 set the focus to focused controls and don't just highlight it.
 {{< /alert >}}

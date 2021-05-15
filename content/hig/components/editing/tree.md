@@ -11,7 +11,7 @@ Purpose
 Tree view allows users to view and interact with objects arranged in
 hierarchical mode. Users can make single selections or multiple
 selections. Objects containing data are called *leaf nodes* and objects
-contianing sub-objects are called *container nodes*. The top-most
+containing sub-objects are called *container nodes*. The top-most
 container node is called the *root node*.
 
 ![TreeView.png](/hig/TreeView.png)

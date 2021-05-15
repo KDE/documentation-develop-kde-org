@@ -20,7 +20,7 @@ most frequently used functions. A good menu bar is a comprehensive
 catalog of all the available top-level commands, whereas a good toolbar
 gives quick, convenient access to frequently used commands.
 
-As part of another component, like a card or an inline mesage, it is
+As part of another component, like a card or an inline message, it is
 used to allow quick access to the most important commands for a single,
 focused content item.
 
@@ -59,7 +59,7 @@ Guidelines for Components
 -   Use a toolbar only if an item has few actions or few frequently used
     actions.
 -   Embed a toolbar only in another control that is clearly visually
-    seperated like a card or an inline message.
+    separated like a card or an inline message.
 
 ### Behavior
 

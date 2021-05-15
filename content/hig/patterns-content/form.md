@@ -112,7 +112,7 @@ Alternatively, you can use separators for a stronger separation.
 
 ![Using a separator to group controls](/hig/Form4.png)
 
-To create even stronger separation, you can add subtiles for groups of
+To create even stronger separation, you can add subtitles for groups of
 controls. Subtitles are left aligned with the longest label of their
 group.
 

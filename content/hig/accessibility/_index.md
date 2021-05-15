@@ -15,7 +15,7 @@ Introduction
 > *Source*: <https://en.wikipedia.org/wiki/Accessibility>
 
 But good accessibility benefits all users. A working keyboard navigation
-and well choosen colors and fonts setting not only help people with low
+and well chosen colors and fonts setting not only help people with low
 vision, blindness, deafness, cognitive or motor impairments or
 situational disabilities, like a broken hand, but also improve the
 workflow and usability for all users.

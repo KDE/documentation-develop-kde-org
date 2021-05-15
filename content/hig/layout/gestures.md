@@ -6,9 +6,9 @@ weight: 5
 Purpose
 -------
 
-Gestures are a way to perform common tasks faster und more intuitively.
+Gestures are a way to perform common tasks faster and more intuitively.
 They should never be the only way to perform an action, but rather be
-treated like a keybord shortcut or a context menu item.
+treated like a keyboard shortcut or a context menu item.
 
 Principles
 ----------
@@ -84,8 +84,8 @@ Rotate content.
 
 ### Mobile
 
-Aditionally to the common gestures, there a gestures especially for
-Plamsa Mobile.
+Additionally to the common gestures, there a gestures especially for
+Plasma Mobile.
 
 #### Swipe to reveal
 

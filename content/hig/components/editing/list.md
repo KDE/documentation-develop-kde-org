@@ -123,7 +123,7 @@ changed by the user.
 
 If you use a
 [dual-list pattern](/hig/patterns/content/duallist) and want to be
-able to re-order the items in the selected list you can add aditional
+able to re-order the items in the selected list you can add additional
 up and down buttons.
 
 ![Dual-list pattern with up and down buttons](/hig/DualListOrdering.png)
@@ -239,7 +239,7 @@ Place the button to add items to the bottom right of list.
 ![Add button at the bottom right of a
 list](/hig/ListPicker.png)
 
-For deselection you can either add a remove button for seleted icons
+For deselection you can either add a remove button for selected icons
 next to the add button or use an icon on the list item.
 
 ![Using an on-demand pattern to display a "Remove"

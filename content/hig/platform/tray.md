@@ -21,7 +21,7 @@ Guidelines
 ### Is this the right control?
 
 An application should only add an icon to the System Tray if the user
-needs to frequently access the application, or if the user is intrested
+needs to frequently access the application, or if the user is interested
 in status changes within the application.
 
 ### Behavior

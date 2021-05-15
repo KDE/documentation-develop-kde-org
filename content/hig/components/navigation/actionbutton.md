@@ -15,7 +15,7 @@ certain page of your application or for the whole application, which is
 executed frequently. Typical primary actions are "Create New",
 "Edit,", "Save" or "Send".
 
-Aditionally you can opt to define two secondary primary actions that are
+Additionally you can opt to define two secondary primary actions that are
 placed left and right to the main primary button.
 
 ![Call, message and write an email as primary

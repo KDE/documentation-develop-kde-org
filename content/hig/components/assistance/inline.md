@@ -19,7 +19,7 @@ and errors. It can also be given buttons.
 Examples
 --------
 
-![An inline message is used for feeback after an upload has been
+![An inline message is used for feedback after an upload has been
 completed.](/hig/Message-example.png)
 
 Guidelines
