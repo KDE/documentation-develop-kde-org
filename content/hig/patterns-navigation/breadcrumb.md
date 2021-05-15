@@ -1,7 +1,7 @@
 ---
 title: Breadcrumbs
 weight: 10
-avaialble:
+available:
   - desktop
   - mobile
 ---

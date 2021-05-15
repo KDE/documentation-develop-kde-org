@@ -4,7 +4,7 @@ weight: 12
 available:
   - desktop
   - mobile
-unabvailab:
+unavailable:
   - plasma
 ---
 
