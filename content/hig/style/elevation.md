@@ -3,7 +3,7 @@ title: Depth, Elevation and Shadows
 weight: 2
 ---
 
-Athough in recent years "flat" design has taken over the mobile
+Although in recent years "flat" design has taken over the mobile
 market, KDE has continued to use shadows as a means to provide depth and
 elevation to elements on the screen.
 

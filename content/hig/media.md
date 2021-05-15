@@ -11,7 +11,7 @@ to create media from the source files.
 
 Source files are located in `HIG/source/qml`.
 
-If you are new to KDE devlopment, make sure to read [how to become a kde
+If you are new to KDE development, make sure to read [how to become a kde
 developer](https://community.kde.org/Get_Involved/development) first.
 
 Getting Started

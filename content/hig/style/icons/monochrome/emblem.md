@@ -40,7 +40,7 @@ outline because of their limited canvas size.
 
 {{< compare >}}
 {{< do src="/hig/22-emblem-outline.png" >}}
-16px and 22px emblem icons get an outline to increase visiblity on
+16px and 22px emblem icons get an outline to increase visibility on
 various backgrounds.
 {{< /do >}}
 {{< dont src="/hig/8-emblem-outline.png" >}}

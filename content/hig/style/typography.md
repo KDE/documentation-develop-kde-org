@@ -39,7 +39,7 @@ in KDE's workspace and applications.
 
 {{< alert color="warning" title="Warning" >}}
 Never use `Text { }` in Kirigami or Plasma, because it does not follow
-the system font settings. See [Typography](#code) for implemntation.
+the system font settings. See [Typography](#code) for implementation.
 {{< /alert >}}
 
 
