@@ -98,16 +98,65 @@ values.
 ### Compute the default value
 
 Sometimes it is useful to dynamically compute a default value from a C++ expression.
-This can be done by adding the `code=true` atribute to the `<default>` tag.
+This can be done by adding the `code=true` atribute to the `<default>` tag. Please be
+aware that the code inside of a `default` tag will be used as parameter of a function call.
+This is a valid code for the `default` tag:
+
+`<default> true </default>`
+
+this is not:
+
+`<default> return true </default>`
+
+If you need to do calculations on the default, you can use the fact that a lambda in c++
+will can be defined and evaluated at the same time, you should also keep in mind that this code
+is running on the constructor, so you can't rely on other default values.
+
+```xml
+<default type="code">
+      [this] {
+         int someValue = OtherLibrary::precalculate();
+         if (someValue % 2 == 0) {
+           return "Even";
+         }
+           return "Odd";
+      } ()
+   </default>
+```
 
 In case you need to import a C++ header to compute the default value, you can add an
 `<include>` tag to the .kcfg file which contains the header file that is needed.
-Note that more than one `<include>` tag can be used as needed.
+Note that more than one `<include>` tag can be used as needed. 
 
 Additional code for computing default values can be provided via the `<code>` tag.
 The content of the `<code>` tag is inserted as-is. A typical use for this, is to
 compute a common default value which can then be referenced by subsequent entries.
 
+## Using variables inside of the Configuration Definition
+
+Sometimes you want to create logic that's reusable inside of different groups,
+supergroups, or to handle defaults. You can define variables that are passed via the
+constructor of the Configuration.
+
+```xml
+<kcfg>
+    <kcfgfile name="rc_file_for_the_setting">
+        <parameter name="masterGroup"/>
+    </kcfgfile>
+
+    <group name="Global" parentGroupName="$(masterGroup)">
+      <entry> ... </entry>
+    </group>
+</kcfg>
+```
+
+This will generate a code that can be used like this:
+
+```c++
+auto *settings = new Settings("MyMasterGroup");
+```
+
+And the stored file on disk will have the MyMasterGroup 
 ## The .kcfgc files
 
 The behavior of KConfigXT is controlled by a `.kcfgc` file.
