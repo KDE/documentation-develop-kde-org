@@ -30,7 +30,7 @@ contain widgets. In slightly more technical terms, they are desktop
 containments. Activities can be created, enumerated, modified and
 destroyed.
 
-New Activities can be created using the **createActivity** function, like
+New Activities can be created using the `createActivity` function, like
 this:
 
 ```js
@@ -38,9 +38,9 @@ let activityId = createActivity("org.kde.plasma.folderview")
 ```
 
 it returns the activity string Id (to not be confused from the numerical
-id of the Desktop object) The string passed into the constructor maps to
-the ``X-KDE-PluginInfo-Name=`` entry in the plugin's .desktop file). See the
-documentation on the Containment object class below.
+id of the `Desktop` object) The string passed into the constructor maps to
+the `X-KDE-PluginInfo-Name=` entry in the plugin's `.desktop` file). See the
+documentation on the `Containment` object class below.
 
 Read-only properties:
 
@@ -69,7 +69,7 @@ using its id.
   that currently exist.
 - `Desktop desktopById(int id)`: return an object representing
   the activity with the given id
-- `Desktop desktopForScreen(number screen[, number desktop])**:
+- `Desktop desktopForScreen(number screen[, number desktop])`:
   returns an object representing the activity currently associated with
   the given screen and, optionally, the given desktop.
 
@@ -87,13 +87,13 @@ let panel = new Panel
 ```
 
 The string passed into the constructor maps to the
-X-KDE-PluginInfo-Name= entry in the plugin's .desktop file).
+`X-KDE-PluginInfo-Name=` entry in the plugin's `.desktop` file.
 
 Read-only properties:
 
 - `array<int> panelIds`: returns a list of integer ids of all
   existing Plasma panels
-- *array<string> knownPanelTypes`: a list of types of panels that can
+- `array<string> knownPanelTypes`: a list of types of panels that can
   be created. This is useful to check if a Panel type is available on
   the system before trying to construct one.
 
@@ -148,7 +148,7 @@ and the following methods:
 -  `Widget widgetById(int id)`: returns an object representing
    the widget with the given id
 -  `Widget addWidget(string name)`: adds a new widget to the
-   activity; the name maps to the ``X-KDE-PluginInfo-Name=`` entry in
+   activity; the name maps to the `X-KDE-PluginInfo-Name=` entry in
    the widget's .desktop file
 -  `Widget addWidget(Widget widget)`: adds an existing widget to
    this activity; useful for moving widgets between Activities and
@@ -215,7 +215,7 @@ This can be used most conveniently with the indexOf() method, like this:
 
 ```js
 if (knownWidgetTypes.indexOf('someWidgetPluginName') > -1) {
-   print("It is installed on this system!");
+    print("It is installed on this system!");
 } else {
     print("It is not installed :(");
 }
@@ -253,7 +253,7 @@ as well as the following read-write properties:
    of the same type.
 -  `QRectF geometry`: the geometry of the widget (settable)
 -  `string globalShortcut`: the shortcut sequence (in the format
-   used by QKeySequence, e.g. "Alt+F1") associated with this widget
+   used by QKeySequence, e.g. `Alt+F1`) associated with this widget
 -  `number index`: the layout index of the widget; in a Panel this
    corresponds to the order the widget appears in. Changing the value of
    the index will change the position of the widget in Panels and may do
@@ -306,15 +306,15 @@ Functions:
    application storage name (aka the .desktop file name), then Name=
    entries for apps with installed .desktop files, then GenericName=
    entries for same
--  *mixed* **defaultApplication(string kind [, boolean storageId =
-   false])**: (scripting version >= 4) returns the executable (or if
-   storageId is true, then the app menu system id, e.g. its .desktop
-   file name) of the default app. The "kind" parameter may be a
-   well-known application type including "browser", "mailer",
-   "filemanager", "terminal", "imClient" and "windowmanager" (or any
+-  *mixed* `defaultApplication(string kind [, boolean storageId =
+   false])`: (scripting version >= 4) returns the executable (or if
+   `storageId` is `true`, then the app menu system id, e.g. its `.desktop`
+   file name) of the default app. The `kind` parameter may be a
+   well-known application type including `"browser"`, `"mailer"`,
+   `"filemanager"`, `"terminal"`, `"imClient"` and `"windowmanager"` (or any
    other entry in `share/apps/kcm_componentchooser/kcm_*.desktop`); it may
-   also be a mimetype (e.g. "application/pdf"). On failure, it returns
-   false.
+   also be a mimetype (e.g. `"application/pdf"`). On failure, it returns
+   `false`.
 -  `string applicationPath(string name)`: (scripting version >= 4)
    returns the full local path to a given application or .desktop file
    if it exists. Example:
@@ -426,7 +426,7 @@ ConfigFile has the follow read-only properties:
 
 Example usage:
 
-```
+```js
 // open the kickoffrc file
 const config = ConfigFile('kickoffrc');
 // switch to the RecentlyUsed group
@@ -435,7 +435,7 @@ config.group = 'RecentlyUsed';
 config.writeEntry('MaxApplications', 25);
 
 // now put Yes=20 into RecentlyUsed/Test
-const config2 = ConfigFile(config, 'Test);
+const config2 = ConfigFile(config, 'Test');
 config2.writeEntry('Yes', 20);
 ```
 
