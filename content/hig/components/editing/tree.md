@@ -92,3 +92,6 @@ Guidelines
     caption.
 -   Use [sentence style capitalization](/hig/style/writing/capitalization)
     for tree view items.
+-   Add a
+    [placeholder message](/hig/patterns/patterns-content/placeholdermessage)
+    when the list has no items in it.

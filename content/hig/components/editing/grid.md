@@ -68,6 +68,9 @@ re-ordering via drag-and-drop.
 -   All rows, except the last one, must have the same number of items.
 -   Use [sentence style capitalization](/hig/style/writing/capitalization)
     for grid view items.
+-   Add a
+    [placeholder message](/hig/patterns/patterns-content/placeholdermessage)
+    when the grid view has no items in it.
 
 #### Cards
 

@@ -66,3 +66,6 @@ Guidelines
 -   Label the table with a descriptive caption to the top left (cf.
     [Alignment](../layout/alignment)).
 -   Create a buddy relation so access keys are assigned.
+-   Add a
+    [placeholder message](/hig/patterns/patterns-content/placeholdermessage)
+    when the table has no items in it.

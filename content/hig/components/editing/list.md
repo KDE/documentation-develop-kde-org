@@ -148,6 +148,9 @@ up and down buttons.
     [sentence style capitalization](/hig/style/writing/capitalization)
     for list view items.
 -   You can use alternate row colors (use theme settings).
+-   Add a
+    [placeholder message](/hig/patterns/patterns-content/placeholdermessage)
+    when the list has no items in it.
 
 For section headers use
 [120% font size](/hig/style/typography) and
