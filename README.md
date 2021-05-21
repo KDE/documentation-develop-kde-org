@@ -22,6 +22,8 @@ You are now ready to start the server. Run:
 hugo server
 ```
 
+And open [http://localhost:1313](http://localhost:1313)
+
 
 ## Extract icon metadata
 
