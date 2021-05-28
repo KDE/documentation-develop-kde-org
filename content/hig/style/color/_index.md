@@ -25,7 +25,7 @@ Guidelines
 ----------
 
 -   While the system color theme can be selected by the user, the
-    [Breeze color palette](../default) is
+    [Breeze color palette](../color/default) is
     used for the reference visual design of KDE Applications and
     Workspaces, and make up the default system color theme.
     -   Primary colors are used throughout the main interface of the
