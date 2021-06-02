@@ -62,9 +62,9 @@ In the advanced section of this Kirigami documentation we have some pages that c
 
 | Page  | Topic |
 | ---   | ---   |
-| [Understanding CMakeLists](/content/docs/kirigami/advanced-understanding_cmakelists)  | Learn all about CMake and how to compile your applications. |
-| [Figuring out main.cpp](/content/docs/kirigami/advanced-maincpp)  | Getting to grips with the central C++ file that handles your applications' initialisation. |
-| [Connect logic to your QML user interface](/content/docs/kirigami/advanced-connect_backend) | Add advanced functionality to your Kirigami application and connect it to your UI.  |
+| [Understanding CMakeLists](/docs/kirigami/advanced-understanding_cmakelists)  | Learn all about CMake and how to compile your applications. |
+| [Figuring out main.cpp](/docs/kirigami/advanced-maincpp)  | Getting to grips with the central C++ file that handles your applications' initialisation. |
+| [Connect logic to your QML user interface](/docs/kirigami/advanced-connect_backend) | Add advanced functionality to your Kirigami application and connect it to your UI.  |
 
 #### Beginner C++ resources
 
