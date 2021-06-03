@@ -50,9 +50,11 @@ We are placing our Kirigami Action within our main page from our previous tutori
 The `id` and `text` properties should be familiar from previous tutorials. However, the new `icon` property should be interesting: it is an object with several properties letting you display certain icons for your actions. Fortunately, to use KDE icons all we need to do is provide the name property for the icon property, `icon.name`.
 
 {{< alert title="Note" color="info" >}}
+
 Cuttlefish is a KDE application that lets you view all the icons that you can use for your application. It offers a number of useful features such as previews of their appearance across different installed themes, previews at different sizes, and more. You might find it a useful tool when deciding on which icons to use in your application. 
 
 Many of KDE's icons follow the FreeDesktop Icon Naming specification. Therefore, you might also find it useful to consult The FreeDesktop project's website, [which lists all of the cross-desktop compatible icon names on their website](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
+
 {{< /alert >}}
 
 The `onTriggered` property is the most important. This is what our action will do when it is used. You'll notice that in our example we're using the method `kountdownModel.append` of the `kountdownModel` we created in our previous tutorial. This method lets us append a new element to our list model. We are providing it with an object that has the relevant properties for our countdowns (name, description, and a placeholder date).
@@ -96,6 +98,8 @@ Since we are keeping our global drawer simple for now, we are setting the `isMen
 ![](quit_action.png)
 
 {{< alert title="Note" color="info" >}}
+
 The ['Actions'](https://develop.kde.org/docs/kirigami/actions/) page in the 'Components' section of these docs provides further detail on Kirigami actions and how they can be used.
+
 {{< /alert >}}
 

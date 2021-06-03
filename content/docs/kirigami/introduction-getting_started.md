@@ -32,6 +32,7 @@ sudo dnf install extra-cmake-modules cmake qt5-qtbase-devel qt5-qtdeclarative-de
 Further information for other distributions can be found [here](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Install_the_dependencies).
 
 ## Project structure
+
 While there are tools that can easily set up our files, we are going to create them manually. This will let us better understand the pieces that are going to make up our new application.
 
 First we create our project folder. We are going to call ours 'helloworld'.
@@ -61,6 +62,7 @@ Here's where we will be handling our application's frontend.
 If you know some Javascript, then much of QML will seem familiar to you (though it does have its own peculiarities). [Qt's documentation](https://doc.qt.io/qt-5/qtqml-index.html) has an extensive amount of material on this language if you feel like trying something on your own. Over the course of these tutorials we will be focusing much of our attention on our QML code, where we can use Kirigami to get the most out of it.
 
 For now, let's focus on `main.qml`. First we import a number of important modules:
+
 - QtQuick, the standard library used in QML applications.
 - QtQuick Controls, which provides a number of standard controls we can use to make our applications interactive.
 - QtQuick Layouts, which provides tools for placing components within the applications window.
@@ -74,9 +76,11 @@ We then set the `id` property of `Kirigami.ApplicationWindow` to 'root'. IDs are
 We also set the window `title` property to 'Hello World'. You'll notice that we have wrapped our "Hello World" string in a function called `i18nc`, where we detail the context of the string as well as the string itself.
 
 {{< alert title="Note" color="info" >}}
+
 [`i18n()`](https://techbase.kde.org/Development/Tutorials/Localization/i18n#Translatable_Code_Using_i18n.28.29) functions make your app more easily translatable, as they return a version of the provided string in the user's language (as long as your app has been localised for that language). While an English user might see our window title as 'Hello World', a Spanish user would see 'Hola Mundo'.
 
 [`i18nc()`](https://techbase.kde.org/Development/Tutorials/Localization/i18n#Adding_Context_with_i18nc.28.29) builds on the `i18n()` function by allowing developers to provide some context to translators working on the app; that's why we have included the string "@title" before "Hello World".
+
 {{< /alert >}}
 
 We then set the first page of our page stack. Most Kirigami applications are organised as a stack of pages, each page containing related components suited to a specific task. For now, we are keeping it simple, and sticking to a single page. With `pageStack.initialPage: Kirigami.Page{...}` we set the first page presented upon loading the application to a `Kirigami.Page`, which will contain all our content.
@@ -93,8 +97,8 @@ Finally, we include in our page a `Controls.Label` that lets us place text on ou
 
 For now, we don't need to go into too much detail regarding what our `main.cpp` code does, but its role will grow significantly more important once we decide to add more complex functionality to our application in the future. If you want to get ahead, you can read more about how this `main.cpp` works [in this page](/docs/kirigami/advanced-maincpp/).
 
-
 ### resources.qrc
+
 `resources.qrc` contains the list of all QML files as well as other files (like custom icons) that will be included in the binary.
 
 {{< readfile file="/content/docs/kirigami/introduction-getting_started/src/resources.qrc" highlight="xml" >}}
@@ -123,7 +127,9 @@ This one's a lot shorter! Let's go through what it does:
 - `target_link_libraries` links the libraries used in our code to our executable. 
 
 {{< alert title="Note" color="info" >}}
+
 Note that these libraries should match the components that we included in our previous CMakeLists.txt file - otherwise these components will not be included and our application won't compile.
+
 {{< /alert >}}
 
 Now that CMake has been taken care of, let's look at the files we are going to spend the majority of our time working with.
@@ -147,7 +153,9 @@ Voila! Now you will see your very first Kirigami app appear before your very own
 ![Screenshot of the generated Kirigami application](hello-kworld.png)
 
 {{< alert title="Note" color="info" >}}
+
 Next time you want to create the files and folders needed, you can use [KAppTemplate](https://apps.kde.org/kapptemplate) or KDevelop to automatically generate a suitable project to start from. They are available from each major distribution's repositories. These applications will also generate files containing [AppStream](https://www.freedesktop.org/software/appstream/docs/sect-Metadata-Application.html) metadata and a `.desktop` file that contains information about how the application should be displayed in a linux application launcher.
 
 Thanks to the magic of CMakeLists, you can also use IDEs such as KDevelop or QtCreator to develop this application within a comfortable environment with minimal effort.
+
 {{< /alert >}}

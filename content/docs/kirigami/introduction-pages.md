@@ -23,10 +23,12 @@ Pages are organized in a pagestack where they can be pushed and popped. On a pho
 ![Two pages next to each other on the desktop](desktop.png)
 
 {{< alert title="Note" color="info" >}}
+
 KDE has a handy [Human Interface Guidelines (HIG) page](/hig/introduction/architecture/) that goes into detail about how to best design your application. The guides there will help ensure your application remain usable, consistent, and aesthetic.
 
 A Kirigami [Page](docs:kirigami2;Page) also inherits from a [QQC2 Page](https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html)
 and as such, you can add a number of extra elements to them. The Qt docs are another useful resource to use when designing your pages.
+
 {{< /alert >}}
 
 Let's go back to the `main.qml` file we created in our previous tutorial:
@@ -38,7 +40,9 @@ We make our application start to our `Kirigami.Page`. All we have included in it
 The idea behind our app is that we're going to be able to display a bunch of countdowns to the user. The problem with a normal `Kirigami.Page` is that it has a fixed vertical size, but don't worry: Kirigami also supports scrollable pages. `Kirigami.ScrollablePage` is going to replace our `Kirigami.Page` now.
 
 {{< alert title="Warning" color="warning" >}}
+
 If you've gone ahead of the tutorial, you might have noticed that there is also such a thing as a `ScrollView` that you can use to contain your components. However, do NOT put a `ScrollView` inside a `ScrollablePage` as this can cause problems. Children of a `ScrollablePage` are functionally already in a `ScrollView`.
+
 {{< /alert >}}
 
 ```qml
@@ -51,6 +55,7 @@ Kirigami.ScrollablePage {
 Kirigami pages also feature neat titles placed within the toolbar, quickly indicating to the user which page they are on. All we need to do to set a page title using the `title` property of `Kirigami.ScrollablePage`. In this case, we used one of the `i18nc()` functions we explored in our previous tutorial to this end.
 
 {{< alert title="Note" color="note" >}}
+
 You could also choose to define your page within its own QML document. To do so, you'd create the new QML doc, add it to your `resources.qrc` file, and set `Kirigami.ApplicationWindow`'s first page to it like so:
 
 ```js
@@ -60,4 +65,5 @@ pageStack.initialPage: Qt.resolvedUrl("StartPage.qml")
 `pageStack.initialPage` sets the initial Page of the Page stack, and `Qt.resolvedUrl` is converting the relative URL of the QML file into an absolute one.
 
 There is further information about alternative page structures [within our Kirigami documentation](/docs/kirigami/manipulate-pages/).
+
 {{< /alert >}}
