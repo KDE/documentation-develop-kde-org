@@ -24,7 +24,7 @@ In order to have a useful KXmlGuiWindow, we must subclass it. So we create two f
 
 {{< readfile file="/content/docs/getting-started/main_window/mainwindow.h" highlight="cpp" >}}
 
-First we [subclass](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming#Subclasses_and_superclasses) KXmlGuiWindow with `class MainWindow : public KXmlGuiWindow` then we declare the [constructor](https://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)) with `MainWindow(QWidget *parent = nullptr);`.
+First we [subclass](https://en.wikipedia.org/wiki/Inheritance_%28object-oriented_programming%29#Subclasses_and_superclasses) KXmlGuiWindow with `class MainWindow : public KXmlGuiWindow` then we declare the [constructor](https://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)) with `MainWindow(QWidget *parent = nullptr);`.
 
 And finally, we declare a pointer to the object that will make up the bulk of our program. [`KTextEdit`](docs:ktextwidgets;KTextEdit) is a generic rich text editing widget with some niceties like cursor auto-hiding. 
 
