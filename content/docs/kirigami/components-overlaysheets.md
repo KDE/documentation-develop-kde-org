@@ -5,7 +5,7 @@ description: Overlay sheets can serve a variety of uses for both serving and inp
 group: components
 ---
 
-Overlay sheets provide a simple component that you can use to supplement the content being displayed on an application's page. They are designed to display long, vertical content and can accomodate content longer than the application window itself. 
+Overlay sheets provide a simple component that you can use to supplement the content being displayed on an application's page. They are designed to display long, vertical content and can accommodate content longer than the application window itself. 
 
 They can be dismissed by clicking or tapping outside of their area or by clicking the 'x' icon on sheets' headers.
 
