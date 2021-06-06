@@ -195,7 +195,7 @@ However, by default, banners are only visible on mobile environments. You can ch
 
 ## Modal and Inline drawers
 
-Kirigami offers two aditional types of drawers, modal drawers and inline drawers. They are quite similar to each other: both span the entirety of the application's width or height and can be placed on the edges of the app window. However, they do react differently to user interaction.
+Kirigami offers two additional types of drawers, modal drawers and inline drawers. They are quite similar to each other: both span the entirety of the application's width or height and can be placed on the edges of the app window. However, they do react differently to user interaction.
 
 - Modal drawers darken the rest of the application and, like overlay sheets, will be dismissed when clicking on a darkened area.
 - Inline drawers allow the user to still interact with the rest of the application without being dismissed, and do not darken other areas.
