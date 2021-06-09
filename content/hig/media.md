@@ -6,7 +6,7 @@ weight: 11
 Most media files used in the HIG are generated from QML files.
 
 The command line tool
-[qmlgrabber](https://cgit.kde.org/scratch/mart/qmlgrabber.git/) is used
+[qmlgrabber](https://invent.kde.org/mart/qmlgrabber) is used
 to create media from the source files.
 
 Source files are located in `HIG/source/qml`.
@@ -30,7 +30,7 @@ Getting Started
 1.  Clone qmlgrabber source code repository into an empty folder:
 
     ``` {.sh}
-    git clone https://anongit.kde.org/scratch/mart/qmlgrabber.git
+    git clone https://invent.kde.org/mart/qmlgrabber.git
     cd qmlgrabber
     qmake PREFIX=~/.local/bin
     make
