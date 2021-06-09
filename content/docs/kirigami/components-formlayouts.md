@@ -148,7 +148,7 @@ Kirigami.FormLayout {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A formlayout with sections](formlayouts-checkable.png)
+![A formlayout with checkable child](formlayouts-checkable.png)
 
 {{< /section-right >}}
 {{< /sections >}}
