@@ -136,7 +136,7 @@ ListViews also support header components with the `header` property, and Kirigam
 An interesting property of the list view is `headerPositioning`. This affects the way that our header will move when we are interacting with a long list view that expands beyond the height of the page. `headerPositioning` can be set to three different settings:
 
 - `ListView.OverlayHeader`: In this setting, the header will contract once we start scrolling down but will remain visible in a more compact state.
-- `ListView.PullBackHeader`: The header will disappear as we scroll down, but will reappear as we scroll back up, even if we haven'tyet reached the top of the list view.
+- `ListView.PullBackHeader`: The header will disappear as we scroll down, but will reappear as we scroll back up, even if we haven't yet reached the top of the list view.
 - `ListView.InlineHeader`: The header will act like a part of the listview and remain at the top of the listview.
 
 {{< sections >}}

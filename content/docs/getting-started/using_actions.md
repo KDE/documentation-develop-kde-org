@@ -38,8 +38,8 @@ We are going to install our UI .rc file under the component `texteditor`, so `ma
 
 {{< readfile file="/content/docs/getting-started/using_actions/mainwindow.h" highlight="cpp" >}}
 
-Only a function void `setupActions()` has been added which will do all the work setting up the QActions.
-
+Only a function `void setupActions()` has been added which will do all the work setting up the QActions.
+
 ### mainwindow.cpp
 
 {{< readfile file="/content/docs/getting-started/using_actions/mainwindow.cpp" highlight="cpp" >}}

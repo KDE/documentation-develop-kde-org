@@ -174,7 +174,7 @@ fileName.clear();
 
 Otherwise, we continue with opening the file.
 
-The data that `storedGet()` successfully downloaded, in this case the contents of our text file, is stored in the data member of a [KIO::StoredTransferJob](docs:kio;KIO::StoredTransferJob) class. But in order to display the contents of the file at text, we must use a [QTextStream](https://doc.qt.io/qt-5/qtextstream.html). We create one by passing the the data of the `StoredTransferJob` to its constructor and then call its `readAll()` function to get the text from the file. This is then passed to the `setPlainText()` function of our text area.
+The data that `storedGet()` successfully downloaded, in this case the contents of our text file, is stored in the data member of a [KIO::StoredTransferJob](docs:kio;KIO::StoredTransferJob) class. But in order to display the contents of the file at text, we must use a [QTextStream](https://doc.qt.io/qt-5/qtextstream.html). We create one by passing the data of the `StoredTransferJob` to its constructor and then call its `readAll()` function to get the text from the file. This is then passed to the `setPlainText()` function of our text area.
 
 
 {{< alert title="Note" color="info" >}}

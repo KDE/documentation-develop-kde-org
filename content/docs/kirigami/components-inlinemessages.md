@@ -10,7 +10,7 @@ Inline messages provide an immediate way for you to notify your users about some
 ## Basic inline message
 
 `Kirigami.InlineMessage` components have two important properties to be mindful of:
-- `visible`: by default this is set to false, so that the message only appears when you explicitly want it to. This can be overriden if you wish by setting it to true. When a hidden inline message is set to be visible, you get a nice animation.
+- `visible`: by default this is set to false, so that the message only appears when you explicitly want it to. This can be overridden if you wish by setting it to true. When a hidden inline message is set to be visible, you get a nice animation.
 - `text`: here is where you set the text of your inline message.
 
 {{< sections >}}

@@ -105,15 +105,15 @@ weight: 20
         Tired of writing your own widgets for your Qt projects? Use
         <a href="https://api.kde.org/frameworks/kwidgetsaddons/html/">KWidgetsAddons</a>! Want a flexible configuration system?
         Use <a href="https://api.kde.org/frameworks/kconfig/html/">KConfig</a>! The <a href="/products/frameworks/">KDE Frameworks</a>
-        suite solves most of the problems you have had deal with when building Qt applications. It will also integrate perfectly into
-        your Qt projects and the API will be familiar as it based on the same interfaces that make up the majority of existing
+        suite solves most of the problems you have to deal with when building Qt applications. It will also integrate perfectly into
+        your Qt projects and the API will be familiar as it is based on the same interfaces that make up the majority of existing
         Qt applications.
       </p>
       <h3>Network Transparancy</h3>
       <p>
         The increase in connectivity of today's world makes <a href="https://api.kde.org/frameworks/kio/html/">KIO</a> an essential
         part of your toolset. KIO allows Qt applications to connect to remote shares as if they were on local computers, making
-        accessing server hosted files and directories transparent and easy for your users. KIO supports ftp, ssh, http, webdav,
+        accessing server-hosted files and directories transparent and easy for your users. KIO supports ftp, ssh, http, webdav,
         fish, samba, and many more protocols.
       </p>
       <div class="d-flex justify-content-center mt-5">

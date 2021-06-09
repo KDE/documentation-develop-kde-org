@@ -8,7 +8,7 @@ description: >
 
 ## Abstract
 
-Your first program shall greet the world with a friendly "Hello World!". For that, we will use a [KMessageBox](docs:kwidgetsaddons;KMessageBox) and customise one of its buttons. 
+Your first program shall greet the world with a friendly "Hello World!". For that, we will use a [KMessageBox](docs:kwidgetsaddons;KMessageBox) and customize one of its buttons.
 
 ![](result.png)
 
@@ -46,7 +46,7 @@ More information on internalization can be found in the [i18n](https://techbase.
 
 {{< readfile file="/content/docs/getting-started/hello_world/main3.cpp" highlight="cpp" >}}
 
-Then we come to [QCommandLineParser ](https://doc.qt.io/qt-5/qcommandlineparser.html). This is the class one would use to specify command line flags to, for example, open the program with a specific file. However, in this tutorial, we simply initialise it with the [KAboutData](docs:kcoreaddons;KAboutData) object we created before so we can use the `--version` or `--author` flags that are provided by default by Qt.
+Then we come to [QCommandLineParser ](https://doc.qt.io/qt-5/qcommandlineparser.html). This is the class one would use to specify command line flags to, for example, open the program with a specific file. However, in this tutorial, we simply initialize it with the [KAboutData](docs:kcoreaddons;KAboutData) object we created before so we can use the `--version` or `--author` flags that are provided by default by Qt.
 
 We're all done as far as the code is concerned. Now to build it and try it out.
 
