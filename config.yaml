@@ -1,11 +1,9 @@
 baseURL: /
-title: Developer
-enableRobotsTXT: true
-enableGitInfo: true
 disableKinds:
-  - taxonomy
-  - taxonomyTerm
-
+- taxonomy
+- taxonomyTerm
+enableGitInfo: true
+enableRobotsTXT: true
 i18n:
   content:
     kirigami-tutorial:
@@ -18,51 +16,107 @@ i18n:
   others:
   - menu
   - strings
-pygmentsCodeFences: true
-pygmentsUseClasses: false
-pygmentsUseClassic: false
-pygmentsStyle: tango
-permalinks:
-  blog: '/:section/:year/:month/:day/:slug/'
 imaging:
-  resampleFilter: CatmullRom
-  quality: 75
   anchor: smart
+  quality: 75
+  resampleFilter: CatmullRom
 languages:
-  en:
-    title: Developer
-    description: All the resources for developing using the KDE Platform
-    languageName: English
-    weight: 1
+  ca:
+    contentDir: content-trans/ca
+    languageCode: ca
+    languageName: Català
     menu:
       main:
-        - identifier: api
-          name: API
-          url: 'https://api.kde.org'
-          weight: 20
+      - identifier: api
+        name: API
+        url: https://api.kde.org
+        weight: 20
+    weight: 2
+  en:
+    description: All the resources for developing using the KDE Platform
+    languageName: English
+    menu:
+      main:
+      - identifier: api
+        name: API
+        url: https://api.kde.org
+        weight: 20
+    title: Developer
+    weight: 1
+  es:
+    contentDir: content-trans/es
+    languageCode: es
+    languageName: Español
+    menu:
+      main:
+      - identifier: api
+        name: API
+        url: https://api.kde.org
+        weight: 20
+    weight: 2
+  nl:
+    contentDir: content-trans/nl
+    languageCode: nl
+    languageName: Nederlands
+    menu:
+      main:
+      - identifier: api
+        name: API
+        url: https://api.kde.org
+        weight: 20
+    weight: 2
+  sk:
+    contentDir: content-trans/sk
+    languageCode: sk
+    languageName: Slovenčina
+    menu:
+      main:
+      - identifier: api
+        name: API
+        url: https://api.kde.org
+        weight: 20
+    weight: 2
+  uk:
+    contentDir: content-trans/uk
+    languageCode: uk
+    languageName: Українська
+    menu:
+      main:
+      - identifier: api
+        name: Програмний інтерфейс
+        url: https://api.kde.org
+        weight: 20
+    weight: 2
 markup:
   defaultMarkdownHandler: goldmark
   goldmark:
     renderer:
       unsafe: true
 params:
-  copyright: The KDE Community
-  privacy_policy: 'https://kde.org/privacypolicy'
-  images:
-    - images/image-preview.png
-  version_menu: Releases
-  archived_version: false
-  version: '0.0'
-  url_latest_version: 'https://example.com'
-  gitlab_repo: 'https://invent.kde.org/documentation/develop-kde-org'
-  gitlab_branch: master 
   algolia_docsearch: false
+  archived_version: false
+  copyright: The KDE Community
+  gitlab_branch: master
+  gitlab_repo: https://invent.kde.org/documentation/develop-kde-org
+  images:
+  - images/image-preview.png
   offlineSearch: true
+  privacy_policy: https://kde.org/privacypolicy
   ui:
-    sidebar_menu_compact: false
     breadcrumb_disable: false
-    sidebar_search_disable: false
-    navbar_logo: true
     footer_about_disable: false
+    navbar_logo: true
     readingtime:
       enable: false
+    sidebar_menu_compact: false
+    sidebar_search_disable: false
+  url_latest_version: https://example.com
+  version: '0.0'
+  version_menu: Releases
+permalinks:
+  blog: /:section/:year/:month/:day/:slug/
+pygmentsCodeFences: true
+pygmentsStyle: tango
+pygmentsUseClasses: false
+pygmentsUseClassic: false
+title: Developer
