@@ -161,7 +161,7 @@ Controls.Button {
 
 ## Using Custom Colors
 
-Altough it's discouraged to use hardcoded colors, Kirigami offers a more 
+Although it's discouraged to use hardcoded colors, Kirigami offers a more 
 maintainable way to assign a custom hardcoded palette to an item and all its 
 children, that will allow to define such custom colors in one place and one 
 only:
