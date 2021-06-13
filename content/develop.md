@@ -1,6 +1,6 @@
 ---
 title: Develop
-subtitle: Develop Featureful Applications with KDE and Qt Technologies
+subtitle: Develop Featureful Applications with KDE and Qt Technologies.
 layout: area
 linkTitle: Develop
 weight: 20

@@ -1,6 +1,6 @@
 ---
 title: Design
-subtitle: Design beautiful, usable applications with KDE
+subtitle: Design beautiful, usable applications with KDE.
 weight: 10
 layout: area
 ---
