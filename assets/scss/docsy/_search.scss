@@ -1,0 +1,21 @@
+/*
+ * SPDX-FileCopyrightText: 2020 (C) Bjorn Erik Pedersen <bjorn.erik.pedersen@gmail.com>
+ * SPDX-FileCopyrightText: 2020 (C) Carl Schwan <carl@carlschwan.eu>
+ * SPDX-FileCopyrightText: 2020 (C) Takayama Fumihiko <tekezo@pqrs.org>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+// Search
+.td-search-input {
+  font-family: "icons", "Noto Sans"
+}
+
+.popover.offline-search-result {
+  // Override bootstrap default style (max-width: $popover-max-width;)
+  max-width: 90%;
+
+  .card {
+    margin-bottom: $spacer * .5;
+  }
+}

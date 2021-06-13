@@ -1,3 +1,6 @@
-{{ $manifest := getJSON "https://cdn.kde.org/aether-devel/version/manifest.json?cache_force=1" }}
-<link href="https://cdn.kde.org/{{ index $manifest "aether-devel/version/aether-docsy.css" }}" rel="stylesheet" />
+{{ $style := resources.Get "/scss/docsy/main.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="preload" href="/fonts/noto-sans.woff2" as="font" crossorigin="anonymous" />
+<link rel="preload" href="/fonts/glyph/glyph.ttf?5ea9rb" as="font" crossorigin="anonymous" />
+
 <link href="https://cdn.kde.org/breeze-icons/icons.css" rel="stylesheet" />

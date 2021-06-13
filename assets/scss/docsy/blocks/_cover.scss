@@ -1,0 +1,32 @@
+/*
+ * SPDX-FileCopyrightText: 2020 (C) Bjorn Erik Pedersen <bjorn.erik.pedersen@gmail.com>
+ * SPDX-FileCopyrightText: 2020 (C) Ian Lewis
+ * SPDX-FileCopyrightText: 2020 (C) Lukasz Sowa <lukasz@owlsome.dev>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+// A cover block is a full size cover with a fixed background for smaller screens.
+
+@include td-box-height-modifiers(".td-cover-block");
+
+.td-cover-logo {
+    margin-right: 0.5em;
+}
+
+.td-cover-block {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: {
+        repeat: no-repeat;
+        position: 50% 0;
+        size: cover;
+    };
+
+    & > .byline {
+        position: absolute;
+        bottom: 2px;
+        right: 4px;
+    }
+}
