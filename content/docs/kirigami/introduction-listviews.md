@@ -220,7 +220,7 @@ GridLayout {
 
 - Left, `Kirigami.Heading`: uses the `ListElement`'s `date` as a level 1 heading.
 
-- Middle, `ColumnLayout`: has a `Kirigami.Heading` that displays the task name; a `Kirigami.Separator`, which provides the horizontal name; and a `Controls.Label`, that displays a task's optional description. The latter two components have a `visible` property, which checks if the description is empty or not and displays the components depending on the result of `description.length > 0`.
+- Middle, `ColumnLayout`: has a `Kirigami.Heading` that displays the task name; a `Kirigami.Separator`, which provides the horizontal line; and a `Controls.Label`, that displays a task's optional description. The latter two components have a `visible` property, which checks if the description is empty or not and displays the components depending on the result of `description.length > 0`.
 
 - Right, `Controls.Button`: a button that will do something... soon!
 
