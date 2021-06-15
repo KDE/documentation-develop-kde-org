@@ -4,7 +4,7 @@ linkTitle: "Colors "
 weight: 101
 group: style
 description: >
-  Make your app follow you user color scheme
+  Make your app follow your user color scheme
 ---
 
 Kirigami has a color palette that follow the system colors, to better integrate 
