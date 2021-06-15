@@ -81,7 +81,7 @@ Within each of these `Controls.Textfield` elements, we are setting a `Kirigami.F
 
 We have also set a property called `inputMask` on the text field for our date. Setting this to `"0000-00-00"` prevents users from entering something that might break the functionality of the application (such as text), restricting them to only entering digits which we can then try to parse into a date object.
 
-At the end of our form we are including a button that adds our new countdown to the list model. We have set the `enabled` property to a conditional statement that checks whether the name field is empty or not: if it is, the button is disabled, and viceversa. When the button is triggered, it triggers the `append` method of our `kountdownModel` list model, adding a Javascript object including the properties we have provided. We also make sure to clear the text fields by setting their `text` properties to an empty string. We finally call a method on our overlay sheet, `close()`, which closes it.
+At the end of our form we are including a button that adds our new countdown to the list model. We have set the `enabled` property to a conditional statement that checks whether the name field is empty or not: if it is, the button is disabled, and vice versa. When the button is triggered, it triggers the `append` method of our `kountdownModel` list model, adding a Javascript object including the properties we have provided. We also make sure to clear the text fields by setting their `text` properties to an empty string. We finally call a method on our overlay sheet, `close()`, which closes it.
 
 ## Using our sheet
 
