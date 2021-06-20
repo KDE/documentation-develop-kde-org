@@ -14,7 +14,9 @@ They can be dismissed by clicking or tapping outside of their area or by clickin
 In order to use an overlay sheet, we should create it inside the Kirigami Page we want it to appear in. 
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as Controls
@@ -42,6 +44,7 @@ Kirigami.Page {
 ![Simple overlay sheet](sheet_simple.png)
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
 Overlay sheets come with methods we can use to open (`mySheet.open()`) or close (`mySheet.close()`) them as we see fit. By default overlay sheets are hidden, so at the very least we will need to use the `open()` method.
@@ -60,7 +63,9 @@ When opened, this overlay sheet will appear centered vertically and horizontally
 If you want to display the sheet as a global sheet — one that spans across the entire width of the application, regardless of the page it is a child to — we have to reparent our overlay sheet to our application window's overlay property. We can do this with the `parent` property.
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 Kirigami.OverlaySheet {
     id: mySheet
@@ -79,11 +84,15 @@ Kirigami.OverlaySheet {
 {{< section-right >}}
 
 {{< compare >}}
+
 {{< figure class="text-center" caption="Non-global overlay sheet" src="sheet_global_before.png" >}}
+
 {{< figure class="text-center" caption="Global overlay sheet" src="sheet_global_after.png" >}}
+
 {{< /compare >}}
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
 ## Fixed sizing
@@ -91,7 +100,9 @@ Kirigami.OverlaySheet {
 A sheet is greedy and will take the maximum amount of available width in a page if needed. We can avoid this by specifying an `implicitWidth` or a `Layout.preferredWidth` for its child elements, which will limit how much the sheet will grow width-wise.
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 Kirigami.OverlaySheet {
     id: mySheet
@@ -102,16 +113,21 @@ Kirigami.OverlaySheet {
     }
 }
 ```
+
 {{< /section-left >}}
 
 {{< section-right >}}
 
 {{< compare >}}
+
 {{< figure class="text-center" caption="Non-fixed width overlay sheet" src="sheet_fixedwidth_before.png" >}}
+
 {{< figure class="text-center" caption="Fixed width overlay sheet" src="sheet_fixedwidth_after.png" >}}
+
 {{< /compare >}}
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
 ## Headers and footers
@@ -119,7 +135,9 @@ Kirigami.OverlaySheet {
 Overlay sheets come by default with a header which only contains a button for closing our overlay sheet. We can add a Kirigami heading as a title in our header to make it easy for users to understand what the sheet is for. This is done by setting the `header` property to contain our Kirigami heading component.
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 Kirigami.OverlaySheet {
     id: mySheet
@@ -142,6 +160,7 @@ Kirigami.OverlaySheet {
 ![Sheet header](sheet_header.png)
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
 We can also provide our overlay sheet with a footer. Footers in overlay sheets are quite flexible, but most often they are used to provide overlay sheets with some sort of quick interactive input similar to that provided by modal dialogs (e.g. buttons for 'Apply', 'Ok', 'Cancel', 'Close', etc.)
@@ -149,7 +168,9 @@ We can also provide our overlay sheet with a footer. Footers in overlay sheets a
 Footers are set in much the same way as headers:
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 Kirigami.OverlaySheet {
     id: mySheet
@@ -177,6 +198,7 @@ Kirigami.OverlaySheet {
 ![Sheet footer](sheet_footer.png)
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
 ## Using delegate / model views
@@ -184,7 +206,9 @@ Kirigami.OverlaySheet {
 Since overlay sheets are designed to display vertical content, they can be especially useful when used in conjunction with components such as ListViews. When displaying content longer than the application window itself, the overlay sheet becomes scrollable:
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 Kirigami.OverlaySheet {
     id: mySheet
@@ -205,4 +229,5 @@ Kirigami.OverlaySheet {
 ![Sheet with a listview](sheet_listview.png)
 
 {{< /section-right >}}
+
 {{< /sections >}}

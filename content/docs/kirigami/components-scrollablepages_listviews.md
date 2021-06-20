@@ -25,8 +25,10 @@ Kirigami.ScrollablePage {
 In almost every other way, a scrollable page is the same as a normal page.
 
 {{< alert color="danger" title="Warning" >}}
+
 Do not put a `ScrollView` inside of a `Kirigami.ScrollablePage`; children of a
 `Kirigami.ScrollablePage` are already inside a `ScrollView`.
+
 {{< /alert >}}
 
 ## ListView in a ScrollablePage
@@ -97,9 +99,11 @@ Kirigami.ScrollablePage {
 ```
 
 {{< alert title="Hint" color="info" >}}
+
 You can use [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) from
 [KItemModel](https://api.kde.org/frameworks/kitemmodels/html/) to easily add
 filtering capability directly in QML without any need for C++ code.
+
 {{< /alert >}}
 
 ### Pull to refresh

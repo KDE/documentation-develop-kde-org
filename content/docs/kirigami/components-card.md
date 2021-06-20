@@ -15,7 +15,9 @@ Kirigami also offers 3 kinds of views and positioners to aid you in presenting y
 A [`Kirigami.AbstractCard`](docs:kirigami2;Card) is the simplest type of card. It's just a rectangle with a shadow, which can contain any `Item` in it. It can also have items assigned to its `header` or `footer` properties. In this case a [`Kirigami.Heading`](docs:kirigami2;Heading) is its header and a [`Controls.Label`](docs:qtquickcontrols;QtQuick.Controls.Label) with `wrapMode` set to `Text.WordWrap` is the card's `contentItem`.
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 Kirigami.AbstractCard {
     Layout.fillHeight: true
@@ -29,11 +31,15 @@ Kirigami.AbstractCard {
     }
 }
 ```
+
 {{< /section-left >}}
 
 {{< section-right >}}
+
 ![Screenshot of an Abstract Card](abstract-card.png)
+
 {{< /section-right >}}
+
 {{< /sections >}}
 
 
@@ -42,7 +48,9 @@ Kirigami.AbstractCard {
 A [`Kirigami.Card`](docs:kirigami2;Card) inherits from [`Kirigami.AbstractCard`](docs:kirigami2;AbstractCard) and provides more features out of the box. A card has a header composed of a `banner` and a footer composed of [`Kirigami.Action`](docs:kirigami2;Action) objects alongside its main content.
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 Kirigami.Card {
     actions: [
@@ -69,11 +77,15 @@ Kirigami.Card {
 }
 
 ```
+
 {{< /section-left >}}
 
 {{< section-right >}}
+
 ![](card1.png)
+
 {{< /section-right >}}
+
 {{< /sections >}}
 
 ## CardsLayout
@@ -89,7 +101,9 @@ A [`Kirigami.CardsLayout`](docs:kirigami2;CardsLayout) is most useful when the c
 A card can optionally be oriented horizontally. In this case it will be wider than tall, and is better suited to being placed in a ColumnLayout. If you must put it in a CardsLayout, it will have a columnSpan of 2 by default.
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 ColumnLayout {
     Kirigami.CardsLayout {
@@ -118,8 +132,11 @@ ColumnLayout {
 {{< /section-left >}}
 
 {{< section-right >}}
+
 ![Screenshot of a CardsLayout](cardslayout.png)
+
 {{< /section-right >}}
+
 {{< /sections >}}
 
 ## CardsListView
@@ -131,7 +148,9 @@ A `Kirigami.CardsListView` will stretch child cards to its own width. This compo
 The choice between using this view with `Kirigami.AbstractCard` components or a conventional `ListView` with [`AbstractListItem`](docs:kirigami2;AbstractListItem)/[BasicListItem](docs:kirigami2;BasicListItem) components is purely an aesthetic one.
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 Kirigami.CardsListView {
     id: view
@@ -173,10 +192,15 @@ Kirigami.CardsListView {
     }
 }
 ```
+
 {{< /section-left >}}
+
 {{< section-right >}}
+
 ![Screenshot of a CardsListView](cardslistview.png)
+
 {{< /section-right >}}
+
 {{< /sections >}}
 
 ## CardsGridView
@@ -190,7 +214,9 @@ CardsGridView has the limitation that every card must have the same exact height
 If possible use `Kirigami.CardsGridView` only when you need to instantiate many cards. If you are only going to instantiate a few cards, opt for a `Kirigami.CardsLayout` with a `Repeater` instead.
 
 {{< sections >}}
+
 {{< section-left >}}
+
 ```qml
 Kirigami.CardsGridView {
     id: view
@@ -223,9 +249,13 @@ Kirigami.CardsGridView {
 }
 
 ```
+
 {{< /section-left >}}
 
 {{< section-right >}}
+
 ![Screenshot of a CardsGridView](cardsgridview.png)
+
 {{< /section-right >}}
+
 {{< /sections >}}
