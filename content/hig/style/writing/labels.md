@@ -115,8 +115,9 @@ checkboxes](/hig/dolphin-settings-dialog.png)
 
 Ellipses are used to indicate that a button or menu item will perform an
 action that always requires additional user input before completing. Use
-an ellipsis at the end of a menu item or button's label only when the
-following circumstances apply:
+the ellipsis Unicode character, not three dot characters, to let screen
+readers describe it appropriately. Use an ellipsis at the end of a menu
+item or button's label only when the following circumstances apply:
 
 -   The menu item or button must perform an action. Actions always
     begin with a verb, (e.g. "Show", "Configure", "Adjust") and
