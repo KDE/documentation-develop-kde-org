@@ -28,7 +28,7 @@ To install it, run:
   As runtimes are versioned, to make sure not to break other applications with sudden updates, you'll have to pick the latest available one.
   Flatpak will ask you to choose a version when running the install command `flatpak install org.kde.Sdk`.
   
-* Writing a flatpak manifest. Flatpak manifests can be written in json or yaml, depending on what you like better. The KDE Team on flathub currently uses json.
+* Writing a Flatpak manifest. Flatpak manifests can be written in JSON or YAML, depending on what you like better. The KDE Team on Flathub currently uses JSON.
   A list of all possible keys for a flatpak manifest can be found in the official [flatpak documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html#flatpak-manifest), but in many cases a minimal recipe is enough.
   
   This is a minimal manifest for Kate:
