@@ -203,7 +203,10 @@ Desktop and Panel objects are both Containments.
 
 Read-only properties:
 
-- `int id`: the integer id of this desktop/panel
+- `string version`:  the version of the containment
+- `int id`: the integer id of this containment
+- `int screen`: the screen this activity is associated with, or
+  -1 for none
 - `string formFactor`: returns [the form factor](https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1Types.html#afd0761e107f9b0ff888b0fabdc53f188) of the containment.
   `planar` for desktop widgets, `mediacenter` for media
   centers like TVs, and either `horizontal` or `vertical` for panels.
@@ -220,27 +223,23 @@ Read-only properties:
 
 Read-write properties:
 
-- `int desktop`: the virtual desktop this activity is associated
-  with, or -1 for none
-- `int screen`: the screen this activity is associated with, or
-  -1 for none
-- `string name`: the name of this activity
 - `array<string> currentConfigGroup`: the current configuration
   group path, with each entry in the array
   representing a sub-group. This allows one to access trees of groups
   with code such as: widget.currentConfigGroup = new array('topGroup',
   'subGroupOfTopGroup'). An empty array means the default (top-level)
   configuration group for the widget
-- `string version`:  the version of the Activity or Panel
 
 Functions:
 
--  `void remove()`: deletes this activity and all widgets inside of it
+-  `void remove()`: deletes this containment and all widgets inside of it
 -  `Widget widgetById(int id)`: returns an object representing
    the widget with the given id
 -  `Widget addWidget(string name)`: adds a new widget to the
-   activity; the name maps to the `X-KDE-PluginInfo-Name=` entry in
+   containment; the name maps to the `X-KDE-PluginInfo-Name=` entry in
    the widget's .desktop file
+-  `Widget addWidget(string name, number x, y, w, h)`: adds a new widget to the
+   containment at the specified position.
 -  `Widget addWidget(Widget widget)`: adds an existing widget to
    this activity; useful for moving widgets between Activities and
    Panels
