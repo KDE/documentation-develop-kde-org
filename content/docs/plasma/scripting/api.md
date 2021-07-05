@@ -201,6 +201,8 @@ Functions:
 
 Desktop and Panel objects are both Containments.
 
+Containments also inherit all the [**Applet properties**](#applets-containments-and-widgets).
+
 Read-only properties:
 
 - `string version`:  the version of the containment
@@ -212,27 +214,22 @@ Read-only properties:
   centers like TVs, and either `horizontal` or `vertical` for panels.
 - `array<int> widgetIds`: a list of integer ids of all the
   widgets in this containment
-- `array<string> configKeys`: a list of all keys that are set in the
-  current configuration group
-- `array<string> configGroups`: (scriptingVersion >= 2) a list of
-  all the groups in the current configuration group
-- `array<string> globalConfigKeys`: (scriptingVersion >= 2) a list
-  of all keys that are set in the current global configuration group
-- `array<string> globalConfigGroups`: (scriptingVersion >= 2) a
-  list of all the groups in the current global configuration group
 
 Read-write properties:
 
-- `array<string> currentConfigGroup`: the current configuration
-  group path, with each entry in the array
-  representing a sub-group. This allows one to access trees of groups
-  with code such as: widget.currentConfigGroup = new array('topGroup',
-  'subGroupOfTopGroup'). An empty array means the default (top-level)
-  configuration group for the widget
-
 Functions:
 
--  `void remove()`: deletes this containment and all widgets inside of it
+- Inherits `Applet.remove()`: deletes this containment and all widgets inside of it
+- Inherits `Applet.showConfigurationInteface()`
+- Inherits `Applet.readConfig(...)`
+- Inherits `Applet.writeConfig(...)`
+- Inherits `Applet.readGlobalConfig(...)`
+- Inherits `Applet.writeGlobalConfig(...)`
+- Inherits `Applet.reloadConfig()`: causes the Containment (Desktop or Panel)
+  to reload its configuration; reaction to configuration changes
+  made using `readConfig()` are usually activated on script exit, but this
+  can be triggered earlier on a per-widget basis using this method
+
 -  `Widget widgetById(int id)`: returns an object representing
    the widget with the given id
 -  `Widget addWidget(string name)`: adds a new widget to the
@@ -243,38 +240,17 @@ Functions:
 -  `Widget addWidget(Widget widget)`: adds an existing widget to
    this activity; useful for moving widgets between Activities and
    Panels
--  `showConfigurationInteface()`: shows the configuration user
-   interface for this Activity or Panel on the screen
--  `readConfig(string key, any default)`: (scriptingVersion >= 2)
-   reads the value of key in the config with default for the default
-   value
--  `writeConfig(string key, any value)`: (scriptingVersion >= 2) sets
-   key to value in the config
--  `readGlobalConfig(string key, any default)`: (scriptingVersion >=
-   2) reads the value of key in the global config with default for the
-   default value
--  `writeGlobalConfig(string key, any value)`: (scriptingVersion >= 2)
-   sets key to value in the global config
--  `reloadConfig()`: (scriptingVersion >= 2) causes the Activity or
-   Panel to reload its configuration; reaction to configuration changes
-   made using readConfig are usually activated on script exit, but this
-   can be triggered earlier on a per-widget basis using this method
--  `array[string] currentGlobalConfigGroup`: (scriptingVersion >= 2)
-   the current global configuration group path, with each entry in the
-   array representing a sub-group, similar to currentConfigGroup.
-   However, global configuration is shared by all instances of panels
-   and activities of the same type.
 -  `array[Widget] widgets([string type])`: (scriptingVersion >= 2)
    returns all the widgets in the Panel or Activity. If the optional
    type is specified, only widgets matching that type will be returned.
 
 ## Widgets
 
-Widgets may be enumerated by calling the widgetIds property on an
-Activity or Panel object. With a widget id in hand, a Widget object can
-be retrieved by calling widgetById(id) on an Activity or Panel object.
-New Widgets can be created with add addWidget(string) function provided
-by Activity and Panel objects.
+Widgets may be enumerated by calling the `widgetIds` property on an
+`Desktop` or `Panel` object. With a widget id in hand, a `Widget` object can
+be retrieved by calling `widgetById(id)` on a `Containment` (`Desktop` or `Panel`) object.
+New Widgets can be created with add `addWidget(string)` function provided
+by `Containment` objects.
 
 ### Checking if a widget is installed
 
@@ -295,60 +271,98 @@ if (knownWidgetTypes.indexOf('someWidgetPluginName') > -1) {
 
 ### Widget Object API
 
-A Widget object provides the following read-only properties:
+Widgets also inherit all the [**Applet properties**](#applets-containments-and-widgets).
 
--  `number id`: the id of the widget
--  `string type`: the plugin type of this widget
--  `array[string] configKeys`: a list of all keys that are set in
-   the current configuration
--  `array[string] configGroups`: a list of all the groups in the
-   current configuration
--  `array[string] globalConfigKeys`: (scriptingVersion >= 2) a list
-   of all keys that are set in the current global configuration group
--  `array[string] globalConfigGroups`: (scriptingVersion >= 2) a
-   list of all the groups in the current global configuration group
--  `string version`: (scriptingVersion >= 2) the version of the
-   Activity or Panel
+Read-only properties:
 
-as well as the following read-write properties:
+- Inherits `Applet.id`: the numerical instance id of the widget
+- Inherits `Applet.type`: the `X-KDE-PluginInfo-Name` of the widget
+- Inherits `Applet.version`
+- Inherits `Applet.configKeys`
+- Inherits `Applet.configGroups`
+- Inherits `Applet.globalConfigKeys`
+- Inherits `Applet.globalConfigGroups`
 
--  `array[string] currentConfigGroup`: the current configuration
-   group path, with each entry in the array representing a sub-group.
-   This allows one to access trees of groups with code such as:
-   widget.currentConfigGroup = new array('topGroup',
-   'subGroupOfTopGroup'). An empty array means the default (top-level)
-   configuration group for the widget
--  `array[string] currentGlobalConfigGroup`: (scriptingVersion >= 2)
-   the current global configuration group path, with each entry in the
-   array representing a sub-group, similar to currentConfigGroup.
-   However, global configuration is shared by all instances of widgets
-   of the same type.
--  `QRectF geometry`: the geometry of the widget (settable)
--  `string globalShortcut`: the shortcut sequence (in the format
-   used by QKeySequence, e.g. `Alt+F1`) associated with this widget
--  `number index`: the layout index of the widget; in a Panel this
-   corresponds to the order the widget appears in. Changing the value of
-   the index will change the position of the widget in Panels and may do
-   so in some Activities as well.
+Read-write properties:
 
-and the following methods:
+- `QRectF geometry`: the geometry of the widget
+- `string globalShortcut`: the shortcut sequence (in the format
+  used by QKeySequence, e.g. `Alt+F1`) associated with this widget
+- `number index`: the layout index of the widget; in a Panel this
+  corresponds to the order the widget appears in. Changing the value of
+  the index will change the position of the widget in Panels and may do
+  so in some Activities as well.
+- Inherits `Applet.currentConfigGroup`
+- Inherits `Applet.currentGlobalConfigGroup`
 
--  `remove()`: deletes this widget
--  `readConfig(string key, any default)`: reads the value of key in
-   the config with default for the default value
--  `writeConfig(string key, any value)`: sets key to value in the
-   config
--  `readGlobalConfig(string key, any default)`: (scriptingVersion >=
-   2) reads the value of key in the global config with default for the
-   default value
--  `writeGlobalConfig(string key, any value)`: (scriptingVersion >= 2)
-   sets key to value in the global config
--  `reloadConfig()`: causes the widget to reload its configuration;
-   reaction to configuration changes made using readConfig are usually
-   activated on script exit, but this can be triggered earlier on a
-   per-widget basis using this method
--  `showConfigurationInteface()`: shows the configuration user
-   interface for this widget on the screen
+Functions:
+
+- Inherits `Applet.remove()`
+- Inherits `Applet.showConfigurationInteface()`
+- Inherits `Applet.readConfig(...)`
+- Inherits `Applet.writeConfig(...)`
+- Inherits `Applet.readGlobalConfig(...)`
+- Inherits `Applet.writeGlobalConfig(...)`
+- Inherits `Applet.reloadConfig()`
+
+
+## Applets (Containments and Widgets)
+
+The base class of Widgets and Containments (Desktops and Panels).
+
+Most of these functions and properties are redefined in both
+[`containment.h`](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/shell/scripting/containment.h)
+and [`widget.h`](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/shell/scripting/widget.h)
+instead of [`applet.h`](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/shell/scripting/applet.h)
+for some reason.
+
+Read-only properties:
+
+- `number id`: the numerical instance id of the applet
+- `string type`: the plugin type of this applet, same value as
+  `X-KDE-PluginInfo-Name` in the metadata
+- `string version`: the version of the applet specified in it's metadata
+- `array<string> configKeys`: a list of all keys that are set in the
+  current configuration group
+- `array<string> configGroups`: a list of all the groups in the current
+  configuration group
+- `array<string> globalConfigKeys`: a list of all keys that are set in
+  the current global configuration group
+- `array<string> globalConfigGroups`: a list of all the groups in the
+  current global configuration group
+
+Read-write properties:
+
+- `array<string> currentConfigGroup`: the current configuration
+  group path, with each entry in the array representing a sub-group.
+  This allows one to access trees of groups with code such as:
+  ```js
+  widget.currentConfigGroup = new array('topGroup', 'subGroupOfTopGroup')
+  ```
+  An empty array means the default (top-level) configuration group
+  for the applet
+- `array<string> currentGlobalConfigGroup`: the current global
+  configuration group path, with each entry in the array representing
+  a sub-group, similar to `currentConfigGroup`. However, global
+  configuration is shared by all instances of applets of the same type.
+
+Functions:
+
+- `remove()`: deletes this applet
+- `showConfigurationInteface()`: shows the configuration user
+  interface for this widget on the screen
+- `readConfig(string key, any default)`: reads the value of key in
+  the config with default for the default value
+- `writeConfig(string key, any value)`: sets key to value in the
+  config
+- `readGlobalConfig(string key, any default)`: reads the value of key
+  in the global config with default for the default value
+- `writeGlobalConfig(string key, any value)`: sets key to value in
+  the global config
+- `reloadConfig()`: causes the widget to reload its configuration;
+  reaction to configuration changes made using readConfig are usually
+  activated on script exit, but this can be triggered earlier on a
+  per-widget basis using this method
 
 ## Screen Geometry
 
@@ -516,7 +530,7 @@ config2.writeEntry('Yes', 20);
 Read-write properties:
 
 -  `boolean locked`: whether the desktop shell and widgets are
-   locked or not (settable)
+   locked or not
 -  `string theme`: (scripting version >= 3) the name of the desktop
    theme to use for the interface, e.g. default, Air, Oxygen, etc.
 
