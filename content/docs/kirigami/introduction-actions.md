@@ -59,7 +59,7 @@ Many of KDE's icons follow the FreeDesktop Icon Naming specification. Therefore,
 
 The `onTriggered` property is the most important. This is what our action will do when it is used. You'll notice that in our example we're using the method `kountdownModel.append` of the `kountdownModel` we created in our previous tutorial. This method lets us append a new element to our list model. We are providing it with an object that has the relevant properties for our countdowns (name, description, and a placeholder date).
 
-{{< figure class="text-center" caption="Each time we click our now 'Add kountdown' button on the top left, our custom countdown is added." src="actions_result.png" >}}
+{{< figure class="text-center" caption="Each time we click our now 'Add kountdown' button on the top right, our custom countdown is added." src="action_result.png" >}}
 
 ## Global drawer
 
