@@ -105,7 +105,9 @@ Every screen will have a Desktop instance. Desktops are containments
 which can have widgets and a wallpaper plugin.
 
 The actual data type for a Desktop is
-[`WorkspaceScripting::Containment`](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/shell/scripting/containment.h) which [Panels](#panels) inherit.
+[`WorkspaceScripting::Containment`](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/shell/scripting/containment.h)
+which [Panels](#panels) inherit. This documentation pretends it's a
+different type to make it saner to read.
 
 ```js
 let desktop = desktops()[0]
@@ -116,7 +118,34 @@ desktop.writeConfig("Image", "file:///usr/share/wallpapers/Next/contents/images/
 
 Desktops also inherit all the [**Containment properties**](#containments-desktops-and-panels).
 
+Global functions:
+
+- `array<Desktop> desktopsForActivity(string id)`: return all the
+  desktops associated to a specific activity id (one per physical
+  screen).
+- `array<Desktop> desktops()`: returns an array of all desktops
+  that currently exist.
+- `Desktop desktopById(int id)`: return an object representing
+  the activity with the given id
+- `Desktop desktopForScreen(number screen[, number desktop])`:
+  returns an object representing the activity currently associated with
+  the given screen and, optionally, the given desktop.
+
+
 Read-only properties:
+
+- Inherits `Containment.formFactor`
+- Inherits `Containment.screen`
+- Inherits `Containment.widgetIds`
+- Inherits `Applet.id`: the numerical instance id of this containment
+- Inherits `Applet.type`: the `X-KDE-PluginInfo-Name` of the containment
+- Inherits `Applet.version`
+- Inherits `Applet.configKeys`
+- Inherits `Applet.configGroups`
+- Inherits `Applet.globalConfigKeys`
+- Inherits `Applet.globalConfigGroups`
+
+Read-write properties:
 
 - `string wallpaperPlugin`: the wallpaper plugin to use with the Desktop.
   ```bash
@@ -135,19 +164,22 @@ Read-only properties:
   ...
   ```
 - `string wallpaperMode`: the wallpaper plugin mode to use with the Desktop. Does nothing in Plasma 5.
+- Inherits `Containment.locked`
+- Inherits `Applet.currentConfigGroup`
+- Inherits `Applet.currentGlobalConfigGroup`
 
 Functions:
 
-- `array<Desktop> desktopsForActivity(string id)`: return all the
-  desktops associated to a specific activity id (one per physical
-  screen).
-- `array<Desktop> desktops()`: returns an array of all desktops
-  that currently exist.
-- `Desktop desktopById(int id)`: return an object representing
-  the activity with the given id
-- `Desktop desktopForScreen(number screen[, number desktop])`:
-  returns an object representing the activity currently associated with
-  the given screen and, optionally, the given desktop.
+- Inherits `Containment.addWidget(...)`
+- Inherits `Containment.widgetById(...)`
+- Inherits `Containment.widgets(...)`
+- Inherits `Applet.remove()`
+- Inherits `Applet.showConfigurationInteface()`
+- Inherits `Applet.readConfig(...)`
+- Inherits `Applet.writeConfig(...)`
+- Inherits `Applet.readGlobalConfig(...)`
+- Inherits `Applet.writeGlobalConfig(...)`
+- Inherits `Applet.reloadConfig()`
 
 ## Panels
 
@@ -164,13 +196,33 @@ let panel = new Panel
 
 Panels also inherit all the [**Containment properties**](#containments-desktops-and-panels).
 
-Read-only properties:
+Global properties:
 
 - `array<int> panelIds`: returns a list of integer ids of all
   existing Plasma panels
 - `array<string> knownPanelTypes`: a list of types of panels that can
   be created. This is useful to check if a Panel type is available on
   the system before trying to construct one.
+
+Global functions:
+
+- `Panel panelById(int id)`: returns an object representing the
+  Panel that matches the given id
+- `array<Panel> panels()`: returns an array of all panels that
+  currently exist
+
+Read-only properties:
+
+- Inherits `Containment.formFactor`
+- Inherits `Containment.screen`
+- Inherits `Containment.widgetIds`
+- Inherits `Applet.id`: the numerical instance id of this containment
+- Inherits `Applet.type`: the `X-KDE-PluginInfo-Name` of the containment
+- Inherits `Applet.version`
+- Inherits `Applet.configKeys`
+- Inherits `Applet.configGroups`
+- Inherits `Applet.globalConfigKeys`
+- Inherits `Applet.globalConfigGroups`
 
 Read-write properties:
 
@@ -189,13 +241,22 @@ Read-write properties:
   left/right/center anchor point
 - `string location`: returns the location of the Panel; valid
   values include `top`, `bottom`, `left`, `right` and `floating`.
+- Inherits `Containment.locked`
+- Inherits `Applet.currentConfigGroup`
+- Inherits `Applet.currentGlobalConfigGroup`
 
 Functions:
 
-- `Panel panelById(int id)`: returns an object representing the
-  Panel that matches the given id
-- `array<Panel> panels()`: returns an array of all panels that
-  currently exist
+- Inherits `Containment.addWidget(...)`
+- Inherits `Containment.widgetById(...)`
+- Inherits `Containment.widgets(...)`
+- Inherits `Applet.remove()`: deletes this containment and all widgets inside of it
+- Inherits `Applet.showConfigurationInteface()`
+- Inherits `Applet.readConfig(...)`
+- Inherits `Applet.writeConfig(...)`
+- Inherits `Applet.readGlobalConfig(...)`
+- Inherits `Applet.writeGlobalConfig(...)`
+- Inherits `Applet.reloadConfig()`
 
 ## Containments (Desktops and Panels)
 
@@ -205,21 +266,42 @@ Containments also inherit all the [**Applet properties**](#applets-containments-
 
 Read-only properties:
 
-- `string version`:  the version of the containment
-- `int id`: the integer id of this containment
-- `int screen`: the screen this activity is associated with, or
-  -1 for none
 - `string formFactor`: returns [the form factor](https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1Types.html#afd0761e107f9b0ff888b0fabdc53f188) of the containment.
   `planar` for desktop widgets, `mediacenter` for media
   centers like TVs, and either `horizontal` or `vertical` for panels.
+- `int screen`: the screen this activity is associated with, or
+  `-1` for none
 - `array<int> widgetIds`: a list of integer ids of all the
   widgets in this containment
+- Inherits `Applet.id`: the numerical instance id of this containment
+- Inherits `Applet.type`: the `X-KDE-PluginInfo-Name` of the containment
+- Inherits `Applet.version`
+- Inherits `Applet.configKeys`
+- Inherits `Applet.configGroups`
+- Inherits `Applet.globalConfigKeys`
+- Inherits `Applet.globalConfigGroups`
 
 Read-write properties:
 
+- `bool locked`
+- Inherits `Applet.currentConfigGroup`
+- Inherits `Applet.currentGlobalConfigGroup`
+
 Functions:
 
-- Inherits `Applet.remove()`: deletes this containment and all widgets inside of it
+- `Widget addWidget(string name)`: adds a new widget to the
+  containment; the name maps to the `X-KDE-PluginInfo-Name` entry in
+  the widget's metadata file
+- `Widget addWidget(string name, number x, y, w, h)`: adds a new widget to the
+  containment at the specified position.
+- `Widget addWidget(Widget widget)`: adds an existing widget to
+  this containment; useful for moving widgets between Desktops and Panels
+- `Widget widgetById(int id)`: returns an object representing
+  the widget with the given instance id
+- `array<Widget> widgets([string type])`:
+  returns all the widgets in the Containment. If the optional `type`
+  is specified, only widgets matching that type will be returned.
+- Inherits `Applet.remove()`: deletes this panel and all widgets inside of it
 - Inherits `Applet.showConfigurationInteface()`
 - Inherits `Applet.readConfig(...)`
 - Inherits `Applet.writeConfig(...)`
@@ -229,20 +311,6 @@ Functions:
   to reload its configuration; reaction to configuration changes
   made using `readConfig()` are usually activated on script exit, but this
   can be triggered earlier on a per-widget basis using this method
-
--  `Widget widgetById(int id)`: returns an object representing
-   the widget with the given id
--  `Widget addWidget(string name)`: adds a new widget to the
-   containment; the name maps to the `X-KDE-PluginInfo-Name=` entry in
-   the widget's .desktop file
--  `Widget addWidget(string name, number x, y, w, h)`: adds a new widget to the
-   containment at the specified position.
--  `Widget addWidget(Widget widget)`: adds an existing widget to
-   this activity; useful for moving widgets between Activities and
-   Panels
--  `array[Widget] widgets([string type])`: (scriptingVersion >= 2)
-   returns all the widgets in the Panel or Activity. If the optional
-   type is specified, only widgets matching that type will be returned.
 
 ## Widgets
 
@@ -254,20 +322,21 @@ by `Containment` objects.
 
 ### Checking if a widget is installed
 
-A list of all installed widget types can be retrieved the following
-read-only property:
-
--  `array[string] knownWidgetTypes` (scripting version >= 2)
-
-This can be used most conveniently with the indexOf() method, like this:
+A list of all installed widget types can be retrieved the global
+`knownWidgetTypes` variable. This can be used most conveniently with the `includes()` method, like this:
 
 ```js
-if (knownWidgetTypes.indexOf('someWidgetPluginName') > -1) {
+if (knownWidgetTypes.includes('someWidgetPluginName')) {
     print("It is installed on this system!");
 } else {
     print("It is not installed :(");
 }
 ```
+
+Global properties:
+
+- `array<string> knownWidgetTypes`: this lists all plasmoid types including
+  Containment types like `org.kde.panel` and `org.kde.desktopcontainment`.
 
 ### Widget Object API
 
@@ -275,7 +344,7 @@ Widgets also inherit all the [**Applet properties**](#applets-containments-and-w
 
 Read-only properties:
 
-- Inherits `Applet.id`: the numerical instance id of the widget
+- Inherits `Applet.id`: the numerical instance id of this widget
 - Inherits `Applet.type`: the `X-KDE-PluginInfo-Name` of the widget
 - Inherits `Applet.version`
 - Inherits `Applet.configKeys`
@@ -286,12 +355,17 @@ Read-only properties:
 Read-write properties:
 
 - `QRectF geometry`: the geometry of the widget
-- `string globalShortcut`: the shortcut sequence (in the format
-  used by QKeySequence, e.g. `Alt+F1`) associated with this widget
+- `string globalShortcut`: the shortcut sequence associated with this widget
+  (in the format used by [`QKeySequence`](https://doc.qt.io/qt-5/qkeysequence.html), e.g. `Alt+F1`)
 - `number index`: the layout index of the widget; in a Panel this
   corresponds to the order the widget appears in. Changing the value of
   the index will change the position of the widget in Panels and may do
-  so in some Activities as well.
+  so in some Desktops as well.
+- `string userBackgroundHints`: Use another kind of background instead if supported by the applet.
+  In order for an applet to support user configuration of the background,
+  it needs to have the [`Plasma::Types::ConfigurableBackground`](https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1Types.html#ab2b1c1767f3f432a0928dc7ca6b3f29e)
+  flag set in its `backgroundHints`.
+  See [`AppletInterface::userBackgroundHints`](https://api.kde.org/frameworks/plasma-framework/html/classAppletInterface.html#ac7a63cd2676f46ec0b2665292c6cdd1d).
 - Inherits `Applet.currentConfigGroup`
 - Inherits `Applet.currentGlobalConfigGroup`
 
@@ -318,7 +392,7 @@ for some reason.
 
 Read-only properties:
 
-- `number id`: the numerical instance id of the applet
+- `number id`: the numerical instance id of this applet
 - `string type`: the plugin type of this applet, same value as
   `X-KDE-PluginInfo-Name` in the metadata
 - `string version`: the version of the applet specified in it's metadata
@@ -337,7 +411,7 @@ Read-write properties:
   group path, with each entry in the array representing a sub-group.
   This allows one to access trees of groups with code such as:
   ```js
-  widget.currentConfigGroup = new array('topGroup', 'subGroupOfTopGroup')
+  widget.currentConfigGroup = new Array('topGroup', 'subGroupOfTopGroup')
   ```
   An empty array means the default (top-level) configuration group
   for the applet
