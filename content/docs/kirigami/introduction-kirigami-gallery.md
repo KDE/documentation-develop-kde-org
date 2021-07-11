@@ -61,7 +61,7 @@ Kirigami.ScrollablePage {
 
 What we have done so far is to create a [ScrollablePage](docs:kirigami2;ScrollablePage) and put
 a [CardsGridView](docs:kirigami2;CardsGridView) into it, since we want to display a grid of Cards
-generated from a model. The data of each contact is provided by a [ListModel](https://doc.qt.io/qt-5/qml-qtqml-models-listmodel.html>)
+generated from a model. The data of each contact is provided by a [ListModel](https://doc.qt.io/qt-5/qml-qtqml-models-listmodel.html)
 while the card delegate is responsible for the presentation of the data. For more info about
 models and views in Qt Quick, see [here](https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html).
 
