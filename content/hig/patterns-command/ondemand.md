@@ -53,4 +53,4 @@ On-demand controls are revealed by sliding a handle from right to left
 to reveal them. As soon as the user taps anywhere else, the handle is
 slid back.
 
-For further guidelines see [list item](/components/editing/list>).
+For further guidelines see [list item](/hig/components/editing/list/).
