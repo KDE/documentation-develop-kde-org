@@ -51,7 +51,7 @@ navigation with the list.
 #### On-Demand Actions
 
 List items can uses an
-[on-demand pattern](/hig/patterns/command/ondemand)
+[on-demand pattern](/hig/patterns-command/ondemand)
 as an alternative to always-visible controls. If the user
 often performs tasks on single items of a list, you can add on-demand
 controls to the list item for these.
@@ -98,8 +98,8 @@ toggle selection state.
 
 -   Don't provide extended multiple selections with Shift+Click or
     Ctrl+Click to select groups of contiguous or non-adjacent values,
-    respectively. Instead, use the [dual-list pattern](/hig/patterns/content/duallist)
-    or the [picker pattern](/hig/patterns/content/picker) if multiple
+    respectively. Instead, use the [dual-list pattern](/hig/patterns-content/duallist)
+    or the [picker pattern](/hig/patterns-content/picker) if multiple
     items have to be selected, because it allows
     users to easily see which items are selected at any point, without
     having to scroll through the available options, and it can be used
@@ -108,7 +108,7 @@ toggle selection state.
 #### Picker
 
 Lists can be used for the
-[picker pattern](/hig/patterns/content/picker).
+[picker pattern](/hig/patterns-content/picker).
 Place a button below the list to add items to the list. To
 remove items from the list, either add an remove action on the item, or
 give the user the possibility to select items and add a global remove
@@ -122,7 +122,7 @@ changed by the user.
 ##### Desktop
 
 If you use a
-[dual-list pattern](/hig/patterns/content/duallist) and want to be
+[dual-list pattern](/hig/patterns-content/duallist) and want to be
 able to re-order the items in the selected list you can add additional
 up and down buttons.
 
@@ -149,7 +149,7 @@ up and down buttons.
     for list view items.
 -   You can use alternate row colors (use theme settings).
 -   Add a
-    [placeholder message](/hig/patterns/patterns-content/placeholdermessage)
+    [placeholder message](/hig/patterns-content/placeholdermessage)
     when the list has no items in it.
 
 For section headers use

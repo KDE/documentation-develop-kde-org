@@ -31,7 +31,7 @@ How to Use
 
 ![Using an overlay to pick additional items.](/hig/PickerOverlay.png)
 
--   Use a [grid](/components/editing/grid) or a [list](/components/editing/list)
+-   Use a [grid](/hig/components/editing/grid) or a [list](/hig/components/editing/list)
     to display the selected elements.
 -   Open a list of additional items to choose in an overlay sheet or a
     dialog.
@@ -50,5 +50,5 @@ How to Use
 -   If the lists or grids appear in a dialog, consider making the window
     and the lists or grids within it resizeable so that the user can
     choose how many list items are visible at a time without scrolling.
--   Use [sentence style capitalization](/style/writing/capitalization)
+-   Use [sentence style capitalization](/hig/style/writing/capitalization)
     for items.

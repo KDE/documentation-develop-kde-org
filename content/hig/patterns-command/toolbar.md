@@ -22,7 +22,7 @@ actions
 -   Commands are also exposed using context menus, a context panel or by
     the direct manipulation of content.
 
-See [toolbar](/components/navigation/toolbar) for more details.
+See [toolbar](/hig/components/navigation/toolbar) for more details.
 
 ### Examples
 
@@ -35,7 +35,7 @@ Mobile
 ![Toolbar](/hig/Actionbutton2.png)
 
 On mobile, a toolbar is displayed as a group of
-[primary action buttons](/components/navigation/actionbutton).
+[primary action buttons](/hig/components/navigation/actionbutton).
 
 -   If there are controls that need to be accessed often within the
     application\'s primary tasks but the content needs as much space to
@@ -45,5 +45,5 @@ On mobile, a toolbar is displayed as a group of
     and there cannot be more then three buttons.
 -   If more than three actions are required, put the remaining ones in
     the
-    [global drawer](/components/navigation/globaldrawer) or 
-    [context drawer](/components/navigation/contextdrawer).
+    [global drawer](/hig/components/navigation/globaldrawer) or 
+    [context drawer](/hig/components/navigation/contextdrawer).

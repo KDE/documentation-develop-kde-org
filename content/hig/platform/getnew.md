@@ -34,7 +34,7 @@ The text of a GNS button should be made of these parts:
     will download
 
 -   Add an
-    [ellipsis to the label](/style/writing/labels), to indicate the
+    [ellipsis to the label](/hig/style/writing/labels), to indicate the
     user must provide additional input to complete the task.
 
 The button should always be placed on the bottom right of the list or

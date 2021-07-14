@@ -4,7 +4,7 @@ weight: 7
 ---
 
 Navigation Patterns depend on the structure of the application content.
-Navigation patterns can be combined with [command patterns](/patterns-command/)
+Navigation patterns can be combined with [command patterns](/hig/patterns-command/)
 and content patterns to design the complete layout for your application.
 
 Patterns for Desktop User Interfaces

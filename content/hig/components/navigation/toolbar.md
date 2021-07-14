@@ -77,7 +77,7 @@ Appearance
 ----------
 
 -   Don't change the button style from the default, which is
-    [text beside icons](/hig/patterns/content/iconandtext).
+    [text beside icons](/hig/patterns-content/iconandtext).
 -   Use and design toolbar icons with special care. Users remember
     location of an object but rely as well on icon properties.
 -   A distinct association between the underlying function and its

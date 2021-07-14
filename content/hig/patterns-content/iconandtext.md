@@ -17,7 +17,7 @@ How to Use
 ![Alignment of text and icons.](/hig/HIGPatternIconsAndText.png)
 
 {{< alert color="warning" title="Attention" >}}
-Make sure to read about how [units and measurements](/layout/units)
+Make sure to read about how [units and measurements](/hig/layout/units)
 are used for design and development.
 {{< /alert >}}
 

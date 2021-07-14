@@ -19,7 +19,7 @@ graphically (as images with or without text), such as a gallery of
 pictures or video thumbnails, or the content of a store.
 
 For elements that are better represented by text, use a
-[list](/components/editing/list).
+[list](/hig/components/editing/list).
 
 How to Use
 ----------
