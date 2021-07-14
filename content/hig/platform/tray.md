@@ -28,11 +28,11 @@ in status changes within the application.
 
 -   On left click, open the application itself, or a panel that allows
     quick access to common features.
--   On right click, open a [context menu](/components/navigation/contextmenu).
+-   On right click, open a [context menu](/hig/components/navigation/contextmenu).
 -   For application like media players, enable the user to change the
     volume while scrolling over the icon.
 
 ### Appearance
 
-Use a [monochrome, shade black icon](/style/icons/) and use color only
+Use a [monochrome, shade black icon](/hig/style/icons/) and use color only
 to communicate state.

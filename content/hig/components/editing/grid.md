@@ -44,12 +44,12 @@ make sure to test keyboard navigation with the grid.
 #### On-Demand Actions
 
 Grid items can use the
-[on-demand pattern](/hig/patterns/command/ondemand) for inline actions.
+[on-demand pattern](/hig/patterns-command/ondemand) for inline actions.
 
 #### Picker
 
 Grids can be used for the
-[picker pattern](/hig/patterns/content/picker). Place a button
+[picker pattern](/hig/patterns-content/picker). Place a button
 below the grid to add items to the grid. To
 remove items from the grid, either add a remove action on the item, or
 give the user the possibility to select items and add a global remove
@@ -69,7 +69,7 @@ re-ordering via drag-and-drop.
 -   Use [sentence style capitalization](/hig/style/writing/capitalization)
     for grid view items.
 -   Add a
-    [placeholder message](/hig/patterns/patterns-content/placeholdermessage)
+    [placeholder message](/hig/patterns-content/placeholdermessage)
     when the grid view has no items in it.
 
 #### Cards

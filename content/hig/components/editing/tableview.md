@@ -67,5 +67,5 @@ Guidelines
     [Alignment](../layout/alignment)).
 -   Create a buddy relation so access keys are assigned.
 -   Add a
-    [placeholder message](/hig/patterns/patterns-content/placeholdermessage)
+    [placeholder message](/hig/patterns-content/placeholdermessage)
     when the table has no items in it.

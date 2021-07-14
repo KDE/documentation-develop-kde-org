@@ -34,7 +34,7 @@ How to Use It
 -   Make the whole area of each list item clickable to select the item
     (unless there is a "Slide to reveal" handle, see next bullet)
 -   If you want actions to be available directly on a list item, use the
-    [slide to reveal pattern](/patterns-command/ondemand).
+    [slide to reveal pattern](/hig/patterns-command/ondemand).
 
 Implementation
 --------------

@@ -51,7 +51,7 @@ How to Use It
 -   When on the lowest level, showing the content of an individual list
     item, use a swipe beyond the top/bottom of the content to jump to
     the previous/next item in the list.
--   For the command structure, see the [command patterns](/patterns/command/).
+-   For the command structure, see the [command patterns](/hig/patterns-command/).
 
 Implementation
 --------------

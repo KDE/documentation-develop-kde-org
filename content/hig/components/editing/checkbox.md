@@ -33,7 +33,7 @@ Use two radio buttons to remove the need to guess.
 {{< /compare >}}
 
 -   For more than five options, use either a
-    [list view](../list) or the [dual-list pattern](/hig/patterns/content/duallist)
+    [list view](../list) or the [dual-list pattern](/hig/patterns-content/duallist)
     in case of multiple selections.
 -   Don't use the selection to perform commands.
 
