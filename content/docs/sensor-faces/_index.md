@@ -227,7 +227,7 @@ might look like this:
 ![TA sensor face showing only an extended legend](images/legend.png)
 {{< /section-left >}}
 {{< section-right >}}
-```
+```qml
 import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.14
