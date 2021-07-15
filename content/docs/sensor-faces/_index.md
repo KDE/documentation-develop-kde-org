@@ -131,7 +131,7 @@ Faces.SensorFace {
 {{< /section-right >}}
 {{< /sections >}}
 
-### Retrieveing the data
+### Retrieving the data
 
 The face controller supplies the list of sensor ids. To access more information about those sensors
 and retrieving their current values, there are two options. We can instantiate a [Sensor](docs:libksysguard;KSysGuard::Sensor)
@@ -287,7 +287,7 @@ If the face contains configurable elements or display settings, can they be decl
     </group>
 </kcfg>
 ```
-It declares two options. A boolean option `showRectangle`that can either be `true` or `false` and
+It declares two options. A boolean option `showRectangle` that can either be `true` or `false` and
 an option `rectangleText` that will hold some. By default the rectangle will
 be shown and the text is "Rectangle". Options can have multitude of types like
 `Int, StringList, Double, Color,...`. [The KConfigXT tutorial]({{< ref "docs/configuration/kconfig_xt" >}})
@@ -379,7 +379,7 @@ last four entries above that are kept empty should be self-explanatory.
 ### faceproperties
 Not every face supports displaying of every feature that are exposed as the [properties of 
 the face controller](#controllerProps). A face can indicate this with the file `faceproperties`
-so that ui elements can be hidden for example when configuring the face depending on whether they
+so that UI elements can be hidden for example when configuring the face depending on whether they
 are supported or not. The file format is a first line `[Config]` followed by key-value-pairs.
 Possible keys are: `SupportsSensorsColors`, `SupportsTotalSensors`, `SupportsLowPrioritySensors`,
 and `MaxTotalSensors`. By default it is assumed that a face does not support these features and
