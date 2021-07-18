@@ -94,7 +94,7 @@ The Qt project is extensive, and so are QML and QtQuick. There is a lot of funct
 
 This documentation includes a lot more about Kirigami. You can poke through some of the Components pages to find out more about some of the QML components that Kirigami provides for you to use.
 
-We recommend you also take a look at Kirigami Gallery (`kirigami2gallery`), an application designed by KDE developers to demonstrate Kirigami's tools and capabilities. It provides both interactive examples of Kirigami components as well as links to the source code of these examples so you can see how they were built. You can read more about Kirigami Gallery in our [specific Kirigami Gallery tutorial](introduction-kirigami-gallery).
+We recommend you also take a look at Kirigami Gallery (`kirigami2gallery`), an application designed by KDE developers to demonstrate Kirigami's tools and capabilities. It provides both interactive examples of Kirigami components as well as links to the source code of these examples so you can see how they were built. You can read more about Kirigami Gallery in our [specific Kirigami Gallery tutorial](/docs/kirigami/introduction-kirigami-gallery).
 
 # The sky is the limit!
 
