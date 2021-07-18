@@ -35,7 +35,7 @@ View. Let's navigate to this page.
 
 ## Implement the card grid
 
-We will reuse most of the code found in the Cards Grid View Gallery [source code page](https://invent.kde.org/sdk/kirigami-gallery/~/blob/master/src/data/contents/ui/gallery/CardsGridViewGallery.qml).
+We will reuse most of the code found in the Cards Grid View Gallery [source code page](https://invent.kde.org/sdk/kirigami-gallery/-/blob/master/src/data/contents/ui/gallery/CardsGridViewGallery.qml).
 In particular, we will remove the extra parts of the OverlaySheet (which is the
 implementation of the Kirigami Gallery that helped us reach the kirigami-gallery source
 code repository).
