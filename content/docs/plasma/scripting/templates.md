@@ -14,21 +14,35 @@ A template is a small set of files in a specified file hierarchy (or, in
 Plasma terms, a "Package"). In particular, a Template package contains
 the following files:
 
--  metadata.desktop: a .desktop file describing the template
--  contents/layout.js: a Javascript file containing the actual script
+-  `metadata.desktop`: a .desktop file describing the template
+-  `contents/layout.js`: a Javascript file containing the actual script
 
-Templates are stored under share/apps/plasma/layout-templates and may be
-installed using `plasmapkg -t layout-template -i /path/to/package`.
-Template packages may also be provided as a .zip file with a
-.plasmalayout suffix.
+Templates are stored in:
 
-The metadata.desktop file contains the usual .desktop entries such as
-Name and Icon but must also contain ``Type=Service`` and
-``ServiceTypes=Plasma/LayoutTemplate`` entries. If the layout is specific to
+-  `/usr/share/plasma/layout-templates/`
+-  `~/.local/share/plasma/layout-templates/`
+
+and may be installed using:
+
+```bash
+kpackagetool5 --type=Plasma/LayoutTemplate -i /path/to/package
+```
+
+Instead of installing a directory, template packages may also be provided
+as a `.zip` file renamed to have a `.plasmalayout` suffix.
+
+```bash
+(cd ~/Code/mytemplate && zip -r ../mytemplate.plasmalayout *)
+kpackagetool5 --type=Plasma/LayoutTemplate -i ~/Code/mytemplate.plasmalayout
+```
+
+The `metadata.desktop` file contains the usual .desktop entries such as
+Name and Icon but must also contain `Type=Service` and
+`ServiceTypes=Plasma/LayoutTemplate` entries. If the layout is specific to
 a given Plasma application, such as plasma-desktop, this can be specific
-using ``X-Plasma-Shell``. ``X-Plasma-ContainmentCategories`` defines what kind
-of layout it is with possible values being panel and desktop. Finally a
-``X-KDE-PluginInfo-Name`` entry is required to provide a globally unique
+using `X-Plasma-Shell`. `X-Plasma-ContainmentCategories` defines what kind
+of layout it is with possible values being panel and desktop. Finally, a
+`X-KDE-PluginInfo-Name` entry is required to provide a globally unique
 internal name for the Template. Here is an example of a Template that
 provides a Panel layout for Plasma Netbook:
 
@@ -64,7 +78,7 @@ a localization is available.
 A good example of the use of templates is the use case that triggered
 the creation of this feature: the desire to make it easy for users to
 re-create the default panel that is created on the first start. There is
-a Template called org.kde.plasma-desktop.defaultPanel that ships with
+a Template called `org.kde.plasma.desktop.defaultPanel` that ships with
 the KDE Plasma Workspace which contains the layout for the initial
 default panel. This is referenced by the default Plasma Desktop init
 script and because it is marked as a Panel Template in the
@@ -132,22 +146,22 @@ X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 ```
 
-The layout itself is still created from the layout.js file as usual, but
+The layout itself is still created from the `layout.js` file as usual, but
 this template also shows as a precreated activity to the user thanks to
-the ``X-Plasma-ContainmentLayout-ShowAsExisting`` key. Additionally, it
+the `X-Plasma-ContainmentLayout-ShowAsExisting` key. Additionally, it
 starts applications in the newly created activity using the
-``X-Plasma-ContainmentLayout-ExecuteOnCreation`` key.
+`X-Plasma-ContainmentLayout-ExecuteOnCreation` key.
 
 That key is a list of commands to execute, and it supports the following
 variables:
 
--  $desktop
--  $autostart
--  $documents
--  $music
--  $video
--  $downloads
--  $pictures
+-  `$desktop`
+-  `$autostart`
+-  `$documents`
+-  `$music`
+-  `$video`
+-  `$downloads`
+-  `$pictures`
 
 They all expand into the path toward the user corresponding default
 folder.
