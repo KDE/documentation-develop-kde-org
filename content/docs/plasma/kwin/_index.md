@@ -7,7 +7,7 @@ description: Learn how to programmatically manipulate windows with KWin scripts.
 ## Quick Start: Desktop Console
 
 The easiest way to test KWin scripts is to use the Plasma Desktop
-Scripting Console which can be opened via the KRunner window (Alt+F2,
+Scripting Console which can be opened via the KRunner window (`Alt+F2`,
 by default, or via the "Run Command" entry in various desktop menus)
 by entering "wm console" as the search term. It can be triggered directly
 via dbus with:
@@ -28,30 +28,66 @@ manager again.
 
 In order to have KWin load a script on each session start the script has to
 be packaged. KWin Scripts use the [KPackage](https://api.kde.org/frameworks/kpackage/html/)
-format. In the metadata.desktop file of the package the value for `X-KDE-ServiceTypes`
-has to be `KWin/Script`, as `X-Plasma-API` only javascript and declarativescript are supported.
-
-A packaged KWin Script can either be installed via the KWin Script KCM (note: the list
-does not yet reload after installing a script) or with the plasmapkg tool:
+format.
 
 ```bash
-plasmapkg2 --type kwinscript -i /path/to/myscript.js
+mkdir -p ~/Code/myscript/contents/code/
+touch ~/Code/myscript/metadata.desktop
+```
+
+Open up `metadata.desktop` in your text editor then paste the following. Keep in mind `X-KDE-PluginInfo-Name=myscript` is the folder name the script is installed to. Eg: `.../share/kwin/scripts/myscript/`.
+
+`X-Plasma-API` can be either `javascript` or `declarativescript` if you want to generate QML windows.
+
+```ini
+[Desktop Entry]
+Name=My Script
+Comment=Description of script.
+Icon=preferences-system-windows
+
+X-KDE-PluginInfo-Author=Name LastName
+X-KDE-PluginInfo-Email=username@gmail.com
+X-KDE-PluginInfo-Name=myscript
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPL
+
+Type=Service
+X-KDE-ServiceTypes=KWin/Script
+X-Plasma-API=javascript
+X-Plasma-MainScript=code/main.js
+```
+
+Next create an empty script with `touch`.
+
+```bash
+touch ~/Code/myscript/contents/code/main.js
+```
+
+A packaged KWin Script can either be installed via the KWin Script KCM (note: the list
+does not yet reload after installing a script) or with the `kpackagetool5` tool:
+
+```bash
+kpackagetool5 --type=KWin/Script -i ~/Code/myscript/
 ```
 
 ## Where can I find example scripts?
 
 A few KWin Scripts are shipped directly with the window manager. You can find those in your
-system installation. Just use plasmapkg to get a list of the available scripts:
+system installation. Just use `kpackagetool5` to get a list of the available scripts:
 
 ```bash
-plasmapkg2 -t kwinscript -l -g
+kpackagetool5 --type=KWin/Script --list --global # /usr/share/kwin/scripts/
 ```
 
-The scripts can be found in the data install path of your local KDE installation
-under "kwin/scripts". E.g. in `/usr/share/kwin/scripts/` and `~/.local/share/kwin/scripts/`.
+The default scripts bundled with the window manager can also be
+[found in the KWin repository](https://invent.kde.org/plasma/kwin/-/tree/master/src/scripts).
 
-Additionally you can find the scripts in the [KWin](https://invent.kde.org/plasma/kwin/-/tree/master/src/scripts)
-repository.
+
+[Downloaded KWin Scripts](https://store.kde.org/browse/cat/210/) can be found your user's data install path under `kwin/scripts/`. This is where your new script will be installed to.
+
+```bash
+kpackagetool5 --type=KWin/Script --list # ~/.local/share/kwin/scripts/
+```
 
 ## KWin scripting basics
 
@@ -59,7 +95,7 @@ To follow this tutorial, you must have some idea about [ECMAScript](http://en.wi
 (or [JavaScript](http://en.wikipedia.org/wiki/JavaScript)). A quick introduction can be found
 in the [Plasma scripting tutorial](https://develop.kde.org/docs/plasma/scripting/).
 
-KWin Scripts can either be written in [javascript](https://doc.qt.io/qt-5/topics-scripting.html#js-api)
+KWin Scripts can either be written in [JavaScript](https://doc.qt.io/qt-5/topics-scripting.html#js-api)
 (service type "javascript") or [QML](https://doc.qt.io/qt-5/qtqml-index.html) (service type "declarativescript").
 In order to develop KWin Scripts you should know the basic concepts of [signals and properties](https://doc.qt.io/qt-5/signalsandslots.html).
 
@@ -72,7 +108,7 @@ of what is available, please refer to the [API documentation](api).
 
 The following global functions are available to both QML and JavaScript:
 
-* `print(QVariant...):` prints the provided arguments to stdout. Takes an arbitrary number
+* `print(QVariant...)`: prints the provided arguments to stdout. Takes an arbitrary number
 of arguments. Comparable to `console.log()` which should be preferred in QML scripts.
 
 * `readConfig(QString key, QVariant defaultValue=QVariant())`: reads a config option of the
@@ -146,7 +182,7 @@ var keepAboveMaximized = [];
 
 Now we need to know whenever a window got maximized. There are two approaches to achieve that: either
 connect to a signal emitted on the workspace object or to a signal of the client. As we need to track
-all Clients it is easier to just use the signal *clientMaximizeSet* on the workspace. This signal is
+all Clients it is easier to just use the signal `clientMaximizeSet` on the workspace. This signal is
 emitted whenever the maximization state of a Client changes and passes the client and two boolean
 flags to the callback. The flags indicate whether the Client is maximized horizontally and/or
 vertically. If a client is maximized both horizontally and vertically it is considered as fully

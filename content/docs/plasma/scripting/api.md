@@ -23,24 +23,56 @@ read-only properties:
 -  `number scriptingVersion`: the version of the scripting API; e.g.
    for Plasma 5.20 it is 20.
 
-## Activities and desktops
+## Activities
 
-**Desktop** are the desktop layer in a plasma-desktop session and may
-contain widgets. In slightly more technical terms, they are desktop
-containments. Activities can be created, enumerated, modified and
-destroyed.
+**Activities** are similar to virtual desktops, except that in Plasma, activities can have different desktop wallpapers and desktop widgets. All activities share the same panels. Individual activities can have many other settings like energy profiles. [Read this](https://userbase.kde.org/Plasma#Activities) for more info on Plasma Activities.
 
-New Activities can be created using the `createActivity` function, like
-this:
+For plasma scripting purposes, we only need worry about how each activity has a different `Desktop` containment for each screen. Each `Desktop` instance can have a custom wallpaper and widgets.
+
+Consider the following example. We have two activities. The first activity named `Default` has a desktop widget, while the 2nd activity named `Gaming` only has a solid black color fill. The `Default` activity has a weather desktop widget, while the `Gaming` activity does not.
+
+* `plasmashell`
+   * All Activities
+      * `Panel(id=0)` for `Screen(id=0)`
+         * `Widget(id=0)`
+         * `Widget(id=1)`
+         * ...
+   * `Activity(name="Default", id="80cddcc9-cf02-4e23-af0b-dc569f24a2b4")`
+      ![](activity1-default.jpg)
+      * `Desktop(id=0, wallpaperPlugin="org.kde.image")` for `Screen(id=0)`
+         * `Widget(id=2)` for the weather desktop widget
+         * `[Wallpaper][org.kde.image][General] Image=wallpaper.png`
+      * `Desktop(id=1, ...)` for the 2nd monitor `Screen(id=1)`
+      
+   * `Activity(name="Gaming", id="3683ebee-8869-4d60-9db1-8e92cfebc0cf")`
+     ![](activity2-gaming.jpg)
+      * `Desktop(id=2, wallpaperPlugin="org.kde.color")` for `Screen(id=0)`
+         * `[Wallpaper][org.kde.color][General] Color=#000000`
+      * `Desktop(id=3, ...)` for the 2nd monitor `Screen(id=1)`
+
+New Activities can be created using the
+[`createActivity(name, pluginId="")`](https://invent.kde.org/plasma/plasma-workspace/blob/master/shell/scripting/scriptengine_v1.cpp#L223)
+function, like this:
 
 ```js
-let activityId = createActivity("org.kde.plasma.folderview")
+let activityId = createActivity("Activity Name")
+let activityDesktops = desktopsForActivity(activityId)
+let desktop = activityDesktops[0]
+desktop.wallpaperPlugin = "org.kde.image"
+desktop.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General")
+desktop.writeConfig("Image", "file:///usr/share/wallpapers/Next/contents/images/1920x1080.png")
 ```
 
-it returns the activity string Id (to not be confused from the numerical
-id of the `Desktop` object) The string passed into the constructor maps to
-the `X-KDE-PluginInfo-Name=` entry in the plugin's `.desktop` file). See the
-documentation on the `Containment` object class below.
+Note, `createActivity()` returns a string id. There is no `Activity` type in Plasma Scripting.
+
+The `pluginId` string passed into the `createActivity()` function should
+select the desktop "layout", however [due to a bug](https://invent.kde.org/documentation/develop-kde-org/-/issues/52)
+it always creates an activity with a folder view layout. Should the bug
+be fixed, you can pass a `pluginId` of:
+
+* The `X-KDE-PluginInfo-Name` of plasmoid with `X-KDE-ServiceTypes=Plasma/Containment` and `X-Plasma-ContainmentType=Desktop`.
+* `org.kde.desktopcontainment` for a desktop without icons
+* `org.kde.plasma.folder` for a desktop with icons
 
 Read-only properties:
 
@@ -58,10 +90,54 @@ Functions:
 - `string activityName(string activityId)`: Get the name of an activity
   by its id.
 - `void setActivityName(string activityId)`: Set the name of an activity
-by its id.
+  by its id.
 - `string currentActivity()`: Get the id of the current activity.
 - `void setCurrentActivity(string activityId)`: Set the current activity
 using its id.
+- `string createActivity(string name[, string plugin])`: Returns the new
+  activity id with the supplied name argument. The plugin argument is
+  ignored [due to a bug](https://invent.kde.org/documentation/develop-kde-org/-/issues/52)
+  so you can call this function with just `createActivity("Name")`.
+
+## Desktops
+
+Every screen will have a Desktop instance. Desktops are containments
+which can have widgets and a wallpaper plugin.
+
+The actual data type for a Desktop is
+[`WorkspaceScripting::Containment`](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/shell/scripting/containment.h) which [Panels](#panels) inherit.
+
+```js
+let desktop = desktops()[0]
+desktop.wallpaperPlugin = "org.kde.image"
+desktop.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General")
+desktop.writeConfig("Image", "file:///usr/share/wallpapers/Next/contents/images/1920x1080.png")
+```
+
+Desktops also inherit all the [**Containment properties**](#containments-desktops-and-panels).
+
+Read-only properties:
+
+- `string wallpaperPlugin`: the wallpaper plugin to use with the Desktop.
+  ```bash
+  kpackagetool5 --global --type=Plasma/Wallpaper --list
+  kpackagetool5 --type=Plasma/Wallpaper --list
+  ```
+  ```
+  Listing service types: Plasma/Wallpaper in /usr/share/plasma/wallpapers/
+  org.kde.color
+  org.kde.haenau
+  org.kde.hunyango
+  org.kde.image
+  org.kde.potd
+  org.kde.slideshow
+  Listing service types: Plasma/Wallpaper in ~/.local/share/plasma/wallpapers/
+  ...
+  ```
+- `string wallpaperMode`: the wallpaper plugin mode to use with the Desktop. Does nothing in Plasma 5.
+
+Functions:
+
 - `array<Desktop> desktopsForActivity(string id)`: return all the
   desktops associated to a specific activity id (one per physical
   screen).
@@ -75,8 +151,8 @@ using its id.
 
 ## Panels
 
-Panels can be created, enumerated, modified and destroyed. A panel
-object combines both a containment as well as the container itself,
+Panels can be created, enumerated, modified and destroyed. A [panel
+object](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/shell/scripting/panel.h) combines both a containment as well as the container itself,
 allowing for full control of things such as where it appears on the
 screen and the hiding features associated with them.
 
@@ -86,8 +162,7 @@ New Panels can be created using the Panel constructor, like this:
 let panel = new Panel
 ```
 
-The string passed into the constructor maps to the
-`X-KDE-PluginInfo-Name=` entry in the plugin's `.desktop` file.
+Panels also inherit all the [**Containment properties**](#containments-desktops-and-panels).
 
 Read-only properties:
 
@@ -97,6 +172,24 @@ Read-only properties:
   be created. This is useful to check if a Panel type is available on
   the system before trying to construct one.
 
+Read-write properties:
+
+- `number length`: the number of pixels along the screen edge used
+- `number minimumLength`: (scriptingVersion >= 7) the minimum
+  number of pixels along the screen edge used (auto-resize panels)
+- `number maximumLength`: (scriptingVersion >= 7) the maximum
+  number of pixels along the screen edge used (auto-resize panels)
+- `number height`: the height (or for vertical panels, the width)
+  of the panel
+- `string hiding`: the hiding mode of the panel, one of `none` (for
+  no hiding), `autohide`, `windowscover` or `windowsbelow`
+- `string alignment`: `right`, `left` or `center` alignment of the panel
+  (for vertical panels, `right` corresponds to top and `left` to bottom)
+- `number offset`: how much the panel is moved from the
+  left/right/center anchor point
+- `string location`: returns the location of the Panel; valid
+  values include `top`, `bottom`, `left`, `right` and `floating`.
+
 Functions:
 
 - `Panel panelById(int id)`: returns an object representing the
@@ -104,18 +197,18 @@ Functions:
 - `array<Panel> panels()`: returns an array of all panels that
   currently exist
 
-## Activities and Panels
+## Containments (Desktops and Panels)
 
-Activity and Panel objects, once created by the script, or as returned
-by activityById, activityForScreen, or panelById) provide the following
-read-only properties:
+Desktop and Panel objects are both Containments.
 
-- `int id`: the integer id of this activity
-- `string formFactor`: returns the form factor of the activity,
-  e.g. "planar" for most desktop activities,"mediacenter" for media
-  centers and either "horizontal" or "vertical" for panels.
+Read-only properties:
+
+- `int id`: the integer id of this desktop/panel
+- `string formFactor`: returns [the form factor](https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1Types.html#afd0761e107f9b0ff888b0fabdc53f188) of the containment.
+  `planar` for desktop widgets, `mediacenter` for media
+  centers like TVs, and either `horizontal` or `vertical` for panels.
 - `array<int> widgetIds`: a list of integer ids of all the
-  widgets in this Activity
+  widgets in this containment
 - `array<string> configKeys`: a list of all keys that are set in the
   current configuration group
 - `array<string> configGroups`: (scriptingVersion >= 2) a list of
@@ -125,15 +218,13 @@ read-only properties:
 - `array<string> globalConfigGroups`: (scriptingVersion >= 2) a
   list of all the groups in the current global configuration group
 
-as well as the following read/write properties:
+Read-write properties:
 
 - `int desktop`: the virtual desktop this activity is associated
   with, or -1 for none
 - `int screen`: the screen this activity is associated with, or
   -1 for none
 - `string name`: the name of this activity
-- `string wallpaperPlugin`: the wallpaper plugin to use with the Activity
-- `string wallpaperMode`: the wallpaper plugin mode to use with the Activity
 - `array<string> currentConfigGroup`: the current configuration
   group path, with each entry in the array
   representing a sub-group. This allows one to access trees of groups
@@ -142,7 +233,7 @@ as well as the following read/write properties:
   configuration group for the widget
 - `string version`:  the version of the Activity or Panel
 
-and the following methods:
+Functions:
 
 -  `void remove()`: deletes this activity and all widgets inside of it
 -  `Widget widgetById(int id)`: returns an object representing
@@ -177,24 +268,6 @@ and the following methods:
 -  `array[Widget] widgets([string type])`: (scriptingVersion >= 2)
    returns all the widgets in the Panel or Activity. If the optional
    type is specified, only widgets matching that type will be returned.
-
-In addition to all of the above properties and functions, Panel objects
-also provide the following read/write properties:
-
--  `number length`: the number of pixels along the screen edge used
--  `number minimumLength`: (scriptingVersion >= 7) the minimum
-   number of pixels along the screen edge used (auto-resize panels)
--  `number maximumLength`: (scriptingVersion >= 7) the maximum
-   number of pixels along the screen edge used (auto-resize panels)
--  `number height`: the height (or for vertical panels, the width)
-   of the panel
--  `string hiding`: the hiding mode of the panel, one of "none" (for
-   no hiding), "autohide", "windowscover" or "windowsbelow"
--  `string alignment`: right, left or center alignment of the panel
-   (for vertical panels, right corresponds to top and left to bottom)
--  `string location`: returns the location of the activity (only
-   relevant for Panels); valid values include "top", "bottom", "left",
-   "right" and "floating"
 
 ## Widgets
 

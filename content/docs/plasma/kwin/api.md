@@ -27,7 +27,24 @@ Methods and properties added to the global JavaScript object.
 * `bool assertNull(QVariant value, QString message = QString())`: Aborts the execution of the script if value is not null. If message is provided an error is thrown with the given message, if not provided an error with default message is thrown.
 * `bool assertNotNull(QVariant value, QString message = QString())`: Aborts the execution of the script if value is null. If message is provided an error is thrown with the given message, if not provided an error with default message is thrown.
 * `callDBus(QString service, QString path, QString interface, QString method, QVariant arg..., QScriptValue callback = QScriptValue())`: Call a D-Bus method at (service, path, interface and method). A variable number of arguments can be added to the method call. The D-Bus call is always performed in an async way invoking the callback provided as the last (optional) argument. The reply values of the D-Bus method call are passed to the callback.
-* `registerUserActionsMenu(QScriptValue callback)`: Registers the passed in callback to be invoked whenever the User actions menu (Alt+F3 or right click on window decoration) is about to be shown. The callback is invoked with a reference to the Client for which the menu is shown. The callback can return either a single menu entry to be added to the menu or an own sub menu with multiple entries. The object for a menu entry should be {title: "My Menu entry", checkable: true, checked: false, triggered: function (action) { // callback with triggered QAction}}, for a menu it should be {title: "My menu", items: [{...}, {...}, ...] /*list with entries as described*/}
+* `registerUserActionsMenu(QScriptValue callback)`: Registers the passed in callback to be invoked whenever the User actions menu (`Alt+F3` or right click on window decoration) is about to be shown. The callback is invoked with a reference to the Client for which the menu is shown. The callback can return either a single menu entry to be added to the menu or an own sub menu with multiple entries. The object for a menu entry should be  
+  ```js
+  {
+    title: "My Menu entry",
+    checkable: true,
+    checked: false,
+    triggered: function (action) {
+      // callback with triggered QAction
+    }
+  }
+  ```
+  for a menu it should be  
+  ```js
+  {
+    title: "My menu",
+    items: [{...}, {...}, ...] /*list with entries as described*/
+  }
+  ```
 
 
 ## KWin::WorkspaceWrapper
@@ -411,29 +428,29 @@ Methods and properties added to the global JavaScript object.
 * `int screen`
 * `qulonglong windowId`
 * `int desktop`
-* `bool onAllDesktops`: Whether the window is on all desktops. That is desktop is -1.
+* `bool onAllDesktops`: Whether the window is on all desktops. That is desktop is `-1`.
 * `QRect rect`
 * `QPoint clientPos`
 * `QSize clientSize`
 * `QByteArray resourceName`
 * `QByteArray resourceClass`
 * `QByteArray windowRole`
-* `bool desktopWindow`: Returns whether the window is a desktop background window (the one with wallpaper). See _NET_WM_WINDOW_TYPE_DESKTOP at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool dock`: Returns whether the window is a dock (i.e. a panel). See _NET_WM_WINDOW_TYPE_DOCK at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool toolbar`: Returns whether the window is a standalone (detached) toolbar window. See _NET_WM_WINDOW_TYPE_TOOLBAR at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool menu`: Returns whether the window is a torn-off menu. See _NET_WM_WINDOW_TYPE_MENU at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool normalWindow`: Returns whether the window is a "normal" window, i.e. an application or any other window for which none of the specialized window types fit. See _NET_WM_WINDOW_TYPE_NORMAL at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool dialog`: Returns whether the window is a dialog window. See _NET_WM_WINDOW_TYPE_DIALOG at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool splash`: Returns whether the window is a splashscreen. Note that many (especially older) applications do not support marking their splash windows with this type. See _NET_WM_WINDOW_TYPE_SPLASH at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool utility`: Returns whether the window is a utility window, such as a tool window. See _NET_WM_WINDOW_TYPE_UTILITY at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool dropdownMenu`: Returns whether the window is a dropdown menu (i.e. a popup directly or indirectly open from the applications menubar). See _NET_WM_WINDOW_TYPE_DROPDOWN_MENU at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool popupMenu`: Returns whether the window is a popup menu (that is not a torn-off or dropdown menu). See _NET_WM_WINDOW_TYPE_POPUP_MENU at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool tooltip`: Returns whether the window is a tooltip. See _NET_WM_WINDOW_TYPE_TOOLTIP at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool notification`: Returns whether the window is a window with a notification. See _NET_WM_WINDOW_TYPE_NOTIFICATION at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool desktopWindow`: Returns whether the window is a desktop background window (the one with wallpaper). See `_NET_WM_WINDOW_TYPE_DESKTOP` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool dock`: Returns whether the window is a dock (i.e. a panel). See `_NET_WM_WINDOW_TYPE_DOCK` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool toolbar`: Returns whether the window is a standalone (detached) toolbar window. See `_NET_WM_WINDOW_TYPE_TOOLBAR` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool menu`: Returns whether the window is a torn-off menu. See `_NET_WM_WINDOW_TYPE_MENU` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool normalWindow`: Returns whether the window is a "normal" window, i.e. an application or any other window for which none of the specialized window types fit. See `_NET_WM_WINDOW_TYPE_NORMAL` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool dialog`: Returns whether the window is a dialog window. See `_NET_WM_WINDOW_TYPE_DIALOG` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool splash`: Returns whether the window is a splashscreen. Note that many (especially older) applications do not support marking their splash windows with this type. See `_NET_WM_WINDOW_TYPE_SPLASH` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool utility`: Returns whether the window is a utility window, such as a tool window. See `_NET_WM_WINDOW_TYPE_UTILITY` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool dropdownMenu`: Returns whether the window is a dropdown menu (i.e. a popup directly or indirectly open from the applications menubar). See `_NET_WM_WINDOW_TYPE_DROPDOWN_MENU` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool popupMenu`: Returns whether the window is a popup menu (that is not a torn-off or dropdown menu). See `_NET_WM_WINDOW_TYPE_POPUP_MENU` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool tooltip`: Returns whether the window is a tooltip. See `_NET_WM_WINDOW_TYPE_TOOLTIP` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool notification`: Returns whether the window is a window with a notification. See `_NET_WM_WINDOW_TYPE_NOTIFICATION` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
 * `bool criticalNotification`: Returns whether the window is a window with a critical notification.
 * `bool onScreenDisplay`: Returns whether the window is an On Screen Display.
-* `bool comboBox`: Returns whether the window is a combobox popup. See _NET_WM_WINDOW_TYPE_COMBO at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
-* `bool dndIcon`: Returns whether the window is a Drag&Drop icon. See _NET_WM_WINDOW_TYPE_DND at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool comboBox`: Returns whether the window is a combobox popup. See `_NET_WM_WINDOW_TYPE_COMBO` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
+* `bool dndIcon`: Returns whether the window is a Drag&Drop icon. See `_NET_WM_WINDOW_TYPE_DND` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
 * `int windowType`: Returns the NETWM window type See https://standards.freedesktop.org/wm-spec/wm-spec-latest.html
 * `QStringList activities`
 * `bool managed`: Whether this Toplevel is managed by KWin (it has control over its placement and other aspects, as opposed to override-redirect windows that are entirely handled by the application).
@@ -523,17 +540,17 @@ Methods and properties added to the global JavaScript object.
 ### Read-only Properties
 
 * `bool fullScreenable`: Whether the Client can be set to fullScreen. The property is evaluated each time it is invoked. Because of that there is no notify signal.
-* `bool active`: Whether this Client is active or not. Use Workspace::activateClient() to activate a Client. Workspace::activateClient
+* `bool active`: Whether this Client is active or not. Use `Workspace::activateClient()` to activate a Client. Workspace::activateClient
 * `QVector< uint > x11DesktopIds`: The x11 ids for all desktops this client is in. On X11 this list will always have a length of
 * `bool closeable`: Whether the window can be closed by the user. The value is evaluated each time the getter is called. Because of that no changed signal is provided.
 * `QIcon icon`
 * `bool shadeable`: Whether the Client can be shaded. The property is evaluated each time it is invoked. Because of that there is no notify signal.
 * `bool minimizable`: Whether the Client can be minimized. The property is evaluated each time it is invoked. Because of that there is no notify signal.
-* `QRect iconGeometry`: The optional geometry representing the minimized Client in e.g a taskbar. See _NET_WM_ICON_GEOMETRY at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html . The value is evaluated each time the getter is called. Because of that no changed signal is provided.
+* `QRect iconGeometry`: The optional geometry representing the minimized Client in e.g a taskbar. See `_NET_WM_ICON_GEOMETRY` at https://standards.freedesktop.org/wm-spec/wm-spec-latest.html . The value is evaluated each time the getter is called. Because of that no changed signal is provided.
 * `bool specialWindow`: Returns whether the window is any of special windows types (desktop, dock, splash, ...), i.e. window types that usually don't have a window frame and the user does not use window management (moving, raising,...) on them. The value is evaluated each time the getter is called. Because of that no changed signal is provided.
-* `QString caption`: The Caption of the Client. Read from WM_NAME property together with a suffix for hostname and shortcut. To read only the caption as provided by WM_NAME, use the getter with an additional false value.
-* `QSize minSize`: Minimum size as specified in WM_NORMAL_HINTS
-* `QSize maxSize`: Maximum size as specified in WM_NORMAL_HINTS
+* `QString caption`: The Caption of the Client. Read from `WM_NAME` property together with a suffix for hostname and shortcut. To read only the caption as provided by `WM_NAME`, use the getter with an additional false value.
+* `QSize minSize`: Minimum size as specified in `WM_NORMAL_HINTS`
+* `QSize maxSize`: Maximum size as specified in `WM_NORMAL_HINTS`
 * `bool wantsInput`: Whether the Client can accept keyboard focus. The value is evaluated each time the getter is called. Because of that no changed signal is provided.
 * `bool transient`: Whether the Client is a transient Window to another Window. transientFor
 * `KWin::AbstractClient * transientFor`: The Client to which this Client is a transient if any.
@@ -546,7 +563,7 @@ Methods and properties added to the global JavaScript object.
 * `bool moveable`: Whether the Client is moveable. Even if it is not moveable, it might be possible to move it to another screen. The property is evaluated each time it is invoked. Because of that there is no notify signal. moveableAcrossScreens
 * `bool moveableAcrossScreens`: Whether the Client can be moved to another screen. The property is evaluated each time it is invoked. Because of that there is no notify signal. moveable
 * `bool resizeable`: Whether the Client can be resized. The property is evaluated each time it is invoked. Because of that there is no notify signal.
-* `QByteArray desktopFileName`: The desktop file name of the application this AbstractClient belongs to. This is either the base name without full path and without file extension of the desktop file for the window's application (e.g. "org.kde.foo"). The application's desktop file name can also be the full path to the desktop file (e.g. "/opt/kde/share/org.kde.foo.desktop") in case it's not in a standard location.
+* `QByteArray desktopFileName`: The desktop file name of the application this AbstractClient belongs to. This is either the base name without full path and without file extension of the desktop file for the window's application (e.g. "org.kde.foo"). The application's desktop file name can also be the full path to the desktop file (e.g. `/opt/kde/share/org.kde.foo.desktop`) in case it's not in a standard location.
 * `bool hasApplicationMenu`: Whether an application menu is available for this Client
 * `bool applicationMenuActive`: Whether the application menu for this Client is currently opened
 * `bool unresponsive`: Whether this client is unresponsive. When an application failed to react on a ping request in time, it is considered unresponsive. This usually indicates that the application froze or crashed.
@@ -554,7 +571,7 @@ Methods and properties added to the global JavaScript object.
 
 ### Read-write Properties
 
-* `bool fullScreen`: Whether this Client is fullScreen. A Client might either be fullScreen due to the _NET_WM property or through a legacy support hack. The fullScreen state can only be changed if the Client does not use the legacy hack. To be sure whether the state changed, connect to the notify signal.
+* `bool fullScreen`: Whether this Client is fullScreen. A Client might either be fullScreen due to the `_NET_WM` property or through a legacy support hack. The fullScreen state can only be changed if the Client does not use the legacy hack. To be sure whether the state changed, connect to the notify signal.
 * `int desktop`: The desktop this Client is on. If the Client is on all desktops the property has value -1. This is a legacy property, use x11DesktopIds instead
 * `bool onAllDesktops`: Whether the Client is on all desktops. That is desktop is -1.
 * `QStringList activities`: The activities this client is on. If it's on all activities the property is empty.
@@ -565,7 +582,7 @@ Methods and properties added to the global JavaScript object.
 * `bool keepBelow`: Whether the Client is set to be kept below other windows.
 * `bool shade`: Whether the Client is shaded.
 * `bool minimized`: Whether the Client is minimized.
-* `bool demandsAttention`: Whether window state _NET_WM_STATE_DEMANDS_ATTENTION is set. This state indicates that some action in or with the window happened. For example, it may be set by the Window Manager if the window requested activation but the Window Manager refused it, or the application may set it if it finished some work. This state may be set by both the Client and the Window Manager. It should be unset by the Window Manager when it decides the window got the required attention (usually, that it got activated).
+* `bool demandsAttention`: Whether window state `_NET_WM_STATE_DEMANDS_ATTENTION` is set. This state indicates that some action in or with the window happened. For example, it may be set by the Window Manager if the window requested activation but the Window Manager refused it, or the application may set it if it finished some work. This state may be set by both the Client and the Window Manager. It should be unset by the Window Manager when it decides the window got the required attention (usually, that it got activated).
 * `QRect geometry`: The geometry of this Client. Be aware that depending on resize mode the frameGeometryChanged signal might be emitted at each resize step or only at the end of the resize operation. DeprecatedUse frameGeometry
 * `QRect frameGeometry`: The geometry of this Client. Be aware that depending on resize mode the frameGeometryChanged signal might be emitted at each resize step or only at the end of the resize operation.
 * `bool noBorder`: Whether the window has a decoration or not. This property is not allowed to be set by applications themselves. The decision whether a window has a border or not belongs to the window manager. If this property gets abused by application developers, it will be removed again.

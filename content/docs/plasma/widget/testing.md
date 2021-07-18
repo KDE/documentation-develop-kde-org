@@ -95,7 +95,7 @@ Note that `--location=desktop` is used for the desktop wallpaper, not desktop wi
 plasmoidviewer -a package --location=floating --formfactor=planar
 plasmoidviewer -a package -l=floating -f=planar
 plasmoidviewer -a package # floating+planar is the default.
-````
+```
 
 ## Test as Horizontal Panel Widget
 

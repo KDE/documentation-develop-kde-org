@@ -75,7 +75,7 @@ PlasmaComponents3.CheckBox {
 
 {{< sections >}}
 {{< section-left >}}
-For mutiple choices, QML ships with [RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton). For Plasma's specific changes, you can read the QML source code at:
+For multiple choices, QML ships with [RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton). For Plasma's specific changes, you can read the QML source code at:
 
 * [`RadioButton.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/RadioButton.qml)
 
@@ -115,15 +115,7 @@ For multiple choices, QML also ships with [ComboBox](docs:qtquickcontrols;QtQuic
 
 * [`ComboBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ComboBox.qml)
 
-Note that [`ComboBox.valueRole`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#valueRole-prop) and [`ComboBox.currentValue`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#currentValue-prop) was introduced in Qt 5.14. [Ubuntu 20.04 only has Qt 5.12](https://repology.org/project/qt/versions) so you will need to use the following properties until Ubuntu 22.04. Make sure to not define a `currentValue` property or it will break when your users upgrade to Qt 5.14.
-
-```
-PlasmaComponents3.ComboBox {
-    textRole: "text"
-    property string _valueRole: "value"
-    readonly property var _currentValue: _valueRole && currentIndex >= 0 ? model[currentIndex][_valueRole] : null
-}
-```
+Note that [`ComboBox.valueRole`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#valueRole-prop) and [`ComboBox.currentValue`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#currentValue-prop) was introduced in Qt 5.14. [Ubuntu 20.04 only has Qt 5.12](https://repology.org/project/qt/versions) so you will need to use your own `_valueRole` and `_currentValue` properties until Ubuntu 22.04. Make sure to not define a `valueRole` or `currentValue` property or it will break when your users upgrade to Qt 5.14.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -140,6 +132,14 @@ PlasmaComponents3.ComboBox {
         { value: "b", text: i18n("B") },
         { value: "c", text: i18n("C") },
     ]
+}
+```
+
+```qml
+PlasmaComponents3.ComboBox {
+    textRole: "text"
+    property string _valueRole: "value"
+    readonly property var _currentValue: _valueRole && currentIndex >= 0 ? model[currentIndex][_valueRole] : null
 }
 ```
 {{< /section-right >}}
