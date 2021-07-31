@@ -158,7 +158,7 @@ Rectangle {
 
 If you want to stack a number of items on top of each other, you should use a [`ColumnLayout`](http://doc.qt.io/qt-5/qml-qtquick-layouts-columnlayout.html).
 
-Labels (which are just fancy Text items which follow Plasma's colors) have a default font size, which means they have their own default height. So they will be stacked on top of each other.
+This example uses Labels which are just fancy [`Text`](https://doc.qt.io/qt-5/qml-qtquick-text.html) items which follow Plasma's color theme. They have a default font size, which means they have their own default height. So they will be stacked on top of each other.
 
 Note that if the `ColumnLayout` is taller than its contents, the children will have spacing between them.
 
