@@ -14,13 +14,13 @@ To start a new widget from scratch, first create a folder for your new widget so
 
 Inside it create another folder called `package`. Everything inside the `package` folder will be what we eventually install to `~/.local/share/plasma/plasmoids/com.github.zren.helloworld/`. Eventually we will zip the contents of `package` and share them online. We can keep text editor files, build scripts, screenshots, etc outside the `package` directory.
 
-Inside the package folder will be a `metadata.desktop` file which is basically a Linux `.ini` file. This file will describe the name of the widget, the category it's in, and various other plasma specific keys like the main QML file.
+Inside the package folder will be a `metadata.json`. This file will describe the name of the widget, the category it's in, and various other plasma specific keys like the main QML file.
 
 Inside `contents`, we will create the `ui` and `config` folders. `ui` is the folder which should contain your layout files like the `main.qml` and the `configGeneral.qml`. `configGeneral.qml` is the layout of the first tab in the widget's configuration window.
 
 Inside the `config` folder we have the `main.xml` which contains the schema of all our serialized configuration keys+values. The `config.qml` is used to define the tabs in the configuration window. Each tab will open a QML layout file (like `ui/configGeneral.qml`).
 
-Note that you don't *need* the 3 config files. You can get away with just the `main.qml` and `metadata.desktop` for a barebones widget.
+Note that you don't *need* the 3 config files. You can get away with just the `main.qml` and `metadata.json` for a barebones widget.
 {{< /section-left >}}
 
 {{< section-right >}}
@@ -34,25 +34,25 @@ Note that you don't *need* the 3 config files. You can get away with just the `m
         │   └── config
         │       ├── config.qml
         │       └── main.xml
-        └── metadata.desktop
+        └── metadata.json
 ```
 {{< /section-right >}}
 {{< /sections >}}
 
-## metadata.desktop
+## metadata.json
 
 {{< sections >}}
 {{< section-left >}}
 
-Inside the `metadata.desktop` file we need to set the `Name` of the widget. The `Type` should be `Service` since the `.desktop` file is not an app launcher and we don't want this to appear in the app menu.
+Inside the `metadata.json` file we need to set the `Name` of the widget.
 
 `Icon` is the icon name associated with the widget. You can search for icon names in the `/usr/share/icon` folder. You can also look for an icon name by right clicking your app launcher widget then editing the icon in its settings. It uses a searchable interface and lists them by category. Plasma's SDK also has the Cuttlefish app ([screenshot](https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png)) which you can install with `sudo apt install plasma-sdk`.
 
-`X-KDE-PluginInfo-Name` needs to be a unique name, since it's used for the folder name it's installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you're planning on contributing the widget to KDE.  
+`Id` needs to be a unique name, since it's used for the folder name it's installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you're planning on contributing the widget to KDE.
 
 Widgets installed by the user (without root) like when you "Install New Widgets" will be installed to `~/.local/share/plasma/plasmoids/` (which may not yet exist). The default widgets shipped with KDE are installed to `/usr/share/plasma/plasmoids/`.
 
-`X-KDE-PluginInfo-Category` is the category the widget can be filtered with in the widget list. A list of category names can be found [here]({{< ref "plasma-qml-api.md#x-kde-plugininfo-category" >}}).
+`Category` is the category the widget can be filtered with in the widget list. A list of category names can be found [here]({{< ref "plasma-qml-api.md#x-kde-plugininfo-category" >}}).
 
 `X-KDE-ServiceTypes`, `X-Plasma-API`, and `X-Plasma-MainScript` are also needed to just define that this package is a plasma widget, and where its entry point is.
 
@@ -60,24 +60,29 @@ For the other properties, read the [`metadata.desktop` section on the Plasma QML
 
 {{< /section-left >}}
 {{< section-right >}}
-```ini
-[Desktop Entry]
-Name=Hello World
-Comment=A widget to take over the world!
-
-Type=Service
-Icon=battery
-X-KDE-ServiceTypes=Plasma/Applet
-
-X-Plasma-API=declarativeappletscript
-X-Plasma-MainScript=ui/main.qml
-
-X-KDE-PluginInfo-Author=My Name
-X-KDE-PluginInfo-Email=myemail@gmail.com
-X-KDE-PluginInfo-Name=com.github.zren.helloworld
-X-KDE-PluginInfo-Version=1
-X-KDE-PluginInfo-Website=https://github.com/Zren/plasmoid-helloworld
-X-KDE-PluginInfo-Category=System Information
+```json
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "myemail@gmail.com",
+                "Name": "My Name"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "A widget to take over the world!",
+        "Icon": "battery",
+        "Id": "com.github.zren.helloworld",
+        "Name": "Hello World",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "1",
+        "Website": "https://github.com/Zren/plasmoid-helloworld"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}
 ```
 {{< /section-right >}}
 {{< /sections >}}
@@ -154,4 +159,16 @@ To set the popup size:
 ```
 
 {{< /section-right >}}
+
+{{< alert title="Note" color="info" >}}
+Plasmoids previously used a metadata.desktop file. This is discouraged, because the conversion to JSON will need to be done at runtime.
+Shipping a JSON file directly is supported for all of Plasma 5.
+
+In case you still have a desktop file inside of your project you can convert it to JSON and afterwards remove it.
+
+```bash
+desktoptojson -s plasma-applet.desktop -i metadata.desktop
+rm metadata.desktop
+```
+{{< /alert >}}
 {{< /sections >}}

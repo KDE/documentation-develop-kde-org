@@ -18,7 +18,7 @@ You can learn by example by reading the default widgets located at:
 You can fork an existing widget by copying the widget to where the downloaded widgets are installed to:  
 `~/.local/share/plasma/plasmoids/`
 
-To properly fork the widget, rename the new folder, then edit the `X-KDE-PluginInfo-Name` in the `metadata.desktop` file to match the new folder name. You will also want to edit the `Name=` in the `metadata.desktop` file as well so you can tell it apart from the widget you forked it from. You should delete all the translated `Name[fr]=` lines as well. Delete the `metadata.json` if it exists (or edit it as well).
+To properly fork the widget, rename the new folder, then edit the `Id` in the `metadata.json` file to match the new folder name. You will also want to edit the `Name` in the `metadata.json` file as well so you can tell it apart from the widget you forked it from. You should delete all the translated `Name[fr]` lines as well. Delete the `metadata.desktop` if it exists.
 
 Finally, run `plasmawindowed` to quickly test the newly forked widget.
 
@@ -29,10 +29,10 @@ cp -r /usr/share/plasma/plasmoids/org.kde.plasma.analogclock/ ~/.local/share/pla
 cd ~/.local/share/plasma/plasmoids/
 mv ./org.kde.plasma.analogclock ./com.github.zren.myanalogclock
 cd ./com.github.zren.myanalogclock
-kwriteconfig5 --file="$PWD/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Name" "com.github.zren.myanalogclock"
-kwriteconfig5 --file="$PWD/metadata.desktop" --group="Desktop Entry" --key="Name" "My Analog Clock"
-sed -i '/^Name\[/ d' ./metadata.desktop
-sed -i '/^Comment\[/ d' ./metadata.desktop
-rm ./metadata.json
+sed -i 's/Analog Clock/My Analog Clock/' ./metadata.json
+sed -i 's/org.kde.plasma.analogclock/com.github.zren.myanalogclock/' ./metadata.json
+sed -i '/^Name\[/ d' ./metadata.json
+sed -i '/^Comment\[/ d' ./metadata.json
+rm ./metadata.desktop
 plasmawindowed com.github.zren.myanalogclock
 ```
