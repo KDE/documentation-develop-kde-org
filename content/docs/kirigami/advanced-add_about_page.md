@@ -63,7 +63,7 @@ In the `.cpp` file we have two methods, `instance` and `aboutData`.
 ```C++
 ...
 #include <KAboutData>
-#include "config-helloword.h"
+#include "config-helloworld.h"
 
 #include "controller.h"
 
