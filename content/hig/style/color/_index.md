@@ -1,6 +1,6 @@
 ---
 title: Color
-weight: 1
+weight: 0
 ---
 
 Purpose
