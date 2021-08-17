@@ -31,7 +31,23 @@ modules:
 
 If we read the [official flatpak-builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html), we can see booleans in parentheses for each property, namely `string`, `boolean`, `integer`, `object`, `array of strings` and `array of objects and strings`.
 
-The kdeapps repository uses JSON files for the manifest, whereas the flathub repository uses YAML. The practical distinction between the above types for when writing a JSON manifest is mostly syntactic. For basic types like `string`, `boolean`, `integer` and `object`, their syntax in JSON would be simply `"Property" : "Value"`. For `array of strings`, this would be `"Property" : [ "String1", "String2" ]`, wherein [] represents an array. For `array of objects and strings`, this would be something like `"Property" : [ "string1", { "PropertyA" : "ValueA", "PropertyB" : "ValueB" } ]`, wherein inside the [] array, there is a string and an object, the latter being everything inside {}. You must be wary of the correct syntax for each type of property, as this can get confusing pretty fast, especially if you are not well acquainted with JSON syntax.
+The kdeapps repository uses JSON files for the manifest, whereas the flathub repository uses YAML. The practical distinction between the above types for when writing a JSON manifest is mostly syntactic. For basic types like string, boolean, integer and object, their syntax in JSON would be simply:
+
+`"Property": "Value"`
+
+For array of strings, this would be:
+
+`"Property": [ "String1", "String2", "String3" ]`
+
+wherein [] represents an array.
+
+For array of objects and strings, this would be something like:
+
+`"Property": ["string1", {"PropertyA": "ValueA", "PropertyB": "ValueB"}]`
+
+wherein inside the [] array, there is a string and an object, the latter being everything inside {}.
+
+You must be wary of the correct syntax for each type of property, as this can get confusing pretty fast, especially if you are not well acquainted with JSON syntax.
 
 Now let's take a look at each component from a logical sequence of information (rather than the arbitrary one in the example).
 
