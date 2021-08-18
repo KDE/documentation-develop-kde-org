@@ -31,7 +31,7 @@ modules:
 
 If we read the [official flatpak-builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html), we can see booleans in parentheses for each property, namely `string`, `boolean`, `integer`, `object`, `array of strings` and `array of objects and strings`.
 
-The kdeapps repository uses JSON files for the manifest, whereas the flathub repository uses YAML. The practical distinction between the above types for when writing a JSON manifest is mostly syntactic. For basic types like string, boolean, integer and object, their syntax in JSON would be simply:
+While non-KDE software typically gets included to flathub as YAML, KDE software added to the kdeapps and flathub repositories is included via JSON manifests, so we will focus on that. The practical distinction between the above types for when writing a JSON manifest is mostly syntactic. For basic types like string, boolean, integer and object, their syntax in JSON would be simply:
 
 `"Property": "Value"`
 
