@@ -12,7 +12,9 @@ groups:
     key: "packaging"
   - name: "Application Extensions"
     key: "applications"
-  
+  - name: "How-To Manuals"
+    key: "how-to-manuals"
+
 menu:
   main:
     weight: 10
