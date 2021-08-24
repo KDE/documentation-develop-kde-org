@@ -243,7 +243,7 @@ You will notice that this code will be much the same for all enumerations. The o
 
 Thankfully, C++ knows how to handle templates, so we should be able to write just the one template-based implementation. However, we need that one implementation to handle only enumeration types, not the other custom types we want to send across DBus. Otherwise, any custom type would be cast from and to an integer value, which is probably not what you want for all types, especially not for complex ones.
 
-This is where the boost library comes to our aid. With some magic, it supports conditionals within template definitions.
+This is where modern C++ Standard Library comes to our aid. With some magic, it supports conditionals within template definitions.
 
 That way, we can provide `QDBusArgument` marshaling and unmarshalling implementations that will be used only in situations when such a conditional is true.
 
@@ -254,7 +254,7 @@ This is what the marshaling and unmarshalling code actually looks like:
 The marshal implementation can now be called by invoking:
 
 ```cpp
-QDBusEnumMarshal<T, typename boost::is_enum<T>::type>::marshal(argument, source);
+QDBusEnumMarshal<T, typename std::is_enum<T>::type>::marshal(argument, source);
 ```
 
 with `T` being the type we want to marshal.
@@ -265,13 +265,13 @@ Some further glue code is needed to link the implementation to the QDbusArgument
 template<typename T>
 QDBusArgument& operator<<(QDBusArgument &argument, const T& source)
 {
-    return QDBusEnumMarshal<T, typename boost::is_enum<T>::type>::marshal(argument, source);
+    return QDBusEnumMarshal<T, typename std::is_enum<T>::type>::marshal(argument, source);
 }
 
 template<typename T>
 const QDBusArgument& operator>>(const QDBusArgument &argument, T &source)
 {
-    return QDBusEnumMarshal<T, typename boost::is_enum<T>::type>::unmarshal(argument, source);
+    return QDBusEnumMarshal<T, typename std::is_enum<T>::type>::unmarshal(argument, source);
 }
 ```
 
@@ -279,8 +279,6 @@ const QDBusArgument& operator>>(const QDBusArgument &argument, T &source)
 Put all that in a header file and include it where you declare the enumerations that need to pass across DBus. The compiler is now able to find the streaming operators all on its own.
 
 You do still need to declare the enumeration as a metatype and register it with the Qt meta object system though.
-
-{{< alert title="Note" >}} You only need a boost header file to do this (`boost/type_traits/is_enum.hpp`, to be exact). There is no need to have the entire library installed, which is rather nice on an embedded platform, since the boost library takes up quite a bit of space. {{< /alert >}}
 
 
 #### enumDBus.hpp

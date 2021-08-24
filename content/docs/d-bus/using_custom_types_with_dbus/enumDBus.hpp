@@ -3,7 +3,7 @@
 
 #include <QtDBus/QDBusArgument>
 
-#include <boost/type_traits/is_enum.hpp>
+#include <type_traits>
 
 using namespace std;
 
@@ -11,7 +11,7 @@ template<typename T, typename TEnum>
 class QDBusEnumMarshal;
 
 template<typename T>
-class QDBusEnumMarshal<T, boost::true_type>
+class QDBusEnumMarshal<T, std::true_type>
 {
 public:
 	static QDBusArgument& marshal(QDBusArgument &argument, const T& source)
@@ -38,13 +38,13 @@ public:
 template<typename T>
 QDBusArgument& operator<<(QDBusArgument &argument, const T& source)
 {
-	return QDBusEnumMarshal<T, typename boost::is_enum<T>::type>::marshal(argument, source);
+	return QDBusEnumMarshal<T, typename std::is_enum<T>::type>::marshal(argument, source);
 }
 
 template<typename T>
 const QDBusArgument& operator>>(const QDBusArgument &argument, T &source)
 {
-	return QDBusEnumMarshal<T, typename boost::is_enum<T>::type>::unmarshal(argument, source);
+	return QDBusEnumMarshal<T, typename std::is_enum<T>::type>::unmarshal(argument, source);
 }
 
 #endif //_ENUM_DBUS_HPP
