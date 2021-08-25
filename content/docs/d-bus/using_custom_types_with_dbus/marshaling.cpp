@@ -2,7 +2,7 @@ template<typename T, typename TEnum>
 class QDBusEnumMarshal;
 
 template<typename T>
-class QDBusEnumMarshal<T, boost::true_type>
+class QDBusEnumMarshal<T, std::true_type>
 {
 public:
 	static QDBusArgument& marshal(QDBusArgument &argument, const T& source)
