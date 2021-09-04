@@ -166,6 +166,7 @@ File=config.kcfg
 ClassName=Config
 Mutators=true
 DefaultValueGetters=true
+Singleton=true
 ```
 
 The first line `File=config.kcfg` specifies where the configuration options for your
