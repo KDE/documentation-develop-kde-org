@@ -44,6 +44,9 @@ Guidelines
 -   For very long or complicated conditions, provide a short error
     message and complement it with a Details button that provides a
     lengthier explanation in the same dialog.
+-   If the dialog offers any destructive actions, such as "Delete" or
+    "Remove", make sure that the button for one of the safe actions is
+    marked as the default.
 
 ### Appearance
 
