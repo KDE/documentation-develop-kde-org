@@ -591,4 +591,4 @@ The mail viewer component is also a `Kirigami.ScrollablePage`, and we use a Text
 
 ## Downloading the project
 
-This tutorial glossed over some of the more technical details. If you are interested in poking around, you can download a complete and working version of the example [here](https://invent.kde.org/documentation/develop-kde-org/-/tree/developement/content/docs/akonadi/using_akonadi_applications).
+This tutorial glossed over some of the more technical details. If you are interested in poking around, you can download a complete and working version of the example [here](https://invent.kde.org/documentation/develop-kde-org/-/tree/master/content/docs/akonadi/using_akonadi_applications).
