@@ -7,56 +7,42 @@ group: advanced
 
 The About Page allows you to have a page that shows the copyright notice of the application together with the contributors and some information of which platform it's running on.
 
-First, we are going to create two files in the `src/` directory called `controller.cpp` and `controller.h`.
+First, we are going to create two files in the `src/` directory called `about.cpp` and `about.h`.
 
-### controller.h
+### about.h
 ```C++
 #pragma once
 
 #include <QObject>
-
 #include <KAboutData>
 
-class Controller : public QObject
+class AboutType : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(KAboutData aboutData READ aboutData CONSTANT)
-
 public:
-    static Controller &instance();
-
-    [[nodiscard]] KAboutData aboutData() const;
+    [[nodiscard]] KAboutData aboutData() const
+    {
+        return KAboutData::applicationData();
+    }
 };
 ```
 
-In the `.h` file we create this class `Controller` which is inherited from [QObject](https://doc.qt.io/qt-5/qobject.html).
+In the `.h` file we create this class `AboutType` which is inherited from [QObject](https://doc.qt.io/qt-5/qobject.html).
 
 
 The `Q_OBJECT` macro tells the compiler that this class uses own signals and slots, the `Q_PROPERTY` macro behaves like a class data member, but it has additional features, it will allow our QML code to have access to this class.
 
 
-The `instance` method will return an instance of `Controller`, and the `aboutData` method will return the application data from `KAboutData`.
+The `aboutData` method will return the application data from `KAboutData`.
 
-### controller.cpp
+### about.cpp
 
 ```C++
-#include "controller.h"
-
-Controller &Controller::instance()
-{
-    static Controller _instance;
-    return _instance;
-}
-
-KAboutData Controller::aboutData() const
-{
-    return KAboutData::applicationData();
-}
+#include "about.h"
 ```
 
-In the `.cpp` file we have two methods, `instance` and `aboutData`.
-
-`instance` just returns a `Controller` object and `aboutData` returns our application data.
+In the `.cpp` file we just include the `.h` file.
 
 ### main.cpp
 
@@ -65,7 +51,7 @@ In the `.cpp` file we have two methods, `instance` and `aboutData`.
 #include <KAboutData>
 #include "config-helloworld.h"
 
-#include "controller.h"
+#include "about.h"
 
 int main(int argc, char *argv[])
 {
@@ -87,10 +73,14 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(i18nc("@info:credit", "Your name"), i18nc("@info:credit", "Author Role"), QStringLiteral("your@email.com"), QStringLiteral("https://yourwebsite.com"));
     KAboutData::setApplicationData(aboutData);
 
-    qmlRegisterSingletonInstance("org.kde.helloworld", 1, 0, "Controller", &Controller::instance());
-
     QQmlApplicationEngine engine;
 
+    qmlRegisterSingletonType<AboutType>("org.kde.helloworld", 1, 0, "AboutType", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        return new AboutType();
+    });
     ...
 }
 ```
@@ -103,7 +93,9 @@ We also include this `config-helloworld.h` file which gives us this `HELLOWORLD_
 After all the required information has been set, we call `KAboutData::setApplicationData` to initialize the properties of the [QApplication ](https://doc.qt.io/qt-5/qapplication.html) object.
 
 
-Before the QML Engine definition, we create a [qmlRegisterSingletonInstance](https://doc.qt.io/qt-5/qqmlengine.html#qmlRegisterSingletonInstance), the first argument is a URI, basically a package name, the second and third arguments are major and minor versions respectively, the fourth is the type name, the name that we will call when accessing the `Controller` methods, and the last one is a cpp object.
+After the QML Engine definition, we create a [qmlRegisterSingletonType](https://doc.qt.io/qt-5/qqmlengine.html#qmlRegisterSingletonType), the first argument is a URI, basically a package name, the second and third arguments are major and minor versions respectively, the fourth is the type name, the name that we will call when accessing the `AboutType` methods.
+
+In the `qmlRegisterSingletonType` lambda we just return a new `AboutType` object;
 
 
 ### main.qml
@@ -132,7 +124,7 @@ Kirigami.ApplicationWindow {
         id: aboutPage
 
         Kirigami.AboutPage {
-            aboutData: Controller.aboutData
+            aboutData: AboutType.aboutData
         }
     }
 }
