@@ -96,8 +96,6 @@ if ( app.isSessionRestored() ) {
 return app.exec();
 {{< /highlight >}}
 
-Currently, KXmlGui provides the `kRestoreMainWindows<>()` template functions for up to three template arguments. 
-
 ### Appendix: Architecture of the KDE session manager
 
 The name of the session management server in KDE is `ksmserver` and it is part of the `plasma-workspace` package. The server interacts with the KDE window manager `kwin` to save and restore the window geometries and to perform legacy session management. To make session management work, ksmserver has to be started as last process of the X login procedure. This happens automatically at the end of the `startplasma` script. 
