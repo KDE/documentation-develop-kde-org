@@ -112,7 +112,7 @@ Now that the action is fully set up, it needs to be connected to something usefu
 
 
 ```c++
-connect(clearAction, &QAction::triggered), 
+connect(clearAction, &QAction::triggered, 
      textArea, &KTextEdit::clear);
 ```
 
