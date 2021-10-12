@@ -611,7 +611,7 @@ https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasma/data
 {{< sections >}}
 {{< section-left >}}
 
-These two are standard [XDG desktop file](https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html) properties. You can also translate these properties with `Name[fr]`. The translated `Name` is used in the "Add Widgets" list. The `Comment` is only used for the default tooltip subtext when the widget is added to a panel.
+These two are standard [XDG desktop file](https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html) properties. You can also translate these properties with `Name[fr]`. The translated `Name` is used in the "Add Widgets" list. The `Comment` (or in the json file names `Description`) is only used for the default tooltip subtext when the widget is added to a panel.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -621,6 +621,17 @@ Name=Calendar
 Name[fr]=Calendrier
 Comment=Month display with your appointments and events
 Comment[fr]=Vue mensuelle avec vos rendez-vous et évènements
+```
+
+```json
+{
+    "KPlugin": {
+        "Description": "Month display with your appointments and events",
+        "Description[fr]": "Vue mensuelle avec vos rendez-vous et évènements",
+        "Name": "Calendar",
+        "Name[fr]": "Calendrier"
+    }
+}
 ```
 {{< /section-right >}}
 {{< /sections >}}
@@ -764,6 +775,16 @@ X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-NotificationArea=true
 X-Plasma-NotificationAreaCategory=ApplicationStatus
 X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
+```
+```json
+{
+    "KPlugin": {
+        "EnabledByDefault": true
+    },
+    "X-Plasma-DBusActivationService": "org.mpris.MediaPlayer2.*",
+    "X-Plasma-NotificationArea": "true",
+    "X-Plasma-NotificationAreaCategory": "ApplicationStatus"
+}
 ```
 
 By specifying `X-Plasma-NotificationArea`, this widget will be found by the systemtray widget.
