@@ -8,7 +8,7 @@ Plasma Mobile uses oFono to communicate with telephony hardware. oFono
 allows to make calls, send and receive sms and use the mobile broadband
 network.
 
-## Poring from oFono to ModemManager
+## Porting from oFono to ModemManager
 
 [Both](https://lists.ofono.org/hyperkitty/list/ofono@ofono.org/thread/OMC2GMOHMWXYNQOOSBKQH5VVIE4HVBXD/?sort=date) oFono and ModemManager are popular frameworks for the Telephony stack.
 
