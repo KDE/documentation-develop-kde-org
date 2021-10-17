@@ -40,5 +40,5 @@ If you want to run the Plasma phone shell, do:
 
 ```bash
 export $(dbus-launch)
-exec /usr/bin/plasmashell -p org.kde.plasma.phone
+exec /usr/bin/plasmashell -p org.kde.plasma.phoneshell
 ```
