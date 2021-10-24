@@ -360,3 +360,27 @@ KCM.SimpleKCM {
   // ...
 }
 ```
+
+Additionally, you can use [SettingStateBinding](docs:kdeclarative;org::kde::kcm::SettingStateBinding)
+in your QML code to display correctly if your setting is immutable or isn't using the default value 
+anymore.
+
+```qml
+import org.kde.kcm 1.5 as KCM
+import QtQuick.Controls 2.12 as QQC2
+
+KCM.SimpleKCM {
+    // ...
+    QQC2.SpinBox {
+        value: kcm.config.width
+        onValueModified: kcm.config.width = value
+
+        KCM.SettingStateBinding {
+            configObject: kcm.config
+            settingName: "width"
+        }
+    }
+    // ...
+}
+```
+
