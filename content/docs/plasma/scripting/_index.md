@@ -95,10 +95,16 @@ There are three ways that scripts can be executed in plasma-desktop:
 - **interactively**: an interactive scripting dialog can be requested
   either via the KRunner window (`Alt+F2`, by default, or via the "Run
   Command" entry in various desktop menus) by entering "desktop
-  console" as the search term. It can also be triggered directly via
-  dbus with
+  console" as the search term.
+  In Plasma versions earlier than 5.23 it can be triggered directly via dbus with:
+
   ```bash
-  qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.showInteractiveConsole
+  qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.showInteractiveKWinConsole
+  ```
+
+  With 5.23 or later the console can be opened using the following command:
+  ```bash
+  plasma-interactiveconsole
   ```
 
   ECMA Script may be entered directly into this window for execution

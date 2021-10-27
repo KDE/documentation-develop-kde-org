@@ -9,11 +9,17 @@ description: Learn how to programmatically manipulate windows with KWin scripts.
 The easiest way to test KWin scripts is to use the Plasma Desktop
 Scripting Console which can be opened via the KRunner window (`Alt+F2`,
 by default, or via the "Run Command" entry in various desktop menus)
-by entering "wm console" as the search term. It can be triggered directly
-via dbus with:
+by entering "wm console" as the search term.
+
+In Plasma versions earlier than 5.23 it can be triggered directly via dbus with:
 
 ```bash
 qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.showInteractiveKWinConsole
+```
+
+With 5.23 or later the console can be opened using the following command:
+```bash
+plasma-interactiveconsole --kwin
 ```
 
 The interactive console allows to send a script to the window manager
