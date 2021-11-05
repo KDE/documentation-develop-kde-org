@@ -14,6 +14,56 @@ There's no need to split it into several parts like Modem Daemon and KDE Telepho
 
 Work-in-Progress.
 
+### Getting started
+
+Minimal iteration could contain these packages:
+
++ **kde-telephony-meta** (D-Bus API descriptions)
++ **modem-daemon** (calls and history) — provides d-bus adaptor according to *kde-telephony-meta*
++ **kde-telephony-plugin-declarative** (QML plugin) — provides d-bus interface to *kde-telephony-meta*
+
+After building these packages and running `/usr/lib/libexec/modem-daemon` via `/etc/xdg/autostart/org.kde.modem.daemon.desktop` you should be able to play with USSD via QML interfaces like this:
+
+```sh
+qml draft.qml
+```
+
+```qml
+// ...
+import QtQuick 2.15
+import org.kde.telephony 1.0
+
+Item {
+
+    // ...
+
+    Component.onCompleted: {
+        const deviceUni =  DeviceUtils.deviceUniList()[0]
+        const number = "*100#"
+        UssdUtils.initiate(deviceUni, number)
+    }
+
+    Connections {
+        target: UssdUtils
+
+        function onNotificationReceived(deviceUni, message) {
+            console.log(message)
+        }
+
+        function onRequestReceived(deviceUni, message) {
+            console.log(message)
+        }
+
+        function onInitiated(deviceUni, command) {
+            console.log("initiated")
+        }
+    }
+}
+
+```
+
+The USSD is probably the simplest part of the API to start with. The same logic could also be found in the *plasma-dialer* project. Feel free to provide feedback via the issues list of the appropriate repositories.
+
 ### Future Work
 
 In theory, it could be added to the Plasma Phone Components repo, since the current ModeManagerQt QML plugin is there right now.
