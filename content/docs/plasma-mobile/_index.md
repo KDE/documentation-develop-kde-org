@@ -11,5 +11,5 @@ to Plasma Desktop. To create an application for Plasma Mobile, take a
 look at our [Kirigami](../kirigami) tutorial. You can also create
 widgets using the [Plasma Components](../plasma).
 
-
+Issue tracker for Plasma Mobile: https://invent.kde.org/teams/plasma-mobile/issues
 
