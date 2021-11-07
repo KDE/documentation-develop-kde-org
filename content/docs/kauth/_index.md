@@ -104,13 +104,14 @@ The fields are defined as follows:
 * **Name**: A human readable action name
 * **Description**: This message will eventually be displayed to the user during the authentication phase, if any.
 * **Policy**: The default policy for this action. It can be one of the following values:
-  *''yes'': the action should be allowed without requesting authentication
-  *''no'': the action should be always denied, without requesting authentication
-  *''auth_self'': the action will be authorized if the user will authenticate as himself
-  *''auth_admin'': the action will be authorized if the user will authenticate as a system administrator
-* **Persistence**: this field is optional and takes effect only if the authorization system supports it and **Policy** is either ''auth_admin'' or ''auth_self''. It defines the persistence of the explicit authorization granted by the user through authentication. It can be one of the following values:
-  *''session'': the authorization persists until the user logs out
-  *''always'': the authorization will persist indefinitely
+  * `yes`: the action should be allowed without requesting authentication
+  * `no`: the action should be always denied, without requesting authentication
+  * `auth_self`` the action will be authorized if the user will authenticate as himself
+  * `auth_admin`: the action will be authorized if the user will authenticate as a system administrator
+* **Persistence**: this field is optional and takes effect only if the authorization system supports it and **Policy** is either `auth_admin` or `auth_self`. It defines the persistence of the explicit authorization granted by the user through authentication. It can be one of the following values:
+
+  * `session`: the authorization persists until the user logs out
+  * `always`: the authorization will persist indefinitely
 
 ## The Domain field
 
