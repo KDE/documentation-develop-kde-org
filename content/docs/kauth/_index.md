@@ -27,19 +27,19 @@ In addition, KAuth is also able to perform privilege elevation on restricted por
 
 There are a few concepts to understand when using KAuth. Much of those are carried from underlying APIs such as polkit, so if you are familiar with one of them you might as well skip this section.
 
-* An ''action'' is a single task that needs authorization to be performed. Each action has an unique action identifier, which is a string in reverse domain name syntax, like ''org.kde.this.is.an.action''. For example, if our example application needs to read a file the user has no privileges on, it would need an action like "org.kde.auth.example.read". Please note that each action has to refer to a single task: this allows system administrators to fine tune the policies that allow users to perform your actions, and also a more secure way of locking down the privileged actions in your application.
+* An `action` is a single task that needs authorization to be performed. Each action has an unique action identifier, which is a string in reverse domain name syntax, like `org.kde.this.is.an.action`. For example, if our example application needs to read a file the user has no privileges on, it would need an action like "org.kde.auth.example.read". Please note that each action has to refer to a single task: this allows system administrators to fine tune the policies that allow users to perform your actions, and also a more secure way of locking down the privileged actions in your application.
 
 * The 'authorization system' is an underlying framework (like polkit or Authorization Services), which KAuth interfaces with. KAuth's aim is to never make the developer know or care about the underlying authorization system, however in this tutorial series this concept will come up quite often to explain better how KAuth works.
 
-* An ''action namespace'' is the first part of the action identifier. In "org.kde.auth.example.read", ''org.kde.auth.example'' is the **action namespace**, ''read'' is the **action name**. This is a very important concept when dealing with helpers and .actions files.
+* An `action namespace` is the first part of the action identifier. In `org.kde.auth.example.read`, `org.kde.auth.example` is the **action namespace**, ''read'' is the **action name**. This is a very important concept when dealing with helpers and .actions files.
 
-* ''Authorization'' is a particular phase where the underlying authorization system performs the needed checks (and eventually asks the user its credentials in order to authorize him). Before any action is executed, the Authorization phase takes place. This is handled internally by KAuth: even if you are able to trigger this phase manually, most of the times you don't need to: KAuth will still execute an action only if the underlying authorization system allows its execution.
+* `Authorization` is a particular phase where the underlying authorization system performs the needed checks (and eventually asks the user its credentials in order to authorize him). Before any action is executed, the Authorization phase takes place. This is handled internally by KAuth: even if you are able to trigger this phase manually, most of the times you don't need to: KAuth will still execute an action only if the underlying authorization system allows its execution.
 
-* ''Authentication''is an optional phase that takes place during authorization, if the policy for the action requests the user to input a credential to give him an explicit authorization. This phase is external and not handled by KAuth, but entirely by the underlying authorization system. It is, however, important for you to know something about it even if KAuth has no way to hijack the Authentication phase by design.
+* `Authentication` is an optional phase that takes place during authorization, if the policy for the action requests the user to input a credential to give him an explicit authorization. This phase is external and not handled by KAuth, but entirely by the underlying authorization system. It is, however, important for you to know something about it even if KAuth has no way to hijack the Authentication phase by design.
 
-* ''Execution'' happens **only** if the Authorization was successful: the execution might consist in a simple confirmation of the successful authorization, or eventually in the execution of a function in an helper.
+* `Execution` happens **only** if the Authorization was successful: the execution might consist in a simple confirmation of the successful authorization, or eventually in the execution of a function in an helper.
 
-* An ''Helper ''is a separate application running as a privileged user (usually root), which is called upon execution if your action was attached to an helper. KAuth uses a completely transparent approach: IPC between your application and the helper itself is handled internally through an extremely simple API, and you won't even know that the helper is a separate application: spawning, killing and all the process handling is handled by KAuth.
+* An `Helper` is a separate application running as a privileged user (usually root), which is called upon execution if your action was attached to an helper. KAuth uses a completely transparent approach: IPC between your application and the helper itself is handled internally through an extremely simple API, and you won't even know that the helper is a separate application: spawning, killing and all the process handling is handled by KAuth.
 
 ## Phases breakdown
 
@@ -76,11 +76,11 @@ To increase the level of security, authorization systems require to register the
 
 Many authorization systems are quite strict about action naming, hence staying compatible with all of them is a tricky task. To ensure maximum compatibility with all of them, in both action namespaces and action names, **use only lowercase letters and numbers**. Here comes a small example:
 
-* ''org.kde.auth.example.read'' **OK**
-* ''org.KDE.auth.example.read'' **NOT OK**
-* ''org.kde.auth.example-1.read'' **NOT OK**
-* ''org.kde.auth.example.readFile'' **NOT OK**
-* ''org.kde.auth.example.readfile'' **OK**
+* `org.kde.auth.example.read` **OK**
+* `org.KDE.auth.example.read` **NOT OK**
+* `org.kde.auth.example-1.read` **NOT OK**
+* `org.kde.auth.example.readFile` **NOT OK**
+* `org.kde.auth.example.readfile` **OK**
 
 ## The basic .actions file
 
