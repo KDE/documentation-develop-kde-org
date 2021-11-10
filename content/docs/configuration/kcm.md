@@ -75,11 +75,6 @@ This `.desktop` file provides further metadata about our KCM. These entries spec
 
 This file will allow our KCM to appear in desktop launchers and KRunner, providing quick access to our KCM from outside the system settings application.
 
-{{< alert title="Note" color="info" >}}
-With the `X-KDE-Library` entry you can also provide the name of any existing installed KDE library in your system. This means you can use pre-existing libraries in your KCM without having to reimplement them yourself!
-{{< /alert >}}
-
-
 ## package/contents/ui/main.qml
 
 {{< readfile file="/content/docs/configuration/kcm/package/contents/ui/main.qml" highlight="json" >}}
