@@ -103,6 +103,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    noClasses: false
 module:
   imports:
   - path: invent.kde.org/websites/aether-sass
@@ -129,8 +131,3 @@ params:
   version_menu: Releases
 permalinks:
   blog: /:section/:year/:month/:day/:slug/
-pygmentsCodeFences: true
-pygmentsStyle: tango
-pygmentsUseClasses: false
-pygmentsUseClassic: false
-title: Developer
