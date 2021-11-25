@@ -53,7 +53,7 @@ Now let's take a look at each component from a logical sequence of information (
 
 `id` refers to the name of the flatpak package, the one that will be used for searching or installing. So when you run `flatpak install kate`, you can find `org.kde.kate` because flatpak is performing a fuzzy search based on the id.
 
-`command` refers to the default program to be executed when you run a flatpak, in this case `kate`. So when you run `flatpak run org.kde.kate` you are effectively running kate from within the flatpak.
+`command` refers to the default program to be executed when you run a flatpak, in this case `kate`. So when you run `flatpak run org.kde.kate` you are effectively running `kate` from within the flatpak.
 
 `desktop-file-name-suffix` is an addition to the package name as it will be shown in your application menu. In this case, `Kate (Nightly)`.
 
@@ -65,7 +65,7 @@ Now let's take a look at each component from a logical sequence of information (
 
 `modules` are the things to be compiled and their respective compilation options. Here we build Konsole so we can make use of its KonsoleParts for Kate to display its embedded terminal. The `name` property is used for clarification and in the case of multiple flatpak manifests. `buildsystem` is the software used to compile, which in KDE software's case is usually cmake or cmake-ninja.
 
-When building, the first step of `flatpak-builder` is to automatically fetch the source code (if it's not already present). The `sources` are used to specify where you want to fetch the source code from, but it is usually of type `git` or `archive`. Since the applications from our kdeapps repository are nightlies, those usually take a `git` type of source. Official releases either use `archive` by pulling from download.kde.org or `git` by specifying a `tag`.
+When building, the first step of `flatpak-builder` is to automatically fetch the source code (if it's not already present). The `sources` are used to specify where you want to fetch the source code from, but it is usually of type `git` or `archive`. Since the applications from our kdeapps repository are nightlies, those usually take a `git` type of source. Official releases either use `archive` by pulling from [download.kde.org](https://download.kde.org) or `git` by specifying a `tag`.
 
 Like the above `tag` example, there are other properties that can be used to improve your flatpak package.
 
@@ -73,7 +73,7 @@ One of the top level properties that is common in the kdeapps repository is `bra
 
 `rename-icon` allows you to specify an icon in your sources that will be renamed according to the id of the application so it gets properly detected by the .desktop file used for the flatpak in specific cases.
 
-There are some particularly useful non-top level properties.
+There are some particularly useful non-top-level properties.
 
 `builddir` allows your build to use an out of source build folder in case you have any issues with the default build folder place.
 
