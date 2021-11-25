@@ -16,13 +16,13 @@ A template is a small set of files in a specified file hierarchy (or, in
 Plasma terms, a "Package"). In particular, a Template package contains
 the following files:
 
--  `metadata.desktop`: a .desktop file describing the template
--  `contents/layout.js`: a Javascript file containing the actual script
+- `metadata.desktop`: a .desktop file describing the template
+- `contents/layout.js`: a Javascript file containing the actual script
 
 Templates are stored in:
 
--  `/usr/share/plasma/layout-templates/`
--  `~/.local/share/plasma/layout-templates/`
+- `/usr/share/plasma/layout-templates/`
+- `~/.local/share/plasma/layout-templates/`
 
 and may be installed using:
 
@@ -157,13 +157,13 @@ starts applications in the newly created activity using the
 That key is a list of commands to execute, and it supports the following
 variables:
 
--  `$desktop`
--  `$autostart`
--  `$documents`
--  `$music`
--  `$video`
--  `$downloads`
--  `$pictures`
+- `$desktop`
+- `$autostart`
+- `$documents`
+- `$music`
+- `$video`
+- `$downloads`
+- `$pictures`
 
 They all expand into the path toward the user corresponding default
 folder.

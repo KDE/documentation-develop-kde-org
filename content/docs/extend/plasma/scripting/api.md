@@ -21,9 +21,9 @@ Starting with KDE SC 4.5, the version number of both the scripting API
 and the application is available to the script via the following
 read-only properties:
 
--  `string applicationVersion`: the version of the application, e.g. 5.20.3
--  `number scriptingVersion`: the version of the scripting API; e.g.
-   for Plasma 5.20 it is 20.
+- `string applicationVersion`: the version of the application, e.g. 5.20.3
+- `number scriptingVersion`: the version of the scripting API; e.g.
+  for Plasma 5.20 it is 20.
 
 ## Activities
 
@@ -444,50 +444,50 @@ Functions:
 
 Read-only properties:
 
--  `number screenCount`: returns the number of screens connected to
-   the computer
+- `number screenCount`: returns the number of screens connected to
+  the computer
 
 Functions:
 
--  `QRectF screenGeometry(number screen)`: returns a rect object
-   representing the geometry of a screen
+- `QRectF screenGeometry(number screen)`: returns a rect object
+  representing the geometry of a screen
 
 ## Wallpaper Plugins
 
--  `array[string => array[string]] knownWallpaperPlugins()`:
-   (scripting version >= 4) returns a list of all installed wallpaper
-   plugins. The keys of the array are the wallpaper plugin names. The
-   values are arrays containing the modes available for that wallpaper
-   plugin. The mode array may be empty, as most wallpaper plugins only
-   offer one mode.
+- `array[string => array[string]] knownWallpaperPlugins()`:
+  (scripting version >= 4) returns a list of all installed wallpaper
+  plugins. The keys of the array are the wallpaper plugin names. The
+  values are arrays containing the modes available for that wallpaper
+  plugin. The mode array may be empty, as most wallpaper plugins only
+  offer one mode.
 
 ## Locating Applications and Paths
 
--  `boolean applicationExists(string name)`: (scripting version >=
-   4) searches $PATH first, then tries in the application menu system by
-   application storage name (aka the .desktop file name), then Name=
-   entries for apps with installed .desktop files, then GenericName=
-   entries for same
--  *mixed* `defaultApplication(string kind [, boolean storageId =
-   false])`: (scripting version >= 4) returns the executable (or if
-   `storageId` is `true`, then the app menu system id, e.g. its `.desktop`
-   file name) of the default app. The `kind` parameter may be a
-   well-known application type including `"browser"`, `"mailer"`,
-   `"filemanager"`, `"terminal"`, `"imClient"` and `"windowmanager"` (or any
-   other entry in `share/apps/kcm_componentchooser/kcm_*.desktop`); it may
-   also be a mimetype (e.g. `"application/pdf"`). On failure, it returns
-   `false`.
--  `string applicationPath(string name)`: (scripting version >= 4)
-   returns the full local path to a given application or .desktop file
-   if it exists. Example:
+- `boolean applicationExists(string name)`: (scripting version >=
+  4) searches $PATH first, then tries in the application menu system by
+  application storage name (aka the .desktop file name), then Name=
+  entries for apps with installed .desktop files, then GenericName=
+  entries for same
+- *mixed* `defaultApplication(string kind [, boolean storageId =
+  false])`: (scripting version >= 4) returns the executable (or if
+  `storageId` is `true`, then the app menu system id, e.g. its `.desktop`
+  file name) of the default app. The `kind` parameter may be a
+  well-known application type including `"browser"`, `"mailer"`,
+  `"filemanager"`, `"terminal"`, `"imClient"` and `"windowmanager"` (or any
+  other entry in `share/apps/kcm_componentchooser/kcm_*.desktop`); it may
+  also be a mimetype (e.g. `"application/pdf"`). On failure, it returns
+  `false`.
+- `string applicationPath(string name)`: (scripting version >= 4)
+  returns the full local path to a given application or .desktop file
+  if it exists. Example:
 
 ```js
 const desktopfile = "firefox.desktop"
 const executable  = "firefox"
-if (applicationExists(executable)) {  
+if (applicationExists(executable)) {
     print(`${executable} exists with this path: ${applicationPath(executable)}`)
     print(`${executable} .desktop file is located here : ${applicationPath(desktopfile)}`)
-} else{
+} else {
     print(`${executable} does not exist`)
 }
 ```
@@ -499,54 +499,54 @@ if (applicationExists(executable)) {
   user's home directory will be located; the following values are
   recognized:
 
-  -  documents
-  -  music
-  -  video
-  -  downloads
-  -  pictures
-  -  autostart
-  -  desktop (should be considered deprecated for Plasma workspaces)
+  - documents
+  - music
+  - video
+  - downloads
+  - pictures
+  - autostart
+  - desktop (should be considered deprecated for Plasma workspaces)
 
 If a second string is passed in, it is considered a request for a
 specific path and the following types are recognized:
 
--  
-   -  apps - Applications menu (.desktop files).
-   -  autostart - Autostart directories (both XDG and kde-specific)
-   -  cache - Cached information (e.g. favicons, web-pages)
-   -  cgi - CGIs to run from kdehelp.
-   -  config - Configuration files.
-   -  data - Where applications store data.
-   -  emoticons - Emoticons themes
-   -  exe - Executables in $prefix/bin. findExe() for a function that
-      takes $PATH into account.
-   -  html - HTML documentation.
-   -  icon - Icons, see KIconLoader.
-   -  kcfg - KConfigXT config files.
-   -  lib - Libraries.
-   -  locale - Translation files for KLocale.
-   -  mime - Mime types defined by KDE-specific .desktop files.
-   -  module - Module (dynamically loaded library).
-   -  qtplugins - Qt plugins (dynamically loaded objects for Qt)
-   -  services - Services.
-   -  servicetypes - Service types.
-   -  sound - Application sounds.
-   -  templates - Templates for the "Create new file" functionality.
-   -  wallpaper - Wallpapers.
-   -  tmp - Temporary files (specific for both current host and current
-      user)
-   -  socket - UNIX Sockets (specific for both current host and current
-      user)
-   -  xdgconf-menu - Freedesktop.org standard location for menu layout
-      (.menu) files.
-   -  xdgdata-apps - Freedesktop.org standard location for application
-      desktop files.
-   -  xdgdata-dirs - Freedesktop.org standard location for menu
-      descriptions (.directory files).
-   -  xdgdata-mime - Freedesktop.org standard location for MIME type
-      definitions.
-   -  xdgdata-icon - Freedesktop.org standard location for icons.
-   -  xdgdata-pixmap - Gnome-compatibility location for pixmaps.
+- 
+  - apps - Applications menu (.desktop files).
+  - autostart - Autostart directories (both XDG and kde-specific)
+  - cache - Cached information (e.g. favicons, web-pages)
+  - cgi - CGIs to run from kdehelp.
+  - config - Configuration files.
+  - data - Where applications store data.
+  - emoticons - Emoticons themes
+  - exe - Executables in $prefix/bin. findExe() for a function that
+    takes $PATH into account.
+  - html - HTML documentation.
+  - icon - Icons, see KIconLoader.
+  - kcfg - KConfigXT config files.
+  - lib - Libraries.
+  - locale - Translation files for KLocale.
+  - mime - Mime types defined by KDE-specific .desktop files.
+  - module - Module (dynamically loaded library).
+  - qtplugins - Qt plugins (dynamically loaded objects for Qt)
+  - services - Services.
+  - servicetypes - Service types.
+  - sound - Application sounds.
+  - templates - Templates for the "Create new file" functionality.
+  - wallpaper - Wallpapers.
+  - tmp - Temporary files (specific for both current host and current
+    user)
+  - socket - UNIX Sockets (specific for both current host and current
+    user)
+  - xdgconf-menu - Freedesktop.org standard location for menu layout
+    (.menu) files.
+  - xdgdata-apps - Freedesktop.org standard location for application
+    desktop files.
+  - xdgdata-dirs - Freedesktop.org standard location for menu
+    descriptions (.directory files).
+  - xdgdata-mime - Freedesktop.org standard location for MIME type
+    definitions.
+  - xdgdata-icon - Freedesktop.org standard location for icons.
+  - xdgdata-pixmap - Gnome-compatibility location for pixmaps.
 
 The second parameter should be a specific resource to find the path to.
 An example might be userDataPath("data", "plasma-desktop").
@@ -559,32 +559,32 @@ Access to configuration files outside of the application's appletsrc
 file is provided by the ConfigFile object which has the following
 constructors:
 
--  `ConfigFile(ConfigFile other)`: creates a new ConfigFile object with
-   the first as its parent, which automatically makes all groups of this
-   object child groups of that parent
--  `ConfigFile(string file[, string group])`: creates a new ConfigFile
-   object for file and optionally set to group group
+- `ConfigFile(ConfigFile other)`: creates a new ConfigFile object with
+  the first as its parent, which automatically makes all groups of this
+  object child groups of that parent
+- `ConfigFile(string file[, string group])`: creates a new ConfigFile
+  object for file and optionally set to group group
 
 ConfigFile has the following functions:
 
--  `writeEntry(string key, any value)`: writes value for key in the
-   current group
--  `readEntry(string key)`: returns the value of key in the current
-   group
--  `deleteEntry(key)`: deletes key in the current group
+- `writeEntry(string key, any value)`: writes value for key in the
+  current group
+- `readEntry(string key)`: returns the value of key in the current
+  group
+- `deleteEntry(key)`: deletes key in the current group
 
 ConfigFile has the following read/write properties:
 
--  `file`: the name of the configuration file. Maybe an absolute path or
-   just a file name to be located automatically in the system's
-   configuration repository.
--  `group`: the name of the current group. To get to child groups,
-   create a new ConfigFile with another ConfigFile as its parent.
+- `file`: the name of the configuration file. Maybe an absolute path or
+  just a file name to be located automatically in the system's
+  configuration repository.
+- `group`: the name of the current group. To get to child groups,
+  create a new ConfigFile with another ConfigFile as its parent.
 
 ConfigFile has the follow read-only properties:
 
--  `entryList`: all the keys in the current group
--  `groupList`: all the child groups in the current group
+- `entryList`: all the keys in the current group
+- `groupList`: all the child groups in the current group
 
 Example usage:
 
@@ -605,25 +605,25 @@ config2.writeEntry('Yes', 20);
 
 Read-write properties:
 
--  `boolean locked`: whether the desktop shell and widgets are
-   locked or not
--  `string theme`: (scripting version >= 3) the name of the desktop
-   theme to use for the interface, e.g. default, Air, Oxygen, etc.
+- `boolean locked`: whether the desktop shell and widgets are
+  locked or not
+- `string theme`: (scripting version >= 3) the name of the desktop
+  theme to use for the interface, e.g. default, Air, Oxygen, etc.
 
 Read-only properties:
 
--  `boolean hasBattery`: whether or not the system has the ability
-   to run on battery power, e.g. a laptop or mobile device
--  `boolean multihead`: (scripting version >= 3) true if the system
-   is running with multiple screens in a "Xaphod" multiple display
-   server configuration
--  `int multiheadScreen`: (scripting version >= 3) if multihead is
-   true, contains the (real) screen id of the current screen
+- `boolean hasBattery`: whether or not the system has the ability
+  to run on battery power, e.g. a laptop or mobile device
+- `boolean multihead`: (scripting version >= 3) true if the system
+  is running with multiple screens in a "Xaphod" multiple display
+  server configuration
+- `int multiheadScreen`: (scripting version >= 3) if multihead is
+  true, contains the (real) screen id of the current screen
 
 Functions:
 
--  `sleep(number ms)`: sleeps the script for the specified number of
-   milliseconds
+- `sleep(number ms)`: sleeps the script for the specified number of
+  milliseconds
 
 ## QRectF
 
@@ -632,23 +632,23 @@ geometry properties and functions.
 
 Read-only properties:
 
--  `boolean empty`: true if the rectangle's width or height is less
-   than, or equal to, 0; an empty rectangle is also invalid
--  `boolean null`: true if the rectangle has both the width and the
-   height set to 0; a null rectangle is also empty and not valid
--  `boolean valid`: true if the rectangle has a width > 0 and height
-   0.
+- `boolean empty`: true if the rectangle's width or height is less
+  than, or equal to, 0; an empty rectangle is also invalid
+- `boolean null`: true if the rectangle has both the width and the
+  height set to 0; a null rectangle is also empty and not valid
+- `boolean valid`: true if the rectangle has a width > 0 and height
+  0.
 
 Read-write properties:
 
--  `number left`
--  `number top`
--  `number bottom`
--  `number right`
--  `number height`
--  `number width`
--  `number x`
--  `number y`
+- `number left`
+- `number top`
+- `number bottom`
+- `number right`
+- `number height`
+- `number width`
+- `number x`
+- `number y`
 
 Constructors:
 
