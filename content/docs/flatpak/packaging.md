@@ -64,7 +64,7 @@ sources:
   A oneliner command for that is `sudo flatpak-builder build --install-deps-from=flathub --force-clean --ccache --install org.kde.kate.json`. It will pull all required dependencies from flathub if they exist, build the application in a directory called "build", clean the directory if needed, cache the build files so later builds will be faster, and automatically install it for you. If the flatpak you made provides a .desktop file, you'll find a new entry on your menu; otherwise you can test/execute it with `flatpak run org.kde.kate`.
   
 {{< alert title="Tip!" color="success" >}}
-If you install Flathub as `--user`, you won't need sudo to run any flatpak command, which allows you to build and install the app for your user only. 
+If you install Flathub as `--user`, you won't need sudo to run any flatpak command, which allows you to build and install the app for your user only. The command then becomes `flatpak-builder build --user --install-deps-from=flathub --force-clean --ccache --install org.kde.kate.json`.
 {{< /alert >}}
 
   
