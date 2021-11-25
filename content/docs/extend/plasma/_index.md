@@ -17,6 +17,7 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
 * **Color Theme** (misc colors for Qt5 apps)
     * Usually set in the `colors` file in a plasma style (desktop theme).
     * When a color theme is applied, its values are copied to `~/.config/kdeglobals`
+    * [`kde-gtk-config`](https://invent.kde.org/plasma/kde-gtk-config) automatically syncs colors to the Breeze GTK Theme in `~/.config/gtk-3.0/colors.css`
 * **Icon Theme**
     * System/Default `/usr/share/icons/` ([GitLab](https://invent.kde.org/frameworks/breeze-icons))
     * User Installed `~/.local/share/icons/` ([KDE Store Category](https://store.kde.org/browse/cat/132/order/latest/))
@@ -35,7 +36,7 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
     * System/Default `/usr/share/plasma/wallpapers/` ([GitLab](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/wallpapers))
     * User Installed `~/.local/share/plasma/wallpapers/`
 * **Window Decoration** is the window titlebar.
-    * Window Decorations are C++ plugins implementing the [KDecoration2 API](docs:kdecoration2). You will be unable to easily fork the default Breeze decoration as it's C++, however there is a preinstalled Aurorae plugin that can be themed with SVGs.
+    * Window Decorations are C++ plugins implementing the [KDecoration2 API](docs:kdecoration2). You will be unable to easily fork the default [Breeze decoration](https://invent.kde.org/plasma/breeze/-/tree/master/kdecoration) as it's C++, however there is a preinstalled Aurorae plugin that can be themed with SVGs.
     * System/Default `/usr/share/aurorae/themes/` (empty usually)
     * User Installed `~/.local/share/aurorae/themes/` ([KDE Store Category](https://store.kde.org/browse/cat/114/order/latest/))
     * Tutorial: [techbase.kde.org/User:Mgraesslin/Aurorae](https://techbase.kde.org/User:Mgraesslin/Aurorae)
