@@ -1,6 +1,6 @@
 ---
 title: Your app on kdeapps
-description: How to publish your manifests on KDE infrastructure
+description: How and where to publish your manifests
 weight: 3
 ---
 
@@ -12,7 +12,7 @@ Kdeapps is particularly convenient for users to test applications that are new a
 
 One way is to fork the repository, add your manifest (either via web interface or via git), and create a merge request (MR). This process is [very extensively described in the wiki](https://community.kde.org/Infrastructure/GitLab), and requires you to create an account over [Identity](https://identity.kde.org/) first. The MR will then undergo a straightforward review process before being added.
 
-If you are the application developer and want to take control of your flatpak package, you can instead host the JSON manifest in your application repository and make an MR to submit a fairly simple pointer file to the kdeapps repository instead, called a remoteapp. It consists of three lines:
+If you are the application developer and want to have more control over your flatpak package, you can instead host the JSON manifest in your application repository and make an MR to submit a fairly simple pointer file to the kdeapps repository instead, called a remoteapp. It consists of three lines:
 
 ```
 ID=org.kde.yourapphere
@@ -30,9 +30,9 @@ Once your application is properly packaged and is known to compile and run well,
 
 Release flatpaks differ from git flatpaks in some ways:
 
-You should prefer sources of type `archive` and link to the official release tarball of the software, which is usually present in https://download.kde.org. It is preferable because it is made using our integrated tool, [releaseme](https://community.kde.org/ReleasingSoftware#Creating_a_Tarball), which includes translations in the tarball. You also need to specify its release `tag` as named on its repository, and its `sha256`, which can be found by clicking on "Details" to the right of the tarball in https://download.kde.org.
+You should prefer sources of type `archive` and link to the official release tarball of the software, which is usually present in [download.kde.org](https://download.kde.org). It is preferable because it is made using our integrated tool, [releaseme](https://community.kde.org/ReleasingSoftware#Creating_a_Tarball), which includes translations in the tarball. You also need to specify its release `tag` as named on its repository, and its `sha256`, which can be found by clicking on "Details" to the right of the tarball on the [download.kde.org](https://download.kde.org) website.
 
-If the above is impossible (like on the rare case a module doesn't have a release yet), prefer sources of type `git` and specify its `commit` in order to ensure the software compiles in reproducible manner.
+If the above is impossible (like on the rare case a module doesn't have a release yet), prefer sources of type `git` and specify its `commit` in order to ensure the software compiles in a reproducible manner.
 
 There is generally no need for `desktop-file-name-suffix`.
 
@@ -44,4 +44,4 @@ After changing your package to a release, you should follow flathub's [contribut
 
 Once you create the PR, it will undergo review. During this step, flathubbot is available to test your builds whenever you comment `bot, build org.kde.yourapphere`. It is useful to verify that your application compiles properly as though it were on flathub; if it fails, it should link to its compile logs, and if it succeeds, you should get a command to test your new package and ensure it runs.
 
-After your package gets accepted, the content of your PR will be added to a separate repository for your app and you will be granted collaborator permissions so you can upload the updates to your manifest in the future. You should read the [maintainer guidelines](https://github.com/flathub/flathub/wiki/App-Maintenance) to learn extra information about your repository and builds. You will also be able to login to the [flathub builds](https://flathub.org/builds/) website in order to see your flatpak's build logs and control when your new update gets published.
+After your package gets accepted, the content of your PR will be added to a separate repository for your app and you will be granted collaborator permissions so you can upload the updates to your manifest in the future. Congratulations, you're now the official maintainer of the package over flathub! You should read the [maintainer guidelines](https://github.com/flathub/flathub/wiki/App-Maintenance) to learn extra information about your repository and builds. You will also be able to login to the [flathub builds](https://flathub.org/builds/) website in order to see your flatpak's build logs and control when your new update gets published. Be sure to follow the application's development cycle and update it every so often. If, later on, you're not able to keep maintaining the package anymore, warn the relevant KDE/flathub developers, and the KDE team will be responsible for maintaining it.
