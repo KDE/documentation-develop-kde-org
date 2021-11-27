@@ -78,9 +78,9 @@ be fixed, you can pass a `pluginId` of:
 
 Read-only properties:
 
-- `array[number] activityIds`: returns a list of integer ids of all
+- `array<number> activityIds`: returns a list of integer ids of all
   existing Plasma activities
-- `array[string] knownActivityTypes`: a list of types of activities
+- `array<string> knownActivityTypes`: a list of types of activities
   that can be created. This is useful to
   check if an Activity type is available on the system before trying to
   construct one.
