@@ -65,7 +65,7 @@ Work-in-Progress.
 
 + Enable audio channels when needed
 + Show notifications
-+ Power management (wake up the device)
++ Automatically launch dialer GUI
 + Share KDE-related Telephony services via session DBus
 
 It is KDE-specific and depends on _Modem Daemon_. It's not ModemManagerQt specific. Could also depend on such KF5 libraries as People, Notifications, I18n. Contains _contactphonenumbermapper_ — a library to work with KDE KPeople and Google phonenumber libraries.
