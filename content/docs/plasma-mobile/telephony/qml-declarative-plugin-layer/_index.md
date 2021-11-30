@@ -6,7 +6,7 @@ SPDX-FileCopyrightText: 2021 Alexey Andreyev <aa13q@ya.ru>
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
-[kde-telephony-plugin-declarative](https://invent.kde.org/andreyev/kde-telephony-plugin-declarative) — `org.kde.telephony` QML plugin to work with the telephony daemon D-Bus interfaces.
+[kde-telephony-plugin-declarative](https://invent.kde.org/plasma-mobile/plasma-dialer/-/tree/master/kde-telephony-plugin-declarative) — `org.kde.telephony` QML plugin to work with the telephony daemon D-Bus interfaces.
 
 The plugin provides QML interfaces to all the session-level D-BUS telephony daemon interfaces (See also: [D-Bus APIs of the session-side daemons](../session-daemon-userland-dbus-ipc-level#daemons))
 

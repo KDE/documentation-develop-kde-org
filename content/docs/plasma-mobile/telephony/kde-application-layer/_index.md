@@ -14,7 +14,7 @@ Client GUI Applications related to telephony. Right now they are using ModemMana
 
 ### Plasma Dialer
 
-[plasma-dialer](https://invent.kde.org/plasma-mobile/plasma-dialer/) — Dialer for Plasma Mobile.
+[plasma-dialer](https://invent.kde.org/plasma-mobile/plasma-dialer/-/tree/master/plasma-dialer) — Dialer for Plasma Mobile.
 
 Similar projects:
 

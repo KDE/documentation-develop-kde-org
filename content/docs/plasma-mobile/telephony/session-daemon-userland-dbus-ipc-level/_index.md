@@ -39,7 +39,7 @@ If not, at least the D-Bus scheme could be shared among both GNOME and KDE via F
 
 #### KDE Telephony Meta
 
-[kde-telephony-meta](https://invent.kde.org/andreyev/kde-telephony-meta/) is KDE Telephony shared data:
+[kde-telephony-meta](https://invent.kde.org/plasma-mobile/plasma-dialer/-/tree/master/kde-telephony-meta/) is KDE Telephony shared data:
 
 + D-Bus XML Interface descriptions
 + ready to reuse Qt meta types for complex D-Bus types as a header or a static library
@@ -48,7 +48,7 @@ If not, at least the D-Bus scheme could be shared among both GNOME and KDE via F
 
 #### Modem Daemon
 
-[modem-daemon](https://invent.kde.org/andreyev/modem-daemon) is a daemon for background tracking the modem events to:
+[modem-daemon](https://invent.kde.org/plasma-mobile/plasma-dialer/-/tree/master/modem-daemon) is a daemon for background tracking the modem events to:
 
 + Provide access to calls for client applications and daemons via D-Bus session level
 + Save the history
@@ -61,7 +61,7 @@ Work-in-Progress.
 
 #### KDE Telephony Daemon
 
-[kde-telephony-daemon](https://invent.kde.org/andreyev/kde-telephony-daemon) is a daemon for background tracking the modem events to:
+[kde-telephony-daemon](https://invent.kde.org/plasma-mobile/plasma-dialer/-/tree/master/kde-telephony-daemon) is a daemon for background tracking the modem events to:
 
 + Enable audio channels when needed
 + Show notifications
