@@ -72,7 +72,7 @@ After that, the next things could be ported to these plugins:
 
 + The part of the Plasma Phone Components called [mmplugin](https://invent.kde.org/plasma/plasma-phone-components/-/tree/master/mmplugin) could be ported to Modem Daemon (after it will be ready; when `SignalIndicator` API will be ported here).
 
-+ The part of the [SpaceBar](https://invent.kde.org/plasma-mobile/spacebar) (SMS Application for Plasma Mobile):
++ The part of the [SpaceBar](https://invent.kde.org/plasma-mobile/spacebar) (SMS/MMS Application for Plasma Mobile):
     + Not related to KDE (MMQt-only) could be ported to Modem Daemon
     + Related to KDE (contacts and avatars) could be ported to KDE Telephony Daemon
 
