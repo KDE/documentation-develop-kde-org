@@ -26,7 +26,7 @@ Similar projects:
 
 ### Spacebar
 
-[spacebar](https://invent.kde.org/plasma-mobile/spacebar/) — SMS Application for Plasma Mobile.
+[spacebar](https://invent.kde.org/plasma-mobile/spacebar/) — SMS/MMS Application for Plasma Mobile.
 
 Currently uses [ModemManagerQt directly](https://invent.kde.org/plasma-mobile/spacebar/-/merge_requests/48).
 
