@@ -8,8 +8,8 @@
   <section id="top">
     <div class="container text-center">
       <span class="kde-logo-big">K</span>
-      <h1>KDE Developer Platform</h1>
-      <p>Design, build and distribute beautiful, usable applications with KDE technologies.</p>
+      <h1>{{ i18n "home.header.title" }}</h1>
+      <p>{{ i18n "home.header.subtitle" }}</p>
     </div>
   </section>
 
@@ -17,40 +17,32 @@
 
   <section id="platform-hero">
     <div class="container text-center">
-      <h2>Multi-Platform</h2>
-      <p>Develop once, deploy everywhere. Built on top of Qt, KDE's technologies work on every platform.</p>
-      <p>Desktop Linux, Android, Windows, macOS, embedded, and more</p>
+      <h2>{{ i18n "home.multiplatform.title" }}</h2>
+      <p>{{ i18n "home.multiplatform.text1" }}</p>
+      <p>{{ i18n "home.multiplatform.text2" }}</p>
      </div>
      <div class="d-flex" id="platform-illustration">
-       <img src="plasma-devices.svg" alt="Plasma running on a phone, laptop and TV" class="img-fluid col-12 col-lg-10 mx-md-auto" />
+       <img src="plasma-devices.svg" alt="{{ i18n "home.multiplatform.alt" }}" class="img-fluid col-12 col-lg-10 mx-md-auto" />
      </div>
   </section>
 
   <section id="develop-hero" class="p-4" style="height: auto;">
     <div class="container text-center p-5" style="background-color: #333">
-      <h1 class="h2 mt-0" style="color: #EEE;">KDE Frameworks: Enhance the Qt Experience</h1>
-      <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">KDE Frameworks cover 80 add-on libraries for programming with Qt. All libraries have been well-tested in real world scenarios and are comprehensively documented. KDE's libraries are distributed under LGPL or MIT licenses.</p>
-      <a class="learn-more" href="/products/frameworks/">Learn more</a>
+      <h1 class="h2 mt-0" style="color: #EEE;">{{ i18n "home.qt.title" }}</h1>
+      <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">{{ i18n "home.qt.description" }}</p>
+      <a class="learn-more" href="/products/frameworks/">{{ i18n "learn-more" }}</a>
     </div>
   </section>
 
   <section class="d-flex pt-0 py-sm-5">
-    <img src="/frameworks/kirigami/kirigami-devices.png" class="img-fluid kirigami-devices d-none d-sm-block"/>
+    <img src="/frameworks/kirigami/kirigami-devices.png" alt="" class="img-fluid kirigami-devices d-none d-sm-block"/>
     <div class="align-self-center container">
-      <section class="d-sm-none kirigami-header"><h1><p class="header-logo">K</p>Kirigami UI Framework</h1></section>
-      <h2 class="h1 mt-5 mt-sm-0">Kirigami</h2>
-      <h3>Build Beautiful, Convergent Apps that Run on Phones, TVs and Everything in Between.</h3>
-      <p>
-        The line between desktop and mobile is blurring and users expect the same quality
-        experience on every device. Applications using Kirigami adapt brilliantly to mobile,
-        desktop, TVs, infortainment systems and everything in between.
-      </p>
-      <p>
-         Kirigami's components are goodlooking and consistent, and Kirigami itself provides a clearly
-         defined workflow. Users of Kirigami apps will appreciate the smart choices made in the API and
-         uncluttered design.
-      </p>
-      <p class="mb-0"><a href="/frameworks/kirigami/" class="learn-more">Discover Kirigami</a></p>
+      <section class="d-sm-none kirigami-header"><h1><p class="header-logo">K</p>{{ i18n "home.kirigami.title" }}</h1></section>
+      <h2 class="h1 mt-5 mt-sm-0">{{ i18n "home.kirigami.name" }}</h2>
+      <h3>{{ i18n "home.kirigami.subtitle" }}</h3>
+      <p>{{ i18n "home.kirigami.description1" }}</p>
+      <p>{{ i18n "home.kirigami.description2" }}</p>
+      <p class="mb-0"><a href="/frameworks/kirigami/" class="learn-more">{{ i18n "home.kirigami.discover" }}</a></p>
     </div>
   </section>
 
