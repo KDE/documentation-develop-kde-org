@@ -18,7 +18,7 @@ intuitive and learnable.
 Design Vision
 -------------
 
-KDE\'s design vision focuses on two attributes of KDE software that
+KDE's design vision focuses on two attributes of KDE software that
 connect its future to its history:
 
 ### Simple by default...
@@ -53,9 +53,11 @@ creative and efficiently productive.*
     the primary task.
 
 {{< alert color="info" title="Note" >}}
+
 KDE encourages developing and designing for customization, while
 providing good default settings. Integrating into other desktop
 environments is also a virtue, but ultimately we aim for perfection
 within our own Plasma desktop environment with the default themes and
 settings. This aim should not be compromised.
+
 {{< /alert >}}
