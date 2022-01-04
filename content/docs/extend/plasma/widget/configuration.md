@@ -420,7 +420,7 @@ I personally don't recommend using the `Color` data type in `main.xml` if you wa
 
 ```qml
 PlasmaComponents.Label {
-    color: plasmoid.configruation.labelColor || PlasmaCore.ColorScope.textColor
+    color: plasmoid.configuration.labelColor || PlasmaCore.ColorScope.textColor
 }
 ```
 
