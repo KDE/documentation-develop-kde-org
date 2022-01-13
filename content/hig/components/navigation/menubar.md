@@ -17,6 +17,8 @@ menus are well organized, are worded clearly, and behave correctly is
 crucial to the user's ability to explore and access the functionality of
 the application.
 
+![Menubar with 7 menus](/hig/Menubar1.png)
+
 Guidelines
 ----------
 
