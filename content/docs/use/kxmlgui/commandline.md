@@ -19,7 +19,7 @@ We now have a working text editor that can open and save files. We might, howeve
 
 Here we have done nothing but add a new `openFileFromUrl` function which takes a `QUrl`. Again, we use a `QUrl` instead of a `QString` so that we can also work with remote files as if they were local.
 
-{{< readfile file="/content/docs/use/getting-started/commandline/mainwindow.h" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/commandline/mainwindow.h" highlight="cpp" >}}
 
 ### mainwindow.cpp
 
@@ -27,7 +27,7 @@ There's no new code here, only rearranging. Everything from `void openFile()` ha
 
 This way, we can call `openFile()` if we want to display a dialog, or we can call `openFileFromUrl(const QUrl &)` if we know the name of the file already. Which will be the case when we feed the file name through the command line.
 
-{{< readfile file="/content/docs/use/getting-started/commandline/mainwindow.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/commandline/mainwindow.cpp" highlight="cpp" >}}
 
 ### main.cpp
 
@@ -49,4 +49,4 @@ if (parser.positionalArguments().count() > 0) {
 
 These are the changes:
 
-{{< readfile file="/content/docs/use/getting-started/commandline/main.cpp" highlight="cpp" start="40" lines="13" >}}
+{{< readfile file="/content/docs/use/kxmlgui/commandline/main.cpp" highlight="cpp" start="40" lines="13" >}}

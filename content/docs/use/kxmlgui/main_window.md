@@ -24,7 +24,7 @@ In order to have a useful KXmlGuiWindow, we must subclass it. So we create two f
 ### mainwindow.h
 
 
-{{< readfile file="/content/docs/use/getting-started/main_window/mainwindow.h" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/main_window/mainwindow.h" highlight="cpp" >}}
 
 First we [subclass](https://en.wikipedia.org/wiki/Inheritance_%28object-oriented_programming%29#Subclasses_and_superclasses) KXmlGuiWindow with `class MainWindow : public KXmlGuiWindow` then we declare the [constructor](https://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)) with `MainWindow(QWidget *parent = nullptr);`.
 
@@ -32,7 +32,7 @@ And finally, we declare a pointer to the object that will make up the bulk of ou
 
 ### mainwindow.cpp
 
-{{< readfile file="/content/docs/use/getting-started/main_window/mainwindow.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/main_window/mainwindow.cpp" highlight="cpp" >}}
 
 First, of course, we have to include the header file containing the class declaration. 
 
@@ -45,7 +45,7 @@ Finally, [KXmlGuiWindow::setupGUI](docs:kxmlgui;KXmlGuiWindow::setupGUI) is call
 In order to actually run this window, we need to add a few lines in main.cpp:
 
 
-{{< readfile file="/content/docs/use/getting-started/main_window/main.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/main_window/main.cpp" highlight="cpp" >}}
 
 Again, we include our new header file ´mainwindow.h´. This lets us create our new MainWindow object which we then display near the end of the main function (by default, new window objects are hidden). 
 
@@ -55,7 +55,7 @@ The best way to build the program is to use CMake. We add `mainwindow.cpp` to th
 
 ### CMakeLists.txt
 
-{{< readfile file="/content/docs/use/getting-started/main_window/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/use/kxmlgui/main_window/CMakeLists.txt" highlight="cmake" >}}
 
 ## Compile and run
 

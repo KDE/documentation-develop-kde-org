@@ -26,7 +26,7 @@ To get more information about any class you come across, you can use [KDE's API 
 All the code we need will be in one file, `main.cpp`. We'll start simple and increment our file as we go further. Create it with the code below: 
 
 
-{{< readfile file="/content/docs/use/getting-started/hello_world/main1.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/hello_world/main1.cpp" highlight="cpp" >}}
 
 First we need to create a [QApplication](https://doc.qt.io/qt-5/qapplication.html) object. It needs to be created exactly once and before any other KDE Framework or Qt object, as it's the starting point for creating your application and thus required for other components, like [Internationalization](../i18n/).
 
@@ -36,7 +36,7 @@ Now that we have our item, we can create our popup. We call the [KMessageBox::qu
 
 ### About and Internationalization
 
-{{< readfile file="/content/docs/use/getting-started/hello_world/main2.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/hello_world/main2.cpp" highlight="cpp" >}}
 
 For your application to be localized, it must first be internationalized, that is, you must prepare your code for it to be localized later. For that, we start with a call to [KLocalizedString::setApplicationDomain](docs:ki18n;KLocalizedString::setApplicationDomain) is required to properly set the translation catalog and must be done before everything else (except QApplication). After that, we can just start enveloping the relevant user-visible strings with `i18n()`. The non-user visible strings that should be kept as-is (that is, read only) should use a [QStringLiteral](https://doc.qt.io/qt-5/qstring.html#QStringLiteral). We'll use those next with [KAboutData](docs:kcoreaddons;KAboutData).
 
@@ -46,7 +46,7 @@ More information on internalization can be found in the [i18n](https://techbase.
 
 ### Command line
 
-{{< readfile file="/content/docs/use/getting-started/hello_world/main3.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/hello_world/main3.cpp" highlight="cpp" >}}
 
 Then we come to [QCommandLineParser ](https://doc.qt.io/qt-5/qcommandlineparser.html). This is the class one would use to specify command line flags to, for example, open the program with a specific file. However, in this tutorial, we simply initialize it with the [KAboutData](docs:kcoreaddons;KAboutData) object we created before so we can use the `--version` or `--author` flags that are provided by default by Qt.
 
@@ -60,7 +60,7 @@ You want to use `cmake` for your build environment. You provide a file `CMakeLis
 
 Create a file named `CMakeLists.txt` in the same directory as `main.cpp` with this content: 
 
-{{< readfile file="/content/docs/use/getting-started/hello_world/CMakeLists.txt" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/hello_world/CMakeLists.txt" highlight="cpp" >}}
 
 The `find_package()` function locates the package that you ask it for (in this case ECM, Qt5, or KF5) and sets some variables describing the location of the package's headers and libraries. ECM, or Extra CMake Modules, is required to import special CMake files and functions for building KDE applications.
 

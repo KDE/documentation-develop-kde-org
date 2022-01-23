@@ -23,7 +23,7 @@ We don't need to change anything in here.
 
 ### mainwindow.h
 
-{{< readfile file="/content/docs/use/getting-started/saving_and_loading/mainwindow.h" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/saving_and_loading/mainwindow.h" highlight="cpp" >}}
 
 Since we want to add the ability to load and save files, we must add the functions which will do the work. Since the functions will be called through [Qt's signal/slot](http://doc.qt.io/qt-5/signalsandslots.html) mechanism we must specify that these functions are slots. Since we are using slots in this header file, we must also add the [Q_OBJECT](http://doc.qt.io/qt-5/qobject.html#Q_OBJECT) macro.
 
@@ -31,7 +31,7 @@ We also want to keep track of the filename of the currently opened file so we de
 
 ### mainwindow.cpp
 
-{{< readfile file="/content/docs/use/getting-started/saving_and_loading/mainwindow.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/saving_and_loading/mainwindow.cpp" highlight="cpp" >}}
 
 We'll get into the details of mainwindow.cpp in a while. 
 
@@ -187,7 +187,7 @@ Again, for simplicity's sake, this tutorial only saves text files to local disk.
 
 ### CMakeLists.txt
 
-{{< readfile file="/content/docs/use/getting-started/saving_and_loading/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/use/kxmlgui/saving_and_loading/CMakeLists.txt" highlight="cmake" >}}
 
 Since we are now using the KIO library, we must tell CMake to link against it. We do this by passing `KIO` to the `find_package()` function and `KF5::KIOCore` to `target_link_libraries()` function.
 

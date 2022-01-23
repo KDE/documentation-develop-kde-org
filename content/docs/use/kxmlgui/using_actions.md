@@ -38,13 +38,13 @@ We are going to install our UI .rc file under the component `texteditor`, so `ma
 
 ### mainwindow.h
 
-{{< readfile file="/content/docs/use/getting-started/using_actions/mainwindow.h" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/using_actions/mainwindow.h" highlight="cpp" >}}
 
 Only a function `void setupActions()` has been added which will do all the work setting up the QActions.
 
 ### mainwindow.cpp
 
-{{< readfile file="/content/docs/use/getting-started/using_actions/mainwindow.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/use/kxmlgui/using_actions/mainwindow.cpp" highlight="cpp" >}}
 
 ## Explanation
 
@@ -152,7 +152,7 @@ Since the description of the UI is defined with XML, the layout must follow stri
 
 #### texteditorui.rc
 
-{{< readfile file="/content/docs/use/getting-started/using_actions/texteditorui.rc" highlight="xml" >}}
+{{< readfile file="/content/docs/use/kxmlgui/using_actions/texteditorui.rc" highlight="xml" >}}
 
 The `<Toolbar>` tag allows you to describe the toolbar, which is the bar across the top of the window normally with icons. Here it is given the unique name `mainToolBar` and its user visible name set to Main Toolbar using the `<text>` tag. The clear action is added to the toolbar using the `<Action>` tag, the name parameter in this tag being the string that was passed to the KActionCollection with `addAction()` in `mainwindow.cpp`. 
 
@@ -172,7 +172,7 @@ Finally, the `texteditorui.rc` needs to go somewhere where the system can find i
 
 ### CMakeLists.txt
 
-{{< readfile file="/content/docs/use/getting-started/using_actions/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/use/kxmlgui/using_actions/CMakeLists.txt" highlight="cmake" >}}
 
 This file is almost identical to the one for [previous tutorial](../main_window), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the `KDE_INSTALL_TARGETS_DEFAULT_ARGS` then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory under `KDE_INSTALL_KXMLGUI5DIR`.
 
