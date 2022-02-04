@@ -41,10 +41,6 @@ target_link_libraries(kcm_time
     KF5::QuickAddons
 )
 
-kcoreaddons_desktop_to_json(kcm_time "package/metadata.desktop")
-
-install(TARGETS kcm_time DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
-install(FILES package/metadata.desktop RENAME kcm_time.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR}) # Install the desktop file
-
+install(TARGETS kcm_time DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
 
 kpackage_install_package(package kcm_time kcms) # Install our QML kpackage.

@@ -26,8 +26,8 @@ The basic structure of this hypothetical time settings module is the following:
 ```
 ├── CMakeLists.txt
 ├── timesettings.{cpp,h}
+├── timesettings.json
 └── package
-    ├── metadata.desktop
     └── contents/ui
         └── main.qml
 ```
@@ -61,21 +61,17 @@ Here is where we would put any backend code that changes things behind the scene
 
 In this C++ file we define the constructor for the class in the previous file. We include some basic metadata about this KCM and we provide the buttons that we will want included in our window.
 
-## package/metadata.desktop
+## package/kcm_time.json
 
-{{< readfile file="/content/docs/extend/kcm/package/metadata.desktop" highlight="ini" >}}
+{{< readfile file="/content/docs/extend/kcm/kcm_time.json" highlight="json" >}}
 
-This `.desktop` file provides further metadata about our KCM. These entries specify the following:
+This `.json` file provides metadata about our KCM. These entries specify the following:
 
 * `Name` defines the name of the KCM which is shown in the settings app.
 * `Description` is a short, one sentence description of the module.
-* `X-KDE-Library` must match the library name defined in CMakeLists.txt.
-* `X-KDE-FormFactors` defines on which kinds of devices this KCM should be shown.
-* `X-Plasma-MainScript` points to the main QML file in the KPackage.
+* `FormFactors` defines on which kinds of devices this KCM should be shown.
 * `X-KDE-System-Settings-Parent-Category` defines the category systemsettings5 is showing the module in.
 * `X-KDE-Keywords` defines Keywords used for searching modules.
-
-This file will allow our KCM to appear in desktop launchers and KRunner, providing quick access to our KCM from outside the system settings application.
 
 ## package/contents/ui/main.qml
 
