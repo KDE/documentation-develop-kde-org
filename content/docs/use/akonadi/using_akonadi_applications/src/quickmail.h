@@ -29,7 +29,6 @@ class QuickMail : public QObject
 
 public:
     QuickMail(QObject *parent = nullptr);
-    ~QuickMail() override = default;
 
     bool loading() const;
     KDescendantsProxyModel *descendantsProxyModel() const;

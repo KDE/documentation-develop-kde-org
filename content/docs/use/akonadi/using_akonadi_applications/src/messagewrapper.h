@@ -23,7 +23,6 @@ class MessageWrapper : public QObject
     Q_PROPERTY(QString content READ content NOTIFY loaded);
 public:
     explicit MessageWrapper(const Akonadi::Item &item, QObject *parent = nullptr);
-    ~MessageWrapper() = default;
 
     QString from() const;
     QStringList to() const;

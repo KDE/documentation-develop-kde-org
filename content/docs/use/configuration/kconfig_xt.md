@@ -309,7 +309,6 @@ class MyKcm : public KQuickAddons::ManagedConfigModule {
 
 public:
   MyKcm(QObject *parent, const QVariantList &args);
-  virtual ~MyKcm() override = default;
 
   My::Config *config() const;
 

@@ -107,7 +107,6 @@ class QuickMail : public QObject
 
 public:
     QuickMail(QObject *parent = nullptr) : QObject(parent) {}
-    ~QuickMail() = default;
 };
 ```
 

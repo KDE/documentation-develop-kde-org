@@ -12,5 +12,4 @@ class TimeSettings : public KQuickAddons::ManagedConfigModule
     Q_OBJECT
 public:
     TimeSettings(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
-    virtual ~TimeSettings() override = default;
 };
