@@ -13,7 +13,7 @@ layout: framework
 
 <div>
   <div class="container text-center block-navs">
-    <a href="/docs/kirigami/" target="_blank" class="block-nav">
+    <a href="/docs/use/kirigami/" target="_blank" class="block-nav">
       <i class="icon icon_document-share"></i>
       <h2>Learn</h2>
       <p>Learn how to build beautiful apps with Kirigami</p>
