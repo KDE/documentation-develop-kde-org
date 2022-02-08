@@ -77,7 +77,7 @@ TAG_FILES = [
     },
     {
         'tags': 'https://api.kde.org/libksysguard/html/Libksysguard.tags',
-        'base_url': 'https://api.kde.org/libksysguard/html/',
+        'base_url': 'https://api.kde.org/plasma/libksysguard/html/',
         'default_prefix': 'KSysGuard',
     },
     {
