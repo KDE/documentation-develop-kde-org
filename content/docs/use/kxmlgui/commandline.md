@@ -17,19 +17,21 @@ We now have a working text editor that can open and save files. We might, howeve
 
 ### mainwindow.h
 
-Here we have done nothing but add a new `openFileFromUrl` function which takes a `QUrl`. Again, we use a `QUrl` instead of a `QString` so that we can also work with remote files as if they were local.
-
 {{< readfile file="/content/docs/use/kxmlgui/commandline/mainwindow.h" highlight="cpp" >}}
 
+Here we have done nothing but add a new `openFileFromUrl` function which takes a `QUrl`. Again, we use a `QUrl` instead of a `QString` so that we can also work with remote files as if they were local.
+
 ### mainwindow.cpp
+
+{{< readfile file="/content/docs/use/kxmlgui/commandline/mainwindow.cpp" highlight="cpp" >}}
 
 There's no new code here, only rearranging. Everything from `void openFile()` has been moved into `void openFileFromUrl(const QUrl &inputFileName)` except the call to `QFileDialog::getOpenFileUrl()`.
 
 This way, we can call `openFile()` if we want to display a dialog, or we can call `openFileFromUrl(const QUrl &)` if we know the name of the file already. Which will be the case when we feed the file name through the command line.
 
-{{< readfile file="/content/docs/use/kxmlgui/commandline/mainwindow.cpp" highlight="cpp" >}}
-
 ### main.cpp
+
+{{< readfile file="/content/docs/use/kxmlgui/commandline/main.cpp" highlight="cpp" >}}
 
 This is where all the [QCommandLineParser ](https://doc.qt.io/qt-5/qcommandlineparser.html) magic happens. In previous examples, we only used the class to feed QApplication the necessary data for using flags like `--version` or `--author`. Now we actually get to use it to process command line arguments.
 
@@ -46,7 +48,3 @@ if (parser.positionalArguments().count() > 0) {
     window->openFileFromUrl(QUrl::fromUserInput(parser.positionalArguments().at(0), QDir::currentPath()));
 }
 ```
-
-These are the changes:
-
-{{< readfile file="/content/docs/use/kxmlgui/commandline/main.cpp" highlight="cpp" start="40" lines="13" >}}
