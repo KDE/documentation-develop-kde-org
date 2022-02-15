@@ -101,7 +101,7 @@ widgetStyle[$i]=breeze
 
 Appending `[$i]` to the configuration key marks it as immutable. As
 configuration files from `$XDG_CONFIG_DIRS` are read before
-`$XDG_CONFIG_HOME`, the background is now "locked down" and and any
+`$XDG_CONFIG_HOME`, the background is now "locked down" and any
 custom settings made by a user to it, either directly or though a
 configuration dialog, will not be read by the configuration system.
 
