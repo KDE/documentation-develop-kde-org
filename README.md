@@ -16,13 +16,6 @@ Then, run this Python script:
 python3 scripts/extract-plasma-applet-config-keys.py
 ```
 
-This website uses a theme shared among KDE websites that are Hugo-based.
-- If you want to work on this website _and_ the theme, please read about it at [kde-hugo wiki](https://invent.kde.org/websites/aether-sass/-/wikis/Hugo);
-- If you only want to work on this website, you can delete the `config` folder, the theme will be downloaded when the website is built. However, you might end up using an old version of it, as defined in the `go.mod` file. To get the up-to-date version, run:
-```
-hugo mod get invent.kde.org/websites/aether-sass@hugo
-```
-
 You are now ready to start the server. Run:
 
 ```
@@ -126,3 +119,6 @@ Examples:
 
 ## I18n
 The Kirigami tutorials are internationalized and localized using [hugoi18n](https://invent.kde.org/websites/hugo-i18n).
+
+## kde-hugo theme
+This website uses a theme shared among KDE websites that are Hugo-based. If you have some issue that you think is not inside this repo, or if you just want to know more about the theme, have a look at [kde-hugo wiki](https://invent.kde.org/websites/aether-sass/-/wikis/Hugo).
