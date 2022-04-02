@@ -20,19 +20,27 @@ Creating new servicemenus is very simple, requiring nothing more than an idea an
 ## Where the Servicemenus Locate
 
 Servicemenus are defined using .desktop files, which are the same kind of files that are used to create entries in the Plasma launcher. These servicemenu files are found in
-
-ServiceMenus subfolder of one of the folders that can be determined with 
-
-```bash
-kf5-config --path services
-```
-
-In the case of my home machine that means that servicemenu files can be found in the following places:
+the `kio/servicemnus` subfolder of the generic data locations. The dirs can be printed out with the following command, multiple dirs are separated by a `:`:
 
 ```bash
-~/.local/share/kservices5/ServiceMenus/      
-/usr/share/kservices5/ServiceMenus/
+qtpaths --locate-dirs GenericDataLocation kio/servicemenus
 ```
+
+In the case of default setups that means that servicemenu files can be found in the following places:
+
+```bash
+~/.local/share/kio/servicemenus
+/usr/share/kio/servicemenus
+```
+
+When a service menus is installed from Dolphin uding Get-Hot-New-Stuff, the local file location is used, because it does not require admin privileges.
+However, you need to mark the desktop file as executable for it to be considered authorized, because the location is not a standard location that is authorized by default.
+
+```bash
+touch myservicemenu.desktop
+chmod +x myservicemenu.desktop
+```
+
 ## The Start of Servicemenu
 
 We will begin creating our wallpaper servicemenu by choosing a name for the file: setAsWallpaper.desktop sounds good. The only thing that really matters with regards to the name is that it is unique and that it ends with .desktop. Next we'll open up the file in a text editor. The first thing we will put in the file is the "Desktop Entry" section: 
@@ -40,7 +48,6 @@ We will begin creating our wallpaper servicemenu by choosing a name for the file
 ```ini
 [Desktop Entry]
 Type=Service
-X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=image/png;image/jpeg;
 Actions=setAsWallpaper
 ```
@@ -55,12 +62,9 @@ KDE configuration files, including .desktop files, separate the individual setti
 
 ```ini
 Type=Service
-X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=image/png;image/jpeg;
 ```
 The first line indicates that this .desktop file is of type Service; this is necessary since the default type is Application (i.e. something with an Exec line). Service is anything else, like plugins.
-
-The ServiceTypes entry refers to the type of plugin that this desktop file defines, and specifies that it is actually a Dolphin service menu.
 
 The MimeType line defines the type of file for which this servicemenu applies. You can define more than one mimetype by providing a list separated by semicolons (but no spaces). In this case, our servicemenu will show up when we select PNG or JPEG images. The File Associations control panel is a good place to look for mimetype definitions. 
 
@@ -72,10 +76,9 @@ mimetype
 
 {{< /alert >}}
 
- You can also specify an entire group of mimetypes using "typeglobs". To make our servicemenu apply not only to PNGs and JPEGs but to all images we would simply change the ServiceTypes entry to be: 
+ You can also specify an entire group of mimetypes using "typeglobs". To make our servicemenu apply not only to PNGs and JPEGs but to all images we would simply change the MimeType entry to be:
 
 ```ini
-X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=image/*;
 ```
 Now when we right-click on any image file in Dolphin we can select it as our background. 
@@ -83,7 +86,7 @@ Now when we right-click on any image file in Dolphin we can select it as our bac
 ```ini
 Actions=setAsWallpaper
 ```
-The Actions entry defines the actions we will create in our servicemenu. As with the ServiceTypes, you can define more than one action by using a semicolon-separated list. Each of the actions listed will get a section of its own defining what that action does. In fact, that's our very next step. 
+The Actions entry defines the actions we will create in our servicemenu. You can define more than one action by using a semicolon-separated list. Each of the actions listed will get a section of its own defining what that action does. In fact, that's our very next step.
 
 ## Creating an Action
 So far we have defined one action in our servicemenu file: setAsWallpaper. Now we need to define what that action looks like and what it actually does. We begin by adding a new heading to the end of our file: 
@@ -121,7 +124,6 @@ Our file now looks like this:
 ```ini
 [Desktop Entry]
 Type=Service
-X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=image/*;
 Actions=setAsWallpaper
 
@@ -178,7 +180,6 @@ This will create a submenu called "Set As Background" and put all of the service
 ```ini
 [Desktop Entry]
 Type=Service
-X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=image/*;
 Actions=setAsWallpaper;tileAsWallpaper;
 X-KDE-Submenu=Use As Wallpaper
