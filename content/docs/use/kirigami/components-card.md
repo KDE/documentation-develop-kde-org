@@ -38,7 +38,7 @@ Kirigami.AbstractCard {
 
 {{< section-right >}}
 
-![Screenshot of an Abstract Card](abstract-card.png)
+![Screenshot of an Abstract Card](/docs/use/kirigami/components-card/abstract-card.png)
 
 {{< /section-right >}}
 
@@ -84,7 +84,7 @@ Kirigami.Card {
 
 {{< section-right >}}
 
-![](card1.png)
+![](/docs/use/kirigami/components-card/card1.png)
 
 {{< /section-right >}}
 
@@ -135,7 +135,7 @@ ColumnLayout {
 
 {{< section-right >}}
 
-![Screenshot of a CardsLayout](cardslayout.png)
+![Screenshot of a CardsLayout](/docs/use/kirigami/components-card/cardslayout.png)
 
 {{< /section-right >}}
 
@@ -256,7 +256,7 @@ Kirigami.CardsGridView {
 
 {{< section-right >}}
 
-![Screenshot of a CardsGridView](cardsgridview.png)
+![Screenshot of a CardsGridView](/docs/use/kirigami/components-card/cardsgridview.png)
 
 {{< /section-right >}}
 
