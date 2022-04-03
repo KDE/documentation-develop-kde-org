@@ -18,6 +18,11 @@ Your first program shall greet the world with a friendly "Hello World!". For tha
 To get more information about any class you come across, you can use [KDE's API Reference site](https://api.kde.org/index.html). It can be quickly accessed via KRunner with the 'kde:' search keyword (e.g. 'kde: KMessageBox'). You may also find it useful to consult Qt's documentation with `qt:`, since much of KDE's Frameworks builds upon it.
 {{< /alert >}}
 
+## Preparation
+
+You will need to set up your development environment (so that you can use the KDE Frameworks) first. You can do that in two ways:
+- Go through the [setting up your development environment](https://community.kde.org/Get_Involved/development) part of the *Get Involved* documentation. That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
+- Install the KDE Frameworks development packages from your Operating System or Distribution. The names of these packages, and how to install them, varies per distro, so you will need to investigate on your own.
 
 ## The Code
 
