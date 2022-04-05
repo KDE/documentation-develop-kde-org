@@ -33,7 +33,7 @@ In the case of default setups that means that servicemenu files can be found in 
 /usr/share/kio/servicemenus
 ```
 
-When a service menus is installed from Dolphin uding Get-Hot-New-Stuff, the local file location is used, because it does not require admin privileges.
+When a service menu is installed from Dolphin using Get-Hot-New-Stuff, the local file location is used, because it does not require admin privileges.
 However, you need to mark the desktop file as executable for it to be considered authorized, because the location is not a standard location that is authorized by default.
 
 ```bash
