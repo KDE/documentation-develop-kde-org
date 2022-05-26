@@ -481,22 +481,26 @@ In the folder `icons/`, SVG files that contain scalable icons for use with appli
 
 Some of the common icons:
 
-* audio.svg
-* battery.svg
-* computer.svg
-* configure.svg
-* device.svg
-* input.svg
-* media.svg
-* network.svg
-* notification.svg
-* preferences.svg
-* start.svg
-* system.svg
+* `audio.svg`
+* `battery.svg`
+* `computer.svg`
+* `configure.svg`
+* `device.svg`
+* `input.svg`
+* `media.svg`
+* `network.svg`
+* `notification.svg`
+* `preferences.svg`
+* `start.svg`
+* `system.svg`
+* [More...](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/desktoptheme/breeze/icons)
 
-The files are named the same as the icon theme name or their prefix, e.g. "audio.svg" or "audio-volume-high.svg". Multiple icons can be contained within a single file whose name must match the full icon name, e.g. "audio.svg" can contain elements named "audio-volume-muted", "audio-volume-low", "audio-volume-medium", and "audio-volume-high".
+You cannot simply copy a svg from an icon theme in `/usr/share/icons/`. For icons in a Plasma Style, the icon loader takes the icon name (eg: `audio-volume-high`) and [removes everything after the first dash](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/core/iconitem.cpp#L162-193) (`-`) for the filename (eg: `audio.svg`). Inside `audio.svg`, must be a group with the `id="audio-volume-high"`.
 
-##  Theming Application Icons in the System Tray
+* Before: [`breeze-icons/icons/.../audio-volume-high.svg`](https://invent.kde.org/frameworks/breeze-icons/-/blame/master/icons/status/22/audio-volume-high.svg)
+* After: [`plasma-framework/desktoptheme/breeze/icons/audio.svg`](https://invent.kde.org/frameworks/plasma-framework/-/blame/master/src/desktoptheme/breeze/icons/audio.svg)
+
+### Theming Application Icons in the System Tray
 
 Applications that use a function called `setIconByName` can have their icon in the system tray themed. Applications can have more than one icon (for example Konversation flashes between two different icons to highlight when your username is mentioned and Kpackagekit changes it's icon depending on the status of it's upgrade / installs). Theming these icons requires firstly that an application has been coded to use `setIconByName`, and secondly that you call your SVG object by the same name (use `Ctrl+Shift-O` in Inkscape). Then you can just put your .svg in `share/plasma/desktoptheme/[themename]/icons`.
 
@@ -598,3 +602,20 @@ The following is an attempt to list known icon names that may be themed by this 
   * filename: **wallet.svg**
     * open ID: **wallet-open**
     * closed ID: **wallet-closed**
+
+### Use Icons From Icon Theme
+
+Deleting / not including an `audio.svg` will not have `audio-volume-high` fall back to your icon theme. Since all Plasma Styles fallback to the default Breeze Plasma Style, it will use `/usr/share/plasma/desktoptheme/default/icons/audio.svg` if `audio.svg` is missing in your Plasma Style. To have you Plasma Style use icons from the currently selected icon theme, you will need to add a near-empty `audio.svg` "text file" with:
+
+```xml
+<svg></svg>
+```
+You will need to
+
+* In Dolphin File Manager: Right Click > Create New > Text File
+* Filename: `audio.svg`
+* Right Click `audio.svg` > Open With > Kate [Text Editor]
+* Type: `<svg></svg>`
+* Save
+* Copy and paste `audio.svg` for all svg files in the default Breeze Plasma Style.  
+  <https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/desktoptheme/breeze/icons>
