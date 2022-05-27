@@ -287,7 +287,7 @@ var keepAboveMaximized = [];
 Now we need to know whenever a window got maximized. There are two approaches to achieve that: either
 connect to a signal emitted on the workspace object or to a signal of the client. As we need to track
 all Clients it is easier to just use the signal `clientMaximizeSet` on the workspace. This signal is
-emitted whenever the maximizationf state of a Client changes and passes the client and two boolean
+emitted whenever the maximization state of a Client changes and passes the client and two boolean
 flags to the callback. The flags indicate whether the Client is maximized horizontally and/or
 vertically. If a client is maximized both horizontally and vertically it is considered as fully
 maximized. Let's try it:
