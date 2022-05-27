@@ -122,7 +122,7 @@ kpackagetool5 --type=KWin/Script --list --global # /usr/share/kwin/scripts/
 The default scripts bundled with the window manager can also be
 [found in the KWin repository](https://invent.kde.org/plasma/kwin/-/tree/master/src/scripts).
 
-[Downloaded KWin scripts](https://store.kde.org/browse/cat/210/) can be found your user's data install path under `kwin/scripts/`. This is where your new script will be installed to.
+[Downloaded KWin scripts](https://store.kde.org/browse/cat/210/) can be found in your user's data install path under `kwin/scripts/`. This is where your new script will be installed to.
 
 ```bash
 kpackagetool5 --type=KWin/Script --list # ~/.local/share/kwin/scripts/
@@ -159,7 +159,7 @@ Additionally, you may need to enable [Plasma systemd boot](https://invent.kde.or
 
 ### Workspace and Options
 
-KWin scripts can access two global properties `workspace` and `options`. The `workspace` object
+KWin scripts can access two global properties: `workspace` and `options`. The `workspace` object
 provides the interface to the core of the window manager, the `options` object provides read
 access to the current configuration options set on the window manager.
 
@@ -394,4 +394,4 @@ players). It's up to you.
 
 ## Publishing
 
-Once you have created something nice, consider sharing it with other Plasma users! Create a zip file of the package folder `myscript`, and upload it in the [KDE Store](https://store.kde.org) under the category Linux/Unix Desktops > Window Managers > KWin > KWin scripts. Users will then be able to find and install your script with Discover or via “Get New Scripts…” in the system settings.
+Once you have created something nice, consider sharing it with other Plasma users! Create a zip file of the package folder `myscript`, and upload it to the [KDE Store](https://store.kde.org) under the category Linux/Unix Desktops > Window Managers > KWin > KWin scripts. Users will then be able to find and install your script with Discover or via “Get New Scripts…” in System Settings.
