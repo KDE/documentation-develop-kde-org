@@ -44,3 +44,13 @@ If you want to run the Plasma phone shell, do:
 export $(dbus-launch)
 exec /usr/bin/plasmashell -p org.kde.plasma.phoneshell
 ```
+
+## Forcing an UI type per-application
+
+If you'd like to force an application to launch with its desktop user interface (if it offers one) rather than the mobile one, do:
+
+```bash
+QT_QUICK_CONTROLS_MOBILE=false $program_to_run
+```
+
+The inverse also works; If you wish to run an application on a desktop system with its mobile interface, simply set the above variable to true instead.
