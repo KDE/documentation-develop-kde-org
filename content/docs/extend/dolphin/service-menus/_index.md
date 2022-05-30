@@ -17,29 +17,45 @@ For example, if you have the KDE file archive utility Ark installed you will see
 
 Creating new servicemenus is very simple, requiring nothing more than an idea and a text editor. You don't have to be a programmer or a KDE wizard to make them. In this tutorial, we will be creating a set of actions that allows us to set an image as our desktop wallpaper just by right-clicking on it and selecting "Use As Wallpaper". By the end of this tutorial, you should be able to create your own servicemenus with ease.
 
-## Where the Servicemenus Locate
+## Where the Servicemenus are Located
 
-Servicemenus are defined using .desktop files, which are the same kind of files that are used to create entries in the Plasma launcher. These servicemenu files are found in
-the `kio/servicemnus` subfolder of the generic data locations. The dirs can be printed out with the following command, multiple dirs are separated by a `:`:
+Servicemenus are defined using .desktop files, which are the same kind of files that are used to create entries in the Plasma launcher. These servicemenu files are found in the `kio/servicemenus` directory in the generic data locations. The following command prints the path used to find this directory. Multiple directories in this path are separated by a `:`. To find the servicemenus at run time, the directories are searched in the order in which they appear in the path.
 
 ```bash
 qtpaths --locate-dirs GenericDataLocation kio/servicemenus
 ```
 
-In the case of default setups that means that servicemenu files can be found in the following places:
+In the case of default setups, the path for locating servicemenus has directories the following order:
 
 ```bash
 ~/.local/share/kio/servicemenus
 /usr/share/kio/servicemenus
 ```
 
-When a service menu is installed from Dolphin using Get-Hot-New-Stuff, the local file location is used, because it does not require admin privileges.
-However, you need to mark the desktop file as executable for it to be considered authorized, because the location is not a standard location that is authorized by default.
+When a service menu is installed from Dolphin using Get-Hot-New-Stuff, the local file location is used, because it does not require admin privileges. However, you need to mark the desktop file as executable for it to be considered authorized, because the location is not a standard location that is authorized by default.
 
 ```bash
 touch myservicemenu.desktop
 chmod +x myservicemenu.desktop
 ```
+
+<details><summary>Location of servicemenus in older versions of KDE (deprecated):</summary>
+
+In KDE Frameworks versions prior to 5.85, the servicemenu files are at the following default locations, which are deprecated. Each of these directories may also have a `ServiceMenus` subdirectory containing servicemenu files.
+
+```bash
+~/.local/share/kservices5
+/usr/share/kservices5
+```
+
+The following command prints the path showing the order of these locations as explained above:
+
+```bash
+kf5-config --path services
+```
+Note that servicemenus in these locations require an additional key, `ServiceTypes=KonqPopupMenu/Plugin`, as explained below.
+</details>
+
 
 ## The Start of Servicemenu
 
@@ -53,6 +69,15 @@ Actions=setAsWallpaper
 ```
 
 Every servicemenu file must have these four lines. Let's examine each of these lines one at a time. 
+
+<details><summary>Key required in older versions of KDE (deprecated):</summary>
+
+As explained above, in KDE Frameworks older than version 5.85, the servicemenu files are in directories `kservices5` and `kservices5/ServiceMenus` in the generic data locations. In this case, the following key is required in addition to `Type`, `MimeType` and `Actions`.
+
+```ini
+ServiceTypes=KonqPopupMenu/Plugin
+```
+</details>
 
 ```ini
 [Desktop Entry]
