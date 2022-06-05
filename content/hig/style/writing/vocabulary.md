@@ -3,7 +3,7 @@ title: Vocabulary
 weight: 8
 ---
 
-Consistenly using the same words to refer to the same concepts avoids
+Consistently using the same words to refer to the same concepts avoids
 confusion. See below word choice recommendations for common computing
 concepts.
 
