@@ -12,7 +12,7 @@ Settings in Plasma are provided by Configuration Modules (KCM). These can be loa
 such as `systemsettings5` on the desktop, `plasma-settings` on mobile or `kcmshell5` for standalone config windows.
 
 You can query the available KCMs using `kcmshell5 --list`. To load an individual module in a standalone window pass its
-name to kcmshell5, e.g. `kcmshell5 kcm_kaccounts`. To open it in plasma-settings use the `-m` parameter, e.g. `plasma-settings -m kcm_kaccounts`.
+name to the wrapper application, e.g. `systemsettings kcm_accounts`, `plasma-settings -m kcm_kaccounts`, or `kcmshell5 kcm_kaccounts`.
 
 ## Basic KCM
 
