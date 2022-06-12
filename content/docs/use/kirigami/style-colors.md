@@ -19,7 +19,7 @@ follow this palette by default, so usually no custom coloring should be needed
 at all for those controls.
 
 Primitive components such as `Rectangle` should always be colored with the 
-color palette provided by Kirigami via the [`Theme`](docs:kirigami2;Theme) attached property.
+color palette provided by Kirigami via the [`Theme`](docs:kirigami2;Kirigami::PlatformTheme) attached property.
 
 Hardcoded colors in QML, such as `#32b2fa` or `red` should usually be 
 avoided; if it is really necessary to have elements with custom colors, it should 
