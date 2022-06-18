@@ -420,7 +420,7 @@ Each theme contains following file structure. All files can be in either `.svg` 
     <!--*** When the panel is not 100% wide/tall the north, south etc. prefixes becomes *north-mini*, *south-mini* etc. . Please note that if KRunner <menuchoice>Positioning</menuchoice> is set to <menuchoice>Top edge of screen</menuchoice> (which is default), then Plasma treats it as not 100% wide north panel.-->
     * All prefixes fallback to a no prefix version when not available
     * if a prefix called `shadow` is available, it will be used as a drop shadow for the panel when compositing is available.
-  * **/plasmoidheading.svg**: The header or footer of a widget/notification popup. It has 2 frames with the following prefixeds:
+  * **/plasmoidheading.svg**: The header or footer of a widget/notification popup. It has 2 frames with the following prefixes:
     * `header`: most widgets have the heading at the top
     * `footer`: popups originating from a top panel usually
   * **/plot-background.svg**: a background for plotter (graph) widgets, such as the plots in ksysguard
