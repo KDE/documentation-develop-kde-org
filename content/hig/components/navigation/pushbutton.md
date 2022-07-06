@@ -1,4 +1,4 @@
----
+    ---
 title: Push Button
 weight: 7
 group: navigation
@@ -7,28 +7,44 @@ group: navigation
 Purpose
 -------
 
-A *push button* initiates an action when the user clicks it.
+A *Push Button* initiates an action when the user clicks it.
 
-![Button-HIG.png](/hig/Button-HIG.png)
-
-Buttons have the benefit of affordance, i.e. their visual properties
-(they look like they can be pushed) suggest how they are used.
+Push buttons are among the most easily understood user interface elements
+because they have the benefit of *affordance.* their raised visual appearance
+suggests how they are used. Use them liberally.
 
 Guidelines
 ----------
 
+### Behavior
+
+-   Push Buttons are left-click-only; don't initiate a different action when
+    the button is double-clicked or right-clicked--except to open a menu.
+
+
+### Appearance
+
+-   Always display an icon.
+-   Text labels are optional but recommended. If hidden, the button should
+    display a ToolTip on hover. Use
+    [title style capitalization](/hig/style/writing/capitalization) and begin
+    with a verb.
+-   If the button's action requires further information from the user before
+    it completes, add an ellipsis at the end of the button label.
+-   Except for split buttons, don't change Buttons' icon or text depending on
+    the context.
+-   Don't make buttons flat except on [toolbars](../toolbar).
+
+
 ### Is this the right control?
 
-Buttons are available in several flavors:
+Push Buttons come in several flavors. Choose the right one for the situation:
 
-#### Command Button
+#### Action Button
 
--   Use a command button to initiate an immediate action.
--   Don't use a command button for navigation to another page (prefer a
-    `link <commandlink>` in this case).
--   Don't use a command button embedded in a body of text.
--   Don't use command buttons for a group of actions. Consider using
-    radio buttons with one 'Apply' option or a menu button.
+-   Use an Action Button to initiate an immediate action when clicked.
+-   The text label should be localized using the "@action:button" translation
+    context. For example `i18nc("@action:button", "Add New User…")`
 
 #### Menu Button
 
@@ -36,59 +52,24 @@ Buttons are available in several flavors:
 
 ![MenuButton open](/hig/MenuButton-open.png)
 
--   Use a menu button when you need to execute one action out of a small
-    set of related functions.
--   Indicate the menu by a single downward-pointing triangle.
--   Clicking the button will drop down the menu only.
--   Don't use the delayed menu button pattern.
+-   Use a Menu Button to offer the user a set of related actions they can
+    choose.
+-   Indicate that the button opens a menu when clicked by showing a
+    downward-pointing triangle on the right side.
+-   Don't use the delayed menu button pattern; the menu should be shown when
+    clicking the button, without requiring a press-and-hold.
+-   The menu items' labels should be localized using the "@action:inmenu"
+    translation context. For example `i18nc("@action:inmenu", "Add New User…")`
 
 #### Split Button
 
 ![Split Button](/hig/Button_SplitButton.png)
 
--   Apply a split button when one of the commands is used by default.
--   Clicking the left part (or right in case of RTL alignment) of a
-    split button starts the default action; clicking the split area
-    opens the menu.
--   Change the default item to the last action when the user is likely
-    to repeat the command.
+-   Use a Split Button to allow the user to choose from among multiple actions
+    or tools, with the last-used one being remembered.
+-   Clicking the left part triggers the active action or tool; clicking the
+    split area opens the menu to suggest a different one.
+-   The menu items' labels should be localized using the "@action:inmenu"
+    translation context. For example `i18nc("@action:inmenu", "Add New User…")`
 
-#### Toggle Button
 
--   A toggle button is not a push button. Guidelines can be found
-    [here][../../editing/togglebutton).
-
-### Behavior
-
--   Buttons are not dynamic: their icon and label should not change
-    depending on the context (except special split buttons).
--   Don't initiate an action on right-click or double-click.
--   Provide feedback when user is not aware to results or when results
-    are not available instantaneous. Display a busy pointer or present a
-    progress bar to users (see
-    [progress indicator](../../assistance/progress)).
--   Denote the relationship between buttons with other controls by
-    placing them logically together.
--   Don't use the delayed (menu) button pattern.
-
-### Appearance
-
--   Indicate a command that needs additional information (including
-    confirmation) by adding an ellipsis at the end of the button label.
--   Buttons have an elevated appearance; don't make buttons flat
-    (except in [toolbars](../toolbar)).
--   Don't use icons for confirmation buttons like OK, Apply, or Cancel.
--   Passive actions like those in the "System Settings => Application
-    Appearance => Fonts" don't have icons (does not apply to toolbar
-    buttons that always have an icon).
--   If icons are applied (or not), this style should be used
-    consistently for a group of buttons.
--   For buttons with text labels, use a minimum button width of 96px and
-    the standard button height. Don't use narrow, short, or tall
-    buttons with text labels.
--   If the same button appears in more than one window, use the same
-    label and access key. Locate them in approximately the same place in
-    each window.
--   Use [title style capitalization](/hig/style/writing/capitalization)
-    for the label.
--   Use a verb or verb phrase for the title of a push button.
