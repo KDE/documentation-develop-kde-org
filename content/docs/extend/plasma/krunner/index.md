@@ -1,5 +1,5 @@
 ---
-title: KRunner
+title: KRunner C++ plugin
 ---
 
 ##  Abstract 
@@ -7,12 +7,13 @@ title: KRunner
 
 The Plasma workspace provides an application called KRunner which, among other things, allows one to type into a text area which causes various actions and information that match the text appear as the text is being typed.
 
-This functionality is provided via plugins loaded at runtime called "Runners". These plugins can be used by any application using the Plasma library. This tutorial explores how to create a runner plugin.
+This functionality is provided via plugins loaded at runtime called "Runners". These plugins can be used by any application using the KRunner library, like the normal Application Launcher or the Plasma-Mobile search applet. This tutorial explores how to create a runner plugin.
 
 ##  Basic Anatomy of a Runner 
 
 
-{{class|Plasma::AbstractRunner}} is the base class of all Runners. It provides the basic structure for Runner plugins to:
+[Plasma::AbstractRunner](docs:krunner;AbstractRunner)
+is the base class of all Runners. It provides the basic structure for Runner plugins to:
 
 * Perform one-time setup upon creation
 * Perform setup and teardown before and after matching starts
@@ -21,15 +22,13 @@ This functionality is provided via plugins loaded at runtime called "Runners". T
 * Take action on a given match registered by the runner
 * Show configuration options
 
-In addition to {{class|Plasma::AbstractRunner}} there are three other important classes that we will be using from the Plasma library: 
+In addition to [Plasma::AbstractRunner](docs:krunner;AbstractRunner) there are three other important classes that we will be using from the Plasma library: 
 
-* {{class|Plasma::RunnerContext}} which gives our plugin information about the current query
-* {{class|Plasma::QueryMatch}} which represents a single match for a given query
-* {{class|Plasma::RunnerSyntax}} which is used to advertise the query syntax understood by the plugin. 
+* [Plasma::RunnerContext](docs:krunner;RunnerContext) which gives our plugin information about the current query
+* [Plasma::QueryMatch](docs:krunner;QueryMatch) which represents a single match for a given query
+* [Plasma::RunnerSyntax](docs:krunner;RunnerSyntax) which is used to advertise the query syntax understood by the plugin. 
 
 Each of these classes will be covered in more detail as we encounter them in the Runner plugin implementation.
-
-{{note|The classes provided by the Plasma library are licensed under the LGPL and can therefore be linked to by code released under a variety of Free/Open Source licenses as well as proprietary licenses.}}
 
 ##  Creating a Runner Plugin Project 
 
