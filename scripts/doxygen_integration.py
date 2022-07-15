@@ -56,6 +56,11 @@ TAG_FILES = [
         'base_url': 'https://api.kde.org/frameworks/kconfig/html/'
     },
     {
+        'tags': 'https://api.kde.org/frameworks/krunner/html/KRunner.tags',
+        'base_url': 'https://api.kde.org/frameworks/krunner/html/',
+        'default_prefix': 'Plasma::'
+    },
+    {
         'tags': 'https://api.kde.org/frameworks/plasma-framework/html/Plasma.tags',
         'base_url': 'https://api.kde.org/frameworks/plasma-framework/html/'
     },
