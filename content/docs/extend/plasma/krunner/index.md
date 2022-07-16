@@ -33,9 +33,7 @@ Each of these classes will be covered in more detail as we encounter them in the
 ##  Creating a Runner Plugin Project 
 
 
-In this tutorial we will be creating a Runner plugin that finds files in the user's home directory that match the query and offers to open them. We begin by setting up the basic project files including a CMakeLists.txt file for building the plugin, a .desktop file to register the plugin, a class definition in a header file and a source code file containing the class implementation.
-
-{{note|The example can be found in its entirety in the [http://websvn.kde.org/trunk/KDE/kdeexamples/ KDE Examples module] in the {{path|plasma/c++/runner/}} directory.}}
+In this tutorial we will be creating a Runner plugin that finds files in the user's home directory that match the query and offers to open them. We begin by setting up the basic project files including a CMakeLists.txt file for building and installing the plugin, a class definition in a header file and a source code file containing the class implementation.
 
 ### The CMakeLists.txt File 
 
@@ -43,28 +41,27 @@ In this tutorial we will be creating a Runner plugin that finds files in the use
 CMake makes it very easy to set up the build system for our plugin:
 
 ```cmake
-# Project Needs a name, of course
+cmake_minimum_required(VERSION 3.16)
 project(runnerexample)
 
 set(KF5_MIN_VERSION "5.90")
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED)
 
-add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
-include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES})
+# Include the Extra-CMake-Modules project
+find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_MODULE_PATH})
 
-# We add our source code here
-set(example_SRCS homefilesrunner.cpp)
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+include(FeatureSummary)
 
-# Now make sure all files get to the right place
-plasma_add_plugin(plasma_runner_example_homefiles ${example_SRCS})
-target_link_libraries(plasma_runner_example_homefiles ${KDE4_PLASMA_LIBS}  ${KDE4_KIO_LIBS})
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Runner)
 
-# Install the library and .desktop file
-install(TARGETS plasma_runner_example_homefiles DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES plasma-runner-example-homefiles.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+# This takes care of building and installing the plugin
+kcoreaddoons_add_plugin(plasma_runner_example_homefiles SOURCES homefilesrunner.cpp INSTALL_NAMESPACE "kf5/krunner")
+# We need to link the KRunner and other used libraryies  to it
+target_link_libraries(plasma_runner_example_homefiles KF5::Runner)
 ```
-
-The first 10 lines are pure boilerplate common to any stand-alone KDE project that uses CMake. We add our source code to the project on line 13, define a plugin at 16 and what libraries it needs to link to on line 17. Runner plugins always need to link against the Plasma libraries, but may also require other libraries such as the KIO libraries in this case (for usage of KRun to open matching files). Lines 20 and 21 install the library and .desktop file to the appropriate locations.
 
 ### The .desktop Services File 
 
