@@ -3,6 +3,9 @@ title: Plasma Comic
 weight: 9
 description: >
   Learn how to create a Comic provider plugin
+
+# Rewrite of KDE4 version for Plasma 5
+SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
 ---
 
 This tutorial will describe how to create your own plugin for the comic plasmoid. The comic plasmoid is part of kdeplasma-addons.
@@ -156,7 +159,7 @@ For this you can use `comic.combine(image, position)`. `image` needs to be an im
 
 `image` will be combined with the last downloaded image -- `comic.pageRequest(url, comic.Image)`. The position defines, where `image` will be placed. That way you can combine multiple images.
 
-The following code is taken from the [Deo Ignito](http://www.kde-files.org/content/show.php/Deo+Ignito+(fr)?content=92428) comic plugin. I removed parts that are not nescessary for explaining this function, added some comments and pseudo code.
+The following code is taken from the [Deo Ignito](http://www.kde-files.org/content/show.php/Deo+Ignito+(fr)?content=92428) comic plugin. I removed parts that are not necessary for explaining this function, added some comments and pseudo code.
 
 ```js
 const firstImage = 0;
@@ -221,7 +224,7 @@ comic.website += comic.identifier.toString("dd-MM-yyyy");
 
 #### comic.requestRedirectedUrl(url, id, metadata)
 
-Sometimes you only have a relative url, e.g. next would be current url + "/?relid=X&go=+1". This function helps you to get the real url this relative url points to. This is useful for cases where you don't know the next or previous identifier, while this information is embded in the "real" url.
+Sometimes you only have a relative url, e.g. next would be current url + "/?relid=X&go=+1". This function helps you to get the real url this relative url points to. This is useful for cases where you don't know the next or previous identifier, while this information is embedded in the "real" url.
 
 Ask the engine to retrieve the real (redirected) url for `url`. `id` specifies of what type the download is. There are some predefined ids:
 * comic.PreviousUrl

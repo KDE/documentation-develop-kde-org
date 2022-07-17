@@ -1,6 +1,8 @@
 ---
-title: Testing and debuggin
+title: Testing and debugging
 weight: 3
+# Rewrite of KDE4 version for Plasma 5
+SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
 ---
 
 
@@ -31,7 +33,7 @@ rm -r ~/.local/share/plasma_engine_comic/
 ## Debugging the plugin
 
 Often it happens that your plugin won't work the first try and the following
-debuggin can be painful as there is not that much output unless you use some
+debugging can be painful as there is not that much output unless you use some
 tricks.
 
 Add print-statements in your main.es file to see what the values of different
