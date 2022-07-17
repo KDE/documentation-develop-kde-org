@@ -15,9 +15,10 @@ public:
     void match(Plasma::RunnerContext &context);
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match);
     void reloadConfiguration();
+protected:
+    void init() override;
 
 protected Q_SLOTS:
-    void init();
     void prepareForMatchSession();
     void matchSessionFinished();
 

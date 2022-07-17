@@ -103,17 +103,20 @@ Next we set the expected priority of the runner. This property affects the sched
 
 ### init() 
 
-
-The init() method is a protected slot. That it is a slot is critical due to an API oddity in AbstractRunner that will be addressed in a future release of the Plasma library (probably KDE5, since it requires a binary incompatible change). The init() method should contain any set up that needs to happen prior to matching queries that should be done exactly once during the lifespan of the plugin.
-
+The init() method should contain any set up that needs to happen prior to matching queries that should be done exactly once during the lifespan of the plugin.
 In the Home Files Runner the init() method is very simple:
 
 ```cpp
 void HomeFilesRunner::init()
 {
     reloadConfiguration();
-    connect(this, SIGNAL(prepare()), this, SLOT(prepareForMatchSession()));
-    connect(this, SIGNAL(teardown()), this, SLOT(matchSessionFinished()));
+    connect(this, &Plasma::AbstractRunner::prepare, this, [this](){
+        // Initialize data for the match session. This gets called from the main thread
+    });
+    connect(this, &Plasma::AbstractRunner::teardown), this, [this](){
+        // Cleanup data from the match session. This gets called from the main thread
+        m_iconCache.clear();
+    });
 }
 ```
 
@@ -121,20 +124,9 @@ It loads the configuration for the runner (see below) and connects up two critic
 
 init() should <b>not</b> load large amounts of data if unneeded or connect to external sources of information that may wake up the process. A common mistake is to connect to signals in the D-Bus interface of an external application. This results in the application using the Runner plugin to wake up whenever the application it is connected to also wakes up. A better way to do this is to use the prepare() signal.
 
-### prepare() and teardown() 
+The final place that initialization may occur is in the lambda connected to the prepare() signal. This signal is emitted whenever matches for queries are going to commence. Zero, one or more query match requests may then be made after which the teardown() signal will be emitted. These are perfect places to connect to external signals or update data sets as these signals are emitted precisely when the Runner is about to be (or cease being) active.
 
-
-The final place that initialization may occur is in a slot connected to the prepare() signal. This signal is emitted whenever matches for queries are going to commence. Zero, one or more query match requests may then be made after which the teardown() signal will be emitted. These are perfect places to connect to external signals or update data sets as these signals are emitted precisely when the Runner is about to be (or cease being) active.
-
-In our example, we have connected to both signals for example purposes though only the matchSessionFinished() slot does anything actually useful in this case:
-
-```cpp
-void HomeFilesRunner::matchSessionFinished()
-{
-    m_iconCache.clear();
-}
-```
-
+In our example, we have connected to both signals for example purposes though only the matchSessionFinished() slot does anything actually useful in this case.
 By clearing the icons that we have cached, the Runner is not holding on to memory allocations unnecessarily between queries. Since there may be numerous Runner plugins instantiated, hours or even days between queries and the applications that use Runner plugins such as KRunner are often long-lived this is an important kind of optimization.
 
 ##  The Main Event: Matching Queries 
