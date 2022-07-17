@@ -40,28 +40,7 @@ In this tutorial we will be creating a Runner plugin that finds files in the use
 
 CMake makes it very easy to set up the build system for our plugin:
 
-```cmake
-cmake_minimum_required(VERSION 3.16)
-project(runnerexample)
-
-set(KF5_MIN_VERSION "5.90")
-
-# Include the Extra-CMake-Modules project
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_MODULE_PATH})
-
-include(KDEInstallDirs)
-include(KDECMakeSettings)
-include(KDECompilerSettings NO_POLICY_SCOPE)
-include(FeatureSummary)
-
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Runner)
-
-# This takes care of building and installing the plugin
-kcoreaddoons_add_plugin(plasma_runner_example_homefiles SOURCES homefilesrunner.cpp INSTALL_NAMESPACE "kf5/krunner")
-# We need to link the KRunner and other used libraryies  to it
-target_link_libraries(plasma_runner_example_homefiles KF5::Runner)
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/CMakeLists.txt" highlight="cmake" >}}
 
 ### The .json Metadata File
 
@@ -70,24 +49,7 @@ When KRunner queries the available plugins, it reads the embedded metadata. in o
 
 The contents of this file, as seen below, contain the name, description and technical details about the plugin.
 
-```json
-{
-    "KPlugin": {
-        "Authors": [
-            {
-                "Email": "aseigo@kde.org",
-                "Name": "Aaron Seigo"
-            }
-        ],
-        "Description": "Part of a tutorial demonstrating how to create Runner plugins",
-        "EnabledByDefault": true,
-        "License": "GPL",
-        "Name": "Home Files",
-        "Version": "0.1",
-        "Website": "http://plasma.kde.org/"
-    }
-}
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.json" highlight="json" >}}
 
 In this example the plugin id gets derived from the plugin file name, in this case "plasma_runner_example_homefiles"
 The entries such as `Name`, Description, `License and `Authors` are information and are shown in the user interface but have no other technical importance. Try to avoid using jargon in the Name and Description entries, however, to make it easy for people to understand what your plugin does.
@@ -97,36 +59,7 @@ The entries such as `Name`, Description, `License and `Authors` are information 
 
 Our class definition for this project looks as follows:
 
-```cpp
-#pragma once
-
-#include <KRunner/AbstractRunner>
-
-#include <QHash>
-#include <QIcon>
-
-class HomeFilesRunner : public Plasma::AbstractRunner
-{
-    Q_OBJECT
-
-public:
-    HomeFilesRunner(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
-
-    void match(Plasma::RunnerContext &context);
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match);
-    void reloadConfiguration();
-
-protected Q_SLOTS:
-    void init();
-    void prepareForMatchSession();
-    void matchSessionFinished();
-
-private:
-    QHash<QString, QIcon> m_iconCache;
-    QString m_path;
-    QString m_triggerWord;
-};
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.h" highlight="cpp" >}}
 
 Even though it is a full featured Runner plugin it is just a handful of methods, each of which will be examined.
 
