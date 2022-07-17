@@ -68,7 +68,7 @@ Every comic plugin needs a metadata.json file like the following:
         "Website": "http://plasma.kde.org/"
     },
     "X-KDE-PlasmaComicProvider-SuffixType": "Date"
-
+}
 ```
 
 In the "Name" and "Description" section add the name of the comic you want to add. It will show up in the comic list (that is not the "Get New Comics..."-dialog) under that name. You could also translate the name of the comic to different languages e.g.
