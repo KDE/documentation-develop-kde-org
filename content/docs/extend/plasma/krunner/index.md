@@ -358,14 +358,7 @@ This method is always called from the GUI thread, so threading is not an issue.
 ## Single Runner Mode
 
 
-For many Runners, it can make sense to support being the only Runner being used. Usually an application will use multiple runners at once via Plasma::RunnerManager, but it can also use just one runner or put Plasma::RunnerManager into a special "single runner" mode.
+For some Runners, it can make sense to support being the only Runner being used. Usually an application will use multiple runners at once via Plasma::RunnerManager, but it can also use just one runner or put Plasma::RunnerManager into a special "single runner" mode.
+This feature is currently only exposed using the D-Bus interface. A common usecase is to a keyboard shortcut to a runner. See https://github.com/alex1701c/EmojiRunner/blob/master/EmojiRunnerCommands.khotkeys#L26 for an example.
 
-For Runners to support this mode effectively, two simple things should be done. First, add a <tt>X-Plasma-SingleRunnerQueryMode=true</tt> entry to the .desktop file for the plugin. Second, create a Plasma::QuerySyntax but instead of passing it in using addSyntax, pass it into setDefaultSyntax:
-
-```cpp
-setDefaultSyntax(Plasma::RunnerSyntax(i18n("Sessions"), i18n("Lists all sessions")));
-```
-
-This will cause that syntax to be used as the default query, instead of an empty string, by default. Runners without a default syntax can still be used in single runner mode, but this may make writing the Runner's match method a bit simpler.
-
-A Runner can, if desired, detect when it is being used as the sole runner by calling <tt>Plasma::RunnerContext::singleRunnerQueryMode()</tt> on the context object passed into the match method. If the return value is true, then the runner may decide to alter its behavior (such as showing a default list of matches in response to an empty query string).
+A Runner can, if desired, detect when it is being used as the sole runner by calling <tt>Plasma::RunnerContext::singleRunnerQueryMode()</tt> on the context object passed into the match method. If the return value is true, then the runner may decide to alter its behavior (like not requiring a trigger word).
