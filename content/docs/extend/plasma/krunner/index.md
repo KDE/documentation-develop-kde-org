@@ -90,7 +90,7 @@ The <tt>.moc</tt> file include looks familiar enough from other Qt code, but the
 The constructor look like this:
 
 ```cpp
-HomeFilesRunner::HomeFilesRunner(QObject *parent const KPluginMetaData &data,, const QVariantList &args)
+HomeFilesRunner::HomeFilesRunner(QObject *parent const KPluginMetaData &data, const QVariantList &args)
     : AbstractRunner(parent, data, args)
 {
     setPriority(LowPriority);
@@ -104,7 +104,7 @@ Next we set the expected priority of the runner. This property affects the sched
 ### init() 
 
 The init() method should contain any set up that needs to happen prior to matching queries that should be done exactly once during the lifespan of the plugin.
-In the Home Files Runner the init() method is very simple:
+In the HomeFilesRunner the `init()` method is very simple:
 
 ```cpp
 void HomeFilesRunner::init()
@@ -113,21 +113,20 @@ void HomeFilesRunner::init()
     connect(this, &Plasma::AbstractRunner::prepare, this, [this](){
         // Initialize data for the match session. This gets called from the main thread
     });
-    connect(this, &Plasma::AbstractRunner::teardown), this, [this](){
+    connect(this, &Plasma::AbstractRunner::teardown, this, [this](){
         // Cleanup data from the match session. This gets called from the main thread
         m_iconCache.clear();
     });
 }
 ```
 
-It loads the configuration for the runner (see below) and connects up two critical signals: prepare() and teardown().
+It loads the configuration for the runner (see below) and connects up two critical signals: `prepare` and `teardown`.
 
-init() should <b>not</b> load large amounts of data if unneeded or connect to external sources of information that may wake up the process. A common mistake is to connect to signals in the D-Bus interface of an external application. This results in the application using the Runner plugin to wake up whenever the application it is connected to also wakes up. A better way to do this is to use the prepare() signal.
+`init()` should try to avoid load large amounts of data if unneeded, because it blocks the main thread.
+The final place that initialization may occur is in the lambda connected to the `prepare()` signal. This signal is emitted whenever matches for queries are going to commence. Zero, one or more query match requests may then be made after which the `teardown()` signal will be emitted. In the connected slots, data that is used during the match session can be initialized. These methods are also called in the main thread.
 
-The final place that initialization may occur is in the lambda connected to the prepare() signal. This signal is emitted whenever matches for queries are going to commence. Zero, one or more query match requests may then be made after which the teardown() signal will be emitted. These are perfect places to connect to external signals or update data sets as these signals are emitted precisely when the Runner is about to be (or cease being) active.
-
-In our example, we have connected to both signals for example purposes though only the matchSessionFinished() slot does anything actually useful in this case.
-By clearing the icons that we have cached, the Runner is not holding on to memory allocations unnecessarily between queries. Since there may be numerous Runner plugins instantiated, hours or even days between queries and the applications that use Runner plugins such as KRunner are often long-lived this is an important kind of optimization.
+In our example, we have connected to both signals for example purposes though only the `teardown` slot does anything actually useful in this case.
+By clearing the icons that we have cached, the Runner is not holding on to memory allocations unnecessarily between queries and also avoid having outdated data in the cache.
 
 ##  The Main Event: Matching Queries 
 
