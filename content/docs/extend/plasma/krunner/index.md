@@ -133,11 +133,11 @@ By clearing the icons that we have cached, the Runner is not holding on to memor
 
 The primary purpose of a Runner plugin is to return potential matches for a given query string. These matches are then presented in some fashion to the user who may select one or more of the matches.
 
-In the KRunner application, when its main window is shown a query session is started (resulting in a prepare() signal) and whenever a letter is typed a query is started. This gives the impression of "as you type" searching to the user. Threads ensure the user interface remains fluid and old query matches can run to their completion even though ignored.
+For each letter typed, the plugins `match` method gets called in a new thread. This ensures the user interface remains fluid. Old `match` method calls can run to their completion even though ignored.
 
-Whenever a Runner is asked to perform a match, the match(Plasma::RunnerContext &context) method is called. This method <b>must</b> be thread safe as it can be called simultaneously in different threads. Ensure that all data used is read-only (and thread safe when reading), local to the match method or protected by a mutex.
+Whenever a Runner is asked to perform a match, the `match(Plasma::RunnerContext &context)` method is called. This method <b>must</b> be thread safe as it can be called simultaneously in different threads. Ensure that all data used is read-only (and thread safe when reading), local to the match method or protected by a mutex.
 
-The {{class|Plasma::RunnerContext}} passed into match offers all the information we'll need about the query being made. Besides the query itself, we can check what (if any) type the query was determined to be during initial analysis and the mimetype (if any) of a file that the query may be referencing. The {{class|Plasma::RunnerContext}} will also take care of accepting matches our Runner generates and collating them with the matches produced by other Runners that may also be in use.
+The [Plasma::RunnerContext](docs:krunner;RunnerContext) passed into match offers all the information we'll need about the query being made. The [Plasma::RunnerContext](docs:krunner;RunnerContext) will also take care of accepting matches our Runner generates and collating them with the matches produced by other Runners that may also be in use.
 
 Let's examine the match method in our example Runner, line by line:
 
@@ -172,7 +172,7 @@ A third technique is to modify the query (or even accept it) based on a minimal 
     QDir dir(m_path);
 ```
 
-Next, a {{class|QDir}} object is created. According to the Qt documentation, QDir is reentrant but not thread safe. Because of this it is safe to use a QDir object in a thread, but not to share one between different threads. So we are forced to create a local object to use in the match method. If QDir was thread safe, we could create one in the slot connected to the prepare() signal, for instance, and potentially gain some additional efficiencies.
+Next, a `QDir` object is created. According to the Qt documentation, QDir is reentrant but not thread safe. Because of this it is safe to use a QDir object in a thread, but not to share one between different threads. So we are forced to create a local object to use in the match method. If QDir was thread safe, we could create one in the slot connected to the `prepare` signal, for instance, and potentially gain some additional efficiencies.
 
 ```cpp
     QList<KRunner::QueryMatch> matches;
@@ -200,17 +200,17 @@ Now to the heart of the matter! We ask the QDir object for a list of files in ou
 
 Since the query may change while the Runner is processing in another thread, the user may not longer care about the results the Runner in this thread is currently generating. In this case, the context object we received will be marked as invalid. By checking this, particularly before doing expensive processing or spinning in a potentially large loop, the Runner can avoid using more CPU and thread pool time than necessary. This makes the user interface feel more snappy.
 
-Next, we create a {{class|Plasma::QueryMatch}} object and add it to our list of matches:
+Next, we create a [Plasma::QueryMatch](docs:krunner;QueryMatch) object and add it to our list of matches:
 
 ```cpp
-        KRunner::QueryMatch match(this);
+        Plasma::QueryMatch match(this);
         match.setText(i18n("Open %1", path));
         match.setData(path);
         match.setId(path);
         if (m_iconCache.contains(path)) {
             match.setIcon(m_iconCache.value(path));
         } else {
-            KIcon icon(KMimeType::iconNameForUrl(path));
+            QIcon icon(KMimeType::iconNameForUrl(path));
             m_iconCache.insert(path, icon);
             match.setIcon(icon);
         }
@@ -226,35 +226,36 @@ Next, we create a {{class|Plasma::QueryMatch}} object and add it to our list of 
     }
 ```
 
-{{class|Plasma::QueryMatch}} objects are small data containers, little more than glorified structs really. As such, they are generally created on the stack, thread safe and can be copied and assigned without worry.
+[Plasma::QueryMatch](docs:krunner;QueryMatch) objects are small data containers, little more than glorified structs really. As such, they are generally created on the stack, thread safe and can be copied and assigned without worry.
 
 We set several of the properties on the match, including the text and icon that will be shown in the user interface. The id that is set is specific to our Runner and can be used for later saving, ranking and even re-creation of the match. The data associated with the match is also specific to the runner; any QVariant may be associated with the match, making later execution of the match easier. 
 
 Finally, a relevance between 0.0 and 1.0 is assigned according to how "close" a match is to the query according to the Runner. In the case of the Home Files runner, if the query matches a file exactly the type of the match is set to "ExactMatch". Other possible match types of interest to Runner plugins include PossibleMatch (the default) and InformationalMatch. InformationMatch is an interesting variation: it is a match which offers information but no further action to be taken; an example might be the answer to a mathematical equation. Not only are InformationalMatch matches shown with higher ranking than PossibleMatch matches, but when selected the data value is copied to the clipboard and put into the query text edit.
 
-Also note how the icons are cached in a QHash so that the relatively expensive call to KMimeType for the icon need only be made once per matching file. This can really add up if the query grows in length (e.g. "p", "pl", "pla", "plas", etc) but continues to match the same file repeatedly. Since the QHash is cleared when the teardown() signal is called, the added memory overhead does not become a concern.
+Also note how the icons are cached in a `QHash` so that the relatively expensive call to `KMimeType` for the icon need only be made once per matching file. This can really add up if the query grows in length (e.g. "p", "pl", "pla", "plas", etc) but continues to match the same file repeatedly. Since the `QHash` is cleared when the `teardown` signal is called, the added memory overhead does not become a concern.
 
-Finally, once the foreach loop is completed, we add any matches created to the context that was passed in:
+Finally, once the for loop is completed, we add any matches created to the context that was passed in:
 
 ```cpp
-    context.addMatches(context.query(), matches);
+    context.addMatches(matches);
 }
 ```
 
-That's it! The runner does not need to worry if the matches are still valid for the current query and can create any number of matches as it goes. It can even offer them up in batches by either calling context.addMatch(match) for each match created or calling context.addMatches every so often. Generally Runners match quickly and so batch up their finds and submit them all at once.
+That's it! The runner does not need to worry if the matches are still valid for the current query and can create any number of matches as it goes. It can even offer them up in batches by either calling `context.addMatch` for each match created or calling `context.addMatches` every so often. Generally Runners match quickly and so batch up their finds and submit them all at once.
 
 ##  "Running" a Match 
 
 
-If a match is selected by the user and it is not an InformationalMatch, the Runner is once again called into action and the run method is invoked. This method does not need to be thread safe, so we can code with a bit more ease here. Our example Runner has this for its implementation:
+If a match is selected by the user and it is not an `Plasma::QueryMatch::InformationalMatch`, the Runner is once again called into action and the run method is invoked. This method does not need to be thread safe, so we can code with a bit more ease here. Our example Runner has this for its implementation:
 
 ```cpp
-void HomeFilesRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void HomeFilesRunner::run(const Plasma::RunnerContext &/*context*/, const Plasma::QueryMatch &match)
 {
-    Q_UNUSED(context)
-    // KRun autodeletes itself, so we can just create it and forget it!
-    auto opener = new KRun(match.data().toString(), 0);
-    opener->setRunExecutables(false);
+    // KIO::OpenUrlJob autodeletes itself, so we can just create it and forget it!
+    auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(match.data().toString()));
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+    job->setRunExecutables(false);
+    job->start();
 }
 ```
 
