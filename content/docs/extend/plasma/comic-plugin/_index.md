@@ -118,7 +118,7 @@ Ask the engine to download `url` for you. `id` specifies of what type the downlo
 * comic.Image
 Both `comic.Page` and `comic.User` (and any integer that is not `comic.Image`) are intended to be used for downloading web-pages (so only text), while `comic.Image` is used for the actual comic image. In
 
-You can also specify `metadata` like the referrer. See [http://websvn.kde.org:80/trunk/KDE/kdelibs/kio/DESIGN.metadata?view=markup DESIGN.metadata] for what types are in general supported.
+You can also specify `metadata` like the referrer. See [the KIO docs](https://invent.kde.org/frameworks/kio/-/blob/master/docs/metadata.txt) for what types are in general supported.
 
 ```js
 const infos = {
