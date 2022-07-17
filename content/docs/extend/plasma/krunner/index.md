@@ -328,33 +328,32 @@ One special string in both the query example and the explanatory text is ":q:". 
 
 If a Runner understands multiple query formulations that result in the same matches being generated (or "query synonyms"), such synonymous queries can be added to the syntax object using Plasma::RunnerSyntax::addExampleQuery(const QString &exampleQuery).
 
-### Runner Configuration User Interface 
+### Runner Configuration
 
 
-Providing a configuration interface for a Runner is accomplished by create a KCModule plugin and putting X-KDE-ParentComponents=pluginName in its associated .desktop file. The pluginName must be the same as the X-KDE-PluginInfo-Name entry in the Runner's configuration file.
+Providing a configuration interface for a Runner is accomplished by create a KCModule plugin.
+The path to the plugin should be registered in the json metadata:
 
-{{improve|An example of how to write a KCModule plugin is in order, but that should probably be a tutorial of its own.}}
-
-### Match Result Options 
-
-
-If setHasRunOptions(true) has been called, matches from this Runner will be marked as configurable. When the user requests to configure a match, the `createRunOptions(QWidget *)` method in the Runner will be called. This method should create a configuration interface suited to its needs with the QWidget passed in as the parent.
-
-The Home Files Runner has this as its implementation:
-
-```cpp
-void HomeFilesRunner::createRunOptions(QWidget *widget)
+```json
 {
-    QVBoxLayout *layout = new QVBoxLayout(widget);
-    QCheckBox *cb = new QCheckBox(widget);
-    cb->setText(i18n("This is just for show"));
-    layout->addWidget(cb);
+    "KPlugin": {
+    },
+    "X-KDE-ConfigModule": "kf5/krunner/kcms/kcm_homefilesrunner"
 }
 ```
 
-Very straight forward, if not very useful. In typical usage, the widgets are connected to slots in the Runner using the traditional Qt signal/slots mechanism.
+The installation of the plugin goes as follows:
 
-This method is always called from the GUI thread, so threading is not an issue.
+```cmake
+kcoreaddons_add_plugin(kcm_homefilesrunner SOURCES kcm_homefilesrunner.cpp INSTALL_NAMESPACE kf5/krunner/kcms)
+```
+
+The config module does not need embedded json metadata can be exported using:   
+```cpp
+K_PLUGIN_CLASS(MYconfigModule)
+```
+
+This KCM can be launched from the KRunner configuration page or the help-runner. When the settings are saved, `reloadConfiguration` will be called.
 
 ## Single Runner Mode
 
