@@ -86,6 +86,7 @@ The contents of this file, as seen below, contain the name, description and tech
         "Version": "0.1",
         "Website": "http://plasma.kde.org/"
     }
+}
 ```
 
 In this example the plugin id gets derived from the plugin file name, in this case "plasma_runner_example_homefiles"
@@ -220,7 +221,7 @@ Let's examine the match method in our example Runner, line by line:
 void HomeFilesRunner::match(Plasma::RunnerContext &context)
 {
     QString query = context.query();
-    if (query == QCharLatin1('.') || query == QStringLiteral("..")) {
+    if (query == QLatin1Char('.') || query == QLatin1String("..")) {
         return;
     }
 
