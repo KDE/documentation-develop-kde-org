@@ -63,39 +63,33 @@ kcoreaddoons_add_plugin(plasma_runner_example_homefiles SOURCES homefilesrunner.
 target_link_libraries(plasma_runner_example_homefiles KF5::Runner)
 ```
 
-### The .desktop Services File 
+### The .json Metadata File
 
 
-To register our plugin with the system so that applications such as KRunner are aware of it, we need to create and install a .desktop file that describes the plugin.
-
-By convention, all Runner plugin .desktop file names start with "plasma-runner-" followed by a unique name part (in this case "example-homefiles") and suffixed with ".desktop".
+When KRunner queries the available plugins, it reads the embedded metadata. in order to provide this, we have to embed a json mteadata file. In this case we call it `homefilesrunner.json`. This name is referenced in the `K_PLUGIN_CLASS_WITH_JSON` macro futher below.
 
 The contents of this file, as seen below, contain the name, description and technical details about the plugin.
 
-```ini
-[Desktop Entry]
-Name=Home Files
-Comment=Part of a tutorial demonstrating how to create Runner plugins
-Type=Service
-X-KDE-ServiceTypes=Plasma/Runner
-
-X-KDE-Library=plasma_runner_example_homefiles
-X-KDE-PluginInfo-Author=Aaron Seigo
-X-KDE-PluginInfo-Email=aseigo@kde.org
-X-KDE-PluginInfo-Name=example-homefiles
-X-KDE-PluginInfo-Version=0.1
-X-KDE-PluginInfo-Website=http://plasma.kde.org/
-X-KDE-PluginInfo-Category=Examples
-X-KDE-PluginInfo-Depends=
-X-KDE-PluginInfo-License=GPL
-X-KDE-PluginInfo-EnabledByDefault=true
+```json
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "aseigo@kde.org",
+                "Name": "Aaron Seigo"
+            }
+        ],
+        "Description": "Part of a tutorial demonstrating how to create Runner plugins",
+        "EnabledByDefault": true,
+        "License": "GPL",
+        "Name": "Home Files",
+        "Version": "0.1",
+        "Website": "http://plasma.kde.org/"
+    }
 ```
 
-There are four entries in the .desktop file in particular that are critical to the proper functioning of the plugin: Type, X-KDE-ServiceTypes, X-KDE-Library and X-KDE-PluginInfo-Name.
-
-The Type entry tells the system that this is a plugin (or "Service") and the ServiceTypes entry defines this plugin as being a Runner. These two key-value pairs are the same in all runners. The X-KDE-PluginInfo-Name entry is used internally to map configuration data to this runner; its value must be unique among all other installed runners on the system. The X-KDE-Library entry must match the name of the library defined in the CMakeLists.txt file.
-
-The other entries such as Name, Description, licensing and authorship are information and may be shown in the user interface but have no other technical importance. Try to avoid using jargon in the Name and Description entries, however, to make it easy for people to understand what your plugin does.
+In this example the plugin id gets derived from the plugin file name, in this case "plasma_runner_example_homefiles"
+The entries such as `Name`, Description, `License and `Authors` are information and are shown in the user interface but have no other technical importance. Try to avoid using jargon in the Name and Description entries, however, to make it easy for people to understand what your plugin does.
 
 ### The Class Definition (Header file) 
 
