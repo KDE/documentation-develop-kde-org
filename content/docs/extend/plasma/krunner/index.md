@@ -160,6 +160,7 @@ void HomeFilesRunner::match(Plasma::RunnerContext &context)
     if (query.length() > 2) {
         query.prepend('*').append('*');
     }
+}
 ```
 
 So far it is quite straight orward, though we can already see a few common techniques. Before doing any more complex processing, if the query matches certain criteria, the match method returns quickly. This frees up that thread in the pool for use by another Runner or for another query.
@@ -175,7 +176,7 @@ A third technique is to modify the query (or even accept it) based on a minimal 
 Next, a `QDir` object is created. According to the Qt documentation, QDir is reentrant but not thread safe. Because of this it is safe to use a QDir object in a thread, but not to share one between different threads. So we are forced to create a local object to use in the match method. If QDir was thread safe, we could create one in the slot connected to the `prepare` signal, for instance, and potentially gain some additional efficiencies.
 
 ```cpp
-    QList<KRunner::QueryMatch> matches;
+    QList<Plasma::QueryMatch> matches;
 ```
 
 Next, a list is defined to hold the matches the Runner creates. This will allow the matches to be queued up and then added all at once at the end. This is slightly more efficient than the alternative of adding matches one at a time as they are created.

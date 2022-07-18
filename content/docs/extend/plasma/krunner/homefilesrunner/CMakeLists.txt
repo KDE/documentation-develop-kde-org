@@ -12,9 +12,19 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Runner KIO)
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n Config Runner KIO Notifications)
 
 # This takes care of building and installing the plugin
-kcoreaddoons_add_plugin(plasma_runner_example_homefiles SOURCES homefilesrunner.cpp INSTALL_NAMESPACE "kf5/krunner")
+kcoreaddons_add_plugin(plasma_runner_example_homefiles SOURCES homefilesrunner.cpp INSTALL_NAMESPACE "kf5/krunner")
 # We need to link the KRunner and other used libraryies  to it
-target_link_libraries(plasma_runner_example_homefiles KF5::Runner KF5::KIOWidgets)
+target_link_libraries(plasma_runner_example_homefiles
+    KF5::I18n
+    KF5::ConfigCore
+    KF5::Runner
+    KF5::KIOWidgets
+    KF5::Notifications
+)
+
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS ConfigWidgets)
+kcoreaddons_add_plugin(kcm_homefilesrunner SOURCES kcm_homefilesrunner.cpp INSTALL_NAMESPACE kf5/krunner/kcms)
+target_link_libraries(kcm_homefilesrunner KF5::ConfigCore KF5::ConfigWidgets)

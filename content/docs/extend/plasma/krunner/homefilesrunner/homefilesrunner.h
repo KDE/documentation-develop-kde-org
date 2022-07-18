@@ -12,15 +12,12 @@ class HomeFilesRunner : public Plasma::AbstractRunner
 public:
     HomeFilesRunner(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
 
-    void match(Plasma::RunnerContext &context);
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match);
-    void reloadConfiguration();
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+    void reloadConfiguration() override;
+
 protected:
     void init() override;
-
-protected Q_SLOTS:
-    void prepareForMatchSession();
-    void matchSessionFinished();
 
 private:
     QHash<QString, QIcon> m_iconCache;
