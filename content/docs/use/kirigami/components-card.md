@@ -199,7 +199,7 @@ Kirigami.CardsListView {
 
 {{< section-right >}}
 
-![Screenshot of a CardsListView](cardslistview.png)
+![Screenshot of a CardsListView](/docs/use/kirigami/components-card/cardslistview.png)
 
 {{< /section-right >}}
 
