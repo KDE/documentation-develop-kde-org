@@ -49,7 +49,24 @@ When KRunner queries the available plugins, it reads the embedded metadata. in o
 
 The contents of this file, as seen below, contain the name, description and technical details about the plugin.
 
-{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.json" highlight="json" >}}
+```json
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "aseigo@kde.org",
+                "Name": "Aaron Seigo"
+            }
+        ],
+        "Description": "Part of a tutorial demonstrating how to create Runner plugins",
+        "EnabledByDefault": true,
+        "License": "GPL",
+        "Name": "Home Files",
+        "Version": "0.1",
+        "Website": "http://plasma.kde.org/"
+    }
+}
+```
 
 In this example the plugin id gets derived from the plugin file name, in this case "plasma_runner_example_homefiles"
 The entries such as `Name`, Description, `License and `Authors` are information and are shown in the user interface but have no other technical importance. Try to avoid using jargon in the Name and Description entries, however, to make it easy for people to understand what your plugin does.

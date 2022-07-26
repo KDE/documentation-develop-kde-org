@@ -25,6 +25,7 @@ target_link_libraries(plasma_runner_example_homefiles
     KF5::Notifications
 )
 
+# If the runner should not provide a config module, the following lines and X-KDE-ConfigModule from the json file can be removed
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS ConfigWidgets)
 kcoreaddons_add_plugin(kcm_homefilesrunner SOURCES kcm_homefilesrunner.cpp INSTALL_NAMESPACE kf5/krunner/kcms)
 target_link_libraries(kcm_homefilesrunner KF5::ConfigCore KF5::ConfigWidgets)
