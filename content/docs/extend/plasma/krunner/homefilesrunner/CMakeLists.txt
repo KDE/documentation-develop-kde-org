@@ -10,6 +10,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_MODULE_PA
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+include(ECMDeprecationSettings)
 include(FeatureSummary)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n Config Runner KIO Notifications)
@@ -24,6 +25,14 @@ target_link_libraries(plasma_runner_example_homefiles
     KF5::KIOWidgets
     KF5::Notifications
 )
+
+
+# This prevents deprecated API from being used
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+    KF ${KF5_MIN_VERSION}
+)
+
 
 # If the runner should not provide a config module, the following lines and X-KDE-ConfigModule from the json file can be removed
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS ConfigWidgets)
