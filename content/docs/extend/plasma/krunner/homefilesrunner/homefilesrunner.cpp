@@ -1,9 +1,11 @@
 #include "homefilesrunner.h"
 
+#include <KConfigGroup>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <QDir>
+#include <QIcon>
 #include <QMimeDatabase>
 
 HomeFilesRunner::HomeFilesRunner(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
