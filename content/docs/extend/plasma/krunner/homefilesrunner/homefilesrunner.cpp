@@ -39,7 +39,7 @@ void HomeFilesRunner::reloadConfiguration()
     }
 
     QList<Plasma::RunnerSyntax> syntaxes;
-    Plasma::RunnerSyntax syntax(QStringLiteral("%1:q:").arg(m_triggerWord), i18n("Finds files matching :q: in the %1 folder"));
+    Plasma::RunnerSyntax syntax(QStringLiteral("%1:q:").arg(m_triggerWord), i18n("Finds files matching :q: in the %1 folder", m_path));
     syntaxes.append(syntax);
     setSyntaxes(syntaxes);
 }
@@ -84,7 +84,7 @@ void HomeFilesRunner::match(Plasma::RunnerContext &context)
         if (m_iconCache.contains(path)) {
             match.setIcon(m_iconCache.value(path));
         } else {
-            QIcon icon(mimeDb.mimeTypeForFile(path).iconName());
+            QIcon icon = QIcon::fromTheme(mimeDb.mimeTypeForFile(path).iconName());
             m_iconCache.insert(path, icon);
             match.setIcon(icon);
         }

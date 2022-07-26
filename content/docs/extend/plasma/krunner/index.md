@@ -60,6 +60,7 @@ The contents of this file, as seen below, contain the name, description and tech
         ],
         "Description": "Part of a tutorial demonstrating how to create Runner plugins",
         "EnabledByDefault": true,
+        "Icon": "user-home",
         "License": "GPL",
         "Name": "Home Files",
         "Version": "0.1",
