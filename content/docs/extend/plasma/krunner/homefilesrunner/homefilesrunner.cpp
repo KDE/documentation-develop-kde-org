@@ -52,6 +52,10 @@ void HomeFilesRunner::match(Plasma::RunnerContext &context)
     if (query == QLatin1Char('.') || query == QLatin1String("..")) {
         return;
     }
+    // This should not get in the way of the Help-Runner which gets triggered by queries starting with '?'
+    if (query.startsWith(QLatin1Char('?'))) {
+        return;
+    }
 
     if (!m_triggerWord.isEmpty()) {
         if (!query.startsWith(m_triggerWord)) {
