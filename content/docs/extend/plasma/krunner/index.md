@@ -40,7 +40,7 @@ In this tutorial we will be creating a Runner plugin that finds files in the use
 
 CMake makes it very easy to set up the build system for our plugin:
 
-{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/CMakeLists.txt" highlight="cmake" start="0" lines="28" >}}
 
 ### The .json Metadata File
 
@@ -94,11 +94,7 @@ Initialization of the Runner is done in four parts: the plugin declaration macro
 
 At the end of our implementation (.cpp) file we have this:
 
-```cpp
-K_PLUGIN_CLASS_WITH_JSON(HomeFilesRunner, "homefilesrunner.json")
-
-#include "homefilesrunner.moc"
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cmake" start="118" line="3" >}}
 
 The <tt>.moc</tt> file include looks familiar enough from other Qt code, but the macro right above it probably does not. This macro creates the factory functions needed to load the plugin at runtime. The first parameter, <tt>example-homefiles</tt>, is the same value as the <tt>X-KDE-PluginInfo-Name=</tt> entry in the <tt>.desktop</tt> file. The second parameter is the name of the <tt>AbstractRunner</tt> subclass.
 
@@ -107,13 +103,7 @@ The <tt>.moc</tt> file include looks familiar enough from other Qt code, but the
 
 The constructor look like this:
 
-```cpp
-HomeFilesRunner::HomeFilesRunner(QObject *parent const KPluginMetaData &data, const QVariantList &args)
-    : AbstractRunner(parent, data, args)
-{
-    setPriority(LowPriority);
-}
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="10" lines="5" >}}
 
 The parent and data parameters are critical to the proper loading of the plugin and are passed into the AbstractRunner superclass in the initialization list. The args can optionally contain additional information for loading the plugin, in case of KRunner we should just pass this to the superclass.
 
@@ -124,19 +114,7 @@ Next we set the expected priority of the runner. This property affects the sched
 The init() method should contain any set up that needs to happen prior to matching queries that should be done exactly once during the lifespan of the plugin.
 In the HomeFilesRunner the `init()` method is very simple:
 
-```cpp
-void HomeFilesRunner::init()
-{
-    reloadConfiguration();
-    connect(this, &Plasma::AbstractRunner::prepare, this, [this](){
-        // Initialize data for the match session. This gets called from the main thread
-    });
-    connect(this, &Plasma::AbstractRunner::teardown, this, [this](){
-        // Cleanup data from the match session. This gets called from the main thread
-        m_iconCache.clear();
-    });
-}
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="16" lines="11" >}}
 
 It loads the configuration for the runner (see below) and connects up two critical signals: `prepare` and `teardown`.
 
@@ -159,29 +137,9 @@ The [Plasma::RunnerContext](docs:krunner;RunnerContext) passed into match offers
 
 Let's examine the match method in our example Runner, line by line:
 
-```cpp
-void HomeFilesRunner::match(Plasma::RunnerContext &context)
-{
-    QString query = context.query();
-    if (query == QLatin1Char('.') || query == QLatin1String("..")) {
-        return;
-    }
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="48" lines="22" >}}
 
-    if (!m_triggerWord.isEmpty()) {
-        if (!query.startsWith(m_triggerWord)) {
-            return;
-        }
-
-        query.remove(0, m_triggerWord.length());
-    }
-
-    if (query.length() > 2) {
-        query.prepend('*').append('*');
-    }
-}
-```
-
-So far it is quite straight orward, though we can already see a few common techniques. Before doing any more complex processing, if the query matches certain criteria, the match method returns quickly. This frees up that thread in the pool for use by another Runner or for another query.
+So far it is quite straight forward, though we can already see a few common techniques. Before doing any more complex processing, if the query matches certain criteria, the match method returns quickly. This frees up that thread in the pool for use by another Runner or for another query.
 
 We can also see the use of a "trigger word". A trigger word is used to mark a specific query so that the user can, through the use of keywords, better control the results. For example, the spell checker Runner uses "spell" (translated to the current user's language, of course) as its trigger word; this allows one to type "spell plasma" and have it checked in the dictionary. This concept does not map well to all Runners, but can be a very effective technique in the right circumstances.
 
@@ -199,15 +157,7 @@ Next, a `QDir` object is created. According to the Qt documentation, QDir is ree
 
 Next, a list is defined to hold the matches the Runner creates. This will allow the matches to be queued up and then added all at once at the end. This is slightly more efficient than the alternative of adding matches one at a time as they are created.
 
-```cpp
-    for (const QString &file : dir.entryList(QStringList(query))) {
-        const QString path = dir.absoluteFilePath(file);
-        if (!path.startsWith(m_path)) {
-            // this file isn't in our directory; looks like we got a query with some
-            // ..'s in it!
-            continue;
-        }
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="75" lines="7" >}}
 
 Now to the heart of the matter! We ask the QDir object for a list of files in our target directory that match the query. We do some basic sanity checking on the result before moving on and checking if the context itself is still valid:
 
@@ -220,30 +170,7 @@ Now to the heart of the matter! We ask the QDir object for a list of files in ou
 Since the query may change while the Runner is processing in another thread, the user may not longer care about the results the Runner in this thread is currently generating. In this case, the context object we received will be marked as invalid. By checking this, particularly before doing expensive processing or spinning in a potentially large loop, the Runner can avoid using more CPU and thread pool time than necessary. This makes the user interface feel more snappy.
 
 Next, we create a [Plasma::QueryMatch](docs:krunner;QueryMatch) object and add it to our list of matches:
-
-```cpp
-        Plasma::QueryMatch match(this);
-        match.setText(i18n("Open %1", path));
-        match.setData(path);
-        match.setId(path);
-        if (m_iconCache.contains(path)) {
-            match.setIcon(m_iconCache.value(path));
-        } else {
-            QIcon icon(KMimeType::iconNameForUrl(path));
-            m_iconCache.insert(path, icon);
-            match.setIcon(icon);
-        }
-
-        if (file.compare(query, Qt::CaseInsensitive)) {
-            match.setRelevance(1.0);
-            match.setType(Plasma::QueryMatch::ExactMatch);
-        } else {
-            match.setRelevance(0.8);
-        }
-
-        matches.append(match);
-    }
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="85" lines="20" >}}
 
 [Plasma::QueryMatch](docs:krunner;QueryMatch) objects are small data containers, little more than glorified structs really. As such, they are generally created on the stack, thread safe and can be copied and assigned without worry.
 
@@ -267,16 +194,7 @@ That's it! The runner does not need to worry if the matches are still valid for 
 
 If a match is selected by the user and it is not an `Plasma::QueryMatch::InformationalMatch`, the Runner is once again called into action and the run method is invoked. This method does not need to be thread safe, so we can code with a bit more ease here. Our example Runner has this for its implementation:
 
-```cpp
-void HomeFilesRunner::run(const Plasma::RunnerContext &/*context*/, const Plasma::QueryMatch &match)
-{
-    // KIO::OpenUrlJob autodeletes itself, so we can just create it and forget it!
-    auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(match.data().toString()));
-    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
-    job->setRunExecutables(false);
-    job->start();
-}
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="109" lines="8" >}}
 
 As can be seen, the match that was selected was passed back to the Runner again along with the relevant context (though this object is rarely needed). What the Runner does at this point is completely up to the given implementation; in this case the Home Files Runner just uses KRun to open up the file it found earlier.
 
@@ -294,28 +212,7 @@ Configuration options for a Runner can be read and written to the KConfigGroup r
 
 In the Home Files Runner, configuration values are read in this fashion:
 
-```cpp
-void HomeFilesRunner::reloadConfiguration()
-{
-    KConfigGroup c = config();
-    m_triggerWord = c.readEntry("trigger", QString());
-    if (!m_triggerWord.isEmpty()) {
-        m_triggerWord.append(' ');
-    }
-
-    m_path = c.readPathEntry("path", QDir::homePath());
-    QFileInfo pathInfo(m_path);
-    if (!pathInfo.isDir()) {
-        m_path = QDir::homePath();
-    }
-
-    QList<Plasma::RunnerSyntax> syntaxes;
-    Plasma::RunnerSyntax syntax(QString("%1:q:").arg(m_triggerWord),
-                                i18n("Finds files matching :q: in the %1 folder"));
-    syntaxes.append(syntax);
-    setSyntaxes(syntaxes);
-}
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="28" lines="19" >}}
 
 Both the trigger word and the path of the directory to look in are read from the configuration group and this method is called from Home File Runner's init() implementation. 
 
@@ -330,14 +227,7 @@ Runners may advertise what sorts of queries they understand by creating {{class|
 
 Let's examine the code in HomeFilesRunner::reloadConfiguration() concerning syntax definition a bit closer:
 
-```cpp
-    QList<Plasma::RunnerSyntax> syntaxes;
-    KRunner::RunnerSyntax syntax(QString("%1:q:").arg(m_triggerWord),
-                                i18n("Finds files matching :q: in the %1 folder"));
-    syntaxes.append(syntax);
-    setSyntaxes(syntaxes);
-}
-```
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="42" lines="4" >}}
 
 On the first line, we create a {{class|QList}} object to put our syntax objects into. We can add syntax objects one at a time, but using a QList, even if there is only one syntax, is usually more convenient.
 
@@ -367,9 +257,9 @@ The installation of the plugin goes as follows:
 kcoreaddons_add_plugin(kcm_homefilesrunner SOURCES kcm_homefilesrunner.cpp INSTALL_NAMESPACE kf5/krunner/kcms)
 ```
 
-The config module does not need embedded json metadata can be exported using:   
+The config module does not need embedded json metadata and can be exported using:   
 ```cpp
-K_PLUGIN_CLASS(MYconfigModule)
+K_PLUGIN_CLASS(HomeFilesRunnerConfig)
 ```
 
 This KCM can be launched from the KRunner configuration page or the help-runner. When the settings are saved, `reloadConfiguration` will be called.

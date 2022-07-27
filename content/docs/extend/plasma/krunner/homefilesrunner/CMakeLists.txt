@@ -17,7 +17,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n Config Runner KIO N
 
 # This takes care of building and installing the plugin
 kcoreaddons_add_plugin(runner_example_homefiles SOURCES homefilesrunner.cpp INSTALL_NAMESPACE "kf5/krunner")
-# We need to link the KRunner and other used libraryies  to it
+# We need to link the KRunner and other used libraries  to it
 target_link_libraries(runner_example_homefiles
     KF5::I18n
     KF5::ConfigCore
