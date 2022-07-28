@@ -115,7 +115,7 @@ function logWidget(widget) {
 //     logWidget(widget);
 // });
 
-//--- Log only digitalclock widgets
+//--- Log only keyboardlayout widgets
 forEachWidgetByType("org.kde.plasma.keyboardlayout", function(widget){
     logWidget(widget);
 });
