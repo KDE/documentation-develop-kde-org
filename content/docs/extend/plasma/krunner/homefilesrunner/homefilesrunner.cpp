@@ -20,9 +20,8 @@ void HomeFilesRunner::init()
     connect(this, &Plasma::AbstractRunner::prepare, this, []() {
         // Initialize data for the match session. This gets called from the main thread
     });
-    connect(this, &Plasma::AbstractRunner::teardown, this, [this]() {
+    connect(this, &Plasma::AbstractRunner::teardown, this, []() {
         // Cleanup data from the match session. This gets called from the main thread
-        m_iconCache.clear();
     });
 }
 
@@ -87,13 +86,8 @@ void HomeFilesRunner::match(Plasma::RunnerContext &context)
         match.setText(i18n("Open %1", path));
         match.setData(path);
         match.setId(path);
-        if (m_iconCache.contains(path)) {
-            match.setIcon(m_iconCache.value(path));
-        } else {
-            QIcon icon = QIcon::fromTheme(mimeDb.mimeTypeForFile(path).iconName());
-            m_iconCache.insert(path, icon);
-            match.setIcon(icon);
-        }
+        QIcon icon = QIcon::fromTheme(mimeDb.mimeTypeForFile(path).iconName());
+        match.setIcon(icon);
 
         if (file.compare(query, Qt::CaseInsensitive)) {
             match.setRelevance(1.0);

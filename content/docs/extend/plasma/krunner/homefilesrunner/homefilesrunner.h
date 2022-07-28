@@ -2,9 +2,6 @@
 
 #include <KRunner/AbstractRunner>
 
-#include <QHash>
-#include <QIcon>
-
 class HomeFilesRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
@@ -20,7 +17,6 @@ protected:
     void init() override;
 
 private:
-    QHash<QString, QIcon> m_iconCache;
     QString m_path;
     QString m_triggerWord;
 };
