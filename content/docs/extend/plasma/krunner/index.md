@@ -1,5 +1,7 @@
 ---
 title: KRunner C++ plugin
+SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
+SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
 ##  Abstract 
@@ -40,12 +42,12 @@ In this tutorial we will be creating a Runner plugin that finds files in the use
 
 CMake makes it very easy to set up the build system for our plugin:
 
-{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/CMakeLists.txt" highlight="cmake" start="0" lines="28" >}}
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/CMakeLists.txt" highlight="cmake" start="0" lines="26" >}}
 
 ### The .json Metadata File
 
 
-When KRunner queries the available plugins, it reads the embedded metadata. in order to provide this, we have to embed a json mteadata file. In this case we call it `homefilesrunner.json`. This name is referenced in the `K_PLUGIN_CLASS_WITH_JSON` macro futher below.
+When KRunner queries the available plugins, it reads the embedded metadata. in order to provide this, we have to embed a json metadata file. In this case we call it `homefilesrunner.json`. This name is referenced in the `K_PLUGIN_CLASS_WITH_JSON` macro further below.
 
 The contents of this file, as seen below, contain the name, description and technical details about the plugin.
 
@@ -54,8 +56,8 @@ The contents of this file, as seen below, contain the name, description and tech
     "KPlugin": {
         "Authors": [
             {
-                "Email": "aseigo@kde.org",
-                "Name": "Aaron Seigo"
+                "Email": "your.name@mail.com",
+                "Name": "Your Name"
             }
         ],
         "Description": "Part of a tutorial demonstrating how to create Runner plugins",
@@ -69,8 +71,8 @@ The contents of this file, as seen below, contain the name, description and tech
 }
 ```
 
-In this example the plugin id gets derived from the plugin file name, in this case "plasma_runner_example_homefiles"
-The entries such as `Name`, Description, `License and `Authors` are information and are shown in the user interface but have no other technical importance. Try to avoid using jargon in the Name and Description entries, however, to make it easy for people to understand what your plugin does.
+In this example the plugin id gets derived from the plugin file name, in this case "runner_example_homefiles"
+The entries such as `Name`, `Description`, `License` and `Authors` are information and are shown in the user interface but have no other technical importance. Try to avoid using jargon in the Name and Description entries, however, to make it easy for people to understand what your plugin does.
 
 ### The Class Definition (Header file) 
 
@@ -94,9 +96,9 @@ Initialization of the Runner is done in four parts: the plugin declaration macro
 
 At the end of our implementation (.cpp) file we have this:
 
-{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cmake" start="118" line="3" >}}
+{{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="112" line="3" >}}
 
-The <tt>.moc</tt> file include looks familiar enough from other Qt code, but the macro right above it probably does not. This macro creates the factory functions needed to load the plugin at runtime. The first parameter, <tt>example-homefiles</tt>, is the same value as the <tt>X-KDE-PluginInfo-Name=</tt> entry in the <tt>.desktop</tt> file. The second parameter is the name of the <tt>AbstractRunner</tt> subclass.
+The <tt>.moc</tt> file include looks familiar enough from other Qt code, but the macro right above it probably does not. This the macro generates the plugin factory that the plugin is created from and as a second parameter the json metadata file.
 
 ### The Constructor 
 
@@ -181,7 +183,6 @@ Finally, once the for loop is completed, we add any matches created to the conte
 
 ```cpp
     context.addMatches(matches);
-}
 ```
 
 That's it! The runner does not need to worry if the matches are still valid for the current query and can create any number of matches as it goes. It can even offer them up in batches by either calling `context.addMatch` for each match created or calling `context.addMatches` every so often. Generally Runners match quickly and so batch up their finds and submit them all at once.
@@ -215,24 +216,24 @@ Both the trigger word and the path of the directory to look in are read from the
 
 Note that if there was a trigger word provided by default that it should be marked for translation with i18nc("Note this is a KRunner keyword", "trigger"). This will both ensure that translators know how to translate it properly (thanks to the comment) and that users will be able to use the runner in their own language.
 
-What you may also notice in the above code snippet is the use of a new class: {{class|Plasma::RunnerSyntax}}.
+What you may also notice in the above code snippet is the use of a new class: [Plasma::RunnerSyntax](docs:krunner;RunnerSyntax).
 
 ### Publishing Recognized Syntax 
 
 
-Runners may advertise what sorts of queries they understand by creating {{class|Plasma::RunnerSyntax}} objects. This information can be requested by the user as a form or run-time documentation and may even be used by some applications to decide which Runners to launch or not. Therefore, while creating {{class|Plasma::RunnerSyntax}} objects is optional it is also highly recommended.
+Runners may advertise what sorts of queries they understand by creating [Plasma::RunnerSyntax](docs:krunner;RunnerSyntax). objects. This information can be requested by the user as a form or run-time documentation and may even be used by some applications to decide which Runners to launch or not. Therefore, while creating [Plasma::RunnerSyntax](docs:krunner;RunnerSyntax). objects is optional it is also highly recommended.
 
-Let's examine the code in HomeFilesRunner::reloadConfiguration() concerning syntax definition a bit closer:
+Let's examine the code in `HomeFilesRunner::reloadConfiguration()` concerning syntax definition a bit closer:
 
 {{< readfile file="/content/docs/extend/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start="41" lines="4" >}}
 
-On the first line, we create a {{class|QList}} object to put our syntax objects into. We can add syntax objects one at a time, but using a QList, even if there is only one syntax, is usually more convenient.
+On the first line, we create a `QList` object to put our syntax objects into. We can add syntax objects one at a time, but using a QList, even if there is only one syntax, is usually more convenient.
 
 The syntax object is created on lines 2-3 with the first parameter being an example of the query and the second parameter being a description of what such a query will result in. In the case of the HomeFilesRunner the syntax is created when the configuration is read in because the syntax depends on the trigger word (if any) that is set.
 
 One special string in both the query example and the explanatory text is ":q:". This is stands for "the variable query text entered by the user" and will be replaced in the user interface with something more meaningful when shown as documentation or as a delimiter to look for when analyzing Runner appropriateness.
 
-If a Runner understands multiple query formulations that result in the same matches being generated (or "query synonyms"), such synonymous queries can be added to the syntax object using Plasma::RunnerSyntax::addExampleQuery(const QString &exampleQuery).
+If a Runner understands multiple query formulations that result in the same matches being generated (or "query synonyms"), such synonymous queries can be added to the syntax object using [Plasma::RunnerSyntax::addExampleQuery](docs:krunner;Plasma::RunnerSyntax::addExampleQuery).
 
 ### Runner Configuration
 
@@ -267,4 +268,4 @@ This KCM can be launched from the KRunner configuration page or the help-runner.
 For some Runners, it can make sense to support being the only Runner being used. Usually an application will use multiple runners at once via Plasma::RunnerManager, but it can also use just one runner or put Plasma::RunnerManager into a special "single runner" mode.
 This feature is currently only exposed using the D-Bus interface. A common usecase is to a keyboard shortcut to a runner. See https://github.com/alex1701c/EmojiRunner/blob/master/EmojiRunnerCommands.khotkeys#L26 for an example.
 
-A Runner can, if desired, detect when it is being used as the sole runner by calling <tt>Plasma::RunnerContext::singleRunnerQueryMode()</tt> on the context object passed into the match method. If the return value is true, then the runner may decide to alter its behavior (like not requiring a trigger word).
+A Runner can, if desired, detect when it is being used as the sole runner by calling [Plasma::RunnerContext::singleRunnerQueryMode](docs:krunner;RunnerContext::singleRunnerQueryMode) on the context object passed into the match method. If the return value is true, then the runner may decide to alter its behavior (like not requiring a trigger word).
