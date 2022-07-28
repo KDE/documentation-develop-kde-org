@@ -4,10 +4,13 @@
 
 Download the latest Hugo release (extended version) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
 
-Before running the server locally, you'll need to run a Python script. Make sure you have PyYaml installed on your system:
+Before running the server locally, you'll need to run a Python script. Make sure you have requirements installed on your system
+(here suggested to be using virtualenv):
 
 ```
-pip install pyyaml
+python3 -m venv .
+source bin/activate
+pip install -r requirements.txt
 ```
 
 Then, run this Python script:

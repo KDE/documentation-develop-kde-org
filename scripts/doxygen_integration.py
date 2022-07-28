@@ -7,7 +7,7 @@
 from xmljson import badgerfish as bf
 from pathlib import Path
 from json import dump
-from xml.etree.ElementTree import fromstring
+from xml.etree.ElementTree import fromstring, ParseError
 import os
 from shutil import copyfile
 import requests
@@ -99,26 +99,48 @@ TAG_FILES = [
 
 components_map = {}
 
+def DEBUG(*msg):
+    if os.environ.get("DEBUG"):
+        print(*msg)
+
 for tag_file in TAG_FILES:
+    tagsURL = tag_file['tags']
+    DEBUG("Checking:", tagsURL)
+    component_name = os.path.basename(os.path.splitext(tagsURL)[0]).lower()
+    jsonFile = f'_data/{component_name}.json'
+
+    content = None
     if 'path' in tag_file:
-        Path("_data").mkdir(parents=True, exist_ok=True)
-        component_name = os.path.basename(os.path.splitext(tag_file['tags'])[0]).lower()
-        with open(tag_file['path'], "r") as r:
-            with open('_data/' + component_name + '.json', 'w') as f:
-                dump(bf.data(fromstring(r.read())), f)
+        with open(tag_file['path']) as inputStream:
+            content = inputStream.read()
     else:
-        r = requests.get(tag_file['tags'])
-        Path("_data").mkdir(parents=True, exist_ok=True)
-        component_name = os.path.basename(os.path.splitext(tag_file['tags'])[0]).lower()
-        with open('_data/' + component_name + '.json', 'w') as f:
-            dump(bf.data(fromstring(r.content)), f)
+        req = requests.get(tagsURL)
+        if req.status_code != 200:
+            print(f"No content found for {component_name} (http code: {req.status_code})")
+            # don't break and move to next
+            continue
+        content = req.text
+
+    if content is None:
+        print(f"No data for {component_name}")
+        # don't break and move to next
+        continue
+
+    Path("_data").mkdir(parents=True, exist_ok=True)
+    with open(jsonFile, 'w') as outputStream:
+        try:
+            dump(bf.data(fromstring(content)), outputStream)
+        except ParseError:
+            print(f"Failed to parse xml content for {component_name}")
+            # don't break and move to next
+            continue
 
     components_map[component_name] = {'url': tag_file['base_url']}
     if 'default_prefix' in tag_file:
         components_map[component_name]['default_prefix'] = tag_file['default_prefix']
 
 
-with open('_data/components_map.json', 'w') as f:
-    dump(components_map, f)
+with open('_data/components_map.json', 'w') as destination:
+    dump(components_map, destination)
 
 
