@@ -11,6 +11,8 @@ from xml.etree.ElementTree import fromstring, ParseError
 import os
 from shutil import copyfile
 import requests
+import logging
+import sys
 
 TAG_FILES = [
     {
@@ -99,13 +101,18 @@ TAG_FILES = [
 
 components_map = {}
 
-def DEBUG(*msg):
-    if os.environ.get("DEBUG"):
-        print(*msg)
+# initialize logging
+if os.environ.get("DEBUG"):
+    level=logging.DEBUG
+else:
+    level=logging.INFO
+logging.basicConfig(stream=sys.stdout, level=level,
+                    format = '%(asctime)s:%(levelname)s:%(message)s')
+
 
 for tag_file in TAG_FILES:
     tagsURL = tag_file['tags']
-    DEBUG("Checking:", tagsURL)
+    logging.debug("Checking: " + tagsURL)
     component_name = os.path.basename(os.path.splitext(tagsURL)[0]).lower()
     jsonFile = f'_data/{component_name}.json'
 
@@ -116,13 +123,13 @@ for tag_file in TAG_FILES:
     else:
         req = requests.get(tagsURL)
         if req.status_code != 200:
-            print(f"No content found for {component_name} (http code: {req.status_code})")
+            logging.warning(f"o content found for {component_name} (http code: {req.status_code})")
             # don't break and move to next
             continue
         content = req.text
 
     if content is None:
-        print(f"No data for {component_name}")
+        logging.warning(f"no data for {component_name}")
         # don't break and move to next
         continue
 
@@ -131,7 +138,7 @@ for tag_file in TAG_FILES:
         try:
             dump(bf.data(fromstring(content)), outputStream)
         except ParseError:
-            print(f"Failed to parse xml content for {component_name}")
+            logging.error(f"Failed to parse xml content for {component_name}")
             # don't break and move to next
             continue
 
