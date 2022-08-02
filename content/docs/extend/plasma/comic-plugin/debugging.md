@@ -15,7 +15,7 @@ kpackagetool5 -t Plasma/Comic -i my_comic.comic
 ```
 
 That will install the plugin to `~/.local/share/plasma/comics/my_comic`
-You could also directly edit `~/.local/share/plasma/comics/my_comic/contents/code/main.js`, but be sure to write the changes back in your project.
+You can also directly edit `~/.local/share/plasma/comics/my_comic/contents/code/main.js`, but be sure to write the changes back in your project.
 
 To test your plugin type:
 
@@ -32,12 +32,9 @@ rm -r ~/.local/share/plasma_engine_comic/
 
 ## Debugging the plugin
 
-Often it happens that your plugin won't work the first try and the following
-debugging can be painful as there is not that much output unless you use some
-tricks.
+Sometimes your plugin won't work on the first attempt, and debugging might be difficult because there isn't a lot of output unless you employ specific tricks.
 
-Add print-statements in your main.es file to see what the values of different
-variables are and where your plugin stops working. Here are some examples:
+To observe the values of various variables and where your plugin breaks, add print-statements to your main.js file. Here are a few instances:
 
 ```js
 function init() {
@@ -60,13 +57,12 @@ function pageRetrieved(id: string, data) {
 }
 ```
 
-I add "****" in the print to find the output more easily.
-Sometimes when I do not find the error at first sight I add a lot print statements like in the example above to find the error (e.g. written something wrong, forgot something etc.).
+To make it easier to find the output, I add "****" to the print.
+Sometimes when I do not immediately spot the issue, I add more print statements, as in the example above, to help me locate issue (e.g. written something wrong, forgot something etc.).
 
-In case all that does not work and pageRetrieved is still called you could use
-
+If none of that succeeds and pageRetrieved is still called, try using
 ```js
 print(data);
 ```
 
-so that you can check if the data is correct and if it is what you expected.
+so that you can check if the data is correct.
