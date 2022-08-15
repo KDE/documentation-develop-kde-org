@@ -516,7 +516,74 @@ This property is a hardcoded value and shouldn't be used for animations. Instead
 
 ## Plasmoid property group
 
-As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contentsuimainqml" >}}), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` property group has properties from [`AppletInterface`](docs:plasma;AppletInterface) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h).
+As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contentsuimainqml" >}}), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` [property group](https://doc.qt.io/qt-6/qtqml-syntax-objectattributes.html#grouped-properties) has properties from [`AppletInterface`](docs:plasma;AppletInterface) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h).
+
+| Property | Type |
+|-----|-----|
+| `Plasmoid.activationTogglesExpanded` | `bool` |
+| `Plasmoid.apiVersion` | `int` |
+| `Plasmoid.associatedApplication` | `QString` |
+| `Plasmoid.associatedApplicationUrls` | `QList<QUrl>` |
+| `Plasmoid.availableScreenRect` | `QRect` |
+| `Plasmoid.availableScreenRegion` | `QVariantList` |
+| `Plasmoid.backgroundHints` | `Plasma::Types::BackgroundHints` |
+| `Plasmoid.busy` | `bool` |
+| `Plasmoid.compactRepresentation` | `QQmlComponent` |
+| `Plasmoid.compactRepresentationItem` | `QQuickItem` |
+| `Plasmoid.configuration` | `QObject` |
+| `Plasmoid.configurationRequired` | `bool` |
+| `Plasmoid.configurationRequiredReason` | `QString` |
+| `Plasmoid.constraintHints` | `Plasma::Types::ConstraintHints` |
+| `Plasmoid.containmentDisplayHints` | `Plasma::Types::ContainmentDisplayHints` |
+| `Plasmoid.contextualActions` | `QList<QObject*>` |
+| `Plasmoid.currentActivity` | `QString` |
+| `Plasmoid.editMode` | `bool` |
+| `Plasmoid.effectiveBackgroundHints` | `Plasma::Types::BackgroundHints` |
+| `Plasmoid.expanded` | `bool` |
+| `Plasmoid.formFactor` | `Plasma::Types::FormFactor` |
+| `Plasmoid.fullRepresentation` | `QQmlComponent` |
+| `Plasmoid.fullRepresentationItem` | `QQuickItem` |
+| `Plasmoid.globalShortcut` | `QKeySequence` |
+| `Plasmoid.hideOnWindowDeactivate` | `bool ` |
+| `Plasmoid.icon` | `QString` |
+| `Plasmoid.id` | `uint` |
+| `Plasmoid.immutability` | `Plasma::Types::ImmutabilityType` |
+| `Plasmoid.immutable` | `bool` |
+| `Plasmoid.loading` | `bool` |
+| `Plasmoid.location` | `Plasma::Types::Location` |
+| `Plasmoid.metaData` | `KPluginMetaData` |
+| `Plasmoid.nativeInterface` | `QObject` |
+| `Plasmoid.pluginName` | `QString` |
+| `Plasmoid.preferredRepresentation` | `QQmlComponent` |
+| `Plasmoid.rootItem` | `QObject` |
+| `Plasmoid.screen` | `int` |
+| `Plasmoid.screenGeometry` | `QRect` |
+| `Plasmoid.self` | `AppletInterface` |
+| `Plasmoid.status` | `Plasma::Types::ItemStatus` |
+| `Plasmoid.switchHeight` | `int` |
+| `Plasmoid.switchWidth` | `int` |
+| `Plasmoid.title` | `QString` |
+| `Plasmoid.toolTipItem` | `QQuickItem` |
+| `Plasmoid.toolTipMainText` | `QString` |
+| `Plasmoid.toolTipSubText` | `QString` |
+| `Plasmoid.toolTipTextFormat` | `int` |
+| `Plasmoid.userBackgroundHints` | `Plasma::Types::BackgroundHints` |
+| `Plasmoid.userConfiguring` | `bool` |
+
+Note that while you can reference a property from this group by the root Item in the widget, you can also refer to properties in this group with the global context property `plasmoid` (lowercase) which is [dynamically defined at runtime](https://invent.kde.org/frameworks/plasma-framework/-/blob/ca97fada4215df0aa1725578c160df9105a4c2e2/src/plasmaquick/appletquickitem.cpp#L644) when the property group is imported.
+
+```qml
+import org.kde.plasma.plasmoid 2.0
+Item {
+    id: widget
+    Plasmoid.icon: 'starred-symbolic'
+    Label {
+        text: plasmoid.icon
+        // OR
+        // text: widget.Plasmoid.icon
+    }
+}
+```
 
 
 ### Plasmoid.compactRepresentation
