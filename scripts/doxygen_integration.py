@@ -132,7 +132,7 @@ for tag_file in TAG_FILES:
     else:
         req = requests.get(tagsURL)
         if req.status_code != 200:
-            logging.warning(f"o content found for {component_name} (http code: {req.status_code})")
+            logging.warning(f"no content found for {component_name} (http code: {req.status_code})")
             # don't break and move to next
             continue
         content = req.text
