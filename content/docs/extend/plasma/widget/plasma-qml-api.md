@@ -535,10 +535,13 @@ This property is a hardcoded value and shouldn't be used for animations. Instead
 
 As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contentsuimainqml" >}}), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` [property group](https://doc.qt.io/qt-6/qtqml-syntax-objectattributes.html#grouped-properties) has properties from [`AppletInterface`](docs:plasma;AppletInterface) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h).
 
+
+### Plasmoid properties
+
 | Property | Type | Notes |
 |-----|-----|-----|
-| `Plasmoid.activationTogglesExpanded` | `bool` |  |
-| `Plasmoid.apiVersion` | `int` |  |
+| `Plasmoid.activationTogglesExpanded` | `bool` | Keyboard shortcut will toggle `Plasmoid.expanded`. [Since KDE Frameworks 5.76](https://invent.kde.org/frameworks/plasma-framework/-/commit/d6a5b10b3b9a4984209f6509a3ed9196b0c1d5d6), this is `true` by default. |
+| `Plasmoid.apiVersion` | `int` | **Due not use.** [Appears to read](https://invent.kde.org/frameworks/plasma-framework/-/blob/9131ac91e73f8096d5c687985c5840c6e12e5ade/src/scriptengines/qml/plasmoid/appletinterface.cpp#L555-568) `Version": "1.0",` or `X-KDE-PluginInfo-Version=1.0` from the widget metadata. Use `plasmoid.metaData.version` instead. |
 | `Plasmoid.associatedApplication` | `string` |  |
 | `Plasmoid.associatedApplicationUrls` | `QList<QUrl>` |  |
 | `Plasmoid.availableScreenRect` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
@@ -568,7 +571,32 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 | `Plasmoid.immutable` | `bool` |  |
 | `Plasmoid.loading` | `bool` |  |
 | `Plasmoid.location` | [`Plasma::Types::Location`](docs:plasma;Plasma::Types::Location) |  |
-| `Plasmoid.metaData` | [`KPluginMetaData`](docs:kcoreaddons;KPluginMetaData) |  |
+| `Plasmoid.metaData` | [`KPluginMetaData`](docs:kcoreaddons;KPluginMetaData) | Reads `metadata.json` (or `metadata.desktop`). See the [`AboutPlugin.qml` source code](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/desktoppackage/contents/configuration/AboutPlugin.qml) for examples. |
+| `Plasmoid.metaData.authors` | `QVariantList` |  |
+| `Plasmoid.metaData.category` | `string` |  |
+| `Plasmoid.metaData.copyrightText` | `string` |  |
+| `Plasmoid.metaData.dependencies` | `QStringList` |  |
+| `Plasmoid.metaData.description` | `string` |  |
+| `Plasmoid.metaData.extraInformation` | `string` |  |
+| `Plasmoid.metaData.fileName` | `string` |  |
+| `Plasmoid.metaData.formFactors` | `QStringList` |  |
+| `Plasmoid.metaData.iconName` | `string` |  |
+| `Plasmoid.metaData.initialPreference` | `int` |  |
+| `Plasmoid.metaData.isEnabledByDefault` | `bool` |  |
+| `Plasmoid.metaData.isHidden` | `bool` |  |
+| `Plasmoid.metaData.isValid` | `bool` |  |
+| `Plasmoid.metaData.license` | `string` |  |
+| `Plasmoid.metaData.licenseText` | `string` |  |
+| `Plasmoid.metaData.metaDataFileName` | `string` |  |
+| `Plasmoid.metaData.mimeTypes` | `QStringList` |  |
+| `Plasmoid.metaData.name` | `string` | The translated widget `Name`. Also see `Plasmoid.title` |
+| `Plasmoid.metaData.otherContributors` | `QVariantList` |  |
+| `Plasmoid.metaData.pluginId` | `string` |  |
+| `Plasmoid.metaData.rawData` | `QJsonObject` |  |
+| `Plasmoid.metaData.serviceTypes` | `QStringList` |  |
+| `Plasmoid.metaData.translators` | `QVariantList` |  |
+| `Plasmoid.metaData.version` | `string` | Reads `Version": "1.0"` or `X-KDE-PluginInfo-Version=1.0` |
+| `Plasmoid.metaData.website` | `string` |  |
 | `Plasmoid.nativeInterface` | `QObject` |  |
 | `Plasmoid.pluginName` | `string` |  |
 | `Plasmoid.preferredRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | Force a representation and ignore `Plasmoid.switchHeight`. [Example](#plasmoidfullrepresentation) |
