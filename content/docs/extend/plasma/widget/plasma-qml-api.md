@@ -348,6 +348,23 @@ PlasmaComponents3.ScrollView {
 {{< /sections >}}
 
 
+### BusyIndicator
+
+{{< sections >}}
+{{< section-left >}}
+
+This draws `widgets/busywidget.svg` from the Plasma Style and spins it. If animation speed is Instant in System Settings, it will not rotate.
+
+* [`BusyIndicator.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/BusyIndicator.qml)
+* [Default `widgets/busywidget.svg` from Breeze](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/desktoptheme/breeze/widgets/busywidget.svg)
+
+{{< /section-left >}}
+{{< section-right >}}
+
+{{< /section-right >}}
+{{< /sections >}}
+
+
 ## PlasmaExtras
 
 To be consistent with elsewhere in Plasma, Plasma ships with a couple of special components.
@@ -527,12 +544,12 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 | `Plasmoid.availableScreenRect` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
 | `Plasmoid.availableScreenRegion` | `QVariantList` |  |
 | `Plasmoid.backgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). Turn off the desktop widget bg. |
-| `Plasmoid.busy` | `bool` |  |
+| `Plasmoid.busy` | `bool` | Draw the [`BusyIndicator`](#busyindicator) overtop the widget. |
 | `Plasmoid.compactRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](#plasmoidcompactrepresentation). The smaller "icon" view view of the widget shown in the panel. |
-| `Plasmoid.compactRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) |  |
+| `Plasmoid.compactRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) | The instance of the `compactRepresentation` Component. May be `null` on load if not visible. |
 | `Plasmoid.configuration` | [`KDeclarative::ConfigPropertyMap`](docs:kdeclarative;KDeclarative::ConfigPropertyMap) | [Documentation](#plasmoidconfiguration). Provides access to all user configurable values as sub-properties. |
-| `Plasmoid.configurationRequired` | `bool` |  |
-| `Plasmoid.configurationRequiredReason` | `string` |  |
+| `Plasmoid.configurationRequired` | `bool` | Wither to show a Configure button on top of the compact/full representation. It may look better to create your own button that calls `plasmoid.action("configure").trigger()`. |
+| `Plasmoid.configurationRequiredReason` | `string` | Not currently implemented to do anything. |
 | `Plasmoid.constraintHints` | [`Plasma::Types::ConstraintHints`](docs:plasma;Plasma::Types::ConstraintHints) |  |
 | `Plasmoid.containmentDisplayHints` | [`Plasma::Types::ContainmentDisplayHints`](docs:plasma;Plasma::Types::ContainmentDisplayHints) |  |
 | `Plasmoid.contextualActions` | `QList<QObject*>` |  |
@@ -542,12 +559,12 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 | `Plasmoid.expanded` | `bool` |  |
 | `Plasmoid.formFactor` | [`Plasma::Types::FormFactor`](docs:plasma;Plasma::Types::FormFactor) |  |
 | `Plasmoid.fullRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](plasmoidfullrepresentation). The full "popup" view of the widget. |
-| `Plasmoid.fullRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) |  |
+| `Plasmoid.fullRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) | The instance of the `fullRepresentation` Component. Since widget popup's a lazy loaded, it is `null` until the popup is opened. |
 | `Plasmoid.globalShortcut` | [`QKeySequence`](https://doc.qt.io/qt-5/qkeysequence.html) |  |
 | `Plasmoid.hideOnWindowDeactivate` | `bool ` |  |
 | `Plasmoid.icon` | `string` | [Example](#plasmoidicon) |
 | `Plasmoid.id` | `uint` |  |
-| `Plasmoid.immutability` | [`Plasma::Types::ImmutabilityType`](docs:plasma;Plasma::Types::ImmutabilityType) |  |
+| `Plasmoid.immutability` | [`Plasma::Types::ImmutabilityType`](docs:plasma;Plasma::Types::ImmutabilityType) | Detect if Kiosk mode has locked the widgets, or the Plasma 5.18 and below Lock Widget mode. |
 | `Plasmoid.immutable` | `bool` |  |
 | `Plasmoid.loading` | `bool` |  |
 | `Plasmoid.location` | [`Plasma::Types::Location`](docs:plasma;Plasma::Types::Location) |  |
@@ -560,13 +577,13 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 | `Plasmoid.screenGeometry` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
 | `Plasmoid.self` | `AppletInterface` |  |
 | `Plasmoid.status` | [`Plasma::Types::ItemStatus`](docs:plasma;Plasma::Types::ItemStatus) |  |
-| `Plasmoid.switchHeight` | `int` |  |
-| `Plasmoid.switchWidth` | `int` |  |
-| `Plasmoid.title` | `string` |  |
+| `Plasmoid.switchHeight` | `int` | The minimum height required to switch to `fullRepresentation`. |
+| `Plasmoid.switchWidth` | `int` | The minimum width required to switch to `fullRepresentation`. |
+| `Plasmoid.title` | `string` | The translated widget name. |
 | `Plasmoid.toolTipItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) |  |
-| `Plasmoid.toolTipMainText` | `string` |  |
-| `Plasmoid.toolTipSubText` | `string` |  |
-| `Plasmoid.toolTipTextFormat` | `int` |  |
+| `Plasmoid.toolTipMainText` | `string` | The mainText in the default tooltip layout. |
+| `Plasmoid.toolTipSubText` | `string` | The subText in the default tooltip layout. |
+| `Plasmoid.toolTipTextFormat` | `int` | The [`TextFormat`](https://doc.qt.io/qt-5/qml-qtquick-text.html#textFormat-prop) of the subText. Defaults to `PlainText`. |
 | `Plasmoid.userBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) |  |
 | `Plasmoid.userConfiguring` | `bool` |  |
 
