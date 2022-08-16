@@ -897,7 +897,8 @@ X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
 
 
 <style>
-.td-content > table td code {
+.td-content > table td:nth-child(1) code,
+.td-content > table td:nth-child(2) code {
     background: none;
     border: none;
     color: inherit;
