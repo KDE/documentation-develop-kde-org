@@ -526,7 +526,7 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 | `Plasmoid.associatedApplicationUrls` | `QList<QUrl>` |  |
 | `Plasmoid.availableScreenRect` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
 | `Plasmoid.availableScreenRegion` | `QVariantList` |  |
-| `Plasmoid.backgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) |  |
+| `Plasmoid.backgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). Turn off the desktop widget bg. |
 | `Plasmoid.busy` | `bool` |  |
 | `Plasmoid.compactRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](#plasmoidcompactrepresentation). The smaller "icon" view view of the widget shown in the panel. |
 | `Plasmoid.compactRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) |  |
@@ -704,6 +704,87 @@ RowLayout {
         onClicked: plasmoid.configuration.numClicked += 1
     }
 }
+```
+{{< /section-right >}}
+{{< /sections >}}
+
+
+### Plasmoid.backgroundHints
+
+{{< sections >}}
+{{< section-left >}}
+
+* `PlasmaCore.Types.DefaultBackground` **(default)** is equal to `StandardBackground`.
+* `PlasmaCore.Types.StandardBackground` The standard background from the theme is drawn.  
+  ![](backgroundhint-standard.png)
+* `PlasmaCore.Types.TranslucentBackground` An alternate version of the background is drawn, usually more translucent.
+* `PlasmaCore.Types.ShadowBackground` The applet won't have a svg background but a drop shadow of its content done via a shader. The text color will also invert.
+  ![](backgroundhint-shadow.png)
+* `PlasmaCore.Types.NoBackground` This property is used to hide a desktop widget background. An example would be [the Analog Clock widget](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/analog-clock/contents/ui/analogclock.qml#L34).  
+  ![](backgroundhint-nobg.png)
+* `PlasmaCore.Types.ConfigurableBackground` Allows the user to toggle between `StandardBackground` and `ShadowBackground`. Note that this is a bit flag to be used with another enum value.  
+  ![](backgroundhint-toggle.png)
+
+To use `ConfigurableBackground`, combine the flag with another value with the bitwise OR operator `|`.
+
+```qml
+PlasmaCore.Types.NoBackground | PlasmaCore.Types.ConfigurableBackground
+```
+
+Note: For `ShadowBackground`, make sure you use `PlasmaCore.ColorScope.colorGroup` in your `IconItem` to have the symbolic icons follow the text color.
+
+```qml
+PlasmaCore.IconItem {
+    colorGroup: PlasmaCore.ColorScope.colorGroup
+}
+```
+
+{{< /section-left >}}
+{{< section-right >}}
+```qml
+// main.qml
+import QtQuick 2.0
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasmoid 2.0
+
+Item {
+    id: widget
+    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
+}
+```
+
+---
+
+```qml
+// main.qml
+import QtQuick 2.0
+import QtQuick.Layouts 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents3
+import org.kde.plasma.plasmoid 2.0
+
+Item {
+    id: widget
+    Plasmoid.icon: 'starred-symbolic'
+    Plasmoid.backgroundHints: PlasmaCore.Types.StandardBackground | PlasmaCore.Types.ConfigurableBackground
+    // Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
+    // Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground | PlasmaCore.Types.ConfigurableBackground
+
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    Plasmoid.fullRepresentation: RowLayout {
+        PlasmaCore.IconItem {
+            source: plasmoid.icon
+            colorGroup: PlasmaCore.ColorScope.colorGroup
+            Layout.fillHeight: true
+            Layout.preferredWidth: height
+        }
+        PlasmaComponents3.Label {
+            text: "Text"
+            font.pointSize: 30
+        }
+    }
+}
+
 ```
 {{< /section-right >}}
 {{< /sections >}}
