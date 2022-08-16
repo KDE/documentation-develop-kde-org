@@ -183,8 +183,9 @@ Note that you can use a property [alias](http://doc.qt.io/qt-5/qtqml-syntax-obje
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
@@ -212,8 +213,9 @@ Kirigami.FormLayout {
 
 A [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html) is used for boolean on/off values. See the [Visual Design Group's tips](https://community.kde.org/KDE_Visual_Design_Group/HIG/CheckBox) on using CheckBoxes.
 
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
-<!-- config/main.xml -->
 <entry name="variableName" type="Bool">
     <default>true</default>
 </entry>
@@ -221,8 +223,9 @@ A [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html) is used
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
@@ -251,8 +254,9 @@ A [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html) is used f
 
 If you want decimal places, a [`QtQuick.Controls 1.0` SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls-spinbox.html) is a little easier to use than the `QtQuick.Controls 2.0` version. `QtQuickControls1` has a `SpinBox.decimals` to easily switch from an Integer `decimals: 0` to `decimals: 3` to represent a Real number (the `Double` data type).
 
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
-<!-- config/main.xml -->
 <entry name="variableName" type="Int">
     <default>6</default>
 </entry>
@@ -260,8 +264,9 @@ If you want decimal places, a [`QtQuick.Controls 1.0` SpinBox](https://doc.qt.io
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
@@ -288,8 +293,9 @@ Kirigami.FormLayout {
 
 If you want decimal places, a [`QtQuick.Controls 1.0` SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls-spinbox.html) is a little easier to use than the `QtQuick.Controls 2.0` version. `QtControls1` has a `SpinBox.decimals` property to easily switch from an Integer `decimals: 0` to `decimals: 3` to represent a Real number (the `Double` config data type).
 
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
-<!-- config/main.xml -->
 <entry name="variableName" type="Double">
     <default>3.1459</default>
 </entry>
@@ -299,8 +305,9 @@ If you really want to use `QtQuick.Controls 2.0`, look at Zren's [libconfig/Spin
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Controls 1.0 as QtControls1
@@ -329,8 +336,9 @@ Kirigami.FormLayout {
 
 A [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html) is used for a single line of text. It can be used as a base for many other data types as well. You will also want to look at the base [TextInput](https://doc.qt.io/qt-5/qml-qtquick-textinput.html) for more properties.
 
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
-<!-- config/main.xml -->
 <entry name="variableName" type="String">
     <default>Hello World</default>
 </entry>
@@ -338,8 +346,9 @@ A [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html) is us
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
@@ -366,8 +375,9 @@ Kirigami.FormLayout {
 
 A [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html) is used for paragraphs of text. You will also want to look at the base [TextEdit](https://doc.qt.io/qt-5/qml-qtquick-textedit-members.html) for more properties.
 
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
-<!-- config/main.xml -->
 <entry name="variableName" type="String">
     <default>Hello World</default>
 </entry>
@@ -375,8 +385,9 @@ A [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html) is used
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
@@ -403,8 +414,9 @@ Kirigami.FormLayout {
 
 KDE Frameworks has [`ColorButton`](https://api.kde.org/frameworks/kdeclarative/html/classorg_1_1kde_1_1kquickcontrols_1_1ColorButton.html) which provides a preview of the selected color and will open QtQuick's [`ColorDialog`](https://doc.qt.io/qt-5/qml-qtquick-dialogs-colordialog.html) for selecting a color.
 
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
-<!-- config/main.xml -->
 <entry name="variableName" type="Color">
     <default>#336699</default>
 </entry>
@@ -428,8 +440,9 @@ Unfortunately KDE Framework's `ColorButton` doesn't easily support this pattern 
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.4 as Kirigami
@@ -459,8 +472,9 @@ When we need to store a filepath in the config, we should use the `Path` or `Pat
 
 Note that we place the `Kirigami.FormData.label` in the `RowLayout` as it is the direct child of `Kirigami.FormLayout`.
 
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
-<!-- config/main.xml -->
 <entry name="variableName" type="Path">
     <default>/usr/share/sounds/freedesktop/stereo/message.oga</default>
 </entry>
@@ -468,8 +482,9 @@ Note that we place the `Kirigami.FormData.label` in the `RowLayout` as it is the
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Dialogs 1.0
@@ -548,8 +563,9 @@ You can also assign directly to `plasmoid.configuration.variableName` if necessa
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
@@ -632,8 +648,9 @@ QQC2.CheckBox {
 }
 ```
 
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.0
@@ -665,3 +682,41 @@ Kirigami.FormLayout {
 {{< /section-right >}}
 {{< /sections >}}
 
+
+
+
+<style>
+.filepath {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,liberation mono,courier new,monospace;
+    background-color: #f0f0f0;
+    color: #595858;
+
+    /* .highlight     has 1px rgba(35,38,41,.125) */
+    /* .highlight>pre has 1px rgba(0,0,0,.125) */
+    border: 2px solid #e3e3e4;
+    border-bottom: 0;
+    border-radius: .25rem .25rem 0 0;
+
+    /* .td-content .highlight pre { padding-left: .5rem } */
+    padding: .3rem .5rem;
+}
+.filepath + .highlight,
+.filepath + .highlight > pre {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+@media (prefers-color-scheme: dark) {
+    .filepath {
+        color: #9d9d9d;
+        background-color: #2a2e33;
+        border-color: #2a2e33;
+    }
+    .filepath,
+    .filepath + .highlight,
+    .filepath + .highlight > pre {
+        border-color: #2a2e33 !important;
+        /*border: 1px solid red;*/
+    }
+}
+</style>
