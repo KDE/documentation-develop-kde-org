@@ -670,6 +670,44 @@ Item {
 {{< /sections >}}
 
 
+### Plasmoid.configuration
+
+{{< sections >}}
+{{< section-left >}}
+
+This property provides access to the values user configurable values. You can easily access config values with `plasmoid.configuration.varName`. By default it populates with the keys and values in `config/main.xml`. You can easily write to `plasmoid.configuration.varName = "value"` to change the value for the user.
+
+Read more about configuration and the config dialog in [it's section of the tutorial]({{< ref "configuration.md" >}}).
+
+The user's configuration is serialized to `~/.config/plasma-org.kde.plasma.desktop-appletsrc` when the `plasmashell` process terminates and is only loaded at startup.
+
+Since: **KDE Frameworks 5.78**, you can reference the default value of `plasmoid.configuration.varName` with  `plasmoid.configuration.varNameDefault`.
+
+Note: Since **KDE Frameworks 5.89**, the [`KDeclarative::ConfigPropertyMap`](docs:kdeclarative;KDeclarative::ConfigPropertyMap) datatype [was deprecated](https://invent.kde.org/frameworks/plasma-framework/-/commit/6750b75bf02e420630144f2ea1d3f9940a85c0ba) and will eventually change to KConfig's [`KConfigPropertyMap`](docs:kconfig;KConfigPropertyMap).
+
+{{< /section-left >}}
+{{< section-right >}}
+```qml
+// main.qml
+import QtQuick 2.0
+import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.plasmoid 2.0
+
+RowLayout {
+    id: widget
+    PlasmaComponents.Label {
+        text: i18np("%1 Click", "%1 Clicks", plasmoid.configuration.numClicked)
+    }
+    PlasmaComponents3.Button {
+        icon.name: "value-increase-symbolic"
+        text: i18n("Add")
+        onClicked: plasmoid.configuration.numClicked += 1
+    }
+}
+```
+{{< /section-right >}}
+{{< /sections >}}
+
 
 ## metadata.desktop
 
