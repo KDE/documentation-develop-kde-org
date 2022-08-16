@@ -518,66 +518,71 @@ This property is a hardcoded value and shouldn't be used for animations. Instead
 
 As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contentsuimainqml" >}}), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` [property group](https://doc.qt.io/qt-6/qtqml-syntax-objectattributes.html#grouped-properties) has properties from [`AppletInterface`](docs:plasma;AppletInterface) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h).
 
-| Property | Type |
-|-----|-----|
-| `Plasmoid.activationTogglesExpanded` | `bool` |
-| `Plasmoid.apiVersion` | `int` |
-| `Plasmoid.associatedApplication` | `QString` |
-| `Plasmoid.associatedApplicationUrls` | `QList<QUrl>` |
-| `Plasmoid.availableScreenRect` | `QRect` |
-| `Plasmoid.availableScreenRegion` | `QVariantList` |
-| `Plasmoid.backgroundHints` | `Plasma::Types::BackgroundHints` |
-| `Plasmoid.busy` | `bool` |
-| `Plasmoid.compactRepresentation` | `QQmlComponent` |
-| `Plasmoid.compactRepresentationItem` | `QQuickItem` |
-| `Plasmoid.configuration` | `QObject` |
-| `Plasmoid.configurationRequired` | `bool` |
-| `Plasmoid.configurationRequiredReason` | `QString` |
-| `Plasmoid.constraintHints` | `Plasma::Types::ConstraintHints` |
-| `Plasmoid.containmentDisplayHints` | `Plasma::Types::ContainmentDisplayHints` |
-| `Plasmoid.contextualActions` | `QList<QObject*>` |
-| `Plasmoid.currentActivity` | `QString` |
-| `Plasmoid.editMode` | `bool` |
-| `Plasmoid.effectiveBackgroundHints` | `Plasma::Types::BackgroundHints` |
-| `Plasmoid.expanded` | `bool` |
-| `Plasmoid.formFactor` | `Plasma::Types::FormFactor` |
-| `Plasmoid.fullRepresentation` | `QQmlComponent` |
-| `Plasmoid.fullRepresentationItem` | `QQuickItem` |
-| `Plasmoid.globalShortcut` | `QKeySequence` |
-| `Plasmoid.hideOnWindowDeactivate` | `bool ` |
-| `Plasmoid.icon` | `QString` |
-| `Plasmoid.id` | `uint` |
-| `Plasmoid.immutability` | `Plasma::Types::ImmutabilityType` |
-| `Plasmoid.immutable` | `bool` |
-| `Plasmoid.loading` | `bool` |
-| `Plasmoid.location` | `Plasma::Types::Location` |
-| `Plasmoid.metaData` | `KPluginMetaData` |
-| `Plasmoid.nativeInterface` | `QObject` |
-| `Plasmoid.pluginName` | `QString` |
-| `Plasmoid.preferredRepresentation` | `QQmlComponent` |
-| `Plasmoid.rootItem` | `QObject` |
-| `Plasmoid.screen` | `int` |
-| `Plasmoid.screenGeometry` | `QRect` |
-| `Plasmoid.self` | `AppletInterface` |
-| `Plasmoid.status` | `Plasma::Types::ItemStatus` |
-| `Plasmoid.switchHeight` | `int` |
-| `Plasmoid.switchWidth` | `int` |
-| `Plasmoid.title` | `QString` |
-| `Plasmoid.toolTipItem` | `QQuickItem` |
-| `Plasmoid.toolTipMainText` | `QString` |
-| `Plasmoid.toolTipSubText` | `QString` |
-| `Plasmoid.toolTipTextFormat` | `int` |
-| `Plasmoid.userBackgroundHints` | `Plasma::Types::BackgroundHints` |
-| `Plasmoid.userConfiguring` | `bool` |
+| Property | Type | Notes |
+|-----|-----|-----|
+| `Plasmoid.activationTogglesExpanded` | `bool` |  |
+| `Plasmoid.apiVersion` | `int` |  |
+| `Plasmoid.associatedApplication` | `string` |  |
+| `Plasmoid.associatedApplicationUrls` | `QList<QUrl>` |  |
+| `Plasmoid.availableScreenRect` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
+| `Plasmoid.availableScreenRegion` | `QVariantList` |  |
+| `Plasmoid.backgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) |  |
+| `Plasmoid.busy` | `bool` |  |
+| `Plasmoid.compactRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](#plasmoidcompactrepresentation). The smaller "icon" view view of the widget shown in the panel. |
+| `Plasmoid.compactRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) |  |
+| `Plasmoid.configuration` | [`KDeclarative::ConfigPropertyMap`](docs:kdeclarative;KDeclarative::ConfigPropertyMap) | [Documentation](#plasmoidconfiguration). Provides access to all user configurable values as sub-properties. |
+| `Plasmoid.configurationRequired` | `bool` |  |
+| `Plasmoid.configurationRequiredReason` | `string` |  |
+| `Plasmoid.constraintHints` | [`Plasma::Types::ConstraintHints`](docs:plasma;Plasma::Types::ConstraintHints) |  |
+| `Plasmoid.containmentDisplayHints` | [`Plasma::Types::ContainmentDisplayHints`](docs:plasma;Plasma::Types::ContainmentDisplayHints) |  |
+| `Plasmoid.contextualActions` | `QList<QObject*>` |  |
+| `Plasmoid.currentActivity` | `string` |  |
+| `Plasmoid.editMode` | `bool` |  |
+| `Plasmoid.effectiveBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) |  |
+| `Plasmoid.expanded` | `bool` |  |
+| `Plasmoid.formFactor` | [`Plasma::Types::FormFactor`](docs:plasma;Plasma::Types::FormFactor) |  |
+| `Plasmoid.fullRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](plasmoidfullrepresentation). The full "popup" view of the widget. |
+| `Plasmoid.fullRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) |  |
+| `Plasmoid.globalShortcut` | [`QKeySequence`](https://doc.qt.io/qt-5/qkeysequence.html) |  |
+| `Plasmoid.hideOnWindowDeactivate` | `bool ` |  |
+| `Plasmoid.icon` | `string` | [Example](#plasmoidicon) |
+| `Plasmoid.id` | `uint` |  |
+| `Plasmoid.immutability` | [`Plasma::Types::ImmutabilityType`](docs:plasma;Plasma::Types::ImmutabilityType) |  |
+| `Plasmoid.immutable` | `bool` |  |
+| `Plasmoid.loading` | `bool` |  |
+| `Plasmoid.location` | [`Plasma::Types::Location`](docs:plasma;Plasma::Types::Location) |  |
+| `Plasmoid.metaData` | [`KPluginMetaData`](docs:kcoreaddons;KPluginMetaData) |  |
+| `Plasmoid.nativeInterface` | `QObject` |  |
+| `Plasmoid.pluginName` | `string` |  |
+| `Plasmoid.preferredRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | Force a representation and ignore `Plasmoid.switchHeight`. [Example](#plasmoidfullrepresentation) |
+| `Plasmoid.rootItem` | `QObject` | Reference the widget's root item. Cannot be used in the config dialog. |
+| `Plasmoid.screen` | `int` |  |
+| `Plasmoid.screenGeometry` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
+| `Plasmoid.self` | `AppletInterface` |  |
+| `Plasmoid.status` | [`Plasma::Types::ItemStatus`](docs:plasma;Plasma::Types::ItemStatus) |  |
+| `Plasmoid.switchHeight` | `int` |  |
+| `Plasmoid.switchWidth` | `int` |  |
+| `Plasmoid.title` | `string` |  |
+| `Plasmoid.toolTipItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) |  |
+| `Plasmoid.toolTipMainText` | `string` |  |
+| `Plasmoid.toolTipSubText` | `string` |  |
+| `Plasmoid.toolTipTextFormat` | `int` |  |
+| `Plasmoid.userBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) |  |
+| `Plasmoid.userConfiguring` | `bool` |  |
 
-Note that while you can reference a property from this group by the root Item in the widget, you can also refer to properties in this group with the global context property `plasmoid` (lowercase) which is [dynamically defined at runtime](https://invent.kde.org/frameworks/plasma-framework/-/blob/ca97fada4215df0aa1725578c160df9105a4c2e2/src/plasmaquick/appletquickitem.cpp#L644) when the property group is imported.
+
+### plasmoid context property
+
+You can reference a property from the `Plasmoid.___` property group by the root `Item { id: widget }` of the widget with `widget.Plasmoid.___`. An easier method is to use the global context property `plasmoid` (lowercase) which is [dynamically defined at runtime](https://invent.kde.org/frameworks/plasma-framework/-/blob/ca97fada4215df0aa1725578c160df9105a4c2e2/src/plasmaquick/appletquickitem.cpp#L644) when the property group is imported.
 
 ```qml
+import QtQuick 2.0
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
 Item {
     id: widget
     Plasmoid.icon: 'starred-symbolic'
-    Label {
+    Plasmoid.fullRepresentation: PlasmaComponents3.Label {
         text: plasmoid.icon
         // OR
         // text: widget.Plasmoid.icon
@@ -888,3 +893,14 @@ X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
 
 [Search `plasma-workspace` for `X-Plasma-DBusActivationService`](https://invent.kde.org/search?utf8=%E2%9C%93&search=X-Plasma-DBusActivationService&group_id=1568&project_id=2703&scope=&search_code=true&snippets=false&repository_ref=master&nav_source=navbar) for more examples.
 
+
+
+
+<style>
+.td-content > table td code {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 100%;
+}
+</style>
