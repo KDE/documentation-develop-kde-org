@@ -2,15 +2,15 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.16)
 
 project(timekcm)
 
 set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.88.0")
+set(KF5_MIN_VERSION "5.97.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -18,7 +18,6 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
-    Svg
 )
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
@@ -28,12 +27,9 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Config
 )
 
-set(timesettings_SRCS
-    timesettings.cpp
-    timesettings.h
-)
+kcoreaddons_add_plugin(kcm_time INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
-add_library(kcm_time MODULE ${timesettings_SRCS})
+target_sources(kcm_time PRIVATE timesettings.cpp)
 
 target_link_libraries(kcm_time
     Qt5::Core
@@ -42,6 +38,6 @@ target_link_libraries(kcm_time
     KF5::QuickAddons
 )
 
-install(TARGETS kcm_time DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
+kpackage_install_package(package kcm_time kcms)
 
-kpackage_install_package(package kcm_time kcms) # Install our QML kpackage.
+kcmutils_generate_desktop_file(kcm_time)
