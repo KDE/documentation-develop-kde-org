@@ -10,7 +10,7 @@ aliases:
 
 Settings in Plasma are provided by KDE Configuration Modules (KCM). These can be loaded by multiple wrapper applications
 such as `systemsettings5` on the desktop, `plasma-settings` on mobile or `kcmshell5` for standalone config windows.
-The source code for many KCMs is in [plasma-workspace](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/kcms).
+The source code for the different modules is split across different locations, such as [plasma-workspace](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/kcms) or [plasma-desktop](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/kcms).
 
 You can query the available KCMs using `kcmshell5 --list`. To load an individual module in a standalone window pass its
 name to the wrapper application, e.g. `systemsettings kcm_accounts`, `plasma-settings -m kcm_kaccounts`, or `kcmshell5 kcm_kaccounts`.
@@ -41,9 +41,7 @@ The basic structure of this hypothetical time settings module is the following:
 
 This CMake file contains a few packages of note: [KCMUtils](docs:kcmutils) provides various classes that allow us to work with [KCModules](docs:kconfigwidgets;KCModule), and `Config` includes the [KConfig](docs:kconfig) classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](../../kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
 
-What's different here is that we are using C++ code as a plugin for our QML code. This is why we don't have a `main.cpp`: we only need the class that will provide the backend functionality for our KCM.
-
-For our KCM to work properly we must install it in our system, so at the end of our CMakeLists.txt we instruct CMake to install our KCM as a KPackage (similarly to a plasmoid, for example).
+What's different here is that we are using C++ code as a plugin for our QML code. This is why we don't have a `main.cpp`: we only need the class that will provide the backend functionality for our KCM. `kcoreaddons_add_plugin` creates such a plugin and installs it to the right location.
 
 ## timesettings.h
 
@@ -106,18 +104,18 @@ kcm.pop()
 ## Run it!
 
 All we need to do now is compile and run our KCM.
-In this case, we are installing our KCM to `~/.local/kde/`, a non-standard location, so that we don't risk messing up anything on our local environment (if you're feeling confident, you can omit `-DCMAKE_INSTALL_PREFIX`, in which case it will be installed to the default prefix, `/usr`).
+In this case, we are installing our KCM to `~/kde/usr`, a non-standard location, so that we don't risk messing up anything on our local environment.
 
 ```bash
 // Configure our project in an out-of-tree build/ folder
-cmake -B build/ -DCMAKE_INSTALL_PREFIX=~/.local/kde
+cmake -B build/ -DCMAKE_INSTALL_PREFIX=~/kde/usr
 // Compile the project inside the build/ folder
 cmake --build build/
-// Install the files compiled in build/ into the ~/.local/kde prefix
+// Install the files compiled in build/ into the ~/kde/usr prefix
 cmake --install build/
 ```
 
-Now that our KCM is installed, we can run it (that is, so long as we have executed `source prefix.sh`, which includes our non-standard `~/.local/kde/` location in our current environment).
+Now that our KCM is installed, we can run it (that is, so long as we have executed `source prefix.sh`, which includes our non-standard `~/kde/usr/` location in our current environment).
 
 ```bash
 source build/prefix.sh
