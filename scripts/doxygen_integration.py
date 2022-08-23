@@ -60,8 +60,12 @@ TAG_FILES = [
         'base_url': 'https://api.kde.org/frameworks/plasma-framework/html/'
     },
     {
-        'tags': 'https://api.kde.org/kdecoration/html/KDecoration2.tags',
+        'tags': 'https://api.kde.org/plasma/kdecoration/html/KDecoration2.tags',
         'base_url': 'https://api.kde.org/kdecoration/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/frameworks/kcmutils/html/KCMUtils.tags',
+        'base_url': 'https://api.kde.org/frameworks/kcmutils/html/'
     },
     {
         'tags': 'https://api.kde.org/frameworks/kirigami/html/Kirigami2.tags',
@@ -78,7 +82,7 @@ TAG_FILES = [
         'default_prefix': 'QtQuick.Controls',
     },
     {
-        'tags': 'https://api.kde.org/libksysguard/html/Libksysguard.tags',
+        'tags': 'https://api.kde.org/plasma/libksysguard/html/Libksysguard.tags',
         'base_url': 'https://api.kde.org/plasma/libksysguard/html/',
         'default_prefix': 'KSysGuard',
     },

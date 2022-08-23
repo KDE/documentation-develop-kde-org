@@ -18,7 +18,7 @@ name to the wrapper application, e.g. `systemsettings kcm_accounts`, `plasma-set
 ## Basic KCM
 
 KCMs consist of a KPackage holding the QML UI and a C++ library holding the logic. Some legacy KCMs are based on QtWidgets,
-however this is not recommended for new KCMs and it's not possible to load these in `plasma-settings`. In Plasma, new KCMs should be built using QML and Kirigami.
+however this is not recommended for new KCMs and it's not possible to load these in `plasma-settings`. In Plasma, new KCMs should be built using QML and [Kirigami](docs:kirigami2).
 
 As an example, we are going to create a time settings module that allows us to configure the time in our system.
 The basic structure of this hypothetical time settings module is the following:
@@ -26,8 +26,9 @@ The basic structure of this hypothetical time settings module is the following:
 
 ```
 ├── CMakeLists.txt
-├── timesettings.{cpp,h}
-├── timesettings.json
+├── timesettings.cpp
+├── timesettings.h
+├── kcm_time.json
 └── package
     └── contents/ui
         └── main.qml
@@ -36,9 +37,9 @@ The basic structure of this hypothetical time settings module is the following:
 
 ## CMakeLists.txt
 
-{{< readfile file="/content/docs/extend/kcm/CMakeLists.txt" highlight="cpp" >}}
+{{< readfile file="/content/docs/extend/kcm/CMakeLists.txt" highlight="cmake" >}}
 
-This CMake file contains a few packages of note: `KCMUtils` provides various classes that allow us to work with KCModules, and `Config` includes the KConfig classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](../../kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
+This CMake file contains a few packages of note: [KCMUtils](docs:kcmutils) provides various classes that allow us to work with [KCModules](docs:kconfigwidgets;KCModule), and `Config` includes the [KConfig](docs:kconfig) classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](../../kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
 
 What's different here is that we are using C++ code as a plugin for our QML code. This is why we don't have a `main.cpp`: we only need the class that will provide the backend functionality for our KCM.
 
@@ -51,8 +52,8 @@ For our KCM to work properly we must install it in our system, so at the end of 
 Here we are defining the class we will be using for our KCM.
 [KQuickAddons::ConfigModule](docs:kdeclarative;KQuickAddons::ConfigModule)
 serves as the base class for all QML-based KCMs. The
-[KQuickAddons::ManagedConfigModule](docs:kdeclarative;KQuickAddons::ManagedConfigModule) inherits `ConfigModule` and adds the [KConfigXT](../kconfig_xt) integration.
-You can read the linked API documentation to get a full description, and the previous page in this section goes into more detail about how KConfigXT works.
+[KQuickAddons::ManagedConfigModule](docs:kdeclarative;KQuickAddons::ManagedConfigModule) inherits [KQuickAddons::ConfigModule](docs:kdeclarative;KQuickAddons::ConfigModule) and adds the [KConfigXT](../kconfig_xt) integration.
+You can read the linked API documentation to get a full description, and the previous page in this section goes into more detail about how [KConfigXT](../kconfig_xt) works.
 
 ## timesettings.cpp
 
@@ -78,7 +79,7 @@ This `.json` file provides metadata about our KCM. These entries specify the fol
 
 {{< readfile file="/content/docs/extend/kcm/package/contents/ui/main.qml" highlight="json" >}}
 
-As you can see, this is a very basic KCM QML file. We have used a `SimpleKCM` component as the root component, and we have just included a label inside here.
+As you can see, this is a very basic KCM QML file. We have used a [SimpleKCM](docs:kdeclarative;org::kde::kcm::SimpleKCM) component as the root component, and we have just included a label inside here.
 
 More complex layouts will require using a different root component. Each has its own use:
 
@@ -105,17 +106,22 @@ kcm.pop()
 ## Run it!
 
 All we need to do now is compile and run our KCM.
-In this case, we are installing our KCM to `~/.local/kde/`, a non-standard location, so that we don't risk messing up anything on our local environment (if you're feeling confident, you can omit `-DCMAKE_INSTALL_PREFIX`).
+In this case, we are installing our KCM to `~/.local/kde/`, a non-standard location, so that we don't risk messing up anything on our local environment (if you're feeling confident, you can omit `-DCMAKE_INSTALL_PREFIX`, in which case it will be installed to the default prefix, `/usr`).
 
 ```bash
-mkdir build
-cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=~/.local/kde
-make -j8 install
-source prefix.sh
-kcmshell5 kcm_time
+// Configure our project in an out-of-tree build/ folder
+cmake -B build/ -DCMAKE_INSTALL_PREFIX=~/.local/kde
+// Compile the project inside the build/ folder
+cmake --build build/
+// Install the files compiled in build/ into the ~/.local/kde prefix
+cmake --install build/
 ```
 
 Now that our KCM is installed, we can run it (that is, so long as we have executed `source prefix.sh`, which includes our non-standard `~/.local/kde/` location in our current environment).
+
+```bash
+source build/prefix.sh
+kcmshell5 kcm_time
+```
 
 ![the time kcm running](./screenshot-kcm.png)
