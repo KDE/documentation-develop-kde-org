@@ -8,6 +8,7 @@ import configparser
 import requests
 import tarfile
 import urllib.request as request
+import json
 
 from yaml import safe_load, dump
 try:
@@ -30,18 +31,17 @@ def extractProjectDir(projectDir):
 
 def nameForId(path, plasmoid):
     configPath = ""
-    if os.path.exists(path + '/metadata.desktop'):
-        configPath = path + '/metadata.desktop'
-    elif os.path.exists(path + '/package/metadata.desktop'):
-        configPath = path + '/package/metadata.desktop'
+    if os.path.exists(path + '/metadata.json'):
+        configPath = path + '/metadata.json'
+    elif os.path.exists(path + '/package/metadata.json'):
+        configPath = path + '/package/metadata.json'
     else:
         return "BUG"
 
-    config = configparser.ConfigParser()
-    config.read(configPath, encoding='UTF-8')
+    with open(configPath, 'r') as metaDataFile:
+        md = json.load(metaDataFile)
 
-    return config['Desktop Entry']['X-KDE-PluginInfo-Name']
-
+        return md["KPlugin"]["Id"]
 
 def parseConfig(path, plasmoid, keys):
     if plasmoid == "CMakeLists.txt" or plasmoid == "Mainpage.dox":
