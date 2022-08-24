@@ -1,1 +1,2217 @@
-{"tagfile": {"compound": [{"@kind": "class", "name": {"$": "org::kde::ksysguard::faces::ExtendedLegend"}, "filename": {"$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"}, "member": [{"@kind": "property", "type": {"$": "var"}, "name": {"$": "colorSource"}, "anchorfile": {"$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"}, "anchor": {"$": "a8602dde1222f63051d801f49ad1165db"}, "arglist": {}}, {"@kind": "property", "type": {"$": "alias"}, "name": {"$": "sensorIds"}, "anchorfile": {"$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"}, "anchor": {"$": "a092a793a0b140fd341f46b02a48ff96a"}, "arglist": {}}, {"@kind": "property", "type": {"$": "SensorDataModel"}, "name": {"$": "sourceModel"}, "anchorfile": {"$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"}, "anchor": {"$": "aa7221249720bac83315cc5e65cf03a72"}, "arglist": {}}]}, {"@kind": "class", "name": {"$": "KSysGuard::Formatter"}, "filename": {"$": "classKSysGuard_1_1Formatter.html"}, "member": [{"@kind": "function", "@static": "yes", "type": {"$": "static QString"}, "name": {"$": "formatValue"}, "anchorfile": {"$": "classKSysGuard_1_1Formatter.html"}, "anchor": {"$": "a87a491da0677242787ab13b49cd3575e"}, "arglist": {"$": "(const QVariant &value, Unit unit, MetricPrefix targetPrefix=MetricPrefixAutoAdjust, FormatOptions options=FormatOptionNone)"}}, {"@kind": "function", "@static": "yes", "type": {"$": "static KLocalizedString"}, "name": {"$": "localizedString"}, "anchorfile": {"$": "classKSysGuard_1_1Formatter.html"}, "anchor": {"$": "a6357c86319b32aee828e8c02ec5867a2"}, "arglist": {"$": "(const QVariant &value, Unit unit, MetricPrefix targetPrefix=MetricPrefixAutoAdjust)"}}, {"@kind": "function", "@static": "yes", "type": {"$": "static qreal"}, "name": {"$": "scaleDownFactor"}, "anchorfile": {"$": "classKSysGuard_1_1Formatter.html"}, "anchor": {"$": "add6348c3999054481af1af229453f432"}, "arglist": {"$": "(const QVariant &value, Unit unit, MetricPrefix targetPrefix=MetricPrefixAutoAdjust)"}}, {"@kind": "function", "@static": "yes", "type": {"$": "static QString"}, "name": {"$": "symbol"}, "anchorfile": {"$": "classKSysGuard_1_1Formatter.html"}, "anchor": {"$": "ac5c5b0a67f85227b716ca3f874997d2a"}, "arglist": {"$": "(Unit unit)"}}]}, {"@kind": "class", "name": {"$": "KSysGuard::FormatterWrapper"}, "filename": {"$": "classKSysGuard_1_1FormatterWrapper.html"}, "base": {"$": "QObject"}}, {"@kind": "class", "name": {"$": "KSysGuard::Sensor"}, "filename": {"$": "classKSysGuard_1_1Sensor.html"}, "base": [{"$": "QObject"}, {"$": "QQmlParserStatus"}], "member": [{"@kind": "enumeration", "type": {}, "name": {"$": "Status"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "a25ee29d68128051d9d822e3e12e0071d"}, "arglist": {}, "enumvalue": [{"@file": "classKSysGuard_1_1Sensor.html", "@anchor": "a25ee29d68128051d9d822e3e12e0071da88183b946cc5f0e8c96b2e66e1c74a7e", "$": "Unknown"}, {"@file": "classKSysGuard_1_1Sensor.html", "@anchor": "a25ee29d68128051d9d822e3e12e0071da16bfbf9c462762cf1cba4134ec53c504", "$": "Loading"}, {"@file": "classKSysGuard_1_1Sensor.html", "@anchor": "a25ee29d68128051d9d822e3e12e0071dae7d31fc0602fb2ede144d18cdffd816b", "$": "Ready"}, {"@file": "classKSysGuard_1_1Sensor.html", "@anchor": "a25ee29d68128051d9d822e3e12e0071da902b0d55fddef6f8d651fe1035b7d4bd", "$": "Error"}, {"@file": "classKSysGuard_1_1Sensor.html", "@anchor": "a25ee29d68128051d9d822e3e12e0071da93f07b720ebf7d1246512569761a5804", "$": "Removed"}]}, {"@kind": "property", "type": {"$": "QString"}, "name": {"$": "description"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "aea8472351500771ea52f0fb519eb9ef5"}, "arglist": {}}, {"@kind": "property", "type": {"$": "bool"}, "name": {"$": "enabled"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "aace8b95b5568fac2c6e841eefc08bf04"}, "arglist": {}}, {"@kind": "property", "type": {"$": "qreal"}, "name": {"$": "maximum"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "ad709d7718f9fc6215a158478bae330bf"}, "arglist": {}}, {"@kind": "property", "type": {"$": "qreal"}, "name": {"$": "minimum"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "a92c937424e90d57f6f8b26b94bdf8186"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QString"}, "name": {"$": "name"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "af962d8dc933caf0a9c7742bc44b29548"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QString"}, "name": {"$": "sensorId"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "a0035de149bfbc662dc5196db4a9ebe25"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QString"}, "name": {"$": "shortName"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "aed119706f3bb84a9d3d985c4a363042f"}, "arglist": {}}, {"@kind": "property", "type": {"$": "Status"}, "name": {"$": "status"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "ae31fb8694ebc429c29da46ea73eb964d"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QVariant::Type"}, "name": {"$": "type"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "a911e9bd7759a075a1424a6ac20dbc021"}, "arglist": {}}, {"@kind": "property", "type": {"$": "KSysGuard::Unit"}, "name": {"$": "unit"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "a5972691f1323c495b2a5bcd486da9fb8"}, "arglist": {}}, {"@kind": "property", "type": {"$": "uint"}, "name": {"$": "updateInterval"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "ae0fd0e061df5c717e0cd6a035b8810bb"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QVariant"}, "name": {"$": "value"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "a9d0dabbe8df9638bfbfa7f254f2a6ad2"}, "arglist": {}}, {"@kind": "function", "type": {}, "name": {"$": "Sensor"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "ab9176b73eb6fe87707fde1c3506a8acf"}, "arglist": {"$": "(const SensorQuery &query, int index, QObject *parent=nullptr)"}}, {"@kind": "function", "type": {"$": "Q_SIGNAL void"}, "name": {"$": "metaDataChanged"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "a91df8f5f25f4f1874df364529c5ee015"}, "arglist": {"$": "() const "}}, {"@kind": "function", "type": {"$": "QVariant"}, "name": {"$": "value"}, "anchorfile": {"$": "classKSysGuard_1_1Sensor.html"}, "anchor": {"$": "a3794d23cc5b7f809087bcbe90ef09499"}, "arglist": {"$": "() const "}}]}, {"@kind": "class", "name": {"$": "KSysGuard::SensorDaemonInterface"}, "filename": {"$": "classKSysGuard_1_1SensorDaemonInterface.html"}, "base": {"$": "QObject"}}, {"@kind": "class", "name": {"$": "KSysGuard::SensorDataModel"}, "filename": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "base": [{"$": "QAbstractTableModel"}, {"$": "QQmlParserStatus"}], "member": [{"@kind": "enumeration", "type": {}, "name": {"$": "AdditionalRoles"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "SensorId"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409abc1aed23a43c4683658ddddf1ab2703d"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Name"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a5f5a39632fe0d2474149b05efa8493bb"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "ShortName"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a72785e857ef34789b0f17144ee4adcd4"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Description"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a4e47e366b7a8799948590181233b93e2"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Unit"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409acab09eae8f49ccffd1c778af3b210970"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Minimum"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a9e9f58f61035984e19be34b1337b0080"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Maximum"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409ac3cbee729f86ac218881b683143050d3"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Type"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409adddea12f89e848eb4c52394f6e5c8b42"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Value"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a262189ad77a01afeeeb6d7bc6a84da74"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "FormattedValue"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a9cc7a1aa43f1b4ecfed2694a78fcf7ad"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Color"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a81e78712c615e5404ddccb71f125d452"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "UpdateInterval"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a7dd4548a436382359f6e9c580bb41351"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Color"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a81e78712c615e5404ddccb71f125d452"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Description"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a4e47e366b7a8799948590181233b93e2"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "FormattedValue"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a9cc7a1aa43f1b4ecfed2694a78fcf7ad"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Maximum"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409ac3cbee729f86ac218881b683143050d3"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Minimum"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a9e9f58f61035984e19be34b1337b0080"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Name"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a5f5a39632fe0d2474149b05efa8493bb"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "SensorId"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409abc1aed23a43c4683658ddddf1ab2703d"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "ShortName"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a72785e857ef34789b0f17144ee4adcd4"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Type"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409adddea12f89e848eb4c52394f6e5c8b42"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Unit"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409acab09eae8f49ccffd1c778af3b210970"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "UpdateInterval"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a7dd4548a436382359f6e9c580bb41351"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Value"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a769951a1d2c11b3510775ff35a79a409a262189ad77a01afeeeb6d7bc6a84da74"}, "arglist": {}}, {"@kind": "property", "type": {"$": "bool"}, "name": {"$": "enabled"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a0a582e12fce0681d1a338a56d60772d8"}, "arglist": {}}, {"@kind": "property", "type": {"$": "qreal"}, "name": {"$": "maximum"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a8415d797f354cc533e726d2b4a307df8"}, "arglist": {}}, {"@kind": "property", "type": {"$": "qreal"}, "name": {"$": "minimum"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a07f1e72f0edc29c03734067a1586787c"}, "arglist": {}}, {"@kind": "property", "type": {"$": "bool"}, "name": {"$": "ready"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a0f13d459d9cf09e23cfa3ffa92720ce5"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QVariantMap"}, "name": {"$": "sensorColors"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "a39a0264d5a9a5025f69d29c31941ff17"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QStringList"}, "name": {"$": "sensors"}, "anchorfile": {"$": "classKSysGuard_1_1SensorDataModel.html"}, "anchor": {"$": "ac10a37a7fb8c71f4be22115589871c17"}, "arglist": {}}]}, {"@kind": "class", "name": {"$": "KSysGuard::SensorFace"}, "filename": {"$": "classKSysGuard_1_1SensorFace.html"}, "base": {"$": "QQuickItem"}, "member": [{"@kind": "enumvalue", "name": {"$": "Constrained"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a0bd7f9f98152f76e6b05b256649fd54ead767031d52edef3600110dd437845e22"}, "arglist": {}}, {"@kind": "enumeration", "type": {}, "name": {"$": "FormFactor"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a0bd7f9f98152f76e6b05b256649fd54e"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Planar"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a0bd7f9f98152f76e6b05b256649fd54eaad1b25436a3e5aa146555ca289335726"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Vertical"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a0bd7f9f98152f76e6b05b256649fd54ea177e88f103e34373db015df77e0447ab"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Horizontal"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a0bd7f9f98152f76e6b05b256649fd54ea649aa8c6698e5d7a0809216c7bfb0ea5"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Constrained"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a0bd7f9f98152f76e6b05b256649fd54ead767031d52edef3600110dd437845e22"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Horizontal"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a0bd7f9f98152f76e6b05b256649fd54ea649aa8c6698e5d7a0809216c7bfb0ea5"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Planar"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a0bd7f9f98152f76e6b05b256649fd54eaad1b25436a3e5aa146555ca289335726"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "Vertical"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a0bd7f9f98152f76e6b05b256649fd54ea177e88f103e34373db015df77e0447ab"}, "arglist": {}}, {"@kind": "property", "type": {"$": "MapProxySource"}, "name": {"$": "colorSource"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "aa351ee1c021878ac7eaf1fbc6388166f"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QQuickItem"}, "name": {"$": "contentItem"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "ae94c1c05106c04616a8e33bc8d3c9587"}, "arglist": {}}, {"@kind": "property", "type": {"$": "KSysGuard::SensorFaceController"}, "name": {"$": "controller"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "aced3c58a45e065822751f14e7d75cbf5"}, "arglist": {}}, {"@kind": "property", "type": {"$": "KSysGuard::SensorFace::FormFactor"}, "name": {"$": "formFactor"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "ab52cee4da186b84793dc8208ffd6c9af"}, "arglist": {}}, {"@kind": "property", "type": {"$": "org::kde::kirigami::Action"}, "name": {"$": "primaryActions"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a207b1452c940b3f621ad61c175fa3785"}, "arglist": {}}, {"@kind": "property", "type": {"$": "org::kde::kirigami::Action"}, "name": {"$": "secondaryActions"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFace.html"}, "anchor": {"$": "a535c6066eeed3b7784d6db242c4c7082"}, "arglist": {}}]}, {"@kind": "class", "name": {"$": "KSysGuard::SensorFaceController"}, "filename": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "base": {"$": "QObject"}, "member": [{"@kind": "property", "type": {"$": "QQuickItem"}, "name": {"$": "appearanceConfigUi"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a8f91eb23688a2cf8a1370e65601196c8"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QAbstractItemModel"}, "name": {"$": "availableFacesModel"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "ad9eaaf36505a869a8fd634a5cd47dc07"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QAbstractItemModel"}, "name": {"$": "availablePresetsModel"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a2110d75f190c3a76e70760d37dc1be59"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QQuickItem"}, "name": {"$": "compactRepresentation"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "ab3ba5f9e89b00364b5754ae959056aeb"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QQuickItem"}, "name": {"$": "faceConfigUi"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a790350c976af40f5a1858586c09a435b"}, "arglist": {}}, {"@kind": "property", "type": {"$": "KDeclarative::ConfigPropertyMap"}, "name": {"$": "faceConfiguration"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a082264d0160fec26f0477594d76d19fc"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QString"}, "name": {"$": "faceId"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "aec1f8f565b3885882b34c9de4073866f"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QQuickItem"}, "name": {"$": "fullRepresentation"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "ada38c2276272f59d0f44b041033e1208"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QJsonArray"}, "name": {"$": "highPrioritySensorIds"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a08d0c1ea04a3361b952982e612ac1400"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QString"}, "name": {"$": "icon"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a51c02b947e47a7ac78e4ae1e5d9a2a34"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QJsonArray"}, "name": {"$": "lowPrioritySensorIds"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "adcca191c6d35a8e7e4f7172d99e23b8c"}, "arglist": {}}, {"@kind": "property", "type": {"$": "int"}, "name": {"$": "maxTotalSensors"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a25ded227bac62cb49b5508a2ce09cf32"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QString"}, "name": {"$": "name"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a427625f18b6260e510921641229450de"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QVariantMap"}, "name": {"$": "sensorColors"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a04a2e67dcde8bb50be56ffd92160aa24"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QQuickItem"}, "name": {"$": "sensorsConfigUi"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a65f9ec71f5fd1307c307283b7305f566"}, "arglist": {}}, {"@kind": "property", "type": {"$": "bool"}, "name": {"$": "showTitle"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a09becd25f54cd65dd141a23666a24aae"}, "arglist": {}}, {"@kind": "property", "type": {"$": "bool"}, "name": {"$": "supportsLowPrioritySensors"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "aeca1ee217ea29b54021356944a0f0bff"}, "arglist": {}}, {"@kind": "property", "type": {"$": "bool"}, "name": {"$": "supportsSensorsColors"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a5396281c1a1c53d5027ce5360ef2a3d0"}, "arglist": {}}, {"@kind": "property", "type": {"$": "bool"}, "name": {"$": "supportsTotalSensors"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "abaf682ab2e24d3e8d804fd2bd0bcee07"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QString"}, "name": {"$": "title"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "ab76b318033bf1c1a9e5cdd3c2926e2d7"}, "arglist": {}}, {"@kind": "property", "type": {"$": "QJsonArray"}, "name": {"$": "totalSensors"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "aeff4146f9aacc8c964db3313d04516f5"}, "arglist": {}}, {"@kind": "function", "type": {}, "name": {"$": "SensorFaceController"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a3cd7539276150a615aaa8ca17c40afeb"}, "arglist": {"$": "(KConfigGroup &config, QQmlEngine *engine)"}}, {"@kind": "function", "type": {"$": "Q_INVOKABLE void"}, "name": {"$": "loadPreset"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a6ff97b4fea72b2132915a79c78ba405e"}, "arglist": {"$": "(const QString &preset)"}}, {"@kind": "function", "type": {"$": "Q_INVOKABLE void"}, "name": {"$": "reloadConfig"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "ae36ed65a797209ad43f8d8202fc5acbd"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "Q_INVOKABLE void"}, "name": {"$": "savePreset"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a7f13b074a513e1307cdb484466f8813a"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setShouldSync"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a764d4504f1fd3694a444053b3d5a2285"}, "arglist": {"$": "(bool sync)"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "shouldSync"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "a7fb3a237e44ae183ea16b0cdcbbc9a95"}, "arglist": {"$": "() const "}}, {"@kind": "function", "type": {"$": "Q_INVOKABLE void"}, "name": {"$": "uninstallPreset"}, "anchorfile": {"$": "classKSysGuard_1_1SensorFaceController.html"}, "anchor": {"$": "ad3f710704c9a28a765727ba3090cab3b"}, "arglist": {"$": "(const QString &pluginId)"}}]}, {"@kind": "class", "name": {"$": "KSysGuard::SensorQuery"}, "filename": {"$": "classKSysGuard_1_1SensorQuery.html"}, "base": {"$": "QObject"}, "member": [{"@kind": "function", "type": {"$": "bool"}, "name": {"$": "execute"}, "anchorfile": {"$": "classKSysGuard_1_1SensorQuery.html"}, "anchor": {"$": "a8fb41d75d221b0b2cf59f81561a53ae4"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "QStringList"}, "name": {"$": "sensorIds"}, "anchorfile": {"$": "classKSysGuard_1_1SensorQuery.html"}, "anchor": {"$": "acd918c0dfb1339995d336c04dad17810"}, "arglist": {"$": "() const "}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "sortByName"}, "anchorfile": {"$": "classKSysGuard_1_1SensorQuery.html"}, "anchor": {"$": "aea20cd42faf008c9c1ce45c47d99aff6"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "waitForFinished"}, "anchorfile": {"$": "classKSysGuard_1_1SensorQuery.html"}, "anchor": {"$": "a31a06c9b463cc1bda18ab7ea903b8832"}, "arglist": {"$": "()"}}]}, {"@kind": "class", "name": {"$": "KSysGuard::SensorTreeModel"}, "filename": {"$": "classKSysGuard_1_1SensorTreeModel.html"}, "base": {"$": "QAbstractItemModel"}}]}}
+{
+  "tagfile": {
+    "compound": [
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::ksysguard::faces::Choices"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1Choices.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::ksysguard::faces::ExtendedLegend"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "var"
+            },
+            "name": {
+              "$": "colorSource"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"
+            },
+            "anchor": {
+              "$": "a8602dde1222f63051d801f49ad1165db"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "sensorIds"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"
+            },
+            "anchor": {
+              "$": "a092a793a0b140fd341f46b02a48ff96a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "SensorDataModel"
+            },
+            "name": {
+              "$": "sourceModel"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"
+            },
+            "anchor": {
+              "$": "aa7221249720bac83315cc5e65cf03a72"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::FaceLoader"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1FaceLoader.html"
+        },
+        "base": [
+          {
+            "$": "QObject"
+          },
+          {
+            "$": "QQmlParserStatus"
+          }
+        ],
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QVariantMap"
+            },
+            "name": {
+              "$": "colors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1FaceLoader.html"
+            },
+            "anchor": {
+              "$": "aa6ab8481111ad919ad87575ca7e3992d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "KSysGuard::SensorFaceController"
+            },
+            "name": {
+              "$": "controller"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1FaceLoader.html"
+            },
+            "anchor": {
+              "$": "a70123b499c013f543f536fd8bc9ee985"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "faceId"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1FaceLoader.html"
+            },
+            "anchor": {
+              "$": "a788c9b3c85a1e12a05dd30fad7c9427c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "groupName"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1FaceLoader.html"
+            },
+            "anchor": {
+              "$": "ae7b8c8bce0175cd1c92127977f21ecfb"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QVariantMap"
+            },
+            "name": {
+              "$": "labels"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1FaceLoader.html"
+            },
+            "anchor": {
+              "$": "a8d605825489d06bfe356f6f882e1092c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "KSysGuard::SensorFaceController"
+            },
+            "name": {
+              "$": "parentController"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1FaceLoader.html"
+            },
+            "anchor": {
+              "$": "afa42e269f91c417be44322cf50a7b6ce"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "readOnly"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1FaceLoader.html"
+            },
+            "anchor": {
+              "$": "ad5c299215ca9bcc6d6251f27a21d0092"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QJsonArray"
+            },
+            "name": {
+              "$": "sensors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1FaceLoader.html"
+            },
+            "anchor": {
+              "$": "acfa52d52c99e975955fd335e53024a09"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::Formatter"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1Formatter.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static QString"
+            },
+            "name": {
+              "$": "formatValue"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Formatter.html"
+            },
+            "anchor": {
+              "$": "a87a491da0677242787ab13b49cd3575e"
+            },
+            "arglist": {
+              "$": "(const QVariant &value, Unit unit, MetricPrefix targetPrefix=MetricPrefixAutoAdjust, FormatOptions options=FormatOptionNone)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static KLocalizedString"
+            },
+            "name": {
+              "$": "localizedString"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Formatter.html"
+            },
+            "anchor": {
+              "$": "a6357c86319b32aee828e8c02ec5867a2"
+            },
+            "arglist": {
+              "$": "(const QVariant &value, Unit unit, MetricPrefix targetPrefix=MetricPrefixAutoAdjust)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static qreal"
+            },
+            "name": {
+              "$": "maximumLength"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Formatter.html"
+            },
+            "anchor": {
+              "$": "ab7b800ce312f2d5ce0158660b903a10c"
+            },
+            "arglist": {
+              "$": "(Unit unit, const QFont &font)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static qreal"
+            },
+            "name": {
+              "$": "scaleDownFactor"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Formatter.html"
+            },
+            "anchor": {
+              "$": "add6348c3999054481af1af229453f432"
+            },
+            "arglist": {
+              "$": "(const QVariant &value, Unit unit, MetricPrefix targetPrefix=MetricPrefixAutoAdjust)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static QString"
+            },
+            "name": {
+              "$": "symbol"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Formatter.html"
+            },
+            "anchor": {
+              "$": "ac5c5b0a67f85227b716ca3f874997d2a"
+            },
+            "arglist": {
+              "$": "(Unit unit)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::FormatterWrapper"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1FormatterWrapper.html"
+        },
+        "base": {
+          "$": "QObject"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::Sensor"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1Sensor.html"
+        },
+        "base": [
+          {
+            "$": "QObject"
+          },
+          {
+            "$": "QQmlParserStatus"
+          }
+        ],
+        "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "Status"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "a25ee29d68128051d9d822e3e12e0071d"
+            },
+            "arglist": {},
+            "enumvalue": [
+              {
+                "@file": "classKSysGuard_1_1Sensor.html",
+                "@anchor": "a25ee29d68128051d9d822e3e12e0071da88183b946cc5f0e8c96b2e66e1c74a7e",
+                "$": "Unknown"
+              },
+              {
+                "@file": "classKSysGuard_1_1Sensor.html",
+                "@anchor": "a25ee29d68128051d9d822e3e12e0071da16bfbf9c462762cf1cba4134ec53c504",
+                "$": "Loading"
+              },
+              {
+                "@file": "classKSysGuard_1_1Sensor.html",
+                "@anchor": "a25ee29d68128051d9d822e3e12e0071dae7d31fc0602fb2ede144d18cdffd816b",
+                "$": "Ready"
+              },
+              {
+                "@file": "classKSysGuard_1_1Sensor.html",
+                "@anchor": "a25ee29d68128051d9d822e3e12e0071da902b0d55fddef6f8d651fe1035b7d4bd",
+                "$": "Error"
+              },
+              {
+                "@file": "classKSysGuard_1_1Sensor.html",
+                "@anchor": "a25ee29d68128051d9d822e3e12e0071da93f07b720ebf7d1246512569761a5804",
+                "$": "Removed"
+              }
+            ]
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "description"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "aea8472351500771ea52f0fb519eb9ef5"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "enabled"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "aace8b95b5568fac2c6e841eefc08bf04"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "qreal"
+            },
+            "name": {
+              "$": "maximum"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "ad709d7718f9fc6215a158478bae330bf"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "qreal"
+            },
+            "name": {
+              "$": "minimum"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "a92c937424e90d57f6f8b26b94bdf8186"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "af962d8dc933caf0a9c7742bc44b29548"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "sensorId"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "a0035de149bfbc662dc5196db4a9ebe25"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "shortName"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "aed119706f3bb84a9d3d985c4a363042f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "Status"
+            },
+            "name": {
+              "$": "status"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "ae31fb8694ebc429c29da46ea73eb964d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QVariant::Type"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "a911e9bd7759a075a1424a6ac20dbc021"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "KSysGuard::Unit"
+            },
+            "name": {
+              "$": "unit"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "a5972691f1323c495b2a5bcd486da9fb8"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "uint"
+            },
+            "name": {
+              "$": "updateInterval"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "ae0fd0e061df5c717e0cd6a035b8810bb"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "updateRateLimit"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "afc8fac4c48d132409a1116fea719d4ac"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "value"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "a9d0dabbe8df9638bfbfa7f254f2a6ad2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "Sensor"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "ab9176b73eb6fe87707fde1c3506a8acf"
+            },
+            "arglist": {
+              "$": "(const SensorQuery &query, int index, QObject *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_SIGNAL void"
+            },
+            "name": {
+              "$": "metaDataChanged"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "ae0d018408977847f9b55801584ed4204"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "value"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1Sensor.html"
+            },
+            "anchor": {
+              "$": "a39d05b9bf39425979d6e46fde0812027"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::SensorDaemonInterface"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1SensorDaemonInterface.html"
+        },
+        "base": {
+          "$": "QObject"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::SensorDataModel"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1SensorDataModel.html"
+        },
+        "base": [
+          {
+            "$": "QAbstractTableModel"
+          },
+          {
+            "$": "QQmlParserStatus"
+          }
+        ],
+        "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "AdditionalRoles"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SensorId"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409abc1aed23a43c4683658ddddf1ab2703d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Name"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a5f5a39632fe0d2474149b05efa8493bb"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ShortName"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a72785e857ef34789b0f17144ee4adcd4"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Description"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a4e47e366b7a8799948590181233b93e2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Unit"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409acab09eae8f49ccffd1c778af3b210970"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Minimum"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a9e9f58f61035984e19be34b1337b0080"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Maximum"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409ac3cbee729f86ac218881b683143050d3"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Type"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409adddea12f89e848eb4c52394f6e5c8b42"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Value"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a262189ad77a01afeeeb6d7bc6a84da74"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FormattedValue"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a9cc7a1aa43f1b4ecfed2694a78fcf7ad"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Color"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a81e78712c615e5404ddccb71f125d452"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "UpdateInterval"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a7dd4548a436382359f6e9c580bb41351"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Color"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a81e78712c615e5404ddccb71f125d452"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Description"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a4e47e366b7a8799948590181233b93e2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FormattedValue"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a9cc7a1aa43f1b4ecfed2694a78fcf7ad"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Maximum"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409ac3cbee729f86ac218881b683143050d3"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Minimum"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a9e9f58f61035984e19be34b1337b0080"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Name"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a5f5a39632fe0d2474149b05efa8493bb"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SensorId"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409abc1aed23a43c4683658ddddf1ab2703d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ShortName"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a72785e857ef34789b0f17144ee4adcd4"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Type"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409adddea12f89e848eb4c52394f6e5c8b42"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Unit"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409acab09eae8f49ccffd1c778af3b210970"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "UpdateInterval"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a7dd4548a436382359f6e9c580bb41351"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Value"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a769951a1d2c11b3510775ff35a79a409a262189ad77a01afeeeb6d7bc6a84da74"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "enabled"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a0a582e12fce0681d1a338a56d60772d8"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "qreal"
+            },
+            "name": {
+              "$": "maximum"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a8415d797f354cc533e726d2b4a307df8"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "qreal"
+            },
+            "name": {
+              "$": "minimum"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a07f1e72f0edc29c03734067a1586787c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "ready"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a0f13d459d9cf09e23cfa3ffa92720ce5"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QVariantMap"
+            },
+            "name": {
+              "$": "sensorColors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a39a0264d5a9a5025f69d29c31941ff17"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QVariantMap"
+            },
+            "name": {
+              "$": "sensorLabels"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a8242703d0b25bf61e5960d504469bd82"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "sensors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "ac10a37a7fb8c71f4be22115589871c17"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "updateRateLimit"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorDataModel.html"
+            },
+            "anchor": {
+              "$": "a7d304c8d72d05cd6b093e1b32a2896f9"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::SensorFace"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1SensorFace.html"
+        },
+        "base": {
+          "$": "QQuickItem"
+        },
+        "member": [
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Constrained"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a0bd7f9f98152f76e6b05b256649fd54ead767031d52edef3600110dd437845e22"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "FormFactor"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a0bd7f9f98152f76e6b05b256649fd54e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Planar"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a0bd7f9f98152f76e6b05b256649fd54eaad1b25436a3e5aa146555ca289335726"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Vertical"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a0bd7f9f98152f76e6b05b256649fd54ea177e88f103e34373db015df77e0447ab"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Horizontal"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a0bd7f9f98152f76e6b05b256649fd54ea649aa8c6698e5d7a0809216c7bfb0ea5"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Constrained"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a0bd7f9f98152f76e6b05b256649fd54ead767031d52edef3600110dd437845e22"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Horizontal"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a0bd7f9f98152f76e6b05b256649fd54ea649aa8c6698e5d7a0809216c7bfb0ea5"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Planar"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a0bd7f9f98152f76e6b05b256649fd54eaad1b25436a3e5aa146555ca289335726"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Vertical"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a0bd7f9f98152f76e6b05b256649fd54ea177e88f103e34373db015df77e0447ab"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "MapProxySource"
+            },
+            "name": {
+              "$": "colorSource"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "aa351ee1c021878ac7eaf1fbc6388166f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QQuickItem"
+            },
+            "name": {
+              "$": "contentItem"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "ae94c1c05106c04616a8e33bc8d3c9587"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "KSysGuard::SensorFaceController"
+            },
+            "name": {
+              "$": "controller"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "aced3c58a45e065822751f14e7d75cbf5"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "KSysGuard::SensorFace::FormFactor"
+            },
+            "name": {
+              "$": "formFactor"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "ab52cee4da186b84793dc8208ffd6c9af"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "org::kde::kirigami::Action"
+            },
+            "name": {
+              "$": "primaryActions"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a207b1452c940b3f621ad61c175fa3785"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "org::kde::kirigami::Action"
+            },
+            "name": {
+              "$": "secondaryActions"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFace.html"
+            },
+            "anchor": {
+              "$": "a535c6066eeed3b7784d6db242c4c7082"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::SensorFaceController"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1SensorFaceController.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QQuickItem"
+            },
+            "name": {
+              "$": "appearanceConfigUi"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a8f91eb23688a2cf8a1370e65601196c8"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QAbstractItemModel"
+            },
+            "name": {
+              "$": "availableFacesModel"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "ad9eaaf36505a869a8fd634a5cd47dc07"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QAbstractItemModel"
+            },
+            "name": {
+              "$": "availablePresetsModel"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a2110d75f190c3a76e70760d37dc1be59"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QQuickItem"
+            },
+            "name": {
+              "$": "compactRepresentation"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "ab3ba5f9e89b00364b5754ae959056aeb"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QQuickItem"
+            },
+            "name": {
+              "$": "faceConfigUi"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a790350c976af40f5a1858586c09a435b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "KConfigPropertyMap"
+            },
+            "name": {
+              "$": "faceConfiguration"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "aecf9d9ef21a00453c8335ecba7f016ea"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "faceId"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "aec1f8f565b3885882b34c9de4073866f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QQuickItem"
+            },
+            "name": {
+              "$": "fullRepresentation"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "ada38c2276272f59d0f44b041033e1208"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QJsonArray"
+            },
+            "name": {
+              "$": "highPrioritySensorIds"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a08d0c1ea04a3361b952982e612ac1400"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "icon"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a51c02b947e47a7ac78e4ae1e5d9a2a34"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QJsonArray"
+            },
+            "name": {
+              "$": "lowPrioritySensorIds"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "adcca191c6d35a8e7e4f7172d99e23b8c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "maxTotalSensors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a25ded227bac62cb49b5508a2ce09cf32"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QJsonArray"
+            },
+            "name": {
+              "$": "missingSensors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a4583f9529241cca62cc492a047007362"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a427625f18b6260e510921641229450de"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QVariantMap"
+            },
+            "name": {
+              "$": "sensorColors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a04a2e67dcde8bb50be56ffd92160aa24"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QVariantMap"
+            },
+            "name": {
+              "$": "sensorLabels"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "ad30db63e726861b9d78473edfe2b1083"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QQuickItem"
+            },
+            "name": {
+              "$": "sensorsConfigUi"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a65f9ec71f5fd1307c307283b7305f566"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "showTitle"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a09becd25f54cd65dd141a23666a24aae"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "supportsLowPrioritySensors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "aeca1ee217ea29b54021356944a0f0bff"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "supportsSensorsColors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a5396281c1a1c53d5027ce5360ef2a3d0"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "supportsTotalSensors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "abaf682ab2e24d3e8d804fd2bd0bcee07"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "title"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "ab76b318033bf1c1a9e5cdd3c2926e2d7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QJsonArray"
+            },
+            "name": {
+              "$": "totalSensors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "aeff4146f9aacc8c964db3313d04516f5"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "updateRateLimit"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "ac598ebb9e4473ffcfd07525acebdc100"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "SensorFaceController"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a3cd7539276150a615aaa8ca17c40afeb"
+            },
+            "arglist": {
+              "$": "(KConfigGroup &config, QQmlEngine *engine)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KConfigGroup"
+            },
+            "name": {
+              "$": "configGroup"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a89ae1940796fdb69e1b25fef1ffa0480"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "loadPreset"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a6ff97b4fea72b2132915a79c78ba405e"
+            },
+            "arglist": {
+              "$": "(const QString &preset)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "reloadConfig"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "ae36ed65a797209ad43f8d8202fc5acbd"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "reloadFaceConfiguration"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "ae4d8fc4688f56d77249a359b8e7b231c"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "replaceSensors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a2f8bcca5b890024258fae4db24bdaca3"
+            },
+            "arglist": {
+              "$": "(const QString &from, const QString &to)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "savePreset"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a7f13b074a513e1307cdb484466f8813a"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setShouldSync"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a764d4504f1fd3694a444053b3d5a2285"
+            },
+            "arglist": {
+              "$": "(bool sync)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "shouldSync"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "a351d438448d0fe23186ffbaada332ec0"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "uninstallPreset"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorFaceController.html"
+            },
+            "anchor": {
+              "$": "ad3f710704c9a28a765727ba3090cab3b"
+            },
+            "arglist": {
+              "$": "(const QString &pluginId)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::SensorQuery"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1SensorQuery.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "execute"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorQuery.html"
+            },
+            "anchor": {
+              "$": "a8fb41d75d221b0b2cf59f81561a53ae4"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "sensorIds"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorQuery.html"
+            },
+            "anchor": {
+              "$": "a9d708e1767c3573988e17d3dbf2294bb"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "sortByName"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorQuery.html"
+            },
+            "anchor": {
+              "$": "aea20cd42faf008c9c1ce45c47d99aff6"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "waitForFinished"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorQuery.html"
+            },
+            "anchor": {
+              "$": "a31a06c9b463cc1bda18ab7ea903b8832"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::ksysguard::faces::SensorRangeSpinBox"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "from"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+            },
+            "anchor": {
+              "$": "a76d5c4c7d43349685e9c8e3fec66c4e0"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "real"
+            },
+            "name": {
+              "$": "multiplier"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+            },
+            "anchor": {
+              "$": "a1383b01c5d321b0bc4dd33de09e02e9c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "sensors"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+            },
+            "anchor": {
+              "$": "a97e40dea0b7a9d5e315f8f3bca78a779"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "to"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+            },
+            "anchor": {
+              "$": "a1c623168b8febecadeafeffdff041dd2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "unit"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+            },
+            "anchor": {
+              "$": "a714efe65a013f9e88480c44125e4cc5e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "real"
+            },
+            "name": {
+              "$": "value"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+            },
+            "anchor": {
+              "$": "ab78e03693236b5d7bbb9bed2706b56c1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "valueModified"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+            },
+            "anchor": {
+              "$": "ac3d0d4443a7912299d0971ae648273b6"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::SensorTreeModel"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1SensorTreeModel.html"
+        },
+        "base": {
+          "$": "QAbstractItemModel"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSysGuard::SensorUnitModel"
+        },
+        "filename": {
+          "$": "classKSysGuard_1_1SensorUnitModel.html"
+        },
+        "base": {
+          "$": "QAbstractListModel"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "ready"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorUnitModel.html"
+            },
+            "anchor": {
+              "$": "aeb6f32c924bfd823db984e35726596b3"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "sensors"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1SensorUnitModel.html"
+            },
+            "anchor": {
+              "$": "a0a338b93c554b2f00259886d423d2b13"
+            },
+            "arglist": {}
+          }
+        ]
+      }
+    ]
+  }
+}
