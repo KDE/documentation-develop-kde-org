@@ -1,311 +1,5 @@
 - groups:
   - entries:
-    - default: 'true'
-      description: ''
-      name: showGrid
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: showOffLeds
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: showSeconds
-      type: Bool
-    - default: 'false'
-      description: ''
-      name: showBcdFormat
-      type: Bool
-    - default: 'false'
-      description: ''
-      name: useCustomColorForActive
-      type: Bool
-    - default: green
-      description: ''
-      name: customColorForActive
-      type: Color
-    - default: 'false'
-      description: ''
-      name: useCustomColorForInactive
-      type: Bool
-    - default: red
-      description: ''
-      name: customColorForInactive
-      type: Color
-    - default: 'false'
-      description: ''
-      name: useCustomColorForGrid
-      type: Bool
-    - default: blue
-      description: ''
-      name: customColorForGrid
-      type: Color
-    name: General
-  id: org.kde.plasma.binaryclock
-- groups:
-  - entries:
-    - default: empty list
-      description: ''
-      name: history
-      type: StringList
-    - default: 'true'
-      description: ''
-      name: autoClipboard
-      type: Bool
-    - default: '#RRGGBB'
-      description: ''
-      name: defaultFormat
-      type: String
-    - default: 'true'
-      description: ''
-      name: pickOnActivate
-      type: Bool
-    name: General
-  id: org.kde.plasma.colorpicker
-- groups:
-  - entries:
-    - default: all
-      description: ''
-      name: dictionary
-      type: String
-    name: General
-  id: org.kde.plasma_applet_dict
-- groups:
-  - entries:
-    - default: empty string
-      description: ''
-      name: imagePath
-      type: String
-    - default: 'false'
-      description: ''
-      name: useImage
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: showNumerals
-      type: Bool
-    - default: '#333333'
-      description: ''
-      name: boardColor
-      type: Color
-    - default: '#ffffff'
-      description: ''
-      name: numberColor
-      type: Color
-    - default: '4'
-      description: ''
-      name: boardSize
-      type: Int
-    name: Appearance
-  id: org.kde.plasma.fifteenpuzzle
-- groups:
-  - entries:
-    - default: '1'
-      description: ''
-      name: fuzzyness
-      type: Int
-    - default: 'false'
-      description: ''
-      name: boldText
-      type: Bool
-    - default: 'false'
-      description: ''
-      name: italicText
-      type: Bool
-    name: Appearance
-  id: org.kde.plasma.fuzzyclock
-- groups:
-  - entries:
-    - default: Caps Lock
-      description: ''
-      name: key
-      type: StringList
-    name: General
-  id: org.kde.plasma.keyboardindicator
-- groups:
-  - entries:
-    - default: '10.0'
-      description: ''
-      name: interval
-      type: Double
-    - default: 'true'
-      description: ''
-      name: randomize
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: pauseOnMouseOver
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: useBackground
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: leftClickOpenImage
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: showCountdown
-      type: Bool
-    - default: '1'
-      description: ''
-      name: fillMode
-      type: int
-    name: General
-  - entries:
-    - default: empty list
-      description: ''
-      name: pathList
-      type: StringList
-    name: Paths
-  id: org.kde.plasma.mediaframe
-- groups:
-  - entries:
-    - default: yellow
-      description: ''
-      name: color
-      type: String
-    - default: 'null'
-      description: ''
-      name: fontSize
-      type: int
-    - default: empty string
-      description: ''
-      name: noteId
-      type: String
-    - default: '0'
-      description: ''
-      name: scrollX
-      type: Double
-    - default: '0'
-      description: ''
-      name: scrollY
-      type: Double
-    - default: '0'
-      description: ''
-      name: cursorPosition
-      type: Int
-    name: General
-  id: org.kde.plasma.notes
-- groups:
-  - entries:
-    - default: '1'
-      description: ''
-      name: maxSectionCount
-      type: Int
-    - default: 'false'
-      description: ''
-      name: showLauncherNames
-      type: Bool
-    - default: 'false'
-      description: ''
-      name: enablePopup
-      type: Bool
-    - default: empty string
-      description: ''
-      name: title
-      type: String
-    - default: empty list
-      description: ''
-      name: launcherUrls
-      type: StringList
-    - default: empty list
-      description: ''
-      name: popupUrls
-      type: StringList
-    name: General
-  id: org.kde.plasma.quicklaunch
-- groups:
-  - entries:
-    - default: 30,60,120,300,450,600,900,1200,1500,1800,2700,3600
-      description: ''
-      name: predefinedTimers
-      type: StringList
-    - default: '0'
-      description: ''
-      name: running
-      type: int
-    - default: '0'
-      description: ''
-      name: seconds
-      type: int
-    - default: 'null'
-      description: ''
-      name: savedAt
-      type: DateTime
-    - default: 'false'
-      description: ''
-      name: showTitle
-      type: Bool
-    - default: Timer
-      description: ''
-      name: title
-      type: String
-    - default: 'true'
-      description: ''
-      name: showSeconds
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: showNotification
-      type: Bool
-    - default: Timer finished
-      description: ''
-      name: notificationText
-      type: String
-    - default: 'false'
-      description: ''
-      name: runCommand
-      type: Bool
-    - default: empty string
-      description: ''
-      name: command
-      type: String
-    name: General
-  id: org.kde.plasma.timer
-- groups:
-  - entries:
-    - default: 'false'
-      description: ''
-      name: showFace
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: showName
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: showFullName
-      type: Bool
-    - default: 'false'
-      description: ''
-      name: showTechnicalInfo
-      type: Bool
-    name: General
-  id: org.kde.plasma.userswitcher
-- groups:
-  - entries:
-    - default: https://www.kde.org/
-      description: ''
-      name: url
-      type: String
-    - default: 'true'
-      description: ''
-      name: useMinViewWidth
-      type: Bool
-    - default: '600'
-      description: ''
-      name: minViewWidth
-      type: Int
-    - default: '100'
-      description: ''
-      name: constantZoomFactor
-      type: Int
-    name: General
-  id: org.kde.plasma.webbrowser
-- groups:
-  - entries:
     - default: 'false'
       description: ''
       name: showFlag
@@ -409,6 +103,10 @@
         a small panel).
       name: icon
       type: String
+    - default: 'null'
+      description: Text label for the Panel button
+      name: menuLabel
+      type: string
     - default: preferred://browser,org.kde.kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.discover.desktop
       description: List of general favorites. Supported values are menu id's (usually
         .desktop file names), special URLs that expand into default applications (e.g.
@@ -455,6 +153,10 @@
         the footer action buttons
       name: showActionButtonCaptions
       type: Bool
+    - default: 'false'
+      description: Whether to use a compact display style for list items
+      name: compactMode
+      type: Bool
     name: General
   id: org.kde.plasma.kickoff
 - groups:
@@ -491,14 +193,6 @@
       type: String
     name: General
   id: org.kde.plasma.marginsseparator
-- groups:
-  - entries:
-    - default: user-desktop
-      description: ''
-      name: icon
-      type: String
-    name: General
-  id: org.kde.plasma.minimizeall
 - groups:
   - entries:
     - default: '2'
@@ -803,6 +497,10 @@
       description: Custom date format string.
       name: customDateFormat
       type: string
+    - default: 'true'
+      description: Use Plasma default font and automatically determine font size.
+      name: autoFontAndSize
+      type: Bool
     - default: 'null'
       description: Font family. e.g "arial". The system font is used if this is not
         set.
@@ -816,6 +514,18 @@
       description: Sets the font to italic.
       name: italicText
       type: Bool
+    - default: '50'
+      description: Sets font weight.
+      name: fontWeight
+      type: Int
+    - default: 'null'
+      description: 'Sets font style '
+      name: fontStyleName
+      type: string
+    - default: '10'
+      description: Sets font size.
+      name: fontSize
+      type: Int
     - default: default
       description: ''
       name: timeFormat
@@ -935,3 +645,309 @@
       type: Int
     name: General
   id: org.kde.plasma.panelspacer
+- groups:
+  - entries:
+    - default: 'true'
+      description: ''
+      name: showGrid
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showOffLeds
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showSeconds
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: showBcdFormat
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: useCustomColorForActive
+      type: Bool
+    - default: green
+      description: ''
+      name: customColorForActive
+      type: Color
+    - default: 'false'
+      description: ''
+      name: useCustomColorForInactive
+      type: Bool
+    - default: red
+      description: ''
+      name: customColorForInactive
+      type: Color
+    - default: 'false'
+      description: ''
+      name: useCustomColorForGrid
+      type: Bool
+    - default: blue
+      description: ''
+      name: customColorForGrid
+      type: Color
+    name: General
+  id: org.kde.plasma.binaryclock
+- groups:
+  - entries:
+    - default: empty list
+      description: ''
+      name: history
+      type: StringList
+    - default: 'true'
+      description: ''
+      name: autoClipboard
+      type: Bool
+    - default: '#RRGGBB'
+      description: ''
+      name: defaultFormat
+      type: String
+    - default: 'true'
+      description: ''
+      name: pickOnActivate
+      type: Bool
+    name: General
+  id: org.kde.plasma.colorpicker
+- groups:
+  - entries:
+    - default: all
+      description: ''
+      name: dictionary
+      type: String
+    name: General
+  id: org.kde.plasma_applet_dict
+- groups:
+  - entries:
+    - default: empty string
+      description: ''
+      name: imagePath
+      type: String
+    - default: 'false'
+      description: ''
+      name: useImage
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showNumerals
+      type: Bool
+    - default: '#333333'
+      description: ''
+      name: boardColor
+      type: Color
+    - default: '#ffffff'
+      description: ''
+      name: numberColor
+      type: Color
+    - default: '4'
+      description: ''
+      name: boardSize
+      type: Int
+    name: Appearance
+  id: org.kde.plasma.fifteenpuzzle
+- groups:
+  - entries:
+    - default: '1'
+      description: ''
+      name: fuzzyness
+      type: Int
+    - default: 'false'
+      description: ''
+      name: boldText
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: italicText
+      type: Bool
+    name: Appearance
+  id: org.kde.plasma.fuzzyclock
+- groups:
+  - entries:
+    - default: Caps Lock
+      description: ''
+      name: key
+      type: StringList
+    name: General
+  id: org.kde.plasma.keyboardindicator
+- groups:
+  - entries:
+    - default: '10.0'
+      description: ''
+      name: interval
+      type: Double
+    - default: 'true'
+      description: ''
+      name: randomize
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: pauseOnMouseOver
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: useBackground
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: leftClickOpenImage
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showCountdown
+      type: Bool
+    - default: '1'
+      description: ''
+      name: fillMode
+      type: int
+    name: General
+  - entries:
+    - default: empty list
+      description: ''
+      name: pathList
+      type: StringList
+    name: Paths
+  id: org.kde.plasma.mediaframe
+- groups:
+  - entries:
+    - default: yellow
+      description: ''
+      name: color
+      type: String
+    - default: 'null'
+      description: ''
+      name: fontSize
+      type: int
+    - default: empty string
+      description: ''
+      name: noteId
+      type: String
+    - default: '0'
+      description: ''
+      name: scrollX
+      type: Double
+    - default: '0'
+      description: ''
+      name: scrollY
+      type: Double
+    - default: '0'
+      description: ''
+      name: cursorPosition
+      type: Int
+    name: General
+  id: org.kde.plasma.notes
+- groups:
+  - entries:
+    - default: '1'
+      description: ''
+      name: maxSectionCount
+      type: Int
+    - default: 'false'
+      description: ''
+      name: showLauncherNames
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: enablePopup
+      type: Bool
+    - default: empty string
+      description: ''
+      name: title
+      type: String
+    - default: empty list
+      description: ''
+      name: launcherUrls
+      type: StringList
+    - default: empty list
+      description: ''
+      name: popupUrls
+      type: StringList
+    name: General
+  id: org.kde.plasma.quicklaunch
+- groups:
+  - entries:
+    - default: 30,60,120,300,450,600,900,1200,1500,1800,2700,3600
+      description: ''
+      name: predefinedTimers
+      type: StringList
+    - default: '0'
+      description: ''
+      name: running
+      type: int
+    - default: '0'
+      description: ''
+      name: seconds
+      type: int
+    - default: 'null'
+      description: ''
+      name: savedAt
+      type: DateTime
+    - default: 'false'
+      description: ''
+      name: showTitle
+      type: Bool
+    - default: Timer
+      description: ''
+      name: title
+      type: String
+    - default: 'true'
+      description: ''
+      name: showSeconds
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showNotification
+      type: Bool
+    - default: Timer finished
+      description: ''
+      name: notificationText
+      type: String
+    - default: 'false'
+      description: ''
+      name: runCommand
+      type: Bool
+    - default: empty string
+      description: ''
+      name: command
+      type: String
+    name: General
+  id: org.kde.plasma.timer
+- groups:
+  - entries:
+    - default: 'false'
+      description: ''
+      name: showFace
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showName
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showFullName
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: showTechnicalInfo
+      type: Bool
+    name: General
+  id: org.kde.plasma.userswitcher
+- groups:
+  - entries:
+    - default: https://www.kde.org/
+      description: ''
+      name: url
+      type: String
+    - default: 'true'
+      description: ''
+      name: useMinViewWidth
+      type: Bool
+    - default: '600'
+      description: ''
+      name: minViewWidth
+      type: Int
+    - default: '100'
+      description: ''
+      name: constantZoomFactor
+      type: Int
+    name: General
+  id: org.kde.plasma.webbrowser
