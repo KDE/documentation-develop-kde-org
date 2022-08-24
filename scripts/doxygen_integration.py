@@ -140,7 +140,7 @@ for tag_file in TAG_FILES:
     Path("_data").mkdir(parents=True, exist_ok=True)
     with open(jsonFile, 'w') as outputStream:
         try:
-            dump(bf.data(fromstring(content)), outputStream)
+            dump(bf.data(fromstring(content)), outputStream, indent=2)
         except ParseError:
             logging.error(f"Failed to parse xml content for {component_name}")
             # don't break and move to next
