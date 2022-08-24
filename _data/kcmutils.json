@@ -1,0 +1,2757 @@
+{
+  "tagfile": {
+    "compound": [
+      {
+        "@kind": "class",
+        "name": {
+          "$": "AboutPlugin"
+        },
+        "filename": {
+          "$": "classAboutPlugin.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSettings::Dialog"
+        },
+        "filename": {
+          "$": "classKSettings_1_1Dialog.html"
+        },
+        "base": {
+          "$": "KCMultiDialog"
+        },
+        "member": [
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "pluginSelectionChanged"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1Dialog.html"
+            },
+            "anchor": {
+              "$": "a042e3d089adcd43091b36bdc6c039e95"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "Dialog"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1Dialog.html"
+            },
+            "anchor": {
+              "$": "a3664c8a209aa071b244b99202a1e9f8d"
+            },
+            "arglist": {
+              "$": "(const QStringList &components, QWidget *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "Dialog"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1Dialog.html"
+            },
+            "anchor": {
+              "$": "ab30ac48588a82983f653f58d50a52ddc"
+            },
+            "arglist": {
+              "$": "(QWidget *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addPluginInfos"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1Dialog.html"
+            },
+            "anchor": {
+              "$": "a142a2ebc3261d98ba6cea2fe4718330a"
+            },
+            "arglist": {
+              "$": "(const QList< KPluginInfo > &plugininfos)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< KPluginInfo >"
+            },
+            "name": {
+              "$": "pluginInfos"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1Dialog.html"
+            },
+            "anchor": {
+              "$": "a771f782de0f3070fbeba55b0ffb6ca83"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setAllowComponentSelection"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1Dialog.html"
+            },
+            "anchor": {
+              "$": "ae6312490b658178d861c8dda1a27a31f"
+            },
+            "arglist": {
+              "$": "(bool allowSelection)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setComponentBlacklist"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1Dialog.html"
+            },
+            "anchor": {
+              "$": "a2b37e5aa85a04363e1a0197572a029c1"
+            },
+            "arglist": {
+              "$": "(const QStringList &blacklist)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setKCMArguments"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1Dialog.html"
+            },
+            "anchor": {
+              "$": "ab8cdcd6795c24c721bd404b3c22385a4"
+            },
+            "arglist": {
+              "$": "(const QStringList &arguments)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "showEvent"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1Dialog.html"
+            },
+            "anchor": {
+              "$": "ae67b9617e6c8177a625b22eb3091fd95"
+            },
+            "arglist": {
+              "$": "(QShowEvent *) override"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCModuleContainer"
+        },
+        "filename": {
+          "$": "classKCModuleContainer.html"
+        },
+        "base": {
+          "$": "KCModule"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleContainer"
+            },
+            "anchorfile": {
+              "$": "classKCModuleContainer.html"
+            },
+            "anchor": {
+              "$": "aba9f649f01bc6a38eb91a1aeca9ebd46"
+            },
+            "arglist": {
+              "$": "(QWidget *parent, const QString &mods=QString())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleContainer"
+            },
+            "anchorfile": {
+              "$": "classKCModuleContainer.html"
+            },
+            "anchor": {
+              "$": "ad45ea6504c50750836d8d515e0889e44"
+            },
+            "arglist": {
+              "$": "(QWidget *parent, const QStringList &mods)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "~KCModuleContainer"
+            },
+            "anchorfile": {
+              "$": "classKCModuleContainer.html"
+            },
+            "anchor": {
+              "$": "a8893fb7900ca9cad4085f214b2287c76"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addModule"
+            },
+            "anchorfile": {
+              "$": "classKCModuleContainer.html"
+            },
+            "anchor": {
+              "$": "ace851d474737d6cb8c77ee3ec0146a5c"
+            },
+            "arglist": {
+              "$": "(const QString &module)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "defaults"
+            },
+            "anchorfile": {
+              "$": "classKCModuleContainer.html"
+            },
+            "anchor": {
+              "$": "a8b8b1bcf6bce50d442a19449ca53e748"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "load"
+            },
+            "anchorfile": {
+              "$": "classKCModuleContainer.html"
+            },
+            "anchor": {
+              "$": "a705ee3374537687df552831e0f2b8c8b"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "save"
+            },
+            "anchorfile": {
+              "$": "classKCModuleContainer.html"
+            },
+            "anchor": {
+              "$": "a045e1086d36a35938dc87187b3576b73"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCModuleData"
+        },
+        "filename": {
+          "$": "classKCModuleData.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "aboutToLoad"
+            },
+            "anchorfile": {
+              "$": "classKCModuleData.html"
+            },
+            "anchor": {
+              "$": "a8e60cca9dbd3e4b366b9edf4d2c152b7"
+            },
+            "arglist": {
+              "$": "(QPrivateSignal)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "loaded"
+            },
+            "anchorfile": {
+              "$": "classKCModuleData.html"
+            },
+            "anchor": {
+              "$": "aaba660f9ddb0f0c166c6ef70629104ac"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "isDefaults"
+            },
+            "anchorfile": {
+              "$": "classKCModuleData.html"
+            },
+            "anchor": {
+              "$": "a965f8761423c3dbeb595654678e47a45"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "matchesQuery"
+            },
+            "anchorfile": {
+              "$": "classKCModuleData.html"
+            },
+            "anchor": {
+              "$": "a30b773dd2de7e14513964df64d65eb6d"
+            },
+            "arglist": {
+              "$": "(const QString &query) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "revertToDefaults"
+            },
+            "anchorfile": {
+              "$": "classKCModuleData.html"
+            },
+            "anchor": {
+              "$": "af94f266e3b8476178b7f03f636251fef"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "autoRegisterSkeletons"
+            },
+            "anchorfile": {
+              "$": "classKCModuleData.html"
+            },
+            "anchor": {
+              "$": "a7418111e92ed1f72d8e385bae19656ca"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "registerSkeleton"
+            },
+            "anchorfile": {
+              "$": "classKCModuleData.html"
+            },
+            "anchor": {
+              "$": "a6c5e17322467dafb2a932055e73302d9"
+            },
+            "arglist": {
+              "$": "(KCoreConfigSkeleton *skeleton)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCModuleInfo"
+        },
+        "filename": {
+          "$": "classKCModuleInfo.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleInfo"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "aa43bd95cc8ed429218a0e966f2d7bcd6"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleInfo"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "af57abec101dc24864ecbba8ed1e16e59"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &rhs)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleInfo"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a70314823ca72200ecf9c9df22988eba5"
+            },
+            "arglist": {
+              "$": "(const KPluginInfo &pluginInfo)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleInfo"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "adb479255dc2143bcb05510311f0fb08f"
+            },
+            "arglist": {
+              "$": "(const QString &desktopFile)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleInfo"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a877b61a1c81939244cce405d5a388cd2"
+            },
+            "arglist": {
+              "$": "(KService::Ptr moduleInfo)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "~KCModuleInfo"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a7c8d6229e1d1e3780611675a883dcdfa"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "comment"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a708e1dfdfda8179b0768e291ee19ee0f"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "docPath"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "aa4c6366787eaa7a79388000bc33b01fe"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "fileName"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a426d64365dde3f2dbdfd8a0b605e3fd6"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "handle"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "ae7ab1006acce059c103fd4317709c4da"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "icon"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a7214f34dd2979bb6c3e740302fe96463"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isValid"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "ac0602237ae767af7ba8232976ea7823a"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "keywords"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a85b3fb136fa10cf7dbc29ee662a9c587"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "library"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a3e5b514021b75f676b62ee98aad65660"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "moduleName"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "ab747d194a594699513d3517d234a60bb"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "operator!="
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "aa9affdb41f3be79f74424f2b0f7bdab9"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &rhs) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCModuleInfo &"
+            },
+            "name": {
+              "$": "operator="
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a587b079bf8e14161ffc41c36656091c5"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &rhs)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "operator=="
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a94c35cebb5728f59e96879e66dd767e8"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &rhs) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPluginInfo"
+            },
+            "name": {
+              "$": "pluginInfo"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a7442ad4e2699587116239bdaaad17e02"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "property"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "ace1ec37688959af6df5f0a76350aa466"
+            },
+            "arglist": {
+              "$": "(const QString &key) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KService::Ptr"
+            },
+            "name": {
+              "$": "service"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a5ec77af956f19bcc292e45b88a75b069"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "weight"
+            },
+            "anchorfile": {
+              "$": "classKCModuleInfo.html"
+            },
+            "anchor": {
+              "$": "a922beb158dead62e9f01e849ff4cf4c3"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCModuleProxy"
+        },
+        "filename": {
+          "$": "classKCModuleProxy.html"
+        },
+        "base": {
+          "$": "QWidget"
+        },
+        "member": [
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "changed"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "acd8b1e4801637e804d8b247b361db492"
+            },
+            "arglist": {
+              "$": "(KCModuleProxy *mod)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "childClosed"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a13d414891c7a428e42e8a72666461438"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "defaults"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a564d47d826e86554978924ee0f00d839"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "deleteClient"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a50ccc8c6b1cd7f49447812024b3b976f"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleProxy"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "ad91c224b1fc72ea74ffef8fd17d22c0b"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &info, QWidget *parent=nullptr, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleProxy"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a0f0e5de45e7e936a740a2d221b0554c9"
+            },
+            "arglist": {
+              "$": "(const KPluginMetaData &metaData, QWidget *parent=nullptr, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleProxy"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a53e3fbc5889c8eb79dad67b999afec4c"
+            },
+            "arglist": {
+              "$": "(const KService::Ptr &service, QWidget *parent=nullptr, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModuleProxy"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "af5a1b2844942cbd9c12284a3461a40aa"
+            },
+            "arglist": {
+              "$": "(const QString &serviceName, QWidget *parent=nullptr, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "~KCModuleProxy"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "ae9bf1be4d9eba1f500be830b705b4a6e"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "const KAboutData *"
+            },
+            "name": {
+              "$": "aboutData"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a92d2aa990d76c164fbfa79571348e8cf"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCModule::Buttons"
+            },
+            "name": {
+              "$": "buttons"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a44841bab691525077e74c2d72ee6846b"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "changed"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a154cd6d09489d91476a6caff2517c5a9"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "dbusPath"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "ab2f8203c3366265b0b752e1782b6a0cb"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "dbusService"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a22cffa5316e5cd044a265b66283d37b2"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "defaulted"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a4856616117c1ca2bad3ff29b59fcfcb3"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isChanged"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a9ee1e4bb3abd4caa718d6a1fece5e95f"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "load"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "acf8c3283771767a2a2f907a27d09c64c"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPluginMetaData"
+            },
+            "name": {
+              "$": "metaData"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a0b1a57122758853c7ba962ce84956e44"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QSize"
+            },
+            "name": {
+              "$": "minimumSizeHint"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "abfe3d419395f6100d202d590a58535a3"
+            },
+            "arglist": {
+              "$": "() const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCModuleInfo"
+            },
+            "name": {
+              "$": "moduleInfo"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a0ba5bffdb3b004831b17e17b89635fab"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "quickHelp"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a1baf39a1e32e725def898b434bfdc8ba"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCModule *"
+            },
+            "name": {
+              "$": "realModule"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a00c61146a8d353460a2933849575d5f9"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "save"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a73a578508c3a025c2813536fc6c8a558"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setDefaultsIndicatorsVisible"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "a87269de548da4430efe0e99e5da2de3f"
+            },
+            "arglist": {
+              "$": "(bool show)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "showEvent"
+            },
+            "anchorfile": {
+              "$": "classKCModuleProxy.html"
+            },
+            "anchor": {
+              "$": "aaf88a0463f14fc47eecb54d8440519ec"
+            },
+            "arglist": {
+              "$": "(QShowEvent *) override"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCMultiDialog"
+        },
+        "filename": {
+          "$": "classKCMultiDialog.html"
+        },
+        "base": {
+          "$": "KPageDialog"
+        },
+        "member": [
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "configCommitted"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "abf8d7b3c52fd90d348c680b8a067aee9"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "configCommitted"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "aeeeb0724750a8e224b58b7c8f7e867fd"
+            },
+            "arglist": {
+              "$": "(const QByteArray &componentName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCMultiDialog"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "a1fd91a9a8c0f1ac9fc3026da63ec66b9"
+            },
+            "arglist": {
+              "$": "(QWidget *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "~KCMultiDialog"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "a195bc2a9e89c8f8160db58ffd92a20ec"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPageWidgetItem *"
+            },
+            "name": {
+              "$": "addModule"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "ab835a0a73736ab0e2ebb70f6f5ecabe8"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &moduleinfo, KPageWidgetItem *parent=nullptr, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPageWidgetItem *"
+            },
+            "name": {
+              "$": "addModule"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "ad8a4bb565776fcbac91d0e56686fb4b4"
+            },
+            "arglist": {
+              "$": "(const KPluginMetaData &metaData)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPageWidgetItem *"
+            },
+            "name": {
+              "$": "addModule"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "a7a4aaa4979fb10ea3411cfb40f36d4f1"
+            },
+            "arglist": {
+              "$": "(const KPluginMetaData &metaData, const QStringList &args)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPageWidgetItem *"
+            },
+            "name": {
+              "$": "addModule"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "ab7eb63946bec308de4a1261e213d93e1"
+            },
+            "arglist": {
+              "$": "(const QString &module, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "clear"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "a2fd7ff4dc1d13a8809dc889eb4188145"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "slotApplyClicked"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "a0d560dfb5d8db98d1805d6e59509a81a"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "slotDefaultClicked"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "abfb661693e8182d36c8d20ad5ace5f04"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "slotHelpClicked"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "adacfac1abb508f0079d685d1d157c416"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "slotOkClicked"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "a168bc04990fbff16d344681919fc72ed"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "slotUser1Clicked"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "a38f54b4cdf6b7d266286cdb808ed24ce"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "KCMultiDialog"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "a97d940f9103810fbecc3f63a9b7937f2"
+            },
+            "arglist": {
+              "$": "(KPageWidget *pageWidget, QWidget *parent, Qt::WindowFlags flags=Qt::WindowFlags())"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "closeEvent"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "a55c44c19e29f44b7f5ec1ba059014ee4"
+            },
+            "arglist": {
+              "$": "(QCloseEvent *event) override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "showEvent"
+            },
+            "anchorfile": {
+              "$": "classKCMultiDialog.html"
+            },
+            "anchor": {
+              "$": "ac94f083894eae40b406342ce8ee48ec6"
+            },
+            "arglist": {
+              "$": "(QShowEvent *event) override"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KPluginDelegate"
+        },
+        "filename": {
+          "$": "classKPluginDelegate.html"
+        },
+        "base": {
+          "$": "org::kde::kirigami::BasicListItem"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KPluginSelector"
+        },
+        "filename": {
+          "$": "classKPluginSelector.html"
+        },
+        "base": {
+          "$": "QWidget"
+        },
+        "member": [
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "changed"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a791dd77d1529c20150d60957267dbfc8"
+            },
+            "arglist": {
+              "$": "(bool hasChanged)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "configCommitted"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a95ea07497d1e292eaf57aab3a6cdfdca"
+            },
+            "arglist": {
+              "$": "(const QByteArray &componentName)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "defaulted"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a561b64cdd412a34ed753edbc9deec9ff"
+            },
+            "arglist": {
+              "$": "(bool isDefault)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "defaultsIndicatorsVisible"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a5b54ea27e197fc26070b1256c8a9ce0f"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KPluginSelector"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "aca26b8efd41e4996091f7eef360c66dc"
+            },
+            "arglist": {
+              "$": "(QWidget *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "~KPluginSelector"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "abe0a31a44a099cfa8ebaac397a2fc086"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addPlugins"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a501cc29d63504c92e73d6e3bfa0f1683"
+            },
+            "arglist": {
+              "$": "(const QList< KPluginInfo > &pluginInfoList, PluginLoadMethod pluginLoadMethod=ReadConfigFile, const QString &categoryName=QString(), const QString &categoryKey=QString(), const KSharedConfig::Ptr &config=KSharedConfig::Ptr())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addPlugins"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a0083776940c6bb68b47f6b737bd5d44b"
+            },
+            "arglist": {
+              "$": "(const QString &componentName, const QString &categoryName=QString(), const QString &categoryKey=QString(), KSharedConfig::Ptr config=KSharedConfig::Ptr())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "clearPlugins"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "ac64b270269acf398046c2a7b8650eb36"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "configurationArguments"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a8eb3d9d313d15c5a239c87b633c241a1"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "defaults"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "ac8e384839a14d0bdf17c0c8a6a93d7cb"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isDefault"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a0e7a73c92b32d282288017afca846a8e"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isSaveNeeded"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a42cffb47bb7bd4d49a01f114a31c023c"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "load"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "ab028a22b586d0698f61cb3f5b54ae7b1"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "save"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "ad9e0185ec6b1ab4dbb532b92d52496d3"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setAdditionalButtonHandler"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a5e6892c3c9ba1c47d3521b3d52859308"
+            },
+            "arglist": {
+              "$": "(std::function< QPushButton *(const KPluginInfo &)> handler)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setConfigurationArguments"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "ab49104bd9390a94e7d378b522d8c6e8e"
+            },
+            "arglist": {
+              "$": "(const QStringList &arguments)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setDefaultsIndicatorsVisible"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a1f939bf2b7e3b017298b19449e802242"
+            },
+            "arglist": {
+              "$": "(bool isVisible)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "showConfiguration"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "ade0f159792b182a14d726c37b83e89bf"
+            },
+            "arglist": {
+              "$": "(const QString &pluginId)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "updatePluginsState"
+            },
+            "anchorfile": {
+              "$": "classKPluginSelector.html"
+            },
+            "anchor": {
+              "$": "a48ff6cc3cf9551e8d82ba1f3bdd92456"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KPluginWidget"
+        },
+        "filename": {
+          "$": "classKPluginWidget.html"
+        },
+        "base": {
+          "$": "QWidget"
+        },
+        "member": [
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "changed"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "a0f249b05817f67c5a6520a762268c2fd"
+            },
+            "arglist": {
+              "$": "(bool enabled)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "defaulted"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "aa845c6f2e50f989f6c82336efb52c678"
+            },
+            "arglist": {
+              "$": "(bool isDefault)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "pluginConfigSaved"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "a8e20bb6e19928a955229487aa548a5aa"
+            },
+            "arglist": {
+              "$": "(const QString &pluginId)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "pluginEnabledChanged"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "ada1b07e37edbe5b87d0b0b0a4896864b"
+            },
+            "arglist": {
+              "$": "(const QString &pluginId, bool enabled)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addPlugins"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "af08ebe209448195e46977eefcb751010"
+            },
+            "arglist": {
+              "$": "(const QVector< KPluginMetaData > &plugins, const QString &categoryLabel)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "clear"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "ae69356edeed0e1b1bdd7a6f847bef151"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "configurationArguments"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "ad1a288d0d21287e561470a77866954f7"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "defaults"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "ab20850412896fa40e69cc826d4dfc47f"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isDefault"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "ac63fd8e5aca0ccf7aa810a1c8b21c9f7"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isSaveNeeded"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "a81b0d157b96c17697290564e1dd0c8e9"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "load"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "a50006fe15d86dbf42a028f81dd37d10a"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "save"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "a3ec3f71a6a8de054c3e09eef74082c90"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setAdditionalButtonHandler"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "a6a1fbf44c514af9e169f122c965a8831"
+            },
+            "arglist": {
+              "$": "(const std::function< QPushButton *(const KPluginMetaData &)> &handler)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setConfig"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "a6427a0185a515301b7d09d18df7a6a8c"
+            },
+            "arglist": {
+              "$": "(const KConfigGroup &config)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setConfigurationArguments"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "abb7746179bd16c671f1c9480f020f17b"
+            },
+            "arglist": {
+              "$": "(const QStringList &arguments)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setDefaultsIndicatorsVisible"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "aa358659f17df27eb2b7f5764941ab405"
+            },
+            "arglist": {
+              "$": "(bool isVisible)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "showConfiguration"
+            },
+            "anchorfile": {
+              "$": "classKPluginWidget.html"
+            },
+            "anchor": {
+              "$": "a9a9238d290964bb11abd73d838031a9c"
+            },
+            "arglist": {
+              "$": "(const QString &pluginId)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSettings::PluginPage"
+        },
+        "filename": {
+          "$": "classKSettings_1_1PluginPage.html"
+        },
+        "base": {
+          "$": "KCModule"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "PluginPage"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1PluginPage.html"
+            },
+            "anchor": {
+              "$": "a7e98d5003ae84e1c7cab83d3e4f3c07b"
+            },
+            "arglist": {
+              "$": "(const KAboutData *aboutData, QWidget *parent=nullptr, const QVariantList &args=QVariantList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "load"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1PluginPage.html"
+            },
+            "anchor": {
+              "$": "a9bde17758723598ac9a0855858132890"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPluginSelector *"
+            },
+            "name": {
+              "$": "pluginSelector"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1PluginPage.html"
+            },
+            "anchor": {
+              "$": "a2c3cdac8e08ed50517a29e69fd9a3e93"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "save"
+            },
+            "anchorfile": {
+              "$": "classKSettings_1_1PluginPage.html"
+            },
+            "anchor": {
+              "$": "a8ea7cfcda4764abe35e8896213964f16"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "UnboundScrollArea"
+        },
+        "filename": {
+          "$": "classUnboundScrollArea.html"
+        },
+        "base": {
+          "$": "QScrollArea"
+        }
+      },
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "KCModuleLoader"
+        },
+        "filename": {
+          "$": "namespaceKCModuleLoader.html"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "ErrorReporting"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a81df4206a4263bda1faeecc4e9d5747d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "None"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a81df4206a4263bda1faeecc4e9d5747da20014ac1da26a191b4d9de679ae9d3e7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Inline"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a81df4206a4263bda1faeecc4e9d5747da005cd4b0726931d7e3c564b24c1e2bb1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Dialog"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a81df4206a4263bda1faeecc4e9d5747da746e97d8f1d1cf1235b1d9e2559ede0a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Both"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a81df4206a4263bda1faeecc4e9d5747dac900aa7bd376141a32912f2e49ae68ed"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCMUTILS_EXPORT bool"
+            },
+            "name": {
+              "$": "isDefaults"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a2155e695c5703bcfe577017a2e8271b8"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &module, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCMUTILS_EXPORT KCModule *"
+            },
+            "name": {
+              "$": "loadModule"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "ad593f496988aa95f36ddd5f42ac48cbc"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &module, ErrorReporting report, QWidget *parent=nullptr, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCMUTILS_EXPORT KCModule *"
+            },
+            "name": {
+              "$": "loadModule"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "ad006a6cbbba4ccc313140ac4169d754f"
+            },
+            "arglist": {
+              "$": "(const KPluginMetaData &metaData, QWidget *parent=nullptr, const QVariantList &args={})"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCMUTILS_EXPORT KCModule *"
+            },
+            "name": {
+              "$": "loadModule"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a7bea1c2d2711125123a0ee3e61b610ee"
+            },
+            "arglist": {
+              "$": "(const QString &module, ErrorReporting report, QWidget *parent=nullptr, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCMUTILS_EXPORT KCModuleData *"
+            },
+            "name": {
+              "$": "loadModuleData"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a27c7557ea44e8086da9abd81ead466d0"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &module, const QStringList &args=QStringList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCMUTILS_EXPORT KCModule *"
+            },
+            "name": {
+              "$": "reportError"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a52ea06ddb9f1a439fdcacbc44837a4d9"
+            },
+            "arglist": {
+              "$": "(ErrorReporting report, const QString &text, const QString &details, QWidget *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCMUTILS_EXPORT void"
+            },
+            "name": {
+              "$": "unloadModule"
+            },
+            "anchorfile": {
+              "$": "namespaceKCModuleLoader.html"
+            },
+            "anchor": {
+              "$": "a486d01e5f9c68b2c44d4c34de034a6ad"
+            },
+            "arglist": {
+              "$": "(const KCModuleInfo &mod)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "KSettings"
+        },
+        "filename": {
+          "$": "namespaceKSettings.html"
+        },
+        "namespace": {
+          "$": "KSettings::Dispatcher"
+        },
+        "class": [
+          {
+            "@kind": "class",
+            "$": "KSettings::Dialog"
+          },
+          {
+            "@kind": "class",
+            "$": "KSettings::PluginPage"
+          }
+        ]
+      },
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "KSettings::Dispatcher"
+        },
+        "filename": {
+          "$": "namespaceKSettings_1_1Dispatcher.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QString >"
+            },
+            "name": {
+              "$": "componentNames"
+            },
+            "anchorfile": {
+              "$": "namespaceKSettings_1_1Dispatcher.html"
+            },
+            "anchor": {
+              "$": "ae47d555e7ec4a315fa656c844a2e112a"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "registerComponent"
+            },
+            "anchorfile": {
+              "$": "namespaceKSettings_1_1Dispatcher.html"
+            },
+            "anchor": {
+              "$": "ab75700ddc2345404e16d2aec72c3b1d3"
+            },
+            "arglist": {
+              "$": "(const QString &componentName, QObject *recv, const char *slot)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "reparseConfiguration"
+            },
+            "anchorfile": {
+              "$": "namespaceKSettings_1_1Dispatcher.html"
+            },
+            "anchor": {
+              "$": "a3f165d512dd5118b1e10802d1dc7c3c3"
+            },
+            "arglist": {
+              "$": "(const QString &componentName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "syncConfiguration"
+            },
+            "anchorfile": {
+              "$": "namespaceKSettings_1_1Dispatcher.html"
+            },
+            "anchor": {
+              "$": "abf32ab9840424edefd0650047328c060"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "page",
+        "name": {
+          "$": "index"
+        },
+        "title": {
+          "$": "KCMUtils"
+        },
+        "filename": {
+          "$": "index"
+        }
+      }
+    ]
+  }
+}
