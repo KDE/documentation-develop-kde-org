@@ -88,6 +88,6 @@ Still Need Help?
 ----------------
 
 For more information and help you can find us on
-[Matrix](https://matrix.to/#/#kde_vdg:matrix.org),
-[IRC](irc://chat.freenode.net/kde-vdg) or
+[Matrix](https://matrix.to/#/#visualdesigngroup:kde.org),
+[IRC](irc://irc.libera.chat/visualdesign) or
 [Telegram](https://telegram.me/vdgmainroom)
