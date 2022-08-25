@@ -15,7 +15,7 @@ restrictions, assigning profiles to users and groups and more.
 
 #### IRC/Matrix Channels
 
-* Advice and answers to questions can be found on #kde and #kde-devel on irc.freenode.net
+* Advice and answers to questions can be found on [#kde](irc://irc.libera.chat/kde) and [#kde-devel](irc://irc.libera.chat/kde-devel) on Libera Chat as well as in the rooms [KDE](https://matrix.to/#/#kde:kde.org) and [KDE Development](https://matrix.to/#/#kde-devel:kde.org) on Matrix.
 
 #### Mailing Lists
 
