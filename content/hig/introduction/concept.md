@@ -50,8 +50,8 @@ If you create your personas, consider the following:
 -   Always try to define personas based on empirical data. Feel free to
     ask the VDG for help assistance with the collection of empirical data.
     
-    [Matrix](https://matrix.to/#/#kde_vdg:matrix.org),
-    [IRC](irc://chat.freenode.net/kde-vdg) or
+    [Matrix](https://matrix.to/#/#visualdesigngroup:kde.org),
+    [IRC](irc://irc.libera.chat/visualdesign) or
     [Telegram](https://telegram.me/vdgmainroom)
 
 -   Add enough information to establish a good impression of the target
