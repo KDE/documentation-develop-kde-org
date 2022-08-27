@@ -14,7 +14,7 @@ guideline as well as alternative solutions are helpful. A HIG should not
 only include widgets and their appearance but also core usability goals,
 generic design specifications, and user demands. To manage all these
 aspects we have chosen to adopt the "[Universal Model of a User
-Interface](http://www.baxleydesign.com/pdfs/dux03_baxleyUIModel.pdf)" by
+Interface](https://web.archive.org/web/20120305211113/http://www.baxleydesign.com/pdfs/dux03_baxleyUIModel.pdf)" by
 Bob Baxley (2003) as basis for the new KDE HIG. This model has been
 slightly adjusted to account for more recent approaches to visual design
 guidelines.
