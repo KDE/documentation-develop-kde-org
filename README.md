@@ -112,11 +112,11 @@ Links to `api.kde.org` and `doc.qt.io` can be generated as follows:
 [text](docs:component;link)
 ```
 
-where `text` is the text for the link, `component` is the component (e.g. `kirigami2`, `qtquickcontrols`) and `link` is the item to link to (e.g. `QtQuick.Controls.Label`, `org::kde::kirigami::BasicListItem`, `KMessageBox`)
+where `text` is the text for the link, `component` is the component (e.g. `kirigami2`, `qtquickcontrols`) and `link` is the item to link to (e.g. `QtQuick.Controls.Label`, `org::kde::kirigami::BasicListItem`, `KMessageBox`).
 
-When you want to link to the main page of a component's documentation, you can omit the `link`, as in `[Kirigami](docs:kirigami2)`.
+When you want to link to the main page for the documentation of a KDE component, you can omit the `link`, as in `[Kirigami](docs:kirigami2)`. This cannot be done for Qt components.
 
-If the component you want to link to isn't added to `scripts/doxygen_integration.py` yet, add it there and execute `python scripts/doxygen_integration.py`.
+If the component you want to link to wasn't added to `scripts/doxygen_integration.py` yet, add it there and execute `python3 scripts/doxygen_integration.py`. After running the script, make sure to add the generated JSON files in the `_data/` folder and commit them together with your MR.
 
 Examples:
  - `[AbstractCard](docs:kirigami2;AbstractCard)`
