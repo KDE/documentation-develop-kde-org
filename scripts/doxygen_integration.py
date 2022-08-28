@@ -15,6 +15,33 @@ import logging
 import sys
 
 TAG_FILES = [
+    # ===== Qt API links ======
+    {
+        'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtquickcontrols.tags',
+        'base_url': 'https://doc.qt.io/qt-5/',
+        'default_prefix': 'QtQuick.Controls',
+    },
+    {
+        'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtwidgets.tags',
+        'base_url': 'https://doc.qt.io/qt-5/',
+    },
+    {
+        'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtgui.tags',
+        'base_url': 'https://doc.qt.io/qt-5/',
+    },
+    {
+        'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtcore.tags',
+        'base_url': 'https://doc.qt.io/qt-5/',
+    },
+    {
+        'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtqml.tags',
+        'base_url': 'https://doc.qt.io/qt-5/',
+    },
+    {
+        'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtdbus.tags',
+        'base_url': 'https://doc.qt.io/qt-5/',
+    },
+    # ===== Frameworks API links =====
     {
         'tags': 'https://api.kde.org/frameworks/kdeclarative/html/KDeclarative.tags',
         'base_url': 'https://api.kde.org/frameworks/kdeclarative/html/'
@@ -65,10 +92,6 @@ TAG_FILES = [
         'base_url': 'https://api.kde.org/frameworks/plasma-framework/html/'
     },
     {
-        'tags': 'https://api.kde.org/plasma/kdecoration/html/KDecoration2.tags',
-        'base_url': 'https://api.kde.org/kdecoration/html/'
-    },
-    {
         'tags': 'https://api.kde.org/frameworks/kcmutils/html/KCMUtils.tags',
         'base_url': 'https://api.kde.org/frameworks/kcmutils/html/'
     },
@@ -81,16 +104,21 @@ TAG_FILES = [
         'tags': 'https://api.kde.org/frameworks/kitemmodels/html/KItemModels.tags',
         'base_url': 'https://api.kde.org/frameworks/kitemmodels/html/',
     },
+    # ===== Plasma API links
     {
-        'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtquickcontrols.tags',
-        'base_url': 'https://doc.qt.io/qt-5/',
-        'default_prefix': 'QtQuick.Controls',
+        'tags': 'https://api.kde.org/plasma/kdecoration/html/KDecoration2.tags',
+        'base_url': 'https://api.kde.org/kdecoration/html/'
+    },
+    {
+        'tags': 'https://api.kde.org/plasma/plasma-workspace/html/Plasma-workspace.tags',
+        'base_url': 'https://api.kde.org/plasma/plasma-workspace/html/'
     },
     {
         'tags': 'https://api.kde.org/plasma/libksysguard/html/Libksysguard.tags',
         'base_url': 'https://api.kde.org/plasma/libksysguard/html/',
         'default_prefix': 'KSysGuard',
     },
+    # ===== KDEPim API links
     {
         'tags': 'https://api.kde.org/kdepim/akonadi/html/Akonadi.tags',
         'base_url': 'https://api.kde.org/kdepim/akonadi/html/',
