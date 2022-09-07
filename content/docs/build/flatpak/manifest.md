@@ -10,13 +10,13 @@ Let's first take a look at our previous manifest to understand what each thing d
 
 {{< code-toggle prefix="kate" >}}id: org.kde.kate
 runtime: org.kde.Platform
-runtime-version: "5.15"
+runtime-version: "5.15-21.08"
 sdk: org.kde.Sdk
 command: kate
 desktop-file-name-suffix: " (Nightly)"
 finish-args:
   - "--share=ipc"
-  - "--socket=x11"
+  - "--socket=fallback-x11"
   - "--socket=wayland"
 modules:
   - name: konsole
@@ -63,7 +63,7 @@ Now let's take a look at each component from a logical sequence of information (
 
 `sdk` refers to the bundle of development libraries used for building your application. Away from your sight, `flatpak-builder` creates a .build folder in the same place where your manifest is, builds it there, then creates a package. Here we use the KDE/Qt development libraries provided by `org.kde.Sdk`.
 
-`finish-args` are the arguments pertaining to the permissions your flatpak will have. `--share=ipc` provides access to shared memory, `--socket=x11` allows your application to be controlled by an X server, usually Xorg, and `--socket=wayland` allows your application to be controlled by a Wayland compositor, like KWin.
+`finish-args` are the arguments pertaining to the permissions your flatpak will have. `--share=ipc` provides access to shared memory, `--socket=wayland` allows your application to be controlled by a Wayland compositor, like KWin, and `--socket=fallback-x11` allows your application to be controlled by an X server, usually Xorg, but only when using an X11 session, meaning that the app won't have unnecessary X11 permissions while on a Wayland session.
 
 `modules` are the things to be compiled and their respective compilation options. Here we build Konsole so we can make use of its KonsoleParts for Kate to display its embedded terminal. The `name` property is used for clarification and in the case of multiple flatpak manifests. `buildsystem` is the software used to compile, which in KDE software's case is usually cmake or cmake-ninja.
 
