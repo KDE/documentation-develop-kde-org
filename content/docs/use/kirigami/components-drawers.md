@@ -212,6 +212,8 @@ These two drawers are so similar because they are, in fact, the same Kirigami co
 {{< section-left >}}
 
 ```qml
+import QtQuick.Controls 2.15 as QQC2
+
 Kirigami.Page {
 
 	Kirigami.OverlayDrawer {
@@ -223,7 +225,7 @@ Kirigami.Page {
 		contentItem: RowLayout {
 			Layout.fillWidth: true
 
-			Kirigami.Label {
+			QQC2.Label {
 				Layout.fillWidth: true
 				text: "Say hello to my little drawer!"
 			}
