@@ -67,6 +67,9 @@ titleLink: Installation # title in the sidebar
 description:
   > In this tutorial you will learn.... # Short summary of the page (displayed in the google description and as subtitle)
 weight: 1 # ordering of the articles in the section
+authors:
+  - SPDX-FileLicenseText: Your name <email@address>
+SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
 ## Introduction
