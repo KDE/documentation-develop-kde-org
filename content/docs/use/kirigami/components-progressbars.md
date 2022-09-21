@@ -63,7 +63,7 @@ Controls.BusyIndicator {}
 {{< /section-left >}}
 {{< section-right >}}
 
-![A busy indicator](busyindicator.png)
+![A busy indicator](/docs/use/kirigami/components-progressbars/busyindicator.png)
 
 {{< /section-right >}}
 {{< /sections >}}

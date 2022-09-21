@@ -53,7 +53,7 @@ Kirigami.Page {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A simple listview](listview-simple.png)
+![A simple listview](/docs/use/kirigami/components-listview/listview-simple.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -126,7 +126,7 @@ ListView {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A list view with a placeholder message](listview-placeholdermessage.png)
+![A list view with a placeholder message](/docs/use/kirigami/components-listview/listview-placeholdermessage.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -165,7 +165,7 @@ ListView {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A listview with a header](listview-header.png)
+![A listview with a header](/docs/use/kirigami/components-listview/listview-header.png)
 
 {{< /section-right >}}
 {{< /sections >}}

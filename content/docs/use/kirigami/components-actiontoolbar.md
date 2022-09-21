@@ -99,7 +99,7 @@ Controls.GroupBox {
 {{< /section-left >}}
 {{< section-right >}}
 
-![ActionToolBar with children center-aligned](actiontoolbar-alignment.png)
+![ActionToolBar with children center-aligned](/docs/use/kirigami/components-actiontoolbar/actiontoolbar-alignment.png)
 
 {{< /section-right >}}
 {{< /sections >}}

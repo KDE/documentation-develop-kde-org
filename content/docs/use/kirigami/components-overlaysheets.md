@@ -43,7 +43,7 @@ Kirigami.Page {
 
 {{< section-right >}}
 
-![Simple overlay sheet](sheet_simple.png)
+![Simple overlay sheet](/docs/use/kirigami/components-overlaysheets/sheet_simple.png)
 
 {{< /section-right >}}
 
@@ -159,7 +159,7 @@ Kirigami.OverlaySheet {
 
 {{< section-right >}}
 
-![Sheet header](sheet_header.png)
+![Sheet header](/docs/use/kirigami/components-overlaysheets/sheet_header.png)
 
 {{< /section-right >}}
 
@@ -197,7 +197,7 @@ Kirigami.OverlaySheet {
 
 {{< section-right >}}
 
-![Sheet footer](sheet_footer.png)
+![Sheet footer](/docs/use/kirigami/components-overlaysheets/sheet_footer.png)
 
 {{< /section-right >}}
 
@@ -228,7 +228,7 @@ Kirigami.OverlaySheet {
 
 {{< section-right >}}
 
-![Sheet with a listview](sheet_listview.png)
+![Sheet with a listview](/docs/use/kirigami/components-overlaysheets/sheet_listview.png)
 
 {{< /section-right >}}
 

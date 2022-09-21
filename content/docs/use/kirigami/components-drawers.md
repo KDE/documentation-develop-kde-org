@@ -48,7 +48,7 @@ Kirigami.ApplicationWindow {
 {{< /section-left >}}
 {{< section-right >}}
 
-![Our new global drawer](globaldrawer_simple.png)
+![Our new global drawer](/docs/use/kirigami/components-drawers/globaldrawer_simple.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -94,7 +94,7 @@ globalDrawer: Kirigami.GlobalDrawer {
 {{< /section-left >}}
 {{< section-right >}}
 
-![Search bar header global drawer](globaldrawer_header.png)
+![Search bar header global drawer](/docs/use/kirigami/components-drawers/globaldrawer_header.png)
 
 Our global drawer now shows the search bar component we set as the header.
 
@@ -141,7 +141,7 @@ globalDrawer: Kirigami.GlobalDrawer {
 {{< /section-left >}}
 {{< section-right >}}
 
-![Global drawer as a menu on the desktop](globaldrawer_menu.png)
+![Global drawer as a menu on the desktop](/docs/use/kirigami/components-drawers/globaldrawer_menu.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -182,7 +182,7 @@ globalDrawer: Kirigami.GlobalDrawer {
 {{< /section-left >}}
 {{< section-right >}}
 
-![Global drawer with title and icon in banner](globaldrawer-banner.png)
+![Global drawer with title and icon in banner](/docs/use/kirigami/components-drawers/globaldrawer-banner.png)
 
 {{< /section-right >}}
 {{< /sections >}}

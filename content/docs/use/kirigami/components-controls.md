@@ -36,7 +36,7 @@ Kirigami.Page {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A freshly-clicked button](controls-button.png)
+![A freshly-clicked button](/docs/use/kirigami/components-controls/controls-button.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -74,7 +74,7 @@ Kirigami.OverlayDrawer {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A toggleable button](controls-togglebutton.png)
+![A toggleable button](/docs/use/kirigami/components-controls/controls-togglebutton.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -102,7 +102,7 @@ Controls.ToolButton {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A tool button](controls-toolbutton.png)
+![A tool button](/docs/use/kirigami/components-controls/controls-toolbutton.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -132,7 +132,7 @@ Controls.CheckBox {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A set of checkboxes](controls-checkbox.png)
+![A set of checkboxes](/docs/use/kirigami/components-controls/controls-checkbox.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -166,7 +166,7 @@ ColumnLayout {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A set of radio buttons](controls-radiobutton.png)
+![A set of radio buttons](/docs/use/kirigami/components-controls/controls-radiobutton.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -196,7 +196,7 @@ Controls.Switch {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A set of switches](controls-switch.png)
+![A set of switches](/docs/use/kirigami/components-controls/controls-switch.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -232,7 +232,7 @@ Controls.Slider {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A set of sliders](controls-sliders.png)
+![A set of sliders](/docs/use/kirigami/components-controls/controls-sliders.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -254,7 +254,7 @@ Controls.Slider {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A set of tickmarked sliders](controls-tickmarkedsliders.png)
+![A set of tickmarked sliders](/docs/use/kirigami/components-controls/controls-tickmarkedsliders.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -280,7 +280,7 @@ Controls.RangeSlider {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A set of range sliders](controls-rangesliders.png)
+![A set of range sliders](/docs/use/kirigami/components-controls/controls-rangesliders.png)
 
 {{< /section-right >}}
 {{< /sections >}}

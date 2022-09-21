@@ -45,7 +45,7 @@ Kirigami.Page {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A simple inline message and button](inlinemessages-simple.png)
+![A simple inline message and button](/docs/use/kirigami/components-inlinemessages/inlinemessages-simple.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -98,7 +98,7 @@ ColumnLayout {
 {{< /section-left >}}
 {{< section-right >}}
 
-![Different inline message types](inlinemessages-types.png)
+![Different inline message types](/docs/use/kirigami/components-inlinemessages/inlinemessages-types.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -123,7 +123,7 @@ Kirigami.InlineMessage {
 {{< /section-left >}}
 {{< section-right >}}
 
-![An inline message with rich text](inlinemessages-richtext.png)
+![An inline message with rich text](/docs/use/kirigami/components-inlinemessages/inlinemessages-richtext.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -145,7 +145,7 @@ Kirigami.InlineMessage {
 {{< /section-left >}}
 {{< section-right >}}
 
-![An inline message with a specified icon](inlinemessages-icon.png)
+![An inline message with a specified icon](/docs/use/kirigami/components-inlinemessages/inlinemessages-icon.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -192,7 +192,7 @@ ColumnLayout {
 {{< /section-left >}}
 {{< section-right >}}
 
-![An inline message with two actions](inlinemessages-actions.png)
+![An inline message with two actions](/docs/use/kirigami/components-inlinemessages/inlinemessages-actions.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -218,7 +218,7 @@ Kirigami.InlineMessage {
 {{< /section-left >}}
 {{< section-right >}}
 
-![An inline message with close button showing](inlinemessages-closebutton.png)
+![An inline message with close button showing](/docs/use/kirigami/components-inlinemessages/inlinemessages-closebutton.png)
 
 {{< /section-right >}}
 {{< /sections >}}

@@ -49,7 +49,7 @@ Kirigami.Page {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A simple formlayout](formlayouts-simple.png)
+![A simple formlayout](/docs/use/kirigami/components-formlayouts/formlayouts-simple.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -115,7 +115,7 @@ Kirigami.FormLayout {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A formlayout with sections](formlayouts-sections.png)
+![A formlayout with sections](/docs/use/kirigami/components-formlayouts/formlayouts-sections.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -150,7 +150,7 @@ Kirigami.FormLayout {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A formlayout with checkable child](formlayouts-checkable.png)
+![A formlayout with checkable child](/docs/use/kirigami/components-formlayouts/formlayouts-checkable.png)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -186,7 +186,7 @@ Kirigami.FormLayout {
 {{< /section-left >}}
 {{< section-right >}}
 
-![A formlayout with forced mobile layout](formlayouts-widemode.png)
+![A formlayout with forced mobile layout](/docs/use/kirigami/components-formlayouts/formlayouts-widemode.png)
 
 {{< /section-right >}}
 {{< /sections >}}
