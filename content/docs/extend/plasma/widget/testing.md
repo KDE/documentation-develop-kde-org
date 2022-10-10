@@ -120,7 +120,17 @@ QT_SCALE_FACTOR=2 plasmoidviewer -a package -l topedge -f horizontal -x 0 -y 0 -
 
 ## Enable logging
 
-By default in Qt 5.9, `console.log()`, which used to write a string to stdout (the Terminal output), is hidden by default. In order to re-enable it, we need to set `[Rules] qml.debug=true` in `~/.config/QtProject/qtlogging.ini`. You can easily set it by running this `kwriteconfig5` command:  
+By default in Qt 5.9, QML's `console.log()`, which used to write a string to stdout (the terminal output), is hidden by default.
+
+You can see `console.log()` output with the following environment variable command:
+
+```bash
+QT_LOGGING_RULES="qml.debug=true" plasmawindowed org.kde.plasma.kickoff
+QT_LOGGING_RULES="qml.debug=true" plasmoidviewer -a org.kde.plasma.kickoff
+QT_LOGGING_RULES="qml.debug=true" plasmashell --replace
+```
+
+However it is much easier to always have it shown for the current user, including in the system log (`journalctl -b0 -f`). To do so, we need to set `[Rules] qml.debug=true` in `~/.config/QtProject/qtlogging.ini`. You can easily set it by running this `kwriteconfig5` command:  
 
 ```bash
 kwriteconfig5 --file ~/.config/QtProject/qtlogging.ini --group "Rules" --key "qml.debug" "true"
