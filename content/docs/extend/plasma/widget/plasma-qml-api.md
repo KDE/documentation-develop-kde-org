@@ -541,7 +541,7 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 | Property | Type | Notes |
 |-----|-----|-----|
 | `Plasmoid.activationTogglesExpanded` | `bool` | Keyboard shortcut will toggle `Plasmoid.expanded`. [Since KDE Frameworks 5.76](https://invent.kde.org/frameworks/plasma-framework/-/commit/d6a5b10b3b9a4984209f6509a3ed9196b0c1d5d6), this is `true` by default. |
-| `Plasmoid.apiVersion` | `int` | **Due not use.** [Appears to read](https://invent.kde.org/frameworks/plasma-framework/-/blob/9131ac91e73f8096d5c687985c5840c6e12e5ade/src/scriptengines/qml/plasmoid/appletinterface.cpp#L555-568) `Version": "1.0",` or `X-KDE-PluginInfo-Version=1.0` from the widget metadata. Use `plasmoid.metaData.version` instead. |
+| `Plasmoid.apiVersion` | `int` | **Due not use.** Always returns `0`. [Source code](https://invent.kde.org/frameworks/plasma-framework/-/blob/9131ac91e73f8096d5c687985c5840c6e12e5ade/src/scriptengines/qml/plasmoid/appletinterface.cpp#L555-568). |
 | `Plasmoid.associatedApplication` | `string` |  |
 | `Plasmoid.associatedApplicationUrls` | `QList<QUrl>` |  |
 | `Plasmoid.availableScreenRect` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
@@ -567,10 +567,10 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 | `Plasmoid.hideOnWindowDeactivate` | `bool ` |  |
 | `Plasmoid.icon` | `string` | [Example](#plasmoidicon) |
 | `Plasmoid.id` | `uint` |  |
-| `Plasmoid.immutability` | [`Plasma::Types::ImmutabilityType`](docs:plasma;Plasma::Types::ImmutabilityType) | Detect if Kiosk mode has locked the widgets, or the Plasma 5.18 and below Lock Widget mode. |
-| `Plasmoid.immutable` | `bool` |  |
-| `Plasmoid.loading` | `bool` |  |
-| `Plasmoid.location` | [`Plasma::Types::Location`](docs:plasma;Plasma::Types::Location) |  |
+| `Plasmoid.immutability` | [`Plasma::Types::ImmutabilityType`](docs:plasma;Plasma::Types::ImmutabilityType) | Detect if Kiosk mode has locked the widgets, or the user Lock Widget mode from Plasma 5.18 and below. |
+| `Plasmoid.immutable` | `bool` | `true` if either `UserImmutable` or `SystemImmutable`. |
+| `Plasmoid.loading` | `bool` | Always `false` when widget is running. |
+| `Plasmoid.location` | [`Plasma::Types::Location`](docs:plasma;Plasma::Types::Location) | Location of widget on the screen. |
 | `Plasmoid.metaData` | [`KPluginMetaData`](docs:kcoreaddons;KPluginMetaData) | Reads `metadata.json` (or `metadata.desktop`). See the [`AboutPlugin.qml` source code](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/desktoppackage/contents/configuration/AboutPlugin.qml) for examples. |
 | `Plasmoid.metaData.authors` | `QVariantList` |  |
 | `Plasmoid.metaData.category` | `string` |  |
@@ -591,14 +591,14 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 | `Plasmoid.metaData.mimeTypes` | `QStringList` |  |
 | `Plasmoid.metaData.name` | `string` | The translated widget `Name`. Also see `Plasmoid.title` |
 | `Plasmoid.metaData.otherContributors` | `QVariantList` |  |
-| `Plasmoid.metaData.pluginId` | `string` |  |
+| `Plasmoid.metaData.pluginId` | `string` | The widget namespace. `Id` in `metadata.json`, or `X-KDE-PluginInfo-Name` in `metadata.desktop`. |
 | `Plasmoid.metaData.rawData` | `QJsonObject` |  |
 | `Plasmoid.metaData.serviceTypes` | `QStringList` |  |
 | `Plasmoid.metaData.translators` | `QVariantList` |  |
-| `Plasmoid.metaData.version` | `string` | Reads `Version": "1.0"` or `X-KDE-PluginInfo-Version=1.0` |
+| `Plasmoid.metaData.version` | `string` | Reads `Version` in `metadata.json` or `X-KDE-PluginInfo-Version` in `metadata.desktop`. |
 | `Plasmoid.metaData.website` | `string` |  |
 | `Plasmoid.nativeInterface` | `QObject` |  |
-| `Plasmoid.pluginName` | `string` |  |
+| `Plasmoid.pluginName` | `string` | The widget namespace. Alias of `Plasmoid.metaData.pluginId` |
 | `Plasmoid.preferredRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | Force a representation and ignore `Plasmoid.switchHeight`. [Example](#plasmoidfullrepresentation) |
 | `Plasmoid.rootItem` | `QObject` | Reference the widget's root item. Cannot be used in the config dialog. |
 | `Plasmoid.screen` | `int` |  |
