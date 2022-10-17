@@ -262,7 +262,26 @@ if __name__ == '__main__':
             os.mkdir(extracted_archive_path)
             logging.info(f'Extracting {archive_path} to {extracted_archive_path}')
             with tarfile.open(archive_path) as tar:
-                tar.extractall(extracted_archive_path)
+                def is_within_directory(directory, target):
+                    
+                    abs_directory = os.path.abspath(directory)
+                    abs_target = os.path.abspath(target)
+                
+                    prefix = os.path.commonprefix([abs_directory, abs_target])
+                    
+                    return prefix == abs_directory
+                
+                def safe_extract(tar, path=".", members=None, *, numeric_owner=False):
+                
+                    for member in tar.getmembers():
+                        member_path = os.path.join(path, member.name)
+                        if not is_within_directory(path, member_path):
+                            raise Exception("Attempted Path Traversal in Tar File")
+                
+                    tar.extractall(path, members, numeric_owner=numeric_owner) 
+                    
+                
+                safe_extract(tar, extracted_archive_path)
 
         # Call icon extractor script
         icon_root = os.path.join(extracted_archive_path, icon['extracted_base'])
