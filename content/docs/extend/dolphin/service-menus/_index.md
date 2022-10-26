@@ -219,6 +219,10 @@ Name=Tiled
 Icon=background
 Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("FillMode", "3")};d.writeConfig("Image", "%u")}';
 ```
+
+If you want your menu to appear at the top level, you can add `X-KDE-Priority=TopLevel` to the `Desktop Entry` group.
+By default, they are most likely to be shown in the "Actions" submenu. Only if there are very few entries will they appear at the top level without this entry being set.
+
 ## Advanced Properties
 This is a collection of advanced properties. You might not need them for your project, but it is useful
 to know that they exist.
