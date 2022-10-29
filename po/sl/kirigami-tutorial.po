@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-15 00:38+0000\n"
-"PO-Revision-Date: 2022-10-27 08:47+0200\n"
+"PO-Revision-Date: 2022-10-28 07:18+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1915,104 +1915,91 @@ msgstr ""
 "html)."
 
 #: content/docs/use/kirigami/components-drawers.md:196
-#, fuzzy
 msgid ""
 "However, by default, banners are only visible on mobile environments. You "
 "can change this by setting the global drawer component's `bannerVisible` "
 "property to `true`."
 msgstr ""
-"Privzeto pa so transparenti vidni le v mobilnih okoljih. To lahko spremenite "
-"tako, da nastavite lastnost »bannerVisible« komponente globalnega predala na "
-"»true«."
+"Privzeto so pasice vidne le v mobilnih okoljih. To lahko spremenite tako, da "
+"nastavite lastnost 'bannerVisible' komponente globalnega predala na 'true'."
 
 #: content/docs/use/kirigami/components-drawers.md:198
-#, fuzzy
 msgid "Modal and Inline drawers"
-msgstr "Modalni in inline predali"
+msgstr "Modalni in znotrajvrstični predali"
 
 #: content/docs/use/kirigami/components-drawers.md:200
-#, fuzzy
 msgid ""
 "Kirigami offers two additional types of drawers, modal drawers and inline "
 "drawers. They are quite similar to each other: both span the entirety of the "
 "application's width or height and can be placed on the edges of the app "
 "window. However, they do react differently to user interaction."
 msgstr ""
-"Kirigami ponuja dve dodatni vrsti predalov, modalne predale in inline "
-"predale. Sta si precej podobna: oba segata v celoto širine ali višine "
-"aplikacije in se lahko postavita na robove okna aplikacije. Vendar pa se "
-"različno odzivajo na interakcijo uporabnikov."
+"Kirigami ponuja dve dodatni vrsti predalov, modalne predale in "
+"znotrajvrstične predale. Vrsti sta si precej podobni: obe segata v celoto "
+"širine ali višine aplikacije in se lahko postavita na robove okna "
+"aplikacije. Vendar pa se različno odzivata na interakcijo uporabnikov."
 
 #: content/docs/use/kirigami/components-drawers.md:202
-#, fuzzy
 msgid ""
 "Modal drawers darken the rest of the application and, like overlay sheets, "
 "will be dismissed when clicking on a darkened area."
 msgstr ""
-"Modalni predali temnijo preostanek aplikacije in, tako kot preklopne liste, "
-"bodo zavrženi ob kliku na temno območje."
+"Modalni predali potemnijo preostanek aplikacije in, bodo tako kot preklopne "
+"liste zavrženi ob kliku na potemnjeno območje."
 
 #: content/docs/use/kirigami/components-drawers.md:203
-#, fuzzy
 msgid ""
 "Inline drawers allow the user to still interact with the rest of the "
 "application without being dismissed, and do not darken other areas."
 msgstr ""
-"Inline predali omogočajo uporabniku, da še vedno interakcijo z ostalo "
-"aplikacijo, ne da bi bil odpuščen, in ne temniti drugih področij."
+"Znotrajvrstični predali omogočajo uporabniku, da še vedno interakcijo z "
+"ostalo aplikacijo, ne da bi bil odpuščen, in ne potemnijo drugih področij."
 
 #: content/docs/use/kirigami/components-drawers.md:205
-#, fuzzy
 msgid ""
 "These two drawers are so similar because they are, in fact, the same "
 "Kirigami component: `Kirigami.OverlayDrawer`. Important properties of this "
 "component to keep in mind:"
 msgstr ""
-"Ta dva predala sta si tako podobna, ker sta dejansko ista kirigami "
-"komponenta: \"Kirigami.OverlayDrawer\". Pomembne lastnosti te komponente, ki "
-"jih je treba imeti v mislih:"
+"Ta dva predala sta si tako podobna, ker sta dejansko ista komponenta "
+"Kirigami: 'Kirigami.OverlayDrawer'. Pomembne lastnosti te komponente, ki jih "
+"je treba imeti v mislih:"
 
 #: content/docs/use/kirigami/components-drawers.md:207
-#, fuzzy
 msgid ""
 "`modal` controls whether the drawer will be modal or inline depending on a "
 "boolean value"
 msgstr ""
-"\"modal\" nadzoruje, ali bo predal modalen ali inlin, odvisno od boolean "
-"vrednosti"
+"'modal' nadzoruje, ali bo predal modalen ali znotrajvrstični, odvisno od "
+"boolove vrednosti"
 
 #: content/docs/use/kirigami/components-drawers.md:208
-#, fuzzy
 msgid ""
 "`edge` controls which edge of the application window the drawer will appear "
 "on; options for this property are `Qt.TopEdge`, `Qt.RightEdge`, `Qt."
 "BottomEdge`, and `Qt.LeftEdge`"
 msgstr ""
-"\"rob\" nadzoruje, na katerem robu okna aplikacije se bo predal prikazal; "
-"možnosti za to lastnost so \"Qt.TopEdge\", \"Qt.RightEdge\", \"Qt.BottomEdge"
-"\" in \"Qt.LeftEdge\""
+"'edge' nadzoruje, na katerem robu okna aplikacije se bo predal prikazal; "
+"možnosti za to lastnost so 'Qt.TopEdge', 'Qt.RightEdge', 'Qt.BottomEdge'  in "
+"'Qt.LeftEdge'"
 
 #: content/docs/use/kirigami/components-drawers.md:209
-#, fuzzy
 msgid ""
 "`contentItem` contains the component that will form the content of your "
 "drawer"
-msgstr "\"contentItem\" vsebuje komponento, ki bo tvorila vsebino predala"
+msgstr "'contentItem' vsebuje komponento, ki bo tvorila vsebino predala"
 
 #: content/docs/use/kirigami/components-drawers.md:222
-#, fuzzy
 msgid "Set modal to false to make this drawer inline!"
-msgstr "Nastavite modal na lažno, da ta predal vstavi v črto!"
+msgstr "Nastavite modal na false, da ta predal postane znotrajvrstični!"
 
 #: content/docs/use/kirigami/components-drawers.md:249
-#, fuzzy
 msgid "Modal drawer on the bottom edge of the screen."
 msgstr "Modalni predal na spodnjem robu zaslona."
 
 #: content/docs/use/kirigami/components-drawers.md:249
-#, fuzzy
 msgid "Inline drawer on the bottom edge of the screen."
-msgstr "Inline predal na spodnjem robu zaslona."
+msgstr "Znotrajvrstični predal na spodnjem robu zaslona."
 
 #: content/docs/use/kirigami/components-drawers.md:257
 #, fuzzy
