@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-15 00:38+0000\n"
-"PO-Revision-Date: 2022-10-28 07:18+0200\n"
+"PO-Revision-Date: 2022-11-01 18:13+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1900,7 +1900,6 @@ msgstr ""
 "png)"
 
 #: content/docs/use/kirigami/components-drawers.md:192
-#, fuzzy
 msgid ""
 "The `titleIcon` property takes names for system-wide icons per the "
 "FreeDesktop specification. These icons and icon names can be viewed with "
@@ -1908,11 +1907,11 @@ msgid ""
 "specification](https://specifications.freedesktop.org/icon-naming-spec/icon-"
 "naming-spec-latest.html)."
 msgstr ""
-"Lastnost \"titleIcon\" ima imena za sistemske ikone na specifikacijo "
+"Lastnost 'titleIcon' pobere imena za sistemske ikone po specifikaciji "
 "FreeDesktop. Te ikone in imena ikon si lahko ogledate s KDE-jevo aplikacijo "
-"CuttleFish ali z obiskom [FreeDesktop's icon naming specification](https://"
-"specifications.freedesktop.org/icon-imenovanje-spec/icon-naming-spec-latest."
-"html)."
+"CuttleFish ali z obiskom specifikacije [FreeDesktop's icon naming "
+"specification](https://specifications.freedesktop.org/icon-imenovanje-spec/"
+"icon-naming-spec-latest.html)."
 
 #: content/docs/use/kirigami/components-drawers.md:196
 msgid ""
@@ -2002,20 +2001,18 @@ msgid "Inline drawer on the bottom edge of the screen."
 msgstr "Znotrajvrstični predal na spodnjem robu zaslona."
 
 #: content/docs/use/kirigami/components-drawers.md:257
-#, fuzzy
 msgid "A usecase for overlay bottom drawers: NeoChat"
-msgstr "Uporabna kovčka za spodnje predale: NeoChat"
+msgstr "Primer uporabe prekrivnih spodnjih predalov: NeoChat"
 
 #: content/docs/use/kirigami/components-drawers.md:259
-#, fuzzy
 msgid ""
 "NeoChat uses bottom overlay drawers to provide user with a number of actions "
 "they can perform on a message they have long-pressed. Here is a simplified "
 "example of what that looks like:"
 msgstr ""
-"NeoChat uporablja predale z spodnjim preklopom, da uporabniku zagotovi več "
-"dejanj, ki jih lahko izvede na sporočilu, ki ga je že dolgo pritisnil. Tukaj "
-"je poenostavljen primer, kako je videti:"
+"NeoChat uporablja prekrivne spodnje predale, da uporabniku zagotovi več "
+"dejanj, ki jih lahko izvede na sporočilu, ki ga je že dolgo pritiskal. Tukaj "
+"je poenostavljen primer, kako je to videti:"
 
 #: content/docs/use/kirigami/components-drawers.md:287
 msgid "Message information"
@@ -2030,26 +2027,23 @@ msgid "Form Layouts"
 msgstr "Postavitve obrazcev"
 
 #: content/docs/use/kirigami/components-formlayouts.md:0
-#, fuzzy
 msgid "Easily create attractive interaction areas with Kirigami FormLayouts"
 msgstr ""
 "Preprosto ustvarite privlačna področja interakcije z Kirigami FormLayouts"
 
 #: content/docs/use/kirigami/components-formlayouts.md:10
-#, fuzzy
 msgid ""
 "`Kirigami.FormLayout` components make it easy for you to create forms that "
 "conform to the KDE Human Interface Guidelines. They are optimal for settings "
 "dialogs and for large groups of controls and input fields that are related "
 "to each other."
 msgstr ""
-"Komponente \"Kirigami.FormLayout\" vam olajšajo ustvarjanje obrazcev, ki so "
-"skladni s smernicami KDE humanega vmesnika. Optimalne so za pogovorna okna "
-"nastavitev in za velike skupine kontrolniku in vnosnih polj, ki so povezana "
-"med seboj."
+"Komponente 'Kirigami.FormLayout' vam olajšajo ustvarjanje obrazcev, ki so "
+"skladni s smernicami uporabniškega vmesnika KDE. Optimalne so za pogovorna "
+"okna nastavitev in za velike skupine kontrolnikov in vnosnih polj, ki so "
+"povezana med seboj."
 
 #: content/docs/use/kirigami/components-formlayouts.md:12
-#, fuzzy
 msgid ""
 "When provided with enough space, form layouts will take up two columns. The "
 "column on the left will be occupied by the labels provided for the form's "
@@ -2058,38 +2052,37 @@ msgid ""
 "of a single vertical column with children components' labels being placed "
 "above their respective component."
 msgstr ""
-"Če je na voljo dovolj prostora, bodo postavitve obrazcev prevzele dva "
-"stolpca. Stolpec na levi bo zaseden z nalepkami, ki so predvidene za "
-"sestavne dele obrazca za otroke, desno pa bodo prevzeli otroci sami. V oknih "
-"z več prostorsko omejitvijo (ali na mobilnih napravah) bodo obrazci "
-"sestavljeni iz enega navpičnega stolpca z nalepkami za komponente otrok, ki "
-"so nameščeni nad njihovo komponento."
+"Če je na voljo dovolj prostora, bodo postavitve obrazcev privzele dva "
+"stolpca. Stolpec na levi bo zaseden z oznakami, ki so predvidene za sestavne "
+"dele obrazca za odvisne komponente, desno pa bodo prevzeli sami odvisni "
+"deli. V oknih z več prostorske omejitve (ali na mobilnih napravah) bodo "
+"obrazci sestavljeni iz enega navpičnega stolpca z oznakami za odvisne "
+"komponente, ki so nameščene nad njihovo ustrezno komponento."
 
 #: content/docs/use/kirigami/components-formlayouts.md:14
 msgid "Simple form"
 msgstr "Enostavna oblika"
 
 #: content/docs/use/kirigami/components-formlayouts.md:16
-#, fuzzy
 msgid ""
 "`Kirigami.FormLayout` components are similar in use to QtQuick Layout "
 "components such as `ColumnLayout` or `RowLayout`. The child components will "
 "be automatically arranged according to the size available to the form layout."
 msgstr ""
-"Komponente \"Kirigami.FormLayout\" so v uporabi podobne komponentam QtQuick "
-"Layout, kot so \"ColumnLayout\" ali \"RowLayout\". Podmladke bodo samodejno "
-"razporejane glede na velikost, ki je na voljo za postavitev obrazca."
+"Komponente 'Kirigami.FormLayout' so v uporabi podobne komponentam QtQuick "
+"Layout, kot so 'ColumnLayout' ali 'RowLayout'. Odvisne komponente bodo "
+"samodejno razporejene glede na velikost, ki je na voljo za postavitev "
+"obrazca."
 
 #: content/docs/use/kirigami/components-formlayouts.md:18
-#, fuzzy
 msgid ""
 "Children of a `Kirigami.FormLayout` have a property named `Kirigami.FormData."
 "label`. This property lets you set the label that will be provided for the "
 "child component in question."
 msgstr ""
-"Otroci 'Kirigami.FormLayout' imajo nastanitev z imenom \"Kirigami.FormData."
-"label\". S to lastnostjo lahko nastavite oznako, ki bo zagotovljena za "
-"zadevno otroško komponento."
+"Odvisne komponente 'Kirigami.FormLayout' imajo nastanitev z imenom 'Kirigami."
+"FormData.label'. S to lastnostjo lahko nastavite oznako, ki bo zagotovljena "
+"za zadevno odvisno komponento."
 
 #: content/docs/use/kirigami/components-formlayouts.md:52
 msgid "![A simple formlayout](formlayouts-simple.png)"
@@ -2154,64 +2147,58 @@ msgid "Checkable children"
 msgstr "Podrejeni, ki jih je mogoče odkljukati"
 
 #: content/docs/use/kirigami/components-formlayouts.md:126
-#, fuzzy
 msgid ""
 "A handy feature of `Kirigami.FormLayout` is that you can add checkboxes to "
 "its children. This can be useful in settings pages where you might want to "
 "let the user enable or disable a setting, and also want the user to provide "
 "some extra information in a component such as a textfield."
 msgstr ""
-"Priročna funkcija \"Kirigami.FormLayout\" je, da lahko dodate potrditvena "
-"polja svojim otrokom. To je lahko uporabno na straneh z nastavitvami, na "
-"katerih boste morda želeli dovoliti uporabniku omogočiti ali onemogočiti "
+"Priročna funkcija 'Kirigami.FormLayout' je, da lahko dodate potrditvena "
+"polja svojim odvisnim delom. To je lahko uporabno na straneh z nastavitvami, "
+"na katerih boste morda želeli dovoliti uporabniku omogočiti ali onemogočiti "
 "nastavitev, poleg tega pa želite, da uporabnik v komponenti, kot je polje z "
 "besedilom, zagotovi nekaj dodatnih informacij."
 
 #: content/docs/use/kirigami/components-formlayouts.md:153
-#, fuzzy
 msgid "![A formlayout with checkable child](formlayouts-checkable.png)"
 msgstr ""
-"![Postavitev obrazca z otrokom, ki ga je mogoče preveriti] (postavitev "
-"obrazca je mogoče preveriti.png)"
+"![Postavitev obrazca s preverljivim odvisnim delom](formlayouts-checkable."
+"png)"
 
 #: content/docs/use/kirigami/components-formlayouts.md:158
 msgid "Forcing a desktop or mobile layout"
 msgstr "Vsiljena namizna ali mobilna postavitev"
 
 #: content/docs/use/kirigami/components-formlayouts.md:160
-#, fuzzy
 msgid ""
 "If you would rather have your form layout stay consistent regardless of your "
 "application's environment, you can use the `wideMode` property of the "
 "`Kirigami.FormLayout` component. `wideMode` is a boolean property:"
 msgstr ""
 "Če želite, da postavitev obrazca ostane skladna ne glede na okolje "
-"aplikacije, lahko uporabite lastnost \"wideMode\" komponente \"Kirigami."
-"FormLayout\". \"wideMode\" je boolean lastnost:"
+"aplikacije, lahko uporabite lastnost 'wideMode' komponente 'Kirigami."
+"FormLayout'. 'wideMode' je boolova lastnost:"
 
 #: content/docs/use/kirigami/components-formlayouts.md:162
-#, fuzzy
 msgid ""
 "When set to `true`, the form layout will be structured in a desktop-"
 "optimized widescreen (double-column) layout"
 msgstr ""
-"Ko je nastavljena na »true«, bo postavitev obrazca strukturirana v "
+"Ko je nastavljena na 'true', bo postavitev obrazca strukturirana v "
 "postavitvi širokega zaslona (dvojnega stolpca) z optimizacijo namizja"
 
 #: content/docs/use/kirigami/components-formlayouts.md:163
-#, fuzzy
 msgid ""
 "When set to `false`, the form layout will be structured in a mobile layout "
 "(single column)"
 msgstr ""
-"Ko je nastavljena na »false«, bo postavitev obrazca strukturirana v mobilni "
+"Ko je nastavljena na 'false', bo postavitev obrazca strukturirana v mobilni "
 "postavitvi (en stolpec)"
 
 #: content/docs/use/kirigami/components-formlayouts.md:189
-#, fuzzy
 msgid "![A formlayout with forced mobile layout](formlayouts-widemode.png)"
 msgstr ""
-"! [Postavitev obrazca s prisilno mobilno postavitev] (razpon razpon oblik."
+"![Postavitev obrazca s prisilno mobilno postavitvijo](formlayouts-widemode."
 "png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:0
@@ -2223,133 +2210,122 @@ msgid "Display messages related to the content in your application"
 msgstr "Prikaži sporočila, povezana z vsebino, v programu"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:10
-#, fuzzy
 msgid ""
 "Inline messages provide an immediate way for you to notify your users about "
 "something that happened while using the application."
 msgstr ""
-"Vnosna sporočila zagotavljajo takojšen način, da uporabnike obvestite o "
-"nečem, kar se je zgodilo med uporabo aplikacije."
+"Znotrajvrstična sporočila zagotavljajo takojšen način, da uporabnike "
+"obvestite o nečem, kar se je zgodilo med uporabo aplikacije."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:12
-#, fuzzy
 msgid "Basic inline message"
-msgstr "Osnovno vtisnjeno sporočilo"
+msgstr "Osnovno znotrajvrstično sporočilo"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:14
-#, fuzzy
 msgid ""
 "`Kirigami.InlineMessage` components have two important properties to be "
 "mindful of:"
 msgstr ""
-"Komponente \"Kirigami.InlineMessage\" imajo dve pomembni lastnosti, ki jih "
+"Komponente 'Kirigami.InlineMessage' imajo dve pomembni lastnosti, na kateri "
 "je treba paziti:"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:15
-#, fuzzy
 msgid ""
 "`visible`: by default this is set to false, so that the message only appears "
 "when you explicitly want it to. This can be overridden if you wish by "
 "setting it to true. When a hidden inline message is set to be visible, you "
 "get a nice animation."
 msgstr ""
-"\"vidno\": to je privzeto nastavljeno na neresnično, tako da se sporočilo "
-"prikaže le, ko izrecno želite. To je mogoče preglasiti, če želite tako, da "
-"ga nastavite na resnično. Ko je skrito vtisnjeno sporočilo nastavljeno tako, "
-"da je vidno, dobiš lepo animacijo."
+"Lastnost vidno 'visible': je privzeto nastavljeno na false, tako da se "
+"sporočilo prikaže le, ko to izrecno želite. To je mogoče preglasiti, tako da "
+"ga nastavite na true. Ko je skrito znotrajvrstično sporočilo nastavljeno na "
+"vidno, dobite lepo animacijo."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:16
-#, fuzzy
 msgid "`text`: here is where you set the text of your inline message."
-msgstr "\"besedilo\": tukaj nastavite besedilo vnosnega sporočila."
+msgstr "'text': tukaj nastavite besedilo znotrajvrstičnega sporočila."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:48
-#, fuzzy
 msgid "![A simple inline message and button](inlinemessages-simple.png)"
-msgstr "! [Preprosto vstavi sporočilo in gumb] (inlinemessages-enostavno.png)"
+msgstr ""
+"![Preprosto znotrajvrstično sporočilo in gumb](inlinemessages-simple.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:53
 msgid "Different types"
 msgstr "Različne vrste"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:55
-#, fuzzy
 msgid ""
 "Standard inline messages are like the ones above: they have a blue "
 "background and a default icon. We can change that with the `type` property, "
 "which lets us set our inline message to a different type. There are four "
 "types we can choose from:"
 msgstr ""
-"Standardna vtisna sporočila so podobna zgornjim: imajo modro ozadje in "
-"privzeto ikono. To lahko spremenimo z lastnostjo \"type\", kar nam dovoli, "
-"da naše vneseno sporočilo nastavimo na drugo vrsto. Izbiramo lahko med "
-"štirimi vrstami:"
+"Standardna znotrajvrstična  sporočila so podobna zgornjim: imajo modro "
+"ozadje in privzeto ikono. To lahko spremenimo z lastnostjo 'type', kar nam "
+"dovoli, da naše vneseno sporočilo nastavimo na drugo vrsto. Izbiramo lahko "
+"med štirimi vrstami:"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:57
-#, fuzzy
 msgid ""
 "**Information** (`Kirigami.MessageType.Information`): the default. Has a "
 "blue background, an 'i' icon, and is used to announce a result or tell the "
 "user something general. It is not necessary to manually set it."
 msgstr ""
 "**Informacije** ('Kirigami.MessageType.Information'): privzeto. Ima modro "
-"ozadje, ikono \"i\" in se uporablja za napoved rezultat ali povedati "
+"ozadje, ikono \"i\" in se uporablja za napoved rezultata ali povedati "
 "uporabniku nekaj splošnega. Ni ga treba ročno nastaviti."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:58
-#, fuzzy
 msgid ""
 "**Positive** (`Kirigami.MessageType.Positive`): has a green background, tick "
 "icon, and indicates that something went well."
 msgstr ""
 "**Pozitivno** ('Kirigami.MessageType.Positive'): ima zeleno ozadje, ikono "
-"ploščic in označuje, da je šlo nekaj dobro."
+"kljukice in označuje, da je šlo nekaj dobro."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:59
-#, fuzzy
 msgid ""
 "**Warning** (`Kirigami.MessageType.Warning`): has an orange background, an "
 "exclamation-mark icon, and can be used to warn the user about something they "
 "should be mindful of."
 msgstr ""
 "**Opozorilo** ('Kirigami.MessageType.Warning'): ima oranžno ozadje, ikono z "
-"znakom vkliska in se lahko uporablja za opozarjanje uporabnika na nekaj, na "
-"kar bi morali biti pozorni."
+"znakom klicaja in se lahko uporablja za opozarjanje uporabnika na nekaj, kar "
+"bi morali biti pozorni."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:60
-#, fuzzy
 msgid ""
 "**Error** (`Kirigami.MessageType.Error`): has a red background, a cross "
 "icon, and can be used to tell the user that something has gone wrong."
 msgstr ""
-"**Error** ('Kirigami.MessageType.Error'): ima rdečo ozadje, križno ikono in "
-"se lahko uporabi za to, da uporabniku pove, da je šlo nekaj narobe."
+"**Error** ('Kirigami.MessageType.Error'): ima rdečo ozadje, ikono križa in "
+"se lahko uporabi za to, da se uporabniku pove, da je šlo nekaj narobe."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:101
 msgid "![Different inline message types](inlinemessages-types.png)"
-msgstr "![Različne vrste sporočil v vrstici](inlinemessages-tipi.png)"
+msgstr "![Različne vrste sporočil v vrstici](inlinemessages-types.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:106
 msgid "Customising text and icons"
 msgstr "Prilagajanje besedila in ikon"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:108
-#, fuzzy
 msgid ""
 "Inline messages support rich text, which can be defined with simple HTML-"
 "like markup. This allows you to add some formatting to your inline message's "
 "text or even include an external web link if you want to."
 msgstr ""
-"Vnosna sporočila podpirajo obogateno besedilo, ki ga lahko določite s "
-"preprostim html-podobnim označevanjem. To vam omogoča, da dodate nekaj "
+"Znotrajvrstična sporočila podpirajo obogateno besedilo, ki ga lahko določite "
+"s preprostim html-podobnim označevanjem. To vam omogoča, da dodate nekaj "
 "oblikovanja v besedilo v vrstici sporočila ali celo vključite zunanjo "
-"spletno povezavo, če želite."
+"spletno povezavo, če to želite."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:116
-#, fuzzy
 msgid "Note that when you use quotes in a string you will have to escape them!"
 msgstr ""
-"Upoštevajte, da boste morali pri uporabi narekovajev v nizu ubežati njim!"
+"Upoštevajte, da boste morali pri uporabi narekovajev v nizu uporabiti ubežni "
+"znak!"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:126
 msgid "![An inline message with rich text](inlinemessages-richtext.png)"
@@ -2401,44 +2377,39 @@ msgid "Close buttons"
 msgstr "Gumbi Zapri"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:202
-#, fuzzy
 msgid ""
 "Inline messages provide a close button that can be used to easily dismiss "
 "them."
 msgstr ""
-"V vrstice sporočila zagotavljajo gumb za zapiranje, ki ga lahko preprosto "
-"zavrnete."
+"Znotrjvrstična sporočila zagotavljajo gumb za zapiranje, ki ga lahko "
+"preprosto odpravite."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:204
-#, fuzzy
 msgid ""
 "By default, this close button is hidden, but this can be overridden by "
 "setting the `showCloseButton` property to `true`."
 msgstr ""
-"Privzeto je ta gumb za zapiranje skrit, vendar je to mogoče preglasiti z "
-"nastavitvijo lastnosti »showCloseButton« na »true«."
+"Privzeto je ta gumb za zapiranje skrit, vendar je to lastnost mogoče "
+"preglasiti z nastavitvijo lastnosti 'showCloseButton' na 'true'."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:221
-#, fuzzy
 msgid ""
 "![An inline message with close button showing](inlinemessages-closebutton."
 "png)"
 msgstr ""
-"! [Vtisnjeno sporočilo z gumbom za zapiranje, ki prikazuje] (inlinemessages-"
-"closebutton.png)"
+"![Znotrajvrstično sporočilo z gumbom za zapiranje, ki ga prikazuje]"
+"(inlinemessages-closebutton.png)"
 
 #: content/docs/use/kirigami/components-listview.md:0
 msgid "List views"
 msgstr "Pogledi seznama"
 
 #: content/docs/use/kirigami/components-listview.md:0
-#, fuzzy
 msgid "A list view can help you easily display many components dynamically.\n"
 msgstr ""
 "Pogled seznama vam lahko pomaga pri dinamičnem prikazu številnih komponent.\n"
 
 #: content/docs/use/kirigami/components-listview.md:11
-#, fuzzy
 msgid ""
 "Listviews can help you display objects from a model in an attractive way. To "
 "use a list view, you have to keep track of three things:"
@@ -2448,37 +2419,33 @@ msgstr ""
 "stvari:"
 
 #: content/docs/use/kirigami/components-listview.md:13
-#, fuzzy
 msgid ""
 "The **model**, which contains the data you want your list view to display"
 msgstr ""
 "**model**, ki vsebuje podatke, ki jih želite prikazati v pogledu seznama"
 
 #: content/docs/use/kirigami/components-listview.md:14
-#, fuzzy
 msgid ""
 "The **delegate**, which defines how each element in the model will be "
 "displayed"
 msgstr "**delegat**, ki določa, kako bo vsak element v modelu prikazan"
 
 #: content/docs/use/kirigami/components-listview.md:15
-#, fuzzy
 msgid ""
 "The **list view** itself, which will display information from the model "
 "according to the delegate"
 msgstr ""
-"Sam pogled **seznama**, ki bo prikazoval informacije iz modela v skladu z "
-"pooblaščenim"
+"Sam **pogled seznama**, ki bo prikazoval informacije iz modela v skladu z "
+"delegatom"
 
 #: content/docs/use/kirigami/components-listview.md:17
-#, fuzzy
 msgid ""
 "If you would like further clarification, the Qt documentation has [an "
 "informative page](https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview."
 "html) on the topic."
 msgstr ""
 "Če želite dodatno pojasnilo, ima dokumentacija Qt [informativna stran]"
-"(https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html) na temo."
+"(https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html) na to temo."
 
 #: content/docs/use/kirigami/components-listview.md:19
 msgid "Creating a basic listview"
@@ -2490,19 +2457,17 @@ msgstr ""
 "Seznamski pogled ima dve bistveni lastnosti, na kateri moramo biti pozorni:"
 
 #: content/docs/use/kirigami/components-listview.md:23
-#, fuzzy
 msgid ""
 "`model`, which accepts the data or the `id` of the object that holds the data"
-msgstr "\"model\", ki sprejema podatke ali \"id\" predmeta, ki ima podatkovno"
+msgstr "'model', ki sprejema podatke ali 'id' predmeta, ki nosi podatke"
 
 #: content/docs/use/kirigami/components-listview.md:24
-#, fuzzy
 msgid ""
 "`delegate`, which accepts the component we will use to display the data in "
 "the model"
 msgstr ""
-"\"pooblaščenec\", ki sprejema komponento, ki jo bomo uporabili za prikaz "
-"podatkov v modelu"
+"'delegat', ki sprejema komponento, ki jo bomo uporabili za prikaz podatkov v "
+"modelu"
 
 #: content/docs/use/kirigami/components-listview.md:40
 #, fuzzy
