@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:39+0000\n"
-"PO-Revision-Date: 2022-07-24 13:51+0100\n"
+"PO-Revision-Date: 2022-11-15 19:00+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -92,7 +92,8 @@ msgstr ""
 "X-POFile-SpellExtra: ecmsetupversion PROJECTVERSION about page components\n"
 "X-POFile-SpellExtra: cards onCompleted Component implementation call\n"
 "X-POFile-SpellExtra: AbstractApplicationWindow AboutType\n"
-"X-POFile-SpellExtra: qmlRegisterSingletonType Koko parse UTC\n"
+"X-POFile-SpellExtra: qmlRegisterSingletonType Koko parse UTC drawers\n"
+"X-POFile-SpellExtra: overlaysheets progressbars\n"
 
 #: content/docs/use/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -1243,14 +1244,12 @@ msgstr ""
 "lidam com o alinhamento horizontal)."
 
 #: content/docs/use/kirigami/components-actiontoolbar.md:102
-#, fuzzy
-#| msgid ""
-#| "![ActionToolBar with children center-aligned](actiontoolbar-alignment.png)"
 msgid ""
 "![ActionToolBar with children center-aligned](/docs/use/kirigami/components-"
 "actiontoolbar/actiontoolbar-alignment.png)"
 msgstr ""
-"![O ActionToolBar com os filhos centrados](actiontoolbar-alignment.png)"
+"![O ActionToolBar com os filhos centrados](/docs/use/kirigami/components-"
+"actiontoolbar/actiontoolbar-alignment.png)"
 
 #: content/docs/use/kirigami/components-card.md:0
 msgid ""
@@ -1541,12 +1540,12 @@ msgstr ""
 "`onClicked`."
 
 #: content/docs/use/kirigami/components-controls.md:39
-#, fuzzy
-#| msgid "![A freshly-clicked button](controls-button.png)"
 msgid ""
 "![A freshly-clicked button](/docs/use/kirigami/components-controls/controls-"
 "button.png)"
-msgstr "![Um botão recém-carregado](controls-button.png)"
+msgstr ""
+"![Um botão recém-carregado](/docs/use/kirigami/components-controls/controls-"
+"button.png)"
 
 #: content/docs/use/kirigami/components-controls.md:44
 msgid "Toggleable buttons"
@@ -1589,12 +1588,12 @@ msgstr ""
 "estado de um botão comutável:"
 
 #: content/docs/use/kirigami/components-controls.md:77
-#, fuzzy
-#| msgid "![A toggleable button](controls-togglebutton.png)"
 msgid ""
 "![A toggleable button](/docs/use/kirigami/components-controls/controls-"
 "togglebutton.png)"
-msgstr "![Um botão comutável](controls-togglebutton.png)"
+msgstr ""
+"![Um botão comutável](/docs/use/kirigami/components-controls/controls-"
+"togglebutton.png)"
 
 #: content/docs/use/kirigami/components-controls.md:84
 msgid ""
@@ -1625,12 +1624,12 @@ msgstr ""
 "que isto possa ser alterado com a propriedade booleana `flat`)."
 
 #: content/docs/use/kirigami/components-controls.md:105
-#, fuzzy
-#| msgid "![](/docs/use/kirigami/components-card/card1.png)"
 msgid ""
 "![A tool button](/docs/use/kirigami/components-controls/controls-toolbutton."
 "png)"
-msgstr "![](/docs/use/kirigami/components-card/card1.png)"
+msgstr ""
+"![Um botão de ferramenta](/docs/use/kirigami/components-controls/controls-"
+"toolbutton.png)"
 
 #: content/docs/use/kirigami/components-controls.md:110
 msgid "Selection controls"
@@ -1658,12 +1657,12 @@ msgstr ""
 "exclusivas e onde cada opção tem uma alternativa bem definida."
 
 #: content/docs/use/kirigami/components-controls.md:135
-#, fuzzy
-#| msgid "![A set of checkboxes](controls-checkbox.png)"
 msgid ""
 "![A set of checkboxes](/docs/use/kirigami/components-controls/controls-"
 "checkbox.png)"
-msgstr "![Um conjunto de opções de marcação](controls-checkbox.png)"
+msgstr ""
+"![Um conjunto de opções de marcação](/docs/use/kirigami/components-controls/"
+"controls-checkbox.png)"
 
 #: content/docs/use/kirigami/components-controls.md:140
 msgid ""
@@ -1703,12 +1702,12 @@ msgstr ""
 "a propriedade `checked`."
 
 #: content/docs/use/kirigami/components-controls.md:169
-#, fuzzy
-#| msgid "![A set of radio buttons](controls-radiobutton.png)"
 msgid ""
 "![A set of radio buttons](/docs/use/kirigami/components-controls/controls-"
 "radiobutton.png)"
-msgstr "![Um conjunto de opções exclusivas](controls-radiobutton.png)"
+msgstr ""
+"![Um conjunto de opções exclusivas](/docs/use/kirigami/components-controls/"
+"controls-radiobutton.png)"
 
 #: content/docs/use/kirigami/components-controls.md:174
 msgid "Switches"
@@ -1744,16 +1743,12 @@ msgstr ""
 "omissão com a propriedade `checked`."
 
 #: content/docs/use/kirigami/components-controls.md:199
-#, fuzzy
-#| msgid ""
-#| "![Screenshot of a CardsListView](/docs/use/kirigami/components-card/"
-#| "cardslistview.png)"
 msgid ""
 "![A set of switches](/docs/use/kirigami/components-controls/controls-switch."
 "png)"
 msgstr ""
-"![Imagem de um CardsListView](/docs/use/kirigami/components-card/"
-"cardslistview.png)"
+"![Um conjunto de comutadores](/docs/use/kirigami/components-controls/"
+"controls-switch.png)"
 
 #: content/docs/use/kirigami/components-controls.md:204
 msgid "Sliders"
@@ -1824,16 +1819,12 @@ msgstr ""
 "Vertical`"
 
 #: content/docs/use/kirigami/components-controls.md:235
-#, fuzzy
-#| msgid ""
-#| "![Screenshot of a CardsGridView](/docs/use/kirigami/components-card/"
-#| "cardsgridview.png)"
 msgid ""
 "![A set of sliders](/docs/use/kirigami/components-controls/controls-sliders."
 "png)"
 msgstr ""
-"![Imagem de um CardsGridView](/docs/use/kirigami/components-card/"
-"cardsgridview.png)"
+"![Um conjunto de barras deslizantes](/docs/use/kirigami/components-controls/"
+"controls-sliders.png)"
 
 #: content/docs/use/kirigami/components-controls.md:240
 msgid ""
@@ -1853,14 +1844,12 @@ msgstr ""
 "indicado na propriedade `to`."
 
 #: content/docs/use/kirigami/components-controls.md:257
-#, fuzzy
-#| msgid "![A set of tickmarked sliders](controls-tickmarkedsliders.png)"
 msgid ""
 "![A set of tickmarked sliders](/docs/use/kirigami/components-controls/"
 "controls-tickmarkedsliders.png)"
 msgstr ""
-"![Um conjunto de barras com marcações de traços](controls-tickmarkedsliders."
-"png)"
+"![Um conjunto de barras com marcações de traços](/docs/use/kirigami/"
+"components-controls/controls-tickmarkedsliders.png)"
 
 #: content/docs/use/kirigami/components-controls.md:262
 msgid "Range slider"
@@ -1886,13 +1875,12 @@ msgstr ""
 "das barras normais, estas podem ser predefinidas."
 
 #: content/docs/use/kirigami/components-controls.md:283
-#, fuzzy
-#| msgid "![A set of range sliders](controls-rangesliders.png)"
 msgid ""
 "![A set of range sliders](/docs/use/kirigami/components-controls/controls-"
 "rangesliders.png)"
 msgstr ""
-"![Um conjunto de barras deslizantes de intervalos](controls-rangesliders.png)"
+"![Um conjunto de barras deslizantes de intervalos](/docs/use/kirigami/"
+"components-controls/controls-rangesliders.png)"
 
 #: content/docs/use/kirigami/components-controls.md:288
 msgid ""
@@ -1963,12 +1951,12 @@ msgstr ""
 "ApplicationWindow` que forma a base da nossa aplicação de Kirigami."
 
 #: content/docs/use/kirigami/components-drawers.md:51
-#, fuzzy
-#| msgid "![Our new global drawer](globaldrawer_simple.png)"
 msgid ""
 "![Our new global drawer](/docs/use/kirigami/components-drawers/"
 "globaldrawer_simple.png)"
-msgstr "![A nossa área global](globaldrawer_simple.png)"
+msgstr ""
+"![A nossa área global](/docs/use/kirigami/components-drawers/"
+"globaldrawer_simple.png)"
 
 #: content/docs/use/kirigami/components-drawers.md:56
 msgid "Header"
@@ -1995,13 +1983,12 @@ msgstr ""
 "`header` da área global."
 
 #: content/docs/use/kirigami/components-drawers.md:97
-#, fuzzy
-#| msgid "![Search bar header global drawer](globaldrawer_header.png)"
 msgid ""
 "![Search bar header global drawer](/docs/use/kirigami/components-drawers/"
 "globaldrawer_header.png)"
 msgstr ""
-"![Área global do cabeçalho da barra de pesquisa](globaldrawer_header.png)"
+"![Área global do cabeçalho da barra de pesquisa](/docs/use/kirigami/"
+"components-drawers/globaldrawer_header.png)"
 
 #: content/docs/use/kirigami/components-drawers.md:99
 msgid ""
@@ -2037,12 +2024,12 @@ msgid "In this menu mode, headers and banners are not visible."
 msgstr "Neste modo de menu, os cabeçalhos e rodapés não ficam visíveis."
 
 #: content/docs/use/kirigami/components-drawers.md:144
-#, fuzzy
-#| msgid "![Global drawer as a menu on the desktop](globaldrawer_menu.png)"
 msgid ""
 "![Global drawer as a menu on the desktop](/docs/use/kirigami/components-"
 "drawers/globaldrawer_menu.png)"
-msgstr "![A área global como um menu no computador](globaldrawer_menu.png)"
+msgstr ""
+"![A área global como um menu no computador](/docs/use/kirigami/components-"
+"drawers/globaldrawer_menu.png)"
 
 #: content/docs/use/kirigami/components-drawers.md:149
 msgid "Banners"
@@ -2078,14 +2065,12 @@ msgstr ""
 "estético. Este ícone aparecerá à esquerda do título."
 
 #: content/docs/use/kirigami/components-drawers.md:185
-#, fuzzy
-#| msgid ""
-#| "![Global drawer with title and icon in banner](globaldrawer-banner.png)"
 msgid ""
 "![Global drawer with title and icon in banner](/docs/use/kirigami/components-"
 "drawers/globaldrawer-banner.png)"
 msgstr ""
-"![Área global com título e ícone no separador](globaldrawer-banner.png)"
+"![Área global com título e ícone no separador](/docs/use/kirigami/components-"
+"drawers/globaldrawer-banner.png)"
 
 #: content/docs/use/kirigami/components-drawers.md:192
 msgid ""
@@ -2279,12 +2264,12 @@ msgstr ""
 "apresentado no componente-filho em questão."
 
 #: content/docs/use/kirigami/components-formlayouts.md:52
-#, fuzzy
-#| msgid "![A simple formlayout](formlayouts-simple.png)"
 msgid ""
 "![A simple formlayout](/docs/use/kirigami/components-formlayouts/formlayouts-"
 "simple.png)"
-msgstr "![Um FormLayout simples](formlayouts-simple.png)"
+msgstr ""
+"![Um FormLayout simples](/docs/use/kirigami/components-formlayouts/"
+"formlayouts-simple.png)"
 
 #: content/docs/use/kirigami/components-formlayouts.md:57
 msgid "Sections and separators"
@@ -2339,12 +2324,12 @@ msgstr ""
 "formulário."
 
 #: content/docs/use/kirigami/components-formlayouts.md:118
-#, fuzzy
-#| msgid "![A formlayout with sections](formlayouts-sections.png)"
 msgid ""
 "![A formlayout with sections](/docs/use/kirigami/components-formlayouts/"
 "formlayouts-sections.png)"
-msgstr "![Um FormLayout com secções](formlayouts-sections.png)"
+msgstr ""
+"![Um FormLayout com secções](/docs/use/kirigami/components-formlayouts/"
+"formlayouts-sections.png)"
 
 #: content/docs/use/kirigami/components-formlayouts.md:124
 msgid "Checkable children"
@@ -2364,13 +2349,12 @@ msgstr ""
 "configuração, como por exemplo num campo de texto."
 
 #: content/docs/use/kirigami/components-formlayouts.md:153
-#, fuzzy
-#| msgid "![A formlayout with checkable child](formlayouts-checkable.png)"
 msgid ""
 "![A formlayout with checkable child](/docs/use/kirigami/components-"
 "formlayouts/formlayouts-checkable.png)"
 msgstr ""
-"![Um FormLayout ou um filho com opção de marcação](formlayouts-checkable.png)"
+"![Um FormLayout ou um filho com opção de marcação](/docs/use/kirigami/"
+"components-formlayouts/formlayouts-checkable.png)"
 
 #: content/docs/use/kirigami/components-formlayouts.md:158
 msgid "Forcing a desktop or mobile layout"
@@ -2405,14 +2389,12 @@ msgstr ""
 "dispositivos móveis (única coluna)"
 
 #: content/docs/use/kirigami/components-formlayouts.md:189
-#, fuzzy
-#| msgid "![A formlayout with forced mobile layout](formlayouts-widemode.png)"
 msgid ""
 "![A formlayout with forced mobile layout](/docs/use/kirigami/components-"
 "formlayouts/formlayouts-widemode.png)"
 msgstr ""
-"![Um FormLayout com o formato para dispositivos móveis forçado](formlayouts-"
-"widemode.png)"
+"![Um FormLayout com o formato para dispositivos móveis forçado](/docs/use/"
+"kirigami/components-formlayouts/formlayouts-widemode.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:0
 msgid "Inline messages"
@@ -2461,13 +2443,12 @@ msgstr ""
 "`text`: aqui é onde poderá definir o texto da sua mensagem incorporada."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:48
-#, fuzzy
-#| msgid "![A simple inline message and button](inlinemessages-simple.png)"
 msgid ""
 "![A simple inline message and button](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-simple.png)"
 msgstr ""
-"![Uma mensagem incorporada simples e um botão](inlinemessages-simple.png)"
+"![Uma mensagem incorporada simples e um botão](/docs/use/kirigami/components-"
+"inlinemessages/inlinemessages-simple.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:53
 msgid "Different types"
@@ -2524,13 +2505,12 @@ msgstr ""
 "errado."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:101
-#, fuzzy
-#| msgid "![Different inline message types](inlinemessages-types.png)"
 msgid ""
 "![Different inline message types](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-types.png)"
 msgstr ""
-"![Diferentes tipos de mensagens incorporadas](inlinemessages-types.png)"
+"![Diferentes tipos de mensagens incorporadas](/docs/use/kirigami/components-"
+"inlinemessages/inlinemessages-types.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:106
 msgid "Customising text and icons"
@@ -2552,13 +2532,12 @@ msgid "Note that when you use quotes in a string you will have to escape them!"
 msgstr "Lembre-se que quando usar aspas no texto terá de as escapar!"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:126
-#, fuzzy
-#| msgid "![An inline message with rich text](inlinemessages-richtext.png)"
 msgid ""
 "![An inline message with rich text](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-richtext.png)"
 msgstr ""
-"![Uma mensagem incorporada com texto formatado](inlinemessages-richtext.png)"
+"![Uma mensagem incorporada com texto formatado](/docs/use/kirigami/"
+"components-inlinemessages/inlinemessages-richtext.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:131
 msgid ""
@@ -2575,13 +2554,12 @@ msgstr ""
 "pesquisar os ícones disponíveis no seu sistema, bem como os seus nomes."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:148
-#, fuzzy
-#| msgid "![An inline message with a specified icon](inlinemessages-icon.png)"
 msgid ""
 "![An inline message with a specified icon](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-icon.png)"
 msgstr ""
-"![Uma mensagem incorporada com um ícone específico](inlinemessages-icon.png)"
+"![Uma mensagem incorporada com um ícone específico](/docs/use/kirigami/"
+"components-inlinemessages/inlinemessages-icon.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:153
 msgid "Using actions in inline messages"
@@ -2600,13 +2578,12 @@ msgstr ""
 "uma `Kirigami.Action` ou com uma lista de componentes `Kirigami.Action`."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:195
-#, fuzzy
-#| msgid "![An inline message with two actions](inlinemessages-actions.png)"
 msgid ""
 "![An inline message with two actions](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-actions.png)"
 msgstr ""
-"![Uma mensagem incorporada com duas acções](inlinemessages-actions.png)"
+"![Uma mensagem incorporada com duas acções](/docs/use/kirigami/components-"
+"inlinemessages/inlinemessages-actions.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:200
 msgid "Close buttons"
@@ -2629,16 +2606,12 @@ msgstr ""
 "substituído ao configurar a propriedade `showCloseButton` como verdadeira."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:221
-#, fuzzy
-#| msgid ""
-#| "![An inline message with close button showing](inlinemessages-closebutton."
-#| "png)"
 msgid ""
 "![An inline message with close button showing](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-closebutton.png)"
 msgstr ""
-"![Uma mensagem incorporada com o botão de fecho visível](inlinemessages-"
-"closebutton.png)"
+"![Uma mensagem incorporada com o botão de fecho visível](/docs/use/kirigami/"
+"components-inlinemessages/inlinemessages-closebutton.png)"
 
 #: content/docs/use/kirigami/components-listview.md:0
 msgid "List views"
@@ -2720,12 +2693,12 @@ msgstr ""
 "dados a começar no 0."
 
 #: content/docs/use/kirigami/components-listview.md:56
-#, fuzzy
-#| msgid "![A simple listview](listview-simple.png)"
 msgid ""
 "![A simple listview](/docs/use/kirigami/components-listview/listview-simple."
 "png)"
-msgstr "![Uma lista simples](listview-simple.png)"
+msgstr ""
+"![Uma lista simples](/docs/use/kirigami/components-listview/listview-simple."
+"png)"
 
 #: content/docs/use/kirigami/components-listview.md:61
 msgid ""
@@ -2813,15 +2786,12 @@ msgstr ""
 "`helpfulAction` do `Kirigami.PlaceHolderMessage`."
 
 #: content/docs/use/kirigami/components-listview.md:129
-#, fuzzy
-#| msgid ""
-#| "![A list view with a placeholder message](listview-placeholdermessage.png)"
 msgid ""
 "![A list view with a placeholder message](/docs/use/kirigami/components-"
 "listview/listview-placeholdermessage.png)"
 msgstr ""
-"![Uma lista com uma mensagem de substituição](listview-placeholdermessage."
-"png)"
+"![Uma lista com uma mensagem de substituição](/docs/use/kirigami/components-"
+"listview/listview-placeholdermessage.png)"
 
 #: content/docs/use/kirigami/components-listview.md:134
 msgid "List headers"
@@ -2881,12 +2851,12 @@ msgstr ""
 "permanece no topo da lista."
 
 #: content/docs/use/kirigami/components-listview.md:168
-#, fuzzy
-#| msgid "![A listview with a header](listview-header.png)"
 msgid ""
 "![A listview with a header](/docs/use/kirigami/components-listview/listview-"
 "header.png)"
-msgstr "![Uma ListView com um cabeçalho](listview-header.png)"
+msgstr ""
+"![Uma ListView com um cabeçalho](/docs/use/kirigami/components-listview/"
+"listview-header.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:0
 msgid "Overlay sheets"
@@ -2933,12 +2903,12 @@ msgstr ""
 "onde queremos que apareça."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:46
-#, fuzzy
-#| msgid "![Simple overlay sheet](sheet_simple.png)"
 msgid ""
 "![Simple overlay sheet](/docs/use/kirigami/components-overlaysheets/"
 "sheet_simple.png)"
-msgstr "![Folha sobreposta simples](sheet_simple.png)"
+msgstr ""
+"![Folha sobreposta simples](/docs/use/kirigami/components-overlaysheets/"
+"sheet_simple.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:52
 msgid ""
@@ -3035,11 +3005,11 @@ msgstr ""
 "Kirigami."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:162
-#, fuzzy
-#| msgid "![](/docs/use/kirigami/components-card/card1.png)"
 msgid ""
 "![Sheet header](/docs/use/kirigami/components-overlaysheets/sheet_header.png)"
-msgstr "![](/docs/use/kirigami/components-card/card1.png)"
+msgstr ""
+"![Cabeçalho da folha](/docs/use/kirigami/components-overlaysheets/"
+"sheet_header.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:168
 msgid ""
@@ -3059,11 +3029,11 @@ msgid "Footers are set in much the same way as headers:"
 msgstr "Os rodapés são configurados da mesma forma que os cabeçalhos:"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:200
-#, fuzzy
-#| msgid "![](/docs/use/kirigami/components-card/card1.png)"
 msgid ""
 "![Sheet footer](/docs/use/kirigami/components-overlaysheets/sheet_footer.png)"
-msgstr "![](/docs/use/kirigami/components-card/card1.png)"
+msgstr ""
+"![Rodapé da folha](/docs/use/kirigami/components-overlaysheets/sheet_footer."
+"png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:206
 msgid "Using delegate / model views"
@@ -3082,16 +3052,12 @@ msgstr ""
 "janela da aplicação, a folha sobreposta fica com opções de deslocamento:"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:231
-#, fuzzy
-#| msgid ""
-#| "![Screenshot of a CardsListView](/docs/use/kirigami/components-card/"
-#| "cardslistview.png)"
 msgid ""
 "![Sheet with a listview](/docs/use/kirigami/components-overlaysheets/"
 "sheet_listview.png)"
 msgstr ""
-"![Imagem de um CardsListView](/docs/use/kirigami/components-card/"
-"cardslistview.png)"
+"![Folha com uma lista](/docs/use/kirigami/components-overlaysheets/"
+"sheet_listview.png)"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:0
 msgid "Page rows and page stacks"
@@ -3378,12 +3344,12 @@ msgstr ""
 "aos utilizadores que algo está a acontecer."
 
 #: content/docs/use/kirigami/components-progressbars.md:66
-#, fuzzy
-#| msgid "![](/docs/use/kirigami/components-card/card1.png)"
 msgid ""
 "![A busy indicator](/docs/use/kirigami/components-progressbars/busyindicator."
 "png)"
-msgstr "![](/docs/use/kirigami/components-card/card1.png)"
+msgstr ""
+"![Um indicador de ocupado](/docs/use/kirigami/components-progressbars/"
+"busyindicator.png)"
 
 #: content/docs/use/kirigami/components-progressbars.md:71
 msgid ""
@@ -6369,24 +6335,3 @@ msgid ""
 msgstr ""
 "O tamanho do texto do [Theme](docs:kirigami2;Theme) do Kirigami está "
 "disponível como `Kirigami.Theme.defaultFont.pointSize` na sua aplicação."
-
-#~ msgid "![A tool button](controls-toolbutton.png)"
-#~ msgstr "![Um botão de ferramentas](controls-toolbutton.png)"
-
-#~ msgid "![A set of switches](controls-switch.png)"
-#~ msgstr "![Um conjunto de comutadores](controls-switch.png)"
-
-#~ msgid "![A set of sliders](controls-sliders.png)"
-#~ msgstr "![Um conjunto de barras deslizantes](controls-sliders.png)"
-
-#~ msgid "![Sheet header](sheet_header.png)"
-#~ msgstr "![Cabeçalho da folha](sheet_header.png)"
-
-#~ msgid "![Sheet footer](sheet_footer.png)"
-#~ msgstr "![Rodapé da folha](sheet_footer.png)"
-
-#~ msgid "![Sheet with a listview](sheet_listview.png)"
-#~ msgstr "![Folha com uma ListView](sheet_listview.png)"
-
-#~ msgid "![A busy indicator](busyindicator.png)"
-#~ msgstr "![Um indicador de ocupado](busyindicator.png)"
