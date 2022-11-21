@@ -8,7 +8,7 @@ authors:
   - SPDX-FileCopyrightText: 2009 Dario Freddi <drf@kde.org>
   - SPDX-FileCopyrightText: 2014 David Edmundson <davidedmundson@kde.org>
   - SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
-SPDX-License-Identifier: LGPL-2-1-or-later
+SPDX-License-Identifier: LGPL-2.1-or-later
 aliases:
   - /docs/kauth/
 ---
