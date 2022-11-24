@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:39+0000\n"
-"PO-Revision-Date: 2022-11-22 18:03+0100\n"
+"PO-Revision-Date: 2022-11-23 18:19+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -2839,16 +2839,14 @@ msgid "Non-fixed width overlay sheet"
 msgstr "Nepremenjena širina prekrivnega lista"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:127
-#, fuzzy
 msgid "Fixed width overlay sheet"
-msgstr "Preložitveni list s fiksno širino"
+msgstr "Prekrivni list s fiksno širino"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:135
 msgid "Headers and footers"
 msgstr "Glave in noge"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:137
-#, fuzzy
 msgid ""
 "Overlay sheets come by default with a header which only contains a button "
 "for closing our overlay sheet. We can add a Kirigami heading as a title in "
@@ -2856,11 +2854,11 @@ msgid ""
 "This is done by setting the `header` property to contain our Kirigami "
 "heading component."
 msgstr ""
-"Preklopne liste privzeto prihajajo z glavo, ki vsebuje samo gumb za "
-"zapiranje našega preklopnega lista. V glavo lahko dodamo naslov Kirigami kot "
-"naslov, da uporabnikom olajšamo razumevanje, za kaj je list. To se naredi "
-"tako, da se lastnost \"glava\" nastavi tako, da vsebuje našo komponento "
-"naslovne glave Kirigami."
+"Prekrivni liste privzeto prihajajo z glavo, ki vsebuje samo gumb za "
+"zapiranje našega prekrivnega lista. Dodamo lahko Kirigami glavo in naslov, "
+"da uporabnikom olajšamo razumevanje, kaj je namen lista. To se naredi tako, "
+"da se lastnost 'header' nastavi tako, da vsebuje našo komponento glave "
+"Kirigami."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:162
 msgid ""
@@ -2869,18 +2867,16 @@ msgstr ""
 "![Glava lista](/docs/use/kirigami/components-overlaysheets/sheet_header.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:168
-#, fuzzy
 msgid ""
 "We can also provide our overlay sheet with a footer. Footers in overlay "
 "sheets are quite flexible, but most often they are used to provide overlay "
 "sheets with some sort of quick interactive input similar to that provided by "
 "modal dialogs (e.g. buttons for 'Apply', 'Ok', 'Cancel', 'Close', etc.)"
 msgstr ""
-"Našemu prekrivnemu listu lahko overlay list z nogo. Noge v preklopnih listov "
-"so precej prilagodljive, najpogosteje pa se uporabljajo za zagotavljanje "
-"preklopnih listov z nekakšnim hitrim interaktivnim vnosom, podobnim tistim, "
-"ki jih zagotavljajo modalna pogovorna okna (npr. gumbi za \"Apply\", \"Ok\", "
-"\"Cancel\", \"Close\" itd.)"
+"Naš prekrivni list ima lahko nogo. Noge v prekrivnih listih so precej "
+"prilagodljive, najpogosteje se uporabljajo za zagotavljanje nekakšnih hitrih "
+"interaktivnih vnosov podobnih tistim, ki jih zagotavljajo modalna pogovorna "
+"okna (npr. gumbi za 'Uveljavi', 'OK', 'Prekliči', 'Zapri' itd.)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:170
 msgid "Footers are set in much the same way as headers:"
@@ -2897,24 +2893,23 @@ msgid "Using delegate / model views"
 msgstr "Uporaba pogledov pooblaščencev / modelov"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:208
-#, fuzzy
 msgid ""
 "Since overlay sheets are designed to display vertical content, they can be "
 "especially useful when used in conjunction with components such as "
 "ListViews. When displaying content longer than the application window "
 "itself, the overlay sheet becomes scrollable:"
 msgstr ""
-"Ker so preložki namenjeni prikazu navpične vsebine, so lahko še posebej "
-"uporabni, kadar se uporabljajo v povezavi s komponentami, kot so "
-"»ListViews«. Pri prikazu vsebine, daljše od samega okna programa, postane "
-"preložni list pomikav:"
+"Ker so prekrivni listi zasnovani tako, da prikazujejo navpično vsebino, so "
+"lahko še posebej uporabni, če se uporabljajo v povezavi s komponentami, kot "
+"so pogledi seznama. Pri prikazu vsebine daljše od okna aplikacije je mogoče "
+"po prekrivnem listu drseti:"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:231
 msgid ""
 "![Sheet with a listview](/docs/use/kirigami/components-overlaysheets/"
 "sheet_listview.png)"
 msgstr ""
-"![List s seznamom pogleda](/docs/use/kirigami/components-overlaysheets/"
+"![List s pogledom seznama](/docs/use/kirigami/components-overlaysheets/"
 "sheet_listview.png)"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:0
@@ -2946,32 +2941,30 @@ msgstr ""
 "flickable.html) površine in bo postal vodoravni pomikajoč pogled stolpcev."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:16
-#, fuzzy
 msgid ""
 "A [PageRow](docs:kirigami2;PageRow) can show a single page or several of "
 "them as columns, depending on the window width. On a phone, a single column "
 "will be viewable, while on a tablet or a desktop more than one column should "
 "be visible at once."
 msgstr ""
-"A [PageRow](docs:kirigami2; PageRow) lahko prikaže eno stran ali več njih "
-"kot stolpce, odvisno od širine okna. V telefonu bo viden en stolpec, v "
-"tabličnem računalniku ali namizju pa mora biti vidnih več kot en stolpec "
-"hkrati."
+"A [Vrstica strani](docs:kirigami2;PageRow) lahko prikaže eno stran ali več "
+"njih kot stolpce, odvisno od širine okna. Na telefonu bo viden en stolpec, v "
+"tabličnem računalniku ali namizju pa mora biti hkrati vidnih več stolpcev "
+"kot le eden."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:20
-#, fuzzy
 msgid ""
 "The columns can either all have the same fixed size, size themselves with "
 "`implicitWidth`, or automatically expand to take up all available width. By "
 "default, the last column will expand to take up all available space."
 msgstr ""
-"Stolpci imajo lahko enako fiksno velikost, velikost sami z \"implicitWidth\" "
-"ali pa se samodejno razširijo tako, da prevzamejo vso razpoložljivo širino. "
+"Stolpci imajo lahko vsi enako fiksno velikost, samodejno z 'implicitWidth' "
+"ali pa se samodejno razširijo tako, da zavzamejo vso razpoložljivo širino. "
 "Privzeto se bo zadnji stolpec razširil in zavzel ves razpoložljivi prostor."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:24
 msgid "Screenshot of a PageRow"
-msgstr "Posnetek zaslona PageRow"
+msgstr "Posnetek zaslona Vrstica strani (PageRow)"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:26
 msgid ""
@@ -3016,22 +3009,21 @@ msgid "give the registered user information to the homepage"
 msgstr "dajte informacije o registriranem uporabniku domačo stran"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:56
-#, fuzzy
 msgid "display error message"
-msgstr "prikaz sporočila o napaki"
+msgstr "prikaži sporočilo o napaki"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:67
-#, fuzzy
 msgid ""
 "Now let's imagine you had a configuration page you wanted the user to access "
 "from the HomePage. You'd want the user to go back to the HomePage, so you "
 "can't use `replace`. Instead, you would use `push` to push a new page in the "
 "stack."
 msgstr ""
-"Predstavljajmo si, da ste imeli konfiguracijsko stran, ki ste jo želeli, da "
-"uporabnik dostopa iz Domače strani. Želeli bi, da se uporabnik vrne na "
-"Domačo stran, tako da ne morete uporabiti »zamenjava«. Namesto tega bi "
-"uporabili \"push\" za potiskanje nove strani v kup."
+"Predstavljajmo si, da bi imeli konfiguracijsko stran, do katere bi jo "
+"želeli, da uporabnik dostopa iz domače strani. Želeli bi, da se uporabnik "
+"spet vrne na Domačo stran, tako da ne morete uporabiti zamenjave - "
+"'replace'. Namesto tega bi uporabili 'push za potiskanje nove strani na "
+"sklad."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:73
 msgid "ConfigurationPage.qml"
@@ -3046,36 +3038,32 @@ msgid "You can also:"
 msgstr "Lahko tudi:"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:87
-#, fuzzy
 msgid ""
 "[pop](docs:kirigami2;PageRow::pop) a page (which removes the last page in "
 "the stack) or"
 msgstr ""
-"[Pop](docs:kirigami2; PageRow::p op) stran (ki odstrani zadnjo stran v "
+"[pop](docs:kirigami2;PageRow::p op) stran (ki odstrani zadnjo stran v "
 "skladu) ali"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:88
-#, fuzzy
 msgid ""
 "use [insertPage](docs:kirigami2;PageRow::insertPage) to insert a page at a "
 "specific position in the stack,"
 msgstr ""
-"uporabite [insertPage](docs:kirigami2; PageRow::insertPage), če želite "
-"vstaviti stran na določenem mestu na sklad,"
+"uporabi [insertPage](docs:kirigami2;PageRow::insertPage), če želite vstaviti "
+"stran na določenem mestu na sklad,"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:89
-#, fuzzy
 msgid ""
 "use [movePage](docs:kirigami2;PageRow::movePage) to move specific pages "
 "within the stack, or"
 msgstr ""
-"uporabite [movePage](docs:kirigami2; PageRow::movePage) za premikanje "
-"določenih strani znotraj sklada ali"
+"uporabi [movePage](docs:kirigami2;PageRow::movePage) za premikanje določenih "
+"strani znotraj sklada ali"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:90
-#, fuzzy
 msgid "[clear](docs:kirigami2;PageRow::clear) all pages from the stack."
-msgstr "[počistite](docs:kirigami2; PageRow::clear) vse strani iz sklada."
+msgstr "[clear](docs:kirigami2;PageRow::clear) počisti vse strani iz sklada."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:92
 msgid ""
@@ -3083,9 +3071,9 @@ msgid ""
 "programmatically, or use [flickBack](docs;Kirigami2;PageRow::flickBack) to "
 "simulate moving a page backwards in the stack."
 msgstr ""
-"Spremenite lahko tudi »currentIndex« in programsko spremenite trenutno "
+"Spremenite lahko tudi 'currentIndex' da programsko spremenite trenutno "
 "aktivno stran ali uporabite [flickBack](docs;Kirigami2;PageRow::flickBack) "
-"za simuliranje premikanja strani nazaj v skladu."
+"za simuliranje premikanja strani nazaj v sklad."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:96
 msgid "Layers"
@@ -3127,18 +3115,16 @@ msgstr ""
 "vrstic napredka."
 
 #: content/docs/use/kirigami/components-progressbars.md:10
-#, fuzzy
 msgid ""
 "Whenever your application does something that takes a noticeable amount of "
 "time, you will want to use a visual element that tells the user that "
 "something is happening in the background."
 msgstr ""
-"Kadarkoli vaša aplikacija naredi nekaj, kar zahteva vidno količino časa, "
-"boste želeli uporabiti vizualni element, ki uporabniku pove, da se nekaj "
-"dogaja v ozadju."
+"Kadarkoli vaša aplikacija naredi nekaj, kar zahteva vidno količino časa, bi "
+"želeli uporabiti vizualni element, ki uporabniku pove, da se nekaj dogaja v "
+"ozadju."
 
 #: content/docs/use/kirigami/components-progressbars.md:12
-#, fuzzy
 msgid ""
 "QtQuick Controls provides two useful components that you can use to this end."
 msgstr ""
@@ -3150,41 +3136,37 @@ msgid "Progress bar"
 msgstr "Vrstica napredka"
 
 #: content/docs/use/kirigami/components-progressbars.md:16
-#, fuzzy
 msgid ""
 "`Controls.ProgressBar` is a component that lets you easily include progress "
 "bars in your application. There are four main properties you will need to "
 "use:"
 msgstr ""
-"\"Controls.ProgressBar\" je komponenta, ki vam v aplikacijo dovoli enostavno "
-"vključiti vrstice napredka. Obstajajo štiri glavne lastnosti, ki jih boste "
+"'Controls.ProgressBar' je komponenta, ki vam v aplikacijo dovoli enostavno "
+"vključiti vrstico napredka. Obstajajo štiri glavne lastnosti, ki jih boste "
 "morali uporabiti:"
 
 #: content/docs/use/kirigami/components-progressbars.md:18
-#, fuzzy
 msgid "`from`: the minimum value represented by the start of the progress bar"
-msgstr "\"od\": najmanjša vrednost, ki jo predstavlja začetek vrstice napredka"
+msgstr "'from': najmanjša vrednost, ki jo predstavlja začetek vrstice napredka"
 
 #: content/docs/use/kirigami/components-progressbars.md:19
-#, fuzzy
 msgid "`to`: the maximum value represented by the end of the progress bar"
-msgstr "\"do\": največja vrednost, ki jo predstavlja konec vrstice napredka"
+msgstr "'to': največja vrednost, ki jo predstavlja konec vrstice napredka"
 
 #: content/docs/use/kirigami/components-progressbars.md:20
-#, fuzzy
 msgid ""
 "`value`: the current value of the action that is in progress (e.g. 50% "
 "loaded)"
-msgstr "\"vrednost\": trenutna vrednost ukrepa, ki je v teku (npr. 50% loaded)"
+msgstr ""
+"'value': trenutna vrednost dejavnosti, ki je v teku (npr. 50% naloženo)"
 
 #: content/docs/use/kirigami/components-progressbars.md:21
-#, fuzzy
 msgid ""
 "`indeterminate`: if the action that is in process currently has no clear "
 "progress value, you can set this property to true to show the user something "
 "is happening but its progress is not yet clear (but will be soon)."
 msgstr ""
-"\"nedoločljiv\": če dejanje, ki je v postopku, trenutno nima jasne vrednosti "
+"`indeterminate`: če dejanje, ki je v postopku, trenutno nima jasne vrednosti "
 "napredka, lahko to lastnost nastavite tako, da bo uporabniku pokazala, da se "
 "nekaj dogaja, vendar njegov napredek še ni jasen (vendar bo kmalu)."
 
@@ -3193,30 +3175,27 @@ msgid "Above: progress bar at 50%; Below: indeterminate progress bar"
 msgstr "Zgoraj: vrstica napredka pri 50 %; spodaj: nedoločena vrstica napredka"
 
 #: content/docs/use/kirigami/components-progressbars.md:52
-#, fuzzy
 msgid "Busy indicator"
-msgstr "Kazalnik zasedenega"
+msgstr "Indikator zasedenosti"
 
 #: content/docs/use/kirigami/components-progressbars.md:54
-#, fuzzy
 msgid ""
 "In cases where loading times are shorter or measuring progress is not "
 "feasible, you can instead use `Controls.BusyIndicator`. This component "
 "provides a simple spinning wheel that shows users that something is "
 "happening."
 msgstr ""
-"V primerih, ko so časi nalaganja krajši ali je izmerjanje napredka "
-"izvedljivo, lahko namesto tega uporabite \"Controls.BusyIndicator\". Ta "
-"komponenta zagotavlja preprosto vrteče kolo, ki uporabnikom pokaže, da se "
-"nekaj dogaja."
+"V primerih, ko so časi nalaganja krajši ali je merjenje napredka izvedljivo, "
+"lahko namesto tega uporabite 'Controls.BusyIndicator'. Ta komponenta "
+"zagotavlja preprosto vrteče kolo, ki uporabnikom pokaže, da se nekaj dogaja."
 
 #: content/docs/use/kirigami/components-progressbars.md:66
-#, fuzzy
-#| msgid "![](/docs/use/kirigami/components-card/card1.png)"
 msgid ""
 "![A busy indicator](/docs/use/kirigami/components-progressbars/busyindicator."
 "png)"
-msgstr "![](/docs/use/kirigami/components-card/card1.png)"
+msgstr ""
+"![Indikator zasedenosti](/docs/use/kirigami/components-progressbars/"
+"busyindicator.png)"
 
 #: content/docs/use/kirigami/components-progressbars.md:71
 msgid ""
@@ -3224,183 +3203,163 @@ msgid ""
 "`running` property to false."
 msgstr ""
 "Če želite, da se indikator ustavi, lahko to storite tako, da nastavite "
-"lastnost »running« na neresnično (false)."
+"lastnost 'running' na false."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:0
-#, fuzzy
 msgid "Scrollable Pages and List Views"
-msgstr "Pomikanje strani in pogledov seznama"
+msgstr "Drsenje po strani in pogledi seznama"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:0
-#, fuzzy
 msgid ""
 "Scrollable pages are useful when combined with vertical components or "
 "dynamic components such as List Views."
 msgstr ""
-"Strani, ki jih je mogoče pomikati, so uporabne v kombinaciji z navpičnimi "
-"komponentami ali dinamičnimi komponentami, kot so Pogledi seznama."
+"Strani, po katerih je mogoče drseti, so uporabne v kombinaciji z navpičnimi "
+"komponentami ali dinamičnimi komponentami, kot so pogledi seznama."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:10
-#, fuzzy
 msgid "`Kirigami.ScrollablePage`"
-msgstr "\"Kirigami.ScrollablePage\""
+msgstr "`Kirigami.ScrollablePage`"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:12
-#, fuzzy
 msgid ""
 "A [`Kirigami.ScrollablePage`](docs:kirigami2;ScrollablePage) is a page that "
 "holds scrollable content, such as `ListView`s. Scrolling and scrolling "
 "indicators are automatically managed."
 msgstr ""
-"A [\"Kirigami.ScrollablePage\"](docs:kirigami2; ScrollablePage) je stran, ki "
-"ima drsno vsebino, na primer »ListView«. Kazalniki za drsenje in drsenje se "
-"samodejno upravljajo."
+"[`Kirigami.ScrollablePage`](docs:kirigami2;ScrollablePage) je stran, ki ima "
+"drsno vsebino, na primer 'ListView'. Kazalniki za drsenje se samodejno "
+"upravljajo."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:19
-#, fuzzy
 msgid "The rectangle will automatically be scrollable"
-msgstr "Pravokotnik bo samodejno drsljiv"
+msgstr "Po pravokotniku se bo samodejno dalo drseti"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:27
-#, fuzzy
 msgid ""
 "In almost every other way, a scrollable page is the same as a normal page."
 msgstr ""
-"Skoraj v vsakem drugem načinu je stran, ki jo je mogoče pomikati, enaka "
+"Na skoraj vsak drug način je stran, po kateri je mogoče drseti, enaka "
 "običajni strani."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:31
-#, fuzzy
 msgid ""
 "Do not put a `ScrollView` inside of a `Kirigami.ScrollablePage`; children of "
 "a `Kirigami.ScrollablePage` are already inside a `ScrollView`."
 msgstr ""
-"Ne dajajte \"ScrollView\" v \"Kirigami.ScrollablePage\"; otroci \"Kirigami."
-"ScrollablePage\" so že znotraj \"ScrollView\"."
+"Ne nastavljajte 'ScrollView' v 'Kirigami.ScrollablePage'; potomci 'Kirigami."
+"ScrollablePage' so že znotraj 'ScrollView'."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:36
-#, fuzzy
 msgid "ListView in a ScrollablePage"
-msgstr "Pregled seznama v pomikavi strani"
+msgstr "Pregled seznama v strani, po kateri se da drseti"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:38
-#, fuzzy
 msgid ""
 "When a `Kirigami.ScrollablePage`'s direct children extend vertically beyond "
 "the size of the page itself, a scrollbar appears at the right edge of the "
 "page and the page will be scrollable."
 msgstr ""
-"Ko se neposredni otroci »Kirigami.ScrollablePage« razširijo navpično preko "
-"velikosti strani, se na desni strani prikaže drsna vrstica in stran bo "
-"pomikajoča."
+"Ko se neposredni potomci 'Kirigami.ScrollablePage' razširijo navpično preko "
+"velikosti strani, se na desni strani prikaže drsnik in po strani se da "
+"drseti."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:42
-#, fuzzy
 msgid "NeoChat Scrollable Page Screenshot"
-msgstr "Posnetek zaslona strani, ki ga je mogoče pomikati v neoChatu"
+msgstr "Posnetek zaslona strani, po katerem je mogoče drseti v neoChatu"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:42
-#, fuzzy
 msgid ""
 "Two scrollable pages, both containing a ListView with custom contents "
 "(Screenshot of NeoChat)"
 msgstr ""
-"Dve pomikavi strani, obe vsebujeta ListView z vsebino po meri (posnetek "
-"zaslona NeoChat)"
+"Dve strani, po katerih se da drseti in obe vsebujeta pogled seznama z "
+"vsebino po meri (posnetek zaslona NeoChat)"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:45
-#, fuzzy
 msgid ""
 "Often you have more than one child in your `Kirigami.ScrollablePage`, and "
 "positioning items can be tricky - especially in combination with a "
 "`ListView`."
 msgstr ""
-"Pogosto imate več kot enega otroka v \"Kirigami.ScrollablePage\" in "
+"Pogosto imate več kot enega potomca v 'Kirigami.ScrollablePage' in "
 "pozicioniranje elementov je lahko zapleteno - še posebej v kombinaciji z "
-"\"ListView\"."
+"'ListView'."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:48
-#, fuzzy
 msgid ""
 "For non-visual components, having them inside the `ListView` element won't "
 "change the visuals of the page. So we can move them inside the `ListView`. "
 "Same for elements anchored to the center of the page, such as placeholder "
 "messages for empty `ListView`s."
 msgstr ""
-"Za nevidne komponente jih v elementu »ListView« ne bodo spremenile vizuale "
-"strani. Da jih lahko premaknemo v 'ListView'. Enako za elemente, ki so "
-"zasidrani na sredino strani, kot so sporočila ograd za prazne »ListView«."
+"Nevizualne komponente v elementu 'ListView' ne bodo spremenile videz strani. "
+"Lahko jih premaknemo v 'ListView'. Enako velja za elemente, ki so zasidrani "
+"na sredino strani, kot so lokacije za sporočila o prazni pogledih seznamov "
+"'ListView'."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:52
-#, fuzzy
 msgid ""
 "For other items, it might make sense to move them to the header or footer of "
 "the `Kirigami.ScrollablePage`. This is often the case for search bars."
 msgstr ""
 "Za druge elemente je morda smiselno, da jih premaknete v glavo ali nogo "
-"strani \"Kirigami.ScrollablePage\". To pogosto velja za iskalne vrstice."
+"strani 'Kirigami.ScrollablePage'. To pogosto velja za iskalne vrstice."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:55
 msgid "PlaceholderMessage"
 msgstr "PlaceholderMessage"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:57
-#, fuzzy
 msgid ""
 "It is possible to add a [`Kirigami.PlaceholderMessage`](docs:kirigami2;"
 "PlaceholderMessage) with some instructions in case the list view is empty."
 msgstr ""
-"Možno je dodati ['Kirigami.PlaceholderMessage'](docs:kirigami2; "
+"Možno je dodati ['Kirigami.PlaceholderMessage'](docs:kirigami2;"
 "PlaceholderMessage) z nekaj navodili, če je pogled seznama prazen."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:79
-#, fuzzy
 msgid "Search in the ListView"
-msgstr "Iskanje v seznamu"
+msgstr "Iskanje v pogledu seznama"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:81
-#, fuzzy
 msgid ""
 "A search field is often added to a `Kirigami.ScrollablePage` to filter the "
 "`ListView`. This can be done by changing the default `titleDelegate` to use "
 "a [`Kirigami.SearchField`](docs:kirigami2;SearchField) instead."
 msgstr ""
-"Iskalno polje se pogosto doda »Kirigami.ScrollablePage« za filtriranje "
-"»ListView«. To lahko storite tako, da spremenite privzeti naslovDelegate za "
-"uporabo ['Kirigami.SearchField'](docs:kirigami2; Iskalno polje) namesto tega."
+"Iskalno polje se pogosto doda 'Kirigami.ScrollablePage' za filtriranje "
+"pogleda seznama 'ListView'. To lahko storite tako, da spremenite privzeti "
+"`titleDelegate` za uporabo [`Kirigami.SearchField`](docs:kirigami2;"
+"SearchField) namesto tega."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:103
 msgid "Hint"
 msgstr "Namig"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:105
-#, fuzzy
 msgid ""
 "You can use [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) from "
 "[KItemModel](https://api.kde.org/frameworks/kitemmodels/html/) to easily add "
 "filtering capability directly in QML without any need for C++ code."
 msgstr ""
-"Uporabite lahko [KSortFilterProxyModel](docs:kitemmodels; SortFilterModel) "
-"iz [KItemModel](https://api.kde.org/frameworks/kitemmodels/html/) za "
-"enostavno dodajanje zmogljivosti filtriranja neposredno v QML brez potrebe "
-"po C++ kodi."
+"Uporabite lahko [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) iz "
+"[KItemModel](https://api.kde.org/frameworks/kitemmodels/html/) za enostavno "
+"dodajanje zmogljivosti filtriranja neposredno v QML brez potrebe po kodi C++."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:111
-#, fuzzy
 msgid "Pull to refresh"
 msgstr "Povlecite za osvežitev"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:113
-#, fuzzy
 msgid ""
 "Another function provided by this component is a \"pull to refresh\" action. "
 "To use this, activate it as follows:"
 msgstr ""
-"Druga funkcija, ki jo zagotavlja ta komponenta, je dejanje \"pull to refresh"
-"\". Če želite to uporabiti, ga aktivirajte na naslednji način:"
+"Druga funkcija, ki jo zagotavlja ta komponenta, je dejanje \"Povlecite za "
+"osvežitev\". Če želite to uporabiti, jo aktivirajte na naslednji način:"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:126
-#, fuzzy
 msgid ""
 "NOTE: MyModel doesn't come from the components, it's purely an example on "
 "how it can be used together some application logic that can update the list "
@@ -3408,36 +3367,33 @@ msgid ""
 msgstr ""
 "OPOMBA: MyModel ne prihaja iz komponent, to je zgolj primer, kako se lahko "
 "uporablja skupaj nekaj logike aplikacije, ki lahko posodobi model seznama in "
-"signale, ko je to končano."
+"signalizira, ko je to končano."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:138
-#, fuzzy
 msgid ""
 "By pulling down, you can also activate a special mode with a larger top "
 "margin which makes single-handed use of the application easier."
 msgstr ""
 "Z vlečenjem navzdol lahko aktivirate tudi poseben način z večjim zgornjim "
-"robom, ki omogoča enoročno uporabo aplikacije."
+"robom, ki še lažje omogoča enoročno uporabo aplikacije."
 
 #: content/docs/use/kirigami/introduction-actions.md:0
 msgid "Adding actions"
 msgstr "Dodajanje dejanj"
 
 #: content/docs/use/kirigami/introduction-actions.md:0
-#, fuzzy
 msgid ""
 "Learning more about Kirigami's Actions will help us make our application "
 "more useful.\n"
 msgstr ""
-"Več informacij o Kirigamijevih ukrepih nam bo pomagalo, da bo naša "
-"aplikacija bolj uporabna.\n"
+"Več informacij o Kirigamijevih aktivnostih nam bo pomagalo, da bo naša "
+"aplikacija še bolj uporabna.\n"
 
 #: content/docs/use/kirigami/introduction-actions.md:10
 msgid "Recap"
 msgstr "Povzetek"
 
 #: content/docs/use/kirigami/introduction-actions.md:12
-#, fuzzy
 msgid ""
 "So far, we have managed to build a simple app that can display cards. "
 "However, we don't yet have a way of adding new cards to our card view."
@@ -3446,31 +3402,28 @@ msgstr ""
 "kartice. Vendar še nimamo načina dodajanja novih kartic v naš pogled kartic."
 
 #: content/docs/use/kirigami/introduction-actions.md:14
-#, fuzzy
 msgid ""
 "In this tutorial, we'll be looking at Kirigami actions. These will help us "
 "add interactivity to our app in a consistent, fast, and accessible way."
 msgstr ""
-"V tem vajah, bomo videli Kirigami akcije. Te nam bodo pomagale dodati "
+"V tem učbeniku, bomo videli akcije Kirigami. Te nam bodo pomagale dodati "
 "interaktivnost v našo aplikacijo na dosleden, hiter in dostopen način."
 
 #: content/docs/use/kirigami/introduction-actions.md:20
-#, fuzzy
 msgid "Page actions on the desktop."
-msgstr "Dejanja strani na namizju."
+msgstr "Aktivnosti strani na namizju."
 
 #: content/docs/use/kirigami/introduction-actions.md:22
-#, fuzzy
 msgid ""
 "If you have used Kirigami apps before, you have certainly interacted with "
 "Kirigami Actions. In this image, we can see actions to the right of the page "
 "title with various icons. Kirigami Actions can be displayed in several ways "
 "and can do a wide variety of things."
 msgstr ""
-"Če ste že uporabljali aplikacije Kirigami, ste zagotovo interakcijo z "
-"Kirigami Actions. Na tej sliki lahko vidimo dejanja na desni strani naslova "
-"z različnimi ikonami. Kirigami Dejanja se lahko prikažejo na več načinov in "
-"lahko naredijo veliko različnih stvari."
+"Če ste že prej uporabljali aplikacije Kirigami, ste zagotovo že spoznali "
+"interakcijo z Kirigami Actions. Na tej sliki lahko vidimo dejanja na desni "
+"strani naslova z različnimi ikonami. Kirigami Actions se lahko prikažejo na "
+"več načinov in lahko naredijo veliko različnih stvari."
 
 #: content/docs/use/kirigami/introduction-actions.md:24
 msgid "Adding countdowns"
@@ -3506,7 +3459,6 @@ msgstr ""
 "postavljamo kot glavno dejanje te strani."
 
 #: content/docs/use/kirigami/introduction-actions.md:52
-#, fuzzy
 msgid ""
 "The `id` and `text` properties should be familiar from previous tutorials. "
 "However, the new `icon` property should be interesting: it is an object with "
@@ -3514,14 +3466,13 @@ msgid ""
 "Fortunately, to use KDE icons all we need to do is provide the name property "
 "for the icon property, `icon.name`."
 msgstr ""
-"Lastnosti \"id\" in \"besedilo\" morajo biti znane iz prejšnjih vaj. Vendar "
-"pa bi morala biti nova lastnost \"ikona\" zanimiva: gre za predmet z več "
-"lastnostmi, ki vam dovolijo prikazati določene ikone za dejanja. Na srečo je "
-"za uporabo Ikon KDE vse, kar moramo storiti, je zagotoviti ime lastnosti "
-"ikone, \"icon.name\"."
+"Lastnosti 'id' in 'text' bi vam morale biti znane iz prejšnjega učenja. "
+"Vendar pa bi morala biti nova lastnost 'icon' zanimiva: je namreč predmet z "
+"več lastnostmi, ki vam dovolijo prikazati določene ikone za dejanja. Na "
+"srečo je za uporabo ikon KDE vse, kar moramo storiti, zagotoviti ime "
+"lastnosti ikone 'icon.name'."
 
 #: content/docs/use/kirigami/introduction-actions.md:56
-#, fuzzy
 msgid ""
 "Cuttlefish is a KDE application that lets you view all the icons that you "
 "can use for your application. It offers a number of useful features such as "
@@ -3529,14 +3480,13 @@ msgid ""
 "different sizes, and more. You might find it a useful tool when deciding on "
 "which icons to use in your application."
 msgstr ""
-"Sipka je aplikacija KDE, ki vam dovoli, da si ogledate vse ikone, ki jih "
-"lahko uporabite za svojo aplikacijo. Ponuja številne uporabne funkcije, kot "
-"so predogledi njihovega videza v različnih nameščenih temah, predogledi "
-"različnih velikosti in drugo. Pri odločanju, katere ikone boste uporabili v "
-"aplikaciji, boste morda našli uporabno orodje."
+"Cuttlefish je aplikacija KDE, ki vam dovoli, da si ogledate vse ikone, ki "
+"jih lahko uporabite za svojo aplikacijo. Ponuja številne uporabne funkcije, "
+"kot so predogledi njihovega videza v različnih nameščenih temah, predogledi "
+"v različnih velikostih in drugo. Pri odločanju, katere ikone boste uporabili "
+"v aplikaciji, boste morda našli uporabno orodje."
 
 #: content/docs/use/kirigami/introduction-actions.md:58
-#, fuzzy
 msgid ""
 "Many of KDE's icons follow the FreeDesktop Icon Naming specification. "
 "Therefore, you might also find it useful to consult The FreeDesktop "
@@ -3544,14 +3494,13 @@ msgid ""
 "names on their website](https://specifications.freedesktop.org/icon-naming-"
 "spec/icon-naming-spec-latest.html)."
 msgstr ""
-"Mnoge Ikone KDE sledijo specifikaciji Poimenovanja ikon FreeDesktop. Zato se "
-"vam morda zdi koristno tudi, da se posvetujte s spletnim mestom projekta "
-"FreeDesktop, [ki na svoji spletni strani našteje vsa imena ikon, združljivih "
-"z več namizjem](https://specifications.freedesktop.org/icon-imenovanje-spec/"
-"icon-naming-spec-latest.html)."
+"Mnoge ikone KDE sledijo specifikaciji poimenovanja ikon FreeDesktop. Zato se "
+"utegne biti tudi koristno, da se posvetujete s spletnim mestom projekta "
+"FreeDesktop, [ki na svoji spletni strani našteje vsa imena združljivih ikon]"
+"(https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-"
+"latest.html)."
 
 #: content/docs/use/kirigami/introduction-actions.md:62
-#, fuzzy
 msgid ""
 "The `onTriggered` property is the most important. This is what our action "
 "will do when it is used. You'll notice that in our example we're using the "
@@ -3560,24 +3509,22 @@ msgid ""
 "model. We are providing it with an object that has the relevant properties "
 "for our countdowns (name, description, and a placeholder date)."
 msgstr ""
-"\"OnTriggered\" lastnina je najpomembnejša. To bo storil naš ukrep, ko bo "
-"uporabljen. Opazili boste, da v našem primeru uporabljamo metodo "
-"\"kountdownModel.append\" \"kountdownModel\" smo ustvarili v prejšnjih "
-"vajah. S to metodo lahko v naš model seznama priložemo nov element. Ponujamo "
-"mu predmet, ki ima ustrezne lastnosti za naše odštevanje (ime, opis in datum "
-"ograde)."
+"Lastnost 'OnTriggered' je najpomembnejša. To bo naša naredila aktivnost, ko "
+"bo uporabljena. Opazili boste, da v našem primeru uporabljamo metodo "
+"'kountdownModel.append' modela 'kountdownModel', ki smo ga ustvarili v "
+"prejšnjih vajah. S to metodo lahko v naš model seznama priložimo nov "
+"element. Ponujamo mu predmet, ki ima ustrezne lastnosti za naše odštevanje "
+"(ime, opis in datum bodoče lokacije)."
 
 #: content/docs/use/kirigami/introduction-actions.md:64
-#, fuzzy
 msgid ""
 "Each time we click our now 'Add kountdown' button on the top right, our "
 "custom countdown is added."
 msgstr ""
-"Vsakič, ko kliknemo naš zdaj \"Dodaj kountdown\" gumb na zgornjem desnem "
-"kotu, je dodano naše odštevanje po meri."
+"Vsakič, ko kliknemo naš gumb  Add kountdown' na zgornjem desnem kotu, je "
+"dodano naše odštevanje po meri."
 
 #: content/docs/use/kirigami/introduction-actions.md:68
-#, fuzzy
 msgid ""
 "Did you notice those three lines next to the page title on the previous "
 "screenshot? That's a global drawer. Global drawers are useful for global "
@@ -3588,35 +3535,33 @@ msgstr ""
 "Ste opazili tiste tri vrstice poleg naslova strani na prejšnji sliki "
 "zaslona? To je globalni predal. Globalni predali so uporabni za globalno "
 "krmarjenje in dejanja: z drugimi besedami, tiste stvari, ki jih boste morda "
-"morali uporabiti v celotni aplikaciji. Ustvarili bomo preprost globalni "
+"morali uporabljati vseskozi v aplikaciji. Ustvarili bomo preprost globalni "
 "predal, ki vključuje gumb za zapiranje."
 
 #: content/docs/use/kirigami/introduction-actions.md:94
-#, fuzzy
 msgid ""
 "Here, we put our global drawer inside our application window. The main "
 "property we need to pay attention to is `actions`, which takes the form of "
 "an array of `Kirigami.Action` components. This action has an appropriate "
 "icon and triggers the `Qt.quit()` function, closing the application."
 msgstr ""
-"Tukaj smo dali naš globalni predal v okno aplikacije. Glavna lastnina, na "
-"katero moramo biti pozorni, so \"ukrepi\", ki so v obliki elementov "
-"\"Kirigami.Action\". To dejanje ima ustrezno ikono in sproži funkcijo \"Qt."
-"quit()\" in zapre program."
+"Tukaj smo dali naš globalni predal v okno aplikacije. Glavna lastnost, na "
+"katero moramo biti pozorni, so 'actions', ki so v obliki elementov vektorja "
+"komponent 'Kirigami.Action'. To dejanje ima ustrezno ikono in sproži "
+"funkcijo \"Qt.quit()\" in zapre program."
 
 #: content/docs/use/kirigami/introduction-actions.md:96
 msgid "![](global_drawer.png)"
 msgstr "![](global_drawer.png)"
 
 #: content/docs/use/kirigami/introduction-actions.md:98
-#, fuzzy
 msgid ""
 "Since we are keeping our global drawer simple for now, we are setting the "
 "`isMenu` property to true. This displays our global drawer as a normal "
 "application menu, taking up less space than the default global drawer pane."
 msgstr ""
 "Ker za zdaj ohranjamo naš globalni predal preprost, postavljamo lastnost "
-"\"isMenu\" na resnično. To prikazuje naš globalni predal kot običajen meni "
+"'isMenu' na true. To prikazuje naš globalni predal kot običajni meni "
 "aplikacije, ki zavzame manj prostora kot privzeto podokno globalnega predala."
 
 #: content/docs/use/kirigami/introduction-actions.md:100
@@ -3624,7 +3569,6 @@ msgid "![](quit_action.png)"
 msgstr "![](quit_action.png)"
 
 #: content/docs/use/kirigami/introduction-actions.md:104
-#, fuzzy
 msgid ""
 "The ['Actions'](https://develop.kde.org/docs/kirigami/actions/) page in the "
 "'Components' section of these docs provides further detail on Kirigami "
@@ -3632,7 +3576,7 @@ msgid ""
 msgstr ""
 "Stran [\"Dejanja\"](https://develop.kde.org/docs/kirigami/actions/) v "
 "razdelku \"Komponente\" teh zdravnikov vsebuje dodatne podrobnosti o "
-"dejanjih kirigami in načinu, kako jih je mogoče uporabiti."
+"dejanjih Kirigami in načinu, kako jih je mogoče uporabiti."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:0
 msgid "Setting up and getting started"
@@ -3681,24 +3625,21 @@ msgid "Project structure"
 msgstr "Struktura projekta"
 
 #: content/docs/use/kirigami/introduction-getting_started.md:38
-#, fuzzy
 msgid ""
 "While there are tools that can easily set up our files, we are going to "
 "create them manually. This will let us better understand the pieces that are "
 "going to make up our new application."
 msgstr ""
-"Medtem ko obstajajo orodja, ki lahko enostavno nastavite naše datoteke, jih "
-"bomo ustvarili ročno. Tako bomo bolje razumeli dele, ki bodo iznašli našo "
-"novo vlogo."
+"Medtem ko obstajajo orodja, s katerimi lahko enostavno nastavite naše "
+"datoteke, jih bomo ustvarili ročno. Tako bomo bolje razumeli dele, ki bodo "
+"iznašli našo novo aplikacijo."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:40
-#, fuzzy
 msgid ""
 "First we create our project folder. We are going to call ours 'helloworld'."
-msgstr "Najprej ustvarimo mapo projekta. Naš bomo klicali \"helloworld\"."
+msgstr "Najprej ustvarimo mapo projekta. Našo bomo klicali 'helloworld'."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:54
-#, fuzzy
 msgid ""
 "Within this folder we are going to create a `src` folder and `CMakeLists."
 "txt`. It is generally considered good practice to place all our main code "
@@ -3706,29 +3647,26 @@ msgid ""
 "named `contents`, which itself contains a folder called `ui`. Here is where "
 "we will create our QML files."
 msgstr ""
-"Znotraj te mape bomo ustvarili mapo \"src\" in \"CMakeLists.txt\". Na "
-"splošno velja za dobro prakso, da vse naše glavne kodne datoteke postavimo v "
-"mapo \"src\". Naša mapa \"src\" pa bo vsebovala mapo z imenom \"vsebina\", "
-"ki sama vsebuje mapo z imenom \"ui\". Tukaj bomo ustvarili naše QML datoteke."
+"Znotraj te mape bomo ustvarili mapo 'src' in 'CMakeLists.txt'. Na splošno "
+"velja za dobro prakso, da vse naše glavne datoteke s kodo postavimo v mapo "
+"'src'. Naša mapa 'src' pa bo vsebovala mapo z vsebino z imenom 'contents', "
+"ki sama vsebuje mapo z imenom 'ui'. Tukaj bomo ustvarili naše QML datoteke."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:56
-#, fuzzy
 msgid ""
 "This is KDE convention, but not all KDE projects use this structure. You are "
 "free to set things up differently, but you will have to take this into "
 "account when creating your `CMakeLists.txt` and `resources.qrc` files."
 msgstr ""
 "To je konvencija KDE, vendar vsi KDE projekti ne uporabljajo te strukture. "
-"Stvari lahko nastavite drugače, vendar boste morali to upoštevati pri "
-"ustvarjanju datotek \"CMakeLists.txt\" in \"resources.qrc\"."
+"Stvari lahko nastavite tudi drugače, vendar boste morali to upoštevati pri "
+"ustvarjanju datotek 'CMakeLists.txt' in 'resources.qrc'."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:62
-#, fuzzy
 msgid "Here's where we will be handling our application's frontend."
-msgstr "Tukaj bova delala na fronti naše prijave."
+msgstr "Tukaj bomo delali na ospredju naše aplikacije."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:64
-#, fuzzy
 msgid ""
 "If you know some Javascript, then much of QML will seem familiar to you "
 "(though it does have its own peculiarities). [Qt's documentation](https://"
@@ -3737,19 +3675,19 @@ msgid ""
 "these tutorials we will be focusing much of our attention on our QML code, "
 "where we can use Kirigami to get the most out of it."
 msgstr ""
-"Če poznate kakšen Javascript, potem se vam bo veliko QML zdelo znano (čeprav "
-"ima svoje posebnosti). [Qtova dokumentacija] (https://doc.qt.io/qt-5/qtqml-"
-"index.html) ima na tem jeziku obsežno količino gradiva, če želite nekaj "
-"poskusiti sami. V teh vajah bomo osredotočeni veliko naše pozornosti na našo "
-"QML kodo, kjer lahko uporabite Kirigami, da bi dobili največ iz tega."
+"Če malo poznate Javascript, potem se vam bo velik del QML zdel tudi znan "
+"(čeprav ima svoje posebnosti). [Dokumentacija Qt](https://doc.qt.io/qt-5/"
+"qtqml-index.html) ima na tem jeziku obsežno količino gradiva, če želite "
+"nekaj poskusiti sami. V teh vajah bomo osredotočeni veliko naše pozornosti "
+"na našo QML kodo, kjer lahko uporabite Kirigami, da bi dobili največ iz "
+"njega."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:66
-#, fuzzy
 msgid ""
 "For now, let's focus on `main.qml`. First we import a number of important "
 "modules:"
 msgstr ""
-"Za zdaj se osredotočimo na \"main.qml\". Najprej uvažamo številne pomembne "
+"Za zdaj se osredotočimo na \"main.qml\". Najprej uvozimo številne pomembne "
 "module:"
 
 #: content/docs/use/kirigami/introduction-getting_started.md:68
@@ -3757,7 +3695,6 @@ msgid "QtQuick, the standard library used in QML applications."
 msgstr "QtQuick, standardna knjižnica, ki se uporablja v aplikacijah QML."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:69
-#, fuzzy
 msgid ""
 "QtQuick Controls, which provides a number of standard controls we can use to "
 "make our applications interactive."
@@ -3766,7 +3703,6 @@ msgstr ""
 "lahko naše aplikacije naredimo interaktivne."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:70
-#, fuzzy
 msgid ""
 "QtQuick Layouts, which provides tools for placing components within the "
 "applications window."
@@ -3774,51 +3710,46 @@ msgstr ""
 "QtQuick Layouts, ki ponuja orodja za postavitev komponent v okno aplikacij."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:71
-#, fuzzy
 msgid ""
 "Kirigami, which provides a number of components suited for creating "
 "applications that work across devices of different shapes and sizes."
 msgstr ""
-"Kirigami, ki zagotavlja številne komponente, ki so primerne za ustvarjanje "
+"Kirigami zagotavlja številne komponente, ki so primerne za ustvarjanje "
 "aplikacij, ki delujejo po napravah različnih oblik in velikosti."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:73
-#, fuzzy
 msgid ""
 "We then come to our base element, [`Kirigami.ApplicationWindow`](docs:"
 "kirigami2;ApplicationWindow) which provides some basic features needed for "
 "all Kirigami applications. This is the window that will contain each of our "
 "pages, the main sections of our UI."
 msgstr ""
-"Nato pridemo do osnovnega elementa['Kirigami.ApplicationWindow'](docs:"
-"kirigami2; ApplicationWindow), ki zagotavlja nekaj osnovnih funkcij, ki so "
-"potrebna za vse Kirigami aplikacije. To je okno, ki bo vsebovalo vsako od "
+"Nato pridemo do našega osnovnega elementa ['Kirigami.ApplicationWindow']"
+"(docs:kirigami2;ApplicationWindow), ki zagotavlja nekaj osnovnih funkcij, ki "
+"so potrebne za vse Kirigami aplikacije. To je okno, ki bo vsebovalo vsako od "
 "naših strani, glavne odseke našega UI."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:76
-#, fuzzy
 msgid ""
 "We then set the `id` property of `Kirigami.ApplicationWindow` to 'root'. IDs "
 "are useful because they let us uniquely reference a component, even if we "
 "have several of the same type."
 msgstr ""
-"Nato določimo \"id\" lastnost \"Kirigami.ApplicationWindow\" na \"root\". ID-"
-"ji so uporabni, ker nam dovolijo edinstveno sklicevanje na komponento, tudi "
-"če imamo več iste vrste."
+"Nato določimo lastnost 'id' 'Kirigami.ApplicationWindow' na 'root'. ID-ji so "
+"uporabni, ker nam dovolijo edinstveno sklicevanje na komponento, tudi če "
+"imamo več iste vrste."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:78
-#, fuzzy
 msgid ""
 "We also set the window `title` property to 'Hello World'. You'll notice that "
 "we have wrapped our \"Hello World\" string in a function called `i18nc`, "
 "where we detail the context of the string as well as the string itself."
 msgstr ""
-"Okno \"naslov\" smo nastavili tudi na \"Hello World\". Opazili boste, da smo "
-"zavili naš niz »Pozdravljeni svet« v funkcijo imenovano 'i18nc', kjer "
-"podrobno podrobjamo kontekst niza kot tudi samega niza."
+"Naslov okna kot lastnost 'title' smo nastavili na 'Hello World'. Opazili "
+"boste, da smo zavili naš niz 'Hello World' v funkcijo imenovano 'i18nc', "
+"kjer podrobno opišemo kontekst niza kot tudi sami niz."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:82
-#, fuzzy
 msgid ""
 "[`i18n()`](https://techbase.kde.org/Development/Tutorials/Localization/"
 "i18n#Translatable_Code_Using_i18n.28.29) functions make your app more easily "
@@ -3827,15 +3758,14 @@ msgid ""
 "an English user might see our window title as 'Hello World', a Spanish user "
 "would see 'Hola Mundo'."
 msgstr ""
-"[\"i18n()\"] (https://techbase.kde.org/Development/Tutorials/Localization/"
-"i18n#Translatable_Code_Using_i18n.28.29) funkcije naredijo vašo aplikacijo "
-"lažje prevodljivo, saj vrnejo različico zagotovljenega niza v jeziku "
-"uporabnika (dokler je bila aplikacija lokalizirana za ta jezik). Medtem ko "
-"bi angleški uporabnik lahko naš naslov okna videl kot \"Hello World\", bi "
+"Funkcije ['i18n()'](https://techbase.kde.org/Development/Tutorials/"
+"Localization/i18n#Translatable_Code_Using_i18n.28.29) naredijo vašo "
+"aplikacijo lažje prevedljivo, saj vrnejo različico zagotovljenega niza v "
+"jeziku uporabnika (če je bila aplikacija lokalizirana za ta jezik). Medtem "
+"ko bi angleški uporabnik lahko naš naslov okna videl kot \"Hello World\", bi "
 "španski uporabnik videl \"Hola Mundo\"."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:84
-#, fuzzy
 msgid ""
 "[`i18nc()`](https://techbase.kde.org/Development/Tutorials/Localization/"
 "i18n#Adding_Context_with_i18nc.28.29) builds on the `i18n()` function by "
@@ -3843,13 +3773,12 @@ msgid ""
 "app; that's why we have included the string \"@title\" before \"Hello World"
 "\"."
 msgstr ""
-"[\"i18nc()\"] (https://techbase.kde.org/Development/Tutorials/Localization/"
-"i18n#Adding_Context_with_i18nc.28.29) gradi na funkciji \"i18n()\" tako, da "
+"[`i18nc()`](https://techbase.kde.org/Development/Tutorials/Localization/"
+"i18n#Adding_Context_with_i18nc.28.29) gradi na funkciji `i18n()` tako, da "
 "razvijalcem omogoča, da prevajalcem, ki delajo na aplikaciji, zagotovijo "
 "nekaj konteksta; Zato smo vključili niz \"@title\" pred \"Hello World\"."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:88
-#, fuzzy
 msgid ""
 "We then set the first page of our page stack. Most Kirigami applications are "
 "organised as a stack of pages, each page containing related components "
@@ -3858,12 +3787,12 @@ msgid ""
 "the first page presented upon loading the application to a `Kirigami.Page`, "
 "which will contain all our content."
 msgstr ""
-"Nato nastavimo prvo stran na naši strani. Večina aplikacij Kirigami je "
-"organizirana kot kup strani, vsaka stran vsebuje povezane komponente, ki so "
-"prilagojene določeni nalogi. Za zdaj se držimo preprostega in se držimo ene "
-"strani. Z \"pageStack.initialPage: Kirigami.Page{...}\" smo nastavili prvo "
-"stran, predstavljeno ob nalaganju aplikacije na \"Kirigami.Page\", ki bo "
-"vsebovala vse naše vsebine."
+"Nato nastavimo prvo stran na našem skladu strani. Večina aplikacij Kirigami "
+"je organizirana kot sklad strani, vsaka stran vsebuje povezane komponente, "
+"ki so prilagojene določeni nalogi. Za zdaj se držimo preprostega in se "
+"držimo ene strani. Z  `pageStack.initialPage: Kirigami.Page{...}`  smo "
+"nastavili prvo stran, predstavljeno ob nalaganju aplikacije na 'Kirigami."
+"Page', ki bo vsebovala vse naše vsebine."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:90
 #, fuzzy
@@ -3882,28 +3811,24 @@ msgstr ""
 "\"besedilo: i18n(\"Pozdravljeni svet!\") `."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:94
-#, fuzzy
 msgid ""
 "`main.cpp` handles the 'business logic' of our application. C++ is handy "
 "because it is flexible and fast, even if it is more involved than other "
 "programming languages."
 msgstr ""
-"\"glavna.cpp\" obravnava \"poslovno logiko\" naše aplikacije. C++ je "
-"prirocen, ker je fleksibilen in hiter, čeprav je bolj vključen kot drugi "
-"programski jeziki."
+"`main.cpp` obravnava  'business logic' naše aplikacije. C++ je priročen, ker "
+"je fleksibilen in hiter, čeprav je bolj vključen kot drugi programski jeziki."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:96
-#, fuzzy
 msgid ""
 "`main.cpp` is also the entrypoint to our application. The two parts of our "
 "project, the backend and the user interface, are both set up and started "
 "here."
 msgstr ""
-"\"glavna.cpp\" je tudi vstopna točka v našo prijavo. Dva dela našega "
-"projekta, hrbtna in uporabniška vmesnika, sta nastavljena in zagnana tukaj."
+"`main.cpp` je tudi vstopna točka v našo aplikacijo. Dva dela našega "
+"projekta, zaledje in uporabniški vmesnik, sta nastavljena in zagnana tukaj."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:100
-#, fuzzy
 msgid ""
 "For now, we don't need to go into too much detail regarding what our `main."
 "cpp` code does, but its role will grow significantly more important once we "
@@ -3911,24 +3836,22 @@ msgid ""
 "If you want to get ahead, you can read more about how this `main.cpp` works "
 "[in this page](/docs/kirigami/advanced-maincpp/)."
 msgstr ""
-"Za zdaj nam ni treba preveč podrobno o tem.cpp kaj počne naša \"glavna.cpp\" "
-"koda, vendar bo njegova vloga bistveno pomembnejša, ko se bomo odločili, da "
+"Za zdaj nam ni treba vedeti preveč podrobnosti o kaj počne naša koda \"main."
+"cpp\", vendar bo njegova vloga bistveno pomembnejša, ko se bomo odločili, da "
 "bomo v prihodnje naši uporabi dodali bolj zapleteno funkcionalnost. Če "
-"želite napredeti, si lahko preberete več o tem, kako to \"glavno.cpp\" "
-"deluje [na tej strani](/docs/kirigami/advanced-maincpp/)."
+"želite napredovati, si lahko preberete več o tem, kako ta \"main.cpp\" "
+"deluje [na tej strani]](/docs/kirigami/advanced-maincpp/)."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:102
-#, fuzzy
 msgid "resources.qrc"
-msgstr "viri.qrc"
+msgstr "resources.qrc"
 
 #: content/docs/use/kirigami/introduction-getting_started.md:104
-#, fuzzy
 msgid ""
 "`resources.qrc` contains the list of all QML files as well as other files "
 "(like custom icons) that will be included in the binary."
 msgstr ""
-"\"resources.qrc\" vsebuje seznam vseh QML datotek in drugih datotek (kot so "
+"'resources.qrc' vsebuje seznam vseh QML datotek in drugih datotek (kot so "
 "ikone po meri), ki bodo vključene v binarno."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:108
@@ -3947,13 +3870,12 @@ msgstr ""
 "\"resources.qrc\" tako, da dodamo še eno vrstico, kot je ta."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:110
-#, fuzzy
 msgid ""
 "You can read more about the specifics of how the Qt resource system works "
 "[in Qt's docs](https://doc.qt.io/qt-5/resources.html)."
 msgstr ""
-"Preberite si lahko več o podrobnostih o tem, kako deluje Qt sistem virov [v "
-"Qt-jevih dohodih](https://doc.qt.io/qt-5/resources.html)."
+"Več o podrobnostih, kako deluje Qt sistem virov, si lahko preberete [v "
+"dokumentih Qt](https://doc.qt.io/qt-5/resources.html)."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:114
 #, fuzzy
@@ -4121,14 +4043,13 @@ msgid "Using Kirigami Gallery to find code patterns\n"
 msgstr "Uporaba Galerije Kirigami za iskanje vzorcev kod\n"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:10
-#, fuzzy
 msgid ""
 "[Kirigami Gallery](https://invent.kde.org/sdk/kirigami-gallery/) is a "
 "helpful friend when developing a Kirigami application. It is an application "
 "which uses the features of Kirigami, provides links to the source code, tips "
 "on how to use the components as well as links to the corresponding HIG pages."
 msgstr ""
-"[Kirigami galerija] (https://invent.kde.org/sdk/kirigami-gallery/) je "
+"[Kirigami Galerija](https://invent.kde.org/sdk/kirigami-gallery/) je "
 "koristna prijateljica pri razvoju aplikacije Kirigami. To je aplikacija, ki "
 "uporablja funkcije Kirigami, zagotavlja povezave do izvorne kode, nasvete o "
 "tem, kako uporabljati komponente, kot tudi povezave do ustreznih HIG strani."
@@ -4139,18 +4060,16 @@ msgid "Tip"
 msgstr "Nasvet"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:17
-#, fuzzy
 msgid ""
 "Before continuing please install Kirigami Gallery. It should already be in "
 "the repository of your Linux distribution."
 msgstr ""
-"Preden nadaljujete, namestite Galerijo Kirigami. To bi moralo biti že v "
-"skladišču vaše Linux distribucije."
+"Preden nadaljujete, namestite Galerijo Kirigami. Morala bi biti že v "
+"skladišču vaše distribucije Linuxa."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:22
-#, fuzzy
 msgid "Find a card grid"
-msgstr "Iskanje mreže kartic"
+msgstr "Išči mrežo kartic"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:24
 #, fuzzy
@@ -4164,9 +4083,8 @@ msgstr ""
 "kartic."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:28
-#, fuzzy
 msgid "![List of kirigami gallery components](components.png)"
-msgstr "! [Seznam komponent kirigami galerije] (komponente.png)"
+msgstr "![Seznam komponent kirigami galerije](components.png)"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:30
 #, fuzzy
@@ -4180,23 +4098,20 @@ msgstr ""
 "abstraktne kartice."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:33
-#, fuzzy
 msgid "![Kirigami gallery grid view](cards.png)"
-msgstr "! [Kirigami galerija pogled na mrežo] (kartice.png)"
+msgstr "![Mrežni pogled Kirigami galerije](cards.png)"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:35
-#, fuzzy
 msgid ""
 "In this information dialog we will also find a link to the source code of "
 "the Cards Grid View. Let's navigate to this page."
 msgstr ""
 "V tem pogovornem oknu z informacijami bomo našli tudi povezavo do izvorne "
-"kode pogleda mreže kartic. Pojdiva do te strani."
+"kode pogleda mreže kartic. Pojdimo do te strani."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:38
-#, fuzzy
 msgid "Implement the card grid"
-msgstr "Izvajanje mreže kartic"
+msgstr "Izvedba mreže kartic"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:40
 #, fuzzy
@@ -4215,13 +4130,12 @@ msgstr ""
 "nam je pomagala priti do skladišča izvorne kode kirigami-galerije)."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:45
-#, fuzzy
 msgid ""
 "So, we are going to substitute the Page component of main.qml of the "
 "skeleton app with the below Scrollable Page:"
 msgstr ""
-"Torej, bomo nadomestili stran komponento main.qml skelet app s spodnjim "
-"Pomikanje Stran:"
+"Torej, bomo nadomestili stran komponento main.qml ogrodja aplikacije s "
+"spodnjo stranjo, po kateri se da drseti:"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:64
 #, fuzzy
@@ -4243,14 +4157,13 @@ msgstr ""
 "(https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html)."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:70
-#, fuzzy
 msgid ""
 "Now let's populate the model that will feed our grid view with data. In "
 "[Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) definition, just "
 "after:"
 msgstr ""
 "Zdaj pa napolnimo model, ki bo naš pogled na mrežo hranil s podatki. V "
-"[Kirigami.ScrollablePage](docs:kirigami2; ScrollablePage) definicija, takoj "
+"[Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) definicija, takoj "
 "za:"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:79
@@ -4258,7 +4171,6 @@ msgid "add the below:"
 msgstr "dodajte spodnje:"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:92
-#, fuzzy
 msgid ""
 "The model part of our implementation is ready. Let's proceed to defining a "
 "delegate that will be responsible for displaying the data. So, we add the "
@@ -4267,42 +4179,39 @@ msgid ""
 msgstr ""
 "Modelni del našega izvajanja je pripravljen. Nadaljujmo z določanjem "
 "pooblaščenca, ki bo odgovoren za prikaz podatkov. Torej, dodamo naslednjo "
-"kodo na stran main.qml, takoj za Component.on Dokončana definicija:"
+"kodo na stran main.qml, takoj za definicijo Component.onCompleted:"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:126
-#, fuzzy
 msgid ""
 "Following the related information on the [api page](docs:kirigami2;Card) we "
 "populate a \"banner\" (although without an image yet), that will act as a "
 "header that will display the name of the contact as well as a contact icon."
 msgstr ""
-"Sledite povezanim informacijam na [api strani](docs:kirigami2; Kartica) "
+"Sledite povezanim informacijam na [strani api](docs:kirigami2;Card) "
 "napolnimo \"banner\" (čeprav še brez slike), ki bo delovala kot glava, ki bo "
 "prikazala ime stika in ikono stika."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:128
-#, fuzzy
 msgid ""
 "The main content of the card has been populated with the cell phone number "
 "and the email of the contact, structured as a [column](https://doc.qt.io/"
 "qt-5/qml-qtquick-column.html) of [labels](https://doc.qt.io/qt-5/qml-qtquick-"
 "controls2-label.html)."
 msgstr ""
-"Glavna vsebina kartice je bila naseljena s številko mobilnega telefona in e-"
+"Glavna vsebina kartice je bila napolnjena s številko mobilnega telefona in e-"
 "pošto stika, strukturirana kot [stolpec](https://doc.qt.io/qt-5/qml-qtquick-"
-"column.html) [nalepk](https://doc.qt.io/qt-5/qml-qtquick-controls2-label."
+"column.html) [oznak](https://doc.qt.io/qt-5/qml-qtquick-controls2-label."
 "html)."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:130
 msgid "The application should look like this:"
-msgstr "Aplikacija mora biti videti tako:"
+msgstr "Aplikacija bi morala biti takega videza:"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:132
 msgid "![Simple grid of cards](implementation.png)"
 msgstr "![Preprosta mreža kart](implementation.png)"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:136
-#, fuzzy
 msgid ""
 "You can find the full source code of the tutorial at [invent.kde.org]"
 "(https://invent.kde.org/dkardarakos/kirigami-tutorial)."
