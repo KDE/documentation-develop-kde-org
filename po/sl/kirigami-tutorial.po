@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:39+0000\n"
-"PO-Revision-Date: 2022-11-24 09:45+0100\n"
+"PO-Revision-Date: 2022-11-26 19:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -980,8 +980,8 @@ msgid ""
 "support extra actions. When using a mouse, they will be shown on hover. On a "
 "touch device, they can be shown by dragging the item with the handle."
 msgstr ""
-"[SwipeListItem](docs:kirigami2;SwipeListItem)  je pooblaščenec, namenjen "
-"podpori dodatnih dejanj. Pri uporabi miške bodo prikazane ob postoju nad "
+"[SwipeListItem](docs:kirigami2;SwipeListItem)  je delegat, namenjen podpori "
+"dodatnih dejanj. Pri uporabi miške bodo prikazane ob miškini kazalki nad "
 "elementom. V napravi na dotik se lahko prikažejo tako, da povlečete element "
 "z ročico."
 
@@ -3984,7 +3984,6 @@ msgid "![Screenshot of the generated Kirigami application](hello-kworld.png)"
 msgstr "![Posnetek zaslona ustvarjene aplikacije Kirigami](hello-kworld.png)"
 
 #: content/docs/use/kirigami/introduction-getting_started.md:159
-#, fuzzy
 msgid ""
 "Next time you want to create the files and folders needed, you can use "
 "[KAppTemplate](https://apps.kde.org/kapptemplate) or KDevelop to "
@@ -3995,14 +3994,14 @@ msgid ""
 "file that contains information about how the application should be displayed "
 "in a linux application launcher."
 msgstr ""
-"Ko želite naslednjič ustvariti datoteke in mape, lahko uporabite "
+"Ko želite naslednjič ustvariti potrebne datoteke in mape, lahko uporabite "
 "[KAppTemplate](https://apps.kde.org/kapptemplate) ali KDevelop za samodejno "
-"ustvarjanje primernega projekta za začetek. Na voljo so v repositorijah "
-"vsake večje distribucije. Te aplikacije bodo ustvarile tudi datoteke, ki "
-"vsebujejo metapodatke [AppStream](https://www.freedesktop.org/software/"
-"appstream/docs/sect-Metadata-Application.html) in datoteko \".desktop\", ki "
-"vsebuje informacije o tem, kako naj se aplikacija prikaže v zaganjalniku "
-"linux aplikacij."
+"ustvarjanje primernega projekta za začetek. Na voljo so v skladiščih vsake "
+"večje distribucije. Te aplikacije bodo ustvarile tudi datoteke, ki vsebujejo "
+"metapodatke [AppStream](https://www.freedesktop.org/software/appstream/docs/"
+"sect-Metadata-Application.html) in datoteko '.desktop', ki vsebuje "
+"informacije o tem, kako naj se aplikacija prikaže v zaganjalniku linux "
+"aplikacij."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:161
 msgid ""
@@ -4092,7 +4091,6 @@ msgid "Implement the card grid"
 msgstr "Izvedba mreže kartic"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:40
-#, fuzzy
 msgid ""
 "We will reuse most of the code found in the Cards Grid View Gallery [source "
 "code page](https://invent.kde.org/sdk/kirigami-gallery/-/blob/master/src/"
@@ -4101,11 +4099,11 @@ msgid ""
 "the Kirigami Gallery that helped us reach the kirigami-gallery source code "
 "repository)."
 msgstr ""
-"Večino kode bomo ponovno uporabili v galeriji pogledov na kartice [izvorna "
-"kodna stran](https://invent.kde.org/sdk/kirigami-galerija/-/blob/master/src/"
+"Večino kode bomo ponovno uporabili v galeriji pogledov na kartice [stran "
+"izvorne kode](https://invent.kde.org/sdk/kirigami-gallery/-/blob/master/src/"
 "data/contents/ui/gallery/CardsGridViewGallery.qml). Še posebej bomo "
-"odstranili dodatne dele OverlaySheet (to je izvedba Galerije Kirigami, ki "
-"nam je pomagala priti do skladišča izvorne kode kirigami-galerije)."
+"odstranili dodatne dele prekrivnega lista (to je izvedba Galerije Kirigami, "
+"ki nam je pomagala priti do skladišča izvorne kode galerije kirigami)."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:45
 msgid ""
@@ -4116,7 +4114,6 @@ msgstr ""
 "spodnjo stranjo, po kateri se da drseti:"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:64
-#, fuzzy
 msgid ""
 "What we have done so far is to create a [ScrollablePage](docs:kirigami2;"
 "ScrollablePage) and put a [CardsGridView](docs:kirigami2;CardsGridView) into "
@@ -4126,13 +4123,13 @@ msgid ""
 "presentation of the data. For more info about models and views in Qt Quick, "
 "see [here](https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html)."
 msgstr ""
-"Do zdaj smo ustvarili [ScrollablePage](docs:kirigami2; ScrollablePage) in "
-"postavite [CardsGridView](docs:kirigami2; CardsGridView) v to, saj želimo "
+"Do zdaj smo ustvarili [ScrollablePage](docs:kirigami2;ScrollablePage) in "
+"vanj postavili [CardsGridView](docs:kirigami2;CardsGridView), saj želimo "
 "prikazati mrežo kartic, ustvarjenih iz modela. Podatke vsakega stika "
 "zagotavlja [ListModel](https://doc.qt.io/qt-5/qml-qtqml-modeli-listmodel."
-"html), pooblaščenec kartice pa je odgovoren za predstavitev podatkov. Če "
-"želite več informacij o modelih in pogledih v Qt Quick, si oglejte [tukaj]"
-"(https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html)."
+"html), predstavnik kartice pa je odgovoren za predstavitev podatkov. Če "
+"želite več informacij o modelih in pogledih v Qt Quick, si jih oglejte "
+"[tukaj](https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html)."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:70
 msgid ""
@@ -4198,28 +4195,26 @@ msgstr ""
 "dkardarakos/kirigami-tutorial)."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:140
-#, fuzzy
 msgid ""
 "As a last step we will add some dummy functionality to each card. In "
 "particular, a \"call\" action will be added. Nevertheless, instead of a real "
 "call, a passive notification will be displayed. So, let's change the card "
 "Component to the following:"
 msgstr ""
-"Kot zadnji korak bomo dodali nekaj dummy funkcionalnosti na vsako kartico. "
-"Še posebej bo dodano dejanje »klic«. Kljub temu bo namesto pravega klica "
+"Kot zadnji korak bomo dodali nekaj slepe funkcionalnosti na vsako kartico. "
+"Še posebej bo dodano dejanje \"klic\". Kljub temu bo namesto pravega klica "
 "prikazano pasivno obvestilo. Torej, spremenimo kartico Komponenta na "
 "naslednje:"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:184
-#, fuzzy
 msgid ""
 "So, we added an [action](docs:kirigami2;Action) that, as soon as it is "
 "triggered (by pressing the action button), a [passive notification](docs:"
 "kirigami2;AbstractApplicationWindow) is displayed."
 msgstr ""
-"Dodali smo torej [dejanje](docs:kirigami2; ukrep), ki takoj, ko se sproži (s "
-"pritiskom na akcijski gumb), [pasivno obvestilo](docs:kirigami2; Prikaže se "
-"AbstractApplicationWindow)."
+"Dodali smo torej action](docs:kirigami2;Action), ki takoj, ko se sproži (s "
+"pritiskom na akcijski gumb), prikaže [passive notification](docs:kirigami2;"
+"AbstractApplicationWindow)"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:187
 msgid "Finally, our application should look like this:"
@@ -4230,9 +4225,8 @@ msgid "![Grid with calling action triggered](implementation-actions.png)"
 msgstr "![Mreža s sproženim klicnim dejanjem](implementation-actions.png)"
 
 #: content/docs/use/kirigami/introduction-listviews.md:0
-#, fuzzy
 msgid "Layouts, ListViews, and Cards"
-msgstr "Postavitve, ListView in kartice"
+msgstr "Postavitve, seznam pogledov in kartice"
 
 #: content/docs/use/kirigami/introduction-listviews.md:0
 msgid "Figuring out the different ways of placing things on a page"
@@ -4244,7 +4238,6 @@ msgid "Laying out your content"
 msgstr "Postavitev vsebine"
 
 #: content/docs/use/kirigami/introduction-listviews.md:11
-#, fuzzy
 msgid ""
 "Now that we understand how pages work, it is time to add stuff to ours. We "
 "will be going through a number of important layout components and elements "
@@ -4255,30 +4248,28 @@ msgstr ""
 "uporabni pri načrtovanju naše aplikacije."
 
 #: content/docs/use/kirigami/introduction-listviews.md:13
-#, fuzzy
 msgid ""
 "Don't be scared by the big chunks of code! We'll be going over everything "
 "that we haven't covered before, and by the end of this section you'll have a "
 "neat-looking app."
 msgstr ""
 "Ne bodite prestrašeni z velikimi kosi kode! Preiskali bomo vse, kar še nismo "
-"zakrili, do konca tega razdelka pa boste imeli aplikacijo, ki je v redu."
+"še spoznali in do konca tega razdelka pa boste imeli aplikacijo, ki je lepo "
+"deluje."
 
 #: content/docs/use/kirigami/introduction-listviews.md:15
-#, fuzzy
 msgid "ListViews"
-msgstr "Ogledi seznamov"
+msgstr "Seznam pogledov"
 
 #: content/docs/use/kirigami/introduction-listviews.md:17
-#, fuzzy
 msgid ""
 "If you've ever used Discover, NeoChat, or Plasma's System Settings, you will "
 "have come across a ListView. Quite simply, ListViews let you display data on "
 "a list."
 msgstr ""
-"Če ste kdaj uporabljali Odkrijte, NeoChat ali Plasmine sistemske nastavitve, "
-"boste naleteli na ListView. Preprosto, SeznamViews vam dovoli prikaz "
-"podatkov na seznamu."
+"Če ste kdaj uporabljali Discover, NeoChat ali Plasmine sistemske nastavitve, "
+"ste naleteli na seznam pogledov. Preprosto, seznam pogledov vam dovoli "
+"prikaz podatkov v seznamu."
 
 #: content/docs/use/kirigami/introduction-listviews.md:28
 msgid "That seems cryptic, but don't worry. Let's start from the top."
@@ -4306,9 +4297,8 @@ msgid "Model"
 msgstr "Model"
 
 #: content/docs/use/kirigami/introduction-listviews.md:37
-#, fuzzy
 msgid "Each ListElement is an element on the list, containing information"
-msgstr "Vsak ListElement je element na seznamu, ki vsebuje informacije"
+msgstr "Vsak element seznama je element na seznamu, ki vsebuje informacije"
 
 #: content/docs/use/kirigami/introduction-listviews.md:42
 #, fuzzy
@@ -4324,12 +4314,11 @@ msgstr ""
 "jo uporabljamo kot ogrado."
 
 #: content/docs/use/kirigami/introduction-listviews.md:48
-#, fuzzy
 msgid ""
 "Models are also useful in how they can be modified through the use of "
 "several methods. Some important ones are:"
 msgstr ""
-"Modeli so uporabni tudi pri tem, kako jih je mogoče spremeniti z uporabo več "
+"Modeli so uporabni tudi v tem, kako jih je mogoče spremeniti z uporabo več "
 "metod. Nekatere pomembne so:"
 
 #: content/docs/use/kirigami/introduction-listviews.md:49
@@ -4346,70 +4335,63 @@ msgstr ""
 "pravilne lastnosti in ustrezne podatkovne skupine."
 
 #: content/docs/use/kirigami/introduction-listviews.md:50
-#, fuzzy
 msgid ""
 "ListModelName.get(int index) returns the JSObject at the index location you "
 "provide."
 msgstr ""
-"ListModelName.get(int index) vrne JSObject na mestu indeksa, ki ga navedite."
+"ListModelName.get(int index) vrne JSObject na mestu indeksa, ki ga navedete."
 
 #: content/docs/use/kirigami/introduction-listviews.md:51
-#, fuzzy
 msgid ""
 "ListModelName.remove(int index, int count) removes the JSObject at the "
 "provided index location, and as many after that index location as you wish "
 "(1 includes only the JSObject at the provided index)"
 msgstr ""
 "ListModelName.remove(int index, int count) odstrani JSObject na predvidenem "
-"mestu indeksa in toliko po tem mestu indeksa, kot želite (1 vključuje samo "
-"JSObject na danem indeksu)"
+"mestu indeksa in tolikokrat po tem mestu indeksa, kot želite (1 vključuje "
+"samo JSObject na danem indeksu)"
 
 #: content/docs/use/kirigami/introduction-listviews.md:52
-#, fuzzy
 msgid ""
 "ListModelName.set(int index, jsobject yourobject) changes the item at the "
 "provided index location with the values provided in yourobject. Same rules "
 "as with `.append`."
 msgstr ""
-"ListModelName.set(int index, jsobject yourobject) spremeni element na "
-"zagotovljenem mestu indeksa z vrednostmi, navedenimi v vašemu programu. "
-"Enaka pravila kot pri \".append\"."
+"ListModelName.set(int index, jsobject yourobject) spremeni postavko na "
+"zagotovljenem mestu indeksa z vrednostmi, navedenimi v vašemu predmetu. "
+"Enaka pravila so kot pri '.append'."
 
 #: content/docs/use/kirigami/introduction-listviews.md:54
-#, fuzzy
 msgid "Delegate"
 msgstr "Delegat"
 
 #: content/docs/use/kirigami/introduction-listviews.md:56
-#, fuzzy
 msgid ""
 "The delegate handles how your ListModel's data will be displayed in the "
 "ListView. CardsListView elements are designed with card-type delegates in "
 "mind, and we have indeed used a `Kirigami.AbstractCard` element as our "
 "delegate in the excerpt above."
 msgstr ""
-"Pooblaščenec obravnava, kako bodo prikazani podatki seznamaModel v pregledu "
-"seznama. CardsListView elementi so zasnovani z delegati tipa kartice v "
-"mislih, in dejansko smo uporabili element \"Kirigami.AbstractCard\" kot naš "
-"delegat v zgornjem odlomek."
+"Delegat obravnava, kako bodo prikazani podatki seznama modelov v seznamu "
+"pogledov. Elementi CardsListView so zasnovani z delegati tipa kartice v "
+"mislih, in dejansko smo uporabili element 'Kirigami.AbstractCard' kot naš "
+"delegat v izvlečku zgoraj."
 
 #: content/docs/use/kirigami/introduction-listviews.md:58
-#, fuzzy
 msgid ""
 "Delegates automatically receive the properties of the ListElements that we "
 "have specified in our model. We can therefore just refer to the `name`, "
 "`description`, and `date` properties of our ListElements as if they were a "
 "conventional variable within our delegate."
 msgstr ""
-"Pooblaščenci samodejno prejmejo lastnosti seznamaElements, ki smo jih "
-"določili v našem modelu. Zato lahko samo napotimo na \"ime\", \"opis\" in "
-"\"datum\" lastnosti naše ListElements, kot da so konvencionalna "
-"spremenljivka znotraj našega pooblaščenca."
+"Delegati samodejno prejmejo lastnosti seznama elementov, ki smo jih določili "
+"v našem modelu. Zato lahko samo napotimo na lastnosti  `name`, "
+"`description`, in `date` našega seznama elementov, kot da so konvencionalne "
+"spremenljivke znotraj našega delegata."
 
 #: content/docs/use/kirigami/introduction-listviews.md:60
-#, fuzzy
 msgid "Building our delegate card"
-msgstr "Gradnja naše delegatske kartice"
+msgstr "Gradnja naše kartice delegata"
 
 #: content/docs/use/kirigami/introduction-listviews.md:67
 #, fuzzy
@@ -4423,16 +4405,14 @@ msgstr ""
 "podlagi njene vsebine"
 
 #: content/docs/use/kirigami/introduction-listviews.md:109
-#, fuzzy
 msgid "onClicked: to be done... soon!"
-msgstr "onClicked: opraviti... kmalu!"
+msgstr "onClicked: za opraviti... kmalu!"
 
 #: content/docs/use/kirigami/introduction-listviews.md:117
 msgid "implicitWidth and implicitHeight"
 msgstr "implicitWidth in implicitHeight"
 
 #: content/docs/use/kirigami/introduction-listviews.md:133
-#, fuzzy
 msgid ""
 "Looking at our Kirigami.AbstractCard, the first properties we set are "
 "`implicitWidth` and `implicitHeight`. We have set these to the "
@@ -4444,15 +4424,15 @@ msgid ""
 "AbstractCard` to that of the `GridLayout` below to ensure the `GridLayout` "
 "does not spill out of the card."
 msgstr ""
-"Če pogledamo našo Kirigami.AbstractCard, prve lastnosti, ki smo jih "
-"določili, so \"implicitWidth\" in \"implicitHeight\". Te smo nastavili na "
-"\"delegateLayout.implicitWidth\" in \"delegateLayout.implicitHeight\", to je "
-"\"implicitWidth\" in \"implicitHeight\" elementa \"GridLayout\". Implicitne "
-"širine in višine so lastnosti, ki so določene kot neke vrste privzeto, torej "
-"če za te komponente ni nastavljena eksplicitna širina ali višina. Zato smo "
-"nastavili \"implicitWidth\" in \"implicitHeight\" naše \"Kirigami."
-"AbstractCard\" na \"GridLayout\" spodaj, da se zagotovi, da se \"Mrežna "
-"postavitev\" ne razlije iz kartice."
+"Če pogledamo našo Kirigami.AbstractCard, so prve lastnosti, ki smo jih "
+"določili, so `implicitWidth` in `implicitHeight`. Te smo nastavili na "
+"`delegateLayout.implicitWidth` in `delegateLayout.implicitHeight`\", to je "
+"`implicitWidth` in `implicitHeight` elementa  `GridLayout`. Implicitne "
+"širine in višine so lastnosti, ki so določene kot neke vrste privzete "
+"vrednosti, torej če za te komponente ni nastavljena eksplicitna širina ali "
+"višina. Zato smo nastavili `implicitWidth` in `implicitHeight` naše "
+"`Kirigami.AbstractCard` na  `GridLayout` spodaj, da se zagotovi, da se "
+"`GridLayout` ne razlije iz kartice."
 
 #: content/docs/use/kirigami/introduction-listviews.md:135
 msgid "Layouts"
@@ -4470,44 +4450,37 @@ msgstr ""
 "na kartici."
 
 #: content/docs/use/kirigami/introduction-listviews.md:139
-#, fuzzy
 msgid ""
 "We also need to choose a layout for our components so that they don't just "
 "pile on top of each other. There are three main types that we can choose "
 "from:"
 msgstr ""
-"Izbrati moramo tudi postavitev za naše komponente, da se ne bodo samo "
-"kopičiti drug na drugega. Obstajajo trije glavni tipi, ki jih lahko izbiramo:"
+"Izbrati moramo tudi postavitev za naše komponente, tako da se ne bodo "
+"kopičili drug na drugega. Obstajajo trije glavni tipi, ki jih lahko izbiramo:"
 
 #: content/docs/use/kirigami/introduction-listviews.md:140
-#, fuzzy
 msgid "`ColumnLayout` lays out your components vertically, in a single column"
-msgstr ""
-"\"Postavitev stolpcev\" določa vaše komponente navpično, v enem stolpcu"
+msgstr "`ColumnLayout` naniza vaše komponente navpično v enem stolpcu"
 
 #: content/docs/use/kirigami/introduction-listviews.md:141
-#, fuzzy
 msgid "`RowLayout` lays out your components horizontally, in a single row"
-msgstr "\"RowLayout\" določa vaše komponente vodoravno, v eni vrstici"
+msgstr "`RowLayout` naniza vaše komponente vodoravno v eni vrstici"
 
 #: content/docs/use/kirigami/introduction-listviews.md:142
-#, fuzzy
 msgid ""
 "`GridLayout` lays out your components in a grid with a composition of your "
 "choosing"
-msgstr ""
-"\"Postavitev mreže\" določa vaše komponente v mreži s sestavo, ki jo izberete"
+msgstr "`GridLayout` naniza vaše komponente v mreži s sestavo, ki jo izberete"
 
 #: content/docs/use/kirigami/introduction-listviews.md:144
-#, fuzzy
 msgid ""
 "With ColumnLayout and RowLayout, all we have to do is write our components "
 "inside the Layout component. As you can see, we went with a grid layout, "
 "which entails a bit more handiwork."
 msgstr ""
-"Z Postavitev stolpcev in postavitev vrstic moramo samo napisati naše "
-"komponente znotraj komponente Postavitve. Kot lahko vidite, smo šli z mrežno "
-"postavitev, ki vključuje malo več ročno delo."
+"Pri ColumnLayout in RowLayout moramo samo napisati naše komponente znotraj "
+"komponente Layout. Kot lahko vidite, smo šli z mrežno postavitev, ki "
+"vključuje malo več ročnega dela."
 
 #: content/docs/use/kirigami/introduction-listviews.md:163
 #, fuzzy
@@ -4544,29 +4517,24 @@ msgid "Pixels"
 msgstr "Slik. točk"
 
 #: content/docs/use/kirigami/introduction-listviews.md:169
-#, fuzzy
 msgid "smallSpacing"
-msgstr "majhniSpacing"
+msgstr "smallSpacing"
 
 #: content/docs/use/kirigami/introduction-listviews.md:169
-#, fuzzy
 msgid "4px"
 msgstr "4px"
 
 #: content/docs/use/kirigami/introduction-listviews.md:170
-#, fuzzy
 msgid "largeSpacing"
-msgstr "velikSpacing"
+msgstr "largeSpacing"
 
 #: content/docs/use/kirigami/introduction-listviews.md:170
-#, fuzzy
 msgid "8px"
 msgstr "8px"
 
 #: content/docs/use/kirigami/introduction-listviews.md:171
-#, fuzzy
 msgid "gridUnit"
-msgstr "mrežaUnit"
+msgstr "gridUnit"
 
 #: content/docs/use/kirigami/introduction-listviews.md:171
 msgid "18px"
@@ -4590,26 +4558,24 @@ msgid "Interior components"
 msgstr "Notranje komponente"
 
 #: content/docs/use/kirigami/introduction-listviews.md:181
-#, fuzzy
 msgid ""
 "We could just create three labels within our delegate component and call it "
 "a day. But that wouldn't look particularly nice."
 msgstr ""
-"Lahko bi ustvarili tri nalepke znotraj naše delegirane komponente in jo "
-"poklicali na dan. Ampak to ne bi bilo videti posebej lepo."
+"Lahko bi ustvarili tri oznake znotraj naše komponente delegata in končali. "
+"Ampak to ne bi bilo videti posebej lepo."
 
 #: content/docs/use/kirigami/introduction-listviews.md:221
 msgid "![](CardDesign.png)"
 msgstr "![](CardDesign.png)"
 
 #: content/docs/use/kirigami/introduction-listviews.md:223
-#, fuzzy
 msgid ""
 "Left, `Kirigami.Heading`: uses the `ListElement`'s `date` as a level 1 "
 "heading."
 msgstr ""
-"Levo, \"Kirigami.Heading\": uporablja \"ListElement\" 'datum' kot naslov "
-"stopnje 1."
+"Levo, `Kirigami.Heading`: uporablja lastnost `ListElement` `date` kot naslov "
+"ravni 1."
 
 #: content/docs/use/kirigami/introduction-listviews.md:225
 #, fuzzy
@@ -5713,32 +5679,31 @@ msgstr ""
 "do tega, moramo dodati nekaj dodatnih stvari našemu \"main.qml\"."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:43
-#, fuzzy
 msgid ""
 "The key changes we have made involve the addition of our component "
 "definition `AddEditSheet` (and `KountdownDelegate` further down) and a new "
 "function called `openPopulateSheet`."
 msgstr ""
 "Ključne spremembe, ki smo jih naredili, vključujejo dodajanje definicije "
-"naše komponente \"AddEditSheet\" (in \"KountdownDelegate\" naprej) in novo "
-"funkcijo, imenovano \"openPopulateSheet\"."
+"naše komponente 'AddEditSheet' (in naprej spodaj \"KountdownDelegate\") in "
+"novo funkcijo, imenovano 'openPopulateSheet'."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:45
 msgid "Lets go through our `AddEditSheet` definition:"
 msgstr "Pojdimo čez definicijo »AddEditSheet«:"
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:63
-#, fuzzy
 msgid ""
 "`onAdded` and `onEdited` are signal handlers. Just like `onTriggered` is "
 "called when we click an action, we can also use handlers that respond to our "
 "custom signals. Looking at our new `AddEditSheet.qml` -- our repurposed "
 "adding sheet -- we can see how these signals work:"
 msgstr ""
-"\"onAdded\" in \"onEdited\" so krmilniki signala. Tako kot se \"onTriggered"
-"\" imenuje, ko kliknemo dejanje, lahko uporabimo tudi ročice, ki se odzivajo "
-"na naše signale po meri. Če pogledamo naš novi 'AddEditSheet.qml' -- naš "
-"prenamenjena dodana lista -- lahko vidimo, kako ti signali delujejo:"
+"'onAdded' in 'onEdited' so krmilniki signala. Tako kot se imenuje "
+"'onTriggered', ko kliknemo dejanje, lahko uporabimo tudi krmilnike, ki se "
+"odzivajo na naše signale po meri. Če pogledamo naš novi 'AddEditSheet.qml' "
+"-- naš dodan list s spremenjenim namenom -- lahko vidimo, kako ti signali "
+"delujejo:"
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:67
 #, fuzzy
