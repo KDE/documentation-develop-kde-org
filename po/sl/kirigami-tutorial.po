@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:39+0000\n"
-"PO-Revision-Date: 2022-11-26 19:36+0100\n"
+"PO-Revision-Date: 2022-11-28 09:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: content/docs/use/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -4276,7 +4276,6 @@ msgid "That seems cryptic, but don't worry. Let's start from the top."
 msgstr "To se zdi skrivnostno, ampak ne skrbite. Začnimo pri vrhu."
 
 #: content/docs/use/kirigami/introduction-listviews.md:30
-#, fuzzy
 msgid ""
 "The first thing you'll notice is that we're using `Kirigami.CardsListView`. "
 "This is a ListView that allows us to easily display cards in a list. "
@@ -4285,12 +4284,12 @@ msgid ""
 "where the `model` property comes in: in this example, it's pointing to "
 "`kountdownModel`."
 msgstr ""
-"Prva stvar, ki jo boste opazili, je, da uporabljamo \"Kirigami.CardsListView"
-"\". To je ListView, ki nam omogoča enostavno prikazovanje kartic na seznamu. "
-"Vendar so Pregledi seznama narejeni tako, da prikazujejo podatke, ki jih "
-"vzamemo iz modela - da se samodejno napolnijo iz nabora podatkov, na katere "
-"jih usmerimo. Tam pride lastnost \"model\": v tem primeru kaže na "
-"\"kountdownModel\"."
+"Prva stvar, ki jo boste opazili, je, da uporabljamo 'Kirigami."
+"CardsListView'. To je seznam pogledov, ki nam omogoča enostavno prikazovanje "
+"kartic na seznamu. Vendar je seznam pogledov narejen tako, da prikazuje "
+"podatke, ki jih vzamemo iz modela - da se samodejno napolnijo iz nabora "
+"podatkov, na katere jih usmerimo. Tam vpliva lastnost 'model': v tem primeru "
+"kaže na 'kountdownModel'."
 
 #: content/docs/use/kirigami/introduction-listviews.md:32
 msgid "Model"
@@ -4301,17 +4300,16 @@ msgid "Each ListElement is an element on the list, containing information"
 msgstr "Vsak element seznama je element na seznamu, ki vsebuje informacije"
 
 #: content/docs/use/kirigami/introduction-listviews.md:42
-#, fuzzy
 msgid ""
 "A model defines the way that a data entry is structured. By looking at our "
 "ListElement above we can see how elements of kountdownModel are structured: "
 "they contain a name, a description, and a date. The first two are just "
 "strings, and the third is a number we're using as a placeholder."
 msgstr ""
-"Model določa način strukture vnosa podatkov. S pogledom na naš ListElement "
-"zgoraj lahko vidimo, kako so elementi kountdownModel strukturirani: "
-"vsebujejo ime, opis in datum. Prva dva sta samo niza, tretja pa številka, ki "
-"jo uporabljamo kot ogrado."
+"Model določa način strukture vnosa podatkov. S pogledom na naš element "
+"seznama ListElement zgoraj lahko vidimo, kako so elementi modela "
+"kountdownModel strukturirani: vsebujejo ime, opis in datum. Prva dva sta "
+"samo niza, tretja pa število, ki jo uporabljamo kot določbo lokacije."
 
 #: content/docs/use/kirigami/introduction-listviews.md:48
 msgid ""
@@ -4322,17 +4320,16 @@ msgstr ""
 "metod. Nekatere pomembne so:"
 
 #: content/docs/use/kirigami/introduction-listviews.md:49
-#, fuzzy
 msgid ""
 "ListModelName.append(jsobject yourobject) adds a JavaScript object you "
 "provide to the ListModel, and places it after the last item in the model. "
 "For this to happen correctly, you must provide a JavaScript Object with the "
 "correct properties and corresponding datatypes."
 msgstr ""
-"ListModelName.append(jsobject yourobject) doda Predmet JavaScript, ki ga "
+"ListModelName.append(jsobject yourobject) doda predmet v JavaScript, ki ga "
 "posredujete v ListModel, in ga postavi za zadnjim elementom v modelu. Če "
 "želite, da se to pravilno zgodi, morate predmetu JavaScript zagotoviti "
-"pravilne lastnosti in ustrezne podatkovne skupine."
+"pravilne lastnosti in ustrezne vrste podatkov."
 
 #: content/docs/use/kirigami/introduction-listviews.md:50
 msgid ""
@@ -4394,7 +4391,6 @@ msgid "Building our delegate card"
 msgstr "Gradnja naše kartice delegata"
 
 #: content/docs/use/kirigami/introduction-listviews.md:67
-#, fuzzy
 msgid ""
 "implicitWidth/Height define the natural width/height of an item if no width "
 "or height is specified. The setting below defines a component's preferred "
@@ -4439,15 +4435,14 @@ msgid "Layouts"
 msgstr "Postavitve"
 
 #: content/docs/use/kirigami/introduction-listviews.md:137
-#, fuzzy
 msgid ""
 "The `GridLayout` is inside the `Item` component we have provided for the "
 "property `contentItem`. This is the item that contains what will be "
 "displayed in your card."
 msgstr ""
-"\"GridLayout\" je znotraj komponente \"Element\", ki smo jo zagotovili za "
-"lastnost \"contentItem\". To je element, ki vsebuje tisto, kar bo prikazano "
-"na kartici."
+"'GridLayout' je znotraj komponente 'Item', ki smo jo zagotovili za lastnost "
+"'contentItem'. To je element, ki vsebuje tisto, kar bo prikazano na vaši "
+"kartici."
 
 #: content/docs/use/kirigami/introduction-listviews.md:139
 msgid ""
@@ -4483,7 +4478,6 @@ msgstr ""
 "vključuje malo več ročnega dela."
 
 #: content/docs/use/kirigami/introduction-listviews.md:163
-#, fuzzy
 msgid ""
 "The first thing you see is our `anchor`. QtQuick's anchoring system provides "
 "a useful way of making sure your components are positioned on certain parts "
@@ -4491,14 +4485,13 @@ msgid ""
 "and right of the parent card, ensuring our content stretches across the "
 "whole card."
 msgstr ""
-"Prva stvar, ki jo vidite je naše \"sidro\". Sistem za sidranje QtQuick "
-"zagotavlja uporaben način, da zagotovite, da so vaše komponente "
-"pozicioniranje na določenih delih nadrejene komponente. Zasidrali smo našo "
-"'GridLayout' levo, vrh in desno od matične kartice, kar zagotavlja, da se "
-"naša vsebina razteza čez celotno kartico."
+"Prva stvar, ki jo vidite je naše sidro 'anchor'. Sistem za sidranje QtQuick "
+"zagotavlja uporaben način, da zagotovite, da so vaše komponente postavljene "
+"na določenih delih nadrejene komponente. Zasidrali smo našo 'GridLayout' "
+"levo, vrh in desno od nadrejene kartice, kar zagotavlja, da se naša vsebina "
+"razteza čez celotno kartico."
 
 #: content/docs/use/kirigami/introduction-listviews.md:165
-#, fuzzy
 msgid ""
 "Next we specify the spacing between the rows and columns within our grid, so "
 "that our components don't bunch up. Kirigami provides a number of handy pre-"
@@ -4541,17 +4534,16 @@ msgid "18px"
 msgstr "18 tč"
 
 #: content/docs/use/kirigami/introduction-listviews.md:177
-#, fuzzy
 msgid ""
 "We have also used a conditional here to vary the number of columns in our "
 "grid depending on the screen we are using. If we are using a widescreen (i."
 "e. a computer monitor or a phone in landscape) the grid will have 4 columns, "
 "else it will have 2."
 msgstr ""
-"Prav tako smo uporabili pogojno tukaj za spreminjanje števila stolpcev v "
-"naši mreži, odvisno od zaslona, ki ga uporabljamo. Če uporabljamo "
-"širokozaslono (to je računalniški monitor ali telefon v krajini) bo mreža "
-"imela 4 stolpce, sicer bo imela 2."
+"Prav tako smo tukaj uporabili pogoj za spreminjanje števila stolpcev v naši "
+"mreži, odvisno od zaslona, ki ga uporabljamo. Če uporabljamo širok zaslon "
+"(to je računalniški monitor ali telefon obrnjen leže) bo mreža imela 4 "
+"stolpce, sicer bo imela 2."
 
 #: content/docs/use/kirigami/introduction-listviews.md:179
 msgid "Interior components"
@@ -4578,7 +4570,6 @@ msgstr ""
 "ravni 1."
 
 #: content/docs/use/kirigami/introduction-listviews.md:225
-#, fuzzy
 msgid ""
 "Middle, `ColumnLayout`: has a `Kirigami.Heading` that displays the task "
 "name; a `Kirigami.Separator`, which provides the horizontal line; and a "
@@ -4587,16 +4578,15 @@ msgid ""
 "empty or not and displays the components depending on the result of "
 "`description.length > 0`."
 msgstr ""
-"Sredina, 'Postavitev stolpcev': ima naslov \"Kirigami.Heading\", ki "
-"prikazuje ime opravila; \"Kirigami.Separator\", ki zagotavlja vodoravno "
-"črto; in \"Controls.Label\", ki prikazuje izbirni opis opravila. Slednji dve "
-"komponenti imata \"vidno\" lastnost, ki preverja, ali je opis prazen ali ne "
-"in prikazuje komponente glede na rezultat \"description.length > 0\"."
+"Sredina, `ColumnLayout`: ima naslov 'Kirigami.Heading', ki prikazuje ime "
+"opravila; 'Kirigami.Separator', ki zagotavlja vodoravno črto; in 'Controls."
+"Label', ki prikazuje izbirni opis opravila. Slednji dve komponenti imata "
+"lastnost 'visible', ki preverja, ali je opis prazen ali ne in prikazuje "
+"komponente glede na rezultat 'description.length > 0'."
 
 #: content/docs/use/kirigami/introduction-listviews.md:227
-#, fuzzy
 msgid "Right, `Controls.Button`: a button that will do something... soon!"
-msgstr "Desno, \"Controls.Button\": gumb, ki bo naredil nekaj... kmalu!"
+msgstr "Desno, 'Controls.Button': gumb, ki bo nekaj naredil... kmalu!"
 
 #: content/docs/use/kirigami/introduction-listviews.md:229
 msgid "Our app so far"
@@ -4607,18 +4597,16 @@ msgid "![](Screenshot.png)"
 msgstr "![](Screenshot.png)"
 
 #: content/docs/use/kirigami/introduction-listviews.md:233
-#, fuzzy
 msgid "So there is our basic card!"
-msgstr "Tu je torej naša osnovna kartica!"
+msgstr "Tu je naša osnovna kartica!"
 
 #: content/docs/use/kirigami/introduction-listviews.md:235
-#, fuzzy
 msgid ""
 "With these steps, we have now laid the basic groundwork for adding all the "
 "functionality to our app."
 msgstr ""
-"S temi koraki smo zdaj v našo aplikacijo našteli temeljne podlage za "
-"dodajanje vseh funkcionalnosti."
+"S temi koraki smo zdaj v postavili temeljne podlage za dodajanje vseh "
+"funkcionalnosti v našo aplikacijo."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:0
 msgid "Next steps"
@@ -4665,18 +4653,16 @@ msgid "Contributing to KDE projects"
 msgstr "Prispevanje k projektom KDE"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:21
-#, fuzzy
 msgid ""
 "One of the best ways to improve your development skills is by putting them "
 "into practice. KDE's community is welcoming and always looking for more "
 "passionate developers!"
 msgstr ""
 "Eden najboljših načinov za izboljšanje vaših razvojnih veščin je, da jih "
-"damo v prakso. KDE-jeva skupnost je dobrodošla in vedno išče bolj strastne "
-"razvijalce!"
+"daste v prakso. KDE-jeva skupnost je dobrodošla in vedno išče več strastnih "
+"razvijalcev!"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:23
-#, fuzzy
 msgid ""
 "We have several pieces of documentation that can help guide you towards "
 "becoming a contributor. We recommend you take a look at the developer-"
@@ -4691,28 +4677,28 @@ msgid ""
 "account."
 msgstr ""
 "Imamo več kosov dokumentacije, ki vam lahko pomagajo pri usmerjanju k temu, "
-"da postanete sopotnik. Priporočamo vam, da si pogledate razdelek za "
-"razvijalce v [vodniku »Vključiti se](https://community.kde.org/Get_Involved/"
-"development), ki vam lahko pomaga izvedeti več o poteku razvojnega dela KDE "
-"Skupnosti. Priporočamo vam tudi, da si pogledate našo dokumentacijo za "
-"primerek KDE GitLab, imenovan [Izum](https://community.kde.org/"
-"Infrastructure/GitLab), saj boste morali z njo med razvojnim procesom "
-"medsebojno delati. Skupnost KDE sodeluje predvsem prek Matrice, prav tako pa "
-"imamo [stran na wikiju skupnosti](https://community.kde.org/Matrix), ki vas "
-"bo vodila pri vzpostavljanju z vašim lastnim računom."
+"da postanete sodelavec. Priporočamo vam, da si pogledate razdelek za "
+"razvijalce v [vodniku 'Bodite vključeni'](https://community.kde.org/"
+"Get_Involved/development), ki vam lahko pomaga izvedeti več o poteku "
+"razvojnega dela skupnosti KDE. Priporočamo vam tudi, da si pogledate našo "
+"dokumentacijo za pojavek KDE GitLab, imenovan [Invent](https://community.kde."
+"org/Infrastructure/GitLab), saj boste morali z njo med razvojnim procesom "
+"interaktivno sodelovati. Skupnost KDE sodeluje predvsem preko storitve "
+"Matrix, prav tako pa imamo [stran na wikiju skupnosti](https://community.kde."
+"org/Matrix), ki vas bo vodila pri vzpostavljanju nastavitev z vašim lastnim "
+"računom."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:29
-#, fuzzy
 msgid ""
 "With your newfound skills you are in a good position to begin contributing "
 "to Kirigami projects. Thankfully, many of KDE's most popular applications "
 "and components are built with this framework. Here are a list of projects "
 "you are welcome to help with."
 msgstr ""
-"Z novimi znanji ste v dobrem položaju, da začnete prispevati k projektom "
-"Kirigami. K sreči so s tem okvirom zgrajene številne najbolj priljubljene "
-"aplikacije in komponente KDE. Tukaj je seznam projektov, s pomočjo katerih "
-"lahko pomagate."
+"Z novo pridobljenimi znanji ste v dobrem položaju, da začnete prispevati k "
+"projektom Kirigami. K sreči so s tem okvirom zgrajene številne najbolj "
+"priljubljene aplikacije in komponente KDE. Tukaj je seznam projektov, kjer "
+"je vaša pomoč dobrodošla."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:31
 msgid "Beginner-friendly Kirigami projects"
@@ -4746,42 +4732,38 @@ msgid "A touch friendly calendar application designed for mobile devices"
 msgstr "Aplikacija koledarja, prijazna za dotik, zasnovana za mobilne naprave"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:35
-#, fuzzy
 msgid ""
 "[KDE Apps page](https://apps.kde.org/en/calindori)<br />[KDE Invent page]"
 "(https://invent.kde.org/plasma-mobile/calindori)"
 msgstr ""
-"[KDE Apps stran] (https://apps.kde.org/en/calindori)<br />[KDE Izmišljena "
-"stran] (https://invent.kde.org/plasma-mobile/calindori)"
+"[Stran KDE aplikacije] (https://apps.kde.org/en/calindori)<br />[KDE Invent "
+"page](https://invent.kde.org/plasma-mobile/calindori)"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:36
-#, fuzzy
 msgid ""
 "<img src=\"https://apps.kde.org/app-icons/org.kde.kdeconnect.kcm.svg\" width="
 "\"50\" height=\"50\"><br />KDE Connect"
 msgstr ""
 "<img src=\"https://apps.kde.org/app-icons/org.kde.kdeconnect.kcm.svg\" width="
-"\"50\" height=\"50\"><br />KDE povezava"
+"\"50\" height=\"50\"><br />KDE Connect"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:36
-#, fuzzy
 msgid ""
 "A multi-platform app that allows your devices to communicate (eg: your phone "
 "and your computer)."
 msgstr ""
-"Aplikacija z več platformami, ki omogoča komuniciranje vaših naprav (npr. "
+"Aplikacija na več platformah, ki omogoča komuniciranje vaših naprav (npr. "
 "telefon in računalnik)."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:36
-#, fuzzy
 msgid ""
 "[Home page](https://kdeconnect.kde.org/)<br />[KDE Community Wiki page]"
 "(https://community.kde.org/KDEConnect)<br />[KDE Invent page](https://invent."
 "kde.org/network/kdeconnect-kde)"
 msgstr ""
-"[Domača stran] (https://kdeconnect.kde.org/)<br />[Wiki stran KDE Skupnosti] "
-"(https://community.kde.org/KDEConnect)<br />[KDE Izmišljena stran] (https://"
-"invent.kde.org/network/kdeconnect-kde)"
+"[Domača stran](https://kdeconnect.kde.org/)<br />[Wiki stran KDE Skupnosti]"
+"(https://community.kde.org/KDEConnect)<br />[KDE Invent page](https://invent."
+"kde.org/network/kdeconnect-kde)"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:37
 msgid ""
@@ -4792,18 +4774,16 @@ msgstr ""
 "width=\"50\" height=\"50\"><br />Koko"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:37
-#, fuzzy
 msgid "An image viewer designed for desktop and touch devices."
-msgstr "Pregledovalnik slik, namenjen namiznim napravam in napravam na dotik."
+msgstr "Pregledovalnik slik namenjen namiznim napravam in napravam na dotik."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:37
-#, fuzzy
 msgid ""
 "[Userbase page](https://userbase.kde.org/Koko)<br />[KDE Invent page]"
 "(https://invent.kde.org/graphics/koko)"
 msgstr ""
-"[Stran uporabniške baze] (https://userbase.kde.org/Koko)<br />[KDE "
-"Izmišljena stran] (https://invent.kde.org/graphics/koko)"
+"[Stran uporabniške baze](https://userbase.kde.org/Koko)<br />[KDE Invent "
+"page](https://invent.kde.org/graphics/koko)"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:38
 msgid ""
@@ -4814,22 +4794,20 @@ msgstr ""
 "\"50\" height=\"50\"><br />Kontrast"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:38
-#, fuzzy
 msgid ""
 "A color contrast checker that tells you if your color combinations are "
 "accessible for people with color vision deficiencies."
 msgstr ""
-"Prevernik barvnega kontrasta, ki vam pove, ali so vaše barvne kombinacije "
+"Preverjalnik barvnega kontrasta, ki vam pove, ali so vaše barvne kombinacije "
 "dostopne za osebe s pomanjkanjem barvnega vida."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:38
-#, fuzzy
 msgid ""
 "[KDE Apps page](https://apps.kde.org/en/kontrast)<br />[KDE Invent page]"
 "(https://invent.kde.org/accessibility/kontrast)"
 msgstr ""
-"[KDE Apps stran] (https://apps.kde.org/en/kontrast)<br />[KDE Izmišljena "
-"stran] (https://invent.kde.org/accessibility/kontrast)"
+"[Stran KDE aplikacij](https://apps.kde.org/en/kontrast)<br />[KDE Invent "
+"page](https://invent.kde.org/accessibility/kontrast)"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:40
 msgid "More complex Kirigami projects"
