@@ -1,6 +1,6 @@
 ---
 title: "Translations / i18n"
-weight: 6
+weight: 7
 description: >
   Translate your widget
 aliases:

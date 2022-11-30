@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-weight: 5
+weight: 6
 description: >
   Adding user configured settings to your widget
 aliases:

@@ -1,6 +1,6 @@
 ---
 title: "Examples"
-weight: 7
+weight: 8
 description: >
   Resizable popup, clock, bundle icon and other simple examples
 aliases:
@@ -18,7 +18,7 @@ There are also several examples in the `plasma-framework` repo:
 To get your panel icon to be configurable like the [Application Launcher widget](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/applets/kickoff/package/contents/ui) we need to:
 
 * Create a new string config key (`plasmoid.configuration.icon`)
-* Set [`Plasmoid.icon`]({{< ref "plasma-qml-api.md#plasmoidicon" >}}) to `plasmoid.configuration.icon`
+* Set [`Plasmoid.icon`]({{< ref "properties.md#plasmoidicon" >}}) to `plasmoid.configuration.icon`
 * Copy the icon selector control from the Application Launcher widget to a reusable `ConfigIcon.qml` file.
 * Add a `ConfigIcon` button to our `ConfigGeneral.qml` tab, and bind it to a `cfg_icon` property.
 
