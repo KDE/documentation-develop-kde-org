@@ -331,7 +331,7 @@ ColumnLayout {
 
 There's also [RowLayout](http://doc.qt.io/qt-5/qml-qtquick-layouts-rowlayout.html) and [GridLayout](http://doc.qt.io/qt-5/qml-qtquick-layouts-gridlayout.html). Lastly there's [Flow](http://doc.qt.io/qt-5/qml-qtquick-flow.html) which will treat its contents as if they all had the CSS `display: inline-block`.
 
-![](https://i.imgur.com/qrDdw8L.png)
+![](rowlayout.png)
 
 {{< /section-left >}}
 {{< section-right >}}
