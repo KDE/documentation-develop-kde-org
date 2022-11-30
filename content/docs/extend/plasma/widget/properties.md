@@ -10,6 +10,28 @@ description: >
 As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contentsuimainqml" >}}), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` [property group](https://doc.qt.io/qt-6/qtqml-syntax-objectattributes.html#grouped-properties) has properties from [`AppletInterface`](docs:plasma;AppletInterface) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h).
 
 
+### plasmoid context property
+
+You can reference a property from the `Plasmoid.___` property group by the root `Item { id: widget }` of the widget with `widget.Plasmoid.___`. An easier method is to use the global context property `plasmoid` (lowercase) which is [dynamically defined at runtime](https://invent.kde.org/frameworks/plasma-framework/-/blob/ca97fada4215df0aa1725578c160df9105a4c2e2/src/plasmaquick/appletquickitem.cpp#L644) when the property group is imported.
+
+<div class="filepath">contents/ui/main.qml</div>
+
+```qml
+import QtQuick 2.0
+import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.plasmoid 2.0
+Item {
+    id: widget
+    Plasmoid.icon: 'starred-symbolic'
+    Plasmoid.fullRepresentation: PlasmaComponents3.Label {
+        text: plasmoid.icon
+        // OR
+        // text: widget.Plasmoid.icon
+    }
+}
+```
+
+
 ### Plasmoid properties
 
 | Property | Type | Notes |
@@ -89,27 +111,6 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 | `Plasmoid.userBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) |  |
 | `Plasmoid.userConfiguring` | `bool` |  |
 
-
-### plasmoid context property
-
-You can reference a property from the `Plasmoid.___` property group by the root `Item { id: widget }` of the widget with `widget.Plasmoid.___`. An easier method is to use the global context property `plasmoid` (lowercase) which is [dynamically defined at runtime](https://invent.kde.org/frameworks/plasma-framework/-/blob/ca97fada4215df0aa1725578c160df9105a4c2e2/src/plasmaquick/appletquickitem.cpp#L644) when the property group is imported.
-
-<div class="filepath">contents/ui/main.qml</div>
-
-```qml
-import QtQuick 2.0
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.plasmoid 2.0
-Item {
-    id: widget
-    Plasmoid.icon: 'starred-symbolic'
-    Plasmoid.fullRepresentation: PlasmaComponents3.Label {
-        text: plasmoid.icon
-        // OR
-        // text: widget.Plasmoid.icon
-    }
-}
-```
 
 
 ### Plasmoid.compactRepresentation
