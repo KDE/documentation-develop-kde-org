@@ -402,6 +402,26 @@ Icon=office-calendar
 
 The `Id` (or `X-KDE-PluginInfo-Name` in `metadata.desktop`) needs to be a unique name, since it's used for the folder name it's installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you are planning on contributing the widget to KDE. You should consider this the widget's namespace.
 
+To view the currently installed namespaces use:
+
+```
+❯ kpackagetool5 --type Plasma/Applet --list
+Listing service types: Plasma/Applet in ~/.local/share/plasma/plasmoids/
+com.github.zren.helloworld
+
+❯ kpackagetool5 --type Plasma/Applet --list --global
+Listing service types: Plasma/Applet in /usr/share/plasma/plasmoids/
+org.kde.desktopcontainment
+org.kde.kdeconnect
+org.kde.kscreen
+org.kde.milou
+org.kde.panel
+org.kde.plasma.activitybar
+org.kde.plasma.activitypager
+org.kde.plasma.addons.katesessions
+...
+```
+
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -415,7 +435,7 @@ The `Id` (or `X-KDE-PluginInfo-Name` in `metadata.desktop`) needs to be a unique
 ```json
 {
     "KPlugin": {
-        "Id": "org.kde.plasma.calendar",
+        "Id": "com.github.zren.helloworld",
     }
 }
 ```
@@ -424,7 +444,7 @@ The `Id` (or `X-KDE-PluginInfo-Name` in `metadata.desktop`) needs to be a unique
 
 ```ini
 [Desktop Entry]
-X-KDE-PluginInfo-Name=org.kde.plasma.calendar
+X-KDE-PluginInfo-Name=com.github.zren.helloworld
 ```
 
 {{< /section-right >}}
