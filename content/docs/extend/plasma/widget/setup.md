@@ -58,7 +58,7 @@ Widgets installed by the user (without root) like when you "Install New Widgets"
 
 `X-KDE-ServiceTypes`, `X-Plasma-API`, and `X-Plasma-MainScript` are also needed to just define that this package is a plasma widget, and where its entry point is.
 
-For the other properties, read the [`metadata.desktop` section on the Plasma QML API page]({{< ref "plasma-qml-api.md#metadatadesktop" >}}).
+For the other properties, read the [`metadata.json` section on the Plasma QML API page]({{< ref "plasma-qml-api.md#metadatajson" >}}).
 
 {{< /section-left >}}
 {{< section-right >}}

@@ -683,7 +683,7 @@ The dialog's source code can be found in [`CompactApplet.qml`](https://invent.kd
 {{< sections >}}
 {{< section-left >}}
 
-As discussed in [the `metadata.desktop` setup widget section]({{< ref "setup.md#metadatadesktop" >}}), by default the plasmoid icon is populated with `Icon=` in `metadata.desktop`.
+As mentioned in [the setup widget `metadata.json` section]({{< ref "setup.md#metadatajson" >}}), by default the plasmoid icon is populated with the `Icon` value in `metadata.json`.
 
 To set a dynamic or user configurable icon, you will need to assign an icon name to `Plasmoid.icon`.
 
