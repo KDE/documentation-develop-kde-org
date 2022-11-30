@@ -274,6 +274,8 @@ RowLayout {
 
 ---
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3

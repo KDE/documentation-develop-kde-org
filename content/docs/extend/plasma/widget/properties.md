@@ -94,6 +94,8 @@ As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contents
 
 You can reference a property from the `Plasmoid.___` property group by the root `Item { id: widget }` of the widget with `widget.Plasmoid.___`. An easier method is to use the global context property `plasmoid` (lowercase) which is [dynamically defined at runtime](https://invent.kde.org/frameworks/plasma-framework/-/blob/ca97fada4215df0aa1725578c160df9105a4c2e2/src/plasmaquick/appletquickitem.cpp#L644) when the property group is imported.
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -314,31 +316,26 @@ Item {
 {{< /sections >}}
 
 
-## metadata.desktop
+## metadata.json
 
-The common `metadata.desktop` properties are covered in the [setup widget section]({{< ref "setup.md#metadatadesktop" >}}).
+The common `metadata.json` properties are covered in the [setup widget section]({{< ref "setup.md#metadatajson" >}}).
 
-The full list of custom `.desktop` file properties for widgets is defined in the [`Plasma/Applet` service type](
+`metadata.desktop` is the older format while `metadata.json` is the newer replacement format. The `.desktop` file is simpler to script using `kreadconfig5` which is the reason why this tutorial prefers it in certain places like translations.
+
+You can read the generated [C++ API Documentation for `metadata.json`](docs:kcoreaddons;KPluginMetaData) for the json schema. The full list of properties for the older `metadata.desktop` properties for widgets is defined in the [`Plasma/Applet` service type](
 https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasma/data/servicetypes/plasma-applet.desktop).
 
-`metadata.desktop` is the original format while `metadata.json` is the newer replacement format. The `.desktop` file is simpler to script using `kreadconfig5` which is the reason why this tutorial prefers it. You can read up on [`metadata.json` in the API Documentation](docs:kcoreaddons;KPluginMetaData).
-
-### Name, Comment
+### Name, Description
 
 {{< sections >}}
 {{< section-left >}}
 
-These two are standard [XDG desktop file](https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html) properties. You can also translate these properties with `Name[fr]`. The translated `Name` is used in the "Add Widgets" list. The `Comment` (or in the json file names `Description`) is only used for the default tooltip subtext when the widget is added to a panel.
+These two are based on the standard [XDG desktop file](https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html) properties. You can also translate these properties with `Name[fr]`. The translated `Name` is used in the "Add Widgets" list. The `Description` (previously known as `Comment` in the `metadata.desktop`) is only used for the default tooltip subtext when the widget is added to a panel.
 
 {{< /section-left >}}
 {{< section-right >}}
-```ini
-[Desktop Entry]
-Name=Calendar
-Name[fr]=Calendrier
-Comment=Month display with your appointments and events
-Comment[fr]=Vue mensuelle avec vos rendez-vous et évènements
-```
+
+<div class="filepath">metadata.json</div>
 
 ```json
 {
@@ -349,6 +346,16 @@ Comment[fr]=Vue mensuelle avec vos rendez-vous et évènements
         "Name[fr]": "Calendrier"
     }
 }
+```
+
+<div class="filepath">metadata.desktop</div>
+
+```ini
+[Desktop Entry]
+Name=Calendar
+Name[fr]=Calendrier
+Comment=Month display with your appointments and events
+Comment[fr]=Vue mensuelle avec vos rendez-vous et évènements
 ```
 {{< /section-right >}}
 {{< /sections >}}
@@ -362,6 +369,19 @@ Comment[fr]=Vue mensuelle avec vos rendez-vous et évènements
 
 {{< /section-left >}}
 {{< section-right >}}
+
+<div class="filepath">metadata.json</div>
+
+```json
+{
+    "KPlugin": {
+        "Icon": "office-calendar",
+    }
+}
+```
+
+<div class="filepath">metadata.desktop</div>
+
 ```ini
 [Desktop Entry]
 Icon=office-calendar
@@ -373,13 +393,13 @@ Icon=office-calendar
 {{< /sections >}}
 
 
-### X-KDE-PluginInfo-Name
+### Id
 
 
 {{< sections >}}
 {{< section-left >}}
 
-`X-KDE-PluginInfo-Name` needs to be a unique name, since it's used for the folder name it's installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you're planning on contributing the widget to KDE. You should consider this the widget's namespace.
+The `Id` (or `X-KDE-PluginInfo-Name` in `metadata.desktop`) needs to be a unique name, since it's used for the folder name it's installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you are planning on contributing the widget to KDE. You should consider this the widget's namespace.
 
 
 {{< /section-left >}}
@@ -388,12 +408,42 @@ Icon=office-calendar
 ~/.local/share/plasma/plasmoids/com.github.zren.helloworld/
 /usr/share/plasma/plasmoids/com.github.zren.helloworld/
 ```
+
+<div class="filepath">metadata.json</div>
+
+```json
+{
+    "KPlugin": {
+        "Id": "org.kde.plasma.calendar",
+    }
+}
+```
+
+<div class="filepath">metadata.desktop</div>
+
+```ini
+[Desktop Entry]
+X-KDE-PluginInfo-Name=org.kde.plasma.calendar
+```
+
 {{< /section-right >}}
 {{< /sections >}}
 
-### X-KDE-PluginInfo-Category
+### Category
 
-`X-KDE-PluginInfo-Category` is the category the widget can be filtered within the widget list.
+The `Category` (or `X-KDE-PluginInfo-Category` in `metadata.desktop`) is used to filter widgets in the widget list.
+
+<div class="filepath">metadata.json</div>
+
+```json
+{
+    "KPlugin": {
+        "Category": "Date and Time",
+    }
+}
+```
+
+<div class="filepath">metadata.desktop</div>
 
 ```ini
 [Desktop Entry]
@@ -422,13 +472,38 @@ X-KDE-PluginInfo-Category=Date and Time
 This list was taken from: <https://techbase.kde.org/Projects/Plasma/PIG>
 
 
-### X-KDE-ServiceTypes
+### ServiceTypes
 
-`X-KDE-ServiceTypes` is a comma-separated list of types. For a plasma widget, it should be `Plasma/Applet`. You may encounter widgets with `Plasma/Containment` as well, like [the System Tray widget](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/systemtray/package/metadata.desktop#L93).
+{{< sections >}}
+{{< section-left >}}
+
+`ServiceTypes` (or `X-KDE-ServiceTypes` in `metadata.desktop`) is a comma-separated list of types. For a plasma widget, it should be `Plasma/Applet`. You may encounter widgets with `Plasma/Containment` as well, like [the System Tray widget](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/systemtray/package/metadata.json#L147).
 
 The defined plasma service types and their custom `.desktop` file properties are found in:  
 [`plasma-framework/src/plasma/data/servicetypes`](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/plasma/data/servicetypes)
 
+{{< /section-left >}}
+{{< section-right >}}
+<div class="filepath">metadata.json</div>
+
+```json
+{
+    "KPlugin": {
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ]
+    }
+}
+```
+
+<div class="filepath">metadata.desktop</div>
+
+```ini
+[Desktop Entry]
+X-KDE-ServiceTypes=Plasma/Applet
+```
+{{< /section-right >}}
+{{< /sections >}}
 
 ### X-Plasma-API, X-Plasma-MainScript
 
@@ -441,6 +516,17 @@ The defined plasma service types and their custom `.desktop` file properties are
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">metadata.json</div>
+
+```json
+{
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}
+```
+
+<div class="filepath">metadata.desktop</div>
+
 ```ini
 [Desktop Entry]
 X-Plasma-API=declarativeappletscript
@@ -454,6 +540,18 @@ X-Plasma-MainScript=ui/main.qml
 
 A Plasmoid can specify the type of functionality it offers, for example whether it's a clock, an application launcher, etc. This mechanism is used to list alternative plasmoids for a certain function. When you open the context menu of the Application Launcher (aka kickoff) in the Plasma desktop panel, you'll see that a number of different Plasmoids are offered here as alternatives, like the Application Menu (aka kicker) and Application Dashboard (aka kickerdash). All three of these widgets define:
 
+<div class="filepath">metadata.json</div>
+
+```json
+{
+    "X-Plasma-Provides": [
+        "org.kde.plasma.launchermenu"
+    ]
+}
+```
+
+<div class="filepath">metadata.desktop</div>
+
 ```ini
 [Desktop Entry]
 X-Plasma-Provides=org.kde.plasma.launchermenu
@@ -465,8 +563,8 @@ These "Provides" are in fact arbitrary, so you can choose your own here. The fie
 * `org.kde.plasma.multimediacontrols`: Multimedia controls
 * `org.kde.plasma.time`: Clocks
 * `org.kde.plasma.date`: Calendars
-* `org.kde.plasma.time,org.kde.plasma.date`: Clocks with calendars ([Eg: Digital Clock](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/digital-clock/package/metadata.desktop#L154))
-* `org.kde.plasma.powermanagement`: Power management ([Eg: Battery and Brightness](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/batterymonitor/package/metadata.desktop#L191))
+* `org.kde.plasma.time,org.kde.plasma.date`: Clocks with calendars ([Eg: Digital Clock](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/digital-clock/package/metadata.json#L197))
+* `org.kde.plasma.powermanagement`: Power management ([Eg: Battery and Brightness](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/batterymonitor/package/metadata.json#L222))
 * `org.kde.plasma.notifications`: Notifications
 * `org.kde.plasma.removabledevices`: Removable devices, auto mounter, etc.
 * `org.kde.plasma.multitasking`: Task switchers
@@ -484,15 +582,10 @@ You can search plasma's code for more examples:
 
 ### X-Plasma-NotificationArea (System Tray)
 
-The Media Controller widget serves as a good example since it uses most of the systemtray metadata features. [Its metadata contains](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/mediacontroller/metadata.desktop) the following:
+The Media Controller widget serves as a good example since it uses most of the systemtray metadata features. [Its metadata contains](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/mediacontroller/metadata.json) the following:
 
-```ini
-[Desktop Entry]
-X-KDE-PluginInfo-EnabledByDefault=true
-X-Plasma-NotificationArea=true
-X-Plasma-NotificationAreaCategory=ApplicationStatus
-X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
-```
+<div class="filepath">metadata.json</div>
+
 ```json
 {
     "KPlugin": {
@@ -504,9 +597,19 @@ X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
 }
 ```
 
+<div class="filepath">metadata.desktop</div>
+
+```ini
+[Desktop Entry]
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=ApplicationStatus
+X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
+```
+
 By specifying `X-Plasma-NotificationArea`, this widget will be found by the systemtray widget.
 
-`X-KDE-PluginInfo-EnabledByDefault` will make sure it's enabled in the systemtray by default.
+`EnabledByDefault` will make sure it's enabled in the systemtray by default.
 
 It's prudent for the widget to also set the `X-Plasma-NotificationAreaCategory` so that the icons are grouped together. Its allowed values are:
 
@@ -525,12 +628,20 @@ You can search plasma's code for more examples:
 
 `X-Plasma-DBusActivationService` will load and unload widgets in the systemtray automatically when a DBus service becomes available or is stopped. This is very convenient to load widgets automatically, so the user doesn't have to explicitly go to the notification area settings and enable or remove a widget.
 
-An example of this is the Media Controller widget, which is auto-loaded as soon as an application starts offering the `org.mpris.MediaPlayer2` DBus service in the session. As you can see [in its `metadata.desktop` file](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/mediacontroller/metadata.desktop#L123), `X-Plasma-DBusActivationService` accepts wildcards which makes it a bit easier to match DBus names. This key can also be very useful to avoid having a widget loaded when it's unnecessary, so it can help to avoid visual clutter and wasted memory.
+An example of this is the Media Controller widget, which is auto-loaded as soon as an application starts offering the `org.mpris.MediaPlayer2` DBus service in the session. As you can see [in its `metadata.json` file](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/mediacontroller/metadata.json#L167), `X-Plasma-DBusActivationService` accepts wildcards which makes it a bit easier to match DBus names. This key can also be very useful to avoid having a widget loaded when it's unnecessary, so it can help to avoid visual clutter and wasted memory.
+
+<div class="filepath">metadata.json</div>
+
+```json
+{
+    "X-Plasma-DBusActivationService": "org.mpris.MediaPlayer2.*"
+}
+```
+
+<div class="filepath">metadata.desktop</div>
 
 ```ini
 [Desktop Entry]
-X-Plasma-NotificationArea=true
-X-Plasma-NotificationAreaCategory=ApplicationStatus
 X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
 ```
 
