@@ -12,13 +12,13 @@ layout: area
     <h3 class="mb-4">Colorful icons</h3>
     <div class="mx-auto mb-4">
     <div class="icons-grid">
-      <img src="https://apps.kde.org/app-icons/org.kde.Help.svg" alt="help icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.dolphin.svg" alt="folder icon" /> 
+      <img src="https://apps.kde.org/app-icons/org.kde.spectacle.svg" alt="screenshot icon" /> 
+      <img src="https://apps.kde.org/app-icons/org.kde.dolphin.svg" alt="dolphin file manager icon" /> 
       <img src="https://apps.kde.org/app-icons/org.kde.kfloppy.svg" alt="floppy icon" /> 
       <img src="https://apps.kde.org/app-icons/org.kde.kolf.svg" alt="floppy icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.kmousetool.svg" alt="floppy icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.Help.svg" alt="floppy icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.ktimer.svg" alt="floppy icon" /> 
+      <img src="https://apps.kde.org/app-icons/org.kde.kmousetool.svg" alt="mouse icon" /> 
+      <img src="https://apps.kde.org/app-icons/org.kde.khelpcenter.svg" alt="help icon" /> 
+      <img src="https://apps.kde.org/app-icons/org.kde.ktimer.svg" alt="timer icon" /> 
     </div>
     </div>
     <h3 class="mb-4">Monochrome action icons</h3>
