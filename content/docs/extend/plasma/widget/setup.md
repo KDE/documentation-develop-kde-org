@@ -62,6 +62,8 @@ For the other properties, read the [`metadata.json` section on the Plasma QML AP
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">metadata.json</div>
+
 ```json
 {
     "KPlugin": {
@@ -123,8 +125,9 @@ You can set the tooltip contents and various other things in the `main.qml`.
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -137,8 +140,9 @@ PlasmaComponents.Label {
 
 To show the text in the panel rather than in a popup:
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.plasmoid 2.0
@@ -155,6 +159,8 @@ PlasmaComponents.Label {
 ---
 
 To set the popup size:
+
+<div class="filepath">contents/ui/main.qml</div>
 
 ```qml
 {{< readfile file="/content/docs/extend/plasma/widget/snippet/popup-size.qml" >}}
@@ -174,3 +180,8 @@ rm metadata.desktop
 ```
 {{< /alert >}}
 {{< /sections >}}
+
+
+
+
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}

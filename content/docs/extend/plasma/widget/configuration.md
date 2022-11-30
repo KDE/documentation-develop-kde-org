@@ -59,6 +59,8 @@ PlasmaComponents.Label {
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
@@ -104,6 +106,8 @@ PlasmaComponents.Label {
 We import the `ConfigModel` and `ConfigCategory`, and define the tab name, icon, and qml file that will be loaded.
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/config/config.qml</div>
+
 ```qml
 import QtQuick 2.0
 import org.kde.plasma.configuration 2.0
@@ -139,6 +143,8 @@ Please note that your should not use `PlasmaComponents.*` controls in the config
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
@@ -633,8 +639,9 @@ unzip -j master.zip plasma-applet-lib-master/package/contents/ui/libconfig/*
 rm master.zip
 ```
 
+<div class="filepath">contents/ui/libconfig/CheckBox.qml</div>
+
 ```qml
-// libconfig/CheckBox.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as QQC2
 
@@ -660,15 +667,18 @@ Kirigami.FormLayout {
     id: page
 
     LibConfig.CheckBox {
+        Kirigami.FormData.label: i18n("CheckBox:")
         configKey: 'showVariable'
     }
 
     LibConfig.ColorField {
+        Kirigami.FormData.label: i18n("ColorField:")
         configKey: 'labelColor'
         defaultColor: PlasmaCore.ColorScope.textColor
     }
 
     LibConfig.ComboBox {
+        Kirigami.FormData.label: i18n("ComboBox:")
         configKey: "variableName"
         model: [
             { value: "a", text: i18n("A") },
@@ -684,38 +694,4 @@ Kirigami.FormLayout {
 
 
 
-<style>
-.filepath {
-    font-family: SFMono-Regular,Menlo,Monaco,Consolas,liberation mono,courier new,monospace;
-    background-color: #f0f0f0;
-    color: #595858;
-
-    /* .highlight     has 1px rgba(35,38,41,.125) */
-    /* .highlight>pre has 1px rgba(0,0,0,.125) */
-    border: 2px solid #e3e3e4;
-    border-bottom: 0;
-    border-radius: .25rem .25rem 0 0;
-
-    /* .td-content .highlight pre { padding-left: .5rem } */
-    padding: .3rem .5rem;
-}
-.filepath + .highlight,
-.filepath + .highlight > pre {
-    margin-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-@media (prefers-color-scheme: dark) {
-    .filepath {
-        color: #9d9d9d;
-        background-color: #2a2e33;
-        border-color: #2a2e33;
-    }
-    .filepath,
-    .filepath + .highlight,
-    .filepath + .highlight > pre {
-        border-color: #2a2e33 !important;
-        /*border: 1px solid red;*/
-    }
-}
-</style>
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}

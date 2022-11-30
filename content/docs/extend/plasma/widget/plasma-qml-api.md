@@ -36,8 +36,9 @@ is it sets the text color to follow the panel's color scheme.
 For the specifics, you can read the [`Label.qml` source code](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Label.qml).
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -59,8 +60,9 @@ For a simple toggle, QML ships with [CheckBox](docs:qtquickcontrols;CheckBox). F
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -85,8 +87,9 @@ Note the [KDE Human Interface Guidelines](/hig/components/editing/radiobutton) s
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
@@ -121,8 +124,9 @@ Note that [`ComboBox.valueRole`](https://doc.qt.io/qt-5/qml-qtquick-controls2-co
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -161,8 +165,9 @@ See the [KDE Human Interface Guidelines](/hig/components/editing/slider) to dete
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.4
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -211,8 +216,9 @@ See the [KDE Human Interface Guidelines](/hig/components/editing/spinbox) to det
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
@@ -248,8 +254,9 @@ See the [KDE Human Interface Guidelines](/hig/components/editing/lineedit) to de
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -290,8 +297,9 @@ For buttons, QML ships with [Button](docs:qtquickcontrols;QtQuick.Controls.Butto
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -303,8 +311,9 @@ PlasmaComponents3.Button {
 
 ---
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -328,8 +337,9 @@ To add a scrollbar to manage overflow, QML ships with [ScrollView](docs:qtquickc
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -385,8 +395,9 @@ Both wraps by default with `Layout.fillWidth: true`.
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -669,6 +680,7 @@ The dialog's source code can be found in [`CompactApplet.qml`](https://invent.kd
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
 
 ```qml
 {{< readfile file="/content/docs/extend/plasma/widget/snippet/popup-size.qml" >}}
@@ -693,8 +705,9 @@ Also checkout the [configurable panel icon example]({{< ref "examples.md#configu
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.plasmoid 2.0
 
@@ -732,8 +745,9 @@ Note: Since **KDE Frameworks 5.89**, the [`KDeclarative::ConfigPropertyMap`](doc
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
@@ -786,8 +800,9 @@ PlasmaCore.IconItem {
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
@@ -800,8 +815,9 @@ Item {
 
 ---
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -1060,6 +1076,7 @@ X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
 
 
 
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}
 <style>
 .td-content > table td:nth-child(1) code,
 .td-content > table td:nth-child(2) code {

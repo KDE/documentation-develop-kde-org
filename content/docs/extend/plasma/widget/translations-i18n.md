@@ -41,8 +41,9 @@ The `i18n(...)` is an overloaded function which allows you to pass values into t
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 Item {
     id: showThing
     property int unreadEmailCount: 3
@@ -73,8 +74,9 @@ Using `i18np(...)` can improve our previous example. When `unreadEmailCount` was
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 Item {
     id: showThing
     property int unreadEmailCount: 3
@@ -516,3 +518,8 @@ Button {
 ```
 {{< /section-right >}}
 {{< /sections >}}
+
+
+
+
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}

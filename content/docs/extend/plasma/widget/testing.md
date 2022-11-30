@@ -144,8 +144,9 @@ qml.debug=true
 
 You should now see output when you add `console.log()` statements to your widget. You can place them in any function like the `Component.onCompleted` signal handler.
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 Item {
     Component.onCompleted: {
         console.log("Hello World")
@@ -155,8 +156,9 @@ Item {
 
 Or in a `onPropertyChanged` signal. The following example will print a log message when you click the button.
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 3.0 as PlasmaComponents
@@ -173,3 +175,8 @@ PlasmaComponents.Button {
     onClicked: num += 1
 }
 ```
+
+
+
+
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}

@@ -20,8 +20,9 @@ An [Item](http://doc.qt.io/qt-5/qml-qtquick-item.html) is a simple visible objec
 
 {{< /section-left >}}
 {{< section-right>}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 
 Item {
@@ -49,8 +50,9 @@ If we want to draw a colored rectangle, we can easily do so with [Rectangle](htt
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 
 Rectangle {
@@ -74,8 +76,9 @@ In the this example, only the Teal Rectangle will be visible, since the Green Re
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 
 Rectangle { // Unlike everything else, the widget's main item will have a default size.
@@ -103,8 +106,9 @@ In this second example, we make the Green Rectangle resize to the parent item, t
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 
 Rectangle { // Unlike everything else, the widget's main item will have a default size.
@@ -133,8 +137,9 @@ Other ways to use `anchors` properties can be read in the QML Documentation page
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 
 Rectangle {
@@ -168,8 +173,9 @@ Note that if the `ColumnLayout` is taller than its contents, the children will h
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -202,8 +208,9 @@ The other Layout related properties can be [read here](http://doc.qt.io/qt-5/qml
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 
@@ -247,8 +254,9 @@ If you want one item (or several) in a Layout to expand to take up the unused sp
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 
@@ -290,8 +298,9 @@ In the last screenshot you might have noticed how there is still spacing between
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 
@@ -335,8 +344,9 @@ There's also [RowLayout](http://doc.qt.io/qt-5/qml-qtquick-layouts-rowlayout.htm
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// main.qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -352,3 +362,7 @@ RowLayout {
 ```
 {{< /section-right >}}
 {{< /sections >}}
+
+
+
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}

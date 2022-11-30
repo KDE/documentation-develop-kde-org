@@ -24,8 +24,9 @@ To get your panel icon to be configurable like the [Application Launcher widget]
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
-<!-- config/main.xml -->
 <?xml version="1.0" encoding="UTF-8"?>
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
     <kcfgfile name=""/>
@@ -475,3 +476,7 @@ Item {
 {{< /section-right >}}
 {{< /sections >}}
 
+
+
+
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}

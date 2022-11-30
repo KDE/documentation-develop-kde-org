@@ -1,0 +1,35 @@
+<style>
+.filepath {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,liberation mono,courier new,monospace;
+    background-color: #f0f0f0;
+    color: #595858;
+
+    /* .highlight     has 1px rgba(35,38,41,.125) */
+    /* .highlight>pre has 1px rgba(0,0,0,.125) */
+    border: 2px solid #e3e3e4;
+    border-bottom: 0;
+    border-radius: .25rem .25rem 0 0;
+
+    /* .td-content .highlight pre { padding-left: .5rem } */
+    padding: .3rem .5rem;
+}
+.filepath + .highlight,
+.filepath + .highlight > pre {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+@media (prefers-color-scheme: dark) {
+    .filepath {
+        color: #9d9d9d;
+        background-color: #2a2e33;
+        border-color: #2a2e33;
+    }
+    .filepath,
+    .filepath + .highlight,
+    .filepath + .highlight > pre {
+        border-color: #2a2e33 !important;
+        /*border: 1px solid red;*/
+    }
+}
+</style>
