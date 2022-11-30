@@ -100,8 +100,9 @@ languages:
         weight: 20
     weight: 2
 markup:
-  defaultMarkdownHandler: goldmark
   goldmark:
+    extensions:
+      typographer: false
     renderer:
       unsafe: true
   highlight:
