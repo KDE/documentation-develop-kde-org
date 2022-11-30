@@ -30,12 +30,12 @@ Note that you don't *need* the 3 config files. You can get away with just the `m
 └── ~/Code/plasmoid-helloworld/
     └── package
         ├── contents
-        │   ├── ui
-        │   │   ├── main.qml
+        │   ├── ui
+        │   │   ├── main.qml
         │   │   └── configGeneral.qml
-        │   └── config
-        │       ├── config.qml
-        │       └── main.xml
+        │   └── config
+        │       ├── config.qml
+        │       └── main.xml
         └── metadata.json
 ```
 {{< /section-right >}}
