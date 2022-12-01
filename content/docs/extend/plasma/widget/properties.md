@@ -53,16 +53,16 @@ Item {
 | `Plasmoid.containmentDisplayHints` | [`Plasma::Types::ContainmentDisplayHints`](docs:plasma;Plasma::Types::ContainmentDisplayHints) |  |
 | `Plasmoid.contextualActions` | `QList<QObject*>` |  |
 | `Plasmoid.currentActivity` | `string` |  |
-| `Plasmoid.editMode` | `bool` |  |
-| `Plasmoid.effectiveBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) |  |
+| `Plasmoid.editMode` | `bool` | Only available to Containments like the "panel" widget. Used to toggle the global widget editing mode. |
+| `Plasmoid.effectiveBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). The actual background hints the applet has based on `backgroundHints` and `userBackgroundHints`. |
 | `Plasmoid.expanded` | `bool` |  |
 | `Plasmoid.formFactor` | [`Plasma::Types::FormFactor`](docs:plasma;Plasma::Types::FormFactor) |  |
 | `Plasmoid.fullRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](plasmoidfullrepresentation). The full "popup" view of the widget. |
 | `Plasmoid.fullRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) | The instance of the `fullRepresentation` Component. Since widget popup's a lazy loaded, it is `null` until the popup is opened. |
 | `Plasmoid.globalShortcut` | [`QKeySequence`](https://doc.qt.io/qt-5/qkeysequence.html) |  |
-| `Plasmoid.hideOnWindowDeactivate` | `bool ` |  |
+| `Plasmoid.hideOnWindowDeactivate` | `bool ` | Set to `false` to "pin" the widget's full representation dialog open when out of focus. |
 | `Plasmoid.icon` | `string` | [Example](#plasmoidicon) |
-| `Plasmoid.id` | `uint` |  |
+| `Plasmoid.id` | `uint` | This is an integer representing the widget instance. See `Plasmoid.metaData.pluginId` for the widget namespace. |
 | `Plasmoid.immutability` | [`Plasma::Types::ImmutabilityType`](docs:plasma;Plasma::Types::ImmutabilityType) | Detect if Kiosk mode has locked the widgets, or the user Lock Widget mode from Plasma 5.18 and below. |
 | `Plasmoid.immutable` | `bool` | `true` if either `UserImmutable` or `SystemImmutable`. |
 | `Plasmoid.loading` | `bool` | Always `false` when widget is running. |
@@ -87,14 +87,14 @@ Item {
 | `Plasmoid.metaData.mimeTypes` | `QStringList` |  |
 | `Plasmoid.metaData.name` | `string` | The translated widget `Name`. Also see `Plasmoid.title` |
 | `Plasmoid.metaData.otherContributors` | `QVariantList` |  |
-| `Plasmoid.metaData.pluginId` | `string` | The widget namespace. `Id` in `metadata.json`, or `X-KDE-PluginInfo-Name` in `metadata.desktop`. |
+| `Plasmoid.metaData.pluginId` | `string` | [Documentation](#id). The widget namespace. `Id` in `metadata.json`, or `X-KDE-PluginInfo-Name` in `metadata.desktop`. |
 | `Plasmoid.metaData.rawData` | `QJsonObject` |  |
 | `Plasmoid.metaData.serviceTypes` | `QStringList` |  |
 | `Plasmoid.metaData.translators` | `QVariantList` |  |
 | `Plasmoid.metaData.version` | `string` | Reads `Version` in `metadata.json` or `X-KDE-PluginInfo-Version` in `metadata.desktop`. |
 | `Plasmoid.metaData.website` | `string` |  |
-| `Plasmoid.nativeInterface` | `QObject` |  |
-| `Plasmoid.pluginName` | `string` | The widget namespace. Alias of `Plasmoid.metaData.pluginId` |
+| `Plasmoid.nativeInterface` | `QObject` | [Documentation]({{< ref "c-api.md#plasmoidnativeinterface" >}}). Provides access to C++ properties by extending `Plasma::Applet` like the SystemTray. |
+| `Plasmoid.pluginName` | `string` | [Documentation](#id). The widget namespace. Alias of `Plasmoid.metaData.pluginId` |
 | `Plasmoid.preferredRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | Force a representation and ignore `Plasmoid.switchHeight`. [Example](#plasmoidfullrepresentation) |
 | `Plasmoid.rootItem` | `QObject` | Reference the widget's root item. Cannot be used in the config dialog. |
 | `Plasmoid.screen` | `int` |  |
@@ -108,7 +108,7 @@ Item {
 | `Plasmoid.toolTipMainText` | `string` | The mainText in the default tooltip layout. |
 | `Plasmoid.toolTipSubText` | `string` | The subText in the default tooltip layout. |
 | `Plasmoid.toolTipTextFormat` | `int` | The [`TextFormat`](https://doc.qt.io/qt-5/qml-qtquick-text.html#textFormat-prop) of the subText. Defaults to `PlainText`. |
-| `Plasmoid.userBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) |  |
+| `Plasmoid.userBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). The user specified background hint. |
 | `Plasmoid.userConfiguring` | `bool` |  |
 
 
