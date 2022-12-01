@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:39+0000\n"
-"PO-Revision-Date: 2022-11-29 20:43+0100\n"
+"PO-Revision-Date: 2022-11-30 23:57+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -5050,7 +5050,6 @@ msgid "Creating classic KDE applications using QtWidgets"
 msgstr "Ustvarjanje klasičnih aplikacij KDE z uporabo QtWidget-ov"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:84
-#, fuzzy
 msgid ""
 "If you'd like to work on more complex KDE applications such as Dolphin, "
 "Kontact, or Kate, you will need to learn more about how to use QtWidgets, "
@@ -5062,8 +5061,8 @@ msgstr ""
 "Če želite delati na zahtevnejših KDE aplikacijah, kot so Delfin, Kontact ali "
 "Kate, boste morali izvedeti več o tem, kako uporabljati QtWidgets, ki zajema "
 "povsem drugačen način razvoja uporabniških vmesnikov s Qt. Čeprav ni "
-"zamenljiv z QML /Kirigami - vsak ima drugačen nabor trgovin - starejši in "
-"kompleksnejši KDE aplikacije se nagajajo, da se gradijo s QtWidgets."
+"zamenljiv z QML/Kirigami - vsak ima drugačen nabor pomanjkljivosti - "
+"starejši in kompleksnejši KDE aplikacije se večinoma izdelujejo s QtWidgets."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:86
 msgid ""
@@ -5201,18 +5200,16 @@ msgid "Countdown-adding sheet"
 msgstr "List z dodajanjem odštevanja"
 
 #: content/docs/use/kirigami/introduction-overlaysheets.md:23
-#, fuzzy
 msgid ""
 "The new component we add is `Kirigami.OverlaySheet`. Overlay sheets hover "
 "above the contents of the window and can be used for a variety of purposes, "
 "such as providing extra information relevant to the current content. They "
 "are sort of like fancy pop-up windows, except they can't be moved."
 msgstr ""
-"Nova komponenta, ki jo dodamo, je \"Kirigami.OverlaySheet\". Nad vsebino "
-"okna se nad vsebino okna postavijo nad prečlapne liste in jih je mogoče "
-"uporabiti za različne namene, kot je zagotavljanje dodatnih informacij, "
-"pomembnih za trenutno vsebino. So kot fancy pop-up okna, le da jih ni mogoče "
-"premakniti."
+"Nova komponenta, ki jo dodamo, je 'Kirigami.OverlaySheet'. Prekrivni listi "
+"se postavijo nad vsebino okna in jih je mogoče uporabiti za različne namene, "
+"kot je zagotavljanje dodatnih informacij pomembnih za trenutno vsebino. So "
+"kot dodatno prikazana pogovorna okna, le da jih ni mogoče premakniti."
 
 #: content/docs/use/kirigami/introduction-overlaysheets.md:59
 msgid ""
@@ -5223,18 +5220,16 @@ msgstr ""
 "00:00:00 UTC."
 
 #: content/docs/use/kirigami/introduction-overlaysheets.md:72
-#, fuzzy
 msgid ""
 "We can give overlay sheets a header. These are set with the `header` "
 "property. We have provided ours with a `Kirigami.Heading` containing a "
 "relevant title: 'Add Kountdown'."
 msgstr ""
-"Lahko damo overlay listov glavo. Te so nastavljene z lastnostjo \"glava\". "
-"Našemu smo zagotovili naslov \"Kirigami.Heading\" z ustreznim naslovom: "
-"\"Dodaj Kountdown\"."
+"Prekrivnemu listu lahko damo glavo. Ti so nastavljeni z lastnostjo 'header'. "
+"Našemu smo zagotovili naslov 'Kirigami.Heading' z ustreznim naslovom: 'Add "
+"Kountdown'."
 
 #: content/docs/use/kirigami/introduction-overlaysheets.md:74
-#, fuzzy
 msgid ""
 "Then we come to a `Kirigami.FormLayout`. This allows us to easily create "
 "responsive input forms, which neatly displays labels for inputs and the "
@@ -5243,12 +5238,12 @@ msgid ""
 "types, though we're sticking to simple `Controls.Textfield` inputs that give "
 "us simple text boxes to write things in."
 msgstr ""
-"Potem pridemo na \"Kirigami.FormLayout\". To nam omogoča enostavno "
-"ustvarjanje odzivnih vhodnih obrazcev, ki pravilno prikazujejo nalepke za "
-"vhode in vhode same na širokozaslonih zaslonih in ožje mobilne naprave. Te "
+"Potem pridemo do 'Kirigami.FormLayout'. Ta nam omogoča enostavno ustvarjanje "
+"odzivnih vhodnih obrazcev, ki pravilno prikazujejo nalepke za vhode in vhode "
+"same na širokih zaslonih zaslonih in na ožjih mobilnih napravah. Te "
 "postavitve obrazcev so zasnovane tako, da delujejo z različnimi vrstami "
-"vnosov, čeprav se držimo preprostih vhodov \"Controls.Textfield\", ki nam "
-"dajejo preprosta polja z besedilom za pisanje stvari v."
+"vnosov, čeprav se držimo preprostih vhodov 'Controls.Textfield', ki nam "
+"dajejo preprosta polja z besedilom za pisanje stvari."
 
 #: content/docs/use/kirigami/introduction-overlaysheets.md:76
 msgid "We have created `Controls.Textfield` elements that act as:"
@@ -5271,7 +5266,6 @@ msgstr ""
 "formatu 'YYYY-MM-DD'."
 
 #: content/docs/use/kirigami/introduction-overlaysheets.md:82
-#, fuzzy
 msgid ""
 "Within each of these `Controls.Textfield` elements, we are setting a "
 "`Kirigami.FormData.label` property that lets us define labels for them. The "
@@ -5283,14 +5277,15 @@ msgid ""
 "active field once the user hits the ENTER key, improving the usability of "
 "our form."
 msgstr ""
-"Znotraj vsake od teh elementov \"Controls.Textfield\" nastavljamo lastnost "
-"\"Kirigami.FormData.label\", ki nam dovoli, da zanje določimo oznake. V "
+"Znotraj vsake od teh elementov 'Controls.Textfield' nastavljamo lastnost "
+"'Kirigami.FormData.label', ki nam dovoli, da zanje določimo oznake. V "
 "obrazcu bodo predstavljene pravilne oznake za vsak od teh besedilnih vnosov. "
-"Besedilo ograde znotraj polj nastavljamo tudi z lastnostjo »ogradaText« -- "
-"to besedilo bo izginilo takoj, ko uporabnik začne vnašati v polje. Na koncu "
-"tudi nastavljamo lastnost \"onAccepted\" za sprožitev metode "
-"\"forceActiveFocus()\" naslednjega polja; to bo preklopil aktivno polje, ko "
-"uporabnik zadene tipko ENTER, kar izboljša uporabnost našega obrazca."
+"Nastavimo tudi mesto za besedilo, kjer znotraj polj nastavljamo lastnost "
+"`placeholderText` -- to besedilo bo izginilo takoj, ko uporabnik začne "
+"vnašati v to polje. Na koncu tudi nastavljamo lastnost 'onAccepted' za "
+"proženje metode 'forceActiveFocus()' na naslednjem polju; to bo preklopilo "
+"aktivno polje, ko uporabnik pritisne tipko ENTER, kar izboljša uporabnost "
+"našega obrazca."
 
 #: content/docs/use/kirigami/introduction-overlaysheets.md:84
 msgid ""
@@ -5370,7 +5365,6 @@ msgstr ""
 "potovanje v smeri ustvarjanja celotne aplikacije z veliko možnostmi."
 
 #: content/docs/use/kirigami/introduction-pages.md:13
-#, fuzzy
 msgid ""
 "These tutorials will focus on creating an application that lets the user see "
 "how many days are left until an event of their choice. That doesn't mean you "
@@ -5381,14 +5375,14 @@ msgid ""
 "provides a number of useful UI examples and provides easy access to all the "
 "code."
 msgstr ""
-"Te vaje se bodo osredotočile na ustvarjanje aplikacije, ki uporabniku "
+"Ti učbeniki se bodo osredotočili na ustvarjanje aplikacije, ki uporabniku "
 "dovoli, da vidi, koliko dni je ostalo do dogodka po svoji izbiri. To ne "
-"pomeni, da ne smeš odstopati in poskušati ustvariti svoje stvari! Samo "
-"poskrbite, da boste pozorno pozorni na to, kako stvari delujejo *prvi*, tako "
-"da se lahko prilagodite, ko so stvari drugačne v vaši lastni kodi. "
+"pomeni, da ne smete odstopati in poskušati ustvariti svoje stvari! Samo "
+"poskrbite, da boste pozorno pozorni na to, kako stvari delujejo *v prvo*, "
+"tako da se lahko prilagodite, ko so stvari drugačne v vaši lastni kodi. "
 "Priporočamo vam tudi, da preverite [Kirigami Gallery](https://apps.kde.org/"
-"en/kirigami2.gallery), ki ponuja številne uporabne primere UI in omogoča "
-"enostaven dostop do vse kode."
+"en/kirigami2.gallery), ki ponuja številne uporabne primere uporabniškega "
+"vmesnika in omogoča enostaven dostop do vse kode."
 
 #: content/docs/use/kirigami/introduction-pages.md:15
 msgid ""
@@ -5446,17 +5440,16 @@ msgstr ""
 "uporabna, dosledna in estetska."
 
 #: content/docs/use/kirigami/introduction-pages.md:31
-#, fuzzy
 msgid ""
 "A Kirigami [Page](docs:kirigami2;Page) also inherits from a [QQC2 Page]"
 "(https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html) and as such, you "
 "can add a number of extra elements to them. The Qt docs are another useful "
 "resource to use when designing your pages."
 msgstr ""
-"A Kirigami [Stran](docs:kirigami2; Stran) podeduje tudi iz [QQC2 Page]"
-"(https://doc.qt.io/qt-5/qml-qtquick-controls2-page.html) in kot taka jim "
-"lahko dodate več dodatnih elementov. Qt docs so še en uporaben vir, ki ga "
-"lahko uporabite pri načrtovanju strani."
+"Kirigami [Page](docs:kirigami2;Page) podeduje tudi iz [QQC2 Page](https://"
+"doc.qt.io/qt-5/qml-qtquick-controls2-page.html) in kot taka jim lahko dodate "
+"več dodatnih elementov. Qt docs so še en uporaben vir, ki ga lahko uporabite "
+"pri načrtovanju strani."
 
 #: content/docs/use/kirigami/introduction-pages.md:36
 msgid ""
@@ -5466,17 +5459,16 @@ msgstr ""
 "učbeniku:"
 
 #: content/docs/use/kirigami/introduction-pages.md:40
-#, fuzzy
 msgid ""
 "We make our application start to our `Kirigami.Page`. All we have included "
 "in it is a label containing 'Hello World', but we're going to spruce things "
 "up a little."
 msgstr ""
-"Prijavo začnemo z našo \"Kirigami.Page\". Vse, kar smo vključili v to, je "
-"nalepka, ki vsebuje \"Pozdravljeni svet\", ampak bomo smreke stvari malo gor."
+"Našo aplikacijo zaženemo z našo stranjo 'Kirigami.Page'. Vse, kar smo "
+"vključili vanjo, je oznaka, ki vsebuje 'Hello World', ampak obnašanje še "
+"malo izboljšali."
 
 #: content/docs/use/kirigami/introduction-pages.md:42
-#, fuzzy
 msgid ""
 "The idea behind our app is that we're going to be able to display a bunch of "
 "countdowns to the user. The problem with a normal `Kirigami.Page` is that it "
@@ -5484,13 +5476,12 @@ msgid ""
 "scrollable pages. `Kirigami.ScrollablePage` is going to replace our "
 "`Kirigami.Page` now."
 msgstr ""
-"Zamisel za našo aplikacijo je, da bomo lahko uporabniku prikazali kopijo "
-"odštevanja. Težava pri normalnem \"Kirigami.Page\" je v tem, da ima fiksno "
-"navpično velikost, vendar ne skrbi: Kirigami podpira tudi pomikanje strani. "
-"\"Kirigami.ScrollablePage\" bo zamenjal naš Kirigami.Page zdaj."
+"Zamisel naše aplikacijo je, da bomo lahko uporabniku prikazali nekaj "
+"odštevanj. Težava pri normalni strani 'Kirigami.Page' je v tem, da ima "
+"fiksno navpično velikost, vendar ne skrbite: Kirigami podpira tudi pomikanje "
+"strani. 'Kirigami.ScrollablePage' bo zamenjal naš 'Kirigami.Page'."
 
 #: content/docs/use/kirigami/introduction-pages.md:46
-#, fuzzy
 msgid ""
 "If you've gone ahead of the tutorial, you might have noticed that there is "
 "also such a thing as a `ScrollView` that you can use to contain your "
@@ -5498,13 +5489,13 @@ msgid ""
 "this can cause problems. Children of a `ScrollablePage` are functionally "
 "already in a `ScrollView`."
 msgstr ""
-"Če ste šli pred vajami, ste morda opazili, da obstaja tudi taka stvar, kot "
-"je 'ScrollView', ki jo lahko uporabite za vsebovanje komponent. Vendar ne "
-"dajajte 'ScrollView' v 'ScrollablePage', saj lahko to povzroči težave. "
-"Otroci \"ScrollablePage\" so funkcionalno že v \"ScrollView\"."
+"Če ste sem prišli pred učbenikom, ste morda opazili, da obstaja tudi taka "
+"stvar, kot je 'ScrollView', ki jo lahko uporabite za vsebino komponent. "
+"Vendar ne dajajte 'ScrollView' v notranjosti 'ScrollablePage', saj lahko to "
+"povzroči težave. Nasledniki 'ScrollablePage' so funkcionalno že v "
+"'ScrollView'."
 
 #: content/docs/use/kirigami/introduction-pages.md:57
-#, fuzzy
 msgid ""
 "Kirigami pages also feature neat titles placed within the toolbar, quickly "
 "indicating to the user which page they are on. All we need to do to set a "
@@ -5512,41 +5503,38 @@ msgid ""
 "case, we used one of the `i18nc()` functions we explored in our previous "
 "tutorial to this end."
 msgstr ""
-"Kirigami strani imajo tudi čete naslove, ki so v orodni vrstici, ki "
+"Kirigami strani imajo tudi lepe naslove, ki so v orodni vrstici, da "
 "uporabniku hitro označujejo, na kateri strani so. Vse, kar moramo storiti za "
-"nastavitev naslova strani z lastnostjo \"naslov\" \"Kirigami.ScrollablePage"
-"\". V tem primeru smo uporabili eno od funkcij \"i18nc()\" smo raziskali v "
-"našem prejšnjem vajah v ta namen."
+"nastavitev naslova strani z lastnostjo 'title' v 'Kirigami.ScrollablePage'. "
+"V tem primeru smo uporabili eno od funkcij 'i18nc()', ki smo jo raziskali že "
+"v našem prejšnjem učbeniku."
 
 #: content/docs/use/kirigami/introduction-pages.md:61
-#, fuzzy
 msgid ""
 "You could also choose to define your page within its own QML document. To do "
 "so, you'd create the new QML doc, add it to your `resources.qrc` file, and "
 "set `Kirigami.ApplicationWindow`'s first page to it like so:"
 msgstr ""
-"Stran lahko določite tudi v svojem dokumentu QML. Če želite to storiti, "
-"ustvarite novo QML doc, jo dodajte v datoteko \"resources.qrc\" in na prvo "
-"stran »Kirigami.ApplicationWindow« nastavite tako:"
+"Določite lahko vašo stran v v svojem dokumentu QML. Če želite to storiti, "
+"ustvarite novo QML doc, jo dodajte v datoteko 'resources.qrc' in na prvo "
+"nastavite stran 'Kirigami.ApplicationWindow' tako:"
 
 #: content/docs/use/kirigami/introduction-pages.md:67
-#, fuzzy
 msgid ""
 "`pageStack.initialPage` sets the initial Page of the Page stack, and `Qt."
 "resolvedUrl` is converting the relative URL of the QML file into an absolute "
 "one."
 msgstr ""
-"\"pageStack.initialPage\" določa začetno stran steka strani in 'Qt."
-"resolvedUrl' pretvori relativni URL datoteke QML v absolutno."
+"'pageStack.initialPage' določa začetno stran sklada strani in 'Qt."
+"resolvedUrl' pretvori relativni naslov URL datoteke QML v absolutni naslov."
 
 #: content/docs/use/kirigami/introduction-pages.md:69
-#, fuzzy
 msgid ""
 "There is further information about alternative page structures [within our "
 "Kirigami documentation](/docs/kirigami/manipulate-pages/)."
 msgstr ""
 "Obstajajo dodatne informacije o alternativnih strukturah strani [v naši "
-"Dokumentaciji Kirigami](/docs/kirigami/manipulate-pages/)."
+"dokumentaciji Kirigami](/docs/kirigami/manipulate-pages/)."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:0
 msgid "Using separate files and signals"
@@ -5565,41 +5553,37 @@ msgid "But why?"
 msgstr "Ampak zakaj?"
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:13
-#, fuzzy
 msgid ""
 "For the first time, we will be separating some of our components into their "
 "own QML files. If we keep adding things to `main.qml`, it's going to quickly "
 "become hard to tell what does what, and we risk muddying our code."
 msgstr ""
 "Prvič bomo nekatere naše komponente ločili v lastne QML datoteke. Če bomo še "
-"naprej dodajali stvari na \"main.qml\", bo hitro postalo težko povedati, kaj "
-"počne, in tvegamo blatenje naše kode."
+"naprej dodajali stvari na \"main.qml\", bo hitro postalo težko določljivo, "
+"kaj vse to počne in tvegamo blatenje naše kode."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:15
-#, fuzzy
 msgid ""
 "First we need to add our new files into our `resources.qrc` which we created "
 "in the first part of this tutorial."
 msgstr ""
-"Najprej moramo dodati naše nove datoteke v naše \"vire.qrc\" ki smo jih "
-"ustvarili v prvem delu tega tutorial."
+"Najprej moramo dodati naše nove datoteke v naše `resources.qrc' ki smo jih "
+"ustvarili v prvem delu tega učbenika."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:27
 msgid "Using our new files"
 msgstr "Uporaba naših novih datotek"
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:29
-#, fuzzy
 msgid ""
 "We'll need to find some way of using our new files in `main.qml`. "
 "Thankfully, all we need to do is include a declaration of these components "
 "in our `main.qml` like this:"
 msgstr ""
-"Najti moramo način uporabe naših novih datotek v \"main.qml\". K sreci "
-"moramo le vključiti izjavo o teh komponentah v naš \"main.qml\" kot je ta:"
+"Najti moramo način uporabe naših novih datotek v \"main.qml\". na srečo "
+"moramo le vključiti izjavo o teh komponentah v naš 'main.qml' kot je ta:"
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:37
-#, fuzzy
 msgid "Extending our add sheet into an add/edit sheet"
 msgstr "Razširitev lista z dodajanjem v list za dodajanje/urejanje"
 
@@ -5616,7 +5600,7 @@ msgstr ""
 "odštevanja storiti nekaj, gumb za urejanje na naših odštevanje kartic je še "
 "vedno neaktiven. Ustvarili smo tudi list z dodatki, ki bi ga lahko zdaj "
 "prenamnoželi, da bi služil tudi kot list za urejanje... ampak preden pridemo "
-"do tega, moramo dodati nekaj dodatnih stvari našemu \"main.qml\"."
+"do tega, moramo dodati nekaj dodatnih stvari našemu 'main.qml'."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:43
 msgid ""
@@ -5667,19 +5651,17 @@ msgstr ""
 "lastnost \"način\" na vrhu našega AddEditSheet."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:69
-#, fuzzy
 msgid ""
 "The `mode` property also controls several other things: mainly what the "
 "title of our sheet is set to, and what text is to be included in our "
 "textfields. However, by default, our `mode` property is just set to add..."
 msgstr ""
-"Lastnost \"mode\" nadzira tudi več drugih stvari: predvsem na kakšen naslov "
+"Lastnost 'mode' nadzira tudi več drugih stvari: predvsem na kakšen naslov "
 "našega lista je nastavljen, in kakšno besedilo naj bi bilo vključeno v naša "
-"besedilna polja. Vendar je privzeto naša lastnost \"mode\" nastavljena tako, "
+"besedilna polja. Vendar je privzeto naša lastnost 'mode' nastavljena tako, "
 "da doda..."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:71
-#, fuzzy
 msgid ""
 "Which brings us back to `main.qml` and our new `openPopulateSheet` function. "
 "You might have noticed that this is what is called now when the countdown-"
@@ -5689,71 +5671,65 @@ msgid ""
 "`openPopulateSheet(\"add\")`. More importantly, this function sets all the "
 "relevant properties in AddEditSheet."
 msgstr ""
-"Kar nas pripelje nazaj do \"main.qml\" in naše nove funkcije "
-"\"openPopulateSheet\". Morda ste opazili, da se to imenuje zdaj, ko se "
-"sproži dejanje dodajanja odštevanja. Ta funkcija vključuje več argumentov, "
-"ki so bili zagotovljeni s privzetimi vrednostmi. To je v pomoč, ko želimo "
+"Kar nas pripelje nazaj do 'main.qml' in naše nove funkcije "
+"'openPopulateSheet'. Morda ste opazili, da se to imenuje tedaj, ko se sproži "
+"dejanje dodajanja odštevanja. Ta funkcija vključuje več argumentov, ki so "
+"bili zagotovljeni s privzetimi vrednostmi. To je v pomoč, ko želimo "
 "preprosto dodati novo odštevanje, saj lahko imamo jedrnato funkcijo klic "
-"\"openPopulateSheet(\"dodaj\")\". Še pomembneje je, da ta funkcija določa "
-"vse ustrezne lastnosti v AddEditSheet."
+"'openPopulateSheet(\"add\")'. Še pomembneje je, da ta funkcija določa vse "
+"ustrezne lastnosti v AddEditSheet."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:86
-#, fuzzy
 msgid ""
 "`mode` changes the add/edit sheet depending on whether this argument is set "
 "to `\"add\"` or to `\"edit\"`"
 msgstr ""
-"\"način\" spremeni list z dodajanjem/urejanjem, odvisno od tega, ali je ta "
-"argument nastavljen na \"\"dodaj\"\" ali \"uredi\"\""
+"'mode' spremeni list z dodajanjem/urejanjem, odvisno od tega, ali je ta "
+"argument nastavljen na `\"add\"` ali na `\"edit\"`"
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:87
-#, fuzzy
 msgid ""
 "`index` argument is needed so that when we save our edited countdown, the "
 "correct one is modified"
 msgstr ""
-"argument \"index\" je potrebna, tako da se pri shranjevanje urejenega "
-"odštevanja pravilno spremeni"
+"argument 'index' je potreben, tako da se pri shranjevanje urejenega "
+"odštevanja spremeni pravega"
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:88
-#, fuzzy
 msgid ""
 "`listName`, `listDesc`, and `listDate` are the relevant countdown details "
 "that need to be put in the sheet's fields"
 msgstr ""
-"\"listName\", \"listDesc\" in \"listDate\" so ustrezne podrobnosti "
-"odštevanja, ki jih je treba vneti v polja lista"
+"'listName', 'listDesc' in 'listDate' so ustrezne podrobnosti odštevanja, ki "
+"jih je treba vnesti v polja lista"
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:90
-#, fuzzy
 msgid ""
 "Of course, to actually use our sheet for anything besides adding countdowns "
 "first we need to make the edit button on our cards work. But if you look at "
 "our `Kirigami.CardsListView` in `main.qml`..."
 msgstr ""
-"Seveda, da dejansko uporabite naš list za vse, poleg dodajanja odštevanja "
-"najprej moramo narediti gumb za urejanje na naših karticah deluje. Če pa "
-"pogledate naš \"Kirigami.CardsListView\" v \"main.qml\"..."
+"Seveda, da lahko dejansko uporabite naš list za vse, moramo poleg dodajanja "
+"odštevanja najprej narediti gumb urejanja, da na naših karticah to deluje. "
+"Če pa pogledate naš 'Kirigami.CardsListView' v 'main.qml'..."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:100
-#, fuzzy
 msgid ""
 "We've replaced our `Kirigami.AbstractCard` with a delegate component "
 "definition from `KountdownDelegate.qml`."
 msgstr ""
-"Zamenjali smo našo \"Kirigami.AbstractCard\" z opredelitvijo delegirane "
-"komponente iz \"KountdownDelegate.qml\"."
+"Smo zamenjali našo 'Kirigami.AbstractCard' z opredelitvijo delegirane "
+"komponente iz 'KountdownDelegate.qml'."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:104
-#, fuzzy
 msgid ""
 "The `onClicked` property of the 'Edit' button on our cards now calls the "
 "`openPopulateSheet` function, with the card's fetched list element "
 "properties set as the arguments for this function. With these, the sheet can "
 "be populated with the correct text."
 msgstr ""
-"Lastnost \"onClicked\" gumba \"Uredi\" na naših karticah zdaj kliče funkcijo "
-"\"openPopulateSheet\", pri tem pa so lastnosti elementov seznama kartice "
+"Lastnost gumba 'onClicked' 'Edit' na naših karticah zdaj kliče funkcijo "
+"'openPopulateSheet', pri tem pa so lastnosti elementov seznama kartice "
 "nastavljene kot argumenti za to funkcijo. S temi se lahko list napolni s "
 "pravilnim besedilom."
 
@@ -5782,37 +5758,34 @@ msgid "Make your app follow your user color scheme\n"
 msgstr "Naj vaša aplikacija sledi barvni shemi uporabnika\n"
 
 #: content/docs/use/kirigami/style-colors.md:12
-#, fuzzy
 msgid ""
 "Kirigami has a color palette that follow the system colors, to better "
 "integrate on the platform it is running on (i.e. Plasma Desktop, Plasma "
 "Mobile, GNOME, Android, etc.)."
 msgstr ""
 "Kirigami ima barvno paleto, ki sledi sistemskim barvam, za boljšo "
-"integracijo na platformi, ki jo izvaja (npr. Plasma Desktop, Plasma Mobile, "
-"GNOME, Android itd.)."
+"integracijo na platformi, kjer se izvaja (npr. Plasma Desktop, Plasma "
+"Mobile, GNOME, Android itd.)."
 
 #: content/docs/use/kirigami/style-colors.md:16
-#, fuzzy
 msgid ""
 "All of Kirigami's QML components and all the Qt Quick Controls 2 QML "
 "components will already follow this palette by default, so usually no custom "
 "coloring should be needed at all for those controls."
 msgstr ""
 "Vse Kirigami's QML komponente in vse Qt Quick Controls 2 QML komponente bodo "
-"že sledile tej paleti privzeto, tako da običajno ni treba po meri barvanje "
-"na vseh za te kontrolniki."
+"že sledile tej privzeti paleti, tako da običajno ni treba barvanja po meri "
+"na za vse kontrolnike."
 
 #: content/docs/use/kirigami/style-colors.md:21
-#, fuzzy
 msgid ""
 "Primitive components such as `Rectangle` should always be colored with the "
 "color palette provided by Kirigami via the [`Theme`](docs:kirigami2;"
 "Kirigami::PlatformTheme) attached property."
 msgstr ""
-"Primitivne komponente, kot je \"Pravokotnik\", morajo biti vedno obarvane z "
-"barvno paleto, ki jo kirigami zagotavlja prek ['Theme'](docs:kirigami2; "
-"Tema) priložena lastnost."
+"Primitivne komponente, kot je `Rectangle`, morajo biti vedno obarvane z "
+"barvno paleto, ki jo kirigami zagotavlja prek [`Theme`](docs:kirigami2;"
+"Kirigami::PlatformTheme) priložena lastnost."
 
 #: content/docs/use/kirigami/style-colors.md:24
 #, fuzzy
@@ -5840,24 +5813,22 @@ msgid "Theme"
 msgstr "Tema"
 
 #: content/docs/use/kirigami/style-colors.md:34
-#, fuzzy
 msgid ""
 "For more information about the Kirigami Theme class, see the [API docs](docs:"
 "kirigami2;Kirigami::PlatformTheme)"
 msgstr ""
-"Če želite več informacij o razredu Kirigami Theme, glejte [API docs](docs:"
-"kirigami2; Kirigami::P latformTheme)"
+"Če želite več informacij o razredu Kirigami Theme, si oglejte [API docs]"
+"(docs:kirigami2;Kirigami::PlatformTheme)"
 
 #: content/docs/use/kirigami/style-colors.md:36
-#, fuzzy
 msgid ""
 "`Kirigami.Theme` is an attached property, therefore is available to use in "
 "any QML item. It contains as properties all the colors available in the "
 "palette, and what palette to use, as the `colorSet` property."
 msgstr ""
-"\"Kirigami.Theme\" je priložena lastnost, zato je na voljo za uporabo v "
-"vsakem QML artiklu. Vsebuje kot lastnosti vse barve, ki so na voljo v "
-"paleti, in katere palete za uporabo, kot lastnost \"colorSet\"."
+"'Kirigami.Theme' je priložena lastnost, zato je na voljo za uporabo v vsakem "
+"QML predmetu. Vsebuje kot lastnosti vse barve, ki so na voljo v paleti, in "
+"katere palete za uporabo, kot lastnost 'colorSet'."
 
 #: content/docs/use/kirigami/style-colors.md:41
 #: content/docs/use/kirigami/style-colors.md:82
@@ -5865,15 +5836,16 @@ msgid "Example:"
 msgstr "Primer:"
 
 #: content/docs/use/kirigami/style-colors.md:52
-#, fuzzy
 msgid ""
 "<!-- TODO\n"
 "screenshot of a qml file with an annotated UI showing all the \n"
 "available color\n"
 "-->\n"
 msgstr ""
-"<!-- todo sliko zaslona datoteke qml z annotiranim UI, ki prikazuje vse "
-"razpoložljive barve -- >\n"
+"<!-- ZA NAREDITI\n"
+"slika zaslona datoteke qml z postavljenim uporabniškim vmesnikom, ki "
+"prikazuje vse razpoložljive barve\n"
+"-->\n"
 
 #: content/docs/use/kirigami/style-colors.md:57
 msgid "Color Set"
