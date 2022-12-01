@@ -26,7 +26,7 @@ Note that you don't *need* the 3 config files. You can get away with just the `m
 {{< /section-left >}}
 
 {{< section-right >}}
-```bash
+```txt
 └── ~/Code/plasmoid-helloworld/
     └── package
         ├── contents
