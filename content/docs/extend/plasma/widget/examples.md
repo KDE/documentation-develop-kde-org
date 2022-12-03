@@ -41,8 +41,9 @@ To get your panel icon to be configurable like the [Application Launcher widget]
 
 -----
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// ui/main.qml
 import QtQuick 2.0
 import org.kde.plasma.plasmoid 2.0
 
@@ -54,8 +55,9 @@ Item {
 
 -----
 
+<div class="filepath">contents/ui/ConfigIcon.qml</div>
+
 ```qml
-// ui/ConfigIcon.qml
 import QtQuick 2.5
 import QtQuick.Controls 2.5
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -115,8 +117,9 @@ Button {
 
 -----
 
+<div class="filepath">contents/ui/ConfigGeneral.qml</div>
+
 ```qml
-// ui/ConfigGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import org.kde.kirigami 2.4 as Kirigami
@@ -142,8 +145,9 @@ Item {
 
 -----
 
+<div class="filepath">contents/config/config.qml</div>
+
 ```qml
-// config/config.qml
 import QtQuick 2.0
 import org.kde.plasma.configuration 2.0
 
@@ -167,8 +171,9 @@ While the user can resize the popup window temporarily with `Alt+RightClick+Drag
 
 So we change to our hardcoded sizes:
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// ui/main.qml
 Item {
     id: widget
     Plasmoid.fullRepresentation: Item {
@@ -180,8 +185,9 @@ Item {
 
 into this:
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// ui/main.qml
 Item {
     id: widget
     Plasmoid.fullRepresentation: Item {
@@ -204,8 +210,9 @@ Lastly we register the General config tab in `config/config.qml`.
 {{< /section-left >}}
 {{< section-right >}}
 
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
-// ui/main.qml
 Item {
     id: widget
     Plasmoid.fullRepresentation: Item {
@@ -226,8 +233,9 @@ Item {
 
 -----
 
+<div class="filepath">contents/config/main.xml</div>
+
 ```xml
-<!-- config/main.xml -->
 <?xml version="1.0" encoding="UTF-8"?>
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
     <kcfgfile name=""/>
@@ -245,8 +253,9 @@ Item {
 
 -----
 
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// ui/configGeneral.qml
 import QtQuick 2.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.12
@@ -286,6 +295,8 @@ Item {
 
 -----
 
+<div class="filepath">contents/config/config.qml</div>
+
 ```qml
 // config/config.qml
 import QtQuick 2.0
@@ -319,6 +330,8 @@ A clock can then use Qt's `Qt.formatTime(currentDateTime)` to display the time i
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
@@ -409,6 +422,8 @@ Examples:
 We use [`TextMetrics`](https://doc.qt.io/qt-5/qml-qtquick-textmetrics.html) to calculate the size of the [Text](https://doc.qt.io/qt-5/qml-qtquick-text.html) label when it is the widest/maximum value of `100%`.
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/main.qml</div>
+
 ```qml
 import QtQuick 2.4
 import QtQuick.Layouts 1.0
