@@ -207,7 +207,7 @@ The user's configuration is serialized to `~/.config/plasma-org.kde.plasma.deskt
 
 Since: **KDE Frameworks 5.78**, you can reference the default value of `plasmoid.configuration.varName` with  `plasmoid.configuration.varNameDefault`.
 
-Note: Since **KDE Frameworks 5.89**, the [`KDeclarative::ConfigPropertyMap`](docs:kdeclarative;KDeclarative::ConfigPropertyMap) datatype [was deprecated](https://invent.kde.org/frameworks/plasma-framework/-/commit/6750b75bf02e420630144f2ea1d3f9940a85c0ba) and will eventually change to KConfig's [`KConfigPropertyMap`](docs:kconfig;KConfigPropertyMap).
+Since: **KDE Frameworks 5.89**, the [`KDeclarative::ConfigPropertyMap`](docs:kdeclarative;KDeclarative::ConfigPropertyMap) datatype [was deprecated](https://invent.kde.org/frameworks/plasma-framework/-/commit/6750b75bf02e420630144f2ea1d3f9940a85c0ba) and will eventually change to KConfig's [`KConfigPropertyMap`](docs:kconfig;KConfigPropertyMap).
 
 {{< /section-left >}}
 {{< section-right >}}
