@@ -167,6 +167,7 @@ To set the popup size:
 ```
 
 {{< /section-right >}}
+{{< /sections >}}
 
 {{< alert title="Note" color="info" >}}
 Plasmoids previously used a metadata.desktop file. This is discouraged, because the conversion to JSON will need to be done at runtime.
@@ -179,7 +180,6 @@ desktoptojson -s plasma-applet.desktop -i metadata.desktop
 rm metadata.desktop
 ```
 {{< /alert >}}
-{{< /sections >}}
 
 
 
