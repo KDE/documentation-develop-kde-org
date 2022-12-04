@@ -671,7 +671,7 @@ X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
 
 
 
-{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/plasma-doc-style.html" >}}
 <style>
 .td-content > table td:nth-child(1) code,
 .td-content > table td:nth-child(2) code {

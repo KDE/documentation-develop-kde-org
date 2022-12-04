@@ -38,3 +38,6 @@ sed -i '/^Comment\[/ d' ./metadata.json
 rm ./metadata.desktop
 plasmawindowed com.github.zren.myanalogclock
 ```
+
+
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/plasma-doc-style.html" >}}

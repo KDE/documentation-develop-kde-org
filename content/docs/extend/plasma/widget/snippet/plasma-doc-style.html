@@ -1,4 +1,41 @@
 <style>
+@media (min-width: 992px) {
+    .td-content .twocolsection > pre,
+    .td-content .twocolsection > .highlight,
+    .td-content .twocolsection > .lead,
+    .td-content .twocolsection > h1,
+    .td-content .twocolsection > h2,
+    .td-content .twocolsection ul,
+    .td-content .twocolsection ol,
+    .td-content .twocolsection p,
+    .td-content .twocolsection blockquote,
+    .td-content .twocolsection > dl dd,
+    .td-content .twocolsection .footnotes,
+    .td-content .twocolsection > .alert {
+       max-width: 100%;
+    }
+}
+
+.td-content .twocolsection > .highlight:first-child {
+    margin-top: 0;
+}
+
+.td-content .twocolrow + .twocolrow {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border: 0;
+    border-top-color: currentcolor;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-top: 1px solid rgba(35,38,41,.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .td-content .twocolrow + .twocolrow {
+        border-top-color: #31363b;
+    }
+}
+
 .filepath {
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,liberation mono,courier new,monospace;
     background-color: #f0f0f0;

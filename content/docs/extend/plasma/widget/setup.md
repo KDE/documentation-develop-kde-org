@@ -184,4 +184,4 @@ rm metadata.desktop
 
 
 
-{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/plasma-doc-style.html" >}}

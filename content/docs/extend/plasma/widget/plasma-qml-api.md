@@ -546,4 +546,4 @@ This property is a hardcoded value and shouldn't be used for animations. Instead
 
 
 
-{{< readfile file="/content/docs/extend/plasma/widget/snippet/code-filepath.html" >}}
+{{< readfile file="/content/docs/extend/plasma/widget/snippet/plasma-doc-style.html" >}}
