@@ -111,6 +111,7 @@ function getMenuItemElement(li) {
 }
 function updateTOC() {
     var viewTop = window.scrollY
+    var viewHeight = window.innerHeight
     var tocList = document.querySelectorAll('#TableOfContents li')
     // Binary Search maybe (since elements are in order)?
     for (var i = 0; i < tocList.length; i++) {
@@ -119,7 +120,7 @@ function updateTOC() {
         var offset = getOffsetSum(curElement)
         var offsetDiff = viewTop - offset.top
         if (offsetDiff < 0) {
-            if (i <= 1) {
+            if (i <= 0) {
                 // At top, select the first item
                 setActiveMenuItem(curMenuItem)
             } else {
@@ -127,8 +128,10 @@ function updateTOC() {
                 var prevElement = getMenuItemElement(prevMenuItem)
                 var prevOffset = getOffsetSum(prevElement)
                 var prevOffsetDiff = viewTop - prevOffset.top
-                var sectionReadRatio = (prevOffsetDiff)/prevMenuItem.offsetHeight
-                if (sectionReadRatio >= 0.7) {
+                var sectionHeight = offset.top - prevOffset.top
+                var sectionUnread = sectionHeight - prevOffsetDiff
+                var screenRatioLeft = sectionUnread / viewHeight
+                if (screenRatioLeft <= 0.3) {
                     // Current item is being read
                     setActiveMenuItem(curMenuItem)
                 } else {
@@ -137,7 +140,7 @@ function updateTOC() {
                 }
             }
             break
-        } else if (i == tocList.length - 1) {
+        } else if (i >= tocList.length - 1) {
             // At bottom, select last item
             setActiveMenuItem(curMenuItem)
         }
