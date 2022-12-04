@@ -21,11 +21,18 @@ Translated strings need to be wrapped in the `i18n(...)` function. Note that sin
 
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">contents/ui/configGeneral.qml</div>
+
 ```qml
-// configGeneral.qml
-CheckBox {
-    id: showThing
-    label: i18n("Show notification")
+import QtQuick 2.0
+import QtQuick.Controls 2.5
+import org.kde.kirigami 2.4 as Kirigami
+
+Kirigami.FormLayout {
+    CheckBox {
+        Kirigami.FormData.label: i18n("Feature:")
+        text: i18n("Enabled")
+    }
 }
 ```
 {{< /section-right >}}
@@ -112,29 +119,29 @@ A working example can be seen in the Tiled Menu widget:
 {{< /section-left >}}
 {{< section-right >}}
 
-```bash
+```txt
 └── ~/Code/plasmoid-helloworld/
     └── package
         ├── contents
-        │   └── ...
+        │   └── ...
         ├── translate
-        │   ├── build.sh
-        │   ├── fr.po
-        │   ├── template.pot
-        │   └── merge.sh
+        │   ├── build.sh
+        │   ├── fr.po
+        │   ├── template.pot
+        │   └── merge.sh
         └── metadata.desktop
 ```
 
 After running `build.sh` we should end up with:
 
-```bash
+```txt
 └── ~/Code/plasmoid-helloworld/
     └── package
         ├── contents
-        │   └── locale
-        │       └── fr
-        │           └── LC_MESSAGES
-        │               └── plasma_applet_com.github.zren.helloworld.mo
+        │   └── locale
+        │       └── fr
+        │           └── LC_MESSAGES
+        │               └── plasma_applet_com.github.zren.helloworld.mo
         └── ...
 ```
 
@@ -184,7 +191,8 @@ In [the complete `merge.sh`](https://github.com/Zren/plasma-applet-lib/blob/mast
 
 {{< /section-left >}}
 {{< section-right >}}
-`translate/merge.sh`
+<div class="filepath">translate/merge.sh</div>
+
 ```bash
 #!/bin/sh
 
@@ -242,6 +250,8 @@ If there hasn't been any changes, we simply delete the `template.pot.new` file.
 Lastly, we delete the `infiles.list` to clean things up.
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">translate/merge.sh</div>
+
 ```bash
 if [ -f "template.pot" ]; then
     newPotDate=`grep "POT-Creation-Date:" template.pot.new | sed 's/.\{3\}$//'`
@@ -288,6 +298,8 @@ Now that we've got a `template.pot`, let's take a look at it.
 The messages we want to translate appear as `msgid "Show Thing"`, with the file it came from appearing in a comment in the line above. Underneath is an empty `msgstr ""` which is where the translator will place the translated messages.
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">translate/template.pot</div>
+
 ```python
 # Translation of helloworld in LANGUAGE
 # Copyright (C) 2018
@@ -339,6 +351,8 @@ A full list of locale codes [can be found on StackOverflow](https://stackoverflo
 Translators can then start filling out the empty `msgstr ""` with translations.
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">translate/fr.po</div>
+
 ```python
 #: ../contents/configGeneral.qml
 msgid "Show notification"
@@ -366,7 +380,8 @@ When we're done, we overwrite the old `fr.po` with `fr.po.new`.
 
 {{< /section-left >}}
 {{< section-right >}}
-`translate/merge.sh`
+<div class="filepath">translate/merge.sh</div>
+
 ```bash
 #---
 echo "[merge] Merging messages"
@@ -412,6 +427,8 @@ We then make sure a `contents/locale/fr/LC_MESSAGES/` folder exists, creating it
 Then we copy the `fr.mo` to the `LC_MESSAGES` folder, renaming it to `plasma_applet_com.github.zren.helloworld.mo`. Notice that we put `plasma_applet_` in front of the widget's namespace.
 {{< /section-left >}}
 {{< section-right >}}
+<div class="filepath">translate/build.sh</div>
+
 ```bash
 #!/bin/sh
 
