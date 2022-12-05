@@ -21,8 +21,8 @@ void MainWindow::setupActions()
     QAction *clearAction = new QAction(this);
     clearAction->setText(i18n("&Clear"));
     clearAction->setIcon(QIcon::fromTheme("document-new"));
-    actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL + Qt::Key_W);
     actionCollection()->addAction("clear", clearAction);
+    actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL + Qt::Key_W);
     connect(clearAction, &QAction::triggered, textArea, &KTextEdit::clear);
     
     KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
