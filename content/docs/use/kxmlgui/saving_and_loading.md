@@ -195,9 +195,9 @@ With this file, the tutorial can be built and run in the same way as the [previo
 
 ```bash
 cmake -B build/
-cmake --build build/ -DCMAKE_INSTALL_PREFIX=$HOME/.local/kde
+cmake --build build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr/
 cmake --install build/
 source build/prefix.sh # located in the build directory
-cd ~/.local/kde/bin
+cd ~/kde/usr/bin
 ./texteditor
 ```

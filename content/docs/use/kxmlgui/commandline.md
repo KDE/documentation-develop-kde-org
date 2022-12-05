@@ -59,10 +59,10 @@ As before:
 
 ```bash
 cmake -B build/
-cmake --build build/ -DCMAKE_INSTALL_PREFIX=$HOME/.local/kde
+cmake --build build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr
 cmake --install build/
 source build/prefix.sh
-cd ~/.local/kde/bin
+cd ~/kde/usr/bin
 ```
 
 However, we will test if our application handles files from the command line correctly.
