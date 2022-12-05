@@ -19,13 +19,13 @@ We now have a working text editor that can open and save files. We might, howeve
 
 {{< readfile file="/content/docs/use/kxmlgui/commandline/mainwindow.h" highlight="cpp" >}}
 
-Here we have done nothing but add a new `openFileFromUrl` function which takes a `QUrl`. Again, we use a `QUrl` instead of a `QString` so that we can also work with remote files as if they were local.
+Here we have done nothing but add a new `openFileFromUrl()` function which takes a [QUrl](docs:qtcore;QUrl). Again, we use URLs instead of strings so that we can also work with remote files as if they were local.
 
 ### mainwindow.cpp
 
 {{< readfile file="/content/docs/use/kxmlgui/commandline/mainwindow.cpp" highlight="cpp" >}}
 
-There's no new code here, only rearranging. Everything from `void openFile()` has been moved into `void openFileFromUrl(const QUrl &inputFileName)` except the call to `QFileDialog::getOpenFileUrl()`.
+There's no new code here, only rearranging. Everything from `void openFile()` has been moved into `void openFileFromUrl(const QUrl &inputFileName)` except the call to [QFileDialog::getOpenFileUrl()](docs:qtwidgets;QFileDialog::getOpenFileUrl).
 
 This way, we can call `openFile()` if we want to display a dialog, or we can call `openFileFromUrl(const QUrl &)` if we know the name of the file already. Which will be the case when we feed the file name through the command line.
 
