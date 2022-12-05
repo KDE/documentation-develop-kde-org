@@ -13,13 +13,11 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 
-# Find Qt modules
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core    # QCommandLineParser, QStringLiteral
     Widgets # QApplication
 )
 
-# Find KDE modules
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons      # KAboutData
     I18n            # KLocalizedString
@@ -29,7 +27,9 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 set(helloworld_SRCS main.cpp)
+
 add_executable(helloworld ${helloworld_SRCS})
+
 target_link_libraries(helloworld
     Qt5::Widgets
     KF5::CoreAddons
