@@ -143,7 +143,7 @@ kauth_install_actions(org.kde.auth.example org.kde.auth.example.actions)
 This macro has the following syntax:
 
 ```cmake
-kauth_install_helper_files(<namespace_id> <actions definition file>)
+kauth_install_actions(<namespace_id> <actions definition file>)
 ```
 
 Where namespace_id is the namespace where you defined your actions, in this case org.kde.auth.example.
