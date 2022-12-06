@@ -34,7 +34,7 @@ All the code we need will be in one file, `main.cpp`. We'll start simple and inc
 
 We are going to create a popup box which displays some text and has a custom-made "Yes" button which simply displays "Hello". The popup box will use the [KMessageBox](docs:kwidgetsaddons;KMessageBox) class, and the Yes button will use [KGuiItem](docs:kwidgetsaddons;KGuiItem).
 
-First we need to create a [QApplication](docs:qtwidgets;QApplication) object. It needs to be created exactly once and before any other KDE Framework or Qt object, as it is the starting point for creating your application and thus required for other components, like [Ki8n](docs:ki18n) for translations.
+First we need to create a [QApplication](docs:qtwidgets;QApplication) object. It needs to be created exactly once and before any other KDE Frameworks or Qt object, as it is the starting point for creating your application and thus required for other components, like [Ki8n](docs:ki18n) for translations.
 
 The first argument of the [KGuiItem](docs:kwidgetsaddons;KGuiItem) constructor is the text that will appear on the item (in our case, a button object to be used soon). Then we have the option to set an icon for the button, but for now we don't want one so we can just give it a `QString()`, which is just a null [QString](docs:qtcore;QString). We then set the tooltip (what appears when you hover over an item), and finally the "What's This?" text (accessed through right-clicking or Shift-F1).
 
