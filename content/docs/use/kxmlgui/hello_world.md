@@ -84,7 +84,7 @@ Here we try to find the modules for Qt 5 and KDE Frameworks 5 required to build 
 
 Next we create a variable called `helloworld_SRCS` using the [`set()`](https://cmake.org/cmake/help/latest/command/set.html) function. In this case we simply set it to the name of our only source file.
 
-Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add_executable.html) to create an executable called `helloworld` from the source files listed in our `helloworld_SRCS` variable. Afterwards, we link our executable to the necessary libraries using [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function. The line starting with install writes a default "install" target into the Makefile.
+Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add_executable.html) to create an executable called `helloworld` from the source files listed in our `helloworld_SRCS` variable. Afterwards, we link our executable to the necessary libraries using [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function. The line starting with install creates a default "install" target, putting executables and libraries in the default path using a convenience macro provided by ECM.
 
 Make And Run
 ------------
