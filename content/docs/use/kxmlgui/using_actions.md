@@ -189,7 +189,7 @@ Finally, the `texteditorui.rc` needs to go somewhere where the system can find i
 
 This file is almost identical to the one for [previous tutorial](../main_window), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the `KDE_INSTALL_TARGETS_DEFAULT_ARGS` then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory under `KDE_INSTALL_KXMLGUI5DIR`.
 
-## Compile, Install And Run
+## Running our application
 
 This is probably the trickiest part. The place where you install the files is important, especially `texteditorui.rc`. Normally, you'd want to install it where KDE software is installed by your distribution, which is usually under `/usr`. That, however, would require root/admin access and If you don't have that, you can install it to a folder in your home directory.
 

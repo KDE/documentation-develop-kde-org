@@ -183,7 +183,7 @@ The data that `storedGet()` successfully downloaded, in this case the contents o
 Again, for simplicity's sake, this tutorial only saves text files to local disk. When you open a remote file for viewing and try to save it, the program will behave as if you were calling Save As on a completely new file.
 {{< /alert >}}
 
-## Compile, Install, and Run
+## Running our application
 
 ### CMakeLists.txt
 
