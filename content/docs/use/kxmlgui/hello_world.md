@@ -44,7 +44,7 @@ Now that we have the item needed for our "Yes" button, we can create our popup. 
 
 {{< readfile file="/content/docs/use/kxmlgui/hello_world/main2.cpp" highlight="cpp" >}}
 
-For your application to be localized, we must first prepare our code so so that it can be adapted to various languages and regions without engineering changes: this process is called [internationalization](https://doc.qt.io/qt-6/internationalization.html), and KDE uses [Ki8n](docs:ki18n) for that, which provides [KLocalizedString](docs:ki18n;KLocalizedString).
+For your application to be localized, we must first prepare our code so that it can be adapted to various languages and regions without engineering changes: this process is called [internationalization](https://doc.qt.io/qt-6/internationalization.html), and KDE uses [Ki8n](docs:ki18n) for that, which provides [KLocalizedString](docs:ki18n;KLocalizedString).
 
 We start with a call to [KLocalizedString::setApplicationDomain()](docs:ki18n;KLocalizedString::setApplicationDomain), which is required to properly set the translation catalog, and must be done before everything else (except [QApplication](docs:qtwidgets;QApplication)). After that, we can just start enveloping the relevant user-visible strings with `i18n()`. The non-user visible strings that should be kept as-is (that is, read only) should use a [QStringLiteral](docs:qtcore;QString::QStringLiteral). We'll use those next with [KAboutData](docs:kcoreaddons;KAboutData).
 
