@@ -44,9 +44,9 @@ Now that we have the item needed for our "Yes" button, we can create our popup. 
 
 {{< readfile file="/content/docs/use/kxmlgui/hello_world/main2.cpp" highlight="cpp" >}}
 
-For your application to be localized, we must first prepare our code so that it can be adapted to various languages and regions without engineering changes: this process is called [internationalization](https://doc.qt.io/qt-6/internationalization.html), and KDE uses [Ki8n](docs:ki18n) for that, which provides [KLocalizedString](docs:ki18n;KLocalizedString).
+For your application to be localized, we must first prepare our code so that it can be adapted to various languages and regions without engineering changes: this process is called [internationalization](https://doc.qt.io/qt-6/internationalization.html). KDE uses [Ki8n](docs:ki18n) for that, which provides [KLocalizedString](docs:ki18n;KLocalizedString).
 
-We start with a call to [KLocalizedString::setApplicationDomain()](docs:ki18n;KLocalizedString::setApplicationDomain), which is required to properly set the translation catalog, and must be done before everything else (except [QApplication](docs:qtwidgets;QApplication)). After that, we can just start enveloping the relevant user-visible strings with `i18n()`. The non-user visible strings that should be kept as-is (that is, read only) should use a [QStringLiteral](docs:qtcore;QString::QStringLiteral). We'll use those next with [KAboutData](docs:kcoreaddons;KAboutData).
+We start with a call to [KLocalizedString::setApplicationDomain()](docs:ki18n;KLocalizedString::setApplicationDomain), which is required to properly set the translation catalog and must be done before everything else (except [QApplication](docs:qtwidgets;QApplication)). After that, we can just start enveloping the relevant user-visible, translatable strings with `i18n()`. The non-user visible strings that do not need to be translated should use a [QStringLiteral](docs:qtcore;QString::QStringLiteral) instead. We'll use those next with [KAboutData](docs:kcoreaddons;KAboutData).
 
 More information on internalization can be found in the [programmer's guide for internationalization](https://api.kde.org/frameworks/ki18n/html/prg_guide.html).
 
@@ -56,7 +56,7 @@ More information on internalization can be found in the [programmer's guide for 
 
 {{< readfile file="/content/docs/use/kxmlgui/hello_world/main3.cpp" highlight="cpp" >}}
 
-Then we come to [QCommandLineParser](docs:qtcore;QCommandLineParser). This is the class one would use to specify command line flags to, for example, open the program with a specific file. However, in this tutorial, we simply initialize it with the [KAboutData](docs:kcoreaddons;KAboutData) object we created before so we can use the `--version` or `--author` flags that are provided by default by Qt.
+Then we come to [QCommandLineParser](docs:qtcore;QCommandLineParser). This is the class one would use to specify command line flags to open your program with a specific file, for instance. However, in this tutorial, we simply initialize it with the [KAboutData](docs:kcoreaddons;KAboutData) object we created before so we can use the `--version` or `--author` flags that are provided by default by Qt.
 
 We're all done as far as the code is concerned. Now to build it and try it out.
 
@@ -89,7 +89,7 @@ Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add
 Make And Run
 ------------
 
-To compile, link and install your program, you must have the following software installed: `cmake`, `make` or `ninja`, and `gcc-c++`, and the Qt 5 and KDE Frameworks development packages. To be sure you have everything, follow [this install guide](https://community.kde.org/Get_Involved/development#One-time_setup:_your_development_environment).
+To compile, link and install your program, you must have the following software installed: `cmake`, `make` or `ninja`, and `gcc-c++`/`g++`, and the Qt 5 and KDE Frameworks development packages. To be sure you have everything, follow [this install guide](https://community.kde.org/Get_Involved/development#One-time_setup:_your_development_environment).
 
 First we configure our project inside of a `build/` folder:
 
