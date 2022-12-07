@@ -33,7 +33,7 @@ This way, we can call `openFile()` if we want to display a dialog, or we can cal
 
 {{< readfile file="/content/docs/use/kxmlgui/commandline/main.cpp" highlight="cpp" >}}
 
-This is where all the [QCommandLineParser ](docs:qtcore;QCommandLineParser) magic happens. In previous examples, we only used the class to feed QApplication the necessary data for using flags like `--version` or `--author`. Now we actually get to use it to process command line arguments.
+This is where all the [QCommandLineParser ](docs:qtcore;QCommandLineParser) magic happens. In previous examples, we only used the class to feed [QApplication](docs:qtwidgets;QApplication) the necessary data for using flags like `--version` or `--author`. Now we actually get to use it to process command line arguments.
 
 First, we tell [QCommandLineParser ](docs:qtcore;QCommandLineParser) that we want to add a new positional argument. In a nutshell, these are arguments that are not options. `-h` or `--version` are options, `file` is an argument.
 
