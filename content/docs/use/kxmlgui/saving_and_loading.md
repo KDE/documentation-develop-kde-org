@@ -194,8 +194,8 @@ Since we are now using the [KIO](docs:kio) library, we must tell CMake to link a
 With this file, the tutorial can be built and run in the same way as the [previous tutorial](../using_actions).
 
 ```bash
-cmake -B build/
-cmake --build build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr/
+cmake -B build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr/
+cmake --build build/
 cmake --install build/
 source build/prefix.sh # located in the build directory
 cd ~/kde/usr/bin
