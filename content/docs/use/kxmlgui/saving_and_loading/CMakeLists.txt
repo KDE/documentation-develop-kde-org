@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.18)
 
 project(texteditor)
 
-set(QT_MIN_VERSION "5.11.0")
-set(KF5_MIN_VERSION "5.68.0")
+set(QT_MIN_VERSION "5.15.2")
+set(KF5_MIN_VERSION "5.78.0")
 
 find_package(ECM 1.0.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
