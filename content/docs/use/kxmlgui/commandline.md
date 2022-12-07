@@ -58,8 +58,8 @@ With this, we should be ready to test our application.
 As before:
 
 ```bash
-cmake -B build/
-cmake --build build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr
+cmake -B build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr
+cmake --build build/
 cmake --install build/
 source build/prefix.sh
 cd ~/kde/usr/bin
