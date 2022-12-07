@@ -36,7 +36,7 @@ Finally, we declare a pointer to the object that will make up the bulk of our pr
 
 First, of course, we have to include the header file containing the class declaration. 
 
-Inside the constructor of our subclassed [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow), we initialize our [KTextEdit](docs:ktextwidgets;KTextEdit) `textArea`. Because `textArea` derives from [QWidget](docs:qtwidgets;QWidget) and our [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) `MainWindow` derives from [QMainWindow](docs:qtwidgets;QMainWindow), we can call [QMainWindow::setCentralWidget()][QMainWindow](docs:qtwidgets;QMainWindow::setCentralWidget) to make our `textArea` occupy the empty area in the central section of our window.
+Inside the constructor of our subclassed [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow), we initialize our [KTextEdit](docs:ktextwidgets;KTextEdit) `textArea`. Because `textArea` derives from [QWidget](docs:qtwidgets;QWidget) and our [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) `MainWindow` derives from [QMainWindow](docs:qtwidgets;QMainWindow), we can call [QMainWindow::setCentralWidget()](docs:qtwidgets;QMainWindow::setCentralWidget) to make our `textArea` occupy the empty area in the central section of our window.
 
 Finally, [KXmlGuiWindow::setupGUI()](docs:kxmlgui;KXmlGuiWindow::setupGUI) is called which does a lot of behind-the-scenes stuff and creates the default menus (Settings, Help).
 
