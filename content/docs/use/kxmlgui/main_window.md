@@ -9,7 +9,7 @@ aliases:
 
 ## Summary
 
-This tutorial carries on from [First Program Tutorial](../hello_world) and will introduce the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) class.
+This tutorial carries on from our [Hello World project](../hello_world) and will introduce the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) class.
 
 In the previous tutorial, the program caused a dialog box to pop up. Now we are going to take steps towards creating a functioning application with a more advanced window structure.
 
