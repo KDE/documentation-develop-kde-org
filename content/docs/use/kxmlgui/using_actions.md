@@ -198,8 +198,8 @@ This is probably the trickiest part. The place where you install the files is im
 To tell CMake where to install the program, set the `-DCMAKE_INSTALL_PREFIX` switch. You probably just want to install it somewhere local for testing (it's probably a bit silly to go to the effort of installing these tutorials to your system), so the following might be appropriate:
 
 ```bash
-cmake -B build
-cmake --build build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr
+cmake -B build -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr
+cmake --build build/
 cmake --install build/
 ```
 
