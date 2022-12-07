@@ -9,9 +9,9 @@ aliases:
 
 ## Introduction
 
-Now that we have a basic text editor interface, it's time to make it do something useful. At the most basic, a text editor needs to be able to load files from data storage, save files that you've created/edited, and create new files.
+Now that we have a basic text editor interface, it's time to make it do something useful. At the most basic, a text editor needs to be able to load files from data storage, save files that have been created/edited, and create new files.
 
-The KDE Frameworks provides a number of classes for working with files that make life a lot easier for developers. [KIO](docs:kio) allows you to easily access files through network-transparent protocols. At the same time, Qt also provides standard file dialogs for opening and saving files.
+KDE Frameworks provides a number of classes for working with files that make life a lot easier for developers. [KIO](docs:kio) allows you to easily access files through network-transparent protocols. Qt also provides standard file dialogs for opening and saving files.
 
 ![](result.png)
 
@@ -25,9 +25,9 @@ We don't need to change anything in here.
 
 {{< readfile file="/content/docs/use/kxmlgui/saving_and_loading/mainwindow.h" highlight="cpp" >}}
 
-To add the ability to load and save files, we must add the functions which will do the work. Since the functions will be called through [Qt's signal/slot](http://doc.qt.io/qt-6/signalsandslots.html) mechanism we must specify that these functions are slots. Since we are using slots in this header file, we must also add the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro.
+To add the ability to load and save files, we must add the functions which will do the work. Since the functions will be called through [Qt's signal/slot](http://doc.qt.io/qt-6/signalsandslots.html) mechanism we must specify that these functions are slots using either `Q_SLOTS` or `slots`; the former for libraries, the latter for end user applications. Since we are using slots in this header file, we must also add the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, as only [Q_OBJECTs](docs:qtcore;QObject::Q_OBJECT) can have signals and slots.
 
-We also want to keep track of the filename of the currently opened file so we declare a [QString](docs:qtcore;QString) `fileName`.
+We also want to keep track of the filename of the currently opened file, so we declare a [QString](docs:qtcore;QString) `fileName`.
 
 ### mainwindow.cpp
 
@@ -144,7 +144,7 @@ There's nothing exciting or new about this function, just the logic to decide wh
 
 ### Loading a file
 
-Finally, we get round to being able to load a file, from local storage or from a remote location like an FTP server. The code for this is all contained in `MainWindow::openFile()`.
+Finally, we get around to being able to load a file, from local storage or from a remote location like an FTP server. The code for this is all contained in `MainWindow::openFile()`.
 
 First we must ask the user for the name of the file they wish to open. We do this using [QFileDialog::getOpenFileUrl()](docs:qtwidgets;QFileDialog::getOpenFileUrl):
 
