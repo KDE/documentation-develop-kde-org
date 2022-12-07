@@ -12,13 +12,15 @@ Introduction
 
 This tutorial introduces the concept of actions. Actions are a unified way of supplying the user with ways to interact with your program.
 
-For example, if we wanted to let the user of your [main window](../main_window) clear the text box by clicking a button in the toolbar, from an option in the File menu or through a keyboard shortcut, it could all be done with one [QAction](docs:qtwidgets;QAction).
+For example, if we wanted to let the user of our [main window](../main_window) clear the text box by clicking a button in the toolbar, from an option in the File menu or through a keyboard shortcut, it could all be done with one [QAction](docs:qtwidgets;QAction).
 
 ![](result.png)
 
-## QAction
+## QActions
 
-A [QAction](docs:qtwidgets;QAction) is an object which contains all the information about the icon and shortcuts that are associated with a certain action. The action is then connected to a [slot](https://doc.qt.io/qt-5/signalsandslots.html) which carries out the work of your action.
+A [QAction](docs:qtwidgets;QAction) is an object which contains all the information about the icon and shortcuts that are associated with a certain action. With the use of [signals and slots](https://doc.qt.io/qt-5/signalsandslots.html), whenever that action is triggered (like clicking a menu option), a function in a different part of your program is automatically run.
+
+[QActions](docs:qtwidgets;QAction) are most commonly used in [QMenus](docs:qtwidgets;QMenu) shown in a [QMenuBar](docs:qtwidgets;QMenuBar), a [QToolBar](docs:qtwidgets;QToolBar), or in a right click context menu.
 
 ## The Code
 
@@ -42,7 +44,7 @@ Don't worry about the .rc file just yet. We will see what it's about by the end 
 
 {{< readfile file="/content/docs/use/kxmlgui/using_actions/mainwindow.h" highlight="cpp" >}}
 
-Only a function `void setupActions()` has been added which will do all the work setting up the QActions.
+Only a function `void setupActions()` has been added which will do all the work setting up the [QActions](docs:qtwidgets;QAction).
 
 ### mainwindow.cpp
 
@@ -66,7 +68,7 @@ This creates a new [QAction](docs:qtwidgets;QAction) called `clearAction`.
 
 ### Setting QAction Properties
 
-Now that we have our [QAction](docs:qtwidgets;QAction) object, we can start setting its properties. With [QAction::setText()](docs:qtwidgets;QAction::setText), we can set the text that will be displayed in the menu and with an optional [QAction::icon](docs:qtwidgets;QAction::icon) in the toolbar, depending on the widget style (whether beside or below the icon) or setting (whether to display the action text or not).
+Now that we have our [QAction](docs:qtwidgets;QAction) object, we can start setting its properties. With [QAction::setText()](docs:qtwidgets;QAction::setText), we can set the text that will be displayed in the menu and with an optional [QAction::icon()](docs:qtwidgets;QAction::icon) in the toolbar, depending on the widget style (whether beside or below the icon) or setting (whether to display the action text or not).
 
 ```c++
 clearAction->setText(i18n("&Clear"));
@@ -74,11 +76,11 @@ clearAction->setText(i18n("&Clear"));
 
 Note that the text is passed through the `i18n()` function; this is necessary for the UI to be translatable, as mentioned in our [Hello World](../hello_world) (more information on this can be found in the [internationalisation docs](docs:ki18n)).
 
-The ampersand (&) in the action text denotes which letter will be used as an accelerator for said action. If the user opens a menu and presses the 'Alt' key, this will highlight the first letter of 'Clear' with an underscore, denoting the key they can press to perform said action. In this case, they would press 'Alt+C' to clear the textbox when the `File` menu is open.
+The ampersand (&) in the action text denotes which letter will be used as an accelerator for said action. If the user opens a menu and presses the 'Alt' key, this will highlight the first letter of 'Clear' with an underscore, denoting the key they can press to perform said action. In this case, the user would press 'Alt+C' to clear the textbox when the `File` menu is open.
 
 ![](accelerator-highlight.png)
 
-The ampersand is also useful for internationalisation: in non-latin languages such as Japanese (where 'copy' is コピー), using the first letter of that language to accelerate the action could be cumbersome. The ampersand lets translators know whether they should include the latin character in parentheses, allowing non-English users to use the same accelerator key even if the translated string is completely different.
+The ampersand is also useful for internationalisation: in non-Latin languages such as Japanese (where 'copy' is コピー), using the first letter of that language to accelerate the action could be cumbersome. The ampersand lets translators know whether they should include the Latin character in parentheses, allowing non-English users to use the same accelerator key even if the translated string is completely different.
 
 ### Icon
 
@@ -167,7 +169,7 @@ Since the description of the UI is defined with XML, the layout must follow stri
 
 {{< readfile file="/content/docs/use/kxmlgui/using_actions/texteditorui.rc" highlight="xml" >}}
 
-The `<Toolbar>` tag allows you to describe the toolbar, which is the bar across the top of the window normally with icons. Here it is given the unique name `mainToolBar` and its user visible name set to Main Toolbar using the `<text>` tag. The `clear` action is added to the toolbar using the `<Action>` tag, the name parameter in this tag being the string that was passed to the action collection with [KActionCollection::addAction()](docs:kxmlgui;KActionCollection::addAction) in `mainwindow.cpp`.
+The `<Toolbar>` tag allows you to describe the toolbar, which is the bar across the top of the window normally with icons. Here it is given the unique name `mainToolBar` and its user visible name set to "Main Toolbar" using the `<text>` tag. The `clear` action is added to the toolbar using the `<Action>` tag, the name parameter in this tag being the string that was passed to the action collection with [KActionCollection::addAction()](docs:kxmlgui;KActionCollection::addAction) in `mainwindow.cpp`.
 
 Besides having the action in the toolbar, it can also be added to the menubar. Here the action is being added to the `File` menu of the `MenuBar` the same way it was added to the toolbar. 
 
@@ -187,11 +189,11 @@ Finally, the `texteditorui.rc` needs to go somewhere where the system can find i
 
 {{< readfile file="/content/docs/use/kxmlgui/using_actions/CMakeLists.txt" highlight="cmake" >}}
 
-This file is almost identical to the one for [previous tutorial](../main_window), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the `KDE_INSTALL_TARGETS_DEFAULT_ARGS` then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory under `KDE_INSTALL_KXMLGUI5DIR`.
+This file is almost identical to the one for the [previous tutorial](../main_window), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the right place for binaries using `${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory, `${KDE_INSTALL_KXMLGUI5DIR}`.
 
 ## Running our application
 
-This is probably the trickiest part. The place where you install the files is important, especially `texteditorui.rc`. Normally, you'd want to install it where KDE software is installed by your distribution, which is usually under `/usr`. That, however, would require root/admin access and If you don't have that, you can install it to a folder in your home directory.
+This is probably the trickiest part. The place where you install the files is important, especially `texteditorui.rc`. Normally, you'd want to install it where KDE software is installed by your distribution, which is usually under `/usr`. That works for distributions, but for our purposes we can install it to a folder in our home directory.
 
 To tell CMake where to install the program, set the `-DCMAKE_INSTALL_PREFIX` switch. You probably just want to install it somewhere local for testing (it's probably a bit silly to go to the effort of installing these tutorials to your system), so the following might be appropriate:
 
@@ -204,7 +206,6 @@ cmake --install build/
 which will create a `/usr`-like directory structure in your user's home directory. Specifically, it will create the directories `$HOME/kde/usr/bin/` and `$HOME/kde/usr/share/`, then install the executable to `$HOME/kde/usr/bin/texteditor` and the `texteditorui.rc` file to `$HOME/kde/usr/share/kxmlgui/texteditor/texteditorui.rc`.
 
 However, to be able to run the program properly, you will need to let the system know where our XML file is. Since we installed it in a nonstandard location, we'll have to explicitly to do so every time. The following command would suffice:
-
 
 ```bash
 source build/prefix.sh # located in the build directory
