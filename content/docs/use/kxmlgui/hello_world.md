@@ -40,6 +40,11 @@ The first argument of the [KGuiItem](docs:kwidgetsaddons;KGuiItem) constructor i
 
 Now that we have the item needed for our "Yes" button, we can create our popup. We call the [KMessageBox::questionYesNo()](docs:kwidgetsaddons;KMessageBox::questionYesNo) function which, by default, creates a message box with "Yes" and "No" buttons. The first argument is the parent widget of the [KMessageBox](docs:kwidgetsaddons;KMessageBox), but since we are just using a ternary operator to ask whether our message box returns yes, we do not need to specify the parent, so we can use `0`, `nullptr` or `NULL` instead. The second argument is the text that will appear inside the message box and above the buttons. The third is the caption shown in the window's titlebar, and then we set our custom [KGuiItem](docs:kwidgetsaddons;KGuiItem) `yesButton` to (what would normally be) the "Yes" button in our [KMessageBox](docs:kwidgetsaddons;KMessageBox).
 
+{{< alert title="Note" color="info" >}}
+If you are using KDE Frameworks equal or higher than 5.100, the example in this tutorial will compile just fine, but you should receive a warning saying that [KMessageBox::questionYesNo()](docs:kwidgetsaddons;KMessageBox::questionYesNo) has been deprecated in favor of [KMessageBox::questionTwoActions()](docs:kwidgetsaddons;KMessageBox::questionTwoActions). The new API is easy to use as well.
+{{< /alert >}}
+
+
 ### About and Internationalization
 
 {{< readfile file="/content/docs/use/kxmlgui/hello_world/main2.cpp" highlight="cpp" >}}
