@@ -21,9 +21,17 @@ Do not reuse the same `Id`/namespace you used with a widget installed with `kpac
 mkdir -p ~/Code/plasmoid-helloworld2
 cd ~/Code/plasmoid-helloworld2
 mkdir -p ./build
+cd ./build
 cmake .. -DCMAKE_INSTALL_PREFIX=/usr
 make
 sudo make install
+plasmoidviewer -a com.github.zren.helloworld2
+```
+
+You can run all build and test commands in a single line like so:
+
+```bash
+(cd ./build && cmake .. -DCMAKE_INSTALL_PREFIX=/usr && make && sudo make install) && plasmoidviewer -a com.github.zren.helloworld2
 ```
 
 {{< alert color="warning" >}}
