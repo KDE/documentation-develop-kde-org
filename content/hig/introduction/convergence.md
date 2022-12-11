@@ -11,7 +11,7 @@ particularities of each type of device that it can run on (desktop,
 laptop, tablet, phone, etc).
 
 For information regarding the differences between a user interface and
-the user experience, see the [glossary](/hig/resources/glossary).
+the user experience, see the [glossary](/hig/glossary).
 
 Device Types
 ------------
