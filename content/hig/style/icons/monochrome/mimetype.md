@@ -42,5 +42,5 @@ to make it easier for users to connect the icon to its filetype.
 
 {{< compare >}}
 {{< figure src="/hig/mono-mimebrand-rss.png" caption="The usage of the RSS icon allows users to recognize the RSS feed MIME type." >}}
-{{< figure src="/hig/mono-mimebrand-deb.png" caption="The usage of the Debian logo allows users to recognize the deb package MINE type." >}}
+{{< figure src="/hig/mono-mimebrand-deb.png" caption="The usage of the Debian logo allows users to recognize the deb package MIME type." >}}
 {{< /compare >}}
