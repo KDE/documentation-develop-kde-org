@@ -24,14 +24,13 @@ it short.
 
 A good starting-point is the *elevator pitch*:
 
--   FOR *the target audience*
--   WHO *needs or wants a thing*
--   THE *project name*
+-   FOR *target customer*
+-   WHO *statement of the need*
+-   THE *product name*
 -   IS A *product category*
--   THAT *offers the key benefit*
--   UNLIKE *primary competitor,*
--   OUR PRODUCT *offers further differentiating benefits*
-
+-   THAT *key benefit*
+-   UNLIKE *primary competitor*
+-   OUR PRODUCT *further differentiation*
 
 Personas
 --------
