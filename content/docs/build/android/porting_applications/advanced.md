@@ -8,7 +8,7 @@ description: >
 
 Most functionality should work without large changes. Some topics, for example writing to and reading from files, requires a bit more care.
 
-## Using the org.kde.breez Style
+## Using the org.kde.breeze Style
 
 While Qt includes a QtQuickControls style that is similar to the native style of android, we do not use that for our apps since it doesn't fit well into android. Instead, we use the `org.kde.breeze` style. You can force the app to use it by adding
 
