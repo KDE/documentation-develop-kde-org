@@ -12,5 +12,5 @@ int main (int argc, char *argv[])
 
     // If user clicks Yes button, return EXIT_SUCCESS, else return EXIT_FAILURE
     return KMessageBox::questionYesNo(0, "Hello World", "Hello", yesButton)
-        == KMessageBox::Yes? EXIT_SUCCESS: EXIT_FAILURE;
+        == KMessageBox::Yes ? EXIT_SUCCESS : EXIT_FAILURE;
 }
