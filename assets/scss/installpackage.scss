@@ -1,0 +1,48 @@
+.installtable img {
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: 2px;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.td-content > table.installtable td {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-top: none;
+}
+.installtable td:first-child {
+  text-align: right;
+  vertical-align: middle;
+}
+.installtable td:first-child a {
+  vertical-align: middle;
+  display: inline-block;
+}
+.installtable td:first-child a+a {
+  margin-left: 0.5em;
+}
+.installtable td:nth-child(2) {
+  vertical-align: middle;
+}
+.installtable pre {
+  margin-bottom: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+@media (max-width: 800px) {
+  table.installtable,
+  table.installtable tbody,
+  table.installtable tr,
+  table.installtable td:first-child,
+  table.installtable td:nth-child(2) {
+    display: block;
+  }
+  table.installtable td:first-child {
+    text-align: left;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+  }
+  table.installtable td:nth-child(2) {
+    padding-bottom: 0.5em;
+  }
+}

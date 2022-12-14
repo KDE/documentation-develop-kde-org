@@ -1,3 +1,7 @@
 {{ with .Site.Params.algolia_docsearch }}
 <!-- stylesheet for algolia docsearch -->
 {{ end }}
+{{- if .HasShortcode "installpackage" }}
+{{- $installpackageCss := resources.Get "scss/installpackage.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $installpackageCss.Permalink }}" />
+{{- end }}

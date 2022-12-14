@@ -1,0 +1,67 @@
+<table class="installtable">
+  {{- if or (.Get "ubuntu") (.Get "ubuntuCommand") -}}
+  <tr>
+    <td>
+      <a href="https://packages.ubuntu.com/search?keywords={{ .Get "ubuntu" }}"><img src="/distro/kubuntu.svg" />Kubuntu</a><a href="https://build.neon.kde.org/search/?q={{ .Get "ubuntu" }}"><img src="/distro/kdeneon.svg" />KDE Neon</a>
+    </td>
+    <td>
+<pre>
+{{- with .Get "ubuntu" }}sudo apt install {{ . }}{{ end }}
+{{ with .Get "ubuntuCommand" }}{{ . }}{{ end -}}
+</pre>
+    </td>
+  </tr>
+  {{- end -}}
+  {{- if or (.Get "arch") (.Get "archCommand") -}}
+  <tr>
+    <td>
+      <a href="https://software.manjaro.org/package/{{ .Get "arch" }}"><img src="/distro/manjaro.svg" />Manjaro</a><a href="https://archlinux.org/packages/?q={{ .Get "arch" }}"><img src="/distro/archlinux.svg" />Arch</a>
+    </td>
+    <td>
+<pre>
+{{- with .Get "arch" }}sudo pacman -S {{ . }}{{ end }}
+{{ with .Get "archCommand" }}{{ . }}{{ end -}}
+</pre>
+    </td>
+  </tr>
+  {{- end -}}
+  {{- if or (.Get "opensuse") (.Get "opensuseCommand") -}}
+  <tr>
+    <td>
+      <a href="https://software.opensuse.org/package/{{ .Get "opensuse" }}"><img src="/distro/opensuse.svg" />OpenSUSE</a>
+    </td>
+    <td>
+<pre>
+{{- with .Get "opensuse" }}sudo zypper install {{ . }}{{ end }}
+{{ with .Get "opensuseCommand" }}{{ . }}{{ end -}}
+</pre>
+    </td>
+  </tr>
+  {{- end -}}
+  {{- if or (.Get "fedora") (.Get "fedoraCommand") -}}
+  <tr>
+    <td>
+      <a href="https://packages.fedoraproject.org/pkgs/{{ .Get "fedora" }}/{{ .Get "fedora" }}/"><img src="/distro/fedora.svg" />Fedora</a>
+    </td>
+    <td>
+<pre>
+{{- with .Get "fedora" }}sudo dnf install {{ . }}{{ end }}
+{{ with .Get "fedoraCommand" }}{{ . }}{{ end -}}
+</pre>
+    </td>
+  </tr>
+  {{- end -}}
+  {{- if or (.Get "gentoo") (.Get "gentooCommand") -}}
+  <tr>
+    <td>
+      <a href="https://packages.gentoo.org/packages/{{ .Get "gentoo" }}"><img src="/distro/gentoo.svg" />Gentoo</a>
+    </td>
+    <td>
+<pre>
+{{- with .Get "gentoo" }}sudo emerge --ask {{ . }}{{ end }}
+{{ with .Get "gentooCommand" }}{{ . }}{{ end -}}
+</pre>
+    </td>
+  </tr>
+  {{- end -}}
+</table>
