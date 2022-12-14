@@ -26,7 +26,7 @@ int main (int argc, char *argv[])
         // Can contain any information desired. (otherText)
         i18n("Some text..."),
         // The program homepage string. (homePageAddress = QString())
-        QStringLiteral("http://example.com/"),
+        QStringLiteral("https://example.com/"),
         // The bug report email address
         // (bugsEmailAddress = QLatin1String("submit@bugs.kde.org")
         QStringLiteral("submit@bugs.kde.org"));
@@ -35,7 +35,7 @@ int main (int argc, char *argv[])
         i18n("Name"),
         i18n("Author Role"),
         QStringLiteral("your@email.com"),
-        QStringLiteral("http://your.website.com"),
+        QStringLiteral("https://your.website.com"),
         QStringLiteral("OCS Username"));
 
     KAboutData::setApplicationData(aboutData);

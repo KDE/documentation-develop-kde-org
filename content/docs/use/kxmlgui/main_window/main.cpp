@@ -22,7 +22,7 @@ int main (int argc, char *argv[])
 
     aboutData.addAuthor(i18n("Name"), i18n("Task"),
         QStringLiteral("your@email.com"),
-        QStringLiteral("http://your.website.com"),
+        QStringLiteral("https://your.website.com"),
         QStringLiteral("OSC Username"));
 
     KAboutData::setApplicationData(aboutData);
