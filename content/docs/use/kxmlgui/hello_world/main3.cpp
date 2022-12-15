@@ -45,11 +45,15 @@ int main (int argc, char *argv[])
     parser.process(app);
     aboutData.processCommandLine(&parser);
     
-    KGuiItem yesButton(
+    KGuiItem primaryAction(
         i18n("Hello"), QString(),
         i18n("This is a tooltip"),
         i18n("This is a WhatsThis help text."));
 
-    return KMessageBox::questionYesNo(0, i18n("Hello World"), i18n("Hello"), yesButton) 
-        == KMessageBox::Yes? EXIT_SUCCESS: EXIT_FAILURE;
+    return KMessageBox::questionTwoActions(
+        nullptr,
+        i18n("Hello World!\n"
+             "This messagebox was made with KDE Frameworks."),
+        i18n("Hello Title"), primaryAction, KStandardGuiItem::cancel())
+        == KMessageBox::PrimaryAction ? EXIT_SUCCESS : EXIT_FAILURE;
 }

@@ -5,12 +5,16 @@ int main (int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    KGuiItem yesButton(// Content text, Icon, Tooltip Text, WhatsThis text
+    KGuiItem primaryAction(
+        // Content text, Icon, Tooltip Text, WhatsThis text
         "Hello", QString(),
         "This is a tooltip",
         "This is a WhatsThis help text.");
 
-    // If user clicks Yes button, return EXIT_SUCCESS, else return EXIT_FAILURE
-    return KMessageBox::questionYesNo(0, "Hello World", "Hello", yesButton)
-        == KMessageBox::Yes ? EXIT_SUCCESS : EXIT_FAILURE;
+    // If user clicks the Hello button, return EXIT_SUCCESS,
+    // else return EXIT_FAILURE
+    return KMessageBox::questionTwoActions(
+        nullptr, "Hello World", "Hello Title",
+        primaryAction, KStandardGuiItem::cancel())
+        == KMessageBox::PrimaryAction ? EXIT_SUCCESS : EXIT_FAILURE;
 }
