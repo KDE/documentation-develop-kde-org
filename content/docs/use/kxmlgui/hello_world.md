@@ -33,6 +33,7 @@ All the code we need will be in one file, `main.cpp`. We'll start simple and inc
 {{< readfile file="/content/docs/use/kxmlgui/hello_world/main1.cpp" highlight="cpp" >}}
 
 We are going to create a popup box which displays some text and has a custom-made "Yes" button which simply displays "Hello". The popup box will use the [KMessageBox](docs:kwidgetsaddons;KMessageBox) class, and the Yes button will use [KGuiItem](docs:kwidgetsaddons;KGuiItem).
+![](result.webp)
 
 First we need to create a [QApplication](docs:qtwidgets;QApplication) object. It needs to be created exactly once and before any other KDE Frameworks or Qt object, as it is the starting point for creating your application and thus required for other components, like [Ki8n](docs:ki18n) for translations.
 First we need to create a [QApplication](docs:qtwidgets;QApplication) object. It needs to be created exactly once and before any other KDE Frameworks or Qt object, as it is the starting point for creating your application and thus required for other components, like [Ki18n](docs:ki18n) for translations.
