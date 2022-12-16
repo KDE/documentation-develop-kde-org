@@ -49,7 +49,7 @@ Okay, now to implement the code that will do the loading and saving. This will a
 MainWindow::MainWindow(QWidget *parent) : KXmlGuiWindow(parent), fileName(QString())
 ```
 
-The first thing we do is to initialize `fileName(QString())` to the MainWindow's [constructor initializer list](https://en.cppreference.com/w/cpp/language/constructor) to make sure that `fileName` is empty right from the beginning.
+The first thing we do is to initialize `fileName(QString())` in the MainWindow's [constructor initializer list](https://en.cppreference.com/w/cpp/language/constructor) to make sure that `fileName` is empty right from the beginning.
 
 ### Adding the actions
 
@@ -156,7 +156,7 @@ const QUrl fileNameFromDialog = QFileDialog::getOpenFileUrl(this, i18n("Open Fil
 
 Here we use [QUrl](docs:qtcore;QUrl) to handle files from remote locations.
 
-Then we use the [KIO](docs:kio) library to retrieve our file. This allows us to open the file normally even if it's stored in a remote location like an SFTP server. We make the following call to the [KIO::storedGet](docs:kio;KIO::storedGet) function with an argument for the file you wish to open or download:
+Then we use the [KIO](docs:kio) library to retrieve our file. This allows us to open the file even if it's stored in a remote location like an SFTP server. We make the following call to the [KIO::storedGet](docs:kio;KIO::storedGet) function with an argument for the file you wish to open or download:
 
 ```c++
 KIO::Job *job = KIO::storedGet(fileNameFromDialog);
@@ -169,7 +169,7 @@ connect(job, &KJob::result, this, &MainWindow::downloadFinished);
 job->exec();
 ```
 
-The rest of the work happens in the `downloadFinished()` slot. First, the job is checked for errors. If it fails, we display a message box giving the error. We also make sure to clear the `fileName`, since the file wasn't opened successfully:
+The rest of the work happens in the `downloadFinished()` slot. First, the job is checked for errors. If it failed, we display a message box giving the error. We also make sure to clear the `fileName`, since the file wasn't opened successfully:
 
 ```c++
 KMessageBox::error(this, job->errorString());
@@ -199,9 +199,6 @@ With this file, the tutorial can be built and run in the same way as the [previo
 cmake -B build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr/
 cmake --build build/
 cmake --install build/
-source build/prefix.sh # located in the build directory
-cd ~/kde/usr/bin
-./texteditor
 source build/prefix.sh # Located in the build directory
 texteditor
 ```
