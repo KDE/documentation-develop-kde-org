@@ -47,7 +47,7 @@ In order to actually run this window, we need to add a few lines in main.cpp:
 
 {{< readfile file="/content/docs/use/kxmlgui/main_window/main.cpp" highlight="cpp" >}}
 
-Again, we include our new header file `mainwindow.h`. This lets us create our new MainWindow object which we then display near the end of the main function (by default, new window objects are hidden).
+Again, we include our new header file `mainwindow.h`. This lets us create our new `MainWindow` object which we then display near the end of the main function (by default, new window objects are hidden).
 
 ## CMake
 
@@ -59,7 +59,7 @@ The best way to build the program is to use CMake. We add `mainwindow.cpp` to th
 
 ## Running our application
 
-For mature projects, the best way to compile, link and run KDE software is to [set up a correct build environment ](https://community.kde.org/Get_Involved/development#One-time_setup:_your_development_environment). But for a simple tutorial like this, it's enough to just create a build directory and build from there. Like before:
+For mature projects, the best way to compile, link and run KDE software is to [set up a correct build environment](https://community.kde.org/Get_Involved/development#One-time_setup:_your_development_environment). But for a simple tutorial like this, it's enough to just create a build directory and build from there. Like before:
 
 ```bash
 cmake -B build/
