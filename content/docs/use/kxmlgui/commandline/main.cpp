@@ -1,4 +1,3 @@
-#include <cstdlib>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDir>
