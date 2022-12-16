@@ -49,7 +49,11 @@ if (parser.positionalArguments().count() > 0) {
 }
 ```
 
-<!-- TODO: Test this -->
+### CMakeLists.txt
+
+We don't need to change anything in here.
+
+{{< readfile file="/content/docs/use/kxmlgui/commandline/CMakeLists.txt" highlight="cmake" >}}
 
 ## Compile, Install and Run
 
@@ -62,14 +66,12 @@ cmake -B build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr
 cmake --build build/
 cmake --install build/
 source build/prefix.sh
-cd ~/kde/usr/bin
 ```
 
 However, we will test if our application handles files from the command line correctly.
 
 ```bash
 echo "It works!" > testfile.txt
-./texteditor somefile.txt
 texteditor somefile.txt
 ```
 
