@@ -70,6 +70,7 @@ However, we will test if our application handles files from the command line cor
 ```bash
 echo "It works!" > testfile.txt
 ./texteditor somefile.txt
+texteditor somefile.txt
 ```
 
 You should then see your application run and load `testfile.txt` directly from its UI, showing "It works!" in your `textArea`.

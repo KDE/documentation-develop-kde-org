@@ -200,4 +200,6 @@ cmake --install build/
 source build/prefix.sh # located in the build directory
 cd ~/kde/usr/bin
 ./texteditor
+source build/prefix.sh # Located in the build directory
+texteditor
 ```
