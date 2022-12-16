@@ -21,11 +21,12 @@ KDE Frameworks provides a number of classes for working with files that make lif
 
 We don't need to change anything in here.
 
+{{< readfile file="/content/docs/use/kxmlgui/saving_and_loading/main.cpp" highlight="cpp" >}}
+
 ### mainwindow.h
 
 {{< readfile file="/content/docs/use/kxmlgui/saving_and_loading/mainwindow.h" highlight="cpp" >}}
 
-To add the ability to load and save files, we must add the functions which will do the work. Since the functions will be called through [Qt's signal/slot](http://doc.qt.io/qt-6/signalsandslots.html) mechanism we must specify that these functions are slots using either `Q_SLOTS` or `slots`; the former for libraries, the latter for end user applications. Since we are using slots in this header file, we must also add the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, as only [Q_OBJECTs](docs:qtcore;QObject::Q_OBJECT) can have signals and slots.
 To add the ability to load and save files, we must add the functions which will do the work. Since the functions will be called through [Qt's signal/slot](http://doc.qt.io/qt-6/signalsandslots.html) mechanism we must specify that these functions are slots using `Q_SLOTS`. Since we are using slots in this header file, we must also add the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, as only [Q_OBJECTs](docs:qtcore;QObject::Q_OBJECT) can have signals and slots.
 
 We also want to keep track of the filename of the currently opened file, so we declare a [QString](docs:qtcore;QString) `fileName`.
