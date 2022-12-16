@@ -14,28 +14,20 @@ int main (int argc, char *argv[])
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("texteditor");
     KAboutData aboutData(
-                         // The program name used internally. (componentName)
-                         QStringLiteral("texteditor"),
-                         // A displayable program name string. (displayName)
-                         i18n("TextEditor"),
-                         // The program version string. (version)
-                         QStringLiteral("1.0"),
-                         // Short description of what the app does. (shortDescription)
-                         i18n("A simple text area using QAction etc."),
-                         // The license this code is released under
-                         KAboutLicense::GPL,
-                         // Copyright Statement (copyrightStatement = QString())
-                         i18n("(c) 2015"),
-                         // Optional text shown in the About box.
-                         // Can contain any information desired. (otherText)
-                         i18n("Some text..."),
-                         // The program homepage string. (homePageAddress = QString())
-                         QStringLiteral("https://mytexteditor.kde.org/"),
-                         // The bug report email address
-                         // (bugsEmailAddress = QLatin1String("submit@bugs.kde.org")
-                         QStringLiteral("submit@bugs.kde.org"));
+        QStringLiteral("texteditor"),
+        i18n("TextEditor"),
+        QStringLiteral("1.0"),
+        i18n("A simple text area using QAction etc."),
+        KAboutLicense::GPL,
+        i18n("(c) 2015"),
+        i18n("Some text..."),
+        QStringLiteral("https://mytexteditor.kde.org/"),
+        QStringLiteral("submit@bugs.kde.org"));
+
     aboutData.addAuthor(i18n("Name"), i18n("Task"), QStringLiteral("your@email.com"),
-                        QStringLiteral("https://your.website.com"), QStringLiteral("OSC Username"));
+                        QStringLiteral("https://your.website.com"),
+                        QStringLiteral("OSC Username"));
+
     KAboutData::setApplicationData(aboutData);
  
     QCommandLineParser parser;
@@ -49,7 +41,9 @@ int main (int argc, char *argv[])
     window->show();
 
     if (parser.positionalArguments().count() > 0) {
-        window->openFileFromUrl(QUrl::fromUserInput(parser.positionalArguments().at(0), QDir::currentPath()));
+        window->openFileFromUrl(QUrl::fromUserInput(
+            parser.positionalArguments().at(0),
+            QDir::currentPath()));
     }
     
     return app.exec();
