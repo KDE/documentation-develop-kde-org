@@ -17,7 +17,7 @@ private:
     void setupActions();
     void saveFileToDisk(const QString &outputFileName);
 
-private slots:
+private Q_SLOTS:
     void newFile();
     void openFile();
     void saveFile();
