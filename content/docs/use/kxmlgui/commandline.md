@@ -11,7 +11,7 @@ aliases:
 
 We now have a working text editor that can open and save files. We might, however, want to extend its utility by enabling users to more quickly and efficiently use it to edit files. In this tutorial we will make the editor act more like a desktop application by enabling it to open files from command line arguments or even using Open with from within Dolphin.
 
-![](result.png)
+![](commandline.webp)
 
 ## Code and Explanation
 

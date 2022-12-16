@@ -30,7 +30,7 @@ All the code we need will be in one file, `main.cpp`. We'll start simple and inc
 
 {{< readfile file="/content/docs/use/kxmlgui/hello_world/main1.cpp" highlight="cpp" >}}
 
-![](result.webp)
+![](hello_world.webp)
 
 Our popup box is a [KMessageBox](docs:kwidgetsaddons;KMessageBox), which has primarily two buttons:
 a [PrimaryAction](docs:kwidgetsaddons;KMessageBox::PrimaryAction), which usually serves as a confirmation button, and a [SecondaryAction](docs:kwidgetsaddons;KMessageBox::SecondaryAction), which usually portrays a different action, like a cancel or discard button. The popup box uses the [KMessageBox](docs:kwidgetsaddons;KMessageBox) class, the primary action uses a custom [KGuiItem](docs:kwidgetsaddons;KGuiItem) with the text "Hello", and the secondary action uses [KStandardGuiItem::cancel()](docs:kwidgetsaddons;KStandardGuiItem::cancel).
@@ -50,7 +50,7 @@ If you are using KDE Frameworks older than 5.100, the example in this tutorial w
 
 {{< readfile file="/content/docs/use/kxmlgui/hello_world/main2.cpp" highlight="cpp" >}}
 
-![](result2.webp)
+![](hello_world_complete.webp)
 
 For your application to be localized, we must first prepare our code so that it can be adapted to various languages and regions without engineering changes: this process is called [internationalization](https://doc.qt.io/qt-6/internationalization.html). KDE uses [Ki18n](docs:ki18n) for that, which provides [KLocalizedString](docs:ki18n;KLocalizedString).
 

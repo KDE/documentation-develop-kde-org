@@ -14,7 +14,7 @@ This tutorial introduces the concept of actions. Actions are a unified way of su
 
 For example, if we wanted to let the user of our [main window](../main_window) clear the text box by clicking a button in the toolbar, from an option in the File menu or through a keyboard shortcut, it could all be done with one [QAction](docs:qtwidgets;QAction).
 
-![](result.png)
+![](using_actions.webp)
 
 ## QActions
 
@@ -78,7 +78,7 @@ Note that the text is passed through the `i18n()` function; this is necessary fo
 
 The ampersand (&) in the action text denotes which letter will be used as an accelerator for said action. If the user opens a menu and presses the 'Alt' key, this will highlight the first letter of 'Clear' with an underscore, denoting the key they can press to perform said action. In this case, the user would press 'Alt+C' to clear the textbox when the `File` menu is open.
 
-![](accelerator-highlight.png)
+![](using_actions_highlighting.webp)
 
 The ampersand is also useful for internationalisation: in non-Latin languages such as Japanese (where 'copy' is コピー), using the first letter of that language to accelerate the action could be cumbersome. The ampersand lets translators know whether they should include the Latin character in parentheses, allowing non-English users to use the same accelerator key even if the translated string is completely different.
 

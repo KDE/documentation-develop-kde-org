@@ -13,7 +13,7 @@ This tutorial carries on from our [Hello World project](../hello_world) and will
 
 In the previous tutorial, the program caused a dialog box to pop up. Now we are going to take steps towards creating a functioning application with a more advanced window structure.
 
-![](result.png)
+![](main_window.webp)
 
 ## KXmlGuiWindow
 

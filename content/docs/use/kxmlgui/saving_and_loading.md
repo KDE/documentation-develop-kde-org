@@ -13,7 +13,7 @@ Now that we have a basic text editor interface, it's time to make it do somethin
 
 KDE Frameworks provides a number of classes for working with files that make life a lot easier for developers. [KIO](docs:kio) allows you to easily access files through network-transparent protocols. Qt also provides standard file dialogs for opening and saving files.
 
-![](result.png)
+![](saving_and_loading.webp)
 
 ## The Code
 
