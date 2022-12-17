@@ -12,7 +12,7 @@ Introduction
 
 This tutorial introduces the concept of actions. Actions are a unified way of supplying the user with ways to interact with your program.
 
-For example, if we wanted to let the user of our [main window](../main_window) clear the text box by clicking a button in the toolbar, from an option in the File menu or through a keyboard shortcut, it could all be done with one [QAction](docs:qtwidgets;QAction).
+For example, if we wanted to let the user of our [main window tutorial]({{< ref "main_window.md" >}}) clear the text box by clicking a button in the toolbar, from an option in the File menu or through a keyboard shortcut, it could all be done with one [QAction](docs:qtwidgets;QAction).
 
 ![](using_actions.webp)
 
@@ -52,7 +52,7 @@ Only a function `void setupActions()` has been added which will do all the work 
 
 ## Explanation
 
-This builds upon the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) code from our previous [main window](../main_window). Most of the changes are to `mainwindow.cpp`, an important structural change being that the constructor for MainWindow now calls `setupActions()` instead of `setupGUI()`. `setupActions()` is where the new [QAction](docs:qtwidgets;QAction) code goes before finally calling `setupGUI()` itself.
+This builds upon the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) code from our previous [main window]({{< ref "main_window.md" >}}). Most of the changes are to `mainwindow.cpp`, an important structural change being that the constructor for MainWindow now calls `setupActions()` instead of `setupGUI()`. `setupActions()` is where the new [QAction](docs:qtwidgets;QAction) code goes before finally calling `setupGUI()` itself.
 
 ### Creating the QAction object
 
@@ -74,7 +74,7 @@ Now that we have our [QAction](docs:qtwidgets;QAction) object, we can start sett
 clearAction->setText(i18n("&Clear"));
 ```
 
-Note that the text is passed through the `i18n()` function; this is necessary for the UI to be translatable, as mentioned in [Hello World](../hello_world) (more information on this can be found in the [internationalisation docs](docs:ki18n)).
+Note that the text is passed through the `i18n()` function; this is necessary for the UI to be translatable, as mentioned in [Hello World]({{< relref "hello_world/#about-and-internationalization" >}}) (more information on this can be found in the [internationalisation docs](docs:ki18n)).
 
 The ampersand (&) in the action text denotes which letter will be used as an accelerator for said action. If the user opens a menu and presses the 'Alt' key, this will highlight the first letter of 'Clear' with an underscore, denoting the key they can press to perform said action. In this case, the user would press 'Alt+C' to clear the textbox when the `File` menu is open.
 
@@ -189,7 +189,7 @@ Finally, the `texteditorui.rc` needs to go somewhere where the system can find i
 
 {{< readfile file="/content/docs/use/kxmlgui/using_actions/CMakeLists.txt" highlight="cmake" >}}
 
-This file is almost identical to the one for the [previous tutorial](../main_window), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the right place for binaries using `${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory, `${KDE_INSTALL_KXMLGUI5DIR}`.
+This file is almost identical to the one for the [previous tutorial]({{< relref "main_window/#cmakeliststxt" >}}), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the right place for binaries using `${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory, `${KDE_INSTALL_KXMLGUI5DIR}`.
 
 ## Running our application
 

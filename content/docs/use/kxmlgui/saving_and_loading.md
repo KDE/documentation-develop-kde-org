@@ -39,7 +39,7 @@ We'll get into the details of mainwindow.cpp in a while.
 
 ### texteditorui.rc
 
-This is identical to the `texteditorui.rc` from the [previous tutorial](../using_actions). We do not need to add any information about any of the [KStandardAction](docs:kconfigwidgets;KStandardAction) methods since the placement of those actions is handled automatically by the [KXmlGui](docs:kxmlgui) system.
+This is identical to the `texteditorui.rc` from the [previous tutorial]({{< relref "using_actions/#texteditoruirc" >}}). We do not need to add any information about any of the [KStandardAction](docs:kconfigwidgets;KStandardAction) methods since the placement of those actions is handled automatically by the [KXmlGui](docs:kxmlgui) system.
 
 ## Explanation
 
@@ -53,7 +53,7 @@ The first thing we do is to initialize `fileName(QString())` in the MainWindow's
 
 ### Adding the actions
 
-We will then provide the outward interface for the user so they can tell the application to load and save. Like with the quit action in the [previous tutorial](../using_actions), we will use [KStandardAction](docs:kconfigwidgets;KStandardAction). We add the actions in the same way we did for the quit action and, for each one, we connect it to the appropriate slot that we declared in the header file.
+We will then provide the outward interface for the user so they can tell the application to load and save. Like with the quit action in the [previous tutorial]({{< relref "using_actions/#kstandardaction" >}}), we will use [KStandardAction](docs:kconfigwidgets;KStandardAction). We add the actions in the same way we did for the quit action and, for each one, we connect it to the appropriate slot that we declared in the header file.
 
 ### Creating a new document
 
@@ -67,7 +67,7 @@ void MainWindow::newFile()
 }
 ```
 
-`fileName.clear()` sets the `fileName` string to be empty to reflect the fact that this document is not stored anywhere yet. `textArea->clear()` then clears the central text area using the same function that we connected the 'clear' action to in the [previous tutorial](../using_actions).
+`fileName.clear()` sets the `fileName` string to be empty to reflect the fact that this document is not stored anywhere yet. `textArea->clear()` then clears the central text area using the same function that we connected the 'clear' action to in the [previous tutorial]({{< relref "using_actions#creating-the-qaction-object" >}}).
 
 {{< alert title="Warning" color="warning" >}}
 This example simply clears the text area without checking if the file has been saved first. It's only meant as a demonstration of file I/O and is *not* an example of best programming practices.
