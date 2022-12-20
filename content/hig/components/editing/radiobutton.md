@@ -35,7 +35,7 @@ Use a combobox instead.
 
 -   If there are only two options where one is the negation of the other
     (e.g. "apply" vs. "don't apply"), consider replacing the radio
-    buttons by one `checkbox <checkbox>`.
+    buttons by one [checkbox](../checkbox).
 
 {{< compare >}}
 {{< dont src="/hig/Radiobutton_Negation_Bad.qml.png" >}}
@@ -59,15 +59,14 @@ Use radio buttons instead.
 {{< /compare >}}
 
 -   Don't use a radio button to initiate an action. Consider using a
-    `push button <../navigation/pushbutton>`{.interpreted-text
-    role="doc"} instead.
+    [push button](/hig/components/navigation/pushbutton) instead.
 
 {{< compare >}}
 {{< dont src="/hig/Radiobutton_Command_Bad.qml.png" >}}
 Don't use the selection to perform commands.
 {{< /dont >}}
 {{< do src="/hig/No_Command_2_Good.qml.png" >}}
-Consider using a [push button](../../navigation/pushbutton).
+Consider using a push button.
 {{< /do >}}
 {{< /compare >}}
 
