@@ -42,12 +42,9 @@ Action bar shrinking only in the horizontal direction.
 
 Keep in mind that not all controls or parts of a layout can and should
 be responsive. Often it is more important to retain the size for
-usability, familiarity and alignment and aim for `optimized convergence 
-<convergence>` by selecting different
-`navigation <../patterns/navigation/index>`{.interpreted-text
-role="doc"}, `command </patterns/command/index>`{.interpreted-text
-role="doc"} and `content </patterns/content/index>`{.interpreted-text
-role="doc"} patterns for different formfactors.
+usability, familiarity and alignment and aim for [optimized convergence](/hig/introduction/convergence) by selecting different
+[navigation](/hig/patterns-navigation),
+[command](/hig/patterns-command) and [content](/hig/patterns-content) patterns for different formfactors.
 
 It is recommended to test your user interface against the most common
 screen sizes of the targeted form factor.

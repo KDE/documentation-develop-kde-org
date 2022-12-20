@@ -92,19 +92,15 @@ set the focus to focused controls and don't just highlight it.
 -   Place Help, Defaults, Reset, OK, Apply, and Cancel buttons on the
     bottom of the dialog window.
 
--   If there is a `Get New Stuff! <getnew>`{.interpreted-text
-    role="doc"} button, place it above the bottom row of buttons.
+-   If there is a [Get New Stuff!](/hig/platform/getnew) button, place it above the bottom row of buttons.
 
-    ![](/hig/SettingsButtons.png)
-
-    The *Help*, *Defaults*, *Reset* buttons on the left side.
+    ![The Help, Defaults, Reset buttons on the left side.](/hig/SettingsButtons.png)
 
 -   Avoid vertical and especially horizontal scrollbars. The dialog
     should be large enough to fit its contents without scrolling being
     necessary. As more controls are added, err on the side of adding
-    additional pages or
-    `tabbed views </components/navigation/tab>`{.interpreted-text
-    role="doc"}. rather than making the dialog window larger. This does
+    additional pages or [tabbed views](/hig/components/navigation/tab)
+    rather than making the dialog window larger. This does
     not apply to scrollbars within inline tables, lists and grid views.
 
 -   On mobile, use a full-screen view for your settings page.
@@ -117,17 +113,15 @@ throughout KDE software:**
 ![Notifications settings in a form
 layout](/hig/Settings-Notification-dark.png)
 
-Use a `form </patterns/content/form>` if
+Use a [form](/hig/patterns-content/form) if
 your settings have many controls and input fields.
 
 -   Lay out your settings page according to the
-    `alignment </layout/alignment>`
-    guidelines.
+    [alignment](/hig/layout/alignment) guidelines.
 -   Organize your settings into logical groups, with more important
     groups appearing higher up on the page. Separate the groups with
     whitespace or put them into different tabs of a
-    `tabbed view </components/navigation/tab>`{.interpreted-text
-    role="doc"} (if appropriate).
+    [tabbed view](/hig/components/navigation/tab) (if appropriate).
 -   Separate common and advanced settings into different groups. If
     necessary, hide the advanced settings behind a collapsible group box
     or on another page or tab. Make the common settings comprehensible
@@ -137,15 +131,15 @@ your settings have many controls and input fields.
 
 ![Choose a new wallpaper](/hig/Wallpaper-dark.png)
 
-Use a `grid </components/editing/grid>`
+Use a [grid](/hig/components/editing/grid)
 for a selection of a single item when all items are visually
 distinctive. To implement a grid in a KCM, use the
-`KCMGrid <kcmgrid>`.
+[KCMGrid](../kcmgrid).
 
 #### Lists
 
 ![Language settings](/hig/LanguagePicker.png)
 
-Use a `picker </patterns/content/picker>`
+Use a [picker](/hig/patterns-content/picker)
 for selection and configuration of list based settings where the items
 are not visually distinctive.
