@@ -29,7 +29,7 @@ Guidelines
     be the primary objective.
 -   Modal message dialogs must offer choices regarding how to proceed;
     don't use them dialogs simply to inform or warn the user. Instead,
-    use an `inline message  <inline>`.
+    use an [inline message ](../inline).
 
 ### Behavior
 

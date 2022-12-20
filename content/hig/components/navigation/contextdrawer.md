@@ -45,11 +45,10 @@ or in a toolbar. For actions which are always available, use the
     -   Try to keep the content of the context drawer in one page. If
         there two distinct "modes" of contextual actions (for example
         navigating through a PDF either by table of contents or
-        thumbnails), consider using two `Tabs <tab>`{.interpreted-text
-        role="doc"} to separate them, but never use more than two tabs.
+        thumbnails), consider using two [Tabs](../tab) to separate them,
+        but never use more than two tabs.
 
-![Examples of a context drawer on
-desktop](/hig/Contextdrawer2.png)
+![Examples of a context drawer on desktop](/hig/Contextdrawer2.png)
 
 Code
 ----
