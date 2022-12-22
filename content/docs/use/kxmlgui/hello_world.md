@@ -41,11 +41,6 @@ The first argument of the [KGuiItem](docs:kwidgetsaddons;KGuiItem) constructor i
 
 Now that we have the item needed for our primary action button, we can create our popup with [KMessageBox::questionTwoActions()](docs:kwidgetsaddons;KMessageBox::questionTwoActions). The first argument is the parent widget of the [KMessageBox](docs:kwidgetsaddons;KMessageBox), which is not needed for us here, so we pass `nullptr`. The second argument is the text that will appear inside the message box and above the buttons, in our case, "Hello World". The third is the caption shown in the window's titlebar, "Hello Title". Then, we set our custom [KGuiItem](docs:kwidgetsaddons;KGuiItem), `primaryAction`. Lastly, we add a convenience object with [KStandardGuiItem::cancel()](docs:kwidgetsaddons;KStandardGuiItem::cancel), which returns a ready-made [KGuiItem](docs:kwidgetsaddons;KGuiItem) with localized text and cancel functionality, satisfying the function signature.
 
-{{< alert title="Note" color="info" >}}
-If you are using KDE Frameworks older than 5.100, the example in this tutorial will not compile. In previous versions, [KMessageBox::questionYesNo()](docs:kwidgetsaddons;KMessageBox::questionYesNo) was used instead of [KMessageBox::questionTwoActions()](docs:kwidgetsaddons;KMessageBox::questionTwoActions).
-{{< /alert >}}
-
-
 ### About and Internationalization
 
 {{< readfile file="/content/docs/use/kxmlgui/hello_world/main2.cpp" highlight="cpp" >}}
