@@ -8,4 +8,4 @@ Code
 
 Use of KCMGrid in Plasma\'s System Settings:
 
-{{< readfile file="/content/hig/examples/kirigami/KCMGrid.qml" lang="qml" >}}
+{{< readfile file="/content/hig/examples/kirigami/KCMGrid.qml" highlight="qml" >}}
