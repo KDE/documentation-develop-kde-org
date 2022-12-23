@@ -186,7 +186,7 @@ example can be easily obtained.
 
 When you design, try to use the recommended values for margin and
 paddings, to ensure a uniform appearance. See
-[Metrics and Placement](../metrics) for more details.
+[Metrics and Placement]({{< relref "metrics" >}}) for more details.
 
 ![Use of base units](/hig/Margin.qml.png)
 

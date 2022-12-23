@@ -40,7 +40,7 @@ weight: 12
 
 -   **Get New Stuff**, **GNS**
 
-    > [Get New Stuff](/hig/platform/getnew)
+    > [Get New Stuff]({{< relref "getnew" >}})
 
 -   **Assistive technology**, **AT**
 

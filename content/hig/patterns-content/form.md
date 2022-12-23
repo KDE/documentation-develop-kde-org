@@ -12,7 +12,7 @@ When to Use
 -   Use a Form layout when there are many related controls and input
     fields.
 -   Form layouts are often used for
-    [settings](/hig/platform/settings).
+    [settings]({{< relref "settings" >}}).
 
 How to Use
 ----------
@@ -48,8 +48,8 @@ important things to take into account for
     QFormLayout handles all of this for you automatically.
 -   Align the form in the top center of the window or view in which it
     is located, but below the title.
--   See the pages on [radio buttons](/hig/components/editing/radiobutton)
-    and [checkboxes](/hig/components/editing/checkbox) for detailed
+-   See the pages on [radio buttons]({{< relref "radiobutton" >}})
+    and [checkboxes]({{< relref "checkbox" >}}) for detailed
     information regarding how to align these tricky controls in a Form
     layout.
 
@@ -103,7 +103,7 @@ Don't misalign controls.
 
 ### Spacing and Grouping
 
-Use [spacing](/layout/metrics) to group
+Use [spacing]({{< relref "metrics" >}}) to group
 and separate controls in your forms.
 
 ![Spacing used to create three groups of controls](/hig/Form3.png)

@@ -25,15 +25,15 @@ Fonts and Colors
 
 Many users have some deficiencies when it comes to seeing. This does not
 always mean that they are blind. For some people it\'s enough when
-[fonts](/hig/style/typography>) are clear and the [color scheme](/hig/style/color/)
+[fonts]({{< relref "typography" >}}) are clear and the [color scheme]({{< relref "color" >}})
 can be adjusted. This is something every application should do in any
 case, so here is the list:
 
 -   Follow the user interface guidelines! This will get you quite far.
 -   Check that color scheme changes apply Try switching to a
-    [dark color scheme](/hig/style/color/dark) and see that your
+    [dark color scheme]({{< relref "dark" >}}) and see that your
     application is still usable
--   Test changing the [font size](/hig/style/typography)
+-   Test changing the [font size]({{< relref "typography" >}})
     -   Switch to different fonts and see that they apply
     -   Increase the font size and make sure that the application layout
         still works

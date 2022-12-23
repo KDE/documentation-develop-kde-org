@@ -18,7 +18,7 @@ The global drawer is used for global, context-independent controls.
     and closed by swiping in the other direction or tapping outside of
     the panel
 -   For the guidelines regarding its content, see
-    [global drawer](/hig/components/navigation/globaldrawer).
+    [global drawer]({{< relref "globaldrawer" >}}).
 
 Context Drawer
 --------------
@@ -32,7 +32,7 @@ context-specific controls that affect only the currently selected object
 -   The drawer is opened by an edge-swipe and closed by swiping in the
     other direction or tapping outside of the panel
 -   For the guidelines regarding its content, see the
-    [context drawer](/hig/components/navigation/contextdrawer).
+    [context drawer]({{< relref "contextdrawer" >}}).
 
 Bottom Drawer and Dialog Sheet
 ------------------------------

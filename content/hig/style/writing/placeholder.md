@@ -32,7 +32,7 @@ Guidelines
 -   Since the placeholder will not be visible anymore as soon as the
     user types, you should only use it on standalone input elements, not
     in groups of input elements such as forms.
--   Use [sentence style capitalization](/hig/style/writing/capitalization).
+-   Use [sentence style capitalization]({{< relref "capitalization" >}}).
 
 ![Krunner showing a placeholder instead of a label with an
 action.](/hig/Krunner-1.png)

@@ -10,8 +10,8 @@ grouped together. The collection of commands and command groups make up
 the command structure of the application.
 
 Command patterns can be combined with
-[navigation patterns](/hig/patterns-navigation/) and
-[content patterns](/hig/patterns-content/) to design the complete layout
+[navigation patterns]({{< relref "patterns-navigation" >}}) and
+[content patterns]({{< relref "patterns-content" >}}) to design the complete layout
 for your application.
 
 Guidelines

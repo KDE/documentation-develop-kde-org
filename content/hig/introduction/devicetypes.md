@@ -10,7 +10,7 @@ interface is tailored to each device's physical characteristics and the
 way that a user will interact with it.
 
 For information regarding the differences between a user interface and
-the user experience, see the [Glossary](/hig/resources/glossary).
+the user experience, see the [Glossary]({{< relref "glossary" >}}).
 
 Some devices are adaptable, e.g. a tablet with a keyboard plugged in, or
 a convertible laptop with only the touchscreen in use. These types of

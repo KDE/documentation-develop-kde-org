@@ -24,7 +24,7 @@ Guidelines
 
 -   Use edits for input of single lines of unconstrained text.
 -   In case of multiple lines of text or more than a few words, use a
-    [text edit](../textedit)
+    [text edit]({{< relref "textedit" >}})
 -   Don't use a line edit if only a specific type of data is valid. Use
     a control for constrained input.
 
@@ -55,5 +55,5 @@ Guidelines
 -   When disabling the line edit, also disable any associated labels and
     buttons.
 -   Label every line edit with a descriptive caption to the left (cf.
-    [Alignment](/hig/layout/alignment)).
+    [Alignment]({{< relref "alignment" >}})).
 -   Create a buddy relation so access keys are assigned.

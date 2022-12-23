@@ -27,13 +27,13 @@ Guidelines
 -   Always display an icon.
 -   Text labels are optional but recommended. If hidden, the button should
     display a ToolTip on hover. Use
-    [title style capitalization](/hig/style/writing/capitalization) and begin
+    [title style capitalization]({{< relref "capitalization" >}}) and begin
     with a verb.
 -   If the button's action requires further information from the user before
     it completes, add an ellipsis at the end of the button label.
 -   Except for split buttons, don't change Buttons' icon or text depending on
     the context.
--   Don't make buttons flat except on [toolbars](../toolbar).
+-   Don't make buttons flat except on [toolbars]({{< relref "toolbar" >}}).
 
 
 ### Is this the right control?

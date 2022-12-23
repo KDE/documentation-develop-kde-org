@@ -27,7 +27,7 @@ Use a Context Drawer if your application has any functions which are
 only relevant in specific contexts, and which are not central enough to
 the application's main purpose to put them in the main user interface
 or in a toolbar. For actions which are always available, use the
-[Global Drawer](../globaldrawer).
+[Global Drawer]({{< relref "globaldrawer" >}}).
 
 ### Behavior
 
@@ -45,7 +45,7 @@ or in a toolbar. For actions which are always available, use the
     -   Try to keep the content of the context drawer in one page. If
         there two distinct "modes" of contextual actions (for example
         navigating through a PDF either by table of contents or
-        thumbnails), consider using two [Tabs](../tab) to separate them,
+        thumbnails), consider using two [Tabs]({{< relref "tab" >}}) to separate them,
         but never use more than two tabs.
 
 ![Examples of a context drawer on desktop](/hig/Contextdrawer2.png)

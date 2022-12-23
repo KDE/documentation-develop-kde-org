@@ -48,7 +48,7 @@ How to Use
 
 ### Desktop-Specific
 
-If your application is using [column-based navigation](/hig/patterns-navigation/column):
+If your application is using [column-based navigation]({{< relref "column" >}}):
 
 -   If there is a global Primary Action, associate it with the first
     column

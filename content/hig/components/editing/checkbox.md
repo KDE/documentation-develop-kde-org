@@ -21,7 +21,7 @@ Guidelines
 
 -   Use checkboxes for non-exclusive options that have clear
     alternatives. Mutually exclusive options should use a set of
-    [radio buttons](../radiobutton) or a [combo box](../combobox).
+    [radio buttons]({{< relref "radiobutton" >}}) or a [combo box]({{< relref "combobox" >}}).
 
 {{< compare >}}
 {{< dont src="/hig/Ambiguous_Opposite_Bad.qml.png" >}}
@@ -33,7 +33,7 @@ Use two radio buttons to remove the need to guess.
 {{< /compare >}}
 
 -   For more than five options, use either a
-    [list view](../list) or the [dual-list pattern](/hig/patterns-content/duallist)
+    [list view]({{< relref "list" >}}) or the [dual-list pattern]({{< relref "duallist" >}})
     in case of multiple selections.
 -   Don't use the selection to perform commands.
 
@@ -42,7 +42,7 @@ Use two radio buttons to remove the need to guess.
 Don't use the selection to perform commands.
 {{< /dont >}}
 {{< do src="/hig/No_Command_2_Good.qml.png" >}}
-Consider using a [push button](../../navigation/pushbutton)
+Consider using a [push button]({{< relref "pushbutton" >}})
 {{< /do >}}
 {{< /compare >}}
 
@@ -140,9 +140,9 @@ Add another label if more explanation is required.
 {{< /compare >}}
 
 -   Label a group of checkbox with a descriptive caption to the top left
-    of the group (cf. [alignment](/hig/layout/alignment)).
+    of the group (cf. [alignment]({{< relref "alignment" >}})).
 -   Create a buddy relation so access keys are assigned.
--   Use [sentence style capitalization](/hig/style/writing/capitalization)
+-   Use [sentence style capitalization]({{< relref "capitalization" >}})
     for checkbox items.
 
 Code

@@ -101,4 +101,4 @@ Documenting Your Concept
 ------------------------
 
 A useful template for documenting your personas and scenarios is the
-[Project User Research Template](../research).
+[Project User Research Template]({{< relref "research" >}}).

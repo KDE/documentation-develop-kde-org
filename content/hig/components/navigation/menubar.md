@@ -25,7 +25,7 @@ Guidelines
 ### Is this the right control?
 
 -   A menu bar is mandatory for applications that have a
-    [very complex command structure](/hig/patterns-command/), such
+    [very complex command structure]({{< relref "patterns-command" >}}), such
     as those used for content creation or editing, file manipulation,
     or other productivity work.
 -   Menu bars are optional for simple apps that are able to expose all

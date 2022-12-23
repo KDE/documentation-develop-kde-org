@@ -22,7 +22,7 @@ Whitespace is an important element of design which enables the objects
 in it to exist at all. The balance between content and whitespace is key
 to grouping.
 
-Please read [Units and Measurements](../units) for more information
+Please read [Units and Measurements]({{< relref "units" >}}) for more information
 which and how different units such as px, dpi independent pixels,
 smallSpacing and largeSpacing are used.
 
@@ -72,7 +72,7 @@ laying out and spacing of your controls.
 
 For consistency you should try to use Kirigami and Plasma's
 `smallSpacing` and `largeSpacing` for margins and paddings whenever
-possible. See [Units and Measurements](../units) for more details.
+possible. See [Units and Measurements]({{< relref "units" >}}) for more details.
 
 When more spacing is required, use multiples of `smallSpacing` or
 `largeSpacing`.

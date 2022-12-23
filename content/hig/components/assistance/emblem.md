@@ -56,4 +56,4 @@ light-colored number inside a blue circle. The circle can become
 number](/hig/emblem-notification-large.png)
 
 For symbolic icon emblems, see
-[Emblem icons](/hig/style/icons/monochrome/emblem).
+[Emblem icons]({{< relref "emblem" >}}).

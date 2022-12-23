@@ -42,7 +42,7 @@ Guidelines
     or start any other side effect.
 -   Don't add controls to the inline message other than action buttons
     for opportunistic interaction.
--   Consider to show a [notification](/hig/platform/notification)
+-   Consider to show a [notification]({{< relref "notification" >}})
     if information does not concern the current workflow.
 
 Is this the right control? / Behavior
@@ -110,7 +110,7 @@ Appearance
 
 A basic inline messages consists of an icon and text. It can contain an
 optional close button and
-[buttons](../../navigation/pushbutton).
+[buttons]({{< relref "pushbutton" >}}).
 
 ![Inline message with a custom icon and a close
 button.](/hig/Message1.png)

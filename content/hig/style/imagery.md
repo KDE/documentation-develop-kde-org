@@ -31,7 +31,7 @@ Guidelines
 
 ![ImageCaption1.png](/hig/ImageCaption1.png)
 
--   Use a [scrim](/hig/components/navigation/scrim) behind the caption
+-   Use a [scrim]({{< relref "scrim" >}}) behind the caption
     text to preserve contrast for legibility.
 -   Try to preserve the image aspect ratio. If preserving the aspect
     ratio is a challenge, consider cropping the image to fill the

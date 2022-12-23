@@ -16,7 +16,7 @@ Guidelines
 -   Craft labels based on user goals and tasks, not on the underlying
     technology.
 -   Keep labels short; be aware that
-    [translated](../localization) English text can expand up to 50% in
+    [translated]({{< relref "localization" >}}) English text can expand up to 50% in
     some languages.
 -   ...But don't shorten your labels to the point of losing meaning. A
     three-word label that provides clear information is better than a

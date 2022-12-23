@@ -47,7 +47,7 @@ Guidelines for Desktop User Interfaces
 -   Don't use vertically stacked tabs. Tabs are drawn above the pages
     only (QTabWidget::TabPosition = North).
 -   Don't use too many tabs. Use a
-    [list view](../../editing/list) with
+    [list view]({{< relref "/hig/components/editing/list" >}}) with
     icons and associated pages if there are many pages or if you want to
     group static pages, e.g. in case of configuration content. This also
     gives ability to present hierarchy of pages as a tree.
@@ -95,14 +95,14 @@ settings or controls.
     any order.
 -   Only use text in horizontal tabs and not icons.
 -   Provide a label with an access key for each tab. Use nouns with
-    [title capitalization](/hig/style/writing/capitalization) to
+    [title capitalization]({{< relref "capitalization" >}}) to
     describe the content.
 -   Don't expand tabs to use empty space of the widget (see the
     `expanding` property of the Qt tab bar, unfortunately true by
     default).
 -   Avoid long tab names. Use a compelling, easy to understand label.
     Phrases not sentences.
--   Don't use [abbreviations](/hig/style/writing/wording) (acronyms
+-   Don't use [abbreviations]({{< relref "wording" >}}) (acronyms
     such as HTML are allowed).
 
 Guidelines for Phone User Interfaces
@@ -121,7 +121,7 @@ Guidelines for Phone User Interfaces
     -   Keep interdependent elements in the same tab.
 -   When using tabs to open multiple documents (e.g. websites) in the
     same instance of an application, show them as a list at the top of
-    the [global drawer](../globaldrawer).
+    the [global drawer]({{< relref "globaldrawer" >}}).
     -   Offer the user the option to choose between "Use tabs" and
         "Use separate windows", the default of which is specified by
         the gobal setting, if it is set, otherwise the default is new

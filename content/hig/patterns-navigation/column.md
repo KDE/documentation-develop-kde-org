@@ -44,14 +44,14 @@ How to Use It
 
 -   Use one page/column for each level of the hierarchy (or more
     generally, for each step of the navigation).
--   Pages can for example be [lists](../list) or [grid](../grid) or a
+-   Pages can for example be [lists]({{< relref "/hig/patterns-navigation/list" >}}) or [grid]({{< relref "grid" >}}) or a
     detail view of a particular item.
 -   Make sure to set meaningful but short page titles, so they can
     create a useful breadcrumb trail.
 -   When on the lowest level, showing the content of an individual list
     item, use a swipe beyond the top/bottom of the content to jump to
     the previous/next item in the list.
--   For the command structure, see the [command patterns](/hig/patterns-command/).
+-   For the command structure, see the [command patterns]({{< relref "patterns-command" >}}).
 
 Implementation
 --------------

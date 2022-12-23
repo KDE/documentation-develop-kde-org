@@ -31,7 +31,7 @@ Guidelines
 -   Use a slider when it is useful for the user to control the rate of
     change of the value in real time.
 -   If the value is open-ended on one or both ends, consider using a
-    [Spin Box](../spinbox) instead.
+    [Spin Box]({{< relref "spinbox" >}}) instead.
 
 ### Behavior
 
@@ -113,4 +113,4 @@ Code
 
 ### Plasma Components
 
-- [Plasma Slider](../Slider)
+- [Plasma Slider]({{< relref "Slider" >}})

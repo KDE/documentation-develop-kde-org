@@ -29,11 +29,11 @@ Guidelines
     iterations of some action, or a time-out value.
 -   If the range is fixed at both ends, or the numerical values are
     arbitrary (for example, a volume control), use a
-    [Slider](../slider) control instead.
+    [Slider]({{< relref "slider" >}}) control instead.
 -   For cases where the values are constrained at both ends and there
     large ranges of integers (more than about 20) or floating-point
     values that require precise control, consider providing both a
-    [Slider and Spin Box](../slider). This
+    [Slider and Spin Box]({{< relref "slider" >}}). This
     allows the user to quickly set or fine-tune the setting more easily
     than they could with the slider control alone.
 
@@ -70,4 +70,4 @@ Code
 
 ### Plasma Components
 
-- [Plasma SpinBox](../SpinBox)
+- [Plasma SpinBox]({{< relref "SpinBox" >}})

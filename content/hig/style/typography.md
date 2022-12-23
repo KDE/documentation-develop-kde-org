@@ -18,7 +18,7 @@ Applications display seven variants of this typeface.
 ![The seven default typeface styles](/hig/Typography1.png)
 
 Typeface settings can be adjusted by the user and have
-great influence on sizing and spacing [Units and Measurements](/hig/layout/units)
+great influence on sizing and spacing [Units and Measurements]({{< relref "units" >}})
 in KDE's workspace and applications.
 
 ### Summary
@@ -26,7 +26,7 @@ in KDE's workspace and applications.
 -   The monospace typeface should be used for code content, filenames,
     file paths.
 -   Typography is treated like any other visual element when considering
-    [spacing](/hig/layout/metrics) and [alignment](/hig/layout/alignment).
+    [spacing]({{< relref "metrics" >}}) and [alignment]({{< relref "alignment" >}}).
 -   Multi-line blocks of text should be either left or right aligned;
     avoid center alignment.
 -   Limit the range of any dynamic type resizing to preserve the
@@ -46,7 +46,7 @@ the system font settings. See [Typography](#code) for implementation.
 {{< alert color="warning" title="Warning" >}}
 
 Never use a hardcoded value of px or pt to define a font size. See the
-entry about [units](/hig/layout/units) for more information.
+entry about [units]({{< relref "units" >}}) for more information.
 {{< /alert >}}
 
 {{< alert color="info" title="Hint" >}}
@@ -67,7 +67,7 @@ Guidelines
 
 ### Components
 
-Most [components](/hig/components/) have
+Most [components]({{< relref "components" >}}) have
 a recommended typeface style. If you create a new component you should
 give it the same typeface style as similar existing components.
 
@@ -94,7 +94,7 @@ Vary the type scale appropriately in your application.
 
 ### Text Color and Contrast
 
-The text [color](../color/) and [background color](../color/) can be
+The [text color and background color]({{< relref "color/" >}}) can be
 varied to provide additional hierarchical hints (e.g. selected text).
 However, the contrast between the text and background color must be
 sufficient to preserve legibility of the text.

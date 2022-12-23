@@ -26,7 +26,7 @@ How to Use
     action; they are only shortcuts.
 -   Don't use more than five (ideally not more than three) actions in
     on-demand controls. If you need more actions, choose a different
-    [command pattern](..).
+    [command pattern]({{< relref "patterns-command" >}}).
 -   Only use on-demand controls, if the actions are the same for each
     item.
 -   Since the actions don't have a label, don't use the on-demand
@@ -53,4 +53,4 @@ On-demand controls are revealed by sliding a handle from right to left
 to reveal them. As soon as the user taps anywhere else, the handle is
 slid back.
 
-For further guidelines see [list item](/hig/components/editing/list/).
+For further guidelines see [list item]({{< relref "/hig/components/editing/list" >}}).

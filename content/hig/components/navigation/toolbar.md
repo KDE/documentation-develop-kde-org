@@ -42,8 +42,8 @@ Guidelines for Applications
     the most frequently-used functions should be accessible from the
     toolbar.
 -   Execute operations immediately; don't require additional input.
--   Try to avoid using [split buttons](../pushbutton) or
-    [toggle buttons](../../editing/togglebutton) in order to keep
+-   Try to avoid using [split buttons]({{< relref "pushbutton" >}}) or
+    [toggle buttons]({{< relref "togglebutton" >}}) in order to keep
     the interaction with all buttons in the toolbar consistent.
 -   Don't hide toolbars by default. If a toolbar can be hidden, users
     should easily be able to make the toolbar viewable again.
@@ -77,12 +77,12 @@ Appearance
 ----------
 
 -   Don't change the button style from the default, which is
-    [text beside icons](/hig/patterns-content/iconandtext).
+    [text beside icons]({{< relref "iconandtext" >}}).
 -   Use and design toolbar icons with special care. Users remember
     location of an object but rely as well on icon properties.
 -   A distinct association between the underlying function and its
     visual depiction is crucial. Follow the advices for
-    [icon design](/hig/style/icons/index).
+    [icon design]({{< relref "/hig/style/icons" >}}).
 -   Don't simulate Microsoft's ribbon controls.
 
 Code

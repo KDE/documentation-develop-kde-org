@@ -22,14 +22,14 @@ Guidelines
 -   Omit the status bar in the main window to maximize vertical space
     for content.
     -   Don't show meaningless information like 'Ready'.
-    -   Use a floating panel or [tooltips](../tooltip) for short-term
+    -   Use a floating panel or [tooltips]({{< relref "tooltip" >}}) for short-term
         status information like full length text of links.
     -   Move controls to the toolbar.
     -   If you cannot find good replacements for status bar functions,
         please ask the usability team for support.
 -   Don't display a status bar in secondary or internal windows.
 -   If a status bar is really necessary in your application consider to
-    use a [toolbar](../../navigation/toolbar) with all customization features.
+    use a [toolbar]({{< relref "/hig/components/navigation/toolbar" >}}) with all customization features.
 
 ### Behavior
 
@@ -37,5 +37,5 @@ Guidelines
     information. Users should never have to know what is in the status
     bar.
 -   Don't use the status bar or any kind of replacement to display
-    advisory messages in place of standard [tooltips](../tooltip).
+    advisory messages in place of standard [tooltips]({{< relref "tooltip" >}}).
 -   Keep the status information plain; e.g. don't add icons.

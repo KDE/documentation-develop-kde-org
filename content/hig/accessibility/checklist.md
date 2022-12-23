@@ -7,7 +7,7 @@ Introduction
 ------------
 
 This is a list of common things you should check for to have great
-[accessibility](..) for your
+[accessibility]({{< relref "accessibility" >}}) for your
 application or widgets.
 
 Keyboard Navigation
@@ -72,7 +72,7 @@ Graphical Elements
     GUI elements.
 -   An option to hide non-essential graphics is provided.
 
-See [units](/hig/layout/units) for more
+See [units]({{< relref "units" >}}) for more
 information on how to use KDE\'s base units to avoid hardcoded size
 values.
 
@@ -99,9 +99,9 @@ Fonts and Text
 -   An alternative to WYSIWYG is provided. For example, the ability to
     specify different screen and printer fonts in a text editor.
 
-See [typography](/hig/style/typography) for
+See [typography]({{< relref "typography" >}}) for
 more information on how to avoid hardcoded font sizes and
-[labels](/hig/style/writing/labels) for more
+[labels]({{< relref "labels" >}}) for more
 details about labels.
 
 ### Testing
@@ -121,11 +121,11 @@ Color and Contrast
 -   Color is only used as an enhancement, and not as the only means to
     convey information or actions.
 -   The application supports all available
-    [high contrast themes](/hig/style/color/high) and settings.
+    [high contrast themes]({{< relref "high" >}}) and settings.
 -   The software is not dependent on any particular
-    [high contrast themes](/hig/style/color/high) or settings.
+    [high contrast themes]({{< relref "high" >}}) or settings.
 
-See [the HIG's page about color](/hig/style/color) for more information.
+See [the HIG's page about color]({{< relref "color" >}}) for more information.
 
 ### Testing
 

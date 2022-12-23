@@ -28,8 +28,8 @@ Guidelines
 -   Don't use dialogs if the flow must not be interrupted. In this case
     prefer inline controls.
 -   Consider to use alternative ways for communication with users like
-    [tooltip](/hig/components/assistance/tooltip) or an 
-    [inline message](/hig/components/assistance/inline).
+    [tooltip]({{< relref "tooltip" >}}) or an 
+    [inline message]({{< relref "inline" >}}).
 -   Always use standard dialogs, if available.
 
 ### Behavior
@@ -47,8 +47,8 @@ Guidelines
     direct selection or inline-editing instead.
 -   Don't use dialogs to display low-importance or informative messages
     that lack options on how to proceed. Consider using a
-    [tooltip](../../assistance/tooltip) or a
-    [inline message](../../assistance/inline) instead.
+    [tooltip]({{< relref "tooltip" >}}) or a
+    [inline message]({{< relref "inline" >}}) instead.
 -   Use modal dialogs only if allowing interaction with other parts of
     the application while the window is opened could cause data loss or
     some other serious problem.
@@ -56,7 +56,7 @@ Guidelines
     button.
 -   When the dialog is used to inform about an unexpected condition that
     needs interaction, follow the guidelines for
-    [message dialogs](../../assistance/message).
+    [message dialogs]({{< relref "message" >}}).
 
 ### Appearance
 
@@ -77,7 +77,7 @@ Guidelines
 -   Consider the common reading direction from left to right and top to
     bottom.
 -   Dialogs are grouped in meaningful sections, for instance by
-    [group boxes](../../formating/groupbox).
+    [group boxes]({{< relref "groupbox" >}}).
     The actions are grouped along their context of use, not along
     technical relations.
 -   Provide a title to each section.

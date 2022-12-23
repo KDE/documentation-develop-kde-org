@@ -23,7 +23,7 @@ Guidelines
 -   Use text edits for input of unconstrained text with more than one
     line.
 -   Don't use a text edit for input of a few words. Use a
-    [line edit](./lineedit) to enter single
+    [line edit]({{< relref "lineedit" >}}) to enter single
     lines of text.
 
 ### Behavior
@@ -37,5 +37,5 @@ Guidelines
 -   When disabling the text edit, also disable any associated labels and
     buttons.
 -   Label every text edit with a descriptive caption to the top left
-    (cf. [alignment](/hig/layout/alignment)).
+    (cf. [alignment]({{< relref "alignment" >}})).
 -   Create a buddy relation so access keys are assigned.

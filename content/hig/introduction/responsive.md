@@ -10,7 +10,7 @@ Introduction
 Responsiveness means that the user interface adjusts to changes in
 screen or window size. While Plasma and especially Kirigami are highly
 responsive, this is not a replacement for
-[optimized convergence](../convergence). It
+[optimized convergence]({{< relref "convergence" >}}). It
 is not supposed to be used as a replacement for different UI and UX for
 different interaction methods (mouse, touch, pointer, remote, \...) or
 different form factors like mobiles and televisions. Instead, it means
@@ -42,9 +42,9 @@ Action bar shrinking only in the horizontal direction.
 
 Keep in mind that not all controls or parts of a layout can and should
 be responsive. Often it is more important to retain the size for
-usability, familiarity and alignment and aim for [optimized convergence](/hig/introduction/convergence) by selecting different
-[navigation](/hig/patterns-navigation),
-[command](/hig/patterns-command) and [content](/hig/patterns-content) patterns for different formfactors.
+usability, familiarity and alignment and aim for [optimized convergence]({{< relref "convergence" >}}) by selecting different
+[navigation]({{< relref "patterns-navigation" >}}),
+[command]({{< relref "patterns-command" >}}) and [content]({{< relref "patterns-content" >}}) patterns for different formfactors.
 
 It is recommended to test your user interface against the most common
 screen sizes of the targeted form factor.
@@ -71,6 +71,6 @@ on one or on multiple folding points.
 
 {{< alert color="warning" >}}
 These are not physical pixels of a device or window, but DPI independent 
-pixels, see [Units](/hig/layout/units) for more information.
+pixels, see [Units]({{< relref "units" >}}) for more information.
 {{< /alert >}}
 

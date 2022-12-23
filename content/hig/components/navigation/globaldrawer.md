@@ -26,7 +26,7 @@ Use a Global Drawer whenever your application has any functions which
 are not central enough to the application's main purpose to put them in
 the main user interface, and which are not dependent on the current
 context. For context-specific actions (e.g. those affecting a selected
-item), use the [Context Drawer][../contextdrawer).
+item), use the [Context Drawer]({{< relref "contextdrawer" >}}).
 
 ### Behavior
 
@@ -40,9 +40,9 @@ tapping outside of it.
 
 A Global Drawer may contain the following controls:
 
--   [Tabs](../tab) A main menu
--   [Push Buttons](../pushbutton) to execute non-contextual actions
--   [Checkboxes](../../editing/checkbox) or [Radio Buttons](../../editing/radiobutton)
+-   [Tabs]({{< relref "tab" >}}) A main menu
+-   [Push Buttons]({{< relref "pushbutton" >}}) to execute non-contextual actions
+-   [Checkboxes]({{< relref "checkbox" >}}) or [Radio Buttons]({{< relref "radiobutton" >}})
     to change settings which are commonly changed
 
 The main menu
@@ -50,7 +50,7 @@ The main menu
 -   Must not have more than three levels
 -   Should if possible not contain more elements than fit on the screen
 -   Should contain an entry
-    [Settings](/hig/platform/settings) in the
+    [Settings]({{< relref "settings" >}}) in the
     last position if the application has settings which are not commonly
     changed
 -   Selecting an entry in the menu either executes an action or goes

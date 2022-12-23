@@ -13,4 +13,4 @@ Pattern for a 2-deep structure.
         into several groups
     -   Viewing multiple documents (e.g. websites in a browser) in the
         same application instance
--   See the [tab](/hig/components/navigation/tab) for details.
+-   See the [tab]({{< relref "tab" >}}) for details.

@@ -7,7 +7,7 @@ weight: 1
 ![Colorful icons](/hig/Sample_color_icons.png)
 
 Colorful icons make full use of the
-[Breeze color palette](../../color/). Colorful icons are not flat and incorporate elevation,
+[Breeze color palette]({{< relref "/hig/style/color/default" >}}). Colorful icons are not flat and incorporate elevation,
 shadows, and lighting.
 
 {{< compare >}}
@@ -22,11 +22,11 @@ Don't make your icon flat - this makes it visually bland.
 
 There are a variety of colorful icon types:
 
--   32px: [Category, Preferences,](category_preferences.html) [MIME
-    type,](mimetype.html) and [Places](places.html) icons
--   48px: [Application](application.html) icons
--   64px: [MIME type,](mimetype.html) [Places,](places.html) Devices,
-    and a few [Status](action.html) icons
+-   32px: [Category, Preferences,]({{< relref "category_preferences" >}})
+    [MIME type]({{< relref "mimetype" >}}), and [Places]({{< relref "places" >}}) icons
+-   48px: [Application]({{< relref "application" >}}) icons
+-   64px: [MIME type,]({{< relref "mimetype" >}}) [Places,]({{< relref "places" >}}) Devices,
+    and a few Status icons
 
 Margins
 -------

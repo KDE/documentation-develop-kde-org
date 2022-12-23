@@ -42,11 +42,11 @@ Guidelines
 
 -   Use a drop-down list for single selection of one out of many items.
     If users should be able to add items use a
-    [combo box](../combobox).
+    [combo box]({{< relref "combobox" >}}).
 -   For only a few options, consider to use a set of
-    [radio buttons](../radiobutton).
+    [radio buttons]({{< relref "radiobutton" >}}).
 -   For a single selection out of a large number of items (n>20), use a
-    [list view](../list).
+    [list view]({{< relref "list" >}}).
 -   Prefer controls that show the options without further user
     interaction, except for the following cases:
     -   the list of options may change over time,
@@ -82,10 +82,10 @@ Guidelines
     certain item is selected (i.e. they are dependent controls), disable
     them instead of hiding.
 -   Label the drop down with a descriptive caption to the left (cf.
-    [alignment](/hig/layout/alignment)).
+    [alignment]({{< relref "alignment" >}})).
 -   Create a buddy relation so access keys are assigned.
 -   End each label with a colon.
--   Use [sentence style capitalization](/hig/style/writing/capitalization)
+-   Use [sentence style capitalization]({{< relref "capitalization" >}})
     for items.
 
 Code

@@ -7,7 +7,7 @@ The system tray provides quick access to functionality integrated into
 the workspace that's both highly visible to the user and frequently
 changed, like enabling/disabling WiFi and Bluetooth, or whether or not
 to show notifications. See
-[architecture](/introduction/architecture) for an overview of plasma
+[architecture]({{< relref "architecture" >}}) for an overview of plasma
 workspace components.
 
 Examples
@@ -28,11 +28,11 @@ in status changes within the application.
 
 -   On left click, open the application itself, or a panel that allows
     quick access to common features.
--   On right click, open a [context menu](/hig/components/navigation/contextmenu).
+-   On right click, open a [context menu]({{< relref "contextmenu" >}}).
 -   For application like media players, enable the user to change the
     volume while scrolling over the icon.
 
 ### Appearance
 
-Use a [monochrome, shade black icon](/hig/style/icons/) and use color only
+Use a [monochrome, shade black icon]({{< relref "/hig/style/icons" >}}) and use color only
 to communicate state.

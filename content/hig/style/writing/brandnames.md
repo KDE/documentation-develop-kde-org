@@ -17,7 +17,7 @@ What needs a brand name?
 -   Major non-app projects should have their own brand names. For
     example, *Plasma*, *KWin*, *Baloo,* and *Kirigami.*
 -   Individual features within apps are not brand names and should be
-    [labeled descriptively](../labels).
+    [labeled descriptively]({{< relref "labels" >}}).
 
 Creating a good brand name
 --------------------------
@@ -35,7 +35,7 @@ Creating a good brand name
     name is too generic, its identity will be diluted and users will
     have a hard time finding it in web searches.
 -   Each brand name needs an
-    [icon or logo](/hig/style/icons).
+    [icon or logo]({{< relref "/hig/style/icons" >}}).
     The logo should reinforce the name. For more abstractly-named
     brands, the logo should provide visual information regarding the
     software's purpose that is not contained within the name (e.g.

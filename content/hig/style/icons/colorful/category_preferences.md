@@ -19,8 +19,7 @@ the same design style.
 Design
 ------
 
-Category and preferences icons always use the [colorful icon
-style](../colorful). Their only size is 32 pixels.
+Category and preferences icons always use the [colorful icon style]({{< relref "colorful" >}}). Their only size is 32 pixels.
 
 When creating category and preferences icons, consider the following
 aspects of an icon:

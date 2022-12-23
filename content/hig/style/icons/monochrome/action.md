@@ -4,7 +4,7 @@ weight: 2
 ---
 
 Action icons are used to depict actions. They come in two sizes: 16px
-and 22px, and always use the [monochrome style](..).
+and 22px, and always use the [monochrome style]({{< relref "monochrome" >}}).
 
 Purpose
 -------

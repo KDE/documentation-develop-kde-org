@@ -4,7 +4,7 @@ weight: 3
 ---
 
 Emblem icons are used to indicate state. They come in three sizes: 8px,
-16px, and 22px, and always use the [monochrome style](..). They
+16px, and 22px, and always use the [monochrome style]({{< relref "monochrome" >}}). They
 are typically overlaid on icons. Unlike most monochromatic icons, emblem
 icons use bright colours to remain recognisable, even at small sizes.
 

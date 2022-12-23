@@ -11,17 +11,17 @@ particularities of each type of device that it can run on (desktop,
 laptop, tablet, phone, etc).
 
 For information regarding the differences between a user interface and
-the user experience, see the [glossary](/hig/glossary).
+the user experience, see the [glossary]({{< relref "glossary" >}}).
 
 Device Types
 ------------
 
 The KDE HIG defines an optimal user experience for each device type, as
-described in [device type](../devicetypes).
+described in [device type]({{< relref "devicetypes" >}}).
 
 Convergence requires an understanding of the commonalities in the user
 interface. Convergence can then be implemented by providing variations
-of `the common UI components [architecture](../architecture) which
+of `the common UI components [architecture]({{< relref "architecture" >}}) which
 correspond with the optimal user experience for each device's usage model.
 
 Making convergent applications

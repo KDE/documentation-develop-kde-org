@@ -35,8 +35,8 @@ Guidelines
     Balance discoverability with a predictable user model that minimizes
     confusion.
 -   Consider breaking down the hierarchical data. For example, into a
-    selection by a [drop-down list](../dropdown) with an associated 
-    [list view](../list).
+    selection by a [drop-down list]({{< relref "dropdown" >}}) with an associated 
+    [list view]({{< relref "list" >}}).
 
 ### Behavior
 
@@ -69,7 +69,7 @@ Guidelines
 
 -   For checkboxes, use the mixed state to indicate that an option is
     set for some, but not all, child objects. Users should not be able
-    to set a mixed state directly (cf. [checkboxes](../checkbox)).
+    to set a mixed state directly (cf. [checkboxes]({{< relref "checkbox" >}})).
 
 -   Clicking a mixed state checkbox selects all child objects and the
     parent checkbox.
@@ -86,12 +86,12 @@ Guidelines
 -   Make controls large enough that it can show at least eight list
     items at a time without scrolling.
 -   Label the tree view with a descriptive caption to the top left (cf.
-    [alignment](../layout/alignment)).
+    [alignment]({{< relref "alignment" >}})).
 -   Create a buddy relation so access keys are assigned.
 -   Make use of punctuation (Except for dot "." or colon ":") for a
     caption.
--   Use [sentence style capitalization](/hig/style/writing/capitalization)
+-   Use [sentence style capitalization]({{< relref "capitalization" >}})
     for tree view items.
 -   Add a
-    [placeholder message](/hig/patterns-content/placeholdermessage)
+    [placeholder message]({{< relref "placeholdermessage" >}})
     when the list has no items in it.

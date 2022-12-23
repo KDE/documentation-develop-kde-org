@@ -91,4 +91,4 @@ notification->sendEvent();
 ```
 
 Use [KNotification](https://api.kde.org/frameworks/knotifications/html/classKNotification.html)
-to send notifications to the [Plasma Workspaces](/introduction/architecture).
+to send notifications to the [Plasma Workspaces]({{< relref "architecture" >}}).

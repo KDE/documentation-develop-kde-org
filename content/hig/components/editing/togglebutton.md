@@ -28,9 +28,9 @@ Guidelines
 
 -   Use a toggle button to indicate a state if no other control apply,
     i.e. in case of the
-    [toolbar](../../navigation/toolbar).
--   Prefer [radio buttons](../radiobutton)
-    or [checkboxes](../checkbox) outside the
+    [toolbar]({{< relref "/hig/components/navigation/toolbar" >}}).
+-   Prefer [radio buttons]({{< relref "radiobutton" >}})
+    or [checkboxes]({{< relref "checkbox" >}}) outside the
     toolbar.
 
 ### Behavior

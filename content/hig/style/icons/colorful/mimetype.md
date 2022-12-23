@@ -5,8 +5,8 @@ weight: 2
 
 MIME type icons are used to depict documents and files. They come in
 four sizes: 16px, 22px, 32px, and 64px. MIME type icons use the
-[monochrome style](../../monochrome/) for 16px and 22px sizes,
-and the [colorful style](..) for 32px and 64px sizes.
+[monochrome style]({{< relref "monochrome" >}}) for 16px and 22px sizes,
+and the [colorful style]({{< relref "colorful" >}}) for 32px and 64px sizes.
 
 Purpose
 -------

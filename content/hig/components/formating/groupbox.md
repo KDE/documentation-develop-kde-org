@@ -31,7 +31,7 @@ Guidelines
 -   Don't disable groups. To indicate that a group of controls does not
     currently apply, disable all the controls within the group, but not
     the group itself.
--   Put a [splitter](splitter) between aligned grouping controls.
+-   Put a [splitter]({{< relref "splitter" >}}) between aligned grouping controls.
 
 ### Appearance
 

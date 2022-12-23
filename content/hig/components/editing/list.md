@@ -44,14 +44,14 @@ Guidelines
     translation.
 
 {{< alert title="Attention" color="warning" >}}
-For [accessibility](/hig/accessibility), make sure to test keyboard
+For [accessibility]({{< relref "accessibility" >}}), make sure to test keyboard
 navigation with the list.
 {{< /alert >}}
 
 #### On-Demand Actions
 
 List items can uses an
-[on-demand pattern](/hig/patterns-command/ondemand)
+[on-demand pattern]({{< relref "ondemand" >}})
 as an alternative to always-visible controls. If the user
 often performs tasks on single items of a list, you can add on-demand
 controls to the list item for these.
@@ -98,8 +98,8 @@ toggle selection state.
 
 -   Don't provide extended multiple selections with Shift+Click or
     Ctrl+Click to select groups of contiguous or non-adjacent values,
-    respectively. Instead, use the [dual-list pattern](/hig/patterns-content/duallist)
-    or the [picker pattern](/hig/patterns-content/picker) if multiple
+    respectively. Instead, use the [dual-list pattern]({{< relref "duallist" >}})
+    or the [picker pattern]({{< relref "picker" >}}) if multiple
     items have to be selected, because it allows
     users to easily see which items are selected at any point, without
     having to scroll through the available options, and it can be used
@@ -108,7 +108,7 @@ toggle selection state.
 #### Picker
 
 Lists can be used for the
-[picker pattern](/hig/patterns-content/picker).
+[picker pattern]({{< relref "picker" >}}).
 Place a button below the list to add items to the list. To
 remove items from the list, either add an remove action on the item, or
 give the user the possibility to select items and add a global remove
@@ -122,7 +122,7 @@ changed by the user.
 ##### Desktop
 
 If you use a
-[dual-list pattern](/hig/patterns-content/duallist) and want to be
+[dual-list pattern]({{< relref "duallist" >}}) and want to be
 able to re-order the items in the selected list you can add additional
 up and down buttons.
 
@@ -141,20 +141,20 @@ up and down buttons.
 -   Disable controls in a dialog if not in use rather than hide, or
     remove them from the list (i.e. they are dependent controls),
 -   Label the list view with a descriptive caption to the top left (cf.
-    [alignment](/hig/layout/alignment)).
+    [alignment]({{< relref "alignment" >}})).
 -   Create a buddy relation so access keys are assigned.
 -   End each label with a colon. ":"
 -   Use
-    [sentence style capitalization](/hig/style/writing/capitalization)
+    [sentence style capitalization]({{< relref "capitalization" >}})
     for list view items.
 -   You can use alternate row colors (use theme settings).
 -   Add a
-    [placeholder message](/hig/patterns-content/placeholdermessage)
+    [placeholder message]({{< relref "placeholdermessage" >}})
     when the list has no items in it.
 
 For section headers use
-[120% font size](/hig/style/typography) and
-the [alternate background color](/hig/style/color). Don't place a
+[120% font size]({{< relref "typography" >}}) and
+the [alternate background color]({{< relref "color" >}}). Don't place a
 border below the section header.
 
 {{< compare >}}
@@ -181,9 +181,9 @@ always be coherent in a list.
 desktop](/hig/Listview3.png)
 
 Items have a padding of
-[Units.smallSpacing](/hig/layout/units) on
+[Units.smallSpacing]({{< relref "units" >}}) on
 the top and bottom and a padding of
-[2 * Units.smallSpacing](/hig/layout/units)
+[2 * Units.smallSpacing]({{< relref "units" >}})
 on the left.
 {{< /block >}}
 
@@ -193,7 +193,7 @@ on the left.
 
 Labels are vertically centered within the list item. If the list item
 includes an icon, add a
-[2 * Units.smallSpacing](/hig/layout/units)
+[2 * Units.smallSpacing]({{< relref "units" >}})
 margin between the icon and the label.
 {{< /block >}}
 {{< /compare >}}
@@ -206,9 +206,9 @@ margin between the icon and the label.
 mobile](/hig/Listview1.png)
 
 Items have a padding of
-[Units.largeSpacing](/hig/layout/units) on
+[Units.largeSpacing]({{< relref "units" >}}) on
 the top and bottom and a padding of
-[2 * Units.largeSpacing](/hig/layout/units)
+[2 * Units.largeSpacing]({{< relref "units" >}})
 on the left.
 {{< /block >}}
 
@@ -217,7 +217,7 @@ on the left.
 
 Labels are vertically centered within the list item. If the list item
 includes an icon, add a
-[2 * Units.largeSpacing](/hig/layout/units)
+[2 * Units.largeSpacing]({{< relref "units" >}})
 margin between the icon and the label.
 {{< /block >}}
 {{< /compare >}}
@@ -229,7 +229,7 @@ Checkboxes should be placed to the left of the item.
 ![List items with checkboxes for multi
 selection.](/hig/Listview5.png)
 
-Add a [2 * Units.largeSpacing ](/hig/layout/units)margin between
+Add a [2 * Units.largeSpacing ]({{< relref "units" >}})margin between
 the checkbox and the icon or the label.
 
 If you change the background color to toggle selection state, use

@@ -16,7 +16,7 @@ Guidelines
 
 ### Is this the right control?
 
-Like [lists](../list), Grids are used to
+Like [lists]({{< relref "list" >}}), Grids are used to
 display a sorted or unsorted set of items. All items should be of the
 same kind.
 
@@ -37,19 +37,19 @@ playsinline="true" width="536" onended="this.play()" class="border"></video>
     translation.
 
 {{< alert title="Attention" color="warning" >}}
-For [accessibility](/hig/accessibility)
+For [accessibility]({{< relref "accessibility" >}})
 make sure to test keyboard navigation with the grid.
 {{< /alert >}}
 
 #### On-Demand Actions
 
 Grid items can use the
-[on-demand pattern](/hig/patterns-command/ondemand) for inline actions.
+[on-demand pattern]({{< relref "ondemand" >}}) for inline actions.
 
 #### Picker
 
 Grids can be used for the
-[picker pattern](/hig/patterns-content/picker). Place a button
+[picker pattern]({{< relref "picker" >}}). Place a button
 below the grid to add items to the grid. To
 remove items from the grid, either add a remove action on the item, or
 give the user the possibility to select items and add a global remove
@@ -66,20 +66,20 @@ re-ordering via drag-and-drop.
     through user input or as a response to changes of the available
     space for the grid.
 -   All rows, except the last one, must have the same number of items.
--   Use [sentence style capitalization](/hig/style/writing/capitalization)
+-   Use [sentence style capitalization]({{< relref "capitalization" >}})
     for grid view items.
 -   Add a
-    [placeholder message](/hig/patterns-content/placeholdermessage)
+    [placeholder message]({{< relref "placeholdermessage" >}})
     when the grid view has no items in it.
 
 #### Cards
 
-See [cards](../card) for more information on
+See [cards]({{< relref "card" >}}) for more information on
 how to use cards in a grid view.
 
 #### KCM
 
-Use the [KCMGrid](/hig/platform/kcmgrid) for
+Use the [KCMGrid]({{< relref "kcmgrid" >}}) for
 grids in KCMs.
 
 Code

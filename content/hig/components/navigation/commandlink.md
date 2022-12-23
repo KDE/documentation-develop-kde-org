@@ -24,7 +24,7 @@ Guidelines
 -   Use command links for a set of mutually exclusive responses like
     navigation from hub to spoke pages.
 -   Don't present single command links.
--   Consider to use a [push button](../pushbutton) for single commands
+-   Consider to use a [push button]({{< relref "pushbutton" >}}) for single commands
     or if the action does not contain navigation.
 
 ### Behavior

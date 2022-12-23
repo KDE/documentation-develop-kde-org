@@ -10,7 +10,7 @@ Purpose
 
 The date/time picker is a control that provides a convenient way to
 select a certain date or time. The time picker works just like a
-[spin box](../spinbox) with an adopted mask.
+[spin box]({{< relref "spinbox" >}}) with an adopted mask.
 The date picker shows all days of a month in weekly columns, has small
 navigation buttons to access previous and next month or years as well as
 interactive controls to chose month and year directly. The user

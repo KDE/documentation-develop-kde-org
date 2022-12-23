@@ -35,7 +35,7 @@ Use a combobox instead.
 
 -   If there are only two options where one is the negation of the other
     (e.g. "apply" vs. "don't apply"), consider replacing the radio
-    buttons by one [checkbox](../checkbox).
+    buttons by one [checkbox]({{< relref "checkbox" >}}).
 
 {{< compare >}}
 {{< dont src="/hig/Radiobutton_Negation_Bad.qml.png" >}}
@@ -59,7 +59,7 @@ Use radio buttons instead.
 {{< /compare >}}
 
 -   Don't use a radio button to initiate an action. Consider using a
-    [push button](/hig/components/navigation/pushbutton) instead.
+    [push button]({{< relref "pushbutton" >}}) instead.
 
 {{< compare >}}
 {{< dont src="/hig/Radiobutton_Command_Bad.qml.png" >}}
@@ -125,10 +125,10 @@ layout and spacing of your controls.
     the checkbox.
 -   Label a group of radio buttons with a descriptive caption to the top
     left of the group (cf.
-    [alignment](/hig/layout/alignment)).
+    [alignment]({{< relref "alignment" >}})).
 -   Create a buddy relation so access keys are assigned.
 -   Use
-    [sentence style capitalization](/hig/style/writing/capitalization)
+    [sentence style capitalization]({{< relref "capitalization" >}})
     for radio buttons.
 -   Don't use ending punctuation (neither dot nor colon) for group
     label.

@@ -32,8 +32,8 @@ Guidelines
 -   Use a table to arrange data in two dimensions.
 -   Use a table for a concise layout with inline editing feature.
 -   Don't use a table for read-only data. In this case use a simple
-    [list view](../list) or a
-    [tree view](../tree) with multiple
+    [list view]({{< relref "list" >}}) or a
+    [tree view]({{< relref "tree" >}}) with multiple
     columns.
 
 ### Behavior
@@ -52,7 +52,7 @@ Guidelines
     controls.
 -   Use the appropriate control for constrained input. Show the
     control's UI (e.g. arrow for
-    [drop-down list](../dropdown)) not until
+    [drop-down list]({{< relref "dropdown" >}})) not until
     the cell is in edit mode.
 -   Distinguish editable cells from those that are read-only.
 -   Allow tables to be extended by users in both directions.
@@ -64,8 +64,8 @@ Guidelines
 -   Avoid horizontal scrollbars. Size the table to a reasonable width.
 -   Use fixed column header.
 -   Label the table with a descriptive caption to the top left (cf.
-    [Alignment](../layout/alignment)).
+    [Alignment]({{< relref "alignment" >}})).
 -   Create a buddy relation so access keys are assigned.
 -   Add a
-    [placeholder message](/hig/patterns-content/placeholdermessage)
+    [placeholder message]({{< relref "placeholdermessage" >}})
     when the table has no items in it.

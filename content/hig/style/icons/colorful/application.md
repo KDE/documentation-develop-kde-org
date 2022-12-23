@@ -16,7 +16,7 @@ icons should be unified with the same design style.
 Design
 ------
 
-Application icons always use the [colorful icon style](../colorful).
+Application icons always use the [colorful icon style]({{< relref "colorful" >}}).
 Their baseline size is 48 pixels.
 
 ### 1st-Party App Icons

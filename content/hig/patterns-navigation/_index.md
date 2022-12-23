@@ -4,7 +4,7 @@ weight: 7
 ---
 
 Navigation Patterns depend on the structure of the application content.
-Navigation patterns can be combined with [command patterns](/hig/patterns-command/)
+Navigation patterns can be combined with [command patterns]({{< relref "patterns-command" >}})
 and content patterns to design the complete layout for your application.
 
 Patterns for Desktop User Interfaces
@@ -20,11 +20,11 @@ structure is flat.
 Examples include a playlist, a slideshow or a list of documents or
 contacts.
 
--  [Single item](single)
--  [List](list)
--  [Expandable list](expandable)
--  [Grid](grid)
--  [Master detail](master)
+-  [Single item]({{< relref "single" >}})
+-  [List]({{< relref "list" >}})
+-  [Expandable list]({{< relref "expandable" >}})
+-  [Grid]({{< relref "grid" >}})
+-  [Master detail]({{< relref "master" >}})
 
 ### Patterns for a 2-Deep Content Structure
 
@@ -35,9 +35,9 @@ content structure is 2-deep.
 
 Examples include picture albums, music albums, email folders or tags.
 
--   [Combination patterns ](combination)
--   [Tabs ](tab)
--   [Unique 2-deep patterns ](unique)
+-   [Combination patterns ]({{< relref "combination" >}})
+-   [Tabs ]({{< relref "tab" >}})
+-   [Unique 2-deep patterns ]({{< relref "unique" >}})
 
 ### Patterns for a 3-Deep Content Structure
 
@@ -54,7 +54,7 @@ Content structures this deep should generally be avoided.
 There are instances, however, where it may be difficult to avoid.
 Examples include a full music or video library or system settings.
 
--   [Combination patterns ](combination-3)
+-   [Combination patterns ]({{< relref "combination-3" >}})
 
 ### Patterns for N-Deep Content Structures
 
@@ -71,5 +71,5 @@ relative to other content.
 There are instances, however, where this structure cannot be avoided.
 Examples include file systems and archives.
 
--   [Breadcrumbs ](breadcrumb)
--   [Column-based navigation ](column)
+-   [Breadcrumbs ]({{< relref "breadcrumb" >}})
+-   [Column-based navigation ]({{< relref "column" >}})
