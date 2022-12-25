@@ -50,8 +50,8 @@ What's different here is that we are using C++ code as a plugin for our QML code
 Here we are defining the class we will be using for our KCM.
 [KQuickAddons::ConfigModule](docs:kdeclarative;KQuickAddons::ConfigModule)
 serves as the base class for all QML-based KCMs. The
-[KQuickAddons::ManagedConfigModule](docs:kdeclarative;KQuickAddons::ManagedConfigModule) inherits [KQuickAddons::ConfigModule](docs:kdeclarative;KQuickAddons::ConfigModule) and adds the [KConfigXT](../kconfig_xt) integration.
-You can read the linked API documentation to get a full description, and the previous page in this section goes into more detail about how [KConfigXT](../kconfig_xt) works.
+[KQuickAddons::ManagedConfigModule](docs:kdeclarative;KQuickAddons::ManagedConfigModule) inherits [KQuickAddons::ConfigModule](docs:kdeclarative;KQuickAddons::ConfigModule) and adds the [KConfigXT]({{< relref "kconfig_xt" >}}) integration.
+You can read the linked API documentation to get a full description, and the KConfigXT page goes into more detail about how KConfigXT works.
 
 ## timesettings.cpp
 
