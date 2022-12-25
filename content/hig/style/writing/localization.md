@@ -24,6 +24,5 @@ Guidelines
     format, currencies etc.).
 -   Take cultural comprehension of icons (Red Cross vs. Red Crescent)
     into account.
--   Don't localize standard
-    [short-cuts](KDE_Visual_Design_Group/HIG/Keyboard_Shortcuts).
+-   Don't localize standard shortcuts.
 -   Be aware of intercultural (mis-)comprehension of acronyms.
