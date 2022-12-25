@@ -50,7 +50,7 @@ Guidelines
     Policy](https://community.kde.org/Policies/Telemetry_Policy) for
     details.
 -   Following KDE's "Simple by default, powerful when needed"
-    [design mantra](..), settings can
+    [design mantra]({{< relref "hig#design-vision" >}}) settings can
     be split into common and advanced groups. Advanced settings are not
     important to most users but essential for some. There therefore
     cannot be removed, but they can be de-emphasized in visual weight.
