@@ -8,9 +8,9 @@ aliases:
 
 ## Testing your flatpak
 
-So far you have read about the [kdeapps](https://invent.kde.org/packaging/flatpak-kde-applications) repository, about remoteapps, and that it all integrates with [Binary Factory](https://binary-factory.kde.org/), which is a Jenkins instance to manage continuous integration (CI). In the case of Flathub, the place that hosts your application manifest is one of thousands of repositories belonging to the [Flathub organization on Github](https://github.com/flathub) that is managed by the package maintainer, the flathub team, and in our case, the KDE flatpak team. The CI management tool is called [Buildbot](https://buildbot.flathub.org/). Both CI tools will trigger new builds upon new commits to the respective repository.
+So far you have read about the [kdeapps](https://invent.kde.org/packaging/flatpak-kde-applications) repository, about remoteapps, and that it all integrates with [Binary Factory](https://binary-factory.kde.org/), which is a Jenkins instance to manage continuous integration (CI). In the case of Flathub, the place that hosts your application manifest is one of thousands of repositories belonging to the [Flathub organization on Github](https://github.com/flathub) that is managed by the package maintainer, the Flathub team, and in our case, the KDE Flatpak team. The CI management tool is called [Buildbot](https://buildbot.flathub.org/). Both CI tools will trigger new builds upon new commits to the respective repository.
 
-It can be useful to checkout specific commits of the flatpak to figure out regressions in both packaging and the app. For such, flatpak allows you to downgrade your application to a specific commit or perform bisect on the flatpak commit log.
+It can be useful to checkout specific commits of the Flatpak to figure out regressions in both packaging and the app. For such, flatpak allows you to downgrade your application to a specific commit or perform bisect on the flatpak commit log.
 
 Downgrading your app is pretty trivial:
 
@@ -71,9 +71,9 @@ Portals are high-level session bus APIs that provide selective access to resourc
 
 Since such dialogs must fit into the user experience of the desktop shell, the portal APIs are implemented by a generic frontend called xdg-desktop-portal which calls out to desktop-specific implementations that provide the actual UI. The bus name through which the portal APIs are available is `org.freedesktop.portal.Desktop`, with the object path `/org/freedesktop/portal/desktop` implementing the various portal interfaces.
 
-The KDE backend for flatpak portals is called [xdg-desktop-portal-kde](https://invent.kde.org/plasma/xdg-desktop-portal-kde) and is now part of Plasma releases (starting with Plasma 5.10). Currently it supports most of the portals.
+The KDE backend for Flatpak portals is called [xdg-desktop-portal-kde](https://invent.kde.org/plasma/xdg-desktop-portal-kde) and is now part of Plasma releases (starting with Plasma 5.10). Currently it supports most of the portals.
 
-Generally speaking, portals will be important to you only if you are a flatpak maintainer who also contributes with code, and in particular neither libportal or xdg-desktop-portal will matter much to you as a developer who uses Qt/KDE Frameworks, only xdg-desktop-portal-kde.
+Generally speaking, portals will be important to you only if you are a Flatpak maintainer who also contributes with code, and in particular neither libportal or xdg-desktop-portal will matter much to you as a developer who uses Qt/KDE Frameworks, only xdg-desktop-portal-kde.
 
 We provide [a simple test app to showcase the use of portals](https://invent.kde.org/libraries/xdg-portal-test-kde). It gets more updates as we implement more portals.
 
@@ -112,9 +112,9 @@ You can see which portal has been called, whether it has been called or when you
 
 ### Theming
 
-By default, if your flatpak does not forcibly ship very custom themes, it should integrate properly with the user's system, especially on Plasma; furthermore, flatpak tries to be smart and install the required themes for the application to run well on your system if they are missing, such as the Breeze GTK Theme (`org.gtk.Gtk3theme.Breeze`) which is used by Electron apps. The user is expected *not* to set the flatpak's individual theme, but their system's theme, to integrate your application. Your flatpak will then attempt to match the installed flatpak theme to the system's theme.
+By default, if your Flatpak does not forcibly ship very custom themes, it should integrate properly with the user's system, especially on Plasma; furthermore, Flatpak tries to be smart and install the required themes for the application to run well on your system if they are missing, such as the Breeze GTK Theme (`org.gtk.Gtk3theme.Breeze`) which is used by Electron apps. The user is expected *not* to set the flatpak's individual theme, but their system's theme, to integrate your application. Your flatpak will then attempt to match the installed flatpak theme to the system's theme.
 
-However, it might still interest you to verify that your application looks good or whether it shows theming issues in other desktop environments. In such cases, you will want to search for KStyles or PlatformThemes on flathub and test your flatpak in that DE, for instance, the KStyle used to integrate your application to the GNOME High Contrast theme for accessibility, `org.kde.KStyle.HighContrast`.
+However, it might still interest you to verify that your application looks good or whether it shows theming issues in other desktop environments. In such cases, you will want to search for KStyles or PlatformThemes on Flathub and test your Flatpak in that DE, for instance, the KStyle used to integrate your application to the GNOME High Contrast theme for accessibility, `org.kde.KStyle.HighContrast`.
 
 
 
