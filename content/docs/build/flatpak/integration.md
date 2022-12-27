@@ -12,7 +12,7 @@ So far you have read about the [kdeapps](https://invent.kde.org/packaging/flatpa
 
 It can be useful to check out specific commits of the Flatpak to figure out regressions in both packaging and the app. For such, flatpak allows you to downgrade your application to a specific commit or perform bisect on the flatpak commit log.
 
-Downgrading your app is pretty trivial:
+Downgrading your app is quite simple:
 
 ```bash
 # Check the commit log
