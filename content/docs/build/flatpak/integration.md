@@ -21,7 +21,7 @@ flatpak remote-info --log flathub org.kde.yourapp
 flatpak update --commit ab1234 org.kde.yourapp
 ```
 
-And flatpak-bisect works similarly to git-bisect:
+And `flatpak-bisect` works similarly to `git bisect`:
 
 ```bash
 flatpak-bisect org.kde.yourapp start
