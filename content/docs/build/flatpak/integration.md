@@ -71,7 +71,7 @@ Portals allow a sandboxed application to interact with the rest of the system in
 
 Since such dialogs must fit into the user experience of the desktop shell, the portal APIs are implemented by a generic frontend called xdg-desktop-portal which calls out to desktop-specific implementations that provide the actual UI. The bus name through which the portal APIs are available is `org.freedesktop.portal.Desktop`, with the object path `/org/freedesktop/portal/desktop` implementing the various portal interfaces.
 
-The KDE backend for Flatpak portals is called [xdg-desktop-portal-kde](https://invent.kde.org/plasma/xdg-desktop-portal-kde) and has been included with Plasma since version Plasma 5.10. Currently it supports most of the portals.
+The KDE backend for Flatpak portals is called [xdg-desktop-portal-kde](https://invent.kde.org/plasma/xdg-desktop-portal-kde) and has been included with Plasma since version 5.10. Currently it supports most of the portals.
 
 Generally speaking, portals will be important to you only if you are a Flatpak maintainer who also contributes with code, and in particular neither libportal or xdg-desktop-portal will matter much to you as a developer who uses Qt/KDE Frameworks, only xdg-desktop-portal-kde.
 
