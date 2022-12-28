@@ -8,9 +8,9 @@ aliases:
 
 ## Testing your flatpak
 
-So far you have read about the [kdeapps](https://invent.kde.org/packaging/flatpak-kde-applications) repository, about remoteapps, and that it all integrates with [Binary Factory](https://binary-factory.kde.org/), which is a Jenkins instance to manage continuous integration (CI). In the case of Flathub, the place that hosts your application manifest is one of thousands of repositories belonging to the [Flathub organization on Github](https://github.com/flathub) that is managed by the package maintainer, the Flathub team, and in our case, the KDE Flatpak team. The CI management tool is called [Buildbot](https://buildbot.flathub.org/). Both CI tools will trigger new builds upon new commits to the respective repository.
+So far you have read about the [kdeapps](https://invent.kde.org/packaging/flatpak-kde-applications) repository, about remoteapps, and that it all integrates with [Binary Factory](https://binary-factory.kde.org/), which is a Jenkins instance to manage continuous integration (CI). In the case of Flathub, the place that hosts your application manifest is one of thousands of repositories belonging to the [Flathub organization on Github](https://github.com/flathub) that is managed by the package maintainer, the Flathub team, and in our case, the KDE Flatpak team. The CI management tool is called [Buildbot](https://buildbot.flathub.org/). Both CI tools will trigger a new build after every new commit in the respective repository.
 
-It can be useful to check out specific commits of the Flatpak to figure out regressions in both packaging and the app. For such, flatpak allows you to downgrade your application to a specific commit or perform bisect on the flatpak commit log.
+It can be useful to check out specific commits of the Flatpak to figure out regressions in both packaging and the app. For this purpose, flatpak allows you to downgrade your application to a specific commit or perform a bisect operation on the flatpak commit log.
 
 Downgrading your app is quite simple:
 
@@ -32,7 +32,7 @@ flatpak-bisect org.kde.yourapp checkout ab1234
 # Test your app and mark the commit as good or bad
 ```
 
-For more information about downgrading, bisect and others, check out the [Flatpak Tips and Tricks](https://docs.flatpak.org/en/latest/tips-and-tricks.html).
+For more information about downgrading, bisecting, and other operations, check out the [Flatpak Tips and Tricks](https://docs.flatpak.org/en/latest/tips-and-tricks.html).
 
 ### Debug and Locale
 
@@ -46,7 +46,7 @@ flatpak run --command=bash --devel org.kde.yourapp
 gdb /app/bin/yourappbinary
 ```
 
-The `.Locale` package comes with a default installation of your application, but can only be seen with `flatpak list --all`. It provides locale-specific files based on your default language or extra languages, which can be useful to check for internationalization issues like text wrapping, ellision and mistranslations. By default, flatpak will try to be smart and deduce the default language based on your locale settings, and the downloaded `.Locale` will only come with the languages listed in `languages` and `extra-languages` (if set), so a `flatpak update` is required to download more languages. For example:
+The `.Locale` package is installed alongside a normal installation of your application, but can only be seen with `flatpak list --all`. It provides locale-specific files based on your default language or extra languages, which can be useful to check for internationalization issues like text wrapping, elision, and mistranslations. By default, flatpak will try to be smart and deduce the default language based on your locale settings, and the downloaded `.Locale` will only include the languages listed in `languages` and `extra-languages` (if set), so a `flatpak update` is required to download more languages. For example:
 
 ```bash
 # Make the default language German
@@ -67,25 +67,25 @@ flatpak run --env=LC_ALL=es_ES org.kde.yourapp
 
 ### Flatpak Portals
 
-Portals are high-level session bus APIs that provide selective access to resources to sandboxed applications, provided by libportal. The implicit expectation of portals is that the user will always be involved in granting or rejecting a portal request, thus most portal APIs will lead to user interaction in the form of dialogs.
+Portals allow a sandboxed application to interact with the rest of the system in a way that is explicitly approved and directed by the user. They are high-level session bus APIs provided by the libportal. The implicit expectation of portals is that the user will always be involved in granting or rejecting a portal request; thus most portal APIs will lead to user interaction in the form of dialogs.
 
 Since such dialogs must fit into the user experience of the desktop shell, the portal APIs are implemented by a generic frontend called xdg-desktop-portal which calls out to desktop-specific implementations that provide the actual UI. The bus name through which the portal APIs are available is `org.freedesktop.portal.Desktop`, with the object path `/org/freedesktop/portal/desktop` implementing the various portal interfaces.
 
-The KDE backend for Flatpak portals is called [xdg-desktop-portal-kde](https://invent.kde.org/plasma/xdg-desktop-portal-kde) and is now part of Plasma releases (starting with Plasma 5.10). Currently it supports most of the portals.
+The KDE backend for Flatpak portals is called [xdg-desktop-portal-kde](https://invent.kde.org/plasma/xdg-desktop-portal-kde) and has been included with Plasma since version Plasma 5.10. Currently it supports most of the portals.
 
 Generally speaking, portals will be important to you only if you are a Flatpak maintainer who also contributes with code, and in particular neither libportal or xdg-desktop-portal will matter much to you as a developer who uses Qt/KDE Frameworks, only xdg-desktop-portal-kde.
 
-We provide [a simple test app to showcase the use of portals](https://invent.kde.org/libraries/xdg-portal-test-kde). It gets more updates as we implement more portals.
+KDE provides [a simple test app to showcase the use of portals](https://invent.kde.org/libraries/xdg-portal-test-kde). It gets more updates as support for more portals is implemented.
 
-Qt apps should require very few tweaks to utilize portals, if any, and your app will probably already integrate correctly from the start, so simple it is.
+Qt-based apps should require few if any tweaks to utilize portals, and your app will probably already integrate correctly from the start. But it is important to test and verify this.
 
-Qt without portals already tries to use the native file dialog by default. For portals to be used in the flatpak, use the QtWidgets [QFileDialog](https://doc.qt.io/qt-6/qfiledialog.html) class and the QtQuick.Dialogs [FileDialog](https://doc.qt.io/qt-6/qml-qtquick-dialogs-filedialog.html) type.
+Qt without portals already tries to use the native file dialog by default--meaning the KDE file dialog when the app is run on Plasma, and the GTK file dialog when run on GNOME. This works for portalized Flatpak apps too, as long as you are using the correct APIs: QtWidgets' [QFileDialog](https://doc.qt.io/qt-6/qfiledialog.html) in C++ code, and the QtQuick.Dialogs [FileDialog](https://doc.qt.io/qt-6/qml-qtquick-dialogs-filedialog.html) component in QML code.
 
 For native notifications, you should use [KNotification](https://api.kde.org/frameworks/knotifications/html/classKNotification.html). Use [`QDesktopServices::openUrl(const QUrl &url)`](https://doc.qt.io/qt-6/qdesktopservices.html#openUrl) or [KIO::OpenUrlJob](https://api.kde.org/frameworks/kio/html/classKIO_1_1OpenUrlJob.html) to open URIs or send an email when using `mailto`.
 
 For global menus to work, you simply use [QMenuBar](https://doc.qt.io/qt-6/qmenubar.html) or a helper class that manages them for you, as is the case with [QMainWindow](https://doc.qt.io/qt-6/qmainwindow.html) and [KXmlGuiWindow](https://api.kde.org/frameworks/kxmlgui/html/classKXmlGuiWindow.html).
 
-In order to debug portals in your application, you must first kill the running `xdg-desktop-portal-kde` instance, then start `xdg-desktop-portal-kde` with:
+To debug issues with portals in your application, you must first kill the running `xdg-desktop-portal-kde` instance, then start `xdg-desktop-portal-kde` with:
 
 ```bash
 QT_LOGGING_RULES='xdg-desktop*.debug=true' /usr/lib/$(uname -m)-linux-gnu/libexec/xdg-desktop-portal-kde
@@ -108,13 +108,13 @@ xdg-desktop-portal-kde-file-chooser:     title:  "Flatpak test - open dialog"
 xdg-desktop-portal-kde-file-chooser:     options:  QMap(("accept_label", QVariant(QString, "Open (portal)"))("filters", QVariant(QDBusArgument, ))("modal", QVariant(bool, true))("multiple", QVariant(bool, true)))
 ```
 
-You can see which portal has been called, whether it has been called or when you check output from xdg-desktop-portal then you should see a message in case of portal error (usually related to DBus). You can also monitor dbus messages using `dbus-monitor`, which indicates whether portals get involved at all as everything goes through DBus.
+You can see which portals have been requested by the application, and any error messages (often related to DBus). You can also monitor DBus messages using `dbus-monitor`, which indicates whether portals get involved at all, as everything goes through DBus.
 
 ### Theming
 
-By default, if your Flatpak does not forcibly ship very custom themes, it should integrate properly with the user's system, especially on Plasma; furthermore, Flatpak tries to be smart and install the required themes for the application to run well on your system if they are missing, such as the Breeze GTK Theme (`org.gtk.Gtk3theme.Breeze`) which is used by Electron apps. The user is expected *not* to set the flatpak's individual theme, but their system's theme, to integrate your application. Your flatpak will then attempt to match the installed flatpak theme to the system's theme.
+If your Flatpak does not hardcode is own app-specific theme, it should integrate properly with the user's system, especially on Plasma, where user theming is common. Flatpak tries to be smart and install the required themes for the application to run well on your system if they are missing, such as the Breeze GTK Theme (`org.gtk.Gtk3theme.Breeze`) which is used by Electron apps. The user is expected *not* to set the flatpak's individual theme, but their system's theme, to integrate your application. Your flatpak will then attempt to match the installed flatpak theme to the system's theme.
 
-However, it might still interest you to verify that your application looks good or whether it shows theming issues in other desktop environments. In such cases, you will want to search for KStyles or PlatformThemes on Flathub and test your Flatpak in that DE, for instance, the KStyle used to integrate your application to the GNOME High Contrast theme for accessibility, `org.kde.KStyle.HighContrast`.
+However, it is still a good idea to test your application in other desktop environments to ensure that it looks good and doesn't exhibit any theming issues. In such cases, you will want to search for KStyles or PlatformThemes on Flathub and test your Flatpak in that DE. For example, the `org.kde.KStyle.HighContrast` KStyle is used to integrate your application with the GNOME High Contrast theme.
 
 
 
