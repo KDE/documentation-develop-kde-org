@@ -69,7 +69,7 @@ Guidelines
 -   Provide icons for all menu items. Don't re-use the same icon for
     multiple items.
 -   For your menu items' text, follow the
-    [general label guidelines][/hig/style/writing/labels).
+    [general label guidelines]({{< relref "labels" >}}).
 -   Don't change menu items' labels dynamically.
 -   Choose single word names for menu categories. Using multiple words
     makes the separation between categories confusing.

@@ -81,4 +81,4 @@ Guidelines
     The actions are grouped along their context of use, not along
     technical relations.
 -   Provide a title to each section.
--   Follow the guidelines for [alignment][/hig/layout/alignment).
+-   Follow the guidelines for [alignment]({{< relref "alignment" >}}).
