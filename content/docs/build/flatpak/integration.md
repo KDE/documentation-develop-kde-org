@@ -79,7 +79,7 @@ KDE provides [a simple test app to showcase the use of portals](https://invent.k
 
 Qt-based apps should require few if any tweaks to utilize portals, and your app will probably already integrate correctly from the start. But it is important to test and verify this.
 
-Qt without portals already tries to use the native file dialog by default--meaning the KDE file dialog when the app is run on Plasma, and the GTK file dialog when run on GNOME. This works for portalized Flatpak apps too, as long as you are using the correct APIs: QtWidgets' [QFileDialog](https://doc.qt.io/qt-6/qfiledialog.html) in C++ code, and the QtQuick.Dialogs [FileDialog](https://doc.qt.io/qt-6/qml-qtquick-dialogs-filedialog.html) component in QML code.
+Qt without portals already tries to use the native file dialog by default&mdash;meaning the KDE file dialog when the app is run on Plasma, and the GTK file dialog when run on GNOME. This works for portalized Flatpak apps too, as long as you are using the correct APIs: QtWidgets' [QFileDialog](https://doc.qt.io/qt-6/qfiledialog.html) in C++ code, and the QtQuick.Dialogs [FileDialog](https://doc.qt.io/qt-6/qml-qtquick-dialogs-filedialog.html) component in QML code.
 
 For native notifications, you should use [KNotification](https://api.kde.org/frameworks/knotifications/html/classKNotification.html). Use [`QDesktopServices::openUrl(const QUrl &url)`](https://doc.qt.io/qt-6/qdesktopservices.html#openUrl) or [KIO::OpenUrlJob](https://api.kde.org/frameworks/kio/html/classKIO_1_1OpenUrlJob.html) to open URIs or send an email when using `mailto`.
 
