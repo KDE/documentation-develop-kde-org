@@ -85,30 +85,29 @@ For native notifications, you should use [KNotification](https://api.kde.org/fra
 
 For global menus to work, you simply use [QMenuBar](https://doc.qt.io/qt-6/qmenubar.html) or a helper class that manages them for you, as is the case with [QMainWindow](https://doc.qt.io/qt-6/qmainwindow.html) and [KXmlGuiWindow](https://api.kde.org/frameworks/kxmlgui/html/classKXmlGuiWindow.html).
 
-To debug issues with portals in your application, you must first kill the running `xdg-desktop-portal-kde` instance, then start `xdg-desktop-portal-kde` with:
+In order to get debug messages related to portals in your application, we first need to make a few changes to the services that manage portals:
 
-```bash
-QT_LOGGING_RULES='xdg-desktop*.debug=true' /usr/lib/$(uname -m)-linux-gnu/libexec/xdg-desktop-portal-kde
-```
+* Run `systemctl edit --full --user plasma-xdg-desktop-portal-kde`
+* Add the `Environment="QT_LOGGING_RULES=xdg-desktop*.debug=true"` line under the `[Service]` section
+* Add the `StandardOutput=journal` line under the `[Service]` section
+* Add the `StandardError=journal` line under the `[Service]` section
+* Save and close the editor
 
-then in another terminal session restart xdg-desktop-portal with:
+* Run `systemctl edit --user --full xdg-desktop-portal`
+* Add `--verbose` to the end of the `ExecStart` line
+* Add the `StandardOutput=journal` line under the `[Service]` section
+* Add the `StandardError=journal` line under the `[Service]` section
+* Add the `Environment="G_MESSAGES_DEBUG=all"` line under the `[Service]` section
+* Save and close the editor
 
-```bash
-G_MESSAGES_DEBUG=all /usr/libexec/xdg-desktop-portal --verbose --replace
-```
+* Run `systemctl restart --user plasma-xdg-desktop-portal-kde`
+* Run `systemctl restart --user xdg-desktop-portal`
 
-You should then see debug output similar to:
+Then, by running `journalctl --follow` in a terminal window and running any portal-using application (such as flatpaks) it is possible to see which portals have been requested by the application, and any error messages (often related to DBus). Likewise, you may filter the log to only `xdg-desktop-portal` or `plasma-xdg-desktop-portal-kde` with `journalctl --user-unit <service here>`. You can also monitor DBus messages using `dbus-monitor`, which indicates whether portals get involved at all, as everything goes through DBus.
 
-```bash
-xdg-desktop-portal-kde: Desktop portal registered successfuly
-xdg-desktop-portal-kde-file-chooser: OpenFile called with parameters:
-xdg-desktop-portal-kde-file-chooser:     handle:  "/org/freedesktop/portal/desktop/request/1_255/t"
-xdg-desktop-portal-kde-file-chooser:     parent_window:  "x11:1"
-xdg-desktop-portal-kde-file-chooser:     title:  "Flatpak test - open dialog"
-xdg-desktop-portal-kde-file-chooser:     options:  QMap(("accept_label", QVariant(QString, "Open (portal)"))("filters", QVariant(QDBusArgument, ))("modal", QVariant(bool, true))("multiple", QVariant(bool, true)))
-```
-
-You can see which portals have been requested by the application, and any error messages (often related to DBus). You can also monitor DBus messages using `dbus-monitor`, which indicates whether portals get involved at all, as everything goes through DBus.
+{{< alert title="Note" color="info" >}}
+If the debug output gets overly polluted, you can disable standard output or standard error logging easily by editing the service again.
+{{< /alert >}}
 
 ### Theming
 
