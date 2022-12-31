@@ -81,7 +81,7 @@ Qt-based apps should require few if any tweaks to utilize portals, and your app 
 
 Qt without portals already tries to use the native file dialog by default&mdash;meaning the KDE file dialog when the app is run on Plasma, and the GTK file dialog when run on GNOME. This works for portalized Flatpak apps too, as long as you are using the correct APIs: QtWidgets' [QFileDialog](https://doc.qt.io/qt-6/qfiledialog.html) in C++ code, and the QtQuick.Dialogs [FileDialog](https://doc.qt.io/qt-6/qml-qtquick-dialogs-filedialog.html) component in QML code.
 
-For native notifications, you should use [KNotification](https://api.kde.org/frameworks/knotifications/html/classKNotification.html). Use [`QDesktopServices::openUrl(const QUrl &url)`](https://doc.qt.io/qt-6/qdesktopservices.html#openUrl) or [KIO::OpenUrlJob](https://api.kde.org/frameworks/kio/html/classKIO_1_1OpenUrlJob.html) to open URIs or send an email when using `mailto`.
+For native notifications, you should use [KNotification](https://api.kde.org/frameworks/knotifications/html/classKNotification.html). Use [QDesktopServices::openUrl(const QUrl &url)](https://doc.qt.io/qt-6/qdesktopservices.html#openUrl) or [KIO::OpenUrlJob](https://api.kde.org/frameworks/kio/html/classKIO_1_1OpenUrlJob.html) to open URIs or send an email when using `mailto`.
 
 For global menus to work, you simply use [QMenuBar](https://doc.qt.io/qt-6/qmenubar.html) or a helper class that manages them for you, as is the case with [QMainWindow](https://doc.qt.io/qt-6/qmainwindow.html) and [KXmlGuiWindow](https://api.kde.org/frameworks/kxmlgui/html/classKXmlGuiWindow.html).
 
@@ -112,7 +112,7 @@ You can see which portals have been requested by the application, and any error 
 
 ### Theming
 
-If your Flatpak does not hardcode is own app-specific theme, it should integrate properly with the user's system, especially on Plasma, where user theming is common. Flatpak tries to be smart and install the required themes for the application to run well on your system if they are missing, such as the Breeze GTK Theme (`org.gtk.Gtk3theme.Breeze`) which is used by Electron apps. The user is expected *not* to set the flatpak's individual theme, but their system's theme, to integrate your application. Your flatpak will then attempt to match the installed flatpak theme to the system's theme.
+If your Flatpak does not hardcode its own app-specific theme, it should integrate properly with the user's system, especially on Plasma, where user theming is common. Flatpak tries to be smart and install the required themes for the application to run well on your system if they are missing, such as the Breeze GTK Theme (`org.gtk.Gtk3theme.Breeze`) which is used by Electron apps. The user is expected *not* to set the flatpak's individual theme, but their system's theme, to integrate your application. Your flatpak will then attempt to match the installed flatpak theme to the system's theme.
 
 However, it is still a good idea to test your application in other desktop environments to ensure that it looks good and doesn't exhibit any theming issues. In such cases, you will want to search for KStyles or PlatformThemes on Flathub and test your Flatpak in that DE. For example, the `org.kde.KStyle.HighContrast` KStyle is used to integrate your application with the GNOME High Contrast theme.
 
