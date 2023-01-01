@@ -57,7 +57,7 @@ Kirigami.AbstractCard {
 				// Column spanning within grid layout (vertically in this case)
 				Layout.columnSpan: 2
 				text: i18n("Edit")
-				onClicked: openPopulateSheet("edit", index, name, description, date = new Date(date).toISOString().slice(0,10))
+				onClicked: openPopulateSheet("edit", index, name, description, new Date(date).toISOString().slice(0,10))
 			}
 		}
 	}
