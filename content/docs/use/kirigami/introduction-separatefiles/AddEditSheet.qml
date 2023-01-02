@@ -11,9 +11,9 @@ Kirigami.OverlaySheet {
 	property string mode: "add"
 	
 	property int index: -1
-	property string name: ""
-	property string description: ""
-	property string kdate: ""
+	property alias name: nameField.text
+    property alias description: descriptionField.text
+    property alias kdate: dateField.text
 	
 	// Signals can be read and certain actions performed when these happen
 	signal added (string name, string description, var kdate)
@@ -36,14 +36,12 @@ Kirigami.OverlaySheet {
 			placeholderText: i18n("Event name (required)")
 			// What to do after input is accepted (i.e. pressed enter)
 			// In this case, it moves the focus to the next field
-			text: mode === "add" ? "" : name
 			onAccepted: descriptionField.forceActiveFocus()
 		}
 		Controls.TextField {
 			id: descriptionField
 			Kirigami.FormData.label: i18nc("@label:textbox", "Description:")
 			placeholderText: i18n("Optional")
-			text: mode === "add" ? "" : description
 			onAccepted: dateField.forceActiveFocus()
 		}
 		Controls.TextField {
@@ -51,7 +49,6 @@ Kirigami.OverlaySheet {
 			Kirigami.FormData.label: i18nc("@label:textbox", "Date:")
 			inputMask: "0000-00-00"
 			placeholderText: i18n("YYYY-MM-DD")
-			text: mode === "add" ? "" : kdate
 		}
 		// This is a button.
 		Controls.Button {

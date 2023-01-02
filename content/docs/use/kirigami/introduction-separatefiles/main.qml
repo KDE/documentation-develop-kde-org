@@ -46,15 +46,14 @@ Kirigami.ApplicationWindow {
 		onRemoved: kountdownModel.remove(index, 1)
 	}
 
-	// Function called by 'edit' button on card
+	// Function called by 'edit' button on card and by 'add'-Action
 	function openPopulateSheet(mode, index = -1, listName = "", listDesc = "", listDate = "") {
 		addEditSheet.mode = mode
-		if(mode === "edit") {
-			addEditSheet.index = index;
-			addEditSheet.name = listName
-			addEditSheet.description = listDesc
-			addEditSheet.kdate = listDate
-		}
+		addEditSheet.index = index;
+		addEditSheet.name = listName
+		addEditSheet.description = listDesc
+		addEditSheet.kdate = listDate
+
 		addEditSheet.open()
 	}
 
