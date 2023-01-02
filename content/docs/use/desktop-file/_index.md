@@ -45,5 +45,5 @@ If you are using KDE infrastructure, this is done automatically by `scripty`, th
 In you CMakeLists.txt file, you can add the following lines to install your .desktop file:
 
 ```cmake
-install(PROGRAMS org.example.my-app.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(FILES org.example.my-app.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 ```
