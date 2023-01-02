@@ -1,16 +1,16 @@
 ---
 title: Flatpak integration
-description: Understanding the flatpak software stack
+description: Understanding the Flatpak software stack
 weight: 4
 aliases:
   - /docs/flatpak/integration/
 ---
 
-## Testing your flatpak
+## Testing your Flatpak
 
 So far you have read about the [kdeapps](https://invent.kde.org/packaging/flatpak-kde-applications) repository, about remoteapps, and that it all integrates with [Binary Factory](https://binary-factory.kde.org/), which is a Jenkins instance to manage continuous integration (CI). In the case of Flathub, the place that hosts your application manifest is one of thousands of repositories belonging to the [Flathub organization on Github](https://github.com/flathub) that is managed by the package maintainer, the Flathub team, and in our case, the KDE Flatpak team. The CI management tool is called [Buildbot](https://buildbot.flathub.org/). Both CI tools will trigger a new build after every new commit in the respective repository.
 
-It can be useful to check out specific commits of the Flatpak to figure out regressions in both packaging and the app. For this purpose, flatpak allows you to downgrade your application to a specific commit or perform a bisect operation on the flatpak commit log.
+It can be useful to check out specific commits of the Flatpak to figure out regressions in both packaging and the app. For this purpose, Flatpak allows you to downgrade your application to a specific commit or perform a bisect operation on the Flatpak commit log.
 
 Downgrading your app is quite simple:
 
@@ -38,7 +38,7 @@ For more information about downgrading, bisecting, and other operations, check o
 
 For every package that is created using `flatpak-builder`, a `.Debug` and a `.Locale` package are automatically generated. This is true for both local compilation and CI-compiled packages.
 
-The `.Debug` package needs to be explicitly installed before it can be used, and it provides debug symbols for [debugging](https://docs.flatpak.org/en/latest/debugging.html) with tools like `gdb` inside the flatpak, like so:
+The `.Debug` package needs to be explicitly installed before it can be used, and it provides debug symbols for [debugging](https://docs.flatpak.org/en/latest/debugging.html) with tools like `gdb` inside the Flatpak, like so:
 
 ```bash
 flatpak install org.kde.yourapp.Debug
@@ -46,7 +46,7 @@ flatpak run --command=bash --devel org.kde.yourapp
 gdb /app/bin/yourappbinary
 ```
 
-The `.Locale` package is installed alongside a normal installation of your application, but can only be seen with `flatpak list --all`. It provides locale-specific files based on your default language or extra languages, which can be useful to check for internationalization issues like text wrapping, elision, and mistranslations. By default, flatpak will try to be smart and deduce the default language based on your locale settings, and the downloaded `.Locale` will only include the languages listed in `languages` and `extra-languages` (if set), so a `flatpak update` is required to download more languages. For example:
+The `.Locale` package is installed alongside a normal installation of your application, but can only be seen with `flatpak list --all`. It provides locale-specific files based on your default language or extra languages, which can be useful to check for internationalization issues like text wrapping, elision, and mistranslations. By default, Flatpak will try to be smart and deduce the default language based on your locale settings, and the downloaded `.Locale` will only include the languages listed in `languages` and `extra-languages` (if set), so a `flatpak update` is required to download more languages. For example:
 
 ```bash
 # Make the default language German
@@ -111,7 +111,7 @@ If the debug output gets overly polluted, you can disable standard output or sta
 
 ### Theming
 
-If your Flatpak does not hardcode its own app-specific theme, it should integrate properly with the user's system, especially on Plasma, where user theming is common. Flatpak tries to be smart and install the required themes for the application to run well on your system if they are missing, such as the Breeze GTK Theme (`org.gtk.Gtk3theme.Breeze`) which is used by Electron apps. The user is expected *not* to set the flatpak's individual theme, but their system's theme, to integrate your application. Your flatpak will then attempt to match the installed flatpak theme to the system's theme.
+If your Flatpak does not hardcode its own app-specific theme, it should integrate properly with the user's system, especially on Plasma, where user theming is common. Flatpak tries to be smart and install the required themes for the application to run well on your system if they are missing, such as the Breeze GTK Theme (`org.gtk.Gtk3theme.Breeze`) which is used by Electron apps. The user is expected *not* to set the Flatpak's individual theme, but their system's theme, to integrate your application. Your Flatpak will then attempt to match the installed Flatpak theme to the system's theme.
 
 However, it is still a good idea to test your application in other desktop environments to ensure that it looks good and doesn't exhibit any theming issues. In such cases, you will want to search for KStyles or PlatformThemes on Flathub and test your Flatpak in that DE. For example, the `org.kde.KStyle.HighContrast` KStyle is used to integrate your application with the GNOME High Contrast theme.
 
