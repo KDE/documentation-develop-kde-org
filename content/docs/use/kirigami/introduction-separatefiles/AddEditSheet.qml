@@ -12,8 +12,8 @@ Kirigami.OverlaySheet {
 	
 	property int index: -1
 	property alias name: nameField.text
-    property alias description: descriptionField.text
-    property alias kdate: dateField.text
+	property alias description: descriptionField.text
+	property alias kdate: dateField.text
 	
 	// Signals can be read and certain actions performed when these happen
 	signal added (string name, string description, var kdate)
