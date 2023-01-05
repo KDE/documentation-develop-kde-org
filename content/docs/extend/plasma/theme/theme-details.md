@@ -419,7 +419,7 @@ Each theme contains following file structure. All files can be in either `.svg` 
     * If you want to create different background for panels located at the top, bottom, left or right, then also create sets of background elements with the following prefixes: `north`, `south`, `west` and `east` respectively. For example the center element of the left positioned panel's background should be named `west-center`.
     <!--*** When the panel is not 100% wide/tall the north, south etc. prefixes becomes *north-mini*, *south-mini* etc. . Please note that if KRunner <menuchoice>Positioning</menuchoice> is set to <menuchoice>Top edge of screen</menuchoice> (which is default), then Plasma treats it as not 100% wide north panel.-->
     * All prefixes fallback to a no prefix version when not available
-    * if a prefix called `shadow` is available, it will be used as a drop shadow for the panel when compositing is available.
+    * If a prefix called `shadow` is available, it will be used as a drop shadow for the panel when compositing is available.
     * If an element called `floating-center` is present, elements named `floating-hint-[direction]-margin` (where `direction` is one of `top`, `bottom`, `left` or `right`) set to a specific width and height can be used to specify the margins panels should have in floating mode.
   * **/plasmoidheading.svg**: The header or footer of a widget/notification popup. It has 2 frames with the following prefixes:
     * `header`: most widgets have the heading at the top
