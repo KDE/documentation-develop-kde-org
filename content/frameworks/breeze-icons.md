@@ -14,7 +14,7 @@ The Breeze icons guidelines are described at [hig.kde.org](https://hig.kde.org).
 
 ## License
 The icons may be freely shared, modified and copied under the GNU LGPL version 3.  If you use them in your app or website please include a link back to this page and a statement such as:
-"[Breeze icons](https://www.kde.org/products/frameworks/breeze-icons) copyright KDE and licenced under the GNU LGPL version 3 or later".
+"[Breeze icons](https://api.kde.org/frameworks/breeze-icons/html/index.html) copyright KDE and licenced under the GNU LGPL version 3 or later".
 
 ## Web Usage
 Icons in the Actions category can be used as a webfont by including `icons.css` hosted on the [KDE CDN](https://cdn.kde.org/breeze-icons/).

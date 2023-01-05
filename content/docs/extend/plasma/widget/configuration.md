@@ -613,7 +613,7 @@ To learn by example, we can look at a couple widgets:
 
 Zren has written a few files that apply the above pattern of skipping "Apply" and updating right after you change the value.
 
-[https://github.com/Zren/plasma-applet-lib/.../libconfig/](https://github.com/Zren/plasma-applet-lib/tree/master/package/contents/ui/libconfig)
+[https://github.com/Zren/plasma-applet-lib/tree/master/package/contents/ui/libconfig](https://github.com/Zren/plasma-applet-lib/tree/master/package/contents/ui/libconfig)
 
 * [libconfig/CheckBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/CheckBox.qml) for on/off booleans values.
 * [libconfig/ColorField.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/ColorField.qml) for use with a `String` or `Color` config data type. If you use use a `String` data type, you can treat an empty string as a certain color theme color. Eg:

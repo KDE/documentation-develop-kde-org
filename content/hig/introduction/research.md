@@ -79,10 +79,10 @@ More Information
 ----------------
 
 [Short introduction to user personas on
-Usability.gov](http://www.usability.gov/analyze/personas.html)
+Usability.gov](https://www.usability.gov/how-to-and-tools/methods/personas.html)
 
 [In-depth discussion about creating personas on Boxes and
-Arrows](http://www.boxesandarrows.com/view/making_personas_more_powerful_details_to_drive_strategic_and_tactical_design)
+Arrows](https://boxesandarrows.com/making-personas-more-powerful-details-to-drive-strategic-and-tactical-design/)
 
 Still Need Help?
 ----------------

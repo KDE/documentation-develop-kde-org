@@ -17,12 +17,12 @@ layout: platform
     <div class="col d-flex flex-column">
       <h3>Plasma Mobile documentation</h3>
       <p>lorem impsum</p>
-      <div class="mt-auto"><a href="https://docs.plasma-mobile.org" class="learn-more">Learn Plasma Mobile Development</a></div>
+      <div class="mt-auto"><a href="https://invent.kde.org/plasma/plasma-mobile/-/wikis/home" class="learn-more">Learn Plasma Mobile Development</a></div>
     </div>
     <div class="col d-flex flex-column">
       <h3>Plasma Mobile communication</h3>
       <p>Learn how to create powerfull and convergent user interface</p>
-      <div class="mt-auto"><a href="https://docs.plasma-mobile.org" class="learn-more">Join the development channel</a></div>
+      <div class="mt-auto"><a href="https://matrix.to/#/#plasmamobile:matrix.org" class="learn-more">Join the development channel</a></div>
     </div>
   </div>
 </div>

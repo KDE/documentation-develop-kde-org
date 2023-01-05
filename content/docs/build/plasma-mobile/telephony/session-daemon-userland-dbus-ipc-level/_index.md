@@ -24,7 +24,7 @@ The tasks of the session side daemons are (but not limited to):
 
 #### eg25-manager
 
-[eg25-manager](https://gitlab.com/mobian1/devices/eg25-manager) is a daemon to handle low-power modes of the Quectel EG25 via ModemManager. It's used for the Pinephone.
+[eg25-manager](https://gitlab.com/mobian1/eg25-manager) is a daemon to handle low-power modes of the Quectel EG25 via ModemManager. It's used for the Pinephone.
 
 #### kop316 projects
 

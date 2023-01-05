@@ -265,8 +265,6 @@ Confirm the following information is included in the documentation:
 
 {{< alert color="info" title="Note" >}}
 
-The content of this page is based on
-[\<https://developer.gnome.org/accessibility-devel-guide/3.32/\\
-accessibility-devel-guide.html\>]()
+The content of this page is based on <https://developer.gnome.org/hig/guidelines/accessibility.html>
 
 {{< /alert >}}

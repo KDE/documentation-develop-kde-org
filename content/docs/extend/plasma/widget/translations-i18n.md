@@ -310,7 +310,7 @@ The messages we want to translate appear as `msgid "Show Thing"`, with the file 
 msgid ""
 msgstr ""
 "Project-Id-Version: helloworld \n"
-"Report-Msgid-Bugs-To: https://github.com/Zren/plasmoid-helloworld\n"
+"Report-Msgid-Bugs-To: https://github.com/Zren/plasmoid-helloworldplugin\n"
 "POT-Creation-Date: 2018-12-03 18:47-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"

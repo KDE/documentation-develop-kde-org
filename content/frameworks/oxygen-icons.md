@@ -10,7 +10,7 @@ Oxygen-icons is a freedesktop.org compatible icon theme. Its sources are hosted 
 
 ## License
 The icons may be freely shared, modified and copied under the GNU LGPL version 3.  If you use them in your app or website please include a link back to this page and a statement such as:
-"[Oxygen icons](https://www.kde.org/products/frameworks/oxygen-icons) copyright KDE and licenced under the GNU LGPL version 3 or later".
+"[Oxygen icons](https://api.kde.org/frameworks/oxygen-icons5/html/index.html) copyright KDE and licenced under the GNU LGPL version 3 or later".
 
 ## Download
 The full collection of Breeze Icons can be downloaded as part of [KDE Frameworks](https://download.kde.org/stable/frameworks/).

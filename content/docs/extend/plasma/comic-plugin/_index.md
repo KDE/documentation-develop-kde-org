@@ -159,7 +159,7 @@ For this you can use `comic.combine(image, position)`. `image` needs to be an im
 
 `image` will be combined with the last downloaded image -- `comic.pageRequest(url, comic.Image)`. The position defines, where `image` will be placed. That way you can combine multiple images.
 
-The following code is taken from the [Deo Ignito](http://www.kde-files.org/content/show.php/Deo+Ignito+(fr)?content=92428) comic plugin. I removed parts that are not necessary for explaining this function, added some comments and pseudo code.
+The following code is taken from the Deo Ignito comic plugin. I removed parts that are not necessary for explaining this function, added some comments and pseudo code.
 
 ```js
 const firstImage = 0;

@@ -16,7 +16,7 @@ Since its inception, Plasma Mobile has used the oFono stack for telephony functi
 
 With [Plasma Mobile Gear 21.10 release](https://www.plasma-mobile.org/blog/), we are transitioning our telephony stack to ModemManager.
 
-[Both](https://lists.ofono.org/hyperkitty/list/ofono@ofono.org/thread/OMC2GMOHMWXYNQOOSBKQH5VVIE4HVBXD/?sort=date) oFono and ModemManager are popular frameworks for the Telephony stack.
+Both oFono and ModemManager are popular frameworks for the Telephony stack.
 
 #### ModemManager
 
@@ -37,7 +37,7 @@ It is currently used by projects like Ubuntu Touch and Sailfish, which maintain 
 oFono and ModemManager share similar goals in providing unified API for accessing modem devices via DBus.
 However, the pace of development has been slow upstream for oFono, with our usage depending on a series of patches in order to have it working.
 
-ModemManager has generally been better in that regard, with active development and new devices being upstreamed. There's also the [eg25-manager](https://gitlab.com/mobian1/devices/eg25-manager) project for the PinePhone's Quectel EG25 mobile broadband modem, which depends on ModemManager and provides support for low-power modes. 
+ModemManager has generally been better in that regard, with active development and new devices being upstreamed. There's also the [eg25-manager](https://gitlab.com/mobian1/eg25-manager) project for the PinePhone's Quectel EG25 mobile broadband modem, which depends on ModemManager and provides support for low-power modes.
 
 The main drawback of switching off oFono, is that it is the only option for Halium devices.
 However, due to our recent decision to drop Halium support, this factor is no longer a constraint. (See also: [kernel layer paragraph of the documentation](../kernel-layer))

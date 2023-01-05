@@ -82,7 +82,7 @@ For the other properties, read the [`metadata.json` section in the Widget Proper
             "Plasma/Applet"
         ],
         "Version": "1",
-        "Website": "https://github.com/Zren/plasmoid-helloworld"
+        "Website": "https://github.com/Zren/plasmoid-helloworldplugin"
     },
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/main.qml"
