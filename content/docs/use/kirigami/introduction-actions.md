@@ -101,7 +101,7 @@ Since we are keeping our global drawer simple for now, we are setting the `isMen
 
 {{< alert title="Note" color="info" >}}
 
-The ['Actions']({{< relref "components-actions" >}}) page in the 'Components' section of these docs provides further detail on Kirigami actions and how they can be used.
+The ['Actions'](/docs/kirigami/components-actions/) page in the 'Components' section of these docs provides further detail on Kirigami actions and how they can be used.
 
 {{< /alert >}}
 
