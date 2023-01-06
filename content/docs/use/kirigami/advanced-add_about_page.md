@@ -51,7 +51,6 @@ In the `.cpp` file we just include the `.h` file.
 ```C++
 ...
 #include <KAboutData>
-#include "config-helloworld.h"
 
 #include "about.h"
 
@@ -65,7 +64,7 @@ int main(int argc, char *argv[])
                          // A displayable program name string.
                          i18nc("@title", "Hello World"),
                          // The program version string.
-                         QStringLiteral(HELLOWORLD_VERSION_STRING),
+                         QStringLiteral("1.0"),
                          // Short description of what the app does.
                          i18n("Hello world application"),
                          // The license this code is released under.
@@ -77,7 +76,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    qmlRegisterSingletonType<AboutType>("org.kde.helloworld", 1, 0, "AboutType", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+    qmlRegisterSingletonType<AboutType>("org.kde.example", 1, 0, "AboutType", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
@@ -89,8 +88,6 @@ int main(int argc, char *argv[])
 
 In the cpp file we include `KAboutData` and the `.h` file we just created, [KAboutData](docs:kcoreaddons;KAboutData) is a core KDE Frameworks component that stores information about an application, which can then be reused by many other KDE Frameworks components. We instantiate a new `KAboutData` object with its fairly complete default constructor and add author information.
 
-
-We also include this `config-helloworld.h` file which gives us this `HELLOWORLD_VERSION_STRING` variable that we'll set later in this tutorial.
 
 After all the required information has been set, we call `KAboutData::setApplicationData` to initialize the properties of the [QApplication ](https://doc.qt.io/qt-5/qapplication.html) object.
 
@@ -104,7 +101,7 @@ In the `qmlRegisterSingletonType` lambda we just return a new `AboutType` object
 
 ```QML
 ...
-import org.kde.helloworld 1.0
+import org.kde.example 1.0
 
 Kirigami.ApplicationWindow {
     ...
@@ -132,7 +129,7 @@ Kirigami.ApplicationWindow {
 }
 ```
 
-First, we import the package we defined in the `main.cpp` file, add a `Kirigami.Action` to our global drawer that will send us to the about page and create a component with a `Kirigami.AboutPage` in it, the About Page only have one property: `aboutData`, we then pass `Conrtoller.aboutData` to it.
+First, we import the package we defined in the `main.cpp` file, add a `Kirigami.Action` to our global drawer that will send us to the about page and create a component with a `Kirigami.AboutPage` in it, the About Page only have one property: `aboutData`, we then pass `AboutType.aboutData` to it.
 
 
 ### CMakeLists
@@ -140,33 +137,20 @@ First, we import the package we defined in the `main.cpp` file, add a `Kirigami.
 ```CMAKE
 ...
 project(helloworld)
-set(PROJECT_VERSION "1.0")
-
-...
-include(ECMSetupVersion)
-include(ECMGenerateHeaders)
-include(ECMPoQmTools)
-...
-
-ecm_setup_version(${PROJECT_VERSION}
-    VARIABLE_PREFIX HELLOWORLD
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/config-helloworld.h"
-)
-
 ...
 find_package(KF5 ${KF_MIN_VERSION} ... CoreAddons)
 ...
 ```
 
-In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to the `find_package` module. You'll also want to add these three `ECM` includes which will allow us to use the `ecm_setup_version` function, this function let's use the `PROJECT_VERSION` variable in our code so we only need to change one variable when bumping up versions.
+In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to the `find_package` module. 
 
 ```CMAKE
 ...
-add_executable(helloworld main.cpp controller.cpp resources.qrc)
+add_executable(helloworld main.cpp about.cpp resources.qrc)
 target_link_libraries(helloworld ... KF5::CoreAddons)
 ```
 
-In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` to the `add_executable` module and `KF5::CoreAddons` to the `target_link_libraries` module.
+In the CMakeLists.txt file in the ‘src’ directory, add `about.cpp` to the `add_executable` module and `KF5::CoreAddons` to the `target_link_libraries` module.
 
 ## Running the application
 
