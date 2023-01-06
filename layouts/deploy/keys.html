@@ -1,57 +1,6 @@
 {{ define "main" }}
   {{ .Render "content" }}
-  {{ range .Params.applications }}
-    <h2>{{ .name }}</h2>
-    {{ with .description }}
-      {{ . | markdownify }}
-    {{ end }}
 
-    {{ $hasmenu := .hasmenu }}
-    {{ with .keys }}
-    <table class="table">
-      <thead>
-        <tr>
-          <td>Key</td>
-          {{ if $hasmenu }}
-          <td>Menu</td>
-          {{ end }}
-          <td>Action</td>
-        </tr>
-      </thead>
-      <tbody>
-        {{ range . }}
-          <tr>
-            <td>{{ .key }}</td>
-            {{ if $hasmenu }}
-            <td>{{ .menu }}</td>
-            {{ end }}
-            <td>{{ .action | markdownify }}</td>
-          </tr>
-        {{ end }}
-      </tbody>
-    </table>
-    {{ end }}
-    {{ with .directories }}
-    <table class="table">
-      <thead>
-        <tr>
-          <td>Key</td>
-          <td>Directory</td>
-          <td>Provides</td>
-        </tr>
-      </thead>
-      <tbody>
-        {{ range . }}
-          <tr>
-            <td>{{ .key }}</td>
-            <td>{{ .directory }}</td>
-            <td>{{ .provides | markdownify }}</td>
-          </tr>
-        {{ end }}
-      </tbody>
-    </table>
-    {{ end }}
-  {{ end }}
   <div class="row mt-5">
     <div class="col-6 d-flex">
       {{with .NextInSection }}

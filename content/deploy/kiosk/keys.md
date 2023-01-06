@@ -676,3 +676,55 @@ application. To make the restrictions valid for all applications, put
 them in kdeglobals. To enable a restriction for a specific applications
 place them in the application-specific configuration, e.g. konquerorrc
 for Konqueror.
+
+## Application Action Restrictions
+
+{{< deploy-kiosk-keys index=0 >}}
+
+## KCalc
+
+{{< deploy-kiosk-keys index=1 >}}
+
+## File Manager
+
+{{< deploy-kiosk-keys index=2 >}}
+
+## Konsole
+
+{{< deploy-kiosk-keys index=3 >}}
+
+## KWin
+
+{{< deploy-kiosk-keys index=4 >}}
+
+## Plasma
+
+{{< deploy-kiosk-keys index=5 >}}
+
+## Authorizing
+
+{{< deploy-kiosk-keys index=6 >}}
+
+## File Dialog
+
+{{< deploy-kiosk-keys index=7 >}}
+
+## Printing
+
+{{< deploy-kiosk-keys index=8 >}}
+
+## Resource Restrictions
+
+{{< deploy-kiosk-keys index=9 >}}
+
+## Screensavers
+
+{{< deploy-kiosk-keys index=10 >}}
+
+## Session Capability Restrictions
+
+{{< deploy-kiosk-keys index=11 >}}
+
+## Telemetry
+
+{{< deploy-kiosk-keys index=12 >}}
