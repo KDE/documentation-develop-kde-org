@@ -394,13 +394,13 @@ applications:
       will not allow execution via that `.desktop` file and will not be used
       by KDE for opening files of associated mimetypes.
 
-  - name: File Dialog {#file_dialog}
+  - name: File Dialog
     description: |
       These keys disable actions that are found in the KDE file dialog. To use
-      them, create a section in `kdeglobals that looks
+      them, create a section in `kdeglobals` that looks
       like this:
 
-      ``` {.ini}
+      ```ini
       [KDE Action Restrictions][$i]
       action/<key>=false
       ```
@@ -437,7 +437,7 @@ applications:
       dialog and printing system. To use them, create a configuration section
       like this:
 
-      ``` {.ini}
+      ```ini
       [KDE Resource Restrictions][$i]
       print/<resource key>=false
       ```
@@ -478,7 +478,7 @@ applications:
       This is accomplished by creating a section like this in a configuration
       file:
 
-      ``` ini
+      ```ini
       [KDE Resource Restrictions][$i]
       <resource key>=false
       ```
@@ -571,9 +571,9 @@ applications:
     description: |
       These keys apply to various capabilities associated with a desktop
       session and are not application specific. To use them, create a section
-      in `kdeglobals that looks like this:
+      in `kdeglobals` that looks like this:
 
-      ``` ini
+      ```ini
       [KDE Action Restrictions][$i]
       <key>=false
       ```
@@ -614,10 +614,10 @@ applications:
       - The default desktop includes the files under
         `.local/share/kdesktop/Desktop` but **not**
         the files under `$HOME/Desktop`.
-      - The KDE menu includes all files under `$KDEDIR/share/applnk and `$XDGDIR/applications
-      - Registered services includes all files under `$KDEDIR/share/services
-      - Autostarting services include all files under `$KDEDIR/share/autostart but **not** the
-        files under `$KDEHOME/Autostart
+      - The KDE menu includes all files under `$KDEDIR/share/applnk` and `$XDGDIR/applications`
+      - Registered services includes all files under `$KDEDIR/share/services`
+      - Autostarting services include all files under `$KDEDIR/share/autostart` but **not** the
+        files under `$KDEHOME/Autostart`
 
       **shell_access:**  Whether a shell suitable for entering random commands may be
       started. This also determines whether the "Run Command" option
@@ -625,7 +625,7 @@ applications:
       executables. Likewise, executables placed in the user's Autostart
       folder will no longer be executed. Applications can still be
       autostarted by placing `.desktop` files in the
-      `.local/share/autostart directory. See also
+      `.local/share/autostart` directory. See also
       `run_desktop_files`.
 
       You probably also want to activate the following resource
@@ -638,7 +638,7 @@ applications:
       - "autostart" - To restrict autostarting services.
 
       Otherwise users can still execute .desktop files by placing them in
-      e.g. `.local/share/kdesktop/Desktop
+      e.g. `.local/share/kdesktop/Desktop`
 
       **skip_drm:** Defines if the user may omit
       [DRM](https://en.wikipedia.org/wiki/Digital_rights_management)
