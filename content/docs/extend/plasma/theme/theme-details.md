@@ -464,17 +464,23 @@ Each theme contains following file structure. All files can be in either `.svg` 
   * **/media-delegate.svg**: intended to be used as delegate for media types: it contains a single prefix: picture.
   * **/viewitem.svg**: controls the background look of selections (results in KRunner, networks in network applet), it can have 4 elements of 9 parts each with prefix `normal`, `hover`, `selected`, `selected+hover`.
 
-## "Opaque" folder
+## "opaque"/"solid"/"translucent" folders
 
-In the special subfolder `opaque/` the same hierarchy can be found again: when compositing is disabled files in this folder are preferred over the corresponding ones listed above. Only background for top level windows are appropriate to go in this folder.
+The folders `opaque/`, `solid/` and `translucent/` contain special versions of some of the theme elements that will be activated under certain conditions and preferred over the corresponding files listed above if present. Only elements that will be rendered as top level window backgrounds should be present in these folders, so the dialogs folder, plus the panel and tooltip backgrounds; the file hierarchy is the same as in the level above.
 
-Since top-level windows will be shaped according to the transparency of the SVG and window shapes don't support alpha-blending, if the SVG has rounded borders they should have a shape that don't require anti-aliasing, like the following example.
+### "opaque" folder
 
-![This is how a border of the plasma "opaque" background svgs should appear when they have a rounded border: since the window shape won't have antialiasing the outer contour must not have rounded lines.](No_composite_plasma_svg.jpg)
+Elements in this folder are used when compositing is disabled. Since top-level windows will be shaped according to the transparency of the SVG and window shapes don't support alpha-blending, if the SVG has rounded borders they should have a shape that doesn't require anti-aliasing, like the following example.
 
-## "translucent" folder
+![This is how a border of the plasma "opaque" background svgs should appear when they have a rounded border: since the window shape won't have antialiasing the outer contour must not have rounded lines.](theme-details/No_composite_plasma_svg.jpg)
 
-In the special folder `translucent/` the same hierarchy is used as well: when the KWin *Background Contrast* effect is enabled the file under this folder will be used if found. As the opaque folder, only elements that will be rendered as window backgrounds should be present in this folder, so the dialogs folder, plus the panel and tooltip backgrounds. When is possible to blur the background of the window, the graphics can be more transparent, keeping the window text readable.
+### "solid" folder
+
+Elements in this folder will be used when compositing is available, but elements should not be rendered transparent. For example, if a panel is configured to use adaptive opacity and a maximized window is present, then an opaque version of the panel is used rather than a transparent version.
+
+### "translucent" folder
+
+Elements in this folder will be used when the the KWin *Background Contrast* effect is enabled. When it is possible to blur the background of the window, the graphics can be more transparent, keeping the window text readable.
 
 ## "icons" folder
 
