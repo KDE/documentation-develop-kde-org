@@ -73,12 +73,11 @@ Which brings us back to `main.qml` and our new `openPopulateSheet` function. You
 ```qml
 function openPopulateSheet(mode, index = -1, listName = "", listDesc = "", listDate = "") {
 	addEditSheet.mode = mode
-	if(mode == "edit") {
-		addEditSheet.index = index;
-		addEditSheet.name = listName
-		addEditSheet.description = listDesc
-		addEditSheet.date = listDate
-	}
+	addEditSheet.index = index;
+	addEditSheet.name = listName
+	addEditSheet.description = listDesc
+	addEditSheet.kdate = listDate
+	
 	addEditSheet.open()
 }
 ```
