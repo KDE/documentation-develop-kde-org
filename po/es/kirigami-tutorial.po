@@ -1,11 +1,11 @@
 #
-# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-06 00:40+0000\n"
-"PO-Revision-Date: 2022-12-18 03:37+0100\n"
+"POT-Creation-Date: 2023-01-07 00:40+0000\n"
+"PO-Revision-Date: 2023-01-06 17:31+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -3661,19 +3661,14 @@ msgid "![](quit_action.png)"
 msgstr "![](quit_action.png)"
 
 #: content/docs/use/kirigami/introduction-actions.md:104
-#, fuzzy
-#| msgid ""
-#| "The ['Actions'](https://develop.kde.org/docs/kirigami/actions/) page in "
-#| "the 'Components' section of these docs provides further detail on "
-#| "Kirigami actions and how they can be used."
 msgid ""
 "The ['Actions'](/docs/kirigami/components-actions/) page in the 'Components' "
 "section of these docs provides further detail on Kirigami actions and how "
 "they can be used."
 msgstr ""
-"La página ['Acciones'](https://develop.kde.org/docs/kirigami/actions/) de la "
-"sección 'Componentes' de esta documentación proporciona más detalle sobre "
-"las acciones de Kirigami y su uso."
+"La página ['Acciones'](/docs/kirigami/components-actions/) de la sección "
+"'Componentes' de esta documentación proporciona más detalle sobre las "
+"acciones de Kirigami y su uso."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:0
 msgid "Setting up and getting started"
@@ -4881,15 +4876,11 @@ msgstr ""
 "Invent](https://invent.kde.org/plasma-mobile/calindori)"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:36
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.kdeconnect.kcm.svg\" "
-#| "width=\"50\" height=\"50\"><br />KDE Connect"
 msgid ""
 "<img src=\"https://apps.kde.org/app-icons/org.kde.kdeconnect.svg\" width="
 "\"50\" height=\"50\"><br />KDE Connect"
 msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.kdeconnect.kcm.svg\" width="
+"<img src=\"https://apps.kde.org/app-icons/org.kde.kdeconnect.svg\" width="
 "\"50\" height=\"50\"><br />KDE Connect"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:36
@@ -5851,7 +5842,7 @@ msgstr ""
 "`openPopulateSheet(\"add\")`. Y, lo más importante, esta función asigna "
 "todas las propiedades relevantes en AddEditSheet."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:86
+#: content/docs/use/kirigami/introduction-separatefiles.md:85
 msgid ""
 "`mode` changes the add/edit sheet depending on whether this argument is set "
 "to `\"add\"` or to `\"edit\"`"
@@ -5859,7 +5850,7 @@ msgstr ""
 "`mode` cambia la hoja de añadir/editar dependiendo de si este argumento está "
 "definido como `\"añadir\"` o como `\"editar\"`"
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:87
+#: content/docs/use/kirigami/introduction-separatefiles.md:86
 msgid ""
 "`index` argument is needed so that when we save our edited countdown, the "
 "correct one is modified"
@@ -5867,7 +5858,7 @@ msgstr ""
 "El argumento `index` es necesario para que cuando guardemos nuestra cuenta "
 "atrás editada se modifique la correcta."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:88
+#: content/docs/use/kirigami/introduction-separatefiles.md:87
 msgid ""
 "`listName`, `listDesc`, and `listDate` are the relevant countdown details "
 "that need to be put in the sheet's fields"
@@ -5875,7 +5866,7 @@ msgstr ""
 "`listName`, `listDesc` y `listDate` son los detalles relevantes de la cuenta "
 "atrás que necesita poner en los campos de la hoja"
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:90
+#: content/docs/use/kirigami/introduction-separatefiles.md:89
 msgid ""
 "Of course, to actually use our sheet for anything besides adding countdowns "
 "first we need to make the edit button on our cards work. But if you look at "
@@ -5886,7 +5877,7 @@ msgstr ""
 "tarjetas funcione. Pero si mira nuestro `Kirigami.CardsListView` en `main."
 "qml`..."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:100
+#: content/docs/use/kirigami/introduction-separatefiles.md:99
 msgid ""
 "We've replaced our `Kirigami.AbstractCard` with a delegate component "
 "definition from `KountdownDelegate.qml`."
@@ -5894,7 +5885,7 @@ msgstr ""
 "Hemos sustituido nuestra `Kirigami.AbstractCard` con la definición de un "
 "componente delegado de `KountdownDelegate.qml`."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:104
+#: content/docs/use/kirigami/introduction-separatefiles.md:103
 msgid ""
 "The `onClicked` property of the 'Edit' button on our cards now calls the "
 "`openPopulateSheet` function, with the card's fetched list element "
@@ -5906,7 +5897,7 @@ msgstr ""
 "lista extraída de la tarjeta definidas como argumentos para esta función. "
 "Con ellos, la hoja se puede rellenar con el texto correcto."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:106
+#: content/docs/use/kirigami/introduction-separatefiles.md:105
 msgid ""
 "With that, we have a fully-functional sheet where we can add and edit our "
 "countdowns!"
@@ -5914,7 +5905,7 @@ msgstr ""
 "Con eso, ¡tenemos una hoja completamente funcional con la que podemos añadir "
 "y editar nuestras cuentas atrás!"
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:108
+#: content/docs/use/kirigami/introduction-separatefiles.md:107
 msgid "![](editsheet.png)"
 msgstr "![](editsheet.png)"
 

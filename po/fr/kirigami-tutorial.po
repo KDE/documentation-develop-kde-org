@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-06 00:40+0000\n"
+"POT-Creation-Date: 2023-01-07 00:40+0000\n"
 "PO-Revision-Date: 2023-01-01 19:55+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -5993,7 +5993,7 @@ msgstr ""
 "fonction concise « openPopulateSheet(« add ») ». Plus important encore, "
 "cette fonction définit toutes propriétés pertinentes dans « AddEditSheet »."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:86
+#: content/docs/use/kirigami/introduction-separatefiles.md:85
 msgid ""
 "`mode` changes the add/edit sheet depending on whether this argument is set "
 "to `\"add\"` or to `\"edit\"`"
@@ -6001,7 +6001,7 @@ msgstr ""
 "Le paramètre « mode » modifie la feuille d'ajout / modification selon que "
 "cet argument est défini comme « add » ou « edit »."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:87
+#: content/docs/use/kirigami/introduction-separatefiles.md:86
 msgid ""
 "`index` argument is needed so that when we save our edited countdown, the "
 "correct one is modified"
@@ -6009,7 +6009,7 @@ msgstr ""
 "L'argument « index » est nécessaire pour que lorsque nous enregistrions "
 "notre compte à rebours modifié, le bon compte à rebours est modifié."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:88
+#: content/docs/use/kirigami/introduction-separatefiles.md:87
 msgid ""
 "`listName`, `listDesc`, and `listDate` are the relevant countdown details "
 "that need to be put in the sheet's fields"
@@ -6018,7 +6018,7 @@ msgstr ""
 "pertinents du compte à rebours, devant être placés dans les champs de la "
 "feuille."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:90
+#: content/docs/use/kirigami/introduction-separatefiles.md:89
 msgid ""
 "Of course, to actually use our sheet for anything besides adding countdowns "
 "first we need to make the edit button on our cards work. But if you look at "
@@ -6029,7 +6029,7 @@ msgstr ""
 "bouton de modification de nos cartes. Mais si vous regardez notre objet "
 "« Kirigami.CardsListView » dans « main.qml »..."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:100
+#: content/docs/use/kirigami/introduction-separatefiles.md:99
 msgid ""
 "We've replaced our `Kirigami.AbstractCard` with a delegate component "
 "definition from `KountdownDelegate.qml`."
@@ -6037,7 +6037,7 @@ msgstr ""
 "Nous avons remplacé notre objet « Kirigami.AbstractCard » par une définition "
 "de composant délégué à partir de « KountdownDelegate.qml »."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:104
+#: content/docs/use/kirigami/introduction-separatefiles.md:103
 msgid ""
 "The `onClicked` property of the 'Edit' button on our cards now calls the "
 "`openPopulateSheet` function, with the card's fetched list element "
@@ -6049,7 +6049,7 @@ msgstr ""
 "trouvés dans la liste pour les cartes, utilisées comme arguments de cette "
 "fonction. Avec celles-ci, la feuille peut être remplie avec le texte correct."
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:106
+#: content/docs/use/kirigami/introduction-separatefiles.md:105
 msgid ""
 "With that, we have a fully-functional sheet where we can add and edit our "
 "countdowns!"
@@ -6057,7 +6057,7 @@ msgstr ""
 "Avec cela, nous avons une feuille entièrement fonctionnelle où nous pouvons "
 "ajouter et modifier nos comptes à rebours !"
 
-#: content/docs/use/kirigami/introduction-separatefiles.md:108
+#: content/docs/use/kirigami/introduction-separatefiles.md:107
 msgid "![](editsheet.png)"
 msgstr " ! [](editsheet.png)"
 
