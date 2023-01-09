@@ -1,0 +1,108 @@
+/*
+ * SPDX-FileCopyrightText: (C) Carl Schwan <carl@carlschwan.eu> 
+ * SPDX-FileCopyrightText: 2020 (C) Bjorn Erik Pedersen <bjorn.erik.pedersen@gmail.com>
+ * SPDX-FileCopyrightText: 2020 (C) Carl Schwan <carl@carlschwan.eu>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.header {
+  @include media-breakpoint-up(md) {
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+  width: initial;
+  background-color: #fcfcfc;
+  @media (prefers-color-scheme: dark) {
+     background-color: #232629; 
+  }
+  &::after {
+    z-index: 34;
+  }
+}
+
+#main_navbar, .navbar-nav, .nav-item, .nav-link {
+  min-height: 48px;
+}
+
+.navbar .nav-item a.nav-link.active {
+    color: white;
+}
+
+.td-navbar-cover {
+  background: $primary;
+
+  @include media-breakpoint-up(md) {
+    background: transparent !important;
+  }
+
+  &.navbar-bg-onscroll .nav-link {
+      text-shadow: none;
+  }
+}
+
+.navbar-bg-onscroll {
+    background: $primary !important;
+    opacity: inherit;
+}
+
+.td-navbar {
+    background-color: #fcfcfc;
+    @media (prefers-color-scheme: dark) {
+       background-color: #232629; 
+    }
+    z-index: 32;
+
+    @include media-breakpoint-up(md) {
+      margin-left: 25% !important;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 16.66667% !important;
+    }
+
+    .td-search-input {
+        border: none;
+
+        @include placeholder {
+            color: $navbar-dark-color;
+        }
+    }
+
+    .dropdown {
+        min-width: 100px;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-right: .5rem;
+        padding-left: .75rem;
+        overflow-x: auto;
+
+        .td-navbar-nav-scroll {
+            max-width: 100%;
+            height: 2.5rem;
+            overflow: hidden;
+
+            .nav-link {
+                padding-right: .25rem;
+                padding-left: 0;
+            }
+
+            .navbar-nav {
+                padding-bottom: 2rem;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+
+            }
+        }
+    }
+}
+
+.navbar .nav-item a.nav-link {
+  padding: 0 20px;
+  line-height: 48px;
+  height: 48px;
+  display: inline-block;
+}

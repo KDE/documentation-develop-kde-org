@@ -1,0 +1,92 @@
+/*
+ * SPDX-FileCopyrightText: 2020 (C) Bjorn Erik Pedersen <bjorn.erik.pedersen@gmail.com>
+ * SPDX-FileCopyrightText: 2020 (C) Carl Schwan <carl@carlschwan.eu>
+ * SPDX-FileCopyrightText: 2020 (C) LisaFC
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@import "support/functions";
+@import "variables_project";
+@import "variables";
+@import "support/mixins";
+
+@import "../bootstrap.scss";
+
+@import "support/utilities";
+@import "colors";
+@import "boxes";
+@import "blog";
+@import "code";
+@import "nav";
+@import "sidebar-tree";
+@import "sidebar-toc";
+@import "buttons";
+@import "content";
+@import "search";
+@import "main-container";
+@import "blocks/blocks";
+@import "section-index";
+@import "pageinfo";
+
+footer {
+    min-height: 150px;
+
+    @include media-breakpoint-down(md) {
+         min-height: 200px;
+    }
+}
+
+.navbar .nav-item a.nav-link {
+  color: #334545;
+  @media (prefers-color-scheme: dark) {
+    color: #efefef;
+  }
+  .active {
+    color: white;
+  }
+}
+
+// Adjust anchors vs the fixed menu.
+@include media-breakpoint-up(md) {
+  .td-offset-anchor:target {
+    display: block;
+    position: relative;
+    top: -4rem;
+    visibility: hidden;
+  }
+
+  h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before {
+    display: block;
+    content: " ";
+    margin-top: -5rem;
+    height: 5rem;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight span[style*="color:#000"] {
+    color: white !important;
+  }
+}
+
+a.api-link {
+  white-space: nowrap;
+}
+a.api-link::after {
+  content: 'API';
+  display: inline-block;
+  margin-left: 4px;
+  width: 20px;
+  height: 14px;
+  color: white;
+  background-color: #54a3d8;
+  font-size: 0.6rem;
+  border-radius: 2px;
+  vertical-align: middle;
+  text-align: center;
+  bottom: 5px;
+}
+
+@import "styles_project";
