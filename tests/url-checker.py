@@ -13,7 +13,7 @@ def test_urls():
     timedout = 0
     error = 0
     success = 0
-    ignore_urls = open("data/ignore_urls.txt","r").read().splitlines()
+    ignore_urls = [url for url in list(filter(None,open("data/ignore_urls.txt","r").read().splitlines())) if url.strip()[0]!="#"]
 
     for path_dir, dirs, files in os.walk(path):
         files = [file for file in files if ".md" in file]
