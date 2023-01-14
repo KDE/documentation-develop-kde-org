@@ -95,7 +95,7 @@ weight: 20
           </g>
         </g>
       </svg>
-      <h2 class="text-center">Extend Qt with New Posibilities</h2>
+      <h2 class="text-center">Extend Qt with New Possibilities</h2>
       <p>
         KDE's development tools and frameworks are built on top of Qt, the popular
         cross-platform framework for developing beautiful applications.
@@ -109,7 +109,7 @@ weight: 20
         your Qt projects and the API will be familiar as it is based on the same interfaces that make up the majority of existing
         Qt applications.
       </p>
-      <h3>Network Transparancy</h3>
+      <h3>Network Transparency</h3>
       <p>
         The increase in connectivity of today's world makes <a href="https://api.kde.org/frameworks/kio/html/">KIO</a> an essential
         part of your toolset. KIO allows Qt applications to connect to remote shares as if they were on local computers, making
