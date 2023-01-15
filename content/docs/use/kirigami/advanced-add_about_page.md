@@ -12,23 +12,8 @@ The About Page allows you to have a page that shows the copyright notice of the 
 First, we are going to create two files in the `src/` directory called `about.cpp` and `about.h`.
 
 ### about.h
-```C++
-#pragma once
 
-#include <QObject>
-#include <KAboutData>
-
-class AboutType : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(KAboutData aboutData READ aboutData CONSTANT)
-public:
-    [[nodiscard]] KAboutData aboutData() const
-    {
-        return KAboutData::applicationData();
-    }
-};
-```
+{{< readfile file="/content/docs/use/kirigami/advanced-add_about_page/src/about.h" highlight="cpp" >}}
 
 In the `.h` file we create this class `AboutType` which is inherited from [QObject](https://doc.qt.io/qt-5/qobject.html).
 
@@ -40,51 +25,13 @@ The `aboutData` method will return the application data from `KAboutData`.
 
 ### about.cpp
 
-```C++
-#include "about.h"
-```
+{{< readfile file="/content/docs/use/kirigami/advanced-add_about_page/src/about.cpp" highlight="cpp" >}}
 
 In the `.cpp` file we just include the `.h` file.
 
 ### main.cpp
 
-```C++
-...
-#include <KAboutData>
-
-#include "about.h"
-
-int main(int argc, char *argv[])
-{
-    ...
-
-    KAboutData aboutData(
-                         // The program name used internally.
-                         QStringLiteral("helloworld"),
-                         // A displayable program name string.
-                         i18nc("@title", "Hello World"),
-                         // The program version string.
-                         QStringLiteral("1.0"),
-                         // Short description of what the app does.
-                         i18n("Hello world application"),
-                         // The license this code is released under.
-                         KAboutLicense::GPL,
-                         // Copyright Statement.
-                         i18n("(c) 2021"));
-    aboutData.addAuthor(i18nc("@info:credit", "Your name"), i18nc("@info:credit", "Author Role"), QStringLiteral("your@email.com"), QStringLiteral("https://yourwebsite.com"));
-    KAboutData::setApplicationData(aboutData);
-
-    QQmlApplicationEngine engine;
-
-    qmlRegisterSingletonType<AboutType>("org.kde.example", 1, 0, "AboutType", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
-        Q_UNUSED(engine)
-        Q_UNUSED(scriptEngine)
-
-        return new AboutType();
-    });
-    ...
-}
-```
+{{< readfile file="/content/docs/use/kirigami/advanced-add_about_page/src/main.cpp" highlight="cpp" >}}
 
 In the cpp file we include `KAboutData` and the `.h` file we just created, [KAboutData](docs:kcoreaddons;KAboutData) is a core KDE Frameworks component that stores information about an application, which can then be reused by many other KDE Frameworks components. We instantiate a new `KAboutData` object with its fairly complete default constructor and add author information.
 
@@ -99,58 +46,21 @@ In the `qmlRegisterSingletonType` lambda we just return a new `AboutType` object
 
 ### main.qml
 
-```QML
-...
-import org.kde.example 1.0
-
-Kirigami.ApplicationWindow {
-    ...
-
-    globalDrawer: Kirigami.GlobalDrawer {
-        ...
-        actions: [
-            ...
-            Kirigami.Action {
-                text: i18n("About")
-                icon.name: "help-about"
-                onTriggered: pageStack.layers.push(aboutPage)
-            }
-            ...
-        ]
-    }
-
-    Component {
-        id: aboutPage
-
-        Kirigami.AboutPage {
-            aboutData: AboutType.aboutData
-        }
-    }
-}
-```
+{{< readfile file="/content/docs/use/kirigami/advanced-add_about_page/src/contents/ui/main.qml" highlight="qml" >}}
 
 First, we import the package we defined in the `main.cpp` file, add a `Kirigami.Action` to our global drawer that will send us to the about page and create a component with a `Kirigami.AboutPage` in it, the About Page only have one property: `aboutData`, we then pass `AboutType.aboutData` to it.
 
 
 ### CMakeLists
 
-```CMAKE
-...
-project(helloworld)
-...
-find_package(KF5 ${KF_MIN_VERSION} ... CoreAddons)
-...
-```
+{{< readfile file="/content/docs/use/kirigami/advanced-add_about_page/CMakeLists.txt" highlight="cmake" >}}
 
 In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to the `find_package` module. 
 
-```CMAKE
-...
-add_executable(helloworld main.cpp about.cpp resources.qrc)
-target_link_libraries(helloworld ... KF5::CoreAddons)
-```
+{{< readfile file="/content/docs/use/kirigami/advanced-add_about_page/src/CMakeLists.txt" highlight="cmake" >}}
 
 In the CMakeLists.txt file in the ‘src’ directory, add `about.cpp` to the `add_executable` module and `KF5::CoreAddons` to the `target_link_libraries` module.
+
 
 ## Running the application
 
