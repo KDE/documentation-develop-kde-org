@@ -341,42 +341,39 @@ applications:
       immutable. Locking a Containment group will render that one group of
       widgets to be immutable, and locking a widget itself will cause it to
       not be movable as well as otherwise locked.
-
       In addition, the following resource restrictions are available:
+    keys:
+      - key: plasma/allow_configure_when_locked (since Plasma 4.4)
+        action: |
+          Whether widgets and containments can be configured when immutable / locked.
+          The default is true as a convenience to users.
+      - key: plasma/containment_actions (since KDE Frameworks 5.49)
+        action: |
+          Whether or not to allow Plasma mouse actions on desktop and panels (most notably
+          context menus, but also mouse wheel to switch virtual desktops, etc.)
+      - key: plasma/plasmashell/unlockedDesktop (since Plasma 5.0)
+        action: |
+          Whether to allow widgets in Plasma to be unlocked; when false, the following restrictions apply:
+          -  Widgets cannot be unlocked
+          -  Favorites and applications in the application launchers cannot be
+          added, removed, rearranged, or otherwise altered (since Plasma 5.7)
+          -  Application launchers in the task manager cannot be added or removed
+           (since Plasma 5.8)
+      - key: plasma-desktop/scripting_console (since Plasma 4.4)
+        action: Whether the plasma desktop scripting console is accessible or not.
+      - key: plasma-desktop/add_activities (>= 4.7.1)
+        action: Whether the user may add new activities or not.
 
-      **plasma/allow_configure_when_locked (since Plasma 4.4):** Whether
-      widgets and containments can be configured when immutable / locked.
-      The default is true as a convenience to users.
-
-      **plasma/containment_actions (since KDE Frameworks 5.49):** Whether
-      or not to allow Plasma mouse actions on desktop and panels (most notably
-      context menus, but also mouse wheel to switch virtual desktops, etc.)
-
-      **plasma/plasmashell/unlockedDesktop (since Plasma 5.0):** Whether to
-      allow widgets in Plasma to be unlocked; when false, the following restrictions apply:
-
-      -  Widgets cannot be unlocked
-      -  Favorites and applications in the application launchers cannot be
-         added, removed, rearranged, or otherwise altered (since Plasma 5.7)
-      -  Application launchers in the task manager cannot be added or removed
-         (since Plasma 5.8)
-
-      **plasma-desktop/scripting_console (since Plasma 4.4):** Whether the
-      plasma desktop scripting console is accessible or not.
-
-      **plasma-desktop/add_activities (>= 4.7.1):** Whether the user may add
-      new activities or not.
-
-      ### Other
-
+  - name: Other
+    description: |
       Plasma offers to download new widgets, wallpapers, scripts, and other
       3rd party add-ons from the KDE Store using the KNewStuff (aka "Get Hot
       New Stuff") framework. The buttons are typically labeled "Get New
       ..." with a "star" icon. If this feature is undesirable it can be
       disabled using the following key:
-
-      ghns (since KDE Frameworks 5.27): Whether the Download Dialog of Get
-      Hot New Stuff can be accessed
+    keys:
+      - key: ghns (since KDE Frameworks 5.27)
+        action: Whether the Download Dialog of Get Hot New Stuff can be accessed
 
   - name: Authorizing
     description: |
@@ -444,29 +441,32 @@ applications:
 
       Note how each of the printing keys start with `print` in the
       configuration file.
-
-      **print/copies:** Disables the panel that allows users to make more than one copy.
-
-      **print/dialog:** Disables the complete print dialog. Selecting the
-      print option will immediately print the selected document using default
-      settings. Make sure that a system-wide default printer has been selected.
-      No application-specific settings are honored when this restriction is
-      activated.
-
-      **print/options:** Disables the button to select additional print options.
-
-      **print/properties:** Disables the button to change printer properties
-      or to add a new printer.
-
-      **print/selection:** Disables the options that allows selecting a
-      (pseudo) printer or change any of the printer properties. Make sure that
-      a proper default printer has been selected before disabling this option.
-      Disabling this option also disables `print/system`, `print/options`
-      and `print/properties`.
-
-      **print/system:** Disables the option to select the printing system backend, e.g.
-      CUPS. It is recommended to disable this option once the correct
-      printing system has been configured.
+    keys:
+      - key: print/copies
+        action: Disables the panel that allows users to make more than one copy.
+      - key: print/dialog
+        action: |
+          Disables the complete print dialog. Selecting the
+          print option will immediately print the selected document using default
+          settings. Make sure that a system-wide default printer has been selected.
+          No application-specific settings are honored when this restriction is
+          activated.
+      - key: print/options
+        action: Disables the button to select additional print options.
+      - key: print/properties
+        action: Disables the button to change printer properties or to add a new printer.
+      - key: print/selection
+        action: |
+          Disables the options that allows selecting a
+          (pseudo) printer or change any of the printer properties. Make sure that
+          a proper default printer has been selected before disabling this option.
+          Disabling this option also disables `print/system`, `print/options`
+          and `print/properties`.
+      - key: print/system
+        action: |
+          Disables the option to select the printing system backend, e.g.
+          CUPS. It is recommended to disable this option once the correct
+          printing system has been configured.
   - name: Resource Restrictions
     description: |
       KDE applications can take advantage of many types of resources such as
@@ -545,15 +545,15 @@ applications:
     description: |
 
       In kdeglobals in the `[KDE Action Restrictions]` group:
-
-      **opengl_screensavers:** Defines whether OpenGL screensavers are allowed to be used.
-
-      **manipulatescreen_screensavers:** Defines whether screensavers that
-      manipulate an image of the screen (e.g. moving chunks of the screen
-      around) are allowed to be used.
-
-      ### Automatic Log-out
-
+    keys:
+      - key: opengl_screensavers
+        action: Defines whether OpenGL screensavers are allowed to be used.
+      - key: manipulatescreen_screensavers
+        action: |
+          Defines whether screensavers that manipulate an image of the screen
+          (e.g. moving chunks of the screen around) are allowed to be used.
+  - name: Automatic Log-out
+    description: |
       In `kscreensaverrc`:
 
       ```ini
@@ -566,7 +566,6 @@ applications:
       the logout process is automatically started. Be careful with this
       capability as it can lead to data loss if the user has unsaved files
       open.
-
   - name: Session Capability Restrictions
     description: |
       These keys apply to various capabilities associated with a desktop
@@ -577,77 +576,83 @@ applications:
       [KDE Action Restrictions][$i]
       <key>=false
       ```
+    keys:
+      - key: custom_config
+        action: |
+          Whether the `--config` command line option should be honored. The
+          `--config` command line option can be used to circumvent locked-down
+          configuration files.
+      - key: editable_desktop_icons
+        action: |
+          Defines whether icons on the desktop can be moved
+          around. In order to prevent adding, removing, or renaming icons, you should set the
+          desktop folder read-only. *(since Plasma 5.14)
+      - key: lineedit_text_completion
+        action: |
+          Defines whether input lines should have the potential to remember
+          any previously entered data and make suggestions based on this when
+          typing. When a single account is shared by multiple people you may
+          wish to disable this out of privacy concerns.
+      - key: lineedit_reveal_password
+        action: |
+          Defines whether password input fields may have a button that allows
+          showing the password in plain text. *(since KDE Frameworks 5.30
+          and/or Plasma 5.9)
+      - key: action/lock_screen
+        action: Defines whether the user will be able to lock the screen.
+      - key: logout
+        action: Defines whether the user will be able to logout from the Plasma session.
+      - key: movable_toolbars
+        action: |
+          Defines whether toolbars may be moved around by the user.
+          See also `action/options_show_toolbar`.
+      - key: run_command
+        action: |
+          Defines whether the "Run Command" (Alt-F2) option is available.
+          **Note:** To also disable desktop context menu run command **action/run_command** is required at [KDE Action Restrictions]
+      - key: run_desktop_files
+        action: |
+          Defines whether users may execute desktop files that are not part of
+          the default desktop, KDE menu, registered services and autostarting services.
+          - The default desktop includes the files under
+            `.local/share/kdesktop/Desktop` but **not**
+            the files under `$HOME/Desktop`.
+          - The KDE menu includes all files under `$KDEDIR/share/applnk` and `$XDGDIR/applications`
+          - Registered services includes all files under `$KDEDIR/share/services`
+          - Autostarting services include all files under `$KDEDIR/share/autostart` but **not** the
+            files under `$KDEHOME/Autostart`
+      - key: shell_access
+        action: |
+          Whether a shell suitable for entering random commands may be
+          started. This also determines whether the "Run Command" option
+          (Alt-F2) can be used to run shell-commands and arbitrary
+          executables. Likewise, executables placed in the user's Autostart
+          folder will no longer be executed. Applications can still be
+          autostarted by placing `.desktop` files in the
+          `.local/share/autostart` directory. See also
+          `run_desktop_files`.
 
-      **custom_config:** Whether the `--config` command line option should be honored. The
-      `--config` command line option can be used to circumvent locked-down
-      configuration files.
+          You probably also want to activate the following resource
+          restrictions:
 
-      **editable_desktop_icons:** Defines whether icons on the desktop can be moved
-      around. In order to prevent adding, removing, or renaming icons, you should set the
-      desktop folder read-only. *(since Plasma 5.14)*
+          - "appdata_kdesktop" - To restrict the default desktop.
+          - "apps" - To restrict the KDE menu.
+          - "xdgdata-apps" - To restrict the KDE menu.
+          - "services" - To restrict registered services.
+          - "autostart" - To restrict autostarting services.
 
-      **lineedit_text_completion:** Defines whether input lines should have the potential to remember
-      any previously entered data and make suggestions based on this when
-      typing. When a single account is shared by multiple people you may
-      wish to disable this out of privacy concerns.
-
-      **lineedit_reveal_password:** Defines whether password input fields may have a button that allows
-      showing the password in plain text. *(since KDE Frameworks 5.30
-      and/or Plasma 5.9)*
-
-      **action/lock_screen:** Defines whether the user will be able to lock the screen.
-
-      **logout:** Defines whether the user will be able to logout from the Plasma
-      session.
-
-      **movable_toolbars:** define whether toolbars may be moved around by the user. See also
-      `action/options_show_toolbar`.
-
-      **run_command:** Defines whether the "Run Command" (Alt-F2) option is available.
-
-      **Note:** To also disable desktop context menu run command **action/run_command** is required at [KDE Action Restrictions]
-
-      **run_desktop_files:** Defines whether users may execute desktop files that are not part of
-      the default desktop, KDE menu, registered services and autostarting
-      services.
-
-      - The default desktop includes the files under
-        `.local/share/kdesktop/Desktop` but **not**
-        the files under `$HOME/Desktop`.
-      - The KDE menu includes all files under `$KDEDIR/share/applnk` and `$XDGDIR/applications`
-      - Registered services includes all files under `$KDEDIR/share/services`
-      - Autostarting services include all files under `$KDEDIR/share/autostart` but **not** the
-        files under `$KDEHOME/Autostart`
-
-      **shell_access:**  Whether a shell suitable for entering random commands may be
-      started. This also determines whether the "Run Command" option
-      (Alt-F2) can be used to run shell-commands and arbitrary
-      executables. Likewise, executables placed in the user's Autostart
-      folder will no longer be executed. Applications can still be
-      autostarted by placing `.desktop` files in the
-      `.local/share/autostart` directory. See also
-      `run_desktop_files`.
-
-      You probably also want to activate the following resource
-      restrictions:
-
-      - "appdata_kdesktop" - To restrict the default desktop.
-      - "apps" - To restrict the KDE menu.
-      - "xdgdata-apps" - To restrict the KDE menu.
-      - "services" - To restrict registered services.
-      - "autostart" - To restrict autostarting services.
-
-      Otherwise users can still execute .desktop files by placing them in
-      e.g. `.local/share/kdesktop/Desktop`
-
-      **skip_drm:** Defines if the user may omit
-      [DRM](https://en.wikipedia.org/wiki/Digital_rights_management)
-      checking. At the time of writing, this primarily applies to document
-      formats with a DRM mechanism (e.g. PDF).
-
-      **action/start_new_session:** Defines whether the user may start a new session.
-
-      **action/switch_user:** Defines whether user switching is allowed.
+          Otherwise users can still execute .desktop files by placing them in
+          e.g. `.local/share/kdesktop/Desktop`
+      - key: skip_drm
+        action: |
+          Defines if the user may omit
+          [DRM](https://en.wikipedia.org/wiki/Digital_rights_management)
+          checking. At the time of writing, this primarily applies to document
+          formats with a DRM mechanism (e.g. PDF).
+      - key: action/start_new_session
+        action: Defines whether the user may start a new session.
+      - key: action/switch_user
+        action: Defines whether user switching is allowed.
 
   - name: Telemetry
     description: |
