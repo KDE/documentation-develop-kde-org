@@ -1,10 +1,8 @@
 
 ---
 title: "Administration with KDE Technologies"
-linkTitle: "Administration"
-menu:
-  main:
-    weight: 10
+linkTitle: "Deploy KDE Tech"
+weight: 4
 description: >
-    Use KDE technologies for your system administration tasks.
+    Learn how to manage your systems with KDE technologies.
 ---
