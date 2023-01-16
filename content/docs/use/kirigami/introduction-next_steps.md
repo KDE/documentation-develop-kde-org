@@ -65,7 +65,7 @@ In the advanced section of this Kirigami documentation we have some pages that c
 | Page  | Topic |
 | ---   | ---   |
 | [Understanding CMakeLists]({{< ref "advanced-understanding_cmakelists.md" >}})  | Learn all about CMake and how to compile your applications. |
-| [Figuring out main.cpp](/docs/kirigami/advanced-maincpp)  | Getting to grips with the central C++ file that handles your applications' initialisation. |
+| [Figuring out main.cpp]({{< ref "advanced-maincpp.md" >}})  | Getting to grips with the central C++ file that handles your applications' initialisation. |
 | [Connect logic to your QML user interface]({{< ref "advanced-connect_backend.md" >}}) | Add advanced functionality to your Kirigami application and connect it to your UI.  |
 | [About Page]({{< ref "advanced-add_about_page.md" >}}) | Add an "About Page" to your UI.  |
 
