@@ -102,9 +102,9 @@ The most important ones are as follows.
 
 Displays the contents of a file and applies syntax highlighting to it. There are two optional parameters:
 
-**start:** Defines the first line that should be displayed.
+**start**: Defines the first line that should be displayed. By default this is 1 which means starting from the first line.
 
-**lines:** Defines how many lines should be displayed.
+**lines**: Defines how many lines should be displayed. By default this is 0 which means displaying all lines from **start** to the end of the file.
 
 The path needs to be specified, starting from `content`.
 
