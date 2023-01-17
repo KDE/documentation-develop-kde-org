@@ -102,9 +102,9 @@ The most important ones are as follows.
 
 Displays the contents of a file and applies syntax highlighting to it. There are two optional parameters:
 
-**start**: Defines the first line that should be displayed. By default this is 1 which means starting from the first line.
+**start**: Defines the first line that should be displayed. By default this is 1, which means starting from the first line.
 
-**lines**: Defines how many lines should be displayed. By default this is 0 which means displaying all lines from **start** to the end of the file.
+**lines**: Defines how many lines should be displayed. By default this is 0, which displays all lines from **start** to the end of the file.
 
 The path needs to be specified, starting from `content`.
 
@@ -113,8 +113,6 @@ The path needs to be specified, starting from `content`.
 ```
 
 Commonly used highlighting options are `cpp`, `qml`, `cmake`.
-
-If you need to display a certain amount of lines starting from the beginning of the file, you can omit `start`.
 
 This shortcode is used once to display the file, so no closing tag is used.
 
