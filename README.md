@@ -5,7 +5,7 @@
 Download the latest Hugo release (extended version) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
 
 Certain tutorials fetch examples directly from their respective repositories (library-specific ones, like KArchive or KAuth); to display them, you'll need to run a Python script.
-Make sure you have the required dependencies installed on your system . We suggest using `virtualenv` for this:
+Make sure you have the required dependencies installed on your system. We suggest using `virtualenv` for this:
 
 ```
 python3 -m venv .
@@ -83,7 +83,7 @@ Normal markdown content
 
 Other available options are:
 
-* `group:`, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](https://develop.kde.org/docs/use/kirigami/), with the groups Introduction, Style, Components and Advanced. The groups need to be listed in the `_index` file of the tutorial.
+* `group:`, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](https://develop.kde.org/docs/use/kirigami/), with the groups Introduction, Style, Components, and Advanced. The groups need to be listed in the `_index` file of the tutorial.
 * `aliases:`, which creates an alias which can be used to shorten links. This is useful when linking to that page from elsewhere in the Develop website.
 
 ## Hugo shortcodes
