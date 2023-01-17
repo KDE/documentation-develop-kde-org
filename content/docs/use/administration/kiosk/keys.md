@@ -364,7 +364,7 @@ applications:
       - key: plasma-desktop/add_activities (>= 4.7.1)
         action: Whether the user may add new activities or not.
 
-  - name: Other
+  - name: GHNS
     description: |
       Plasma offers to download new widgets, wallpapers, scripts, and other
       3rd party add-ons from the KDE Store using the KNewStuff (aka "Get Hot
@@ -706,7 +706,7 @@ for Konqueror.
 
 {{< deploy-kiosk-keys index=5 >}}
 
-## Other
+## GHNS
 
 {{< deploy-kiosk-keys index=6 >}}
 
