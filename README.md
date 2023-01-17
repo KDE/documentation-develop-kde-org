@@ -114,6 +114,8 @@ The path needs to be specified, starting from `content`.
 
 Commonly used highlighting options are `cpp`, `qml`, `cmake`.
 
+If you need to display a certain amount of lines starting from the beginning of the file, you can omit `start`.
+
 This shortcode is used once to display the file, so no closing tag is used.
 
 ### alert
