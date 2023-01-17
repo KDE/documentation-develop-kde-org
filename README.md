@@ -92,7 +92,7 @@ There are also some custom [shortcodes](https://gohugo.io/content-management/sho
 
 They can be identified by their characteristic `{{< >}}`, which have HTML tags inside `<>`. Certain shortcodes require closing tags.
 
-For readability, we add internal spaces to improve the readability of the shortcode, e.g. `{{< myshortcode parameter="" >}}`.
+For readability, we add spaces between the `{{< >}}` and the tag, e.g. `{{< myshortcode parameter="" >}}`.
 
 Do *not* add spaces between the `{` and `<`, or between `>` and `}` when using shortcodes.
 
