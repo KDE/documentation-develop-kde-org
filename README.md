@@ -175,6 +175,10 @@ You can specify the language to be used to highlight code blocks written in Mark
 
 The most commonly used highlighting options are `c++`, `qml`, `cmake`.
 
+## Code formatting
+
+When creating new source code files to be displayed using the readfile shortcode, use 2 spaces for C++ files and 4 spaces for QML files. Do not use tabs.
+
 ## API links
 
 Links to `api.kde.org` and `doc.qt.io` can be generated as follows:
