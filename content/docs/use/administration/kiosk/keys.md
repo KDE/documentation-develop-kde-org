@@ -552,7 +552,7 @@ applications:
         action: |
           Defines whether screensavers that manipulate an image of the screen
           (e.g. moving chunks of the screen around) are allowed to be used.
-  - name: Automatic Log-out
+  - name: Automatic Logout
     description: |
       In `kscreensaverrc`:
 
@@ -706,30 +706,38 @@ for Konqueror.
 
 {{< deploy-kiosk-keys index=5 >}}
 
-## Authorizing
+## Other
 
 {{< deploy-kiosk-keys index=6 >}}
 
-## File Dialog
+## Authorizing
 
 {{< deploy-kiosk-keys index=7 >}}
 
-## Printing
+## File Dialog
 
 {{< deploy-kiosk-keys index=8 >}}
 
-## Resource Restrictions
+## Printing
 
 {{< deploy-kiosk-keys index=9 >}}
 
-## Screensavers
+## Resource Restrictions
 
 {{< deploy-kiosk-keys index=10 >}}
 
-## Session Capability Restrictions
+## Screensavers
 
 {{< deploy-kiosk-keys index=11 >}}
 
-## Telemetry
+## Automatic logout
 
 {{< deploy-kiosk-keys index=12 >}}
+
+## Session Capability Restrictions
+
+{{< deploy-kiosk-keys index=13 >}}
+
+## Telemetry
+
+{{< deploy-kiosk-keys index=14 >}}
