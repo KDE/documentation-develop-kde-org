@@ -109,7 +109,7 @@ Displays the contents of a file and applies syntax highlighting to it. There are
 The path needs to be specified, starting from `content`.
 
 ```
-{{< readfile file="/content/docs/getting-started/main_window/mainwindow.h" highlight="cpp" start="41" lines="13" >}}
+{{< readfile file="/content/docs/getting-started/main_window/mainwindow.h" highlight="cpp" start=41 lines=13 >}}
 ```
 
 Commonly used highlighting options are `cpp`, `qml`, `cmake`.
