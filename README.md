@@ -1,11 +1,11 @@
 # KDE Developer website
 
-## Running the website locally
+## Before running the website
 
 Download the latest Hugo release (extended version) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
 
-Before running the server locally, you'll need to run a Python script. Make sure you have requirements installed on your system
-(here suggested to be using virtualenv):
+Certain tutorials fetch examples directly from their respective repositories (library-specific ones, like KArchive or KAuth); to display them, you'll need to run a Python script.
+Make sure you have the required dependencies installed on your system . We suggest using `virtualenv` for this:
 
 ```
 python3 -m venv .
@@ -19,7 +19,9 @@ Then, run this Python script:
 python3 scripts/extract-plasma-applet-config-keys.py
 ```
 
-You are now ready to start the server. Run:
+## Running the website locally
+
+From the repo's root folder, run:
 
 ```
 hugo server
@@ -77,12 +79,48 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 Normal markdown content
 ```
 
+`title:` and `weight:` are the minimum requirements for a page.
+
+Other available options are:
+
+* `group:`, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](https://develop.kde.org/docs/use/kirigami/), with the groups Introduction, Style, Components and Advanced. The groups need to be listed in the `_index` file of the tutorial.
+* `aliases:`, which creates an alias which can be used to shorten links. This is useful when linking to that page from elsewhere in the Develop website.
+
 ## Hugo shortcodes
 
-There are also some custom commands that can be used to create more complex content. For the moment there are three of them available,
-but more can be added if needed.
+There are also some custom commands that can be used to create more complex content, called [shortcodes](https://gohugo.io/content-management/shortcodes/).
+
+They can be identified by their characteristic `{{< >}}`, which have HTML tags inside `<>`. Certain shortcodes require closing tags.
+
+For readability, we add internal spaces to improve the readability of the shortcode, e.g. `{{< myshortcode parameter="" >}}`.
+
+Do *not* add spaces between the `{` and `<`, or between `>` and `}` when using shortcodes.
+
+The most important ones are as follows.
+
+### readfile
+
+Displays the contents of a file and applies syntax highlighting to it. There are two optional parameters:
+
+**start:** Defines the first line that should be displayed.
+
+**lines:** Defines how many lines should be displayed.
+
+The path needs to be specified, starting from `content`.
+
+```
+{{< readfile file="/content/docs/getting-started/main_window/mainwindow.h" highlight="cpp" start="41" lines="13" >}}
+```
+
+Commonly used highlighting options are `cpp`, `qml`, `cmake`.
+
+This shortcode is used once to display the file, so no closing tag is used.
 
 ### alert
+
+Displays a block of text with optional title and background color.
+
+If no title or color is specified, it defaults to no title and color "info".
 
 ```
 {{< alert title="Note" color="info" >}}
@@ -90,21 +128,52 @@ Text you want to display in the alert
 {{< /alert >}}
 ```
 
-Available colors are `success`, `warning`, `error` and `info`.
+Note that this shortcode requires a closing tag, or else it will envelop the whole page into an alert.
 
-### readfile
+The available colors are `success`, `warning`, `error`, and `info`.
 
-Read a file and apply syntax highlight on it. There is two option argument:
+Usage suggestions:
 
-**start:** Defines the first line that should be displayed 
+* Use `info` to display general information or additional content.
 
-**lines:** Defines how many lines should be displayed.
+* Use `warning` to warn the reader that a certain action can have dangerous results if misused.
 
-```
-{{< readfile file="/content/docs/getting-started/main_window/mainwindow.h" highlight="cpp" start="41" lines="13" >}}
-```
+* Use `error` to display content that is critical to the tutorial and must not be forgotten.
 
-### Api links
+* Use `success` to display advice or important pieces of information.
+
+### rel/ref links
+
+Hugo provides the `relref` and `ref` shortcodes. Use them whenever you need to link to other pages or anchors.
+
+These shortcodes allow linking directly to a certain file without needing to pass its path, e.g. `{{< ref "helloworld.md" >}}`. This also works with anchors, e.g. linking to an `anchor` in the `helloworld.md` file would be `{{< ref "helloworld.md#anchor" >}}`, and linking to an `anchor` in the current file would be `{{< #anchor >}}`.
+
+They also error out upon finding an invalid link, which protects you from merging broken links.
+
+Do *not* use `rel`/`relref` for the `content/hig/_index.md` and `content/docs/use/kirigami/*.md` pages.
+
+These shortcodes are used once to display the link, so no closing tag is used.
+
+You can read more about `rel`/`relref` [here](https://gohugo.io/content-management/cross-references/).
+
+## Adding images
+
+Images should be placed in a folder that has the same name as the Markdown file without the `.md` extension. This way, it is possible to link to the image without needing to specify its path.
+
+You can embed images in the tutorial page using `![](imagefile.png)`. Optionally, you can add alt text inside the brackets, e.g. `![Alternative text that will be read by screen readers.](imagefile.png)`.
+
+## Code blocks
+
+You can specify the language to be used to highlight code blocks written in Markdown by writing the language name after the three backticks, e.g.:
+
+    ```cmake
+    cmake -B build
+    cmake --build build
+    ```
+
+The most commonly used highlighting options are `c++`, `qml`, `cmake`.
+
+## API links
 
 Links to `api.kde.org` and `doc.qt.io` can be generated as follows:
 
@@ -112,7 +181,9 @@ Links to `api.kde.org` and `doc.qt.io` can be generated as follows:
 [text](docs:component;link)
 ```
 
-where `text` is the text for the link, `component` is the component (e.g. `kirigami2`, `qtquickcontrols`) and `link` is the item to link to (e.g. `QtQuick.Controls.Label`, `org::kde::kirigami::BasicListItem`, `KMessageBox`).
+where `text` is the text for the link, `component` is the component group (e.g. `kirigami2`, `qtquickcontrols`) and `link` is the item to link to (e.g. `QtQuick.Controls.Label`, `org::kde::kirigami::BasicListItem`, `KMessageBox`).
+
+The `component` matches the name of the `.json` files in `_data`. Inside the corresponding `.json` file, searching for the name of the class or function you need will give you the name of the `link`.
 
 When you want to link to the main page for the documentation of a KDE component, you can omit the `link`, as in `[Kirigami](docs:kirigami2)`. This cannot be done for Qt components.
 
