@@ -162,6 +162,8 @@ Images should be placed in a folder that has the same name as the Markdown file 
 
 You can embed images in the tutorial page using `![](imagefile.png)`. Optionally, you can add alt text inside the brackets, e.g. `![Alternative text that will be read by screen readers.](imagefile.png)`.
 
+If you need captions or need to position the image in a specific way, like in the horizontal center of the page, you may also use the [figure shortcode](https://gohugo.io/content-management/shortcodes/#figure): `{{< figure class="text-center" caption="Caption of the image" alt="Alternative text" src="image.png" >}}`. The available options for positioning the image using `class=` can be found in the [Bootstrap documentation](https://getbootstrap.com/docs/4.0/).
+
 ## Code blocks
 
 You can specify the language to be used to highlight code blocks written in Markdown by writing the language name after the three backticks, e.g.:
