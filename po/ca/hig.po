@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-25 00:38+0000\n"
+"POT-Creation-Date: 2023-01-17 00:50+0000\n"
 "PO-Revision-Date: 2022-01-30 10:46+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -24,13 +24,21 @@ msgid "KDE Human Interface Guidelines"
 msgstr "Guia d'interfície humana de KDE"
 
 #: content/hig/_index.md:9
+#, fuzzy
+#| msgid ""
+#| "The KDE Human Interface Guidelines (HIG) offer designers and developers a "
+#| "set of recommendations for producing beautiful, usable, and consistent "
+#| "user interfaces for convergent desktop and mobile applications and "
+#| "workspace widgets. Their aim is to improve the experience for users by "
+#| "making application and widget interfaces more consistent and hence more "
+#| "intuitive and learnable."
 msgid ""
-"The KDE Human Interface Guidelines (HIG) offer designers and developers a "
-"set of recommendations for producing beautiful, usable, and consistent user "
-"interfaces for convergent desktop and mobile applications and workspace "
-"widgets. Their aim is to improve the experience for users by making "
-"application and widget interfaces more consistent and hence more intuitive "
-"and learnable."
+"The **KDE Human Interface Guidelines (HIG)** offer designers and developers "
+"a set of recommendations for producing beautiful, usable, and consistent "
+"user interfaces for convergent desktop and mobile applications and workspace "
+"widgets. Our aim is to improve the experience for users by making consistent "
+"interfaces for desktop, mobile, and everything in between, more consistent, "
+"intuitive and learnable."
 msgstr ""
 "Les Directrius d'Interfície Humana de KDE (Human Interface Guidelines, HIG) "
 "ofereixen als dissenyadors i als desenvolupadors un conjunt de recomanacions "
@@ -40,30 +48,34 @@ msgstr ""
 "les interfícies d'aplicacions i ginys siguin més coherents i, per tant, més "
 "intuïtives i fàcils d'aprendre."
 
-#: content/hig/_index.md:16
+#: content/hig/_index.md:15
+msgid "Design Vision"
+msgstr "Visió del disseny"
+
+#: content/hig/_index.md:18
+#, fuzzy
+#| msgid ""
+#| "KDE's design vision focuses on two attributes of KDE software that "
+#| "connect its future to its history:"
+msgid ""
+"Our design vision focuses on two attributes of KDE software that connect its "
+"future to its history:"
+msgstr ""
+"La visió de disseny de KDE se centra en dos atributs del programari KDE que "
+"connecten el seu futur amb la seva història:"
+
+#: content/hig/_index.md:21
 msgid ""
 "![Simple by default, powerful when needed.](/hig/HIGDesignVisionFullBleed."
 "png)"
 msgstr ""
 "![Simple per defecte, potent quan cal.](/hig/HIGDesignVisionFullBleed.png)"
 
-#: content/hig/_index.md:18
-msgid "Design Vision"
-msgstr "Visió del disseny"
-
-#: content/hig/_index.md:21
-msgid ""
-"KDE's design vision focuses on two attributes of KDE software that connect "
-"its future to its history:"
-msgstr ""
-"La visió de disseny de KDE se centra en dos atributs del programari KDE que "
-"connecten el seu futur amb la seva història:"
-
-#: content/hig/_index.md:24
+#: content/hig/_index.md:23
 msgid "Simple by default..."
 msgstr "Senzill de manera predeterminada..."
 
-#: content/hig/_index.md:26
+#: content/hig/_index.md:25
 msgid ""
 "*Simple and inviting. KDE software is pleasant to experience and easy to use."
 "*"
@@ -71,12 +83,21 @@ msgstr ""
 "*Senzill i atraient. El programari del KDE és agradable de provar i fàcil "
 "d'utilitzar.*"
 
-#: content/hig/_index.md:29
+#: content/hig/_index.md:28
+msgid "**Make it easy to focus on what matters**"
+msgstr ""
+
+#: content/hig/_index.md:30
+#, fuzzy
+#| msgid ""
+#| "**Make it easy to focus on what matters** --- Remove or minimize elements "
+#| "not crucial to the primary or main task. Use spacing to keep things "
+#| "organized. Use color to draw attention. Reveal additional information or "
+#| "optional functions only when needed."
 msgid ""
-"**Make it easy to focus on what matters** --- Remove or minimize elements "
-"not crucial to the primary or main task. Use spacing to keep things "
-"organized. Use color to draw attention. Reveal additional information or "
-"optional functions only when needed."
+"Remove or minimize elements not crucial to the primary or main task. Use "
+"spacing to keep things organized. Use color to draw attention. Reveal "
+"additional information or optional functions only when needed."
 msgstr ""
 "**Fa que sigui fàcil centrar-se en el que importa** --- Elimina o minimitza "
 "els elements no crucials de la tasca primària o principal. Utilitza "
@@ -84,31 +105,48 @@ msgstr ""
 "cridar l'atenció. Mostra informació addicional o funcions opcionals només "
 "quan sigui necessari."
 
-#: content/hig/_index.md:33
+#: content/hig/_index.md:35
+msgid "**\"I know how to do that!\"**"
+msgstr ""
+
+#: content/hig/_index.md:37
+#, fuzzy
+#| msgid ""
+#| "**I know how to do that!** --- Make things easier to learn by reusing "
+#| "design patterns from other applications. Other applications that use good "
+#| "design are a precedent to follow."
 msgid ""
-"**I know how to do that!** --- Make things easier to learn by reusing design "
-"patterns from other applications. Other applications that use good design "
-"are a precedent to follow."
+"Make things easier to learn by reusing design patterns from other "
+"applications. Other applications that use good design are a precedent to "
+"follow."
 msgstr ""
 "**Sé com fer-ho!** --- Fa que les coses siguin més fàcils d'aprendre "
 "reutilitzant patrons de disseny d'altres aplicacions. Altres aplicacions que "
 "utilitzen un bon disseny són un precedent a seguir."
 
-#: content/hig/_index.md:36
+#: content/hig/_index.md:41
+msgid "**Do the heavy lifting for me**"
+msgstr ""
+
+#: content/hig/_index.md:43
+#, fuzzy
+#| msgid ""
+#| "**Do the heavy lifting for me** --- Make complex tasks simple. Make "
+#| "novices feel like experts. Create ways in which your users can naturally "
+#| "feel empowered by your software."
 msgid ""
-"**Do the heavy lifting for me** --- Make complex tasks simple. Make novices "
-"feel like experts. Create ways in which your users can naturally feel "
-"empowered by your software."
+"Make complex tasks simple. Make novices feel like experts. Create ways in "
+"which your users can naturally feel empowered by your software."
 msgstr ""
 "**Fa les feines pesades en el meu lloc** --- Fa simples les tasques "
 "complexes. Fa que els novençans se sentin experts. Crea maneres en què els "
 "usuaris poden sentir-se empoderats pel vostre programari."
 
-#: content/hig/_index.md:40
+#: content/hig/_index.md:47
 msgid "...Powerful when needed"
 msgstr "...Potent quan cal"
 
-#: content/hig/_index.md:42
+#: content/hig/_index.md:49
 msgid ""
 "*Power and flexibility. KDE software allows users to be effortlessly "
 "creative and efficiently productive.*"
@@ -116,39 +154,63 @@ msgstr ""
 "*Potència i flexibilitat. El programari de KDE permet que els usuaris siguin "
 "creatius i productius sense esforç.*"
 
-#: content/hig/_index.md:45
+#: content/hig/_index.md:52
+msgid "**Solve a problem**"
+msgstr ""
+
+#: content/hig/_index.md:54
+#, fuzzy
+#| msgid ""
+#| "**Solve a problem** --- Identify and make very clear to the user what "
+#| "need is addressed and how."
 msgid ""
-"**Solve a problem** --- Identify and make very clear to the user what need "
-"is addressed and how."
+"Identify and make very clear to the user what need is addressed and how."
 msgstr ""
 "**Soluciona un problema** --- Identifica i deixa molt clar a l'usuari quina "
 "necessitat s'ha d'abordar i com."
 
-#: content/hig/_index.md:47
+#: content/hig/_index.md:57
+msgid "**Always in control**"
+msgstr ""
+
+#: content/hig/_index.md:59
+#, fuzzy
+#| msgid ""
+#| "**Always in control** --- It should always be clear what can be done, "
+#| "what is currently happening, and what has just happened. The user should "
+#| "never feel at the mercy of the tool. Give the user the final say."
 msgid ""
-"**Always in control** --- It should always be clear what can be done, what "
-"is currently happening, and what has just happened. The user should never "
-"feel at the mercy of the tool. Give the user the final say."
+"It should always be clear what can be done, what is currently happening, and "
+"what has just happened. The user should never feel at the mercy of the tool. "
+"Give the user the final say."
 msgstr ""
 "**Sempre sota control** --- Sempre ha de quedar clar el que es pot fer, el "
 "que està passant actualment i el que acaba de passar. L'usuari no hauria de "
 "sentir-se mai en mans de l'eina. Doneu a l'usuari l'última paraula."
 
-#: content/hig/_index.md:51
+#: content/hig/_index.md:64
+msgid "**Be flexible**"
+msgstr ""
+
+#: content/hig/_index.md:66
+#, fuzzy
+#| msgid ""
+#| "**Be flexible** --- Provide sensible defaults but consider optional "
+#| "functionality and customization options that don\\'t interfere with the "
+#| "primary task."
 msgid ""
-"**Be flexible** --- Provide sensible defaults but consider optional "
-"functionality and customization options that don\\'t interfere with the "
-"primary task."
+"Provide sensible defaults but consider optional functionality and "
+"customization options that don\\'t interfere with the primary task."
 msgstr ""
 "**Sigueu flexible** --- Proporcioneu valors predeterminats assenyats, però "
 "considereu opcions opcionals de funcionalitat i personalització que no "
 "interfereixin amb la tasca principal."
 
-#: content/hig/_index.md:55
+#: content/hig/_index.md:70
 msgid "Note"
 msgstr "Nota"
 
-#: content/hig/_index.md:57
+#: content/hig/_index.md:72
 msgid ""
 "KDE encourages developing and designing for customization, while providing "
 "good default settings. Integrating into other desktop environments is also a "
