@@ -706,7 +706,7 @@ for Konqueror.
 
 {{< deploy-kiosk-keys index=5 >}}
 
-## GHNS
+### GHNS
 
 {{< deploy-kiosk-keys index=6 >}}
 
@@ -730,7 +730,7 @@ for Konqueror.
 
 {{< deploy-kiosk-keys index=11 >}}
 
-## Automatic logout
+### Automatic logout
 
 {{< deploy-kiosk-keys index=12 >}}
 
