@@ -5,7 +5,7 @@
 Download the latest Hugo release (extended version) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
 
 Certain tutorials fetch examples directly from their respective repositories (library-specific ones, like KArchive or KAuth); to display them, you'll need to run a Python script.
-Make sure you have the required dependencies installed on your system. We suggest using `virtualenv` for this:
+Make sure you have the required dependencies installed on your system. We suggest using `venv` for this:
 
 ```
 python3 -m venv .
@@ -70,7 +70,7 @@ description:
   > In this tutorial you will learn.... # Short summary of the page (displayed in the google description and as subtitle)
 weight: 1 # ordering of the articles in the section
 authors:
-  - SPDX-FileLicenseText: Your name <email@address>
+  - SPDX-FileCopyrightText: Your name <email@address>
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
@@ -84,11 +84,11 @@ Normal markdown content
 Other available options are:
 
 * `group:`, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](https://develop.kde.org/docs/use/kirigami/), with the groups Introduction, Style, Components, and Advanced. The groups need to be listed in the `_index` file of the tutorial.
-* `aliases:`, which creates an alias which can be used to shorten links. This is useful when linking to that page from elsewhere in the Develop website.
+* `aliases:`, which creates aliases which can be used to shorten links. This is useful when linking to that page from elsewhere.
 
 ## Hugo shortcodes
 
-There are also some custom commands that can be used to create more complex content, called [shortcodes](https://gohugo.io/content-management/shortcodes/).
+There are also some custom [shortcodes](https://gohugo.io/content-management/shortcodes/) that can be used to create more complex content.
 
 They can be identified by their characteristic `{{< >}}`, which have HTML tags inside `<>`. Certain shortcodes require closing tags.
 
