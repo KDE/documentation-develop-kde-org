@@ -66,6 +66,6 @@ pageStack.initialPage: Qt.resolvedUrl("StartPage.qml")
 
 `pageStack.initialPage` sets the initial Page of the Page stack, and `Qt.resolvedUrl` is converting the relative URL of the QML file into an absolute one.
 
-There is further information about alternative page structures [within our Kirigami documentation]({{< ref "components-pagerow_pagestack.md" >}}).
+There is further information about alternative page structures [within our Kirigami documentation](/docs/kirigami/components-pagerow_pagestack).
 
 {{< /alert >}}
