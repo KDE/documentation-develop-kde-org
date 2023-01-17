@@ -1,17 +1,23 @@
-{{ $file := .Get "file" }}
+{{- $fileContent := .Get "file" | readFile -}}
 {{- if eq (.Get "markdown") "true" -}}
-{{- $file  | readFile | markdownify -}}
-{{- else if  (.Get "highlight") -}}
-  {{- if (or (.Get "start") (.Get "lines")) -}}
-    {{- $fileContent := $file  | readFile -}}
-    {{- $fileContent = split $fileContent "\n" -}}
-    {{- $fileContent = first ((default 9999 (.Get "lines"))) (after (default 0 (.Get "start")) $fileContent) -}}
-    {{- $fileContent = delimit $fileContent "\n" -}}
-    {{- $args := (print "linenos=table,linenostart=" (default 0 (add (int (.Get "start")) 1))) -}}
-    {{-  highlight ($fileContent) (.Get "highlight") $args -}}
-  {{- else -}}
-    {{-  highlight ($file  | readFile) (.Get "highlight") "linenos=table" -}}
-  {{- end -}}
+{{- $fileContent | markdownify -}}
 {{- else -}}
-{{ $file  | readFile | safeHTML }}
+  {{- $start := 1 -}}
+  {{- if (or (.Get "start") (.Get "lines")) -}}
+    {{- with .Get "start" }}{{ $start = . }}{{ end -}}
+    {{- $skip := sub $start 1 -}}
+    {{- $lines := .Get "lines" | default 0 -}}
+    {{- $fileContent = split $fileContent "\n" -}}
+    {{- $fileContent = after $skip $fileContent -}}
+    {{- if gt $lines 0 -}}
+      {{- $fileContent = first $lines $fileContent -}}
+    {{- end -}}
+    {{- $fileContent = delimit $fileContent "\n" -}}
+  {{- end -}}
+  {{- with .Get "highlight" -}}
+    {{- $args := print "linenos=table,linenostart=" $start -}}
+    {{- highlight $fileContent . $args -}}
+  {{- else -}}
+    {{- $fileContent | htmlUnescape | safeHTML -}}
+  {{- end -}}
 {{- end -}}
