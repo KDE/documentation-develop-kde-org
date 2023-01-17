@@ -99,23 +99,20 @@ values.  A default value can be either an enum value or the index of an enum.
 
 ### Compute the default value
 
-Sometimes it is useful to dynamically compute a default value from a C++ expression.
-This can be done by adding the `code=true` attribute to the `<default>` tag. Please be
-aware that the code inside of a `default` tag will be used as parameter of a function call.
-This is a valid code for the `default` tag:
+Sometimes it is useful to dynamically compute a default value from a C++ expression. This can be done by adding the `code="true"` attribute to the `<default>` tag. Please be aware that that any default value set this way will be not be persisted by the configuration system and is recomputed each time the generated settings class is instantiated (even if a different configuration value has been set).
 
-`<default> true </default>`
+In addition, the code inside of a `default` tag will be used as parameter of a function call, so this is a valid code for the `default` tag:
 
-this is not:
+`<default code="true"> true </default>`
 
-`<default> return true </default>`
+while this is not:
 
-If you need to do calculations on the default, you can use the fact that a lambda in c++
-will can be defined and evaluated at the same time, you should also keep in mind that this code
-is running on the constructor, so you can't rely on other default values.
+`<default code="true"> return true </default>`
+
+If you need to do calculations on the default, you can use the fact that a lambda in C++ will can be defined and evaluated at the same time, you should also keep in mind that this code is running on the constructor, so you can’t rely on other default values.
 
 ```xml
-<default type="code">
+<default code="true">
       [this] {
          int someValue = OtherLibrary::precalculate();
          if (someValue % 2 == 0) {
