@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:40+0000\n"
+"POT-Creation-Date: 2023-01-18 00:50+0000\n"
 "PO-Revision-Date: 2023-01-07 09:30+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -126,7 +126,7 @@ msgstr ""
 msgid "about.h"
 msgstr "about.h"
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:33
+#: content/docs/use/kirigami/advanced-add_about_page.md:18
 msgid ""
 "In the `.h` file we create this class `AboutType` which is inherited from "
 "[QObject](https://doc.qt.io/qt-5/qobject.html)."
@@ -134,7 +134,7 @@ msgstr ""
 "V datoteki ».h« ustvarimo ta razred »AboutType«, ki je dedovan iz [QObject]"
 "(https://doc.qt.io/qt-5/qobject.html)."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:36
+#: content/docs/use/kirigami/advanced-add_about_page.md:21
 msgid ""
 "The `Q_OBJECT` macro tells the compiler that this class uses own signals and "
 "slots, the `Q_PROPERTY` macro behaves like a class data member, but it has "
@@ -144,49 +144,25 @@ msgstr ""
 "»Q_PROPERTY« se vede kot član podatkov razreda, vendar ima dodatne funkcije, "
 "to bo omogočilo, da ima naša koda QML dostop do tega razreda."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:39
+#: content/docs/use/kirigami/advanced-add_about_page.md:24
 msgid ""
 "The `aboutData` method will return the application data from `KAboutData`."
 msgstr "Metoda »aboutData« bo vrnila podatke programa iz »KAboutData«."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:41
+#: content/docs/use/kirigami/advanced-add_about_page.md:26
 msgid "about.cpp"
 msgstr "about.cpp"
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:47
+#: content/docs/use/kirigami/advanced-add_about_page.md:30
 msgid "In the `.cpp` file we just include the `.h` file."
 msgstr "V datoteko ».cpp« samo vključimo datoteko ».h«."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:49
+#: content/docs/use/kirigami/advanced-add_about_page.md:32
 #: content/docs/use/kirigami/introduction-getting_started.md:92
 msgid "main.cpp"
 msgstr "main.cpp"
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:63
-msgid "The program name used internally."
-msgstr "Ime programa, ki se uporablja interno."
-
-#: content/docs/use/kirigami/advanced-add_about_page.md:65
-msgid "A displayable program name string."
-msgstr "Prikazan niz imena programa."
-
-#: content/docs/use/kirigami/advanced-add_about_page.md:67
-msgid "The program version string."
-msgstr "Niz programske različice."
-
-#: content/docs/use/kirigami/advanced-add_about_page.md:69
-msgid "Short description of what the app does."
-msgstr "Kratek opis tega, kaj aplikacija počne."
-
-#: content/docs/use/kirigami/advanced-add_about_page.md:71
-msgid "The license this code is released under."
-msgstr "Dovoljenje, pod katerim je ta koda izdana."
-
-#: content/docs/use/kirigami/advanced-add_about_page.md:73
-msgid "Copyright Statement."
-msgstr "Izjava o avtorski pravici."
-
-#: content/docs/use/kirigami/advanced-add_about_page.md:90
+#: content/docs/use/kirigami/advanced-add_about_page.md:36
 msgid ""
 "In the cpp file we include `KAboutData` and the `.h` file we just created, "
 "[KAboutData](docs:kcoreaddons;KAboutData) is a core KDE Frameworks component "
@@ -202,16 +178,7 @@ msgstr ""
 "iniciramo z dokaj popolnim privzetim konstruktorjem in dodamo informacije o "
 "avtorju."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:93
-msgid ""
-"We also include this `config-helloworld.h` file which gives us this "
-"`HELLOWORLD_VERSION_STRING` variable that we'll set later in this tutorial."
-msgstr ""
-"Prav tako vključujemo datoteko »config-helloworld.h«, ki nam daje to "
-"spremenljivko »HELLOWORLD_VERSION_STRING«, ki jo bomo nastavili kasneje v "
-"teh vajah."
-
-#: content/docs/use/kirigami/advanced-add_about_page.md:95
+#: content/docs/use/kirigami/advanced-add_about_page.md:39
 msgid ""
 "After all the required information has been set, we call `KAboutData::"
 "setApplicationData` to initialize the properties of the [QApplication ]"
@@ -221,7 +188,7 @@ msgstr ""
 "setApplicationData« za inicializacijo lastnosti predmeta [QApplication]"
 "(https://doc.qt.io/qt-5/qapplication.html)."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:98
+#: content/docs/use/kirigami/advanced-add_about_page.md:42
 msgid ""
 "After the QML Engine definition, we create a [qmlRegisterSingletonType]"
 "(https://doc.qt.io/qt-5/qqmlengine.html#qmlRegisterSingletonType), the first "
@@ -235,23 +202,30 @@ msgstr ""
 "podrazličica, četrti je ime vrste, ime, ki ga bomo klicali pri dostopanju do "
 "metod »AboutType«."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:100
+#: content/docs/use/kirigami/advanced-add_about_page.md:44
 msgid ""
 "In the `qmlRegisterSingletonType` lambda we just return a new `AboutType` "
 "object;"
 msgstr "V lambdi »qmlRegisterSingletonType« vrnemo nov predmet »AboutType«;"
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:103
+#: content/docs/use/kirigami/advanced-add_about_page.md:47
 #: content/docs/use/kirigami/introduction-getting_started.md:58
 msgid "main.qml"
 msgstr "main.qml"
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:135
+#: content/docs/use/kirigami/advanced-add_about_page.md:51
+#, fuzzy
+#| msgid ""
+#| "First, we import the package we defined in the `main.cpp` file, add a "
+#| "`Kirigami.Action` to our global drawer that will send us to the about "
+#| "page and create a component with a `Kirigami.AboutPage` in it, the About "
+#| "Page only have one property: `aboutData`, we then pass `Conrtoller."
+#| "aboutData` to it."
 msgid ""
 "First, we import the package we defined in the `main.cpp` file, add a "
 "`Kirigami.Action` to our global drawer that will send us to the about page "
 "and create a component with a `Kirigami.AboutPage` in it, the About Page "
-"only have one property: `aboutData`, we then pass `Conrtoller.aboutData` to "
+"only have one property: `aboutData`, we then pass `AboutType.aboutData` to "
 "it."
 msgstr ""
 "Najprej uvozimo paket, ki smo ga določili v datoteki »main.cpp«, dodamo "
@@ -260,38 +234,42 @@ msgstr ""
 "programu ima samo eno lastnost: »aboutData«, nato mu podajamo »Controller."
 "aboutData«."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:138
+#: content/docs/use/kirigami/advanced-add_about_page.md:54
 msgid "CMakeLists"
 msgstr "CMakeLists"
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:161
+#: content/docs/use/kirigami/advanced-add_about_page.md:58
+#, fuzzy
+#| msgid ""
+#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
+#| "to the `add_executable` module and `KF5::CoreAddons` to the "
+#| "`target_link_libraries` module."
 msgid ""
 "In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to the "
-"`find_package` module. You'll also want to add these three `ECM` includes "
-"which will allow us to use the `ecm_setup_version` function, this function "
-"let's use the `PROJECT_VERSION` variable in our code so we only need to "
-"change one variable when bumping up versions."
-msgstr ""
-"V datoteki CMakeLists .txt v naši mapi najvišje ravni dodajte »CoreAddons« v "
-"modul »find_package«. Prav tako boste želeli dodati te tri vključitve "
-"»ECM« (include), ki nam bodo omogočile uporabo funkcije »ecm_setup_version«, "
-"za to funkcijo uporabimo spremenljivko »PROJECT_VERSION« v naši kodi, zato "
-"moramo spremeniti samo eno spremenljivko pri poviševanju različic."
-
-#: content/docs/use/kirigami/advanced-add_about_page.md:169
-msgid ""
-"In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` to "
-"the `add_executable` module and `KF5::CoreAddons` to the "
-"`target_link_libraries` module."
+"`find_package` module."
 msgstr ""
 "V datoteko CMakeLists.txt v imeniku »src« dodajte »controller.cpp« k modulu "
 "»add_executable« in »KF5::CoreAddons« k modulu »target_link_libraries«."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:171
+#: content/docs/use/kirigami/advanced-add_about_page.md:62
+#, fuzzy
+#| msgid ""
+#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
+#| "to the `add_executable` module and `KF5::CoreAddons` to the "
+#| "`target_link_libraries` module."
+msgid ""
+"In the CMakeLists.txt file in the ‘src’ directory, add `about.cpp` to the "
+"`add_executable` module and `KF5::CoreAddons` to the `target_link_libraries` "
+"module."
+msgstr ""
+"V datoteko CMakeLists.txt v imeniku »src« dodajte »controller.cpp« k modulu "
+"»add_executable« in »KF5::CoreAddons« k modulu »target_link_libraries«."
+
+#: content/docs/use/kirigami/advanced-add_about_page.md:65
 msgid "Running the application"
 msgstr "Zagon aplikacije"
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:173
+#: content/docs/use/kirigami/advanced-add_about_page.md:67
 msgid ""
 "Now if you run your application and trigger the \"About\" action in the "
 "global drawer you should see our about page."
@@ -299,7 +277,7 @@ msgstr ""
 "Če zaženete aplikacijo in sprožite dejanje »O programu« v globalnem predalu, "
 "bi morali videti našo stran o programu."
 
-#: content/docs/use/kirigami/advanced-add_about_page.md:175
+#: content/docs/use/kirigami/advanced-add_about_page.md:69
 msgid "![Screenshot of the Kirigami About Page](about-page.png)"
 msgstr "![Posnetek zaslona strani o programu Kirigami] (o strani.png)"
 
@@ -4955,7 +4933,7 @@ msgstr ""
 "pomagajo pri prvih korakih:"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:65
-#: content/docs/use/kirigami/introduction-next_steps.md:75
+#: content/docs/use/kirigami/introduction-next_steps.md:76
 msgid "Topic"
 msgstr "Tema"
 
@@ -4997,11 +4975,21 @@ msgstr ""
 "Dodajte napredno funkcionalnost v aplikacijo Kirigami in jo povežite z "
 "uporabniškim vmesnikom."
 
-#: content/docs/use/kirigami/introduction-next_steps.md:71
+#: content/docs/use/kirigami/introduction-next_steps.md:70
+#, fuzzy
+#| msgid "[Figuring out main.cpp](/docs/kirigami/advanced-maincpp)"
+msgid "[About Page](/docs/kirigami/advanced-add_about_page)"
+msgstr "[Ugotavljanje main.cpp](/docs/kirigami/advanced-maincpp)"
+
+#: content/docs/use/kirigami/introduction-next_steps.md:70
+msgid "Add an \"About Page\" to your UI."
+msgstr ""
+
+#: content/docs/use/kirigami/introduction-next_steps.md:72
 msgid "Beginner C++ resources"
 msgstr "Viri C++ za začetnike"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:73
+#: content/docs/use/kirigami/introduction-next_steps.md:74
 msgid ""
 "If you are completely new to C++ there are numerous resources available "
 "throughout the web. Here are some that may be useful."
@@ -5009,47 +4997,47 @@ msgstr ""
 "Če ste popolnoma novi v C++ so na voljo številni viri v celotnem spletu. "
 "Tukaj jih je nekaj, ki bi lahko bili koristni."
 
-#: content/docs/use/kirigami/introduction-next_steps.md:75
+#: content/docs/use/kirigami/introduction-next_steps.md:76
 msgid "Resource"
 msgstr "Sredstvo"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:77
+#: content/docs/use/kirigami/introduction-next_steps.md:78
 msgid "[Wikibooks C++](https://en.wikibooks.org/wiki/C%2B%2B_Programming)"
 msgstr "[Wikibooks C++](https://en.wikibooks.org/wiki/C%2B%2B_Programming)"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:77
+#: content/docs/use/kirigami/introduction-next_steps.md:78
 msgid "A comprehensive wikibook with C++ lessons and exercises"
 msgstr "Celovita wiki-knjiga s C++ lekcijami in vajami"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:78
+#: content/docs/use/kirigami/introduction-next_steps.md:79
 msgid "[W3Schools C++](https://www.w3schools.com/cpp/cpp_intro.asp)"
 msgstr "[W3Schools C++](https://www.w3schools.com/cpp/cpp_intro.asp)"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:78
+#: content/docs/use/kirigami/introduction-next_steps.md:79
 msgid "A set of C++ tutorials and other resources aimed at beginners"
 msgstr "Sklop učbenikov C++ in drugih virov namenjenih začetnikom"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:79
+#: content/docs/use/kirigami/introduction-next_steps.md:80
 msgid "[LearnCpp](https://www.learncpp.com/)"
 msgstr "[LearnCpp](https://www.learncpp.com/)"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:79
+#: content/docs/use/kirigami/introduction-next_steps.md:80
 msgid "Tutorials to get to grips with C++"
 msgstr "Vaje za spoprijemanje s C++"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:80
+#: content/docs/use/kirigami/introduction-next_steps.md:81
 msgid "[cppreference](https://en.cppreference.com/w/)"
 msgstr "[cppreference](https://en.cppreference.com/w/)"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:80
+#: content/docs/use/kirigami/introduction-next_steps.md:81
 msgid "A reference site for C++"
 msgstr "Referenčno spletišče za C++"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:82
+#: content/docs/use/kirigami/introduction-next_steps.md:83
 msgid "Creating classic KDE applications using QtWidgets"
 msgstr "Ustvarjanje klasičnih aplikacij KDE z uporabo QtWidget-ov"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:84
+#: content/docs/use/kirigami/introduction-next_steps.md:85
 msgid ""
 "If you'd like to work on more complex KDE applications such as Dolphin, "
 "Kontact, or Kate, you will need to learn more about how to use QtWidgets, "
@@ -5064,7 +5052,7 @@ msgstr ""
 "zamenljiv z QML/Kirigami - vsak ima drugačen nabor pomanjkljivosti - "
 "starejši in kompleksnejši KDE aplikacije se večinoma izdelujejo s QtWidgets."
 
-#: content/docs/use/kirigami/introduction-next_steps.md:86
+#: content/docs/use/kirigami/introduction-next_steps.md:87
 msgid ""
 "QtWidgets are somewhat more daunting to work with than QML (and *much* more C"
 "++ intensive!). Luckily, we have [a set of tutorials](/content/docs/"
@@ -5075,11 +5063,11 @@ msgstr ""
 "intenzivni v C++!). Na srečo imamo [nabor učbenikov](/content/docs/"
 "getting_started) v KDE Docs, ki vam bo pomagal, da se bolj seznanite z njimi."
 
-#: content/docs/use/kirigami/introduction-next_steps.md:88
+#: content/docs/use/kirigami/introduction-next_steps.md:89
 msgid "More QML and QtQuick"
 msgstr "Več QML in QtQuick"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:90
+#: content/docs/use/kirigami/introduction-next_steps.md:91
 msgid ""
 "The Qt project is extensive, and so are QML and QtQuick. There is a lot of "
 "functionality we haven't covered, but there is a lot of documentation we can "
@@ -5089,7 +5077,7 @@ msgstr ""
 "funkcionalnosti, ki je nismo obdelali, vendar je veliko dokumentacije, ki jo "
 "lahko izvlečemo, da izvemo več."
 
-#: content/docs/use/kirigami/introduction-next_steps.md:92
+#: content/docs/use/kirigami/introduction-next_steps.md:93
 msgid ""
 "If you want to look up what specific components do, look no further than "
 "[Qt's official QML documentation.](https://doc.qt.io/qt-5/qtquick-index.html)"
@@ -5097,7 +5085,7 @@ msgstr ""
 "Če želite poiskati, kaj naredijo določene komponente, ne glejte dlje od [Qt-"
 "jeve uradne dokumentacije QML.](https://doc.qt.io/qt-5/qtquick-index.html)"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:93
+#: content/docs/use/kirigami/introduction-next_steps.md:94
 msgid ""
 "If you are looking for a more guided approach to learning, [the QMLBook]"
 "(https://qmlbook.github.io/) is a great place to start."
@@ -5105,11 +5093,11 @@ msgstr ""
 "Če iščete bolj voden pristop k učenju, je [QMLBook](https://qmlbook.github."
 "io/) odličen kraj za začetek."
 
-#: content/docs/use/kirigami/introduction-next_steps.md:95
+#: content/docs/use/kirigami/introduction-next_steps.md:96
 msgid "More Kirigami"
 msgstr "Več Kirigamija"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:97
+#: content/docs/use/kirigami/introduction-next_steps.md:98
 msgid ""
 "This documentation includes a lot more about Kirigami. You can poke through "
 "some of the Components pages to find out more about some of the QML "
@@ -5119,7 +5107,7 @@ msgstr ""
 "nekaterih straneh o komponentah QML, lahko pokukate v nekatere komponente, "
 "ki jih Kirigami vam zagotavlja za uporabo."
 
-#: content/docs/use/kirigami/introduction-next_steps.md:99
+#: content/docs/use/kirigami/introduction-next_steps.md:100
 msgid ""
 "We recommend you also take a look at Kirigami Gallery (`kirigami2gallery`), "
 "an application designed by KDE developers to demonstrate Kirigami's tools "
@@ -5137,11 +5125,11 @@ msgstr ""
 "preberete v našem [učbeniku specifične Kirigami galerije](/docs/kirigami/"
 "introduction-kirigami-gallery)."
 
-#: content/docs/use/kirigami/introduction-next_steps.md:101
+#: content/docs/use/kirigami/introduction-next_steps.md:102
 msgid "The sky is the limit!"
 msgstr "Nebo je meja!"
 
-#: content/docs/use/kirigami/introduction-next_steps.md:103
+#: content/docs/use/kirigami/introduction-next_steps.md:104
 msgid ""
 "Don't be intimidated by all the material on here! No one starts off being "
 "able to create something like Plasma from scratch. But KDE is no multi-"
@@ -5153,7 +5141,7 @@ msgstr ""
 "oviro za vstop - nimamo intervjujev za kodiranje v petih krogih! Dokler "
 "boste prijazni, boš dobrodošli."
 
-#: content/docs/use/kirigami/introduction-next_steps.md:105
+#: content/docs/use/kirigami/introduction-next_steps.md:106
 msgid "Good luck!"
 msgstr "Srečno!"
 
@@ -5529,9 +5517,14 @@ msgstr ""
 "resolvedUrl' pretvori relativni naslov URL datoteke QML v absolutni naslov."
 
 #: content/docs/use/kirigami/introduction-pages.md:69
+#, fuzzy
+#| msgid ""
+#| "There is further information about alternative page structures [within "
+#| "our Kirigami documentation]({{< ref \"components-pagerow_pagestack.md\" "
+#| ">}})."
 msgid ""
 "There is further information about alternative page structures [within our "
-"Kirigami documentation]({{< ref \"components-pagerow_pagestack.md\" >}})."
+"Kirigami documentation](/docs/kirigami/components-pagerow_pagestack)."
 msgstr ""
 "Obstajajo še dodatne informacije o alternativnih strukturah strani [v naši "
 "dokumentaciji Kirigami]({{< ref \"components-pagerow_pagestack.md\" >}})."
@@ -6089,3 +6082,44 @@ msgid ""
 msgstr ""
 "Velikost pisave programa [teme](docs:kirigami2;Theme) Kirigami je na voljo "
 "kot »Kirigami.Theme.defaultFont.pointSize« v programu."
+
+#~ msgid "The program name used internally."
+#~ msgstr "Ime programa, ki se uporablja interno."
+
+#~ msgid "A displayable program name string."
+#~ msgstr "Prikazan niz imena programa."
+
+#~ msgid "The program version string."
+#~ msgstr "Niz programske različice."
+
+#~ msgid "Short description of what the app does."
+#~ msgstr "Kratek opis tega, kaj aplikacija počne."
+
+#~ msgid "The license this code is released under."
+#~ msgstr "Dovoljenje, pod katerim je ta koda izdana."
+
+#~ msgid "Copyright Statement."
+#~ msgstr "Izjava o avtorski pravici."
+
+#~ msgid ""
+#~ "We also include this `config-helloworld.h` file which gives us this "
+#~ "`HELLOWORLD_VERSION_STRING` variable that we'll set later in this "
+#~ "tutorial."
+#~ msgstr ""
+#~ "Prav tako vključujemo datoteko »config-helloworld.h«, ki nam daje to "
+#~ "spremenljivko »HELLOWORLD_VERSION_STRING«, ki jo bomo nastavili kasneje v "
+#~ "teh vajah."
+
+#~ msgid ""
+#~ "In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to "
+#~ "the `find_package` module. You'll also want to add these three `ECM` "
+#~ "includes which will allow us to use the `ecm_setup_version` function, "
+#~ "this function let's use the `PROJECT_VERSION` variable in our code so we "
+#~ "only need to change one variable when bumping up versions."
+#~ msgstr ""
+#~ "V datoteki CMakeLists .txt v naši mapi najvišje ravni dodajte "
+#~ "»CoreAddons« v modul »find_package«. Prav tako boste želeli dodati te tri "
+#~ "vključitve »ECM« (include), ki nam bodo omogočile uporabo funkcije "
+#~ "»ecm_setup_version«, za to funkcijo uporabimo spremenljivko "
+#~ "»PROJECT_VERSION« v naši kodi, zato moramo spremeniti samo eno "
+#~ "spremenljivko pri poviševanju različic."
