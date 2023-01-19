@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-18 00:50+0000\n"
-"PO-Revision-Date: 2023-01-09 09:51+0000\n"
+"PO-Revision-Date: 2023-01-18 13:27+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -93,7 +93,8 @@ msgstr ""
 "X-POFile-SpellExtra: cards onCompleted Component implementation call\n"
 "X-POFile-SpellExtra: AbstractApplicationWindow AboutType\n"
 "X-POFile-SpellExtra: qmlRegisterSingletonType Koko parse UTC drawers\n"
-"X-POFile-SpellExtra: overlaysheets progressbars\n"
+"X-POFile-SpellExtra: overlaysheets progressbars addaboutpage\n"
+"X-POFile-SpellExtra: pagerowpagestack\n"
 
 #: content/docs/use/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -298,13 +299,6 @@ msgid "main.qml"
 msgstr "main.qml"
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:51
-#, fuzzy
-#| msgid ""
-#| "First, we import the package we defined in the `main.cpp` file, add a "
-#| "`Kirigami.Action` to our global drawer that will send us to the about "
-#| "page and create a component with a `Kirigami.AboutPage` in it, the About "
-#| "Page only have one property: `aboutData`, we then pass `Conrtoller."
-#| "aboutData` to it."
 msgid ""
 "First, we import the package we defined in the `main.cpp` file, add a "
 "`Kirigami.Action` to our global drawer that will send us to the about page "
@@ -316,40 +310,28 @@ msgstr ""
 "adicionamos uma `Kirigami.Action` à nossa área global que nos enviará para a "
 "página 'acerca' e criar um componente com um `Kirigami.AboutPage` nela, "
 "sendo que a página 'Acerca' só tem uma propriedade - a `aboutData` -, onde "
-"iremos passar a ela o `Controller.aboutData`."
+"iremos passar a ela o `AboutType.aboutData`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:54
 msgid "CMakeLists"
 msgstr "CMakeLists"
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:58
-#, fuzzy
-#| msgid ""
-#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
-#| "to the `add_executable` module and `KF5::CoreAddons` to the "
-#| "`target_link_libraries` module."
 msgid ""
 "In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to the "
 "`find_package` module."
 msgstr ""
-"No ficheiro CMakeLists.txt da pasta ‘src’, adicione o  `controller.cpp` ao "
-"módulo `add_executable` e o `KF5::CoreAddons` ao módulo "
-"`target_link_libraries`."
+"No ficheiro CMakeLists.txt da pasta de topo, adicione o `CoreAddons` ao "
+"módulo `find_package`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:62
-#, fuzzy
-#| msgid ""
-#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
-#| "to the `add_executable` module and `KF5::CoreAddons` to the "
-#| "`target_link_libraries` module."
 msgid ""
 "In the CMakeLists.txt file in the ‘src’ directory, add `about.cpp` to the "
 "`add_executable` module and `KF5::CoreAddons` to the `target_link_libraries` "
 "module."
 msgstr ""
-"No ficheiro CMakeLists.txt da pasta ‘src’, adicione o  `controller.cpp` ao "
-"módulo `add_executable` e o `KF5::CoreAddons` ao módulo "
-"`target_link_libraries`."
+"No ficheiro CMakeLists.txt da pasta ‘src’, adicione o  `about.cpp` ao módulo "
+"`add_executable` e o `KF5::CoreAddons` ao módulo `target_link_libraries`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:65
 msgid "Running the application"
@@ -5197,14 +5179,12 @@ msgstr ""
 "sua interface."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:70
-#, fuzzy
-#| msgid "[Figuring out main.cpp](/docs/kirigami/advanced-maincpp)"
 msgid "[About Page](/docs/kirigami/advanced-add_about_page)"
-msgstr "[Descobrir o main.cpp](/docs/kirigami/advanced-maincpp)"
+msgstr "[Página 'Acerca'](/docs/kirigami/advanced-add_about_page)"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:70
 msgid "Add an \"About Page\" to your UI."
-msgstr ""
+msgstr "Adicione uma página \"Acerca\" na sua interface do utilizador."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:72
 msgid "Beginner C++ resources"
@@ -5754,18 +5734,12 @@ msgstr ""
 "resolvedUrl` irá converter o URL relativo do ficheiro QML para um absoluto."
 
 #: content/docs/use/kirigami/introduction-pages.md:69
-#, fuzzy
-#| msgid ""
-#| "There is further information about alternative page structures [within "
-#| "our Kirigami documentation]({{< ref \"components-pagerow_pagestack.md\" "
-#| ">}})."
 msgid ""
 "There is further information about alternative page structures [within our "
 "Kirigami documentation](/docs/kirigami/components-pagerow_pagestack)."
 msgstr ""
 "Existe mais informações sobre estruturas alternativas de páginas [dentro da "
-"nossa documentação do Kirigami]({{< ref \"components-pagerow_pagestack.md\" "
-">}})."
+"nossa documentação do Kirigami](/docs/kirigami/components-pagerow_pagestack)."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:0
 msgid "Using separate files and signals"
@@ -6331,44 +6305,3 @@ msgid ""
 msgstr ""
 "O tamanho do texto do [Theme](docs:kirigami2;Theme) do Kirigami está "
 "disponível como `Kirigami.Theme.defaultFont.pointSize` na sua aplicação."
-
-#~ msgid "The program name used internally."
-#~ msgstr "O nome usado internamente para o programa."
-
-#~ msgid "A displayable program name string."
-#~ msgstr "Um texto visível com o nome do programa."
-
-#~ msgid "The program version string."
-#~ msgstr "O texto da versão do programa."
-
-#~ msgid "Short description of what the app does."
-#~ msgstr "Breve descrição do que faz a aplicação."
-
-#~ msgid "The license this code is released under."
-#~ msgstr "A licença sob a qual é disponibilizado este código."
-
-#~ msgid "Copyright Statement."
-#~ msgstr "Aviso de Direitos de Cópia."
-
-#~ msgid ""
-#~ "We also include this `config-helloworld.h` file which gives us this "
-#~ "`HELLOWORLD_VERSION_STRING` variable that we'll set later in this "
-#~ "tutorial."
-#~ msgstr ""
-#~ "Também incluímos este ficheiro `config-helloworld.h` que nos dá a "
-#~ "variável `HELLOWORLD_VERSION_STRING` que iremos ver mais tarde neste "
-#~ "tutorial."
-
-#~ msgid ""
-#~ "In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to "
-#~ "the `find_package` module. You'll also want to add these three `ECM` "
-#~ "includes which will allow us to use the `ecm_setup_version` function, "
-#~ "this function let's use the `PROJECT_VERSION` variable in our code so we "
-#~ "only need to change one variable when bumping up versions."
-#~ msgstr ""
-#~ "No ficheiro CMakeLists.txt na nossa pasta de topo, adicione o "
-#~ "`CoreAddons` ao módulo `find_package`. Iremos também querer adicionar "
-#~ "estas três inclusões do `ECM` que nos permitirão usar a função "
-#~ "`ecm_setup_version`, onde a mesma nos deixa usar a variável "
-#~ "`PROJECT_VERSION` no nosso código, para que só tenhamos de mudar uma "
-#~ "variável quando incrementarmos as versões."

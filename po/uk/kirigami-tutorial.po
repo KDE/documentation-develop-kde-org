@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-18 00:50+0000\n"
-"PO-Revision-Date: 2023-01-06 09:47+0200\n"
+"PO-Revision-Date: 2023-01-18 11:57+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -216,13 +216,6 @@ msgid "main.qml"
 msgstr "main.qml"
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:51
-#, fuzzy
-#| msgid ""
-#| "First, we import the package we defined in the `main.cpp` file, add a "
-#| "`Kirigami.Action` to our global drawer that will send us to the about "
-#| "page and create a component with a `Kirigami.AboutPage` in it, the About "
-#| "Page only have one property: `aboutData`, we then pass `Conrtoller."
-#| "aboutData` to it."
 msgid ""
 "First, we import the package we defined in the `main.cpp` file, add a "
 "`Kirigami.Action` to our global drawer that will send us to the about page "
@@ -235,37 +228,27 @@ msgstr ""
 "надаватиме нам змогу переходити на сторінку «Про програму». Створюємо на "
 "загальній панелі компонент з `Kirigami.AboutPage` на ньому. Сторінка «Про "
 "програму» матиме лише одну властивість — `aboutData`. Далі, ми передамо цій "
-"властивості значення `Conrtoller.aboutData`."
+"властивості значення `AboutType.aboutData`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:54
 msgid "CMakeLists"
 msgstr "CMakeLists"
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:58
-#, fuzzy
-#| msgid ""
-#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
-#| "to the `add_executable` module and `KF5::CoreAddons` to the "
-#| "`target_link_libraries` module."
 msgid ""
 "In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to the "
 "`find_package` module."
 msgstr ""
-"У файлі CMakeLists.txt у каталозі ‘src’ додайте `controller.cpp` до модуля "
-"`add_executable` і `KF5::CoreAddons` до модуля `target_link_libraries`."
+"У файлі CMakeLists.txt у найвищій теці прооєкту додайте `CoreAddons` до "
+"модуля `find_package`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:62
-#, fuzzy
-#| msgid ""
-#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
-#| "to the `add_executable` module and `KF5::CoreAddons` to the "
-#| "`target_link_libraries` module."
 msgid ""
 "In the CMakeLists.txt file in the ‘src’ directory, add `about.cpp` to the "
 "`add_executable` module and `KF5::CoreAddons` to the `target_link_libraries` "
 "module."
 msgstr ""
-"У файлі CMakeLists.txt у каталозі ‘src’ додайте `controller.cpp` до модуля "
+"У файлі CMakeLists.txt у каталозі ‘src’ додайте `about.cpp` до модуля "
 "`add_executable` і `KF5::CoreAddons` до модуля `target_link_libraries`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:65
@@ -5069,14 +5052,12 @@ msgstr ""
 "інтерфейсом користувача."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:70
-#, fuzzy
-#| msgid "[Figuring out main.cpp](/docs/kirigami/advanced-maincpp)"
 msgid "[About Page](/docs/kirigami/advanced-add_about_page)"
-msgstr "[Розбираємося у main.cpp](/docs/kirigami/advanced-maincpp)"
+msgstr "[Сторінка «Про програму»](/docs/kirigami/advanced-add_about_page)"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:70
 msgid "Add an \"About Page\" to your UI."
-msgstr ""
+msgstr "Додаємо сторінку «Про програму» до вашого інтерфейсу користувача."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:72
 msgid "Beginner C++ resources"
@@ -5624,17 +5605,13 @@ msgstr ""
 "resolvedUrl` перетворює відносну адресу файла QML на абсолютну."
 
 #: content/docs/use/kirigami/introduction-pages.md:69
-#, fuzzy
-#| msgid ""
-#| "There is further information about alternative page structures [within "
-#| "our Kirigami documentation]({{< ref \"components-pagerow_pagestack.md\" "
-#| ">}})."
 msgid ""
 "There is further information about alternative page structures [within our "
 "Kirigami documentation](/docs/kirigami/components-pagerow_pagestack)."
 msgstr ""
-"У [нашій документації з Kirigami]({{< ref \"components-pagerow_pagestack.md"
-"\" >}}) є докладніші відомості щодо альтернативних структур сторінки."
+"У [нашій документації з Kirigami](/docs/kirigami/components-"
+"pagerow_pagestack) є докладніші відомості щодо альтернативних структур "
+"сторінки."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:0
 msgid "Using separate files and signals"

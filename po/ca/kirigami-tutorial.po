@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-18 00:50+0000\n"
-"PO-Revision-Date: 2023-01-06 05:44+0100\n"
+"PO-Revision-Date: 2023-01-18 09:42+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -230,13 +230,6 @@ msgstr "main.qml"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-add_about_page.md:51
-#, fuzzy
-#| msgid ""
-#| "First, we import the package we defined in the `main.cpp` file, add a "
-#| "`Kirigami.Action` to our global drawer that will send us to the about "
-#| "page and create a component with a `Kirigami.AboutPage` in it, the About "
-#| "Page only have one property: `aboutData`, we then pass `Conrtoller."
-#| "aboutData` to it."
 msgid ""
 "First, we import the package we defined in the `main.cpp` file, add a "
 "`Kirigami.Action` to our global drawer that will send us to the about page "
@@ -248,7 +241,7 @@ msgstr ""
 "`Kirigami.Action` al nostre calaix global que ens enviarà a la pàgina quant "
 "al i crearem un component amb una `Kirigami.AboutPage` en ell, la pàgina "
 "Quant al només en té una propietat: `aboutData`, després li passarem "
-"`Controller.aboutData`."
+"`AboutType.aboutData`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:54
 msgid "CMakeLists"
@@ -256,32 +249,22 @@ msgstr "CMakeLists"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-add_about_page.md:58
-#, fuzzy
-#| msgid ""
-#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
-#| "to the `add_executable` module and `KF5::CoreAddons` to the "
-#| "`target_link_libraries` module."
 msgid ""
 "In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to the "
 "`find_package` module."
 msgstr ""
-"En el fitxer CMakeLists.txt a la carpeta `src`, afegiu `controller.cpp` al "
-"mòdul `add_executable` i `KF5::CoreAddons` al mòdul `target_link_libraries`."
+"En el fitxer CMakeLists.txt de la carpeta de nivell superior, afegiu "
+"`CoreAddons` al mòdul `find_package`."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-add_about_page.md:62
-#, fuzzy
-#| msgid ""
-#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
-#| "to the `add_executable` module and `KF5::CoreAddons` to the "
-#| "`target_link_libraries` module."
 msgid ""
 "In the CMakeLists.txt file in the ‘src’ directory, add `about.cpp` to the "
 "`add_executable` module and `KF5::CoreAddons` to the `target_link_libraries` "
 "module."
 msgstr ""
-"En el fitxer CMakeLists.txt a la carpeta `src`, afegiu `controller.cpp` al "
-"mòdul `add_executable` i `KF5::CoreAddons` al mòdul `target_link_libraries`."
+"En el fitxer CMakeLists.txt a la carpeta `src`, afegiu `about.cpp` al mòdul "
+"`add_executable` i `KF5::CoreAddons` al mòdul `target_link_libraries`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:65
 msgid "Running the application"
@@ -5329,14 +5312,12 @@ msgstr ""
 "connecteu-la amb la IU."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:70
-#, fuzzy
-#| msgid "[Figuring out main.cpp](/docs/kirigami/advanced-maincpp)"
 msgid "[About Page](/docs/kirigami/advanced-add_about_page)"
-msgstr "[Descobrir el main.cpp](/docs/kirigami/advanced-maincpp)"
+msgstr "[Pàgina «Quant al»](/docs/kirigami/advanced-add_about_page)"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:70
 msgid "Add an \"About Page\" to your UI."
-msgstr ""
+msgstr "Afegeix una «Pàgina quant al» a la interfície d'usuari."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:72
 msgid "Beginner C++ resources"
@@ -5907,17 +5888,12 @@ msgstr ""
 "`Qt.resolvedUrl` converteix l'URL relatiu del fitxer en QML en un absolut."
 
 #: content/docs/use/kirigami/introduction-pages.md:69
-#, fuzzy
-#| msgid ""
-#| "There is further information about alternative page structures [within "
-#| "our Kirigami documentation]({{< ref \"components-pagerow_pagestack.md\" "
-#| ">}})."
 msgid ""
 "There is further information about alternative page structures [within our "
 "Kirigami documentation](/docs/kirigami/components-pagerow_pagestack)."
 msgstr ""
 "Hi ha més informació sobre estructures de pàgina alternatives [dins la "
-"documentació del Kirigami]({{< ref \"components-pagerow_pagestack.md\" >}})."
+"documentació del Kirigami](/docs/kirigami/components-pagerow_pagestack)."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:0
 msgid "Using separate files and signals"
@@ -6514,46 +6490,3 @@ msgstr ""
 "La mida del tipus de lletra del [Theme](docs:kirigami2;Theme) de Kirigami "
 "està disponible en la vostra aplicació com una `Kirigami.Theme.defaultFont."
 "pointSize`."
-
-#~ msgid "The program name used internally."
-#~ msgstr "El nom del programa que s'utilitza internament."
-
-#~ msgid "A displayable program name string."
-#~ msgstr "Una cadena de nom visible del programa."
-
-#~ msgid "The program version string."
-#~ msgstr "La cadena de versió del programa."
-
-#~ msgid "Short description of what the app does."
-#~ msgstr "Una descripció breu del que fa l'aplicació."
-
-#~ msgid "The license this code is released under."
-#~ msgstr "La llicència sota la qual es publica aquest codi."
-
-#~ msgid "Copyright Statement."
-#~ msgstr "Declaració dels drets d'autor."
-
-# skip-rule: t-acc_obe,punctuation-accent-quotes
-#~ msgid ""
-#~ "We also include this `config-helloworld.h` file which gives us this "
-#~ "`HELLOWORLD_VERSION_STRING` variable that we'll set later in this "
-#~ "tutorial."
-#~ msgstr ""
-#~ "També incloem aquest fitxer `config-helloworld.h`, el qual ens dona "
-#~ "aquesta variable `HELLOWORLD_VERSION_STRING` que configurarem més "
-#~ "endavant en aquesta guia d'aprenentatge."
-
-# skip-rule: t-acc_obe,punctuation-accent-quotes
-#~ msgid ""
-#~ "In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to "
-#~ "the `find_package` module. You'll also want to add these three `ECM` "
-#~ "includes which will allow us to use the `ecm_setup_version` function, "
-#~ "this function let's use the `PROJECT_VERSION` variable in our code so we "
-#~ "only need to change one variable when bumping up versions."
-#~ msgstr ""
-#~ "En el fitxer CMakeLists.txt en la nostra carpeta de nivell superior, "
-#~ "afegiu `CoreAddons` al mòdul `find_package`. També voldreu afegir "
-#~ "aquestes tres inclusions d'`ECM`, les quals ens permetran utilitzar la "
-#~ "funció `ecm_setup_version`, aquesta funció permet utilitzar la variable "
-#~ "`PROJECT_VERSION` en el nostre codi, de manera que només necessitarem "
-#~ "canviar una variable quan fem augmentar les versions."
