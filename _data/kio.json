@@ -1907,15 +1907,6 @@
         ]
       },
       {
-        "@kind": "struct",
-        "name": {
-          "$": "ConnectionResult"
-        },
-        "filename": {
-          "$": "structConnectionResult.html"
-        }
-      },
-      {
         "@kind": "class",
         "name": {
           "$": "KIO::CookieJar"
@@ -2388,15 +2379,6 @@
             }
           }
         ]
-      },
-      {
-        "@kind": "struct",
-        "name": {
-          "$": "HTTPProtocol::DAVRequest"
-        },
-        "filename": {
-          "$": "structHTTPProtocol_1_1DAVRequest.html"
-        }
       },
       {
         "@kind": "class",
@@ -4391,610 +4373,386 @@
       {
         "@kind": "class",
         "name": {
-          "$": "FtpInternal"
+          "$": "KIO::ForwardingWorkerBase"
         },
         "filename": {
-          "$": "classFtpInternal.html"
+          "$": "classKIO_1_1ForwardingWorkerBase.html"
         },
-        "base": {
-          "$": "QObject"
-        },
+        "base": [
+          {
+            "$": "QObject"
+          },
+          {
+            "$": "KIO::WorkerBase"
+          }
+        ],
         "member": [
           {
             "@kind": "function",
             "type": {
-              "$": "void"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "closeConnection"
+              "$": "chmod"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a41db5c8210bced544c0ea73c1f32ce77"
+              "$": "a35e52f2dafed71a5532a192eb2f0c71d"
             },
             "arglist": {
-              "$": "()"
+              "$": "(const QUrl &url, int permissions) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "Result"
+              "$": "WorkerResult"
             },
             "name": {
               "$": "copy"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a02a6275967db2ef5af6ebfbb5c5298dc"
+              "$": "aa32719df994e5eb0013ef585dccfa5a3"
             },
             "arglist": {
-              "$": "(const QUrl &src, const QUrl &dest, int permissions, KIO::JobFlags flags)"
+              "$": "(const QUrl &src, const QUrl &dest, int permissions, JobFlags flags) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "void"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "fixupEntryName"
+              "$": "del"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a6266b09e2f3cd5f0cae97ad02f74dfd1"
+              "$": "ab45196177ed14e55e72acfd1f41b9f91"
             },
             "arglist": {
-              "$": "(FtpEntry *ftpEnt)"
+              "$": "(const QUrl &url, bool isfile) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "void"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "ftpAutoLoginMacro"
+              "$": "get"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "ab0688e7fc7ca5f7c73341e1265fb68e4"
+              "$": "af9be13105f26846ae247450d91ae5d2b"
             },
             "arglist": {
-              "$": "()"
+              "$": "(const QUrl &url) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "bool"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "ftpCloseCommand"
+              "$": "listDir"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a0b8e9c3cb3e1bfcb0d6095b07891c068"
+              "$": "a2428c38adc09abef6c60b84222c67c81"
             },
             "arglist": {
-              "$": "()"
+              "$": "(const QUrl &url) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "void"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "ftpCloseControlConnection"
+              "$": "mimetype"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a8e788877e5f1d8579f43a7fcefe5a98d"
+              "$": "a08bdf342258ee08b601167790813382b"
             },
             "arglist": {
-              "$": "()"
+              "$": "(const QUrl &url) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "void"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "ftpCloseDataConnection"
+              "$": "mkdir"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "accfff7cc52f4c617cf4ba338b139f0a7"
+              "$": "a8a0aaacba04df4708876d05625d95d9c"
             },
             "arglist": {
-              "$": "()"
+              "$": "(const QUrl &url, int permissions) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "Result"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "ftpCopyGet"
+              "$": "put"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a6d7fdc5f13795b754c999fe3d5748968"
+              "$": "a336f2816ad98e433d7978d6b0e4270eb"
             },
             "arglist": {
-              "$": "(int &iCopyFile, const QString &sCopyFile, const QUrl &url, int permissions, KIO::JobFlags flags)"
+              "$": "(const QUrl &url, int permissions, JobFlags flags) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "Result"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "ftpCopyPut"
+              "$": "rename"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a2d17a273dd9d3cf3712d8ad94c294e65"
+              "$": "acf62b8a93cb448d0267093561045120c"
             },
             "arglist": {
-              "$": "(int &iCopyFile, const QString &sCopyFile, const QUrl &url, int permissions, KIO::JobFlags flags)"
+              "$": "(const QUrl &src, const QUrl &dest, JobFlags flags) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "void"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "ftpCreateUDSEntry"
+              "$": "setModificationTime"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a17222699a6f48eae9dc6f4b580058242"
+              "$": "a76664110711de826b585520a7ce79ae9"
             },
             "arglist": {
-              "$": "(const QString &filename, const FtpEntry &ftpEnt, KIO::UDSEntry &entry, bool isDir)"
+              "$": "(const QUrl &url, const QDateTime &mtime) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "bool"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "ftpDataMode"
+              "$": "stat"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a75d21dbfd7b943008533c5082aa98575"
+              "$": "a2a03c4c243cd365ac85b3cc8acc2aad1"
             },
             "arglist": {
-              "$": "(char cMode)"
+              "$": "(const QUrl &url) override"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "bool"
+              "$": "WorkerResult"
             },
             "name": {
-              "$": "ftpFileExists"
+              "$": "symlink"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a3bc49c76a29c3db4791b56afb11896b3"
+              "$": "a2c11f083baee269e8fd7914460dc14f2"
             },
             "arglist": {
-              "$": "(const QString &path)"
+              "$": "(const QString &target, const QUrl &dest, JobFlags flags) override"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "@protection": "protected",
+            "name": {
+              "$": "UDSEntryCreationInListDir"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
+            },
+            "anchor": {
+              "$": "a7901815a0621248f65ac4dbb809b7c95a1f9c0b3e2ec2cc0424b88feee4d85609"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "@protection": "protected",
+            "name": {
+              "$": "UDSEntryCreationInStat"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
+            },
+            "anchor": {
+              "$": "a7901815a0621248f65ac4dbb809b7c95a9305d26f3de263a69f4d2ff65cf76cbf"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "UDSEntryCreationMode"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
+            },
+            "anchor": {
+              "$": "a7901815a0621248f65ac4dbb809b7c95"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "@protection": "protected",
+            "name": {
+              "$": "UDSEntryCreationInStat"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
+            },
+            "anchor": {
+              "$": "a7901815a0621248f65ac4dbb809b7c95a9305d26f3de263a69f4d2ff65cf76cbf"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "@protection": "protected",
+            "name": {
+              "$": "UDSEntryCreationInListDir"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
+            },
+            "anchor": {
+              "$": "a7901815a0621248f65ac4dbb809b7c95a1f9c0b3e2ec2cc0424b88feee4d85609"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "adjustUDSEntry"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
+            },
+            "anchor": {
+              "$": "a175a3cd68ad339e70009638f79d80046"
+            },
+            "arglist": {
+              "$": "(KIO::UDSEntry &entry, UDSEntryCreationMode creationMode) const"
             }
           },
           {
             "@kind": "function",
+            "@protection": "protected",
             "type": {
-              "$": "bool"
+              "$": "QUrl"
             },
             "name": {
-              "$": "ftpFolder"
+              "$": "processedUrl"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a26c78d9c86987be3a05a31720f534ac4"
+              "$": "a28ed0adebffe07acad9f3527dc2c2972"
             },
             "arglist": {
-              "$": "(const QString &path)"
+              "$": "() const"
             }
           },
           {
             "@kind": "function",
+            "@protection": "protected",
             "type": {
-              "$": "Result"
+              "$": "QUrl"
             },
             "name": {
-              "$": "ftpGet"
+              "$": "requestedUrl"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a8aeb419290910ebd2a9e11c1822b3ed3"
+              "$": "a2e252c5ddc3be672c107ba08352ed22b"
             },
             "arglist": {
-              "$": "(int iCopyFile, const QString &sCopyFile, const QUrl &url, KIO::fileoffset_t hCopyOffset)"
+              "$": "() const"
             }
           },
           {
             "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "pure",
             "type": {
-              "$": "Result"
+              "$": "virtual bool"
             },
             "name": {
-              "$": "ftpLogin"
+              "$": "rewriteUrl"
             },
             "anchorfile": {
-              "$": "classFtpInternal.html"
+              "$": "classKIO_1_1ForwardingWorkerBase.html"
             },
             "anchor": {
-              "$": "a19a725533edf688d148e36c90e12dac9"
+              "$": "a1438fa7d124ab19c858967c3eab12e96"
             },
             "arglist": {
-              "$": "(bool *userChanged=nullptr)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Result"
-            },
-            "name": {
-              "$": "ftpOpenCommand"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a9a1460123d44db1c5435e53052774b08"
-            },
-            "arglist": {
-              "$": "(const char *command, const QString &path, char mode, int errorcode, KIO::fileoffset_t offset=0)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Result"
-            },
-            "name": {
-              "$": "ftpOpenConnection"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a5841371835a725d1c2b68e26f717f3bd"
-            },
-            "arglist": {
-              "$": "(LoginMode loginMode)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Result"
-            },
-            "name": {
-              "$": "ftpOpenControlConnection"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a2986c8da3b375bd32df6c6345ce69ad0"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "ftpOpenDataConnection"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "acf6d4df4db8786a49efc942ed7327179"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "ftpOpenEPSVDataConnection"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a7a6a8033fa0a878f16828bebd739114c"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "ftpOpenPASVDataConnection"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "ada5b7444eb53f91fc7d09de8d7aab387"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "ftpOpenPortDataConnection"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "ae8520d1d68b9b1053f299d9e0af4dd36"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Result"
-            },
-            "name": {
-              "$": "ftpPut"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a5547e76cddef4b6c08cece9752dccfe7"
-            },
-            "arglist": {
-              "$": "(int iCopyFile, const QUrl &url, int permissions, KIO::JobFlags flags)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "ftpReadDir"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a5dfafc0f77ab9d208f184f6585158446"
-            },
-            "arglist": {
-              "$": "(FtpEntry &ftpEnt)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Result"
-            },
-            "name": {
-              "$": "ftpRename"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "ade5700d67561ac51253391e12c9332ca"
-            },
-            "arglist": {
-              "$": "(const QString &src, const QString &dst, KIO::JobFlags flags)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const char *"
-            },
-            "name": {
-              "$": "ftpResponse"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "afa75c9b638f2e0537142a22bb9e74403"
-            },
-            "arglist": {
-              "$": "(int iOffset)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "ftpSendCmd"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a854f30cc054e1fb4c1996527637d0bba"
-            },
-            "arglist": {
-              "$": "(const QByteArray &cmd, int maxretries=1)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Result"
-            },
-            "name": {
-              "$": "ftpSendMimeType"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a92219e122964fcfc8138007a92402e8e"
-            },
-            "arglist": {
-              "$": "(const QUrl &url)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "ftpSize"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a70bbb9f01bbb53bf9617c9d3f7158f38"
-            },
-            "arglist": {
-              "$": "(const QString &path, char mode)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "maybeEmitStatEntry"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a467b219fac8582b3ca7e8c7ad490a6bb"
-            },
-            "arglist": {
-              "$": "(FtpEntry &ftpEnt, const QString &filename, bool isDir)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Result"
-            },
-            "name": {
-              "$": "openConnection"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a2c474e6560af2330f392ad5ac44b1444"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ConnectionResult"
-            },
-            "name": {
-              "$": "synchronousConnectToHost"
-            },
-            "anchorfile": {
-              "$": "classFtpInternal.html"
-            },
-            "anchor": {
-              "$": "a4ec4981781466dd24c0a707230fe583e"
-            },
-            "arglist": {
-              "$": "(const QString &host, quint16 port)"
+              "$": "(const QUrl &url, QUrl &newURL)=0"
             }
           }
         ]
-      },
-      {
-        "@kind": "struct",
-        "name": {
-          "$": "HTTPProtocol::HTTPRequest"
-        },
-        "filename": {
-          "$": "structHTTPProtocol_1_1HTTPRequest.html"
-        }
-      },
-      {
-        "@kind": "struct",
-        "name": {
-          "$": "HTTPProtocol::HTTPServerState"
-        },
-        "filename": {
-          "$": "structHTTPProtocol_1_1HTTPServerState.html"
-        }
       },
       {
         "@kind": "class",
@@ -13085,6 +12843,139 @@
             },
             "arglist": {
               "$": "(const QUrl &url)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KFileFilter"
+        },
+        "filename": {
+          "$": "classKFileFilter.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KFileFilter"
+            },
+            "anchorfile": {
+              "$": "classKFileFilter.html"
+            },
+            "anchor": {
+              "$": "a13a0d4c7ee4e9c6ea8a63e309246544e"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KFileFilter"
+            },
+            "anchorfile": {
+              "$": "classKFileFilter.html"
+            },
+            "anchor": {
+              "$": "a1a7c02ae76c5826003f667288dba08c3"
+            },
+            "arglist": {
+              "$": "(const QString &label, const QStringList &filePatterns, const QStringList &mimePatterns)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "filePatterns"
+            },
+            "anchorfile": {
+              "$": "classKFileFilter.html"
+            },
+            "anchor": {
+              "$": "a321e62d1bd527cb09c80130514c30920"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isEmpty"
+            },
+            "anchorfile": {
+              "$": "classKFileFilter.html"
+            },
+            "anchor": {
+              "$": "a882c6d795716bcd2e79acc3fdaf2ae5c"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "label"
+            },
+            "anchorfile": {
+              "$": "classKFileFilter.html"
+            },
+            "anchor": {
+              "$": "a40bf0995e198c81bd02ce9aeb0a19754"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "mimePatterns"
+            },
+            "anchorfile": {
+              "$": "classKFileFilter.html"
+            },
+            "anchor": {
+              "$": "ae40b24815e80283239ac4fe1c56795e1"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "toFilterString"
+            },
+            "anchorfile": {
+              "$": "classKFileFilter.html"
+            },
+            "anchor": {
+              "$": "a50e042acf5638e0e3ab29bbf91419bc5"
+            },
+            "arglist": {
+              "$": "() const"
             }
           }
         ]
@@ -41788,6 +41679,128 @@
       {
         "@kind": "class",
         "name": {
+          "$": "KIO::WorkerConfig"
+        },
+        "filename": {
+          "$": "classKIO_1_1WorkerConfig.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "configNeeded"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1WorkerConfig.html"
+            },
+            "anchor": {
+              "$": "a7988ad3639ff051fb973d3cbbc3d9236"
+            },
+            "arglist": {
+              "$": "(const QString &protocol, const QString &host)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "MetaData"
+            },
+            "name": {
+              "$": "configData"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1WorkerConfig.html"
+            },
+            "anchor": {
+              "$": "af052ca247ce1c485032096f921aa880f"
+            },
+            "arglist": {
+              "$": "(const QString &protocol, const QString &host)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "configData"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1WorkerConfig.html"
+            },
+            "anchor": {
+              "$": "a6e9155bda900bd0121d4e401ed843a8c"
+            },
+            "arglist": {
+              "$": "(const QString &protocol, const QString &host, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "reset"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1WorkerConfig.html"
+            },
+            "anchor": {
+              "$": "a00c18887ef57861bb5b8f7dd845ceac4"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setConfigData"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1WorkerConfig.html"
+            },
+            "anchor": {
+              "$": "a5fa1f27eb8f391d6a8692406f827a53b"
+            },
+            "arglist": {
+              "$": "(const QString &protocol, const QString &host, const MetaData &config)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setConfigData"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1WorkerConfig.html"
+            },
+            "anchor": {
+              "$": "a49cb9ca7b275530a1f082604a6d7f377"
+            },
+            "arglist": {
+              "$": "(const QString &protocol, const QString &host, const QString &key, const QString &value)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "KIO::WorkerResult"
         },
         "filename": {
@@ -42152,6 +42165,10 @@
           },
           {
             "@kind": "class",
+            "$": "KIO::ForwardingWorkerBase"
+          },
+          {
+            "@kind": "class",
             "$": "KIO::IdleSlave"
           },
           {
@@ -42324,6 +42341,10 @@
           },
           {
             "@kind": "class",
+            "$": "KIO::WorkerConfig"
+          },
+          {
+            "@kind": "class",
             "$": "KIO::WorkerResult"
           }
         ],
@@ -42469,59 +42490,6 @@
             },
             "anchor": {
               "$": "abb17978b4ca2ffacf7a1147576f255a5"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumeration",
-            "type": {},
-            "name": {
-              "$": "buffersizes"
-            },
-            "anchorfile": {
-              "$": "namespaceKIO.html"
-            },
-            "anchor": {
-              "$": "ace3e7d3f8f1c9694500cc47b0b21582e"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "maximumIpcSize"
-            },
-            "anchorfile": {
-              "$": "namespaceKIO.html"
-            },
-            "anchor": {
-              "$": "ace3e7d3f8f1c9694500cc47b0b21582ea46051fb5ecae605936ec73561c649f04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "initialIpcSize"
-            },
-            "anchorfile": {
-              "$": "namespaceKIO.html"
-            },
-            "anchor": {
-              "$": "ace3e7d3f8f1c9694500cc47b0b21582ea8d14ade607142551814f19d90ae164dc"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "minimumMimeSize"
-            },
-            "anchorfile": {
-              "$": "namespaceKIO.html"
-            },
-            "anchor": {
-              "$": "ace3e7d3f8f1c9694500cc47b0b21582ea61fc79324d789f9c7775bab550610911"
             },
             "arglist": {}
           },
@@ -45680,25 +45648,6 @@
             "arglist": {
               "$": "(const QUrl &url)"
             }
-          },
-          {
-            "@kind": "function",
-            "@static": "yes",
-            "type": {
-              "$": "static int"
-            },
-            "name": {
-              "$": "WriteToFile"
-            },
-            "anchorfile": {
-              "$": "namespaceKIO.html"
-            },
-            "anchor": {
-              "$": "a9de3a623354312bacef4bd7d2840add3"
-            },
-            "arglist": {
-              "$": "(int fd, const char *buf, size_t len)"
-            }
           }
         ]
       },
@@ -46050,18 +45999,6 @@
             }
           }
         ]
-      },
-      {
-        "@kind": "page",
-        "name": {
-          "$": "md__home_user_workspace_Generate_API_Documentation_sources_kio_src_kioworkers_ftp_ProxyTesting"
-        },
-        "title": {
-          "$": "Proxy Testing"
-        },
-        "filename": {
-          "$": "md__home_user_workspace_Generate_API_Documentation_sources_kio_src_kioworkers_ftp_ProxyTesting"
-        }
       },
       {
         "@kind": "page",

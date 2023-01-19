@@ -153,7 +153,7 @@
               "$": "classorg_1_1kde_1_1kirigami_1_1AboutPage.html"
             },
             "anchor": {
-              "$": "a3f00f161137a7860906148e6e79f1784"
+              "$": "ab3e8d4a1c153e41560f55d8b1be6e0f4"
             },
             "arglist": {}
           },
@@ -185,7 +185,7 @@
               "$": "classorg_1_1kde_1_1kirigami_1_1AboutPage.html"
             },
             "anchor": {
-              "$": "a1631c2037fba0bae92fccb687b8245d4"
+              "$": "a0aeb7cc7027178b8cba805a95d4c7b90"
             },
             "arglist": {}
           }
@@ -604,10 +604,10 @@
               "$": "classorg_1_1kde_1_1kirigami_1_1AbstractApplicationItem.html"
             },
             "anchor": {
-              "$": "a620e0b8a2ed9c9e440f935ebb62d6a1d"
+              "$": "a529cdc4307aaf9df6a1e95800d008d8d"
             },
             "arglist": {
-              "$": "()"
+              "$": "(index=0)"
             }
           },
           {
@@ -800,10 +800,10 @@
               "$": "classorg_1_1kde_1_1kirigami_1_1AbstractApplicationWindow.html"
             },
             "anchor": {
-              "$": "aa7aece9a4af86fcd9628939b0a79f99e"
+              "$": "a39e1dde64098b438173be66231d38869"
             },
             "arglist": {
-              "$": "()"
+              "$": "(index=0)"
             }
           },
           {
@@ -1460,7 +1460,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "string"
+              "$": "alias"
             },
             "name": {
               "$": "focusSequence"
@@ -1469,7 +1469,7 @@
               "$": "classorg_1_1kde_1_1kirigami_1_1ActionTextField.html"
             },
             "anchor": {
-              "$": "ada918162ae92c6330497980561ca66bc"
+              "$": "a2e2315a85d783af0fce7024cb329bd3a"
             },
             "arglist": {}
           },
@@ -6579,6 +6579,22 @@
           {
             "@kind": "property",
             "type": {
+              "$": "real"
+            },
+            "name": {
+              "$": "buttonWidth"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1NavigationTabBar.html"
+            },
+            "anchor": {
+              "$": "a2f35cb6f5ab918358af82693c55203a3"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
               "$": "int"
             },
             "name": {
@@ -6854,22 +6870,6 @@
             },
             "anchor": {
               "$": "af122f51599eb9b1bd4a02106d0355d83"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "enabled"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1kirigami_1_1templates_1_1OverlayDrawer.html"
-            },
-            "anchor": {
-              "$": "acd92c6973214f6bd0c74f072b56f1211"
             },
             "arglist": {}
           },
@@ -8490,6 +8490,51 @@
         "base": {
           "$": "QQuickPaintedItem"
         }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::kirigami::templates::PassiveNotificationsManager"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1kirigami_1_1templates_1_1PassiveNotificationsManager.html"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "maximumNotificationCount"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1templates_1_1PassiveNotificationsManager.html"
+            },
+            "anchor": {
+              "$": "a392376f81630bcb6b7a7579af5bc96c9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "hideNotification"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1templates_1_1PassiveNotificationsManager.html"
+            },
+            "anchor": {
+              "$": "a7d90e2bd882b8fce613393f03eb9e4f7"
+            },
+            "arglist": {
+              "$": "(index=0)"
+            }
+          }
+        ]
       },
       {
         "@kind": "class",
@@ -10661,18 +10706,6 @@
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::kirigami::SwipeListItem"
-        },
-        "filename": {
-          "$": "classorg_1_1kde_1_1kirigami_1_1SwipeListItem.html"
-        },
-        "base": {
-          "$": "org::kde::kirigami::templates::SwipeListItem"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
           "$": "org::kde::kirigami::templates::SwipeListItem"
         },
         "filename": {
@@ -10931,6 +10964,18 @@
         },
         "base": {
           "$": "QtQuick.Item"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::kirigami::SwipeListItem"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1kirigami_1_1SwipeListItem.html"
+        },
+        "base": {
+          "$": "org::kde::kirigami::templates::SwipeListItem"
         }
       },
       {

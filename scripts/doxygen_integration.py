@@ -17,6 +17,10 @@ import sys
 TAG_FILES = [
     # ===== Qt API links ======
     {
+        'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtquick.tags',
+        'base_url': 'https://doc.qt.io/qt-5/',
+    },
+    {
         'tags': 'https://invent.kde.org/websites/quality-kde-org/-/raw/master/apidox/data/5.15/qtquickcontrols.tags',
         'base_url': 'https://doc.qt.io/qt-5/',
         'default_prefix': 'QtQuick.Controls',

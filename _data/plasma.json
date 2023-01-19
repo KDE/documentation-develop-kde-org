@@ -173,7 +173,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "string"
+              "$": "alias"
             },
             "name": {
               "$": "focusSequence"
@@ -182,7 +182,7 @@
               "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ActionTextField.html"
             },
             "anchor": {
-              "$": "ac4768707bd1afa91bbe410575bffe926"
+              "$": "a56e4c66fa5baf186ba7e9e6660af0d9d"
             },
             "arglist": {}
           },
@@ -5001,6 +5001,24 @@
               "$": "Q_INVOKABLE void"
             },
             "name": {
+              "$": "openContextMenu"
+            },
+            "anchorfile": {
+              "$": "classContainmentInterface.html"
+            },
+            "anchor": {
+              "$": "a1bf8dd0dcb421a8dcc81b4eadb77f576"
+            },
+            "arglist": {
+              "$": "(const QPointF &globalPos)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
               "$": "processMimeData"
             },
             "anchorfile": {
@@ -8904,6 +8922,42 @@
           {
             "@kind": "function",
             "type": {
+              "$": "Q_INVOKABLE int"
+            },
+            "name": {
+              "$": "minimumDrawingHeight"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1FrameSvg.html"
+            },
+            "anchor": {
+              "$": "a843de93328a06b8c54c4269f8c3fdc7e"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE int"
+            },
+            "name": {
+              "$": "minimumDrawingWidth"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1FrameSvg.html"
+            },
+            "anchor": {
+              "$": "a67060de7fc4c3632deca6d1a2ef950b5"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "Q_INVOKABLE void"
             },
             "name": {
@@ -9242,6 +9296,38 @@
           {
             "@kind": "property",
             "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "minimumDrawingHeight"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1FrameSvgItem.html"
+            },
+            "anchor": {
+              "$": "af7701c458a9b3ea230106253171b6228"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "minimumDrawingWidth"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1FrameSvgItem.html"
+            },
+            "anchor": {
+              "$": "af2c5d103726de1cdeade89fc44da997d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
               "$": "QVariant"
             },
             "name": {
@@ -9286,6 +9372,24 @@
               "$": "a4c489b04306df97e0c556c63676d577b"
             },
             "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE bool"
+            },
+            "name": {
+              "$": "hasElement"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1FrameSvgItem.html"
+            },
+            "anchor": {
+              "$": "af6ca76f976a77363f362057dc98d3cd6"
+            },
+            "arglist": {
+              "$": "(const QString &elementName) const"
+            }
           },
           {
             "@kind": "function",
@@ -9518,18 +9622,6 @@
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::plasma::components::Highlight"
-        },
-        "filename": {
-          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1Highlight.html"
-        },
-        "base": {
-          "$": "org::kde::plasma::extras::Highlight"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
           "$": "org::kde::plasma::extras::Highlight"
         },
         "filename": {
@@ -9588,6 +9680,18 @@
             "arglist": {}
           }
         ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::plasma::components::Highlight"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1Highlight.html"
+        },
+        "base": {
+          "$": "org::kde::plasma::extras::Highlight"
+        }
       },
       {
         "@kind": "class",
@@ -9922,6 +10026,84 @@
       {
         "@kind": "class",
         "name": {
+          "$": "org::kde::plasma::extras::ListItem"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+        },
+        "base": {
+          "$": "org::kde::kirigami::AbstractListItem"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "containsMouse"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "a017babb290e59e10c05fa627ec41bb9e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "content"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "aef29658b879d0f5b362175e38217e788"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "sectionDelegate"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "a742fd2d5fd3de682775a0a1f12abbb1f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "separatorVisible"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "a2711b94fdda53578539d55b7b6455a60"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "org::kde::plasma::components::ListItem"
         },
         "filename": {
@@ -10068,80 +10250,11 @@
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::plasma::extras::ListItem"
+          "$": "org::kde::plasma::components::Menu"
         },
         "filename": {
-          "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-        },
-        "base": {
-          "$": "org::kde::kirigami::AbstractListItem"
-        },
-        "member": [
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "containsMouse"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "a017babb290e59e10c05fa627ec41bb9e"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "alias"
-            },
-            "name": {
-              "$": "content"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "aef29658b879d0f5b362175e38217e788"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "sectionDelegate"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "a742fd2d5fd3de682775a0a1f12abbb1f"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "separatorVisible"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "a2711b94fdda53578539d55b7b6455a60"
-            },
-            "arglist": {}
-          }
-        ]
+          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1Menu.html"
+        }
       },
       {
         "@kind": "class",
@@ -10150,15 +10263,6 @@
         },
         "filename": {
           "$": "classMenu.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org::kde::plasma::components::Menu"
-        },
-        "filename": {
-          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1Menu.html"
         }
       },
       {
@@ -11543,6 +11647,22 @@
           {
             "@kind": "property",
             "type": {
+              "$": "QQC2"
+            },
+            "name": {
+              "$": "Action"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1PlaceholderMessage.html"
+            },
+            "anchor": {
+              "$": "ac22170ff3d69bb23a8d46bb2c6ed51b7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
               "$": "string"
             },
             "name": {
@@ -11553,22 +11673,6 @@
             },
             "anchor": {
               "$": "a085a96129bd52d26338d3bc5a566d3e8"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "alias"
-            },
-            "name": {
-              "$": "helpfulAction"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1PlaceholderMessage.html"
-            },
-            "anchor": {
-              "$": "a95d2488559f057c0a210da6af8d1efdb"
             },
             "arglist": {}
           },
@@ -13353,7 +13457,41 @@
         },
         "filename": {
           "$": "classRaisedButtonBackground.html"
-        }
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "showFocused"
+            },
+            "anchorfile": {
+              "$": "classRaisedButtonBackground.html"
+            },
+            "anchor": {
+              "$": "ac55008543a9faa71979cf21ce446ddaa"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "showPressed"
+            },
+            "anchorfile": {
+              "$": "classRaisedButtonBackground.html"
+            },
+            "anchor": {
+              "$": "ac4313c022c3ee5bcf9736a5ec453c3af"
+            },
+            "arglist": {}
+          }
+        ]
       },
       {
         "@kind": "class",
@@ -13413,19 +13551,19 @@
       {
         "@kind": "class",
         "name": {
-          "$": "RoundShadow"
+          "$": "QtQuick::Controls::Styles::Plasma::RoundShadow"
         },
         "filename": {
-          "$": "classRoundShadow.html"
+          "$": "classQtQuick_1_1Controls_1_1Styles_1_1Plasma_1_1RoundShadow.html"
         }
       },
       {
         "@kind": "class",
         "name": {
-          "$": "QtQuick::Controls::Styles::Plasma::RoundShadow"
+          "$": "RoundShadow"
         },
         "filename": {
-          "$": "classQtQuick_1_1Controls_1_1Styles_1_1Plasma_1_1RoundShadow.html"
+          "$": "classRoundShadow.html"
         }
       },
       {

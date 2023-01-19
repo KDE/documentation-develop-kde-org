@@ -1,1 +1,3468 @@
-{"tagfile": {"compound": [{"@kind": "class", "name": {"$": "Plasma::AbstractRunner"}, "filename": {"$": "classPlasma_1_1AbstractRunner.html"}, "base": {"$": "QObject"}, "member": [{"@kind": "typedef", "type": {"$": "QList< AbstractRunner * >"}, "name": {"$": "List"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ae7327c226318ed74e87c0d02a9179b53"}, "arglist": {}}, {"@kind": "enumeration", "type": {}, "name": {"$": "Priority"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "af0a8860b75ee6a66336e2837ab1b23fd"}, "arglist": {}}, {"@kind": "enumeration", "type": {}, "name": {"$": "Speed"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a37353ac75d1401241352acae4804a5c4"}, "arglist": {}}, {"@kind": "signal", "type": {"$": "void"}, "name": {"$": "matchingSuspended"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a1e88251d11acbe80743301a4e7b77d2a"}, "arglist": {"$": "(bool suspended)"}}, {"@kind": "signal", "type": {"$": "void"}, "name": {"$": "prepare"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a31f3aecba61f112b1ec8df9fb36dff60"}, "arglist": {"$": "()"}}, {"@kind": "signal", "type": {"$": "void"}, "name": {"$": "teardown"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a4d5c2b5b735089cef0f5cc71dac36fc5"}, "arglist": {"$": "()"}}, {"@kind": "function", "@virtualness": "virtual", "type": {"$": "virtual QStringList"}, "name": {"$": "categories"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a15a9848577250f78bb7750ecbe8039f0"}, "arglist": {"$": "() const"}}, {"@kind": "function", "@virtualness": "virtual", "type": {"$": "virtual QIcon"}, "name": {"$": "categoryIcon"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "af6a52ffb03829c6adac757783443eb9f"}, "arglist": {"$": "(const QString &category) const"}}, {"@kind": "function", "@virtualness": "virtual", "type": {"$": "virtual void"}, "name": {"$": "createRunOptions"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ab4d3da5e7b0080200d594abf714c612d"}, "arglist": {"$": "(QWidget *widget)"}}, {"@kind": "function", "type": {"$": "RunnerSyntax *"}, "name": {"$": "defaultSyntax"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "af85fe46e6f6f5b35ab4079573b39c0b7"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "description"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a22363f18d1a1d69dde4952f5cfed2c13"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "hasMatchRegex"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "aa9927fc03b36b6535336403483931d7d"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "hasRunOptions"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "afbb4c1552ab28cf77cfae8f2f8fd8d86"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "QIcon"}, "name": {"$": "icon"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a43437beb7cd0b443ea66a5a1504f7fbf"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "id"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a3f24f174c5f0f88cff3715191f2d8ecb"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "RunnerContext::Types"}, "name": {"$": "ignoredTypes"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a05f9eb0eed57582687bc0de669c2633c"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "isMatchingSuspended"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ac3807d7c628a4b42eea3aff4eba1fece"}, "arglist": {"$": "() const"}}, {"@kind": "function", "@virtualness": "virtual", "type": {"$": "virtual void"}, "name": {"$": "match"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a420fa8a3407b0c9417f57e7c6bf1770e"}, "arglist": {"$": "(Plasma::RunnerContext &context)"}}, {"@kind": "function", "type": {"$": "QRegularExpression"}, "name": {"$": "matchRegex"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a963f8f38b6a7e4330047d5aaedfca8ed"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "KPluginInfo"}, "name": {"$": "metadata"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a6da23b6fc9caeefa92cdeffdd563121f"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "KPluginMetaData"}, "name": {"$": "metadata"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ad6e0386fa68eb37cbc38de0d11e1c4e5"}, "arglist": {"$": "(RunnerReturnPluginMetaDataConstant) const"}}, {"@kind": "function", "type": {"$": "int"}, "name": {"$": "minLetterCount"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a963f43c09a541626b3a7ce60ee55aa6c"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "name"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a8ae2865321954ed18b9af1192a33a5cf"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "Package"}, "name": {"$": "package"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a99f751710000c12a7dd3693cfba2e934"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "performMatch"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a9b31f5a2173af24011b060329cf58683"}, "arglist": {"$": "(Plasma::RunnerContext &context)"}}, {"@kind": "function", "type": {"$": "Priority"}, "name": {"$": "priority"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a14b3f997e7073dc73e320a8966d1ea5f"}, "arglist": {"$": "() const"}}, {"@kind": "function", "@virtualness": "virtual", "type": {"$": "virtual void"}, "name": {"$": "reloadConfiguration"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a308a461619ed4a5e7d122b9aeb0bb31d"}, "arglist": {"$": "()"}}, {"@kind": "function", "@virtualness": "virtual", "type": {"$": "virtual void"}, "name": {"$": "run"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a2599fb0cf64ce86d8d0dc1bf74a40593"}, "arglist": {"$": "(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setIgnoredTypes"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a11673d86482b256945c5904e34a6a3db"}, "arglist": {"$": "(RunnerContext::Types types)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setMatchRegex"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a32ec5e0fb8cb53aa4117dc28319ab9fe"}, "arglist": {"$": "(const QRegularExpression &regex)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setMinLetterCount"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a7b6f7cfc3f88e3e6db84876a8dee343a"}, "arglist": {"$": "(int count)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setTriggerWords"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a3b86669216e1d6df33a40bf66287c2db"}, "arglist": {"$": "(const QStringList &triggerWords)"}}, {"@kind": "function", "type": {"$": "Speed"}, "name": {"$": "speed"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "aa6216b584d7fe6a5264245e6961fc8d5"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QList< RunnerSyntax >"}, "name": {"$": "syntaxes"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a6bc196e63343fddcadcd5e5b009ecb83"}, "arglist": {"$": "() const"}}, {"@kind": "function", "@protection": "protected", "type": {}, "name": {"$": "AbstractRunner"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a5a2085f5a29df5d748989546d9d74324"}, "arglist": {"$": "(const KPluginMetaData &pluginMetaData, QObject *parent=nullptr)"}}, {"@kind": "function", "@protection": "protected", "type": {}, "name": {"$": "AbstractRunner"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a42cd7616f8e4cc37b5f256f0f8347418"}, "arglist": {"$": "(const KService::Ptr service, QObject *parent=nullptr)"}}, {"@kind": "function", "@protection": "protected", "type": {}, "name": {"$": "AbstractRunner"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ad41c06b7a464cd1f517ced928f7ea82c"}, "arglist": {"$": "(QObject *parent, const KPluginMetaData &pluginMetaData, const QVariantList &args)"}}, {"@kind": "function", "@protection": "protected", "type": {}, "name": {"$": "AbstractRunner"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a482691f30eb9c91653db59e0bd6e6e23"}, "arglist": {"$": "(QObject *parent, const QVariantList &args)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "QAction *"}, "name": {"$": "action"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a2060d944b9b97f9a4511e6721525d2b5"}, "arglist": {"$": "(const QString &id) const"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "QHash< QString, QAction * >"}, "name": {"$": "actions"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ad1365f739d46c1b74b5d98085b96e23d"}, "arglist": {"$": "() const"}}, {"@kind": "function", "@protection": "protected", "@virtualness": "virtual", "type": {"$": "virtual QList< QAction * >"}, "name": {"$": "actionsForMatch"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a524af89fca3e5730a84e3fecd44095a8"}, "arglist": {"$": "(const Plasma::QueryMatch &match)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "QAction *"}, "name": {"$": "addAction"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "af3615c4e28157727dc6f3bf1712f25c5"}, "arglist": {"$": "(const QString &id, const QIcon &icon, const QString &text)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "addAction"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a88673ec2ef9e59437709152eef1579c2"}, "arglist": {"$": "(const QString &id, QAction *action)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "addSyntax"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "abf1a8db588c72cfad804e246264b81d7"}, "arglist": {"$": "(const RunnerSyntax &syntax)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "clearActions"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a1fc15fb88ad8e4483c4f369bc5c21f91"}, "arglist": {"$": "()"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "KConfigGroup"}, "name": {"$": "config"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "afdc37c00d0fe35e2ffcdbda8aa4aea70"}, "arglist": {"$": "() const"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "Q_INVOKABLE DataEngine *"}, "name": {"$": "dataEngine"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ab329cc138840747b886bab30fa76404a"}, "arglist": {"$": "(const QString &name) const"}}, {"@kind": "function", "@protection": "protected", "@virtualness": "virtual", "type": {"$": "virtual void"}, "name": {"$": "init"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ac243016563d726cc0b90529cf903833c"}, "arglist": {"$": "()"}}, {"@kind": "function", "@protection": "protected", "@virtualness": "virtual", "type": {"$": "virtual QMimeData *"}, "name": {"$": "mimeDataForMatch"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a86da51b8fa164df6c339da15cc84fe1e"}, "arglist": {"$": "(const Plasma::QueryMatch &match)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "removeAction"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "aa2ab6223a0ff19754a65ef90841e676c"}, "arglist": {"$": "(const QString &id)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "setDefaultSyntax"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a16ab7e01cdc2b082a4be75be3f73d89d"}, "arglist": {"$": "(const RunnerSyntax &syntax)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "setHasRunOptions"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ad794990a111ed09673b616b0683c1e31"}, "arglist": {"$": "(bool hasRunOptions)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "setPriority"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ad0df1c624fe8c7d90c7ffe3856fb8cde"}, "arglist": {"$": "(Priority newPriority)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "setSpeed"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a7a25eda24c099a0753a8887316b7f215"}, "arglist": {"$": "(Speed newSpeed)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "setSyntaxes"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ac4934acc33f043fb642f249477f3e9bb"}, "arglist": {"$": "(const QList< RunnerSyntax > &syns)"}}, {"@kind": "function", "@protection": "protected", "type": {"$": "void"}, "name": {"$": "suspendMatching"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "a57a54ba45ce4509f0e3f38d167b24060"}, "arglist": {"$": "(bool suspend)"}}, {"@kind": "define", "type": {"$": "#define"}, "name": {"$": "K_EXPORT_PLASMA_RUNNER"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "ac5b8cae3f5f9467367ee8236245326a8"}, "arglist": {"$": "(libname, classname)"}}, {"@kind": "define", "type": {"$": "#define"}, "name": {"$": "K_EXPORT_PLASMA_RUNNER_WITH_JSON"}, "anchorfile": {"$": "classPlasma_1_1AbstractRunner.html"}, "anchor": {"$": "afcade687b59d8bc6283cec76230cc3bf"}, "arglist": {"$": "(classname, jsonFile)"}}]}, {"@kind": "class", "name": {"$": "Plasma::QueryMatch"}, "filename": {"$": "classPlasma_1_1QueryMatch.html"}, "member": [{"@kind": "enumvalue", "name": {"$": "CompletionMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fad19e0614abcde9f1e43731f3db5319d1"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "ExactMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa4fbabba5b6c785446e3e077b0dcb011b"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "HelperMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa7f21e3c410591536437b856c40727344"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "InformationalMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa5c7ce8640639ec38c5f2c77c6187e710"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "NoMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa2429a977dd52f1065cd3e48450a1b347"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "PossibleMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600faa07665917f208fa90ae563d16ea06891"}, "arglist": {}}, {"@kind": "enumeration", "type": {}, "name": {"$": "Type"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600f"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "NoMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa2429a977dd52f1065cd3e48450a1b347"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "CompletionMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fad19e0614abcde9f1e43731f3db5319d1"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "PossibleMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600faa07665917f208fa90ae563d16ea06891"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "InformationalMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa5c7ce8640639ec38c5f2c77c6187e710"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "HelperMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa7f21e3c410591536437b856c40727344"}, "arglist": {}}, {"@kind": "enumvalue", "name": {"$": "ExactMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa4fbabba5b6c785446e3e077b0dcb011b"}, "arglist": {}}, {"@kind": "function", "type": {}, "name": {"$": "QueryMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a9869a71dfc3943f6b94bb5ab0fcb8c61"}, "arglist": {"$": "(AbstractRunner *runner=nullptr)"}}, {"@kind": "function", "type": {}, "name": {"$": "QueryMatch"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a24fc19bcc04ced9ea6ec515bf0fe7775"}, "arglist": {"$": "(const QueryMatch &other)"}}, {"@kind": "function", "type": {"$": "QList< QAction * >"}, "name": {"$": "actions"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a7409617e9085395533c661a1debb1b03"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "addAction"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a89935ac462578d04decce47c651f4851"}, "arglist": {"$": "(QAction *actions)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "createConfigurationInterface"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "adae28032ecab33b71cf24342d2d5ced9"}, "arglist": {"$": "(QWidget *parent)"}}, {"@kind": "function", "type": {"$": "QVariant"}, "name": {"$": "data"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a8a60e1d17dc9c04c0272ddcc3f884635"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "hasConfigurationInterface"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a0d9418e50126af41b1bf18c9e1a048dc"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QIcon"}, "name": {"$": "icon"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a71b0d6bfd80b3405eeba214b7f8930bb"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "iconName"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a2512314cc646102d473cde336e35df6b"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "id"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a21b8bbb150ee7327d08f675564fd19ad"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "isEnabled"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "ae9ce20b6f03e06ef885e262627601945"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "isMultiLine"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a3a80e2c61c339083564ddf99ee48f8cb"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "isValid"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "af0eff36692d63b4e4ede0ec96c6b0b0e"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "matchCategory"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a9f6ad1f4bf90f675542905b3e44abfa6"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "mimeType"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a50a97aea1050a5513dcd49dbd9b5923a"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "qreal"}, "name": {"$": "relevance"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a787e6f064248b028424aef6ffd282187"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "run"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "ab09de0dbf370e90304ed794820dca698"}, "arglist": {"$": "(const RunnerContext &context) const"}}, {"@kind": "function", "type": {"$": "AbstractRunner *"}, "name": {"$": "runner"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "abf18695a18cd1237d65dc4f0868aaf3e"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QAction *"}, "name": {"$": "selectedAction"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a1145f51cdd6356e76abf1f381d41f2e4"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setActions"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a6f8baa28474c0cf7269ea26be1a9599e"}, "arglist": {"$": "(const QList< QAction * > &actions)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setData"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "aad806b18a5fbec942f1258f6b4436cd8"}, "arglist": {"$": "(const QVariant &data)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setEnabled"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a2e391665fff184efd274b920e1f42353"}, "arglist": {"$": "(bool enable)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setIcon"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a2b6be3046fee0b5a4572e6767a29f497"}, "arglist": {"$": "(const QIcon &icon)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setIconName"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "aa8347043eda7ae30aaa86d20f6796d81"}, "arglist": {"$": "(const QString &iconName)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setId"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a9c0a40cbfaa985dc6dab52f617d491c3"}, "arglist": {"$": "(const QString &id)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setMatchCategory"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "af1af8b2f586aea5b9c66ea39b0fb9281"}, "arglist": {"$": "(const QString &category)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setMimeType"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "ae6ccdfcbca0ac6ff871c7507e5eda826"}, "arglist": {"$": "(const QString &mimeType)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setMultiLine"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a6d4f50cfb907720879ca7a2beefe98f4"}, "arglist": {"$": "(bool multiLine)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setRelevance"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a33092a4384eaa117325b99f6fff675f0"}, "arglist": {"$": "(qreal relevance)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setSelectedAction"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "adfaddb73926bd355b5763a50d48f0055"}, "arglist": {"$": "(QAction *action)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setSubtext"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a96570707370b4109aaae9ceebd5bd6ba"}, "arglist": {"$": "(const QString &text)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setText"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a43ad4e96cfa7f5a86803cc8c4846b874"}, "arglist": {"$": "(const QString &text)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setType"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "aae0dc58edda1eacdfe80f059cc2528da"}, "arglist": {"$": "(Type type)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setUrls"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a92c7743956cb92c4db00b1e8058f75d2"}, "arglist": {"$": "(const QList< QUrl > &urls)"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "subtext"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "afa82c2549faa03c041d6cdc9045aa965"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "text"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a5e2fbd2b497ab5e00d52ac84ad50c475"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "Type"}, "name": {"$": "type"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a7d99b3eb24ef7e560294c0cff5bf218f"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QList< QUrl >"}, "name": {"$": "urls"}, "anchorfile": {"$": "classPlasma_1_1QueryMatch.html"}, "anchor": {"$": "a0fbba32aa184c51fab61bd4c3f7f8256"}, "arglist": {"$": "() const"}}]}, {"@kind": "class", "name": {"$": "Plasma::RunnerContext"}, "filename": {"$": "classPlasma_1_1RunnerContext.html"}, "base": {"$": "QObject"}, "member": [{"@kind": "function", "type": {}, "name": {"$": "RunnerContext"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a89282eb5e9b1548cd1da0e263843d3b7"}, "arglist": {"$": "(RunnerContext &other, QObject *parent=nullptr)"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "addMatch"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a44f7538b3560664f99a89ce288bb5f91"}, "arglist": {"$": "(const QueryMatch &match)"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "addMatches"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a84736c01ce574fa845cb3fb24e9e3328"}, "arglist": {"$": "(const QList< QueryMatch > &matches)"}}, {"@kind": "function", "type": {"$": "QStringList"}, "name": {"$": "enabledCategories"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a8eb9a85415ab5013c33f5f33c647b490"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "ignoreCurrentMatchForHistory"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "adb516c539f32e7a0f69effd4425baea2"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "isValid"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "aec53b3273f18a6da719f65e48619acee"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QueryMatch"}, "name": {"$": "match"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a637691f8b8624d18efed217e2b8f6615"}, "arglist": {"$": "(const QString &id) const"}}, {"@kind": "function", "type": {"$": "QList< QueryMatch >"}, "name": {"$": "matches"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "adde592d2e5aa9139e6567998c7a9f49f"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "mimeType"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a63ba0d3742a222ad09892727ff1aa075"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "RunnerContext &"}, "name": {"$": "operator="}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "ac27baf79656c8357c5f8d29f6fcad894"}, "arglist": {"$": "(const RunnerContext &other)"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "query"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "ad4fb6234ec800852afcf358c70a299c8"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "removeMatch"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "ad3a5819fffedf713aff4f5816bf33007"}, "arglist": {"$": "(const QString matchId)"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "removeMatches"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "aaa641ea178c7f437d10bb3cd23c0d830"}, "arglist": {"$": "(AbstractRunner *runner)"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "removeMatches"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "ac2c06a8baff721aa60466fabccd2fa96"}, "arglist": {"$": "(const QStringList matchIdList)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "requestQueryStringUpdate"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "ab2fde3e84944975bc50ee5b20e450fcd"}, "arglist": {"$": "(const QString &text, int cursorPosition) const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "reset"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a9fc27d023b2673972df12730bcef5a06"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "restore"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "aaaec302fbfb4aa0e4861897fbbb43d0a"}, "arglist": {"$": "(const KConfigGroup &config)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "run"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "aa4a0cec8c0ba065aa883dd2e4b629b9a"}, "arglist": {"$": "(const QueryMatch &match)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "save"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a39b8ca5df69d44be8a74d5beca5cbb14"}, "arglist": {"$": "(KConfigGroup &config)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setEnabledCategories"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a693436532d1be58f3231e750158113cf"}, "arglist": {"$": "(const QStringList &categories)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setQuery"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a664bc02baa94fb6756e9d858c7a262ff"}, "arglist": {"$": "(const QString &term)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setSingleRunnerQueryMode"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "ab863aab15b4e2ae72f04dc8050868ac2"}, "arglist": {"$": "(bool enabled)"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "singleRunnerQueryMode"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "a775c11b1d3bd24f7991c3650c217c2cf"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "Type"}, "name": {"$": "type"}, "anchorfile": {"$": "classPlasma_1_1RunnerContext.html"}, "anchor": {"$": "af494d5dbc423f7b12a5cb95f4a15fd60"}, "arglist": {"$": "() const"}}]}, {"@kind": "class", "name": {"$": "Plasma::RunnerManager"}, "filename": {"$": "classPlasma_1_1RunnerManager.html"}, "base": {"$": "QObject"}, "member": [{"@kind": "signal", "type": {"$": "void"}, "name": {"$": "historyEnabledChanged"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a085a729d3e3e63aded183a335357e36b"}, "arglist": {"$": "()"}}, {"@kind": "signal", "type": {"$": "void"}, "name": {"$": "matchesChanged"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a28f8c3d31f6bf070b32a2d16309a3e88"}, "arglist": {"$": "(const QList< Plasma::QueryMatch > &matches)"}}, {"@kind": "signal", "type": {"$": "void"}, "name": {"$": "queryFinished"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a78c2fd86ac2773d64f2b5fdb5edaf06d"}, "arglist": {"$": "()"}}, {"@kind": "signal", "type": {"$": "void"}, "name": {"$": "setSearchTerm"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "aba8bf5abf760bceaa7c2b89018a95fa9"}, "arglist": {"$": "(const QString &term, int cursorPosition)"}}, {"@kind": "slot", "type": {"$": "void"}, "name": {"$": "launchQuery"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "af8517e0135019d205c41d38d81d5be8d"}, "arglist": {"$": "(const QString &term)"}}, {"@kind": "slot", "type": {"$": "void"}, "name": {"$": "launchQuery"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "af350cda1a14d962a5903fceb202d833a"}, "arglist": {"$": "(const QString &term, const QString &runnerId)"}}, {"@kind": "slot", "type": {"$": "void"}, "name": {"$": "matchSessionComplete"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a503fd69a3f6ab83fc888b09c6faf7109"}, "arglist": {"$": "()"}}, {"@kind": "slot", "type": {"$": "void"}, "name": {"$": "reset"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a8d9724f9ff9ab270ebca6b8a5dc5594b"}, "arglist": {"$": "()"}}, {"@kind": "slot", "type": {"$": "void"}, "name": {"$": "setupMatchSession"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "ae32bdb3a45dd1b4d6307c70198eb7c4d"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {}, "name": {"$": "RunnerManager"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "ab8b0a1785fdf7f09bfd493544647a081"}, "arglist": {"$": "(KConfigGroup &config, QObject *parent=nullptr)"}}, {"@kind": "function", "type": {"$": "QList< QAction * >"}, "name": {"$": "actionsForMatch"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a0f53974cf565dfa72563a7a687c60dfb"}, "arglist": {"$": "(const QueryMatch &match)"}}, {"@kind": "function", "type": {"$": "QStringList"}, "name": {"$": "allowedRunners"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a0d584fea1209464f3cb8975e4afc371d"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QStringList"}, "name": {"$": "enabledCategories"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a380db8c673a85558c7bed74816178cdd"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "enableKNotifyPluginWatcher"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a7d02c83b9286a6c1e04c784186eb3973"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "Q_INVOKABLE QString"}, "name": {"$": "getHistorySuggestion"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a8badd73bce2c3024d109c0a3275fad24"}, "arglist": {"$": "(const QString &typedQuery) const"}}, {"@kind": "function", "type": {"$": "QStringList"}, "name": {"$": "history"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "abff30adcf2e2ce4ff16d5a0b28249ab6"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "historyEnabled"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "ab89f4ced7dd3a61b04f53ca6bce4839c"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "loadRunner"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "adc73d74feedf611ffeeb2a64cca4b343"}, "arglist": {"$": "(const KPluginMetaData &pluginMetaData)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "loadRunner"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a33129cdbb0e2fdf78547c9819a00801b"}, "arglist": {"$": "(const KService::Ptr service)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "loadRunner"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a974715dfaab6acc0b32ef5a905d966bc"}, "arglist": {"$": "(const QString &path)"}}, {"@kind": "function", "type": {"$": "QList< QueryMatch >"}, "name": {"$": "matches"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a8456b3472b77cdce502db51890a847b8"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QMimeData *"}, "name": {"$": "mimeDataForMatch"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a08098b6360713080e86fb9455a08ec7b"}, "arglist": {"$": "(const QString &matchId) const"}}, {"@kind": "function", "type": {"$": "QMimeData *"}, "name": {"$": "mimeDataForMatch"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "ad27c71cde07fcc4062a13b240b90a970"}, "arglist": {"$": "(const QueryMatch &match) const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "priorSearch"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "ae8d45f4bd20ac84d37b30fc919743fde"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "query"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a6a7e9966a0b1004f3db27f9176eb2484"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "reloadConfiguration"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "abd181ddadf899400b96d95667e88b346"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "Q_INVOKABLE void"}, "name": {"$": "removeFromHistory"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a9131e0b63109f1340c4570f97108da31"}, "arglist": {"$": "(int index)"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "retainPriorSearch"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a2a27d2296530470e593cfc1fa4b336c4"}, "arglist": {"$": "()"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "run"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a3b7b29db4138e27ebb3ec748f79ca10b"}, "arglist": {"$": "(const QString &id)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "run"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a336cbf2962c2f2212c4fe0bd9cc518f8"}, "arglist": {"$": "(const QueryMatch &match)"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "runMatch"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "adb98d86e6f9f6c4133015a65838db6f9"}, "arglist": {"$": "(const QueryMatch &match)"}}, {"@kind": "function", "type": {"$": "AbstractRunner *"}, "name": {"$": "runner"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a4d950714784e0ee12e2d2b2fdb4859c1"}, "arglist": {"$": "(const QString &pluginName) const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "runnerName"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a7669e2965c260c9f03f5355ae496bee6"}, "arglist": {"$": "(const QString &id) const"}}, {"@kind": "function", "type": {"$": "QList< AbstractRunner * >"}, "name": {"$": "runners"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a4ad6b523b99b70178f2b90bd2042d987"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "RunnerContext *"}, "name": {"$": "searchContext"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "adcbe3f8fef3ecd1a81a65bb86f9eca4d"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setAllowedRunners"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a1086d657087eb69726e1ba8de2ac7c2b"}, "arglist": {"$": "(const QStringList &runners)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setEnabledCategories"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a51909cc315ae3863f78e476797b91b89"}, "arglist": {"$": "(const QStringList &categories)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setPriorSearch"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a17c9924f13469cef2643285811bc53ef"}, "arglist": {"$": "(const QString &search)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setSingleMode"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "afa78a36b20f8d9c920e753bb5cfd6b27"}, "arglist": {"$": "(bool singleMode)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setSingleModeRunnerId"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a04a7448eed23e7b92dfbdede7c61a257"}, "arglist": {"$": "(const QString &id)"}}, {"@kind": "function", "type": {"$": "bool"}, "name": {"$": "singleMode"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a9c7be43487c729e330864a2eaeda84c3"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QStringList"}, "name": {"$": "singleModeAdvertisedRunnerIds"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a2a2595e152136a4c982461e2096e52b8"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "AbstractRunner *"}, "name": {"$": "singleModeRunner"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a42a7c3c44571892d96739757679b5ec9"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "singleModeRunnerId"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a5a5f50a87154eb74a0114210f181280b"}, "arglist": {"$": "() const"}}, {"@kind": "function", "@static": "yes", "type": {"$": "static KPluginInfo::List"}, "name": {"$": "listRunnerInfo"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a94da3cd4e23ac570bfc6db8153257e3c"}, "arglist": {"$": "(const QString &parentApp=QString())"}}, {"@kind": "function", "@static": "yes", "type": {"$": "static QVector< KPluginMetaData >"}, "name": {"$": "runnerMetaDataList"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "af37f4011c5e2f2e2b69cdc10bf379775"}, "arglist": {"$": "()"}}, {"@kind": "function", "@static": "yes", "type": {"$": "static QVector< KPluginMetaData >"}, "name": {"$": "runnerMetaDataList"}, "anchorfile": {"$": "classPlasma_1_1RunnerManager.html"}, "anchor": {"$": "a1dbe8c343cc698629364e90a23039874"}, "arglist": {"$": "(const QString &parentApp)"}}]}, {"@kind": "class", "name": {"$": "RunnerModel"}, "filename": {"$": "classRunnerModel.html"}, "base": {"$": "QAbstractListModel"}, "member": {"@kind": "enumeration", "type": {}, "name": {"$": "Roles"}, "anchorfile": {"$": "classRunnerModel.html"}, "anchor": {"$": "a60a7fafb4069e0c8900bc1a64efc0ddc"}, "arglist": {}}}, {"@kind": "class", "name": {"$": "Plasma::RunnerSyntax"}, "filename": {"$": "classPlasma_1_1RunnerSyntax.html"}, "member": [{"@kind": "function", "type": {}, "name": {"$": "RunnerSyntax"}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "a66e523e6d6c65cd347d19430fc28d64e"}, "arglist": {"$": "(const QString &exampleQuery, const QString &description)"}}, {"@kind": "function", "type": {}, "name": {"$": "RunnerSyntax"}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "ac5f034e48f605b65bd9de339d9380629"}, "arglist": {"$": "(const RunnerSyntax &other)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "addExampleQuery"}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "aab6b2426391c913e4f8602cef85a92da"}, "arglist": {"$": "(const QString &exampleQuery)"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "description"}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "a4cfba216a5d0ac420cb4884ae561542a"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QStringList"}, "name": {"$": "exampleQueries"}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "a34301bf7afbbfae06528cf915c3084bf"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "QStringList"}, "name": {"$": "exampleQueriesWithTermDescription"}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "a6e988d8f198ec620838a2ea164534847"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "RunnerSyntax &"}, "name": {"$": "operator="}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "a690abc0955677a285c85a09ab643f4a3"}, "arglist": {"$": "(const RunnerSyntax &rhs)"}}, {"@kind": "function", "type": {"$": "QString"}, "name": {"$": "searchTermDescription"}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "aa6c544ff3dc49f7b280a26ffab542d8a"}, "arglist": {"$": "() const"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setDescription"}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "a00d65581e564a243514d7919c19f8bdd"}, "arglist": {"$": "(const QString &description)"}}, {"@kind": "function", "type": {"$": "void"}, "name": {"$": "setSearchTermDescription"}, "anchorfile": {"$": "classPlasma_1_1RunnerSyntax.html"}, "anchor": {"$": "a16ad7432aea4270aa255739ea20ae90d"}, "arglist": {"$": "(const QString &description)"}}]}, {"@kind": "page", "name": {"$": "index"}, "title": {"$": "KRunner"}, "filename": {"$": "index"}}]}}
+{
+  "tagfile": {
+    "compound": [
+      {
+        "@kind": "class",
+        "name": {
+          "$": "Plasma::AbstractRunner"
+        },
+        "filename": {
+          "$": "classPlasma_1_1AbstractRunner.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "typedef",
+            "type": {
+              "$": "QList< AbstractRunner * >"
+            },
+            "name": {
+              "$": "List"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ae7327c226318ed74e87c0d02a9179b53"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "Priority"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "af0a8860b75ee6a66336e2837ab1b23fd"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "Speed"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a37353ac75d1401241352acae4804a5c4"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "matchingSuspended"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a1e88251d11acbe80743301a4e7b77d2a"
+            },
+            "arglist": {
+              "$": "(bool suspended)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "prepare"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a31f3aecba61f112b1ec8df9fb36dff60"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "teardown"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a4d5c2b5b735089cef0f5cc71dac36fc5"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual QStringList"
+            },
+            "name": {
+              "$": "categories"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a15a9848577250f78bb7750ecbe8039f0"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual QIcon"
+            },
+            "name": {
+              "$": "categoryIcon"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "af6a52ffb03829c6adac757783443eb9f"
+            },
+            "arglist": {
+              "$": "(const QString &category) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "createRunOptions"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ab4d3da5e7b0080200d594abf714c612d"
+            },
+            "arglist": {
+              "$": "(QWidget *widget)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "RunnerSyntax *"
+            },
+            "name": {
+              "$": "defaultSyntax"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "af85fe46e6f6f5b35ab4079573b39c0b7"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "description"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a22363f18d1a1d69dde4952f5cfed2c13"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasMatchRegex"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "aa9927fc03b36b6535336403483931d7d"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasRunOptions"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "afbb4c1552ab28cf77cfae8f2f8fd8d86"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QIcon"
+            },
+            "name": {
+              "$": "icon"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a43437beb7cd0b443ea66a5a1504f7fbf"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "id"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a3f24f174c5f0f88cff3715191f2d8ecb"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "RunnerContext::Types"
+            },
+            "name": {
+              "$": "ignoredTypes"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a05f9eb0eed57582687bc0de669c2633c"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isMatchingSuspended"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ac3807d7c628a4b42eea3aff4eba1fece"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "match"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a420fa8a3407b0c9417f57e7c6bf1770e"
+            },
+            "arglist": {
+              "$": "(Plasma::RunnerContext &context)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QRegularExpression"
+            },
+            "name": {
+              "$": "matchRegex"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a963f8f38b6a7e4330047d5aaedfca8ed"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPluginInfo"
+            },
+            "name": {
+              "$": "metadata"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a6da23b6fc9caeefa92cdeffdd563121f"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPluginMetaData"
+            },
+            "name": {
+              "$": "metadata"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ad6e0386fa68eb37cbc38de0d11e1c4e5"
+            },
+            "arglist": {
+              "$": "(RunnerReturnPluginMetaDataConstant) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "minLetterCount"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a963f43c09a541626b3a7ce60ee55aa6c"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a8ae2865321954ed18b9af1192a33a5cf"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Package"
+            },
+            "name": {
+              "$": "package"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a99f751710000c12a7dd3693cfba2e934"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "performMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a9b31f5a2173af24011b060329cf58683"
+            },
+            "arglist": {
+              "$": "(Plasma::RunnerContext &context)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Priority"
+            },
+            "name": {
+              "$": "priority"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a14b3f997e7073dc73e320a8966d1ea5f"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "reloadConfiguration"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a308a461619ed4a5e7d122b9aeb0bb31d"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "run"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a2599fb0cf64ce86d8d0dc1bf74a40593"
+            },
+            "arglist": {
+              "$": "(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setIgnoredTypes"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a11673d86482b256945c5904e34a6a3db"
+            },
+            "arglist": {
+              "$": "(RunnerContext::Types types)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMatchRegex"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a32ec5e0fb8cb53aa4117dc28319ab9fe"
+            },
+            "arglist": {
+              "$": "(const QRegularExpression &regex)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMinLetterCount"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a7b6f7cfc3f88e3e6db84876a8dee343a"
+            },
+            "arglist": {
+              "$": "(int count)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setTriggerWords"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a3b86669216e1d6df33a40bf66287c2db"
+            },
+            "arglist": {
+              "$": "(const QStringList &triggerWords)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Speed"
+            },
+            "name": {
+              "$": "speed"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "aa6216b584d7fe6a5264245e6961fc8d5"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< RunnerSyntax >"
+            },
+            "name": {
+              "$": "syntaxes"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a6bc196e63343fddcadcd5e5b009ecb83"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "AbstractRunner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a5a2085f5a29df5d748989546d9d74324"
+            },
+            "arglist": {
+              "$": "(const KPluginMetaData &pluginMetaData, QObject *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "AbstractRunner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a42cd7616f8e4cc37b5f256f0f8347418"
+            },
+            "arglist": {
+              "$": "(const KService::Ptr service, QObject *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "AbstractRunner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ad41c06b7a464cd1f517ced928f7ea82c"
+            },
+            "arglist": {
+              "$": "(QObject *parent, const KPluginMetaData &pluginMetaData, const QVariantList &args)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "AbstractRunner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a482691f30eb9c91653db59e0bd6e6e23"
+            },
+            "arglist": {
+              "$": "(QObject *parent, const QVariantList &args)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "QAction *"
+            },
+            "name": {
+              "$": "action"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a2060d944b9b97f9a4511e6721525d2b5"
+            },
+            "arglist": {
+              "$": "(const QString &id) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "QHash< QString, QAction * >"
+            },
+            "name": {
+              "$": "actions"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ad1365f739d46c1b74b5d98085b96e23d"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual QList< QAction * >"
+            },
+            "name": {
+              "$": "actionsForMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a524af89fca3e5730a84e3fecd44095a8"
+            },
+            "arglist": {
+              "$": "(const Plasma::QueryMatch &match)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "QAction *"
+            },
+            "name": {
+              "$": "addAction"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "af3615c4e28157727dc6f3bf1712f25c5"
+            },
+            "arglist": {
+              "$": "(const QString &id, const QIcon &icon, const QString &text)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addAction"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a88673ec2ef9e59437709152eef1579c2"
+            },
+            "arglist": {
+              "$": "(const QString &id, QAction *action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addSyntax"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "abf1a8db588c72cfad804e246264b81d7"
+            },
+            "arglist": {
+              "$": "(const RunnerSyntax &syntax)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "clearActions"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a1fc15fb88ad8e4483c4f369bc5c21f91"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "KConfigGroup"
+            },
+            "name": {
+              "$": "config"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "afdc37c00d0fe35e2ffcdbda8aa4aea70"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "Q_INVOKABLE DataEngine *"
+            },
+            "name": {
+              "$": "dataEngine"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ab329cc138840747b886bab30fa76404a"
+            },
+            "arglist": {
+              "$": "(const QString &name) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "init"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ac243016563d726cc0b90529cf903833c"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual QMimeData *"
+            },
+            "name": {
+              "$": "mimeDataForMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a86da51b8fa164df6c339da15cc84fe1e"
+            },
+            "arglist": {
+              "$": "(const Plasma::QueryMatch &match)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "removeAction"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "aa2ab6223a0ff19754a65ef90841e676c"
+            },
+            "arglist": {
+              "$": "(const QString &id)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setDefaultSyntax"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a16ab7e01cdc2b082a4be75be3f73d89d"
+            },
+            "arglist": {
+              "$": "(const RunnerSyntax &syntax)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setHasRunOptions"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ad794990a111ed09673b616b0683c1e31"
+            },
+            "arglist": {
+              "$": "(bool hasRunOptions)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setPriority"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ad0df1c624fe8c7d90c7ffe3856fb8cde"
+            },
+            "arglist": {
+              "$": "(Priority newPriority)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSpeed"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a7a25eda24c099a0753a8887316b7f215"
+            },
+            "arglist": {
+              "$": "(Speed newSpeed)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSyntaxes"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ac4934acc33f043fb642f249477f3e9bb"
+            },
+            "arglist": {
+              "$": "(const QList< RunnerSyntax > &syns)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "suspendMatching"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "a57a54ba45ce4509f0e3f38d167b24060"
+            },
+            "arglist": {
+              "$": "(bool suspend)"
+            }
+          },
+          {
+            "@kind": "define",
+            "type": {
+              "$": "#define"
+            },
+            "name": {
+              "$": "K_EXPORT_PLASMA_RUNNER"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "ac5b8cae3f5f9467367ee8236245326a8"
+            },
+            "arglist": {
+              "$": "(libname, classname)"
+            }
+          },
+          {
+            "@kind": "define",
+            "type": {
+              "$": "#define"
+            },
+            "name": {
+              "$": "K_EXPORT_PLASMA_RUNNER_WITH_JSON"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1AbstractRunner.html"
+            },
+            "anchor": {
+              "$": "afcade687b59d8bc6283cec76230cc3bf"
+            },
+            "arglist": {
+              "$": "(classname, jsonFile)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "Plasma::QueryMatch"
+        },
+        "filename": {
+          "$": "classPlasma_1_1QueryMatch.html"
+        },
+        "member": [
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "CompletionMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fad19e0614abcde9f1e43731f3db5319d1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ExactMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa4fbabba5b6c785446e3e077b0dcb011b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "HelperMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa7f21e3c410591536437b856c40727344"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "InformationalMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa5c7ce8640639ec38c5f2c77c6187e710"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NoMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa2429a977dd52f1065cd3e48450a1b347"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PossibleMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600faa07665917f208fa90ae563d16ea06891"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "Type"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NoMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa2429a977dd52f1065cd3e48450a1b347"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "CompletionMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fad19e0614abcde9f1e43731f3db5319d1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PossibleMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600faa07665917f208fa90ae563d16ea06891"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "InformationalMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa5c7ce8640639ec38c5f2c77c6187e710"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "HelperMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa7f21e3c410591536437b856c40727344"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ExactMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa4fbabba5b6c785446e3e077b0dcb011b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "QueryMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a9869a71dfc3943f6b94bb5ab0fcb8c61"
+            },
+            "arglist": {
+              "$": "(AbstractRunner *runner=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "QueryMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a24fc19bcc04ced9ea6ec515bf0fe7775"
+            },
+            "arglist": {
+              "$": "(const QueryMatch &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QAction * >"
+            },
+            "name": {
+              "$": "actions"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a7409617e9085395533c661a1debb1b03"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addAction"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a89935ac462578d04decce47c651f4851"
+            },
+            "arglist": {
+              "$": "(QAction *actions)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "createConfigurationInterface"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "adae28032ecab33b71cf24342d2d5ced9"
+            },
+            "arglist": {
+              "$": "(QWidget *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "data"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a8a60e1d17dc9c04c0272ddcc3f884635"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasConfigurationInterface"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a0d9418e50126af41b1bf18c9e1a048dc"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QIcon"
+            },
+            "name": {
+              "$": "icon"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a71b0d6bfd80b3405eeba214b7f8930bb"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "iconName"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a2512314cc646102d473cde336e35df6b"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "id"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a21b8bbb150ee7327d08f675564fd19ad"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isEnabled"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "ae9ce20b6f03e06ef885e262627601945"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isMultiLine"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a3a80e2c61c339083564ddf99ee48f8cb"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isValid"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "af0eff36692d63b4e4ede0ec96c6b0b0e"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "matchCategory"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a9f6ad1f4bf90f675542905b3e44abfa6"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "mimeType"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a50a97aea1050a5513dcd49dbd9b5923a"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "qreal"
+            },
+            "name": {
+              "$": "relevance"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a787e6f064248b028424aef6ffd282187"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "run"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "ab09de0dbf370e90304ed794820dca698"
+            },
+            "arglist": {
+              "$": "(const RunnerContext &context) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "AbstractRunner *"
+            },
+            "name": {
+              "$": "runner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "abf18695a18cd1237d65dc4f0868aaf3e"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QAction *"
+            },
+            "name": {
+              "$": "selectedAction"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a1145f51cdd6356e76abf1f381d41f2e4"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setActions"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a6f8baa28474c0cf7269ea26be1a9599e"
+            },
+            "arglist": {
+              "$": "(const QList< QAction * > &actions)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setData"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "aad806b18a5fbec942f1258f6b4436cd8"
+            },
+            "arglist": {
+              "$": "(const QVariant &data)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setEnabled"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a2e391665fff184efd274b920e1f42353"
+            },
+            "arglist": {
+              "$": "(bool enable)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setIcon"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a2b6be3046fee0b5a4572e6767a29f497"
+            },
+            "arglist": {
+              "$": "(const QIcon &icon)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setIconName"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "aa8347043eda7ae30aaa86d20f6796d81"
+            },
+            "arglist": {
+              "$": "(const QString &iconName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setId"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a9c0a40cbfaa985dc6dab52f617d491c3"
+            },
+            "arglist": {
+              "$": "(const QString &id)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMatchCategory"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "af1af8b2f586aea5b9c66ea39b0fb9281"
+            },
+            "arglist": {
+              "$": "(const QString &category)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMimeType"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "ae6ccdfcbca0ac6ff871c7507e5eda826"
+            },
+            "arglist": {
+              "$": "(const QString &mimeType)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMultiLine"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a6d4f50cfb907720879ca7a2beefe98f4"
+            },
+            "arglist": {
+              "$": "(bool multiLine)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setRelevance"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a33092a4384eaa117325b99f6fff675f0"
+            },
+            "arglist": {
+              "$": "(qreal relevance)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSelectedAction"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "adfaddb73926bd355b5763a50d48f0055"
+            },
+            "arglist": {
+              "$": "(QAction *action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSubtext"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a96570707370b4109aaae9ceebd5bd6ba"
+            },
+            "arglist": {
+              "$": "(const QString &text)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setText"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a43ad4e96cfa7f5a86803cc8c4846b874"
+            },
+            "arglist": {
+              "$": "(const QString &text)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setType"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "aae0dc58edda1eacdfe80f059cc2528da"
+            },
+            "arglist": {
+              "$": "(Type type)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setUrls"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a92c7743956cb92c4db00b1e8058f75d2"
+            },
+            "arglist": {
+              "$": "(const QList< QUrl > &urls)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "subtext"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "afa82c2549faa03c041d6cdc9045aa965"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "text"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a5e2fbd2b497ab5e00d52ac84ad50c475"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Type"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a7d99b3eb24ef7e560294c0cff5bf218f"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QUrl >"
+            },
+            "name": {
+              "$": "urls"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "a0fbba32aa184c51fab61bd4c3f7f8256"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "Plasma::RunnerContext"
+        },
+        "filename": {
+          "$": "classPlasma_1_1RunnerContext.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "RunnerContext"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a89282eb5e9b1548cd1da0e263843d3b7"
+            },
+            "arglist": {
+              "$": "(RunnerContext &other, QObject *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "addMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a44f7538b3560664f99a89ce288bb5f91"
+            },
+            "arglist": {
+              "$": "(const QueryMatch &match)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "addMatches"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a84736c01ce574fa845cb3fb24e9e3328"
+            },
+            "arglist": {
+              "$": "(const QList< QueryMatch > &matches)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "enabledCategories"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a8eb9a85415ab5013c33f5f33c647b490"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "ignoreCurrentMatchForHistory"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "adb516c539f32e7a0f69effd4425baea2"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isValid"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "aec53b3273f18a6da719f65e48619acee"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QueryMatch"
+            },
+            "name": {
+              "$": "match"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a637691f8b8624d18efed217e2b8f6615"
+            },
+            "arglist": {
+              "$": "(const QString &id) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QueryMatch >"
+            },
+            "name": {
+              "$": "matches"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "adde592d2e5aa9139e6567998c7a9f49f"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "mimeType"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a63ba0d3742a222ad09892727ff1aa075"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "RunnerContext &"
+            },
+            "name": {
+              "$": "operator="
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "ac27baf79656c8357c5f8d29f6fcad894"
+            },
+            "arglist": {
+              "$": "(const RunnerContext &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "query"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "ad4fb6234ec800852afcf358c70a299c8"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "removeMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "ad3a5819fffedf713aff4f5816bf33007"
+            },
+            "arglist": {
+              "$": "(const QString matchId)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "removeMatches"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "aaa641ea178c7f437d10bb3cd23c0d830"
+            },
+            "arglist": {
+              "$": "(AbstractRunner *runner)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "removeMatches"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "ac2c06a8baff721aa60466fabccd2fa96"
+            },
+            "arglist": {
+              "$": "(const QStringList matchIdList)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "requestQueryStringUpdate"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "ab2fde3e84944975bc50ee5b20e450fcd"
+            },
+            "arglist": {
+              "$": "(const QString &text, int cursorPosition) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "reset"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a9fc27d023b2673972df12730bcef5a06"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "restore"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "aaaec302fbfb4aa0e4861897fbbb43d0a"
+            },
+            "arglist": {
+              "$": "(const KConfigGroup &config)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "run"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "aa4a0cec8c0ba065aa883dd2e4b629b9a"
+            },
+            "arglist": {
+              "$": "(const QueryMatch &match)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "save"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a39b8ca5df69d44be8a74d5beca5cbb14"
+            },
+            "arglist": {
+              "$": "(KConfigGroup &config)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setEnabledCategories"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a693436532d1be58f3231e750158113cf"
+            },
+            "arglist": {
+              "$": "(const QStringList &categories)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setQuery"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a664bc02baa94fb6756e9d858c7a262ff"
+            },
+            "arglist": {
+              "$": "(const QString &term)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSingleRunnerQueryMode"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "ab863aab15b4e2ae72f04dc8050868ac2"
+            },
+            "arglist": {
+              "$": "(bool enabled)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "singleRunnerQueryMode"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "a775c11b1d3bd24f7991c3650c217c2cf"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Type"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerContext.html"
+            },
+            "anchor": {
+              "$": "af494d5dbc423f7b12a5cb95f4a15fd60"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "Plasma::RunnerManager"
+        },
+        "filename": {
+          "$": "classPlasma_1_1RunnerManager.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "historyEnabledChanged"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a085a729d3e3e63aded183a335357e36b"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "matchesChanged"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a28f8c3d31f6bf070b32a2d16309a3e88"
+            },
+            "arglist": {
+              "$": "(const QList< Plasma::QueryMatch > &matches)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "queryFinished"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a78c2fd86ac2773d64f2b5fdb5edaf06d"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSearchTerm"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "aba8bf5abf760bceaa7c2b89018a95fa9"
+            },
+            "arglist": {
+              "$": "(const QString &term, int cursorPosition)"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "launchQuery"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "af8517e0135019d205c41d38d81d5be8d"
+            },
+            "arglist": {
+              "$": "(const QString &term)"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "launchQuery"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "af350cda1a14d962a5903fceb202d833a"
+            },
+            "arglist": {
+              "$": "(const QString &term, const QString &runnerId)"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "matchSessionComplete"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a503fd69a3f6ab83fc888b09c6faf7109"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "reset"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a8d9724f9ff9ab270ebca6b8a5dc5594b"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setupMatchSession"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "ae32bdb3a45dd1b4d6307c70198eb7c4d"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "RunnerManager"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "ab8b0a1785fdf7f09bfd493544647a081"
+            },
+            "arglist": {
+              "$": "(KConfigGroup &config, QObject *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QAction * >"
+            },
+            "name": {
+              "$": "actionsForMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a0f53974cf565dfa72563a7a687c60dfb"
+            },
+            "arglist": {
+              "$": "(const QueryMatch &match)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "allowedRunners"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a0d584fea1209464f3cb8975e4afc371d"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "enabledCategories"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a380db8c673a85558c7bed74816178cdd"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "enableKNotifyPluginWatcher"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a7d02c83b9286a6c1e04c784186eb3973"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE QString"
+            },
+            "name": {
+              "$": "getHistorySuggestion"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a8badd73bce2c3024d109c0a3275fad24"
+            },
+            "arglist": {
+              "$": "(const QString &typedQuery) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "history"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "abff30adcf2e2ce4ff16d5a0b28249ab6"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "historyEnabled"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "ab89f4ced7dd3a61b04f53ca6bce4839c"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "loadRunner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "adc73d74feedf611ffeeb2a64cca4b343"
+            },
+            "arglist": {
+              "$": "(const KPluginMetaData &pluginMetaData)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "loadRunner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a33129cdbb0e2fdf78547c9819a00801b"
+            },
+            "arglist": {
+              "$": "(const KService::Ptr service)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "loadRunner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a974715dfaab6acc0b32ef5a905d966bc"
+            },
+            "arglist": {
+              "$": "(const QString &path)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QueryMatch >"
+            },
+            "name": {
+              "$": "matches"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a8456b3472b77cdce502db51890a847b8"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QMimeData *"
+            },
+            "name": {
+              "$": "mimeDataForMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a08098b6360713080e86fb9455a08ec7b"
+            },
+            "arglist": {
+              "$": "(const QString &matchId) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QMimeData *"
+            },
+            "name": {
+              "$": "mimeDataForMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "ad27c71cde07fcc4062a13b240b90a970"
+            },
+            "arglist": {
+              "$": "(const QueryMatch &match) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "priorSearch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "ae8d45f4bd20ac84d37b30fc919743fde"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "query"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a6a7e9966a0b1004f3db27f9176eb2484"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "reloadConfiguration"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "abd181ddadf899400b96d95667e88b346"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "removeFromHistory"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a9131e0b63109f1340c4570f97108da31"
+            },
+            "arglist": {
+              "$": "(int index)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "retainPriorSearch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a2a27d2296530470e593cfc1fa4b336c4"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "run"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a3b7b29db4138e27ebb3ec748f79ca10b"
+            },
+            "arglist": {
+              "$": "(const QString &id)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "run"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a336cbf2962c2f2212c4fe0bd9cc518f8"
+            },
+            "arglist": {
+              "$": "(const QueryMatch &match)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "runMatch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "adb98d86e6f9f6c4133015a65838db6f9"
+            },
+            "arglist": {
+              "$": "(const QueryMatch &match)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "AbstractRunner *"
+            },
+            "name": {
+              "$": "runner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a4d950714784e0ee12e2d2b2fdb4859c1"
+            },
+            "arglist": {
+              "$": "(const QString &pluginName) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "runnerName"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a7669e2965c260c9f03f5355ae496bee6"
+            },
+            "arglist": {
+              "$": "(const QString &id) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< AbstractRunner * >"
+            },
+            "name": {
+              "$": "runners"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a4ad6b523b99b70178f2b90bd2042d987"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "RunnerContext *"
+            },
+            "name": {
+              "$": "searchContext"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "adcbe3f8fef3ecd1a81a65bb86f9eca4d"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setAllowedRunners"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a1086d657087eb69726e1ba8de2ac7c2b"
+            },
+            "arglist": {
+              "$": "(const QStringList &runners)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setEnabledCategories"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a51909cc315ae3863f78e476797b91b89"
+            },
+            "arglist": {
+              "$": "(const QStringList &categories)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setPriorSearch"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a17c9924f13469cef2643285811bc53ef"
+            },
+            "arglist": {
+              "$": "(const QString &search)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSingleMode"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "afa78a36b20f8d9c920e753bb5cfd6b27"
+            },
+            "arglist": {
+              "$": "(bool singleMode)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSingleModeRunnerId"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a04a7448eed23e7b92dfbdede7c61a257"
+            },
+            "arglist": {
+              "$": "(const QString &id)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "singleMode"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a9c7be43487c729e330864a2eaeda84c3"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "singleModeAdvertisedRunnerIds"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a2a2595e152136a4c982461e2096e52b8"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "AbstractRunner *"
+            },
+            "name": {
+              "$": "singleModeRunner"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a42a7c3c44571892d96739757679b5ec9"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "singleModeRunnerId"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a5a5f50a87154eb74a0114210f181280b"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static KPluginInfo::List"
+            },
+            "name": {
+              "$": "listRunnerInfo"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a94da3cd4e23ac570bfc6db8153257e3c"
+            },
+            "arglist": {
+              "$": "(const QString &parentApp=QString())"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static QVector< KPluginMetaData >"
+            },
+            "name": {
+              "$": "runnerMetaDataList"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "af37f4011c5e2f2e2b69cdc10bf379775"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static QVector< KPluginMetaData >"
+            },
+            "name": {
+              "$": "runnerMetaDataList"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a1dbe8c343cc698629364e90a23039874"
+            },
+            "arglist": {
+              "$": "(const QString &parentApp)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "RunnerModel"
+        },
+        "filename": {
+          "$": "classRunnerModel.html"
+        },
+        "base": {
+          "$": "QAbstractListModel"
+        },
+        "member": {
+          "@kind": "enumeration",
+          "type": {},
+          "name": {
+            "$": "Roles"
+          },
+          "anchorfile": {
+            "$": "classRunnerModel.html"
+          },
+          "anchor": {
+            "$": "a60a7fafb4069e0c8900bc1a64efc0ddc"
+          },
+          "arglist": {}
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "Plasma::RunnerSyntax"
+        },
+        "filename": {
+          "$": "classPlasma_1_1RunnerSyntax.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "RunnerSyntax"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "a66e523e6d6c65cd347d19430fc28d64e"
+            },
+            "arglist": {
+              "$": "(const QString &exampleQuery, const QString &description)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "RunnerSyntax"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "ac5f034e48f605b65bd9de339d9380629"
+            },
+            "arglist": {
+              "$": "(const RunnerSyntax &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addExampleQuery"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "aab6b2426391c913e4f8602cef85a92da"
+            },
+            "arglist": {
+              "$": "(const QString &exampleQuery)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "description"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "a4cfba216a5d0ac420cb4884ae561542a"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "exampleQueries"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "a34301bf7afbbfae06528cf915c3084bf"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "exampleQueriesWithTermDescription"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "a6e988d8f198ec620838a2ea164534847"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "RunnerSyntax &"
+            },
+            "name": {
+              "$": "operator="
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "a690abc0955677a285c85a09ab643f4a3"
+            },
+            "arglist": {
+              "$": "(const RunnerSyntax &rhs)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "searchTermDescription"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "aa6c544ff3dc49f7b280a26ffab542d8a"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setDescription"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "a00d65581e564a243514d7919c19f8bdd"
+            },
+            "arglist": {
+              "$": "(const QString &description)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSearchTermDescription"
+            },
+            "anchorfile": {
+              "$": "classPlasma_1_1RunnerSyntax.html"
+            },
+            "anchor": {
+              "$": "a16ad7432aea4270aa255739ea20ae90d"
+            },
+            "arglist": {
+              "$": "(const QString &description)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "page",
+        "name": {
+          "$": "index"
+        },
+        "title": {
+          "$": "KRunner"
+        },
+        "filename": {
+          "$": "index"
+        }
+      }
+    ]
+  }
+}

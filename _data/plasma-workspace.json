@@ -4790,6 +4790,22 @@
             "arglist": {}
           },
           {
+            "@kind": "property",
+            "type": {
+              "$": "QWindow"
+            },
+            "name": {
+              "$": "window"
+            },
+            "anchorfile": {
+              "$": "classNotificationManager_1_1Notifications.html"
+            },
+            "anchor": {
+              "$": "ae809b5787956b64e36fa2a78efc9343a"
+            },
+            "arglist": {}
+          },
+          {
             "@kind": "function",
             "type": {
               "$": "Q_INVOKABLE void"
@@ -5478,10 +5494,28 @@
               "$": "classNotificationManager_1_1Server.html"
             },
             "anchor": {
-              "$": "a8542ba378cc54f1ab0184a026d36a0cf"
+              "$": "ad567b84d4e2c501452400556c57c6015"
             },
             "arglist": {
               "$": "(uint id, const QString &actionName, const QString &xdgActivationToken, Notifications::InvokeBehavior behavior)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "invokeAction"
+            },
+            "anchorfile": {
+              "$": "classNotificationManager_1_1Server.html"
+            },
+            "anchor": {
+              "$": "a73142cefcea428495c9d873c1b8cf213"
+            },
+            "arglist": {
+              "$": "(uint id, const QString &actionName, const QString &xdgActivationToken, Notifications::InvokeBehavior behavior, QWindow *window)"
             }
           },
           {
@@ -6288,6 +6322,24 @@
               "$": "bool"
             },
             "name": {
+              "$": "filterMinimized"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TaskFilterProxyModel.html"
+            },
+            "anchor": {
+              "$": "a49909f6971388352f1ade1622e369bdf"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
               "$": "filterNotMaximized"
             },
             "anchorfile": {
@@ -6475,6 +6527,24 @@
             },
             "anchor": {
               "$": "accf720bb8286d4976c9bceb7846e1232"
+            },
+            "arglist": {
+              "$": "(bool filter)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setFilterMinimized"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TaskFilterProxyModel.html"
+            },
+            "anchor": {
+              "$": "ad3abfe608d0eb36cf33dfbfecd101b75"
             },
             "arglist": {
               "$": "(bool filter)"
@@ -7519,6 +7589,24 @@
               "$": "bool"
             },
             "name": {
+              "$": "filterMinimized"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TasksModel.html"
+            },
+            "anchor": {
+              "$": "a32605a901bb125ead29fe06e84d19715"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
               "$": "filterNotMaximized"
             },
             "anchorfile": {
@@ -8282,6 +8370,24 @@
             },
             "anchor": {
               "$": "a9720bba533f41043144c632a4c5c45e5"
+            },
+            "arglist": {
+              "$": "(bool filter)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setFilterMinimized"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TasksModel.html"
+            },
+            "anchor": {
+              "$": "a79a8d8c5370a77e6c3d4bd036950b386"
             },
             "arglist": {
               "$": "(bool filter)"
