@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-18 00:50+0000\n"
-"PO-Revision-Date: 2023-01-07 09:30+0100\n"
+"PO-Revision-Date: 2023-01-19 09:10+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: content/docs/use/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -214,13 +214,6 @@ msgid "main.qml"
 msgstr "main.qml"
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:51
-#, fuzzy
-#| msgid ""
-#| "First, we import the package we defined in the `main.cpp` file, add a "
-#| "`Kirigami.Action` to our global drawer that will send us to the about "
-#| "page and create a component with a `Kirigami.AboutPage` in it, the About "
-#| "Page only have one property: `aboutData`, we then pass `Conrtoller."
-#| "aboutData` to it."
 msgid ""
 "First, we import the package we defined in the `main.cpp` file, add a "
 "`Kirigami.Action` to our global drawer that will send us to the about page "
@@ -228,42 +221,32 @@ msgid ""
 "only have one property: `aboutData`, we then pass `AboutType.aboutData` to "
 "it."
 msgstr ""
-"Najprej uvozimo paket, ki smo ga določili v datoteki »main.cpp«, dodamo "
-"»Kirigami.Action« v naš globalni predal, ki nas bo poslal na stran o "
-"programu, in ustvarimo komponento z »Kirigami.AboutPage« v njen. Stran o "
-"programu ima samo eno lastnost: »aboutData«, nato mu podajamo »Controller."
-"aboutData«."
+"Najprej uvozimo paket, ki smo ga določili v datoteki `main.cpp`, dodamo "
+"`Kirigami.Action` v naš globalni predal, ki nas bo poslal na stran o "
+"programu, in ustvarimo komponento s `Kirigami.AboutPage`  v njem. Stran o "
+"programu ima samo eno lastnost: `aboutData`, nato mu podamo `AboutType."
+"aboutData`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:54
 msgid "CMakeLists"
 msgstr "CMakeLists"
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:58
-#, fuzzy
-#| msgid ""
-#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
-#| "to the `add_executable` module and `KF5::CoreAddons` to the "
-#| "`target_link_libraries` module."
 msgid ""
 "In the CMakeLists.txt file in our top-level folder, add `CoreAddons` to the "
 "`find_package` module."
 msgstr ""
-"V datoteko CMakeLists.txt v imeniku »src« dodajte »controller.cpp« k modulu "
-"»add_executable« in »KF5::CoreAddons« k modulu »target_link_libraries«."
+"V datoteko CMakeLists.txt v vrhnji mapi dodajte `CoreAddons` k modulu "
+"`find_package`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:62
-#, fuzzy
-#| msgid ""
-#| "In the CMakeLists.txt file in the ‘src’ directory, add `controller.cpp` "
-#| "to the `add_executable` module and `KF5::CoreAddons` to the "
-#| "`target_link_libraries` module."
 msgid ""
 "In the CMakeLists.txt file in the ‘src’ directory, add `about.cpp` to the "
 "`add_executable` module and `KF5::CoreAddons` to the `target_link_libraries` "
 "module."
 msgstr ""
-"V datoteko CMakeLists.txt v imeniku »src« dodajte »controller.cpp« k modulu "
-"»add_executable« in »KF5::CoreAddons« k modulu »target_link_libraries«."
+"V datoteko CMakeLists.txt v imeniku ‘src’ dodajte `about.cpp`  k modulu "
+"`add_executable` in `KF5::CoreAddons` k modulu  `target_link_libraries`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:65
 msgid "Running the application"
@@ -4976,14 +4959,12 @@ msgstr ""
 "uporabniškim vmesnikom."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:70
-#, fuzzy
-#| msgid "[Figuring out main.cpp](/docs/kirigami/advanced-maincpp)"
 msgid "[About Page](/docs/kirigami/advanced-add_about_page)"
-msgstr "[Ugotavljanje main.cpp](/docs/kirigami/advanced-maincpp)"
+msgstr "[About Page](/docs/kirigami/advanced-add_about_page)"
 
 #: content/docs/use/kirigami/introduction-next_steps.md:70
 msgid "Add an \"About Page\" to your UI."
-msgstr ""
+msgstr "Dodajte \"About Page\" k vašemu uporabniškemu vmesniku."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:72
 msgid "Beginner C++ resources"
@@ -5517,17 +5498,12 @@ msgstr ""
 "resolvedUrl' pretvori relativni naslov URL datoteke QML v absolutni naslov."
 
 #: content/docs/use/kirigami/introduction-pages.md:69
-#, fuzzy
-#| msgid ""
-#| "There is further information about alternative page structures [within "
-#| "our Kirigami documentation]({{< ref \"components-pagerow_pagestack.md\" "
-#| ">}})."
 msgid ""
 "There is further information about alternative page structures [within our "
 "Kirigami documentation](/docs/kirigami/components-pagerow_pagestack)."
 msgstr ""
-"Obstajajo še dodatne informacije o alternativnih strukturah strani [v naši "
-"dokumentaciji Kirigami]({{< ref \"components-pagerow_pagestack.md\" >}})."
+"Obstajajo še dodatne informacije o alternativnih strukturah strani  [v naši "
+"dokumentaciji o Kirigami](/docs/kirigami/components-pagerow_pagestack)."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:0
 msgid "Using separate files and signals"
