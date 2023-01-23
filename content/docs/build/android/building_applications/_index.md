@@ -10,45 +10,42 @@ description: >
 
 Building .apk files from Qt Applications requires a cross-compiling toolchain, which is hard to setup. To simplify this, there is a ready-to-use Docker container for building KDE applications.
 
-This documentation only applies to applications that have a craft blueprint in the [craft-blueprints-kde](https://invent.kde.org/packaging/craft-blueprints-kde) repository. If the application you want does not have such a blueprint yet, have a look at [the documentation](https://community.kde.org/Craft/Blueprints).
+This documentation only applies to applications that have a Craft blueprint in the [craft-blueprints-kde](https://invent.kde.org/packaging/craft-blueprints-kde) repository. If the application you want does not have such a blueprint yet, have a look at [the documentation](https://community.kde.org/Craft/Blueprints).
 
 The container can be initialized with
 ```bash
 mkdir craft-kde-android
-docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot kdeorg/android-sdk craft-bootstrap
+docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot kdeorg/android-qt515 bash
+python3 -c "$(curl https://raw.githubusercontent.com/KDE/craft/master/setup/CraftBootstrap.py)" --prefix ~/CraftRoot
 ```
 
 {{< alert color="info" title="Note" >}}
 If this fails with an error similar to "Permission denied", you may need to disable SELinux while using craft by running `sudo setenforce 0`
 {{< /alert >}}
 
-The container will prompt you for the desired target architecture (arm32, arm64, x86_32 or x86_64) and possible other prompts.
+Craft will prompt you for the desired target architecture (arm32, arm64, x86_32 or x86_64) and possible other prompts.
 
-You can then build an application by running
-
-```bash
-docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot kdeorg/android-sdk craft <appname>
-```
-
-and package it using
+To build an application you first need to enter the container using
 
 ```bash
-docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot kdeorg/android-sdk craft --package <appname>
+docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot kdeorg/android-qt515 bash
 ```
 
-Alternatively, you can enter the container using
+and source the Craft environment with
 
 ```bash
-docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot kdeorg/android-sdk bash
+source ~/CraftRoot/craft/craftenv.sh
 ```
 
-and run the craft commands locally (e.g. `craft <appname>`, `craft --package <appname>`).
+Now run Craft commands like `craft <appname>` to build an application and  `craft --package <appname>` to package it as apk.
 
-Inside the container, the blueprints can be found by running `cs craft-blueprints-kde` and can be edited there to quickly test changes.
+Inside the Craft environment, the blueprints can be found by running `cs craft-blueprints-kde` and can be edited there to quickly test changes.
 
 The source folder for an application or library can be found the same way by running `cs <projectname>`; the build folder can be found by running `cb <projectname>`.
 
 You can quickly iterate on patches for a project by editing it in the source folder, followed by calling `ninja install` in the build folder and creating an apk file using `craft --package <appname>`.
+
+There are much more Craft commands, take a look at the [Craft documentation](https://community.kde.org/Craft) to learn about them.
 
 The `.apk` file can be found at `/home/user/CraftRoot/tmp`. This folder is also available as `craft-kde-android/tmp` on the host system. Craft does not sign the apks, so you need to do that yourself before being able to install it onto a device. For signing an apk, you need to create a signing key first, which can be done using
 
