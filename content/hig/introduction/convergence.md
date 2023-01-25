@@ -4,14 +4,14 @@ weight: 2
 ---
 
 
-The design of KDE software, and by extension the KDE HIG, is made with
-convergence in mind. *Convergence* means that a piece of software\'s
-user interface can immediately adapt its user experience to the
-particularities of each type of device that it can run on (desktop,
-laptop, tablet, phone, etc).
+KDE's objective is to design optimized convergent software. 
 
-For information regarding the differences between a user interface and
-the user experience, see the [glossary]({{< relref "glossary" >}}).
+**Optimized convergence** means that the application's
+user interface can dynamically adapt its user experience to the
+form factor of each type of device that it runs on. For example, desktop,
+laptop, tablet, phone, TVs, etc.
+
+For information regarding differences between user interface and user experience, see the [glossary]({{< relref "glossary" >}}).
 
 Device Types
 ------------
@@ -19,12 +19,12 @@ Device Types
 The KDE HIG defines an optimal user experience for each device type, as
 described in [device type]({{< relref "devicetypes" >}}).
 
-Convergence requires an understanding of the commonalities in the user
-interface. Convergence can then be implemented by providing variations
-of `the common UI components [architecture]({{< relref "architecture" >}}) which
-correspond with the optimal user experience for each device's usage model.
+Optimized convergence requires an understanding of the commonalities in the user interface. Convergence can be implemented by providing variations
+of `the common UI components [architecture]({{< relref "architecture" >}}) which correspond with the optimal user experience for each device's usage model.
 
-Making convergent applications
+The same application can accommodate various form factors. The application can decide which forms to apply depending on available screen sizes.
+
+Making Convergent Applications
 ------------------------------
 
 The best way to create convergent applications is to follow the
