@@ -43,8 +43,8 @@ application. Let's create a `.kcfg` file with a single group and a few entries.
         <choice name="Windows">
           <label>Windows</label>
         </choice>
-        <default>Linux</default>
       </choices>
+      <default>0</default> <!-- or <default>Linux</default> -->
     </entry>
   </group>
 </kcfg>
@@ -95,7 +95,7 @@ property changes.
 
 An entry can optionally have a default value which is used when the value
 isn't specified in any config file. Default values are interpreted as literal constant
-values. 
+values.  A default value can be either an enum value or the index of an enum.
 
 ### Compute the default value
 
