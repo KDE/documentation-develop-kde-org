@@ -7,14 +7,14 @@ aliases:
 
 Aurorae is a theme engine for KWin window decorations. It uses SVG to render the decoration and buttons and there is a simple config file for configuring the theme details.
 
-A simple way to start creating your own theme is by modifying an existing one. You can find many existing themes in the [KDE Store](https://store.kde.org/browse?cat=114&ord=latest).
+A simple way to start creating your own theme is by modifying an existing one. You can find many existing themes in the [KDE Store](https://store.kde.org/browse?cat=114&ord=latest). One example is [Breeze Active Accent](https://github.com/nclarius/Plasma-window-decorations/blob/main/ActiveAccentLight/decoration.svg?short_path=f052936).
 
 ## Package structure
 
 An Aurorae theme consists of one folder containing
 
 - svg files for decoration and buttons
-- one KConfig file for the theme details
+- one KConfig rc file for the theme details
 - one metadata.desktop file for information about the theme.
 
 ```plaintext
@@ -28,27 +28,23 @@ ExampleDecoration
 ├── ...
 ```
 
-Each svg file needs to include certain custom [attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute) for it to be managed correctly as part of a window decoration. With a vector graphics editor like [Inkscape](https://inkscape.org/), these attributes can be edited by selecting an object, opening the Object Properties pane and changing the ID and Label fields.
+Each svg file needs to include certain custom [attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute) for it to be managed correctly as part of a window decoration. With a vector graphics editor like [Inkscape](https://inkscape.org/), these attributes can be edited by selecting an object, opening the Object Properties pane and changing the ID and Label fields. It is also possible to make use of colors from the [system color scheme](https://develop.kde.org/docs/extend/plasma/theme/theme-details/#using-system-colors).
 
-System-wide installed Aurorae themes are located in `/usr/share/aurorae/themes/` and user-specific themes are located in `~/.local/share/aurorae/themes/`. If you copy your folder into the user folder, it will be available for selection in System Settings. Just make sure you change the theme name in the KConfig rc file and in metadata.desktop.
+System-wide installed Aurorae themes are located in `/usr/share/aurorae/themes/` and user-specific themes are located in `~/.local/share/aurorae/themes/`. If you copy your folder into the user folder, it will be available for selection in System Settings.
 
-## Window decoration
+## Window frame
 
-The window decoration has to be provided in a file `decoration.svg` . This svg has to contain all the elements required for a Plasma theme background. 
+The window frame has to be provided in a file `decoration.svg`. This svg has to contain all the elements required for a Plasma theme background. Different styles for special states (such as active or inactive) can optionally be provided in the same svg file.
+
+Each decoration state element is composed of one element for each window side which have the name of the side as a suffix in the ID: `left`, `right`, `top`, `bottom`, `topleft`, `topright`, `bottomleft`, `bottomright`, `center`.
 
 ### Basic decoration
 
-The base decoration element has to use the prefix `decoration`, like in the case of `decoration-inactive` or `decoration-top`. Different styles for special modes can optionally be provided in the same svg file.
+The base decoration element has to use the prefix `decoration`, like in the case of `decoration-inactive` or `decoration-top`.
 
 ### Inactive windows
 
 A different style for inactive windows can be provided in the same svg. The inactive elements must have the element prefix `decoration-inactive`. If not provided, inactive windows will be rendered with the same style as active windows. 
-
-### Maximized windows
-
-In order to better support maximized windows there exists a special frame svg called `decoration-maximized`. In the same way as for the general decoration a version for inactive, opaque and inactive-opaque can be specified: `decoration-maximized`, `decoration-maximized-inactive`, `decoration-maximized-opaque` and `decoration-maximized-opaque-inactive`. If not provided, the engine falls back to the normal decoration.
-
-In all cases only the center element will be used. There is no need to specify borders. Please note that in case of a window with translucent widgets the center element will be stretched to the size of the complete window. In order to support Fitts' Law all TitleEdge Settings are set to 0. So the buttons will be directly next to the screen edges.
 
 ### Opacity
 
@@ -64,12 +60,19 @@ Aurorae supports inner borders, that is a border at the margin to the window. Wh
 
 For inner borders the decoration svg file can include two additional FrameSvgs: `innerborder` and `innerborder-inactive`.  If the inactive element is not present the active element is used for inactive windows. 
 
-These frames must include the border elements. Only the border elements will be visible, the center element is not visible. For performance reasons the center element should be a simple rect and for support of decoration behind windows it should be completely translucent.
+These frames must include the border elements. Only the border elements will be visible, the center element is not visible. For performance reasons the center element should be a simple rectangle and for support of decoration behind windows it should be completely translucent.
 
-Inner borders are not shown for maximized windows. If a maximized window should show an inner border it is recommeded to directly add it to the maximized element.
+Inner borders are not shown for maximized windows. If a maximized window should show an inner border it is recommended to directly add it to the `maximized` element.
+
+### Maximized windows
+
+In order to better support maximized windows there exists a special frame svg called `decoration-maximized`. In the same way as for the general decoration a version for inactive, opaque and inactive-opaque can be specified: `decoration-maximized`, `decoration-maximized-inactive`, `decoration-maximized-opaque` and `decoration-maximized-opaque-inactive`. If not provided, the engine falls back to the normal decoration.
+
+In all cases only the center element will be used. There is no need to specify borders. Please note that in case of a window with translucent widgets the center element will be stretched to the size of the complete window. In order to support Fitts' Law all TitleEdge Settings are set to 0. So the buttons will be directly next to the screen edges.
 
 ### Button Groups
-An Aurorae decoration may include elements to be painted behind the button groups. This is intended for cases when the buttons share a common background. it should be preferred over custom editing of each button as this will result in a bad visual experience for explicit spacers or if the user changes the order of buttons.
+
+An Aurorae decoration may include elements to be painted behind the button groups on the left and right side of the frame. This is intended for cases when the buttons share a common background. It should be preferred over custom editing of each button as this will result in a bad visual experience for explicit spacers or if the user changes the order of buttons.
 
 The following elements are supported: `buttongroup-left`, `buttongroup-left-inactive`, `buttongroup-right`, `buttongroup-right-inactive`. If the inactive element is not provided, the element for active is used for the inactive decoration, too. Left and right are independent and there is no fallback to the other element.
 
@@ -96,7 +99,7 @@ The following buttons are supported:
 - (`M`): window menu ("Move to Desktop", "Move to Screen", etc.). This button is not to be provided as an svg file, but available for use in the configuration.
 - (`N`): application menu ("File", "Edit", "View" etc.). This button is not to be provided as an svg file, but available for use in the configuration.
 
-The name is the name of the svg file; e.g. the close button has to be named `close.svg`. The letter in brackets is the button name to be used in the configuration (see below).
+Each button svg file needs to be named after the button type; e.g. the close button has to be named `close.svg`. The letter in brackets is the button name to be used in the configuration (see below).
 
 ### Button states
 
@@ -111,7 +114,7 @@ Each button can have different states. So a button could be hovered, pressed, de
 - `deactivated`: button cannot be clicked, e.g. window cannot be closed 
 - `deactivated-inactive`: same for inactive windows
 
-At least the active element has to be provided. All other elements are optional and the active element is always used as a fallback. If the theme provides the inactive element, this is used as a fallback for the inactive states. That is, if the theme provides a hover element, but none for inactive, the inactive window will not have a hover effect. Same is true for pressed and deactivated.
+At least the active element has to be provided. All other elements are optional and the `active` element is always used as a fallback. If the theme provides the `inactive` element, this is used as a fallback for the inactive states. That is, if the theme provides a `hover` element, but none for `inactive`, the inactive window will not have a hover effect. Same is true for `pressed` and `deactivated`.
 
 The buttons `alldesktops`, `keepabove`, `keepbelow` and `shade` are toggle buttons. When clicking on them they will stay in state `pressed(-inactive)`. By clicking them again they will change back to `(in)active`.
 
@@ -141,8 +144,6 @@ In a configuration group with the heading `[General]` the following options can 
 - `DecorationPositon`: decoration on top (`0`), left (`1`), right (`2`), or bottom (`3`) (default: `0`) 
 
 If `Shadow` is enabled, `Padding` values have to be added in the layout configuration (see below).
-
-If the decoration handles are on a side other than the top, some of the layout options change their meaning. E.g. `ButtonMarginTop` becomes a `ButtonMarginLeft`, in general layout settings were only a top exists are changed, if all exists like `TitleEdge` the meaning is unchanged. A shaded window will always have the decoration on the top, so the layout is transformed to be painted on the top again.
 
 
 ## Layout
@@ -188,7 +189,7 @@ Buttons:
 ```
 
 
-The layout can be configured in aconfiguration group named `[Layout]` with the following options and values:
+The layout can be configured in a configuration group named `[Layout]` with the following options and values:
 
 - `BorderLeft` (default: `5`)
 - `BorderRight` (default: `5`) 
@@ -226,13 +227,15 @@ The layout can be configured in aconfiguration group named `[Layout]` with the f
 
 `Border<Direction>` is only required if the decoration is not in that direction; e.g. `BorderTop` is only required for decorations on the left, right or bottom. `Padding<Direction>` values can be used to provide shadows. The `ButtonWidth<Action>` values are optional, falling back to `ButtonWidth` if not specified.
 
+If the decoration handles are on a side other than the top, layout options where only an option for the top exist change their meaning, e.g. with `DecorationPosition=1`, `ButtonMarginTop` will mean `ButtonMarginLeft`, wheras e.g. the `TitleEdge` options remain unchanged. A shaded window will always have the decoration on the top, so the layout is transformed to be painted on the top again.
+
 The user can change border and button sizes in the settings dialog. The defaults are the settings specified in the configuration file. The configurable border size influences the right, left and bottom borders, the button size influences both the size of all buttons and the title height.
 
 It is important to remember that the buttons have to be scalable to correctly support this feature and that the borders may extend into the center element if the border size is changed.
 
 ## Metadata
 
-The theme must contain a file `metadata.desktop` for information about the theme such as name, author, licence, etc. The format follows the [Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html), staring with a group heading `[DesktopEntry]` and supporting the following entries:
+The theme must contain a `metadata.desktop` file for information about the theme such as name, author, license, etc. The format follows the [Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html), starting with a group heading `[DesktopEntry]` and supporting the following entries:
 
 - `Name`: the name of the theme used in theme selection
 - `Comment`: a comment for the theme, e.g. "Aurorae theme inspired by Oxygen decoration"
@@ -244,4 +247,4 @@ The theme must contain a file `metadata.desktop` for information about the theme
 
 
 ## Publishing
-Once you have created something nice, consider sharing it with other Plasma users! Create a zip file of the package folder, and upload it to the [KDE Store](https://store.kde.org/browse/) under the category Linux/Unix Desktops > Desktop Themse > KDE > KDE Plasma > Plasma Windoe Decorations. Users will then be able to find and install your script with Discover or via “Get New Windoe Decorations…” in System Settings.
+Once you have created something nice, consider sharing it with other Plasma users! Create a zip file of the package folder and upload it to the [KDE Store](https://store.kde.org/browse/) under the category Linux/Unix Desktops > Desktop Themes > KDE > KDE Plasma > Plasma Window Decorations. Users will then be able to find and install your script with [Discover](https://apps.kde.org/discover/) or via “Get New Window Decorations…” in System Settings.
