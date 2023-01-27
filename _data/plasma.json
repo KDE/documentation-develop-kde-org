@@ -10026,84 +10026,6 @@
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::plasma::extras::ListItem"
-        },
-        "filename": {
-          "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-        },
-        "base": {
-          "$": "org::kde::kirigami::AbstractListItem"
-        },
-        "member": [
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "containsMouse"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "a017babb290e59e10c05fa627ec41bb9e"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "alias"
-            },
-            "name": {
-              "$": "content"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "aef29658b879d0f5b362175e38217e788"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "sectionDelegate"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "a742fd2d5fd3de682775a0a1f12abbb1f"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "separatorVisible"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "a2711b94fdda53578539d55b7b6455a60"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
           "$": "org::kde::plasma::components::ListItem"
         },
         "filename": {
@@ -10250,11 +10172,80 @@
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::plasma::components::Menu"
+          "$": "org::kde::plasma::extras::ListItem"
         },
         "filename": {
-          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1Menu.html"
-        }
+          "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+        },
+        "base": {
+          "$": "org::kde::kirigami::AbstractListItem"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "containsMouse"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "a017babb290e59e10c05fa627ec41bb9e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "content"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "aef29658b879d0f5b362175e38217e788"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "sectionDelegate"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "a742fd2d5fd3de682775a0a1f12abbb1f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "separatorVisible"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "a2711b94fdda53578539d55b7b6455a60"
+            },
+            "arglist": {}
+          }
+        ]
       },
       {
         "@kind": "class",
@@ -10263,6 +10254,15 @@
         },
         "filename": {
           "$": "classMenu.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::plasma::components::Menu"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1Menu.html"
         }
       },
       {
@@ -10388,6 +10388,37 @@
           "$": "classorg_1_1kde_1_1plasma_1_1calendar_1_1MonthView.html"
         },
         "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "CalendarView"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1calendar_1_1MonthView.html"
+            },
+            "anchor": {
+              "$": "ad2f4150bab8144ba8cc1a4f0c6daad18"
+            },
+            "arglist": {},
+            "enumvalue": [
+              {
+                "@file": "classorg_1_1kde_1_1plasma_1_1calendar_1_1MonthView.html",
+                "@anchor": "ad2f4150bab8144ba8cc1a4f0c6daad18adcce94e46b22e2557e7c998c03517a6c",
+                "$": "DayView"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1plasma_1_1calendar_1_1MonthView.html",
+                "@anchor": "ad2f4150bab8144ba8cc1a4f0c6daad18a05841a9912882b37671592cd3cc71067",
+                "$": "MonthView"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1plasma_1_1calendar_1_1MonthView.html",
+                "@anchor": "ad2f4150bab8144ba8cc1a4f0c6daad18afc6b308dcfa210ce39e5f806e6b5ccfc",
+                "$": "YearView"
+              }
+            ]
+          },
           {
             "@kind": "property",
             "type": {
@@ -11734,22 +11765,50 @@
         "filename": {
           "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1PlasmoidHeading.html"
         },
-        "member": {
-          "@kind": "property",
-          "type": {
-            "$": "alias"
+        "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "Location"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1PlasmoidHeading.html"
+            },
+            "anchor": {
+              "$": "abd7bc2d17565b18eb68d0a1fbab4fe40"
+            },
+            "arglist": {},
+            "enumvalue": [
+              {
+                "@file": "classorg_1_1kde_1_1plasma_1_1extras_1_1PlasmoidHeading.html",
+                "@anchor": "abd7bc2d17565b18eb68d0a1fbab4fe40abf50d5e661106d0abe925af3c2e6f7e7",
+                "$": "Header"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1plasma_1_1extras_1_1PlasmoidHeading.html",
+                "@anchor": "abd7bc2d17565b18eb68d0a1fbab4fe40aded40f2a77c30efc6062db0cbd857746",
+                "$": "Footer"
+              }
+            ]
           },
-          "name": {
-            "$": "location"
-          },
-          "anchorfile": {
-            "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1PlasmoidHeading.html"
-          },
-          "anchor": {
-            "$": "ad90c8410e2b8eaf5edadeaedee45b214"
-          },
-          "arglist": {}
-        }
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "location"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1PlasmoidHeading.html"
+            },
+            "anchor": {
+              "$": "ad90c8410e2b8eaf5edadeaedee45b214"
+            },
+            "arglist": {}
+          }
+        ]
       },
       {
         "@kind": "class",
@@ -17508,15 +17567,6 @@
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::plasma::components::ToolTip"
-        },
-        "filename": {
-          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1ToolTip.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
           "$": "ToolTip"
         },
         "filename": {
@@ -17793,6 +17843,15 @@
             }
           }
         ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::plasma::components::ToolTip"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1ToolTip.html"
+        }
       },
       {
         "@kind": "class",
@@ -21044,6 +21103,24 @@
             },
             "arglist": {
               "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Types::PopupPlacement"
+            },
+            "name": {
+              "$": "visualPopupPlacement"
+            },
+            "anchorfile": {
+              "$": "namespacePlasma.html"
+            },
+            "anchor": {
+              "$": "a2408c617c2781a20536909c9c4af160a"
+            },
+            "arglist": {
+              "$": "(Types::PopupPlacement placement, Qt::LayoutDirection layoutDirection=Qt::LayoutDirectionAuto)"
             }
           }
         ]

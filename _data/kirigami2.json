@@ -1250,6 +1250,47 @@
         },
         "member": [
           {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "DisplayHint"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1Action.html"
+            },
+            "anchor": {
+              "$": "aa760cad51ea8c3a439af00e4c5cfa9f9"
+            },
+            "arglist": {},
+            "enumvalue": [
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1Action.html",
+                "@anchor": "aa760cad51ea8c3a439af00e4c5cfa9f9a9c66f2227b4dc7054e34ea7bb3d1e010",
+                "$": "NoPreference"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1Action.html",
+                "@anchor": "aa760cad51ea8c3a439af00e4c5cfa9f9a3e295bab08dbf707858dc524c924401c",
+                "$": "IconOnly"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1Action.html",
+                "@anchor": "aa760cad51ea8c3a439af00e4c5cfa9f9ac53452cbb0f0a40c6e9556804cf73e8b",
+                "$": "KeepVisible"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1Action.html",
+                "@anchor": "aa760cad51ea8c3a439af00e4c5cfa9f9a5dc0512b2e6be8a654e86e466f2b95ed",
+                "$": "AlwaysHide"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1Action.html",
+                "@anchor": "aa760cad51ea8c3a439af00e4c5cfa9f9a7bd122cb7cff560aba8c6d29bb3a1c0d",
+                "$": "HideChildIndicator"
+              }
+            ]
+          },
+          {
             "@kind": "property",
             "type": {
               "$": "QQC2"
@@ -2639,6 +2680,9 @@
         },
         "filename": {
           "$": "classorg_1_1kde_1_1kirigami_1_1CategorizedSettings.html"
+        },
+        "base": {
+          "$": "org::kde::kirigami::PageRow"
         },
         "member": {
           "@kind": "property",
@@ -4689,6 +4733,37 @@
           "$": "QtQuick.Controls.Label"
         },
         "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "Type"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1Heading.html"
+            },
+            "anchor": {
+              "$": "acac2f3e3e33f3f59a689aac7d50e2970"
+            },
+            "arglist": {},
+            "enumvalue": [
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1Heading.html",
+                "@anchor": "acac2f3e3e33f3f59a689aac7d50e2970a960b44c579bc2f6818d2daaf9e4c16f0",
+                "$": "Normal"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1Heading.html",
+                "@anchor": "acac2f3e3e33f3f59a689aac7d50e2970a074de7e7c226d5c60f8af14c20725352",
+                "$": "Primary"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1Heading.html",
+                "@anchor": "acac2f3e3e33f3f59a689aac7d50e2970a0c7d6cf19426e01dcfa32434828ed266",
+                "$": "Secondary"
+              }
+            ]
+          },
           {
             "@kind": "property",
             "type": {
@@ -6784,6 +6859,18 @@
       {
         "@kind": "class",
         "name": {
+          "$": "org::kde::kirigami::OverlayDrawer"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1kirigami_1_1OverlayDrawer.html"
+        },
+        "base": {
+          "$": "org::kde::kirigami::templates::OverlayDrawer"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "org::kde::kirigami::templates::OverlayDrawer"
         },
         "filename": {
@@ -6970,18 +7057,6 @@
             "arglist": {}
           }
         ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org::kde::kirigami::OverlayDrawer"
-        },
-        "filename": {
-          "$": "classorg_1_1kde_1_1kirigami_1_1OverlayDrawer.html"
-        },
-        "base": {
-          "$": "org::kde::kirigami::templates::OverlayDrawer"
-        }
       },
       {
         "@kind": "class",
@@ -8475,6 +8550,575 @@
             },
             "arglist": {
               "$": "(QJSValue route)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::kirigami::PageRow"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "columnView"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a7dc22c70cda39533f9fe928b8b60f4a8"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "currentIndex"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "ae4ce59199b7cb35eb07c886b10c56e21"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "currentItem"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a490ed503ad5c6f0e5bf4a9339202f0fb"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "defaultColumnWidth"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "ac0e4c6e30235c37db5c6c54d285d01a1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "depth"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a3c756463824a81dbb15060f38de12795"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "firstVisibleItem"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "ab9401f5f727f45c75d1605d0d3c3a3b1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "globalToolBar"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "aea1581ab5e23f0846c80dad8650911fd"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "variant"
+            },
+            "name": {
+              "$": "initialPage"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a9d0dfeba0cfe75a33e615adb4f9033af"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "interactive"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a482c8e88beb6faacb7a466deb322f1a9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "items"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a6b991dfd756e3ae6a69d0c7bc0188997"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "lastItem"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a4817c9bb1a91d4a0513349682e0caee3"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "lastVisibleItem"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a97e80ed21465ebc2b2e2131397b46155"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "layers"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "abecb6c7d235278f33eef8fd1d2a7ec66"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "OverlayDrawer"
+            },
+            "name": {
+              "$": "leftSidebar"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a847d3373d1e56d8c7eed14cd22682a41"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "popHiddenPages"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a078a4effef43b95e89f44cfb2dbe37fc"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "separatorVisible"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "ac3d13a7aa1b732978881fcbc8380070e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "visibleItems"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "ab551263feab5a8d532d83d3c8642e723"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "wideMode"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a014aca61843be095a870195d5300ead8"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "pageInserted"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a0cd2e69a33bef9fcd8c9f6a149f64657"
+            },
+            "arglist": {
+              "$": "(int position, Item page)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "pagePushed"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "ac31cd0a93cdc5e0de1398e50279e60a2"
+            },
+            "arglist": {
+              "$": "(Item page)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "pageRemoved"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "abe788931f754b35b1fbcf69bc2aea313"
+            },
+            "arglist": {
+              "$": "(Item page)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "clear"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a0e277715b41c5cb1fa3860ffdcbcdd66"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "flickBack"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a305b82b0e4fa6284cc2e608ff13c05db"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "get"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a3a23640bd40506f3471d4d6235af8eab"
+            },
+            "arglist": {
+              "$": "(idx)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "goBack"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "ab711f30518716d0c17206edbadc26589"
+            },
+            "arglist": {
+              "$": "(event=null)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "goForward"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "aace5569a2c3677bc773ac23e1a228499"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "insertPage"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a9075d4816a1dbb7be976b37242e411f3"
+            },
+            "arglist": {
+              "$": "(position, page, properties)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "movePage"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a88fe60dc1e7ce94e4416080456ef9788"
+            },
+            "arglist": {
+              "$": "(fromPos, toPos)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "pop"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a85ff622134c12b79a9c8122e99cf9f57"
+            },
+            "arglist": {
+              "$": "(page)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "push"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a6a5b14c5aa9be05dc377aa1c7ee3cdd2"
+            },
+            "arglist": {
+              "$": "(page, properties)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "pushDialogLayer"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "abcd6415f4a6a1c1cbeec4023d2f751ef"
+            },
+            "arglist": {
+              "$": "(page, properties={}, windowProperties={})"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "removePage"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a0d035dc0fb713cac06b4997ec5bf96bf"
+            },
+            "arglist": {
+              "$": "(page)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "replace"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1PageRow.html"
+            },
+            "anchor": {
+              "$": "a79852b56ae4d4fb4052186201a48e941"
+            },
+            "arglist": {
+              "$": "(page, properties)"
             }
           }
         ]
@@ -10706,6 +11350,30 @@
       {
         "@kind": "class",
         "name": {
+          "$": "org::kde::kirigami::SwipeListItem"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1kirigami_1_1SwipeListItem.html"
+        },
+        "base": {
+          "$": "org::kde::kirigami::templates::SwipeListItem"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "SwipeListItem"
+        },
+        "filename": {
+          "$": "classSwipeListItem.html"
+        },
+        "base": {
+          "$": "QtQuick.Item"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "org::kde::kirigami::templates::SwipeListItem"
         },
         "filename": {
@@ -10957,26 +11625,130 @@
       {
         "@kind": "class",
         "name": {
-          "$": "SwipeListItem"
+          "$": "org::kde::kirigami::SwipeNavigator"
         },
         "filename": {
-          "$": "classSwipeListItem.html"
+          "$": "classorg_1_1kde_1_1kirigami_1_1SwipeNavigator.html"
         },
         "base": {
           "$": "QtQuick.Item"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org::kde::kirigami::SwipeListItem"
         },
-        "filename": {
-          "$": "classorg_1_1kde_1_1kirigami_1_1SwipeListItem.html"
-        },
-        "base": {
-          "$": "org::kde::kirigami::templates::SwipeListItem"
-        }
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "big"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1SwipeNavigator.html"
+            },
+            "anchor": {
+              "$": "a7b5ba39ea6c3e349fd4e6095d10821b0"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "currentIndex"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1SwipeNavigator.html"
+            },
+            "anchor": {
+              "$": "ad509ce3dd6c32f53605b6529806168f6"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "Component"
+            },
+            "name": {
+              "$": "footer"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1SwipeNavigator.html"
+            },
+            "anchor": {
+              "$": "a249adde023dde0dbcab982923339a18b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "Component"
+            },
+            "name": {
+              "$": "header"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1SwipeNavigator.html"
+            },
+            "anchor": {
+              "$": "a58b8dd547f59c67fc639d6f1938eb1af"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "initialIndex"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1SwipeNavigator.html"
+            },
+            "anchor": {
+              "$": "af804576a5e8e69febad24b2b862c0c3c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "list"
+            },
+            "name": {
+              "$": "Kirigami"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1SwipeNavigator.html"
+            },
+            "anchor": {
+              "$": "a0d2f30075f3a23c43aa8e9499ffa7c6e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "pushDialogLayer"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1SwipeNavigator.html"
+            },
+            "anchor": {
+              "$": "aea4db0777128cbf3c29abb73f75542b8"
+            },
+            "arglist": {
+              "$": "(page, properties={}, windowProperties={})"
+            }
+          }
+        ]
       },
       {
         "@kind": "class",
@@ -11066,22 +11838,50 @@
         "base": {
           "$": "QtQuick.Item"
         },
-        "member": {
-          "@kind": "property",
-          "type": {
-            "$": "int"
+        "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "Position"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1TabViewLayout.html"
+            },
+            "anchor": {
+              "$": "ab9de653519308a75e59a0e793001328e"
+            },
+            "arglist": {},
+            "enumvalue": [
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1TabViewLayout.html",
+                "@anchor": "ab9de653519308a75e59a0e793001328eaa4ffdcf0dc1f31b9acaf295d75b51d00",
+                "$": "Top"
+              },
+              {
+                "@file": "classorg_1_1kde_1_1kirigami_1_1TabViewLayout.html",
+                "@anchor": "ab9de653519308a75e59a0e793001328ea2ad9d63b69c4a10a5cc9cad923133bc4",
+                "$": "Bottom"
+              }
+            ]
           },
-          "name": {
-            "$": "position"
-          },
-          "anchorfile": {
-            "$": "classorg_1_1kde_1_1kirigami_1_1TabViewLayout.html"
-          },
-          "anchor": {
-            "$": "a9738f5179d05d1fb1e6fc05d8e5a610f"
-          },
-          "arglist": {}
-        }
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "position"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1kirigami_1_1TabViewLayout.html"
+            },
+            "anchor": {
+              "$": "a9738f5179d05d1fb1e6fc05d8e5a610f"
+            },
+            "arglist": {}
+          }
+        ]
       },
       {
         "@kind": "class",

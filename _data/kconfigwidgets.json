@@ -768,6 +768,24 @@
               "$": "void"
             },
             "name": {
+              "$": "codecNameTriggered"
+            },
+            "anchorfile": {
+              "$": "classKCodecAction.html"
+            },
+            "anchor": {
+              "$": "aa9de50fa63b0025a31862c76ffc6e15b"
+            },
+            "arglist": {
+              "$": "(const QString &name)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "codecTriggered"
             },
             "anchorfile": {
@@ -855,6 +873,60 @@
           {
             "@kind": "function",
             "type": {
+              "$": "QTextCodec *"
+            },
+            "name": {
+              "$": "codecForMib"
+            },
+            "anchorfile": {
+              "$": "classKCodecAction.html"
+            },
+            "anchor": {
+              "$": "af63c87fc07f48660961ea57adf41220a"
+            },
+            "arglist": {
+              "$": "(int mib) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QTextCodec *"
+            },
+            "name": {
+              "$": "currentCodec"
+            },
+            "anchorfile": {
+              "$": "classKCodecAction.html"
+            },
+            "anchor": {
+              "$": "a6b4a60a9e3aaf29724f854eb247e7ac0"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "currentCodecMib"
+            },
+            "anchorfile": {
+              "$": "classKCodecAction.html"
+            },
+            "anchor": {
+              "$": "a7415ed6eeba1af66920bf92892b181a9"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "KEncodingProber::ProberType"
             },
             "name": {
@@ -868,6 +940,60 @@
             },
             "arglist": {
               "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "mibForName"
+            },
+            "anchorfile": {
+              "$": "classKCodecAction.html"
+            },
+            "anchor": {
+              "$": "a35030591b65eac360d43a152e75f1097"
+            },
+            "arglist": {
+              "$": "(const QString &codecName, bool *ok=nullptr) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "setCurrentCodec"
+            },
+            "anchorfile": {
+              "$": "classKCodecAction.html"
+            },
+            "anchor": {
+              "$": "acfde78f757f6410c54684d12984caa48"
+            },
+            "arglist": {
+              "$": "(int mib)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "setCurrentCodec"
+            },
+            "anchorfile": {
+              "$": "classKCodecAction.html"
+            },
+            "anchor": {
+              "$": "a140ddc3552c5a6f2c21c07b5fc0aca69"
+            },
+            "arglist": {
+              "$": "(QTextCodec *codec)"
             }
           },
           {
