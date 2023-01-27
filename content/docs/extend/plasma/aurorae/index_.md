@@ -7,7 +7,7 @@ aliases:
 
 Aurorae is a theme engine for KWin window decorations. It uses SVG to render the decoration and buttons and there is a simple config file for configuring the theme details.
 
-For examples, you can find many existing themes in the [KDE Store](https://store.kde.org/browse?cat=114&ord=latest).
+A simple way to start creating your own theme is by modifying an existing one. You can find many existing themes in the [KDE Store](https://store.kde.org/browse?cat=114&ord=latest).
 
 ## Package structure
 
@@ -28,7 +28,9 @@ ExampleDecoration
 ├── ...
 ```
 
-Installed Aurorae themes are located in `/usr/share/aurorae/themes/` for system-wide available themes and `~/.local/share/aurorae/themes/` for user-specific themes. If you copy your folder into there, it will be available for selection in the System Settings.
+Each svg file needs to include certain custom [attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute) for it to be managed correctly as part of a window decoration. With a vector graphics editor like [Inkscape](https://inkscape.org/), these attributes can be edited by selecting an object, opening the Object Properties pane and changing the ID and Label fields.
+
+System-wide installed Aurorae themes are located in `/usr/share/aurorae/themes/` and user-specific themes are located in `~/.local/share/aurorae/themes/`. If you copy your folder into the user folder, it will be available for selection in System Settings. Just make sure you change the theme name in the KConfig rc file and in metadata.desktop.
 
 ## Window decoration
 
@@ -36,7 +38,7 @@ The window decoration has to be provided in a file `decoration.svg` . This svg h
 
 ### Basic decoration
 
-The base decoration element has to use the element prefix `decoration`. Additionally, different styles for special modes can optionally be provided in the same SVG.
+The base decoration element has to use the prefix `decoration`, like in the case of `decoration-inactive` or `decoration-top`. Different styles for special modes can optionally be provided in the same svg file.
 
 ### Inactive windows
 
@@ -73,7 +75,7 @@ The following elements are supported: `buttongroup-left`, `buttongroup-left-inac
 
 ## Buttons
 
-A svg file has to be provided for each button. If the theme does not provide a file for a button type the engine will not include that button, so the decoration will miss it. There is no fallback to a default theme. The buttons are rendered using Plasma's FrameSvg just like the decoration. 
+An svg file has to be provided for each button. If the theme does not provide a file for a button type the engine will not include that button, so the decoration will miss it. There is no fallback to a default theme. The buttons are rendered using Plasma's FrameSvg just like the decoration. 
 
 Each button has to provide the `center` element. 
 
@@ -91,8 +93,8 @@ The following buttons are supported:
 - `keepbelow` (`B`): keep window below other windows
 - `shade` (`L`): shade the window
 - `help` (`H`): show help information
-- (`M`): window menu ("Move to Desktop", "Move to Screen", etc.). This button is not to be provided as an SVG file, but available for use in the configuration.
-- (`N`): application menu ("File", "Edit", "View" etc.). This button is not to be provided as an SVG file, but available for use in the configuration.
+- (`M`): window menu ("Move to Desktop", "Move to Screen", etc.). This button is not to be provided as an svg file, but available for use in the configuration.
+- (`N`): application menu ("File", "Edit", "View" etc.). This button is not to be provided as an svg file, but available for use in the configuration.
 
 The name is the name of the svg file; e.g. the close button has to be named `close.svg`. The letter in brackets is the button name to be used in the configuration (see below).
 
@@ -117,7 +119,7 @@ All of those elements have to be put into one svg file for a button type.
 
 ## Configuration
 
-The configuration file must have as its name the name as given in the metadata file followed by the suffix `rc`. The configuration file is a KConfig file following the Desktop Entry Specification.
+The configuration file must have as its name the name provided in the metadata file followed by the suffix `rc`. The configuration file is a KConfig file following the [Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html).
 
 In a configuration group with the heading `[General]` the following options can be set:
 
