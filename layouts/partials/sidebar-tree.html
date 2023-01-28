@@ -22,11 +22,13 @@
 {{ $p := .page }}
 {{ $d := .depth }}
 {{ $shouldDelayActive := .delayActive }}
-{{ $active := (and (eq $p.CurrentSection $s) (not (eq $d 0))) }}
-{{ $show := and (or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) (or ($p.IsDescendant $s) (eq $p $s))) (or (not (or (eq .page.LinkTitle "KDE Human Interface Guidelines" ) (eq .page.LinkTitle "Documentation" ))) (eq $d 0)) }}
+{{ $active := and (eq $p.CurrentSection $s) (ne $d 0) }}
+{{ $isRelevantDescendant := and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s) }}
+{{ $isAncestorOrSelf := or ($p.IsDescendant $s) (eq $p $s) }}
+{{ $show := or $isRelevantDescendant $isAncestorOrSelf }}
 {{ $sid := $s.RelPermalink | anchorize }}
 <ul class="td-sidebar-nav__section {{ if $active}} active{{ end }}">
-  {{ if (not (eq $d 0)) }}
+  {{ if (ne $d 0) }}
   <li class="td-sidebar-nav__section-title">
     <div class="d-flex flex-row justify-content-between align-items-center">
       <a href="{{ $s.RelPermalink }}" class="align-left w-100 {{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section">{{ $s.LinkTitle }}</a>
