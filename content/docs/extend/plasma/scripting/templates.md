@@ -63,7 +63,6 @@ X-KDE-PluginInfo-Name=org.kde.CoolNetbookPanel
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=http://plasma.kde.org/
 X-KDE-PluginInfo-Category=
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 ```
@@ -143,7 +142,6 @@ X-KDE-PluginInfo-Name=org.kde.plasma-desktop.CoolTemplate
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=http://john.doe.org
 X-KDE-PluginInfo-Category=
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 ```
