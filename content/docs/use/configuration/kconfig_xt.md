@@ -44,7 +44,7 @@ application. Let's create a `.kcfg` file with a single group and a few entries.
           <label>Windows</label>
         </choice>
       </choices>
-      <default>0</default> <!-- or <default>Linux</default> -->
+      <default>0</default> <!-- Linux -->
     </entry>
   </group>
 </kcfg>
