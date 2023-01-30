@@ -35,7 +35,7 @@ System-wide installed Aurorae themes are located in `/usr/share/aurorae/themes/`
 
 ## Window frame
 
-The window frame has to be provided in a file `decoration.SVG` ([example](https://github.com/nclarius/Plasma-window-decorations/blob/main/ActiveAccentLight/decoration.svg?short_path=f052936)). This SVG has to contain all the elements required for a Plasma theme background. Different styles for special states (such as active or inactive) can optionally be provided in the same SVG file.
+The window frame has to be provided in a file `decoration.svg` ([example](https://github.com/nclarius/Plasma-window-decorations/blob/main/ActiveAccentLight/decoration.svg?short_path=f052936)). This SVG has to contain all the elements required for a Plasma theme background. Different styles for special states (such as active or inactive) can optionally be provided in the same SVG file.
 
 Each decoration state element is composed of one element for each window side which have the name of the side as a suffix in the ID: `left`, `right`, `top`, `bottom`, `topleft`, `topright`, `bottomleft`, `bottomright`, `center`.
 
