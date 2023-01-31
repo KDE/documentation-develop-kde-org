@@ -111,7 +111,7 @@ TAG_FILES = [
     # ===== Plasma API links
     {
         'tags': 'https://api.kde.org/plasma/kdecoration/html/KDecoration2.tags',
-        'base_url': 'https://api.kde.org/kdecoration/html/'
+        'base_url': 'https://api.kde.org/plasma/kdecoration/html/'
     },
     {
         'tags': 'https://api.kde.org/plasma/plasma-workspace/html/Plasma-workspace.tags',
