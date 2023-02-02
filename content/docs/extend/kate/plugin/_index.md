@@ -9,13 +9,13 @@ aliases:
 
 Writing a Kate plugin
 
-The plugin we will write will basically be a markdown previewer. It will do something like
-- Once a file opens, check if the file is a markdown file
+The plugin we will write will basically be a Markdown previewer. It will do something like
+- Once a file opens, check if the file is a Markdown file
 - If it is, then create a preview for it in the sidebar
 
 We'll call this plugin Markdown Previewer.
 
-The tutorials assumes that you have dev versions of Qt and KDE Framework libraries installed. Additionally we will need extra-cmake-modules package.
+The tutorials assumes that you have development versions of Qt and KDE Framework libraries installed, as well as `extra-cmake-modules`.
 
 Initial directory structure:
 
@@ -110,6 +110,7 @@ Below is the code for both of the classes. At this point, the classes are empty 
 #include <KTextEditor/Plugin>
 #include <KTextEditor/View>
 #include <KXMLGUIClient>
+#include <QTextBrowser>
 
 class MarkdownPreviewPlugin : public KTextEditor::Plugin
 {
@@ -139,6 +140,9 @@ private:
 #include "plugin.h"
 
 #include <KPluginFactory>
+#include <QIcon>
+#include <QLayout>
+#include <KLocalizedString>
 
 K_PLUGIN_FACTORY_WITH_JSON(MarkdownPreviewPluginFactory, "plugin.json", registerPlugin<MarkdownPreviewPlugin>();)
 
@@ -155,23 +159,30 @@ MarkdownPreviewPluginView::MarkdownPreviewPluginView(MarkdownPreviewPlugin *plug
 #include "plugin.moc"
 ```
 
-Lets compile the plugin:
-```
-mkdir build
-cmake .. && make
-```
+With this, we should now be able to compile and install it. For testing purposes, we will be installing it to our home directory.
 
-If the previous step worked, congrats! Now lets install it
-
-```
-sudo make install
+```bash
+cmake -B build/ -D CMAKE_INSTALL_PREFIX=$HOME/kde/usr
+cmake --build build/
+cmake --install build/
 ```
 
-For me, this installed the plugin here `/usr/lib/qt/plugins/ktexteditor/markdowpreview.so`. This is also where all the rest of kate plugins live.
+You should now see the installed plugin in `~/kde/usr/lib64/plugins/ktexteditor/markdowpreview.so`.
 
-Now start Kate, open settings, go to the plugin page and verify that the plugin is present there.
+To test the local plugin with our system-installed Kate, we can use the generated `prefix.sh` inside our build folder:
 
-Next we will create a toolview in the right sidebar. This toolview will show the preview
+```bash
+source build/prefix.sh
+kate
+```
+
+{{< alert title="Note" color="info" >}}
+If we were to install the plugin to the root directory where Kate plugins are deployed, it would have been installed in `/usr/lib/qt/plugins/ktexteditor/markdowpreview.so`. To do that, you'd need to remove the `-D CMAKE_INSTALL_PREFIX` call and run the install command with sudo, and sourcing `prefix.sh` would no longer be necessary.
+{{< /alert >}}
+
+With Kate now running, go to Settings, Configure Kate..., Plugins, and verify that the "Markdown Previewer" plugin is present.
+
+Next we will create a toolview in the right sidebar. This toolview will be the GUI component that appears on the right side of Kate that, when clicked, opens the Markdown preview.
 
 First add two new member variables to the plugin view class:
 
@@ -183,7 +194,7 @@ First add two new member variables to the plugin view class:
     QTextBrowser *m_previewer = nullptr;
 ```
 
-Now lets create the toolview
+Now lets create the toolview by adding the following to the constructor in `plugin.cpp`:
 
 ```c++
 MarkdownPreviewPluginView::MarkdownPreviewPluginView(MarkdownPreviewPlugin *plugin, KTextEditor::MainWindow *mainwindow)
@@ -204,7 +215,7 @@ MarkdownPreviewPluginView::MarkdownPreviewPluginView(MarkdownPreviewPlugin *plug
 
 Before proceeding further, make sure the code compiles. Then install the plugin, enable it in Kate and verify that the toolview is visible in the right sidebar. If you didn't use an icon and your sidebar settings are set to "icon-only", you won't see the button for the toolview.  If the toolview isn't visible, make sure the plugin is enabled and recheck your code.
 
-Now to the actual previewing. To be able to tell when the active document changes the MainWindow class emits a `viewChanged` signal. We will connect to that signal and then check if the new document is of markdown type. If it is, we will load the document's text into the preview widget which will take care of the rest.
+Now to the actual previewing. To be able to tell when the active document changes the `MainWindow` class emits a `viewChanged()` [signal](https://doc.qt.io/qt-6/signalsandslots.html). We will connect to that signal and then check if the new document is of Markdown type. If it is, we will load the document's text into the preview widget which will take care of the rest.
 
 So, in the constructor of the plugin view class add the following
 ```c++
@@ -212,7 +223,7 @@ So, in the constructor of the plugin view class add the following
     connect(m_mainWindow, &KTextEditor::MainWindow::viewChanged, this, &MarkdownPreviewPluginView::onViewChanged);
 ```
 
-Next, we will define the `onViewChanged` function:
+Next, we will define the `onViewChanged()` function:
 
 ```c++
 void MarkdownPreviewPluginView::onViewChanged(KTextEditor::View *v)
