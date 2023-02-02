@@ -4,10 +4,8 @@ linkTitle: "Writing a Kate plugin"
 weight: 1
 description: Learn how to write a kate plugin
 aliases:
-  - /docs/kate/plugin/
+  - /docs/kate/plugin.md
 ---
-
-Writing a Kate plugin
 
 The plugin we will write will basically be a Markdown previewer. It will do something like
 - Once a file opens, check if the file is a Markdown file
@@ -28,67 +26,12 @@ myplugin
 ```
 
 Lets start by writing our cmake file:
-```cmake
-cmake_minimum_required(VERSION 3.8) # minimum cmake version required
-project(markdowpreview VERSION 1.0) #project name and version
 
-# We need some parts of the ECM CMake helpers.
-find_package(ECM ${KF5_DEP_VERSION} QUIET REQUIRED NO_MODULE)
+{{< readfile file="/content/docs/extend/kate/plugin/CMakeLists.txt" highlight="cmake" >}}
 
-# We append to the module path so modules can be overridden from the command line.
-list(APPEND CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+Ok, CMake is done. Lets write the plugin.json file:
 
-include(KDEInstallDirs)
-include(KDECMakeSettings)
-
-# find Qt
-find_package(Qt${QT_MAJOR_VERSION}Widgets CONFIG REQUIRED)
-
-# find KDE Framework libraries
-set(KF5_DEP_VERSION "5.90")
-find_package(KF5 ${KF5_DEP_VERSION}
-    REQUIRED COMPONENTS
-        CoreAddons # Core addons on top of QtCore
-        I18n # For localization
-        TextEditor # The editor component
-)
-
-# This line defines the actual target
-kcoreaddons_add_plugin(markdowpreview # your plugin name here
-    INSTALL_NAMESPACE "ktexteditor")
-
-# tell the target about source files
-target_sources(
-  markdowpreview
-  PRIVATE
-  plugin.h
-  plugin.cpp
-)
-
-# for localization
-target_compile_definitions(markdowpreview PRIVATE TRANSLATION_DOMAIN="markdowpreview")
-
-# finally link the needed libraries
-target_link_libraries(markdowpreview
-    PRIVATE
-    KF5::CoreAddons KF5::I18n KF5::TextEditor
-)
-```
-
-Ok, CMake stuff is done. Lets write the plugin.json file
-
-```json
-{
-    "KPlugin": {
-        "Description": "Displays preview for markdown files",
-        "Name": "Markdown Previewer",
-        "ServiceTypes": [
-            "KTextEditor/Plugin"
-        ]
-    }
-}
-```
-
+{{< readfile file="/content/docs/extend/kate/plugin/plugin.json" highlight="json" >}}
 
 Finally, lets start writing the actual code for the plugin.
 
@@ -99,7 +42,6 @@ Before I start, lets go through a couple of basic things first. Every Kate plugi
 The plugin class creates a global instance of the plugin only once. The plugin view class will be created once for each new MainWindow. Your UI code will always go into the plugin view class. The plugin class usually stores stuff that will be same across multiple plugin views for e.g., the configuration.
 
 Below is the code for both of the classes. At this point, the classes are empty and don't do anything at all
-
 
 #### `plugin.h`
 ```c++
@@ -184,7 +126,7 @@ With Kate now running, go to Settings, Configure Kate..., Plugins, and verify th
 
 Next we will create a toolview in the right sidebar. This toolview will be the GUI component that appears on the right side of Kate that, when clicked, opens the Markdown preview.
 
-First add two new member variables to the plugin view class:
+First add two new member variables to the MarkdownPreviewPluginView class in `plugin.h`:
 
 ```c++
     // The top level toolview widget
@@ -208,22 +150,31 @@ MarkdownPreviewPluginView::MarkdownPreviewPluginView(MarkdownPreviewPlugin *plug
                                       i18n("Markdown Preview"))); // User visible name of the toolview, i18n means it will be available for translation
 
     m_previewer = new QTextBrowser(m_toolview.get());
-    // Add the preview with to our toolview
+    // Add the preview widget to our toolview
     m_toolview->layout()->addWidget(m_previewer);
 }
 ```
 
-Before proceeding further, make sure the code compiles. Then install the plugin, enable it in Kate and verify that the toolview is visible in the right sidebar. If you didn't use an icon and your sidebar settings are set to "icon-only", you won't see the button for the toolview.  If the toolview isn't visible, make sure the plugin is enabled and recheck your code.
+Before proceeding further, make sure the code compiles. Then install the plugin, enable it in Kate and verify that the toolview is visible in the right sidebar. If the toolview isn't visible, make sure the plugin is enabled and recheck your code.
 
-Now to the actual previewing. To be able to tell when the active document changes the `MainWindow` class emits a `viewChanged()` [signal](https://doc.qt.io/qt-6/signalsandslots.html). We will connect to that signal and then check if the new document is of Markdown type. If it is, we will load the document's text into the preview widget which will take care of the rest.
+{{< alert title="Note" color="info" >}}
+If you didn't use an icon and your sidebar settings are set to "icon-only", you won't see the button for the toolview and it will appear as if there is no toolview because of the non existent icon. To disable this setting, check the option "**Show text for left and right sidebar buttons**".
+{{< /alert >}}
 
-So, in the constructor of the plugin view class add the following
+Now to the actual previewing. To be able to tell when the active document changes the `MainWindow` class emits a `viewChanged()` [signal](https://doc.qt.io/qt-6/signalsandslots.html). We will connect to this signal and then check if the new document is of Markdown type. If it is, we will load the document's text into the preview widget which will take care of the rest.
+
+So, in the constructor of the `MarkdownPreviewPluginView` class add the following:
 ```c++
     // Connect the view changed signal to our slot
     connect(m_mainWindow, &KTextEditor::MainWindow::viewChanged, this, &MarkdownPreviewPluginView::onViewChanged);
 ```
 
-Next, we will define the `onViewChanged()` function:
+Next, we will define the `onViewChanged()` function. Lets add its declaration in `MarkdownPreviewPluginView` in `plugin.h`:
+```c++
+void onViewChanged(KTextEditor::View *v);
+```
+
+And definition in the `plugin.cpp` file:
 
 ```c++
 void MarkdownPreviewPluginView::onViewChanged(KTextEditor::View *v)
@@ -238,4 +189,22 @@ void MarkdownPreviewPluginView::onViewChanged(KTextEditor::View *v)
 }
 ```
 
-Compile and install it. You should now be able to see the preivew of markdown files in the toolview we created.
+Compile and install it. You should now be able to see the preview of markdown files in the toolview we created.
+
+### Full code
+
+#### CMakeLists.txt
+{{< readfile file="/content/docs/extend/kate/plugin/CMakeLists.txt" highlight="cmake" >}}
+#### plugin.json
+{{< readfile file="/content/docs/extend/kate/plugin/plugin.json" highlight="json" >}}
+#### plugin.h
+{{< readfile file="/content/docs/extend/kate/plugin/plugin.h" highlight="cpp" >}}
+#### plugin.cpp
+{{< readfile file="/content/docs/extend/kate/plugin/plugin.cpp" highlight="cpp" >}}
+
+Since this is a very basic tutorial and likely doesn't explain a lot of things or shows other APIs that we have, the following resources may be of more help:
+
+- https://api.kde.org/frameworks/ktexteditor/html/ - Here you will find the list of all classes and methods available in the API
+- https://invent.kde.org/utilities/kate/-/tree/master/addons - The list of existing plugins can be an extremely useful resource if you want to find how to do a particular thing
+- https://kate-editor.org/support/ - You can find links to our mailing-list, chat here. We also have a telegram group where you can ask questions
+
