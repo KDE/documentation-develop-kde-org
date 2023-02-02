@@ -1,5 +1,6 @@
 ---
-title: "Aurorae Window Decorations Tutorial"
+title: "Aurorae Window Decorations"
+linkTitle: "Aurorae Window Decorations"
 weight: 4
 description: How to create window decorations with SVGs
 aliases:
