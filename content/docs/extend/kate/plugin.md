@@ -25,17 +25,17 @@ myplugin
 └─ plugin.json     # plugin type, description and name
 ```
 
-Lets start by writing our cmake file:
+Let's start by writing our cmake file:
 
 {{< readfile file="/content/docs/extend/kate/plugin/CMakeLists.txt" highlight="cmake" >}}
 
-Ok, CMake is done. Lets write the plugin.json file:
+Ok, CMake is done. Let's write the `plugin.json` file:
 
 {{< readfile file="/content/docs/extend/kate/plugin/plugin.json" highlight="json" >}}
 
-Finally, lets start writing the actual code for the plugin.
+Finally, let's start writing the actual code for the plugin.
 
-Before I start, lets go through a couple of basic things first. Every Kate plugin consists of at least two classes
+Before I start, let's go through a couple of basic things first. Every Kate plugin consists of at least two classes
 - Plugin class
 - Plugin View class
 
@@ -136,7 +136,7 @@ First add two new member variables to the MarkdownPreviewPluginView class in `pl
     QTextBrowser *m_previewer = nullptr;
 ```
 
-Now lets create the toolview by adding the following to the constructor in `plugin.cpp`:
+Now let's create the toolview by adding the following to the constructor in `plugin.cpp`:
 
 ```c++
 MarkdownPreviewPluginView::MarkdownPreviewPluginView(MarkdownPreviewPlugin *plugin, KTextEditor::MainWindow *mainwindow)
@@ -169,7 +169,7 @@ So, in the constructor of the `MarkdownPreviewPluginView` class add the followin
     connect(m_mainWindow, &KTextEditor::MainWindow::viewChanged, this, &MarkdownPreviewPluginView::onViewChanged);
 ```
 
-Next, we will define the `onViewChanged()` function. Lets add its declaration in `MarkdownPreviewPluginView` in `plugin.h`:
+Next, we will define the `onViewChanged()` function. Let's add its declaration in `MarkdownPreviewPluginView` in `plugin.h`:
 ```c++
 void onViewChanged(KTextEditor::View *v);
 ```
