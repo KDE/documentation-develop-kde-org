@@ -65,7 +65,7 @@ This is the structure of a file:
 ```
 ---
 title: Installation of the development libraries # title of the page
-titleLink: Installation # title in the sidebar
+linkTitle: Installation # title in the sidebar, no need to add if the same as `title`
 description:
   > In this tutorial you will learn.... # Short summary of the page (displayed in the google description and as subtitle)
 weight: 1 # ordering of the articles in the section
