@@ -1,6 +1,5 @@
 ---
 title: Distribute
-titleLink: Distribute
 subtitle: Get your applications to your users.
 weight: 30
 layout: area

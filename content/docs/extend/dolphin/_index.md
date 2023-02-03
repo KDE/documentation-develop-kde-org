@@ -1,6 +1,5 @@
 ---
 title: Dolphin
-titleLink: Dolphin
 description:
    Tutorials related to Dolphin
 weight: 1
