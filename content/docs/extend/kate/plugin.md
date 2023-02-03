@@ -3,17 +3,15 @@ title: "Writing a Kate plugin"
 linkTitle: "Writing a Kate plugin"
 weight: 1
 description: Learn how to write a kate plugin
-aliases:
-  - /docs/kate/plugin.md
 ---
 
 The plugin we will write will basically be a Markdown previewer. It will do something like
 - Once a file opens, check if the file is a Markdown file
-- If it is, then create a preview for it in the sidebar
+- If it is, then create and show a preview for it in right the sidebar
 
 We'll call this plugin Markdown Previewer.
 
-The tutorials assumes that you have development versions of Qt and KDE Framework libraries installed, as well as `extra-cmake-modules`.
+This tutorial assumes that you have a basic understanding of C++ and Qt concepts and that you have development versions of Qt and KDE Framework libraries installed, as well as `extra-cmake-modules`.
 
 Initial directory structure:
 
@@ -206,5 +204,5 @@ Since this is a very basic tutorial and likely doesn't explain a lot of things o
 
 - https://api.kde.org/frameworks/ktexteditor/html/ - Here you will find the list of all classes and methods available in the API
 - https://invent.kde.org/utilities/kate/-/tree/master/addons - The list of existing plugins can be an extremely useful resource if you want to find how to do a particular thing
-- https://kate-editor.org/support/ - You can find links to our mailing-list, chat here. We also have a telegram group where you can ask questions
+- https://kate-editor.org/support/ - You can find links to our mailing-list, chat here. We also have telegram and matrix groups where you can ask questions
 

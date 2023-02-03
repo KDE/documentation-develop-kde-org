@@ -2,14 +2,8 @@
 title: Kate
 titleLink: Kate
 description:
-   Tutorials related to Kate
+   Tutorials related to the Kate text editor
 weight: 1
 group: "applications"
-aliases:
-  - /docs/kate/
 ---
-
-## Introduction
-
-Tutorials related to Kate
 
