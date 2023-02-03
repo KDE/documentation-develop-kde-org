@@ -1,0 +1,33 @@
+DirectoryPath: public/ # Directory to scan for HTML files.
+IgnoreURLs: # Array of regexs of URLs to ignore.
+- https?://.*linkedin.com.*
+- https?://.*files.kde.org.*
+IgnoreDirs: # Array of regexs of directories to ignore when scanning for HTML files.
+- admin
+- aether
+- content
+- css
+- favicons
+- fonts
+- kirigami
+- images
+- js
+- media
+- resources
+- reusable-assets
+- scss
+- store_badges
+IgnoreInternalEmptyHash: true # When true prevents raising an error for links with href="#".
+#IgnoreExternalBrokenLinks: false # When true produces a warning, rather than an error, for broken external links. Useful when testing a site having hundreds of external links.
+IgnoreAltMissing: true # Turns off image alt attribute checking.
+IgnoreAltEmpty: false # Allows alt="" for decorative images.
+IgnoreDirectoryMissingTrailingSlash: true # Turns off errors for links to directories without a trailing slash.
+IgnoreSSLVerify: true # Turns off x509 errors for self-signed certificates.
+#IgnoreTagAttribute: "data-proofer-ignore" # Specify the ignore attribute. All tags with this attribute will be excluded from every check.
+#LogLevel: 2 # Logging level, 0-3: debug, info, warning, error.
+StripQueryString: true # Enables stripping of query strings from external checks.
+#StripQueryExcludes: ["fonts.googleapis.com"] # List of URLs to disable query stripping on.
+OutputDir: .htmltest # Directory to store cache and log files in. Relative to executing directory.
+OutputCacheFile: refcache.json # File within OutputDir to store reference cache.
+OutputLogFile: htmltest.log # File within OutputDir to store last tests errors.
+#CacheExpires: 336h (two weeks) # Cache validity period, accepts go.time duration strings (…"m", "h").

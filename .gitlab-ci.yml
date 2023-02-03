@@ -2,4 +2,22 @@
 # SPDX-License-Identifier: CC0-1.0
 
 include:
-  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/linux.yml
+  - project: sysadmin/ci-utilities
+    file: /gitlab-templates/website-hugo.yml
+
+variables:
+  WEBSITE_DOMAIN: develop.kde.org
+
+html_test:
+  stage: test
+  script: htmltest
+  cache:
+    key: htmltest-refcache
+    paths:
+      - .htmltest/refcache.json
+    when: always
+  artifacts:
+    name: htmltest_log
+    paths:
+      - .htmltest/htmltest.log
+    when: always
