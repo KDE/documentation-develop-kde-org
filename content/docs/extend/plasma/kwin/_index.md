@@ -132,7 +132,7 @@ kpackagetool5 --type=KWin/Script --list # ~/.local/share/kwin/scripts/
 
 To follow this tutorial, you must have some idea about [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript)
 (or [JavaScript](http://en.wikipedia.org/wiki/JavaScript)). A quick introduction can be found
-in the [Plasma scripting tutorial](https://develop.kde.org/docs/plasma/scripting/).
+in the [Plasma scripting tutorial](/docs/extend/plasma/scripting/).
 
 KWin scripts can either be written in [JavaScript](https://doc.qt.io/qt-5/topics-scripting.html#js-api)
 (service type `javascript`) or [QML](https://doc.qt.io/qt-5/qtqml-index.html) (service type `declarativescript`).
@@ -211,7 +211,7 @@ KWin scripts can have a user configuration. To enable this, add the following li
 
 ### Declaration
 
-User configurable settings are defined in a file `myscript/contents/config/main.xml`. An example can be found in the [Plasma widget tutorial](https://develop.kde.org/docs/extend/plasma/widget/configuration/). This results in the following package structure:
+User configurable settings are defined in a file `myscript/contents/config/main.xml`. An example can be found in the [Plasma widget tutorial](/docs/extend/plasma/widget/configuration/). This results in the following package structure:
 
 ```plaintext
 myscript

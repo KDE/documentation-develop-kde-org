@@ -115,7 +115,7 @@ You can read more about the specifics of how the Qt resource system works [in Qt
 
 {{< readfile file="/content/docs/use/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" >}}
 
-The CMakeLists.txt defines how to build your projects. Most of the content here is just to bootstrap your project. You can read a line-by-line, in-depth explanation of what this CMakeLists file does [here](https://develop.kde.org/docs/kirigami/advanced-understanding_cmakelists/).
+The CMakeLists.txt defines how to build your projects. Most of the content here is just to bootstrap your project. You can read a line-by-line, in-depth explanation of what this CMakeLists file does [here](/docs/use/kirigami/advanced-understanding_cmakelists/).
 
 The most important thing to keep in mind is that the Qt and KDE Frameworks dependencies are managed with `find_package`. You will have to modify these lines and include any additional components that you decide to use during the development of your application.
 
