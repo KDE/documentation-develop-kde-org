@@ -72,12 +72,6 @@ In order to better support maximized windows there exists a special frame SVG ca
 
 In all cases, only the center element will be used. There is no need to specify borders. Please note that in the case of a window with translucent widgets, the center element will be stretched to the size of the complete window. In order to support Fitts' Law all TitleEdge Settings are set to 0. So the buttons will be directly next to the screen edges.
 
-### Button Groups
-
-An Aurorae decoration may include elements to be painted behind the button groups on the left and right side of the frame. This is intended for cases when the buttons share a common background. It should be preferred over custom editing of each button as this will result in a bad visual experience for explicit spacers or if the user changes the order of buttons.
-
-The following elements are supported: `buttongroup-left`, `buttongroup-left-inactive`, `buttongroup-right`, `buttongroup-right-inactive`. If the inactive element is not provided, the element for active is used for the inactive decoration, too. Left and right are independent and there is no fallback to the other element.
-
 ## Buttons
 
 An SVG file has to be provided for each button ([example](https://github.com/nclarius/Plasma-window-decorations/blob/main/ActiveAccentLight/close.svg?short_path=c5cfc22)). If the theme does not provide a file for a button type the engine will not include that button, so the decoration will miss it. There is no fallback to a default theme. The buttons are rendered using Plasma's FrameSvg just like the decoration. 
