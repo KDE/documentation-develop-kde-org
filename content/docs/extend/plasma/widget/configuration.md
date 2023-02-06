@@ -147,8 +147,7 @@ Please note that your should not use `PlasmaComponents.*` controls in the config
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.12
+import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
@@ -158,16 +157,16 @@ Kirigami.FormLayout {
     property alias cfg_showIcon: showIcon.checked
     property alias cfg_labelText: labelText.text
 
-    CheckBox {
+    QQC2.CheckBox {
         id: showLabel
         Kirigami.FormData.label: i18n("Section:")
         text: i18n("Show label")
     }
-    CheckBox {
+    QQC2.CheckBox {
         id: showIcon
         text: i18n("Show icon")
     }
-    TextField {
+    QQC2.TextField {
         id: labelText
         Kirigami.FormData.label: i18n("Label:")
         placeholderText: i18n("Placeholder")
@@ -193,15 +192,14 @@ Note that you can use a property [alias](http://doc.qt.io/qt-5/qtqml-syntax-obje
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.0
+import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.checked
 
-    CheckBox {
+    QQC2.CheckBox {
         id: variableName
         Kirigami.FormData.label: i18n("Icon:")
         text: i18n("Show")
@@ -233,15 +231,14 @@ A [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html) is used
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.0
+import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.checked
 
-    CheckBox {
+    QQC2.CheckBox {
         id: variableName
     }
 }
@@ -274,15 +271,14 @@ If you want decimal places, a [`QtQuick.Controls 1.0` SpinBox](https://doc.qt.io
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.0
+import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.value
 
-    SpinBox {
+    QQC2.SpinBox {
         id: variableName
     }
 }
@@ -315,9 +311,7 @@ If you really want to use `QtQuick.Controls 2.0`, look at Zren's [libconfig/Spin
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
 import QtQuick.Controls 1.0 as QtControls1
-import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
@@ -356,15 +350,14 @@ A [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html) is us
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.0
+import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
     id: page
     property alias cfg_variableName: variableName.text
 
-    TextField {
+    QQC2.TextField {
         id: variableName
     }
 }
@@ -395,15 +388,14 @@ A [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html) is used
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.0
+import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
     id: page
-    property alias cfg_variableName: variableName.value
+    property alias cfg_variableName: variableName.text
 
-    TextArea {
+    QQC2.TextArea {
         id: variableName
     }
 }
@@ -450,13 +442,12 @@ Unfortunately KDE Framework's `ColorButton` doesn't easily support this pattern 
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kquickcontrols 2.0 as KQControls
 
 Kirigami.FormLayout {
     id: page
-    property alias cfg_variableName: variableName.value
+    property alias cfg_variableName: variableName.color
 
     KQControls.ColorButton {
         id: variableName
@@ -492,23 +483,23 @@ Note that we place the `Kirigami.FormData.label` in the `RowLayout` as it is the
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
-import QtQuick.Dialogs 1.0
+import QtQuick.Controls 2.5 as QQC2
+import QtQuick.Dialogs 1.0 as QQD
 import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
     id: page
-    property alias cfg_variableName: variableName.value
+    property alias cfg_variableName: variableName.text
 
     RowLayout {
         Kirigami.FormData.label: i18n("Sound File:")
 
-        TextField {
+        QQC2.TextField {
             id: variableName
             placeholderText: i18n("No file selected.")
         }
-        Button {
+        QQC2.Button {
             text: i18n("Browse")
             icon.name: "folder-symbolic"
             onClicked: fileDialogLoader.active = true
@@ -517,7 +508,7 @@ Kirigami.FormLayout {
                 id: fileDialogLoader
                 active: false
 
-                sourceComponent: FileDialog {
+                sourceComponent: QQD.FileDialog {
                     id: fileDialog
                     folder: shortcuts.music
                     nameFilters: [
@@ -573,14 +564,14 @@ You can also assign directly to `plasmoid.configuration.variableName` if necessa
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
+import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
     id: page
 
-    CheckBox {
+    QQC2.CheckBox {
         id: variableName
         checked: plasmoid.configuration.variableName
         onCheckedChanged: plasmoid.configuration.variableName = checked
@@ -658,8 +649,6 @@ QQC2.CheckBox {
 
 ```qml
 import QtQuick 2.0
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.4 as Kirigami
 import "./libconfig" as LibConfig
 
