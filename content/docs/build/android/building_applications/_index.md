@@ -53,8 +53,18 @@ The `.apk` file can be found at `/home/user/CraftRoot/tmp`. This folder is also 
 keytool -genkey -noprompt -keystore key.keystore -keypass 123456  -dname "CN=None, OU=None, O=None, L=None, S=None, C=XY" -alias mykey -keyalg RSA -keysize 2048 -validity 10000 -storepass 123456
 ```
 
-This key can be reused to sign all of your development apks. You can sign an apk with it using
+This key can be reused to sign all of your development apks.
+
+Before signing the apk, it might be needed to align it.  This can be done using
 
 ```bash
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore key.keystore <app>.apk mykey -keypass 123456 -storepass 123456
+zipalign -p -f -v 4 <app>.apk <app>.signed.apk
 ```
+
+You can finally sign the aligned apk with your key using
+
+```bash
+apksigner sign -verbose -ks key.keystore <app>.signed.apk
+```
+
+The `zipalign` and `apksigner` binaries can be found at `/opt/android-sdk/build-tools/<version>/` inside the Craft container environment.
