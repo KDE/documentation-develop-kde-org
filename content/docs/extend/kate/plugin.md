@@ -1,6 +1,5 @@
 ---
-title: "Writing a Kate plugin"
-linkTitle: "Writing a Kate plugin"
+title: "Kate Plugin Tutorial"
 weight: 1
 description: Learn how to write a kate plugin
 ---
