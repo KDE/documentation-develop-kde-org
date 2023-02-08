@@ -12,7 +12,7 @@ html_test:
   stage: test
   script: htmltest
   cache:
-    key: htmltest-refcache
+    key: htmltest-cache
     paths:
       - .htmltest/refcache.json
     when: always
