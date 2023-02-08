@@ -56,3 +56,5 @@ ShowBuild=true
 
 If this is present kinfocenter will show the BUILD_ID from /etc/os-release next to the version.
 
+For example instead of just showing SteamOS 3.5 at the top it would say SteamOS 3.5 Build: 20230201.1000
+
