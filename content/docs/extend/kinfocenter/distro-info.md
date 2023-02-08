@@ -24,7 +24,7 @@ and another for the value for that label.
 
 If possible localization can be given by checking the LANGUAGE parameter when the script is executed.
 
-For example in kcm-about-distrorc:
+An example `kcm-about-distrorc` would look like this:
 
 ```
 [General]
