@@ -6,7 +6,9 @@ weight: 1
 
 ## Introduction
 
-Tutorials related to KInfoCenter
+[KInfoCenter](https://invent.kde.org/plasma/kinfocenter) is an application that can show information about your system, both as a standalone window and as a [Plasma configuration module (KCM)](../../kcm/).
+
+It provides a simple way for distributions to showcase their branding in an integrated manner by editing a simple configuration file following the [Desktop Entry spec](https://specifications.freedesktop.org/desktop-entry-spec/latest/). It is possible to specify a custom logo, a link to a website, and make the output of scripts appear in its main page.
 
 To extend KInfoCenter's information with data specific to your distribution you can
 do the following:
