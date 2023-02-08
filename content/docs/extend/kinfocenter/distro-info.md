@@ -15,7 +15,7 @@ do the following:
 
 ## Extra Software Data
 
-Add a kcm-about-distrorc file either in /etc/xdg or in user's ~/.config/ folder.
+You can add a `kcm-about-distrorc` file in either `/etc/xdg` or the user's `~/.config/` folder. If the file is stored in `/etc/xdg`, its configuration will be applied to all users in the same computer, whereas if it is stored in `~/.config/` it will only affect the current user. The `~/.config` folder takes precedence over `/etc/xdg`, so if a `kcm-about-distrorc` exists in both places, the user configuration file will override the system configuration file.
 
 Inside the rc file under the [General] section add a ExtraSoftwareData entry containing
 a ; separated list of scripts to run when kinfocenter is shown.
