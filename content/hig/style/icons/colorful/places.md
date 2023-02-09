@@ -1,13 +1,13 @@
 ---
 title: Places Icons
-weigt: 4
+weight: 4
 ---
 
 Places icons are used to depict folders, network locations, and other
 places. They come in four sizes: 16px, 22px, 32px, and 64px. Places
-icons use the [monochrome style](index.html#monochrome-icon-style) for
+icons use the [monochrome style]({{< relref "monochrome" >}}) for
 16px and 22px sizes, and the [colorful
-style](index.html#colorful-icon-style) for 32px and 64px sizes.
+style]({{< relref "colorful" >}}) for 32px and 64px sizes.
 
 Purpose
 -------

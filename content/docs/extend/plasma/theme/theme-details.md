@@ -472,7 +472,7 @@ The folders `opaque/`, `solid/` and `translucent/` contain special versions of s
 
 Elements in this folder are used when compositing is disabled. Since top-level windows will be shaped according to the transparency of the SVG and window shapes don't support alpha-blending, if the SVG has rounded borders they should have a shape that doesn't require anti-aliasing, like the following example.
 
-![This is how a border of the plasma "opaque" background svgs should appear when they have a rounded border: since the window shape won't have antialiasing the outer contour must not have rounded lines.](theme-details/No_composite_plasma_svg.jpg)
+![This is how a border of the plasma "opaque" background svgs should appear when they have a rounded border: since the window shape won't have antialiasing the outer contour must not have rounded lines.](No_composite_plasma_svg.jpg)
 
 ### "solid" folder
 

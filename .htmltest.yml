@@ -1,12 +1,15 @@
 DirectoryPath: public/ # Directory to scan for HTML files.
 IgnoreURLs: # Array of regexs of URLs to ignore.
 - https?://.*linkedin.com.*
+- https?://.*01.org.*
+- https?://.*play.google.com.*
 - https?://.*files.kde.org.*
+- https?://.*websvn.kde.org.*
 IgnoreDirs: # Array of regexs of directories to ignore when scanning for HTML files.
-- admin
 - aether
 - content
 - css
+- docs/extend/plasma/widget/snippet
 - favicons
 - fonts
 - kirigami

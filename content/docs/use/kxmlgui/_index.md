@@ -7,6 +7,7 @@ description: >
 group: "getting-started"
 aliases:
   - /docs/kxmlgui/
+  - /docs/getting-started
 ---
 
 This tutorial will guide you in creating a small text editor using

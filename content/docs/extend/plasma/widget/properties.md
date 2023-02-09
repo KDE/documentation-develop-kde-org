@@ -43,7 +43,7 @@ Item {
 | `Plasmoid.availableScreenRect` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
 | `Plasmoid.availableScreenRegion` | `QVariantList` |  |
 | `Plasmoid.backgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). Turn off the desktop widget bg. |
-| `Plasmoid.busy` | `bool` | Draw the [`BusyIndicator`](#busyindicator) overtop the widget. |
+| `Plasmoid.busy` | `bool` | Draw the [`BusyIndicator`]({{ relref "plasma-qml-api#busyindicator" }}) overtop the widget. |
 | `Plasmoid.compactRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](#plasmoidcompactrepresentation). The smaller "icon" view view of the widget shown in the panel. |
 | `Plasmoid.compactRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) | The instance of the `compactRepresentation` Component. May be `null` on load if not visible. |
 | `Plasmoid.configuration` | [`KDeclarative::ConfigPropertyMap`](docs:kdeclarative;KDeclarative::ConfigPropertyMap) | [Documentation](#plasmoidconfiguration). Provides access to all user configurable values as sub-properties. |
@@ -57,7 +57,7 @@ Item {
 | `Plasmoid.effectiveBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). The actual background hints the applet has based on `backgroundHints` and `userBackgroundHints`. |
 | `Plasmoid.expanded` | `bool` |  |
 | `Plasmoid.formFactor` | [`Plasma::Types::FormFactor`](docs:plasma;Plasma::Types::FormFactor) |  |
-| `Plasmoid.fullRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](plasmoidfullrepresentation). The full "popup" view of the widget. |
+| `Plasmoid.fullRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](#plasmoidfullrepresentation). The full "popup" view of the widget. |
 | `Plasmoid.fullRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) | The instance of the `fullRepresentation` Component. Since widget popup's a lazy loaded, it is `null` until the popup is opened. |
 | `Plasmoid.globalShortcut` | [`QKeySequence`](https://doc.qt.io/qt-5/qkeysequence.html) |  |
 | `Plasmoid.hideOnWindowDeactivate` | `bool ` | Set to `false` to "pin" the widget's full representation dialog open when out of focus. |

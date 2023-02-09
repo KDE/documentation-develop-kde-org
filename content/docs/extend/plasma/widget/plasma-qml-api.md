@@ -14,7 +14,7 @@ KDE Frameworks ships with a number of useful extensions to Qt's QML. The [API do
 
 ## PlasmaComponents Controls
 
-QML ships with various controls, like [CheckBox](docs:qtquickcontrols;QtQuick.Controls.Checkbox), [RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton), [ComboBox](docs:qtquickcontrols;QtQuick.Controls.Combobox) (dropdown menu), [SpinBox](docs:qtquickcontrols;QtQuick.Controls.SpinBox), [Slider](docs:qtquickcontrols;QtQuick.Controls.Slider), [TextField](docs:qtquickcontrols;QtQuick.Controls.TextField), [TextArea](docs:qtquickcontrols;QtQuick.Controls.TextArea), [Button](docs:qtquickcontrols;QtQuick.Controls.Button), [ToolButton](docs:qtquickcontrols;QtQuick.Controls.ToolButton). Plasma extends these controls to style them using the SVGs from the [Plasma Style]({{< ref "../theme/_index.md" >}}). It also assigns a number of default settings like setting the text color to follow the panel's color scheme.
+QML ships with various controls, like [CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox), [RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton), [ComboBox](docs:qtquickcontrols;QtQuick.Controls.ComboBox) (dropdown menu), [SpinBox](docs:qtquickcontrols;QtQuick.Controls.SpinBox), [Slider](docs:qtquickcontrols;QtQuick.Controls.Slider), [TextField](docs:qtquickcontrols;QtQuick.Controls.TextField), [TextArea](docs:qtquickcontrols;QtQuick.Controls.TextArea), [Button](docs:qtquickcontrols;QtQuick.Controls.Button), [ToolButton](docs:qtquickcontrols;QtQuick.Controls.ToolButton). Plasma extends these controls to style them using the SVGs from the [Plasma Style]({{< ref "../theme/_index.md" >}}). It also assigns a number of default settings like setting the text color to follow the panel's color scheme.
 
 PlasmaComponents 3 is a QML library that extends the [Qt Quick Controls 2 components](https://doc.qt.io/qt-5/qtquickcontrols-index.html) with defaults adapted to fit into Plasma widgets. Because PlasmaComponents 3 inherits from Qt Quick Controls 2, they have the same API, so the [Qt documentation](https://doc.qt.io/qt-5/qtquickcontrols-index.html) can be followed. For Plasma's specific behaviour changes, you can read the QML source code for each control in:
 
@@ -54,7 +54,7 @@ PlasmaComponents3.Label {
 
 {{< sections >}}
 {{< section-left >}}
-For a simple toggle, QML ships with [CheckBox](docs:qtquickcontrols;CheckBox). For Plasma's specific changes, you can read the QML source code at:
+For a simple toggle, QML ships with [CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox). For Plasma's specific changes, you can read the QML source code at:
 
 * [`CheckBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/CheckBox.qml)
 

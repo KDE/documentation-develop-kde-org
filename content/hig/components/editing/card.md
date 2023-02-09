@@ -80,7 +80,7 @@ Here are some general recommendations for card layouts:
 
     ![Padding for text and buttons.](/hig/Card2.png)
 
-    ![Spacing between banner image, text and buttons.](/img/Card7.png)
+    ![Spacing between banner image, text and buttons.](/hig/Card7.png)
 
 Code
 ----

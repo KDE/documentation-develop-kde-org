@@ -54,7 +54,7 @@ Inside the `metadata.json` file we need to set the `Name` of the widget.
 
 Widgets installed by the user (without root) like when you "Install New Widgets" will be installed to `~/.local/share/plasma/plasmoids/` (which may not yet exist). The default widgets shipped with KDE are installed to `/usr/share/plasma/plasmoids/`.
 
-`Category` is the category the widget can be filtered with in the widget list. A list of category names can be found [here]({{< ref "properties.md#x-kde-plugininfo-category" >}}).
+`Category` is the category the widget can be filtered with in the widget list. A list of category names can be found [here]({{< ref "properties.md#category" >}}).
 
 `X-KDE-ServiceTypes`, `X-Plasma-API`, and `X-Plasma-MainScript` are also needed to just define that this package is a plasma widget, and where its entry point is.
 
