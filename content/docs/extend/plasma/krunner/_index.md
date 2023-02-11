@@ -73,6 +73,7 @@ The contents of this file, as seen below, contain the name, description and tech
 
 In this example the plugin id gets derived from the plugin file name, in this case "runner_example_homefiles"
 The entries such as `Name`, `Description`, `License` and `Authors` are information and are shown in the user interface but have no other technical importance. Try to avoid using jargon in the Name and Description entries, however, to make it easy for people to understand what your plugin does.
+For further reading, you can refer to the [KRunner Metadata Format]({{< ref "metadata.md" >}}) documentation.
 
 ### The Class Definition (Header file) 
 
