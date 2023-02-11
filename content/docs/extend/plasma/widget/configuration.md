@@ -28,7 +28,7 @@ Every widget by default has a configure action when you right click the widget c
 {{< sections >}}
 {{< section-left >}}
 
-`main.xml` is where you define the properties that will be serialized into `~/.config/plasma-org.kde.plasma.desktop-appletsrc`. All properties will be accessible with `plasmoid.configuration.variableName` reguardless of was group it's in.
+`main.xml` is where you define the properties that will be serialized into `~/.config/plasma-org.kde.plasma.desktop-appletsrc`. All properties will be accessible with `plasmoid.configuration.variableName` regardless of what group it's in.
 
 [KConfig](docs:kconfig;annotated.html) has a variety of data types:
 
