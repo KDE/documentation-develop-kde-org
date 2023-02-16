@@ -77,7 +77,7 @@ A D-Bus message contains an address made up of all the above components so that 
 org.kde.krunner /App org.kde.krunner.App.display
 ```
 
-In this case `org.kde.krunner` is the service, `/App` is the path to the object, `org.kde.krunner.App` is the interface the object exports and display is a method in the interface. If the `/App` object only provides the ```org.kde.krunner.App``` interface (or the display method is unique amongst the services it implements) then this would work equally well as an address:
+In this case `org.kde.krunner` is the service, `/App` is the path to the object, `org.kde.krunner.App` is the interface the object exports and `display` is a method in the interface. If the `/App` object only provides the ```org.kde.krunner.App``` interface (or the `display` method is unique amongst the services it implements) then this would work equally well as an address:
 
 ```
 org.kde.krunner /App display
