@@ -1,6 +1,6 @@
 ---
 title: Connect logic to your QML user interface
-weight: 203
+weight: 303
 description: Connect a backend to do calculations and supply your user interface with data to display
 group: advanced
 aliases:
@@ -11,7 +11,7 @@ To integrate logic into the application, we need C++ backend classes that can do
 
 For your new backend class, create two new files called `backend.cpp` and `backend.h`. Don't forget to add the new cpp file to the executable in `src/CMakeLists.txt`, next to main.cpp.
 
-Add the following content to the new header file (the one with the `.h` extension):
+Add the following content to the new header file (`backend.h`):
 ```C++
 #pragma once
 
@@ -26,7 +26,7 @@ public:
 };
 ```
 
-The cpp file containing the definitions is similarly empty right now, it should contain something like the following:
+The `backend.cpp` file containing the definitions is similarly empty right now, it should contain something like the following:
 ```C++
 #include "backend.h"
 
@@ -39,7 +39,7 @@ Backend::Backend(QObject *parent)
 
 Currently the user interface doesn't know about your backend class. To change that, we need to register the new type in `main.cpp`. The backend will be created as a singleton, that means it will only be created once and exist through the whole time from starting the application to closing it.
 
-To `main.cpp`, right after creating the `QQmlApplicationEngine`, add the type registration as follows:
+Right after creating the [QQmlApplicationEngine](docs:qtqml;QQmlApplicationEngine), add the [type registration](https://doc.qt.io/qt-5/qtqml-cppintegration-definetypes.html) to `main.cpp` as follows:
 ```C++
     Backend backend;
     qmlRegisterSingletonInstance<Backend>("org.kde.example", 1, 0, "Backend", &backend);
@@ -47,7 +47,7 @@ To `main.cpp`, right after creating the `QQmlApplicationEngine`, add the type re
 
 Don't forget to include the new header file at the top of `main.cpp`.
 
-From now on, the backend will be known to QML as `Backend`. It is contained in a module called `org.kde.example`. Since the module is part of the application, you don't need to worry about versioning it, just stay with 1.0 and use it consistently throughout the application.
+From now on, the backend will be known to QML as `Backend`. It is contained in a module called `org.kde.example`. Since the module is part of the application, you don't need to worry about versioning it, just stay with `1.0` and use it consistently throughout the application.
 
 In `main.qml`, import the new module:
 ```QML
@@ -56,16 +56,15 @@ import org.kde.example 1.0
 
 Now we have connected the class holding the future logic to the application, but it still doesn't do anything. To change that, let's add a property to the class. Properties are a lot more than a simple variable. They can inform the UI about changes so it can update the right areas.
 
-Right under the `Q_OBJECT` macro, add a new `Q_PROPERTY`.
+Right under the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, add a new [Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY).
 
 ```
 Q_PROPERTY(QString introductionText READ introductionText WRITE setIntroductionText NOTIFY introductionTextChanged)
 ```
 
-That seems like quite a lot for a simple property we'll use to show some text from the backend, right?
-But a closer look reveals that this can already run logic when the property is read by the user interface, and when it is written. It will automatically inform frontend and backend of changes.
+This may seem like a lot of code to just read and write some code from the backend. However, a closer look reveals that reading the property from the UI can already run some logic—same when it is written to. In this case, it will automatically inform the frontend and backend of changes.
 
-The reading and writing is based on getter and setter functions, so add a new private attribute to your class, like this, and add getter and setter functions.
+The reading and writing is based on the concept of [getter and setter functions](https://www.w3schools.com/cpp/cpp_encapsulation.asp). Go ahead and add a new private attribute to your class that holds the data, as well as the relevant getter and setter functions.
 ```C++
 private:
     QString m_introductionText = "Hello World!";
@@ -73,11 +72,12 @@ private:
 
 To the public section, add
 ```C++
+public:
     QString introductionText() const;
     void setIntroductionText(const QString &introductionText);
     Q_SIGNAL void introductionTextChanged();
 ```
-The first function is the getter, the second the setter, and the third a signal that is emitted when the property was changed. The signal doesn't need any implementation in the cpp file, since it doesn't do much more than being emitted, but the getter and setter need to be implemented similar to the following:
+The first function is the getter, the second the setter, and the third a signal that is emitted when the property is changed. The signal doesn't need any implementation in `backend.cpp` file, since it doesn't do much more than being emitted, but the getter and setter need to be implemented similar to the following:
 ```C++
 QString Backend::introductionText() const
 {
@@ -93,22 +93,25 @@ void Backend::setIntroductionText(const QString &introductionText)
 
 As you can see, when the setter is called, the signal will be emitted, and inform the ui and backend of the change.
 
-To display the text, in `main.qml` add a heading displaying it right under the text property of the `Kirigami.Page` element that is already contained in the template.
+To display the text, add a heading to `main.qml` under the `title` property of the [Kirigami.Page](docs:kirigami2;Page) element already contained in the template.
 
 The resulting code in that part of the file should look like this:
 ```
-        ...
-        Kirigami.Page {
-            title: i18n("develop.kde.org tutorial")
+...
+Kirigami.Page {
+    title: i18n("develop.kde.org tutorial")
 
-            Kirigami.Heading {
-                anchors.centerIn: parent
-                text: Backend.introductionText
-            }
+    Kirigami.Heading {
+        anchors.centerIn: parent
+        text: Backend.introductionText
+    }
 
-            actions {
-                main: Kirigami.Action {
-                    ...
+    actions {
+        main: Kirigami.Action {
+            ...
+        }
+    }
+}
 ```
 
 Now compile and start your program again.

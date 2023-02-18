@@ -1,23 +1,24 @@
 // Includes relevant modules used by the QML
-import QtQuick 2.6
-import QtQuick.Controls 2.0 as Controls
-import QtQuick.Layouts 1.2
-import org.kde.kirigami 2.13 as Kirigami
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
+import QtQuick.Layouts 1.15
+import org.kde.kirigami 2.20 as Kirigami
 
-// Base element, provides basic features needed for all kirigami applications
+// Provides basic features needed for all kirigami applications
 Kirigami.ApplicationWindow {
-    // ID provides unique identifier to reference this element
+    // Unique identifier to reference this object
     id: root
 
     // Window title
-    // i18nc is useful for adding context for translators, also lets strings be changed for different languages
+    // i18nc() makes a string translatable
+    // and provides additional context for the translators
     title: i18nc("@title:window", "Hello World")
 
-    // Initial page to be loaded on app load
+    // Set the first page that will be loaded when the app opens
+    // This can also be set to an id of a Kirigami.Page
     pageStack.initialPage: Kirigami.Page {
-
         Controls.Label {
-            // Center label horizontally and vertically within parent element
+            // Center label horizontally and vertically within parent object
             anchors.centerIn: parent
             text: i18n("Hello World!")
         }

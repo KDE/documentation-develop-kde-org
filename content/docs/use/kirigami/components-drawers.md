@@ -1,6 +1,6 @@
 ---
 title: Drawers
-weight: 105
+weight: 205
 description: Drawers provide applications with quick access to controls and pages of your application.
 group: components
 aliases:
@@ -15,42 +15,45 @@ Drawers come in different types, shapes, and forms. In this page we will go over
 
 The global drawer is a standard feature in KDE's mobile applications and can sometimes be found in their desktop incarnations too. It contains an application's main menu: included here are any functions that are not specific to the current page but still significant to general navigation or interaction within the application.
 
-`Kirigami.GlobalDrawer` components are what we use to create such drawers. These are set to the `globalDrawer` property of the `Kirigami.ApplicationWindow` that forms the basis of our Kirigami application.
+It can be activated by tapping the hamburger menu or by swiping from the left edge to the middle of the screen in Left to Right mode or from the right edge in Right to Left mode.
+
+[Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer) components are what we use to create such drawers. These are set to the [globalDrawer](docs:kirigami2;AbstractApplicationWindow::globalDrawer) property of the [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow) that forms the basis of our Kirigami application.
 
 {{< sections >}}
+
 {{< section-left >}}
 
 ```qml
 Kirigami.ApplicationWindow {
 
     globalDrawer: Kirigami.GlobalDrawer {
-		actions: [
-			Kirigami.Action {
-				text: "Kirigami Action 1"
-			},
-			Kirigami.Action {
-				text: "Kirigami Action 2"
-			},
-			Kirigami.Action {
-				text: i18n("Quit")
-				icon.name: "gtk-quit"
-				shortcut: StandardKey.Quit
-				onTriggered: Qt.quit()
-			}
-		]
-	}
-
-	...
-
+        actions: [
+            Kirigami.Action {
+                text: "Kirigami Action 1"
+            },
+            Kirigami.Action {
+                text: "Kirigami Action 2"
+            },
+            Kirigami.Action {
+                text: i18n("Quit")
+                icon.name: "gtk-quit"
+                shortcut: StandardKey.Quit
+                onTriggered: Qt.quit()
+            }
+        ]
+    }
+    ...
 }
 ```
 
 {{< /section-left >}}
+
 {{< section-right >}}
 
-![Our new global drawer](/docs/use/kirigami/components-drawers/globaldrawer_simple.png)
+![Screenshot of a global drawer in desktop mode that looks like a sidebar](/docs/use/kirigami/components-drawers/globaldrawer_simple.png)
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
 ### Header
@@ -60,45 +63,45 @@ Headers can be used to place sticky components at the top of your global drawer.
 Your chosen header component can be set with the global drawer's `header` property.
 
 {{< sections >}}
+
 {{< section-left >}}
 
 ```qml
 globalDrawer: Kirigami.GlobalDrawer {
 
-	header: Kirigami.AbstractApplicationHeader { 
-		
-		contentItem: Kirigami.SearchField {
-			id: searchField
-			Layout.fillWidth: true
-		}
+    header: Kirigami.AbstractApplicationHeader {
 
-	}
+        contentItem: Kirigami.SearchField {
+            id: searchField
+            Layout.fillWidth: true
+        }
+    }
 
-	actions: [
-		Kirigami.Action {
-			text: "Kirigami Action 1"
-		},
-		Kirigami.Action {
-			text: "Kirigami Action 2"
-		},
-		Kirigami.Action {
-			text: i18n("Quit")
-			icon.name: "application-exit"
-			shortcut: StandardKey.Quit
-			onTriggered: Qt.quit()
-		}
-	]
+    actions: [
+        Kirigami.Action {
+            text: "Kirigami Action 1"
+        },
+        Kirigami.Action {
+            text: "Kirigami Action 2"
+        },
+        Kirigami.Action {
+            text: i18n("Quit")
+            icon.name: "application-exit"
+            shortcut: StandardKey.Quit
+            onTriggered: Qt.quit()
+        }
+    ]
 }
 ```
 
 {{< /section-left >}}
+
 {{< section-right >}}
 
-![Search bar header global drawer](/docs/use/kirigami/components-drawers/globaldrawer_header.png)
-
-Our global drawer now shows the search bar component we set as the header.
+{{< figure class="text-center" caption="Our global drawer now shows the search bar component we set as the header" src="globaldrawer_header.png" >}}
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
 
@@ -106,7 +109,7 @@ Our global drawer now shows the search bar component we set as the header.
 
 While panel-style global drawers can be useful in mobile environments, they might be too large on the desktop. 
 
-Thankfully, Kirigami global drawers provide an `isMenu` property. When set to `true`, our global drawers turn into more traditional menus only on the desktop. 
+Thankfully, Kirigami global drawers provide an [isMenu](docs:kirigami2;GlobalDrawer::isMenu) property. When set to `true`, they turn into more traditional menus only on the desktop.
 
 {{< alert title="Note" color="info" >}}
 
@@ -115,156 +118,213 @@ In this menu mode, headers and banners are not visible.
 {{< /alert >}}
 
 {{< sections >}}
+
 {{< section-left >}}
 
 ```qml
 globalDrawer: Kirigami.GlobalDrawer {
-	isMenu: true
+    isMenu: true
 
-	actions: [
-		Kirigami.Action {
-			text: "Kirigami Action 1"
-		},
-		Kirigami.Action {
-			text: "Kirigami Action 2"
-		},
-		Kirigami.Action {
-			text: i18n("Quit")
-			icon.name: "application-exit"
-			shortcut: StandardKey.Quit
-			onTriggered: Qt.quit()
-		}
-	]
+    actions: [
+        Kirigami.Action {
+            text: "Kirigami Action 1"
+        },
+        Kirigami.Action {
+            text: "Kirigami Action 2"
+        },
+        Kirigami.Action {
+            text: i18n("Quit")
+            icon.name: "application-exit"
+            shortcut: StandardKey.Quit
+            onTriggered: Qt.quit()
+        }
+    ]
 }
 ```
 
 {{< /section-left >}}
+
 {{< section-right >}}
 
-![Global drawer as a menu on the desktop](/docs/use/kirigami/components-drawers/globaldrawer_menu.png)
+{{< figure class="text-center" caption="Global drawer in menu mode, without a header or banner" src="globaldrawer_menu.png" >}}
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
 ### Banners
 
 Banners allow you to display a title and an icon at the top of your global drawer (even above the header).
 
-Titles, set with the `title` property, can be used to pretty up your global drawer and make it seem less sparse. More importantly, it can remind your users that this is a global and app-wide drawer rather than a local drawer.
+By default, banners are only visible on mobile environments. You can change this by setting the global drawer component's [bannerVisible](docs:kirigami2;GlobalDrawer) property to `true`.
 
-There is also a `titleIcon` property, which can be paired with your title to make the global drawer even more aesthetically pleasing. This icon will be placed to the left of the title.
+Titles, set with the [title](docs:kirigami2;GlobalDrawer::title) property, can be used to pretty up your global drawer and make it seem less sparse. More importantly, it can remind your users that this is a global and app-wide drawer rather than a local drawer.
+
+There is also a [titleIcon](docs:kirigami2;GlobalDrawer::titleIcon) property, which can be paired with your title to make the global drawer even more aesthetically pleasing. This icon will be placed to the left of the title.
 
 {{< sections >}}
+
 {{< section-left >}}
 
 ```qml
 globalDrawer: Kirigami.GlobalDrawer {
-	title: "My Global Drawer"
-	titleIcon: "kde"
-
-	actions: [
-		Kirigami.Action {
-			text: "Kirigami Action 1"
-		},
-		Kirigami.Action {
-			text: "Kirigami Action 2"
-		},
-		Kirigami.Action {
-			text: i18n("Quit")
-			icon.name: "application-exit"
-			shortcut: StandardKey.Quit
-			onTriggered: Qt.quit()
-		}
-	]
+    title: "My Global Drawer"
+    titleIcon: "kde"
+    bannerVisible: true
+    actions: [
+        Kirigami.Action {
+            text: "Kirigami Action 1"
+        },
+        Kirigami.Action {
+            text: "Kirigami Action 2"
+        },
+        Kirigami.Action {
+            text: i18n("Quit")
+            icon.name: "application-exit"
+            shortcut: StandardKey.Quit
+            onTriggered: Qt.quit()
+        }
+    ]
 }
 ```
 
 {{< /section-left >}}
+
 {{< section-right >}}
 
-![Global drawer with title and icon in banner](/docs/use/kirigami/components-drawers/globaldrawer-banner.png)
+{{< figure class="text-center" caption="Global drawer with title and icon in banner" src="globaldrawer-banner.png" >}}
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
 {{< alert title="Note" color="info" >}}
 
-The `titleIcon` property takes names for system-wide icons per the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application, or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
+The [titleIcon](docs:kirigami2;GlobalDrawer::titleIcon) property takes names for system-wide icons according to the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application which comes with [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk), or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
 
 {{< /alert >}}
 
-However, by default, banners are only visible on mobile environments. You can change this by setting the global drawer component's `bannerVisible` property to `true`.
+## Context Drawers
+
+While a [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer) displays global actions available throughout your application, a [Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer) should be used to display actions that are only relevant in certain contexts. This is usually used in separate [pages](/docs/kirigami/introduction-pages).
+
+A context drawer will only show up if any [contextualActions](docs:kirigami2;Page::contextualActions) have been created as part of the [Page.actions group](docs:kirigami2;Page::actions). It also behaves differently depending on whether it is being used on a mobile platform or on a desktop.
+
+On a desktop, when a window has enough space, contextual actions show up as part of the `actions` group in the top toolbar. When space is limited, such as on a mobile device or in a narrow window, contextual actions are hidden behind a hamburger menu on the right side. This is different from other actions in the `actions` group, namely `actions.main`, `actions.left` and `actions.right`; these do not get hidden in space-constrained windows, and are instead collapsed into their respective icons.
+
+
+{{< sections >}}
+
+{{< section-left >}}
+
+{{< readfile file="/content/docs/use/kirigami/components-drawers/contextdrawer.qml" highlight="qml" >}}
+
+{{< /section-left >}}
+
+{{< section-right >}}
+
+{{< figure class="text-center" src="contextdrawer-retracted.webp" caption="Context drawer with contextual actions hidden" >}}
+
+{{< figure class="text-center" src="contextdrawer-expanded.webp" caption="Context drawer showing all contextual actions" >}}
+
+{{< /section-right >}}
+
+{{< /sections >}}
+
+On mobile, the drawer always consists of actions hidden behind a hamburger menu. It can be activated by tapping the hamburger menu or by swiping from the right edge to the middle of the screen in Left to Right mode or from the left edge in Right to Left mode. If you are on a desktop and want to test the mobile interface, you can run your application with the environment variable `QT_QUICK_CONTROLS_MOBILE=1`.
+
+{{< sections >}}
+
+{{< section-left >}}
+
+{{< figure class="text-center" src="contextdrawer-mobile.webp" caption="Same example above, running in mobile mode" >}}
+
+{{< /section-left >}}
+
+{{< section-right >}}
+
+{{< figure class="text-center" src="contextdrawer-mobile-draweropen.webp" caption="Context drawer open in mobile mode" >}}
+
+{{< /section-right >}}
+
+{{< /sections >}}
 
 ## Modal and Inline drawers
 
 Kirigami offers two additional types of drawers, modal drawers and inline drawers. They are quite similar to each other: both span the entirety of the application's width or height and can be placed on the edges of the app window. However, they do react differently to user interaction.
 
-- Modal drawers darken the rest of the application and, like overlay sheets, will be dismissed when clicking on a darkened area.
+- Modal drawers darken the rest of the application and, like [overlay sheets](docs:kirigami2;OverlaySheet), will be dismissed when clicking on a darkened area.
 - Inline drawers allow the user to still interact with the rest of the application without being dismissed, and do not darken other areas.
 
-These two drawers are so similar because they are, in fact, the same Kirigami component: `Kirigami.OverlayDrawer`. Important properties of this component to keep in mind:
+These two drawers are so similar because they can, in fact, be implemented using the same Kirigami component: [Kirigami.OverlayDrawer](docs:kirigami2;OverlayDrawer). Here are a few important inherited properties of this component to keep in mind:
 
-- `modal` controls whether the drawer will be modal or inline depending on a boolean value
-- `edge` controls which edge of the application window the drawer will appear on; options for this property are `Qt.TopEdge`, `Qt.RightEdge`, `Qt.BottomEdge`, and `Qt.LeftEdge`
-- `contentItem` contains the component that will form the content of your drawer
+- [Popup.modal](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup.html#modal-prop) controls whether the drawer will be modal or inline depending on a boolean value
+- [Drawer.edge](https://doc.qt.io/qt-6/qml-qtquick-controls2-drawer.html#edge-prop) controls which edge of the application window the drawer will appear on; options for this property are part of the [Edge enum](docs:qtcore;Qt::RightEdge), namely `Qt.TopEdge`, `Qt.RightEdge`, `Qt.BottomEdge`, and `Qt.LeftEdge`
+- [Popup.contentItem](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup.html#contentItem-prop) contains the component that will form the content of your drawer
 
 {{< sections >}}
+
 {{< section-left >}}
 
 ```qml
-import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Controls 2.15 as Controls
 
 Kirigami.Page {
 
-	Kirigami.OverlayDrawer {
-		id: bottomDrawer
-		edge: Qt.BottomEdge
-		// Set modal to false to make this drawer inline!
-		modal: true
+    Kirigami.OverlayDrawer {
+        id: bottomDrawer
+        edge: Qt.BottomEdge
+        // Set modal to false to make this drawer inline!
+        modal: true
 
-		contentItem: RowLayout {
-			Layout.fillWidth: true
+        contentItem: RowLayout {
+            Layout.fillWidth: true
 
-			QQC2.Label {
-				Layout.fillWidth: true
-				text: "Say hello to my little drawer!"
-			}
-			Controls.Button {
-				text: "Close"
-				onClicked: bottomDrawer.close()
-			}
-		}
-	}
+            Controls.Label {
+                Layout.fillWidth: true
+                text: "Say hello to my little drawer!"
+            }
+            Controls.Button {
+                text: "Close"
+                onClicked: bottomDrawer.close()
+            }
+        }
+    }
 
-	Controls.Button {
-		text: "Open bottomDrawer"
-		onClicked: bottomDrawer.open()
-	}
-
+    Controls.Button {
+        text: "Open bottomDrawer"
+        onClicked: bottomDrawer.open()
+    }
 }
 ```
 {{< /section-left >}}
+
 {{< section-right >}}
 
 {{< compare >}}
-{{< figure class="text-center" caption="Modal drawer on the bottom edge of the screen." src="modal_drawer.png" >}}
-{{< figure class="text-center" caption="Inline drawer on the bottom edge of the screen." src="inline_drawer.png" >}}
+
+{{< figure class="text-center" caption="Modal drawer on the bottom edge of the screen" src="modal_drawer.png" >}}
+
+{{< figure class="text-center" caption="Inline drawer on the bottom edge of the screen" src="inline_drawer.png" >}}
+
 {{< /compare >}}
 
 {{< /section-right >}}
+
 {{< /sections >}}
 
-### A usecase for overlay bottom drawers: NeoChat
+### A use case for bottom overlay drawers: NeoChat
 
-NeoChat uses bottom overlay drawers to provide user with a number of actions they can perform on a message they have long-pressed. Here is a simplified example of what that looks like:
+NeoChat uses bottom overlay drawers to provide the user with a number of actions they can perform on a message they have long pressed. Here is a simplified example of what that looks like:
 
 ```qml
 Kirigami.Page {
+
     ListView {
         model: App.MessageModel
         delegate: MessageDelegate {
             onPressAndHold: bottomDrawer.open()
-       }
+        }
     }
 
    Kirigami.OverlayDrawer {

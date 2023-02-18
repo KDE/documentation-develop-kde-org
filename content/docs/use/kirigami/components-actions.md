@@ -1,7 +1,7 @@
 ---
 title: Actions based components
 group: components
-weight: 101
+weight: 201
 description: >
   Kirigami's Actions are used to add functionality to components.
 aliases:
@@ -9,18 +9,20 @@ aliases:
 ---
 ## Actions
 
-A Kirigami Action encapsulates a user interface action. We can use these to provide our applications with easy-to-reach actions that are essential to their functionality.
+A [Kirigami.Action](docs:kirigami2;Action) encapsulates a user interface action. We can use these to provide our applications with easy-to-reach actions that are essential to their functionality.
 
 {{< alert title="Note" color="info" >}}
-Kirigami actions inherit from [Qt Quick Controls 2 Action](docs:qtquickcontrols;QtQuick.Controls.Action) and
-can be assigned shortcuts. 
+
+Kirigami actions inherit from [QtQuick Controls Action](docs:qtquickcontrols;QtQuick.Controls.Action) and
+can be assigned shortcuts.
+
 {{< /alert >}}
 
-Like QtQuick Controls Actions, they can be assigned to menu items and toolbar buttons,
+Like [QtQuick Controls Actions](docs:qtquickcontrols;QtQuick.Controls.Action), they can be assigned to menu items and toolbar buttons,
 but also to multiple other Kirigami components.
 
 ```qml
-import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.Action {
     id: copyAction
@@ -33,15 +35,14 @@ Kirigami.Action {
 
 {{< alert title="Note" color="info" >}}
 
-The `icon.name` property takes names for system-wide icons per the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application, or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
+The [icon.name](https://doc.qt.io/qt-6/qml-qtquick-controls2-action.html#icon.name-prop) property takes names for system-wide icons following the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application which comes with [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk), or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
 
 {{< /alert >}}
 
-One feature offered by Kirigami Actions on top of QtQuick Actions is the possibility
-to nest actions.
+One feature offered by Kirigami Actions on top of [QtQuick Actions](docs:qtquickcontrols;QtQuick.Controls.Action) is the possibility to nest actions.
 
 ```qml
-import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.Action {
     text: "View"
@@ -57,16 +58,17 @@ Kirigami.Action {
     }
 }
 ```
+
 Another feature of Kirigami Actions is to provide various hints to items using actions
-about how they should display the action. These are primarily handled by the `displayHint`
-and `displayComponent` properties.
+about how they should display the action. These are primarily handled by the [displayHint](docs:kirigami2;Action::displayHint)
+and [displayComponent](docs:kirigami2;Action::displayComponent) properties.
 
 These properties will be respected by the item if possible. For example, the following
-action will be displayed as a TextField with the item trying its best to keep the item
+action will be displayed as a [TextField](docs:qtquickcontrols;QtQuick.Controls.TextField) with the item trying its best to keep itself
 visible as long as possible.
 
 ```qml
-import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.Action {
     text: "Search"
@@ -82,54 +84,24 @@ Kirigami.Action {
 
 ### Page
 
-One of the features of pages is that Actions can be added to them.
+One of [Kirigami.Page](docs:kirigami2;Page)'s features is that Actions can be added to it.
 
-You can add a main action, a left and right action and additional context actions
+You can add a `actions.main` action, a `actions.left` and `actions.right` action and additional [context actions](../components-drawers#context-drawers)
 that are displayed on the toolbar if there is enough place or in a hamburger menu
 on smaller screens.
 
-
-```qml
-import org.kde.kirigami 2.13 as Kirigami
-
-Kirigami.Page {
-    title: i18n("Demo")
-
-    actions {
-        main: Kirigami.Action {
-            icon.name: "go-home"
-            onTriggered: showPassiveNotification(i18n("Main action triggered"))
-        }
-        left: Kirigami.Action {
-            icon.name: "go-previous"
-            onTriggered: showPassiveNotification(i18n("Left action triggered"))
-        }
-        right: Kirigami.Action {
-            icon.name: "go-next"
-            onTriggered: showPassiveNotification(i18n("Right action triggered"))
-        }
-        contextualActions: [
-            Kirigami.Action {
-                text: i18n("Contextual Action 1")
-                icon.name: "bookmarks"
-                onTriggered: showPassiveNotification(i18n("Contextual action 1 clicked"))
-            },
-            Kirigami.Action {
-                text: i18n("Contextual Action 2")
-                icon.name: "folder"
-                enabled: false
-            }
-        ]
-    }
-}
-```
+{{< readfile file="/content/docs/use/kirigami/components-actions/pageactions.qml" highlight="qml" >}}
 
 {{< compare >}}
-{{< figure class="text-center" caption="Page actions on the desktop" src="desktop_page.png" >}}
-{{< figure class="text-center" caption="Page actions on a mobile device" src="mobile_page.png" >}}
+
+{{< figure class="text-center" caption="Page actions on the desktop" src="desktop_page.webp" >}}
+
+{{< figure class="text-center" caption="Page actions on a mobile device" src="mobile_page.webp" >}}
+
 {{< /compare >}}
 
 {{< alert color="warning" title="Warning" >}}
+
 To make the context actions work on mobile, you need to add a [ContextDrawer](docs:kirigami2;ContextDrawer)
 to your [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow).
 
@@ -142,12 +114,12 @@ Kirigami.ApplicationWindow {
     ...
 }
 ```
+
 {{< /alert >}}
 
 ### Global Drawer
 
-The global drawer provides an action based navigation to your application. This is the place,
-where nested actions are useful because it allows you to create nested navigation:
+The global drawer provides an action based navigation to your application. This is where nested actions are useful because it is possible to create nested navigation:
 
 ```qml
 Kirigami.ApplicationWindow {
@@ -183,15 +155,18 @@ Kirigami.ApplicationWindow {
 ```
 
 {{< compare >}}
-{{< figure class="text-center" caption="Global Drawers actions on the desktop" src="desktop_global_drawers.png" >}}
-{{< figure class="text-center" caption="Global Drawers actions on a mobile device" src="mobile_global_drawers.png" >}}
+
+{{< figure class="text-center" caption="Global Drawer actions on the desktop" src="desktop_global_drawers.png" >}}
+
+{{< figure class="text-center" caption="Global Drawer actions on a mobile device" src="mobile_global_drawers.png" >}}
+
 {{< /compare >}}
 
-You can read more about Global Drawers in the [documentation page for drawers](../components-drawers/).
+You can read more about Global Drawers in the [documentation page for drawers](../components-drawers#globaldrawer).
 
 ### ActionTextFields
 
-A [Kirigami ActionTextField](docs:kirigami2;ActionTextField) is used to add some contextual
+A [Kirigami.ActionTextField](docs:kirigami2;ActionTextField) is used to add some contextual
 actions to a text field, for example to clear the text, or to search for the text.
 
 ```qml
@@ -210,27 +185,25 @@ Kirigami.ActionTextField {
 }
 ```
 
-In this example, we are creating a clear button for a search field only visible when text is entered.
+In this example, we are creating a "clear" button for a search field that is only visible when text is entered.
 
 ![Search field with text: "I want ](searchfield.png)
 
 {{< alert title="Note" color="info" >}}
-You should only rarely use an ActionTextField directly. The two major use cases for an
-ActionTextField are provided by [SearchField](docs:kirigami2;SearchField) and
-[PasswordField](docs:kirigami2;PaswordField). Both inherit from ActionTextField.
+
+You should rarely use an ActionTextField directly. [SearchField](docs:kirigami2;SearchField) and [PasswordField](docs:kirigami2;PasswordField) both inherit from `ActionTextField` and are likely to cover your desired use-case.
+
 {{< /alert >}}
 
 ### SwipeListItem
 
-A [SwipeListItem](docs:kirigami2;SwipeListItem) is a delegate intended to support extra actions.
-When using a mouse, they will be shown on hover. On a touch device, they can be shown by dragging
-the item with the handle.
+A [Kirigami.SwipeListItem](docs:kirigami2;SwipeListItem) is a delegate intended to support extra actions. When using a mouse, its actions will always be shown. On a touch device, they can be shown by dragging the item with the handle. In the following pictures, these are the icons to the right.
 
 ```qml
 ListView {
     model: myModel
     delegate: SwipeListItem {
-        QQC2.Label {
+        Controls.Label {
             text: model.text
         }
         actions: [
@@ -253,13 +226,10 @@ ListView {
 
 ###  ActionToolBar
 
-An [ActionToolBar](docs:kirigami2;ActionToolBar) is a toolbar built out of a 
-list of actions. By default, each action that will fit on the toolbar will be 
-represented by a ToolButton, with those that do not fit being moved into a 
+A [Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar) is a toolbar built out of a list of actions. By default, each action that will fit in the toolbar will be represented by a [ToolButton](docs:qtquickcontrols;QtQuick.Controls.ToolButton), with those that do not fit being moved into a
 menu at the end of the toolbar.
 
-Like ActionTextField, you may not need to use ActionToolBar directly as it is
-used by page headers and cards to provide their action display.
+Like [ActionTextField](docs:kirigami2;ActionTextField), you may not need to use [ActionToolBar](docs:kirigami2;ActionToolBar) directly as it is used by page headers and cards to provide their action display.
 
 ```qml
 Kirigami.ActionToolBar {
@@ -284,10 +254,52 @@ Kirigami.ActionToolBar {
 }
 ```
 
-![](action_tool_bar.png)
+{{< figure class="text-center" caption="A horizontal toolbar being displayed at the top of the application" src="action_tool_bar.png" >}}
 
-You can read more about ActionToolBar components in their [dedicated documentation page](../components-actiontoolbar/).
+You can read more about [ActionToolBar](docs:kirigami2;ActionToolBar) components in their [dedicated documentation page](../components-actiontoolbar/).
 
 ### Cards
 
-The cards components can also take an action. For more information consult the [component page for Cards](../components-card/).
+A [Kirigami.Card](docs:kirigami2;Card) is used to display a collection of information or actions together. These actions can be added to the `actions` group, similarly to previous components.
+
+{{< sections >}}
+
+{{< section-left >}}
+
+```qml
+Kirigami.Card {
+    actions: [
+        Kirigami.Action {
+            text: qsTr("Action1")
+            icon.name: "add-placemark"
+        },
+        Kirigami.Action {
+            text: qsTr("Action2")
+            icon.name: "address-book-new-symbolic"
+        },
+        // ...
+    ]
+    banner {
+        source: "../banner.jpg"
+        title: "Title Alignment"
+        titleAlignment: Qt.AlignLeft | Qt.AlignBottom
+    }
+    contentItem: Controls.Label {
+        wrapMode: Text.WordWrap
+        text: "My Text"
+    }
+}
+
+```
+
+{{< /section-left >}}
+
+{{< section-right >}}
+
+![Screenshot of a full-fledged Card with a banner background behind its title, white background behind its text, and two actions with icons and a hamburger menu at the bottom](card.png)
+
+{{< /section-right >}}
+
+{{< /sections >}}
+
+For more information consult the [component page for Cards](../components-card/).

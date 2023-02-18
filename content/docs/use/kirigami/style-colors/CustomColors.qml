@@ -1,6 +1,6 @@
-import QtQuick 2.11
-import QtQuick.Controls 2.2 as Controls
-import org.kde.kirigami 2.9 as Kirigami
+import QtQuick 2.15
+import QtQuick.Controls 2.15 as Controls
+import org.kde.kirigami 2.20 as Kirigami
 
 Rectangle {
     Kirigami.Theme.inherit: false
@@ -18,8 +18,8 @@ Rectangle {
     Rectangle {
         // This will be "#465c2b"
         anchors.centerIn: parent
-        height: parent.height / 2
-        width: parent.width / 2
+        height: Math.round(parent.height / 2)
+        width: Math.round(parent.width / 2)
         color: Kirigami.Theme.textColor
     }
 }
