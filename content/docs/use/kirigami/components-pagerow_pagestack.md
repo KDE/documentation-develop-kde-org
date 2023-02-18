@@ -206,4 +206,4 @@ Kirigami.Page {
 ```
 
 
-{{< figure class="text-center" caption="" src="pushpage.webp" >}}
+{{< figure class="text-center" caption="Clicking the button pushes a new page with help of applicationWindow" src="pushpage.webp" >}}
