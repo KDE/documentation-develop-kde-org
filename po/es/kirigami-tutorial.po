@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-08 03:35+0100\n"
+"PO-Revision-Date: 2023-02-19 09:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -44,15 +44,6 @@ msgid "Learning to create your first applications using Kirigami\n"
 msgstr "Aprenda a crear su primera aplicación usando Kirigami\n"
 
 #: content/docs/use/kirigami/_index.md:22
-#, fuzzy
-#| msgid ""
-#| "This tutorial will guide you through the process of creating your own "
-#| "convergent application using the [Kirigami framework](/frameworks/"
-#| "kirigami). A *convergent application*, in this context, means people can "
-#| "use the program easily regardless of the device it is running on. If it "
-#| "is on a desktop computer, it will adapt to a large screen and a mouse and "
-#| "keyboard; if it is being used on a mobile, it will accept input from a "
-#| "touchscreen and adapt to a smaller portrait screen. And so on."
 msgid ""
 "This tutorial will guide you through the process of creating your own "
 "convergent application using the [Kirigami framework](/frameworks/kirigami). "
@@ -88,13 +79,6 @@ msgstr ""
 "componentes Qt Quick diseñados para crear aplicaciones convergentes."
 
 #: content/docs/use/kirigami/_index.md:36
-#, fuzzy
-#| msgid ""
-#| "While you will use QML to create the visual part of your application, the "
-#| "business logic -- the code that does the heavy lifting for your "
-#| "application's functionality -- is usually created in C++ for performance "
-#| "reasons. We will also explore how to integrate our business logic with "
-#| "our UI in the tutorials below."
 msgid ""
 "While you will use QML to create the visual part of your application, the "
 "business logic—the code that does the heavy lifting for your application's "
@@ -117,19 +101,15 @@ msgid "Informations about your application"
 msgstr "Información sobre su aplicación"
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:10
-#, fuzzy
-#| msgid ""
-#| "The About Page allows you to have a page that shows the copyright notice "
-#| "of the application together with the contributors and some information of "
-#| "which platform it's running on."
 msgid ""
 "[Kirigami.AboutPage](docs:kirigami2;AboutPage) allows you to have a page "
 "that shows the copyright notice of the application together with the list of "
 "contributors and some information of which platform it's running on."
 msgstr ""
-"La «Página acerca de» le permite tener una página que muestra información "
-"sobre el copyright de la aplicación junto a los colaboradores y cierta "
-"información sobre la plataforma en la que se está ejecutando."
+"[Kirigami.AboutPage](docs:kirigami2;AboutPage) le permite tener una página "
+"que muestra información sobre el copyright de la aplicación junto a la lista "
+"de colaboradores y cierta información sobre la plataforma en la que se está "
+"ejecutando."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:12
 msgid ""
@@ -294,16 +274,12 @@ msgstr ""
 "extensión `.h`):"
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:29
-#, fuzzy
-#| msgid ""
-#| "The cpp file containing the definitions is similarly empty right now, it "
-#| "should contain something like the following:"
 msgid ""
 "The `backend.cpp` file containing the definitions is similarly empty right "
 "now, it should contain something like the following:"
 msgstr ""
-"El archivo cpp que contiene las definiciones también está vacío ahora; debe "
-"contener algo similar a lo siguiente:"
+"El archivo `backend.cpp` que contiene las definiciones también está vacío "
+"ahora; debe contener algo similar a lo siguiente:"
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:40
 msgid ""
@@ -331,12 +307,6 @@ msgstr ""
 "No olvide incluir el nuevo archivo de cabecera al principio de `main.cpp`."
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:50
-#, fuzzy
-#| msgid ""
-#| "From now on, the backend will be known to QML as `Backend`. It is "
-#| "contained in a module called `org.kde.example`. Since the module is part "
-#| "of the application, you don't need to worry about versioning it, just "
-#| "stay with 1.0 and use it consistently throughout the application."
 msgid ""
 "From now on, the backend will be known to QML as `Backend`. It is contained "
 "in a module called `org.kde.example`. Since the module is part of the "
@@ -346,7 +316,7 @@ msgstr ""
 "A partir de este momento, QML conocerá el motor como `Backend`. Está "
 "contenido en un módulo llamado `org.kde.example`. Como el módulo es parte de "
 "la aplicación, no tiene que preocuparse por su número de versión: solo tiene "
-"que quedarse con 1.0 y usarlo de forma consistente en toda la aplicación."
+"que quedarse con `1.0` y usarlo de forma consistente en toda la aplicación."
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:52
 msgid "In `main.qml`, import the new module:"
@@ -370,6 +340,8 @@ msgid ""
 "Right under the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, add a new "
 "[Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY)."
 msgstr ""
+"Justo debajo de la macro [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT), añada "
+"una nueva [Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY)."
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:65
 #, fuzzy
@@ -412,13 +384,6 @@ msgid "To the public section, add"
 msgstr "En la sección `public`, añada"
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:80
-#, fuzzy
-#| msgid ""
-#| "The first function is the getter, the second the setter, and the third a "
-#| "signal that is emitted when the property was changed. The signal doesn't "
-#| "need any implementation in the cpp file, since it doesn't do much more "
-#| "than being emitted, but the getter and setter need to be implemented "
-#| "similar to the following:"
 msgid ""
 "The first function is the getter, the second the setter, and the third a "
 "signal that is emitted when the property is changed. The signal doesn't need "
@@ -426,11 +391,11 @@ msgid ""
 "being emitted, but the getter and setter need to be implemented similar to "
 "the following:"
 msgstr ""
-"La primera función es el *gette*, la segunda es el *setter* y la tercera es "
+"La primera función es el *getter*, la segunda es el *setter* y la tercera es "
 "una señal que se emite cada vez que se cambie la propiedad. La señal no "
-"necesita estar implementada en el archivo cpp, ya que no hace otra cosa que "
-"emitirse, aunque el *getter* y el *setter* deben implementarse de un modo "
-"similar al siguiente:"
+"necesita estar implementada en el archivo `backend.cpp`, ya que no hace otra "
+"cosa que emitirse, aunque el *getter* y el *setter* deben implementarse de "
+"un modo similar al siguiente:"
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:94
 msgid ""
@@ -525,13 +490,6 @@ msgstr ""
 "crear aplicaciones que sean más útiles de lo que podemos lograr con QML puro."
 
 #: content/docs/use/kirigami/advanced-maincpp.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
-#| "Started' page so that we can better understand what is going on in the "
-#| "central C++ file of our application. While this is a basic `main.cpp`, "
-#| "the features we will go over will remain essential no matter what kind of "
-#| "application it is that you decide to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
 "Started' page so that we can better understand what is going on in the "
@@ -550,22 +508,17 @@ msgid "What it does"
 msgstr "Lo que hace"
 
 #: content/docs/use/kirigami/advanced-maincpp.md:21
-#, fuzzy
-#| msgid ""
-#| "First we must include a number of Qt header files, allowing us to use "
-#| "their functions. In this case, we include a number of Qt headers that "
-#| "handle application logic, reading QML files, and accessing files defined "
-#| "in `resources.qrc`."
 msgid ""
 "First we must include a number of Qt [header files](https://www.learncpp.com/"
 "cpp-tutorial/header-files/), allowing us to use their functions. In this "
 "case, we include a number of Qt headers that handle application logic, "
 "reading QML files, and accessing files defined in `resources.qrc`."
 msgstr ""
-"Primero debemos incluir una serie de archivos de cabecera Qt, lo que nos "
-"permite usar sus funciones. En este caso, incluimos una serie de cabeceras "
-"Qt que manejan la lógica de la aplicación, leen archivos QML y acceden a los "
-"archivos definidos en `resources.qrc`."
+"Primero debemos incluir una serie de [archivos de cabecera](https://www."
+"learncpp.com/cpp-tutorial/header-files/) de Qt, lo que nos permite usar sus "
+"funciones. En este caso, incluimos una serie de cabeceras Qt que manejan la "
+"lógica de la aplicación, leen archivos QML y acceden a los archivos "
+"definidos en `resources.qrc`."
 
 #: content/docs/use/kirigami/advanced-maincpp.md:23
 msgid ""
@@ -707,22 +660,15 @@ msgid "CMakeLists.txt"
 msgstr "CMakeLists.txt"
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:18
-#, fuzzy
-#| msgid "You might remember this CMakeLists file from the first tutorial:"
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
-msgstr "Es posible que recuerde este archivo CMakeLists del primer tutorial:"
+msgstr ""
+"Es posible que recuerde este archivo `CMakeLists.txt` del primer tutorial:"
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:22
 msgid "The first line, `project(helloworld)` defines the name of the project."
 msgstr "La primera línea, `project(helloworld)` define el nombre del proyecto."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:24
-#, fuzzy
-#| msgid ""
-#| "After that, we are setting the versions of our needed tools. "
-#| "`cmake_minimum_required(VERSION 3.10)` sets the version of CMake we will "
-#| "be calling. We then use `set` to define variables (`KF5_MIN_VERSION` and "
-#| "`QT_MIN_VERSION`) containing the versions of the KDE Frameworks and Qt."
 msgid ""
 "After that, we set the versions of our needed tools. "
 "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be "
@@ -730,17 +676,12 @@ msgid ""
 "`QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgstr ""
 "Tras ella, definimos las versiones de las herramientas que vamos a "
-"necesitar. `cmake_minimum_required(VERSION 3.10)` define la versión de CMake "
-"que vamos a llamar. Después usamos `set` para definir las variables "
+"necesitar. `cmake_minimum_required(VERSION 3.16)` define la versión de CMake "
+"que vamos a llamar. Después usamos `set()` para definir las variables "
 "(`KF5_MIN_VERSION` y `QT_MIN_VERSION`) que contienen las versiones de KDE "
 "Frameworks y de Qt."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:26
-#, fuzzy
-#| msgid ""
-#| "Then we get to a section where we include a number of necessary CMake and "
-#| "KDE settings. You shouldn't worry too much about these lines for now and "
-#| "we won't need to change them in this tutorial."
 msgid ""
 "Then we get to a section where we include a number of necessary CMake and "
 "KDE settings by using [extra-cmake-modules](https://api.kde.org/ecm/). You "
@@ -748,8 +689,9 @@ msgid ""
 "change them in this tutorial."
 msgstr ""
 "Luego llegamos a una sección donde incluimos una serie de preferencias "
-"necesarias de CMake y de KDE. No debe preocuparse demasiado de estas líneas "
-"por ahora y tampoco necesitaremos cambiarlas en este tutorial."
+"necesarias de CMake y de KDE usando [extra-cmake-modules](https://api.kde."
+"org/ecm/). No debe preocuparse demasiado de estas líneas por ahora y tampoco "
+"necesitaremos cambiarlas en este tutorial."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:28
 msgid ""
@@ -768,12 +710,12 @@ msgstr ""
 "WidgetsAddons)`"
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:31
-#, fuzzy
-#| msgid "`find_package` finds and loads the external component."
 msgid ""
 "[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
 "html) finds and loads the external component."
-msgstr "`find_package` encuentra y carga el componente externo."
+msgstr ""
+"[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
+"html) encuentra y carga el componente externo."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:32
 msgid "The first word is the framework (`KF5`)."
@@ -843,16 +785,12 @@ msgid ""
 msgstr ""
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:45
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake into the 'src' "
-#| "directory."
 msgid ""
 "The final line, `add_subdirectory(src)`, points CMake into the `src/` "
 "directory."
 msgstr ""
 "La línea final, `add_subdirectory(src)`, hace que CMake apunte al directorio "
-"'src'."
+"`src/`."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:49
 msgid ""
@@ -863,59 +801,43 @@ msgstr ""
 "es mucho más breve."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:51
-#, fuzzy
-#| msgid ""
-#| "`set` is used to set `helloworld_SRCS` to `main.cpp` and `resources.qrc` "
-#| "(if we decide to create additional C++ files we'll need to add them here "
-#| "too)"
 msgid ""
 "[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to set "
 "`helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to create "
 "additional C++ files we'll need to add them here too)"
 msgstr ""
-"`set` se usa para definir `helloworld_SRCS` como `main.cpp` y `resources."
-"qrc` (si decidimos crear archivos C++ adicionales, también tendremos que "
-"añadirlos aquí)."
+"[set()](https://cmake.org/cmake/help/latest/command/set.html) se usa para "
+"definir `helloworld_SRCS` como `main.cpp` y `resources.qrc` (si decidimos "
+"crear archivos C++ adicionales, también tendremos que añadirlos aquí)."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:52
-#, fuzzy
-#| msgid ""
-#| "`add_executable` takes care of naming our executable and grabbing the "
-#| "files needed to create it"
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of naming our executable and grabbing the "
 "files needed to create it"
 msgstr ""
-"`add_executable` se encarga de dar nombre a nuestro ejecutable y de tomar "
-"los archivos necesarios para crearlo."
+"[add_executable()](https://cmake.org/cmake/help/latest/command/"
+"add_executable.html) se encarga de dar nombre a nuestro ejecutable y de "
+"tomar los archivos necesarios para crearlo."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:53
-#, fuzzy
-#| msgid ""
-#| "`target_link_libraries` dynamically links the libraries used in our code "
-#| "to our executable."
 msgid ""
 "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
 "to our executable."
 msgstr ""
-"`target_link_libraries` enlaza de forma dinámica las bibliotecas usadas en "
-"el código fuente con nuestro ejecutable."
+"[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
+"target_link_libraries.html) enlaza de forma dinámica las bibliotecas usadas "
+"en el código fuente con nuestro ejecutable."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:57
-#, fuzzy
-#| msgid ""
-#| "Note that these libraries should match the components that we included in "
-#| "our previous CMakeLists.txt file - otherwise these components will not be "
-#| "included and our application won't compile."
 msgid ""
 "Note that these libraries should match the components that we included in "
 "our previous `CMakeLists.txt` file - otherwise these components will not be "
 "included and our application won't compile."
 msgstr ""
 "Tenga en cuenta que estas bibliotecas deben coincidir con los componentes "
-"que incluimos en nuestro archivo CMakeLists.txt anterior; de lo contrario, "
+"que incluimos en nuestro archivo `CMakeLists.txt` anterior; de lo contrario, "
 "estos componentes no se incluirán y nuestra aplicación no se compilará."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:61
@@ -941,19 +863,15 @@ msgstr "Acciones"
 
 #: content/docs/use/kirigami/components-actions.md:12
 #: content/docs/use/kirigami/introduction-actions.md:18
-#, fuzzy
-#| msgid ""
-#| "A Kirigami Action encapsulates a user interface action. We can use these "
-#| "to provide our applications with easy-to-reach actions that are essential "
-#| "to their functionality."
 msgid ""
 "A [Kirigami.Action](docs:kirigami2;Action) encapsulates a user interface "
 "action. We can use these to provide our applications with easy-to-reach "
 "actions that are essential to their functionality."
 msgstr ""
-"Una acción de Kirigami encapsula una acción de la interfaz de usuario. "
-"Podemos usarlas para proporcionar a nuestras aplicaciones acciones de fácil "
-"acceso que son esenciales para su funcionalidad."
+"Una [Kirigami.Action](docs:kirigami2;Action) encapsula una acción de la "
+"interfaz de usuario. Podemos usarlas para proporcionar a nuestras "
+"aplicaciones acciones de fácil acceso que son esenciales para su "
+"funcionalidad."
 
 #: content/docs/use/kirigami/components-actions.md:16
 msgid ""
@@ -962,18 +880,14 @@ msgid ""
 msgstr ""
 
 #: content/docs/use/kirigami/components-actions.md:21
-#, fuzzy
-#| msgid ""
-#| "Like QtQuick Controls Actions, they can be assigned to menu items and "
-#| "toolbar buttons, but also to multiple other Kirigami components."
 msgid ""
 "Like [QtQuick Controls Actions](docs:qtquickcontrols;QtQuick.Controls."
 "Action), they can be assigned to menu items and toolbar buttons, but also to "
 "multiple other Kirigami components."
 msgstr ""
-"Al igual que las acciones de los controles de QtQuick, se pueden asignar a "
-"elementos del menú y a botones de la barra de herramientas, así como a otros "
-"componentes de Kirigami."
+"Al igual que las [acciones de los controles de QtQuick](docs:qtquickcontrols;"
+"QtQuick.Controls.Action), se pueden asignar a elementos del menú y a botones "
+"de la barra de herramientas, así como a otros componentes de Kirigami."
 
 #: content/docs/use/kirigami/components-actions.md:38
 #, fuzzy
@@ -999,16 +913,13 @@ msgstr ""
 "icon-naming-spec/icon-naming-spec-latest.html)."
 
 #: content/docs/use/kirigami/components-actions.md:42
-#, fuzzy
-#| msgid ""
-#| "One feature offered by Kirigami Actions on top of QtQuick Actions is the "
-#| "possibility to nest actions."
 msgid ""
 "One feature offered by Kirigami Actions on top of [QtQuick Actions](docs:"
 "qtquickcontrols;QtQuick.Controls.Action) is the possibility to nest actions."
 msgstr ""
-"Una funcionalidad que ofrecen las acciones de Kirigami sobre las acciones de "
-"QtQuick es la posibilidad de anidad acciones."
+"Una funcionalidad que ofrecen las acciones de Kirigami sobre las [acciones "
+"de QtQuick](docs:qtquickcontrols;QtQuick.Controls.Action) es la posibilidad "
+"de anidad acciones."
 
 #: content/docs/use/kirigami/components-actions.md:62
 #, fuzzy
@@ -1107,60 +1018,42 @@ msgid "Global Drawer"
 msgstr "Cajón global"
 
 #: content/docs/use/kirigami/components-actions.md:122
-#, fuzzy
-#| msgid ""
-#| "The global drawer provides an action based navigation to your "
-#| "application. This is the place, where nested actions are useful because "
-#| "it allows you to create nested navigation:"
 msgid ""
 "The global drawer provides an action based navigation to your application. "
 "This is where nested actions are useful because it is possible to create "
 "nested navigation:"
 msgstr ""
 "El cajón global proporciona navegación basada en acciones a su aplicación. "
-"Este es el lugar donde las acciones anidadas resultan útiles, ya que le "
-"permite crear navegación anidada:"
+"Aquí es donde las acciones anidadas resultan útiles, ya que es posible crear "
+"navegación anidada:"
 
 #: content/docs/use/kirigami/components-actions.md:159
-#, fuzzy
-#| msgid "Global Drawers actions on the desktop"
 msgid "Global Drawer actions on the desktop"
-msgstr "Acciones de cajones globales en el escritorio"
+msgstr "Acciones del cajón global en el escritorio"
 
 #: content/docs/use/kirigami/components-actions.md:161
-#, fuzzy
-#| msgid "Global Drawers actions on a mobile device"
 msgid "Global Drawer actions on a mobile device"
-msgstr "Acciones de cajones globales en un dispositivo móvil"
+msgstr "Acciones del cajón global en un dispositivo móvil"
 
 #: content/docs/use/kirigami/components-actions.md:165
-#, fuzzy
-#| msgid ""
-#| "You can read more about Global Drawers in the [documentation page for "
-#| "drawers](../components-drawers/)."
 msgid ""
 "You can read more about Global Drawers in the [documentation page for "
 "drawers](../components-drawers#globaldrawer)."
 msgstr ""
 "Puede obtener más información sobre los cajones globales en la [página de "
-"documentación de los cajones](../components-drawers/)."
+"documentación de los cajones](../components-drawers#globaldrawer)."
 
 #: content/docs/use/kirigami/components-actions.md:167
 msgid "ActionTextFields"
 msgstr "ActionTextFields"
 
 #: content/docs/use/kirigami/components-actions.md:169
-#, fuzzy
-#| msgid ""
-#| "A [Kirigami ActionTextField](docs:kirigami2;ActionTextField) is used to "
-#| "add some contextual actions to a text field, for example to clear the "
-#| "text, or to search for the text."
 msgid ""
 "A [Kirigami.ActionTextField](docs:kirigami2;ActionTextField) is used to add "
 "some contextual actions to a text field, for example to clear the text, or "
 "to search for the text."
 msgstr ""
-"Una [Kirigami ActionTextField](docs:kirigami2;ActionTextField) se usa para "
+"Una [Kirigami.ActionTextField](docs:kirigami2;ActionTextField) se usa para "
 "añadir algunas acciones de contexto a un campo de teto. Por ejemplo, para "
 "borrar el texto o para buscar dicho texto."
 
@@ -1262,6 +1155,8 @@ msgstr ""
 #: content/docs/use/kirigami/components-actions.md:257
 msgid "A horizontal toolbar being displayed at the top of the application"
 msgstr ""
+"Una barra de herramientas horizontal que se muestra en la parte superior de "
+"la aplicación"
 
 #: content/docs/use/kirigami/components-actions.md:259
 #, fuzzy
@@ -1301,17 +1196,12 @@ msgid ""
 msgstr ""
 
 #: content/docs/use/kirigami/components-actions.md:305
-#, fuzzy
-#| msgid ""
-#| "The cards components can also take an action. For more information "
-#| "consult the [component page for Cards](../components-card/)."
 msgid ""
 "For more information consult the [component page for Cards](../components-"
 "card/)."
 msgstr ""
-"Los componentes de tipo tarjeta también pueden tener acciones. Para más "
-"información, consulte la [página del componente de tarjetas](../components-"
-"card/)."
+"Para más información, consulte la [página del componente de tarjetas](../"
+"components-card/)."
 
 #: content/docs/use/kirigami/components-actiontoolbar.md:0
 msgid "Action Tool Bars"
@@ -1449,11 +1339,6 @@ msgstr ""
 "actiontoolbar/actiontoolbar-alignment.png)"
 
 #: content/docs/use/kirigami/components-card.md:0
-#, fuzzy
-#| msgid ""
-#| "A card serves as overview and an entry point for more detailed "
-#| "information and can offer direct access to the most important actions on "
-#| "an item.\n"
 msgid ""
 "A card serves as an overview and entry point for more detailed information "
 "and can offer direct access to the most important actions of an item.\n"
@@ -1615,7 +1500,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-card.md:103
 msgid "Important"
-msgstr ""
+msgstr "Importante"
 
 #: content/docs/use/kirigami/components-card.md:105
 msgid ""
@@ -1656,18 +1541,13 @@ msgid "CardsListView"
 msgstr "CardsListView"
 
 #: content/docs/use/kirigami/components-card.md:153
-#, fuzzy
-#| msgid ""
-#| "A [`Kirigami.CardsListView`](docs:kirigami2;CardsListView) is a list view "
-#| "that can be used with [`Kirigami.AbstractCard`](docs:kirigami2;"
-#| "AbstractCard) components."
 msgid ""
 "A [Kirigami.CardsListView](docs:kirigami2;CardsListView) is a list view that "
 "can be used with [AbstractCard](docs:kirigami2;AbstractCard) components."
 msgstr ""
-"Una [`Kirigami.CardsListView`](docs:kirigami2;CardsListView) es una vista de "
-"lista que se puede usar con componentes [`Kirigami.AbstractCard`](docs:"
-"kirigami2;AbstractCard)."
+"Una [Kirigami.CardsListView](docs:kirigami2;CardsListView) es una vista de "
+"lista que se puede usar con componentes [AbstractCard](docs:kirigami2;"
+"AbstractCard)."
 
 #: content/docs/use/kirigami/components-card.md:155
 #, fuzzy
@@ -1737,16 +1617,12 @@ msgid "CardsGridView"
 msgstr "CardsGridView"
 
 #: content/docs/use/kirigami/components-card.md:217
-#, fuzzy
-#| msgid ""
-#| "Use a [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
-#| "CardsGridView) to display cards in a grid."
 msgid ""
 "Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display "
 "cards in a grid."
 msgstr ""
-"Use un [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
-"CardsGridView) para mostrar tarjetas en una cuadrícula."
+"Use un [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) para mostrar "
+"tarjetas en una cuadrícula."
 
 #: content/docs/use/kirigami/components-card.md:219
 #, fuzzy
@@ -1916,10 +1792,6 @@ msgstr ""
 "casos de uso específicos."
 
 #: content/docs/use/kirigami/components-controls.md:53
-#, fuzzy
-#| msgid ""
-#| "In this example, we set the visibility of an in-line drawer according to "
-#| "the status of a toggleable button:"
 msgid ""
 "In this example, we set the visibility of an inline drawer according to the "
 "status of a toggleable button:"
@@ -1941,12 +1813,6 @@ msgstr ""
 "togglebutton.png)"
 
 #: content/docs/use/kirigami/components-controls.md:90
-#, fuzzy
-#| msgid ""
-#| "With the default Breeze theme in KDE Plasma it can be hard to tell "
-#| "whether a button is toggled, since buttons are coloured blue when they "
-#| "are clicked on. Make sure you take this into account when creating your "
-#| "application: a different control might be more user-friendly."
 msgid ""
 "With the default Breeze theme in KDE Plasma it can be hard to tell whether a "
 "button is toggled, since buttons are coloured blue when they are clicked on. "
@@ -2201,18 +2067,12 @@ msgid ""
 msgstr ""
 
 #: content/docs/use/kirigami/components-controls.md:230
-#, fuzzy
-#| msgid ""
-#| "By default, sliders go left to right to increase (and bottom up to "
-#| "increase when vertical). The coloration provides a visual indicator of "
-#| "how large the value you are selecting is."
 msgid ""
 "The coloration provides a visual indicator of how large the value you are "
 "selecting is."
 msgstr ""
-"De forma predeterminada, los deslizadores van de izquierda a derecha para "
-"aumentar (o de abajo hacia arriba para cuando son verticales). La coloración "
-"proporciona un indicador visual de la magnitud del valor seleccionado."
+"La coloración proporciona un indicador visual de la magnitud del valor "
+"seleccionado."
 
 #: content/docs/use/kirigami/components-controls.md:232
 msgid "Sliders have a few important properties we must pay attention to:"
@@ -2221,42 +2081,33 @@ msgstr ""
 "prestar atención:"
 
 #: content/docs/use/kirigami/components-controls.md:234
-#, fuzzy
-#| msgid ""
-#| "`value`: contains the value at which the handle is placed, and can also "
-#| "be set manually to provide a default starting value"
 msgid ""
 "[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-"
 "prop): contains the value at which the handle is placed, and can also be set "
 "manually to provide a default starting value"
 msgstr ""
-"`value`: contiene el valor en el que se coloca el asa; también se puede "
+"[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-"
+"prop): contiene el valor en el que se coloca el asa; también se puede "
 "definir manualmente para proporcionar un valor inicial predeterminado"
 
 #: content/docs/use/kirigami/components-controls.md:235
-#, fuzzy
-#| msgid ""
-#| "`to`: defines the range of the slider by specifying the maximum value it "
-#| "can go to"
 msgid ""
 "[to](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html#to-prop): "
 "defines the range of the slider by specifying the maximum value it can go to"
 msgstr ""
-"`to`: define el intervalo del deslizador indicando el valor máximo hasta el "
-"que puede llegar"
+"[to](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html#to-prop): "
+"define el intervalo del deslizador indicando el valor máximo hasta el que "
+"puede llegar"
 
 #: content/docs/use/kirigami/components-controls.md:236
-#, fuzzy
-#| msgid ""
-#| "`orientation`: allows the slider to be set to a vertical orientation with "
-#| "`Qt.Vertical`"
 msgid ""
 "[orientation](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider."
 "html#orientation-prop): allows the slider to be set to a vertical "
 "orientation with `Qt.Vertical`"
 msgstr ""
-"`orientation`: permite situar el deslizador verticalmente si se usa el valor "
-"`Qt.Vertical`"
+"[orientation](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider."
+"html#orientation-prop): permite situar el deslizador verticalmente si se usa "
+"el valor `Qt.Vertical`"
 
 #: content/docs/use/kirigami/components-controls.md:255
 #, fuzzy
@@ -2309,10 +2160,8 @@ msgstr ""
 "controls/controls-tickmarkedsliders.png)"
 
 #: content/docs/use/kirigami/components-controls.md:286
-#, fuzzy
-#| msgid "Range slider"
 msgid "Range sliders"
-msgstr "Deslizador de intervalo"
+msgstr "Deslizadores de intervalo"
 
 #: content/docs/use/kirigami/components-controls.md:288
 #, fuzzy
@@ -2487,14 +2336,11 @@ msgstr ""
 "`header` del cajón global."
 
 #: content/docs/use/kirigami/components-drawers.md:101
-#, fuzzy
-#| msgid ""
-#| "Our global drawer now shows the search bar component we set as the header."
 msgid ""
 "Our global drawer now shows the search bar component we set as the header"
 msgstr ""
 "Nuestro cajón global muestra ahora el componente de barra de búsqueda que "
-"hemos definido como cabecera."
+"hemos definido como cabecera"
 
 #: content/docs/use/kirigami/components-drawers.md:108
 msgid "Adapting for the desktop"
@@ -2619,10 +2465,8 @@ msgstr ""
 "icon-naming-spec/icon-naming-spec-latest.html)."
 
 #: content/docs/use/kirigami/components-drawers.md:207
-#, fuzzy
-#| msgid "Drawers"
 msgid "Context Drawers"
-msgstr "Cajones"
+msgstr "Cajones de contexto"
 
 #: content/docs/use/kirigami/components-drawers.md:209
 msgid ""
@@ -2654,11 +2498,11 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-drawers.md:226
 msgid "Context drawer with contextual actions hidden"
-msgstr ""
+msgstr "Cajón de contexto con acciones de contexto ocultas"
 
 #: content/docs/use/kirigami/components-drawers.md:228
 msgid "Context drawer showing all contextual actions"
-msgstr ""
+msgstr "Cajón de contexto mostrando todas las acciones de contexto"
 
 #: content/docs/use/kirigami/components-drawers.md:234
 msgid ""
@@ -2672,7 +2516,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-drawers.md:240
 msgid "Same example above, running in mobile mode"
-msgstr ""
+msgstr "El mismo ejemplo anterior, ejecutado en modo móvil"
 
 #: content/docs/use/kirigami/components-drawers.md:246
 msgid "Context drawer open in mobile mode"
@@ -2778,16 +2622,12 @@ msgid "Set modal to false to make this drawer inline!"
 msgstr "Defina `modal` a falso para hacer que este cajón esté en línea."
 
 #: content/docs/use/kirigami/components-drawers.md:306
-#, fuzzy
-#| msgid "Modal drawer on the bottom edge of the screen."
 msgid "Modal drawer on the bottom edge of the screen"
-msgstr "Cajón modal en el borde inferior de la pantalla."
+msgstr "Cajón modal en el borde inferior de la pantalla"
 
 #: content/docs/use/kirigami/components-drawers.md:308
-#, fuzzy
-#| msgid "Inline drawer on the bottom edge of the screen."
 msgid "Inline drawer on the bottom edge of the screen"
-msgstr "Cajón en línea en el borde inferior de la pantalla."
+msgstr "Cajón en línea en el borde inferior de la pantalla"
 
 #: content/docs/use/kirigami/components-drawers.md:316
 #, fuzzy
@@ -2796,11 +2636,6 @@ msgid "A use case for bottom overlay drawers: NeoChat"
 msgstr "Un caso de uso para cajones inferiores superpuestos: NeoChat"
 
 #: content/docs/use/kirigami/components-drawers.md:318
-#, fuzzy
-#| msgid ""
-#| "NeoChat uses bottom overlay drawers to provide user with a number of "
-#| "actions they can perform on a message they have long-pressed. Here is a "
-#| "simplified example of what that looks like:"
 msgid ""
 "NeoChat uses bottom overlay drawers to provide the user with a number of "
 "actions they can perform on a message they have long pressed. Here is a "

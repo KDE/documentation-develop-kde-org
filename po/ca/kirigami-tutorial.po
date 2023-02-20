@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-08 10:13+0100\n"
+"PO-Revision-Date: 2023-02-19 22:37+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -49,15 +49,6 @@ msgid "Learning to create your first applications using Kirigami\n"
 msgstr "Aprenent a crear les vostres primeres aplicacions amb el Kirigami\n"
 
 #: content/docs/use/kirigami/_index.md:22
-#, fuzzy
-#| msgid ""
-#| "This tutorial will guide you through the process of creating your own "
-#| "convergent application using the [Kirigami framework](/frameworks/"
-#| "kirigami). A *convergent application*, in this context, means people can "
-#| "use the program easily regardless of the device it is running on. If it "
-#| "is on a desktop computer, it will adapt to a large screen and a mouse and "
-#| "keyboard; if it is being used on a mobile, it will accept input from a "
-#| "touchscreen and adapt to a smaller portrait screen. And so on."
 msgid ""
 "This tutorial will guide you through the process of creating your own "
 "convergent application using the [Kirigami framework](/frameworks/kirigami). "
@@ -73,8 +64,8 @@ msgstr ""
 "que les persones poden utilitzar el programa amb facilitat independentment "
 "del dispositiu en el qual s'estigui executant. Si està en un ordinador "
 "d'escriptori, s'adaptarà a una pantalla gran amb un ratolí i teclat. Si està "
-"en un mòbil, acceptarà l'entrada d'una pantalla tàctil i s'adaptarà a una "
-"pantalla vertical més petita. I així successivament."
+"en un dispositiu mòbil, acceptarà l'entrada d'una pantalla tàctil i "
+"s'adaptarà a una pantalla vertical més petita. I així successivament."
 
 #: content/docs/use/kirigami/_index.md:30
 msgid ""
@@ -94,13 +85,6 @@ msgstr ""
 "aplicacions convergents."
 
 #: content/docs/use/kirigami/_index.md:36
-#, fuzzy
-#| msgid ""
-#| "While you will use QML to create the visual part of your application, the "
-#| "business logic -- the code that does the heavy lifting for your "
-#| "application's functionality -- is usually created in C++ for performance "
-#| "reasons. We will also explore how to integrate our business logic with "
-#| "our UI in the tutorials below."
 msgid ""
 "While you will use QML to create the visual part of your application, the "
 "business logic—the code that does the heavy lifting for your application's "
@@ -109,7 +93,7 @@ msgid ""
 "tutorials below."
 msgstr ""
 "Si bé fareu servir QML per a crear la part visual de la vostra aplicació, la "
-"lògica empresarial farà que el codi per a la pesada la feina de la "
+"lògica empresarial farà que el codi per a la feina pesada de la "
 "funcionalitat de la vostra aplicació generalment es creï en C++ per raons de "
 "rendiment. També explorarem com integrar la nostra lògica empresarial amb la "
 "nostra interfície d'usuari en les guies d'aprenentatge següents."
@@ -123,24 +107,22 @@ msgid "Informations about your application"
 msgstr "Informació sobre la vostra aplicació"
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:10
-#, fuzzy
-#| msgid ""
-#| "The About Page allows you to have a page that shows the copyright notice "
-#| "of the application together with the contributors and some information of "
-#| "which platform it's running on."
 msgid ""
 "[Kirigami.AboutPage](docs:kirigami2;AboutPage) allows you to have a page "
 "that shows the copyright notice of the application together with the list of "
 "contributors and some information of which platform it's running on."
 msgstr ""
-"La pàgina «Quant al» permet tenir una pàgina que mostra les notes dels drets "
-"d'autor de l'aplicació juntament amb els col·laboradors i certa informació "
-"sobre la plataforma en la qual s'està executant."
+"La [Kirigami.AboutPage](docs:kirigami2;AboutPage) permet tenir una pàgina "
+"que mostra les notes dels drets d'autor de l'aplicació juntament amb la "
+"llista dels col·laboradors i certa informació sobre la plataforma en la qual "
+"s'està executant."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:12
 msgid ""
 "First, we are going to edit our `main.cpp` file from previous tutorials."
 msgstr ""
+"Primer, editarem el nostre fitxer `main.cpp` de les guia d'aprenentatge "
+"anteriors."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:14
 #: content/docs/use/kirigami/introduction-getting_started.md:101
@@ -149,14 +131,6 @@ msgstr "main.cpp"
 
 # skip-rule: t-acc_obe,t-pu_sp,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-add_about_page.md:18
-#, fuzzy
-#| msgid ""
-#| "In the cpp file we include `KAboutData` and the `.h` file we just "
-#| "created, [KAboutData](docs:kcoreaddons;KAboutData) is a core KDE "
-#| "Frameworks component that stores information about an application, which "
-#| "can then be reused by many other KDE Frameworks components. We "
-#| "instantiate a new `KAboutData` object with its fairly complete default "
-#| "constructor and add author information."
 msgid ""
 "In the `main.cpp` file we include [KAboutData](docs:kcoreaddons;KAboutData), "
 "a core KDE frameworks component that lets us store information about our "
@@ -164,20 +138,15 @@ msgid ""
 "Frameworks components. We instantiate a new `aboutData` object with its "
 "fairly complete default constructor and add author information."
 msgstr ""
-"En el fitxer cpp incloem `KAboutData` i acabem de crear el fitxer `.h`, "
-"[KAboutData](docs:kcoreaddons;KAboutData) és un component central dels "
-"Frameworks del KDE que emmagatzema la informació sobre una aplicació, la "
-"qual després pot ser reutilitzada per molts altres components dels "
-"Frameworks del KDE. Instanciem un objecte nou `KAboutData` amb el seu "
-"constructor predeterminat força complet i afegim la informació de l'autor."
+"En el fitxer `main.cpp` incloem [KAboutData](docs:kcoreaddons;KAboutData), "
+"un component central dels Frameworks del KDE que permet emmagatzemar la "
+"informació sobre l'aplicació. Aquesta informació després pot ser "
+"reutilitzada  per molts altres components dels Frameworks del KDE. "
+"Instanciem un objecte `aboutData` nou amb el seu constructor predeterminat "
+"força complet i afegim la informació de l'autor."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-add_about_page.md:20
-#, fuzzy
-#| msgid ""
-#| "After all the required information has been set, we call `KAboutData::"
-#| "setApplicationData` to initialize the properties of the [QApplication ]"
-#| "(https://doc.qt.io/qt-5/qapplication.html) object."
 msgid ""
 "After all the required information has been set, we call [KAboutData::"
 "setApplicationData](docs:kcoreaddons;KAboutData::setApplicationData) to "
@@ -185,8 +154,9 @@ msgid ""
 "QApplication) object."
 msgstr ""
 "Una vegada s'ha establert tota la informació requerida, cridem a "
-"`KAboutData::setApplicationData` per a inicialitzar les propietats de "
-"l'objecte [QApplication ](https://doc.qt.io/qt-5/qapplication.html)."
+"[KAboutData::setApplicationData](docs:kcoreaddons;KAboutData::"
+"setApplicationData) per a inicialitzar les propietats de l'objecte "
+"[QApplication ](docs:qtwidgets;QApplication)."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:22
 msgid ""
@@ -194,6 +164,9 @@ msgid ""
 "qmlRegisterSingletonType). This is used to allow us to import the C++ code "
 "as a module in our `main.qml` with `import org.kde.example 1.0`."
 msgstr ""
+"Després creem un [qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+"qmlRegisterSingletonType). Això s'utilitza per permetre importar el codi C++ "
+"com un mòdul en el nostre `main.qml` amb `import org.kde.example 1.0`."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:24
 msgid ""
@@ -204,6 +177,13 @@ msgid ""
 "latter's case, we use a [lambda](https://en.cppreference.com/w/cpp/language/"
 "lambda) to instantiate the `aboutData` of our application in place."
 msgstr ""
+"El seu primer argument és l'URI que s'utilitzarà per a la importació, el "
+"segon i el tercer són les versions majors i menors respectivament, el quart "
+"és el nom del tipus, el nom que cridarem quan accedim al nostre tipus "
+"`About`, i l'últim és una referència a l'objecte C++ que està exposat al "
+"QML. En el cas d'aquest últim, utilitzem una [lambda](https://en."
+"cppreference.com/w/cpp/language/lambda) per a instanciar l'`aboutData` de la "
+"nostra aplicació en el seu lloc."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:26
 #: content/docs/use/kirigami/introduction-getting_started.md:62
@@ -221,6 +201,14 @@ msgid ""
 "kcoreaddons;KAboutData::applicationData) object. We exposed precisely that "
 "in our `main.cpp` and called it `About`, so we can pass it here."
 msgstr ""
+"Primer, utilitzarem la importació que hem definit al fitxer `main.cpp`, és a "
+"dir `org.kde.example`. Després s'afegeix [Kirigami.Action](docs:kirigami2;"
+"Action) al nostre [calaix global](docs:kirigami2;GlobalDrawer) que ens "
+"enviarà a la pàgina «Quant al», i crearà un component amb un [Kirigami."
+"AboutPage](docs:kirigami2;AboutPage) en ell, que espera un objecte "
+"[KAboutData::applicationData()](docs:kcoreaddons;KAboutData::"
+"applicationData). Hem exposat precisament això en el nostre `main.cpp` i "
+"l'hem anomenat `About`, de manera que el podem passar aquí."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:33
 msgid "CMakeLists"
@@ -233,12 +221,18 @@ msgid ""
 "command/find_package.html) call. It is needed for [KAboutData](docs:"
 "kcoreaddons;KAboutData)."
 msgstr ""
+"Al fitxer `CMakeLists.txt` de la nostra carpeta de nivell superior, "
+"assegureu-vos de tenir `CoreAddons` a la crida [find.package()](https://"
+"cmake.org/cmake/help/latest/command/find_package.html). És necessari per a "
+"[KAboutData](docs:kcoreaddons;KAboutData)."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:41
 msgid ""
 "In the `CMakeLists.txt` file in the `src/` directory, nothing is needed "
 "since we instantiated out `aboutData` in place."
 msgstr ""
+"En el fitxer `CMakeLists.txt` en el directori `src/`, no es necessita res, "
+"ja que hem instanciat `aboutData` al lloc."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:44
 msgid "Running the application"
@@ -297,26 +291,16 @@ msgstr ""
 
 # skip-rule: t-pu_sp,t-acc_obe
 #: content/docs/use/kirigami/advanced-connect_backend.md:14
-#, fuzzy
-#| msgid ""
-#| "Add the following content to the new header file (the one with the `.h` "
-#| "extension):"
 msgid "Add the following content to the new header file (`backend.h`):"
-msgstr ""
-"Afegiu el següent contingut al nou fitxer de capçalera nou (el que té "
-"l'extensió `.h`):"
+msgstr "Afegiu el contingut següent al fitxer de capçalera nou (`backend.h`):"
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:29
-#, fuzzy
-#| msgid ""
-#| "The cpp file containing the definitions is similarly empty right now, it "
-#| "should contain something like the following:"
 msgid ""
 "The `backend.cpp` file containing the definitions is similarly empty right "
 "now, it should contain something like the following:"
 msgstr ""
-"El fitxer cpp que conté les definicions en aquest moment està igualment "
-"buit, hauria de contenir quelcom com el següent:"
+"El fitxer `backend.cpp` que conté les definicions en aquest moment està "
+"igualment buit, hauria de contenir quelcom com el següent:"
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-connect_backend.md:40
@@ -338,6 +322,9 @@ msgid ""
 "QQmlApplicationEngine), add the [type registration](https://doc.qt.io/qt-5/"
 "qtqml-cppintegration-definetypes.html) to `main.cpp` as follows:"
 msgstr ""
+"Just després de crear el [QQmlApplicationEngine](docs:qtqml;"
+"QQmlApplicationEngine), afegiu el [registre de tipus](https://doc.qt.io/qt-5/"
+"qtqml-cppintegration-definetypes.html) a `main.cpp` de la manera següent:"
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-connect_backend.md:48
@@ -348,12 +335,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-connect_backend.md:50
-#, fuzzy
-#| msgid ""
-#| "From now on, the backend will be known to QML as `Backend`. It is "
-#| "contained in a module called `org.kde.example`. Since the module is part "
-#| "of the application, you don't need to worry about versioning it, just "
-#| "stay with 1.0 and use it consistently throughout the application."
 msgid ""
 "From now on, the backend will be known to QML as `Backend`. It is contained "
 "in a module called `org.kde.example`. Since the module is part of the "
@@ -362,8 +343,8 @@ msgid ""
 msgstr ""
 "A partir d'ara, el QML coneixerà el dorsal com a `Backend`. Està contingut "
 "en un mòdul anomenat `org.kde.example`. Atès que el mòdul forma part de "
-"l'aplicació, no us haureu de preocupar pel control de versions, només cal "
-"que us quedeu amb 1.0 i utilitzeu-lo constantment en tota l'aplicació."
+"l'aplicació, no us haureu de preocupar pel control de versions, només empreu "
+"`1.0` i utilitzeu-ho coherentment en tota l'aplicació."
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-connect_backend.md:52
@@ -388,55 +369,38 @@ msgid ""
 "Right under the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, add a new "
 "[Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY)."
 msgstr ""
+"Just a sota de la macro [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT), afegiu "
+"una [Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY) nova."
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:65
-#, fuzzy
-#| msgid ""
-#| "That seems like quite a lot for a simple property we'll use to show some "
-#| "text from the backend, right? But a closer look reveals that this can "
-#| "already run logic when the property is read by the user interface, and "
-#| "when it is written. It will automatically inform frontend and backend of "
-#| "changes."
 msgid ""
 "This may seem like a lot of code to just read and write some code from the "
 "backend. However, a closer look reveals that reading the property from the "
 "UI can already run some logic—same when it is written to. In this case, it "
 "will automatically inform the frontend and backend of changes."
 msgstr ""
-"Això sembla molt per a una propietat senzilla que utilitzarem per a mostrar "
-"el text del dorsal. Oi? Però una mirada més atenta revela que això ja pot "
-"executar la lògica quan la propietat és llegida per la interfície d'usuari i "
-"quan s'ha escrit. Informarà automàticament al frontal i al dorsal dels "
-"canvis."
+"Això sembla molt codi per a només llegir i escriure codi des del dorsal. "
+"Però una mirada més atenta revela que llegir la propietat des de la IU pot "
+"executar una lògica, i el mateix quan s'escriu. En aquest cas, informarà "
+"automàticament al frontal i al dorsal dels canvis."
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:67
-#, fuzzy
-#| msgid ""
-#| "The reading and writing is based on getter and setter functions, so add a "
-#| "new private attribute to your class, like this, and add getter and setter "
-#| "functions."
 msgid ""
 "The reading and writing is based on the concept of [getter and setter "
 "functions](https://www.w3schools.com/cpp/cpp_encapsulation.asp). Go ahead "
 "and add a new private attribute to your class that holds the data, as well "
 "as the relevant getter and setter functions."
 msgstr ""
-"La lectura i escriptura es basen en les funcions capturador i establidor, de "
-"manera que afegiu un atribut privat nou a la vostra classe, com aquest, i "
-"afegiu les funcions capturador i establidor."
+"La lectura i escriptura es basen en les [funcions capturador i establidor]"
+"(https://www.w3schools.com/cpp/cpp_encapsulation.asp). Continueu i afegiu un "
+"atribut privat nou a la vostra classe que contingui les dades, així com les "
+"funcions capturador i establidor rellevants."
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:73
 msgid "To the public section, add"
 msgstr "A la secció pública, afegiu"
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:80
-#, fuzzy
-#| msgid ""
-#| "The first function is the getter, the second the setter, and the third a "
-#| "signal that is emitted when the property was changed. The signal doesn't "
-#| "need any implementation in the cpp file, since it doesn't do much more "
-#| "than being emitted, but the getter and setter need to be implemented "
-#| "similar to the following:"
 msgid ""
 "The first function is the getter, the second the setter, and the third a "
 "signal that is emitted when the property is changed. The signal doesn't need "
@@ -446,8 +410,9 @@ msgid ""
 msgstr ""
 "La primera funció és el capturador, la segona l'establidor i la tercera un "
 "senyal que s'emet quan es canvia la propietat. El senyal no necessita cap "
-"implementació en el fitxer cpp, ja que no fa gaire més que ser emès, però el "
-"capturador i l'establidor s'han d'implementar de manera similar a la següent:"
+"implementació en el fitxer `backend.cpp`, ja que no fa gaire més que ser "
+"emès, però el capturador i l'establidor s'han d'implementar de manera "
+"similar a la següent:"
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:94
 msgid ""
@@ -459,18 +424,13 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-connect_backend.md:96
-#, fuzzy
-#| msgid ""
-#| "To display the text, in `main.qml` add a heading displaying it right "
-#| "under the text property of the `Kirigami.Page` element that is already "
-#| "contained in the template."
 msgid ""
 "To display the text, add a heading to `main.qml` under the `title` property "
 "of the [Kirigami.Page](docs:kirigami2;Page) element already contained in the "
 "template."
 msgstr ""
-"Per a mostrar el text, en el `main.qml` afegiu una capçalera que el mostri "
-"just sota la propietat de text de l'element `Kirigami.Page` que ja està "
+"Per a mostrar el text, afegiu una capçalera en el `main.qml` sota la "
+"propietat de l'element [Kirigami.Page](docs:kirigami2;Page) que ja està "
 "contingut a la plantilla."
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:98
@@ -544,13 +504,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-maincpp.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
-#| "Started' page so that we can better understand what is going on in the "
-#| "central C++ file of our application. While this is a basic `main.cpp`, "
-#| "the features we will go over will remain essential no matter what kind of "
-#| "application it is that you decide to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
 "Started' page so that we can better understand what is going on in the "
@@ -562,7 +515,7 @@ msgstr ""
 "començar* perquè puguem comprendre millor el que està succeint en el fitxer "
 "central de C++ de la nostra aplicació. Si bé aquest és un `main.cpp` bàsic, "
 "les característiques que repassarem seguiran sent essencials, sense importar "
-"el tipus d'aplicació que decidiu crear."
+"la classe d'aplicació que decidiu crear."
 
 #: content/docs/use/kirigami/advanced-maincpp.md:17
 msgid "What it does"
@@ -570,22 +523,17 @@ msgstr "Què és el que fa"
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-maincpp.md:21
-#, fuzzy
-#| msgid ""
-#| "First we must include a number of Qt header files, allowing us to use "
-#| "their functions. In this case, we include a number of Qt headers that "
-#| "handle application logic, reading QML files, and accessing files defined "
-#| "in `resources.qrc`."
 msgid ""
 "First we must include a number of Qt [header files](https://www.learncpp.com/"
 "cpp-tutorial/header-files/), allowing us to use their functions. In this "
 "case, we include a number of Qt headers that handle application logic, "
 "reading QML files, and accessing files defined in `resources.qrc`."
 msgstr ""
-"Primer hem d'incloure una sèrie de fitxers de capçalera de les Qt, i això "
-"ens permetrà utilitzar les seves funcions. En aquest cas, incloem una sèrie "
-"de capçaleres de les Qt que manegen la lògica de l'aplicació, llegeixen els "
-"fitxers en QML i accedeixen als fitxers definits en el `resources.qrc`."
+"Primer hem d'incloure una sèrie de [fitxers de capçalera](https://www."
+"learncpp.com/cpp-tutorial/header-files/) de les Qt, i això ens permetrà "
+"utilitzar les seves funcions. En aquest cas, incloem una sèrie de capçaleres "
+"de les Qt que manegen la lògica de l'aplicació, llegeixen els fitxers en QML "
+"i accedeixen als fitxers definits en el `resources.qrc`."
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-maincpp.md:23
@@ -602,22 +550,16 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-maincpp.md:25
-#, fuzzy
-#| msgid ""
-#| "We then create a [`QApplication`](https://doc.qt.io/qt-5/qapplication."
-#| "html#QApplication) instance which we call `app`. We pass `argc` and "
-#| "`argv` to the constructor here, letting Qt parse and use arguments meant "
-#| "to affect Qt."
 msgid ""
 "We then create a [QApplication](docs:qtwidgets;QApplication) instance which "
 "we call `app`. We then pass [argc and argv](https://www.learncpp.com/cpp-"
 "tutorial/command-line-arguments/) to the constructor, letting Qt parse and "
 "use arguments."
 msgstr ""
-"Després hem creat una instància [`QApplication`](https://doc.qt.io/qt-5/"
-"qapplication.html#QApplication) a la que cridem `app`. Aquí passem `argc` i "
-"`argv` al constructor, deixant que les Qt analitzin i utilitzin arguments "
-"destinats a afectar a les Qt."
+"Després creem una instància [QApplication](docs:qtwidgets;QApplication) a la "
+"que anomenarem `app`. Aquí passem [argc i argv](https://www.learncpp.com/cpp-"
+"tutorial/command-line-arguments/) al constructor, deixant que les Qt "
+"analitzin i utilitzin arguments."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-maincpp.md:27
@@ -867,12 +809,21 @@ msgid ""
 "modules](https://api.kde.org/ecm/) becomes something like `find_package(KF5 "
 "COMPONENTS Kirigami2)`."
 msgstr ""
+"Si esteu mirant d'afegir qualsevol component llistat a la [documentació de "
+"l'API de KDE](https://api.kde.org/) a la vostra aplicació, podeu comprovar "
+"la barra lateral dreta per a com afegir el component amb el CMake. Per "
+"exemple, per al [Kirigami2](docs:kirigami2;), trobareu quelcom com "
+"`find_package(KF5Kirigami2)`, el qual amb l'addició de l'[extra-cmake-"
+"modules](https://api.kde.org/ecm/) es converteix en quelcom com "
+"`find_package(KF5 COMPONENTS Kirigami2)`."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:41
 msgid ""
 "Pay close attention to your included components, as omitting ones used in "
 "our code will stop our application from compiling."
 msgstr ""
+"Pareu molta atenció als components inclosos, ja que l'omissió dels "
+"utilitzats en el nostre codi aturarà la compilació de l'aplicació."
 
 # skip-rule: t-acc_obe,punctuation-simple-quotes
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:45
