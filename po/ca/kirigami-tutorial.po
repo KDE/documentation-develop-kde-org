@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-19 22:37+0100\n"
+"PO-Revision-Date: 2023-02-20 22:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -563,15 +563,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-maincpp.md:27
-#, fuzzy
-#| msgid ""
-#| "We also set some metadata relating to the application. These include the "
-#| "organisation that created the application, the organisation's website, "
-#| "and the name of the application. We set these properties in "
-#| "[`QCoreApplication`](https://doc.qt.io/qt-5/qcoreapplication.html), an "
-#| "object which provides the event loop for applications regardless of "
-#| "whether they have a GUI or not (so if we ran our program without the GUI, "
-#| "this metadata would still be set)."
 msgid ""
 "We also set some metadata relating to the application. These include the "
 "organisation that created the application, the organisation's website, and "
@@ -582,22 +573,17 @@ msgid ""
 "of whether they have a GUI or not (so if we ran our program without the GUI, "
 "this metadata would still be set)."
 msgstr ""
-"També establim algunes metadades relacionades amb l'aplicació. Aquests "
+"També establim algunes metadades relacionades amb l'aplicació. Aquestes "
 "inclouen l'organització que va crear l'aplicació, el lloc web de "
-"l'organització i el nom de l'aplicació. Configurem aquestes propietats en la "
-"[`QCoreApplication`](https://doc.qt.io/qt-5/qcoreapplication.html), un "
-"objecte que proporciona el bucle d'esdeveniments per a les aplicacions, "
+"l'organització i el nom de l'aplicació. Configurem aquestes propietats en el "
+"[QApplication](docs:qtwidgets;QApplication), un objecte que ve de "
+"[QCoreApplication](docs:qtcore;QCoreApplication) i proporciona el [bucle "
+"d'esdeveniments](docs:qtcore;QCoreApplication::exec) per a les aplicacions, "
 "independentment de si tenen una IGU o no (pel que si executem el nostre "
 "programa sense la IGU, aquestes metadades encara s'establiran)."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-maincpp.md:29
-#, fuzzy
-#| msgid ""
-#| "The [`QQmlApplicationEngine`](https://doc.qt.io/qt-5/"
-#| "qqmlapplicationengine.html) lets us load an application from a QML file, "
-#| "which we do in the next line. In `engine.load(QUrl(QStringLiteral(\"qrc:/"
-#| "main.qml\")));` we load our QML from a URL in our `resources.qrc` file."
 msgid ""
 "The [QQmlApplicationEngine](docs:qtqml;QQmlApplicationEngine) lets us load "
 "an application from a QML file, which we do in the next line. In `engine."
@@ -605,18 +591,14 @@ msgid ""
 "in our [Qt Resource File](https://doc.qt.io/qt-6/resources.html) (`resources."
 "qrc`)."
 msgstr ""
-"El [`QQmlApplicationEngine`](https://doc.qt.io/qt-5/qqmlapplicationengine."
-"html) permet carregar una aplicació des d'un fitxer QML, el qual fem en la "
-"línia següent. A `engine.load(QUrl(QStringLiteral(\"qrc:/main.qml\")));` "
-"carreguem el nostre QML des d'un URL al nostre fitxer `resources.qrc`."
+"El [QQmlApplicationEngine](docs:qtqml;QQmlApplicationEngine) permet carregar "
+"una aplicació des d'un fitxer QML, el qual fem en la línia següent. A "
+"`engine.load(QUrl(QStringLiteral(\"qrc:/main.qml\")));` carreguem el nostre "
+"QML des d'un URL en el nostre [Qt Resource File](https://doc.qt.io/qt-6/"
+"resources.html) (`resources.qrc`)."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-maincpp.md:31
-#, fuzzy
-#| msgid ""
-#| "Next, we check if our engine correctly loaded the QML file by checking "
-#| "that the engine's `rootObjects` list is not empty. We can then run our "
-#| "application with `app.exec()`."
 msgid ""
 "Next, we check if our engine correctly loaded the QML file by checking that "
 "the engine's [rootObjects()](docs:qtqml;QQmlApplicationEngine::rootObjects) "
@@ -624,8 +606,10 @@ msgid ""
 "qtcore;QCoreApplication::exec)."
 msgstr ""
 "A continuació, comprovem si el nostre motor ha carregat correctament el "
-"fitxer QML comprovant que la llista `rootObjects` del motor no està buida. "
-"Després podem executar la nostra aplicació amb `app.exec()`."
+"fitxer QML comprovant que la llista `[rootObjects()](docs:qtqml;"
+"QQmlApplicationEngine::rootObjects)` del motor no està buida. Després podem "
+"executar la nostra aplicació amb [app.exec()](docs:qtcore;QCoreApplication::"
+"exec)."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:0
 msgid "Understanding CMakeLists"
@@ -640,22 +624,16 @@ msgid "CMake"
 msgstr "CMake"
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:12
-#, fuzzy
-#| msgid ""
-#| "In our introductory tutorial, we used CMake as the build system for our "
-#| "application, but we only really paid close attention to one of our "
-#| "CMakeLists. Here, we're going to go over how CMakeLists work in a bit "
-#| "more detail."
 msgid ""
 "In our introductory tutorial, we used [CMake](https://cmake.org/) as the "
 "build system for our application, but we only really paid close attention to "
 "one of our `CMakeLists.txt` files. Here, we're going to go over how it works "
 "in a bit more detail."
 msgstr ""
-"En la nostra guia d'aprenentatge introductòria, emprem el CMake com el "
-"sistema de compilació per a la nostra aplicació, però només prestem molta "
-"atenció a una de les nostres CMakeLists. Aquí, repassarem com funcionen les "
-"CMakeLists amb una mica més de detall."
+"En la nostra guia d'aprenentatge introductòria, emprem el [CMake](https://"
+"cmake.org/) com el sistema de compilació per a la nostra aplicació, però "
+"només parem molta atenció a un dels nostres fitxers `CMakeLists.txt`. Aquí, "
+"repassarem com funcionen amb una mica més de detall."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:14
 msgid ""
@@ -671,11 +649,9 @@ msgid "CMakeLists.txt"
 msgstr "CMakeLists.txt"
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:18
-#, fuzzy
-#| msgid "You might remember this CMakeLists file from the first tutorial:"
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
 msgstr ""
-"És possible que recordeu aquest fitxer CMakeLists de la primera guia "
+"És possible que recordeu aquest fitxer `CMakeLists.txt` de la primera guia "
 "d'aprenentatge:"
 
 # skip-rule: t-acc_obe
@@ -685,40 +661,30 @@ msgstr "La primera línia, `project(helloworld)` defineix el nom del projecte."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:24
-#, fuzzy
-#| msgid ""
-#| "After that, we are setting the versions of our needed tools. "
-#| "`cmake_minimum_required(VERSION 3.10)` sets the version of CMake we will "
-#| "be calling. We then use `set` to define variables (`KF5_MIN_VERSION` and "
-#| "`QT_MIN_VERSION`) containing the versions of the KDE Frameworks and Qt."
 msgid ""
 "After that, we set the versions of our needed tools. "
 "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be "
 "calling. We then use `set()` to define variables (`KF5_MIN_VERSION` and "
 "`QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgstr ""
-"Després d'això, establim les versions necessàries de les nostres eines. "
-"`cmake_minimum_required(VERSION 3.10)` estableix la versió de CMake que "
-"cridarem. Després utilitzem `set` per a definir les variables "
+"Després d'això, establim les versions de les nostres eines necessàries. "
+"`cmake_minimum_required(VERSION 3.16)` estableix la versió de CMake que "
+"cridarem. Després utilitzem `set()` per a definir les variables "
 "(`KF5_MIN_VERSION` i `QT_MIN_VERSION`) que contenen les versions dels "
 "Frameworks del KDE i de les Qt."
 
 # skip-rule: common-settings
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:26
-#, fuzzy
-#| msgid ""
-#| "Then we get to a section where we include a number of necessary CMake and "
-#| "KDE settings. You shouldn't worry too much about these lines for now and "
-#| "we won't need to change them in this tutorial."
 msgid ""
 "Then we get to a section where we include a number of necessary CMake and "
 "KDE settings by using [extra-cmake-modules](https://api.kde.org/ecm/). You "
 "shouldn't worry too much about these lines for now and we won't need to "
 "change them in this tutorial."
 msgstr ""
-"Després arribem a una secció on incloem una sèrie de configuracions "
-"necessàries de CMake i del KDE. Per ara no heu de preocupar-vos massa per "
-"aquestes línies i no necessitarem canviar-les en aquesta guia d'aprenentatge."
+"Després arribem a una secció on incloem una sèrie de paràmetres necessaris "
+"de CMake i del KDE fent servir [extra-cmake-modules](https://api.kde.org/"
+"ecm/). Per ara no heu de preocupar-vos massa per aquestes línies i no "
+"necessitarem canviar-les en aquesta guia d'aprenentatge."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:28
 msgid ""
@@ -739,12 +705,12 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:31
-#, fuzzy
-#| msgid "`find_package` finds and loads the external component."
 msgid ""
 "[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
 "html) finds and loads the external component."
-msgstr "`find_package` cerca i carrega el component extern."
+msgstr ""
+"[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
+"html) cerca i carrega el component extern."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:32
@@ -827,16 +793,12 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-simple-quotes
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:45
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake into the 'src' "
-#| "directory."
 msgid ""
 "The final line, `add_subdirectory(src)`, points CMake into the `src/` "
 "directory."
 msgstr ""
 "L'última línia, `add_subdirectory(src)`, apunta CMake a dins del directori "
-"*src*."
+"`src/`."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:49
 msgid ""
@@ -848,63 +810,47 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:51
-#, fuzzy
-#| msgid ""
-#| "`set` is used to set `helloworld_SRCS` to `main.cpp` and `resources.qrc` "
-#| "(if we decide to create additional C++ files we'll need to add them here "
-#| "too)"
 msgid ""
 "[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to set "
 "`helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to create "
 "additional C++ files we'll need to add them here too)"
 msgstr ""
-"`set` s'utilitza per a establir `helloworld_SRCS` al `main.cpp` i `resources."
-"qrc` (si decidim crear fitxers en C++ addicionals, també els haurem d'afegir "
-"aquí)."
+"[set()](https://cmake.org/cmake/help/latest/command/set.html) s'utilitza per "
+"a establir `helloworld_SRCS` al `main.cpp` i `resources.qrc` (si decidim "
+"crear fitxers en C++ addicionals, també els haurem d'afegir aquí)."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:52
-#, fuzzy
-#| msgid ""
-#| "`add_executable` takes care of naming our executable and grabbing the "
-#| "files needed to create it"
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of naming our executable and grabbing the "
 "files needed to create it"
 msgstr ""
-"`add_executable` s'encarrega d'anomenar el nostre executable i prendre els "
-"fitxers necessaris per a crear-lo."
+"`[add_executable()](https://cmake.org/cmake/help/latest/command/"
+"add_executable.html) s'encarrega d'anomenar el nostre executable i prendre "
+"els fitxers necessaris per a crear-lo."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:53
-#, fuzzy
-#| msgid ""
-#| "`target_link_libraries` dynamically links the libraries used in our code "
-#| "to our executable."
 msgid ""
 "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
 "to our executable."
 msgstr ""
-"`target_link_libraries` vincula dinàmicament les biblioteques utilitzades en "
-"el nostre codi amb el nostre executable."
+"[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
+"target_link_libraries.html) enllaça dinàmicament les biblioteques "
+"utilitzades en el nostre codi amb el nostre executable."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:57
-#, fuzzy
-#| msgid ""
-#| "Note that these libraries should match the components that we included in "
-#| "our previous CMakeLists.txt file - otherwise these components will not be "
-#| "included and our application won't compile."
 msgid ""
 "Note that these libraries should match the components that we included in "
 "our previous `CMakeLists.txt` file - otherwise these components will not be "
 "included and our application won't compile."
 msgstr ""
 "Cal tenir present que aquestes biblioteques han de coincidir amb els "
-"components que incloem en el nostre fitxer CMakeLists.txt anterior -en cas "
+"components que incloem en el nostre fitxer `CMakeLists.txt` anterior. En cas "
 "contrari, aquests components no s'inclouran i la nostra aplicació no "
-"compilarà-."
+"compilarà."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:61
 msgid "This setup will be useful when developing most Kirigami apps."
@@ -928,19 +874,15 @@ msgstr "Accions"
 
 #: content/docs/use/kirigami/components-actions.md:12
 #: content/docs/use/kirigami/introduction-actions.md:18
-#, fuzzy
-#| msgid ""
-#| "A Kirigami Action encapsulates a user interface action. We can use these "
-#| "to provide our applications with easy-to-reach actions that are essential "
-#| "to their functionality."
 msgid ""
 "A [Kirigami.Action](docs:kirigami2;Action) encapsulates a user interface "
 "action. We can use these to provide our applications with easy-to-reach "
 "actions that are essential to their functionality."
 msgstr ""
-"Una acció de Kirigami encapsula una acció de la interfície d'usuari. Podem "
-"utilitzar-les per a proporcionar a les nostres aplicacions accions de fàcil "
-"accés que són essencials per a la seva funcionalitat."
+"Una [Kirigami.Action](docs:kirigami2;Action) encapsula una acció de la "
+"interfície d'usuari. Podem utilitzar-les per a proporcionar a les nostres "
+"aplicacions accions de fàcil accés que són essencials per a la seva "
+"funcionalitat."
 
 #: content/docs/use/kirigami/components-actions.md:16
 msgid ""
@@ -2233,7 +2175,7 @@ msgstr ""
 msgid "Sliders have a few important properties we must pay attention to:"
 msgstr ""
 "Els controls lliscants tenen algunes propietats importants a les quals hem "
-"de prestar atenció:"
+"de parar atenció:"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/components-controls.md:234
@@ -3502,7 +3444,7 @@ msgstr "Crear una vista de llista bàsica"
 #: content/docs/use/kirigami/components-listview.md:21
 msgid "A list view has two essential properties we must pay attention to:"
 msgstr ""
-"Una vista de llista té dues propietats essencials a les quals hem de prestar "
+"Una vista de llista té dues propietats essencials a les quals hem de parar "
 "atenció:"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
@@ -4752,7 +4694,7 @@ msgid ""
 "function when triggered, closing the application."
 msgstr ""
 "Aquí, col·locarem el nostre calaix global dins de la finestra de la nostra "
-"aplicació. La propietat principal a la qual hem de prestar atenció són les "
+"aplicació. La propietat principal a la qual hem de parar atenció són les "
 "accions, les quals prenen la forma d'una matriu de components `Kirigami."
 "Action`. Aquesta acció té una icona adequada i activa la funció `Qt.quit()`, "
 "tancant l'aplicació."
@@ -5345,17 +5287,14 @@ msgstr "`add_executable` crea un executable a partir dels fitxers font donats."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:138
-#, fuzzy
-#| msgid ""
-#| "`target_link_libraries` dynamically links the libraries used in our code "
-#| "to our executable."
 msgid ""
 "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) links the libraries used in our code to our "
 "executable."
 msgstr ""
-"`target_link_libraries` vincula dinàmicament les biblioteques utilitzades en "
-"el nostre codi amb el nostre executable."
+"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
+"target_link_libraries.html) enllaça dinàmicament les biblioteques "
+"utilitzades en el nostre codi amb el nostre executable."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:142
 #, fuzzy
@@ -7413,7 +7352,7 @@ msgstr ""
 "Aquestes guies d'aprenentatge se centraran en la creació d'una aplicació que "
 "permeti a l'usuari veure quants dies queden fins a un esdeveniment de la "
 "seva elecció. Això no vol dir que no us pugueu desviar i mirar de crear la "
-"vostra pròpia cosa! Només assegureu-vos *primer* de prestar molta atenció "
+"vostra pròpia cosa! Només assegureu-vos *primer* de parar molta atenció "
 "sobre com funcionen les coses, de manera que pugueu ajustar-ho quan les "
 "coses siguin diferents en el vostre propi codi. També us recomanem que "
 "consulteu la [Galeria de Kirigami](https://apps.kde.org/en/kirigami2."
