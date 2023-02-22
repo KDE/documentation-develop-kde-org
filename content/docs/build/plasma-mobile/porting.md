@@ -10,11 +10,11 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 Plasma Mobile currently only supports device running a mainline
 Linux kernel.
 
-Many consumer mobile devices are Android-only and not working with the Linux kernel directly. [Android provides Hardware abstraction layer](https://source.android.com/devices/architecture) on top of the Linux kernel. Even if the Linux kernel sources for the device are open, Android environment is [Bionic](https://android.googlesource.com/platform/bionic.git/+/HEAD/docs) (not glibc or Musl) and HAL-specific, so Android drivers could not be used in a general Linux kernel environment directly.
+Many consumer mobile devices are Android-only and do not work with the Linux kernel directly. [Android provides a Hardware abstraction layer](https://source.android.com/devices/architecture) on top of the Linux kernel. Even if the Linux kernel sources for the device are open, the Android environment is [Bionic](https://android.googlesource.com/platform/bionic.git/+/HEAD/docs) (not glibc or Musl) and HAL-specific, so Android drivers can not be used in a general Linux kernel environment directly.
 
-There're projects to support devices without mainline Linux. First of all, [libhybris](https://github.com/libhybris/libhybris) from Mer project and others. Project called [Halium](https://halium.org/) uses libhybris to provide discto-agnostic Hardware Abstraction.
+There are projects to support devices without mainline Linux. First of all, [libhybris](https://github.com/libhybris/libhybris) from Mer project and others. Project called [Halium](https://halium.org/) uses libhybris to provide a distro-agnostic Hardware Abstraction.
 
-Previously Plasma Mobile also supported Halium devices (using Android kernel+userspace) but the support was dropped in favor of [focusing on mainline device](https://www.plasma-mobile.org/2020/12/14/plasma-mobile-technical-debt/).
+Previously Plasma Mobile also supported Halium devices (using Android kernel+userspace) but the support was dropped in favor of [focusing on the mainline device](https://www.plasma-mobile.org/2020/12/14/plasma-mobile-technical-debt/).
 
 To port a device to mainline Linux, please refer to [Porting to a new device in postmarketOS wiki](https://wiki.postmarketos.org/wiki/Porting_to_a_new_device).
 
