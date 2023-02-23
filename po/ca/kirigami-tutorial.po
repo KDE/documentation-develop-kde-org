@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-21 22:51+0100\n"
+"PO-Revision-Date: 2023-02-22 22:19+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -117,6 +117,7 @@ msgstr ""
 "llista dels col·laboradors i certa informació sobre la plataforma en la qual "
 "s'està executant."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-add_about_page.md:12
 msgid ""
 "First, we are going to edit our `main.cpp` file from previous tutorials."
@@ -141,9 +142,9 @@ msgstr ""
 "En el fitxer `main.cpp` incloem [KAboutData](docs:kcoreaddons;KAboutData), "
 "un component central dels Frameworks del KDE que permet emmagatzemar la "
 "informació sobre l'aplicació. Aquesta informació després pot ser "
-"reutilitzada  per molts altres components dels Frameworks del KDE. "
-"Instanciem un objecte `aboutData` nou amb el seu constructor predeterminat "
-"força complet i afegim la informació de l'autor."
+"reutilitzada per molts altres components dels Frameworks del KDE. Instanciem "
+"un objecte `aboutData` nou amb el seu constructor predeterminat força "
+"complet i afegim la informació de l'autor."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-add_about_page.md:20
@@ -158,6 +159,7 @@ msgstr ""
 "setApplicationData) per a inicialitzar les propietats de l'objecte "
 "[QApplication ](docs:qtwidgets;QApplication)."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-add_about_page.md:22
 msgid ""
 "We then create a [qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
@@ -168,6 +170,7 @@ msgstr ""
 "qmlRegisterSingletonType). Això s'utilitza per permetre importar el codi C++ "
 "com un mòdul en el nostre `main.qml` amb `import org.kde.example 1.0`."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-add_about_page.md:24
 msgid ""
 "Its first argument is the URI that will be used for the import, the second "
@@ -191,6 +194,7 @@ msgstr ""
 msgid "main.qml"
 msgstr "main.qml"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-add_about_page.md:30
 msgid ""
 "First, we use the import we defined in the `main.cpp` file, namely `org.kde."
@@ -214,6 +218,7 @@ msgstr ""
 msgid "CMakeLists"
 msgstr "CMakeLists"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-add_about_page.md:37
 msgid ""
 "In the `CMakeLists.txt` file in our top-level folder, be sure to have "
@@ -226,6 +231,7 @@ msgstr ""
 "cmake.org/cmake/help/latest/command/find_package.html). És necessari per a "
 "[KAboutData](docs:kcoreaddons;KAboutData)."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-add_about_page.md:41
 msgid ""
 "In the `CMakeLists.txt` file in the `src/` directory, nothing is needed "
@@ -289,11 +295,12 @@ msgstr ""
 "cpp` i `backend.h`. No oblideu afegir el nou fitxer cpp a l'executable en el "
 "`src/CMakeLists.txt`, al costat del main.cpp."
 
-# skip-rule: t-pu_sp,t-acc_obe
+# skip-rule: t-pu_sp,t-acc_obe,kct-backend
 #: content/docs/use/kirigami/advanced-connect_backend.md:14
 msgid "Add the following content to the new header file (`backend.h`):"
 msgstr "Afegiu el contingut següent al fitxer de capçalera nou (`backend.h`):"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-connect_backend.md:29
 msgid ""
 "The `backend.cpp` file containing the definitions is similarly empty right "
@@ -316,6 +323,7 @@ msgstr ""
 "un cop i estarà durant tot el temps, des que s'inicia l'aplicació fins que "
 "es tanca."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-connect_backend.md:42
 msgid ""
 "Right after creating the [QQmlApplicationEngine](docs:qtqml;"
@@ -400,6 +408,7 @@ msgstr ""
 msgid "To the public section, add"
 msgstr "A la secció pública, afegiu"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-connect_backend.md:80
 msgid ""
 "The first function is the getter, the second the setter, and the third a "
@@ -623,6 +632,7 @@ msgstr "Familiaritzant-nos amb com funcionen els fitxers CMakeLists.txt\n"
 msgid "CMake"
 msgstr "CMake"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:12
 msgid ""
 "In our introductory tutorial, we used [CMake](https://cmake.org/) as the "
@@ -648,6 +658,7 @@ msgstr ""
 msgid "CMakeLists.txt"
 msgstr "CMakeLists.txt"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:18
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
 msgstr ""
@@ -765,6 +776,7 @@ msgstr ""
 msgid "Note"
 msgstr "Nota"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:39
 msgid ""
 "If you are looking to add any components listed in the [KDE API "
@@ -841,6 +853,7 @@ msgstr ""
 "target_link_libraries.html) enllaça dinàmicament les biblioteques "
 "utilitzades en el nostre codi amb el nostre executable."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:57
 msgid ""
 "Note that these libraries should match the components that we included in "
@@ -971,6 +984,7 @@ msgstr ""
 "Una de les característiques de les [Kirigami.Page](docs:kirigami2;Page) és "
 "que se'ls hi poden afegir accions."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-actions.md:89
 msgid ""
 "You can add a `actions.main` action, a `actions.left` and `actions.right` "
@@ -1276,12 +1290,11 @@ msgid ""
 msgstr ""
 "De manera predeterminada, les accions a l'[ActionToolBar]([Kirigami."
 "ActionToolBar](docs:kirigami2;ActionToolBar)) s'alinearan a l'esquerra. Això "
-"pot no ser desitjable en totes les situacions.  Afortunadament, podem "
-"canviar això amb la propietat [alignment](docs:kirigami2;ActionToolBar::"
-"alignment). Podem establir aquesta propietat en un interval de valors, però "
-"els tres més rellevants per a una ActionToolBar són `Qt.AlignLeft`, `Qt."
-"AlignCenter` i `Qt.AlignRight` (els quals s'ocupen de l'alineació "
-"horitzontal)."
+"pot no ser desitjable en totes les situacions. Afortunadament, podem canviar "
+"això amb la propietat [alignment](docs:kirigami2;ActionToolBar::alignment). "
+"Podem establir aquesta propietat en un interval de valors, però els tres més "
+"rellevants per a una ActionToolBar són `Qt.AlignLeft`, `Qt.AlignCenter` i "
+"`Qt.AlignRight` (els quals s'ocupen de l'alineació horitzontal)."
 
 #: content/docs/use/kirigami/components-actiontoolbar.md:109
 msgid ""
@@ -1434,12 +1447,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-card.md:109
-#, fuzzy
-#| msgid ""
-#| "A card can optionally be oriented horizontally. In this case it will be "
-#| "wider than tall, and is better suited to being placed in a ColumnLayout. "
-#| "If you must put it in a CardsLayout, it will have a columnSpan of 2 by "
-#| "default."
 msgid ""
 "A card can optionally be oriented horizontally. In this case it will be "
 "wider than tall, and is better suited to being placed in a [ColumnLayout]"
@@ -1450,8 +1457,10 @@ msgid ""
 msgstr ""
 "De manera opcional, una targeta es pot orientar horitzontalment. En aquest "
 "cas, serà més ampla que alta i és més adequada per a col·locar-se en una "
-"`ColumnLayout`. Si heu de posar-la en una `CardsLayout`, de manera "
-"predeterminada tindreu un `columnSpan` de 2."
+"[ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
+"html). Si heu de posar-la en una [CardsLayout](docs:kirigami2;CardsLayout), "
+"de manera predeterminada tindrà un [maximumColumns](docs:kirigami2;"
+"CardsLayout::maximumColumns) de `2`."
 
 #: content/docs/use/kirigami/components-card.md:145
 msgid ""
@@ -1466,28 +1475,16 @@ msgstr "CardsListView"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:153
-#, fuzzy
-#| msgid ""
-#| "A [`Kirigami.CardsListView`](docs:kirigami2;CardsListView) is a list view "
-#| "that can be used with [`Kirigami.AbstractCard`](docs:kirigami2;"
-#| "AbstractCard) components."
 msgid ""
 "A [Kirigami.CardsListView](docs:kirigami2;CardsListView) is a list view that "
 "can be used with [AbstractCard](docs:kirigami2;AbstractCard) components."
 msgstr ""
-"Una [`Kirigami.CardsListView`](docs:kirigami2;CardsListView) és una vista de "
-"llista que es pot utilitzar amb els components de [`Kirigami.AbstractCard`]"
-"(docs:kirigami2;AbstractCard)."
+"Una [Kirigami.CardsListView](docs:kirigami2;CardsListView) és una vista de "
+"llista que es pot utilitzar amb els components de [AbstractCard](docs:"
+"kirigami2;AbstractCard)."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:155
-#, fuzzy
-#| msgid ""
-#| "A `Kirigami.CardsListView` will stretch child cards to its own width. "
-#| "This component should therefore only be used with cards which will look "
-#| "good at any horizontal size. Using a `Kirigami.CardsListView` the "
-#| "`Kirigami.Card` component is discouraged, unless it has `Qt.Horizontal` "
-#| "as its `headerOrientation` property."
 msgid ""
 "A [CardsListView](docs:kirigami2;CardsListView) will stretch child cards to "
 "its own width. This component should therefore only be used with cards which "
@@ -1496,20 +1493,16 @@ msgid ""
 "qtcore;Qt::Orientation) as its [headerOrientation](docs:kirigami2;templates::"
 "AbstractCard::headerOrientation) property."
 msgstr ""
-"Una `Kirigami.CardsListView` estendrà les targetes filles a la seva pròpia "
-"amplada. Per tant, aquest component només s'ha d'utilitzar amb les targetes "
-"que es vegin bé en qualsevol mida horitzontal. Es desaconsella l'ús del "
-"component `Kirigami.Card`, llevat que tingueu `Qt.Horizontal` com la seva "
-"propietat `headerOrientation`."
+"Una [CardsListView](docs:kirigami2;CardsListView) estendrà les targetes "
+"filles a la seva pròpia amplada. Per tant, aquest component només s'ha "
+"d'utilitzar amb les targetes que es vegin bé en qualsevol mida horitzontal. "
+"Es desaconsella l'ús del component [Card](docs:kirigami2;Card), llevat que "
+"tingueu Qt.Horizontal](docs:qtcore;Qt::Orientation) com la seva propietat "
+"[headerOrientation](docs:kirigami2;templates::AbstractCard::"
+"headerOrientation)."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:157
-#, fuzzy
-#| msgid ""
-#| "The choice between using this view with `Kirigami.AbstractCard` "
-#| "components or a conventional `ListView` with [`AbstractListItem`](docs:"
-#| "kirigami2;AbstractListItem)/[BasicListItem](docs:kirigami2;BasicListItem) "
-#| "components is purely an aesthetic one."
 msgid ""
 "The choice between using this view with [AbstractCard](docs:kirigami2;"
 "AbstractCard) components or a conventional [ListView](docs:qtquick;QtQuick."
@@ -1517,10 +1510,11 @@ msgid ""
 "[BasicListItem](docs:kirigami2;BasicListItem) components is purely an "
 "aesthetic one."
 msgstr ""
-"L'elecció entre utilitzar aquesta vista amb components `Kirigami."
-"AbstractCard` o un `ListView` convencional amb components "
-"[`AbstractListItem`](docs:kirigami2;AbstractListItem)/[BasicListItem](docs:"
-"kirigami2;BasicListItem) és purament estètic."
+"L'elecció entre utilitzar aquesta vista amb components [AbstractCard](docs:"
+"kirigami2;AbstractCard) o un [ListView](docs:qtquick;QtQuick.ListView) "
+"convencional amb components [AbstractListItem](docs:kirigami2;"
+"AbstractListItem)/[BasicListItem](docs:kirigami2;BasicListItem) és purament "
+"estètic."
 
 #: content/docs/use/kirigami/components-card.md:169
 msgid "NOTE: never put a Layout as contentItem as it will cause binding loops"
@@ -1533,16 +1527,13 @@ msgid "IMPORTANT: never put the bottom margin"
 msgstr "IMPORTANT: no posar mai el marge inferior"
 
 #: content/docs/use/kirigami/components-card.md:209
-#, fuzzy
-#| msgid ""
-#| "![Screenshot of a CardsListView](/docs/use/kirigami/components-card/"
-#| "cardslistview.png)"
 msgid ""
 "![Screenshot of a CardsListView, which is a simple vertical list of cards in "
 "landscape mode](/docs/use/kirigami/components-card/cardslistview.png)"
 msgstr ""
-"![Captura de pantalla d'una CardsGridView](/docs/use/kirigami/components-"
-"card/cardslistview.png)"
+"![Captura de pantalla d'una CardsListView, que és un llista vertical "
+"senzilla de targetes en mode apaïsat](/docs/use/kirigami/components-card/"
+"cardslistview.png)"
 
 #: content/docs/use/kirigami/components-card.md:215
 msgid "CardsGridView"
@@ -1550,83 +1541,64 @@ msgstr "CardsGridView"
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-card.md:217
-#, fuzzy
-#| msgid ""
-#| "Use a [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
-#| "CardsGridView) to display cards in a grid."
 msgid ""
 "Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display "
 "cards in a grid."
 msgstr ""
-"Utilitzeu una [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
-"CardsGridView) per a mostrar les targetes en una quadrícula."
+"Utilitzeu una [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) per a "
+"mostrar les targetes en una quadrícula."
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-card.md:219
-#, fuzzy
-#| msgid ""
-#| "Its behavior is the same as a `Kirigami.CardsLayout`, and it allows cards "
-#| "to be put in one or two columns depending on the available width."
 msgid ""
 "Its behavior is the same as a [CardsLayout](docs:kirigami2;CardsLayout), and "
 "it allows cards to be put in one or two columns depending on the available "
 "width."
 msgstr ""
-"El seu comportament és el mateix que una `Kirigami.CardsLayout`, i permet "
-"col·locar les targetes en una o dues columnes depenent de l'amplada "
-"disponible."
+"El seu comportament és el mateix que una [CardsLayout](docs:kirigami2;"
+"CardsLayout), i permet col·locar les targetes en una o dues columnes "
+"depenent de l'amplada disponible."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:221
-#, fuzzy
-#| msgid ""
-#| "CardsGridView has the limitation that every card must have the same exact "
-#| "height, so `cellHeight` must be manually set to a value for which the "
-#| "content must fit for every child card."
 msgid ""
 "[CardsGridView](docs:kirigami2;CardsGridView) has the limitation that every "
 "card must have the same exact height, so [cellHeight](https://doc.qt.io/qt-6/"
 "qml-qtquick-gridview.html#cellHeight-prop) must be manually set to a value "
 "for which the content must fit for every child card."
 msgstr ""
-"Una `CardsGridView` té la limitació que totes les targetes hauran de tenir "
-"la mateixa alçada exacta, de manera que `cellHeight` s'haurà d'establir "
-"manualment a un valor per al qual el contingut haurà de cabre per a cada "
-"targeta filla."
+"Una [CardsGridView](docs:kirigami2;CardsGridView) té la limitació que totes "
+"les targetes hauran de tenir la mateixa alçada exacta, de manera que "
+"[cellHeight](https://doc.qt.io/qt-6/qml-qtquick-gridview.html#cellHeight-"
+"prop) s'haurà d'establir manualment a un valor per al qual el contingut "
+"haurà d'encaixar per cada targeta filla."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:223
-#, fuzzy
-#| msgid ""
-#| "If possible use `Kirigami.CardsGridView` only when you need to "
-#| "instantiate many cards. If you are only going to instantiate a few cards, "
-#| "opt for a `Kirigami.CardsLayout` with a `Repeater` instead."
 msgid ""
 "If possible use [CardsGridView](docs:kirigami2;CardsGridView) only when you "
 "need to instantiate many cards. If you are only going to instantiate a few "
 "cards, opt for a [CardsLayout](docs:kirigami2;CardsLayout) with a [Repeater]"
 "(docs:qtquick;QtQuick.Repeater) instead."
 msgstr ""
-"Si és possible, utilitzeu `Kirigami.CardsGridView` només quan necessiteu fer "
-"una instància de moltes targetes. Si només creeu una instància d'unes "
-"quantes targetes, en el seu lloc opteu per una `Kirigami.CardsLayout` amb un "
-"`Repeater`."
+"Si és possible, utilitzeu [CardsGridView](docs:kirigami2;CardsGridView) "
+"només quan necessiteu instanciar moltes targetes. Si només creeu una "
+"instància d'unes quantes targetes, en el seu lloc opteu per una [CardsLayout]"
+"(docs:kirigami2;CardsLayout) amb un [Repeater](docs:qtquick;QtQuick."
+"Repeater)."
 
 #: content/docs/use/kirigami/components-card.md:234
 msgid "Model with the following roles: text, actions and image"
 msgstr "Model amb els rols següents: text, accions i imatge"
 
 #: content/docs/use/kirigami/components-card.md:266
-#, fuzzy
-#| msgid ""
-#| "![Screenshot of a CardsGridView](/docs/use/kirigami/components-card/"
-#| "cardsgridview.png)"
 msgid ""
 "![Screenshot of a CardsGridView where each card occupies the same amount of "
 "space in a grid](/docs/use/kirigami/components-card/cardsgridview.png)"
 msgstr ""
-"![Captura de pantalla d'una CardsGridView](/docs/use/kirigami/components-"
-"card/cardsgridview.png)"
+"![Captura de pantalla d'una CardsGridView a on cada targeta ocupa la mateixa "
+"quantitat d'espai d'una quadrícula](/docs/use/kirigami/components-card/"
+"cardsgridview.png)"
 
 #: content/docs/use/kirigami/components-controls.md:0
 msgid "Controls and interactive elements"
@@ -1660,11 +1632,6 @@ msgstr "Botons"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:15
-#, fuzzy
-#| msgid ""
-#| "In Kirigami apps, we use buttons from QtQuick Controls. Using them is "
-#| "pretty straightforward: we set the text to the `text` property and any "
-#| "action we want it to perform is set to the `onClicked` property."
 msgid ""
 "In Kirigami apps, we use buttons from QtQuick Controls. Using them is pretty "
 "straightforward: we set the text to the [text](https://doc.qt.io/qt-6/qml-"
@@ -1674,8 +1641,10 @@ msgid ""
 msgstr ""
 "En les aplicacions escrites amb el Kirigami, utilitzem els botons dels "
 "QtQuick Controls. Emprar-los és força senzill: establim el text a la "
-"propietat `text` i qualsevol acció que volem que realitzi s'estableix a la "
-"propietat `onClicked`."
+"propietat [text](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton."
+"html#text-prop) i qualsevol acció que volem que realitzi s'estableix a la "
+"propietat [onClicked](docs:qtquickcontrols;QtQuick.Controls.AbstractButton::"
+"clicked)."
 
 #: content/docs/use/kirigami/components-controls.md:41
 msgid ""
@@ -1690,13 +1659,6 @@ msgstr "Botons commutables"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:49
-#, fuzzy
-#| msgid ""
-#| "Buttons' behaviour can be changed to make them toggleable: in this mode, "
-#| "they will stay pressed until clicked on once more. This mode can be "
-#| "activated by setting the `checkable` property to `true`; we can also set "
-#| "buttons to be toggled on by default by setting the `checked` property to "
-#| "`true`."
 msgid ""
 "The behavior of buttons can be changed to make them toggleable: in this "
 "mode, they will stay pressed until clicked on once more. This mode can be "
@@ -1708,19 +1670,14 @@ msgid ""
 msgstr ""
 "El comportament dels botons es pot canviar perquè es puguin commutar: en "
 "aquest mode, romandran premuts fins que s'hi faci clic una vegada més. "
-"Aquest mode es pot activar establint la propietat `checkable` a `true`. "
+"Aquest mode es pot activar establint la propietat [checkable](https://doc.qt."
+"io/qt-6/qml-qtquick-controls2-abstractbutton.html#checkable-prop) a `true`. "
 "També podem establir els botons perquè es commutin de manera predeterminada "
-"establint la propietat `checked` a `true`."
+"establint la propietat [checked](https://doc.qt.io/qt-5/qml-qtquick-"
+"controls2-abstractbutton.html#checked-prop) a `true`."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:51
-#, fuzzy
-#| msgid ""
-#| "We can get the most out of toggleable buttons by using the "
-#| "`onCheckedChanged` property. It works similarly to `onClicked`, except "
-#| "here the assigned action will be executed when the button's `checked` "
-#| "property changes. `checked` is a boolean property, which can come in "
-#| "handy for specific use-cases."
 msgid ""
 "We can get the most out of toggleable buttons by using the "
 "`onCheckedChanged` signal handler which is [automatically generated](https://"
@@ -1731,17 +1688,16 @@ msgid ""
 "changes. It is a boolean property, which can come in handy for specific use "
 "cases."
 msgstr ""
-"Podem aprofitar al màxim els botons commutables utilitzant la propietat "
-"`onCheckedChanged`. Funciona de manera similar a `onClicked`, excepte que "
-"aquí l'acció assignada s'executarà quan es canviï la propietat `checked` del "
-"botó. `checked` és una propietat booleana, el qual pot ser útil per a casos "
-"específics d'ús."
+"Podem aprofitar al màxim els botons commutables utilitzant el gestor de la "
+"propietat `onCheckedChanged` que es [genera automàticament](https://doc.qt."
+"io/qt-6/qtqml-syntax-signals.html#property-change-signal-handlers) a partir "
+"del senyal [checked](https://doc.qt.io/qt-5/qml-qtquick-controls2-"
+"abstractbutton.html#checked-prop). Funciona de manera similar a `onClicked`, "
+"excepte que aquí l'acció assignada s'executarà quan es canviï l'estat del "
+"botó. És una propietat booleana, el qual pot ser útil per a casos específics "
+"d'ús."
 
 #: content/docs/use/kirigami/components-controls.md:53
-#, fuzzy
-#| msgid ""
-#| "In this example, we set the visibility of an in-line drawer according to "
-#| "the status of a toggleable button:"
 msgid ""
 "In this example, we set the visibility of an inline drawer according to the "
 "status of a toggleable button:"
@@ -1750,25 +1706,16 @@ msgstr ""
 "l'estat d'un botó commutable:"
 
 #: content/docs/use/kirigami/components-controls.md:82
-#, fuzzy
-#| msgid ""
-#| "![A toggleable button](/docs/use/kirigami/components-controls/controls-"
-#| "togglebutton.png)"
 msgid ""
 "![A window containing a toggleable button \"Toggle\" which when toggled "
 "displays \"Peekaboo\" in the contentItem area like a status bar](/docs/use/"
 "kirigami/components-controls/controls-togglebutton.png)"
 msgstr ""
-"![Un botó commutable](/docs/use/kirigami/components-controls/controls-"
-"togglebutton.png)"
+"![Una finestra que conté un Un botó commutable «Toggle» que quan es commuta "
+"mostra «Peekaboo» a l'àrea «contentItem» com en una barra d'estat](/docs/use/"
+"kirigami/components-controls/controls-togglebutton.png)"
 
 #: content/docs/use/kirigami/components-controls.md:90
-#, fuzzy
-#| msgid ""
-#| "With the default Breeze theme in KDE Plasma it can be hard to tell "
-#| "whether a button is toggled, since buttons are coloured blue when they "
-#| "are clicked on. Make sure you take this into account when creating your "
-#| "application: a different control might be more user-friendly."
 msgid ""
 "With the default Breeze theme in KDE Plasma it can be hard to tell whether a "
 "button is toggled, since buttons are coloured blue when they are clicked on. "
@@ -1786,12 +1733,6 @@ msgstr "Botons de la barra d'eines"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:96
-#, fuzzy
-#| msgid ""
-#| "There is a specific button type meant for use in toolbars, `Controls."
-#| "ToolButton`. The most obvious difference between this and a conventional "
-#| "button is the styling, with toolbuttons being flat (though this is "
-#| "alterable with the boolean property `flat`)."
 msgid ""
 "There is a specific button type meant for use in toolbars, [Controls."
 "ToolButton](docs:qtquickcontrols;QtQuick.Controls.ToolButton). The most "
@@ -1801,21 +1742,20 @@ msgid ""
 "(https://doc.qt.io/qt-6/qml-qtquick-controls2-button.html#flat-prop))."
 msgstr ""
 "Hi ha un tipus de botó específic per al seu ús en les barres d'eines, "
-"`Controls.ToolButton`. La diferència més òbvia entre aquest i un botó "
-"convencional és l'estil, amb botons d'eina plans (encara que això es pot "
-"alterar amb la propietat booleana `flat`)."
+"[Controls.ToolButton](docs:qtquickcontrols;QtQuick.Controls.ToolButton). La "
+"diferència més òbvia entre aquest i un botó [Button](docs:qtquickcontrols;"
+"QtQuick.Controls.Button) convencional és l'estil, amb botons d'eina plans "
+"(encara que això es pot alterar amb la propietat booleana [flat](https://doc."
+"qt.io/qt-6/qml-qtquick-controls2-button.html#flat-prop))."
 
+# skip-rule: common-beep
 #: content/docs/use/kirigami/components-controls.md:113
-#, fuzzy
-#| msgid ""
-#| "![A tool button](/docs/use/kirigami/components-controls/controls-"
-#| "toolbutton.png)"
 msgid ""
 "![A window showing a tool button \"Tool beep\" which is completely flat](/"
 "docs/use/kirigami/components-controls/controls-toolbutton.png)"
 msgstr ""
-"![Un botó d'eina](/docs/use/kirigami/components-controls/controls-toolbutton."
-"png)"
+"![Una finestra que mostra un botó d'eina «Tool beep» que és completament pla "
+"«flat»](/docs/use/kirigami/components-controls/controls-toolbutton.png)"
 
 #: content/docs/use/kirigami/components-controls.md:119
 msgid "Selection controls"
@@ -1834,43 +1774,34 @@ msgid "Checkboxes"
 msgstr "Caselles de selecció"
 
 #: content/docs/use/kirigami/components-controls.md:125
-#, fuzzy
-#| msgid ""
-#| "Checkboxes are meant for options where the choices are non-exclusive and "
-#| "where each option has a clear alternative."
 msgid ""
 "A [Controls.CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox) is "
 "meant for options where the choices are non-exclusive and where each option "
 "has a clear alternative."
 msgstr ""
-"Les caselles de selecció estan destinades a opcions en què les opcions no "
-"són exclusives i en què cada opció té una alternativa clara."
+"Un [Controls.CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox) està "
+"destinat a opcions en què les opcions no són exclusives i en què cada opció "
+"té una alternativa clara."
 
 #: content/docs/use/kirigami/components-controls.md:146
-#, fuzzy
-#| msgid ""
-#| "![A set of checkboxes](/docs/use/kirigami/components-controls/controls-"
-#| "checkbox.png)"
 msgid ""
 "![A window showing a set of checkboxes where more than one checkbox can be "
 "ticked at the same time](/docs/use/kirigami/components-controls/controls-"
 "checkbox.png)"
 msgstr ""
-"![Un conjunt de caselles de selecció](/docs/use/kirigami/components-controls/"
-"controls-checkbox.png)"
+"![Una finestra que mostra un conjunt de caselles de selecció a on es pot "
+"marcar més d'una casella de selecció a la vegada](/docs/use/kirigami/"
+"components-controls/controls-checkbox.png)"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:152
-#, fuzzy
-#| msgid ""
-#| "As you can see, they are simple to use. The property `checked` holds a "
-#| "boolean value determining whether or not they have been checked."
 msgid ""
 "As you can see, they are simple to use. The [checked](https://doc.qt.io/qt-6/"
 "qml-qtquick-controls2-abstractbutton.html#checked-prop) property holds a "
 "boolean value determining whether or not they have been checked."
 msgstr ""
-"Com podeu veure, són fàcils d'utilitzar. La propietat `checked` manté un "
+"Com podeu veure, són fàcils d'utilitzar. La propietat [checked](https://doc."
+"qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checked-prop) manté un "
 "valor booleà que determina si s'ha marcat o no."
 
 #: content/docs/use/kirigami/components-controls.md:154
@@ -1878,17 +1809,14 @@ msgid "Radio buttons"
 msgstr "Botons d'opció"
 
 #: content/docs/use/kirigami/components-controls.md:156
-#, fuzzy
-#| msgid ""
-#| "Radio buttons are designed for situations where the user must choose one "
-#| "option from a set of several options."
 msgid ""
 "A [Controls.RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton) "
 "is designed for situations where the user must choose one option from a set "
 "of several options."
 msgstr ""
-"Els botons d'opció estan dissenyats per a situacions en què l'usuari ha de "
-"triar una opció d'entre un conjunt d'opcions diverses."
+"Un [Controls.RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton) "
+"està dissenyat per a situacions en què l'usuari ha de triar una opció "
+"d'entre un conjunt d'opcions diverses."
 
 #: content/docs/use/kirigami/components-controls.md:158
 msgid ""
@@ -1900,29 +1828,24 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:160
-#, fuzzy
-#| msgid ""
-#| "Like checkboxes, they can be set to be checked or unchecked by default "
-#| "with the `checked` property."
 msgid ""
 "Like checkboxes, they can be set to be checked or unchecked by default with "
 "the [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton."
 "html#checked-prop) property."
 msgstr ""
 "Igual que les caselles de selecció, es poden establir perquè estiguin "
-"marcats o desmarcats de manera predeterminada amb la propietat `checked`."
+"marcats o desmarcats de manera predeterminada amb la propietat [checked]"
+"(https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checked-"
+"prop)."
 
 #: content/docs/use/kirigami/components-controls.md:183
-#, fuzzy
-#| msgid ""
-#| "![A set of radio buttons](/docs/use/kirigami/components-controls/controls-"
-#| "radiobutton.png)"
 msgid ""
 "![A window showing a set of radio buttons where only one radio button can be "
 "ticked at the same time](/docs/use/kirigami/components-controls/controls-"
 "radiobutton.png)"
 msgstr ""
-"![Un conjunt de botons d'opció](/docs/use/kirigami/components-controls/"
+"![Una finestra que mostra un conjunt de botons d'opció a on només es pot "
+"marcar un botó d'acció a la vegada](/docs/use/kirigami/components-controls/"
 "controls-radiobutton.png)"
 
 #: content/docs/use/kirigami/components-controls.md:189
@@ -1931,11 +1854,6 @@ msgstr "Commutadors (Switches)"
 
 # skip-rule: punctuation-simple-quotes
 #: content/docs/use/kirigami/components-controls.md:191
-#, fuzzy
-#| msgid ""
-#| "On the desktop, changing settings usually involves changing the setting "
-#| "and then applying the setting by clicking on an 'Apply' or 'OK' button. "
-#| "On mobile, we can use switches instead."
 msgid ""
 "On the desktop, changing settings usually involves changing the setting and "
 "then applying it by clicking on an \"Apply\" or \"OK\" button. On mobile, we "
@@ -1943,17 +1861,12 @@ msgid ""
 "instead."
 msgstr ""
 "A l'escriptori, canviar les opcions de configuració generalment implica "
-"canviar la configuració i després aplicar-la fent clic a un botó *Aplica* o "
-"*D'acrod*. Al mòbil, en el seu lloc podem utilitzar els commutadors."
+"canviar la configuració i després aplicar-la fent clic a un botó «Aplica» o "
+"«D'acord». Al mòbil, en el seu lloc podem utilitzar un [Controls.Switch]"
+"(docs:qtquickcontrols;QtQuick.Controls.Switch)."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-simple-quotes
 #: content/docs/use/kirigami/components-controls.md:193
-#, fuzzy
-#| msgid ""
-#| "Switches can be toggled between an on and off state. They can be clicked "
-#| "or tapped on to toggle them, or they can be dragged towards the 'on' or "
-#| "'off' position. Once again, switches can be set to be on or off by "
-#| "default with the `checked` property."
 msgid ""
 "Switches can be toggled between an on and off state. They can be toggled by "
 "clicking or tapping on them, or they can be dragged towards the on or off "
@@ -1961,60 +1874,49 @@ msgid ""
 "the [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton."
 "html#checked-prop) property."
 msgstr ""
-"Els commutadors es poden passar d'un estat activat i desactivat. S'hi pot "
-"fer clic o tocar-los per a alternar, o es poden arrossegar cap a la posició "
-"*on* o *off*. Un cop més, els commutadors es poden establir perquè estiguin "
-"activats o desactivats de manera predeterminada amb la propietat `checked`."
+"Els commutadors es poden alternar entre un estat activat i desactivat. Es "
+"poden alternar fent-hi clic o tocar-los, o es poden arrossegar cap a la "
+"posició activada o desactivada. Un cop més, els commutadors es poden "
+"establir perquè estiguin activats o desactivats de manera predeterminada amb "
+"la propietat [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-"
+"abstractbutton.html#checked-prop)."
 
 #: content/docs/use/kirigami/components-controls.md:214
-#, fuzzy
-#| msgid ""
-#| "![A set of switches](/docs/use/kirigami/components-controls/controls-"
-#| "switch.png)"
 msgid ""
 "![A window showing a set of switches that function as toggles](/docs/use/"
 "kirigami/components-controls/controls-switch.png)"
 msgstr ""
-"![Un conjunt de commutadors](/docs/use/kirigami/components-controls/controls-"
-"switch.png)"
+"![Una finestra que mostra un conjunt de commutadors que funcionen alternant]"
+"(/docs/use/kirigami/components-controls/controls-switch.png)"
 
 #: content/docs/use/kirigami/components-controls.md:220
 msgid "Sliders"
 msgstr "Controls lliscants"
 
 #: content/docs/use/kirigami/components-controls.md:222
-#, fuzzy
-#| msgid ""
-#| "Sliders allow users to select certain values by sliding a handle along a "
-#| "track. Thanks to QtQuick Controls, there are several types that you can "
-#| "choose from depending on the values you'd like your users to choose from "
-#| "in your application."
 msgid ""
 "Sliders allow users to select certain values by sliding a handle along a "
 "track. There are several types that you can choose from depending on the "
 "values you'd like your users to choose in your application."
 msgstr ""
 "Els controls lliscants permeten als usuaris seleccionar certs valors fent "
-"lliscar un control al llarg d'una pista. Gràcies als QtQuick Controls, hi ha "
-"diversos tipus entre els quals podreu triar segons els valors que us "
-"agradaria que triïn els usuaris a la vostra aplicació."
+"lliscar un control al llarg d'una pista. Hi ha diversos tipus entre els "
+"quals podreu triar segons els valors que us agradaria que triïn els usuaris "
+"a la vostra aplicació."
 
 #: content/docs/use/kirigami/components-controls.md:224
 msgid "Standard and tickmarked sliders"
 msgstr "Controls lliscants estàndard i amb marques"
 
 #: content/docs/use/kirigami/components-controls.md:226
-#, fuzzy
-#| msgid ""
-#| "A standard slider provides the user with very fine control over the "
-#| "selection they wish to make."
 msgid ""
 "A standard [Controls.Slider](docs:qtquickcontrols;QtQuick.Controls.Slider) "
 "provides the user with very fine control over the selection they wish to "
 "make."
 msgstr ""
-"Un control lliscant estàndard proporciona a l'usuari un control molt precís "
-"sobre la selecció que voleu realitzar."
+"Un [Controls.Slider](docs:qtquickcontrols;QtQuick.Controls.Slider) estàndard "
+"proporciona a l'usuari un control molt precís sobre la selecció que voleu "
+"realitzar."
 
 #: content/docs/use/kirigami/components-controls.md:228
 msgid ""
@@ -2025,18 +1927,11 @@ msgid ""
 msgstr ""
 
 #: content/docs/use/kirigami/components-controls.md:230
-#, fuzzy
-#| msgid ""
-#| "By default, sliders go left to right to increase (and bottom up to "
-#| "increase when vertical). The coloration provides a visual indicator of "
-#| "how large the value you are selecting is."
 msgid ""
 "The coloration provides a visual indicator of how large the value you are "
 "selecting is."
 msgstr ""
-"De manera predeterminada, els controls lliscants van d'esquerra a dreta per "
-"a incrementar (i de baix a dalt per a reduir quan estan verticals). La "
-"coloració proporciona un indicador visual de com és de gran el valor que "
+"La coloració proporciona un indicador visual de com és de gran el valor que "
 "s'està seleccionant."
 
 #: content/docs/use/kirigami/components-controls.md:232

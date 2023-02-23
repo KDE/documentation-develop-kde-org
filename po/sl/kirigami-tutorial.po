@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-21 21:25+0100\n"
+"PO-Revision-Date: 2023-02-22 19:16+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -2091,7 +2091,7 @@ msgid ""
 "Our global drawer now shows the search bar component we set as the header"
 msgstr ""
 "Naš globalni predal zdaj prikazuje komponento vrstice za iskanje, ki smo jo "
-"nastavili kot glavo."
+"nastavili kot glavo"
 
 #: content/docs/use/kirigami/components-drawers.md:108
 msgid "Adapting for the desktop"
@@ -2511,28 +2511,27 @@ msgid ""
 "use [Kirigami.Separator](docs:kirigami2;Separator) or [Item](docs:qtquick;"
 "QtQuick.Item) components in places where you would like to use a header text."
 msgstr ""
+"To ne velja za vsako komponento, zato priporočilo, da uporabljate komponenti "
+"[Kirigami.Separator](docs:kirigami2;Separator) ali [Item](docs:qtquick;"
+"QtQuick.Item) na mestih, kjer bi želeli uporabiti glavo kot besedilo."
 
 #: content/docs/use/kirigami/components-formlayouts.md:74
 msgid ""
 "This header text is larger than the normal label text, and provides users "
 "with a nice visual cue of what the form layout section is about."
 msgstr ""
+"To besedilo glave je večje od običajnega besedila oznak in uporabnikom "
+"omogoča lepo vizualno iztočnico o razdelku in postavitvi obrazca."
 
 #: content/docs/use/kirigami/components-formlayouts.md:130
 msgid "A form layout with sections"
-msgstr ""
+msgstr "Postavitev obrazca s sekcijami"
 
 #: content/docs/use/kirigami/components-formlayouts.md:137
 msgid "Checkable children"
 msgstr "Podrejeni, ki jih je mogoče odkljukati"
 
 #: content/docs/use/kirigami/components-formlayouts.md:139
-#, fuzzy
-#| msgid ""
-#| "A handy feature of `Kirigami.FormLayout` is that you can add checkboxes "
-#| "to its children. This can be useful in settings pages where you might "
-#| "want to let the user enable or disable a setting, and also want the user "
-#| "to provide some extra information in a component such as a textfield."
 msgid ""
 "A handy feature of [Kirigami.FormLayout](docs:kirigami2;FormLayout) is that "
 "you can add checkboxes to its children. This can be useful in settings pages "
@@ -2540,26 +2539,21 @@ msgid ""
 "want the user to provide some extra information in a component such as a "
 "textfield."
 msgstr ""
-"Priročna funkcija 'Kirigami.FormLayout' je, da lahko dodate potrditvena "
-"polja svojim odvisnim delom. To je lahko uporabno na straneh z nastavitvami, "
-"na katerih boste morda želeli dovoliti uporabniku omogočiti ali onemogočiti "
-"nastavitev, poleg tega pa želite, da uporabnik v komponenti, kot je polje z "
-"besedilom, zagotovi nekaj dodatnih informacij."
+"Priročna zmožnost [Kirigami.FormLayout](docs:kirigami2;FormLayout) je, da "
+"lahko dodate potrditvena polja svojim odvisnim delom. To je lahko uporabno "
+"na straneh z nastavitvami, na katerih boste morda želeli dovoliti uporabniku "
+"omogočiti ali onemogočiti nastavitev, poleg tega pa želite, da uporabnik v "
+"komponenti, kot je polje z besedilom, zagotovi nekaj dodatnih informacij."
 
 #: content/docs/use/kirigami/components-formlayouts.md:166
 msgid "A form layout with checkable label."
-msgstr ""
+msgstr "Postavitev obrazca s potrditveno oznako."
 
 #: content/docs/use/kirigami/components-formlayouts.md:172
 msgid "Forcing a desktop or mobile layout"
 msgstr "Vsiljena namizna ali mobilna postavitev"
 
 #: content/docs/use/kirigami/components-formlayouts.md:174
-#, fuzzy
-#| msgid ""
-#| "If you would rather have your form layout stay consistent regardless of "
-#| "your application's environment, you can use the `wideMode` property of "
-#| "the `Kirigami.FormLayout` component. `wideMode` is a boolean property:"
 msgid ""
 "If you would rather have your form layout stay consistent regardless of your "
 "application's environment, you can use the [wideMode](docs:kirigami2;"
@@ -2567,8 +2561,8 @@ msgid ""
 "FormLayout) component:"
 msgstr ""
 "Če želite, da postavitev obrazca ostane skladna ne glede na okolje "
-"aplikacije, lahko uporabite lastnost 'wideMode' komponente 'Kirigami."
-"FormLayout'. 'wideMode' je boolova lastnost:"
+"aplikacije, lahko uporabite lastnost [wideMode](docs:kirigami2;FormLayout::"
+"wideMode) komponente [Kirigami.FormLayout](docs:kirigami2;FormLayout):"
 
 #: content/docs/use/kirigami/components-formlayouts.md:176
 msgid ""
@@ -2587,14 +2581,12 @@ msgstr ""
 "postavitvi (en stolpec)"
 
 #: content/docs/use/kirigami/components-formlayouts.md:204
-#, fuzzy
-#| msgid "Forcing a desktop or mobile layout"
 msgid "A form layout with forced mobile layout"
-msgstr "Vsiljena namizna ali mobilna postavitev"
+msgstr "Postavitev obrazca z vsiljeno mobilno postavitvijo"
 
 #: content/docs/use/kirigami/components-formlayouts.md:210
 msgid "Aligning your labels"
-msgstr ""
+msgstr "Poravnava oznak"
 
 #: content/docs/use/kirigami/components-formlayouts.md:212
 msgid ""
@@ -2608,10 +2600,18 @@ msgid ""
 "this with help of [Kirigami.FormData.labelAlignment](docs:kirigami2;"
 "FormLayoutAttached::labelAlignment)."
 msgstr ""
+"Obstajajo primeri, ko želite, da je oznaka dodeljena komponentam, ki imajo "
+"več vrstic ali na seznam komponent. To je mogoče doseči z dajanjem [Kirigami."
+"FormData.label](docs:kirigami2;FormLayoutAttached::label) v [ColumnLayout]"
+"(https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html), kar ste "
+"lahko opazili v [Sections and Separators](#sections-and-separators). Oznaka "
+"je privzeto nameščena v navpičnem središču postavitve, kar ni vedno "
+"zaželeno. To lahko spremenimo s pomočjo [Kirigami.FormData.labelAlignment]"
+"(docs:kirigami2;FormLayoutAttached::labelAlignment)."
 
 #: content/docs/use/kirigami/components-formlayouts.md:238
 msgid "A form layout with top-aligned label"
-msgstr ""
+msgstr "Postavitev obrazca z zgoraj poravnano oznako"
 
 #: content/docs/use/kirigami/components-formlayouts.md:244
 msgid ""
@@ -2619,16 +2619,21 @@ msgid ""
 "or lists of components whose size you do not know beforehand. [Elisa]"
 "(https://apps.kde.org/elisa) is a very good example of this:"
 msgstr ""
+"Nastavitev poravnave nalepke je še posebej priročna za upravljanje komponent "
+"ali seznamov komponent, katerih velikost vnaprej ne poznate. [Elisa](https://"
+"apps.kde.org/elisa) je zelo dober primer tega:"
 
 #: content/docs/use/kirigami/components-formlayouts.md:246
 msgid ""
 "The Comment label is only top aligned when its corresponding component has "
 "more than one line"
 msgstr ""
+"Oznaka komentarja je zgoraj poravnana le, če ima ustrezna komponenta več kot "
+"eno vrstico"
 
 #: content/docs/use/kirigami/components-formlayouts.md:248
 msgid "We can do something similar to this with a JavaScript ternary operator:"
-msgstr ""
+msgstr "Lahko naredimo nekaj podobnega s ternarnim operatorjem v JavaScriptu:"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:0
 msgid "Inline messages"
@@ -2651,24 +2656,14 @@ msgid "Basic inline message"
 msgstr "Osnovno znotrajvrstično sporočilo"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:14
-#, fuzzy
-#| msgid ""
-#| "`Kirigami.InlineMessage` components have two important properties to be "
-#| "mindful of:"
 msgid ""
 "[Kirigami.InlineMessage](docs:kirigami2;InlineMessage) components have two "
 "important properties to be mindful of:"
 msgstr ""
-"Komponente 'Kirigami.InlineMessage' imajo dve pomembni lastnosti, na kateri "
-"je treba paziti:"
+"Komponente [Kirigami.InlineMessage](docs:kirigami2;InlineMessage) imajo dve "
+"pomembni lastnosti, na kateri je treba paziti:"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:15
-#, fuzzy
-#| msgid ""
-#| "`visible`: by default this is set to false, so that the message only "
-#| "appears when you explicitly want it to. This can be overridden if you "
-#| "wish by setting it to true. When a hidden inline message is set to be "
-#| "visible, you get a nice animation."
 msgid ""
 "[visible](https://doc.qt.io/qt-6/qml-qtquick-item.html#visible-prop): by "
 "default this is set to false, so that the message only appears when you "
@@ -2676,44 +2671,36 @@ msgid ""
 "true. When a hidden inline message is set to be visible, you get a nice "
 "animation."
 msgstr ""
-"Lastnost vidno 'visible': je privzeto nastavljeno na false, tako da se "
-"sporočilo prikaže le, ko to izrecno želite. To je mogoče preglasiti, tako da "
-"ga nastavite na true. Ko je skrito znotrajvrstično sporočilo nastavljeno na "
+"Lastnost vidno [visible](https://doc.qt.io/qt-6/qml-qtquick-item."
+"html#visible-prop): je privzeto nastavljeno na false, tako da se sporočilo "
+"prikaže le, ko to izrecno želite. To je mogoče preglasiti, tako da ga "
+"nastavite na true. Ko je skrito znotrajvrstično sporočilo nastavljeno na "
 "vidno, dobite lepo animacijo."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:16
-#, fuzzy
-#| msgid "`text`: here is where you set the text of your inline message."
 msgid ""
 "[text](docs:kirigami2;templates::InlineMessage::text): here is where you set "
 "the text of your inline message."
-msgstr "'text': tukaj nastavite besedilo znotrajvrstičnega sporočila."
+msgstr ""
+"[text](docs:kirigami2;templates::InlineMessage::text): tukaj nastavite "
+"besedilo vašega znotrajvrstičnega sporočila."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:49
-#, fuzzy
-#| msgid ""
-#| "![A simple inline message and button](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-simple.png)"
 msgid ""
 "![A window showing a button which when clicked makes an inline message with "
 "light blue background pop up with text above it, near the top of the "
 "application](/docs/use/kirigami/components-inlinemessages/inlinemessages-"
 "simple.png)"
 msgstr ""
-"![Preprosto znotrajvrstično sporočilo in gumb](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-simple.png)"
+"![Okno, ki prikazuje gumb, ki ob kliku naredi vgrajeno sporočilo z svetlo "
+"modrim ozadjem se pojavi z besedilom nad njim blizu vrha aplikacije](/docs/"
+"use/kirigami/components-inlinemessages/inlinemessages-simple.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:55
 msgid "Different types"
 msgstr "Različne vrste"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:57
-#, fuzzy
-#| msgid ""
-#| "Standard inline messages are like the ones above: they have a blue "
-#| "background and a default icon. We can change that with the `type` "
-#| "property, which lets us set our inline message to a different type. There "
-#| "are four types we can choose from:"
 msgid ""
 "Standard inline messages are like the ones above: they have a blue "
 "background and a default icon. We can change that with the [type](docs:"
@@ -2721,9 +2708,9 @@ msgid ""
 "inline message to a different type. There are four types we can choose from:"
 msgstr ""
 "Standardna znotrajvrstična  sporočila so podobna zgornjim: imajo modro "
-"ozadje in privzeto ikono. To lahko spremenimo z lastnostjo 'type', kar nam "
-"dovoli, da naše vneseno sporočilo nastavimo na drugo vrsto. Izbiramo lahko "
-"med štirimi vrstami:"
+"ozadje in privzeto ikono. To lahko spremenimo z lastnostjo [type](docs:"
+"kirigami2;templates::InlineMessage::type), kar nam dovoli, da naše vneseno "
+"sporočilo nastavimo na drugo vrsto. Izbiramo lahko med štirimi vrstami:"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:59
 msgid ""
@@ -2762,17 +2749,14 @@ msgstr ""
 "se lahko uporabi za to, da se uporabniku pove, da je šlo nekaj narobe."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:105
-#, fuzzy
-#| msgid ""
-#| "![Different inline message types](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-types.png)"
 msgid ""
 "![A window showcasing all four inline message types in blue, green, orange "
 "and red](/docs/use/kirigami/components-inlinemessages/inlinemessages-types."
 "png)"
 msgstr ""
-"![Različne vrste sporočil v vrstici](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-types.png)"
+"![Okno, ki prikazuje vse štiri vrste znotrajvrstičnih sporočil v modri, "
+"zeleni, oranžni in rdeči barvi](/docs/use/kirigami/components-inlinemessages/"
+"inlinemessages-types.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:111
 msgid "Customising text and icons"
@@ -2796,25 +2780,14 @@ msgstr ""
 "znak!"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:133
-#, fuzzy
-#| msgid ""
-#| "![An inline message with rich text](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-richtext.png)"
 msgid ""
 "![An inline message with rich text and a hyperlink](/docs/use/kirigami/"
 "components-inlinemessages/inlinemessages-richtext.png)"
 msgstr ""
-"![Znotrajvrstično sporočilo z obogatenim besedilom](/docs/use/kirigami/"
-"components-inlinemessages/inlinemessages-richtext.png)"
+"![Znotrajvrstično sporočilo z obogatenim besedilom in hiperpovezavo](/docs/"
+"use/kirigami/components-inlinemessages/inlinemessages-richtext.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:139
-#, fuzzy
-#| msgid ""
-#| "You can also customise the icon that appears on the top-left of your "
-#| "message by providing a system icon name for the `icon.source` property. "
-#| "These icon names should correspond to icons installed on your system; you "
-#| "can use an application such as Cuttlefish to browse and search the icons "
-#| "available on your system, and what their names are."
 msgid ""
 "You can also customise the icon that appears on the top left of your message "
 "by providing a system icon name for the [icon.source](docs:kirigami2;"
@@ -2825,21 +2798,19 @@ msgid ""
 "their names are."
 msgstr ""
 "Ikono, ki je prikazana zgoraj levo od sporočila, lahko prilagodite tudi "
-"tako, da zagotovite ime sistemske ikone za lastnost \"icon.source\". Ta "
-"imena ikon bi morala ustrezati ikonam, nameščenim v vašem sistemu; lahko "
-"uporabite aplikacijo, kot je Cuttlefish za brskanje in iskanje ikon, ki so "
-"na voljo v vašem sistemu, in kakšna so njihova imena."
+"tako, da zagotovite ime sistemske ikone za lastnost [icon.source](docs:"
+"kirigami2;templates::InlineMessage::icon). Ta imena ikon bi morala ustrezati "
+"ikonam, nameščenim v vašem sistemu; lahko uporabite aplikacijo, kot je "
+"Cuttlefish, ki jo nudi provided by [plasma-sdk](https://invent.kde.org/"
+"plasma/plasma-sdk) za brskanje in iskanje ikon, ki so na voljo v vašem "
+"sistemu, in ugotavljanje kakšna so njihova imena."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:158
-#, fuzzy
-#| msgid ""
-#| "![An inline message with a specified icon](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-icon.png)"
 msgid ""
 "![An inline message with a custom icon](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-icon.png)"
 msgstr ""
-"![Znotrajvrstično sporočilo z določeno ikono](/docs/use/kirigami/components-"
+"![Znotrajvrstično sporočilo z ikono po meri](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-icon.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:164
@@ -2847,12 +2818,6 @@ msgid "Using actions in inline messages"
 msgstr "Uporaba dejanj v znotrajvrstičnih sporočilih"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:166
-#, fuzzy
-#| msgid ""
-#| "If your messages need to be interactive, you can attach Kirigami actions "
-#| "to your inline messages. Like with pages, you can do this by setting the "
-#| "inline message's `actions` property to either a `Kirigami.Action` or an "
-#| "array containing `Kirigami.Action` components."
 msgid ""
 "If your messages need to be interactive, you can attach Kirigami actions to "
 "your inline messages. Like with pages, you can do this by setting the "
@@ -2862,8 +2827,10 @@ msgid ""
 msgstr ""
 "Če morajo biti vaša sporočila interaktivna, lahko svojim znotrajvrstičnim "
 "sporočilom priložite dejanja Kirigami. Tako kot pri straneh lahko to storite "
-"tako, da lastnost »actions« znotrajvrstičnega sporočila nastavite na "
-"»Kirigami.Action« ali matriko, ki vsebuje komponente »Kirigami.Action«."
+"tako, da lastnost [InlineMessage.actions](docs:kirigami2;templates::"
+"InlineMessage::actions) nastavite na [Kirigami.Action](docs:kirigami2;"
+"Action) ali na vektor, ki vsebuje komponente [Kirigami.Action](docs:"
+"kirigami2;Action)."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:207
 msgid ""
@@ -2886,28 +2853,21 @@ msgstr ""
 "uporabite za enostaven izhod."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:217
-#, fuzzy
-#| msgid ""
-#| "By default, this close button is hidden, but this can be overridden by "
-#| "setting the `showCloseButton` property to `true`."
 msgid ""
 "By default, this close button is hidden, but this can be overridden by "
 "setting the [showCloseButton](docs:kirigami2;templates::InlineMessage::"
 "showCloseButton) property to `true`."
 msgstr ""
 "Privzeto je ta gumb za zapiranje skrit, vendar je to lastnost mogoče "
-"preglasiti z nastavitvijo lastnosti 'showCloseButton' na 'true'."
+"preglasiti z nastavitvijo lastnosti [showCloseButton](docs:kirigami2;"
+"templates::InlineMessage::showCloseButton) na 'true'."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:236
-#, fuzzy
-#| msgid ""
-#| "![An inline message with close button showing](/docs/use/kirigami/"
-#| "components-inlinemessages/inlinemessages-closebutton.png)"
 msgid ""
 "![An inline message with close button to its right side](/docs/use/kirigami/"
 "components-inlinemessages/inlinemessages-closebutton.png)"
 msgstr ""
-"![Znotrajvrstično sporočilo s prikazanim gumbom za zapiranje](/docs/use/"
+"![Znotrajvrstično sporočilo z gumbom za zapiranje na desni strani](/docs/use/"
 "kirigami/components-inlinemessages/inlinemessages-closebutton.png)"
 
 #: content/docs/use/kirigami/components-listview.md:0
@@ -2920,18 +2880,14 @@ msgstr ""
 "Pogled seznama vam lahko pomaga pri dinamičnem prikazu številnih komponent.\n"
 
 #: content/docs/use/kirigami/components-listview.md:11
-#, fuzzy
-#| msgid ""
-#| "Listviews can help you display objects from a model in an attractive way. "
-#| "To use a list view, you have to keep track of three things:"
 msgid ""
 "[Listviews](docs:qtquick;QtQuick.ListView) can help you display objects from "
 "a model in an attractive way. To use a list view, you have to keep track of "
 "three things:"
 msgstr ""
-"Pregledi seznamov vam lahko pomagajo prikazati predmete iz modela na "
-"privlačen način. Če želite uporabiti pogled seznama, morate spremljati tri "
-"stvari:"
+"Pregledi seznamov [Listviews](docs:qtquick;QtQuick.ListView) vam lahko "
+"pomagajo prikazati predmete iz modela na privlačen način. Če želite "
+"uporabiti pogled seznama, morate spremljati tri stvari:"
 
 #: content/docs/use/kirigami/components-listview.md:13
 msgid ""
@@ -2972,26 +2928,20 @@ msgstr ""
 "Seznamski pogled ima dve bistveni lastnosti, na kateri moramo biti pozorni:"
 
 #: content/docs/use/kirigami/components-listview.md:23
-#, fuzzy
-#| msgid ""
-#| "`model`, which accepts the data or the `id` of the object that holds the "
-#| "data"
 msgid ""
 "[model](https://doc.qt.io/qt-6/qml-qtquick-listview.html#model-prop), which "
 "accepts the data or the `id` of the object that holds the data"
-msgstr "'model', ki sprejema podatke ali 'id' predmeta, ki nosi podatke"
+msgstr ""
+"[model](https://doc.qt.io/qt-6/qml-qtquick-listview.html#model-prop), ki "
+"sprejema podatke ali 'id' predmeta, ki nosi podatke"
 
 #: content/docs/use/kirigami/components-listview.md:24
-#, fuzzy
-#| msgid ""
-#| "`delegate`, which accepts the component we will use to display the data "
-#| "in the model"
 msgid ""
 "[delegate](https://doc.qt.io/qt-6/qml-qtquick-listview.html#delegate-prop), "
 "which accepts the component we will use to display the data in the model"
 msgstr ""
-"'delegat', ki sprejema komponento, ki jo bomo uporabili za prikaz podatkov v "
-"modelu"
+"[delegate](https://doc.qt.io/qt-6/qml-qtquick-listview.html#delegate-prop), "
+"ki sprejema komponento, ki jo bomo uporabili za prikaz podatkov v modelu"
 
 #: content/docs/use/kirigami/components-listview.md:41
 msgid ""
@@ -3010,11 +2960,6 @@ msgstr ""
 "simple.png)"
 
 #: content/docs/use/kirigami/components-listview.md:63
-#, fuzzy
-#| msgid ""
-#| "In cases where your model data only contain a single piece of data, like "
-#| "in the example above, you can just grab the data in the model by "
-#| "referencing `modelData`."
 msgid ""
 "In cases where your model data only contain a single piece of data, like in "
 "the example above, you can just grab the data in the model by referencing "
@@ -3023,7 +2968,8 @@ msgid ""
 msgstr ""
 "V primerih, ko podatki modela vsebujejo samo en del podatkov, kot v zgornjem "
 "primeru, lahko podatke v modelu zgrabite tako, da se sklicujete na "
-"'modelData'."
+"[modelData](https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview."
+"html#models)."
 
 #: content/docs/use/kirigami/components-listview.md:65
 msgid ""
@@ -3031,19 +2977,11 @@ msgid ""
 "properties, the name of these properties will be automatically exposed to "
 "your delegate and you will only need to use these names in your delegate."
 msgstr ""
-"Opomba o pooblaščencih: če vaš model vsebuje predmete s podatki v imenovanih "
-"lastnostih, bo ime teh lastnosti samodejno izpostavljeno vašemu pooblaščencu "
-"in samo ta imena boste morali uporabljati v pooblaščencu."
+"Opomba o delegatih, če vaš model vsebuje predmete s podatki v imenovanih "
+"lastnostih, bo ime teh lastnosti samodejno izpostavljeno vašemu delegatu in "
+"samo ta imena boste morali uporabljati v delegatu."
 
 #: content/docs/use/kirigami/components-listview.md:87
-#, fuzzy
-#| msgid ""
-#| "Kirigami offers a number of components that have been designed "
-#| "specifically for use in list views, such as `Kirigami.BasicListItem`, "
-#| "`Kirigami.CheckableListItem` and `Kirigami.SwipeListItem`, all of which "
-#| "build upon `Kirigami.AbstractListItem`. There are also `Kirigami."
-#| "CheckDelegate`, `Kirigami.RadioDelegate`, and `Kirigami.SwitchDelegate`, "
-#| "which are designed to take advantage of those specific controls."
 msgid ""
 "Kirigami offers a number of components that have been designed specifically "
 "for use in list views, such as [Kirigami.BasicListItem](docs:kirigami2;"
@@ -3057,36 +2995,28 @@ msgid ""
 "controls."
 msgstr ""
 "Kirigami ponuja številne komponente, ki so bile zasnovane posebej za uporabo "
-"v pogledih seznama, kot so 'Kirigami.BasicListItem', 'Kirigami."
-"CheckableListItem' in 'Kirigami.SwipeListItem', vse pa gradijo na 'Kirigami."
-"AbstractListItem'. Obstajajo tudi 'Kirigami.CheckDelegate', 'Kirigami."
-"RadioDelegate' in 'Kirigami.SwitchDelegate', ki so zasnovani tako, da "
-"izkoristijo te posebne kontrole."
+"v pogledih seznama, kot so [Kirigami.BasicListItem](docs:kirigami2;"
+"BasicListItem), [Kirigami.CheckableListItem](docs:kirigami2;"
+"CheckableListItem) and [Kirigami.SwipeListItem](docs:kirigami2;"
+"SwipeListItem), vse pa gradijo na [Kirigami.AbstractListItem](docs:kirigami2;"
+"AbstractListItem). Obstajajo tudi [Kirigami.CheckDelegate](docs:kirigami2;"
+"CheckDelegate), [Kirigami.RadioDelegate](docs:kirigami2;RadioDelegate) in "
+"[Kirigami.SwitchDelegate](docs:kirigami2;SwitchDelegate), ki so zasnovani "
+"tako, da izkoristijo te posebne kontrole."
 
 #: content/docs/use/kirigami/components-listview.md:89
-#, fuzzy
-#| msgid ""
-#| "However, you are not limited to using these components and can choose "
-#| "whichever ones you wish - though this may mean some tweaking to your "
-#| "layout."
 msgid ""
 "However, you are not limited to using these components and you can choose "
 "whichever ones you wish. This may require some tweaking of your layout."
 msgstr ""
 "Vendar pa niste omejeni na uporabo teh komponent in lahko izberete, katere "
-"želite - čeprav to lahko pomeni nekaj poseganja v vašo postavitev."
+"želite - čeprav to lahko pomeni nekaj preoblikovanja v vašo postavitev."
 
 #: content/docs/use/kirigami/components-listview.md:91
 msgid "Placeholder messages"
 msgstr "Sporočila oznak lokacije"
 
 #: content/docs/use/kirigami/components-listview.md:93
-#, fuzzy
-#| msgid ""
-#| "In some cases, you might want to use a list view that is empty until the "
-#| "user does something. In these situations, using a `Kirigami."
-#| "PlaceholderMessage` can be an attractive way of telling your user that "
-#| "the list is empty and that they can do something about it."
 msgid ""
 "In some cases, you might want to use a list view that is empty until the "
 "user does something. In these situations, using a [Kirigami."
@@ -3095,18 +3025,12 @@ msgid ""
 "something about it."
 msgstr ""
 "V nekaterih primerih boste morda želeli uporabiti pogled seznama, ki je "
-"prazen, dokler uporabnik nekaj ne naredi. V teh primerih je uporaba "
-"'Kirigami.PlaceholderMessage' lahko privlačen način, da uporabniku poveste, "
-"da je seznam prazen in da lahko nekaj stori glede tega."
+"prazen, dokler uporabnik nekaj ne naredi. V teh primerih je lahko uporaba "
+"[Kirigami.PlaceholderMessage](docs:kirigami2;PlaceholderMessage) privlačen "
+"način, da uporabniku poveste, da je seznam prazen in da lahko nekaj stori "
+"glede tega."
 
 #: content/docs/use/kirigami/components-listview.md:95
-#, fuzzy
-#| msgid ""
-#| "You will generally want to place a PlaceholderMessage in the center of "
-#| "the ListView and you will want it to not span the entire width of the "
-#| "ListView either. You will obviously also want it to not be visible once "
-#| "the ListView's model becomes populated with data: thankfully, ListViews "
-#| "have a property named `count` that makes doing this quite easy."
 msgid ""
 "You will generally want to place a placeholder message in the center of the "
 "ListView and you will likely not want it to span the entire width of the "
@@ -3115,39 +3039,32 @@ msgid ""
 "named [count](https://doc.qt.io/qt-6/qml-qtquick-listview.html#count-prop) "
 "that makes doing this quite easy."
 msgstr ""
-"Na splošno boste želeli postaviti predmet PlaceholderMessage v središče "
-"predmeta ListView in bi tudi želeli, da se ne bo razprl čez celotno širino "
-"predmeta ListView. Očitno boste tudi želeli, da ne bo viden, ko bo model "
-"ListView napolnjen s podatki: na srečo ima ListViews lastnost z imenom "
-"'count', zaradi katere je to zelo enostavno."
+"Na splošno boste želeli postaviti predmet placeholder message v središče "
+"predmeta seznam pogledov (ListView) in bi tudi želeli, da se ne bo razprl "
+"čez celotno širino predmeta seznama pogledov. Očitno boste tudi želeli, da "
+"ne bo viden, ko bo model seznama pogledov napolnjen s podatki: na srečo "
+"imajo seznami pogledov lastnost z imenom [count](https://doc.qt.io/qt-6/qml-"
+"qtquick-listview.html#count-prop), zaradi katere je to zelo enostavno."
 
 #: content/docs/use/kirigami/components-listview.md:97
-#, fuzzy
-#| msgid ""
-#| "You might also want to add a helpful action to your placeholder message. "
-#| "This can be done by attaching an action to the `Kirigami."
-#| "PlaceHolderMessage`'s `helpfulAction` property."
 msgid ""
 "You might also want to add a helpful action to your placeholder message. "
 "This can be done by attaching an action to the [PlaceholderMessage."
 "helpfulAction](docs:kirigami2;PlaceholderMessage::helpfulAction) property."
 msgstr ""
-"V sporočilo ograde boste morda želeli dodati tudi koristno dejanje. To lahko "
-"storite tako, da priložite dejanje lastnosti `helpfulAction` v `Kirigami."
-"PlaceHolderMessage`."
+"V predmet placeholder message boste morda želeli dodati tudi dejanje pomoči. "
+"To lahko storite tako, da priložite dejanje lastnosti [PlaceholderMessage."
+"helpfulAction](docs:kirigami2;PlaceholderMessage::helpfulAction)."
 
 #: content/docs/use/kirigami/components-listview.md:133
-#, fuzzy
-#| msgid ""
-#| "![A list view with a placeholder message](/docs/use/kirigami/components-"
-#| "listview/listview-placeholdermessage.png)"
 msgid ""
 "![An empty list view which displays a placeholder message in the middle of "
 "the application together with an action to add new data to the model](/docs/"
 "use/kirigami/components-listview/listview-placeholdermessage.png)"
 msgstr ""
-"![Pogled seznama z držalom sporočila](/docs/use/kirigami/components-listview/"
-"listview-placeholdermessage.png)"
+"![Prazen seznam pogledov, ki na sredini aplikacije prikazuje sporočilo "
+"placeholder message skupaj z dejanjem, da v model dodate nove podatke](/docs/"
+"use/kirigami/components-listview/listview-placeholdermessage.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:0
 msgid "Overlay sheets"
@@ -3162,30 +3079,25 @@ msgstr ""
 "za vnos podatkov."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:10
-#, fuzzy
-#| msgid ""
-#| "Overlay sheets provide a simple component that you can use to supplement "
-#| "the content being displayed on an application's page. They are designed "
-#| "to display long, vertical content and can accommodate content longer than "
-#| "the application window itself."
 msgid ""
 "A [Kirigami.OverlaySheet](docs:kirigami2;OverlaySheet) is a simple component "
 "that you can use to supplement the content being displayed on an "
 "application's page. They are designed to display long, vertical content and "
 "can accommodate content longer than the application window itself."
 msgstr ""
-"Preklopne plasti listov zagotavljajo preprosto komponento, ki jo lahko "
-"uporabite za dopolnitev vsebine, ki je prikazana na strani aplikacije. "
-"Zasnovani so tako, da prikazujejo dolgo, navpično vsebino in lahko vsebino "
-"prilagajajo dlje kot samo okno aplikacije."
+"Preklopne plasti listov [Kirigami.OverlaySheet](docs:kirigami2;OverlaySheet) "
+"zagotavljajo preprosto komponento, ki jo lahko uporabite za dopolnitev "
+"vsebine, ki je prikazana na strani aplikacije. Zasnovani so tako, da "
+"prikazujejo dolgo, navpično vsebino in lahko vsebino prilagajajo dlje kot "
+"samo okno aplikacije."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:12
 msgid ""
 "They can be dismissed by clicking or tapping outside of their area or by "
 "clicking the 'x' icon on sheets' headers."
 msgstr ""
-"Zavrnejo jih lahko tako, da kliknete ali tapnete zunaj njihovega območja ali "
-"s klikom na ikono 'x na glavah listov'."
+"Lahko jih odpustite tako, da kliknete ali tapnete zunaj njihovega območja "
+"ali s klikom na ikono 'x na glavah listov'."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:14
 msgid "Learning about the sheet"
@@ -3200,42 +3112,27 @@ msgstr ""
 "Kirigami, kjer želimo, da se pojavi."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:46
-#, fuzzy
-#| msgid ""
-#| "![Simple overlay sheet](/docs/use/kirigami/components-overlaysheets/"
-#| "sheet_simple.png)"
 msgid ""
 "![Simple overlay sheet containing only text](/docs/use/kirigami/components-"
 "overlaysheets/sheet_simple.png)"
 msgstr ""
-"![Preprosti prekrivni list](/docs/use/kirigami/components-overlaysheets/"
-"sheet_simple.png)"
+"![Simple overlay sheet containing only text](/docs/use/kirigami/components-"
+"overlaysheets/sheet_simple.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:52
-#, fuzzy
-#| msgid ""
-#| "Overlay sheets come with methods we can use to open (`mySheet.open()`) or "
-#| "close (`mySheet.close()`) them as we see fit. By default overlay sheets "
-#| "are hidden, so at the very least we will need to use the `open()` method."
 msgid ""
 "Overlay sheets come with methods we can use to [open()](docs:kirigami2;"
 "templates::OverlaySheet::open) or [close()](docs:kirigami2;templates::"
 "OverlaySheet::close) them as we see fit. By default overlay sheets are "
 "hidden, so at the very least we will need to use the `open()` method."
 msgstr ""
-"Prekrivni listi so imajo z metode, ki jih lahko uporabimo za odpiranje "
-"('mySheet.open()') ali zapiranje ('mySheet.close()') kot se nam zdi "
-"primerno. Privzeto so prekrivne liste skrite, zato bomo na koncu morali "
-"uporabiti metodo 'open()'."
+"Prekrivni listi imajo metode, ki jih lahko uporabimo za odpiranje [open()]"
+"(docs:kirigami2;templates::OverlaySheet::open) ali zapiranje [close()](docs:"
+"kirigami2;templates::OverlaySheet::close) kot se nam zdi primerno. Privzeto "
+"so prekrivni listi skriti, zato bomo na koncu morali uporabiti metodo "
+"'open()'."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:61
-#, fuzzy
-#| msgid ""
-#| "When opened, this overlay sheet will appear centered vertically and "
-#| "horizontally within its parent page. Horizontally it will be bounded by "
-#| "its parent even if its contents' width exceeds its parent's. If the "
-#| "sheet's vertical length exceeds its' parent's, then the sheet will be "
-#| "displayed from its top position, and will be scrollable."
 msgid ""
 "When opened, this overlay sheet will appear centered vertically and "
 "horizontally within its parent page. Horizontally it will be bounded by its "
@@ -3243,22 +3140,17 @@ msgid ""
 "sheet's vertical length exceeds its parent's, then the sheet will be "
 "displayed starting from its top position, and will be scrollable."
 msgstr ""
-"Ko bo odprt, bo ta prekriti list prikazan navpično in vodoravno znotraj "
+"Ko je odprt, bo ta prekriti list prikazan navpično in vodoravno znotraj "
 "nadrejene strani. Vodoravno jo bo omejil njen nadrejeni, tudi če širina "
 "vsebine presega širino njenega starša. Če navpična dolžina lista presega "
-"nadrejenega, bo list prikazan iz zgornjega položaja in se bo lahko pomikal."
+"nadrejenega, bo list prikazan iz zgornjega položaja in se bo pomičen z "
+"drsnikom."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:63
 msgid "Global sheet"
 msgstr "Globalni list"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:65
-#, fuzzy
-#| msgid ""
-#| "If you want to display the sheet as a global sheet — one that spans "
-#| "across the entire width of the application, regardless of the page it is "
-#| "a child to — we have to reparent our overlay sheet to our application "
-#| "window's overlay property. We can do this with the `parent` property."
 msgid ""
 "If you want to display the sheet as a global sheet—one that spans across the "
 "entire width of the application, regardless of the page it is a child to—we "
@@ -3269,7 +3161,8 @@ msgstr ""
 "Če želite prikazati list kot globalni list – tisti, ki sega po celotni "
 "širini aplikacije, ne glede na stran, katere otrok je – moramo prekrivni "
 "list znova posvojiti na svojstvo prekrivnega okna programa. To lahko storimo "
-"z 'matično'  lastnino."
+"z lastnostjo [parent](https://doc.qt.io/qt-6/qml-qtquick-item.html#parent-"
+"prop)."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:86
 msgid "Non-global overlay sheet"
@@ -3284,12 +3177,6 @@ msgid "Fixed sizing"
 msgstr "Fiksna velikost"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:100
-#, fuzzy
-#| msgid ""
-#| "A sheet is greedy and will take the maximum amount of available width in "
-#| "a page if needed. We can avoid this by specifying an `implicitWidth` or a "
-#| "`Layout.preferredWidth` for its child elements, which will limit how much "
-#| "the sheet will grow width-wise."
 msgid ""
 "A sheet is greedy and will take the maximum amount of available width in a "
 "page if needed. We can avoid this by specifying an [implicitWidth](https://"
@@ -3299,13 +3186,15 @@ msgid ""
 "how much the sheet will grow width wise."
 msgstr ""
 "List je pohlepen in bo po potrebi vzel največjo razpoložljivo širino na "
-"strani. Temu se lahko izognemo tako, da določimo 'implicitWidth' ali 'Layout."
-"preferredWidth' za svoje otroške elemente, kar bo omejilo, za koliko se bo "
-"list razširil."
+"strani. Temu se lahko izognemo tako, da določimo [implicitWidth](https://doc."
+"qt.io/qt-6/qml-qtquick-item.html#implicitWidth-prop) ali [Layout."
+"preferredWidth](https://doc.qt.io/qt-6/qml-qtquick-layouts-layout."
+"html#preferredWidth-attached-prop) za svoje podrejene elemente, kar bo "
+"omejilo, za koliko se bo lahko list razširil."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:117
 msgid "Non-fixed width overlay sheet"
-msgstr "Nepremenjena širina prekrivnega lista"
+msgstr "Nefiksirana širina prekrivnega lista"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:123
 msgid "Fixed width overlay sheet"
@@ -3316,13 +3205,6 @@ msgid "Headers and footers"
 msgstr "Glave in noge"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:131
-#, fuzzy
-#| msgid ""
-#| "Overlay sheets come by default with a header which only contains a button "
-#| "for closing our overlay sheet. We can add a Kirigami heading as a title "
-#| "in our header to make it easy for users to understand what the sheet is "
-#| "for. This is done by setting the `header` property to contain our "
-#| "Kirigami heading component."
 msgid ""
 "Overlay sheets come by default with a [header](docs:kirigami2;templates::"
 "OverlaySheet::header) that only contains a button for closing our overlay "
@@ -3331,31 +3213,23 @@ msgid ""
 "for users to understand what the sheet is for. This is done by setting "
 "`header` to contain our heading component."
 msgstr ""
-"Prekrivni liste privzeto prihajajo z glavo, ki vsebuje samo gumb za "
-"zapiranje našega prekrivnega lista. Dodamo lahko Kirigami glavo in naslov, "
-"da uporabnikom olajšamo razumevanje, kaj je namen lista. To se naredi tako, "
-"da se lastnost 'header' nastavi tako, da vsebuje našo komponento glave "
-"Kirigami."
+"Prekrivni listi privzeto prihajajo z glavo header](docs:kirigami2;templates::"
+"OverlaySheet::header), ki vsebuje samo gumb za zapiranje našega prekrivnega "
+"lista. Dodamo lahko Kirigami glavo [Kirigami.Heading](docs:kirigami2;"
+"Heading) in naslov v naši glavi [header](docs:kirigami2;templates::"
+"OverlaySheet::header), da uporabnikom olajšamo razumevanje, kaj je namen "
+"lista. To se naredi tako, da se lastnost 'header' nastavi tako, da vsebuje "
+"našo komponento glave."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:156
-#, fuzzy
-#| msgid ""
-#| "![Sheet header](/docs/use/kirigami/components-overlaysheets/sheet_header."
-#| "png)"
 msgid ""
 "![Overlay sheet with title text in its header area](/docs/use/kirigami/"
 "components-overlaysheets/sheet_header.png)"
 msgstr ""
-"![Glava lista](/docs/use/kirigami/components-overlaysheets/sheet_header.png)"
+"![Prekrivni list z besedilom naslova v področju glave](/docs/use/kirigami/"
+"components-overlaysheets/sheet_header.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:162
-#, fuzzy
-#| msgid ""
-#| "We can also provide our overlay sheet with a footer. Footers in overlay "
-#| "sheets are quite flexible, but most often they are used to provide "
-#| "overlay sheets with some sort of quick interactive input similar to that "
-#| "provided by modal dialogs (e.g. buttons for 'Apply', 'Ok', 'Cancel', "
-#| "'Close', etc.)"
 msgid ""
 "We can also provide our overlay sheet with a [footer](docs:kirigami2;"
 "templates::OverlaySheet::footer). Footers in overlay sheets are quite "
@@ -3363,37 +3237,29 @@ msgid ""
 "sort of quick interactive input similar to that provided by modal dialogs (e."
 "g. buttons for \"Apply\", \"Ok\", \"Cancel\", \"Close\", etc.)"
 msgstr ""
-"Naš prekrivni list ima lahko nogo. Noge v prekrivnih listih so precej "
-"prilagodljive, najpogosteje se uporabljajo za zagotavljanje nekakšnih hitrih "
-"interaktivnih vnosov podobnih tistim, ki jih zagotavljajo modalna pogovorna "
-"okna (npr. gumbi za 'Uveljavi', 'OK', 'Prekliči', 'Zapri' itd.)"
+"Naš prekrivni list ima lahko nogo [footer](docs:kirigami2;templates::"
+"OverlaySheet::footer). Noge v prekrivnih listih so precej prilagodljive, "
+"najpogosteje se uporabljajo za zagotavljanje nekakšnih hitrih interaktivnih "
+"vnosov podobnih tistim, ki jih zagotavljajo modalna pogovorna okna (npr. "
+"gumbi za 'Uveljavi', 'OK', 'Prekliči', 'Zapri' itd.)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:164
 msgid "Footers are set in much the same way as headers:"
 msgstr "Noge so nastavljene na podoben način kot glave:"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:194
-#, fuzzy
-#| msgid ""
-#| "![Sheet footer](/docs/use/kirigami/components-overlaysheets/sheet_footer."
-#| "png)"
 msgid ""
 "![Overlay sheet with a button in its footer area](/docs/use/kirigami/"
 "components-overlaysheets/sheet_footer.png)"
 msgstr ""
-"![Noga lista](/docs/use/kirigami/components-overlaysheets/sheet_footer.png)"
+"![Prekrivni list z gumbom v področju noge](/docs/use/kirigami/components-"
+"overlaysheets/sheet_footer.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:200
 msgid "Using delegate / model views"
-msgstr "Uporaba pogledov pooblaščencev / modelov"
+msgstr "Uporaba delegatov / pogledi modelov"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:202
-#, fuzzy
-#| msgid ""
-#| "Since overlay sheets are designed to display vertical content, they can "
-#| "be especially useful when used in conjunction with components such as "
-#| "ListViews. When displaying content longer than the application window "
-#| "itself, the overlay sheet becomes scrollable:"
 msgid ""
 "Since overlay sheets are designed to display vertical content, they can be "
 "especially useful when used in conjunction with components such as "
@@ -3402,20 +3268,16 @@ msgid ""
 msgstr ""
 "Ker so prekrivni listi zasnovani tako, da prikazujejo navpično vsebino, so "
 "lahko še posebej uporabni, če se uporabljajo v povezavi s komponentami, kot "
-"so pogledi seznama. Pri prikazu vsebine daljše od okna aplikacije je mogoče "
-"po prekrivnem listu drseti:"
+"so seznami pogledov [ListViews](docs:qtquick;QtQuick.ListView). Pri prikazu "
+"vsebine daljše od okna aplikacije je mogoče po prekrivnem listu drseti:"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:225
-#, fuzzy
-#| msgid ""
-#| "![Sheet with a listview](/docs/use/kirigami/components-overlaysheets/"
-#| "sheet_listview.png)"
 msgid ""
 "![Overlay sheet with a listview](/docs/use/kirigami/components-overlaysheets/"
 "sheet_listview.png)"
 msgstr ""
-"![List s pogledom seznama](/docs/use/kirigami/components-overlaysheets/"
-"sheet_listview.png)"
+"![Prekrivni list s seznamom pogledov](/docs/use/kirigami/components-"
+"overlaysheets/sheet_listview.png)"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:0
 msgid "Page rows and page stacks"
@@ -3430,7 +3292,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:10
 msgid "A row of pages"
-msgstr ""
+msgstr "Vrstica strani"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:12
 msgid ""
@@ -3439,6 +3301,10 @@ msgid ""
 "screen of the application, or it can be shown together with other pages at "
 "the same time, if there is space."
 msgstr ""
+"Do sedaj smo videli, da je ena od osnovnih komponent okna Kirigami stran "
+"[Kirigami.Page](docs:kirigami2;Page). Ena stran lahko ovije celotni zaslon "
+"aplikacije, ali pa jo lahko prikazujemo skupaj z drugimi stranmi, če je še "
+"prostor."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:14
 msgid ""
@@ -3446,16 +3312,17 @@ msgid ""
 "existing page(s), forming a row. This row of pages can be managed with the "
 "fittingly named [Kirigami.PageRow](docs:kirigami2;PageRow)."
 msgstr ""
+"Kadar koli je stran dodana ali *potisnjena*, se pojavi desno od obstoječih "
+"strani in tvori vrstico. To vrstico strani lahko upravljate z ustrezno "
+"naslovljeno vrsto strani [Kirigami.PageRow](docs:kirigami2;PageRow)."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:16
-#, fuzzy
-#| msgid "The resulting code in that part of the file should look like this:"
 msgid "A minimal page row with a single page could look like this:"
-msgstr "Nastala koda v tem delu datoteke mora biti videti tako:"
+msgstr "Minimalna vrstica strani z eno stranjo bi lahko bila videti tako:"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:41
 msgid "A single page with light blue color to show the page's dimensions"
-msgstr ""
+msgstr "Ena sama stran s svetlo modro barvo, ki prikazuje dimenzije strani"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:43
 msgid ""
@@ -3471,11 +3338,24 @@ msgid ""
 "from, but we'll go with [Kirigami.ApplicationHeaderStyle.Auto](docs:"
 "kirigami2;templates::ApplicationHeader::headerStyle) for now."
 msgstr ""
+"Tu lahko naredimo dve izboljšavi. Prva je, da lahko z začetno stranjo "
+"[initialPage](docs:kirigami2;PageRow::initialPage), nastavimo dve lastnosti "
+"glavne strani, da je `mainPage` prva stran, ki se pokaže v vrstici strani in "
+"njene dimenzije upravlja vrstica strani namesto ročni [anchors](https://doc."
+"qt.io/qt-6/qtquick-positioning-anchors.html), [positioners](https://doc.qt."
+"io/qt-6/qtquick-positioning-layouts.html) ali [layouts](https://doc.qt.io/"
+"qt-6/layout.html). Druga izboljšava je, da imamo orodno vrstico, ki jo lahko "
+"določimo s slogom orodne vrstice z [globalToolBar.style](docs:kirigami2;"
+"PageRow::globalToolBar). Obstaja na izbiro nekaj slogov, za zdaj bomo "
+"uporabili [Kirigami.ApplicationHeaderStyle.Auto](docs:kirigami2;templates::"
+"ApplicationHeader::headerStyle)."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:65
 msgid ""
 "A single page with toolbar and light blue color to show the page's dimensions"
 msgstr ""
+"Ena stran z orodno vrstico in svetlo modro barvo, ki prikazuje dimenzije "
+"strani"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:67
 msgid ""
@@ -3487,21 +3367,27 @@ msgid ""
 "[goForward()](docs:kirigami2;PageRow::goForward) can be used to navigate "
 "between pages."
 msgstr ""
+"V vrstici strani obstajata samo dva načina dodajanja strani: z nastavitvijo "
+"njene začetne strani [initialPage](docs:kirigami2;PageRow::initialPage) (ki "
+"neobvezno lahko prevzame vektor strani) ali z uporabo funkcije [push()](docs:"
+"kirigami2;PageRow::push). Za brisanje strani iz vrstice strani , uporabite "
+"funkcijo [pop()](docs:kirigami2;PageRow::pop), kjer lahko uporabite še "
+"[goBack()](docs:kirigami2;PageRow::goBack) ali [goForward()](docs:kirigami2;"
+"PageRow::goForward) za navigacijo med stranmi."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:112
 msgid "Initial page with light blue color"
-msgstr ""
+msgstr "Začetna stran s svetlo modro barvo"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:114
 msgid ""
 "Upon clicking \\\"Push!\\\", a second page with light green color shows up"
 msgstr ""
+"Ko kliknete \\\"Push!\\\", se prikaže druga stran s svetlo zeleno barvo"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:116
-#, fuzzy
-#| msgid "The application should look like this:"
 msgid "The application's stack of pages"
-msgstr "Aplikacija bi morala biti takega videza:"
+msgstr "Sklad strani aplikacije"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:118
 msgid ""
@@ -3511,12 +3397,19 @@ msgid ""
 "pageStack) is nothing more than a very convenient, global page row. Every "
 "function available to a `PageRow` is also available to the `pageStack`."
 msgstr ""
+"Če se vam zdi [Kirigami.PageRow](docs:kirigami2;PageRow) z orodno vrstico že "
+"znan, je to ker ste to že videli prej. Sklad [ApplicationWindow.pageStack]"
+"(docs:kirigami2;AbstractApplicationWindow::pageStack) ni nič drugega kot "
+"zelo priročna globalna vrstica strani. Vsaka funkcija, ki je na voljo za "
+"`PageRow` je tudi na voljo za `pageStack`."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:120
 msgid ""
 "The previous example can be reduced significantly with a `pageStack`, with "
 "the added bonus of navigation actions:"
 msgstr ""
+"Prejšnji primer je mogoče znatno zmanjšati s `pageStack` z dodanim bonusom "
+"dejavnosti navigacije:"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:167
 msgid ""
@@ -3529,26 +3422,30 @@ msgid ""
 "[applicationWindow()](docs:kirigami2;AbstractApplicationWindow::"
 "applicationWindow):"
 msgstr ""
+"Na splošno boste želeli uporabiti \"pageStack\", namesto da bi "
+"implementirali svojo vrstico [PageRow](docs:kirigami2;PageRow), še posebej, "
+"ko postane vaša aplikacija večja in je potrebno, da vaše komponente živijo v "
+"posameznih datotekah. Če ustvarite vaše okno v vašem `main.qml` z uporabo "
+"[Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), lahko "
+"komponenta iz druge datoteke še vedno neposredno kliče globalnega "
+"`pageStack` s klicem [applicationWindow()](docs:kirigami2;"
+"AbstractApplicationWindow::applicationWindow):"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:170
-#, fuzzy
-#| msgid "main.qml"
 msgid "\"main.qml\""
-msgstr "main.qml"
+msgstr "\"main.qml\""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:180
 msgid "and"
-msgstr ""
+msgstr "in"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:183
-#, fuzzy
-#| msgid "LoginPage.qml"
 msgid "\"BasicPage.qml\""
-msgstr "PrijavaPage.qml"
+msgstr "\"BasicPage.qml\""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:209
 msgid "Clicking the button pushes a new page with help of applicationWindow"
-msgstr ""
+msgstr "Klik na gumb potisne novo stran s pomočjo applicationWindow"
 
 #: content/docs/use/kirigami/components-progressbars.md:0
 msgid "Progress Bars and Indicators"
@@ -3582,55 +3479,40 @@ msgid "Progress bar"
 msgstr "Vrstica napredka"
 
 #: content/docs/use/kirigami/components-progressbars.md:16
-#, fuzzy
-#| msgid ""
-#| "`Controls.ProgressBar` is a component that lets you easily include "
-#| "progress bars in your application. There are four main properties you "
-#| "will need to use:"
 msgid ""
 "[Controls.ProgressBar](docs:qtquickcontrols;QtQuick.Controls.ProgressBar) is "
 "a component that lets you easily include progress bars in your application. "
 "There are four main properties you will need to use:"
 msgstr ""
-"'Controls.ProgressBar' je komponenta, ki vam v aplikacijo dovoli enostavno "
-"vključiti vrstico napredka. Obstajajo štiri glavne lastnosti, ki jih boste "
-"morali uporabiti:"
+"[Controls.ProgressBar](docs:qtquickcontrols;QtQuick.Controls.ProgressBar) je "
+"komponenta, ki vam v aplikacijo dovoli enostavno vključiti vrstico napredka. "
+"Obstajajo štiri glavne lastnosti, ki jih boste morali uporabiti:"
 
 #: content/docs/use/kirigami/components-progressbars.md:18
-#, fuzzy
-#| msgid ""
-#| "`from`: the minimum value represented by the start of the progress bar"
 msgid ""
 "[from](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#from-"
 "prop): the minimum value represented by the start of the progress bar"
-msgstr "'from': najmanjša vrednost, ki jo predstavlja začetek vrstice napredka"
+msgstr ""
+"[from](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#from-"
+"prop): najmanjša vrednost, ki jo predstavlja začetek vrstice napredka"
 
 #: content/docs/use/kirigami/components-progressbars.md:19
-#, fuzzy
-#| msgid "`to`: the maximum value represented by the end of the progress bar"
 msgid ""
 "[to](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#to-prop): "
 "the maximum value represented by the end of the progress bar"
-msgstr "'to': največja vrednost, ki jo predstavlja konec vrstice napredka"
+msgstr ""
+"[to](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#to-prop): "
+"največja vrednost, ki jo predstavlja konec vrstice napredka"
 
 #: content/docs/use/kirigami/components-progressbars.md:20
-#, fuzzy
-#| msgid ""
-#| "`value`: the current value of the action that is in progress (e.g. 50% "
-#| "loaded)"
 msgid ""
 "[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#value-"
 "prop): the current value of the action that is in progress (e.g. 50% loaded)"
 msgstr ""
-"'value': trenutna vrednost dejavnosti, ki je v teku (npr. 50% naloženo)"
+"[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#value-"
+"prop): trenutna vrednost dejavnosti, ki je v teku (npr. 50% naloženo)"
 
 #: content/docs/use/kirigami/components-progressbars.md:21
-#, fuzzy
-#| msgid ""
-#| "`indeterminate`: if the action that is in process currently has no clear "
-#| "progress value, you can set this property to true to show the user "
-#| "something is happening but its progress is not yet clear (but will be "
-#| "soon)."
 msgid ""
 "[indeterminate](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar."
 "html#indeterminate-prop): if the action that is in process currently has no "
@@ -3638,36 +3520,32 @@ msgid ""
 "that something is happening but its progress is not yet clear (but will be "
 "soon)."
 msgstr ""
-"`indeterminate`: če dejanje, ki je v postopku, trenutno nima jasne vrednosti "
-"napredka, lahko to lastnost nastavite tako, da bo uporabniku pokazala, da se "
-"nekaj dogaja, vendar njegov napredek še ni jasen (vendar bo kmalu)."
+"nedoločljivo [indeterminate](https://doc.qt.io/qt-6/qml-qtquick-controls2-"
+"progressbar.html#indeterminate-prop):  če dejanje, ki je v postopku, "
+"trenutno nima jasne vrednosti napredka, lahko to lastnost nastavite tako, da "
+"bo uporabniku pokazala, da se nekaj dogaja, vendar njegov napredek še ni "
+"jasen (vendar bo kmalu)."
 
 #: content/docs/use/kirigami/components-progressbars.md:48
-#, fuzzy
-#| msgid "Above: progress bar at 50%; Below: indeterminate progress bar"
 msgid "Above: progress bar at 50%; below: indeterminate progress bar"
-msgstr "Zgoraj: vrstica napredka pri 50 %; spodaj: nedoločena vrstica napredka"
+msgstr ""
+"Zgoraj: vrstica napredka pri 50 %; spodaj: nedoločljiva vrstica napredka"
 
 #: content/docs/use/kirigami/components-progressbars.md:54
 msgid "Busy indicator"
 msgstr "Indikator zasedenosti"
 
 #: content/docs/use/kirigami/components-progressbars.md:56
-#, fuzzy
-#| msgid ""
-#| "In cases where loading times are shorter or measuring progress is not "
-#| "feasible, you can instead use `Controls.BusyIndicator`. This component "
-#| "provides a simple spinning wheel that shows users that something is "
-#| "happening."
 msgid ""
 "In cases where loading times are shorter or measuring progress is not "
 "feasible, you can instead use [Controls.BusyIndicator](docs:qtquickcontrols;"
 "QtQuick.Controls.BusyIndicator). This component provides a simple spinning "
 "wheel that shows users that something is happening."
 msgstr ""
-"V primerih, ko so časi nalaganja krajši ali je merjenje napredka izvedljivo, "
-"lahko namesto tega uporabite 'Controls.BusyIndicator'. Ta komponenta "
-"zagotavlja preprosto vrteče kolo, ki uporabnikom pokaže, da se nekaj dogaja."
+"V primerih, ko so časi nalaganja krajši ali merjenje napredka ni smiselno, "
+"lahko namesto tega uporabite  [Controls.BusyIndicator](docs:qtquickcontrols;"
+"QtQuick.Controls.BusyIndicator). Ta komponenta zagotavlja preprosto vrteče "
+"kolo, ki uporabnikom pokaže, da se nekaj dogaja."
 
 #: content/docs/use/kirigami/components-progressbars.md:62
 msgid ""
@@ -3678,17 +3556,14 @@ msgstr ""
 "busyindicator.png)"
 
 #: content/docs/use/kirigami/components-progressbars.md:64
-#, fuzzy
-#| msgid ""
-#| "If you want the indicator to stop running, you can do so by setting the "
-#| "`running` property to false."
 msgid ""
 "If you want the indicator to stop running, you can do so by setting the "
 "[running](https://doc.qt.io/qt-6/qml-qtquick-controls2-busyindicator."
 "html#running-prop) property to false."
 msgstr ""
 "Če želite, da se indikator ustavi, lahko to storite tako, da nastavite "
-"lastnost 'running' na false."
+"lastnost [running](https://doc.qt.io/qt-6/qml-qtquick-controls2-"
+"busyindicator.html#running-prop) na false."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:0
 msgid "Scrollable Pages and List Views"
@@ -3703,17 +3578,10 @@ msgstr ""
 "komponentami ali dinamičnimi komponentami, kot so pogledi seznama."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:10
-#, fuzzy
-#| msgid "`Kirigami.ScrollablePage`"
 msgid "Kirigami.ScrollablePage"
-msgstr "`Kirigami.ScrollablePage`"
+msgstr "Kirigami.ScrollablePage"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:12
-#, fuzzy
-#| msgid ""
-#| "A [`Kirigami.ScrollablePage`](docs:kirigami2;ScrollablePage) is a page "
-#| "that holds scrollable content, such as `ListView`s. Scrolling and "
-#| "scrolling indicators are automatically managed."
 msgid ""
 "A [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) is a page that "
 "holds scrollable content, such as a [ListView](docs:qtquick;QtQuick."
@@ -3721,8 +3589,8 @@ msgid ""
 "managed."
 msgstr ""
 "[`Kirigami.ScrollablePage`](docs:kirigami2;ScrollablePage) je stran, ki ima "
-"drsno vsebino, na primer 'ListView'. Kazalniki za drsenje se samodejno "
-"upravljajo."
+"drsno vsebino, na primer [ListView](docs:qtquick;QtQuick.ListView). "
+"Kazalniki za drsenje se samodejno upravljajo."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:18
 msgid "The rectangle will automatically be scrollable"
@@ -3736,43 +3604,31 @@ msgstr ""
 "običajni strani."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:30
-#, fuzzy
-#| msgid ""
-#| "Do not put a `ScrollView` inside of a `Kirigami.ScrollablePage`; children "
-#| "of a `Kirigami.ScrollablePage` are already inside a `ScrollView`."
 msgid ""
 "Do not put a [ScrollView](docs:qtquickcontrols;QtQuick.Controls.ScrollView) "
 "inside of a [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage); "
 "children of a `Kirigami.ScrollablePage` are already inside a `ScrollView`."
 msgstr ""
-"Ne nastavljajte 'ScrollView' v 'Kirigami.ScrollablePage'; potomci 'Kirigami."
-"ScrollablePage' so že znotraj 'ScrollView'."
+"Ne postavljajte [ScrollView](docs:qtquickcontrols;QtQuick.Controls."
+"ScrollView) v [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage); "
+"potomci 'Kirigami.ScrollablePage' so že znotraj 'ScrollView'."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:35
 msgid "ListView in a ScrollablePage"
 msgstr "Pregled seznama v strani, po kateri se da drseti"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:37
-#, fuzzy
-#| msgid ""
-#| "When a `Kirigami.ScrollablePage`'s direct children extend vertically "
-#| "beyond the size of the page itself, a scrollbar appears at the right edge "
-#| "of the page and the page will be scrollable."
 msgid ""
 "When the direct children of a [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage) extend vertically beyond the size of the page itself, a "
 "scrollbar appears at the right edge of the page and the page will be "
 "scrollable."
 msgstr ""
-"Ko se neposredni potomci 'Kirigami.ScrollablePage' razširijo navpično preko "
-"velikosti strani, se na desni strani prikaže drsnik in po strani se da "
-"drseti."
+"Ko se neposredni potomci [Kirigami.ScrollablePage](docs:kirigami2;"
+"ScrollablePage) razširijo navpično preko velikosti strani, se na desni "
+"strani prikaže drsnik in po strani se da drseti."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:41
-#, fuzzy
-#| msgid ""
-#| "Two scrollable pages, both containing a ListView with custom contents "
-#| "(Screenshot of NeoChat)"
 msgid ""
 "Two scrollable pages, both containing a ListView with custom contents "
 "(screenshot of NeoChat)"
@@ -3781,77 +3637,54 @@ msgstr ""
 "vsebino po meri (posnetek zaslona NeoChat)"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:43
-#, fuzzy
-#| msgid ""
-#| "Often you have more than one child in your `Kirigami.ScrollablePage`, and "
-#| "positioning items can be tricky - especially in combination with a "
-#| "`ListView`."
 msgid ""
 "Often you have more than one child in your [Kirigami.ScrollablePage](docs:"
 "kirigami2;ScrollablePage), and positioning items can be tricky—especially in "
 "combination with a [ListView](docs:qtquick;QtQuick.ListView)."
 msgstr ""
-"Pogosto imate več kot enega potomca v 'Kirigami.ScrollablePage' in "
-"pozicioniranje elementov je lahko zapleteno - še posebej v kombinaciji z "
-"'ListView'."
+"Pogosto imate več kot enega potomca v [Kirigami.ScrollablePage](docs:"
+"kirigami2;ScrollablePage) in pozicioniranje elementov je lahko zapleteno - "
+"še posebej v kombinaciji z [ListView](docs:qtquick;QtQuick.ListView)."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:46
-#, fuzzy
-#| msgid ""
-#| "For non-visual components, having them inside the `ListView` element "
-#| "won't change the visuals of the page. So we can move them inside the "
-#| "`ListView`. Same for elements anchored to the center of the page, such as "
-#| "placeholder messages for empty `ListView`s."
 msgid ""
 "For non-visual components, having them inside the [ListView](docs:qtquick;"
 "QtQuick.ListView) component won't change the visuals of the page, so we can "
 "move them inside the scope of the list view. Same for elements anchored to "
 "the center of the page, such as placeholder messages for empty list views."
 msgstr ""
-"Nevizualne komponente v elementu 'ListView' ne bodo spremenile videz strani. "
-"Lahko jih premaknemo v 'ListView'. Enako velja za elemente, ki so zasidrani "
-"na sredino strani, kot so lokacije za sporočila o prazni pogledih seznamov "
-"'ListView'."
+"Nevizualne komponente v elementu [ListView](docs:qtquick;QtQuick.ListView) "
+"ne bodo spremenile videz strani. Lahko jih premaknemo v seznam pogledov. "
+"Enako velja za elemente, ki so zasidrani na sredino strani, kot so lokacije "
+"za sporočila o praznih seznamih pogledov."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:49
-#, fuzzy
-#| msgid ""
-#| "For other items, it might make sense to move them to the header or footer "
-#| "of the `Kirigami.ScrollablePage`. This is often the case for search bars."
 msgid ""
 "For other items, it might make sense to move them to the header or footer of "
 "the [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage). This is often "
 "the case for search bars."
 msgstr ""
-"Za druge elemente je morda smiselno, da jih premaknete v glavo ali nogo "
-"strani 'Kirigami.ScrollablePage'. To pogosto velja za iskalne vrstice."
+"Za druge elemente je morda bolj smiselno, da jih premaknete v glavo ali nogo "
+"strani [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage. To pogosto "
+"velja za iskalne vrstice."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:52
 msgid "PlaceholderMessage"
 msgstr "PlaceholderMessage"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:54
-#, fuzzy
-#| msgid ""
-#| "It is possible to add a [`Kirigami.PlaceholderMessage`](docs:kirigami2;"
-#| "PlaceholderMessage) with some instructions in case the list view is empty."
 msgid ""
 "It is possible to add a [Kirigami.PlaceholderMessage](docs:kirigami2;"
 "PlaceholderMessage) with some instructions in case the list view is empty."
 msgstr ""
 "Možno je dodati ['Kirigami.PlaceholderMessage'](docs:kirigami2;"
-"PlaceholderMessage) z nekaj navodili, če je pogled seznama prazen."
+"PlaceholderMessage) z nekaj navodili, če je seznam pogledov prazen."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:76
 msgid "Search in the ListView"
 msgstr "Iskanje v pogledu seznama"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:78
-#, fuzzy
-#| msgid ""
-#| "A search field is often added to a `Kirigami.ScrollablePage` to filter "
-#| "the `ListView`. This can be done by changing the default `titleDelegate` "
-#| "to use a [`Kirigami.SearchField`](docs:kirigami2;SearchField) instead."
 msgid ""
 "A search field is often added to a [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage) to filter the [ListView](docs:qtquick;QtQuick.ListView). "
@@ -3859,22 +3692,17 @@ msgid ""
 "Page::titleDelegate) to use a [Kirigami.SearchField](docs:kirigami2;"
 "SearchField) instead."
 msgstr ""
-"Iskalno polje se pogosto doda 'Kirigami.ScrollablePage' za filtriranje "
-"pogleda seznama 'ListView'. To lahko storite tako, da spremenite privzeti "
-"`titleDelegate` za uporabo [`Kirigami.SearchField`](docs:kirigami2;"
-"SearchField) namesto tega."
+"Iskalno polje se pogosto doda [Kirigami.ScrollablePage](docs:kirigami2;"
+"ScrollablePage) za filtriranje seznama pogledov [ListView](docs:qtquick;"
+"QtQuick.ListView). To lahko storite tako, da spremenite privzeti "
+"[titleDelegate](docs:kirigami2;Page::titleDelegate) za uporabo [`Kirigami."
+"SearchField`](docs:kirigami2;SearchField) namesto tega."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:100
 msgid "Hint"
 msgstr "Namig"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:102
-#, fuzzy
-#| msgid ""
-#| "You can use [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) "
-#| "from [KItemModel](https://api.kde.org/frameworks/kitemmodels/html/) to "
-#| "easily add filtering capability directly in QML without any need for C++ "
-#| "code."
 msgid ""
 "You can use [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) from "
 "[KItemModel](docs:kitemmodels) to easily add filtering capability directly "
@@ -3889,10 +3717,6 @@ msgid "Pull to refresh"
 msgstr "Povlecite za osvežitev"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:110
-#, fuzzy
-#| msgid ""
-#| "Another function provided by this component is a \"pull to refresh\" "
-#| "action. To use this, activate it as follows:"
 msgid ""
 "Another function provided by this component is a \"pull-to-refresh\" action. "
 "To use this, activate it as follows:"
@@ -3901,11 +3725,6 @@ msgstr ""
 "osvežitev\". Če želite to uporabiti, jo aktivirajte na naslednji način:"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:123
-#, fuzzy
-#| msgid ""
-#| "NOTE: MyModel doesn't come from the components, it's purely an example on "
-#| "how it can be used together some application logic that can update the "
-#| "list model and signals when it's done."
 msgid ""
 "NOTE: MyModel doesn't come from the components, it's purely an example on "
 "how it can be used together with some application logic that can update the "
@@ -3956,8 +3775,6 @@ msgstr ""
 "interaktivnost v našo aplikacijo na dosleden, hiter in dostopen način."
 
 #: content/docs/use/kirigami/introduction-actions.md:24
-#, fuzzy
-#| msgid "Page actions on a mobile device"
 msgid "Page actions on mobile"
 msgstr "Dejanja strani na mobilni napravi"
 
@@ -3986,16 +3803,6 @@ msgstr ""
 "odštevanja. Ustvarimo akcijo, ki nam bo to dovolila."
 
 #: content/docs/use/kirigami/introduction-actions.md:57
-#, fuzzy
-#| msgid ""
-#| "We are placing our Kirigami Action within our main page from our previous "
-#| "tutorials. If we wanted to, we could add more actions to our page (and "
-#| "even nest actions within actions!). `Kirigami.Action` components are used "
-#| "as contextual actions within Kirigami pages. We are setting it "
-#| "specifically to the `actions.main` property of the page: the `actions` "
-#| "object has properties that let us set different actions in different "
-#| "positions, but since our 'Add kountdown' action is central to our UI we "
-#| "are setting it as the main action of this page."
 msgid ""
 "We are placing our Kirigami Action within our main page from our previous "
 "tutorials. If we wanted to, we could add more actions to our page (and even "
@@ -4007,23 +3814,17 @@ msgid ""
 "since our \"Add kountdown\" action is central to our UI we are setting it as "
 "the main action of this page."
 msgstr ""
-"Mi smo Postavilo naše dejanje Kirigami Action znotraj naše glavne strani iz "
+"Mi smo postavili naše dejanje Kirigami Action znotraj naše glavne strani iz "
 "naših prejšnjih vaj. Če bi želeli, bi lahko na našo stran dodali še več "
-"dejanj (in celo ugnezdili dejanja znotraj dejanj!). Komponente 'Kirigami."
-"Action' se uporabljajo kot kontekstualni ukrepi na straneh Kirigami. Posebej "
-"nastavljamo lastnost strani 'actions.main': predmet 'actions' ima lastnosti, "
-"ki nam dovolijo nastaviti različna dejanja na različnih položajih, ker pa je "
-"naše dejanje 'Add kountdown' osrednje za naš uporabniški vmesnik, ga "
-"nastavljamo kot glavno dejanje te strani."
+"dejanj (in celo ugnezdili dejanja znotraj dejanj!). Komponente [Kirigami."
+"Action](docs:kirigami2;Action) se uporabljajo kot kontekstualna dejanja na "
+"straneh Kirigami. Posebej nastavljamo lastnost strani [actions.main](docs:"
+"kirigami2;Page::actions) predmet naše strani [Kirigami.Page](docs:kirigami2;"
+"Page) ima lastnosti, ki nam dovolijo nastaviti različna dejanja na različnih "
+"položajih, ker pa je naše dejanje 'Add kountdown' osrednje za naš "
+"uporabniški vmesnik, ga nastavljamo kot glavno dejanje te strani."
 
 #: content/docs/use/kirigami/introduction-actions.md:59
-#, fuzzy
-#| msgid ""
-#| "The `id` and `text` properties should be familiar from previous "
-#| "tutorials. However, the new `icon` property should be interesting: it is "
-#| "an object with several properties letting you display certain icons for "
-#| "your actions. Fortunately, to use KDE icons all we need to do is provide "
-#| "the name property for the icon property, `icon.name`."
 msgid ""
 "The `id` and `text` properties should be familiar from previous tutorials. "
 "However, the inherited [Action.icon](https://doc.qt.io/qt-5/qml-qtquick-"
@@ -4032,11 +3833,12 @@ msgid ""
 "actions. Fortunately, to use KDE icons all we need to do is provide the name "
 "property for the icon property, `icon.name`."
 msgstr ""
-"Lastnosti 'id' in 'text' bi vam morale biti znane iz prejšnjega učenja. "
-"Vendar pa bi morala biti nova lastnost 'icon' zanimiva: je namreč predmet z "
-"več lastnostmi, ki vam dovolijo prikazati določene ikone za dejanja. Na "
-"srečo je za uporabo ikon KDE vse, kar moramo storiti, zagotoviti ime "
-"lastnosti ikone 'icon.name'."
+"Lastnosti 'id' in 'text' bi vam morale biti znane iz prejšnjih vaj. Vendar "
+"pa bi morala biti nova podedovana lastnost [Action.icon](https://doc.qt.io/"
+"qt-5/qml-qtquick-controls2-action.html#icon-prop) zanimiva: je namreč "
+"predmet z več lastnostmi, ki vam dovolijo prikazati določene ikone za "
+"dejanja. Na srečo je za uporabo ikon KDE vse, kar moramo storiti, zagotoviti "
+"ime lastnosti ikone 'icon.name'."
 
 #: content/docs/use/kirigami/introduction-actions.md:63
 msgid ""
@@ -4053,13 +3855,6 @@ msgstr ""
 "v aplikaciji, boste morda našli uporabno orodje."
 
 #: content/docs/use/kirigami/introduction-actions.md:65
-#, fuzzy
-#| msgid ""
-#| "Many of KDE's icons follow the FreeDesktop Icon Naming specification. "
-#| "Therefore, you might also find it useful to consult The FreeDesktop "
-#| "project's website, [which lists all of the cross-desktop compatible icon "
-#| "names on their website](https://specifications.freedesktop.org/icon-"
-#| "naming-spec/icon-naming-spec-latest.html)."
 msgid ""
 "Many of KDE's icons follow the FreeDesktop Icon Naming specification. "
 "Therefore, you might also find it useful to consult The FreeDesktop "
@@ -4069,7 +3864,7 @@ msgid ""
 msgstr ""
 "Mnoge ikone KDE sledijo specifikaciji poimenovanja ikon FreeDesktop. Zato se "
 "utegne biti tudi koristno, da se posvetujete s spletnim mestom projekta "
-"FreeDesktop, [ki na svoji spletni strani našteje vsa imena združljivih ikon]"
+"FreeDesktop, [ki na svoji spletni strani našteva vsa imena združljivih ikon]"
 "(https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-"
 "latest.html)."
 
@@ -4093,12 +3888,14 @@ msgid ""
 "relevant properties for our countdowns (`name`, `description`, and a "
 "placeholder `date`)."
 msgstr ""
-"Lastnost 'OnTriggered' je najpomembnejša. To bo naša naredila aktivnost, ko "
-"bo uporabljena. Opazili boste, da v našem primeru uporabljamo metodo "
-"'kountdownModel.append' modela 'kountdownModel', ki smo ga ustvarili v "
-"prejšnjih vajah. S to metodo lahko v naš model seznama priložimo nov "
-"element. Ponujamo mu predmet, ki ima ustrezne lastnosti za naše odštevanje "
-"(ime, opis in datum bodoče lokacije)."
+"Prožilnik [onTriggered](docs:qtquickcontrols;QtQuick.Controls.Action::"
+"triggered) je najpomembnejši. To bo naredila naša dejavnost, ko bo "
+"uporabljena. Opazili boste, da v našem primeru uporabljamo metodo "
+"[kountdownModel.append](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel."
+"html#append-method) modela 'kountdownModel', ki smo ga ustvarili v prejšnjih "
+"vajah. S to metodo lahko v naš model seznama priložimo nov element. Ponujamo "
+"mu predmet, ki ima ustrezne lastnosti za naše odštevanje (ime, opis in datum "
+"bodoče lokacije)."
 
 #: content/docs/use/kirigami/introduction-actions.md:75
 #, fuzzy
