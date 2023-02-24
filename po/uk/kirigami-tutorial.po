@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-22 23:11+0200\n"
+"PO-Revision-Date: 2023-02-23 23:32+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -1877,6 +1877,10 @@ msgid ""
 "direction. In both modes, sliders in vertical orientation go from the bottom "
 "up."
 msgstr ""
+"У режимі зліва праворуч повзунки рухаються зліва праворуч для збільшення при "
+"горизонтальній орієнтації, а у режимі справа ліворуч вони рухаються в "
+"оберненому напрямку. В обох режимах повзунки у вертикальній орієнтації "
+"рухаються знизу вгору."
 
 #: content/docs/use/kirigami/components-controls.md:230
 msgid ""
@@ -2066,6 +2070,9 @@ msgid ""
 "left edge to the middle of the screen in Left to Right mode or from the "
 "right edge in Right to Left mode."
 msgstr ""
+"Її можна активувати натисканням кнопки меню-гамбургера або рухом пальця від "
+"лівого краю до середини екрана у режимі зліва праворуч або від правого краю "
+"у режимі справа ліворуч."
 
 #: content/docs/use/kirigami/components-drawers.md:20
 msgid ""
@@ -2260,6 +2267,14 @@ msgid ""
 "`actions.right`; these do not get hidden in space-constrained windows, and "
 "are instead collapsed into their respective icons."
 msgstr ""
+"На робочій станції, якщо у вікна достатньо місця, пункти контекстних дій "
+"буде показано як частину групи `actions` на верхній панелі інструментів. "
+"Якщо місце обмежено, зокрема на мобільних пристроях або у вузьких вікнах, "
+"пункти контекстних дій буде приховано за меню-гамбургером у правій частині "
+"вікна. Ця поведінка є відмінною від інших пунктів дій у групі `actions`, "
+"зокрема `actions.main`, `actions.left` і `actions.right`; ці пункти дій не "
+"буде приховано у вікнах із обмеженим розміром. Замість того, їх буде "
+"згорнуто до відповідних піктограм."
 
 #: content/docs/use/kirigami/components-drawers.md:226
 msgid "Context drawer with contextual actions hidden"
@@ -2279,6 +2294,13 @@ msgid ""
 "the mobile interface, you can run your application with the environment "
 "variable `QT_QUICK_CONTROLS_MOBILE=1`."
 msgstr ""
+"На мобільних пристроях висувна панель завжди складається з пунктів дій, які "
+"сховано під меню-гамбургером. Її можна активувати натисканням кнопки меню-"
+"гамбургера або проведенням пальцем від правого краю до середини екрана у "
+"режимі зліва праворуч або від лівого краю у режимі справа ліворуч. Якщо ви "
+"працюєте за робочою станцією і хочете тестувати мобільний інтерфейс, ви "
+"можете запустити вашу програму із встановленим значенням змінної середовища "
+"`QT_QUICK_CONTROLS_MOBILE=1`."
 
 #: content/docs/use/kirigami/components-drawers.md:240
 msgid "Same example above, running in mobile mode"
@@ -2630,6 +2652,15 @@ msgid ""
 "this with help of [Kirigami.FormData.labelAlignment](docs:kirigami2;"
 "FormLayoutAttached::labelAlignment)."
 msgstr ""
+"Іноді виникає потреба у наданні мітці значення компонентів, які складаються "
+"з декількох рядків, або списку компонентів. Досягти бажаного результату "
+"можна вставленням [Kirigami.FormData.label](docs:kirigami2;"
+"FormLayoutAttached::label) до [ColumnLayout](https://doc.qt.io/qt-6/qml-"
+"qtquick-layouts-columnlayout.html), як ви могли помітити у розділі [Розділи "
+"і роздільники](#sections-and-separators). Типово, мітку буде розташовано у "
+"центрі компонування за вертикаллю, що не завжди є бажаним. Змінити "
+"розташування можна за допомогою [Kirigami.FormData.labelAlignment](docs:"
+"kirigami2;FormLayoutAttached::labelAlignment)."
 
 #: content/docs/use/kirigami/components-formlayouts.md:238
 msgid "A form layout with top-aligned label"
@@ -3092,6 +3123,9 @@ msgid ""
 "the application together with an action to add new data to the model](/docs/"
 "use/kirigami/components-listview/listview-placeholdermessage.png)"
 msgstr ""
+"![Порожня панель списку, на якій показано повідомлення-замінник посередині "
+"вікна програми разом із кнопкою дії для додавання нових даних до моделі](/"
+"docs/use/kirigami/components-listview/listview-placeholdermessage.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:0
 msgid "Overlay sheets"
@@ -3329,6 +3363,10 @@ msgid ""
 "screen of the application, or it can be shown together with other pages at "
 "the same time, if there is space."
 msgstr ""
+"Досі ми бачили, що одним з основних компонентів вікна Kirigami є [Kirigami."
+"Page](docs:kirigami2;Page). Одна сторінка може включати увесь екран "
+"програми, або її може бути показано разом із іншими сторінками, якщо "
+"достатньо місця."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:14
 msgid ""
@@ -3336,6 +3374,10 @@ msgid ""
 "existing page(s), forming a row. This row of pages can be managed with the "
 "fittingly named [Kirigami.PageRow](docs:kirigami2;PageRow)."
 msgstr ""
+"Кожного разу, коли додається або «виштовхується» сторінка, вона з'являється "
+"праворуч від наявних сторінок, формуючи рядок. Керувати цим рядком сторінок "
+"можна за допомогою відповідно названого [Kirigami.PageRow](docs:kirigami2;"
+"PageRow)."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:16
 msgid "A minimal page row with a single page could look like this:"
@@ -4306,6 +4348,9 @@ msgid ""
 "`main.cpp`, instead of needing to specify the whole \"contents/ui/main.qml\" "
 "path."
 msgstr ""
+"Цей файл ресурсів надає нам змогу скористатися шляхом \"qrc:\" + \"/main.qml"
+"\" у нашому `main.cpp`, замість потреби у визначенні повного шляху "
+"\"contents/ui/main.qml\"."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:123
 msgid ""
@@ -5660,6 +5705,9 @@ msgid ""
 "[this wiki page](https://community.kde.org/Get_Involved/development/"
 "Learn#C_and_C++)."
 msgstr ""
+"Ми також надаємо список неперервно оновлюваних ресурсів для вивчення C++ на "
+"[цій сторінці вікі](https://community.kde.org/Get_Involved/development/"
+"Learn#C_and_C++)."
 
 #: content/docs/use/kirigami/introduction-next_steps.md:89
 msgid "Creating classic KDE applications using QtWidgets"
@@ -5817,6 +5865,8 @@ msgid ""
 "![Overlay sheet appearing in the middle of the application like a dialog "
 "window](addSheet.webp)"
 msgstr ""
+"![Аркуш-накладка, що з'являється посередині вікна програми як діалогове "
+"вікно](addSheet.webp)"
 
 #: content/docs/use/kirigami/introduction-overlaysheets.md:21
 msgid "Countdown-adding sheet"
@@ -6629,11 +6679,11 @@ msgstr ""
 
 #: content/docs/use/kirigami/style-colors.md:84
 msgid "How color sets differ in Breeze"
-msgstr ""
+msgstr "Як відрізняються набори кольорів у Breeze"
 
 #: content/docs/use/kirigami/style-colors.md:90
 msgid "How color sets differ in Breeze Dark"
-msgstr ""
+msgstr "Як відрізняються набори кольорів у темній Breeze"
 
 #: content/docs/use/kirigami/style-colors.md:96
 msgid "Using Custom Colors"
@@ -6701,11 +6751,12 @@ msgstr ""
 
 #: content/docs/use/kirigami/style-typography.md:112
 msgid "Heading and lorem ipsum text aligned to the horizontal center"
-msgstr ""
+msgstr "Заголовок і текст lorem ipsum вирівняно горизонтально за центром"
 
 #: content/docs/use/kirigami/style-typography.md:148
 msgid "Heading and lorem ipsum text using right-aligned text"
 msgstr ""
+"Заголовок і текст lorem ipsum з використанням вирівняного праворуч тексту"
 
 #: content/docs/use/kirigami/style-typography.md:186
 msgid ""
@@ -6738,6 +6789,8 @@ msgid ""
 "A Label containing a list of fruits using HTML tags like paragraph, "
 "unordered lists and bold fonts"
 msgstr ""
+"Мітка, що містить список фруктів із використанням теґів HTML, зокрема теґів "
+"абзаців, неупорядкованих списків та напівжирних шрифтів"
 
 #: content/docs/use/kirigami/style-typography.md:268
 msgid ""
