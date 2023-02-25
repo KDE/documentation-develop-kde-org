@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-19 09:38+0100\n"
+"PO-Revision-Date: 2023-02-24 15:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -115,6 +115,8 @@ msgstr ""
 msgid ""
 "First, we are going to edit our `main.cpp` file from previous tutorials."
 msgstr ""
+"En primer lugar, vamos a editar nuestro archivo `main.cpp` de los tutoriales "
+"anteriores."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:14
 #: content/docs/use/kirigami/introduction-getting_started.md:101
@@ -264,14 +266,9 @@ msgstr ""
 "`src/CMakeLists.txt`, junto a `main.cpp`."
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:14
-#, fuzzy
-#| msgid ""
-#| "Add the following content to the new header file (the one with the `.h` "
-#| "extension):"
 msgid "Add the following content to the new header file (`backend.h`):"
 msgstr ""
-"Añada el siguiente contenido al nuevo archivo de cabecera (el que tiene la "
-"extensión `.h`):"
+"Añada el siguiente contenido al nuevo archivo de cabecera (`backend.h`):"
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:29
 msgid ""
@@ -300,6 +297,9 @@ msgid ""
 "QQmlApplicationEngine), add the [type registration](https://doc.qt.io/qt-5/"
 "qtqml-cppintegration-definetypes.html) to `main.cpp` as follows:"
 msgstr ""
+"Después de crear el [QQmlApplicationEngine](docs:qtqml;"
+"QQmlApplicationEngine), añada el [registro de tipo](https://doc.qt.io/qt-5/"
+"qtqml-cppintegration-definetypes.html) a `main.cpp` de este modo:"
 
 #: content/docs/use/kirigami/advanced-connect_backend.md:48
 msgid "Don't forget to include the new header file at the top of `main.cpp`."
@@ -922,11 +922,6 @@ msgstr ""
 "de anidad acciones."
 
 #: content/docs/use/kirigami/components-actions.md:62
-#, fuzzy
-#| msgid ""
-#| "Another feature of Kirigami Actions is to provide various hints to items "
-#| "using actions about how they should display the action. These are "
-#| "primarily handled by the `displayHint` and `displayComponent` properties."
 msgid ""
 "Another feature of Kirigami Actions is to provide various hints to items "
 "using actions about how they should display the action. These are primarily "
@@ -936,7 +931,8 @@ msgstr ""
 "Otra de las funcionalidades de las acciones de Kirigami es la de "
 "proporcionar diversas sugerencias a los elementos que usan acciones sobre "
 "cómo deben mostrar la acción. Esto se controla principalmente mediante las "
-"propiedades `displayHint` y `displayComponent`."
+"propiedades `[displayHint](docs:kirigami2;Action::displayHint) y "
+"[displayComponent](docs:kirigami2;Action::displayComponent)."
 
 #: content/docs/use/kirigami/components-actions.md:66
 #, fuzzy
@@ -965,13 +961,12 @@ msgid "Page"
 msgstr "Página"
 
 #: content/docs/use/kirigami/components-actions.md:87
-#, fuzzy
-#| msgid "One of the features of pages is that Actions can be added to them."
 msgid ""
 "One of [Kirigami.Page](docs:kirigami2;Page)'s features is that Actions can "
 "be added to it."
 msgstr ""
-"Una característica de las páginas es que se les pueden añadir acciones."
+"Una característica de [Kirigami.Page](docs:kirigami2;Page) es que se le "
+"pueden añadir acciones."
 
 #: content/docs/use/kirigami/components-actions.md:89
 #, fuzzy
@@ -1012,6 +1007,9 @@ msgid ""
 "(docs:kirigami2;ContextDrawer) to your [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow)."
 msgstr ""
+"Para que las acciones de contexto funcionen en el móvil, debe añadir un "
+"[ContextDrawer](docs:kirigami2;ContextDrawer) a su [Kirigami."
+"ApplicationWindow](docs:kirigami2;ApplicationWindow)."
 
 #: content/docs/use/kirigami/components-actions.md:120
 msgid "Global Drawer"
@@ -1058,10 +1056,6 @@ msgstr ""
 "borrar el texto o para buscar dicho texto."
 
 #: content/docs/use/kirigami/components-actions.md:188
-#, fuzzy
-#| msgid ""
-#| "In this example, we are creating a clear button for a search field only "
-#| "visible when text is entered."
 msgid ""
 "In this example, we are creating a \"clear\" button for a search field that "
 "is only visible when text is entered."
@@ -1159,17 +1153,14 @@ msgstr ""
 "la aplicación"
 
 #: content/docs/use/kirigami/components-actions.md:259
-#, fuzzy
-#| msgid ""
-#| "You can read more about ActionToolBar components in their [dedicated "
-#| "documentation page](../components-actiontoolbar/)."
 msgid ""
 "You can read more about [ActionToolBar](docs:kirigami2;ActionToolBar) "
 "components in their [dedicated documentation page](../components-"
 "actiontoolbar/)."
 msgstr ""
-"Puede leer más sobre los componentes ActionToolBar en su [propia página de "
-"documentación](../components-actiontoolbar/)."
+"Puede leer más sobre los componentes [ActionToolBar](docs:kirigami2;"
+"ActionToolBar) en su [propia página de documentación](../components-"
+"actiontoolbar/)."
 
 #: content/docs/use/kirigami/components-actions.md:261
 #: content/docs/use/kirigami/components-card.md:0
@@ -2405,38 +2396,28 @@ msgstr ""
 "`true` a la propiedad `bannerVisible` del componente del cajón global."
 
 #: content/docs/use/kirigami/components-drawers.md:161
-#, fuzzy
-#| msgid ""
-#| "Titles, set with the `title` property, can be used to pretty up your "
-#| "global drawer and make it seem less sparse. More importantly, it can "
-#| "remind your users that this is a global and app-wide drawer rather than a "
-#| "local drawer."
 msgid ""
 "Titles, set with the [title](docs:kirigami2;GlobalDrawer::title) property, "
 "can be used to pretty up your global drawer and make it seem less sparse. "
 "More importantly, it can remind your users that this is a global and app-"
 "wide drawer rather than a local drawer."
 msgstr ""
-"Los títulos, definidos con la propiedad `title`, se pueden usar para "
-"embellecer un cajón global y hacer que parezca menos disperso. Más "
-"importante aún, puede recordar a los usuarios que este es un cajón global y "
-"para toda la aplicación en lugar de un cajón local."
+"Los títulos, definidos con la propiedad [title](docs:kirigami2;GlobalDrawer::"
+"title), se pueden usar para embellecer un cajón global y hacer que parezca "
+"menos disperso. Más importante aún, puede recordar a los usuarios que este "
+"es un cajón global y para toda la aplicación en lugar de un cajón local."
 
 #: content/docs/use/kirigami/components-drawers.md:163
-#, fuzzy
-#| msgid ""
-#| "There is also a `titleIcon` property, which can be paired with your title "
-#| "to make the global drawer even more aesthetically pleasing. This icon "
-#| "will be placed to the left of the title."
 msgid ""
 "There is also a [titleIcon](docs:kirigami2;GlobalDrawer::titleIcon) "
 "property, which can be paired with your title to make the global drawer even "
 "more aesthetically pleasing. This icon will be placed to the left of the "
 "title."
 msgstr ""
-"También existe una propiedad `titleIcon` que se puede emparejar con el "
-"título para hacer que la estética del cajón global sea todavía más "
-"agradable. Este icono se situará a la izquierda del título."
+"También existe una propiedad [titleIcon](docs:kirigami2;GlobalDrawer::"
+"titleIcon) que se puede emparejar con el título para hacer que la estética "
+"del cajón global sea todavía más agradable. Este icono se situará a la "
+"izquierda del título."
 
 #: content/docs/use/kirigami/components-drawers.md:195
 msgid "Global drawer with title and icon in banner"
@@ -2520,7 +2501,7 @@ msgstr "El mismo ejemplo anterior, ejecutado en modo móvil"
 
 #: content/docs/use/kirigami/components-drawers.md:246
 msgid "Context drawer open in mobile mode"
-msgstr ""
+msgstr "Cajón de contexto abierto en modo móvil"
 
 #: content/docs/use/kirigami/components-drawers.md:252
 msgid "Modal and Inline drawers"
@@ -2540,17 +2521,14 @@ msgstr ""
 "interacción del usuario."
 
 #: content/docs/use/kirigami/components-drawers.md:256
-#, fuzzy
-#| msgid ""
-#| "Modal drawers darken the rest of the application and, like overlay "
-#| "sheets, will be dismissed when clicking on a darkened area."
 msgid ""
 "Modal drawers darken the rest of the application and, like [overlay sheets]"
 "(docs:kirigami2;OverlaySheet), will be dismissed when clicking on a darkened "
 "area."
 msgstr ""
-"Los cajones modales oscurecen el resto de la aplicación y, como las hojas "
-"superpuestas, se descartan al pulsar sobre un área oscurecida."
+"Los cajones modales oscurecen el resto de la aplicación y, como las [hojas "
+"superpuestas](docs:kirigami2;OverlaySheet), se descartan al pulsar sobre un "
+"área oscurecida."
 
 #: content/docs/use/kirigami/components-drawers.md:257
 msgid ""
@@ -2577,16 +2555,13 @@ msgstr ""
 "importantes de este componente a tener en cuenta son:"
 
 #: content/docs/use/kirigami/components-drawers.md:261
-#, fuzzy
-#| msgid ""
-#| "`modal` controls whether the drawer will be modal or inline depending on "
-#| "a boolean value"
 msgid ""
 "[Popup.modal](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup.html#modal-"
 "prop) controls whether the drawer will be modal or inline depending on a "
 "boolean value"
 msgstr ""
-"`modal` controla si el cajón será modal o en línea según un valor booleano"
+"[Popup.modal](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup.html#modal-"
+"prop) controla si el cajón será modal o en línea según un valor booleano"
 
 #: content/docs/use/kirigami/components-drawers.md:262
 #, fuzzy
@@ -2606,16 +2581,14 @@ msgstr ""
 "`Qt.BottomEdge` y `Qt.LeftEdge`"
 
 #: content/docs/use/kirigami/components-drawers.md:263
-#, fuzzy
-#| msgid ""
-#| "`contentItem` contains the component that will form the content of your "
-#| "drawer"
 msgid ""
 "[Popup.contentItem](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup."
 "html#contentItem-prop) contains the component that will form the content of "
 "your drawer"
 msgstr ""
-"`contentItem` contiene el componente que formará el contenido del cajón"
+"[Popup.contentItem](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup."
+"html#contentItem-prop) contiene el componente que formará el contenido del "
+"cajón"
 
 #: content/docs/use/kirigami/components-drawers.md:277
 msgid "Set modal to false to make this drawer inline!"
@@ -2748,7 +2721,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-formlayouts.md:54
 msgid "A simple form layout in desktop mode"
-msgstr ""
+msgstr "Un diseño de formulario simple en modo escritorio"
 
 #: content/docs/use/kirigami/components-formlayouts.md:60
 msgid "Sections and separators"
@@ -2823,19 +2796,13 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-formlayouts.md:130
 msgid "A form layout with sections"
-msgstr ""
+msgstr "Un diseño de formulario con secciones"
 
 #: content/docs/use/kirigami/components-formlayouts.md:137
 msgid "Checkable children"
 msgstr "Hijos con casillas de verificación"
 
 #: content/docs/use/kirigami/components-formlayouts.md:139
-#, fuzzy
-#| msgid ""
-#| "A handy feature of `Kirigami.FormLayout` is that you can add checkboxes "
-#| "to its children. This can be useful in settings pages where you might "
-#| "want to let the user enable or disable a setting, and also want the user "
-#| "to provide some extra information in a component such as a textfield."
 msgid ""
 "A handy feature of [Kirigami.FormLayout](docs:kirigami2;FormLayout) is that "
 "you can add checkboxes to its children. This can be useful in settings pages "
@@ -2843,15 +2810,15 @@ msgid ""
 "want the user to provide some extra information in a component such as a "
 "textfield."
 msgstr ""
-"Una funcionalidad útil de `Kirigami.FormLayout` es que puede asignar "
-"casillas de verificación a sus hijos. Esto puede ser de utilidad en las "
-"páginas de preferencias donde quiera permitir que el usuario active o "
-"desactive una preferencia y también quiera que el usuario proporcione "
-"información adicional en un componente, como un campo de texto."
+"Una funcionalidad útil de [Kirigami.FormLayout](docs:kirigami2;FormLayout) "
+"es que puede asignar casillas de verificación a sus hijos. Esto puede ser de "
+"utilidad en las páginas de preferencias donde quiera permitir que el usuario "
+"active o desactive una preferencia y también quiera que el usuario "
+"proporcione información adicional en un componente, como un campo de texto."
 
 #: content/docs/use/kirigami/components-formlayouts.md:166
 msgid "A form layout with checkable label."
-msgstr ""
+msgstr "Un diseño de formulario con una etiqueta que se puede marcar."
 
 #: content/docs/use/kirigami/components-formlayouts.md:172
 msgid "Forcing a desktop or mobile layout"
@@ -2890,10 +2857,8 @@ msgstr ""
 "(a una sola columna)"
 
 #: content/docs/use/kirigami/components-formlayouts.md:204
-#, fuzzy
-#| msgid "Forcing a desktop or mobile layout"
 msgid "A form layout with forced mobile layout"
-msgstr "Forzar un diseño de escritorio o móvil"
+msgstr "Un diseño de formulario con diseño móvil forzado"
 
 #: content/docs/use/kirigami/components-formlayouts.md:210
 msgid "Aligning your labels"
