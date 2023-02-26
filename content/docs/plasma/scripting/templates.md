@@ -16,7 +16,7 @@ A template is a small set of files in a specified file hierarchy (or, in
 Plasma terms, a "Package"). In particular, a Template package contains
 the following files:
 
-- `metadata.desktop`: a .desktop file describing the template
+- `metadata.json`: a file describing the template
 - `contents/layout.js`: a Javascript file containing the actual script
 
 Templates are stored in:
@@ -38,10 +38,9 @@ as a `.zip` file renamed to have a `.plasmalayout` suffix.
 kpackagetool5 --type=Plasma/LayoutTemplate -i ~/Code/mytemplate.plasmalayout
 ```
 
-The `metadata.desktop` file contains the usual .desktop entries such as
-Name and Icon but must also contain `Type=Service` and
-`ServiceTypes=Plasma/LayoutTemplate` entries. If the layout is specific to
-a given Plasma application, such as plasma-desktop, this can be specific
+The `metadata.json` file contains the usual [KPluginMetaData](docs:kcoreaddons;KPluginMetaData) entries such as
+Name and Icon but must also contain the `KPackageStructure` entry set to `Plasma/LayoutTemplate`.
+If the layout is specific to a given Plasma application, such as plasma-desktop, this can be specific
 using `X-Plasma-Shell`. `X-Plasma-ContainmentCategories` defines what kind
 of layout it is with possible values being panel and desktop. Finally, a
 `X-KDE-PluginInfo-Name` entry is required to provide a globally unique
@@ -49,27 +48,33 @@ internal name for the Template. Here is an example of a Template that
 provides a Panel layout for Plasma Netbook:
 
 
-```ini
-[Desktop Entry]
-Encoding=UTF-8
-Name=Cool Panel
-Type=Service
-ServiceTypes=Plasma/LayoutTemplate
-X-Plasma-Shell=plasma-netbook
-X-Plasma-ContainmentCategories=panel
-X-KDE-PluginInfo-Author=Aaron Seigo
-X-KDE-PluginInfo-Email=aseigo@kde.org
-X-KDE-PluginInfo-Name=org.kde.CoolNetbookPanel
-X-KDE-PluginInfo-Version=1.0
-X-KDE-PluginInfo-Website=http://plasma.kde.org/
-X-KDE-PluginInfo-Category=
-X-KDE-PluginInfo-License=GPL
-X-KDE-PluginInfo-EnabledByDefault=true
+```json
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "aseigo@kde.org",
+                "Name": "Aaron Seigo"
+            }
+        ],
+        "EnabledByDefault": true,
+        "Id": "org.kde.CoolNetbookPanel",
+        "License": "GPL",
+        "Name": "Cool Panel",
+        "Version": "1.0",
+        "Website": "http://plasma.kde.org/"
+    },
+    "X-Plasma-ContainmentCategories": [
+        "panel"
+    ],
+    "X-Plasma-Shell": "plasma-netbook",
+    "KPackageStructure": "Plasma/LayoutTemplate"
+}
 ```
 
 When running a template, two global variables will be accessible in
 read-only mode: templateName and templateComment. They will contain the
-Name and Comment fields of the above desktop file, and are translated if
+Name and Description fields of the above json file, and are translated if
 a localization is available.
 
 ### Examples of Usage
@@ -83,7 +88,7 @@ a Template called `org.kde.plasma.desktop.defaultPanel` that ships with
 the KDE Plasma Workspace which contains the layout for the initial
 default panel. This is referenced by the default Plasma Desktop init
 script and because it is marked as a Panel Template in the
-metadata.desktop file it also shows up to the user in the Add Panels
+metadata.json file it also shows up to the user in the Add Panels
 menu. When selected by the user from the menu, the exact same panel that
 is created on desktop start up is created for them, complete with Plasma
 Widgets and configuration.
@@ -123,27 +128,34 @@ template.findWidgets('systemtray', removeWidget);
 Probably the most user visible use of templates are "Activity
 templates". The structure of Activity templates is similar to the other
 use of templates, but a few extra features are provided in the
-metadata.desktop file. Here is an example of such an activity template:
+metadata.json file. Here is an example of such an activity template:
 
-```ini
-[Desktop Entry]
-Encoding=UTF-8
-Name=Cool Activity Template
-Icon=user-desktop
-Type=Service
-ServiceTypes=Plasma/LayoutTemplate
-X-Plasma-Shell=plasma-desktop
-X-Plasma-ContainmentCategories=desktop
-X-Plasma-ContainmentLayout-ExecuteOnCreation=dolphin $desktop, gwenview $pictures
-X-Plasma-ContainmentLayout-ShowAsExisting=true
-X-KDE-PluginInfo-Author=John Doe
-X-KDE-PluginInfo-Email=john@doe.org
-X-KDE-PluginInfo-Name=org.kde.plasma-desktop.CoolTemplate
-X-KDE-PluginInfo-Version=1.0
-X-KDE-PluginInfo-Website=http://john.doe.org
-X-KDE-PluginInfo-Category=
-X-KDE-PluginInfo-License=GPL
-X-KDE-PluginInfo-EnabledByDefault=true
+```json
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "john@doe.org",
+                "Name": "John Doe"
+            }
+        ],
+        "Category": "",
+        "EnabledByDefault": true,
+        "Icon": "user-desktop",
+        "Id": "org.kde.plasma-desktop.CoolTemplate",
+        "License": "GPL",
+        "Name": "Cool Activity Template",
+        "Version": "1.0",
+        "Website": "http://john.doe.org"
+    },
+    "X-Plasma-ContainmentCategories": [
+        "desktop"
+    ],
+    "X-Plasma-ContainmentLayout-ExecuteOnCreation": "dolphin $desktop, gwenview $pictures",
+    "X-Plasma-ContainmentLayout-ShowAsExisting": "true",
+    "X-Plasma-Shell": "plasma-desktop",
+    "KPackageStructure": "Plasma/LayoutTemplate"
+}
 ```
 
 The layout itself is still created from the `layout.js` file as usual, but
