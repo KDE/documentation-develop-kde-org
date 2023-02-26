@@ -122,6 +122,11 @@ TAG_FILES = [
         'base_url': 'https://api.kde.org/plasma/libksysguard/html/',
         'default_prefix': 'KSysGuard',
     },
+    {
+        'tags': 'https://api.kde.org/frameworks/kpackage/html/KPackage.tags',
+        'base_url': 'https://api.kde.org/frameworks/kpackage/html/',
+        'default_prefix': 'KPackage',
+    },
     # ===== KDEPim API links
     {
         'tags': 'https://api.kde.org/kdepim/akonadi/html/Akonadi.tags',

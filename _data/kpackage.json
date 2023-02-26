@@ -1,0 +1,1631 @@
+{
+  "tagfile": {
+    "compound": [
+      {
+        "@kind": "file",
+        "name": {
+          "$": "version.h"
+        },
+        "path": {
+          "$": "/home/user/workspace/Generate_API_Documentation/sources/kpackage/src/kpackage/"
+        },
+        "filename": {
+          "$": "version_8h.html"
+        },
+        "namespace": {
+          "$": "KPackage"
+        },
+        "member": [
+          {
+            "@kind": "define",
+            "type": {
+              "$": "#define"
+            },
+            "name": {
+              "$": "PACKAGE_IS_VERSION"
+            },
+            "anchorfile": {
+              "$": "version_8h.html"
+            },
+            "anchor": {
+              "$": "a5ae369ade4348c24e80b79f89979459e"
+            },
+            "arglist": {
+              "$": "(a, b, c)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isPluginVersionCompatible"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "ab9aa091568b4f5999984f4e4646d2ff0"
+            },
+            "arglist": {
+              "$": "(unsigned int version)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "unsigned int"
+            },
+            "name": {
+              "$": "version"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "a1f6d75a3fdd5a046e9b106d543e09a77"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "unsigned int"
+            },
+            "name": {
+              "$": "versionMajor"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "a2aa9c6fefec7936fc0c27792c20dfb36"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "unsigned int"
+            },
+            "name": {
+              "$": "versionMinor"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "aacadc848d43259ef51fb16742a13181d"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "unsigned int"
+            },
+            "name": {
+              "$": "versionRelease"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "afce04abe09eda054267417f80fabd721"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "const char *"
+            },
+            "name": {
+              "$": "versionString"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "a94de9e3e426d7bc55854c7d4ced15d48"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KPackage::Package"
+        },
+        "filename": {
+          "$": "classKPackage_1_1Package.html"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "JobError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RootCreationError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55baa6e976f49c6ff638187195b5ca0c5509"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageFileNotFoundError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba817c7fdd3bf9d5609b5a03a2706c2654"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "UnsupportedArchiveFormatError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba0d1efcfd7d61d43431332a1d50b10a04"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageOpenError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55baf9bd56e4081091d83c71b2530a78f0a7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MetadataFileMissingError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba5ddd14bf4805accaaf176d635519f3f8"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PluginNameMissingError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55bafee26e3755ffd31be58957a170cd88a9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PluginNameInvalidError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba290cad912f4265afac2b8fda7b86950e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "UpdatePackageTypeMismatchError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba55e85085ca8799f5c7c654d6c43db2c9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "OldVersionRemovalError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba2ef2f559cf41ae6190c1bac0e2f9dbf1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NewerVersionAlreadyInstalledError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba57f118b19d906807b6db09ccfbaecca9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageAlreadyInstalledError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba1c6ea2f1398abdd197d60a26e3bdae75"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageMoveError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba0490d7178b226c1e72699858f3a715cb"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageCopyError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55baee2ff4ad94bd0a9d9e479f273425f0e2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageUninstallError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55bafa5f150856e4e36b338e3fcb2a3b0ff0"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MetadataFileMissingError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba5ddd14bf4805accaaf176d635519f3f8"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NewerVersionAlreadyInstalledError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba57f118b19d906807b6db09ccfbaecca9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "OldVersionRemovalError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba2ef2f559cf41ae6190c1bac0e2f9dbf1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageAlreadyInstalledError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba1c6ea2f1398abdd197d60a26e3bdae75"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageCopyError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55baee2ff4ad94bd0a9d9e479f273425f0e2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageFileNotFoundError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba817c7fdd3bf9d5609b5a03a2706c2654"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageMoveError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba0490d7178b226c1e72699858f3a715cb"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageOpenError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55baf9bd56e4081091d83c71b2530a78f0a7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PackageUninstallError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55bafa5f150856e4e36b338e3fcb2a3b0ff0"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PluginNameInvalidError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba290cad912f4265afac2b8fda7b86950e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PluginNameMissingError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55bafee26e3755ffd31be58957a170cd88a9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RootCreationError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55baa6e976f49c6ff638187195b5ca0c5509"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "UnsupportedArchiveFormatError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba0d1efcfd7d61d43431332a1d50b10a04"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "UpdatePackageTypeMismatchError"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a526ba12835121705f80664f304cff55ba55e85085ca8799f5c7c654d6c43db2c9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "Package"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "aec74842590de8145dad8c5a815d5ddee"
+            },
+            "arglist": {
+              "$": "(const Package &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "Package"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a4050387b806fe790150d73d7bf8ab43e"
+            },
+            "arglist": {
+              "$": "(PackageStructure *structure=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addDirectoryDefinition"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "af6b028f7ba2b8f3eed6c3d953dc02cd4"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key, const QString &path, const QString &name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addFileDefinition"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a9457b9721e713a026a78dca479945cfc"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key, const QString &path, const QString &name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "allowExternalPaths"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "ac7c546a8f691b12b75ab3ffca4510c5a"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "contentsHash"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a89876aba87fea055b412b02b8cfa809a"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "contentsPrefixPaths"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "ac28b694bd82296872bf3d955fc461dc8"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QByteArray"
+            },
+            "name": {
+              "$": "cryptographicHash"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a0b8d44882dad95be3af9f6855fa68771"
+            },
+            "arglist": {
+              "$": "(QCryptographicHash::Algorithm algorithm) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "defaultPackageRoot"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a42956f741658479b1043b4b6ec7d57a5"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QByteArray >"
+            },
+            "name": {
+              "$": "directories"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "af2436381b0268a17172d9272cf1347d8"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "entryList"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a671fb4ea1e063a22e418912cbf48287f"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPackage::Package"
+            },
+            "name": {
+              "$": "fallbackPackage"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "ab1c25e4943b6d73422235f90c416e528"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "filePath"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a935b5f3f1302c06dcf0fb348cea42c00"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key, const QString &filename=QString()) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QByteArray >"
+            },
+            "name": {
+              "$": "files"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "ad02987e0916b09862e9689b1b6242853"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QUrl"
+            },
+            "name": {
+              "$": "fileUrl"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a33f778a95edd6a673b85df5940c7d755"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key, const QString &filename=QString()) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasValidStructure"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a27242b0250fb09264da2c9594b1d95b4"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KJob *"
+            },
+            "name": {
+              "$": "install"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a5e2ba569f2655e92f6fd767c87d55338"
+            },
+            "arglist": {
+              "$": "(const QString &sourcePackage, const QString &packageRoot=QString())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isRequired"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a7ca5269711e6df819855c2309e219d8d"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isValid"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a42c002590166a55c26e332f065c8efd6"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPluginMetaData"
+            },
+            "name": {
+              "$": "metadata"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "aa73d0c22a411bc6442a981b71f99b197"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "mimeTypes"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "afb541ef59717089754772f98b3a586f9"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a2bdeae6203245afc5137ef67d10ff416"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Package &"
+            },
+            "name": {
+              "$": "operator="
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a13621692e42b91a259c268ebd38a8967"
+            },
+            "arglist": {
+              "$": "(const Package &rhs)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "const QString"
+            },
+            "name": {
+              "$": "path"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a817b5ee4ecbf8d3c6b28b79fb6690e6d"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "removeDefinition"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "abf44e0421dbaee3b23acbe2298250291"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QByteArray >"
+            },
+            "name": {
+              "$": "requiredDirectories"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a7168fa0de8dfc4ee6dfca94b192e9a13"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QByteArray >"
+            },
+            "name": {
+              "$": "requiredFiles"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "af2d0c3bae78f97744aa4dd2faad2206f"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setAllowExternalPaths"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a9e904f2155c95a824f26a155c317130e"
+            },
+            "arglist": {
+              "$": "(bool allow)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setContentsPrefixPaths"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a03abf46f30a34d0187ec0aed71455b62"
+            },
+            "arglist": {
+              "$": "(const QStringList &prefixPaths)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setDefaultMimeTypes"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "afe7db278e405471f4274b9d5abd82f41"
+            },
+            "arglist": {
+              "$": "(const QStringList &mimeTypes)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setDefaultPackageRoot"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a8e1fea647f3d2d7ecf9582c12bfdd72b"
+            },
+            "arglist": {
+              "$": "(const QString &packageRoot)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setFallbackPackage"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "af1f796d20e7316a349c5638dfb6d49d0"
+            },
+            "arglist": {
+              "$": "(const KPackage::Package &package)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMetadata"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a84e140462489b2c601f0c739529f833d"
+            },
+            "arglist": {
+              "$": "(const KPluginMetaData &data)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMimeTypes"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a283b27d6f0f9a8eac768d22598849347"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key, const QStringList &mimeTypes)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setPath"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a33ecf5e38f16b34cf703247ac8fdf540"
+            },
+            "arglist": {
+              "$": "(const QString &path)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setRequired"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a1e24e397f3d2baa0fb8de30ca47fb230"
+            },
+            "arglist": {
+              "$": "(const QByteArray &key, bool required)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KJob *"
+            },
+            "name": {
+              "$": "uninstall"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "ac14a4ce753193cca8de1ea0e073e0342"
+            },
+            "arglist": {
+              "$": "(const QString &packageName, const QString &packageRoot)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KJob *"
+            },
+            "name": {
+              "$": "update"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1Package.html"
+            },
+            "anchor": {
+              "$": "a6862c15d981d22d34e5d88744bf88434"
+            },
+            "arglist": {
+              "$": "(const QString &sourcePackage, const QString &packageRoot=QString())"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KPackage::PackageLoader"
+        },
+        "filename": {
+          "$": "classKPackage_1_1PackageLoader.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addKnownPackageStructure"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageLoader.html"
+            },
+            "anchor": {
+              "$": "a737e46fd9ea0a9f9f77d64c301190032"
+            },
+            "arglist": {
+              "$": "(const QString &packageFormat, KPackage::PackageStructure *structure)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< KPluginMetaData >"
+            },
+            "name": {
+              "$": "findPackages"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageLoader.html"
+            },
+            "anchor": {
+              "$": "a08944f550228611fa0d5bb65020ee186"
+            },
+            "arglist": {
+              "$": "(const QString &packageFormat, const QString &packageRoot=QString(), std::function< bool(const KPluginMetaData &)> filter=std::function< bool(const KPluginMetaData &)>())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< KPluginMetaData >"
+            },
+            "name": {
+              "$": "listPackages"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageLoader.html"
+            },
+            "anchor": {
+              "$": "ad2480cf85aad0055e064487a10c3cb53"
+            },
+            "arglist": {
+              "$": "(const QString &packageFormat, const QString &packageRoot=QString())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Package"
+            },
+            "name": {
+              "$": "loadPackage"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageLoader.html"
+            },
+            "anchor": {
+              "$": "a1d08c2f819966419fd2b362b87ad4ea1"
+            },
+            "arglist": {
+              "$": "(const QString &packageFormat, const QString &packagePath=QString())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPackage::PackageStructure *"
+            },
+            "name": {
+              "$": "loadPackageStructure"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageLoader.html"
+            },
+            "anchor": {
+              "$": "a8e1b49ff73ccf6cf7a8c5afc61fa42e2"
+            },
+            "arglist": {
+              "$": "(const QString &packageFormat)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static PackageLoader *"
+            },
+            "name": {
+              "$": "self"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageLoader.html"
+            },
+            "anchor": {
+              "$": "a4f90700cbe677d3e6d4c40cefe618fce"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static void"
+            },
+            "name": {
+              "$": "setPackageLoader"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageLoader.html"
+            },
+            "anchor": {
+              "$": "a2c36fba4b6299ee5ac085f87eda04832"
+            },
+            "arglist": {
+              "$": "(PackageLoader *loader)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual Package"
+            },
+            "name": {
+              "$": "internalLoadPackage"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageLoader.html"
+            },
+            "anchor": {
+              "$": "ad55d500c4f2d58c3f4f634422f6e4143"
+            },
+            "arglist": {
+              "$": "(const QString &packageFormat)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KPackage::PackageStructure"
+        },
+        "filename": {
+          "$": "classKPackage_1_1PackageStructure.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "initPackage"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageStructure.html"
+            },
+            "anchor": {
+              "$": "acefb465783bb3775eb8c39bc15399ac7"
+            },
+            "arglist": {
+              "$": "(Package *package)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual KJob *"
+            },
+            "name": {
+              "$": "install"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageStructure.html"
+            },
+            "anchor": {
+              "$": "a9e34414aa931ed8f33b83db2ab835db1"
+            },
+            "arglist": {
+              "$": "(Package *package, const QString &archivePath, const QString &packageRoot)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "pathChanged"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageStructure.html"
+            },
+            "anchor": {
+              "$": "a0a7d9f10b0c63c3672ac474f4b9adb4e"
+            },
+            "arglist": {
+              "$": "(Package *package)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual KJob *"
+            },
+            "name": {
+              "$": "uninstall"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageStructure.html"
+            },
+            "anchor": {
+              "$": "a005e44226634be028a171eb8e693f88b"
+            },
+            "arglist": {
+              "$": "(Package *package, const QString &packageRoot)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual KJob *"
+            },
+            "name": {
+              "$": "update"
+            },
+            "anchorfile": {
+              "$": "classKPackage_1_1PackageStructure.html"
+            },
+            "anchor": {
+              "$": "a8b0d8a77ceb79b7b7c9ee5ad1fdb3cbf"
+            },
+            "arglist": {
+              "$": "(Package *package, const QString &archivePath, const QString &packageRoot)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "KPackage"
+        },
+        "filename": {
+          "$": "namespaceKPackage.html"
+        },
+        "class": [
+          {
+            "@kind": "class",
+            "$": "KPackage::Package"
+          },
+          {
+            "@kind": "class",
+            "$": "KPackage::PackageLoader"
+          },
+          {
+            "@kind": "class",
+            "$": "KPackage::PackageStructure"
+          }
+        ],
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isPluginVersionCompatible"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "ab9aa091568b4f5999984f4e4646d2ff0"
+            },
+            "arglist": {
+              "$": "(unsigned int version)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "unsigned int"
+            },
+            "name": {
+              "$": "version"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "a1f6d75a3fdd5a046e9b106d543e09a77"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "unsigned int"
+            },
+            "name": {
+              "$": "versionMajor"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "a2aa9c6fefec7936fc0c27792c20dfb36"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "unsigned int"
+            },
+            "name": {
+              "$": "versionMinor"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "aacadc848d43259ef51fb16742a13181d"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "unsigned int"
+            },
+            "name": {
+              "$": "versionRelease"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "afce04abe09eda054267417f80fabd721"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "const char *"
+            },
+            "name": {
+              "$": "versionString"
+            },
+            "anchorfile": {
+              "$": "namespaceKPackage.html"
+            },
+            "anchor": {
+              "$": "a94de9e3e426d7bc55854c7d4ced15d48"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "page",
+        "name": {
+          "$": "index"
+        },
+        "title": {
+          "$": "KPackage Framework"
+        },
+        "filename": {
+          "$": "index"
+        }
+      }
+    ]
+  }
+}
