@@ -72,7 +72,7 @@ select the desktop "layout", however [due to a bug](https://invent.kde.org/docum
 it always creates an activity with a folder view layout. Should the bug
 be fixed, you can pass a `pluginId` of:
 
-* The `X-KDE-PluginInfo-Name` of plasmoid with `X-KDE-ServiceTypes=Plasma/Containment` and `X-Plasma-ContainmentType=Desktop`.
+* The `Id` of plasmoid with `X-Plasma-ContainmentType=Desktop`.
 * `org.kde.desktopcontainment` for a desktop without icons
 * `org.kde.plasma.folder` for a desktop with icons
 

@@ -196,13 +196,11 @@ Before moving on to the C++ code, don't forget to create the `metadata.json`.
         "Id": "com.github.zren.widgetname",
         "Name": "widgetname",
         "Version": "1.0",
-        "Website": "https://github.com/Zren/plasmoid-helloworldplugin",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ]
+        "Website": "https://github.com/Zren/plasmoid-helloworldplugin"
     },
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
 }
 ```
 {{< /section-right >}}

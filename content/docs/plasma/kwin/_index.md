@@ -78,15 +78,13 @@ Open up `metadata.json` in your text editor then paste the following. Keep in mi
             }
         ],
         "Id": "myscript",
-        "ServiceTypes": [
-            "KWin/Script"
-        ],
         "Version": "1.0",
         "Licsense": "GPLv3",
         "Website": "https://github.com/username/myscript"
     },
     "X-Plasma-API": "javascript",
-    "X-Plasma-MainScript": "code/main.js"
+    "X-Plasma-MainScript": "code/main.js",
+    "KPackageStructure": "KWin/Script"
 }
 ```
 

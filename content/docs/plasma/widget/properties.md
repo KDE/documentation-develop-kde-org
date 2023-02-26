@@ -493,15 +493,18 @@ X-KDE-PluginInfo-Category=Date and Time
 This list was taken from: <https://techbase.kde.org/Projects/Plasma/PIG>
 
 
-### ServiceTypes
+### KPackageStructure
 
 {{< sections >}}
 {{< section-left >}}
 
-`ServiceTypes` (or `X-KDE-ServiceTypes` in `metadata.desktop`) is a comma-separated list of types. For a plasma widget, it should be `Plasma/Applet`. You may encounter widgets with `Plasma/Containment` as well, like [the System Tray widget](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/systemtray/package/metadata.json#L147).
-
-The defined plasma service types and their custom `.desktop` file properties are found in:  
-[`plasma-framework/src/plasma/data/servicetypes`](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/plasma/data/servicetypes)
+`KPackageStructure` is a string to identify the associated [KPackage::PackageStructure](docs:kpackage;KPackage::PackageStructure). For a plasma widget, it should be `Plasma/Applet`.
+{{< alert title="Note" color="info" >}}
+In desktop files, the `ServiceTypes` key was defined instead.
+This key is however deprecated and desktop files will no longer be supported in KF6.
+To convert a desktop file to json, you can run the `desktoptojson -i metadata.json` command.
+The `ServiceTypes` -> `KPackageStructure` change must be done manually
+{{< /alert >}}
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -509,11 +512,7 @@ The defined plasma service types and their custom `.desktop` file properties are
 
 ```json
 {
-    "KPlugin": {
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ]
-    }
+    "KPackageStructure": "Plasma/Applet"
 }
 ```
 
