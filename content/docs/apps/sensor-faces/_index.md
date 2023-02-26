@@ -22,7 +22,7 @@ rootdir
 │   │   └── Config.qml (optional)
 │   └── config
 │       └── main.xml (optional)
-├── metadata.desktop (required)
+├── metadata.json (required)
 └── faceproperties (required)
 ```
 
@@ -358,26 +358,36 @@ does not need to be handled by the face.
 
 ## Finishing it up
 There are still two files that were omitted until now:
-### metadata.desktop
+### metadata.json
 As the name implies it contains user-visible and not user-visible metadata about the face.
-```ini
-[Desktop Entry]
-Name=My awesome face
-Icon=office-chart-line
-
-Type=Service
-X-KDE-ServiceTypes=KSysguard/SensorFace
-X-KDE-ParentApp=org.kde.plasmashell
-X-KDE-PluginInfo-Name=org.kde.awesomeface
-X-KDE-PluginInfo-Version=1.0
-X-KDE-PluginInfo-Author=
-X-KDE-PluginInfo-Email=
-X-KDE-PluginInfo-License=
-X-KDE-PluginInfo-Website=
+```json
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "your.name@mail.com",
+                "Name": "Your Name"
+            }
+        ],
+        "Icon": "office-chart-line",
+        "Id": "org.kde.awesomeface",
+        "License": "",
+        "Name": "My awesome face",
+        "Version": "1.0",
+        "Website": ""
+    },
+    "X-KDE-ParentApp": "org.kde.plasmashell",
+    "KPackageStructure": "KSysguard/SensorFace"
+}
 ```
-The first two entries are the user visible name and an icon that could be used for the face.
-The next lines tell the system that this is a sensor face and the id and version of it. The
-last four entries above that are kept empty should be self-explanatory.
+The first `Name` and `Icon` values are the user visible name and an icon that could be used for the face.
+The `Id` is a unique identifier for the face. 
+See [KPluginMetaData](docs:kcoreaddons;KPluginMetaData) for the documentation about all the entries in the `KPlugin` object.
+The `KPackageStructure` is needed for the plugin to be correctly found.
+
+In case you have an existing plugin that uses a metadata.desktop file, you can follow
+the migration instructions from the [Widget Properties](/docs/extend/plasma/widget/properties/#kpackagestructure) documentation.
+
 ### faceproperties
 Not every face supports displaying of every feature that are exposed as the [properties of 
 the face controller](#controllerProps). A face can indicate this with the file `faceproperties`
@@ -398,8 +408,8 @@ low priority sensors because the default is  `false`. It however supports displa
 ### Installation
 To enable applications finding a face it needs to be installed into a specific directory. This is typically
 `/usr/share/ksysguard/sensorfaces/` for system installed faces or `~/.local/share/ksysguard/sensorfaces/`.
-Additionally the root folder has to have the same name as the plugin id, which is the value that
-`X-KDE-PluginInfo-Name` is set to in `metadata.desktop`. If the face is distributed through the kde store
+Additionally the root folder has to have the same name as the plugin `Id` specified in the metadata.
+If the face is distributed through the kde store
 and installed using the relevant tools, installation is handled automatically.
 
 ## Further topics
