@@ -8,8 +8,7 @@ description: Package your application as a Snap.
 
 # Put Your App in the Snap Store
 
-![Snap Store KDE
-Page](snapstore-kde.png)
+{{< figure src="snapstore-kde.png" caption="Snap Store KDE Page" >}}
 
 It is a KDE goal to be [All About the Apps](https://kde.org/goals/) to deliver our apps directly to our users. Snaps are one of the ways to do this. Snaps are Linux app packages that can run on pretty much any Linux distro. There is a single centralised Snap store that delivers them to users. Take a look at the [KDE page on the Snap Store](https://snapcraft.io/publisher/kde) to see what's available.
 
