@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-24 19:24+0100\n"
+"PO-Revision-Date: 2023-02-26 22:29+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -146,7 +146,6 @@ msgstr ""
 "un objecte `aboutData` nou amb el seu constructor predeterminat força "
 "complet i afegim la informació de l'autor."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-add_about_page.md:20
 msgid ""
 "After all the required information has been set, we call [KAboutData::"
@@ -570,7 +569,6 @@ msgstr ""
 "tutorial/command-line-arguments/) al constructor, deixant que les Qt "
 "analitzin i utilitzin arguments."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-maincpp.md:27
 msgid ""
 "We also set some metadata relating to the application. These include the "
@@ -606,7 +604,6 @@ msgstr ""
 "QML des d'un URL en el nostre [Qt Resource File](https://doc.qt.io/qt-6/"
 "resources.html) (`resources.qrc`)."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-maincpp.md:31
 msgid ""
 "Next, we check if our engine correctly loaded the QML file by checking that "
@@ -615,8 +612,8 @@ msgid ""
 "qtcore;QCoreApplication::exec)."
 msgstr ""
 "A continuació, comprovem si el nostre motor ha carregat correctament el "
-"fitxer QML comprovant que la llista `[rootObjects()](docs:qtqml;"
-"QQmlApplicationEngine::rootObjects)` del motor no està buida. Després podem "
+"fitxer QML comprovant que la llista [rootObjects()](docs:qtqml;"
+"QQmlApplicationEngine::rootObjects) del motor no està buida. Després podem "
 "executar la nostra aplicació amb [app.exec()](docs:qtcore;QCoreApplication::"
 "exec)."
 
@@ -714,7 +711,6 @@ msgstr ""
 "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
 "WidgetsAddons)`"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:31
 msgid ""
 "[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
@@ -831,18 +827,16 @@ msgstr ""
 "a establir `helloworld_SRCS` al `main.cpp` i `resources.qrc` (si decidim "
 "crear fitxers en C++ addicionals, també els haurem d'afegir aquí)."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of naming our executable and grabbing the "
 "files needed to create it"
 msgstr ""
-"`[add_executable()](https://cmake.org/cmake/help/latest/command/"
+"[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) s'encarrega d'anomenar el nostre executable i prendre "
 "els fitxers necessaris per a crear-lo."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:53
 msgid ""
 "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
@@ -913,7 +907,6 @@ msgstr ""
 "Action), es poden assignar a elements de menú i botons de la barra d'eines, "
 "però també a molts altres components de Kirigami."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-actions.md:38
 msgid ""
 "The [icon.name](https://doc.qt.io/qt-6/qml-qtquick-controls2-action."
@@ -941,7 +934,6 @@ msgstr ""
 "Actions](docs:qtquickcontrols;QtQuick.Controls.Action) és la possibilitat "
 "d'imbricar les accions."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-actions.md:62
 msgid ""
 "Another feature of Kirigami Actions is to provide various hints to items "
@@ -1130,7 +1122,6 @@ msgstr ""
 "per un [ToolButton](docs:qtquickcontrols;QtQuick.Controls.ToolButton), i les "
 "que no càpiguen es mouran a un menú al final de la barra d'eines."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-actions.md:232
 msgid ""
 "Like [ActionTextField](docs:kirigami2;ActionTextField), you may not need to "
@@ -1146,7 +1137,6 @@ msgstr ""
 msgid "A horizontal toolbar being displayed at the top of the application"
 msgstr ""
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-actions.md:259
 msgid ""
 "You can read more about [ActionToolBar](docs:kirigami2;ActionToolBar) "
@@ -1209,7 +1199,6 @@ msgstr ""
 "d'accions a la capçalera de la pàgina, hi ha ocasions en què potser "
 "preferireu tenir una mica més de flexibilitat."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-actiontoolbar.md:12
 msgid ""
 "Kirigami provides the component [Kirigami.ActionToolBar](docs:kirigami2;"
@@ -1237,7 +1226,6 @@ msgstr ""
 msgid "Creating our first ActionToolBar"
 msgstr "Crear la nostra primera ActionToolBar"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-actiontoolbar.md:22
 msgid ""
 "The layout and location of your [Kirigami.ActionToolBar](docs:kirigami2;"
@@ -1252,7 +1240,6 @@ msgstr ""
 "convencions de la interfície d'usuari i col·locar la barra d'eines a prop de "
 "la part superior o inferior de la pàgina i que s'estengui en amplada."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-actiontoolbar.md:24
 msgid ""
 "Like most other action-holding components, [Kirigami.ActionToolBar](docs:"
@@ -1313,7 +1300,6 @@ msgstr ""
 "obtenir informació més detallada, i pot oferir accés directe a les accions "
 "més importants d'un element.\n"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-card.md:11
 msgid ""
 "The Kirigami types [AbstractCard](docs:kirigami2;AbstractCard) and [Card]"
@@ -1411,7 +1397,6 @@ msgstr ""
 msgid "CardsLayout"
 msgstr "CardsLayout"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-card.md:95
 msgid ""
 "A [Kirigami.CardsLayout](docs:kirigami2;CardsLayout) is most useful when the "
@@ -1473,7 +1458,6 @@ msgstr ""
 msgid "CardsListView"
 msgstr "CardsListView"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:153
 msgid ""
 "A [Kirigami.CardsListView](docs:kirigami2;CardsListView) is a list view that "
@@ -1483,7 +1467,6 @@ msgstr ""
 "llista que es pot utilitzar amb els components de [AbstractCard](docs:"
 "kirigami2;AbstractCard)."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:155
 msgid ""
 "A [CardsListView](docs:kirigami2;CardsListView) will stretch child cards to "
@@ -1501,7 +1484,6 @@ msgstr ""
 "[headerOrientation](docs:kirigami2;templates::AbstractCard::"
 "headerOrientation)."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:157
 msgid ""
 "The choice between using this view with [AbstractCard](docs:kirigami2;"
@@ -1539,7 +1521,6 @@ msgstr ""
 msgid "CardsGridView"
 msgstr "CardsGridView"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-card.md:217
 msgid ""
 "Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display "
@@ -1548,7 +1529,6 @@ msgstr ""
 "Utilitzeu una [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) per a "
 "mostrar les targetes en una quadrícula."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-card.md:219
 msgid ""
 "Its behavior is the same as a [CardsLayout](docs:kirigami2;CardsLayout), and "
@@ -1559,7 +1539,6 @@ msgstr ""
 "CardsLayout), i permet col·locar les targetes en una o dues columnes "
 "depenent de l'amplada disponible."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:221
 msgid ""
 "[CardsGridView](docs:kirigami2;CardsGridView) has the limitation that every "
@@ -1573,7 +1552,6 @@ msgstr ""
 "prop) s'haurà d'establir manualment a un valor per al qual el contingut "
 "haurà d'encaixar per cada targeta filla."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-card.md:223
 msgid ""
 "If possible use [CardsGridView](docs:kirigami2;CardsGridView) only when you "
@@ -1630,7 +1608,6 @@ msgstr ""
 msgid "Buttons"
 msgstr "Botons"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:15
 msgid ""
 "In Kirigami apps, we use buttons from QtQuick Controls. Using them is pretty "
@@ -1657,7 +1634,7 @@ msgstr ""
 msgid "Toggleable buttons"
 msgstr "Botons commutables"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-controls.md:49
 msgid ""
 "The behavior of buttons can be changed to make them toggleable: in this "
@@ -1731,7 +1708,6 @@ msgstr ""
 msgid "Toolbar buttons"
 msgstr "Botons de la barra d'eines"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:96
 msgid ""
 "There is a specific button type meant for use in toolbars, [Controls."
@@ -1793,7 +1769,6 @@ msgstr ""
 "marcar més d'una casella de selecció a la vegada](/docs/use/kirigami/"
 "components-controls/controls-checkbox.png)"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:152
 msgid ""
 "As you can see, they are simple to use. The [checked](https://doc.qt.io/qt-6/"
@@ -1852,7 +1827,6 @@ msgstr ""
 msgid "Switches"
 msgstr "Commutadors (Switches)"
 
-# skip-rule: punctuation-simple-quotes
 #: content/docs/use/kirigami/components-controls.md:191
 msgid ""
 "On the desktop, changing settings usually involves changing the setting and "
@@ -1865,7 +1839,6 @@ msgstr ""
 "«D'acord». Al mòbil, en el seu lloc podem utilitzar un [Controls.Switch]"
 "(docs:qtquickcontrols;QtQuick.Controls.Switch)."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-simple-quotes
 #: content/docs/use/kirigami/components-controls.md:193
 msgid ""
 "Switches can be toggled between an on and off state. They can be toggled by "
@@ -2022,7 +1995,6 @@ msgstr ""
 "qtquickcontrols;QtQuick.Controls.RangeSlider). Aquests tenen dues nanses, i "
 "això permet definir un interval de nombres entre les dues nanses."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:290
 msgid ""
 "Two new properties are important to keep in mind: [first.value](https://doc."
@@ -2050,7 +2022,6 @@ msgstr ""
 "dos cercles que es poden moure emprats per a delimitar un interval "
 "determinat](/docs/use/kirigami/components-controls/controls-rangesliders.png)"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-controls.md:315
 msgid ""
 "We can also make it a tickmarked slider by setting the [stepSize](https://"
@@ -2371,7 +2342,6 @@ msgstr ""
 "Els calaixos inclosos permeten a l'usuari interactuar amb la resta de "
 "l'aplicació sense ser descartats i no enfosqueixen les altres àrees."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-drawers.md:259
 msgid ""
 "These two drawers are so similar because they can, in fact, be implemented "
@@ -2383,7 +2353,6 @@ msgstr ""
 "component de Kirigami: [Kirigami.OverlayDrawer](docs:kirigami2;"
 "OverlayDrawer). Propietats importants d'aquest component a tenir en compte:"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/components-drawers.md:261
 msgid ""
 "[Popup.modal](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup.html#modal-"
@@ -2408,7 +2377,6 @@ msgstr ""
 "qtcore;Qt::RightEdge), això és, `Qt.TopEdge`, `Qt.RightEdge`, `Qt."
 "BottomEdge` i `Qt.LeftEdge`"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/components-drawers.md:263
 msgid ""
 "[Popup.contentItem](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup."
@@ -2419,7 +2387,6 @@ msgstr ""
 "html#contentItem-prop) conté el component que formarà el contingut del "
 "calaix."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-drawers.md:277
 msgid "Set modal to false to make this drawer inline!"
 msgstr "Establiu «modal» a «false» per a fer que aquest calaix estigui inclòs!"
@@ -2465,7 +2432,6 @@ msgstr ""
 "Creant amb facilitat àrees d'interacció atractives amb les FormLayouts de "
 "Kirigami"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-formlayouts.md:10
 msgid ""
 "[Kirigami.FormLayout](docs:kirigami2;FormLayout) components make it easy for "
@@ -2500,7 +2466,6 @@ msgstr ""
 msgid "Simple form"
 msgstr "Formulari senzill"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-formlayouts.md:16
 msgid ""
 "[Kirigami.FormLayout](docs:kirigami2;FormLayout) components are similar in "
@@ -2518,7 +2483,6 @@ msgstr ""
 "automàticament d'acord amb la mida disponible per a la disposició del "
 "formulari."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-formlayouts.md:18
 msgid ""
 "Children of a [Kirigami.FormLayout](docs:kirigami2;FormLayout) have a "
@@ -2539,7 +2503,6 @@ msgstr ""
 msgid "Sections and separators"
 msgstr "Seccions i separadors"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-formlayouts.md:62
 msgid ""
 "FormLayouts can also be divided into sections. Setting where a section "
@@ -2554,7 +2517,6 @@ msgstr ""
 "proporcionarà al component un marge addicional a la part superior per a "
 "demarcar el començament de la secció nova."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-formlayouts.md:64
 msgid ""
 "[Kirigami.Separator](docs:kirigami2;Separator) components are best suited "
@@ -2565,13 +2527,13 @@ msgid ""
 "isSection](docs:kirigami2;FormLayoutAttached::isSection) property on any "
 "other component."
 msgstr ""
-"Els components de `[Kirigami.Separator](docs:kirigami2;Separator) són els "
-"més adequats per a començar seccions noves. Els separadors s'usen per a "
-"dibuixar una prima línia horitzontal, delimitant el final d'una secció. Si "
-"preferiu no traçar dita línia entre les seccions, podeu utilitzar una "
-"propietat [Item](docs:qtquick;QtQuick.Item) de QML estàndard. De manera "
-"alternativa, podeu utilitzar la propietat [Kirigami.FormData.isSection](docs:"
-"kirigami2;FormLayoutAttached::isSection) en qualsevol altre component."
+"Els components de [Kirigami.Separator](docs:kirigami2;Separator) són els més "
+"adequats per a començar seccions noves. Els separadors s'usen per a dibuixar "
+"una prima línia horitzontal, delimitant el final d'una secció. Si preferiu "
+"no traçar dita línia entre les seccions, podeu utilitzar una propietat [Item]"
+"(docs:qtquick;QtQuick.Item) de QML estàndard. De manera alternativa, podeu "
+"utilitzar la propietat [Kirigami.FormData.isSection](docs:kirigami2;"
+"FormLayoutAttached::isSection) en qualsevol altre component."
 
 #: content/docs/use/kirigami/components-formlayouts.md:66
 msgid ""
@@ -2603,7 +2565,6 @@ msgstr ""
 msgid "Checkable children"
 msgstr "Fills seleccionables"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-formlayouts.md:139
 msgid ""
 "A handy feature of [Kirigami.FormLayout](docs:kirigami2;FormLayout) is that "
@@ -2627,7 +2588,6 @@ msgstr ""
 msgid "Forcing a desktop or mobile layout"
 msgstr "Forçar una disposició d'escriptori o mòbil"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-formlayouts.md:174
 msgid ""
 "If you would rather have your form layout stay consistent regardless of your "
@@ -2721,7 +2681,6 @@ msgstr ""
 msgid "Basic inline message"
 msgstr "Missatge bàsic inclòs"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-inlinemessages.md:14
 msgid ""
 "[Kirigami.InlineMessage](docs:kirigami2;InlineMessage) components have two "
@@ -2730,7 +2689,6 @@ msgstr ""
 "Els components de [Kirigami.InlineMessage](docs:kirigami2;InlineMessage) "
 "tenen dues propietats importants a tenir en compte:"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-inlinemessages.md:15
 msgid ""
 "[visible](https://doc.qt.io/qt-6/qml-qtquick-item.html#visible-prop): by "
@@ -2745,41 +2703,31 @@ msgstr ""
 "establint-la a «true». Quan un missatge inclòs ocult està establert per a "
 "ser visible, s'obtindrà una animació bonica."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-inlinemessages.md:16
-#, fuzzy
-#| msgid "`text`: here is where you set the text of your inline message."
 msgid ""
 "[text](docs:kirigami2;templates::InlineMessage::text): here is where you set "
 "the text of your inline message."
-msgstr "`text`: aquí és on establireu el text del missatge inclòs."
+msgstr ""
+"[text](docs:kirigami2;templates::InlineMessage::text): aquí és on establireu "
+"el text del missatge inclòs."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:49
-#, fuzzy
-#| msgid ""
-#| "![A simple inline message and button](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-simple.png)"
 msgid ""
 "![A window showing a button which when clicked makes an inline message with "
 "light blue background pop up with text above it, near the top of the "
 "application](/docs/use/kirigami/components-inlinemessages/inlinemessages-"
 "simple.png)"
 msgstr ""
-"![Un missatge i botó inclosos senzills](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-simple.png)"
+"![Una finestra que mostra un i botó que quan s'hi fa clic fa que emergeixi "
+"un missatge inclòs amb fons blau clar amb text a sobre, a prop de la part "
+"superior de l'aplicació](/docs/use/kirigami/components-inlinemessages/"
+"inlinemessages-simple.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:55
 msgid "Different types"
 msgstr "Tipus diferents"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-inlinemessages.md:57
-#, fuzzy
-#| msgid ""
-#| "Standard inline messages are like the ones above: they have a blue "
-#| "background and a default icon. We can change that with the `type` "
-#| "property, which lets us set our inline message to a different type. There "
-#| "are four types we can choose from:"
 msgid ""
 "Standard inline messages are like the ones above: they have a blue "
 "background and a default icon. We can change that with the [type](docs:"
@@ -2787,9 +2735,10 @@ msgid ""
 "inline message to a different type. There are four types we can choose from:"
 msgstr ""
 "Els missatges inclosos estàndard són com els anteriors: tenen un fons blau i "
-"una icona predeterminada. Podem canviar-ho amb la propietat `type`, la qual "
-"ens permet establir el nostre missatge inclòs a un tipus diferent. N'hi ha "
-"quatre tipus entre els quals podem triar:"
+"una icona predeterminada. Podem canviar-ho amb la propietat [type](docs:"
+"kirigami2;templates::InlineMessage::type), la qual ens permet establir el "
+"nostre missatge inclòs a un tipus diferent. N'hi ha quatre tipus entre els "
+"quals podem triar:"
 
 # skip-rule: t-acc_obe,punctuation-simple-quotes
 #: content/docs/use/kirigami/components-inlinemessages.md:59
@@ -2833,17 +2782,14 @@ msgstr ""
 "malament."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:105
-#, fuzzy
-#| msgid ""
-#| "![Different inline message types](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-types.png)"
 msgid ""
 "![A window showcasing all four inline message types in blue, green, orange "
 "and red](/docs/use/kirigami/components-inlinemessages/inlinemessages-types."
 "png)"
 msgstr ""
-"![Diferents tipus de missatges inclosos](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-types.png)"
+"![Una finestra que mostra tots els quatre tipus de missatges inclosos en "
+"blau, verd, taronja i vermell](/docs/use/kirigami/components-inlinemessages/"
+"inlinemessages-types.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:111
 msgid "Customising text and icons"
@@ -2866,26 +2812,14 @@ msgstr ""
 "d'escapar."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:133
-#, fuzzy
-#| msgid ""
-#| "![An inline message with rich text](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-richtext.png)"
 msgid ""
 "![An inline message with rich text and a hyperlink](/docs/use/kirigami/"
 "components-inlinemessages/inlinemessages-richtext.png)"
 msgstr ""
-"![Un missatge inclòs amb text enriquit](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-richtext.png)"
+"![Un missatge inclòs amb text enriquit i un enllaç](/docs/use/kirigami/"
+"components-inlinemessages/inlinemessages-richtext.png)"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-inlinemessages.md:139
-#, fuzzy
-#| msgid ""
-#| "You can also customise the icon that appears on the top-left of your "
-#| "message by providing a system icon name for the `icon.source` property. "
-#| "These icon names should correspond to icons installed on your system; you "
-#| "can use an application such as Cuttlefish to browse and search the icons "
-#| "available on your system, and what their names are."
 msgid ""
 "You can also customise the icon that appears on the top left of your message "
 "by providing a system icon name for the [icon.source](docs:kirigami2;"
@@ -2897,35 +2831,25 @@ msgid ""
 msgstr ""
 "També podreu personalitzar la icona que apareix a la part superior esquerra "
 "del missatge, proporcionant un nom d'icona de sistema per a la propietat "
-"`icon.source`. Aquests noms d'icona s'han de correspondre amb les icones que "
-"hi ha al vostre sistema. Podeu utilitzar una aplicació com Cuttlefish per a "
-"explorar i cercar les icones disponibles en el sistema, i quins són els seus "
-"noms."
+"[icon.source](docs:kirigami2;templates::InlineMessage::icon). Aquests noms "
+"d'icona s'han de correspondre amb les icones que hi ha al vostre sistema. "
+"Podeu utilitzar una aplicació com Cuttlefish proporcionada per [plasma-sdk]"
+"(https://invent.kde.org/plasma/plasma-sdk) per a explorar i cercar les "
+"icones disponibles en el sistema, i quins són els seus noms."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:158
-#, fuzzy
-#| msgid ""
-#| "![An inline message with a specified icon](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-icon.png)"
 msgid ""
 "![An inline message with a custom icon](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-icon.png)"
 msgstr ""
-"![Un missatge inclòs amb una icona específica](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-icon.png)"
+"![Un missatge inclòs amb una icona personalitzada](/docs/use/kirigami/"
+"components-inlinemessages/inlinemessages-icon.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:164
 msgid "Using actions in inline messages"
 msgstr "Usar accions en els missatges inclosos"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-inlinemessages.md:166
-#, fuzzy
-#| msgid ""
-#| "If your messages need to be interactive, you can attach Kirigami actions "
-#| "to your inline messages. Like with pages, you can do this by setting the "
-#| "inline message's `actions` property to either a `Kirigami.Action` or an "
-#| "array containing `Kirigami.Action` components."
 msgid ""
 "If your messages need to be interactive, you can attach Kirigami actions to "
 "your inline messages. Like with pages, you can do this by setting the "
@@ -2935,8 +2859,10 @@ msgid ""
 msgstr ""
 "Si els missatges han de ser interactius, podreu adjuntar accions de Kirigami "
 "als missatges inclosos. Igual que amb les pàgines, podreu fer això establint "
-"la propietat `actions` del missatge inclòs ja sigui en una `Kirigami.Action` "
-"o en una matriu que contingui els components d'una `Kirigami.Action`."
+"la propietat [InlineMessage.actions](docs:kirigami2;templates::"
+"InlineMessage::actions) del missatge inclòs ja sigui en una [Kirigami.Action]"
+"(docs:kirigami2;Action) o en una matriu que contingui els components d'una "
+"[Kirigami.Action](docs:kirigami2;Action)."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:207
 msgid ""
@@ -2958,31 +2884,24 @@ msgstr ""
 "Els missatges inclosos proporcionen un botó de tancament que es pot "
 "utilitzar per a descartar-los amb facilitat."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-inlinemessages.md:217
-#, fuzzy
-#| msgid ""
-#| "By default, this close button is hidden, but this can be overridden by "
-#| "setting the `showCloseButton` property to `true`."
 msgid ""
 "By default, this close button is hidden, but this can be overridden by "
 "setting the [showCloseButton](docs:kirigami2;templates::InlineMessage::"
 "showCloseButton) property to `true`."
 msgstr ""
 "De manera predeterminada, aquest botó de tancament estarà ocult, però ho "
-"podeu anul·lar establint la propietat `showCloseButton` a `true`."
+"podeu anul·lar establint la propietat [showCloseButton](docs:kirigami2;"
+"templates::InlineMessage::showCloseButton) a `true`."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:236
-#, fuzzy
-#| msgid ""
-#| "![An inline message with close button showing](/docs/use/kirigami/"
-#| "components-inlinemessages/inlinemessages-closebutton.png)"
 msgid ""
 "![An inline message with close button to its right side](/docs/use/kirigami/"
 "components-inlinemessages/inlinemessages-closebutton.png)"
 msgstr ""
-"![Un missatge inclòs amb el botó de tancar](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-closebutton.png)"
+"![Un missatge inclòs amb el botó de tancar a la seva banda dreta](/docs/use/"
+"kirigami/components-inlinemessages/inlinemessages-closebutton.png)"
 
 #: content/docs/use/kirigami/components-listview.md:0
 msgid "List views"
@@ -2995,18 +2914,14 @@ msgstr ""
 "de forma dinàmica.\n"
 
 #: content/docs/use/kirigami/components-listview.md:11
-#, fuzzy
-#| msgid ""
-#| "Listviews can help you display objects from a model in an attractive way. "
-#| "To use a list view, you have to keep track of three things:"
 msgid ""
 "[Listviews](docs:qtquick;QtQuick.ListView) can help you display objects from "
 "a model in an attractive way. To use a list view, you have to keep track of "
 "three things:"
 msgstr ""
-"Les vistes de llista poden ajudar a mostrar objectes d'un model d'una manera "
-"atractiva. Per a utilitzar una vista de llista, haureu de realitzar un "
-"seguiment de tres coses:"
+"Les [vistes de llista «Listviews»](docs:qtquick;QtQuick.ListView) poden "
+"ajudar a mostrar objectes d'un model d'una manera atractiva. Per a utilitzar "
+"una vista de llista, haureu de realitzar un seguiment de tres coses:"
 
 # skip-rule: punctuation-period-no
 #: content/docs/use/kirigami/components-listview.md:13
@@ -3053,28 +2968,22 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/components-listview.md:23
-#, fuzzy
-#| msgid ""
-#| "`model`, which accepts the data or the `id` of the object that holds the "
-#| "data"
 msgid ""
 "[model](https://doc.qt.io/qt-6/qml-qtquick-listview.html#model-prop), which "
 "accepts the data or the `id` of the object that holds the data"
 msgstr ""
-"`model`, el qual accepta les dades o l'`id` de l'objecte que conté les dades."
+"[model](https://doc.qt.io/qt-6/qml-qtquick-listview.html#model-prop), el "
+"qual accepta les dades o l'`id` de l'objecte que conté les dades."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/components-listview.md:24
-#, fuzzy
-#| msgid ""
-#| "`delegate`, which accepts the component we will use to display the data "
-#| "in the model"
 msgid ""
 "[delegate](https://doc.qt.io/qt-6/qml-qtquick-listview.html#delegate-prop), "
 "which accepts the component we will use to display the data in the model"
 msgstr ""
-"`delegate`, el qual accepta el component que utilitzarem per a mostrar les "
-"dades en el model."
+"[delegate](https://doc.qt.io/qt-6/qml-qtquick-listview.html#delegate-prop), "
+"el qual accepta el component que utilitzarem per a mostrar les dades en el "
+"model."
 
 #: content/docs/use/kirigami/components-listview.md:41
 msgid ""
@@ -3092,13 +3001,7 @@ msgstr ""
 "![Una vista de llista senzilla](/docs/use/kirigami/components-listview/"
 "listview-simple.png)"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-listview.md:63
-#, fuzzy
-#| msgid ""
-#| "In cases where your model data only contain a single piece of data, like "
-#| "in the example above, you can just grab the data in the model by "
-#| "referencing `modelData`."
 msgid ""
 "In cases where your model data only contain a single piece of data, like in "
 "the example above, you can just grab the data in the model by referencing "
@@ -3107,7 +3010,8 @@ msgid ""
 msgstr ""
 "En els casos en què les dades del model només contenen una sola peça de "
 "dades, com en l'exemple anterior, podeu prendre les dades en el model fent "
-"referència a `modelData`."
+"referència a [modelData](https://doc.qt.io/qt-6/qtquick-modelviewsdata-"
+"modelview.html#models)."
 
 #: content/docs/use/kirigami/components-listview.md:65
 msgid ""
@@ -3119,16 +3023,7 @@ msgstr ""
 "propietats amb nom, el nom d'aquestes propietats s'exposarà automàticament "
 "al delegat i només podreu utilitzar aquests noms en el vostre delegat."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-listview.md:87
-#, fuzzy
-#| msgid ""
-#| "Kirigami offers a number of components that have been designed "
-#| "specifically for use in list views, such as `Kirigami.BasicListItem`, "
-#| "`Kirigami.CheckableListItem` and `Kirigami.SwipeListItem`, all of which "
-#| "build upon `Kirigami.AbstractListItem`. There are also `Kirigami."
-#| "CheckDelegate`, `Kirigami.RadioDelegate`, and `Kirigami.SwitchDelegate`, "
-#| "which are designed to take advantage of those specific controls."
 msgid ""
 "Kirigami offers a number of components that have been designed specifically "
 "for use in list views, such as [Kirigami.BasicListItem](docs:kirigami2;"
@@ -3142,39 +3037,29 @@ msgid ""
 "controls."
 msgstr ""
 "El Kirigami ofereix una sèrie de components que s'han dissenyat "
-"específicament per al seu ús en vistes de llista, com `Kirigami."
-"BasicListItem`, `Kirigami.CheckableListItem` i `Kirigami.SwipeListItem`, "
-"tots els quals es basen en el `Kirigami.AbstractListItem`. També hi ha "
-"`Kirigami.CheckDelegate`, `Kirigami.RadioDelegate` i `Kirigami."
-"SwitchDelegate`, els quals estan dissenyats per a aprofitar aquests controls "
-"específics."
+"específicament per al seu ús en vistes de llista, com [Kirigami."
+"BasicListItem](docs:kirigami2;BasicListItem), [Kirigami.CheckableListItem]"
+"(docs:kirigami2;CheckableListItem) i [Kirigami.SwipeListItem](docs:kirigami2;"
+"SwipeListItem), tots els quals es basen en el [Kirigami.AbstractListItem]"
+"(docs:kirigami2;AbstractListItem). També hi ha [Kirigami.CheckDelegate](docs:"
+"kirigami2;CheckDelegate), [Kirigami.RadioDelegate](docs:kirigami2;"
+"RadioDelegate) i [Kirigami.SwitchDelegate](docs:kirigami2;SwitchDelegate), "
+"els quals estan dissenyats per a aprofitar aquests controls específics."
 
 #: content/docs/use/kirigami/components-listview.md:89
-#, fuzzy
-#| msgid ""
-#| "However, you are not limited to using these components and can choose "
-#| "whichever ones you wish - though this may mean some tweaking to your "
-#| "layout."
 msgid ""
 "However, you are not limited to using these components and you can choose "
 "whichever ones you wish. This may require some tweaking of your layout."
 msgstr ""
 "No obstant això, no esteu limitat a utilitzar aquests components i podreu "
-"triar els que vulgueu -encara que això pot significar alguns ajustos en la "
-"vostra disposició-."
+"triar els que vulgueu. Això pot requerir alguns ajustos de la vostra "
+"disposició."
 
 #: content/docs/use/kirigami/components-listview.md:91
 msgid "Placeholder messages"
 msgstr "Missatges amb marcadors de posició"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-listview.md:93
-#, fuzzy
-#| msgid ""
-#| "In some cases, you might want to use a list view that is empty until the "
-#| "user does something. In these situations, using a `Kirigami."
-#| "PlaceholderMessage` can be an attractive way of telling your user that "
-#| "the list is empty and that they can do something about it."
 msgid ""
 "In some cases, you might want to use a list view that is empty until the "
 "user does something. In these situations, using a [Kirigami."
@@ -3184,18 +3069,11 @@ msgid ""
 msgstr ""
 "En alguns casos, possiblement voldreu utilitzar una vista de llista que "
 "estigui buida fins que l'usuari faci alguna cosa. En aquestes situacions, "
-"utilitzar un `Kirigami.PlaceholderMessage` pot ser una forma atractiva de "
-"dir-li a l'usuari que la llista està buida i que hi pot fer alguna cosa."
+"utilitzar un [Kirigami.PlaceholderMessage](docs:kirigami2;"
+"PlaceholderMessage) pot ser una forma atractiva de dir-li a l'usuari que la "
+"llista està buida i que hi pot fer alguna cosa."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-listview.md:95
-#, fuzzy
-#| msgid ""
-#| "You will generally want to place a PlaceholderMessage in the center of "
-#| "the ListView and you will want it to not span the entire width of the "
-#| "ListView either. You will obviously also want it to not be visible once "
-#| "the ListView's model becomes populated with data: thankfully, ListViews "
-#| "have a property named `count` that makes doing this quite easy."
 msgid ""
 "You will generally want to place a placeholder message in the center of the "
 "ListView and you will likely not want it to span the entire width of the "
@@ -3204,19 +3082,14 @@ msgid ""
 "named [count](https://doc.qt.io/qt-6/qml-qtquick-listview.html#count-prop) "
 "that makes doing this quite easy."
 msgstr ""
-"En general, voldreu col·locar un `PlaceholderMessage` al centre de la "
-"`ListView` i tampoc voldreu que abasti tota l'amplada de la `ListView`. "
-"Òbviament, també voldreu que no sigui visible un cop es completi amb dades "
-"el model de la `ListView`: afortunadament, les `ListView` tenen una "
-"propietat anomenada `count`, la qual fa que fer això sigui molt fàcil."
+"En general, voldreu col·locar un missatge amb marcador de posició al centre "
+"de la ListView, però no voldreu que abasti tota l'amplada de la ListView. "
+"Òbviament, també voldreu que no s'oculti un cop el model de la ListView es "
+"completi amb les dades. Afortunadament, les ListView tenen una propietat "
+"anomenada [count](https://doc.qt.io/qt-6/qml-qtquick-listview.html#count-"
+"prop), la qual facilita fer això."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-listview.md:97
-#, fuzzy
-#| msgid ""
-#| "You might also want to add a helpful action to your placeholder message. "
-#| "This can be done by attaching an action to the `Kirigami."
-#| "PlaceHolderMessage`'s `helpfulAction` property."
 msgid ""
 "You might also want to add a helpful action to your placeholder message. "
 "This can be done by attaching an action to the [PlaceholderMessage."
@@ -3224,20 +3097,19 @@ msgid ""
 msgstr ""
 "Possiblement també voldreu afegir una acció d'ajuda al vostre missatge amb "
 "un marcador de posició. Això es pot fer adjuntant una acció a la propietat "
-"`helpfulAction` d'un `Kirigami.PlaceHolderMessage`."
+"[PlaceholderMessage.helpfulAction](docs:kirigami2;PlaceholderMessage::"
+"helpfulAction)."
 
 #: content/docs/use/kirigami/components-listview.md:133
-#, fuzzy
-#| msgid ""
-#| "![A list view with a placeholder message](/docs/use/kirigami/components-"
-#| "listview/listview-placeholdermessage.png)"
 msgid ""
 "![An empty list view which displays a placeholder message in the middle of "
 "the application together with an action to add new data to the model](/docs/"
 "use/kirigami/components-listview/listview-placeholdermessage.png)"
 msgstr ""
-"![Una vista de llista amb un missatge amb marcadors de posició](/docs/use/"
-"kirigami/components-listview/listview-placeholdermessage.png)"
+"![Una vista de llista buida que mostra un missatge amb marcadors de posició "
+"al mig de l'aplicació juntament amb una acció per afegir dades noves al "
+"model](/docs/use/kirigami/components-listview/listview-placeholdermessage."
+"png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:0
 msgid "Overlay sheets"
