@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-26 22:29+0100\n"
+"PO-Revision-Date: 2023-02-27 20:21+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -1493,7 +1493,7 @@ msgid ""
 "aesthetic one."
 msgstr ""
 "L'elecció entre utilitzar aquesta vista amb components [AbstractCard](docs:"
-"kirigami2;AbstractCard) o un [ListView](docs:qtquick;QtQuick.ListView) "
+"kirigami2;AbstractCard) o una [ListView](docs:qtquick;QtQuick.ListView) "
 "convencional amb components [AbstractListItem](docs:kirigami2;"
 "AbstractListItem)/[BasicListItem](docs:kirigami2;BasicListItem) és purament "
 "estètic."
@@ -2624,7 +2624,7 @@ msgstr "Una disposició de formulari amb la disposició de mòbil forçada"
 
 #: content/docs/use/kirigami/components-formlayouts.md:210
 msgid "Aligning your labels"
-msgstr ""
+msgstr "Alineació de les etiquetes"
 
 #: content/docs/use/kirigami/components-formlayouts.md:212
 msgid ""
@@ -2975,7 +2975,6 @@ msgstr ""
 "[model](https://doc.qt.io/qt-6/qml-qtquick-listview.html#model-prop), el "
 "qual accepta les dades o l'`id` de l'objecte que conté les dades."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/components-listview.md:24
 msgid ""
 "[delegate](https://doc.qt.io/qt-6/qml-qtquick-listview.html#delegate-prop), "
@@ -3124,31 +3123,25 @@ msgstr ""
 "servir com per a introduir dades."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:10
-#, fuzzy
-#| msgid ""
-#| "Overlay sheets provide a simple component that you can use to supplement "
-#| "the content being displayed on an application's page. They are designed "
-#| "to display long, vertical content and can accommodate content longer than "
-#| "the application window itself."
 msgid ""
 "A [Kirigami.OverlaySheet](docs:kirigami2;OverlaySheet) is a simple component "
 "that you can use to supplement the content being displayed on an "
 "application's page. They are designed to display long, vertical content and "
 "can accommodate content longer than the application window itself."
 msgstr ""
-"Els fulls superposats proporcionen un component senzill que podreu utilitzar "
-"per a complementar el contingut que es mostra a la pàgina d'una aplicació. "
-"Estan dissenyats per a mostrar contingut vertical extens i poden acomodar el "
-"contingut més llarg millor que la finestra mateixa de l'aplicació."
+"Un [Kirigami.OverlaySheet](docs:kirigami2;OverlaySheet) és un component "
+"individual que podreu utilitzar per a complementar el contingut que es "
+"mostra a la pàgina d'una aplicació. Estan dissenyats per a mostrar contingut "
+"vertical extens i poden acomodar contingut més llarg millor que la finestra "
+"mateixa de l'aplicació."
 
-# skip-rule: punctuation-simple-quotes
 #: content/docs/use/kirigami/components-overlaysheets.md:12
 msgid ""
 "They can be dismissed by clicking or tapping outside of their area or by "
 "clicking the 'x' icon on sheets' headers."
 msgstr ""
 "Es poden descartar fent clic o tocant fora de la seva àrea, o fent clic "
-"sobre la icona *x* en les capçaleres dels fulls."
+"sobre la icona «x» en les capçaleres dels fulls."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:14
 msgid "Learning about the sheet"
@@ -3163,24 +3156,15 @@ msgstr ""
 "Kirigami en la que volem que aparegui."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:46
-#, fuzzy
-#| msgid ""
-#| "![Simple overlay sheet](/docs/use/kirigami/components-overlaysheets/"
-#| "sheet_simple.png)"
 msgid ""
 "![Simple overlay sheet containing only text](/docs/use/kirigami/components-"
 "overlaysheets/sheet_simple.png)"
 msgstr ""
-"![Full superposat senzill](/docs/use/kirigami/components-overlaysheets/"
-"sheet_simple.png)"
+"![Full superposat individual que només conté text](/docs/use/kirigami/"
+"components-overlaysheets/sheet_simple.png)"
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-overlaysheets.md:52
-#, fuzzy
-#| msgid ""
-#| "Overlay sheets come with methods we can use to open (`mySheet.open()`) or "
-#| "close (`mySheet.close()`) them as we see fit. By default overlay sheets "
-#| "are hidden, so at the very least we will need to use the `open()` method."
 msgid ""
 "Overlay sheets come with methods we can use to [open()](docs:kirigami2;"
 "templates::OverlaySheet::open) or [close()](docs:kirigami2;templates::"
@@ -3188,18 +3172,12 @@ msgid ""
 "hidden, so at the very least we will need to use the `open()` method."
 msgstr ""
 "Els fulls superposats venen amb mètodes que podem utilitzar per a obrir "
-"(`mySheet.open()`) o tancar (`mySheet.close()`) com millor ens sembli. De "
+"[open()](docs:kirigami2;templates::OverlaySheet::open) o tancar [close()]"
+"(docs:kirigami2;templates::OverlaySheet::close) com millor ens sembli. De "
 "manera predeterminada, els fulls superposats estaran ocults, de manera que "
 "almenys necessitarem utilitzar el mètode `open()`."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:61
-#, fuzzy
-#| msgid ""
-#| "When opened, this overlay sheet will appear centered vertically and "
-#| "horizontally within its parent page. Horizontally it will be bounded by "
-#| "its parent even if its contents' width exceeds its parent's. If the "
-#| "sheet's vertical length exceeds its' parent's, then the sheet will be "
-#| "displayed from its top position, and will be scrollable."
 msgid ""
 "When opened, this overlay sheet will appear centered vertically and "
 "horizontally within its parent page. Horizontally it will be bounded by its "
@@ -3220,12 +3198,6 @@ msgstr "Full global"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-overlaysheets.md:65
-#, fuzzy
-#| msgid ""
-#| "If you want to display the sheet as a global sheet — one that spans "
-#| "across the entire width of the application, regardless of the page it is "
-#| "a child to — we have to reparent our overlay sheet to our application "
-#| "window's overlay property. We can do this with the `parent` property."
 msgid ""
 "If you want to display the sheet as a global sheet—one that spans across the "
 "entire width of the application, regardless of the page it is a child to—we "
@@ -3233,10 +3205,11 @@ msgid ""
 "property. We can do this with the [parent](https://doc.qt.io/qt-6/qml-"
 "qtquick-item.html#parent-prop) property."
 msgstr ""
-"Si voleu mostrar el full com un full global -un que abasti tota l'amplada de "
-"l'aplicació, independentment de la pàgina que sigui filla-, haurem de tornar "
-"a fer referència al nostre full superposat a la propietat `overlay` de la "
-"finestra de la nostra aplicació. Podem fer això amb la propietat `parent`."
+"Si voleu mostrar el full com un full global (un que abasti tota l'amplada de "
+"l'aplicació, independentment de la pàgina de la qual sigui filla), haurem de "
+"tornar a afiliar el nostre full superposat a la propietat `overlay` de la "
+"finestra de la nostra aplicació. Podem fer això amb la propietat [parent]"
+"(https://doc.qt.io/qt-6/qml-qtquick-item.html#parent-prop)."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:86
 msgid "Non-global overlay sheet"
@@ -3250,14 +3223,7 @@ msgstr "Full superposat global"
 msgid "Fixed sizing"
 msgstr "Mida fixa"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-overlaysheets.md:100
-#, fuzzy
-#| msgid ""
-#| "A sheet is greedy and will take the maximum amount of available width in "
-#| "a page if needed. We can avoid this by specifying an `implicitWidth` or a "
-#| "`Layout.preferredWidth` for its child elements, which will limit how much "
-#| "the sheet will grow width-wise."
 msgid ""
 "A sheet is greedy and will take the maximum amount of available width in a "
 "page if needed. We can avoid this by specifying an [implicitWidth](https://"
@@ -3267,9 +3233,11 @@ msgid ""
 "how much the sheet will grow width wise."
 msgstr ""
 "Un full és voraç i, si cal, prendrà la quantitat màxima d'amplada disponible "
-"en una pàgina. Podem evitar-ho especificant una `implicitWidth` o una "
-"`Layout.preferredWidth` per als seus elements fills, la qual limitarà quant "
-"creixerà el full en amplada."
+"en una pàgina. Podem evitar-ho especificant una [implicitWidth](https://doc."
+"qt.io/qt-6/qml-qtquick-item.html#implicitWidth-prop) o una [Layout."
+"preferredWidth](https://doc.qt.io/qt-6/qml-qtquick-layouts-layout."
+"html#preferredWidth-attached-prop) per als seus elements fills, la qual "
+"limitarà quant creixerà el full en amplada."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:117
 msgid "Non-fixed width overlay sheet"
@@ -3285,13 +3253,6 @@ msgstr "Capçaleres i peus"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-overlaysheets.md:131
-#, fuzzy
-#| msgid ""
-#| "Overlay sheets come by default with a header which only contains a button "
-#| "for closing our overlay sheet. We can add a Kirigami heading as a title "
-#| "in our header to make it easy for users to understand what the sheet is "
-#| "for. This is done by setting the `header` property to contain our "
-#| "Kirigami heading component."
 msgid ""
 "Overlay sheets come by default with a [header](docs:kirigami2;templates::"
 "OverlaySheet::header) that only contains a button for closing our overlay "
@@ -3300,34 +3261,23 @@ msgid ""
 "for users to understand what the sheet is for. This is done by setting "
 "`header` to contain our heading component."
 msgstr ""
-"Els fulls superposats venen de manera predeterminada amb una capçalera que "
-"només conté un botó per a tancar el nostre full superposat. Podem afegir una "
-"capçalera de Kirigami com a títol en la nostra capçalera perquè sigui més "
-"fàcil per als usuaris entendre per a què serveix el full. Això es fa "
-"establint la propietat `header` perquè contingui el nostre component de "
-"capçalera de Kirigami."
+"Els fulls superposats venen de manera predeterminada amb una [header](docs:"
+"kirigami2;templates::OverlaySheet::header) que només conté un botó per a "
+"tancar el nostre full superposat. Podem afegir una [Kirigami.Heading](docs:"
+"kirigami2;Heading) com a títol en la nostra [header](docs:kirigami2;"
+"templates::OverlaySheet::header) perquè sigui més fàcil per als usuaris "
+"entendre per a què serveix el full. Això es fa establint la propietat "
+"`header` perquè contingui el nostre component de capçalera de Kirigami."
 
 #: content/docs/use/kirigami/components-overlaysheets.md:156
-#, fuzzy
-#| msgid ""
-#| "![Sheet header](/docs/use/kirigami/components-overlaysheets/sheet_header."
-#| "png)"
 msgid ""
 "![Overlay sheet with title text in its header area](/docs/use/kirigami/"
 "components-overlaysheets/sheet_header.png)"
 msgstr ""
-"![Capçalera de full](/docs/use/kirigami/components-overlaysheets/"
-"sheet_header.png)"
+"![Capçalera de full amb text de títol a la seva àrea de capçalera](/docs/use/"
+"kirigami/components-overlaysheets/sheet_header.png)"
 
-# skip-rule: punctuation-simple-quotes
 #: content/docs/use/kirigami/components-overlaysheets.md:162
-#, fuzzy
-#| msgid ""
-#| "We can also provide our overlay sheet with a footer. Footers in overlay "
-#| "sheets are quite flexible, but most often they are used to provide "
-#| "overlay sheets with some sort of quick interactive input similar to that "
-#| "provided by modal dialogs (e.g. buttons for 'Apply', 'Ok', 'Cancel', "
-#| "'Close', etc.)"
 msgid ""
 "We can also provide our overlay sheet with a [footer](docs:kirigami2;"
 "templates::OverlaySheet::footer). Footers in overlay sheets are quite "
@@ -3335,11 +3285,12 @@ msgid ""
 "sort of quick interactive input similar to that provided by modal dialogs (e."
 "g. buttons for \"Apply\", \"Ok\", \"Cancel\", \"Close\", etc.)"
 msgstr ""
-"També podem proporcionar el nostre full superposat amb un peu de pàgina. Els "
-"peus de pàgina en els fulls superposats són molt flexibles, però la majoria "
-"de les vegades s'utilitzen per a proporcionar fulls superposats amb algun "
-"tipus d'entrada interactiva ràpida similar a la proporcionada pels diàlegs "
-"modals (p. ex., els botons per a *Apply*, *Ok*, *Cancel*, *Close*, etc.)"
+"També podem proporcionar al nostre full superposat un [footer](docs:"
+"kirigami2;templates::OverlaySheet::footer). Els peus de pàgina en els fulls "
+"superposats són força flexibles, però la majoria de les vegades s'utilitzen "
+"per a proporcionar fulls superposats amb algun tipus d'entrada interactiva "
+"ràpida similar a la proporcionada pels diàlegs modals (p. ex., els botons "
+"per a «Apply», «Ok», «Cancel», «Close», etc.)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:164
 msgid "Footers are set in much the same way as headers:"
@@ -3347,29 +3298,18 @@ msgstr ""
 "Els peus de pàgina s'estableixen de la mateixa manera que les capçaleres:"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:194
-#, fuzzy
-#| msgid ""
-#| "![Sheet footer](/docs/use/kirigami/components-overlaysheets/sheet_footer."
-#| "png)"
 msgid ""
 "![Overlay sheet with a button in its footer area](/docs/use/kirigami/"
 "components-overlaysheets/sheet_footer.png)"
 msgstr ""
-"![Peu de pàgina de full](/docs/use/kirigami/components-overlaysheets/"
-"sheet_footer.png)"
+"![Full superposat amb un botó a la seva àrea de peu de pàgina](/docs/use/"
+"kirigami/components-overlaysheets/sheet_footer.png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:200
 msgid "Using delegate / model views"
 msgstr "Usar les vistes «delegate / model»"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-overlaysheets.md:202
-#, fuzzy
-#| msgid ""
-#| "Since overlay sheets are designed to display vertical content, they can "
-#| "be especially useful when used in conjunction with components such as "
-#| "ListViews. When displaying content longer than the application window "
-#| "itself, the overlay sheet becomes scrollable:"
 msgid ""
 "Since overlay sheets are designed to display vertical content, they can be "
 "especially useful when used in conjunction with components such as "
@@ -3378,21 +3318,17 @@ msgid ""
 msgstr ""
 "Atès que els fulls superposats estan dissenyats per a mostrar contingut "
 "vertical, poden ser especialment útils quan s'utilitzen juntament amb "
-"components com les `ListView`. Quan es mostra contingut més llarg que la "
-"finestra de l'aplicació, el full superposat es torna desplaçable:"
+"components com les [ListViews](docs:qtquick;QtQuick.ListView). Quan es "
+"mostra contingut més llarg que la finestra de l'aplicació, el full "
+"superposat es torna desplaçable:"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-overlaysheets.md:225
-#, fuzzy
-#| msgid ""
-#| "![Sheet with a listview](/docs/use/kirigami/components-overlaysheets/"
-#| "sheet_listview.png)"
 msgid ""
 "![Overlay sheet with a listview](/docs/use/kirigami/components-overlaysheets/"
 "sheet_listview.png)"
 msgstr ""
-"![Full amb una `ListView`](/docs/use/kirigami/components-overlaysheets/"
-"sheet_listview.png)"
+"![Full de superposició amb una vista de llista «listview»](/docs/use/"
+"kirigami/components-overlaysheets/sheet_listview.png)"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:0
 msgid "Page rows and page stacks"
@@ -3407,7 +3343,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:10
 msgid "A row of pages"
-msgstr ""
+msgstr "Una fila de pàgines"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:12
 msgid ""
@@ -3425,10 +3361,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:16
-#, fuzzy
-#| msgid "The resulting code in that part of the file should look like this:"
 msgid "A minimal page row with a single page could look like this:"
-msgstr "El codi resultant en aquesta part del fitxer hauria de ser així:"
+msgstr "Una fila de pàgina mínima amb una única pàgina hauria de ser així:"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:41
 msgid "A single page with light blue color to show the page's dimensions"
@@ -3467,7 +3401,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:112
 msgid "Initial page with light blue color"
-msgstr ""
+msgstr "Pàgina inicial amb un color blau clar"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:114
 msgid ""
@@ -3475,10 +3409,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:116
-#, fuzzy
-#| msgid "The application should look like this:"
 msgid "The application's stack of pages"
-msgstr "L'aplicació hauria de ser així:"
+msgstr "La pila de pàgines de l'aplicació"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:118
 msgid ""
@@ -3508,20 +3440,16 @@ msgid ""
 msgstr ""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:170
-#, fuzzy
-#| msgid "main.qml"
 msgid "\"main.qml\""
-msgstr "main.qml"
+msgstr "\"main.qml\""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:180
 msgid "and"
-msgstr ""
+msgstr "i"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:183
-#, fuzzy
-#| msgid "LoginPage.qml"
 msgid "\"BasicPage.qml\""
-msgstr "LoginPage.qml"
+msgstr "\"BasicPage.qml\""
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:209
 msgid "Clicking the button pushes a new page with help of applicationWindow"
@@ -3558,62 +3486,42 @@ msgstr ""
 msgid "Progress bar"
 msgstr "Barra de progrés"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-progressbars.md:16
-#, fuzzy
-#| msgid ""
-#| "`Controls.ProgressBar` is a component that lets you easily include "
-#| "progress bars in your application. There are four main properties you "
-#| "will need to use:"
 msgid ""
 "[Controls.ProgressBar](docs:qtquickcontrols;QtQuick.Controls.ProgressBar) is "
 "a component that lets you easily include progress bars in your application. "
 "There are four main properties you will need to use:"
 msgstr ""
-"La `Controls.ProgressBar` és un component que permet incloure amb facilitat "
-"barres de progrés en la vostra aplicació. Hi ha quatre propietats principals "
-"que haureu d'utilitzar:"
+"[Controls.ProgressBar](docs:qtquickcontrols;QtQuick.Controls.ProgressBar) és "
+"un component que permet incloure amb facilitat barres de progrés en la "
+"vostra aplicació. Hi ha quatre propietats principals que haureu d'utilitzar:"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/components-progressbars.md:18
-#, fuzzy
-#| msgid ""
-#| "`from`: the minimum value represented by the start of the progress bar"
 msgid ""
 "[from](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#from-"
 "prop): the minimum value represented by the start of the progress bar"
 msgstr ""
-"`from`: el valor mínim representat pel començament de la barra de progrés."
+"[from](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#from-"
+"prop): el valor mínim representat pel començament de la barra de progrés."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/components-progressbars.md:19
-#, fuzzy
-#| msgid "`to`: the maximum value represented by the end of the progress bar"
 msgid ""
 "[to](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#to-prop): "
 "the maximum value represented by the end of the progress bar"
-msgstr "`to`: el valor màxim representat pel final de la barra de progrés."
+msgstr ""
+"[to](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#to-prop): "
+"el valor màxim representat pel final de la barra de progrés."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-progressbars.md:20
-#, fuzzy
-#| msgid ""
-#| "`value`: the current value of the action that is in progress (e.g. 50% "
-#| "loaded)"
 msgid ""
 "[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#value-"
 "prop): the current value of the action that is in progress (e.g. 50% loaded)"
 msgstr ""
-"`value`: el valor actual de l'acció que està en curs (p. ex., 50% carregat)"
+"[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#value-"
+"prop): el valor actual de l'acció que està en curs (p. ex., 50% carregat)"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-progressbars.md:21
-#, fuzzy
-#| msgid ""
-#| "`indeterminate`: if the action that is in process currently has no clear "
-#| "progress value, you can set this property to true to show the user "
-#| "something is happening but its progress is not yet clear (but will be "
-#| "soon)."
 msgid ""
 "[indeterminate](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar."
 "html#indeterminate-prop): if the action that is in process currently has no "
@@ -3621,31 +3529,21 @@ msgid ""
 "that something is happening but its progress is not yet clear (but will be "
 "soon)."
 msgstr ""
-"`indeterminate`: si l'acció que està en procés actualment no té un valor de "
-"progrés clar, podreu establir aquesta propietat a `true` per a mostrar a "
-"l'usuari que està succeint alguna cosa, però el seu progrés encara no està "
-"clar (però que ho estarà aviat)."
+"[indeterminate](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar."
+"html#indeterminate-prop): si l'acció que està en procés actualment no té un "
+"valor de progrés clar, podreu establir aquesta propietat a `true` per a "
+"mostrar a l'usuari que està succeint alguna cosa, però el seu progrés encara "
+"no està clar (però que ho estarà aviat)."
 
-# skip-rule: punctuation-period-no
 #: content/docs/use/kirigami/components-progressbars.md:48
-#, fuzzy
-#| msgid "Above: progress bar at 50%; Below: indeterminate progress bar"
 msgid "Above: progress bar at 50%; below: indeterminate progress bar"
-msgstr ""
-"A dalt: barra de progrés al 50%. A baix: barra de progrés que no determina."
+msgstr "A dalt: barra de progrés al 50%. A baix: barra de progrés indeterminat"
 
 #: content/docs/use/kirigami/components-progressbars.md:54
 msgid "Busy indicator"
 msgstr "Indicador d'ocupat"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-progressbars.md:56
-#, fuzzy
-#| msgid ""
-#| "In cases where loading times are shorter or measuring progress is not "
-#| "feasible, you can instead use `Controls.BusyIndicator`. This component "
-#| "provides a simple spinning wheel that shows users that something is "
-#| "happening."
 msgid ""
 "In cases where loading times are shorter or measuring progress is not "
 "feasible, you can instead use [Controls.BusyIndicator](docs:qtquickcontrols;"
@@ -3653,9 +3551,10 @@ msgid ""
 "wheel that shows users that something is happening."
 msgstr ""
 "En els casos en què els temps de càrrega són més curts o el mesurament del "
-"progrés no és factible, podreu utilitzar el `Controls.BusyIndicator`. Aquest "
-"component proporciona una roda giratòria senzilla que mostra als usuaris que "
-"està succeint alguna cosa."
+"progrés no és factible, podreu utilitzar el [Controls.BusyIndicator](docs:"
+"qtquickcontrols;QtQuick.Controls.BusyIndicator). Aquest component "
+"proporciona una roda giratòria senzilla que mostra als usuaris que està "
+"succeint alguna cosa."
 
 # skip-rule: kct-progressbar
 #: content/docs/use/kirigami/components-progressbars.md:62
@@ -3668,17 +3567,14 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-progressbars.md:64
-#, fuzzy
-#| msgid ""
-#| "If you want the indicator to stop running, you can do so by setting the "
-#| "`running` property to false."
 msgid ""
 "If you want the indicator to stop running, you can do so by setting the "
 "[running](https://doc.qt.io/qt-6/qml-qtquick-controls2-busyindicator."
 "html#running-prop) property to false."
 msgstr ""
 "Si voleu que l'indicador deixi d'executar-se, podreu fer-ho establint la "
-"propietat `running` a `false`."
+"propietat [running](https://doc.qt.io/qt-6/qml-qtquick-controls2-"
+"busyindicator.html#running-prop) a `false`."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:0
 msgid "Scrollable Pages and List Views"
@@ -3692,29 +3588,21 @@ msgstr ""
 "Les pàgines desplaçables són útils quan es combinen amb components verticals "
 "o dinàmics com les vistes de llista."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:10
-#, fuzzy
-#| msgid "`Kirigami.ScrollablePage`"
 msgid "Kirigami.ScrollablePage"
-msgstr "`Kirigami.ScrollablePage`"
+msgstr "Kirigami.ScrollablePage"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:12
-#, fuzzy
-#| msgid ""
-#| "A [`Kirigami.ScrollablePage`](docs:kirigami2;ScrollablePage) is a page "
-#| "that holds scrollable content, such as `ListView`s. Scrolling and "
-#| "scrolling indicators are automatically managed."
 msgid ""
 "A [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) is a page that "
 "holds scrollable content, such as a [ListView](docs:qtquick;QtQuick."
 "ListView). Scrolling, as well as scrolling indicators, are automatically "
 "managed."
 msgstr ""
-"Una [`Kirigami.ScrollablePage`](docs:kirigami2;ScrollablePage) és una pàgina "
-"que conté contingut desplaçable, com ara les `ListView`. El desplaçament i "
-"els indicadors de desplaçament es gestionen automàticament."
+"Una [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) és una pàgina "
+"que conté contingut desplaçable, com ara una vista de llista [ListView](docs:"
+"qtquick;QtQuick.ListView). El desplaçament i els indicadors de desplaçament "
+"es gestionen automàticament."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:18
 msgid "The rectangle will automatically be scrollable"
@@ -3729,45 +3617,33 @@ msgstr ""
 
 # skip-rule: t-acc_obe,kct-scrollview
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:30
-#, fuzzy
-#| msgid ""
-#| "Do not put a `ScrollView` inside of a `Kirigami.ScrollablePage`; children "
-#| "of a `Kirigami.ScrollablePage` are already inside a `ScrollView`."
 msgid ""
 "Do not put a [ScrollView](docs:qtquickcontrols;QtQuick.Controls.ScrollView) "
 "inside of a [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage); "
 "children of a `Kirigami.ScrollablePage` are already inside a `ScrollView`."
 msgstr ""
-"No poseu una `ScrollView` dins d'una `Kirigami.ScrollablePage`. Els fills "
-"d'una `Kirigami.ScrollablePage` ja estan dins d'una `ScrollView`."
+"No poseu una [ScrollView](docs:qtquickcontrols;QtQuick.Controls.ScrollView) "
+"dins d'una [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage). Els "
+"fills d'una `Kirigami.ScrollablePage` ja estan dins d'una `ScrollView`."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:35
 msgid "ListView in a ScrollablePage"
 msgstr "Vista de llista en una pàgina desplaçable"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:37
-#, fuzzy
-#| msgid ""
-#| "When a `Kirigami.ScrollablePage`'s direct children extend vertically "
-#| "beyond the size of the page itself, a scrollbar appears at the right edge "
-#| "of the page and the page will be scrollable."
 msgid ""
 "When the direct children of a [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage) extend vertically beyond the size of the page itself, a "
 "scrollbar appears at the right edge of the page and the page will be "
 "scrollable."
 msgstr ""
-"Quan els elements fills directes de la `Kirigami.ScrollablePage` s'estenen "
-"verticalment més enllà de la mida de la pàgina en si, apareixerà una barra "
-"de desplaçament a la vora dreta de la pàgina i la pàgina es podrà desplaçar."
+"Quan els fills directes d'una [Kirigami.ScrollablePage](docs:kirigami2;"
+"ScrollablePage) s'estenen verticalment més enllà de la mida de la pàgina en "
+"si, apareixerà una barra de desplaçament a la vora dreta de la pàgina i la "
+"pàgina es podrà desplaçar."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:41
-#, fuzzy
-#| msgid ""
-#| "Two scrollable pages, both containing a ListView with custom contents "
-#| "(Screenshot of NeoChat)"
 msgid ""
 "Two scrollable pages, both containing a ListView with custom contents "
 "(screenshot of NeoChat)"
@@ -3775,71 +3651,49 @@ msgstr ""
 "Dues pàgines desplaçables, ambdues amb una ListView amb contingut "
 "personalitzat (captura de pantalla del NeoChat)."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:43
-#, fuzzy
-#| msgid ""
-#| "Often you have more than one child in your `Kirigami.ScrollablePage`, and "
-#| "positioning items can be tricky - especially in combination with a "
-#| "`ListView`."
 msgid ""
 "Often you have more than one child in your [Kirigami.ScrollablePage](docs:"
 "kirigami2;ScrollablePage), and positioning items can be tricky—especially in "
 "combination with a [ListView](docs:qtquick;QtQuick.ListView)."
 msgstr ""
-"Sovint, tindreu més d'un fill a la vostra `Kirigami.ScrollablePage`, i "
-"col·locar-hi els elements pot ser complicat -especialment en combinació amb "
-"una ListView-."
+"Sovint tindreu més d'un fill a la vostra [Kirigami.ScrollablePage](docs:"
+"kirigami2;ScrollablePage), i col·locar-hi els elements pot ser complicat, "
+"especialment en combinació amb una [ListView](docs:qtquick;QtQuick.ListView)."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:46
-#, fuzzy
-#| msgid ""
-#| "For non-visual components, having them inside the `ListView` element "
-#| "won't change the visuals of the page. So we can move them inside the "
-#| "`ListView`. Same for elements anchored to the center of the page, such as "
-#| "placeholder messages for empty `ListView`s."
 msgid ""
 "For non-visual components, having them inside the [ListView](docs:qtquick;"
 "QtQuick.ListView) component won't change the visuals of the page, so we can "
 "move them inside the scope of the list view. Same for elements anchored to "
 "the center of the page, such as placeholder messages for empty list views."
 msgstr ""
-"Per als components no visuals, tenir-los dins de l'element `ListView` no "
-"canviarà les imatges de la pàgina. Llavors podem moure'ls dins de la "
-"`ListView`. El mateix per als elements ancorats al centre de la pàgina, com "
-"els missatges amb algun marcador de posició per a les `ListView` buides."
+"Per als components no visuals, tenir-los dins del component [ListView](docs:"
+"qtquick;QtQuick.ListView) no canviarà la visualització de la pàgina. Llavors "
+"podem moure'ls dins de l'àmbit de la vista de llista. El mateix per als "
+"elements ancorats al centre de la pàgina, com els missatges amb marcador de "
+"posició per a les vistes de llistes buides."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:49
-#, fuzzy
-#| msgid ""
-#| "For other items, it might make sense to move them to the header or footer "
-#| "of the `Kirigami.ScrollablePage`. This is often the case for search bars."
 msgid ""
 "For other items, it might make sense to move them to the header or footer of "
 "the [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage). This is often "
 "the case for search bars."
 msgstr ""
 "Per als altres elements, podria tenir sentit moure'ls a la capçalera o al "
-"peu de pàgina de la `Kirigami.ScrollablePage`. Aquest sol ser el cas de les "
-"barres de cerca."
+"peu de pàgina de la [Kirigami.ScrollablePage](docs:kirigami2;"
+"ScrollablePage). Sovint, aquest és el cas de les barres de cerca."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:52
 msgid "PlaceholderMessage"
 msgstr "PlaceholderMessage"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:54
-#, fuzzy
-#| msgid ""
-#| "It is possible to add a [`Kirigami.PlaceholderMessage`](docs:kirigami2;"
-#| "PlaceholderMessage) with some instructions in case the list view is empty."
 msgid ""
 "It is possible to add a [Kirigami.PlaceholderMessage](docs:kirigami2;"
 "PlaceholderMessage) with some instructions in case the list view is empty."
 msgstr ""
-"És possible afegir un [`Kirigami.PlaceholderMessage`](docs:kirigami2;"
+"És possible afegir un [Kirigami.PlaceholderMessage](docs:kirigami2;"
 "PlaceholderMessage) amb algunes instruccions en cas que la vista de llista "
 "estigui buida."
 
@@ -3847,13 +3701,7 @@ msgstr ""
 msgid "Search in the ListView"
 msgstr "Cercar a la vista de llista"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:78
-#, fuzzy
-#| msgid ""
-#| "A search field is often added to a `Kirigami.ScrollablePage` to filter "
-#| "the `ListView`. This can be done by changing the default `titleDelegate` "
-#| "to use a [`Kirigami.SearchField`](docs:kirigami2;SearchField) instead."
 msgid ""
 "A search field is often added to a [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage) to filter the [ListView](docs:qtquick;QtQuick.ListView). "
@@ -3861,41 +3709,31 @@ msgid ""
 "Page::titleDelegate) to use a [Kirigami.SearchField](docs:kirigami2;"
 "SearchField) instead."
 msgstr ""
-"Sovint s'afegeix un camp de cerca a la `Kirigami.ScrollablePage` per a "
-"filtrar la `ListView`. Això es pot fer canviant el `titleDelegate` "
-"predeterminat per a utilitzar en el seu lloc un [`Kirigami.SearchField`]"
-"(docs:kirigami2;SearchField)."
+"Sovint s'afegeix un camp de cerca a una [Kirigami.ScrollablePage](docs:"
+"kirigami2;ScrollablePage) per a filtrar la [ListView](docs:qtquick;QtQuick."
+"ListView). Això es pot fer canviant el [titleDelegate](docs:kirigami2;Page::"
+"titleDelegate) predeterminat per a utilitzar en el seu lloc un [Kirigami."
+"SearchField](docs:kirigami2;SearchField)."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:100
 msgid "Hint"
 msgstr "Consell"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:102
-#, fuzzy
-#| msgid ""
-#| "You can use [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) "
-#| "from [KItemModel](https://api.kde.org/frameworks/kitemmodels/html/) to "
-#| "easily add filtering capability directly in QML without any need for C++ "
-#| "code."
 msgid ""
 "You can use [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) from "
 "[KItemModel](docs:kitemmodels) to easily add filtering capability directly "
 "in QML without any need for C++ code."
 msgstr ""
 "Podeu utilitzar un [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) "
-"des del [KItemModel](https://api.kde.org/frameworks/kitemmodels/html/) per a "
-"afegir amb facilitat la capacitat de filtratge directament en el QML sense "
-"necessitat de codi en C++."
+"des del [KItemModel](docs:kitemmodels) per a afegir amb facilitat la "
+"capacitat de filtratge directament en el QML sense necessitat de codi en C++."
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:108
 msgid "Pull to refresh"
 msgstr "Estirar per a actualitzar"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:110
-#, fuzzy
-#| msgid ""
-#| "Another function provided by this component is a \"pull to refresh\" "
-#| "action. To use this, activate it as follows:"
 msgid ""
 "Another function provided by this component is a \"pull-to-refresh\" action. "
 "To use this, activate it as follows:"
@@ -3904,11 +3742,6 @@ msgstr ""
 "per a actualitzar». Per a utilitzar això, activeu-lo de la manera següent:"
 
 #: content/docs/use/kirigami/components-scrollablepages_listviews.md:123
-#, fuzzy
-#| msgid ""
-#| "NOTE: MyModel doesn't come from the components, it's purely an example on "
-#| "how it can be used together some application logic that can update the "
-#| "list model and signals when it's done."
 msgid ""
 "NOTE: MyModel doesn't come from the components, it's purely an example on "
 "how it can be used together with some application logic that can update the "
@@ -3961,10 +3794,8 @@ msgstr ""
 "coherent, ràpida i accessible."
 
 #: content/docs/use/kirigami/introduction-actions.md:24
-#, fuzzy
-#| msgid "Page actions on a mobile device"
 msgid "Page actions on mobile"
-msgstr "Accions de la pàgina en un dispositiu mòbil"
+msgstr "Accions de la pàgina en un mòbil"
 
 #: content/docs/use/kirigami/introduction-actions.md:29
 msgid ""
@@ -4017,13 +3848,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-actions.md:59
-#, fuzzy
-#| msgid ""
-#| "The `id` and `text` properties should be familiar from previous "
-#| "tutorials. However, the new `icon` property should be interesting: it is "
-#| "an object with several properties letting you display certain icons for "
-#| "your actions. Fortunately, to use KDE icons all we need to do is provide "
-#| "the name property for the icon property, `icon.name`."
 msgid ""
 "The `id` and `text` properties should be familiar from previous tutorials. "
 "However, the inherited [Action.icon](https://doc.qt.io/qt-5/qml-qtquick-"
@@ -4033,11 +3857,12 @@ msgid ""
 "property for the icon property, `icon.name`."
 msgstr ""
 "Les propietats `id` i `text` haurien de ser familiars de guies "
-"d'aprenentatge anteriors. No obstant això, la propietat nova `icon` hauria "
-"de ser interessant: és un objecte amb diverses propietats que permet mostrar "
-"certes icones per a les vostres accions. Afortunadament, per a utilitzar les "
-"icones del KDE, tot el que hem de fer és proporcionar el nom de la propietat "
-"per a la propietat d'icona, `icon.name`."
+"d'aprenentatge anteriors. No obstant això, la propietat nova heretada "
+"[Action.icon](https://doc.qt.io/qt-5/qml-qtquick-controls2-action.html#icon-"
+"prop) hauria de ser interessant: és un objecte amb diverses propietats que "
+"permet mostrar certes icones per a les vostres accions. Afortunadament, per "
+"a utilitzar les icones del KDE, tot el que hem de fer és proporcionar el nom "
+"de la propietat per a la propietat d'icona, `icon.name`."
 
 #: content/docs/use/kirigami/introduction-actions.md:63
 msgid ""
@@ -4055,13 +3880,6 @@ msgstr ""
 "vostra aplicació."
 
 #: content/docs/use/kirigami/introduction-actions.md:65
-#, fuzzy
-#| msgid ""
-#| "Many of KDE's icons follow the FreeDesktop Icon Naming specification. "
-#| "Therefore, you might also find it useful to consult The FreeDesktop "
-#| "project's website, [which lists all of the cross-desktop compatible icon "
-#| "names on their website](https://specifications.freedesktop.org/icon-"
-#| "naming-spec/icon-naming-spec-latest.html)."
 msgid ""
 "Many of KDE's icons follow the FreeDesktop Icon Naming specification. "
 "Therefore, you might also find it useful to consult The FreeDesktop "
@@ -4077,14 +3895,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-actions.md:69
-#, fuzzy
-#| msgid ""
-#| "The `onTriggered` property is the most important. This is what our action "
-#| "will do when it is used. You'll notice that in our example we're using "
-#| "the method `kountdownModel.append` of the `kountdownModel` we created in "
-#| "our previous tutorial. This method lets us append a new element to our "
-#| "list model. We are providing it with an object that has the relevant "
-#| "properties for our countdowns (name, description, and a placeholder date)."
 msgid ""
 "The [onTriggered](docs:qtquickcontrols;QtQuick.Controls.Action::triggered) "
 "signal handler is the most important. This is what our action will do when "
@@ -4096,38 +3906,29 @@ msgid ""
 "relevant properties for our countdowns (`name`, `description`, and a "
 "placeholder `date`)."
 msgstr ""
-"La propietat `onTriggered` és la més important. És el que farà la nostra "
-"acció quan s'utilitzi. Notareu que en el nostre exemple fem servir el mètode "
-"`kountdownModel.append` del `kountdownModel` que hem creat en la nostra guia "
+"El gestor de senyals [onTriggered](docs:qtquickcontrols;QtQuick.Controls."
+"Action::triggered) és el més important. És el que farà la nostra acció quan "
+"s'utilitzi. Notareu que en el nostre exemple fem servir el mètode "
+"[kountdownModel.append](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel."
+"html#append-method) del `kountdownModel` que hem creat en la nostra guia "
 "d'aprenentatge anterior. Aquest mètode ens permet afegir un element nou al "
-"nostre model de llista. Proporcionem un objecte que té les propietats "
-"rellevants per als nostres comptes enrere (nom, descripció i una data per al "
-"marcador de posició)."
+"nostre model de llista. Proporcionem un objecte (indicat per les claus `{}`) "
+"que té les propietats rellevants per als nostres comptes enrere (`name`, "
+"`description` i una `date` de marcador de posició)."
 
 #: content/docs/use/kirigami/introduction-actions.md:75
-#, fuzzy
-#| msgid ""
-#| "Each time we click our now 'Add kountdown' button on the top right, our "
-#| "custom countdown is added."
 msgid ""
 "Each time we click our \\\"Add kountdown\\\" button on the top right, our "
 "custom countdown is added"
 msgstr ""
-"Cada vegada que fem clic sobre el nostre botó «*Add kountdown*» que hi ha a "
-"la part superior dreta, s'afegirà el nostre compte enrere personalitzat."
+"Cada vegada que fem clic sobre el nostre botó «Add kountdown» que hi ha a la "
+"part superior dreta, s'afegirà el nostre compte enrere personalitzat."
 
 #: content/docs/use/kirigami/introduction-actions.md:77
 msgid "Mobile version"
-msgstr ""
+msgstr "Versió mòbil"
 
 #: content/docs/use/kirigami/introduction-actions.md:89
-#, fuzzy
-#| msgid ""
-#| "Did you notice those three lines next to the page title on the previous "
-#| "screenshot? That's a global drawer. Global drawers are useful for global "
-#| "navigation and actions: in other words, those things you might need to "
-#| "use throughout your application. We are going to create a simple global "
-#| "drawer that includes a quit button."
 msgid ""
 "Did you notice those three lines next to the page title on the previous "
 "screenshot? That's a hamburger menu that opens a [Kirigami.GlobalDrawer]"
@@ -4136,21 +3937,15 @@ msgid ""
 "throughout your application. We are going to create a simple global drawer "
 "that includes a \"quit\" button."
 msgstr ""
-"Cal tenir en compte aquestes tres línies al costat del títol de la pàgina en "
-"la captura de pantalla anterior? És un calaix global. Els calaixos globals "
-"són útils per a la navegació i les accions globals: en altres paraules, "
-"aquelles coses que podríeu necessitar emprar a través de tota la vostra "
-"aplicació. Crearem un calaix global senzill que inclou un botó per a sortir."
+"Heu vist aquelles tres línies al costat del títol de la pàgina en la captura "
+"de pantalla anterior? És un menú d'hamburguesa que obre un [Kirigami."
+"GlobalDrawer](docs:kirigami2;GlobalDrawer). Els calaixos globals són útils "
+"per a la navegació i les accions globals: en altres paraules, aquelles coses "
+"que podríeu necessitar emprar a través de tota la vostra aplicació. Crearem "
+"un calaix global senzill que inclou un botó per a sortir."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-actions.md:111
-#, fuzzy
-#| msgid ""
-#| "Here, we put our global drawer inside our application window. The main "
-#| "property we need to pay attention to is `actions`, which takes the form "
-#| "of an array of `Kirigami.Action` components. This action has an "
-#| "appropriate icon and triggers the `Qt.quit()` function, closing the "
-#| "application."
 msgid ""
 "Here, we put our global drawer inside our application window. The main "
 "property we need to pay attention to is [GlobalDrawer.actions](docs:"
@@ -4160,19 +3955,14 @@ msgid ""
 "function when triggered, closing the application."
 msgstr ""
 "Aquí, col·locarem el nostre calaix global dins de la finestra de la nostra "
-"aplicació. La propietat principal a la qual hem de parar atenció són les "
-"accions, les quals prenen la forma d'una matriu de components `Kirigami."
-"Action`. Aquesta acció té una icona adequada i activa la funció `Qt.quit()`, "
-"tancant l'aplicació."
+"aplicació. La propietat principal a la qual hem de parar atenció és "
+"[GlobalDrawer.actions](docs:kirigami2;GlobalDrawer::actions), que pren la "
+"forma d'una matriu de components [Kirigami.Action](docs:kirigami2;Action). "
+"Aquesta acció té una icona adequada i executa la funció [Qt.quit()](docs:"
+"qtqml;QtQml.Qt::quit) quan s'activa, tancant l'aplicació."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-actions.md:114
-#, fuzzy
-#| msgid ""
-#| "Since we are keeping our global drawer simple for now, we are setting the "
-#| "`isMenu` property to true. This displays our global drawer as a normal "
-#| "application menu, taking up less space than the default global drawer "
-#| "pane."
 msgid ""
 "Since we are keeping our global drawer simple for now, we are setting the "
 "[GlobalDrawer.isMenu](docs:kirigami2;GlobalDrawer::isMenu) property to "
@@ -4180,9 +3970,10 @@ msgid ""
 "up less space than the default global drawer pane."
 msgstr ""
 "Atès que, per ara, mantenim senzill el nostre calaix global, establim la "
-"propietat `isMenu` a cert. Això mostrarà el nostre calaix global com un menú "
-"normal d'aplicació, ocupant menys espai que la subfinestra predeterminada "
-"del calaix global."
+"propietat [GlobalDrawer.isMenu](docs:kirigami2;GlobalDrawer::isMenu) a "
+"`true`. Això mostrarà el nostre calaix global com un menú normal "
+"d'aplicació, ocupant menys espai que la subfinestra predeterminada del "
+"calaix global."
 
 #: content/docs/use/kirigami/introduction-actions.md:122
 #, fuzzy

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-26 17:31+0100\n"
+"PO-Revision-Date: 2023-02-27 14:19+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -191,6 +191,14 @@ msgid ""
 "kcoreaddons;KAboutData::applicationData) object. We exposed precisely that "
 "in our `main.cpp` and called it `About`, so we can pass it here."
 msgstr ""
+"Ten eerste gebruiken we het geïmporteerde dat we definiëren in het bestand "
+"`main.cpp`, namelijk `org.kde.example`. Daarna voegen we een [Kirigami."
+"Action](docs:kirigami2;Action) toe aan onze [global drawer](docs:kirigami2;"
+"GlobalDrawer) die ons naar de pagina About (Info over) zendt en een "
+"component met een [Kirigami.AboutPage](docs:kirigami2;AboutPage) erin "
+"aanmaakt, die een object [KAboutData::applicationData()](docs:kcoreaddons;"
+"KAboutData::applicationData) verwacht. We stellen precies dat zichtbaar in "
+"onze `main.cpp` en noemen het `About`, zodat we het hier kunnen doorgeven."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:33
 msgid "CMakeLists"
@@ -203,6 +211,10 @@ msgid ""
 "command/find_package.html) call. It is needed for [KAboutData](docs:"
 "kcoreaddons;KAboutData)."
 msgstr ""
+"In het bestand `CMakeLists.txt` in onze hoofdmap, gaan we na dat "
+"`CoreAddons` in uw aanroep [find_package()](https://cmake.org/cmake/help/"
+"latest/command/find_package.html) aanwezig is. Het is nodig voor [KAboutData]"
+"(docs:kcoreaddons;KAboutData)."
 
 #: content/docs/use/kirigami/advanced-add_about_page.md:41
 msgid ""
@@ -732,6 +744,13 @@ msgid ""
 "modules](https://api.kde.org/ecm/) becomes something like `find_package(KF5 "
 "COMPONENTS Kirigami2)`."
 msgstr ""
+"Als u zoekt om componenten in de lijst in de [KDE API documentation](https://"
+"api.kde.org/) aan uw toepassing toe te voegen, dan zou u de rechter zijbalk "
+"kunnen controleren op hoe de component met CMake toe te voegen. "
+"Bijvoorbeeld, voor [Kirigami2](docs:kirigami2;) zult u iets vinden zoals "
+"`find_package(KF5Kirigami2)`, dat met de toevoeging van [extra-cmake-modules]"
+"(https://api.kde.org/ecm/) iets wordt als `find_package(KF5 COMPONENTS "
+"Kirigami2)`."
 
 #: content/docs/use/kirigami/advanced-understanding_cmakelists.md:41
 msgid ""
@@ -1106,6 +1125,9 @@ msgid ""
 "information or actions together. These actions can be added to the `actions` "
 "group, similarly to previous components."
 msgstr ""
+"Een [Kirigami.Card](docs:kirigami2;Card) wordt gebruikt om een verzameling "
+"informatie of acties tezamen te tonen. Deze acties kunnen toegevoegd worden "
+"aan de groep `actions`, evenals eerdere componenten."
 
 #: content/docs/use/kirigami/components-actions.md:280
 #: content/docs/use/kirigami/components-card.md:67
@@ -1118,6 +1140,9 @@ msgid ""
 "title, white background behind its text, and two actions with icons and a "
 "hamburger menu at the bottom](card.png)"
 msgstr ""
+"![Schermafdruk van een volwaardige kaart met een bannerachergrond achter "
+"zijn titel, witte achtergrond achter zijn tekst en twee acties met "
+"pictogrammen en een hamburgermenu onderaan](card.png)"
 
 #: content/docs/use/kirigami/components-actions.md:305
 msgid ""
@@ -1168,6 +1193,10 @@ msgid ""
 "beginner tutorial or in [the dedicated documentation page for them](../"
 "components-actions/)."
 msgstr ""
+"Deze pagina neemt aan dat u bekend bent met [Kirigami.Action](docs:kirigami2;"
+"Action) objecten. Zo niet, u kunt er alles over leren in onze inleiding voor "
+"beginners of in [de toegewijde documentatiepagina voor hen](../components-"
+"actions/)."
 
 #: content/docs/use/kirigami/components-actiontoolbar.md:20
 msgid "Creating our first ActionToolBar"
@@ -1335,6 +1364,10 @@ msgid ""
 "title, white background behind its text, and two actions with icons and a "
 "hamburger menu at the bottom](/docs/use/kirigami/components-card/card1.png)"
 msgstr ""
+"![Schermafdruk van een volwaardige kaart met een bannerachergrond achter "
+"zijn titel, witte achtergrond achter zijn tekst en twee acties met "
+"pictogrammen en een hamburgermenu onderaan](/docs/use/kirigami/components-"
+"card/card1.png)"
 
 #: content/docs/use/kirigami/components-card.md:93
 msgid "CardsLayout"
@@ -1361,6 +1394,8 @@ msgid ""
 "[`CardsListView`](docs:kirigami2;CardsListView) or [`CardsGridView`](docs:"
 "kirigami2;CardsGridView) are better suited for larger models."
 msgstr ""
+"[`CardsListView`](docs:kirigami2;CardsListView) of [`CardsGridView`](docs:"
+"kirigami2;CardsGridView) zijn meer geschikt voor grotere modellen."
 
 #: content/docs/use/kirigami/components-card.md:103
 msgid "Important"
@@ -1372,6 +1407,9 @@ msgid ""
 "within a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
 "columnlayout.html)."
 msgstr ""
+"Een [CardsLayout](docs:kirigami2;CardsLayout) zou zich altijd binnen een "
+"[ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html) "
+"moeten bevinden.)."
 
 #: content/docs/use/kirigami/components-card.md:109
 msgid ""
@@ -1395,6 +1433,10 @@ msgid ""
 "orientation on top of a card in landscape orientation, all with different "
 "components being used](/docs/use/kirigami/components-card/cardslayout.png)"
 msgstr ""
+"![Schermafdruk van een CardsLayout die twee kaarten naast elkaar in "
+"oriëntatie portret bovenaan een kaart in oriëntatie landschap toont, allen "
+"met verschillende in gebruik zijnde componenten](/docs/use/kirigami/"
+"components-card/cardslayout.png)"
 
 #: content/docs/use/kirigami/components-card.md:151
 msgid "CardsListView"
@@ -1569,6 +1611,9 @@ msgid ""
 "clicked shows a passive notification \"Boop\" at the bottom of the window](/"
 "docs/use/kirigami/components-controls/controls-button.png)"
 msgstr ""
+"![Een venster met een knop \"Piep\" linksboven, die wanneer er op wordt "
+"geklikt een passieve melding \"Boop\" onderaan het venster](/docs/use/"
+"kirigami/components-controls/controls-button.png)"
 
 #: content/docs/use/kirigami/components-controls.md:47
 msgid "Toggleable buttons"
@@ -1834,6 +1879,10 @@ msgid ""
 "direction. In both modes, sliders in vertical orientation go from the bottom "
 "up."
 msgstr ""
+"In modus Links-naar-rechts, gaan schuifregelaar van links naar rechts om toe "
+"te nemen indien in horizontale oriëntatie, terwijl in modus Rechts-naar-"
+"links ze in de omgekeerde richting gaan. In beide modi gaan schuifregelaars "
+"in verticale oriëntatie van onder omhoog."
 
 #: content/docs/use/kirigami/components-controls.md:230
 msgid ""
@@ -2024,6 +2073,9 @@ msgid ""
 "left edge to the middle of the screen in Left to Right mode or from the "
 "right edge in Right to Left mode."
 msgstr ""
+"Het kan geactiveerd worden door op het hamburgermenu te tikken of door vegen "
+"van de linker rand naar het midden van het scherm in modus Links-naar-rechts "
+"of vanaf de rechter rand in modus Rechts-naar-links."
 
 #: content/docs/use/kirigami/components-drawers.md:20
 msgid ""
@@ -2106,7 +2158,7 @@ msgstr "In deze menumodus, zijn opschriften en banners niet zichtbaar."
 
 #: content/docs/use/kirigami/components-drawers.md:149
 msgid "Global drawer in menu mode, without a header or banner"
-msgstr ""
+msgstr "Globale schuiflade in modus menu, zonder een kop of banner"
 
 #: content/docs/use/kirigami/components-drawers.md:155
 msgid "Banners"
@@ -2157,7 +2209,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-drawers.md:195
 msgid "Global drawer with title and icon in banner"
-msgstr ""
+msgstr "Globale schuiflade met titel en pictogram in banner"
 
 #: content/docs/use/kirigami/components-drawers.md:203
 msgid ""
@@ -2627,38 +2679,30 @@ msgstr ""
 "een leuke animatie."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:16
-#, fuzzy
-#| msgid "`text`: here is where you set the text of your inline message."
 msgid ""
 "[text](docs:kirigami2;templates::InlineMessage::text): here is where you set "
 "the text of your inline message."
-msgstr "`text`: hier is waar u de tekst van uw inline bericht zet."
+msgstr ""
+"[text](docs:kirigami2;templates::InlineMessage::text): hier is waar u de "
+"tekst van uw inline bericht zet."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:49
-#, fuzzy
-#| msgid ""
-#| "![A simple inline message and button](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-simple.png)"
 msgid ""
 "![A window showing a button which when clicked makes an inline message with "
 "light blue background pop up with text above it, near the top of the "
 "application](/docs/use/kirigami/components-inlinemessages/inlinemessages-"
 "simple.png)"
 msgstr ""
-"![Een eenvoudig inline bericht en knop](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-simple.png)"
+"![Een venster die een knop toont die bij klikken een inline bericht laat "
+"verschijnen met lichtblauwe achtergrond met tekst erboven, nabij de "
+"bovenkant van de toepassing](/docs/use/kirigami/components-inlinemessages/"
+"inlinemessages-simple.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:55
 msgid "Different types"
 msgstr "Verschillende typen"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:57
-#, fuzzy
-#| msgid ""
-#| "Standard inline messages are like the ones above: they have a blue "
-#| "background and a default icon. We can change that with the `type` "
-#| "property, which lets us set our inline message to a different type. There "
-#| "are four types we can choose from:"
 msgid ""
 "Standard inline messages are like the ones above: they have a blue "
 "background and a default icon. We can change that with the [type](docs:"
@@ -2667,8 +2711,9 @@ msgid ""
 msgstr ""
 "Standaard inline berichten zijn als die hierboven: ze hebben een blauwe "
 "achtergrond en een standaard pictogram. We kunnen dat wijzigen met de "
-"eigenschap `type`, die ons ons inline bericht op een ander type laat zetten. "
-"Er zijn vier typen waar we uit kunnen kiezen:"
+"eigenschap [type](docs:kirigami2;templates::InlineMessage::type), die ons "
+"ons inline bericht op een ander type laat zetten. Er zijn vier typen waar we "
+"uit kunnen kiezen:"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:59
 msgid ""
@@ -2709,17 +2754,14 @@ msgstr ""
 "dat er iets verkeerd ging."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:105
-#, fuzzy
-#| msgid ""
-#| "![Different inline message types](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-types.png)"
 msgid ""
 "![A window showcasing all four inline message types in blue, green, orange "
 "and red](/docs/use/kirigami/components-inlinemessages/inlinemessages-types."
 "png)"
 msgstr ""
-"![Verschillende inline berichttypen](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-types.png)"
+"![Een venster die alle vier inline typen melding in blauw, groen, oranje en "
+"rood laat zien](/docs/use/kirigami/components-inlinemessages/inlinemessages-"
+"types.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:111
 msgid "Customising text and icons"
@@ -2743,25 +2785,14 @@ msgstr ""
 "escape moet gebruiken!"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:133
-#, fuzzy
-#| msgid ""
-#| "![An inline message with rich text](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-richtext.png)"
 msgid ""
 "![An inline message with rich text and a hyperlink](/docs/use/kirigami/"
 "components-inlinemessages/inlinemessages-richtext.png)"
 msgstr ""
-"![Een inline melding met opgemaakte tekst](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-richtext.png)"
+"![Een inline melding met opgemaakte tekst en een hyperlink](/docs/use/"
+"kirigami/components-inlinemessages/inlinemessages-richtext.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:139
-#, fuzzy
-#| msgid ""
-#| "You can also customise the icon that appears on the top-left of your "
-#| "message by providing a system icon name for the `icon.source` property. "
-#| "These icon names should correspond to icons installed on your system; you "
-#| "can use an application such as Cuttlefish to browse and search the icons "
-#| "available on your system, and what their names are."
 msgid ""
 "You can also customise the icon that appears on the top left of your message "
 "by providing a system icon name for the [icon.source](docs:kirigami2;"
@@ -2772,35 +2803,26 @@ msgid ""
 "their names are."
 msgstr ""
 "U kunt ook het pictogram dat linksboven van uw melding verschijnt aanpassen "
-"door een systeempictogramnaam te leveren voor de eigenschap `icon.source`. "
-"Deze pictogramnamen zouden overeen moeten komen met op uw systeem "
-"geïnstalleerde pictogrammen; u kunt een toepassing zoals Cuttlefish "
-"gebruiken om te bladeren en te zoeken naar de beschikbare pictogrammen op uw "
-"systeem en wat hun namen zijn."
+"door een systeempictogramnaam te leveren voor de eigenschap [icon.source]"
+"(docs:kirigami2;templates::InlineMessage::icon). Deze pictogramnamen zouden "
+"overeen moeten komen met op uw systeem geïnstalleerde pictogrammen; u kunt "
+"een toepassing zoals Cuttlefish, geleverd door [plasma-sdk](https://invent."
+"kde.org/plasma/plasma-sdk), gebruiken om te bladeren en te zoeken naar de "
+"beschikbare pictogrammen op uw systeem en zien wat hun namen zijn."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:158
-#, fuzzy
-#| msgid ""
-#| "![An inline message with a specified icon](/docs/use/kirigami/components-"
-#| "inlinemessages/inlinemessages-icon.png)"
 msgid ""
 "![An inline message with a custom icon](/docs/use/kirigami/components-"
 "inlinemessages/inlinemessages-icon.png)"
 msgstr ""
-"![Een inline melding met een gespecificeerd pictogram](/docs/use/kirigami/"
-"components-inlinemessages/inlinemessages-icon.png)"
+"![Een inline melding met een eigen pictogram](/docs/use/kirigami/components-"
+"inlinemessages/inlinemessages-icon.png)"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:164
 msgid "Using actions in inline messages"
 msgstr "Acties in inline meldingen gebruiken"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:166
-#, fuzzy
-#| msgid ""
-#| "If your messages need to be interactive, you can attach Kirigami actions "
-#| "to your inline messages. Like with pages, you can do this by setting the "
-#| "inline message's `actions` property to either a `Kirigami.Action` or an "
-#| "array containing `Kirigami.Action` components."
 msgid ""
 "If your messages need to be interactive, you can attach Kirigami actions to "
 "your inline messages. Like with pages, you can do this by setting the "
@@ -2810,8 +2832,10 @@ msgid ""
 msgstr ""
 "Als uw meldingen interactief moeten zijn, kunt u Kirigami acties toevoegen "
 "aan uw inline meldingen. Net als met pagina's kunt u dit doen door het "
-"zetten van de eigenschap `actions` van de inline meldingen op ofwel een "
-"`Kirigami.Action` of een array dat `Kirigami.Action` componenten bevat."
+"zetten van de eigenschap [InlineMessage.actions](docs:kirigami2;templates::"
+"InlineMessage::actions) op ofwel een [Kirigami.Action](docs:kirigami2;"
+"Action) of een array dat [Kirigami.Action](docs:kirigami2;Action) "
+"componenten bevat."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:207
 msgid ""
@@ -2834,29 +2858,22 @@ msgstr ""
 "gemakkelijk af te wijzen."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:217
-#, fuzzy
-#| msgid ""
-#| "By default, this close button is hidden, but this can be overridden by "
-#| "setting the `showCloseButton` property to `true`."
 msgid ""
 "By default, this close button is hidden, but this can be overridden by "
 "setting the [showCloseButton](docs:kirigami2;templates::InlineMessage::"
 "showCloseButton) property to `true`."
 msgstr ""
 "Standaard is deze sluitknop verborgen, maar dit kan overschreven worden door "
-"de eigenschap `showCloseButton` op `true` te zetten."
+"de eigenschap [showCloseButton](docs:kirigami2;templates::InlineMessage::"
+"showCloseButton) op `true` te zetten."
 
 #: content/docs/use/kirigami/components-inlinemessages.md:236
-#, fuzzy
-#| msgid ""
-#| "![An inline message with close button showing](/docs/use/kirigami/"
-#| "components-inlinemessages/inlinemessages-closebutton.png)"
 msgid ""
 "![An inline message with close button to its right side](/docs/use/kirigami/"
 "components-inlinemessages/inlinemessages-closebutton.png)"
 msgstr ""
-"![Een inline melding met tonen van sluitknop](/docs/use/kirigami/components-"
-"inlinemessages/inlinemessages-closebutton.png)"
+"![Een inline melding met sluitknop aan de rechterkant](/docs/use/kirigami/"
+"components-inlinemessages/inlinemessages-closebutton.png)"
 
 #: content/docs/use/kirigami/components-listview.md:0
 msgid "List views"
@@ -2869,17 +2886,14 @@ msgstr ""
 "tonen.\n"
 
 #: content/docs/use/kirigami/components-listview.md:11
-#, fuzzy
-#| msgid ""
-#| "Listviews can help you display objects from a model in an attractive way. "
-#| "To use a list view, you have to keep track of three things:"
 msgid ""
 "[Listviews](docs:qtquick;QtQuick.ListView) can help you display objects from "
 "a model in an attractive way. To use a list view, you have to keep track of "
 "three things:"
 msgstr ""
-"Lijstweergaven kan u helpen om objecten uit een model op een attractieve "
-"manier te tonen. Om een lijstweergave te gebruiken moet u drie dingen volgen:"
+"[Listviews](docs:qtquick;QtQuick.ListView) kan u helpen om objecten uit een "
+"model op een attractieve manier te tonen. Om een lijstweergave te gebruiken "
+"moet u drie dingen volgen:"
 
 #: content/docs/use/kirigami/components-listview.md:13
 msgid ""
@@ -2924,28 +2938,21 @@ msgstr ""
 "moeten besteden:"
 
 #: content/docs/use/kirigami/components-listview.md:23
-#, fuzzy
-#| msgid ""
-#| "`model`, which accepts the data or the `id` of the object that holds the "
-#| "data"
 msgid ""
 "[model](https://doc.qt.io/qt-6/qml-qtquick-listview.html#model-prop), which "
 "accepts the data or the `id` of the object that holds the data"
 msgstr ""
-"`model`, die de gegevens accepteert of de `id` van het object dat de "
-"gegevens bevat"
+"[model](https://doc.qt.io/qt-6/qml-qtquick-listview.html#model-prop), die de "
+"gegevens accepteert of de `id` van het object dat de gegevens bevat"
 
 #: content/docs/use/kirigami/components-listview.md:24
-#, fuzzy
-#| msgid ""
-#| "`delegate`, which accepts the component we will use to display the data "
-#| "in the model"
 msgid ""
 "[delegate](https://doc.qt.io/qt-6/qml-qtquick-listview.html#delegate-prop), "
 "which accepts the component we will use to display the data in the model"
 msgstr ""
-"`delegate`, die de component accepteert die we willen gebruiken om de "
-"gegevens in het model te tonen"
+"[delegate](https://doc.qt.io/qt-6/qml-qtquick-listview.html#delegate-prop), "
+"die de component accepteert die we willen gebruiken om de gegevens in het "
+"model te tonen"
 
 #: content/docs/use/kirigami/components-listview.md:41
 msgid ""
@@ -2964,11 +2971,6 @@ msgstr ""
 "listview-simple.png)"
 
 #: content/docs/use/kirigami/components-listview.md:63
-#, fuzzy
-#| msgid ""
-#| "In cases where your model data only contain a single piece of data, like "
-#| "in the example above, you can just grab the data in the model by "
-#| "referencing `modelData`."
 msgid ""
 "In cases where your model data only contain a single piece of data, like in "
 "the example above, you can just grab the data in the model by referencing "
@@ -2977,7 +2979,8 @@ msgid ""
 msgstr ""
 "In gevallen waar uw modelgegevens slechts een enkel stukje gegevens "
 "bevatten, zoals in het bovenstaande voorbeeld, kunt u de gegevens in het "
-"model pakken door te wijzen naar `modelData`."
+"model pakken door te wijzen naar [modelData](https://doc.qt.io/qt-6/qtquick-"
+"modelviewsdata-modelview.html#models)."
 
 #: content/docs/use/kirigami/components-listview.md:65
 msgid ""
@@ -2991,14 +2994,6 @@ msgstr ""
 "gedelegeerde te gebruiken."
 
 #: content/docs/use/kirigami/components-listview.md:87
-#, fuzzy
-#| msgid ""
-#| "Kirigami offers a number of components that have been designed "
-#| "specifically for use in list views, such as `Kirigami.BasicListItem`, "
-#| "`Kirigami.CheckableListItem` and `Kirigami.SwipeListItem`, all of which "
-#| "build upon `Kirigami.AbstractListItem`. There are also `Kirigami."
-#| "CheckDelegate`, `Kirigami.RadioDelegate`, and `Kirigami.SwitchDelegate`, "
-#| "which are designed to take advantage of those specific controls."
 msgid ""
 "Kirigami offers a number of components that have been designed specifically "
 "for use in list views, such as [Kirigami.BasicListItem](docs:kirigami2;"
@@ -3012,37 +3007,29 @@ msgid ""
 "controls."
 msgstr ""
 "Kirigami biedt een aantal componenten die specifiek ontworpen zijn voor "
-"gebruik in lijstweergaven, zoals `Kirigami.BasicListItem`, `Kirigami."
-"CheckableListItem` en `Kirigami.SwipeListItem`, die allemaal bouwen op "
-"`Kirigami.AbstractListItem`. Er zijn ook `Kirigami.CheckDelegate`, `Kirigami."
-"RadioDelegate` en `Kirigami.SwitchDelegate`, die ontworpen zijn om te "
-"profiteren van deze specifieke besturingen."
+"gebruik in lijstweergaven, zoals [Kirigami.BasicListItem](docs:kirigami2;"
+"BasicListItem), [Kirigami.CheckableListItem](docs:kirigami2;"
+"CheckableListItem) en [Kirigami.SwipeListItem](docs:kirigami2;"
+"SwipeListItem), die allemaal bouwen op [Kirigami.AbstractListItem](docs:"
+"kirigami2;AbstractListItem). Er zijn ook [Kirigami.CheckDelegate](docs:"
+"kirigami2;CheckDelegate), [Kirigami.RadioDelegate](docs:kirigami2;"
+"RadioDelegate) en [Kirigami.SwitchDelegate](docs:kirigami2;SwitchDelegate), "
+"die ontworpen zijn om te profiteren van deze specifieke besturingen."
 
 #: content/docs/use/kirigami/components-listview.md:89
-#, fuzzy
-#| msgid ""
-#| "However, you are not limited to using these components and can choose "
-#| "whichever ones you wish - though this may mean some tweaking to your "
-#| "layout."
 msgid ""
 "However, you are not limited to using these components and you can choose "
 "whichever ones you wish. This may require some tweaking of your layout."
 msgstr ""
-"U bent echter niet beperkt tot het gebruik van deze componenten en kunt "
-"kiezen uit diegenen die u wenst - hoewel dat enig aanpassen in uw indeling "
-"kan betekenen."
+"U bent echter niet beperkt tot het gebruik van deze componenten en u kunt "
+"kiezen uit diegenen die u wenst. Dit kan enig aanpassen in uw indeling "
+"betekenen."
 
 #: content/docs/use/kirigami/components-listview.md:91
 msgid "Placeholder messages"
 msgstr "Meldingen met plaatshouders"
 
 #: content/docs/use/kirigami/components-listview.md:93
-#, fuzzy
-#| msgid ""
-#| "In some cases, you might want to use a list view that is empty until the "
-#| "user does something. In these situations, using a `Kirigami."
-#| "PlaceholderMessage` can be an attractive way of telling your user that "
-#| "the list is empty and that they can do something about it."
 msgid ""
 "In some cases, you might want to use a list view that is empty until the "
 "user does something. In these situations, using a [Kirigami."
@@ -3052,17 +3039,11 @@ msgid ""
 msgstr ""
 "In sommige gevallen zou u een lijstweergave willen gebruiken die leeg is "
 "totdat de gebruiker iets doet. In deze situaties kan gebruik van een "
-"`Kirigami.PlaceholderMessage` een attractieve manier zijn om uw gebruiker te "
-"vertellen dat de lijst leeg is en dat deze er iets aan kan doen."
+"[Kirigami.PlaceholderMessage](docs:kirigami2;PlaceholderMessage) een "
+"attractieve manier zijn om uw gebruiker te vertellen dat de lijst leeg is en "
+"dat deze er iets aan kan doen."
 
 #: content/docs/use/kirigami/components-listview.md:95
-#, fuzzy
-#| msgid ""
-#| "You will generally want to place a PlaceholderMessage in the center of "
-#| "the ListView and you will want it to not span the entire width of the "
-#| "ListView either. You will obviously also want it to not be visible once "
-#| "the ListView's model becomes populated with data: thankfully, ListViews "
-#| "have a property named `count` that makes doing this quite easy."
 msgid ""
 "You will generally want to place a placeholder message in the center of the "
 "ListView and you will likely not want it to span the entire width of the "
@@ -3071,39 +3052,34 @@ msgid ""
 "named [count](https://doc.qt.io/qt-6/qml-qtquick-listview.html#count-prop) "
 "that makes doing this quite easy."
 msgstr ""
-"In het algemeen zult u een PlaceholderMessage in het centrum van de ListView "
-"willen plaatsen en u wilt ook niet dat het de gehele breedte van de ListView "
-"gebruikt. U zult natuurlijk ook niet willen dat het onzichtbaar is nadat het "
-"model van ListView bevolkt is met gegevens: gelukkig heeft ListViews een "
-"eigenschap genaamd `count` die dit erg gemakkelijk maakt."
+"In het algemeen zult u een plaatshouderbericht in het centrum van de "
+"ListView willen plaatsen en u wilt waarschijnlijk ook niet dat het de gehele "
+"breedte van de ListView gebruikt. U zult natuurlijk ook willen dat het "
+"verborgen is nadat het model van ListView bevolkt is met gegevens. Gelukkig "
+"heeft ListViews een eigenschap genaamd [count](https://doc.qt.io/qt-6/qml-"
+"qtquick-listview.html#count-prop) die dit erg gemakkelijk maakt."
 
 #: content/docs/use/kirigami/components-listview.md:97
-#, fuzzy
-#| msgid ""
-#| "You might also want to add a helpful action to your placeholder message. "
-#| "This can be done by attaching an action to the `Kirigami."
-#| "PlaceHolderMessage`'s `helpfulAction` property."
 msgid ""
 "You might also want to add a helpful action to your placeholder message. "
 "This can be done by attaching an action to the [PlaceholderMessage."
 "helpfulAction](docs:kirigami2;PlaceholderMessage::helpfulAction) property."
 msgstr ""
 "U zou ook een behulpzame actie willen toevoegen aan uw plaatshoudermelding. "
-"Dit kan gedaan worden door een actie aan de eigenschap `helpfulAction` van "
-"`Kirigami.PlaceHolderMessage` vast te maken."
+"Dit kan gedaan worden door een actie aan de eigenschap [PlaceholderMessage."
+"helpfulAction](docs:kirigami2;PlaceholderMessage::helpfulAction) vast te "
+"maken."
 
 #: content/docs/use/kirigami/components-listview.md:133
-#, fuzzy
-#| msgid ""
-#| "![A list view with a placeholder message](/docs/use/kirigami/components-"
-#| "listview/listview-placeholdermessage.png)"
 msgid ""
 "![An empty list view which displays a placeholder message in the middle of "
 "the application together with an action to add new data to the model](/docs/"
 "use/kirigami/components-listview/listview-placeholdermessage.png)"
 msgstr ""
-"![Een lijstweergave met een plaatshoudermelding](/docs/use/kirigami/"
-"components-listview/listview-placeholdermessage.png)"
+"![Een lege lijstweergave die een plaatshoudermelding in het midden van de "
+"toepassing toont samen met een actie om nieuwe gegevens aan het model toe te "
+"voegen](/docs/use/kirigami/components-listview/listview-placeholdermessage."
+"png)"
 
 #: content/docs/use/kirigami/components-overlaysheets.md:0
 msgid "Overlay sheets"
