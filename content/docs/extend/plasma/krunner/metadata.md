@@ -12,21 +12,24 @@ Due to some properties being only relevant for DBus runners, this explanation is
 
 ## Universal Properties
 
-This includes user-visible keys like `Name`, `Icon`, and `Description`.
-`EnabledByDefault` should be set to `true`, otherwise the plugin must be enabled manually.
-`Authors`, `License`, `Email`, and `Website` are displayed in the config module's about dialog for the runner plugin.
-Those keys/values are defined by [KPluginMetaData](docs:kcoreaddons;KPluginMetaData).
+These include user-visible keys like `Name`, `Icon`, and `Description`, which will be shown in several places, like the list of Runners available under System Settings > Search > Plasma Search.
+
+`EnabledByDefault` should be set to `true`, otherwise the plugin must be enabled manually by ticking its checkbox.
+
+`Authors`, `License`, `Email`, and `Website` are displayed in the config module's About dialog for the Runner.
+
+You can find a more extensive list of keys/values in [KPluginMetaData](docs:kcoreaddons;KPluginMetaData).
 
 **Deduplication**: KRunner is able to deduplicate matches based on their ID. However, this behavior is not enabled by default to avoid unwanted side effects for plugins that do not define their IDs explicitly.
+The ID, which in the previous example was defined using setId(), should look like a URL, for example `file:///home/user/foo` or `exec:///bin/konsole`.
+
 To tell KRunner that results from your plugin should be deduplicated, the `X-Plasma-Runner-Unique-Results` property should be set to `true`.
-The ID should look like a URL, for example `file:///home/user/foo` or `exec:///bin/konsole`.
 
 When deduplicating entries, KRunner must decide which of the matches should be displayed to the user and which ones should be removed.
 To give KRunner a hint that your matches are less relevant than matches from other runners, you can set the `X-Plasma-Runner-Weak-Results` property to `true`.
-This is also disabled by default.
-A use case would be if your plugin does a file search and sets the file URL as the match's ID.
+A possible use case for `X-Plasma-Runner-Weak-Results` would be if your plugin does a file search and sets the file URL as the match's ID.
 If the user enters a full file path like `/home/user/foo`, both your plugin and KDE's Locations runner could produce a match for opening the same URL.
-Using the `X-Plasma-Runner-Weak-Results` property, the Locations runner will take preference over yours, because this KDE plugin only provides exact matches.
+By using this property, the Locations Runner will take preference over yours, because this KDE plugin only provides exact matches.
 
 ```json
 {
@@ -52,12 +55,12 @@ Using the `X-Plasma-Runner-Weak-Results` property, the Locations runner will tak
 
 ## DBus Runner Properties
 
-For DBus runners, the metadata is written in a desktop file. At runtime, KRunner parses this and converts it to a JSON representation to simplify the internals.
+For DBus runners, the metadata is written in a `.desktop` file. At runtime, KRunner parses this and converts it to a JSON representation to simplify the internals.
 
 The most important key for DBus runners is `X-Plasma-API`, which is used to internally identify DBus runners and determine their supported API.
 This can have the value `DBus` or `DBus2`. With `DBus2`, the `Config` method of the DBus interface will be called, which allows for runtime configuration.
 In addition to that, `X-Plasma-DBusRunner-Service` must be defined. This tells KRunner what DBus service name it should query.
-In case there are multiple ones, the service can end with a `*` at the end, for example `org.kde.testrunner.*`.
+In case there are multiple service names, the value for `X-Plasma-DBusRunner-Service` can end with a `*` at the end, for example `org.kde.testrunner.*`.
 Also, KRunner needs to know under which path in the service the runner is registered. This is defined using `X-Plasma-DBusRunner-Path`.
 
 **Providing Usage Help**: Since DBus runners can not directly use the [RunnerSyntax](docs:krunner;RunnerSyntax), it is possible to define a list of supported syntaxes in the metadata.
@@ -76,7 +79,7 @@ Another useful property is `X-Plasma-Request-Actions-Once`, which causes KRunner
 This is prevents lots of unneeded DBus calls and object creations, if the actions stay the same during the lifetime of your runner.
 
 
-```desktop
+```ini
 [Desktop Entry]
 Name=My Runner
 Description=Example Description
