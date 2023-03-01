@@ -4,12 +4,6 @@ SPDX-FileCopyrightText: 2023 Alexander Lohnau <alexander.lohnau@gmx.de>
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
-# Abstract
-
-Metadata is important in KRunner. It determines user-visible properties like the name, description, and default values for categories.
-They can also affect the runtime behavior and allow for more features and optimizations.
-Due to some properties being only relevant for DBus runners, this explanation is split into separate sections.
-
 ## Universal Properties
 
 These include user-visible keys like `Name`, `Icon`, and `Description`, which will be shown in several places, like the list of Runners available under System Settings > Search > Plasma Search.
@@ -29,7 +23,7 @@ When deduplicating entries, KRunner must decide which of the matches should be d
 To give KRunner a hint that your matches are less relevant than matches from other runners, you can set the `X-Plasma-Runner-Weak-Results` property to `true`.
 A possible use case for `X-Plasma-Runner-Weak-Results` would be if your plugin does a file search and sets the file URL as the match's ID.
 If the user enters a full file path like `/home/user/foo`, both your plugin and KDE's Locations runner could produce a match for opening the same URL.
-By using this property, the Locations Runner will take preference over yours, because this KDE plugin only provides exact matches.
+By using this property, the Locations runner will take preference over yours. This is desirable, because the Locations runner only provides exact matches.
 
 ```json
 {
@@ -59,16 +53,24 @@ For DBus runners, the metadata is written in a `.desktop` file. At runtime, KRun
 
 The most important key for DBus runners is `X-Plasma-API`, which is used to internally identify DBus runners and determine their supported API.
 This can have the value `DBus` or `DBus2`. With `DBus2`, the `Config` method of the DBus interface will be called, which allows for runtime configuration.
+When only `DBus` is set, all explained features of DBus runners will be supported, except the `Config`-method.
 In addition to that, `X-Plasma-DBusRunner-Service` must be defined. This tells KRunner what DBus service name it should query.
 In case there are multiple service names, the value for `X-Plasma-DBusRunner-Service` can end with a `*` at the end, for example `org.kde.testrunner.*`.
 Also, KRunner needs to know under which path in the service the runner is registered. This is defined using `X-Plasma-DBusRunner-Path`.
 
 **Providing Usage Help**: Since DBus runners can not directly use the [RunnerSyntax](docs:krunner;RunnerSyntax), it is possible to define a list of supported syntaxes in the metadata.
+These syntaxes will be displayed by KDE's [Help Runner](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/runners/helprunner).
 To utilize this, you can define `X-Plasma-Runner-Syntaxes` and `X-Plasma-Runner-Syntax-Descriptions`, both of which are comma separated lists.
 Those lists must be of the same size and each syntax description is mapped to the syntax of the corresponding list index.
 `:q:` serves as a placeholder that will get expanded to "search term" or the translation. The expanded text will be put in angle brackets.
+This way you do not need to duplicate the "\<search term\>" string and also do not need to take care of translating it.
 If you want a more precise description than "search term", you should put the text in angle brackets too.
 For example `myrunner <files to search for>`.
+
+**Syntax overview of the example file below**:
+![Syntax Overview](/krunner/syntaxoverview.png)
+**KRunner input field when the last syntax is selected**:
+![Example query with placeholder inserted in KRunner](/krunner/placeholderselected.png)
 
 **Reduce unneeded querying and DBus activation**: Normally, your runner would get queried for each typed letter, and in case it is DBus activated, it would be activated when the first letter is typed.
 However, many runners have a prefix or pattern that must match.
@@ -102,6 +104,6 @@ X-Plasma-Runner-Min-Letter-Count=3
 # To simplify debugging/creating the regex, you can use https://regex101.com/
 X-Plasma-Runner-Match-Regex=^[a-z]+
 
-X-Plasma-Runner-Syntaxes=:q:,myrunner :q:
-X-Plasma-Runner-Syntax-Descriptions=Description for example query, Description for example query with prefix
+X-Plasma-Runner-Syntaxes=:q:,myrunner :q:,otherprefix <more specific query>
+X-Plasma-Runner-Syntax-Descriptions=Description for example query,Description for example query with prefix,Description for other prefix
 ```
