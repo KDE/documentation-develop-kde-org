@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-02-27 20:21+0100\n"
+"PO-Revision-Date: 2023-03-01 22:22+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -3822,7 +3822,7 @@ msgstr ""
 "Una aplicació de compte enrere és força inútil sense la capacitat d'afegir-"
 "ne. Crearem una acció que ens permeti fer-ho."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-actions.md:57
 msgid ""
 "We are placing our Kirigami Action within our main page from our previous "
@@ -3838,13 +3838,14 @@ msgstr ""
 "Estem col·locant la nostra acció de Kirigami dins de la nostra pàgina "
 "principal de les nostres guies d'aprenentatge anteriors. Si volguéssim, "
 "podríem afegir més accions a la nostra pàgina. (Fins i tot imbricar accions "
-"dins de les accions!) Els components `Kirigami.Action` s'utilitzen com a "
-"accions contextuals dins les pàgines de Kirigami. Ho estem configurant "
-"específicament per a la propietat `actions.main` de la pàgina: l'objecte "
-"`actions` té propietats que ens permeten establir accions diferents en "
-"posicions diferents, però atès que la nostra acció «*Add kountdown*» és "
-"fonamental per a la nostra interfície d'usuari, l'establirem com l'acció "
-"principal d'aquesta pàgina."
+"dins de les accions!) Els components [Kirigami.Action](docs:kirigami2;"
+"Action) s'utilitzen com a accions contextuals dins les pàgines de Kirigami. "
+"Ho estem configurant específicament per a la propietat [actions.main](docs:"
+"kirigami2;Page::actions) de la [Kirigami.Page](docs:kirigami2;Page): "
+"l'objecte `actions` té propietats que ens permeten establir accions "
+"diferents en posicions diferents, però atès que la nostra acció «Add "
+"kountdown» és fonamental per a la nostra interfície d'usuari, l'establirem "
+"com l'acció principal d'aquesta pàgina."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-actions.md:59
@@ -3976,26 +3977,18 @@ msgstr ""
 "calaix global."
 
 #: content/docs/use/kirigami/introduction-actions.md:122
-#, fuzzy
-#| msgid "Global drawer"
 msgid "Global drawer as a menu"
-msgstr "Calaix global"
+msgstr "Calaix global com a menú"
 
-# skip-rule: punctuation-simple-quotes
 #: content/docs/use/kirigami/introduction-actions.md:130
-#, fuzzy
-#| msgid ""
-#| "The ['Actions'](/docs/kirigami/components-actions/) page in the "
-#| "'Components' section of these docs provides further detail on Kirigami "
-#| "actions and how they can be used."
 msgid ""
 "The [Actions based components](/docs/kirigami/components-actions/) page of "
 "these docs provides further detail on Kirigami Actions and how they can be "
 "used."
 msgstr ""
-"La pàgina [*Accions*](/docs/kirigami/components-actions/) a la secció "
-"*Components* d'aquesta documentació, proporciona més detalls sobre les "
-"accions de Kirigami i com es poden utilitzar."
+"La pàgina [components basats en Actions](/docs/kirigami/components-actions/) "
+"d'aquesta documentació, proporciona més detalls sobre les accions del "
+"Kirigami i com es poden utilitzar."
 
 #: content/docs/use/kirigami/introduction-actions.md:134
 #: content/docs/use/kirigami/introduction-listviews.md:242
@@ -4049,26 +4042,14 @@ msgstr ""
 "fitxers, els crearem manualment. Això ens permetrà comprendre millor les "
 "peces que compondran la nostra nova aplicació."
 
-# skip-rule: punctuation-simple-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:30
-#, fuzzy
-#| msgid ""
-#| "First we create our project folder. We are going to call ours "
-#| "'helloworld'."
 msgid ""
 "First we create our project folder. We are going to call ours \"helloworld\"."
 msgstr ""
-"Primer crearem la nostra carpeta de projecte. L'anomenarem *helloworld*."
+"Primer crearem la nostra carpeta de projecte. L'anomenarem «helloworld»."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:44
-#, fuzzy
-#| msgid ""
-#| "Within this folder we are going to create a `src` folder and `CMakeLists."
-#| "txt`. It is generally considered good practice to place all our main code "
-#| "files in a `src` folder. Our `src` folder in turn will contain a folder "
-#| "named `contents`, which itself contains a folder called `ui`. Here is "
-#| "where we will create our QML files."
 msgid ""
 "Within this folder we are going to create a `src/` folder and `CMakeLists."
 "txt`. It is generally considered good practice to place all our main code "
@@ -4076,11 +4057,11 @@ msgid ""
 "named `contents/`, which itself contains a folder called `ui/`. Here is "
 "where we will create our QML files."
 msgstr ""
-"Dins d'aquesta carpeta crearem una carpeta `src` i un fitxer `CMakeLists."
+"Dins d'aquesta carpeta crearem una carpeta `src/` i un fitxer `CMakeLists."
 "txt`. En general, es considera una bona pràctica posar tots els nostres "
-"principals fitxers de codi en una carpeta `src`. La nostra carpeta `src`, al "
-"seu torn, contindrà una carpeta anomenada `contents`, la qual conté una "
-"carpeta anomenada `ui`. Aquí és on crearem els nostres fitxers QML."
+"principals fitxers de codi en una carpeta `src/`. La nostra carpeta `src/`, "
+"al seu torn, contindrà una carpeta anomenada `contents/`, la qual conté una "
+"carpeta anomenada `ui/`. Aquí és on crearem els nostres fitxers QML."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:46
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:14
@@ -4103,18 +4084,12 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:60
-#, fuzzy
-#| msgid ""
-#| "This is KDE convention, but not all KDE projects use this structure. You "
-#| "are free to set things up differently, but you will have to take this "
-#| "into account when creating your `CMakeLists.txt` and `resources.qrc` "
-#| "files."
 msgid ""
 "This is a KDE convention, but not all KDE projects use this structure. You "
 "are free to set things up differently, but you will have to take this into "
 "account when creating your `CMakeLists.txt` and `resources.qrc` files."
 msgstr ""
-"Aquesta és la convenció del KDE, però no tots els projectes KDE utilitzen "
+"Aquesta és una convenció del KDE, però no tots els projectes KDE utilitzen "
 "aquesta estructura. Podeu configurar les coses de manera diferent, però ho "
 "heu de tenir en compte en crear els fitxers `CMakeLists.txt` i `resources."
 "qrc`."
@@ -4142,61 +4117,48 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:70
-#, fuzzy
-#| msgid ""
-#| "For now, let's focus on `main.qml`. First we import a number of important "
-#| "modules:"
 msgid ""
 "For now, let's focus on `main.qml`. First we [import](https://doc.qt.io/qt-6/"
 "qtqml-syntax-imports.html) a number of important modules:"
 msgstr ""
-"Per ara, centrem-nos en `main.qml`. Primer importem diversos mòduls "
-"importants:"
+"Per ara, centrem-nos en `main.qml`. Primer [importarem](https://doc.qt.io/"
+"qt-6/qtqml-syntax-imports.html) diversos mòduls importants:"
 
 #: content/docs/use/kirigami/introduction-getting_started.md:72
-#, fuzzy
-#| msgid "QtQuick, the standard library used in QML applications."
 msgid ""
 "[QtQuick](https://doc.qt.io/qt-6/qtquick-index.html), the standard library "
 "used in QML applications."
-msgstr "QtQuick, la biblioteca estàndard utilitzada en les aplicacions QML."
+msgstr ""
+"[QtQuick](https://doc.qt.io/qt-6/qtquick-index.html), la biblioteca "
+"estàndard utilitzada en les aplicacions QML."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:73
-#, fuzzy
-#| msgid ""
-#| "QtQuick Controls, which provides a number of standard controls we can use "
-#| "to make our applications interactive."
 msgid ""
 "[QtQuick Controls](https://doc.qt.io/qt-6/qtquickcontrols-index.html), which "
 "provides a number of standard controls we can use to make our applications "
 "interactive."
 msgstr ""
-"QtQuick Controls, la qual proporciona una sèrie de controls estàndard que "
-"podem utilitzar perquè les nostres aplicacions siguin interactives."
+"[QtQuick Controls](https://doc.qt.io/qt-6/qtquickcontrols-index.html), que "
+"proporciona una sèrie de controls estàndard que podem utilitzar perquè les "
+"nostres aplicacions siguin interactives."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:74
-#, fuzzy
-#| msgid ""
-#| "QtQuick Layouts, which provides tools for placing components within the "
-#| "applications window."
 msgid ""
 "[QtQuick Layouts](https://doc.qt.io/qt-6/qtquicklayouts-index.html), which "
 "provides tools for placing components within the application window."
 msgstr ""
-"QtQuick Layouts, la qual proporciona eines per a col·locar els components "
-"dins de la finestra de l'aplicació."
+"[QtQuick Layouts](https://doc.qt.io/qt-6/qtquicklayouts-index.html), que "
+"proporciona eines per a col·locar els components dins de la finestra de "
+"l'aplicació."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:75
-#, fuzzy
-#| msgid ""
-#| "Kirigami, which provides a number of components suited for creating "
-#| "applications that work across devices of different shapes and sizes."
 msgid ""
 "[Kirigami](docs:kirigami2), which provides a number of components suited for "
 "creating applications that work across devices of different shapes and sizes."
 msgstr ""
-"El Kirigami, el qual proporciona una sèrie de components adequats per a "
-"crear aplicacions que funcionen en dispositius de formes i mides diferents."
+"El [Kirigami](docs:kirigami2), que proporciona una sèrie de components "
+"adequats per a crear aplicacions que funcionen en dispositius de formes i "
+"mides diferents."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:79
 msgid ""
@@ -4207,71 +4169,44 @@ msgid ""
 "\"Controls\" in this tutorial for clarity."
 msgstr ""
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:83
-#, fuzzy
-#| msgid ""
-#| "We then come to our base element, [`Kirigami.ApplicationWindow`](docs:"
-#| "kirigami2;ApplicationWindow) which provides some basic features needed "
-#| "for all Kirigami applications. This is the window that will contain each "
-#| "of our pages, the main sections of our UI."
 msgid ""
 "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow), which provides some basic features needed for "
 "all Kirigami applications. This is the window that will contain each of our "
 "pages, the main sections of our UI."
 msgstr ""
-"Després arribem al nostre element base, la [`Kirigami.ApplicationWindow`]"
-"(docs:kirigami2;ApplicationWindow), el qual proporciona algunes "
-"característiques bàsiques necessàries per a totes les aplicacions escrites "
-"amb el Kirigami. Aquesta és la finestra que contindrà cadascuna de les "
-"nostres pàgines, les seccions principals de la nostra interfície d'usuari."
+"Després arribem al nostre element base, la [Kirigami.ApplicationWindow](docs:"
+"kirigami2;ApplicationWindow), que proporciona algunes característiques "
+"bàsiques necessàries per a totes les aplicacions escrites amb el Kirigami. "
+"Aquesta és la finestra que contindrà cadascuna de les nostres pàgines, les "
+"seccions principals de la nostra interfície d'usuari."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-simple-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:85
-#, fuzzy
-#| msgid ""
-#| "We then set the `id` property of `Kirigami.ApplicationWindow` to 'root'. "
-#| "IDs are useful because they let us uniquely reference a component, even "
-#| "if we have several of the same type."
 msgid ""
 "We then set the window's `id` property to \"root\". IDs are useful because "
 "they let us uniquely reference a component, even if we have several of the "
 "same type."
 msgstr ""
-"Després, establim la propietat `id` d'una `Kirigami.ApplicationWindow` a "
-"*root*. Els ID són útils perquè ens permeten fer referència de forma única a "
-"un component, fins i tot si en tenim diversos del mateix tipus."
+"Després, establim la propietat `id` de la finestra a \"root\". Els ID són "
+"útils perquè ens permeten fer referència de forma única a un component, fins "
+"i tot si en tenim diversos del mateix tipus."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:87
-#, fuzzy
-#| msgid ""
-#| "We also set the window `title` property to 'Hello World'. You'll notice "
-#| "that we have wrapped our \"Hello World\" string in a function called "
-#| "`i18nc`, where we detail the context of the string as well as the string "
-#| "itself."
 msgid ""
 "We also set the window `title` property to \"Hello World\". You'll notice "
 "that we have wrapped our \"Hello World\" string in a function called "
 "`i18nc()`, where we detail the context of the string as well as the string "
 "itself."
 msgstr ""
-"També establirem la propietat `title` de la finestra a *Hello World*. Us "
-"adonareu que hem embolcallat la nostra cadena \"Hello World\" en una funció "
-"amb la crida `i18nc`, on detallem el context de la cadena, així com la "
+"També establirem la propietat `title` de la finestra a \"Hello World\". Us "
+"adonareu que hem embolcallat la nostra cadena \"Hello World\" amb una funció "
+"amb la crida `i18nc()`, on detallem el context de la cadena, així com la "
 "cadena en si."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:91
-#, fuzzy
-#| msgid ""
-#| "[`i18n()`](https://techbase.kde.org/Development/Tutorials/Localization/"
-#| "i18n#Translatable_Code_Using_i18n.28.29) functions make your app more "
-#| "easily translatable, as they return a version of the provided string in "
-#| "the user's language (as long as your app has been localised for that "
-#| "language). While an English user might see our window title as 'Hello "
-#| "World', a Spanish user would see 'Hola Mundo'."
 msgid ""
 "[i18n()](https://techbase.kde.org/Development/Tutorials/Localization/"
 "i18n#Translatable_Code_Using_i18n()) functions make your app more easily "
@@ -4280,23 +4215,16 @@ msgid ""
 "an English user might see our window title as \"Hello World\", a Spanish "
 "user would see \"Hola Mundo\"."
 msgstr ""
-"Les funcions [`i18n()`](https://techbase.kde.org/Development/Tutorials/"
-"Localization/i18n#Translatable_Code_Using_i18n.28.29) fan que la vostra "
+"Les funcions [i18n()](https://techbase.kde.org/Development/Tutorials/"
+"Localization/i18n#Translatable_Code_Using_i18n()) fan que la vostra "
 "aplicació sigui traduïble amb més facilitat, ja que retornen una versió de "
 "la cadena proporcionada en l'idioma de l'usuari (sempre que l'aplicació "
 "estigui localitzada per a aquest idioma). Mentre que un usuari anglès pot "
-"veure el títol de la finestra com *Hello World*, un usuari català veurà "
-"*Hola Món*."
+"veure el títol de la finestra com «Hello World», un usuari català veurà "
+"«Hola món»."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:93
-#, fuzzy
-#| msgid ""
-#| "[`i18nc()`](https://techbase.kde.org/Development/Tutorials/Localization/"
-#| "i18n#Adding_Context_with_i18nc.28.29) builds on the `i18n()` function by "
-#| "allowing developers to provide some context to translators working on the "
-#| "app; that's why we have included the string \"@title\" before \"Hello "
-#| "World\"."
 msgid ""
 "[i18nc()](https://techbase.kde.org/Development/Tutorials/Localization/"
 "i18n#Adding_Context_with_i18nc()) builds on the `i18n()` function by "
@@ -4306,22 +4234,16 @@ msgid ""
 "\". See the [Ki18n Programmer's guide](https://api.kde.org/frameworks/ki18n/"
 "html/prg_guide.html#good_ctxt) for more details."
 msgstr ""
-"[`i18nc()`](https://techbase.kde.org/Development/Tutorials/Localization/"
-"i18n#Adding_Context_with_i18nc.28.29) construeix la funció `i18n()` que "
-"permet als desenvolupadors proporcionar algun context als equips de "
-"traducció que treballen en l'aplicació. És per això que hem inclòs la cadena "
-"\"@title\" abans de \"Hello World\"."
+"[i18nc()](https://techbase.kde.org/Development/Tutorials/Localization/"
+"i18n#Adding_Context_with_i18nc()) construeix la funció `i18n()` que permet "
+"als desenvolupadors proporcionar un context als equips de traducció que "
+"treballen en l'aplicació. És per això que hem inclòs la cadena \"@title:"
+"window\" abans de \"Hello World\". Vegeu la [Guia del programador Ki18n]"
+"(https://api.kde.org/frameworks/ki18n/html/prg_guide.html#good_ctxt) per a "
+"més detalls."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:97
-#, fuzzy
-#| msgid ""
-#| "We then set the first page of our page stack. Most Kirigami applications "
-#| "are organised as a stack of pages, each page containing related "
-#| "components suited to a specific task. For now, we are keeping it simple, "
-#| "and sticking to a single page. With `pageStack.initialPage: Kirigami."
-#| "Page{...}` we set the first page presented upon loading the application "
-#| "to a `Kirigami.Page`, which will contain all our content."
 msgid ""
 "We then set the first page of our page stack. Most Kirigami applications are "
 "organised as a stack of pages, each page containing related components "
@@ -4337,19 +4259,15 @@ msgstr ""
 "majoria de les aplicacions escrites amb el Kirigami estan organitzades com "
 "una pila de pàgines, cada pàgina conté els components relacionats adequats "
 "per a una tasca específica. Per ara, el mantenim senzill i ens cenyim a una "
-"sola pàgina. Amb `pageStack.initialPage: Kirigami.Page{...}` establim la "
-"primera pàgina presentada en carregar l'aplicació a una `Kirigami.Page`, la "
-"qual contindrà tot el nostre contingut."
+"sola pàgina. [pageStack](docs:kirigami2;AbstractApplicationWindow::"
+"pageStack) és una pila inicialment buida de pàgines proporcionades per "
+"[Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), i amb "
+"`pageStack.initialPage: Kirigami.Page{...}` establim la primera pàgina "
+"presentada en carregar l'aplicació a una [Kirigami.Page](docs:kirigami2;"
+"Page). Aquesta pàgina contindrà tot el nostre contingut."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:99
-#, fuzzy
-#| msgid ""
-#| "Finally, we include in our page a `Controls.Label` that lets us place "
-#| "text on our page. We use `anchors.centerIn: parent` to center our label "
-#| "horizontally and vertically within our parent element. In this case, "
-#| "`Controls.Label`'s parent component is `Kirigami.Page`. The last thing we "
-#| "need to do is set the text: `text: i18n(\"Hello World!\")`."
 msgid ""
 "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
 "QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
@@ -4358,27 +4276,23 @@ msgid ""
 "Page](docs:kirigami2;Page). The last thing we need to do is set its text: "
 "`text: i18n(\"Hello World!\")`."
 msgstr ""
-"Finalment, incloem en la nostra pàgina un `Controls.Label` que ens permetrà "
-"inserir text a la nostra pàgina. Utilitzarem `anchors.centerIn: parent` per "
-"a centrar la nostra etiqueta horitzontalment i verticalment dins del nostre "
-"element pare. En aquest cas, el component principal d'un `Controls.Label` és "
-"`Kirigami.Page`. L'últim que hem de fer és configurar el text: `text: "
+"Finalment, incloem en la nostra pàgina un [Controls.Label](docs:"
+"qtquickcontrols;QtQuick.Controls.Label) que ens permetrà inserir text a la "
+"nostra pàgina. Utilitzarem `anchors.centerIn: parent` per a centrar la "
+"nostra etiqueta horitzontalment i verticalment dins de l'element pare. En "
+"aquest cas, el component principal de la nostra etiqueta és [Kirigami.Page]"
+"(docs:kirigami2;Page). L'últim que hem de fer és configurar el text: `text: "
 "i18n(\"Hello World!\")`."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:103
-#, fuzzy
-#| msgid ""
-#| "`main.cpp` handles the 'business logic' of our application. C++ is handy "
-#| "because it is flexible and fast, even if it is more involved than other "
-#| "programming languages."
 msgid ""
 "`main.cpp` handles the \"business logic\" of our application. C++ is handy "
 "because it is flexible and fast, even if it is more involved than other "
 "programming languages."
 msgstr ""
-"`main.cpp` gestiona la *lògica empresarial* de la nostra aplicació. C++ és "
-"útil perquè és flexible i ràpid, encara que és més complicat que altres "
+"`main.cpp` gestiona la «lògica empresarial» de la nostra aplicació. El C++ "
+"és útil perquè és flexible i ràpid, encara que és més complicat que altres "
 "llenguatges de programació."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
@@ -4394,13 +4308,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:109
-#, fuzzy
-#| msgid ""
-#| "For now, we don't need to go into too much detail regarding what our "
-#| "`main.cpp` code does, but its role will grow significantly more important "
-#| "once we decide to add more complex functionality to our application in "
-#| "the future. If you want to get ahead, you can read more about how this "
-#| "`main.cpp` works [in this page](/docs/kirigami/advanced-maincpp/)."
 msgid ""
 "For now, we don't need to go into too much detail regarding what our `main."
 "cpp` code does, but its role will grow significantly more important once we "
@@ -4409,11 +4316,10 @@ msgid ""
 "in [this page](/docs/kirigami/advanced-maincpp)."
 msgstr ""
 "Per ara, no necessitem entrar en massa detalls sobre el que fa el nostre "
-"codi a `main.cpp`, però la seva funció serà significativament més important "
-"una vegada en el futur decidim afegir una funcionalitat més complexa a la "
-"nostra aplicació. Si vols tirar endavant, podeu llegir més sobre com "
-"funciona aquest `main.cpp` [en aquesta pàgina](/docs/kirigami/advanced-"
-"maincpp/)."
+"codi de `main.cpp`, però la seva funció serà significativament més important "
+"una vegada en el futur decidim afegir una funcionalitat més complexa a "
+"l'aplicació. Si voleu avançar, podeu llegir més sobre com funciona aquest "
+"`main.cpp` [en aquesta pàgina](/docs/kirigami/advanced-maincpp/)."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:111
 msgid "resources.qrc"
@@ -4421,16 +4327,13 @@ msgstr "resources.qrc"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:113
-#, fuzzy
-#| msgid ""
-#| "`resources.qrc` contains the list of all QML files as well as other files "
-#| "(like custom icons) that will be included in the binary."
 msgid ""
 "Our `resources.qrc` is a [Qt Resource file](https://doc.qt.io/qt-5/resources."
 "html). It contains the list of all QML files as well as other files (like "
 "custom icons) that will be included in the binary."
 msgstr ""
-"`resources.qrc` conté la llista de tots els fitxers QML, així com altres "
+"`resources.qrc` és un [fitxer de recursos Qt](https://doc.qt.io/qt-5/"
+"resources.html). Conté la llista de tots els fitxers QML, així com altres "
 "fitxers (com les icones personalitzades) que s'inclouran en el binari."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
@@ -4457,12 +4360,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:123
-#, fuzzy
-#| msgid ""
-#| "`CMakeLists.txt` files are needed to use KDE's build system of choice, "
-#| "[CMake](https://cmake.org/). The CMakeLists.txt file in our top-level "
-#| "folder is going to specify some of our application's characteristics. It "
-#| "also includes some of the dependencies we need to compile it."
 msgid ""
 "`CMakeLists.txt` files are needed to use KDE's build system of choice, "
 "[CMake](https://cmake.org/). The `CMakeLists.txt` file in our top-level "
@@ -4471,37 +4368,25 @@ msgid ""
 "project."
 msgstr ""
 "Els fitxers `CMakeLists.txt` són necessaris per a utilitzar el sistema de "
-"compilació triat pel KDE, [CMake](https://cmake.org/). El fitxer CMakeLists."
-"txt que hi ha a la nostra carpeta de nivell superior especifica algunes de "
-"les característiques de la nostra aplicació. També inclou algunes de les "
-"dependències que necessitem per a compilar-la."
+"compilació triat pel KDE, [CMake](https://cmake.org/). El fitxer `CMakeLists."
+"txt` de la carpeta de nivell superior especifica algunes de les "
+"característiques de la nostra aplicació. També inclou algunes de les "
+"dependències que necessitem per a compilar el projecte."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-getting_started.md:127
-#, fuzzy
-#| msgid ""
-#| "The CMakeLists.txt defines how to build your projects. Most of the "
-#| "content here is just to bootstrap your project. You can read a line-by-"
-#| "line, in-depth explanation of what this CMakeLists file does [here](/docs/"
-#| "use/kirigami/advanced-understanding_cmakelists/)."
 msgid ""
 "The `CMakeLists.txt` defines how to build your projects. Most of the content "
 "here is just to bootstrap your project. You can read a line-by-line, in-"
 "depth explanation of what this CMakeLists file does [here](/docs/kirigami/"
 "advanced-understanding_cmakelists/)."
 msgstr ""
-"El CMakeLists.txt defineix com construir els vostres projectes. La major "
+"El `CMakeLists.txt` defineix com construir els vostres projectes. La major "
 "part del seu contingut només és per a arrencar el vostre projecte. [Aquí](/"
-"docs/use/kirigami/advanced-understanding_cmakelists/) podeu llegir una "
-"explicació detallada línia per línia del que fa aquest fitxer CMakeLists."
+"docs/kirigami/advanced-understanding_cmakelists/) podeu llegir una "
+"explicació detallada línia a línia del que fa aquest fitxer CMakeLists."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:129
-#, fuzzy
-#| msgid ""
-#| "The most important thing to keep in mind is that the Qt and KDE "
-#| "Frameworks dependencies are managed with `find_package`. You will have to "
-#| "modify these lines and include any additional components that you decide "
-#| "to use during the development of your application."
 msgid ""
 "The most important thing to keep in mind is that the Qt and KDE Frameworks "
 "dependencies are managed with [find_package()](https://cmake.org/cmake/help/"
@@ -4510,39 +4395,34 @@ msgid ""
 "development of your application."
 msgstr ""
 "El més important a tenir en compte és que les dependències de les Qt i dels "
-"Frameworks del KDE es gestionen amb `find_package`. Haureu de modificar "
-"aquestes línies i incloure qualsevol component addicional que decidiu "
-"utilitzar durant el desenvolupament de la vostra aplicació."
+"Frameworks del KDE es gestionen amb [find_package()](https://cmake.org/cmake/"
+"help/latest/command/find_package.html). Haureu de modificar aquestes línies "
+"i incloure qualsevol component addicional que decidiu utilitzar durant el "
+"desenvolupament de la vostra aplicació."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-simple-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:131
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake into the 'src' "
-#| "directory, where our source code is located. Let's delve into the "
-#| "CMakeLists.txt file in there."
 msgid ""
 "The final line, `add_subdirectory(src)`, points CMake to the `helloworld/src/"
 "` directory, where our source code is located. Let's delve into the "
 "`helloworld/src/CMakeLists.txt` file in there."
 msgstr ""
-"L'última línia, `add_subdirectory(src)`, apunta CMake al directori *src*, on "
-"es troba el nostre codi font. Allà aprofundirem en el fitxer CMakeLists.txt."
+"L'última línia, `add_subdirectory(src)`, apunta el CMake al directori "
+"`helloworld/src/`, on es troba el nostre codi font. Allà aprofundirem en el "
+"fitxer `helloworld/src/CMakeLists.txt`."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:135
 msgid "This one's a lot shorter! Let's go through what it does:"
 msgstr "Aquest és molt més curt! Repassem el que fa:"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:137
-#, fuzzy
-#| msgid "`add_executable` creates an executable from the given source files."
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) creates an executable from the given source files."
-msgstr "`add_executable` crea un executable a partir dels fitxers font donats."
+msgstr ""
+"[add_executable()](https://cmake.org/cmake/help/latest/command/"
+"add_executable.html) crea un executable a partir dels fitxers font donats."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:138
 msgid ""
 "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
@@ -4553,21 +4433,17 @@ msgstr ""
 "target_link_libraries.html) enllaça dinàmicament les biblioteques "
 "utilitzades en el nostre codi amb el nostre executable."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-getting_started.md:142
-#, fuzzy
-#| msgid ""
-#| "Note that these libraries should match the components that we included in "
-#| "our previous CMakeLists.txt file - otherwise these components will not be "
-#| "included and our application won't compile."
 msgid ""
 "Note that these libraries should match the components that we included in "
 "our previous `CMakeLists.txt` file—otherwise these components will not be "
 "included and our application won't compile."
 msgstr ""
 "Cal tenir present que aquestes biblioteques han de coincidir amb els "
-"components que incloem en el nostre fitxer CMakeLists.txt anterior -en cas "
+"components que incloem en el nostre fitxer `CMakeLists.txt` anterior. En cas "
 "contrari, aquests components no s'inclouran i la nostra aplicació no "
-"compilarà-."
+"compilarà."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:146
 msgid ""
@@ -4581,14 +4457,8 @@ msgstr ""
 msgid "Compiling and running the application"
 msgstr "Compilar i executar l'aplicació"
 
-# skip-rule: ff-enter,punctuation-simple-quotes
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-getting_started.md:150
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our "
-#| "'helloworld' folder in our terminal application of choice and run the "
-#| "following command:"
 msgid ""
 "We are almost at the finish line. The last thing we need to do is build and "
 "compile our application. To do that, we need to enter our `helloworld/` "
@@ -4596,17 +4466,13 @@ msgid ""
 msgstr ""
 "Estem gairebé a la línia de meta. L'últim que hem de fer és construir i "
 "compilar la nostra aplicació. Per a fer això, hem d'entrar a la carpeta "
-"*helloworld* en la nostra aplicació de terminal i executar l'ordre següent:"
+"`helloworld/` amb l'aplicació de terminal i executar les ordres següents:"
 
 #: content/docs/use/kirigami/introduction-getting_started.md:157
 msgid "And launch it with:"
 msgstr "I llanceu-la amb:"
 
 #: content/docs/use/kirigami/introduction-getting_started.md:163
-#, fuzzy
-#| msgid ""
-#| "Voila! Now you will see your very first Kirigami app appear before your "
-#| "very own eyes."
 msgid ""
 "Voilà! Now you will see your very first Kirigami app appear before your very "
 "own eyes."
@@ -4622,16 +4488,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:169
-#, fuzzy
-#| msgid ""
-#| "Next time you want to create the files and folders needed, you can use "
-#| "[KAppTemplate](https://apps.kde.org/kapptemplate) or KDevelop to "
-#| "automatically generate a suitable project to start from. They are "
-#| "available from each major distribution's repositories. These applications "
-#| "will also generate files containing [AppStream](https://www.freedesktop."
-#| "org/software/appstream/docs/sect-Metadata-Application.html) metadata and "
-#| "a `.desktop` file that contains information about how the application "
-#| "should be displayed in a linux application launcher."
 msgid ""
 "Next time you want to create the files and folders needed, you can use "
 "[KAppTemplate](https://apps.kde.org/kapptemplate) or [KDevelop](https://apps."
@@ -4643,28 +4499,24 @@ msgid ""
 "application should be displayed in a linux application launcher."
 msgstr ""
 "La pròxima vegada que vulgueu crear els fitxers i carpetes necessaris, "
-"podreu fer servir [KAppTemplate](https://apps.kde.org/kapptemplate) o "
-"KDevelop per a generar automàticament un projecte adequat per a començar. "
-"Estan disponibles en els repositoris de cada distribució. Aquestes "
-"aplicacions també generaran els fitxers que contenen les metadades "
-"d'[AppStream](https://www.freedesktop.org/software/appstream/docs/sect-"
-"Metadata-Application.html) i un fitxer `.desktop` que conté la informació "
-"sobre com s'ha de mostrar l'aplicació en un llançador d'aplicacions de Linux."
+"podreu fer servir [KAppTemplate](https://apps.kde.org/kapptemplate) o el "
+"[KDevelop](https://apps.kde.org/kdevelop/) per a generar automàticament un "
+"projecte adequat per a començar. Estan disponibles en els repositoris de "
+"cada distribució. Aquestes aplicacions també generaran els fitxers que "
+"contenen les metadades d'[AppStream](https://www.freedesktop.org/software/"
+"appstream/docs/sect-Metadata-Application.html) i un fitxer `.desktop` que "
+"conté la informació sobre com s'ha de mostrar l'aplicació en un llançador "
+"d'aplicacions del Linux."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:171
-#, fuzzy
-#| msgid ""
-#| "Thanks to the magic of CMakeLists, you can also use IDEs such as KDevelop "
-#| "or QtCreator to develop this application within a comfortable environment "
-#| "with minimal effort."
 msgid ""
 "Thanks to the magic of CMakeLists, you can also use IDEs such as KDevelop or "
 "[QtCreator](https://www.qt.io/product/development-tools) to develop this "
 "application within a comfortable environment with minimal effort."
 msgstr ""
 "Gràcies a la màgia de CMakeLists, també podreu utilitzar un IDE com el "
-"KDevelop o QtCreator per a desenvolupar aquesta aplicació dins d'un entorn "
-"còmode, amb un mínim esforç."
+"KDevelop o el [QtCreator](https://www.qt.io/product/development-tools) per a "
+"desenvolupar aquesta aplicació dins d'un entorn còmode, amb un esforç mínim."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:0
 msgid "Using Kirigami Gallery"
@@ -4675,23 +4527,16 @@ msgid "Using Kirigami Gallery to find code patterns\n"
 msgstr "Utilitzant la Galeria del Kirigami per a trobar patrons de codi\n"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:11
-#, fuzzy
-#| msgid ""
-#| "[Kirigami Gallery](https://invent.kde.org/sdk/kirigami-gallery/) is a "
-#| "helpful friend when developing a Kirigami application. It is an "
-#| "application which uses the features of Kirigami, provides links to the "
-#| "source code, tips on how to use the components as well as links to the "
-#| "corresponding HIG pages."
 msgid ""
 "[Kirigami Gallery](https://apps.kde.org/kirigami2.gallery/) is a helpful "
 "friend when developing a Kirigami application. It is an application that "
 "uses core Kirigami features, provides links to the source code, tips on how "
 "to use Kirigami components, and links to the corresponding HIG pages."
 msgstr ""
-"La [Galeria del Kirigami](https://invent.kde.org/sdk/kirigami-gallery/) és "
-"un amic útil quan es desenvolupa una aplicació amb el Kirigami. És una "
+"La [Galeria del Kirigami](https://apps.kde.org/kirigami2.gallery/) és un "
+"amic útil quan es desenvolupa una aplicació amb el Kirigami. És una "
 "aplicació que utilitza les característiques del Kirigami, proporciona "
-"enllaços amb el codi font, consells sobre com utilitzar els components i "
+"enllaços al codi font, consells sobre com utilitzar els components i "
 "enllaços amb les pàgines HIG corresponents."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:16
@@ -4703,81 +4548,51 @@ msgstr ""
 "el repositori de la vostra distribució de Linux."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:21
-#, fuzzy
-#| msgid "Find a card grid"
 msgid "Finding a card grid"
 msgstr "Trobar una quadrícula de targetes"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:23
-#, fuzzy
-#| msgid ""
-#| "Navigating through the Kirigami Gallery application, we will stumble upon "
-#| "the \"Grid view of cards\" gallery component. This is a good candidate "
-#| "for example to display a grid of contact cards."
 msgid ""
 "Navigating through the Kirigami Gallery application, we will stumble upon "
 "the \"Grid view with cards\" gallery component. This is an example that can "
 "be applied to multiple use cases, such as contact cards."
 msgstr ""
 "Navegant a través de l'aplicació Galeria del Kirigami, ens toparem amb el "
-"component de la galeria «Vista de quadrícula de les targetes». Aquest és un "
-"bon candidat, per exemple, per a mostrar una quadrícula de targetes de "
-"contacte."
+"component de la galeria «Vista de quadrícula amb targetes». Aquest és un "
+"exemple que es pot aplicar a diversos casos d'ús, com targetes de contactes."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:25
-#, fuzzy
-#| msgid "![List of kirigami gallery components](components.png)"
 msgid "![List of kirigami gallery components](components.webp)"
-msgstr "![Llista de components de la Galeria del Kirigami](components.png)"
+msgstr "![Llista de components de la Galeria del Kirigami](components.webp)"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:27
-#, fuzzy
-#| msgid ""
-#| "After selecting the \"Grid view of cards\" gallery component, we will "
-#| "click to the bottom action and we will get some useful information about "
-#| "the Card and Abstract Card types."
 msgid ""
 "After selecting the \"Grid view of cards\" gallery component, if we click "
 "the \"Info\" button on the top right, we will get some useful information "
 "about the Card and Abstract Card types."
 msgstr ""
 "Després de seleccionar el component de la galeria «Vista de quadrícula de "
-"les targetes», farem clic en el botó d'acció a la part inferior i obtindrem "
+"targetes», farem clic al botó d'acció de la part superior dreta i obtindrem "
 "informació útil sobre els tipus Targeta i Targeta abstracta."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:29
-#, fuzzy
-#| msgid "![Kirigami gallery grid view](cards.png)"
 msgid "![Kirigami gallery grid view](cards.webp)"
-msgstr "![Vista de quadrícula de la Galeria del Kirigami](cards.png)"
+msgstr "![Vista de quadrícula de galeria del Kirigami](cards.webp)"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:31
-#, fuzzy
-#| msgid ""
-#| "In this information dialog we will also find a link to the source code of "
-#| "the Cards Grid View. Let's navigate to this page."
 msgid ""
 "In the bottom section of this information dialog we will also find a link to "
 "the source code of the \"Cards Grid View\". Let's navigate to this page."
 msgstr ""
-"En aquest diàleg d'informació també trobarem un enllaç amb el codi font de "
-"la Vista de quadrícula de les targetes. Anem fins a aquesta pàgina."
+"A la part inferior d'aquest diàleg d'informació també trobarem un enllaç amb "
+"el codi font de la «Vista de quadrícula de targetes». Anem fins a aquesta "
+"pàgina."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:34
-#, fuzzy
-#| msgid "Implement the card grid"
 msgid "Implementing a card grid"
-msgstr "Implementar la quadrícula de targetes"
+msgstr "Implementar una quadrícula de targetes"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:36
-#, fuzzy
-#| msgid ""
-#| "We will reuse most of the code found in the Cards Grid View Gallery "
-#| "[source code page](https://invent.kde.org/sdk/kirigami-gallery/-/blob/"
-#| "master/src/data/contents/ui/gallery/CardsGridViewGallery.qml). In "
-#| "particular, we will remove the extra parts of the OverlaySheet (which is "
-#| "the implementation of the Kirigami Gallery that helped us reach the "
-#| "kirigami-gallery source code repository)."
 msgid ""
 "We will reuse most of the code found in the [source code of the "
 "CardsGridViewGallery component](https://invent.kde.org/sdk/kirigami-"
@@ -4786,37 +4601,25 @@ msgid ""
 "(docs:kirigami2;OverlaySheet) (which is the pop-up we used to reach the "
 "kirigami-gallery source code repository)."
 msgstr ""
-"Reutilitzarem la major part del codi que es troba a la [pàgina del codi font]"
-"(https://invent.kde.org/sdk/kirigami-gallery/-/blob/master/src/data/contents/"
-"ui/gallery/CardsGridViewGallery.qml) de la galeria Vista de quadrícula de "
-"les targetes. En particular, eliminarem les parts addicionals d'OverlaySheet "
-"(la qual és la implementació de la Galeria del Kirigami que ens ha ajudat a "
-"arribar fins al repositori de codi font kirigami-gallery)."
+"Reutilitzarem la major part del codi que es troba a la [pàgina del codi font "
+"del component CardsGridViewGallery](https://invent.kde.org/sdk/kirigami-"
+"gallery/-/blob/master/src/data/contents/ui/gallery/CardsGridViewGallery."
+"qml). En particular, eliminarem les parts addicionals d'[OverlaySheet](docs:"
+"kirigami2;OverlaySheet) (que és la finestra emergent que fem servir per "
+"arribar al repositori de codi font de la «kirigami-gallery»)."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:39
-#, fuzzy
-#| msgid ""
-#| "So, we are going to substitute the Page component of main.qml of the "
-#| "skeleton app with the below Scrollable Page:"
 msgid ""
 "So, we are going to substitute the [Page](docs:kirigami2;Page) component of "
 "`main.qml` of our skeleton app with the below [ScrollablePage](docs:"
 "kirigami2;ScrollablePage):"
 msgstr ""
-"Llavors, substituirem el component Page de main.qml a l'esquelet de "
-"l'aplicació amb la pàgina desplaçable següent:"
+"Llavors, substituirem el component [Page](docs:kirigami2;Page) de `main.qml` "
+"a l'esquelet de l'aplicació amb la [ScrollablePage](docs:kirigami2;"
+"ScrollablePage) següent:"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:58
-#, fuzzy
-#| msgid ""
-#| "What we have done so far is to create a [ScrollablePage](docs:kirigami2;"
-#| "ScrollablePage) and put a [CardsGridView](docs:kirigami2;CardsGridView) "
-#| "into it, since we want to display a grid of Cards generated from a model. "
-#| "The data of each contact is provided by a [ListModel](https://doc.qt.io/"
-#| "qt-5/qml-qtqml-models-listmodel.html) while the card delegate is "
-#| "responsible for the presentation of the data. For more info about models "
-#| "and views in Qt Quick, see [here](https://doc.qt.io/qt-5/qtquick-"
-#| "modelviewsdata-modelview.html)."
 msgid ""
 "What we have done so far is to create a [ScrollablePage](docs:kirigami2;"
 "ScrollablePage) and put a [CardsGridView](docs:kirigami2;CardsGridView) into "
@@ -4830,17 +4633,12 @@ msgstr ""
 "ScrollablePage) i posar una [CardsGridView](docs:kirigami2;CardsGridView) en "
 "ella, ja que volem mostrar una quadrícula de targetes generada a partir d'un "
 "model. Les dades de cada contacte són proporcionats per un [ListModel]"
-"(https://doc.qt.io/qt-5/qml-qtqml-models-listmodel.html), mentre que el "
+"(https://doc.qt.io/qt-6/qml-qtqml-models-listmodel.html), mentre que el "
 "delegat de la targeta és responsable de la presentació de les dades. Per a "
 "obtenir més informació sobre els models i vistes a Qt Quick, vegeu [aquí]"
 "(https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html)."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:64
-#, fuzzy
-#| msgid ""
-#| "Now let's populate the model that will feed our grid view with data. In "
-#| "[Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) definition, just "
-#| "after:"
 msgid ""
 "Now let's populate the model that will feed our grid view with data. In the "
 "definition of [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage), just "
@@ -4851,8 +4649,6 @@ msgstr ""
 "ScrollablePage), just després:"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:72
-#, fuzzy
-#| msgid "add the below:"
 msgid "add the following:"
 msgstr "afegiu el següent:"
 
@@ -4862,13 +4658,8 @@ msgid ""
 "model."
 msgstr ""
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:127
-#, fuzzy
-#| msgid ""
-#| "The model part of our implementation is ready. Let's proceed to defining "
-#| "a delegate that will be responsible for displaying the data. So, we add "
-#| "the following code to the main.qml page, just after the Component."
-#| "onCompleted definition:"
 msgid ""
 "The model part of our implementation is ready. Let's proceed to defining a "
 "delegate that will be responsible for displaying the data. So, we add the "
@@ -4877,25 +4668,20 @@ msgid ""
 msgstr ""
 "La part del model de la nostra implementació està llista. Procedim a definir "
 "un delegat que serà responsable de mostrar les dades. Llavors, afegim el "
-"codi següent a la pàgina main.qml, just després de la definició Component."
-"onCompleted:"
+"codi següent a la pàgina `main.qml`, just després de la definició de "
+"[Component.onCompleted](docs:qtqml;QtQml.Component::completed):"
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:161
-#, fuzzy
-#| msgid ""
-#| "Following the related information on the [api page](docs:kirigami2;Card) "
-#| "we populate a \"banner\" (although without an image yet), that will act "
-#| "as a header that will display the name of the contact as well as a "
-#| "contact icon."
 msgid ""
 "Following the related information on the [Kirigami.Card API page](docs:"
 "kirigami2;Card), we populate a \"[banner](docs:kirigami2;Card::banner)\" "
 "that will act as a header to display the name of the contact as well as a "
 "contact icon."
 msgstr ""
-"Seguint la informació relacionada a la [pàgina de l'API](docs:kirigami2;"
-"Card), omplim un «banner» (tot i que encara sense imatge), que actuarà com "
-"una capçalera que mostrarà el nom del contacte, així com una icona."
+"Seguint la informació relacionada a la [pàgina de l'API de Kirigami.Card]"
+"(docs:kirigami2;Card), omplim un «[banner](docs:kirigami2;Card::banner)» que "
+"actuarà com una capçalera que mostrarà el nom del contacte, així com la seva "
+"icona."
 
 #: content/docs/use/kirigami/introduction-kirigami-gallery.md:163
 #, fuzzy
