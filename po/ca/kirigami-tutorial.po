@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-03-02 22:33+0100\n"
+"PO-Revision-Date: 2023-03-03 22:19+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -1138,6 +1138,7 @@ msgstr ""
 #: content/docs/use/kirigami/components-actions.md:257
 msgid "A horizontal toolbar being displayed at the top of the application"
 msgstr ""
+"Una barra d'eines horitzontal que es mostra a la part superior de l'aplicació"
 
 #: content/docs/use/kirigami/components-actions.md:259
 msgid ""
@@ -1667,10 +1668,10 @@ msgid ""
 "changes. It is a boolean property, which can come in handy for specific use "
 "cases."
 msgstr ""
-"Podem aprofitar al màxim els botons commutables utilitzant el gestor de la "
-"propietat `onCheckedChanged` que es [genera automàticament](https://doc.qt."
-"io/qt-6/qtqml-syntax-signals.html#property-change-signal-handlers) a partir "
-"del senyal [checked](https://doc.qt.io/qt-5/qml-qtquick-controls2-"
+"Podem aprofitar al màxim els botons commutables utilitzant el controlador de "
+"la propietat `onCheckedChanged` que es [genera automàticament](https://doc."
+"qt.io/qt-6/qtqml-syntax-signals.html#property-change-signal-handlers) a "
+"partir del senyal [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-"
 "abstractbutton.html#checked-prop). Funciona de manera similar a `onClicked`, "
 "excepte que aquí l'acció assignada s'executarà quan es canviï l'estat del "
 "botó. És una propietat booleana, el qual pot ser útil per a casos específics "
@@ -3909,9 +3910,9 @@ msgid ""
 "relevant properties for our countdowns (`name`, `description`, and a "
 "placeholder `date`)."
 msgstr ""
-"El gestor de senyals [onTriggered](docs:qtquickcontrols;QtQuick.Controls."
-"Action::triggered) és el més important. És el que farà la nostra acció quan "
-"s'utilitzi. Notareu que en el nostre exemple fem servir el mètode "
+"El controlador de senyals [onTriggered](docs:qtquickcontrols;QtQuick."
+"Controls.Action::triggered) és el més important. És el que farà la nostra "
+"acció quan s'utilitzi. Notareu que en el nostre exemple fem servir el mètode "
 "[kountdownModel.append](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel."
 "html#append-method) del `kountdownModel` que hem creat en la nostra guia "
 "d'aprenentatge anterior. Aquest mètode ens permet afegir un element nou al "
@@ -6220,31 +6221,17 @@ msgstr ""
 "Tornem al fitxer `main.qml` que hem creat en la nostra guia d'aprenentatge "
 "anterior:"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-pages.md:39
-#, fuzzy
-#| msgid ""
-#| "We make our application start to our `Kirigami.Page`. All we have "
-#| "included in it is a label containing 'Hello World', but we're going to "
-#| "spruce things up a little."
 msgid ""
 "We make our application start to our [Kirigami.Page](docs:kirigami2;Page). "
 "All we have included in it is a label containing \"Hello World\", but we're "
 "going to spruce things up a little."
 msgstr ""
-"Fem que la nostra aplicació comenci a la nostra `Kirigami.Page`. Tot el que "
-"hi hem inclòs és una etiqueta que conté *Hello World*, però arreglarem una "
-"mica les coses."
+"Fem que la nostra aplicació comenci a la nostra [Kirigami.Page](docs:"
+"kirigami2;Page). Tot el que hi hem inclòs és una etiqueta que conté «Hello "
+"World», però arreglarem una mica les coses."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-pages.md:41
-#, fuzzy
-#| msgid ""
-#| "The idea behind our app is that we're going to be able to display a bunch "
-#| "of countdowns to the user. The problem with a normal `Kirigami.Page` is "
-#| "that it has a fixed vertical size, but don't worry: Kirigami also "
-#| "supports scrollable pages. `Kirigami.ScrollablePage` is going to replace "
-#| "our `Kirigami.Page` now."
 msgid ""
 "The idea behind our app is that we're going to be able to display a bunch of "
 "countdowns to the user. The problem with a normal [Kirigami.Page](docs:"
@@ -6253,20 +6240,13 @@ msgid ""
 "kirigami2;ScrollablePage) is going to be our main page now."
 msgstr ""
 "La idea darrere de la nostra aplicació és que podrem mostrar a l'usuari un "
-"munt de comptes enrere. El problema amb una `Kirigami.Page` normal és que té "
-"una mida vertical fixa, però no us preocupeu: el Kirigami també admet "
-"pàgines desplaçables. Ara, la `Kirigami.ScrollablePage` substituirà a la "
-"nostra `Kirigami.Page`."
+"munt de comptes enrere. El problema amb una [Kirigami.Page](docs:kirigami2;"
+"Page) normal és que té una mida vertical fixa, però no us preocupeu: el "
+"Kirigami també admet pàgines desplaçables. Ara, la [Kirigami.ScrollablePage]"
+"(docs:kirigami2;ScrollablePage) serà la nostra pàgina principal."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,kct-scrollview
 #: content/docs/use/kirigami/introduction-pages.md:45
-#, fuzzy
-#| msgid ""
-#| "If you've gone ahead of the tutorial, you might have noticed that there "
-#| "is also such a thing as a `ScrollView` that you can use to contain your "
-#| "components. However, do NOT put a `ScrollView` inside a `ScrollablePage` "
-#| "as this can cause problems. Children of a `ScrollablePage` are "
-#| "functionally already in a `ScrollView`."
 msgid ""
 "If you've gone ahead of the tutorial, you might have noticed that there is "
 "also such a thing as a [ScrollView](docs:qtquickcontrols;QtQuick.Controls."
@@ -6275,20 +6255,14 @@ msgid ""
 "Children of a `ScrollablePage` are functionally already in a `ScrollView`."
 msgstr ""
 "Si heu avançat en la guia d'aprenentatge, possiblement haureu notat que "
-"també hi ha una `ScrollView` que podreu utilitzar per a contenir els vostres "
-"components. No obstant això, NO poseu una `ScrollView` dins d'una "
-"`ScrollablePage`, ja que això pot causar problemes. Els elements fills d'una "
-"`ScrollablePage` ja estan funcionals en la `ScrollView`."
+"també hi ha una [ScrollView](docs:qtquickcontrols;QtQuick.Controls."
+"ScrollView) que podreu utilitzar per a contenir els vostres components. No "
+"obstant això, NO poseu una `ScrollView` dins d'una `ScrollablePage`, ja que "
+"això pot causar problemes. Els elements fills d'una `ScrollablePage` ja són "
+"funcionals en una `ScrollView`."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-pages.md:51
-#, fuzzy
-#| msgid ""
-#| "Kirigami pages also feature neat titles placed within the toolbar, "
-#| "quickly indicating to the user which page they are on. All we need to do "
-#| "to set a page title using the `title` property of `Kirigami."
-#| "ScrollablePage`. In this case, we used one of the `i18nc()` functions we "
-#| "explored in our previous tutorial to this end."
 msgid ""
 "Kirigami pages also feature neat titles placed within the toolbar, quickly "
 "indicating to the user which page they are on. All we need to do is to set a "
@@ -6299,17 +6273,13 @@ msgstr ""
 "Les pàgines escrites amb el Kirigami també compten amb títols niuats "
 "col·locats dins de la barra d'eines, indicant ràpidament a l'usuari en quina "
 "pàgina es troba. Tot el que necessitem fer per a establir un títol de pàgina "
-"és emprar la propietat `title` de la `Kirigami.ScrollablePage`. En aquest "
-"cas, per a aquesta finalitat utilitzarem una de les funcions `i18nc()` que "
-"hem explorat en la nostra guia d'aprenentatge anterior."
+"és emprar la propietat `title` de la [Kirigami.ScrollablePage](docs:"
+"kirigami2;ScrollablePage). En aquest cas, per a aquesta finalitat "
+"utilitzarem una de les funcions `i18nc()` que hem explorat en la nostra guia "
+"d'aprenentatge anterior."
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-pages.md:55
-#, fuzzy
-#| msgid ""
-#| "You could also choose to define your page within its own QML document. To "
-#| "do so, you'd create the new QML doc, add it to your `resources.qrc` file, "
-#| "and set `Kirigami.ApplicationWindow`'s first page to it like so:"
 msgid ""
 "You could also choose to define your page within its own QML document. To do "
 "so, you'd create the new QML file, for example \"StartPage.qml\", add it to "
@@ -6317,24 +6287,20 @@ msgid ""
 "so:"
 msgstr ""
 "També podeu optar per definir la vostra pàgina dins del seu propi document "
-"en QML. Per a fer això, heu de crear el document en QML nou, afegir-lo al "
-"vostre fitxer `resources.qrc` i establir la primera pàgina de la `Kirigami."
-"ApplicationWindow` d'aquesta manera:"
+"QML. Per a fer-ho, cal crear el fitxer QML nou, per exemple «StartPage.qml», "
+"i afegir-lo al vostre fitxer `resources.qrc` i establir la primera pàgina "
+"per a carregar-lo, com així:"
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-pages.md:61
-#, fuzzy
-#| msgid ""
-#| "`pageStack.initialPage` sets the initial Page of the Page stack, and `Qt."
-#| "resolvedUrl` is converting the relative URL of the QML file into an "
-#| "absolute one."
 msgid ""
 "`pageStack.initialPage` sets the initial Page of the application's page "
 "stack, and [Qt.resolvedUrl](docs:qtqml;QtQml.Qt::resolvedUrl) converts the "
 "relative URL of the QML file into an absolute one."
 msgstr ""
-"`pageStack.initialPage` estableix la pàgina inicial de la pila de pàgines, i "
-"`Qt.resolvedUrl` converteix l'URL relatiu del fitxer en QML en un absolut."
+"`pageStack.initialPage` estableix la pàgina inicial de la pila de pàgines de "
+"l'aplicació, i [Qt.resolvedUrl](docs:qtqml;QtQml.Qt::resolvedUrl) converteix "
+"l'URL relatiu del fitxer QML en un d'absolut."
 
 #: content/docs/use/kirigami/introduction-pages.md:63
 msgid ""
@@ -6417,11 +6383,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-separatefiles.md:45
-#, fuzzy
-#| msgid ""
-#| "The key changes we have made involve the addition of our component "
-#| "definition `AddEditSheet` (and `KountdownDelegate` further down) and a "
-#| "new function called `openPopulateSheet`."
 msgid ""
 "The key changes we have made involve the addition of our component "
 "definition `AddEditSheet` (and `KountdownDelegate` further down) and a new "
@@ -6429,7 +6390,7 @@ msgid ""
 msgstr ""
 "Els canvis clau que hem realitzat impliquen l'addició de la nostra definició "
 "de component `AddEditSheet` (i `KountdownDelegate` més avall) i una funció "
-"nova anomenada `openPopulateSheet`."
+"nova anomenada `openPopulateSheet()`."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-separatefiles.md:47
@@ -6438,12 +6399,6 @@ msgstr "Vegem la nostra definició `AddEditSheet`:"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-separatefiles.md:65
-#, fuzzy
-#| msgid ""
-#| "`onAdded` and `onEdited` are signal handlers. Just like `onTriggered` is "
-#| "called when we click an action, we can also use handlers that respond to "
-#| "our custom signals. Looking at our new `AddEditSheet.qml` -- our "
-#| "repurposed adding sheet -- we can see how these signals work:"
 msgid ""
 "`onAdded` and `onEdited` are signal handlers. Just like `onTriggered` is "
 "called when we click an action, we can use handlers that respond to our "
@@ -6451,33 +6406,23 @@ msgid ""
 msgstr ""
 "`onAdded` i `onEdited` són controladors de senyals. Igual com `onTriggered` "
 "es crida quan fem clic sobre una acció, també podem utilitzar controladors "
-"que responguin als nostres senyals personalitzats. Mirant el nostre nou "
-"`AddEditSheet.qml` -el nostre full d'afegir recuperat-, podem veure com "
-"funcionen aquests senyals:"
+"que responguin als nostres senyals personalitzats."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:67
 msgid "AddEditSheet.qml"
-msgstr ""
+msgstr "AddEditSheet.qml"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-separatefiles.md:69
 msgid ""
 "Looking at our new `AddEditSheet.qml`—our repurposed adding sheet—we can see "
 "how these signals work:"
 msgstr ""
+"Mirant el nostre nou `AddEditSheet.qml` (el nostre full d'afegir recuperat), "
+"podem veure com funcionen aquests senyals:"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-simple-quotes
 #: content/docs/use/kirigami/introduction-separatefiles.md:73
-#, fuzzy
-#| msgid ""
-#| "Signals invoke their handlers when they are called. In this case, we have "
-#| "created two signals that we can invoke with different outcomes, and to "
-#| "which we can attach information about the countdown we are adding or "
-#| "creating. A neat thing about signals is that they expose the variables "
-#| "defined in them to the functions that are listening to them, which is why "
-#| "we can just call those variable names in our `onEdited` and `onAdded` "
-#| "handlers in `main.qml`. Our signals are invoked by the 'Done' button "
-#| "depending on what the `mode` property, defined at the top of our "
-#| "AddEditSheet, is set to."
 msgid ""
 "Signals invoke their handlers when they are called. In this case, we have "
 "created two signals, `added` and `edited`, that we can invoke with different "
@@ -6490,14 +6435,14 @@ msgid ""
 "AddEditSheet, is set to."
 msgstr ""
 "Quan se'ls crida, els senyals invoquen als seus controladors. En aquest cas, "
-"hem creat dos senyals que podem invocar amb resultats diferents, i als quals "
-"podem adjuntar informació sobre el compte enrere que estem afegint o creant. "
-"Una cosa interessant sobre els senyals és que exposen les variables "
-"definides en elles a les funcions que les estan escoltant, amb el qual podem "
-"cridar a aquests noms de variable en els nostres controladors `onEdited` i "
-"`onAdded` en el `main.qml`. Els nostres senyals són invocats pel botó *Done* "
-"depenent d'en què s'estableixi la propietat `mode`, definida a la part "
-"superior de la nostra `AddEditSheet`."
+"hem creat dos senyals, `added` i `edited`, que podem invocar amb resultats "
+"diferents, i als quals podem adjuntar informació sobre el compte enrere que "
+"estem afegint o creant. Una cosa interessant sobre els senyals és que "
+"exposen les variables definides en elles a les funcions que les estan "
+"escoltant, amb el qual podem cridar a aquests noms de variable en els "
+"nostres controladors `onEdited` i `onAdded` en el `main.qml`. Els nostres "
+"senyals són invocats pel botó «Done» depenent d'en què s'estableixi la "
+"propietat `mode`, definida a la part superior de la nostra AddEditSheet."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-separatefiles.md:75
@@ -6513,15 +6458,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-double-quotes
 #: content/docs/use/kirigami/introduction-separatefiles.md:77
-#, fuzzy
-#| msgid ""
-#| "Which brings us back to `main.qml` and our new `openPopulateSheet` "
-#| "function. You might have noticed that this is what is called now when the "
-#| "countdown-adding action is triggered. This function takes in several "
-#| "arguments which have been provided with defaults. This is helpful when we "
-#| "simply want to add a new countdown, because we can have the concise "
-#| "function call `openPopulateSheet(\"add\")`. More importantly, this "
-#| "function sets all the relevant properties in AddEditSheet."
 msgid ""
 "Which brings us back to `main.qml` and our new `openPopulatedSheet()` "
 "function. You might have noticed that this is what it is called now when the "
@@ -6532,13 +6468,13 @@ msgid ""
 "the relevant properties in AddEditSheet."
 msgstr ""
 "El que ens porta de tornada al `main.qml` i la nostra funció "
-"`openPopulateSheet` nova. És possible que hàgiu notat que aquesta és la que "
-"es cridarà ara quan s'activi l'acció d'afegir un compte enrere. Aquesta "
+"`openPopulateSheet()` nova. És possible que hàgiu notat que aquesta és la "
+"que es cridarà ara quan s'activi l'acció d'afegir un compte enrere. Aquesta "
 "funció pren diversos arguments que s'han proporcionat amb valors "
 "predeterminats. Això és útil quan senzillament volem afegir un compte "
 "enrere, perquè podem tenir la crida a la funció concisa "
-"`openPopulateSheet(\"add\"). Més important encara, aquesta funció estableix "
-"totes les propietats rellevants a `AddEditSheet`."
+"`openPopulateSheet(\"add\")`. Més important encara, aquesta funció estableix "
+"totes les propietats rellevants a AddEditSheet."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-double-quotes,punctuation-period-no
 #: content/docs/use/kirigami/introduction-separatefiles.md:91
@@ -6551,16 +6487,12 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/introduction-separatefiles.md:92
-#, fuzzy
-#| msgid ""
-#| "`index` argument is needed so that when we save our edited countdown, the "
-#| "correct one is modified"
 msgid ""
 "`index` is needed so that when we save our edited countdown, the correct one "
 "is modified"
 msgstr ""
-"Es necessita un argument `index`, de manera que quan desem el nostre compte "
-"enrere editat, es modifiqui el correcte."
+"Es necessita un `index`, de manera que quan desem el nostre compte enrere "
+"editat, es modifiqui el correcte"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
 #: content/docs/use/kirigami/introduction-separatefiles.md:93
@@ -6573,11 +6505,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-separatefiles.md:95
-#, fuzzy
-#| msgid ""
-#| "Of course, to actually use our sheet for anything besides adding "
-#| "countdowns first we need to make the edit button on our cards work. But "
-#| "if you look at our `Kirigami.CardsListView` in `main.qml`..."
 msgid ""
 "Of course, to actually use our sheet for anything besides adding countdowns "
 "first we need to make the edit button on our cards work. But if you look at "
@@ -6585,34 +6512,24 @@ msgid ""
 msgstr ""
 "Per descomptat, per a emprar el nostre full per a qualsevol cosa a més "
 "d'afegir comptes enrere, primer haurem de fer que funcioni el botó d'editar "
-"en les nostres targetes. Però si veieu la nostra `Kirigami.CardsListView` en "
-"el `main.qml`..."
+"en les nostres targetes. Però si veieu la nostra [Kirigami.CardsListView]"
+"(docs:kirigami2;CardsListView) en el `main.qml`..."
 
 #: content/docs/use/kirigami/introduction-separatefiles.md:105
 msgid "KountdownDelegate.qml"
-msgstr ""
+msgstr "KountdownDelegate.qml"
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-separatefiles.md:107
-#, fuzzy
-#| msgid ""
-#| "We've replaced our `Kirigami.AbstractCard` with a delegate component "
-#| "definition from `KountdownDelegate.qml`."
 msgid ""
 "We've replaced our [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) with "
 "a delegate component definition from `KountdownDelegate.qml`."
 msgstr ""
-"Substituïm la nostra `Kirigami.AbstractCard` amb una definició de component "
-"delegat des de `KountdownDelegate.qml`."
+"Substituïm la nostra [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) "
+"per una definició de component delegat des de `KountdownDelegate.qml`."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-simple-quotes
 #: content/docs/use/kirigami/introduction-separatefiles.md:111
-#, fuzzy
-#| msgid ""
-#| "The `onClicked` property of the 'Edit' button on our cards now calls the "
-#| "`openPopulateSheet` function, with the card's fetched list element "
-#| "properties set as the arguments for this function. With these, the sheet "
-#| "can be populated with the correct text."
 msgid ""
 "The [onClicked](docs:qtquickcontrols;QtQuick.Controls.AbstractButton::"
 "clicked) property of the \"Edit\" button on our cards now calls the "
@@ -6620,8 +6537,9 @@ msgid ""
 "properties set as the arguments for this function. With these, the sheet can "
 "be populated with the correct text."
 msgstr ""
-"La propietat `onClicked` del botó *Edita* en les nostres targetes, ara crida "
-"a la funció `openPopulateSheet`, amb les propietats de l'element de llista "
+"La propietat [onClicked](docs:qtquickcontrols;QtQuick.Controls."
+"AbstractButton::clicked) del botó «Edita» en les nostres targetes, ara crida "
+"a la funció `openPopulateSheet()`, amb les propietats de l'element de llista "
 "obtingudes des de la targeta establertes com els arguments per a aquesta "
 "funció. Amb aquestes, el full es pot omplir amb el text correcte."
 
@@ -6649,13 +6567,7 @@ msgstr "Colors "
 msgid "Make your app follow your user color scheme\n"
 msgstr "Fent que la vostra aplicació segueixi l'esquema de color de l'usuari\n"
 
-# skip-rule: punctuation-period
 #: content/docs/use/kirigami/style-colors.md:12
-#, fuzzy
-#| msgid ""
-#| "Kirigami has a color palette that follow the system colors, to better "
-#| "integrate on the platform it is running on (i.e. Plasma Desktop, Plasma "
-#| "Mobile, GNOME, Android, etc.)."
 msgid ""
 "Kirigami has a color palette that follows the system colors to better "
 "integrate with the platform it is running on (i.e. Plasma Desktop, Plasma "
@@ -6663,52 +6575,32 @@ msgid ""
 msgstr ""
 "El Kirigami té una paleta de colors que segueix els colors del sistema, per "
 "a integrar-se millor amb la plataforma en la qual s'executa (és a dir, "
-"Escriptori Plasma, Plasma mòbil, GNOME, Android, etc.)"
+"Escriptori Plasma, Plasma Mobile, GNOME, Android, etc.)."
 
 #: content/docs/use/kirigami/style-colors.md:16
-#, fuzzy
-#| msgid ""
-#| "All of Kirigami's QML components and all the Qt Quick Controls 2 QML "
-#| "components will already follow this palette by default, so usually no "
-#| "custom coloring should be needed at all for those controls."
 msgid ""
 "All of the QML components of Kirigami and QtQuick Controls should already "
 "follow this palette by default, so usually no custom coloring should be "
 "needed for these controls."
 msgstr ""
-"Tots els components QML de Kirigami i tots els components QML de Qt Quick "
-"Controls 2 ja seguiran de manera predeterminada aquesta paleta, de manera "
-"que normalment no es necessitaran colors personalitzats per a cap d'aquests "
+"Tots els components QML del Kirigami i tots els components QML de Qt Quick "
+"Controls ja seguiran de manera predeterminada aquesta paleta, de manera que "
+"normalment no es necessitaran colors personalitzats per a cap d'aquests "
 "controls."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period
 #: content/docs/use/kirigami/style-colors.md:20
-#, fuzzy
-#| msgid ""
-#| "Primitive components such as `Rectangle` should always be colored with "
-#| "the color palette provided by Kirigami via the [`Theme`](docs:kirigami2;"
-#| "Kirigami::PlatformTheme) attached property."
 msgid ""
 "Primitive components such as [Rectangle](docs:qtquick;QtQuick.Rectangle) "
 "should always be colored with the color palette provided by Kirigami via the "
 "[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) attached property."
 msgstr ""
-"Els components primitius com `Rectangle` sempre s'han d'acolorir amb la "
-"paleta de colors proporcionada pel Kirigami a través de la propietat adjunta "
-"[`Theme`](docs:kirigami2;Kirigami::PlatformTheme)"
+"Els components primitius com [Rectangle](docs:qtquick;QtQuick.Rectangle) "
+"sempre s'han d'acolorir amb la paleta de colors proporcionada pel Kirigami a "
+"través de la propietat adjunta [Kirigami.Theme](docs:kirigami2;Kirigami::"
+"PlatformTheme)."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/style-colors.md:23
-#, fuzzy
-#| msgid ""
-#| "Hardcoded colors in QML, such as `#32b2fa` or `red` should usually be "
-#| "avoided; if it is really necessary to have elements with custom colors, "
-#| "it should be an area where only custom colors are used (usually in the "
-#| "content area of the app, and never in the chrome such as toolbars or "
-#| "dialogs), for instance a hardcoded `black` foreground cannot be used over "
-#| "a `Kirigami.Theme.backgroundColor` background, because if the platform "
-#| "uses a dark color scheme the result will look poor contrasting black over "
-#| "almost black."
 msgid ""
 "Hardcoded colors in QML, such as `#32b2fa` or `red`, should usually be "
 "avoided; if it is really necessary to have elements with custom colors, it "
@@ -6723,11 +6615,13 @@ msgstr ""
 "En general, s'han d'evitar els colors codificats en el QML, com `#32b2fa` o "
 "`red`. Si realment és necessari tenir elements amb colors personalitzats, "
 "haurà de ser una àrea on només s'utilitzin colors personalitzats "
-"(generalment a l'àrea de contingut de l'aplicació, i mai en el cromat com "
-"les barres d'eines o els diàlegs), per exemple, un primer pla `black` "
-"codificat no es pot utilitzar sobre un fons` Kirigami.Theme."
-"backgroundColor`, perquè si la plataforma empra un esquema de color fosc, el "
-"resultat tindrà un contrast pobre del negre sobre gairebé negre."
+"(generalment a l'àrea de contingut de l'aplicació, i mai en les àrees de "
+"cromat com les barres d'eines o els diàlegs), per exemple, un primer pla "
+"`black` codificat no es pot utilitzar sobre un fons [Kirigami.Theme."
+"backgroundColor](docs:kirigami2;Kirigami::PlatformTheme::backgroundColor), "
+"perquè si la plataforma empra un esquema de color fosc, el resultat tindrà "
+"un contrast pobre del negre sobre gairebé negre. Això és un problema "
+"d'accessibilitat i s'hauria d'evitar."
 
 #: content/docs/use/kirigami/style-colors.md:30
 msgid ""
@@ -6744,11 +6638,6 @@ msgstr "Tema"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/style-colors.md:36
-#, fuzzy
-#| msgid ""
-#| "`Kirigami.Theme` is an attached property, therefore is available to use "
-#| "in any QML item. It contains as properties all the colors available in "
-#| "the palette, and what palette to use, as the `colorSet` property."
 msgid ""
 "[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) is an attached "
 "property, and therefore it is available to use for any QML item. Its "
@@ -6756,10 +6645,11 @@ msgid ""
 "to use, such as the [colorSet](docs:kirigami2;Kirigami::PlatformTheme::"
 "colorSet) property."
 msgstr ""
-"`Kirigami.Theme` és una propietat adjunta, per tant, està disponible per a "
-"utilitzar-la en qualsevol element QML. Conté com propietats tots els colors "
-"disponibles a la paleta i quina paleta emprar, així com la propietat "
-"`colorSet`."
+"[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) és una propietat "
+"adjunta, per tant, està disponible per a utilitzar-la en qualsevol element "
+"QML. Les seves propietats inclouen tots els colors disponibles a la paleta, "
+"i quina paleta emprar, així com la propietat [colorSet](docs:kirigami2;"
+"Kirigami::PlatformTheme::colorSet)."
 
 #: content/docs/use/kirigami/style-colors.md:39
 msgid "Example:"
@@ -6777,22 +6667,14 @@ msgid ""
 msgstr ""
 
 #: content/docs/use/kirigami/style-colors.md:52
-#, fuzzy
-#| msgid "Using Kirigami Gallery"
 msgid "The Colors component in Kirigami Gallery"
-msgstr "Usar la Galeria del Kirigami"
+msgstr "El component Colors en la Galeria del Kirigami"
 
 #: content/docs/use/kirigami/style-colors.md:54
 msgid "Color Set"
 msgstr "Conjunt de colors"
 
 #: content/docs/use/kirigami/style-colors.md:56
-#, fuzzy
-#| msgid ""
-#| "Depending on where a control is located, it should use a different color "
-#| "set: for instance, (with the Breeze light color theme) in itemviews, the "
-#| "normal background is almost white, while in other regions, such as "
-#| "toolbars or dialogs, the normal background color is gray."
 msgid ""
 "Depending on where a control is located, it should use a different color "
 "set: for instance, when the Breeze Light color scheme is used in [Views]"
@@ -6801,20 +6683,13 @@ msgid ""
 "dialogs, the normal background color is gray."
 msgstr ""
 "Depenent d'on s'ubiqui un control, haureu d'utilitzar un conjunt de colors "
-"diferent: per exemple, (amb el tema de color Brisa clara) en les vistes "
-"d'elements, el fons normal és gairebé blanc, mentre que en altres regions, "
-"com les barres d'eines o diàlegs, el color de fons normal és gris."
+"diferent: per exemple, quan el tema de color Brisa clara es fa servir a les "
+"[Views](https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html), el "
+"fons normal és gairebé blanc, mentre que en altres regions, com les barres "
+"d'eines o diàlegs, el color de fons normal és gris."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/style-colors.md:59
-#, fuzzy
-#| msgid ""
-#| "If you set a color set for an item, all of its child items (recursively) "
-#| "will inherit it automatically (unless the property `inherit` has "
-#| "explicitly been set to `false`, which should always be done when the "
-#| "developer wants to force a specific color set) so it is easy to change "
-#| "colors for an entire hierarchy of items without touching any of the items "
-#| "themselves."
 msgid ""
 "If you define a color set for an item, all of its child items will "
 "recursively inherit it automatically (unless the property [inherit](docs:"
@@ -6824,20 +6699,20 @@ msgid ""
 "of items without touching any of the items themselves."
 msgstr ""
 "Si establiu un conjunt de colors per a un element, tots els seus elements "
-"fill (de manera recursiva) l'heretaran automàticament (llevat que la "
-"propietat `inherit` s'hagi establert explícitament a `false`, el qual sempre "
-"s'ha de fer quan el desenvolupador vol forçar un conjunt de colors "
-"específic), de manera que és fàcil canviar els colors de tots una jerarquia "
-"d'elements sense tocar cap dels elements en si."
+"fills l'heretaran de manera recursiva automàticament (llevat que la "
+"propietat [inherit](docs:kirigami2;Kirigami::PlatformTheme::inherit) s'hagi "
+"establert explícitament a `false`, el qual sempre s'ha de fer quan el "
+"desenvolupador vol forçar un conjunt de colors específic), de manera que és "
+"fàcil canviar els colors de tots una jerarquia d'elements sense tocar cap "
+"dels elements en si."
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/style-colors.md:64
-#, fuzzy
-#| msgid "`Kirigami.Theme` supports 5 different color sets:"
 msgid ""
 "[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) supports 5 "
 "different color sets:"
-msgstr "`Kirigami.Theme` admet 5 conjunts de colors diferents:"
+msgstr ""
+"[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) admet 5 conjunts "
+"diferents de colors:"
 
 #: content/docs/use/kirigami/style-colors.md:66
 msgid ""
@@ -6848,14 +6723,12 @@ msgstr ""
 "de tots (en els temes de colors clars)"
 
 #: content/docs/use/kirigami/style-colors.md:68
-#, fuzzy
-#| msgid "Window: **Default** Color set for windows and \"chrome\" areas"
 msgid ""
 "Window: Color set for windows and chrome areas (this is also the default "
 "color set)"
 msgstr ""
-"Window: conjunt de colors **predeterminats** per a les finestres i les àrees "
-"«cromades»"
+"Window: conjunt de colors per a les finestres i les àrees «cromades» (aquest "
+"és també el conjunt de colors predeterminat)"
 
 #: content/docs/use/kirigami/style-colors.md:69
 msgid "Button: Color set used by buttons"
@@ -6870,11 +6743,6 @@ msgid "Tooltip: Color set used by tooltips"
 msgstr "Tooltip: conjunt de colors utilitzat per als consells d'eina"
 
 #: content/docs/use/kirigami/style-colors.md:72
-#, fuzzy
-#| msgid ""
-#| "Complementary: Color set meant to be complementary to Window: usually is "
-#| "dark even in light themes. May be used for \"emphasis\" in small areas of "
-#| "the application"
 msgid ""
 "Complementary: Color set meant to be complementary to Window: usually dark "
 "even in light themes. May be used for emphasis in small areas of the "
@@ -6882,7 +6750,7 @@ msgid ""
 msgstr ""
 "Complementary: conjunt de colors destinat a ser complementari a Window: "
 "generalment és fosc fins i tot en els temes clars. Pot emprar-se per a "
-"«emfatitzar» en les àrees petites de l'aplicació"
+"emfatitzar en les àrees petites de l'aplicació"
 
 #: content/docs/use/kirigami/style-colors.md:76
 msgid ""
@@ -6904,12 +6772,6 @@ msgid "Using Custom Colors"
 msgstr "Usar colors personalitzats"
 
 #: content/docs/use/kirigami/style-colors.md:98
-#, fuzzy
-#| msgid ""
-#| "Although it's discouraged to use hardcoded colors, Kirigami offers a more "
-#| "maintainable way to assign a custom hardcoded palette to an item and all "
-#| "its children, that will allow to define such custom colors in one place "
-#| "and one only:"
 msgid ""
 "Although it's discouraged to use hardcoded colors, Kirigami offers a more "
 "maintainable way to assign a custom hardcoded palette to an item and all its "
@@ -6918,12 +6780,12 @@ msgid ""
 msgstr ""
 "Tot i que es desaconsella utilitzar colors codificats, el Kirigami ofereix "
 "una forma més fàcil de mantenir per a assignar una paleta codificada "
-"personalitzada a un element i a tots els seus elements fills, el qual "
-"permetrà definir aquests colors personalitzats en un lloc i només en un:"
+"personalitzada a un element i a tots els seus fills, el qual permetrà "
+"definir aquests colors personalitzats en un lloc i només en un:"
 
 #: content/docs/use/kirigami/style-colors.md:113
 msgid "Example with custom colors"
-msgstr ""
+msgstr "Exemple amb colors personalitzats"
 
 #: content/docs/use/kirigami/style-typography.md:0
 msgid "Typography"
@@ -6934,16 +6796,12 @@ msgid "Headings"
 msgstr "Capçaleres"
 
 #: content/docs/use/kirigami/style-typography.md:12
-#, fuzzy
-#| msgid ""
-#| "Kirigami provides an [heading element](docs:kirigami2;Heading) that can "
-#| "be used for page or section titles."
 msgid ""
 "Kirigami provides a [Heading](docs:kirigami2;Heading) that can be used for "
 "page or section titles."
 msgstr ""
-"El Kirigami proporciona un [element de capçalera](docs:kirigami2;Heading) "
-"que es pot utilitzar per a títols de pàgines o de seccions."
+"El Kirigami proporciona un [Heading](docs:kirigami2;Heading) que es pot "
+"utilitzar per a títols de pàgines o de seccions."
 
 #: content/docs/use/kirigami/style-typography.md:47
 msgid "Five headings with different levels for size comparison"
@@ -6953,15 +6811,13 @@ msgstr ""
 msgid "Labels"
 msgstr "Etiquetes"
 
-# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/style-typography.md:55
-#, fuzzy
-#| msgid "Text elements should use the Label element from QtQuick Controls 2."
 msgid ""
 "Text elements should use the [Label](docs:qtquickcontrols;QtQuick.Controls."
 "Label) component from QtQuick Controls 2."
 msgstr ""
-"Els elements de text hauran d'emprar l'element `Label` de QtQuick Controls 2."
+"Els elements de text hauran d'emprar l'element [Label](docs:qtquickcontrols;"
+"QtQuick.Controls.Label) de QtQuick Controls 2."
 
 #: content/docs/use/kirigami/style-typography.md:79
 msgid "Text Alignment"
@@ -7000,18 +6856,13 @@ msgid "Rich Text"
 msgstr "Text enriquit"
 
 #: content/docs/use/kirigami/style-typography.md:233
-#, fuzzy
-#| msgid ""
-#| "QML allows you to display (and edit) rich text. The behavior can be "
-#| "controlled via the [textFormat](https://doc.qt.io/qt-5/qml-qtquick-text."
-#| "html#textFormat-prop) property."
 msgid ""
 "QML allows you to display (and edit) rich text. The behavior can be "
 "controlled via the [textFormat](https://doc.qt.io/qt-6/qml-qtquick-text."
 "html#textFormat-prop) property."
 msgstr ""
-"El QML permet mostrar (i editar) en text enriquit. El comportament es pot "
-"controlar mitjançant la propietat [textFormat](https://doc.qt.io/qt-5/qml-"
+"El QML permet mostrar (i editar) el text enriquit. El comportament es pot "
+"controlar mitjançant la propietat [textFormat](https://doc.qt.io/qt-6/qml-"
 "qtquick-text.html#textFormat-prop)."
 
 #: content/docs/use/kirigami/style-typography.md:260
@@ -7022,18 +6873,14 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/style-typography.md:268
-#, fuzzy
-#| msgid ""
-#| "The font size of the Kirigami [Theme](docs:kirigami2;Theme) is available "
-#| "as `Kirigami.Theme.defaultFont.pointSize` in your application."
 msgid ""
 "The font size of the [Kirigami.Theme](docs:kirigami2;Kirigami::"
 "PlatformTheme) is available as `Kirigami.Theme.defaultFont.pointSize` in "
 "your application."
 msgstr ""
-"La mida del tipus de lletra del [Theme](docs:kirigami2;Theme) de Kirigami "
-"està disponible en la vostra aplicació com una `Kirigami.Theme.defaultFont."
-"pointSize`."
+"La mida del tipus de lletra del [Kirigami.Theme](docs:kirigami2;Kirigami::"
+"PlatformTheme) està disponible en la vostra aplicació com una `Kirigami."
+"Theme.defaultFont.pointSize`."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #~ msgid ""
