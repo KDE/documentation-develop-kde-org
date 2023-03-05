@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-03-03 22:19+0100\n"
+"PO-Revision-Date: 2023-03-04 16:41+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -1013,6 +1013,9 @@ msgid ""
 "(docs:kirigami2;ContextDrawer) to your [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow)."
 msgstr ""
+"Per a fer que les accions de context funcionin al mòbil, haureu d'afegir un "
+"[ContextDrawer](docs:kirigami2;ContextDrawer) al vostre [Kirigami."
+"ApplicationWindow](docs:kirigami2;ApplicationWindow)."
 
 #: content/docs/use/kirigami/components-actions.md:120
 msgid "Global Drawer"
@@ -1070,6 +1073,7 @@ msgstr ""
 msgid "![Search field with text: \"I want ](searchfield.png)"
 msgstr "![Camp de cerca amb el text: \"I want ](searchfield.png)"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-actions.md:194
 msgid ""
 "You should rarely use an ActionTextField directly. [SearchField](docs:"
@@ -1077,6 +1081,10 @@ msgid ""
 "both inherit from `ActionTextField` and are likely to cover your desired use-"
 "case."
 msgstr ""
+"Rarament hauríeu d'utilitzar un ActionTextField directament. El [SearchField]"
+"(docs:kirigami2;SearchField) i el [PasswordField](docs:kirigami2;"
+"PasswordField) hereten del `ActionTextField` i és probable que cobreixin el "
+"vostre cas d'ús desitjat."
 
 #: content/docs/use/kirigami/components-actions.md:198
 msgid "SwipeListItem"
@@ -1155,12 +1163,16 @@ msgstr ""
 msgid "Cards"
 msgstr "Targetes (Card)"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-actions.md:263
 msgid ""
 "A [Kirigami.Card](docs:kirigami2;Card) is used to display a collection of "
 "information or actions together. These actions can be added to the `actions` "
 "group, similarly to previous components."
 msgstr ""
+"Un [Kirigami.Card](docs:kirigami2;Card) s'utilitza per a mostrar una "
+"col·lecció d'informació o accions junts. Aquestes accions es poden afegir al "
+"grup `actions`, de manera similar als components anteriors."
 
 #: content/docs/use/kirigami/components-actions.md:280
 #: content/docs/use/kirigami/components-card.md:67
@@ -1173,6 +1185,9 @@ msgid ""
 "title, white background behind its text, and two actions with icons and a "
 "hamburger menu at the bottom](card.png)"
 msgstr ""
+"![Captura de pantalla d'una targeta totalment desenvolupada amb un fons de "
+"bàner darrere del títol, fons blanc darrere del text i dues accions amb "
+"icones i un menú d'hamburguesa a la part inferior](card.png)"
 
 #: content/docs/use/kirigami/components-actions.md:305
 msgid ""
@@ -1224,6 +1239,10 @@ msgid ""
 "beginner tutorial or in [the dedicated documentation page for them](../"
 "components-actions/)."
 msgstr ""
+"Aquesta pàgina assumeix que esteu familiaritzat amb els objectes [Kirigami."
+"Action](docs:kirigami2;Action). Si no ho esteu, podeu aprendre-ho tot a la "
+"nostra guia d'aprenentatge inicial o a la [pàgina de documentació dedicada a "
+"ells](../components-actions/)."
 
 #: content/docs/use/kirigami/components-actiontoolbar.md:20
 msgid "Creating our first ActionToolBar"
@@ -1395,6 +1414,10 @@ msgid ""
 "title, white background behind its text, and two actions with icons and a "
 "hamburger menu at the bottom](/docs/use/kirigami/components-card/card1.png)"
 msgstr ""
+"![Captura de pantalla d'una targeta totalment desenvolupada amb un fons de "
+"bàner darrere del títol, fons blanc darrere del text, i dues accions amb "
+"icones i un menú d'hamburguesa a la part inferior](/docs/use/kirigami/"
+"components-card/card1.png)"
 
 #: content/docs/use/kirigami/components-card.md:93
 msgid "CardsLayout"
@@ -1416,15 +1439,18 @@ msgstr ""
 "és realment ampla, o es convertiran en una sola columna si no hi ha prou "
 "espai per a dues columnes, com en la pantalla d'un telèfon mòbil."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-card.md:99
 msgid ""
 "[`CardsListView`](docs:kirigami2;CardsListView) or [`CardsGridView`](docs:"
 "kirigami2;CardsGridView) are better suited for larger models."
 msgstr ""
+"[`CardsListView`](docs:kirigami2;CardsListView) o [`CardsGridView`](docs:"
+"kirigami2;CardsGridView) són més adequats per als models més grans."
 
 #: content/docs/use/kirigami/components-card.md:103
 msgid "Important"
-msgstr ""
+msgstr "Important"
 
 #: content/docs/use/kirigami/components-card.md:105
 msgid ""
@@ -1432,6 +1458,9 @@ msgid ""
 "within a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
 "columnlayout.html)."
 msgstr ""
+"Una [CardsLayout](docs:kirigami2;CardsLayout) sempre hauria d'estar inclosa "
+"dins d'una [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
+"columnlayout.html)."
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-card.md:109
@@ -1456,6 +1485,10 @@ msgid ""
 "orientation on top of a card in landscape orientation, all with different "
 "components being used](/docs/use/kirigami/components-card/cardslayout.png)"
 msgstr ""
+"![Captura de pantalla d'una CardsLayout que mostra dues targetes cara a cara "
+"en orientació vertical a la part superior d'una targeta en orientació "
+"horitzontal, totes amb components diferents que s'utilitzen](/docs/use/"
+"kirigami/components-card/cardslayout.png)"
 
 #: content/docs/use/kirigami/components-card.md:151
 msgid "CardsListView"
@@ -1626,12 +1659,16 @@ msgstr ""
 "propietat [onClicked](docs:qtquickcontrols;QtQuick.Controls.AbstractButton::"
 "clicked)."
 
+# skip-rule: common-beep
 #: content/docs/use/kirigami/components-controls.md:41
 msgid ""
 "![A window containing a button \"Beep\" on the upper left side, which when "
 "clicked shows a passive notification \"Boop\" at the bottom of the window](/"
 "docs/use/kirigami/components-controls/controls-button.png)"
 msgstr ""
+"![Una finestra que conté un botó «Beep» a la part superior esquerra, que "
+"quan s'hi fa clic mostra una notificació passiva «Boop» a la part inferior "
+"de la finestra](/docs/use/kirigami/components-controls/controls-button.png)"
 
 #: content/docs/use/kirigami/components-controls.md:47
 msgid "Toggleable buttons"
@@ -1901,6 +1938,10 @@ msgid ""
 "direction. In both modes, sliders in vertical orientation go from the bottom "
 "up."
 msgstr ""
+"En el mode d'esquerra a dreta, els controls lliscants van d'esquerra a dreta "
+"per a augmentar en l'orientació horitzontal, mentre que en el mode de dreta "
+"a esquerra van en la direcció inversa. En ambdós modes, els controls "
+"lliscants en orientació vertical van des de baix cap a dalt."
 
 #: content/docs/use/kirigami/components-controls.md:230
 msgid ""
@@ -2094,6 +2135,9 @@ msgid ""
 "left edge to the middle of the screen in Left to Right mode or from the "
 "right edge in Right to Left mode."
 msgstr ""
+"Es pot activar tocant el menú d'hamburguesa o lliscant des de la vora "
+"esquerra al centre de la pantalla en el mode d'esquerra a dreta o des de la "
+"vora dreta en el mode de dreta a esquerra."
 
 #: content/docs/use/kirigami/components-drawers.md:20
 msgid ""
@@ -2181,7 +2225,7 @@ msgstr "En aquest mode de menú, les capçaleres i els bàners no seran visibles
 
 #: content/docs/use/kirigami/components-drawers.md:149
 msgid "Global drawer in menu mode, without a header or banner"
-msgstr ""
+msgstr "Calaix global en el mode de menú, sense capçalera ni bàner"
 
 #: content/docs/use/kirigami/components-drawers.md:155
 msgid "Banners"
@@ -2233,7 +2277,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-drawers.md:195
 msgid "Global drawer with title and icon in banner"
-msgstr ""
+msgstr "Calaix global amb el títol i la icona al bàner"
 
 #: content/docs/use/kirigami/components-drawers.md:203
 msgid ""
@@ -2264,6 +2308,11 @@ msgid ""
 "only relevant in certain contexts. This is usually used in separate [pages](/"
 "docs/kirigami/introduction-pages)."
 msgstr ""
+"Mentre un [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer) mostra les "
+"accions globals disponibles a tota la vostra aplicació, un [Kirigami."
+"ContextDrawer](docs:kirigami2;ContextDrawer) s'ha d'utilitzar per a mostrar "
+"accions que només són rellevants en determinats contextos. Normalment "
+"s'utilitza en [pàgines](/docs/kirigami/introduction-pages) separades."
 
 #: content/docs/use/kirigami/components-drawers.md:211
 msgid ""
@@ -2272,7 +2321,13 @@ msgid ""
 "group](docs:kirigami2;Page::actions). It also behaves differently depending "
 "on whether it is being used on a mobile platform or on a desktop."
 msgstr ""
+"Només es mostrarà un calaix contextual si s'ha creat qualsevol "
+"[contextualActions](docs:kirigami2;Page::contextualActions) com a part del "
+"[grup Page.actions](docs:kirigami2;Page::actions). També es comporta de "
+"manera diferent depenent de si s'utilitza en una plataforma mòbil o en un "
+"escriptori."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-drawers.md:213
 msgid ""
 "On a desktop, when a window has enough space, contextual actions show up as "
@@ -2283,15 +2338,24 @@ msgid ""
 "`actions.right`; these do not get hidden in space-constrained windows, and "
 "are instead collapsed into their respective icons."
 msgstr ""
+"En un escriptori, quan una finestra té prou espai, les accions contextuals "
+"es mostren com a part del grup `actions` a la barra d'eines superior. Quan "
+"l'espai és limitat, com en un dispositiu mòbil o en una finestra estreta, "
+"les accions contextuals s'oculten darrere d'un menú d'hamburguesa al costat "
+"dret. Això és diferent d'altres accions en el grup `actions`, concretament "
+"`actions.main`, `actions.left` i `actions.right`; aquestes no s'ocultaran en "
+"les finestres restringides per espais, i en el seu lloc es col·lapsaran en "
+"les seves respectives icones."
 
 #: content/docs/use/kirigami/components-drawers.md:226
 msgid "Context drawer with contextual actions hidden"
-msgstr ""
+msgstr "Calaix contextual amb accions contextuals ocultes"
 
 #: content/docs/use/kirigami/components-drawers.md:228
 msgid "Context drawer showing all contextual actions"
-msgstr ""
+msgstr "Calaix contextual que mostra totes les accions contextuals"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-drawers.md:234
 msgid ""
 "On mobile, the drawer always consists of actions hidden behind a hamburger "
@@ -2301,14 +2365,20 @@ msgid ""
 "the mobile interface, you can run your application with the environment "
 "variable `QT_QUICK_CONTROLS_MOBILE=1`."
 msgstr ""
+"Al mòbil, el calaix sempre consisteix en accions ocultes darrere d'un menú "
+"d'hamburguesa. Es pot activar tocant el menú d'hamburguesa o passant de la "
+"vora dreta al centre de la pantalla en el mode d'esquerra a dreta o de la "
+"vora esquerra en el mode de dreta a esquerra. Si esteu en un escriptori i "
+"voleu provar la interfície mòbil, podeu executar la vostra aplicació amb la "
+"variable d'entorn `QT_QUICK_CONTROLS_MOBILE=1`."
 
 #: content/docs/use/kirigami/components-drawers.md:240
 msgid "Same example above, running in mobile mode"
-msgstr ""
+msgstr "El mateix exemple anterior, executant-se en mode mòbil"
 
 #: content/docs/use/kirigami/components-drawers.md:246
 msgid "Context drawer open in mobile mode"
-msgstr ""
+msgstr "Calaix contextual obert en mode mòbil"
 
 #: content/docs/use/kirigami/components-drawers.md:252
 msgid "Modal and Inline drawers"
@@ -2365,7 +2435,7 @@ msgstr ""
 "[Popup.modal](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup.html#modal-"
 "prop) controla si el calaix serà modal o inclòs depenent d'un valor booleà."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-drawers.md:262
 msgid ""
 "[Drawer.edge](https://doc.qt.io/qt-6/qml-qtquick-controls2-drawer.html#edge-"
@@ -2500,7 +2570,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-formlayouts.md:54
 msgid "A simple form layout in desktop mode"
-msgstr ""
+msgstr "Una disposició de formulari senzilla en mode escriptori"
 
 #: content/docs/use/kirigami/components-formlayouts.md:60
 msgid "Sections and separators"
@@ -2538,6 +2608,7 @@ msgstr ""
 "utilitzar la propietat [Kirigami.FormData.isSection](docs:kirigami2;"
 "FormLayoutAttached::isSection) en qualsevol altre component."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-formlayouts.md:66
 msgid ""
 "However, this is not recommended. On components where [Kirigami.FormData."
@@ -2546,6 +2617,11 @@ msgid ""
 "kirigami2;FormLayoutAttached::label) property will be displayed as the "
 "section's header text."
 msgstr ""
+"Tanmateix, això no està recomanat. Als components on [Kirigami.FormData."
+"isSection](docs:kirigami2;FormLayoutAttached::isSection) està establert a "
+"`true`, el text de l'etiqueta proporcionat per la propietat [Kirigami."
+"FormData.label](docs:kirigami2;FormLayoutAttached::label) d'aquest component "
+"es mostrarà com a text de capçalera de la secció."
 
 #: content/docs/use/kirigami/components-formlayouts.md:70
 msgid ""
@@ -2553,16 +2629,22 @@ msgid ""
 "use [Kirigami.Separator](docs:kirigami2;Separator) or [Item](docs:qtquick;"
 "QtQuick.Item) components in places where you would like to use a header text."
 msgstr ""
+"Això no s'aplica a cada component, d'aquí la recomanació que utilitzeu els "
+"components [Kirigami.Separator](docs:kirigami2;Separator) o [Item](docs:"
+"qtquick;QtQuick.Item) en llocs on voleu utilitzar un text de capçalera."
 
 #: content/docs/use/kirigami/components-formlayouts.md:74
 msgid ""
 "This header text is larger than the normal label text, and provides users "
 "with a nice visual cue of what the form layout section is about."
 msgstr ""
+"Aquest text de capçalera és més gran que el text d'etiqueta normal, i "
+"proporciona als usuaris una pista visual agradable de què tracta la secció "
+"de disseny de formulari."
 
 #: content/docs/use/kirigami/components-formlayouts.md:130
 msgid "A form layout with sections"
-msgstr ""
+msgstr "Una disposició de formulari amb seccions"
 
 #: content/docs/use/kirigami/components-formlayouts.md:137
 msgid "Checkable children"
@@ -2585,7 +2667,7 @@ msgstr ""
 
 #: content/docs/use/kirigami/components-formlayouts.md:166
 msgid "A form layout with checkable label."
-msgstr ""
+msgstr "Una disposició de formulari amb una etiqueta que es pot marcar."
 
 #: content/docs/use/kirigami/components-formlayouts.md:172
 msgid "Forcing a desktop or mobile layout"
@@ -2641,10 +2723,19 @@ msgid ""
 "this with help of [Kirigami.FormData.labelAlignment](docs:kirigami2;"
 "FormLayoutAttached::labelAlignment)."
 msgstr ""
+"Hi ha instàncies en què voleu assignar una etiqueta als components que tenen "
+"més d'una línia o a una llista de components. Això es pot aconseguir posant "
+"el [Kirigami.FormData.label](docs:kirigami2;FormLayoutAttached::label) a la "
+"[ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
+"html), tal com es pot veure a [Seccions i separadors](#sections-and-"
+"separators). Per defecte, l'etiqueta es col·loca al centre vertical de la "
+"disposició, la qual cosa no sempre és desitjable. Podem canviar això amb "
+"l'ajuda del [Kirigami.FormData.labelAlignment](docs:kirigami2;"
+"FormLayoutAttached::labelAlignment)."
 
 #: content/docs/use/kirigami/components-formlayouts.md:238
 msgid "A form layout with top-aligned label"
-msgstr ""
+msgstr "Una disposició de formulari amb una etiqueta alineada a dalt"
 
 #: content/docs/use/kirigami/components-formlayouts.md:244
 msgid ""
@@ -2652,16 +2743,21 @@ msgid ""
 "or lists of components whose size you do not know beforehand. [Elisa]"
 "(https://apps.kde.org/elisa) is a very good example of this:"
 msgstr ""
+"Establir l'alineació de l'etiqueta és especialment pràctic per a gestionar "
+"els components o llistes de components la mida dels quals no coneixeu "
+"prèviament. L'[Elisa](https://apps.kde.org/elisa) és un bon exemple d'això:"
 
 #: content/docs/use/kirigami/components-formlayouts.md:246
 msgid ""
 "The Comment label is only top aligned when its corresponding component has "
 "more than one line"
 msgstr ""
+"L'etiqueta Comment només està alineada a dalt quan el seu component "
+"corresponent té més d'una línia"
 
 #: content/docs/use/kirigami/components-formlayouts.md:248
 msgid "We can do something similar to this with a JavaScript ternary operator:"
-msgstr ""
+msgstr "Podem fer quelcom similar a això amb un operador JavaScript ternari:"
 
 #: content/docs/use/kirigami/components-inlinemessages.md:0
 msgid "Inline messages"
@@ -3254,7 +3350,7 @@ msgstr "Full superposat d'amplada fixa"
 msgid "Headers and footers"
 msgstr "Capçaleres i peus"
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-overlaysheets.md:131
 msgid ""
 "Overlay sheets come by default with a [header](docs:kirigami2;templates::"
@@ -3355,6 +3451,10 @@ msgid ""
 "screen of the application, or it can be shown together with other pages at "
 "the same time, if there is space."
 msgstr ""
+"Fins ara hem vist que un dels components principals d'una finestra del "
+"Kirigami és un [Kirigami.Page](docs:kirigami2;Page). Una sola pàgina pot "
+"envoltar tota la pantalla de l'aplicació, o es pot mostrar juntament amb "
+"altres pàgines al mateix temps, si hi ha espai."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:14
 msgid ""
@@ -3362,6 +3462,9 @@ msgid ""
 "existing page(s), forming a row. This row of pages can be managed with the "
 "fittingly named [Kirigami.PageRow](docs:kirigami2;PageRow)."
 msgstr ""
+"Quan s'afegeix una pàgina, o *s'empeny*, apareix a la dreta de les pàgines "
+"existents, formant una fila. Aquesta fila de pàgines es pot gestionar amb el "
+"que s'anomena correctament [Kirigami.PageRow](docs:kirigami2;PageRow)."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:16
 msgid "A minimal page row with a single page could look like this:"
@@ -3370,7 +3473,9 @@ msgstr "Una fila de pàgina mínima amb una única pàgina hauria de ser així:"
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:41
 msgid "A single page with light blue color to show the page's dimensions"
 msgstr ""
+"Una sola pàgina amb color blau clar per a mostrar les dimensions de la pàgina"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:43
 msgid ""
 "There are two improvements that can be done here. The first is that, with "
@@ -3385,11 +3490,25 @@ msgid ""
 "from, but we'll go with [Kirigami.ApplicationHeaderStyle.Auto](docs:"
 "kirigami2;templates::ApplicationHeader::headerStyle) for now."
 msgstr ""
+"Aquí es poden fer dues millores. El primer és que, amb [initialPage](docs:"
+"kirigami2;PageRow::initialPage), podem establir que `mainPage` sigui la "
+"primera pàgina que aparegui a la fila de la pàgina, i que les seves "
+"dimensions siguin gestionades per la fila de la pàgina en lloc de fer-ho a "
+"través d'[ancoratges](https://doc.qt.io/qt-6/qtquick-positioning-anchors."
+"html), [posicionadors](https://doc.qt.io/qt-6/qtquick-positioning-layouts."
+"html) o [disposicions](https://doc.qt.io/qt-6/layouts.html) manuals. El "
+"segon és tenir una barra d'eines, que es pot establir definint un estil "
+"d'eines amb [globalToolBar.style](docs:kirigami2;PageRow::globalToolBar). Hi "
+"ha alguns estils que podem triar, però continuarem amb el [Kirigami."
+"ApplicationHeaderStyle.Auto](docs:kirigami2;templates::ApplicationHeader::"
+"headerStyle) per ara."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:65
 msgid ""
 "A single page with toolbar and light blue color to show the page's dimensions"
 msgstr ""
+"Una sola pàgina amb barra d'eines i color blau clar per a mostrar les "
+"dimensions de la pàgina"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:67
 msgid ""
@@ -3401,6 +3520,13 @@ msgid ""
 "[goForward()](docs:kirigami2;PageRow::goForward) can be used to navigate "
 "between pages."
 msgstr ""
+"Només hi ha dues maneres d'afegir pàgines a una fila de pàgina: establint la "
+"seva [initialPage](docs:kirigami2;PageRow::initialPage) (que opcionalment "
+"pot prendre una matriu de pàgines) o utilitzant [push()](docs:kirigami2;"
+"PageRow::push). Per a suprimir una pàgina de la fila de pàgina, haureu "
+"d'utilitzar [pop()](docs:kirigami2;PageRow::pop), mentre que [goBack()](docs:"
+"kirigami2;PageRow::goBack) o [goForward()](docs:kirigami2;PageRow::"
+"goForward) es pot utilitzar per a navegar entre les pàgines."
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:112
 msgid "Initial page with light blue color"
@@ -3410,11 +3536,13 @@ msgstr "Pàgina inicial amb un color blau clar"
 msgid ""
 "Upon clicking \\\"Push!\\\", a second page with light green color shows up"
 msgstr ""
+"En fer clic a \\\"Push!\\\", apareix una segona pàgina de color verd clar"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:116
 msgid "The application's stack of pages"
 msgstr "La pila de pàgines de l'aplicació"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:118
 msgid ""
 "If a [Kirigami.PageRow](docs:kirigami2;PageRow) with a toolbar looks "
@@ -3423,13 +3551,22 @@ msgid ""
 "pageStack) is nothing more than a very convenient, global page row. Every "
 "function available to a `PageRow` is also available to the `pageStack`."
 msgstr ""
+"Si un [Kirigami.PageRow](docs:kirigami2;PageRow) amb una barra d'eines "
+"ussembla familiar, és perquè l'heu vist abans. Una [ApplicationWindow."
+"pageStack](docs:kirigami2;AbstractApplicationWindow::pageStack) no és més "
+"que una fila de pàgina global molt útil. Cada funció disponible per a una "
+"`PageRow` també està disponible per a `pageStack`."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:120
 msgid ""
 "The previous example can be reduced significantly with a `pageStack`, with "
 "the added bonus of navigation actions:"
 msgstr ""
+"L'exemple anterior es pot reduir significativament amb una `pageStack`, amb "
+"la bonificació afegida de les accions de navegació:"
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:167
 msgid ""
 "In general you'll want to use a `pageStack` rather than implement your own "
@@ -3441,6 +3578,14 @@ msgid ""
 "[applicationWindow()](docs:kirigami2;AbstractApplicationWindow::"
 "applicationWindow):"
 msgstr ""
+"En general, voldreu utilitzar una `pageStack` en lloc d'implementar la "
+"vostra [PageRow](docs:kirigami2;PageRow), especialment quan la vostra "
+"aplicació es fa més gran i necessiteu els vostres components residint en "
+"fitxers separats. Si creeu la finestra al vostre `main.qml` utilitzant un "
+"[Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), un component "
+"que resideix en un altre fitxer encara pot invocar directament la "
+"`pageStack` global mitjançant una crida a la [applicationWindow()](docs:"
+"kirigami2;AbstractApplicationWindow::applicationWindow):"
 
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:170
 msgid "\"main.qml\""
@@ -3457,6 +3602,8 @@ msgstr "\"BasicPage.qml\""
 #: content/docs/use/kirigami/components-pagerow_pagestack.md:209
 msgid "Clicking the button pushes a new page with help of applicationWindow"
 msgstr ""
+"En fer clic al botó s'empeny una pàgina nova amb l'ajuda "
+"d'«applicationWindow»"
 
 #: content/docs/use/kirigami/components-progressbars.md:0
 msgid "Progress Bars and Indicators"
@@ -4077,6 +4224,7 @@ msgid "You can quickly create this file structure with:"
 msgstr "Podeu crear ràpidament aquesta estructura de fitxers amb:"
 
 #: content/docs/use/kirigami/introduction-getting_started.md:56
+#, fuzzy
 msgid ""
 "Alternatively, you may want to use the standard Kirigami template provided "
 "by [KDevelop](https://apps.kde.org/kdevelop/), KDE's main IDE for coding in C"
@@ -4084,6 +4232,12 @@ msgid ""
 "available if you only need a quick template to start coding in your favorite "
 "IDE or text editor."
 msgstr ""
+"De manera alternativa, és possible que vulgueu utilitzar la plantilla "
+"estàndard del Kirigami proporcionada pel [KDevelop](https://apps.kde.org/"
+"kdevelop/), l'EID principal del KDE per a codificar en C++ i QML. El "
+"[KAppTemplate](https://apps.kde.org/kapptemplate/) també està disponible si "
+"només necessiteu una plantilla ràpida per a iniciar la codificació en el "
+"vostre IDE o editor de text preferit."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/use/kirigami/introduction-getting_started.md:60
@@ -4164,6 +4318,7 @@ msgstr ""
 "mides diferents."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:79
+#, fuzzy
 msgid ""
 "Putting the QtQuick Controls and Kirigami imports into separate namespaces "
 "using the `as` keyword is a best practice that ensures no components with "
@@ -4171,6 +4326,12 @@ msgid ""
 "Controls in the wild, such as \"QQC\" or \"QQC2\". We will be using "
 "\"Controls\" in this tutorial for clarity."
 msgstr ""
+"Posar els QtQuick Controls i les importacions de Kirigami en espais de noms "
+"separats utilitzant la paraula clau `as` és una millor pràctica que assegura "
+"que cap component amb el mateix nom pugui entrar en conflicte. Podeu veure "
+"diferents noms per als controls QtQuick en estat salvatge, com ara «QQC» o "
+"«QQC2». Utilitzarem \"Controls\" en aquesta guia d'aprenentatge per a més "
+"claredat."
 
 #: content/docs/use/kirigami/introduction-getting_started.md:83
 msgid ""
@@ -4873,6 +5034,7 @@ msgstr ""
 "tercer és un número que utilitzem com a marcador de posició."
 
 #: content/docs/use/kirigami/introduction-listviews.md:53
+#, fuzzy
 msgid ""
 "Since QML is built on top of JavaScript, many of this language's features "
 "are available for use in QML files. However, QML variables have to be "
@@ -4880,6 +5042,12 @@ msgid ""
 "more about it in [this page](https://doc.qt.io/qt-6/qtqml-javascript-topic."
 "html)."
 msgstr ""
+"Com que el QML està construït sobre JavaScript, moltes de les "
+"característiques d'aquest llenguatge estan disponibles per al seu ús en "
+"fitxers QML. No obstant això, les variables QML s'han de prefixar amb "
+"`property`, a menys que estigui dins d'un bloc de codi JS. Podeu llegir-ne "
+"més a la [aquesta pàgina](https://doc.qt.io/qt-6/qtqml-javascript-topic."
+"html)."
 
 #: content/docs/use/kirigami/introduction-listviews.md:57
 msgid ""
@@ -4980,12 +5148,17 @@ msgid "Building our delegate card"
 msgstr "Construir la nostra targeta de delegat"
 
 #: content/docs/use/kirigami/introduction-listviews.md:71
+#, fuzzy
 msgid ""
 "The [Component](docs:qtqml;QtQml.Component) that will represent our delegate "
 "can be added inside our [Kirigami.ApplicationWindow](docs:kirigami2;"
 "ApplicationWindow). We will then proceed by checking what each part of our "
 "delegate component does."
 msgstr ""
+"El [Component](docs:qtqml;QtQml.Component) que representarà el nostre "
+"delegat es pot afegir dins del nostre [Kirigami.ApplicationWindow](docs:"
+"kirigami2;ApplicationWindow). Després procedirem comprovant el que fa cada "
+"part del nostre component delegat."
 
 #: content/docs/use/kirigami/introduction-listviews.md:78
 msgid ""
@@ -5048,6 +5221,7 @@ msgid "Layouts"
 msgstr "Disposicions"
 
 #: content/docs/use/kirigami/introduction-listviews.md:149
+#, fuzzy
 msgid ""
 "The [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
 "is inside the [Item](https://doc.qt.io/qt-6/qml-qtquick-item.html) component "
@@ -5056,6 +5230,12 @@ msgid ""
 "doc.qt.io/qt-6/qml-qtquick-item.html) that contains what will be displayed "
 "in your card."
 msgstr ""
+"El component [GridLayout](https://doc.qt.io/qt-6/qml-layouts-gridlayout."
+"html) es troba dins del component [Item](https://doc.qt.io/qt-6/qtquick-item."
+"html) que hem proporcionat per a la propietat [contentItem](https://doc.qt."
+"io/qt-6/qml-qtquick-controls2-control.html#contentItem-prop). Aquest és "
+"l'[element](https://doc.qt.io/qt-6/qml-qtquick-item.html) que conté el que "
+"es mostrarà a la targeta."
 
 #: content/docs/use/kirigami/introduction-listviews.md:151
 msgid ""
@@ -5171,13 +5351,18 @@ msgid "18px"
 msgstr "18px"
 
 #: content/docs/use/kirigami/introduction-listviews.md:187
+#, fuzzy
 msgid ""
 "KDE's Visual Design Group (VDG) has a lot more information about the "
 "different units defined within Plasma and Kirigami on the [Human Interface "
 "Guidelines](/hig/layout/units/)."
 msgstr ""
+"El Grup de Disseny Visual del KDE (VDG) té molta més informació sobre les "
+"diferents unitats definides en el Plasma i el Kirigami a les [Guia de la "
+"interfície humana](/hig/layout/units/)."
 
 #: content/docs/use/kirigami/introduction-listviews.md:191
+#, fuzzy
 msgid ""
 "As you might remember, `root` is the id of our [Kirigami.ApplicationWindow]"
 "(docs:kirigami2;ApplicationWindow). It provides the [wideScreen](docs:"
@@ -5187,6 +5372,15 @@ msgid ""
 "number of columns in our grid depending on the screen we are using: if it's "
 "a widescreen, the grid will have 4 columns, else it will have 2."
 msgstr ""
+"Com recordareu, `root` és l'identificador del nostre [Kirigami."
+"ApplicationWindow](docs:kirigami2;ApplicationWindow). Proporciona la "
+"propietat [wideScreen](docs:kirigami2;AbstractApplicationWindow::"
+"wideScreen), utilitzada per determinar si la pantalla del dispositiu actual "
+"és una pantalla ampla (és a dir, un monitor d'ordinador o un telèfon en "
+"paisatge). Utilitzem un condicional ternari aquí per a variar el nombre de "
+"columnes a la nostra quadrícula depenent de la pantalla que utilitzem: si és "
+"una pantalla ampla, la quadrícula tindrà 4 columnes, en cas contrari tindrà "
+"2."
 
 #: content/docs/use/kirigami/introduction-listviews.md:193
 msgid "Inner components"
@@ -5945,8 +6139,6 @@ msgstr ""
 "El mètode parse() analitza una cadena i retorna el nombre de mil·lisegons "
 "des de l'1 de gener de 1970, 00:00:00 UTC."
 
-#
-#
 #: content/docs/use/kirigami/introduction-overlaysheets.md:73
 msgid ""
 "We can give overlay sheets a header. These are set with the [header](docs:"
@@ -6207,11 +6399,15 @@ msgstr ""
 "segueix sent útil, coherent i estètica."
 
 #: content/docs/use/kirigami/introduction-pages.md:31
+#, fuzzy
 msgid ""
 "A [Kirigami.Page](docs:kirigami2;Page) inherits from a [Controls.Page](docs:"
 "qtquickcontrols;QtQuick.Controls.Page), and as such you can use the latter's "
 "properties as well."
 msgstr ""
+"UN [Kirigami.La pàgina](docs:kirigami2;Page) hereta d'un [Controls.Pàgina]"
+"(docs:qtquickcontrols;QtQuick.Controls.Pàgina), i com a tal, també podeu "
+"utilitzar les propietats d'aquest últim."
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-pages.md:35
@@ -6476,7 +6672,8 @@ msgstr ""
 "`openPopulateSheet(\"add\")`. Més important encara, aquesta funció estableix "
 "totes les propietats rellevants a AddEditSheet."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-double-quotes,punctuation-period-no
+# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-double-
+# quotes,punctuation-period-no
 #: content/docs/use/kirigami/introduction-separatefiles.md:91
 msgid ""
 "`mode` changes the add/edit sheet depending on whether this argument is set "
@@ -6624,12 +6821,17 @@ msgstr ""
 "d'accessibilitat i s'hauria d'evitar."
 
 #: content/docs/use/kirigami/style-colors.md:30
+#, fuzzy
 msgid ""
 "If you really need to use custom colors, check out [Kontrast](https://apps."
 "kde.org/kontrast/) to ensure that the colors you choose have good contrast "
 "and are [WCAG compliant](https://en.wikipedia.org/wiki/"
 "Web_Content_Accessibility_Guidelines)."
 msgstr ""
+"Si realment necessiteu utilitzar colors personalitzats, reviseu el [Kontrast]"
+"(https://apps.kde.org/kontrast/) per assegurar-vos que els colors que trieu "
+"tenen un bon contrast i que són [compatibles amb el WCAG](https://en."
+"wikipedia.org/wiki/WebContentAccessibilityGuidelines)."
 
 #: content/docs/use/kirigami/style-colors.md:34
 #: content/docs/use/kirigami/style-typography.md:266
@@ -6656,6 +6858,7 @@ msgid "Example:"
 msgstr "Exemple:"
 
 #: content/docs/use/kirigami/style-colors.md:50
+#, fuzzy
 msgid ""
 "[Kirigami Gallery](../introduction-kirigami-gallery) provides a code example "
 "showcasing [all colors available for Kirigami](https://invent.kde.org/sdk/"
@@ -6665,6 +6868,14 @@ msgid ""
 "change to their inactive state, and if you switch your system to a dark "
 "theme, the dark variants of the colors should show up in real time."
 msgstr ""
+"La [Galeria del Kirigami](../introduction-kirigami-gallery) proporciona un "
+"exemple de codi que mostra [tots els colors disponibles per al Kirigami]"
+"(https://invent.kde.org/sdk/kirigami-gallery/-/blob/master/src/data/contents/"
+"ui/gallery/ColorsGallery.qml) a través del [Kirigami.Tema](docs:kirigami2;"
+"Kirigami::PlatformTheme). Això inclou tots els seus estats: si feu clic fora "
+"de la finestra, els colors canviaran al seu estat inactiu, i si canvieu el "
+"sistema a un tema fosc, les variants fosques dels colors es mostraran en "
+"temps real."
 
 #: content/docs/use/kirigami/style-colors.md:52
 msgid "The Colors component in Kirigami Gallery"
@@ -6753,19 +6964,25 @@ msgstr ""
 "emfatitzar en les àrees petites de l'aplicació"
 
 #: content/docs/use/kirigami/style-colors.md:76
+#, fuzzy
 msgid ""
 "Here is an example showcasing how color sets are inherited and can be used "
 "to distinguish different components. A large border has been added to "
 "contrast colors."
 msgstr ""
+"Aquest és un exemple que mostra com s'hereten els conjunts de colors i es "
+"poden utilitzar per a distingir diferents components. S'ha afegit una vora "
+"gran als colors de contrast."
 
 #: content/docs/use/kirigami/style-colors.md:84
+#, fuzzy
 msgid "How color sets differ in Breeze"
-msgstr ""
+msgstr "Com els conjunts de colors difereixen en el Brisa"
 
 #: content/docs/use/kirigami/style-colors.md:90
+#, fuzzy
 msgid "How color sets differ in Breeze Dark"
-msgstr ""
+msgstr "Com els conjunts de colors difereixen en el Brisa fosca"
 
 #: content/docs/use/kirigami/style-colors.md:96
 msgid "Using Custom Colors"
@@ -6804,8 +7021,9 @@ msgstr ""
 "utilitzar per a títols de pàgines o de seccions."
 
 #: content/docs/use/kirigami/style-typography.md:47
+#, fuzzy
 msgid "Five headings with different levels for size comparison"
-msgstr ""
+msgstr "Cinc encapçalaments amb diferents nivells per a comparar la mida"
 
 #: content/docs/use/kirigami/style-typography.md:53
 msgid "Labels"
@@ -6824,32 +7042,45 @@ msgid "Text Alignment"
 msgstr "Alineació del text"
 
 #: content/docs/use/kirigami/style-typography.md:81
+#, fuzzy
 msgid ""
 "You can align your text elements using the [horizontalAlignment](https://doc."
 "qt.io/qt-6/qml-qtquick-text.html#horizontalAlignment-prop) and "
 "[verticalAlignment](https://doc.qt.io/qt-6/qml-qtquick-text."
 "html#verticalAlignment-prop) properties."
 msgstr ""
+"Podeu alinear els elements de text utilitzant les propietats "
+"[horizontalAlignment](https://doc.qt.io/qt-6/qml-qtquick-text."
+"html#horizontalAlignment-prop) i [verticalAlignment-prop](https://doc.qt.io/"
+"qt-6/qml-qtquick-text.html#verticalAlignment-prop)."
 
 #: content/docs/use/kirigami/style-typography.md:112
+#, fuzzy
 msgid "Heading and lorem ipsum text aligned to the horizontal center"
-msgstr ""
+msgstr "Encapçalament i ipsum text alineat al centre horitzontal"
 
 #: content/docs/use/kirigami/style-typography.md:148
+#, fuzzy
 msgid "Heading and lorem ipsum text using right-aligned text"
-msgstr ""
+msgstr "Text d'encapçalament i ipsum de lorem usant text alineat a la dreta"
 
 #: content/docs/use/kirigami/style-typography.md:186
+#, fuzzy
 msgid ""
 "Heading with bottom vertical alignment and lorem ipsum text with top "
 "vertical alignment"
 msgstr ""
+"Capçalera amb alineació vertical inferior i text ipsum del lorema amb "
+"alineació vertical superior"
 
 #: content/docs/use/kirigami/style-typography.md:225
+#, fuzzy
 msgid ""
 "Heading with top vertical alignment and lorem ipsum text with bottom "
 "vertical alignment"
 msgstr ""
+"Capçalera amb alineació vertical superior i text ipsum del lorema amb "
+"alineació vertical inferior"
 
 #: content/docs/use/kirigami/style-typography.md:231
 msgid "Rich Text"
@@ -6866,10 +7097,13 @@ msgstr ""
 "qtquick-text.html#textFormat-prop)."
 
 #: content/docs/use/kirigami/style-typography.md:260
+#, fuzzy
 msgid ""
 "A Label containing a list of fruits using HTML tags like paragraph, "
 "unordered lists and bold fonts"
 msgstr ""
+"Una etiqueta que conté una llista de fruits que utilitzen etiquetes HTML com "
+"ara paràgraf, llistes desordenades i tipus de lletra en negreta"
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/style-typography.md:268
