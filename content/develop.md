@@ -128,10 +128,10 @@ weight: 20
   <div class="text-center pl-5 pr-5 img-fluid container">
     <h2>Develop Convergent Apps with Kirigami</h2>
     <p class="mb-5">Kirigami is a new, convergent, responsive, elegant, and open cross-platform toolkit that uses QML.</p>
-    <div class="laptop-with-overlay text-center position-relative w-100 w-md-75" style="left: 0">
-      <img class="laptop img-fluid mb-3" src="https://kde.org/content/plasma-desktop/laptop.png" alt="" width="1600" height="890" >
+    <div class="laptop-with-overlay d-block mt-5 mb-3 mx-auto w-100 mw-1k">
+      <img class="laptop img-fluid" src="/reusable-assets/laptop.svg" alt="empty laptop with an overlay" width=2000 height=1220>
       <div class="laptop-overlay">
-        <img class="img-fluid mb-3" src="/develop/kirigami_code_view.png" alt="Kirigami application with source code" />
+        <img class="img-fluid" src="/develop/kirigami_code_view.png" alt="Kirigami application with source code" />
       </div>
     </div>
     <a class="learn-more h4" href="/frameworks/kirigami/">Discover Kirigami</a>
