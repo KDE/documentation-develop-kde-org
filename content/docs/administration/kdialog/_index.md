@@ -2,6 +2,7 @@
 title: Shell Scripting with KDE Dialogs
 description: Create simple scripts for your users to use.
 weight: 2
+group: administration
 authors:
   - 2003-2004 Brad Hards
   - 2020 Carl Schwan

@@ -16,6 +16,8 @@ groups:
     key: "plasma"
   - name: "Application Extensions"
     key: "applications"
+  - name: "Administration"
+    key: "administration"
   - name: "Packaging"
     key: "packaging"
 ---

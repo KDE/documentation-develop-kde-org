@@ -1,5 +1,6 @@
 ---
 title: Kiosk - Simple configuration management for large deployment
+group: administration
 description: The Kiosk framework provides a set of features that makes it possible to easily and powerfully restrict the capabilities of a KDE environment.
 ---
 
