@@ -13,7 +13,7 @@ layout: framework
 
 <div>
   <div class="container text-center block-navs">
-    <a href="/docs/use/kirigami/" target="_blank" class="block-nav">
+    <a href="/docs/getting-started/kirigami/" target="_blank" class="block-nav">
       <i class="icon icon_document-share"></i>
       <h2>Learn</h2>
       <p>Learn how to build beautiful apps with Kirigami</p>
@@ -61,7 +61,7 @@ layout: framework
             And everything else.
           </dt>
           <!-- space -->
-          <dd class="d-inline">Besides providing high level components, to make it easier to support multiple form factors, Kirigami also provides a wide variety of low level components that can be used in your embedded Linux QML app. For example, check out the high performance <a href="https://api.kde.org/frameworks/kirigami/html/classShadowedRectangle.html">ShadowedRectangle</a> and an <a href="/docs/use/kirigami/style-colors/">expensible theming API</a>.</dd>
+          <dd class="d-inline">Besides providing high level components, to make it easier to support multiple form factors, Kirigami also provides a wide variety of low level components that can be used in your embedded Linux QML app. For example, check out the high performance <a href="https://api.kde.org/frameworks/kirigami/html/classShadowedRectangle.html">ShadowedRectangle</a> and an <a href="/docs/getting-started/kirigami/style-colors/">expensible theming API</a>.</dd>
         </div>
       </div>
     </div>
