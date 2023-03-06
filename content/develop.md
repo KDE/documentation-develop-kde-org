@@ -146,31 +146,31 @@ weight: 20
   </div>
   <div class="row ">
     <div class="col-12 col-sm-6 p-3 d-flex">
-      <a href="/docs/getting-started" class="shadow p-4 w-100">
+      <a href="/docs/getting-started/kxmlgui" class="shadow p-4 w-100">
         <h3>Getting Started with KXmlGui</h3>
         <p>Create a small text editor</p>
       </a>
     </div>
     <div class="col-12 col-sm-6 p-3 d-flex">
-      <a href="/docs/kirigami" class="shadow p-4 w-100">
+      <a href="/docs/getting-started/kirigami" class="shadow p-4 w-100">
         <h3>Getting Started with Kirigami</h3>
         <p>Create a convergent application using QtQuick</p>
       </a>
     </div>
     <div class="col-12 col-sm-3 p-3 d-flex">
-      <a href="/docs/configuration/" class="shadow p-3 w-100">
+      <a href="/docs/features/configuration/" class="shadow p-3 w-100">
         <h3>KConfig</h3>
         <p>Manage your application settings</p>
       </a>
     </div>
     <div class="col-12 col-sm-3 p-3 d-flex">
-      <a href="/docs/akonadi/" class="shadow p-3 w-100">
+      <a href="/docs/features/akonadi/" class="shadow p-3 w-100">
         <h3>Akonadi</h3>
         <p>Integrated Personal Information manager</p>
       </a>
     </div>
     <div class="col-12 col-sm-3 p-3 d-flex">
-      <a href="/docs/d-bus" class="shadow p-3 w-100">
+      <a href="/docs/features/d-bus" class="shadow p-3 w-100">
         <h3>D-Bus</h3>
         <p>Inter-process communication made easy</p>
       </a>
