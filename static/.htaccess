@@ -1,0 +1,8 @@
+# own 404 handler
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.html$ /$1 [R=302,L]
