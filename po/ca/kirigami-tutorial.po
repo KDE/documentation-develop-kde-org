@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-19 00:51+0000\n"
-"PO-Revision-Date: 2023-03-04 16:41+0100\n"
+"PO-Revision-Date: 2023-03-05 19:47+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -4224,7 +4224,6 @@ msgid "You can quickly create this file structure with:"
 msgstr "Podeu crear ràpidament aquesta estructura de fitxers amb:"
 
 #: content/docs/use/kirigami/introduction-getting_started.md:56
-#, fuzzy
 msgid ""
 "Alternatively, you may want to use the standard Kirigami template provided "
 "by [KDevelop](https://apps.kde.org/kdevelop/), KDE's main IDE for coding in C"
@@ -4234,7 +4233,7 @@ msgid ""
 msgstr ""
 "De manera alternativa, és possible que vulgueu utilitzar la plantilla "
 "estàndard del Kirigami proporcionada pel [KDevelop](https://apps.kde.org/"
-"kdevelop/), l'EID principal del KDE per a codificar en C++ i QML. El "
+"kdevelop/), l'IDE principal de KDE per a codificar en C++ i QML. El "
 "[KAppTemplate](https://apps.kde.org/kapptemplate/) també està disponible si "
 "només necessiteu una plantilla ràpida per a iniciar la codificació en el "
 "vostre IDE o editor de text preferit."
@@ -4272,7 +4271,7 @@ msgstr ""
 "la nostra atenció en el codi en QML, on podrem emprar el Kirigami per a "
 "aprofitar-lo al màxim."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-getting_started.md:70
 msgid ""
 "For now, let's focus on `main.qml`. First we [import](https://doc.qt.io/qt-6/"
@@ -4317,8 +4316,8 @@ msgstr ""
 "adequats per a crear aplicacions que funcionen en dispositius de formes i "
 "mides diferents."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-getting_started.md:79
-#, fuzzy
 msgid ""
 "Putting the QtQuick Controls and Kirigami imports into separate namespaces "
 "using the `as` keyword is a best practice that ensures no components with "
@@ -4326,10 +4325,10 @@ msgid ""
 "Controls in the wild, such as \"QQC\" or \"QQC2\". We will be using "
 "\"Controls\" in this tutorial for clarity."
 msgstr ""
-"Posar els QtQuick Controls i les importacions de Kirigami en espais de noms "
+"Posar els QtQuick Controls i les importacions del Kirigami en espais de noms "
 "separats utilitzant la paraula clau `as` és una millor pràctica que assegura "
-"que cap component amb el mateix nom pugui entrar en conflicte. Podeu veure "
-"diferents noms per als controls QtQuick en estat salvatge, com ara «QQC» o "
+"que cap component amb el mateix nom pugui entrar en conflicte. Podreu trobar "
+"diferents noms per als controls QtQuick en els textos, com ara «QQC» o "
 "«QQC2». Utilitzarem \"Controls\" en aquesta guia d'aprenentatge per a més "
 "claredat."
 
@@ -5033,8 +5032,8 @@ msgstr ""
 "diversos tipus de dades en el vostre model. Els dos primers són cadenes i el "
 "tercer és un número que utilitzem com a marcador de posició."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-listviews.md:53
-#, fuzzy
 msgid ""
 "Since QML is built on top of JavaScript, many of this language's features "
 "are available for use in QML files. However, QML variables have to be "
@@ -5042,12 +5041,11 @@ msgid ""
 "more about it in [this page](https://doc.qt.io/qt-6/qtqml-javascript-topic."
 "html)."
 msgstr ""
-"Com que el QML està construït sobre JavaScript, moltes de les "
+"Com que el QML està construït sobre el JavaScript, moltes de les "
 "característiques d'aquest llenguatge estan disponibles per al seu ús en "
 "fitxers QML. No obstant això, les variables QML s'han de prefixar amb "
 "`property`, a menys que estigui dins d'un bloc de codi JS. Podeu llegir-ne "
-"més a la [aquesta pàgina](https://doc.qt.io/qt-6/qtqml-javascript-topic."
-"html)."
+"més en [aquesta pàgina](https://doc.qt.io/qt-6/qtqml-javascript-topic.html)."
 
 #: content/docs/use/kirigami/introduction-listviews.md:57
 msgid ""
@@ -5148,7 +5146,6 @@ msgid "Building our delegate card"
 msgstr "Construir la nostra targeta de delegat"
 
 #: content/docs/use/kirigami/introduction-listviews.md:71
-#, fuzzy
 msgid ""
 "The [Component](docs:qtqml;QtQml.Component) that will represent our delegate "
 "can be added inside our [Kirigami.ApplicationWindow](docs:kirigami2;"
@@ -5221,7 +5218,6 @@ msgid "Layouts"
 msgstr "Disposicions"
 
 #: content/docs/use/kirigami/introduction-listviews.md:149
-#, fuzzy
 msgid ""
 "The [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
 "is inside the [Item](https://doc.qt.io/qt-6/qml-qtquick-item.html) component "
@@ -5230,12 +5226,12 @@ msgid ""
 "doc.qt.io/qt-6/qml-qtquick-item.html) that contains what will be displayed "
 "in your card."
 msgstr ""
-"El component [GridLayout](https://doc.qt.io/qt-6/qml-layouts-gridlayout."
-"html) es troba dins del component [Item](https://doc.qt.io/qt-6/qtquick-item."
-"html) que hem proporcionat per a la propietat [contentItem](https://doc.qt."
-"io/qt-6/qml-qtquick-controls2-control.html#contentItem-prop). Aquest és "
-"l'[element](https://doc.qt.io/qt-6/qml-qtquick-item.html) que conté el que "
-"es mostrarà a la targeta."
+"La [GridLayout](https://doc.qt.io/qt-6/qml-layouts-gridlayout.html) es troba "
+"dins del component [Item](https://doc.qt.io/qt-6/qtquick-item.html) que hem "
+"proporcionat per a la propietat [contentItem](https://doc.qt.io/qt-6/qml-"
+"qtquick-controls2-control.html#contentItem-prop). Aquest és l'[Item](https://"
+"doc.qt.io/qt-6/qml-qtquick-item.html) que conté el que es mostrarà a la "
+"targeta."
 
 #: content/docs/use/kirigami/introduction-listviews.md:151
 msgid ""
@@ -5351,18 +5347,17 @@ msgid "18px"
 msgstr "18px"
 
 #: content/docs/use/kirigami/introduction-listviews.md:187
-#, fuzzy
 msgid ""
 "KDE's Visual Design Group (VDG) has a lot more information about the "
 "different units defined within Plasma and Kirigami on the [Human Interface "
 "Guidelines](/hig/layout/units/)."
 msgstr ""
-"El Grup de Disseny Visual del KDE (VDG) té molta més informació sobre les "
-"diferents unitats definides en el Plasma i el Kirigami a les [Guia de la "
-"interfície humana](/hig/layout/units/)."
+"El Grup de Disseny Visual de KDE (VDG) té molta més informació sobre les "
+"diferents unitats definides en el Plasma i el Kirigami a les [Directrius "
+"d'interfície humana](/hig/layout/units/)."
 
+# skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-listviews.md:191
-#, fuzzy
 msgid ""
 "As you might remember, `root` is the id of our [Kirigami.ApplicationWindow]"
 "(docs:kirigami2;ApplicationWindow). It provides the [wideScreen](docs:"
@@ -5372,15 +5367,15 @@ msgid ""
 "number of columns in our grid depending on the screen we are using: if it's "
 "a widescreen, the grid will have 4 columns, else it will have 2."
 msgstr ""
-"Com recordareu, `root` és l'identificador del nostre [Kirigami."
+"Com recordareu, `root` és l'identificador de la nostra [Kirigami."
 "ApplicationWindow](docs:kirigami2;ApplicationWindow). Proporciona la "
 "propietat [wideScreen](docs:kirigami2;AbstractApplicationWindow::"
 "wideScreen), utilitzada per determinar si la pantalla del dispositiu actual "
-"és una pantalla ampla (és a dir, un monitor d'ordinador o un telèfon en "
-"paisatge). Utilitzem un condicional ternari aquí per a variar el nombre de "
+"és una pantalla ampla (és a dir, un monitor d'ordinador o un telèfon "
+"apaïsat). Utilitzem un condicional ternari aquí per a variar el nombre de "
 "columnes a la nostra quadrícula depenent de la pantalla que utilitzem: si és "
-"una pantalla ampla, la quadrícula tindrà 4 columnes, en cas contrari tindrà "
-"2."
+"una pantalla ampla, la quadrícula tindrà 4 columnes, en cas contrari en "
+"tindrà 2."
 
 #: content/docs/use/kirigami/introduction-listviews.md:193
 msgid "Inner components"
@@ -6399,15 +6394,14 @@ msgstr ""
 "segueix sent útil, coherent i estètica."
 
 #: content/docs/use/kirigami/introduction-pages.md:31
-#, fuzzy
 msgid ""
 "A [Kirigami.Page](docs:kirigami2;Page) inherits from a [Controls.Page](docs:"
 "qtquickcontrols;QtQuick.Controls.Page), and as such you can use the latter's "
 "properties as well."
 msgstr ""
-"UN [Kirigami.La pàgina](docs:kirigami2;Page) hereta d'un [Controls.Pàgina]"
-"(docs:qtquickcontrols;QtQuick.Controls.Pàgina), i com a tal, també podeu "
-"utilitzar les propietats d'aquest últim."
+"Una [Kirigami.Page](docs:kirigami2;Page) hereta d'un [Controls.Page](docs:"
+"qtquickcontrols;QtQuick.Controls.Page), i com a tal, també podeu utilitzar "
+"les propietats d'aquest últim."
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/introduction-pages.md:35
@@ -6821,7 +6815,6 @@ msgstr ""
 "d'accessibilitat i s'hauria d'evitar."
 
 #: content/docs/use/kirigami/style-colors.md:30
-#, fuzzy
 msgid ""
 "If you really need to use custom colors, check out [Kontrast](https://apps."
 "kde.org/kontrast/) to ensure that the colors you choose have good contrast "
@@ -6831,7 +6824,7 @@ msgstr ""
 "Si realment necessiteu utilitzar colors personalitzats, reviseu el [Kontrast]"
 "(https://apps.kde.org/kontrast/) per assegurar-vos que els colors que trieu "
 "tenen un bon contrast i que són [compatibles amb el WCAG](https://en."
-"wikipedia.org/wiki/WebContentAccessibilityGuidelines)."
+"wikipedia.org/wiki/Web_Content_Accessibility_Guidelines)."
 
 #: content/docs/use/kirigami/style-colors.md:34
 #: content/docs/use/kirigami/style-typography.md:266
@@ -6858,7 +6851,6 @@ msgid "Example:"
 msgstr "Exemple:"
 
 #: content/docs/use/kirigami/style-colors.md:50
-#, fuzzy
 msgid ""
 "[Kirigami Gallery](../introduction-kirigami-gallery) provides a code example "
 "showcasing [all colors available for Kirigami](https://invent.kde.org/sdk/"
@@ -6871,7 +6863,7 @@ msgstr ""
 "La [Galeria del Kirigami](../introduction-kirigami-gallery) proporciona un "
 "exemple de codi que mostra [tots els colors disponibles per al Kirigami]"
 "(https://invent.kde.org/sdk/kirigami-gallery/-/blob/master/src/data/contents/"
-"ui/gallery/ColorsGallery.qml) a través del [Kirigami.Tema](docs:kirigami2;"
+"ui/gallery/ColorsGallery.qml) a través del [Kirigami.Theme](docs:kirigami2;"
 "Kirigami::PlatformTheme). Això inclou tots els seus estats: si feu clic fora "
 "de la finestra, els colors canviaran al seu estat inactiu, i si canvieu el "
 "sistema a un tema fosc, les variants fosques dels colors es mostraran en "
@@ -6964,25 +6956,22 @@ msgstr ""
 "emfatitzar en les àrees petites de l'aplicació"
 
 #: content/docs/use/kirigami/style-colors.md:76
-#, fuzzy
 msgid ""
 "Here is an example showcasing how color sets are inherited and can be used "
 "to distinguish different components. A large border has been added to "
 "contrast colors."
 msgstr ""
 "Aquest és un exemple que mostra com s'hereten els conjunts de colors i es "
-"poden utilitzar per a distingir diferents components. S'ha afegit una vora "
+"poden utilitzar per a distingir components diferents. S'ha afegit una vora "
 "gran als colors de contrast."
 
 #: content/docs/use/kirigami/style-colors.md:84
-#, fuzzy
 msgid "How color sets differ in Breeze"
 msgstr "Com els conjunts de colors difereixen en el Brisa"
 
 #: content/docs/use/kirigami/style-colors.md:90
-#, fuzzy
 msgid "How color sets differ in Breeze Dark"
-msgstr "Com els conjunts de colors difereixen en el Brisa fosca"
+msgstr "Com els conjunts de colors difereixen en el Brisa fosc"
 
 #: content/docs/use/kirigami/style-colors.md:96
 msgid "Using Custom Colors"
@@ -7021,9 +7010,8 @@ msgstr ""
 "utilitzar per a títols de pàgines o de seccions."
 
 #: content/docs/use/kirigami/style-typography.md:47
-#, fuzzy
 msgid "Five headings with different levels for size comparison"
-msgstr "Cinc encapçalaments amb diferents nivells per a comparar la mida"
+msgstr "Cinc encapçalaments amb nivells diferents per a comparar la mida"
 
 #: content/docs/use/kirigami/style-typography.md:53
 msgid "Labels"
@@ -7042,7 +7030,6 @@ msgid "Text Alignment"
 msgstr "Alineació del text"
 
 #: content/docs/use/kirigami/style-typography.md:81
-#, fuzzy
 msgid ""
 "You can align your text elements using the [horizontalAlignment](https://doc."
 "qt.io/qt-6/qml-qtquick-text.html#horizontalAlignment-prop) and "
@@ -7051,36 +7038,32 @@ msgid ""
 msgstr ""
 "Podeu alinear els elements de text utilitzant les propietats "
 "[horizontalAlignment](https://doc.qt.io/qt-6/qml-qtquick-text."
-"html#horizontalAlignment-prop) i [verticalAlignment-prop](https://doc.qt.io/"
-"qt-6/qml-qtquick-text.html#verticalAlignment-prop)."
+"html#horizontalAlignment-prop) i [verticalAlignment](https://doc.qt.io/qt-6/"
+"qml-qtquick-text.html#verticalAlignment-prop)."
 
 #: content/docs/use/kirigami/style-typography.md:112
-#, fuzzy
 msgid "Heading and lorem ipsum text aligned to the horizontal center"
-msgstr "Encapçalament i ipsum text alineat al centre horitzontal"
+msgstr "Capçalera i text lorem ipsum alineat al centre horitzontal"
 
 #: content/docs/use/kirigami/style-typography.md:148
-#, fuzzy
 msgid "Heading and lorem ipsum text using right-aligned text"
-msgstr "Text d'encapçalament i ipsum de lorem usant text alineat a la dreta"
+msgstr "Capçalera i text lorem ipsum usant text alineat a la dreta"
 
 #: content/docs/use/kirigami/style-typography.md:186
-#, fuzzy
 msgid ""
 "Heading with bottom vertical alignment and lorem ipsum text with top "
 "vertical alignment"
 msgstr ""
-"Capçalera amb alineació vertical inferior i text ipsum del lorema amb "
-"alineació vertical superior"
+"Capçalera amb alineació vertical inferior i text lorem ipsum amb alineació "
+"vertical superior"
 
 #: content/docs/use/kirigami/style-typography.md:225
-#, fuzzy
 msgid ""
 "Heading with top vertical alignment and lorem ipsum text with bottom "
 "vertical alignment"
 msgstr ""
-"Capçalera amb alineació vertical superior i text ipsum del lorema amb "
-"alineació vertical inferior"
+"Capçalera amb alineació vertical superior i text lorem ipsum amb alineació "
+"vertical inferior"
 
 #: content/docs/use/kirigami/style-typography.md:231
 msgid "Rich Text"
@@ -7097,13 +7080,12 @@ msgstr ""
 "qtquick-text.html#textFormat-prop)."
 
 #: content/docs/use/kirigami/style-typography.md:260
-#, fuzzy
 msgid ""
 "A Label containing a list of fruits using HTML tags like paragraph, "
 "unordered lists and bold fonts"
 msgstr ""
-"Una etiqueta que conté una llista de fruits que utilitzen etiquetes HTML com "
-"ara paràgraf, llistes desordenades i tipus de lletra en negreta"
+"Una etiqueta que conté una llista de fruites que utilitzen etiquetes HTML "
+"com ara paràgraf, llistes desordenades i tipus de lletra en negreta"
 
 # skip-rule: t-acc_obe
 #: content/docs/use/kirigami/style-typography.md:268
