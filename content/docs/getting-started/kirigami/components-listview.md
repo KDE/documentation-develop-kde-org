@@ -112,14 +112,14 @@ ListView {
 
     Kirigami.PlaceholderMessage {
         anchors.centerIn: parent
-        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        width: parent.width - Kirigami.Units.largeSpacing * 4
         visible: myList.count === 0
         text: "Add something to me!"
 
         helpfulAction: Kirigami.Action {
-        icon.name: "list-add"
-        text: "Add"
-        onTriggered: myModel.append({"text": "Hello!!"})
+            icon.name: "list-add"
+            text: "Add"
+            onTriggered: myModel.append({"text": "Hello!!"})
         }
     }
 }
