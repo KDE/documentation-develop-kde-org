@@ -1,6 +1,7 @@
 ---
 title: Kiosk Keys
 weight: 2
+type: deploy
 layout: keys
 applications:
   - name: Application Action Restrictions
