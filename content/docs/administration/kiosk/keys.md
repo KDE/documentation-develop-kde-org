@@ -1,8 +1,7 @@
 ---
 title: Kiosk Keys
 weight: 2
-type: kiosk
-layout: keys
+layout: kiosk-keys
 applications:
   - name: Application Action Restrictions
     hasmenu: true
