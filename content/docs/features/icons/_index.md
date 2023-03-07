@@ -2,6 +2,7 @@
 title: Icons
 description: >
   Deliver your application with icons.
+group: features
 weight: 2
 aliases:
   - /docs/plasma-integration/icons/

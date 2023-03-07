@@ -1,6 +1,7 @@
 ---
 title: Create your own mouse cursor theme
 linkTitle: Mouse Cursor
+group: features
 weight: 4
 description: >
     Learn how to create custom mouse cursors.
