@@ -16,8 +16,10 @@ groups:
     key: "plasma"
   - name: "Application Extensions"
     key: "applications"
-  - name: "Administration"
-    key: "administration"
   - name: "Packaging"
     key: "packaging"
+  - name: "Administration"
+    key: "administration"
+  - name: "Contributing to the KDE Developer website"
+    key: "contribute"
 ---

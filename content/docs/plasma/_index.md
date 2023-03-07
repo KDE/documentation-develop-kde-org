@@ -5,6 +5,7 @@ description: >
   How to customize plasma with widgets, themes and icons
 aliases:
   - /docs/use/plasma/
+weight: 3
 ---
 
 The KDE wiki also has a [few tutorials](https://techbase.kde.org/Development/Tutorials/Plasma5) which haven't been ported to develop.kde.org yet.
