@@ -4,6 +4,7 @@ author:
   - SPDX-FileCopyrightText: 2023 Thiago Masato Costa Sueto <thiago.sueto@kde.org>
 weight: 4
 description: Package your application as a Snap.
+group: packaging
 ---
 
 # Put Your App in the Snap Store
