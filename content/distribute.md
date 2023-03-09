@@ -21,7 +21,7 @@ layout: area
           <img class="img-fluid" src="/develop/flatpak_logo.png" alt="Flatpak logo" />
         </div>
       </a>
-      <a class="tool tool-one" href="https://snapcraft.io/docs/snapcraft-overview">
+      <a class="tool tool-one" href="https://snapcraft.io/docs/qt5-kde-applications">
         <div>
           <h3>Snapcraft</h3>
           <p>
