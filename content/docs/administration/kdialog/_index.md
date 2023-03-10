@@ -44,13 +44,13 @@ a password, you can easily generate a dialog from your script that looks like th
 ### Password Dialog
 
 The key to using KDE dialogs in shell scripts is an application named `kdialog`. To
-generate a password dialog as shown in above, you could use the following command line.
+generate a password dialog as shown above, you could use the following command line.
 
 ```bash
 kdialog --password "Please enter the server access code:"
 ```
 
-Let's look at the code in a bit more detail. The arguments to kdialog are used to control
+Let's look at the code in a bit more detail. The arguments passed to kdialog are used to control
 the type of dialog that is produced and the parameter or parameters of that dialog box.
 In the case of the password dialog, you use `--password` to specify the dialog type, and
 then follow that with the parameter, which is the text that appears in the dialog box.
@@ -73,12 +73,12 @@ The $? variable is updated when each foreground process exits. If you need to us
 variable later, you need to save it away.
 {{< /alert >}}
 
-In this example, the return value is zero. It would be one if the Cancel button had been
+In this example, the return value is 0. It would be 1 if the Cancel button had been
 selected instead of the OK button. 
 
 {{< alert title="Note" color="info" >}}
-This is different to the convention used by the underlying widgets. If you are familiar
-with the underlying Qt widgets, this might be a bit confusing, however it is important
+This is different from the convention used by the underlying widgets. If you are familiar
+with Qt widgets, this might be a bit confusing, however it is important
 to conform to the standard approach to shell scripting.
 {{< /alert >}}
 
@@ -141,7 +141,7 @@ Secreter
 
 ### Password Dialog with Title
 
-While not shown in the previous examples, you can also use the --title option to specify
+While not shown in the previous examples, you can also use the `--title` option to specify
 the title of the dialog box, as shown in the following example. 
 
 ```bash
@@ -190,7 +190,7 @@ kdialog --error "Server protocol error."
 
 The return value for these basic message boxes is zero.
 
-While not used in these examples, you can use the `--title` to set the window title
+While not used in these examples, you can use `--title` to set the window title
 as well. This option can be used with any of the dialog types.
 
 ## Non-Interrupting Notifications
@@ -200,8 +200,8 @@ called a passive popup.
 
 ### --passivepopup dialog box
 
-`--passivepopup` takes a text label to display, and a timeout. The display will be
-automatically removed when the timeout (which is in seconds) has elapsed, or when
+`--passivepopup` takes a text label to display, and a timeout in seconds. The display will be
+automatically removed when the timeout has elapsed, or when
 the user clicks on the popup. 
 
 ```bash
@@ -279,7 +279,7 @@ kdialog --title "YesNoCancel warning dialog" --warningyesnocancel \
 
 ## Suppressing the display of a dialog
 
-Sometimes you will be using kdialog in a loop, or other situation where a
+Sometimes you will be using kdialog in a loop, or another situation where a
 message may be repeated. For example, you might be iterating through a list
 of files, and you raise an error for each file you cannot open because of
 permission problems. This can produce a really bad user experience because
@@ -312,7 +312,7 @@ nofilemsg=false
 
 The effect of this entry is to suppress future display of dialogs using that filename.
 In the example above, this means myscript:nofilemsg. This will take effect across all
-KDE applications, so be careful of the filename you use. 
+KDE applications, so be careful with the filename you use. 
 
 ## User Input dialogs
 
@@ -437,7 +437,7 @@ select any, kdialog will raise an assertion, so don't do this.
 
 ### --combobox dialog box
 
-A combo-box is slightly different to the previous menu options, in that it doesn't use
+A combobox is slightly different to the previous menu options in that it doesn't use
 keys, but instead just returns the selected text. An example is shown below: 
 
 ```bash
@@ -457,7 +457,7 @@ provide either paths or URLs.
 
 The dialog to select a file to open is invoked with `--getopenfilename` or `--getopenurl`.
 These two commands are used in the same way - only the format of the result changes,
-so every example shown here can be applied for either format. You have to specify a
+so every example shown here can be applied to either format. You have to specify a
 starting directory, and can optionally provide a filter. Here is a simple example that
 doesn't provide any filtering, and accesses the current directory: 
 
@@ -480,8 +480,8 @@ shown below, in each case selecting the same file:
 file:/home/watson/coding/cvs-vers/kde-head/kdebase/kdialog/Makefile.am
 ```
 
-Note that the user can only select an existing file with these options. When you doing
-a lot of opening of files, it can be useful to open the dialog in the directory that was
+Note that the user can only select an existing file with these options. When you are opening 
+many files, this can be useful to open the dialog in the directory that was
 navigated to last time. While you can potentially do this by extracting the directory
 from the filename, you can use a special KDE feature based on labels, as shown below:
 
@@ -527,7 +527,7 @@ kdialog --getsavefilename .
 
 ![getsavefilename dialog box](save.png)
 
-Unlike the file opening dialogs, the file saving dialogs allow to user to specify a filename
+Unlike the file opening dialogs, the file saving dialogs allow the user to specify a filename
 that doesn't yet exist. 
 
 ### --getsavefilename dialog box with filter
@@ -542,8 +542,8 @@ kdialog --getsavefilename :label1 "C and C++ Source Files (*.cpp *.cc *.c)"
 ### --getexistingdirectory dialog box
 
 Sometimes you don't want to specify a filename, but instead need a directory. While you can specify
-a "inode/directory" filter to a file open dialog, it is sometimes better to use the
-`--getexistingdirectory` type, as shown below: 
+an "inode/directory" filter to a file open dialog, it is sometimes better to use 
+`--getexistingdirectory`, as shown below: 
 
 ```bash
 kdialog --getexistingdirectory .
@@ -563,11 +563,11 @@ thinking about writing an information dialog that says something like "..., this
 take a while", it may be appropriate to use a progress bar dialog.
 
 Because you need to make the progress bar change, you can't use kdialog in the normal
-way. Instead, you set up the dialog, and use the qdbus tool to make the required changes.
+way. Instead, you set up the dialog, and use the `qdbus` tool to make the required changes.
 
 ### --progressbar dialog box example
 
-A simple use of the --progressbar command is shown below.
+A simple use of the `--progressbar` flag is shown below.
 
 ```bash
 dbusRef=`kdialog --progressbar "Initializing" 4`
@@ -584,17 +584,17 @@ sleep 2
 qdbus $dbusRef close
 ```
 
-Line 1 runs kdialog, with an initial label of Initialising, and a progress bar with
+Line 1 runs kdialog, with an initial label of "Initialising", and a progress bar with
 four elements. We capture the return value in a variable (which can be named just about
-anything - I chose dbusRef) for later use with the qdbus command. Line 2 sets the bar
-to one stage along, and line 3 changes the label to Thinking really hard. Line 4 is
+anything - I chose "dbusRef") for later use with the `qdbus` command. Line 2 sets the bar
+to one stage along, and line 3 changes the label to "Thinking really hard". Line 4 is
 just a delay (which would be when your script would perform the first part of the lengthy
 task in a real application). Line 5 then increases the progress bar, followed by another
 delay (representing more processing) in line 6. Line 7 changes the label, while lines 8
 through 11 further increase the progress bar over a few seconds. Line 12 closes the progress
 bar dialog - without this, it will remain displayed. If you'd prefer that the progress
-bar dialog closed as soon as the bar gets to 100%, you can use the setAutoClose true
-argument to qdbus. If a task is taking a very long time, the user may decide that it
+bar dialog closed as soon as the bar gets to 100%, you can pass the `setAutoClose true`
+argument to `qdbus`. If a task is taking a very long time, the user may decide that it
 is better cancelled. kdialog can assist with this too, as shown in the example below.
 
 {{< alert color="info" title="Note" >}}
@@ -621,9 +621,9 @@ time with 10 segments; and again we capture the return value in a variable for l
 use with DBus. Line 2 turns on the display of the Cancel button, which is off by default. 
 
 Lines 3 through 7 are a loop. Line three runs qdbus to check if the Cancel button has
-been pressed, and if it hasn't been pressed yet, runs line 4 through 6. Line 4 is again
-a delay, representing processing in a real application. Line 5 runs qdbus to get the
-current progress bar setting, and adds one to the count (I could have just kept a
-counter variable, but this approach shows another qdbus usage). Line 6 then sets the
+been pressed, and if it hasn't been pressed yet, runs lines 4 through 6. Line 4 is again
+a delay, representing processing in a real application. Line 5 runs a `qdbus` command to get the
+current progress bar setting, and adds one to the count (this could have just been kept as a
+counter variable, but this approach shows a different `qdbus` usage). Line 6 then sets the
 progress bar to the incremented value. Line 8 closes the progress bar dialog if the
 Cancel button has been pressed. 
