@@ -18,11 +18,13 @@ notified upon idle time events, such as custom timeouts or user activity. It fea
 
 ## Using It
 
-For understanding how to use KIdleTime, we create a small testing application, called KIdleTest. This application initially waits for the first user action and afterwards registers some timeout intervals, and acts whenever the system idles for such a time. The KIdleTime framework provides a singleton KIdleTime, which provides us with all necessary signals and information about the idling status of the system. For our example, we start with connecting to the signals for user resuming from idling and for reaching timeouts that we will set ourselves:
+To understand how to use KIdleTime, we will create a small testing application, called "KIdleTest". This application initially waits for the first user action and afterwards registers some timeout intervals, acting whenever the system idles for such a time. The framework includes the singleton KIdleTime, which provides all necessary signals and information about the idling status of the system. For our example, we start by connecting to the signals for user resuming from idling and for reaching timeouts that we will set ourselves:
 
 {{< snippet repo="frameworks/kidletime" file="examples/KIdleTest.cpp" part="initialize" lang="cpp" >}}
 
-We also tell KIdleTime to notify us the very next time when the user acts. Note that this is actually only for the next time. If we were interested in further events, we had to invoke `catchNextResumeEvent()` again. Next, in our event listener for the user resume event, we add register a couple of idle intervals:
+We also tell KIdleTime to notify us the very next time when the user acts. Note that this is actually only for the next time. If we were interested in further events, we would need to invoke `catchNextResumeEvent()` again.
+
+Next, in our event listener for the user resume event, we register a couple of idle intervals:
 
 {{< snippet repo="frameworks/kidletime" file="examples/KIdleTest.cpp" part="resumeEvent" lang="cpp" >}}
 
@@ -30,6 +32,6 @@ If any of these idle intervals is reached, our initially registered `timeoutReac
 
 {{< snippet repo="frameworks/kidletime" file="examples/KIdleTest.cpp" part="timeoutReached" lang="cpp" >}}
 
-From there on, depending on the reached idle interval, we go back to one of the former steps.
+From then on, depending on the reached idle interval, we can go back to one of the former steps.
 
 
