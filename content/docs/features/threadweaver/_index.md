@@ -19,7 +19,13 @@ This short but complete program written in C++11 outputs the common greeting to 
 
 The header file `ThreadWeaver/ThreadWeaver.h` included in line 2 contains the essential declarations needed to use the most common ThreadWeaver operations. The components used in this example are the global queue, a job, and a queueing mechanism.
 
-The **global queue** is a singleton instance of the ThreadWeaver thread pool that is instantiated when it is first accessed after the application starts. A **job** represents "something" that should be executed asynchronously. In this case, the thing to execute is a C++ lambda function that prints the welcome message. The **queueing mechanism** used here is a queue stream, an API inspired by the _iostream_ family of classes. ThreadWeaver builds on top of Qt, and similarly to most Qt applications it requires a `QCoreApplication` (or one of it's descendants) to exist throughout the lifetime of the application. Up to line 7, the program looks like any other Qt application.
+* The **global queue** is a singleton instance of the ThreadWeaver thread pool that is instantiated when it is first accessed after the application starts.
+
+* A **job** represents "something" that should be executed asynchronously. In this case, the thing to execute is a C++ lambda function that prints the welcome message.
+
+* The **queueing mechanism** used here is a queue stream, an API inspired by the _iostream_ family of classes.
+
+ThreadWeaver builds on top of Qt, and similarly to most Qt applications it requires a `QCoreApplication` (or one of it's descendants) to exist throughout the lifetime of the application. Up to line 7, the program looks like any other Qt application.
 
 To have the job lambda function called by one of the worker threads, a job is created to wrap it using the `make_job()` function. It is then handed to the queue stream, which then submits the jobs for execution when the queuing command is completed. Once the job is queued, one of the worker threads will automatically pick it up from the queue and execute it.
 
