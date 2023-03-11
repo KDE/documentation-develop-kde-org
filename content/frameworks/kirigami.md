@@ -73,7 +73,7 @@ layout: framework
     <div class="col-12 col-lg-6 mt-5 order-0 order-lg-2">
       <h2 class="h1 bold">Open and trusted</h2>
       <p>Kirigami is developed by the KDE community. We have been around since 1997, and we develop high quality open source software used by millions of people worldwide. Kirigami is released under <a href="https://invent.kde.org/frameworks/kirigami/-/tree/master/LICENSES/LGPL-2.0-or-later.txt">LGPL-2.0-or-later</a>, and, as such, can be used in your open source or commercial project.</p>
-      <p>Kirigami is one of the 80 <a href="/products/frameworks">KDE Frameworks</a> produced by KDE, part of a collection of high quality add-on libraries for Qt apps with long ABI and API stability guarantees. And, in case you need support, there is a <a href="ev.kde.org/consultants/">network of trusted consultants</a> available to assist you with your project.</p>
+      <p>Kirigami is one of the 80 <a href="/products/frameworks">KDE Frameworks</a> produced by KDE, part of a collection of high quality add-on libraries for Qt apps with long ABI and API stability guarantees. And, in case you need support, there is a <a href="https://ev.kde.org/consultants/">network of trusted consultants</a> available to assist you with your project.</p>
     </div>
     <div class="col-12 col-lg-6 mt-5">
       <img src="neochat.png" class="img-fluid kirigami-devices"/>
