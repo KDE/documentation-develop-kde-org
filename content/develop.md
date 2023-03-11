@@ -33,7 +33,7 @@ weight: 20
     <div class="tool tool-multiple flex-column  mt-5">
       <h3 class="mt-1">And many more tools</h3>
       <div class="more-apps">
-        <a href="https://umbrello.kde.org">
+        <a href="https://apps.kde.org/umbrello">
           <img src="https://apps.kde.org/app-icons/org.kde.umbrello.svg" />
           Umbrello
         </a>

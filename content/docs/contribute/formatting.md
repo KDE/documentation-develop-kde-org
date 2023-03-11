@@ -42,7 +42,7 @@ SPDX-License-Identifier:` are the minimum requirements for a page.
 
 Other available options are:
 
-* `group:`, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](https://develop.kde.org/docs/use/kirigami/), with the groups Introduction, Style, Components, and Advanced. The groups need to be listed in the `_index` file of the tutorial.
+* `group:`, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](/docs/getting-started/kirigami), with the groups Introduction, Style, Components, and Advanced. The groups need to be listed in the `_index` file of the tutorial.
 * `aliases:`, which creates aliases which can be used to shorten links. This is useful when linking to that page from elsewhere.
 
 ## Hugo shortcodes

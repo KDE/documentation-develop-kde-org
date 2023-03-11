@@ -39,7 +39,7 @@ The basic structure of this hypothetical time settings module is the following:
 
 {{< readfile file="/content/docs/features/kcm/CMakeLists.txt" highlight="cmake" >}}
 
-This CMake file contains a few packages of note: [KCMUtils](docs:kcmutils) provides various classes that allow us to work with [KCModules](docs:kconfigwidgets;KCModule), and `Config` includes the [KConfig](docs:kconfig) classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](../../getting-started/kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
+This CMake file contains a few packages of note: [KCMUtils](docs:kcmutils) provides various classes that allow us to work with [KCModules](docs:kconfigwidgets;KCModule), and `Config` includes the [KConfig](docs:kconfig) classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](/docs/getting-started/kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
 
 What's different here is that we are using C++ code as a plugin for our QML code. This is why we don't have a `main.cpp`: we only need the class that will provide the backend functionality for our KCM. `kcoreaddons_add_plugin` creates such a plugin and installs it to the right location.
 
@@ -122,4 +122,4 @@ source build/prefix.sh
 kcmshell5 kcm_time
 ```
 
-![the time kcm running](./screenshot-kcm.png)
+{{< figure src="../screenshot-kcm.png" caption="The Time KCM running." >}}

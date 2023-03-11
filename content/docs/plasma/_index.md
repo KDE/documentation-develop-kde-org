@@ -21,7 +21,7 @@ Plasma is very modular. Plasma is shipped with preinstalled modules in your root
     * System/Default `/usr/share/color-schemes/` ([GitLab](https://invent.kde.org/plasma/breeze/-/tree/master/colors))
     * User Installed `~/.local/share/color-schemes/` ([KDE Store Category](https://store.kde.org/browse/cat/112/order/latest/))
     * When a color theme is applied, its values are copied to `~/.config/kdeglobals` and [`kde-gtk-config`](https://invent.kde.org/plasma/kde-gtk-config) will automatically sync colors to the Breeze GTK Theme in `~/.config/gtk-3.0/colors.css`
-    * [Documentation](https://docs.kde.org/trunk5/en/plasma-workspace/kcontrol/colors/index.html)
+    * [Documentation](https://docs.kde.org/stable5/en/plasma-workspace/kcontrol/colors/index.html)
 * **Icon Theme**
     * System/Default `/usr/share/icons/` ([GitLab](https://invent.kde.org/frameworks/breeze-icons))
     * User Installed `~/.local/share/icons/` ([KDE Store Category](https://store.kde.org/browse/cat/132/order/latest/))
