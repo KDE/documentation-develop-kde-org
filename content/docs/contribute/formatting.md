@@ -133,7 +133,7 @@ sudo zypper install cmake extra-cmake-modules libQt5Core-devel libqt5-qtdeclarat
 sudo dnf install cmake extra-cmake-modules qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel kf5-kirigami2-devel kf5-ki18n-devel kf5-kcoreaddons-devel qqc2-breeze-style` */>}}
 ```
 
-Which looks like this: https://develop.kde.org/docs/use/kirigami/introduction-getting_started/
+Which looks like [this](/docs/getting-started/kirigami/introduction-getting_started).
 
 ## Add a line between shortcodes
 
