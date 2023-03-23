@@ -1,5 +1,7 @@
 # KDE Developer website
 
+https://develop.kde.org
+
 ## Before running the website
 
 Download the latest Hugo release (extended version) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
@@ -27,7 +29,7 @@ From the repo's root folder, run:
 hugo server
 ```
 
-And open [http://localhost:1313](http://localhost:1313)
+And open http://localhost:1313
 
 
 ## Extract icon metadata
@@ -59,5 +61,5 @@ To learn more about tutorial style and the use cases of the available tools, see
 ## I18n
 The Kirigami tutorials are internationalized and localized using [hugoi18n](https://invent.kde.org/websites/hugo-i18n).
 
-## kde-hugo theme
-This website uses a theme shared among KDE websites that are Hugo-based. If you have some issue that you think is not inside this repo, or if you just want to know more about the theme, have a look at [kde-hugo wiki](https://invent.kde.org/websites/aether-sass/-/wikis/Hugo).
+## hugo-kde theme
+This website uses a theme shared among KDE websites that are Hugo-based. If you have some issue that you think is not inside this repo, or if you just want to know more about the theme, have a look at [hugo-kde wiki](https://invent.kde.org/websites/hugo-kde/-/wikis/).
