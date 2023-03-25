@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:40+0000\n"
-"PO-Revision-Date: 2023-03-23 10:37+0100\n"
+"PO-Revision-Date: 2023-03-24 15:11+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -3418,6 +3418,18 @@ msgid ""
 "from, but we'll go with [Kirigami.ApplicationHeaderStyle.Auto](docs:"
 "kirigami2;templates::ApplicationHeader::headerStyle) for now."
 msgstr ""
+"Er zijn twee verbeteringen die hier gedaan kunnen worden. De eerste is dat, "
+"met [initialPage](docs:kirigami2;PageRow::initialPage), we zowel `mainPage` "
+"als de eerste pagina kunnen instellen, die verschijnt in de paginarij, en "
+"zijn afmetingen te laten beheren door de paginarij in plaats van via "
+"handmatige [ankers](https://doc.qt.io/qt-6/qtquick-positioning-anchors."
+"html), [positioneerders](https://doc.qt.io/qt-6/qtquick-positioning-layouts."
+"html) of [indelingen](https://doc.qt.io/qt-6/layout.html). De tweede is het "
+"hebben van een werkbalk, die ingesteld kan worden door een werkbalkstijl te "
+"definiëren met [globalToolBar.style](docs:kirigami2;PageRow::globalToolBar). "
+"Er zijn een paar stijlen waar we uit kunnen kiezen, maar we gaan voor nu met "
+"[Kirigami.ApplicationHeaderStyle.Auto](docs:kirigami2;templates::"
+"ApplicationHeader::headerStyle)."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:65
 msgid ""
@@ -3436,15 +3448,25 @@ msgid ""
 "[goForward()](docs:kirigami2;PageRow::goForward) can be used to navigate "
 "between pages."
 msgstr ""
+"Er zijn slechts twee manieren voor toevoegen van pagina's aan een paginarij: "
+"door zijn [initialPage](docs:kirigami2;PageRow::initialPage) in te stellen "
+"(die optioneel een array van pagina's kan nemen) of door [push()](docs:"
+"kirigami2;PageRow::push) te gebruiken. Om een pagina te verwijderen uit de "
+"paginarij zou u [pop()](docs:kirigami2;PageRow::pop) kunnen gebruiken, "
+"terwijl [goBack()](docs:kirigami2;PageRow::goBack) of [goForward()](docs:"
+"kirigami2;PageRow::goForward) gebruikt kan worden om tussen pagina's te "
+"navigeren."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:112
 msgid "Initial page with light blue color"
-msgstr ""
+msgstr "Initiële pagina met lichtblauwe kleur"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:114
 msgid ""
 "Upon clicking \\\"Push!\\\", a second page with light green color shows up"
 msgstr ""
+"Bij klikken op \\\"Druk!\\\" zal een tweede pagina verschijnen met een "
+"lichtgroene kleur"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:116
 msgid "The application's stack of pages"
@@ -3458,12 +3480,19 @@ msgid ""
 "pageStack) is nothing more than a very convenient, global page row. Every "
 "function available to a `PageRow` is also available to the `pageStack`."
 msgstr ""
+"Als een [Kirigami.PageRow](docs:kirigami2;PageRow) met een werkbalk u bekent "
+"voor komt, dan is dat omdat u het eerder hebt gezien. Een [ApplicationWindow."
+"pageStack](docs:kirigami2;AbstractApplicationWindow::pageStack) is niets "
+"meer dan een erg handig, globale paginarij. Elke functie beschikbaar in een "
+"`PageRow` is ook beschikbaar in de `pageStack`."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:120
 msgid ""
 "The previous example can be reduced significantly with a `pageStack`, with "
 "the added bonus of navigation actions:"
 msgstr ""
+"Het vorige voorbeeld kan aanzienlijk gereduceerd worden met een `pageStack`, "
+"met de toegevoegde bonus met navigatie-acties:"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:167
 msgid ""
@@ -3476,6 +3505,15 @@ msgid ""
 "[applicationWindow()](docs:kirigami2;AbstractApplicationWindow::"
 "applicationWindow):"
 msgstr ""
+"In het algemeen zult u een `pageStack` willen gebruiken in plaats van uw "
+"eigen [PageRow](docs:kirigami2;PageRow) te implementeren, speciaal wanneer "
+"uw toepassing groter wordt en u hebt het nodig om uw componenten aanwezig te "
+"hebben in aparte bestanden. Als u uw venster in uw `main.qml` aanmaakt met "
+"een [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), kan een "
+"component, die zich in een ander bestand bevindt, nog  steeds direct "
+"aangeroepen worden in de globale `pageStack` door middel van een oproep naar "
+"het [applicationWindow()](docs:kirigami2;AbstractApplicationWindow::"
+"applicationWindow):"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:170
 msgid "\"main.qml\""
@@ -3492,6 +3530,7 @@ msgstr "\"BasicPage.qml\""
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:209
 msgid "Clicking the button pushes a new page with help of applicationWindow"
 msgstr ""
+"Op de knop klikken brengt een nieuwe pagina met behulp van applicationWindow"
 
 #: content/docs/getting-started/kirigami/components-progressbars.md:0
 msgid "Progress Bars and Indicators"
@@ -4093,7 +4132,7 @@ msgstr "Tip"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:48
 msgid "You can quickly create this file structure with:"
-msgstr ""
+msgstr "U kunt deze bestandsstructuur snel aanmaken met:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:56
 msgid ""
@@ -4103,6 +4142,11 @@ msgid ""
 "available if you only need a quick template to start coding in your favorite "
 "IDE or text editor."
 msgstr ""
+"Als alternatief kunt u het standaard Kirigami sjabloon gebruiken geleverd "
+"door [KDevelop](https://apps.kde.org/kdevelop/), de hoofd-IDE van KDE voor "
+"coderen in C++ en QML. [KAppTemplate](https://apps.kde.org/kapptemplate/) is "
+"ook beschikbaar als u alleen een snel sjabloon nodig hebt om met coderen te "
+"starten in uw favoriete IDE of tekstbewerker."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:60
 msgid ""
@@ -4187,6 +4231,12 @@ msgid ""
 "Controls in the wild, such as \"QQC\" or \"QQC2\". We will be using "
 "\"Controls\" in this tutorial for clarity."
 msgstr ""
+"De QtQuick Controls en Kirigami imports in aparte naamruimten stoppen met "
+"het gebruik van sleutelwoord `as` is een beste praktijk die verzekert dat er "
+"geen componenten zijn met dezelfde naam die in conflict kunnen zijn. U zou "
+"verschillende namen voor QtQuick Controls in het wild kunnen zien, zoals "
+"\"QQC\" of \"QQC2\". We zullen \"Controls\" in deze handleiding gebruiken "
+"voor alle helderheid."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:83
 msgid ""
@@ -4365,6 +4415,9 @@ msgid ""
 "`main.cpp`, instead of needing to specify the whole \"contents/ui/main.qml\" "
 "path."
 msgstr ""
+"Dit hulpbronbestand laat ons het pad \"qrc:\" + \"/main.qml\" gebruiken in "
+"onze `main.cpp`, in plaats van het moeten specificeren van het gehele pad "
+"\"contents/ui/main.qml\"."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:123
 msgid ""
@@ -4660,6 +4713,8 @@ msgid ""
 "Notice the `{}` that indicates we are appending a JavaScript object to our "
 "model."
 msgstr ""
+"Merk de `{}` op wat aangeeft dat we een JavaScript-object aan ons model "
+"achtervoegen."
 
 #: content/docs/getting-started/kirigami/introduction-kirigami-gallery.md:127
 msgid ""
@@ -4839,16 +4894,12 @@ msgid "Each ListElement is an element on the list, containing information"
 msgstr "Elk ListElement is een element in de lijst, die informatie bevat"
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:47
-#, fuzzy
-#| msgid ""
-#| "We add this component inside our [Kirigami.ScrollablePage](docs:kirigami2;"
-#| "ScrollablePage) from the last tutorial."
 msgid ""
 "We add our `kountdownModel` inside our [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow) from the last tutorial."
 msgstr ""
-"We voegen deze component toe in onze [Kirigami.ScrollablePage](docs:"
-"kirigami2;ScrollablePage) uit de laatste inleiding."
+"We voegen onze `kountdownModel` toe in onze [Kirigami.ApplicationWindow]"
+"(docs:kirigami2;ApplicationWindow) uit de laatste inleiding."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:49
 msgid ""
@@ -5036,14 +5087,6 @@ msgid "Layouts"
 msgstr "Indelingen"
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:149
-#, fuzzy
-#| msgid ""
-#| "With [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
-#| "columnlayout.html) and [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-"
-#| "layouts-rowlayout.html), all we have to do is write our components inside "
-#| "the Layout component. As you can see, we went with a [GridLayout](https://"
-#| "doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html), which entails a bit "
-#| "more handiwork."
 msgid ""
 "The [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
 "is inside the [Item](https://doc.qt.io/qt-6/qml-qtquick-item.html) component "
@@ -5052,12 +5095,6 @@ msgid ""
 "doc.qt.io/qt-6/qml-qtquick-item.html) that contains what will be displayed "
 "in your card."
 msgstr ""
-"Met [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
-"html) en [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout."
-"html), is alles wat we hoeven te doen is onze componenten binnen de "
-"component Layout schrijven. Zoals u kunt zien, we gingen voor een "
-"[GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html), "
-"die wat meer handwerk vraagt."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:151
 msgid ""
@@ -6182,17 +6219,11 @@ msgstr ""
 "toepassing bruikbaar, consistent en esthetisch blijft."
 
 #: content/docs/getting-started/kirigami/introduction-pages.md:31
-#, fuzzy
-#| msgid ""
-#| "Kirigami actions inherit from [QtQuick Controls Action](docs:"
-#| "qtquickcontrols;QtQuick.Controls.Action) and can be assigned shortcuts."
 msgid ""
 "A [Kirigami.Page](docs:kirigami2;Page) inherits from a [Controls.Page](docs:"
 "qtquickcontrols;QtQuick.Controls.Page), and as such you can use the latter's "
 "properties as well."
 msgstr ""
-"Kirigami acties erven uit [QtQuick Controls Action](docs:qtquickcontrols;"
-"QtQuick.Controls.Action) en kunnen toegekend worden aan sneltoetsen."
 
 #: content/docs/getting-started/kirigami/introduction-pages.md:35
 msgid ""
