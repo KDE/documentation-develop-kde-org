@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:40+0000\n"
-"PO-Revision-Date: 2023-03-24 15:11+0100\n"
+"PO-Revision-Date: 2023-03-25 12:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -4928,6 +4928,11 @@ msgid ""
 "more about it in [this page](https://doc.qt.io/qt-6/qtqml-javascript-topic."
 "html)."
 msgstr ""
+"Omdat QML is bovenop JavaScript is gebouwd, zijn vele van deze taalfuncties "
+"beschikbaar voor gebruik in QML-bestanden. QML-variabelen moeten echter een "
+"prefix met `property` hebben, tenzij het binnen een JS codeblok is. U kunt "
+"hier meer over lezen op [deze pagina](https://doc.qt.io/qt-6/qtqml-"
+"javascript-topic.html)."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:57
 msgid ""
@@ -5028,6 +5033,10 @@ msgid ""
 "ApplicationWindow). We will then proceed by checking what each part of our "
 "delegate component does."
 msgstr ""
+"De [Component](docs:qtqml;QtQml.Component) die onze gedelegeerde "
+"representeert kan toegevoegd worden in ons [Kirigami.ApplicationWindow](docs:"
+"kirigami2;ApplicationWindow). We zullen daarna verder gaan door te "
+"controleren wat elk deel van onze gedelegeerde component doet."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:78
 msgid ""
@@ -5052,6 +5061,8 @@ msgid ""
 "The first part we will take a look at is how to manage the width and height "
 "of our component:"
 msgstr ""
+"Het eerste deel waar we naar zullen kijken is hoe de breedte en hoogte van "
+"onze component te beheren:"
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:145
 msgid ""
@@ -5095,6 +5106,12 @@ msgid ""
 "doc.qt.io/qt-6/qml-qtquick-item.html) that contains what will be displayed "
 "in your card."
 msgstr ""
+"De [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
+"is binnen de [Item](https://doc.qt.io/qt-6/qml-qtquick-item.html)-component "
+"die we hebben geleverd voor de eigenschap [contentItem](https://doc.qt.io/"
+"qt-6/qml-qtquick-controls2-control.html#contentItem-prop). Dit is het [Item]"
+"(https://doc.qt.io/qt-6/qml-qtquick-item.html) dat bevat wat getoond zal "
+"worden in uw kaart."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:151
 msgid ""
@@ -5212,6 +5229,9 @@ msgid ""
 "different units defined within Plasma and Kirigami on the [Human Interface "
 "Guidelines](/hig/layout/units/)."
 msgstr ""
+"De Visuele ontwerpgroep (VDG) van KDE heeft heel wat meer informatie over de "
+"verschillende eenheden gedefinieerd in Plasma en Kirigami op het [Human "
+"Interface Guidelines](/hig/layout/units/)."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:191
 msgid ""
@@ -5283,6 +5303,8 @@ msgid ""
 "![Screenshot of the app appearance after completing this lesson](Screenshot."
 "webp)"
 msgstr ""
+"![Schermafdruk van het uiterlijk van de toepassing na afmaken van deze les]"
+"(Screenshot.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:248
 msgid "So there is our basic card!"
@@ -5383,6 +5405,8 @@ msgid ""
 "While interacting with others in the KDE Community, please make sure you "
 "abide by the [Code of Conduct](https://kde.org/code-of-conduct/)."
 msgstr ""
+"Tijdens het omgaan met anderen in de KDE-gemeenschap, houd u aan de [Code "
+"voor gedrag](https://kde.org/code-of-conduct/)."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:31
 msgid ""
@@ -5483,6 +5507,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:40
 msgid "An app to help you choose the license to go with your project."
 msgstr ""
+"Een toepassing om u te helpen bij het kiezen van de licentie die behoort bij "
+"uw project."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:40
 msgid ""
@@ -5504,6 +5530,8 @@ msgstr ""
 msgid ""
 "A welcome app for the Plasma desktop that lets you create new pages with QML."
 msgstr ""
+"Een toepassing voor welkom voor het Plasma bureaublad die u nieuwe pagina's "
+"laat maken met QML."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:41
 msgid "[KDE Invent page](https://invent.kde.org/plasma/plasma-welcome)"
@@ -5782,6 +5810,9 @@ msgid ""
 "[this wiki page](https://community.kde.org/Get_Involved/development/"
 "Learn#C_and_C++)."
 msgstr ""
+"We leveren ook een lijst met continue bijgewerkte hulpbronnen om C++ te "
+"leren in [deze wiki-pagina](https://community.kde.org/Get_Involved/"
+"development/Learn#C_and_C++)."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:89
 msgid "Creating classic KDE applications using QtWidgets"
@@ -5938,6 +5969,8 @@ msgid ""
 "![Overlay sheet appearing in the middle of the application like a dialog "
 "window](addSheet.webp)"
 msgstr ""
+"![Overlay-vel die verschijnt in het midden van de toepassing zoals een "
+"dialoogvenster](addSheet.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-overlaysheets.md:21
 msgid "Countdown-adding sheet"
@@ -6117,6 +6150,8 @@ msgid ""
 "![Screenshot of the application with four example cards](addedKountdowns."
 "webp)"
 msgstr ""
+"![Schermafdruk van de toepassing met vier voorbeeldkaarten](addedKountdowns."
+"webp)"
 
 #: content/docs/getting-started/kirigami/introduction-pages.md:0
 msgid "Explaining Pages"
@@ -6224,6 +6259,9 @@ msgid ""
 "qtquickcontrols;QtQuick.Controls.Page), and as such you can use the latter's "
 "properties as well."
 msgstr ""
+"Een [Kirigami.Page](docs:kirigami2;Page) erft van een [Controls.Page](docs:"
+"qtquickcontrols;QtQuick.Controls.Page), en als zodanig kunt u ook de "
+"eigenschappen van de laatste gebruiken."
 
 #: content/docs/getting-started/kirigami/introduction-pages.md:35
 msgid ""
@@ -6411,13 +6449,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:67
 msgid "AddEditSheet.qml"
-msgstr ""
+msgstr "AddEditSheet.qml"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:69
 msgid ""
 "Looking at our new `AddEditSheet.qml`—our repurposed adding sheet—we can see "
 "how these signals work:"
 msgstr ""
+"Kijkend naar onze nieuwe `AddEditSheet.qml`-ons toevoegvel met een nieuw "
+"doel-kunnen we zien hoe deze signalen werken:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:73
 msgid ""
