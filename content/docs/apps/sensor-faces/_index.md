@@ -386,7 +386,7 @@ See [KPluginMetaData](docs:kcoreaddons;KPluginMetaData) for the documentation ab
 The `KPackageStructure` is needed for the plugin to be correctly found.
 
 In case you have an existing plugin that uses a metadata.desktop file, you can follow
-the migration instructions from the [Widget Properties]({{< relref "docs/plasma/widget/properties/#kpackagestructure" >}}) documentation.
+the migration instructions from the [Widget Properties]({{< relref "docs/plasma/widget/properties.md#kpackagestructure" >}}) documentation.
 
 ### faceproperties
 Not every face supports displaying of every feature that are exposed as the [properties of 
