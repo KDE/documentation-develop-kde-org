@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:40+0000\n"
-"PO-Revision-Date: 2023-03-25 12:48+0100\n"
+"PO-Revision-Date: 2023-03-28 23:25+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -5243,6 +5243,15 @@ msgid ""
 "number of columns in our grid depending on the screen we are using: if it's "
 "a widescreen, the grid will have 4 columns, else it will have 2."
 msgstr ""
+"Zoals u zich misschien herinnert, `root` is de id van onze [Kirigami."
+"ApplicationWindow](docs:kirigami2;ApplicationWindow). Het levert de "
+"eigenschap [wideScreen](docs:kirigami2;AbstractApplicationWindow::"
+"wideScreen), gebruikt om te bepalen of het huidige apparaatscherm een breed "
+"scherm is (d.w.z. een computermonitor of een telefoon in landschap). We "
+"gebruiken hier een drievoudige voorwaarde om het aantal kolommen in ons "
+"raster te variëren afhankelijk van het scherm dat we gebruiken: als het een "
+"breed scherm is, zal het raster 4 kolommen hebben, anders zal het er 2 "
+"hebben."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:193
 msgid "Inner components"
@@ -6547,7 +6556,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:105
 msgid "KountdownDelegate.qml"
-msgstr ""
+msgstr "KountdownDelegate.qml"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:107
 msgid ""
@@ -6657,6 +6666,10 @@ msgid ""
 "and are [WCAG compliant](https://en.wikipedia.org/wiki/"
 "Web_Content_Accessibility_Guidelines)."
 msgstr ""
+"Als u echt aangepaste kleuren nodig hebt, kijk dan op [Kontrast](https://"
+"apps.kde.org/kontrast/) om er zeker van te zijn dat de kleuren die u kiest "
+"een goed contrast hebben en [WCAG compliant](https://en.wikipedia.org/wiki/"
+"Web_Content_Accessibility_Guidelines) zijn."
 
 #: content/docs/getting-started/kirigami/style-colors.md:34
 #: content/docs/getting-started/kirigami/style-typography.md:266
@@ -6690,6 +6703,14 @@ msgid ""
 "change to their inactive state, and if you switch your system to a dark "
 "theme, the dark variants of the colors should show up in real time."
 msgstr ""
+"[Kirigami Gallery](../introduction-kirigami-gallery) levert een "
+"codevoorbeeld die [alle beschikbare kleuren voor Kirigami](https://invent."
+"kde.org/sdk/kirigami-gallery/-/blob/master/src/data/contents/ui/gallery/"
+"ColorsGallery.qml) presenteert via [Kirigami.Theme](docs:kirigami2;Kirigami::"
+"PlatformTheme). Dit omvat alle hun statussen: als u buiten het venster "
+"klikt, wijzigen de kleuren naar hun inactieve status en als u uw systeem "
+"omschakelt naar een donker thema, zouden de donkere varianten van de kleuren "
+"direct moeten verschijnen."
 
 #: content/docs/getting-started/kirigami/style-colors.md:52
 msgid "The Colors component in Kirigami Gallery"
@@ -6782,14 +6803,17 @@ msgid ""
 "to distinguish different components. A large border has been added to "
 "contrast colors."
 msgstr ""
+"Hier is een voorbeeld dat presenteert hoe kleurensets geërfd worden en "
+"gebruikt kunnen worden om verschillende componenten te onderscheiden. Een "
+"grote rand is toegevoegd om kleuren te laten contrasteren."
 
 #: content/docs/getting-started/kirigami/style-colors.md:84
 msgid "How color sets differ in Breeze"
-msgstr ""
+msgstr "Hoe kleurensets in Breeze verschillen"
 
 #: content/docs/getting-started/kirigami/style-colors.md:90
 msgid "How color sets differ in Breeze Dark"
-msgstr ""
+msgstr "Hoe kleurensets in Breeze Dark verschillen"
 
 #: content/docs/getting-started/kirigami/style-colors.md:96
 msgid "Using Custom Colors"
@@ -6809,7 +6833,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors.md:113
 msgid "Example with custom colors"
-msgstr ""
+msgstr "Voorbeeld met eigen/aangepaste kleuren"
 
 #: content/docs/getting-started/kirigami/style-typography.md:0
 msgid "Typography"
@@ -6829,7 +6853,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-typography.md:47
 msgid "Five headings with different levels for size comparison"
-msgstr ""
+msgstr "Vijf koppen met verschillende niveaus voor vergelijken van grootte"
 
 #: content/docs/getting-started/kirigami/style-typography.md:53
 msgid "Labels"
@@ -6854,26 +6878,34 @@ msgid ""
 "[verticalAlignment](https://doc.qt.io/qt-6/qml-qtquick-text."
 "html#verticalAlignment-prop) properties."
 msgstr ""
+"U kunt uw tekstelementen uitlijnen met de eigenschappen [horizontalAlignment]"
+"(https://doc.qt.io/qt-6/qml-qtquick-text.html#horizontalAlignment-prop) en "
+"[verticalAlignment](https://doc.qt.io/qt-6/qml-qtquick-text."
+"html#verticalAlignment-prop)."
 
 #: content/docs/getting-started/kirigami/style-typography.md:112
 msgid "Heading and lorem ipsum text aligned to the horizontal center"
-msgstr ""
+msgstr "Kop en tekst lorem ipsum uitgelijnd naar het horizontale centrum"
 
 #: content/docs/getting-started/kirigami/style-typography.md:148
 msgid "Heading and lorem ipsum text using right-aligned text"
-msgstr ""
+msgstr "Kop en tekst lorem ipsum met de tekst rechts uitgelijnd"
 
 #: content/docs/getting-started/kirigami/style-typography.md:186
 msgid ""
 "Heading with bottom vertical alignment and lorem ipsum text with top "
 "vertical alignment"
 msgstr ""
+"Kop met verticale uitlijning onderaan en tekst lorem ipsum met verticale "
+"uitlijning bovenaan"
 
 #: content/docs/getting-started/kirigami/style-typography.md:225
 msgid ""
 "Heading with top vertical alignment and lorem ipsum text with bottom "
 "vertical alignment"
 msgstr ""
+"Kop met verticale uitlijning bovenaan en tekst lorem ipsum met verticale "
+"uitlijning onderaan"
 
 #: content/docs/getting-started/kirigami/style-typography.md:231
 msgid "Rich Text"
@@ -6894,6 +6926,8 @@ msgid ""
 "A Label containing a list of fruits using HTML tags like paragraph, "
 "unordered lists and bold fonts"
 msgstr ""
+"Een label met een lijst met fruit gebruikmakend van HTML tags zoals "
+"paragraaf, ongeordende lijsten en vette lettertypen"
 
 #: content/docs/getting-started/kirigami/style-typography.md:268
 msgid ""
