@@ -78,7 +78,7 @@ Name and Description fields of the above json file, and are translated if
 a localization is available.
 
 In case you have an existing plugin that uses a metadata.desktop file, you can follow
-the migration instructions from the [Widget Properties](/docs/extend/plasma/widget/properties/#kpackagestructure) documentation.
+the migration instructions from the [Widget Properties]({{< relref "docs/plasma/widget/properties/#kpackagestructure" >}}) documentation.
 
 ### Examples of Usage
 
