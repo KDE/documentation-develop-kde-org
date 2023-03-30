@@ -129,7 +129,7 @@ Collapsible boxes like the following:
 
 Can be used for optional content that really should not be taking space from the page and from the main content, which might be the case for really long lists. Use this rarely.
 
-## Follow standard documentation practices where it makes sense
+## Follow standard documentation practices where it makes sense {#standard-documentation-practices}
 
 Here are a few free resources to learn about technical documentation:
 
