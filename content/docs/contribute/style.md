@@ -28,7 +28,7 @@ These are not rules, just a compilation of matters found in technical documentat
 
 Simply by keeping these questions in mind while writing your tutorial, your content will naturally lean towards high quality documentation.
 
-## Use tree {#tree}
+## Use tree to show the project structure {#tree}
 
 The `tree --dirs-first` command is great to show the project structure to the reader.
 
@@ -139,6 +139,29 @@ Here are a few free resources to learn about technical documentation:
 
 * [Microsoft Style Guide: Top 10 Tips](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice)
 
+Here are a few highlights from the Google Technical Writing Guide that effectively summarize content seen in most technical writing books:
+
+* [Define new or unfamiliar terms](https://developers.google.com/tech-writing/one/words#define_new_or_unfamiliar_terms)
+
+* [Use terms consistently](https://developers.google.com/tech-writing/one/words#use_terms_consistently)
+
+* [Recognize ambiguous pronouns](https://developers.google.com/tech-writing/one/words#recognize_ambiguous_pronouns)
+
+* [Prefer active voice to passive voice](https://developers.google.com/tech-writing/one/active-voice#prefer_active_voice_to_passive_voice)
+
+* [Choose strong verbs](https://developers.google.com/tech-writing/one/clear-sentences#choose_strong_verbs)
+
+* [Convert some long sentences to lists](https://developers.google.com/tech-writing/one/short-sentences#convert_some_long_sentences_to_lists)
+
+* [Distinguish that from which](https://developers.google.com/tech-writing/one/short-sentences#distinguish_that_from_which)
+
+* [Answer what, why and how](https://developers.google.com/tech-writing/one/paragraphs#answer_what_why_and_how)
+
+* [Think like your audience](https://developers.google.com/tech-writing/two/editing#think_like_your_audience)
+
+* [Prefer task-based headings](https://developers.google.com/tech-writing/two/large-docs#prefer_task-based_headings)
+
+* [Disclose information progressively](https://developers.google.com/tech-writing/two/large-docs#disclose_information_progressively)
 
 
 
