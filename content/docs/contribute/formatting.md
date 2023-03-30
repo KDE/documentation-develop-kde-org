@@ -12,13 +12,16 @@ group: contribute
 
 You accept that your contributions are licensed under the CC-BY-SA-4.0.
 
-Each page of the website is located in `content`, for the documentation specific pages, they are
-located at `content/docs`. To add a new article just create a new markdown file called `_index.md`
-at the location you want it to have, e.g. for
-`https://developer.kde.org/docs/getting-started/installation`, you need to create a file called
-`content/docs/getting-started/installation/_index.md`.
+Each page of the website is located in `content`, while documentation-specific pages are
+located in `content/docs`.
 
-This is the structure of a file:
+ To create a new tutorial, you need to create a folder inside `content/docs`, for example, `content/docs/getting-started/installation/`, and inside it, create an `_index.md` file. This will be the index page for the tutorial, the **section**, which will group other pages inside.
+
+ To add new pages to the tutorial, you can then create individual Markdown files containing the name of the tutorial page. For instance, you could have a `content/docs/getting-started/installation/howto.md` and a `content/docs/getting-started/installation/configuring.md`.
+
+To add additional content like screenshots or example code for each individual page, you can create a folder containing the same name as the individual Markdown file, for example `content/docs/getting-started/installation/howto/` and `content/docs/getting-started/installation/configuring/`.
+
+This is the structure of a typical page:
 
 ```
 ---
@@ -37,29 +40,28 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 Normal markdown content
 ```
 
-`title:`, `weight:`, `SPDX-FileCopyrightText:` and `
-SPDX-License-Identifier:` are the minimum requirements for a page.
+`title:`, `weight:`, `SPDX-FileCopyrightText:` and `SPDX-License-Identifier:` are the minimum requirements for a page.
 
 Other available options are:
 
-* `group:`, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](/docs/getting-started/kirigami), with the groups Introduction, Style, Components, and Advanced. The groups need to be listed in the `_index` file of the tutorial.
-* `aliases:`, which creates aliases which can be used to shorten links. This is useful when linking to that page from elsewhere.
+* `group:`, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](/docs/getting-started/kirigami), with the groups Introduction, Style, Components, and Advanced. The groups need to be listed in the `_index.md` file of the tutorial.
+* `aliases:`, which creates aliases that can be used to shorten links. This is useful when linking to that page from elsewhere.
 
 ## Hugo shortcodes
 
-There are also some custom [shortcodes](https://gohugo.io/content-management/shortcodes/) that can be used to create more complex content.
+There are some custom [shortcodes](https://gohugo.io/content-management/shortcodes/) that can be used to create more complex content.
 
 They can be identified by their characteristic `{{</* */>}}`, which have HTML tags inside `<>`. Certain shortcodes require closing tags.
 
 For readability, we add spaces between the `{{</* */>}}` and the tag, e.g. `{{</* myshortcode parameter="" */>}}`.
 
-Do *not* add spaces between the `{` and `<`, or between `>` and `}` when using shortcodes.
+Do *not* add spaces between the `{` and `<`, or between `>` and `}` when using shortcodes. In other words, don't do `{{ <contenthere> }}`.
 
-The most important ones are as follows.
+The most important shortcodes are as follows.
 
 ### readfile
 
-Displays the contents of a file and applies syntax highlighting to it. There are two optional parameters:
+Displays the contents of a file and applies syntax highlighting to it. It has two optional parameters:
 
 **start**: Defines the first line that should be displayed. By default this is 1, which means starting from the first line.
 
@@ -139,7 +141,7 @@ Which looks like [this](/docs/getting-started/kirigami/introduction-getting_star
 
 We have tooling that parses through shortcodes.
 
-Adding a line between shortcodes ensures the absence of any parsing error.
+Adding a line between shortcodes ensures that no parsing error occurs.
 
 ## Adding images
 
