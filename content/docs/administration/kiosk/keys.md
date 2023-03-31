@@ -216,7 +216,7 @@ applications:
           [Settings]
           PreviewsEnabled[$i]=false
           ```
-      - key: "acton/sharefile"
+      - key: "action/sharefile"
         action: Disables file sharing from the UI, but you may also want to disable filesharing altogether.
       - key: "action/sendURL"
         action: Send Link Address
