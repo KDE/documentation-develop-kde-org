@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:40+0000\n"
-"PO-Revision-Date: 2023-02-15 12:51+0000\n"
+"PO-Revision-Date: 2023-04-01 17:28+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -94,7 +94,13 @@ msgstr ""
 "X-POFile-SpellExtra: AbstractApplicationWindow AboutType\n"
 "X-POFile-SpellExtra: qmlRegisterSingletonType Koko parse UTC drawers\n"
 "X-POFile-SpellExtra: overlaysheets progressbars addaboutpage\n"
-"X-POFile-SpellExtra: pagerowpagestack\n"
+"X-POFile-SpellExtra: pagerowpagestack qtqml QQmlEngine import About\n"
+"X-POFile-SpellExtra: applicationData qtcore ContextDrawer PasswordField\n"
+"X-POFile-SpellExtra: getting started contextualActions left right\n"
+"X-POFile-SpellExtra: QTQUICKCONTROLSMOBILE qtquick and separators mainPage\n"
+"X-POFile-SpellExtra: globalToolBar style goBack goForward Push QQC\n"
+"X-POFile-SpellExtra: property QtQml VDG layout units wideScreen ternária\n"
+"X-POFile-SpellExtra: webp lorem ipsum\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -217,6 +223,7 @@ msgstr ""
 msgid ""
 "First, we are going to edit our `main.cpp` file from previous tutorials."
 msgstr ""
+"Primeiro, vamos editar o nosso ficheiro `main.cpp` dos tutoriais anteriores."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:14
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:101
@@ -269,6 +276,9 @@ msgid ""
 "qmlRegisterSingletonType). This is used to allow us to import the C++ code "
 "as a module in our `main.qml` with `import org.kde.example 1.0`."
 msgstr ""
+"Iremos criar então um [qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+"qmlRegisterSingletonType). Este é usado para nos permitir importar o código "
+"em C++ como um módulo no nosso `main.qml` com o `import org.kde.example 1.0`."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:24
 msgid ""
@@ -279,6 +289,13 @@ msgid ""
 "latter's case, we use a [lambda](https://en.cppreference.com/w/cpp/language/"
 "lambda) to instantiate the `aboutData` of our application in place."
 msgstr ""
+"O seu primeiro argumento é o URI que será usado para a importação, sendo os "
+"segundo e terceiro argumentos as versões principais e secundárias, "
+"respectivamente, o quarto o nome do tipo - o nome que iremos invocar ao "
+"aceder ao nosso tipo `About` e o último é uma referência ao objecto em C++ "
+"que está exposto no QML. No caso do último, iremos usar uma função [lambda]"
+"(https://en.cppreference.com/w/cpp/language/lambda) para instanciar o "
+"`aboutData` da nossa aplicação no local."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:26
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:62
@@ -296,6 +313,14 @@ msgid ""
 "kcoreaddons;KAboutData::applicationData) object. We exposed precisely that "
 "in our `main.cpp` and called it `About`, so we can pass it here."
 msgstr ""
+"Primeiro, usamos a importação que definimos no ficheiro `main.cpp`, "
+"nomeadamente a `org.kde.example`. Depois adicionamos uma [Kirigami.Action]"
+"(docs:kirigami2;Action) à nossa [área global](docs:kirigami2;GlobalDrawer), "
+"que nos enviará para a página Acerca, e criamos um componente com uma "
+"[Kirigami.AboutPage](docs:kirigami2;AboutPage) nele, a qual está à espera de "
+"um objecto [KAboutData::applicationData()](docs:kcoreaddons;KAboutData::"
+"applicationData). Nós expomos precisamente isso no nosso `main.cpp` e "
+"chamámos-lhe `About`, pelo que o podemos passar aqui."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:33
 msgid "CMakeLists"
@@ -308,12 +333,18 @@ msgid ""
 "command/find_package.html) call. It is needed for [KAboutData](docs:"
 "kcoreaddons;KAboutData)."
 msgstr ""
+"No ficheiro `CMakeLists.txt` da nossa pasta de topo, certifique-se que tem o "
+"`CoreAddons` na nosss chamada [find_package()](https://cmake.org/cmake/help/"
+"latest/command/find_package.html). É necessária por causad do [KAboutData]"
+"(docs:kcoreaddons;KAboutData)."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:41
 msgid ""
 "In the `CMakeLists.txt` file in the `src/` directory, nothing is needed "
 "since we instantiated out `aboutData` in place."
 msgstr ""
+"No ficheiro `CMakeLists.txt` da pasta `src/`, não é necessário nada, dado "
+"que instanciámos o `aboutData` no local."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:44
 msgid "Running the application"
@@ -408,6 +439,9 @@ msgid ""
 "QQmlApplicationEngine), add the [type registration](https://doc.qt.io/qt-5/"
 "qtqml-cppintegration-definetypes.html) to `main.cpp` as follows:"
 msgstr ""
+"Logo depois de criar o  [QQmlApplicationEngine](docs:qtqml;"
+"QQmlApplicationEngine), adicione o [registo do tipo](https://doc.qt.io/qt-5/"
+"qtqml-cppintegration-definetypes.html) no `main.cpp`, da seguinte forma:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:48
 msgid "Don't forget to include the new header file at the top of `main.cpp`."
@@ -455,6 +489,8 @@ msgid ""
 "Right under the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, add a new "
 "[Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY)."
 msgstr ""
+"Logo abaixo da macro [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT), adicione uma "
+"nova [Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:65
 #, fuzzy
@@ -920,12 +956,21 @@ msgid ""
 "modules](https://api.kde.org/ecm/) becomes something like `find_package(KF5 "
 "COMPONENTS Kirigami2)`."
 msgstr ""
+"Se estiver a precisar de adicionar algum dos componentes indicados na "
+"[documentação da API do KDE](https://api.kde.org/) à sua aplicação, poderá "
+"verificar a barra lateral direita para ver como adicionar o componente com o "
+"CMake. Por exemplo, para o [Kirigami2](docs:kirigami2;), irá encontrar algo "
+"do tipo `find_package(KF5Kirigami2)` o qual, com a adição dos [extra-cmake-"
+"modules](https://api.kde.org/ecm/), fica algo semelhante a `find_package(KF5 "
+"COMPONENTS Kirigami2)`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:41
 msgid ""
 "Pay close attention to your included components, as omitting ones used in "
 "our code will stop our application from compiling."
 msgstr ""
+"Preste bastante atenção aos seus componentes incluídos, dado que omiti-los "
+"no nosso código fará com que a aplicação deixe de compilar."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:45
 #, fuzzy
@@ -1189,6 +1234,9 @@ msgid ""
 "(docs:kirigami2;ContextDrawer) to your [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow)."
 msgstr ""
+"Para fazer com que as acções do contexto funcionem em dispositivos móveis, "
+"precisa de adicionar uma [ContextDrawer](docs:kirigami2;ContextDrawer) na "
+"sua [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow)."
 
 #: content/docs/getting-started/kirigami/components-actions.md:120
 msgid "Global Drawer"
@@ -1275,6 +1323,10 @@ msgid ""
 "both inherit from `ActionTextField` and are likely to cover your desired use-"
 "case."
 msgstr ""
+"Raramente deverá usar um ActionTextField directamente. O [SearchField](docs:"
+"kirigami2;SearchField) e o [PasswordField](docs:kirigami2;PasswordField) "
+"herdam ambos de `ActionTextField` e provavelmente irão cobrir o seu caso de "
+"uso desejado."
 
 #: content/docs/getting-started/kirigami/components-actions.md:198
 msgid "SwipeListItem"
@@ -1349,6 +1401,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-actions.md:257
 msgid "A horizontal toolbar being displayed at the top of the application"
 msgstr ""
+"Uma barra de ferramentas horizontal a ser apresentada no topo da aplicação"
 
 #: content/docs/getting-started/kirigami/components-actions.md:259
 #, fuzzy
@@ -1374,6 +1427,9 @@ msgid ""
 "information or actions together. These actions can be added to the `actions` "
 "group, similarly to previous components."
 msgstr ""
+"Um [Kirigami.Card](docs:kirigami2;Card) é usado para apresentar uma colecção "
+"de informações ou acções em conjunto. Estas acções poderão ser adicionadas "
+"ao grupo `actions`, de forma semelhante aos componentes anteriores."
 
 #: content/docs/getting-started/kirigami/components-actions.md:280
 #: content/docs/getting-started/kirigami/components-card.md:67
@@ -1386,6 +1442,9 @@ msgid ""
 "title, white background behind its text, and two actions with icons and a "
 "hamburger menu at the bottom](card.png)"
 msgstr ""
+"![Imagem de um Card completo com um fundo separador debaixo do seu título, "
+"um fundo branco atrás do seu texto e duas acções com ícones e um menu em "
+"hambúrguer no fundo](card.png)"
 
 #: content/docs/getting-started/kirigami/components-actions.md:305
 #, fuzzy
@@ -1449,6 +1508,10 @@ msgid ""
 "beginner tutorial or in [the dedicated documentation page for them](../"
 "components-actions/)."
 msgstr ""
+"Esta página assume que está familiarizado com os objectos [Kirigami.Action]"
+"(docs:kirigami2;Action). Se não estiver, poderá aprender tudo sobre eles no "
+"nosso tutorial para principiantes ou na [página dedicada da documentação "
+"sobre eles](../components-actions/)."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar.md:20
 msgid "Creating our first ActionToolBar"
@@ -1671,6 +1734,10 @@ msgid ""
 "hamburger menu at the bottom](/docs/getting-started/kirigami/components-card/"
 "card1.png)"
 msgstr ""
+"![Imagem de um Card completo com um fundo separador debaixo do seu título, "
+"um fundo branco atrás do seu texto e duas acções com ícones e um menu em "
+"hambúrguer no fundo](/docs/getting-started/kirigami/components-card/card1."
+"png)"
 
 #: content/docs/getting-started/kirigami/components-card.md:93
 msgid "CardsLayout"
@@ -1705,6 +1772,8 @@ msgid ""
 "[`CardsListView`](docs:kirigami2;CardsListView) or [`CardsGridView`](docs:"
 "kirigami2;CardsGridView) are better suited for larger models."
 msgstr ""
+"O [`CardsListView`](docs:kirigami2;CardsListView) ou o [`CardsGridView`]"
+"(docs:kirigami2;CardsGridView) são mais adequados para modelos maiores."
 
 #: content/docs/getting-started/kirigami/components-card.md:103
 msgid "Important"
@@ -1716,6 +1785,9 @@ msgid ""
 "within a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
 "columnlayout.html)."
 msgstr ""
+"Um [CardsLayout](docs:kirigami2;CardsLayout) deverá estar contido dentro de "
+"um [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
+"html)."
 
 #: content/docs/getting-started/kirigami/components-card.md:109
 #, fuzzy
@@ -2309,6 +2381,10 @@ msgid ""
 "direction. In both modes, sliders in vertical orientation go from the bottom "
 "up."
 msgstr ""
+"No modo da Esquerda para a Direita, as barras aumentam o seu valor quando as "
+"desloca da esquerda para a direita, enquanto que no modo da Direita para a "
+"Esquerda, as mesmas funcionam na direcção inversa. Em ambos os modos, as "
+"barras com orientação vertical são incrementadas de baixo para cima."
 
 #: content/docs/getting-started/kirigami/components-controls.md:230
 #, fuzzy
@@ -2540,6 +2616,9 @@ msgid ""
 "left edge to the middle of the screen in Left to Right mode or from the "
 "right edge in Right to Left mode."
 msgstr ""
+"Poderá ser activado se tocar no menu do hambúrguer ou deslizando do extremo "
+"esquerdo para o meio do ecrã, no modo da Esquerda para a Direita, ou do "
+"extremo direito para o centro no modo da Direita para a Esquerda."
 
 #: content/docs/getting-started/kirigami/components-drawers.md:20
 #, fuzzy
@@ -2637,7 +2716,7 @@ msgstr "Neste modo de menu, os cabeçalhos e rodapés não ficam visíveis."
 
 #: content/docs/getting-started/kirigami/components-drawers.md:149
 msgid "Global drawer in menu mode, without a header or banner"
-msgstr ""
+msgstr "Área global no modo de menu, sem um cabeçalho ou separador"
 
 #: content/docs/getting-started/kirigami/components-drawers.md:155
 msgid "Banners"
@@ -2702,7 +2781,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-drawers.md:195
 msgid "Global drawer with title and icon in banner"
-msgstr ""
+msgstr "Área global com um título e um ícone no separador"
 
 #: content/docs/getting-started/kirigami/components-drawers.md:203
 #, fuzzy
@@ -2740,6 +2819,12 @@ msgid ""
 "only relevant in certain contexts. This is usually used in separate [pages](/"
 "docs/getting-started/kirigami/introduction-pages)."
 msgstr ""
+"Enquanto um [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer) mostra as "
+"acções globais disponíveis por toda a sua aplicação, um [Kirigami."
+"ContextDrawer](docs:kirigami2;ContextDrawer) deverá ser usado para mostrar "
+"as acções que só são relevantes em determinados contextos. Este é "
+"normalmente usado em [páginas](/docs/getting-started/kirigami/introduction-"
+"pages) separadas."
 
 #: content/docs/getting-started/kirigami/components-drawers.md:211
 msgid ""
@@ -2748,6 +2833,11 @@ msgid ""
 "group](docs:kirigami2;Page::actions). It also behaves differently depending "
 "on whether it is being used on a mobile platform or on a desktop."
 msgstr ""
+"Uma área de contexto só irá aparecer se tiver criado alguma variável "
+"[contextualActions](docs:kirigami2;Page::contextualActions) como parte do "
+"[grupo Page.actions](docs:kirigami2;Page::actions). Também se comporta de "
+"forma diferente, dependendo se é usado num dispositivo móvel ou num "
+"computador."
 
 #: content/docs/getting-started/kirigami/components-drawers.md:213
 msgid ""
@@ -2759,14 +2849,22 @@ msgid ""
 "`actions.right`; these do not get hidden in space-constrained windows, and "
 "are instead collapsed into their respective icons."
 msgstr ""
+"Num computador, quando uma janela tem espaço suficiente, as acções de "
+"contexto aparecem como parte do grupo `actions` na barra de ferramentas de "
+"topo. Quando o espaço é limitado, como acontece num dispositivo móvel ou "
+"numa  janela estreita, as acções de contexto ficam escondidas num menu em "
+"hambúrguer do lado direito. Isto é diferente das outras acções no grupo "
+"`actions`, nomeadamente as `actions.main`, `actions.left` e `actions.right`; "
+"estas não ficam escondidas nas janelas bastante reduzidas, sendo sim "
+"reduzidas nos seus respectivos ícones."
 
 #: content/docs/getting-started/kirigami/components-drawers.md:226
 msgid "Context drawer with contextual actions hidden"
-msgstr ""
+msgstr "Área de contexto com as acções de contexto escondidas"
 
 #: content/docs/getting-started/kirigami/components-drawers.md:228
 msgid "Context drawer showing all contextual actions"
-msgstr ""
+msgstr "Área de contexto a mostrar todas as acções de contexto"
 
 #: content/docs/getting-started/kirigami/components-drawers.md:234
 msgid ""
@@ -2777,14 +2875,21 @@ msgid ""
 "the mobile interface, you can run your application with the environment "
 "variable `QT_QUICK_CONTROLS_MOBILE=1`."
 msgstr ""
+"Em dispositivos móveis, a área consiste sempre nas acções escondidas atrás "
+"do menu em hambúrguer. Pode ser activado se tocar no menu em hambúrguer ou "
+"deslizando o dedo do lado direito para o centro do ecrã, caso esteja no modo "
+"da Esquerda para a Direita, ou do lado esquerdo para o centro, se tiver no "
+"modo inverso. Se estiver numa computador e quiser experimentar a interface "
+"para dispositivos móveis, poderá executar a sua aplicação com a variável de "
+"ambiente `QT_QUICK_CONTROLS_MOBILE=1`."
 
 #: content/docs/getting-started/kirigami/components-drawers.md:240
 msgid "Same example above, running in mobile mode"
-msgstr ""
+msgstr "O mesmo exemplo acima, a correr num dispositivo móvel"
 
 #: content/docs/getting-started/kirigami/components-drawers.md:246
 msgid "Context drawer open in mobile mode"
-msgstr ""
+msgstr "Área de contexto aberta no modo para dispositivos móveis"
 
 #: content/docs/getting-started/kirigami/components-drawers.md:252
 msgid "Modal and Inline drawers"
@@ -3023,7 +3128,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:54
 msgid "A simple form layout in desktop mode"
-msgstr ""
+msgstr "Um formulário disposto de forma simples no modo para o computador"
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:60
 msgid "Sections and separators"
@@ -3096,12 +3201,18 @@ msgid ""
 "use [Kirigami.Separator](docs:kirigami2;Separator) or [Item](docs:qtquick;"
 "QtQuick.Item) components in places where you would like to use a header text."
 msgstr ""
+"Isto não se aplica a todos os componentes, daí a recomendação de que use os "
+"componentes [Kirigami.Separator](docs:kirigami2;Separator) ou [Item](docs:"
+"qtquick;QtQuick.Item) nos locais onde gostaria de usar um texto de cabeçalho."
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:74
 msgid ""
 "This header text is larger than the normal label text, and provides users "
 "with a nice visual cue of what the form layout section is about."
 msgstr ""
+"Este texto de cabeçalho é maior que o texto das legendas normais, dando aos "
+"utilizadores uma dica visual interessante sobre o que diz respeito o "
+"formulário."
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:130
 #, fuzzy
@@ -3185,7 +3296,7 @@ msgstr "Forçar um formato para computador ou dispositivo móvel"
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:210
 msgid "Aligning your labels"
-msgstr ""
+msgstr "Alinhar as suas legendas"
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:212
 msgid ""
@@ -3199,6 +3310,15 @@ msgid ""
 "this with help of [Kirigami.FormData.labelAlignment](docs:kirigami2;"
 "FormLayoutAttached::labelAlignment)."
 msgstr ""
+"Existem instâncias em que deseja atribuir uma legenda a componentes que "
+"tenham mais que uma linha ou a uma lista de componentes. Isto pode ser "
+"obtido se colocar a [Kirigami.FormData.label](docs:kirigami2;"
+"FormLayoutAttached::label) no [ColumnLayout](https://doc.qt.io/qt-6/qml-"
+"qtquick-layouts-columnlayout.html), como poderá ter reparado nas [Secções e "
+"Separadores](#sections-and-separators). Por omissão, a legenda está "
+"posicionada verticalmente ao centro da disposição, o que nem sempre é "
+"desejável. Podemos mudar isto com a ajuda do [Kirigami.FormData."
+"labelAlignment](docs:kirigami2;FormLayoutAttached::labelAlignment)."
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:238
 #, fuzzy
@@ -3212,16 +3332,22 @@ msgid ""
 "or lists of components whose size you do not know beforehand. [Elisa]"
 "(https://apps.kde.org/elisa) is a very good example of this:"
 msgstr ""
+"A definição do alinhamento das legendas é particularmente conveniente para "
+"gerir os componentes ou listas de componentes cujo tamanho não conhece de "
+"antemão. O [Elisa](https://apps.kde.org/elisa) é um óptimo exemplo disto:"
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:246
 msgid ""
 "The Comment label is only top aligned when its corresponding component has "
 "more than one line"
 msgstr ""
+"A legenda Comentário só está alinhada ao topo quando o seu componente "
+"correspondente tem mais que uma linha"
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:248
 msgid "We can do something similar to this with a JavaScript ternary operator:"
 msgstr ""
+"Podemos fazer algo semelhante a isto com um operador ternário em JavaScript:"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages.md:0
 msgid "Inline messages"
@@ -4043,7 +4169,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:10
 msgid "A row of pages"
-msgstr ""
+msgstr "Uma fila de páginas"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:12
 msgid ""
@@ -4052,6 +4178,10 @@ msgid ""
 "screen of the application, or it can be shown together with other pages at "
 "the same time, if there is space."
 msgstr ""
+"Vimos até agora que um dos componentes básicos de uma janela do Kirigami é "
+"uma [Kirigami.Page](docs:kirigami2;Page). Uma única página consegue conter o "
+"ecrã inteiro da aplicação, ou poderá ser apresentada em conjunto com outras "
+"páginas ao mesmo tempo, caso haja espaço."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:14
 msgid ""
@@ -4059,6 +4189,10 @@ msgid ""
 "existing page(s), forming a row. This row of pages can be managed with the "
 "fittingly named [Kirigami.PageRow](docs:kirigami2;PageRow)."
 msgstr ""
+"Sempre que for adicionada uma página, ou *colocada por cima*, aparece à "
+"direita das páginas existentes, formando uma fila. Esta fila de páginas pode "
+"ser gerida com um [Kirigami.PageRow](docs:kirigami2;PageRow) devidamente "
+"atribuído."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:16
 #, fuzzy
@@ -4071,6 +4205,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:41
 msgid "A single page with light blue color to show the page's dimensions"
 msgstr ""
+"Uma única página com uma cor azul-clara para mostrar as dimensões da página"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:43
 msgid ""
@@ -4086,11 +4221,25 @@ msgid ""
 "from, but we'll go with [Kirigami.ApplicationHeaderStyle.Auto](docs:"
 "kirigami2;templates::ApplicationHeader::headerStyle) for now."
 msgstr ""
+"Existem duas melhorias que podem ser feitas aqui. A primeira é que, com o "
+"[initialPage](docs:kirigami2;PageRow::initialPage), podemos tanto definir a "
+"`mainPage` como sendo a primeira página que aparece na fila de páginas, como "
+"ter as suas dimensões a  ser geridas pela fila de páginas, através de "
+"[âncoras](https://doc.qt.io/qt-6/qtquick-positioning-anchors.html) manuais, "
+"[posicionamentos](https://doc.qt.io/qt-6/qtquick-positioning-layouts.html) "
+"ou [disposições](https://doc.qt.io/qt-6/layout.html). A segunda é ter uma "
+"barra de ferramentas, que poderá ser configurada ao definir um estilo de "
+"barras de ferramentas com o [globalToolBar.style](docs:kirigami2;PageRow::"
+"globalToolBar). Existem alguns estilos que podemos escolher, mas iremos "
+"seguir com o [Kirigami.ApplicationHeaderStyle.Auto](docs:kirigami2;"
+"templates::ApplicationHeader::headerStyle) por agora."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:65
 msgid ""
 "A single page with toolbar and light blue color to show the page's dimensions"
 msgstr ""
+"Uma única página com uma barra de ferramentas e uma cor azul-clara para "
+"mostrar as dimensões da página"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:67
 msgid ""
@@ -4102,15 +4251,24 @@ msgid ""
 "[goForward()](docs:kirigami2;PageRow::goForward) can be used to navigate "
 "between pages."
 msgstr ""
+"Existem duas formas de adicionar páginas a uma fila de páginas: configurando "
+"a sua [initialPage](docs:kirigami2;PageRow::initialPage) (que pode receber "
+"opcionalmente uma lista de páginas) ou usando a operação [push()](docs:"
+"kirigami2;PageRow::push). Para apagar uma página da fila de páginas, deverá "
+"usar a operação [pop()](docs:kirigami2;PageRow::pop), enquanto o [goBack()]"
+"(docs:kirigami2;PageRow::goBack) ou [goForward()](docs:kirigami2;PageRow::"
+"goForward) podem ser usados para navegar entre páginas."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:112
 msgid "Initial page with light blue color"
-msgstr ""
+msgstr "Página inicial com uma cor azul-clara"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:114
 msgid ""
 "Upon clicking \\\"Push!\\\", a second page with light green color shows up"
 msgstr ""
+"Depois de carregar em \\\"Push!\\\" (Sobrepor!), irá aparecer uma segunda "
+"página de cor verde-clara"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:116
 #, fuzzy
@@ -4126,12 +4284,20 @@ msgid ""
 "pageStack) is nothing more than a very convenient, global page row. Every "
 "function available to a `PageRow` is also available to the `pageStack`."
 msgstr ""
+"Se um [Kirigami.PageRow](docs:kirigami2;PageRow) com uma barra de "
+"ferramentas parecer familiar para si, é porque já o viu anteriormente. Uma "
+"[ApplicationWindow.pageStack](docs:kirigami2;AbstractApplicationWindow::"
+"pageStack) não é mais que uma fila de páginas globais realmente conveniente. "
+"Todas as funções disponíveis numa `PageRow` também estão disponíveis na "
+"`pageStack`."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:120
 msgid ""
 "The previous example can be reduced significantly with a `pageStack`, with "
 "the added bonus of navigation actions:"
 msgstr ""
+"O exemplo anterior poderá ser reduzido de forma significativa com uma "
+"`pageStack`, com o bónus adicional das acções de navegação:"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:167
 msgid ""
@@ -4144,6 +4310,14 @@ msgid ""
 "[applicationWindow()](docs:kirigami2;AbstractApplicationWindow::"
 "applicationWindow):"
 msgstr ""
+"De um modo geral, irá querer usar uma `pageStack` em vez de implementar a "
+"sua própria [PageRow](docs:kirigami2;PageRow), especialmente quando a sua "
+"aplicação fica cada vez maior e precisa que os seus componentes residam em "
+"ficheiros separados. Se criar a sua janela no seu `main.qml`, usando uma "
+"[Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), um "
+"componente que resida noutro ficheiro consegue à mesma invocar directamente "
+"a `pageStack` global, através de uma chamada à [applicationWindow()](docs:"
+"kirigami2;AbstractApplicationWindow::applicationWindow):"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:170
 #, fuzzy
@@ -4164,6 +4338,8 @@ msgstr "LoginPage.qml"
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:209
 msgid "Clicking the button pushes a new page with help of applicationWindow"
 msgstr ""
+"Se carregar no botão, irá sobrepor uma nova página com a ajuda da "
+"'applicationWindow'"
 
 #: content/docs/getting-started/kirigami/components-progressbars.md:0
 msgid "Progress Bars and Indicators"
@@ -4747,7 +4923,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions.md:77
 msgid "Mobile version"
-msgstr ""
+msgstr "Versão para dispositivos móveis"
 
 #: content/docs/getting-started/kirigami/introduction-actions.md:89
 #, fuzzy
@@ -4922,7 +5098,7 @@ msgstr "Sugestão"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:48
 msgid "You can quickly create this file structure with:"
-msgstr ""
+msgstr "Pode criar rapidamente esta estrutura de ficheiros com:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:56
 msgid ""
@@ -4932,6 +5108,11 @@ msgid ""
 "available if you only need a quick template to start coding in your favorite "
 "IDE or text editor."
 msgstr ""
+"Em alternativ,a poderá querer usar o modelo-padrão do Kirigami que é "
+"fornecido pelo [KDevelop](https://apps.kde.org/kdevelop/), o IDE principal "
+"do KDE para programar em C++ e QML. O [KAppTemplate](https://apps.kde.org/"
+"kapptemplate/) também está disponível se só precisar de um modelo rápido "
+"para começar a programar no seu IDE ou editor de texto favoritos."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:60
 #, fuzzy
@@ -5037,6 +5218,12 @@ msgid ""
 "Controls in the wild, such as \"QQC\" or \"QQC2\". We will be using "
 "\"Controls\" in this tutorial for clarity."
 msgstr ""
+"Colocar as importações do QtQuick Controls e do Kirigami em espaços de nomes "
+"separados com a palavra-chave `as` é uma boa prática que garante que os "
+"componentes que tenham o mesmo nome não entrem em conflito. Poderá ver "
+"diferentes nomes para os controlos do QtQuick por aí, como por exemplo \"QQC"
+"\" ou \"QQC2\". Iremos usar \"Controls\" neste tutorial por questões de "
+"clareza."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:83
 #, fuzzy
@@ -5274,6 +5461,9 @@ msgid ""
 "`main.cpp`, instead of needing to specify the whole \"contents/ui/main.qml\" "
 "path."
 msgstr ""
+"Este ficheiro de recursos deixa-nos usar a localização \"qrc:\" + \"/main.qml"
+"\" no nosso `main.cpp`, em vez de ser necessário definir toda a localização "
+"\"contents/ui/main.qml\"."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:123
 #, fuzzy
@@ -5677,6 +5867,8 @@ msgid ""
 "Notice the `{}` that indicates we are appending a JavaScript object to our "
 "model."
 msgstr ""
+"Repare no `{}` que indica que estamos a adicionar um objecto de JavaScript "
+"ao nosso modelo."
 
 #: content/docs/getting-started/kirigami/introduction-kirigami-gallery.md:127
 #, fuzzy
@@ -5944,6 +6136,11 @@ msgid ""
 "more about it in [this page](https://doc.qt.io/qt-6/qtqml-javascript-topic."
 "html)."
 msgstr ""
+"Dado que o QML é desenvolvido sobre o JavaScript, muitas das funcionalidades "
+"desta linguagem estão disponíveis para usar nos ficheiros QML. Contudo, as "
+"variáveis em QML têm de ser antecedidas de `property`, a menos que esteja "
+"dentro de um bloco de código em JS. Poderá ler mais sobre isso [nesta página]"
+"(https://doc.qt.io/qt-6/qtqml-javascript-topic.html)."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:57
 msgid ""
@@ -6064,6 +6261,10 @@ msgid ""
 "ApplicationWindow). We will then proceed by checking what each part of our "
 "delegate component does."
 msgstr ""
+"O [Component](docs:qtqml;QtQml.Component) que irá representar o nosso "
+"delegado poderá ser adicionado dentro da nossa [Kirigami.ApplicationWindow]"
+"(docs:kirigami2;ApplicationWindow). Iremos então prosseguir, verificando o "
+"que cada parte do nosso componente delegado faz."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:78
 msgid ""
@@ -6088,6 +6289,8 @@ msgid ""
 "The first part we will take a look at is how to manage the width and height "
 "of our component:"
 msgstr ""
+"A primeira parte que iremos observar é como gerir a largura e a altura do "
+"nosso componente:"
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:145
 #, fuzzy
@@ -6289,6 +6492,9 @@ msgid ""
 "different units defined within Plasma and Kirigami on the [Human Interface "
 "Guidelines](/hig/layout/units/)."
 msgstr ""
+"O Grupo de Desenho Visual do KDE (VDG) tem bastantes mais informações sobre "
+"as diferentes unidades definidas dentro do Plasma e do Kirigami nas "
+"[Directrizes de Interfaces com Humanos](/hig/layout/units/)."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:191
 msgid ""
@@ -6300,6 +6506,14 @@ msgid ""
 "number of columns in our grid depending on the screen we are using: if it's "
 "a widescreen, the grid will have 4 columns, else it will have 2."
 msgstr ""
+"Como se poderá recordar, o `root` é o ID da nossa [Kirigami."
+"ApplicationWindow](docs:kirigami2;ApplicationWindow). Oferece a propriedade "
+"[wideScreen](docs:kirigami2;AbstractApplicationWindow::wideScreen), usada "
+"para determinar se o dispositivo actual tem um ecrã panorâmico (i.e., um "
+"monitor de computador ou um telefone no modo paisagem). Usamos uma condição "
+"ternária aqui para variar o número de colunas na nossa grelha, dependendo do "
+"ecrã que estamos a usar: se for um ecrã panorâmico, a grelha terá 4 colunas, "
+"caso contrário terás 2."
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:193
 #, fuzzy
@@ -6317,7 +6531,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:234
 msgid "![Screenshot showing how a Card looks like](CardDesign.png)"
-msgstr ""
+msgstr "![Imagem a mostrar como é a aparência de um Card](CardDesign.png)"
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:236
 #, fuzzy
@@ -6371,6 +6585,8 @@ msgid ""
 "![Screenshot of the app appearance after completing this lesson](Screenshot."
 "webp)"
 msgstr ""
+"![Imagem da aparência da aplicação depois de terminar esta lição](Screenshot."
+"webp)"
 
 #: content/docs/getting-started/kirigami/introduction-listviews.md:248
 msgid "So there is our basic card!"
@@ -6491,6 +6707,8 @@ msgid ""
 "While interacting with others in the KDE Community, please make sure you "
 "abide by the [Code of Conduct](https://kde.org/code-of-conduct/)."
 msgstr ""
+"Enquanto interage com outros na Comunidade do KDE, certifique-se por favor "
+"que cumpre o seu [Código de Conduta](https://kde.org/code-of-conduct/)."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:31
 msgid ""
@@ -6617,6 +6835,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:40
 msgid "An app to help you choose the license to go with your project."
 msgstr ""
+"Uma aplicação para o ajudar a escolher a licença com que o seu projecto será "
+"disponibilizado."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:40
 #, fuzzy
@@ -6646,6 +6866,8 @@ msgstr ""
 msgid ""
 "A welcome app for the Plasma desktop that lets you create new pages with QML."
 msgstr ""
+"Uma aplicação de boas-vindas para o ambiente de trabalho Plasma que lhe "
+"permite criar páginas novas com QML."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:41
 #, fuzzy
@@ -6968,6 +7190,9 @@ msgid ""
 "[this wiki page](https://community.kde.org/Get_Involved/development/"
 "Learn#C_and_C++)."
 msgstr ""
+"Também oferecemos uma lista de recursos em actualização contínua para "
+"aprender C++ [nesta página de wiki](https://community.kde.org/Get_Involved/"
+"development/Learn#C_and_C++)."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps.md:89
 msgid "Creating classic KDE applications using QtWidgets"
@@ -7154,6 +7379,8 @@ msgid ""
 "![Overlay sheet appearing in the middle of the application like a dialog "
 "window](addSheet.webp)"
 msgstr ""
+"![Camada sobreposta que aparece no meio da aplicação, como se fosse uma "
+"janela de diálogo](addSheet.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-overlaysheets.md:21
 msgid "Countdown-adding sheet"
@@ -7379,6 +7606,7 @@ msgid ""
 "![Screenshot of the application with four example cards](addedKountdowns."
 "webp)"
 msgstr ""
+"![Imagem da aplicação com quatro cartões de exemplo](addedKountdowns.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-pages.md:0
 msgid "Explaining Pages"
@@ -7516,6 +7744,9 @@ msgid ""
 "qtquickcontrols;QtQuick.Controls.Page), and as such you can use the latter's "
 "properties as well."
 msgstr ""
+"Uma [Kirigami.Page](docs:kirigami2;Page) herda de uma [Controls.Page](docs:"
+"qtquickcontrols;QtQuick.Controls.Page) e, como tal, poderá usar as "
+"propriedades da última da mesma forma."
 
 #: content/docs/getting-started/kirigami/introduction-pages.md:35
 msgid ""
@@ -7752,13 +7983,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:67
 msgid "AddEditSheet.qml"
-msgstr ""
+msgstr "AddEditSheet.qml"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:69
 msgid ""
 "Looking at our new `AddEditSheet.qml`—our repurposed adding sheet—we can see "
 "how these signals work:"
 msgstr ""
+"Se olhar para o nosso novo `AddEditSheet.qml`— a nossa folha de adição "
+"remodelada — podemos ver como funcionarão esses eventos:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:73
 #, fuzzy
@@ -7879,7 +8112,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:105
 msgid "KountdownDelegate.qml"
-msgstr ""
+msgstr "KountdownDelegate.qml"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:107
 #, fuzzy
@@ -8020,6 +8253,10 @@ msgid ""
 "and are [WCAG compliant](https://en.wikipedia.org/wiki/"
 "Web_Content_Accessibility_Guidelines)."
 msgstr ""
+"Se precisar realmente de usar cores personalizadas, consulte o [Kontrast]"
+"(https://apps.kde.org/kontrast/) para garantir que as cores que escolher têm "
+"bom contraste e são [compatíveis com a WCAG](https://en.wikipedia.org/wiki/"
+"Web_Content_Accessibility_Guidelines)."
 
 #: content/docs/getting-started/kirigami/style-colors.md:34
 #: content/docs/getting-started/kirigami/style-typography.md:266
@@ -8057,6 +8294,14 @@ msgid ""
 "change to their inactive state, and if you switch your system to a dark "
 "theme, the dark variants of the colors should show up in real time."
 msgstr ""
+"O [Kirigami Gallery](../introduction-kirigami-gallery) oferece um exemplo de "
+"código que demonstra [todas as cores disponíveis para o Kirigami](https://"
+"invent.kde.org/sdk/kirigami-gallery/-/blob/master/src/data/contents/ui/"
+"gallery/ColorsGallery.qml) através do [Kirigami.Theme](docs:kirigami2;"
+"Kirigami::PlatformTheme). Isto inclui todos os seus estados: se carregar "
+"fora da janela, as cores mudam para o seu estado inactivo, e se mudar o seu "
+"sistema para um tema escuro, deverão aparecer as cores na sua variante "
+"escura em tempo-real."
 
 #: content/docs/getting-started/kirigami/style-colors.md:52
 #, fuzzy
@@ -8169,14 +8414,17 @@ msgid ""
 "to distinguish different components. A large border has been added to "
 "contrast colors."
 msgstr ""
+"Aqui está um exemplo que demonstra como são herdados os conjuntos de cores e "
+"como podem ser usados para distinguir entre os diferentes componentes. Foi "
+"adicionado um contorno grande às cores em contraste."
 
 #: content/docs/getting-started/kirigami/style-colors.md:84
 msgid "How color sets differ in Breeze"
-msgstr ""
+msgstr "Como diferem os conjuntos de cores no Brisa"
 
 #: content/docs/getting-started/kirigami/style-colors.md:90
 msgid "How color sets differ in Breeze Dark"
-msgstr ""
+msgstr "Como diferem os conjuntos de cores no Brisa Escuro"
 
 #: content/docs/getting-started/kirigami/style-colors.md:96
 msgid "Using Custom Colors"
@@ -8202,7 +8450,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors.md:113
 msgid "Example with custom colors"
-msgstr ""
+msgstr "Exemplo com cores personalizadas"
 
 #: content/docs/getting-started/kirigami/style-typography.md:0
 msgid "Typography"
@@ -8227,6 +8475,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/style-typography.md:47
 msgid "Five headings with different levels for size comparison"
 msgstr ""
+"Cinco cabeçalhos com diferentes níveis, para fins de comparação dos tamanhos"
 
 #: content/docs/getting-started/kirigami/style-typography.md:53
 msgid "Labels"
@@ -8252,26 +8501,34 @@ msgid ""
 "[verticalAlignment](https://doc.qt.io/qt-6/qml-qtquick-text."
 "html#verticalAlignment-prop) properties."
 msgstr ""
+"Poderá alinhar os seus elementos de texto com as propriedades "
+"[horizontalAlignment](https://doc.qt.io/qt-6/qml-qtquick-text."
+"html#horizontalAlignment-prop) e [verticalAlignment](https://doc.qt.io/qt-6/"
+"qml-qtquick-text.html#verticalAlignment-prop)."
 
 #: content/docs/getting-started/kirigami/style-typography.md:112
 msgid "Heading and lorem ipsum text aligned to the horizontal center"
-msgstr ""
+msgstr "Cabeçalho e texto 'lorem ipsum' alinhado horizontalmente ao centro"
 
 #: content/docs/getting-started/kirigami/style-typography.md:148
 msgid "Heading and lorem ipsum text using right-aligned text"
-msgstr ""
+msgstr "Cabeçalho e texto 'lorem ipsum' alinhado à direita"
 
 #: content/docs/getting-started/kirigami/style-typography.md:186
 msgid ""
 "Heading with bottom vertical alignment and lorem ipsum text with top "
 "vertical alignment"
 msgstr ""
+"Cabeçalho com alinhamento vertical ao fundo e texto 'lorem ipsum' com "
+"alinhamento vertical ao topo"
 
 #: content/docs/getting-started/kirigami/style-typography.md:225
 msgid ""
 "Heading with top vertical alignment and lorem ipsum text with bottom "
 "vertical alignment"
 msgstr ""
+"Cabeçalho com alinhamento vertical ao topo e texto 'lorem ipsum' com "
+"alinhamento vertical ao fundo"
 
 #: content/docs/getting-started/kirigami/style-typography.md:231
 msgid "Rich Text"
@@ -8297,6 +8554,8 @@ msgid ""
 "A Label containing a list of fruits using HTML tags like paragraph, "
 "unordered lists and bold fonts"
 msgstr ""
+"Uma Label que contém uma lista de frutas, usando marcas de HTML como os "
+"parágrafos, listas não ordenadas e tipos de letra a negrito"
 
 #: content/docs/getting-started/kirigami/style-typography.md:268
 #, fuzzy
