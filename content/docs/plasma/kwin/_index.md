@@ -79,7 +79,7 @@ Open up `metadata.json` in your text editor then paste the following. Keep in mi
         ],
         "Id": "myscript",
         "Version": "1.0",
-        "Licsense": "GPLv3",
+        "License": "GPLv3",
         "Website": "https://github.com/username/myscript"
     },
     "X-Plasma-API": "javascript",
