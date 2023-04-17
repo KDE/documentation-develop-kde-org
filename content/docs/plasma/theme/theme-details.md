@@ -622,7 +622,7 @@ The following is an attempt to list known icon names that may be themed by this 
     * some security updates available ID: **update-high**
     * some important updates available ID: **update-medium**
     * some regular updates available ID: **update-low**
-    * no update available ID: **update-none**
+    * no update available (or checking) ID: **update-none**
 * KWallet
   * filename: **wallet.svg**
     * open ID: **wallet-open**
