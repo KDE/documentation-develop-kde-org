@@ -536,6 +536,13 @@ The following is an attempt to list known icon names that may be themed by this 
 * device (the device-notifier)
   * filename: **device.svg**
     * ID: **device-notifier**
+* input (mouse, keyboard, state of the lock keys...)
+  * filename: **input.svg**
+    * mouse battery ID: **input-mouse-battery**
+    * keyboard battery ID: **input-keyboard-battery**
+    * keyboard backlight level ID: **input-keyboard-brightness**
+    * Caps Lock ID: **input-caps-on** (used for both on and off)
+    * Num Lock ID: **input-num-on** (used for both on and off)
 * juk
   * filename: **juk.svg**
     * ID: **juk**
@@ -552,7 +559,7 @@ The following is an attempt to list known icon names that may be themed by this 
     * ID: **konv_message**
 * Kopete
   * filename: **kopete.svg**
-    * öffline ID: **kopete-offline**
+    * offline ID: **kopete-offline**
     * online ID: **kopete**
     * other statuses are not supported atm
 * Korgac
@@ -590,9 +597,14 @@ The following is an attempt to list known icon names that may be themed by this 
     * mobile broadband with access technology on 0%  
       ID: **network-mobile-0-[technology]**  
       (The optional `[technology]` suffix can be: `gprs`, `edge`, `umts`, `hsdpa`, `hsupa`, `hspa`, `lte`)
+* Night color
+  * filename: **redshift.svg**
+    * on ID: **redshift-status-on**
+    * off ID: **redshift-status-off**
 * preferences (some apps like bluedevil, krandrtray, text-to-speech)
   * filename: **preferences.svg**
-    * bluedevil online ID: **preferences-system-bluetooth**
+    * bluedevil generic bluetooth ID: **preferences-system-bluetooth**
+    * bluedevil online bluetooth ID: **preferences-system-bluetooth-activated**
     * bluedevil offline ID: **preferences-system-bluetooth-inactive**
     * text-to-speech ID: **preferences-desktop-text-to-speech**
     * krandrtray ID: **preferences-desktop-display-randr**
@@ -602,9 +614,15 @@ The following is an attempt to list known icon names that may be themed by this 
     * ID: **printer**
 * Quassel IRC
   * filename: **quassel.svg**
-    * quassel öffline ID: **quassel-inactive**
+    * quassel offline ID: **quassel-inactive**
     * quassel online ID: **quassel**
     * quassel new message ID: **quassel-message**
+* PackageKit updates
+  * filename: **update.svg**
+    * some security updates available ID: **update-high**
+    * some important updates available ID: **update-medium**
+    * some regular updates available ID: **update-low**
+    * no update available ID: **update-none**
 * KWallet
   * filename: **wallet.svg**
     * open ID: **wallet-open**
