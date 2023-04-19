@@ -1,21 +1,25 @@
+# hugo
+/.hugo_build.lock
+/config/development/config.yaml
+/public/
+/resources/
 
-public/
-resources/
-node_modules/
-tech-doc-hugo
-build/
+# i18n
+/content-trans*/
+/i18n/*
+!/i18n/en.yaml
+/locale*/
+/po[st]*/
+
+# misc.
+*.swp
+.directory
+/.htmltest/
+/node_modules/
+
+# Plasma keys extraction
 tmp/
 files/
-content-trans
-i18n/*
-!i18n/en.yaml
-locale*
-po[st]*
-bin/
-lib/
-lib64
-pyvenv.cfg
-/.htmltest
 
-!content/docs/build/
+# clangd
 .cache
