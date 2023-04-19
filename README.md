@@ -10,8 +10,8 @@ Certain tutorials fetch examples directly from their respective repositories (li
 Make sure you have the required dependencies installed on your system. We suggest using `venv` for this:
 
 ```
-python3 -m venv .
-source bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
