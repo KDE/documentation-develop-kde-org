@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:40+0000\n"
-"PO-Revision-Date: 2023-05-02 19:05+0100\n"
+"PO-Revision-Date: 2023-05-03 18:24+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -1592,16 +1592,13 @@ msgid "IMPORTANT: never put the bottom margin"
 msgstr "IMPORTANTE: nunca coloque a margem inferior"
 
 #: content/docs/getting-started/kirigami/components-card.md:209
-#, fuzzy
-#| msgid ""
-#| "![Screenshot of a CardsListView](/docs/use/kirigami/components-card/"
-#| "cardslistview.png)"
 msgid ""
 "![Screenshot of a CardsListView, which is a simple vertical list of cards in "
 "landscape mode](/docs/getting-started/kirigami/components-card/cardslistview."
 "png)"
 msgstr ""
-"![Imagem de um CardsListView](/docs/use/kirigami/components-card/"
+"![Imagem de uma CardsListView, que é uma lista vertical simples de cartões "
+"no modo de paisagem](/docs/getting-started/kirigami/components-card/"
 "cardslistview.png)"
 
 #: content/docs/getting-started/kirigami/components-card.md:215
@@ -1609,79 +1606,60 @@ msgid "CardsGridView"
 msgstr "CardsGridView"
 
 #: content/docs/getting-started/kirigami/components-card.md:217
-#, fuzzy
-#| msgid ""
-#| "Use a [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
-#| "CardsGridView) to display cards in a grid."
 msgid ""
 "Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display "
 "cards in a grid."
 msgstr ""
-"Use um [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
-"CardsGridView) para mostrar os cartões numa grelha."
+"Use um [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) para mostrar "
+"os cartões numa grelha."
 
 #: content/docs/getting-started/kirigami/components-card.md:219
-#, fuzzy
-#| msgid ""
-#| "Its behavior is the same as a `Kirigami.CardsLayout`, and it allows cards "
-#| "to be put in one or two columns depending on the available width."
 msgid ""
 "Its behavior is the same as a [CardsLayout](docs:kirigami2;CardsLayout), and "
 "it allows cards to be put in one or two columns depending on the available "
 "width."
 msgstr ""
-"O seu comportamento é o mesmo que um `Kirigami.CardsLayout`, e permite que "
-"os cartões sejam dispostos numa ou duas colunas, dependendo da largura "
-"disponível."
+"O seu comportamento é o mesmo que um [CardsLayout](docs:kirigami2;"
+"CardsLayout), e permite que os cartões sejam dispostos numa ou duas colunas, "
+"dependendo da largura disponível."
 
 #: content/docs/getting-started/kirigami/components-card.md:221
-#, fuzzy
-#| msgid ""
-#| "CardsGridView has the limitation that every card must have the same exact "
-#| "height, so `cellHeight` must be manually set to a value for which the "
-#| "content must fit for every child card."
 msgid ""
 "[CardsGridView](docs:kirigami2;CardsGridView) has the limitation that every "
 "card must have the same exact height, so [cellHeight](https://doc.qt.io/qt-6/"
 "qml-qtquick-gridview.html#cellHeight-prop) must be manually set to a value "
 "for which the content must fit for every child card."
 msgstr ""
-"O CardsGridView tem a limitação que cada cartão tem de ter a mesma altura "
-"exacta, pelo que o `cellHeight` deverá ser definido manualmente com um dado "
-"valor, pelo que o conteúdo deverá ser suficiente para todos os cartões-"
-"filhos."
+"O [CardsGridView](docs:kirigami2;CardsGridView) tem a limitação que cada "
+"cartão tem de ter a mesma altura exacta, pelo que o [cellHeight](https://doc."
+"qt.io/qt-6/qml-qtquick-gridview.html#cellHeight-prop) deverá ser definido "
+"manualmente com um dado valor, pelo que o conteúdo deverá ser suficiente "
+"para todos os cartões-filhos."
 
 #: content/docs/getting-started/kirigami/components-card.md:223
-#, fuzzy
-#| msgid ""
-#| "If possible use `Kirigami.CardsGridView` only when you need to "
-#| "instantiate many cards. If you are only going to instantiate a few cards, "
-#| "opt for a `Kirigami.CardsLayout` with a `Repeater` instead."
 msgid ""
 "If possible use [CardsGridView](docs:kirigami2;CardsGridView) only when you "
 "need to instantiate many cards. If you are only going to instantiate a few "
 "cards, opt for a [CardsLayout](docs:kirigami2;CardsLayout) with a [Repeater]"
 "(docs:qtquick;QtQuick.Repeater) instead."
 msgstr ""
-"É possível usar o `Kirigami.CardsGridView` apenas quando precisar de "
-"inicializar vários cartões. Se só for criar instâncias de apenas alguns "
-"cartões, opte por um `Kirigami.CardsLayout` com um `Repeater` em alternativa."
+"É possível usar o [CardsGridView](docs:kirigami2;CardsGridView) apenas "
+"quando precisar de inicializar vários cartões. Se só for criar instâncias de "
+"apenas alguns cartões, opte por um [CardsLayout](docs:kirigami2;CardsLayout) "
+"com um [Repeater](docs:qtquick;QtQuick.Repeater) em alternativa."
 
 #: content/docs/getting-started/kirigami/components-card.md:234
 msgid "Model with the following roles: text, actions and image"
 msgstr "Modelo com os seguintes papéis: texto, acções e imagem"
 
 #: content/docs/getting-started/kirigami/components-card.md:266
-#, fuzzy
-#| msgid ""
-#| "![Screenshot of a CardsGridView](/docs/use/kirigami/components-card/"
-#| "cardsgridview.png)"
 msgid ""
 "![Screenshot of a CardsGridView where each card occupies the same amount of "
 "space in a grid](/docs/getting-started/kirigami/components-card/"
 "cardsgridview.png)"
 msgstr ""
-"![Imagem de um CardsGridView](/docs/use/kirigami/components-card/"
+"![Imagem de um CardsGridView, onde cada cartão ocupa a mesma quantidade de "
+"espaço numa grelha](/docs/getting-started/kirigami/components-card/"
 "cardsgridview.png)"
 
 #: content/docs/getting-started/kirigami/components-controls.md:0
@@ -1715,11 +1693,6 @@ msgid "Buttons"
 msgstr "Botões"
 
 #: content/docs/getting-started/kirigami/components-controls.md:15
-#, fuzzy
-#| msgid ""
-#| "In Kirigami apps, we use buttons from QtQuick Controls. Using them is "
-#| "pretty straightforward: we set the text to the `text` property and any "
-#| "action we want it to perform is set to the `onClicked` property."
 msgid ""
 "In Kirigami apps, we use buttons from QtQuick Controls. Using them is pretty "
 "straightforward: we set the text to the [text](https://doc.qt.io/qt-6/qml-"
@@ -1728,35 +1701,27 @@ msgid ""
 "Controls.AbstractButton::clicked) property."
 msgstr ""
 "Nas aplicações do Kirigami, usamos os botões dos controlos do QtQuick. O uso "
-"dos mesmos é bastante simples: configuramos o texto na propriedade `text` e "
-"todas as acções que pretendemos que ela faça serão definidas na propriedade "
-"`onClicked`."
+"dos mesmos é bastante simples: configuramos o texto na propriedade [text]"
+"(https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#text-prop) "
+"e todas as acções que pretendemos que ela faça serão definidas na "
+"propriedade [onClicked](docs:qtquickcontrols;QtQuick.Controls."
+"AbstractButton::clicked)."
 
 #: content/docs/getting-started/kirigami/components-controls.md:41
-#, fuzzy
-#| msgid ""
-#| "![A toggleable button](/docs/use/kirigami/components-controls/controls-"
-#| "togglebutton.png)"
 msgid ""
 "![A window containing a button \"Beep\" on the upper left side, which when "
 "clicked shows a passive notification \"Boop\" at the bottom of the window](/"
 "docs/getting-started/kirigami/components-controls/controls-button.png)"
 msgstr ""
-"![Um botão comutável](/docs/use/kirigami/components-controls/controls-"
-"togglebutton.png)"
+"![Uma janela que contém um botão \"Beep\" no canto superior esquerdo que, ao "
+"ser carregada, mostra uma notificação passiva \"Boop\" no fundo da janela](/"
+"docs/getting-started/kirigami/components-controls/controls-button.png)"
 
 #: content/docs/getting-started/kirigami/components-controls.md:47
 msgid "Toggleable buttons"
 msgstr "Botões comutáveis"
 
 #: content/docs/getting-started/kirigami/components-controls.md:49
-#, fuzzy
-#| msgid ""
-#| "Buttons' behaviour can be changed to make them toggleable: in this mode, "
-#| "they will stay pressed until clicked on once more. This mode can be "
-#| "activated by setting the `checkable` property to `true`; we can also set "
-#| "buttons to be toggled on by default by setting the `checked` property to "
-#| "`true`."
 msgid ""
 "The behavior of buttons can be changed to make them toggleable: in this "
 "mode, they will stay pressed until clicked on once more. This mode can be "
@@ -1768,18 +1733,13 @@ msgid ""
 msgstr ""
 "O comportamento dos botões poderá ser alterado para os tornar comutáveis: "
 "neste modo, os mesmos ficarão carregados até que volte a carregar neles. "
-"Este modo poderá ser activado com a propriedade `checkable` configurada como "
-"`true`; poderemos também configurar os botões para ficarem activos por "
-"omissão se configurarmos a propriedade `checked` como `true`."
+"Este modo poderá ser activado com a propriedade [checkable](https://doc.qt."
+"io/qt-6/qml-qtquick-controls2-abstractbutton.html#checkable-prop) "
+"configurada como `true`; poderemos também configurar os botões para ficarem "
+"activos por omissão se configurarmos a propriedade [checked](https://doc.qt."
+"io/qt-5/qml-qtquick-controls2-abstractbutton.html#checked-prop) como `true`."
 
 #: content/docs/getting-started/kirigami/components-controls.md:51
-#, fuzzy
-#| msgid ""
-#| "We can get the most out of toggleable buttons by using the "
-#| "`onCheckedChanged` property. It works similarly to `onClicked`, except "
-#| "here the assigned action will be executed when the button's `checked` "
-#| "property changes. `checked` is a boolean property, which can come in "
-#| "handy for specific use-cases."
 msgid ""
 "We can get the most out of toggleable buttons by using the "
 "`onCheckedChanged` signal handler which is [automatically generated](https://"
@@ -1790,17 +1750,16 @@ msgid ""
 "changes. It is a boolean property, which can come in handy for specific use "
 "cases."
 msgstr ""
-"Poderemos obter o máximo dos botões comutáveis se usarmos a propriedade "
-"`onCheckedChanged`. Funciona de forma semelhante ao `onClicked`, excepto que "
-"a acção atribuída será executada quando a propriedade `checked` mudar. A "
-"`checked` é uma propriedade booleana, a qual poderá ser útil para alguns "
-"casos de uso específicos."
+"Poderemos obter o máximo dos botões comutáveis se usarmos a rotina de evento "
+"`onCheckedChanged`, que é [gerada automaticamente](https://doc.qt.io/qt-6/"
+"qtqml-syntax-signals.html#property-change-signal-handlers) a partir do "
+"evento [checked](https://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton."
+"html#checked-prop). Funciona de forma semelhante ao `onClicked`, excepto que "
+"a acção atribuída será executada quando o estado do botão. Esta é uma "
+"propriedade booleana, a qual poderá ser útil para alguns casos de uso "
+"específicos."
 
 #: content/docs/getting-started/kirigami/components-controls.md:53
-#, fuzzy
-#| msgid ""
-#| "In this example, we set the visibility of an in-line drawer according to "
-#| "the status of a toggleable button:"
 msgid ""
 "In this example, we set the visibility of an inline drawer according to the "
 "status of a toggleable button:"
@@ -1809,25 +1768,17 @@ msgstr ""
 "estado de um botão comutável:"
 
 #: content/docs/getting-started/kirigami/components-controls.md:82
-#, fuzzy
-#| msgid ""
-#| "![A toggleable button](/docs/use/kirigami/components-controls/controls-"
-#| "togglebutton.png)"
 msgid ""
 "![A window containing a toggleable button \"Toggle\" which when toggled "
 "displays \"Peekaboo\" in the contentItem area like a status bar](/docs/"
 "getting-started/kirigami/components-controls/controls-togglebutton.png)"
 msgstr ""
-"![Um botão comutável](/docs/use/kirigami/components-controls/controls-"
+"![Uma janela que contém um botão comutável \"Toggle\" que, quando muda de "
+"estado apresenta \"Peekaboo\" na área do 'contentItem', como uma barra de "
+"estado](/docs/getting-started/kirigami/components-controls/controls-"
 "togglebutton.png)"
 
 #: content/docs/getting-started/kirigami/components-controls.md:90
-#, fuzzy
-#| msgid ""
-#| "With the default Breeze theme in KDE Plasma it can be hard to tell "
-#| "whether a button is toggled, since buttons are coloured blue when they "
-#| "are clicked on. Make sure you take this into account when creating your "
-#| "application: a different control might be more user-friendly."
 msgid ""
 "With the default Breeze theme in KDE Plasma it can be hard to tell whether a "
 "button is toggled, since buttons are coloured blue when they are clicked on. "
@@ -1844,12 +1795,6 @@ msgid "Toolbar buttons"
 msgstr "Botões da barra de ferramentas"
 
 #: content/docs/getting-started/kirigami/components-controls.md:96
-#, fuzzy
-#| msgid ""
-#| "There is a specific button type meant for use in toolbars, `Controls."
-#| "ToolButton`. The most obvious difference between this and a conventional "
-#| "button is the styling, with toolbuttons being flat (though this is "
-#| "alterable with the boolean property `flat`)."
 msgid ""
 "There is a specific button type meant for use in toolbars, [Controls."
 "ToolButton](docs:qtquickcontrols;QtQuick.Controls.ToolButton). The most "
@@ -1859,21 +1804,20 @@ msgid ""
 "(https://doc.qt.io/qt-6/qml-qtquick-controls2-button.html#flat-prop))."
 msgstr ""
 "Existe um tipo de botão específico para usar nas barras de ferramentas, o "
-"`Controls.ToolButton`. A diferença mais óbvia entre este e um botão "
-"convencional é o estilo, onde os botões de ferramentas ficam planos (ainda "
-"que isto possa ser alterado com a propriedade booleana `flat`)."
+"[Controls.ToolButton](docs:qtquickcontrols;QtQuick.Controls.ToolButton). A "
+"diferença mais óbvia entre este e um [Button](docs:qtquickcontrols;QtQuick."
+"Controls.Button) convencional é o estilo, onde os botões de ferramentas "
+"ficam planos (ainda que isto possa ser alterado com a propriedade booleana "
+"[flat](https://doc.qt.io/qt-6/qml-qtquick-controls2-button.html#flat-prop))."
 
 #: content/docs/getting-started/kirigami/components-controls.md:113
-#, fuzzy
-#| msgid ""
-#| "![A tool button](/docs/use/kirigami/components-controls/controls-"
-#| "toolbutton.png)"
 msgid ""
 "![A window showing a tool button \"Tool beep\" which is completely flat](/"
 "docs/getting-started/kirigami/components-controls/controls-toolbutton.png)"
 msgstr ""
-"![Um botão de ferramenta](/docs/use/kirigami/components-controls/controls-"
-"toolbutton.png)"
+"![Uma janela que mostra um botão de ferramenta \"Tool beep\", que é "
+"completamente plano](/docs/getting-started/kirigami/components-controls/"
+"controls-toolbutton.png)"
 
 #: content/docs/getting-started/kirigami/components-controls.md:119
 msgid "Selection controls"
@@ -1893,42 +1837,33 @@ msgid "Checkboxes"
 msgstr "Opções de Marcação"
 
 #: content/docs/getting-started/kirigami/components-controls.md:125
-#, fuzzy
-#| msgid ""
-#| "Checkboxes are meant for options where the choices are non-exclusive and "
-#| "where each option has a clear alternative."
 msgid ""
 "A [Controls.CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox) is "
 "meant for options where the choices are non-exclusive and where each option "
 "has a clear alternative."
 msgstr ""
-"As opções de marcação servem para opções em que as alternativas não são "
-"exclusivas e onde cada opção tem uma alternativa bem definida."
+"Uma [Controls.CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox) "
+"serve para opções em que as alternativas não são exclusivas e onde cada "
+"opção tem uma alternativa bem definida."
 
 #: content/docs/getting-started/kirigami/components-controls.md:146
-#, fuzzy
-#| msgid ""
-#| "![A set of checkboxes](/docs/use/kirigami/components-controls/controls-"
-#| "checkbox.png)"
 msgid ""
 "![A window showing a set of checkboxes where more than one checkbox can be "
 "ticked at the same time](/docs/getting-started/kirigami/components-controls/"
 "controls-checkbox.png)"
 msgstr ""
-"![Um conjunto de opções de marcação](/docs/use/kirigami/components-controls/"
-"controls-checkbox.png)"
+"![Uma janela que mostra um conjunto de opções de marcação, onde mais que uma "
+"opção poderá ser assinalada ao mesmo tempo](/docs/getting-started/kirigami/"
+"components-controls/controls-checkbox.png)"
 
 #: content/docs/getting-started/kirigami/components-controls.md:152
-#, fuzzy
-#| msgid ""
-#| "As you can see, they are simple to use. The property `checked` holds a "
-#| "boolean value determining whether or not they have been checked."
 msgid ""
 "As you can see, they are simple to use. The [checked](https://doc.qt.io/qt-6/"
 "qml-qtquick-controls2-abstractbutton.html#checked-prop) property holds a "
 "boolean value determining whether or not they have been checked."
 msgstr ""
-"Como poderá ver, são simples de usar. A propriedade `checked` guarda um "
+"Como poderá ver, são simples de usar. A propriedade [checked](https://doc.qt."
+"io/qt-6/qml-qtquick-controls2-abstractbutton.html#checked-prop) guarda um "
 "valor booleano que determina se estavam ou não assinaladas."
 
 #: content/docs/getting-started/kirigami/components-controls.md:154
@@ -1936,18 +1871,14 @@ msgid "Radio buttons"
 msgstr "Opções exclusivas"
 
 #: content/docs/getting-started/kirigami/components-controls.md:156
-#, fuzzy
-#| msgid ""
-#| "Radio buttons are designed for situations where the user must choose one "
-#| "option from a set of several options."
 msgid ""
 "A [Controls.RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton) "
 "is designed for situations where the user must choose one option from a set "
 "of several options."
 msgstr ""
-"Os botões de opções exclusivas são desenhados para situações em que o "
-"utilizador deverá escolher uma única opção a partir de um conjunto de várias "
-"opções."
+"Um [Controls.RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton) "
+"é desenhado para situações em que o utilizador deverá escolher uma única "
+"opção a partir de um conjunto de várias opções."
 
 #: content/docs/getting-started/kirigami/components-controls.md:158
 msgid ""
@@ -1958,41 +1889,30 @@ msgstr ""
 "no mesmo item-pai."
 
 #: content/docs/getting-started/kirigami/components-controls.md:160
-#, fuzzy
-#| msgid ""
-#| "Like checkboxes, they can be set to be checked or unchecked by default "
-#| "with the `checked` property."
 msgid ""
 "Like checkboxes, they can be set to be checked or unchecked by default with "
 "the [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton."
 "html#checked-prop) property."
 msgstr ""
 "Como as opções de marcação, poderão estar assinalados ou não por omissão com "
-"a propriedade `checked`."
+"a propriedade [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-"
+"abstractbutton.html#checked-prop)."
 
 #: content/docs/getting-started/kirigami/components-controls.md:183
-#, fuzzy
-#| msgid ""
-#| "![A set of radio buttons](/docs/use/kirigami/components-controls/controls-"
-#| "radiobutton.png)"
 msgid ""
 "![A window showing a set of radio buttons where only one radio button can be "
 "ticked at the same time](/docs/getting-started/kirigami/components-controls/"
 "controls-radiobutton.png)"
 msgstr ""
-"![Um conjunto de opções exclusivas](/docs/use/kirigami/components-controls/"
-"controls-radiobutton.png)"
+"![Uma janela que mostra um conjunto de botões de opções exclusivas, onde só "
+"um destes botões pode estar assinalado ao mesmo tempo](/docs/getting-started/"
+"kirigami/components-controls/controls-radiobutton.png)"
 
 #: content/docs/getting-started/kirigami/components-controls.md:189
 msgid "Switches"
 msgstr "Comutadores"
 
 #: content/docs/getting-started/kirigami/components-controls.md:191
-#, fuzzy
-#| msgid ""
-#| "On the desktop, changing settings usually involves changing the setting "
-#| "and then applying the setting by clicking on an 'Apply' or 'OK' button. "
-#| "On mobile, we can use switches instead."
 msgid ""
 "On the desktop, changing settings usually involves changing the setting and "
 "then applying it by clicking on an \"Apply\" or \"OK\" button. On mobile, we "
@@ -2000,16 +1920,11 @@ msgid ""
 "instead."
 msgstr ""
 "No computador, a alteração da configuração normalmente envolve a alteração "
-"de uma opção e depois aplicar essa alteração com um botão 'Aplicar' ou 'OK'. "
-"Em dispositivos móveis, podemos usar os comutadores para esse fim."
+"de uma opção e depois aplicar essa alteração com um botão \"Aplicar\" ou \"OK"
+"\". Em dispositivos móveis, podemos usar os objectos [Controls.Switch](docs:"
+"qtquickcontrols;QtQuick.Controls.Switch) para esse fim."
 
 #: content/docs/getting-started/kirigami/components-controls.md:193
-#, fuzzy
-#| msgid ""
-#| "Switches can be toggled between an on and off state. They can be clicked "
-#| "or tapped on to toggle them, or they can be dragged towards the 'on' or "
-#| "'off' position. Once again, switches can be set to be on or off by "
-#| "default with the `checked` property."
 msgid ""
 "Switches can be toggled between an on and off state. They can be toggled by "
 "clicking or tapping on them, or they can be dragged towards the on or off "
@@ -2021,57 +1936,45 @@ msgstr ""
 "carregar ou tocar nos mesmos para os comutar, e os mesmos poderão ser "
 "arrastados para a posição 'ligado' ou 'desligado'. Mais uma vez, os "
 "comutadores poderão ser configurados para estar ligados ou desligados por "
-"omissão com a propriedade `checked`."
+"omissão com a propriedade [checked](https://doc.qt.io/qt-6/qml-qtquick-"
+"controls2-abstractbutton.html#checked-prop)."
 
 #: content/docs/getting-started/kirigami/components-controls.md:214
-#, fuzzy
-#| msgid ""
-#| "![A set of switches](/docs/use/kirigami/components-controls/controls-"
-#| "switch.png)"
 msgid ""
 "![A window showing a set of switches that function as toggles](/docs/getting-"
 "started/kirigami/components-controls/controls-switch.png)"
 msgstr ""
-"![Um conjunto de comutadores](/docs/use/kirigami/components-controls/"
-"controls-switch.png)"
+"![Uma janela que mostra um conjunto de interruptores que funcionam como "
+"comutadores](/docs/getting-started/kirigami/components-controls/controls-"
+"switch.png)"
 
 #: content/docs/getting-started/kirigami/components-controls.md:220
 msgid "Sliders"
 msgstr "Barras"
 
 #: content/docs/getting-started/kirigami/components-controls.md:222
-#, fuzzy
-#| msgid ""
-#| "Sliders allow users to select certain values by sliding a handle along a "
-#| "track. Thanks to QtQuick Controls, there are several types that you can "
-#| "choose from depending on the values you'd like your users to choose from "
-#| "in your application."
 msgid ""
 "Sliders allow users to select certain values by sliding a handle along a "
 "track. There are several types that you can choose from depending on the "
 "values you'd like your users to choose in your application."
 msgstr ""
-"As barras permitem aos utilizadores seleccionarem determinados valores se "
-"deslizar uma pega ao longo de um risco. Graças aos QtQuick Controls, existem "
-"vários tipos que poderá escolher, dependendo dos valores que gostaria que os "
-"seus utilizadores escolhessem na sua aplicação."
+"As barras deslizantes permitem aos utilizadores seleccionarem determinados "
+"valores se deslizar uma pega ao longo de um risco. Graças aos QtQuick "
+"Controls, existem vários tipos que poderá escolher, dependendo dos valores "
+"que gostaria que os seus utilizadores escolhessem na sua aplicação."
 
 #: content/docs/getting-started/kirigami/components-controls.md:224
 msgid "Standard and tickmarked sliders"
 msgstr "Barras normais e com marcações"
 
 #: content/docs/getting-started/kirigami/components-controls.md:226
-#, fuzzy
-#| msgid ""
-#| "A standard slider provides the user with very fine control over the "
-#| "selection they wish to make."
 msgid ""
 "A standard [Controls.Slider](docs:qtquickcontrols;QtQuick.Controls.Slider) "
 "provides the user with very fine control over the selection they wish to "
 "make."
 msgstr ""
-"Uma barra normal fornece ao utilizador algum controlo fino na selecção que "
-"pretendem fazer."
+"Um [Controls.Slider](docs:qtquickcontrols;QtQuick.Controls.Slider) normal "
+"fornece ao utilizador algum controlo fino na selecção que pretendem fazer."
 
 #: content/docs/getting-started/kirigami/components-controls.md:228
 msgid ""
@@ -2086,18 +1989,12 @@ msgstr ""
 "barras com orientação vertical são incrementadas de baixo para cima."
 
 #: content/docs/getting-started/kirigami/components-controls.md:230
-#, fuzzy
-#| msgid ""
-#| "By default, sliders go left to right to increase (and bottom up to "
-#| "increase when vertical). The coloration provides a visual indicator of "
-#| "how large the value you are selecting is."
 msgid ""
 "The coloration provides a visual indicator of how large the value you are "
 "selecting is."
 msgstr ""
-"Por omissão, as barras vão da esquerda para a direita (e de baixo para cima, "
-"quando estiverem na vertical). A coloração dá uma reacção visual de quão "
-"grande é o valor que está a escolher."
+"A coloração dá uma reacção visual de quão grande é o valor que está a "
+"escolher."
 
 #: content/docs/getting-started/kirigami/components-controls.md:232
 msgid "Sliders have a few important properties we must pay attention to:"
@@ -2106,42 +2003,32 @@ msgstr ""
 "devemos prestar atenção:"
 
 #: content/docs/getting-started/kirigami/components-controls.md:234
-#, fuzzy
-#| msgid ""
-#| "`value`: contains the value at which the handle is placed, and can also "
-#| "be set manually to provide a default starting value"
 msgid ""
 "[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-"
 "prop): contains the value at which the handle is placed, and can also be set "
 "manually to provide a default starting value"
 msgstr ""
-"`value`: contém o valor onde se encontra a pega, podendo ser definido "
+"[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-"
+"prop): contém o valor onde se encontra a pega, podendo ser definido "
 "manualmente para oferecer um valor predefinido válido"
 
 #: content/docs/getting-started/kirigami/components-controls.md:235
-#, fuzzy
-#| msgid ""
-#| "`to`: defines the range of the slider by specifying the maximum value it "
-#| "can go to"
 msgid ""
 "[to](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html#to-prop): "
 "defines the range of the slider by specifying the maximum value it can go to"
 msgstr ""
-"`to`: define o intervalo da barra, configurando o valor máximo até onde "
-"poderá ir"
+"[to](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html#to-prop): "
+"define o intervalo da barra, configurando o valor máximo até onde poderá ir"
 
 #: content/docs/getting-started/kirigami/components-controls.md:236
-#, fuzzy
-#| msgid ""
-#| "`orientation`: allows the slider to be set to a vertical orientation with "
-#| "`Qt.Vertical`"
 msgid ""
 "[orientation](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider."
 "html#orientation-prop): allows the slider to be set to a vertical "
 "orientation with `Qt.Vertical`"
 msgstr ""
-"`orientation`: permite à barra ser disposta numa posição vertical com o `Qt."
-"Vertical`"
+"[orientation](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider."
+"html#orientation-prop): permite à barra ser disposta numa posição vertical "
+"com o `Qt.Vertical`"
 
 #: content/docs/getting-started/kirigami/components-controls.md:255
 #, fuzzy
