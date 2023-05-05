@@ -447,6 +447,18 @@ Chocolate
 
 ![Combobox dialog](combobox.png)
 
+### --slider dialog box
+
+A slider allows you to select a value within a range. You can use arrow keys to move
+left or right by one `<step>`.
+
+```bash
+# syntax: --slider <text> <min> <max> <step>
+kdialog --slider "Select a Value" 0 100 10
+```
+
+![Slider dialog](slider.png)
+
 ## File Selection Dialogs
 
 This section covers dialogs to select files to open and save. These dialogs access the
