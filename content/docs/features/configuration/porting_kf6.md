@@ -7,6 +7,7 @@ description: "Porting guide for KDE Config Modules to Qt6/KF6"
 
 The config modules had a lot of significant changes during the KF6 transition.
 This is a porting-guide to get your KCMs ready for KF6!
+Note that KF6 is still a work in progress and will be subject to breaking changes.
 
 ### Build system and class name changes
 In KF5, the code for QML KCMs was in KDeclarative and for QWidgets KCMs in KConfigWidgets.
@@ -18,9 +19,15 @@ for QML KCMs are in the `KF6::KCMUtilsQuick` library.
 Since the QML classes are no longer in KDeclarative, the `KQuickAddons` namespace is no longer suitable.
 Because of this, `KDeclarative::ConfigModule` to renamed to `KQuickConfigModule` and `KQuickAddons::ManagedConfigModule` to `KQuickManagedConfigModule`.
 
+### Class-hierarchy changes
+In KF5, the APIs of the QML and QWidgets KCMs were very different. This causes a mental burden when working with different UI-technologies.
+In KF6, we have the `KAbstractConfigModule` class, which contains all the APIs that are not specific to to any of UI-technology.
+Since the QML KCMs are more widely used in KDE nowadays and the API is cleaner, most API was copied from those classes.
+
 ### Changes to `ConfigModule` and `ManagedConfigModule`
 The QQmlComponent::Status getter was removed for lack of usage. `showPassiveNotification`/`passiveNotificationRequested` were also removed.
 The attached `quickHelp` property was also removed, because it is not used when displaying KCMs.
+Setting a `rootOnlyMessage` was also removed due to it being unused.
 
 Also, we no longer use KPackage to install QML files, instead we bundle them as QRC.
 This way all needed files are embedded in the plugin. This simplifies testing and installation.
@@ -35,3 +42,32 @@ In the following, you can see an example where all parameters are used. But in m
 kcmutils_add_qml_kcm(my_kcm DISABLE_DESKTOP_FILE_GENERATION SOURCES kcm.coo INSTALL_NAMESPACE plasma/kcms/kinfocenter)
 target_link_libraries(my_kcm ...)
 ```
+
+### Changes to KCModule class
+Due to the class hierarchy changes, `KCModule` can no longer extend from QWidget. To get access to a KCModule's QWidget, you can call the `widget()` method.
+This should be used when you need the parent widget.
+Due to the class no longer extending from a QWidget, [KPluginFactory](docs:kcoreaddons;KPluginFactory) passes in a QObject * instead of QWidget* for the parent.
+We internally cast this to a QWidget, but for the constructor it should be changed to QObject.
+
+API using [KAboutData](docs:kcoreaddons;KAboutData) was removed, because metadata should be set using [KPluginMetaData](docs:kcoreaddons;KPluginMetaData) instead.
+In the constructor, you should take the `const KPluginMetaData &data` argument and pass it to the `KCModule` baseclass.
+For plugins that embedded in for example a [KPluginWidget](docs:kcmutils;KPluginWidget), this can be omitted.
+
+The `setAuthAction` and `authAction` methods where removed, because you should take care of creating the `KAuth::Action` manually.
+In the relevant methods you should execute the action.
+To signal that the KCM needs authorization, you can use the `setNeedsAuthorization` method or set the `setAuthActionName`.
+The latter value can be retrieved using the `authActionName` getter and internally calls `setNeedsAuthorization`.
+
+Instead of `Q_SIGNAL void changed(bool hasChanged)`, you can use `setNeedsSave(bool needsSave)`. For connects, can use `void markAsChanged()`.
+Instead of `Q_SIGNAL void defaulted(bool state)`, `void setRepresentsDefault(bool defaults)` should be used.
+
+#### Compatibility API in KConfigWidgets 5.105
+This release of KDE Frameworks introduced compatibility compatibility logic to easy the transition.
+This includes `QWidget *widget()` and `void setNeedsSave(bool needsSave)`.
+Also, the `KCModule(QObject *parent, const KPluginMetaData & data = {}, const QVariantList &args = QVariantList())` constructor was added.
+
+### Changes to other KCMUtils API
+The `KCModuleProxy` class has been removed. Instead, you should use `KCModuleLoader` to get a `KCModule` instance and embed the result of `KCModule::widget`.
+In case your app has already a  `QQmlEngine` instance or needs one in other places, you should explicitly pass in the engine in for loading QML based KCMs.
+For loading `KQuickConfigModule`/`KQuickManagedConfigModule` instances you should use `KQuickModuleLoader`.
+You should use the `QQmlEngine` parameter as explained for the `KCModuleLoader`.
