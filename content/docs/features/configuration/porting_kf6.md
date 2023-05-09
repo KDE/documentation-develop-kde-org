@@ -43,6 +43,24 @@ kcmutils_add_qml_kcm(my_kcm DISABLE_DESKTOP_FILE_GENERATION SOURCES kcm.coo INST
 target_link_libraries(my_kcm ...)
 ```
 
+#### Changes to QML modules
+The `org.kde.kcm` QML module from KDeclarative has been moved to KCMUtils under the name `org.kde.kcmutils`.
+All versions of registered files are 1.0. For consistency, `KPluginSelector` and `KPluginDelegate` were renamed to `PluginSelector` and `PluginDelegate`.
+It is recommended to use a "namespaced" imports, like `import org.kde.kcmutils as KCMUtils`.
+
+The `KCMShell` class from `org.kde.kquickcontrolsaddons` has been moved to the mentioned KCMutils QML module and is not called `KCMLauncher`.
+The `open`, `openSystemSettings` and `openInfoCenter` methods are identical.
+For checking of a KCM is authorized, you should use `KAuthorized` from the `org.kde.config` QML module.
+
+```qml
+import org.kde.config
+if (KAuthorized.authorizeControlModule("kcm_clock")) {
+    // Launch the KCM or do other logic
+}
+const allowedKCMs = KAuthorized.authorizeControlModules(["kcm_clock", "kcm_icons"])
+// Do sth. with the allowed KCMs
+```
+
 ### Changes to KCModule class
 Due to the class hierarchy changes, `KCModule` can no longer extend from QWidget. To get access to a KCModule's QWidget, you can call the `widget()` method.
 This should be used when you need the parent widget.
