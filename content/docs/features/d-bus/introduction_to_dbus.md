@@ -31,7 +31,7 @@ The **system bus** is used for system-global services such as hardware managemen
 
 Each desktop session (e.g. each logged in user) has an additional **session bus**, which is the one that desktop applications will tend to use most often.
 
-Additionally, an application may create any number of own busses if necessary.
+Additionally, an application may create any number of own buses if necessary.
 
 ## Messages
 
@@ -103,7 +103,7 @@ If this sounds a lot like the signal and slots mechanism in Qt, that's because i
 
 ## Useful Tools
 
-There are several useful tools for exploring the D-Bus busses as well as developing applications that use D-Bus. We will now look briefly at end-user tools as the articles that follow cover the development tools in greater detail and context. 
+There are several useful tools for exploring the D-Bus buses as well as developing applications that use D-Bus. We will now look briefly at end-user tools as the articles that follow cover the development tools in greater detail and context. 
 
 ### qdbus
 
