@@ -148,7 +148,7 @@ The following global function is available to both QML and JavaScript:
 The print output of Plasma and KWin scripts can be read from the journal:
 
 ```bash
-journalctl -g "js:" -f
+journalctl -f QT_CATEGORY=js QT_CATEGORY=kwin_scripting
 ```
 
 In order to obtain log information for KWin scripts, `QT_LOGGING_RULES="kwin_*.debug=true"` must be set in your environment. Open `kdebugsettings` and ensure KWin Scripting is set to Full Debug. If you are still not getting any output, try adding
