@@ -1,89 +1,90 @@
 ---
-title: Theme details
+title: Understanding Plasma Styles
 weight: 2
-description: Details about the internal of Plasma theme
-aliases:
-  - /docs/plasma/theme/theme-details/
+description: Essentials of making a Plasma Style
 ---
 
-libKF5Plasma provides the Theme class so Plasma elements and other
-applications, such as KRunner, that need to graphically hint or theme
-interface elements. This is not a replacement for QStyle, but rather
+[Plasma Framework](docs:plasma) provides the [Plasma::Theme](docs:plasma;Plasma::Theme) class so Plasma elements and other
+applications, such as KRunner, can graphically hint or theme
+interface elements. This is not a replacement for [QStyle](https://doc.qt.io/qt-6/qstyle.html), but rather
 provides standard elements for things such as box backgrounds.
 
 This allows for easy re-theming of the desktop while also keeping elements
 on the desktop more consistent with each other.
 
-See also [Creating a Plasma Theme](../quickstart).
-
-## Theme Location, Structure and Definition
+## Theme Location, Structure and Definition {#structure}
 
 Themes are stored in:
 
 * **System/Default:** `/usr/share/plasma/desktoptheme/`
 * **User Installed:** `~/.local/share/plasma/desktoptheme/` ([KDE Store Category](https://store.kde.org/browse/cat/104/order/latest/))
 
-Each theme is stored in an own sub-folder by the name of the theme.  
-Eg: `~/.local/share/plasma/desktoptheme/electrostorm/`
+Each theme is stored in its own sub-folder following the name of the theme.
 
-A theme is described by a `metadata.desktop` file in the top-level directory of
-such a subfolder.
+Example: `~/.local/share/plasma/desktoptheme/electrostorm/`
 
-Beneath this directory one will find the following file structure:
+A theme is described by a `metadata.json` file in the top-level directory of
+the theme folder (so `electrostorm/metadata.json` in this case). Additional properties are defined in a separate `plasmarc` file.
 
-* **`dialogs/`**: images for dialogs.
-* **`icons/`**: optional directory images for icons.
-* **`widgets/`:** images for widgets.
-* **`opaque/`:** optional directory containing images appropriate for non-compositing environments.
-* **`translucent/`:** optional directory containing images appropriate for when
+Beneath this directory you will find the following file structure:
+
+* [dialogs/]({{< ref "theme-elements#dialogs-folder" >}}): images for dialogs.
+* [icons/]({{< ref "theme-elements#icons-folder" >}}): optional directory images for icons.
+* [widgets/]({{< ref "theme-elements#widgets-folder" >}}): images for widgets.
+* [opaque/]({{< ref "theme-elements#opaque-folder" >}}): optional directory containing images appropriate for non-compositing environments.
+* [translucent/]({{< ref "theme-elements#translucent-folder" >}}): optional directory containing images appropriate for when
 background contrast and blur effect is supported.
-* **`wallpapers/`:** wallpaper image packages.
-* **`colors`**: optional a configuration file defining a color scheme that blends
-* **`metadata.desktop`**: theme name, version, and properties
+* [wallpapers/]({{< ref "theme-details#default-theme-wallpaper" >}}): wallpaper image packages.
+* [metadata.json]({{< ref "theme-details#theme-metadata" >}}): theme name, version, and credits.
+* [plasmarc]({{< ref "theme-details#theme-metadata" >}}): optional theme properties.
+* [colors]({{< ref "theme-details#colors" >}}): optional configuration file defining a color scheme that blends well with images.
 
-All `.svg` images are optional. If a theme is missing an svg file, it will fallback to the default Breeze theme.
+All SVG images are optional. If a theme is missing an SVG file, it will fall back to the default Breeze theme.
 
 ## Theme Metadata
 
-The contents of the `metadata.desktop` file might look like this:
+The contents of the `metadata.json` file might look like this:
 
-```ini
-[Desktop Entry]
-Name=Electrostorm
-Comment=Brings a very dynamic electrical energy atmosphere to the desktop
+`~/.local/share/plasma/desktoptheme/electrostorm/metadata.json`
 
-X-KDE-PluginInfo-Author=A Plasma Theme Designer
-X-KDE-PluginInfo-Email=my@mail.address
-X-KDE-PluginInfo-Name=electrostorm
-X-KDE-PluginInfo-Version=0.1
-X-KDE-PluginInfo-Website=
-X-KDE-PluginInfo-License=GPL
-X-Plasma-API=5.0
+```json
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "A Plasma Style Designer",
+                "Email": "my@mail.address",
+            }
+        ],
+        "Name": "Electrostorm",
+        "Description": "Brings a very dynamic electrical energy atmosphere to the desktop",
+        "Id": "electrostorm",
+        "Version": "0.1",
+        "Category": "",
+        "EnabledByDefault": true,
+        "License": "GPL",
+        "Website": ""
+    },
+    "X-Plasma-API": "5.0"
+}
 ```
 
-The `X-KDE-PluginInfo-Name` entry should match the name of the sub-folder
-in `share/plasma/desktoptheme` where the SVG files for this theme exist.
+The `Id` entry should match the name of the theme folder name.
 
-Eg: `~/.local/share/plasma/desktoptheme/electrostorm/metadata.desktop`
+If you do changes to SVG files in your theme, make sure to update the "Version" so Plasma can properly refresh its cache.
 
-If the theme should inherit from another theme than the "default" one, this
-can be defined by a section like this (where the folder name resp. the
-`X-KDE-PluginInfo-Name` would be passed as value):
+Additional properties like setting a fallback theme can be done by writing in [INI format](https://en.wikipedia.org/wiki/INI_file) inside the `plasmarc` file:
 
 ```ini
 [Settings]
 FallbackTheme=oxygen
 ```
 
-If you do changes to SVG files in your theme, make sure to **update the version
-number in `X-KDE-PluginInfo-Version`** so Plasma can properly refresh its cache.
-
 If your theme is not fully opaque, to improve readability of text or other
-elements, there are two options to ask the window manager to apply some effect
-for (KWin supports those):
+elements, there are two options to ask the window manager to apply some effect:
 
-a. One is adding some contrast to what is behind windows, panels or tooltips
-(disabled by default), which is done by a section like this:
+1. Adding some contrast to what is behind windows, panels or tooltips
+(this is the Background Contrast effect, **disabled by default**):
 
 ```ini
 [ContrastEffect]
@@ -93,50 +94,72 @@ intensity=1.9
 saturation=1.9
 ```
 
-b. The other option is blurring what is behind windows, panels or tool tips.
-This is enabled by default. Since Plasma Frameworks 5.57, this can be disabled
-by a section like this (ignored otherwise):
+{{< alert title="Tip" color="success" >}}
+
+There is an online tool available to get a general idea of how these values interact with each other: https://niccolo.venerandi.com/backstage/files/ownopacity/main.html
+
+{{< /alert >}}
+
+2. Blurring what is behind windows, panels or tooltips.
+This is **enabled by default**. Since Plasma Frameworks 5.57, this can be disabled like so:
 
 ```ini
 [BlurBehindEffect]
 enabled=false
 ```
 
-## Image Access
+{{< alert title="Deprecation Note" color="warning" >}}
 
-Theme elements are accessed by path. Whether this maps to literal paths on disk
-or not is not guaranteed and considered an implementation detail of
-[`Plasma::Theme`](docs:plasma;Plasma::Theme).
+Prior to KDE Frameworks 6, themes used a `metadata.desktop` file instead of `metadata.json` + `plasmarc`.
 
-Therefore, to access the dialog background, one might create an SVG in this
-manner:
+For porting reasons, here is how the old `metadata.desktop` would look like:
 
-```c++
-Plasma::Theme theme;
-QSvgRenderer svg(theme.image("dialogs/background"));
+<details><summary>metadata.desktop</summary>
+
+```ini
+[Desktop Entry]
+Name=Electrostorm
+Comment=Brings a very dynamic electrical energy atmosphere to the desktop
+
+X-KDE-PluginInfo-Author=A Plasma Style Designer
+X-KDE-PluginInfo-Email=my@mail.address
+X-KDE-PluginInfo-Name=electrostorm
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=
+X-KDE-PluginInfo-License=GPL
+X-Plasma-API=5.0
+
+[Settings]
+FallbackTheme=oxygen
+
+[ContrastEffect]
+enabled=true
+contrast=0.3
+intensity=1.9
+saturation=1.9
+
+[BlurBehindEffect]
+enabled=false
 ```
 
-It is **generally recommended** to use [`Plasma::Svg`](docs:plasma;Plasma::Svg) instead
-of `QSvgRenderer` directly, however. This is because `Plasma::Svg` uses caching where it
-can. Remember to call `resize()` on the `Plasma::Svg` before painting with it!
+</details>
 
-```cpp
-Plasma::Svg svg("dialogs/background");
-svg.resize(size());
-```
+{{< /alert >}}
 
-## Wallpaper Access
+## Default Theme Wallpaper
 
 Themes may optionally provide wallpaper image packages to be used with the theme.
 These wallpaper image packages must appear in the `wallpapers/` directory within the theme.
 
 A theme may also define a default wallpaper image, image size and image file extension
 to be used in conjunction with the theme. It will then be automatically used as wallpaper
-image, if the current wallpaper type supports the settings (like the "Image") and the
-user has not yet chosen a custom image. The default wallpaper image may either be
+image, if the current wallpaper type supports the settings (like the "Image" wallpaper type) and the
+user has not yet chosen a custom image.
+
+The default wallpaper image may either be
 installed in the standard location for wallpaper image packages or may be shipped with the
 theme itself. The default wallpaper image settings should appear in the theme's
-`metadata.desktop` file and contain the following entries:
+`plasmarc` file and contain the following entries:
 
 ```ini
 [Wallpaper]
@@ -146,501 +169,80 @@ defaultWidth=<width in pixels of default wallpaper file>
 defaultHeight=<height in pixels of default wallpaper file>
 ```
 
-##  Reaction to Theme Changes
-
-If you use `Plasma::Svg`, changes to the theme are automatically picked up.
-Otherwise, you can connect to the `changed()` signal in the
-`Plasma::Theme` class. This signal is emitted whenever the theme is changed,
-which may be triggered by the user switching the theme used or system changes
-such as a composite manager becoming available.
-
 ##  Colors
 
-The colors file follows the standard Plasma colorscheme file format and
+The `colors` file follows the standard Plasma color scheme file format and
 allows a theme to define what colors work best with its theme elements.
-The colors in this file can be edited with the default color scheme module.
+The colors in this file can be edited with the color scheme editor available in System Settings.
 
-* Make a new colorscheme using the editor in System Settings > Appearance > Colors.
+* Make a new color scheme using the editor in System Settings -> Appearance -> Colors.
 * Save it with a unique name.
-* Open the colorscheme in a text editor, like Kate.
-  * Saved at `/home/[user]/.local/share/color-schemes/[unique name].colors`
-* Copy everything to your Plasma theme colors file except the **[ColorEffects:Disabled]**
+* You will see the new color scheme in `~/.local/share/color-schemes/[theme-name].colors`.
+* Copy everything to your Plasma Style `colors` file except the **[ColorEffects:Disabled]**
 and **[ColorEffects:Inactive]** sections.
 
+The most common use of the `colors` file is to ensure that text is readable on various backgrounds.
 
-The most common use of the colors file is to ensure that text is readable on various backgrounds.
-
-Here is a list of color entries in the colors file that are currently actively used in a Plasma theme:
+Here is a non-comprehensive list of the main color entries in the `colors` file that are currently actively used in a Plasma Style:
 
 * **[Colors:Window]**
-  * **ForegroundNormal** the text color applied to text on the standard background elements; maps to `Theme::TextColor`
-  * **DecorationHover** the color used for text highlighting; maps to `Theme::HighlightColor`
-  * **BackgroundNormal** the default background color, for items that paint a background themselves, allowing them to blend in with the theme; maps to `Theme::BackgroundColor`
+  * **ForegroundNormal**: the text color applied to text on the standard background elements; maps to [Theme::TextColor](docs:plasma;Plasma::Theme::TextColor)
+  * **BackgroundNormal**: the default background color used for items that paint a background themselves, allowing them to blend in with the theme; maps to [Theme::BackgroundColor](docs:plasma;Plasma::Theme::BackgroundColor)
+  * **DecorationHover**: the color used for text highlighting; maps to [Theme::HighlightColor](docs:plasma;Plasma::Theme::HighlightColor)
+
 * **[Colors:Button]**
-  * **ForegroundNormal** the text color to use on push buttons; maps to `Theme::ButtonTextColor`
-  * **BackgroundNormal** used for hinting buttons; maps to `Theme::ButtonBackgroundColor`
-  * **ForegroundActive** color used to tint `BackgroundNormal` for final button hinting color
-* **[Colors:View]**
-  * **ForegroundLink** clickable text link font color
-  * **ForegroundVisited** visited clickable text link font color
-
-Other colors in the file may be used by individual widgets or used in the future, so it doesn't hurt to provide a complete colorscheme file and is probably a safer strategy.
-
-Currently also used by individual widgets, which should give a good idea of additional usage patterns:
+  * **ForegroundNormal**: the text color to use on push buttons
+  * **ForegroundActive**: the color used to tint `BackgroundNormal` for final button hinting color
+  * **BackgroundNormal**: the background color used for hinting buttons
 
 * **[Colors:View]**
-  * **ForegroundActive** used by the digital and fuzzy clocks for the default text color, dictionary widget for results text, microblog for status update text
-  * **ForegroundInactive** used by the pager to draw non-active windows and frames, microblog for user names
-  * **ForegroundNormal** used by microblog for status update entry area background
+  * **ForegroundLink**: the text color used for clickable links
+  * **ForegroundVisited**: the text color used for visited links
+  * **ForegroundNormal**: the text color used most non-title text in applications
+  * **ForegroundInactive**: the text color used for secondary text, like placeholders in text fields ("Search…")
+  * **DecorationFocus**: the color used for outlines revolving content panes (like Dolphin or Kate), outlines for checkboxes, and the background tint of hovered menu options.
+  * **DecorationHover**: the color used in the outline of text fields or checkboxes, or to highlight the background of tabs and menu buttons when hovered.
+
+* **[Colors:Header]**
+  * **ForegroundNormal**: the text color used for the titlebar and headerbar
+  * **BackgroundNormal**: the background color used for the titlebar and headerbar
+
+* **[ColorsSelection]**
+  * **ForegroundNormal**: the text color used in text fields
+  * **BackgroundNormal**: the background color used in text fields
+
+* **[Colors:Tooltip]**
+  * **ForegroundNormal**: the primary text color used for tooltips from Plasma
+  * **ForegroundInactive**: the color used for secondary text in tooltips, such as the "Press Shift for More" text
+  * **BackgroundNormal**: the color used for the background of tooltips
+
+Other colors in the file may be used by individual widgets or used in the future, so you are encouraged to provide a complete color scheme file.
+
+The following colors are currently also used by individual plasmoids, which should give a good idea of additional usage patterns:
+
+* **[Colors:View]**
+  * **BackgroundNormal**: used as a background color for the digital clock and the dictionary plasmoid search field.
+  * **ForegroundNormal**: used by the digital clock for most of its minute indicators and arrows, as well as the text color used in the search field of the dictionary plasmoid.
+  * **DecorationFocus**: used to outline the dictionary plasmoid search field.
+  * **DecorationHover**: used when hovering the dictionary plasmoid search field.
 
 * **[Colors:Complementary]**
-Same roles as Colors:Window, those are used in areas such as the logout screen, the screen locker etc, in order for them to have independent colors compared to normal plasmoids.
+  * Same roles as **Colors:Window**, those are used in areas such as the logout screen, the screen locker, and other areas in order for them to have independent colors compared to normal plasmoids.
 
-Note that some of these may end up folded back into `Plasma::Theme` properly at some point.
+Note that some of these may end up folded back into [Plasma::Theme](docs:plasma;Plasma::Theme) properly at some point.
 
-##  Background SVG format
+## Image Access from C++
 
-All background SVGs (except for wallpaper images) must have the following named elements, all of which will be painted at the *native* size (and can therefore be bitmaps), except for the center which will be scaled:
+Theme elements can be accessed from C++ code by path. Whether this maps to literal paths on disk
+or not is not guaranteed and considered an implementation detail of
+[Plasma::Theme](docs:plasma;Plasma::Theme).
 
-* **topleft**: the top left corner
-* **topright**: the top right corner
-* **bottomleft**: the bottom left corner
-* **bottomright**: the bottom right corner
-* **top**: the top bar between the two top corners
-* **left**: the left bar between the two left corners
-* **right**: the right bar between the two right corners
-* **bottom**: the bottom bar between the two bottom corners
-* **center**: the center fill; will be scaled so should be an actual SVG element
+For example, to access the dialog background, one might create an SVG in this manner:
 
-Some Plasma components may use the above named elements with prefixes.  For example the panel placed on the left side of the screen uses the "west" prefix (**west-topleft**, **west-topright**, etc.).
-
-Additionally, the following elements can be used to control the rendering of the backgrounds:
-
-* **hint-stretch-borders**: if it exists, the borders will not be tiled but rather will be stretched to fit
-* **hint-tile-center**: if it exists, the center will not be scaled but rather will be tiled to fit. (Optional, from 4.1 and later)
-* **hint-no-border-padding**:  If this element exists, padding will not be added for the borders, and content will therefore be able to use the entire area (inclusive borders).
-* **hint-apply-color-scheme**:  If this element exists, the SVG will be colorized using the color scheme colors.  Colorization is applied at 100%, and tapers off on either side, of an HSV color value/intensity of 127.
-* **current-color-scheme**: If a style element with this id exists it is replaced by a css-style with colors of the current colorscheme. See below for details.
-* **[prefix]-hint-[direction]-margin**: Use this optional hints if you want different margins than the borders size. The [prefix]- part is optional and identifies the prefix of the panel you want to specify the margins. [direction] can be either top, bottom, left or right and indicates the border you want to configure. For top and bottom margins the height of these hints are used, for left and right margins the width.
-* **[prefix]-hint-compose-over-border**: if this element is resent, the center element will be drawn with the same size as the total image, composed under the borders and shaped with the alpha mask frame, that has to be present in order to make work this hint(Optional).
-
-Next there can be optionally another element called **overlay** (or **[prefix]-overlay** if to be applied to a frame with a different prefix) it will be rendered over the frame as a filigrane effects, with the rules given from the following mutually exclusive hints:
-* **hint-overlay-random-pos** it will be put at a random position, this works just for applet backgrounds
-* **hint-overlay-tile** tile the overlay
-* **hint-overlay-stretch** the overlay will be stretched
-* **hint-overlay-pos-right** align the overlay at right of the background rather than to the left
-* **hint-overlay-pos-bottom** align the overlay at bottom of the background rather than to the top
-
-### Inkscape extension
-An Inkscape extension exists to automatically rename SVG elements with the above naming spec.
-* download the two files at https://websvn.kde.org/trunk/playground/artwork/Oxygen/notmart/inkscapeextensions/
-* copy them to `$HOME/.config/inkscape/extensions`
-* restart inkscape
-* select the 9 items of a frame (or the 4 items of an hint) and go to Extension->Plasma menu entry.
-* put the optional prefix in the dialog
-
-###  Using system colors
-
-It is possible to apply colors from the color scheme to a graphic. A very easy way to reach this is by adding an element with the id **hint-apply-color-scheme** to the SVG, In this case the rendered graphic gets converted to monochrome and colorized by the window background color.
-
-![Editing xml directly](EditingSvgIcon.png)
-
-A more flexible solution is available by using CSS-styling. For this to work the SVG must have a style-element with the `id="current-color-scheme"`. Before the graphic is rendered this element gets replaced by a style containing classes where the color attribute is set to the corresponding system color. Currently the following classes are defined:
-* ColorScheme-Text
-* ColorScheme-Background
-* ColorScheme-Highlight
-* ColorScheme-ViewText
-* ColorScheme-ViewBackground
-* ColorScheme-ViewHover
-* ColorScheme-ViewFocus
-* ColorScheme-ButtonText
-* ColorScheme-ButtonBackground
-* ColorScheme-ButtonHover
-* ColorScheme-ButtonFocus
-
-In order to apply a color from a class to an element, its `fill` or `stroke` attribute must be `currentColor` and of course the name of the wanted class has to be in the class-attribute. Special attention is needed on gradients, as neither the gradient-tags themselves nor the stop-tags accept classes. To still get the wanted result one can put a g-tag around them and apply the class to this.
-
-* `<path class="ColorScheme-Text" fill="currentColor">`
-* `<path class="ColorScheme-Text" stroke="currentColor">`
-* `<path class="ColorScheme-Text" style="fill:currentColor">`
-* `<path class="ColorScheme-Text" style="stroke:currentColor">`
-
-Eg: `/usr/share/icons/breeze/actions/16/go-down.svg`
-
-```xml
-<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-    <style
-        id="current-color-scheme"
-        type="text/css"
-    >
-        .ColorScheme-Text {
-            color:#232629;
-        }
-    </style>
-    <path
-        class="ColorScheme-Text"
-        fill="currentColor"
-        d="M8 11.707l-6-6L2.707 5 8 10.293 13.293 5l.707.707-6 6z"
-    />
-</svg>
+```c++
+Plasma::Theme theme;
+Plasma::Svg svg("dialogs/background");
+svg.resize(size());
 ```
 
-In the [`plasma-framework` source repository](https://invent.kde.org/frameworks/plasma-framework/), two useful tools are present:
-* [`currentColorFillFix.sh`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/tools/currentColorFillFix.sh): fixes an error in the file format that inkscape often does that would break the correct application of the stylesheet
-* [`apply-stylesheet.sh`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/tools/apply-stylesheet.sh): looks in the SVG file for certain colors (by default from the Breeze palette) and replaces them with the corresponding stylesheet class, automating a potential long and tedious job
-
-##  Current Theme Elements
-
-Themes get installed to:
-
-* **System/Default:** `/usr/share/plasma/desktoptheme/`
-* **User Installed:** `~/.local/share/plasma/desktoptheme/` ([KDE Store Category](https://store.kde.org/browse/cat/104/order/latest/))
-
-Each theme is stored in an own sub-folder by the name of the theme.  
-Eg: `~/.local/share/plasma/desktoptheme/electrostorm/`
-
-Each theme contains following file structure. All files can be in either `.svg` or `.svgz` format.
-
-* **/dialogs**: elements for dialogs
-  * **/background.svg**: generic dialog background used by the screensaver password dialog, etc. See the section on backgrounds above for information on the required elements in this file.
-    * `hint-left-shadow`: optional hints that say how big the shadow is
-    * `hint-top-shadow`
-    * `hint-right-shadow`
-    * `hint-bottom-shadow`
-* **/widgets**: generic desktop widget background
-  * **/action-overlays.svg**: overlays for icons to indicate actions
-    * `add-normal`: icon used to add the parent icon to a selection of elements (used for instance in folderview), normal state, there are also `add-hover` and `add-pressed`
-    * `remove-normal`: icon used to remove the parent icon to a selection of elements, normal state, there are also `remove-hover` and `remove-pressed`
-    * `open-normal`: icon used to initialize tooltip on folderview widget, there are also `open-hover` and `open-pressed`
-  * **/analog_meter.svg**: an analog gauge widget.
-    * `background`: the body of the analog instrument
-    * `foreground`: the pin where the hand rotates
-    * `pointer`: the hand of the instrument
-    * `rotateminmax`: how much the hand can rotate, the width is the maximum angle in degrees the height the minimum angle
-    * `label0`: the rect for the first label
-    * `label1`: the rect for the second label
-  * **/arrows.svg**: arrows that match the theme. Four elements should exist in this SVG: up-arrow, down-arrow, left-arrow, right-arrow.
-  * **/background.svg**: a background image for plasmoids. See the section on backgrounds above for information on the required elements in this file.
-    * `hint-left-shadow`: optional hints that say how big the shadow is
-    * `hint-top-shadow`
-    * `hint-right-shadow`
-    * `hint-bottom-shadow`
-  * **/bar_meter_horizontal.svg**: an horizontal meter like a progressbar
-    * `background`: background of the progressbar
-    * `foreground`: overlay in the foreground of the progressbar
-    * `bar`: the progressbar itself
-    * `background`: a 9 pieces SVG with the `background` prefix, it replaces the background element if available
-     <!--****hint-stretched-bar*: make the progressbar background element stretched rather than tiled-->
-    * `bar-active` and `bar-inactive`: 9 pieces SVGs with the `bar-active` and `bar-inactive` prefixes, they replace the bar element when available, they will be drawn tiled
-    * `label0`, `label1` and `label2`: rects for 3 labels to be placed around
-    * `hint-bar-size`: default height of the bar, if not present the default is taken from sum of heights of `bar-inactive-top` & `bar-inactive-bottom`
-  * **/bar_meter_vertical.svg**: a vertical meter like a vertical progressbar. It has the same format of **/bar_meter_horizontal.svg**.
-  * **/branding.svg**: a little Plasma logo that can be customized by distributors as a branding element. Contains a single element called `brilliant`
-  * **/busywidget.svg**: Used to indicate a busy state, it's a circular image that will be animated with a rotation.
-    * `busywidget`: the main spinner
-    * `paused`: the paused state
-  * **/button.svg**: graphics elements for a button widget, it needs the following prefixes:
-    * `normal` normal button
-    * `pressed` pressed button
-    * `active` button under mouse. Active can have ticker borders that would be rendered outside the widget. It's useful to do a glowing effect **DEPRECATED:** use `hover` instead
-    * `hover` element that will be in the background of the widget, will act as a border (useful for glow effects)
-    * `shadow` a shadow for the button, can be bigger than the button itself
-    * `focus` keyboard focus rectangle superimposed to the button graphics
-  * **/calendar.svg**: graphics for a calendar widget
-    * `weeksColumn`: background for the vertical column with week numbers in it.
-    * `weekDayHeader`: background for the row with week day names in it.
-    * `active`: background for the day numbers of the current month.
-    * `inactive`: background for the day numbers of the next and previous months.
-    * `hoverHighlight`: background for the day under the mouse cursor.
-    * `today`: border for the current day cell.
-    * `selected`: border for the selected day cell.
-    * `red`: border for holidays on sundays
-    * `green`: border for holidays during week days
-  * **/clock.svg**: an analog clock face. it must have the following named elements:
-    * `ClockFace`: the background of the clock, usually containing the numbers, etc
-    * `HourHand`: the hour hand, pointing down in the SVG
-    * `MinuteHand`: the minute hand, pointing down in the SVG
-    * `SecondHand`: the second hand, pointing down in the SVG
-    * `HourHandShadow`, `MinuteHandShadow` and `SecondHandShadow`: drop shadows for the hands (optional)
-    * `HandCenterScrew`: the "pin" that holds the hands together in the center
-    * `Glass`: a final overlay which allows for things such as the appearance of glass
-    * `hint-square-clock`: if present the shape of the clock will be square rather than round
-    * `hint-[hand(shadow)]-rotation-center-offset`: the point of a hand (shadow) where it is "pinned" to the clock center, defined by the center of the hint, relative to the element position (can be outside the element), with `[hand(shadow)]` being `hourhand`, `hourhandshadow`, `minutehand`, `minutehandshadow`, `secondhand`, `secondhandshadow`, default is "(width/2, width/2)" from top-left of the hand (shadow) element  (since Plasma 5.16)
-    * `hint-hands-shadow-offset-to-west` or `hint-hands-shadows-offset-to-east`: horizontal offset of the hands shadows, default is 0 offset (since Plasma 5.16)
-    * `hint-hands-shadow-offset-to-north` or `hint-hands-shadow-offset-to-south`: vertical offset of the hands shadows, default is 0 offset (since Plasma 5.16)
-    * Note: In the SVG, the Hand elements as well as their optional Shadow counterparts must be oriented in a direction as the one indicating the time 6:30:30. The relative position of the Hand elements as well as their optional Shadow counterparts with respect to the center of ClockFace does not matter.
-  * **/configuration-icons.svg**: it's a set of simple icons that are meant to be shortcuts for configuration actions. Must contain the following elements:
-    * `close`: a close icon
-    * `configure`: a setup action
-    * `move`
-    * `resize-vertical`: resize in the y axis
-    * `resize-horizontal`: resize in the x axis
-    * `size-diagonal-tl2br`: resize diagonal, usually an arrow from top-left to bottom-right
-    * `size-diagonal-tr2bl`: resize diagonal, usually an arrow from top-right to bottom-left
-    * `rotate`
-    * `help`
-    * `maximize`
-    * `unmaximize`
-    * `collapse`: set something in a minimized, collapsed status
-    * `restore`: restore from *collapse* status
-    * `status`: refers to a status of something, logging or system monitoring in general
-    * `retourn-to-source`: make detached extender items return to their owner applet
-    * `add` and `remove`: specular actions, adding and removing for instance an item from a list
-    * `delete`: the (potentially dangerous) action of deleting something
-  * **/containment-controls.svg**: handles for the control used to resize the panel.   The following elements are required.
-    * `maxslider` maximum size slider, south position
-    * `minslider` minimum size slider, south position
-    * `offsetslider` positioning slider, south position
-    * Each of the above elements must be present with `north`, `south`, `east` and `west` prefixes for each panel position.
-    * There are also four backgrounds (north, south, east and west orientations) for the ruler widget itself in the "Backgrounds format", since the width of the widget is 100% the elements of left and right (or north and bottom if vertical) are not needed
-  * **/dragger.svg**: meant to be a generic drag handle (not currently used but available). It needs to contain the same elements as other backgrounds, see the section about backgrounds above. In addition it needs the following element:
-    * `hint-preferred-icon-size`: the size icons within the drag handle should get. The vertical size of the dragger is also derived from this: this size hint + the dragger's margins.
-  * **/frame.svg** : a generic frame, used mostly for widget containers, to visually group widgets together. It must contain the following prefixes, for different 3d looks:
-    * `sunken`
-    * `plain`
-    * `raised`
-  * **/glowbar.svg** : a frame without a prefix, it represents a glow, it's used for instance in Plasma Desktop for the panel autohide unhide hint.
-  * **/line.svg** : a simple line use to separate items in layouts, contains `vertical-line` and `horizontal-line` elements
-  * **/lineedit.svg**: it's a framesvg, used to style line edits, spinboxes and other similar fields, it must have the following prefixes
-    * `base`: the background of the line edit
-    * `focus`: will be drawn outside base, when the line edit has input focus
-    * `hover`: will be drawn outside base, when the line edit is under the mouse
-  * **/listitem.svg**: used for "opened"/clicked notifications
-  * **/monitor.svg** : represents a screen, it's used in places such as the wallpaper config dialog. It contains a frame without prefixes and the following extra elements:
-    * `glass` : glass reflection effect over the screen
-    * `base` : a stand for the monitor
-  * **/notes.svg** : design of note stickers, with 10 different color variants:
-    * `[color]-notes` : colored note sticker with `[color]` one of: `white`, `black`, `red`, `orange`, `yellow`, `green`, `blue`, `pink`, `translucent`, `translucent-light`
-  * **/pager.svg** : graphic elements for the little screens of the pager, it must have 3 frames with the following prefixes:
-    * `normal` : all virtual desktops
-    * `active` : active virtual desktop
-    * `hover` : virtual desktop under mouse
-  * **/panel-background.svg**: the background image for panels.
-    * If you want to create different background for panels located at the top, bottom, left or right, then also create sets of background elements with the following prefixes: `north`, `south`, `west` and `east` respectively. For example the center element of the left positioned panel's background should be named `west-center`.
-    <!--*** When the panel is not 100% wide/tall the north, south etc. prefixes becomes *north-mini*, *south-mini* etc. . Please note that if KRunner <menuchoice>Positioning</menuchoice> is set to <menuchoice>Top edge of screen</menuchoice> (which is default), then Plasma treats it as not 100% wide north panel.-->
-    * All prefixes fallback to a no prefix version when not available
-    * If a prefix called `shadow` is available, it will be used as a drop shadow for the panel when compositing is available.
-    * If an element called `floating-center` is present, elements named `floating-hint-[direction]-margin` (where `direction` is one of `top`, `bottom`, `left` or `right`) set to a specific width and height can be used to specify the margins panels should have in floating mode.
-  * **/plasmoidheading.svg**: The header or footer of a widget/notification popup. It has 2 frames with the following prefixes:
-    * `header`: most widgets have the heading at the top
-    * `footer`: popups originating from a top panel usually
-  * **/plot-background.svg**: a background for plotter (graph) widgets, such as the plots in ksysguard
-  * **/scrollbar.svg** : the classical `elevator` scrollbar, must have the following elements : `arrow-up`, `mouseover-arrow-up`, `sunken-arrow-up`, same 3 elements for `arrow-left`, `arrow-right` and `arrow-bottom`. It can have an element called `hint-scrollbar-size` that says at what size the scrollbar should be rendered (width if vertical, height if horizontal). It must also have frames with the following prefixes:
-    * `slider`
-    * `mouseover-slider`
-    * `sunken-slider`
-    * `background-vertical`
-    * `background-horizontal`
-  * **/scrollwidget.svg**: used by Plasma::ScrollWidget, it has a single prefix
-    * `border`: a border used when the scrollbar is enabled
-  * **/slider.svg**: used to theme sliders, it must have the following elements:
-    * `vertical-slider-line`: the background for vertical sliders, it indicates how much the indicator can scroll
-    * `vertical-slider-handle`: the handle for vertical sliders
-    * `vertical-slider-focus`: background for the handle when it has input focus
-    * `vertical-slider-hover`: background for the handle when it is under the mouse
-    * `groove`: groove for the slider (since Plasma 4.8 replaces `*-slider-line`)
-    * `groove-highlight`: highlight part of the groove (since Plasma 4.8 replaces `*-slider-line`)
-    * `horizontal-slider-line`: the background for horizontal sliders
-    * `horizontal-slider-handle`: the handle for horizontal sliders
-    * `horizontal-slider-focus`: background for the handle when it has input focus
-    * `horizontal-slider-hover`: background for the handle when it is under the mouse
-  * **/tabbar.svg**: graphics elements for tabbars: contains 4 frames, each one for tabs in the possible orientations a tabbar can be relative to its contents, with the prefixes:
-    * `north`
-    * `west`
-    * `south`
-    * `east`
-  * **/tasks.svg**: task item backgrounds for tasks. See the section on backgrounds above for information on the required elements in this file.  The following element prefixes are required:
-    * `focus`: background of focused task item
-    * `hover`: background when the pointer hovers the task item. Focus and hover can have ticker borders that will be painted outside the task button, useful to make a glow effect.
-    * `attention`: background when tasks item is trying to get attention
-    * `normal`: background of normal, unfocused task item
-    * `minimized`: background for minimized tasks
-    * All the frames can be prefixed with `north-`, `west-`, `south-` or `east-` if the taskbar should have a different look at the 4 sides of the screen
-    * The svg should contain elements of all five prefixes, if a prefix is missing that element will be not be drawn.
-    * `panel-north`, `panel-south`, `panel-west`, `panel-east` : elements for the panel toolbox.
-  * **/toolbar.svg**: used in the ToolBar QML component, can be used in custom applications in a similar way, contains a single frame without prefix.
-  * **/tooltip.svg**: background for tooltips used for instance in the taskbar and with icons. See the section on backgrounds above for information on the required elements in this file.
-  * **/translucentbackground.svg**: a standard background image for plasmoids that for their nature are bigger and with not much text. In this case a translucent background looks better. It needs the same elements of background.svg in it. If this file is not present, the plasmoids that uses this will use background.svg instead.
-  * **/media-delegate.svg**: intended to be used as delegate for media types: it contains a single prefix: picture.
-  * **/viewitem.svg**: controls the background look of selections (results in KRunner, networks in network applet), it can have 4 elements of 9 parts each with prefix `normal`, `hover`, `selected`, `selected+hover`.
-
-## "opaque"/"solid"/"translucent" folders
-
-The folders `opaque/`, `solid/` and `translucent/` contain special versions of some of the theme elements that will be activated under certain conditions and preferred over the corresponding files listed above if present. Only elements that will be rendered as top level window backgrounds should be present in these folders, so the dialogs folder, plus the panel and tooltip backgrounds; the file hierarchy is the same as in the level above.
-
-### "opaque" folder
-
-Elements in this folder are used when compositing is disabled. Since top-level windows will be shaped according to the transparency of the SVG and window shapes don't support alpha-blending, if the SVG has rounded borders they should have a shape that doesn't require anti-aliasing, like the following example.
-
-![This is how a border of the plasma "opaque" background svgs should appear when they have a rounded border: since the window shape won't have antialiasing the outer contour must not have rounded lines.](No_composite_plasma_svg.jpg)
-
-### "solid" folder
-
-Elements in this folder will be used when compositing is available, but elements should not be rendered transparent. For example, if a panel is configured to use adaptive opacity and a maximized window is present, then an opaque version of the panel is used rather than a transparent version.
-
-### "translucent" folder
-
-Elements in this folder will be used when the the KWin *Background Contrast* effect is enabled. When it is possible to blur the background of the window, the graphics can be more transparent, keeping the window text readable.
-
-## "icons" folder
-
-In the folder `icons/`, SVG files that contain scalable icons for use with application status items (e.g. icons in the system tray) are contained.
-
-Some of the common icons:
-
-* `audio.svg`
-* `battery.svg`
-* `computer.svg`
-* `configure.svg`
-* `device.svg`
-* `input.svg`
-* `media.svg`
-* `network.svg`
-* `notification.svg`
-* `preferences.svg`
-* `start.svg`
-* `system.svg`
-* [More...](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/desktoptheme/breeze/icons)
-
-You cannot simply copy a svg from an icon theme in `/usr/share/icons/`. For icons in a Plasma Style, the icon loader takes the icon name (eg: `audio-volume-high`) and [removes everything after the first dash](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/core/iconitem.cpp#L162-193) (`-`) for the filename (eg: `audio.svg`). Inside `audio.svg`, must be a group with the `id="audio-volume-high"`.
-
-* Before: [`breeze-icons/icons/.../audio-volume-high.svg`](https://invent.kde.org/frameworks/breeze-icons/-/blame/master/icons/status/22/audio-volume-high.svg)
-* After: [`plasma-framework/desktoptheme/breeze/icons/audio.svg`](https://invent.kde.org/frameworks/plasma-framework/-/blame/master/src/desktoptheme/breeze/icons/audio.svg)
-
-### Theming Application Icons in the System Tray
-
-Applications that use a function called `setIconByName` can have their icon in the system tray themed. Applications can have more than one icon (for example Konversation flashes between two different icons to highlight when your username is mentioned and Kpackagekit changes it's icon depending on the status of it's upgrade / installs). Theming these icons requires firstly that an application has been coded to use `setIconByName`, and secondly that you call your SVG object by the same name (use `Ctrl+Shift-O` in Inkscape). Then you can just put your .svg in `share/plasma/desktoptheme/[themename]/icons`.
-
-The following is an attempt to list known icon names that may be themed by this method. Please add any other known icon names and the object ID here to help other people making themes:
-
-* Amarok
-  * filename: **amarok.svg**
-    * ID: **amarok**
-* audio (for kmix, veromix, a.o.)
-  * filename: **audio.svg**
-    * volume muted ID: **audio-volume-muted**
-    * volume low ID: **audio-volume-low**
-    * volume medium ID: **audio-volume-medium**
-    * volume high ID: **audio-volume-high**
-* battery
-  * filename: **battery.svg**
-    * battery (always shown object) ID: **Battery**
-    * on powerline ID: **AcAdapter**
-    * no battery found ID: **Unavailable**
-    * battery on 10% ID: **Fill10**
-    * battery on 20% ID: **Fill20**
-    * battery on 30% ID: **Fill30**
-    * […]
-    * battery on 90% ID: **Fill90**
-    * battery on 100% ID: **Fill100**
-* device (the device-notifier)
-  * filename: **device.svg**
-    * ID: **device-notifier**
-* input (mouse, keyboard, state of the lock keys...)
-  * filename: **input.svg**
-    * mouse battery ID: **input-mouse-battery**
-    * keyboard battery ID: **input-keyboard-battery**
-    * keyboard backlight level ID: **input-keyboard-brightness**
-    * Caps Lock ID: **input-caps-on** (used for both on and off)
-    * Num Lock ID: **input-num-on** (used for both on and off)
-* juk
-  * filename: **juk.svg**
-    * ID: **juk**
-* KGet
-  * filename: **kget.svg**
-    * ID: **kget**
-* Klipper
-  * filename: **klipper.svg**
-    * ID: **klipper**
-* Konversation
-  * filename: **konversation**
-    * ID: **konversation**
-  * filename: **konv_message.svg** (new incoming message)
-    * ID: **konv_message**
-* Kopete
-  * filename: **kopete.svg**
-    * offline ID: **kopete-offline**
-    * online ID: **kopete**
-    * other statuses are not supported atm
-* Korgac
-  * filename: **korgac.svg**
-    * ID: **korgac**
-* Ktorrent
-  * filename: **ktorrent.svg**
-    * ID: **ktorrent**
-* message-indicator
-  * filename: **message-indicator.svg**
-    * standard ID: **normal**
-    * new message ID: **new**
-* Nepomuk
-  * filename: **nepomuk.svg**
-    * ID: **nepomuk**
-* Network-management-plasmoid
-  * filename: **network.svg**
-    * wired online ID: **network-wired-activated**
-    * wired offline ID: **network-wired**
-    * wless offline ID: **network-wireless-0**
-    * wless on 20% ID: **network-wireless-20**
-    * wless on 25% ID: **network-wireless-25**
-    * wless on 40% ID: **network-wireless-40**
-    * wless on 50% ID: **network-wireless-50**
-    * wless on 60% ID: **network-wireless-60**
-    * wless on 75% ID: **network-wireless-75**
-    * wless on 80% ID: **network-wireless-80**
-    * wless on 100% ID: **network-wireless-100**
-    * mobile broadband on 0% ID: **network-mobile-0**
-    * mobile broadband on 20% ID: **network-mobile-20**
-    * mobile broadband on 40% ID: **network-mobile-40**
-    * mobile broadband on 60% ID: **network-mobile-60**
-    * mobile broadband on 80% ID: **network-mobile-80**
-    * mobile broadband on 100% ID: **network-mobile-100**
-    * mobile broadband with access technology on 0%  
-      ID: **network-mobile-0-[technology]**  
-      (The optional `[technology]` suffix can be: `gprs`, `edge`, `umts`, `hsdpa`, `hsupa`, `hspa`, `lte`)
-* Night color
-  * filename: **redshift.svg**
-    * on ID: **redshift-status-on**
-    * off ID: **redshift-status-off**
-* preferences (some apps like bluedevil, krandrtray, text-to-speech)
-  * filename: **preferences.svg**
-    * bluedevil generic bluetooth ID: **preferences-system-bluetooth**
-    * bluedevil online bluetooth ID: **preferences-system-bluetooth-activated**
-    * bluedevil offline ID: **preferences-system-bluetooth-inactive**
-    * text-to-speech ID: **preferences-desktop-text-to-speech**
-    * krandrtray ID: **preferences-desktop-display-randr**
-    * activity manager ID: **preferences-activities**
-* Printer applet
-  * filename: **printer.svg**
-    * ID: **printer**
-* Quassel IRC
-  * filename: **quassel.svg**
-    * quassel offline ID: **quassel-inactive**
-    * quassel online ID: **quassel**
-    * quassel new message ID: **quassel-message**
-* PackageKit updates
-  * filename: **update.svg**
-    * some security updates available ID: **update-high**
-    * some important updates available ID: **update-medium**
-    * some regular updates available ID: **update-low**
-    * no update available (or checking) ID: **update-none**
-* KWallet
-  * filename: **wallet.svg**
-    * open ID: **wallet-open**
-    * closed ID: **wallet-closed**
-
-### Use Icons From Icon Theme
-
-Deleting / not including an `audio.svg` will not have `audio-volume-high` fall back to your icon theme. Since all Plasma Styles fallback to the default Breeze Plasma Style, it will use `/usr/share/plasma/desktoptheme/default/icons/audio.svg` if `audio.svg` is missing in your Plasma Style. To have you Plasma Style use icons from the currently selected icon theme, you will need to add a near-empty `audio.svg` "text file" with:
-
-```xml
-<svg></svg>
-```
-You will need to
-
-* In Dolphin File Manager: Right Click > Create New > Text File
-* Filename: `audio.svg`
-* Right Click `audio.svg` > Open With > Kate [Text Editor]
-* Type: `<svg></svg>`
-* Save
-* Copy and paste `audio.svg` for all svg files in the default Breeze Plasma Style.  
-  <https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/desktoptheme/breeze/icons>
+By using [Plasma::Svg](docs:plasma;Plasma::Svg), changes to the theme are automatically picked up.
