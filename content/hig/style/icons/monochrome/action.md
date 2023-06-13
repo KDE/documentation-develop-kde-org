@@ -25,19 +25,9 @@ can indicate information about an action to a user.
 Use Shade Black as your icon's base--- this color is neutral and has the
 most contrast against a white background.
 {{< /do >}}
-{{< dont src="/hig/action-colour-do.png" >}}
+{{< dont src="/hig/action-colour-dont.png" >}}
 Don’t use a bright color for your icon’s base—this distracts the user
 without adding extra information to your icon.
-{{< /dont >}}
-{{< /compare >}}
-
-{{< compare >}}
-{{< do src="/hig/action-colour-dont.png" >}}
-Don't use a bright color for your icon's base---this distracts the user
-without adding extra information to your icon.
-{{< /do >}}
-{{< dont src="/hig/action-colour-destructive-do.png" >}}
-Use red to indicate destructive actions.
 {{< /dont >}}
 {{< /compare >}}
 
