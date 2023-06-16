@@ -62,6 +62,7 @@ import QtQuick 2.5
 import QtQuick.Controls 2.5
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import org.kde.ksvg 1.0 as KSvg
 
 Button {
     id: configIcon
@@ -79,7 +80,7 @@ Button {
 
     onPressed: iconMenu.opened ? iconMenu.close() : iconMenu.open()
 
-    PlasmaCore.FrameSvgItem {
+    KSvg.FrameSvgItem {
         id: previewFrame
         anchors.centerIn: parent
         imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
