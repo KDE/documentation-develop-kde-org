@@ -105,5 +105,59 @@ PlasmoidItem {
 }
 ```
 
+### Components to replace with others of same functionality
+
+#### Things moved to Kirigami
+
+The following things have been replaced by their Kirigami counterparts:
+
+| Plasma 5                                      | Plasma 6                               |
+|-----------------------------------------------|----------------------------------------|
+| PlasmaExtras.Heading                          | Kirigami.Heading                       |
+| PlasmaCore.Theme.smallestFont                 | Kirigami.Theme.smallFont               |
+| PlasmaCore.Theme.NormalColorGroup             | Kirigami.Theme.Window                  |
+| PlasmaCore.Theme.*anything*                   | Kirigami.Theme.*the same thing*        |
+| PlasmaCore.ColorScope.colorGroup              | Kirigami.Theme.colorSet                |
+| PlasmaCore.ColorScope.inherit                 | Kirigami.Theme.inherit                 |
+| PlasmaCore.Units.*anything*                   | Kirigami.Units.*the same thing*        |
+| PlasmaCore.Units.largeSpacing                 | Kirigami.Units.gridUnit                |
+| PlasmaCore.Units.devicePixelRatio             | 1                                      |
+| PlasmaCore.Theme.mSize(font).height           | Kirigami.Units.gridUnit                |
+| PlasmaCore.Units.roundtoIconSize(font height) | Kirigami.Units.iconSizes.sizeForLabels |
+PlasmaCore.Units.roundtoIconSize(value)         | Kirigami.Units.roundedIconSize(value)  |
+
+Note: remember to add ``import org.kde.kirigami 2.20 as Kirigami`` in
+files that don't have it yet
+
+#### New KSvg framework
+
+Everything regarding SVG theming has moved from Plasma Framework to a new framework called KSvg.
+The API is compatible, but the import needs to be changed to:
+```import org.kde.ksvg 1.0 as KSvg```
+
+| Plasma 5                | Plasma 6          |
+|-------------------------|-------------------|
+| PlasmaCore.Svg          | KSvg.Svg          |
+| PlasmaCore.SvgItem      | KSvg.SvgItem      |
+| PlasmaCore.FrameSvgItem | KSvg.FrameSvgItem |
+
+Also, even if the old syntax is still compatible, it's recommended to change:
+
+```qml
+KSvg.SvgItem {
+    svg: KSvg.Svg {
+        imagePath: "widgets/background"
+    }
+}
+```
+
+To the more compact form:
+
+```qml
+KSvg.SvgItem {
+    imagePath: "widgets/background"
+}
+```
+
 
 {{< readfile file="/content/docs/plasma/widget/snippet/plasma-doc-style.html" >}}
