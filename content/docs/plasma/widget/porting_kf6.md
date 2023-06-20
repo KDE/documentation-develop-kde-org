@@ -113,18 +113,18 @@ The following things have been replaced by their Kirigami counterparts:
 
 | Plasma 5                                      | Plasma 6                                         |
 |-----------------------------------------------|--------------------------------------------------|
-| PlasmaExtras.Heading                          | Kirigami.Heading                                 |
-| PlasmaCore.Theme.smallestFont                 | Kirigami.Theme.smallFont                         |
-| PlasmaCore.Theme.NormalColorGroup             | Kirigami.Theme.Window                            |
-| PlasmaCore.Theme.*anything*                   | Kirigami.Theme.*the same thing*                  |
 | PlasmaCore.ColorScope.colorGroup              | Kirigami.Theme.colorSet                          |
 | PlasmaCore.ColorScope.inherit                 | Kirigami.Theme.inherit                           |
-| PlasmaCore.Units.*anything*                   | Kirigami.Units.*the same thing*                  |
+| PlasmaCore.Theme.smallestFont                 | Kirigami.Theme.smallFont                         |
+| PlasmaCore.Theme.NormalColorGroup             | Kirigami.Theme.Window                            |
+| PlasmaCore.Theme.*anything else*              | Kirigami.Theme.*the same thing*                  |
+| PlasmaCore.Theme.mSize(font).height           | Kirigami.Units.gridUnit                          |
 | PlasmaCore.Units.largeSpacing                 | Kirigami.Units.gridUnit                          |
 | PlasmaCore.Units.devicePixelRatio             | 1                                                |
-| PlasmaCore.Theme.mSize(font).height           | Kirigami.Units.gridUnit                          |
 | PlasmaCore.Units.roundtoIconSize(font height) | Kirigami.Units.iconSizes.sizeForLabels           |
 | PlasmaCore.Units.roundtoIconSize(value)       | Kirigami.Units.iconSizes.roundedIconSize(value)  |
+| PlasmaCore.Units.*anything else*              | Kirigami.Units.*the same thing*                  |
+| PlasmaExtras.Heading                          | Kirigami.Heading                                 |
 
 Note: remember to add ``import org.kde.kirigami 2.20 as Kirigami`` in
 files that don't have it yet
