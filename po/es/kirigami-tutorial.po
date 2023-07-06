@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:40+0000\n"
-"PO-Revision-Date: 2023-03-26 19:47+0200\n"
+"PO-Revision-Date: 2023-07-05 19:30+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.80\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -168,6 +168,10 @@ msgid ""
 "qmlRegisterSingletonType). This is used to allow us to import the C++ code "
 "as a module in our `main.qml` with `import org.kde.example 1.0`."
 msgstr ""
+"A continuación creamos un [qmlRegisterSingletonType()](docs:qtqml;"
+"QQmlEngine::qmlRegisterSingletonType). Esto se usa para permitirnos importar "
+"el código C++ como un módulo en nuestro `main.qml` con `import org.kde."
+"example 1.0`."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:24
 msgid ""
@@ -178,6 +182,13 @@ msgid ""
 "latter's case, we use a [lambda](https://en.cppreference.com/w/cpp/language/"
 "lambda) to instantiate the `aboutData` of our application in place."
 msgstr ""
+"Su primer argumento es el URI que se usará para la importación; el segundo y "
+"tercer argumentos son, respectivamente, las versiones mayor y menor; el "
+"cuarto es el nombre del tipo, el nombre que llamaremos para acceder a "
+"nuestro tipo `About`; y el último es una referencia al objeto de C++ que se "
+"expone a QML. En el caso de este último, usamos una [lambda](https://en."
+"cppreference.com/w/cpp/language/lambda) para instanciar el `aboutData` de "
+"nuestra aplicación en el mismo lugar."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:26
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:62
@@ -406,19 +417,14 @@ msgstr ""
 "a la interfaz de usuario y al motor del cambio."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:96
-#, fuzzy
-#| msgid ""
-#| "To display the text, in `main.qml` add a heading displaying it right "
-#| "under the text property of the `Kirigami.Page` element that is already "
-#| "contained in the template."
 msgid ""
 "To display the text, add a heading to `main.qml` under the `title` property "
 "of the [Kirigami.Page](docs:kirigami2;Page) element already contained in the "
 "template."
 msgstr ""
-"Para mostrar el texto, añada un encabezado para mostrarlo en `main.qml` "
-"justo debajo de la propiedad de texto del elemento `Kirigami.Page` que ya "
-"contiene la plantilla."
+"Para mostrar el texto, añada un encabezado a `main.qml` bajo la propiedad "
+"`title` del elemento [Kirigami.Page](docs:kirigami2;Page) que ya contiene la "
+"plantilla."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:98
 msgid "The resulting code in that part of the file should look like this:"
@@ -534,22 +540,16 @@ msgstr ""
 "de píxeles."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp.md:25
-#, fuzzy
-#| msgid ""
-#| "We then create a [`QApplication`](https://doc.qt.io/qt-5/qapplication."
-#| "html#QApplication) instance which we call `app`. We pass `argc` and "
-#| "`argv` to the constructor here, letting Qt parse and use arguments meant "
-#| "to affect Qt."
 msgid ""
 "We then create a [QApplication](docs:qtwidgets;QApplication) instance which "
 "we call `app`. We then pass [argc and argv](https://www.learncpp.com/cpp-"
 "tutorial/command-line-arguments/) to the constructor, letting Qt parse and "
 "use arguments."
 msgstr ""
-"A continuación creamos una instancia de [`QApplication`](https://doc.qt.io/"
-"qt-5/qapplication.html#QApplication) que llamaremos `app`. Aquí pasamos "
-"`argc` y `argv` al constructor, dejando que Qt analice y use los argumentos "
-"que pueden afectar a Qt."
+"A continuación creamos una instancia de una [QApplication](docs:qtwidgets;"
+"QApplication) que llamaremos `app`. Aquí pasamos [argc y argv](https://www."
+"learncpp.com/cpp-tutorial/command-line-arguments/) al constructor, dejando "
+"que Qt analice y use los argumentos."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp.md:27
 #, fuzzy
