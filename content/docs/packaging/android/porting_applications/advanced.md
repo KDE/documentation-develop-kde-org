@@ -22,7 +22,7 @@ to the main function and including `QQuickStyle`.
 
 ## Not using Qt Widgets
 
-Even if the app does not qt widgets for its UI, it may use a `QApplication` internally, since that enables a few things on the desktop.
+Even if the app does not use qt widgets for its UI, it may use a `QApplication` internally, since that enables a few things on the desktop.
 On android, this not necessary and we should make sure not to link against Qt Widgets, since that would increase the apk's size.
 
 The first step towards not using Qt Widgets is thus to replace the `QApplication` with a `QGuiApplication`, but only on android. This can be done using `#ifdef` and replacing the old variable with
