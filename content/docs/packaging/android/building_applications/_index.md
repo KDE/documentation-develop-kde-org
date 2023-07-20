@@ -15,7 +15,7 @@ This documentation only applies to applications that have a Craft blueprint in t
 The container can be initialized with
 ```bash
 mkdir craft-kde-android
-docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot kdeorg/android-qt515 bash
+docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt515 bash
 python3 -c "$(curl https://raw.githubusercontent.com/KDE/craft/master/setup/CraftBootstrap.py)" --prefix ~/CraftRoot
 ```
 
