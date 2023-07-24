@@ -159,5 +159,51 @@ KSvg.SvgItem {
 }
 ```
 
+### New Actions API
+
+Plasmoids can add contextual actions, which appear in their headers (when used in the System Tray) and context menus.
+
+In Plasma 5 these actions were defined using an imperative API in ``Component.onCompleted:``, like so:
+
+```qml
+Component.onCompleted: {
+    Plasmoid.clearActions()
+    Plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"),
+                        Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward");
+    Plasmoid.action("previous").enabled = Qt.binding(() => root.canGoPrevious)
+    Plasmoid.action("previous").visible = Qt.binding(() => root.canControl)
+    Plasmoid.action("previous").priority = Plasmoid.LowPriorityAction
+    ...
+}
+
+// Handling of actions then had to be done by adding "magic" functions:
+
+function action_previous() {
+  serviceOp(mpris2Source.current, "Previous");
+}
+```
+
+This has been replaced with a purely declarative API, in the form of a new QML type
+called ``PlasmaCore.Action`` and a ``contextualActions:`` list property on the ``Plasmoid``
+item, where all the actions are declared with standard array syntax. The Plasma 6 version
+of the above example can be rewritten as follows:
+
+```qml
+Plasmoid.contextualActions: [
+    PlasmaCore.Action {
+        text: i18nc("Play previous track", "Previous Track")
+        icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward"
+        priority: Plasmoid.LowPriorityAction
+        visible: root.canControl
+        enabled: root.canGoPrevious
+        onTriggered: serviceOp(mpris2Source.current, "Previous")
+    },
+    ...
+]
+```
+
+This way, both property bindings and the code to be executed when the action is
+activated are all defined inline in a declarative way inside the ``PlasmaCore.Action``
+definition.
 
 {{< readfile file="/content/docs/plasma/widget/snippet/plasma-doc-style.html" >}}
