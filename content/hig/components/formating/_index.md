@@ -1,3 +1,3 @@
 ---
-title: Formating
+title: Formatting
 ---

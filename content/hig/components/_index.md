@@ -4,8 +4,8 @@ weight: 4
 layout: home
 recursive: true
 groups:
-  - name: "Formating"
-    key: formating
+  - name: "Formatting"
+    key: formatting
   - name: "Navigation"
     key: navigation
   - name: "User Assistance"

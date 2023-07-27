@@ -1,6 +1,6 @@
 ---
 title: Group Box
-group: formating
+group: formatting
 ---
 
 Purpose
