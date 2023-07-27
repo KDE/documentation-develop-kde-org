@@ -1,12 +1,12 @@
 ...
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents
 ...
-PlasmaExtras.Heading {
+Kirigami.Heading {
     level: 1
     text: "Header 1"
 }
-PlasmaExtras.Heading {
+Kirigami.Heading {
     level: 4
     text: "Header 4"
 }

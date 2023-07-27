@@ -107,9 +107,10 @@ PlasmoidItem {
 
 ### Components to replace with others of same functionality
 
-#### Things moved to Kirigami
+#### Port to Kirigami or upstream QQC2
 
-The following things have been replaced by their Kirigami counterparts:
+The following Plasma components have been replaced by their Kirigami or upstream
+QtQuickControls 2 counterparts:
 
 | Plasma 5                                      | Plasma 6                                         |
 |-----------------------------------------------|--------------------------------------------------|
@@ -125,11 +126,14 @@ The following things have been replaced by their Kirigami counterparts:
 | PlasmaCore.Units.roundtoIconSize(value)       | Kirigami.Units.iconSizes.roundedIconSize(value)  |
 | PlasmaCore.Units.*anything else*              | Kirigami.Units.*the same thing*                  |
 | PlasmaExtras.Heading                          | Kirigami.Heading                                 |
+| PlasmaExtras.DescriptiveLabel                 | QtQuickControls2.Label with ``opacity: 0.7``     |
+| PlasmaComponents3.Label                       | QtQuickControls2.Label                           |
+
 
 Note: remember to add ``import org.kde.kirigami 2.20 as Kirigami`` in
 files that don't have it yet
 
-#### New KSvg framework
+#### Port to KSvg
 
 Everything regarding SVG theming has moved from Plasma Framework to a new framework called KSvg.
 The API is compatible, but the import needs to be changed to:
