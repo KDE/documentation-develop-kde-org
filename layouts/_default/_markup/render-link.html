@@ -17,10 +17,12 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     {{ $prefix := (index $dataMap $module).default_prefix }}
 
     {{ $found := 0 }}
+    {{ $variations := slice (printf "%s%s" $prefix $link) $link }}
     {{/* Search for complete name first */}}
     {{ range $data.tagfile.compound }}
-      {{ if (or (eq (index .name "$") (printf "%s%s" $prefix $link)) (eq (index .name "$") $link)) }}
-        {{ $filename = (index .filename "$") }}
+      {{ $name := index .name "$" }}
+      {{ if in $variations $name }}
+        {{ $filename = index .filename "$" }}
         {{ $found = 1 }}
       {{ end }}
     {{ end }}
