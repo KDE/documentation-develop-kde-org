@@ -9836,84 +9836,6 @@
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::plasma::extras::ListItem"
-        },
-        "filename": {
-          "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-        },
-        "base": {
-          "$": "org::kde::kirigami::AbstractListItem"
-        },
-        "member": [
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "containsMouse"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "a017babb290e59e10c05fa627ec41bb9e"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "alias"
-            },
-            "name": {
-              "$": "content"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "aef29658b879d0f5b362175e38217e788"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "sectionDelegate"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "a742fd2d5fd3de682775a0a1f12abbb1f"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "separatorVisible"
-            },
-            "anchorfile": {
-              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
-            },
-            "anchor": {
-              "$": "a2711b94fdda53578539d55b7b6455a60"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
           "$": "org::kde::plasma::components::ListItem"
         },
         "filename": {
@@ -10060,11 +9982,80 @@
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::plasma::components::Menu"
+          "$": "org::kde::plasma::extras::ListItem"
         },
         "filename": {
-          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1Menu.html"
-        }
+          "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+        },
+        "base": {
+          "$": "org::kde::kirigami::AbstractListItem"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "containsMouse"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "a017babb290e59e10c05fa627ec41bb9e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "alias"
+            },
+            "name": {
+              "$": "content"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "aef29658b879d0f5b362175e38217e788"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "sectionDelegate"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "a742fd2d5fd3de682775a0a1f12abbb1f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "separatorVisible"
+            },
+            "anchorfile": {
+              "$": "classorg_1_1kde_1_1plasma_1_1extras_1_1ListItem.html"
+            },
+            "anchor": {
+              "$": "a2711b94fdda53578539d55b7b6455a60"
+            },
+            "arglist": {}
+          }
+        ]
       },
       {
         "@kind": "class",
@@ -10073,6 +10064,15 @@
         },
         "filename": {
           "$": "classMenu.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org::kde::plasma::components::Menu"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1Menu.html"
         }
       },
       {
@@ -13420,19 +13420,19 @@
       {
         "@kind": "class",
         "name": {
-          "$": "RoundShadow"
+          "$": "QtQuick::Controls::Styles::Plasma::RoundShadow"
         },
         "filename": {
-          "$": "classRoundShadow.html"
+          "$": "classQtQuick_1_1Controls_1_1Styles_1_1Plasma_1_1RoundShadow.html"
         }
       },
       {
         "@kind": "class",
         "name": {
-          "$": "QtQuick::Controls::Styles::Plasma::RoundShadow"
+          "$": "RoundShadow"
         },
         "filename": {
-          "$": "classQtQuick_1_1Controls_1_1Styles_1_1Plasma_1_1RoundShadow.html"
+          "$": "classRoundShadow.html"
         }
       },
       {
@@ -17377,6 +17377,15 @@
       {
         "@kind": "class",
         "name": {
+          "$": "org::kde::plasma::components::ToolTip"
+        },
+        "filename": {
+          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1ToolTip.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "ToolTip"
         },
         "filename": {
@@ -17653,15 +17662,6 @@
             }
           }
         ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org::kde::plasma::components::ToolTip"
-        },
-        "filename": {
-          "$": "classorg_1_1kde_1_1plasma_1_1components_1_1ToolTip.html"
-        }
       },
       {
         "@kind": "class",

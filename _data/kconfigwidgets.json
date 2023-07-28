@@ -218,6 +218,42 @@
             }
           },
           {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setNeedsSave"
+            },
+            "anchorfile": {
+              "$": "classKCModule.html"
+            },
+            "anchor": {
+              "$": "acf7e340a450dcde980e058b320fd9e36"
+            },
+            "arglist": {
+              "$": "(bool needsSave)"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "QWidget *"
+            },
+            "name": {
+              "$": "widget"
+            },
+            "anchorfile": {
+              "$": "classKCModule.html"
+            },
+            "anchor": {
+              "$": "a0b008eedc5ee9a3886248e204972f1e8"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
             "@kind": "function",
             "type": {},
             "name": {
@@ -231,6 +267,22 @@
             },
             "arglist": {
               "$": "(const KAboutData *aboutData, QWidget *parent=nullptr, const QVariantList &args=QVariantList())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KCModule"
+            },
+            "anchorfile": {
+              "$": "classKCModule.html"
+            },
+            "anchor": {
+              "$": "ad496145e336d1d628a1450aa94cd887c"
+            },
+            "arglist": {
+              "$": "(QObject *parent, const KPluginMetaData &={}, const QVariantList &args=QVariantList())"
             }
           },
           {
@@ -2312,6 +2364,24 @@
             },
             "arglist": {
               "$": "(const QModelIndex &index)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "activeSchemeId"
+            },
+            "anchorfile": {
+              "$": "classKColorSchemeManager.html"
+            },
+            "anchor": {
+              "$": "a3804b255705377e4dc25b50c49837254"
+            },
+            "arglist": {
+              "$": "() const"
             }
           },
           {
@@ -4765,6 +4835,33 @@
           "$": "classKViewStateMaintainer.html"
         },
         "templarg": {}
+      },
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "KColorSchemeMenu"
+        },
+        "filename": {
+          "$": "namespaceKColorSchemeMenu.html"
+        },
+        "member": {
+          "@kind": "function",
+          "type": {
+            "$": "KActionMenu *"
+          },
+          "name": {
+            "$": "createMenu"
+          },
+          "anchorfile": {
+            "$": "namespaceKColorSchemeMenu.html"
+          },
+          "anchor": {
+            "$": "a799a5eedbf83f06a381fa58e09987cef"
+          },
+          "arglist": {
+            "$": "(KColorSchemeManager *manager, QObject *parent=nullptr)"
+          }
+        }
       },
       {
         "@kind": "namespace",

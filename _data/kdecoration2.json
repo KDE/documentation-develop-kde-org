@@ -105,23 +105,7 @@
               "$": "classKDecoration2_1_1DecoratedClient.html"
             },
             "anchor": {
-              "$": "a13cfd4455588215c0a7669e4702c369a"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "desktop"
-            },
-            "anchorfile": {
-              "$": "classKDecoration2_1_1DecoratedClient.html"
-            },
-            "anchor": {
-              "$": "ae6ba4d28bdb9a9173ff9bcdf768d592a"
+              "$": "a3d0c9f978feb535066c50f7fb3843733"
             },
             "arglist": {}
           },
@@ -655,7 +639,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QWeakPointer< DecoratedClient >"
+              "$": "DecoratedClient *"
             },
             "name": {
               "$": "client"
@@ -664,7 +648,7 @@
               "$": "classKDecoration2_1_1Decoration.html"
             },
             "anchor": {
-              "$": "af85543aa9efafb4fb0abe08d1735c6b5"
+              "$": "a633bd6661434981164f2e8af870b6aff"
             },
             "arglist": {
               "$": "() const"
@@ -719,16 +703,16 @@
               "$": "classKDecoration2_1_1Decoration.html"
             },
             "anchor": {
-              "$": "ab0cd57b8d0e8cfb0e0a5307ad8bcdf07"
+              "$": "a1263ea11691d74e63ae89e08e3f20285"
             },
             "arglist": {
-              "$": "(const QSharedPointer< DecorationSettings > &settings)"
+              "$": "(const std::shared_ptr< DecorationSettings > &settings)"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "QSharedPointer< DecorationSettings >"
+              "$": "std::shared_ptr< DecorationSettings >"
             },
             "name": {
               "$": "settings"
@@ -737,7 +721,7 @@
               "$": "classKDecoration2_1_1Decoration.html"
             },
             "anchor": {
-              "$": "aba083dab40d0bf627d580ca4344b8947"
+              "$": "ad361fd7c5ce4da32f06812ac3cc92271"
             },
             "arglist": {
               "$": "() const"
@@ -746,7 +730,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QSharedPointer< DecorationShadow >"
+              "$": "std::shared_ptr< DecorationShadow >"
             },
             "name": {
               "$": "shadow"
@@ -755,7 +739,7 @@
               "$": "classKDecoration2_1_1Decoration.html"
             },
             "anchor": {
-              "$": "ab43cc711f2d3625cb823d9119b558094"
+              "$": "a0f85706b885b93733179a13261f2d963"
             },
             "arglist": {
               "$": "() const"
@@ -1086,16 +1070,16 @@
               "$": "classKDecoration2_1_1DecorationButtonGroup.html"
             },
             "anchor": {
-              "$": "a1c896fe1d7b33facc5024ed32987de51"
+              "$": "ad1331f240bc7c4b5ad41cbaf93ab7fec"
             },
             "arglist": {
-              "$": "(const QPointer< DecorationButton > &button)"
+              "$": "(DecorationButton *button)"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< QPointer< DecorationButton > >"
+              "$": "QVector< DecorationButton * >"
             },
             "name": {
               "$": "buttons"
@@ -1104,7 +1088,7 @@
               "$": "classKDecoration2_1_1DecorationButtonGroup.html"
             },
             "anchor": {
-              "$": "ae53a7e3438b9f07c5d1e7c763d909d53"
+              "$": "aade1fca6b836b6ccc1854de62be0f0fd"
             },
             "arglist": {
               "$": "() const"
@@ -1159,10 +1143,10 @@
               "$": "classKDecoration2_1_1DecorationButtonGroup.html"
             },
             "anchor": {
-              "$": "a2d176f95f0c50afcd5567e1a91b3c269"
+              "$": "adb281751caf09279d2ad3fdd443fd40f"
             },
             "arglist": {
-              "$": "(const QPointer< DecorationButton > &button)"
+              "$": "(DecorationButton *button)"
             }
           },
           {
@@ -1437,16 +1421,16 @@
           {
             "@kind": "function",
             "type": {
-              "$": "bool"
+              "$": "QString"
             },
             "name": {
-              "$": "hasConfiguration"
+              "$": "configurationName"
             },
             "anchorfile": {
               "$": "classKDecoration2_1_1DecorationThemeMetaData.html"
             },
             "anchor": {
-              "$": "a003bf4735bb43e5fc6791d9073cbd114"
+              "$": "ab11b11246d961c819e42cd0441591f8d"
             },
             "arglist": {
               "$": "() const"

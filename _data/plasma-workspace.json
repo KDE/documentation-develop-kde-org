@@ -2157,6 +2157,24 @@
               "$": "Q_INVOKABLE QString"
             },
             "name": {
+              "$": "activityIcon"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1ActivityInfo.html"
+            },
+            "anchor": {
+              "$": "ab003aa47d8b8159f50698a4424b14c6b"
+            },
+            "arglist": {
+              "$": "(const QString &id)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE QString"
+            },
+            "name": {
               "$": "activityName"
             },
             "anchorfile": {
@@ -6265,6 +6283,24 @@
           {
             "@kind": "function",
             "type": {
+              "$": "RegionFilterMode::Mode"
+            },
+            "name": {
+              "$": "filterByRegion"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TaskFilterProxyModel.html"
+            },
+            "anchor": {
+              "$": "aa35dadfb067b52d562c05fbe28848f2e"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "bool"
             },
             "name": {
@@ -6412,6 +6448,24 @@
               "$": "QRect"
             },
             "name": {
+              "$": "regionGeometry"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TaskFilterProxyModel.html"
+            },
+            "anchor": {
+              "$": "a6adc21bb7417301c8d2eee2e4e7953f0"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QRect"
+            },
+            "name": {
               "$": "screenGeometry"
             },
             "anchorfile": {
@@ -6476,6 +6530,24 @@
             },
             "arglist": {
               "$": "(bool filter)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setFilterByRegion"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TaskFilterProxyModel.html"
+            },
+            "anchor": {
+              "$": "ac72d2cb630a970d68d10b0431de71bfe"
+            },
+            "arglist": {
+              "$": "(RegionFilterMode::Mode mode)"
             }
           },
           {
@@ -6620,6 +6692,24 @@
             },
             "arglist": {
               "$": "(bool filter)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setRegionGeometry"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TaskFilterProxyModel.html"
+            },
+            "anchor": {
+              "$": "a7ec255a2f1365c2748c3e8621013f48c"
+            },
+            "arglist": {
+              "$": "(const QRect &geometry)"
             }
           },
           {
@@ -7532,6 +7622,24 @@
           {
             "@kind": "function",
             "type": {
+              "$": "RegionFilterMode::Mode"
+            },
+            "name": {
+              "$": "filterByRegion"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TasksModel.html"
+            },
+            "anchor": {
+              "$": "ac706b0c14e46c946fdce23cbd89ff4dc"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "bool"
             },
             "name": {
@@ -7869,6 +7977,24 @@
             },
             "arglist": {
               "$": "(int row, int newPos, const QModelIndex &parent=QModelIndex())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QRect"
+            },
+            "name": {
+              "$": "regionGeometry"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TasksModel.html"
+            },
+            "anchor": {
+              "$": "aacea3a0ec4c85adf489d26b08b88b25c"
+            },
+            "arglist": {
+              "$": "() const"
             }
           },
           {
@@ -8327,6 +8453,24 @@
               "$": "void"
             },
             "name": {
+              "$": "setFilterByRegion"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TasksModel.html"
+            },
+            "anchor": {
+              "$": "a31cd08f1f69130211193fc31f4988e24"
+            },
+            "arglist": {
+              "$": "(RegionFilterMode::Mode mode)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "setFilterByScreen"
             },
             "anchorfile": {
@@ -8561,6 +8705,24 @@
               "$": "void"
             },
             "name": {
+              "$": "setRegionGeometry"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TasksModel.html"
+            },
+            "anchor": {
+              "$": "a3442271a1cd81496ce6c95bdece81c15"
+            },
+            "arglist": {
+              "$": "(const QRect &geometry)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "setScreenGeometry"
             },
             "anchorfile": {
@@ -8712,6 +8874,44 @@
             },
             "anchor": {
               "$": "a09dab01d14137b4a20521580efdc1c77"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "std::shared_ptr< ActivityInfo >"
+            },
+            "name": {
+              "$": "activityInfo"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TasksModel.html"
+            },
+            "anchor": {
+              "$": "a5cd5362ccefda5a019ba9110ab5f183b"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "std::shared_ptr< VirtualDesktopInfo >"
+            },
+            "name": {
+              "$": "virtualDesktopInfo"
+            },
+            "anchorfile": {
+              "$": "classTaskManager_1_1TasksModel.html"
+            },
+            "anchor": {
+              "$": "a734f14155f8f59f02c2327fbcf07e7fa"
             },
             "arglist": {
               "$": "() const"

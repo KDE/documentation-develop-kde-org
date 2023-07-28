@@ -1609,7 +1609,9 @@
           {
             "@kind": "function",
             "@protection": "protected",
-            "type": {},
+            "type": {
+              "$": "KIOCORE_NO_EXPORT"
+            },
             "name": {
               "$": "BatchRenameJob"
             },
@@ -30221,6 +30223,24 @@
               "$": "void"
             },
             "name": {
+              "$": "setSupportedSchemes"
+            },
+            "anchorfile": {
+              "$": "classKUrlNavigator.html"
+            },
+            "anchor": {
+              "$": "affe8396ebb8798764f56893a2ca3a2dc"
+            },
+            "arglist": {
+              "$": "(const QStringList &schemes)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "setUrlEditable"
             },
             "anchorfile": {
@@ -30282,6 +30302,24 @@
             },
             "anchor": {
               "$": "a74752c8ace9d4b69b45bacc5eb83db58"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "supportedSchemes"
+            },
+            "anchorfile": {
+              "$": "classKUrlNavigator.html"
+            },
+            "anchor": {
+              "$": "a5e35eef62f6cdce2155b61d1794fe801"
             },
             "arglist": {
               "$": "() const"
@@ -30377,6 +30415,38 @@
             },
             "anchor": {
               "$": "aad92ed5ed050bfb8a34127183aecb176"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "filter"
+            },
+            "anchorfile": {
+              "$": "classKUrlRequester.html"
+            },
+            "anchor": {
+              "$": "adc2eee724f53a7f2a067a6a2f1b03d84"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "nameFilters"
+            },
+            "anchorfile": {
+              "$": "classKUrlRequester.html"
+            },
+            "anchor": {
+              "$": "a41066a45cdf7ddb523d309611b371b86"
             },
             "arglist": {}
           },
@@ -30862,6 +30932,24 @@
           {
             "@kind": "function",
             "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "nameFilters"
+            },
+            "anchorfile": {
+              "$": "classKUrlRequester.html"
+            },
+            "anchor": {
+              "$": "a17a4682bcee5b7a5b43f8ec7ec6bdf60"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "QString"
             },
             "name": {
@@ -30983,6 +31071,42 @@
             },
             "arglist": {
               "$": "(KFile::Modes mode)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setNameFilter"
+            },
+            "anchorfile": {
+              "$": "classKUrlRequester.html"
+            },
+            "anchor": {
+              "$": "a3c982575e36b2000621d02cd4da05c20"
+            },
+            "arglist": {
+              "$": "(const QString &filter)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setNameFilters"
+            },
+            "anchorfile": {
+              "$": "classKUrlRequester.html"
+            },
+            "anchor": {
+              "$": "aefd0f36c90a583e7aeed7951308cea06"
+            },
+            "arglist": {
+              "$": "(const QStringList &filters)"
             }
           },
           {
@@ -34211,7 +34335,9 @@
           {
             "@kind": "function",
             "@protection": "protected",
-            "type": {},
+            "type": {
+              "$": "KIOCORE_NO_EXPORT"
+            },
             "name": {
               "$": "SimpleJob"
             },

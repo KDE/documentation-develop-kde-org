@@ -5596,6 +5596,7 @@
         },
         "member": {
           "@kind": "function",
+          "@protection": "protected",
           "type": {},
           "name": {
             "$": "CacheCleaner"
@@ -7909,6 +7910,92 @@
             },
             "arglist": {
               "$": "()"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "Akonadi::CollectionAnnotationsAttribute"
+        },
+        "filename": {
+          "$": "classAkonadi_1_1CollectionAnnotationsAttribute.html"
+        },
+        "base": {
+          "$": "Akonadi::Attribute"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "CollectionAnnotationsAttribute *"
+            },
+            "name": {
+              "$": "clone"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1CollectionAnnotationsAttribute.html"
+            },
+            "anchor": {
+              "$": "a89c1d672b1567387914ba3cd4d42e9aa"
+            },
+            "arglist": {
+              "$": "() const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "deserialize"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1CollectionAnnotationsAttribute.html"
+            },
+            "anchor": {
+              "$": "a21da196ab0228b99c63fb1fcb6671fc5"
+            },
+            "arglist": {
+              "$": "(const QByteArray &data) override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QByteArray"
+            },
+            "name": {
+              "$": "serialized"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1CollectionAnnotationsAttribute.html"
+            },
+            "anchor": {
+              "$": "ad5fea4073059fa3c88892c835d25e6a0"
+            },
+            "arglist": {
+              "$": "() const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QByteArray"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1CollectionAnnotationsAttribute.html"
+            },
+            "anchor": {
+              "$": "ae57009d015f2e1a03b5df4b859bc9dd8"
+            },
+            "arglist": {
+              "$": "() const override"
             }
           }
         ]
@@ -12153,6 +12240,23 @@
             "arglist": {
               "$": "() const"
             }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "Connection"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1Connection.html"
+            },
+            "anchor": {
+              "$": "aa2535499ef8736653b5b545432099cc7"
+            },
+            "arglist": {
+              "$": "(quintptr socketDescriptor, AkonadiServer &akonadi)"
+            }
           }
         ]
       },
@@ -12761,25 +12865,6 @@
             },
             "anchor": {
               "$": "a3200e6f6261b7771f2660c83327a8c6c"
-            },
-            "arglist": {
-              "$": "(Collection &collection)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual bool"
-            },
-            "name": {
-              "$": "cleanupCollection_slow"
-            },
-            "anchorfile": {
-              "$": "classAkonadi_1_1Server_1_1DataStore.html"
-            },
-            "anchor": {
-              "$": "a1adb25bccbb4c0e4b16fe479d9c317c7"
             },
             "arglist": {
               "$": "(Collection &collection)"
@@ -13520,25 +13605,6 @@
             },
             "arglist": {
               "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "pure",
-            "type": {
-              "$": "virtual bool"
-            },
-            "name": {
-              "$": "hasForeignKeyConstraints"
-            },
-            "anchorfile": {
-              "$": "classAkonadi_1_1Server_1_1DbInitializer.html"
-            },
-            "anchor": {
-              "$": "a6ec10be7292ed605d58489d3e22fe1ca"
-            },
-            "arglist": {
-              "$": "() const =0"
             }
           },
           {
@@ -18545,24 +18611,43 @@
         "filename": {
           "$": "classAkonadi_1_1Server_1_1IntervalCheck.html"
         },
-        "member": {
-          "@kind": "function",
-          "type": {
-            "$": "void"
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "requestCollectionSync"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1IntervalCheck.html"
+            },
+            "anchor": {
+              "$": "a6c1c17e217dadb73d2c5a7590a38c56c"
+            },
+            "arglist": {
+              "$": "(const Collection &collection)"
+            }
           },
-          "name": {
-            "$": "requestCollectionSync"
-          },
-          "anchorfile": {
-            "$": "classAkonadi_1_1Server_1_1IntervalCheck.html"
-          },
-          "anchor": {
-            "$": "a6c1c17e217dadb73d2c5a7590a38c56c"
-          },
-          "arglist": {
-            "$": "(const Collection &collection)"
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "IntervalCheck"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1IntervalCheck.html"
+            },
+            "anchor": {
+              "$": "a5b69cf9bc8aa538b310218e720ace209"
+            },
+            "arglist": {
+              "$": "(ItemRetrievalManager &itemRetrievalManager)"
+            }
           }
-        }
+        ]
       },
       {
         "@kind": "struct",
@@ -22536,6 +22621,23 @@
             },
             "arglist": {
               "$": "(ItemRetrievalRequest request)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "ItemRetrievalManager"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1ItemRetrievalManager.html"
+            },
+            "anchor": {
+              "$": "a70665dd8b4d442283ea06c5c81227c7a"
+            },
+            "arglist": {
+              "$": "(QObject *parent=nullptr)"
             }
           },
           {
@@ -31389,22 +31491,6 @@
           },
           {
             "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "SearchManager"
-            },
-            "anchorfile": {
-              "$": "classAkonadi_1_1Server_1_1SearchManager.html"
-            },
-            "anchor": {
-              "$": "a0c88f5aaeeee0c8fd9c01d369e217d09"
-            },
-            "arglist": {
-              "$": "(const QStringList &searchEngines, SearchTaskManager &agentSearchManager)"
-            }
-          },
-          {
-            "@kind": "function",
             "@virtualness": "virtual",
             "type": {
               "$": "virtual QVector< AbstractSearchPlugin * >"
@@ -31458,6 +31544,23 @@
             },
             "arglist": {
               "$": "(const Collection &collection)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "SearchManager"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1SearchManager.html"
+            },
+            "anchor": {
+              "$": "a0c88f5aaeeee0c8fd9c01d369e217d09"
+            },
+            "arglist": {
+              "$": "(const QStringList &searchEngines, SearchTaskManager &agentSearchManager)"
             }
           }
         ]
@@ -32493,18 +32596,6 @@
       {
         "@kind": "class",
         "name": {
-          "$": "Session"
-        },
-        "filename": {
-          "$": "classSession.html"
-        },
-        "base": {
-          "$": "QObject"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
           "$": "Akonadi::Session"
         },
         "filename": {
@@ -32637,6 +32728,18 @@
             }
           }
         ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "Session"
+        },
+        "filename": {
+          "$": "classSession.html"
+        },
+        "base": {
+          "$": "QObject"
+        }
       },
       {
         "@kind": "class",
@@ -35092,6 +35195,23 @@
             },
             "arglist": {
               "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {},
+            "name": {
+              "$": "StorageJanitor"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1StorageJanitor.html"
+            },
+            "anchor": {
+              "$": "a52a554b79da60de10cad78028c104385"
+            },
+            "arglist": {
+              "$": "(AkonadiServer &mAkonadi)"
             }
           }
         ]
@@ -38435,6 +38555,10 @@
           },
           {
             "@kind": "class",
+            "$": "Akonadi::CollectionAnnotationsAttribute"
+          },
+          {
+            "@kind": "class",
             "$": "Akonadi::CollectionAttributesSynchronizationJob"
           },
           {
@@ -39081,24 +39205,6 @@
               "$": "ac239d042872d89bfc2059a6d856195d9"
             },
             "arglist": {}
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isSystemSQLite"
-            },
-            "anchorfile": {
-              "$": "namespaceAkonadi_1_1Server_1_1DbType.html"
-            },
-            "anchor": {
-              "$": "a7bbbc79383002ae16457fb3bab4105c6"
-            },
-            "arglist": {
-              "$": "(const QSqlDatabase &db)"
-            }
           },
           {
             "@kind": "function",

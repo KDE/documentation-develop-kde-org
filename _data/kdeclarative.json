@@ -66,6 +66,183 @@
       {
         "@kind": "class",
         "name": {
+          "$": "CalendarEvents::CalendarEventsPlugin"
+        },
+        "filename": {
+          "$": "classCalendarEvents_1_1CalendarEventsPlugin.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "SubLabelPriority"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1CalendarEventsPlugin.html"
+            },
+            "anchor": {
+              "$": "a1ba53420362aedcdfcb9955d1c48667f"
+            },
+            "arglist": {},
+            "enumvalue": [
+              {
+                "@file": "classCalendarEvents_1_1CalendarEventsPlugin.html",
+                "@anchor": "a1ba53420362aedcdfcb9955d1c48667fa28d0edd045e05cf5af64e35ae0c4c6ef",
+                "$": "Low"
+              },
+              {
+                "@file": "classCalendarEvents_1_1CalendarEventsPlugin.html",
+                "@anchor": "a1ba53420362aedcdfcb9955d1c48667fa7a1920d61156abc05a60135aefe8bc67",
+                "$": "Default"
+              },
+              {
+                "@file": "classCalendarEvents_1_1CalendarEventsPlugin.html",
+                "@anchor": "a1ba53420362aedcdfcb9955d1c48667fa655d20c1ca69519ca647684edbb2db35",
+                "$": "High"
+              },
+              {
+                "@file": "classCalendarEvents_1_1CalendarEventsPlugin.html",
+                "@anchor": "a1ba53420362aedcdfcb9955d1c48667fa2708565083321423b1a3244979bade9b",
+                "$": "Urgent"
+              }
+            ]
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "alternateCalendarDateReady"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1CalendarEventsPlugin.html"
+            },
+            "anchor": {
+              "$": "a7032ee57ad7df7d8831c9b3d86a9c94c"
+            },
+            "arglist": {
+              "$": "(const QHash< QDate, QCalendar::YearMonthDay > &data)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "alternateDateReady"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1CalendarEventsPlugin.html"
+            },
+            "anchor": {
+              "$": "acd2a426d84a4b0bc11a1e8b3a39cbb93"
+            },
+            "arglist": {
+              "$": "(const QHash< QDate, QDate > &data)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "dataReady"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1CalendarEventsPlugin.html"
+            },
+            "anchor": {
+              "$": "a9521aaf11513434daf931c8749943bf8"
+            },
+            "arglist": {
+              "$": "(const QMultiHash< QDate, CalendarEvents::EventData > &data)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "eventModified"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1CalendarEventsPlugin.html"
+            },
+            "anchor": {
+              "$": "a4fc4350b9cc7d911e5c0c559f94eae52"
+            },
+            "arglist": {
+              "$": "(const CalendarEvents::EventData &modifiedEvent)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "eventRemoved"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1CalendarEventsPlugin.html"
+            },
+            "anchor": {
+              "$": "ad533a6a2759181a6551c0c35a64581ac"
+            },
+            "arglist": {
+              "$": "(const QString &uid)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "subLabelReady"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1CalendarEventsPlugin.html"
+            },
+            "anchor": {
+              "$": "afb289284baaa10ca714c3451ceef39e1"
+            },
+            "arglist": {
+              "$": "(const QHash< QDate, SubLabel > &data)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "pure",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "loadEventsForDateRange"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1CalendarEventsPlugin.html"
+            },
+            "anchor": {
+              "$": "a8e958ebae78bb3fd49ccd81aa8d22d13"
+            },
+            "arglist": {
+              "$": "(const QDate &startDate, const QDate &endDate)=0"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "Clipboard"
         },
         "filename": {
@@ -1602,6 +1779,341 @@
             },
             "arglist": {
               "$": "()"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "CalendarEvents::EventData"
+        },
+        "filename": {
+          "$": "classCalendarEvents_1_1EventData.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "description"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a3ba49d0fd8c620682fcc74dcf9cb4bf3"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QDateTime"
+            },
+            "name": {
+              "$": "endDateTime"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "af2cbcf0051590b0a1ac4cfd560f79e06"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "eventColor"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "ac54348265bdafeddb248b06079177881"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isAllDay"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a9cac989a770c1b26474edb1ea87c01c9"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isMinor"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a80fa8e4738c70171ebff6c5a645cc068"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setDescription"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a8ccecdc445e95fa9b2d26ae0850a6bd4"
+            },
+            "arglist": {
+              "$": "(const QString &description)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setEndDateTime"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a917cdfda9ad927ee6ee0a3bad3b6dca0"
+            },
+            "arglist": {
+              "$": "(const QDateTime &endDateTime)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setEventColor"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a5c9b8588badebf44f928af57659405e7"
+            },
+            "arglist": {
+              "$": "(const QString &color)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setEventType"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a5bb13b4dcdac2e1746d280d3e8fb64d9"
+            },
+            "arglist": {
+              "$": "(EventType type)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setIsAllDay"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a8d8b1c5ee07a70ec20464a1dd396572e"
+            },
+            "arglist": {
+              "$": "(bool isAllDay)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setIsMinor"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "aaa04fc9ba6840c1535824944945d97d7"
+            },
+            "arglist": {
+              "$": "(bool isMinor)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setStartDateTime"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a38824443688c930d155ffb7db4ae27d2"
+            },
+            "arglist": {
+              "$": "(const QDateTime &startDateTime)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setTitle"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a760fd4b62c794273783ac1978cdf6eae"
+            },
+            "arglist": {
+              "$": "(const QString &title)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setUid"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "aaa8b3f37639a4224210406ffcbc419d7"
+            },
+            "arglist": {
+              "$": "(const QString &uid)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QDateTime"
+            },
+            "name": {
+              "$": "startDateTime"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a6ea6e7cdafb5ea641a9cd8ed2d9d64fa"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "title"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "abd1c084578c5085d2147d43d897bfa97"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "EventType"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "ad3a6c1d483d78d4711b5e68e8344c19a"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "uid"
+            },
+            "anchorfile": {
+              "$": "classCalendarEvents_1_1EventData.html"
+            },
+            "anchor": {
+              "$": "a33c5a7d3e15d18089f9519ba17136d9f"
+            },
+            "arglist": {
+              "$": "() const"
             }
           }
         ]
@@ -3999,6 +4511,29 @@
               "$": "a620698d0e87c08d88c04b3572851ded5"
             },
             "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "CalendarEvents"
+        },
+        "filename": {
+          "$": "namespaceCalendarEvents.html"
+        },
+        "class": [
+          {
+            "@kind": "class",
+            "$": "CalendarEvents::CalendarEventsPlugin"
+          },
+          {
+            "@kind": "class",
+            "$": "CalendarEvents::EventData"
+          },
+          {
+            "@kind": "class",
+            "$": "CalendarEvents::ShowEventInterface"
           }
         ]
       },

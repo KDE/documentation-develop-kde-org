@@ -10268,7 +10268,9 @@
           {
             "@kind": "function",
             "@protection": "protected",
-            "type": {},
+            "type": {
+              "$": "KCOREADDONS_NO_EXPORT"
+            },
             "name": {
               "$": "KProcess"
             },
@@ -12999,6 +13001,53 @@
       {
         "@kind": "namespace",
         "name": {
+          "$": "KLibexec"
+        },
+        "filename": {
+          "$": "namespaceKLibexec.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "kdeFrameworksPaths"
+            },
+            "anchorfile": {
+              "$": "namespaceKLibexec.html"
+            },
+            "anchor": {
+              "$": "a8fc908487f3bb5ed7faa29466bd0d9ce"
+            },
+            "arglist": {
+              "$": "(const QString &relativePath)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "path"
+            },
+            "anchorfile": {
+              "$": "namespaceKLibexec.html"
+            },
+            "anchor": {
+              "$": "a5d1f3859e42e8286ad9a66ef22d79fe9"
+            },
+            "arglist": {
+              "$": "(const QString &relativePath)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "namespace",
+        "name": {
           "$": "KMacroExpander"
         },
         "filename": {
@@ -13323,6 +13372,33 @@
             }
           }
         ]
+      },
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "KRuntimePlatform"
+        },
+        "filename": {
+          "$": "namespaceKRuntimePlatform.html"
+        },
+        "member": {
+          "@kind": "function",
+          "type": {
+            "$": "KCOREADDONS_EXPORT QStringList"
+          },
+          "name": {
+            "$": "runtimePlatform"
+          },
+          "anchorfile": {
+            "$": "namespaceKRuntimePlatform.html"
+          },
+          "anchor": {
+            "$": "ad95f9c73e3960bd74107f01456d4a12b"
+          },
+          "arglist": {
+            "$": "()"
+          }
+        }
       },
       {
         "@kind": "namespace",
