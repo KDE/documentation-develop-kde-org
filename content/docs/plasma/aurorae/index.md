@@ -30,7 +30,7 @@ An Aurorae theme consists of one folder containing
 ├── ...
 ```
 
-Each SVG file needs to include certain custom [attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute) for it to be managed correctly as part of a window decoration. With a vector graphics editor like [Inkscape](https://inkscape.org/), these attributes can be edited by selecting an object, opening the Object Properties pane and changing the ID and Label fields. It is also possible to make use of colors from the [system color scheme](/docs/plasma/theme/theme-details/#using-system-colors).
+Each SVG file needs to include certain custom [attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute) for it to be managed correctly as part of a window decoration. With a vector graphics editor like [Inkscape](https://inkscape.org/), these attributes can be edited by selecting an object, opening the Object Properties pane and changing the ID and Label fields. It is also possible to make use of colors from the [system color scheme]({{< ref "/docs/plasma/theme/theme-colors" >}}).
 
 System-wide installed Aurorae themes are located in `/usr/share/aurorae/themes/` and user-specific themes are located in `~/.local/share/aurorae/themes/`. If you copy your folder into the user folder, it will be available for selection in System Settings. Just make sure you have the matching theme name for the folder, the configuration file and the metadata file, as described in the sections below.
 

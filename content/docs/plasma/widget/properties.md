@@ -117,7 +117,7 @@ Item {
 
 The compact representation uses [`DefaultCompactRepresentation.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/desktoppackage/contents/applet/DefaultCompactRepresentation.qml) by default. To summarize, it:
 
-* Draws the `plasmoid.icon` using a [`PlasmaCore.IconItem`](docs:plasma;IconItem)
+* Draws the `plasmoid.icon` using a [`PlasmaCore.IconItem`](docs:plasma;Plasma::IconItem)
 * Defines a [`MouseArea`](https://doc.qt.io/qt-5/qml-qtquick-mousearea.html) to toggle the `expanded` property which displays the full representation.
 
 

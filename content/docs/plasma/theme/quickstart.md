@@ -95,7 +95,7 @@ element and choosing Object Properties.
 
 Add or remove any element containing a hint ID you desire. It doesn't matter how the element looks,
 just that elements with IDs matching the hint elements either exist or
-don't exist. See [Background SVG Format]({{< ref "theme-details#background-svg-format">}}) for a
+don't exist. See [Background SVG Format]({{< ref "/docs/plasma/theme/background-svg" >}}) for a
 description of available hint elements.
 
 ### Step 7: Save the SVG file. {#save}
