@@ -402,7 +402,6 @@ Both wraps by default with `Layout.fillWidth: true`.
 ```qml
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
-import org.kde.kirigami 2.20 as Kirigami
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
@@ -410,7 +409,7 @@ ColumnLayout {
 
     Repeater {
         model: 5
-        Kirigami.Heading {
+        PlasmaExtras.Heading {
             Layout.fillWidth: true
             level: index + 1
             text: i18n("Header level %1", level)
