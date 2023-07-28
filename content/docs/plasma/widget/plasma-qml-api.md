@@ -434,7 +434,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 * The very useful `Theme` and `Units` singletons.
 * A number of enums listed in [`Types`](docs:plasma;Plasma::Types).
-* [`IconItem`](docs:plasma;Plasma::IconItem) for drawing icons.
+* [`IconItem`](docs:plasma;IconItem) for drawing icons.
 * [`SvgItem`](docs:plasma;Plasma::SvgItem), [`Svg`](docs:plasma;Plasma::Svg) and [`FrameSvgItem`](docs:plasma;Plasma::FrameSvgItem) for drawing SVGs coloured with the Plasma Style color palette.
 * [`DataSource`](docs:plasma;Plasma::DataSource) for connecting to a Plasma DataEngine.
 
