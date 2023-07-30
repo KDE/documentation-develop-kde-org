@@ -124,6 +124,7 @@ The following things have been replaced by their Kirigami counterparts:
 | PlasmaCore.Units.roundtoIconSize(font height) | Kirigami.Units.iconSizes.sizeForLabels           |
 | PlasmaCore.Units.roundtoIconSize(value)       | Kirigami.Units.iconSizes.roundedIconSize(value)  |
 | PlasmaCore.Units.*anything else*              | Kirigami.Units.*the same thing*                  |
+| PlasmaCore.IconItem                           | Kirigami.Icon                                    |
 | PlasmaExtras.Heading                          | Kirigami.Heading                                 |
 
 Note: remember to add ``import org.kde.kirigami 2.20 as Kirigami`` in
