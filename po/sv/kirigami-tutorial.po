@@ -1,11 +1,11 @@
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:40+0000\n"
-"PO-Revision-Date: 2022-08-02 22:08+0200\n"
+"PO-Revision-Date: 2023-08-01 14:54+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -44,15 +44,6 @@ msgid "Learning to create your first applications using Kirigami\n"
 msgstr "Lär dig skapa din första program med användning av Kirigami\n"
 
 #: content/docs/getting-started/kirigami/_index.md:22
-#, fuzzy
-#| msgid ""
-#| "This tutorial will guide you through the process of creating your own "
-#| "convergent application using the [Kirigami framework](/frameworks/"
-#| "kirigami). A *convergent application*, in this context, means people can "
-#| "use the program easily regardless of the device it is running on. If it "
-#| "is on a desktop computer, it will adapt to a large screen and a mouse and "
-#| "keyboard; if it is being used on a mobile, it will accept input from a "
-#| "touchscreen and adapt to a smaller portrait screen. And so on."
 msgid ""
 "This tutorial will guide you through the process of creating your own "
 "convergent application using the [Kirigami framework](/frameworks/kirigami). "
@@ -67,8 +58,9 @@ msgstr ""
 "kirigami). Ett *konvergent program* betyder i det här sammanhanget att folk "
 "enkelt kan använda programmet oberoende av apparaten det kör på. Om det är "
 "på en skrivbordsdator, anpassar det sig till en stor skärm, och en mus och "
-"tangentbord. Om det används på en mobil, accepterar det inmatning från en "
-"pekskärm och anpassar sig till en mindre stående skärm. Ock så vidare."
+"tangentbord. Om det används på en mobil apparat, accepterar det inmatning "
+"från en pekskärm och anpassar sig till en mindre stående skärm. Ock så "
+"vidare."
 
 #: content/docs/getting-started/kirigami/_index.md:30
 msgid ""
@@ -87,13 +79,6 @@ msgstr ""
 "konstruerade för att skapa konvergenta program."
 
 #: content/docs/getting-started/kirigami/_index.md:36
-#, fuzzy
-#| msgid ""
-#| "While you will use QML to create the visual part of your application, the "
-#| "business logic -- the code that does the heavy lifting for your "
-#| "application's functionality -- is usually created in C++ for performance "
-#| "reasons. We will also explore how to integrate our business logic with "
-#| "our UI in the tutorials below."
 msgid ""
 "While you will use QML to create the visual part of your application, the "
 "business logic—the code that does the heavy lifting for your application's "
@@ -115,24 +100,20 @@ msgid "Informations about your application"
 msgstr "Information om ditt program"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:10
-#, fuzzy
-#| msgid ""
-#| "The About Page allows you to have a page that shows the copyright notice "
-#| "of the application together with the contributors and some information of "
-#| "which platform it's running on."
 msgid ""
 "[Kirigami.AboutPage](docs:kirigami2;AboutPage) allows you to have a page "
 "that shows the copyright notice of the application together with the list of "
 "contributors and some information of which platform it's running on."
 msgstr ""
-"Sidan Om låter dig ha en sida som visar programmets copyrightmeddelande "
-"tillsammans med bidragsgivare och en del information om vilken plattform det "
-"kör på."
+"[Kirigami.AboutPage](docs:kirigami2;AboutPage) låter dig ha en sida som "
+"visar programmets copyrightmeddelande tillsammans med listan över "
+"bidragsgivare och en del information om vilken plattform det kör på."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:12
 msgid ""
 "First, we are going to edit our `main.cpp` file from previous tutorials."
 msgstr ""
+"Först ska vi redigera vår fil, `main.cpp`, från tidigare handledningar."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:14
 #: content/docs/getting-started/kirigami/introduction-getting_started.md:101
@@ -140,14 +121,6 @@ msgid "main.cpp"
 msgstr "main.cpp"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:18
-#, fuzzy
-#| msgid ""
-#| "In the cpp file we include `KAboutData` and the `.h` file we just "
-#| "created, [KAboutData](docs:kcoreaddons;KAboutData) is a core KDE "
-#| "Frameworks component that stores information about an application, which "
-#| "can then be reused by many other KDE Frameworks components. We "
-#| "instantiate a new `KAboutData` object with its fairly complete default "
-#| "constructor and add author information."
 msgid ""
 "In the `main.cpp` file we include [KAboutData](docs:kcoreaddons;KAboutData), "
 "a core KDE frameworks component that lets us store information about our "
@@ -155,28 +128,23 @@ msgid ""
 "Frameworks components. We instantiate a new `aboutData` object with its "
 "fairly complete default constructor and add author information."
 msgstr ""
-"I cpp-filen inkluderar vi `KAboutData` och `.h`-filen vi just skapat, "
-"[KAboutData](docs:kcoreaddons;KAboutData) är en huvudkomponent i KDE Ramverk "
-"som lagrar information om ett program, vilket sedan kan återanvändas av "
-"många andra komponenter i KDE Ramverk. Vi lägger till ett nytt `KAboutData` "
-"objekt med dess ganska fullständiga förvalda konstruktor och lägger till "
-"information om upphovsmän."
+"I filen `main.cpp` inkluderar vi [KAboutData](docs:kcoreaddons;KAboutData), "
+"en huvudkomponent i KDE Ramverk som lagrar information om ett program. "
+"Informationen kan sedan återanvändas av många andra komponenter i KDE "
+"Ramverk. Vi instansierar ett nytt `aboutData` objekt med dess ganska "
+"fullständiga förvalda konstruktor och lägger till information om upphovsmän."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:20
-#, fuzzy
-#| msgid ""
-#| "After all the required information has been set, we call `KAboutData::"
-#| "setApplicationData` to initialize the properties of the [QApplication ]"
-#| "(https://doc.qt.io/qt-5/qapplication.html) object."
 msgid ""
 "After all the required information has been set, we call [KAboutData::"
 "setApplicationData](docs:kcoreaddons;KAboutData::setApplicationData) to "
 "initialize the properties of the [QApplication ](docs:qtwidgets;"
 "QApplication) object."
 msgstr ""
-"Efter all nödvändig information har angetts, anropar vi `KAboutData::"
-"setApplicationData` för att initiera egenskaperna i objektet [QApplication ]"
-"(https://doc.qt.io/qt-5/qapplication.html)."
+"Efter all nödvändig information har angetts, anropar vi [KAboutData::"
+"setApplicationData](docs:kcoreaddons;KAboutData::setApplicationData) för att "
+"initiera egenskaperna i objektet [QApplication ](docs:qtwidgets;"
+"QApplication)."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:22
 msgid ""
@@ -282,26 +250,16 @@ msgstr ""
 "körbara filen i `src/CMakeLists.txt`, intill main.cpp."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:14
-#, fuzzy
-#| msgid ""
-#| "Add the following content to the new header file (the one with the `.h` "
-#| "extension):"
 msgid "Add the following content to the new header file (`backend.h`):"
-msgstr ""
-"Lägg till följande innehåll i den nya deklarationsfilen (den med filändelsen "
-"`.h`):"
+msgstr "Lägg till följande innehåll i den nya deklarationsfilen (`backend.h`):"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:29
-#, fuzzy
-#| msgid ""
-#| "The cpp file containing the definitions is similarly empty right now, it "
-#| "should contain something like the following:"
 msgid ""
 "The `backend.cpp` file containing the definitions is similarly empty right "
 "now, it should contain something like the following:"
 msgstr ""
-"Cpp-filen som innehåller definitionerna är också tom för tillfället. Den ska "
-"innehålla något som liknar följande:"
+"Filen `backend.cpp` som innehåller definitionerna är också tom för "
+"tillfället. Den ska innehålla något som liknar följande:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:40
 msgid ""
@@ -328,12 +286,6 @@ msgstr ""
 "Glöm inte att inkludera den nya deklarationsfilen längst upp i `main.cpp`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:50
-#, fuzzy
-#| msgid ""
-#| "From now on, the backend will be known to QML as `Backend`. It is "
-#| "contained in a module called `org.kde.example`. Since the module is part "
-#| "of the application, you don't need to worry about versioning it, just "
-#| "stay with 1.0 and use it consistently throughout the application."
 msgid ""
 "From now on, the backend will be known to QML as `Backend`. It is contained "
 "in a module called `org.kde.example`. Since the module is part of the "
@@ -343,7 +295,7 @@ msgstr ""
 "Från och med nu är bakgrundskoden känd för QML som `Backend`. Den finns i en "
 "modul som kallas `org.kde.example`. Eftersom modulen är en del av "
 "programmet, behöver du inte bekymra dig om versionshantering, behåll bara "
-"1.0 och använd det konsekvent i hela programmet."
+"`1.0` och använd det konsekvent i hela programmet."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:52
 msgid "In `main.qml`, import the new module:"
@@ -369,39 +321,28 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:65
-#, fuzzy
-#| msgid ""
-#| "That seems like quite a lot for a simple property we'll use to show some "
-#| "text from the backend, right? But a closer look reveals that this can "
-#| "already run logic when the property is read by the user interface, and "
-#| "when it is written. It will automatically inform frontend and backend of "
-#| "changes."
 msgid ""
 "This may seem like a lot of code to just read and write some code from the "
 "backend. However, a closer look reveals that reading the property from the "
 "UI can already run some logic—same when it is written to. In this case, it "
 "will automatically inform the frontend and backend of changes."
 msgstr ""
-"Det verkar rätt mycket för en enkel egenskap vi använder för att visa någon "
-"text från bakgrundskoden, inte sant? Men en närmare titt avslöjar att det "
-"redan kan utföra logik när egenskapen läses av användargränssnittet, och när "
-"den skrivs. Det informerar automatiskt både förgrunden och bakgrunden om "
+"Det verkar som rätt mycket kod för att bara läsa och skriva en del "
+"bakgrundskod. Men en närmare titt avslöjar att det redan kan utföra logik "
+"när egenskapen läses av användargränssnittet, och även när den skrivs till. "
+"I detta fall, informerar den automatiskt både förgrunden och bakgrunden om "
 "ändringar."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:67
-#, fuzzy
-#| msgid ""
-#| "The reading and writing is based on getter and setter functions, so add a "
-#| "new private attribute to your class, like this, and add getter and setter "
-#| "functions."
 msgid ""
 "The reading and writing is based on the concept of [getter and setter "
 "functions](https://www.w3schools.com/cpp/cpp_encapsulation.asp). Go ahead "
 "and add a new private attribute to your class that holds the data, as well "
 "as the relevant getter and setter functions."
 msgstr ""
-"Läsning och skrivning är baserade på hämtnings- och tilldelningsfunktioner, "
-"så lägg till en ny privat egenskap i din klass, och lägg till hämtnings- och "
+"Läsning och skrivning är baserade på [hämtnings- och tilldelningsfunktioner]"
+"(https://www.w3schools.com/cpp/cpp_encapsulation.asp), så lägg till en ny "
+"privat egenskap i din klass, och lägg till hämtnings- och "
 "tilldelningsfunktioner."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:73
@@ -409,13 +350,6 @@ msgid "To the public section, add"
 msgstr "Lägg till följande i den öppna sektionen"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:80
-#, fuzzy
-#| msgid ""
-#| "The first function is the getter, the second the setter, and the third a "
-#| "signal that is emitted when the property was changed. The signal doesn't "
-#| "need any implementation in the cpp file, since it doesn't do much more "
-#| "than being emitted, but the getter and setter need to be implemented "
-#| "similar to the following:"
 msgid ""
 "The first function is the getter, the second the setter, and the third a "
 "signal that is emitted when the property is changed. The signal doesn't need "
@@ -425,9 +359,10 @@ msgid ""
 msgstr ""
 "Den första funktionen är hämtningsfunktionen,den andra är "
 "tilldelningsfunktionen, och den tredje en signal som skickas när egenskapen "
-"ändras. Signalen behöver ingen implementering i cpp-filen, eftersom den inte "
-"gör mycket mer än att skickas, men hämtnings- och tilldelningsfunktionen "
-"behöver implementeras på liknande sätt som det följande:"
+"ändras. Signalen behöver ingen implementering i filen `backend.cpp`, "
+"eftersom den inte gör mycket mer än att skickas, men hämtnings- och "
+"tilldelningsfunktionen behöver implementeras på liknande sätt som det "
+"följande:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:94
 msgid ""
@@ -438,18 +373,14 @@ msgstr ""
 "informerar användargränssnittet och bakgrundskoden om ändringen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:96
-#, fuzzy
-#| msgid ""
-#| "To display the text, in `main.qml` add a heading displaying it right "
-#| "under the text property of the `Kirigami.Page` element that is already "
-#| "contained in the template."
 msgid ""
 "To display the text, add a heading to `main.qml` under the `title` property "
 "of the [Kirigami.Page](docs:kirigami2;Page) element already contained in the "
 "template."
 msgstr ""
-"För att visa texten, lägg till en rubrik  i `main.qml` som visar den under "
-"textegenskapen för elementet `Kirigami.Page`, som redan finns i mallen."
+"För att visa texten, lägg till en rubrik  i `main.qml` under egenskapen "
+"`title` för elementet [Kirigami.Page](docs:kirigami2;Page), som redan finns "
+"i mallen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:98
 msgid "The resulting code in that part of the file should look like this:"
@@ -520,13 +451,6 @@ msgstr ""
 "åstadkomma med ren QML."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
-#| "Started' page so that we can better understand what is going on in the "
-#| "central C++ file of our application. While this is a basic `main.cpp`, "
-#| "the features we will go over will remain essential no matter what kind of "
-#| "application it is that you decide to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
 "Started' page so that we can better understand what is going on in the "
@@ -544,22 +468,17 @@ msgid "What it does"
 msgstr "Vad den gör"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp.md:21
-#, fuzzy
-#| msgid ""
-#| "First we must include a number of Qt header files, allowing us to use "
-#| "their functions. In this case, we include a number of Qt headers that "
-#| "handle application logic, reading QML files, and accessing files defined "
-#| "in `resources.qrc`."
 msgid ""
 "First we must include a number of Qt [header files](https://www.learncpp.com/"
 "cpp-tutorial/header-files/), allowing us to use their functions. In this "
 "case, we include a number of Qt headers that handle application logic, "
 "reading QML files, and accessing files defined in `resources.qrc`."
 msgstr ""
-"Först måste vi inkludera ett antal Qt deklarationsfiler, vilket låter oss "
-"använda deras funktioner. I detta fall, inkluderade vi ett antal Qt "
-"deklarationsfiler som hanterar programlogik, läser QML-filer och kommer åt "
-"filer definierade i `resources.qrc`."
+"Först måste vi inkludera ett antal Qt [deklarationsfiler](https://www."
+"learncpp.com/cpp-tutorial/header-files/), vilket låter oss använda deras "
+"funktioner. I detta fall, inkluderade vi ett antal Qt deklarationsfiler som "
+"hanterar programlogik, läser QML-filer och kommer åt filer definierade i "
+"`resources.qrc`."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp.md:23
 msgid ""
@@ -7210,16 +7129,12 @@ msgstr ""
 "(skrivbordsdator eller surfplatta) kan flera sidor visas intill varandra."
 
 #: content/docs/getting-started/kirigami/introduction-pages.md:23
-#, fuzzy
-#| msgid "![A single page on the phone](mobile.png)"
 msgid "![A single page on the phone](mobile.webp)"
-msgstr "![En enda sida på telefonen](mobile.png)"
+msgstr "![En enda sida på telefonen](mobile.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-pages.md:25
-#, fuzzy
-#| msgid "![Two pages next to each other on the desktop](desktop.png)"
 msgid "![Two pages next to each other on the desktop](desktop.webp)"
-msgstr "![Två sidor intill varandra på skrivbordsdatorn](desktop.png)"
+msgstr "![Två sidor intill varandra på skrivbordsdatorn](desktop.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-pages.md:29
 #, fuzzy
@@ -7567,16 +7482,12 @@ msgstr ""
 "tilldelat `\"add\"` eller `\"edit\"`"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:92
-#, fuzzy
-#| msgid ""
-#| "`index` argument is needed so that when we save our edited countdown, the "
-#| "correct one is modified"
 msgid ""
 "`index` is needed so that when we save our edited countdown, the correct one "
 "is modified"
 msgstr ""
-"`index` argumentet behövs så att den rätta ändras när vi sparar vår "
-"redigerade nedräknare"
+"`index` behövs så att den rätta ändras när vi sparar vår redigerade "
+"nedräknare"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:93
 msgid ""
@@ -7870,19 +7781,14 @@ msgid "Tooltip: Color set used by tooltips"
 msgstr "Tooltip: Färguppsättning använd av verktygstips"
 
 #: content/docs/getting-started/kirigami/style-colors.md:72
-#, fuzzy
-#| msgid ""
-#| "Complementary: Color set meant to be complementary to Window: usually is "
-#| "dark even in light themes. May be used for \"emphasis\" in small areas of "
-#| "the application"
 msgid ""
 "Complementary: Color set meant to be complementary to Window: usually dark "
 "even in light themes. May be used for emphasis in small areas of the "
 "application"
 msgstr ""
 "Complementary: Färguppsättning avsedd att vara komplementär till Fönster: "
-"oftast är den mörk också i ljusa teman. Kan användas för \"eftertryck\" på "
-"små områden i programmet."
+"oftast är den mörk också i ljusa teman. Kan användas för eftertryck på små "
+"områden i programmet."
 
 #: content/docs/getting-started/kirigami/style-colors.md:76
 msgid ""
@@ -7998,18 +7904,13 @@ msgid "Rich Text"
 msgstr "Rich text"
 
 #: content/docs/getting-started/kirigami/style-typography.md:233
-#, fuzzy
-#| msgid ""
-#| "QML allows you to display (and edit) rich text. The behavior can be "
-#| "controlled via the [textFormat](https://doc.qt.io/qt-5/qml-qtquick-text."
-#| "html#textFormat-prop) property."
 msgid ""
 "QML allows you to display (and edit) rich text. The behavior can be "
 "controlled via the [textFormat](https://doc.qt.io/qt-6/qml-qtquick-text."
 "html#textFormat-prop) property."
 msgstr ""
 "QML låter dig visa (och redigera) rich text. Beteendet kan styras via "
-"egenskapen [textFormat](https://doc.qt.io/qt-5/qml-qtquick-text."
+"egenskapen [textFormat](https://doc.qt.io/qt-6/qml-qtquick-text."
 "html#textFormat-prop)."
 
 #: content/docs/getting-started/kirigami/style-typography.md:260
