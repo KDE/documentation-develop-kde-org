@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:40+0000\n"
-"PO-Revision-Date: 2023-08-01 14:54+0200\n"
+"PO-Revision-Date: 2023-08-04 20:10+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -493,22 +493,16 @@ msgstr ""
 "olika bildpunktstäthet på skärmen."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp.md:25
-#, fuzzy
-#| msgid ""
-#| "We then create a [`QApplication`](https://doc.qt.io/qt-5/qapplication."
-#| "html#QApplication) instance which we call `app`. We pass `argc` and "
-#| "`argv` to the constructor here, letting Qt parse and use arguments meant "
-#| "to affect Qt."
 msgid ""
 "We then create a [QApplication](docs:qtwidgets;QApplication) instance which "
 "we call `app`. We then pass [argc and argv](https://www.learncpp.com/cpp-"
 "tutorial/command-line-arguments/) to the constructor, letting Qt parse and "
 "use arguments."
 msgstr ""
-"Därefter skapar vi en instans av [`QApplication`](https://doc.qt.io/qt-5/"
-"qapplication.html#QApplication), som vi kallar `app`. Vi skickar `argc` och "
-"`argv` till konstruktorn här, och låter Qt tolka och använda väljare avsedda "
-"att påverka Qt."
+"Därefter skapar vi en instans av [QApplication](docs:qtwidgets;"
+"QApplication), som vi kallar `app`. Vi skickar sedan [argc och argv](https://"
+"www.learncpp.com/cpp-tutorial/command-line-arguments/) till konstruktorn, "
+"och låter Qt tolka och använda argumenten."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp.md:27
 #, fuzzy
@@ -616,22 +610,15 @@ msgid "CMakeLists.txt"
 msgstr "CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:18
-#, fuzzy
-#| msgid "You might remember this CMakeLists file from the first tutorial:"
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
-msgstr "Du kanske kommer ihåg filen CMakeLists från den första handledningen:"
+msgstr ""
+"Du kanske kommer ihåg filen `CMakeLists.txt` från den första handledningen:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:22
 msgid "The first line, `project(helloworld)` defines the name of the project."
 msgstr "Den första raden, `project(helloworld)` definierar projektets namn."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
-#, fuzzy
-#| msgid ""
-#| "After that, we are setting the versions of our needed tools. "
-#| "`cmake_minimum_required(VERSION 3.10)` sets the version of CMake we will "
-#| "be calling. We then use `set` to define variables (`KF5_MIN_VERSION` and "
-#| "`QT_MIN_VERSION`) containing the versions of the KDE Frameworks and Qt."
 msgid ""
 "After that, we set the versions of our needed tools. "
 "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be "
@@ -639,16 +626,11 @@ msgid ""
 "`QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgstr ""
 "Därefter anger vi versionerna av verktygen vi behöver. "
-"`cmake_minimum_required(VERSION 3.10)` anger versionen av CMake vi anropar. "
-"Därefter använder vi `set` för att definiera variabler (`KF5_MIN_VERSION` "
+"`cmake_minimum_required(VERSION 3.16)` anger versionen av CMake vi anropar. "
+"Därefter använder vi `set()` för att definiera variabler (`KF5_MIN_VERSION` "
 "och `QT_MIN_VERSION`) som innehåller versionerna av KDE Ramverk och Qt."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:26
-#, fuzzy
-#| msgid ""
-#| "Then we get to a section where we include a number of necessary CMake and "
-#| "KDE settings. You shouldn't worry too much about these lines for now and "
-#| "we won't need to change them in this tutorial."
 msgid ""
 "Then we get to a section where we include a number of necessary CMake and "
 "KDE settings by using [extra-cmake-modules](https://api.kde.org/ecm/). You "
@@ -656,9 +638,9 @@ msgid ""
 "change them in this tutorial."
 msgstr ""
 "Därefter kommer vi till en sektion där vi inkluderar ett antal nödvändiga "
-"CMake- och KDE-inställningar. Du behöver inte bekymra dig så mycket om "
-"raderna för tillfället, och vi behöver inte ändra dem i den här "
-"handledningen."
+"CMake- och KDE-inställningar genom att använda [extra-cmake-modules](https://"
+"api.kde.org/ecm/). Du behöver inte bekymra dig så mycket om raderna för "
+"tillfället, och vi behöver inte ändra dem i den här handledningen."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:28
 msgid ""
@@ -677,12 +659,12 @@ msgstr ""
 "WidgetsAddons)`"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:31
-#, fuzzy
-#| msgid "`find_package` finds and loads the external component."
 msgid ""
 "[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
 "html) finds and loads the external component."
-msgstr "`find_package` hittar och läser in den externa komponenten."
+msgstr ""
+"[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
+"html) hittar och läser in den externa komponenten."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
 msgid "The first word is the framework (`KF5`)."
@@ -750,15 +732,11 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:45
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake into the 'src' "
-#| "directory."
 msgid ""
 "The final line, `add_subdirectory(src)`, points CMake into the `src/` "
 "directory."
 msgstr ""
-"Den sista raden, `add_subdirectory(src)`, pekar CMake på katalogen 'src'."
+"Den sista raden, `add_subdirectory(src)`, pekar CMake på katalogen 'src/'."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:49
 msgid ""
@@ -769,59 +747,44 @@ msgstr ""
 "mycket kortare."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:51
-#, fuzzy
-#| msgid ""
-#| "`set` is used to set `helloworld_SRCS` to `main.cpp` and `resources.qrc` "
-#| "(if we decide to create additional C++ files we'll need to add them here "
-#| "too)"
 msgid ""
 "[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to set "
 "`helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to create "
 "additional C++ files we'll need to add them here too)"
 msgstr ""
-"`set` används för att tilldela `helloworld_SRCS` till `main.cpp` och "
-"`resources.qrc` (om vi bestämmer oss för att lägga till ytterligare C++ "
-"filer behöver vi lägga till dem här också)"
+"[set()](https://cmake.org/cmake/help/latest/command/set.html) används för "
+"att tilldela `helloworld_SRCS` till `main.cpp` och `resources.qrc` (om vi "
+"bestämmer oss för att lägga till ytterligare C++ filer behöver vi lägga till "
+"dem här också)"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
-#, fuzzy
-#| msgid ""
-#| "`add_executable` takes care of naming our executable and grabbing the "
-#| "files needed to create it"
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of naming our executable and grabbing the "
 "files needed to create it"
 msgstr ""
-"`add_executable` tar hand om att namnge vårt körbara program och hämta "
+"[add_executable()](https://cmake.org/cmake/help/latest/command/"
+"add_executable.html) tar hand om att namnge vårt körbara program och hämta "
 "filerna som behövs för att skapa den"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:53
-#, fuzzy
-#| msgid ""
-#| "`target_link_libraries` dynamically links the libraries used in our code "
-#| "to our executable."
 msgid ""
 "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
 "to our executable."
 msgstr ""
-"`target_link_libraries` länkar biblioteken som används i vår kod till vårt "
-"körbara program dynamiskt."
+"[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
+"target_link_libraries.html) länkar biblioteken som används i vår kod till "
+"vårt körbara program dynamiskt."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:57
-#, fuzzy
-#| msgid ""
-#| "Note that these libraries should match the components that we included in "
-#| "our previous CMakeLists.txt file - otherwise these components will not be "
-#| "included and our application won't compile."
 msgid ""
 "Note that these libraries should match the components that we included in "
 "our previous `CMakeLists.txt` file - otherwise these components will not be "
 "included and our application won't compile."
 msgstr ""
 "Observera att biblioteken ska motsvara komponenterna som vi inkluderade i "
-"vår tidigare CMakeLists.txt, annars inkluderas inte komponenterna och vårt "
+"vår tidigare `CMakeLists.txt`, annars inkluderas inte komponenterna och vårt "
 "program går inte att kompilera."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:61
@@ -1520,7 +1483,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-card.md:103
 msgid "Important"
-msgstr ""
+msgstr "Viktigt"
 
 #: content/docs/getting-started/kirigami/components-card.md:105
 msgid ""
@@ -2944,7 +2907,7 @@ msgstr "Tvinga skrivbords- eller mobillayout"
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:210
 msgid "Aligning your labels"
-msgstr ""
+msgstr "Justera beteckningar"
 
 #: content/docs/getting-started/kirigami/components-formlayouts.md:212
 msgid ""
@@ -3757,7 +3720,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:10
 msgid "A row of pages"
-msgstr ""
+msgstr "En rad med sidor"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:12
 msgid ""
@@ -3865,7 +3828,7 @@ msgstr "main.qml"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:180
 msgid "and"
-msgstr ""
+msgstr "och"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack.md:183
 #, fuzzy
@@ -4446,7 +4409,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions.md:77
 msgid "Mobile version"
-msgstr ""
+msgstr "Mobilversion"
 
 #: content/docs/getting-started/kirigami/introduction-actions.md:89
 #, fuzzy
@@ -5463,7 +5426,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-kirigami-gallery.md:182
 msgid "Result"
-msgstr ""
+msgstr "Resultat"
 
 #: content/docs/getting-started/kirigami/introduction-kirigami-gallery.md:184
 msgid "Finally, our application should look like this:"
@@ -7395,7 +7358,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:67
 msgid "AddEditSheet.qml"
-msgstr ""
+msgstr "AddEditSheet.qml"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:69
 msgid ""
@@ -7514,7 +7477,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:105
 msgid "KountdownDelegate.qml"
-msgstr ""
+msgstr "KountdownDelegate.qml"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles.md:107
 #, fuzzy
@@ -7660,11 +7623,6 @@ msgid "Theme"
 msgstr "Tema"
 
 #: content/docs/getting-started/kirigami/style-colors.md:36
-#, fuzzy
-#| msgid ""
-#| "`Kirigami.Theme` is an attached property, therefore is available to use "
-#| "in any QML item. It contains as properties all the colors available in "
-#| "the palette, and what palette to use, as the `colorSet` property."
 msgid ""
 "[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) is an attached "
 "property, and therefore it is available to use for any QML item. Its "
@@ -7672,10 +7630,11 @@ msgid ""
 "to use, such as the [colorSet](docs:kirigami2;Kirigami::PlatformTheme::"
 "colorSet) property."
 msgstr ""
-"`Kirigami.Theme` är en bifogad egenskap, och är därför tillgänglig för "
-"användning i alla QML-objekt. Den innehåller alla tillgängliga färger som "
-"egenskaper i paletten, och vilken palett som ska användas, som egenskapen "
-"`colorSet`."
+"[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) är en bifogad "
+"egenskap, och är därför tillgänglig för användning i alla QML-objekt. Den "
+"innehåller alla tillgängliga färger som egenskaper i paletten, och vilken "
+"palett som ska användas, som egenskapen [colorSet](docs:kirigami2;Kirigami::"
+"PlatformTheme::colorSet)."
 
 #: content/docs/getting-started/kirigami/style-colors.md:39
 msgid "Example:"
@@ -7693,22 +7652,14 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors.md:52
-#, fuzzy
-#| msgid "Using Kirigami Gallery"
 msgid "The Colors component in Kirigami Gallery"
-msgstr "Använda Kirigami galleri"
+msgstr "Färgkomponenterna i Kirigami galleri"
 
 #: content/docs/getting-started/kirigami/style-colors.md:54
 msgid "Color Set"
 msgstr "Färguppsättning"
 
 #: content/docs/getting-started/kirigami/style-colors.md:56
-#, fuzzy
-#| msgid ""
-#| "Depending on where a control is located, it should use a different color "
-#| "set: for instance, (with the Breeze light color theme) in itemviews, the "
-#| "normal background is almost white, while in other regions, such as "
-#| "toolbars or dialogs, the normal background color is gray."
 msgid ""
 "Depending on where a control is located, it should use a different color "
 "set: for instance, when the Breeze Light color scheme is used in [Views]"
@@ -7717,19 +7668,12 @@ msgid ""
 "dialogs, the normal background color is gray."
 msgstr ""
 "Beroende på var en kontroll är placerad, ska den använda olika "
-"färguppsättningar: exempelvis (med färgtemat Breeze ljus) är den normala "
-"bakgrunden i objektvyer nästan vit, medan i andra områden, såsom "
-"verktygsrader och dialogrutor, är den normala bakgrundsfärgen grå."
+"färguppsättningar: exempelvis när färgtemat Breeze ljus används i [Views]"
+"(https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html), är den "
+"normala bakgrunden nästan vit, medan i andra områden, såsom verktygsrader "
+"och dialogrutor, är den normala bakgrundsfärgen grå."
 
 #: content/docs/getting-started/kirigami/style-colors.md:59
-#, fuzzy
-#| msgid ""
-#| "If you set a color set for an item, all of its child items (recursively) "
-#| "will inherit it automatically (unless the property `inherit` has "
-#| "explicitly been set to `false`, which should always be done when the "
-#| "developer wants to force a specific color set) so it is easy to change "
-#| "colors for an entire hierarchy of items without touching any of the items "
-#| "themselves."
 msgid ""
 "If you define a color set for an item, all of its child items will "
 "recursively inherit it automatically (unless the property [inherit](docs:"
@@ -7738,19 +7682,20 @@ msgid ""
 "specific color set) so it is easy to change colors for an entire hierarchy "
 "of items without touching any of the items themselves."
 msgstr ""
-"Om du tilldelar ett objekt en färguppsättning, ärver alla dess underliggande "
-"objekt (rekursivt) den automatiskt (om inte egenskapen `inherit` explicit "
-"har tilldelats `false`, vilket alltid bör göras när utvecklaren vill tvinga "
+"Om du definierar ett objekt en färguppsättning, ärver alla dess "
+"underliggande objekt (rekursivt) den automatiskt (om inte egenskapen "
+"[inherit](docs:kirigami2;Kirigami::PlatformTheme::inherit) explicit har "
+"tilldelats `false`, vilket alltid bör göras när utvecklaren vill tvinga "
 "användning av en viss färguppsättning) så att det är enkelt att ändra färger "
 "för en hel objekthierarki utan att röra något av objekten själva."
 
 #: content/docs/getting-started/kirigami/style-colors.md:64
-#, fuzzy
-#| msgid "`Kirigami.Theme` supports 5 different color sets:"
 msgid ""
 "[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) supports 5 "
 "different color sets:"
-msgstr "`Kirigami.Theme` stöder fem olika färguppsättningar:"
+msgstr ""
+"[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) stöder fem olika "
+"färguppsättningar:"
 
 #: content/docs/getting-started/kirigami/style-colors.md:66
 msgid ""
@@ -7761,12 +7706,12 @@ msgstr ""
 "teman)"
 
 #: content/docs/getting-started/kirigami/style-colors.md:68
-#, fuzzy
-#| msgid "Window: **Default** Color set for windows and \"chrome\" areas"
 msgid ""
 "Window: Color set for windows and chrome areas (this is also the default "
 "color set)"
-msgstr "Window: **Förvald** färguppsättning för fönster och \"kromområden\""
+msgstr ""
+"Window: Färguppsättning för fönster och kromområden (det är också förvald "
+"färguppsättning)"
 
 #: content/docs/getting-started/kirigami/style-colors.md:69
 msgid "Button: Color set used by buttons"
@@ -7799,7 +7744,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors.md:84
 msgid "How color sets differ in Breeze"
-msgstr ""
+msgstr "Hur färguppsättningar skiljer sig i Breeze"
 
 #: content/docs/getting-started/kirigami/style-colors.md:90
 msgid "How color sets differ in Breeze Dark"
@@ -7810,12 +7755,6 @@ msgid "Using Custom Colors"
 msgstr "Använda egna färger"
 
 #: content/docs/getting-started/kirigami/style-colors.md:98
-#, fuzzy
-#| msgid ""
-#| "Although it's discouraged to use hardcoded colors, Kirigami offers a more "
-#| "maintainable way to assign a custom hardcoded palette to an item and all "
-#| "its children, that will allow to define such custom colors in one place "
-#| "and one only:"
 msgid ""
 "Although it's discouraged to use hardcoded colors, Kirigami offers a more "
 "maintainable way to assign a custom hardcoded palette to an item and all its "
@@ -7829,7 +7768,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors.md:113
 msgid "Example with custom colors"
-msgstr ""
+msgstr "Exempel med egna färger"
 
 #: content/docs/getting-started/kirigami/style-typography.md:0
 msgid "Typography"
@@ -7840,16 +7779,12 @@ msgid "Headings"
 msgstr "Rubriker"
 
 #: content/docs/getting-started/kirigami/style-typography.md:12
-#, fuzzy
-#| msgid ""
-#| "Kirigami provides an [heading element](docs:kirigami2;Heading) that can "
-#| "be used for page or section titles."
 msgid ""
 "Kirigami provides a [Heading](docs:kirigami2;Heading) that can be used for "
 "page or section titles."
 msgstr ""
-"Kirigami tillhandahåller ett [rubrikelement](docs:kirigami2;Heading) som kan "
-"användas för sid- eller sektionstitlar."
+"Kirigami tillhandahåller [Heading](docs:kirigami2;Heading) som kan användas "
+"för sid- eller sektionstitlar."
 
 #: content/docs/getting-started/kirigami/style-typography.md:47
 msgid "Five headings with different levels for size comparison"
@@ -7860,12 +7795,12 @@ msgid "Labels"
 msgstr "Beteckningar"
 
 #: content/docs/getting-started/kirigami/style-typography.md:55
-#, fuzzy
-#| msgid "Text elements should use the Label element from QtQuick Controls 2."
 msgid ""
 "Text elements should use the [Label](docs:qtquickcontrols;QtQuick.Controls."
 "Label) component from QtQuick Controls 2."
-msgstr "Textelement ska använda elementet Label från QtQuick Controls 2."
+msgstr ""
+"Textelement ska använda komponenten [Label](docs:qtquickcontrols;QtQuick."
+"Controls.Label) från QtQuick Controls 2."
 
 #: content/docs/getting-started/kirigami/style-typography.md:79
 msgid "Text Alignment"
@@ -7920,17 +7855,13 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/style-typography.md:268
-#, fuzzy
-#| msgid ""
-#| "The font size of the Kirigami [Theme](docs:kirigami2;Theme) is available "
-#| "as `Kirigami.Theme.defaultFont.pointSize` in your application."
 msgid ""
 "The font size of the [Kirigami.Theme](docs:kirigami2;Kirigami::"
 "PlatformTheme) is available as `Kirigami.Theme.defaultFont.pointSize` in "
 "your application."
 msgstr ""
-"Teckenstorleken på Kirigami [Theme](docs:kirigami2;Theme) är tillgänglig som "
-"`Kirigami.Theme.defaultFont.pointSize` i ditt program."
+"Teckenstorleken på [Kirigami Theme](docs:kirigami2;Kirigami::PlatformTheme) "
+"är tillgänglig som `Kirigami.Theme.defaultFont.pointSize` i ditt program."
 
 #~ msgid ""
 #~ "First, we are going to create two files in the `src/` directory called "
