@@ -29,7 +29,7 @@ The `Applet` base instance was usually not accessible, unless the plasmoid offer
 ### How it works in Plasma 6
 In Plasma 6, `AppletInterface` and `Applet` have a more clear task separation. All the wrapper properties and methods from `AppletInterface` to `Applet` (and from `ContainmentInterface` to `Containment`) have been removed. `AppletInterface` and `ContainmentInterface` only offer QtQuick-specific API now.
 
-The root QML object of a plasmoid is now required to be a `PlasmoidItem` which is the QML name for `AppletInterface`. If it is also a containment, it must be of type `ContaimentItem`, which is the QML name for `ContainmentInterface`. This approach is similar and consistent with the `ApplicationWindow` type for QML-based applications.
+The root QML object of a plasmoid is now required to be a `PlasmoidItem` which is the QML name for `AppletInterface`. If it is also a containment, it must be of type `ContainmentItem`, which is the QML name for `ContainmentInterface`. This approach is similar and consistent with the `ApplicationWindow` type for QML-based applications.
 
 The attached `Plasmoid` object, as well the lowercase `plasmoid` context property are now instances of the underlying `Applet` (or `Containment` for panels and desktops), keeping most of the API present in the Plasma 5 version of the attached property.
 
