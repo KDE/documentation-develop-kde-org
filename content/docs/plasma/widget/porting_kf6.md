@@ -207,4 +207,40 @@ This way, both property bindings and the code to be executed when the action is
 activated are all defined inline in a declarative way inside the ``PlasmaCore.Action``
 definition.
 
+
+### PlasmaCore.SortFilterModel to KItemModels.KSortFilterProxyModel
+
+The item ``SortFilterModel`` from the import ``org.kde.plasma.core`` has been removed.
+Any usages of it should be ported to the ``KSortFilterProxyModel`` component which offers
+the same functionality. You can import it using ``org.kde.kitemmodels``.
+
+There are some key differences. While ``SortFilterModel`` has properties ``sortRole``
+and ``filterRole`` that take strings as role names, ``KSortFilterProxyModel``
+has the same two proeprties accepting only integers as the actual role vaues.
+Usages of role names must be ported to the properties ``sortRoleName``
+and ``filterRoleName`` (``sortRole`` and ``filterRole`` will automatically sync to the coresponding role number)
+
+The ``filterRegExp`` property becomes ``filterRegularExpression`` which will have to be a ``RegExp()``
+type, such as ```filterRegularExpression: RegExp(".*foo.+")```.
+
+Another change in usage is ``filterCallback`` which becomes ``filterRowCallback`` and ``filterColumnCallback``
+with a different API: the ``value`` parameter is gone, replaced by the parent index, from which the data of any role number can be extracted.
+
+Example usage:
+
+```qml
+KItemModels.KSortFilterProxyModel {
+    id: configDialogFilterModel
+    sourceModel: ...
+    filterRoleName: "name"
+    filterRowCallback: (sourceRow, sourceParent) => {
+        // filterRole will be the corresponding number for the role named the value set in filterRoleName
+        let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
+        return value === "foo";
+    }
+}
+```
+
+
+
 {{< readfile file="/content/docs/plasma/widget/snippet/plasma-doc-style.html" >}}
