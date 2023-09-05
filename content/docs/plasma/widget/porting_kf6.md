@@ -133,7 +133,11 @@ files that don't have it yet
 #### New KSvg framework
 
 Everything regarding SVG theming has moved from Plasma Framework to a new framework called KSvg.
-The API is compatible, but the import needs to be changed to:
+
+The API is compatible, with the exception of the ``colorGroup:`` property which
+hass been removed because its functionality is now provided automatically.
+
+The import needs to be changed to:
 ```import org.kde.ksvg 1.0 as KSvg```
 
 | Plasma 5                | Plasma 6          |
