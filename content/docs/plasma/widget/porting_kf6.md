@@ -69,6 +69,7 @@ The main thing to consider is adapting to the new subdivision of API between `Pl
 * Port the root `Item` of the plasmoid to `PlasmoidItem` (or `ContainmentItem`, if the plasmoid is a containment). If the root item wasn't an `Item` but rather something functional like a `MouseArea`, that item should be made a child of the new root `PlasmoidItem` or `ContainmentItem`.
 * All the properties and methods mentioned above will have to be ported from the `Plasmoid` attached property (or `plasmoid` context property) to be properties set on the root `PlasmoidItem` or `ContainmentItem` item. Other properties, such as `icon` and `title` can remain using the `Plasmoid` attached property.
 * for plasmoids that offer a C++ plugin as an `Applet` subclass, the C++ part doesn't change.  The QML part drops its `nativeInterface` intermediary property, so change properties like `Plasmoid.nativeInterface.myProperty` to `Plasmoid.myProperty`
+* Un-version your QML module imports. This is unnecessary in Qt6 and can cause bugs.
 
 ### Example porting of a minimal plasmoid
 
@@ -92,8 +93,8 @@ Item {
 
 ```qml
 import QtQuick 2.15
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasmoid
 
 
 PlasmoidItem {
@@ -127,7 +128,7 @@ The following things have been replaced by their Kirigami counterparts:
 | PlasmaCore.IconItem                           | Kirigami.Icon                                    |
 | PlasmaExtras.Heading                          | Kirigami.Heading                                 |
 
-Note: remember to add ``import org.kde.kirigami 2.20 as Kirigami`` in
+Note: remember to add ``import org.kde.kirigami as Kirigami`` in
 files that don't have it yet
 
 #### New KSvg framework
@@ -135,10 +136,10 @@ files that don't have it yet
 Everything regarding SVG theming has moved from Plasma Framework to a new framework called KSvg.
 
 The API is compatible, with the exception of the ``colorGroup:`` property which
-hass been removed because its functionality is now provided automatically.
+has been removed from KSvg because its functionality is now provided automatically.
 
 The import needs to be changed to:
-```import org.kde.ksvg 1.0 as KSvg```
+```import org.kde.ksvg as KSvg```
 
 | Plasma 5                | Plasma 6          |
 |-------------------------|-------------------|
