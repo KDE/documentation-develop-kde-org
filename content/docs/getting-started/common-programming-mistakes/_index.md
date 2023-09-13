@@ -35,7 +35,7 @@ be used as template arguments.
 So for now instead of using anonymous namespaces use static if you do not want
 a symbol to be exported.
 
-## nullptr pointer issues
+### nullptr pointer issues
 
 First and foremost: it is fine to delete a null pointer. So constructs like
 this that check for null before deleting are simply redundant: 
@@ -239,7 +239,7 @@ private:
 
 Prefer to use `const_iterators` over normal iterators when possible.
 Containers, which are being implicitly shared often detach when a call to a
-non-const `begin()` or `end()` methods is made ({{qt|QList}} is an example of
+non-const `begin()` or `end()` methods is made ([QList](https://doc.qt.io/qt-6/qlist.html) is an example of
 such a container). When using a const_iterator also watch out that you are
 really calling the const version of `begin()` and `end()`. Unless your
 container is actually const itself this probably will not be the case, possibly
@@ -372,7 +372,7 @@ allocated memory; when constructing a QObject (e.g. a widget) it can be given a
 parent, and when the parent is deleted it deletes all its children. The parent
 is also set when you add a widget to a layout, for example.
 
-A tool to detect memory leaks like this is [Valigrind](https://community.kde.org/Guidelines_and_HOWTOs/Debugging/Valgrind).
+A tool to detect memory leaks like this is [Valgrind](https://community.kde.org/Guidelines_and_HOWTOs/Debugging/Valgrind).
 
 ## dynamic_cast
 
@@ -521,7 +521,7 @@ Instead always use
 [QObject::deleteLater](https://doc.qt.io/qt-6/qobject.html#deleteLater) which
 tries to do the same thing as `delete this` but in a safer way.
 
-## Empty QStrings
+### Empty QStrings
 
 It is common to want to see if a [QString](https://doc.qt.io/qt-6/qstring.html)
 is empty. Here are three ways of doing it, the first two of which are correct:
@@ -541,7 +541,7 @@ While there is a distinction between "null"
 [QString](https://doc.qt.io/qt-6/qstring.html)s and empty ones, this is a
 purely historical artifact and new code is discouraged from making use of it.
 
-## QString and reading files
+### QString and reading files
 
 If you are reading in a file, it is faster to convert it from the local
 encoding to Unicode ([QString](https://doc.qt.io/qt-6/qstring.html)) in one go,
@@ -558,7 +558,7 @@ read in the blocks in the background, or by creating a local event loop.
 While one can also use `qApp->processEvents()`, it is discouraged as it easily
 leads to subtle yet often fatal problems.
 
-## QString and QByteArray
+### QString and QByteArray
 
 While [QString](https://doc.qt.io/qt-6/qstring.html) is the tool of choice for many
 string handling situations, there is one where it is particularly inefficient.
