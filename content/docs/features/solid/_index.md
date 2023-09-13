@@ -252,7 +252,7 @@ Atomic predicates can be composed using the keywords `AND` and
 action with **System Settings** and peek the description from the custom
 action desktop file (within the user profile directory).
 
-## Executing actions
+### Executing actions
 
 A matching action can be selected for execution by the user.  When that
 happens, the command line in the Exec key of the action is executed given the
@@ -267,7 +267,7 @@ So you are free to choose whatever command syntax your application supports.
 Note, however, that the forms `%d` and `%i` are deprecated by
 the Free Desktop standard and may be discontinued.
 
-## Installing actions
+### Installing actions
 
 You install system-wide actions in the directory where the **hotplug** data
 engine will look for them (see above). The action is available immediately
