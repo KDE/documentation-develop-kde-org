@@ -1,11 +1,11 @@
 #
-# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:40+0000\n"
-"PO-Revision-Date: 2023-08-26 00:34+0200\n"
+"PO-Revision-Date: 2023-09-16 11:49+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -194,6 +194,14 @@ msgid ""
 "kcoreaddons;KAboutData::applicationData) object. We exposed precisely that "
 "in our `main.cpp` and called it `About`, so we can pass it here."
 msgstr ""
+"En primer lugar, usamos la importación que definimos en el archivo `main."
+"cpp`; es decir, `org.kde.example`. A continuación añadimos una [Kirigami."
+"Action](docs:kirigami2;Action) a nuestro [cajón global](docs:kirigami2;"
+"GlobalDrawer), que nos enviará a la página «Acerca de», y creamos un "
+"componente con una [Kirigami.AboutPage]( docs:kirigami2;AboutPage) en él, "
+"que espera un objeto [KAboutData::applicationData()](docs:kcoreaddons;"
+"KAboutData::applicationData). Ya expusimos precisamente eso en nuestro `main."
+"cpp` y lo llamamos `About`, para poder pasarlo aquí."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:33
 msgid "CMakeLists"
@@ -206,12 +214,18 @@ msgid ""
 "command/find_package.html) call. It is needed for [KAboutData](docs:"
 "kcoreaddons;KAboutData)."
 msgstr ""
+"En el archivo `CMakeLists.txt` de nuestra carpeta principal, nos aseguramos "
+"de tener `CoreAddons` en la llamada a [find_package()](https://cmake.org/"
+"cmake/help/latest/command/find_package.html). Es necesario para [KAboutData]"
+"(docs:kcoreaddons;KAboutData)."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:41
 msgid ""
 "In the `CMakeLists.txt` file in the `src/` directory, nothing is needed "
 "since we instantiated out `aboutData` in place."
 msgstr ""
+"En el archivo `CMakeLists.txt` del directorio `src/` no hace falta nada, ya "
+"que hemos creado una instancia de `aboutData` en el lugar."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page.md:44
 msgid "Running the application"
@@ -771,6 +785,8 @@ msgid ""
 "Pay close attention to your included components, as omitting ones used in "
 "our code will stop our application from compiling."
 msgstr ""
+"Preste mucha atención a los componentes incluidos, ya que si omite alguno de "
+"ellos en el código se detendrá la compilación de la aplicación."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:45
 msgid ""
@@ -862,18 +878,13 @@ msgstr ""
 "funcionalidad."
 
 #: content/docs/getting-started/kirigami/components-actions.md:16
-#, fuzzy
-#| msgid ""
-#| "One feature offered by Kirigami Actions on top of [QtQuick Actions](docs:"
-#| "qtquickcontrols;QtQuick.Controls.Action) is the possibility to nest "
-#| "actions."
 msgid ""
 "Kirigami actions inherit from [QtQuick Controls Action](docs:qtquickcontrols;"
 "QtQuick.Controls.Action) and can be assigned shortcuts."
 msgstr ""
-"Una funcionalidad que ofrecen las acciones de Kirigami sobre las [acciones "
-"de QtQuick](docs:qtquickcontrols;QtQuick.Controls.Action) es la posibilidad "
-"de anidad acciones."
+"Las acciones de Kirigami heredan de la [acción de los controles de QtQuick]"
+"(docs:qtquickcontrols;QtQuick.Controls.Action) y se le pueden asignar atajos "
+"de teclado."
 
 #: content/docs/getting-started/kirigami/components-actions.md:21
 msgid ""
