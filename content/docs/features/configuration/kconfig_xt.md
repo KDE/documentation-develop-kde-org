@@ -232,7 +232,7 @@ if(currentWidth != 720)
 
 ### QML
 
-To access our configuration files in QML we must first register our `Config` class as a singleton in our application's QML engine.
+To access our configuration files in QML we must first add `GenerateProperties=true` to our `.kcfgc` file, and register our `Config` class as a singleton in our application's QML engine.
 
 ```cpp
 auto config = Config::self();
