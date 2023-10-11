@@ -19,18 +19,20 @@ You might remember this `CMakeLists.txt` file from the first tutorial:
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" >}}
 
-The first line, `project(helloworld)` defines the name of the project.
+The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be calling.
 
-After that, we set the versions of our needed tools. `cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be calling. We then use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt.
+After that, `project(helloworld)` defines the name of the project. We then use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt.
 
 Then we get to a section where we include a number of necessary CMake and KDE settings by using [extra-cmake-modules](https://api.kde.org/ecm/). You shouldn't worry too much about these lines for now and we won't need to change them in this tutorial.
 
 The following section is important, because it specifies which dependencies we'll be bringing in at compile time. Let's look at the first line: 
 
-`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons WidgetsAddons)`
+`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui QuickControls2 Widgets)`
 - [find_package()](https://cmake.org/cmake/help/latest/command/find_package.html) finds and loads the external component.
-- The first word is the framework (`KF5`).
-- Then we are calling the variable with the versions we set in the second line.
+- The first word is the framework (`Qt5`).
+- Then we are calling the variable with the version we set in the fifth line.
+- `REQUIRED` tells CMake that these dependencies are indeed required and that it shall exit with an error if the package can not be found.
+- `NO_MODULE` switches CMake into the Config mode. We don't need to worry about that at the moment.
 - `COMPONENTS` is a parameter that precedes the specific components of the framework we will include.
 - Each word after `COMPONENTS` refers to a specific component.
 
@@ -42,13 +44,13 @@ Pay close attention to your included components, as omitting ones used in our co
 
 {{< /alert >}}
 
-The final line, `add_subdirectory(src)`, points CMake into the `src/` directory.
+The final line lets CMake print out which packages it has found.
+And above that, `add_subdirectory(src)` points CMake into the `src/` directory, where it finds another `CMakeLists.txt` file:
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/CMakeLists.txt" highlight="cmake" >}}
 
 Since most of the heavy lifting is done by the first file, this one is a lot shorter.
 
-- [set()](https://cmake.org/cmake/help/latest/command/set.html) is used to set `helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to create additional C++ files we'll need to add them here too)
 - [add_executable()](https://cmake.org/cmake/help/latest/command/add_executable.html) takes care of naming our executable and grabbing the files needed to create it
 - [target_link_libraries](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) dynamically links the libraries used in our code to our executable.
 
