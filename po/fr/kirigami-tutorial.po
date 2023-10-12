@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-29 00:36+0000\n"
+"POT-Creation-Date: 2023-10-12 00:36+0000\n"
 "PO-Revision-Date: 2023-02-13 19:04+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -725,8 +725,10 @@ msgstr ""
 "tutoriel :"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:22
-msgid "The first line, `project(helloworld)` defines the name of the project."
-msgstr "La première ligne, « projet(helloworld) » définit le nom du projet."
+msgid ""
+"The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of "
+"CMake we will be calling."
+msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
 #, fuzzy
@@ -736,10 +738,9 @@ msgstr "La première ligne, « projet(helloworld) » définit le nom du projet
 #| "be calling. We then use `set` to define variables (`KF5_MIN_VERSION` and "
 #| "`QT_MIN_VERSION`) containing the versions of the KDE Frameworks and Qt."
 msgid ""
-"After that, we set the versions of our needed tools. "
-"`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be "
-"calling. We then use `set()` to define variables (`KF5_MIN_VERSION` and "
-"`QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
+"After that, `project(helloworld)` defines the name of the project. We then "
+"use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) "
+"containing the versions of KDE Frameworks and Qt."
 msgstr ""
 "Après cela, nous définissons les versions de nos outils nécessaires. "
 "« cmake_minimum_required(VERSION 3.10) » définit la version de « CMake » que "
@@ -774,9 +775,13 @@ msgstr ""
 "ligne :"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:30
+#, fuzzy
+#| msgid ""
+#| "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
+#| "WidgetsAddons)`"
 msgid ""
-"`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-"WidgetsAddons)`"
+"`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
+"Test Gui QuickControls2 Widgets)`"
 msgstr ""
 "« find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
 "WidgetsAddons) »"
@@ -790,17 +795,35 @@ msgid ""
 msgstr "« find_package » trouve et charge le composant externe."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
-msgid "The first word is the framework (`KF5`)."
+#, fuzzy
+#| msgid "The first word is the framework (`KF5`)."
+msgid "The first word is the framework (`Qt5`)."
 msgstr "Le premier mot est l'environnement de développement (« KF5 »)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:33
+#, fuzzy
+#| msgid ""
+#| "Then we are calling the variable with the versions we set in the second "
+#| "line."
 msgid ""
-"Then we are calling the variable with the versions we set in the second line."
+"Then we are calling the variable with the version we set in the fifth line."
 msgstr ""
 "Ensuite, nous appelons la variable avec les versions que nous avons définies "
 "dans la deuxième ligne."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:34
+msgid ""
+"`REQUIRED` tells CMake that these dependencies are indeed required and that "
+"it shall exit with an error if the package can not be found."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
+msgid ""
+"`NO_MODULE` switches CMake into the Config mode. We don't need to worry "
+"about that at the moment."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:36
 msgid ""
 "`COMPONENTS` is a parameter that precedes the specific components of the "
 "framework we will include."
@@ -808,13 +831,13 @@ msgstr ""
 "« COMPONENTS » est un paramètre précédant les composants spécifiques de "
 "l'environnement de développement que nous allons inclure."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:37
 msgid "Each word after `COMPONENTS` refers to a specific component."
 msgstr ""
 "Chaque mot après « COMPONENTS » fait référence à un composant spécifique."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:37
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:55
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:39
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:57
 #: content/docs/getting-started/kirigami/components-actions.md:14
 #: content/docs/getting-started/kirigami/components-actions.md:36
 #: content/docs/getting-started/kirigami/components-actions.md:192
@@ -839,7 +862,7 @@ msgstr ""
 msgid "Note"
 msgstr "Note"
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:39
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:41
 msgid ""
 "If you are looking to add any components listed in the [KDE API "
 "documentation](https://api.kde.org/) to your application, you may check the "
@@ -850,25 +873,28 @@ msgid ""
 "COMPONENTS Kirigami2)`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:41
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:43
 msgid ""
 "Pay close attention to your included components, as omitting ones used in "
 "our code will stop our application from compiling."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:45
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:47
 #, fuzzy
 #| msgid ""
 #| "The final line, `add_subdirectory(src)`, points CMake into the 'src' "
-#| "directory."
+#| "directory, where our source code is located. Let's delve into the "
+#| "CMakeLists.txt file in there."
 msgid ""
-"The final line, `add_subdirectory(src)`, points CMake into the `src/` "
-"directory."
+"The final line lets CMake print out which packages it has found. And above "
+"that, `add_subdirectory(src)` points CMake into the `src/` directory, where "
+"it finds another `CMakeLists.txt` file:"
 msgstr ""
 "La dernière ligne, « add_subdirectory(src) », fait pointer « CMake » vers le "
-"dossier « src »."
+"dossier « src », où se trouve notre code source. Plongeons dans le fichier "
+"« CMakeLists.txt » s'y trouvant."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:49
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""
 "Since most of the heavy lifting is done by the first file, this one is a lot "
 "shorter."
@@ -876,22 +902,7 @@ msgstr ""
 "Comme le gros du travail est fait dans le premier fichier, celui-ci est "
 "beaucoup plus court."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:51
-#, fuzzy
-#| msgid ""
-#| "`set` is used to set `helloworld_SRCS` to `main.cpp` and `resources.qrc` "
-#| "(if we decide to create additional C++ files we'll need to add them here "
-#| "too)"
-msgid ""
-"[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to set "
-"`helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to create "
-"additional C++ files we'll need to add them here too)"
-msgstr ""
-"La propriété « set » est utilisée pour définir « helloworld_SRCS » à « main."
-"cpp » et « resources.qrc » (si nous décidons de créer des fichiers C++ "
-"supplémentaires, nous devrons les ajouter ici aussi)."
-
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:54
 #, fuzzy
 #| msgid ""
 #| "`add_executable` takes care of naming our executable and grabbing the "
@@ -904,7 +915,7 @@ msgstr ""
 "« add_executable » se charge de nommer notre exécutable et de collecter les "
 "fichiers nécessaires à sa création."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:53
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:55
 #, fuzzy
 #| msgid ""
 #| "`target_link_libraries` dynamically links the libraries used in our code "
@@ -917,7 +928,7 @@ msgstr ""
 "« target_link_libraries » effectue une liaison dynamique entre les "
 "bibliothèques utilisées dans notre code et notre exécutable."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:57
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:59
 #, fuzzy
 #| msgid ""
 #| "Note that these libraries should match the components that we included in "
@@ -933,7 +944,7 @@ msgstr ""
 "autrement ces composants ne seront pas inclus et notre application ne pourra "
 "pas se compiler."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:61
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:63
 msgid "This setup will be useful when developing most Kirigami apps."
 msgstr ""
 "Cette configuration sera utile lors du développement de la plupart des "
@@ -8370,6 +8381,35 @@ msgstr ""
 "La taille de la police du [Thème] de Kirigami (docs:kirigami2;Theme) est "
 "disponible sous la forme de la propriété « Kirigami.Theme.defaultFont."
 "pointSize » dans votre application."
+
+#~ msgid ""
+#~ "The first line, `project(helloworld)` defines the name of the project."
+#~ msgstr "La première ligne, « projet(helloworld) » définit le nom du projet."
+
+#, fuzzy
+#~| msgid ""
+#~| "The final line, `add_subdirectory(src)`, points CMake into the 'src' "
+#~| "directory."
+#~ msgid ""
+#~ "The final line, `add_subdirectory(src)`, points CMake into the `src/` "
+#~ "directory."
+#~ msgstr ""
+#~ "La dernière ligne, « add_subdirectory(src) », fait pointer « CMake » vers "
+#~ "le dossier « src »."
+
+#, fuzzy
+#~| msgid ""
+#~| "`set` is used to set `helloworld_SRCS` to `main.cpp` and `resources.qrc` "
+#~| "(if we decide to create additional C++ files we'll need to add them here "
+#~| "too)"
+#~ msgid ""
+#~ "[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to "
+#~ "set `helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to "
+#~ "create additional C++ files we'll need to add them here too)"
+#~ msgstr ""
+#~ "La propriété « set » est utilisée pour définir « helloworld_SRCS » à "
+#~ "« main.cpp » et « resources.qrc » (si nous décidons de créer des fichiers "
+#~ "C++ supplémentaires, nous devrons les ajouter ici aussi)."
 
 #~ msgid ""
 #~ "First, we are going to create two files in the `src/` directory called "

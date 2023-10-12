@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-29 00:36+0000\n"
+"POT-Creation-Date: 2023-10-12 00:36+0000\n"
 "PO-Revision-Date: 2021-08-18 17:40+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -471,15 +471,16 @@ msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:22
-msgid "The first line, `project(helloworld)` defines the name of the project."
+msgid ""
+"The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of "
+"CMake we will be calling."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
 msgid ""
-"After that, we set the versions of our needed tools. "
-"`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be "
-"calling. We then use `set()` to define variables (`KF5_MIN_VERSION` and "
-"`QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
+"After that, `project(helloworld)` defines the name of the project. We then "
+"use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) "
+"containing the versions of KDE Frameworks and Qt."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:26
@@ -498,8 +499,8 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:30
 msgid ""
-"`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-"WidgetsAddons)`"
+"`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
+"Test Gui QuickControls2 Widgets)`"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:31
@@ -509,26 +510,38 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
-msgid "The first word is the framework (`KF5`)."
+msgid "The first word is the framework (`Qt5`)."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:33
 msgid ""
-"Then we are calling the variable with the versions we set in the second line."
+"Then we are calling the variable with the version we set in the fifth line."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:34
+msgid ""
+"`REQUIRED` tells CMake that these dependencies are indeed required and that "
+"it shall exit with an error if the package can not be found."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
+msgid ""
+"`NO_MODULE` switches CMake into the Config mode. We don't need to worry "
+"about that at the moment."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:36
 msgid ""
 "`COMPONENTS` is a parameter that precedes the specific components of the "
 "framework we will include."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:37
 msgid "Each word after `COMPONENTS` refers to a specific component."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:37
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:55
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:39
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:57
 #: content/docs/getting-started/kirigami/components-actions.md:14
 #: content/docs/getting-started/kirigami/components-actions.md:36
 #: content/docs/getting-started/kirigami/components-actions.md:192
@@ -553,7 +566,7 @@ msgstr ""
 msgid "Note"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:39
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:41
 msgid ""
 "If you are looking to add any components listed in the [KDE API "
 "documentation](https://api.kde.org/) to your application, you may check the "
@@ -564,53 +577,47 @@ msgid ""
 "COMPONENTS Kirigami2)`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:41
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:43
 msgid ""
 "Pay close attention to your included components, as omitting ones used in "
 "our code will stop our application from compiling."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:45
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:47
 msgid ""
-"The final line, `add_subdirectory(src)`, points CMake into the `src/` "
-"directory."
+"The final line lets CMake print out which packages it has found. And above "
+"that, `add_subdirectory(src)` points CMake into the `src/` directory, where "
+"it finds another `CMakeLists.txt` file:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:49
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""
 "Since most of the heavy lifting is done by the first file, this one is a lot "
 "shorter."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:51
-msgid ""
-"[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to set "
-"`helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to create "
-"additional C++ files we'll need to add them here too)"
-msgstr ""
-
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:54
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of naming our executable and grabbing the "
 "files needed to create it"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:53
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:55
 msgid ""
 "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
 "to our executable."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:57
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:59
 msgid ""
 "Note that these libraries should match the components that we included in "
 "our previous `CMakeLists.txt` file - otherwise these components will not be "
 "included and our application won't compile."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:61
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:63
 msgid "This setup will be useful when developing most Kirigami apps."
 msgstr ""
 

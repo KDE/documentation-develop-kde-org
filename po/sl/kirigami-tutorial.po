@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-29 00:36+0000\n"
+"POT-Creation-Date: 2023-10-12 00:36+0000\n"
 "PO-Revision-Date: 2023-08-23 19:41+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -620,15 +620,22 @@ msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
 msgstr "Morda se spomnite datoteke `CMakeLists.txt` iz prve vaje:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:22
-msgid "The first line, `project(helloworld)` defines the name of the project."
-msgstr "Prva vrstica, »project(helloworld)«, določa ime projekta."
+msgid ""
+"The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of "
+"CMake we will be calling."
+msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
+#, fuzzy
+#| msgid ""
+#| "After that, we set the versions of our needed tools. "
+#| "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will "
+#| "be calling. We then use `set()` to define variables (`KF5_MIN_VERSION` "
+#| "and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgid ""
-"After that, we set the versions of our needed tools. "
-"`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be "
-"calling. We then use `set()` to define variables (`KF5_MIN_VERSION` and "
-"`QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
+"After that, `project(helloworld)` defines the name of the project. We then "
+"use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) "
+"containing the versions of KDE Frameworks and Qt."
 msgstr ""
 "Zatem nastavljamo različice zahtevanih orodij. "
 "`cmake_minimum_required(VERSION 3.16)` določa različico CMake, ki jo bomo "
@@ -655,9 +662,13 @@ msgstr ""
 "v času prevajanja. Poglejmo prvo vrstico:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:30
+#, fuzzy
+#| msgid ""
+#| "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
+#| "WidgetsAddons)`"
 msgid ""
-"`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-"WidgetsAddons)`"
+"`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
+"Test Gui QuickControls2 Widgets)`"
 msgstr ""
 "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
 "WidgetsAddons)`"
@@ -671,17 +682,35 @@ msgstr ""
 "html) najde in naloži zunanjo komponento."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
-msgid "The first word is the framework (`KF5`)."
+#, fuzzy
+#| msgid "The first word is the framework (`KF5`)."
+msgid "The first word is the framework (`Qt5`)."
 msgstr "Prva beseda je ogrodje (`KF5`)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:33
+#, fuzzy
+#| msgid ""
+#| "Then we are calling the variable with the versions we set in the second "
+#| "line."
 msgid ""
-"Then we are calling the variable with the versions we set in the second line."
+"Then we are calling the variable with the version we set in the fifth line."
 msgstr ""
 "Potem kličemo spremenljivko z različicami, ki smo jih nastavili v drugi "
 "vrstici."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:34
+msgid ""
+"`REQUIRED` tells CMake that these dependencies are indeed required and that "
+"it shall exit with an error if the package can not be found."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
+msgid ""
+"`NO_MODULE` switches CMake into the Config mode. We don't need to worry "
+"about that at the moment."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:36
 msgid ""
 "`COMPONENTS` is a parameter that precedes the specific components of the "
 "framework we will include."
@@ -689,12 +718,12 @@ msgstr ""
 "`COMPONENTS` je parameter, ki je pred posebnimi sestavnimi deli ogrodja, ki "
 "ga bomo vključili."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:37
 msgid "Each word after `COMPONENTS` refers to a specific component."
 msgstr "Vsaka beseda za `COMPONENTS` se nanaša na določeno komponento."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:37
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:55
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:39
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:57
 #: content/docs/getting-started/kirigami/components-actions.md:14
 #: content/docs/getting-started/kirigami/components-actions.md:36
 #: content/docs/getting-started/kirigami/components-actions.md:192
@@ -719,7 +748,7 @@ msgstr "Vsaka beseda za `COMPONENTS` se nanaša na določeno komponento."
 msgid "Note"
 msgstr "Opomba"
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:39
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:41
 msgid ""
 "If you are looking to add any components listed in the [KDE API "
 "documentation](https://api.kde.org/) to your application, you may check the "
@@ -736,7 +765,7 @@ msgstr ""
 "ki z dodatkom [extra-cmake-modules](https://api.kde.org/ecm/) postane nekaj "
 "podobnega kot `find_package(KF5 COMPONENTS Kirigami2)`."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:41
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:43
 msgid ""
 "Pay close attention to your included components, as omitting ones used in "
 "our code will stop our application from compiling."
@@ -744,30 +773,28 @@ msgstr ""
 "Bodite pozorni na svoje vključene komponente, prav tako kot na izpuščene iz "
 "naše kode saj bodo preprečile, da bi se naša aplikacija prevedla."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:45
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:47
+#, fuzzy
+#| msgid ""
+#| "The final line, `add_subdirectory(src)`, points CMake to the `helloworld/"
+#| "src/` directory, where our source code is located. Let's delve into the "
+#| "`helloworld/src/CMakeLists.txt` file in there."
 msgid ""
-"The final line, `add_subdirectory(src)`, points CMake into the `src/` "
-"directory."
-msgstr "Končna vrstica,`add_subdirectory(src)`, kaže CMake v imenik `src/`."
+"The final line lets CMake print out which packages it has found. And above "
+"that, `add_subdirectory(src)` points CMake into the `src/` directory, where "
+"it finds another `CMakeLists.txt` file:"
+msgstr ""
+"Končna vrstica, 'add_subdirectory(src)', kaže CMake v imenik '`helloworld/"
+"src/', kjer se nahaja naša izvorna koda. Postavimo `helloworld/src/"
+"CMakeLists.txt` tja."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:49
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""
 "Since most of the heavy lifting is done by the first file, this one is a lot "
 "shorter."
 msgstr "Ker večino težkega dela opravi prva datoteka, je ta precej krajša."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:51
-msgid ""
-"[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to set "
-"`helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to create "
-"additional C++ files we'll need to add them here too)"
-msgstr ""
-"[set()](https://cmake.org/cmake/help/latest/command/set.html) se uporablja "
-"za nastavitev `helloworld_SRCS` na `main.cpp`  in `resources.qrc` (če se "
-"odločimo za ustvarjanje dodatnih datotek C++, jih bomo morali dodati tudi "
-"tukaj)"
-
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:54
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of naming our executable and grabbing the "
@@ -777,7 +804,7 @@ msgstr ""
 "add_executable.html) skrbi za poimenovanje naše izvršilne datoteke in "
 "pridobivanje datotek, ki so potrebne za njeno izdelavo"
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:53
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:55
 msgid ""
 "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
@@ -787,7 +814,7 @@ msgstr ""
 "target_link_libraries.html) dinamično povezuje knjižnice, uporabljene v naši "
 "kodi, z našo izvršitveno datoteko."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:57
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:59
 msgid ""
 "Note that these libraries should match the components that we included in "
 "our previous `CMakeLists.txt` file - otherwise these components will not be "
@@ -797,7 +824,7 @@ msgstr ""
 "vključili v našo prejšnjo datoteko `CMakeLists.txt` - v nasprotnem primeru "
 "te komponente ne bodo vključene in naša aplikacija ne bo prevedena."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:61
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:63
 msgid "This setup will be useful when developing most Kirigami apps."
 msgstr ""
 "Ta nastavitev bo uporabna pri razvoju večine programov oz. aplikacij "
@@ -6786,6 +6813,25 @@ msgstr ""
 "Velikost pisave programa [Kirigami.Theme](docs:kirigami2;Kirigami::"
 "PlatformTheme) Kirigami je na voljo kot `Kirigami.Theme.defaultFont."
 "pointSize` v vaši aplikaciji."
+
+#~ msgid ""
+#~ "The first line, `project(helloworld)` defines the name of the project."
+#~ msgstr "Prva vrstica, »project(helloworld)«, določa ime projekta."
+
+#~ msgid ""
+#~ "The final line, `add_subdirectory(src)`, points CMake into the `src/` "
+#~ "directory."
+#~ msgstr "Končna vrstica,`add_subdirectory(src)`, kaže CMake v imenik `src/`."
+
+#~ msgid ""
+#~ "[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to "
+#~ "set `helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to "
+#~ "create additional C++ files we'll need to add them here too)"
+#~ msgstr ""
+#~ "[set()](https://cmake.org/cmake/help/latest/command/set.html) se "
+#~ "uporablja za nastavitev `helloworld_SRCS` na `main.cpp`  in `resources."
+#~ "qrc` (če se odločimo za ustvarjanje dodatnih datotek C++, jih bomo morali "
+#~ "dodati tudi tukaj)"
 
 #~ msgid ""
 #~ "First, we are going to create two files in the `src/` directory called "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-29 00:36+0000\n"
+"POT-Creation-Date: 2023-10-12 00:36+0000\n"
 "PO-Revision-Date: 2023-10-08 21:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -662,18 +662,24 @@ msgstr ""
 "És possible que recordeu aquest fitxer `CMakeLists.txt` de la primera guia "
 "d'aprenentatge:"
 
-# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:22
-msgid "The first line, `project(helloworld)` defines the name of the project."
-msgstr "La primera línia, `project(helloworld)` defineix el nom del projecte."
+msgid ""
+"The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of "
+"CMake we will be calling."
+msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
+#, fuzzy
+#| msgid ""
+#| "After that, we set the versions of our needed tools. "
+#| "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will "
+#| "be calling. We then use `set()` to define variables (`KF5_MIN_VERSION` "
+#| "and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgid ""
-"After that, we set the versions of our needed tools. "
-"`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be "
-"calling. We then use `set()` to define variables (`KF5_MIN_VERSION` and "
-"`QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
+"After that, `project(helloworld)` defines the name of the project. We then "
+"use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) "
+"containing the versions of KDE Frameworks and Qt."
 msgstr ""
 "Després d'això, establim les versions de les nostres eines necessàries. "
 "`cmake_minimum_required(VERSION 3.16)` estableix la versió de CMake que "
@@ -704,9 +710,13 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:30
+#, fuzzy
+#| msgid ""
+#| "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
+#| "WidgetsAddons)`"
 msgid ""
-"`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-"WidgetsAddons)`"
+"`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
+"Test Gui QuickControls2 Widgets)`"
 msgstr ""
 "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
 "WidgetsAddons)`"
@@ -721,18 +731,36 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
-msgid "The first word is the framework (`KF5`)."
+#, fuzzy
+#| msgid "The first word is the framework (`KF5`)."
+msgid "The first word is the framework (`Qt5`)."
 msgstr "La primera paraula és el marc de treball (`KF5`)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:33
+#, fuzzy
+#| msgid ""
+#| "Then we are calling the variable with the versions we set in the second "
+#| "line."
 msgid ""
-"Then we are calling the variable with the versions we set in the second line."
+"Then we are calling the variable with the version we set in the fifth line."
 msgstr ""
 "Després fem una crida a la variable amb les versions que hem establert a la "
 "segona línia."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:34
+msgid ""
+"`REQUIRED` tells CMake that these dependencies are indeed required and that "
+"it shall exit with an error if the package can not be found."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
+msgid ""
+"`NO_MODULE` switches CMake into the Config mode. We don't need to worry "
+"about that at the moment."
+msgstr ""
+
+# skip-rule: t-acc_obe,punctuation-accent-quotes
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:36
 msgid ""
 "`COMPONENTS` is a parameter that precedes the specific components of the "
 "framework we will include."
@@ -741,13 +769,13 @@ msgstr ""
 "marc de treball que incloem."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:37
 msgid "Each word after `COMPONENTS` refers to a specific component."
 msgstr ""
 "Cada paraula després de `COMPONENTS` es refereix a un component específic."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:37
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:55
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:39
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:57
 #: content/docs/getting-started/kirigami/components-actions.md:14
 #: content/docs/getting-started/kirigami/components-actions.md:36
 #: content/docs/getting-started/kirigami/components-actions.md:192
@@ -773,7 +801,7 @@ msgid "Note"
 msgstr "Nota"
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:39
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:41
 msgid ""
 "If you are looking to add any components listed in the [KDE API "
 "documentation](https://api.kde.org/) to your application, you may check the "
@@ -791,7 +819,7 @@ msgstr ""
 "modules](https://api.kde.org/ecm/) es converteix en quelcom com "
 "`find_package(KF5 COMPONENTS Kirigami2)`."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:41
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:43
 msgid ""
 "Pay close attention to your included components, as omitting ones used in "
 "our code will stop our application from compiling."
@@ -799,16 +827,23 @@ msgstr ""
 "Pareu molta atenció als components inclosos, ja que l'omissió dels "
 "utilitzats en el nostre codi aturarà la compilació de l'aplicació."
 
-# skip-rule: t-acc_obe,punctuation-simple-quotes
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:45
+# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-simple-quotes
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:47
+#, fuzzy
+#| msgid ""
+#| "The final line, `add_subdirectory(src)`, points CMake to the `helloworld/"
+#| "src/` directory, where our source code is located. Let's delve into the "
+#| "`helloworld/src/CMakeLists.txt` file in there."
 msgid ""
-"The final line, `add_subdirectory(src)`, points CMake into the `src/` "
-"directory."
+"The final line lets CMake print out which packages it has found. And above "
+"that, `add_subdirectory(src)` points CMake into the `src/` directory, where "
+"it finds another `CMakeLists.txt` file:"
 msgstr ""
-"L'última línia, `add_subdirectory(src)`, apunta CMake a dins del directori "
-"`src/`."
+"L'última línia, `add_subdirectory(src)`, apunta el CMake al directori "
+"`helloworld/src/`, on es troba el nostre codi font. Allà aprofundirem en el "
+"fitxer `helloworld/src/CMakeLists.txt`."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:49
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""
 "Since most of the heavy lifting is done by the first file, this one is a lot "
 "shorter."
@@ -816,19 +851,8 @@ msgstr ""
 "Atès que la major part de la feina pesada es realitza amb la primera llima, "
 "aquesta és molt més curta."
 
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:51
-msgid ""
-"[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to set "
-"`helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to create "
-"additional C++ files we'll need to add them here too)"
-msgstr ""
-"[set()](https://cmake.org/cmake/help/latest/command/set.html) s'utilitza per "
-"a establir `helloworld_SRCS` al `main.cpp` i `resources.qrc` (si decidim "
-"crear fitxers en C++ addicionals, també els haurem d'afegir aquí)."
-
 # skip-rule: punctuation-period-no
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:54
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of naming our executable and grabbing the "
@@ -838,7 +862,7 @@ msgstr ""
 "add_executable.html) s'encarrega d'anomenar el nostre executable i prendre "
 "els fitxers necessaris per a crear-lo."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:53
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:55
 msgid ""
 "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
@@ -849,7 +873,7 @@ msgstr ""
 "utilitzades en el nostre codi amb el nostre executable."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:57
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:59
 msgid ""
 "Note that these libraries should match the components that we included in "
 "our previous `CMakeLists.txt` file - otherwise these components will not be "
@@ -860,7 +884,7 @@ msgstr ""
 "contrari, aquests components no s'inclouran i la nostra aplicació no "
 "compilarà."
 
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:61
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:63
 msgid "This setup will be useful when developing most Kirigami apps."
 msgstr ""
 "Aquesta configuració serà útil en desenvolupar la majoria de les aplicacions "
@@ -7122,3 +7146,27 @@ msgstr ""
 "La mida del tipus de lletra del [Kirigami.Theme](docs:kirigami2;Kirigami::"
 "PlatformTheme) està disponible en la vostra aplicació com una `Kirigami."
 "Theme.defaultFont.pointSize`."
+
+# skip-rule: t-acc_obe
+#~ msgid ""
+#~ "The first line, `project(helloworld)` defines the name of the project."
+#~ msgstr ""
+#~ "La primera línia, `project(helloworld)` defineix el nom del projecte."
+
+# skip-rule: t-acc_obe,punctuation-simple-quotes
+#~ msgid ""
+#~ "The final line, `add_subdirectory(src)`, points CMake into the `src/` "
+#~ "directory."
+#~ msgstr ""
+#~ "L'última línia, `add_subdirectory(src)`, apunta CMake a dins del "
+#~ "directori `src/`."
+
+# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
+#~ msgid ""
+#~ "[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to "
+#~ "set `helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to "
+#~ "create additional C++ files we'll need to add them here too)"
+#~ msgstr ""
+#~ "[set()](https://cmake.org/cmake/help/latest/command/set.html) s'utilitza "
+#~ "per a establir `helloworld_SRCS` al `main.cpp` i `resources.qrc` (si "
+#~ "decidim crear fitxers en C++ addicionals, també els haurem d'afegir aquí)."
