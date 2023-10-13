@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 00:36+0000\n"
-"PO-Revision-Date: 2023-03-23 06:46+0200\n"
+"PO-Revision-Date: 2023-10-12 09:38+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -637,24 +637,18 @@ msgid ""
 "The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of "
 "CMake we will be calling."
 msgstr ""
+"Перший рядок, `cmake_minimum_required(VERSION 3.16)`, встановлює версію "
+"CMake, яку буде викликано."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
-#, fuzzy
-#| msgid ""
-#| "After that, we set the versions of our needed tools. "
-#| "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will "
-#| "be calling. We then use `set()` to define variables (`KF5_MIN_VERSION` "
-#| "and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgid ""
 "After that, `project(helloworld)` defines the name of the project. We then "
 "use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) "
 "containing the versions of KDE Frameworks and Qt."
 msgstr ""
-"Після цього ми встановлюємо версії потрібних нам інструментів. "
-"`cmake_minimum_required(VERSION 3.16)` встановлює версію CMake, яку ми "
-"викликатимемо. Далі, ми використовуємо `set()` для визначення змінних "
-"(`KF5_MIN_VERSION` і `QT_MIN_VERSION`), які містять дані щодо версій KDE "
-"Frameworks і Qt."
+"Після цього, `project(helloworld)` встановлює назву проєкту. Далі, ми "
+"використовуємо `set()` для визначення змінних (`KF5_MIN_VERSION` і "
+"`QT_MIN_VERSION`), які містять дані щодо версій KDE Frameworks і Qt."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:26
 msgid ""
@@ -677,16 +671,12 @@ msgstr ""
 "використовуватимемо під час компіляції. Погляньмо на перший рядок:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:30
-#, fuzzy
-#| msgid ""
-#| "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-#| "WidgetsAddons)`"
 msgid ""
 "`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
 "Test Gui QuickControls2 Widgets)`"
 msgstr ""
-"`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-"WidgetsAddons)`"
+"`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
+"Test Gui QuickControls2 Widgets)`"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:31
 msgid ""
@@ -697,20 +687,14 @@ msgstr ""
 "html) знаходить і завантажує зовнішній компонент."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
-#, fuzzy
-#| msgid "The first word is the framework (`KF5`)."
 msgid "The first word is the framework (`Qt5`)."
-msgstr "Першим словом є бібліотека (`KF5`)."
+msgstr "Першим словом є бібліотека (`Qt5`)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:33
-#, fuzzy
-#| msgid ""
-#| "Then we are calling the variable with the versions we set in the second "
-#| "line."
 msgid ""
 "Then we are calling the variable with the version we set in the fifth line."
 msgstr ""
-"Далі, ми викликаємо змінну із версіями, значення яких ми вказали у другому "
+"Далі, ми викликаємо змінну із версією, значення яких ми вказали у п'ятому "
 "рядку."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:34
@@ -718,12 +702,17 @@ msgid ""
 "`REQUIRED` tells CMake that these dependencies are indeed required and that "
 "it shall exit with an error if the package can not be found."
 msgstr ""
+"`REQUIRED` повідомляє CMake, що ці залежності є справді обов'язковими і що "
+"програма має повідомити про помилку і завершити роботу, якщо пакунок не буде "
+"знайдено."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
 msgid ""
 "`NO_MODULE` switches CMake into the Config mode. We don't need to worry "
 "about that at the moment."
 msgstr ""
+"`NO_MODULE` перемикає CMake у режим Config. Зараз перейматися цим немає "
+"сенсу."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:36
 msgid ""
@@ -791,19 +780,14 @@ msgstr ""
 "вашу програму."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:47
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake to the `helloworld/"
-#| "src/` directory, where our source code is located. Let's delve into the "
-#| "`helloworld/src/CMakeLists.txt` file in there."
 msgid ""
 "The final line lets CMake print out which packages it has found. And above "
 "that, `add_subdirectory(src)` points CMake into the `src/` directory, where "
 "it finds another `CMakeLists.txt` file:"
 msgstr ""
-"Останній рядок, `add_subdirectory(src)`, вказує каталог `helloworld/src/` "
-"для CMake, де зберігатиметься наш початковий код. Розгляньмо докладніше файл "
-"`helloworld/src/CMakeLists.txt` у цьому каталозі."
+"Останній рядок дозволяє CMake вивести список пакунків, які було знайдено. А "
+"вище, `add_subdirectory(src)` вказує CMake каталог `src/`, де програма "
+"знайде інший файл `CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""

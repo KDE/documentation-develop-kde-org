@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 00:36+0000\n"
-"PO-Revision-Date: 2023-10-08 21:32+0200\n"
+"PO-Revision-Date: 2023-10-12 09:33+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -662,30 +662,25 @@ msgstr ""
 "És possible que recordeu aquest fitxer `CMakeLists.txt` de la primera guia "
 "d'aprenentatge:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:22
 msgid ""
 "The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of "
 "CMake we will be calling."
 msgstr ""
+"La primera línia, `cmake_minimum_required(VERSION 3.16)` estableix la versió "
+"del CMake que es cridarà."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
-#, fuzzy
-#| msgid ""
-#| "After that, we set the versions of our needed tools. "
-#| "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will "
-#| "be calling. We then use `set()` to define variables (`KF5_MIN_VERSION` "
-#| "and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgid ""
 "After that, `project(helloworld)` defines the name of the project. We then "
 "use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) "
 "containing the versions of KDE Frameworks and Qt."
 msgstr ""
-"Després d'això, establim les versions de les nostres eines necessàries. "
-"`cmake_minimum_required(VERSION 3.16)` estableix la versió de CMake que "
-"cridarem. Després utilitzem `set()` per a definir les variables "
-"(`KF5_MIN_VERSION` i `QT_MIN_VERSION`) que contenen les versions dels "
-"Frameworks del KDE i de les Qt."
+"Després d'això, `project(helloworld)` defineix el nom del projecte. Després "
+"farem servir `set()` per a definir les variables (`KF5_MIN_VERSION` i "
+"`QT_MIN_VERSION`) que contenen les versions dels Frameworks de KDE i les Qt."
 
 # skip-rule: common-settings
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:26
@@ -710,16 +705,12 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:30
-#, fuzzy
-#| msgid ""
-#| "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-#| "WidgetsAddons)`"
 msgid ""
 "`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
 "Test Gui QuickControls2 Widgets)`"
 msgstr ""
-"`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-"WidgetsAddons)`"
+"`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
+"Test Gui QuickControls2 Widgets)`"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:31
 msgid ""
@@ -731,33 +722,33 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
-#, fuzzy
-#| msgid "The first word is the framework (`KF5`)."
 msgid "The first word is the framework (`Qt5`)."
-msgstr "La primera paraula és el marc de treball (`KF5`)."
+msgstr "La primera paraula és el marc de treball (`Qt5`)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:33
-#, fuzzy
-#| msgid ""
-#| "Then we are calling the variable with the versions we set in the second "
-#| "line."
 msgid ""
 "Then we are calling the variable with the version we set in the fifth line."
 msgstr ""
 "Després fem una crida a la variable amb les versions que hem establert a la "
-"segona línia."
+"cinquena línia."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:34
 msgid ""
 "`REQUIRED` tells CMake that these dependencies are indeed required and that "
 "it shall exit with an error if the package can not be found."
 msgstr ""
+"`REQUIRED` fa saber al CMake que aquestes dependencies són necessàries i que "
+"hauria de sortir amb un error si no s'ha pogut trobar el paquet."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
 msgid ""
 "`NO_MODULE` switches CMake into the Config mode. We don't need to worry "
 "about that at the moment."
 msgstr ""
+"`NO_MODULE` canvia el CMake en el mode Config. De moment, això no ens ha de "
+"preocupar."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:36
@@ -829,19 +820,14 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-simple-quotes
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:47
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake to the `helloworld/"
-#| "src/` directory, where our source code is located. Let's delve into the "
-#| "`helloworld/src/CMakeLists.txt` file in there."
 msgid ""
 "The final line lets CMake print out which packages it has found. And above "
 "that, `add_subdirectory(src)` points CMake into the `src/` directory, where "
 "it finds another `CMakeLists.txt` file:"
 msgstr ""
-"L'última línia, `add_subdirectory(src)`, apunta el CMake al directori "
-"`helloworld/src/`, on es troba el nostre codi font. Allà aprofundirem en el "
-"fitxer `helloworld/src/CMakeLists.txt`."
+"La línia final permet que el CMake imprimeixi els paquets que ha trobat. I a "
+"sobre d'això, `add_subdirectory(src)` a punta el CMake en el directori `src/"
+"`, a on troba un altre fitxer `CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""

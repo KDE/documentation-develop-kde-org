@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 00:36+0000\n"
-"PO-Revision-Date: 2023-08-23 19:41+0200\n"
+"PO-Revision-Date: 2023-10-12 05:08+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -624,23 +624,18 @@ msgid ""
 "The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of "
 "CMake we will be calling."
 msgstr ""
+"Prva vrstica, `cmake_minimum_required(VERSION 3.16)` nastavi različico "
+"CMake, ki jo bomo klicali."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
-#, fuzzy
-#| msgid ""
-#| "After that, we set the versions of our needed tools. "
-#| "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will "
-#| "be calling. We then use `set()` to define variables (`KF5_MIN_VERSION` "
-#| "and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgid ""
 "After that, `project(helloworld)` defines the name of the project. We then "
 "use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) "
 "containing the versions of KDE Frameworks and Qt."
 msgstr ""
-"Zatem nastavljamo različice zahtevanih orodij. "
-"`cmake_minimum_required(VERSION 3.16)` določa različico CMake, ki jo bomo "
-"klicali. Nato uporabimo `set()` za določanje spremenljivk (`KF5_MIN_VERSION` "
-"in `QT_MIN_VERSION`), ki vsebujejo različice Ogrodja KDE in Qt."
+"Nato `project(helloworld)` definira ime projekta. Nato uporabimo `set()` za "
+"definiranje spremenljivk (`KF5_MIN_VERSION` in `QT_MIN_VERSION`), ki "
+"vsebujejo različici KDE Frameworks in Qt."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:26
 msgid ""
@@ -662,16 +657,12 @@ msgstr ""
 "v času prevajanja. Poglejmo prvo vrstico:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:30
-#, fuzzy
-#| msgid ""
-#| "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-#| "WidgetsAddons)`"
 msgid ""
 "`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
 "Test Gui QuickControls2 Widgets)`"
 msgstr ""
-"`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-"WidgetsAddons)`"
+"`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
+"Test Gui QuickControls2 Widgets)`"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:31
 msgid ""
@@ -682,33 +673,30 @@ msgstr ""
 "html) najde in naloži zunanjo komponento."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
-#, fuzzy
-#| msgid "The first word is the framework (`KF5`)."
 msgid "The first word is the framework (`Qt5`)."
-msgstr "Prva beseda je ogrodje (`KF5`)."
+msgstr "Prva beseda je ogrodje (`Qt5`)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:33
-#, fuzzy
-#| msgid ""
-#| "Then we are calling the variable with the versions we set in the second "
-#| "line."
 msgid ""
 "Then we are calling the variable with the version we set in the fifth line."
 msgstr ""
-"Potem kličemo spremenljivko z različicami, ki smo jih nastavili v drugi "
-"vrstici."
+"Potem kličemo spremenljivko z različico, ki smo jo nastavili v peti vrstici."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:34
 msgid ""
 "`REQUIRED` tells CMake that these dependencies are indeed required and that "
 "it shall exit with an error if the package can not be found."
 msgstr ""
+"`REQUIRED` pove CMake, da so te odvisnosti res zahtevane in da bo končal "
+"delo z napako, če paketa ni mogoče najti."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
 msgid ""
 "`NO_MODULE` switches CMake into the Config mode. We don't need to worry "
 "about that at the moment."
 msgstr ""
+"`NO_MODULE` preklopi CMake v način konfiguracije. Za to nam trenutno ni "
+"treba skrbeti."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:36
 msgid ""
@@ -774,19 +762,14 @@ msgstr ""
 "naše kode saj bodo preprečile, da bi se naša aplikacija prevedla."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:47
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake to the `helloworld/"
-#| "src/` directory, where our source code is located. Let's delve into the "
-#| "`helloworld/src/CMakeLists.txt` file in there."
 msgid ""
 "The final line lets CMake print out which packages it has found. And above "
 "that, `add_subdirectory(src)` points CMake into the `src/` directory, where "
 "it finds another `CMakeLists.txt` file:"
 msgstr ""
-"Končna vrstica, 'add_subdirectory(src)', kaže CMake v imenik '`helloworld/"
-"src/', kjer se nahaja naša izvorna koda. Postavimo `helloworld/src/"
-"CMakeLists.txt` tja."
+"Zadnja vrstica omogoča, da CMake natisne, katere pakete je našel. In nad tem "
+"`add_subdirectory(src)` usmeri CMake v imenik `src/`, kjer najde drugo "
+"datoteko `CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""
