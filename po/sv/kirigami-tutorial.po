@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 00:36+0000\n"
-"PO-Revision-Date: 2023-08-05 23:19+0200\n"
+"PO-Revision-Date: 2023-10-14 20:04+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -626,23 +626,18 @@ msgid ""
 "The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of "
 "CMake we will be calling."
 msgstr ""
+"Första raden, `cmake_minimum_required(VERSION 3.16)` ställer in version av "
+"CMake som vi anropar."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
-#, fuzzy
-#| msgid ""
-#| "After that, we set the versions of our needed tools. "
-#| "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will "
-#| "be calling. We then use `set()` to define variables (`KF5_MIN_VERSION` "
-#| "and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgid ""
 "After that, `project(helloworld)` defines the name of the project. We then "
 "use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) "
 "containing the versions of KDE Frameworks and Qt."
 msgstr ""
-"Därefter anger vi versionerna av verktygen vi behöver. "
-"`cmake_minimum_required(VERSION 3.16)` anger versionen av CMake vi anropar. "
-"Därefter använder vi `set()` för att definiera variabler (`KF5_MIN_VERSION` "
-"och `QT_MIN_VERSION`) som innehåller versionerna av KDE Ramverk och Qt."
+"Därefter definierar `project(helloworld)` projektets namn. Sedan använder vi "
+"`set()` för att definiera variabler (`KF5_MIN_VERSION` och `QT_MIN_VERSION`) "
+"som innehåller versionerna av KDE Ramverk och Qt."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:26
 msgid ""
@@ -665,16 +660,12 @@ msgstr ""
 "med vid kompileringstid. Låt oss titta på den första raden:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:30
-#, fuzzy
-#| msgid ""
-#| "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-#| "WidgetsAddons)`"
 msgid ""
 "`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
 "Test Gui QuickControls2 Widgets)`"
 msgstr ""
-"`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-"WidgetsAddons)`"
+"`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
+"Test Gui QuickControls2 Widgets)`"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:31
 msgid ""
@@ -685,32 +676,30 @@ msgstr ""
 "html) hittar och läser in den externa komponenten."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
-#, fuzzy
-#| msgid "The first word is the framework (`KF5`)."
 msgid "The first word is the framework (`Qt5`)."
-msgstr "Det första ordet är ramverket (`KF5`)."
+msgstr "Det första ordet är ramverket (`Qt5`)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:33
-#, fuzzy
-#| msgid ""
-#| "Then we are calling the variable with the versions we set in the second "
-#| "line."
 msgid ""
 "Then we are calling the variable with the version we set in the fifth line."
 msgstr ""
-"Därefter anropar vi variabeln med versionerna vi angav på den andra raden."
+"Därefter anropar vi variabeln med versionen vi angav på den femte raden."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:34
 msgid ""
 "`REQUIRED` tells CMake that these dependencies are indeed required and that "
 "it shall exit with an error if the package can not be found."
 msgstr ""
+"`REQUIRED` talar om för CMake beroendena verkligen krävs och att det ska "
+"avslutas med ett fel om paketet inte kan hittas."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
 msgid ""
 "`NO_MODULE` switches CMake into the Config mode. We don't need to worry "
 "about that at the moment."
 msgstr ""
+"`NO_MODULE` ställer om CMake till läget Config. Vi behöver inte bry oss om "
+"det för tillfället."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:36
 msgid ""
@@ -777,19 +766,14 @@ msgstr ""
 "används ivår kod förhindrar vår program från att kompileras."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:47
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake to the `helloworld/"
-#| "src/` directory, where our source code is located. Let's delve into the "
-#| "`helloworld/src/CMakeLists.txt` file in there."
 msgid ""
 "The final line lets CMake print out which packages it has found. And above "
 "that, `add_subdirectory(src)` points CMake into the `src/` directory, where "
 "it finds another `CMakeLists.txt` file:"
 msgstr ""
-"Den sista raden, `add_subdirectory(src)`, pekar CMake på katalogen "
-"'helloworld/src/', där vår källkod finns. Låt oss fördjupa oss i "
-"filen`helloworld/src/CMakeLists.txt` där."
+"Den sista raden låter CMake skriva ut vilka paket som har hittats, Och "
+"ovanför den pekar `add_subdirectory(src)` CMake på katalogen 'src/', där en "
+"annan `CMakeLists.txt` finns:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""
