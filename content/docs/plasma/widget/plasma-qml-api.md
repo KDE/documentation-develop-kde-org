@@ -434,7 +434,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 * The very useful `Theme` and `Units` singletons.
 * A number of enums listed in [`Types`](docs:plasma;Plasma::Types).
-* [`IconItem`](docs:plasma;IconItem) for drawing icons.
+* [`Icon`](docs:kirigami2;Icon) for drawing icons.
 * [`SvgItem`](docs:plasma;Plasma::SvgItem), [`Svg`](docs:plasma;Plasma::Svg) and [`FrameSvgItem`](docs:plasma;Plasma::FrameSvgItem) for drawing SVGs coloured with the Plasma Style color palette.
 * [`DataSource`](docs:plasma;Plasma::DataSource) for connecting to a Plasma DataEngine.
 
@@ -463,7 +463,7 @@ There is also properties for the various color groups using a prefix.
 * `PlasmaCore.Theme.complementaryTextColor`
 * `PlasmaCore.Theme.headerTextColor`
 
-The full list of `PlasmaCore.Theme` color properties can be found in the `QuickTheme` class definition:  
+The full list of `PlasmaCore.Theme` color properties can be found in the `QuickTheme` class definition:
 [`plasma-framework/src/declarativeimports/core/quicktheme.h`](https://invent.kde.org/frameworks/plasma-framework/blob/master/src/declarativeimports/core/quicktheme.h)
 
 The `QuickTheme` class extends [Plasma::Theme](docs:plasma;Units::devicePixelRatio) which also contains:

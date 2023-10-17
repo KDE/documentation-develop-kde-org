@@ -10,7 +10,7 @@ aliases:
   - /docs/extend/sensor-faces/
 ---
 ## Folder structure
-A sensor face consists of multiple parts of which some are required and others are optional. The 
+A sensor face consists of multiple parts of which some are required and others are optional. The
 folder structure looks like this and is similar to the one of Plasma widgets:
 
  ```
@@ -62,7 +62,7 @@ import org.kde.ksysguard.faces 1.0
 
 SensorFace {
     contentItem: Label {
-        text: "Sensors that should be shown:" 
+        text: "Sensors that should be shown:"
             +  controller.highPrioritySensorIds.join(",")
     }
 }
@@ -124,7 +124,7 @@ Faces.SensorFace {
             level: 2
         }
         Label {
-            text: "Sensors that should shown: " 
+            text: "Sensors that should shown: "
                 +  controller.highPrioritySensorIds.map(id => "<font color='" + controller.sensorColors[id] + "'>" + id + "</font>").join(", ")
         }
     }
@@ -217,10 +217,10 @@ Faces.SensorFace {
 
 ### Adding a Legend
 A legend is generally useful since it allows matching colors to a chart and precise reading of the
-current value. [ExtendedLegend](docs:libksysguard;org::kde::ksysguard::faces::ExtendedLegend) is a premade
+current value. `ExtendedLegend` is a premade
 Component that displays a legend that is a generated from a `SensorDataModel` assigned to its
-[sourceModel](docs:libksysguard;org::kde::ksysguard::faces::ExtendedLegend::sourceModel) property. The
-[sensorIds](docs:libksysguard;org::kde::ksysguard::faces::ExtendedLegend::sensorIds) property holds the ids of additional sensors that should be included in the
+`sourceModel` property. The
+`sensorIds` property holds the ids of additional sensors that should be included in the
 legend. Most sensor faces use this to display the "text only"
 [lowPrioritySensorIds](docs:libksysguard;KSysGuard::SensorFaceController::lowPrioritySensorIds). A typical usage
 might look like this:
@@ -381,7 +381,7 @@ As the name implies it contains user-visible and not user-visible metadata about
 }
 ```
 The first `Name` and `Icon` values are the user visible name and an icon that could be used for the face.
-The `Id` is a unique identifier for the face. 
+The `Id` is a unique identifier for the face.
 See [KPluginMetaData](docs:kcoreaddons;KPluginMetaData) for the documentation about all the entries in the `KPlugin` object.
 The `KPackageStructure` is needed for the plugin to be correctly found.
 
@@ -389,7 +389,7 @@ In case you have an existing plugin that uses a metadata.desktop file, you can f
 the migration instructions from the [Widget Properties]({{< relref "docs/plasma/widget/properties.md#kpackagestructure" >}}) documentation.
 
 ### faceproperties
-Not every face supports displaying of every feature that are exposed as the [properties of 
+Not every face supports displaying of every feature that are exposed as the [properties of
 the face controller](#controllerProps). A face can indicate this with the file `faceproperties`
 so that UI elements can be hidden for example when configuring the face depending on whether they
 are supported or not. The file format is a first line `[Config]` followed by key-value-pairs.

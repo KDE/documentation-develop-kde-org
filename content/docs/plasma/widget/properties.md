@@ -117,7 +117,7 @@ Item {
 
 The compact representation uses [`DefaultCompactRepresentation.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/desktoppackage/contents/applet/DefaultCompactRepresentation.qml) by default. To summarize, it:
 
-* Draws the `plasmoid.icon` using a [`PlasmaCore.IconItem`](docs:plasma;IconItem)
+* Draws the `plasmoid.icon` using a [`Kirigami.Icon`](docs:kirigami2;Icon)
 * Defines a [`MouseArea`](https://doc.qt.io/qt-5/qml-qtquick-mousearea.html) to toggle the `expanded` property which displays the full representation.
 
 
@@ -240,14 +240,14 @@ RowLayout {
 {{< section-left >}}
 
 * `PlasmaCore.Types.DefaultBackground` **(default)** is equal to `StandardBackground`.
-* `PlasmaCore.Types.StandardBackground` The standard background from the theme is drawn.  
+* `PlasmaCore.Types.StandardBackground` The standard background from the theme is drawn.
   ![](backgroundhint-standard.png)
 * `PlasmaCore.Types.TranslucentBackground` An alternate version of the background is drawn, usually more translucent.
 * `PlasmaCore.Types.ShadowBackground` The applet won't have a svg background but a drop shadow of its content done via a shader. The text color will also invert.
   ![](backgroundhint-shadow.png)
-* `PlasmaCore.Types.NoBackground` This property is used to hide a desktop widget background. An example would be [the Analog Clock widget](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/analog-clock/contents/ui/analogclock.qml#L34).  
+* `PlasmaCore.Types.NoBackground` This property is used to hide a desktop widget background. An example would be [the Analog Clock widget](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/analog-clock/contents/ui/analogclock.qml#L34).
   ![](backgroundhint-nobg.png)
-* `PlasmaCore.Types.ConfigurableBackground` Allows the user to toggle between `StandardBackground` and `ShadowBackground`. Note that this is a bit flag to be used with another enum value.  
+* `PlasmaCore.Types.ConfigurableBackground` Allows the user to toggle between `StandardBackground` and `ShadowBackground`. Note that this is a bit flag to be used with another enum value.
   ![](backgroundhint-toggle.png)
 
 To use `ConfigurableBackground`, combine the flag with another value with the bitwise OR operator `|`.
@@ -577,7 +577,7 @@ A Plasmoid can specify the type of functionality it offers, for example whether 
 X-Plasma-Provides=org.kde.plasma.launchermenu
 ```
 
-These "Provides" are in fact arbitrary, so you can choose your own here. The field accepts multiple values separated by a comma. Here are some possible values that are used throughout Plasma: 
+These "Provides" are in fact arbitrary, so you can choose your own here. The field accepts multiple values separated by a comma. Here are some possible values that are used throughout Plasma:
 
 * `org.kde.plasma.launchermenu`: App Launcher Menus
 * `org.kde.plasma.multimediacontrols`: Multimedia controls

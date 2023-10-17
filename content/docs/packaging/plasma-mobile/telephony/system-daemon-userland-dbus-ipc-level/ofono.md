@@ -11,7 +11,7 @@ Plasma Mobile is currently switched from oFono to ModemManager.
 The current documentation page is provided for historical reasons.
 
 ## oFono
-[oFono](https://01.org/ofono) is a _GPL-2.0-only_ Nokia/Intel project [started in the year 2009 with mobile devices support like Nokia N900's Phonet/ISI](https://git.kernel.org/pub/scm/network/ofono/ofono.git/tree/drivers/isimodem/isimodem.c?h=0.1&id=bc42f6ab5939034e5b010acf55de6b1c4daa1d6f). It integrates with the higher-level [ConnMan](https://git.kernel.org/pub/scm/network/connman/connman.git/about/) connection manager.
+[oFono](https://01.org/ofono) is a _GPL-2.0-only_ Nokia/Intel project [started in the year 2009 with mobile devices support like Nokia N900's Phonet/ISI](https://git.kernel.org/pub/scm/network/ofono/ofono.git/tree/drivers/isimodem). It integrates with the higher-level [ConnMan](https://git.kernel.org/pub/scm/network/connman/connman.git/about/) connection manager.
 
 ## Phonesim
 
