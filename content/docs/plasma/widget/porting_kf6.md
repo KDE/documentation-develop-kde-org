@@ -69,6 +69,13 @@ The main thing to consider is adapting to the new subdivision of API between `Pl
 * for plasmoids that offer a C++ plugin as an `Applet` subclass, the C++ part doesn't change.  The QML part drops its `nativeInterface` intermediary property, so change properties like `Plasmoid.nativeInterface.myProperty` to `Plasmoid.myProperty`
 * Un-version your QML module imports. This is unnecessary in Qt6 and can cause bugs.
 
+#### Adjusting metadata of plasmoid
+In Plasma 6, all plasmoids must use json metadata. Next to the conversion using the `desktoptojson` command line utility, there were some minor changes to the plasmoid values.
+
+In Plasma 6, it is no longer possible to specify a custom mainscript. Instead, `ui/main.qml` is used as the entry point.
+The `X-Plasma-MainScript` entry may be omitted from the metadata in both Plasma 5 and 6.
+`X-Plasma-API` may also be removed in KF6, but is needed in KF5.
+
 ### Example porting of a minimal plasmoid
 
 #### Qt5

@@ -56,7 +56,7 @@ Widgets installed by the user (without root) like when you "Install New Widgets"
 
 `Category` is the category the widget can be filtered with in the widget list. A list of category names can be found [here]({{< ref "properties.md#category" >}}).
 
-`X-Plasma-API`, `X-Plasma-MainScript`, and `KPackageStructure` are also needed to just define that this package is a plasma widget, and where its entry point is.
+`X-Plasma-API` and `KPackageStructure` are also needed to just define that this package is a plasma widget, and where its entry point is.
 
 For the other properties, read the [`metadata.json` section in the Widget Properties page]({{< ref "properties.md#metadatajson" >}}).
 
@@ -82,7 +82,6 @@ For the other properties, read the [`metadata.json` section in the Widget Proper
         "Website": "https://github.com/Zren/plasmoid-helloworldplugin"
     },
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml",
     "KPackageStructure": "Plasma/Applet"
 }
 ```

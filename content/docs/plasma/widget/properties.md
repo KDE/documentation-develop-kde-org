@@ -532,7 +532,12 @@ X-KDE-ServiceTypes=Plasma/Applet
 
 `X-Plasma-API` tells plasma what script engine to use. `declarativeappletscript` is the standard `QML` loader.
 
-`X-Plasma-MainScript` is the entry point of your qml code. The standard throughout plasma is to use `ui/main.qml`.
+`X-Plasma-MainScript` is the entry point of your qml code. The default value is `ui/main.qml`.
+{{< alert title="Note" color="info" >}}
+In Plasma 6, it is no longer possible to specify a custom mainscript. Instead, `ui/main.qml` is used as the entry point.
+The `X-Plasma-MainScript` entry may be omitted from the metadata in both Plasma 5 and 6.
+`X-Plasma-API` may also be removed in KF6, but is needed in KF5.
+{{< /alert >}}
 
 {{< /section-left >}}
 {{< section-right >}}
