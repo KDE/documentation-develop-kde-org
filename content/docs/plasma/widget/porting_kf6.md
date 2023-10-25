@@ -13,8 +13,6 @@ categories: [Porting Guide]
 
 The Plasma API used to make desktop widgets (also known as "applets" or "plasmoids") is changing for the Plasma 6.0 release.
 
-Note that the final API is still a work in progress and this document will be updated over time to reflect them. **If you are reading this message, expect further changes before the final release of Plasma 6**.
-
 ## Changes Overview
 ### Background Information
 A plasmoid's base component is a C++ class called `Applet`, which is a `QObject`. Applets are contained in an Applet subclass called `Containment`, which manages the lifecycle of all of its applets. On Plasma Desktop, each screen has one containment which manages its desktop area, and another for each panel on that desktop.
