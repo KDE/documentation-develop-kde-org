@@ -221,7 +221,7 @@ the same functionality. You can import it using ``org.kde.kitemmodels``.
 
 There are some key differences. While ``SortFilterModel`` has properties ``sortRole``
 and ``filterRole`` that take strings as role names, ``KSortFilterProxyModel``
-has the same two proeprties accepting only integers as the actual role vaues.
+has the same two properties accepting only integers as the actual role vaues.
 Usages of role names must be ported to the properties ``sortRoleName``
 and ``filterRoleName`` (``sortRole`` and ``filterRole`` will automatically sync to the coresponding role number)
 
