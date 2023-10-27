@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 00:36+0000\n"
-"PO-Revision-Date: 2023-09-16 11:49+0200\n"
+"PO-Revision-Date: 2023-10-27 01:02+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -357,40 +357,29 @@ msgstr ""
 "una nueva [Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:65
-#, fuzzy
-#| msgid ""
-#| "That seems like quite a lot for a simple property we'll use to show some "
-#| "text from the backend, right? But a closer look reveals that this can "
-#| "already run logic when the property is read by the user interface, and "
-#| "when it is written. It will automatically inform frontend and backend of "
-#| "changes."
 msgid ""
 "This may seem like a lot of code to just read and write some code from the "
 "backend. However, a closer look reveals that reading the property from the "
 "UI can already run some logic—same when it is written to. In this case, it "
 "will automatically inform the frontend and backend of changes."
 msgstr ""
-"Esto parece demasiado para una simple propiedad que vamos a usar para "
-"mostrar algo de texto desde el motor, ¿verdad? Pero una mirada más cercana "
-"revela que esto ya puede ejecutar la lógica cuando la interfaz de usuario "
-"lee la propiedad y cuando se escribe un valor en ella. Informará "
+"Esto puede parecer una gran cantidad de código para solo leer y escribir "
+"código desde el motor. Sin embargo, una mirada más cercana revela que leer "
+"la propiedad de la interfaz de usuario ya puede ejecutar cierta lógica (lo "
+"mismo ocurre cuando se escribe en ella). En este caso, informará "
 "automáticamente a la interfaz y al motor de los cambios."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:67
-#, fuzzy
-#| msgid ""
-#| "The reading and writing is based on getter and setter functions, so add a "
-#| "new private attribute to your class, like this, and add getter and setter "
-#| "functions."
 msgid ""
 "The reading and writing is based on the concept of [getter and setter "
 "functions](https://www.w3schools.com/cpp/cpp_encapsulation.asp). Go ahead "
 "and add a new private attribute to your class that holds the data, as well "
 "as the relevant getter and setter functions."
 msgstr ""
-"La lectura y la escritura están basadas en las funciones *getter* y "
-"*setter*, por lo que debe añadir un nuevo atributo `private` a su clase, "
-"como este, y añadir las funciones *getter* y *setter*."
+"La lectura y la escritura están basadas en los conceptos de las [funciones "
+"*getter* y *setter*](https://www.w3schools.com/cpp/cpp_encapsulation.asp). "
+"Siga adelante y añada un nuevo atributo privado a la clase para contener los "
+"datos, así como las pertinentes funciones *getter* y *setter*."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend.md:73
 msgid "To the public section, add"
@@ -671,24 +660,18 @@ msgid ""
 "The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of "
 "CMake we will be calling."
 msgstr ""
+"La primera línea, `cmake_minimum_required(VERSION 3.16)` define la versión "
+"de CMake que se va a utilizar."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:24
-#, fuzzy
-#| msgid ""
-#| "After that, we set the versions of our needed tools. "
-#| "`cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will "
-#| "be calling. We then use `set()` to define variables (`KF5_MIN_VERSION` "
-#| "and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
 msgid ""
 "After that, `project(helloworld)` defines the name of the project. We then "
 "use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) "
 "containing the versions of KDE Frameworks and Qt."
 msgstr ""
-"Tras ella, definimos las versiones de las herramientas que vamos a "
-"necesitar. `cmake_minimum_required(VERSION 3.16)` define la versión de CMake "
-"que vamos a llamar. Después usamos `set()` para definir las variables "
-"(`KF5_MIN_VERSION` y `QT_MIN_VERSION`) que contienen las versiones de KDE "
-"Frameworks y de Qt."
+"Tras ella, `project(helloworld)` define el nombre del proyecto. Después "
+"usamos `set()` para definir las variables (`KF5_MIN_VERSION` y "
+"`QT_MIN_VERSION`) que contienen las versiones de KDE Frameworks y de Qt."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:26
 msgid ""
@@ -711,16 +694,12 @@ msgstr ""
 "necesarias durante la compilación. Veamos la primera línea:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:30
-#, fuzzy
-#| msgid ""
-#| "`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-#| "WidgetsAddons)`"
 msgid ""
 "`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
 "Test Gui QuickControls2 Widgets)`"
 msgstr ""
-"`find_package(KF5 ${KF5_MIN_VERSION} COMPONENTS Kirigami2 I18n CoreAddons "
-"WidgetsAddons)`"
+"`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick "
+"Test Gui QuickControls2 Widgets)`"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:31
 msgid ""
@@ -731,33 +710,31 @@ msgstr ""
 "html) encuentra y carga el componente externo."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:32
-#, fuzzy
-#| msgid "The first word is the framework (`KF5`)."
 msgid "The first word is the framework (`Qt5`)."
-msgstr "La primera palabra es la infraestructura (`KF5`)."
+msgstr "La primera palabra es la infraestructura (`Qt5`)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:33
-#, fuzzy
-#| msgid ""
-#| "Then we are calling the variable with the versions we set in the second "
-#| "line."
 msgid ""
 "Then we are calling the variable with the version we set in the fifth line."
 msgstr ""
-"Luego llamamos a la variable con las versiones que hemos configurado en la "
-"segunda línea."
+"Luego llamamos a la variable con la versión que hemos configurado en la "
+"quinta línea."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:34
 msgid ""
 "`REQUIRED` tells CMake that these dependencies are indeed required and that "
 "it shall exit with an error if the package can not be found."
 msgstr ""
+"`REQUIRED` indica a CMake que estas dependencias son necesarias y que debe "
+"terminar con un error si no se puede encontrar dicho paquete."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:35
 msgid ""
 "`NO_MODULE` switches CMake into the Config mode. We don't need to worry "
 "about that at the moment."
 msgstr ""
+"`NO_MODULE` cambia CMake al modo Config. No tenemos que preocuparnos por "
+"esto en este momento."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:36
 msgid ""
@@ -818,19 +795,14 @@ msgstr ""
 "ellos en el código se detendrá la compilación de la aplicación."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:47
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake into the 'src' "
-#| "directory, where our source code is located. Let's delve into the "
-#| "CMakeLists.txt file in there."
 msgid ""
 "The final line lets CMake print out which packages it has found. And above "
 "that, `add_subdirectory(src)` points CMake into the `src/` directory, where "
 "it finds another `CMakeLists.txt` file:"
 msgstr ""
-"La línea final, `add_subdirectory(src)`, hace que CMake apunte al directorio "
-"'src', donde se encuentra nuestro código fuente. Profundicemos en el archivo "
-"CMakeLists.txt que hay allí."
+"La última línea hace que CMake liste los paquetes que ha encontrado. Y sobre "
+"esta, `add_subdirectory(src)` hace que CMake se dirija al directorio `src/`, "
+"donde encontrará otro archivo `CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists.md:52
 msgid ""
@@ -923,13 +895,6 @@ msgstr ""
 "de la barra de herramientas, así como a otros componentes de Kirigami."
 
 #: content/docs/getting-started/kirigami/components-actions.md:38
-#, fuzzy
-#| msgid ""
-#| "The `icon.name` property takes names for system-wide icons per the "
-#| "FreeDesktop specification. These icons and icon names can be viewed with "
-#| "KDE's CuttleFish application, or by visiting [FreeDesktop's icon naming "
-#| "specification](https://specifications.freedesktop.org/icon-naming-spec/"
-#| "icon-naming-spec-latest.html)."
 msgid ""
 "The [icon.name](https://doc.qt.io/qt-6/qml-qtquick-controls2-action."
 "html#icon.name-prop) property takes names for system-wide icons following "
@@ -939,11 +904,13 @@ msgid ""
 "specification](https://specifications.freedesktop.org/icon-naming-spec/icon-"
 "naming-spec-latest.html)."
 msgstr ""
-"La propiedad `icon.name` usa nombres de iconos del sistema de la "
+"La propiedad [icon.name](https://doc.qt.io/qt-6/qml-qtquick-controls2-action."
+"html#icon.name-prop) usa nombres de iconos del sistema siguiendo la "
 "especificación de FreeDesktop. Estos iconos y nombres de iconos se pueden "
-"ver con la aplicación CuttleFish de KDE o visitando la [especificación de "
-"nombres de iconos de FreeDesktop](https://specifications.freedesktop.org/"
-"icon-naming-spec/icon-naming-spec-latest.html)."
+"ver con la aplicación CuttleFish de KDE, incluida en [plasma-sdk](https://"
+"invent.kde.org/plasma/plasma-sdk), o visitando la [especificación de nombres "
+"de iconos de FreeDesktop](https://specifications.freedesktop.org/icon-naming-"
+"spec/icon-naming-spec-latest.html)."
 
 #: content/docs/getting-started/kirigami/components-actions.md:42
 msgid ""
@@ -968,11 +935,6 @@ msgstr ""
 "[displayComponent](docs:kirigami2;Action::displayComponent)."
 
 #: content/docs/getting-started/kirigami/components-actions.md:66
-#, fuzzy
-#| msgid ""
-#| "These properties will be respected by the item if possible. For example, "
-#| "the following action will be displayed as a TextField with the item "
-#| "trying its best to keep the item visible as long as possible."
 msgid ""
 "These properties will be respected by the item if possible. For example, the "
 "following action will be displayed as a [TextField](docs:qtquickcontrols;"
@@ -980,9 +942,9 @@ msgid ""
 "visible as long as possible."
 msgstr ""
 "Estas propiedades serán respetadas por el elemento siempre que sea posible. "
-"Por ejemplo, la siguiente acción se mostrará como un TextField con el "
-"elemento haciendo todo lo posible para mantenerlo visible el mayor tiempo "
-"posible."
+"Por ejemplo, la siguiente acción se mostrará como un [TextField](docs:"
+"qtquickcontrols;QtQuick.Controls.TextField) con el elemento haciendo todo lo "
+"posible para mantenerse visible el mayor tiempo posible."
 
 #: content/docs/getting-started/kirigami/components-actions.md:83
 msgid "Using actions in other components"
@@ -1161,18 +1123,14 @@ msgstr ""
 "moverán a un menú en un extremo de la barra de herramientas."
 
 #: content/docs/getting-started/kirigami/components-actions.md:232
-#, fuzzy
-#| msgid ""
-#| "Like ActionTextField, you may not need to use ActionToolBar directly as "
-#| "it is used by page headers and cards to provide their action display."
 msgid ""
 "Like [ActionTextField](docs:kirigami2;ActionTextField), you may not need to "
 "use [ActionToolBar](docs:kirigami2;ActionToolBar) directly as it is used by "
 "page headers and cards to provide their action display."
 msgstr ""
-"Como ActionTextField, no necesita usar ActionToolBar directamente, ya que la "
-"usan las cabeceras de las páginas y de las tarjetas para mostrar sus "
-"acciones."
+"Como [ActionTextField](docs:kirigami2;ActionTextField), no necesita usar "
+"[ActionToolBar](docs:kirigami2;ActionToolBar) directamente, ya que la usan "
+"las cabeceras de las páginas y de las tarjetas para mostrar sus acciones."
 
 #: content/docs/getting-started/kirigami/components-actions.md:257
 msgid "A horizontal toolbar being displayed at the top of the application"
@@ -1201,6 +1159,9 @@ msgid ""
 "information or actions together. These actions can be added to the `actions` "
 "group, similarly to previous components."
 msgstr ""
+"Una [Kirigami.Card](docs:kirigami2;Card) se usa para mostrar una colección "
+"de información o acciones juntas. Dichas acciones se pueden añadir al grupo "
+"`actions`, del mismo modo que los componentes anteriores."
 
 #: content/docs/getting-started/kirigami/components-actions.md:280
 #: content/docs/getting-started/kirigami/components-card.md:67
@@ -1902,18 +1863,14 @@ msgid "Checkboxes"
 msgstr "Casillas de verificación"
 
 #: content/docs/getting-started/kirigami/components-controls.md:125
-#, fuzzy
-#| msgid ""
-#| "Checkboxes are meant for options where the choices are non-exclusive and "
-#| "where each option has a clear alternative."
 msgid ""
 "A [Controls.CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox) is "
 "meant for options where the choices are non-exclusive and where each option "
 "has a clear alternative."
 msgstr ""
-"Las casillas de verificación están destinadas a casos en los que las "
-"opciones no son exclusivas y en las que cada opción tiene una alternativa "
-"clara."
+"Una [Controls.CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox)  es "
+"adecuada para opciones donde las elecciones no son exclusivas y en las que "
+"cada opción tiene una alternativa clara."
 
 #: content/docs/getting-started/kirigami/components-controls.md:146
 #, fuzzy
