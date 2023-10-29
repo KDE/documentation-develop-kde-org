@@ -106,11 +106,11 @@ Then, toggle snapping on by going to the small Snap Controls Bar on the top righ
 
 ### Inkscape Extensions
 
-Defining element IDs can be somewhat tedious. There is an Inkscape extension in [Plasma Framework](https://invent.kde.org/frameworks/plasma-framework/) that can be used to edit SVG files for Plasma SVGs, more specifically those containing positions (`top`, `left`, `topleft`, `center` etc.) or hints (`hint-left-margin`, etc.).
+Defining element IDs can be somewhat tedious. There is an Inkscape extension in [KSvg](https://invent.kde.org/frameworks/ksvg) that can be used to edit SVG files for Plasma SVGs, more specifically those containing positions (`top`, `left`, `topleft`, `center` etc.) or hints (`hint-left-margin`, etc.).
 
 The extension is contextual, that is, if you select 9 elements, it will default to the positions, and if you select 4 elements, it will default to the hints.
 
-* download the two files at https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/tools/inkscape%20extensions
+* download the two files at https://invent.kde.org/frameworks/ksvg/-/tree/master/src/tools/inkscape%20extensions
 * copy them to `~/.config/inkscape/extensions`
 * restart Inkscape
 * select the 9 elements of a frame (or the 4 elements of a hint)

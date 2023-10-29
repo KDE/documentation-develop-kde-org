@@ -78,7 +78,7 @@ Effects -> Images -> Embed All Images).
 
 To make renaming of the theme elements easier, it is possible to use an [Inkscape
 extension provided by
-Plasma Framework](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/tools/inkscape%20extensions). See [Inkscape Extensions]({{< ref "theme-svg#inkscape-extensions" >}}) for how to install it.
+KSvg](https://invent.kde.org/frameworks/ksvg/-/tree/master/src/tools/inkscape%20extensions). See [Inkscape Extensions]({{< ref "theme-svg#inkscape-extensions" >}}) for how to install it.
 
 ### Step 5: Review element IDs {#review}
 
