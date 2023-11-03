@@ -198,7 +198,7 @@ Item {
 }
 ```
 
-Make sure you still multiply the stored width/height by [`PlasmaCore.Units.devicePixelRatio`](docs:plasma;Units::devicePixelRatio), otherwise your popup will look smaller by default on HiDPI/4k monitors.
+Make sure you still multiply the stored width/height by `PlasmaCore.Units.devicePixelRatio`, otherwise your popup will look smaller by default on HiDPI/4k monitors.
 
 To simplify testing, I added `Plasmoid.hideOnWindowDeactivate: false` to prevent the popup from closing when you focus the config window.
 
