@@ -1,6 +1,8 @@
 # KDE Developer website
 
-https://develop.kde.org
+The [KDE Developer website](https://develop.kde.org) is built using [Hugo](https://gohugo.io/) and is hosted on [Invent](https://invent.kde.org/documentation/develop-kde-org).
+
+It is home to the [development tutorials](https://develop.kde.org/docs/) and the [KDE Human Interface Guidelines](https://develop.kde.org/hig/).
 
 ## Before running the website
 
@@ -54,9 +56,13 @@ optional arguments:
 
 # Contributing to the KDE Developer website
 
-To learn more about the formatting and custom tooling available to start contributing, see [CONTRIBUTING.md](contributing.md).
+The source code for this website can be found at https://invent.kde.org/documentation/develop-kde-org.
 
-To learn more about tutorial style and the use cases of the available tools, see [STYLE.md](style.md).
+To learn more about the formatting and custom tooling available to start contributing, see the [Formatting Guidelines](https://develop.kde.org/docs/contribute/formatting/).
+
+To learn more about tutorial style and the use cases of the available tools, see the [Style Guidelines](https://develop.kde.org/docs/contribute/style/).
+
+To learn how to submit a contribution, see [Submitting a Merge Request](https://community.kde.org/Infrastructure/GitLab#Submitting_a_merge_request).
 
 ## I18n
 The Kirigami tutorials are internationalized and localized using [hugoi18n](https://invent.kde.org/websites/hugo-i18n).
