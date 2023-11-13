@@ -36,7 +36,8 @@ implement a slot called `org_kde_datetime_changetime()`.
 
 The slot's signature is fixed: the return type is `ActionReply`, a class that
 allows you to return results, error codes and custom data to the application
-when your action has finished to run.
+when your action has finished to run. Starting from KAuth 5.69, a fully qualified
+name `KAuth::ActionReply` can be used for the return type.
 
 Let's look at the `read()` action implementation. Its purpose is to read files:
 
