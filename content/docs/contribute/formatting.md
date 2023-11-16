@@ -102,18 +102,27 @@ The most important shortcodes are as follows.
 Displays the contents of a file and applies syntax highlighting to it. It has two optional parameters:
 
 * **start**: Defines the first line that should be displayed. By default this is 1, which means starting from the first line.
-
 * **lines**: Defines how many lines should be displayed. By default this is 0, which displays all lines from **start** to the end of the file.
 
-The path needs to be specified, starting from `content`.
+The only required parameter is **file** for specifying the path of the file to read:
+- If the file is in the [bundle](#creating-a-new-tutorial) of the content file you are writing, you can specify the path starting from the bundle directory;
+- Otherwise, the path needs to be specified starting from the root of your project directory.
 
-```
+For example, in any content file you can write:
+
+```html
 {{</* readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/contents/ui/main.qml" highlight="qml" start=17 lines=9 */>}}
 ```
 
-The above example should look like so:
+which will be rendered as:
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/contents/ui/main.qml" highlight="qml" start=17 lines=9 >}}
+
+Since `/docs/getting-started/kirigami/introduction-getting_started/` is a bundle, in the file `/content/docs/getting-started/kirigami/introduction-getting_started/index.md` you can also write as below and achieve the same result:
+
+```html
+{{</* readfile file="src/contents/ui/main.qml" highlight="qml" start=17 lines=9 */>}}
+```
 
 Commonly used highlighting options are:
 

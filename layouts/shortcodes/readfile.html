@@ -1,4 +1,10 @@
-{{- $fileContent := .Get "file" | readFile -}}
+{{- $filePath := .Get "file" -}}
+{{- $fileResource := $filePath | .Page.Resources.GetMatch -}}
+{{- $fileContent := "" -}}
+{{- with $fileResource }}{{ $fileContent = .Content -}}
+{{- else }}{{ $fileContent = readFile $filePath -}}
+{{- end -}}
+
 {{- if eq (.Get "markdown") "true" -}}
 {{- $fileContent | markdownify -}}
 {{- else -}}

@@ -13,7 +13,7 @@ First, we are going to edit our `main.cpp` file from previous tutorials.
 
 ### main.cpp
 
-{{< readfile file="/content/docs/getting-started/kirigami/advanced-add_about_page/src/main.cpp" highlight="cpp" >}}
+{{< readfile file="src/main.cpp" highlight="cpp" >}}
 
 In the `main.cpp` file we include [KAboutData](docs:kcoreaddons;KAboutData), a core KDE frameworks component that lets us store information about our application. This information can then be reused by many other KDE Frameworks components. We instantiate a new `aboutData` object with its fairly complete default constructor and add author information.
 
@@ -25,18 +25,18 @@ Its first argument is the URI that will be used for the import, the second and t
 
 ### main.qml
 
-{{< readfile file="/content/docs/getting-started/kirigami/advanced-add_about_page/src/contents/ui/main.qml" highlight="qml" >}}
+{{< readfile file="src/contents/ui/main.qml" highlight="qml" >}}
 
 First, we use the import we defined in the `main.cpp` file, namely `org.kde.example`. We then add a [Kirigami.Action](docs:kirigami2;Action) to our [global drawer](docs:kirigami2;GlobalDrawer) that will send us to the About page, and create a component with a [Kirigami.AboutPage](docs:kirigami2;AboutPage) in it, which expects a [KAboutData::applicationData()](docs:kcoreaddons;KAboutData::applicationData) object. We exposed precisely that in our `main.cpp` and called it `About`, so we can pass it here.
 
 
 ### CMakeLists
 
-{{< readfile file="/content/docs/getting-started/kirigami/advanced-add_about_page/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="CMakeLists.txt" highlight="cmake" >}}
 
 In the `CMakeLists.txt` file in our top-level folder, be sure to have `CoreAddons` in your [find_package()](https://cmake.org/cmake/help/latest/command/find_package.html) call. It is needed for [KAboutData](docs:kcoreaddons;KAboutData).
 
-{{< readfile file="/content/docs/getting-started/kirigami/advanced-add_about_page/src/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="src/CMakeLists.txt" highlight="cmake" >}}
 
 In the `CMakeLists.txt` file in the `src/` directory, nothing is needed since we instantiated out `aboutData` in place.
 
