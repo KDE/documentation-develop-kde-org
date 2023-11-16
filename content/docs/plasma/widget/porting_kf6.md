@@ -251,6 +251,10 @@ KItemModels.KSortFilterProxyModel {
 }
 ```
 
+### ExpandableListItem
 
+- Rename property ``contextualActionsModel`` to ``contextualActions``.
+- Properties ``iconUsesPlasmaSVG``, ``contextMenu`` and ``enabledActions`` are gone.
+- Port ``isEnabled`` property to the standard ``enabled`` one.
 
 {{< readfile file="/content/docs/plasma/widget/snippet/plasma-doc-style.html" >}}
