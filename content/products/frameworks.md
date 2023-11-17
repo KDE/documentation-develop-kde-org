@@ -116,7 +116,7 @@ scss: "scss/framework.scss"
           LXQt is a simple desktop environment for Linux.  It uses <a href="https://api.kde.org/frameworks/solid/html/">Solid</a> for hardware integration, <a href="https://api.kde.org/frameworks/kwindowsystem/html/">KWindowSystem</a> for window management and <a href="https://api.kde.org/frameworks/kidletime/html/">KIdleTime</a> for power management.
         </p>
         <p>
-          Good looks are added with <a href="https://api.kde.org/frameworks/oxygen-icons5/html/index.html">Oxygen Icons</a>, one of our icon theme frameworks.
+          Good looks are added with <a href="https://invent.kde.org/frameworks/oxygen-icons">Oxygen Icons</a>, one of our icon theme frameworks.
         </p>
       </div>
       <img class="img-fluid col-12 col-sm-8 order-sm-0" src="lxqt.png" />
