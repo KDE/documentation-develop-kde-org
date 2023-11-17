@@ -8,9 +8,17 @@ aliases:
   - /docs/getting-started/kirigami/introduction-getting_started/
 ---
 
-## Installing required packages
+## Installing Kirigami
 
-Before getting started, we must install a few things. We need a C++ compiler, Qt development packages, and Kirigami. 
+Before getting started, we will need to install Kirigami on our machine. There are three ways to do so:
+
+* [Installing Kirigami from the repositories in your Linux distribution]({{< ref "#linux" >}})
+* [Building Kirigami with kdesrc-build]({{< ref "#kdesrc-build" >}})
+* [Installing Kirigami with Craft]({{< ref "#craft" >}})
+
+### Installing Kirigami from the repositories in your Linux distribution {#linux}
+
+We need a C++ compiler, Qt development packages, and Kirigami. Open a terminal application and run one of the following, depending on which Linux distribution you are using:
 
 {{< installpackage
   ubuntu="build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev kirigami2-dev libkf5i18n-dev gettext libkf5coreaddons-dev"
@@ -20,8 +28,42 @@ sudo zypper install cmake extra-cmake-modules libQt5Core-devel libqt5-qtdeclarat
   fedoraCommand=`sudo dnf groupinstall "Development Tools" "Development Libraries"
 sudo dnf install cmake extra-cmake-modules qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel kf5-kirigami2-devel kf5-ki18n-devel kf5-kcoreaddons-devel qqc2-breeze-style` >}}
 
-
 Further information for other distributions can be found [here](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Install_the_dependencies).
+
+If you wish to build Kirigami with Qt6, this is currently not possible with only distribution packages on Linux. You will need to resort to [kdesrc-build]({{< ref "#kdesrc-build" >}}) instead.
+
+### Building Kirigami with kdesrc-build {#kdesrc-build}
+
+KDE has a custom tool to easily build all of its libraries and programs: **kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD.
+
+You will need to follow the [setup instructions for kdesrc-build](https://community.kde.org/Get_Involved/development/Set_up_a_development_environment) first, then copy the sample KF5 file to your home:
+
+```bash
+cp ~/kde/src/kdesrc-build/kdesrc-buildrc-kf5-sample ~/.config/kdesrc-buildrc
+```
+
+After that, you may simply run the following on a terminal:
+
+```bash
+kdesrc-build kirigami kconfig kcoreaddons ki18n
+source ~/kde5/build/kirigami/prefix.sh
+```
+
+And then you may compile your Kirigami projects on the same terminal shell you used to source the prefix file. If you close your terminal, you can simply source the file again to compile your app.
+
+### Installing Kirigami with Craft {#craft}
+
+KDE has a custom tool to easily install most of its libraries and programs: **Craft**. It can be used to install Kirigami on [Linux](https://community.kde.org/Craft/Linux), [FreeBSD](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/FreeBSD), [Windows](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Windows), [Android](https://community.kde.org/Craft/Android) and [macOS](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Mac).
+
+You will need to follow the [setup instructions for Craft](https://community.kde.org/Craft). By the end of the setup, you should have run an environment setup file (`craftenv.ps1` or `craftenv.sh`), which will give you a terminal shell where you will be compiling your Kirigami application.
+
+After that, you may simply run the following on a terminal:
+
+```bash
+craft kirigami kconfig kcoreaddons ki18n
+```
+
+If you close your terminal, you can simply run the environment setup file again to compile your app.
 
 ## Project structure
 
@@ -153,6 +195,11 @@ We are almost at the finish line. The last thing we need to do is build and comp
 cmake -B build/
 cmake --build build/
 ```
+
+If you are compiling your project with [Craft]({{< ref "#craft" >}}) on Windows, you might need to specify a CMake Generator for the first step, depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) to compile your projects.
+
+* If Visual Studio: `cmake -B build/ -G "Visual Studio 16 2019"`
+* If MinGW: `cmake -B build/ -G "MinGW Makefiles"`
 
 And launch it with:
 

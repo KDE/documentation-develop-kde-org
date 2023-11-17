@@ -21,16 +21,16 @@ You might remember this `CMakeLists.txt` file from the first tutorial:
 
 The first line, `cmake_minimum_required(VERSION 3.16)` sets the version of CMake we will be calling.
 
-After that, `project(helloworld)` defines the name of the project. We then use `set()` to define variables (`KF5_MIN_VERSION` and `QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt.
+After that, `project(helloworld)` defines the name of the project.
 
 Then we get to a section where we include a number of necessary CMake and KDE settings by using [extra-cmake-modules](https://api.kde.org/ecm/). You shouldn't worry too much about these lines for now and we won't need to change them in this tutorial.
 
-The following section is important, because it specifies which dependencies we'll be bringing in at compile time. Let's look at the first line: 
+The following section is important, because it specifies which dependencies we'll be bringing in at compile time. Let's look at the first:
 
-`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui QuickControls2 Widgets)`
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" start=11 lines=8 >}}
+
 - [find_package()](https://cmake.org/cmake/help/latest/command/find_package.html) finds and loads the external component.
-- The first word is the framework (`Qt5`).
-- Then we are calling the variable with the version we set in the fifth line.
+- The first word is the framework, Qt. `${QT_MAJOR_VERSION}` is a convenience variable provided by extra-cmake-modules that lets us choose the Qt version to be used, 5 or 6, depending on whether we use the CMake flag `-DBUILD_WITH_QT6=ON`.
 - `REQUIRED` tells CMake that these dependencies are indeed required and that it shall exit with an error if the package can not be found.
 - `NO_MODULE` switches CMake into the Config mode. We don't need to worry about that at the moment.
 - `COMPONENTS` is a parameter that precedes the specific components of the framework we will include.
@@ -51,8 +51,9 @@ And above that, `add_subdirectory(src)` points CMake into the `src/` directory, 
 
 Since most of the heavy lifting is done by the first file, this one is a lot shorter.
 
-- [add_executable()](https://cmake.org/cmake/help/latest/command/add_executable.html) takes care of naming our executable and grabbing the files needed to create it
-- [target_link_libraries](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) dynamically links the libraries used in our code to our executable.
+- [add_executable()](https://cmake.org/cmake/help/latest/command/add_executable.html) takes care of generating our executable.
+- [target_sources()](https://cmake.org/cmake/help/latest/command/target_sources.html) lets us add files that will be used by our new executable.
+- [target_link_libraries()](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) dynamically links the libraries used in our code to our executable. Kirigami is not included here because we are using only its QML module.
 
 {{< alert title="Note" color="info" >}}
 
