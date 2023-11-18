@@ -273,3 +273,34 @@ KItemModels.KSortFilterProxyModel {
 - Port ``isEnabled`` property to the standard ``enabled`` one.
 
 {{< readfile file="/content/docs/plasma/widget/snippet/plasma-doc-style.html" >}}
+
+### Configuration UI
+
+If the plasmoid ships with a configuration UI this needs to be adjusted. The root item for a configuration page now must be one of the KCM components from the ``org.kde.kcmutils`` import.
+
+Available are:
+- ``SimpleKCM``: Use this for arbitrary content, e.g. a FormLayout or a column of controls. This will be the right thing for most applets.
+- ``AbstractKCM``: Similar to SimpleKCM, but does not contain a ScrollView. Use this when you need control over where and how to use a ScrollView in the UI.
+- ``ScrollViewKCM``: Use this when your configuration features a central ListView or similar view. Additional controls can be placed as ``header`` and ``footer`` of the control.
+- ``GridViewKCM``: Use this when your configuration features a central GridView.
+
+Example usage:
+
+```qml
+import QtQuick
+import QtQuick.Controls
+import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
+
+KCM.SimpleKCM {
+
+    property var cfg_myConfigKey
+
+    Kirigami.FormLayout {
+        Button {
+            ...
+        }
+    }
+}
+
+```
