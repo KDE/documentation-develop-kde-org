@@ -36,10 +36,10 @@ If you wish to build Kirigami with Qt6, this is currently not possible with only
 
 KDE has a custom tool to easily build all of its libraries and programs: **kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD.
 
-You will need to follow the [setup instructions for kdesrc-build](https://community.kde.org/Get_Involved/development/Set_up_a_development_environment) first, then copy the sample KF5 file to your home:
+For this tutorial, you will need to follow the [setup instructions for kdesrc-build](https://community.kde.org/Get_Involved/development/Set_up_a_development_environment) but using a `~/kde5` directory instead, then copy the sample KF5 file to your home:
 
 ```bash
-cp ~/kde/src/kdesrc-build/kdesrc-buildrc-kf5-sample ~/.config/kdesrc-buildrc
+cp ~/kde5/src/kdesrc-build/kdesrc-buildrc-kf5-sample ~/.config/kdesrc-buildrc
 ```
 
 After that, you may simply run the following on a terminal:
