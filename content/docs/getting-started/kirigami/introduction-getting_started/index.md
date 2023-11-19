@@ -60,7 +60,7 @@ You will need to follow the [setup instructions for Craft](https://community.kde
 After that, you may simply run the following on a terminal:
 
 ```bash
-craft kirigami kconfig kcoreaddons ki18n qqc2-desktop-style
+craft kirigami kconfig kcoreaddons ki18n breeze qqc2-desktop-style
 ```
 
 If you close your terminal, you can simply run the environment setup file again to compile your app.
