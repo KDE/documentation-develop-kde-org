@@ -60,8 +60,18 @@ You will need to follow the [setup instructions for Craft](https://community.kde
 After that, you may simply run the following on a terminal:
 
 ```bash
-craft kirigami kconfig kcoreaddons ki18n breeze qqc2-desktop-style
+craft kirigami kcoreaddons ki18n breeze kiconthemes qqc2-desktop-style
 ```
+
+{{< alert title="Theming on Windows" color="info">}}
+
+<details>
+<summary>Click here to read more</summary>
+
+When building the application after installing dependencies with Craft, just installing KIconThemes and Breeze ensures the application will be able to use Breeze icons on platforms like Windows, linking is not necessary. [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style) on the other hand is responsible for the nice looking style we want to enforce on those platforms.
+</details>
+
+{{< /alert >}}
 
 If you close your terminal, you can simply run the environment setup file again to compile your app.
 
