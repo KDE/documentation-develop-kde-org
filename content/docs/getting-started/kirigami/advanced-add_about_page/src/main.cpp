@@ -17,6 +17,10 @@ int main(int argc, char *argv[])
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
     QCoreApplication::setApplicationName(QStringLiteral("Hello World"));
 
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
+        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
+    }
+
     KAboutData aboutData(
         QStringLiteral("helloworld"),
         i18nc("@title", "Hello World"),
