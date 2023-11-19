@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 00:35+0000\n"
-"PO-Revision-Date: 2023-10-12 09:33+0200\n"
+"POT-Creation-Date: 2023-11-19 00:36+0000\n"
+"PO-Revision-Date: 2023-11-18 13:03+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -673,11 +673,8 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:24
-#, fuzzy
-#| msgid ""
-#| "The first line, `project(helloworld)` defines the name of the project."
 msgid "After that, `project(helloworld)` defines the name of the project."
-msgstr "La primera línia, `project(helloworld)` defineix el nom del projecte."
+msgstr "Després d'això, `project(helloworld)` defineix el nom del projecte."
 
 # skip-rule: common-settings
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:26
@@ -693,17 +690,12 @@ msgstr ""
 "necessitarem canviar-les en aquesta guia d'aprenentatge."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:28
-#, fuzzy
-#| msgid ""
-#| "The following section is important, because it specifies which "
-#| "dependencies we'll be bringing in at compile time. Let's look at the "
-#| "first line:"
 msgid ""
 "The following section is important, because it specifies which dependencies "
 "we'll be bringing in at compile time. Let's look at the first:"
 msgstr ""
 "La secció següent és important, perquè especifica quines dependències "
-"portarem en temps de compilació. Vegem la primera línia:"
+"portarem en temps de compilació. Vegem el primer:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:32
 msgid ""
@@ -713,6 +705,7 @@ msgstr ""
 "[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
 "html) cerca i carrega el component extern."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:33
 msgid ""
 "The first word is the framework, Qt. `${QT_MAJOR_VERSION}` is a convenience "
@@ -720,6 +713,10 @@ msgid ""
 "to be used, 5 or 6, depending on whether we use the CMake flag `-"
 "DBUILD_WITH_QT6=ON`."
 msgstr ""
+"La primera paraula és l'entorn de treball, les Qt. `${QT_MAJOR_VERSION}` és "
+"una variable d'utilitat proporcionada per «extra-cmake-modules» que ens "
+"permet triar la versió de les Qt a usar, 5 o 6, depenent de si usem "
+"l'indicador de CMake `-DBUILD_WITH_QT6=ON`."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:34
@@ -828,49 +825,34 @@ msgstr ""
 
 # skip-rule: punctuation-period-no
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:54
-#, fuzzy
-#| msgid ""
-#| "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-#| "add_executable.html) takes care of naming our executable and grabbing the "
-#| "files needed to create it"
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of generating our executable."
 msgstr ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-"add_executable.html) s'encarrega d'anomenar el nostre executable i prendre "
-"els fitxers necessaris per a crear-lo."
+"add_executable.html) s'encarrega de generar el nostre executable."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:55
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) links the libraries used in our code to our "
-#| "executable."
 msgid ""
 "[target_sources()](https://cmake.org/cmake/help/latest/command/"
 "target_sources.html) lets us add files that will be used by our new "
 "executable."
 msgstr ""
-"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-"target_link_libraries.html) enllaça dinàmicament les biblioteques "
-"utilitzades en el nostre codi amb el nostre executable."
+"[target_sources()](https://cmake.org/cmake/help/latest/command/"
+"target_sources.html) ens permet afegir fitxers que s'utilitzarà el nostre "
+"executable nou."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:56
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) dynamically links the libraries used in our "
-#| "code to our executable."
 msgid ""
 "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
 "to our executable. Kirigami is not included here because we are using only "
 "its QML module."
 msgstr ""
-"[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
+"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) enllaça dinàmicament les biblioteques "
-"utilitzades en el nostre codi amb el nostre executable."
+"utilitzades en el nostre codi amb el nostre executable. El Kirigami no "
+"s'inclou aquí perquè només estem utilitzant el seu mòdul QML."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:60
@@ -4196,40 +4178,39 @@ msgstr ""
 "Kirigami\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:11
-#, fuzzy
-#| msgid "Using Kirigami Gallery"
 msgid "Installing Kirigami"
-msgstr "Usar la Galeria del Kirigami"
+msgstr "Instal·lació del Kirigami"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:13
 msgid ""
 "Before getting started, we will need to install Kirigami on our machine. "
 "There are three ways to do so:"
 msgstr ""
+"Abans de començar, haurem d'instal·lar el Kirigami a la nostra màquina. Hi "
+"ha tres maneres de fer-ho:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:15
 msgid ""
 "[Installing Kirigami from the repositories in your Linux distribution]({{< "
 "ref \"#linux\" >}})"
 msgstr ""
+"[Instal·lar el Kirigami a partir dels repositoris de la vostra distribució "
+"Linux.]({{< ref \"#linux\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
 msgid "[Building Kirigami with kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
 msgstr ""
+"[Construir el Kirigami amb «kdesrc-build»]({{< ref \"#kdesrc-build\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft]({{< ref \"#craft\" >}})"
-msgstr ""
+msgstr "[Instal·lar el Kirigami amb el Craft]({{< ref \"#craft\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:19
-#, fuzzy
-#| msgid ""
-#| "Before continuing please install Kirigami Gallery. It should already be "
-#| "in the repository of your Linux distribution."
 msgid "Installing Kirigami from the repositories in your Linux distribution"
 msgstr ""
-"Abans de continuar, instal·leu la Galeria del Kirigami. Ja hauria d'estar en "
-"el repositori de la vostra distribució de Linux."
+"Instal·lar el Kirigami a partir dels repositoris de la vostra distribució "
+"Linux"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:21
 msgid ""
@@ -4237,6 +4218,9 @@ msgid ""
 "terminal application and run one of the following, depending on which Linux "
 "distribution you are using:"
 msgstr ""
+"Necessitem un compilador de C++, els paquets de desenvolupament de les Qt i "
+"el Kirigami. Obriu una aplicació de terminal i executeu un dels següents, "
+"depenent de quina distribució Linux utilitzeu:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
 msgid ""
@@ -4254,28 +4238,45 @@ msgid ""
 "only distribution packages on Linux. You will need to resort to [kdesrc-"
 "build]({{< ref \"#kdesrc-build\" >}}) instead."
 msgstr ""
+"Si voleu construir el Kirigami amb les Qt6, actualment això no és possible "
+"amb només els paquets de la distribució Linux. En el seu lloc haureu de "
+"recórrer al [«kdesrc-build»]({{< ref \"#kdesrc-build\" >}})."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
 msgid "Building Kirigami with kdesrc-build"
-msgstr ""
+msgstr "Construcció del Kirigami amb «kdesrc-build»"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
+"KDE té una eina personalitzada per a construir fàcilment totes les seves "
+"biblioteques i programes: **kdesrc-build**. Es pot utilitzar per construir "
+"el Kirigami al Linux i al FreeBSD."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
+#, fuzzy
+#| msgid ""
+#| "You will need to follow the [setup instructions for kdesrc-build](https://"
+#| "community.kde.org/Get_Involved/development/"
+#| "Set_up_a_development_environment) first, then copy the sample KF5 file to "
+#| "your home:"
 msgid ""
-"You will need to follow the [setup instructions for kdesrc-build](https://"
-"community.kde.org/Get_Involved/development/Set_up_a_development_environment) "
-"first, then copy the sample KF5 file to your home:"
+"For this tutorial, you will need to follow the [setup instructions for "
+"kdesrc-build](https://community.kde.org/Get_Involved/development/"
+"Set_up_a_development_environment) but using a `~/kde5` directory instead, "
+"then copy the sample KF5 file to your home:"
 msgstr ""
+"Primer cal seguir les [instruccions de configuració del «kdesrc-build»]"
+"(https://community.kde.org/Get_Involved/development/"
+"Set_up_a_development_environment), després copiar els fitxer KF5 d'exemple "
+"al vostre directori d'inici:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:45
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:60
 msgid "After that, you may simply run the following on a terminal:"
-msgstr ""
+msgstr "Després d'això, simplement podeu executar el següent en un terminal:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:52
 msgid ""
@@ -4283,10 +4284,14 @@ msgid ""
 "you used to source the prefix file. If you close your terminal, you can "
 "simply source the file again to compile your app."
 msgstr ""
+"I llavors podeu compilar els projectes del Kirigami en el mateix intèrpret "
+"d'ordres del terminal que heu utilitzat per a crear el fitxer de prefix. Si "
+"tanqueu el terminal, podeu tornar a crear el fitxer per compilar la vostra "
+"aplicació."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:54
 msgid "Installing Kirigami with Craft"
-msgstr ""
+msgstr "Instal·lar el Kirigami amb el Craft"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:56
 msgid ""
@@ -4298,7 +4303,16 @@ msgid ""
 "(https://community.kde.org/Craft/Android) and [macOS](https://community.kde."
 "org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
 msgstr ""
+"KDE té una eina personalitzada per a instal·lar fàcilment la majoria de les "
+"seves biblioteques i programes: **Craft**. Es pot utilitzar per instal·lar "
+"el Kirigami al [Linux](https://community.kde.org/Craft/Linux), el [FreeBSD]"
+"(https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/FreeBSD), "
+"el [Windows](https://community.kde.org/Guidelines_and_HOWTOs/"
+"Build_from_source/Windows), l'[Android](https://community.kde.org/Craft/"
+"Android) i el [macOS](https://community.kde.org/Guidelines_and_HOWTOs/"
+"Build_from_source/Mac)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:58
 msgid ""
 "You will need to follow the [setup instructions for Craft](https://community."
@@ -4306,12 +4320,19 @@ msgid ""
 "setup file (`craftenv.ps1` or `craftenv.sh`), which will give you a terminal "
 "shell where you will be compiling your Kirigami application."
 msgstr ""
+"Cal seguir les [instruccions de configuració per al Craft](https://community."
+"kde.org/Craft). Cap al final de la configuració, hauríeu d'executar un "
+"fitxer de configuració d'entorn (`craftenv.ps1` o `craftenv.sh`), que us "
+"proporcionarà un intèrpret d'ordres de terminal a on compilareu la vostra "
+"aplicació Kirigami."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:66
 msgid ""
 "If you close your terminal, you can simply run the environment setup file "
 "again to compile your app."
 msgstr ""
+"Si tanqueu el terminal, podeu tornar a executar el fitxer de configuració "
+"d'entorn per compilar la vostra aplicació."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:68
 msgid "Project structure"
@@ -4779,14 +4800,20 @@ msgid ""
 "depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) "
 "to compile your projects."
 msgstr ""
+"Si esteu compilant el projecte amb el [Craft]({{< ref \"#craft\" >}}) en el "
+"Windows, potser necessitareu especificar un generador de CMake per al primer "
+"pas, depenent de si esteu utilitzant el Visual Studio 2019 (msvc) o el MinGW "
+"(make) per a compilar els projectes."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:201
 msgid "If Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
-msgstr ""
+msgstr "Si és Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:202
 msgid "If MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
-msgstr ""
+msgstr "Si és MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
 msgid "And launch it with:"
@@ -7258,61 +7285,3 @@ msgstr ""
 "La mida del tipus de lletra del [Kirigami.Theme](docs:kirigami2;Kirigami::"
 "PlatformTheme) està disponible en la vostra aplicació com una `Kirigami."
 "Theme.defaultFont.pointSize`."
-
-# skip-rule: t-acc_obe,punctuation-accent-quotes
-#~ msgid ""
-#~ "After that, `project(helloworld)` defines the name of the project. We "
-#~ "then use `set()` to define variables (`KF5_MIN_VERSION` and "
-#~ "`QT_MIN_VERSION`) containing the versions of KDE Frameworks and Qt."
-#~ msgstr ""
-#~ "Després d'això, `project(helloworld)` defineix el nom del projecte. "
-#~ "Després farem servir `set()` per a definir les variables "
-#~ "(`KF5_MIN_VERSION` i `QT_MIN_VERSION`) que contenen les versions dels "
-#~ "Frameworks de KDE i les Qt."
-
-# skip-rule: t-acc_obe
-#~ msgid ""
-#~ "`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core "
-#~ "Quick Test Gui QuickControls2 Widgets)`"
-#~ msgstr ""
-#~ "`find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core "
-#~ "Quick Test Gui QuickControls2 Widgets)`"
-
-# skip-rule: t-acc_obe,punctuation-accent-quotes
-#~ msgid "The first word is the framework (`Qt5`)."
-#~ msgstr "La primera paraula és el marc de treball (`Qt5`)."
-
-#~ msgid ""
-#~ "Then we are calling the variable with the version we set in the fifth "
-#~ "line."
-#~ msgstr ""
-#~ "Després fem una crida a la variable amb les versions que hem establert a "
-#~ "la cinquena línia."
-
-#~ msgid "Installing required packages"
-#~ msgstr "Instal·lar els paquets necessaris"
-
-#~ msgid ""
-#~ "Before getting started, we must install a few things. We need a C++ "
-#~ "compiler, Qt development packages, and Kirigami."
-#~ msgstr ""
-#~ "Abans de començar, hem d'instal·lar algunes coses. Necessitem un "
-#~ "compilador C++, els paquets de desenvolupament de les Qt i el Kirigami."
-
-# skip-rule: t-acc_obe,punctuation-simple-quotes
-#~ msgid ""
-#~ "The final line, `add_subdirectory(src)`, points CMake into the `src/` "
-#~ "directory."
-#~ msgstr ""
-#~ "L'última línia, `add_subdirectory(src)`, apunta CMake a dins del "
-#~ "directori `src/`."
-
-# skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-period-no
-#~ msgid ""
-#~ "[set()](https://cmake.org/cmake/help/latest/command/set.html) is used to "
-#~ "set `helloworld_SRCS` to `main.cpp` and `resources.qrc` (if we decide to "
-#~ "create additional C++ files we'll need to add them here too)"
-#~ msgstr ""
-#~ "[set()](https://cmake.org/cmake/help/latest/command/set.html) s'utilitza "
-#~ "per a establir `helloworld_SRCS` al `main.cpp` i `resources.qrc` (si "
-#~ "decidim crear fitxers en C++ addicionals, també els haurem d'afegir aquí)."

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 00:35+0000\n"
-"PO-Revision-Date: 2023-10-12 10:02+0200\n"
+"POT-Creation-Date: 2023-11-19 00:36+0000\n"
+"PO-Revision-Date: 2023-11-18 12:20+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -639,12 +639,8 @@ msgstr ""
 "CMake in die we willen aanroepen."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:24
-#, fuzzy
-#| msgid ""
-#| "The first line, `project(helloworld)` defines the name of the project."
 msgid "After that, `project(helloworld)` defines the name of the project."
-msgstr ""
-"De eerste regel, `project(helloworld)` definieert de naam van het project."
+msgstr "Daarna, definieert `project(helloworld)` de naam van het project."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:26
 msgid ""
@@ -659,18 +655,13 @@ msgstr ""
 "en we hoeven ze niet te wijzigen in deze handleiding."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:28
-#, fuzzy
-#| msgid ""
-#| "The following section is important, because it specifies which "
-#| "dependencies we'll be bringing in at compile time. Let's look at the "
-#| "first line:"
 msgid ""
 "The following section is important, because it specifies which dependencies "
 "we'll be bringing in at compile time. Let's look at the first:"
 msgstr ""
 "De volgende sectie is belangrijk, omdat het specificeert welke "
 "afhankelijkheden we zullen inbrengen bij compileren. Laten we naar de eerste "
-"regel kijken:"
+"kijken:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:32
 msgid ""
@@ -687,6 +678,10 @@ msgid ""
 "to be used, 5 or 6, depending on whether we use the CMake flag `-"
 "DBUILD_WITH_QT6=ON`."
 msgstr ""
+"Het eerste woord is het framework, Qt. `${QT_MAJOR_VERSION}` is een "
+"variabele voor het gemak geleverd door extra-cmake-modules die ons de te "
+"gebruiken Qt-versie laten kiezen, 5 of 6, afhankelijk van of we de CMake-"
+"vlag `-DBUILD_WITH_QT6=ON` gebruiken."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:34
 msgid ""
@@ -787,49 +782,34 @@ msgstr ""
 "korter."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:54
-#, fuzzy
-#| msgid ""
-#| "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-#| "add_executable.html) takes care of naming our executable and grabbing the "
-#| "files needed to create it"
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of generating our executable."
 msgstr ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-"add_executable.html) zorgt voor het geven van een naam aan ons uitvoerbare "
-"bestand en het pakken van de bestanden nodig om het aan te maken"
+"add_executable.html) zorgt voor genereren van het uitvoerbare bestand."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:55
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) links the libraries used in our code to our "
-#| "executable."
 msgid ""
 "[target_sources()](https://cmake.org/cmake/help/latest/command/"
 "target_sources.html) lets us add files that will be used by our new "
 "executable."
 msgstr ""
-"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-"target_link_libraries.html) koppelt dynamisch de bibliotheken, die gebruikt "
-"worden in onze code, aan ons uitvoerbare bestand."
+"[target_sources()](https://cmake.org/cmake/help/latest/command/"
+"target_sources.html) laat ons bestanden toevoegen die gebruikt zullen worden "
+"door ons nieuwe uitvoerbare bestand."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:56
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) dynamically links the libraries used in our "
-#| "code to our executable."
 msgid ""
 "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
 "to our executable. Kirigami is not included here because we are using only "
 "its QML module."
 msgstr ""
-"[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
+"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) koppelt dynamisch de bibliotheken, die gebruikt "
-"worden in onze code, aan ons uitvoerbare bestand."
+"worden in onze code, aan ons uitvoerbare bestand. Kirigami is hier niet "
+"meegenomen omdat we alleen zijn QML-module gebruiken."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:60
 msgid ""
@@ -4095,40 +4075,36 @@ msgid "Getting ready to create our first Kirigami application\n"
 msgstr "Gereed zijn om onze eerste Kirigami toepassing te maken\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:11
-#, fuzzy
-#| msgid "Using Kirigami Gallery"
 msgid "Installing Kirigami"
-msgstr "Kirigami galerij gebruiken"
+msgstr "Kirigami installeren"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:13
 msgid ""
 "Before getting started, we will need to install Kirigami on our machine. "
 "There are three ways to do so:"
 msgstr ""
+"Alvorens te beginnen moeten we Kirigami op onze machine installeren. Er zijn "
+"drie manieren om dat te doen:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:15
 msgid ""
 "[Installing Kirigami from the repositories in your Linux distribution]({{< "
 "ref \"#linux\" >}})"
 msgstr ""
+"[Kirigami installeren uit de opslagruimte in uw Linux distributie]({{< ref "
+"\"#linux\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
 msgid "[Building Kirigami with kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
-msgstr ""
+msgstr "[Kirigami bouwen met kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft]({{< ref \"#craft\" >}})"
-msgstr ""
+msgstr "[Kirigami installeren met Craft]({{< ref \"#craft\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:19
-#, fuzzy
-#| msgid ""
-#| "Before continuing please install Kirigami Gallery. It should already be "
-#| "in the repository of your Linux distribution."
 msgid "Installing Kirigami from the repositories in your Linux distribution"
-msgstr ""
-"Alvorens door te gaan installeer Kirigami Gallery. Het zou al in de "
-"opslagruimte van uw Linux distributie aanwezig moeten zijn."
+msgstr "Kirigami installeren uit de opslagruimte in uw Linux distributie"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:21
 msgid ""
@@ -4136,6 +4112,9 @@ msgid ""
 "terminal application and run one of the following, depending on which Linux "
 "distribution you are using:"
 msgstr ""
+"We hebben een C++ compiler, Qt ontwikkelpakketten en Kirigami nodig. Open "
+"een terminaltoepassing en voer een van de volgende, afhankelijk van welke "
+"Linux distributie u gebruikt:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
 msgid ""
@@ -4153,28 +4132,44 @@ msgid ""
 "only distribution packages on Linux. You will need to resort to [kdesrc-"
 "build]({{< ref \"#kdesrc-build\" >}}) instead."
 msgstr ""
+"Als u Kirigami wilt bouwen met Qt6 dan is dat nu niet mogelijk met alleen "
+"distributiepakketten op Linux. U moet in plaats daarvan uw toevlucht nemen "
+"tot [kdesrc-build]({{< ref \"#kdesrc-build\" >}})."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
 msgid "Building Kirigami with kdesrc-build"
-msgstr ""
+msgstr "Kirigami bouwen met kdesrc-build"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
+"KDE heeft een eigen hulpmiddel om gemakkelijk al zijn bibliotheken en "
+"programma's te bouwen: **kdesrc-build**. Het kan gebruikt worden om Kirigami "
+"op Linux en FreeBSD te bouwen."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
+#, fuzzy
+#| msgid ""
+#| "You will need to follow the [setup instructions for kdesrc-build](https://"
+#| "community.kde.org/Get_Involved/development/"
+#| "Set_up_a_development_environment) first, then copy the sample KF5 file to "
+#| "your home:"
 msgid ""
-"You will need to follow the [setup instructions for kdesrc-build](https://"
-"community.kde.org/Get_Involved/development/Set_up_a_development_environment) "
-"first, then copy the sample KF5 file to your home:"
+"For this tutorial, you will need to follow the [setup instructions for "
+"kdesrc-build](https://community.kde.org/Get_Involved/development/"
+"Set_up_a_development_environment) but using a `~/kde5` directory instead, "
+"then copy the sample KF5 file to your home:"
 msgstr ""
+"U moet de [opzetinstructies voor kdesrc-build](https://community.kde.org/"
+"Get_Involved/development/Set_up_a_development_environment) eerst volgen, "
+"daarna het voorbeeld KF5-bestand naar uw home kopiëren:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:45
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:60
 msgid "After that, you may simply run the following on a terminal:"
-msgstr ""
+msgstr "Daarna kunt u eenvoudig het volgende in een terminal uitvoeren:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:52
 msgid ""
@@ -4182,10 +4177,14 @@ msgid ""
 "you used to source the prefix file. If you close your terminal, you can "
 "simply source the file again to compile your app."
 msgstr ""
+"En daarna kunt u uw Kirigami-projecten in dezelfde terminal-shell compileren "
+"die u gebruikte om het prefix-bestand met source binnen te halen. Als u uw "
+"terminal sluit kunt u eenvoudig het bestand opnieuw binnenhalen om uw "
+"toepassing te compileren."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:54
 msgid "Installing Kirigami with Craft"
-msgstr ""
+msgstr "Kirigami installeren met Craft"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:56
 msgid ""
@@ -4197,6 +4196,14 @@ msgid ""
 "(https://community.kde.org/Craft/Android) and [macOS](https://community.kde."
 "org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
 msgstr ""
+"KDE heeft een eigen hulpmiddel om gemakkelijk de meeste van zijn "
+"bibliotheken en programma's te installeren: **Craft**. Het kan gebruikt "
+"worden om Kirigami te installeren op [Linux](https://community.kde.org/Craft/"
+"Linux), [FreeBSD](https://community.kde.org/Guidelines_and_HOWTOs/"
+"Build_from_source/FreeBSD), [Windows](https://community.kde.org/"
+"Guidelines_and_HOWTOs/Build_from_source/Windows), [Android](https://"
+"community.kde.org/Craft/Android) en [macOS](https://community.kde.org/"
+"Guidelines_and_HOWTOs/Build_from_source/Mac)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:58
 msgid ""
@@ -4205,12 +4212,18 @@ msgid ""
 "setup file (`craftenv.ps1` or `craftenv.sh`), which will give you a terminal "
 "shell where you will be compiling your Kirigami application."
 msgstr ""
+"U moet de [opzetinstructies voor Craft](https://community.kde.org/Craft) "
+"volgen. Aan het einde van de opzet zou u een opzetbestand voor de omgeving "
+"(`craftenv.ps1` of `craftenv.sh`) moeten uitvoeren, die u een terminal-shell "
+"geeft waar u uw Kirigami toepassing kunt compileren."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:66
 msgid ""
 "If you close your terminal, you can simply run the environment setup file "
 "again to compile your app."
 msgstr ""
+"Als u uw terminal sluit kunt u eenvoudig het opzetbestand voor de omgeving "
+"opnieuw binnenhalen om uw toepassing te compileren."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:68
 msgid "Project structure"
@@ -4653,14 +4666,18 @@ msgid ""
 "depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) "
 "to compile your projects."
 msgstr ""
+"Als u uw project met [Craft]({{< ref \"#craft\" >}}) compileert onder "
+"Windows, hebt u misschien een CMake-generator nodig voor de eerste stap, "
+"afhankelijk van of u Visual Studio 2019 (msvc) of MinGW (make) gebruikt om "
+"uw projecten te compileren."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:201
 msgid "If Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
-msgstr ""
+msgstr "Indien Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:202
 msgid "If MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
-msgstr ""
+msgstr "Indien MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
 msgid "And launch it with:"

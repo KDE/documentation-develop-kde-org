@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 00:35+0000\n"
-"PO-Revision-Date: 2023-10-12 09:38+0300\n"
+"POT-Creation-Date: 2023-11-19 00:36+0000\n"
+"PO-Revision-Date: 2023-11-18 17:04+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -641,11 +641,8 @@ msgstr ""
 "CMake, яку буде викликано."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:24
-#, fuzzy
-#| msgid ""
-#| "The first line, `project(helloworld)` defines the name of the project."
 msgid "After that, `project(helloworld)` defines the name of the project."
-msgstr "Перший рядок, `project(helloworld)`, визначає назву проєкту."
+msgstr "Після цього `project(helloworld)` визначає назву проєкту."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:26
 msgid ""
@@ -660,17 +657,12 @@ msgstr ""
 "цьому підручнику."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:28
-#, fuzzy
-#| msgid ""
-#| "The following section is important, because it specifies which "
-#| "dependencies we'll be bringing in at compile time. Let's look at the "
-#| "first line:"
 msgid ""
 "The following section is important, because it specifies which dependencies "
 "we'll be bringing in at compile time. Let's look at the first:"
 msgstr ""
 "Наступний розділ є важливим, оскільки у ньому визначають, які залежності ми "
-"використовуватимемо під час компіляції. Погляньмо на перший рядок:"
+"використовуватимемо під час компіляції. Погляньмо на початок:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:32
 msgid ""
@@ -687,6 +679,10 @@ msgid ""
 "to be used, 5 or 6, depending on whether we use the CMake flag `-"
 "DBUILD_WITH_QT6=ON`."
 msgstr ""
+"Першим словом є бібліотека, Qt. `${QT_MAJOR_VERSION}` є зручною змінною, "
+"доступ до якої надає extra-cmake-modules. За її допомогою ми можемо вибрати "
+"використану версію Qt, 5 або 6, залежно від того, чи використовуємо ми "
+"прапорець CMake `-DBUILD_WITH_QT6=ON`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:34
 msgid ""
@@ -789,49 +785,34 @@ msgstr ""
 "коротшим."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:54
-#, fuzzy
-#| msgid ""
-#| "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-#| "add_executable.html) takes care of naming our executable and grabbing the "
-#| "files needed to create it"
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of generating our executable."
 msgstr ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-"add_executable.html) відповідає за назву нашого виконуваного файла і "
-"визначення файлів, які потрібні для його створення"
+"add_executable.html) відповідає за створення нашого виконуваного файла."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:55
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) links the libraries used in our code to our "
-#| "executable."
 msgid ""
 "[target_sources()](https://cmake.org/cmake/help/latest/command/"
 "target_sources.html) lets us add files that will be used by our new "
 "executable."
 msgstr ""
-"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-"target_link_libraries.html) пов'язує ціль із бібліотеками, які "
-"використовуються у нашому коді для створення виконуваного файла."
+"[target_sources()](https://cmake.org/cmake/help/latest/command/"
+"target_sources.html) надає нам змогу додавати файли, які буде використано у "
+"нашому новому виконуваному файлі."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:56
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) dynamically links the libraries used in our "
-#| "code to our executable."
 msgid ""
 "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
 "to our executable. Kirigami is not included here because we are using only "
 "its QML module."
 msgstr ""
-"[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
+"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) динамічно пов'язує ціль із бібліотеками, які "
-"використовуються у нашому коді для створення виконуваного файла."
+"використовуються у нашому коді для створення виконуваного файла. Kirigami не "
+"включено сюди, оскільки ми використовуємо лише її модуль QML."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:60
 msgid ""
@@ -4087,40 +4068,37 @@ msgid "Getting ready to create our first Kirigami application\n"
 msgstr "Готуємося до створення нашої першої програми Kirigami\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:11
-#, fuzzy
-#| msgid "Using Kirigami Gallery"
 msgid "Installing Kirigami"
-msgstr "Користування галереєю Kirigami"
+msgstr "Встановлення Kirigami"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:13
 msgid ""
 "Before getting started, we will need to install Kirigami on our machine. "
 "There are three ways to do so:"
 msgstr ""
+"Перш ніж почати, нам потрібно встановити Kirigami у нашій машині. Існує три "
+"способи зробити це:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:15
 msgid ""
 "[Installing Kirigami from the repositories in your Linux distribution]({{< "
 "ref \"#linux\" >}})"
 msgstr ""
+"[Встановлення Kirigami зі сховищ пакунків у вашому дистрибутиві Linux](< ref "
+"\"#linux\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
 msgid "[Building Kirigami with kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
 msgstr ""
+"[Збирання Kirigami за допомогою kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft]({{< ref \"#craft\" >}})"
-msgstr ""
+msgstr "[Встановлення Kirigami за допомогою Craft]({{< ref \"#craft\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:19
-#, fuzzy
-#| msgid ""
-#| "Before continuing please install Kirigami Gallery. It should already be "
-#| "in the repository of your Linux distribution."
 msgid "Installing Kirigami from the repositories in your Linux distribution"
-msgstr ""
-"Перш ніж продовжувати, встановіть Галерею Kirigami. Відповідні пакунки можна "
-"знайти у сховищах пакунків вашого дистрибутива Linux."
+msgstr "Встановлення Kirigami зі сховищ пакунків у вашому дистрибутиві Linux"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:21
 msgid ""
@@ -4128,6 +4106,9 @@ msgid ""
 "terminal application and run one of the following, depending on which Linux "
 "distribution you are using:"
 msgstr ""
+"Нам знадобиться компілятор C++, пакунки для розробки Qt та Kirigami. "
+"Відкрийте програму-термінал і віддайте одну з вказаних нижче команд, залежно "
+"від дистрибутива Linux, яким ви користуєтеся:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
 msgid ""
@@ -4144,28 +4125,45 @@ msgid ""
 "only distribution packages on Linux. You will need to resort to [kdesrc-"
 "build]({{< ref \"#kdesrc-build\" >}}) instead."
 msgstr ""
+"Якщо ви хочете зібрати Kirigami з Qt6, у поточній версії це не можна зробити "
+"з використанням лише пакунків дистрибутива у Linux. Вам доведеться "
+"скористатися [kdesrc-build]({{< ref \"#kdesrc-build\" >}})."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
 msgid "Building Kirigami with kdesrc-build"
-msgstr ""
+msgstr "Збирання Kirigami за допомогою kdesrc-build"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
+"У KDE передбачено нетиповий інструмент для спрощення збирання усіх бібліотек "
+"і програм: **kdesrc-build**. Ним можна скористатися для збирання Kirigami у "
+"Linux і FreeBSD."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
+#, fuzzy
+#| msgid ""
+#| "You will need to follow the [setup instructions for kdesrc-build](https://"
+#| "community.kde.org/Get_Involved/development/"
+#| "Set_up_a_development_environment) first, then copy the sample KF5 file to "
+#| "your home:"
 msgid ""
-"You will need to follow the [setup instructions for kdesrc-build](https://"
-"community.kde.org/Get_Involved/development/Set_up_a_development_environment) "
-"first, then copy the sample KF5 file to your home:"
+"For this tutorial, you will need to follow the [setup instructions for "
+"kdesrc-build](https://community.kde.org/Get_Involved/development/"
+"Set_up_a_development_environment) but using a `~/kde5` directory instead, "
+"then copy the sample KF5 file to your home:"
 msgstr ""
+"Спочатку вам слід виконати [настанови з налаштовування kdesrc-build](https://"
+"community.kde.org/Get_Involved/development/"
+"Set_up_a_development_environment), потім скопіювати зразок файла KF5 до "
+"вашого домашнього каталогу:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:45
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:60
 msgid "After that, you may simply run the following on a terminal:"
-msgstr ""
+msgstr "Після цього ви можете просто віддати таку команду у терміналі:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:52
 msgid ""
@@ -4173,10 +4171,14 @@ msgid ""
 "you used to source the prefix file. If you close your terminal, you can "
 "simply source the file again to compile your app."
 msgstr ""
+"А потім ви зможете збирати ваші проєкти Kirigami у тій самій оболонці "
+"термінала, якою ви скористалися для отримання файла префікса. Якщо ви "
+"закриєте термінал, ви можете просто ще раз отримати цей файл, щоб зібрати "
+"вашу програму."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:54
 msgid "Installing Kirigami with Craft"
-msgstr ""
+msgstr "Встановлення Kirigami за допомогою Craft"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:56
 msgid ""
@@ -4188,6 +4190,13 @@ msgid ""
 "(https://community.kde.org/Craft/Android) and [macOS](https://community.kde."
 "org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
 msgstr ""
+"У KDE передбачено нетиповий інструмент для полегшення встановлення більшості "
+"бібліотек і програм: **Craft**. Ним можна скористатися для встановлення "
+"Kirigami у [Linux](https://community.kde.org/Craft/Linux), [FreeBSD](https://"
+"community.kde.org/Guidelines_and_HOWTOs/Build_from_source/FreeBSD), [Windows]"
+"(https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Windows), "
+"[Android](https://community.kde.org/Craft/Android) та [macOS](https://"
+"community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:58
 msgid ""
@@ -4196,12 +4205,19 @@ msgid ""
 "setup file (`craftenv.ps1` or `craftenv.sh`), which will give you a terminal "
 "shell where you will be compiling your Kirigami application."
 msgstr ""
+"Вам слід виконати [настанови зі встановлення для Craft](https://community."
+"kde.org/Craft). Наприкінці налаштовування вам слід запустити файл "
+"налаштовування середовища (`craftenv.ps1` або `craftenv.sh`), який надасть у "
+"ваше розпорядження оболонку термінала, у якій ви збиратимете вашу програму "
+"Kirigami."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:66
 msgid ""
 "If you close your terminal, you can simply run the environment setup file "
 "again to compile your app."
 msgstr ""
+"Якщо ви закриєте термінал, ви можете просто ще раз запустити файл "
+"налаштовування середовища, щоб зібрати вашу програму."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:68
 msgid "Project structure"
@@ -4642,14 +4658,18 @@ msgid ""
 "depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) "
 "to compile your projects."
 msgstr ""
+"Якщо ви збираєте ваш проєкт за допомогою [Craft]({{< ref \"#craft\" >}}) у "
+"Windows, вам, можливо, на першому кроці слід вказати породжувач CMake, "
+"залежно від того, користуєтеся ви для збирання ваших проєктів Visual Studio "
+"2019 (msvc) чи MinGW (make)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:201
 msgid "If Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
-msgstr ""
+msgstr "Якщо Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:202
 msgid "If MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
-msgstr ""
+msgstr "Якщо MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
 msgid "And launch it with:"

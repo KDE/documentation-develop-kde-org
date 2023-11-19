@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-18 00:35+0000\n"
-"PO-Revision-Date: 2023-10-12 05:08+0200\n"
+"POT-Creation-Date: 2023-11-19 00:36+0000\n"
+"PO-Revision-Date: 2023-11-18 10:09+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -628,11 +628,8 @@ msgstr ""
 "CMake, ki jo bomo klicali."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:24
-#, fuzzy
-#| msgid ""
-#| "The first line, `project(helloworld)` defines the name of the project."
 msgid "After that, `project(helloworld)` defines the name of the project."
-msgstr "Prva vrstica, »project(helloworld)«, določa ime projekta."
+msgstr "Po tem `project(helloworld)` določa ime projekta."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:26
 msgid ""
@@ -646,17 +643,12 @@ msgstr ""
 "skrbi preveč glede teh vrstic za zdaj, ne bomo jih spreminjali v tej vaji."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:28
-#, fuzzy
-#| msgid ""
-#| "The following section is important, because it specifies which "
-#| "dependencies we'll be bringing in at compile time. Let's look at the "
-#| "first line:"
 msgid ""
 "The following section is important, because it specifies which dependencies "
 "we'll be bringing in at compile time. Let's look at the first:"
 msgstr ""
-"Naslednji razdelek je pomemben, saj določa, katere odvisnosti bomo vključili "
-"v času prevajanja. Poglejmo prvo vrstico:"
+"Naslednji razdelek je pomemben, ker določa, katere odvisnosti bomo vnesli "
+"med prevajanjem. Poglejmo prvega:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:32
 msgid ""
@@ -673,6 +665,10 @@ msgid ""
 "to be used, 5 or 6, depending on whether we use the CMake flag `-"
 "DBUILD_WITH_QT6=ON`."
 msgstr ""
+"Prva beseda je okvir Qt. `${QT_MAJOR_VERSION}` je priročna spremenljivka, ki "
+"jo zagotavljajo moduli extra-cmake-modules, ki nam omogoča izbiro "
+"uporabljene različice Qt 5 ali 6, odvisno od tega, ali uporabljamo zastavico "
+"CMake `-DBUILD_WITH_QT6=ON`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:34
 msgid ""
@@ -770,49 +766,34 @@ msgid ""
 msgstr "Ker večino težkega dela opravi prva datoteka, je ta precej krajša."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:54
-#, fuzzy
-#| msgid ""
-#| "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-#| "add_executable.html) takes care of naming our executable and grabbing the "
-#| "files needed to create it"
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of generating our executable."
 msgstr ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-"add_executable.html) skrbi za poimenovanje naše izvršilne datoteke in "
-"pridobivanje datotek, ki so potrebne za njeno izdelavo"
+"add_executable.html) skrbi za generiranje naše izvršljive datoteke."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:55
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) links the libraries used in our code to our "
-#| "executable."
 msgid ""
 "[target_sources()](https://cmake.org/cmake/help/latest/command/"
 "target_sources.html) lets us add files that will be used by our new "
 "executable."
 msgstr ""
-"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-"target_link_libraries.html) povezuje knjižnice, uporabljene v naši kodi z "
-"našo izvršitveno datoteko."
+"[target_sources()](https://cmake.org/cmake/help/latest/command/"
+"target_sources.html) nam omogoča dodajanje datotek, ki jih bo uporabljala "
+"naša nova izvršljiva datoteka."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:56
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) dynamically links the libraries used in our "
-#| "code to our executable."
 msgid ""
 "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
 "to our executable. Kirigami is not included here because we are using only "
 "its QML module."
 msgstr ""
-"[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
+"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dinamično povezuje knjižnice, uporabljene v naši "
-"kodi, z našo izvršitveno datoteko."
+"kodi, z našo izvršljivo datoteko. Kirigami tukaj ni vključen, ker "
+"uporabljamo samo njegov modul QML."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:60
 msgid ""
@@ -4007,40 +3988,36 @@ msgid "Getting ready to create our first Kirigami application\n"
 msgstr "Pripravljamo se za ustvarjanje naše prve aplikacije Kirigami\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:11
-#, fuzzy
-#| msgid "Using Kirigami Gallery"
 msgid "Installing Kirigami"
-msgstr "Uporaba galerije Kirigami"
+msgstr "Nameščanje Kirigami"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:13
 msgid ""
 "Before getting started, we will need to install Kirigami on our machine. "
 "There are three ways to do so:"
 msgstr ""
+"Preden začnemo, bomo morali namestiti Kirigami na naš računalnik. To lahko "
+"storite na tri načine:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:15
 msgid ""
 "[Installing Kirigami from the repositories in your Linux distribution]({{< "
 "ref \"#linux\" >}})"
 msgstr ""
+"[Namestitev Kirigamija iz skladišč v vaši distribuciji Linuxa]({{< ref "
+"\"#linux\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
 msgid "[Building Kirigami with kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
-msgstr ""
+msgstr "[Izgradnja Kirigamija s kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft]({{< ref \"#craft\" >}})"
-msgstr ""
+msgstr "[Namestitev Kirigami s programom Craft]({{< ref \"#craft\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:19
-#, fuzzy
-#| msgid ""
-#| "Before continuing please install Kirigami Gallery. It should already be "
-#| "in the repository of your Linux distribution."
 msgid "Installing Kirigami from the repositories in your Linux distribution"
-msgstr ""
-"Preden nadaljujete, namestite Galerijo Kirigami. Morala bi biti že v "
-"skladišču vaše distribucije Linuxa."
+msgstr "Namestitev Kirigamija iz skladišč v vaši distribuciji Linuxa"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:21
 msgid ""
@@ -4048,6 +4025,9 @@ msgid ""
 "terminal application and run one of the following, depending on which Linux "
 "distribution you are using:"
 msgstr ""
+"Potrebujemo prevajalnik C++, razvojne pakete Qt in Kirigami. Odprite "
+"terminalsko aplikacijo in zaženite nekaj od naslednjega, odvisno od tega, "
+"katero distribucijo Linuxa uporabljate:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
 msgid ""
@@ -4064,28 +4044,45 @@ msgid ""
 "only distribution packages on Linux. You will need to resort to [kdesrc-"
 "build]({{< ref \"#kdesrc-build\" >}}) instead."
 msgstr ""
+"Če želite zgraditi Kirigami s Qt6, to trenutno ni mogoče samo z "
+"distribucijskimi paketi v Linuxu. Namesto tega se boste morali zateči k "
+"[kdesrc-build]({{< ref \"#kdesrc-build\" >}})."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
 msgid "Building Kirigami with kdesrc-build"
-msgstr ""
+msgstr "Gradnja Kirigami s kdesrc-build"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
+"KDE ima orodje po meri za enostavno izgradnjo vseh svojih knjižnic in "
+"programov: **kdesrc-build**. Uporablja se lahko za izdelavo Kirigamija na "
+"Linuxu in FreeBSD."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
+#, fuzzy
+#| msgid ""
+#| "You will need to follow the [setup instructions for kdesrc-build](https://"
+#| "community.kde.org/Get_Involved/development/"
+#| "Set_up_a_development_environment) first, then copy the sample KF5 file to "
+#| "your home:"
 msgid ""
-"You will need to follow the [setup instructions for kdesrc-build](https://"
-"community.kde.org/Get_Involved/development/Set_up_a_development_environment) "
-"first, then copy the sample KF5 file to your home:"
+"For this tutorial, you will need to follow the [setup instructions for "
+"kdesrc-build](https://community.kde.org/Get_Involved/development/"
+"Set_up_a_development_environment) but using a `~/kde5` directory instead, "
+"then copy the sample KF5 file to your home:"
 msgstr ""
+"Najprej boste morali slediti [navodilom za namestitev za kdesrc-build]"
+"(https://community.kde.org/Get_Involved/development/"
+"Set_up_a_development_environment), nato kopirati vzorčno datoteko KF5 na "
+"svoj domači disk:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:45
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:60
 msgid "After that, you may simply run the following on a terminal:"
-msgstr ""
+msgstr "Po tem lahko preprosto zaženete naslednje na terminalu:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:52
 msgid ""
@@ -4093,10 +4090,13 @@ msgid ""
 "you used to source the prefix file. If you close your terminal, you can "
 "simply source the file again to compile your app."
 msgstr ""
+"In potem lahko svoje projekte Kirigami prevedete v isto terminalsko lupino, "
+"ki ste jo uporabili za izvor datoteke s predpono. Če zaprete terminal, lahko "
+"preprosto znova pridobite datoteko, da prevedete svojo aplikacijo."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:54
 msgid "Installing Kirigami with Craft"
-msgstr ""
+msgstr "Namestitev Kirigami s programom Craft"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:56
 msgid ""
@@ -4108,6 +4108,13 @@ msgid ""
 "(https://community.kde.org/Craft/Android) and [macOS](https://community.kde."
 "org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
 msgstr ""
+"KDE ima orodje po meri za preprosto namestitev večine svojih knjižnic in "
+"programov: **Craft**. Uporablja se lahko za namestitev Kirigamija v [Linux]"
+"(https://community.kde.org/Craft/Linux), [FreeBSD](https://community.kde.org/"
+"Guidelines_and_HOWTOs/Build_from_source/FreeBSD), [Windows ](https://"
+"community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Windows), [Android]"
+"(https://community.kde.org/Craft/Android) in [macOS](https://community.kde. "
+"org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:58
 msgid ""
@@ -4116,12 +4123,18 @@ msgid ""
 "setup file (`craftenv.ps1` or `craftenv.sh`), which will give you a terminal "
 "shell where you will be compiling your Kirigami application."
 msgstr ""
+"Slediti boste morali [navodilom za namestitev za Craft](https://community."
+"kde.org/Craft). Do konca namestitve bi morali zagnati datoteko za nastavitev "
+"okolja (`craftenv.ps1` ali `craftenv.sh`), ki vam bo dala terminalsko "
+"lupino, kjer boste prevajali svojo aplikacijo Kirigami."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:66
 msgid ""
 "If you close your terminal, you can simply run the environment setup file "
 "again to compile your app."
 msgstr ""
+"Če zaprete terminal, lahko preprosto znova zaženete namestitveno datoteko "
+"okolja, da prevedete svojo aplikacijo."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:68
 msgid "Project structure"
@@ -4554,14 +4567,18 @@ msgid ""
 "depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) "
 "to compile your projects."
 msgstr ""
+"Če prevajate svoj projekt z [Craft]({{< ref \"#craft\" >}}) v sistemu "
+"Windows, boste morda morali določiti CMake Generator za prvi korak, odvisno "
+"od tega, ali uporabljate Visual Studio 2019 (msvc ) ali MinGW (make) za "
+"prevajanje vaših projektov."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:201
 msgid "If Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
-msgstr ""
+msgstr "Če Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:202
 msgid "If MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
-msgstr ""
+msgstr "Če MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
 msgid "And launch it with:"
