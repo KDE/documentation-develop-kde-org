@@ -54,6 +54,7 @@ Since most of the heavy lifting is done by the first file, this one is a lot sho
 - [add_executable()](https://cmake.org/cmake/help/latest/command/add_executable.html) takes care of generating our executable.
 - [target_sources()](https://cmake.org/cmake/help/latest/command/target_sources.html) lets us add files that will be used by our new executable.
 - [target_link_libraries()](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) dynamically links the libraries used in our code to our executable. Kirigami is not included here because we are using only its QML module.
+- [install()](https://cmake.org/cmake/help/latest/command/install.html) puts our executable in its right place by using `${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, a convenience variable provided by [KDEInstallDirs](https://api.kde.org/ecm/manual/ecm-kde-modules.7.html) in extra-cmake-modules that installs executables and libraries in their right place for you without needing to specify the absolute path, similarly to [GNUInstallDirs](https://cmake.org/cmake/help/latest/module/GNUInstallDirs.html).
 
 {{< alert title="Note" color="info" >}}
 

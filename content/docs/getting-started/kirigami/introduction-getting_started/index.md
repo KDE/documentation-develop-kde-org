@@ -21,12 +21,12 @@ Before getting started, we will need to install Kirigami on our machine. There a
 We need a C++ compiler, Qt development packages, and Kirigami. Open a terminal application and run one of the following, depending on which Linux distribution you are using:
 
 {{< installpackage
-  ubuntu="build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev kirigami2-dev libkf5i18n-dev gettext libkf5coreaddons-dev"
-  arch="base-devel extra-cmake-modules cmake qt5-base qt5-declarative qt5-quickcontrols2 kirigami2 ki18n kcoreaddons breeze"
+  ubuntu="build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev kirigami2-dev libkf5i18n-dev gettext libkf5coreaddons-dev qml-module-org-kde-qqc2desktopstyle"
+  arch="base-devel extra-cmake-modules cmake qt5-base qt5-declarative qt5-quickcontrols2 kirigami2 ki18n kcoreaddons breeze qqc2-desktop-style"
   opensuseCommand=`sudo zypper install --type pattern devel_C_C++
-sudo zypper install cmake extra-cmake-modules libQt5Core-devel libqt5-qtdeclarative-devel libQt5QuickControls2-devel kirigami2-devel ki18n-devel kcoreaddons-devel qqc2-breeze-style`
+sudo zypper install cmake extra-cmake-modules libQt5Core-devel libqt5-qtdeclarative-devel libQt5QuickControls2-devel kirigami2-devel ki18n-devel kcoreaddons-devel qqc2-desktop-style`
   fedoraCommand=`sudo dnf groupinstall "Development Tools" "Development Libraries"
-sudo dnf install cmake extra-cmake-modules qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel kf5-kirigami2-devel kf5-ki18n-devel kf5-kcoreaddons-devel qqc2-breeze-style` >}}
+sudo dnf install cmake extra-cmake-modules qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel kf5-kirigami2-devel kf5-ki18n-devel kf5-kcoreaddons-devel qqc2-desktop-style` >}}
 
 Further information for other distributions can be found [here](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Install_the_dependencies).
 
@@ -45,7 +45,7 @@ cp ~/kde5/src/kdesrc-build/kdesrc-buildrc-kf5-sample ~/.config/kdesrc-buildrc
 After that, you may simply run the following on a terminal:
 
 ```bash
-kdesrc-build kirigami kconfig kcoreaddons ki18n
+kdesrc-build kirigami kcoreaddons ki18n breeze plasma-integration qqc2-desktop-style
 source ~/kde5/build/kirigami/prefix.sh
 ```
 
@@ -60,7 +60,7 @@ You will need to follow the [setup instructions for Craft](https://community.kde
 After that, you may simply run the following on a terminal:
 
 ```bash
-craft kirigami kconfig kcoreaddons ki18n
+craft kirigami kconfig kcoreaddons ki18n qqc2-desktop-style
 ```
 
 If you close your terminal, you can simply run the environment setup file again to compile your app.
@@ -189,22 +189,43 @@ Now that CMake has been taken care of, let's look at the files we are going to s
 
 ## Compiling and running the application
 
-We are almost at the finish line. The last thing we need to do is build and compile our application. To do that, we need to enter our `helloworld/` folder in our terminal application of choice and run the following commands:
+We are almost at the finish line. The last thing we need to do is build and run our application. Doing so will depend on which platform you are on.
+
+If you are running your project on Linux, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `helloworld/` folder in our terminal application of choice and run the following commands:
 
 ```bash
-cmake -B build/
+cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/kde5/usr"
 cmake --build build/
+cmake --install build/
 ```
+
+The program will be installed to `~/kde5/usr/bin`.
 
 If you are compiling your project with [Craft]({{< ref "#craft" >}}) on Windows, you might need to specify a CMake Generator for the first step, depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) to compile your projects.
 
-* If Visual Studio: `cmake -B build/ -G "Visual Studio 16 2019"`
-* If MinGW: `cmake -B build/ -G "MinGW Makefiles"`
-
-And launch it with:
+If Visual Studio:
 
 ```bash
-./build/bin/helloworld
+cmake -B build/ -G "Visual Studio 16 2019"`
+cmake --build build/
+cmake --install build/
+```
+
+If MinGW:
+
+```bash
+cmake -B build/ -G "MinGW Makefiles"
+cmake --build build/
+cmake --install build/
+```
+
+In both cases, the program will be installed to `C:\CraftRoot\bin`.
+
+You can then run the helloworld program with:
+
+```bash
+helloworld # On Linux
+helloworld.exe # On Windows
 ```
 
 Voilà! Now you will see your very first Kirigami app appear before your very own eyes.
