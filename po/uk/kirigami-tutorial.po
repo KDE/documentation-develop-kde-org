@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-20 00:35+0000\n"
-"PO-Revision-Date: 2023-11-19 08:58+0200\n"
+"PO-Revision-Date: 2023-11-20 09:04+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -490,13 +490,6 @@ msgstr ""
 "програми кориснішими за ті, які ми могли б написати, використовуючи лише QML."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
-#| "Started' page so that we can better understand what is going on in the "
-#| "central C++ file of our application. While this is a basic `main.cpp`, "
-#| "the features we will go over will remain essential no matter what kind of "
-#| "application you decide to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the [Getting "
 "Started]({{< ref \"introduction-getting_started\" >}}) page so that we can "
@@ -506,10 +499,11 @@ msgid ""
 "create."
 msgstr ""
 "У цьому розділі ми вивчимо файл `main.cpp`, який було створено на сторінці "
-"«Вступ» з метою удосконалення знань щодо того, що відбувається у "
-"центральному файлі мовою C++ нашої програми. Хоча це базовий варіант `main."
-"cpp`, можливості, які ми вивчатимемо, лишатимуться характерними для будь-"
-"яких програм, які ви створюватимете."
+"[Вступ]({{< ref \"introduction-getting_started\" >}}) з метою удосконалення "
+"знань щодо того, що відбувається у центральному файлі мовою C++ нашої "
+"програми. Хоча це базовий варіант `main.cpp`, можливості, які ми "
+"вивчатимемо, лишатимуться характерними для будь-яких програм, які ви "
+"створюватимете."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:17
 msgid "What it does"
@@ -568,6 +562,10 @@ msgid ""
 "make use of [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-"
 "desktop-style)."
 msgstr ""
+"Щоб наша програма виглядала природно у Плазмі, Windows або GNOME, нам слід "
+"наказати за допомогою [QQuickStyle::setStyle()](docs:qtquickcontrols;"
+"QQuickStyle::setStyle()) використовувати [qqc2-desktop-style](https://invent."
+"kde.org/frameworks/qqc2-desktop-style)."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
 msgid ""
@@ -829,6 +827,14 @@ msgid ""
 "[GNUInstallDirs](https://cmake.org/cmake/help/latest/module/GNUInstallDirs."
 "html)."
 msgstr ""
+"[install()](https://cmake.org/cmake/help/latest/command/install.html) "
+"розташовує наш виконуваний файл у належному місці за допомогою `"
+"${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, зручної змінної, яку надає "
+"[KDEInstallDirs](https://api.kde.org/ecm/manual/ecm-kde-modules.7.html) у "
+"extra-cmake-modules, і яка встановлює виконувані файли та бібліотеки у "
+"належному місці, без потреби у визначенні абсолютних шляхів, подібно до "
+"[GNUInstallDirs](https://cmake.org/cmake/help/latest/module/GNUInstallDirs."
+"html)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:61
 msgid ""
@@ -4223,13 +4229,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:66
 msgid "Theming on Windows"
-msgstr ""
+msgstr "Теми у Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:68
 msgid ""
 "<details>\n"
 "<summary>Click here to read more</summary>\n"
 msgstr ""
+"<details>\n"
+"<summary>Натисніть тут, щоб дізнатися більше</summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:71
 msgid ""
@@ -4240,10 +4248,16 @@ msgid ""
 "other hand is responsible for the nice looking style we want to enforce on "
 "those platforms."
 msgstr ""
+"При збирання програми після встановлення залежностей за допомогою Craft "
+"просте встановлення KIconThemes і Breeze забезпечує для програми можливість "
+"використання піктограм Breeze на платформах, подібних до Windows, окреме "
+"компонування не потрібне. З іншого боку, [qqc2-desktop-style](https://invent."
+"kde.org/frameworks/qqc2-desktop-style) відповідає за приємний вигляд стилю, "
+"який ми примусово встановлюємо на відповідних платформах."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
 msgid "</details>\n"
-msgstr ""
+msgstr "</details>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:76
 msgid ""
@@ -4676,40 +4690,27 @@ msgid "Compiling and running the application"
 msgstr "Збирання і запуск програми"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:202
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "We are almost at the finish line. The last thing we need to do is build and "
 "run our application. Doing so will depend on which platform you are on."
 msgstr ""
-"Ми наблизилися до фінішу. Наприкінці процесу нам слід побудувати і зібрати "
-"нашу програму. Для цього нам потрібно увійти до нашої теки «helloworld» у "
-"програмі-терміналі і віддати такі команди:"
+"Ми наблизилися до фінішу. Наприкінці процесу нам слід зібрати і запустити "
+"нашу програму. При цьому послідовність дій залежить від програмної платформи."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "If you are running your project on Linux, you will need to specify the place "
 "where the program will be installed. To do that, we need to change "
 "directories to our `helloworld/` folder in our terminal application of "
 "choice and run the following commands:"
 msgstr ""
-"Ми наблизилися до фінішу. Наприкінці процесу нам слід побудувати і зібрати "
-"нашу програму. Для цього нам потрібно увійти до нашої теки «helloworld» у "
-"програмі-терміналі і віддати такі команди:"
+"Якщо ви працюєте над вашим проєктом у Linux, вам слід вказати місце, куди "
+"буде встановлено програму. Для цього нам слід перейти до каталогу "
+"`helloworld/` у нашій програмі-терміналі і віддати такі команди:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:212
 msgid "The program will be installed to `~/kde5/usr/bin`."
-msgstr ""
+msgstr "Програму буде встановлено до `~/kde5/usr/bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:214
 msgid ""
@@ -4725,27 +4726,27 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:216
 msgid "If Visual Studio:"
-msgstr ""
+msgstr "Якщо Visual Studio:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:224
 msgid "If MinGW:"
-msgstr ""
+msgstr "Якщо MinGW:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:232
 msgid "In both cases, the program will be installed to `C:\\CraftRoot\\bin`."
-msgstr ""
+msgstr "В обох випадках програму буде встановлено до `C:\\CraftRoot\\bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:234
 msgid "You can then run the helloworld program with:"
-msgstr ""
+msgstr "Далі, ви можете запустити програму helloworld такою командою:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:237
 msgid "On Linux"
-msgstr ""
+msgstr "У Linux"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:238
 msgid "On Windows"
-msgstr ""
+msgstr "У Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:241
 msgid ""

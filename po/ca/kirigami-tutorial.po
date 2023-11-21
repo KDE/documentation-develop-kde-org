@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-20 00:35+0000\n"
-"PO-Revision-Date: 2023-11-19 10:36+0100\n"
+"PO-Revision-Date: 2023-11-20 09:59+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -512,13 +512,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
-#| "Started' page so that we can better understand what is going on in the "
-#| "central C++ file of our application. While this is a basic `main.cpp`, "
-#| "the features we will go over will remain essential no matter what kind of "
-#| "application you decide to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the [Getting "
 "Started]({{< ref \"introduction-getting_started\" >}}) page so that we can "
@@ -527,11 +520,12 @@ msgid ""
 "will remain essential no matter what kind of application you decide to "
 "create."
 msgstr ""
-"Aquí, repassarem el fitxer `main.cpp` que hem creat a la pàgina *Com "
-"començar* perquè puguem comprendre millor el que està succeint en el fitxer "
-"central de C++ de la nostra aplicació. Si bé aquest és un `main.cpp` bàsic, "
-"les característiques que repassarem seguiran sent essencials, sense importar "
-"la classe d'aplicació que decidiu crear."
+"Aquí, repassarem el fitxer `main.cpp` que hem creat a la pàgina [Com "
+"començar]({{< ref \"introduction-getting_started\" >}}) perquè puguem "
+"comprendre millor el que està succeint en el fitxer central de C++ de la "
+"nostra aplicació. Si bé aquest és un `main.cpp` bàsic, les característiques "
+"que repassarem seguiran sent essencials, sense importar la classe "
+"d'aplicació que decidiu crear."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:17
 msgid "What it does"
@@ -591,6 +585,10 @@ msgid ""
 "make use of [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-"
 "desktop-style)."
 msgstr ""
+"Per fer que la nostra aplicació sembli nativa al Plasma, Windows o GNOME, "
+"utilitzem [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::"
+"setStyle()) per a fer ús de [qqc2-desktop-style](https://invent.kde.org/"
+"frameworks/qqc2-desktop-style)."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
@@ -857,6 +855,7 @@ msgstr ""
 "utilitzades en el nostre codi amb el nostre executable. El Kirigami no "
 "s'inclou aquí perquè només estem utilitzant el seu mòdul QML."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:57
 msgid ""
 "[install()](https://cmake.org/cmake/help/latest/command/install.html) puts "
@@ -868,6 +867,14 @@ msgid ""
 "[GNUInstallDirs](https://cmake.org/cmake/help/latest/module/GNUInstallDirs."
 "html)."
 msgstr ""
+"[install()](https://cmake.org/cmake/help/latest/command/install.html) posa "
+"el nostre executable en el seu lloc correcte utilitzant `"
+"${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, una variable d'utilitat proporcionada "
+"per [KDEInstallDirs](https://api.kde.org/ecm/manual/ecm-kde-modules.7.html) "
+"en extra-cmake-modules que instal·len executables i biblioteques en el seu "
+"lloc correcte, sense necessitat d'especificar el camí absolut, de manera "
+"similar a [GNUInstallDirs](https://cmake.org/cmake/help/latest/module/"
+"GNUInstallDirs.html)."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:61
@@ -4297,7 +4304,7 @@ msgid ""
 msgstr ""
 "I llavors podeu compilar els projectes del Kirigami en el mateix intèrpret "
 "d'ordres del terminal que heu utilitzat per a crear el fitxer de prefix. Si "
-"tanqueu el terminal, podeu tornar a crear el fitxer per compilar la vostra "
+"tanqueu el terminal, podeu tornar a crear el fitxer per a compilar la vostra "
 "aplicació."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:54
@@ -4339,13 +4346,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:66
 msgid "Theming on Windows"
-msgstr ""
+msgstr "Temes al Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:68
 msgid ""
 "<details>\n"
 "<summary>Click here to read more</summary>\n"
 msgstr ""
+"<details>\n"
+"<summary>Feu clic aquí per a llegir-ne més</summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:71
 msgid ""
@@ -4356,10 +4365,16 @@ msgid ""
 "other hand is responsible for the nice looking style we want to enforce on "
 "those platforms."
 msgstr ""
+"En construir l'aplicació després d'instal·lar les dependències amb el Craft, "
+"només instal·lar el KIconThemes i el Breeze assegura que l'aplicació podrà "
+"utilitzar les icones Breeze en plataformes com el Windows, no és necessari "
+"enllaçar [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-"
+"style) d'altra banda és responsable de l'estil d'aspecte agradable que volem "
+"aplicar en aquestes plataformes."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
 msgid "</details>\n"
-msgstr ""
+msgstr "</details>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:76
 msgid ""
@@ -4367,7 +4382,7 @@ msgid ""
 "again to compile your app."
 msgstr ""
 "Si tanqueu el terminal, podeu tornar a executar el fitxer de configuració "
-"d'entorn per compilar la vostra aplicació."
+"d'entorn per a compilar la vostra aplicació."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:78
 msgid "Project structure"
@@ -4819,41 +4834,31 @@ msgstr "Compilar i executar l'aplicació"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:202
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "We are almost at the finish line. The last thing we need to do is build and "
 "run our application. Doing so will depend on which platform you are on."
 msgstr ""
 "Estem gairebé a la línia de meta. L'últim que hem de fer és construir i "
-"compilar la nostra aplicació. Per a fer això, hem d'entrar a la carpeta "
-"`helloworld/` amb l'aplicació de terminal i executar les ordres següents:"
+"compilar la nostra aplicació. Fer això dependrà de la plataforma en la qual "
+"estem."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "If you are running your project on Linux, you will need to specify the place "
 "where the program will be installed. To do that, we need to change "
 "directories to our `helloworld/` folder in our terminal application of "
 "choice and run the following commands:"
 msgstr ""
-"Estem gairebé a la línia de meta. L'últim que hem de fer és construir i "
-"compilar la nostra aplicació. Per a fer això, hem d'entrar a la carpeta "
-"`helloworld/` amb l'aplicació de terminal i executar les ordres següents:"
+"Si esteu executant el vostre projecte en el Linux, haureu d'especificar el "
+"lloc on s'instal·larà el programa. Per a fer-ho, necessitem canviar els "
+"directoris a la nostra carpeta `helloworld/` a l'aplicació de terminal de la "
+"nostra elecció i executar les ordres següents:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:212
 msgid "The program will be installed to `~/kde5/usr/bin`."
-msgstr ""
+msgstr "El programa s'instal·larà a `~/kde5/usr/bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:214
 msgid ""
@@ -4869,27 +4874,28 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:216
 msgid "If Visual Studio:"
-msgstr ""
+msgstr "Si és Visual Studio:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:224
 msgid "If MinGW:"
-msgstr ""
+msgstr "Si és MinGW:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:232
 msgid "In both cases, the program will be installed to `C:\\CraftRoot\\bin`."
-msgstr ""
+msgstr "En els dos casos, el programa s'instal·larà a `C:\\CraftRoot\\bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:234
 msgid "You can then run the helloworld program with:"
-msgstr ""
+msgstr "Llavors podeu executar el programa «helloworld» amb:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:237
 msgid "On Linux"
-msgstr ""
+msgstr "Al Linux"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:238
 msgid "On Windows"
-msgstr ""
+msgstr "Al Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:241
 msgid ""

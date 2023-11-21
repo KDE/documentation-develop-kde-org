@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-20 00:35+0000\n"
-"PO-Revision-Date: 2023-11-19 08:55+0100\n"
+"PO-Revision-Date: 2023-11-20 09:31+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -478,13 +478,6 @@ msgstr ""
 "aplikacije, ki so bolj uporabne od tega, kar lahko dosežemo s čistim QML."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
-#| "Started' page so that we can better understand what is going on in the "
-#| "central C++ file of our application. While this is a basic `main.cpp`, "
-#| "the features we will go over will remain essential no matter what kind of "
-#| "application you decide to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the [Getting "
 "Started]({{< ref \"introduction-getting_started\" >}}) page so that we can "
@@ -493,11 +486,11 @@ msgid ""
 "will remain essential no matter what kind of application you decide to "
 "create."
 msgstr ""
-"Tukaj bomo preiskali datoteko `main.cpp`, ki smo jo ustvarili na strani "
-"'Getting Started', da bomo bolje razumeli, kaj se dogaja v osrednji datoteki "
-"C++ naše aplikacije. Čeprav gre za osnovo  `main.cpp` bodo funkcije, ki jih "
-"bomo pregledali, ostale bistvene ne glede na to, kakšno aplikacijo boste "
-"ustvarili."
+"Tukaj bomo preučili datoteko `main.cpp`, ki smo jo ustvarili na strani "
+"[Getting Started]({{< ref \"introduction-getting_started\" >}}), da bomo "
+"lahko bolje razumeli, kaj se dogaja v osrednjo datoteko C++ naše aplikacije. "
+"Čeprav je to osnovni `main.cpp`, bodo funkcije, ki jih bomo pregledali, "
+"ostale bistvene, ne glede na to, kakšno aplikacijo boste ustvarili."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:17
 msgid "What it does"
@@ -555,6 +548,10 @@ msgid ""
 "make use of [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-"
 "desktop-style)."
 msgstr ""
+"Da bi bila naša aplikacija videti izvirna v Plasmi, Windows ali GNOME, "
+"uporabljamo [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::"
+"setStyle()) da bomo uporabili [qqc2-desktop-style](https://invent.kde.org/"
+"frameworks/qqc2-desktop-style)."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
 msgid ""
@@ -810,6 +807,14 @@ msgid ""
 "[GNUInstallDirs](https://cmake.org/cmake/help/latest/module/GNUInstallDirs."
 "html)."
 msgstr ""
+"[install()](https://cmake.org/cmake/help/latest/command/install.html) "
+"postavi našo izvršljivo datoteko na pravo mesto z uporabo `"
+"${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, priročne spremenljivke, ki jo "
+"zagotavlja [KDEInstallDirs](https://api.kde.org/ecm/manual/ecm-kde-modules.7."
+"html) v extra-cmake-modules, ki namesti izvedljive datoteke in knjižnice na "
+"svoje pravo mesto namesto vas, ne da bi morali določiti absolutno pot, "
+"podobno kot [GNUInstallDirs](https://cmake.org/cmake/help/latest/module/"
+"GNUInstallDirs.html)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:61
 msgid ""
@@ -4140,13 +4145,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:66
 msgid "Theming on Windows"
-msgstr ""
+msgstr "Teme na Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:68
 msgid ""
 "<details>\n"
 "<summary>Click here to read more</summary>\n"
 msgstr ""
+"<details>\n"
+"<summary>Kliknite sem, da bi prebrali več</summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:71
 msgid ""
@@ -4157,10 +4164,16 @@ msgid ""
 "other hand is responsible for the nice looking style we want to enforce on "
 "those platforms."
 msgstr ""
+"Pri gradnji aplikacije po namestitvi odvisnosti s programom Craft samo "
+"namestitev KIconThemes in Breeze zagotavlja, da bo aplikacija lahko "
+"uporabljala ikone Sapice na platformah, kot je Windows, povezovanje ni "
+"potrebno. [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-"
+"desktop-style) je po drugi strani odgovoren za lep videz, ki ga želimo "
+"uveljaviti na teh platformah."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
 msgid "</details>\n"
-msgstr ""
+msgstr "</details>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:76
 msgid ""
@@ -4584,42 +4597,28 @@ msgid "Compiling and running the application"
 msgstr "Prevajanje in zagon aplikacije"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:202
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "We are almost at the finish line. The last thing we need to do is build and "
 "run our application. Doing so will depend on which platform you are on."
 msgstr ""
-"Skoraj smo na ciljni črti. Zadnja stvar, ki jo moramo narediti je, da "
-"zgradimo in prevedemo našo aplikacijo. Da bi to storili, moramo vnesti našo "
-"mapo 'helloworld/' v našo terminalno aplikacijo po izbiri in zagnati "
-"naslednje ukaze:"
+"Skoraj smo na ciljni črti. Zadnja stvar, ki jo moramo narediti, je zgraditi "
+"in zagnati našo aplikacijo. To bo odvisno od platforme, na kateri ste."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "If you are running your project on Linux, you will need to specify the place "
 "where the program will be installed. To do that, we need to change "
 "directories to our `helloworld/` folder in our terminal application of "
 "choice and run the following commands:"
 msgstr ""
-"Skoraj smo na ciljni črti. Zadnja stvar, ki jo moramo narediti je, da "
-"zgradimo in prevedemo našo aplikacijo. Da bi to storili, moramo vnesti našo "
-"mapo 'helloworld/' v našo terminalno aplikacijo po izbiri in zagnati "
+"Če izvajate svoj projekt v Linuxu, boste morali določiti mesto, kjer bo "
+"program nameščen. Če želite to narediti, moramo spremeniti imenike v našo "
+"mapo `helloworld/` v naši izbrani terminalski aplikaciji in zagnati "
 "naslednje ukaze:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:212
 msgid "The program will be installed to `~/kde5/usr/bin`."
-msgstr ""
+msgstr "Program bo nameščen v `~/kde5/usr/bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:214
 msgid ""
@@ -4635,27 +4634,27 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:216
 msgid "If Visual Studio:"
-msgstr ""
+msgstr "Če Visual Studio:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:224
 msgid "If MinGW:"
-msgstr ""
+msgstr "Če MinGW:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:232
 msgid "In both cases, the program will be installed to `C:\\CraftRoot\\bin`."
-msgstr ""
+msgstr "V obeh primerih bo program nameščen na `C:\\CraftRoot\\bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:234
 msgid "You can then run the helloworld program with:"
-msgstr ""
+msgstr "Nato lahko zaženete program helloworld z:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:237
 msgid "On Linux"
-msgstr ""
+msgstr "Na Linuxu"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:238
 msgid "On Windows"
-msgstr ""
+msgstr "Na Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:241
 msgid ""

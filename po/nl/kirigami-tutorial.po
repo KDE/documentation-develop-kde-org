@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-20 00:35+0000\n"
-"PO-Revision-Date: 2023-11-19 15:16+0100\n"
+"PO-Revision-Date: 2023-11-20 11:27+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -486,13 +486,6 @@ msgstr ""
 "bereiken met pure QML."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
-#| "Started' page so that we can better understand what is going on in the "
-#| "central C++ file of our application. While this is a basic `main.cpp`, "
-#| "the features we will go over will remain essential no matter what kind of "
-#| "application you decide to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the [Getting "
 "Started]({{< ref \"introduction-getting_started\" >}}) page so that we can "
@@ -502,10 +495,10 @@ msgid ""
 "create."
 msgstr ""
 "Hier gaan we het hebben over het bestand `main.cpp` dat we hebben gemaakt in "
-"de pagina 'Beginnen' zodat we beter begrijpen wat er gaande is in het "
-"centrale C++ bestand van onze toepassing. Terwijl dit een basis `main.cpp` "
-"is, blijven de functies die we bespreken essentieel ongeacht het soort "
-"toepassing dat u beslist te maken."
+"de pagina [Beginnen]({{< ref \"introduction-getting_started\" >}}) zodat we "
+"beter begrijpen wat er gaande is in het centrale C++ bestand van onze "
+"toepassing. Terwijl dit een basis `main.cpp` is, blijven de functies die we "
+"bespreken essentieel ongeacht het soort toepassing dat u beslist te maken."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:17
 msgid "What it does"
@@ -564,6 +557,10 @@ msgid ""
 "make use of [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-"
 "desktop-style)."
 msgstr ""
+"Om onze toepassing inheems te laten lijken op Plasma, Windows of GNOME "
+"gebruiken we [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::"
+"setStyle()) om gebruik te maken van [qqc2-desktop-style](https://invent.kde."
+"org/frameworks/qqc2-desktop-style)."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
 msgid ""
@@ -826,6 +823,14 @@ msgid ""
 "[GNUInstallDirs](https://cmake.org/cmake/help/latest/module/GNUInstallDirs."
 "html)."
 msgstr ""
+"[install()](https://cmake.org/cmake/help/latest/command/install.html) zet "
+"ons uitvoerbare bestand op zijn juiste plaats door `"
+"${KDE_INSTALL_TARGETS_DEFAULT_ARGS}` te gebruiken, een gemaksvariabele "
+"geleverd door [KDEInstallDirs](https://api.kde.org/ecm/manual/ecm-kde-"
+"modules.7.html) in extra-cmake-modules die uitvoerbare bestanden en "
+"bibliotheken installeert op hun juiste plaats voor u zonder noodzaak het "
+"absolute pad te specificeren, overeenkomstig [GNUInstallDirs](https://cmake."
+"org/cmake/help/latest/module/GNUInstallDirs.html)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:61
 msgid ""
@@ -4230,13 +4235,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:66
 msgid "Theming on Windows"
-msgstr ""
+msgstr "Thema's toekennen op Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:68
 msgid ""
 "<details>\n"
 "<summary>Click here to read more</summary>\n"
 msgstr ""
+"<details>\n"
+"<summary>Klik hier om meer te lezen</summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:71
 msgid ""
@@ -4247,10 +4254,17 @@ msgid ""
 "other hand is responsible for the nice looking style we want to enforce on "
 "those platforms."
 msgstr ""
+"Bij bouwen van de toepassing na installeren van afhankelijkheden met Craft, "
+"door eenvoudig KIconThemes en Breeze te installeren verzekert dat de "
+"toepassing in staat zal zijn om Breeze pictogrammen op platforms zoals "
+"Windows te gebruiken, linking is niet noodzakelijk. [qqc2-desktop-style]"
+"(https://invent.kde.org/frameworks/qqc2-desktop-style) aan de ander kant is "
+"verantwoordelijk voor de leuk uitziende stijl die we willen afdwingen op "
+"deze platforms."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
 msgid "</details>\n"
-msgstr ""
+msgstr "</details>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:76
 msgid ""
@@ -4684,42 +4698,29 @@ msgid "Compiling and running the application"
 msgstr "De toepassing compileren en uitvoeren."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:202
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "We are almost at the finish line. The last thing we need to do is build and "
 "run our application. Doing so will depend on which platform you are on."
 msgstr ""
 "We zijn bijna bij de eindstreep. Het laatste wat we moeten doen is bouwen en "
-"compileren van onze toepassing. Om dat te doen moeten we in onze map "
-"`helloworld/` in onze terminaltoepassing naar keuze gaan staan en de "
-"volgende commando's uitvoeren:"
+"onze toepassing uitvoeren. Om dat te doen hangt af van op welke platform u "
+"bent."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "If you are running your project on Linux, you will need to specify the place "
 "where the program will be installed. To do that, we need to change "
 "directories to our `helloworld/` folder in our terminal application of "
 "choice and run the following commands:"
 msgstr ""
-"We zijn bijna bij de eindstreep. Het laatste wat we moeten doen is bouwen en "
-"compileren van onze toepassing. Om dat te doen moeten we in onze map "
-"`helloworld/` in onze terminaltoepassing naar keuze gaan staan en de "
-"volgende commando's uitvoeren:"
+"Als u uw project op Linux draait, hebt u de plaats nodig waar het programma "
+"geïnstalleerd zal worden. Om dat te doen moeten we de mappen naar onze "
+"`helloworld/` map in onze gekozen terminaltoepassing wijzigen en de volgende "
+"commando's uitvoeren:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:212
 msgid "The program will be installed to `~/kde5/usr/bin`."
-msgstr ""
+msgstr "Het programma zal geïnstalleerd worden in `~/kde5/usr/bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:214
 msgid ""
@@ -4735,27 +4736,29 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:216
 msgid "If Visual Studio:"
-msgstr ""
+msgstr "Indien Visual Studio:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:224
 msgid "If MinGW:"
-msgstr ""
+msgstr "Indien MinGW:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:232
 msgid "In both cases, the program will be installed to `C:\\CraftRoot\\bin`."
 msgstr ""
+"In beide gevallen zal het programma geïnstalleerd worden in `C:\\CraftRoot"
+"\\bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:234
 msgid "You can then run the helloworld program with:"
-msgstr ""
+msgstr "U kunt daarna het programma helloworld uitvoeren met:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:237
 msgid "On Linux"
-msgstr ""
+msgstr "Op Linux"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:238
 msgid "On Windows"
-msgstr ""
+msgstr "Op Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:241
 msgid ""
