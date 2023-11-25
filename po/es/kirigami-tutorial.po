@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-20 00:35+0000\n"
-"PO-Revision-Date: 2023-10-27 01:02+0200\n"
+"PO-Revision-Date: 2023-11-24 04:29+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -487,13 +487,6 @@ msgstr ""
 "crear aplicaciones que sean más útiles de lo que podemos lograr con QML puro."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
-#| "Started' page so that we can better understand what is going on in the "
-#| "central C++ file of our application. While this is a basic `main.cpp`, "
-#| "the features we will go over will remain essential no matter what kind of "
-#| "application you decide to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the [Getting "
 "Started]({{< ref \"introduction-getting_started\" >}}) page so that we can "
@@ -502,11 +495,12 @@ msgid ""
 "will remain essential no matter what kind of application you decide to "
 "create."
 msgstr ""
-"Aquí repasaremos el archivo `main.cpp` que creamos en la página 'Primeros "
-"pasos' para que podamos entender mejor lo que está sucediendo en el archivo "
-"central de C++ de nuestra aplicación. Aunque este es un `main.cpp` básico, "
-"las características que vamos a repasar seguirán siendo esenciales "
-"independientemente del tipo de aplicación que decida crear."
+"Aquí repasaremos el archivo `main.cpp` que creamos en la página [Primeros "
+"pasos]({{< ref \"introduction-getting_started\" >}})  para que podamos "
+"entender mejor lo que está sucediendo en el archivo central de C++ de "
+"nuestra aplicación. Aunque este es un `main.cpp` básico, las características "
+"que vamos a repasar seguirán siendo esenciales independientemente del tipo "
+"de aplicación que decida crear."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:17
 msgid "What it does"
@@ -573,6 +567,10 @@ msgid ""
 "make use of [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-"
 "desktop-style)."
 msgstr ""
+"Para hacer que nuestra aplicación parezca nativa en Plasma, Windows o GNOME, "
+"utilizamos [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::"
+"setStyle()) para hacer uso de [qqc2-desktop-style](https://invent.kde.org/"
+"frameworks/qqc2-desktop-style)."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
 #, fuzzy
@@ -667,11 +665,8 @@ msgstr ""
 "de CMake que se va a utilizar."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:24
-#, fuzzy
-#| msgid ""
-#| "The first line, `project(helloworld)` defines the name of the project."
 msgid "After that, `project(helloworld)` defines the name of the project."
-msgstr "La primera línea, `project(helloworld)` define el nombre del proyecto."
+msgstr "A continuación, `project(helloworld)` define el nombre del proyecto."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:26
 msgid ""
@@ -686,17 +681,12 @@ msgstr ""
 "necesitaremos cambiarlas en este tutorial."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:28
-#, fuzzy
-#| msgid ""
-#| "The following section is important, because it specifies which "
-#| "dependencies we'll be bringing in at compile time. Let's look at the "
-#| "first line:"
 msgid ""
 "The following section is important, because it specifies which dependencies "
 "we'll be bringing in at compile time. Let's look at the first:"
 msgstr ""
 "La siguiente sección es importante, ya que especifica las dependencias "
-"necesarias durante la compilación. Veamos la primera línea:"
+"necesarias durante la compilación. Veamos la primera:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:32
 msgid ""
@@ -713,6 +703,10 @@ msgid ""
 "to be used, 5 or 6, depending on whether we use the CMake flag `-"
 "DBUILD_WITH_QT6=ON`."
 msgstr ""
+"La primera palabra es la infraestructura, Qt. `${QT_MAJOR_VERSION}` es una "
+"variable de conveniencia proporcionada por extra-make-modules que nos "
+"permite escoger la versión de Qt que vamos a usar, 5 o 6, dependiendo de si "
+"usamos el indicador `-DBUILD_WITH_QT6=ON` de CMake."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:34
 msgid ""
@@ -807,38 +801,24 @@ msgstr ""
 "es mucho más breve."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:54
-#, fuzzy
-#| msgid ""
-#| "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-#| "add_executable.html) takes care of naming our executable and grabbing the "
-#| "files needed to create it"
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of generating our executable."
 msgstr ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-"add_executable.html) se encarga de dar nombre a nuestro ejecutable y de "
-"tomar los archivos necesarios para crearlo."
+"add_executable.html) se encarga de generar nuestro ejecutable."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:55
-#, fuzzy
-#| msgid ""
-#| "`target_link_libraries` dynamically links the libraries used in our code "
-#| "to our executable."
 msgid ""
 "[target_sources()](https://cmake.org/cmake/help/latest/command/"
 "target_sources.html) lets us add files that will be used by our new "
 "executable."
 msgstr ""
-"`target_link_libraries` enlaza de forma dinámica las bibliotecas usadas en "
-"el código fuente con nuestro ejecutable."
+"[target_sources()](https://cmake.org/cmake/help/latest/command/"
+"target_sources.html) nos permite añadir los archivos que se usarán en "
+"nuestro nuevo ejecutable."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:56
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) dynamically links the libraries used in our "
-#| "code to our executable."
 msgid ""
 "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
@@ -847,7 +827,8 @@ msgid ""
 msgstr ""
 "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) enlaza de forma dinámica las bibliotecas usadas "
-"en el código fuente con nuestro ejecutable."
+"en el código fuente con nuestro ejecutable. Kirigami no está incluido aquí "
+"porque estamos usando solo su módulo QML."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:57
 msgid ""
@@ -860,6 +841,14 @@ msgid ""
 "[GNUInstallDirs](https://cmake.org/cmake/help/latest/module/GNUInstallDirs."
 "html)."
 msgstr ""
+"[install()](https://cmake.org/cmake/help/latest/command/install.html) sitúa "
+"nuestro ejecutable en el lugar correcto usando `"
+"${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, una variable de conveniencia "
+"proporcionada por [KDEInstallDirs](https://api.kde.org/ecm/manual/ecm-kde-"
+"modules.7.html) en extra-cmake-modules que instala ejecutables y bibliotecas "
+"en sus lugares correctos sin necesidad de indicar su ruta absoluta, de forma "
+"similar a [GNUInstallDirs](https://cmake.org/cmake/help/latest/module/"
+"GNUInstallDirs.html)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:61
 msgid ""
