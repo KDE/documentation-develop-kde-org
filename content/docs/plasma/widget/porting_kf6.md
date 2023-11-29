@@ -170,6 +170,19 @@ KSvg.SvgItem {
 }
 ```
 
+### New Plasma5Support library
+
+Some parts of Plasma Framework have moved to Plasma5Support, such as types for the Data Engines system.
+
+Their new import is:
+
+```import org.kde.plasma.plasma5support as Plasma5Support```
+
+| Plasma 5                | Plasma 6          |
+|-------------------------|-------------------|
+| PlasmaCore.DataSource   | Plasma5Support.DataSource          |
+| PlasmaCore.DataModel      | Plasma5Support.DataModel      |
+
 ### New Actions API
 
 Plasmoids can add contextual actions, which appear in their headers (when used in the System Tray) and context menus.
