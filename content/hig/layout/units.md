@@ -216,8 +216,8 @@ Row {
 
 ### Ratio
 
-Sometimes the ratio between dimensions is more important then the
-actually values.
+Sometimes, the ratio between dimensions is more important than the
+actual values.
 
 ![](/hig/Ratio.qml.png)
 
