@@ -9,6 +9,7 @@ variables:
   WEBSITE_DOMAIN: develop.kde.org
 
 html_test:
+  image: invent-registry.kde.org/sysadmin/ci-images/staticweb:latest
   stage: test
   script: htmltest
   cache:
