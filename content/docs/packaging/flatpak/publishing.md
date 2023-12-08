@@ -13,13 +13,13 @@ While flathub is a popular hub for flatpak'd software, it is possible to have mu
 The nightly repositories are particularly convenient for users to test applications that are new and have yet to be released or are still being developed. The repository integrates with GitLab CI/CD.
 
 The following steps are required to publish your app to a nightly repository:
-1. add your JSON manifests as `.flatpak-manifest.json` to the root of your application repository
-2. [include the flatpak CI template](https://community.kde.org/Infrastructure/Continuous_Integration_System#Including_CI_templates)
+1. Add your JSON manifests as `.flatpak-manifest.json` to the root of your application repository
+2. [Include the flatpak CI template](https://community.kde.org/Infrastructure/Continuous_Integration_System#Including_CI_templates)
 3. Finally request publishing by a merge request to https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/flatpaksigner-projects.yaml (See the [detailed description](https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/README.md#flatpaksigner))
 
 Even without the 3. step (publish your app) the CI job will create `.flatpak` files in the [GitLab job artifacts](https://community.kde.org/Infrastructure/Continuous_Integration_System#Special_cases_and_job_artifacts) that are anyway convenient e.g. to test a merge request.
 
-If you are not a KDE Developer you can fork the repository, add the manifest (either via web interface or via git), and create a merge request (MR). This process is [very extensively described in the wiki](https://community.kde.org/Infrastructure/GitLab), and requires you to create an account over [Identity](https://identity.kde.org/) first. The MR will then undergo a straightforward review process before being added.
+If you are not a KDE Developer you can fork the repository, add the manifest (either via web interface or via git), and create a merge request (MR). This process is [described in the wiki](https://community.kde.org/Infrastructure/GitLab), and requires you to create an account over [Identity](https://identity.kde.org/) first. The MR will then undergo a straightforward review process before being added.
 
 {{< alert title="Note" color="info" >}}
 The old way of building nightly Flatpaks on Binary Factory (Jenkins) with manifests hosted in https://invent.kde.org/packaging/flatpak-kde-applications is deprecated and no longer supported. You should move your manifests to the application repository as descriped above.
