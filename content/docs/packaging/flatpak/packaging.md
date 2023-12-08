@@ -9,7 +9,7 @@ aliases:
 Flatpak is a new package format in the Linux world that works on many Linux
 distributions and gives back control to the application developers. Many Flatpak
 applications are distributed via [Flathub](https://flathub.org), but Flatpak is
-decentralized by nature and applications can be provided using alternatives sources, such as the [kdeapps](https://community.kde.org/Guidelines_and_HOWTOs/Flatpak#Applications) repository for nightly builds.
+decentralized by nature and applications can be provided using alternatives sources, such as the [KDE nightly repositories](https://userbase.kde.org/Tutorials/Flatpak#Nightly_KDE_Apps).
 
 Flatpak applications can be downloaded using Discover (KDE Software Center), GNOME
 Software and other software centers compatible with Flatpak.
@@ -73,5 +73,5 @@ If you installed Flathub with `sudo`/`root` (the default) and do not mind the se
 {{< /alert >}}
 
   
-You can now submit your new manifest to [flatpak-kde-applications](https://invent.kde.org/packaging/flatpak-kde-applications)! It works as a testing grounds of sorts for nightlies (built every day) to ensure that your package runs well.
-After testing it there for some time, you may submit a stable release to flathub.
+You can now start to add a Flatpak CI job and publish to a nightly repository!
+After testing it there for some time, you may submit a stable release to flathub. See [Flatpak publishing](/docs/packaging/flatpak/publishing) for detailed instructions.

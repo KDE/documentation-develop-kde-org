@@ -6,25 +6,24 @@ aliases:
   - /docs/flatpak/publishing/
 ---
 
-## Publishing on kdeapps
+## Publishing to KDE's nightly repositories 
 
-While flathub is a popular hub for flatpak'd software, it is possible to have multiple flatpak repositories due to its decentralized nature with the help of [flat-manager](https://github.com/flatpak/flat-manager). A few other flatpak repositories are GNOME Nightly, Fedora for Silverblue/Kinoite, openSUSE for MicroOS, and Winepak. The KDE Community has its own repository for nightlies, [kdeapps](https://community.kde.org/Guidelines_and_HOWTOs/Flatpak), which is [hosted on Invent](https://invent.kde.org/packaging/flatpak-kde-applications).
+While flathub is a popular hub for flatpak'd software, it is possible to have multiple flatpak repositories due to its decentralized nature with the help of [flat-manager](https://github.com/flatpak/flat-manager). A few other flatpak repositories are GNOME Nightly, Fedora for Silverblue/Kinoite, openSUSE for MicroOS, and Winepak. The KDE Community has its own [repositories for nightlies](https://userbase.kde.org/Tutorials/Flatpak) hosted on https://cdn.kde.org/flatpak. Every repository is dedicated to one application.
 
-Kdeapps is particularly convenient for users to test applications that are new and have yet to be released or are still being developed. The repository integrates with a Jenkins instance hosted over [binary factory](https://binary-factory.kde.org/view/Flatpak/), requiring only that you submit your JSON manifests to the git repository one way or another.
+The nightly repositories are particularly convenient for users to test applications that are new and have yet to be released or are still being developed. The repository integrates with GitLab CI/CD.
 
-One way is to fork the repository, add your manifest (either via web interface or via git), and create a merge request (MR). This process is [very extensively described in the wiki](https://community.kde.org/Infrastructure/GitLab), and requires you to create an account over [Identity](https://identity.kde.org/) first. The MR will then undergo a straightforward review process before being added.
+The following steps are required to publish your app to a nightly repository:
+1. add your JSON manifests as `.flatpak-manifest.json` to the root of your application repository
+2. [include the flatpak CI template](https://community.kde.org/Infrastructure/Continuous_Integration_System#Including_CI_templates)
+3. Finaly request publishing by a merge request to https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/flatpaksigner-projects.yaml (See the [detailed description](https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/README.md#flatpaksigner))
 
-If you are the application developer and want to have more control over your flatpak package, you can instead host the JSON manifest in your application repository and make an MR to submit a fairly simple pointer file to the kdeapps repository instead, called a remoteapp. It consists of three lines:
+Even witout the 3. step (publish your app) the CI job will create `.flatpak` files in the [GitLab job artifacts](https://community.kde.org/Infrastructure/Continuous_Integration_System#Special_cases_and_job_artifacts) that are anyway convinient eg. to test a merge request.
 
-```
-ID=org.kde.yourapphere
-JSON=org.kde.yourapphere.json
-GITURL=https://invent.kde.org/application-group/application-repo.git
-```
+If you are not a KDE Developer you can fork the repository, add the manifest (either via web interface or via git), and create a merge request (MR). This process is [very extensively described in the wiki](https://community.kde.org/Infrastructure/GitLab), and requires you to create an account over [Identity](https://identity.kde.org/) first. The MR will then undergo a straightforward review process before being added.
 
-Your remoteapp needs to be named using your application ID + ".remoteapp", so "org.kde.yourapphere.remoteapp". You can see an example for Audiotube [here](https://invent.kde.org/packaging/flatpak-kde-applications/-/blob/master/org.kde.audiotube.remoteapp).
-
-If you are submitting your manifest to kdeapps, there might be situations in which your packaged application has a dependency that is used by other applications. To minimize redundancy, it may make sense to create a different file where to host that dependency, which will work exactly as a module. This has been done for [boost](https://invent.kde.org/packaging/flatpak-kde-applications/-/blob/master/boost.json) which is used by [kdevelop](https://invent.kde.org/packaging/flatpak-kde-applications/-/blob/master/org.kde.kdevelop.json) and [kdiff3](https://invent.kde.org/packaging/flatpak-kde-applications/-/blob/master/org.kde.kdiff3.json), for instance; [libkdegames](https://invent.kde.org/packaging/flatpak-kde-applications/-/blob/master/libkdegames.json), which is used by most KDE games; [poppler](https://invent.kde.org/packaging/flatpak-kde-applications/-/blob/master/poppler.json) which is used for [okular_dependencies](https://invent.kde.org/packaging/flatpak-kde-applications/-/blob/master/okular_dependencies.json), which in turn is used for both [okular](https://invent.kde.org/packaging/flatpak-kde-applications/-/blob/master/org.kde.okular.json) and [kile](https://invent.kde.org/packaging/flatpak-kde-applications/-/blob/master/org.kde.kile.json), and so on.
+{{< alert title="Note" color="info" >}}
+The old way of building nightly Flatpaks on Binary Factory (Jenkins) with manifests hosted in https://invent.kde.org/packaging/flatpak-kde-applications is deprecated and no longer supported. You should move your manifests to the application repository as descriped above.
+{{< /alert >}}
 
 ## Publishing on flathub
 
