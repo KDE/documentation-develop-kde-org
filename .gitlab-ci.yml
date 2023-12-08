@@ -7,6 +7,8 @@ include:
 
 html_test:
   image: invent-registry.kde.org/sysadmin/ci-images/staticweb:latest
+  tags:
+    - Linux
   stage: test
   script: htmltest
   cache:
