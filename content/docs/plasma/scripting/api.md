@@ -228,6 +228,8 @@ Read-only properties:
 
 Read-write properties:
 
+_ `string lengthMode`: (since 6.0) `fill`, `fit`, or `custom` length modes.
+  `fill` means FillAvailable, and `fit` means FitContent.
 - `number length`: the number of pixels along the screen edge used
 - `number minimumLength`: (scriptingVersion >= 7) the minimum
   number of pixels along the screen edge used (auto-resize panels)
