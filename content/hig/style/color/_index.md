@@ -66,7 +66,7 @@ Implementation
 ### Plasma components
 
 In Plasmoids use
-[PlasmaCore.Theme](https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1QuickTheme.html)
+[PlasmaCore.Theme](https://api.kde.org/frameworks/plasma-plasma-framework/html/classPlasma_1_1QuickTheme.html)
 to pick theme colors.
 
 Color Mapping

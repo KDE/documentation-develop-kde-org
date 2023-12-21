@@ -92,8 +92,8 @@ TAG_FILES = [
         'default_prefix': 'Plasma::'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/plasma-framework/html/Plasma.tags',
-        'base_url': 'https://api.kde.org/frameworks/plasma-framework/html/'
+        'tags': 'https://api.kde.org/frameworks/plasma-plasma-framework/html/Plasma.tags',
+        'base_url': 'https://api.kde.org/frameworks/plasma-plasma-framework/html/'
     },
     {
         'tags': 'https://api.kde.org/frameworks/kcmutils/html/KCMUtils.tags',

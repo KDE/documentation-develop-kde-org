@@ -53,7 +53,7 @@ Plasma
 ------
 
 Plasma is built using widgets (also called Plasmoids), allowing you to
-move, mix, add, and remove to fit the user's workflow. [Some widgets are built using Plasma Components 3](https://api.kde.org/frameworks/plasma-framework/html/plasmacomponents.html), which are based on Qt Quick Controls 2.
+move, mix, add, and remove to fit the user's workflow. [Some widgets are built using Plasma Components 3](https://api.kde.org/frameworks/plasma-plasma-framework/html/plasmacomponents.html), which are based on Qt Quick Controls 2.
 
 ![Plasma desktop and mobile.](/hig/plasma-workspace.jpg)
 

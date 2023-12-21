@@ -270,7 +270,7 @@ Containments also inherit all the [**Applet properties**](#applets-containments-
 
 Read-only properties:
 
-- `string formFactor`: returns [the form factor](https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1Types.html#afd0761e107f9b0ff888b0fabdc53f188) of the containment.
+- `string formFactor`: returns [the form factor](https://api.kde.org/frameworks/plasma-plasma-framework/html/classPlasma_1_1Types.html#afd0761e107f9b0ff888b0fabdc53f188) of the containment.
   `planar` for desktop widgets, `mediacenter` for media
   centers like TVs, and either `horizontal` or `vertical` for panels.
 - `int screen`: the screen this activity is associated with, or
@@ -367,9 +367,9 @@ Read-write properties:
   so in some Desktops as well.
 - `string userBackgroundHints`: Use another kind of background instead if supported by the applet.
   In order for an applet to support user configuration of the background,
-  it needs to have the [`Plasma::Types::ConfigurableBackground`](https://api.kde.org/frameworks/plasma-framework/html/classPlasma_1_1Types.html#ab2b1c1767f3f432a0928dc7ca6b3f29e)
+  it needs to have the [`Plasma::Types::ConfigurableBackground`](https://api.kde.org/frameworks/plasma-plasma-framework/html/classPlasma_1_1Types.html#ab2b1c1767f3f432a0928dc7ca6b3f29e)
   flag set in its `backgroundHints`.
-  See [`AppletInterface::userBackgroundHints`](https://api.kde.org/frameworks/plasma-framework/html/classAppletInterface.html#ac7a63cd2676f46ec0b2665292c6cdd1d).
+  See [`AppletInterface::userBackgroundHints`](https://api.kde.org/frameworks/plasma-plasma-framework/html/classAppletInterface.html#ac7a63cd2676f46ec0b2665292c6cdd1d).
 - Inherits `Applet.currentConfigGroup`
 - Inherits `Applet.currentGlobalConfigGroup`
 

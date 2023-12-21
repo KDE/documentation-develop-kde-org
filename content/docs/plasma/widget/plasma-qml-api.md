@@ -438,7 +438,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 * [`SvgItem`](docs:plasma;Plasma::SvgItem), [`Svg`](docs:plasma;Plasma::Svg) and [`FrameSvgItem`](docs:plasma;Plasma::FrameSvgItem) for drawing SVGs coloured with the Plasma Style color palette.
 * [`DataSource`](docs:plasma;Plasma::DataSource) for connecting to a Plasma DataEngine.
 
-[See the API docs](https://api.kde.org/frameworks/plasma-framework/html/core.html) for the full list of types in `PlasmaCore`. You can also skim the generated [`.../core/plugins.qmltypes`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/core/plugins.qmltypes) file.
+[See the API docs](https://api.kde.org/frameworks/plasma-plasma-framework/html/core.html) for the full list of types in `PlasmaCore`. You can also skim the generated [`.../core/plugins.qmltypes`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/core/plugins.qmltypes) file.
 
 
 ### PlasmaCore.Theme
