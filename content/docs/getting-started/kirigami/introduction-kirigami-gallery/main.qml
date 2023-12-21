@@ -71,7 +71,7 @@ Kirigami.ApplicationWindow {
                 Kirigami.Card {
                     height: view.cellHeight - Kirigami.Units.largeSpacing
                     banner {
-                        title: model.firstname + " " + model.lastname      
+                        title: i18nc("@title", "%1 %2", model.firstname, model.lastname)
                         titleIcon: "im-user"
                     }
                     contentItem: Column {
@@ -80,12 +80,12 @@ Kirigami.ApplicationWindow {
 
                         Controls.Label {
                             wrapMode: Text.WordWrap
-                            text: "Mobile: " + model.cellphone
+                            text: i18nc("@label", "Mobile: %1", model.cellphone)
                         }
 
                         Controls.Label {
                             wrapMode: Text.WordWrap
-                            text: "Email: " + model.email
+                            text: i18nc("@label", "Email: %1", model.email)
                         }
                     }
 
@@ -94,7 +94,7 @@ Kirigami.ApplicationWindow {
                             text: "Call"
                             icon.name: "call-start"
                             onTriggered: {
-                                showPassiveNotification("Calling " + model.firstname + " " + model.lastname + " ...")
+                                showPassiveNotification("Calling %1 %2...".arg(model.firstname).arg(model.lastname))
                             }
                         }                                        
                     ]

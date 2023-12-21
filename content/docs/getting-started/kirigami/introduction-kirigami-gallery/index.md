@@ -135,7 +135,7 @@ Component {
         height: view.cellHeight - Kirigami.Units.largeSpacing
 
         banner {
-            title: model.firstname + " " + model.lastname
+            title: i18nc("@title", "%1 %2", model.firstname, model.lastname)
             titleIcon: "im-user"
         }
 
@@ -146,12 +146,12 @@ Component {
 
             Controls.Label {
                 wrapMode: Text.WordWrap
-                text: "Mobile: " + model.cellphone
+                text: i18nc("@label", "Mobile: %1", model.cellphone)
             }
 
             Controls.Label {
                 wrapMode: Text.WordWrap
-                text: "Email: " + model.email
+                text: i18nc("@label", "Email: %1", model.email)
             }
         }
     }
