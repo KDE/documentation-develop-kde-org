@@ -1,14 +1,14 @@
 - groups:
   - entries:
-    - default: 'false'
-      description: ''
-      name: showFlag
-      type: Bool
+    - default: '0'
+      description: Whether to show text, a flag, or both on the compact representation.
+      name: displayStyle
+      type: Enum
     name: General
   id: org.kde.plasma.keyboardlayout
 - groups:
   - entries:
-    - default: start-here-kde
+    - default: start-here-kde-symbolic
       description: The name of the icon to use for the compact representation (e.g.
         on a small panel).
       name: icon
@@ -19,7 +19,7 @@
       name: useCustomButtonImage
       type: Bool
     - default: 'null'
-      description: The URL of the custtom image to use instead of an icon in the compact
+      description: The URL of the custom image to use instead of an icon in the compact
         representation (e.g. on a small panel).
       name: customButtonImage
       type: Url
@@ -39,11 +39,11 @@
       name: alphaSort
       type: Bool
     - default: '0'
-      description: 'How should the previously used apps/docs/contacts be ordered:
-        0 = RecentFirst, 1 = PopularFirst'
+      description: 'How should the previously used apps/docs be ordered: 0 = RecentFirst,
+        1 = PopularFirst'
       name: recentOrdering
       type: Int
-    - default: preferred://browser,org.kde.kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.discover
+    - default: preferred://browser,org.kde.kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.discover
       description: List of general favorites. Supported values are menu id's (usually
         .desktop file names), special URLs that expand into default applications (e.g.
         preferred://browser), document URLs and KPeople contact URIs.
@@ -71,16 +71,12 @@
       description: Whether to show the "Recent Files" category.
       name: showRecentDocs
       type: Bool
-    - default: 'false'
-      description: Whether to show the "Recent Contacts" category.
-      name: showRecentContacts
-      type: Bool
     - default: 'true'
       description: Whether to use additional KRunner plugins to produce results in
         the search.
       name: useExtraRunners
       type: Bool
-    - default: shell,bookmarks,baloosearch,locations
+    - default: krunner_shell,krunner_bookmarksrunner,baloosearch,locations
       description: The plugin id's of additional KRunner plugins to use. Only used
         if useExtraRunners is true.
       name: extraRunners
@@ -98,7 +94,7 @@
   id: org.kde.plasma.kicker
 - groups:
   - entries:
-    - default: start-here-kde
+    - default: start-here-kde-symbolic
       description: The name of the icon used in the compact representation (e.g. on
         a small panel).
       name: icon
@@ -107,7 +103,7 @@
       description: Text label for the Panel button
       name: menuLabel
       type: string
-    - default: preferred://browser,org.kde.kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.discover.desktop
+    - default: preferred://browser,org.kde.kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.discover.desktop
       description: List of general favorites. Supported values are menu id's (usually
         .desktop file names), special URLs that expand into default applications (e.g.
         preferred://browser), document URLs and KPeople contact URIs.
@@ -131,6 +127,10 @@
       description: List of applications at the top of the "Computer" tab.
       name: systemApplications
       type: StringList
+    - default: 'false'
+      description: Whether to swap the sidebar and content panes
+      name: paneSwap
+      type: Bool
     - default: '0'
       description: 'How to display favorites: 0 = Grid, 1 = List'
       name: favoritesDisplay
@@ -236,7 +236,7 @@
   id: org.kde.plasma.showActivityManager
 - groups:
   - entries:
-    - default: user-desktop
+    - default: user-desktop-symbolic
       description: ''
       name: icon
       type: String
@@ -305,7 +305,7 @@
         the widget or can be mixed with other tasks.
       name: separateLaunchers
       type: Bool
-    - default: '2'
+    - default: '1'
       description: The maximum number of rows (in a horizontal-orientation containment,
         i.e. panel) or columns (in a vertical-orientation containment) to layout task
         buttons in.
@@ -441,10 +441,10 @@
   id: org.kde.plasma.calendar
 - groups:
   - entries:
-    - default: '1'
+    - default: QRCode
       description: ''
       name: barcodeType
-      type: Int
+      type: String
     name: General
   id: org.kde.plasma.clipboard
 - groups:
@@ -480,10 +480,10 @@
         the local timezone.
       name: showLocalTimezone
       type: Bool
-    - default: 'false'
-      description: Whether seconds should be shown in the clock.
+    - default: '1'
+      description: How seconds should be shown in the clock.
       name: showSeconds
-      type: Bool
+      type: Enum
     - default: 'true'
       description: Whether the date should be shown next to the clock.
       name: showDate
@@ -545,7 +545,7 @@
         in selectedTimeZones.
       name: wheelChangesTimezone
       type: Bool
-    - default: Code
+    - default: '0'
       description: Whether the timezone is displayed as a code i.e. "GMT", full text
         i.e. "London" or UTC offset "+1".
       name: displayTimezoneFormat
@@ -572,7 +572,7 @@
       description: Whether the popup should remain open when another window is activated
       name: pin
       type: Bool
-    - default: Adaptive
+    - default: '0'
       description: Whether the date should be shown below or beside the time
       name: dateDisplayFormat
       type: Enum
@@ -624,14 +624,6 @@
   id: org.kde.plasma.lock_logout
 - groups:
   - entries:
-    - default: '5'
-      description: ''
-      name: volumeStep
-      type: Int
-    name: General
-  id: org.kde.plasma.mediacontroller
-- groups:
-  - entries:
     - default: 'true'
       description: If true, the spacer tries to take all the available space in the
         panel.
@@ -649,19 +641,11 @@
   - entries:
     - default: 'true'
       description: ''
-      name: showGrid
-      type: Bool
-    - default: 'true'
-      description: ''
       name: showOffLeds
       type: Bool
     - default: 'true'
       description: ''
       name: showSeconds
-      type: Bool
-    - default: 'false'
-      description: ''
-      name: showBcdFormat
       type: Bool
     - default: 'false'
       description: ''
@@ -707,6 +691,10 @@
       description: ''
       name: pickOnActivate
       type: Bool
+    - default: '1'
+      description: ''
+      name: compactPreviewCount
+      type: Int
     name: General
   id: org.kde.plasma.colorpicker
 - groups:
@@ -782,10 +770,6 @@
     - default: 'true'
       description: ''
       name: pauseOnMouseOver
-      type: Bool
-    - default: 'true'
-      description: ''
-      name: useBackground
       type: Bool
     - default: 'true'
       description: ''
@@ -891,7 +875,19 @@
       type: String
     - default: 'true'
       description: ''
+      name: showRemainingTime
+      type: Bool
+    - default: 'true'
+      description: ''
       name: showSeconds
+      type: Bool
+    - default: 'true'
+      description: ''
+      name: showTimerToggle
+      type: Bool
+    - default: 'false'
+      description: ''
+      name: showProgressBar
       type: Bool
     - default: 'true'
       description: ''
@@ -933,6 +929,62 @@
   id: org.kde.plasma.userswitcher
 - groups:
   - entries:
+    - default: '30'
+      description: ''
+      name: updateInterval
+      type: int
+    - default: 'null'
+      description: ''
+      name: source
+      type: string
+    name: WeatherStation
+  - entries:
+    - default: 'false'
+      description: ''
+      name: showTemperatureInCompactMode
+      type: bool
+    - default: 'false'
+      description: ''
+      name: showTemperatureInBadge
+      type: bool
+    - default: 'true'
+      description: ''
+      name: showTemperatureInTooltip
+      type: bool
+    - default: 'true'
+      description: ''
+      name: showWindInTooltip
+      type: bool
+    - default: 'false'
+      description: ''
+      name: showPressureInTooltip
+      type: bool
+    - default: 'true'
+      description: ''
+      name: showHumidityInTooltip
+      type: bool
+    name: Appearance
+  - entries:
+    - default: 'null'
+      description: ''
+      name: temperatureUnit
+      type: int
+    - default: 'null'
+      description: ''
+      name: pressureUnit
+      type: int
+    - default: 'null'
+      description: ''
+      name: speedUnit
+      type: int
+    - default: 'null'
+      description: ''
+      name: visibilityUnit
+      type: int
+    name: Units
+  id: org.kde.plasma.weather
+- groups:
+  - entries:
     - default: https://www.kde.org/
       description: ''
       name: url
@@ -949,5 +1001,18 @@
       description: ''
       name: constantZoomFactor
       type: Int
+    - default: empty string
+      description: The name of the icon used in the compact representation (e.g. on
+        a small panel).
+      name: icon
+      type: String
+    - default: empty string
+      description: The url of the website's favicon that is saved in the last session.
+      name: favIcon
+      type: String
+    - default: 'true'
+      description: Use the website's favicon instead of a system icon
+      name: useFavIcon
+      type: Bool
     name: General
   id: org.kde.plasma.webbrowser
