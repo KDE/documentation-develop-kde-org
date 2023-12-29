@@ -7,7 +7,7 @@ description: >
 ---
 
 [Kirigami.Chip](docs:kirigami2;Chip) components are small elements inherited from
-AbstractButton(https://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton.html)
+[AbstractButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton.html)
 used for displaying common properties or filters of something. These are typically
 text elements, which is also interactable and comes with an optional delete button.
 
