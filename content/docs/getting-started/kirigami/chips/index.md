@@ -6,9 +6,10 @@ description: >
   Chips are small elements typically used to list out related properties.
 ---
 
-[Kirigami.Chip](docs:kirigami2;Chip) components are small elements used for
-displaying common properties or filters of something. These are typically text
-elements, which is also interactable and comes with an optional delete button.
+[Kirigami.Chip](docs:kirigami2;Chip) components are small elements inherited from
+AbstractButton(https://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton.html)
+used for displaying common properties or filters of something. These are typically
+text elements, which is also interactable and comes with an optional delete button.
 
 ![Example Chips in Kirigami Gallery](chips_kirigami_gallery.png)
 
@@ -118,20 +119,6 @@ the changing of both, unless something like
 See [Example Application](#example-application) for more information.
 
 {{< /alert >}}
-
-
-## Interactivity
-
-There exists several boolean properties that changes the way chips can be
-interacted with.
-
-- `closable` - Enable showing a close button with the chip. If this is disabled, the chips will become checkable. Default: `true`
-- `down` - If closable is true, visually show feedback when the user clicks on the chip. If closable is false, it always indicates that a buttons is pushed down. Default: `true`
-- `checked` - Set whether or not the chip is in a checked state. Default: `false` 
-<!-- `hoverEnabled` - I've actually got no clue what this does. Can somebody please fill me in?  D-: -->
-
-When a chip is clicked on, it will emit the `clicked()` signal. And when the
-delete button is clicked on, it will emit the `removed()` signal.
 
 ## Example Application
 
