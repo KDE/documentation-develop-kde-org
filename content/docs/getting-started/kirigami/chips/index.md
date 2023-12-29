@@ -125,8 +125,8 @@ See [Example Application](#example-application) for more information.
 There exists several boolean properties that changes the way chips can be
 interacted with.
 
-- `closable` - Enable showing a close button with the chip. Default: `true`
-- `down` - Enable the ability for the user to click on the chip. Default: `true`
+- `closable` - Enable showing a close button with the chip. If this is disabled, the chips will become checkable. Default: `true`
+- `down` - If closable is true, visually show feedback when the user clicks on the chip. If closable is false, it always indicates that a buttons is pushed down. Default: `true`
 - `checked` - Set whether or not the chip is in a checked state. Default: `false` 
 <!-- `hoverEnabled` - I've actually got no clue what this does. Can somebody please fill me in?  D-: -->
 
