@@ -1,11 +1,11 @@
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Stefan Asserhäll <stefan.asserhall@bredband.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-20 00:35+0000\n"
-"PO-Revision-Date: 2023-10-14 20:04+0200\n"
+"PO-Revision-Date: 2023-12-29 15:07+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -479,13 +479,6 @@ msgstr ""
 "åstadkomma med ren QML."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the 'Getting "
-#| "Started' page so that we can better understand what is going on in the "
-#| "central C++ file of our application. While this is a basic `main.cpp`, "
-#| "the features we will go over will remain essential no matter what kind of "
-#| "application you decide to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the [Getting "
 "Started]({{< ref \"introduction-getting_started\" >}}) page so that we can "
@@ -494,10 +487,11 @@ msgid ""
 "will remain essential no matter what kind of application you decide to "
 "create."
 msgstr ""
-"Här går vi igenom filen `main.cpp` vi skapade på sidan 'Komma igång' så att "
-"vi bättre förstår vad som händer i programmets centrala C++ fil. Även om det "
-"är en grundläggande `main.cpp`, förblir funktionerna vi går igenom "
-"väsentliga oberoende av vilket sorts program du bestämmer dig för att skapa."
+"Här går vi igenom filen `main.cpp` vi skapade på sidan [Komma igång]({{< ref "
+"\"introduction-getting_started\" >}}) så att vi bättre förstår vad som "
+"händer i programmets centrala C++ fil. Även om det är en grundläggande `main."
+"cpp`, förblir funktionerna vi går igenom väsentliga oberoende av vilket "
+"sorts program du bestämmer dig för att skapa."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:17
 msgid "What it does"
@@ -556,6 +550,10 @@ msgid ""
 "make use of [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-"
 "desktop-style)."
 msgstr ""
+"För att få vårt program att se ut att höra hemma på Plasma, Windows eller "
+"GNOME använder vi [QQuickStyle::setStyle()](docs:qtquickcontrols;"
+"QQuickStyle::setStyle()) för att utnyttja [qqc2-desktop-style](https://"
+"invent.kde.org/frameworks/qqc2-desktop-style)."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
 msgid ""
@@ -634,11 +632,8 @@ msgstr ""
 "CMake som vi anropar."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:24
-#, fuzzy
-#| msgid ""
-#| "The first line, `project(helloworld)` defines the name of the project."
 msgid "After that, `project(helloworld)` defines the name of the project."
-msgstr "Den första raden, `project(helloworld)` definierar projektets namn."
+msgstr "Därefter definierar `project(helloworld)` projektets namn."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:26
 msgid ""
@@ -653,17 +648,12 @@ msgstr ""
 "tillfället, och vi behöver inte ändra dem i den här handledningen."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:28
-#, fuzzy
-#| msgid ""
-#| "The following section is important, because it specifies which "
-#| "dependencies we'll be bringing in at compile time. Let's look at the "
-#| "first line:"
 msgid ""
 "The following section is important, because it specifies which dependencies "
 "we'll be bringing in at compile time. Let's look at the first:"
 msgstr ""
 "Den följande sektionen är viktig, eftersom den anger vilka beroenden vi tar "
-"med vid kompileringstid. Låt oss titta på den första raden:"
+"med vid kompileringstillfället. Låt oss titta på den första:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:32
 msgid ""
@@ -680,6 +670,10 @@ msgid ""
 "to be used, 5 or 6, depending on whether we use the CMake flag `-"
 "DBUILD_WITH_QT6=ON`."
 msgstr ""
+"Det första ordet är ramverket, Qt. `${QT_MAJOR_VERSION}` är en "
+"bekvämlighetsvariabel som tillhandahålls av extra-cmake-moduler som låter "
+"oss välja Qt-versionen som ska användas, 5 eller 6, beroende på om vi "
+"använder CMake-flaggan `-DBUILD_WITH_QT6=ON`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:34
 msgid ""
@@ -780,40 +774,24 @@ msgstr ""
 "mycket kortare."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:54
-#, fuzzy
-#| msgid ""
-#| "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-#| "add_executable.html) takes care of naming our executable and grabbing the "
-#| "files needed to create it"
 msgid ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
 "add_executable.html) takes care of generating our executable."
 msgstr ""
 "[add_executable()](https://cmake.org/cmake/help/latest/command/"
-"add_executable.html) tar hand om att namnge vårt körbara program och hämta "
-"filerna som behövs för att skapa den"
+"add_executable.html) tar hand om att generera vårt körbara program."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:55
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) links the libraries used in our code to our "
-#| "executable."
 msgid ""
 "[target_sources()](https://cmake.org/cmake/help/latest/command/"
 "target_sources.html) lets us add files that will be used by our new "
 "executable."
 msgstr ""
-"[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
-"target_link_libraries.html) länkar biblioteken som används i vår kod till "
-"vårt körbara program."
+"[target_sources()](https://cmake.org/cmake/help/latest/command/"
+"target_sources.html) låter oss lägga till filer som används av vårt nya "
+"körbara program."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:56
-#, fuzzy
-#| msgid ""
-#| "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
-#| "target_link_libraries.html) dynamically links the libraries used in our "
-#| "code to our executable."
 msgid ""
 "[target_link_libraries()](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) dynamically links the libraries used in our code "
@@ -822,7 +800,8 @@ msgid ""
 msgstr ""
 "[target_link_libraries](https://cmake.org/cmake/help/latest/command/"
 "target_link_libraries.html) länkar biblioteken som används i vår kod till "
-"vårt körbara program dynamiskt."
+"vårt körbara program dynamiskt. Kirigami inkluderas inte här eftersom vi "
+"bara använder dess QML-modul."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:57
 msgid ""
@@ -835,6 +814,14 @@ msgid ""
 "[GNUInstallDirs](https://cmake.org/cmake/help/latest/module/GNUInstallDirs."
 "html)."
 msgstr ""
+"[install()](https://cmake.org/cmake/help/latest/command/install.html) "
+"placerar vår körbara fil på rätt plats genom att använda `"
+"${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, en bekvämlighetsvariabel som "
+"tillhandahålls av [KDEInstallDirs](https://api.kde.org/ecm/manual/ecm-kde-"
+"modules.7.html) i extra-cmake-modules som installerar körbara filer och "
+"bibliotek på rätt plats åt dig utan att behöva ange den absoluta sökvägen, "
+"på liknande sätt som [GNUInstallDirs](https://cmake.org/cmake/help/latest/"
+"module/GNUInstallDirs.html)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:61
 msgid ""
@@ -4032,40 +4019,36 @@ msgid "Getting ready to create our first Kirigami application\n"
 msgstr "Bli redo att skapa vårt första program med Kirigami\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:11
-#, fuzzy
-#| msgid "Using Kirigami Gallery"
 msgid "Installing Kirigami"
-msgstr "Använda Kirigami galleri"
+msgstr "Installera Kirigami"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:13
 msgid ""
 "Before getting started, we will need to install Kirigami on our machine. "
 "There are three ways to do so:"
 msgstr ""
+"Innan vi börjar måste vi installera Kirigami på datorn. Det finns tre sätt "
+"att göra det:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:15
 msgid ""
 "[Installing Kirigami from the repositories in your Linux distribution]({{< "
 "ref \"#linux\" >}})"
 msgstr ""
+"[Installera Kirigami från din Linux-distributions arkiv]({{< ref \"#linux\" "
+">}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
 msgid "[Building Kirigami with kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
-msgstr ""
+msgstr "[Bygga Kirigami med kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft]({{< ref \"#craft\" >}})"
-msgstr ""
+msgstr "[Installera Kirigami med Craft]({{< ref \"#craft\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:19
-#, fuzzy
-#| msgid ""
-#| "Before continuing please install Kirigami Gallery. It should already be "
-#| "in the repository of your Linux distribution."
 msgid "Installing Kirigami from the repositories in your Linux distribution"
-msgstr ""
-"Innan du fortsätter, installera Kirigami galleri. Det ska redan finnas i din "
-"Linux-distributions arkiv."
+msgstr "Installera Kirigami från arkiven i Linux-distribution."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:21
 msgid ""
@@ -4073,6 +4056,9 @@ msgid ""
 "terminal application and run one of the following, depending on which Linux "
 "distribution you are using:"
 msgstr ""
+"Vi behöver en C++-kompilator, Qt-utvecklingspaket och Kirigami. Öppna ett "
+"terminalprogram och kör något av följande, beroende på vilken Linux-"
+"distribution du använder:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
 msgid ""
@@ -4090,16 +4076,22 @@ msgid ""
 "only distribution packages on Linux. You will need to resort to [kdesrc-"
 "build]({{< ref \"#kdesrc-build\" >}}) instead."
 msgstr ""
+"Om du vill bygga Kirigami med Qt6 är detta för närvarande inte möjligt med "
+"endast distributionspaket på Linux. Du måste ta till [kdesrc-build]({{< ref "
+"\"#kdesrc-build\" >}}) istället."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
 msgid "Building Kirigami with kdesrc-build"
-msgstr ""
+msgstr "Bygga Kirigami med kdesrc-build"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
+"KDE har ett eget verktyg för att enkelt bygga alla dess bibliotek och "
+"program: **kdesrc-build**. Det kan användas för att bygga Kirigami på Linux "
+"och FreeBSD."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
 msgid ""
@@ -4108,11 +4100,15 @@ msgid ""
 "Set_up_a_development_environment) but using a `~/kde5` directory instead, "
 "then copy the sample KF5 file to your home:"
 msgstr ""
+"För den här handledningen måste du följa [installationsinstruktionerna för "
+"kdesrc-build](https://community.kde.org/Get_Involved/development/"
+"Set_up_a_development_environment) men använda katalogen `~/kde5` istället, "
+"kopiera sedan KF5 exempelfilen till din hemkatalog:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:45
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:60
 msgid "After that, you may simply run the following on a terminal:"
-msgstr ""
+msgstr "Därefter kan du helt enkelt köra följande på en terminal:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:52
 msgid ""
@@ -4120,10 +4116,13 @@ msgid ""
 "you used to source the prefix file. If you close your terminal, you can "
 "simply source the file again to compile your app."
 msgstr ""
+"Och sedan kan du kompilera dina Kirigami-projekt med skalet i samma terminal "
+"som du använde för att hämta prefixfilen. Om du stänger terminalen kan du "
+"helt enkelt hämta filen igen för att kompilera ditt program."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:54
 msgid "Installing Kirigami with Craft"
-msgstr ""
+msgstr "Installera Kirigami med Craft"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:56
 msgid ""
@@ -4135,6 +4134,13 @@ msgid ""
 "(https://community.kde.org/Craft/Android) and [macOS](https://community.kde."
 "org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
 msgstr ""
+"KDE har ett eget verktyg för att enkelt installera de flesta av dess "
+"bibliotek och program: **Craft**. Det kan användas för att installera "
+"Kirigami på [Linux](https://community.kde.org/Craft/Linux), [FreeBSD]"
+"(https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/FreeBSD), "
+"[Windows](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/"
+"Windows), [Android](https://community.kde.org/Craft/Android) och [macOS]"
+"(https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:58
 msgid ""
@@ -4143,16 +4149,22 @@ msgid ""
 "setup file (`craftenv.ps1` or `craftenv.sh`), which will give you a terminal "
 "shell where you will be compiling your Kirigami application."
 msgstr ""
+"Du måste följa [installationsinstruktionerna för Craft](https://community."
+"kde.org/Craft). I slutet av installationen ska du ha kört en "
+"miljöinstallationsfil (`craftenv.ps1` eller `craftenv.sh`), som ger dig ett "
+"skal i en terminal där du kan kompilera ditt Kirigami-program."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:66
 msgid "Theming on Windows"
-msgstr ""
+msgstr "Tema på Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:68
 msgid ""
 "<details>\n"
 "<summary>Click here to read more</summary>\n"
 msgstr ""
+"<details>\n"
+"<summary>Klicka här för att läsa mer</summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:71
 msgid ""
@@ -4163,16 +4175,24 @@ msgid ""
 "other hand is responsible for the nice looking style we want to enforce on "
 "those platforms."
 msgstr ""
+"När du bygger programmet efter att ha installerat beroenden med Craft, "
+"säkerställer enbart installation av KIconThemes och Breeze att programmet "
+"kan använda Breeze-ikoner på plattformar som Windows, länkning är inte "
+"nödvändig. [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-"
+"desktop-style) ansvarar å andra sidan för den snygga stilen vi vill införa "
+"på plattformarna."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
 msgid "</details>\n"
-msgstr ""
+msgstr "</details>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:76
 msgid ""
 "If you close your terminal, you can simply run the environment setup file "
 "again to compile your app."
 msgstr ""
+"Om du stänger din terminal kan du helt enkelt köra miljöinstallationsfilen "
+"igen för att kompilera ditt program."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:78
 msgid "Project structure"
@@ -4591,42 +4611,27 @@ msgid "Compiling and running the application"
 msgstr "Kompilera och köra programmet"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:202
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "We are almost at the finish line. The last thing we need to do is build and "
 "run our application. Doing so will depend on which platform you are on."
 msgstr ""
-"Vi har nästa nått mållinjen. Det sista vi måste göra är att bygga och "
-"kompilera vårt program. För att göra det, behöver vi lägga till katalogen "
-"'helloworld' i terminalprogrammet vi tycker bäst om och köra följande "
-"kommandon:"
+"Vi har nästa nått mållinjen. Det sista vi måste göra är att bygga och köra "
+"vårt program. Hur man gör det beror på vilken plattform som används."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
-#, fuzzy
-#| msgid ""
-#| "We are almost at the finish line. The last thing we need to do is build "
-#| "and compile our application. To do that, we need to enter our `helloworld/"
-#| "` folder in our terminal application of choice and run the following "
-#| "commands:"
 msgid ""
 "If you are running your project on Linux, you will need to specify the place "
 "where the program will be installed. To do that, we need to change "
 "directories to our `helloworld/` folder in our terminal application of "
 "choice and run the following commands:"
 msgstr ""
-"Vi har nästa nått mållinjen. Det sista vi måste göra är att bygga och "
-"kompilera vårt program. För att göra det, behöver vi lägga till katalogen "
-"'helloworld' i terminalprogrammet vi tycker bäst om och köra följande "
-"kommandon:"
+"Om projektet görs på Linux, måste platsen där programmet ska installeras "
+"anges. För att göra det, behöver vi lägga till katalogen 'helloworld' i "
+"terminalprogrammet vi tycker bäst om och köra följande kommandon:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:212
 msgid "The program will be installed to `~/kde5/usr/bin`."
-msgstr ""
+msgstr "Programmet installeras i `~/kde5/usr/bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:214
 msgid ""
@@ -4635,30 +4640,34 @@ msgid ""
 "depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) "
 "to compile your projects."
 msgstr ""
+"Om du kompilerar ditt projekt med [Craft]({{< ref \"#craft\" >}}) på Windows "
+"kan du behöva ange en CMake Generator för det första steget, beroende på om "
+"du använder Visual Studio 2019 (msvc) ) eller MinGW (make) för att kompilera "
+"dina projekt."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:216
 msgid "If Visual Studio:"
-msgstr ""
+msgstr "För Visual Studio:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:224
 msgid "If MinGW:"
-msgstr ""
+msgstr "För MinGW:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:232
 msgid "In both cases, the program will be installed to `C:\\CraftRoot\\bin`."
-msgstr ""
+msgstr "I båda fall, installeras programmet i `C:\\CraftRoot\\bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:234
 msgid "You can then run the helloworld program with:"
-msgstr ""
+msgstr "Därefter kan programmet helloworld köras med:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:237
 msgid "On Linux"
-msgstr ""
+msgstr "På Linux"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:238
 msgid "On Windows"
-msgstr ""
+msgstr "På Windows"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:241
 msgid ""
