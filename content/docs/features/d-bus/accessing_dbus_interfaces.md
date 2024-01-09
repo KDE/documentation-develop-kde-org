@@ -99,7 +99,9 @@ Using [QDBusMessage](https://doc.qt.io/qt-5/qdbusmessage.html) directly in this 
 
 ## Using QDBusInterface
 
-{{< alert title="Warning" color="warning" >}}QDBusInterface should not be used. Since it uses blocking d-bus calls on application startup, it has a significant impact on the application's startup time{{< /alert >}}
+{{< alert title="Warning" color="warning" >}}This section is for learning purposes only. **Avoid using QDBusInterface, especially in graphical applications**. QDBusInterface's constructor makes a non-obvious blocking call to introspect the D-Bus service ([QTBUG-14485](https://bugreports.qt.io/browse/QTBUG-14485)). **This problem doesn't affect the classes generated from D-Bus XML explained in the later section**, since there the required information is available at compile time.
+
+These blocking calls are especially problematic if used for initializing non-essential service interfaces, as each call requires a roundtrip to the process hosting the service: at best, this will cause a slight increase in the time to load your application; at worst, a hung process will keep your process blocked until the 25s timeout is reached.{{< /alert >}}
 
 [QDBusInterface](https://doc.qt.io/qt-5/qdbusinterface.html) provides a simple and direct method to make D-Bus calls and connect to D-Bus signals.
 
@@ -227,9 +229,13 @@ Due to this combination of ease of use and compile-time checking, this is genera
 But it does come with its drawbacks, since we need a XML file to generate adaptor at compile time. The XML file must be present in system. This would means one will have to build the project that carries this file first, leading to more compile time dependencies. Including the XML file in source code avoid this, but only feasible if you can guarantee the sync between the actual interface and the XML file you carry.
 
 Each ways comes with pros and cons, feel free to choose your solution. My suggestions are:
-* Use `QDBusInterface` directly if remote interface is simple enough.
-* Use adaptor if the XML file comes from a software very likely to be compiled first. E.g. XML files from `KWin` or `PowerDevil` or other most important Plasma softwares.
-* It's fine to use adaptor if it's installed by the same project. I.e. your project consists of a daemon and client, the XML file is from daemon and the adaptor is for client. Being in same project you can always guarantee the generated adaptor is correct.
+
+* Use `QDBusInterface` only if blocking is not a problem (e.g. small console utilities) and the remote interface is simple enough.
+* Use adaptor with a system XML file if the XML comes from a software very likely to be compiled first. E.g. XML files from `KWin` or `PowerDevil` or other most important Plasma softwares.
+* It's fine to use adaptor if the XML is installed by the same project. I.e. your project consists of a daemon and client, the XML file is from daemon and the adaptor is for client. Being in same project you can always guarantee the generated adaptor is correct.
+* Including the XML in your project is less than perfect but it's appropriate for stable APIs and can be a good option if it would otherwise drag too many otherwise unnecessary dependencies or if no system XML exists (you can create your own with introspection).
+* You can still raw `QDBusMessage` along with `QDBusConnection` for complex cases not covered by other methods.
+
 ## Doing A Little Introspection
 
 It may also be helpful to find out if a given service is available or to check which application is providing it. Another [QDBusAbstractInterface](https://doc.qt.io/qt-5/qdbusabstractinterface.html) subclass, [QDBusConnectionInterface](https://doc.qt.io/qt-5/qdbusconnectioninterface.html), provides methods to query for such information as which services are registered and who owns them.
