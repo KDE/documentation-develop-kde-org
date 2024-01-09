@@ -197,7 +197,7 @@ Note that these libraries should match the components that we included in our pr
 
 Now that CMake has been taken care of, let's look at the files we are going to spend the majority of our time working with.
 
-## Compiling and running the application
+## Compiling and running the application {#build}
 
 We are almost at the finish line. The last thing we need to do is build and run our application. Doing so will depend on which platform you are on.
 

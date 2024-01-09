@@ -139,6 +139,14 @@ if __name__ == "__main__":
 
     download_file('frameworks/threadweaver', 'examples/HelloWorld/HelloWorld.cpp')
 
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/CMakeLists.txt')
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/main.cpp')
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/resources.qrc')
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/contents/ui/main.qml')
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/contents/ui/SettingsPage.qml')
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/contents/ui/MyAboutPage.qml')
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/contents/ui/JsonAboutPage.qml')
+
     projects = os.listdir("./tmp/")
     keys = []
     for project in projects:

@@ -12,6 +12,8 @@ groups:
     key: "components"
   - name: "Advanced"
     key: "advanced"
+  - name: "Kirigami Addons"
+    key: "addons"
 description: >
   Learning to create your first applications using Kirigami
 group: "getting-started"
