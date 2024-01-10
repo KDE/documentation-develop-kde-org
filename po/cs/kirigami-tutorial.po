@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-20 00:35+0000\n"
+"POT-Creation-Date: 2024-01-10 00:35+0000\n"
 "PO-Revision-Date: 2023-03-29 16:18+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -40,10 +40,16 @@ msgid "Advanced"
 msgstr "Pokročilé"
 
 #: content/docs/getting-started/kirigami/_index.md:0
+#, fuzzy
+#| msgid "Kirigami Unit"
+msgid "Kirigami Addons"
+msgstr "Jednotka Kirigami"
+
+#: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/_index.md:22
+#: content/docs/getting-started/kirigami/_index.md:24
 msgid ""
 "This tutorial will guide you through the process of creating your own "
 "convergent application using the [Kirigami framework](/frameworks/kirigami). "
@@ -54,7 +60,7 @@ msgid ""
 "touchscreen and adapt to a smaller portrait screen. And so on."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/_index.md:30
+#: content/docs/getting-started/kirigami/_index.md:32
 msgid ""
 "Kirigami is built on top of the QML language and Qt Quick Controls 2 "
 "components provided by the Qt project. QML has built in support for touch "
@@ -64,7 +70,7 @@ msgid ""
 "applications."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/_index.md:36
+#: content/docs/getting-started/kirigami/_index.md:38
 msgid ""
 "While you will use QML to create the visual part of your application, the "
 "business logic—the code that does the heavy lifting for your application's "
@@ -73,9 +79,714 @@ msgid ""
 "tutorials below."
 msgstr ""
 
+#: content/docs/getting-started/kirigami/addons-about/index.md:0
+#, fuzzy
+#| msgid "About Page"
+msgid "FormCard About pages"
+msgstr "O stránce"
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:0
+#, fuzzy
+#| msgid "Informations about your application"
+msgid "Learn to create About pages to credit your application."
+msgstr "Informace o vaší aplikaci"
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:8
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:8
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:8
+msgid ""
+"Kirigami Addons is an additional set of visual components that work well on "
+"mobile and desktop and are guaranteed to be cross-platform. It uses Kirigami "
+"under the hood to create its components."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:10
+msgid ""
+"Some of those components allow you to credit your work and the work of other "
+"contributors in your project, as well as mention the frameworks being used "
+"in your application: [AboutKDE](https://api.kde.org/frameworks/kirigami-"
+"addons/html/classAboutKDE.html) and AboutPage."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:12
+#, fuzzy
+#| msgid "About Page"
+msgid "About KDE"
+msgstr "O stránce"
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:14
+msgid ""
+"Each new button we created in the previous step should open a new page. You "
+"can add new pages by instantiating them as [Components](docs:qtqml;QtQml."
+"Component) and then using `pageStack.layers.push()` for each button to load "
+"that page in our `main.qml`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:18
+msgid ""
+"That's it really! All it takes is instantiating `FormCard.AboutKDE`. You "
+"should see something like this after clicking the AboutKDE button:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:22
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "About Page"
 msgstr "O stránce"
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:24
+msgid ""
+"The application's AboutPage is slightly more complex, but it's still very "
+"simple to use. We will be adding a new QML file that will contain the "
+"information needed for our about page. First in our `resources.qrc` file:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:35
+msgid "And our `contents/ui/MyAboutPage.qml` should have the following:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:39
+msgid ""
+"Here we use the information we set using [KAboutData](docs:kcoreaddons;"
+"KAboutData) in our `main.cpp`. Here's a brief reminder of what is in `main."
+"cpp`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:43
+msgid "<========== used in the import"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:44
+msgid "<========== C++ object exported as a QML type"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:51
+msgid ""
+"The `About` object we exported to the QML side using "
+"[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+"qmlRegisterSingletonType) contains the data from [KAboutData::"
+"applicationData()](docs:kcoreaddons;KAboutData::applicationData), and that "
+"is what we pass to the `aboutData` property."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:53
+msgid "Lastly, we add our new MyAboutPage to our `main.qml`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:57
+msgid "The About page of our application should look like this:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:61
+msgid "Using JSON instead of KAboutData"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:63
+msgid ""
+"If you were wondering why the About page was kept separate rather than "
+"embedded in `main.qml`, that is because it allows to set a custom model for "
+"the `aboutData` property."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:65
+msgid ""
+"Instead of letting your about page get information from [KAboutData](docs:"
+"kcoreaddons;KAboutData), it is possible to pass a JSON object directly. You "
+"will still need to use [QApplication::setWindowIcon()](docs:qtwidgets;"
+"QApplication::setWindowIcon) in your `main.cpp` in order for your "
+"application icon to show up."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:67
+msgid "Change your `MyAboutPage.json` to something like this:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:71
+msgid ""
+"The main JSON object here contains the keys `displayName`, `productName`, "
+"`homepage` and so on. The keys `authors`, `credits`, `translators` and "
+"`licenses` can each be passed an array of objects. The objects passed to "
+"`authors`, `credits` and `translators` share the same keys so that they can "
+"be displayed each in their own section, while `licenses` includes the keys "
+"`name`, `text` and `spdx` for each license added, as it is not uncommon for "
+"the same project to include multiple licenses."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:73
+msgid ""
+"These keys are optional, but a reasonable minimum amount of keys is expected "
+"to make your application have no empty fields: `displayName`, `version`, "
+"`description`, `homepage`, `copyrightStatement` and `authors`. You are "
+"encouraged to fill as many key as possible, however."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:0
+msgid "Form Delegates in your settings pages"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:0
+msgid "Create elegant custom settings pages."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:10
+msgid ""
+"You have learned how to add About and AboutKDE pages to your application. "
+"Now you will be able to use their same inner components to create your "
+"settings pages."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:12
+msgid "The project structure should look like this:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:26
+msgid "Needed Changes"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:28
+msgid "Add a new line to our `resources.qrc`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:32
+msgid "And change `main.qml` to include our new Settings page:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:92
+msgid ""
+"We can now start checking out the components used to create our Settings "
+"page: the Form Card and its Delegates."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:94
+#, fuzzy
+#| msgid "Delegate"
+msgid "Form Delegates"
+msgstr "Delegovat"
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:96
+msgid "FormCard and FormCardPage"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:98
+msgid ""
+"[FormCard.FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html) is the main component we will be using to group all its "
+"child components, the Delegates."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:100
+msgid ""
+"We used a form card in the [Kirigami Addons introduction]({{< ref \"addons-"
+"introduction\" >}}) before. Its main purpose is to serve as a container for "
+"other components while following a color different from the background, in a "
+"similar manner to a [Kirigami.Card](docs:kirigami2;Card)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:102
+msgid "Create a new `contents/ui/SettingsPage.qml` file:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:110
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:114
+msgid "This is where all our delegates go!"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:119
+msgid ""
+"Since we are making a separate QML file for our Settings page, and since we "
+"need to prepare for potential scrolling in our page, we use a `FormCard."
+"FormCardPage`, which inherits [Kirigami.ScrollablePage](docs:kirigami2;"
+"ScrollablePage)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:121
+msgid ""
+"The nice thing about the form card page is that it comes with an internal "
+"layout, so no additional ColumnLayout is needed and our delegates can be "
+"added directly to it."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:123
+msgid ""
+"{{< alert color=\"info\" title=\"Note\" >}} It is possible to use FormCard "
+"delegates directly with a Kirigami.ScrollablePage, but in that case you will "
+"need to add your own layouts. {{< /alert >}}"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:127
+#, fuzzy
+#| msgid "Header"
+msgid "FormHeader"
+msgstr "Záhlaví"
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:129
+msgid ""
+"For every [FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html) you want to create, you can create a [FormHeader]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/classFormHeader.html) "
+"just before it. The header uses bold text and shows up right above the form "
+"card."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:140
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:148
+msgid "Our delegates go here..."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:153
+msgid "FormTextDelegate and FormSectionText"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:155
+msgid "Let's start simple, with plain text."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:157
+msgid ""
+"`FormSectionText` simply adds a thin delegate containing a label. "
+"`FormTextDelegate` has text and a grayed out description."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:193
+msgid ""
+"We add some dummy text for the hypothetical theme detection. If we wanted to "
+"have actual color scheme detection, in the future it could be done similarly "
+"to [Neochat](https://apps.kde.org/neochat) ([code here](https://github.com/"
+"KDE/neochat/blob/master/src/colorschemer.cpp)), making use of a C++ model "
+"with [KColorSchemeManager](docs:kconfigwidgets;KColorSchemeManager)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:195
+msgid ""
+"In the Online Accounts section, we see an additional property, `leading`. We "
+"can add an [Item](docs:qtquick;Item) to it so that it appears before the "
+"text. Its opposite property, `trailing`, would be able to show an Item after "
+"the text, but we won't use it in our program."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:197
+msgid ""
+"We use a [Kirigami.Icon](docs:kirigami2;Icon) here for simplicity, but this "
+"could also be implemented using a [Kirigami.Avatar](docs:kirigami2;Avatar) "
+"that grabs the information from a model, as is done in Neochat [here]"
+"(https://invent.kde.org/network/neochat/-/blob/master/src/qml/Settings/"
+"AccountsPage.qml)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:199
+msgid "It should end up looking like this:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:203
+#, fuzzy
+#| msgid "Delegate"
+msgid "FormButtonDelegate"
+msgstr "Delegovat"
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:205
+msgid ""
+"The [FormButtonDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormButtonDelegate.html) is visually similar to a FormTextDelegate, but "
+"it is clickable and shows an arrow pointing to the right. We used it in the "
+"[Kirigami Addons introduction]({{< ref \"addons-introduction\" >}}) before."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:207
+msgid ""
+"While the FormTextDelegate had the `leading` and `trailing` properties to "
+"show an item before and after the main content, the FormButtonDelegate only "
+"has the `leading` property, because the right side is occupied by the arrow."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:248
+msgid ""
+"We use its `icon.name` property to set a plus (+) icon to appear after the "
+"space where the `leading` would appear, and before the main content. This is "
+"a common pattern to indicate your button will add something to a list."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:250
+msgid ""
+"Since this example is for simple illustrative purposes, we don't delve deep "
+"into what would be done once the button is clicked: it just prints \"Clicked!"
+"\" to the terminal. We _could_ make a new page for account creation that "
+"adds another user to a model, then push the page into view, similarly to "
+"what we did in `main.qml`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:254
+msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:256
+msgid ""
+"The RadioButton, CheckBox and Switch are very commonly used components in "
+"any user interface. Kirigami Addons provides them as [FormRadioDelegate]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/classFormRadioDelegate."
+"html), [FormCheckDelegate](https://api.kde.org/frameworks/kirigami-addons/"
+"html/classFormCheckDelegate.html) and [FormSwitchDelegate](https://api.kde."
+"org/frameworks/kirigami-addons/html/classFormSwitchDelegate.html)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:258
+msgid ""
+"Their only main properties are `text` and `description`. They are different "
+"in usage because they all inherit [AbstractButton](docs:qtquickcontrols;"
+"QtQuick.Controls.AbstractButton), and so you are expected to use its signals "
+"and handlers: checked and onChecked, toggled and onToggled, clicked and "
+"onClicked."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:260
+msgid ""
+"We want to create some autosave functionality in our application, and we "
+"want to only show its settings if the user has enabled this functionality. "
+"Create a new section using a [FormCard](https://api.kde.org/frameworks/"
+"kirigami-addons/html/classFormCard.html) and a [FormHeader](https://api.kde."
+"org/frameworks/kirigami-addons/html/classFormHeader.html), then add a "
+"[FormSwitchDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormSwitchDelegate.html) and a [FormRadioDelegate](https://api.kde.org/"
+"frameworks/kirigami-addons/html/classFormRadioDelegate.html)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:287
+msgid ""
+"We bind the visibility of each radio button to a switch, so they only appear "
+"when the switch is enabled."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:289
+msgid "Best Practices"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:291
+msgid "<details><summary>Click here to read more</summary>\n"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:293
+msgid ""
+"If you have some programming background in imperative languages such as C++, "
+"you might be tempted to set the `checked` property of the switch to turn the "
+"visibility of the radio buttons to `true` with a JavaScript assignment such "
+"as:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:303
+msgid ""
+"This is not very efficient for QML's declarative language and its signals "
+"and slots. Try to use QML bindings like in the case of `visible: autosave."
+"checked` as much as possible instead of JavaScript expressions."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:305
+msgid ""
+"See [this page](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
+"declarative-bindings-over-imperative-assignments) for details."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:307
+#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
+msgid "</details>\n"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:313
+msgid ""
+"To test our checkbox, we can add a new [FormCheckDelegate](https://api.kde."
+"org/frameworks/kirigami-addons/html/classFormCheckDelegate.html) to our "
+"General section."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:338
+msgid ""
+"Here we use the `onToggled` [signal handler](https://doc.qt.io/qt-6/qtqml-"
+"syntax-signals.html) to show some dummy text to simulate a tray icon "
+"appearing in the system. If you really wanted to, you could easily implement "
+"a tray icon using [SystemTrayIcon](https://doc.qt.io/qt-6/qml-qt-labs-"
+"platform-systemtrayicon.html)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:340
+msgid "So far our application should look like this:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:344
+msgid "FormComboBoxDelegate"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:346
+msgid ""
+"The common ComboBox component can be created using a [FormComboBoxDelegate]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormComboBoxDelegate.html)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:348
+msgid ""
+"This combobox has several useful properties we can make use of: `editable`, "
+"`displayText` and `displayMode`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:350
+msgid ""
+"Setting `editable: true` allows the user to edit the text of the combobox, "
+"which is useful in case adding new combobox options is needed:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:354
+msgid ""
+"Whenever you need to show additional text before each option, you can use "
+"something like `displayText: \"Profile: \" + currentText`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:358
+msgid ""
+"And the most interesting one, which we will be using in our example, is "
+"`displayMode`. It can have three options:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:360
+msgid ""
+"**FormComboBoxDelegate.ComboBox**: the standard small box showing a list of "
+"options."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:364
+msgid ""
+"**FormComboBoxDelegate.Dialog**: a dialog showing a list of options in the "
+"middle of the window, like a [Kirigami.OverlaySheet](docs:kirigami2;"
+"OverlaySheet)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:368
+msgid ""
+"**FormComboBoxDelegate.Page**: a new page containing a list of options shown "
+"in a separate window."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:372
+msgid ""
+"Add the following between the \"Current Color Scheme\" and \"Show Tray Icon"
+"\" delegates in your \"General\" form card."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:385
+msgid "With the checkbox, our Settings page should look like this:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:389
+msgid "FormDelegateSeparator"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:391
+msgid ""
+"Our Settings page is taking shape, but each section is starting to get long. "
+"We can add a few FormDelegateSeparators to make our page tidier:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:395
+msgid ""
+"Generally, you may use separators whenever you see major distinctions "
+"between components, although the choice of where to place them is ultimately "
+"yours. For example, in the General section, the checkbox differs from its "
+"previous components as it doesn't start with text; in the Autosave section, "
+"the separator groups the radio buttons together; and in the Accounts "
+"section, adding a separator between the last account and the button provides "
+"some additional focus to the button."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:397
+msgid ""
+"The `above` and `below` properties are rather self-explanatory when it comes "
+"to their use: you pass the `id` of the components above and below the "
+"separator. When they are set, the separator will swiftly disappear whenever "
+"the above or below item is highlighted/hovered. They are most useful, for "
+"instance, when you need to generate components dynamically and you can't "
+"automatically assume which item will come immediately before or after the "
+"separator. That would be the case in the Accounts section of our application "
+"once the logic to add new accounts were actually implemented, in which case "
+"we could always grab the last item in the model to do so."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:401
+msgid ""
+"Notice how the separator above the tray icon setting does not appear while "
+"it is hovered."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:0
+msgid "Introduction to Kirigami Addons"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:0
+msgid "Get acquainted with Kirigami Addons components"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:10
+msgid ""
+"Here you will be setting up your new Kirigami Addons project and be "
+"introduced to a few useful components."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:12
+msgid ""
+"These components make use of KDE's localization facilities, so before we "
+"start using these, we will need to set a little project that makes use of "
+"[KLocalizedContext](docs:ki18n;KLocalizedContext)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:14
+msgid "Setting up your project"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:16
+msgid "The initial project structure will look like so:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:28
+#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:98
+#: content/docs/getting-started/kirigami/introduction-kirigami-gallery/index.md:14
+#: content/docs/getting-started/kirigami/introduction-kirigami-gallery/index.md:169
+msgid "Tip"
+msgstr "Tip"
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:30
+#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:100
+msgid "You can quickly create this file structure with:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:40
+msgid "We start by using a very standard `CMakeLists.txt`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:44
+msgid "A standard `resources.qrc`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:55
+msgid "The interesting part will be the `main.cpp`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:59
+msgid ""
+"If you have read our [KXmlGui tutorial](/docs/getting-started/kxmlgui) or "
+"the last Kirigami tutorial on the [Kirigami About page](/docs/getting-"
+"started/kirigami/advanced-add_about_page), much of this will seem familiar "
+"to you."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:61
+msgid ""
+"We create our application and use [KAboutData's](docs:kcoreaddons;"
+"KAboutData) default constructor to add the metadata of our application, add "
+"ourselves as an author, and then use [setApplicationData()](docs:kcoreaddons;"
+"KAboutData::setApplicationData) to finish the process. For later, we also "
+"set an application icon that comes from the system theme."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:63
+msgid ""
+"We then use a lambda in [qmlRegisterSingletonType](docs:qtqml;QQmlEngine::"
+"qmlRegisterSingletonType) to directly send the metadata of our application "
+"to the QML side, exposing its properties."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:65
+msgid ""
+"We then instantiate our QML engine, and set its [context](docs:qtqml;"
+"QQmlContext) to use KDE's [KLocalizedContext](docs:ki18n;KLocalizedContext), "
+"used to integrate translated strings, passing the just created engine as a "
+"parameter."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:67
+msgid ""
+"We simply load our QML file from the resource file, and now we just need to "
+"take care of our initial QML file."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:69
+msgid "FormCard and FormButtonDelegate"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:71
+msgid ""
+"The idea for our app is to design our own Kirigami Addons gallery, "
+"showcasing multiple components, one per page. The main page will contain a "
+"simple list of buttons in a [ColumnLayout](https://doc.qt.io/qt-6/qml-"
+"qtquick-layouts-columnlayout.html), each opening a separate page."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:73
+msgid "Initially, our `contents/ui/main.qml` should look like this:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:77
+msgid ""
+"We use our handy [pageStack](/docs/getting-started/kirigami/components-"
+"pagerow_pagestack) to set the initial page to a [Kirigami.ScrollablePage]"
+"(docs:kirigami2;ScrollablePage)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:79
+msgid ""
+"While we could use a [FormLayout]({{< ref \"components-formlayouts\" >}}) "
+"together with [QtQuick Controls components](components-controls) to achieve "
+"our goal, here you will be introduced to [FormCard](https://api.kde.org/"
+"frameworks/kirigami-addons/html/classFormCard.html)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:81
+msgid ""
+"The main purpose of a FormCard is to serve as a container for other "
+"components while following a color different from the background, in a "
+"similar manner to a [Kirigami.Card](docs:kirigami2;Card), but for settings "
+"windows. You can have multiple FormCards in your application to indicate "
+"different sections. Your FormCard is also expected to be a direct child of a "
+"ColumnLayout."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:83
+msgid ""
+"Importing `org.kde.kirigamiaddons.formcard` makes all FormCard components "
+"available to your QML file."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:85
+msgid ""
+"We will have only a single section in our main page, so we add a single "
+"FormCard:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:89
+msgid ""
+"The great thing about FormCard is that it does automatic layouting for you. "
+"In other words, just the order of its components is enough to indicate their "
+"position inside the FormCard, no [Layout attached properties](https://doc.qt."
+"io/qt-6/qml-qtquick-layouts-layout.html) are necessary and you are expected "
+"not to use [anchors](https://doc.qt.io/qt-6/qtquick-positioning-anchors."
+"html) or [positioners](https://doc.qt.io/qt-6/qtquick-positioning-layouts."
+"html)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:91
+msgid "We can simply add a few buttons inside our FormCard:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:95
+msgid ""
+"That's it! The buttons are not usable just yet, but we are now set up to "
+"play with our About pages!"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:97
+msgid "We then build and run it like so:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:106
+msgid ""
+"To see other ways to build your application (for example, on Windows), see "
+"the [Getting Started with Kirigami]({{< ref \"introduction-"
+"getting_started#build\" >}}) page."
+msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "Informations about your application"
@@ -3077,10 +3788,6 @@ msgid ""
 "those platforms."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
-msgid "</details>\n"
-msgstr ""
-
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:76
 msgid ""
 "If you close your terminal, you can simply run the environment setup file "
@@ -3110,16 +3817,6 @@ msgid ""
 "files in a `src/` folder. Our `src/` folder in turn will contain a folder "
 "named `contents/`, which itself contains a folder called `ui/`. Here is "
 "where we will create our QML files."
-msgstr ""
-
-#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:98
-#: content/docs/getting-started/kirigami/introduction-kirigami-gallery/index.md:14
-#: content/docs/getting-started/kirigami/introduction-kirigami-gallery/index.md:169
-msgid "Tip"
-msgstr "Tip"
-
-#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:100
-msgid "You can quickly create this file structure with:"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:108
