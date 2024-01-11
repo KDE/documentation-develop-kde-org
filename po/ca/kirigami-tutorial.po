@@ -1,16 +1,16 @@
 # Translation of kirigami-tutorial.po to Catalan
-# Copyright (C) 2021-2023 This_file_is_part_of_KDE
+# Copyright (C) 2021-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2021.
-# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-10 00:35+0000\n"
-"PO-Revision-Date: 2023-11-20 09:59+0100\n"
+"PO-Revision-Date: 2024-01-10 20:37+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -45,10 +45,8 @@ msgid "Advanced"
 msgstr "Avançat"
 
 #: content/docs/getting-started/kirigami/_index.md:0
-#, fuzzy
-#| msgid "Kirigami Unit"
 msgid "Kirigami Addons"
-msgstr "Unitat de Kirigami"
+msgstr "Complements del Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
@@ -105,16 +103,13 @@ msgstr ""
 "nostra interfície d'usuari en les guies d'aprenentatge següents."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:0
-#, fuzzy
-#| msgid "About Page"
 msgid "FormCard About pages"
-msgstr "Pàgina «Quant al»"
+msgstr "Pàgines FormCard «Quant al»"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:0
-#, fuzzy
-#| msgid "Learn all about CMake and how to compile your applications."
 msgid "Learn to create About pages to credit your application."
-msgstr "Aprendre-ho tot sobre CMake i com compilar les vostres aplicacions."
+msgstr ""
+"Aprendre a crear pàgines «Quant al» per a acreditar la vostra aplicació."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:8
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:8
@@ -124,6 +119,10 @@ msgid ""
 "mobile and desktop and are guaranteed to be cross-platform. It uses Kirigami "
 "under the hood to create its components."
 msgstr ""
+"Els complements del Kirigami són un conjunt addicional de components visuals "
+"que funcionen bé en el mòbil i l'escriptori i es garanteix que són "
+"multiplataforma. Utilitzen el Kirigami per sota per a crear els seus "
+"components."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:10
 msgid ""
@@ -132,13 +131,16 @@ msgid ""
 "in your application: [AboutKDE](https://api.kde.org/frameworks/kirigami-"
 "addons/html/classAboutKDE.html) and AboutPage."
 msgstr ""
+"Alguns d'aquests components us permeten acreditar el vostre treball i el "
+"treball d'altres col·laboradors en el projecte, així com esmentar els marcs "
+"de treball que s'utilitzen a l'aplicació: [AboutKDE](https://api.kde.org/"
+"frameworks/kirigami-addons/html/classAboutKDE.html) i AboutPage."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:12
-#, fuzzy
-#| msgid "About Page"
 msgid "About KDE"
-msgstr "Pàgina «Quant al»"
+msgstr "Quant al KDE"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:14
 msgid ""
 "Each new button we created in the previous step should open a new page. You "
@@ -146,44 +148,62 @@ msgid ""
 "Component) and then using `pageStack.layers.push()` for each button to load "
 "that page in our `main.qml`:"
 msgstr ""
+"Cada botó nou que hem creat en el pas anterior hauria d'obrir una pàgina "
+"nova. Podeu afegir pàgines noves instanciant-les com a [Components](docs:"
+"qtqml;QtQml.Component) i després utilitzant `pageStack.layers.push()` per a "
+"cada botó per a carregar aquesta pàgina en el `main.qml`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:18
 msgid ""
 "That's it really! All it takes is instantiating `FormCard.AboutKDE`. You "
 "should see something like this after clicking the AboutKDE button:"
 msgstr ""
+"Això és realment! Tot el que cal és instanciar `FormCard.AboutKDE`. Hauríeu "
+"de veure una cosa així després de fer clic al botó AboutKDE:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:22
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "About Page"
 msgstr "Pàgina «Quant al»"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:24
 msgid ""
 "The application's AboutPage is slightly more complex, but it's still very "
 "simple to use. We will be adding a new QML file that will contain the "
 "information needed for our about page. First in our `resources.qrc` file:"
 msgstr ""
+"L'AboutPage de l'aplicació és una mica més complexa, però encara és molt "
+"senzilla d'utilitzar. Afegirem un fitxer nou en QML que contindrà la "
+"informació necessària per a la nostra pàgina «Quant al». Primer al nostre "
+"fitxer `resources.qrc`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:35
 msgid "And our `contents/ui/MyAboutPage.qml` should have the following:"
-msgstr ""
+msgstr "I el `contents/ui/MyAboutPage.qml` hauria de tenir el següent:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:39
 msgid ""
 "Here we use the information we set using [KAboutData](docs:kcoreaddons;"
 "KAboutData) in our `main.cpp`. Here's a brief reminder of what is in `main."
 "cpp`:"
 msgstr ""
+"Aquí utilitzem la informació que hem establert utilitzant [KAboutData](docs:"
+"kcoreaddons;KAboutData) en el nostre `main.cpp`. Aquí hi ha un breu "
+"recordatori del que hi ha a `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:43
 msgid "<========== used in the import"
-msgstr ""
+msgstr "<========== utilitzat en la importació"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:44
 msgid "<========== C++ object exported as a QML type"
-msgstr ""
+msgstr "<========== Objecte C++ exportat com a un tipus de QML"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:51
 msgid ""
 "The `About` object we exported to the QML side using "
@@ -192,28 +212,37 @@ msgid ""
 "applicationData()](docs:kcoreaddons;KAboutData::applicationData), and that "
 "is what we pass to the `aboutData` property."
 msgstr ""
+"L'objecte `About` que exportem a la part del QML utilitzant "
+"[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+"qmlRegisterSingletonType) conté les dades de [KAboutData::applicationData()]"
+"(docs:kcoreaddons;KAboutData::applicationData), i això és el que passem a la "
+"propietat `aboutData`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:53
 msgid "Lastly, we add our new MyAboutPage to our `main.qml`:"
-msgstr ""
+msgstr "Finalment, afegim la MyAboutPage nova al `main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:57
-#, fuzzy
-#| msgid "The application should look like this:"
 msgid "The About page of our application should look like this:"
-msgstr "L'aplicació hauria de ser així:"
+msgstr "La pàgina «Quant al» de la nostra aplicació s'hauria de veure així:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:61
 msgid "Using JSON instead of KAboutData"
-msgstr ""
+msgstr "Ús del JSON en lloc del KAboutData"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:63
 msgid ""
 "If you were wondering why the About page was kept separate rather than "
 "embedded in `main.qml`, that is because it allows to set a custom model for "
 "the `aboutData` property."
 msgstr ""
+"Si us pregunteu per què la pàgina «Quant al» es va mantenir separada en lloc "
+"d'incrustada a `main.qml`, això és perquè permet establir un model "
+"personalitzat per a la propietat `aboutData`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:65
 msgid ""
 "Instead of letting your about page get information from [KAboutData](docs:"
@@ -222,11 +251,18 @@ msgid ""
 "QApplication::setWindowIcon) in your `main.cpp` in order for your "
 "application icon to show up."
 msgstr ""
+"En lloc de permetre que la pàgina «Quant al» rebi informació de [KAboutData]"
+"(docs:kcoreaddons;KAboutData), és possible passar directament un objecte "
+"JSON. Encara haureu d'utilitzar [QApplication::setWindowIcon()](docs:"
+"qtwidgets;QApplication::setWindowIcon) en el vostre `main.cpp` perquè es "
+"mostri la icona de l'aplicació."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:67
 msgid "Change your `MyAboutPage.json` to something like this:"
-msgstr ""
+msgstr "Canvieu el `MyAboutPage.json` a alguna cosa així:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:71
 msgid ""
 "The main JSON object here contains the keys `displayName`, `productName`, "
@@ -237,7 +273,16 @@ msgid ""
 "`name`, `text` and `spdx` for each license added, as it is not uncommon for "
 "the same project to include multiple licenses."
 msgstr ""
+"L'objecte JSON principal conté les claus `displayName`, `productName`, "
+"`homepage` i així successivament. Les claus `authors`, `credits`, "
+"`translators` i `licenses` se'ls hi poden passar una matriu d'objectes. Els "
+"objectes passats a `authors`, `credits` i `translators` comparteixen les "
+"mateixes claus perquè es puguin mostrar cadascuna en la seva pròpia secció, "
+"mentre que `licenses` inclou les claus `name`, `text` i `spdx` per a cada "
+"llicència afegida, ja que no és estrany que el mateix projecte inclogui "
+"diverses llicències."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:73
 msgid ""
 "These keys are optional, but a reasonable minimum amount of keys is expected "
@@ -245,14 +290,19 @@ msgid ""
 "`description`, `homepage`, `copyrightStatement` and `authors`. You are "
 "encouraged to fill as many key as possible, however."
 msgstr ""
+"Aquestes claus són opcionals, però s'espera que una quantitat mínima "
+"raonable de claus faci que la vostra aplicació no tingui camps buits: "
+"`displayName`, `version`, `description`, `homepage`, `copyrightStatement` i "
+"`authors`. No obstant això, se us anima a omplir tantes claus com sigui "
+"possible."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Form Delegates in your settings pages"
-msgstr ""
+msgstr "Delegats de formularis a les pàgines de configuració"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Create elegant custom settings pages."
-msgstr ""
+msgstr "Creació de pàgines elegants de configuració personalitzada."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:10
 msgid ""
@@ -260,40 +310,43 @@ msgid ""
 "Now you will be able to use their same inner components to create your "
 "settings pages."
 msgstr ""
+"Heu après a afegir pàgines «Quant al» i «Quant al KDE» a l'aplicació. Ara "
+"podreu utilitzar els seus mateixos components interns per a crear les "
+"pàgines de configuració."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:12
-#, fuzzy
-#| msgid "The application should look like this:"
 msgid "The project structure should look like this:"
-msgstr "L'aplicació hauria de ser així:"
+msgstr "L'estructura del projecte s'hauria de veure així:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:26
 msgid "Needed Changes"
-msgstr ""
+msgstr "Canvis necessaris"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:28
 msgid "Add a new line to our `resources.qrc`:"
-msgstr ""
+msgstr "Afegeix una línia nova al `resources.qrc`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:32
 msgid "And change `main.qml` to include our new Settings page:"
-msgstr ""
+msgstr "I canvieu el `main.qml` per a incloure la pàgina nova de configuració:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:92
 msgid ""
 "We can now start checking out the components used to create our Settings "
 "page: the Form Card and its Delegates."
 msgstr ""
+"Ara podem començar a consultar els components que s'utilitzen per a crear la "
+"pàgina de Configuració: la Targeta de Formulari i els seus Delegats."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:94
-#, fuzzy
-#| msgid "Delegate"
 msgid "Form Delegates"
-msgstr "Delegat"
+msgstr "Delegats de Formularis"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:96
 msgid "FormCard and FormCardPage"
-msgstr ""
+msgstr "FormCard i FormCardPage"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:98
 msgid ""
@@ -301,6 +354,9 @@ msgid ""
 "classFormCard.html) is the main component we will be using to group all its "
 "child components, the Delegates."
 msgstr ""
+"[FormCard.FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html) és el component principal que utilitzarem per a agrupar "
+"tots els seus components fills, els Delegats."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:100
 msgid ""
@@ -309,16 +365,23 @@ msgid ""
 "other components while following a color different from the background, in a "
 "similar manner to a [Kirigami.Card](docs:kirigami2;Card)."
 msgstr ""
+"Hem utilitzat una targeta de formulari en la [introducció dels complements "
+"del Kirigami]({< ref \"addons-introduction\" >}}) abans. El seu propòsit "
+"principal és servir com a contenidor per a altres components alhora que "
+"segueix un color diferent del fons, de manera similar a un [Kirigami.Card]"
+"(docs:kirigami2;Card)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:102
 msgid "Create a new `contents/ui/SettingsPage.qml` file:"
-msgstr ""
+msgstr "Crea un fitxer `contents/ui/SettingsPage.qml` nou:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:110
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:114
 msgid "This is where all our delegates go!"
-msgstr ""
+msgstr "Aquí és on van tots els nostres delegats!"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:119
 msgid ""
 "Since we are making a separate QML file for our Settings page, and since we "
@@ -326,6 +389,10 @@ msgid ""
 "FormCardPage`, which inherits [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage)."
 msgstr ""
+"Com que estem creant un fitxer QML separat per a la nostra pàgina de "
+"Configuració, i com que necessitem preparar el desplaçament potencial a la "
+"nostra pàgina, utilitzem un `FormCard.FormCardPage`, que hereta [Kirigami."
+"ScrollablePage](docs:kirigami2;ScrollablePage)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:121
 msgid ""
@@ -333,6 +400,9 @@ msgid ""
 "layout, so no additional ColumnLayout is needed and our delegates can be "
 "added directly to it."
 msgstr ""
+"El més agradable de la pàgina de la targeta de formulari és que ve amb una "
+"disposició interna, de manera que no es necessita cap ColumnLayout "
+"addicional i els nostres delegats poden afegir-se directament a ella."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:123
 msgid ""
@@ -340,12 +410,13 @@ msgid ""
 "delegates directly with a Kirigami.ScrollablePage, but in that case you will "
 "need to add your own layouts. {{< /alert >}}"
 msgstr ""
+"{{< alert color=\"info\" title=\"Note\" >}} És possible utilitzar delegats "
+"de FormCard directament amb un Kirigami.ScrollablePage, però en aquest cas "
+"haureu d'afegir les vostres pròpies disposicions. {{< /alert >}}"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:127
-#, fuzzy
-#| msgid "Header"
 msgid "FormHeader"
-msgstr "Capçalera"
+msgstr "FormHeader"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:129
 msgid ""
@@ -355,25 +426,33 @@ msgid ""
 "just before it. The header uses bold text and shows up right above the form "
 "card."
 msgstr ""
+"Per a cada [FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html) que vulgueu crear, podeu crear un [FormHeader](https://"
+"api.kde.org/frameworks/kirigami-addons/html/classFormHeader.html) just "
+"abans. La capçalera utilitza text en negreta i es mostra just a sobre de la "
+"targeta de formulari."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:140
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:148
 msgid "Our delegates go here..."
-msgstr ""
+msgstr "Els nostres delegats van aquí..."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:153
 msgid "FormTextDelegate and FormSectionText"
-msgstr ""
+msgstr "FormTextDelegate i FormSectionText"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:155
 msgid "Let's start simple, with plain text."
-msgstr ""
+msgstr "Comencem de manera senzilla, amb text net."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:157
 msgid ""
 "`FormSectionText` simply adds a thin delegate containing a label. "
 "`FormTextDelegate` has text and a grayed out description."
 msgstr ""
+"`FormSectionText` simplement afegeix un delegat prim que conté una etiqueta."
+"`FormTextDelegate` té text i una descripció en gris."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:193
 msgid ""
@@ -383,7 +462,14 @@ msgid ""
 "KDE/neochat/blob/master/src/colorschemer.cpp)), making use of a C++ model "
 "with [KColorSchemeManager](docs:kconfigwidgets;KColorSchemeManager)."
 msgstr ""
+"Afegim algun text fictici per a la hipotètica detecció del tema. Si volíem "
+"tenir una detecció real de l'esquema de color, en el futur es podria fer de "
+"manera similar al [Neochat](https://apps.kde.org/neochat) ([codi aquí]"
+"(https://github.com/KDE/neochat/blob/master/src/colorschemer.cpp)), fent ús "
+"d'un model de C++ amb el [KColorSchemeManager](docs:kconfigwidgets;"
+"KColorSchemeManager)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:195
 msgid ""
 "In the Online Accounts section, we see an additional property, `leading`. We "
@@ -391,6 +477,10 @@ msgid ""
 "text. Its opposite property, `trailing`, would be able to show an Item after "
 "the text, but we won't use it in our program."
 msgstr ""
+"A l'apartat Comptes Online, veiem un immoble addicional, `leading`. Es pot "
+"afegir un [element](docs:qtquick;Item) perquè aparegui abans del text. La "
+"seva propietat oposada, `trailing`, podria mostrar un element després del "
+"text, però no l'utilitzarem en el programa."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:197
 msgid ""
@@ -400,18 +490,19 @@ msgid ""
 "(https://invent.kde.org/network/neochat/-/blob/master/src/qml/Settings/"
 "AccountsPage.qml)."
 msgstr ""
+"Fem servir un [Kirigami.Icon](docs:kirigami2;Icon) aquí per a la "
+"simplicitat, però això també es podria implementar utilitzant un [Kirigami."
+"Avatar](docs:kirigami2;Avatar) que captura la informació d'un model, com es "
+"fa a Neochat [aquí](https://invent.kde.org/network/neochat/-/blob/master/src/"
+"qml/Settings/AccountsPage.qml)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:199
-#, fuzzy
-#| msgid "The application should look like this:"
 msgid "It should end up looking like this:"
-msgstr "L'aplicació hauria de ser així:"
+msgstr "Hauria d'acabar veient-se així:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:203
-#, fuzzy
-#| msgid "KountdownDelegate.qml"
 msgid "FormButtonDelegate"
-msgstr "KountdownDelegate.qml"
+msgstr "FormButtonDelegate"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:205
 msgid ""
@@ -420,21 +511,37 @@ msgid ""
 "it is clickable and shows an arrow pointing to the right. We used it in the "
 "[Kirigami Addons introduction]({{< ref \"addons-introduction\" >}}) before."
 msgstr ""
+"El [FormButtonDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormButtonDelegate.html) és visualment similar a un FormTextDelegate, "
+"però s'hi pot fer clic i mostra una fletxa que apunta cap a la dreta. L'hem "
+"utilitzat abans a la [introducció dels complements del Kirigami]({< ref "
+"\"addons-introduction\" >}})."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:207
 msgid ""
 "While the FormTextDelegate had the `leading` and `trailing` properties to "
 "show an item before and after the main content, the FormButtonDelegate only "
 "has the `leading` property, because the right side is occupied by the arrow."
 msgstr ""
+"Mentre que el FormTextDelegate tenia les propietats `leading` i `trailing` "
+"per a mostrar un element abans i després del contingut principal, el "
+"FormButtonDelegate només té la propietat `leading`, perquè el costat dret "
+"està ocupat per la fletxa."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:248
 msgid ""
 "We use its `icon.name` property to set a plus (+) icon to appear after the "
 "space where the `leading` would appear, and before the main content. This is "
 "a common pattern to indicate your button will add something to a list."
 msgstr ""
+"Utilitzem la seva propietat `icon.name` per a establir una icona de més (+) "
+"que apareixerà després de l'espai on apareixerà el `leading`, i abans del "
+"contingut principal. Aquest és un patró comú per a indicar que el botó "
+"afegirà alguna cosa a una llista."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:250
 msgid ""
 "Since this example is for simple illustrative purposes, we don't delve deep "
@@ -443,11 +550,17 @@ msgid ""
 "adds another user to a model, then push the page into view, similarly to "
 "what we did in `main.qml`."
 msgstr ""
+"Com que aquest exemple és per a propòsits il·lustratius senzills, no "
+"aprofundim en el que es faria una vegada que es clica el botó: només "
+"imprimeix «Clicked!» al terminal. _Podríem_ crear una pàgina nova per a la "
+"creació de comptes que afegeixi un altre usuari a un model i després empenyi "
+"la pàgina a la vista, de manera similar al que vam fer a `main.qml`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:254
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
-msgstr ""
+msgstr "FormRadioDelegate, FormCheckDelegate i FormSwitchDelegate"
 
+# skip-rule: kct-checkbox, kct-radiobutton, t-sc-checkbox
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:256
 msgid ""
 "The RadioButton, CheckBox and Switch are very commonly used components in "
@@ -457,7 +570,15 @@ msgid ""
 "html/classFormCheckDelegate.html) and [FormSwitchDelegate](https://api.kde."
 "org/frameworks/kirigami-addons/html/classFormSwitchDelegate.html)."
 msgstr ""
+"El RadioButton, el CheckBox i el Switch són components molt utilitzats en "
+"qualsevol interfície d'usuari. Els complements del Kirigami els proporcionen "
+"com a [FormRadioDelegate](https://api.kde.org/frameworks/kirigami-addons/"
+"html/classFormCheckDelegate.html), [FormCheckDelegate](https://api.kde.org/"
+"frameworks/kirigami-addons/html/classFormSwitchDelegate.html) i "
+"[FormSwitchDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormSwitchDelegate.html)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:258
 msgid ""
 "Their only main properties are `text` and `description`. They are different "
@@ -466,6 +587,11 @@ msgid ""
 "and handlers: checked and onChecked, toggled and onToggled, clicked and "
 "onClicked."
 msgstr ""
+"Les seves úniques propietats principals són `text` i `description`. Són "
+"diferents en ús perquè tots hereten [AbstractButton](docs:qtquickcontrols;"
+"QtQuick.Controls.AbstractButton), i per tant s'espera que utilitzin els seus "
+"senyals i controladors: «checked» i «onChecked», «toggled» i «onToggled», "
+"«clicked» i «onClicked»."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:260
 msgid ""
@@ -478,27 +604,32 @@ msgid ""
 "classFormSwitchDelegate.html) and a [FormRadioDelegate](https://api.kde.org/"
 "frameworks/kirigami-addons/html/classFormRadioDelegate.html)."
 msgstr ""
+"Volem crear alguna funcionalitat de desament automàtic a la nostra "
+"aplicació, i només volem mostrar la seva configuració si l'usuari ha "
+"habilitat aquesta funcionalitat. Creeu una secció nova utilitzant un "
+"[FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormHeader.html) i un [FormHeader](https://api.kde.org/frameworks/"
+"kirigami-addons/html/classFormSwitchDelegate.html) i un [FormRadioDelegate]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/classFormRadioDelegate."
+"html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:287
 msgid ""
 "We bind the visibility of each radio button to a switch, so they only appear "
 "when the switch is enabled."
 msgstr ""
+"Vinculem la visibilitat de cada botó d'opció a un commutador, de manera que "
+"només apareixeran quan el commutador estigui habilitat."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:289
 msgid "Best Practices"
-msgstr ""
+msgstr "Millors pràctiques"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:291
-#, fuzzy
-#| msgid ""
-#| "<details>\n"
-#| "<summary>Click here to read more</summary>\n"
 msgid "<details><summary>Click here to read more</summary>\n"
-msgstr ""
-"<details>\n"
-"<summary>Feu clic aquí per a llegir-ne més</summary>\n"
+msgstr "<details><summary>Feu clic aquí per a llegir-ne més</summary>\n"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:293
 msgid ""
 "If you have some programming background in imperative languages such as C++, "
@@ -506,19 +637,31 @@ msgid ""
 "visibility of the radio buttons to `true` with a JavaScript assignment such "
 "as:"
 msgstr ""
+"Si teniu algun coneixement de programació en llenguatges imperatius com C++, "
+"és possible que tingueu la temptació d'establir la propietat `checked` del "
+"commutador per a activar la visibilitat dels botons d'opció a `true` amb una "
+"assignació de JavaScript com:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:303
 msgid ""
 "This is not very efficient for QML's declarative language and its signals "
 "and slots. Try to use QML bindings like in the case of `visible: autosave."
 "checked` as much as possible instead of JavaScript expressions."
 msgstr ""
+"Això no és molt eficient per al llenguatge declaratiu del QML i els seus "
+"senyals i ranures. Intenteu utilitzar les vinculacions del QML com en el cas "
+"de `visible: autosave.checked` tant com sigui possible en lloc d'expressions "
+"JavaScript."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:305
 msgid ""
 "See [this page](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
 "declarative-bindings-over-imperative-assignments) for details."
 msgstr ""
+"Vegeu [aquesta pàgina](https://doc.qt.io/qt-6/qtquick-bestpractices."
+"html#prefer-declarative-bindings-over-imperative-assignments) per als "
+"detalls."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:307
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
@@ -531,7 +674,11 @@ msgid ""
 "org/frameworks/kirigami-addons/html/classFormCheckDelegate.html) to our "
 "General section."
 msgstr ""
+"Per a provar la nostra casella de selecció, podem afegir un "
+"[FormCheckDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCheckDelegate.html) nou a la nostra secció General."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:338
 msgid ""
 "Here we use the `onToggled` [signal handler](https://doc.qt.io/qt-6/qtqml-"
@@ -540,53 +687,76 @@ msgid ""
 "a tray icon using [SystemTrayIcon](https://doc.qt.io/qt-6/qml-qt-labs-"
 "platform-systemtrayicon.html)."
 msgstr ""
+"Aquí utilitzem el [manipulador de senyals](https://doc.qt.io/qt-6/qtqml-"
+"syntax-signals.html) `onToggled` per a mostrar algun text fictici per a "
+"simular una icona de safata que apareix en el sistema. Si realment voleu, "
+"podeu implementar fàcilment una icona de la safata utilitzant "
+"[SystemTrayIcon](https://doc.qt.io/qt-6/qml-qt-labs-platform-systemtrayicon."
+"html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:340
-#, fuzzy
-#| msgid "Finally, our application should look like this:"
 msgid "So far our application should look like this:"
 msgstr "Finalment, la nostra aplicació s'hauria de veure així:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:344
 msgid "FormComboBoxDelegate"
-msgstr ""
+msgstr "FormComboBoxDelegate"
 
+# skip-rule: kct-combobox
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:346
 msgid ""
 "The common ComboBox component can be created using a [FormComboBoxDelegate]"
 "(https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormComboBoxDelegate.html)."
 msgstr ""
+"El component ComboBox comú es pot crear utilitzant un [FormComboBoxDelegate]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormComboBoxDelegate.html)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:348
 msgid ""
 "This combobox has several useful properties we can make use of: `editable`, "
 "`displayText` and `displayMode`."
 msgstr ""
+"Aquest quadre combinat té diverses propietats útils que podem fer servir: "
+"`editable`, `displayText` i `displayMode`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:350
 msgid ""
 "Setting `editable: true` allows the user to edit the text of the combobox, "
 "which is useful in case adding new combobox options is needed:"
 msgstr ""
+"Establir `editable: true` permet a l'usuari editar el text del quadre "
+"combinat, el qual és útil en cas que es necessitin opcions noves del quadre "
+"combinat:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:354
 msgid ""
 "Whenever you need to show additional text before each option, you can use "
 "something like `displayText: \"Profile: \" + currentText`:"
 msgstr ""
+"Sempre que necessiteu mostrar text addicional abans de cada opció, podeu "
+"utilitzar alguna cosa com `displayText: \"Profile: \" + currentText`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:358
 msgid ""
 "And the most interesting one, which we will be using in our example, is "
 "`displayMode`. It can have three options:"
 msgstr ""
+"I el més interessant, que utilitzarem en el nostre exemple, és "
+"`displayMode`. Pot tenir tres opcions:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:360
 msgid ""
 "**FormComboBoxDelegate.ComboBox**: the standard small box showing a list of "
 "options."
 msgstr ""
+"**FormComboBoxDelegate.ComboBox**: el quadre petit estàndard que mostra una "
+"llista d'opcions."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:364
 msgid ""
@@ -594,34 +764,43 @@ msgid ""
 "middle of the window, like a [Kirigami.OverlaySheet](docs:kirigami2;"
 "OverlaySheet)."
 msgstr ""
+"**FormComboBoxDelegate.Dialog**: un diàleg que mostra una llista d'opcions "
+"al mig de la finestra, com un [Kirigami.OverlaySheet](docs:kirigami2;"
+"OverlaySheet)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:368
 msgid ""
 "**FormComboBoxDelegate.Page**: a new page containing a list of options shown "
 "in a separate window."
 msgstr ""
+"**FormComboBoxDelegate.Page**: una pàgina nova que conté una llista "
+"d'opcions mostrades en una finestra separada."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:372
 msgid ""
 "Add the following between the \"Current Color Scheme\" and \"Show Tray Icon"
 "\" delegates in your \"General\" form card."
 msgstr ""
+"Afegiu el següent entre els delegats de «Current Color Scheme» i «Show Tray "
+"Icon» a la targeta del formulari «General»."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:385
-#, fuzzy
-#| msgid "Finally, our application should look like this:"
 msgid "With the checkbox, our Settings page should look like this:"
-msgstr "Finalment, la nostra aplicació s'hauria de veure així:"
+msgstr ""
+"Amb la casella de selecció, la pàgina Configuració s'hauria de veure així:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:389
 msgid "FormDelegateSeparator"
-msgstr ""
+msgstr "FormDelegateSeparator"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:391
 msgid ""
 "Our Settings page is taking shape, but each section is starting to get long. "
 "We can add a few FormDelegateSeparators to make our page tidier:"
 msgstr ""
+"La nostra pàgina de configuració està prenent forma, però cada secció està "
+"començant a fer-se llarga. Podem afegir alguns FormDelegateSeparators per "
+"fer que la nostra pàgina sigui més ordenada:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:395
 msgid ""
@@ -633,7 +812,15 @@ msgid ""
 "section, adding a separator between the last account and the button provides "
 "some additional focus to the button."
 msgstr ""
+"Generalment, podeu utilitzar separadors sempre que veieu distincions "
+"importants entre components, encara que l'elecció d'on col·locar-los és en "
+"última instància vostra. Per exemple, a la secció General, la casella de "
+"selecció difereix dels seus components anteriors, ja que no comença per "
+"text; a la secció Desament automàtic, el separador agrupa els botons "
+"d'opció; i a la secció Comptes, afegir un separador entre l'últim compte i "
+"el botó proporciona algun focus addicional al botó."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:397
 msgid ""
 "The `above` and `below` properties are rather self-explanatory when it comes "
@@ -646,26 +833,40 @@ msgid ""
 "once the logic to add new accounts were actually implemented, in which case "
 "we could always grab the last item in the model to do so."
 msgstr ""
+"Les propietats `above` i `below` són bastant autoexplicatives pel que fa al "
+"seu ús: es passa el `id` dels components per sobre i per sota del separador. "
+"Quan s'estableixin, el separador desapareixerà ràpidament cada vegada que es "
+"ressalti o es passi per sobre de l'element anterior o inferior. Són més "
+"útils, per exemple, quan necessiteu generar components dinàmicament i no "
+"podeu assumir automàticament quin element vindrà immediatament abans o "
+"després del separador. Aquest seria el cas a la secció de Comptes de la "
+"nostra aplicació una vegada que s'hagi implementat realment la lògica "
+"d'afegir comptes nous, i en aquest cas sempre podríem agafar l'últim element "
+"del model per fer-ho."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:401
 msgid ""
 "Notice how the separator above the tray icon setting does not appear while "
 "it is hovered."
 msgstr ""
+"Observeu com el separador que hi ha a sobre de la configuració de la icona "
+"de la safata no apareixerà mentre es passa per sobre."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Introduction to Kirigami Addons"
-msgstr ""
+msgstr "Introducció als complements del Kirigami"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Get acquainted with Kirigami Addons components"
-msgstr ""
+msgstr "Coneixeu els components dels complements del Kirigami"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:10
 msgid ""
 "Here you will be setting up your new Kirigami Addons project and be "
 "introduced to a few useful components."
 msgstr ""
+"Aquí configurareu el vostre projecte nou de complements del Kirigami i es "
+"presentaran alguns components útils."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:12
 msgid ""
@@ -673,16 +874,17 @@ msgid ""
 "start using these, we will need to set a little project that makes use of "
 "[KLocalizedContext](docs:ki18n;KLocalizedContext)."
 msgstr ""
+"Aquests components fan ús de les ajudes de localització del KDE, de manera "
+"que abans de començar a utilitzar-les, haurem d'establir un petit projecte "
+"que faci ús del [KLocalizedContext](docs:ki18n;KLocalizedContext)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:14
-#, fuzzy
-#| msgid "Laying out your content"
 msgid "Setting up your project"
-msgstr "Dissenyar el contingut"
+msgstr "Configurar el projecte"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:16
 msgid "The initial project structure will look like so:"
-msgstr ""
+msgstr "L'estructura inicial del projecte s'hauria de veure així:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:28
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:98
@@ -696,19 +898,20 @@ msgstr "Consell"
 msgid "You can quickly create this file structure with:"
 msgstr "Podeu crear ràpidament aquesta estructura de fitxers amb:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:40
 msgid "We start by using a very standard `CMakeLists.txt`:"
-msgstr ""
+msgstr "Comencem utilitzant un `CMakeLists.txt` molt estàndard:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:44
-#, fuzzy
-#| msgid "resources.qrc"
 msgid "A standard `resources.qrc`:"
-msgstr "resources.qrc"
+msgstr "Un `resources.qrc` estàndard:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:55
 msgid "The interesting part will be the `main.cpp`:"
-msgstr ""
+msgstr "La part interessant serà el `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:59
 msgid ""
@@ -717,6 +920,10 @@ msgid ""
 "started/kirigami/advanced-add_about_page), much of this will seem familiar "
 "to you."
 msgstr ""
+"Si heu llegit la nostra [guia d'aprenentatge del KXmlGui](/docs/getting-"
+"started/kxmlgui) o l'última guia d'aprenentatge del Kirigami a la [pàgina "
+"sobre el Kirigami](/docs/getting-started/kirigami/advanced-add_about_page), "
+"gran part d'això us semblarà familiar."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:61
 msgid ""
@@ -726,22 +933,23 @@ msgid ""
 "KAboutData::setApplicationData) to finish the process. For later, we also "
 "set an application icon that comes from the system theme."
 msgstr ""
+"Creem la nostra aplicació i utilitzem el constructor predeterminat "
+"[KAboutData](docs:kcoreaddons;KAboutData) per afegir les metadades de la "
+"nostra aplicació, afegir-nos com a autor i després utilitzar "
+"[setApplicationData()](docs:kcoreaddons;KAboutData::setApplicationData) per "
+"a acabar el procés. Per a més endavant, també s'ha establert una icona "
+"d'aplicació que prové del tema del sistema."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:63
-#, fuzzy
-#| msgid ""
-#| "We then create a [qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
-#| "qmlRegisterSingletonType). This is used to allow us to import the C++ "
-#| "code as a module in our `main.qml` with `import org.kde.example 1.0`."
 msgid ""
 "We then use a lambda in [qmlRegisterSingletonType](docs:qtqml;QQmlEngine::"
 "qmlRegisterSingletonType) to directly send the metadata of our application "
 "to the QML side, exposing its properties."
 msgstr ""
-"Després creem un [qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
-"qmlRegisterSingletonType). Això s'utilitza per a permetre importar el codi C+"
-"+ com un mòdul en el nostre `main.qml` amb `import org.kde.example 1.0`."
+"Després utilitzem una lambda en [qmlRegisterSingletonType](docs:qtqml;"
+"QQmlEngine::qmlRegisterSingletonType) per a enviar directament les metadades "
+"de la nostra aplicació a la part del QML, exposant les seves propietats."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:65
 msgid ""
@@ -750,16 +958,22 @@ msgid ""
 "used to integrate translated strings, passing the just created engine as a "
 "parameter."
 msgstr ""
+"Després, instanciem el nostre motor QML i establim el seu [context](docs:"
+"qtqml;QQmlContext) per a utilitzar el [KLocalizedContext](docs:ki18n;"
+"KLocalizedContext) de KDE, que s'utilitza per a integrar cadenes traduïdes, "
+"passant el motor que s'acaba de crear com a paràmetre."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:67
 msgid ""
 "We simply load our QML file from the resource file, and now we just need to "
 "take care of our initial QML file."
 msgstr ""
+"Simplement carreguem el fitxer QML des del fitxer de recursos, i ara només "
+"cal tenir cura del fitxer QML inicial."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:69
 msgid "FormCard and FormButtonDelegate"
-msgstr ""
+msgstr "FormCard i FormButtonDelegate"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:71
 msgid ""
@@ -768,12 +982,16 @@ msgid ""
 "simple list of buttons in a [ColumnLayout](https://doc.qt.io/qt-6/qml-"
 "qtquick-layouts-columnlayout.html), each opening a separate page."
 msgstr ""
+"La idea de l'aplicació és dissenyar la nostra pròpia galeria de complements "
+"del Kirigami, mostrant múltiples components, un per pàgina. La pàgina "
+"principal contindrà una llista senzilla de botons en un [ColumnLayout]"
+"(https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html), cada un "
+"obrint una pàgina separada."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:73
-#, fuzzy
-#| msgid "Finally, our application should look like this:"
 msgid "Initially, our `contents/ui/main.qml` should look like this:"
-msgstr "Finalment, la nostra aplicació s'hauria de veure així:"
+msgstr "Inicialment, el nostre `contents/ui/main.qml` s'hauria de veure així:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:77
 msgid ""
@@ -781,6 +999,9 @@ msgid ""
 "pagerow_pagestack) to set the initial page to a [Kirigami.ScrollablePage]"
 "(docs:kirigami2;ScrollablePage)."
 msgstr ""
+"Utilitzem la nostra útil [pageStack](/docs/getting-started/kirigami/"
+"components-pagerow_pagestack) per establir la pàgina inicial a [Kirigami."
+"ScrollablePage](docs:kirigami2;ScrollablePage)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:79
 msgid ""
@@ -789,6 +1010,10 @@ msgid ""
 "our goal, here you will be introduced to [FormCard](https://api.kde.org/"
 "frameworks/kirigami-addons/html/classFormCard.html)."
 msgstr ""
+"Tot i que podríem utilitzar un [FormLayout]({{< ref \"components-formlayouts"
+"\" >}}) juntament amb els [components de QtQuick Controls](components-"
+"controls) per a assolir el nostre objectiu, aquí us presentarem un [FormCard]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/classFormCard.html)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:81
 msgid ""
@@ -799,18 +1024,29 @@ msgid ""
 "different sections. Your FormCard is also expected to be a direct child of a "
 "ColumnLayout."
 msgstr ""
+"El propòsit principal d'un FormCard és servir com a contenidor per a altres "
+"components mentre segueix un color diferent del fons, de manera similar a un "
+"[Kirigami.Card](docs:kirigami2;Card), però per a les finestres de "
+"configuració. Podeu tenir múltiples FormCards a l'aplicació per a indicar "
+"seccions diferents. També s'espera que el FormCard sigui fill directe d'un "
+"ColumnLayout."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:83
 msgid ""
 "Importing `org.kde.kirigamiaddons.formcard` makes all FormCard components "
 "available to your QML file."
 msgstr ""
+"La importació de `org.kde.kirigamiaddons.formcard` fa que tots els "
+"components de FormCard estiguin disponibles per al fitxer QML."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:85
 msgid ""
 "We will have only a single section in our main page, so we add a single "
 "FormCard:"
 msgstr ""
+"Només tindrem una secció única a la pàgina principal, per la qual cosa "
+"afegirem una FormCard única:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:89
 msgid ""
@@ -822,20 +1058,29 @@ msgid ""
 "html) or [positioners](https://doc.qt.io/qt-6/qtquick-positioning-layouts."
 "html)."
 msgstr ""
+"El millor del FormCard és que fa una maquetació automàtica. En altres "
+"paraules, només l'ordre dels seus components és suficient per a indicar la "
+"seva posició dins del FormCard, no són necessàries les [propietats adjuntes "
+"a la disposició](https://doc.qt.io/qt-6/qml-qtquick-layouts-layout.html) i "
+"s'espera que no utilitzeu les [àncores](https://doc.qt.io/qtquick-"
+"positioning-anchors.html) o els [posicionadors](https://doc.qt.io/qtquick-"
+"positioning-layouts.html)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:91
 msgid "We can simply add a few buttons inside our FormCard:"
-msgstr ""
+msgstr "Simplement podem afegir uns quants botons dins de la FormCard:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:95
 msgid ""
 "That's it! The buttons are not usable just yet, but we are now set up to "
 "play with our About pages!"
 msgstr ""
+"Això és tot! Els botons encara no es poden utilitzar, però ara estem "
+"preparats per a jugar amb les nostres pàgines «Quant al»!"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:97
 msgid "We then build and run it like so:"
-msgstr ""
+msgstr "Després la construïm i l'executem així:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:106
 msgid ""
@@ -843,6 +1088,9 @@ msgid ""
 "the [Getting Started with Kirigami]({{< ref \"introduction-"
 "getting_started#build\" >}}) page."
 msgstr ""
+"Per veure altres maneres de construir la vostra aplicació (per exemple, al "
+"Windows), vegeu la pàgina [Com començar amb el Kirigami]({< ref "
+"\"introduction-getting_started#build\" >}})."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "Informations about your application"
@@ -968,7 +1216,7 @@ msgid ""
 "kcoreaddons;KAboutData)."
 msgstr ""
 "Al fitxer `CMakeLists.txt` de la nostra carpeta de nivell superior, "
-"assegureu-vos de tenir `CoreAddons` a la crida [find.package()](https://"
+"assegureu-vos de tenir `CoreAddons` a la crida [find_package()](https://"
 "cmake.org/cmake/help/latest/command/find_package.html). És necessari per a "
 "[KAboutData](docs:kcoreaddons;KAboutData)."
 
@@ -1185,7 +1433,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:98
 msgid "The resulting code in that part of the file should look like this:"
-msgstr "El codi resultant en aquesta part del fitxer hauria de ser així:"
+msgstr "El codi resultant en aquesta part del fitxer s'hauria de veure així:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:117
 msgid "Now compile and start your program again."
@@ -5851,7 +6099,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-kirigami-gallery/index.md:165
 msgid "The application should look like this:"
-msgstr "L'aplicació hauria de ser així:"
+msgstr "L'aplicació s'hauria de veure així:"
 
 #: content/docs/getting-started/kirigami/introduction-kirigami-gallery/index.md:167
 msgid "![Simple grid of cards](implementation.png)"
