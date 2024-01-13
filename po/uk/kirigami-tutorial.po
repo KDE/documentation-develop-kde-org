@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-10 00:35+0000\n"
-"PO-Revision-Date: 2024-01-10 13:51+0200\n"
+"PO-Revision-Date: 2024-01-11 20:02+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -117,6 +117,10 @@ msgid ""
 "mobile and desktop and are guaranteed to be cross-platform. It uses Kirigami "
 "under the hood to create its components."
 msgstr ""
+"Додатки Kirigami — це додатковий набір візуальних компонентів, які добре "
+"працюють на мобільних пристроях і комп'ютерах і гарантовано є "
+"багатоплатформовими. З лаштунками вони використовують Kirigami для створення "
+"своїх компонентів."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:10
 msgid ""
@@ -125,6 +129,10 @@ msgid ""
 "in your application: [AboutKDE](https://api.kde.org/frameworks/kirigami-"
 "addons/html/classAboutKDE.html) and AboutPage."
 msgstr ""
+"Деякі з цих компонентів надають змогу показати вашу роботу та роботу інших "
+"учасників у вашому проєкті, а також згадати бібліотеки, які використовуються "
+"у вашій програмі: [Про KDE](https://api.kde.org/frameworks/kirigami-addons/"
+"html/classAboutKDE.html) і AboutPage."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:12
 msgid "About KDE"
@@ -137,12 +145,18 @@ msgid ""
 "Component) and then using `pageStack.layers.push()` for each button to load "
 "that page in our `main.qml`:"
 msgstr ""
+"Кожна нова кнопка, яку ми створили на попередньому кроці, має відкривати "
+"нову сторінку. Ви можете додати нові сторінки, створивши їх як [компоненти]"
+"(docs:qtqml;QtQml.Component), а потім використавши `pageStack.layers.push()` "
+"для кожної кнопки, щоб завантажити цю сторінку до нашого `main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:18
 msgid ""
 "That's it really! All it takes is instantiating `FormCard.AboutKDE`. You "
 "should see something like this after clicking the AboutKDE button:"
 msgstr ""
+"Ось і справді! Усе, що потрібно, це створити екземпляр `FormCard.AboutKDE`. "
+"Ви маєте побачити щось подібне після натискання кнопки AboutKDE:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:22
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
@@ -155,10 +169,13 @@ msgid ""
 "simple to use. We will be adding a new QML file that will contain the "
 "information needed for our about page. First in our `resources.qrc` file:"
 msgstr ""
+"Сторінка AboutPage програми трохи складніша, але користуватися нею все одно "
+"дуже просто. Ми додамо новий файл QML, який міститиме інформацію, необхідну "
+"для нашої сторінки з інформацією. Спочатку в нашому файлі `resources.qrc`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:35
 msgid "And our `contents/ui/MyAboutPage.qml` should have the following:"
-msgstr ""
+msgstr "А наш `contents/ui/MyAboutPage.qml` має містити таке:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:39
 msgid ""
@@ -166,6 +183,9 @@ msgid ""
 "KAboutData) in our `main.cpp`. Here's a brief reminder of what is in `main."
 "cpp`:"
 msgstr ""
+"Тут ми використовуємо відомості, які встановлено за допомогою [KAboutData]"
+"(docs:kcoreaddons;KAboutData) у нашому `main.cpp`. Ось коротке нагадування "
+"того, що містить `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:43
 msgid "<========== used in the import"
@@ -173,7 +193,7 @@ msgstr "<========== використовують в імпортуванні"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:44
 msgid "<========== C++ object exported as a QML type"
-msgstr ""
+msgstr "<========== Об'єкт C++ експортовано як тип QML"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:51
 msgid ""
@@ -183,10 +203,15 @@ msgid ""
 "applicationData()](docs:kcoreaddons;KAboutData::applicationData), and that "
 "is what we pass to the `aboutData` property."
 msgstr ""
+"Об'єкт `About`, який ми експортували на бік QML за допомогою "
+"[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+"qmlRegisterSingletonType), містить дані з [KAboutData::applicationData()]"
+"(docs:kcoreaddons;KAboutData::applicationData), і це те, що ми передаємо до "
+"властивості `aboutData`."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:53
 msgid "Lastly, we add our new MyAboutPage to our `main.qml`:"
-msgstr ""
+msgstr "Нарешті, ми додаємо нашу нову MyAboutPage до нашого `main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:57
 msgid "The About page of our application should look like this:"
@@ -202,6 +227,9 @@ msgid ""
 "embedded in `main.qml`, that is because it allows to set a custom model for "
 "the `aboutData` property."
 msgstr ""
+"Якщо вам цікаво, чому сторінку About зберігали окремо, а не вбудовано в "
+"`main.qml`, це тому, що вона дозволяє встановити спеціальну модель для "
+"властивості `aboutData`."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:65
 msgid ""
@@ -211,10 +239,15 @@ msgid ""
 "QApplication::setWindowIcon) in your `main.cpp` in order for your "
 "application icon to show up."
 msgstr ""
+"Замість того, щоб надавати вашій сторінці «Про програму» інформації з "
+"[KAboutData](docs:kcoreaddons;KAboutData), можна передати об'єкт JSON "
+"безпосередньо. Вам все одно потрібно буде використовувати [QApplication::"
+"setWindowIcon()](docs:qtwidgets;QApplication::setWindowIcon) у вашому `main."
+"cpp`, щоб було показано піктограму вашої програми."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:67
 msgid "Change your `MyAboutPage.json` to something like this:"
-msgstr ""
+msgstr "Внесіть десь такі зміни до вашого `MyAboutPage.json`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:71
 msgid ""
@@ -226,6 +259,13 @@ msgid ""
 "`name`, `text` and `spdx` for each license added, as it is not uncommon for "
 "the same project to include multiple licenses."
 msgstr ""
+"Головний об'єкт JSON містить ключі `displayName`, `productName`, `homepage` "
+"тощо. Кожному з ключів `authors`, `credits`, `translators` і `licenses` "
+"можна передати масив об'єктів. Об'єкти, передані до `authors`, `credits` і "
+"`translators`, мають однакові ключі, тому їх можна показувати у окремих "
+"розділах для кожного, тоді як `licenses` включає ключі `name`, `text` і "
+"`spdx` для кожної доданої ліцензії, оскільки часто той самий проєкт "
+"ліцензовано з використанням різних ліцензій."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:73
 msgid ""
@@ -234,14 +274,18 @@ msgid ""
 "`description`, `homepage`, `copyrightStatement` and `authors`. You are "
 "encouraged to fill as many key as possible, however."
 msgstr ""
+"Ці ключі є необов'язковими, але очікуваною є розумна мінімальна кількість "
+"ключів, щоб ваша програма не мала порожніх полів: `displayName`, `version`, "
+"`description`, `homepage`, `copyrightStatement` і `authors`. Проте вам "
+"рекомендується заповнити якомога більше ключів."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Form Delegates in your settings pages"
-msgstr ""
+msgstr "Делегати форми на наших сторінках параметрів"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Create elegant custom settings pages."
-msgstr ""
+msgstr "Створіть елегантні нетипові сторінки параметрів."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:10
 msgid ""
@@ -249,6 +293,9 @@ msgid ""
 "Now you will be able to use their same inner components to create your "
 "settings pages."
 msgstr ""
+"Ви навчилися додавати сторінки About та AboutKDE до вашої програми. Тепер ви "
+"зможете використовувати їхні внутрішні компоненти для створення сторінок "
+"налаштувань."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:12
 msgid "The project structure should look like this:"
@@ -260,17 +307,21 @@ msgstr "Потрібні зміни"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:28
 msgid "Add a new line to our `resources.qrc`:"
-msgstr ""
+msgstr "Додамо новий рядок до нашого `resources.qrc`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:32
 msgid "And change `main.qml` to include our new Settings page:"
 msgstr ""
+"І внесемо зміни до `main.qml` так, щоб включити до нього нашу нову сторінку "
+"Settings:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:92
 msgid ""
 "We can now start checking out the components used to create our Settings "
 "page: the Form Card and its Delegates."
 msgstr ""
+"Тепер ми можемо розпочати перевірку компонентів, які використовуються для "
+"створення сторінки налаштувань: картки форми та її делегатів."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:94
 msgid "Form Delegates"
@@ -286,6 +337,9 @@ msgid ""
 "classFormCard.html) is the main component we will be using to group all its "
 "child components, the Delegates."
 msgstr ""
+"[FormCard.FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html) є головним компонентом, яким ми користуватимемося для "
+"групування його дочірніх компонентів, делегатів."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:100
 msgid ""
@@ -294,6 +348,10 @@ msgid ""
 "other components while following a color different from the background, in a "
 "similar manner to a [Kirigami.Card](docs:kirigami2;Card)."
 msgstr ""
+"Раніше ми скористалися карткою форми у [вступі до додатків Kirigami]({{< ref "
+"\"addons-introduction\" >}}). Її основним призначенням є робота контейнером "
+"для інших компонентів, маючи колір, який відрізняється від кольору тла, "
+"подібно до [Kirigami.Card](docs:kirigami2;Card)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:102
 msgid "Create a new `contents/ui/SettingsPage.qml` file:"
@@ -302,7 +360,7 @@ msgstr "Створіть файл `contents/ui/SettingsPage.qml`:"
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:110
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:114
 msgid "This is where all our delegates go!"
-msgstr ""
+msgstr "Ось куди ми впишемо усі делегати!"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:119
 msgid ""
@@ -311,6 +369,10 @@ msgid ""
 "FormCardPage`, which inherits [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage)."
 msgstr ""
+"Оскільки ми створюємо окремий файл QML для нашої сторінки налаштувань і "
+"оскільки нам потрібно підготуватися до можливого гортання нашої сторінки, ми "
+"використовуємо `FormCard.FormCardPage`, який успадковує [Kirigami."
+"ScrollablePage](docs:kirigami2;ScrollablePage)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:121
 msgid ""
@@ -318,6 +380,9 @@ msgid ""
 "layout, so no additional ColumnLayout is needed and our delegates can be "
 "added directly to it."
 msgstr ""
+"Приємна особливість сторінки картки форми полягає у тому, що вона має "
+"внутрішній макет, тому додатковий ColumnLayout не потрібен, і наших "
+"делегатів можна додавати безпосередньо до нього."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:123
 msgid ""
@@ -325,6 +390,9 @@ msgid ""
 "delegates directly with a Kirigami.ScrollablePage, but in that case you will "
 "need to add your own layouts. {{< /alert >}}"
 msgstr ""
+"{{< alert color=\"info\" title=\"Зауваження\" >}} Можна використовувати "
+"делегати FormCard безпосередньо за допомогою Kirigami.ScrollablePage, але у "
+"цьому випадку вам доведеться додати ваші власні компонування. {{< /alert >}}"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:127
 msgid "FormHeader"
@@ -338,6 +406,11 @@ msgid ""
 "just before it. The header uses bold text and shows up right above the form "
 "card."
 msgstr ""
+"Для кожної [FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html), яку ви хочете створити, ви можете створити [FormHeader]"
+"(https://api.kde.org /frameworks/kirigami-addons/html/classFormHeader.html) "
+"безпосередньо перед ним. У заголовку використовується напівжирний текст, "
+"який буде показано безпосередньо над карткою форми."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:140
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:148
@@ -357,6 +430,8 @@ msgid ""
 "`FormSectionText` simply adds a thin delegate containing a label. "
 "`FormTextDelegate` has text and a grayed out description."
 msgstr ""
+"`FormSectionText` просто додає тонкий делегат, що містить мітку. "
+"`FormTextDelegate` містить текст і показаний сірим опис."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:193
 msgid ""
@@ -366,6 +441,12 @@ msgid ""
 "KDE/neochat/blob/master/src/colorschemer.cpp)), making use of a C++ model "
 "with [KColorSchemeManager](docs:kconfigwidgets;KColorSchemeManager)."
 msgstr ""
+"Ми додаємо деякий фіктивний текст для виявлення гіпотетичної теми. Якби ми "
+"хотіли мати фактичне визначення схеми кольорів, у майбутньому це можна було "
+"б зробити подібно до [Neochat](https://apps.kde.org/neochat) ([код тут]"
+"(https://github.com/KDE/neochat/blob/master/src/colorschemer.cpp)), "
+"використовуючи модель C++ із [KColorSchemeManager](docs:kconfigwidgets;"
+"KColorSchemeManager)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:195
 msgid ""
@@ -374,6 +455,11 @@ msgid ""
 "text. Its opposite property, `trailing`, would be able to show an Item after "
 "the text, but we won't use it in our program."
 msgstr ""
+"У розділі «Облікові записи в інтернеті» ми бачимо додаткову властивість "
+"`leading`. Ми можемо додати до нього [Item](docs:qtquick;Item), щоб він "
+"з'являвся перед текстом. Його протилежна властивість, `trailing`, надає "
+"можливість показувати елемент після тексту, але ми не будемо використовувати "
+"його у нашій програмі."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:197
 msgid ""
@@ -383,6 +469,11 @@ msgid ""
 "(https://invent.kde.org/network/neochat/-/blob/master/src/qml/Settings/"
 "AccountsPage.qml)."
 msgstr ""
+"Ми використовуємо тут [Kirigami.Icon](docs:kirigami2;Icon) для простоти, але "
+"це також можна реалізувати за допомогою [Kirigami.Avatar](docs:kirigami2;"
+"Avatar), який збирає інформацію з моделі, як це робиться у Neochat [тут]"
+"(https://invent.kde.org/network/neochat/-/blob/master/src/qml/Settings/"
+"AccountsPage.qml)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:199
 msgid "It should end up looking like this:"
@@ -399,6 +490,11 @@ msgid ""
 "it is clickable and shows an arrow pointing to the right. We used it in the "
 "[Kirigami Addons introduction]({{< ref \"addons-introduction\" >}}) before."
 msgstr ""
+"[FormButtonDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormButtonDelegate.html) візуально схожий на FormTextDelegate, але його "
+"можна натиснути, і на ньому показано стрілку, що вказує праворуч. Раніше ми "
+"використовували його у [вступі до додатків Kirigami]({{< ref \"addons-"
+"introduction\" >}})."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:207
 msgid ""
@@ -406,6 +502,9 @@ msgid ""
 "show an item before and after the main content, the FormButtonDelegate only "
 "has the `leading` property, because the right side is occupied by the arrow."
 msgstr ""
+"У той час як FormTextDelegate мав властивості `leading` і `trailing` для "
+"показу елемента до та після основного вмісту, FormButtonDelegate має лише "
+"властивість `leading`, оскільки права сторона зайнята стрілкою."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:248
 msgid ""
@@ -413,6 +512,10 @@ msgid ""
 "space where the `leading` would appear, and before the main content. This is "
 "a common pattern to indicate your button will add something to a list."
 msgstr ""
+"Ми використовуємо його властивість `icon.name`, щоб установити піктограму "
+"плюса (+), яка з'являється після місця, де з'являтиметься `leading`, і перед "
+"основним вмістом. Це загальний шаблон, який вказує, що ваша кнопка додасть "
+"щось до списку."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:250
 msgid ""
@@ -422,6 +525,11 @@ msgid ""
 "adds another user to a model, then push the page into view, similarly to "
 "what we did in `main.qml`."
 msgstr ""
+"Оскільки цей приклад наведено для простої ілюстрації, ми не заглиблюємось у "
+"те, що буде зроблено після натискання кнопки: він просто друкує \"Clicked!\" "
+"до терміналу. Ми _можемо_ створити нову сторінку для створення облікового "
+"запису, яка додає іншого користувача до моделі, а потім розмістимо сторінку "
+"в полі зору, подібно до того, що ми зробили в `main.qml`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:254
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
@@ -436,6 +544,12 @@ msgid ""
 "html/classFormCheckDelegate.html) and [FormSwitchDelegate](https://api.kde."
 "org/frameworks/kirigami-addons/html/classFormSwitchDelegate.html)."
 msgstr ""
+"RadioButton, CheckBox і Switch є дуже поширеними компонентами для будь-якого "
+"інтерфейсу користувача. Додатки Kirigami надають їх як [FormRadioDelegate]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/classFormRadioDelegate."
+"html), [FormCheckDelegate](https://api.kde.org/frameworks/kirigami-addons/"
+"html/classFormCheckDelegate.html) і [FormSwitchDelegate](https://api.kde.org/"
+"frameworks/kirigami-addons/html/classFormSwitchDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:258
 msgid ""
@@ -445,6 +559,11 @@ msgid ""
 "and handlers: checked and onChecked, toggled and onToggled, clicked and "
 "onClicked."
 msgstr ""
+"Їх єдиними основними властивостями є `text` і `description`. Вони "
+"відрізняються у використанні, тому що всі вони успадковують [AbstractButton]"
+"(docs:qtquickcontrols;QtQuick.Controls.AbstractButton), і тому ви повинні "
+"використовувати його сигнали та обробники: checked і onChecked, toggled і "
+"onToggled, clicked і onClicked."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:260
 msgid ""
@@ -457,12 +576,22 @@ msgid ""
 "classFormSwitchDelegate.html) and a [FormRadioDelegate](https://api.kde.org/"
 "frameworks/kirigami-addons/html/classFormRadioDelegate.html)."
 msgstr ""
+"Ми хочемо створити деякі функції автозбереження у нашій програмі, і ми "
+"хочемо показувати її налаштування, лише якщо користувач увімкнув цю функцію. "
+"Створіть новий розділ за допомогою [FormCard](https://api.kde.org/frameworks/"
+"kirigami-addons/html/classFormCard.html) і [FormHeader](https://api.kde.org/"
+"frameworks/ kirigami-addons/html/classFormHeader.html), потім додайте "
+"[FormSwitchDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormSwitchDelegate.html) і [FormRadioDelegate](https:// api.kde.org/"
+"frameworks/kirigami-addons/html/classFormRadioDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:287
 msgid ""
 "We bind the visibility of each radio button to a switch, so they only appear "
 "when the switch is enabled."
 msgstr ""
+"Ми пов'яжемо видимість кожного пункту варіанта із перемикачем, тому їх буде "
+"показано, лише якщо увімкнено перемикач."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:289
 msgid "Best Practices"
@@ -479,6 +608,10 @@ msgid ""
 "visibility of the radio buttons to `true` with a JavaScript assignment such "
 "as:"
 msgstr ""
+"Якщо ви маєте досвід програмування в імперативних мовах, таких як C++, у вас "
+"може виникнути спокуса встановити властивість `checked` перемикача, щоб "
+"змінити видимість пунктів варіантів на `true` за допомогою призначення "
+"JavaScript, наприклад:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:303
 msgid ""
@@ -486,12 +619,17 @@ msgid ""
 "and slots. Try to use QML bindings like in the case of `visible: autosave."
 "checked` as much as possible instead of JavaScript expressions."
 msgstr ""
+"Це не дуже ефективно для декларативної мови QML та її сигналів і слотів. "
+"Намагайтеся якомога більше використовувати прив'язки QML, як у випадку "
+"`visible: autosave.checked` замість виразів JavaScript."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:305
 msgid ""
 "See [this page](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
 "declarative-bindings-over-imperative-assignments) for details."
 msgstr ""
+"Див. [цю сторінку](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
+"declarative-bindings-over-imperative-assignments), щоб дізнатися більше."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:307
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
@@ -504,6 +642,9 @@ msgid ""
 "org/frameworks/kirigami-addons/html/classFormCheckDelegate.html) to our "
 "General section."
 msgstr ""
+"Щоб перевірити наш пункт варіанта, ми можемо додати новий [FormCheckDelegate]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/classFormCheckDelegate."
+"html) до нашого розділу «Загальне»."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:338
 msgid ""
@@ -513,6 +654,11 @@ msgid ""
 "a tray icon using [SystemTrayIcon](https://doc.qt.io/qt-6/qml-qt-labs-"
 "platform-systemtrayicon.html)."
 msgstr ""
+"Тут ми використовуємо `onToggled` [обробник сигналів](https://doc.qt.io/qt-6/"
+"qtqml-syntax-signals.html), щоб показати деякий фіктивний текст для імітації "
+"піктограми у лотку, що з'являється у системі. Якщо ви справді захочете, ви "
+"можете легко додати піктограму у лотку за допомогою [SystemTrayIcon](https://"
+"doc.qt.io/qt-6/qml-qt-labs-platform-systemtrayicon.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:340
 msgid "So far our application should look like this:"
@@ -528,36 +674,50 @@ msgid ""
 "(https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormComboBoxDelegate.html)."
 msgstr ""
+"Типовий компонент ComboBox можна створити за допомогою [FormComboBoxDelegate]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormComboBoxDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:348
 msgid ""
 "This combobox has several useful properties we can make use of: `editable`, "
 "`displayText` and `displayMode`."
 msgstr ""
+"Цей спадний список має декілька корисних властивостей, якими ми можемо "
+"скористатися: `editable`, `displayText` and `displayMode`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:350
 msgid ""
 "Setting `editable: true` allows the user to edit the text of the combobox, "
 "which is useful in case adding new combobox options is needed:"
 msgstr ""
+"Налаштування `editable: true` надає змогу користувачеві редагувати текст "
+"спадного списку, що корисно, якщо потрібно додати нові пункти до спадного "
+"списку:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:354
 msgid ""
 "Whenever you need to show additional text before each option, you can use "
 "something like `displayText: \"Profile: \" + currentText`:"
 msgstr ""
+"Щоразу, коли вам потрібно показати додатковий текст перед кожним пунктом, ви "
+"можете використати щось подібне до `displayText: \"Profile: \" + "
+"currentText`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:358
 msgid ""
 "And the most interesting one, which we will be using in our example, is "
 "`displayMode`. It can have three options:"
 msgstr ""
+"І найцікавішим, який ми будемо використовувати в нашому прикладі, є "
+"`displayMode`. Він може мати три варіанти:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:360
 msgid ""
 "**FormComboBoxDelegate.ComboBox**: the standard small box showing a list of "
 "options."
 msgstr ""
+"**FormComboBoxDelegate.ComboBox**: стандартна мала панель зі списком пунктів."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:364
 msgid ""
@@ -565,18 +725,25 @@ msgid ""
 "middle of the window, like a [Kirigami.OverlaySheet](docs:kirigami2;"
 "OverlaySheet)."
 msgstr ""
+"**FormComboBoxDelegate.Dialog**: діалогове вікно, у якому буде показано "
+"список пунктів посередині вікна, подібне до [Kirigami.OverlaySheet](docs:"
+"kirigami2;OverlaySheet)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:368
 msgid ""
 "**FormComboBoxDelegate.Page**: a new page containing a list of options shown "
 "in a separate window."
 msgstr ""
+"**FormComboBoxDelegate.Page**: нова сторінка, що містить список пунктів, які "
+"показано в окремому вікні."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:372
 msgid ""
 "Add the following between the \"Current Color Scheme\" and \"Show Tray Icon"
 "\" delegates in your \"General\" form card."
 msgstr ""
+"Додайте таке між делегатами \"Current Color Scheme\" і \"Show Tray Icon\" у "
+"картці форми \"General\"."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:385
 msgid "With the checkbox, our Settings page should look like this:"
@@ -591,6 +758,9 @@ msgid ""
 "Our Settings page is taking shape, but each section is starting to get long. "
 "We can add a few FormDelegateSeparators to make our page tidier:"
 msgstr ""
+"Наша сторінка налаштувань набуває форми, але її розділи стають надто "
+"довгими. Ми можемо додати кілька FormDelegateSeparators, щоб зробити нашу "
+"сторінку більш охайною:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:395
 msgid ""
@@ -602,6 +772,13 @@ msgid ""
 "section, adding a separator between the last account and the button provides "
 "some additional focus to the button."
 msgstr ""
+"Як правило, ви можете використовувати роздільники щоразу, коли бачите великі "
+"відмінності між компонентами, хоча вибір місця їх розміщення залишається за "
+"вами. Наприклад, у розділі «Загальні» пункт варіанта відрізняється від "
+"попередніх компонентів тим, що він не починається з тексту; у розділі "
+"автозбереження роздільник об'єднує перемикачі; а в розділі «Облікові записи» "
+"додавання роздільника між останнім обліковим записом і кнопкою забезпечує "
+"додатковий акцент на кнопці."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:397
 msgid ""
@@ -615,12 +792,23 @@ msgid ""
 "once the logic to add new accounts were actually implemented, in which case "
 "we could always grab the last item in the model to do so."
 msgstr ""
+"Властивості `above` і `below` досить зрозумілі, коли йдеться про їхнє "
+"використання: ви передаєте `id` компонентів над і під роздільником. Коли їх "
+"установлено, роздільник швидко зникатиме, при підсвічуванні або наведенні "
+"вказівника миші на пункт вище або нижче. Вони найбільш корисні, наприклад, "
+"коли вам потрібно генерувати компоненти динамічно, а ви не можете "
+"автоматично спрогнозувати, який елемент буде безпосередньо перед "
+"роздільником або після нього. Так було б у розділі «Облікові записи» нашої "
+"програми, де було реалізовано логіку додавання нових облікових записів, коли "
+"ми завжди могли б отримати останній елемент у моделі, щоб зробити це."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:401
 msgid ""
 "Notice how the separator above the tray icon setting does not appear while "
 "it is hovered."
 msgstr ""
+"Зверніть увагу на те, що роздільник над налаштуванням піктограми у лотку не "
+"з'являється, якщо на нього навести вказівник."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Introduction to Kirigami Addons"
@@ -628,13 +816,15 @@ msgstr "Вступ до додатків Kirigami"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Get acquainted with Kirigami Addons components"
-msgstr ""
+msgstr "Знайомимося із компонентами додатків Kirigami"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:10
 msgid ""
 "Here you will be setting up your new Kirigami Addons project and be "
 "introduced to a few useful components."
 msgstr ""
+"Тут ви налаштуєте свій новий проєкт додатків Kirigami і познайомитеся з "
+"кількома корисними компонентами."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:12
 msgid ""
@@ -642,6 +832,9 @@ msgid ""
 "start using these, we will need to set a little project that makes use of "
 "[KLocalizedContext](docs:ki18n;KLocalizedContext)."
 msgstr ""
+"Ці компоненти використовують засоби локалізації KDE, тому перед тим, як ми "
+"почнемо ними користуватися, нам потрібно буде налаштувати невеликий проєкт, "
+"який використовує [KLocalizedContext](docs:ki18n;KLocalizedContext)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:14
 msgid "Setting up your project"
@@ -682,6 +875,10 @@ msgid ""
 "started/kirigami/advanced-add_about_page), much of this will seem familiar "
 "to you."
 msgstr ""
+"Якщо ви вже прочитали наш [підручник з KXmlGui](/docs/getting-started/"
+"kxmlgui) або останній підручник з Kirigami на [сторінці про Kirigami](/docs/"
+"getting-started/kirigami/advanced-add_about_page), ви вже знайомі зі значною "
+"частиною цього розділу."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:61
 msgid ""
@@ -691,6 +888,12 @@ msgid ""
 "KAboutData::setApplicationData) to finish the process. For later, we also "
 "set an application icon that comes from the system theme."
 msgstr ""
+"Ми створюємо нашу програму та використовуємо типовий конструктор [KAboutData]"
+"(docs:kcoreaddons;KAboutData), щоб додати метадані нашої програми, додаємо "
+"себе як автора, а потім використовуємо [setApplicationData()](docs:"
+"kcoreaddons;KAboutData::setApplicationData), щоб завершити процес. Надалі ми "
+"також встановлюємо піктограму програми, яка походить із загальносистемної "
+"теми."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:63
 msgid ""
@@ -709,12 +912,18 @@ msgid ""
 "used to integrate translated strings, passing the just created engine as a "
 "parameter."
 msgstr ""
+"Потім ми створюємо екземпляр нашого рушія QML і встановлюємо його [контекст]"
+"(docs:qtqml;QQmlContext) на використання [KLocalizedContext](docs:ki18n;"
+"KLocalizedContext) KDE, який використовується для інтеграції перекладених "
+"рядків, передаючи щойно створений рушій як параметр."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:67
 msgid ""
 "We simply load our QML file from the resource file, and now we just need to "
 "take care of our initial QML file."
 msgstr ""
+"Ми просто завантажуємо наш файл QML із файла ресурсів, і тепер нам потрібно "
+"лише подбати про наш початковий файл QML."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:69
 msgid "FormCard and FormButtonDelegate"
@@ -727,6 +936,11 @@ msgid ""
 "simple list of buttons in a [ColumnLayout](https://doc.qt.io/qt-6/qml-"
 "qtquick-layouts-columnlayout.html), each opening a separate page."
 msgstr ""
+"Ідея нашого додатка полягає в тому, щоб розробити власну галерею додатків "
+"Kirigami, демонструючи кілька компонентів, по одному на сторінку. Головна "
+"сторінка міститиме простий список кнопок у [ColumnLayout](https://doc.qt.io/"
+"qt-6/qml-qtquick-layouts-columnlayout.html), кожна з яких відкриватиме "
+"окрему сторінку."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:73
 msgid "Initially, our `contents/ui/main.qml` should look like this:"
@@ -738,6 +952,9 @@ msgid ""
 "pagerow_pagestack) to set the initial page to a [Kirigami.ScrollablePage]"
 "(docs:kirigami2;ScrollablePage)."
 msgstr ""
+"Ми скористаємося нашим зручним [pageStack](/docs/getting-started/kirigami/"
+"components-pagerow_pagestack) для встановлення для початкової сторінки "
+"варіанта [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:79
 msgid ""
@@ -746,6 +963,10 @@ msgid ""
 "our goal, here you will be introduced to [FormCard](https://api.kde.org/"
 "frameworks/kirigami-addons/html/classFormCard.html)."
 msgstr ""
+"Хоча ми могли б використовувати [FormLayout]({{< ref \"components-formlayouts"
+"\" >}}) разом із [компонентами QtQuick Controls](components-controls) для "
+"досягнення нашої мети, тут ви познайомитеся з [FormCard](https://api.kde.org/"
+"frameworks/kirigami-addons/html/classFormCard.html)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:81
 msgid ""
@@ -756,18 +977,27 @@ msgid ""
 "different sections. Your FormCard is also expected to be a direct child of a "
 "ColumnLayout."
 msgstr ""
+"Основне призначення FormCard — слугувати контейнером для інших компонентів, "
+"використовуючи колір, відмінний від фону, подібно до [Kirigami.Card](docs:"
+"kirigami2;Card), але для вікон налаштувань. Ви можете мати кілька FormCards "
+"у своїй програмі для позначення різних розділів. Очікується, що ваша "
+"FormCard буде прямою дочірньою формою ColumnLayout."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:83
 msgid ""
 "Importing `org.kde.kirigamiaddons.formcard` makes all FormCard components "
 "available to your QML file."
 msgstr ""
+"Імпортування `org.kde.kirigamiaddons.formcard` робить доступними для вашого "
+"файла QML усі компоненти FormCard."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:85
 msgid ""
 "We will have only a single section in our main page, so we add a single "
 "FormCard:"
 msgstr ""
+"У нас буде лише один розділ на нашій головній сторінці, тому ми додамо одну "
+"FormCard:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:89
 msgid ""
@@ -779,20 +1009,29 @@ msgid ""
 "html) or [positioners](https://doc.qt.io/qt-6/qtquick-positioning-layouts."
 "html)."
 msgstr ""
+"Чудова особливість FormCard полягає в тому, що вона виконує автоматичне "
+"компонування за вас. Іншими словами, лише порядку його компонентів "
+"достатньо, щоб вказати їхнє розташування всередині FormCard — не потрібно "
+"ніяких [прикріплених властивостей компонування](https://doc.qt.io/qt-6/qml-"
+"qtquick-layouts-layout.html), і немає потреби у використанні [прив'язок]"
+"(https://doc.qt.io/qt-6/qtquick-positioning-anchors.html) або [позиціонерів]"
+"(https://doc.qt.io /qt-6/qtquick-positioning-layouts.html)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:91
 msgid "We can simply add a few buttons inside our FormCard:"
-msgstr ""
+msgstr "Ми можемо просто додати декілька кнопок всередину нашого FormCard:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:95
 msgid ""
 "That's it! The buttons are not usable just yet, but we are now set up to "
 "play with our About pages!"
 msgstr ""
+"Ось і все! Кнопками ще не можна скористатися, але ми налаштували усе для "
+"користування нашими сторінками «Про програму»!"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:97
 msgid "We then build and run it like so:"
-msgstr ""
+msgstr "Тепер можна зібрати і запустити усе ось так:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:106
 msgid ""
@@ -800,6 +1039,9 @@ msgid ""
 "the [Getting Started with Kirigami]({{< ref \"introduction-"
 "getting_started#build\" >}}) page."
 msgstr ""
+"Щоб ознайомитися із іншими способами зібрати нашу програму (наприклад, у "
+"Windows), прочитайте сторінку [Вступ до Kirigami]({{< ref \"introduction-"
+"getting_started#build\" >}})."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "Informations about your application"
@@ -7116,7 +7358,7 @@ msgid ""
 "easier you can create different QML files, one for each page."
 msgstr ""
 "Програми Kirigami типово поділено на [сторінки](docs:kirigami2;Page). "
-"Сторінки є різними ‘екранами’ програми. Вам знадобляться сторінки, кожну з "
+"Сторінки є різними ‘екранами' програми. Вам знадобляться сторінки, кожну з "
 "яких присвячено певним аспектам взаємодії із вашою програмою, і, щоб "
 "полегшити справу, ви можете створити різні файли QML, кожен з яких міститиме "
 "код для окремої сторінки."

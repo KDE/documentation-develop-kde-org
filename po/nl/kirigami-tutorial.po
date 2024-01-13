@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-10 00:35+0000\n"
-"PO-Revision-Date: 2024-01-10 11:16+0100\n"
+"PO-Revision-Date: 2024-01-12 10:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -152,6 +152,9 @@ msgid ""
 "That's it really! All it takes is instantiating `FormCard.AboutKDE`. You "
 "should see something like this after clicking the AboutKDE button:"
 msgstr ""
+"Dat is het helemaal! Al wat er gedaan moet worden is een exemplaar maken van "
+"`FormCard.AboutKDE`. U zou iets moeten zien als dit na klikken op de knop "
+"AboutKDE:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:22
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
@@ -164,10 +167,15 @@ msgid ""
 "simple to use. We will be adding a new QML file that will contain the "
 "information needed for our about page. First in our `resources.qrc` file:"
 msgstr ""
+"De AboutPage van de toepassing is iets complexer, maar het is nog steeds erg "
+"eenvoudig te gebruiken. We zullen een nieuwe QML-bestand toevoegen die de "
+"informatie zal bevatten nodig voor onze pagina over. Eerst in ons bestand "
+"`resources.qrc`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:35
 msgid "And our `contents/ui/MyAboutPage.qml` should have the following:"
 msgstr ""
+"En onze `contents/ui/MyAboutPage.qml` zou het volgende moeten bevatten:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:39
 msgid ""
@@ -175,14 +183,17 @@ msgid ""
 "KAboutData) in our `main.cpp`. Here's a brief reminder of what is in `main."
 "cpp`:"
 msgstr ""
+"Hier gebruiken we de informatie die we hebben ingesteld met [KAboutData]"
+"(docs:kcoreaddons;KAboutData) in onze `main.cpp`. Hier is een beknopte "
+"herinnering aan wat in `main.cpp` is:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:43
 msgid "<========== used in the import"
-msgstr ""
+msgstr "<========== gebruikt in het importeren"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:44
 msgid "<========== C++ object exported as a QML type"
-msgstr ""
+msgstr "<========== C++ object geëxporteerd als een QML-type"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:51
 msgid ""
@@ -192,10 +203,15 @@ msgid ""
 "applicationData()](docs:kcoreaddons;KAboutData::applicationData), and that "
 "is what we pass to the `aboutData` property."
 msgstr ""
+"Het object `About` dat we exporteerden naar de QML-kant met "
+"[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+"qmlRegisterSingletonType) bevat de gegevens uit [KAboutData::"
+"applicationData()](docs:kcoreaddons;KAboutData::applicationData) en dat is "
+"wat we doorgeven aan de eigenschap `aboutData`."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:53
 msgid "Lastly, we add our new MyAboutPage to our `main.qml`:"
-msgstr ""
+msgstr "Tenslotte voegen we onze nieuwe MyAboutPage toe aan onze `main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:57
 msgid "The About page of our application should look like this:"
@@ -204,7 +220,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:61
 msgid "Using JSON instead of KAboutData"
-msgstr ""
+msgstr "JSON gebruiken in plaats van KAboutData"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:63
 msgid ""
@@ -212,6 +228,9 @@ msgid ""
 "embedded in `main.qml`, that is because it allows to set a custom model for "
 "the `aboutData` property."
 msgstr ""
+"Als u zich afvraagt waarom de pagina About apart is gehouden in plaats van "
+"ingebed in `main.qml`, dan is dat omdat het biedt het instellen van een "
+"aangepast model voor de eigenschap `aboutData`."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:65
 msgid ""
@@ -221,10 +240,15 @@ msgid ""
 "QApplication::setWindowIcon) in your `main.cpp` in order for your "
 "application icon to show up."
 msgstr ""
+"In plaats van dat uw pagina about informatie krijgt uit [KAboutData](docs:"
+"kcoreaddons;KAboutData), is het mogelijk om een JSON-object direct door te "
+"geven. U zult nog steeds [QApplication::setWindowIcon()](docs:qtwidgets;"
+"QApplication::setWindowIcon) in uw `main.cpp` moeten gebruiken om in uw "
+"toepassing het pictogram te laten tonen."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:67
 msgid "Change your `MyAboutPage.json` to something like this:"
-msgstr ""
+msgstr "Wijzig uw `MyAboutPage.json` in zoiets als dit:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:71
 msgid ""
@@ -236,6 +260,14 @@ msgid ""
 "`name`, `text` and `spdx` for each license added, as it is not uncommon for "
 "the same project to include multiple licenses."
 msgstr ""
+"Het hoofd JSON-object hier bevat de sleutels `displayName`, `productName`, "
+"`homepage` enzovoort. De sleutels `authors`, `credits`, `translators` en "
+"`licenses` kunnen elk doorgeven worden als een array van objecten. De "
+"doorgeven objecten aan `authors`, `credits` en `translators` delen dezelfde "
+"sleutels zodat ze getoond kunnen worden elk in hun eigen sectie, terwijl "
+"`licenses` de sleutels `name`, `text` en `spdx` voor elke toegevoegde "
+"licentie bevat, omdat het niet ongewoon is voor hetzelfde project om "
+"meerdere licenties te bevatten."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:73
 msgid ""
@@ -244,10 +276,15 @@ msgid ""
 "`description`, `homepage`, `copyrightStatement` and `authors`. You are "
 "encouraged to fill as many key as possible, however."
 msgstr ""
+"Deze sleutels zijn optioneel, maar een redelijke minimale hoeveelheid "
+"sleutels wordt verwacht om te zorgen dat uw toepassing geen lege velden "
+"heeft: `displayName`, `version`, `description`, `homepage`, "
+"`copyrightStatement` en `authors`. U wordt echter aangemoedigd om zoveel "
+"sleutels als mogelijk in te vullen."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Form Delegates in your settings pages"
-msgstr ""
+msgstr "Formulier Gedelegeerden in uw instellingen pagina's"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Create elegant custom settings pages."
