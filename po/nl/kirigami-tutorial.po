@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-10 00:35+0000\n"
-"PO-Revision-Date: 2024-01-12 10:48+0100\n"
+"PO-Revision-Date: 2024-01-13 14:58+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -288,7 +288,7 @@ msgstr "Formulier Gedelegeerden in uw instellingen pagina's"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Create elegant custom settings pages."
-msgstr ""
+msgstr "Elegante aangepaste instellingenpagina's aanmaken."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:10
 msgid ""
@@ -296,6 +296,9 @@ msgid ""
 "Now you will be able to use their same inner components to create your "
 "settings pages."
 msgstr ""
+"U hebt geleerd hoe de pagina's About en AboutKDE toe te voegen aan uw "
+"toepassing. Nu zult u in staat zijn om hun zelfde innerlijke componenten te "
+"gebruiken om uw instellingenpagina's aan te maken."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:12
 msgid "The project structure should look like this:"
@@ -303,21 +306,24 @@ msgstr "De projectstructuur zou er als volgt uit moeten zien:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:26
 msgid "Needed Changes"
-msgstr ""
+msgstr "Benodigde wijzigingen"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:28
 msgid "Add a new line to our `resources.qrc`:"
-msgstr ""
+msgstr "Voeg een nieuwe regel toe aan uw `resources.qrc`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:32
 msgid "And change `main.qml` to include our new Settings page:"
-msgstr ""
+msgstr "En wijzig `main.qml` om onze nieuwe pagina Instellingen in te voegen:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:92
 msgid ""
 "We can now start checking out the components used to create our Settings "
 "page: the Form Card and its Delegates."
 msgstr ""
+"We kunnen nu beginnen met de checkout van de componenten gebruikt om onze "
+"pagina Instellingenpage aan te maken: het formulier Card en zijn "
+"Gedelegeerden."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:94
 msgid "Form Delegates"
@@ -325,7 +331,7 @@ msgstr "Formulier over gedelegeerden"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:96
 msgid "FormCard and FormCardPage"
-msgstr ""
+msgstr "FormCard en FormCardPage"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:98
 msgid ""
@@ -333,6 +339,9 @@ msgid ""
 "classFormCard.html) is the main component we will be using to group all its "
 "child components, the Delegates."
 msgstr ""
+"[FormCard.FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html) is de hoofdcomponent die we zullen gebruiken om alle "
+"zijn dochtercomponenten, de Gedelegeerden, te groeperen."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:100
 msgid ""
@@ -341,15 +350,20 @@ msgid ""
 "other components while following a color different from the background, in a "
 "similar manner to a [Kirigami.Card](docs:kirigami2;Card)."
 msgstr ""
+"We gebruikten eerder een formulier-card in de [Kirigami Addons introductie]"
+"({{< ref \"addons-introduction\" >}}). Zijn hoofddoel is te dienen als een "
+"container voor andere componenten tijdens het volgen van een kleurverschil "
+"met de achtergrond, op een vergelijkbare manier met een [Kirigami.Card](docs:"
+"kirigami2;Card)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:102
 msgid "Create a new `contents/ui/SettingsPage.qml` file:"
-msgstr ""
+msgstr "Maak een nieuw bestand `contents/ui/SettingsPage.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:110
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:114
 msgid "This is where all our delegates go!"
-msgstr ""
+msgstr "Dit is waar alle gedelegeerden naartoe gaan!"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:119
 msgid ""
@@ -358,6 +372,10 @@ msgid ""
 "FormCardPage`, which inherits [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage)."
 msgstr ""
+"Omdat we een apart QML-bestand gaan maken voor onze pagina Instellingen en "
+"omdat we voor potentieel schuiven in onze pagina ons willen voorbereiden, "
+"gebruiken we een `FormCard.FormCardPage`, die [Kirigami.ScrollablePage](docs:"
+"kirigami2;ScrollablePage) erft."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:121
 msgid ""
@@ -365,6 +383,9 @@ msgid ""
 "layout, so no additional ColumnLayout is needed and our delegates can be "
 "added directly to it."
 msgstr ""
+"Het mooie van de pagina form-card is dat het komt met een interne indeling, "
+"dus is geen extra ColumnLayout nodig en onze gedelegeerden kunnen direct "
+"eraan worden toegevoegd."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:123
 msgid ""
@@ -372,6 +393,9 @@ msgid ""
 "delegates directly with a Kirigami.ScrollablePage, but in that case you will "
 "need to add your own layouts. {{< /alert >}}"
 msgstr ""
+"{{< alert color=\"info\" title=\"Note\" >}} Het is mogelijk FormCard "
+"gedelegeerden direct te gebruiken met een Kirigami.ScrollablePage, maar in "
+"dat geval moet u uw eigen indelingen toevoegen. {{< /alert >}}"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:127
 msgid "FormHeader"
@@ -389,7 +413,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:140
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:148
 msgid "Our delegates go here..."
-msgstr ""
+msgstr "Onze gedelegeerden gaan hier..."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:153
 msgid "FormTextDelegate and FormSectionText"
