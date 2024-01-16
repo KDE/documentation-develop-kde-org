@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-10 00:35+0000\n"
-"PO-Revision-Date: 2024-01-13 14:58+0100\n"
+"PO-Revision-Date: 2024-01-15 10:38+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -409,6 +409,10 @@ msgid ""
 "just before it. The header uses bold text and shows up right above the form "
 "card."
 msgstr ""
+"Voor elke [FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html) die u wilt aanmaken kunt u een [FormHeader](https://api."
+"kde.org/frameworks/kirigami-addons/html/classFormHeader.html) ervoor "
+"aanmaken. De kop gebruikt vette tekst en toont omhoog bovenaan de formcard."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:140
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:148
@@ -417,17 +421,19 @@ msgstr "Onze gedelegeerden gaan hier..."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:153
 msgid "FormTextDelegate and FormSectionText"
-msgstr ""
+msgstr "FormTextDelegate en FormSectionText"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:155
 msgid "Let's start simple, with plain text."
-msgstr ""
+msgstr "Laten we eenvoudig beginnen met platte tekst."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:157
 msgid ""
 "`FormSectionText` simply adds a thin delegate containing a label. "
 "`FormTextDelegate` has text and a grayed out description."
 msgstr ""
+"`FormSectionText` voegt eenvoudig een dunne gedelegeerde toe die een label "
+"bevat. `FormTextDelegate` heeft tekst en een grijs gemaakte beschrijving."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:193
 msgid ""
@@ -437,6 +443,12 @@ msgid ""
 "KDE/neochat/blob/master/src/colorschemer.cpp)), making use of a C++ model "
 "with [KColorSchemeManager](docs:kconfigwidgets;KColorSchemeManager)."
 msgstr ""
+"We voegen enige dummy tekst toe voor de hypothetische detectie van het "
+"thema. Als we echt detectie van het kleurschema willen hebben, kan dat in de "
+"toekomst op dezelfde manier gedaan worden aan [Neochat](https://apps.kde.org/"
+"neochat) ([code hier](https://github.com/KDE/neochat/blob/master/src/"
+"colorschemer.cpp)), gebruik makend van een C++ model met "
+"[KColorSchemeManager](docs:kconfigwidgets;KColorSchemeManager)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:195
 msgid ""
@@ -445,6 +457,11 @@ msgid ""
 "text. Its opposite property, `trailing`, would be able to show an Item after "
 "the text, but we won't use it in our program."
 msgstr ""
+"In de sectie Online accounts zien we een extra eigenschap, `leading`. We "
+"kunnen een [Item](docs:qtquick;Item) er aan toevoegen zodat het verschijnt "
+"voor de tekst. Zijn tegengestelde eigenschap, `trailing`, zou in staat zijn "
+"een Item achter de tekst te tonen, maar we zullen dat niet in ons programma "
+"gebruiken."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:197
 msgid ""
@@ -454,6 +471,11 @@ msgid ""
 "(https://invent.kde.org/network/neochat/-/blob/master/src/qml/Settings/"
 "AccountsPage.qml)."
 msgstr ""
+"We gebruiken hier eenvoudig een [Kirigami.Icon](docs:kirigami2;Icon), maar "
+"dit zou ook geïmplementeerd kunnen worden met een [Kirigami.Avatar](docs:"
+"kirigami2;Avatar) die de informatie pakt uit een model, zoals gedaan is in "
+"Neochat [hier](https://invent.kde.org/network/neochat/-/blob/master/src/qml/"
+"Settings/AccountsPage.qml)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:199
 msgid "It should end up looking like this:"
@@ -470,6 +492,11 @@ msgid ""
 "it is clickable and shows an arrow pointing to the right. We used it in the "
 "[Kirigami Addons introduction]({{< ref \"addons-introduction\" >}}) before."
 msgstr ""
+"De [FormButtonDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormButtonDelegate.html) is visueel gelijk aan een FormTextDelegate, "
+"maar er is op  te klikken en toont een pijl wijzend naar rechts. We "
+"gebruikten het eerder in de [Kirigami Addons introduction]({{< ref \"addons-"
+"introduction\" >}})."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:207
 msgid ""
@@ -477,6 +504,10 @@ msgid ""
 "show an item before and after the main content, the FormButtonDelegate only "
 "has the `leading` property, because the right side is occupied by the arrow."
 msgstr ""
+"Terwijl de FormTextDelegate de eigenschappen `leading` en `trailing` hadden "
+"om een item voor en na de hoofdinhoud te tonen, zo heeft de "
+"FormButtonDelegate slechts de eigenschap `leading`, omdat de rechterkant "
+"bezet is door de pijl."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:248
 msgid ""
@@ -484,6 +515,10 @@ msgid ""
 "space where the `leading` would appear, and before the main content. This is "
 "a common pattern to indicate your button will add something to a list."
 msgstr ""
+"We gebruiken zijn eigenschap `icon.name` om een pluspictogram (+) te laten "
+"verschijnen na de ruimte waar de `leading` zou verschijnen en voor de "
+"hoofdinhoud. Dit is een algemeen patroon om aan te geven dat uw knop iets "
+"aan een lijst wil toevoegen."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:250
 msgid ""
