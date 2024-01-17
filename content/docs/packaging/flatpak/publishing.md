@@ -1,5 +1,5 @@
 ---
-title: Your app on kdeapps
+title: Nightly flatpaks and Flathub
 description: How and where to publish your manifests
 weight: 3
 aliases:
