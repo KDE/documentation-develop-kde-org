@@ -97,7 +97,7 @@ We can now start checking out the components used to create our Settings page: t
 
 [FormCard.FormCard](https://api.kde.org/frameworks/kirigami-addons/html/classFormCard.html) is the main component we will be using to group all its child components, the Delegates.
 
-We used a form card in the [Kirigami Addons introduction]({{< ref "addons-introduction" >}}) before. Its main purpose is to serve as a container for other components while following a color different from the background, in a similar manner to a [Kirigami.Card](docs:kirigami2;Card).
+We used a form card in the [Kirigami Addons introduction](/docs/getting-started/kirigami/addons-introduction) before. Its main purpose is to serve as a container for other components while following a color different from the background, in a similar manner to a [Kirigami.Card](docs:kirigami2;Card).
 
 Create a new `contents/ui/SettingsPage.qml` file:
 
@@ -202,7 +202,7 @@ It should end up looking like this:
 
 ### FormButtonDelegate
 
-The [FormButtonDelegate](https://api.kde.org/frameworks/kirigami-addons/html/classFormButtonDelegate.html) is visually similar to a FormTextDelegate, but it is clickable and shows an arrow pointing to the right. We used it in the [Kirigami Addons introduction]({{< ref "addons-introduction" >}}) before.
+The [FormButtonDelegate](https://api.kde.org/frameworks/kirigami-addons/html/classFormButtonDelegate.html) is visually similar to a FormTextDelegate, but it is clickable and shows an arrow pointing to the right. We used it in the [Kirigami Addons introduction](/docs/getting-started/kirigami/addons-introduction) before.
 
 While the FormTextDelegate had the `leading` and `trailing` properties to show an item before and after the main content, the FormButtonDelegate only has the `leading` property, because the right side is occupied by the arrow.
 
