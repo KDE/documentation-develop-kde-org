@@ -36,4 +36,4 @@ Guidelines
 
 ### Behavior and Appearance
 
-Follow the same guidelines for [menu bars]({{< relref "menubar" >}}) except for disabled menu items. Context menus should contain items relevant for their context, if it's not relevant then it shouldn't appear in the menu at all.
+See the guidelines for [menu bars]({{< relref "menubar" >}}).
