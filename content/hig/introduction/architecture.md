@@ -117,8 +117,8 @@ look-and-feel of KDE applications and the Plasma workspace.
 The default for all three is the *Breeze* theme.
 
 {{< alert title="Note" color="info" >}}
-Only *Breeze*, *Breeze dark*, *Breeze Light*, *Breeze Highcontrast* are
-covered by the HIG, all other themes are not covered.
+Only *Breeze* is
+covered by the HIG, other 3rd-party themes are not covered.
 {{< /alert >}}
 
 ![Overview of breeze controls](/hig/breeze.jpeg)
