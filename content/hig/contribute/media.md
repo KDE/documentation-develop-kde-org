@@ -1,6 +1,7 @@
 ---
 title: Generate media
-weight: 11
+aliases:
+- /hig/media
 ---
 
 Most media files used in the HIG are generated from QML files.
