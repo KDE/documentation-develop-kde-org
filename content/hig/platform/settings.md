@@ -87,7 +87,7 @@ set the focus to focused controls and don't just highlight it.
 -   Place the main title at the top left corner of the window or view
     your form is placed in.
 
--   For a desktop app, put your settings page inside a dialog window.
+-   For a desktop app, put your settings page inside a dialog window. On mobile, use a full-screen view for your settings page.
 
 -   Place Help, Defaults, Reset, OK, Apply, and Cancel buttons on the
     bottom of the dialog window.
@@ -103,7 +103,6 @@ set the focus to focused controls and don't just highlight it.
     rather than making the dialog window larger. This does
     not apply to scrollbars within inline tables, lists and grid views.
 
--   On mobile, use a full-screen view for your settings page.
 
 **There are several well established layouts for settings that are used
 throughout KDE software:**
