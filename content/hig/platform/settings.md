@@ -133,8 +133,7 @@ your settings have many controls and input fields.
 
 Use a [grid]({{< relref "/hig/components/editing/grid" >}})
 for a selection of a single item when all items are visually
-distinctive. To implement a grid in a KCM, use the
-[KCMGrid]({{< relref "kcmgrid" >}}).
+distinctive.
 
 #### Lists
 

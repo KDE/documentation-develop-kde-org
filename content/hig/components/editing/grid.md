@@ -77,11 +77,6 @@ re-ordering via drag-and-drop.
 See [cards]({{< relref "card" >}}) for more information on
 how to use cards in a grid view.
 
-#### KCM
-
-Use the [KCMGrid]({{< relref "kcmgrid" >}}) for
-grids in KCMs.
-
 Code
 ----
 
