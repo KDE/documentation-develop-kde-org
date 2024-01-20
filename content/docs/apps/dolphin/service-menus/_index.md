@@ -15,11 +15,11 @@ In KDE-speak a "servicemenu" is a special entry that appears in a context menu (
 
 For example, if you have the KDE file archive utility Ark installed you will see a menu entry to "Extract here..." whenever you right-click on a file archive. The option to "Extract here..." is a servicemenu.
 
-Creating new servicemenus is very simple, requiring nothing more than an idea and a text editor. You don't have to be a programmer or a KDE wizard to make them. In this tutorial, we will be creating a set of actions that allows us to set an image as our desktop wallpaper just by right-clicking on it and selecting "Use As Wallpaper". By the end of this tutorial, you should be able to create your own servicemenus with ease.
+Creating new servicemenus doesn't require to be a programmer or a KDE wizard to make them. In this tutorial, we will be creating a set of actions that allows us to set an image as our desktop wallpaper just by right-clicking on it and selecting "Use As Wallpaper". By the end of this tutorial, you should be able to create your own servicemenus with ease.
 
 ## Where the Servicemenus are Located
 
-Servicemenus are defined using .desktop files, which are the same kind of files that are used to create entries in the Plasma launcher. These servicemenu files are found in the `kio/servicemenus` directory in the generic data locations. The following command prints the path used to find this directory. Multiple directories in this path are separated by a `:`. To find the servicemenus at run time, the directories are searched in the order in which they appear in the path.
+Servicemenus are defined using files with the extension `.desktop`, which are the same kind of files that are used to create entries in the Plasma launcher. These servicemenu files are found in the `kio/servicemenus` directory in the generic data locations. The following command prints the path used to find this directory. Multiple directories in this path are separated by a `:`. To find the servicemenus at run time, the directories are searched in the order in which they appear in the path.
 
 ```bash
 qtpaths --locate-dirs GenericDataLocation kio/servicemenus
