@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 01:35+0000\n"
-"PO-Revision-Date: 2024-01-19 11:20+0100\n"
+"PO-Revision-Date: 2024-01-24 11:13+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -530,10 +530,15 @@ msgid ""
 "adds another user to a model, then push the page into view, similarly to "
 "what we did in `main.qml`."
 msgstr ""
+"Omdat dit voorbeeld een eenvoudig illustratief doel heeft, gaan we niet "
+"dieper in wat zou gedaan worden nadat op de knop is geklikt: het print "
+"eenvoudig \"Geklikt!\" op de terminal. We _zouden_ een nieuwe pagina kunnen "
+"maken voor aanmaken van een account die een andere gebruiker toevoegt aan "
+"een model, daarna de pagina laat zien, gelijk aan wat we deden in `main.qml`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:254
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
-msgstr ""
+msgstr "FormRadioDelegate, FormCheckDelegate en FormSwitchDelegate"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:256
 msgid ""
@@ -544,6 +549,12 @@ msgid ""
 "html/classFormCheckDelegate.html) and [FormSwitchDelegate](https://api.kde."
 "org/frameworks/kirigami-addons/html/classFormSwitchDelegate.html)."
 msgstr ""
+"De RadioButton, CheckBox en Switch zijn erg gebruikelijke componenten in "
+"elke gebruikersinterface. Kirigami Addons levert ze als [FormRadioDelegate]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/classFormRadioDelegate."
+"html), [FormCheckDelegate](https://api.kde.org/frameworks/kirigami-addons/"
+"html/classFormCheckDelegate.html) en [FormSwitchDelegate](https://api.kde."
+"org/frameworks/kirigami-addons/html/classFormSwitchDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:258
 msgid ""
@@ -553,6 +564,11 @@ msgid ""
 "and handlers: checked and onChecked, toggled and onToggled, clicked and "
 "onClicked."
 msgstr ""
+"Hun enige hoofdeigenschappen zijn `tekst` en `beschrijving`. Ze zijn anders "
+"in gebruik omdat ze allemaal [AbstractButton](docs:qtquickcontrols;QtQuick."
+"Controls.AbstractButton)erven en dus van u wordt verwacht hun signalen en "
+"hendels te gebruiken: geactiveerd en niet-geactiveerd, omgeschakeld en niet-"
+"omgeschakeld, geklikt en niet-geklikt."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:260
 msgid ""
@@ -565,16 +581,27 @@ msgid ""
 "classFormSwitchDelegate.html) and a [FormRadioDelegate](https://api.kde.org/"
 "frameworks/kirigami-addons/html/classFormRadioDelegate.html)."
 msgstr ""
+"We willen enige auto-opslag functionaliteit in uw toepassing aanmaken en we "
+"willen alleen zijn instellingen tonen als de gebruiker deze functionaliteit "
+"heeft ingeschakeld. Maak een nieuwe sectie aan met een [FormCard](https://"
+"api.kde.org/frameworks/kirigami-addons/html/classFormCard.html) en een "
+"[FormHeader](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormHeader.html), voeg daarna een [FormSwitchDelegate](https://api.kde."
+"org/frameworks/kirigami-addons/html/classFormSwitchDelegate.html) toe en een "
+"[FormRadioDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormRadioDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:287
 msgid ""
 "We bind the visibility of each radio button to a switch, so they only appear "
 "when the switch is enabled."
 msgstr ""
+"We verbinden de zichtbaarheid van elk keuzerondje aan een schakelaar, ze "
+"verschijnen dus alleen wanneer de schakelaar is ingeschakeld."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:289
 msgid "Best Practices"
-msgstr ""
+msgstr "Beste praktijk"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:291
 msgid "<details><summary>Click here to read more</summary>\n"
@@ -587,6 +614,10 @@ msgid ""
 "visibility of the radio buttons to `true` with a JavaScript assignment such "
 "as:"
 msgstr ""
+"Als u enige achtergrond hebt in programmeren in imperatieve talen zoals C++, "
+"dan zou u verleid kunnen worden om de eigenschap `geactiveerd` aan de "
+"schakelaar te hangen om de zichtbaarheid van het keuzerondje op `true` te "
+"zetten met een JavaScript toekenning zoals:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:303
 msgid ""
@@ -594,12 +625,17 @@ msgid ""
 "and slots. Try to use QML bindings like in the case of `visible: autosave."
 "checked` as much as possible instead of JavaScript expressions."
 msgstr ""
+"Dit is niet erg efficiënt voor de declaratie taal QML en zijn signalen en "
+"slots. Probeer de binding aan QML zo veel mogelijk te gebruiken zoals in het "
+"geval van `visible: autosave.checked` in plaats van JavaScript expressies."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:305
 msgid ""
 "See [this page](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
 "declarative-bindings-over-imperative-assignments) for details."
 msgstr ""
+"Zie [deze pagina](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
+"declarative-bindings-over-imperative-assignments) voor details."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:307
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
