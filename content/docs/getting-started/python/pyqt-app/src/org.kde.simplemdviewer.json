@@ -1,0 +1,33 @@
+{
+    "id": "org.kde.simplemdviewer",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15-23.08",
+    "sdk": "org.kde.Sdk",
+    "base": "com.riverbankcomputing.PyQt.BaseApp",
+    "base-version": "5.15-23.08",
+    "command": "simplemdviewer",
+    "finish-args": [
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--device=dri",
+    "--socket=pulseaudio"
+    ],
+    "modules": [
+        "python3-markdown.json",
+        {
+            "name": "simplemdviewer",
+            "buildsystem" : "simple",
+            "build-commands" : [
+                "python3 setup.py build",
+                "python3 setup.py install --prefix=/app --root=/"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "path": "dist/org.kde.simplemdviewer-0.1.tar.gz"
+                }
+            ]
+        }
+    ]
+}
