@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 01:35+0000\n"
-"PO-Revision-Date: 2024-01-24 11:13+0100\n"
+"PO-Revision-Date: 2024-01-25 13:52+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -648,6 +648,9 @@ msgid ""
 "org/frameworks/kirigami-addons/html/classFormCheckDelegate.html) to our "
 "General section."
 msgstr ""
+"Om ons keuzevakje te testen kunnen we een nieuwe [FormCheckDelegate](https://"
+"api.kde.org/frameworks/kirigami-addons/html/classFormCheckDelegate.html) "
+"toevoegen aan onze sectie Algemeen."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:338
 msgid ""
@@ -657,6 +660,12 @@ msgid ""
 "a tray icon using [SystemTrayIcon](https://doc.qt.io/qt-6/qml-qt-labs-"
 "platform-systemtrayicon.html)."
 msgstr ""
+"Hier gebruiken we de `niet-omgeschakeld` [signaalbehandelaar](https://doc.qt."
+"io/qt-6/qtqml-syntax-signals.html) om enige dummy tekst te tonen om een "
+"pictogram in het systeemvak te simuleren die in het systeem verschijnt. Als "
+"u dat echt wilt, zou u gemakkelijk een pictogram in het systeemvak kunnen "
+"implementeren met [SystemTrayIcon](https://doc.qt.io/qt-6/qml-qt-labs-"
+"platform-systemtrayicon.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:340
 msgid "So far our application should look like this:"
@@ -664,7 +673,7 @@ msgstr "Tot zover zal onze toepassing er uitzien zoals deze:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:344
 msgid "FormComboBoxDelegate"
-msgstr ""
+msgstr "FormComboBoxDelegate"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:346
 msgid ""
@@ -672,36 +681,50 @@ msgid ""
 "(https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormComboBoxDelegate.html)."
 msgstr ""
+"De algemene component keuzelijst kan aangemaakt worden met een "
+"[FormComboBoxDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormComboBoxDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:348
 msgid ""
 "This combobox has several useful properties we can make use of: `editable`, "
 "`displayText` and `displayMode`."
 msgstr ""
+"Deze keuzelijst heeft verschillende nuttige eigenschappen waar we gebruik "
+"van kunnen maken: `editable`, `displayText` en `displayMode`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:350
 msgid ""
 "Setting `editable: true` allows the user to edit the text of the combobox, "
 "which is useful in case adding new combobox options is needed:"
 msgstr ""
+"Instellen van `editable: true` biedt de gebruiker het bewerken van de tekst "
+"van het keuzevak, wat nuttig is in geval dat toevoegen van nieuwe opties in "
+"het keuzevak nodig is:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:354
 msgid ""
 "Whenever you need to show additional text before each option, you can use "
 "something like `displayText: \"Profile: \" + currentText`:"
 msgstr ""
+"Wanneer u het tonen van extra tekst voor elke optie nodig hebt, kunt u "
+"zoiets als `displayText: \"Profile: \" + currentText` gebruiken:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:358
 msgid ""
 "And the most interesting one, which we will be using in our example, is "
 "`displayMode`. It can have three options:"
 msgstr ""
+"En de meest interessante, die we zullen gaan gebruiken in ons voorbeeld, is "
+"`displayMode`. Het kan drie opties hebben:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:360
 msgid ""
 "**FormComboBoxDelegate.ComboBox**: the standard small box showing a list of "
 "options."
 msgstr ""
+"**FormComboBoxDelegate.ComboBox**: het standaard kleine vak die een lijst "
+"met opties toont."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:364
 msgid ""
@@ -709,18 +732,25 @@ msgid ""
 "middle of the window, like a [Kirigami.OverlaySheet](docs:kirigami2;"
 "OverlaySheet)."
 msgstr ""
+"**FormComboBoxDelegate.Dialog**: een dialoog die een lijst met opties in het "
+"midden van het venster toont, zoals [Kirigami.OverlaySheet](docs:kirigami2;"
+"OverlaySheet)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:368
 msgid ""
 "**FormComboBoxDelegate.Page**: a new page containing a list of options shown "
 "in a separate window."
 msgstr ""
+"**FormComboBoxDelegate.Page**: een nieuwe pagina die een lijst met opties "
+"bevat in een apart venster."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:372
 msgid ""
 "Add the following between the \"Current Color Scheme\" and \"Show Tray Icon"
 "\" delegates in your \"General\" form card."
 msgstr ""
+"Voeg het volgende toe tussen het \"Huidige kleurenschema\" en \"Pictogram in "
+"systeemvak tonen\" gedelegeerden in uw formulierkaart \"Algemeen\"."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:385
 msgid "With the checkbox, our Settings page should look like this:"
@@ -728,13 +758,16 @@ msgstr "Met het keuzevakje zou de pagina Instellingen er uitzien zoals deze:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:389
 msgid "FormDelegateSeparator"
-msgstr ""
+msgstr "FormDelegateSeparator"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:391
 msgid ""
 "Our Settings page is taking shape, but each section is starting to get long. "
 "We can add a few FormDelegateSeparators to make our page tidier:"
 msgstr ""
+"Onze pagina Instellingen krijgt vorm, maar elke sectie begint lang te "
+"worden. We kunnen een paar FormDelegateSeparators toevoegen om onze pagina "
+"netter te maken:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:395
 msgid ""
@@ -765,6 +798,8 @@ msgid ""
 "Notice how the separator above the tray icon setting does not appear while "
 "it is hovered."
 msgstr ""
+"Merk op hoe de scheider boven de instelling van het pictogram in het "
+"systeemvak niet verschijnt bij er boven zweven."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Introduction to Kirigami Addons"
