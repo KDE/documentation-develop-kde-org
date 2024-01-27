@@ -22,7 +22,7 @@ it easily. Any other dependencies can be installed from Pip in a
 [Python virtual environment](https://docs.python.org/3/library/venv.html) later.
 
 {{< installpackage
-    ubuntu="python-pyqt5 python3-venv kirigami2-dev flatpak-builder qqc2-desktop-style appstream-compose"
+    ubuntu="python3-pyqt5 python3-pyqt5.qtquick python3-venv kirigami2-dev flatpak-builder libkf5qqc2desktopstyle-dev appstream-compose"
     opensuse="python3-qt5 kirigami2-devel flatpak-builder qqc2-desktop-style AppStream-compose"
     fedora="python3-qt5 kf5-kirigami2-devel flatpak-builder qqc2-desktop-style appstream-compose"
     arch="python-pyqt5 kirigami2 flatpak-builder qqc2-desktop-style appstream"
