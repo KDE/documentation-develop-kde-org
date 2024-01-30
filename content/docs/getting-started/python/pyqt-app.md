@@ -118,6 +118,10 @@ Create a new `src/qml/main.qml` file that specifies the UI of the application:
 
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/main.qml" highlight="qml" >}}
 
+{{< alert title="Warning" color="warning">}}
+Older distributions such as Debian or Ubuntu LTS that do not have an up-to-date Kirigami might require lowering the Kirigami import version from `3.20` to `3.15` to run. 
+{{< /alert >}}
+
 We have just created a new QML-Kirigami-Python application. Run it:
 
 ```bash
