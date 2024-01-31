@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-19 01:35+0000\n"
-"PO-Revision-Date: 2024-01-25 13:52+0100\n"
+"PO-Revision-Date: 2024-01-30 21:19+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -803,17 +803,19 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Introduction to Kirigami Addons"
-msgstr ""
+msgstr "Introductie tot Kirigami add-ons"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Get acquainted with Kirigami Addons components"
-msgstr ""
+msgstr "Wordt vertrouwd met Kirigami add-on-componenten"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:10
 msgid ""
 "Here you will be setting up your new Kirigami Addons project and be "
 "introduced to a few useful components."
 msgstr ""
+"Hier zult u uw nieuwe Kirigami add-on-project opzetten en geïntroduceerd "
+"worden tot een paar nuttige componenten."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:12
 msgid ""
@@ -821,6 +823,10 @@ msgid ""
 "start using these, we will need to set a little project that makes use of "
 "[KLocalizedContext](docs:ki18n;KLocalizedContext)."
 msgstr ""
+"Deze componenten maken gebruik van de lokalisatie faciliteiten, dus voordat "
+"we beginnen met deze te gebruiken, is het nodig een opzet voor een klein "
+"project te maken die gebruik maakt van [KLocalizedContext](docs:ki18n;"
+"KLocalizedContext)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:14
 msgid "Setting up your project"
@@ -828,7 +834,7 @@ msgstr "Uw project opzetten"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:16
 msgid "The initial project structure will look like so:"
-msgstr ""
+msgstr "De initiële projectstructuur zal er zo uitzien:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:28
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:98
@@ -844,7 +850,7 @@ msgstr "U kunt deze bestandsstructuur snel aanmaken met:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:40
 msgid "We start by using a very standard `CMakeLists.txt`:"
-msgstr ""
+msgstr "We beginnen door een erge standaard `CMakeLists.txt` te gebruiken:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:44
 msgid "A standard `resources.qrc`:"
@@ -852,7 +858,7 @@ msgstr "Een standaard `resources.qrc`:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:55
 msgid "The interesting part will be the `main.cpp`:"
-msgstr ""
+msgstr "Het interessante deel zal de `main.cpp` zijn:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:59
 msgid ""
@@ -861,6 +867,10 @@ msgid ""
 "started/kirigami/advanced-add_about_page), much of this will seem familiar "
 "to you."
 msgstr ""
+"Als u onze [KXmlGui-handleiding](/docs/getting-started/kxmlgui) hebt gelezen "
+"of de laatste Kirigami handleiding over de [Kirigami pagina Info over](/docs/"
+"getting-started/kirigami/advanced-add_about_page), zal veel hiervan bekend "
+"zijn voor u."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:61
 msgid ""
@@ -870,6 +880,12 @@ msgid ""
 "KAboutData::setApplicationData) to finish the process. For later, we also "
 "set an application icon that comes from the system theme."
 msgstr ""
+"We maken onze toepassing en gebruiken de standaard constructor [KAboutData's]"
+"(docs:kcoreaddons;KAboutData) om de metagegevens van onze toepassing toe te "
+"voegen, voegen onszelf toe als een auteur en gebruiken daarna "
+"[setApplicationData()](docs:kcoreaddons;KAboutData::setApplicationData) om "
+"het proces te beëindigen. Voor later zetten we ook een toepassingspictogram "
+"die uit het systeemthema komt."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:63
 msgid ""
@@ -888,16 +904,22 @@ msgid ""
 "used to integrate translated strings, passing the just created engine as a "
 "parameter."
 msgstr ""
+"We maken dan een exemplaar van onze QML-engine en zetten zijn [context](docs:"
+"qtqml;QQmlContext) om [KLocalizedContext](docs:ki18n;KLocalizedContext) van "
+"KDE te gebruiken, gebruikt om vertaalde tekenreeksen te integreren, en de "
+"zojuist gemaakte engine als een parameter door te geven."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:67
 msgid ""
 "We simply load our QML file from the resource file, and now we just need to "
 "take care of our initial QML file."
 msgstr ""
+"We laden eenvoudig ons QML-bestand uit het hulpbronbestand en nu we hoeven "
+"alleen nog zorg te dragen voor ons initiële QML-bestand."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:69
 msgid "FormCard and FormButtonDelegate"
-msgstr ""
+msgstr "FormCard en FormButtonDelegate"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:71
 msgid ""
@@ -941,12 +963,16 @@ msgid ""
 "Importing `org.kde.kirigamiaddons.formcard` makes all FormCard components "
 "available to your QML file."
 msgstr ""
+"Importeren van `org.kde.kirigamiaddons.formcard` maakt alle FormCard-"
+"componenten beschikbaar aan ons QML-bestand."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:85
 msgid ""
 "We will have only a single section in our main page, so we add a single "
 "FormCard:"
 msgstr ""
+"We zullen slechts een enkele sectie hebben in onze hoofdpagina, dus voegen "
+"we een enkele FormCard toe:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:89
 msgid ""
@@ -961,7 +987,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:91
 msgid "We can simply add a few buttons inside our FormCard:"
-msgstr ""
+msgstr "We kunnen eenvoudig een paar knoppen in onze FormCard toevoegen:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:95
 msgid ""
