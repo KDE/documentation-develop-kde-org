@@ -1,11 +1,9 @@
 ---
 title: Chips
 group: components
-weight: 3
+weight: 206
 description: >
   Chips are small elements typically used to list out related properties.
-aliases:
-  - /docs/getting-started/kirigami/chips/
 ---
 
 [Kirigami.Chip](docs:kirigami2;Chip) components are small elements used for
@@ -22,7 +20,6 @@ string to its `text` field, we give chips their name.
 {{< sections >}}
 
 {{< section-left >}}
-
 ```qml
 import QtQuick 2.15
 import QtQuick.Controls 2.15
@@ -35,18 +32,16 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: Kirigami.Page {
         title: "Chips"
 
-        ColumnLayout {
+        Kirigami.FormLayout {
             anchors.fill: parent
-            Kirigami.FormLayout {
-                Kirigami.Chip {
-                    text: "Chip 1"
-                }
-                Kirigami.Chip {
-                    text: "Chip 2"
-                }
-                Kirigami.Chip {
-                    text: "Chip 3"
-                }
+            Kirigami.Chip {
+                text: "Chip 1"
+            }
+            Kirigami.Chip {
+                text: "Chip 2"
+            }
+            Kirigami.Chip {
+                text: "Chip 3"
             }
         }
     }
@@ -97,17 +92,15 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: Kirigami.Page {
         title: "Chips"
 
-        ColumnLayout {
+        Kirigami.FormLayout {
             anchors.fill: parent
-            Kirigami.FormLayout {
-                Repeater {
-                    Layout.fillWidth: true
-                    model: chips
+            Repeater {
+                Layout.fillWidth: true
+                model: chips
 
-                    Kirigami.Chip {
-                        id: chip
-                        text: modelData
-                    }
+                Kirigami.Chip {
+                id: chip
+                    text: modelData
                 }
             }
         }
@@ -120,8 +113,9 @@ Kirigami.ApplicationWindow {
 You can dynamically append and remove data from the ListModel, and the Repeater
 will automatically make those changes. However, simply changing a specific item
 from either the Repeater or ListModel does not affect the other, and requires
-the changing of both. See [Example Application](#example-application) for more
-information.
+the changing of both, unless something like
+[QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel.html) is used.
+See [Example Application](#example-application) for more information.
 
 {{< /alert >}}
 

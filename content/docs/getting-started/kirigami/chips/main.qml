@@ -47,31 +47,29 @@ Kirigami.ApplicationWindow {
             }
         }
 
-        ColumnLayout {
+        Kirigami.FormLayout {
             anchors.fill: parent
-            Kirigami.FormLayout {
-                TextField {
-                    id: insertTextField
-                    Kirigami.FormData.label: "Item:"
-                    onAccepted: chips.append({ text: insertTextField.text })
-                }
-                // Wrapped in ColumnLayout to prevent binding loops.
-                ColumnLayout {
-                    Layout.alignment: Qt.AlignHCenter
-                    Repeater {
-                        model: chips
+            TextField {
+                id: insertTextField
+                Kirigami.FormData.label: "Item:"
+                onAccepted: chips.append({ text: insertTextField.text })
+            }
+            // Wrapped in ColumnLayout to prevent binding loops.
+            ColumnLayout {
+                Layout.alignment: Qt.AlignHCenter
+                Repeater {
+                    model: chips
 
-                        Kirigami.Chip {
-                            id: chip
-                            text: modelData
-                            onClicked: {
-                                editTextField.text = modelData;
-                                editChipPrompt.chip = chip;
-                                editChipPrompt.index = index;
-                                editChipPrompt.open();
-                            }
-                            onRemoved: chips.remove(index)
+                    Kirigami.Chip {
+                        id: chip
+                        text: modelData
+                        onClicked: {
+                            editTextField.text = modelData;
+                            editChipPrompt.chip = chip;
+                            editChipPrompt.index = index;
+                            editChipPrompt.open();
                         }
+                        onRemoved: chips.remove(index)
                     }
                 }
             }
