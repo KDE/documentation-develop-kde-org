@@ -128,3 +128,4 @@ as to-do lists.
 {{< readfile file="/content/docs/getting-started/kirigami/chips/main.qml" highlight="qml" >}}
 
 ![Chips Example Application](chips_example_app.png)
+
