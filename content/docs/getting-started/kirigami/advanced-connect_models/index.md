@@ -128,8 +128,9 @@ public:
 ```
 
 Once we have that settled, we can finally create what these roles are in the
-QML side using QByteArrays (think of them as strings), and what C++ role value
-they correspond to.
+QML side using a [QHash](docs:qtcore;qhash.html) where the keys are the
+enumerated values paired with [QByteArrays](docs:qtcore;qbytearray.html). The
+text in the QByteArray is what's used in the actual QML code.
 
 ```cpp
 QHash<int, QByteArray> Model::roleNames() const {
@@ -237,3 +238,8 @@ Kirigami.ApplicationWindow {
 ```
 
 ![App Screenshot](app_screenshot.png)
+
+## More Information
+
+For more information, see [Using C++ Models with Qt Quick
+Views](docs:qtquick;qtquick-modelviewsdata-cppmodels.html).
