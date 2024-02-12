@@ -208,6 +208,11 @@ AbstractCard using a Repeater, where the custom model we created acts as the
 model. The data is accessed using word `model`, followed by the roles we
 declared in `roleNames()`.
 
+
+{{< sections >}}
+
+{{< section-left >}}
+
 ```qml
 import QtQuick 2.15
 import QtQuick.Controls 2.15
@@ -242,7 +247,135 @@ Kirigami.ApplicationWindow {
 }
 ```
 
+{{< /section-left >}}
+
+{{< section-right >}}
+
 ![App Screenshot](app_screenshot.png)
+
+{{< /section-right >}}
+
+{{< /sections >}}
+
+## Editing Data Using `setData()`
+
+You may encounter a situation where you want to modify data in the model, and
+have the changes reflected on the frontend side. We can make this happen by
+overriding and implementing `setData()`.
+
+`setData()` is called when attempting to change the data in the model's role.
+It automatically passes arguments in the three parameters:
+
+- `index` - The location of where the data is.
+- `value` - The contents of the new data.
+- `role` - In this context, the role here is used to tell views on how they
+  should handle data. The role here should be `Qt::EditRole`.
+
+Using these parameters, we can use `role` to check if the intent of calling the
+function is to edit the model and return false when it isn't. Using `index`, we
+can use that to determine the location of where the data should be edited with
+the contents of `value`.
+
+```cpp
+bool Model::setData(const QModelIndex &index, const QVariant &value, int role) {
+    if (!value.canConvert<QString>() && role != Qt::EditRole) {
+        return false;
+    }
+
+    auto it = m_list.begin() + index.row();
+    QString waifusUnformatted = value.toString();
+    QStringList waifus = waifusUnformatted.split(", ");
+
+    m_list[it.key()] = waifus;
+    emit dataChanged(index, index);
+
+    return true;
+}
+```
+
+Let's update the QML code so that we can open up a prompt that allows us
+editing the model using a button attached to the cards.
+
+```qml
+Kirigami.ApplicationWindow {
+    ...
+
+    Kirigami.OverlaySheet {
+        id: editPrompt
+
+        property var model
+        property alias text: textField.text
+
+        title: "Edit Waifus"
+
+        TextField {
+            id: textField
+        }
+
+        footer: DialogButtonBox {
+            standardButtons: DialogButtonBox.Ok
+            onAccepted: {
+                const model = editPrompt.model;
+                model.waifus = textField.text;
+                editPrompt.close();
+            }
+        }
+    }
+
+    pageStack.initialPage: Kirigami.ScrollablePage {
+        ColumnLayout {
+            Repeater {
+                model: customModel
+                delegate: Kirigami.AbstractCard {
+                    Layout.fillHeight: true
+                    header: Kirigami.Heading {
+                        text: model.type
+                        level: 2
+                    }
+                    contentItem: Item {
+                        implicitWidth: delegateLayout.implicitWidth
+                        implicitHeight: delegateLayout.implicitHeight
+                        ColumnLayout {
+                            id: delegateLayout
+                            Label {
+                                text: model.waifus
+                            }
+                            Button {
+                                text: "Edit"
+                                onClicked: {
+                                    editPrompt.text = model.waifus;
+                                    editPrompt.model = model;
+                                    editPrompt.open();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+And now, whenever the values of the model change here, the changes should
+affect the model in the backend and have those changes automatically update on
+the frontend.
+
+{{< sections >}}
+
+{{< section-left >}}
+
+![app_screenshot_1.png](app_screenshot_1.png)
+
+{{< /section-left >}}
+
+{{< section-right >}}
+
+![app_screenshot_2.png](app_screenshot_2.png)
+
+{{< /section-right >}}
+
+{{< /sections >}}
 
 ## More Information
 
