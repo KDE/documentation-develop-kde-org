@@ -178,7 +178,10 @@ QVariant Model::data(const QModelIndex &index, int role) const {
 QString Model::formatList(const QStringList& list) {
     QString result;
     for (const QString& waifu : list) {
-        result += waifu + ", ";
+        result += waifu;
+        if (list.last() != waifu) {
+            result += ", ";
+        }
     }
     return result;
 }
