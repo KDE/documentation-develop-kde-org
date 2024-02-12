@@ -155,7 +155,7 @@ data type depending on the role, which is possible as `data()` returns a
 appropriate location of the data, though. In this example below, you can see
 that a new iterator variable is being declared, which is set from the beginning
 of the list plus the row of the index and the data that the iterator is
-pointing to is what is being returned
+pointing to is what is being returned.
 
 We can't just return whatever data we want though. We may be trying to bind
 data to a property with an incompatible data type, such as a QStringList to a
