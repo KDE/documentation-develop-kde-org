@@ -150,10 +150,12 @@ previously stated, `role` is used by QML to get specific data returned when
 it's accessing a role.
 
 In `data()`, we can use a `switch` statement to return the appropriate data and
-data type depending on the role. We still need to make sure we get the
+data type depending on the role, which is possible as `data()` returns a
+[QVariant](docs:qtcore;qvariant.html). We still need to make sure we get the
 appropriate location of the data, though. In this example below, you can see
-that a new iterator variable is being declared, and is set from the beginning
-of the list plus the row of the index on the QML side.
+that a new iterator variable is being declared, which is set from the beginning
+of the list plus the row of the index and the data that the iterator is
+pointing to is what is being returned
 
 We can't just return whatever data we want though. We may be trying to bind
 data to a property with an incompatible data type, such as a QStringList to a
@@ -196,12 +198,12 @@ int main(int argc, char *argv[]) {
 
 ## In Practice in QML
 
-The QML file that will use this custom model will just contain three
-AbstractCard components, where the key is the title and the value is the
-content. These cards are created by delegating an AbstractCard using a
-Repeater, where the custom model we created acts as the model. The data is
-accessed using word `model`, followed by the roles we declared in
-`roleNames()`.
+The QML file that is used will just contain three
+[AbstractCard](docs:kirigami2;AbstractCard) components, where the key is the
+header and the value is the content. These cards are created by delegating an
+AbstractCard using a Repeater, where the custom model we created acts as the
+model. The data is accessed using word `model`, followed by the roles we
+declared in `roleNames()`.
 
 ```qml
 import QtQuick 2.15
