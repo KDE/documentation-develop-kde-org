@@ -257,14 +257,18 @@ Kirigami.ApplicationWindow {
 
 {{< /sections >}}
 
-## Editing Data Using `setData()`
+## Editing Data Using `dataChanged()` and `setData()`
 
 You may encounter a situation where you want to modify data in the model, and
-have the changes reflected on the frontend side. We can make this happen by
-overriding and implementing `setData()`.
+have the changes reflected on the frontend side. Every time we change data in
+the model, we must emit the `dataChanged()` and pass in the which will apply
+those changes on the frontend side.
 
-`setData()` is called when attempting to change the data in the model's role.
-It automatically passes arguments in the three parameters:
+There's also a function we can override that allows us to modify the data in
+the frontend side and have those changed happen on the backend side. This
+virtual function is `setData()`, and is automatically called when attempting to
+change the data in the model's role. It also automatically passes arguments in
+the three parameters:
 
 - `index` - The location of where the data is.
 - `value` - The contents of the new data.
@@ -292,6 +296,13 @@ bool Model::setData(const QModelIndex &index, const QVariant &value, int role) {
     return true;
 }
 ```
+
+{{< alert title="Note" color="info" >}}
+
+`setData()` does not automatically emit `dataChanged()` and that still has to
+be done manually.
+
+{{< /alert >}}
 
 Let's update the QML code so that we can open up a prompt that allows us
 editing the model using a button attached to the cards.
