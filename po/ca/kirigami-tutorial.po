@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-19 01:35+0000\n"
+"POT-Creation-Date: 2024-02-15 01:30+0000\n"
 "PO-Revision-Date: 2024-01-28 19:12+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1752,6 +1752,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-actions/index.md:192
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:14
 #: content/docs/getting-started/kirigami/components-card/index.md:97
+#: content/docs/getting-started/kirigami/components-chips/index.md:112
 #: content/docs/getting-started/kirigami/components-controls/index.md:88
 #: content/docs/getting-started/kirigami/components-drawers/index.md:114
 #: content/docs/getting-started/kirigami/components-drawers/index.md:201
@@ -2641,6 +2642,99 @@ msgstr ""
 "![Captura de pantalla d'una CardsGridView a on cada targeta ocupa la mateixa "
 "quantitat d'espai d'una quadrícula](/docs/getting-started/kirigami/"
 "components-card/cardsgridview.png)"
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:0
+msgid "Chips"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:0
+msgid "Chips are small elements typically used to list out related properties."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:9
+msgid ""
+"[Kirigami.Chip](docs:kirigami2;Chip) components are small elements inherited "
+"from [AbstractButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-"
+"abstractbutton.html) used for displaying common properties or filters of "
+"something. These are typically text elements, which is also interactable and "
+"comes with an optional delete button."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:14
+msgid "![Example Chips in Kirigami Gallery](chips_kirigami_gallery.png)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:16
+msgid "Quick Start"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:18
+msgid ""
+"Chips can easily be added using the `Kirigami.Chip` component. By assigning "
+"a string to its `text` field, we give chips their name."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:55
+msgid "![Declaring and Displaying Chips](chips_usage.png)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:57
+msgid "{{< /section-right >}} {{< /sections >}}"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:60
+msgid "With Repeaters (Recommended)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:62
+msgid ""
+"Since chips are meant to be used more than once, you'll likely want to use "
+"some kind of list data structure and iterate over them to display the chips. "
+"To do this, we need a [ListModel](https://doc.qt.io/qt-6/qml-qtqml-models-"
+"listmodel.html) and a [Repeater](https://doc.qt.io/qt-6/qml-qtquick-repeater."
+"html) component."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:69
+msgid ""
+"The ListModel is used as storage for the chips. To populate the ListModel "
+"(and therefore chips), we declare a couple of ListElement components, which "
+"contains a field known as `text`. We can use this string assigned from here "
+"to the `text` field for each repeated chip."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:74
+msgid ""
+"The Repeater is used for displaying the chips. First, we need to set the "
+"`model` field of the Repeater to our ListModel, or create the ListModel "
+"inside of repeater. Then, we declare the `Kirigami.Chip` component inside of "
+"the Repeater, and assign its `text` field with the element's data using the "
+"`modelData` property."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:114
+msgid ""
+"You can dynamically append and remove data from the ListModel, and the "
+"Repeater will automatically make those changes. However, simply changing a "
+"specific item from either the Repeater or ListModel does not affect the "
+"other, and requires the changing of both, unless something like "
+"[QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel.html) is "
+"used. See [Example Application](#example-application) for more information."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:123
+msgid "Example Application"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:125
+msgid ""
+"The example application below showcases how chips can be used in programs "
+"such as to-do lists."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/components-chips/index.md:130
+msgid "![Chips Example Application](chips_example_app.png)"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:0
 msgid "Controls and interactive elements"
