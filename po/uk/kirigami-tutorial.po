@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 01:30+0000\n"
-"PO-Revision-Date: 2024-01-19 08:35+0200\n"
+"PO-Revision-Date: 2024-02-15 16:31+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -2544,11 +2544,13 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips"
-msgstr ""
+msgstr "Чіпси"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips are small elements typically used to list out related properties."
 msgstr ""
+"Чіпси — малі елементи, які типово використовують для зберігання списків "
+"пов'язаних властивостей."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:9
 msgid ""
@@ -2558,32 +2560,39 @@ msgid ""
 "something. These are typically text elements, which is also interactable and "
 "comes with an optional delete button."
 msgstr ""
+"Компоненти [Kirigami.Chip](docs:kirigami2;Chip) є малими елементами, які "
+"успадковують властивості від [AbstractButton](https://doc.qt.io/qt-5/qml-"
+"qtquick-controls2-abstractbutton.html) і які використовують для показу "
+"типових властивостей або фільтрів чогось. Типово, це текстові елементи, з "
+"якими можна взаємодіяти і які містять необов'язкову кнопку вилучення даних."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:14
 msgid "![Example Chips in Kirigami Gallery](chips_kirigami_gallery.png)"
-msgstr ""
+msgstr "![Приклад чіпсів у галереї Kirigami](chips_kirigami_gallery.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:16
 msgid "Quick Start"
-msgstr ""
+msgstr "Початкові зауваження"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:18
 msgid ""
 "Chips can easily be added using the `Kirigami.Chip` component. By assigning "
 "a string to its `text` field, we give chips their name."
 msgstr ""
+"Чіпси можна без проблем додати за допомогою компонента `Kirigami.Chip`. "
+"Наданням рядкових даних для поля `text` чіпса ми надаємо чіпсу назву."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:55
 msgid "![Declaring and Displaying Chips](chips_usage.png)"
-msgstr ""
+msgstr "![Оголошення і показ чіпсів](chips_usage.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:57
 msgid "{{< /section-right >}} {{< /sections >}}"
-msgstr ""
+msgstr "{{< /section-right >}} {{< /sections >}}"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:60
 msgid "With Repeaters (Recommended)"
-msgstr ""
+msgstr "Із повторювачами (рекомендовано)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:62
 msgid ""
@@ -2593,6 +2602,11 @@ msgid ""
 "listmodel.html) and a [Repeater](https://doc.qt.io/qt-6/qml-qtquick-repeater."
 "html) component."
 msgstr ""
+"Оскільки чіпси призначено для багаторазового використання, ймовірно, вам "
+"потрібна буде певна структура спискових даних та ітерація за ними для показу "
+"чіпсів. Для цього нам знадобляться компоненти [ListModel](https://doc.qt.io/"
+"qt-6/qml-qtqml-models-listmodel.html) і [Repeater](https://doc.qt.io/qt-6/"
+"qml-qtquick-repeater.html)."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:69
 msgid ""
@@ -2601,6 +2615,10 @@ msgid ""
 "contains a field known as `text`. We can use this string assigned from here "
 "to the `text` field for each repeated chip."
 msgstr ""
+"ListModel буле використано як сховище для чіпсів. Для заповнення ListModel "
+"(і отже, чіпсів), ми оголошуємо двійко компонентів ListElement, які містять "
+"поле, відоме як `text`. Ми можемо скористатися цим рядком, який тут "
+"пов'язано із полем `text`, для кожного повторюваного чіпса."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:74
 msgid ""
@@ -2610,6 +2628,11 @@ msgid ""
 "the Repeater, and assign its `text` field with the element's data using the "
 "`modelData` property."
 msgstr ""
+"Repeater буде використано для показу чіпсів. Спочатку, для поля `model` "
+"Repeater встановлюємо нашу ListModel або створюємо ListModel у повторювачі. "
+"Далі, ми оголошуємо компонент `Kirigami.Chip` всередині Repeater і "
+"пов'язуємо його поле `text` із даними елемента за допомогою властивості "
+"`modelData`."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:114
 msgid ""
@@ -2620,20 +2643,28 @@ msgid ""
 "[QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel.html) is "
 "used. See [Example Application](#example-application) for more information."
 msgstr ""
+"Ви можете у динамічному режимі додавати дані до ListModel або вилучати дані "
+"з неї, а Repeater вноситиме зміни автоматично. Втім, проста зміна певного "
+"запису з Repeater або ListModel не вплине на інший компонент і потребує "
+"внесення змін до обох, якщо не використано щось подібне до "
+"[QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel.html). Див. "
+"[приклад програми](#example-application), щоб дізнатися більше."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:123
 msgid "Example Application"
-msgstr ""
+msgstr "Приклад програми"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:125
 msgid ""
 "The example application below showcases how chips can be used in programs "
 "such as to-do lists."
 msgstr ""
+"У прикладі програми, який наведено нижче, висвітлено можливість використання "
+"чіпсів у програмах, зокрема у списках завдань."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:130
 msgid "![Chips Example Application](chips_example_app.png)"
-msgstr ""
+msgstr "![Приклад програми з чіпсами](chips_example_app.png)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:0
 msgid "Controls and interactive elements"

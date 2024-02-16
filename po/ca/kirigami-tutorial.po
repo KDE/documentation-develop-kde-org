@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 01:30+0000\n"
-"PO-Revision-Date: 2024-01-28 19:12+0100\n"
+"PO-Revision-Date: 2024-02-15 15:16+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -2645,11 +2645,13 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips"
-msgstr ""
+msgstr "Chips"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips are small elements typically used to list out related properties."
 msgstr ""
+"Els chips són elements petits que s'utilitzen normalment per a llistar les "
+"propietats relacionades."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:9
 msgid ""
@@ -2659,32 +2661,41 @@ msgid ""
 "something. These are typically text elements, which is also interactable and "
 "comes with an optional delete button."
 msgstr ""
+"Els components [Kirigami.Chip](docs:kirigami2;Chip) són elements petits "
+"heretats del [AbstractButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-"
+"abstractbutton.html) utilitzats per a mostrar propietats comunes o filtres "
+"d'alguna cosa. Aquests són normalment elements de text, que també es pot "
+"interaccionar amb ells i venen amb un botó opcional de supressió."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:14
 msgid "![Example Chips in Kirigami Gallery](chips_kirigami_gallery.png)"
 msgstr ""
+"![Chips d'exemple a la Galeria del Kirigami](chips_kirigami_gallery.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:16
 msgid "Quick Start"
-msgstr ""
+msgstr "Inici ràpid"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/components-chips/index.md:18
 msgid ""
 "Chips can easily be added using the `Kirigami.Chip` component. By assigning "
 "a string to its `text` field, we give chips their name."
 msgstr ""
+"Els chips es poden afegir fàcilment utilitzant el component `Kirigami.Chip`. "
+"En assignar una cadena al seu camp de `text`, li donem el nom als chips."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:55
 msgid "![Declaring and Displaying Chips](chips_usage.png)"
-msgstr ""
+msgstr "![Declaració i visualització de chips](chips_usage.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:57
 msgid "{{< /section-right >}} {{< /sections >}}"
-msgstr ""
+msgstr "{{< /section-right >}} {{< /sections >}}"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:60
 msgid "With Repeaters (Recommended)"
-msgstr ""
+msgstr "Amb repetidors (recomanat)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:62
 msgid ""
@@ -2694,7 +2705,13 @@ msgid ""
 "listmodel.html) and a [Repeater](https://doc.qt.io/qt-6/qml-qtquick-repeater."
 "html) component."
 msgstr ""
+"Com que els chips s'han d'utilitzar més d'una vegada, és probable que "
+"vulgueu utilitzar algun tipus d'estructura de dades de llista i iterar-los "
+"per a mostrar els chips. Per a fer-ho, necessitem un component [ListModel]"
+"(https://doc.qt.io/qt-6/qml-qtqml-models-listmodel.html) i un component "
+"[Repeater](https://doc.qt.io/qt-6/qml-qtquick-repeater.html)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/components-chips/index.md:69
 msgid ""
 "The ListModel is used as storage for the chips. To populate the ListModel "
@@ -2702,7 +2719,12 @@ msgid ""
 "contains a field known as `text`. We can use this string assigned from here "
 "to the `text` field for each repeated chip."
 msgstr ""
+"El ListModel s'utilitza com a emmagatzematge per als chips. Per a poblar el "
+"ListModel (i per tant, els chips), declarem un parell de components de "
+"ListElement, que conté un camp conegut com a `text`. Podem utilitzar aquesta "
+"cadena assignada des d'aquí al camp `text` per a cada xip repetit."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/components-chips/index.md:74
 msgid ""
 "The Repeater is used for displaying the chips. First, we need to set the "
@@ -2711,6 +2733,11 @@ msgid ""
 "the Repeater, and assign its `text` field with the element's data using the "
 "`modelData` property."
 msgstr ""
+"El repetidor s'utilitza per mostrar els chips. Primer, hem d'establir el "
+"camp `model` del Repeater al nostre ListModel, o crear el ListModel dins del "
+"repetidor. Després, declarem el component `Kirigami.Chip` dins del Repeater, "
+"i assigneu el seu camp `text` amb les dades de l'element utilitzant la "
+"propietat `modelData`."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:114
 msgid ""
@@ -2721,20 +2748,28 @@ msgid ""
 "[QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel.html) is "
 "used. See [Example Application](#example-application) for more information."
 msgstr ""
+"Podeu afegir i eliminar dinàmicament dades del ListModel, i el Repeater farà "
+"automàticament aquests canvis. No obstant això, canviant un element "
+"específic del Repeater o del ListModel no afecta l'altre, i requereix el "
+"canvi de tots dos, a menys que s'utilitzi alguna cosa com "
+"[QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel.html). Vegeu "
+"[Aplicació d'exemple](#example-application) per a més informació."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:123
 msgid "Example Application"
-msgstr ""
+msgstr "Aplicació d'exemple"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:125
 msgid ""
 "The example application below showcases how chips can be used in programs "
 "such as to-do lists."
 msgstr ""
+"L'aplicació d'exemple següent mostra com es poden utilitzar els chips en "
+"programes com llistes de tasques pendents."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:130
 msgid "![Chips Example Application](chips_example_app.png)"
-msgstr ""
+msgstr "![Aplicació d'exemple de chips](chips_example_app.png)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:0
 msgid "Controls and interactive elements"
@@ -8436,27 +8471,3 @@ msgstr ""
 "La mida del tipus de lletra del [Kirigami.Theme](docs:kirigami2;Kirigami::"
 "PlatformTheme) està disponible en la vostra aplicació com una `Kirigami."
 "Theme.defaultFont.pointSize`."
-
-# skip-rule: t-acc_obe
-#~ msgid ""
-#~ "Enter our main function. Its first line `QGuiApplication::"
-#~ "setAttribute(Qt::AA_EnableHighDpiScaling);` enables High DPI scaling. "
-#~ "This lets our application scale properly across devices with different "
-#~ "display pixel densities."
-#~ msgstr ""
-#~ "Introduïu la nostra funció principal. La seva primera línia "
-#~ "`QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);` habilita "
-#~ "l'escalat en PPP alt. Això permet que la nostra aplicació escali "
-#~ "correctament en dispositius amb diferents densitats de píxels a la "
-#~ "pantalla."
-
-# skip-rule: t-acc_obe
-#~ msgid "If Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
-#~ msgstr "Si és Visual Studio: `cmake -B build/ -G \"Visual Studio 16 2019\"`"
-
-# skip-rule: t-acc_obe
-#~ msgid "If MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
-#~ msgstr "Si és MinGW: `cmake -B build/ -G \"MinGW Makefiles\"`"
-
-#~ msgid "And launch it with:"
-#~ msgstr "I llanceu-la amb:"
