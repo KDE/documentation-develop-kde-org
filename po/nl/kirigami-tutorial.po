@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 01:30+0000\n"
-"PO-Revision-Date: 2024-02-15 10:28+0100\n"
+"PO-Revision-Date: 2024-02-16 12:14+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -2558,6 +2558,8 @@ msgstr "Chips"
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips are small elements typically used to list out related properties."
 msgstr ""
+"Chips zijn kleine elementen typisch gebruikt om een lijst te maken van "
+"gerelateerde eigenschappen."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:9
 msgid ""
@@ -2567,32 +2569,40 @@ msgid ""
 "something. These are typically text elements, which is also interactable and "
 "comes with an optional delete button."
 msgstr ""
+"[Kirigami.Chip](docs:kirigami2;Chip) componenten zijn kleine elementen "
+"geërfd van [AbstractButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-"
+"abstractbutton.html) gebruikt voor het tonen van gemeenschappelijke "
+"eigenschappen of filters van iets. Dit zijn typisch tekstelementen, waarop "
+"ook geacteerd kan worden en komt met een optionele knop voor wissen."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:14
 msgid "![Example Chips in Kirigami Gallery](chips_kirigami_gallery.png)"
-msgstr ""
+msgstr "![Voorbeeld Chips in Kirigami galerij](chips_kirigami_gallery.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:16
 msgid "Quick Start"
-msgstr ""
+msgstr "Snelstart"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:18
 msgid ""
 "Chips can easily be added using the `Kirigami.Chip` component. By assigning "
 "a string to its `text` field, we give chips their name."
 msgstr ""
+"Chips kunnen gemakkelijk toegevoegd worden met de component `Kirigami.Chip`. "
+"Door het toekennen van een tekenreeks aan zijn `text`-veld geven we chips "
+"hun naam."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:55
 msgid "![Declaring and Displaying Chips](chips_usage.png)"
-msgstr ""
+msgstr "![Declareren en tonen van Chips](chips_usage.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:57
 msgid "{{< /section-right >}} {{< /sections >}}"
-msgstr ""
+msgstr "{{< /section-right >}} {{< /sections >}}"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:60
 msgid "With Repeaters (Recommended)"
-msgstr ""
+msgstr "Met herhalers (aanbevolen)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:62
 msgid ""
@@ -2602,6 +2612,11 @@ msgid ""
 "listmodel.html) and a [Repeater](https://doc.qt.io/qt-6/qml-qtquick-repeater."
 "html) component."
 msgstr ""
+"Omdat chips bedoeld zijn om meer dan eens te worden gebruikt, wilt u "
+"waarschijnlijk een vorm van een gegevensstructuur mat een lijst gebruiken en "
+"er over itereren om de chips te tonen. Om dat te doen hebben we een "
+"[ListModel](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel.html) nodig en "
+"een component [Herhaler](https://doc.qt.io/qt-6/qml-qtquick-repeater.html)."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:69
 msgid ""
@@ -2610,6 +2625,10 @@ msgid ""
 "contains a field known as `text`. We can use this string assigned from here "
 "to the `text` field for each repeated chip."
 msgstr ""
+"Het ListModel wordt gebruikt als opslag voor de chips. Om het ListModel te "
+"bevolken (en daarom chips), declareren we een aantal componenten "
+"ListElement, die een veld bevatten bekend als `text`. We kunnen deze vanhier "
+"aan het `text`-veld toegekende tekenreeks gebruiken voor elke herhaalde chip."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:74
 msgid ""
@@ -2619,6 +2638,11 @@ msgid ""
 "the Repeater, and assign its `text` field with the element's data using the "
 "`modelData` property."
 msgstr ""
+"De Herhaler wordt gebruikt voor het tonen van de chips. Eerst moeten we het "
+"`model`-veld van de Herhaler aan ons ListModel instellen of het ListModel "
+"aanmaken binnen de herhaler. Daarna declareren we de component `Kirigami."
+"Chip` binnen de Herhaler en kennen zijn `text`-veld toe met de gegevens van "
+"het element met gebruik van de eigenschap `modelData`."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:114
 msgid ""
@@ -2629,20 +2653,29 @@ msgid ""
 "[QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel.html) is "
 "used. See [Example Application](#example-application) for more information."
 msgstr ""
+"U kunt dynamisch gegevens achtervoegen en verwijderen uit het ListModel en "
+"de Herhaler zal automatisch deze wijzigingen doen. Echter, eenvoudig "
+"wijzigen van een specifiek item uit ofwel de Herhaler of ListModel heeft "
+"geen effect op de anderen en vereist het wijzigen van beiden, tenzij zoiets "
+"als [QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel.html) "
+"wordt gebruikt. Zie [Voorbeeldtoepassing](#example-application) voor meer "
+"informatie."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:123
 msgid "Example Application"
-msgstr ""
+msgstr "Voorbeeldtoepassing"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:125
 msgid ""
 "The example application below showcases how chips can be used in programs "
 "such as to-do lists."
 msgstr ""
+"De onderstaande voorbeeldtoepassing laat zien hoe chips gebruikt kunnen "
+"worden in programma's zoals te-doenlijsten."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:130
 msgid "![Chips Example Application](chips_example_app.png)"
-msgstr ""
+msgstr "![Chips Voorbeeldtoepassing](chips_example_app.png)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:0
 msgid "Controls and interactive elements"
