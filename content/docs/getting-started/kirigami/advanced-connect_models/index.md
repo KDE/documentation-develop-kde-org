@@ -199,7 +199,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-## In Practice in QML
+## Class Usage in QML
 
 The QML file that is used will just contain three
 [AbstractCard](docs:kirigami2;AbstractCard) components, where the key is the
@@ -257,12 +257,15 @@ Kirigami.ApplicationWindow {
 
 {{< /sections >}}
 
-## Editing Data Using `dataChanged()` and `setData()`
+## Data Modification
+
+### Editing Data Using `dataChanged()` and `setData()`
 
 You may encounter a situation where you want to modify data in the model, and
 have the changes reflected on the frontend side. Every time we change data in
-the model, we must emit the `dataChanged()` and pass in the which will apply
-those changes on the frontend side.
+the model, we must emit the `dataChanged()` which will apply those changes on
+the frontend side at the specific cells specified in its arguments. In this
+tutorial, we can just use the `index` argument of `setData()`.
 
 There's also a function we can override that allows us to modify the data in
 the frontend side and have those changed happen on the backend side. This
@@ -315,19 +318,19 @@ Kirigami.ApplicationWindow {
         id: editPrompt
 
         property var model
-        property alias text: textField.text
+        property alias text: editPromptText.text
 
         title: "Edit Waifus"
 
         TextField {
-            id: textField
+            id: editPromptText
         }
 
         footer: DialogButtonBox {
             standardButtons: DialogButtonBox.Ok
             onAccepted: {
                 const model = editPrompt.model;
-                model.waifus = textField.text;
+                model.waifus = editPromptText.text;
                 editPrompt.close();
             }
         }
@@ -387,6 +390,171 @@ the frontend.
 {{< /section-right >}}
 
 {{< /sections >}}
+
+### Adding Rows
+
+We added a way to modify the data in existing keys of the QMap, and in the
+front end, this is reflected as modifying the contents inside the
+AbstractCards. But, what if we to add a new key entry in the QMap and have that
+reflected on the QML side? Let's do this by creating a new method that is
+callable on the QML side, which performs the necessary operations to do this.
+
+To make the method visible in QML, we must use the Q_OBJECT macro in the class,
+and begin the method declaration with the Q_INVOKABLE macro. This method will
+also include a string parameter, which is intended to be the new key in the
+QMap.
+
+```cpp
+class Model : public QAbstractListModel {
+Q_OBJECT;
+
+    ...
+public:
+    ...
+    Q_INVOKABLE void addType(const QString &typeName);
+};
+```
+
+Inside of this method, we need to tell Qt that we want to create more rows in
+the model. This is done by calling `beginInsertRows()` to begin our row adding
+operation, followed by inserting whatever we need, then use `endInsertRows()`
+to end the operation. We still need to emit `dataChanged()` at the end,
+however. This time, we are going to update all rows, from the first row to the
+last one as the QMap may alphabetically reorganize itself, and we need to catch
+that across all rows.
+
+When calling `beginInsertRows()`, we need to first pass in a QModelIndex class
+to specify the location of where the new rows should be added, followed by what
+the new first and last row numbers are going to be. In this tutorial, the first
+argument will just be `QModelIndex()` as there is no need to use the parameter
+here. We can just use the current row size for the first and last row number,
+as we'll just be adding one row at the end of the model.
+
+```cpp
+void Model::addType(const QString& typeName) {
+    beginInsertRows(QModelIndex(), m_list.size() - 1, m_list.size() - 1);
+    m_list.insert(typeName, {});
+    endInsertRows();
+    emit dataChanged(index(0), index(m_list.size() - 1));
+}
+```
+
+{{< alert title="Note" color="info" >}}
+
+The `dataChanged()` function uses QModelIndex as the data type for its
+parameters. However, we can convert integers in QModelIndex data types using
+the `index()` function. 
+
+{{< /alert >}}
+
+Let's update the QML code so we are given the ability to add a new key to the QMap.
+
+```qml
+Kirigami.ApplicationWindow {
+    ...
+
+    Kirigami.OverlaySheet {
+        id: addPrompt
+
+        title: "Add New Type"
+
+        TextField {
+            id: addPromptText
+        }
+
+        footer: DialogButtonBox {
+            standardButtons: DialogButtonBox.Ok
+            onAccepted: {
+                customModel.addType(addPromptText.text);
+                addPromptText.text = ""; // Clear TextField every time it's done
+                addPrompt.close();
+            }
+        }
+    }
+
+    pageStack.initialPage: Kirigami.ScrollablePage {
+        actions.main: Kirigami.Action {
+            icon.name: "add"
+            text: "Add New Type"
+            onTriggered: {
+                addPrompt.open();
+            }
+        }
+        ...
+    }
+}
+```
+
+Now, we should be given a new action at the top of the app that brings up a
+prompt that allows to add a new element to the model, with our own custom data.
+
+### Removing Rows
+
+The way remove rows is similar to adding rows. Let's create another method that
+we'll call in QML. This time, we will use an additional parameter, and that is
+an integer that is the row number. The type name is used to delete the key from
+the QMap, while the row number will be used to delete the row on the front end.
+
+```cpp
+class Model : public QAbstractListModel {
+Q_OBJECT;
+
+...
+    public:
+    ...
+
+    Q_INVOKABLE void deleteType(const QString &typeName, const int &rowIndex);
+}
+```
+
+```cpp
+void Model::deleteType(const QString &typeName, const int& rowIndex) {
+    beginRemoveRows(QModelIndex(), rowIndex, rowIndex);
+    m_list.remove(typeName);
+    endRemoveRows();
+    emit dataChanged(index(0), index(m_list.size() - 1));
+}
+```
+
+Now, let's update the application so a "Delete" button appears alongside the
+edit button, and hook it up to our delete method.
+
+```qml
+ColumnLayout {
+    Repeater {
+        model: customModel
+        delegate: Kirigami.AbstractCard {
+            ...
+            contentItem: Item {
+                implicitWidth: delegateLayout.implicitWidth
+                implicitHeight: delegateLayout.implicitHeight
+                ColumnLayout {
+                    id: delegateLayout
+                    Label {
+                        text: model.waifus
+                    }
+                    RowLayout {
+                        Button {
+                            text: "Edit"
+                            onClicked: {
+                                editPrompt.text = model.waifus;
+                                editPrompt.model = model;
+                                editPrompt.open();
+                            }
+                        }
+                        Button {
+                            text: "Delete"
+                            onClicked: {
+                                customModel.deleteType(model.type, index);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
 
 ## More Information
 
