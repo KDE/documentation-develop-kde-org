@@ -488,6 +488,22 @@ Kirigami.ApplicationWindow {
 Now, we should be given a new action at the top of the app that brings up a
 prompt that allows to add a new element to the model, with our own custom data.
 
+{{< sections >}}
+
+{{< section-left >}}
+
+![app_screenshot_add_1.png](app_screenshot_add_1.png)
+
+{{< /section-left >}}
+
+{{< section-right >}}
+
+![app_screenshot_add_2.png](app_screenshot_add_2.png)
+
+{{< /section-right >}}
+
+{{< /sections >}}
+
 ### Removing Rows
 
 The way remove rows is similar to adding rows. Let's create another method that
@@ -556,7 +572,30 @@ ColumnLayout {
 }
 ```
 
+{{< sections >}}
+
+{{< section-left >}}
+
+![app_screenshot_del_1.png](app_screenshot_del_1.png)
+
+{{< /section-left >}}
+
+{{< section-right >}}
+
+![app_screenshot_del_2.png](app_screenshot_del_2.png)
+
+{{< /section-right >}}
+
+{{< /sections >}}
+
+## Full Code
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model.h" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/main.qml" highlight="qml" >}}
+
 ## More Information
 
 For more information, see [Using C++ Models with Qt Quick
-Views](docs:qtquick;qtquick-modelviewsdata-cppmodels.html).
+Views](docs:qtquick;qtquick-modelviewsdata-cppmodels.html) and 
+[Model/View Programming](docs:qtquick;model-view-programming.html).
