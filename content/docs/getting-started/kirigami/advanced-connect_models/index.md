@@ -159,7 +159,7 @@ pointing to is what is being returned.
 
 We can't just return whatever data we want though. We may be trying to bind
 data to a property with an incompatible data type, such as a QStringList to a
-string. You may have to do data conversion in order for the data to be
+QString. You may have to do data conversion in order for the data to be
 displayed properly.
 
 ```cpp
