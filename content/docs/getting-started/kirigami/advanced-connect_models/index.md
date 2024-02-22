@@ -187,7 +187,7 @@ QString Model::formatList(const QStringList& list) {
 }
 ```
 
-### Allow Class to be Declared in QML
+### Allow the Class to be Declared in QML
 
 Let's not forget to make our class usable in QML.
 
