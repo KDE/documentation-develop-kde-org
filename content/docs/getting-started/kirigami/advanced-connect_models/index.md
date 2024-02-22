@@ -275,7 +275,7 @@ the three parameters:
 
 - `index` - The location of where the data is.
 - `value` - The contents of the new data.
-- `role` - In this context, the role here is used to tell views on how they
+- `role` - In this context, the role here is used to tell views how they
   should handle data. The role here should be `Qt::EditRole`.
 
 Using these parameters, we can use `role` to check if the intent of calling the
