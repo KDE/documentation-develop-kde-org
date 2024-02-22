@@ -202,7 +202,7 @@ int main(int argc, char *argv[]) {
 ## Class Usage in QML
 
 The QML file that is used will just contain three
-[AbstractCard](docs:kirigami2;AbstractCard) components, where the key is the
+[Kirigami.AbstractCard](docs:kirigami2;AbstractCard) components, where the key is the
 header and the value is the content. These cards are created by delegating an
 AbstractCard using a Repeater, where the custom model we created acts as the
 model. The data is accessed using word `model`, followed by the roles we
