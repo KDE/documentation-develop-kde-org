@@ -57,9 +57,8 @@ tasks.
 
 - `rowCount()` - Think of this function as a way to tell QML how many items are
   in the model to represent.
-- `roleNames()` - When delegating, there are named roles (think of them as
-  properties in QML) you will want to use in QML. This function allows you to
-  create what those roles are.
+- `roleNames()` - You can think of role names as property names
+attached to data in QML. This function allows you to create those roles.
 - `data()` - This function is called when QML wants to represent data.
 
 {{< alert title="Note" color="info" >}}
