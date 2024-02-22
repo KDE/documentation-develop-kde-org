@@ -263,7 +263,7 @@ Kirigami.ApplicationWindow {
 
 You may encounter a situation where you want to modify data in the model, and
 have the changes reflected on the frontend side. Every time we change data in
-the model, we must emit the `dataChanged()` which will apply those changes on
+the model, we must emit the `dataChanged()` signal which will apply those changes on
 the frontend side at the specific cells specified in its arguments. In this
 tutorial, we can just use the `index` argument of `setData()`.
 
