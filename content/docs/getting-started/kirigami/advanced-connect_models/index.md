@@ -20,9 +20,9 @@ the QML frontend.
 ## Preparing the Class
 
 In this tutorial, we will create a class that contains a QMap, where a QString
-is used as a key and QStringList objects is used as a value. The frontend will
-be able to read and display the keys and values, and as if it was a
-one-dimensional array similar to the ListModel component.
+is used as a key and QStringList objects are used as values. The frontend will
+be able to read and display the keys and values and be simple to use just like a
+one-dimensional array. It should look similar to a QML ListModel.
 
 To do this, we need to declare a class that inherits from
 [QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add in
