@@ -9,7 +9,7 @@ As shown from the [previous
 tutorial](/docs/getting-started/kirigami/advanced-connect_backend/), you can
 connect C++ code to QML by creating a class that will be treated as just
 another component in QML. However, you may want to represent more complicated
-data, such as if your data needs to act as a custom
+data, such as data that needs to act as a custom
 [ListModel](docs:qtquick;qml-qtqml-models-listmodel.html) or in some way needs
 to be delegated from a [Repeater](docs:qtquick;qml-qtquick-repeater.html).
 
