@@ -59,7 +59,8 @@ tasks.
   in the model to represent.
 - `roleNames()` - You can think of role names as property names
 attached to data in QML. This function allows you to create those roles.
-- `data()` - This function is called when QML wants to represent data.
+- `data()` - This function is called when you want to retrieve the data
+that corresponds to the role names from the model.
 
 {{< alert title="Note" color="info" >}}
 
