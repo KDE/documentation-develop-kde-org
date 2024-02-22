@@ -273,7 +273,7 @@ virtual function is `setData()`, and is automatically called when attempting to
 change the data in the model's role. It also automatically passes arguments in
 the three parameters:
 
-- `index` - The location of where the data is.
+- `index` - The location of the data.
 - `value` - The contents of the new data.
 - `role` - In this context, the role here is used to tell views how they
   should handle data. The role here should be `Qt::EditRole`.
