@@ -397,7 +397,7 @@ We added a way to modify the data in existing keys of the QMap, and in the
 front end, this is reflected as modifying the contents inside the
 AbstractCards. But, what if we to add a new key entry in the QMap and have that
 reflected on the QML side? Let's do this by creating a new method that is
-callable on the QML side, which performs the necessary operations to do this.
+callable on the QML side to perform this task.
 
 To make the method visible in QML, we must use the Q_OBJECT macro in the class,
 and begin the method declaration with the Q_INVOKABLE macro. This method will
