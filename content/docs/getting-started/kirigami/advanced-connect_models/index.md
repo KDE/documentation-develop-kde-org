@@ -267,11 +267,9 @@ the model, we must emit the `dataChanged()` signal which will apply those change
 the frontend side at the specific cells specified in its arguments. In this
 tutorial, we can just use the `index` argument of `setData()`.
 
-There's also a function we can override that allows us to modify the data in
-the frontend side and have those changed happen on the backend side. This
-virtual function is `setData()`, and is automatically called when attempting to
-change the data in the model's role. It also automatically passes arguments in
-the three parameters:
+`setData()` is a virtual function you can override so that attempting
+to modify the data from the frontend side automatically reflects those
+changes on the backend side. It requires three parameters:
 
 - `index` - The location of the data.
 - `value` - The contents of the new data.
