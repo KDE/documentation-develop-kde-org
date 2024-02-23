@@ -1,5 +1,5 @@
 import QtQuick 2.15
-import QtQuick.Controls 2.15
+import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import CustomModel 1.0
@@ -18,17 +18,17 @@ Kirigami.ApplicationWindow {
         property var model
         property alias text: editPromptText.text
 
-        title: "Edit Waifus"
+        title: "Edit Characters"
 
-        TextField {
+        Controls.TextField {
             id: editPromptText
         }
 
-        footer: DialogButtonBox {
-            standardButtons: DialogButtonBox.Ok
+        footer: Controls.DialogButtonBox {
+            standardButtons: Controls.DialogButtonBox.Ok
             onAccepted: {
                 const model = editPrompt.model;
-                model.waifus = editPromptText.text;
+                model.characters = editPromptText.text;
                 editPrompt.close();
             }
         }
@@ -37,16 +37,16 @@ Kirigami.ApplicationWindow {
     Kirigami.OverlaySheet {
         id: addPrompt
 
-        title: "Add New Type"
+        title: "Add New Species"
 
-        TextField {
+        Controls.TextField {
             id: addPromptText
         }
 
-        footer: DialogButtonBox {
-            standardButtons: DialogButtonBox.Ok
+        footer: Controls.DialogButtonBox {
+            standardButtons: Controls.DialogButtonBox.Ok
             onAccepted: {
-                customModel.addType(addPromptText.text);
+                customModel.addSpecies(addPromptText.text);
                 addPromptText.text = ""; // Clear TextField every time it's done
                 addPrompt.close();
             }
@@ -56,7 +56,7 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: Kirigami.ScrollablePage {
         actions.main: Kirigami.Action {
             icon.name: "add"
-            text: "Add New Type"
+            text: "Add New Species"
             onTriggered: {
                 addPrompt.open();
             }
@@ -68,7 +68,7 @@ Kirigami.ApplicationWindow {
                 delegate: Kirigami.AbstractCard {
                     Layout.fillHeight: true
                     header: Kirigami.Heading {
-                        text: model.type
+                        text: model.species
                         level: 2
                     }
                     contentItem: Item {
@@ -76,22 +76,22 @@ Kirigami.ApplicationWindow {
                         implicitHeight: delegateLayout.implicitHeight
                         ColumnLayout {
                             id: delegateLayout
-                            Label {
-                                text: model.waifus
+                            Controls.Label {
+                                text: model.characters
                             }
                             RowLayout {
-                                Button {
+                                Controls.Button {
                                     text: "Edit"
                                     onClicked: {
-                                        editPrompt.text = model.waifus;
+                                        editPrompt.text = model.characters;
                                         editPrompt.model = model;
                                         editPrompt.open();
                                     }
                                 }
-                                Button {
+                                Controls.Button {
                                     text: "Delete"
                                     onClicked: {
-                                        customModel.deleteType(model.type, index);
+                                        customModel.deleteSpecies(model.species, index);
                                     }
                                 }
                             }

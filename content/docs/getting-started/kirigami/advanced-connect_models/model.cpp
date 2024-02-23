@@ -1,4 +1,5 @@
 #include "model.h"
+#include <QDebug>
 
 int Model::rowCount(const QModelIndex &) const {
     return m_list.count();
@@ -6,8 +7,8 @@ int Model::rowCount(const QModelIndex &) const {
 
 QHash<int, QByteArray> Model::roleNames() const {
     QHash<int, QByteArray> map = {
-            {TypeRole,   "type"},
-            {WaifusRole, "waifus"}
+            {SpeciesRole,   "species"},
+            {CharactersRole, "characters"}
     };
     return map;
 }
@@ -15,9 +16,9 @@ QHash<int, QByteArray> Model::roleNames() const {
 QVariant Model::data(const QModelIndex &index, int role) const {
     const auto it = m_list.begin() + index.row();
     switch (role) {
-        case TypeRole:
+        case SpeciesRole:
             return it.key();
-        case WaifusRole:
+        case CharactersRole:
             return formatList(it.value());
         default:
             return {};
@@ -26,9 +27,9 @@ QVariant Model::data(const QModelIndex &index, int role) const {
 
 QString Model::formatList(const QStringList& list) {
     QString result;
-    for (const QString& waifu : list) {
-        result += waifu;
-        if (list.last() != waifu) {
+    for (const QString& character : list) {
+        result += character;
+        if (list.last() != character) {
             result += ", ";
         }
     }
@@ -41,25 +42,25 @@ bool Model::setData(const QModelIndex &index, const QVariant &value, int role) {
     }
 
     auto it = m_list.begin() + index.row();
-    QString waifusUnformatted = value.toString();
-    QStringList waifus = waifusUnformatted.split(", ");
+    QString charactersUnformatted = value.toString();
+    QStringList characters = charactersUnformatted.split(", ");
 
-    m_list[it.key()] = waifus;
+    m_list[it.key()] = characters;
     emit dataChanged(index, index);
 
     return true;
 }
 
-void Model::addType(const QString& typeName) {
+void Model::addSpecies(const QString& species) {
     beginInsertRows(QModelIndex(), m_list.size() - 1, m_list.size() - 1);
-    m_list.insert(typeName, {});
+    m_list.insert(species, {});
     endInsertRows();
     emit dataChanged(index(0), index(m_list.size() - 1));
 }
 
-void Model::deleteType(const QString &typeName, const int& rowIndex) {
+void Model::deleteSpecies(const QString &species, const int& rowIndex) {
     beginRemoveRows(QModelIndex(), rowIndex, rowIndex);
-    m_list.remove(typeName);
+    m_list.remove(species);
     endRemoveRows();
     emit dataChanged(index(0), index(m_list.size() - 1));
 }

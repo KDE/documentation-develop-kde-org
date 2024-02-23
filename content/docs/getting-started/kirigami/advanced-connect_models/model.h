@@ -16,8 +16,8 @@ private:
 
 public:
     enum Roles {
-        TypeRole = Qt::UserRole,
-        WaifusRole
+        SpeciesRole = Qt::UserRole,
+        CharactersRole
     };
 
     int rowCount(const QModelIndex &) const override;
@@ -28,7 +28,7 @@ public:
 
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
-    Q_INVOKABLE void addType(const QString &typeName);
+    Q_INVOKABLE void addSpecies(const QString &species);
 
-    Q_INVOKABLE void deleteType(const QString &typeName, const int &rowIndex);
+    Q_INVOKABLE void deleteSpecies(const QString &species, const int &rowIndex);
 };

@@ -118,8 +118,8 @@ class Model : public QAbstractListModel {
 ...
 public:
     enum Roles {
-        TypeRole = Qt::UserRole,
-        WaifusRole
+        SpeciesRole = Qt::UserRole,
+        CharactersRole
     };
 
     ...
@@ -135,14 +135,14 @@ text in the QByteArray is what's used in the actual QML code.
 ```cpp
 QHash<int, QByteArray> Model::roleNames() const {
     QHash<int, QByteArray> map = {
-            {TypeRole,   "type"},
-            {WaifusRole, "waifus"}
+        {SpeciesRole,   "species"},
+        {CharactersRole, "characters"}
     };
     return map;
 }
 ```
 
-In our example model, the role "type" can be used to retrieve
+In our example model, the role "species" can be used to retrieve
 the QString key "Feline", "Fox", "Goat", each in a separate delegate.
 The same can be done with the QStringList values for the character
 names list.
@@ -171,9 +171,9 @@ displayed properly.
 QVariant Model::data(const QModelIndex &index, int role) const {
     const auto it = m_list.begin() + index.row();
     switch (role) {
-        case TypeRole:
+        case SpeciesRole:
             return it.key();
-        case WaifusRole:
+        case CharactersRole:
             return formatList(it.value());
         default:
             return {};
@@ -182,9 +182,9 @@ QVariant Model::data(const QModelIndex &index, int role) const {
 
 QString Model::formatList(const QStringList& list) {
     QString result;
-    for (const QString& waifu : list) {
-        result += waifu;
-        if (list.last() != waifu) {
+    for (const QString& character : list) {
+        result += character;
+        if (list.last() != character) {
             result += ", ";
         }
     }
@@ -239,11 +239,11 @@ Kirigami.ApplicationWindow {
                 model: customModel
                 delegate: Kirigami.AbstractCard {
                     header: Kirigami.Heading {
-                        text: model.type
+                        text: model.species
                         level: 2
                     }
                     contentItem: Label {
-                        text: model.waifus
+                        text: model.characters
                     }
                 }
             }
@@ -293,10 +293,10 @@ bool Model::setData(const QModelIndex &index, const QVariant &value, int role) {
     }
 
     auto it = m_list.begin() + index.row();
-    QString waifusUnformatted = value.toString();
-    QStringList waifus = waifusUnformatted.split(", ");
+    QString charactersUnformatted = value.toString();
+    QStringList characters = charactersUnformatted.split(", ");
 
-    m_list[it.key()] = waifus;
+    m_list[it.key()] = characters;
     emit dataChanged(index, index);
 
     return true;
@@ -323,7 +323,7 @@ Kirigami.ApplicationWindow {
         property var model
         property alias text: editPromptText.text
 
-        title: "Edit Waifus"
+        title: "Edit Characters"
 
         TextField {
             id: editPromptText
@@ -333,7 +333,7 @@ Kirigami.ApplicationWindow {
             standardButtons: DialogButtonBox.Ok
             onAccepted: {
                 const model = editPrompt.model;
-                model.waifus = editPromptText.text;
+                model.characters = editPromptText.text;
                 editPrompt.close();
             }
         }
@@ -346,7 +346,7 @@ Kirigami.ApplicationWindow {
                 delegate: Kirigami.AbstractCard {
                     Layout.fillHeight: true
                     header: Kirigami.Heading {
-                        text: model.type
+                        text: model.species
                         level: 2
                     }
                     contentItem: Item {
@@ -355,12 +355,12 @@ Kirigami.ApplicationWindow {
                         ColumnLayout {
                             id: delegateLayout
                             Label {
-                                text: model.waifus
+                                text: model.characters
                             }
                             Button {
                                 text: "Edit"
                                 onClicked: {
-                                    editPrompt.text = model.waifus;
+                                    editPrompt.text = model.characters;
                                     editPrompt.model = model;
                                     editPrompt.open();
                                 }
@@ -414,7 +414,7 @@ Q_OBJECT;
     ...
 public:
     ...
-    Q_INVOKABLE void addType(const QString &typeName);
+    Q_INVOKABLE void addSpecies(const QString &species);
 };
 ```
 
@@ -434,9 +434,9 @@ here. We can just use the current row size for the first and last row number,
 as we'll just be adding one row at the end of the model.
 
 ```cpp
-void Model::addType(const QString& typeName) {
+void Model::addSpecies(const QString& species) {
     beginInsertRows(QModelIndex(), m_list.size() - 1, m_list.size() - 1);
-    m_list.insert(typeName, {});
+    m_list.insert(species, {});
     endInsertRows();
     emit dataChanged(index(0), index(m_list.size() - 1));
 }
@@ -459,7 +459,7 @@ Kirigami.ApplicationWindow {
     Kirigami.OverlaySheet {
         id: addPrompt
 
-        title: "Add New Type"
+        title: "Add New Species"
 
         TextField {
             id: addPromptText
@@ -468,7 +468,7 @@ Kirigami.ApplicationWindow {
         footer: DialogButtonBox {
             standardButtons: DialogButtonBox.Ok
             onAccepted: {
-                customModel.addType(addPromptText.text);
+                customModel.addSpecies(addPromptText.text);
                 addPromptText.text = ""; // Clear TextField every time it's done
                 addPrompt.close();
             }
@@ -478,7 +478,7 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: Kirigami.ScrollablePage {
         actions.main: Kirigami.Action {
             icon.name: "add"
-            text: "Add New Type"
+            text: "Add New Species"
             onTriggered: {
                 addPrompt.open();
             }
@@ -511,8 +511,9 @@ prompt that allows to add a new element to the model, with our own custom data.
 
 The way remove rows is similar to adding rows. Let's create another method that
 we'll call in QML. This time, we will use an additional parameter, and that is
-an integer that is the row number. The type name is used to delete the key from
-the QMap, while the row number will be used to delete the row on the front end.
+an integer that is the row number. The species name is used to delete the key
+from the QMap, while the row number will be used to delete the row on the front
+end.
 
 ```cpp
 class Model : public QAbstractListModel {
@@ -522,14 +523,14 @@ Q_OBJECT;
     public:
     ...
 
-    Q_INVOKABLE void deleteType(const QString &typeName, const int &rowIndex);
+    Q_INVOKABLE void deleteSpecies(const QString &speciesName, const int &rowIndex);
 }
 ```
 
 ```cpp
-void Model::deleteType(const QString &typeName, const int& rowIndex) {
+void Model::deleteSpecies(const QString &speciesName, const int& rowIndex) {
     beginRemoveRows(QModelIndex(), rowIndex, rowIndex);
-    m_list.remove(typeName);
+    m_list.remove(speciesName);
     endRemoveRows();
     emit dataChanged(index(0), index(m_list.size() - 1));
 }
@@ -550,13 +551,13 @@ ColumnLayout {
                 ColumnLayout {
                     id: delegateLayout
                     Label {
-                        text: model.waifus
+                        text: model.characters
                     }
                     RowLayout {
                         Button {
                             text: "Edit"
                             onClicked: {
-                                editPrompt.text = model.waifus;
+                                editPrompt.text = model.characters;
                                 editPrompt.model = model;
                                 editPrompt.open();
                             }
@@ -564,7 +565,7 @@ ColumnLayout {
                         Button {
                             text: "Delete"
                             onClicked: {
-                                customModel.deleteType(model.type, index);
+                                customModel.deleteSpecies(model.species, index);
                             }
                         }
                     }
