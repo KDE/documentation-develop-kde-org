@@ -142,6 +142,11 @@ QHash<int, QByteArray> Model::roleNames() const {
 }
 ```
 
+In our example model, the role "type" can be used to retrieve
+the QString key "Feline", "Fox", "Goat", each in a separate delegate.
+The same can be done with the QStringList values for the character
+names list.
+
 ### Overriding and Implementing `data()`
 
 There are two parameters that are passed in `data()`: `index` and `role`.
