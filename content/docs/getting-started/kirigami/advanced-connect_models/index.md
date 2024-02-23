@@ -281,8 +281,8 @@ changes on the backend side. It requires three parameters:
 - `role` - In this context, the role here is used to tell views how they
   should handle data. The role here should be `Qt::EditRole`.
 
-Using these parameters, we can use `role` to check if the intent of calling the
-function is to edit the model and return false when it isn't. Using `index`, we
+The `role` parameter in this case is used to ensure `setData()` can be
+edited via user input (Qt::EditRole). Using `index`, we
 can use that to determine the location of where the data should be edited with
 the contents of `value`.
 
