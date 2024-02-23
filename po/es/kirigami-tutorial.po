@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-15 01:30+0000\n"
-"PO-Revision-Date: 2024-02-10 12:35+0100\n"
+"PO-Revision-Date: 2024-02-22 02:35+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -142,12 +142,18 @@ msgid ""
 "Component) and then using `pageStack.layers.push()` for each button to load "
 "that page in our `main.qml`:"
 msgstr ""
+"Cada nuevo botón que creamos en el paso anterior debería abrir una nueva "
+"página. Se pueden añadir nuevas páginas instanciándolas como [Components]"
+"(docs:qtqml;QtQml.Component) y usando posteriormente `pageStack.layers."
+"push()` en cada botón para cargar la página en nuestro `main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:18
 msgid ""
 "That's it really! All it takes is instantiating `FormCard.AboutKDE`. You "
 "should see something like this after clicking the AboutKDE button:"
 msgstr ""
+"¡Eso es todo! Todo lo que se necesita es crear una instancia de `FormCard."
+"AboutKDE`. Debería ver algo parecido a esto tras pulsar el botón «AboutKDE»:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:22
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
@@ -160,10 +166,14 @@ msgid ""
 "simple to use. We will be adding a new QML file that will contain the "
 "information needed for our about page. First in our `resources.qrc` file:"
 msgstr ""
+"La «AboutPage» de la aplicación es un poco más compleja, aunque sigue siendo "
+"bastante fácil de usar. Añadiremos un nuevo archivo QML que contendrá la "
+"información necesaria para nuestra página «acerca de» en el archivo "
+"`resources.qrc`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:35
 msgid "And our `contents/ui/MyAboutPage.qml` should have the following:"
-msgstr ""
+msgstr "Y nuestro `contents/ui/MyAboutPage.qml` debería tener lo siguiente:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:39
 msgid ""
@@ -171,6 +181,9 @@ msgid ""
 "KAboutData) in our `main.cpp`. Here's a brief reminder of what is in `main."
 "cpp`:"
 msgstr ""
+"Aquí usamos la información que hemos definido usando [KAboutData](docs:"
+"kcoreaddons;KAboutData) en nuestro `main.cpp`. Esto es un breve recordatorio "
+"de lo que hay en `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:43
 msgid "<========== used in the import"
@@ -188,10 +201,15 @@ msgid ""
 "applicationData()](docs:kcoreaddons;KAboutData::applicationData), and that "
 "is what we pass to the `aboutData` property."
 msgstr ""
+"El objeto `About` que hemos exportado al lado QML usando "
+"[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+"qmlRegisterSingletonType) contiene los datos de [KAboutData::"
+"applicationData()](docs:kcoreaddons;KAboutData::applicationData), y eso es "
+"lo que pasamos a la propiedad `aboutData`."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:53
 msgid "Lastly, we add our new MyAboutPage to our `main.qml`:"
-msgstr ""
+msgstr "Por último, añadimos nuestra nueva MyAboutPage a nuestro `main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:57
 msgid "The About page of our application should look like this:"
@@ -207,6 +225,9 @@ msgid ""
 "embedded in `main.qml`, that is because it allows to set a custom model for "
 "the `aboutData` property."
 msgstr ""
+"Si se está preguntando por qué la página «About» se guarda por separado en "
+"lugar de integrarla en `main.qml`, es porque permite definir un modelo "
+"personalizado para la propiedad `aboutData`."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:65
 msgid ""
@@ -216,6 +237,11 @@ msgid ""
 "QApplication::setWindowIcon) in your `main.cpp` in order for your "
 "application icon to show up."
 msgstr ""
+"En lugar de dejar que la página «acerca de» obtenga información de "
+"[KAboutData](docs:kcoreaddons;KAboutData), se puede pasar un objeto JSON "
+"directamente. Seguirá necesitando usar [QApplication::setWindowIcon()](docs:"
+"qtwidgets;QApplication::setWindowIcon) en `main.cpp` para que se muestre el "
+"icono de la aplicación."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:67
 msgid "Change your `MyAboutPage.json` to something like this:"
