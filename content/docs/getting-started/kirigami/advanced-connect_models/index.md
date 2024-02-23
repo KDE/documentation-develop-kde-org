@@ -220,7 +220,7 @@ declared in `roleNames()`.
 
 ```qml
 import QtQuick 2.15
-import QtQuick.Controls 2.15
+import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.20 as Kirigami
 import CustomModel 1.0
@@ -242,7 +242,7 @@ Kirigami.ApplicationWindow {
                         text: model.species
                         level: 2
                     }
-                    contentItem: Label {
+                    contentItem: Controls.Label {
                         text: model.characters
                     }
                 }
@@ -325,12 +325,12 @@ Kirigami.ApplicationWindow {
 
         title: "Edit Characters"
 
-        TextField {
+        Controls.TextField {
             id: editPromptText
         }
 
-        footer: DialogButtonBox {
-            standardButtons: DialogButtonBox.Ok
+        footer: Controls.DialogButtonBox {
+            standardButtons: Controls.DialogButtonBox.Ok
             onAccepted: {
                 const model = editPrompt.model;
                 model.characters = editPromptText.text;
@@ -354,10 +354,10 @@ Kirigami.ApplicationWindow {
                         implicitHeight: delegateLayout.implicitHeight
                         ColumnLayout {
                             id: delegateLayout
-                            Label {
+                            Controls.Label {
                                 text: model.characters
                             }
-                            Button {
+                            Controls.Button {
                                 text: "Edit"
                                 onClicked: {
                                     editPrompt.text = model.characters;
@@ -461,12 +461,12 @@ Kirigami.ApplicationWindow {
 
         title: "Add New Species"
 
-        TextField {
+        Controls.TextField {
             id: addPromptText
         }
 
-        footer: DialogButtonBox {
-            standardButtons: DialogButtonBox.Ok
+        footer: Controls.DialogButtonBox {
+            standardButtons: Controls.DialogButtonBox.Ok
             onAccepted: {
                 customModel.addSpecies(addPromptText.text);
                 addPromptText.text = ""; // Clear TextField every time it's done
@@ -550,11 +550,11 @@ ColumnLayout {
                 implicitHeight: delegateLayout.implicitHeight
                 ColumnLayout {
                     id: delegateLayout
-                    Label {
+                    Controls.Label {
                         text: model.characters
                     }
                     RowLayout {
-                        Button {
+                        Controls.Button {
                             text: "Edit"
                             onClicked: {
                                 editPrompt.text = model.characters;
@@ -562,7 +562,7 @@ ColumnLayout {
                                 editPrompt.open();
                             }
                         }
-                        Button {
+                        Controls.Button {
                             text: "Delete"
                             onClicked: {
                                 customModel.deleteSpecies(model.species, index);
