@@ -311,7 +311,7 @@ be done manually.
 {{< /alert >}}
 
 Let's update the QML code so that we can open up a prompt that allows us
-editing the model using a button attached to the cards.
+to edit the model using a Controls.Button attached to the cards.
 
 ```qml
 Kirigami.ApplicationWindow {
