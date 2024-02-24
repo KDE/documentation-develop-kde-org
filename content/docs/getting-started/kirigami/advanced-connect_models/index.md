@@ -374,9 +374,8 @@ Kirigami.ApplicationWindow {
 }
 ```
 
-And now, whenever the values of the model change here, the changes should
-affect the model in the backend and have those changes automatically update on
-the frontend.
+Now, whenever the values of the model change in the frontend,
+the changes should automatically update on the backend.
 
 {{< sections >}}
 
