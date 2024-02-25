@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 01:30+0000\n"
+"POT-Creation-Date: 2024-02-25 01:39+0000\n"
 "PO-Revision-Date: 2024-02-15 15:16+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1476,6 +1476,441 @@ msgstr ""
 "la [documentació oficial de les Qt](https://doc.qt.io/qt-5/qtqml-"
 "cppintegration-definetypes.html)."
 
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
+#, fuzzy
+#| msgid "Connect logic to your QML user interface"
+msgid "Connect models to your QML user interface"
+msgstr "Connectar la lògica amb la vostra interfície d'usuari en QML"
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
+msgid "Connect models from C++ backend to QML frontend"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
+msgid ""
+"As shown from the [previous tutorial](/docs/getting-started/kirigami/"
+"advanced-connect_backend/), you can connect C++ code to QML by creating a "
+"class that will be treated as just another component in QML. However, you "
+"may want to represent more complicated data, such as data that needs to act "
+"as a custom [ListModel](docs:qtquick;qml-qtqml-models-listmodel.html) or in "
+"some way needs to be delegated from a [Repeater](docs:qtquick;qml-qtquick-"
+"repeater.html)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:16
+msgid ""
+"We can create our own [models](docs:qtcore;qabstractlistmodel.html) from the "
+"C++ side, and declare how the data from that model should be represented on "
+"the QML frontend."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:20
+msgid "Preparing the Class"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:22
+msgid ""
+"In this tutorial, we will create a class that contains a QMap, where a "
+"QString is used as a key and QStringList objects are used as values. The "
+"frontend will be able to read and display the keys and values and be simple "
+"to use just like a one-dimensional array. It should look similar to a QML "
+"ListModel."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:27
+msgid ""
+"To do this, we need to declare a class that inherits from "
+"[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add in "
+"some add data to the QMap. These declarations will be located in `model.h`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:32
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:65
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:73
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:306
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:444
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:39
+#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:59
+#: content/docs/getting-started/kirigami/components-actions/index.md:14
+#: content/docs/getting-started/kirigami/components-actions/index.md:36
+#: content/docs/getting-started/kirigami/components-actions/index.md:192
+#: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:14
+#: content/docs/getting-started/kirigami/components-card/index.md:97
+#: content/docs/getting-started/kirigami/components-chips/index.md:112
+#: content/docs/getting-started/kirigami/components-controls/index.md:88
+#: content/docs/getting-started/kirigami/components-drawers/index.md:114
+#: content/docs/getting-started/kirigami/components-drawers/index.md:201
+#: content/docs/getting-started/kirigami/introduction-actions/index.md:61
+#: content/docs/getting-started/kirigami/introduction-actions/index.md:128
+#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:129
+#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:141
+#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:192
+#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:245
+#: content/docs/getting-started/kirigami/introduction-kirigami-gallery/index.md:121
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:51
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:185
+#: content/docs/getting-started/kirigami/introduction-next_steps/index.md:25
+#: content/docs/getting-started/kirigami/introduction-pages/index.md:27
+#: content/docs/getting-started/kirigami/introduction-pages/index.md:53
+#: content/docs/getting-started/kirigami/style-colors/index.md:28
+msgid "Note"
+msgstr "Nota"
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:34
+msgid ""
+"If you are following along, please remember to update your `CMakeLists.txt` "
+"file!"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:53
+msgid ""
+"Of course, we can't just display this class as is. We also need to tell QML "
+"on how to represent this data in the class. We can do this by overriding "
+"three virtual functions that are essential at doing this, all of which do "
+"their own tasks."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:58
+msgid ""
+"`rowCount()` - Think of this function as a way to tell QML how many items "
+"are in the model to represent."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:60
+msgid ""
+"`roleNames()` - You can think of role names as property names attached to "
+"data in QML. This function allows you to create those roles."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:62
+msgid ""
+"`data()` - This function is called when you want to retrieve the data that "
+"corresponds to the role names from the model."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:67
+msgid ""
+"The custom role names created by `roleNames()` are only usable when a model "
+"is being delegated, and are not usable outside of it. See [Models and Views]"
+"(docs:qtquick;qtquick-modelviewsdata-modelview.html#models)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:75
+msgid ""
+"Technically, models in Qt are represented as tables, with rows and columns. "
+"So, what overriding `rowCount()` does is tell Qt how many rows are in a "
+"model. Since we are just dealing with a one-dimensional array in this "
+"tutorial, you can just think of \"rows\" as \"number of elements.\""
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:82
+msgid "Overriding and Implementing `rowCount()`"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:84
+msgid ""
+"Let's override the function in the header file. The `rowCount()` comes with "
+"its own parameter, but will not be used in this example and is excluded."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:95
+msgid "Then, let's declare how many rows are in this model in `model.cpp`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
+msgid "Overriding and Implementing `roleNames()`"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
+msgid ""
+"Before we override `roleNames()`, we need to declare what the roles are in "
+"the C++ side using an public `enum` variable. The reason for this is because "
+"these values from the `enum` variable are passed into `data()` every time "
+"QML accesses a corresponding role, and as such we can make `data()` return "
+"what we want."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:113
+msgid ""
+"Let's begin with creating the `enum` variable for roles, where each value is "
+"a role for the C++ side."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:130
+msgid ""
+"Once we have that settled, we can finally create what these roles are in the "
+"QML side using a [QHash](docs:qtcore;qhash.html) where the keys are the "
+"enumerated values paired with [QByteArrays](docs:qtcore;qbytearray.html). "
+"The text in the QByteArray is what's used in the actual QML code."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:145
+msgid ""
+"In our example model, the role \"species\" can be used to retrieve the "
+"QString key \"Feline\", \"Fox\", \"Goat\", each in a separate delegate. The "
+"same can be done with the QStringList values for the character names list."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:150
+msgid "Overriding and Implementing `data()`"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:152
+msgid ""
+"There are two parameters that are passed in `data()`: `index` and `role`. "
+"`index` is the location of where the data is when being delegated. As "
+"previously stated, `role` is used by QML to get specific data returned when "
+"it's accessing a role."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:157
+msgid ""
+"In `data()`, we can use a `switch` statement to return the appropriate data "
+"and data type depending on the role, which is possible as `data()` returns a "
+"[QVariant](docs:qtcore;qvariant.html). We still need to make sure we get the "
+"appropriate location of the data, though. In this example below, you can see "
+"that a new iterator variable is being declared, which is set from the "
+"beginning of the list plus the row of the index and the data that the "
+"iterator is pointing to is what is being returned."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:165
+msgid ""
+"We can't just return whatever data we want though. We may be trying to bind "
+"data to a property with an incompatible data type, such as a QStringList to "
+"a QString. You may have to do data conversion in order for the data to be "
+"displayed properly."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:195
+msgid "Allow the Class to be Declared in QML"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:197
+msgid "Let's not forget to make our class usable in QML."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:207
+msgid "Class Usage in QML"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:209
+msgid ""
+"The QML file that is used will just contain three [Kirigami.AbstractCard]"
+"(docs:kirigami2;AbstractCard) components, where the key is the header and "
+"the value is the content. These cards are created by delegating an "
+"AbstractCard using a Repeater, where the custom model we created acts as the "
+"model. The data is accessed using word `model`, followed by the roles we "
+"declared in `roleNames()`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:259
+msgid "![App Screenshot](app_screenshot.png)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:265
+msgid "Data Modification"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:267
+msgid "Editing Data Using `dataChanged()` and `setData()`"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:269
+msgid ""
+"You may encounter a situation where you want to modify data in the model, "
+"and have the changes reflected on the frontend side. Every time we change "
+"data in the model, we must emit the `dataChanged()` signal which will apply "
+"those changes on the frontend side at the specific cells specified in its "
+"arguments. In this tutorial, we can just use the `index` argument of "
+"`setData()`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:275
+msgid ""
+"`setData()` is a virtual function you can override so that attempting to "
+"modify the data from the frontend side automatically reflects those changes "
+"on the backend side. It requires three parameters:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
+msgid "`index` - The location of the data."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:280
+msgid "`value` - The contents of the new data."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:281
+msgid ""
+"`role` - In this context, the role here is used to tell views how they "
+"should handle data. The role here should be `Qt::EditRole`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:284
+msgid ""
+"The `role` parameter in this case is used to ensure `setData()` can be "
+"edited via user input (Qt::EditRole). Using `index`, we can use that to "
+"determine the location of where the data should be edited with the contents "
+"of `value`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:308
+msgid ""
+"`setData()` does not automatically emit `dataChanged()` and that still has "
+"to be done manually."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:313
+msgid ""
+"Let's update the QML code so that we can open up a prompt that allows us to "
+"edit the model using a Controls.Button attached to the cards."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:377
+msgid ""
+"Now, whenever the values of the model change in the frontend, the changes "
+"should automatically update on the backend."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:384
+msgid "![app_screenshot_1.png](app_screenshot_1.png)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:390
+msgid "![app_screenshot_2.png](app_screenshot_2.png)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:396
+#, fuzzy
+#| msgid "Adding actions"
+msgid "Adding Rows"
+msgstr "Afegir accions"
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:398
+msgid ""
+"We added a way to modify the data in existing keys of the QMap, and in the "
+"front end, this is reflected as modifying the contents inside the "
+"AbstractCards. But what if we need to add a new key entry in the QMap and "
+"have that reflected on the QML side? Let's do this by creating a new method "
+"that is callable on the QML side to perform this task."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:404
+msgid ""
+"To make the method visible in QML, we must use the Q_OBJECT macro in the "
+"class, and begin the method declaration with the Q_INVOKABLE macro. This "
+"method will also include a string parameter, which is intended to be the new "
+"key in the QMap."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:420
+msgid ""
+"Inside of this method, we need to tell Qt that we want to create more rows "
+"in the model. This is done by calling `beginInsertRows()` to begin our row "
+"adding operation, followed by inserting whatever we need, then use "
+"`endInsertRows()` to end the operation. We still need to emit "
+"`dataChanged()` at the end, however. This time, we are going to update all "
+"rows, from the first row to the last one as the QMap may alphabetically "
+"reorganize itself, and we need to catch that across all rows."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:428
+msgid ""
+"When calling `beginInsertRows()`, we need to first pass in a QModelIndex "
+"class to specify the location of where the new rows should be added, "
+"followed by what the new first and last row numbers are going to be. In this "
+"tutorial, the first argument will just be `QModelIndex()` as there is no "
+"need to use the parameter here. We can just use the current row size for the "
+"first and last row number, as we'll just be adding one row at the end of the "
+"model."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:446
+msgid ""
+"The `dataChanged()` function uses QModelIndex as the data type for its "
+"parameters. However, we can convert integers in QModelIndex data types using "
+"the `index()` function."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:452
+msgid ""
+"Let's update the QML code so we are given the ability to add a new key to "
+"the QMap."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:471
+msgid "Clear TextField every time it's done"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:490
+msgid ""
+"Now, we should be given a new action at the top of the app that brings up a "
+"prompt that allows to add a new element to the model, with our own custom "
+"data."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:497
+msgid "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:503
+msgid "![app_screenshot_add_2.png](app_screenshot_add_2.png)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:509
+msgid "Removing Rows"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:511
+msgid ""
+"The way remove rows is similar to adding rows. Let's create another method "
+"that we'll call in QML. This time, we will use an additional parameter, and "
+"that is an integer that is the row number. The species name is used to "
+"delete the key from the QMap, while the row number will be used to delete "
+"the row on the front end."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:538
+msgid ""
+"Now, let's update the application so a \"Delete\" button appears alongside "
+"the edit button, and hook it up to our delete method."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:582
+msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:588
+msgid "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:594
+msgid "Full Code"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:596
+msgid ""
+"{{< readfile file=\"/content/docs/getting-started/kirigami/advanced-"
+"connect_models/model.h\" highlight=\"cpp\" >}} {{< readfile file=\"/content/"
+"docs/getting-started/kirigami/advanced-connect_models/model.cpp\" highlight="
+"\"cpp\" >}} {{< readfile file=\"/content/docs/getting-started/kirigami/"
+"advanced-connect_models/main.qml\" highlight=\"qml\" >}}"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:600
+#, fuzzy
+#| msgid "Message information"
+msgid "More Information"
+msgstr "Informació del missatge"
+
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:602
+msgid ""
+"For more information, see [Using C++ Models with Qt Quick Views](docs:"
+"qtquick;qtquick-modelviewsdata-cppmodels.html) and [Model/View Programming]"
+"(docs:qtquick;model-view-programming.html)."
+msgstr ""
+
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:0
 msgid "Figuring out main.cpp"
 msgstr "Descobrir el main.cpp"
@@ -1744,33 +2179,6 @@ msgstr ""
 msgid "Each word after `COMPONENTS` refers to a specific component."
 msgstr ""
 "Cada paraula després de `COMPONENTS` es refereix a un component específic."
-
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:39
-#: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:59
-#: content/docs/getting-started/kirigami/components-actions/index.md:14
-#: content/docs/getting-started/kirigami/components-actions/index.md:36
-#: content/docs/getting-started/kirigami/components-actions/index.md:192
-#: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:14
-#: content/docs/getting-started/kirigami/components-card/index.md:97
-#: content/docs/getting-started/kirigami/components-chips/index.md:112
-#: content/docs/getting-started/kirigami/components-controls/index.md:88
-#: content/docs/getting-started/kirigami/components-drawers/index.md:114
-#: content/docs/getting-started/kirigami/components-drawers/index.md:201
-#: content/docs/getting-started/kirigami/introduction-actions/index.md:61
-#: content/docs/getting-started/kirigami/introduction-actions/index.md:128
-#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:129
-#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:141
-#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:192
-#: content/docs/getting-started/kirigami/introduction-getting_started/index.md:245
-#: content/docs/getting-started/kirigami/introduction-kirigami-gallery/index.md:121
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:51
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:185
-#: content/docs/getting-started/kirigami/introduction-next_steps/index.md:25
-#: content/docs/getting-started/kirigami/introduction-pages/index.md:27
-#: content/docs/getting-started/kirigami/introduction-pages/index.md:53
-#: content/docs/getting-started/kirigami/style-colors/index.md:28
-msgid "Note"
-msgstr "Nota"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:41
