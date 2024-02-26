@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-25 01:39+0000\n"
-"PO-Revision-Date: 2024-02-16 12:14+0100\n"
+"PO-Revision-Date: 2024-02-25 14:40+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -1417,14 +1417,12 @@ msgstr ""
 "cppintegration-definetypes.html) aan."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
-#, fuzzy
-#| msgid "Connect logic to your QML user interface"
 msgid "Connect models to your QML user interface"
-msgstr "Verbindingslogica naar uw QML gebruikersinterface"
+msgstr "Modellen verbinden naar uw QML gebruikersinterface"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
 msgid "Connect models from C++ backend to QML frontend"
-msgstr ""
+msgstr "Modellen verbinden uit de C++-backend naar de QML-frontend"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
 msgid ""
@@ -1446,7 +1444,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:20
 msgid "Preparing the Class"
-msgstr ""
+msgstr "De klasse voorbereiden"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:22
 msgid ""
@@ -1500,7 +1498,7 @@ msgstr "Notitie"
 msgid ""
 "If you are following along, please remember to update your `CMakeLists.txt` "
 "file!"
-msgstr ""
+msgstr "Als u dit volgt, onthoud om uw bestand `CMakeLists.txt` bij te werken!"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:53
 msgid ""
@@ -1515,18 +1513,24 @@ msgid ""
 "`rowCount()` - Think of this function as a way to tell QML how many items "
 "are in the model to represent."
 msgstr ""
+"`rowCount()` - denk aan deze functie als een manier om QML te vertellen "
+"hoeveel items er in het model zijn om te representeren."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:60
 msgid ""
 "`roleNames()` - You can think of role names as property names attached to "
 "data in QML. This function allows you to create those roles."
 msgstr ""
+"`roleNames()` - u kunt denken aan rolnamen als eigenschapnamen gekoppeld aan "
+"gegevens in QML. Deze functie biedt u het aanmaken van die rollen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:62
 msgid ""
 "`data()` - This function is called when you want to retrieve the data that "
 "corresponds to the role names from the model."
 msgstr ""
+"`data()` - deze functie wordt aangeroepen wanneer u de gegevens, die "
+"corresponderen met de rolnamen uit het model, wilt ophalen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:67
 msgid ""
@@ -1645,10 +1649,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:259
-#, fuzzy
-#| msgid "![](Screenshot.png)"
 msgid "![App Screenshot](app_screenshot.png)"
-msgstr "![](Screenshot.png)"
+msgstr "![App Screenshot](app_screenshot.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:265
 msgid "Data Modification"
@@ -1681,7 +1683,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:280
 msgid "`value` - The contents of the new data."
-msgstr ""
+msgstr "`waarde` - de inhoud van de nieuwe gegevens."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:281
 msgid ""
@@ -1714,20 +1716,20 @@ msgid ""
 "Now, whenever the values of the model change in the frontend, the changes "
 "should automatically update on the backend."
 msgstr ""
+"Nu, wanneer de waarden van het model in de frontend wijzigen, zouden de "
+"automatisch in de backend moeten worden bijgewerkt."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:384
 msgid "![app_screenshot_1.png](app_screenshot_1.png)"
-msgstr ""
+msgstr "![app_screenshot_1.png](app_screenshot_1.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:390
 msgid "![app_screenshot_2.png](app_screenshot_2.png)"
-msgstr ""
+msgstr "![app_screenshot_2.png](app_screenshot_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:396
-#, fuzzy
-#| msgid "Adding actions"
 msgid "Adding Rows"
-msgstr "Toevoegen van acties"
+msgstr "Rijen worden toegevoegd"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:398
 msgid ""
@@ -1783,7 +1785,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:471
 msgid "Clear TextField every time it's done"
-msgstr ""
+msgstr "Het tekstveld wissen elke keer dat het is gedaan"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:490
 msgid ""
@@ -1791,18 +1793,21 @@ msgid ""
 "prompt that allows to add a new element to the model, with our own custom "
 "data."
 msgstr ""
+"Nu zouden een nieuwe actie bovenaan de toepassing moeten geven die een "
+"prompt laat verschijnen die een nieuw element aan het model biedt om toe te "
+"voegen, met onze eigen aangepaste gegevens."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:497
 msgid "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
-msgstr ""
+msgstr "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:503
 msgid "![app_screenshot_add_2.png](app_screenshot_add_2.png)"
-msgstr ""
+msgstr "![app_screenshot_add_2.png](app_screenshot_add_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:509
 msgid "Removing Rows"
-msgstr ""
+msgstr "Rijen verwijderen"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:511
 msgid ""
@@ -1818,18 +1823,21 @@ msgid ""
 "Now, let's update the application so a \"Delete\" button appears alongside "
 "the edit button, and hook it up to our delete method."
 msgstr ""
+"Laten we nu de toepassing bijwerken zodat een knop \"Verwijderen\" "
+"verschijnt naast de knop Bewerken en verbind het met uw methode voor "
+"verwijderen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:582
 msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
-msgstr ""
+msgstr "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:588
 msgid "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
-msgstr ""
+msgstr "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:594
 msgid "Full Code"
-msgstr ""
+msgstr "Volledige code"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:596
 msgid ""
@@ -1839,12 +1847,15 @@ msgid ""
 "\"cpp\" >}} {{< readfile file=\"/content/docs/getting-started/kirigami/"
 "advanced-connect_models/main.qml\" highlight=\"qml\" >}}"
 msgstr ""
+"{{< readfile file=\"/content/docs/getting-started/kirigami/advanced-"
+"connect_models/model.h\" highlight=\"cpp\" >}} {{< readfile file=\"/content/"
+"docs/getting-started/kirigami/advanced-connect_models/model.cpp\" highlight="
+"\"cpp\" >}} {{< readfile file=\"/content/docs/getting-started/kirigami/"
+"advanced-connect_models/main.qml\" highlight=\"qml\" >}}"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:600
-#, fuzzy
-#| msgid "Message information"
 msgid "More Information"
-msgstr "Berichtinformatie"
+msgstr "Meer informatie"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:602
 msgid ""

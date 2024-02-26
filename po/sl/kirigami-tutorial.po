@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-25 01:39+0000\n"
-"PO-Revision-Date: 2024-02-17 07:54+0100\n"
+"PO-Revision-Date: 2024-02-25 10:35+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -1389,14 +1389,12 @@ msgstr ""
 "html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
-#, fuzzy
-#| msgid "Connect logic to your QML user interface"
 msgid "Connect models to your QML user interface"
-msgstr "Povežite logiko s svojim uporabniškim vmesnikom QML"
+msgstr "Povežite modele z vašim uporabniškim vmesnikom QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
 msgid "Connect models from C++ backend to QML frontend"
-msgstr ""
+msgstr "Povežite modele iz zaledja C++ z začeljem QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
 msgid ""
@@ -1408,6 +1406,13 @@ msgid ""
 "some way needs to be delegated from a [Repeater](docs:qtquick;qml-qtquick-"
 "repeater.html)."
 msgstr ""
+"Kot je prikazano v [prejšnjem učbeniku](/docs/getting-started/kirigami/"
+"advanced-connect_backend/), lahko kodo C++ povežete s QML tako, da ustvarite "
+"arazred, ki bo obravnavan kot le še ena komponenta v QML. Vendar pa morda "
+"želite predstaviti bolj zapletene podatke, kot so podatki, ki morajo "
+"delovati kot [ListModel](docs:qtquick;qml-qtqml-models-listmodel.html) ali "
+"jih je potrebno nek način je treba delegirati iz [Repeater](docs:qtquick;qml-"
+"qtquick-repetitor.html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:16
 msgid ""
@@ -1415,10 +1420,13 @@ msgid ""
 "C++ side, and declare how the data from that model should be represented on "
 "the QML frontend."
 msgstr ""
+"Ustvarimo lahko lastne [modele](docs:qtcore;qabstractlistmodel.html) s "
+"strani C++ in navedite, kako naj bodo podatki iz tega modela predstavljeni "
+"na vmesniku QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:20
 msgid "Preparing the Class"
-msgstr ""
+msgstr "Priprava razreda"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:22
 msgid ""
@@ -1428,6 +1436,10 @@ msgid ""
 "to use just like a one-dimensional array. It should look similar to a QML "
 "ListModel."
 msgstr ""
+"V tem učbeniku bomo ustvarili razred, ki vsebuje QMap, kjer se QString "
+"uporablja kot ključ, objekti QStringList pa kot vrednosti. Začelje bo lahko "
+"prebralo in prikazalo ključe in vrednosti ter bo preprosto za uporabo kot "
+"enodimenzionalni niz. Videti mora biti podobno kot QMLListModel."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:27
 msgid ""
@@ -1435,6 +1447,9 @@ msgid ""
 "[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add in "
 "some add data to the QMap. These declarations will be located in `model.h`."
 msgstr ""
+"Da bi to naredili, moramo deklarirati razred, ki deduje "
+"od[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Dodajmo še "
+"nekatere dodatne podatke v QMap. Te deklaracije se bodo nahajale v `model.h`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:32
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:65
@@ -1472,7 +1487,7 @@ msgstr "Opomba"
 msgid ""
 "If you are following along, please remember to update your `CMakeLists.txt` "
 "file!"
-msgstr ""
+msgstr "Če sledite, ne pozabite posodobiti svoje datoteke `CMakeLists.txt`!"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:53
 msgid ""
@@ -1481,24 +1496,34 @@ msgid ""
 "three virtual functions that are essential at doing this, all of which do "
 "their own tasks."
 msgstr ""
+"Seveda tega razreda ne moremo prikazati takšnega, kot je. Povedati moramo "
+"tudi QML o tem, kako te podatke predstaviti v razredu. To lahko storimo s "
+"preglasitvijo treh virtualnih funkcij, ki so bistvenega pomena za to, in za "
+"vse svoje naloge."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:58
 msgid ""
 "`rowCount()` - Think of this function as a way to tell QML how many items "
 "are in the model to represent."
 msgstr ""
+"`rowCount()` – Zamislite si to funkcijo kot način, kako QML povedati, koliko "
+"elementovje v modelu, ki ga predstavljajo."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:60
 msgid ""
 "`roleNames()` - You can think of role names as property names attached to "
 "data in QML. This function allows you to create those roles."
 msgstr ""
+"`roleNames()` – Imena vlog si lahko predstavljate kot imena lastnosti, "
+"priloženapodatkom v QML. Ta funkcija vam omogoča ustvarjanje teh vlog."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:62
 msgid ""
 "`data()` - This function is called when you want to retrieve the data that "
 "corresponds to the role names from the model."
 msgstr ""
+"`data()` – Ta funkcija se pokliče, ko želite pridobiti podatke, ki ustrezajo "
+"imenom vlog iz modela."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:67
 msgid ""
@@ -1506,6 +1531,9 @@ msgid ""
 "is being delegated, and are not usable outside of it. See [Models and Views]"
 "(docs:qtquick;qtquick-modelviewsdata-modelview.html#models)."
 msgstr ""
+"Imena vlog po meri, ustvarjena z `roleNames()`, so uporabna samo, ko je "
+"model delegiran in jih ni mogoče uporabiti zunaj njega. Glejte [Modeli in "
+"pogledi](docs:qtquick;qtquick-modelviewsdata-modelview.html#models)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:75
 msgid ""
@@ -1514,24 +1542,31 @@ msgid ""
 "model. Since we are just dealing with a one-dimensional array in this "
 "tutorial, you can just think of \"rows\" as \"number of elements.\""
 msgstr ""
+"Tehnično so modeli v Qt predstavljeni kot tabele z vrsticami in stolpci. "
+"Torej preglasitev `rowCount()` pove Qt-u, koliko vrstic je v modelu. Ker "
+"imamo v tem primeru opravka samo z enodimenzionalnim nizomučbenika, si lahko "
+"\"vrstice\" preprosto predstavljate kot \"število elementov.\""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:82
 msgid "Overriding and Implementing `rowCount()`"
-msgstr ""
+msgstr "Preglasitev in implementacija `rowCount()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:84
 msgid ""
 "Let's override the function in the header file. The `rowCount()` comes with "
 "its own parameter, but will not be used in this example and is excluded."
 msgstr ""
+"Preglasimo funkcijo v datoteki glave. Funkciji `rowCount()` je "
+"priloženlasten parameter, vendar v tem primeru ne bo uporabljen in je "
+"izključen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:95
 msgid "Then, let's declare how many rows are in this model in `model.cpp`."
-msgstr ""
+msgstr "Nato deklarirajmo, koliko vrstic je v tem modelu v `model.cpp`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
 msgid "Overriding and Implementing `roleNames()`"
-msgstr ""
+msgstr "Preglasitev in implementacija `roleNames()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
 msgid ""
@@ -1541,12 +1576,18 @@ msgid ""
 "QML accesses a corresponding role, and as such we can make `data()` return "
 "what we want."
 msgstr ""
+"Preden preglasimo `roleNames()`, moramo deklarirati, v čem so vloge strani C+"
+"+ z uporabo javne spremenljivke `enum`. Razlog za to je, ker se te vrednosti "
+"iz spremenljivke `enum` vsakič posredujejo v `data()` kadar QML dostopa do "
+"ustrezne vloge in tako lahko vrnemo prek `data()` kar želimo."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:113
 msgid ""
 "Let's begin with creating the `enum` variable for roles, where each value is "
 "a role for the C++ side."
 msgstr ""
+"Začnimo z ustvarjanjem spremenljivke `enum` za vloge, kjer je vsaka vrednost "
+"vloga za stran C++."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:130
 msgid ""
@@ -1555,6 +1596,10 @@ msgid ""
 "enumerated values paired with [QByteArrays](docs:qtcore;qbytearray.html). "
 "The text in the QByteArray is what's used in the actual QML code."
 msgstr ""
+"Ko bomo to uredili, lahko končno ustvarimo, v čem so te vloge strani QML z "
+"uporabo [QHash](docs:qtcore;qhash.html), kjer so ključi oštevilčene "
+"vrednosti v paru z [QByteArrays](docs:qtcore;qbytearray.html). Besedilo v "
+"QByteArray je tisto, kar se uporablja v dejanski kodi QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:145
 msgid ""
@@ -1562,10 +1607,13 @@ msgid ""
 "QString key \"Feline\", \"Fox\", \"Goat\", each in a separate delegate. The "
 "same can be done with the QStringList values for the character names list."
 msgstr ""
+"V našem vzorčnem modelu lahko vlogo \"species\" uporabite za "
+"pridobitevQString ključ \"Feline\", \"Fox\", \"Goat\", v vsakem ločenem "
+"delegatu. Enako lahko storite z vrednostmi QStringList za seznam imen znakov."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:150
 msgid "Overriding and Implementing `data()`"
-msgstr ""
+msgstr "Preglasitev in implementacija `data()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:152
 msgid ""
@@ -1574,6 +1622,10 @@ msgid ""
 "previously stated, `role` is used by QML to get specific data returned when "
 "it's accessing a role."
 msgstr ""
+"V `data()` sta posredovana dva parametra: `index` in `role`. `indeks` je "
+"lokacija, kjer so podatki, ko so delegirani. Kot kot je bilo že navedeno, "
+"QML uporablja `role - vlogo` za vrnitev določenih podatkov, kodostopa do "
+"vloge."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:157
 msgid ""
@@ -1585,6 +1637,13 @@ msgid ""
 "beginning of the list plus the row of the index and the data that the "
 "iterator is pointing to is what is being returned."
 msgstr ""
+"V `data()` lahko uporabimo stavek `switch`, da vrnemo ustrezne podatke in "
+"podatkovne tipe, odvisno od vloge, kar je mogoče, saj `data()` vrne "
+"[QVariant](docs:qtcore;qvariant.html). Še vedno se moramo prepričati, da "
+"dobimo primerno lokacijo podatkov. V tem primeru spodaj lahko viditeda se "
+"deklarira nova spremenljivka iteratorja, ki je nastavljena iz začetka "
+"seznama plus vrstica indeksa in podatki, ki jih iterator, na katerega kaže "
+"prav tisto, kar je vrnjeno."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:165
 msgid ""
@@ -1593,18 +1652,22 @@ msgid ""
 "a QString. You may have to do data conversion in order for the data to be "
 "displayed properly."
 msgstr ""
+"Ne moremo pa kar tako vrniti podatkov, ki jih želimo. Morda se poskušamo "
+"zavezatipodatkov v lastnost z nezdružljivim tipom podatkov, kot je "
+"QStringList vQString. Morda boste morali izvesti pretvorbo podatkov, da bodo "
+"podatki lahkoprikazani pravilno."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:195
 msgid "Allow the Class to be Declared in QML"
-msgstr ""
+msgstr "Dovolite, da se razred deklarira v QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:197
 msgid "Let's not forget to make our class usable in QML."
-msgstr ""
+msgstr "Ne pozabimo narediti našega razreda uporabnega v QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:207
 msgid "Class Usage in QML"
-msgstr ""
+msgstr "Uporaba razreda v QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:209
 msgid ""
@@ -1615,20 +1678,24 @@ msgid ""
 "model. The data is accessed using word `model`, followed by the roles we "
 "declared in `roleNames()`."
 msgstr ""
+"Uporabljena datoteka QML bo vsebovala samo tri komponente [Kirigami."
+"AbstractCard](docs:kirigami2;AbstractCard) , kjer je ključ glava in vrednost "
+"vsebina. Te kartice so ustvarjene z delegiranjem AbstractCard z uporabo "
+"Repeaterja, kjer model po meri, ki smo ga ustvarili, deluje kotmodel. Do "
+"podatkov dostopamo z besedo `model`, ki ji sledijo vloge deklarirane v "
+"`roleNames()`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:259
-#, fuzzy
-#| msgid "![](Screenshot.png)"
 msgid "![App Screenshot](app_screenshot.png)"
-msgstr "![](Screenshot.png)"
+msgstr "![App Screenshot](app_screenshot.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:265
 msgid "Data Modification"
-msgstr ""
+msgstr "Spreminjanje podatkov"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:267
 msgid "Editing Data Using `dataChanged()` and `setData()`"
-msgstr ""
+msgstr "Urejanje podatkov z uporabo `dataChanged()` in `setData()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:269
 msgid ""
@@ -1639,6 +1706,11 @@ msgid ""
 "arguments. In this tutorial, we can just use the `index` argument of "
 "`setData()`."
 msgstr ""
+"Lahko se zgodi, da želite spremeniti podatke v modelu, in naj se spremembe "
+"odražajo na začelju. Vsakič, ko spremenimo podatke v modelu, moramo oddati "
+"signal `dataChanged()`, ki bo uveljavil te spremembe na sprednji strani v "
+"posebnih celicah, ki so določene v njegovih argumentih. V tem učbeniku lahko "
+"samo uporabimo argument `index` od `setData()`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:275
 msgid ""
@@ -1646,20 +1718,25 @@ msgid ""
 "modify the data from the frontend side automatically reflects those changes "
 "on the backend side. It requires three parameters:"
 msgstr ""
+"`setData()` je navidezna funkcija, ki jo lahko preglasite, tako da poskus "
+"spreminjanja podatkov na začelju samodejno odraža te spremembe na ozadju. "
+"Zahteva tri parametre:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
 msgid "`index` - The location of the data."
-msgstr ""
+msgstr "`index` – Lokacija podatkov."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:280
 msgid "`value` - The contents of the new data."
-msgstr ""
+msgstr "`value` – Vsebina novih podatkov."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:281
 msgid ""
 "`role` - In this context, the role here is used to tell views how they "
 "should handle data. The role here should be `Qt::EditRole`."
 msgstr ""
+"`role` – V tem kontekstu se role - vloga tukaj uporablja, da pogledom pove, "
+"kako morajo ravnati s podatki. Vloga tukaj bi morala biti `Qt::EditRole`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:284
 msgid ""
@@ -1668,38 +1745,46 @@ msgid ""
 "determine the location of where the data should be edited with the contents "
 "of `value`."
 msgstr ""
+"Parameter `role` se v tem primeru uporablja za zagotovitev, da je "
+"`setData()` lahkourejana z uporabniškim vnosom (Qt::EditRole). Z uporabo "
+"`indexa` lahko to uporabimo zadoločanje lokacije, kjer naj bodo podatki "
+"urejani z vsebino `value`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:308
 msgid ""
 "`setData()` does not automatically emit `dataChanged()` and that still has "
 "to be done manually."
 msgstr ""
+"`setData()` ne odda samodejno `dataChanged()` in to je še vedno treba "
+"opraviti ročno."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:313
 msgid ""
 "Let's update the QML code so that we can open up a prompt that allows us to "
 "edit the model using a Controls.Button attached to the cards."
 msgstr ""
+"Posodobimo kodo QML, da bomo lahko odprli poziv, ki nam to omogoča urejanje "
+"modela z gumbom Controls.Button, ki je pritrjen na kartice."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:377
 msgid ""
 "Now, whenever the values of the model change in the frontend, the changes "
 "should automatically update on the backend."
 msgstr ""
+"Zdaj, ko se vrednosti modela spremenijo v sprednjem delu, se spremembe "
+"morajo samodejno posodobiti v zaledju.​"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:384
 msgid "![app_screenshot_1.png](app_screenshot_1.png)"
-msgstr ""
+msgstr "![app_screenshot_1.png](app_screenshot_1.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:390
 msgid "![app_screenshot_2.png](app_screenshot_2.png)"
-msgstr ""
+msgstr "![app_screenshot_2.png](app_screenshot_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:396
-#, fuzzy
-#| msgid "Adding actions"
 msgid "Adding Rows"
-msgstr "Dodajanje dejanj"
+msgstr "Dodajanje vrstic"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:398
 msgid ""
@@ -1709,6 +1794,11 @@ msgid ""
 "have that reflected on the QML side? Let's do this by creating a new method "
 "that is callable on the QML side to perform this task."
 msgstr ""
+"Dodali smo način za spreminjanje podatkov v obstoječih ključih QMap in v "
+"začelju, se to odraža kot spreminjanje vsebine znotraj AbstractCards. Kaj "
+"pa, če moramo dodati nov ključni vnos v QMap inse je to odraža na strani "
+"QML? Naredimo to tako, da ustvarimo novo metodo, ki jo je mogoče priklicati "
+"na strani QML za izvedbo te naloge."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:404
 msgid ""
@@ -1717,6 +1807,9 @@ msgid ""
 "method will also include a string parameter, which is intended to be the new "
 "key in the QMap."
 msgstr ""
+"Da bi bila metoda vidna v QML, moramo uporabiti makro Q_OBJECT v razredu in "
+"začeti deklaracijo metode z makrom Q_INVOKABLE. Ta metoda bo vključevala "
+"tudi parameter niza, ki naj bi bil novi ključ v QMap."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:420
 msgid ""
@@ -1728,6 +1821,13 @@ msgid ""
 "rows, from the first row to the last one as the QMap may alphabetically "
 "reorganize itself, and we need to catch that across all rows."
 msgstr ""
+"Znotraj te metode moramo Qt-ju povedati, da želimo ustvariti več vrstic v "
+"modelu. To naredimo tako, da pokličemo `beginInsertRows()` za začetek naše "
+"vrsticeoperacija dodajanja, ki ji sledi vstavljanje vsega, kar potrebujemo, "
+"nato uporaba`endInsertRows()` za končanje operacije. Še vedno moramo "
+"oddajati`dataChanged()` na koncu pa. Tokrat bomo posodobili vse vrstice, od "
+"prve vrstice do zadnje, kot lahko QMap po abecedi se reorganizira in to "
+"moramo ujeti v vseh vrsticah."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:428
 msgid ""
@@ -1739,6 +1839,12 @@ msgid ""
 "first and last row number, as we'll just be adding one row at the end of the "
 "model."
 msgstr ""
+"Ko kličemo `beginInsertRows()`, moramo najprej posredovati razred "
+"QModelIndex, da določite lokacijo, kamor naj bodo dodane nove vrstice, ki ji "
+"sledijo nove številke prve in zadnje vrstice. V tem učbeniku, bo prvi "
+"argument samo `QModelIndex()`, ker ne ni potrebe uporabiti parametra. "
+"Uporabimo lahko samo trenutno velikost vrstice za številko prve in zadnje "
+"vrstice, saj bomo dodali samo eno vrstico na koncumodela."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:446
 msgid ""
@@ -1746,16 +1852,19 @@ msgid ""
 "parameters. However, we can convert integers in QModelIndex data types using "
 "the `index()` function."
 msgstr ""
+"Funkcija `dataChanged()` uporablja QModelIndex kot podatkovni tip za svoje "
+"parametre. Vendar pa lahko pretvorimo cela števila v podatkovne vrste "
+"QModelIndex z uporabo funkcije `index()`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:452
 msgid ""
 "Let's update the QML code so we are given the ability to add a new key to "
 "the QMap."
-msgstr ""
+msgstr "Posodobimo kodo QML, da bomo lahko dodali nov ključ v QMap."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:471
 msgid "Clear TextField every time it's done"
-msgstr ""
+msgstr "Počisti TextField vsakič, ko je narejeno"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:490
 msgid ""
@@ -1763,18 +1872,20 @@ msgid ""
 "prompt that allows to add a new element to the model, with our own custom "
 "data."
 msgstr ""
+"Zdaj bi morali dobiti novo dejanje na vrhu aplikacije, ki prikaže poziv, ki "
+"omogoča dodajanje novega elementa s podatki v model po lastni meri."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:497
 msgid "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
-msgstr ""
+msgstr "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:503
 msgid "![app_screenshot_add_2.png](app_screenshot_add_2.png)"
-msgstr ""
+msgstr "![app_screenshot_add_2.png](app_screenshot_add_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:509
 msgid "Removing Rows"
-msgstr ""
+msgstr "Odstranjevanje vrstic"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:511
 msgid ""
@@ -1784,24 +1895,31 @@ msgid ""
 "delete the key from the QMap, while the row number will be used to delete "
 "the row on the front end."
 msgstr ""
+"Način odstranjevanja vrstic je podoben dodajanju vrstic. Ustvarimo drugo "
+"metodo, ki jo bomo poklicali v QML. Tokrat bomo uporabili dodaten parameter "
+"in to je celo število, ki je številka vrstice. Ime vrste se uporablja za "
+"brisanje ključa iz QMap, medtem ko bo številka vrstice uporabljena za "
+"brisanjevrstice na začelju."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:538
 msgid ""
 "Now, let's update the application so a \"Delete\" button appears alongside "
 "the edit button, and hook it up to our delete method."
 msgstr ""
+"Zdaj pa posodobimo aplikacijo, da se gumb »Izbriši« prikaže poleg gumba za "
+"urejanje in ga povežimo z našo metodo brisanja."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:582
 msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
-msgstr ""
+msgstr "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:588
 msgid "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
-msgstr ""
+msgstr "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:594
 msgid "Full Code"
-msgstr ""
+msgstr "Celotna koda"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:596
 msgid ""
@@ -1811,12 +1929,15 @@ msgid ""
 "\"cpp\" >}} {{< readfile file=\"/content/docs/getting-started/kirigami/"
 "advanced-connect_models/main.qml\" highlight=\"qml\" >}}"
 msgstr ""
+"{{< readfile file=\"/content/docs/getting-started/kirigami/advanced-"
+"connect_models/model.h\" highlight=\"cpp\" >}} {{< readfile file=\"/content/"
+"docs/getting-started/kirigami/advanced-connect_models/model.cpp\" highlight="
+"\"cpp\" >}} {{< readfile file=\"/content/docs/getting-started/kirigami/"
+"advanced-connect_models/main.qml\" highlight=\"qml\" >}}"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:600
-#, fuzzy
-#| msgid "Message information"
 msgid "More Information"
-msgstr "Podatki o sporočilu"
+msgstr "Več informacij"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:602
 msgid ""
@@ -1824,6 +1945,9 @@ msgid ""
 "qtquick;qtquick-modelviewsdata-cppmodels.html) and [Model/View Programming]"
 "(docs:qtquick;model-view-programming.html)."
 msgstr ""
+"Za več informacij glejte [Uporaba modelov C++ s hitrimi pogledi Qt](docs:"
+"qtquick;qtquick-modelviewsdata-cppmodels.html) in [Model/View Programming]"
+"(docs:qtquick;model-view-programming.html)."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:0
 msgid "Figuring out main.cpp"
