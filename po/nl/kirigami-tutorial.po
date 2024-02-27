@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-25 01:39+0000\n"
-"PO-Revision-Date: 2024-02-25 14:40+0100\n"
+"PO-Revision-Date: 2024-02-26 11:58+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -1434,6 +1434,13 @@ msgid ""
 "some way needs to be delegated from a [Repeater](docs:qtquick;qml-qtquick-"
 "repeater.html)."
 msgstr ""
+"Zoals getoond in de [vorige inleiding](/docs/getting-started/kirigami/"
+"advanced-connect_backend/), kunt u C++ code verbinden met QML door een "
+"klasse aan te maken die behandeld zal worden als nog een component in QML. U "
+"zou echter meer gecompliceerde gegevens willen representeren, zoals gegevens "
+"die moeten acteren als een klant [ListModel](docs:qtquick;qml-qtqml-models-"
+"listmodel.html) of op de een of andere manier gedelegeerd moeten worden uit "
+"een [Repeater](docs:qtquick;qml-qtquick-repeater.html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:16
 msgid ""
@@ -1441,6 +1448,9 @@ msgid ""
 "C++ side, and declare how the data from that model should be represented on "
 "the QML frontend."
 msgstr ""
+"We kunnen onze eigen [modellen](docs:qtcore;qabstractlistmodel.html) "
+"aanmaken vanaf de C++ kant en declareren hoe de gegevens uit dat model "
+"gerepresenteerd moeten worden op de QML-frontend."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:20
 msgid "Preparing the Class"
@@ -1454,6 +1464,11 @@ msgid ""
 "to use just like a one-dimensional array. It should look similar to a QML "
 "ListModel."
 msgstr ""
+"In deze inleiding zullen we een klasse aanmaken die een QMap bevat, waar een "
+"QString wordt gebruikt als een sleutel en QStringList objecten gebruikt "
+"worden als waarden. De frontend zal in staat zijn de sleutels en de waarden "
+"te lezen en te tonen en eenvoudig te gebruiken net als een een-dimensionaal "
+"array. Het zou er uit moeten zien als een QML-ListModel."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:27
 msgid ""
@@ -1461,6 +1476,10 @@ msgid ""
 "[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add in "
 "some add data to the QMap. These declarations will be located in `model.h`."
 msgstr ""
+"Om dit te doen moeten we een klasse declareren die erft van "
+"[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Laten we ook "
+"enige toegevoegde gegevens invoegen in de QMap. Deze declaraties zullen "
+"gelokaliseerd zijn in `model.h`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:32
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:65
@@ -1507,6 +1526,10 @@ msgid ""
 "three virtual functions that are essential at doing this, all of which do "
 "their own tasks."
 msgstr ""
+"Natuurlijk kunnen we deze klasse niet gewoon tonen zoals deze is. We moeten "
+"aan QML ook vertellen hoe deze gegevens in de klasse te representeren. We "
+"kunnen dit doen door drie virtuele functies te overschrijven die essentieel "
+"zijn om dit te  doen, allen zullen hun eigen taken doen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:58
 msgid ""
@@ -1538,6 +1561,10 @@ msgid ""
 "is being delegated, and are not usable outside of it. See [Models and Views]"
 "(docs:qtquick;qtquick-modelviewsdata-modelview.html#models)."
 msgstr ""
+"De aangepaste rolnamen aangemaakt met `roleNames()` zijn alleen te gebruiken "
+"wanneer een model wordt gedelegeerd en zijn daar buiten niet bruikbaar. Zie "
+"[Modellen en weergaven](docs:qtquick;qtquick-modelviewsdata-modelview."
+"html#models)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:75
 msgid ""
@@ -1546,24 +1573,33 @@ msgid ""
 "model. Since we are just dealing with a one-dimensional array in this "
 "tutorial, you can just think of \"rows\" as \"number of elements.\""
 msgstr ""
+"Technisch worden modellen in Qt gerepresenteerd als tabellen, met rijen en "
+"kolommen. Dus, wat overschrijven van `rowCount()` doet aan Qt vertellen "
+"hoeveel rijen er in een model zitten. Omdat we van doen hebben met met een "
+"een-dimensionaal array in deze inleiding, kunt u gewoon denken aan \"rijen\" "
+"als \"aantal elementen.\""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:82
 msgid "Overriding and Implementing `rowCount()`"
-msgstr ""
+msgstr "Overschrijven en implementeren `rowCount()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:84
 msgid ""
 "Let's override the function in the header file. The `rowCount()` comes with "
 "its own parameter, but will not be used in this example and is excluded."
 msgstr ""
+"Laten we de functie in het kopbestand overschrijven. De `rowCount()` komt "
+"met zijn eigen parameter, maar zal niet gebruikt worden in dit voorbeeld en "
+"wordt uitgesloten."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:95
 msgid "Then, let's declare how many rows are in this model in `model.cpp`."
 msgstr ""
+"Laten we daarna declareren hoeveel rijen er in dit model in `model.cpp` zijn."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
 msgid "Overriding and Implementing `roleNames()`"
-msgstr ""
+msgstr "Overschrijven en implementeren `roleNames()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
 msgid ""
@@ -1573,12 +1609,19 @@ msgid ""
 "QML accesses a corresponding role, and as such we can make `data()` return "
 "what we want."
 msgstr ""
+"Voordat we `roleNames()` overschrijven, moeten we declareren wat de rollen "
+"zijn aan de C++ kan met gebruik van een publieke `enum` variabele. De reden "
+"hiervoor is omdat deze waarden uit de variabele `enum` doorgegeven worden in "
+"`data()` elke keer dat QML toegang pakt tot een bijbehorende rol en als "
+"zodanig kunnen we `data()` terug laten geven wat we willen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:113
 msgid ""
 "Let's begin with creating the `enum` variable for roles, where each value is "
 "a role for the C++ side."
 msgstr ""
+"Laten we beginnen met de variabele `enum` voor rollen aan te maken, waar "
+"elke waarde is een rol is voor de C++ kant."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:130
 msgid ""
@@ -1587,6 +1630,11 @@ msgid ""
 "enumerated values paired with [QByteArrays](docs:qtcore;qbytearray.html). "
 "The text in the QByteArray is what's used in the actual QML code."
 msgstr ""
+"Nadat we dat hebben vastgesteld kunnen we tenslotte aanmaken wat deze rollen "
+"zijn aan de kant an QML met een [QHash](docs:qtcore;qhash.html) waar de "
+"sleutels de enumerated waarden zijn gepaard met [QByteArrays](docs:qtcore;"
+"qbytearray.html). De tekst in de QByteArray is wat wordt gebruikt in de "
+"actuele QML code."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:145
 msgid ""
@@ -1594,6 +1642,10 @@ msgid ""
 "QString key \"Feline\", \"Fox\", \"Goat\", each in a separate delegate. The "
 "same can be done with the QStringList values for the character names list."
 msgstr ""
+"In ons voorbeeldmodel kan de rol \"soorten\" gebruikt worden om de QString-"
+"sleutel \"Feline\", \"Fox\", \"Goat\" op te halen, elk in een gescheiden "
+"gedelegeerde. Hetzelfde kan gedaan worden met de QStringList waarden voor de "
+"karakternamenlijst."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:150
 msgid "Overriding and Implementing `data()`"
