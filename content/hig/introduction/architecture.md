@@ -118,7 +118,7 @@ The default for all three is the *Breeze* theme.
 
 {{< alert title="Note" color="info" >}}
 Only *Breeze* is
-covered by the HIG, other 3rd-party themes are not covered.
+covered by the HIG; other 3rd-party themes are not covered.
 {{< /alert >}}
 
 ![Overview of breeze controls](/hig/breeze.jpeg)
