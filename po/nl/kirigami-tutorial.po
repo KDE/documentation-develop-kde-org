@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-25 01:39+0000\n"
-"PO-Revision-Date: 2024-02-26 11:58+0100\n"
+"PO-Revision-Date: 2024-02-27 10:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -1649,7 +1649,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:150
 msgid "Overriding and Implementing `data()`"
-msgstr ""
+msgstr "Overschrijven en implementeren `data()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:152
 msgid ""
@@ -1658,6 +1658,10 @@ msgid ""
 "previously stated, `role` is used by QML to get specific data returned when "
 "it's accessing a role."
 msgstr ""
+"Er zijn twee parameters die doorgegeven worden in `data()`: `index` en "
+"`role`. `index` is de locatie waar de gegevens zijn wanneer ze gedelegeerd "
+"worden. Zoals eerder gesteld, `role` wordt gebruikt door QML om specifieke "
+"gegevens terug te krijgen wanneer er toegang toe wordt gevraagd als rol."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:157
 msgid ""
@@ -1669,6 +1673,14 @@ msgid ""
 "beginning of the list plus the row of the index and the data that the "
 "iterator is pointing to is what is being returned."
 msgstr ""
+"In `data()` kunnen we een `switch` statement gebruiken om de toepasselijke "
+"gegevens en gegevenstype terug te geven afhankelijk van de rol, wat mogelijk "
+"is als `data()` een [QVariant](docs:qtcore;qvariant.html) teruggeeft. We "
+"moeten echter nog steeds zeker maken dat we de toepasselijke locatie van de "
+"gegevens krijgen. In dit onderstaande voorbeeld kunt u zien dat een nieuwe "
+"iterator-variabele gedeclareerd wordt, die is gezet vanaf het begin van de "
+"lijst plus de rij van de index en de gegevens waar de iterator naar wijst is "
+"wat wordt teruggegeven."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:165
 msgid ""
@@ -1677,18 +1689,22 @@ msgid ""
 "a QString. You may have to do data conversion in order for the data to be "
 "displayed properly."
 msgstr ""
+"We kunnen echter niet gewoon teruggeven welke gegevens dan ook die we "
+"willen. We kunnen proberen gegevens te binden aan een eigenschap met een "
+"niet compatibel type gegeven, zoals een QStringList aan een QString. U moet "
+"misschien conversie van gegevens doen om het gegeven juist weer te geven."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:195
 msgid "Allow the Class to be Declared in QML"
-msgstr ""
+msgstr "De klasse toestaan gedeclareerd te worden in QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:197
 msgid "Let's not forget to make our class usable in QML."
-msgstr ""
+msgstr "Laten we niet vergeten om onze klasse bruikbaar te maken in QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:207
 msgid "Class Usage in QML"
-msgstr ""
+msgstr "Gebruik van klasse in QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:209
 msgid ""
@@ -1706,11 +1722,11 @@ msgstr "![App Screenshot](app_screenshot.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:265
 msgid "Data Modification"
-msgstr ""
+msgstr "Modificatie van gegevens"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:267
 msgid "Editing Data Using `dataChanged()` and `setData()`"
-msgstr ""
+msgstr "Gegevens bewerken met gebruik van `dataChanged()` en `setData()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:269
 msgid ""
@@ -1731,7 +1747,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
 msgid "`index` - The location of the data."
-msgstr ""
+msgstr "`index` - de locatie van de gegevens."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:280
 msgid "`value` - The contents of the new data."
