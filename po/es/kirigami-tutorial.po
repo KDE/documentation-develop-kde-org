@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-25 01:39+0000\n"
-"PO-Revision-Date: 2024-02-22 02:35+0100\n"
+"PO-Revision-Date: 2024-03-01 21:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -268,11 +268,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Form Delegates in your settings pages"
-msgstr ""
+msgstr "Delegados de Form en sus páginas de preferencias"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Create elegant custom settings pages."
-msgstr ""
+msgstr "Cree elegantes páginas de preferencias personalizadas."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:10
 msgid ""
@@ -280,6 +280,9 @@ msgid ""
 "Now you will be able to use their same inner components to create your "
 "settings pages."
 msgstr ""
+"Ha aprendido a añadir las páginas «Acerca de» y «Acerca de KDE» a su "
+"aplicación. Ahora podrá usar los mismos componentes internos para crear sus "
+"páginas de preferencias."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:12
 msgid "The project structure should look like this:"
@@ -303,6 +306,8 @@ msgid ""
 "We can now start checking out the components used to create our Settings "
 "page: the Form Card and its Delegates."
 msgstr ""
+"Ahora podemos comenzar a revisar los componentes usados para crear nuestra "
+"página de «Preferencias»: la tarjeta de formulario y sus delegados."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:94
 msgid "Form Delegates"
@@ -318,6 +323,9 @@ msgid ""
 "classFormCard.html) is the main component we will be using to group all its "
 "child components, the Delegates."
 msgstr ""
+"[FormCard.FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html) es el componente principal que usaremos para agrupar "
+"todos sus componentes hijos, los «delegados»."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:100
 msgid ""
@@ -327,10 +335,15 @@ msgid ""
 "the background, in a similar manner to a [Kirigami.Card](docs:kirigami2;"
 "Card)."
 msgstr ""
+"Ya hemos usado una tarjeta de formulario en la [introducción a los "
+"complementos de Kirigami](/docs/getting-started/kirigami/addons-"
+"introduction). Su propósito principal es el de servir como contenedor para "
+"otros componentes con un color distinto al del fondo, de un modo similar a "
+"una [Kirigami.Card](docs:kirigami2;Card)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:102
 msgid "Create a new `contents/ui/SettingsPage.qml` file:"
-msgstr ""
+msgstr "Cree un nuevo archivo `contents/ui/SettingsPage.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:110
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:114
@@ -344,6 +357,11 @@ msgid ""
 "FormCardPage`, which inherits [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage)."
 msgstr ""
+"Como estamos creando un archivo QML distinto para nuestra página de "
+"«Preferencias», y como posiblemente necesitaremos prepararla para que "
+"permita usar desplazamiento en la página, usamos una `FormCard."
+"FormCardPage`, que hereda de [Kirigami.ScrollablePage](docs:kirigami2;"
+"ScrollablePage)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:121
 msgid ""
@@ -351,6 +369,9 @@ msgid ""
 "layout, so no additional ColumnLayout is needed and our delegates can be "
 "added directly to it."
 msgstr ""
+"Lo bueno de la página de la tarjeta de formulario es que viene con un diseño "
+"interno, por lo que no necesita ningún «ColumnLayout» adicional, y nuestros "
+"delegados se pueden añadir directamente al mismo."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:123
 msgid ""
@@ -358,6 +379,9 @@ msgid ""
 "delegates directly with a Kirigami.ScrollablePage, but in that case you will "
 "need to add your own layouts. {{< /alert >}}"
 msgstr ""
+"{{< alert color=\"info\" title=\"Nota\" >}} Se pueden usar delegados de "
+"FormCard directamente con una Kirigami.ScrollablePage, aunque en este caso "
+"tendrá que añadir sus propios diseños. {{< /alert >}}"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:127
 msgid "FormHeader"
@@ -470,6 +494,14 @@ msgid ""
 "html/classFormCheckDelegate.html) and [FormSwitchDelegate](https://api.kde."
 "org/frameworks/kirigami-addons/html/classFormSwitchDelegate.html)."
 msgstr ""
+"Los botones de opción, las casillas de verificación y los interruptores son "
+"componentes que se usan con mucha frecuencia en cualquier interfaz de "
+"usuario. Los complementos de Kirigami los proporcionan como "
+"[FormRadioDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormRadioDelegate.html), [FormCheckDelegate](https://api.kde.org/"
+"frameworks/kirigami-addons/html/classFormCheckDelegate.html) y "
+"[FormSwitchDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormSwitchDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:258
 msgid ""
@@ -479,6 +511,11 @@ msgid ""
 "and handlers: checked and onChecked, toggled and onToggled, clicked and "
 "onClicked."
 msgstr ""
+"Sus únicas propiedades principales son `text` y `description`. Se usan de "
+"forma diferente porque heredan de [AbstractButton](docs:qtquickcontrols;"
+"QtQuick.Controls.AbstractButton), por lo que se espera que use sus señales y "
+"manejadores: «checked» y «onChecked», «toggled» y «onToggled», «clicked» y "
+"«onClicked»."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:260
 msgid ""
@@ -497,10 +534,12 @@ msgid ""
 "We bind the visibility of each radio button to a switch, so they only appear "
 "when the switch is enabled."
 msgstr ""
+"Vinculamos la visibilidad de cada botón de opción a un interruptor, por lo "
+"que solo aparecen cuando el interruptor está activado."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:289
 msgid "Best Practices"
-msgstr ""
+msgstr "Mejores prácticas"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:291
 msgid "<details><summary>Click here to read more</summary>\n"
@@ -616,10 +655,10 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:385
-#, fuzzy
-#| msgid "Finally, our application should look like this:"
 msgid "With the checkbox, our Settings page should look like this:"
-msgstr "Finalmente, nuestra aplicación debería parecerse a esto:"
+msgstr ""
+"Con la casilla de verificación, nuestra página de «Preferencias» debería "
+"parecerse a esto:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:389
 msgid "FormDelegateSeparator"
@@ -807,12 +846,16 @@ msgid ""
 "Importing `org.kde.kirigamiaddons.formcard` makes all FormCard components "
 "available to your QML file."
 msgstr ""
+"La importación de `org.kde.kirigamiaddons.formcard` hace que todos los "
+"componentes de FormCard estén disponibles para nuestro archivo QML."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:85
 msgid ""
 "We will have only a single section in our main page, so we add a single "
 "FormCard:"
 msgstr ""
+"Solo tendremos una única sección en nuestra página principal, por lo que "
+"añadimos una única FormCard:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:89
 msgid ""
@@ -1216,14 +1259,12 @@ msgstr ""
 "cppintegration-definetypes.html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
-#, fuzzy
-#| msgid "Connect logic to your QML user interface"
 msgid "Connect models to your QML user interface"
-msgstr "Conectar la lógica a la interfaz de usuario QML"
+msgstr "Conectar modelos a la interfaz de usuario QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
 msgid "Connect models from C++ backend to QML frontend"
-msgstr ""
+msgstr "Conectar modelos del motor C++ a la interfaz de QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
 msgid ""
@@ -1245,7 +1286,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:20
 msgid "Preparing the Class"
-msgstr ""
+msgstr "Preparación de la clase"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:22
 msgid ""
@@ -1344,7 +1385,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:82
 msgid "Overriding and Implementing `rowCount()`"
-msgstr ""
+msgstr "Redefinición e implementación de `rowCount()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:84
 msgid ""
@@ -1355,10 +1396,11 @@ msgstr ""
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:95
 msgid "Then, let's declare how many rows are in this model in `model.cpp`."
 msgstr ""
+"A continuación declaramos cuántas filas hay en este modelo en `model.cpp`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
 msgid "Overriding and Implementing `roleNames()`"
-msgstr ""
+msgstr "Redefinición e implementación de `roleNames()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
 msgid ""
@@ -1392,7 +1434,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:150
 msgid "Overriding and Implementing `data()`"
-msgstr ""
+msgstr "Redefinición e implementación de `data()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:152
 msgid ""
@@ -1423,15 +1465,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:195
 msgid "Allow the Class to be Declared in QML"
-msgstr ""
+msgstr "Permitir que la clase se declare en QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:197
 msgid "Let's not forget to make our class usable in QML."
-msgstr ""
+msgstr "No olvidemos hacer que nuestra clase se pueda usar en QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:207
 msgid "Class Usage in QML"
-msgstr ""
+msgstr "Uso de clases en QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:209
 msgid ""
@@ -1444,18 +1486,16 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:259
-#, fuzzy
-#| msgid "![](Screenshot.png)"
 msgid "![App Screenshot](app_screenshot.png)"
-msgstr "![](Screenshot.png)"
+msgstr "![Captura de pantalla de la aplicación](app_screenshot.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:265
 msgid "Data Modification"
-msgstr ""
+msgstr "Modificación de datos"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:267
 msgid "Editing Data Using `dataChanged()` and `setData()`"
-msgstr ""
+msgstr "Edición de datos con `dataChanged()` y `setData()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:269
 msgid ""
@@ -1476,11 +1516,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
 msgid "`index` - The location of the data."
-msgstr ""
+msgstr "`index`: La ubicación de los datos."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:280
 msgid "`value` - The contents of the new data."
-msgstr ""
+msgstr "`value`: El contenido de los datos nuevos."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:281
 msgid ""
@@ -1516,17 +1556,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:384
 msgid "![app_screenshot_1.png](app_screenshot_1.png)"
-msgstr ""
+msgstr "![app_screenshot_1.png](app_screenshot_1.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:390
 msgid "![app_screenshot_2.png](app_screenshot_2.png)"
-msgstr ""
+msgstr "![app_screenshot_2.png](app_screenshot_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:396
-#, fuzzy
-#| msgid "Adding actions"
 msgid "Adding Rows"
-msgstr "Añadir acciones"
+msgstr "Añadir filas"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:398
 msgid ""
@@ -1593,15 +1631,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:497
 msgid "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
-msgstr ""
+msgstr "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:503
 msgid "![app_screenshot_add_2.png](app_screenshot_add_2.png)"
-msgstr ""
+msgstr "![app_screenshot_add_2.png](app_screenshot_add_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:509
 msgid "Removing Rows"
-msgstr ""
+msgstr "Eliminar filas"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:511
 msgid ""
@@ -1620,15 +1658,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:582
 msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
-msgstr ""
+msgstr "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:588
 msgid "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
-msgstr ""
+msgstr "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:594
 msgid "Full Code"
-msgstr ""
+msgstr "Código completo"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:596
 msgid ""
@@ -1638,12 +1676,15 @@ msgid ""
 "\"cpp\" >}} {{< readfile file=\"/content/docs/getting-started/kirigami/"
 "advanced-connect_models/main.qml\" highlight=\"qml\" >}}"
 msgstr ""
+"{{< readfile file=\"/content/docs/getting-started/kirigami/advanced-"
+"connect_models/model.h\" highlight=\"cpp\" >}} {{< readfile file=\"/content/"
+"docs/getting-started/kirigami/advanced-connect_models/model.cpp\" highlight="
+"\"cpp\" >}} {{< readfile file=\"/content/docs/getting-started/kirigami/"
+"advanced-connect_models/main.qml\" highlight=\"qml\" >}}"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:600
-#, fuzzy
-#| msgid "Message information"
 msgid "More Information"
-msgstr "Información del mensaje"
+msgstr "Más información"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:602
 msgid ""
@@ -8498,17 +8539,6 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:73
-#, fuzzy
-#| msgid ""
-#| "Signals invoke their handlers when they are called. In this case, we have "
-#| "created two signals that we can invoke with different outcomes, and to "
-#| "which we can attach information about the countdown we are adding or "
-#| "creating. A neat thing about signals is that they expose the variables "
-#| "defined in them to the functions that are listening to them, which is why "
-#| "we can just call those variable names in our `onEdited` and `onAdded` "
-#| "handlers in `main.qml`. Our signals are invoked by the 'Done' button "
-#| "depending on what the `mode` property, defined at the top of our "
-#| "AddEditSheet, is set to."
 msgid ""
 "Signals invoke their handlers when they are called. In this case, we have "
 "created two signals, `added` and `edited`, that we can invoke with different "
@@ -8521,14 +8551,15 @@ msgid ""
 "AddEditSheet, is set to."
 msgstr ""
 "Las señales invocan a sus controladores cuando se las llama. En este caso, "
-"hemos creado dos señales que podemos invocar con diferentes resultados, y a "
-"las que podemos adjuntar información sobre la cuenta atrás que estamos "
-"añadiendo o creando. Una cosa interesante de las señales es que exponen las "
-"variables definidas en ellas a las funciones que las están escuchando, por "
-"lo que podemos simplemente llamar a esos nombres de variables en nuestros "
-"controladores `onEdited` y `onAdded` de `main.qml`. Nuestras señales son "
-"invocadas por el botón 'Terminado' dependiendo del contenido de la propiedad "
-"`mode`, definida en la parte superior de nuestra AddEditSheet."
+"hemos creado dos señales, `added` y `edited`, que podemos invocar con "
+"diferentes resultados, y a las que podemos adjuntar información sobre la "
+"cuenta atrás que estamos añadiendo o creando. Una cosa interesante de las "
+"señales es que exponen las variables definidas en ellas a las funciones que "
+"las están escuchando, por lo que podemos simplemente llamar a esos nombres "
+"de variables en nuestros controladores `onEdited` y `onAdded` de `main.qml`. "
+"Nuestras señales son invocadas por el botón \"Terminado\" dependiendo del "
+"contenido de la propiedad `mode`, definida en la parte superior de nuestra "
+"AddEditSheet."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:75
 msgid ""
@@ -8542,15 +8573,6 @@ msgstr ""
 "`mode` está asignada para añadir..."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:77
-#, fuzzy
-#| msgid ""
-#| "Which brings us back to `main.qml` and our new `openPopulateSheet` "
-#| "function. You might have noticed that this is what is called now when the "
-#| "countdown-adding action is triggered. This function takes in several "
-#| "arguments which have been provided with defaults. This is helpful when we "
-#| "simply want to add a new countdown, because we can have the concise "
-#| "function call `openPopulateSheet(\"add\")`. More importantly, this "
-#| "function sets all the relevant properties in AddEditSheet."
 msgid ""
 "Which brings us back to `main.qml` and our new `openPopulatedSheet()` "
 "function. You might have noticed that this is what it is called now when the "
@@ -8561,12 +8583,12 @@ msgid ""
 "the relevant properties in AddEditSheet."
 msgstr ""
 "Lo que nos lleva de vuelta a `main.qml` y a nuestra nueva función "
-"`openPopulateSheet`. Es posible que haya notado que esto es lo que se llama "
-"ahora cuando se dispara la acción para añadir una cuenta atrás. Esta función "
-"tiene varios argumentos de entrada que se han proporcionado con valores por "
-"defecto. Esto resulta de utilidad cuando solo queremos añadir una nueva "
-"cuenta atrás, porque podemos hacer que la función concisa llame a "
-"`openPopulateSheet(\"add\")`. Y, lo más importante, esta función asigna "
+"`openPopulatedSheet()`. Es posible que haya notado que esto es lo que se "
+"llama ahora cuando se dispara la acción para añadir una cuenta atrás. Esta "
+"función tiene varios argumentos de entrada que se han proporcionado con "
+"valores por defecto. Esto resulta de utilidad cuando solo queremos añadir "
+"una nueva cuenta atrás, porque podemos hacer que la función concisa llame a "
+"`openPopulatedSheet(\"add\")`. Y, lo más importante, esta función asigna "
 "todas las propiedades relevantes en AddEditSheet."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:91
@@ -8594,11 +8616,6 @@ msgstr ""
 "atrás que necesita poner en los campos de la hoja"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:95
-#, fuzzy
-#| msgid ""
-#| "Of course, to actually use our sheet for anything besides adding "
-#| "countdowns first we need to make the edit button on our cards work. But "
-#| "if you look at our `Kirigami.CardsListView` in `main.qml`..."
 msgid ""
 "Of course, to actually use our sheet for anything besides adding countdowns "
 "first we need to make the edit button on our cards work. But if you look at "
@@ -8606,24 +8623,21 @@ msgid ""
 msgstr ""
 "Por supuesto, para usar nuestra hoja para cualquier cosa además de añadir "
 "cuentas atrás, primero debemos hacer que el botón de edición en nuestras "
-"tarjetas funcione. Pero si mira nuestro `Kirigami.CardsListView` en `main."
-"qml`..."
+"tarjetas funcione. Pero si mira nuestro [Kirigami.CardsListView](docs:"
+"kirigami2;CardsListView) en `main.qml`..."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:105
 msgid "KountdownDelegate.qml"
 msgstr "KountdownDelegate.qml"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:107
-#, fuzzy
-#| msgid ""
-#| "We've replaced our `Kirigami.AbstractCard` with a delegate component "
-#| "definition from `KountdownDelegate.qml`."
 msgid ""
 "We've replaced our [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) with "
 "a delegate component definition from `KountdownDelegate.qml`."
 msgstr ""
-"Hemos sustituido nuestra `Kirigami.AbstractCard` con la definición de un "
-"componente delegado de `KountdownDelegate.qml`."
+"Hemos sustituido nuestra [Kirigami.AbstractCard](docs:kirigami2;"
+"AbstractCard) con la definición de un componente delegado de "
+"`KountdownDelegate.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:111
 #, fuzzy
@@ -8786,10 +8800,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:52
-#, fuzzy
-#| msgid "Using Kirigami Gallery"
 msgid "The Colors component in Kirigami Gallery"
-msgstr "Uso de la Galería de Kirigami"
+msgstr "El componente «Colors» de la Galería de Kirigami"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:54
 msgid "Color Set"
@@ -8878,19 +8890,14 @@ msgid "Tooltip: Color set used by tooltips"
 msgstr "Tooltip: Conjunto de colores usado por las ayudas emergentes."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:72
-#, fuzzy
-#| msgid ""
-#| "Complementary: Color set meant to be complementary to Window: usually is "
-#| "dark even in light themes. May be used for \"emphasis\" in small areas of "
-#| "the application"
 msgid ""
 "Complementary: Color set meant to be complementary to Window: usually dark "
 "even in light themes. May be used for emphasis in small areas of the "
 "application"
 msgstr ""
-"Complementary: Conjunto de colores a usar como complementario de Window; "
+"Complementary: Conjunto de colores que se usa como complementario de Window; "
 "normalmente es oscuro, incluso en los temas claros. Se puede usar para "
-"\"enfatizar\" pequeñas áreas de la aplicación."
+"enfatizar pequeñas áreas de la aplicación."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:76
 msgid ""
@@ -8901,11 +8908,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:84
 msgid "How color sets differ in Breeze"
-msgstr ""
+msgstr "Cómo se diferencian los conjuntos de colores en «Brisa»"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:90
 msgid "How color sets differ in Breeze Dark"
-msgstr ""
+msgstr "Cómo se diferencian los conjuntos de colores en «Brisa oscuro»"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:96
 msgid "Using Custom Colors"
@@ -8936,20 +8943,16 @@ msgid "Headings"
 msgstr "Encabezados"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:12
-#, fuzzy
-#| msgid ""
-#| "Kirigami provides an [heading element](docs:kirigami2;Heading) that can "
-#| "be used for page or section titles."
 msgid ""
 "Kirigami provides a [Heading](docs:kirigami2;Heading) that can be used for "
 "page or section titles."
 msgstr ""
-"Kirigami proporciona un [elemento de encabezado](docs:kirigami2;Heading) que "
-"se puede usar para títulos de página o de sección."
+"Kirigami proporciona una [Heading](docs:kirigami2;Heading) que se puede usar "
+"para títulos de páginas o de secciones."
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:47
 msgid "Five headings with different levels for size comparison"
-msgstr ""
+msgstr "Cinco cabeceras con distintos niveles para comparar sus tamaños"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:53
 msgid "Labels"
@@ -8974,26 +8977,34 @@ msgid ""
 "[verticalAlignment](https://doc.qt.io/qt-6/qml-qtquick-text."
 "html#verticalAlignment-prop) properties."
 msgstr ""
+"Puede alinear elementos de texto usando las propiedades [horizontalAlignment]"
+"(https://doc.qt.io/qt-6/qml-qtquick-text.html#horizontalAlignment-prop) y "
+"[verticalAlignment](https://doc.qt.io/qt-6/qml-qtquick-text."
+"html#verticalAlignment-prop)."
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:112
 msgid "Heading and lorem ipsum text aligned to the horizontal center"
-msgstr ""
+msgstr "Cabecera y el texto «lorem ipsum» centrado horizontalmente"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:148
 msgid "Heading and lorem ipsum text using right-aligned text"
-msgstr ""
+msgstr "Cabecera y el texto «lorem ipsum» alineado a la derecha"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:186
 msgid ""
 "Heading with bottom vertical alignment and lorem ipsum text with top "
 "vertical alignment"
 msgstr ""
+"Cabecera con alineación vertical a la parte inferior y el texto «lorem "
+"ipsum» con alineación vertical a la parte superior"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:225
 msgid ""
 "Heading with top vertical alignment and lorem ipsum text with bottom "
 "vertical alignment"
 msgstr ""
+"Cabecera con alineación vertical a la parte superior y el texto «lorem "
+"ipsum» con alineación vertical a la parte inferior"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:231
 msgid "Rich Text"
@@ -9014,19 +9025,18 @@ msgid ""
 "A Label containing a list of fruits using HTML tags like paragraph, "
 "unordered lists and bold fonts"
 msgstr ""
+"Una Label que contiene una lista de frutas que usan etiquetas HTML, como "
+"párrafo, lista desordenada y textos en negrita"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:268
-#, fuzzy
-#| msgid ""
-#| "The font size of the Kirigami [Theme](docs:kirigami2;Theme) is available "
-#| "as `Kirigami.Theme.defaultFont.pointSize` in your application."
 msgid ""
 "The font size of the [Kirigami.Theme](docs:kirigami2;Kirigami::"
 "PlatformTheme) is available as `Kirigami.Theme.defaultFont.pointSize` in "
 "your application."
 msgstr ""
-"El tamaño del texto del [tema](docs:kirigami2;Theme) de Kirigami está "
-"disponible como `Kirigami.Theme.defaultFont.pointSize` en su aplicación."
+"El tamaño del texto del [Kirigami.Theme](docs:kirigami2;Kirigami::"
+"PlatformTheme) está disponible como `Kirigami.Theme.defaultFont.pointSize` "
+"en su aplicación."
 
 #~ msgid ""
 #~ "Enter our main function. Its first line `QGuiApplication::"
