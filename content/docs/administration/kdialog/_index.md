@@ -461,9 +461,9 @@ kdialog --slider "Select a Value" 0 100 10
 
 ## File Selection Dialogs
 
-This section covers dialogs to select files to open and save. These dialogs access the
-power of the underlying KDE dialogs, including advanced filtering techniques and can
-provide either paths or URLs. 
+This section covers dialogs to select files to open and save. The file dialogs are
+provided by your system. They can be provided with either paths or URLs and could
+utilize wildcard or mimetype filtering.
 
 ###  --getopenfilename dialog box
 
@@ -471,7 +471,7 @@ The dialog to select a file to open is invoked with `--getopenfilename` or `--ge
 These two commands are used in the same way - only the format of the result changes,
 so every example shown here can be applied to either format. You have to specify a
 starting directory, and can optionally provide a filter. Here is a simple example that
-doesn't provide any filtering, and accesses the current directory: 
+filter out all `.ogg` files and accesses `/usr/share/sounds/`:
 
 ```bash
 kdialog --getopenfilename /usr/share/sounds/ '*.ogg'
@@ -486,9 +486,9 @@ As mentioned previously, the result format varies between the two variations. Th
 shown below, in each case selecting the same file:
 
 ```bash
-[watson@bakerst]$ kdialog --getopenfilename .
+$ kdialog --getopenfilename .
 /home/watson/coding/cvs-vers/kde-head/kdebase/kdialog/Makefile.am
-[watson@bakerst]$ kdialog --getopenurl .
+$ kdialog --getopenurl .
 file:/home/watson/coding/cvs-vers/kde-head/kdebase/kdialog/Makefile.am
 ```
 
@@ -526,6 +526,11 @@ kdialog --getopenfilename /usr/share/sounds/ 'audio/ogg audio/mp3 audio/wav'
 If it isn't possible to use MIME types, you can specify a range of wildcards and an optional
 label, as shown below: 
 
+```bash
+kdialog --getopenfilename . "C and C++ Source Files(*.cpp)"
+# Not specifying the filter's name also works.
+kdialog --getopenfilename . "*.cpp"
+```
 ![getopenfilename dialog box with wildcard filter](cpp.png)
 
 ### --getsavefilename dialog box
