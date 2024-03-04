@@ -58,7 +58,7 @@ CRAFT: user@830068cd8dca:~/CraftRoot$
 To build an application and it's dependencies, simply run the craft command with the application as the sole argument. For example, to build [KDE Itinerary](https://apps.kde.org/itinerary/):
 
 ```bash
-craft kitinerary
+craft itinerary
 ```
 
 You can search for blueprints using the `--search` command:
@@ -88,7 +88,7 @@ kde/applications/kongress
 When compilation is finished, the APK packaging step is not run automatically. Invoke it manually using `--package`:
 
 ```bash
-craft --package kitinerary
+craft --package itinerary
 ```
 
 ## Signing APKs
