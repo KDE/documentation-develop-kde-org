@@ -11,7 +11,7 @@ description: Understand the Microsoft Store submission process and extend your a
 
 To increase the visibility of KDE applications on the Windows operating system, the [KDE e.V.](https://ev.kde.org) has a Microsoft Store account to publish our applications.
 
-This is not the only way to get a KDE application on Windows; you may also directly grab installers or portable ZIP files from our [Binary Factory](https://binary-factory.kde.org).
+This is not the only way to get a KDE application on Windows; you may also directly grab installers or portable ZIP files from [KDE's CDN](https://cdn.kde.org/ci-builds).
 
 This tutorial will guide you on how the submission process works in detail.
 
@@ -158,15 +158,15 @@ After filling the required fields, just press "Save and generate" and the result
 
 ### Submission: Packages
 
-Now we get to submit the real installer: the `.appxupload` package the Binary Factory creates for you.
+Now we get to submit the real installer: the `.appxupload` package KDE's GitLab creates for you.
 
 {{< figure class="text-center" src="packages-original.png" >}}
 
-For example, for Kile, you can grab the latest release build at [Kile_Release_win64](https://binary-factory.kde.org/job/Kile_Release_win64/).
+For example, for NeoChat, you can grab the latest release build from [KDE's CDN](https://cdn.kde.org/ci-builds/network/neochat/release-24.02/windows/).
 
 Before you upload your package, please really test this manually first! Broken versions make for a very bad impression.
 
-You can locally test the generated `.appx` file on Windows just by double clicking on it to install it locally.
+You can locally test the generated sideload `.appx` file on Windows just by double clicking on it to install it locally. You will have to uninstall a previously installed version first.
 
 {{< figure src="packages-upload.png" >}}
 

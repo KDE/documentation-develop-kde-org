@@ -8,7 +8,7 @@ aliases:
 
 ## Testing your Flatpak
 
-So far you have read about the [kdeapps](https://invent.kde.org/packaging/flatpak-kde-applications) repository, about remoteapps, and that it all integrates with [Binary Factory](https://binary-factory.kde.org/), which is a Jenkins instance to manage continuous integration (CI). In the case of Flathub, the place that hosts your application manifest is one of thousands of repositories belonging to the [Flathub organization on Github](https://github.com/flathub) that is managed by the package maintainer, the Flathub team, and in our case, the KDE Flatpak team. The CI management tool is called [Buildbot](https://buildbot.flathub.org/). Both CI tools will trigger a new build after every new commit in the respective repository.
+So far you have read about the [kdeapps](https://invent.kde.org/packaging/flatpak-kde-applications) repository, about remoteapps, and that it all integrates with [KDE's GitLab](https://invent.kde.org/). In the case of Flathub, the place that hosts your application manifest is one of thousands of repositories belonging to the [Flathub organization on Github](https://github.com/flathub) that is managed by the package maintainer, the Flathub team, and in our case, the KDE Flatpak team. The CI management tool is called [Buildbot](https://buildbot.flathub.org/). Both CI tools will trigger a new build after every new commit in the respective repository.
 
 It can be useful to check out specific commits of the Flatpak to figure out regressions in both packaging and the app. For this purpose, Flatpak allows you to downgrade your application to a specific commit or perform a bisect operation on the Flatpak commit log.
 

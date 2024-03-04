@@ -19,10 +19,12 @@ For questions and discussion around KDE software on Android join our [Matrix cha
 
 ## Getting Applications
 
-Stable releases of our Android apps are available on [Google Play](https://play.google.com/store/apps/dev?id=4758894585905287660) and [F-Droid](https://f-droid.org/).
+Stable releases of our Android apps are available on KDE's [Android Release Builds F-Droid repository](https://cdn.kde.org/android/stable-releases/fdroid/repo/?fingerprint=13784BA6C80FF4E2181E55C56F961EED5844CEA16870D3B38D58780B85E1158F). Some apps are also available on [Google Play](https://play.google.com/store/apps/dev?id=4758894585905287660).
 
-Nightly builds can be downloaded either from the [Binary Factory](https://binary-factory.kde.org) or from KDE's [F-Droid repo](https://cdn.kde.org/android/fdroid/repo/?fingerprint=B3EBE10AFA6C5C400379B34473E843D686C61AE6AD33F423C98AF903F056523F).
+Nightly builds of our apps are available on KDE's [Android Nightly Builds F-Droid repository](https://cdn.kde.org/android/nightly/fdroid/repo/?fingerprint=B3EBE10AFA6C5C400379B34473E843D686C61AE6AD33F423C98AF903F056523F). Alternatively, they can be downloaded from [KDE's GitLab](https://invent.kde.org) by browsing the build artifacts of the project's `craft_android_*` jobs.
 
-## Releasing Application
+If you want to install an application from one of KDE's F-Droid repositories then you have to add the repository as a package source to your F-Droid client using the URL or the QR code displayed on the pages linked above.
 
-Every android application built on KDE's [Binary Factory](https://binary-factory.kde.org) is released in KDE's [F-Droid repo](https://cdn.kde.org/android/fdroid/repo/?fingerprint=B3EBE10AFA6C5C400379B34473E843D686C61AE6AD33F423C98AF903F056523F). From there, the applications can be downloaded manually or by adding the url as a package source in the F-Droid application.
+## Publishing Applications
+
+Every Android application built on [KDE's GitLab](https://invent.kde.org) is published in KDE's F-Droid repositories. For details see the tutorial on [packaging and publishing applications for Android]({{< ref "packaging_applications" >}}).
