@@ -11,9 +11,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## Introduction
 
-This tutorial will guide you in packaging an application for Android and publishing it in one of KDE's F-Droid repositories.
+This tutorial will guide you in packaging an application for Android and publishing it in one of [KDE's F-Droid repositories](https://community.kde.org/Android/F-Droid).
 
-We assume that there is already a working blueprint for the application you want to package and publish. If not then read the tutorial on [building applications for Android]({{< relref "docs/packaging/android/building_applications/" >}}).
+We assume that there is already a working blueprint for the application you want to package and publish. If not then read the tutorial on [building applications for Android]({{< ref "building_applications" >}}).
 
 We use [Kongress](https://invent.kde.org/utilities/kongress) as example.
 
@@ -38,7 +38,7 @@ This template adds four jobs to CI/CD pipeline of Kongress:
 When we now run a CI/CD pipeline for Kongress then, after successful completion, the three `craft_android_*` jobs will have created APKs which we can download by browsing the job artifacts. You'll find the APKs in the folder `.kde-ci-packages/`.
 
 By default, the APKs are not signed. If you want to install such an APKs on your device then you have to sign it as described in the
-[previous tutorial]({{< relref "docs/packaging/android/building_applications/#signing-apks" >}}).
+[previous tutorial]({{< ref "building_applications#signing-apks" >}}).
 
 {{< alert title="Note" color="info" >}}
 If the application you want to package is based on Qt 5 then include the template `/gitlab-templates/craft-android-apks.yml`.
@@ -67,17 +67,17 @@ to `apksigner-projects.yaml`.
 See the documentation of the [apksigner's project settings](https://invent.kde.org/sysadmin/ci-utilities/-/tree/master/signing?ref_type=heads#apksigner)
 for details.
 
-When we now run a CI/CD pipeline for Kongress on the `release/24.02` branch then the three `craft_android_*` jobs will create signed APKs which you can install on your device without having the sign them yourself.
+When we now run a CI/CD pipeline for Kongress on the `release/24.02` branch then the three `craft_android_*` jobs will create signed APKs which you can install on your device without having to sign them yourself.
 
 {{< alert title="Note" color="info" >}}
-Only so called mainline branches can be cleared for signing. Mainline branches are the `master` branch and release branches like `release/24.02`.
+Only mainline branches can be cleared for signing. Mainline branches are the `master` branch and release branches like `release/24.02`.
 APKs created on work branches and forks are never signed.
 {{< /alert >}}
 
 
 ## Publishing the application on F-Droid
 
-Now that we have signed APKs created for the latest release branch of Kongress we want to publish them in our F-Droid repository to make it more easy to
+Now that we have signed APKs created for the latest release branch of Kongress we want to publish them in our F-Droid repository to make it easier to
 install and update Kongress. But before we do this we download the APK, install it on our device and perform a more or less thorough test to ensure that
 the APK works.
 
@@ -103,4 +103,4 @@ for details.
 ## Summary
 
 In this tutorial we have learned how to configure KDE's CI/CD system to package an application for Android and how to publish it in one of KDE's F-Droid
-repositories so that our users can easily install it. A possible next step would be the publication on Google Play.
+repositories so that our users can easily install it.
