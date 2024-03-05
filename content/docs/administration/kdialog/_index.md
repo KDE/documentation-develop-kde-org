@@ -62,10 +62,9 @@ whether the application ran as expected, or failed in some way. You can access t
 value as `$?`, as shown in the following example.
 
 ```bash
-[watson@bakerst]$ kdialog --password "Some Text"
-hello
-[watson@bakerst]$ echo $?
-0
+kdialog --password "Some Text"
+echo $?      # for Bash, 0 means successful
+echo $status # for fish, 0 also means successful
 ```
 
 {{< alert title="Note" color="info" >}}
@@ -89,10 +88,8 @@ subtracts them from 256. This means that if you fail to specify a required argum
 the system returns -2, and $? returns 254.
 
 ```bash
-[watson@bakerst]$ kdialog --password
-kdialog: '<text>' missing.
-kdialog: Use --help to get a list of available command line options.
-[watson@bakerst]$ echo $?
+kdialog --password "Press Cancel to cause an error"
+echo $? # or `echo $status` for fish
 254
 ```
 
@@ -121,9 +118,8 @@ or pipe it to another program. In the case of the password dialog, the text that
 entered will be echoed as shown in 
 
 ```bash
-[watson@bakerst]$ kdialog --password "Enter the password" > password.file
-[watson@bakerst]$ cat password.file
-Secrter
+kdialog --password "Enter the password" > password.file
+cat password.file
 ```
 
 ### Password Dialog Using a Shell Variable
@@ -134,9 +130,8 @@ of English (British or American) layout keyboards, above the "7" key on French l
 keyboards, and on the top right of German layout keyboards.
 
 ```bash
-[watson@bakerst]$ password=`kdialog --password "Enter the password"`
-[watson@bakerst]$ echo $password
-Secreter
+password=`kdialog --password "Enter the password"`
+echo $password
 ```
 
 ### Password Dialog with Title
@@ -305,7 +300,7 @@ kdialog --dontagain myscript:nofilemsg --msgbox "File not found."
 As noted above, an entry is written to a file when the user selects the checkbox.
 
 ```bash
-$ cat ~/.kde/share/config/myscript
+cat ~/.kde/share/config/myscript
 [Notification Messages]
 nofilemsg=false
 ```
@@ -406,10 +401,10 @@ one label. By default, the results are returned on a single line, however you ca
 shown in the example below, where all of the options were selected in each case.
 
 ```bash
-$ kdialog --checklist "Select languages:" 1 "American English" off \
+kdialog --checklist "Select languages:" 1 "American English" off \
 2  French on 3 "Oz' English" off
 "1" "2" "3"
-$ kdialog --separate-output --checklist "Select languages:" \
+kdialog --separate-output --checklist "Select languages:" \
 1 "American English" off 2  French on 3 "Oz' English" off
 1
 2
@@ -425,7 +420,7 @@ The radiolist is very similar to the checklist, except that the user can only se
 of the options. An example is shown below: 
 
 ```bash
-$ kdialog --radiolist "Select a default language:" 1 "American \
+kdialog --radiolist "Select a default language:" 1 "American \
 English" off  2  French on 3 "Oz' English" off
 ```
 
@@ -441,7 +436,7 @@ A combobox is slightly different to the previous menu options in that it doesn't
 keys, but instead just returns the selected text. An example is shown below: 
 
 ```bash
-$ kdialog --combobox "Select a flavour:" "Vanilla" "Chocolate" "Strawberry" "Fudge"
+kdialog --combobox "Select a flavour:" "Vanilla" "Chocolate" "Strawberry" "Fudge"
 Chocolate
 ```
 
@@ -486,10 +481,10 @@ As mentioned previously, the result format varies between the two variations. Th
 shown below, in each case selecting the same file:
 
 ```bash
-$ kdialog --getopenfilename .
-/home/watson/coding/cvs-vers/kde-head/kdebase/kdialog/Makefile.am
-$ kdialog --getopenurl .
-file:/home/watson/coding/cvs-vers/kde-head/kdebase/kdialog/Makefile.am
+kdialog --getopenfilename .
+/home/watson/a_file_name.xt
+kdialog --getopenurl .
+file:///home/watson/a_file_name.xt
 ```
 
 Note that the user can only select an existing file with these options. When you are opening 
