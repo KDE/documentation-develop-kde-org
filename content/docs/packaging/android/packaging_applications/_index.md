@@ -11,7 +11,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## Introduction
 
-This tutorial will guide you in packaging an application for Android and publishing it in one of [KDE's F-Droid repositories](https://community.kde.org/Android/F-Droid).
+This tutorial will guide you in packaging an application for Android and publishing it in one of [KDE's F-Droid repositories]({{< ref "android#getting-applications" >}}).
 
 We assume that there is already a working blueprint for the application you want to package and publish. If not then read the tutorial on [building applications for Android]({{< ref "building_applications" >}}).
 
