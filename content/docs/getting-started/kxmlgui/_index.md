@@ -18,4 +18,4 @@ for saving and loading files.
 
 KXmlGui is built on top of QtWidgets and provides several libraries easily create your user interfaces with C++. QtWidgets is a mature technology with several premade components to easily create user interfaces, and it is strongly geared towards non-convergent, traditional desktop interfaces.
 
-The knowledge gained from this tutorial will introduce you to several KDE libraries that are managed with C++, and should prove useful for other tutorials, like [Kirigami]({{< ref "/content/docs/getting-started/kirigami/_index.md" >}}).
+The knowledge gained from this tutorial will introduce you to several KDE libraries that are managed with C++, and should prove useful for other tutorials, like [Kirigami]({{< ref "/docs/getting-started/kirigami" >}}).
