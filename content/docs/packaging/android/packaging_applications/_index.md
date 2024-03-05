@@ -92,7 +92,7 @@ utilities/kongress:
 ```
 
 These settings tell the CI/CD system that the APKs built on the `master` branch shall be published in the default repository (which is
-the nightly builds repository) and that the APKs built on the `release/24.02`
+the nightly builds repository) and that the APKs built on the `release/24.02` branch shall be published in the release builds repository.
 
 See the documentation of the [fdroidpublisher's project settings](https://invent.kde.org/sysadmin/ci-utilities/-/tree/master/signing?ref_type=heads#fdroidpublisher)
 for details.
