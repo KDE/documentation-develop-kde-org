@@ -53,7 +53,7 @@ Now we configure our CI/CD system, so that it signs the APKs created by the CI/C
 The CI/CD system signs APKs on project branches which are cleared for APK signing. We want to sign the APKs created for the 24.02 release branch.
 Project branches are cleared for APK signing by adding them to the
 [project settings of the apksigner](https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/apksigner-projects.yaml?ref_type=heads) in the
-ci-utilities repository. To clear the 24.02 release branch of Kongress for APK signing we add
+ci-utilities repository. To clear the 24.02 release branch of Kongress for APK signing we add the following to `apksigner-projects.yaml`:
 
 ```
 utilities/kongress:
@@ -61,8 +61,6 @@ utilities/kongress:
   branches:
     release/24.02:
 ```
-
-to `apksigner-projects.yaml`.
 
 See the documentation of the [apksigner's project settings](https://invent.kde.org/sysadmin/ci-utilities/-/tree/master/signing?ref_type=heads#apksigner)
 for details.
@@ -82,7 +80,7 @@ install and update Kongress. But before we do this we download the APK, install 
 the APK works.
 
 After we have verified that the APK works we configure the CI/CD system to publish the APKs created for the 24.02 release branch of Kongress in our
-[Android Release Builds F-Droid repository](https://cdn.kde.org/android/stable-releases/fdroid/repo/). For this we add
+[Android Release Builds F-Droid repository](https://cdn.kde.org/android/stable-releases/fdroid/repo/). For this we add the following to the [project settings of the fdroidpublisher](https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/fdroidpublisher-projects.yaml?ref_type=heads):
 
 ```
 utilities/kongress:
@@ -93,7 +91,7 @@ utilities/kongress:
       repository: stable-releases
 ```
 
-to the [project settings of the fdroidpublisher](https://invent.kde.org/sysadmin/ci-utilities/-/blob/master/signing/fdroidpublisher-projects.yaml?ref_type=heads). These settings tell the CI/CD system that the APKs built on the `master` branch shall be published in the default repository (which is
+These settings tell the CI/CD system that the APKs built on the `master` branch shall be published in the default repository (which is
 the nightly builds repository) and that the APKs built on the `release/24.02`
 
 See the documentation of the [fdroidpublisher's project settings](https://invent.kde.org/sysadmin/ci-utilities/-/tree/master/signing?ref_type=heads#fdroidpublisher)
