@@ -97,7 +97,7 @@ Methods and properties added to the global JavaScript object.
 ### Read-write Properties
 
 * `int currentDesktop`
-* `KWin::AbstractClient * activeClient`
+* `KWin::AbstractClient * activeWindow`
 * `int desktops`: The number of desktops currently used. Minimum number of desktops is 1, maximum 20.
 * `QString currentActivity`
 
