@@ -21,7 +21,6 @@ Before getting started, we will need to install Kirigami on our machine. There a
 We need a C++ compiler, Qt development packages, and Kirigami. Open a terminal application and run one of the following, depending on which Linux distribution you are using:
 
 {{< installpackage
-  ubuntu="build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev kirigami2-dev libkf5i18n-dev gettext libkf5coreaddons-dev qml-module-org-kde-qqc2desktopstyle"
   arch="base-devel extra-cmake-modules cmake qt5-base qt5-declarative qt5-quickcontrols2 kirigami2 ki18n kcoreaddons breeze qqc2-desktop-style"
   opensuseCommand=`sudo zypper install --type pattern devel_C_C++
 sudo zypper install cmake extra-cmake-modules libQt5Core-devel libqt5-qtdeclarative-devel libQt5QuickControls2-devel kirigami2-devel ki18n-devel kcoreaddons-devel qqc2-desktop-style`
@@ -36,17 +35,13 @@ If you wish to build Kirigami with Qt6, this is currently not possible with only
 
 KDE has a custom tool to easily build all of its libraries and programs: **kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD.
 
-For this tutorial, you will need to follow the [setup instructions for kdesrc-build](https://community.kde.org/Get_Involved/development/Set_up_a_development_environment) but using a `~/kde5` directory instead, then copy the sample KF5 file to your home:
-
-```bash
-cp ~/kde5/src/kdesrc-build/kdesrc-buildrc-kf5-sample ~/.config/kdesrc-buildrc
-```
+For this tutorial, you will need to follow the [setup instructions for kdesrc-build](https://community.kde.org/Get_Involved/development/Set_up_a_development_environment).
 
 After that, you may simply run the following on a terminal:
 
 ```bash
 kdesrc-build kirigami kcoreaddons ki18n breeze plasma-integration qqc2-desktop-style
-source ~/kde5/build/kirigami/prefix.sh
+source ~/kde/build/kirigami/prefix.sh
 ```
 
 And then you may compile your Kirigami projects on the same terminal shell you used to source the prefix file. If you close your terminal, you can simply source the file again to compile your app.
@@ -204,12 +199,12 @@ We are almost at the finish line. The last thing we need to do is build and run 
 If you are running your project on Linux, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `helloworld/` folder in our terminal application of choice and run the following commands:
 
 ```bash
-cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/kde5/usr"
+cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/kde/usr"
 cmake --build build/
 cmake --install build/
 ```
 
-The program will be installed to `~/kde5/usr/bin`.
+The program will be installed to `~/kde/usr/bin`.
 
 If you are compiling your project with [Craft]({{< ref "#craft" >}}) on Windows, you might need to specify a CMake Generator for the first step, depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) to compile your projects.
 
