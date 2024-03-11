@@ -1,4 +1,4 @@
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Kirigami.ApplicationWindow {
     globalDrawer: Kirigami.GlobalDrawer {}

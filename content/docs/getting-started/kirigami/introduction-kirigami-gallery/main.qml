@@ -1,6 +1,6 @@
-import QtQuick 2.15
-import org.kde.kirigami 2.20 as Kirigami
-import QtQuick.Controls 2.15 as Controls
+import QtQuick
+import org.kde.kirigami as Kirigami
+import QtQuick.Controls as Controls
 
 Kirigami.ApplicationWindow {
     id: root
