@@ -20,9 +20,7 @@ PlasmaComponents 3 is a QML library that extends the [Qt Quick Controls 2 compon
 
 [`plasma-framework`/src/declarativeimports/plasmacomponents3/](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/declarativeimports/plasmacomponents3)
 
-You may see leftover imports to PlasmaComponents 2 in some widgets. It uses the older [Qt Quick Controls 1](https://doc.qt.io/qt-5/qtquickcontrols1-index.html) components which are deprecated. The source code for the older controls can also be found in the `plasma-frameworks` repo:
-
-[`plasma-framework`/src/declarativeimports/plasmacomponents/qml/](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/declarativeimports/plasmacomponents/qml)
+Removed in Plasma 6.0: [PlasmaComponents 2](https://invent.kde.org/plasma/libplasma/-/tree/v5.102.0/src/declarativeimports/plasmacomponents/qml) was used in Plasma 5. It used the older [Qt Quick Controls 1](https://doc.qt.io/qt-5/qtquickcontrols1-index.html).
 
 
 ### Label
