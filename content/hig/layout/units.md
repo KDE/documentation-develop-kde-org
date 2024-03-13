@@ -6,7 +6,7 @@ weight: 1
 Purpose
 -------
 
-This pages gives an overview about different units used in Plasma and
+This pages gives an overview about different units used in Kirigami and
 applications using KDE frameworks.
 
 Pixel
@@ -63,20 +63,6 @@ use DPI independent pixels/px.
 
 {{< /alert >}}
 
-### DPI Independent Pixels in KDE
-
-As a developer, if you want to use DPI independent pixels in Plasma use
-`units.devicePixelRatio` or `Units.devicePixelRatio` in Kirigami.
-
-{{< alert color="warning" title="Caution" >}} 
-
-The use of devicePixelRatio should be avoided, but if you must, check
-the [documentation](http://doc.qt.io/qt-5/highdpi.html) and ask for more
-information in [Plasma](https://telegram.me/vdgmainroom) or
-[Kirigami](https://telegram.me/joinchat/BbOuVj6l7b5aZ_WbupyFFw) channel.
-
-{{< /alert >}}
-
 ### Fonts
 
 Since Plasma allows the user to change the font settings, any objects
@@ -86,14 +72,14 @@ with text.
 ![Using DPI independent pixels with
 different font settings](/hig/Font.qml.png)
 
-Base Units in Plasma and Kirigami
----------------------------------
+Base Units in Kirigami
+----------------------
 
 There are two types of DPI independent base units in Kirigami:
 
 -   `Units.gridUnit` is the height needed to display one line of text.
     Use this for defining height and width of an element.
--   `Units.smallSpacing` and `Units.largeSpacing` are used to define
+-   `Units.smallSpacing`, `Units.largeSpacing`, and others are used to define
     paddings and margins.
 
 These base units are not only DPI independent, but scale according to
@@ -103,6 +89,8 @@ ratio between `Units.gridUnit` and
 on the user's font settings.
 
 ![A rectangle defined with Units.gridUnit.](/hig/Units.qml.png)
+
+#### Mockup Units
 
 {{< alert color="warning" title="Attention" >}}
 These px values are only for design and mockup purposes. Don't use them
@@ -114,22 +102,18 @@ These are the base units in Kirigami:
 Units                 | Value
 ----------------------|--------
 `Units.smallSpacing`  | 4px
+`Units.mediumSpacing` | 6px
 `Units.largeSpacing`  | 8px
 `Units.gridUnit`      | 18px
 
-And in Plasma:
 
-Units                 | Value
-----------------------|--------
-`units.smallSpacing`  | 4px
-`units.largeSpacing`  | 18px
-`units.gridUnit`      | 18px
+Icon sizes in Kirigami
+----------------------
 
-Icon sizes in Plasma and Kirigami
----------------------------------
-
-There are several predefined icon sizes in Plasma and Kirigami. You
+There are several predefined icon sizes in Kirigami. You
 should always use these icon sizes.
+
+#### Mockup Units
 
 {{< alert color="warning" title="Attention" >}}
 These px values are only for design and mockup purposes. Don't use them
@@ -146,18 +130,6 @@ Units                          | Value
 `Units.iconSizes.large`        | 48px
 `Units.iconSizes.huge`         | 64px
 `Units.iconSizes.enormous`     | 128px
-
-Plasma:
-
-Units                          | Value
--------------------------------|--------
-`units.iconSizes.tiny`         | 8px
-`units.iconSizes.small`        | 16px
-`units.iconSizes.smallMedium`  | 22px
-`units.iconSizes.medium`       | 32px
-`units.iconSizes.large`        | 48px
-`units.iconSizes.huge`         | 64px
-`units.iconSizes.enormous`     | 128px
 
 From Design to Code
 -------------------
