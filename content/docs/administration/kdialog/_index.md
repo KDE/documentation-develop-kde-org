@@ -458,7 +458,7 @@ kdialog --slider "Select a Value" 0 100 10
 
 This section covers dialogs to select files to open and save. The file dialogs are
 provided by your system. They can be provided with either paths or URLs and could
-utilize wildcard or mimetype filtering.
+utilize name or MIME type filtering.
 
 ###  --getopenfilename dialog box
 
@@ -516,17 +516,16 @@ kdialog --getopenfilename /usr/share/sounds/ 'audio/ogg audio/mp3 audio/wav'
 
 ![getopenfilename dialog box with MIME filter](mine.png)
 
-### --getopenfilename dialog box with wildcard filter
+### --getopenfilename dialog box with name filter
 
-If it isn't possible to use MIME types, you can specify a range of wildcards and an optional
-label, as shown below: 
+You can also specify a range of name filters as shown below: 
 
 ```bash
-kdialog --getopenfilename . "C and C++ Source Files(*.cpp)"
+kdialog --getopenfilename . "C and C++ Source Files(*.cpp *.cc *.c)"
 # Not specifying the filter's name also works.
-kdialog --getopenfilename . "*.cpp"
+kdialog --getopenfilename . "*.cpp *.cc *.c"
 ```
-![getopenfilename dialog box with wildcard filter](cpp.png)
+![getopenfilename dialog box with name filter](cpp.png)
 
 ### --getsavefilename dialog box
 
@@ -545,7 +544,7 @@ that doesn't yet exist.
 ### --getsavefilename dialog box with filter
 
 As for the file opening dialogs, the file saving dialogs allow use of the colon notation,
-and also allow filtering using MIME types and wildcards, as shown below: 
+and also allow using MIME type filters and name filters, as shown below: 
 
 ```bash
 kdialog --getsavefilename :label1 "C and C++ Source Files (*.cpp *.cc *.c)"
