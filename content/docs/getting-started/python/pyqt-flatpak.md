@@ -116,7 +116,7 @@ Other improvements you can make to your application:
 [Flatpak Tutorial]({{< ref "flatpak" >}}) and the
 [official documentation](https://docs.flatpak.org/en/latest/index.html).
 - Consider making it an official [KDE Application]({{< ref "add-project" >}}),
-building [Flatpak nightlies using KDE infrastructure]({{< ref "publishing" >}}).
+building [Flatpak nightlies using KDE infrastructure]({{< ref "docs/packaging/flatpak/publishing" >}}).
 - Follow the
 [Flathub Quality Guidelines](https://docs.flathub.org/docs/for-app-authors/appdata-guidelines/quality-guidelines)
 to refine the presentation of your application on Flathub.

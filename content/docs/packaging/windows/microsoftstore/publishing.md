@@ -4,7 +4,7 @@ author:
   - SPDX-FileCopyrightText: 2019 Christoph Cullmann <cullmann@kde.org>
   - SPDX-FileCopyrightText: 2023 Thiago Masato Costa Sueto <thiago.sueto@kde.org>
 SPDX-License-Identifier: CC-BY-SA-4.0
-group: packaging
+group: windows
 weight: 3
 description: Understand the Microsoft Store submission process and extend your application's audience.
 ---
