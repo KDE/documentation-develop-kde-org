@@ -238,7 +238,7 @@ _ `string lengthMode`: (since 6.0) `fill`, `fit`, or `custom` length modes.
 - `number height`: the height (or for vertical panels, the width)
   of the panel
 - `string hiding`: the hiding mode of the panel, one of `none` (for
-  no hiding), `autohide`, `windowscover` or `windowsbelow`
+  no hiding), `autohide`, `dodgewindows` or `windowsgobelow`
 - `string alignment`: `right`, `left` or `center` alignment of the panel
   (for vertical panels, `right` corresponds to top and `left` to bottom)
 - `number offset`: how much the panel is moved from the
