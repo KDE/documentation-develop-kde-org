@@ -33,7 +33,7 @@ and save it into the `simplemdviewer/env/bin/` directory:
 
 ```bash
 #From within the simplemdviewer/ directory
-wget https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/pip/flatpak-pip-generator --directory-prefix ../env/bin
+wget https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/pip/flatpak-pip-generator --directory-prefix env/bin
 ```
 
 The generator has a single dependency to run, `requirements-parser`. After
@@ -41,7 +41,7 @@ installing it in the virtual environment, the tool can be run:
 
 ```bash
 python3 -m pip install requirements-parser
-python3 flatpak-pip-generator markdown
+python3 env/bin/flatpak-pip-generator markdown
 ```
 
 You should see a new `python3-markdown.json` inside `simplemdviewer/` now.
@@ -56,10 +56,10 @@ More than that, the KDE Runtime is based on the general
 which provides Python. You can read more about runtimes in the
 [Flatpak Runtime Documentation](https://docs.flatpak.org/en/latest/available-runtimes.html).
 
-Install `org.kde.Sdk` and `org.kde.Platform`, version 5.15-23.08, from Flathub:
+Install `org.kde.Sdk` and `org.kde.Platform`, version 6.6, from Flathub:
 
 ```bash
-flatpak install org.kde.Platform/x86_64/5.15-23.08 org.kde.Sdk/x86_64/5.15-23.08
+flatpak install org.kde.Platform/x86_64/6.6 org.kde.Sdk/x86_64/6.6
 ```
 
 We are using the
@@ -68,7 +68,7 @@ which contains an already built and ready-to-use PyQt we can quickly add on
 top of the KDE Runtime, so we need to install it as well.
 
 ```bash
-flatpak install com.riverbankcomputing.PyQt.BaseApp/x86-64/5.15-23.08
+flatpak install com.riverbankcomputing.PyQt.BaseApp/x86-64/6.6
 ```
 
 To attempt a first build of the flatpak, run:

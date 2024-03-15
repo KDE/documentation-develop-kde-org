@@ -1,5 +1,5 @@
 from markdown import markdown
-from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
+from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
 
 class MdConverter(QObject):
     """A simple markdown converter"""
