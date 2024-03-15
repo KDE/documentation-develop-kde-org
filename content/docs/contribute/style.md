@@ -36,6 +36,20 @@ To select how many levels in a directory tree you want to expose, you can use th
 
 `tree -L 3`
 
+## Use sentence case for titles {#titles}
+
+Prefer sentence case where possible:
+
+> Contribute to the documentation
+
+Use Title Case only for project names, compound nouns that are known to be in Title Case, or words that come from acronyms:
+
+> Plasma Mobile
+
+> Hello World!
+
+> Personal Information Management
+
 ## Use monospaced text for files, directories, code references, and short code snippets {#monospace}
 
 Use backticks before and after things like:
