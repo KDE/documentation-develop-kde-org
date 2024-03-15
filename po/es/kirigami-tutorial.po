@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-25 01:39+0000\n"
-"PO-Revision-Date: 2024-03-06 17:40+0100\n"
+"PO-Revision-Date: 2024-03-15 00:17+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -527,6 +527,11 @@ msgid ""
 "adds another user to a model, then push the page into view, similarly to "
 "what we did in `main.qml`."
 msgstr ""
+"Dado que este ejemplo tiene fines ilustrativos sencillos, no profundizamos "
+"en lo que se haría tras pulsar el botón: solo muestra «¡Pulsado!» en la "
+"terminal. _Podríamos_ crear una nueva página para crear una cuenta que añada "
+"otro usuario a un modelo y luego mostrar la página en la vista, de forma "
+"similar a lo que hicimos en `main.qml`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:254
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
@@ -575,6 +580,15 @@ msgid ""
 "classFormSwitchDelegate.html) and a [FormRadioDelegate](https://api.kde.org/"
 "frameworks/kirigami-addons/html/classFormRadioDelegate.html)."
 msgstr ""
+"Queremos dotar de cierta funcionalidad para guardar automáticamente a "
+"nuestra aplicación, y solo queremos mostrar sus preferencias si el usuario "
+"ha activado dicha funcionalidad. Creamos una nueva sección usando una "
+"[FormCard](https://api.kde.org/frameworks/kirigami-addons/html/classFormCard."
+"html) y una [FormHeader](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormHeader.html), a la que añadiremos un [FormSwitchDelegate](https://"
+"api.kde.org/frameworks/kirigami-addons/html/classFormSwitchDelegate.html) y "
+"un [FormRadioDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormRadioDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:287
 msgid ""
@@ -599,6 +613,10 @@ msgid ""
 "visibility of the radio buttons to `true` with a JavaScript assignment such "
 "as:"
 msgstr ""
+"Si tiene experiencia en programación con lenguajes imperativos, como C++, es "
+"posible que tenga la tentación de definir la propiedad `checked` del "
+"interruptor para cambiar la visibilidad de los botones de opción a `true` "
+"con una asignación de JavaScript, como:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:303
 msgid ""
@@ -606,6 +624,9 @@ msgid ""
 "and slots. Try to use QML bindings like in the case of `visible: autosave."
 "checked` as much as possible instead of JavaScript expressions."
 msgstr ""
+"Esto no es muy eficiente para el lenguaje declarativo de QML y sus señales y "
+"ranuras. Trate de usar enlaces QML, como en el caso de `visible: autosave."
+"checked`, tanto como sea posible en lugar de expresiones JavaScript."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:305
 msgid ""
@@ -627,6 +648,9 @@ msgid ""
 "org/frameworks/kirigami-addons/html/classFormCheckDelegate.html) to our "
 "General section."
 msgstr ""
+"Para probar nuestra casilla de verificación, podemos añadir un nuevo "
+"[FormCheckDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCheckDelegate.html) a nuestra sección «General»."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:338
 msgid ""
@@ -636,6 +660,12 @@ msgid ""
 "a tray icon using [SystemTrayIcon](https://doc.qt.io/qt-6/qml-qt-labs-"
 "platform-systemtrayicon.html)."
 msgstr ""
+"Aquí usamos el [manejador de señal](https://doc.qt.io/qt-6/qtqml-syntax-"
+"signals.html) `onToggled` para mostrar un texto de relleno para simular un "
+"icono de la bandeja del sistema que aparece en el sistema. Si realmente lo "
+"necesita, podría implementar fácilmente un icono de la bandeja del sistema "
+"usando [SystemTrayIcon](https://doc.qt.io/qt-6/qml-qt-labs-platform-"
+"systemtrayicon.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:340
 msgid "So far our application should look like this:"
@@ -651,36 +681,50 @@ msgid ""
 "(https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormComboBoxDelegate.html)."
 msgstr ""
+"El componente común ComboBox se puede crear usando un [FormComboBoxDelegate]"
+"(https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormComboBoxDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:348
 msgid ""
 "This combobox has several useful properties we can make use of: `editable`, "
 "`displayText` and `displayMode`."
 msgstr ""
+"Esta lista desplegable tiene varias propiedades útiles que podemos usar: "
+"`editable`, `displayText` y `displayMode`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:350
 msgid ""
 "Setting `editable: true` allows the user to edit the text of the combobox, "
 "which is useful in case adding new combobox options is needed:"
 msgstr ""
+"Defina `editable: true` para permitir que el usuario pueda modificar el "
+"texto de la lista desplegable, que será de utilidad si necesita añadir "
+"nuevas opciones de la lista desplegable."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:354
 msgid ""
 "Whenever you need to show additional text before each option, you can use "
 "something like `displayText: \"Profile: \" + currentText`:"
 msgstr ""
+"Siempre que necesite mostrar texto adicional antes de cada opción, puede "
+"usar algo semejante a `displayText: \"Perfil: \" + textoActual`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:358
 msgid ""
 "And the most interesting one, which we will be using in our example, is "
 "`displayMode`. It can have three options:"
 msgstr ""
+"Y la más interesante, que usaremos en nuestro ejemplo, es `displayMode`. "
+"Puede tener tres opciones:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:360
 msgid ""
 "**FormComboBoxDelegate.ComboBox**: the standard small box showing a list of "
 "options."
 msgstr ""
+"**FormComboBoxDelegate.ComboBox**: el pequeño cuadro estándar que muestra "
+"una lista de opciones."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:364
 msgid ""
@@ -688,18 +732,25 @@ msgid ""
 "middle of the window, like a [Kirigami.OverlaySheet](docs:kirigami2;"
 "OverlaySheet)."
 msgstr ""
+"**FormComboBoxDelegate.Dialog**: un diálogo que muestra una lista de "
+"opciones en el centro de la ventana, como una [Kirigami.OverlaySheet](docs:"
+"kirigami2;OverlaySheet)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:368
 msgid ""
 "**FormComboBoxDelegate.Page**: a new page containing a list of options shown "
 "in a separate window."
 msgstr ""
+"**FormComboBoxDelegate.Page**: una nueva página que contiene una lista de "
+"opciones que se muestran en una ventana separada."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:372
 msgid ""
 "Add the following between the \"Current Color Scheme\" and \"Show Tray Icon"
 "\" delegates in your \"General\" form card."
 msgstr ""
+"Añada lo siguiente entre los delegados \"Esquema de color actual\" y "
+"\"Mostrar bandeja del sistema\" de la tarjeta \"General\"."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:385
 msgid "With the checkbox, our Settings page should look like this:"
@@ -716,6 +767,9 @@ msgid ""
 "Our Settings page is taking shape, but each section is starting to get long. "
 "We can add a few FormDelegateSeparators to make our page tidier:"
 msgstr ""
+"Nuestra página de «Preferencias» va tomando forma, aunque cada sección está "
+"empezando a ser demasiado larga. Podemos añadir unos cuantos "
+"FormDelegateSeparators para que la página quede más clara:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:395
 msgid ""
@@ -746,6 +800,8 @@ msgid ""
 "Notice how the separator above the tray icon setting does not appear while "
 "it is hovered."
 msgstr ""
+"Observe cómo el separador sobre la preferencia del icono de la bandeja del "
+"sistema no aparece mientras está sobre él."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Introduction to Kirigami Addons"
@@ -879,6 +935,9 @@ msgid ""
 "pagerow_pagestack) to set the initial page to a [Kirigami.ScrollablePage]"
 "(docs:kirigami2;ScrollablePage)."
 msgstr ""
+"Usamos nuestra útil [pageStack](/docs/getting-started/kirigami/components-"
+"pagerow_pagestack) para definir la página inicial a una [Kirigami."
+"ScrollablePage](docs:kirigami2;ScrollablePage)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:79
 msgid ""
@@ -1398,6 +1457,8 @@ msgid ""
 "If you are following along, please remember to update your `CMakeLists.txt` "
 "file!"
 msgstr ""
+"Si está siguiendo las instrucciones, recuerde actualizar su archivo "
+"`CMakeLists.txt`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:53
 msgid ""
@@ -1612,6 +1673,8 @@ msgid ""
 "Now, whenever the values of the model change in the frontend, the changes "
 "should automatically update on the backend."
 msgstr ""
+"Ahora, cada vez que los valores del modelo cambian en la interfaz, los "
+"cambios deberían actualizarse automáticamente en el motor."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:384
 msgid "![app_screenshot_1.png](app_screenshot_1.png)"
