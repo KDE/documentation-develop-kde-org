@@ -1,5 +1,5 @@
 ---
-title: Shell scripting with KDE Dialogs
+title: Shell scripting with KDE dialogs
 description: Create simple scripts for your users to use.
 weight: 2
 group: administration
