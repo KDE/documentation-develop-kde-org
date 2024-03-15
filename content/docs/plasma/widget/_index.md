@@ -1,8 +1,8 @@
 ---
-title: "Plasma Widget Tutorial"
+title: "Plasma Widget tutorial"
 weight: 2
 description: >
-  Learn how to create a KDE Plasma Widget.
+  Learn how to create a KDE Plasma widget.
 aliases:
   - /docs/plasma/widget/
 ---

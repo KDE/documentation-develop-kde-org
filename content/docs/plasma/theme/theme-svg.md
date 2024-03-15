@@ -1,5 +1,5 @@
 ---
-title: SVG Elements and Inkscape
+title: SVG elements and Inkscape
 weight: 3
 description: Understanding how to manipulate Plasma Style SVG files
 ---

@@ -1,5 +1,5 @@
 ---
-title: Explaining Pages
+title: Explaining pages
 weight: 2
 group: introduction
 description: Pages allow you to organize your application content

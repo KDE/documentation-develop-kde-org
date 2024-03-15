@@ -1,5 +1,5 @@
 ---
-title: Configuration Keys
+title: Configuration keys
 weight: 3
 description: List of all the configurations keys available for the scripting API
 layout: keys

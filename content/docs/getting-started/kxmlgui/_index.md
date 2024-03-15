@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with KXmlGui"
+title: "Getting started with KXmlGui"
 linkTitle: "KXmlGui"
 weight: 1
 description: >

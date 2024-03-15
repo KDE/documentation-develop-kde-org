@@ -1,6 +1,6 @@
 ---
-title: D-Bus Autostart Services
-linkTitle: D-Bus Autostart Services
+title: D-Bus autostart services
+linkTitle: D-Bus autostart services
 weight: 6
 description: >
     Turn your application into a D-Bus autostart service with this tutorial. This D-Bus feature, also known as "D-Bus service activation", will ensure that even when your application isn't running that D-Bus calls made to it will work by relying on the D-Bus daemon itself to start your app if and when needed.

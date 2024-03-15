@@ -1,5 +1,5 @@
 ---
-title: Testing and Debugging
+title: Testing and debugging
 weight: 3
 # Rewrite of KDE4 version for Plasma 5
 SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>

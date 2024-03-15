@@ -1,5 +1,5 @@
 ---
-title: Making a KMines Theme
+title: Making a KMines theme
 description: How to add a theme to KMines.
 weight: 1
 authors:

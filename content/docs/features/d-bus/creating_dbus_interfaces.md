@@ -1,6 +1,6 @@
 ---
-title: Creating D-Bus Interfaces
-linkTitle: Creating D-Bus Interfaces
+title: Creating D-Bus interfaces
+linkTitle: Creating D-Bus interfaces
 weight: 4
 description: >
     Learn how to expose functionality in your application by creating and using custom D-Bus interfaces. Covers generating the XML descriptions, instantiating interfaces at run time and setting up the build system with CMake.

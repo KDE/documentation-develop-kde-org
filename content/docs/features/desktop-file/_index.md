@@ -1,5 +1,5 @@
 ---
-title: Desktop File
+title: Desktop file
 weight: 5
 group: features
 description: >

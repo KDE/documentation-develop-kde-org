@@ -1,5 +1,5 @@
 ---
-title: Command Line Interface
+title: Command line interface
 description: >
   Adds the ability to specify which file to open from the command line to our text editor.
 weight: 6

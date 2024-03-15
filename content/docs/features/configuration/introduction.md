@@ -1,5 +1,5 @@
 ---
-title: Introduction To KConfig
+title: Introduction to KConfig
 description: >
   An overview of the KConfig classes and how to use them in your application code
 weight: 1

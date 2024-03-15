@@ -1,6 +1,6 @@
 ---
-title: "Aurorae Window Decorations"
-linkTitle: "Aurorae Window Decorations"
+title: "Aurorae window decorations"
+linkTitle: "Aurorae window decorations"
 weight: 4
 description: How to create window decorations with SVGs
 aliases:

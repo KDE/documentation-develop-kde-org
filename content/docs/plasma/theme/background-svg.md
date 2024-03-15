@@ -1,5 +1,5 @@
 ---
-title: Background SVG Format
+title: Background SVG format
 weight: 4
 description: Plasma's background SVG
 ---

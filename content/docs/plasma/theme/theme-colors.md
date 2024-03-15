@@ -1,5 +1,5 @@
 ---
-title: System and Accent Colors
+title: System and accent colors
 weight: 5
 description: How to make a Plasma SVGs follow system colors
 ---

@@ -1,5 +1,5 @@
 ---
-title: Progress Bars and Indicators
+title: Progress bars and indicators
 weight: 211
 description: Provide your users with loading state information using progress bars.
 group: components

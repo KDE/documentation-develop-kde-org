@@ -1,5 +1,5 @@
 ---
-title: Creating a Plasma Style Quickstart
+title: Creating a Plasma Style quickstart
 weight: 1
 description: A quick guide to creating your first Plasma Style
 aliases:

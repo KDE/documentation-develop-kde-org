@@ -1,5 +1,5 @@
 ---
-title: Theme Elements Reference
+title: Theme elements reference
 weight: 6
 description: A reference list of SVG elements
 ---

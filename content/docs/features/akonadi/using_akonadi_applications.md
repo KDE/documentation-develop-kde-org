@@ -1,5 +1,5 @@
 ---
-title: Using Akonadi in Applications
+title: Using Akonadi in applications
 subtitle: Displaying and modifying data provided by Akonadi
 authors:
   - SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>

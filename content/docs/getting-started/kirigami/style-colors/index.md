@@ -1,5 +1,5 @@
 ---
-title: "Colors and Themes in Kirigami"
+title: "Colors and themes in Kirigami"
 linkTitle: "Colors "
 weight: 101
 group: style

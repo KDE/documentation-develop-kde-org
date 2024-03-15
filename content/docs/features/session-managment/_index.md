@@ -1,5 +1,5 @@
 ---
-title: Session Management
+title: Session management
 description: >
   Make your application aware of X sessions
 weight: 4

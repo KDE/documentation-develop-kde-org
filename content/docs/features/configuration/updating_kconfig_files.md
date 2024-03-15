@@ -1,5 +1,5 @@
 ---
-title: Updating KConfig Files
+title: Updating KConfig files
 draft: true
 ---
 

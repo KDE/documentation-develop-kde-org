@@ -1,5 +1,5 @@
 ---
-title: Plasma Mobile Telephony Stack
+title: Plasma Mobile Telephony stack
 description: Architecture and general description
 weight: 2
 aliases:

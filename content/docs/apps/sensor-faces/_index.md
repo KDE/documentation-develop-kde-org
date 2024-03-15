@@ -1,5 +1,5 @@
 ---
-title: Creating Sensor Faces
+title: Creating sensor faces
 description: Create new display styles for the System Monitor application and widgets.
 weight: 1
 group: applications

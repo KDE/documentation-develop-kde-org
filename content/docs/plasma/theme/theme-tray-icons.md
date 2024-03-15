@@ -1,5 +1,5 @@
 ---
-title: Application Icons in the System Tray
+title: Application icons in the System Tray
 weight: 7
 description: A reference list of application icons
 ---

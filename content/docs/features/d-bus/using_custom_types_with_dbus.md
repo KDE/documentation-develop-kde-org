@@ -1,6 +1,6 @@
 ---
-title: Using Custom Types with D-Bus
-linkTitle: Using Custom Types with D-Bus
+title: Using custom types with D-Bus
+linkTitle: Using custom types with D-Bus
 weight: 5
 description: >
     Using custom types as arguments of D-Bus method calls.

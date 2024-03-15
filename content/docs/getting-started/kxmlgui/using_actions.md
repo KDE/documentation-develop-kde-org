@@ -1,5 +1,5 @@
 ---
-title: Using Actions
+title: Using actions
 weight: 3
 description: >
   How to add actions to the menus and toolbars.

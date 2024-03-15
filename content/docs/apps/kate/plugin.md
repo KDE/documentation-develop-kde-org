@@ -1,7 +1,7 @@
 ---
-title: "Kate Plugin Tutorial"
+title: "Kate plugin tutorial"
 weight: 1
-description: Learn how to write a kate plugin
+description: Learn how to write a Kate plugin
 ---
 
 The plugin we will write will basically be a Markdown previewer. It will do something like

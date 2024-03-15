@@ -1,6 +1,6 @@
 ---
-title: Accessing D-Bus Interfaces
-linkTitle: Accessing D-Bus Interfaces
+title: Accessing D-Bus interfaces
+linkTitle: Accessing D-Bus interfaces
 weight: 2
 description: >
     A step-by-step guide to calling D-Bus methods and connecting to D-Bus signals using QtDBus.

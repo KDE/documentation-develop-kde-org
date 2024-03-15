@@ -1,5 +1,5 @@
 ---
-title: Scrollable Pages and List Views
+title: Scrollable pages and list views
 weight: 203
 group: components
 description: Scrollable pages are useful when combined with vertical components or dynamic components such as List Views.

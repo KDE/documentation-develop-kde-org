@@ -1,5 +1,5 @@
 ---
-title: Layouts, ListViews, and Cards
+title: Layouts, listViews, and cards
 weight: 3
 group: introduction
 description: Figuring out the different ways of placing things on a page

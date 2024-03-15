@@ -1,5 +1,5 @@
 ---
-title: Writing Tests
+title: Writing tests
 description:
    Learn how to create tests for KDE applications
 weight: 1

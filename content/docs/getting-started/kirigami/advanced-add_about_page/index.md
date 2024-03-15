@@ -1,5 +1,5 @@
 ---
-title: About Page
+title: About page
 weight: 304
 description: Informations about your application
 group: advanced

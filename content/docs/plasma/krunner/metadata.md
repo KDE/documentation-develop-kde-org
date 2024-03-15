@@ -1,5 +1,5 @@
 ---
-title: KRunner Metadata Format
+title: KRunner metadata format
 SPDX-FileCopyrightText: 2023 Alexander Lohnau <alexander.lohnau@gmx.de>
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---

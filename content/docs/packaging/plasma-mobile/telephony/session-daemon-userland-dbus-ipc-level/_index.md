@@ -1,5 +1,5 @@
 ---
-title: Session Daemons
+title: Session daemons
 description: Userland D-Bus IPC, KDE Telephony stack
 weight: 3
 SPDX-FileCopyrightText: 2021 Alexey Andreyev <aa13q@ya.ru>

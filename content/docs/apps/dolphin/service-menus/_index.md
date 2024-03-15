@@ -1,8 +1,8 @@
 ---
-title: "Creating Dolphin Service Menus"
+title: "Creating Dolphin service menus"
 linkTitle: "Creating Dolphin Service Menus"
 weight: 1
-description: Learn how to create dolphin service menus
+description: Learn how to create Dolphin service menus
 aliases:
   - /docs/dolphin/service-menus/
 ---

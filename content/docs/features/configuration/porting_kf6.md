@@ -1,5 +1,5 @@
 ---
-title: "KDE Frameworks 6 Porting Guide"
+title: "KDE Frameworks 6 porting guide"
 weight: 3
 group: "features"
 description: "Porting guide for KDE Config Modules to Qt6/KF6"

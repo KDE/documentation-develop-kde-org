@@ -1,5 +1,5 @@
 ---
-title: Kiosk Keys
+title: Kiosk keys
 weight: 2
 layout: kiosk-keys
 applications:

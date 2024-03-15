@@ -1,5 +1,5 @@
 ---
-title: Action Tool Bars
+title: Action toolbars
 weight: 210
 description: Create your own customisable tool bars with the ActionToolBar component
 group: components

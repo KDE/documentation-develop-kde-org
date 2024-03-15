@@ -1,8 +1,8 @@
 ---
-title: Creating the Main Window
+title: Creating the main window
 weight: 2
 description: >
-  This tutorial shows you the magic of an application's most important thing: The main window.
+  This tutorial shows you the magic of an application's most important thing: the main window.
 aliases:
   - /docs/getting-started/main_window/
 ---

@@ -1,5 +1,5 @@
 ---
-title: KWin Scripting Tutorial
+title: KWin scripting tutorial
 weight: 4
 description: Learn how to programmatically manipulate windows with KWin scripts.
 aliases:

@@ -1,6 +1,6 @@
 ---
 title: Create your own mouse cursor theme
-linkTitle: Mouse Cursor
+linkTitle: Mouse cursor
 group: features
 weight: 4
 description: >

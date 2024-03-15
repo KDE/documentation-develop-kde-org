@@ -1,5 +1,5 @@
 ---
-title: Plasma Desktop Scripting
+title: Plasma Desktop scripting
 weight: 3
 aliases:
   - /docs/plasma/scripting/

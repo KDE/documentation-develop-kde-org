@@ -1,5 +1,5 @@
 ---
-title: "System Administration"
+title: "System administration"
 weight: 6
 description: >
     Learn how to manage your systems with KDE technologies.

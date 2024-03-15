@@ -1,5 +1,5 @@
 ---
-title: Execute Applications
+title: Execute applications
 weight: 3
 aliases:
   - /docs/plasma-mobile/running-apps

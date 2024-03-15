@@ -1,5 +1,5 @@
 ---
-title: KWin Scripting API
+title: KWin scripting API
 aliases:
   - /docs/plasma/kwin/api/
 ---
