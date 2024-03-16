@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-25 01:39+0000\n"
-"PO-Revision-Date: 2024-03-15 00:17+0100\n"
+"POT-Creation-Date: 2024-03-16 01:59+0000\n"
+"PO-Revision-Date: 2024-03-16 00:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -156,7 +156,6 @@ msgstr ""
 "AboutKDE`. Debería ver algo parecido a esto tras pulsar el botón «AboutKDE»:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:22
-#: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "About Page"
 msgstr "Página acerca de"
 
@@ -279,7 +278,9 @@ msgstr ""
 "posible."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
-msgid "Form Delegates in your settings pages"
+#, fuzzy
+#| msgid "Form Delegates in your settings pages"
+msgid "Form delegates in your settings pages"
 msgstr "Delegados de Form en sus páginas de preferencias"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
@@ -1009,6 +1010,12 @@ msgstr ""
 "Para ver otras formas de compilar la aplicación (por ejemplo, en Windows), "
 "consulte la página [Primeros pasos con Kirigami](/docs/getting-started/"
 "kirigami/introduction-getting_started)."
+
+#: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
+#, fuzzy
+#| msgid "About Page"
+msgid "About page"
+msgstr "Página acerca de"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "Informations about your application"
@@ -2405,21 +2412,17 @@ msgid "SwipeListItem"
 msgstr "SwipeListItem"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:200
-#, fuzzy
-#| msgid ""
-#| "A [SwipeListItem](docs:kirigami2;SwipeListItem) is a delegate intended to "
-#| "support extra actions. When using a mouse, they will be shown on hover. "
-#| "On a touch device, they can be shown by dragging the item with the handle."
 msgid ""
 "A [Kirigami.SwipeListItem](docs:kirigami2;SwipeListItem) is a delegate "
 "intended to support extra actions. When using a mouse, its actions will "
 "always be shown. On a touch device, they can be shown by dragging the item "
 "with the handle. In the following pictures, these are the icons to the right."
 msgstr ""
-"Un [SwipeListItem](docs:kirigami2;SwipeListItem) es un delegado diseñado "
-"para permitir acciones adicionales. Cuando se usa un ratón, se mostrará al "
-"situar el cursor encima. En un dispositivo táctil, se mostrará al arrastrar "
-"el elemento mediante un asa."
+"Un [Kirigami.SwipeListItem](docs:kirigami2;SwipeListItem) es un delegado "
+"diseñado para permitir acciones adicionales. Cuando se usa un ratón, siempre "
+"se mostrarán sus acciones. En un dispositivo táctil, se mostrará al "
+"arrastrar el elemento mediante un asa. En las siguientes imágenes, son los "
+"iconos de la derecha."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:216
 msgid "do something"
@@ -2438,12 +2441,6 @@ msgid "ActionToolBar"
 msgstr "ActionToolBar"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:229
-#, fuzzy
-#| msgid ""
-#| "An [ActionToolBar](docs:kirigami2;ActionToolBar) is a toolbar built out "
-#| "of a list of actions. By default, each action that will fit on the "
-#| "toolbar will be represented by a ToolButton, with those that do not fit "
-#| "being moved into a menu at the end of the toolbar."
 msgid ""
 "A [Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar) is a toolbar built "
 "out of a list of actions. By default, each action that will fit in the "
@@ -2451,11 +2448,12 @@ msgid ""
 "Controls.ToolButton), with those that do not fit being moved into a menu at "
 "the end of the toolbar."
 msgstr ""
-"Un [ActionToolBar](docs:kirigami2;ActionToolBar) es una barra de "
+"Una [Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar) es una barra de "
 "herramientas creada a partir de una lista de acciones. De forma "
 "predeterminada, cada acción que quepa en la barra de herramientas se "
-"representará mediante un ToolButton, mientras que las que no quepan se "
-"moverán a un menú en un extremo de la barra de herramientas."
+"representará mediante un [ToolButton](docs:qtquickcontrols;QtQuick.Controls."
+"ToolButton), mientras que las que no quepan se moverán a un menú en un "
+"extremo de la barra de herramientas."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:232
 msgid ""
@@ -2522,7 +2520,9 @@ msgstr ""
 "components-card/)."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:0
-msgid "Action Tool Bars"
+#, fuzzy
+#| msgid "Action Tool Bars"
+msgid "Action toolbars"
 msgstr "Barras de herramientas de acciones"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:0
@@ -2542,13 +2542,6 @@ msgstr ""
 "tener algo más flexible."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:12
-#, fuzzy
-#| msgid ""
-#| "Kirigami provides the component `Kirigami.ActionToolBar`. It will display "
-#| "a list of `Kirigami.Action` objects and will display as many of them as "
-#| "possible, providing an overflow menu for the ones that don't fit. The "
-#| "ActionToolBar is dynamic and will move actions in and out of the overflow "
-#| "menu depending on the size available to it."
 msgid ""
 "Kirigami provides the component [Kirigami.ActionToolBar](docs:kirigami2;"
 "ActionToolBar). It displays a list of [Kirigami.Action](docs:kirigami2;"
@@ -2557,11 +2550,12 @@ msgid ""
 "will move actions in and out of the overflow menu depending on the size "
 "available to it."
 msgstr ""
-"Kirigami proporciona el componente `Kirigami.ActionToolBar`. Muestra una "
-"lista de objetos `Kirigami.Action` que contendrá tantos como sea posible, "
-"proporcionando un menú de sobrantes para los que no quepan en ella. La "
-"ActionToolBar es dinámica y moverá acciones dentro y fuera del menú de "
-"sobrantes dependiendo del tamaño disponible para ella."
+"Kirigami proporciona el componente [Kirigami.ActionToolBar](docs:kirigami2;"
+"ActionToolBar). Muestra una lista de objetos [Kirigami.Action](docs:"
+"kirigami2;Action) que contendrá tantos como sea posible, proporcionando un "
+"menú de sobrantes para los que no quepan en ella. La ActionToolBar es "
+"dinámica y moverá acciones dentro y fuera del menú de sobrantes dependiendo "
+"del tamaño disponible para ella."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:16
 msgid ""
@@ -2594,20 +2588,16 @@ msgstr ""
 "inferior de la página y que se extienda a lo ancho."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:24
-#, fuzzy
-#| msgid ""
-#| "Like most other action-holding components, `Kirigami.ActionToolBar` has "
-#| "an `actions` property. We can assign an array of `Kirigami.Action` "
-#| "components to this property."
 msgid ""
 "Like most other action-holding components, [Kirigami.ActionToolBar](docs:"
 "kirigami2;ActionToolBar) has an [actions](docs:kirigami2;ActionToolBar::"
 "actions) property. We can assign an array of [Kirigami.Action](docs:"
 "kirigami2;Action) components to this property."
 msgstr ""
-"Como la mayoría del resto de componentes que contienen acciones, `Kirigami."
-"ActionToolBar` tiene una propiedad `actions`. Podemos asignar una matriz de "
-"componentes `Kirigami.Action` a dicha propiedad."
+"Como la mayoría del resto de componentes que contienen acciones, [Kirigami."
+"ActionToolBar](docs:kirigami2;ActionToolBar) tiene una propiedad [actions]"
+"(docs:kirigami2;ActionToolBar::actions). Podemos asignar una matriz de "
+"componentes [Kirigami.Action](docs:kirigami2;Action) a dicha propiedad."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:70
 msgid "ActionToolBar with enough space for all children"
@@ -2622,14 +2612,6 @@ msgid "Alignment"
 msgstr "Alineación"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:78
-#, fuzzy
-#| msgid ""
-#| "By default, actions in the ActionToolBar will be left aligned. This might "
-#| "not be desirable in all situations. Thankfully we can change this with "
-#| "the `alignment` property. We can set this property to a range of values, "
-#| "but the three most relevant ones for an ActionToolBar are `Qt.AlignLeft`, "
-#| "`Qt.AlignCenter`, and `Qt.AlignRight` (which deal with horizontal "
-#| "alignment)."
 msgid ""
 "By default, actions in the [ActionToolBar]([Kirigami.ActionToolBar](docs:"
 "kirigami2;ActionToolBar)) will be left aligned. This might not be desirable "
@@ -2639,12 +2621,13 @@ msgid ""
 "AlignCenter`, and `Qt.AlignRight` (which deal with [horizontal alignment]"
 "(docs:qtcore;Qt::Alignment))."
 msgstr ""
-"Por omisión, las acciones de una ActionToolBar estarán alineadas a la "
-"izquierda. Es posible que esto no sea deseable en todas las situaciones. "
-"Afortunadamente, podemos cambiar esto con la propiedad `alignment`. Podemos "
-"definir esta propiedad con diversos valores, pero los tres más relevantes "
-"para ActionToolBar son `Qt.AlignLeft`, `Qt.AlignCenter` y `Qt.AlignRight` "
-"(que se ocupan del alineamiento horizontal)."
+"Por omisión, las acciones de una [ActionToolBar]([Kirigami.ActionToolBar]"
+"(docs:kirigami2;ActionToolBar)) estarán alineadas a la izquierda. Es posible "
+"que esto no sea deseable en todas las situaciones. Afortunadamente, podemos "
+"cambiar esto con la propiedad [alignment](docs:kirigami2;ActionToolBar::"
+"alignment). Podemos definir esta propiedad con diversos valores, pero los "
+"tres más relevantes son `Qt.AlignLeft`, `Qt.AlignCenter` y `Qt.AlignRight` "
+"(que se ocupan del [alineamiento horizontal](docs:qtcore;Qt::Alignment))."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:109
 msgid ""
@@ -2895,12 +2878,6 @@ msgstr ""
 "si tiene el valor `Qt.Horizontal` en la propiedad `headerOrientation`."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:157
-#, fuzzy
-#| msgid ""
-#| "The choice between using this view with `Kirigami.AbstractCard` "
-#| "components or a conventional `ListView` with [`AbstractListItem`](docs:"
-#| "kirigami2;AbstractListItem)/[BasicListItem](docs:kirigami2;BasicListItem) "
-#| "components is purely an aesthetic one."
 msgid ""
 "The choice between using this view with [AbstractCard](docs:kirigami2;"
 "AbstractCard) components or a conventional [ListView](docs:qtquick;QtQuick."
@@ -2908,10 +2885,11 @@ msgid ""
 "[BasicListItem](docs:kirigami2;BasicListItem) components is purely an "
 "aesthetic one."
 msgstr ""
-"La elección entre usar esta vista con componentes `Kirigami.AbstractCard` o "
-"una `ListView` convencional con componentes [`AbstractListItem`](docs:"
-"kirigami2;AbstractListItem)/[BasicListItem](docs:kirigami2;BasicListItem) es "
-"solo una cuestión de estética."
+"La elección entre usar esta vista con componentes [AbstractCard](docs:"
+"kirigami2;AbstractCard) o una [ListView](docs:qtquick;QtQuick.ListView) "
+"convencional con componentes [AbstractListItem](docs:kirigami2;"
+"AbstractListItem)/[BasicListItem](docs:kirigami2;BasicListItem) es solo una "
+"cuestión de estética."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:169
 msgid "NOTE: never put a Layout as contentItem as it will cause binding loops"
@@ -3747,10 +3725,8 @@ msgid "In this menu mode, headers and banners are not visible."
 msgstr "En este modo de menú, las cabeceras y los *banners* no son visibles."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:149
-#, fuzzy
-#| msgid "Global drawer with title and icon in banner"
 msgid "Global drawer in menu mode, without a header or banner"
-msgstr "Cajón global con un título y un icono en un banner"
+msgstr "Cajón global en modo menú, sin cabecera ni banner"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:155
 msgid "Banners"
@@ -3948,11 +3924,6 @@ msgstr ""
 "prop) controla si el cajón será modal o en línea según un valor booleano"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:262
-#, fuzzy
-#| msgid ""
-#| "`edge` controls which edge of the application window the drawer will "
-#| "appear on; options for this property are `Qt.TopEdge`, `Qt.RightEdge`, "
-#| "`Qt.BottomEdge`, and `Qt.LeftEdge`"
 msgid ""
 "[Drawer.edge](https://doc.qt.io/qt-6/qml-qtquick-controls2-drawer.html#edge-"
 "prop) controls which edge of the application window the drawer will appear "
@@ -3960,9 +3931,11 @@ msgid ""
 "RightEdge), namely `Qt.TopEdge`, `Qt.RightEdge`, `Qt.BottomEdge`, and `Qt."
 "LeftEdge`"
 msgstr ""
-"`edge` controla en qué borde de la ventana de la aplicación aparecerá el "
-"cajón; las opciones para esta propiedad son `Qt.TopEdge`, `Qt.RightEdge`, "
-"`Qt.BottomEdge` y `Qt.LeftEdge`"
+"[Drawer.edge](https://doc.qt.io/qt-6/qml-qtquick-controls2-drawer.html#edge-"
+"prop) controla en qué borde de la ventana de la aplicación aparecerá el "
+"cajón; las opciones para esta propiedad forman parte del [enumerador Edge]"
+"(docs:qtcore;Qt::RightEdge), en concreto `Qt.TopEdge`, `Qt.RightEdge`, `Qt."
+"BottomEdge` y `Qt.LeftEdge`"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:263
 msgid ""
@@ -4009,7 +3982,9 @@ msgid "Message actions"
 msgstr "Acciones del mensaje"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:0
-msgid "Form Layouts"
+#, fuzzy
+#| msgid "Form Layouts"
+msgid "Form layouts"
 msgstr "Diseños de formulario"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:0
@@ -4032,14 +4007,6 @@ msgstr ""
 "campos de entrada que están relacionados entre sí."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:12
-#, fuzzy
-#| msgid ""
-#| "When provided with enough space, form layouts will take up two columns. "
-#| "The column on the left will be occupied by the labels provided for the "
-#| "form's children components, while the right will be taken up by the "
-#| "children itself. In more space-constrained windows (or on mobile), forms "
-#| "will consist of a single vertical column with children components' labels "
-#| "being placed above their respective component."
 msgid ""
 "When provided with enough space, form layouts will take up two columns. The "
 "column on the left will be occupied by the labels provided for the form's "
@@ -4051,22 +4018,16 @@ msgstr ""
 "Cuando se les proporciona suficiente espacio, los diseños de formularios "
 "ocuparán dos columnas. La columna de la izquierda estará ocupada con las "
 "etiquetas proporcionadas para los componentes secundarios del formulario, "
-"mientras que la derecha contendrá los elementos secundarios. En ventanas con "
-"espacio más limitado (o en dispositivos móviles), los formularios constarán "
-"de una sola columna vertical con las etiquetas de los componentes "
-"secundarios colocadas sobre sus respectivos componentes."
+"mientras que la derecha contendrá los propios elementos secundarios. En "
+"ventanas con espacio más limitado (o en dispositivos móviles), los "
+"formularios constarán de una sola columna vertical con las etiquetas de los "
+"componentes secundarios colocadas sobre sus respectivos componentes."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:14
 msgid "Simple form"
 msgstr "Formulario sencillo"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:16
-#, fuzzy
-#| msgid ""
-#| "`Kirigami.FormLayout` components are similar in use to QtQuick Layout "
-#| "components such as `ColumnLayout` or `RowLayout`. The child components "
-#| "will be automatically arranged according to the size available to the "
-#| "form layout."
 msgid ""
 "[Kirigami.FormLayout](docs:kirigami2;FormLayout) components are similar in "
 "use to [QtQuick Layout](https://doc.qt.io/qt-6/qtquicklayouts-index.html) "
@@ -4075,10 +4036,12 @@ msgid ""
 "rowlayout.html). The child components will be automatically arranged "
 "according to the size available to the form layout."
 msgstr ""
-"El uso de los componentes `Kirigami.FormLayout` es similar al de los "
-"componentes de diseño de QtQuick, como `ColumnLayout` o `RowLayout`. Los "
-"componentes hijos se organizarán automáticamente según el espacio disponible "
-"para el diseño del formulario."
+"El uso de los componentes [Kirigami.FormLayout](docs:kirigami2;FormLayout) "
+"es similar al de los componentes de [diseño de QtQuick](https://doc.qt.io/"
+"qt-6/qtquicklayouts-index.html), como [ColumnLayout](https://doc.qt.io/qt-6/"
+"qml-qtquick-layouts-columnlayout.html) o [RowLayout](https://doc.qt.io/qt-6/"
+"qml-qtquick-layouts-rowlayout.html). Los componentes hijos se organizarán "
+"automáticamente según el espacio disponible para el diseño del formulario."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:18
 #, fuzzy
@@ -5183,7 +5146,9 @@ msgstr ""
 "applicationWindow"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:0
-msgid "Progress Bars and Indicators"
+#, fuzzy
+#| msgid "Progress Bars and Indicators"
+msgid "Progress bars and indicators"
 msgstr "Barras de avance e indicadores"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:0
@@ -5310,7 +5275,9 @@ msgstr ""
 "`running` a `false`."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:0
-msgid "Scrollable Pages and List Views"
+#, fuzzy
+#| msgid "Scrollable Pages and List Views"
+msgid "Scrollable pages and list views"
 msgstr "Páginas desplazables y vistas de lista"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:0
@@ -8271,7 +8238,9 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:0
-msgid "Explaining Pages"
+#, fuzzy
+#| msgid "Explaining Pages"
+msgid "Explaining pages"
 msgstr "Explicación de las páginas"
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:0
@@ -8771,7 +8740,9 @@ msgid "![](editsheet.png)"
 msgstr "![](editsheet.png)"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
-msgid "Colors and Themes in Kirigami"
+#, fuzzy
+#| msgid "Colors and Themes in Kirigami"
+msgid "Colors and themes in Kirigami"
 msgstr "Colores y temas en Kirigami"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
