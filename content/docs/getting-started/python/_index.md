@@ -1,6 +1,6 @@
 ---
 title: Python with Kirigami
-weight: 3
+weight: 4
 group: getting-started
 description: >
   Create KDE applications using Python.

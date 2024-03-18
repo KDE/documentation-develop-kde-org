@@ -1,7 +1,7 @@
 ---
 title: "Getting started with Kirigami"
 linkTitle: "Kirigami"
-weight: 1
+weight: 2
 layout: home
 groups:
   - name: "Introduction"

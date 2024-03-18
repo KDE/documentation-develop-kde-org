@@ -35,7 +35,7 @@ This tutorial requires Python 3.8+ which is included by default in most distribu
 
 ### Building from source
 
-[kdesrc-build](https://community.kde.org/Get_Involved/development/Build_software_with_kdesrc-build) is the recommended tool to build selenium-webdriver-at-spi from source. Learn [how to set up a KDE development environment using kdesrc-build](https://community.kde.org/Get_Involved/development/Set_up_a_development_environment).
+[kdesrc-build](https://invent.kde.org/sdk/kdesrc-build) is the recommended tool to build selenium-webdriver-at-spi from source. Learn [how to set up a KDE development environment using kdesrc-build]({{< ref "kdesrc-build-setup" >}}).
 
 After the development environment is set up, run the command below to build both selenium-webdriver-at-spi and kcalc from source. The command will automatically install all the required dependencies:
 

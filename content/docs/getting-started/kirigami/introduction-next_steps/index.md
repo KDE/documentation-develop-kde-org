@@ -20,7 +20,7 @@ Well, don't worry: we have taken the time to provide some pointers as to where y
 
 One of the best ways to improve your development skills is by putting them into practice. KDE's community is welcoming and always looking for more passionate developers!
 
-We have several pieces of documentation that can help guide you towards becoming a contributor. We recommend you take a look at the developer-specific section of our [Development Guide](https://community.kde.org/Get_Involved/development) which can help you learn more about the KDE Community's development workflow. We also recommend you take a look at our documentation for KDE's GitLab instance, called [Invent](https://community.kde.org/Infrastructure/GitLab), as you will likely need to interact with it during the development process. The KDE Community interacts mainly through Matrix, and we also have [a page on the community wiki](https://community.kde.org/Matrix) that will guide you through setting up with your very own account.
+We have several pieces of documentation that can help guide you towards becoming a contributor. We recommend you take a look at the developer-specific section of our [Development Guide](/docs/getting-started/building/help-dependencies) which can help you learn more about the KDE Community's development workflow. We also recommend you take a look at our documentation for KDE's GitLab instance, called [Invent](https://community.kde.org/Infrastructure/GitLab), as you will likely need to interact with it during the development process. The KDE Community interacts mainly through Matrix, and we also have [a page on the community wiki](https://community.kde.org/Matrix) that will guide you through setting up with your very own account.
 
 {{< alert title="Note" color="info" >}}
 

@@ -19,7 +19,7 @@ To get more information about any class you come across, you can use [KDE's API 
 ## Preparation
 
 You will need to set up your development environment (so that you can use the KDE Frameworks) first. You can do that in two ways:
-- Go through the [setting up your development environment](https://community.kde.org/Get_Involved/development) part of the *Get Involved* documentation. That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
+- Go through the [setting up your development environment]({{< ref "building" >}}) part of the *Get Involved* documentation. That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
 - Install the KDE Frameworks development packages from your operating system or distribution. The names of these packages, and how to install them, varies per distro, so you will need to investigate on your own.
 
 ## The Code
@@ -108,9 +108,8 @@ Next we create a variable called `helloworld_SRCS` using the [`set()`](https://c
 Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add_executable.html) to create an executable called `helloworld` from the source files listed in our `helloworld_SRCS` variable. Afterwards, we link our executable to the necessary libraries using the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function. The [`install()`](https://cmake.org/cmake/help/latest/command/install.html) function call creates a default "install" target, putting executables and libraries in the default path using a convenience macro provided by ECM. Additionally, just by including ECM, an "uninstall" target automatically gets created based on this "install" target.
 
 Running our application
-------------
 
-To compile, link and install your program, you must have the following software installed: `cmake`, `make` or `ninja`, and `gcc-c++`/`g++`, and the Qt 6 and KDE Frameworks development packages.
+To compile, link and install your program, you must have the following software installed: `cmake`, `make` or `ninja`, and `gcc-c++`/`g++`, and the Qt 6 and KDE Frameworks development packages. To be sure you have everything, follow [this install guide]({{< ref "building" >}}).
 
 First we configure our project inside of a `build/` folder:
 

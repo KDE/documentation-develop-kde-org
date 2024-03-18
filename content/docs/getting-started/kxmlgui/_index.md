@@ -1,7 +1,7 @@
 ---
 title: "Getting started with KXmlGui"
 linkTitle: "KXmlGui"
-weight: 1
+weight: 3
 description: >
   Discover KDE Frameworks and start building your first classic KDE desktop application.
 group: "getting-started"

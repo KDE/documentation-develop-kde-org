@@ -1,7 +1,7 @@
 ---
 title: "Adding a new KDE project"
 linkTitle: "New project"
-weight: 5
+weight: 6
 description: >
   How to make your project be a part of the KDE community
 group: "getting-started"
