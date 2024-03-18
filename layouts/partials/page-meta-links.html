@@ -17,11 +17,11 @@
       {{ $sourceURL = printf "%s/-/tree/%s/%s/content/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
     {{ end }}
     {{ $issuesURL := printf "%s/-/issues/new?title=%s" $gl_repo (htmlEscape $.Title )}}
-    <a href="{{ $editURL }}" target="_blank"><i class="icon icon_document-edit mr-2"></i>{{ T "post_edit_this" }}</a>
-    <a href="{{ $sourceURL }}" target="_blank"><i class="icon icon_redeyes mr-2"></i>See source code</a>
-    <a href="{{ $issuesURL }}" target="_blank"><i class="icon icon_document-send mr-2"></i>{{ T "post_create_issue" }}</a>
-    <a href="/docs/contribute/formatting/"><i class="icon icon_format-text-color mr-2"></i>Formatting guidelines</a>
-    <a href="/docs/contribute/style/"><i class="icon icon_draw-brush mr-2"></i>Style guidelines</a>
+    <a href="{{ $editURL }}" target="_blank"><i class="icon icon_document-edit me-2"></i>{{ T "post_edit_this" }}</a>
+    <a href="{{ $sourceURL }}" target="_blank"><i class="icon icon_redeyes me-2"></i>See source code</a>
+    <a href="{{ $issuesURL }}" target="_blank"><i class="icon icon_document-send me-2"></i>{{ T "post_create_issue" }}</a>
+    <a href="/docs/contribute/formatting/"><i class="icon icon_format-text-color me-2"></i>Formatting guidelines</a>
+    <a href="/docs/contribute/style/"><i class="icon icon_draw-brush me-2"></i>Style guidelines</a>
   </div>
   {{ end }}
 {{ end }}
