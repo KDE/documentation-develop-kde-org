@@ -64,5 +64,5 @@ For mature projects, the best way to compile, link and run KDE software is to [s
 ```bash
 cmake -B build/
 cmake --build build/
-./build/mainwindow
+./build/bin/mainwindow
 ```

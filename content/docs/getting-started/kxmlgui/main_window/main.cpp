@@ -6,24 +6,26 @@
  
 int main (int argc, char *argv[])
 {
+    using namespace Qt::Literals::StringLiterals;
+
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("mainwindow");
     
     KAboutData aboutData(
-        QStringLiteral("mainwindow"),
+        u"mainwindow"_s,
         i18n("Main Window"),
-        QStringLiteral("1.0"),
+        u"1.0"_s,
         i18n("A simple text area"),
         KAboutLicense::GPL,
         i18n("(c) 2015"),
         i18n("Some text..."),
-        QStringLiteral("https://example.kde.org/"),
-        QStringLiteral("submit@bugs.kde.org"));
+        u"https://example.kde.org/"_s,
+        u"submit@bugs.kde.org"_s);
 
     aboutData.addAuthor(i18n("Name"), i18n("Task"),
-        QStringLiteral("your@email.com"),
-        QStringLiteral("https://your.website.com"),
-        QStringLiteral("OSC Username"));
+        u"your@email.com"_s,
+        u"https://your.website.com"_s,
+        u"OSC Username"_s);
 
     KAboutData::setApplicationData(aboutData);
  

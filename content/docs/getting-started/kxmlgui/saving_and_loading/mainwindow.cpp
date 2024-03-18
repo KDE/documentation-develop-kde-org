@@ -10,7 +10,7 @@
 #include <KActionCollection>
 #include <KStandardAction>
 #include <KMessageBox>
-#include <KIO/Job>
+#include <KIO/StoredTransferJob>
 
 #include "mainwindow.h"
 
@@ -24,11 +24,13 @@ MainWindow::MainWindow(QWidget *parent) : KXmlGuiWindow(parent), fileName(QStrin
 
 void MainWindow::setupActions()
 {
+    using namespace Qt::Literals::StringLiterals;
+
     QAction *clearAction = new QAction(this);
     clearAction->setText(i18n("&Clear"));
-    clearAction->setIcon(QIcon::fromTheme("document-new"));
-    actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL + Qt::Key_W);
-    actionCollection()->addAction("clear", clearAction);
+    clearAction->setIcon(QIcon::fromTheme(u"document-new-symbolic"_s));
+    actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL | Qt::Key_L);
+    actionCollection()->addAction(u"clear"_s, clearAction);
     connect(clearAction, &QAction::triggered, textArea, &KTextEdit::clear);
     
     KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
@@ -37,7 +39,7 @@ void MainWindow::setupActions()
     KStandardAction::saveAs(this, &MainWindow::saveFileAs, actionCollection());
     KStandardAction::openNew(this, &MainWindow::newFile, actionCollection());
 
-    setupGUI(Default, "texteditorui.rc");
+    setupGUI(Default, u"texteditorui.rc"_s);
 }
 
 void MainWindow::newFile()

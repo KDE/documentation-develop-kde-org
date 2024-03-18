@@ -38,7 +38,7 @@ This is where all the [QCommandLineParser ](docs:qtcore;QCommandLineParser) magi
 First, we tell [QCommandLineParser ](docs:qtcore;QCommandLineParser) that we want to add a new positional argument. In a nutshell, these are arguments that are not options. `-h` or `--version` are options, `file` is an argument.
 
 ```c++
-parser.addPositionalArgument(QStringLiteral("file"), i18n("Document to open"));
+parser.addPositionalArgument(u"file"_s, i18n("Document to open"));
 ```
 
 Later on, we start processing positional arguments, but only if there is one. Otherwise, we proceed as usual. In our case we can only open one file at a time, so only the first file is of interest to us. We call the `openFileFromUrl()` function and feed it the URL of the file we want to open, whether it is a local file like "$HOME/foo" or a remote one like "ftp.mydomain.com/bar". We use the overloaded form of [QUrl::fromUserInput()](docs:qtcore;QUrl::fromUserInput) in order to set the current path. This is needed in order to work with relative paths like "../baz".

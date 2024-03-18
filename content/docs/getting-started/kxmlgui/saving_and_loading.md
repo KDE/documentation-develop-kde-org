@@ -191,7 +191,7 @@ Again, for simplicity's sake, this tutorial only saves text files to local disk.
 
 {{< readfile file="/content/docs/getting-started/kxmlgui/saving_and_loading/CMakeLists.txt" highlight="cmake" >}}
 
-Since we are now using the [KIO](docs:kio) library, we must tell CMake to link against it. We do this by passing `KIO` to the [`find_package()`](https://cmake.org/cmake/help/latest/command/find_package.html) function and `KF5::KIOCore` to the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function.
+Since we are now using the [KIO](docs:kio) library, we must tell CMake to link against it. We do this by passing `KIO` to the [`find_package()`](https://cmake.org/cmake/help/latest/command/find_package.html) function and `KF6::KIOCore` to the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function.
 
 With this file, the tutorial can be built and run in the same way as the [previous tutorial](../using_actions).
 

@@ -34,9 +34,8 @@ Don't worry about the .rc file just yet. We will see what it's about by the end 
     // ...
     KLocalizedString::setApplicationDomain("texteditor");
     
-    KAboutData aboutData(
-                         // The program name used internally. (componentName)
-                         QStringLiteral("texteditor"),
+    KAboutData aboutData(// The program name used internally. (componentName)
+                         u"texteditor"_s,
     // ...
 ```
 
@@ -84,10 +83,10 @@ The ampersand is also useful for internationalisation: in non-Latin languages su
 
 ### Icon
 
-If the action is going to be displayed in a toolbar, it is nice to have an icon depicting the action. The icon may also be displayed beside the action in the menus, depending on the widget style. We use a [QIcon::fromTheme()](docs:qtgui;QIcon::fromTheme) to grab the system's default icon for "document-new" and use [QAction::setIcon()](docs:qtwidgets;QAction::setIcon) to assign it to our `clearAction`.
+If the action is going to be displayed in a toolbar, it is nice to have an icon depicting the action. The icon may also be displayed beside the action in the menus, depending on the widget style. We use a [QIcon::fromTheme()](docs:qtgui;QIcon::fromTheme) to grab the system's default icon for "document-new-symbolic" and use [QAction::setIcon()](docs:qtwidgets;QAction::setIcon) to assign it to our `clearAction`.
 
 ```c++
-clearAction->setIcon(QIcon::fromTheme("document-new"));
+clearAction->setIcon(QIcon::fromTheme(u"document-new-symbolic"_s));
 ```
 
 ### Adding to the Collection
@@ -120,7 +119,6 @@ The list of available keys can be found in the [Qt namespace Key enum](docs:qtco
 ### Connecting the action
 
 Now that the action is fully set up, it needs to be connected to something useful. In this case (because we want to clear the text area), we connect our action to the [KTextEdit::clear()](docs:ktextwidgets;KTextEdit::clear) slot belonging to a [KTextEdit](docs:ktextwidgets;KTextEdit) (which, unsurprisingly, clears the text):
-
 
 ```c++
 connect(clearAction, &QAction::triggered, 
@@ -189,7 +187,7 @@ Finally, the `texteditorui.rc` needs to go somewhere where the system can find i
 
 {{< readfile file="/content/docs/getting-started/kxmlgui/using_actions/CMakeLists.txt" highlight="cmake" >}}
 
-This file is almost identical to the one for the [previous tutorial]({{< relref "main_window/#cmakeliststxt" >}}), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the right place for binaries using `${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory, `${KDE_INSTALL_KXMLGUI5DIR}`.
+This file is almost identical to the one for the [previous tutorial]({{< relref "main_window/#cmakeliststxt" >}}), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the right place for binaries using `${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory, `${KDE_INSTALL_KXMLGUIDIR}`.
 
 ## Running our application
 

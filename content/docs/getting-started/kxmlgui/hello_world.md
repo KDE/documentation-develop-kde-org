@@ -33,13 +33,19 @@ All the code we need will be in one file, `main.cpp`. We'll start simple and inc
 ![](hello_world.webp)
 
 Our popup box is a [KMessageBox](docs:kwidgetsaddons;KMessageBox), which has primarily two buttons:
-a [PrimaryAction](docs:kwidgetsaddons;KMessageBox::PrimaryAction), which usually serves as a confirmation button, and a [SecondaryAction](docs:kwidgetsaddons;KMessageBox::SecondaryAction), which usually portrays a different action, like a cancel or discard button. The popup box uses the [KMessageBox](docs:kwidgetsaddons;KMessageBox) class, the primary action uses a custom [KGuiItem](docs:kwidgetsaddons;KGuiItem) with the text "Hello", and the secondary action uses [KStandardGuiItem::cancel()](docs:kwidgetsaddons;KStandardGuiItem::cancel).
+a [PrimaryAction](docs:kwidgetsaddons;KMessageBox::PrimaryAction), which usually serves as a confirmation button, and a [SecondaryAction](docs:kwidgetsaddons;KMessageBox::SecondaryAction), which usually portrays a different action, like a cancel or discard button. The popup box uses the KMessageBox class, the primary action uses a custom [KGuiItem](docs:kwidgetsaddons;KGuiItem) with the text "Hello", and the secondary action uses [KStandardGuiItem::cancel()](docs:kwidgetsaddons;KStandardGuiItem::cancel).
 
 First we need to create a [QApplication](docs:qtwidgets;QApplication) object. It needs to be created exactly once and before any other KDE Frameworks or Qt object, as it is the starting point for creating your application and thus required for other components, like [Ki18n](docs:ki18n) for translations.
 
 The first argument of the [KGuiItem](docs:kwidgetsaddons;KGuiItem) constructor is the text that will appear on the item (in our case, a button object to be used soon). Then we have the option to set an icon for the button, but for now we don't want one so we can pass an empty [QString](docs:qtcore;QString) using `QString()`. We then set the tooltip (the text that appears when you hover over an item), and finally the "What's This?" text (accessed through right-clicking or Shift-F1).
 
 Now that we have the item needed for our primary action button, we can create our popup with [KMessageBox::questionTwoActions()](docs:kwidgetsaddons;KMessageBox::questionTwoActions). The first argument is the parent widget of the [KMessageBox](docs:kwidgetsaddons;KMessageBox), which is not needed for us here, so we pass `nullptr`. The second argument is the text that will appear inside the message box and above the buttons, in our case, "Hello World". The third is the caption shown in the window's titlebar, "Hello Title". Then, we set our custom [KGuiItem](docs:kwidgetsaddons;KGuiItem), `primaryAction`. Lastly, we add a convenience object with [KStandardGuiItem::cancel()](docs:kwidgetsaddons;KStandardGuiItem::cancel), which returns a ready-made [KGuiItem](docs:kwidgetsaddons;KGuiItem) with localized text and cancel functionality, satisfying the function signature.
+
+{{< alert title="Important" color="warning" >}}
+
+Using a QStringLiteral for strings like `QStringLiteral("Hello World!")` instead of literals like `"Hello World!"` is both a best practice in Qt programming and an expected coding practice in KDE software.
+
+{{< /alert >}}
 
 ### About and Internationalization
 
@@ -52,6 +58,14 @@ For your application to be localized, we must first prepare our code so that it 
 We start with a call to [KLocalizedString::setApplicationDomain()](docs:ki18n;KLocalizedString::setApplicationDomain), which is required to properly set the translation catalog and must be done before everything else (except the creation of the [QApplication](docs:qtwidgets;QApplication) instance). After that, we can just start enveloping the relevant user-visible, translatable strings with `i18n()`. The non-user visible strings that do not need to be translated should use a [QStringLiteral](docs:qtcore;QString::QStringLiteral) instead. We'll use those next with [KAboutData](docs:kcoreaddons;KAboutData).
 
 More information on internalization can be found in the [programmer's guide for internationalization](https://api.kde.org/frameworks/ki18n/html/prg_guide.html).
+
+{{< alert title="Important" color="warning" >}}
+
+Since we are about to use many string arguments, instead of writing `QStringLiteral()` 7 times, we can use QString's [operator""_s](https://doc.qt.io/qt-6/qstring.html#operator-22-22_s), a shorter notation for [string literals](https://en.cppreference.com/w/cpp/language/string_literal) special to Qt that does the same thing. This is also where the `using namespace Qt::Literals::StringLiterals;` comes from.
+
+So instead of `QStringLiteral("Hello World!")`, just typing `u"Hello World!"_s` is enough.
+
+{{< /alert >}}
 
 [KAboutData](docs:kcoreaddons;KAboutData) is a core KDE Frameworks component that stores information about an application, which can then be reused by many other KDE Frameworks components. We instantiate a new [KAboutData](docs:kcoreaddons;KAboutData) object with its fairly complete default constructor and add author information. After all the required information has been set, we call [KAboutData::setApplicationData()](docs:kcoreaddons;KAboutData::setApplicationData) to initialize the properties of the [QApplication ](docs:qtwidgets;QApplication) object.
 
@@ -96,7 +110,7 @@ Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add
 Running our application
 ------------
 
-To compile, link and install your program, you must have the following software installed: `cmake`, `make` or `ninja`, and `gcc-c++`/`g++`, and the Qt 5 and KDE Frameworks development packages. To be sure you have everything, follow [this install guide](https://community.kde.org/Get_Involved/development#One-time_setup:_your_development_environment).
+To compile, link and install your program, you must have the following software installed: `cmake`, `make` or `ninja`, and `gcc-c++`/`g++`, and the Qt 6 and KDE Frameworks development packages.
 
 First we configure our project inside of a `build/` folder:
 
@@ -119,3 +133,10 @@ And launch it with:
 ```
 
 You can also run the binary with flags. The flag `--help` is a standard flag added by Qt via [QCommandLineParser](docs:qtcore;QCommandLineParser), and the content of the `--version`, `--author` and `--license` flags should match the information we added with [KAboutData](docs:kcoreaddons;KAboutData).
+
+```bash
+./build/bin/helloworld --help
+./build/bin/helloworld --version
+./build/bin/helloworld --author
+./build/bin/helloworld --license
+```

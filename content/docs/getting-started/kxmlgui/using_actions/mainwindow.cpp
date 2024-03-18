@@ -18,14 +18,16 @@ MainWindow::MainWindow(QWidget *parent) : KXmlGuiWindow(parent)
 
 void MainWindow::setupActions()
 {
+    using namespace Qt::Literals::StringLiterals;
+
     QAction *clearAction = new QAction(this);
     clearAction->setText(i18n("&Clear"));
-    clearAction->setIcon(QIcon::fromTheme("document-new"));
-    actionCollection()->addAction("clear", clearAction);
-    actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL + Qt::Key_W);
+    clearAction->setIcon(QIcon::fromTheme(u"document-new-symbolic"_s));
+    actionCollection()->addAction(u"clear"_s, clearAction);
+    actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL | Qt::Key_L);
     connect(clearAction, &QAction::triggered, textArea, &KTextEdit::clear);
     
     KStandardAction::quit(qApp, &QCoreApplication::quit, actionCollection());
     
-    setupGUI(Default, "texteditorui.rc");
+    setupGUI(Default, u"texteditorui.rc"_s);
 }
