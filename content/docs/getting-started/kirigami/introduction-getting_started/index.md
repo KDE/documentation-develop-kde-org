@@ -21,11 +21,10 @@ Before getting started, we will need to install Kirigami on our machine. There a
 We need a C++ compiler, Qt development packages, and Kirigami. Open a terminal application and run one of the following, depending on which Linux distribution you are using:
 
 {{< installpackage
-  arch="base-devel extra-cmake-modules cmake qt5-base qt5-declarative qt5-quickcontrols2 kirigami2 ki18n kcoreaddons breeze qqc2-desktop-style"
-  opensuseCommand=`sudo zypper install --type pattern devel_C_C++
-sudo zypper install cmake extra-cmake-modules libQt5Core-devel libqt5-qtdeclarative-devel libQt5QuickControls2-devel kirigami2-devel ki18n-devel kcoreaddons-devel qqc2-desktop-style`
+  arch="base-devel extra-cmake-modules cmake qt6-base qt6-declarative kirigami ki18n kcoreaddons breeze qqc2-desktop-style"
+  opensuse="cmake kf6-extra-cmake-modules kf6-kirigami-devel kf6-ki18n-devel kf6-kcoreaddons-devel qt6-base-devel qt6-declarative-devel qt6-quickcontrols2-devel qqc2-desktop-style"
   fedoraCommand=`sudo dnf groupinstall "Development Tools" "Development Libraries"
-sudo dnf install cmake extra-cmake-modules qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel kf5-kirigami2-devel kf5-ki18n-devel kf5-kcoreaddons-devel qqc2-desktop-style` >}}
+sudo dnf install cmake extra-cmake-modules kf6-kirigami2-devel kf6-ki18n-devel kf6-kcoreaddons-devel qt6-qtbase-devel qt6-qtdeclarative-devel qt6-qtquickcontrols2-devel qqc2-desktop-style` >}}
 
 Further information for other distributions can be found [here](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Install_the_dependencies).
 
