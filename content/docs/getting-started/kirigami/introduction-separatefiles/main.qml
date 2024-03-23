@@ -55,15 +55,17 @@ Kirigami.ApplicationWindow {
         title: i18nc("@title", "Kountdown")
 
         // Kirigami.Action encapsulates a UI action. Inherits from Controls.Action
-        actions.main: Kirigami.Action {
-            id: addAction
-            // Name of icon associated with the action
-            icon.name: "list-add"
-            // Action text, i18n function returns translated string
-            text: i18nc("@action:button", "Add kountdown")
-            // What to do when triggering the action
-            onTriggered: openPopulatedSheet("add")
-        }
+        actions: [
+            Kirigami.Action {
+                id: addAction
+                // Name of icon associated with the action
+                icon.name: "list-add"
+                // Action text, i18n function returns translated string
+                text: i18nc("@action:button", "Add kountdown")
+                // What to do when triggering the action
+                onTriggered: openPopulatedSheet("add")
+            }
+        ]
 
         Kirigami.CardsListView {
             id: layout

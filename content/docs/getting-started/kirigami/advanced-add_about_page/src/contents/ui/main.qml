@@ -69,12 +69,14 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: Kirigami.ScrollablePage {
         title: i18nc("@title", "Kountdown")
 
-        actions.main: Kirigami.Action {
-            id: addAction
-            icon.name: "list-add"
-            text: i18nc("@action:button", "Add kountdown")
-            onTriggered: openPopulatedSheet("add")
-        }
+        actions: [
+            Kirigami.Action {
+                id: addAction
+                icon.name: "list-add"
+                text: i18nc("@action:button", "Add kountdown")
+                onTriggered: openPopulatedSheet("add")
+            }
+        ]
 
         Kirigami.CardsListView {
             id: layout
