@@ -5,28 +5,11 @@ weight: 3
 group: "help"
 ---
 
-Choosing what you want to work on is more important to the contribution process than it might look like at first.
+The best place to start is with something that personally affects you: for example, a small bug or glitch in a piece of KDE software that you use, or an idea you have for a new feature.
 
-If you don't know which project to start working on, there are multiple ways to go about it, but the sole principle behind all of them is this: your motivation.
+The personal angle will impart more motivation to get started, push through challenges, and finish your contribution to KDE. This isn't a requirement, but it's a strong indicator that you'll be able to complete the task as a brand new KDE contributor.
 
-For that reason, a good place to start is with a small bug or feature in an existing piece of software that personally affects you (something commonly known as "scratching your own itch" in open source land). This can be many things:
-
-* A missing feature
-* Broken functionality
-* Unexpected behavior
-* Non-descriptive text
-* Bad application layout
-* and many others.
-
-By having the issue affect you personally, you will be more inclined to start, go through, and finish your contribution to KDE. This is not a requirement, but it is a strong indicator that you will be able to finish your tasks as a brand new KDE contributor.
-
-Below you will see multiple lists of tasks that might inspire you to fix them.
-
-Once you have established or have a general idea about what you want to work on, you can [get in touch with the existing developers]({{< ref "help-developers" >}}) and they can help you out by pointing you to the right place in the code and providing advice about how to tackle the problem.
-
-Try not to start by proposing or working on major features or significant design changes. These can be controversial, and the smoothest way to get going is by working on relatively non-controversial bugfixes. Start slowly and build trust!
-
-Here are some other ideas for starting points:
+If everything works great for you, here are some other ideas for starting points:
 
 * Improve awkwardly-worded messages and labels that are written in English. This is a great way for non-programmers to contribute! If you can compile software and have a good grasp of English, you can make a big difference here.
 
@@ -42,4 +25,8 @@ There are many other lists of issues you can take a look at:
 
 * The [Bug Triaging team](https://community.kde.org/Guidelines_and_HOWTOs/Bug_triaging) has [many search queries](https://community.kde.org/Guidelines_and_HOWTOs/Bug_triaging#Decide_what_to_work_on) that can be useful to search for bugs.
 
-* The [Gardening team](https://community.kde.org/Gardening) has a [stale merge requests list](https://invent.kde.org/dashboard/merge_requests?draft=no&not%5Blabel_name%5D%5B%5D=Gardening%3A+Stale&scope=all&sort=updated_asc&state=opened) full of old merge requests with interesting, but unfinished ideas. Remember to ask the developers if it's okay to work on them!
+* The [Gardening team](https://community.kde.org/Gardening) has a [stale merge requests list](https://invent.kde.org/dashboard/merge_requests?draft=no&not%5Blabel_name%5D%5B%5D=Gardening%3A+Stale&scope=all&sort=updated_asc&state=opened) full of old merge requests with interesting but unfinished ideas. You can ask their developers if it's okay to take over the work on them.
+
+Try not to start out by proposing or working on major features or significant design changes. These can be controversial, and the smoothest way to get going is by working on relatively non-controversial bugfixes. Start slowly and build trust!
+
+Once you've got a general idea about what you want to work on, you can [get in touch with the existing developers]({{< ref "help-developers" >}}) and they can help you out by pointing you to the right place in the code and providing advice about how to tackle the problem.
