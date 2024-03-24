@@ -18,7 +18,7 @@ For example, if we wanted to let the user of our [main window tutorial]({{< ref 
 
 ## QActions
 
-A [QAction](docs:qtwidgets;QAction) is an object which contains all the information about the icon and shortcuts that are associated with a certain action. With the use of [signals and slots](https://doc.qt.io/qt-5/signalsandslots.html), whenever that action is triggered (like clicking a menu option), a function in a different part of your program is automatically run.
+A [QAction](docs:qtwidgets;QAction) is an object which contains all the information about the icon and shortcuts that are associated with a certain action. With the use of [signals and slots](https://doc.qt.io/qt-6/signalsandslots.html), whenever that action is triggered (like clicking a menu option), a function in a different part of your program is automatically run.
 
 [QActions](docs:qtwidgets;QAction) are most commonly used in [QMenus](docs:qtwidgets;QMenu) shown in a [QMenuBar](docs:qtwidgets;QMenuBar), a [QToolBar](docs:qtwidgets;QToolBar), or in a right click context menu.
 

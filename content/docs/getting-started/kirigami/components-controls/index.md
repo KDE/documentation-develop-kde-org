@@ -46,9 +46,9 @@ Kirigami.Page {
 
 ### Toggleable buttons
 
-The behavior of buttons can be changed to make them toggleable: in this mode, they will stay pressed until clicked on once more. This mode can be activated by setting their [checkable](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checkable-prop) property to `true`; we can also set buttons to be toggled on by default by setting [checked](https://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton.html#checked-prop) to `true`.
+The behavior of buttons can be changed to make them toggleable: in this mode, they will stay pressed until clicked on once more. This mode can be activated by setting their [checkable](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checkable-prop) property to `true`; we can also set buttons to be toggled on by default by setting [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checked-prop) to `true`.
 
-We can get the most out of toggleable buttons by using the `onCheckedChanged` signal handler which is [automatically generated](https://doc.qt.io/qt-6/qtqml-syntax-signals.html#property-change-signal-handlers) from the [checked](https://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton.html#checked-prop) signal. It works similarly to `onClicked`, except here the assigned action will be executed when the button's state changes. It is a boolean property, which can come in handy for specific use cases.
+We can get the most out of toggleable buttons by using the `onCheckedChanged` signal handler which is [automatically generated](https://doc.qt.io/qt-6/qtqml-syntax-signals.html#property-change-signal-handlers) from the [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checked-prop) signal. It works similarly to `onClicked`, except here the assigned action will be executed when the button's state changes. It is a boolean property, which can come in handy for specific use cases.
 
 In this example, we set the visibility of an inline drawer according to the status of a toggleable button:
 
@@ -232,8 +232,8 @@ The coloration provides a visual indicator of how large the value you are select
 Sliders have a few important properties we must pay attention to:
 
 - [value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-prop): contains the value at which the handle is placed, and can also be set manually to provide a default starting value
-- [to](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html#to-prop): defines the range of the slider by specifying the maximum value it can go to
-- [orientation](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html#orientation-prop): allows the slider to be set to a vertical orientation with `Qt.Vertical`
+- [to](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#to-prop): defines the range of the slider by specifying the maximum value it can go to
+- [orientation](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#orientation-prop): allows the slider to be set to a vertical orientation with `Qt.Vertical`
 
 {{< sections >}}
 
@@ -287,7 +287,7 @@ Controls.Slider {
 
 QtQuick Controls also provides [Controls.RangeSliders](docs:qtquickcontrols;QtQuick.Controls.RangeSlider). These have two handles, hence allowing you to define a range of numbers between the two handles.
 
-Two new properties are important to keep in mind: [first.value](https://doc.qt.io/qt-6/qml-qtquick-controls2-rangeslider.html#first-prop) and [second.value](https://doc.qt.io/qt-5/qml-qtquick-controls2-rangeslider.html#second-prop), which hold the values of the two handles. Like the [value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-prop) property of the standard sliders, these can be pre-set.
+Two new properties are important to keep in mind: [first.value](https://doc.qt.io/qt-6/qml-qtquick-controls2-rangeslider.html#first-prop) and [second.value](https://doc.qt.io/qt-6/qml-qtquick-controls2-rangeslider.html#second-prop), which hold the values of the two handles. Like the [value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-prop) property of the standard sliders, these can be pre-set.
 
 {{< sections >}}
 

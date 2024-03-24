@@ -58,7 +58,7 @@ pageStack.initialPage: Kirigami.ScrollablePage {
 
 We are placing our Kirigami Action within our main page from our previous tutorials. If we wanted to, we could add more actions to our page (and even nest actions within actions!). [Kirigami.Action](docs:kirigami2;Action) components are used as contextual actions within Kirigami pages. We are setting it specifically to the [actions.main](docs:kirigami2;Page::actions) property of our [Kirigami.Page](docs:kirigami2;Page): the `actions` object has properties that let us set different actions in different positions, but since our "Add kountdown" action is central to our UI we are setting it as the main action of this page.
 
-The `id` and `text` properties should be familiar from previous tutorials. However, the inherited [Action.icon](https://doc.qt.io/qt-5/qml-qtquick-controls2-action.html#icon-prop) property should be interesting: it is an object with several properties letting you display certain icons for your actions. Fortunately, to use KDE icons all we need to do is provide the name property for the icon property, `icon.name`.
+The `id` and `text` properties should be familiar from previous tutorials. However, the inherited [Action.icon](https://doc.qt.io/qt-6/qml-qtquick-controls2-action.html#icon-prop) property should be interesting: it is an object with several properties letting you display certain icons for your actions. Fortunately, to use KDE icons all we need to do is provide the name property for the icon property, `icon.name`.
 
 {{< alert title="Note" color="info" >}}
 

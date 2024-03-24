@@ -305,7 +305,7 @@ while (it != m_activeTimers.end()) {
 }
 ```
 
-This problem is also discussed in the [ Qt documentation for QMap::iterator](https://doc.qt.io/qt-5/qmap-iterator.html#details)
+This problem is also discussed in the [Qt documentation for QMap::iterator](https://doc.qt.io/qt-6/qmap-iterator.html#details)
 but applies to **all** Qt iterators
 
 ## memory leaks

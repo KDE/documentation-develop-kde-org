@@ -14,7 +14,7 @@ aliases:
 2. The **delegate**, which defines how each element in the model will be displayed
 3. The **list view** itself, which will display information from the model according to the delegate
 
-If you would like further clarification, the Qt documentation has [an informative page](https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html) on the topic.
+If you would like further clarification, the Qt documentation has [an informative page](https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html) on the topic.
 
 ## Creating a basic listview
 

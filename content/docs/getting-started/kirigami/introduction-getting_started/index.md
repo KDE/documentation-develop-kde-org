@@ -111,7 +111,7 @@ This is a KDE convention, but not all KDE projects use this structure. You are f
 
 Here's where we will be handling our application's frontend.
 
-If you know some Javascript, then much of QML will seem familiar to you (though it does have its own peculiarities). [Qt's documentation](https://doc.qt.io/qt-5/qtqml-index.html) has an extensive amount of material on this language if you feel like trying something on your own. Over the course of these tutorials we will be focusing much of our attention on our QML code, where we can use Kirigami to get the most out of it.
+If you know some Javascript, then much of QML will seem familiar to you (though it does have its own peculiarities). [Qt's documentation](https://doc.qt.io/qt-6/qtqml-index.html) has an extensive amount of material on this language if you feel like trying something on your own. Over the course of these tutorials we will be focusing much of our attention on our QML code, where we can use Kirigami to get the most out of it.
 
 For now, let's focus on `main.qml`. First we [import](https://doc.qt.io/qt-6/qtqml-syntax-imports.html) a number of important modules:
 
@@ -156,7 +156,7 @@ For now, we don't need to go into too much detail regarding what our `main.cpp` 
 
 ### resources.qrc
 
-Our `resources.qrc` is a [Qt Resource file](https://doc.qt.io/qt-5/resources.html). It contains the list of all QML files as well as other files (like custom icons) that will be included in the binary.
+Our `resources.qrc` is a [Qt Resource file](https://doc.qt.io/qt-6/resources.html). It contains the list of all QML files as well as other files (like custom icons) that will be included in the binary.
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/resources.qrc" highlight="xml" >}}
 

@@ -96,7 +96,7 @@ QtWidgets are somewhat more daunting to work with than QML (and *much* more C++ 
 
 The Qt project is extensive, and so are QML and QtQuick. There is a lot of functionality we haven't covered, but there is a lot of documentation we can pull from to find out more.
 
-- If you want to look up what specific components do, look no further than [Qt's official QML documentation.](https://doc.qt.io/qt-5/qtquick-index.html)
+- If you want to look up what specific components do, look no further than [Qt's official QML documentation.](https://doc.qt.io/qt-6/qtquick-index.html)
 - If you are looking for a more guided approach to learning, [the QMLBook](https://qmlbook.github.io/) is a great place to start.
 
 ### More Kirigami
