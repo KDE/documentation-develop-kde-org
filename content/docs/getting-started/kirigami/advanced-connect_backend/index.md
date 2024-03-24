@@ -106,11 +106,11 @@ Kirigami.Page {
         text: Backend.introductionText
     }
 
-    actions {
-        main: Kirigami.Action {
+    actions: [
+        Kirigami.Action {
             ...
         }
-    }
+    ]
 }
 ```
 

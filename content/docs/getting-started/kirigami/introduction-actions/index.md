@@ -40,16 +40,18 @@ A countdown app is pretty useless without the ability to add countdowns. Let's c
 
 pageStack.initialPage: Kirigami.ScrollablePage {
     ...
-    actions.main: Kirigami.Action {
-        id: addAction
-        icon.name: "list-add"
-        text: i18nc("@action:button", "Add kountdown")
-        onTriggered: kountdownModel.append({
-            name: "Kirigami Action added card!",
-            description: "Congratulations, your Kirigami Action works!",
-            date: 1000
-        })
-    }
+    actions: [
+        Kirigami.Action {
+            id: addAction
+            icon.name: "list-add"
+            text: i18nc("@action:button", "Add kountdown")
+            onTriggered: kountdownModel.append({
+                name: "Kirigami Action added card!",
+                description: "Congratulations, your Kirigami Action works!",
+                date: 1000
+            })
+        }
+    ]
     ...
 }
 ```

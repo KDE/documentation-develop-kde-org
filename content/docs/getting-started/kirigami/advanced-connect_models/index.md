@@ -475,13 +475,15 @@ Kirigami.ApplicationWindow {
     }
 
     pageStack.initialPage: Kirigami.ScrollablePage {
-        actions.main: Kirigami.Action {
-            icon.name: "add"
-            text: "Add New Species"
-            onTriggered: {
-                addPrompt.open();
+        actions: [
+            Kirigami.Action {
+                icon.name: "add"
+                text: "Add New Species"
+                onTriggered: {
+                    addPrompt.open();
+                }
             }
-        }
+        ]
         ...
     }
 }

@@ -89,12 +89,14 @@ At the end of our form we are including a [Button](docs:qtquickcontrols;QtQuick.
 ## Using our sheet
 
 ```qml
-actions.main: Kirigami.Action {
-    id: addAction
-    icon.name: "list-add"
-    text: i18nc("@action:button", "Add kountdown")
-    onTriggered: addSheet.open()
-}
+actions: [
+    Kirigami.Action {
+        id: addAction
+        icon.name: "list-add"
+        text: i18nc("@action:button", "Add kountdown")
+        onTriggered: addSheet.open()
+    }
+]
 ```
 
 Overlay sheets have two methods, [open()](docs:kirigami2;templates::OverlaySheet::open) and [close()](docs:kirigami2;templates::OverlaySheet::close), which control the opening and closing of this component. In this case, we have set the sheet to be opened when we trigger our action. Once we save our files and build our program, we'll be able to add our own custom countdowns!
