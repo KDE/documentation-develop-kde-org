@@ -48,12 +48,14 @@ hugo_website:
     # On none protected branches create a redirect file for GitLab pages
     - |
       if [ "$CI_COMMIT_REF_PROTECTED" != "true" ]; then
-        echo "/*/ /:splat/index.html 200" > public/_redirects 
+        echo "/*/ /:splat/index.html 200" > public/_redirects
+        echo "/public/*/ /public/:splat/index.html 200" > _redirects
       fi
     - python3 -u ci-notary-service/publishwebsite.py --config ci-utilities/signing/publishwebsite.ini public/
     - if [[ -e /tmp/task-debug.log ]]; then mv /tmp/task-debug.log $CI_PROJECT_DIR/; fi
   artifacts:
     expire_in: 2 days
     paths:
+      - _redirects
       - public/
       - task-debug.log
