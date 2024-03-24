@@ -25,7 +25,7 @@ You start your submission of new applications on the "Windows -> Overview" page 
 
 Click on the "Create a new app" button.
 
-{{< figure src="windows-overview.png" >}}
+{{< figure src="../windows-overview.png" >}}
 
 ### Choosing the application name
 
@@ -35,7 +35,7 @@ For this guide, we will be using [Kile](https://apps.kde.org/kile).
 
 Don't hesitate to reserve the name of your app even if you are not yet ready for the first submission to the Microsoft Store. Once a name is reserved nobody else can publish an app with this name.
 
-{{< figure src="application-name.png" >}}
+{{< figure src="../application-name.png" >}}
 
 ### Starting a submission
 
@@ -45,13 +45,13 @@ The next step is now to create our first submission. For this you will need to p
 
 A submission is a bundle of both a new application version and the needed metadata for the store, like screenshots and descriptions.
 
-{{< figure src="start-submission.png" >}}
+{{< figure src="../start-submission.png" >}}
 
 ### Fill out the different submission parts
 
 You will end up on the overview page of the new submission.
 
-{{< figure src="submission-overview.png" >}}
+{{< figure src="../submission-overview.png" >}}
 
 The important parts to fill out are the top five:
 
@@ -67,19 +67,19 @@ We will be visiting each section separately.
 
 The defaults here are sufficient for the most part.
 
-{{< figure src="pricing-availability-market.png" >}}
+{{< figure src="../pricing-availability-market.png" >}}
 
 For your first submission, you may want to restrict the visibility to "Private audience" until everything is ready for public consumption. You can create a customer group "Foo Beta Testers" with the email address of a regular Microsoft Store account in the Microsoft Partner Center and then select this group under "Private audience". This way, after you are finished, you can test installing your app with the Microsoft Store app before anybody else can see it.
 
-{{< figure src="pricing-availability-visibility-reverse.png" >}}
+{{< figure src="../pricing-availability-visibility-reverse.png" >}}
 
 The default release schedule is fine, too: as soon as possible and with no end time for availability.
 
-{{< figure src="pricing-availability-schedule.png" >}}
+{{< figure src="../pricing-availability-schedule.png" >}}
 
 The only thing that needs adjustments here is the pricing, which was set to "Free" in this case.
 
-{{< figure class="text-center" src="pricing-availability-price.png" >}}
+{{< figure class="text-center" src="../pricing-availability-price.png" >}}
 
 {{< alert title="Note" color="info" >}}
 
@@ -89,21 +89,21 @@ KDE e.V. is currently investigating the financial and technical matters necessar
 
 The rest can be left as is.
 
-{{< figure src="pricing-availability-rest.png" >}}
+{{< figure src="../pricing-availability-rest.png" >}}
 
 Afterwards, you can press the "Save draft" button at the bottom of the page.
 
-{{< figure src="pricing-availability-save.png" >}}
+{{< figure src="../pricing-availability-save.png" >}}
 
 ### Submission: Properties
 
 On this page, you should see the following:
 
-{{< figure class="text-center" src="properties-original.png" >}}
+{{< figure class="text-center" src="../properties-original.png" >}}
 
 The most important section is at the top.
 
-{{< figure src="properties-category.png" >}}
+{{< figure src="../properties-category.png" >}}
 
 Very important: The category/subcategory for the store! People will not be able to locate your stuff easily if you choose a category that does not match your application.
 
@@ -116,7 +116,7 @@ You won't be able to change the category after setting it the first time. Choose
 For example, Kile should be in something like "Productivity", like other tools of that kind.
 If unsure, just browse through the Microsoft store and take a look at which kind of applications are where.
 
-{{< figure src="properties-support.png" >}}
+{{< figure src="../properties-support.png" >}}
 
 KDE provides a [privacy policy website](https://kde.org/privacypolicy-apps/) you can link to.
 
@@ -124,7 +124,7 @@ Below that text field, insert the homepage of your application and the best mean
 
 At the bottom you can configure some other things like system requirements.
 
-{{< figure src="properties-requirements.png" >}}
+{{< figure src="../properties-requirements.png" >}}
 
 Keyboard or Mouse input is required to interact with Kile. Your application might recommend Touch input as well.
 
@@ -134,33 +134,33 @@ After you are done, scroll down and press the "Save" button.
 
 For age ratings, just follow the instructions.
 
-{{< figure class="text-center" src="age-ratings-original.png" >}}
+{{< figure class="text-center" src="../age-ratings-original.png" >}}
 
 This is more or less what you would expect. As the typical KDE application doesn't contain sex, violence, or other content of that kind, this should be straightforward. Below is the input used for Kile.
 
-{{< figure class="text-center" src="age-ratings-filled-original.png" >}}
+{{< figure class="text-center" src="../age-ratings-filled-original.png" >}}
 
 Of these, there are a few fields that might be of note for your application. If we were to use a few existing KDE apps as examples, User Content could apply to a chat app like [Neochat](https://apps.kde.org/neochat) or [Tokodon](https://apps.kde.org/tokodon).
 
-{{< figure src="age-ratings-filled-usercontent.png" >}}
+{{< figure src="../age-ratings-filled-usercontent.png" >}}
 
 Online Content could apply to an app that fetches content from the internet like the feed reader [Alligator](https://apps.kde.org/alligator).
 
-{{< figure src="age-ratings-filled-onlinecontent.png" >}}
+{{< figure src="../age-ratings-filled-onlinecontent.png" >}}
 
 And a web browser like [Falkon](https://apps.kde.org/falkon) or educational software like [GCompris](https://apps.kde.org/gcompris) would need a few ticked options in Miscellaneous:
 
-{{< figure src="age-ratings-filled-miscellaneous.png" >}}
+{{< figure src="../age-ratings-filled-miscellaneous.png" >}}
 
 After filling the required fields, just press "Save and generate" and the results will show up. If you see no issues, press "Continue" to finalize it. As shown, Kile is applicable to pretty much all ages.
 
-{{< figure src="age-ratings-results.png" >}}
+{{< figure src="../age-ratings-results.png" >}}
 
 ### Submission: Packages
 
 Now we get to submit the real installer: the `.appxupload` package KDE's GitLab creates for you.
 
-{{< figure class="text-center" src="packages-original.png" >}}
+{{< figure class="text-center" src="../packages-original.png" >}}
 
 For example, for NeoChat, you can grab the latest release build from [KDE's CDN](https://cdn.kde.org/ci-builds/network/neochat/release-24.02/windows/).
 
@@ -168,11 +168,11 @@ Before you upload your package, please really test this manually first! Broken v
 
 You can locally test the generated sideload `.appx` file on Windows just by double clicking on it to install it locally. You will have to uninstall a previously installed version first.
 
-{{< figure src="packages-upload.png" >}}
+{{< figure src="../packages-upload.png" >}}
 
 For operating systems, select at least "Windows 10 Desktop".
 
-{{< figure src="packages-version.png" >}}
+{{< figure src="../packages-version.png" >}}
 
 After the package has been successfully uploaded and validated, press "Save" to be done here.
 
@@ -188,11 +188,11 @@ But keep in mind: you will need to update them manually on each new version. If 
 
 To start with the English variant, click on the "English (United States)" link on the submission overview as seen below.
 
-{{< figure class="text-center" src="overview-store-listings.png" >}}
+{{< figure class="text-center" src="../overview-store-listings.png" >}}
 
 You will now end up on a page that allows to insert the usual stuff for an application store page.
 
-{{< figure src="store-listings.png" >}}
+{{< figure src="../store-listings.png" >}}
 
 Important here are the following sections:
 
@@ -213,7 +213,7 @@ After you are done with this, you can just press the "Submit to the Store" butto
 
 The application icon will show up properly in the web interface after the first submission is done, too.
 
-{{< figure class="text-center" src="submit-to-the-store.png" >}}
+{{< figure class="text-center" src="../submit-to-the-store.png" >}}
 
 ### What's next?
 
