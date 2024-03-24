@@ -49,11 +49,13 @@ hugo_website:
     - |
       if [ "$CI_COMMIT_REF_PROTECTED" != "true" ]; then
         echo "/*/ /:splat/index.html 200" > public/_redirect
+        echo "/public/*/ /public/:splat/index.html 200" > _redirect
       fi
     - python3 -u ci-notary-service/publishwebsite.py --config ci-utilities/signing/publishwebsite.ini public/
     - if [[ -e /tmp/task-debug.log ]]; then mv /tmp/task-debug.log $CI_PROJECT_DIR/; fi
   artifacts:
     expire_in: 2 days
     paths:
+      - _redirect
       - public/
       - task-debug.log
