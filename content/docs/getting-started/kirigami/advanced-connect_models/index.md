@@ -134,11 +134,10 @@ text in the QByteArray is what's used in the actual QML code.
 
 ```cpp
 QHash<int, QByteArray> Model::roleNames() const {
-    QHash<int, QByteArray> map = {
+    return {
         {SpeciesRole,   "species"},
         {CharactersRole, "characters"}
     };
-    return map;
 }
 ```
 
