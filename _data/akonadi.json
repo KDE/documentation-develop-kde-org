@@ -1,5 +1,7 @@
 {
   "tagfile": {
+    "@doxygen_version": "1.10.0",
+    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
       {
         "@kind": "class",
@@ -315,10 +317,10 @@
               "$": "classAkonadi_1_1AbstractSearchPlugin.html"
             },
             "anchor": {
-              "$": "a72e9e534391063bda7bc60d2f994d510"
+              "$": "ae2a1ca3b9df55ee753c33aef3c17045d"
             },
             "arglist": {
-              "$": "(const QString &query, const QVector< qint64 > &collections, const QStringList &mimeTypes)=0"
+              "$": "(const QString &query, const QList< qint64 > &collections, const QStringList &mimeTypes)=0"
             }
           }
         ]
@@ -1866,7 +1868,9 @@
         "filename": {
           "$": "classAkonadi_1_1AgentFactory.html"
         },
-        "templarg": {},
+        "templarg": {
+          "$": "typename T"
+        },
         "base": {
           "$": "Akonadi::AgentFactoryBase"
         },
@@ -1899,7 +1903,7 @@
               "$": "classAkonadi_1_1AgentFactory.html"
             },
             "anchor": {
-              "$": "aa66d1caa7bab064697c6d58e491fc84e"
+              "$": "add9508478bddfc8447d7ed7464e8c1a2"
             },
             "arglist": {
               "$": "(const QString &identifier) const override"
@@ -1932,7 +1936,7 @@
               "$": "classAkonadi_1_1AgentFactoryBase.html"
             },
             "anchor": {
-              "$": "abdf21ea4aa40c5bc82be7467ebc42597"
+              "$": "a2181d84d2b96ecc8290442142efb1ecb"
             },
             "arglist": {
               "$": "(const QString &identifier) const =0"
@@ -2142,7 +2146,7 @@
           {
             "@kind": "typedef",
             "type": {
-              "$": "QVector< AgentInstance >"
+              "$": "QList< AgentInstance >"
             },
             "name": {
               "$": "List"
@@ -2151,7 +2155,7 @@
               "$": "classAkonadi_1_1AgentInstance.html"
             },
             "anchor": {
-              "$": "aa166c078b2b15696f6d6d2d88fa484eb"
+              "$": "a55b3c96682d06d297c8094eeb5322ba5"
             },
             "arglist": {}
           },
@@ -2289,7 +2293,7 @@
               "$": "classAkonadi_1_1AgentInstance.html"
             },
             "anchor": {
-              "$": "a8c86badb15165f3f7a16a4603a9662dd"
+              "$": "aacf85957045db92bc1be23838892b6c4"
             },
             "arglist": {
               "$": "()"
@@ -2343,7 +2347,7 @@
               "$": "classAkonadi_1_1AgentInstance.html"
             },
             "anchor": {
-              "$": "a2314a140145946f61abb31bfd0177e42"
+              "$": "a3a1f4ba594e767f6585583676317d079"
             },
             "arglist": {
               "$": "() const"
@@ -2361,7 +2365,7 @@
               "$": "classAkonadi_1_1AgentInstance.html"
             },
             "anchor": {
-              "$": "aff9ac3dd88e50a7ca0132fff816c5942"
+              "$": "ae540845cf19d7ac8e804ee804653acf1"
             },
             "arglist": {
               "$": "() const"
@@ -2451,7 +2455,7 @@
               "$": "classAkonadi_1_1AgentInstance.html"
             },
             "anchor": {
-              "$": "ac3a683849c75b8b2de3af19d69983571"
+              "$": "ae5f77f1333076c2cd255a93cd769a87f"
             },
             "arglist": {
               "$": "() const"
@@ -2541,7 +2545,7 @@
               "$": "classAkonadi_1_1AgentInstance.html"
             },
             "anchor": {
-              "$": "a18c74513912f431dbdb6514352e780cb"
+              "$": "a1b1b140fab438ef85c7edc120e35d888"
             },
             "arglist": {
               "$": "() const"
@@ -2559,7 +2563,7 @@
               "$": "classAkonadi_1_1AgentInstance.html"
             },
             "anchor": {
-              "$": "a9cfd1a73c4198479bdb9e126f32f0261"
+              "$": "ab961e507d0a34df3490dd021e249f87a"
             },
             "arglist": {
               "$": "() const"
@@ -2814,6 +2818,19 @@
           {
             "@kind": "enumvalue",
             "name": {
+              "$": "IconNameRole"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1AgentInstanceModel.html"
+            },
+            "anchor": {
+              "$": "a23988d196729328c3ddade3bf5bb551dab9bfa392e153ad7820a090ed032ae02a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
               "$": "InstanceIdentifierRole"
             },
             "anchorfile": {
@@ -2900,6 +2917,19 @@
             },
             "anchor": {
               "$": "a23988d196729328c3ddade3bf5bb551dac96471450273248f6f9907274d921bed"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "IconNameRole"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1AgentInstanceModel.html"
+            },
+            "anchor": {
+              "$": "a23988d196729328c3ddade3bf5bb551dab9bfa392e153ad7820a090ed032ae02a"
             },
             "arglist": {}
           },
@@ -3282,7 +3312,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< AgentInstance >"
+              "$": "QList< AgentInstance >"
             },
             "name": {
               "$": "selectedAgentInstances"
@@ -4309,7 +4339,7 @@
               "$": "classAkonadi_1_1AgentManager.html"
             },
             "anchor": {
-              "$": "acc4e8e19b6ba2707891cc334e0811015"
+              "$": "ac10ddd05dd689e46e51084c667bb4af6"
             },
             "arglist": {
               "$": "() override"
@@ -4675,7 +4705,7 @@
           {
             "@kind": "typedef",
             "type": {
-              "$": "QVector< AgentType >"
+              "$": "QList< AgentType >"
             },
             "name": {
               "$": "List"
@@ -4684,7 +4714,7 @@
               "$": "classAkonadi_1_1AgentType.html"
             },
             "anchor": {
-              "$": "af90df04be5e902caeb73a15b8c1ae252"
+              "$": "a7a88882a6c8c8091e372b0660d0a845e"
             },
             "arglist": {}
           },
@@ -4698,7 +4728,7 @@
               "$": "classAkonadi_1_1AgentType.html"
             },
             "anchor": {
-              "$": "a454a1545f9573d32b1fcbdc14336cc4d"
+              "$": "a223bcb7ee44edb111c2e02b494fbdbe7"
             },
             "arglist": {
               "$": "()"
@@ -4748,7 +4778,7 @@
               "$": "classAkonadi_1_1AgentType.html"
             },
             "anchor": {
-              "$": "ad8b08c65b8ce34c526e0ab88fc43d0ae"
+              "$": "ac6187cdbc0ed5af3507324c870e41e6f"
             },
             "arglist": {
               "$": "() const"
@@ -4802,7 +4832,7 @@
               "$": "classAkonadi_1_1AgentType.html"
             },
             "anchor": {
-              "$": "a191d2779f4537b5824068c873e0ba9b0"
+              "$": "a662f279912372c221134df69a6111fd9"
             },
             "arglist": {
               "$": "() const"
@@ -4838,7 +4868,7 @@
               "$": "classAkonadi_1_1AgentType.html"
             },
             "anchor": {
-              "$": "a47388e4e0f30203164412cab416b7797"
+              "$": "ab47c933dea11a359cf776745b28ef5aa"
             },
             "arglist": {
               "$": "() const"
@@ -4874,7 +4904,7 @@
               "$": "classAkonadi_1_1AgentType.html"
             },
             "anchor": {
-              "$": "a5f97359dc17d68d522daa2c658d71f36"
+              "$": "a418fd645828dbdf012911aa17f0961b6"
             },
             "arglist": {
               "$": "() const"
@@ -4892,7 +4922,7 @@
               "$": "classAkonadi_1_1AgentType.html"
             },
             "anchor": {
-              "$": "a581d5de490d6cf7ca5e2af97ef99fbd3"
+              "$": "ae6fc03ffcb79d1f1fef50cd51f3af1d3"
             },
             "arglist": {
               "$": "() const"
@@ -5059,6 +5089,19 @@
           {
             "@kind": "enumvalue",
             "name": {
+              "$": "IconNameRole"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1AgentTypeModel.html"
+            },
+            "anchor": {
+              "$": "a9e3cb7e8f857a62ff1e8cad327fabef9ab836c7a170e37654ac198e8c0d71a3e3"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
               "$": "IdentifierRole"
             },
             "anchorfile": {
@@ -5106,6 +5149,19 @@
             },
             "anchor": {
               "$": "a9e3cb7e8f857a62ff1e8cad327fabef9a24d39b8e46e2797a0fbe0b0de61241fc"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "IconNameRole"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1AgentTypeModel.html"
+            },
+            "anchor": {
+              "$": "a9e3cb7e8f857a62ff1e8cad327fabef9ab836c7a170e37654ac198e8c0d71a3e3"
             },
             "arglist": {}
           },
@@ -5460,7 +5516,7 @@
               "$": "classAkonadi_1_1Attribute.html"
             },
             "anchor": {
-              "$": "a0d3a95bc13d8e40c5a311bd2998bd6a3"
+              "$": "ac16107e23cf1d064c6d277677efea0c7"
             },
             "arglist": {
               "$": "() const =0"
@@ -5583,7 +5639,7 @@
           "$": "structAkonadi_1_1Server_1_1__detail_1_1ById.html"
         },
         "templarg": {
-          "$": "Op"
+          "$": "template< typename U > class Op"
         }
       },
       {
@@ -6472,7 +6528,7 @@
           {
             "@kind": "typedef",
             "type": {
-              "$": "QVector< Collection >"
+              "$": "QList< Collection >"
             },
             "name": {
               "$": "List"
@@ -6481,7 +6537,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "a898c662f7f68e50587a292a553f759fd"
+              "$": "ade3201640228dfa54da93c7c3030605c"
             },
             "arglist": {}
           },
@@ -6902,7 +6958,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "aaae7b07d6f719471851af986c03d1b12"
+              "$": "a1fda66d6a2ff4fcecc74fba63abbf52f"
             },
             "arglist": {
               "$": "()"
@@ -7110,7 +7166,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "a5f97065468c5d4a1de6a278092c524a0"
+              "$": "a07a37422094f53cfe83bb425a006b75b"
             },
             "arglist": {
               "$": "() const"
@@ -7128,7 +7184,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "ab14b109fb5f71cb94f336d3139aa61c2"
+              "$": "a1fe70508955063bea3cee3db1e27a72c"
             },
             "arglist": {
               "$": "() const"
@@ -7146,7 +7202,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "a31cda6fa3d587708ef360e3866d10f85"
+              "$": "aa4bbd0d3b5ea5da7d7b9373a19467801"
             },
             "arglist": {
               "$": "() const"
@@ -7200,7 +7256,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "a018f89f17d06e006d3acfc66673f3f8f"
+              "$": "ad3ddcb0ee4e5bdc53fc4974b576d5133"
             },
             "arglist": {
               "$": "() const"
@@ -7218,7 +7274,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "a73b9c45c082f5ddf891fbad4fe9fb84f"
+              "$": "a1fa99d5ac4f17d5ca79db5267b3d523b"
             },
             "arglist": {
               "$": "() const"
@@ -7236,7 +7292,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "aa8f7c33e222d3041c401ea691816bb07"
+              "$": "ad5c47f38e8ba152b983ba2f02dd5b636"
             },
             "arglist": {
               "$": "() const"
@@ -7290,7 +7346,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "aef28d360a0b71166169a26feeef36aec"
+              "$": "a7b7a7e6ed0776ebeab2b53712670cda5"
             },
             "arglist": {
               "$": "() const"
@@ -7380,7 +7436,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "ab525da10184e6c8d1167e61b953b4436"
+              "$": "ab11ba3df8addf18f0ee5a0dd5d509a63"
             },
             "arglist": {
               "$": "()"
@@ -7434,7 +7490,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "a82745a70ce74fee40e273dd5d5cf3f9b"
+              "$": "a9879465b02df347b7f9f4016849204be"
             },
             "arglist": {
               "$": "() const"
@@ -7488,7 +7544,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "a5f1c73baedea8b645f447a49fb7c2d73"
+              "$": "a04b8d7e561e4c3c304ccbf348bbb68a5"
             },
             "arglist": {
               "$": "() const"
@@ -7506,7 +7562,7 @@
               "$": "classAkonadi_1_1Collection.html"
             },
             "anchor": {
-              "$": "affb108217e8b145e475dcdbd64ee5aa9"
+              "$": "a501d8c1be7c9e3dbbb8cabcb72354b27"
             },
             "arglist": {
               "$": "() const"
@@ -9673,7 +9729,7 @@
               "$": "classAkonadi_1_1CollectionFetchScope.html"
             },
             "anchor": {
-              "$": "a849a658888af8a9233b9b9aba8063487"
+              "$": "a87caf619cc2c4562f2c6db1af0531a41"
             },
             "arglist": {
               "$": "()"
@@ -9691,7 +9747,7 @@
               "$": "classAkonadi_1_1CollectionFetchScope.html"
             },
             "anchor": {
-              "$": "aec58e643f7696a5cbe38cb4a79142585"
+              "$": "a63ae8911aef87ec3f190f0f823057c72"
             },
             "arglist": {
               "$": "() const"
@@ -11082,7 +11138,7 @@
               "$": "classAkonadi_1_1CollectionPropertiesPageFactory.html"
             },
             "anchor": {
-              "$": "a36de8e74b80bda69ff47e2626b749b47"
+              "$": "aba7e8b5f8cb388de008fbc3c72ce470f"
             },
             "arglist": {
               "$": "(QWidget *parent=nullptr) const =0"
@@ -12057,7 +12113,7 @@
           {
             "@kind": "typedef",
             "type": {
-              "$": "QVector< Condition >"
+              "$": "QList< Condition >"
             },
             "name": {
               "$": "List"
@@ -12066,7 +12122,7 @@
               "$": "classAkonadi_1_1Server_1_1Query_1_1Condition.html"
             },
             "anchor": {
-              "$": "afbad3d33197fcfc9c16d71af976bdbc0"
+              "$": "a6970b623bb60918cdf505d1e7137e1bb"
             },
             "arglist": {}
           },
@@ -12120,6 +12176,24 @@
             },
             "arglist": {
               "$": "(const Condition &condition)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addValueCondition"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1Query_1_1Condition.html"
+            },
+            "anchor": {
+              "$": "a12b4d4050fcc918d28a20f6baeba8ff4"
+            },
+            "arglist": {
+              "$": "(const QString &column, CompareOperator op, const QList< qint64 > &value)"
             }
           },
           {
@@ -13152,7 +13226,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< Collection >"
+              "$": "QList< Collection >"
             },
             "name": {
               "$": "virtualCollections"
@@ -13161,10 +13235,29 @@
               "$": "classAkonadi_1_1Server_1_1DataStore.html"
             },
             "anchor": {
-              "$": "aa6fd97f6dbaa5cf79e8192c59e451940"
+              "$": "a188bbe438014fd024f2ab531c9b01e3f"
             },
             "arglist": {
               "$": "(const PimItem &item)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static DataStore *"
+            },
+            "name": {
+              "$": "dataStoreForDatabase"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1DataStore.html"
+            },
+            "anchor": {
+              "$": "ace2a405381d9989f6217d825c825e480"
+            },
+            "arglist": {
+              "$": "(const QSqlDatabase &db)"
             }
           },
           {
@@ -13216,10 +13309,10 @@
               "$": "classAkonadi_1_1Server_1_1DataStore.html"
             },
             "anchor": {
-              "$": "afdb6ac8be44a01120bf313db8716071d"
+              "$": "ab4e3d6e0fc1a4b0dd643d3f87a17f6cf"
             },
             "arglist": {
-              "$": "(AkonadiServer &akonadi)"
+              "$": "(AkonadiServer *akonadi, DbConfig *dbConfig)"
             }
           }
         ]
@@ -13278,6 +13371,44 @@
               "$": "virtual QString"
             },
             "name": {
+              "$": "databasePath"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1DbConfig.html"
+            },
+            "anchor": {
+              "$": "a8ecf3f29364e09911d0730f326a93d45"
+            },
+            "arglist": {
+              "$": "() const =0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "pure",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "disableConstraintChecks"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1DbConfig.html"
+            },
+            "anchor": {
+              "$": "a84ea62a6e9a745c8d7b40f4c3bf0b782"
+            },
+            "arglist": {
+              "$": "(const QSqlDatabase &db)=0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "pure",
+            "type": {
+              "$": "virtual QString"
+            },
+            "name": {
               "$": "driverName"
             },
             "anchorfile": {
@@ -13297,16 +13428,35 @@
               "$": "virtual bool"
             },
             "name": {
+              "$": "enableConstraintChecks"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1DbConfig.html"
+            },
+            "anchor": {
+              "$": "a72fb793e2a240a8503bc16b540be68ce"
+            },
+            "arglist": {
+              "$": "(const QSqlDatabase &db)=0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "pure",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
               "$": "init"
             },
             "anchorfile": {
               "$": "classAkonadi_1_1Server_1_1DbConfig.html"
             },
             "anchor": {
-              "$": "ae8d8665f9a8c6ce8b0ddb4dea227ab7b"
+              "$": "a784f2b23b88159a3fd0aa4c22f7de2bf"
             },
             "arglist": {
-              "$": "(QSettings &settings, bool storeSettings=true)=0"
+              "$": "(QSettings &settings, bool storeSettings=true, const QString &overrideDbPath={})=0"
             }
           },
           {
@@ -13345,6 +13495,25 @@
             },
             "arglist": {
               "$": "(QSettings &settings)=0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "pure",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setDatabasePath"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1DbConfig.html"
+            },
+            "anchor": {
+              "$": "a864567be52cdcc568c38edf1f65d92c3"
+            },
+            "arglist": {
+              "$": "(const QString &path, QSettings &settings)=0"
             }
           },
           {
@@ -13456,6 +13625,25 @@
             },
             "anchor": {
               "$": "a987378d3fe9d2933b09c11b9eb8a2fed"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static void"
+            },
+            "name": {
+              "$": "destroy"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1DbConfig.html"
+            },
+            "anchor": {
+              "$": "af4c6f95c180b3ad1f2bf38d09de6014c"
             },
             "arglist": {
               "$": "()"
@@ -13798,7 +13986,7 @@
             "@kind": "function",
             "@virtualness": "virtual",
             "type": {
-              "$": "virtual QVector< ForeignKey >"
+              "$": "virtual QList< ForeignKey >"
             },
             "name": {
               "$": "foreignKeyConstraints"
@@ -13807,10 +13995,29 @@
               "$": "classAkonadi_1_1Server_1_1DbIntrospector.html"
             },
             "anchor": {
-              "$": "a838f114fb656db46647c3a7d99a2d4f1"
+              "$": "ad67005711670ba39b6f23c22fb837d88"
             },
             "arglist": {
               "$": "(const QString &tableName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "pure",
+            "type": {
+              "$": "virtual QString"
+            },
+            "name": {
+              "$": "getAutoIncrementValueQuery"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1DbIntrospector.html"
+            },
+            "anchor": {
+              "$": "a14bed5d657efbfc6acc1966f3f5d44e7"
+            },
+            "arglist": {
+              "$": "(const QString &tableName, const QString &columnName)=0"
             }
           },
           {
@@ -13887,6 +14094,25 @@
             },
             "arglist": {
               "$": "(const QString &tableName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "pure",
+            "type": {
+              "$": "virtual QString"
+            },
+            "name": {
+              "$": "updateAutoIncrementValueQuery"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1DbIntrospector.html"
+            },
+            "anchor": {
+              "$": "a8468b62f1a58780bfa59879bbcc2df83"
+            },
+            "arglist": {
+              "$": "(const QString &tableName, const QString &columnName, qint64 value)=0"
             }
           },
           {
@@ -15988,6 +16214,19 @@
           {
             "@kind": "enumvalue",
             "name": {
+              "$": "DisplayNameRole"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1EntityTreeModel.html"
+            },
+            "anchor": {
+              "$": "afb2cc4f8ecf57b3db2ef56068e7223c2ace32192f0d1c7aad6807718230c36317"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
               "$": "EndHeaderGroup"
             },
             "anchorfile": {
@@ -16727,6 +16966,19 @@
             },
             "anchor": {
               "$": "afb2cc4f8ecf57b3db2ef56068e7223c2a7bb8d0ed102666ddc858da381ca93790"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "DisplayNameRole"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1EntityTreeModel.html"
+            },
+            "anchor": {
+              "$": "afb2cc4f8ecf57b3db2ef56068e7223c2ace32192f0d1c7aad6807718230c36317"
             },
             "arglist": {}
           },
@@ -18310,7 +18562,7 @@
             "@kind": "function",
             "@static": "yes",
             "type": {
-              "$": "static QVector< Protocol::Ancestor >"
+              "$": "static QList< Protocol::Ancestor >"
             },
             "name": {
               "$": "ancestorsResponse"
@@ -18319,7 +18571,7 @@
               "$": "classAkonadi_1_1Server_1_1HandlerHelper.html"
             },
             "anchor": {
-              "$": "a40a50141056c1c11546d58a28551fbdc"
+              "$": "ace49363a7658f5ae3e384a1cbfb4e45b"
             },
             "arglist": {
               "$": "(int ancestorDepth, const QStack< Collection > &ancestors, const QStack< CollectionAttribute::List > &_ancestorsAttributes=QStack< CollectionAttribute::List >())"
@@ -18452,10 +18704,10 @@
               "$": "classAkonadi_1_1Server_1_1HandlerHelper.html"
             },
             "anchor": {
-              "$": "a3b9716042b3f7947d41b227daf551131"
+              "$": "a1f5a0492bdcba59ec37f8a361b480109"
             },
             "arglist": {
-              "$": "(const ImapSet &tags)"
+              "$": "(const QList< qint64 > &tags)"
             }
           }
         ]
@@ -18657,7 +18909,9 @@
         "filename": {
           "$": "structAkTraits_1_1detail_1_1isAppendable.html"
         },
-        "templarg": {}
+        "templarg": {
+          "$": "typename T"
+        }
       },
       {
         "@kind": "struct",
@@ -18667,7 +18921,9 @@
         "filename": {
           "$": "structAkTraits_1_1detail_1_1isContainer.html"
         },
-        "templarg": {}
+        "templarg": {
+          "$": "typename T"
+        }
       },
       {
         "@kind": "struct",
@@ -18677,7 +18933,9 @@
         "filename": {
           "$": "structAkTraits_1_1detail_1_1isInsertable.html"
         },
-        "templarg": {}
+        "templarg": {
+          "$": "typename T"
+        }
       },
       {
         "@kind": "struct",
@@ -18687,7 +18945,9 @@
         "filename": {
           "$": "structAkTraits_1_1detail_1_1isReservable.html"
         },
-        "templarg": {}
+        "templarg": {
+          "$": "typename T"
+        }
       },
       {
         "@kind": "class",
@@ -18815,7 +19075,7 @@
           {
             "@kind": "typedef",
             "type": {
-              "$": "QVector< Item >"
+              "$": "QList< Item >"
             },
             "name": {
               "$": "List"
@@ -18824,7 +19084,7 @@
               "$": "classAkonadi_1_1Item.html"
             },
             "anchor": {
-              "$": "af133e4184e41de78af2a18d745f68d1a"
+              "$": "aee2376a6ea356c59008a27c444377b64"
             },
             "arglist": {}
           },
@@ -18968,7 +19228,7 @@
               "$": "classAkonadi_1_1Item.html"
             },
             "anchor": {
-              "$": "a6a0804acb31bc39c2d68a0831e09fbdd"
+              "$": "a720d04e49fe33f39e2eabeda7fb19e41"
             },
             "arglist": {
               "$": "(Item &&) noexcept"
@@ -19056,7 +19316,7 @@
               "$": "classAkonadi_1_1Item.html"
             },
             "anchor": {
-              "$": "ae03b3d5c3dfdc8e108f4a14d0e9af0e2"
+              "$": "a816d76214e484e4320efd5f0f9c83867"
             },
             "arglist": {
               "$": "(const QByteArray &name)"
@@ -19101,7 +19361,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< int >"
+              "$": "QList< int >"
             },
             "name": {
               "$": "availablePayloadMetaTypeIds"
@@ -19110,7 +19370,7 @@
               "$": "classAkonadi_1_1Item.html"
             },
             "anchor": {
-              "$": "a5bdc5f72b9b46d4499598f0b3e6b6ba8"
+              "$": "a5e786c69dfcfeb5a68ad14954cf038c2"
             },
             "arglist": {
               "$": "() const"
@@ -19290,7 +19550,7 @@
               "$": "classAkonadi_1_1Item.html"
             },
             "anchor": {
-              "$": "a10644cb8c23d9425a7656f069db5987f"
+              "$": "a163ac2f32568975a1a62a58e486f7025"
             },
             "arglist": {
               "$": "(const QByteArray &name) const"
@@ -19326,7 +19586,7 @@
               "$": "classAkonadi_1_1Item.html"
             },
             "anchor": {
-              "$": "adb222b0a299fbf9c53b6659035532315"
+              "$": "a65ddea843a846b1f1844ac3f5f1625c4"
             },
             "arglist": {
               "$": "() const"
@@ -19524,7 +19784,7 @@
               "$": "classAkonadi_1_1Item.html"
             },
             "anchor": {
-              "$": "af8aeaae4b8ac0149341f9951275a0faa"
+              "$": "a3f87dd942cff0a85ae46b52f4fdba38c"
             },
             "arglist": {
               "$": "()"
@@ -19686,7 +19946,7 @@
               "$": "classAkonadi_1_1Item.html"
             },
             "anchor": {
-              "$": "a2c63889e8eec913e0cd18a86cdf69c33"
+              "$": "a9ed21b19a67bb2531927ea4a695c4405"
             },
             "arglist": {
               "$": "(const QByteArray &name)"
@@ -21914,7 +22174,7 @@
               "$": "classAkonadi_1_1ItemFetchScope.html"
             },
             "anchor": {
-              "$": "a059540d014cbd31eb314343183336d3f"
+              "$": "a80a57a48200a85e0ac6f9d5f316b5d50"
             },
             "arglist": {
               "$": "()"
@@ -21932,7 +22192,7 @@
               "$": "classAkonadi_1_1ItemFetchScope.html"
             },
             "anchor": {
-              "$": "a93a1f3f45ff5a7dc4c85f2b1ea92dc13"
+              "$": "a82ad4ef9cc5e5e5af3e7a7343e6b1f58"
             },
             "arglist": {
               "$": "() const"
@@ -23452,10 +23712,10 @@
               "$": "classAkonadi_1_1ItemSync.html"
             },
             "anchor": {
-              "$": "a5ab5bab270480512145609ea0a59b376"
+              "$": "a04152eaad75e1e5067cc2e57bc76bda4"
             },
             "arglist": {
-              "$": "(const Collection &collection, QObject *parent=nullptr)"
+              "$": "(const Collection &collection, const QDateTime &timestamp={}, QObject *parent=nullptr)"
             }
           },
           {
@@ -25475,7 +25735,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< Item::Id >"
+              "$": "QList< Item::Id >"
             },
             "name": {
               "$": "itemsMonitoredEx"
@@ -25484,7 +25744,7 @@
               "$": "classAkonadi_1_1Monitor.html"
             },
             "anchor": {
-              "$": "a062e15ac8830834f477deb89d63a9f3e"
+              "$": "a09573417e353c5c694fce0390b714bc5"
             },
             "arglist": {
               "$": "() const"
@@ -25835,7 +26095,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< Tag::Id >"
+              "$": "QList< Tag::Id >"
             },
             "name": {
               "$": "tagsMonitored"
@@ -25844,7 +26104,7 @@
               "$": "classAkonadi_1_1Monitor.html"
             },
             "anchor": {
-              "$": "a895bb4f30e60d3242fee6374e16bc5e5"
+              "$": "aa5c385801c1de52fa8638d9282412697"
             },
             "arglist": {
               "$": "() const"
@@ -25853,7 +26113,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< Type >"
+              "$": "QList< Type >"
             },
             "name": {
               "$": "typesMonitored"
@@ -25862,7 +26122,7 @@
               "$": "classAkonadi_1_1Monitor.html"
             },
             "anchor": {
-              "$": "a7b3df407a03a151d27f7361dcf4d25e1"
+              "$": "a9b8177b2f55cde294e281637ac1196eb"
             },
             "arglist": {
               "$": "() const"
@@ -27056,7 +27316,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< qint64 >"
+              "$": "QList< qint64 >"
             },
             "name": {
               "$": "queryCollections"
@@ -27065,7 +27325,7 @@
               "$": "classAkonadi_1_1PersistentSearchAttribute.html"
             },
             "anchor": {
-              "$": "ac8f99bf0cae1a706d2c670a5faff32da"
+              "$": "a6d0a8dc084a6570a752d5bed232bfab2"
             },
             "arglist": {
               "$": "() const"
@@ -27101,10 +27361,10 @@
               "$": "classAkonadi_1_1PersistentSearchAttribute.html"
             },
             "anchor": {
-              "$": "ae77a28031a8088edc7f345ea3caed7b5"
+              "$": "a8572847883fc4408d69565869b2b7bad"
             },
             "arglist": {
-              "$": "(const QVector< Collection > &collections)"
+              "$": "(const QList< Collection > &collections)"
             }
           },
           {
@@ -27119,10 +27379,10 @@
               "$": "classAkonadi_1_1PersistentSearchAttribute.html"
             },
             "anchor": {
-              "$": "a6815ee89cd22070e67147ed3f3c9b08c"
+              "$": "ae549cc27cd30becf6961dfe1c990aaf2"
             },
             "arglist": {
-              "$": "(const QVector< qint64 > &collectionsIds)"
+              "$": "(const QList< qint64 > &collectionsIds)"
             }
           },
           {
@@ -27535,7 +27795,7 @@
               "$": "classAkonadi_1_1Server_1_1PreprocessorInstance.html"
             },
             "anchor": {
-              "$": "a0b1f76e0634b1e47c9672d67d1aba67f"
+              "$": "a6e5f1c05222727e831993154896b84ed"
             },
             "arglist": {
               "$": "() const"
@@ -27611,7 +27871,7 @@
               "$": "classAkonadi_1_1Server_1_1PreprocessorInstance.html"
             },
             "anchor": {
-              "$": "a6e8ebb65aaa684c6a41b4923d01224cb"
+              "$": "a141ab57266ede1cc2d90538e801d54b2"
             },
             "arglist": {
               "$": "()"
@@ -28504,6 +28764,24 @@
             },
             "arglist": {
               "$": "(const QString &column, Query::SortOrder order=Query::Ascending)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addValueCondition"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1QueryBuilder.html"
+            },
+            "anchor": {
+              "$": "a6ec3100a8cf704013a7ec5eaaa5ba771"
+            },
+            "arglist": {
+              "$": "(const QString &column, Query::CompareOperator op, const QList< qint64 > &value, ConditionType type=WhereCondition)"
             }
           },
           {
@@ -31100,7 +31378,7 @@
             "@kind": "function",
             "@virtualness": "pure",
             "type": {
-              "$": "virtual QVector< RelationDescription >"
+              "$": "virtual QList< RelationDescription >"
             },
             "name": {
               "$": "relations"
@@ -31109,7 +31387,7 @@
               "$": "classAkonadi_1_1Server_1_1Schema.html"
             },
             "anchor": {
-              "$": "ac2e12bfaa6967d1130d8b4d92b29a187"
+              "$": "a0f2882bf4690cb49336b0f7861e342fe"
             },
             "arglist": {
               "$": "()=0"
@@ -31119,7 +31397,7 @@
             "@kind": "function",
             "@virtualness": "pure",
             "type": {
-              "$": "virtual QVector< TableDescription >"
+              "$": "virtual QList< TableDescription >"
             },
             "name": {
               "$": "tables"
@@ -31128,7 +31406,7 @@
               "$": "classAkonadi_1_1Server_1_1Schema.html"
             },
             "anchor": {
-              "$": "a99cb90409e722f2da142e771e158f6dc"
+              "$": "a2b50b5b558e3cae08eabe46604c4f3bf"
             },
             "arglist": {
               "$": "()=0"
@@ -31267,7 +31545,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< Collection >"
+              "$": "QList< Collection >"
             },
             "name": {
               "$": "searchCollections"
@@ -31276,7 +31554,7 @@
               "$": "classAkonadi_1_1SearchCreateJob.html"
             },
             "anchor": {
-              "$": "a5cc89fd0fd8ce737d1da4bd118f31c78"
+              "$": "a329e1863a304de0e2653d020cba07791"
             },
             "arglist": {
               "$": "() const"
@@ -31348,10 +31626,10 @@
               "$": "classAkonadi_1_1SearchCreateJob.html"
             },
             "anchor": {
-              "$": "a80cfa5d030bdc72420df186be4340a0c"
+              "$": "a2810f955467b2272165346354ff84e25"
             },
             "arglist": {
-              "$": "(const QVector< Collection > &collections)"
+              "$": "(const QList< Collection > &collections)"
             }
           },
           {
@@ -31493,7 +31771,7 @@
             "@kind": "function",
             "@virtualness": "virtual",
             "type": {
-              "$": "virtual QVector< AbstractSearchPlugin * >"
+              "$": "virtual QList< AbstractSearchPlugin * >"
             },
             "name": {
               "$": "searchPlugins"
@@ -31502,7 +31780,7 @@
               "$": "classAkonadi_1_1Server_1_1SearchManager.html"
             },
             "anchor": {
-              "$": "afead7341771aedaeb0704b11a1175bc4"
+              "$": "a557ff379978b64e02a583c6b8a36b72d"
             },
             "arglist": {
               "$": "() const"
@@ -31953,7 +32231,9 @@
         "filename": {
           "$": "classAkonadi_1_1Server_1_1SelectQueryBuilder.html"
         },
-        "templarg": {},
+        "templarg": {
+          "$": "typename T"
+        },
         "base": {
           "$": "Akonadi::Server::QueryBuilder"
         },
@@ -31977,7 +32257,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< T >"
+              "$": "QList< T >"
             },
             "name": {
               "$": "result"
@@ -31986,7 +32266,7 @@
               "$": "classAkonadi_1_1Server_1_1SelectQueryBuilder.html"
             },
             "anchor": {
-              "$": "af8f5b65aa2f7a741a7a0eef3098ab350"
+              "$": "ad838dc209b83a6b742aac369bd71f8a8"
             },
             "arglist": {
               "$": "()"
@@ -32649,7 +32929,7 @@
               "$": "classAkonadi_1_1Session.html"
             },
             "anchor": {
-              "$": "a0f31ff6c59ea04a520655cbc11cf63bc"
+              "$": "a3d1ac73e310d809fbf0967961e295c78"
             },
             "arglist": {
               "$": "() override"
@@ -32721,7 +33001,7 @@
               "$": "classAkonadi_1_1Session.html"
             },
             "anchor": {
-              "$": "afe8c69b4197c7067294ba430d5c4f683"
+              "$": "aab697efa4e67487b52c02c1ecd1ebee9"
             },
             "arglist": {
               "$": "(SessionPrivate *d, const QByteArray &sessionId=QByteArray(), QObject *parent=nullptr)"
@@ -35199,6 +35479,22 @@
           },
           {
             "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "StorageJanitor"
+            },
+            "anchorfile": {
+              "$": "classAkonadi_1_1Server_1_1StorageJanitor.html"
+            },
+            "anchor": {
+              "$": "aba821c0964438b4a0068f8fcd26150e9"
+            },
+            "arglist": {
+              "$": "(DbConfig *config)"
+            }
+          },
+          {
+            "@kind": "function",
             "@protection": "protected",
             "type": {},
             "name": {
@@ -35208,10 +35504,10 @@
               "$": "classAkonadi_1_1Server_1_1StorageJanitor.html"
             },
             "anchor": {
-              "$": "a52a554b79da60de10cad78028c104385"
+              "$": "a6758acc6c045ec0e6373c07dc3e94bbe"
             },
             "arglist": {
-              "$": "(AkonadiServer &mAkonadi)"
+              "$": "(AkonadiServer *mAkonadi, DbConfig *config=DbConfig::configuredDatabase())"
             }
           }
         ]
@@ -35304,9 +35600,11 @@
         "filename": {
           "$": "structAkonadi_1_1SuperClass.html"
         },
-        "templarg": {},
+        "templarg": {
+          "$": "typename Class"
+        },
         "base": {
-          "$": "SuperClassTrait< Class >"
+          "$": "Akonadi::SuperClassTrait< Class >"
         }
       },
       {
@@ -35318,18 +35616,13 @@
           "$": "structAkonadi_1_1SuperClassTrait.html"
         },
         "templarg": [
-          {},
-          {}
+          {
+            "$": "typename Super"
+          },
+          {
+            "$": "typename"
+          }
         ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "SuperClassTrait< Class >"
-        },
-        "filename": {
-          "$": "structAkonadi_1_1SuperClassTrait.html"
-        }
       },
       {
         "@kind": "class",
@@ -38131,10 +38424,10 @@
               "$": "classAkonadi_1_1XmlDocument.html"
             },
             "anchor": {
-              "$": "a65b8d6e66e359ba74ebe853adaf47ca1"
+              "$": "a6ad6741ad28844e092a6a73c7153ee21"
             },
             "arglist": {
-              "$": "(const QString &fileName)"
+              "$": "(const QString &fileName, const QString &xsdFile={})"
             }
           },
           {
@@ -38347,10 +38640,10 @@
               "$": "classAkonadi_1_1XmlDocument.html"
             },
             "anchor": {
-              "$": "abd7ff18e2d4b8996087e17d7a7eb2d74"
+              "$": "a0d4718fcc9a22c179986eaf0ae4874bd"
             },
             "arglist": {
-              "$": "(const QString &fileName)"
+              "$": "(const QString &fileName, const QString &xsdFile={})"
             }
           },
           {
@@ -39001,40 +39294,6 @@
             "@kind": "class",
             "$": "Akonadi::XmlWriteJob"
           }
-        ],
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "Q_GLOBAL_STATIC"
-            },
-            "anchorfile": {
-              "$": "namespaceAkonadi.html"
-            },
-            "anchor": {
-              "$": "a4fa2a20ac2cce89b1f91f22dce987ad1"
-            },
-            "arglist": {
-              "$": "(Internal::StaticControl, s_instance) class ControlPrivate"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "Q_GLOBAL_STATIC"
-            },
-            "anchorfile": {
-              "$": "namespaceAkonadi.html"
-            },
-            "anchor": {
-              "$": "a7c36a39b0624b295fa7721e911eb3d31"
-            },
-            "arglist": {
-              "$": "(Internal::StaticControlGui, s_instance) class ControlGuiPrivate"
-            }
-          }
         ]
       },
       {
@@ -39139,10 +39398,10 @@
               "$": "namespaceAkonadi_1_1Server_1_1CollectionQueryHelper.html"
             },
             "anchor": {
-              "$": "ae70bca636c6649b9ba1c0472a6c08324"
+              "$": "ac55a065b5ef52b05b93eb0f470c68d8a"
             },
             "arglist": {
-              "$": "(const QVector< Scope::HRID > &hridChain, Resource::Id resId)"
+              "$": "(const QList< Scope::HRID > &hridChain, Resource::Id resId)"
             }
           },
           {
@@ -39161,24 +39420,6 @@
             },
             "arglist": {
               "$": "(const Scope &scope, const CommandContext &context, QueryBuilder &qb)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Collection"
-            },
-            "name": {
-              "$": "singleCollectionFromScope"
-            },
-            "anchorfile": {
-              "$": "namespaceAkonadi_1_1Server_1_1CollectionQueryHelper.html"
-            },
-            "anchor": {
-              "$": "a49b0ecbbcefee9e6429e861b4cf2b7a4"
-            },
-            "arglist": {
-              "$": "(const Scope &scope, const CommandContext &context)"
             }
           }
         ]
@@ -39265,10 +39506,10 @@
               "$": "namespaceAkonadi_1_1Server_1_1ItemQueryHelper.html"
             },
             "anchor": {
-              "$": "aa43cfd7dea2daeb41ab0df88bb803d8a"
+              "$": "a7ff68a9b2ef414feaa795af8ad53992a"
             },
             "arglist": {
-              "$": "(const ImapSet &set, const CommandContext &context, QueryBuilder &qb)"
+              "$": "(const QList< PimItem::Id > &set, const CommandContext &context, QueryBuilder &qb)"
             }
           },
           {
@@ -39283,10 +39524,10 @@
               "$": "namespaceAkonadi_1_1Server_1_1ItemQueryHelper.html"
             },
             "anchor": {
-              "$": "a0ffff92eccaedb4101e3039e950b5f7e"
+              "$": "acc104f49f53a6a29e00532062d2cf266"
             },
             "arglist": {
-              "$": "(const ImapSet &set, QueryBuilder &qb, const Collection &collection=Collection())"
+              "$": "(const QList< PimItem::Id > &set, QueryBuilder &qb, const Collection &collection=Collection())"
             }
           },
           {
@@ -39733,10 +39974,10 @@
               "$": "namespaceAkonadi_1_1Server_1_1QueryCache.html"
             },
             "anchor": {
-              "$": "ad41b8c30fac0de5d1be1aac0562f3773"
+              "$": "a333dc5e98781625abf22b0455c86f559"
             },
             "arglist": {
-              "$": "(const QString &queryStatement, const QSqlQuery &query)"
+              "$": "(const QSqlDatabase &db, const QString &queryStatement, const QSqlQuery &query)"
             }
           },
           {
@@ -39758,33 +39999,6 @@
             }
           }
         ]
-      },
-      {
-        "@kind": "namespace",
-        "name": {
-          "$": "Akonadi::Server::QueryHelper"
-        },
-        "filename": {
-          "$": "namespaceAkonadi_1_1Server_1_1QueryHelper.html"
-        },
-        "member": {
-          "@kind": "function",
-          "type": {
-            "$": "void"
-          },
-          "name": {
-            "$": "setToQuery"
-          },
-          "anchorfile": {
-            "$": "namespaceAkonadi_1_1Server_1_1QueryHelper.html"
-          },
-          "anchor": {
-            "$": "a50d743bda6dbc1ac8017be2114ff5ff8"
-          },
-          "arglist": {
-            "$": "(const ImapSet &set, const QString &column, QueryBuilder &qb)"
-          }
-        }
       },
       {
         "@kind": "namespace",
@@ -40292,9 +40506,14 @@
           "$": "Akonadi client libraries"
         },
         "filename": {
-          "$": "client_libraries"
+          "$": "client_libraries.html"
         },
         "docanchor": [
+          {
+            "@file": "client_libraries.html",
+            "@title": "/builds/websites/api-kde-org/sources/akonadi/docs/client_libraries.md",
+            "$": "md__2builds_2websites_2api-kde-org_2sources_2akonadi_2docs_2client__libraries"
+          },
           {
             "@file": "client_libraries.html",
             "@title": "Akonadi Objects",
@@ -40406,7 +40625,12 @@
           "$": "Historical background"
         },
         "filename": {
-          "$": "history"
+          "$": "history.html"
+        },
+        "docanchor": {
+          "@file": "history.html",
+          "@title": "/builds/websites/api-kde-org/sources/akonadi/docs/history.md",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2akonadi_2docs_2history"
         }
       },
       {
@@ -40418,7 +40642,12 @@
           "$": "Internals documentation for Akonadi developers"
         },
         "filename": {
-          "$": "internals"
+          "$": "internals.html"
+        },
+        "docanchor": {
+          "@file": "internals.html",
+          "@title": "/builds/websites/api-kde-org/sources/akonadi/docs/internals.md",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2akonadi_2docs_2internals"
         }
       },
       {
@@ -40430,7 +40659,12 @@
           "$": "Akonadi Server"
         },
         "filename": {
-          "$": "server"
+          "$": "server.html"
+        },
+        "docanchor": {
+          "@file": "server.html",
+          "@title": "/builds/websites/api-kde-org/sources/akonadi/docs/server.md",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2akonadi_2docs_2server"
         }
       },
       {
@@ -40442,9 +40676,14 @@
           "$": "Tags"
         },
         "filename": {
-          "$": "tags"
+          "$": "tags.html"
         },
         "docanchor": [
+          {
+            "@file": "tags.html",
+            "@title": "/builds/websites/api-kde-org/sources/akonadi/docs/tags.md",
+            "$": "md__2builds_2websites_2api-kde-org_2sources_2akonadi_2docs_2tags"
+          },
           {
             "@file": "tags.html",
             "@title": "Tag type",
@@ -40486,8 +40725,28 @@
           "$": "Akonadi"
         },
         "filename": {
-          "$": "index"
-        }
+          "$": "index.html"
+        },
+        "subpage": [
+          {
+            "$": "Stars.html"
+          },
+          {
+            "$": "HTMIndexing.html"
+          }
+        ],
+        "docanchor": [
+          {
+            "@file": "index.html",
+            "@title": "Akonadi",
+            "$": "md__2builds_2websites_2api-kde-org_2sources_2akonadi_2README"
+          },
+          {
+            "@file": "history.html",
+            "@title": "Historical background",
+            "$": "history"
+          }
+        ]
       }
     ]
   }

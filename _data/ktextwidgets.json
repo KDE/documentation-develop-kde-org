@@ -1,5 +1,7 @@
 {
   "tagfile": {
+    "@doxygen_version": "1.10.0",
+    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
       {
         "@kind": "class",
@@ -267,42 +269,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "highlight"
-            },
-            "anchorfile": {
-              "$": "classKFind.html"
-            },
-            "anchor": {
-              "$": "af66e494430aa005f66f08052ed82b0e9"
-            },
-            "arglist": {
-              "$": "(const QString &text, int matchingIndex, int matchedLength)"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "highlight"
-            },
-            "anchorfile": {
-              "$": "classKFind.html"
-            },
-            "anchor": {
-              "$": "a657f5d8ff4bfaf4fbdcb06f31ce0951b"
-            },
-            "arglist": {
-              "$": "(int id, int matchingIndex, int matchedLength)"
             }
           },
           {
@@ -682,44 +648,6 @@
             },
             "arglist": {
               "$": "(const QString &text, int index, int matchedlength)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@static": "yes",
-            "type": {
-              "$": "static int"
-            },
-            "name": {
-              "$": "find"
-            },
-            "anchorfile": {
-              "$": "classKFind.html"
-            },
-            "anchor": {
-              "$": "acccfd8b9bfe82bf8cb6b1b20257cd718"
-            },
-            "arglist": {
-              "$": "(const QString &text, const QRegExp &pattern, int index, long options, int *matchedlength)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@static": "yes",
-            "type": {
-              "$": "static int"
-            },
-            "name": {
-              "$": "find"
-            },
-            "anchorfile": {
-              "$": "classKFind.html"
-            },
-            "anchor": {
-              "$": "a1ce04dfdc7e2ee4117743fcf9a41d3e4"
-            },
-            "arglist": {
-              "$": "(const QString &text, const QString &pattern, int index, long options, int *matchedlength)"
             }
           },
           {
@@ -1128,153 +1056,6 @@
       {
         "@kind": "class",
         "name": {
-          "$": "KRegExpEditorInterface"
-        },
-        "filename": {
-          "$": "classKRegExpEditorInterface.html"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "@virtualness": "pure",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "doSomething"
-            },
-            "anchorfile": {
-              "$": "classKRegExpEditorInterface.html"
-            },
-            "anchor": {
-              "$": "a0fc984d4318f2d1f0b390aa236207f20"
-            },
-            "arglist": {
-              "$": "(const QString &method, void *arguments)=0"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "pure",
-            "type": {
-              "$": "virtual QString"
-            },
-            "name": {
-              "$": "regExp"
-            },
-            "anchorfile": {
-              "$": "classKRegExpEditorInterface.html"
-            },
-            "anchor": {
-              "$": "a593bc983976bf59ccec2c557dd31f685"
-            },
-            "arglist": {
-              "$": "() const =0"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "pure",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setMatchText"
-            },
-            "anchorfile": {
-              "$": "classKRegExpEditorInterface.html"
-            },
-            "anchor": {
-              "$": "a614f9f59bcdef7cd8c2977564eacc113"
-            },
-            "arglist": {
-              "$": "(const QString &)=0"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "pure",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setRegExp"
-            },
-            "anchorfile": {
-              "$": "classKRegExpEditorInterface.html"
-            },
-            "anchor": {
-              "$": "a497e32b2a6872790120c6b0f7a685b5c"
-            },
-            "arglist": {
-              "$": "(const QString &regexp)=0"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "@virtualness": "pure",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "canRedo"
-            },
-            "anchorfile": {
-              "$": "classKRegExpEditorInterface.html"
-            },
-            "anchor": {
-              "$": "a4dc4cce03ab2ff5d215b5c29e59357b3"
-            },
-            "arglist": {
-              "$": "(bool)=0"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "@virtualness": "pure",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "canUndo"
-            },
-            "anchorfile": {
-              "$": "classKRegExpEditorInterface.html"
-            },
-            "anchor": {
-              "$": "a8e747276e74cdddaa4f5bc5a58d37865"
-            },
-            "arglist": {
-              "$": "(bool)=0"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "@virtualness": "pure",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "changes"
-            },
-            "anchorfile": {
-              "$": "classKRegExpEditorInterface.html"
-            },
-            "anchor": {
-              "$": "a80fdd614d158abd51d207ed472a2ebe6"
-            },
-            "arglist": {
-              "$": "(bool)=0"
-            }
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
           "$": "KReplace"
         },
         "filename": {
@@ -1284,24 +1065,6 @@
           "$": "KFind"
         },
         "member": [
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "replace"
-            },
-            "anchorfile": {
-              "$": "classKReplace.html"
-            },
-            "anchor": {
-              "$": "afdefd71e9e487ea7292409172eb4430c"
-            },
-            "arglist": {
-              "$": "(const QString &text, int replacementIndex, int replacedLength, int matchedLength)"
-            }
-          },
           {
             "@kind": "signal",
             "type": {
@@ -1476,25 +1239,6 @@
             },
             "arglist": {
               "$": "(bool forceAsking=false, bool showNumMatches=true) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@static": "yes",
-            "type": {
-              "$": "static int"
-            },
-            "name": {
-              "$": "replace"
-            },
-            "anchorfile": {
-              "$": "classKReplace.html"
-            },
-            "anchor": {
-              "$": "a3071bff758152292c517b49496353069"
-            },
-            "arglist": {
-              "$": "(QString &text, const QRegExp &pattern, const QString &replacement, int index, long options, int *replacedLength)"
             }
           },
           {
@@ -1789,24 +1533,6 @@
               "$": "a8f9c10b0d3e8e474c2ca4ea5d0ee751daab45522882d83b97c2d243af649c06cd"
             },
             "arglist": {}
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "selectionFinished"
-            },
-            "anchorfile": {
-              "$": "classKRichTextEdit.html"
-            },
-            "anchor": {
-              "$": "a48fac4dc2376d478cd46b42f429e72f0"
-            },
-            "arglist": {
-              "$": "()"
-            }
           },
           {
             "@kind": "signal",
@@ -3262,7 +2988,7 @@
               "$": "classKRichTextWidget.html"
             },
             "anchor": {
-              "$": "a57d010acedd704eee67dbfff83bc6c0c"
+              "$": "af8772bfed58a45dc034a7b0c18853b80"
             },
             "arglist": {
               "$": "()"
@@ -3650,25 +3376,7 @@
               "$": "classKTextEdit.html"
             },
             "anchor": {
-              "$": "a75d059a68f11d1fc28668a678ca498aa"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "clickMessage"
-            },
-            "anchorfile": {
-              "$": "classKTextEdit.html"
-            },
-            "anchor": {
-              "$": "a1284f8c990c039b48ca054a146c84376"
+              "$": "a1e89585041d31601b19267e87b99bf2d"
             },
             "arglist": {
               "$": "() const"
@@ -3809,24 +3517,6 @@
               "$": "void"
             },
             "name": {
-              "$": "setClickMessage"
-            },
-            "anchorfile": {
-              "$": "classKTextEdit.html"
-            },
-            "anchor": {
-              "$": "aae420054fe1196e017cd34d54ca4082a"
-            },
-            "arglist": {
-              "$": "(const QString &msg)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setHighlighter"
             },
             "anchorfile": {
@@ -3925,7 +3615,7 @@
               "$": "classKTextEdit.html"
             },
             "anchor": {
-              "$": "acd309899600cb2987f7917c5b6f24d8b"
+              "$": "abfda7e6fcecebadbcf521e7b44b85341"
             },
             "arglist": {
               "$": "() const"
@@ -4115,7 +3805,20 @@
           "$": "KTextWidgets"
         },
         "filename": {
-          "$": "index"
+          "$": "index.html"
+        },
+        "subpage": [
+          {
+            "$": "Stars.html"
+          },
+          {
+            "$": "HTMIndexing.html"
+          }
+        ],
+        "docanchor": {
+          "@file": "index.html",
+          "@title": "KTextWidgets",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2ktextwidgets_2README"
         }
       }
     ]

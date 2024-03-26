@@ -1,80 +1,20 @@
 {
   "tagfile": {
+    "@doxygen_version": "1.10.0",
+    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
       {
         "@kind": "class",
         "name": {
-          "$": "Plasma::AbstractRunner"
+          "$": "KRunner::AbstractRunner"
         },
         "filename": {
-          "$": "classPlasma_1_1AbstractRunner.html"
+          "$": "classKRunner_1_1AbstractRunner.html"
         },
         "base": {
           "$": "QObject"
         },
         "member": [
-          {
-            "@kind": "typedef",
-            "type": {
-              "$": "QList< AbstractRunner * >"
-            },
-            "name": {
-              "$": "List"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ae7327c226318ed74e87c0d02a9179b53"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumeration",
-            "type": {},
-            "name": {
-              "$": "Priority"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "af0a8860b75ee6a66336e2837ab1b23fd"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumeration",
-            "type": {},
-            "name": {
-              "$": "Speed"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a37353ac75d1401241352acae4804a5c4"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "matchingSuspended"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a1e88251d11acbe80743301a4e7b77d2a"
-            },
-            "arglist": {
-              "$": "(bool suspended)"
-            }
-          },
           {
             "@kind": "signal",
             "type": {
@@ -84,10 +24,10 @@
               "$": "prepare"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a31f3aecba61f112b1ec8df9fb36dff60"
+              "$": "ac33258346c3778c310b1cadcfaea0f14"
             },
             "arglist": {
               "$": "()"
@@ -102,106 +42,13 @@
               "$": "teardown"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a4d5c2b5b735089cef0f5cc71dac36fc5"
+              "$": "a0b89fd86697cb404f54227eb5a013cf1"
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual QStringList"
-            },
-            "name": {
-              "$": "categories"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a15a9848577250f78bb7750ecbe8039f0"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual QIcon"
-            },
-            "name": {
-              "$": "categoryIcon"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "af6a52ffb03829c6adac757783443eb9f"
-            },
-            "arglist": {
-              "$": "(const QString &category) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "createRunOptions"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ab4d3da5e7b0080200d594abf714c612d"
-            },
-            "arglist": {
-              "$": "(QWidget *widget)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "RunnerSyntax *"
-            },
-            "name": {
-              "$": "defaultSyntax"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "af85fe46e6f6f5b35ab4079573b39c0b7"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "description"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a22363f18d1a1d69dde4952f5cfed2c13"
-            },
-            "arglist": {
-              "$": "() const"
             }
           },
           {
@@ -213,46 +60,10 @@
               "$": "hasMatchRegex"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "aa9927fc03b36b6535336403483931d7d"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "hasRunOptions"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "afbb4c1552ab28cf77cfae8f2f8fd8d86"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QIcon"
-            },
-            "name": {
-              "$": "icon"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a43437beb7cd0b443ea66a5a1504f7fbf"
+              "$": "ac8293c0eb41b9c884be9acae60a2c892"
             },
             "arglist": {
               "$": "() const"
@@ -267,28 +78,10 @@
               "$": "id"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a3f24f174c5f0f88cff3715191f2d8ecb"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "RunnerContext::Types"
-            },
-            "name": {
-              "$": "ignoredTypes"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a05f9eb0eed57582687bc0de669c2633c"
+              "$": "a839efaf055b3fbf4c6c488843fab01f7"
             },
             "arglist": {
               "$": "() const"
@@ -303,10 +96,10 @@
               "$": "isMatchingSuspended"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "ac3807d7c628a4b42eea3aff4eba1fece"
+              "$": "ab244d9c7e03f31bbbc13a8d877400716"
             },
             "arglist": {
               "$": "() const"
@@ -314,7 +107,7 @@
           },
           {
             "@kind": "function",
-            "@virtualness": "virtual",
+            "@virtualness": "pure",
             "type": {
               "$": "virtual void"
             },
@@ -322,13 +115,13 @@
               "$": "match"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a420fa8a3407b0c9417f57e7c6bf1770e"
+              "$": "afd5bba2f56f40dc20e241f7ec82d3d25"
             },
             "arglist": {
-              "$": "(Plasma::RunnerContext &context)"
+              "$": "(KRunner::RunnerContext &context)=0"
             }
           },
           {
@@ -340,28 +133,10 @@
               "$": "matchRegex"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a963f8f38b6a7e4330047d5aaedfca8ed"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KPluginInfo"
-            },
-            "name": {
-              "$": "metadata"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a6da23b6fc9caeefa92cdeffdd563121f"
+              "$": "ad7b0305fc5fbcf5f7ea23ef4058557f5"
             },
             "arglist": {
               "$": "() const"
@@ -376,13 +151,13 @@
               "$": "metadata"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "ad6e0386fa68eb37cbc38de0d11e1c4e5"
+              "$": "a4f3bdabd95b79edfebc6191d5de7dfa9"
             },
             "arglist": {
-              "$": "(RunnerReturnPluginMetaDataConstant) const"
+              "$": "() const"
             }
           },
           {
@@ -394,10 +169,10 @@
               "$": "minLetterCount"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a963f43c09a541626b3a7ce60ee55aa6c"
+              "$": "a1bc6bd308e9e61713bb6193935f2988f"
             },
             "arglist": {
               "$": "() const"
@@ -412,64 +187,10 @@
               "$": "name"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a8ae2865321954ed18b9af1192a33a5cf"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Package"
-            },
-            "name": {
-              "$": "package"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a99f751710000c12a7dd3693cfba2e934"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "performMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a9b31f5a2173af24011b060329cf58683"
-            },
-            "arglist": {
-              "$": "(Plasma::RunnerContext &context)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Priority"
-            },
-            "name": {
-              "$": "priority"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a14b3f997e7073dc73e320a8966d1ea5f"
+              "$": "a0af02a2d16d2f038fef8475f93e2051e"
             },
             "arglist": {
               "$": "() const"
@@ -485,10 +206,10 @@
               "$": "reloadConfiguration"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a308a461619ed4a5e7d122b9aeb0bb31d"
+              "$": "a2441730b73fd9e191a7fd11a90bece2b"
             },
             "arglist": {
               "$": "()"
@@ -504,31 +225,13 @@
               "$": "run"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a2599fb0cf64ce86d8d0dc1bf74a40593"
+              "$": "a35d508dcadf4bab2dc2477737188d4bd"
             },
             "arglist": {
-              "$": "(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setIgnoredTypes"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a11673d86482b256945c5904e34a6a3db"
-            },
-            "arglist": {
-              "$": "(RunnerContext::Types types)"
+              "$": "(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)"
             }
           },
           {
@@ -540,10 +243,10 @@
               "$": "setMatchRegex"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a32ec5e0fb8cb53aa4117dc28319ab9fe"
+              "$": "aea91991968f4e067680fb9118cf7942a"
             },
             "arglist": {
               "$": "(const QRegularExpression &regex)"
@@ -558,10 +261,10 @@
               "$": "setMinLetterCount"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a7b6f7cfc3f88e3e6db84876a8dee343a"
+              "$": "ae7c01219f18fcf4b2040cf7f8d00520f"
             },
             "arglist": {
               "$": "(int count)"
@@ -576,31 +279,13 @@
               "$": "setTriggerWords"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a3b86669216e1d6df33a40bf66287c2db"
+              "$": "a8543c294acfadc481b3ba4154479ba88"
             },
             "arglist": {
               "$": "(const QStringList &triggerWords)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Speed"
-            },
-            "name": {
-              "$": "speed"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "aa6216b584d7fe6a5264245e6961fc8d5"
-            },
-            "arglist": {
-              "$": "() const"
             }
           },
           {
@@ -612,10 +297,10 @@
               "$": "syntaxes"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a6bc196e63343fddcadcd5e5b009ecb83"
+              "$": "ad02caa2459a84a8244725441beb2cc0c"
             },
             "arglist": {
               "$": "() const"
@@ -629,160 +314,13 @@
               "$": "AbstractRunner"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a5a2085f5a29df5d748989546d9d74324"
+              "$": "af9210d0b81f4cd6c55db116fafc6a887"
             },
             "arglist": {
-              "$": "(const KPluginMetaData &pluginMetaData, QObject *parent=nullptr)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {},
-            "name": {
-              "$": "AbstractRunner"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a42cd7616f8e4cc37b5f256f0f8347418"
-            },
-            "arglist": {
-              "$": "(const KService::Ptr service, QObject *parent=nullptr)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {},
-            "name": {
-              "$": "AbstractRunner"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ad41c06b7a464cd1f517ced928f7ea82c"
-            },
-            "arglist": {
-              "$": "(QObject *parent, const KPluginMetaData &pluginMetaData, const QVariantList &args)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {},
-            "name": {
-              "$": "AbstractRunner"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a482691f30eb9c91653db59e0bd6e6e23"
-            },
-            "arglist": {
-              "$": "(QObject *parent, const QVariantList &args)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "QAction *"
-            },
-            "name": {
-              "$": "action"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a2060d944b9b97f9a4511e6721525d2b5"
-            },
-            "arglist": {
-              "$": "(const QString &id) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "QHash< QString, QAction * >"
-            },
-            "name": {
-              "$": "actions"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ad1365f739d46c1b74b5d98085b96e23d"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual QList< QAction * >"
-            },
-            "name": {
-              "$": "actionsForMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a524af89fca3e5730a84e3fecd44095a8"
-            },
-            "arglist": {
-              "$": "(const Plasma::QueryMatch &match)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "QAction *"
-            },
-            "name": {
-              "$": "addAction"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "af3615c4e28157727dc6f3bf1712f25c5"
-            },
-            "arglist": {
-              "$": "(const QString &id, const QIcon &icon, const QString &text)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "addAction"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a88673ec2ef9e59437709152eef1579c2"
-            },
-            "arglist": {
-              "$": "(const QString &id, QAction *action)"
+              "$": "(QObject *parent, const KPluginMetaData &pluginMetaData)"
             }
           },
           {
@@ -795,10 +333,10 @@
               "$": "addSyntax"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a493901268eefd5a928bdd08f35413ea7"
+              "$": "a9525149a884906d70b3fc4c67b5d53da"
             },
             "arglist": {
               "$": "(const QString &exampleQuery, const QString &description)"
@@ -814,10 +352,10 @@
               "$": "addSyntax"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "affe2ef6b34151ca42e51501562743772"
+              "$": "acea3ff0bdaf3d2dfb8fc8304a00e176e"
             },
             "arglist": {
               "$": "(const QStringList &exampleQueries, const QString &description)"
@@ -833,32 +371,13 @@
               "$": "addSyntax"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "abf1a8db588c72cfad804e246264b81d7"
+              "$": "abf5d046bc28378b27e50a817a835946d"
             },
             "arglist": {
               "$": "(const RunnerSyntax &syntax)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "clearActions"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a1fc15fb88ad8e4483c4f369bc5c21f91"
-            },
-            "arglist": {
-              "$": "()"
             }
           },
           {
@@ -871,32 +390,13 @@
               "$": "config"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "afdc37c00d0fe35e2ffcdbda8aa4aea70"
+              "$": "a19b9d3bd2c82a8162bede5cd01eea8ed"
             },
             "arglist": {
               "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "Q_INVOKABLE DataEngine *"
-            },
-            "name": {
-              "$": "dataEngine"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ab329cc138840747b886bab30fa76404a"
-            },
-            "arglist": {
-              "$": "(const QString &name) const"
             }
           },
           {
@@ -910,10 +410,10 @@
               "$": "init"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "ac243016563d726cc0b90529cf903833c"
+              "$": "acdc51fcf803ede0ea5a4100f4c82d14a"
             },
             "arglist": {
               "$": "()"
@@ -930,108 +430,13 @@
               "$": "mimeDataForMatch"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a86da51b8fa164df6c339da15cc84fe1e"
+              "$": "aea363566604df74361cc3885ec9f7a24"
             },
             "arglist": {
-              "$": "(const Plasma::QueryMatch &match)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "removeAction"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "aa2ab6223a0ff19754a65ef90841e676c"
-            },
-            "arglist": {
-              "$": "(const QString &id)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefaultSyntax"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a16ab7e01cdc2b082a4be75be3f73d89d"
-            },
-            "arglist": {
-              "$": "(const RunnerSyntax &syntax)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setHasRunOptions"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ad794990a111ed09673b616b0683c1e31"
-            },
-            "arglist": {
-              "$": "(bool hasRunOptions)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setPriority"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ad0df1c624fe8c7d90c7ffe3856fb8cde"
-            },
-            "arglist": {
-              "$": "(Priority newPriority)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setSpeed"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a7a25eda24c099a0753a8887316b7f215"
-            },
-            "arglist": {
-              "$": "(Speed newSpeed)"
+              "$": "(const KRunner::QueryMatch &match)"
             }
           },
           {
@@ -1044,13 +449,13 @@
               "$": "setSyntaxes"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "ac4934acc33f043fb642f249477f3e9bb"
+              "$": "a3f2bc7c0e2bc0fbb4d068a6486304c3f"
             },
             "arglist": {
-              "$": "(const QList< RunnerSyntax > &syns)"
+              "$": "(const QList< RunnerSyntax > &syntaxes)"
             }
           },
           {
@@ -1063,49 +468,13 @@
               "$": "suspendMatching"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
+              "$": "classKRunner_1_1AbstractRunner.html"
             },
             "anchor": {
-              "$": "a57a54ba45ce4509f0e3f38d167b24060"
+              "$": "a2bf64b439b41b89f6f7054495c95f95b"
             },
             "arglist": {
               "$": "(bool suspend)"
-            }
-          },
-          {
-            "@kind": "define",
-            "type": {
-              "$": "#define"
-            },
-            "name": {
-              "$": "K_EXPORT_PLASMA_RUNNER"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ac5b8cae3f5f9467367ee8236245326a8"
-            },
-            "arglist": {
-              "$": "(libname, classname)"
-            }
-          },
-          {
-            "@kind": "define",
-            "type": {
-              "$": "#define"
-            },
-            "name": {
-              "$": "K_EXPORT_PLASMA_RUNNER_WITH_JSON"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "afcade687b59d8bc6283cec76230cc3bf"
-            },
-            "arglist": {
-              "$": "(classname, jsonFile)"
             }
           }
         ]
@@ -1113,181 +482,209 @@
       {
         "@kind": "class",
         "name": {
-          "$": "Plasma::QueryMatch"
+          "$": "KRunner::AbstractRunnerTest"
         },
         "filename": {
-          "$": "classPlasma_1_1QueryMatch.html"
+          "$": "classKRunner_1_1AbstractRunnerTest.html"
+        },
+        "base": {
+          "$": "QObject"
         },
         "member": [
           {
-            "@kind": "enumvalue",
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
             "name": {
-              "$": "CompletionMatch"
+              "$": "initProperties"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1AbstractRunnerTest.html"
             },
             "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fad19e0614abcde9f1e43731f3db5319d1"
+              "$": "acbe8d0327bbf5979d8bc62ac1fba8b19"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QueryMatch >"
+            },
+            "name": {
+              "$": "launchQuery"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1AbstractRunnerTest.html"
+            },
+            "anchor": {
+              "$": "acc9baee6432d98309f784feba39b3535"
+            },
+            "arglist": {
+              "$": "(const QString &query, const QString &runnerName=QString())"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KRunner::Action"
+        },
+        "filename": {
+          "$": "classKRunner_1_1Action.html"
+        },
+        "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "iconSource"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1Action.html"
+            },
+            "anchor": {
+              "$": "a4fe760c79fe2f3bdafb0d5915049b560"
             },
             "arglist": {}
           },
           {
-            "@kind": "enumvalue",
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
             "name": {
-              "$": "ExactMatch"
+              "$": "text"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1Action.html"
             },
             "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa4fbabba5b6c785446e3e077b0dcb011b"
+              "$": "a1d2657e70b86408d8bdbfa02438e7f48"
             },
             "arglist": {}
           },
           {
-            "@kind": "enumvalue",
+            "@kind": "function",
+            "type": {},
             "name": {
-              "$": "HelperMatch"
+              "$": "Action"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1Action.html"
             },
             "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa7f21e3c410591536437b856c40727344"
+              "$": "a4f457ccfc8336b565cadca56b36e0271"
             },
-            "arglist": {}
+            "arglist": {
+              "$": "()"
+            }
           },
           {
-            "@kind": "enumvalue",
+            "@kind": "function",
+            "type": {},
             "name": {
-              "$": "InformationalMatch"
+              "$": "Action"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1Action.html"
             },
             "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa5c7ce8640639ec38c5f2c77c6187e710"
+              "$": "a7bea91180d158f37972314de7f99223b"
             },
-            "arglist": {}
+            "arglist": {
+              "$": "(const KRunner::Action &other)"
+            }
           },
           {
-            "@kind": "enumvalue",
+            "@kind": "function",
+            "type": {},
             "name": {
-              "$": "NoMatch"
+              "$": "Action"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1Action.html"
             },
             "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa2429a977dd52f1065cd3e48450a1b347"
+              "$": "a95022cc42d8dadfcc490092072fa3755"
             },
-            "arglist": {}
+            "arglist": {
+              "$": "(const QString &id, const QString &iconSource, const QString &text)"
+            }
           },
           {
-            "@kind": "enumvalue",
+            "@kind": "function",
+            "type": {},
             "name": {
-              "$": "PossibleMatch"
+              "$": "operator bool"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1Action.html"
             },
             "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600faa07665917f208fa90ae563d16ea06891"
+              "$": "a7f0fef36e5d2df2d0ed1bf7ebfb2907d"
             },
-            "arglist": {}
-          },
+            "arglist": {
+              "$": "() const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KRunner::QueryMatch"
+        },
+        "filename": {
+          "$": "classKRunner_1_1QueryMatch.html"
+        },
+        "member": [
           {
             "@kind": "enumeration",
             "type": {},
             "name": {
-              "$": "Type"
+              "$": "CategoryRelevance"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600f"
+              "$": "ad786997a70214d3be48c0b7267a8eba4"
             },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "NoMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa2429a977dd52f1065cd3e48450a1b347"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "CompletionMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fad19e0614abcde9f1e43731f3db5319d1"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "PossibleMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600faa07665917f208fa90ae563d16ea06891"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "InformationalMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa5c7ce8640639ec38c5f2c77c6187e710"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "HelperMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa7f21e3c410591536437b856c40727344"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "ExactMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a05fd6c2c5c0ce4d34c4eeda57fda600fa4fbabba5b6c785446e3e077b0dcb011b"
-            },
-            "arglist": {}
+            "arglist": {},
+            "enumvalue": [
+              {
+                "@file": "classKRunner_1_1QueryMatch.html",
+                "@anchor": "ad786997a70214d3be48c0b7267a8eba4ab5b8e20937205384be7b9e0c29a28fdb",
+                "$": "Lowest"
+              },
+              {
+                "@file": "classKRunner_1_1QueryMatch.html",
+                "@anchor": "ad786997a70214d3be48c0b7267a8eba4a28d0edd045e05cf5af64e35ae0c4c6ef",
+                "$": "Low"
+              },
+              {
+                "@file": "classKRunner_1_1QueryMatch.html",
+                "@anchor": "ad786997a70214d3be48c0b7267a8eba4a1eb79d43dbb97d5ceb3c157fdb27fa60",
+                "$": "Moderate"
+              },
+              {
+                "@file": "classKRunner_1_1QueryMatch.html",
+                "@anchor": "ad786997a70214d3be48c0b7267a8eba4a655d20c1ca69519ca647684edbb2db35",
+                "$": "High"
+              },
+              {
+                "@file": "classKRunner_1_1QueryMatch.html",
+                "@anchor": "ad786997a70214d3be48c0b7267a8eba4a582996407922dab08d5cf2b3d2a7c1c9",
+                "$": "Highest"
+              }
+            ]
           },
           {
             "@kind": "function",
@@ -1296,10 +693,10 @@
               "$": "QueryMatch"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a9869a71dfc3943f6b94bb5ab0fcb8c61"
+              "$": "afbb69c14ac34000ed906f6e7cd397c71"
             },
             "arglist": {
               "$": "(AbstractRunner *runner=nullptr)"
@@ -1312,10 +709,10 @@
               "$": "QueryMatch"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a24fc19bcc04ced9ea6ec515bf0fe7775"
+              "$": "a45fe01f8448216de8ae0504b555914d3"
             },
             "arglist": {
               "$": "(const QueryMatch &other)"
@@ -1324,16 +721,16 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QList< QAction * >"
+              "$": "QList< KRunner::Action >"
             },
             "name": {
               "$": "actions"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a7409617e9085395533c661a1debb1b03"
+              "$": "ae460b2ac31b973a490b54f8a0d47804c"
             },
             "arglist": {
               "$": "() const"
@@ -1348,31 +745,31 @@
               "$": "addAction"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a89935ac462578d04decce47c651f4851"
+              "$": "a50dc6801568e562f94c07fdf181375ec"
             },
             "arglist": {
-              "$": "(QAction *actions)"
+              "$": "(const KRunner::Action &action)"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "void"
+              "$": "qreal"
             },
             "name": {
-              "$": "createConfigurationInterface"
+              "$": "categoryRelevance"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "adae28032ecab33b71cf24342d2d5ced9"
+              "$": "a8e6d4e47aaffdda86c3466c87c8e8ac1"
             },
             "arglist": {
-              "$": "(QWidget *parent)"
+              "$": "() const"
             }
           },
           {
@@ -1384,28 +781,10 @@
               "$": "data"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a8a60e1d17dc9c04c0272ddcc3f884635"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "hasConfigurationInterface"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a0d9418e50126af41b1bf18c9e1a048dc"
+              "$": "af92c06d2dcde2f8a027dbf2686005e9a"
             },
             "arglist": {
               "$": "() const"
@@ -1420,10 +799,10 @@
               "$": "icon"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a71b0d6bfd80b3405eeba214b7f8930bb"
+              "$": "ace8969d41fc6c0a3c2ce7d674a98f852"
             },
             "arglist": {
               "$": "() const"
@@ -1438,10 +817,10 @@
               "$": "iconName"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a2512314cc646102d473cde336e35df6b"
+              "$": "ae8123d910409576b97c4bc0856a2d1a2"
             },
             "arglist": {
               "$": "() const"
@@ -1456,10 +835,10 @@
               "$": "id"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a21b8bbb150ee7327d08f675564fd19ad"
+              "$": "a3844e7f9eb1980066213e05d7334a398"
             },
             "arglist": {
               "$": "() const"
@@ -1474,10 +853,10 @@
               "$": "isEnabled"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "ae9ce20b6f03e06ef885e262627601945"
+              "$": "a3c495daca5fd9580e042352a10ab78f7"
             },
             "arglist": {
               "$": "() const"
@@ -1492,10 +871,10 @@
               "$": "isMultiLine"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a3a80e2c61c339083564ddf99ee48f8cb"
+              "$": "acd9462356d9c9f3eeaac13d15cc28e5a"
             },
             "arglist": {
               "$": "() const"
@@ -1510,10 +889,10 @@
               "$": "isValid"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "af0eff36692d63b4e4ede0ec96c6b0b0e"
+              "$": "a348cdc855b7a96a88765293f29d7e76e"
             },
             "arglist": {
               "$": "() const"
@@ -1528,28 +907,10 @@
               "$": "matchCategory"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a9f6ad1f4bf90f675542905b3e44abfa6"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "mimeType"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a50a97aea1050a5513dcd49dbd9b5923a"
+              "$": "ae4e34134ab0e0d40437fe945e71bf647"
             },
             "arglist": {
               "$": "() const"
@@ -1564,31 +925,13 @@
               "$": "relevance"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a787e6f064248b028424aef6ffd282187"
+              "$": "a6975b18c331ba5a8e9d96ad5fc954aec"
             },
             "arglist": {
               "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "run"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "ab09de0dbf370e90304ed794820dca698"
-            },
-            "arglist": {
-              "$": "(const RunnerContext &context) const"
             }
           },
           {
@@ -1600,10 +943,10 @@
               "$": "runner"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "abf18695a18cd1237d65dc4f0868aaf3e"
+              "$": "af4a9302b7d595483c71f0fe7b25a7365"
             },
             "arglist": {
               "$": "() const"
@@ -1612,16 +955,16 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QAction *"
+              "$": "KRunner::Action"
             },
             "name": {
               "$": "selectedAction"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a1145f51cdd6356e76abf1f381d41f2e4"
+              "$": "ac0143e25b8909818c42c49ae20d3b326"
             },
             "arglist": {
               "$": "() const"
@@ -1636,13 +979,49 @@
               "$": "setActions"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a6f8baa28474c0cf7269ea26be1a9599e"
+              "$": "a4ac20fb03413c13f75068abfc7eed0e1"
             },
             "arglist": {
-              "$": "(const QList< QAction * > &actions)"
+              "$": "(const QList< KRunner::Action > &actions)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setCategoryRelevance"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "ab67cccf00c27d33834f0c2c7e075fb71"
+            },
+            "arglist": {
+              "$": "(CategoryRelevance relevance)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setCategoryRelevance"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1QueryMatch.html"
+            },
+            "anchor": {
+              "$": "aa76b36b8e2ae98b38a1ec1a9189843aa"
+            },
+            "arglist": {
+              "$": "(qreal relevance)"
             }
           },
           {
@@ -1654,10 +1033,10 @@
               "$": "setData"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "aad806b18a5fbec942f1258f6b4436cd8"
+              "$": "ab1992b53b3a268117a9093aa885b9e33"
             },
             "arglist": {
               "$": "(const QVariant &data)"
@@ -1672,10 +1051,10 @@
               "$": "setEnabled"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a2e391665fff184efd274b920e1f42353"
+              "$": "a1986b6a058ddb171a369811ec1071701"
             },
             "arglist": {
               "$": "(bool enable)"
@@ -1690,10 +1069,10 @@
               "$": "setIcon"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a2b6be3046fee0b5a4572e6767a29f497"
+              "$": "aa313c42dc38809456e7100f2a59909b2"
             },
             "arglist": {
               "$": "(const QIcon &icon)"
@@ -1708,10 +1087,10 @@
               "$": "setIconName"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "aa8347043eda7ae30aaa86d20f6796d81"
+              "$": "ade71a376ca79cbca540c3f4b00ffef3e"
             },
             "arglist": {
               "$": "(const QString &iconName)"
@@ -1726,10 +1105,10 @@
               "$": "setId"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a9c0a40cbfaa985dc6dab52f617d491c3"
+              "$": "a8bedbe4e01efe03768be499ee9ce88c0"
             },
             "arglist": {
               "$": "(const QString &id)"
@@ -1744,10 +1123,10 @@
               "$": "setMatchCategory"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "af1af8b2f586aea5b9c66ea39b0fb9281"
+              "$": "abf18f3156c1c36e80a56c4cdc1ab00ef"
             },
             "arglist": {
               "$": "(const QString &category)"
@@ -1759,31 +1138,13 @@
               "$": "void"
             },
             "name": {
-              "$": "setMimeType"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "ae6ccdfcbca0ac6ff871c7507e5eda826"
-            },
-            "arglist": {
-              "$": "(const QString &mimeType)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setMultiLine"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a6d4f50cfb907720879ca7a2beefe98f4"
+              "$": "afd7a90a4c74d5a0310dcd0229abcdd7b"
             },
             "arglist": {
               "$": "(bool multiLine)"
@@ -1798,10 +1159,10 @@
               "$": "setRelevance"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a33092a4384eaa117325b99f6fff675f0"
+              "$": "a6c3080e30fbb418ee76531d2c1f46d82"
             },
             "arglist": {
               "$": "(qreal relevance)"
@@ -1813,31 +1174,13 @@
               "$": "void"
             },
             "name": {
-              "$": "setSelectedAction"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "adfaddb73926bd355b5763a50d48f0055"
-            },
-            "arglist": {
-              "$": "(QAction *action)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setSubtext"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a96570707370b4109aaae9ceebd5bd6ba"
+              "$": "ad92a717896b973fd345901025bb46c83"
             },
             "arglist": {
               "$": "(const QString &text)"
@@ -1852,10 +1195,10 @@
               "$": "setText"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a43ad4e96cfa7f5a86803cc8c4846b874"
+              "$": "a3aaa5f40ee2f3fa634ebbc90d63e04d7"
             },
             "arglist": {
               "$": "(const QString &text)"
@@ -1867,31 +1210,13 @@
               "$": "void"
             },
             "name": {
-              "$": "setType"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "aae0dc58edda1eacdfe80f059cc2528da"
-            },
-            "arglist": {
-              "$": "(Type type)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setUrls"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a92c7743956cb92c4db00b1e8058f75d2"
+              "$": "a1a963564ea7c54f65a25db43e65d199c"
             },
             "arglist": {
               "$": "(const QList< QUrl > &urls)"
@@ -1906,10 +1231,10 @@
               "$": "subtext"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "afa82c2549faa03c041d6cdc9045aa965"
+              "$": "ab01f178ff468d061ea7a4f9d328f029e"
             },
             "arglist": {
               "$": "() const"
@@ -1924,28 +1249,10 @@
               "$": "text"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a5e2fbd2b497ab5e00d52ac84ad50c475"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Type"
-            },
-            "name": {
-              "$": "type"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a7d99b3eb24ef7e560294c0cff5bf218f"
+              "$": "a38a9dce79b2d5ba7728e135e49712b27"
             },
             "arglist": {
               "$": "() const"
@@ -1960,10 +1267,10 @@
               "$": "urls"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1QueryMatch.html"
+              "$": "classKRunner_1_1QueryMatch.html"
             },
             "anchor": {
-              "$": "a0fbba32aa184c51fab61bd4c3f7f8256"
+              "$": "ad7a512abc367a04c5b9fda2325306042"
             },
             "arglist": {
               "$": "() const"
@@ -1974,13 +1281,280 @@
       {
         "@kind": "class",
         "name": {
-          "$": "Plasma::RunnerContext"
+          "$": "KRunner::ResultsModel"
         },
         "filename": {
-          "$": "classPlasma_1_1RunnerContext.html"
+          "$": "classKRunner_1_1ResultsModel.html"
         },
         "base": {
-          "$": "QObject"
+          "$": "QSortFilterProxyModel"
+        },
+        "member": [
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FavoriteCountRole"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a6d7a8770cd4b7df7b59de3e32beb9afaa4490d85f9e293dc063d1c4c097d10f4d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FavoriteIndexRole"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a6d7a8770cd4b7df7b59de3e32beb9afaa5dc55c881f678a3cddc3d7b3f2ce7e7a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "Roles"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a6d7a8770cd4b7df7b59de3e32beb9afa"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FavoriteIndexRole"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a6d7a8770cd4b7df7b59de3e32beb9afaa5dc55c881f678a3cddc3d7b3f2ce7e7a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FavoriteCountRole"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a6d7a8770cd4b7df7b59de3e32beb9afaa4490d85f9e293dc063d1c4c097d10f4d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "limit"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a719f55aa1e6bdec712f2f4ea7ecf8d21"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "querying"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a4517832c420655db571a05900a54ee38"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "queryString"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "aa7da506c1de516dc70325e04417c5792"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "singleRunner"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a088d0fa553192dd868d2e9a4c7c5a9d7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "queryStringChangeRequested"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "abf63004da11a4c7c30c08a8736dfa5c4"
+            },
+            "arglist": {
+              "$": "(const QString &queryString, int pos)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "clear"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a8d2ff76534157be2f010240340e5d643"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE QMimeData *"
+            },
+            "name": {
+              "$": "getMimeData"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "ade6afcc34d0cde086857856fde32901b"
+            },
+            "arglist": {
+              "$": "(const QModelIndex &idx) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KRunner::QueryMatch"
+            },
+            "name": {
+              "$": "getQueryMatch"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a1956f3e605f8d3c9f9d7f487806618f1"
+            },
+            "arglist": {
+              "$": "(const QModelIndex &idx) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE bool"
+            },
+            "name": {
+              "$": "run"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "adc264e09ef40445485bacb8e44cf8570"
+            },
+            "arglist": {
+              "$": "(const QModelIndex &idx)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Q_INVOKABLE bool"
+            },
+            "name": {
+              "$": "runAction"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "a22874055953395ed7adfc283f8b125fc"
+            },
+            "arglist": {
+              "$": "(const QModelIndex &idx, int actionNumber)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setFavoriteIds"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1ResultsModel.html"
+            },
+            "anchor": {
+              "$": "ae3ec8d7e95d01dda4c14368e2078ccb8"
+            },
+            "arglist": {
+              "$": "(const QStringList &ids)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KRunner::RunnerContext"
+        },
+        "filename": {
+          "$": "classKRunner_1_1RunnerContext.html"
         },
         "member": [
           {
@@ -1990,13 +1564,13 @@
               "$": "RunnerContext"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "a89282eb5e9b1548cd1da0e263843d3b7"
+              "$": "aa5d9cf8dcdbed1b1137ff98a60a6b90b"
             },
             "arglist": {
-              "$": "(RunnerContext &other, QObject *parent=nullptr)"
+              "$": "(const RunnerContext &other)"
             }
           },
           {
@@ -2008,10 +1582,10 @@
               "$": "addMatch"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "a44f7538b3560664f99a89ce288bb5f91"
+              "$": "ab1e445e2a3606acf543652ae4afc6192"
             },
             "arglist": {
               "$": "(const QueryMatch &match)"
@@ -2026,31 +1600,13 @@
               "$": "addMatches"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "a84736c01ce574fa845cb3fb24e9e3328"
+              "$": "adc734eeb984044bcc7b0201a40ca4525"
             },
             "arglist": {
               "$": "(const QList< QueryMatch > &matches)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QStringList"
-            },
-            "name": {
-              "$": "enabledCategories"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "a8eb9a85415ab5013c33f5f33c647b490"
-            },
-            "arglist": {
-              "$": "() const"
             }
           },
           {
@@ -2062,10 +1618,10 @@
               "$": "ignoreCurrentMatchForHistory"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "adb516c539f32e7a0f69effd4425baea2"
+              "$": "aeeba680c7c6c86c68519bac9dbc4b5a3"
             },
             "arglist": {
               "$": "() const"
@@ -2080,31 +1636,13 @@
               "$": "isValid"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "aec53b3273f18a6da719f65e48619acee"
+              "$": "a487df61c951dd2e762b68b255c78141a"
             },
             "arglist": {
               "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QueryMatch"
-            },
-            "name": {
-              "$": "match"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "a637691f8b8624d18efed217e2b8f6615"
-            },
-            "arglist": {
-              "$": "(const QString &id) const"
             }
           },
           {
@@ -2116,28 +1654,10 @@
               "$": "matches"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "adde592d2e5aa9139e6567998c7a9f49f"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "mimeType"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "a63ba0d3742a222ad09892727ff1aa075"
+              "$": "a5f938bbf39684dca89c6c869a10b6b10"
             },
             "arglist": {
               "$": "() const"
@@ -2152,10 +1672,10 @@
               "$": "operator="
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "ac27baf79656c8357c5f8d29f6fcad894"
+              "$": "a88b7978f2925ee205590279fc9410ba2"
             },
             "arglist": {
               "$": "(const RunnerContext &other)"
@@ -2170,67 +1690,13 @@
               "$": "query"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "ad4fb6234ec800852afcf358c70a299c8"
+              "$": "ace9a022290b99fbb56204fe15341d5bf"
             },
             "arglist": {
               "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "removeMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "ad3a5819fffedf713aff4f5816bf33007"
-            },
-            "arglist": {
-              "$": "(const QString matchId)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "removeMatches"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "aaa641ea178c7f437d10bb3cd23c0d830"
-            },
-            "arglist": {
-              "$": "(AbstractRunner *runner)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "removeMatches"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "ac2c06a8baff721aa60466fabccd2fa96"
-            },
-            "arglist": {
-              "$": "(const QStringList matchIdList)"
             }
           },
           {
@@ -2242,10 +1708,10 @@
               "$": "requestQueryStringUpdate"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "ab2fde3e84944975bc50ee5b20e450fcd"
+              "$": "adf9999d21685c2268d77fa0e966e79d3"
             },
             "arglist": {
               "$": "(const QString &text, int cursorPosition) const"
@@ -2257,124 +1723,16 @@
               "$": "void"
             },
             "name": {
-              "$": "reset"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "a9fc27d023b2673972df12730bcef5a06"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "restore"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "aaaec302fbfb4aa0e4861897fbbb43d0a"
-            },
-            "arglist": {
-              "$": "(const KConfigGroup &config)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "run"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "aa4a0cec8c0ba065aa883dd2e4b629b9a"
-            },
-            "arglist": {
-              "$": "(const QueryMatch &match)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "save"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "a39b8ca5df69d44be8a74d5beca5cbb14"
-            },
-            "arglist": {
-              "$": "(KConfigGroup &config)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setEnabledCategories"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "a693436532d1be58f3231e750158113cf"
-            },
-            "arglist": {
-              "$": "(const QStringList &categories)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setQuery"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "a664bc02baa94fb6756e9d858c7a262ff"
+              "$": "a39d089fc846edce40514d020225e66b2"
             },
             "arglist": {
               "$": "(const QString &term)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setSingleRunnerQueryMode"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "ab863aab15b4e2ae72f04dc8050868ac2"
-            },
-            "arglist": {
-              "$": "(bool enabled)"
             }
           },
           {
@@ -2386,28 +1744,10 @@
               "$": "singleRunnerQueryMode"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
+              "$": "classKRunner_1_1RunnerContext.html"
             },
             "anchor": {
-              "$": "a775c11b1d3bd24f7991c3650c217c2cf"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Type"
-            },
-            "name": {
-              "$": "type"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "af494d5dbc423f7b12a5cb95f4a15fd60"
+              "$": "ace8bda5e4b512dc8b6025c6698223ff4"
             },
             "arglist": {
               "$": "() const"
@@ -2418,10 +1758,10 @@
       {
         "@kind": "class",
         "name": {
-          "$": "Plasma::RunnerManager"
+          "$": "KRunner::RunnerManager"
         },
         "filename": {
-          "$": "classPlasma_1_1RunnerManager.html"
+          "$": "classKRunner_1_1RunnerManager.html"
         },
         "base": {
           "$": "QObject"
@@ -2436,10 +1776,10 @@
               "$": "historyEnabledChanged"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a085a729d3e3e63aded183a335357e36b"
+              "$": "aab3f5c6f9af6c4f5268e7095064d120d"
             },
             "arglist": {
               "$": "()"
@@ -2454,13 +1794,13 @@
               "$": "matchesChanged"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a28f8c3d31f6bf070b32a2d16309a3e88"
+              "$": "aad9d54d6883be03288046ebde5eba46e"
             },
             "arglist": {
-              "$": "(const QList< Plasma::QueryMatch > &matches)"
+              "$": "(const QList< KRunner::QueryMatch > &matches)"
             }
           },
           {
@@ -2472,10 +1812,10 @@
               "$": "queryFinished"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a78c2fd86ac2773d64f2b5fdb5edaf06d"
+              "$": "ac69fac8e7cdaf40b2fc6d68fe881ec33"
             },
             "arglist": {
               "$": "()"
@@ -2487,13 +1827,13 @@
               "$": "void"
             },
             "name": {
-              "$": "setSearchTerm"
+              "$": "requestUpdateQueryString"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "aba8bf5abf760bceaa7c2b89018a95fa9"
+              "$": "aba19f04ca3f3d41eeaa540674a0ed5eb"
             },
             "arglist": {
               "$": "(const QString &term, int cursorPosition)"
@@ -2508,31 +1848,13 @@
               "$": "launchQuery"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "af8517e0135019d205c41d38d81d5be8d"
+              "$": "aec8050b0767a19feece6be1130a9e087"
             },
             "arglist": {
-              "$": "(const QString &term)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "launchQuery"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "af350cda1a14d962a5903fceb202d833a"
-            },
-            "arglist": {
-              "$": "(const QString &term, const QString &runnerId)"
+              "$": "(const QString &term, const QString &runnerId=QString())"
             }
           },
           {
@@ -2544,10 +1866,10 @@
               "$": "matchSessionComplete"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a503fd69a3f6ab83fc888b09c6faf7109"
+              "$": "a92b85c8e1df1031f45eada21c940db53"
             },
             "arglist": {
               "$": "()"
@@ -2562,13 +1884,31 @@
               "$": "reset"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a8d9724f9ff9ab270ebca6b8a5dc5594b"
+              "$": "aecfcdae292738bbe5df1c839929efd80"
             },
             "arglist": {
               "$": "()"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "setHistoryEnvironmentIdentifier"
+            },
+            "anchorfile": {
+              "$": "classKRunner_1_1RunnerManager.html"
+            },
+            "anchor": {
+              "$": "a5726a4193a385d1a656a40c5267237cd"
+            },
+            "arglist": {
+              "$": "(const QString &identifier)"
             }
           },
           {
@@ -2580,10 +1920,10 @@
               "$": "setupMatchSession"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "ae32bdb3a45dd1b4d6307c70198eb7c4d"
+              "$": "a02b9154f648116680d67cdb55cbd7fe2"
             },
             "arglist": {
               "$": "()"
@@ -2596,85 +1936,29 @@
               "$": "RunnerManager"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "ab8b0a1785fdf7f09bfd493544647a081"
+              "$": "a2bc8e04aa515c840d91687497136453d"
             },
             "arglist": {
-              "$": "(KConfigGroup &config, QObject *parent=nullptr)"
+              "$": "(const KConfigGroup &pluginConfigGroup, const KConfigGroup &stateGroup, QObject *parent)"
             }
           },
           {
             "@kind": "function",
-            "type": {
-              "$": "QList< QAction * >"
-            },
+            "type": {},
             "name": {
-              "$": "actionsForMatch"
+              "$": "RunnerManager"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a0f53974cf565dfa72563a7a687c60dfb"
+              "$": "a3532666ac0b811d138d5165f389c92a8"
             },
             "arglist": {
-              "$": "(const QueryMatch &match)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QStringList"
-            },
-            "name": {
-              "$": "allowedRunners"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a0d584fea1209464f3cb8975e4afc371d"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QStringList"
-            },
-            "name": {
-              "$": "enabledCategories"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a380db8c673a85558c7bed74816178cdd"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "enableKNotifyPluginWatcher"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a7d02c83b9286a6c1e04c784186eb3973"
-            },
-            "arglist": {
-              "$": "()"
+              "$": "(QObject *parent=nullptr)"
             }
           },
           {
@@ -2686,10 +1970,10 @@
               "$": "getHistorySuggestion"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a8badd73bce2c3024d109c0a3275fad24"
+              "$": "ab4cb79dc16b78eaf6a0feb8ac4e02252"
             },
             "arglist": {
               "$": "(const QString &typedQuery) const"
@@ -2704,10 +1988,10 @@
               "$": "history"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "abff30adcf2e2ce4ff16d5a0b28249ab6"
+              "$": "ae973c24d9d8de648f7de83687f3efbda"
             },
             "arglist": {
               "$": "() const"
@@ -2722,10 +2006,10 @@
               "$": "historyEnabled"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "ab89f4ced7dd3a61b04f53ca6bce4839c"
+              "$": "a8e056dae2f4b29cca19b31dce27dc780"
             },
             "arglist": {
               "$": "()"
@@ -2734,55 +2018,19 @@
           {
             "@kind": "function",
             "type": {
-              "$": "void"
+              "$": "AbstractRunner *"
             },
             "name": {
               "$": "loadRunner"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "adc73d74feedf611ffeeb2a64cca4b343"
+              "$": "a9195b3073c283c21a1c02e8de1483df7"
             },
             "arglist": {
               "$": "(const KPluginMetaData &pluginMetaData)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "loadRunner"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a33129cdbb0e2fdf78547c9819a00801b"
-            },
-            "arglist": {
-              "$": "(const KService::Ptr service)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "loadRunner"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a974715dfaab6acc0b32ef5a905d966bc"
-            },
-            "arglist": {
-              "$": "(const QString &path)"
             }
           },
           {
@@ -2794,10 +2042,10 @@
               "$": "matches"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a8456b3472b77cdce502db51890a847b8"
+              "$": "a21f1741a99e8e594fbb1eb921bfe79d0"
             },
             "arglist": {
               "$": "() const"
@@ -2812,28 +2060,10 @@
               "$": "mimeDataForMatch"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a08098b6360713080e86fb9455a08ec7b"
-            },
-            "arglist": {
-              "$": "(const QString &matchId) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QMimeData *"
-            },
-            "name": {
-              "$": "mimeDataForMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "ad27c71cde07fcc4062a13b240b90a970"
+              "$": "a3891bd88dc8f247cdc13f3d1f3ec9c2b"
             },
             "arglist": {
               "$": "(const QueryMatch &match) const"
@@ -2845,31 +2075,13 @@
               "$": "QString"
             },
             "name": {
-              "$": "priorSearch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "ae8d45f4bd20ac84d37b30fc919743fde"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
               "$": "query"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a6a7e9966a0b1004f3db27f9176eb2484"
+              "$": "a652d07db34396657baef2f6771dbb88d"
             },
             "arglist": {
               "$": "() const"
@@ -2884,10 +2096,10 @@
               "$": "reloadConfiguration"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "abd181ddadf899400b96d95667e88b346"
+              "$": "a4f30db49592b455a8c8c9e48c8da6c5f"
             },
             "arglist": {
               "$": "()"
@@ -2902,10 +2114,10 @@
               "$": "removeFromHistory"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a9131e0b63109f1340c4570f97108da31"
+              "$": "a92755910c942febe8450de02e8268141"
             },
             "arglist": {
               "$": "(int index)"
@@ -2917,70 +2129,16 @@
               "$": "bool"
             },
             "name": {
-              "$": "retainPriorSearch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a2a27d2296530470e593cfc1fa4b336c4"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "run"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a3b7b29db4138e27ebb3ec748f79ca10b"
+              "$": "a1eacac370541af12b5ac347c6a97da2d"
             },
             "arglist": {
-              "$": "(const QString &id)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "run"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a336cbf2962c2f2212c4fe0bd9cc518f8"
-            },
-            "arglist": {
-              "$": "(const QueryMatch &match)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "runMatch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "adb98d86e6f9f6c4133015a65838db6f9"
-            },
-            "arglist": {
-              "$": "(const QueryMatch &match)"
+              "$": "(const QueryMatch &match, const KRunner::Action &action={})"
             }
           },
           {
@@ -2992,31 +2150,13 @@
               "$": "runner"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a4d950714784e0ee12e2d2b2fdb4859c1"
+              "$": "a43d648c0d462a26305ed9f0a3c61d309"
             },
             "arglist": {
-              "$": "(const QString &pluginName) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "runnerName"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a7669e2965c260c9f03f5355ae496bee6"
-            },
-            "arglist": {
-              "$": "(const QString &id) const"
+              "$": "(const QString &pluginId) const"
             }
           },
           {
@@ -3028,10 +2168,10 @@
               "$": "runners"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a4ad6b523b99b70178f2b90bd2042d987"
+              "$": "af59675828e0c7ae09b8c16d854b85a0c"
             },
             "arglist": {
               "$": "() const"
@@ -3046,10 +2186,10 @@
               "$": "searchContext"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "adcbe3f8fef3ecd1a81a65bb86f9eca4d"
+              "$": "a1836941f7697a9e9a4dea4bc8d8f6913"
             },
             "arglist": {
               "$": "() const"
@@ -3064,10 +2204,10 @@
               "$": "setAllowedRunners"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a1086d657087eb69726e1ba8de2ac7c2b"
+              "$": "a712d6e59f599ee1521d48678b4870d4d"
             },
             "arglist": {
               "$": "(const QStringList &runners)"
@@ -3079,199 +2219,35 @@
               "$": "void"
             },
             "name": {
-              "$": "setEnabledCategories"
+              "$": "setHistoryEnabled"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "a51909cc315ae3863f78e476797b91b89"
+              "$": "a012a3c65738097fe46d2a765afdc10c8"
             },
             "arglist": {
-              "$": "(const QStringList &categories)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setPriorSearch"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a17c9924f13469cef2643285811bc53ef"
-            },
-            "arglist": {
-              "$": "(const QString &search)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setSingleMode"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "afa78a36b20f8d9c920e753bb5cfd6b27"
-            },
-            "arglist": {
-              "$": "(bool singleMode)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setSingleModeRunnerId"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a04a7448eed23e7b92dfbdede7c61a257"
-            },
-            "arglist": {
-              "$": "(const QString &id)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "singleMode"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a9c7be43487c729e330864a2eaeda84c3"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QStringList"
-            },
-            "name": {
-              "$": "singleModeAdvertisedRunnerIds"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a2a2595e152136a4c982461e2096e52b8"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "AbstractRunner *"
-            },
-            "name": {
-              "$": "singleModeRunner"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a42a7c3c44571892d96739757679b5ec9"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "singleModeRunnerId"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a5a5f50a87154eb74a0114210f181280b"
-            },
-            "arglist": {
-              "$": "() const"
+              "$": "(bool enabled)"
             }
           },
           {
             "@kind": "function",
             "@static": "yes",
             "type": {
-              "$": "static KPluginInfo::List"
-            },
-            "name": {
-              "$": "listRunnerInfo"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a94da3cd4e23ac570bfc6db8153257e3c"
-            },
-            "arglist": {
-              "$": "(const QString &parentApp=QString())"
-            }
-          },
-          {
-            "@kind": "function",
-            "@static": "yes",
-            "type": {
-              "$": "static QVector< KPluginMetaData >"
+              "$": "static QList< KPluginMetaData >"
             },
             "name": {
               "$": "runnerMetaDataList"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
+              "$": "classKRunner_1_1RunnerManager.html"
             },
             "anchor": {
-              "$": "af37f4011c5e2f2e2b69cdc10bf379775"
+              "$": "a6a6298ca0e1063802667788bd653f3c3"
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@static": "yes",
-            "type": {
-              "$": "static QVector< KPluginMetaData >"
-            },
-            "name": {
-              "$": "runnerMetaDataList"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a1dbe8c343cc698629364e90a23039874"
-            },
-            "arglist": {
-              "$": "(const QString &parentApp)"
             }
           }
         ]
@@ -3279,36 +2255,10 @@
       {
         "@kind": "class",
         "name": {
-          "$": "RunnerModel"
+          "$": "KRunner::RunnerSyntax"
         },
         "filename": {
-          "$": "classRunnerModel.html"
-        },
-        "base": {
-          "$": "QAbstractListModel"
-        },
-        "member": {
-          "@kind": "enumeration",
-          "type": {},
-          "name": {
-            "$": "Roles"
-          },
-          "anchorfile": {
-            "$": "classRunnerModel.html"
-          },
-          "anchor": {
-            "$": "a60a7fafb4069e0c8900bc1a64efc0ddc"
-          },
-          "arglist": {}
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "Plasma::RunnerSyntax"
-        },
-        "filename": {
-          "$": "classPlasma_1_1RunnerSyntax.html"
+          "$": "classKRunner_1_1RunnerSyntax.html"
         },
         "member": [
           {
@@ -3318,10 +2268,10 @@
               "$": "RunnerSyntax"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
+              "$": "classKRunner_1_1RunnerSyntax.html"
             },
             "anchor": {
-              "$": "a66e523e6d6c65cd347d19430fc28d64e"
+              "$": "a004d8e6b72b320228f462417b7523caf"
             },
             "arglist": {
               "$": "(const QString &exampleQuery, const QString &description)"
@@ -3334,10 +2284,10 @@
               "$": "RunnerSyntax"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
+              "$": "classKRunner_1_1RunnerSyntax.html"
             },
             "anchor": {
-              "$": "a269e45d96f85a57cf74df87fea777251"
+              "$": "a0ec93168bc87a742b105c5d442d940fc"
             },
             "arglist": {
               "$": "(const QStringList &exampleQueries, const QString &description)"
@@ -3350,31 +2300,13 @@
               "$": "RunnerSyntax"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
+              "$": "classKRunner_1_1RunnerSyntax.html"
             },
             "anchor": {
-              "$": "ac5f034e48f605b65bd9de339d9380629"
+              "$": "a1b00d6145116d2e461eb4e9622ba6e40"
             },
             "arglist": {
               "$": "(const RunnerSyntax &other)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "addExampleQuery"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
-            },
-            "anchor": {
-              "$": "aab6b2426391c913e4f8602cef85a92da"
-            },
-            "arglist": {
-              "$": "(const QString &exampleQuery)"
             }
           },
           {
@@ -3386,10 +2318,10 @@
               "$": "description"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
+              "$": "classKRunner_1_1RunnerSyntax.html"
             },
             "anchor": {
-              "$": "a4cfba216a5d0ac420cb4884ae561542a"
+              "$": "ab4e843809553362f45f399d7f9ce0273"
             },
             "arglist": {
               "$": "() const"
@@ -3404,28 +2336,10 @@
               "$": "exampleQueries"
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
+              "$": "classKRunner_1_1RunnerSyntax.html"
             },
             "anchor": {
-              "$": "a34301bf7afbbfae06528cf915c3084bf"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QStringList"
-            },
-            "name": {
-              "$": "exampleQueriesWithTermDescription"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
-            },
-            "anchor": {
-              "$": "a6e988d8f198ec620838a2ea164534847"
+              "$": "a4bffee2511053bfa038eff9715537d08"
             },
             "arglist": {
               "$": "() const"
@@ -3440,67 +2354,13 @@
               "$": "operator="
             },
             "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
+              "$": "classKRunner_1_1RunnerSyntax.html"
             },
             "anchor": {
-              "$": "a690abc0955677a285c85a09ab643f4a3"
+              "$": "a4ae728c7f50349b07e22c696e00024ca"
             },
             "arglist": {
               "$": "(const RunnerSyntax &rhs)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "searchTermDescription"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
-            },
-            "anchor": {
-              "$": "aa6c544ff3dc49f7b280a26ffab542d8a"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDescription"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
-            },
-            "anchor": {
-              "$": "a00d65581e564a243514d7919c19f8bdd"
-            },
-            "arglist": {
-              "$": "(const QString &description)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setSearchTermDescription"
-            },
-            "anchorfile": {
-              "$": "classPlasma_1_1RunnerSyntax.html"
-            },
-            "anchor": {
-              "$": "a16ad7432aea4270aa255739ea20ae90d"
-            },
-            "arglist": {
-              "$": "(const QString &description)"
             }
           }
         ]
@@ -3514,7 +2374,20 @@
           "$": "KRunner"
         },
         "filename": {
-          "$": "index"
+          "$": "index.html"
+        },
+        "subpage": [
+          {
+            "$": "Stars.html"
+          },
+          {
+            "$": "HTMIndexing.html"
+          }
+        ],
+        "docanchor": {
+          "@file": "index.html",
+          "@title": "KRunner",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2krunner_2README"
         }
       }
     ]

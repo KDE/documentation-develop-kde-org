@@ -1,5 +1,7 @@
 {
   "tagfile": {
+    "@doxygen_version": "1.10.0",
+    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
       {
         "@kind": "class",
@@ -13,19 +15,6 @@
           "$": "QDialog"
         },
         "member": [
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "HideKdeVersion"
-            },
-            "anchorfile": {
-              "$": "classKAboutApplicationDialog.html"
-            },
-            "anchor": {
-              "$": "a0538e1197f96a267f98da89e77c786f8ab2cd123fc9fdc54acc643885bc55ab60"
-            },
-            "arglist": {}
-          },
           {
             "@kind": "enumvalue",
             "name": {
@@ -115,19 +104,6 @@
             },
             "anchor": {
               "$": "a0538e1197f96a267f98da89e77c786f8a3959b5a94f6d190023310d2ff3e7e7c9"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "HideKdeVersion"
-            },
-            "anchorfile": {
-              "$": "classKAboutApplicationDialog.html"
-            },
-            "anchor": {
-              "$": "a0538e1197f96a267f98da89e77c786f8ab2cd123fc9fdc54acc643885bc55ab60"
             },
             "arglist": {}
           },
@@ -442,7 +418,11 @@
               "$": "(const QString &text)"
             }
           }
-        ]
+        ],
+        "docanchor": {
+          "@file": "classKActionCategory.html",
+          "$": "Usage"
+        }
       },
       {
         "@kind": "class",
@@ -456,24 +436,6 @@
           "$": "QObject"
         },
         "member": [
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "QT_MOC_COMPAT void"
-            },
-            "name": {
-              "$": "actionHighlighted"
-            },
-            "anchorfile": {
-              "$": "classKActionCollection.html"
-            },
-            "anchor": {
-              "$": "a70a5a6e63f8498635f26d866c05d9ef0"
-            },
-            "arglist": {
-              "$": "(QAction *action)"
-            }
-          },
           {
             "@kind": "signal",
             "type": {
@@ -547,24 +509,6 @@
             }
           },
           {
-            "@kind": "signal",
-            "type": {
-              "$": "QT_MOC_COMPAT void"
-            },
-            "name": {
-              "$": "removed"
-            },
-            "anchorfile": {
-              "$": "classKActionCollection.html"
-            },
-            "anchor": {
-              "$": "aa5a1bdd8c06c640c709f148ecede4718"
-            },
-            "arglist": {
-              "$": "(QAction *action)"
-            }
-          },
-          {
             "@kind": "function",
             "type": {},
             "name": {
@@ -599,7 +543,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QAction *"
+              "$": "Q_INVOKABLE QAction *"
             },
             "name": {
               "$": "action"
@@ -698,7 +642,7 @@
               "$": "classKActionCollection.html"
             },
             "anchor": {
-              "$": "a4c1fd103e9aba7d18e2f0d5187245484"
+              "$": "a5e6c99300b806b02803c643d7e96cf12"
             },
             "arglist": {
               "$": "(const QString &name, const QObject *receiver=nullptr, const char *member=nullptr)"
@@ -716,7 +660,7 @@
               "$": "classKActionCollection.html"
             },
             "anchor": {
-              "$": "ad0cc422fa20c4052b16ee753924af347"
+              "$": "a82e9bbd8e11f97233a23eb5986fcf27f"
             },
             "arglist": {
               "$": "(const QString &name, const Receiver *receiver, Func slot)"
@@ -752,7 +696,7 @@
               "$": "classKActionCollection.html"
             },
             "anchor": {
-              "$": "a0797f97ba6711d4cd1197da2cfd072ec"
+              "$": "a3b877e12a102f08fd093918250cd7ea9"
             },
             "arglist": {
               "$": "(const QString &name, const Receiver *receiver, Func slot)"
@@ -824,7 +768,7 @@
               "$": "classKActionCollection.html"
             },
             "anchor": {
-              "$": "a3cac4416ac2bc8c9fd66782807dc97d3"
+              "$": "a35df875ea1fabe04705848fb4df41365"
             },
             "arglist": {
               "$": "(KStandardAction::StandardAction actionType, const QString &name, const Receiver *receiver, Func slot)"
@@ -1031,42 +975,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QKeySequence"
-            },
-            "name": {
-              "$": "defaultShortcut"
-            },
-            "anchorfile": {
-              "$": "classKActionCollection.html"
-            },
-            "anchor": {
-              "$": "a7dd702bf26f1244add0094f454bba41c"
-            },
-            "arglist": {
-              "$": "(QAction *action) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QList< QKeySequence >"
-            },
-            "name": {
-              "$": "defaultShortcuts"
-            },
-            "anchorfile": {
-              "$": "classKActionCollection.html"
-            },
-            "anchor": {
-              "$": "a92264d378d7720ebd6199e99361d4895"
-            },
-            "arglist": {
-              "$": "(QAction *action) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "void"
             },
             "name": {
@@ -1116,24 +1024,6 @@
             },
             "arglist": {
               "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isShortcutsConfigurable"
-            },
-            "anchorfile": {
-              "$": "classKActionCollection.html"
-            },
-            "anchor": {
-              "$": "a1d687e113aad3d83d9ff06e3230202d2"
-            },
-            "arglist": {
-              "$": "(QAction *action) const"
             }
           },
           {
@@ -1283,60 +1173,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefaultShortcut"
-            },
-            "anchorfile": {
-              "$": "classKActionCollection.html"
-            },
-            "anchor": {
-              "$": "a92702a7c425b36a6cf9e28458267c93e"
-            },
-            "arglist": {
-              "$": "(QAction *action, const QKeySequence &shortcut)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Q_INVOKABLE void"
-            },
-            "name": {
-              "$": "setDefaultShortcuts"
-            },
-            "anchorfile": {
-              "$": "classKActionCollection.html"
-            },
-            "anchor": {
-              "$": "a9b892de12245896391fe3d64d1270c0f"
-            },
-            "arglist": {
-              "$": "(QAction *action, const QList< QKeySequence > &shortcuts)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setShortcutsConfigurable"
-            },
-            "anchorfile": {
-              "$": "classKActionCollection.html"
-            },
-            "anchor": {
-              "$": "a7acffb48e28585526679ec7f7bba2673"
-            },
-            "arglist": {
-              "$": "(QAction *action, bool configurable)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "QAction *"
             },
             "name": {
@@ -1390,23 +1226,117 @@
             }
           },
           {
-            "@kind": "slot",
-            "@protection": "protected",
-            "@virtualness": "virtual",
+            "@kind": "function",
+            "@static": "yes",
             "type": {
-              "$": "virtual QT_MOC_COMPAT void"
+              "$": "static QKeySequence"
             },
             "name": {
-              "$": "slotActionHighlighted"
+              "$": "defaultShortcut"
             },
             "anchorfile": {
               "$": "classKActionCollection.html"
             },
             "anchor": {
-              "$": "a0c3e940454e702ed846b62047e9df3d4"
+              "$": "a14d473c83de86aa088c1e599a09d80d5"
             },
             "arglist": {
-              "$": "()"
+              "$": "(QAction *action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static QList< QKeySequence >"
+            },
+            "name": {
+              "$": "defaultShortcuts"
+            },
+            "anchorfile": {
+              "$": "classKActionCollection.html"
+            },
+            "anchor": {
+              "$": "ac599f386ef2c2b0a6261ad203e05d009"
+            },
+            "arglist": {
+              "$": "(QAction *action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static bool"
+            },
+            "name": {
+              "$": "isShortcutsConfigurable"
+            },
+            "anchorfile": {
+              "$": "classKActionCollection.html"
+            },
+            "anchor": {
+              "$": "a1d50389ad95b895a4bec59854b7d4f66"
+            },
+            "arglist": {
+              "$": "(QAction *action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static void"
+            },
+            "name": {
+              "$": "setDefaultShortcut"
+            },
+            "anchorfile": {
+              "$": "classKActionCollection.html"
+            },
+            "anchor": {
+              "$": "a92702a7c425b36a6cf9e28458267c93e"
+            },
+            "arglist": {
+              "$": "(QAction *action, const QKeySequence &shortcut)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static Q_INVOKABLE void"
+            },
+            "name": {
+              "$": "setDefaultShortcuts"
+            },
+            "anchorfile": {
+              "$": "classKActionCollection.html"
+            },
+            "anchor": {
+              "$": "a9b892de12245896391fe3d64d1270c0f"
+            },
+            "arglist": {
+              "$": "(QAction *action, const QList< QKeySequence > &shortcuts)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static void"
+            },
+            "name": {
+              "$": "setShortcutsConfigurable"
+            },
+            "anchorfile": {
+              "$": "classKActionCollection.html"
+            },
+            "anchor": {
+              "$": "a7acffb48e28585526679ec7f7bba2673"
+            },
+            "arglist": {
+              "$": "(QAction *action, bool configurable)"
             }
           },
           {
@@ -1494,42 +1424,6 @@
           },
           {
             "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "messageBody"
-            },
-            "anchorfile": {
-              "$": "classKBugReport.html"
-            },
-            "anchor": {
-              "$": "a8101a57dfd6c1c21a86588b9c1be15d2"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setMessageBody"
-            },
-            "anchorfile": {
-              "$": "classKBugReport.html"
-            },
-            "anchor": {
-              "$": "aab208be9da296ed756fd1294dd9df805"
-            },
-            "arglist": {
-              "$": "(const QString &messageBody)"
-            }
-          },
-          {
-            "@kind": "function",
             "@protection": "protected",
             "type": {
               "$": "bool"
@@ -1545,25 +1439,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "text"
-            },
-            "anchorfile": {
-              "$": "classKBugReport.html"
-            },
-            "anchor": {
-              "$": "a39edf0c8bbf2e73fd03a815d927b8c87"
-            },
-            "arglist": {
-              "$": "() const"
             }
           }
         ]
@@ -1623,24 +1498,6 @@
             },
             "anchor": {
               "$": "aae754738ab34990194064f3b77899d57"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "QT_MOC_COMPAT void"
-            },
-            "name": {
-              "$": "newToolbarConfig"
-            },
-            "anchorfile": {
-              "$": "classKEditToolBar.html"
-            },
-            "anchor": {
-              "$": "af6c544cf27553997586039e465934424"
             },
             "arglist": {
               "$": "()"
@@ -1743,10 +1600,10 @@
               "$": "classKEditToolBar.html"
             },
             "anchor": {
-              "$": "a880c5b452d58f71c2ece05d09f4bb188"
+              "$": "ab2818dedba1e9d3b4d806edd1caf72db"
             },
             "arglist": {
-              "$": "(const char *toolBarName)"
+              "$": "(const QString &toolBarName)"
             }
           }
         ]
@@ -2323,7 +2180,7 @@
               "$": "classKKeySequenceWidget.html"
             },
             "anchor": {
-              "$": "aecb75124c5768581ac08aeff86139ced"
+              "$": "a96ad637202d34e4d6bdf982c8cda3b87"
             },
             "arglist": {
               "$": "() const"
@@ -2453,24 +2310,6 @@
             },
             "arglist": {
               "$": "(const QList< KActionCollection * > &actionCollections)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setCheckActionList"
-            },
-            "anchorfile": {
-              "$": "classKKeySequenceWidget.html"
-            },
-            "anchor": {
-              "$": "a435af2285bd1bb8da6e729af1fa334bd"
-            },
-            "arglist": {
-              "$": "(const QList< QAction * > &checkList)"
             }
           },
           {
@@ -2814,24 +2653,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QMenu *"
-            },
-            "name": {
-              "$": "customHelpMenu"
-            },
-            "anchorfile": {
-              "$": "classKMainWindow.html"
-            },
-            "anchor": {
-              "$": "aff97bcd122771b99b699a4837b728907"
-            },
-            "arglist": {
-              "$": "(bool showWhatsThis=true)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "QString"
             },
             "name": {
@@ -2863,42 +2684,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QMenu *"
-            },
-            "name": {
-              "$": "helpMenu"
-            },
-            "anchorfile": {
-              "$": "classKMainWindow.html"
-            },
-            "anchor": {
-              "$": "a669da563f6d8e85e6f590980593353b4"
-            },
-            "arglist": {
-              "$": "(const QString &aboutAppText=QString(), bool showWhatsThis=true)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "initialGeometrySet"
-            },
-            "anchorfile": {
-              "$": "classKMainWindow.html"
-            },
-            "anchor": {
-              "$": "a88db4e95634a7365c512ed5e5d5cde85"
-            },
-            "arglist": {
-              "$": "() const"
             }
           },
           {
@@ -3140,26 +2925,6 @@
             }
           },
           {
-            "@kind": "slot",
-            "@protection": "protected",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "showAboutApplication"
-            },
-            "anchorfile": {
-              "$": "classKMainWindow.html"
-            },
-            "anchor": {
-              "$": "a769c90d4ade5154255fd053f5ad1cc62"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
             "@kind": "function",
             "@protection": "protected",
             "type": {
@@ -3195,6 +2960,25 @@
             },
             "arglist": {
               "$": "(QEvent *event) override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "keyPressEvent"
+            },
+            "anchorfile": {
+              "$": "classKMainWindow.html"
+            },
+            "anchor": {
+              "$": "ae88e1d928fe2e48cca0b1d7fbd902c5a"
+            },
+            "arglist": {
+              "$": "(QKeyEvent *keyEvent) override"
             }
           },
           {
@@ -3260,25 +3044,6 @@
           {
             "@kind": "function",
             "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "restoreWindowSize"
-            },
-            "anchorfile": {
-              "$": "classKMainWindow.html"
-            },
-            "anchor": {
-              "$": "a065547cffb7d84d243bc86c5ffbc1b04"
-            },
-            "arglist": {
-              "$": "(const KConfigGroup &config)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
             "@virtualness": "virtual",
             "type": {
               "$": "virtual void"
@@ -3320,25 +3085,6 @@
             "@kind": "function",
             "@protection": "protected",
             "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "saveWindowSize"
-            },
-            "anchorfile": {
-              "$": "classKMainWindow.html"
-            },
-            "anchor": {
-              "$": "a6ff94db3910198c41ee688ef9ba122cf"
-            },
-            "arglist": {
-              "$": "(KConfigGroup &config) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
               "$": "bool"
             },
             "name": {
@@ -3353,22 +3099,6 @@
             "arglist": {
               "$": "() const"
             }
-          },
-          {
-            "@kind": "define",
-            "type": {
-              "$": "#define"
-            },
-            "name": {
-              "$": "KDE_DEFAULT_WINDOWFLAGS"
-            },
-            "anchorfile": {
-              "$": "classKMainWindow.html"
-            },
-            "anchor": {
-              "$": "a6ce4ce7bc53f28e2af8a7b8c3160d54f"
-            },
-            "arglist": {}
           }
         ]
       },
@@ -3610,25 +3340,6 @@
             },
             "arglist": {
               "$": "() const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@static": "yes",
-            "type": {
-              "$": "static int"
-            },
-            "name": {
-              "$": "configure"
-            },
-            "anchorfile": {
-              "$": "classKShortcutsDialog.html"
-            },
-            "anchor": {
-              "$": "a116fbfbf69290f991feca6a9d22cb357"
-            },
-            "arglist": {
-              "$": "(KActionCollection *collection, KShortcutsEditor::LetterShortcuts allowLetterShortcuts=KShortcutsEditor::LetterShortcutsAllowed, QWidget *parent=nullptr, bool bSaveSettings=true)"
             }
           },
           {
@@ -3927,42 +3638,6 @@
             }
           },
           {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "printShortcuts"
-            },
-            "anchorfile": {
-              "$": "classKShortcutsEditor.html"
-            },
-            "anchor": {
-              "$": "a7017f7df6fac22c003b90c0063a0cf81"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "resizeColumns"
-            },
-            "anchorfile": {
-              "$": "classKShortcutsEditor.html"
-            },
-            "anchor": {
-              "$": "a36d0380fe5b0f297549c4ba128a312fa"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
             "@kind": "function",
             "type": {},
             "name": {
@@ -4022,7 +3697,7 @@
               "$": "classKShortcutsEditor.html"
             },
             "anchor": {
-              "$": "a303dd8f0ba4783454e11d52bb45871ed"
+              "$": "ae4c14280d3d88c300c81729d8e86e157"
             },
             "arglist": {
               "$": "() const"
@@ -4062,78 +3737,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "clearConfiguration"
-            },
-            "anchorfile": {
-              "$": "classKShortcutsEditor.html"
-            },
-            "anchor": {
-              "$": "a4a21dfa7b12d71a65faa7e964dcf4e87"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "commit"
-            },
-            "anchorfile": {
-              "$": "classKShortcutsEditor.html"
-            },
-            "anchor": {
-              "$": "a371b43ea29f7972741f84841ba75edb3"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "exportConfiguration"
-            },
-            "anchorfile": {
-              "$": "classKShortcutsEditor.html"
-            },
-            "anchor": {
-              "$": "a5dcc842b38c5b1f62bb949bccbbcf493"
-            },
-            "arglist": {
-              "$": "(KConfigBase *config) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "importConfiguration"
-            },
-            "anchorfile": {
-              "$": "classKShortcutsEditor.html"
-            },
-            "anchor": {
-              "$": "a6ba1956084eb4f60a9455dc583952f51"
-            },
-            "arglist": {
-              "$": "(KConfigBase *config)"
             }
           },
           {
@@ -4207,42 +3810,6 @@
             "arglist": {
               "$": "()"
             }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "undoChanges"
-            },
-            "anchorfile": {
-              "$": "classKShortcutsEditor.html"
-            },
-            "anchor": {
-              "$": "aa30bf07e9f23513766347327f59785ca"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfiguration"
-            },
-            "anchorfile": {
-              "$": "classKShortcutsEditor.html"
-            },
-            "anchor": {
-              "$": "a3ad21b74db8feabfd901e7ef554b6a38"
-            },
-            "arglist": {
-              "$": "(KConfigGroup *config=nullptr) const"
-            }
           }
         ]
       },
@@ -4293,24 +3860,6 @@
             "arglist": {
               "$": "(const QList< KActionCollection * > &actionCollections)"
             }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setCheckActionList"
-            },
-            "anchorfile": {
-              "$": "classKShortcutWidget.html"
-            },
-            "anchor": {
-              "$": "a9f9d112bc3a86c9bdc438419ade2ae2f"
-            },
-            "arglist": {
-              "$": "(const QList< QAction * > &checkList)"
-            }
           }
         ]
       },
@@ -4326,22 +3875,6 @@
           "$": "KToggleAction"
         },
         "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KToggleToolBarAction"
-            },
-            "anchorfile": {
-              "$": "classKToggleToolBarAction.html"
-            },
-            "anchor": {
-              "$": "a6fea861d3f60ccfdf5609f3d5f0a9526"
-            },
-            "arglist": {
-              "$": "(const char *toolBarName, const QString &text, QObject *parent)"
-            }
-          },
           {
             "@kind": "function",
             "type": {},
@@ -4530,24 +4063,6 @@
               "$": "bool"
             },
             "name": {
-              "$": "contextMenuEnabled"
-            },
-            "anchorfile": {
-              "$": "classKToolBar.html"
-            },
-            "anchor": {
-              "$": "a1e501f091d7334aac111415f93ddcc41"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
               "$": "eventFilter"
             },
             "anchorfile": {
@@ -4674,24 +4189,6 @@
               "$": "void"
             },
             "name": {
-              "$": "setContextMenuEnabled"
-            },
-            "anchorfile": {
-              "$": "classKToolBar.html"
-            },
-            "anchor": {
-              "$": "a14bc31ca79f7c76c0c618fb20d246268"
-            },
-            "arglist": {
-              "$": "(bool enable=true)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setIconDimensions"
             },
             "anchorfile": {
@@ -4702,24 +4199,6 @@
             },
             "arglist": {
               "$": "(int size)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setXMLGUIClient"
-            },
-            "anchorfile": {
-              "$": "classKToolBar.html"
-            },
-            "anchor": {
-              "$": "aa48b33c08547de137ff45781477f05b4"
-            },
-            "arglist": {
-              "$": "(KXMLGUIClient *client)"
             }
           },
           {
@@ -4917,25 +4396,6 @@
             "arglist": {
               "$": "(QWidget *container, QWidget *parent, QDomElement &element, QAction *containerAction)"
             }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "removeCustomElement"
-            },
-            "anchorfile": {
-              "$": "classKXMLGUIBuilder.html"
-            },
-            "anchor": {
-              "$": "a79addb091bde6cfcdaf39e4dbb85ad9f"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, QAction *action)"
-            }
           }
         ]
       },
@@ -5001,24 +4461,6 @@
           },
           {
             "@kind": "function",
-            "type": {
-              "$": "QAction *"
-            },
-            "name": {
-              "$": "action"
-            },
-            "anchorfile": {
-              "$": "classKXMLGUIClient.html"
-            },
-            "anchor": {
-              "$": "a1895d52a8aee6bb2727782d2498e2fcc"
-            },
-            "arglist": {
-              "$": "(const char *name) const"
-            }
-          },
-          {
-            "@kind": "function",
             "@virtualness": "virtual",
             "type": {
               "$": "virtual QAction *"
@@ -5034,6 +4476,24 @@
             },
             "arglist": {
               "$": "(const QDomElement &element) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QAction *"
+            },
+            "name": {
+              "$": "action"
+            },
+            "anchorfile": {
+              "$": "classKXMLGUIClient.html"
+            },
+            "anchor": {
+              "$": "ab04a6e508626dcc1a005689dbb7b25cf"
+            },
+            "arglist": {
+              "$": "(const QString &name) const"
             }
           },
           {
@@ -5590,24 +5050,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "configureShortcuts"
-            },
-            "anchorfile": {
-              "$": "classKXMLGUIFactory.html"
-            },
-            "anchor": {
-              "$": "a9e985c57238c9ba5d76eca9366c36d76"
-            },
-            "arglist": {
-              "$": "(bool bAllowLetterShortcuts=true, bool bSaveSettings=true)"
             }
           },
           {
@@ -6547,24 +5989,6 @@
             "arglist": {}
           },
           {
-            "@kind": "define",
-            "type": {
-              "$": "#define"
-            },
-            "name": {
-              "$": "RESTORE"
-            },
-            "anchorfile": {
-              "$": "group__KXMLGUI__Session.html"
-            },
-            "anchor": {
-              "$": "ga63a46e8d446de3b16d76ff6c714dc2f3"
-            },
-            "arglist": {
-              "$": "(type)"
-            }
-          },
-          {
             "@kind": "function",
             "type": {
               "$": "void"
@@ -6611,7 +6035,20 @@
           "$": "KXMLGUI"
         },
         "filename": {
-          "$": "index"
+          "$": "index.html"
+        },
+        "subpage": [
+          {
+            "$": "Stars.html"
+          },
+          {
+            "$": "HTMIndexing.html"
+          }
+        ],
+        "docanchor": {
+          "@file": "index.html",
+          "@title": "KXMLGUI",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2kxmlgui_2README"
         }
       }
     ]

@@ -1,5 +1,7 @@
 {
   "tagfile": {
+    "@doxygen_version": "1.10.0",
+    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
       {
         "@kind": "class",
@@ -71,6 +73,30 @@
         },
         "base": {
           "$": "Akonadi::EntityOrderProxyModel"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "ExpireDeleteJob"
+        },
+        "filename": {
+          "$": "classExpireDeleteJob.html"
+        },
+        "base": {
+          "$": "QObject"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "ExpireMoveJob"
+        },
+        "filename": {
+          "$": "classExpireMoveJob.html"
+        },
+        "base": {
+          "$": "QObject"
         }
       },
       {
@@ -573,10 +599,10 @@
               "$": "classMailCommon_1_1FilterAction.html"
             },
             "anchor": {
-              "$": "ac72248003801da859ca85ad1538dea02"
+              "$": "a5ffe129556a82c227df7648da92ccd7d"
             },
             "arglist": {
-              "$": "(const Akonadi::Item &item, KMime::MDN::DispositionType d, const QVector< KMime::MDN::DispositionModifier > &m=QVector< KMime::MDN::DispositionModifier >())"
+              "$": "(const Akonadi::Item &item, KMime::MDN::DispositionType d, const QList< KMime::MDN::DispositionModifier > &m=QList< KMime::MDN::DispositionModifier >())"
             }
           }
         ]
@@ -660,7 +686,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "const MAILCOMMON_EXPORT QVector< FilterActionDesc * > &"
+              "$": "MAILCOMMON_EXPORT const QList< FilterActionDesc * > &"
             },
             "name": {
               "$": "list"
@@ -669,7 +695,7 @@
               "$": "classMailCommon_1_1FilterActionDict.html"
             },
             "anchor": {
-              "$": "a72425d421bec87f7c701f63109bda632"
+              "$": "ae16a88712f917ad7ee60d09ec2557ad1"
             },
             "arglist": {
               "$": "() const"
@@ -853,10 +879,10 @@
               "$": "classMailCommon_1_1FilterActionWidgetLister.html"
             },
             "anchor": {
-              "$": "a9876198bb66c38d84cfca34a7ccfc7ec"
+              "$": "a110a18fd9560dc053b85d3d7e713c812"
             },
             "arglist": {
-              "$": "(QVector< FilterAction * > *list)"
+              "$": "(QList< FilterAction * > *list)"
             }
           },
           {
@@ -1777,16 +1803,16 @@
               "$": "classMailCommon_1_1FilterImporterExporter.html"
             },
             "anchor": {
-              "$": "a10cd1fc81d448f15ee31b5d3463bc12a"
+              "$": "a3b1dc21d2e92fc699a271aea2908b92c"
             },
             "arglist": {
-              "$": "(const QVector< MailFilter * > &filters, const QUrl &fileName=QUrl(), bool saveAll=false)"
+              "$": "(const QList< MailFilter * > &filters, const QUrl &fileName=QUrl(), bool saveAll=false)"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< MailFilter * >"
+              "$": "QList< MailFilter * >"
             },
             "name": {
               "$": "importFilters"
@@ -1795,7 +1821,7 @@
               "$": "classMailCommon_1_1FilterImporterExporter.html"
             },
             "anchor": {
-              "$": "a5d7d469ec251343f66db71d155fafe2f"
+              "$": "a8bccb068206f014bec3dce04a95c923b"
             },
             "arglist": {
               "$": "(bool &canceled, FilterImporterExporter::FilterType type=FilterImporterExporter::KMailFilter, const QString &filename=QString())"
@@ -1805,7 +1831,7 @@
             "@kind": "function",
             "@static": "yes",
             "type": {
-              "$": "static QVector< MailFilter * >"
+              "$": "static QList< MailFilter * >"
             },
             "name": {
               "$": "readFiltersFromConfig"
@@ -1814,7 +1840,7 @@
               "$": "classMailCommon_1_1FilterImporterExporter.html"
             },
             "anchor": {
-              "$": "a1f64568af1508977ce399ce25c54ca86"
+              "$": "ad32b1861c3398dcb1d2a1e099c768c5d"
             },
             "arglist": {
               "$": "(const KSharedConfig::Ptr &config, QStringList &emptyFilter)"
@@ -1833,10 +1859,10 @@
               "$": "classMailCommon_1_1FilterImporterExporter.html"
             },
             "anchor": {
-              "$": "a869555c03e5f9d288f01c831f037fdd6"
+              "$": "ab01171ea89875eb50381542a25041767"
             },
             "arglist": {
-              "$": "(const QVector< MailFilter * > &filters, KSharedConfig::Ptr config, bool exportFilter=false)"
+              "$": "(const QList< MailFilter * > &filters, KSharedConfig::Ptr config, bool exportFilter=false)"
             }
           }
         ]
@@ -2435,10 +2461,10 @@
               "$": "classMailCommon_1_1FilterManager.html"
             },
             "anchor": {
-              "$": "a39856ccc08e9dd0d72c68387e7ad1ae3"
+              "$": "a1d3aaf41fcdf2f900ae59935c2963487"
             },
             "arglist": {
-              "$": "(const QVector< MailCommon::MailFilter * > &filters, bool replaceIfNameExists=false)"
+              "$": "(const QList< MailCommon::MailFilter * > &filters, bool replaceIfNameExists=false)"
             }
           },
           {
@@ -2624,7 +2650,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< MailCommon::MailFilter * >"
+              "$": "QList< MailCommon::MailFilter * >"
             },
             "name": {
               "$": "filters"
@@ -2633,7 +2659,7 @@
               "$": "classMailCommon_1_1FilterManager.html"
             },
             "anchor": {
-              "$": "af58f30d7cf6bf14e8bfeaf5b95cfd92d"
+              "$": "a71b4ecce616cea2ecb7c0fefcff9aba0"
             },
             "arglist": {
               "$": "() const"
@@ -2687,10 +2713,10 @@
               "$": "classMailCommon_1_1FilterManager.html"
             },
             "anchor": {
-              "$": "a3874797bc032556816441d9efa7be837"
+              "$": "a30cdcbe1fcd96505f581dfbbd65f7689"
             },
             "arglist": {
-              "$": "(const QVector< MailCommon::MailFilter * > &filters)"
+              "$": "(const QList< MailCommon::MailFilter * > &filters)"
             }
           },
           {
@@ -3249,7 +3275,7 @@
               "$": "classMailCommon_1_1IKernel.html"
             },
             "anchor": {
-              "$": "ad05cced1ec481a9beb99d867a9548210"
+              "$": "a211c868d77f4c95302db680b5aca4969"
             },
             "arglist": {
               "$": "() const =0"
@@ -3259,7 +3285,7 @@
             "@kind": "function",
             "@virtualness": "pure",
             "type": {
-              "$": "virtual KIdentityManagement::IdentityManager *"
+              "$": "virtual KIdentityManagementCore::IdentityManager *"
             },
             "name": {
               "$": "identityManager"
@@ -3268,7 +3294,7 @@
               "$": "classMailCommon_1_1IKernel.html"
             },
             "anchor": {
-              "$": "ac27fcc0c96d58a9e7d079bbbbc7cd13f"
+              "$": "a09677051ba893620d82305b7b96ecceb"
             },
             "arglist": {
               "$": "()=0"
@@ -3778,7 +3804,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< FilterAction * > *"
+              "$": "QList< FilterAction * > *"
             },
             "name": {
               "$": "actions"
@@ -3787,7 +3813,7 @@
               "$": "classMailCommon_1_1MailFilter.html"
             },
             "anchor": {
-              "$": "ab2b7973bfabd4b87176661315926a32a"
+              "$": "accfd9bd5ac960e9bc8f80e7fd3a0b512"
             },
             "arglist": {
               "$": "()"
@@ -3796,7 +3822,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "const QVector< FilterAction * > *"
+              "$": "const QList< FilterAction * > *"
             },
             "name": {
               "$": "actions"
@@ -3805,7 +3831,7 @@
               "$": "classMailCommon_1_1MailFilter.html"
             },
             "anchor": {
-              "$": "a8999676471894695f29e1e20f67b66f6"
+              "$": "ace802229b12088efff4b381ed68d2a0d"
             },
             "arglist": {
               "$": "() const"
@@ -4147,7 +4173,7 @@
               "$": "classMailCommon_1_1MailFilter.html"
             },
             "anchor": {
-              "$": "a0e203c34d044e3c63613e1db7b76a9ed"
+              "$": "a1dabcda18c4a7e2f96c2a72341034ca6"
             },
             "arglist": {
               "$": "()"
@@ -4165,7 +4191,7 @@
               "$": "classMailCommon_1_1MailFilter.html"
             },
             "anchor": {
-              "$": "ad92ab960b51003ff1dc637561a5cf550"
+              "$": "a6cf50b77020ae7333403c1af148c6fa7"
             },
             "arglist": {
               "$": "() const"
@@ -4681,7 +4707,7 @@
               "$": "classMailCommon_1_1ScheduledExpireTask.html"
             },
             "anchor": {
-              "$": "a84908dd2534e36fd6a602d47da330790"
+              "$": "abdf2db3a3f517840584c70a645e24326"
             },
             "arglist": {
               "$": "() override"
@@ -4775,7 +4801,7 @@
               "$": "classMailCommon_1_1ScheduledTask.html"
             },
             "anchor": {
-              "$": "a89441473fb79213b0e00dc3bd087a244"
+              "$": "a1bb00da040160c6144a2ce2b84bc873b"
             },
             "arglist": {
               "$": "()=0"

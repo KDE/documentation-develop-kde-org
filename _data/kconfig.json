@@ -1,5 +1,7 @@
 {
   "tagfile": {
+    "@doxygen_version": "1.10.0",
+    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
       {
         "@kind": "class",
@@ -507,24 +509,6 @@
             },
             "arglist": {
               "$": "(const QString &_group, const QString &_key, qint32 &reference, const QList< Choice > &choices, qint32 defaultValue=0)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QList< Choice >"
-            },
-            "name": {
-              "$": "choices2"
-            },
-            "anchorfile": {
-              "$": "classKCoreConfigSkeleton_1_1ItemEnum.html"
-            },
-            "anchor": {
-              "$": "a4bf48fadbe5f4372ea322056c577be18"
-            },
-            "arglist": {
-              "$": "() const"
             }
           },
           {
@@ -1380,6 +1364,108 @@
       {
         "@kind": "class",
         "name": {
+          "$": "KCoreConfigSkeleton::ItemPointF"
+        },
+        "filename": {
+          "$": "classKCoreConfigSkeleton_1_1ItemPointF.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem< QPointF >"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "ItemPointF"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemPointF.html"
+            },
+            "anchor": {
+              "$": "a1e1e18db28a34c441c7e46a94e1aad72"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key, QPointF &reference, const QPointF &defaultValue=QPointF())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isEqual"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemPointF.html"
+            },
+            "anchor": {
+              "$": "a00823e2e526cdd2b3d5dc464d5ef567c"
+            },
+            "arglist": {
+              "$": "(const QVariant &p) const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "property"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemPointF.html"
+            },
+            "anchor": {
+              "$": "acbfa007b07aff24a371a443050195d78"
+            },
+            "arglist": {
+              "$": "() const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "readConfig"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemPointF.html"
+            },
+            "anchor": {
+              "$": "a41f78cddd97212d5b8abc6b92d494a25"
+            },
+            "arglist": {
+              "$": "(KConfig *config) override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setProperty"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemPointF.html"
+            },
+            "anchor": {
+              "$": "aada1d8f4a6d9ff93cb0497811514340a"
+            },
+            "arglist": {
+              "$": "(const QVariant &p) override"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "KCoreConfigSkeleton::ItemProperty"
         },
         "filename": {
@@ -1584,6 +1670,108 @@
       {
         "@kind": "class",
         "name": {
+          "$": "KCoreConfigSkeleton::ItemRectF"
+        },
+        "filename": {
+          "$": "classKCoreConfigSkeleton_1_1ItemRectF.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem< QRectF >"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "ItemRectF"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemRectF.html"
+            },
+            "anchor": {
+              "$": "a1199e1e5915ac5a39c81fea2009e5655"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key, QRectF &reference, const QRectF &defaultValue=QRectF())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isEqual"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemRectF.html"
+            },
+            "anchor": {
+              "$": "a42c7e123cad418937e99f89844dda8be"
+            },
+            "arglist": {
+              "$": "(const QVariant &p) const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "property"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemRectF.html"
+            },
+            "anchor": {
+              "$": "af3f7d2197d54ff83f7e4d2e01556ed9b"
+            },
+            "arglist": {
+              "$": "() const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "readConfig"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemRectF.html"
+            },
+            "anchor": {
+              "$": "af4b66ebbd67fd9b86312104483524bce"
+            },
+            "arglist": {
+              "$": "(KConfig *config) override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setProperty"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemRectF.html"
+            },
+            "anchor": {
+              "$": "ae5339d4fb9bba13755eda678572ab7dd"
+            },
+            "arglist": {
+              "$": "(const QVariant &p) override"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "KCoreConfigSkeleton::ItemSize"
         },
         "filename": {
@@ -1676,6 +1864,108 @@
             },
             "anchor": {
               "$": "ae629165fb8d0dc2b0c8257cea9f883f3"
+            },
+            "arglist": {
+              "$": "(const QVariant &p) override"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemSizeF"
+        },
+        "filename": {
+          "$": "classKCoreConfigSkeleton_1_1ItemSizeF.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem< QSizeF >"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "ItemSizeF"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemSizeF.html"
+            },
+            "anchor": {
+              "$": "a364370248f492a7770fa837b713282b3"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key, QSizeF &reference, const QSizeF &defaultValue=QSizeF())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isEqual"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemSizeF.html"
+            },
+            "anchor": {
+              "$": "ad458ce82a83dc8e68a9e9555bc956916"
+            },
+            "arglist": {
+              "$": "(const QVariant &p) const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "property"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemSizeF.html"
+            },
+            "anchor": {
+              "$": "aed51781c8930f3d66a6cd1891be73d40"
+            },
+            "arglist": {
+              "$": "() const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "readConfig"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemSizeF.html"
+            },
+            "anchor": {
+              "$": "a5e233192980d20431d9df9ce2e6f86b2"
+            },
+            "arglist": {
+              "$": "(KConfig *config) override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setProperty"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton_1_1ItemSizeF.html"
+            },
+            "anchor": {
+              "$": "af4795d4ea2d1ab91c4540df18e697f16"
             },
             "arglist": {
               "$": "(const QVariant &p) override"
@@ -2588,6 +2878,351 @@
       {
         "@kind": "class",
         "name": {
+          "$": "KAuthorized"
+        },
+        "filename": {
+          "$": "classKAuthorized.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "BOOKMARKS"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7fae5592633dcfb265455597f8d38fb7681"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "EDITFILETYPE"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7faba0447cfe4a6be5e76e24999e68415a7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "GenericAction"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "EDITFILETYPE"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7faba0447cfe4a6be5e76e24999e68415a7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "OPTIONS_SHOW_TOOLBAR"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7fa59d1c1c5dce28f6691dd4aab0df0e600"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SWITCH_APPLICATION_LANGUAGE"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7fa0b9045a08b87f696253fdf04d5a1058c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "BOOKMARKS"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7fae5592633dcfb265455597f8d38fb7681"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "GenericRestriction"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "afaed344a4a50c0ee44139fb910c57a9e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "LINEEDIT_REVEAL_PASSWORD"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "afaed344a4a50c0ee44139fb910c57a9ea09c3dd65eb105ebf59d107132c248c02"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "LINEEDIT_TEXT_COMPLETION"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "afaed344a4a50c0ee44139fb910c57a9eade9a32c06fc1525ea6a6082131cf7ce2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MOVABLE_TOOLBARS"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "afaed344a4a50c0ee44139fb910c57a9ea0dd89953798774322b3cbfe845770d08"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RUN_DESKTOP_FILES"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "afaed344a4a50c0ee44139fb910c57a9eaa0b0fb2414af54ad815537eec6294122"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "LINEEDIT_REVEAL_PASSWORD"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "afaed344a4a50c0ee44139fb910c57a9ea09c3dd65eb105ebf59d107132c248c02"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "LINEEDIT_TEXT_COMPLETION"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "afaed344a4a50c0ee44139fb910c57a9eade9a32c06fc1525ea6a6082131cf7ce2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MOVABLE_TOOLBARS"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "afaed344a4a50c0ee44139fb910c57a9ea0dd89953798774322b3cbfe845770d08"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "OPTIONS_SHOW_TOOLBAR"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7fa59d1c1c5dce28f6691dd4aab0df0e600"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RUN_DESKTOP_FILES"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "afaed344a4a50c0ee44139fb910c57a9eaa0b0fb2414af54ad815537eec6294122"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SWITCH_APPLICATION_LANGUAGE"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7fa0b9045a08b87f696253fdf04d5a1058c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static Q_INVOKABLE bool"
+            },
+            "name": {
+              "$": "authorize"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "a5e242f5ecea86fbdc3151669b1db6db6"
+            },
+            "arglist": {
+              "$": "(const QString &action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static Q_INVOKABLE bool"
+            },
+            "name": {
+              "$": "authorize"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "a2ef2e061f5feaf76b894126cd2ac5a6d"
+            },
+            "arglist": {
+              "$": "(GenericRestriction action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static Q_INVOKABLE bool"
+            },
+            "name": {
+              "$": "authorizeAction"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "af6f59884deb7660aacc9eaead74e89ea"
+            },
+            "arglist": {
+              "$": "(const QString &action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static Q_INVOKABLE bool"
+            },
+            "name": {
+              "$": "authorizeAction"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "a147dfeef6584052341c379b5dc1b00dc"
+            },
+            "arglist": {
+              "$": "(GenericAction action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static Q_INVOKABLE bool"
+            },
+            "name": {
+              "$": "authorizeControlModule"
+            },
+            "anchorfile": {
+              "$": "classKAuthorized.html"
+            },
+            "anchor": {
+              "$": "a8f9f42dc6b9aeaec05f6899fc531ccc6"
+            },
+            "arglist": {
+              "$": "(const QString &pluginId)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "KConfig"
         },
         "filename": {
@@ -3177,42 +3812,6 @@
           },
           {
             "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setForceGlobal"
-            },
-            "anchorfile": {
-              "$": "classKConfig.html"
-            },
-            "anchor": {
-              "$": "ad23a0ea745b472eef64581d6df5bb25d"
-            },
-            "arglist": {
-              "$": "(bool force)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "forceGlobal"
-            },
-            "anchorfile": {
-              "$": "classKConfig.html"
-            },
-            "anchor": {
-              "$": "a50102fa699937efa6fa237ba2569cc92"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
             "@static": "yes",
             "type": {
               "$": "static QString"
@@ -3262,10 +3861,10 @@
               "$": "classKConfig.html"
             },
             "anchor": {
-              "$": "ab4c90da9b7a85d535eefab3e65c550ed"
+              "$": "ad9a6574e67869bd23bff8037712c89da"
             },
             "arglist": {
-              "$": "(const QByteArray &group, WriteConfigFlags flags=Normal) override"
+              "$": "(const QString &groupName, WriteConfigFlags flags=Normal) override"
             }
           },
           {
@@ -3281,10 +3880,10 @@
               "$": "classKConfig.html"
             },
             "anchor": {
-              "$": "a885f0188f04348ce40b721d9e0c2d214"
+              "$": "a131fab2953847be6ea27b2832895eb9f"
             },
             "arglist": {
-              "$": "(const QByteArray &b) const override"
+              "$": "(const QString &groupName) const override"
             }
           },
           {
@@ -3300,10 +3899,10 @@
               "$": "classKConfig.html"
             },
             "anchor": {
-              "$": "aafb620e7391486941eca3cd15df8c611"
+              "$": "aa5f5c951fdf3d5b002d635075fdbfaf2"
             },
             "arglist": {
-              "$": "(const QByteArray &b) override"
+              "$": "(const QString &groupName) override"
             }
           },
           {
@@ -3319,10 +3918,10 @@
               "$": "classKConfig.html"
             },
             "anchor": {
-              "$": "aa661b91aea37ee298cdde6102d27d0ad"
+              "$": "a5bdadc38307ac271b958ff15edbd5014"
             },
             "arglist": {
-              "$": "(const QByteArray &group) const override"
+              "$": "(const QString &groupName) const override"
             }
           },
           {
@@ -3338,10 +3937,10 @@
               "$": "classKConfig.html"
             },
             "anchor": {
-              "$": "ae4c5bfe68dc996a1118b2a798ba6c9ee"
+              "$": "a9e527a035288cc6ef8f1ecf9af1c8320"
             },
             "arglist": {
-              "$": "(const QByteArray &aGroup) const override"
+              "$": "(const QString &groupName) const override"
             }
           },
           {
@@ -3523,42 +4122,6 @@
             },
             "arglist": {
               "$": "() const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setForceGlobal"
-            },
-            "anchorfile": {
-              "$": "classKConfig.html"
-            },
-            "anchor": {
-              "$": "ad23a0ea745b472eef64581d6df5bb25d"
-            },
-            "arglist": {
-              "$": "(bool force)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "forceGlobal"
-            },
-            "anchorfile": {
-              "$": "classKConfig.html"
-            },
-            "anchor": {
-              "$": "a50102fa699937efa6fa237ba2569cc92"
-            },
-            "arglist": {
-              "$": "() const"
             }
           }
         ]
@@ -3796,118 +4359,10 @@
               "$": "classKConfigBase.html"
             },
             "anchor": {
-              "$": "ab08ca98b4f415282138a5d3fa20541ba"
-            },
-            "arglist": {
-              "$": "(const char *group, WriteConfigFlags flags=Normal)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "deleteGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
-              "$": "a6251665543e7b49c9592aafb59c920f5"
-            },
-            "arglist": {
-              "$": "(const QByteArray &group, WriteConfigFlags flags=Normal)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "deleteGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
               "$": "a47e086625970ef75e9675ac4a59d6f78"
             },
             "arglist": {
               "$": "(const QString &group, WriteConfigFlags flags=Normal)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KConfigGroup"
-            },
-            "name": {
-              "$": "group"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
-              "$": "a5365e265bf51159e42feaf9a38b825e2"
-            },
-            "arglist": {
-              "$": "(const char *group)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const KConfigGroup"
-            },
-            "name": {
-              "$": "group"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
-              "$": "af1950a109d7708248fe6174ec9759976"
-            },
-            "arglist": {
-              "$": "(const char *group) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KConfigGroup"
-            },
-            "name": {
-              "$": "group"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
-              "$": "afbb86fb82d1aba5b76e3b2fe76dbfb02"
-            },
-            "arglist": {
-              "$": "(const QByteArray &group)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const KConfigGroup"
-            },
-            "name": {
-              "$": "group"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
-              "$": "acf64282fc205398c3c8e6c9705938c7a"
-            },
-            "arglist": {
-              "$": "(const QByteArray &group) const"
             }
           },
           {
@@ -3977,82 +4432,10 @@
               "$": "classKConfigBase.html"
             },
             "anchor": {
-              "$": "a5fa5f85fd266292afe51fab21d3669f5"
-            },
-            "arglist": {
-              "$": "(const char *group) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "hasGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
-              "$": "a8ab970603c8787751f33053ca8947ac8"
-            },
-            "arglist": {
-              "$": "(const QByteArray &group) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "hasGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
               "$": "ac8581bb5f5d885235eb27261c7be70f4"
             },
             "arglist": {
               "$": "(const QString &group) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isGroupImmutable"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
-              "$": "ac9b2d183180b5bf4c0c82d31cce7e9ee"
-            },
-            "arglist": {
-              "$": "(const char *group) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isGroupImmutable"
-            },
-            "anchorfile": {
-              "$": "classKConfigBase.html"
-            },
-            "anchor": {
-              "$": "a1da64862fb7cebdef4448f07a5aabbe1"
-            },
-            "arglist": {
-              "$": "(const QByteArray &group) const"
             }
           },
           {
@@ -4144,10 +4527,10 @@
               "$": "classKConfigBase.html"
             },
             "anchor": {
-              "$": "a63c6d63d8596a173529aed88e280c5d4"
+              "$": "af078d801a21eaa74bcf0518ac1f307f1"
             },
             "arglist": {
-              "$": "(const QByteArray &group, WriteConfigFlags flags=Normal)=0"
+              "$": "(const QString &groupName, WriteConfigFlags flags=Normal)=0"
             }
           },
           {
@@ -4164,10 +4547,10 @@
               "$": "classKConfigBase.html"
             },
             "anchor": {
-              "$": "a1796f5e183e5cba342cf129b2b5cbe10"
+              "$": "afa5eae0371e3a048612e7a3a30901672"
             },
             "arglist": {
-              "$": "(const QByteArray &group) const =0"
+              "$": "(const QString &groupName) const =0"
             }
           },
           {
@@ -4184,10 +4567,10 @@
               "$": "classKConfigBase.html"
             },
             "anchor": {
-              "$": "a9bafb3ff25ce911b2395810f7ed0da8f"
+              "$": "aa6800f64c767ef761d7aeffceb6f06df"
             },
             "arglist": {
-              "$": "(const QByteArray &group)=0"
+              "$": "(const QString &groupName)=0"
             }
           },
           {
@@ -4204,10 +4587,10 @@
               "$": "classKConfigBase.html"
             },
             "anchor": {
-              "$": "a823a813a01faa7d027756934ec2a2eb1"
+              "$": "a5d5acccf3ff78121f0ec2c7144aec7ed"
             },
             "arglist": {
-              "$": "(const QByteArray &group) const =0"
+              "$": "(const QString &groupName) const =0"
             }
           },
           {
@@ -4224,10 +4607,10 @@
               "$": "classKConfigBase.html"
             },
             "anchor": {
-              "$": "a772a7922f93fd014ebc070643d1406be"
+              "$": "a42d0e752607bc575ce2652ac3b4d6c7e"
             },
             "arglist": {
-              "$": "(const QByteArray &group) const =0"
+              "$": "(const QString &groupName) const =0"
             }
           },
           {
@@ -4500,22 +4883,6 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "a4d3a8aa00771b30006e0a1f9c4439ba1"
-            },
-            "arglist": {
-              "$": "(const KConfigBase *master, const char *group)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigGroup.html"
-            },
-            "anchor": {
               "$": "a508a3b78dab1da62dce6366428c645b2"
             },
             "arglist": {
@@ -4548,42 +4915,10 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "aa9d1cf8ee2b07facfdb8f3f57fdeb5f3"
-            },
-            "arglist": {
-              "$": "(const QExplicitlySharedDataPointer< KSharedConfig > &master, const char *group)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigGroup.html"
-            },
-            "anchor": {
               "$": "aa5ab43e257014ad42d470656718173a4"
             },
             "arglist": {
               "$": "(const QExplicitlySharedDataPointer< KSharedConfig > &master, const QString &group)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigGroup.html"
-            },
-            "anchor": {
-              "$": "a1dd35f276d852b7d20c6cac52c2e4f42"
-            },
-            "arglist": {
-              "$": "(KConfigBase *master, const char *group)"
             }
           },
           {
@@ -4623,42 +4958,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "changeGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigGroup.html"
-            },
-            "anchor": {
-              "$": "a6e5a4b506f37e7841726c7248ee82c01"
-            },
-            "arglist": {
-              "$": "(const char *group)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "changeGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigGroup.html"
-            },
-            "anchor": {
-              "$": "ad2dc1ccc586c076536ea81fed5504612"
-            },
-            "arglist": {
-              "$": "(const QString &group)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "KConfig *"
             },
             "name": {
@@ -4668,7 +4967,7 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "af75671d03a9c7a8930e4c2882d014b95"
+              "$": "abbc627fe4c08541008570f55cfbfac7c"
             },
             "arglist": {
               "$": "()"
@@ -4686,7 +4985,7 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "a722f7254f58315b023a5267583dca6bb"
+              "$": "ae27e584dd3f2b87b6265a30f25b587d4"
             },
             "arglist": {
               "$": "() const"
@@ -4744,42 +5043,6 @@
             },
             "arglist": {
               "$": "(const QString &pKey, WriteConfigFlags pFlags=Normal)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "deleteGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigGroup.html"
-            },
-            "anchor": {
-              "$": "ab08ca98b4f415282138a5d3fa20541ba"
-            },
-            "arglist": {
-              "$": "(const char *group, WriteConfigFlags flags=Normal)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "deleteGroup"
-            },
-            "anchorfile": {
-              "$": "classKConfigGroup.html"
-            },
-            "anchor": {
-              "$": "a6251665543e7b49c9592aafb59c920f5"
-            },
-            "arglist": {
-              "$": "(const QByteArray &group, WriteConfigFlags flags=Normal)"
             }
           },
           {
@@ -5262,7 +5525,7 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "aa27d512edf4bd66f6803afbe02f0b2f1"
+              "$": "adc79f2ebee8f1cecc2c6d00ed49eafd8"
             },
             "arglist": {
               "$": "(const QString &key, const QList< T > &aDefault) const"
@@ -5532,10 +5795,10 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "afe0a8eff3a3d72108b98835b3851cdeb"
+              "$": "a21938df5df6a6028d4682fc83349af9d"
             },
             "arglist": {
-              "$": "(const char *key)"
+              "$": "(const char *key, WriteConfigFlags pFlag=WriteConfigFlags())"
             }
           },
           {
@@ -5550,28 +5813,10 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "a60bbaf2ad208b956e2d027cc38ebabed"
+              "$": "a4b8a40fdb716c5cd81cef769a9ac0443"
             },
             "arglist": {
-              "$": "(const char *key, WriteConfigFlags pFlag)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "revertToDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigGroup.html"
-            },
-            "anchor": {
-              "$": "a989bce78837c87761cff85f5199e20b4"
-            },
-            "arglist": {
-              "$": "(const QString &key)"
+              "$": "(const QString &key, WriteConfigFlags pFlag=WriteConfigFlags())"
             }
           },
           {
@@ -6001,10 +6246,10 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "a8178c534fe19f85537f7ea2aa2e09655"
+              "$": "a70a0ef52bce5ed555c226b89f1cdef55"
             },
             "arglist": {
-              "$": "(const QByteArray &group, WriteConfigFlags flags) override"
+              "$": "(const QString &groupName, WriteConfigFlags flags) override"
             }
           },
           {
@@ -6020,10 +6265,10 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "af0faff0179c8fdc3225123b931b1bc69"
+              "$": "a5570cce8221e198facb9a74568338568"
             },
             "arglist": {
-              "$": "(const QByteArray &b) const override"
+              "$": "(const QString &groupName) const override"
             }
           },
           {
@@ -6039,10 +6284,10 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "a5d081570c6e42f16136f5407d55bea4d"
+              "$": "af288f6ed8312eaf046bee5d1b097d9e2"
             },
             "arglist": {
-              "$": "(const QByteArray &b) override"
+              "$": "(const QString &groupName) override"
             }
           },
           {
@@ -6058,10 +6303,10 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "aa03023c1bb3a8b86b9eca57ecae7a243"
+              "$": "a46741afef895a053f8f392f8c4f47e8f"
             },
             "arglist": {
-              "$": "(const QByteArray &group) const override"
+              "$": "(const QString &groupName) const override"
             }
           },
           {
@@ -6077,10 +6322,10 @@
               "$": "classKConfigGroup.html"
             },
             "anchor": {
-              "$": "ae8dc5a1c8c6f38098e60d7b2db8cab6a"
+              "$": "a8f7642e738fb702b2dad6e8b9af75c17"
             },
             "arglist": {
-              "$": "(const QByteArray &aGroup) const override"
+              "$": "(const QString &groupName) const override"
             }
           }
         ]
@@ -6242,13 +6487,13 @@
               "$": "bool"
             },
             "name": {
-              "$": "usrWriteConfig"
+              "$": "usrSave"
             },
             "anchorfile": {
               "$": "classKConfigLoader.html"
             },
             "anchor": {
-              "$": "af383b00e58a7d084c98208b96eb2b42d"
+              "$": "a730e402c109db9edb811b727aee064bf"
             },
             "arglist": {
               "$": "() override"
@@ -6334,7 +6579,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "void"
+              "$": "Q_INVOKABLE void"
             },
             "name": {
               "$": "writeConfig"
@@ -6451,7 +6696,9 @@
         "filename": {
           "$": "classKConfigSkeletonGenericItem.html"
         },
-        "templarg": {},
+        "templarg": {
+          "$": "typename T"
+        },
         "base": {
           "$": "KConfigSkeletonItem"
         },
@@ -6575,7 +6822,7 @@
               "$": "classKConfigSkeletonGenericItem.html"
             },
             "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
+              "$": "a2da49e04a401204af6a1ca0ef31f8cd3"
             },
             "arglist": {
               "$": "()"
@@ -6593,7 +6840,7 @@
               "$": "classKConfigSkeletonGenericItem.html"
             },
             "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
+              "$": "a410ee87035d7afc9cd046bb36f4dabba"
             },
             "arglist": {
               "$": "() const"
@@ -6639,3768 +6886,6 @@
             "@protection": "protected",
             "type": {
               "$": "T &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< bool >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, bool &reference, bool defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const bool &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const bool &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const bool &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "bool &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< double >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, double &reference, double defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const double &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const double &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "double &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const double &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "double"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "double &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QColor >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QColor &reference, QColor defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QColor &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QColor &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QColor &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QColor &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QColor"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QColor &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QDateTime >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QDateTime &reference, QDateTime defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QDateTime &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QDateTime &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QDateTime &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QDateTime &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QDateTime"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QDateTime &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QFont >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QFont &reference, QFont defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QFont &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QFont &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QFont &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QFont &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QFont"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QFont &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< qint32 >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, qint32 &reference, qint32 defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const qint32 &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const qint32 &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "qint32 &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const qint32 &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "qint32"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "qint32 &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< qint64 >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, qint64 &reference, qint64 defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const qint64 &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const qint64 &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "qint64 &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const qint64 &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "qint64"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "qint64 &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QList< int > >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QList< int > &reference, QList< int > defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QList< int > &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QList< int > &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QList< int > &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QList< int > &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QList< int >"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QList< int > &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QList< QUrl > >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QList< QUrl > &reference, QList< QUrl > defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QList< QUrl > &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QList< QUrl > &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QList< QUrl > &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QList< QUrl > &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QList< QUrl >"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QList< QUrl > &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QPoint >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QPoint &reference, QPoint defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QPoint &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QPoint &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QPoint &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QPoint &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QPoint"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QPoint &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QRect >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QRect &reference, QRect defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QRect &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QRect &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QRect &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QRect &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QRect"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QRect &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QSize >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QSize &reference, QSize defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QSize &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QSize &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QSize &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QSize &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QSize"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QSize &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QString >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QString &reference, QString defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QString &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QString &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QString &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QString &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QStringList >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QStringList &reference, QStringList defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QStringList &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QStringList &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QStringList &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QStringList &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QStringList"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QStringList &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< quint32 >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, quint32 &reference, quint32 defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const quint32 &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const quint32 &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "quint32 &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const quint32 &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "quint32"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "quint32 &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< quint64 >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, quint64 &reference, quint64 defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const quint64 &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const quint64 &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "quint64 &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const quint64 &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "quint64"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "quint64 &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QUrl >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QUrl &reference, QUrl defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QUrl &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QUrl &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QUrl &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QUrl &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QUrl"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QUrl &"
-            },
-            "name": {
-              "$": "mReference"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a5353a7b170db7af74692e76c70805b12"
-            },
-            "arglist": {}
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConfigSkeletonGenericItem< QVariant >"
-        },
-        "filename": {
-          "$": "classKConfigSkeletonGenericItem.html"
-        },
-        "base": {
-          "$": "KConfigSkeletonItem"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConfigSkeletonGenericItem"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a06ec3bc078dd73a0ae7f85cf6949c4eb"
-            },
-            "arglist": {
-              "$": "(const QString &_group, const QString &_key, QVariant &reference, QVariant defaultValue)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "readDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a04cb9d0a49594e00c82a3f99c7fac628"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a7c5286e3b5c40756dff140afa027cc9e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "setDefaultValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a60f74ae34c22ea113aead80de27be21c"
-            },
-            "arglist": {
-              "$": "(const QVariant &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setValue"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "af9b0c5c11bd3c9e030ce11b6180dfd12"
-            },
-            "arglist": {
-              "$": "(const QVariant &v)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swapDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "aaa89313b2310b0c56a5cda9356c7b07e"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QVariant &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a64c34760536cc4cabf6a3be80797f9b2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "const QVariant &"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a956529ba42a26bbdd4c972d0c5b27c86"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a6675b20a98497ce8593f9d1978483c1d"
-            },
-            "arglist": {
-              "$": "(KConfig *config) override"
-            }
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QVariant"
-            },
-            "name": {
-              "$": "mDefault"
-            },
-            "anchorfile": {
-              "$": "classKConfigSkeletonGenericItem.html"
-            },
-            "anchor": {
-              "$": "a0ba129c5c76076586ff84c93a90d2e04"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "variable",
-            "@protection": "protected",
-            "type": {
-              "$": "QVariant &"
             },
             "name": {
               "$": "mReference"
@@ -11208,6 +7693,10 @@
           },
           {
             "@kind": "class",
+            "$": "KCoreConfigSkeleton::ItemPointF"
+          },
+          {
+            "@kind": "class",
             "$": "KCoreConfigSkeleton::ItemProperty"
           },
           {
@@ -11216,7 +7705,15 @@
           },
           {
             "@kind": "class",
+            "$": "KCoreConfigSkeleton::ItemRectF"
+          },
+          {
+            "@kind": "class",
             "$": "KCoreConfigSkeleton::ItemSize"
+          },
+          {
+            "@kind": "class",
+            "$": "KCoreConfigSkeleton::ItemSizeF"
           },
           {
             "@kind": "class",
@@ -11275,24 +7772,6 @@
             },
             "anchor": {
               "$": "aad9cf9023be2d670cd0e680684e9cca1"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "writeConfig"
-            },
-            "anchorfile": {
-              "$": "classKCoreConfigSkeleton.html"
-            },
-            "anchor": {
-              "$": "a248a69c512b2eac43ad755ced1446a9f"
             },
             "arglist": {
               "$": "()"
@@ -11439,24 +7918,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "ItemLongLong *"
-            },
-            "name": {
-              "$": "addItemInt64"
-            },
-            "anchorfile": {
-              "$": "classKCoreConfigSkeleton.html"
-            },
-            "anchor": {
-              "$": "ada0f72551a9d81ac510e9a3ad1e3c4dd"
-            },
-            "arglist": {
-              "$": "(const QString &name, qint64 &reference, qint64 defaultValue=0, const QString &key=QString())"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "ItemIntList *"
             },
             "name": {
@@ -11547,6 +8008,24 @@
           {
             "@kind": "function",
             "type": {
+              "$": "ItemPointF *"
+            },
+            "name": {
+              "$": "addItemPointF"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton.html"
+            },
+            "anchor": {
+              "$": "a724b3ac782c3604e8fe5d9072ea60a00"
+            },
+            "arglist": {
+              "$": "(const QString &name, QPointF &reference, const QPointF &defaultValue=QPointF(), const QString &key=QString())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "ItemProperty *"
             },
             "name": {
@@ -11583,6 +8062,24 @@
           {
             "@kind": "function",
             "type": {
+              "$": "ItemRectF *"
+            },
+            "name": {
+              "$": "addItemRectF"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton.html"
+            },
+            "anchor": {
+              "$": "aaa081cad77370b08dceba55aa989773f"
+            },
+            "arglist": {
+              "$": "(const QString &name, QRectF &reference, const QRectF &defaultValue=QRectF(), const QString &key=QString())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "ItemSize *"
             },
             "name": {
@@ -11596,6 +8093,24 @@
             },
             "arglist": {
               "$": "(const QString &name, QSize &reference, const QSize &defaultValue=QSize(), const QString &key=QString())"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "ItemSizeF *"
+            },
+            "name": {
+              "$": "addItemSizeF"
+            },
+            "anchorfile": {
+              "$": "classKCoreConfigSkeleton.html"
+            },
+            "anchor": {
+              "$": "abc5abed18d0d0959159e6e07d1712fb1"
+            },
+            "arglist": {
+              "$": "(const QString &name, QSizeF &reference, const QSizeF &defaultValue=QSizeF(), const QString &key=QString())"
             }
           },
           {
@@ -11658,24 +8173,6 @@
               "$": "ItemULongLong *"
             },
             "name": {
-              "$": "addItemUInt64"
-            },
-            "anchorfile": {
-              "$": "classKCoreConfigSkeleton.html"
-            },
-            "anchor": {
-              "$": "abb142fb47953459eedcc3b5041047471"
-            },
-            "arglist": {
-              "$": "(const QString &name, quint64 &reference, quint64 defaultValue=0, const QString &key=QString())"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ItemULongLong *"
-            },
-            "name": {
               "$": "addItemULongLong"
             },
             "anchorfile": {
@@ -11718,7 +8215,7 @@
               "$": "classKCoreConfigSkeleton.html"
             },
             "anchor": {
-              "$": "a782c0d72ec0432d719a376f01e43dc12"
+              "$": "a7bc2655c974eec0d32f2dde3895beeb6"
             },
             "arglist": {
               "$": "()"
@@ -11736,7 +8233,7 @@
               "$": "classKCoreConfigSkeleton.html"
             },
             "anchor": {
-              "$": "ae19c6e27c70c022cf6130e9534ab896f"
+              "$": "ab9dda951fca382deb46e4d1cba372758"
             },
             "arglist": {
               "$": "() const"
@@ -11892,24 +8389,6 @@
               "$": "void"
             },
             "name": {
-              "$": "readConfig"
-            },
-            "anchorfile": {
-              "$": "classKCoreConfigSkeleton.html"
-            },
-            "anchor": {
-              "$": "a3772e0cd58790c312b8d0802bc78a70c"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "removeItem"
             },
             "anchorfile": {
@@ -12039,26 +8518,6 @@
             "@protection": "protected",
             "@virtualness": "virtual",
             "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "usrReadConfig"
-            },
-            "anchorfile": {
-              "$": "classKCoreConfigSkeleton.html"
-            },
-            "anchor": {
-              "$": "ae159276732b152c91856ab5e4355d338"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "@virtualness": "virtual",
-            "type": {
               "$": "virtual bool"
             },
             "name": {
@@ -12112,26 +8571,6 @@
             },
             "arglist": {
               "$": "(bool b)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual bool"
-            },
-            "name": {
-              "$": "usrWriteConfig"
-            },
-            "anchorfile": {
-              "$": "classKCoreConfigSkeleton.html"
-            },
-            "anchor": {
-              "$": "a473dd78d25660808bbb7056deb78a1ed"
-            },
-            "arglist": {
-              "$": "()"
             }
           }
         ]
@@ -12212,6 +8651,24 @@
             },
             "arglist": {
               "$": "(const QString &group)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< KDesktopFileAction >"
+            },
+            "name": {
+              "$": "actions"
+            },
+            "anchorfile": {
+              "$": "classKDesktopFile.html"
+            },
+            "anchor": {
+              "$": "a58ec11398688415b23fd3716a919ee0d"
+            },
+            "arglist": {
+              "$": "() const"
             }
           },
           {
@@ -12400,24 +8857,6 @@
               "$": "QString"
             },
             "name": {
-              "$": "readDevice"
-            },
-            "anchorfile": {
-              "$": "classKDesktopFile.html"
-            },
-            "anchor": {
-              "$": "ac95f883091c8195607b572c81aac2a59"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
               "$": "readDocPath"
             },
             "anchorfile": {
@@ -12559,42 +8998,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QStandardPaths::StandardLocation"
-            },
-            "name": {
-              "$": "resource"
-            },
-            "anchorfile": {
-              "$": "classKDesktopFile.html"
-            },
-            "anchor": {
-              "$": "ad003353299e7091e5734c4d4438997ff"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QStringList"
-            },
-            "name": {
-              "$": "sortOrder"
-            },
-            "anchorfile": {
-              "$": "classKDesktopFile.html"
-            },
-            "anchor": {
-              "$": "a08e5512d3b112c5a8861bcbebbc38912"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "bool"
             },
             "name": {
@@ -12672,104 +9075,163 @@
       {
         "@kind": "class",
         "name": {
+          "$": "KDesktopFileAction"
+        },
+        "filename": {
+          "$": "classKDesktopFileAction.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KDesktopFileAction"
+            },
+            "anchorfile": {
+              "$": "classKDesktopFileAction.html"
+            },
+            "anchor": {
+              "$": "ac658096a43542d32161acb7046f2ea74"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KDesktopFileAction"
+            },
+            "anchorfile": {
+              "$": "classKDesktopFileAction.html"
+            },
+            "anchor": {
+              "$": "ac545e7855dbfb155da47c1112dff4187"
+            },
+            "arglist": {
+              "$": "(const QString &name, const QString &text, const QString &icon, const QString &exec, const QString &desktopFilePath)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "actionsKey"
+            },
+            "anchorfile": {
+              "$": "classKDesktopFileAction.html"
+            },
+            "anchor": {
+              "$": "a48fadd57832fe2d7fdc71cf1edc1861e"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "desktopFilePath"
+            },
+            "anchorfile": {
+              "$": "classKDesktopFileAction.html"
+            },
+            "anchor": {
+              "$": "aaf5c50b94e37ca1eed3f50b66b6a6b10"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "exec"
+            },
+            "anchorfile": {
+              "$": "classKDesktopFileAction.html"
+            },
+            "anchor": {
+              "$": "a01e4e7e945b7defbf9a6b030c4a26faa"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "icon"
+            },
+            "anchorfile": {
+              "$": "classKDesktopFileAction.html"
+            },
+            "anchor": {
+              "$": "a9512f3791b7d6c201996bdae21b26c05"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isSeparator"
+            },
+            "anchorfile": {
+              "$": "classKDesktopFileAction.html"
+            },
+            "anchor": {
+              "$": "a51f1bb74514de31b37b9dc72950434db"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "classKDesktopFileAction.html"
+            },
+            "anchor": {
+              "$": "aab2bd6a53762b18f82478bc7694bf887"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "KEMailSettings"
         },
         "filename": {
           "$": "classKEMailSettings.html"
         },
         "member": [
-          {
-            "@kind": "enumeration",
-            "type": {},
-            "name": {
-              "$": "Extension"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "a293d6b856ecd4d6bcd13cf0e97a1e344"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "InServerMBXType"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9ea6b0fbb4a55e425cc79ad23105fed06cc"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "InServerTLS"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9ea3557ae020df67a1d180298bc35818982"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "InServerType"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9ea4821bdf09bafdda2728de8984f6c6058"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "OutServerCommand"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9ea52cfaee88974b0347886e1340c8b9ee6"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "OutServerTLS"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9eaf8c879419c6054ef15ec1233a17b5288"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "OutServerType"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9eac69f79475289bbd683451ba1dd8e0fab"
-            },
-            "arglist": {}
-          },
           {
             "@kind": "enumeration",
             "type": {},
@@ -12781,84 +9243,6 @@
             },
             "anchor": {
               "$": "ae12254329b6bedfeb8de5f439f8bcb9e"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "OutServerType"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9eac69f79475289bbd683451ba1dd8e0fab"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "OutServerCommand"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9ea52cfaee88974b0347886e1340c8b9ee6"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "OutServerTLS"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9eaf8c879419c6054ef15ec1233a17b5288"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "InServerType"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9ea4821bdf09bafdda2728de8984f6c6058"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "InServerMBXType"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9ea6b0fbb4a55e425cc79ad23105fed06cc"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "InServerTLS"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "ae12254329b6bedfeb8de5f439f8bcb9ea3557ae020df67a1d180298bc35818982"
             },
             "arglist": {}
           },
@@ -12892,24 +9276,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "currentProfileName"
-            },
-            "anchorfile": {
-              "$": "classKEMailSettings.html"
-            },
-            "anchor": {
-              "$": "a3362a5a5429275ed26b2b17ec4a28d3d"
-            },
-            "arglist": {
-              "$": "() const"
             }
           },
           {
@@ -13293,22 +9659,6 @@
               "$": "classKWindowStateSaver.html"
             },
             "anchor": {
-              "$": "abead5ccf219db36ecfb62033527f8ab5"
-            },
-            "arglist": {
-              "$": "(QWindow *window, const char *configGroupName)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KWindowStateSaver"
-            },
-            "anchorfile": {
-              "$": "classKWindowStateSaver.html"
-            },
-            "anchor": {
               "$": "aa06646fead86c7009602c7452623467e"
             },
             "arglist": {
@@ -13329,22 +9679,6 @@
             },
             "arglist": {
               "$": "(QWindow *window, const QString &configGroupName)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KWindowStateSaver"
-            },
-            "anchorfile": {
-              "$": "classKWindowStateSaver.html"
-            },
-            "anchor": {
-              "$": "a3172e63d68993736ef53a789c6957ca7"
-            },
-            "arglist": {
-              "$": "(Widget *widget, const char *configGroupName)"
             }
           },
           {
@@ -13424,279 +9758,10 @@
               "$": "classKStandardShortcut_1_1StandardShortcutWatcher.html"
             },
             "anchor": {
-              "$": "a06cb60a070b5c2bfebb4296b26324470"
+              "$": "aa2cb9777ee74f892b865be5d6a1a7771"
             },
             "arglist": {
               "$": "()"
-            }
-          }
-        ]
-      },
-      {
-        "@kind": "namespace",
-        "name": {
-          "$": "KAuthorized"
-        },
-        "filename": {
-          "$": "namespaceKAuthorized.html"
-        },
-        "member": [
-          {
-            "@kind": "enumeration",
-            "type": {},
-            "name": {
-              "$": "GenericAction"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7f"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "EDITFILETYPE"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7faba0447cfe4a6be5e76e24999e68415a7"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "OPTIONS_SHOW_TOOLBAR"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7fa59d1c1c5dce28f6691dd4aab0df0e600"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "SWITCH_APPLICATION_LANGUAGE"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7fa0b9045a08b87f696253fdf04d5a1058c"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "BOOKMARKS"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "af8316f1ef7f1a482b0ddb0f74deb6c7fae5592633dcfb265455597f8d38fb7681"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumeration",
-            "type": {},
-            "name": {
-              "$": "GenericRestriction"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "afaed344a4a50c0ee44139fb910c57a9e"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "LINEEDIT_REVEAL_PASSWORD"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "afaed344a4a50c0ee44139fb910c57a9ea09c3dd65eb105ebf59d107132c248c02"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "LINEEDIT_TEXT_COMPLETION"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "afaed344a4a50c0ee44139fb910c57a9eade9a32c06fc1525ea6a6082131cf7ce2"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "MOVABLE_TOOLBARS"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "afaed344a4a50c0ee44139fb910c57a9ea0dd89953798774322b3cbfe845770d08"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "RUN_DESKTOP_FILES"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "afaed344a4a50c0ee44139fb910c57a9eaa0b0fb2414af54ad815537eec6294122"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KCONFIGCORE_EXPORT bool"
-            },
-            "name": {
-              "$": "authorize"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "a5e242f5ecea86fbdc3151669b1db6db6"
-            },
-            "arglist": {
-              "$": "(const QString &action)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KCONFIGCORE_EXPORT bool"
-            },
-            "name": {
-              "$": "authorize"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "a2ef2e061f5feaf76b894126cd2ac5a6d"
-            },
-            "arglist": {
-              "$": "(GenericRestriction action)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KCONFIGCORE_EXPORT bool"
-            },
-            "name": {
-              "$": "authorizeAction"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "af6f59884deb7660aacc9eaead74e89ea"
-            },
-            "arglist": {
-              "$": "(const QString &action)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KCONFIGCORE_EXPORT bool"
-            },
-            "name": {
-              "$": "authorizeAction"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "a147dfeef6584052341c379b5dc1b00dc"
-            },
-            "arglist": {
-              "$": "(GenericAction action)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KCONFIGCORE_EXPORT bool"
-            },
-            "name": {
-              "$": "authorizeControlModule"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "a04fa2e938a8af09d733c6b6325db3793"
-            },
-            "arglist": {
-              "$": "(const QString &menuId)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KCONFIGCORE_EXPORT QStringList"
-            },
-            "name": {
-              "$": "authorizeControlModules"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "a0d2ea48fee3810f36a941093a3db0ab9"
-            },
-            "arglist": {
-              "$": "(const QStringList &menuIds)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KCONFIGCORE_EXPORT bool"
-            },
-            "name": {
-              "$": "authorizeKAction"
-            },
-            "anchorfile": {
-              "$": "namespaceKAuthorized.html"
-            },
-            "anchor": {
-              "$": "a8e2b27b5690d1f132bde791352a18fa9"
-            },
-            "arglist": {
-              "$": "(const QString &action)"
             }
           }
         ]
@@ -13741,24 +9806,6 @@
             },
             "anchor": {
               "$": "a36d66204429764d84f4f7728dfb0805e"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KCONFIGGUI_EXPORT QString"
-            },
-            "name": {
-              "$": "sessionConfigName"
-            },
-            "anchorfile": {
-              "$": "namespaceKConfigGui.html"
-            },
-            "anchor": {
-              "$": "ac89bd9cff47317d2060f8154b7608098"
             },
             "arglist": {
               "$": "()"
@@ -14749,19 +10796,6 @@
           {
             "@kind": "enumvalue",
             "name": {
-              "$": "SaveOptions"
-            },
-            "anchorfile": {
-              "$": "namespaceKStandardShortcut.html"
-            },
-            "anchor": {
-              "$": "afc4fa78a9029f199d4a2d2ff198eebe6a063669310157bb6ce93c5dc395278d3a"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
               "$": "KeyBindings"
             },
             "anchorfile": {
@@ -14808,19 +10842,6 @@
             },
             "anchor": {
               "$": "afc4fa78a9029f199d4a2d2ff198eebe6ad9114fdceeebedad89fff917d7da3a56"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "TipofDay"
-            },
-            "anchorfile": {
-              "$": "namespaceKStandardShortcut.html"
-            },
-            "anchor": {
-              "$": "afc4fa78a9029f199d4a2d2ff198eebe6ab86d43074917c58f11894c01a8dc036b"
             },
             "arglist": {}
           },
@@ -14955,6 +10976,32 @@
             "arglist": {}
           },
           {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "OpenMainMenu"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardShortcut.html"
+            },
+            "anchor": {
+              "$": "afc4fa78a9029f199d4a2d2ff198eebe6a2211443645b6303b980fd921f1baf9ab"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "OpenContextMenu"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardShortcut.html"
+            },
+            "anchor": {
+              "$": "afc4fa78a9029f199d4a2d2ff198eebe6a19fb88e1aee437b80153fe4c160635d5"
+            },
+            "arglist": {}
+          },
+          {
             "@kind": "function",
             "type": {
               "$": "const QList< QKeySequence > &"
@@ -14966,7 +11013,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a5ac187346aa547fa3653f73a58f05d86"
+              "$": "a4abd3c1b86438efcba0de5c0b2d88411"
             },
             "arglist": {
               "$": "()"
@@ -14984,7 +11031,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "acff0f8dda3bb1d9fb928b5a3f9320626"
+              "$": "ae213b897621bb35a7b768f6c858c5204"
             },
             "arglist": {
               "$": "()"
@@ -15002,7 +11049,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a3b49379acb786b71e9aefccbfb123344"
+              "$": "a7b47c5dd285dca895af100e7376e6278"
             },
             "arglist": {
               "$": "()"
@@ -15020,7 +11067,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a408f2db3504e8204a65890fba34926e3"
+              "$": "a177f361b905d43cabad8e9a163fa9a38"
             },
             "arglist": {
               "$": "()"
@@ -15038,7 +11085,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a2da9047c1688d27c299c84c9a4ebb251"
+              "$": "a0313d75d3be149d5ca73b7ac2633904b"
             },
             "arglist": {
               "$": "()"
@@ -15074,7 +11121,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a6e0f0061dc77e85e38bf0ce8d63bc3c3"
+              "$": "a1decacdf93c345273761be4042a01efb"
             },
             "arglist": {
               "$": "()"
@@ -15092,7 +11139,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a0037874403037b6e07eac4852576ccd5"
+              "$": "a8a9f11ff9e1fd4ba233ac3ce68b3bfc6"
             },
             "arglist": {
               "$": "()"
@@ -15110,7 +11157,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a4e32f45bc68b3d93bff30d80bd813c9f"
+              "$": "a73174761151b61bd14dc97dd0eb66804"
             },
             "arglist": {
               "$": "()"
@@ -15128,7 +11175,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ab8c430e28da460ceb8de273a371569e5"
+              "$": "aabc3d38a4fef0a8205cf235f8bbfcd3e"
             },
             "arglist": {
               "$": "()"
@@ -15146,7 +11193,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a377fe116392e03f67bbc8cb25af0b700"
+              "$": "a25cff9d943fcd41704f9a1b6df0f5318"
             },
             "arglist": {
               "$": "()"
@@ -15164,7 +11211,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a8e578c9db66a980627ee0d63cb42cc88"
+              "$": "a9e682ccab1f730d9eb199102cf2f8f24"
             },
             "arglist": {
               "$": "()"
@@ -15182,7 +11229,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a0e3a5ca0061b6cac7fc938a565e00d49"
+              "$": "a50c19afbd9d064514f3f0d2613ce083f"
             },
             "arglist": {
               "$": "()"
@@ -15200,7 +11247,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a3fca3844d82117ffb065525caeaf34a4"
+              "$": "ad4c89d4d38df181e142311d1968e0956"
             },
             "arglist": {
               "$": "()"
@@ -15218,7 +11265,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a6784a9858f6524a934b0b797f3152a02"
+              "$": "a65aa5d5620adc7966005fedfdd5c0f37"
             },
             "arglist": {
               "$": "()"
@@ -15236,7 +11283,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a9c102504104280d129b9e5a7b313ad3e"
+              "$": "a7e73605406aa708ac66cd005c77757d8"
             },
             "arglist": {
               "$": "()"
@@ -15254,28 +11301,10 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a5feba3e03bf6d5cb660c4543c1875417"
+              "$": "a569d532b69b15e269421383f8a5c22cc"
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "StandardShortcut"
-            },
-            "name": {
-              "$": "find"
-            },
-            "anchorfile": {
-              "$": "namespaceKStandardShortcut.html"
-            },
-            "anchor": {
-              "$": "afa21e76358c853130e45c444bc743b3f"
-            },
-            "arglist": {
-              "$": "(const char *keyName)"
             }
           },
           {
@@ -15326,7 +11355,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a08949d6c2741ad3876ff99f7b474e78e"
+              "$": "adbe0d3e77cc61107bc4c268e907cf748"
             },
             "arglist": {
               "$": "()"
@@ -15344,7 +11373,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a571340a56e518c6695317538c0c2a147"
+              "$": "a8db6426edbaae98866d01a73d11e6acc"
             },
             "arglist": {
               "$": "()"
@@ -15362,7 +11391,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ab8037d65d5c3b7753a8af07094816f9a"
+              "$": "a5a4322b32e230c23a3b426f5f3466794"
             },
             "arglist": {
               "$": "()"
@@ -15380,7 +11409,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ace01dfd7e9dcd9d7c2b37a9e52e29103"
+              "$": "a825e51fb8bb084e9cf8118eb03b51f26"
             },
             "arglist": {
               "$": "()"
@@ -15398,7 +11427,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a3ca0b248ec93e3cde013aa062c5ef715"
+              "$": "a64fb2d2f26a3c807d3cfd864c2683db9"
             },
             "arglist": {
               "$": "()"
@@ -15416,7 +11445,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a7a35c631fdba317dc773e57d0f078bb5"
+              "$": "af01cfa3f3bae5f77111c46210e4b5b79"
             },
             "arglist": {
               "$": "()"
@@ -15435,7 +11464,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a8428d7e49024a33ced05a47699f53336"
+              "$": "a2d873a88f45ead351ebce8f374dce230"
             },
             "arglist": {
               "$": "(StandardShortcut id)"
@@ -15471,7 +11500,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ae1d4c4e9a91a5f938cce6fd6e2274279"
+              "$": "af8a395206b33392ebc8420a7813e731a"
             },
             "arglist": {
               "$": "()"
@@ -15489,7 +11518,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a79fe669e576b0a1ebffa79a06ff3fb07"
+              "$": "a6d695ed1b80a77760c6ffd765997623a"
             },
             "arglist": {
               "$": "()"
@@ -15543,7 +11572,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ad8d5318a1bbf50c51c3b7bae46795e92"
+              "$": "a95995c90b4bec9d2a20e47ed1b04aaa0"
             },
             "arglist": {
               "$": "()"
@@ -15579,7 +11608,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a1b3fd48bdad9373bd7aea353c945ae14"
+              "$": "a4e4bbc9e165bcb3f8f227270c3b535b7"
             },
             "arglist": {
               "$": "()"
@@ -15597,7 +11626,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "acbbfbc958ae3c4b0b3822c57a50275d2"
+              "$": "a0958546689ddea409a34c2a35ecab428"
             },
             "arglist": {
               "$": "()"
@@ -15615,7 +11644,43 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "aef2e9fbe1735939e8234ecf5324ee2df"
+              "$": "aacaa096bf5f591dcf542ae925ffd100e"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "const QList< QKeySequence > &"
+            },
+            "name": {
+              "$": "openContextMenu"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardShortcut.html"
+            },
+            "anchor": {
+              "$": "af0ad8e604711a23116142d86e4490651"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "const QList< QKeySequence > &"
+            },
+            "name": {
+              "$": "openMainMenu"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardShortcut.html"
+            },
+            "anchor": {
+              "$": "a564982d9cdaa827d05b9c78413b0dfb5"
             },
             "arglist": {
               "$": "()"
@@ -15633,7 +11698,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "aa85d555b8dcc81512fcfa9e563dfac73"
+              "$": "ad988cc98664bd4baa109104563f938b9"
             },
             "arglist": {
               "$": "()"
@@ -15651,7 +11716,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a9f17512ae4f3ffd0c88286658de5d6e5"
+              "$": "a604e3ba8b1f5b83726c0e797aa6220a1"
             },
             "arglist": {
               "$": "()"
@@ -15669,7 +11734,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a46b633002d2cb9f88a430de9b0496225"
+              "$": "af125c818da75896f24ea907f006064a2"
             },
             "arglist": {
               "$": "()"
@@ -15687,7 +11752,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ac2510ff994f7ee7e38567d8bf65113e6"
+              "$": "a9e4c0679d2234d54b9a194ba7c12afdb"
             },
             "arglist": {
               "$": "()"
@@ -15705,7 +11770,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ac79dc67eceb599c54e1fe3ed2268d9e9"
+              "$": "ac1f782ff555cc67a2e94bc3b8b0d3d17"
             },
             "arglist": {
               "$": "()"
@@ -15723,7 +11788,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a18003b553107056e9707143f52d15fad"
+              "$": "a3e2d9452b76b785fdac5b96619267b58"
             },
             "arglist": {
               "$": "()"
@@ -15741,7 +11806,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a3a3b333197ae6e7576e8b03fbbabbdd7"
+              "$": "addefa7a6b21409ab40aef55503e88250"
             },
             "arglist": {
               "$": "()"
@@ -15759,7 +11824,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a29f1caa88693e3a1ab6c7e8842513e7d"
+              "$": "aa96f590eb19fb3cf4dda62cf61708757"
             },
             "arglist": {
               "$": "()"
@@ -15777,7 +11842,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a909d485f254fb5cfbdfe98fd524c6609"
+              "$": "af8579f36b8347265a1991d911c19efe7"
             },
             "arglist": {
               "$": "()"
@@ -15795,7 +11860,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a94a788ac0bf2bdea001e316dfa65aa92"
+              "$": "a244301b4e1d4a4b5edca28d3b5d567b5"
             },
             "arglist": {
               "$": "()"
@@ -15813,7 +11878,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a5b203baea3cfdeec65290c37123c2b2c"
+              "$": "a7dfa067f878dc8dee95f39cb2d9a346c"
             },
             "arglist": {
               "$": "()"
@@ -15831,7 +11896,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a4955143576a29e6f0551663664b54f1e"
+              "$": "ae97554c9fc46418ea61e0127e15369e4"
             },
             "arglist": {
               "$": "()"
@@ -15849,7 +11914,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "afe1c37d8e54864e74da3a26ab49e264f"
+              "$": "a1997a843fe851f7205b6e162e893f0fb"
             },
             "arglist": {
               "$": "()"
@@ -15867,7 +11932,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ad69fb78842356c7ffa53b49a76ed81f4"
+              "$": "af9ade7102723d380e7deb313addd1b7a"
             },
             "arglist": {
               "$": "()"
@@ -15885,7 +11950,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a5c337168a816ac62ed1b054220a45e08"
+              "$": "a6bc512d6be9dd9a1d81c781cd4c6430e"
             },
             "arglist": {
               "$": "()"
@@ -15921,7 +11986,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ac79c99f726cad4eb1c1e1a49cde38199"
+              "$": "ae7fd3417aa26ed0ce39b07c7d3672757"
             },
             "arglist": {
               "$": "()"
@@ -15939,7 +12004,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a277571dba682ef27d3d43e5184468996"
+              "$": "ac267c82dcd08d8f98c582f4f87c62b53"
             },
             "arglist": {
               "$": "(StandardShortcut id)"
@@ -15975,7 +12040,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ac8b2765175372ca043859fdf325cbcb8"
+              "$": "ab52bcc834a8befc39310f1b5f1dba430"
             },
             "arglist": {
               "$": "()"
@@ -15993,7 +12058,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a263cf481afdfcd2d37f1661b8b9cda08"
+              "$": "ab855eead64cf665c321eec06d8312ec9"
             },
             "arglist": {
               "$": "()"
@@ -16011,7 +12076,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a1350d88f04075d0ebdbfe506eaf3e114"
+              "$": "a1e02d32a34caa8a95bab577da9e4b734"
             },
             "arglist": {
               "$": "()"
@@ -16029,7 +12094,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a076f5ccbdb4e4fa7ee71f94100d7c867"
+              "$": "a9262eb609e9ad994d7b913eb715e004e"
             },
             "arglist": {
               "$": "()"
@@ -16047,7 +12112,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a5ea33f705f816faf0be33b32cbbc5379"
+              "$": "a74a978efe91c66dd7585aca8e925ca42"
             },
             "arglist": {
               "$": "()"
@@ -16065,7 +12130,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a2bb6511786eec28029425ad07a927f65"
+              "$": "a38bc08f3697ee70dcf981eee6d788305"
             },
             "arglist": {
               "$": "()"
@@ -16083,7 +12148,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "adf4573cd5abf5adbf94ed3d6ec302c81"
+              "$": "a772051af4489a188be79fdc519e050b6"
             },
             "arglist": {
               "$": "()"
@@ -16092,7 +12157,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "KCONFIGGUI_EXPORT QString"
+              "$": "const QList< QKeySequence > &"
             },
             "name": {
               "$": "whatsThis"
@@ -16101,10 +12166,10 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a0df74edb68a79939607c3952f72f505f"
+              "$": "a644241365fe1cd4d49152ae01bb095a4"
             },
             "arglist": {
-              "$": "(StandardShortcut id)"
+              "$": "()"
             }
           },
           {
@@ -16119,7 +12184,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ab8806c6d04cc5e06ba80476020eb1f9f"
+              "$": "a3bd865ff652af7f66e8e0d4e57292c8d"
             },
             "arglist": {
               "$": "()"
@@ -16137,7 +12202,7 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "ad31fb37076c2938496204d6aa5fd9f8d"
+              "$": "a4089275f2d0b531c39b071441be48f37"
             },
             "arglist": {
               "$": "()"
@@ -16174,10 +12239,10 @@
               "$": "namespaceKStandardShortcut.html"
             },
             "anchor": {
-              "$": "a24f012df681712b27437785a163a590f"
+              "$": "a8c530cc624464c2fa30c84c5e43a2339"
             },
             "arglist": {
-              "$": "()"
+              "$": "(StandardShortcut id)"
             }
           }
         ]
@@ -16191,6 +12256,42 @@
           "$": "namespaceKWindowConfig.html"
         },
         "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCONFIGGUI_EXPORT bool"
+            },
+            "name": {
+              "$": "hasSavedWindowPosition"
+            },
+            "anchorfile": {
+              "$": "namespaceKWindowConfig.html"
+            },
+            "anchor": {
+              "$": "a9487ddd41c1b83e4c0cf455b4f7dea52"
+            },
+            "arglist": {
+              "$": "(KConfigGroup &config)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KCONFIGGUI_EXPORT bool"
+            },
+            "name": {
+              "$": "hasSavedWindowSize"
+            },
+            "anchorfile": {
+              "$": "namespaceKWindowConfig.html"
+            },
+            "anchor": {
+              "$": "a313b41c66f997b10b7c00b31cc13fbbe"
+            },
+            "arglist": {
+              "$": "(KConfigGroup &config)"
+            }
+          },
           {
             "@kind": "function",
             "type": {
@@ -16292,7 +12393,7 @@
           "$": "The KDE Configuration Compiler"
         },
         "filename": {
-          "$": "kconfig_compiler"
+          "$": "kconfig_compiler.html"
         },
         "docanchor": [
           {
@@ -16346,7 +12447,12 @@
           "$": "KConfig Entry Options"
         },
         "filename": {
-          "$": "options"
+          "$": "options.html"
+        },
+        "docanchor": {
+          "@file": "options.html",
+          "@title": "/builds/websites/api-kde-org/sources/kconfig/docs/options.md",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2kconfig_2docs_2options"
         }
       },
       {
@@ -16358,7 +12464,20 @@
           "$": "KConfig"
         },
         "filename": {
-          "$": "index"
+          "$": "index.html"
+        },
+        "subpage": [
+          {
+            "$": "Stars.html"
+          },
+          {
+            "$": "HTMIndexing.html"
+          }
+        ],
+        "docanchor": {
+          "@file": "index.html",
+          "@title": "KConfig",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2kconfig_2README"
         }
       }
     ]

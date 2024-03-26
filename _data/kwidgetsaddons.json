@@ -1,5 +1,7 @@
 {
   "tagfile": {
+    "@doxygen_version": "1.10.0",
+    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
       {
         "@kind": "class",
@@ -130,42 +132,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "delayed"
-            },
-            "anchorfile": {
-              "$": "classKActionMenu.html"
-            },
-            "anchor": {
-              "$": "a19c7c981d0df3d1ae4705e019a824520"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QMenu *"
-            },
-            "name": {
-              "$": "popupMenu"
-            },
-            "anchorfile": {
-              "$": "classKActionMenu.html"
-            },
-            "anchor": {
-              "$": "a43862879800b027b8f3885d10615d8c5"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "QToolButton::ToolButtonPopupMode"
             },
             "name": {
@@ -187,42 +153,6 @@
               "$": "void"
             },
             "name": {
-              "$": "remove"
-            },
-            "anchorfile": {
-              "$": "classKActionMenu.html"
-            },
-            "anchor": {
-              "$": "a5b1fc623c2a9c4b28733c62db58cc6a7"
-            },
-            "arglist": {
-              "$": "(QAction *)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDelayed"
-            },
-            "anchorfile": {
-              "$": "classKActionMenu.html"
-            },
-            "anchor": {
-              "$": "a7e60a60c87657f5da6d3df0299cc3dcc"
-            },
-            "arglist": {
-              "$": "(bool delayed)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setPopupMode"
             },
             "anchorfile": {
@@ -233,42 +163,6 @@
             },
             "arglist": {
               "$": "(QToolButton::ToolButtonPopupMode popupMode)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setStickyMenu"
-            },
-            "anchorfile": {
-              "$": "classKActionMenu.html"
-            },
-            "anchor": {
-              "$": "a9beb4c6b56619e31b97f1f1ca0697590"
-            },
-            "arglist": {
-              "$": "(bool sticky)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "stickyMenu"
-            },
-            "anchorfile": {
-              "$": "classKActionMenu.html"
-            },
-            "anchor": {
-              "$": "a6f0930b658786b7247e85e1054ebc1c3"
-            },
-            "arglist": {
-              "$": "() const"
             }
           }
         ]
@@ -519,7 +413,7 @@
               "$": "classKActionSelector.html"
             },
             "anchor": {
-              "$": "aee1549fb3156b68a11536217d6fc4c16"
+              "$": "a90e6c0140f10e80415b919a9aeade97c"
             },
             "arglist": {
               "$": "() const"
@@ -609,7 +503,7 @@
               "$": "classKActionSelector.html"
             },
             "anchor": {
-              "$": "a4e8d0c35c8ed10531773126e672507c8"
+              "$": "a0574a441671aa47d23a3790641b43b99"
             },
             "arglist": {
               "$": "() const"
@@ -1441,7 +1335,7 @@
               "$": "classKCapacityBar.html"
             },
             "anchor": {
-              "$": "a8a6e21da23534442a03b4c40d502cd71"
+              "$": "a59e9cc58f6f039ca2a40c564de14c826"
             },
             "arglist": {
               "$": "() const"
@@ -2175,7 +2069,7 @@
               "$": "classKCharSelect.html"
             },
             "anchor": {
-              "$": "a142dac45a20b598ef0fc53f607a21106"
+              "$": "ab36bb1f83c588ca8b7c567a233ed8fe6"
             },
             "arglist": {
               "$": "() const"
@@ -2184,7 +2078,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< uint >"
+              "$": "QList< uint >"
             },
             "name": {
               "$": "displayedCodePoints"
@@ -2193,7 +2087,7 @@
               "$": "classKCharSelect.html"
             },
             "anchor": {
-              "$": "aa396ccc16a5af118b5d417d3adfb6cae"
+              "$": "a733e36175eab2a196c88afa3884e699f"
             },
             "arglist": {
               "$": "() const"
@@ -2597,6 +2491,180 @@
             },
             "arglist": {
               "$": "(const QColor &c)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KColorCombo"
+        },
+        "filename": {
+          "$": "classKColorCombo.html"
+        },
+        "base": {
+          "$": "QComboBox"
+        },
+        "member": [
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "activated"
+            },
+            "anchorfile": {
+              "$": "classKColorCombo.html"
+            },
+            "anchor": {
+              "$": "aeff919aefed721e4e3de8b7061dbe92e"
+            },
+            "arglist": {
+              "$": "(const QColor &col)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "highlighted"
+            },
+            "anchorfile": {
+              "$": "classKColorCombo.html"
+            },
+            "anchor": {
+              "$": "af9cf473e7a2b31fab378f9748e23bcb5"
+            },
+            "arglist": {
+              "$": "(const QColor &col)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "KColorCombo"
+            },
+            "anchorfile": {
+              "$": "classKColorCombo.html"
+            },
+            "anchor": {
+              "$": "a56eef2f991a284d91fd46169ce9d5204"
+            },
+            "arglist": {
+              "$": "(QWidget *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QColor"
+            },
+            "name": {
+              "$": "color"
+            },
+            "anchorfile": {
+              "$": "classKColorCombo.html"
+            },
+            "anchor": {
+              "$": "ad9471d83c6e5142e2650fb2e9a1b7ca4"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< QColor >"
+            },
+            "name": {
+              "$": "colors"
+            },
+            "anchorfile": {
+              "$": "classKColorCombo.html"
+            },
+            "anchor": {
+              "$": "a5037faaba575fc317e1287f83a35faac"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isCustomColor"
+            },
+            "anchorfile": {
+              "$": "classKColorCombo.html"
+            },
+            "anchor": {
+              "$": "af8d7c3b3526d5d06d1a431b12d8289a5"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setColor"
+            },
+            "anchorfile": {
+              "$": "classKColorCombo.html"
+            },
+            "anchor": {
+              "$": "af7362a6c1bbc45d48b4f9df760f659ca"
+            },
+            "arglist": {
+              "$": "(const QColor &col)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setColors"
+            },
+            "anchorfile": {
+              "$": "classKColorCombo.html"
+            },
+            "anchor": {
+              "$": "a07160f07f2cd2d1f9773d31da7558345"
+            },
+            "arglist": {
+              "$": "(const QList< QColor > &colors)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "showEmptyList"
+            },
+            "anchorfile": {
+              "$": "classKColorCombo.html"
+            },
+            "anchor": {
+              "$": "a4c94e16751c59bbb8485b97a4da8faa1"
+            },
+            "arglist": {
+              "$": "()"
             }
           }
         ]
@@ -3348,7 +3416,7 @@
               "$": "classKDateComboBox.html"
             },
             "anchor": {
-              "$": "a44facb729abac87ed64f287acd548034"
+              "$": "a66e01308f489184f6e6d0bd99dc582aa"
             },
             "arglist": {
               "$": "() const"
@@ -3520,7 +3588,7 @@
               "$": "classKDatePicker.html"
             },
             "anchor": {
-              "$": "a500ebd85b49b89bab253383fb64e6295"
+              "$": "a8c6ec6a32a726e1fd65d45883b0bb37b"
             },
             "arglist": {
               "$": "() const"
@@ -3910,7 +3978,7 @@
               "$": "classKDatePickerPopup.html"
             },
             "anchor": {
-              "$": "a026d8508a2c7b59a38364efc2557bd2a"
+              "$": "a76a20c5429f7e4beae572c4c649e21c4"
             },
             "arglist": {
               "$": "() const"
@@ -5214,7 +5282,7 @@
               "$": "classKDateTimeEdit.html"
             },
             "anchor": {
-              "$": "a214b1a384d8e337b397e803e66a4694e"
+              "$": "ae64fab3c7bc67b4a98f6e7b22b549f9c"
             },
             "arglist": {
               "$": "() const"
@@ -5417,7 +5485,9 @@
         "filename": {
           "$": "classKDragWidgetDecorator.html"
         },
-        "templarg": {},
+        "templarg": {
+          "$": "class Widget"
+        },
         "base": {
           "$": "KDragWidgetDecoratorBase"
         },
@@ -6224,7 +6294,7 @@
               "$": "classKEditListWidget.html"
             },
             "anchor": {
-              "$": "a0605450383cf36f45b100f81f7fa956c"
+              "$": "af6bb92f2c3d002fa1a5edeab4c8ca247"
             },
             "arglist": {
               "$": "() const"
@@ -7094,22 +7164,6 @@
               "$": "classKFontChooser.html"
             },
             "anchor": {
-              "$": "aeea5d3dd90f00ecdf7f2fe0f502b162b"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const DisplayFlags &flags, const QStringList &fontList=QStringList(), int visibleListSize=8, Qt::CheckState *sizeIsRelativeState=nullptr)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KFontChooser"
-            },
-            "anchorfile": {
-              "$": "classKFontChooser.html"
-            },
-            "anchor": {
               "$": "aa6d06bf7371844f15c275d3ca3a6e1ec"
             },
             "arglist": {
@@ -7369,24 +7423,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setSizeIsRelative"
-            },
-            "anchorfile": {
-              "$": "classKFontChooser.html"
-            },
-            "anchor": {
-              "$": "a836cfd0b15aee74da99dc2f7787201c6"
-            },
-            "arglist": {
-              "$": "(Qt::CheckState relative)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "QSize"
             },
             "name": {
@@ -7400,24 +7436,6 @@
             },
             "arglist": {
               "$": "(void) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Qt::CheckState"
-            },
-            "name": {
-              "$": "sizeIsRelative"
-            },
-            "anchorfile": {
-              "$": "classKFontChooser.html"
-            },
-            "anchor": {
-              "$": "a031e4cebfd48aa07a9460afe72126028"
-            },
-            "arglist": {
-              "$": "() const"
             }
           },
           {
@@ -7437,25 +7455,6 @@
             },
             "arglist": {
               "$": "(uint fontListCriteria)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@static": "yes",
-            "type": {
-              "$": "static void"
-            },
-            "name": {
-              "$": "getFontList"
-            },
-            "anchorfile": {
-              "$": "classKFontChooser.html"
-            },
-            "anchor": {
-              "$": "a700c43020123602acff9b3dc00d7f0c3"
-            },
-            "arglist": {
-              "$": "(QStringList &list, uint fontListCriteria)"
             }
           }
         ]
@@ -7813,13 +7812,13 @@
             "$": "void"
           },
           "name": {
-            "$": "actionTriggered"
+            "$": "slotActionTriggered"
           },
           "anchorfile": {
             "$": "classKFontSizeAction.html"
           },
           "anchor": {
-            "$": "a7ce47f5f5e706c1a69fd769dc6b08593"
+            "$": "aca6e76169f258c744d30dbbcc1bfcc86"
           },
           "arglist": {
             "$": "(QAction *action) override"
@@ -8597,7 +8596,7 @@
               "$": "classKLed.html"
             },
             "anchor": {
-              "$": "a70a187d5643bf37fc2452676d2b2cf19"
+              "$": "aacac2a9499fb67091a9acfbf87c6f728"
             },
             "arglist": {
               "$": "() const"
@@ -8705,7 +8704,7 @@
               "$": "classKLed.html"
             },
             "anchor": {
-              "$": "a7a86256a0911054129b6e90a90ab1892"
+              "$": "ada7b842508e789c07983edc66e2a3e9f"
             },
             "arglist": {
               "$": "() const"
@@ -8723,13 +8722,25 @@
               "$": "classKLed.html"
             },
             "anchor": {
-              "$": "abd155478211a5a7e8d50b9af7f937b47"
+              "$": "a99f016c9eeb53b5299808897486fda99"
             },
             "arglist": {
               "$": "() const"
             }
           }
         ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KLineEditUrlDropEventFilter"
+        },
+        "filename": {
+          "$": "classKLineEditUrlDropEventFilter.html"
+        },
+        "base": {
+          "$": "QObject"
+        }
       },
       {
         "@kind": "class",
@@ -8778,6 +8789,123 @@
           {
             "@kind": "enumvalue",
             "name": {
+              "$": "Ok"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "ad96a0aee68d41b6a153020b01ee61813a9dcbd1f9e5f5e5d67403c49642612182"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Cancel"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "ad96a0aee68d41b6a153020b01ee61813af9dfdcb9675a947b7d04338605c6111a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PrimaryAction"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "ad96a0aee68d41b6a153020b01ee61813a549230f6ec72771e8697f250e215928b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SecondaryAction"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "ad96a0aee68d41b6a153020b01ee61813a6cb1563d7a7cb48ccaec38bb1fb916bb"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Cancel"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "ad96a0aee68d41b6a153020b01ee61813af9dfdcb9675a947b7d04338605c6111a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Error"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "ad6124f701d07928b95a0ed3cffe028dca30947f62f616ffeb3a0920dd86fa671c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Information"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "ad6124f701d07928b95a0ed3cffe028dca7d043ed07ecddc768770f4291bfd36e7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Ok"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "ad96a0aee68d41b6a153020b01ee61813a9dcbd1f9e5f5e5d67403c49642612182"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PrimaryAction"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "ad96a0aee68d41b6a153020b01ee61813a549230f6ec72771e8697f250e215928b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
               "$": "QuestionTwoActions"
             },
             "anchorfile": {
@@ -8804,39 +8932,13 @@
           {
             "@kind": "enumvalue",
             "name": {
-              "$": "QuestionYesNo"
+              "$": "SecondaryAction"
             },
             "anchorfile": {
               "$": "classKMessageDialog.html"
             },
             "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dca538def91567c81aaa71dcf2bed896c40"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "QuestionYesNoCancel"
-            },
-            "anchorfile": {
-              "$": "classKMessageDialog.html"
-            },
-            "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dca94911c33b5ff339d57715ce3413e9183"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "Sorry"
-            },
-            "anchorfile": {
-              "$": "classKMessageDialog.html"
-            },
-            "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dca36af62d78d90f6e19e52e0f0a4874e1d"
+              "$": "ad96a0aee68d41b6a153020b01ee61813a6cb1563d7a7cb48ccaec38bb1fb916bb"
             },
             "arglist": {}
           },
@@ -8909,65 +9011,52 @@
           {
             "@kind": "enumvalue",
             "name": {
-              "$": "Sorry"
+              "$": "WarningContinueCancel"
             },
             "anchorfile": {
               "$": "classKMessageDialog.html"
             },
             "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dca36af62d78d90f6e19e52e0f0a4874e1d"
+              "$": "ad6124f701d07928b95a0ed3cffe028dca768a7a4ad61db48b93e935d1daf25854"
             },
             "arglist": {}
           },
           {
             "@kind": "enumvalue",
             "name": {
-              "$": "QuestionYesNo"
+              "$": "Information"
             },
             "anchorfile": {
               "$": "classKMessageDialog.html"
             },
             "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dca538def91567c81aaa71dcf2bed896c40"
+              "$": "ad6124f701d07928b95a0ed3cffe028dca7d043ed07ecddc768770f4291bfd36e7"
             },
             "arglist": {}
           },
           {
             "@kind": "enumvalue",
             "name": {
-              "$": "QuestionYesNoCancel"
+              "$": "Error"
             },
             "anchorfile": {
               "$": "classKMessageDialog.html"
             },
             "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dca94911c33b5ff339d57715ce3413e9183"
+              "$": "ad6124f701d07928b95a0ed3cffe028dca30947f62f616ffeb3a0920dd86fa671c"
             },
             "arglist": {}
           },
           {
             "@kind": "enumvalue",
             "name": {
-              "$": "WarningYesNo"
+              "$": "WarningContinueCancel"
             },
             "anchorfile": {
               "$": "classKMessageDialog.html"
             },
             "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dcaff497fc50aad427bf596543d732eea19"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "WarningYesNoCancel"
-            },
-            "anchorfile": {
-              "$": "classKMessageDialog.html"
-            },
-            "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dcafef8163d73f64d578d9ebbf97fd75bbf"
+              "$": "ad6124f701d07928b95a0ed3cffe028dca768a7a4ad61db48b93e935d1daf25854"
             },
             "arglist": {}
           },
@@ -8994,32 +9083,6 @@
             },
             "anchor": {
               "$": "ad6124f701d07928b95a0ed3cffe028dca28d24939c2337062599c39d3b15b78cf"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "WarningYesNo"
-            },
-            "anchorfile": {
-              "$": "classKMessageDialog.html"
-            },
-            "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dcaff497fc50aad427bf596543d732eea19"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "WarningYesNoCancel"
-            },
-            "anchorfile": {
-              "$": "classKMessageDialog.html"
-            },
-            "anchor": {
-              "$": "ad6124f701d07928b95a0ed3cffe028dcafef8163d73f64d578d9ebbf97fd75bbf"
             },
             "arglist": {}
           },
@@ -9119,10 +9182,10 @@
               "$": "classKMessageDialog.html"
             },
             "anchor": {
-              "$": "a5e77491dcb547acd0353db506213f356"
+              "$": "a84908b631f19b6d35c013807a3ee1eaf"
             },
             "arglist": {
-              "$": "(const KGuiItem &primaryAction=KStandardGuiItem::yes(), const KGuiItem &secondaryAction=KStandardGuiItem::no(), const KGuiItem &cancelAction=KStandardGuiItem::cancel())"
+              "$": "(const KGuiItem &primaryAction=KGuiItem(), const KGuiItem &secondaryAction=KGuiItem(), const KGuiItem &cancelAction=KGuiItem())"
             }
           },
           {
@@ -9268,6 +9331,25 @@
             "arglist": {
               "$": "(bool isAllowed)"
             }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static void"
+            },
+            "name": {
+              "$": "beep"
+            },
+            "anchorfile": {
+              "$": "classKMessageDialog.html"
+            },
+            "anchor": {
+              "$": "a36afed3e50635e78014133e4f5d548ac"
+            },
+            "arglist": {
+              "$": "(KMessageDialog::Type type, const QString &text=QString(), QWidget *dialog=nullptr)"
+            }
           }
         ]
       },
@@ -9284,6 +9366,71 @@
         },
         "member": [
           {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Error"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a8f412da4688bcf3d3c5dfa0b0d558a9ba22e91263760ec8a4adff95b164304099"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Footer"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "aed74ed44f18731597d0b8820f7162ee1a34b30d6c28be27f903e45a499c746010"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Header"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "aed74ed44f18731597d0b8820f7162ee1ae8a366814ec804d3c8d99cd1f76dc3a5"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Information"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a8f412da4688bcf3d3c5dfa0b0d558a9ba2a7dc64a63e8b9a1020bed37de3ab177"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Inline"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "aed74ed44f18731597d0b8820f7162ee1ab27173a117b766114d1c26e17750483c"
+            },
+            "arglist": {}
+          },
+          {
             "@kind": "enumeration",
             "type": {},
             "name": {
@@ -9294,6 +9441,137 @@
             },
             "anchor": {
               "$": "a8f412da4688bcf3d3c5dfa0b0d558a9b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Positive"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a8f412da4688bcf3d3c5dfa0b0d558a9ba780eaf42aef2171310561404839850a6"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Information"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a8f412da4688bcf3d3c5dfa0b0d558a9ba2a7dc64a63e8b9a1020bed37de3ab177"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Warning"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a8f412da4688bcf3d3c5dfa0b0d558a9ba9af739252bcd2c97f6c77bb468c75c4f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Error"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a8f412da4688bcf3d3c5dfa0b0d558a9ba22e91263760ec8a4adff95b164304099"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "Position"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "aed74ed44f18731597d0b8820f7162ee1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Inline"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "aed74ed44f18731597d0b8820f7162ee1ab27173a117b766114d1c26e17750483c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Header"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "aed74ed44f18731597d0b8820f7162ee1ae8a366814ec804d3c8d99cd1f76dc3a5"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Footer"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "aed74ed44f18731597d0b8820f7162ee1a34b30d6c28be27f903e45a499c746010"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Positive"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a8f412da4688bcf3d3c5dfa0b0d558a9ba780eaf42aef2171310561404839850a6"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Warning"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a8f412da4688bcf3d3c5dfa0b0d558a9ba9af739252bcd2c97f6c77bb468c75c4f"
             },
             "arglist": {}
           },
@@ -9457,6 +9735,24 @@
             },
             "arglist": {
               "$": "(KMessageWidget::MessageType type)"
+            }
+          },
+          {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setPosition"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "ad9df6d3644820d575e079f79922acbf5"
+            },
+            "arglist": {
+              "$": "(Position position)"
             }
           },
           {
@@ -9681,7 +9977,7 @@
               "$": "classKMessageWidget.html"
             },
             "anchor": {
-              "$": "a6be14698b167cefecdb84418b3fc08a9"
+              "$": "a6ad1b7b4c690b88d1f26e1c8108d0937"
             },
             "arglist": {
               "$": "() const"
@@ -9708,6 +10004,24 @@
           {
             "@kind": "function",
             "type": {
+              "$": "Position"
+            },
+            "name": {
+              "$": "position"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a2d7ea0ef54be7db4f97adb4d84805e4d"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "void"
             },
             "name": {
@@ -9721,6 +10035,24 @@
             },
             "arglist": {
               "$": "(QAction *action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setTextFormat"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a7ae14e14e9ff0fe8121bfe153dad27f8"
+            },
+            "arglist": {
+              "$": "(Qt::TextFormat textFormat)"
             }
           },
           {
@@ -9754,6 +10086,24 @@
             },
             "anchor": {
               "$": "a228d07f92b86e32dbb43a2ac633ab002"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "Qt::TextFormat"
+            },
+            "name": {
+              "$": "textFormat"
+            },
+            "anchorfile": {
+              "$": "classKMessageWidget.html"
+            },
+            "anchor": {
+              "$": "a850345d8c643fbba7b65e75ef74e3cd2"
             },
             "arglist": {
               "$": "() const"
@@ -10119,24 +10469,6 @@
               "$": "int"
             },
             "name": {
-              "$": "appendButton"
-            },
-            "anchorfile": {
-              "$": "classKMultiTabBar.html"
-            },
-            "anchor": {
-              "$": "a1b633706e56b9d2258f459d9f27262ec"
-            },
-            "arglist": {
-              "$": "(const QPixmap &pic, int id=-1, QMenu *popup=nullptr, const QString &not_used_yet=QString())"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
               "$": "appendTab"
             },
             "anchorfile": {
@@ -10147,24 +10479,6 @@
             },
             "arglist": {
               "$": "(const QIcon &icon, int id=-1, const QString &text=QString())"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "appendTab"
-            },
-            "anchorfile": {
-              "$": "classKMultiTabBar.html"
-            },
-            "anchor": {
-              "$": "a77f7123536366912c39b1ce3b68988a7"
-            },
-            "arglist": {
-              "$": "(const QPixmap &pic, int id=-1, const QString &text=QString())"
             }
           },
           {
@@ -10215,7 +10529,7 @@
               "$": "classKMultiTabBar.html"
             },
             "anchor": {
-              "$": "a45cb2a62abb51fa8f1925ec61dcd8496"
+              "$": "ae421ada021a58f3c92035a21fa6eef53"
             },
             "arglist": {
               "$": "() const"
@@ -10341,7 +10655,7 @@
               "$": "classKMultiTabBar.html"
             },
             "anchor": {
-              "$": "ad6c5a88130fa126552321a128d484058"
+              "$": "a2b7c8de9a8ff58271846014c040cd254"
             },
             "arglist": {
               "$": "() const"
@@ -10394,23 +10708,6 @@
             },
             "arglist": {
               "$": "(const QIcon &icon, const QString &, int id, QWidget *parent)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {},
-            "name": {
-              "$": "KMultiTabBarButton"
-            },
-            "anchorfile": {
-              "$": "classKMultiTabBarButton.html"
-            },
-            "anchor": {
-              "$": "a59fa34c3fb9ba3557c2c53060cb806cf"
-            },
-            "arglist": {
-              "$": "(const QPixmap &pic, const QString &, int id, QWidget *parent)"
             }
           }
         ]
@@ -10495,6 +10792,22 @@
           "$": "QDialog"
         },
         "member": [
+          {
+            "@kind": "property",
+            "type": {
+              "$": "KPassword::RevealMode"
+            },
+            "name": {
+              "$": "revealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKNewPasswordDialog.html"
+            },
+            "anchor": {
+              "$": "aa63ca901958717572aff5dbf04265073"
+            },
+            "arglist": {}
+          },
           {
             "@kind": "signal",
             "type": {
@@ -10710,24 +11023,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QPixmap"
-            },
-            "name": {
-              "$": "pixmap"
-            },
-            "anchorfile": {
-              "$": "classKNewPasswordDialog.html"
-            },
-            "anchor": {
-              "$": "a4422103571cbe6c9289deeb3cfead0c2"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "QString"
             },
             "name": {
@@ -10756,6 +11051,24 @@
             },
             "anchor": {
               "$": "aeb6b3def5c6b6b8c2eb023337951c1a0"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPassword::RevealMode"
+            },
+            "name": {
+              "$": "revealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKNewPasswordDialog.html"
+            },
+            "anchor": {
+              "$": "a8ada4b4aceed09b436c50ec4694b0572"
             },
             "arglist": {
               "$": "() const"
@@ -10875,24 +11188,6 @@
               "$": "void"
             },
             "name": {
-              "$": "setPixmap"
-            },
-            "anchorfile": {
-              "$": "classKNewPasswordDialog.html"
-            },
-            "anchor": {
-              "$": "a34e4756cc891a861e83f2711e3c5c59a"
-            },
-            "arglist": {
-              "$": "(const QPixmap &)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setPrompt"
             },
             "anchorfile": {
@@ -10939,6 +11234,24 @@
             },
             "arglist": {
               "$": "(bool reveal)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setRevealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKNewPasswordDialog.html"
+            },
+            "anchor": {
+              "$": "ad98c01ba9edb1f7d52eaac8ddbc26ea4"
+            },
+            "arglist": {
+              "$": "(KPassword::RevealMode revealPasswordMode)"
             }
           },
           {
@@ -11128,6 +11441,37 @@
               "$": "a2be2c3f78b0f4b4ad9f5706852c2011caa7df2a3a85b8aeb15a35869ee65a54ea"
             },
             "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "RevealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKNewPasswordWidget.html"
+            },
+            "anchor": {
+              "$": "ac79370b1501b85ea2fe87f9c97dc51f9"
+            },
+            "arglist": {},
+            "enumvalue": [
+              {
+                "@file": "classKNewPasswordWidget.html",
+                "@anchor": "ac79370b1501b85ea2fe87f9c97dc51f9aede91184c71014194167340aed65b70f",
+                "$": "OnlyNew"
+              },
+              {
+                "@file": "classKNewPasswordWidget.html",
+                "@anchor": "ac79370b1501b85ea2fe87f9c97dc51f9a6e7b34fa59e1bd229b207892956dc41c",
+                "$": "Never"
+              },
+              {
+                "@file": "classKNewPasswordWidget.html",
+                "@anchor": "ac79370b1501b85ea2fe87f9c97dc51f9a68eec46437c384d8dad18d5464ebc35c",
+                "$": "Always"
+              }
+            ]
           },
           {
             "@kind": "enumvalue",
@@ -11334,6 +11678,24 @@
             }
           },
           {
+            "@kind": "slot",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setRevealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKNewPasswordWidget.html"
+            },
+            "anchor": {
+              "$": "aecda0db62f9480138a206297d2bc1fd0"
+            },
+            "arglist": {
+              "$": "(KPassword::RevealMode revealPasswordMode)"
+            }
+          },
+          {
             "@kind": "function",
             "type": {},
             "name": {
@@ -11503,7 +11865,7 @@
               "$": "classKNewPasswordWidget.html"
             },
             "anchor": {
-              "$": "a01a879c1123ae016d075f9024c9f4831"
+              "$": "a3f7a54583238c7404d3490c1110a6162"
             },
             "arglist": {
               "$": "() const"
@@ -11540,6 +11902,24 @@
             },
             "anchor": {
               "$": "a28022b89421958f5e6606517d31d9be6"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPassword::RevealMode"
+            },
+            "name": {
+              "$": "revealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKNewPasswordWidget.html"
+            },
+            "anchor": {
+              "$": "ad8419d423cfb359f2062fa4ba6c2443b"
             },
             "arglist": {
               "$": "() const"
@@ -12077,7 +12457,7 @@
               "$": "classKPageDialog.html"
             },
             "anchor": {
-              "$": "ab77ab89bde6113e4ab11b36fb59e9982"
+              "$": "a03b08f7541eea927a4bf9bbf209857b6"
             },
             "arglist": {
               "$": "()"
@@ -12096,7 +12476,7 @@
               "$": "classKPageDialog.html"
             },
             "anchor": {
-              "$": "aa2bf90df68dc8eebb6648037e2f764f3"
+              "$": "a6ad42ce021e13c5045ab1e02ab2cda02"
             },
             "arglist": {
               "$": "() const"
@@ -12115,7 +12495,7 @@
               "$": "classKPageDialog.html"
             },
             "anchor": {
-              "$": "a1a20f15abf5b29e550f6c1de64ad36fa"
+              "$": "a500366a715a3bf718e25b8789715b24a"
             },
             "arglist": {
               "$": "()"
@@ -12134,7 +12514,7 @@
               "$": "classKPageDialog.html"
             },
             "anchor": {
-              "$": "ab72d6679ec97f2f3254aaebb1772c454"
+              "$": "a4cc46bfc4a171bd183f8ed2112d02cde"
             },
             "arglist": {
               "$": "() const"
@@ -12580,7 +12960,7 @@
               "$": "classKPageView.html"
             },
             "anchor": {
-              "$": "a755e0ce693e6d90b970b318df0410ff0"
+              "$": "a9a695d1c192eef52684cfcff4b5cf8b1"
             },
             "arglist": {
               "$": "() const"
@@ -14301,24 +14681,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QPixmap"
-            },
-            "name": {
-              "$": "pixmap"
-            },
-            "anchorfile": {
-              "$": "classKPasswordDialog.html"
-            },
-            "anchor": {
-              "$": "aec3f75aa5853b0d6dc53eb8cb94c248d"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "QString"
             },
             "name": {
@@ -14329,6 +14691,24 @@
             },
             "anchor": {
               "$": "a005e36d5c234391313e4ebd90af01431"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPassword::RevealMode"
+            },
+            "name": {
+              "$": "revealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKPasswordDialog.html"
+            },
+            "anchor": {
+              "$": "ad3f87337915f699b673ec4afe4d3319f"
             },
             "arglist": {
               "$": "() const"
@@ -14448,24 +14828,6 @@
               "$": "void"
             },
             "name": {
-              "$": "setPixmap"
-            },
-            "anchorfile": {
-              "$": "classKPasswordDialog.html"
-            },
-            "anchor": {
-              "$": "aff113248fc606e94417915bd9c7ac33d"
-            },
-            "arglist": {
-              "$": "(const QPixmap &)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setPrompt"
             },
             "anchorfile": {
@@ -14494,6 +14856,24 @@
             },
             "arglist": {
               "$": "(bool reveal)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setRevealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKPasswordDialog.html"
+            },
+            "anchor": {
+              "$": "aeada43211f4f5057f05d5aff0c702f81"
+            },
+            "arglist": {
+              "$": "(KPassword::RevealMode revealPasswordMode)"
             }
           },
           {
@@ -14730,6 +15110,24 @@
               "$": "bool"
             },
             "name": {
+              "$": "isReadOnly"
+            },
+            "anchorfile": {
+              "$": "classKPasswordLineEdit.html"
+            },
+            "anchor": {
+              "$": "a3b76df40b59ea87190d2bfb79f5b303c"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
               "$": "isRevealPasswordAvailable"
             },
             "anchorfile": {
@@ -14773,6 +15171,24 @@
             },
             "anchor": {
               "$": "a531571560282b0c5bcf3dac5a55ac9ca"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KPassword::RevealMode"
+            },
+            "name": {
+              "$": "revealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKPasswordLineEdit.html"
+            },
+            "anchor": {
+              "$": "a3297869efa44bdcf09a787d69bba2005"
             },
             "arglist": {
               "$": "() const"
@@ -14838,6 +15254,24 @@
               "$": "void"
             },
             "name": {
+              "$": "setReadOnly"
+            },
+            "anchorfile": {
+              "$": "classKPasswordLineEdit.html"
+            },
+            "anchor": {
+              "$": "a40885e8cf38b0325f11c51a2ec8f867b"
+            },
+            "arglist": {
+              "$": "(bool readOnly)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "setRevealPasswordAvailable"
             },
             "anchorfile": {
@@ -14848,6 +15282,24 @@
             },
             "arglist": {
               "$": "(bool reveal)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setRevealPasswordMode"
+            },
+            "anchorfile": {
+              "$": "classKPasswordLineEdit.html"
+            },
+            "anchor": {
+              "$": "a3c0f8946f697ad9e07a11ff969a35f2a"
+            },
+            "arglist": {
+              "$": "(KPassword::RevealMode revealPasswordMode)"
             }
           },
           {
@@ -16663,24 +17115,6 @@
             }
           },
           {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "ratingChanged"
-            },
-            "anchorfile": {
-              "$": "classKRatingWidget.html"
-            },
-            "anchor": {
-              "$": "a1ea439f36c0e8d178f3242293cfdebf6"
-            },
-            "arglist": {
-              "$": "(unsigned int rating)"
-            }
-          },
-          {
             "@kind": "slot",
             "type": {
               "$": "void"
@@ -16794,60 +17228,6 @@
               "$": "void"
             },
             "name": {
-              "$": "setMaxRating"
-            },
-            "anchorfile": {
-              "$": "classKRatingWidget.html"
-            },
-            "anchor": {
-              "$": "a6be468389c04faef04b7d37bcebe475a"
-            },
-            "arglist": {
-              "$": "(unsigned int max)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setOnlyPaintFullSteps"
-            },
-            "anchorfile": {
-              "$": "classKRatingWidget.html"
-            },
-            "anchor": {
-              "$": "a338ee7b0044a0732b09271cf40b60664"
-            },
-            "arglist": {
-              "$": "(bool)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setPixmap"
-            },
-            "anchorfile": {
-              "$": "classKRatingWidget.html"
-            },
-            "anchor": {
-              "$": "a17aef06d0f67e3c828d1133789de2c7d"
-            },
-            "arglist": {
-              "$": "(const QPixmap &)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setPixmapSize"
             },
             "anchorfile": {
@@ -16876,24 +17256,6 @@
             },
             "arglist": {
               "$": "(int rating)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setRating"
-            },
-            "anchorfile": {
-              "$": "classKRatingWidget.html"
-            },
-            "anchor": {
-              "$": "af2d7ab459e5792f1152ccaa112cc5cec"
-            },
-            "arglist": {
-              "$": "(unsigned int rating)"
             }
           },
           {
@@ -17039,7 +17401,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "unsigned int"
+              "$": "int"
             },
             "name": {
               "$": "rating"
@@ -17048,7 +17410,7 @@
               "$": "classKRatingWidget.html"
             },
             "anchor": {
-              "$": "a1e5fde544b8ec8f7970b67facc7c38ae"
+              "$": "ac0f53b854eb09d991004017f7bccd377"
             },
             "arglist": {
               "$": "() const"
@@ -17436,42 +17798,6 @@
               "$": "int"
             },
             "name": {
-              "$": "maxValue"
-            },
-            "anchorfile": {
-              "$": "classKRuler.html"
-            },
-            "anchor": {
-              "$": "ab1c3204e343f16fcb7a7fc713af454b6"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "minValue"
-            },
-            "anchorfile": {
-              "$": "classKRuler.html"
-            },
-            "anchor": {
-              "$": "a947dd6c3e2d7de05dca5900cb33e9b47"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
               "$": "offset"
             },
             "anchorfile": {
@@ -17544,24 +17870,6 @@
               "$": "void"
             },
             "name": {
-              "$": "setFrameStyle"
-            },
-            "anchorfile": {
-              "$": "classKRuler.html"
-            },
-            "anchor": {
-              "$": "acb89eed223d7a4efa628d7f712fa1b3a"
-            },
-            "arglist": {
-              "$": "(int)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setLength"
             },
             "anchorfile": {
@@ -17616,24 +17924,6 @@
               "$": "void"
             },
             "name": {
-              "$": "setMaxValue"
-            },
-            "anchorfile": {
-              "$": "classKRuler.html"
-            },
-            "anchor": {
-              "$": "a5586ea6fd8e08bc155c8e90eacfed333"
-            },
-            "arglist": {
-              "$": "(int)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setMediumMarkDistance"
             },
             "anchorfile": {
@@ -17641,24 +17931,6 @@
             },
             "anchor": {
               "$": "a065538397c5893ed40501c9548403307"
-            },
-            "arglist": {
-              "$": "(int)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setMinValue"
-            },
-            "anchorfile": {
-              "$": "classKRuler.html"
-            },
-            "anchor": {
-              "$": "a803f3b5d3fc8d44e40d19f28b5ad32ae"
             },
             "arglist": {
               "$": "(int)"
@@ -18002,6 +18274,24 @@
               "$": "void"
             },
             "name": {
+              "$": "actionTriggered"
+            },
+            "anchorfile": {
+              "$": "classKSelectAction.html"
+            },
+            "anchor": {
+              "$": "ad8cdfc986adc892ee4ace2a2a5bcb349"
+            },
+            "arglist": {
+              "$": "(QAction *action)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "indexTriggered"
             },
             "anchorfile": {
@@ -18030,60 +18320,6 @@
             },
             "arglist": {
               "$": "(const QString &text)"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "triggered"
-            },
-            "anchorfile": {
-              "$": "classKSelectAction.html"
-            },
-            "anchor": {
-              "$": "a75729c4340d5c7265f0e9675d336ac99"
-            },
-            "arglist": {
-              "$": "(const QString &text)"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "triggered"
-            },
-            "anchorfile": {
-              "$": "classKSelectAction.html"
-            },
-            "anchor": {
-              "$": "a3d48802c2ef63e62dd4e4ee5ece6dc59"
-            },
-            "arglist": {
-              "$": "(int index)"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "triggered"
-            },
-            "anchorfile": {
-              "$": "classKSelectAction.html"
-            },
-            "anchor": {
-              "$": "a5f9116d18856b89789f1d71b795a16f5"
-            },
-            "arglist": {
-              "$": "(QAction *action)"
             }
           },
           {
@@ -18324,7 +18560,7 @@
               "$": "classKSelectAction.html"
             },
             "anchor": {
-              "$": "acec67736385858d3b1b4e1209a23b992"
+              "$": "a17afd55f50eedcdae3d2be17920da8a9"
             },
             "arglist": {
               "$": "() const"
@@ -18686,7 +18922,7 @@
               "$": "classKSelectAction.html"
             },
             "anchor": {
-              "$": "aa277cf1714bec0202b6254e0a2394e32"
+              "$": "abd7ed8218bddcc3083b0a83f6320b8ce"
             },
             "arglist": {
               "$": "() const"
@@ -18718,13 +18954,13 @@
               "$": "virtual void"
             },
             "name": {
-              "$": "actionTriggered"
+              "$": "slotActionTriggered"
             },
             "anchorfile": {
               "$": "classKSelectAction.html"
             },
             "anchor": {
-              "$": "ad8cdfc986adc892ee4ace2a2a5bcb349"
+              "$": "a895cd9a72adb2362901c600cb111039f"
             },
             "arglist": {
               "$": "(QAction *action)"
@@ -19987,7 +20223,7 @@
               "$": "classKTimeComboBox.html"
             },
             "anchor": {
-              "$": "a260b273a922f9aeb53348469f6a2990a"
+              "$": "a96b14877036864e2f8f3f32ab0cdc42b"
             },
             "arglist": {
               "$": "() const"
@@ -20370,22 +20606,6 @@
             "arglist": {}
           },
           {
-            "@kind": "property",
-            "type": {
-              "$": "QPixmap"
-            },
-            "name": {
-              "$": "pixmap"
-            },
-            "anchorfile": {
-              "$": "classKTitleWidget.html"
-            },
-            "anchor": {
-              "$": "a0c2021f4d38700c63fb7ff2548af5aa9"
-            },
-            "arglist": {}
-          },
-          {
             "@kind": "slot",
             "type": {
               "$": "void"
@@ -20491,78 +20711,6 @@
             },
             "arglist": {
               "$": "(int level)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setPixmap"
-            },
-            "anchorfile": {
-              "$": "classKTitleWidget.html"
-            },
-            "anchor": {
-              "$": "aebb385fd64f14f57b2308d012ede7a62"
-            },
-            "arglist": {
-              "$": "(const QIcon &icon, ImageAlignment alignment=ImageRight)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setPixmap"
-            },
-            "anchorfile": {
-              "$": "classKTitleWidget.html"
-            },
-            "anchor": {
-              "$": "a9d53d6157704490b9cccd9cf0d555ec7"
-            },
-            "arglist": {
-              "$": "(const QPixmap &pixmap, ImageAlignment alignment=ImageRight)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setPixmap"
-            },
-            "anchorfile": {
-              "$": "classKTitleWidget.html"
-            },
-            "anchor": {
-              "$": "a8194bc2cdfaaaa15b8bad159a526829b"
-            },
-            "arglist": {
-              "$": "(const QString &icon, ImageAlignment alignment=ImageRight)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setPixmap"
-            },
-            "anchorfile": {
-              "$": "classKTitleWidget.html"
-            },
-            "anchor": {
-              "$": "ad6d65d4ff42d366f2d6875cb670c3376"
-            },
-            "arglist": {
-              "$": "(MessageType type, ImageAlignment alignment=ImageRight)"
             }
           },
           {
@@ -20710,24 +20858,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "const QPixmap *"
-            },
-            "name": {
-              "$": "pixmap"
-            },
-            "anchorfile": {
-              "$": "classKTitleWidget.html"
-            },
-            "anchor": {
-              "$": "a1a184b22d208b3c31a1c824886d79c0c"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "void"
             },
             "name": {
@@ -20779,7 +20909,11 @@
               "$": "() const"
             }
           }
-        ]
+        ],
+        "docanchor": {
+          "@file": "classKTitleWidget.html",
+          "$": "Usage"
+        }
       },
       {
         "@kind": "class",
@@ -21123,6 +21257,124 @@
         },
         "member": [
           {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "DelayedPopup"
+            },
+            "anchorfile": {
+              "$": "classKToolBarPopupAction.html"
+            },
+            "anchor": {
+              "$": "a5b6d744b109dfa275dc4d45870febd80af4905943394b7cf6121fcbf594f27b37"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "InstantPopup"
+            },
+            "anchorfile": {
+              "$": "classKToolBarPopupAction.html"
+            },
+            "anchor": {
+              "$": "a5b6d744b109dfa275dc4d45870febd80a37f495981503116317e741c22038c4f9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MenuButtonPopup"
+            },
+            "anchorfile": {
+              "$": "classKToolBarPopupAction.html"
+            },
+            "anchor": {
+              "$": "a5b6d744b109dfa275dc4d45870febd80a1ad8f0e5f0b5f2521453424cacff937c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NoPopup"
+            },
+            "anchorfile": {
+              "$": "classKToolBarPopupAction.html"
+            },
+            "anchor": {
+              "$": "a5b6d744b109dfa275dc4d45870febd80ac4b2dd99c839e75d2a8e8e00a4f5855b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "PopupMode"
+            },
+            "anchorfile": {
+              "$": "classKToolBarPopupAction.html"
+            },
+            "anchor": {
+              "$": "a5b6d744b109dfa275dc4d45870febd80"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NoPopup"
+            },
+            "anchorfile": {
+              "$": "classKToolBarPopupAction.html"
+            },
+            "anchor": {
+              "$": "a5b6d744b109dfa275dc4d45870febd80ac4b2dd99c839e75d2a8e8e00a4f5855b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "DelayedPopup"
+            },
+            "anchorfile": {
+              "$": "classKToolBarPopupAction.html"
+            },
+            "anchor": {
+              "$": "a5b6d744b109dfa275dc4d45870febd80af4905943394b7cf6121fcbf594f27b37"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MenuButtonPopup"
+            },
+            "anchorfile": {
+              "$": "classKToolBarPopupAction.html"
+            },
+            "anchor": {
+              "$": "a5b6d744b109dfa275dc4d45870febd80a1ad8f0e5f0b5f2521453424cacff937c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "InstantPopup"
+            },
+            "anchorfile": {
+              "$": "classKToolBarPopupAction.html"
+            },
+            "anchor": {
+              "$": "a5b6d744b109dfa275dc4d45870febd80a37f495981503116317e741c22038c4f9"
+            },
+            "arglist": {}
+          },
+          {
             "@kind": "function",
             "type": {},
             "name": {
@@ -21175,24 +21427,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "delayed"
-            },
-            "anchorfile": {
-              "$": "classKToolBarPopupAction.html"
-            },
-            "anchor": {
-              "$": "aa7dcd93e662e9c72585ffd62ea8536ac"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "QMenu *"
             },
             "name": {
@@ -21211,7 +21445,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QToolButton::ToolButtonPopupMode"
+              "$": "PopupMode"
             },
             "name": {
               "$": "popupMode"
@@ -21220,28 +21454,10 @@
               "$": "classKToolBarPopupAction.html"
             },
             "anchor": {
-              "$": "a7d3713cdf79fd6aa913a657ff7b45403"
+              "$": "acf2ccb7be58f205bf1ed4f9cc0549e8b"
             },
             "arglist": {
               "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDelayed"
-            },
-            "anchorfile": {
-              "$": "classKToolBarPopupAction.html"
-            },
-            "anchor": {
-              "$": "ab6a27b54db80b8c50e12d622b7c51dca"
-            },
-            "arglist": {
-              "$": "(bool delayed)"
             }
           },
           {
@@ -21256,46 +21472,10 @@
               "$": "classKToolBarPopupAction.html"
             },
             "anchor": {
-              "$": "a95cb0ac0c7ba96c99d369d80c4521641"
+              "$": "a7bb411ea8969258df9f8242fd896e1d1"
             },
             "arglist": {
-              "$": "(QToolButton::ToolButtonPopupMode popupMode)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setStickyMenu"
-            },
-            "anchorfile": {
-              "$": "classKToolBarPopupAction.html"
-            },
-            "anchor": {
-              "$": "a59d5e5735129812c41003db69306bbe9"
-            },
-            "arglist": {
-              "$": "(bool sticky)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "stickyMenu"
-            },
-            "anchorfile": {
-              "$": "classKToolBarPopupAction.html"
-            },
-            "anchor": {
-              "$": "ad0bfd75185b6527f143eaed6602b259a"
-            },
-            "arglist": {
-              "$": "() const"
+              "$": "(PopupMode popupMode)"
             }
           }
         ]
@@ -22122,24 +22302,6 @@
               "$": "void"
             },
             "name": {
-              "$": "enteredUrl"
-            },
-            "anchorfile": {
-              "$": "classKUrlLabel.html"
-            },
-            "anchor": {
-              "$": "af32e68ec4d61a22158138ef591ef7e3e"
-            },
-            "arglist": {
-              "$": "(const QString &url)"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "leftClickedUrl"
             },
             "anchorfile": {
@@ -22150,24 +22312,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "leftClickedUrl"
-            },
-            "anchorfile": {
-              "$": "classKUrlLabel.html"
-            },
-            "anchor": {
-              "$": "a8424eeae5000ab57e3761dea96c6cfb9"
-            },
-            "arglist": {
-              "$": "(const QString &url)"
             }
           },
           {
@@ -22194,24 +22338,6 @@
               "$": "void"
             },
             "name": {
-              "$": "leftUrl"
-            },
-            "anchorfile": {
-              "$": "classKUrlLabel.html"
-            },
-            "anchor": {
-              "$": "ad43e92e63809b91277c23a658dfdfbcd"
-            },
-            "arglist": {
-              "$": "(const QString &url)"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "middleClickedUrl"
             },
             "anchorfile": {
@@ -22230,24 +22356,6 @@
               "$": "void"
             },
             "name": {
-              "$": "middleClickedUrl"
-            },
-            "anchorfile": {
-              "$": "classKUrlLabel.html"
-            },
-            "anchor": {
-              "$": "adbd5d12acc6806c74de82d06e8e74730"
-            },
-            "arglist": {
-              "$": "(const QString &url)"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "rightClickedUrl"
             },
             "anchorfile": {
@@ -22258,24 +22366,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "rightClickedUrl"
-            },
-            "anchorfile": {
-              "$": "classKUrlLabel.html"
-            },
-            "anchor": {
-              "$": "a7de527110dea9f57c817382a363b63b5"
-            },
-            "arglist": {
-              "$": "(const QString &url)"
             }
           },
           {
@@ -22573,7 +22663,7 @@
               "$": "classKUrlLabel.html"
             },
             "anchor": {
-              "$": "aba9ef620dc3539aa327338576134b188"
+              "$": "a94beee4f3dfa818d0676b28ebdcc4f6c"
             },
             "arglist": {
               "$": "() const"
@@ -23353,16 +23443,134 @@
         ]
       },
       {
-        "@kind": "class",
+        "@kind": "namespace",
         "name": {
-          "$": "LineEditUrlDropEventFilter"
+          "$": "KJobWidgets"
         },
         "filename": {
-          "$": "classLineEditUrlDropEventFilter.html"
+          "$": "namespaceKJobWidgets.html"
         },
-        "base": {
-          "$": "QObject"
-        }
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setWindow"
+            },
+            "anchorfile": {
+              "$": "namespaceKJobWidgets.html"
+            },
+            "anchor": {
+              "$": "a15278c3b4e08c2488e9182c4c7be62d6"
+            },
+            "arglist": {
+              "$": "(QObject *job, QWidget *widget)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "updateUserTimestamp"
+            },
+            "anchorfile": {
+              "$": "namespaceKJobWidgets.html"
+            },
+            "anchor": {
+              "$": "a1bc8a5286dc5d6a335af1c03cdb4da60"
+            },
+            "arglist": {
+              "$": "(QObject *job, unsigned long time)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "unsigned long"
+            },
+            "name": {
+              "$": "userTimestamp"
+            },
+            "anchorfile": {
+              "$": "namespaceKJobWidgets.html"
+            },
+            "anchor": {
+              "$": "a33c8d5220bc17ffc2069496ececd544f"
+            },
+            "arglist": {
+              "$": "(QObject *job)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QWidget *"
+            },
+            "name": {
+              "$": "window"
+            },
+            "anchorfile": {
+              "$": "namespaceKJobWidgets.html"
+            },
+            "anchor": {
+              "$": "a709cfa1c639c662e4dd18eb69159a8ba"
+            },
+            "arglist": {
+              "$": "(QObject *job)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "KLineEditEventHandler"
+        },
+        "filename": {
+          "$": "namespaceKLineEditEventHandler.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "catchReturnKey"
+            },
+            "anchorfile": {
+              "$": "namespaceKLineEditEventHandler.html"
+            },
+            "anchor": {
+              "$": "a2b8bbe03dd08ad088de5f3dedbee5f9f"
+            },
+            "arglist": {
+              "$": "(QObject *lineEdit)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "handleUrlDrops"
+            },
+            "anchorfile": {
+              "$": "namespaceKLineEditEventHandler.html"
+            },
+            "anchor": {
+              "$": "a5d17ec1a12e7139b0d11d3b11c445386"
+            },
+            "arglist": {
+              "$": "(QObject *lineEdit)"
+            }
+          }
+        ]
       },
       {
         "@kind": "namespace",
@@ -23406,6 +23614,32 @@
           {
             "@kind": "enumvalue",
             "name": {
+              "$": "Ok"
+            },
+            "anchorfile": {
+              "$": "namespaceKMessageBox.html"
+            },
+            "anchor": {
+              "$": "a7b65482f7d03a391aff64c73f7cae32aac83b0d367028cccdab64e758e240d6f9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Cancel"
+            },
+            "anchorfile": {
+              "$": "namespaceKMessageBox.html"
+            },
+            "anchor": {
+              "$": "a7b65482f7d03a391aff64c73f7cae32aac4217c396c3d87d7052a5e55a24743ea"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
               "$": "PrimaryAction"
             },
             "anchorfile": {
@@ -23432,26 +23666,13 @@
           {
             "@kind": "enumvalue",
             "name": {
-              "$": "Yes"
+              "$": "Continue"
             },
             "anchorfile": {
               "$": "namespaceKMessageBox.html"
             },
             "anchor": {
-              "$": "a7b65482f7d03a391aff64c73f7cae32aa2a5a0869dd1dad4b9dc0a83308ec5f8c"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "No"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a7b65482f7d03a391aff64c73f7cae32aa934d63ab49671d24946dbdfe384bdc4e"
+              "$": "a7b65482f7d03a391aff64c73f7cae32aa78901e6424f3ba32a5654f69856468f9"
             },
             "arglist": {}
           },
@@ -23498,6 +23719,19 @@
           {
             "@kind": "enumvalue",
             "name": {
+              "$": "WarningContinueCancel"
+            },
+            "anchorfile": {
+              "$": "namespaceKMessageBox.html"
+            },
+            "anchor": {
+              "$": "adc639e300955a6280ab86dcf33919806a8169a56a435f787d4e6f06b1d80206e6"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
               "$": "WarningTwoActionsCancel"
             },
             "anchorfile": {
@@ -23511,13 +23745,26 @@
           {
             "@kind": "enumvalue",
             "name": {
-              "$": "Sorry"
+              "$": "Information"
             },
             "anchorfile": {
               "$": "namespaceKMessageBox.html"
             },
             "anchor": {
-              "$": "adc639e300955a6280ab86dcf33919806ac03226abd933be3aa77f709ab4585e94"
+              "$": "adc639e300955a6280ab86dcf33919806afc60662b56d416ef1113332493d46cd1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Error"
+            },
+            "anchorfile": {
+              "$": "namespaceKMessageBox.html"
+            },
+            "anchor": {
+              "$": "adc639e300955a6280ab86dcf33919806a11d54fc146e9305c8ef610b66eee562a"
             },
             "arglist": {}
           },
@@ -23531,58 +23778,6 @@
             },
             "anchor": {
               "$": "adc639e300955a6280ab86dcf33919806a53ab08cc47a1e9488dbb0f5a035dd4ab"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "QuestionYesNo"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "adc639e300955a6280ab86dcf33919806ac068221ac08bc10586642cc7b791f80b"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "WarningYesNo"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "adc639e300955a6280ab86dcf33919806aee2d2161f3d44ca3dbb4767becd1cd7c"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "WarningYesNoCancel"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "adc639e300955a6280ab86dcf33919806aa720295df2f222af8bf1634be43dedb9"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "QuestionYesNoCancel"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "adc639e300955a6280ab86dcf33919806a494a439c02094db4b0ea8f81e1003f64"
             },
             "arglist": {}
           },
@@ -23642,19 +23837,6 @@
           {
             "@kind": "enumvalue",
             "name": {
-              "$": "PlainCaption"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "acd8594bea8b70b6b1ffeab5cfbb5ca4aa1b25aa3f02b775cc47ba9c092bfc0b0f"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
               "$": "NoExec"
             },
             "anchorfile": {
@@ -23677,24 +23859,6 @@
               "$": "acd8594bea8b70b6b1ffeab5cfbb5ca4aa5e865a0c6068b89b5b9761a6098a83a3"
             },
             "arglist": {}
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "about"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "aaa606fecd6c065077f6383616d565199"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QString &title=QString(), Options options=Notify)"
-            }
           },
           {
             "@kind": "function",
@@ -23799,78 +23963,6 @@
             },
             "anchor": {
               "$": "a746fd01bddc35f52bd17acd305cc5267"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QString &details, const QString &title=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "detailedSorry"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a3ac3dec1844ea01cb743016c6028e762"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "detailedSorry"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "af864fdd8da1b94c05048d121a54d10d9"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QString &details, const QString &title=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "detailedSorryWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a4665dce27ab2ba6d2ebfc5182aae10a6"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "detailedSorryWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a8fa5b1c637990c6c99ca6397b5420cc9"
             },
             "arglist": {
               "$": "(WId parent_id, const QString &text, const QString &details, const QString &title=QString(), Options options=Notify)"
@@ -24086,10 +24178,10 @@
               "$": "namespaceKMessageBox.html"
             },
             "anchor": {
-              "$": "aedb67af274075638956c89ec64bb4efe"
+              "$": "a879eef76169c4d5b093a564ed1b37144"
             },
             "arglist": {
-              "$": "(QWidget *parent, DialogType type, const QString &text, const QString &title=QString(), const KGuiItem &primaryAction=KStandardGuiItem::yes(), const KGuiItem &secondaryAction=KStandardGuiItem::no(), const KGuiItem &cancelAction=KStandardGuiItem::cancel(), const QString &dontShowAskAgainName=QString(), Options options=Notify)"
+              "$": "(QWidget *parent, DialogType type, const QString &text, const QString &title, const KGuiItem &primaryAction, const KGuiItem &secondaryAction, const KGuiItem &cancelAction=KStandardGuiItem::cancel(), const QString &dontShowAskAgainName=QString(), Options options=Notify)"
             }
           },
           {
@@ -24104,10 +24196,10 @@
               "$": "namespaceKMessageBox.html"
             },
             "anchor": {
-              "$": "a5964ed7039a5a3e4d8edd6351cffa0bb"
+              "$": "a34a838067e0eb71d9fb9708ac3f36a8d"
             },
             "arglist": {
-              "$": "(WId parent_id, DialogType type, const QString &text, const QString &title=QString(), const KGuiItem &primaryAction=KStandardGuiItem::yes(), const KGuiItem &secondaryAction=KStandardGuiItem::no(), const KGuiItem &cancelAction=KStandardGuiItem::cancel(), const QString &dontShowAskAgainName=QString(), Options options=Notify)"
+              "$": "(WId parent_id, DialogType type, const QString &text, const QString &title, const KGuiItem &primaryAction, const KGuiItem &secondaryAction, const KGuiItem &cancelAction=KStandardGuiItem::cancel(), const QString &dontShowAskAgainName=QString(), Options options=Notify)"
             }
           },
           {
@@ -24221,114 +24313,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "questionYesNo"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a2bf4519c7bf4ca308afb2f1625287e67"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "questionYesNoCancel"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a88748c3ff1dfe41632c40b5c4719261c"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const KGuiItem &buttonCancel=KStandardGuiItem::cancel(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "questionYesNoCancelWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a20d879a93bc1937f0904eadc1b233f03"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const KGuiItem &buttonCancel=KStandardGuiItem::cancel(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "questionYesNoList"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "ae82ce0adc373bac57e9e0f69799a0a32"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QStringList &strlist, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "questionYesNoListWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a4de1143f12065a878a038d603f3af06a"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QStringList &strlist, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "questionYesNoWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "acd9feac655f333ae598084273283e5d4"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "void"
             },
             "name": {
@@ -24368,24 +24352,6 @@
               "$": "void"
             },
             "name": {
-              "$": "saveDontShowAgainYesNo"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a38083cf5201b08dbc39f214a602a211e"
-            },
-            "arglist": {
-              "$": "(const QString &dontShowAgainName, ButtonCode result)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setDontShowAgainConfig"
             },
             "anchorfile": {
@@ -24414,24 +24380,6 @@
             },
             "arglist": {
               "$": "(KMessageBoxDontAskAgainInterface *dontAskAgainInterface)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setDontShowAskAgainConfig"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a1b9b292cd52abfb96de9f5f0005eca89"
-            },
-            "arglist": {
-              "$": "(KConfig *cfg)"
             }
           },
           {
@@ -24486,78 +24434,6 @@
             },
             "arglist": {
               "$": "(const QString &dontShowAgainName, ButtonCode &result)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "shouldBeShownYesNo"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a42977c2f9bdacc43dd65801a8fa264d9"
-            },
-            "arglist": {
-              "$": "(const QString &dontShowAgainName, ButtonCode &result)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "sorry"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a90b4bf192f2c354d080108c17006c503"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QString &title, const KGuiItem &buttonOk, Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "sorry"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a4c09b8bb1fb2c1f0c665b5ec4972464e"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QString &title=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "sorryWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a0cd39106d5cdf7f859fc0b66806d5de5"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QString &title=QString(), Options options=Notify)"
             }
           },
           {
@@ -24793,150 +24669,6 @@
             "arglist": {
               "$": "(WId parent_id, const QString &text, const QString &title, const KGuiItem &primaryAction, const KGuiItem &secondaryAction, const QString &dontAskAgainName=QString(), Options options=Options(Notify|Dangerous))"
             }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "warningYesNo"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "ad7b0f047ce829984c192bdf8583e2a20"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const QString &dontAskAgainName=QString(), Options options=Options(Notify|Dangerous))"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "warningYesNoCancel"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "aed60f8fa39fca4643dde7de6fe539ced"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const KGuiItem &buttonCancel=KStandardGuiItem::cancel(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "warningYesNoCancelList"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a765e2807e2868e1a6ab92228d136e2a0"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QStringList &strlist, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const KGuiItem &buttonCancel=KStandardGuiItem::cancel(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "warningYesNoCancelListWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "ac4e570b59b3b30291984e59528973acd"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QStringList &strlist, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const KGuiItem &buttonCancel=KStandardGuiItem::cancel(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "warningYesNoCancelWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a4aa75a15987b7a8f6d91c2d64bd75003"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const KGuiItem &buttonCancel=KStandardGuiItem::cancel(), const QString &dontAskAgainName=QString(), Options options=Notify)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "warningYesNoList"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a6b3b3050629d632128dbc9e0dd1c13d5"
-            },
-            "arglist": {
-              "$": "(QWidget *parent, const QString &text, const QStringList &strlist, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const QString &dontAskAgainName=QString(), Options options=Options(Notify|Dangerous))"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "warningYesNoListWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "ad95f26c1d9fa13c39dce2270b2ef5d3e"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QStringList &strlist, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const QString &dontAskAgainName=QString(), Options options=Options(Notify|Dangerous))"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "ButtonCode"
-            },
-            "name": {
-              "$": "warningYesNoWId"
-            },
-            "anchorfile": {
-              "$": "namespaceKMessageBox.html"
-            },
-            "anchor": {
-              "$": "a56a9ac71ab75beedd79b321a5e7c363c"
-            },
-            "arglist": {
-              "$": "(WId parent_id, const QString &text, const QString &title=QString(), const KGuiItem &buttonYes=KStandardGuiItem::yes(), const KGuiItem &buttonNo=KStandardGuiItem::no(), const QString &dontAskAgainName=QString(), Options options=Options(Notify|Dangerous))"
-            }
           }
         ]
       },
@@ -24987,46 +24719,6 @@
             },
             "anchor": {
               "$": "a12b808c4d52febcbe21429db226c15aa"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumeration",
-            "type": {},
-            "name": {
-              "$": "StandardItem"
-            },
-            "anchorfile": {
-              "$": "namespaceKStandardGuiItem.html"
-            },
-            "anchor": {
-              "$": "ad2b13db18fef771d220ba2845caf0bfd"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "Yes"
-            },
-            "anchorfile": {
-              "$": "namespaceKStandardGuiItem.html"
-            },
-            "anchor": {
-              "$": "ad2b13db18fef771d220ba2845caf0bfdae87d75b787242ce5419245277511e776"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "No"
-            },
-            "anchorfile": {
-              "$": "namespaceKStandardGuiItem.html"
-            },
-            "anchor": {
-              "$": "ad2b13db18fef771d220ba2845caf0bfda5a38abe8700e00ca2ec0414ece718dd1"
             },
             "arglist": {}
           },
@@ -25414,24 +25106,6 @@
               "$": "KGuiItem"
             },
             "name": {
-              "$": "no"
-            },
-            "anchorfile": {
-              "$": "namespaceKStandardGuiItem.html"
-            },
-            "anchor": {
-              "$": "a49452224e17d95e837ed65740a2a429b"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KGuiItem"
-            },
-            "name": {
               "$": "ok"
             },
             "anchorfile": {
@@ -25659,24 +25333,6 @@
             "arglist": {
               "$": "()"
             }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KGuiItem"
-            },
-            "name": {
-              "$": "yes"
-            },
-            "anchorfile": {
-              "$": "namespaceKStandardGuiItem.html"
-            },
-            "anchor": {
-              "$": "a19f34ee0c88920b88ed29ba02e66560e"
-            },
-            "arglist": {
-              "$": "()"
-            }
           }
         ]
       },
@@ -25754,8 +25410,28 @@
           "$": "KWidgetsAddons"
         },
         "filename": {
-          "$": "index"
-        }
+          "$": "index.html"
+        },
+        "subpage": [
+          {
+            "$": "Stars.html"
+          },
+          {
+            "$": "HTMIndexing.html"
+          }
+        ],
+        "docanchor": [
+          {
+            "@file": "index.html",
+            "@title": "KWidgetsAddons",
+            "$": "md__2builds_2websites_2api-kde-org_2sources_2kwidgetsaddons_2README"
+          },
+          {
+            "@file": "classKPasswordLineEdit.html",
+            "@title": "Usage Example",
+            "$": "usage"
+          }
+        ]
       }
     ]
   }

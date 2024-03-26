@@ -1,5 +1,7 @@
 {
   "tagfile": {
+    "@doxygen_version": "1.10.0",
+    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
       {
         "@kind": "class",
@@ -96,7 +98,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "KDecoration2::Decoration"
+              "$": "KDecoration2::Decoration *"
             },
             "name": {
               "$": "decoration"
@@ -105,7 +107,7 @@
               "$": "classKDecoration2_1_1DecoratedClient.html"
             },
             "anchor": {
-              "$": "a3d0c9f978feb535066c50f7fb3843733"
+              "$": "ad39164c95dd6ca0f3f691d96837393dc"
             },
             "arglist": {}
           },
@@ -583,9 +585,9 @@
           },
           {
             "@kind": "slot",
-            "@virtualness": "virtual",
+            "@virtualness": "pure",
             "type": {
-              "$": "virtual void"
+              "$": "virtual bool"
             },
             "name": {
               "$": "init"
@@ -594,10 +596,10 @@
               "$": "classKDecoration2_1_1Decoration.html"
             },
             "anchor": {
-              "$": "ae68b5afb58e9b8e25845d0921d349e5b"
+              "$": "af8e839067ea0f6c363396d63c37644b1"
             },
             "arglist": {
-              "$": "()"
+              "$": "()=0"
             }
           },
           {
@@ -739,7 +741,7 @@
               "$": "classKDecoration2_1_1Decoration.html"
             },
             "anchor": {
-              "$": "a0f85706b885b93733179a13261f2d963"
+              "$": "a807abf821d5bb713e470809db98262cb"
             },
             "arglist": {
               "$": "() const"
@@ -1079,7 +1081,7 @@
           {
             "@kind": "function",
             "type": {
-              "$": "QVector< DecorationButton * >"
+              "$": "QList< DecorationButton * >"
             },
             "name": {
               "$": "buttons"
@@ -1088,7 +1090,7 @@
               "$": "classKDecoration2_1_1DecorationButtonGroup.html"
             },
             "anchor": {
-              "$": "aade1fca6b836b6ccc1854de62be0f0fd"
+              "$": "a48610b124732355b5edfd7e97db283df"
             },
             "arglist": {
               "$": "() const"
@@ -1232,7 +1234,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "QVector< KDecoration2::DecorationButtonType >"
+              "$": "QList< KDecoration2::DecorationButtonType >"
             },
             "name": {
               "$": "decorationButtonsLeft"
@@ -1241,14 +1243,14 @@
               "$": "classKDecoration2_1_1DecorationSettings.html"
             },
             "anchor": {
-              "$": "a00408eac3f0af27e99db772ae36c6d07"
+              "$": "a45b824b7e46e956880e2e744a422f0a7"
             },
             "arglist": {}
           },
           {
             "@kind": "property",
             "type": {
-              "$": "QVector< KDecoration2::DecorationButtonType >"
+              "$": "QList< KDecoration2::DecorationButtonType >"
             },
             "name": {
               "$": "decorationButtonsRight"
@@ -1257,7 +1259,7 @@
               "$": "classKDecoration2_1_1DecorationSettings.html"
             },
             "anchor": {
-              "$": "a124b8da151b37eb9685c51e25b2dab28"
+              "$": "a0f65f7a504a320a5b5a70ec19ad74d56"
             },
             "arglist": {}
           },
@@ -1516,7 +1518,7 @@
             "$": "classKDecoration2_1_1DecorationThemeProvider.html"
           },
           "anchor": {
-            "$": "a24a699466506794c0ffb81d19e8a61fc"
+            "$": "a8eae1b5ca8b1f5a36f60f9ad99ffe1c6"
           },
           "arglist": {
             "$": "() const =0"
@@ -1757,6 +1759,11 @@
                 "@file": "namespaceKDecoration2.html",
                 "@anchor": "a9b8dd32a773fbf291f37bc345313622fa90589c47f06eb971d548591f23c285af",
                 "$": "Custom"
+              },
+              {
+                "@file": "namespaceKDecoration2.html",
+                "@anchor": "a9b8dd32a773fbf291f37bc345313622fa6ab9a295c00f945cf4881fd7667a0334",
+                "$": "Spacer"
               }
             ]
           }
@@ -1771,7 +1778,20 @@
           "$": "KDecoration2"
         },
         "filename": {
-          "$": "index"
+          "$": "index.html"
+        },
+        "subpage": [
+          {
+            "$": "Stars.html"
+          },
+          {
+            "$": "HTMIndexing.html"
+          }
+        ],
+        "docanchor": {
+          "@file": "index.html",
+          "@title": "KDecoration2",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2kdecoration_2README"
         }
       }
     ]

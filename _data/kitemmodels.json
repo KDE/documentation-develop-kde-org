@@ -1,5 +1,7 @@
 {
   "tagfile": {
+    "@doxygen_version": "1.10.0",
+    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
       {
         "@kind": "class",
@@ -51,322 +53,6 @@
         "base": {
           "$": "QAbstractListModel"
         }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KConcatenateRowsProxyModel"
-        },
-        "filename": {
-          "$": "classKConcatenateRowsProxyModel.html"
-        },
-        "base": {
-          "$": "QAbstractItemModel"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "KConcatenateRowsProxyModel"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "aea02e0679db4c1cb357107c5dd22a5f4"
-            },
-            "arglist": {
-              "$": "(QObject *parent=nullptr)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "~KConcatenateRowsProxyModel"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a8f6a2591b23cd1abf281f4d278ce2e2f"
-            },
-            "arglist": {
-              "$": "() override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Q_SCRIPTABLE void"
-            },
-            "name": {
-              "$": "addSourceModel"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "ae9dd4add39e2b1971c36e63ee39c5483"
-            },
-            "arglist": {
-              "$": "(QAbstractItemModel *sourceModel)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "columnCount"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a7be1a1a621e94d4d78eda0cd2f5e1bd2"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &parent=QModelIndex()) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QVariant"
-            },
-            "name": {
-              "$": "data"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a7020bdbed38bc36a701ad9a6d016281b"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &index, int role=Qt::DisplayRole) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Qt::ItemFlags"
-            },
-            "name": {
-              "$": "flags"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a46d2232aa391e6d593c5ef9e0090405e"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &index) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QVariant"
-            },
-            "name": {
-              "$": "headerData"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a02a71789abe5b3f1b94a556207585985"
-            },
-            "arglist": {
-              "$": "(int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QModelIndex"
-            },
-            "name": {
-              "$": "index"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a389e9c6f4a30db5b1a10c3c0b2b3e2a4"
-            },
-            "arglist": {
-              "$": "(int row, int column, const QModelIndex &parent=QModelIndex()) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QMap< int, QVariant >"
-            },
-            "name": {
-              "$": "itemData"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a616a5fe6e1456d17de6e78fd9d7fd4c2"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &proxyIndex) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QModelIndex"
-            },
-            "name": {
-              "$": "mapFromSource"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a57d67c52780238d94f0f51d2f147ffcd"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &sourceIndex) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QModelIndex"
-            },
-            "name": {
-              "$": "mapToSource"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a2a27fa66bc1a76e7869ff15ae672db27"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &proxyIndex) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QModelIndex"
-            },
-            "name": {
-              "$": "parent"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "aaca8a1f57cead6d5be1266873941d937"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &index) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Q_SCRIPTABLE void"
-            },
-            "name": {
-              "$": "removeSourceModel"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "ad744ed86fe908077ff0f6873fb74651a"
-            },
-            "arglist": {
-              "$": "(QAbstractItemModel *sourceModel)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QHash< int, QByteArray >"
-            },
-            "name": {
-              "$": "roleNames"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "ae3ec54db086ec1e682eff1d8cbbf224c"
-            },
-            "arglist": {
-              "$": "() const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "rowCount"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a99f2b92c20ef044a563f2060e965172d"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &parent=QModelIndex()) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "setData"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a2a19ed32f1a1267960b6a1d50242e90e"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &index, const QVariant &value, int role=Qt::DisplayRole) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QList< QAbstractItemModel * >"
-            },
-            "name": {
-              "$": "sources"
-            },
-            "anchorfile": {
-              "$": "classKConcatenateRowsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a005a1c12580faa02d0755a115fba7de9"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          }
-        ]
       },
       {
         "@kind": "class",
@@ -431,7 +117,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "QAbstractItemModel"
+              "$": "QAbstractItemModel *"
             },
             "name": {
               "$": "model"
@@ -440,7 +126,7 @@
               "$": "classKDescendantsProxyModel.html"
             },
             "anchor": {
-              "$": "a4c46a339af53ce16f9baca4cbd3ac201"
+              "$": "aeed765975babf2f99da437f04623ec21"
             },
             "arglist": {}
           },
@@ -681,24 +367,6 @@
               "$": "void"
             },
             "name": {
-              "$": "setRootIndex"
-            },
-            "anchorfile": {
-              "$": "classKDescendantsProxyModel.html"
-            },
-            "anchor": {
-              "$": "a538094968402a1f0d3508d6a9afa2119"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &index)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setSourceModel"
             },
             "anchorfile": {
@@ -860,10 +528,10 @@
               "$": "classKExtraColumnsProxyModel.html"
             },
             "anchor": {
-              "$": "ac9ff6d56fb14f94eb71c120c7a662add"
+              "$": "aab23bc2d91214d0c4e5844a83550a840"
             },
             "arglist": {
-              "$": "(const QModelIndex &parent, int row, int extraColumn, const QVector< int > &roles)"
+              "$": "(const QModelIndex &parent, int row, int extraColumn, const QList< int > &roles)"
             }
           },
           {
@@ -1581,10 +1249,10 @@
               "$": "classKRearrangeColumnsProxyModel.html"
             },
             "anchor": {
-              "$": "a3bdeceba3be0efaa809820b4a62ffa02"
+              "$": "ab68d2a0155500c72032d3be656dc3447"
             },
             "arglist": {
-              "$": "(const QVector< int > &columns)"
+              "$": "(const QList< int > &columns)"
             }
           },
           {
@@ -1628,120 +1296,49 @@
       {
         "@kind": "class",
         "name": {
-          "$": "KRecursiveFilterProxyModel"
+          "$": "KRoleNames"
         },
         "filename": {
-          "$": "classKRecursiveFilterProxyModel.html"
+          "$": "classKRoleNames.html"
         },
         "base": {
-          "$": "QSortFilterProxyModel"
+          "$": "QObject"
         },
         "member": [
           {
             "@kind": "function",
-            "type": {},
+            "type": {
+              "$": "Q_INVOKABLE int"
+            },
             "name": {
-              "$": "KRecursiveFilterProxyModel"
+              "$": "role"
             },
             "anchorfile": {
-              "$": "classKRecursiveFilterProxyModel.html"
+              "$": "classKRoleNames.html"
             },
             "anchor": {
-              "$": "afe526b5d13ee6a4f903b10cc685fe33c"
+              "$": "a3ec733cc1387fe41ba01ef4134058e0c"
             },
             "arglist": {
-              "$": "(QObject *parent=nullptr)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "~KRecursiveFilterProxyModel"
-            },
-            "anchorfile": {
-              "$": "classKRecursiveFilterProxyModel.html"
-            },
-            "anchor": {
-              "$": "ab839e3cb51b923425917bb43bd55679f"
-            },
-            "arglist": {
-              "$": "() override"
+              "$": "(const QByteArray &roleName) const"
             }
           },
           {
             "@kind": "function",
             "type": {
-              "$": "QModelIndexList"
+              "$": "Q_INVOKABLE QByteArray"
             },
             "name": {
-              "$": "match"
+              "$": "roleName"
             },
             "anchorfile": {
-              "$": "classKRecursiveFilterProxyModel.html"
+              "$": "classKRoleNames.html"
             },
             "anchor": {
-              "$": "a2bed7d16ff319e7241fd03158bcb6f07"
+              "$": "a728c1070f7e7f01023a4304600a7d325"
             },
             "arglist": {
-              "$": "(const QModelIndex &start, int role, const QVariant &value, int hits=1, Qt::MatchFlags flags=Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap)) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setSourceModel"
-            },
-            "anchorfile": {
-              "$": "classKRecursiveFilterProxyModel.html"
-            },
-            "anchor": {
-              "$": "a8d1dde01d9009e756ac0f5c03046bb94"
-            },
-            "arglist": {
-              "$": "(QAbstractItemModel *model) override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual bool"
-            },
-            "name": {
-              "$": "acceptRow"
-            },
-            "anchorfile": {
-              "$": "classKRecursiveFilterProxyModel.html"
-            },
-            "anchor": {
-              "$": "aeee9b6a0b2cfef9f70a00e86e55ab3ee"
-            },
-            "arglist": {
-              "$": "(int sourceRow, const QModelIndex &sourceParent) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "filterAcceptsRow"
-            },
-            "anchorfile": {
-              "$": "classKRecursiveFilterProxyModel.html"
-            },
-            "anchor": {
-              "$": "a3341d88e958ffd798e04a42cb00a7a01"
-            },
-            "arglist": {
-              "$": "(int sourceRow, const QModelIndex &sourceParent) const override"
+              "$": "(int role) const"
             }
           }
         ]
@@ -1934,7 +1531,20 @@
           "$": "KItemModels"
         },
         "filename": {
-          "$": "index"
+          "$": "index.html"
+        },
+        "subpage": [
+          {
+            "$": "Stars.html"
+          },
+          {
+            "$": "HTMIndexing.html"
+          }
+        ],
+        "docanchor": {
+          "@file": "index.html",
+          "@title": "KItemModels",
+          "$": "md__2builds_2websites_2api-kde-org_2sources_2kitemmodels_2README"
         }
       }
     ]

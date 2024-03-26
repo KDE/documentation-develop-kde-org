@@ -110,22 +110,20 @@
           {
             "@kind": "function",
             "@protection": "public",
-            "@virtualness": "virtual",
+            "@virtualness": "non",
             "@static": "no",
-            "type": {
-              "$": "virtual "
-            },
+            "type": {},
             "name": {
-              "$": "~QDBusAbstractAdaptor"
+              "$": "Q_NOREPLY"
             },
             "anchorfile": {
               "$": "qdbusabstractadaptor.html"
             },
             "anchor": {
-              "$": "dtor.QDBusAbstractAdaptor"
+              "$": "Q_NOREPLY"
             },
             "arglist": {
-              "$": "()"
+              "$": "Q_NOREPLY"
             }
           },
           {
@@ -151,6 +149,27 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual "
+            },
+            "name": {
+              "$": "~QDBusAbstractAdaptor"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractadaptor.html"
+            },
+            "anchor": {
+              "$": "dtor.QDBusAbstractAdaptor"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
             "@protection": "protected",
             "@virtualness": "non",
             "@static": "no",
@@ -168,25 +187,6 @@
             },
             "arglist": {
               "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "Q_NOREPLY"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractadaptor.html"
-            },
-            "anchor": {
-              "$": "Q_NOREPLY"
-            },
-            "arglist": {
-              "$": "Q_NOREPLY"
             }
           }
         ]
@@ -206,190 +206,22 @@
           {
             "@kind": "function",
             "@protection": "public",
-            "@virtualness": "virtual",
-            "@static": "no",
-            "type": {
-              "$": "virtual "
-            },
-            "name": {
-              "$": "~QDBusAbstractInterface"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractinterface.html"
-            },
-            "anchor": {
-              "$": "dtor.QDBusAbstractInterface"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "bool"
+              "$": "QDBusMessage"
             },
             "name": {
-              "$": "isValid"
+              "$": "call"
             },
             "anchorfile": {
               "$": "qdbusabstractinterface.html"
             },
             "anchor": {
-              "$": "isValid"
+              "$": "call-3"
             },
             "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusConnection"
-            },
-            "name": {
-              "$": "connection"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractinterface.html"
-            },
-            "anchor": {
-              "$": "connection"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "service"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractinterface.html"
-            },
-            "anchor": {
-              "$": "service"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "path"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractinterface.html"
-            },
-            "anchor": {
-              "$": "path"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "interface"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractinterface.html"
-            },
-            "anchor": {
-              "$": "interface"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusError"
-            },
-            "name": {
-              "$": "lastError"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractinterface.html"
-            },
-            "anchor": {
-              "$": "lastError"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setTimeout"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractinterface.html"
-            },
-            "anchor": {
-              "$": "setTimeout"
-            },
-            "arglist": {
-              "$": "(int timeout)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "timeout"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractinterface.html"
-            },
-            "anchor": {
-              "$": "timeout"
-            },
-            "arglist": {
-              "$": "() const const"
+              "$": "(QDBus::CallMode mode, const QString &method, Args &&... args)"
             }
           },
           {
@@ -422,27 +254,6 @@
               "$": "QDBusMessage"
             },
             "name": {
-              "$": "call"
-            },
-            "anchorfile": {
-              "$": "qdbusabstractinterface.html"
-            },
-            "anchor": {
-              "$": "call-3"
-            },
-            "arglist": {
-              "$": "(QDBus::CallMode mode, const QString &method, Args &&... args)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusMessage"
-            },
-            "name": {
               "$": "callWithArgumentList"
             },
             "anchorfile": {
@@ -453,6 +264,48 @@
             },
             "arglist": {
               "$": "(QDBus::CallMode mode, const QString &method, const QList<QVariant> &args)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusPendingCall"
+            },
+            "name": {
+              "$": "asyncCall"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractinterface.html"
+            },
+            "anchor": {
+              "$": "asyncCall-1"
+            },
+            "arglist": {
+              "$": "(const QString &method, Args &&... args)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusPendingCall"
+            },
+            "name": {
+              "$": "asyncCallWithArgumentList"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractinterface.html"
+            },
+            "anchor": {
+              "$": "asyncCallWithArgumentList"
+            },
+            "arglist": {
+              "$": "(const QString &method, const QList<QVariant> &args)"
             }
           },
           {
@@ -503,19 +356,40 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QDBusPendingCall"
+              "$": "void"
             },
             "name": {
-              "$": "asyncCall"
+              "$": "setTimeout"
             },
             "anchorfile": {
               "$": "qdbusabstractinterface.html"
             },
             "anchor": {
-              "$": "asyncCall-1"
+              "$": "setTimeout"
             },
             "arglist": {
-              "$": "(const QString &method, Args &&... args)"
+              "$": "(int timeout)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual "
+            },
+            "name": {
+              "$": "~QDBusAbstractInterface"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractinterface.html"
+            },
+            "anchor": {
+              "$": "dtor.QDBusAbstractInterface"
+            },
+            "arglist": {
+              "$": "()"
             }
           },
           {
@@ -524,34 +398,148 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QDBusPendingCall"
+              "$": "QDBusConnection"
             },
             "name": {
-              "$": "asyncCallWithArgumentList"
+              "$": "connection"
             },
             "anchorfile": {
               "$": "qdbusabstractinterface.html"
             },
             "anchor": {
-              "$": "asyncCallWithArgumentList"
+              "$": "connection"
             },
             "arglist": {
-              "$": "(const QString &method, const QList<QVariant> &args)"
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusError"
+            },
+            "name": {
+              "$": "lastError"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractinterface.html"
+            },
+            "anchor": {
+              "$": "lastError"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "interface"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractinterface.html"
+            },
+            "anchor": {
+              "$": "interface"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "path"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractinterface.html"
+            },
+            "anchor": {
+              "$": "path"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "service"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractinterface.html"
+            },
+            "anchor": {
+              "$": "service"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isValid"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractinterface.html"
+            },
+            "anchor": {
+              "$": "isValid"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "timeout"
+            },
+            "anchorfile": {
+              "$": "qdbusabstractinterface.html"
+            },
+            "anchor": {
+              "$": "timeout"
+            },
+            "arglist": {
+              "$": "() const const"
             }
           }
         ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "QDBusAbstractInterfaceBase"
-        },
-        "filename": {
-          "$": "qdbusabstractinterfacebase.html"
-        },
-        "base": {
-          "$": "QObject"
-        }
       },
       {
         "@kind": "class",
@@ -670,126 +658,6 @@
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusArgument"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "QDBusArgument"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusArgument"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "QDBusArgument-1"
-            },
-            "arglist": {
-              "$": "(const QDBusArgument &other)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusArgument &"
-            },
-            "name": {
-              "$": "operator="
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "operator-eq-1"
-            },
-            "arglist": {
-              "$": "(const QDBusArgument &other)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "~QDBusArgument"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "dtor.QDBusArgument"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "swap"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "swap"
-            },
-            "arglist": {
-              "$": "(QDBusArgument &other)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusArgument &"
-            },
-            "name": {
-              "$": "operator<<"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "operator-lt-lt"
-            },
-            "arglist": {
-              "$": "(uchar arg)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
             "type": {
               "$": "QDBusArgument &"
             },
@@ -821,10 +689,10 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "operator-lt-lt-2"
+              "$": "operator-lt-lt-12"
             },
             "arglist": {
-              "$": "(short arg)"
+              "$": "(const QByteArray &arg)"
             }
           },
           {
@@ -842,10 +710,73 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "operator-lt-lt-3"
+              "$": "operator-lt-lt-10"
             },
             "arglist": {
-              "$": "(ushort arg)"
+              "$": "(const QDBusVariant &arg)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusArgument &"
+            },
+            "name": {
+              "$": "operator<<"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "operator-lt-lt-9"
+            },
+            "arglist": {
+              "$": "(const QString &arg)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusArgument &"
+            },
+            "name": {
+              "$": "operator<<"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "operator-lt-lt-11"
+            },
+            "arglist": {
+              "$": "(const QStringList &arg)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusArgument &"
+            },
+            "name": {
+              "$": "operator<<"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "operator-lt-lt-8"
+            },
+            "arglist": {
+              "$": "(double arg)"
             }
           },
           {
@@ -867,27 +798,6 @@
             },
             "arglist": {
               "$": "(int arg)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusArgument &"
-            },
-            "name": {
-              "$": "operator<<"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "operator-lt-lt-5"
-            },
-            "arglist": {
-              "$": "(uint arg)"
             }
           },
           {
@@ -947,52 +857,10 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "operator-lt-lt-8"
+              "$": "operator-lt-lt-2"
             },
             "arglist": {
-              "$": "(double arg)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusArgument &"
-            },
-            "name": {
-              "$": "operator<<"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "operator-lt-lt-9"
-            },
-            "arglist": {
-              "$": "(const QString &arg)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusArgument &"
-            },
-            "name": {
-              "$": "operator<<"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "operator-lt-lt-10"
-            },
-            "arglist": {
-              "$": "(const QDBusVariant &arg)"
+              "$": "(short arg)"
             }
           },
           {
@@ -1013,7 +881,7 @@
               "$": "operator-lt-lt"
             },
             "arglist": {
-              "$": "(const QStringList &arg)"
+              "$": "(uchar arg)"
             }
           },
           {
@@ -1031,10 +899,195 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "operator-lt-lt-11"
+              "$": "operator-lt-lt-5"
             },
             "arglist": {
-              "$": "(const QByteArray &arg)"
+              "$": "(uint arg)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusArgument &"
+            },
+            "name": {
+              "$": "operator<<"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "operator-lt-lt-3"
+            },
+            "arglist": {
+              "$": "(ushort arg)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusArgument &"
+            },
+            "name": {
+              "$": "operator="
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "operator-eq-1"
+            },
+            "arglist": {
+              "$": "(const QDBusArgument &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QDBusArgument"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "QDBusArgument"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QDBusArgument"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "QDBusArgument-1"
+            },
+            "arglist": {
+              "$": "(const QDBusArgument &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QMetaType"
+            },
+            "name": {
+              "$": "qDBusRegisterMetaType"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "qDBusRegisterMetaType"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "T"
+            },
+            "name": {
+              "$": "qdbus_cast"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "qdbus_cast"
+            },
+            "arglist": {
+              "$": "(const QDBusArgument &arg)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "beginArray"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "beginArray-1"
+            },
+            "arglist": {
+              "$": "(QMetaType id)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "beginMap"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "beginMap-1"
+            },
+            "arglist": {
+              "$": "(QMetaType keyMetaType, QMetaType valueMetaType)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "beginMapEntry"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "beginMapEntry"
+            },
+            "arglist": {
+              "$": "()"
             }
           },
           {
@@ -1053,6 +1106,69 @@
             },
             "anchor": {
               "$": "beginStructure"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "endArray"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "endArray"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "endMap"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "endMap"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "endMapEntry"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "endMapEntry"
             },
             "arglist": {
               "$": "()"
@@ -1088,16 +1204,16 @@
               "$": "void"
             },
             "name": {
-              "$": "beginArray"
+              "$": "swap"
             },
             "anchorfile": {
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "beginArray"
+              "$": "swap"
             },
             "arglist": {
-              "$": "(int id)"
+              "$": "(QDBusArgument &other)"
             }
           },
           {
@@ -1105,17 +1221,15 @@
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
-            "type": {
-              "$": "void"
-            },
+            "type": {},
             "name": {
-              "$": "endArray"
+              "$": "~QDBusArgument"
             },
             "anchorfile": {
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "endArray"
+              "$": "dtor.QDBusArgument"
             },
             "arglist": {
               "$": "()"
@@ -1127,91 +1241,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "beginMap"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "beginMap"
-            },
-            "arglist": {
-              "$": "(int kid, int vid)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "endMap"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "endMap"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "beginMapEntry"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "beginMapEntry"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "endMapEntry"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "endMapEntry"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusArgument::ElementType"
+              "$": "ElementType"
             },
             "name": {
               "$": "currentType"
@@ -1232,6 +1262,48 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "asVariant"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "asVariant"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "atEnd"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "atEnd"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "const QDBusArgument &"
             },
             "name": {
@@ -1241,10 +1313,73 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "operator-gt-gt"
+              "$": "operator-gt-gt-12"
             },
             "arglist": {
-              "$": "(uchar &arg) const const"
+              "$": "(QByteArray &arg) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "const QDBusArgument &"
+            },
+            "name": {
+              "$": "operator>>"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "operator-gt-gt-10"
+            },
+            "arglist": {
+              "$": "(QDBusVariant &arg) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "const QDBusArgument &"
+            },
+            "name": {
+              "$": "operator>>"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "operator-gt-gt-9"
+            },
+            "arglist": {
+              "$": "(QString &arg) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "const QDBusArgument &"
+            },
+            "name": {
+              "$": "operator>>"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "operator-gt-gt-11"
+            },
+            "arglist": {
+              "$": "(QStringList &arg) const const"
             }
           },
           {
@@ -1283,31 +1418,10 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "operator-gt-gt-2"
+              "$": "operator-gt-gt-8"
             },
             "arglist": {
-              "$": "(short &arg) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "const QDBusArgument &"
-            },
-            "name": {
-              "$": "operator>>"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "operator-gt-gt-3"
-            },
-            "arglist": {
-              "$": "(ushort &arg) const const"
+              "$": "(double &arg) const const"
             }
           },
           {
@@ -1329,27 +1443,6 @@
             },
             "arglist": {
               "$": "(int &arg) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "const QDBusArgument &"
-            },
-            "name": {
-              "$": "operator>>"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "operator-gt-gt-5"
-            },
-            "arglist": {
-              "$": "(uint &arg) const const"
             }
           },
           {
@@ -1409,52 +1502,10 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "operator-gt-gt-8"
+              "$": "operator-gt-gt-2"
             },
             "arglist": {
-              "$": "(double &arg) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "const QDBusArgument &"
-            },
-            "name": {
-              "$": "operator>>"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "operator-gt-gt-9"
-            },
-            "arglist": {
-              "$": "(QString &arg) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "const QDBusArgument &"
-            },
-            "name": {
-              "$": "operator>>"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "operator-gt-gt-10"
-            },
-            "arglist": {
-              "$": "(QDBusVariant &arg) const const"
+              "$": "(short &arg) const const"
             }
           },
           {
@@ -1475,7 +1526,7 @@
               "$": "operator-gt-gt"
             },
             "arglist": {
-              "$": "(QStringList &arg) const const"
+              "$": "(uchar &arg) const const"
             }
           },
           {
@@ -1493,10 +1544,10 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "operator-gt-gt-11"
+              "$": "operator-gt-gt-5"
             },
             "arglist": {
-              "$": "(QByteArray &arg) const const"
+              "$": "(uint &arg) const const"
             }
           },
           {
@@ -1505,40 +1556,19 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "void"
+              "$": "const QDBusArgument &"
             },
             "name": {
-              "$": "beginStructure"
+              "$": "operator>>"
             },
             "anchorfile": {
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "beginStructure-1"
+              "$": "operator-gt-gt-3"
             },
             "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "endStructure"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "endStructure-1"
-            },
-            "arglist": {
-              "$": "() const const"
+              "$": "(ushort &arg) const const"
             }
           },
           {
@@ -1556,28 +1586,7 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "beginArray-1"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "endArray"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "endArray-1"
+              "$": "beginArray-2"
             },
             "arglist": {
               "$": "() const const"
@@ -1598,28 +1607,7 @@
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "beginMap-1"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "endMap"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "endMap-1"
+              "$": "beginMap-2"
             },
             "arglist": {
               "$": "() const const"
@@ -1655,6 +1643,69 @@
               "$": "void"
             },
             "name": {
+              "$": "beginStructure"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "beginStructure-1"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "endArray"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "endArray-1"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "endMap"
+            },
+            "anchorfile": {
+              "$": "qdbusargument.html"
+            },
+            "anchor": {
+              "$": "endMap-1"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "endMapEntry"
             },
             "anchorfile": {
@@ -1673,82 +1724,19 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "bool"
+              "$": "void"
             },
             "name": {
-              "$": "atEnd"
+              "$": "endStructure"
             },
             "anchorfile": {
               "$": "qdbusargument.html"
             },
             "anchor": {
-              "$": "atEnd"
+              "$": "endStructure-1"
             },
             "arglist": {
               "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QVariant"
-            },
-            "name": {
-              "$": "asVariant"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "asVariant"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "T"
-            },
-            "name": {
-              "$": "qdbus_cast"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "qdbus_cast"
-            },
-            "arglist": {
-              "$": "(const QDBusArgument &arg, T *)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qDBusRegisterMetaType"
-            },
-            "anchorfile": {
-              "$": "qdbusargument.html"
-            },
-            "anchor": {
-              "$": "qDBusRegisterMetaType"
-            },
-            "arglist": {
-              "$": "()"
             }
           }
         ]
@@ -1810,6 +1798,31 @@
             },
             "anchor": {
               "$": "BusType-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "ConnectionCapability"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "ConnectionCapability-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "UnixFileDescriptorPassing"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "ConnectionCapability-enum"
             },
             "arglist": {}
           },
@@ -2047,20 +2060,6 @@
             "arglist": {}
           },
           {
-            "@kind": "typedef",
-            "@type": "QDBusConnection::RegisterOption",
-            "name": {
-              "$": "RegisterOptions"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "RegisterOption-enum"
-            },
-            "arglist": {}
-          },
-          {
             "@kind": "enumeration",
             "name": {
               "$": "UnregisterMode"
@@ -2099,94 +2098,24 @@
             "arglist": {}
           },
           {
-            "@kind": "typedef",
-            "@type": "QDBusConnection::VirtualObjectRegisterOption",
-            "name": {
-              "$": "VirtualObjectRegisterOptions"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "VirtualObjectRegisterOption-enum"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumeration",
-            "name": {
-              "$": "ConnectionCapability"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "ConnectionCapability-enum"
-            }
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "UnixFileDescriptorPassing"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "ConnectionCapability-enum"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "typedef",
-            "@type": "QDBusConnection::ConnectionCapability",
-            "name": {
-              "$": "ConnectionCapabilities"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "ConnectionCapability-enum"
-            },
-            "arglist": {}
-          },
-          {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "no",
-            "type": {},
+            "@static": "yes",
+            "type": {
+              "$": "QByteArray"
+            },
             "name": {
-              "$": "QDBusConnection"
+              "$": "localMachineId"
             },
             "anchorfile": {
               "$": "qdbusconnection.html"
             },
             "anchor": {
-              "$": "QDBusConnection"
+              "$": "localMachineId"
             },
             "arglist": {
-              "$": "(const QString &name)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusConnection"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "QDBusConnection-1"
-            },
-            "arglist": {
-              "$": "(const QDBusConnection &other)"
+              "$": "()"
             }
           },
           {
@@ -2214,16 +2143,102 @@
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "no",
-            "type": {},
+            "@static": "yes",
+            "type": {
+              "$": "QDBusConnection"
+            },
             "name": {
-              "$": "~QDBusConnection"
+              "$": "connectToBus"
             },
             "anchorfile": {
               "$": "qdbusconnection.html"
             },
             "anchor": {
-              "$": "dtor.QDBusConnection"
+              "$": "connectToBus"
+            },
+            "arglist": {
+              "$": "(BusType type, const QString &name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QDBusConnection"
+            },
+            "name": {
+              "$": "connectToBus"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "connectToBus-1"
+            },
+            "arglist": {
+              "$": "(const QString &address, const QString &name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QDBusConnection"
+            },
+            "name": {
+              "$": "connectToPeer"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "connectToPeer"
+            },
+            "arglist": {
+              "$": "(const QString &address, const QString &name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QDBusConnection"
+            },
+            "name": {
+              "$": "sessionBus"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "sessionBus"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QDBusConnection"
+            },
+            "name": {
+              "$": "systemBus"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "systemBus"
             },
             "arglist": {
               "$": "()"
@@ -2234,20 +2249,18 @@
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
-            "type": {
-              "$": "void"
-            },
+            "type": {},
             "name": {
-              "$": "swap"
+              "$": "QDBusConnection"
             },
             "anchorfile": {
               "$": "qdbusconnection.html"
             },
             "anchor": {
-              "$": "swap"
+              "$": "QDBusConnection-1"
             },
             "arglist": {
-              "$": "(QDBusConnection &other)"
+              "$": "(const QDBusConnection &other)"
             }
           },
           {
@@ -2255,209 +2268,18 @@
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
-            "type": {
-              "$": "bool"
-            },
+            "type": {},
             "name": {
-              "$": "isConnected"
+              "$": "QDBusConnection"
             },
             "anchorfile": {
               "$": "qdbusconnection.html"
             },
             "anchor": {
-              "$": "isConnected"
+              "$": "QDBusConnection"
             },
             "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "baseService"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "baseService"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusError"
-            },
-            "name": {
-              "$": "lastError"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "lastError"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "name"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "name"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusConnection::ConnectionCapabilities"
-            },
-            "name": {
-              "$": "connectionCapabilities"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "connectionCapabilities"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "send"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "send"
-            },
-            "arglist": {
-              "$": "(const QDBusMessage &message) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "callWithCallback"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "callWithCallback"
-            },
-            "arglist": {
-              "$": "(const QDBusMessage &message, QObject *receiver, const char *returnMethod, const char *errorMethod, int timeout) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "callWithCallback"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection-obsolete.html"
-            },
-            "anchor": {
-              "$": "callWithCallback-1"
-            },
-            "arglist": {
-              "$": "(const QDBusMessage &message, QObject *receiver, const char *returnMethod, int timeout) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusMessage"
-            },
-            "name": {
-              "$": "call"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "call"
-            },
-            "arglist": {
-              "$": "(const QDBusMessage &message, QDBus::CallMode mode, int timeout) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusPendingCall"
-            },
-            "name": {
-              "$": "asyncCall"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "asyncCall"
-            },
-            "arglist": {
-              "$": "(const QDBusMessage &message, int timeout) const const"
+              "$": "(const QString &name)"
             }
           },
           {
@@ -2604,7 +2426,7 @@
               "$": "registerObject"
             },
             "arglist": {
-              "$": "(const QString &path, QObject *object, QDBusConnection::RegisterOptions options)"
+              "$": "(const QString &path, QObject *object, RegisterOptions options)"
             }
           },
           {
@@ -2625,7 +2447,112 @@
               "$": "registerObject-1"
             },
             "arglist": {
-              "$": "(const QString &path, const QString &interface, QObject *object, QDBusConnection::RegisterOptions options)"
+              "$": "(const QString &path, const QString &interface, QObject *object, RegisterOptions options)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "registerService"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "registerService"
+            },
+            "arglist": {
+              "$": "(const QString &serviceName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "unregisterService"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "unregisterService"
+            },
+            "arglist": {
+              "$": "(const QString &serviceName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "disconnectFromBus"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "disconnectFromBus"
+            },
+            "arglist": {
+              "$": "(const QString &name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "disconnectFromPeer"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "disconnectFromPeer"
+            },
+            "arglist": {
+              "$": "(const QString &name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "swap"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "swap"
+            },
+            "arglist": {
+              "$": "(QDBusConnection &other)"
             }
           },
           {
@@ -2646,7 +2573,131 @@
               "$": "unregisterObject"
             },
             "arglist": {
-              "$": "(const QString &path, QDBusConnection::UnregisterMode mode)"
+              "$": "(const QString &path, UnregisterMode mode)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "~QDBusConnection"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "dtor.QDBusConnection"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "ConnectionCapabilities"
+            },
+            "name": {
+              "$": "connectionCapabilities"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "connectionCapabilities"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusConnectionInterface *"
+            },
+            "name": {
+              "$": "interface"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "interface"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusError"
+            },
+            "name": {
+              "$": "lastError"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "lastError"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusMessage"
+            },
+            "name": {
+              "$": "call"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "call"
+            },
+            "arglist": {
+              "$": "(const QDBusMessage &message, QDBus::CallMode mode, int timeout) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusPendingCall"
+            },
+            "name": {
+              "$": "asyncCall"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "asyncCall"
+            },
+            "arglist": {
+              "$": "(const QDBusMessage &message, int timeout) const const"
             }
           },
           {
@@ -2676,58 +2727,16 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "bool"
+              "$": "QString"
             },
             "name": {
-              "$": "registerService"
+              "$": "baseService"
             },
             "anchorfile": {
               "$": "qdbusconnection.html"
             },
             "anchor": {
-              "$": "registerService"
-            },
-            "arglist": {
-              "$": "(const QString &serviceName)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "unregisterService"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "unregisterService"
-            },
-            "arglist": {
-              "$": "(const QString &serviceName)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusConnectionInterface *"
-            },
-            "name": {
-              "$": "interface"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "interface"
+              "$": "baseService"
             },
             "arglist": {
               "$": "() const const"
@@ -2737,190 +2746,148 @@
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "yes",
+            "@static": "no",
             "type": {
-              "$": "QDBusConnection"
+              "$": "QString"
             },
             "name": {
-              "$": "connectToBus"
+              "$": "name"
             },
             "anchorfile": {
               "$": "qdbusconnection.html"
             },
             "anchor": {
-              "$": "connectToBus"
+              "$": "name"
             },
             "arglist": {
-              "$": "(QDBusConnection::BusType type, const QString &name)"
+              "$": "() const const"
             }
           },
           {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "yes",
+            "@static": "no",
             "type": {
-              "$": "QDBusConnection"
+              "$": "bool"
             },
             "name": {
-              "$": "connectToBus"
+              "$": "callWithCallback"
             },
             "anchorfile": {
               "$": "qdbusconnection.html"
             },
             "anchor": {
-              "$": "connectToBus-1"
+              "$": "callWithCallback"
             },
             "arglist": {
-              "$": "(const QString &address, const QString &name)"
+              "$": "(const QDBusMessage &message, QObject *receiver, const char *returnMethod, const char *errorMethod, int timeout) const const"
             }
           },
           {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "yes",
+            "@static": "no",
             "type": {
-              "$": "QDBusConnection"
+              "$": "bool"
             },
             "name": {
-              "$": "connectToPeer"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "connectToPeer"
-            },
-            "arglist": {
-              "$": "(const QString &address, const QString &name)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "disconnectFromBus"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "disconnectFromBus"
-            },
-            "arglist": {
-              "$": "(const QString &name)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "disconnectFromPeer"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "disconnectFromPeer"
-            },
-            "arglist": {
-              "$": "(const QString &name)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "QByteArray"
-            },
-            "name": {
-              "$": "localMachineId"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "localMachineId"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "QDBusConnection"
-            },
-            "name": {
-              "$": "sessionBus"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "sessionBus"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "QDBusConnection"
-            },
-            "name": {
-              "$": "systemBus"
-            },
-            "anchorfile": {
-              "$": "qdbusconnection.html"
-            },
-            "anchor": {
-              "$": "systemBus"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "QDBusConnection"
-            },
-            "name": {
-              "$": "sender"
+              "$": "callWithCallback"
             },
             "anchorfile": {
               "$": "qdbusconnection-obsolete.html"
             },
             "anchor": {
-              "$": "sender"
+              "$": "callWithCallback-1"
             },
             "arglist": {
-              "$": "()"
+              "$": "(const QDBusMessage &message, QObject *receiver, const char *returnMethod, int timeout) const const"
             }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isConnected"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "isConnected"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "send"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "send"
+            },
+            "arglist": {
+              "$": "(const QDBusMessage &message) const const"
+            }
+          },
+          {
+            "@kind": "typedef",
+            "@type": "QDBusConnection::ConnectionCapability",
+            "name": {
+              "$": "ConnectionCapabilities"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "ConnectionCapability-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "typedef",
+            "@type": "QDBusConnection::RegisterOption",
+            "name": {
+              "$": "RegisterOptions"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "RegisterOption-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "typedef",
+            "@type": "QDBusConnection::VirtualObjectRegisterOption",
+            "name": {
+              "$": "VirtualObjectRegisterOptions"
+            },
+            "anchorfile": {
+              "$": "qdbusconnection.html"
+            },
+            "anchor": {
+              "$": "VirtualObjectRegisterOption-enum"
+            },
+            "arglist": {}
           }
         ]
       },
@@ -2937,30 +2904,53 @@
         },
         "member": [
           {
-            "@kind": "property",
-            "@type": "QDBusReply<QStringList>",
+            "@kind": "enumeration",
             "name": {
-              "$": "registeredServiceNames"
+              "$": "RegisterServiceReply"
             },
             "anchorfile": {
               "$": "qdbusconnectioninterface.html"
             },
             "anchor": {
-              "$": "registeredServiceNames-prop"
+              "$": "RegisterServiceReply-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ServiceNotRegistered"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "RegisterServiceReply-enum"
             },
             "arglist": {}
           },
           {
-            "@kind": "property",
-            "@type": "QDBusReply<QStringList>",
+            "@kind": "enumvalue",
             "name": {
-              "$": "activatableServiceNames"
+              "$": "ServiceRegistered"
             },
             "anchorfile": {
               "$": "qdbusconnectioninterface.html"
             },
             "anchor": {
-              "$": "activatableServiceNames-prop"
+              "$": "RegisterServiceReply-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ServiceQueued"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "RegisterServiceReply-enum"
             },
             "arglist": {}
           },
@@ -3054,138 +3044,24 @@
             "arglist": {}
           },
           {
-            "@kind": "enumeration",
-            "name": {
-              "$": "RegisterServiceReply"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "RegisterServiceReply-enum"
-            }
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "ServiceNotRegistered"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "RegisterServiceReply-enum"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "ServiceRegistered"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "RegisterServiceReply-enum"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "ServiceQueued"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "RegisterServiceReply-enum"
-            },
-            "arglist": {}
-          },
-          {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QDBusReply<QStringList>"
+              "$": "QDBusReply<QDBusConnectionInterface::RegisterServiceReply>"
             },
             "name": {
-              "$": "registeredServiceNames"
+              "$": "registerService"
             },
             "anchorfile": {
               "$": "qdbusconnectioninterface.html"
             },
             "anchor": {
-              "$": "registeredServiceNames-prop"
+              "$": "registerService"
             },
             "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply<QStringList>"
-            },
-            "name": {
-              "$": "activatableServiceNames"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "activatableServiceNames-prop"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply<bool>"
-            },
-            "name": {
-              "$": "isServiceRegistered"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "isServiceRegistered"
-            },
-            "arglist": {
-              "$": "(const QString &serviceName) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply<QString>"
-            },
-            "name": {
-              "$": "serviceOwner"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "serviceOwner"
-            },
-            "arglist": {
-              "$": "(const QString &name) const const"
+              "$": "(const QString &serviceName, ServiceQueueOptions qoption, ServiceReplacementOptions roption)"
             }
           },
           {
@@ -3207,69 +3083,6 @@
             },
             "arglist": {
               "$": "(const QString &serviceName)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply<QDBusConnectionInterface::RegisterServiceReply>"
-            },
-            "name": {
-              "$": "registerService"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "registerService"
-            },
-            "arglist": {
-              "$": "(const QString &serviceName, QDBusConnectionInterface::ServiceQueueOptions qoption, QDBusConnectionInterface::ServiceReplacementOptions roption)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply<uint>"
-            },
-            "name": {
-              "$": "servicePid"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "servicePid"
-            },
-            "arglist": {
-              "$": "(const QString &serviceName) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply<uint>"
-            },
-            "name": {
-              "$": "serviceUid"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "serviceUid"
-            },
-            "arglist": {
-              "$": "(const QString &serviceName) const const"
             }
           },
           {
@@ -3302,37 +3115,16 @@
               "$": "void"
             },
             "name": {
-              "$": "serviceRegistered"
+              "$": "callWithCallbackFailed"
             },
             "anchorfile": {
               "$": "qdbusconnectioninterface.html"
             },
             "anchor": {
-              "$": "serviceRegistered"
+              "$": "callWithCallbackFailed"
             },
             "arglist": {
-              "$": "(const QString &service)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "serviceUnregistered"
-            },
-            "anchorfile": {
-              "$": "qdbusconnectioninterface.html"
-            },
-            "anchor": {
-              "$": "serviceUnregistered"
-            },
-            "arglist": {
-              "$": "(const QString &service)"
+              "$": "(const QDBusError &error, const QDBusMessage &call)"
             }
           },
           {
@@ -3365,17 +3157,192 @@
               "$": "void"
             },
             "name": {
-              "$": "callWithCallbackFailed"
+              "$": "serviceRegistered"
             },
             "anchorfile": {
               "$": "qdbusconnectioninterface.html"
             },
             "anchor": {
-              "$": "callWithCallbackFailed"
+              "$": "serviceRegistered"
             },
             "arglist": {
-              "$": "(const QDBusError &error, const QDBusMessage &call)"
+              "$": "(const QString &service)"
             }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "serviceUnregistered"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "serviceUnregistered"
+            },
+            "arglist": {
+              "$": "(const QString &service)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusReply<QString>"
+            },
+            "name": {
+              "$": "serviceOwner"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "serviceOwner"
+            },
+            "arglist": {
+              "$": "(const QString &name) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusReply<QStringList>"
+            },
+            "name": {
+              "$": "activatableServiceNames"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "activatableServiceNames-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusReply<QStringList>"
+            },
+            "name": {
+              "$": "registeredServiceNames"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "registeredServiceNames-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusReply<bool>"
+            },
+            "name": {
+              "$": "isServiceRegistered"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "isServiceRegistered"
+            },
+            "arglist": {
+              "$": "(const QString &serviceName) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusReply<uint>"
+            },
+            "name": {
+              "$": "servicePid"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "servicePid"
+            },
+            "arglist": {
+              "$": "(const QString &serviceName) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusReply<uint>"
+            },
+            "name": {
+              "$": "serviceUid"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "serviceUid"
+            },
+            "arglist": {
+              "$": "(const QString &serviceName) const const"
+            }
+          },
+          {
+            "@kind": "property",
+            "@type": "QDBusReply<QStringList>",
+            "name": {
+              "$": "activatableServiceNames"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "activatableServiceNames-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "QDBusReply<QStringList>",
+            "name": {
+              "$": "registeredServiceNames"
+            },
+            "anchorfile": {
+              "$": "qdbusconnectioninterface.html"
+            },
+            "anchor": {
+              "$": "registeredServiceNames-prop"
+            },
+            "arglist": {}
           }
         ]
       },
@@ -3432,6 +3399,27 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QDBusConnection"
+            },
+            "name": {
+              "$": "connection"
+            },
+            "anchorfile": {
+              "$": "qdbuscontext.html"
+            },
+            "anchor": {
+              "$": "connection"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "bool"
             },
             "name": {
@@ -3453,16 +3441,16 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QDBusConnection"
+              "$": "bool"
             },
             "name": {
-              "$": "connection"
+              "$": "isDelayedReply"
             },
             "anchorfile": {
               "$": "qdbuscontext.html"
             },
             "anchor": {
-              "$": "connection"
+              "$": "isDelayedReply"
             },
             "arglist": {
               "$": "() const const"
@@ -3495,40 +3483,19 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isDelayedReply"
-            },
-            "anchorfile": {
-              "$": "qdbuscontext.html"
-            },
-            "anchor": {
-              "$": "isDelayedReply"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
               "$": "void"
             },
             "name": {
-              "$": "setDelayedReply"
+              "$": "sendErrorReply"
             },
             "anchorfile": {
               "$": "qdbuscontext.html"
             },
             "anchor": {
-              "$": "setDelayedReply"
+              "$": "sendErrorReply-1"
             },
             "arglist": {
-              "$": "(bool enable) const const"
+              "$": "(QDBusError::ErrorType type, const QString &msg) const const"
             }
           },
           {
@@ -3561,16 +3528,16 @@
               "$": "void"
             },
             "name": {
-              "$": "sendErrorReply"
+              "$": "setDelayedReply"
             },
             "anchorfile": {
               "$": "qdbuscontext.html"
             },
             "anchor": {
-              "$": "sendErrorReply-1"
+              "$": "setDelayedReply"
             },
             "arglist": {
-              "$": "(QDBusError::ErrorType type, const QString &msg) const const"
+              "$": "(bool enable) const const"
             }
           }
         ]
@@ -3964,6 +3931,27 @@
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "errorString"
+            },
+            "anchorfile": {
+              "$": "qdbuserror.html"
+            },
+            "anchor": {
+              "$": "errorString"
+            },
+            "arglist": {
+              "$": "(ErrorType error)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
             "@static": "no",
             "type": {
               "$": "void"
@@ -3987,7 +3975,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QDBusError::ErrorType"
+              "$": "ErrorType"
             },
             "name": {
               "$": "type"
@@ -4011,13 +3999,13 @@
               "$": "QString"
             },
             "name": {
-              "$": "name"
+              "$": "message"
             },
             "anchorfile": {
               "$": "qdbuserror.html"
             },
             "anchor": {
-              "$": "name"
+              "$": "message"
             },
             "arglist": {
               "$": "() const const"
@@ -4032,13 +4020,13 @@
               "$": "QString"
             },
             "name": {
-              "$": "message"
+              "$": "name"
             },
             "anchorfile": {
               "$": "qdbuserror.html"
             },
             "anchor": {
-              "$": "message"
+              "$": "name"
             },
             "arglist": {
               "$": "() const const"
@@ -4063,27 +4051,6 @@
             },
             "arglist": {
               "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "errorString"
-            },
-            "anchorfile": {
-              "$": "qdbuserror.html"
-            },
-            "anchor": {
-              "$": "errorString"
-            },
-            "arglist": {
-              "$": "(QDBusError::ErrorType error)"
             }
           }
         ]
@@ -4233,37 +4200,20 @@
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
-            "type": {},
+            "type": {
+              "$": "QDBusMessage &"
+            },
             "name": {
-              "$": "QDBusMessage"
+              "$": "operator<<"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "QDBusMessage"
+              "$": "operator-lt-lt"
             },
             "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusMessage"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "QDBusMessage-1"
-            },
-            "arglist": {
-              "$": "(const QDBusMessage &other)"
+              "$": "(const QVariant &arg)"
             }
           },
           {
@@ -4291,40 +4241,84 @@
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "no",
-            "type": {},
+            "@static": "yes",
+            "type": {
+              "$": "QDBusMessage"
+            },
             "name": {
-              "$": "~QDBusMessage"
+              "$": "createError"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "dtor.QDBusMessage"
+              "$": "createError-2"
             },
             "arglist": {
-              "$": "()"
+              "$": "(QDBusError::ErrorType type, const QString &msg)"
             }
           },
           {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "no",
+            "@static": "yes",
             "type": {
-              "$": "void"
+              "$": "QDBusMessage"
             },
             "name": {
-              "$": "swap"
+              "$": "createError"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "swap"
+              "$": "createError-1"
             },
             "arglist": {
-              "$": "(QDBusMessage &other)"
+              "$": "(const QDBusError &error)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QDBusMessage"
+            },
+            "name": {
+              "$": "createError"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "createError"
+            },
+            "arglist": {
+              "$": "(const QString &name, const QString &msg)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QDBusMessage"
+            },
+            "name": {
+              "$": "createMethodCall"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "createMethodCall"
+            },
+            "arglist": {
+              "$": "(const QString &service, const QString &path, const QString &interface, const QString &method)"
             }
           },
           {
@@ -4373,84 +4367,225 @@
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "QDBusMessage"
-            },
+            "@static": "no",
+            "type": {},
             "name": {
-              "$": "createMethodCall"
+              "$": "QDBusMessage"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "createMethodCall"
+              "$": "QDBusMessage"
             },
             "arglist": {
-              "$": "(const QString &service, const QString &path, const QString &interface, const QString &method)"
+              "$": "()"
             }
           },
           {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "QDBusMessage"
-            },
+            "@static": "no",
+            "type": {},
             "name": {
-              "$": "createError"
+              "$": "QDBusMessage"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "createError"
+              "$": "QDBusMessage-1"
             },
             "arglist": {
-              "$": "(const QString &name, const QString &msg)"
+              "$": "(const QDBusMessage &other)"
             }
           },
           {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "yes",
+            "@static": "no",
             "type": {
-              "$": "QDBusMessage"
+              "$": "void"
             },
             "name": {
-              "$": "createError"
+              "$": "setArguments"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "createError-1"
+              "$": "setArguments"
             },
             "arglist": {
-              "$": "(const QDBusError &error)"
+              "$": "(const QList<QVariant> &arguments)"
             }
           },
           {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "yes",
+            "@static": "no",
             "type": {
-              "$": "QDBusMessage"
+              "$": "void"
             },
             "name": {
-              "$": "createError"
+              "$": "setAutoStartService"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "createError-2"
+              "$": "setAutoStartService"
             },
             "arglist": {
-              "$": "(QDBusError::ErrorType type, const QString &msg)"
+              "$": "(bool enable)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setInteractiveAuthorizationAllowed"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "setInteractiveAuthorizationAllowed"
+            },
+            "arglist": {
+              "$": "(bool enable)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "swap"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "swap"
+            },
+            "arglist": {
+              "$": "(QDBusMessage &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "~QDBusMessage"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "dtor.QDBusMessage"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "MessageType"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "type"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusMessage"
+            },
+            "name": {
+              "$": "createErrorReply"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "createErrorReply-2"
+            },
+            "arglist": {
+              "$": "(QDBusError::ErrorType type, const QString &msg) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusMessage"
+            },
+            "name": {
+              "$": "createErrorReply"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "createErrorReply-1"
+            },
+            "arglist": {
+              "$": "(const QDBusError &error) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusMessage"
+            },
+            "name": {
+              "$": "createErrorReply"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "createErrorReply"
+            },
+            "arglist": {
+              "$": "(const QString &name, const QString &msg) const const"
             }
           },
           {
@@ -4501,79 +4636,16 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QDBusMessage"
+              "$": "QList<QVariant>"
             },
             "name": {
-              "$": "createErrorReply"
+              "$": "arguments"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "createErrorReply"
-            },
-            "arglist": {
-              "$": "(const QString name, const QString &msg) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusMessage"
-            },
-            "name": {
-              "$": "createErrorReply"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "createErrorReply-1"
-            },
-            "arglist": {
-              "$": "(const QDBusError &error) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusMessage"
-            },
-            "name": {
-              "$": "createErrorReply"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "createErrorReply-2"
-            },
-            "arglist": {
-              "$": "(QDBusError::ErrorType type, const QString &msg) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "service"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "service"
+              "$": "arguments"
             },
             "arglist": {
               "$": "() const const"
@@ -4588,13 +4660,34 @@
               "$": "QString"
             },
             "name": {
-              "$": "path"
+              "$": "errorMessage"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "path"
+              "$": "errorMessage"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "errorName"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "errorName"
             },
             "arglist": {
               "$": "() const const"
@@ -4651,13 +4744,13 @@
               "$": "QString"
             },
             "name": {
-              "$": "errorName"
+              "$": "path"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "errorName"
+              "$": "path"
             },
             "arglist": {
               "$": "() const const"
@@ -4672,34 +4765,13 @@
               "$": "QString"
             },
             "name": {
-              "$": "errorMessage"
+              "$": "service"
             },
             "anchorfile": {
               "$": "qdbusmessage.html"
             },
             "anchor": {
-              "$": "errorMessage"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusMessage::MessageType"
-            },
-            "name": {
-              "$": "type"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "type"
+              "$": "service"
             },
             "arglist": {
               "$": "() const const"
@@ -4721,6 +4793,69 @@
             },
             "anchor": {
               "$": "signature"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "autoStartService"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "autoStartService"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isDelayedReply"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "isDelayedReply"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isInteractiveAuthorizationAllowed"
+            },
+            "anchorfile": {
+              "$": "qdbusmessage.html"
+            },
+            "anchor": {
+              "$": "isInteractiveAuthorizationAllowed"
             },
             "arglist": {
               "$": "() const const"
@@ -4767,174 +4902,6 @@
             "arglist": {
               "$": "(bool enable) const const"
             }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isDelayedReply"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "isDelayedReply"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setAutoStartService"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "setAutoStartService"
-            },
-            "arglist": {
-              "$": "(bool enable)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "autoStartService"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "autoStartService"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setInteractiveAuthorizationAllowed"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "setInteractiveAuthorizationAllowed"
-            },
-            "arglist": {
-              "$": "(bool enable)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isInteractiveAuthorizationAllowed"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "isInteractiveAuthorizationAllowed"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setArguments"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "setArguments"
-            },
-            "arglist": {
-              "$": "(const QList<QVariant> &arguments)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QList<QVariant>"
-            },
-            "name": {
-              "$": "arguments"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "arguments"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusMessage &"
-            },
-            "name": {
-              "$": "operator<<"
-            },
-            "anchorfile": {
-              "$": "qdbusmessage.html"
-            },
-            "anchor": {
-              "$": "operator-lt-lt"
-            },
-            "arglist": {
-              "$": "(const QVariant &arg)"
-            }
           }
         ]
       },
@@ -4979,29 +4946,10 @@
               "$": "qdbusobjectpath.html"
             },
             "anchor": {
-              "$": "QDBusObjectPath-1"
-            },
-            "arglist": {
-              "$": "(const char *path)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusObjectPath"
-            },
-            "anchorfile": {
-              "$": "qdbusobjectpath.html"
-            },
-            "anchor": {
               "$": "QDBusObjectPath-2"
             },
             "arglist": {
-              "$": "(QLatin1String path)"
+              "$": "(QLatin1StringView path)"
             }
           },
           {
@@ -5028,20 +4976,18 @@
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
-            "type": {
-              "$": "void"
-            },
+            "type": {},
             "name": {
-              "$": "swap"
+              "$": "QDBusObjectPath"
             },
             "anchorfile": {
               "$": "qdbusobjectpath.html"
             },
             "anchor": {
-              "$": "swap"
+              "$": "QDBusObjectPath-1"
             },
             "arglist": {
-              "$": "(QDBusObjectPath &other)"
+              "$": "(const char *path)"
             }
           },
           {
@@ -5063,6 +5009,27 @@
             },
             "arglist": {
               "$": "(const QString &path)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "swap"
+            },
+            "anchorfile": {
+              "$": "qdbusobjectpath.html"
+            },
+            "anchor": {
+              "$": "swap"
+            },
+            "arglist": {
+              "$": "(QDBusObjectPath &other)"
             }
           },
           {
@@ -5123,44 +5090,6 @@
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusPendingCall"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingcall.html"
-            },
-            "anchor": {
-              "$": "QDBusPendingCall"
-            },
-            "arglist": {
-              "$": "(const QDBusPendingCall &other)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "~QDBusPendingCall"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingcall.html"
-            },
-            "anchor": {
-              "$": "dtor.QDBusPendingCall"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
             "type": {
               "$": "QDBusPendingCall &"
             },
@@ -5172,6 +5101,67 @@
             },
             "anchor": {
               "$": "operator-eq-1"
+            },
+            "arglist": {
+              "$": "(const QDBusPendingCall &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QDBusPendingCall"
+            },
+            "name": {
+              "$": "fromCompletedCall"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingcall.html"
+            },
+            "anchor": {
+              "$": "fromCompletedCall"
+            },
+            "arglist": {
+              "$": "(const QDBusMessage &msg)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QDBusPendingCall"
+            },
+            "name": {
+              "$": "fromError"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingcall.html"
+            },
+            "anchor": {
+              "$": "fromError"
+            },
+            "arglist": {
+              "$": "(const QDBusError &error)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QDBusPendingCall"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingcall.html"
+            },
+            "anchor": {
+              "$": "QDBusPendingCall"
             },
             "arglist": {
               "$": "(const QDBusPendingCall &other)"
@@ -5202,42 +5192,19 @@
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "QDBusPendingCall"
-            },
+            "@static": "no",
+            "type": {},
             "name": {
-              "$": "fromError"
+              "$": "~QDBusPendingCall"
             },
             "anchorfile": {
               "$": "qdbuspendingcall.html"
             },
             "anchor": {
-              "$": "fromError"
+              "$": "dtor.QDBusPendingCall"
             },
             "arglist": {
-              "$": "(const QDBusError &error)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "QDBusPendingCall"
-            },
-            "name": {
-              "$": "fromCompletedCall"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingcall.html"
-            },
-            "anchor": {
-              "$": "fromCompletedCall"
-            },
-            "arglist": {
-              "$": "(const QDBusMessage &msg)"
+              "$": "()"
             }
           }
         ]
@@ -5281,6 +5248,48 @@
           {
             "@kind": "function",
             "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "finished"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingcallwatcher.html"
+            },
+            "anchor": {
+              "$": "finished"
+            },
+            "arglist": {
+              "$": "(QDBusPendingCallWatcher *self)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "waitForFinished"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingcallwatcher.html"
+            },
+            "anchor": {
+              "$": "waitForFinished"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
             "@virtualness": "virtual",
             "@static": "no",
             "type": {
@@ -5319,48 +5328,6 @@
             "arglist": {
               "$": "() const const"
             }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "waitForFinished"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingcallwatcher.html"
-            },
-            "anchor": {
-              "$": "waitForFinished"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "finished"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingcallwatcher.html"
-            },
-            "anchor": {
-              "$": "finished"
-            },
-            "arglist": {
-              "$": "(QDBusPendingCallWatcher *self)"
-            }
           }
         ]
       },
@@ -5373,34 +5340,9 @@
           "$": "qdbuspendingreply.html"
         },
         "base": {
-          "$": "QDBusPendingCall"
+          "$": "QDBusPendingReplyBase"
         },
         "member": [
-          {
-            "@kind": "enumeration",
-            "name": {
-              "$": "anonymous"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingreply.html"
-            },
-            "anchor": {
-              "$": "anonymous-enum"
-            }
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "Count"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingreply.html"
-            },
-            "anchor": {
-              "$": "anonymous-enum"
-            },
-            "arglist": {}
-          },
           {
             "@kind": "function",
             "@protection": "public",
@@ -5433,10 +5375,10 @@
               "$": "qdbuspendingreply.html"
             },
             "anchor": {
-              "$": "QDBusPendingReply-1"
+              "$": "QDBusPendingReply-3"
             },
             "arglist": {
-              "$": "(const QDBusPendingReply<T1, T2, T3, T4, T5, T6, T7, T8> &other)"
+              "$": "(const QDBusMessage &message)"
             }
           },
           {
@@ -5471,10 +5413,10 @@
               "$": "qdbuspendingreply.html"
             },
             "anchor": {
-              "$": "QDBusPendingReply-3"
+              "$": "QDBusPendingReply-1"
             },
             "arglist": {
-              "$": "(const QDBusMessage &message)"
+              "$": "(const QDBusPendingReply<Types...> &other)"
             }
           },
           {
@@ -5483,49 +5425,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QDBusPendingReply<T1, T2, T3, T4, T5, T6, T7, T8> &"
-            },
-            "name": {
-              "$": "operator="
-            },
-            "anchorfile": {
-              "$": "qdbuspendingreply.html"
-            },
-            "anchor": {
-              "$": "operator-eq"
-            },
-            "arglist": {
-              "$": "(const QDBusPendingReply<T1, T2, T3, T4, T5, T6, T7, T8> &other)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusPendingReply<T1, T2, T3, T4, T5, T6, T7, T8> &"
-            },
-            "name": {
-              "$": "operator="
-            },
-            "anchorfile": {
-              "$": "qdbuspendingreply.html"
-            },
-            "anchor": {
-              "$": "operator-eq-1"
-            },
-            "arglist": {
-              "$": "(const QDBusPendingCall &call)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusPendingReply<T1, T2, T3, T4, T5, T6, T7, T8> &"
+              "$": "QDBusPendingReply<Types...> &"
             },
             "name": {
               "$": "operator="
@@ -5546,19 +5446,19 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "int"
+              "$": "QDBusPendingReply<Types...> &"
             },
             "name": {
-              "$": "count"
+              "$": "operator="
             },
             "anchorfile": {
               "$": "qdbuspendingreply.html"
             },
             "anchor": {
-              "$": "count"
+              "$": "operator-eq-1"
             },
             "arglist": {
-              "$": "() const const"
+              "$": "(const QDBusPendingCall &call)"
             }
           },
           {
@@ -5567,40 +5467,19 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QVariant"
+              "$": "QDBusPendingReply<Types...> &"
             },
             "name": {
-              "$": "argumentAt"
+              "$": "operator="
             },
             "anchorfile": {
               "$": "qdbuspendingreply.html"
             },
             "anchor": {
-              "$": "argumentAt"
+              "$": "operator-eq"
             },
             "arglist": {
-              "$": "(int index) const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isFinished"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingreply.html"
-            },
-            "anchor": {
-              "$": "isFinished"
-            },
-            "arglist": {
-              "$": "() const const"
+              "$": "(const QDBusPendingReply<Types...> &other)"
             }
           },
           {
@@ -5622,48 +5501,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isValid"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingreply.html"
-            },
-            "anchor": {
-              "$": "isValid"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isError"
-            },
-            "anchorfile": {
-              "$": "qdbuspendingreply.html"
-            },
-            "anchor": {
-              "$": "isError"
-            },
-            "arglist": {
-              "$": "() const const"
             }
           },
           {
@@ -5714,16 +5551,37 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "T1"
+              "$": "QVariant"
             },
             "name": {
-              "$": "value"
+              "$": "argumentAt"
             },
             "anchorfile": {
               "$": "qdbuspendingreply.html"
             },
             "anchor": {
-              "$": "value"
+              "$": "argumentAt-1"
+            },
+            "arglist": {
+              "$": "(int index) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isError"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingreply.html"
+            },
+            "anchor": {
+              "$": "isError"
             },
             "arglist": {
               "$": "() const const"
@@ -5735,34 +5593,106 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "T1"
+              "$": "bool"
             },
             "name": {
-              "$": "operator T1"
+              "$": "isFinished"
             },
             "anchorfile": {
               "$": "qdbuspendingreply.html"
             },
             "anchor": {
-              "$": "operator-T1"
+              "$": "isFinished"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isValid"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingreply.html"
+            },
+            "anchor": {
+              "$": "isValid"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "count"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingreply.html"
+            },
+            "anchor": {
+              "$": "count"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "typename Select<0>::Type"
+            },
+            "name": {
+              "$": "operator typename Select<0>::Type"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingreply.html"
+            },
+            "anchor": {
+              "$": "operator-typename-Select-lt0-gt-3a-3aType"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "typename Select<0>::Type"
+            },
+            "name": {
+              "$": "value"
+            },
+            "anchorfile": {
+              "$": "qdbuspendingreply.html"
+            },
+            "anchor": {
+              "$": "value"
             },
             "arglist": {
               "$": "() const const"
             }
           }
         ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "QDBusPendingReplyData"
-        },
-        "filename": {
-          "$": "qdbuspendingreplydata.html"
-        },
-        "base": {
-          "$": "QDBusPendingCall"
-        }
       },
       {
         "@kind": "class",
@@ -5786,10 +5716,10 @@
               "$": "qdbusreply.html"
             },
             "anchor": {
-              "$": "QDBusReply"
+              "$": "QDBusReply-4"
             },
             "arglist": {
-              "$": "(const QDBusMessage &reply)"
+              "$": "(const QDBusError &error)"
             }
           },
           {
@@ -5805,28 +5735,7 @@
               "$": "qdbusreply.html"
             },
             "anchor": {
-              "$": "QDBusReply-1"
-            },
-            "arglist": {
-              "$": "(const QDBusReply<T> &other)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply<T> &"
-            },
-            "name": {
-              "$": "operator="
-            },
-            "anchorfile": {
-              "$": "qdbusreply.html"
-            },
-            "anchor": {
-              "$": "operator-eq"
+              "$": "QDBusReply"
             },
             "arglist": {
               "$": "(const QDBusMessage &reply)"
@@ -5846,27 +5755,6 @@
             },
             "anchor": {
               "$": "QDBusReply-2"
-            },
-            "arglist": {
-              "$": "(const QDBusPendingCall &pcall)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply<T> &"
-            },
-            "name": {
-              "$": "operator="
-            },
-            "anchorfile": {
-              "$": "qdbusreply.html"
-            },
-            "anchor": {
-              "$": "operator-eq-1"
             },
             "arglist": {
               "$": "(const QDBusPendingCall &pcall)"
@@ -5904,10 +5792,10 @@
               "$": "qdbusreply.html"
             },
             "anchor": {
-              "$": "QDBusReply-4"
+              "$": "QDBusReply-1"
             },
             "arglist": {
-              "$": "(const QDBusError &error)"
+              "$": "(const QDBusReply<T> &other)"
             }
           },
           {
@@ -5946,10 +5834,94 @@
               "$": "qdbusreply.html"
             },
             "anchor": {
+              "$": "operator-eq"
+            },
+            "arglist": {
+              "$": "(const QDBusMessage &reply)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusReply<T> &"
+            },
+            "name": {
+              "$": "operator="
+            },
+            "anchorfile": {
+              "$": "qdbusreply.html"
+            },
+            "anchor": {
+              "$": "operator-eq-1"
+            },
+            "arglist": {
+              "$": "(const QDBusPendingCall &pcall)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QDBusReply<T> &"
+            },
+            "name": {
+              "$": "operator="
+            },
+            "anchorfile": {
+              "$": "qdbusreply.html"
+            },
+            "anchor": {
               "$": "operator-eq-3"
             },
             "arglist": {
               "$": "(const QDBusReply<T> &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "const QDBusError &"
+            },
+            "name": {
+              "$": "error"
+            },
+            "anchorfile": {
+              "$": "qdbusreply.html"
+            },
+            "anchor": {
+              "$": "error-1"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Type"
+            },
+            "name": {
+              "$": "operator Type"
+            },
+            "anchorfile": {
+              "$": "qdbusreply.html"
+            },
+            "anchor": {
+              "$": "operator-Type"
+            },
+            "arglist": {
+              "$": "() const const"
             }
           },
           {
@@ -5988,70 +5960,7 @@
               "$": "qdbusreply.html"
             },
             "anchor": {
-              "$": "error-1"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "const QDBusError &"
-            },
-            "name": {
               "$": "error"
-            },
-            "anchorfile": {
-              "$": "qdbusreply.html"
-            },
-            "anchor": {
-              "$": "error"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply::Type"
-            },
-            "name": {
-              "$": "value"
-            },
-            "anchorfile": {
-              "$": "qdbusreply.html"
-            },
-            "anchor": {
-              "$": "value"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QDBusReply::Type"
-            },
-            "name": {
-              "$": "operator QDBusReply::Type"
-            },
-            "anchorfile": {
-              "$": "qdbusreply.html"
-            },
-            "anchor": {
-              "$": "operator-QDBusReply::Type"
             },
             "arglist": {
               "$": "() const const"
@@ -6084,10 +5993,10 @@
               "$": "qdbusserver.html"
             },
             "anchor": {
-              "$": "QDBusServer"
+              "$": "QDBusServer-1"
             },
             "arglist": {
-              "$": "(const QString &address, QObject *parent)"
+              "$": "(QObject *parent)"
             }
           },
           {
@@ -6103,10 +6012,52 @@
               "$": "qdbusserver.html"
             },
             "anchor": {
-              "$": "QDBusServer-1"
+              "$": "QDBusServer"
             },
             "arglist": {
-              "$": "(QObject *parent)"
+              "$": "(const QString &address, QObject *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "newConnection"
+            },
+            "anchorfile": {
+              "$": "qdbusserver.html"
+            },
+            "anchor": {
+              "$": "newConnection"
+            },
+            "arglist": {
+              "$": "(const QDBusConnection &connection)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setAnonymousAuthenticationAllowed"
+            },
+            "anchorfile": {
+              "$": "qdbusserver.html"
+            },
+            "anchor": {
+              "$": "setAnonymousAuthenticationAllowed"
+            },
+            "arglist": {
+              "$": "(bool value)"
             }
           },
           {
@@ -6128,27 +6079,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isConnected"
-            },
-            "anchorfile": {
-              "$": "qdbusserver.html"
-            },
-            "anchor": {
-              "$": "isConnected"
-            },
-            "arglist": {
-              "$": "() const const"
             }
           },
           {
@@ -6199,27 +6129,6 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setAnonymousAuthenticationAllowed"
-            },
-            "anchorfile": {
-              "$": "qdbusserver.html"
-            },
-            "anchor": {
-              "$": "setAnonymousAuthenticationAllowed"
-            },
-            "arglist": {
-              "$": "(bool value)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
               "$": "bool"
             },
             "name": {
@@ -6241,19 +6150,19 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "void"
+              "$": "bool"
             },
             "name": {
-              "$": "newConnection"
+              "$": "isConnected"
             },
             "anchorfile": {
               "$": "qdbusserver.html"
             },
             "anchor": {
-              "$": "newConnection"
+              "$": "isConnected"
             },
             "arglist": {
-              "$": "(const QDBusConnection &connection)"
+              "$": "() const const"
             }
           }
         ]
@@ -6270,34 +6179,6 @@
           "$": "QObject"
         },
         "member": [
-          {
-            "@kind": "property",
-            "@type": "QStringList",
-            "name": {
-              "$": "watchedServices"
-            },
-            "anchorfile": {
-              "$": "qdbusservicewatcher.html"
-            },
-            "anchor": {
-              "$": "watchedServices-prop"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "@type": "WatchMode",
-            "name": {
-              "$": "watchMode"
-            },
-            "anchorfile": {
-              "$": "qdbusservicewatcher.html"
-            },
-            "anchor": {
-              "$": "watchMode-prop"
-            },
-            "arglist": {}
-          },
           {
             "@kind": "enumeration",
             "name": {
@@ -6350,18 +6231,46 @@
             "arglist": {}
           },
           {
-            "@kind": "typedef",
-            "@type": "QDBusServiceWatcher::WatchModeFlag",
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QBindable<QStringList>"
+            },
             "name": {
-              "$": "WatchMode"
+              "$": "bindableWatchedServices"
             },
             "anchorfile": {
               "$": "qdbusservicewatcher.html"
             },
             "anchor": {
-              "$": "WatchModeFlag-enum"
+              "$": "watchedServices-prop"
             },
-            "arglist": {}
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QBindable<WatchMode>"
+            },
+            "name": {
+              "$": "bindableWatchMode"
+            },
+            "anchorfile": {
+              "$": "qdbusservicewatcher.html"
+            },
+            "anchor": {
+              "$": "watchMode-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
           },
           {
             "@kind": "function",
@@ -6398,91 +6307,7 @@
               "$": "QDBusServiceWatcher-1"
             },
             "arglist": {
-              "$": "(const QString &service, const QDBusConnection &connection, QDBusServiceWatcher::WatchMode watchMode, QObject *parent)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "virtual",
-            "@static": "no",
-            "type": {
-              "$": "virtual "
-            },
-            "name": {
-              "$": "~QDBusServiceWatcher"
-            },
-            "anchorfile": {
-              "$": "qdbusservicewatcher.html"
-            },
-            "anchor": {
-              "$": "dtor.QDBusServiceWatcher"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QStringList"
-            },
-            "name": {
-              "$": "watchedServices"
-            },
-            "anchorfile": {
-              "$": "qdbusservicewatcher.html"
-            },
-            "anchor": {
-              "$": "watchedServices"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setWatchedServices"
-            },
-            "anchorfile": {
-              "$": "qdbusservicewatcher.html"
-            },
-            "anchor": {
-              "$": "setWatchedServices"
-            },
-            "arglist": {
-              "$": "(const QStringList &services)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "addWatchedService"
-            },
-            "anchorfile": {
-              "$": "qdbusservicewatcher.html"
-            },
-            "anchor": {
-              "$": "addWatchedService"
-            },
-            "arglist": {
-              "$": "(const QString &newService)"
+              "$": "(const QString &service, const QDBusConnection &connection, WatchMode watchMode, QObject *parent)"
             }
           },
           {
@@ -6512,19 +6337,19 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QDBusServiceWatcher::WatchMode"
+              "$": "void"
             },
             "name": {
-              "$": "watchMode"
+              "$": "addWatchedService"
             },
             "anchorfile": {
               "$": "qdbusservicewatcher.html"
             },
             "anchor": {
-              "$": "watchMode-prop"
+              "$": "addWatchedService"
             },
             "arglist": {
-              "$": "() const const"
+              "$": "(const QString &newService)"
             }
           },
           {
@@ -6536,16 +6361,16 @@
               "$": "void"
             },
             "name": {
-              "$": "setWatchMode"
+              "$": "serviceOwnerChanged"
             },
             "anchorfile": {
               "$": "qdbusservicewatcher.html"
             },
             "anchor": {
-              "$": "watchMode-prop"
+              "$": "serviceOwnerChanged"
             },
             "arglist": {
-              "$": "(QDBusServiceWatcher::WatchMode mode)"
+              "$": "(const QString &serviceName, const QString &oldOwner, const QString &newOwner)"
             }
           },
           {
@@ -6554,19 +6379,40 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QDBusConnection"
+              "$": "void"
             },
             "name": {
-              "$": "connection"
+              "$": "serviceRegistered"
             },
             "anchorfile": {
               "$": "qdbusservicewatcher.html"
             },
             "anchor": {
-              "$": "connection"
+              "$": "serviceRegistered"
             },
             "arglist": {
-              "$": "() const const"
+              "$": "(const QString &serviceName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "serviceUnregistered"
+            },
+            "anchorfile": {
+              "$": "qdbusservicewatcher.html"
+            },
+            "anchor": {
+              "$": "serviceUnregistered"
+            },
+            "arglist": {
+              "$": "(const QString &serviceName)"
             }
           },
           {
@@ -6599,16 +6445,16 @@
               "$": "void"
             },
             "name": {
-              "$": "serviceRegistered"
+              "$": "setWatchMode"
             },
             "anchorfile": {
               "$": "qdbusservicewatcher.html"
             },
             "anchor": {
-              "$": "serviceRegistered"
+              "$": "watchMode-prop"
             },
             "arglist": {
-              "$": "(const QString &serviceName)"
+              "$": "(WatchMode mode)"
             }
           },
           {
@@ -6620,16 +6466,37 @@
               "$": "void"
             },
             "name": {
-              "$": "serviceUnregistered"
+              "$": "setWatchedServices"
             },
             "anchorfile": {
               "$": "qdbusservicewatcher.html"
             },
             "anchor": {
-              "$": "serviceUnregistered"
+              "$": "setWatchedServices"
             },
             "arglist": {
-              "$": "(const QString &serviceName)"
+              "$": "(const QStringList &services)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual "
+            },
+            "name": {
+              "$": "~QDBusServiceWatcher"
+            },
+            "anchorfile": {
+              "$": "qdbusservicewatcher.html"
+            },
+            "anchor": {
+              "$": "dtor.QDBusServiceWatcher"
+            },
+            "arglist": {
+              "$": "()"
             }
           },
           {
@@ -6638,20 +6505,104 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "void"
+              "$": "QDBusConnection"
             },
             "name": {
-              "$": "serviceOwnerChanged"
+              "$": "connection"
             },
             "anchorfile": {
               "$": "qdbusservicewatcher.html"
             },
             "anchor": {
-              "$": "serviceOwnerChanged"
+              "$": "connection"
             },
             "arglist": {
-              "$": "(const QString &serviceName, const QString &oldOwner, const QString &newOwner)"
+              "$": "() const const"
             }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "watchedServices"
+            },
+            "anchorfile": {
+              "$": "qdbusservicewatcher.html"
+            },
+            "anchor": {
+              "$": "watchedServices"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "WatchMode"
+            },
+            "name": {
+              "$": "watchMode"
+            },
+            "anchorfile": {
+              "$": "qdbusservicewatcher.html"
+            },
+            "anchor": {
+              "$": "watchMode-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "typedef",
+            "@type": "QDBusServiceWatcher::WatchModeFlag",
+            "name": {
+              "$": "WatchMode"
+            },
+            "anchorfile": {
+              "$": "qdbusservicewatcher.html"
+            },
+            "anchor": {
+              "$": "WatchModeFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "WatchMode",
+            "name": {
+              "$": "watchMode"
+            },
+            "anchorfile": {
+              "$": "qdbusservicewatcher.html"
+            },
+            "anchor": {
+              "$": "watchMode-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "QStringList",
+            "name": {
+              "$": "watchedServices"
+            },
+            "anchorfile": {
+              "$": "qdbusservicewatcher.html"
+            },
+            "anchor": {
+              "$": "watchedServices-prop"
+            },
+            "arglist": {}
           }
         ]
       },
@@ -6696,29 +6647,10 @@
               "$": "qdbussignature.html"
             },
             "anchor": {
-              "$": "QDBusSignature-1"
-            },
-            "arglist": {
-              "$": "(const char *signature)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusSignature"
-            },
-            "anchorfile": {
-              "$": "qdbussignature.html"
-            },
-            "anchor": {
               "$": "QDBusSignature-2"
             },
             "arglist": {
-              "$": "(QLatin1String signature)"
+              "$": "(QLatin1StringView signature)"
             }
           },
           {
@@ -6745,20 +6677,18 @@
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
-            "type": {
-              "$": "void"
-            },
+            "type": {},
             "name": {
-              "$": "swap"
+              "$": "QDBusSignature"
             },
             "anchorfile": {
               "$": "qdbussignature.html"
             },
             "anchor": {
-              "$": "swap"
+              "$": "QDBusSignature-1"
             },
             "arglist": {
-              "$": "(QDBusSignature &other)"
+              "$": "(const char *signature)"
             }
           },
           {
@@ -6780,6 +6710,27 @@
             },
             "arglist": {
               "$": "(const QString &signature)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "swap"
+            },
+            "anchorfile": {
+              "$": "qdbussignature.html"
+            },
+            "anchor": {
+              "$": "swap"
+            },
+            "arglist": {
+              "$": "(QDBusSignature &other)"
             }
           },
           {
@@ -6814,63 +6765,6 @@
           "$": "qdbusunixfiledescriptor.html"
         },
         "member": [
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusUnixFileDescriptor"
-            },
-            "anchorfile": {
-              "$": "qdbusunixfiledescriptor.html"
-            },
-            "anchor": {
-              "$": "QDBusUnixFileDescriptor"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusUnixFileDescriptor"
-            },
-            "anchorfile": {
-              "$": "qdbusunixfiledescriptor.html"
-            },
-            "anchor": {
-              "$": "QDBusUnixFileDescriptor-1"
-            },
-            "arglist": {
-              "$": "(int fileDescriptor)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QDBusUnixFileDescriptor"
-            },
-            "anchorfile": {
-              "$": "qdbusunixfiledescriptor.html"
-            },
-            "anchor": {
-              "$": "QDBusUnixFileDescriptor-2"
-            },
-            "arglist": {
-              "$": "(const QDBusUnixFileDescriptor &other)"
-            }
-          },
           {
             "@kind": "function",
             "@protection": "public",
@@ -6920,16 +6814,96 @@
             "@static": "no",
             "type": {},
             "name": {
-              "$": "~QDBusUnixFileDescriptor"
+              "$": "QDBusUnixFileDescriptor"
             },
             "anchorfile": {
               "$": "qdbusunixfiledescriptor.html"
             },
             "anchor": {
-              "$": "dtor.QDBusUnixFileDescriptor"
+              "$": "QDBusUnixFileDescriptor"
             },
             "arglist": {
               "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QDBusUnixFileDescriptor"
+            },
+            "anchorfile": {
+              "$": "qdbusunixfiledescriptor.html"
+            },
+            "anchor": {
+              "$": "QDBusUnixFileDescriptor-2"
+            },
+            "arglist": {
+              "$": "(const QDBusUnixFileDescriptor &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QDBusUnixFileDescriptor"
+            },
+            "anchorfile": {
+              "$": "qdbusunixfiledescriptor.html"
+            },
+            "anchor": {
+              "$": "QDBusUnixFileDescriptor-1"
+            },
+            "arglist": {
+              "$": "(int fileDescriptor)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isSupported"
+            },
+            "anchorfile": {
+              "$": "qdbusunixfiledescriptor.html"
+            },
+            "anchor": {
+              "$": "isSupported"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setFileDescriptor"
+            },
+            "anchorfile": {
+              "$": "qdbusunixfiledescriptor.html"
+            },
+            "anchor": {
+              "$": "setFileDescriptor"
+            },
+            "arglist": {
+              "$": "(int fileDescriptor)"
             }
           },
           {
@@ -6951,6 +6925,25 @@
             },
             "arglist": {
               "$": "(QDBusUnixFileDescriptor &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "~QDBusUnixFileDescriptor"
+            },
+            "anchorfile": {
+              "$": "qdbusunixfiledescriptor.html"
+            },
+            "anchor": {
+              "$": "dtor.QDBusUnixFileDescriptor"
+            },
+            "arglist": {
+              "$": "()"
             }
           },
           {
@@ -6993,48 +6986,6 @@
             },
             "arglist": {
               "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setFileDescriptor"
-            },
-            "anchorfile": {
-              "$": "qdbusunixfiledescriptor.html"
-            },
-            "anchor": {
-              "$": "setFileDescriptor"
-            },
-            "arglist": {
-              "$": "(int fileDescriptor)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isSupported"
-            },
-            "anchorfile": {
-              "$": "qdbusunixfiledescriptor.html"
-            },
-            "anchor": {
-              "$": "isSupported"
-            },
-            "arglist": {
-              "$": "()"
             }
           }
         ]
@@ -7095,16 +7046,16 @@
               "$": "void"
             },
             "name": {
-              "$": "swap"
+              "$": "setVariant"
             },
             "anchorfile": {
               "$": "qdbusvariant.html"
             },
             "anchor": {
-              "$": "swap"
+              "$": "setVariant"
             },
             "arglist": {
-              "$": "(QDBusVariant &other)"
+              "$": "(const QVariant &variant)"
             }
           },
           {
@@ -7116,16 +7067,16 @@
               "$": "void"
             },
             "name": {
-              "$": "setVariant"
+              "$": "swap"
             },
             "anchorfile": {
               "$": "qdbusvariant.html"
             },
             "anchor": {
-              "$": "setVariant"
+              "$": "swap"
             },
             "arglist": {
-              "$": "(const QVariant &variant)"
+              "$": "(QDBusVariant &other)"
             }
           },
           {
@@ -7185,6 +7136,27 @@
           {
             "@kind": "function",
             "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "handleMessage"
+            },
+            "anchorfile": {
+              "$": "qdbusvirtualobject.html"
+            },
+            "anchor": {
+              "$": "handleMessage"
+            },
+            "arglist": {
+              "$": "(const QDBusMessage &message, const QDBusConnection &connection) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
             "@virtualness": "virtual",
             "@static": "no",
             "type": {
@@ -7223,56 +7195,8 @@
             "arglist": {
               "$": "(const QString &path) const const = 0"
             }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "pure",
-            "@static": "no",
-            "type": {
-              "$": "virtual bool"
-            },
-            "name": {
-              "$": "handleMessage"
-            },
-            "anchorfile": {
-              "$": "qdbusvirtualobject.html"
-            },
-            "anchor": {
-              "$": "handleMessage"
-            },
-            "arglist": {
-              "$": "(const QDBusMessage &message, const QDBusConnection &connection) = 0"
-            }
           }
         ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "QMetaTypeId"
-        },
-        "filename": {
-          "$": "qmetatypeid.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "QMetaTypeId2"
-        },
-        "filename": {
-          "$": "qmetatypeid2.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "QTypeInfo"
-        },
-        "filename": {
-          "$": "qtypeinfo.html"
-        }
       }
     ]
   }
