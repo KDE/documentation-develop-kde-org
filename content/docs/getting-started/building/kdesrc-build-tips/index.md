@@ -5,7 +5,7 @@ weight: 14
 group: "kdesrc-build"
 ---
 
-## Opening logs directly with Konsole / Yakuake {#directlogs}
+## Opening logs directly from Konsole / Yakuake {#directlogs}
 
 Konsole and Yakuake, two terminal applications by KDE, have the ability to open files by clicking directly on their path on the screen.
 
@@ -21,6 +21,25 @@ Clicking on the file path text will open the log file with your preferred text e
 To enable this functionality in Konsole or Yakuake:
 
 Right click the terminal -> Edit Current Profile... -> Mouse -> Miscellaneous -> enable Underline Files.
+
+## Colorizing build logs correctly in Kate
+
+By default, when you open a `.log` file in Kate, its syntax will be highlighted as "Log File (simplified)".  
+The mode "Log File (advanced)" applies full syntax highlighting which makes it easier to read log files.
+
+There are two ways to change from simplified to advanced mode:
+
+* Through the menu: **Tools | Highlighting | Other | Log File (advanced)**
+* Through the syntax highlighting button at the bottom right of Kate (where it says "Log File (simplified)")
+
+To avoid applying this manually each time you open log file, change the priority of the Filetype:
+
+In the main menu, go to **Settings | Configure Kate**. In the _Configure Kate_ window choose
+**Open/Save | Modes & Filetypes**. In the Filetype dropdown list:
+- select _Other/Log File (advanced)_ and set its _Priority_ to "-10"
+- select _Other/Log File (simplified)_ and set its _Priority_ to "-11"
+
+Apply changes and close the window.
 
 ## Viewing colored build logs
 
