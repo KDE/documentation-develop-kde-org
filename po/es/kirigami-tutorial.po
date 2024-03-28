@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-19 01:37+0000\n"
-"PO-Revision-Date: 2024-03-16 00:33+0100\n"
+"POT-Creation-Date: 2024-03-28 02:03+0000\n"
+"PO-Revision-Date: 2024-03-27 16:58+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -278,8 +278,6 @@ msgstr ""
 "posible."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
-#, fuzzy
-#| msgid "Form Delegates in your settings pages"
 msgid "Form delegates in your settings pages"
 msgstr "Delegados de Form en sus páginas de preferencias"
 
@@ -1012,8 +1010,6 @@ msgstr ""
 "kirigami/introduction-getting_started)."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
-#, fuzzy
-#| msgid "About Page"
 msgid "About page"
 msgstr "Página acerca de"
 
@@ -1430,8 +1426,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:32
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:65
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:73
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:306
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:444
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:305
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:443
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:39
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:59
 #: content/docs/getting-started/kirigami/components-actions/index.md:14
@@ -1552,18 +1548,18 @@ msgid ""
 "The text in the QByteArray is what's used in the actual QML code."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:145
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:144
 msgid ""
 "In our example model, the role \"species\" can be used to retrieve the "
 "QString key \"Feline\", \"Fox\", \"Goat\", each in a separate delegate. The "
 "same can be done with the QStringList values for the character names list."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:150
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:149
 msgid "Overriding and Implementing `data()`"
 msgstr "Redefinición e implementación de `data()`"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:152
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:151
 msgid ""
 "There are two parameters that are passed in `data()`: `index` and `role`. "
 "`index` is the location of where the data is when being delegated. As "
@@ -1571,7 +1567,7 @@ msgid ""
 "it's accessing a role."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:157
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:156
 msgid ""
 "In `data()`, we can use a `switch` statement to return the appropriate data "
 "and data type depending on the role, which is possible as `data()` returns a "
@@ -1582,7 +1578,7 @@ msgid ""
 "iterator is pointing to is what is being returned."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:165
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:164
 msgid ""
 "We can't just return whatever data we want though. We may be trying to bind "
 "data to a property with an incompatible data type, such as a QStringList to "
@@ -1590,19 +1586,19 @@ msgid ""
 "displayed properly."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:195
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:194
 msgid "Allow the Class to be Declared in QML"
 msgstr "Permitir que la clase se declare en QML"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:197
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:196
 msgid "Let's not forget to make our class usable in QML."
 msgstr "No olvidemos hacer que nuestra clase se pueda usar en QML."
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:207
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:206
 msgid "Class Usage in QML"
 msgstr "Uso de clases en QML"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:209
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:208
 msgid ""
 "The QML file that is used will just contain three [Kirigami.AbstractCard]"
 "(docs:kirigami2;AbstractCard) components, where the key is the header and "
@@ -1612,19 +1608,19 @@ msgid ""
 "declared in `roleNames()`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:259
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:258
 msgid "![App Screenshot](app_screenshot.png)"
 msgstr "![Captura de pantalla de la aplicación](app_screenshot.png)"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:265
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:264
 msgid "Data Modification"
 msgstr "Modificación de datos"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:267
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:266
 msgid "Editing Data Using `dataChanged()` and `setData()`"
 msgstr "Edición de datos con `dataChanged()` y `setData()`"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:269
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:268
 msgid ""
 "You may encounter a situation where you want to modify data in the model, "
 "and have the changes reflected on the frontend side. Every time we change "
@@ -1634,28 +1630,28 @@ msgid ""
 "`setData()`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:275
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:274
 msgid ""
 "`setData()` is a virtual function you can override so that attempting to "
 "modify the data from the frontend side automatically reflects those changes "
 "on the backend side. It requires three parameters:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:278
 msgid "`index` - The location of the data."
 msgstr "`index`: La ubicación de los datos."
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:280
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
 msgid "`value` - The contents of the new data."
 msgstr "`value`: El contenido de los datos nuevos."
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:281
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:280
 msgid ""
 "`role` - In this context, the role here is used to tell views how they "
 "should handle data. The role here should be `Qt::EditRole`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:284
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:283
 msgid ""
 "The `role` parameter in this case is used to ensure `setData()` can be "
 "edited via user input (Qt::EditRole). Using `index`, we can use that to "
@@ -1663,19 +1659,19 @@ msgid ""
 "of `value`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:308
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:307
 msgid ""
 "`setData()` does not automatically emit `dataChanged()` and that still has "
 "to be done manually."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:313
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:312
 msgid ""
 "Let's update the QML code so that we can open up a prompt that allows us to "
 "edit the model using a Controls.Button attached to the cards."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:377
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:376
 msgid ""
 "Now, whenever the values of the model change in the frontend, the changes "
 "should automatically update on the backend."
@@ -1683,19 +1679,19 @@ msgstr ""
 "Ahora, cada vez que los valores del modelo cambian en la interfaz, los "
 "cambios deberían actualizarse automáticamente en el motor."
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:384
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:383
 msgid "![app_screenshot_1.png](app_screenshot_1.png)"
 msgstr "![app_screenshot_1.png](app_screenshot_1.png)"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:390
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:389
 msgid "![app_screenshot_2.png](app_screenshot_2.png)"
 msgstr "![app_screenshot_2.png](app_screenshot_2.png)"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:396
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:395
 msgid "Adding Rows"
 msgstr "Añadir filas"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:398
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:397
 msgid ""
 "We added a way to modify the data in existing keys of the QMap, and in the "
 "front end, this is reflected as modifying the contents inside the "
@@ -1704,7 +1700,7 @@ msgid ""
 "that is callable on the QML side to perform this task."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:404
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:403
 msgid ""
 "To make the method visible in QML, we must use the Q_OBJECT macro in the "
 "class, and begin the method declaration with the Q_INVOKABLE macro. This "
@@ -1712,7 +1708,7 @@ msgid ""
 "key in the QMap."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:420
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:419
 msgid ""
 "Inside of this method, we need to tell Qt that we want to create more rows "
 "in the model. This is done by calling `beginInsertRows()` to begin our row "
@@ -1723,7 +1719,7 @@ msgid ""
 "reorganize itself, and we need to catch that across all rows."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:428
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:427
 msgid ""
 "When calling `beginInsertRows()`, we need to first pass in a QModelIndex "
 "class to specify the location of where the new rows should be added, "
@@ -1734,43 +1730,43 @@ msgid ""
 "model."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:446
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:445
 msgid ""
 "The `dataChanged()` function uses QModelIndex as the data type for its "
 "parameters. However, we can convert integers in QModelIndex data types using "
 "the `index()` function."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:452
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:451
 msgid ""
 "Let's update the QML code so we are given the ability to add a new key to "
 "the QMap."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:471
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:470
 msgid "Clear TextField every time it's done"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:490
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:489
 msgid ""
 "Now, we should be given a new action at the top of the app that brings up a "
 "prompt that allows to add a new element to the model, with our own custom "
 "data."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:497
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:496
 msgid "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
 msgstr "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:503
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:502
 msgid "![app_screenshot_add_2.png](app_screenshot_add_2.png)"
 msgstr "![app_screenshot_add_2.png](app_screenshot_add_2.png)"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:509
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:508
 msgid "Removing Rows"
 msgstr "Eliminar filas"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:511
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:510
 msgid ""
 "The way remove rows is similar to adding rows. Let's create another method "
 "that we'll call in QML. This time, we will use an additional parameter, and "
@@ -1779,25 +1775,25 @@ msgid ""
 "the row on the front end."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:538
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:537
 msgid ""
 "Now, let's update the application so a \"Delete\" button appears alongside "
 "the edit button, and hook it up to our delete method."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:582
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:581
 msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
 msgstr "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:588
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:587
 msgid "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
 msgstr "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:594
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:593
 msgid "Full Code"
 msgstr "Código completo"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:596
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:595
 msgid ""
 "{{< readfile file=\"/content/docs/getting-started/kirigami/advanced-"
 "connect_models/model.h\" highlight=\"cpp\" >}} {{< readfile file=\"/content/"
@@ -1811,11 +1807,11 @@ msgstr ""
 "\"cpp\" >}} {{< readfile file=\"/content/docs/getting-started/kirigami/"
 "advanced-connect_models/main.qml\" highlight=\"qml\" >}}"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:600
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:599
 msgid "More Information"
 msgstr "Más información"
 
-#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:602
+#: content/docs/getting-started/kirigami/advanced-connect_models/index.md:601
 msgid ""
 "For more information, see [Using C++ Models with Qt Quick Views](docs:"
 "qtquick;qtquick-modelviewsdata-cppmodels.html) and [Model/View Programming]"
@@ -2520,8 +2516,6 @@ msgstr ""
 "components-card/)."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:0
-#, fuzzy
-#| msgid "Action Tool Bars"
 msgid "Action toolbars"
 msgstr "Barras de herramientas de acciones"
 
@@ -3982,8 +3976,6 @@ msgid "Message actions"
 msgstr "Acciones del mensaje"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:0
-#, fuzzy
-#| msgid "Form Layouts"
 msgid "Form layouts"
 msgstr "Diseños de formulario"
 
@@ -5146,8 +5138,6 @@ msgstr ""
 "applicationWindow"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:0
-#, fuzzy
-#| msgid "Progress Bars and Indicators"
 msgid "Progress bars and indicators"
 msgstr "Barras de avance e indicadores"
 
@@ -5275,8 +5265,6 @@ msgstr ""
 "`running` a `false`."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:0
-#, fuzzy
-#| msgid "Scrollable Pages and List Views"
 msgid "Scrollable pages and list views"
 msgstr "Páginas desplazables y vistas de lista"
 
@@ -5655,15 +5643,11 @@ msgstr ""
 "y una fecha de relleno)."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:75
-#, fuzzy
-#| msgid ""
-#| "Each time we click our now 'Add kountdown' button on the top right, our "
-#| "custom countdown is added."
 msgid ""
 "Each time we click our \\\"Add kountdown\\\" button on the top right, our "
 "custom countdown is added"
 msgstr ""
-"Cada vez que hacemos clic en el botón 'Añadir kountdown' de la parte "
+"Cada vez que hacemos clic en el botón «Añadir kountdown» de la parte "
 "superior derecha, se añade una cuenta atrás personalizada."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:77
@@ -6220,17 +6204,15 @@ msgid "resources.qrc"
 msgstr "resources.qrc"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:165
-#, fuzzy
-#| msgid ""
-#| "`resources.qrc` contains the list of all QML files as well as other files "
-#| "(like custom icons) that will be included in the binary."
 msgid ""
 "Our `resources.qrc` is a [Qt Resource file](https://doc.qt.io/qt-5/resources."
 "html). It contains the list of all QML files as well as other files (like "
 "custom icons) that will be included in the binary."
 msgstr ""
-"`resources.qrc` contiene la lista de todos los archivos QML, así como otros "
-"archivos (como los iconos personalizados) que se incluirán en el binario."
+"Nuestro `resources.qrc` es un [archivo de recursos de Qt](https://doc.qt.io/"
+"qt-5/resources.htm). Contiene la lista de todos los archivos QML, así como "
+"otros archivos (como los iconos personalizados) que se incluirán en el "
+"binario."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:169
 msgid ""
@@ -6255,12 +6237,6 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:175
-#, fuzzy
-#| msgid ""
-#| "`CMakeLists.txt` files are needed to use KDE's build system of choice, "
-#| "[CMake](https://cmake.org/). The CMakeLists.txt file in our top-level "
-#| "folder is going to specify some of our application's characteristics. It "
-#| "also includes some of the dependencies we need to compile it."
 msgid ""
 "`CMakeLists.txt` files are needed to use KDE's build system of choice, "
 "[CMake](https://cmake.org/). The `CMakeLists.txt` file in our top-level "
@@ -6270,35 +6246,23 @@ msgid ""
 msgstr ""
 "Los archivos `CMakeLists.txt` son necesarios para usar el sistema de "
 "compilación de elección de KDE, [CMake](https://cmake.org/). El archivo "
-"CMakeLists.txt de nuestra carpeta superior va a especificar algunas de las "
+"`CMakeLists.txt` de nuestra carpeta superior va a especificar algunas de las "
 "características de nuestra aplicación. También incluye algunas de las "
-"dependencias que necesitamos compilar."
+"dependencias que necesitamos para compilar nuestro proyecto."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:179
-#, fuzzy
-#| msgid ""
-#| "The CMakeLists.txt defines how to build your projects. Most of the "
-#| "content here is just to bootstrap your project. You can read a line-by-"
-#| "line, in-depth explanation of what this CMakeLists file does [here](/docs/"
-#| "use/kirigami/advanced-understanding_cmakelists/)."
 msgid ""
 "The `CMakeLists.txt` defines how to build your projects. Most of the content "
 "here is just to bootstrap your project. You can read a line-by-line, in-"
 "depth explanation of what this CMakeLists file does [here](/docs/getting-"
 "started/kirigami/advanced-understanding_cmakelists/)."
 msgstr ""
-"El CMakeLists.txt define cómo se compilan los proyectos. La mayor parte de "
+"El `CMakeLists.txt` define cómo se compilan los proyectos. La mayor parte de "
 "su contenido es solo para iniciar el proyecto. Puede leer una explicación "
 "detallada, línea por línea, de lo que hace este archivo CMakeLists.txt [aquí]"
-"(/docs/use/kirigami/advanced-understanding_cmakelists/)."
+"(/docs/getting-started/kirigami/advanced-understanding_cmakelists/)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:181
-#, fuzzy
-#| msgid ""
-#| "The most important thing to keep in mind is that the Qt and KDE "
-#| "Frameworks dependencies are managed with `find_package`. You will have to "
-#| "modify these lines and include any additional components that you decide "
-#| "to use during the development of your application."
 msgid ""
 "The most important thing to keep in mind is that the Qt and KDE Frameworks "
 "dependencies are managed with [find_package()](https://cmake.org/cmake/help/"
@@ -6307,24 +6271,20 @@ msgid ""
 "development of your application."
 msgstr ""
 "Lo más importante a tener en cuenta es que las dependencias de Qt y de KDE "
-"Frameworks se gestionan con `find_package`. Deberá modificar estas líneas e "
-"incluir cualquier componente adicional que decida usar durante el desarrollo "
-"de su aplicación."
+"Frameworks se gestionan con [find_package()](https://cmake.org/cmake/help/"
+"latest/command/find_package.html). Deberá modificar estas líneas e incluir "
+"cualquier componente adicional que decida usar durante el desarrollo de su "
+"aplicación."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:183
-#, fuzzy
-#| msgid ""
-#| "The final line, `add_subdirectory(src)`, points CMake into the 'src' "
-#| "directory, where our source code is located. Let's delve into the "
-#| "CMakeLists.txt file in there."
 msgid ""
 "The final line, `add_subdirectory(src)`, points CMake to the `helloworld/src/"
 "` directory, where our source code is located. Let's delve into the "
 "`helloworld/src/CMakeLists.txt` file in there."
 msgstr ""
 "La línea final, `add_subdirectory(src)`, hace que CMake apunte al directorio "
-"'src', donde se encuentra nuestro código fuente. Profundicemos en el archivo "
-"CMakeLists.txt que hay allí."
+"'helloworld/src/', donde se encuentra nuestro código fuente. Profundicemos "
+"en el archivo `helloworld/src/CMakeLists.txt` que hay allí."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:187
 msgid "This one's a lot shorter! Let's go through what it does:"
@@ -8240,8 +8200,6 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:0
-#, fuzzy
-#| msgid "Explaining Pages"
 msgid "Explaining pages"
 msgstr "Explicación de las páginas"
 
@@ -8394,13 +8352,6 @@ msgstr ""
 "arreglar un poco las cosas."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:41
-#, fuzzy
-#| msgid ""
-#| "The idea behind our app is that we're going to be able to display a bunch "
-#| "of countdowns to the user. The problem with a normal `Kirigami.Page` is "
-#| "that it has a fixed vertical size, but don't worry: Kirigami also "
-#| "supports scrollable pages. `Kirigami.ScrollablePage` is going to replace "
-#| "our `Kirigami.Page` now."
 msgid ""
 "The idea behind our app is that we're going to be able to display a bunch of "
 "countdowns to the user. The problem with a normal [Kirigami.Page](docs:"
@@ -8410,18 +8361,12 @@ msgid ""
 msgstr ""
 "La idea que hay detrás de nuestra aplicación es la capacidad de poder "
 "mostrar un buen número de cuentas atrás al usuario. El problema con una "
-"`Kirigami.Page` normal es que tiene un tamaño vertical fijo. Pero no se "
-"preocupe: Kirigami también admite páginas desplazables. `Kirigami."
-"ScrollablePage` va a sustituir a nuestra `Kirigami.Page` ahora."
+"[Kirigami.Page](docs:kirigami2;Page) normal es que tiene un tamaño vertical "
+"fijo. Pero no se preocupe: Kirigami también admite páginas desplazables. "
+"[Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) va a ser ahora "
+"nuestra página principal."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:45
-#, fuzzy
-#| msgid ""
-#| "If you've gone ahead of the tutorial, you might have noticed that there "
-#| "is also such a thing as a `ScrollView` that you can use to contain your "
-#| "components. However, do NOT put a `ScrollView` inside a `ScrollablePage` "
-#| "as this can cause problems. Children of a `ScrollablePage` are "
-#| "functionally already in a `ScrollView`."
 msgid ""
 "If you've gone ahead of the tutorial, you might have noticed that there is "
 "also such a thing as a [ScrollView](docs:qtquickcontrols;QtQuick.Controls."
@@ -8430,19 +8375,13 @@ msgid ""
 "Children of a `ScrollablePage` are functionally already in a `ScrollView`."
 msgstr ""
 "Si se ha adelantado al tutorial, es posible que haya notado que también "
-"existe una `ScrollView` que puede usar para contener sus componentes. Sin "
-"embargo, NO coloque una `ScrollView` dentro de una `ScrollablePage`, ya que "
-"esto puede causar problemas. Los elementos secundarios de una "
-"`ScrollablePage` ya están funcionalmente en una `ScrollView`."
+"existe una [ScrollView](docs:qtquickcontrols;QtQuick.Controls.ScrollView) "
+"que puede usar para contener sus componentes. Sin embargo, NO coloque una "
+"`ScrollView` dentro de una `ScrollablePage`, ya que esto puede causar "
+"problemas. Los elementos secundarios de una `ScrollablePage` ya están "
+"funcionalmente en una `ScrollView`."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:51
-#, fuzzy
-#| msgid ""
-#| "Kirigami pages also feature neat titles placed within the toolbar, "
-#| "quickly indicating to the user which page they are on. All we need to do "
-#| "to set a page title using the `title` property of `Kirigami."
-#| "ScrollablePage`. In this case, we used one of the `i18nc()` functions we "
-#| "explored in our previous tutorial to this end."
 msgid ""
 "Kirigami pages also feature neat titles placed within the toolbar, quickly "
 "indicating to the user which page they are on. All we need to do is to set a "
@@ -8452,10 +8391,10 @@ msgid ""
 msgstr ""
 "Las páginas de Kirigami también cuentan con títulos claros situados dentro "
 "de la barra de herramientas que le indican rápidamente al usuario en qué "
-"página se encuentra. Todo lo que necesitamos para definir un título de "
-"página es usar la propiedad `title` de `Kirigami.ScrollablePage`. En este "
-"caso, usamos una de las funciones `i18nc()` que exploramos en nuestro "
-"tutorial anterior para este fin."
+"página se encuentra. Todo lo que tenemos que hacer es definir un título de "
+"página usando la propiedad `title` de [Kirigami.ScrollablePage(docs:"
+"kirigami2;ScrollablePage)]. En este caso, usamos una de las funciones "
+"`i18nc()` que exploramos en nuestro tutorial anterior para este fin."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:55
 #, fuzzy
@@ -8711,12 +8650,6 @@ msgstr ""
 "`KountdownDelegate.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:111
-#, fuzzy
-#| msgid ""
-#| "The `onClicked` property of the 'Edit' button on our cards now calls the "
-#| "`openPopulateSheet` function, with the card's fetched list element "
-#| "properties set as the arguments for this function. With these, the sheet "
-#| "can be populated with the correct text."
 msgid ""
 "The [onClicked](docs:qtquickcontrols;QtQuick.Controls.AbstractButton::"
 "clicked) property of the \"Edit\" button on our cards now calls the "
@@ -8724,8 +8657,9 @@ msgid ""
 "properties set as the arguments for this function. With these, the sheet can "
 "be populated with the correct text."
 msgstr ""
-"La propiedad `onClicked` del botón 'Editar' de nuestras tarjetas llama ahora "
-"a la función `openPopulateSheet`, con las propiedades del elemento de la "
+"La propiedad [onClicked](docs:qtquickcontrols;QtQuick.Controls."
+"AbstractButton::clicked) del botón «Editar» de nuestras tarjetas llama ahora "
+"a la función `openPopulatedSheet()`, con las propiedades del elemento de la "
 "lista extraída de la tarjeta definidas como argumentos para esta función. "
 "Con ellos, la hoja se puede rellenar con el texto correcto."
 
@@ -8742,8 +8676,6 @@ msgid "![](editsheet.png)"
 msgstr "![](editsheet.png)"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
-#, fuzzy
-#| msgid "Colors and Themes in Kirigami"
 msgid "Colors and themes in Kirigami"
 msgstr "Colores y temas en Kirigami"
 
@@ -8781,19 +8713,15 @@ msgstr ""
 "normalmente no se necesitarán colores personalizados para dichos controles."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:20
-#, fuzzy
-#| msgid ""
-#| "Primitive components such as `Rectangle` should always be colored with "
-#| "the color palette provided by Kirigami via the [`Theme`](docs:kirigami2;"
-#| "Kirigami::PlatformTheme) attached property."
 msgid ""
 "Primitive components such as [Rectangle](docs:qtquick;QtQuick.Rectangle) "
 "should always be colored with the color palette provided by Kirigami via the "
 "[Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) attached property."
 msgstr ""
-"Los componentes primitivos, como `Rectangle`, siempre se deben colorear con "
-"la paleta de colores proporcionada por Kirigami a través de la propiedad "
-"adjunta [`Theme`](docs:kirigami2;Kirigami::PlatformTheme)."
+"Los componentes primitivos, como [Rectangle](docs:qtquick;QtQuick."
+"Rectangle), siempre se deben colorear con la paleta de colores proporcionada "
+"por Kirigami a través de la propiedad adjunta [Kirigami.Theme](docs:"
+"kirigami2;Kirigami::PlatformTheme)."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:23
 #, fuzzy
