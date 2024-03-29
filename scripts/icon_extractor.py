@@ -16,13 +16,13 @@ import tarfile
 from distutils import dir_util
 
 
-ICONS= {
+ICONS = {
     'breeze': {
-        'url': 'https://build-artifacts.kde.org/production/SUSEQt5.15/Frameworks-breeze-icons-kf5-qt5.tar',
+        'url': 'https://invent.kde.org/teams/ci-artifacts/suse-qt6.6/-/package_files/789088/download',
         'extracted_base': 'share/icons/breeze'
     },
     'oxygen': {
-        'url': 'https://build-artifacts.kde.org/production/SUSEQt5.15/Plasma-oxygen-icons5-kf5-qt5.tar',
+        'url': 'https://invent.kde.org/teams/ci-artifacts/suse-qt6.6/-/package_files/789102/download',
         'extracted_base': 'share/icons/oxygen/base/'
     }
 }
