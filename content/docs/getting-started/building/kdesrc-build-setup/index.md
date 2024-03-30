@@ -71,6 +71,7 @@ Some Linux distributions do not provide development packages for [KDE Frameworks
 Let's set it up now! You will need many gigabytes of free disk space. Budget 50 GB for KDE Frameworks + KDE Plasma, and 10-30 GB more for some apps as well. Then clone the `kdesrc-build` git repository in the following directory:
 
 ```bash
+mkdir -p ~/kde
 mkdir -p ~/.local/share
 cd ~/.local/share
 git clone https://invent.kde.org/sdk/kdesrc-build.git
@@ -159,14 +160,11 @@ If your Linux distribution does not provide recent versions of Qt packages, you 
 
 ### Disable indexing for your development environment
 
-You'll want to disable indexing for your development-related git repos and the files they will build and install. Add the `~/kde` directory to the exclusions list in:
+You'll want to disable indexing for your development-related git repos and the files they will build and install.
 
-* Plasma 6: System Settings › Search › File Search
-
-* Plasma 5: System Settings › Workspace › Search › File Search
+To do that, add the `~/kde` directory to the exclusions list in System Settings › Search › File Search > Start Indexing a Folder...
 
 {{< figure class="text-center mr-5 pr-5" caption="The Search field in System Settings." src="search-kdesrc-build.webp" >}}
-
 
 ## Next Steps
 
