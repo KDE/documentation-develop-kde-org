@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #
 # SPDX-FileCopyrightText: 2020 David Barchiesi <david@barchie.si>
+# SPDX-FileCopyrightText: 2024 Julius Künzel <jk.kdedev@smartlab.uber.space>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -11,19 +12,22 @@ import argparse
 import re
 import gzip
 import logging
-import requests
+import shutil
+
+from ciutilities.components import Package
 import tarfile
-from distutils import dir_util
 
 
-ICONS = {
+ICON_THEMES = {
     'breeze': {
-        'url': 'https://invent.kde.org/teams/ci-artifacts/suse-qt6.6/-/package_files/789088/download',
-        'extracted_base': 'share/icons/breeze'
+        'sub_path': 'breeze',
+        'project_path': 'breeze-icons',
+        'branch': 'master'
     },
     'oxygen': {
-        'url': 'https://invent.kde.org/teams/ci-artifacts/suse-qt6.6/-/package_files/789102/download',
-        'extracted_base': 'share/icons/oxygen/base/'
+        'sub_path': 'oxygen/base',
+        'project_path': 'oxygen-icons',
+        'branch': 'master'
     }
 }
 
@@ -59,7 +63,10 @@ def parse_args(out_metadata, out_icons):
     if len(sys.path) > 0 and sys.path[0]:
         workdir_default = os.path.normpath(os.path.join(sys.path[0], './icon-extractor-workdir/'))
 
+    input_dir_default = os.environ['XDG_DATA_DIRS']
+
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument('-i', '--input-base-dir', default=input_dir_default, help='Path to directory where the icon themes are installed. Multiple paths with colon (:) as seperator are supported. Default is $XDG_DATA_DIRS')
     parser.add_argument('-j', '--output-metadata-dir', help='Path to directory where to write json metadata', **output_metadata_dir_kwargs)
     parser.add_argument('-d', '--output-icons-dir', help='Path to directory where to copy icons', **output_icons_dir_kwargs)
     parser.add_argument('-w', '--work-dir', default=workdir_default, help='Path to directory used as script workdir')
@@ -168,10 +175,10 @@ def icon_extractor(icons_root, output_icons, output_metadata, pretty_json=False)
 
     # Copy icons
     if os.path.exists(output_icons):
-        dir_util.remove_tree(output_icons)
+        shutil.rmtree(output_icons)
     for dir_name, dir_path in get_dirs(icons_root):
         dir_path_out = os.path.join(output_icons, dir_name)
-        dir_util.copy_tree(dir_path, dir_path_out, preserve_symlinks=True)
+        shutil.copytree(dir_path, dir_path_out, symlinks=True)
 
     # Uncompress svgz
     for category in categories:
@@ -238,34 +245,49 @@ if __name__ == '__main__':
     if not os.path.exists(args.work_dir):
         os.mkdir(args.work_dir)
 
-    for icon_name in ICONS:
-        icon = ICONS[icon_name]
+    localCachePath = os.environ.get('KDECI_CACHE_PATH', '/tmp')
+    gitlabInstance = os.environ.get('KDECI_GITLAB_SERVER', 'https://invent.kde.org/')
+    gitlabToken    = os.environ.get('KDECI_GITLAB_TOKEN')
+    packageProject = os.environ.get('KDECI_PACKAGE_PROJECT', 'teams/ci-artifacts/suse-qt6.6')
 
-        # Create icon workdir if missing
-        icon_workdir = os.path.join(args.work_dir, icon_name)
-        if not os.path.exists(icon_workdir):
-            os.mkdir(icon_workdir)
+    packageRegistry = Package.Registry(localCachePath, gitlabInstance, gitlabToken, packageProject)
 
-        # Dowload icon binary archive if missing
-        archive_filename = os.path.basename(icon['url'])
-        archive_path = os.path.join(icon_workdir, archive_filename)
-        if not os.path.exists(archive_path):
-            logging.info(f'Downloading {icon["url"]} to {archive_path}')
-            r = requests.get(icon['url'])
-            r.raise_for_status()
-            with open(archive_path, 'wb') as f:
-                f.write(r.content)
+    for theme_name in ICON_THEMES:
+        theme = ICON_THEMES[theme_name]
 
-        # Extract archive
-        extracted_archive_path = os.path.join(icon_workdir, 'base')
-        if not os.path.exists(extracted_archive_path):
-            os.mkdir(extracted_archive_path)
-            logging.info(f'Extracting {archive_path} to {extracted_archive_path}')
-            with tarfile.open(archive_path) as tar:
-                tar.extractall(extracted_archive_path)
+        data_dirs = args.input_base_dir.split(":")
+
+        icon_root = None
+        for data_dir in data_dirs:
+            path_candidate = os.path.join(data_dir, theme['sub_path'])
+            if os.path.exists(path_candidate):
+                icon_root = path_candidate
+                break
+
+            path_candidate = os.path.join(data_dir, 'icons', theme['sub_path'])
+            if os.path.exists(path_candidate):
+                icon_root = path_candidate
+                break
+
+        if icon_root:
+            # everythings fine, continue
+            continue
+
+        logging.info(f"Icon files for theme \"{theme_name}\" not found, fetching them now")
+
+        dependenciesToUnpack = packageRegistry.retrieveDependencies({theme['project_path']: theme['branch']})
+
+        # And then unpack them
+        for packageContents, packageMetadata in dependenciesToUnpack:
+            # Open the archive file
+            archive = tarfile.open( name=packageContents, mode='r' )
+            # Extract it's contents into the install directory
+            archive.extractall( path=args.work_dir )
+
+            icon_root = os.path.join(args.work_dir, 'share/icons', theme['sub_path'])
+
 
         # Call icon extractor script
-        icon_root = os.path.join(extracted_archive_path, icon['extracted_base'])
-        icon_output_data = os.path.join(args.output_icons_dir, icon_name)
-        icon_output_metadata = os.path.join(args.output_metadata_dir, icon_name) + '.json'
+        icon_output_data = os.path.join(args.output_icons_dir, theme_name)
+        icon_output_metadata = os.path.join(args.output_metadata_dir, theme_name) + '.json'
         icon_extractor(icon_root, icon_output_data, icon_output_metadata, args.pretty)

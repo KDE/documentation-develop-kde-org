@@ -5,6 +5,12 @@ include:
   - project: sysadmin/ci-utilities
     file: /gitlab-templates/website-hugo.yml
 
+hugo_website:
+  variables:
+    KDECI_CACHE_PATH: /mnt/artifacts/suse-qt6.6/
+    KDECI_GITLAB_SERVER: https://invent.kde.org/
+    KDECI_PACKAGE_PROJECT: teams/ci-artifacts/suse-qt6.6
+
 # broken
 #html_test:
 #  image: invent-registry.kde.org/sysadmin/ci-images/staticweb:latest

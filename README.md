@@ -36,20 +36,24 @@ And open http://localhost:1313
 
 ## Extract icon metadata
 
-Data for the icon galleries (i.e. `/frameworks/breeze-icons/`) must be downloaded and extracted via `scripts/icon_extractor.py`.
+Data for the icon galleries (i.e. `/frameworks/breeze-icons/`) must extracted via `scripts/icon_extractor.py`.
 The script is configured with the correct paths for this repository and therefore may be executed without additional arguments.
+It expects breeze-icons and oxygen-icons to be installed on the system (base install path can be configure, see below). If icons are not found, they will be fetched.
 
 ```
-usage: icon_extractor.py [-h] [-j OUTPUT_METADATA_DIR] [-d OUTPUT_ICONS_DIR] [-w WORK_DIR] [-p] [-v]
+usage: icon_extractor.py [-h] [-i INPUT_BASE_DIR] [-j OUTPUT_METADATA_DIR] [-d OUTPUT_ICONS_DIR] [-w WORK_DIR] [-p] [-v]
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
+  -i INPUT_BASE_DIR, --input-base-dir INPUT_BASE_DIR
+                        Path to directory where the icon themes are installed. Multiple paths with colon (:) as seperator are supported. Default is $XDG_DATA_DIRS (default:
+                        /home/konqi/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop)
   -j OUTPUT_METADATA_DIR, --output-metadata-dir OUTPUT_METADATA_DIR
                         Path to directory where to write json metadata (default: data/icons)
   -d OUTPUT_ICONS_DIR, --output-icons-dir OUTPUT_ICONS_DIR
                         Path to directory where to copy icons (default: assets/icons)
   -w WORK_DIR, --work-dir WORK_DIR
-                        Path to directory used as script workdir (default: ./workdir)
+                        Path to directory used as script workdir (default: scripts/icon-extractor-workdir)
   -p, --pretty          Pretty write output json metadata (default: False)
   -v, --verbose         Increase logging to debug (default: False)
 ```
