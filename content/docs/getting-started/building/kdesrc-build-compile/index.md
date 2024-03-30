@@ -38,7 +38,7 @@ This command clones the KDE git repository https://invent.kde.org/utilities/kcal
 
 If the build failed for any reason, please see our instructions on how to proceed with [Basic Troubleshooting]({{< ref "kdesrc-build-failure" >}}).
 
-To run it, use the `kdesrc-build --run` command, which launches the built-from-source version instead of the one installed by your system's package manager.
+To run it, use the `kdesrc-build --run` command, which launches the built-from-source version of KCalc (from the directory `~/kde/usr`) instead of the version installed using the package manager from your operating system (from the directory `/usr`).
 
 ```bash
 kdesrc-build --run kcalc
@@ -50,7 +50,7 @@ Did it run? If so, then **congratulations, you just compiled your own version of
 
 [KDE Plasma](https://community.kde.org/Plasma) is the environment in which you can run apps. Plasma is responsible for providing a desktop with wallpaper, app launchers, and widgets; displaying notifications; managing wired and wireless networks; and similar operating-system level tasks.
 
-Plasma has multiple *shells*: [Plasma Desktop](https://kde.org/plasma-desktop) for desktop, laptop, and 2-in-1 computers, [Plasma Mobile](https://www.plasma-mobile.org/) for mobile phones, [Plasma Bigscreen](https://plasma-bigscreen.org/) for televisions, and so on. They all share certain common components, such as a window manager, networking stack, basic graphical components, and so on. These shared components are found in [Plasma Workspace](https://invent.kde.org/plasma/plasma-workspace).
+Plasma has multiple *shells*: [Plasma Desktop](https://kde.org/plasma-desktop) for desktop, laptop, and 2-in-1 computers, [Plasma Mobile](https://www.plasma-mobile.org/) for mobile phones and [Plasma Bigscreen](https://plasma-bigscreen.org/) for televisions. They all share certain common components, such as a window manager, networking stack, basic graphical components, and so on. These shared components are found in [Plasma Workspace](https://invent.kde.org/plasma/plasma-workspace).
 
 ### Plasma Desktop
 
