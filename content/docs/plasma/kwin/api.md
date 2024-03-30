@@ -381,7 +381,7 @@ Methods and properties added to the global JavaScript object.
 * `bool` `decorationHasAlpha`: Whether the decoration is currently using an alpha channel.
 * `bool` `providesContextHelp`: Whether the Window provides context help. Mostly needed by decorations to decide whether to show the help button or not.
 * `bool` `maximizable`: Whether the Window can be maximized both horizontally and vertically. The property is evaluated each time it is invoked. Because of that there is no notify signal.
-* `bool` `moveable`: Whether the Window is moveable. Even if it is not moveable, it might be possible to move it to another screen. The property is evaluated each time it is invoked. Because of that there is no notify signal. moveableAcrossScreens
+* `bool` `moveable`: Whether the Window is movable. Even if it is not movable, it might be possible to move it to another screen. The property is evaluated each time it is invoked. Because of that there is no notify signal. moveableAcrossScreens
 * `bool` `moveableAcrossScreens`: Whether the Window can be moved to another screen. The property is evaluated each time it is invoked. Because of that there is no notify signal. moveable
 * `bool` `resizeable`: Whether the Window can be resized. The property is evaluated each time it is invoked. Because of that there is no notify signal.
 * `QString` `desktopFileName`: The desktop file name of the application this Window belongs to. This is either the base name without full path and without file extension of the desktop file for the window's application (e.g. "org.kde.foo"). The application's desktop file name can also be the full path to the desktop file (e.g. "/opt/kde/share/org.kde.foo.desktop") in case it's not in a standard location.
@@ -619,7 +619,7 @@ Methods and properties added to the global JavaScript object.
 * `showingDesktopChanged(bool)`: Signal emitted when the desktop showing ("dashboard") state changed The desktop is risen to the keepAbove layer, you may want to elevate windows or such. 5.3
 * `windowAdded(KWin::EffectWindow *w)`: Signal emitted when a new window has been added to the Workspace. w The added window 4.7
 * `windowClosed(KWin::EffectWindow *w)`: Signal emitted when a window is being removed from the Workspace. An effect which wants to animate the window closing should connect to this signal and reference the window by using refWindow w The window which is being closed 4.7
-* `windowActivated(KWin::EffectWindow *w)`: Signal emitted when a window get's activated. w The new active window, or NULL if there is no active window. 4.7
+* `windowActivated(KWin::EffectWindow *w)`: Signal emitted when a window gets activated. w The new active window, or NULL if there is no active window. 4.7
 * `windowDeleted(KWin::EffectWindow *w)`: Signal emitted when a window is deleted. This means that a closed window is not referenced any more. An effect bookkeeping the closed windows should connect to this signal to clean up the internal references. w The window which is going to be deleted. EffectWindow::refWindow EffectWindow::unrefWindow windowClosed 4.7
 * `tabBoxAdded(int mode)`: Signal emitted when a tabbox is added. An effect who wants to replace the tabbox with itself should use refTabBox. mode The TabBoxMode. refTabBox tabBoxClosed tabBoxUpdated tabBoxKeyEvent 4.7
 * `tabBoxClosed()`: Signal emitted when the TabBox was closed by KWin core. An effect which referenced the TabBox should use unrefTabBox to unref again. unrefTabBox tabBoxAdded 4.7
@@ -772,7 +772,7 @@ Methods and properties added to the global JavaScript object.
 * `windowOpacityChanged(KWin::EffectWindow *w, qreal oldOpacity, qreal newOpacity)`: Signal emitted when the windows opacity is changed. w The window whose opacity level is changed. oldOpacity The previous opacity level newOpacity The new opacity level
 * `minimizedChanged(KWin::EffectWindow *w)`: Signal emitted when a window is minimized or unminimized. w The window whose minimized state has changed
 * `windowModalityChanged(KWin::EffectWindow *w)`: Signal emitted when a window either becomes modal (ie. blocking for its main client) or looses that state. w The window which was unminimized
-* `windowUnresponsiveChanged(KWin::EffectWindow *w, bool unresponsive)`: Signal emitted when a window either became unresponsive (eg. app froze or crashed) or respoonsive w The window that became (un)responsive unresponsive Whether the window is responsive or unresponsive
+* `windowUnresponsiveChanged(KWin::EffectWindow *w, bool unresponsive)`: Signal emitted when a window either became unresponsive (eg. app froze or crashed) or responsive w The window that became (un)responsive unresponsive Whether the window is responsive or unresponsive
 * `windowDamaged(KWin::EffectWindow *w)`: Signal emitted when an area of a window is scheduled for repainting. Use this signal in an effect if another area needs to be synced as well. w The window which is scheduled for repainting
 * `windowKeepAboveChanged(KWin::EffectWindow *w)`: This signal is emitted when the keep above state of w was changed. w The window whose the keep above state was changed.
 * `windowKeepBelowChanged(KWin::EffectWindow *w)`: This signal is emitted when the keep below state of was changed. w The window whose the keep below state was changed.

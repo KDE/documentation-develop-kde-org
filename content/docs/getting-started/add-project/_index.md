@@ -23,7 +23,7 @@ For projects which started outside of KDE.
 **KDE Incubator checklist**
 - [ ] Incubation Sponsor is..
 - [ ] E-mailed kde-devel@ and other relevant lists on YYYY-MM-DD
-- [ ] Compliance with the [http://manifesto.kde.org KDE Manifesto]
+- [ ] Compliance with the [https://manifesto.kde.org KDE Manifesto]
 - [ ] Governance similar to the other KDE projects
 - [ ] Clear product vision
 - [ ] Healthy team (healthy proportion of volunteers, inclusive towards new contributors, ideally more than one developer)
@@ -83,7 +83,7 @@ For any project to become an official part of KDE.
 - [ ] Documentation appropriate to the project: if a library, API documentation (such as [Doxygen](https://www.doxygen.nl/) for C++), if an application, user documentation (such as a README detailing what the application does or is for, how to install/build, and other such useful information)
 - [ ] A [bugs.kde.org](https://bugs.kde.org) product (file a [sysadmin ticket](https://community.kde.org/Sysadmin))
 - [ ] Passing [Gitlab CI build jobs](https://mail.kde.org/pipermail/kde-devel/2021-September/000717.html)
-- [ ] Passing [KDE neon](http://build.neon.kde.org/) build
+- [ ] Passing [KDE neon](https://build.neon.kde.org) build
 - [ ] App packages in [Flatpak](https://develop.kde.org/docs/packaging/flatpak/), [Snap](https://community.kde.org/Guidelines_and_HOWTOs/Snap), [AppImages and Windows](https://community.kde.org/Craft) etc. as appropriate
 ```
 

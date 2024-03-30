@@ -388,7 +388,7 @@ Now that we have our symlink ready, we can proceed to create the `index.theme` f
 ---
 
 The `index.theme` file is responsible for storing the information about the custom theme. In this tutorial, we are 
-calling it `KoolKursors`. The minimal structre for the `index.theme` file is the one as follows:
+calling it `KoolKursors`. The minimal structure for the `index.theme` file is the one as follows:
 
 ```theme
 [Icon Theme]
@@ -482,7 +482,7 @@ On Plasma you can follow these steps to select your new `KoolKursors` theme:
 
 Done! Enjoy your new `KoolKursors` theme. :)
 
-## Other Resources {#other-resourcers}
+## Other Resources {#other-resources}
 ---
 
 - [X.org xcursorgen documentation](https://www.x.org/releases/current/doc/man/man1/xcursorgen.1.xhtml)

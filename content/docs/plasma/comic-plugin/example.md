@@ -19,12 +19,12 @@ There are some other comic websites that use the same structure.
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 let findNewDate = new Boolean();
-const mainPage = "http://www.jesusandmo.net/";
+const mainPage = "https://www.jesusandmo.net";
 
 function init() {
     comic.comicAuthor = "\"Mohammed Jones\"";
     comic.firstIdentifier = "2005-11-24";
-    comic.shopUrl = "http://www.jesusandmo.net/the-shop/";
+    comic.shopUrl = "https://www.jesusandmo.net/the-shop/";
 
     var today = date.currentDate();
     findNewDate = (comic.identifier.date >= today.date);
@@ -102,8 +102,8 @@ This example shows the implementation of the comic plugin for [xkcd](https://sto
 
 function init() {
     comic.comicAuthor = "Randall Munroe";
-    comic.websiteUrl = "http://xkcd.com/";
-    comic.shopUrl = "http://store.xkcd.com/";
+    comic.websiteUrl = "https://xkcd.com/";
+    comic.shopUrl = "https://store.xkcd.com/";
 
     comic.requestPage(comic.websiteUrl, comic.User);
 }

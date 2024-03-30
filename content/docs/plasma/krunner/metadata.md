@@ -40,7 +40,7 @@ By using this property, the Locations runner will take preference over yours. Th
         "License": "GPL",
         "Name": "My Runner",
         "Version": "0.1",
-        "Website": "http://plasma.kde.org/"
+        "Website": "https://kde.org/plasma-desktop"
     },
     "X-Plasma-Runner-Unique-Results": true,
     "X-Plasma-Runner-Weak-Results": true

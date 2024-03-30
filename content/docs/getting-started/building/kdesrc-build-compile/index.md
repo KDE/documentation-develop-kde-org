@@ -192,7 +192,7 @@ Perhaps you went through this whole procedure and still have no idea what to wor
 
 [Choose what to work on]({{< ref "help-choosing" >}})
 
-If you already know what you want to work on and you are in fact already working on it, then it might be time to learn to make a merge request and send your changes:
+If you already know what you want to work on and you are in fact already working on it, then it might be time to learn how to make a merge request and send your changes:
 
 [Submit your new software changes for review](https://community.kde.org/Infrastructure/GitLab#Submitting_a_merge_request)
 

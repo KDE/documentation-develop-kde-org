@@ -68,7 +68,7 @@ Every comic plugin needs a metadata.json file like the following:
         "License": "GPLv2",
         "Name": "My Comic",
         "Version": "0.1",
-        "Website": "http://plasma.kde.org/"
+        "Website": "https://kde.org/plasma-desktop"
     },
     "X-KDE-PlasmaComicProvider-SuffixType": "Date"
 }
@@ -269,8 +269,8 @@ cases -- as discussed below -- have something assigned to them initially.
 
 ```js
 comic.comicAuthor = "Randall Munroe";      // the author or authors of the comic strip
-comic.websiteUrl = "http://xkcd.com/42/";  // the address to the page where the strip is
-comic.shopUrl = "http://store.xkcd.com/";  // if there is a shop for the comic
+comic.websiteUrl = "https://xkcd.com/42";  // the address to the page where the strip is
+comic.shopUrl = "https://store.xkcd.com/";  // if there is a shop for the comic
 comic.title = "Geico";                     // the title of the comic strip, can be also the chapter etc.
 comic.additionalText = "David did this";   // additional text, that will be shown as tooltip in the comic applet.
 comic.textCodec = "Windows-1251";          // Only set the codec of the web content if it is not automatically recognized! So test first if it works without setting it.

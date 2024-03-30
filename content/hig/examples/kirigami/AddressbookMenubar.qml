@@ -14,7 +14,7 @@ Kirigami.ApplicationWindow {
         Menu {
             title: i18n("&Edit")
             Action { text: i18n("&Merge contacts") }
-            Action { text: i18n("&Search dupplicate contacts") }
+            Action { text: i18n("&Search duplicate contacts") }
             Action { text: i18n("&Export") }
         }
         Menu {

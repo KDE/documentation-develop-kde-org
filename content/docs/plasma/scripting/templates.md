@@ -62,7 +62,7 @@ provides a Panel layout for Plasma Netbook:
         "License": "GPL",
         "Name": "Cool Panel",
         "Version": "1.0",
-        "Website": "http://plasma.kde.org/"
+        "Website": "https://kde.org/plasma-desktop"
     },
     "X-Plasma-ContainmentCategories": [
         "panel"

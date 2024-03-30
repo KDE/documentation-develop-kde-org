@@ -32,7 +32,7 @@ handle it, for example with GPhoto or any other library you can think of. The
 same applies for any other plugged device: DVB cards (once recognized, Solid
 gives you the name of the associated device), audio cards (you can use ALSA,
 OSS or whatever you want: Solid knows the data to access it), portable media
-players, network cards, et cetera. Moreover, it lets you check if you're
+players, network cards, etc. Moreover, it lets you check if you're
 connected to any network or not, and you can use Solid to tell the system to
 connect (that is, you can ask Solid: "Give me access to the network, I don't
 want to care about details").

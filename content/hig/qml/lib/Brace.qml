@@ -21,7 +21,7 @@ import QtQuick 2.2
 import QtQuick.Controls 2.2
 import org.kde.kirigami 2.4 as Kirigami
 
-// Drawing a brace between to obejcts to show the distance between them
+// Drawing a brace between to objects to show the distance between them
 Item {
     id: canvas
     anchors.fill: parent;
@@ -71,7 +71,7 @@ Item {
             // Determine direction
             // draw either horizontal or vertical
             if (horizontal) {
-                // If no label was provided calulate it
+                // If no label was provided calculate it
                 if (canvas.text == "") {
                     if (cfrom.x > cto.x) {
                         canvas.text = cfrom.x - cto.x - to.width;
@@ -110,7 +110,7 @@ Item {
                 prot.y = cfrom.y - prot.height - 2 * Kirigami.Units.smallSpacing
             }
             else {
-                // If no label was provided calulate it
+                // If no label was provided calculate it
                 if (canvas.text == "") {
                     if (cfrom.y > cto.y) {
                         canvas.text = cfrom.y - cto.y - to.height;

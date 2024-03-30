@@ -118,7 +118,7 @@ Ideally, apks should be as small as possible. There are several ways this can be
 
 First, the apk should be inspected to show the contained files and their sizes. The Android SDK contains two tools that can be used for this:
 
-- `apkanalyzer` is a command-linetool that lists apk contents and its size
+- `apkanalyzer` is a command line tool that lists apk contents and its size
 - Android Studio contains a graphical tool for this under `Build > Analyze APK`.
 
 Since apk files are just zip files internally, they can also be opened using normal archive tools like Ark.

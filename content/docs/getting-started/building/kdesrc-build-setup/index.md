@@ -178,4 +178,4 @@ To recapitulate the essentials:
 2. You cloned kdesrc-build using git.
 3. You ran the initial setup for kdesrc-build.
 
-Time to learn how to use kdesrc-build tool to build software from source code!
+Time to learn how to use kdesrc-build to build software from source code!

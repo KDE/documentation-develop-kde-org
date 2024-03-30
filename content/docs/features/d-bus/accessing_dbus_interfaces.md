@@ -226,12 +226,12 @@ Due to the generated class being a subclass of [QDBusAbstractInterface](https://
 Due to this combination of ease of use and compile-time checking, this is generally the preferred mechanism to use when accessing *complicated* D-Bus interfaces.
 {{< alert title="Tip" >}}If your CMake installation does not provide the `${DBUS_INTERFACES_INSTALL_DIR}`, remember to add KDE ECM module to your `CMakeLists.txt`.{{< /alert >}}
 
-But it does come with its drawbacks, since we need a XML file to generate adaptor at compile time. The XML file must be present in system. This would means one will have to build the project that carries this file first, leading to more compile time dependencies. Including the XML file in source code avoid this, but only feasible if you can guarantee the sync between the actual interface and the XML file you carry.
+But it does come with its drawbacks, since we need a XML file to generate adaptor at compile time. The XML file must be present in system. This would mean one will have to build the project that carries this file first, leading to more compile time dependencies. Including the XML file in source code avoid this, but only feasible if you can guarantee the sync between the actual interface and the XML file you carry.
 
 Each ways comes with pros and cons, feel free to choose your solution. My suggestions are:
 
 * Use `QDBusInterface` only if blocking is not a problem (e.g. small console utilities) and the remote interface is simple enough.
-* Use adaptor with a system XML file if the XML comes from a software very likely to be compiled first. E.g. XML files from `KWin` or `PowerDevil` or other most important Plasma softwares.
+* Use adaptor with a system XML file if the XML comes from a software very likely to be compiled first. E.g. XML files from `KWin` or `PowerDevil` or other important Plasma software packages.
 * It's fine to use adaptor if the XML is installed by the same project. I.e. your project consists of a daemon and client, the XML file is from daemon and the adaptor is for client. Being in same project you can always guarantee the generated adaptor is correct.
 * Including the XML in your project is less than perfect but it's appropriate for stable APIs and can be a good option if it would otherwise drag too many otherwise unnecessary dependencies or if no system XML exists (you can create your own with introspection).
 * You can still raw `QDBusMessage` along with `QDBusConnection` for complex cases not covered by other methods.

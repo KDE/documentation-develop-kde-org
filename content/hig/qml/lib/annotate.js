@@ -386,7 +386,7 @@ An.prototype._draw = function(node, type, opt) {
  */
 function Select(str) {
     // TODO support more complex syntax
-    // - multiple nodenames, hirachy, ...
+    // - multiple nodenames, hierarchy, ...
     if (str.search(/\{/) !== -1) {
         this.nodeName = str.substring(0, str.indexOf("{"));
         var members = str.match(/\{.+\}/);

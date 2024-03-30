@@ -25,7 +25,7 @@ Keyboard Navigation
 -   Frequently-accessed keyboard shortcuts should be physically easy to
     access and not require awkwardly bending the wrist or fingers.
 -   The application does not require repetitive, simultaneous
-    keypresses.
+    key presses.
 -   The application provides keyboard equivalents for all mouse
     functions.
 -   The application provides keyboard equivalents for all mouse-based

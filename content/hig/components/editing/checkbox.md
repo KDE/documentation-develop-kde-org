@@ -84,7 +84,7 @@ Do use sliding switches on mobile.
 
 ### Appearance
 
-If you are using Qt Widgets you should use one of Qt's Layout classes,
+If you are using Qt Widgets you should use one of the Qt Layout classes,
 which will take care of the layout and spacing of your controls.
 
 -   The text of a checkbox is on the right of its tick rectangle, which

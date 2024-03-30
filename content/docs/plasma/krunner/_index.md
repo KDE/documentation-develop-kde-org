@@ -66,7 +66,7 @@ The contents of this file, as seen below, contain the name, description and tech
         "License": "GPL",
         "Name": "Home Files",
         "Version": "0.1",
-        "Website": "http://plasma.kde.org/"
+        "Website": "https://kde.org/plasma-desktop"
     }
 }
 ```

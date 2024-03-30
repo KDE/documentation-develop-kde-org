@@ -137,7 +137,7 @@ Next let's add an icon:
 Icon=background
 ```
 
-Notice that we didn't include the .png file extension, but just referred to the icon by name. You can find icons by name by looking in `/usr/share/icons/` or installing `plasma-sdk` and using the [Cuttlefish app](https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png). If we had left the `Icon` line out our action would still work, it just wouldn't look as fancy. Now that we've achieved fancyness, let's finish up by making it useful: 
+Notice that we didn't include the .png file extension, but just referred to the icon by name. You can find icons by name by looking in `/usr/share/icons/` or installing `plasma-sdk` and using the [Cuttlefish app](https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png). If we had left the `Icon` line out our action would still work, it just wouldn't look as fancy. Now that we've achieved fanciness, let's finish up by making it useful: 
 
 ```ini
 Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("Image", "%u")}';

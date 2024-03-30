@@ -27,7 +27,7 @@ Kirigami.ApplicationWindow {
             },
             Kirigami.Action {
                 iconName: "user-group-new"
-                text: i18n("&Search dupplicate contacts")
+                text: i18n("&Search duplicate contacts")
             },
             Kirigami.Action {
                 iconName: "configure"
