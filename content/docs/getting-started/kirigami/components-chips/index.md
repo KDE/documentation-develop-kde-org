@@ -125,7 +125,7 @@ See [Example Application](#example-application) for more information.
 The example application below showcases how chips can be used in programs such
 as to-do lists.
 
-{{< readfile file="/content/docs/getting-started/kirigami/chips/main.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/components-chips/main.qml" highlight="qml" >}}
 
 ![Chips Example Application](chips_example_app.png)
 
