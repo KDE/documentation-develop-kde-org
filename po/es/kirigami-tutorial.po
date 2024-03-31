@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-28 02:03+0000\n"
-"PO-Revision-Date: 2024-03-27 16:58+0100\n"
+"PO-Revision-Date: 2024-03-30 04:41+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1402,6 +1402,9 @@ msgid ""
 "C++ side, and declare how the data from that model should be represented on "
 "the QML frontend."
 msgstr ""
+"Podemos crear nuestros propios [modelos](docs:qtcore;qabstractlistmodel."
+"html) desde el lado C++ y declarar cómo se deben representar los datos de "
+"este modelo en la interfaz QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:20
 msgid "Preparing the Class"
@@ -1470,24 +1473,35 @@ msgid ""
 "three virtual functions that are essential at doing this, all of which do "
 "their own tasks."
 msgstr ""
+"Por supuesto, no podemos mostrar esta clase como está. También necesitamos "
+"decirle a QML cómo se representan estos datos en la clase. Podemos hacerlo "
+"sobrescribiendo tres funciones virtuales que son esenciales para ello, cada "
+"una de las cuales realiza su propia tarea."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:58
 msgid ""
 "`rowCount()` - Think of this function as a way to tell QML how many items "
 "are in the model to represent."
 msgstr ""
+"`rowCount()`: Piense en esta función como un modo de decirle a QML cuántos "
+"elementos hay en el modelo que se va a representar."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:60
 msgid ""
 "`roleNames()` - You can think of role names as property names attached to "
 "data in QML. This function allows you to create those roles."
 msgstr ""
+"`roleNames()`: Se puede decir que los nombres de los roles son nombres de "
+"propiedades adjuntados a los datos en QML. Esta función le permite crear "
+"dichos roles."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:62
 msgid ""
 "`data()` - This function is called when you want to retrieve the data that "
 "corresponds to the role names from the model."
 msgstr ""
+"`data()`: Esta función se llama cuando necesite obtener los datos que "
+"corresponden a los nombres de roles del modelo."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:67
 msgid ""
@@ -1495,6 +1509,10 @@ msgid ""
 "is being delegated, and are not usable outside of it. See [Models and Views]"
 "(docs:qtquick;qtquick-modelviewsdata-modelview.html#models)."
 msgstr ""
+"Los nombres de roles personalizados creados por `roleNames()` solo se pueden "
+"usar cuando un modelo está delegado, y no se pueden usar fuera del mismo. "
+"Consulte [Modelos y vistas](docs:qtquick;qtquick-modelviewsdata-modelview."
+"html#models)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:75
 msgid ""
@@ -1503,16 +1521,23 @@ msgid ""
 "model. Since we are just dealing with a one-dimensional array in this "
 "tutorial, you can just think of \"rows\" as \"number of elements.\""
 msgstr ""
+"Técnicamente, los modelos de Qt se representan como tablas, con filas y "
+"columnas. Así, lo que la sobrescritura de `rowCount()` hace es decirle a Qt "
+"cuántas filas hay en un modelo. Como solo estamos tratando con una matriz de "
+"una única dimensión en este tutorial, podemos pensar en las «filas» como "
+"«número de elementos»."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:82
 msgid "Overriding and Implementing `rowCount()`"
-msgstr "Redefinición e implementación de `rowCount()`"
+msgstr "Sobrescritura e implementación de `rowCount()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:84
 msgid ""
 "Let's override the function in the header file. The `rowCount()` comes with "
 "its own parameter, but will not be used in this example and is excluded."
 msgstr ""
+"Sobrescribamos la función en el archivo de cabecera. `rowCount()` viene con "
+"su propio parámetro, pero no se usará en este ejemplo, por lo que se excluye."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:95
 msgid "Then, let's declare how many rows are in this model in `model.cpp`."
@@ -1521,7 +1546,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
 msgid "Overriding and Implementing `roleNames()`"
-msgstr "Redefinición e implementación de `roleNames()`"
+msgstr "Sobrescritura e implementación de `roleNames()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
 msgid ""
@@ -1531,6 +1556,11 @@ msgid ""
 "QML accesses a corresponding role, and as such we can make `data()` return "
 "what we want."
 msgstr ""
+"Antes de sobrescribir `roleNames()`, necesitamos declarar que los roles "
+"están en el lado C++ usando una variable `enum` pública. El motivo para ello "
+"es que dichos valores de la variable `enum` se pasan a `data()` cada vez que "
+"QML accede a un determinado rol y, como tal, podemos hacer que `data()` "
+"devuelva lo que queremos."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:113
 msgid ""
@@ -1557,7 +1587,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:149
 msgid "Overriding and Implementing `data()`"
-msgstr "Redefinición e implementación de `data()`"
+msgstr "Sobrescritura e implementación de `data()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:151
 msgid ""
@@ -1636,6 +1666,9 @@ msgid ""
 "modify the data from the frontend side automatically reflects those changes "
 "on the backend side. It requires three parameters:"
 msgstr ""
+"`setData()` es una función virtual que se puede sobrescribir para que, al "
+"intentar modificar los datos desde el lado de la interfaz, refleje de forma "
+"automática dichos cambios en el lado del motor. Requiere tres parámetros:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:278
 msgid "`index` - The location of the data."
@@ -2968,11 +3001,13 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips"
-msgstr ""
+msgstr "Chips"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips are small elements typically used to list out related properties."
 msgstr ""
+"Los chips son pequeños elementos que se suelen usar para listar las "
+"propiedades relacionadas."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:9
 msgid ""
@@ -2989,7 +3024,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:16
 msgid "Quick Start"
-msgstr ""
+msgstr "Inicio rápido"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:18
 msgid ""
@@ -3057,7 +3092,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:130
 msgid "![Chips Example Application](chips_example_app.png)"
-msgstr ""
+msgstr "![Aplicación de ejemplo de chips](chips_example_app.png)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:0
 msgid "Controls and interactive elements"
@@ -4490,18 +4525,14 @@ msgstr ""
 "descartarlos fácilmente."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:217
-#, fuzzy
-#| msgid ""
-#| "By default, this close button is hidden, but this can be overridden by "
-#| "setting the `showCloseButton` property to `true`."
 msgid ""
 "By default, this close button is hidden, but this can be overridden by "
 "setting the [showCloseButton](docs:kirigami2;templates::InlineMessage::"
 "showCloseButton) property to `true`."
 msgstr ""
 "De forma predeterminada, este botón de cierre está oculto, pero puede "
-"modificar este comportamiento definiendo la propiedad `showCloseButton` a "
-"`true`."
+"modificar este comportamiento definiendo la propiedad [showCloseButton](docs:"
+"kirigami2;templates::InlineMessage::showCloseButton) a `true`."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:236
 #, fuzzy
