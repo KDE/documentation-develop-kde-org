@@ -78,6 +78,24 @@ In addition, some changes to applets' metadata are needed. In Plasma 6, all plas
 If you automatically converted the `metadata.json` from a `metadata.desktop`, the `KPlugin` section may still contain the `ServiceTypes` key.
 This needs to be replaced by a `KPackageStructure` entry in the json's top level.
 
+For example, the following `ServiceTypes` section must be reworked:
+
+```json
+{
+    "ServiceTypes": [
+        "Plasma/Applet"
+    ]
+}
+```
+
+into this `KPackageStructure` definition:
+
+```json
+{
+    "KPackageStructure": "Plasma/Applet"
+}
+```
+
 ### Example porting of a minimal plasmoid
 
 #### Qt5
