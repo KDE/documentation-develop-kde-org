@@ -23,11 +23,9 @@ sudo dnf install code`
  >}}
 
 
-## Configuration
+## Setup
 
-### Preparation
-
-#### Enivronment
+### Enivronment
 
 To ensure VS Code can find source-built libraries and allow running some terminal commands, add the following to your `~/.bashrc` or `~/.zshrc`:
 
@@ -36,7 +34,7 @@ export CMAKE_PREFIX_PATH="~/kde/usr"
 ```
 
 
-#### kdesrc-build
+### kdesrc-build
 
 Needed to enable [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) support:
 
@@ -56,9 +54,6 @@ global
 ...
 end global
 ```
-
-
-### Automatic configuration
 
 `kdesrc-build` can automatically generate the config files for projects that vscode needs to enable intellisense, building, debugging, tests, and more from directly within the IDE.
 
@@ -82,130 +77,6 @@ A popup will ask if you want to install/enable the recommended extensions for wo
 ![Screenshot of the prompt to install recommended extensions](recommended-extensions-prompt.png)
 
 Click `Install`. You are ready to start working on the code with an advanced, modern IDE!
-
-
-### Manual configuration
-
-We will use kcalc (the KDE calculator app) as an example.
-Build kcalc:
-
-```bash
-kdesrc-build kcalc
-```
-
-Either open VSCode, from the VSCode main menu > File > Open Folder... Ctrl+K Ctrl+O > select `~/kde/src/kcalc/`.
-
-Or, in a terminal,
-
-```bash
-cd ~/kde/src/kcalc
-code .
-```
-
-The directory opened in VSCode is also known as the VSCode workspace folder.
-
-VSCode has two sets of settings: "User" settings (e.g. ~/.config/Code/User/settings.json) and "Workspace" settings (e.g. ~/kde/src/kcalc/.vscode/settings.json). You can see these in VSCode main menu > File > Preferences > Settings Ctrl+Comma > at the top there are two tabs: "User" and "Workspace"
-
-VSCode stores settings related to a specific project in the top-level directory of that project, in a hidden directory named `.vscode`.
-
-Create this file. Make it have the content:
-
-`~/kde/src/kcalc/.vscode/settings.json`
-
-```json
-{
-    "cmake.buildDirectory": "${workspaceFolder}/../../build/kcalc"
-}
-```
-
-Create this file. This config enables the correct settings to support C++, CMake & IntelliSense. Make it have the content:
-
-`~/kde/src/kcalc/.vscode/c_cpp_properties.json`
-
-```json
-{
-    "configurations": [
-        {
-            "name": "Linux",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "${default}",
-            "compileCommands": "${workspaceFolder}/compile_commands.json"
-        }
-    ],
-    "version": 4
-}
-```
-
-
-#### User settings
-
-These settings apply once to every project.
-
-In VSCode open the command palette with Ctrl + Shift + P > "Preferences: Open User Settings (JSON)". On my machine the file has the content:
-
-```json
-{
-    "editor.wordWrap": "on",
-    "cmake.environment": {
-      "PATH": "~/kde/usr/bin:${env:PATH}",
-      "LD_LIBRARY_PATH": "~/kde/usr/lib/x86_64-linux-gnu:${env:LD_LIBRARY_PATH}",
-      "XDG_DATA_DIRS": "~/kde/usr/share:${env:XDG_DATA_DIRS}",
-      "XDG_CONFIG_DIRS": "~/kde/usr/etc/xdg:${env:XDG_CONFIG_DIRS}",
-      "QT_PLUGIN_PATH": "~/kde/usr/lib/plugins:${env:QT_PLUGIN_PATH}",
-      "QML2_IMPORT_PATH": "~/kde/usr/lib/qml:${env:QML2_IMPORT_PATH}",
-      "QT_QUICK_CONTROLS_STYLE_PATH": "~/kde/usr/lib/qml/QtQuick/Controls.2/:${env:QT_QUICK_CONTROLS_STYLE_PATH}"
-    },
-    "cmake.generator": "Unix Makefiles",
-    "cmake.installPrefix": "~/kde/usr"
-}
-```
-
-Or, alternatively, from VSCode main menu > File > Preferences > Settings Ctrl+Comma > User > Extensions > CMake Tools > scroll through the list and make sure that you keep the defaults, plus you configure the following:
-
-```json
-{
-    "cmake.environment": {
-      "PATH": "~/kde/usr/bin:${env:PATH}",
-      "LD_LIBRARY_PATH": "~/kde/usr/lib/x86_64-linux-gnu:${env:LD_LIBRARY_PATH}",
-      "XDG_DATA_DIRS": "~/kde/usr/share:${env:XDG_DATA_DIRS}",
-      "XDG_CONFIG_DIRS": "~/kde/usr/etc/xdg:${env:XDG_CONFIG_DIRS}",
-      "QT_PLUGIN_PATH": "~/kde/usr/lib/plugins:${env:QT_PLUGIN_PATH}",
-      "QML2_IMPORT_PATH": "~/kde/usr/lib/qml:${env:QML2_IMPORT_PATH}",
-      "QT_QUICK_CONTROLS_STYLE_PATH": "~/kde/usr/lib/qml/QtQuick/Controls.2/:${env:QT_QUICK_CONTROLS_STYLE_PATH}"
-    },
-    "cmake.generator": "Unix Makefiles",
-    "cmake.installPrefix": "~/kde/usr"
-}
-```
-
-E.g. scroll to "Cmake: Environment Environment variables to set when running CMake commands." > Add Item > Key: `PATH`, Value: `~/kde/usr/bin:${env:PATH}`. Then, while you hover with the mouse over this settings, or wile you edit this setting, on the left hand side of "Cmake: Environment" a "gear" icon will appear > click on it > Copy Settings as JSON > make sure that the contents of the clipboard is equal to the JSON snippet from above, for "cmake.environment".
-
-After you finish configuring VSCode, close all VSCode windows.
-
-
-#### Extensions
-
-Once VSCode is installed we need some extensions to enable support for the languages to work on KDE projects.
-
-- [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack) - Enables support for C++ and CMake.
-
-- [Qt tools](https://marketplace.visualstudio.com/items?itemName=tonka3000.qtvsctools) - Enables some Qt support.
-
-- [QML](https://marketplace.visualstudio.com/items?itemName=bbenoist.QML) - Enables syntax highlighting for QML.
-
-Optional:
-
-[Zeal](https://zealdocs.org/) is an application that allows browsing documentation offline.
-
-[Dash](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-dash) is a VSCode extension that enables a hotkey (Ctrl + H) to instantly open the item under the cursor in Zeal.
-
-These paired together make looking up documentation while working on code very quick and easy.
 
 
 ## Working on a project
@@ -239,3 +110,10 @@ The workaround is to source the project's `prefix.sh` file before opening VSCode
 source ~/kde/build/kcalc/prefix.sh
 code ~/kde/src/kcalc
 ```
+
+
+## Notes
+
+The templates for the `.vscode` configuration files are available
+[here](https://invent.kde.org/sdk/kdesrc-build/-/tree/master/data/vscode) if you
+need to reference them or create them manually.
