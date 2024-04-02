@@ -63,7 +63,7 @@ def parse_args(out_metadata, out_icons):
     if len(sys.path) > 0 and sys.path[0]:
         workdir_default = os.path.normpath(os.path.join(sys.path[0], './icon-extractor-workdir/'))
 
-    input_dir_default = os.environ['XDG_DATA_DIRS']
+    input_dir_default = os.environ.get('XDG_DATA_DIRS', '')
 
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('-i', '--input-base-dir', default=input_dir_default, help='Path to directory where the icon themes are installed. Multiple paths with colon (:) as seperator are supported. Default is $XDG_DATA_DIRS')
