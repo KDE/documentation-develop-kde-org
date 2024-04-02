@@ -145,6 +145,104 @@ To later change the target, open the Command Palette (`Ctrl+Shift+P`) and run
 the `CMake: Set Debug Target` command.
 
 
+### Debugging KCMs
+
+{{< alert title="Info" color="info" >}}
+We are hoping to make this process more automated in the future.
+{{< /alert >}}
+
+We'll use the `kscreenlocker` KCM as an example.
+
+To debug a KCM, you need to start VSCode with the necessary environment 
+variables set. This can be done by sourcing the project's `prefix.sh` script 
+and launching VSCode from the terminal:
+
+```bash
+    source ~/kde/build/kscreenlocker/prefix.sh
+    code ~/kde/src/kscreenlocker
+```
+
+Add a new file to the `.vscode` folder of the project called `tasks.json` with 
+the following content:
+
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        // Run `kdesrc-build --no-src --no-include-dependencies kscreenlocker`
+        {
+            "label": "Rebuild",
+            "type": "shell",
+            "command": "kdesrc-build",
+            "args": [
+                "--no-src",
+                "--no-include-dependencies",
+                "kscreenlocker"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+```
+
+Add a new entry to the `launch.json` file in the `.vscode` folder of the project 
+to launch the KCM:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        // ...
+        // Regular Debug launch config
+        // ...
+
+        // Debug config that launches ~/kde/build/kcmutils/bin/kcmshell6
+        {
+            "name": "kcm",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask": "Rebuild", // Runs the Rebuild task before launching
+            "program": "/home/<username>/kde/build/kcmutils/bin/kcmshell6", // Replace <username> with your username
+            "args": [
+                "kcm_screenlocker"
+            ],
+            "environment": [
+                {
+                    "name": "QT_LOGGING_RULES",
+                    "value": "*.debug=true; qt.*.debug=false"
+                }
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+        }
+    ]
+}
+```
+
+{{< alert title="Tip" color="success" >}}
+You can find the name of the KCM you want by running `kcmshell6 --list` in the terminal.
+{{< /alert >}}
+
+Now you can start debugging the KCM by selecting the `kcm` configuration in the 
+debugger and clicking the green play button:
+
+{{< figure alt="Screenshot of choosing the kcm launch configuration" width="800px" src="kcm-choose-launch-config.png" >}}
+
+The KCM will open in a new window, and the debugger will hit breakpoints in the 
+C++ code.
+
+
 ## Troubleshooting
 
 - Reloading the window (Command Palette -> `Developer: Reload Window`) can fix
