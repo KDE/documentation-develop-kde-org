@@ -11,7 +11,7 @@ Microsoft Visual Studio Code (VSCode) is a popular cross-platform, general-purpo
 
 A screen recording version is available https://www.youtube.com/watch?v=BCJhD57GN0Y
 
-## Installing
+## Installation
 
 {{< installpackage
     arch="vscode"
@@ -54,35 +54,89 @@ The configuration files are generated when a project is build or rebuilt with
 before enabling the `generate-vscode-project-config` option, make sure to 
 rebuild it before opening it in VSCode.
 
-*****
-
-Now the project source directory can be opened as a workspace in vs code by opening the src directory as a folder:
-
-* `File -> Open Folder...`
-* Select the project src directory: `kde/src/kcalc`
-
-A popup will ask if you want to install/enable the recommended extensions for working on this project:
-
-![Screenshot of the prompt to install recommended extensions](recommended-extensions-prompt.png)
-
-Click `Install`. You are ready to start working on the code with an advanced, modern IDE!
-
 
 ## Working on a project
 
-If there is a file `~/kde/src/kcalc/CMakePresets.json` please delete it. Because it makes it really hard to use the correct CMake build configuration in VSCode. Deleting this file should be temporary. Be careful not to git commit this deleted file. E.g. do not stage to commit the deleted file `CMakePresets.json`. 
+We will use the `kcalc` project as an example.
 
-Open the kcalc project (i.e. the git work directory, i.e. the directory where kdesrc-build has git cloned the git repository of kcalc) `~/kde/src/kcalc`.
 
-In VSCode, in the bottom status bar:
-* In the button "Click to select the current build variant" the CMake build configuration selected should be "Debug". I.e. the button should say "CMake: \[Debug]: Ready".
-* Ignore the button "No active kit" with tooltip "Click to change the active kit". Or select the "gcc" from your Linux distribution.
-* In the right hand side there should be a button "Linux" with tooltip "C/C++ Configuration".
-* In the button "Set the default build target", select your preferred CMake target, in our case "kcalc". In the button "Select the target to launch" select one of the executables which are created using CMake targets, in our case "kcalc".
-* Ctrl+Shift+P > "CMake: Configure". It should say `[proc] Executing command: /usr/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_INSTALL_PREFIX:STRING=~/kde/usr -S~/kde/src/kcalc -B~/kde/build/kcalc -G "Unix Makefiles"` and `Build files have been written to: ~/kde/build/kcalc`.
-* Press the button "Build" with gear icon with tooltip "Build the selected target: \[kcalc]". It should say `[proc] Executing command: /usr/bin/cmake --build ~/kde/build/kcalc --config`.
-* Press the button with the "Play" triangle icon with tooltip "Launch the selected target in the terminal window: \[kcalc]". The application kcalc will start. In another terminal you can run e.g. `lsof | grep kcalc | grep KF5` and make sure that the KDE *.so files are opened from the correct directory. I.e. from `~/kde/usr/lib`, not from `/lib` or from `/usr`.
-* Open the file `~/kde/src/kcalc/kcalc.cpp`, place a breakpoint inside the function `int main(int argc, char *argv[])`, which is the entry point of the process/executable kcalc. Press in the status bar the button with a ladybug icon and with tooltip "Launch the debugger for the selected target: \[kcalc]". The debugger should start correctly and stop at the breakpoint.
+### Opening the project
+
+The project can be opened as a workspace in vs code by opening the src directory as a folder:
+
+* `File` -> `Open Folder...`
+* Select the project src directory: `~/kde/src/kcalc`
+
+If you have the `kdesrc-build` configuration set up as described above, VSCode
+will automatically detect the `.vscode` folder and load the project with the
+correct settings.
+
+The following configuration sections will only need to be done the first time
+you open a new project in VSCode.
+
+
+### Installing extensions
+
+A notification popup at the bottom-right of the window will ask if you want to
+install the recommended extensions for working on this project:
+
+{{< figure alt="Screenshot of the prompt to install recommended extensions" width="800px" src="recommended-extensions-prompt.png" >}}
+
+These extensions add support to VSCode for technologies commonly used in KDE 
+projects, such as CMake, C++, Qt, and more.
+
+Click `Install`.
+
+
+### Configuring the project
+
+After the extensions have been installed:
+
+- If a notification prompt asks if you want to switch to a pre-release version
+  of the C++ extension, click `No`.
+- A notification prompt will ask `Would you like to configure project "kcalc"?`
+  Click `Yes`.
+
+{{< figure alt="Screenshot of the prompt to configure the project" width="800px" src="configure-project-prompt.png" >}}
+
+A prompt will open at the top-middle of the window asking to choose a kit (A kit 
+is a configuration used when building and running the project.) Select 
+`Unspecified` to have the kit chosen automatically based on the project and 
+system configuration:
+
+{{< figure alt="Screenshot of the prompt to select a kit" width="800px" src="select-kit-prompt.png" >}}
+
+The integrated terminal will open at the bottom of the window, and if the
+project was configured successfully, the last line should say:
+
+```
+[cmake] -- Build files have been written to: /home/<username>/kde/build/kcalc
+```
+
+{{< figure alt="Screenshot of the terminal showing successful configuration" width="800px" src="configuration-successful.png" >}}
+
+You are ready to start working on the code with an advanced, modern IDE! 🎉
+
+
+### Debugging
+
+To start debugging, click on the `Run and Debug` icon on the left sidebar, then 
+click on the green play button to start debugging.
+
+{{< figure alt="Screenshot of how to start a debug session" width="800px" src="run-and-debug.png" >}}
+
+If the project has multiple targets it will open a prompt at the top-middle of 
+the window asking to choose a target. Select the target you want to debug; in
+this case, `kcalc`:
+
+{{< figure alt="Screenshot of the prompt to select a target" width="800px" src="initial-launch-target.png" >}}
+
+We should now be running a debug session of the `kcalc` project. 🚀
+
+{{< figure alt="Screenshot of the debug session" width="800px" src="debug-session.png" >}}
+
+To later change the target, open the Command Palette (`Ctrl+Shift+P`) and run 
+the `CMake: Set Debug Target` command.
 
 
 ## Troubleshooting
