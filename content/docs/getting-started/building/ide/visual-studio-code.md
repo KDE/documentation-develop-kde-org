@@ -25,39 +25,36 @@ sudo dnf install code`
 
 ## Setup
 
+The KDE build tool [kdesrc-build]({{< ref "kdesrc-build-setup" >}}) can
+automatically generate the configuration files needed for VSCode to work with
+KDE projects.
 
-### kdesrc-build
+To enable this feature, first ensure that `kdesrc-build` is installed and
+configured; then enable the feature in the `kdesrc-build` configuration file 
+(located at `~/.config/kdesrc-buildrc` by default) - ensure these options are in 
+the `global` section and set to `true`:
 
-Needed to enable [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) support:
+```bash
+global
+    # ... other settings ...
 
-In `~/.config/kdesrc-buildrc` ensure these two options are in the global section and set to true:
-
-```ini
     compile-commands-linking true
     compile-commands-export true
-```
 
-Other recommended settings:
-
-```ini
-global
-...
-    cmake-options -DCMAKE_BUILD_TYPE=Debug
-...
-end global
-```
-
-`kdesrc-build` can automatically generate the config files for projects that vscode needs to enable intellisense, building, debugging, tests, and more from directly within the IDE.
-
-```ini
-global
-...
     generate-vscode-project-config true
-...
 end global
 ```
 
-With this setting enabled, projects built by `kdesrc-build` will have the hidden `.vscode` folder created in their source directory, for example for kcalc this would be `kde/src/kcalc/.vscode`.
+With these settings, projects built by `kdesrc-build` will have the hidden
+`.vscode` folder created in their source directory; for example for kcalc this
+would be `kde/src/kcalc/.vscode`.
+
+The configuration files are generated when a project is build or rebuilt with 
+`kdesrc-build`. If you have already built the project you want to work on 
+before enabling the `generate-vscode-project-config` option, make sure to 
+rebuild it before opening it in VSCode.
+
+*****
 
 Now the project source directory can be opened as a workspace in vs code by opening the src directory as a folder:
 
