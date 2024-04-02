@@ -25,14 +25,6 @@ sudo dnf install code`
 
 ## Setup
 
-### Enivronment
-
-To ensure VS Code can find source-built libraries and allow running some terminal commands, add the following to your `~/.bashrc` or `~/.zshrc`:
-
-```bash
-export CMAKE_PREFIX_PATH="~/kde/usr"
-```
-
 
 ### kdesrc-build
 
