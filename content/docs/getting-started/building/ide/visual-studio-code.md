@@ -147,18 +147,11 @@ the `CMake: Set Debug Target` command.
 
 ## Troubleshooting
 
-If a project is not building or debugging correctly, it may be that the needed environment variables are not being set correctly if the project uses cmake-presets. This is often the case if it works using kdesrc-build or kdesrc-run but not in VSCode.
-
-The vscode-cmake-tools extension has an open issue about this:
-
-https://github.com/microsoft/vscode-cmake-tools/issues/1829
-
-The workaround is to source the project's `prefix.sh` file before opening VSCode:
-
-```bash
-source ~/kde/build/kcalc/prefix.sh
-code ~/kde/src/kcalc
-```
+- Reloading the window (Command Palette -> `Developer: Reload Window`) can fix
+  some issues, and cause notifications/prompts to reappear if they were missed.
+- Command Palette -> `CMake: Delete Cache and Reconfigure` or 
+  `CMake: Reset CMake Tools Extension State (For troubleshooting)` can be 
+  useful if things are not working as expected.
 
 
 ## Tips
