@@ -155,6 +155,14 @@ code ~/kde/src/kcalc
 ```
 
 
+## Tips
+
+- There is extensive documentation available for VSCode at
+  https://code.visualstudio.com/docs.
+- There are first-party video tutorials available at
+  https://code.visualstudio.com/docs/getstarted/introvideos.
+
+
 ## Notes
 
 The templates for the `.vscode` configuration files are available
