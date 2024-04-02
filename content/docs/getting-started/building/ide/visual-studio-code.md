@@ -59,6 +59,12 @@ rebuild it before opening it in VSCode.
 
 We will use the `kcalc` project as an example.
 
+{{< alert title="Tip" color="success" >}}
+The [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) 
+(`Ctrl+Shift+P`) is your friend. It allows you to search for and run commands, 
+and is a great way to discover features.
+{{< /alert >}}
+
 
 ### Opening the project
 
@@ -157,6 +163,9 @@ code ~/kde/src/kcalc
 
 ## Tips
 
+- The [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
+  (`Ctrl+Shift+P`) is your friend. It allows you to search for and run commands, 
+    and is a great way to discover features.
 - There is extensive documentation available for VSCode at
   https://code.visualstudio.com/docs.
 - There are first-party video tutorials available at
