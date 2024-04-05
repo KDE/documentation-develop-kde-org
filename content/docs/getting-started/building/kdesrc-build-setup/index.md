@@ -162,7 +162,7 @@ If your Linux distribution does not provide recent versions of Qt packages, you 
 
 You'll want to disable indexing for your development-related git repos and the files they will build and install.
 
-To do that, add the `~/kde` directory to the exclusions list in System Settings › Search › File Search > Start Indexing a Folder...
+To do that, add the `~/kde` directory to the exclusions list in System Settings › Search › File Search > Stop Indexing a Folder...
 
 {{< figure class="text-center mr-5 pr-5" caption="The Search field in System Settings." src="search-kdesrc-build.webp" >}}
 
