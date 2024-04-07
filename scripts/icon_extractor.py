@@ -231,7 +231,7 @@ if __name__ == '__main__':
     detected_out_icons = None
     if len(sys.path) > 0 and sys.path[0]:
         detected_out_metadata = os.path.normpath(os.path.join(sys.path[0], '../data/icons/'))
-        detected_out_icons = os.path.normpath(os.path.join(sys.path[0], '../assets/icons/'))
+        detected_out_icons = os.path.normpath(os.path.join(sys.path[0], '../assets/themeicons/'))
 
     args = parse_args(detected_out_metadata, detected_out_icons)
 
@@ -269,22 +269,19 @@ if __name__ == '__main__':
                 icon_root = path_candidate
                 break
 
-        if icon_root:
-            # everythings fine, continue
-            continue
+        if not icon_root:
+            logging.info(f"Icon files for theme \"{theme_name}\" not found, fetching them now")
 
-        logging.info(f"Icon files for theme \"{theme_name}\" not found, fetching them now")
+            dependenciesToUnpack = packageRegistry.retrieveDependencies({theme['project_path']: theme['branch']})
 
-        dependenciesToUnpack = packageRegistry.retrieveDependencies({theme['project_path']: theme['branch']})
+            # And then unpack them
+            for packageContents, packageMetadata in dependenciesToUnpack:
+                # Open the archive file
+                archive = tarfile.open( name=packageContents, mode='r' )
+                # Extract it's contents into the install directory
+                archive.extractall( path=args.work_dir )
 
-        # And then unpack them
-        for packageContents, packageMetadata in dependenciesToUnpack:
-            # Open the archive file
-            archive = tarfile.open( name=packageContents, mode='r' )
-            # Extract it's contents into the install directory
-            archive.extractall( path=args.work_dir )
-
-            icon_root = os.path.join(args.work_dir, 'share/icons', theme['sub_path'])
+                icon_root = os.path.join(args.work_dir, 'share/icons', theme['sub_path'])
 
 
         # Call icon extractor script

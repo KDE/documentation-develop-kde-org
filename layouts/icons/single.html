@@ -38,7 +38,7 @@
     <ul class="row list-unstyled">
         {{- range $category, $category_icons := $iconTheme -}}
             {{ range $icon_file, $icon := $category_icons }}
-                {{ $icon_resource := (resources.Get (printf "icons/%s/%s" $.Params.iconTheme $icon.preview_path)) }}
+                {{ $icon_resource := (resources.Get (printf "themeicons/%s/%s" $.Params.iconTheme $icon.preview_path)) }}
                     {{ if not (eq $icon_resource nil) }}
                         <li data-category="{{ $category }}" class="icon-holder col-sm-4 col-md-2 mb-4">
                             <a class="d-block text-dark text-decoration-none" href="{{ $icon_resource.Permalink }}">
