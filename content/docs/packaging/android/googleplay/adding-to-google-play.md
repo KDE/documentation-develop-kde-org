@@ -113,7 +113,7 @@ Click on "Upload generated ZIP" and upload the file `ktrip-signing-key.zip`.
 
 ### Uploading the Upload Key Certificate to Google Play
 
-Download KDE's [Upload Key Certificate](https://invent.kde.org/sysadmin/ci-utilities/-/raw/master/signing/google-play-upload-certificate.pem).
+Download KDE's [Upload Key Certificate](google-play-upload-certificate.pem).
 
 Then click on "Show instructions" next to "For increased security, create a new upload key (optional)."
 
