@@ -7,7 +7,7 @@ authors:
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
-Microsoft Visual Studio Code (VSCode) is a popular cross-platform, general-purpose, open source IDE. Thanks to its powerful extensions ecosystem it supports many languages as well as deep customization options for themes, fonts, keyboard controls, and more.
+Microsoft Visual Studio Code (VS Code) is a popular cross-platform, general-purpose, open source IDE. Thanks to its powerful extensions ecosystem it supports many languages as well as deep customization options for themes, fonts, keyboard controls, and more.
 
 A screen recording version is available https://www.youtube.com/watch?v=BCJhD57GN0Y
 
@@ -26,7 +26,7 @@ sudo dnf install code`
 ## Setup
 
 The KDE build tool [kdesrc-build]({{< ref "kdesrc-build-setup" >}}) can
-automatically generate the configuration files needed for VSCode to work with
+automatically generate the configuration files needed for VS Code to work with
 KDE projects.
 
 To enable this feature, first ensure that `kdesrc-build` is installed and
@@ -52,7 +52,7 @@ would be `kde/src/kcalc/.vscode`.
 The configuration files are generated when a project is built or rebuilt with 
 `kdesrc-build`. If you have already built the project you want to work on 
 before enabling the `generate-vscode-project-config` option, make sure to 
-rebuild it before opening it in VSCode.
+rebuild it before opening it in VS Code.
 
 
 ## Working on a project
@@ -73,12 +73,12 @@ The project can be opened as a workspace in vs code by opening the src directory
 * `File` -> `Open Folder...`
 * Select the project's source code directory: `~/kde/src/kcalc`
 
-If you have the `kdesrc-build` configuration set up as described above, VSCode
+If you have the `kdesrc-build` configuration set up as described above, VS Code
 will automatically detect the `.vscode` folder and load the project with the
 correct settings.
 
 The following configuration sections will only need to be done the first time
-you open a new project in VSCode.
+you open a new project in VS Code.
 
 
 ### Installing extensions
@@ -88,7 +88,7 @@ install the recommended extensions for working on this project:
 
 {{< figure alt="Screenshot of the prompt to install recommended extensions" width="800px" src="recommended-extensions-prompt.png" >}}
 
-These extensions add support to VSCode for technologies commonly used in KDE 
+These extensions add support to VS Code for technologies commonly used in KDE 
 projects, such as CMake, C++, Qt, and more.
 
 Click `Install`.
@@ -153,9 +153,9 @@ We are hoping to make this process more automated in the future.
 
 We'll use the `kscreenlocker` KCM as an example.
 
-To debug a KCM, you need to start VSCode with the necessary environment 
+To debug a KCM, you need to start VS Code with the necessary environment 
 variables set. This can be done by sourcing the project's `prefix.sh` script 
-and launching VSCode from the terminal:
+and launching VS Code from the terminal:
 
 ```bash
     source ~/kde/build/kscreenlocker/prefix.sh
@@ -259,7 +259,7 @@ C++ code.
 - The [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
   (`Ctrl+Shift+P`) is your friend. It allows you to search for and run commands, 
     and is a great way to discover features.
-- There is extensive documentation available for VSCode at
+- There is extensive documentation available for VS Code at
   https://code.visualstudio.com/docs.
 - There are first-party video tutorials available at
   https://code.visualstudio.com/docs/getstarted/introvideos.
