@@ -46,10 +46,10 @@ end global
 ```
 
 With these settings, projects built by `kdesrc-build` will have the hidden
-`.vscode` folder created in their source directory; for example for kcalc this
+`.vscode` folder created in their source directory; for example, for KCalc this
 would be `kde/src/kcalc/.vscode`.
 
-The configuration files are generated when a project is build or rebuilt with 
+The configuration files are generated when a project is built or rebuilt with 
 `kdesrc-build`. If you have already built the project you want to work on 
 before enabling the `generate-vscode-project-config` option, make sure to 
 rebuild it before opening it in VSCode.
@@ -57,12 +57,12 @@ rebuild it before opening it in VSCode.
 
 ## Working on a project
 
-We will use the `kcalc` project as an example.
+We will use [KCalc](https://apps.kde.org/kcalc/) as an example.
 
 {{< alert title="Tip" color="success" >}}
 The [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) 
-(`Ctrl+Shift+P`) is your friend. It allows you to search for and run commands, 
-and is a great way to discover features.
+(`Ctrl+Shift+P`) is your friend. It allows you to search for and run commands
+and it is a great way to discover features.
 {{< /alert >}}
 
 
@@ -71,7 +71,7 @@ and is a great way to discover features.
 The project can be opened as a workspace in vs code by opening the src directory as a folder:
 
 * `File` -> `Open Folder...`
-* Select the project src directory: `~/kde/src/kcalc`
+* Select the project's source code directory: `~/kde/src/kcalc`
 
 If you have the `kdesrc-build` configuration set up as described above, VSCode
 will automatically detect the `.vscode` folder and load the project with the
@@ -105,8 +105,8 @@ After the extensions have been installed:
 
 {{< figure alt="Screenshot of the prompt to configure the project" width="800px" src="configure-project-prompt.png" >}}
 
-A prompt will open at the top-middle of the window asking to choose a kit (A kit 
-is a configuration used when building and running the project.) Select 
+A prompt will open at the top-middle of the window asking to choose a kit
+(a set of predefined configurations used when building and running the project). Select 
 `Unspecified` to have the kit chosen automatically based on the project and 
 system configuration:
 
@@ -121,7 +121,7 @@ project was configured successfully, the last line should say:
 
 {{< figure alt="Screenshot of the terminal showing successful configuration" width="800px" src="configuration-successful.png" >}}
 
-You are ready to start working on the code with an advanced, modern IDE! 🎉
+You are ready to start working on the code with VS Code! 🎉
 
 
 ### Debugging
@@ -204,8 +204,10 @@ to launch the KCM:
             "name": "kcm",
             "type": "cppdbg",
             "request": "launch",
-            "preLaunchTask": "Rebuild", // Runs the Rebuild task before launching
-            "program": "/home/<username>/kde/build/kcmutils/bin/kcmshell6", // Replace <username> with your username
+            // Runs the Rebuild task before launching
+            "preLaunchTask": "Rebuild",
+            // Replace <username> with your username
+            "program": "/home/<username>/kde/build/kcmutils/bin/kcmshell6",
             "args": [
                 "kcm_screenlocker"
             ],
