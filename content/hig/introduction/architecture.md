@@ -107,7 +107,7 @@ any [device type]({{< relref "devicetypes" >}}).
 Theme
 -----
 
-There are three different kinds of themes influencing the the
+There are three different kinds of themes influencing the
 look-and-feel of KDE applications and the Plasma workspace.
 
 -   Workspace
