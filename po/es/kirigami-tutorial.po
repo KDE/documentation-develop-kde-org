@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-28 02:03+0000\n"
-"PO-Revision-Date: 2024-04-11 23:30+0200\n"
+"PO-Revision-Date: 2024-04-12 16:59+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1454,6 +1454,10 @@ msgid ""
 "to use just like a one-dimensional array. It should look similar to a QML "
 "ListModel."
 msgstr ""
+"En este tutorial crearemos una clase que contiene un QMap, donde se usa un "
+"QString como clave y objetos QStringList como valores. La interfaz será "
+"capaz de leer y mostrar las claves y los valores, y será tan fácil de usar "
+"como una matriz de una dimensión. Debería parecerse a un ListModel de QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:27
 msgid ""
@@ -1461,6 +1465,9 @@ msgid ""
 "[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add in "
 "some add data to the QMap. These declarations will be located in `model.h`."
 msgstr ""
+"Para ello, necesitamos declarar una clase que herede de [QAbstractListModel]"
+"(docs:qtcore;qabstractlistmodel.html). También añadiremos datos al QMap. "
+"Estas declaraciones estarán en `model.h`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:32
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:65
@@ -1719,6 +1726,8 @@ msgid ""
 "`role` - In this context, the role here is used to tell views how they "
 "should handle data. The role here should be `Qt::EditRole`."
 msgstr ""
+"`role`: En este contexto, el rol se usa para indicar a las vistas cómo deben "
+"manejar los datos. Aquí, el rol debe ser `Qt::EditRole`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:283
 msgid ""
@@ -1733,6 +1742,8 @@ msgid ""
 "`setData()` does not automatically emit `dataChanged()` and that still has "
 "to be done manually."
 msgstr ""
+"`setData()` no emite `dataChanged()` automáticamente, por lo que se tiene "
+"que hacer de forma manual."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:312
 msgid ""
@@ -1811,6 +1822,8 @@ msgid ""
 "Let's update the QML code so we are given the ability to add a new key to "
 "the QMap."
 msgstr ""
+"Actualicemos el código QML para tener la capacidad de añadir una nueva clave "
+"al QMap."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:470
 msgid "Clear TextField every time it's done"
@@ -3074,11 +3087,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:57
 msgid "{{< /section-right >}} {{< /sections >}}"
-msgstr ""
+msgstr "{{< /section-right >}} {{< /sections >}}"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:60
 msgid "With Repeaters (Recommended)"
-msgstr ""
+msgstr "Con repetidores (recomendado)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:62
 msgid ""
@@ -3118,7 +3131,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:123
 msgid "Example Application"
-msgstr ""
+msgstr "Aplicación de ejemplo"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:125
 msgid ""
@@ -8265,6 +8278,8 @@ msgid ""
 "![Screenshot of the application with four example cards](addedKountdowns."
 "webp)"
 msgstr ""
+"![Captura de pantalla de la aplicación con cuatro cards de ejemplo]"
+"(addedKountdowns.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:0
 msgid "Explaining pages"
