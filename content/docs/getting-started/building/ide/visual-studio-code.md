@@ -253,6 +253,17 @@ C++ code.
   `CMake: Reset CMake Tools Extension State (For troubleshooting)` can be 
   useful if things are not working as expected.
 
+{{< alert title="Note" color="info" >}}
+In case something goes wrong in config generation, if using kde-builder, you can use the `ide_project_configs` logger. Create the file
+  `~/.config/kde-builder-logging.yaml` with the following content:
+```yaml
+loggers:
+  ide_project_configs:
+    level: DEBUG
+    handlers: [console-named]
+```
+  After that, run kde-builder as normal, and you will see corresponding debug messages.
+{{< /alert >}}
 
 ## Tips
 
