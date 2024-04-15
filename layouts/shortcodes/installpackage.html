@@ -2,7 +2,7 @@
   {{- if or (.Get "ubuntu") (.Get "ubuntuCommand") -}}
   <tr>
     <td>
-      <a {{ with .Get "ubuntu" }}href="https://packages.ubuntu.com/search?keywords={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/kubuntu.svg" />Kubuntu</a><a {{ with .Get "ubuntu" }}href="https://build.neon.kde.org/search/?q={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/kdeneon.svg" />KDE Neon</a>
+      <a {{ with .Get "ubuntu" }}href="https://packages.ubuntu.com/search?keywords={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/kubuntu.svg" alt="logo of Linux operating system Kubuntu" />Kubuntu</a><a {{ with .Get "ubuntu" }}href="https://build.neon.kde.org/search/?q={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/kdeneon.svg" alt="logo of Linux operating system KDE neon" />KDE Neon</a>
     </td>
     <td>
 <pre>
@@ -15,7 +15,7 @@
   {{- if or (.Get "arch") (.Get "archCommand") -}}
   <tr>
     <td>
-      <a {{ with .Get "arch" }}href="https://software.manjaro.org/package/{{ index (split . " ") 0 }}"{{ end }}><img src="/distro/manjaro.svg" />Manjaro</a><a {{ with .Get "arch" }}href="https://archlinux.org/packages/?q={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/archlinux.svg" />Arch</a>
+      <a {{ with .Get "arch" }}href="https://software.manjaro.org/package/{{ index (split . " ") 0 }}"{{ end }}><img src="/distro/manjaro.svg" alt="logo of Linux operating system Manjaro" />Manjaro</a><a {{ with .Get "arch" }}href="https://archlinux.org/packages/?q={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/archlinux.svg" alt="logo of Linux operating system Arch Linux" />Arch</a>
     </td>
     <td>
 <pre>
@@ -28,7 +28,7 @@
   {{- if or (.Get "opensuse") (.Get "opensuseCommand") -}}
   <tr>
     <td>
-      <a {{ with .Get "opensuse" }}href="https://software.opensuse.org/package/{{ index (split . " ") 0 }}"{{ end }}><img src="/distro/opensuse.svg" />OpenSUSE</a>
+      <a {{ with .Get "opensuse" }}href="https://software.opensuse.org/package/{{ index (split . " ") 0 }}"{{ end }}><img src="/distro/opensuse.svg" alt="logo of Linux operating system openSUSE" />OpenSUSE</a>
     </td>
     <td>
 <pre>
@@ -41,7 +41,7 @@
   {{- if or (.Get "fedora") (.Get "fedoraCommand") -}}
   <tr>
     <td>
-      <a {{ with .Get "fedora" }}{{ with index (split . " ") 0 }}href="https://packages.fedoraproject.org/pkgs/{{ . }}/{{ . }}/"{{ end }}{{ end }}><img src="/distro/fedora.svg" />Fedora</a>
+      <a {{ with .Get "fedora" }}{{ with index (split . " ") 0 }}href="https://packages.fedoraproject.org/pkgs/{{ . }}/{{ . }}/"{{ end }}{{ end }}><img src="/distro/fedora.svg" alt="logo of Linux operating system Fedora" />Fedora</a>
     </td>
     <td>
 <pre>
@@ -54,7 +54,7 @@
   {{- if or (.Get "gentoo") (.Get "gentooCommand") -}}
   <tr>
     <td>
-      <a {{ with .Get "gentoo" }}href="https://packages.gentoo.org/packages/{{ index (split . " ") 0 }}"{{ end }}><img src="/distro/gentoo.svg" />Gentoo</a>
+      <a {{ with .Get "gentoo" }}href="https://packages.gentoo.org/packages/{{ index (split . " ") 0 }}"{{ end }}><img src="/distro/gentoo.svg" alt="logo of Linux operating system Gentoo Linux" />Gentoo</a>
     </td>
     <td>
 <pre>

@@ -17,7 +17,7 @@ weight: 20
           <p>KDevelop is KDE's full-fledged development environment.</p>
         </div>
         <div>
-          <img class="img-fluid" src="https://apps.kde.org/app-icons/org.kde.kdevelop.svg">
+          <img class="img-fluid" src="https://apps.kde.org/app-icons/org.kde.kdevelop.svg" alt="icon of app KDevelop" />
         </div>
       </a>
       <a class="tool tool-one" href="https://kate-editor.org">
@@ -26,7 +26,7 @@ weight: 20
           <p>Kate is KDE's lightweight, but feature-rich text editor</p>
         </div>
         <div>
-          <img class="img-fluid" src="https://apps.kde.org/app-icons/org.kde.kate.svg">
+          <img class="img-fluid" src="https://apps.kde.org/app-icons/org.kde.kate.svg" alt="icon of app Kate" />
         </div>
       </a>
     </div>
@@ -34,23 +34,23 @@ weight: 20
       <h3 class="mt-1">And many more tools</h3>
       <div class="more-apps">
         <a href="https://apps.kde.org/umbrello">
-          <img src="https://apps.kde.org/app-icons/org.kde.umbrello.svg" />
+          <img src="https://apps.kde.org/app-icons/org.kde.umbrello.svg" alt="icon of app Umbrello" />
           Umbrello
         </a>
         <a href="https://apps.kde.org/clazy">
-          <img src="https://apps.kde.org/app-icons/org.kde.clazy.svg" />
+          <img src="https://apps.kde.org/app-icons/org.kde.clazy.svg" alt="icon of app Clazy" />
           Clazy
         </a>
         <a href="https://apps.kde.org/kcachegrind">
-          <img src="https://apps.kde.org/app-icons/org.kde.kcachegrind.svg" />
-          KCacheGrind
+          <img src="https://apps.kde.org/app-icons/org.kde.kcachegrind.svg" alt="icon of app KCachegrind" />
+          KCachegrind
         </a>
         <a href="https://apps.kde.org/heaptrack">
-          <img src="https://apps.kde.org/app-icons/org.kde.heaptrack.svg" />
+          <img src="https://apps.kde.org/app-icons/org.kde.heaptrack.svg" alt="icon of app Heaptrack" />
           Heaptrack
         </a>
         <a href="https://apps.kde.org/massif-visualizer">
-          <img src="https://apps.kde.org/app-icons/org.kde.massif-visualizer.svg" />
+          <img src="https://apps.kde.org/app-icons/org.kde.massif-visualizer.svg" alt="icon of app Massif-Visualizer"/>
           Massif-Visualizer
         </a>
       </div>

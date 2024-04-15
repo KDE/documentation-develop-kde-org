@@ -66,7 +66,7 @@ layout: framework
       </div>
     </div>
     <div class="col-12 col-lg-6">
-      <img src="tokodon-desktop.png" class="img-fluid kirigami-devices"/>
+      <img src="tokodon-desktop.png" class="img-fluid kirigami-devices" alt="the app Tokodon works correctly both on a Linux desktop computer and on a phone running KDE Plasma Mobile"/>
     </div>
    </div>
    <div class="row">
@@ -76,7 +76,7 @@ layout: framework
       <p>Kirigami is one of the 80 <a href="/products/frameworks">KDE Frameworks</a> produced by KDE, part of a collection of high quality add-on libraries for Qt apps with long ABI and API stability guarantees. And, in case you need support, there is a <a href="https://ev.kde.org/consultants/">network of trusted consultants</a> available to assist you with your project.</p>
     </div>
     <div class="col-12 col-lg-6 mt-5">
-      <img src="neochat.png" class="img-fluid kirigami-devices"/>
+      <img src="neochat.png" class="img-fluid kirigami-devices" alt="screenshot of the app NeoChat"/>
     </div>
   </div>
 </section>

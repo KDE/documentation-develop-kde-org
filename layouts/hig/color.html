@@ -2,12 +2,14 @@
   {{ .Render "content" }}
   <table class="table">
     <thead>
-      <th>Color Set</th>
-      <th>Color Role</th>
-      <th>Color</th>
-      <th>HEX</th>
-      <th>RGB</th>
-      <th>Name</th>
+      <tr>
+        <th>Color Set</th>
+        <th>Color Role</th>
+        <th>Color</th>
+        <th>HEX</th>
+        <th>RGB</th>
+        <th>Name</th>
+      </tr>
     </thead>
     <tbody>
       {{ range .Params.colorsets }}

@@ -49,7 +49,7 @@ layout: area
     <h2>Cuttlefish</h2>
     <p>Cuttlefish is the app helping you find the perfect icons for your applications.</p>
     <div class="text-center">
-      <img class="w-75 mx-auto img-fluid shadow" src="https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png" />
+      <img class="w-75 mx-auto img-fluid shadow" src="https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png" alt="screenshot of app Cuttlefish" />
     </div>
     <a class="noblefir ml-auto align-self-center mt-4" id="install-button" href="appstream://org.kde.cuttlefish.desktop" data-windows="">
       <span id="install-msg">Install on Linux</span>
@@ -64,6 +64,6 @@ layout: area
     <div class="text-center mt-3 mb-4">
       <a href="/hig" class="learn-more">Read KDE HIG</a> 
     </div>
-    <a href="/hig"><img class="w-100 img-fluid" src="/hig/HIGDesignVisionFullBleed.png" /></a>
+    <a href="/hig"><img class="w-100 img-fluid" src="/hig/HIGDesignVisionFullBleed.png" alt="KDE Human Interface Guidelines" /></a>
   </div>
 </section>

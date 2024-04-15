@@ -47,7 +47,7 @@ scss: "scss/framework.scss"
       </p>
     </div>
     <div class="image align-self-center order-3 order-lg-0">
-      <img src="platform-icons.png" style="margin: auto; max-width: 90%; height: auto;" />
+      <img src="platform-icons.png" style="margin: auto; max-width: 90%; height: auto;" alt="some operating systems supported by the KDE Frameworks"/>
     </div>
   </div>
 </article>
@@ -108,7 +108,7 @@ scss: "scss/framework.scss"
             GammaRay is a cross platform (Linux, Windows, Mac) inspection tool for Qt apps from KDAB.  It uses <a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html">KSyntaxHighlighting</a> to colour text it shows.
           </p>
         </div>
-        <img class="img-fluid col-12 col-sm-8" src="gammaray.png" />
+        <img class="img-fluid col-12 col-sm-8" src="gammaray.png" alt="screenshot of app GammaRay"/>
     </div>
     <div class="row my-3">
       <div class="col-12 col-sm-4 order-sm-1 align-self-center">
@@ -119,7 +119,7 @@ scss: "scss/framework.scss"
           Good looks are added with <a href="https://invent.kde.org/frameworks/oxygen-icons">Oxygen Icons</a>, one of our icon theme frameworks.
         </p>
       </div>
-      <img class="img-fluid col-12 col-sm-8 order-sm-0" src="lxqt.png" />
+      <img class="img-fluid col-12 col-sm-8 order-sm-0" src="lxqt.png" alt="screenshot of the desktop environment LXQt" />
     </div>
 </article>
 <article class="container-fluid">

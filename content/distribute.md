@@ -43,7 +43,7 @@ layout: area
     <h2>KNewStuff</h2>
     <p><a href="https://api.kde.org/frameworks/knewstuff/html/index.html">KNewStuff</a> let your users create and distribute addons for your application via <a href="https://store.kde.org">store.kde.org</a></p>
     <a class="d-block learn-more h5" href="https://api.kde.org/frameworks/knewstuff/html/index.html">Learn more</a>
-    <img src="/develop/knewstuff.png" class="img-fluid" />
+    <img src="/develop/knewstuff.png" class="img-fluid" alt="screenshot of Download New app"/>
   </div>
 </section>
 
