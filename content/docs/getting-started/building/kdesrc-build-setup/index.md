@@ -106,7 +106,10 @@ deb-src http://us.archive.ubuntu.com/ubuntu/ noble main restricted
 
 Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, like `bookworm` or `jammy`.
 
-If the deb-src line is commented out with a `#`, remove the `#` character, then run:
+If the deb-src line is commented out with a `#`, remove the `#` character.
+
+Lastly, run:
+
 ```bash
 sudo apt update
 ```
@@ -115,7 +118,7 @@ sudo apt update
 
 Starting with Kubuntu 24.04, the configuration file for apt repositories has moved to `/etc/apt/sources.list.d/ubuntu.sources`.
 
-Open the file `/etc/apt/sources.list.d/ubuntu.sources` with an editor like [Kate](https://kate-editor.org/) or `nano`. Change the contents of the file by replacing `Types: deb` with `Types: deb deb-src`. For example, replacing the following:
+Open the file `/etc/apt/sources.list.d/ubuntu.sources` with an editor like [Kate](https://kate-editor.org/) or `nano`. Change the contents of the file by replacing all occurrences of `Types: deb` with `Types: deb deb-src`. For example, replacing the following:
 
 ```bash
 Types: deb
