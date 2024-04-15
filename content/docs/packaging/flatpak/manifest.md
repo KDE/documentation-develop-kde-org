@@ -33,7 +33,7 @@ modules:
 
 If we read the [official flatpak-builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html), we can see values in parentheses for each property, namely `string`, `boolean`, `integer`, `object`, `array of strings` and `array of objects and strings`.
 
-While non-KDE software typically gets included to flathub as YAML, KDE software added to the kdeapps and flathub repositories is included via JSON manifests, so we will focus on that. The practical distinction between the above types for when writing a JSON manifest is mostly syntactic. For basic types like string, boolean, integer and object, their syntax in JSON would be simply:
+While non-KDE software typically gets included to Flathub as YAML, KDE software added to the kdeapps and Flathub repositories is included via JSON manifests, so we will focus on that. The practical distinction between the above types for when writing a JSON manifest is mostly syntactic. For basic types like string, boolean, integer and object, their syntax in JSON would be simply:
 
 `"Property": "Value"`
 
@@ -71,7 +71,7 @@ When building, the first step of `flatpak-builder` is to automatically fetch the
 
 Like the above `tag` example, there are other properties that can be used to improve your flatpak package.
 
-One of the top level properties that is common in the kdeapps repository is `branch`. It is not about git branches, but rather flatpak branches. Apps from flathub are usually of branch `stable` or of specific versions, those of kdeapps are usually `master`, and those of flathub-beta are usually `beta`. This way a user can install the same application under different branches as defined by the package publisher.
+One of the top level properties that is common in the kdeapps repository is `branch`. It is not about git branches, but rather flatpak branches. Apps from `flathub` are usually of branch `stable` or of specific versions, those of `kdeapps` are usually `master`, and those of `flathub-beta` are usually `beta`. This way a user can install the same application under different branches as defined by the package publisher.
 
 `rename-icon` allows you to specify an icon in your sources that will be renamed according to the id of the application so it gets properly detected by the .desktop file used for the flatpak in specific cases.
 

@@ -65,8 +65,8 @@ sources:
 For a full view of how the entire manifest looks like with the added Konsole module, see the next page.
 
 * The third step is building the binary. Although the final binary will be built on a CI system, you'll need to test your manifest locally.
-  First, be sure to have the `--user` version of flathub enabled: `flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`.
-  After that, a oneliner command for the build process is `flatpak-builder build --user --install-deps-from=flathub --force-clean --ccache --install org.kde.kate.json`, which can then be repeated as many times as needed after making any changes. It will pull all required dependencies from flathub if they exist, build the application in a directory called "build", clean the directory if needed, cache the build files so later builds will be faster, and automatically install it for you. If the flatpak you made provides a .desktop file, you'll find a new entry on your menu; otherwise you can test/execute it with `flatpak run org.kde.kate`.
+  First, be sure to have the `--user` version of Flathub enabled: `flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`.
+  After that, a oneliner command for the build process is `flatpak-builder build --user --install-deps-from=flathub --force-clean --ccache --install org.kde.kate.json`, which can then be repeated as many times as needed after making any changes. It will pull all required dependencies from Flathub if they exist, build the application in a directory called "build", clean the directory if needed, cache the build files so later builds will be faster, and automatically install it for you. If the flatpak you made provides a .desktop file, you'll find a new entry on your menu; otherwise you can test/execute it with `flatpak run org.kde.kate`.
   
 {{< alert title="Note" color="warning" >}}
 If you installed Flathub with `sudo`/`root` (the default) and do not mind the security implications of installing the compiled package as root, it is still possible to run a oneliner command for the build process. The command then becomes `sudo flatpak-builder build --install-deps-from=flathub --force-clean --ccache --install org.kde.kate.json`.
@@ -74,4 +74,4 @@ If you installed Flathub with `sudo`/`root` (the default) and do not mind the se
 
   
 You can now start to add a Flatpak CI job and publish to a nightly repository!
-After testing it there for some time, you may submit a stable release to flathub. See [Flatpak publishing](/docs/packaging/flatpak/publishing) for detailed instructions.
+After testing it there for some time, you may submit a stable release to Flathub. See [Flatpak publishing](/docs/packaging/flatpak/publishing) for detailed instructions.
