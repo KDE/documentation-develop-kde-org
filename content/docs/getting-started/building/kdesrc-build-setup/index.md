@@ -95,26 +95,52 @@ Some distros need source repositories enabled before you can install the develop
 
 **KDE neon/Debian/Ubuntu/Kubuntu/etc:**
 
-```bash
-sudo sed -i '/^# deb-src/s/^# //' /etc/apt/sources.list && sudo apt update
-```
+**If the file /etc/apt/sources.list exists**
 
-Look at the content of the file `/etc/apt/sources.list`, e.g. `cat /etc/apt/sources.list`. Each line that starts with "deb " should be followed by an identical line to the one that starts with "deb-src ", in the following way:
+Open the file `/etc/apt/sources.list` with a text editor such as [Kate](https://kate-editor.org/) or `nano`. Each line that starts with "deb " should be followed by a similar line beginning with "deb-src ", for example:
 
 ```bash
 deb http://us.archive.ubuntu.com/ubuntu/ noble main restricted
 deb-src http://us.archive.ubuntu.com/ubuntu/ noble main restricted
 ```
 
-The archive name might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, like `bookworm` or `jammy`.
+Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, like `bookworm` or `jammy`.
 
-**openSUSE Tumbleweed:**
-
+If the deb-src line is commented out with a `#`, remove the `#` character, then run:
 ```bash
-sudo zypper modifyrepo --enable $(zypper repos | awk '/source/{print $5}')
+sudo apt update
 ```
 
-This should be enough to enable the source repositories.
+**If the file /etc/apt/sources.list does not exist**
+
+Starting with Kubuntu 24.04, the configuration file for apt repositories has moved to `/etc/apt/sources.list.d/ubuntu.sources`.
+
+Open the file `/etc/apt/sources.list.d/ubuntu.sources` with an editor like [Kate](https://kate-editor.org/) or `nano`. Change the contents of the file by replacing `Types: deb` with `Types: deb deb-src`. For example, replacing the following:
+
+```bash
+Types: deb
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: noble noble-updates noble-backports
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+```
+
+With:
+
+```bash
+Types: deb deb-src
+URIs: http://archive.ubuntu.com/ubuntu
+Suites: noble noble-updates noble-backports
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+```
+
+Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, like `bookworm` or `jammy`.
+
+Lastly, run:
+```bash
+sudo apt update
+```
 
 </details>
 
