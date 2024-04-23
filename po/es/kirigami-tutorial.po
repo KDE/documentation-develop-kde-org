@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-28 02:03+0000\n"
-"PO-Revision-Date: 2024-04-12 16:59+0200\n"
+"PO-Revision-Date: 2024-04-22 12:42+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -980,7 +980,6 @@ msgstr ""
 "html)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:81
-#, fuzzy
 msgid ""
 "The main purpose of a FormCard is to serve as a container for other "
 "components while following a color different from the background, in a "
@@ -990,7 +989,11 @@ msgid ""
 "ColumnLayout."
 msgstr ""
 "El propósito principal de una FormCard es de servir como contenedor para "
-"otros componentes con un color distinto para el fondo"
+"otros componentes con un color distinto para el fondo, de un modo similar a "
+"[Kirigami.Card](docs:kirigami2;Card), pero para ventanas de preferencias. "
+"Puede tener varias FormCards en una aplicación para indicar distintas "
+"secciones. También se espera que la FormCard sea descendiente directa de una "
+"ColumnLayout."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:83
 msgid ""
@@ -1018,6 +1021,13 @@ msgid ""
 "html) or [positioners](https://doc.qt.io/qt-6/qtquick-positioning-layouts."
 "html)."
 msgstr ""
+"Lo mejor de una FormCard es que organiza automáticamente su contenido. En "
+"otras palabras, basta con indicar el orden de sus componentes para definir "
+"su posición dentro de la FormCard, por lo que no se necesitan [propiedades "
+"adjuntas de diseño](https://doc.qt.io/qt-6/qml-qtquick-layouts-layout.html) "
+"ni el uso de [anclajes](https://doc.qt.io/qt-6/qtquick-positioning-anchors."
+"html) o [posicionadores](https://doc.qt.io/qt-6/qtquick-positioning-layouts."
+"html)."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:91
 msgid "We can simply add a few buttons inside our FormCard:"
@@ -3066,10 +3076,16 @@ msgid ""
 "something. These are typically text elements, which is also interactable and "
 "comes with an optional delete button."
 msgstr ""
+"Los componentes [Kirigami.Chip](docs:kirigami2;Chip) son pequeños elementos "
+"que heredan de [AbstractButton](https://doc.qt.io/qt-5/qml-qtquick-controls2-"
+"abstractbutton.html) y que se usan para mostrar propiedades comunes o "
+"filtros de algo. Suelen ser elementos de texto, con el que se puede "
+"interactuar, y contienen un botón de borrado opcional."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:14
 msgid "![Example Chips in Kirigami Gallery](chips_kirigami_gallery.png)"
 msgstr ""
+"![Ejemplo de Chips en la galería de Kirigami](chips_kirigami_gallery.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:16
 msgid "Quick Start"
@@ -3080,10 +3096,12 @@ msgid ""
 "Chips can easily be added using the `Kirigami.Chip` component. By assigning "
 "a string to its `text` field, we give chips their name."
 msgstr ""
+"Se pueden añadir Chips con facilidad usando el componente `Kirigami.Chip`. "
+"Proporcionamos un nombre a un chip asignando una cadena al campo `text`."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:55
 msgid "![Declaring and Displaying Chips](chips_usage.png)"
-msgstr ""
+msgstr "![Declarar y mostrar Chips](chips_usage.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:57
 msgid "{{< /section-right >}} {{< /sections >}}"
@@ -3819,19 +3837,15 @@ msgstr ""
 "de un cajón global (incluso sobre la cabecera)."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:159
-#, fuzzy
-#| msgid ""
-#| "However, by default, banners are only visible on mobile environments. You "
-#| "can change this by setting the global drawer component's `bannerVisible` "
-#| "property to `true`."
 msgid ""
 "By default, banners are only visible on mobile environments. You can change "
 "this by setting the global drawer component's [bannerVisible](docs:kirigami2;"
 "GlobalDrawer) property to `true`."
 msgstr ""
-"No obstante, de forma predeterminada, los *banners* solo son visibles en los "
-"entornos móviles. Puede cambiar este comportamiento asignando el valor "
-"`true` a la propiedad `bannerVisible` del componente del cajón global."
+"De forma predeterminada, los *banners* solo son visibles en los entornos "
+"móviles. Puede cambiar este comportamiento asignando el valor `true` a la "
+"propiedad [bannerVisible](docs:kirigami2;GlobalDrawer) del componente del "
+"cajón global."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:161
 msgid ""
@@ -4120,20 +4134,16 @@ msgstr ""
 "automáticamente según el espacio disponible para el diseño del formulario."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:18
-#, fuzzy
-#| msgid ""
-#| "Children of a `Kirigami.FormLayout` have a property named `Kirigami."
-#| "FormData.label`. This property lets you set the label that will be "
-#| "provided for the child component in question."
 msgid ""
 "Children of a [Kirigami.FormLayout](docs:kirigami2;FormLayout) have a "
 "property named [Kirigami.FormData.label](docs:kirigami2;FormLayoutAttached::"
 "label). This property lets you set the label that will be provided for the "
 "child component in question."
 msgstr ""
-"Los hijos de `Kirigami.FormLayout` tienen una propiedad llamada `Kirigami."
-"FormData.label`. Esta propiedad le permite definir la etiqueta que se "
-"proporcionará a los componentes hijos en cuestión."
+"Los hijos de [Kirigami.FormLayout](docs:kirigami2;FormLayout) tienen una "
+"propiedad llamada [Kirigami.FormData.label](docs:kirigami2;"
+"FormLayoutAttached::label). Esta propiedad le permite definir la etiqueta "
+"que se proporcionará a los componentes hijos en cuestión."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:54
 msgid "A simple form layout in desktop mode"
@@ -4144,12 +4154,6 @@ msgid "Sections and separators"
 msgstr "Secciones y separadores"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:62
-#, fuzzy
-#| msgid ""
-#| "FormLayouts can also be divided into sections. Setting where a section "
-#| "starts is as easy as setting a child component's `Kirigami.FormData."
-#| "isSection` to true. This will provide the component with some extra "
-#| "margin at the top to demarcate the start of the new section."
 msgid ""
 "FormLayouts can also be divided into sections. Setting where a section "
 "starts is as easy as setting a child component's [Kirigami.FormData."
@@ -4158,10 +4162,10 @@ msgid ""
 "start of the new section."
 msgstr ""
 "Los formularios también se pueden dividir en secciones. Definir dónde "
-"empieza una sección es tan fácil como asignar el valor `true` a `Kirigami."
-"FormData.isSection` de un componente hijo. Esto proporcionará un poco de "
-"margen adicional en la parte superior del componente para denotar el inicio "
-"de la nueva sección."
+"empieza una sección es tan fácil como asignar el valor `true` a [Kirigami."
+"FormData.isSection](docs:kirigami2;FormLayoutAttached::isSection) de un "
+"componente hijo. Esto proporcionará un poco de margen adicional en la parte "
+"superior del componente para denotar el inicio de la nueva sección."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:64
 #, fuzzy
@@ -4399,12 +4403,6 @@ msgid "Different types"
 msgstr "Diferentes tipos"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:57
-#, fuzzy
-#| msgid ""
-#| "Standard inline messages are like the ones above: they have a blue "
-#| "background and a default icon. We can change that with the `type` "
-#| "property, which lets us set our inline message to a different type. There "
-#| "are four types we can choose from:"
 msgid ""
 "Standard inline messages are like the ones above: they have a blue "
 "background and a default icon. We can change that with the [type](docs:"
@@ -4412,9 +4410,10 @@ msgid ""
 "inline message to a different type. There are four types we can choose from:"
 msgstr ""
 "Los mensajes en línea estándares son como los anteriores: tienen un fondo "
-"azul y un icono predeterminado. Podemos cambiar esto con la propiedad "
-"`type`, que nos permite hacer que nuestro mensaje en línea sea de un tipo "
-"diferente. Hay cuatro tipos entre los que podemos elegir:"
+"azul y un icono predeterminado. Podemos cambiar esto con la propiedad [type]"
+"(docs:kirigami2;templates::InlineMessage::type), que nos permite hacer que "
+"nuestro mensaje en línea sea de un tipo diferente. Hay cuatro tipos entre "
+"los que podemos elegir:"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:59
 msgid ""
