@@ -32,7 +32,7 @@ First, we use the import we defined in the `main.cpp` file, namely `org.kde.exam
 
 ### CMakeLists
 
-{{< readfile file="CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-add_about_page/CMakeLists.txt" highlight="cmake" >}}
 
 In the `CMakeLists.txt` file in our top-level folder, be sure to have `CoreAddons` in your [find_package()](https://cmake.org/cmake/help/latest/command/find_package.html) call. It is needed for [KAboutData](docs:kcoreaddons;KAboutData).
 
