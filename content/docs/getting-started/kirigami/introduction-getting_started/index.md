@@ -12,9 +12,9 @@ aliases:
 
 Before getting started, we will need to install Kirigami on our machine. There are three ways to do so:
 
-* [Installing Kirigami from the repositories in your Linux distribution]({{< ref "#linux" >}})
-* [Building Kirigami with kdesrc-build]({{< ref "#kdesrc-build" >}})
-* [Installing Kirigami with Craft]({{< ref "#craft" >}})
+* [Installing Kirigami from the repositories in your Linux distribution](#linux)
+* [Building Kirigami with kdesrc-build](#kdesrc-build)
+* [Installing Kirigami with Craft](#craft)
 
 ### Installing Kirigami from the repositories in your Linux distribution {#linux}
 
@@ -30,7 +30,7 @@ sudo dnf install cmake extra-cmake-modules qt5-qtbase-devel qt5-qtdeclarative-de
 
 Further information for other distributions can be found [here](/docs/getting-started/building/help-dependencies).
 
-If you wish to build Kirigami with Qt6, this is currently not possible with only distribution packages on Linux. You will need to resort to [kdesrc-build]({{< ref "#kdesrc-build" >}}) instead.
+If you wish to build Kirigami with Qt6, this is currently not possible with only distribution packages on Linux. You will need to resort to [kdesrc-build](#kdesrc-build) instead.
 
 ### Building Kirigami with kdesrc-build {#kdesrc-build}
 
@@ -211,7 +211,7 @@ cmake --install build/
 
 The program will be installed to `~/kde5/usr/bin`.
 
-If you are compiling your project with [Craft]({{< ref "#craft" >}}) on Windows, you might need to specify a CMake Generator for the first step, depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) to compile your projects.
+If you are compiling your project with [Craft](#craft) on Windows, you might need to specify a CMake Generator for the first step, depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) to compile your projects.
 
 If Visual Studio:
 
