@@ -25,6 +25,8 @@ There are many ways in which you can build KDE software:
 
 If you are completely new to KDE development and want to build it on Linux, you will want to [set up a development environment with kdesrc-build]({{< ref "kdesrc-build-setup" >}}) first. This is KDE's most complete and best supported method for building KDE software on Linux.
 
+The experimental tool [kde-builder](https://kde-builder.kde.org) that is planned to succeed kdesrc-build is now [available for testing](https://discuss.kde.org/t/please-start-testing-kde-builder-if-using-kdesrc-build/13698) as well. Most instructions from the kdesrc-build tutorial mentioned above also apply to kde-builder.
+
 If you are on a rolling release Linux distribution or just want to build a single app, you may also learn how to compile KDE software with manual CMake compilation.
 
 If you are on a Linux distribution that is too old for the previous methods or use an immutable Linux distribution where development is only possible with containers, it is possible to develop KDE software using [Podman + Distrobox](https://community.kde.org/Get_Involved/development/More#Option_2._distrobox) and [Docker + Distrobox](https://community.kde.org/Neon/Containers).
