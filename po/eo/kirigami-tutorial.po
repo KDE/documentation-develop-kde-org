@@ -1,21 +1,21 @@
 # translation of kirigami-tutorial.pot to Esperanto
 # Copyright (C) 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the documentation-develop-kde-org package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.
+# SPDX-FileCopyrightText: 2024 Oliver Kellogg <okellogg@users.sourceforge.net>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 02:03+0000\n"
-"PO-Revision-Date: 2024-04-20 21:13+0100\n"
+"POT-Creation-Date: 2024-04-28 01:33+0000\n"
+"PO-Revision-Date: 2024-04-27 19:00+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
-"Language-Team: Esperanto <kde-i18n-eo.org>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
@@ -383,7 +383,7 @@ msgid ""
 msgstr ""
 "{{< alert color=\"info\" title=\"Noto\" >}} Eblas uzi FormCard-delegitojn "
 "rekte kun Kirigami.ScrollablePage, sed tiukaze vi devos aldoni viajn "
-"proprajn aranĝojn. {{< /alert >>}}"
+"proprajn aranĝojn. {{< /alert >}}"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:127
 msgid "FormHeader"
@@ -1932,7 +1932,7 @@ msgstr ""
 "connect_models/model.h\" highlight=\"cpp\" >}} {{< readfile file=\"/content/"
 "docs /getting-started/kirigami/advanced-connect_models/model.cpp\" highlight="
 "\"cpp\" >}} {{< readfile file=\"/content/docs/getting-started/kirigami/"
-"advanced-connect_models/main .qml\" highlight=\"qml\" >>}}"
+"advanced-connect_models/main.qml\" highlight=\"qml\" >}}"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:599
 msgid "More Information"
@@ -3072,7 +3072,7 @@ msgstr "![Deklarante kaj Montrante Blatojn](chips_usage.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:57
 msgid "{{< /section-right >}} {{< /sections >}}"
-msgstr "{{< /sekcio-dekstra >}} {{< /sekcioj >}}"
+msgstr "{{< /section-right >}} {{< /sections >}}"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:60
 msgid "With Repeaters (Recommended)"
@@ -5587,21 +5587,25 @@ msgstr ""
 "manieroj fari tion:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:15
+#, fuzzy
+#| msgid "Installing Kirigami from the repositories in your Linux distribution"
 msgid ""
-"[Installing Kirigami from the repositories in your Linux distribution]({{< "
-"ref \"#linux\" >}})"
-msgstr ""
-"[Instalado de Kirigami el la deponejoj en via Linuksa distribuo]({{< ref "
-"\"#linux\" >}})"
+"[Installing Kirigami from the repositories in your Linux distribution]"
+"(#linux)"
+msgstr "Instalante Kirigami el la deponejoj en via Linuksa distribuo"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-msgid "[Building Kirigami with kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
+#, fuzzy
+#| msgid "[Building Kirigami with kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
+msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgstr ""
 "[Konstruado de Kirigami kun kdesrc-build]({{< ref \"#kdesrc-build\" >}})"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
-msgid "[Installing Kirigami with Craft]({{< ref \"#craft\" >}})"
-msgstr "[Instalado de Kirigami kun Craft]({{< ref \"#craft\" >}})"
+#, fuzzy
+#| msgid "Installing Kirigami with Craft"
+msgid "[Installing Kirigami with Craft](#craft)"
+msgstr "Instalado de Kirigami kun Craft"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:19
 msgid "Installing Kirigami from the repositories in your Linux distribution"
@@ -5626,10 +5630,15 @@ msgstr ""
 "building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
+#, fuzzy
+#| msgid ""
+#| "If you wish to build Kirigami with Qt6, this is currently not possible "
+#| "with only distribution packages on Linux. You will need to resort to "
+#| "[kdesrc-build]({{< ref \"#kdesrc-build\" >}}) instead."
 msgid ""
 "If you wish to build Kirigami with Qt6, this is currently not possible with "
 "only distribution packages on Linux. You will need to resort to [kdesrc-"
-"build]({{< ref \"#kdesrc-build\" >}}) instead."
+"build](#kdesrc-build) instead."
 msgstr ""
 "Se vi volas konstrui Kirigami per Qt6, ĉi tio nuntempe ne eblas kun nur "
 "distribuaj pakoj en Linukso. Vi devos uzi [kdesrc-build]({{< ref \"#kdesrc-"
@@ -6174,11 +6183,17 @@ msgid "The program will be installed to `~/kde5/usr/bin`."
 msgstr "La programo estos instalita al `~/kde5/usr/bin`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:214
+#, fuzzy
+#| msgid ""
+#| "If you are compiling your project with [Craft]({{< ref \"#craft\" >}}) on "
+#| "Windows, you might need to specify a CMake Generator for the first step, "
+#| "depending on whether you are using Visual Studio 2019 (msvc) or MinGW "
+#| "(make) to compile your projects."
 msgid ""
-"If you are compiling your project with [Craft]({{< ref \"#craft\" >}}) on "
-"Windows, you might need to specify a CMake Generator for the first step, "
-"depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) "
-"to compile your projects."
+"If you are compiling your project with [Craft](#craft) on Windows, you might "
+"need to specify a CMake Generator for the first step, depending on whether "
+"you are using Visual Studio 2019 (msvc) or MinGW (make) to compile your "
+"projects."
 msgstr ""
 "Se vi kompilas vian projekton per [Craft]({{< ref \"#craft\" >}}) en "
 "Vindozo, vi eble bezonos specifi CMake Generatoron por la unua paŝo, depende "
@@ -8559,3 +8574,13 @@ msgid ""
 msgstr ""
 "La tiparo de la [Kirigami.Theme](docs:kirigami2;Kirigami::PlatformTheme) "
 "estas disponebla kiel `Kirigami.Theme.defaultFont.pointSize` en via aplikaĵo."
+
+#~ msgid ""
+#~ "[Installing Kirigami from the repositories in your Linux distribution]"
+#~ "({{< ref \"#linux\" >}})"
+#~ msgstr ""
+#~ "[Instalado de Kirigami el la deponejoj en via Linuksa distribuo]({{< ref "
+#~ "\"#linux\" >}})"
+
+#~ msgid "[Installing Kirigami with Craft]({{< ref \"#craft\" >}})"
+#~ msgstr "[Instalado de Kirigami kun Craft]({{< ref \"#craft\" >}})"
