@@ -85,6 +85,24 @@ mkdir -p ~/.local/bin
 ln -sf ~/.local/share/kdesrc-build/kdesrc-build ~/.local/bin
 ```
 
+{{< alert title="About ~/.local/bin" color="info" >}}
+
+Some Linux distributions might not follow the [Freedesktop Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) that enforces that the `~/.local/bin` directory be added to the `$PATH`, which is required for an executable to show up in the terminal without its absolute path.
+
+To check if `~/.local/bin` is in the `$PATH`, run: `echo $PATH`.
+
+If the directory is not listed, then you will need to add it yourself. You can do so by adding the following to your `~/.bashrc` (or equivalent in your preferred shell):
+
+```bash
+export PATH=$PATH:~/.local/bin
+```
+
+Closing and reopening your terminal window once should be enough for `kdesrc-build` to appear for the next steps.
+
+Don't forget to warn your distribution to follow the specification.
+
+{{< /alert >}}
+
 {{< alert title="Note" color="info" >}}
 
 Some distros need source repositories enabled before you can install the development packages you need. Do that now, *if needed*:
