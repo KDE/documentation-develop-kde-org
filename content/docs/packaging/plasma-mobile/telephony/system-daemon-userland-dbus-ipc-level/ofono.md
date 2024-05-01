@@ -44,8 +44,9 @@ only be displayed once the virtual modem is activated.
 * From the [oFono source directory](https://git.kernel.org/pub/scm/network/ofono/ofono.git), call `./test/enable-modem` to bring the modem up, the
   control UI should come up
 * Call `./test/online-modem` to activate the test phonesim modem
-* Install [oFono2MM](https://github.com/droidian/oFono2MM), 
-  reload the available systemd services `systemctl daemon-reload` and restart ModemManager `systemctl restart ModemManager`).
+* Install the `phonesim` branch of this [oFono2MM](https://github.com/jbruechert/oFono2MM/tree/phonesim) fork, until it is merged [upstream](https://github.com/droidian/oFono2MM).
+
+  Then reload the available systemd services `systemctl daemon-reload` and restart ModemManager `systemctl restart ModemManager`).
   The running ModemManager will now be the fake oFono based implementation.
 
   If you need to restore the normal ModemManager later, delete `/usr/lib/systemd/system/ModemManager.service.d/10-ofono2mm.conf`
