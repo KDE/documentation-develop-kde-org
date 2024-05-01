@@ -1,34 +1,30 @@
 ---
-title: oFono Telephony functions
-SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb.mail@gmx.de>
+title: Developing Telephony functionality
+SPDX-FileCopyrightText: 2024 Jonah Brüchert <jbb@kaidan.im>
 SPDX-License-Identifier: CC-BY-SA-4.0
 aliases:
   - /docs/plasma-mobile/telephony/system-daemon-userland-dbus-ipc-level/modem-manager/
 ---
 
-Plasma Mobile is currently switched from oFono to ModemManager.
-
-The current documentation page is provided for historical reasons.
-
-## oFono
-[oFono](https://01.org/ofono) is a _GPL-2.0-only_ Nokia/Intel project [started in the year 2009 with mobile devices support like Nokia N900's Phonet/ISI](https://git.kernel.org/pub/scm/network/ofono/ofono.git/tree/drivers/isimodem). It integrates with the higher-level [ConnMan](https://git.kernel.org/pub/scm/network/connman/connman.git/about/) connection manager.
+Plasma Mobile uses ModemManager as telephony stack.
+However, there is a very useful debugging tool for the competing telephony stack, oFono.
+This page describes how to use it for development of Plasma Mobile telephony features.
 
 ## Phonesim
 
-Phonesim will add a fake phone modem, that can be controlled via a Qt
-based user interface from which it will be possible to test various aspects
+Phonesim will add a fake phone modem that can be controlled via a Qt
+based user interface.
+This interface makes it possible to test various aspects
 of the phone UI: making calls, receiving, signal strength, send SMS and so
-on. It will not generate any real call, but only make the UI think a SIM is
-working and that a phone call is in progress.
+on.
 
-The current stable release of phonesim is still based on Qt4, therefore we
-recommend compiling the [Qt5 based git master branch](https://git.kernel.org/pub/scm/network/ofono/phonesim.git).
-In some cases, you might be able to install ofono-phonesim from your
-distribution’s repository.
+The current stable release of phonesim is still based on Qt5.
+On most distributions, you need to compile it yourself from the [source code](https://git.kernel.org/pub/scm/network/ofono/phonesim.git). If you need a Qt6 based version, you currently have to resort to [this fork](https://invent.kde.org/jbbgameich/ofono-phonesim/-/tree/qt6).
+In some cases, you might be able to install ofono-phonesim from your distribution’s repository.
 
 To set up ofono-phonesim for development:
-
-* Edit `/etc/ofono/phonesim.conf`, uncomment everything so that it looks like
+* Install oFono
+* Edit `/etc/ofono/phonesim.conf`, and uncomment everything so that it looks like
 
 ```ini
 [phonesim]
@@ -36,22 +32,22 @@ Address=127.0.0.1
 Port=12345
 ```
 
-* Start ofonod as root
+* Start ofonod (`systemctl start ofono`)
 * Start phonesim
-
-  Please note that the binary may be called ofono-phonesim in some distributions.
-
   ```bash
-  phonesim -p 12345 -gui /usr/share/phonesim/default.xml
+  ./src/phonesim -gui -p 12345 ../src/default.xml
   ```
 
   A bit surprisingly, at first nothing will happen. That is fine, since the UI will
 only be displayed once the virtual modem is activated.
 
-* From the oFono source directory, call ./test/enable-modem to bring the modem up, the
+* From the [oFono source directory](https://git.kernel.org/pub/scm/network/ofono/ofono.git), call `./test/enable-modem` to bring the modem up, the
   control UI should come up
 * Call `./test/online-modem` to activate the test phonesim modem
+* Install [oFono2MM](https://github.com/droidian/oFono2MM), 
+  reload the available systemd services `systemctl daemon-reload` and restart ModemManager `systemctl restart ModemManager`).
+  The running ModemManager will now be the fake oFono based implementation.
 
-## On an actual device
+  If you need to restore the normal ModemManager later, delete `/usr/lib/systemd/system/ModemManager.service.d/10-ofono2mm.conf`
 
-Ofono can be controlled (for development purposes), using scripts located in `/usr/share/ofono/scripts/`.
+You should now be able to receive SMS in Spacebar. Make sure to start `spacebar-daemon` before `spacebar`.
