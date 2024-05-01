@@ -8,7 +8,7 @@ aliases:
 
 ## Publishing to KDE's nightly repositories 
 
-While Flathub is a popular hub for flatpak'd software, it is possible to have multiple flatpak repositories due to its decentralized nature with the help of [flat-manager](https://github.com/flatpak/flat-manager). A few other flatpak repositories are GNOME Nightly, Fedora for Silverblue/Kinoite, openSUSE for MicroOS, and Winepak. The KDE Community has its own [repositories for nightlies](https://userbase.kde.org/Tutorials/Flatpak) hosted on https://cdn.kde.org/flatpak. Every repository is dedicated to one application.
+While Flathub is a popular hub for flatpak'd software, it is possible to have multiple flatpak repositories due to its decentralized nature. A few other flatpak repositories are GNOME Nightly, Fedora for Silverblue/Kinoite, openSUSE for MicroOS, and Winepak. The KDE Community has its own [repositories for nightlies](https://userbase.kde.org/Tutorials/Flatpak) hosted on https://cdn.kde.org/flatpak. Every repository is dedicated to one application.
 
 The nightly repositories are particularly convenient for users to test applications that are new and have yet to be released or are still being developed. The repository integrates with GitLab CI/CD.
 
