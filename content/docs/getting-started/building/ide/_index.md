@@ -1,7 +1,7 @@
 ---
 title: "IDE Configuration"
 description: "Setting up an IDE for KDE development"
-weight: 5
+weight: 15
 group: "kdesrc-build"
 authors:
     - SPDX-FileCopyrightText: 2024 Kristen McWilliam <kmcwilliampublic@gmail.com>
