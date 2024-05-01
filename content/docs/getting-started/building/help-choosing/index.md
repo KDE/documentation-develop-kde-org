@@ -27,6 +27,8 @@ There are many other lists of issues you can take a look at:
 
 * The [Gardening team](https://community.kde.org/Gardening) has a [stale merge requests list](https://invent.kde.org/dashboard/merge_requests?draft=no&not%5Blabel_name%5D%5B%5D=Gardening%3A+Stale&scope=all&sort=updated_asc&state=opened) full of old merge requests with interesting but unfinished ideas. You can ask their developers if it's okay to take over the work on them.
 
+* The [list of app ideas](https://community.kde.org/App_ideas) is a good entrypoint if you are looking to make a new KDE application from scratch.
+
 Try not to start out by proposing or working on major features or significant design changes. These can be controversial, and the smoothest way to get going is by working on relatively non-controversial bugfixes. Start slowly and build trust!
 
 Once you've got a general idea about what you want to work on, you can [get in touch with the existing developers]({{< ref "help-developers" >}}) and they can help you out by pointing you to the right place in the code and providing advice about how to tackle the problem.
