@@ -77,7 +77,7 @@ After this, you can log out and select your new Plasma session in SDDM's session
 Alternatively, you can run the new version of Plasma on top of your existing system for quick testing like so:
 
 ```bash
-source ~/kde/build/plasma-desktop/prefix.sh
+source ~/kde/build/plasma-workspace/prefix.sh
 ~/kde/usr/bin/plasmashell --replace
 ```
 
