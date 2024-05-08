@@ -996,27 +996,8 @@ Some of the most common icons:
 * `system.svg`
 * [More...](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/desktoptheme/breeze/icons)
 
-<!-- This should be removed once Plasma 6 is released and https://invent.kde.org/plasma/plasma-desktop/-/issues/82 is implemented -->
-{{< alert color="warning" title="Warning" >}}
+{{< alert color="warning" title="Deprecated in Plasma 6" >}}
 
-The `icons/` folder contains special icons designed for Plasma Styles. Those do not follow the same naming scheme and structure as [Freedesktop icons](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html) usually stored in `/usr/share/icons`.
-
-While icons from icon themes would ship, for instance:
-
-* audio.svg
-* audio-volume-low.svg
-* audio-volume-medium.svg
-* audio-volume-high.svg
-* audio-volume-muted.svg
-* etc.
-
-The `icons/` folder of a Plasma Style ships with one `audio.svg` file that contains elements with IDs `audio-volume-low`, `audio-volume-medium`, etc. For example:
-
-* Icon Theme: [`breeze-icons/icons/.../audio-volume-high.svg`](https://invent.kde.org/frameworks/breeze-icons/-/blame/master/icons/status/22/audio-volume-high.svg)
-* Plasma Style: [`plasma-framework/desktoptheme/breeze/icons/audio.svg`](https://invent.kde.org/frameworks/plasma-framework/-/blame/master/src/desktoptheme/breeze/icons/audio.svg)
-
-Plasma's icon loader takes the icon name (for example: `audio-volume-high`) and [removes everything after the first dash](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/core/iconitem.cpp#L162-193) (`-`) for the filename (eg: `audio.svg`). Inside `audio.svg`.
-
-For this reason, if you attempt to copy icons from an icon theme instead of a Plasma Style, this might lead to Plasma ignoring your icons, in particular if you ship an `audio-volume-high.svg` without shipping an `audio.svg`.
+The use of special icons provided by the Plasma theme to be used in the system tray has been [deprecated](https://invent.kde.org/plasma/plasma-desktop/-/issues/82) and tray icons now come from the icon theme. See [the reasoning for the change](https://pointieststick.com/2023/08/12/how-all-this-icon-stuff-is-going-to-work-in-plasma-6/) for details.
 
 {{< /alert >}}
