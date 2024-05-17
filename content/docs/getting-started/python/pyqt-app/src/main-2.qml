@@ -7,7 +7,7 @@ import org.kde.simplemdviewer 1.0
 Kirigami.ApplicationWindow {
     id: root
 
-    title: qsTr("Simple markdown viewer")
+    title: qsTr("Simple Markdown viewer")
 
     minimumWidth: Kirigami.Units.gridUnit * 20
     minimumHeight: Kirigami.Units.gridUnit * 20
@@ -37,7 +37,7 @@ Kirigami.ApplicationWindow {
                 Controls.TextArea {
                     id: sourceArea
 
-                    placeholderText: qsTr("Write here some markdown code")
+                    placeholderText: qsTr("Write some Markdown code here")
                     wrapMode: Text.WrapAnywhere
                     Layout.fillWidth: true
                     Layout.minimumHeight: Kirigami.Units.gridUnit * 5 
