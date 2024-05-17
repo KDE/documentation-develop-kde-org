@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -8,11 +8,12 @@ from PyQt6.QtCore import QUrl
 from PyQt6.QtQml import QQmlApplicationEngine, qmlRegisterType
 from md_converter import MdConverter
 
+
 def main():
     """Initializes and manages the application execution"""
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
-    
+
     """Needed to close the app with Ctrl+C"""
     signal.signal(signal.SIGINT, signal.SIG_DFL)
 
@@ -20,17 +21,17 @@ def main():
     if not os.environ.get("QT_QUICK_CONTROLS_STYLE"):
         os.environ["QT_QUICK_CONTROLS_STYLE"] = "org.kde.desktop"
 
-    qmlRegisterType(MdConverter, 'org.kde.simplemdviewer',
-                    1, 0, 'MdConverter')
- 
+    qmlRegisterType(MdConverter, "org.kde.simplemdviewer", 1, 0, "MdConverter")
+
     base_path = os.path.abspath(os.path.dirname(__file__))
-    url = QUrl(f'file://{base_path}/qml/main.qml')
+    url = QUrl(f"file://{base_path}/qml/main.qml")
     engine.load(url)
 
     if len(engine.rootObjects()) == 0:
         quit()
 
     app.exec()
+
 
 if __name__ == "__main__":
     main()

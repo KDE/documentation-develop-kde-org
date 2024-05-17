@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -6,6 +6,7 @@ import signal
 from PyQt6.QtGui import QGuiApplication
 from PyQt6.QtCore import QUrl
 from PyQt6.QtQml import QQmlApplicationEngine, qmlRegisterType
+
 
 def main():
     """Initializes and manages the application execution"""
@@ -20,13 +21,14 @@ def main():
         os.environ["QT_QUICK_CONTROLS_STYLE"] = "org.kde.desktop"
 
     base_path = os.path.abspath(os.path.dirname(__file__))
-    url = QUrl(f'file://{base_path}/qml/main.qml')
+    url = QUrl(f"file://{base_path}/qml/main.qml")
     engine.load(url)
 
     if len(engine.rootObjects()) == 0:
         quit()
 
     app.exec()
+
 
 if __name__ == "__main__":
     main()

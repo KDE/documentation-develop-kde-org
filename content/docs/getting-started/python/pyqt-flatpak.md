@@ -122,4 +122,3 @@ building [Flatpak nightlies using KDE infrastructure]({{< ref "docs/packaging/fl
 to refine the presentation of your application on Flathub.
 
 Happy hacking.
-

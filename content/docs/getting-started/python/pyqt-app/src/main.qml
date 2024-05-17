@@ -54,7 +54,7 @@ Kirigami.ApplicationWindow {
                         }
                     }
                 } 
-                
+
                 Text {
                     id: formattedText
 
