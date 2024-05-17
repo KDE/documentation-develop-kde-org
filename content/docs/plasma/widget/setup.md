@@ -12,7 +12,7 @@ aliases:
 {{< sections >}}
 {{< section-left >}}
 
-To start a new widget from scratch, first create a folder for your new widget somewhere in you coding directory (eg: `~/Code/plasmoid-helloworld`).
+To start a new widget from scratch, first create a folder for your new widget somewhere in your coding directory (eg: `~/Code/plasmoid-helloworld`).
 
 Inside it create another folder called `package`. Everything inside the `package` folder will be what we eventually install to `~/.local/share/plasma/plasmoids/com.github.zren.helloworld/`. Eventually we will zip the contents of `package` and share them online. We can keep text editor files, build scripts, screenshots, etc outside the `package` directory.
 
@@ -48,7 +48,7 @@ Note that you don't *need* the 3 config files. You can get away with just the `m
 
 Inside the `metadata.json` file we need to set the `Name` of the widget.
 
-`Icon` is the icon name associated with the widget. You can search for icon names in the `/usr/share/icons` folder. You can also look for an icon name by right clicking your app launcher widget then editing the icon in its settings. It uses a searchable interface and lists them by category. Plasma's SDK also has the Cuttlefish app ([screenshot](https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png)) which you can install with `sudo apt install plasma-sdk`.
+`Icon` is the icon name associated with the widget. You can search for icon names in the `/usr/share/icons` folder. You can also look for an icon name by right-clicking your app launcher widget then editing the icon in its settings. It uses a searchable interface and lists them by category. Plasma's SDK also has the Cuttlefish app ([screenshot](https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png)) which you can install with `sudo apt install plasma-sdk`.
 
 `Id` needs to be a unique name, since it's used for the folder name it's installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you're planning on contributing the widget to KDE.
 
