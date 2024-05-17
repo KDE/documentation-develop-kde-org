@@ -6,9 +6,8 @@ import signal
 from PyQt6.QtGui import QGuiApplication
 from PyQt6.QtCore import QUrl
 from PyQt6.QtQml import QQmlApplicationEngine, qmlRegisterType
-from simplemdviewer.md_converter import MdConverter
-# Previously it was:
 # from md_converter import MdConverter
+from simplemdviewer.md_converter import MdConverter
 
 
 def main():
