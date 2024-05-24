@@ -8,7 +8,7 @@ aliases:
 ---
 
 There are also several examples in the `plasma-framework` repo:  
-<https://invent.kde.org/frameworks/plasma-framework/-/tree/master/examples/applets>
+<https://invent.kde.org/plasma/libplasma/-/tree/master/examples/applets>
 
 ## Configurable icon
 
