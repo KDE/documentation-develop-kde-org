@@ -33,6 +33,15 @@ This tutorial will provide a step-by-step guide to use Selenium AT-SPI to automa
 
 This tutorial requires Python 3.8+ which is included by default in most distributions.
 
+Installation of [Accerciser](https://help.gnome.org/users/accerciser/stable/introduction.html.en) (an interactive accessibility explorer) and [Orca](https://help.gnome.org/users/orca/stable/introduction.html.en) (screen reader) are recommended if you want to test accessibility with Appium tests.
+
+{{< installpackage
+    ubuntu="accerciser orca"
+    opensuse="accerciser orca"
+    fedora="accerciser orca"
+    arch="accerciser orca"
+>}}
+
 ### Building from source
 
 [kdesrc-build](https://invent.kde.org/sdk/kdesrc-build) is the recommended tool to build selenium-webdriver-at-spi from source. Learn [how to set up a KDE development environment using kdesrc-build]({{< ref "kdesrc-build-setup" >}}).
@@ -43,21 +52,18 @@ After the development environment is set up, run the command below to build both
 kdesrc-build kcalc selenium-webdriver-at-spi
 ```
 
-Installation of [Accerciser](https://help.gnome.org/users/accerciser/stable/introduction.html.en) (an interactive accessibility explorer) and [Orca](https://help.gnome.org/users/orca/stable/introduction.html.en) (screen reader) are recommended if you want to test accessibility with Appium tests.
-
-{{< installpackage
-    ubuntu="accerciser orca"
-    opensuse="accerciser orca"
-    fedora="accerciser orca"
-    arch="accerciser orca"
->}}
-
-The driver will be installed in `~/kde/src/selenium-webdriver-at-spi` if you followed the wiki.
-
 Run the example test script to check that your installation is working.
 
+With kdesrc-build:
+
 ```shell
-selenium-webdriver-at-spi-run ~/kde/src/selenium-webdriver-at-spi-run/examples/calculatortest.py
+kdesrc-build --run --exec selenium-webdriver-at-spi-run selenium-webdriver-at-spi ~/kde/src/selenium-webdriver-at-spi/examples/calculatortest.py
+```
+
+With kde-builder:
+
+```shell
+kde-builder --run selenium-webdriver-at-spi-run ~/kde/src/selenium-webdriver-at-spi/examples/calculatortest.py
 ```
 
 You will see a black window titled "KDE Wayland Compositor" running a KCalc window and having a few buttons getting highlighted (very fast!) as they're activated.
