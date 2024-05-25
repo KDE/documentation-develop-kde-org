@@ -68,6 +68,12 @@ Once built, you can make an entire built-from-source Plasma session accessible f
 
 {{< alert title="Note" color="info" >}}
 
+In KDE Builder, this is done automatically. See https://kde-builder.kde.org/en/using-kde-builder/advanced-features.html#installing-login-session.
+
+{{< /alert >}}
+
+{{< alert title="Note" color="info" >}}
+
 SELinux can interfere with the new DBus services working correctly, and the path of least resistance may be to simply turn off enforcement if you are using a distro that ships with it on by default (for example, Fedora). To do this, set the value of `SELINUX` to `permissive` in the file `/etc/selinux`.
 
 {{< /alert >}}
