@@ -49,7 +49,7 @@ Using a QStringLiteral for strings like `QStringLiteral("Hello World!")` instead
 
 ### About and Internationalization
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/main2.cpp" highlight="cpp" emphasize="3-4 8 11-42 45-47 51-52" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/main2.cpp" highlight="cpp" emphasize="3-4 8 11-47 50-52 56-57" >}}
 
 ![](hello_world_complete.webp)
 
@@ -75,7 +75,7 @@ One more thing of note is that, if you are using a different system language, th
 
 ### Command line
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/main3.cpp" highlight="cpp" emphasize="5 34-37" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/main3.cpp" highlight="cpp" emphasize="2 34-37" >}}
 
 Then we come to [QCommandLineParser](docs:qtcore;QCommandLineParser). This is the class one would use to specify command line flags to open your program with a specific file, for instance. However, in this tutorial, we simply initialize it with the [KAboutData](docs:kcoreaddons;KAboutData) object we created before so we can use the `--version` or `--author` flags that are provided by default by Qt.
 

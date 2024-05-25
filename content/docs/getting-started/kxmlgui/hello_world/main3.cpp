@@ -1,8 +1,8 @@
 #include <QApplication>
+#include <QCommandLineParser>
 #include <KMessageBox>
 #include <KAboutData>
 #include <KLocalizedString>
-#include <QCommandLineParser>
 
 int main (int argc, char *argv[])
 {
@@ -12,22 +12,22 @@ int main (int argc, char *argv[])
     KLocalizedString::setApplicationDomain("tutorial1");
 
     KAboutData aboutData(
-        u"tutorial1"_s,
-        i18n("Tutorial 1"),
+        u"helloworld"_s,
+        i18n("Hello World tutorial"),
         u"1.0"_s,
         i18n("Displays a KMessageBox popup"),
         KAboutLicense::GPL,
-        i18n("(c) 2021"),
-        i18n("Some text..."),
-        u"https://example.com/"_s,
+        i18n("(c) 2024"),
+        i18n("Educational application..."),
+        u"https://apps.kde.org/someappname/"_s,
         u"submit@bugs.kde.org"_s);
 
     aboutData.addAuthor(
-        i18n("Name"),
-        i18n("Author Role"),
-        u"your@email.com"_s,
-        u"https://your.website.com"_s,
-        u"OCS Username"_s);
+        i18n("John Doe"),
+        i18n("Tutorial learner"),
+        u"john.doe@example.com"_s,
+        u"https://john-doe.example.com"_s,
+        u"johndoe"_s);
 
     KAboutData::setApplicationData(aboutData);
 
