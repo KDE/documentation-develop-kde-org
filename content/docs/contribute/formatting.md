@@ -99,10 +99,11 @@ The most important shortcodes are as follows.
 
 ### readfile
 
-Displays the contents of a file and applies syntax highlighting to it. It has two optional parameters:
+Displays the contents of a file and applies syntax highlighting to it. It has three optional parameters:
 
 * **start**: Defines the first line that should be displayed. By default this is 1, which means starting from the first line.
 * **lines**: Defines how many lines should be displayed. By default this is 0, which displays all lines from **start** to the end of the file.
+* **emphasize**: Defines a set of line numbers or line number ranges to be highlighted. Note that they are relative to displayed lines, not to the absolute file line numbers (important in case file is displayed not from start). For example, if start="5" and emphasize="3 6-7", lines 7, 10 and 11 of the file will be highlighted.
 
 The only required parameter is **file** for specifying the path of the file to read:
 - If the file is in the [bundle](#creating-a-new-tutorial) of the content file you are writing, you can specify the path starting from the bundle directory;

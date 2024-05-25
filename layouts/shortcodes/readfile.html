@@ -22,6 +22,9 @@
   {{- end -}}
   {{- with .Get "highlight" -}}
     {{- $args := print "linenos=table,linenostart=" $start -}}
+    {{- with $.Get "emphasize" -}}
+      {{- $args = print $args ",hl_lines=" . -}}
+    {{- end -}}
     {{- highlight $fileContent . $args -}}
   {{- else -}}
     {{- $fileContent | htmlUnescape | safeHTML -}}
