@@ -18,7 +18,7 @@ To get more information about any class you come across, you can use [KDE's API 
 
 ## Preparation
 
-You will need to set up your development environment (so that you can use the KDE Frameworks) first. You can do that in two ways:
+We are going to discuss some basic code, and in the final section we will build it. You will need to set up your development environment (so that you can use the KDE Frameworks) first. You can do that in two ways:
 - Go through the [setting up your development environment]({{< ref "building" >}}) part of the *Get Involved* documentation. That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
 - Install the KDE Frameworks development packages from your operating system or distribution. The names of these packages, and how to install them, varies per distro, so you will need to investigate on your own.
 
@@ -49,7 +49,7 @@ Using a QStringLiteral for strings like `QStringLiteral("Hello World!")` instead
 
 ### About and Internationalization
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/main2.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/main2.cpp" highlight="cpp" emphasize="3-4 8 11-42 45-47 51-52" >}}
 
 ![](hello_world_complete.webp)
 
@@ -75,13 +75,13 @@ One more thing of note is that, if you are using a different system language, th
 
 ### Command line
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/main3.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/main3.cpp" highlight="cpp" emphasize="5 34-37" >}}
 
 Then we come to [QCommandLineParser](docs:qtcore;QCommandLineParser). This is the class one would use to specify command line flags to open your program with a specific file, for instance. However, in this tutorial, we simply initialize it with the [KAboutData](docs:kcoreaddons;KAboutData) object we created before so we can use the `--version` or `--author` flags that are provided by default by Qt.
 
 We're all done as far as the code is concerned. Now to build it and try it out.
 
-## Build
+## Building and running
 
 In order to run our project, we need a build system in place to compile and link the required libraries; for that, we use the industry standard CMake, together with files in our project folder called `CMakeLists.txt`. CMake uses this file to run mainly three steps: configure, build, and install. During the configure step it will generate a `Makefile` (if using `make`) or a `build.ninja` (if using `ninja`), which is then used to build.
 
@@ -97,17 +97,15 @@ And KDAB provides a [YouTube playlist explaining CMake](https://www.youtube.com/
 
 Create a file named `CMakeLists.txt` in the same directory as `main.cpp` with this content: 
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/CMakeLists.txt" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/hello_world/CMakeLists.txt" highlight="cmake" >}}
 
-The [`find_package()`](https://cmake.org/cmake/help/latest/command/find_package.html) function locates the package that you ask it for (in this case ECM, Qt5, or KF5) and sets some variables describing the location of the package's headers and libraries. [ECM](https://api.kde.org/ecm/), or Extra CMake Modules, is required to import special CMake files and functions for building KDE applications.
+The [`find_package()`](https://cmake.org/cmake/help/latest/command/find_package.html) function locates the package that you ask it for (in this case ECM, Qt6, or KF6) and sets some variables describing the location of the package's headers and libraries. [ECM](https://api.kde.org/ecm/), or Extra CMake Modules, is required to import special CMake files and functions for building KDE applications.
 
-Here we try to find the modules for Qt 5 and KDE Frameworks 5 required to build our tutorial. The necessary files are included by CMake so that the compiler can see them at build time. Minimum version numbers are set at the very top of `CMakeLists.txt` file for easier reference.
+Here we try to find the modules for Qt 6 and KDE Frameworks 6 required to build our tutorial. The necessary files are included by CMake so that the compiler can see them at build time. Minimum version numbers are set at the very top of `CMakeLists.txt` file for easier reference.
 
-Next we create a variable called `helloworld_SRCS` using the [`set()`](https://cmake.org/cmake/help/latest/command/set.html) function. In this case we simply set it to the name of our only source file.
+Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add_executable.html) to create an executable called `helloworld`. Afterwards, we link our executable to the necessary libraries using the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function. The [`install()`](https://cmake.org/cmake/help/latest/command/install.html) function call creates a default "install" target, putting executables and libraries in the default path using a convenience macro `KDE_INSTALL_TARGETS_DEFAULT_ARGS` provided by ECM. Additionally, just by including ECM, an "uninstall" target automatically gets created based on this "install" target.
 
-Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add_executable.html) to create an executable called `helloworld` from the source files listed in our `helloworld_SRCS` variable. Afterwards, we link our executable to the necessary libraries using the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function. The [`install()`](https://cmake.org/cmake/help/latest/command/install.html) function call creates a default "install" target, putting executables and libraries in the default path using a convenience macro provided by ECM. Additionally, just by including ECM, an "uninstall" target automatically gets created based on this "install" target.
-
-Running our application
+### Building our application
 
 To compile, link and install your program, you must have the following software installed: `cmake`, `make` or `ninja`, and `gcc-c++`/`g++`, and the Qt 6 and KDE Frameworks development packages. To be sure you have everything, follow [this install guide]({{< ref "building" >}}).
 
@@ -125,7 +123,9 @@ Then we compile the project inside the same `build/` folder:
 cmake --build build/
 ```
 
-And launch it with: 
+### Running our application
+
+Launch can be done with: 
 
 ```bash
 ./build/helloworld

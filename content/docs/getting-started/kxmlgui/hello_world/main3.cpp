@@ -10,7 +10,7 @@ int main (int argc, char *argv[])
 
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("tutorial1");
-    
+
     KAboutData aboutData(
         u"tutorial1"_s,
         i18n("Tutorial 1"),
@@ -31,12 +31,11 @@ int main (int argc, char *argv[])
 
     KAboutData::setApplicationData(aboutData);
 
-    // New section
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
-    
+
     KGuiItem primaryAction(
         i18n("Hello"), QString(),
         i18n("This is a tooltip"),
@@ -44,8 +43,7 @@ int main (int argc, char *argv[])
 
     auto messageBox = KMessageBox::questionTwoActions(
         nullptr,
-        i18n("Hello World\n"
-             "This messagebox was made with KDE Frameworks."),
+        i18n("Hello World"),
         i18n("Hello Title"),
         primaryAction, KStandardGuiItem::cancel());
 

@@ -9,7 +9,7 @@ int main (int argc, char *argv[])
 
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("tutorial1");
-    
+
     KAboutData aboutData(
         // The program name used internally. (componentName)
         u"tutorial1"_s,
@@ -40,7 +40,7 @@ int main (int argc, char *argv[])
         u"OCS Username"_s);
 
     KAboutData::setApplicationData(aboutData);
-    
+
     KGuiItem primaryAction(
         i18n("Hello"), QString(),
         i18n("This is a tooltip"),
