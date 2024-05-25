@@ -62,17 +62,34 @@ With this, we should be ready to test our application.
 As before:
 
 ```bash
+kde-builder kxmlgui-tutorial
+```
+
+or
+
+```bash
 cmake -B build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr
 cmake --build build/
 cmake --install build/
 source build/prefix.sh
 ```
 
-However, we will test if our application handles files from the command line correctly.
+However, we will test if our application handles files from the command line correctly. Create a simple file:
 
 ```bash
 echo "It works!" > testfile.txt
-texteditor somefile.txt
+```
+
+Now pass it as argument:
+
+```bash
+kde-builder --run --exec texteditor kxmlgui-tutorial testfile.txt
+```
+
+or
+
+```bash
+texteditor testfile.txt
 ```
 
 You should then see your application run and load `testfile.txt` directly from its UI, showing "It works!" in your `textArea`.

@@ -192,7 +192,7 @@ if (storedJob) {
 Again, for simplicity's sake, this tutorial only saves text files to local disk. When you open a remote file for viewing and try to save it, the program will behave as if you were calling Save As on a completely new file.
 {{< /alert >}}
 
-## Running our application
+## Building and running our application
 
 ### CMakeLists.txt
 
@@ -201,6 +201,13 @@ Again, for simplicity's sake, this tutorial only saves text files to local disk.
 Since we are now using the [KIO](docs:kio) library, we must tell CMake to link against it. We do this by passing `KIO` to the [`find_package()`](https://cmake.org/cmake/help/latest/command/find_package.html) function and `KF6::KIOCore` to the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function.
 
 With this file, the tutorial can be built and run in the same way as the [previous tutorial](../using_actions).
+
+```bash
+kde-builder kxmlgui-tutorial
+kde-builder --run --exec texteditor kxmlgui-tutorial
+```
+
+or
 
 ```bash
 cmake -B build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr/

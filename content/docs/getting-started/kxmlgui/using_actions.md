@@ -188,7 +188,16 @@ Finally, the `texteditorui.rc` needs to go somewhere where the system can find i
 
 This file is almost identical to the one for the [previous tutorial]({{< relref "main_window/#cmakeliststxt" >}}), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the right place for binaries using `${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory, `${KDE_INSTALL_KXMLGUIDIR}`.
 
-## Running our application
+## Building and running our application
+
+### Using kde-builder
+
+```
+kde-builder kxmlgui-tutorial
+kde-builder --run --exec texteditor kxmlgui-tutorial
+```
+
+### Manually
 
 This is probably the trickiest part. The place where you install the files is important, especially `texteditorui.rc`. Normally, you'd want to install it where KDE software is installed by your distribution, which is usually under `/usr`. That works for distributions, but for our purposes we can install it to a folder in our home directory.
 

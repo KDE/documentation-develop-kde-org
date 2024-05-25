@@ -18,9 +18,25 @@ To get more information about any class you come across, you can use [KDE's API 
 
 ## Preparation
 
-We are going to discuss some basic code, and in the final section we will build it. You will need to set up your development environment (so that you can use the KDE Frameworks) first. You can do that in two ways:
-- Go through the [setting up your development environment]({{< ref "building" >}}) part of the *Get Involved* documentation. That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
-- Install the KDE Frameworks development packages from your operating system or distribution. The names of these packages, and how to install them, varies per distro, so you will need to investigate on your own.
+We are going to discuss some basic code, and in the final section we will build it. You will need to set up your development environment (so that you can use the KDE Frameworks) first. You can do that in two ways.
+
+### Option 1: Using kde-builder
+
+Go through the [setting up your development environment]({{< ref "building" >}}) part of the *Get Involved* documentation. That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
+
+Create a folder `~/kde/src/kxmlgui-tutorial`. In that folder you will place the source code files from this tutorial.
+
+In your `~/.config/kdesrc-buildrc` add the following stanza:
+
+```
+module kxmlgui-tutorial
+  no-src
+end module
+```
+
+### Option 2: Manually
+
+Install the KDE Frameworks development packages from your operating system or distribution. The names of these packages, and how to install them, varies per distro, so you will need to investigate on your own.
 
 ## The Code
 
@@ -107,6 +123,16 @@ Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add
 
 ### Building our application
 
+#### With kde-builder
+
+Run the following command:
+
+```
+kde-builder kxmlgui-tutorial
+```
+
+#### Manually
+
 To compile, link and install your program, you must have the following software installed: `cmake`, `make` or `ninja`, and `gcc-c++`/`g++`, and the Qt 6 and KDE Frameworks development packages. To be sure you have everything, follow [this install guide]({{< ref "building" >}}).
 
 First we configure our project inside of a `build/` folder:
@@ -125,6 +151,15 @@ cmake --build build/
 
 ### Running our application
 
+#### With kde-builder
+
+Run the following command:
+```
+kde-builder --run --exec helloworld kxmlgui-tutorial
+```
+
+#### Manually
+
 Launch can be done with: 
 
 ```bash
@@ -138,4 +173,13 @@ You can also run the binary with flags. The flag `--help` is a standard flag add
 ./build/bin/helloworld --version
 ./build/bin/helloworld --author
 ./build/bin/helloworld --license
+```
+
+or
+
+```bash
+kde-builder --run --exec helloworld kxmlgui-tutorial --help
+kde-builder --run --exec helloworld kxmlgui-tutorial --version
+kde-builder --run --exec helloworld kxmlgui-tutorial --author
+kde-builder --run --exec helloworld kxmlgui-tutorial --license
 ```
