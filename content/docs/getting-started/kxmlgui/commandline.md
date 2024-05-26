@@ -23,7 +23,7 @@ Here we have done nothing but add a new `openFileFromUrl()` function which takes
 
 ### mainwindow.cpp
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/commandline/mainwindow.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/commandline/mainwindow.cpp" highlight="cpp" emphasize="80 83-91" >}}
 
 There's no new code here, only rearranging. Everything from `void openFile()` has been moved into `void openFileFromUrl(const QUrl &inputFileName)` except the call to [QFileDialog::getOpenFileUrl()](docs:qtwidgets;QFileDialog::getOpenFileUrl).
 

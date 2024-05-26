@@ -33,7 +33,7 @@ We also want to keep track of the filename of the currently opened file, so we d
 
 ### mainwindow.cpp
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/saving_and_loading/mainwindow.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/saving_and_loading/mainwindow.cpp" highlight="cpp" emphasize="3-6 11-12 15 34-37 42-105" >}}
 
 We'll get into the details of mainwindow.cpp in a while. 
 

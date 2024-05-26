@@ -1,6 +1,5 @@
-#include "mainwindow.h"
-
 #include <KTextEdit>
+#include "mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) : KXmlGuiWindow(parent)
 {

@@ -47,7 +47,7 @@ Only a function `void setupActions()` has been added which will do all the work 
 
 ### mainwindow.cpp
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/using_actions/mainwindow.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/using_actions/mainwindow.cpp" highlight="cpp" emphasize="1-2 4-6 13 16-30" >}}
 
 ## Explanation
 
