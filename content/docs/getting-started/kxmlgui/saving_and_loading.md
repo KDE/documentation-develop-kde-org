@@ -25,7 +25,7 @@ We don't need to change anything in here.
 
 ### mainwindow.h
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/saving_and_loading/mainwindow.h" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/saving_and_loading/mainwindow.h" highlight="cpp" emphasize="7 11 16-26 30" >}}
 
 To add the ability to load and save files, we must add the functions which will do the work. Since the functions will be called through [Qt's signal/slot](http://doc.qt.io/qt-6/signalsandslots.html) mechanism we must specify that these functions are slots using `Q_SLOTS`. Since we are using slots in this header file, we must also add the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, as only [Q_OBJECTs](docs:qtcore;QObject::Q_OBJECT) can have signals and slots.
 

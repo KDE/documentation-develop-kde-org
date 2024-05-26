@@ -5,11 +5,11 @@
 
 class KTextEdit;
 class KJob;
- 
+
 class MainWindow : public KXmlGuiWindow
 {
     Q_OBJECT
-    
+
 public:
     explicit MainWindow(QWidget *parent = nullptr);
 
@@ -22,7 +22,7 @@ private Q_SLOTS:
     void openFile();
     void saveFile();
     void saveFileAs();
-    
+
     void downloadFinished(KJob *job);
 
 private:

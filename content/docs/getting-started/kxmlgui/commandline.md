@@ -17,7 +17,7 @@ We now have a working text editor that can open and save files. We might, howeve
 
 ### mainwindow.h
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/commandline/mainwindow.h" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/commandline/mainwindow.h" highlight="cpp" emphasize="15" >}}
 
 Here we have done nothing but add a new `openFileFromUrl()` function which takes a [QUrl](docs:qtcore;QUrl). Again, we use URLs instead of strings so that we can also work with remote files as if they were local.
 

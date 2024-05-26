@@ -41,7 +41,7 @@ Don't worry about the .rc file just yet. We will see what it's about by the end 
 
 ### mainwindow.h
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/using_actions/mainwindow.h" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/using_actions/mainwindow.h" highlight="cpp" emphasize="15" >}}
 
 Only a function `void setupActions()` has been added which will do all the work setting up the [QActions](docs:qtwidgets;QAction).
 
