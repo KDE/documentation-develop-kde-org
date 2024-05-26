@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project (helloworld)
+project(helloworld)
 
 set(QT_MIN_VERSION "6.6.0")
 set(KF_MIN_VERSION "6.0.0")

@@ -189,7 +189,7 @@ Again, for simplicity's sake, this tutorial only saves text files to local disk.
 
 ### CMakeLists.txt
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/saving_and_loading/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/saving_and_loading/CMakeLists.txt" highlight="cmake" emphasize="27-28 46-47" >}}
 
 Since we are now using the [KIO](docs:kio) library, we must tell CMake to link against it. We do this by passing `KIO` to the [`find_package()`](https://cmake.org/cmake/help/latest/command/find_package.html) function and `KF6::KIOCore` to the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function.
 

@@ -15,7 +15,7 @@ include(FeatureSummary)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core    # QCommandLineParser, QStringLiteral
-    Widgets # QApplication 
+    Widgets # QApplication
 )
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
@@ -24,13 +24,14 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     XmlGui          # KXmlGuiWindow
     TextWidgets     # KTextEdit
 )
-    
+
 add_executable(mainwindow)
 
 target_sources(mainwindow
     PRIVATE
     main.cpp
-    mainwindow.cpp)
+    mainwindow.cpp
+)
 
 target_link_libraries(mainwindow
     Qt6::Widgets

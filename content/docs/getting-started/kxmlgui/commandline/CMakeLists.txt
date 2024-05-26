@@ -27,7 +27,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons   # KMessageBox
     KIO             # KIO
 )
-    
+
 add_executable(texteditor)
 
 target_sources(texteditor

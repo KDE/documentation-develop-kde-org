@@ -45,9 +45,9 @@ Finally, [KXmlGuiWindow::setupGUI()](docs:kxmlgui;KXmlGuiWindow::setupGUI) is ca
 In order to actually run this window, we need to add a few lines in main.cpp:
 
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/main_window/main.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/main_window/main.cpp" highlight="cpp" emphasize="5 39-42" >}}
 
-Again, we include our new header file `mainwindow.h`. This lets us create our new `MainWindow` object which we then display near the end of the main function (by default, new window objects are hidden).
+We include our new header file `mainwindow.h`. This lets us create our new `MainWindow` object which we then display near the end of the main function (by default, new window objects are hidden).
 
 ## CMake
 
@@ -55,7 +55,7 @@ The best way to build the program is to use CMake. We add `mainwindow.cpp` to th
 
 ### CMakeLists.txt
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/main_window/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/main_window/CMakeLists.txt" highlight="cmake" emphasize="3 24-25 28 30 33 35 39-40 43" >}}
 
 ## Running our application
 

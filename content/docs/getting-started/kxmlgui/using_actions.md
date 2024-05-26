@@ -185,7 +185,7 @@ Finally, the `texteditorui.rc` needs to go somewhere where the system can find i
 
 ### CMakeLists.txt
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/using_actions/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/using_actions/CMakeLists.txt" highlight="cmake" emphasize="3 26 29 31 37 43 46-47" >}}
 
 This file is almost identical to the one for the [previous tutorial]({{< relref "main_window/#cmakeliststxt" >}}), but with two extra lines at the end that describe where the files are to be installed. Firstly, the `texteditor` target is installed to the right place for binaries using `${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, then the `texteditorui.rc` file that describes the layout of the user interface is installed to the application's data directory, `${KDE_INSTALL_KXMLGUIDIR}`.
 
