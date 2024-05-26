@@ -31,7 +31,7 @@ This way, we can call `openFile()` if we want to display a dialog, or we can cal
 
 ### main.cpp
 
-{{< readfile file="/content/docs/getting-started/kxmlgui/commandline/main.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kxmlgui/commandline/main.cpp" highlight="cpp" emphasize="3-4 37 45-49" >}}
 
 This is where all the [QCommandLineParser ](docs:qtcore;QCommandLineParser) magic happens. In previous examples, we only used the class to feed [QApplication](docs:qtwidgets;QApplication) the necessary data for using flags like `--version` or `--author`. Now we actually get to use it to process command line arguments.
 

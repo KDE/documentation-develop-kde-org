@@ -85,7 +85,7 @@ void MainWindow::openFileFromUrl(const QUrl &inputFileName)
     if (!inputFileName.isEmpty()) {
         KIO::Job *job = KIO::storedGet(inputFileName);
         fileName = inputFileName.toLocalFile();
-        connect(job, &KIO::Job::result, this, &MainWindow::downloadFinished);
+        connect(job, &KJob::result, this, &MainWindow::downloadFinished);
         job->exec();
     }
 }

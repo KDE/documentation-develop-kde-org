@@ -118,7 +118,7 @@ fileName = outputFileName;
 
 ### saveFileAs()
 
-This is the function that the `saveAs` slot is connected to. It simply calls the generic `saveFileAs(QString)` function and passes the file name returned by [QFileDialog::getSaveFileName()](docs:qtwidgets;QFileDialog::getSaveFileName).
+This is the function that the `saveAs` slot is connected to. It simply calls the generic `saveFileToDisk(QString)` function and passes the file name returned by [QFileDialog::getSaveFileName()](docs:qtwidgets;QFileDialog::getSaveFileName).
 
 ```cpp
 void MainWindow::saveFileAs()
@@ -127,7 +127,7 @@ void MainWindow::saveFileAs()
 }
 ```
 
-[QFileDialog](docs:qtwidgets;QFileDialog) provides a number of static functions for displaying the common file dialog that is used by all KDE applications. Calling [QFileDialog::getSaveFileName()](docs:qtwidgets;QFileDialog::getSaveFileName) will display a dialog where the user can select the name of the file to save to or choose a new name. The function returns the full file name, which we then pass to `saveFileAs(QString)`.
+[QFileDialog](docs:qtwidgets;QFileDialog) provides a number of static functions for displaying the common file dialog that is used by all KDE applications. Calling [QFileDialog::getSaveFileName()](docs:qtwidgets;QFileDialog::getSaveFileName) will display a dialog where the user can select the name of the file to save to or choose a new name. The function returns the full file name, which we then pass to `saveFileToDisk(QString)`.
 
 ### saveFile()
 
@@ -180,6 +180,13 @@ Otherwise, we continue with opening the file.
 
 The data that `storedGet()` successfully downloaded, in this case the contents of our text file, is stored in the data member of a [KIO::StoredTransferJob](docs:kio;KIO::StoredTransferJob) class. But in order to display the contents of the file as text, we must use a [QTextStream](docs:qtcore;QTextStream). We create one by passing the data of the [KIO::StoredTransferJob](docs:kio;KIO::StoredTransferJob) to its constructor and then call its [QTextStream::readAll()](docs:qtcore;QTextStream::readAll) function to get the text from the file. This is then passed to the `setPlainText()` function of our text area.
 
+```c++
+const KIO::StoredTransferJob *storedJob = qobject_cast<KIO::StoredTransferJob *>(job);
+
+if (storedJob) {
+    textArea->setPlainText(QTextStream(storedJob->data(), QIODevice::ReadOnly).readAll());
+}
+```
 
 {{< alert title="Note" color="info" >}}
 Again, for simplicity's sake, this tutorial only saves text files to local disk. When you open a remote file for viewing and try to save it, the program will behave as if you were calling Save As on a completely new file.
