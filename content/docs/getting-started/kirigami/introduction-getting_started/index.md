@@ -39,11 +39,8 @@ For this tutorial, you will need to follow the [setup instructions for kdesrc-bu
 After that, you may simply run the following on a terminal:
 
 ```bash
-kdesrc-build kirigami kcoreaddons ki18n breeze plasma-integration qqc2-desktop-style
-source ~/kde/build/kirigami/prefix.sh
+kde-builder kirigami kcoreaddons ki18n breeze plasma-integration qqc2-desktop-style
 ```
-
-And then you may compile your Kirigami projects on the same terminal shell you used to source the prefix file. If you close your terminal, you can simply source the file again to compile your app.
 
 ### Installing Kirigami with Craft {#craft}
 
@@ -73,7 +70,7 @@ If you close your terminal, you can simply run the environment setup file again 
 
 While there are tools that can easily set up our files, we are going to create them manually. This will let us better understand the pieces that are going to make up our new application.
 
-First we create our project folder. We are going to call ours `kirigami-tutorial/`.
+First we create our project folder (you can use the commands below). We are going to call ours `kirigami-tutorial/`.
 
 ```
 kirigami-tutorial/
@@ -92,10 +89,16 @@ Within this folder we are going to create a `src/` folder and `CMakeLists.txt`. 
 You can quickly create this file structure with:
 
 ```bash
-mkdir -p kirigami-tutorial/src/qml
-touch kirigami-tutorial/CMakeLists.txt
+mkdir -p kirigami-tutorial/src
+touch kirigami-tutorial/{CMakeLists.txt,org.kde.tutorial.desktop}
 touch kirigami-tutorial/src/{CMakeLists.txt,main.cpp,Main.qml}
 ```
+
+{{< /alert >}}
+
+{{< alert title="Note" color="info" >}}
+
+In case you want to automatically build the project with kde-builder/kdesrc-build, custom module name should be the same as the project root folder (in our case it will be "kirigami-tutorial"), otherwise you would need to customize the `source-dir` or `dest-dir` for the module. We will assume the path to your `main.cpp` will be `~/kde/src/kirigami-tutorial/src/main.cpp`.
 
 {{< /alert >}}
 
@@ -221,19 +224,39 @@ This [Qt resource URI](https://doc.qt.io/qt-6/resources.html) above follows the 
 
 {{< /alert >}}
 
-## Compiling and running the application {#build}
+## Compiling and installing the application {#build}
 
 We are almost at the finish line. The last thing we need to do is build and run our application. Doing so will depend on which platform you are on.
 
-If you are running your project on Linux, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
+### Linux or FreeBSD
+
+If you want kde-builder to handle building and installation of your project, you need to specify a custom module in your `~/.config/kdesrc-buildrc`:
+
+```
+...
+module kirigami-tutorial
+    no-src
+end module
+```
+
+Then you can build and install it with the command:
 
 ```bash
-cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/.local"
+kde-builder kirigami-tutorial
+```
+
+In case you want to handle building and installation manually, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
+
+```bash
+source ~/kde/build/kirigami/prefix.sh # if you also have built kirigami with kde-builder or kdesrc-build
+cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/kde/usr"
 cmake --build build/
 cmake --install build/
 ```
 
-The program will be installed to `~/.local/bin` and its desktop entry to `~/.local/share/applications`.
+The program will be installed to `~/kde/usr/bin` and its desktop entry to `~/kde/usr/share/applications`.
+
+### Windows
 
 If you are compiling your project with [Craft](#craft) on Windows, you might need to specify a CMake Generator for the first step, depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) to compile your projects.
 
@@ -255,10 +278,14 @@ cmake --install build/
 
 In both cases, the program will be installed to `C:\CraftRoot\bin`.
 
+## Running the application
+
 You can then run the `kirigami-hello` program with:
 
 ```bash
-kirigami-hello # On Linux
+kirigami-hello # On Linux, manually
+kde-builder --run kirigami-hello # On Linux, with kde-builder
+kdesrc-build --run --exec kirigami-hello kirigami-tutorial # On Linux, with kdesrc-build
 kirigami-hello.exe # On Windows
 ```
 
