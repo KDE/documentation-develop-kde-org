@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-28 01:33+0000\n"
-"PO-Revision-Date: 2024-05-26 10:46+0200\n"
+"PO-Revision-Date: 2024-06-01 23:12+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -97,11 +97,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:0
 msgid "FormCard About pages"
-msgstr ""
+msgstr "FormCard om-sidor"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:0
 msgid "Learn to create About pages to credit your application."
-msgstr ""
+msgstr "Lär dig hur man skapar om-sidor för att ge information om programmet."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:8
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:8
@@ -111,6 +111,10 @@ msgid ""
 "mobile and desktop and are guaranteed to be cross-platform. It uses Kirigami "
 "under the hood to create its components."
 msgstr ""
+"Kirigami Addons är en ytterligare uppsättning visuella komponenter som "
+"fungerar bra på mobiler och skrivbordsdatorer och är garanterade att fungera "
+"på flera plattformar. De använder Kirigami i bakgrunden för att skapa sina "
+"komponenter."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:10
 msgid ""
@@ -119,6 +123,10 @@ msgid ""
 "in your application: [AboutKDE](https://api.kde.org/frameworks/kirigami-"
 "addons/html/classAboutKDE.html) and AboutPage."
 msgstr ""
+"Visa av komponenterna gör att du kan ge information om ditt arbetet och "
+"andra bidragsgivare till projektet, samt nämna ramverken som används av "
+"programmet: [AboutKDE](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classAboutKDE.html) och AboutPage."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:12
 msgid "About KDE"
@@ -131,12 +139,19 @@ msgid ""
 "Component) and then using `pageStack.layers.push()` for each button to load "
 "that page in our `main.qml`:"
 msgstr ""
+"Varje ny knapp som vi skapade i föregående steg ska öppna en ny sida. Du kan "
+"lägga till nya sidor genom att instansiera dem som [Components](docs:qtqml;"
+"QtQml.Component) och sedan använda `pageStack.layers.push()` för varje knapp "
+"för att ladda den sidan i vår `main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:18
 msgid ""
 "That's it really! All it takes is instantiating `FormCard.AboutKDE`. You "
 "should see something like this after clicking the AboutKDE button:"
 msgstr ""
+"Det är faktiskt det hela! Allt som krävs är att instansiera `FormCard."
+"AboutKDE`. Du ska se något som liknar det här efter att ha klickat på "
+"knappen AboutKDE:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:22
 msgid "About Page"
@@ -148,10 +163,13 @@ msgid ""
 "simple to use. We will be adding a new QML file that will contain the "
 "information needed for our about page. First in our `resources.qrc` file:"
 msgstr ""
+"Programmets AboutPage är något mer komplex, men den är fortfarande väldigt "
+"enkel att använda. Vi lägger till en ny QML-fil som innehåller den "
+"information som behövs för vår Om-sida. Först i vår `resources.qrc`-fil:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:35
 msgid "And our `contents/ui/MyAboutPage.qml` should have the following:"
-msgstr ""
+msgstr "Och vår `contents/ui/MyAboutPage.qml` ska ha följande:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:39
 msgid ""
@@ -159,6 +177,9 @@ msgid ""
 "KAboutData) in our `main.cpp`. Here's a brief reminder of what is in `main."
 "cpp`:"
 msgstr ""
+"Här använder vi informationen vi ställer in med [KAboutData](docs:"
+"kcoreaddons;KAboutData) i vår `main.cpp`. Här är en kort påminnelse om vad "
+"som finns i `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:43
 msgid "<========== used in the import"
@@ -176,6 +197,11 @@ msgid ""
 "applicationData()](docs:kcoreaddons;KAboutData::applicationData), and that "
 "is what we pass to the `aboutData` property."
 msgstr ""
+"Objektet `About` som vi exporterade till QML-sidan med "
+"[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+"qmlRegisterSingletonType) innehåller data från [KAboutData::"
+"applicationData()](docs:kcoreaddons:KAboutData), och det är vad vi skickar "
+"till egenskapen `aboutData`."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:53
 msgid "Lastly, we add our new MyAboutPage to our `main.qml`:"
@@ -183,7 +209,7 @@ msgstr "Till sist lägger vi till vår nya MyAboutPage i vår `main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:57
 msgid "The About page of our application should look like this:"
-msgstr ""
+msgstr "Om sidan i vårt program ska se ut så här:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:61
 msgid "Using JSON instead of KAboutData"
@@ -195,6 +221,9 @@ msgid ""
 "embedded in `main.qml`, that is because it allows to set a custom model for "
 "the `aboutData` property."
 msgstr ""
+"Om du undrade varför sidan Om hölls separat snarare än inbäddad i `main."
+"qml`, så beror det på att den tillåter att ange en anpassad modell för "
+"egenskapen `aboutData`."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:65
 msgid ""
@@ -204,6 +233,11 @@ msgid ""
 "QApplication::setWindowIcon) in your `main.cpp` in order for your "
 "application icon to show up."
 msgstr ""
+"Istället för att låta Om-sidan hämta information från [KAboutData](docs:"
+"kcoreaddons;KAboutData), är det möjligt att skicka ett JSON-objekt direkt. "
+"Du behöver fortfarande använda [QApplication::setWindowIcon()](docs:"
+"qtwidgets;QApplication::setWindowIcon) i `main.cpp` för att programikonen "
+"ska dyka upp."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:67
 msgid "Change your `MyAboutPage.json` to something like this:"
@@ -230,7 +264,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Form delegates in your settings pages"
-msgstr ""
+msgstr "Formulärdelegater på inställningssidorna"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:0
 msgid "Create elegant custom settings pages."
@@ -242,6 +276,8 @@ msgid ""
 "Now you will be able to use their same inner components to create your "
 "settings pages."
 msgstr ""
+"Du har lärt dig hur man lägger till About- och AboutKDE-sidor i programmet. "
+"Nu kan du använda samma inre komponenter för att skapa inställningssidor."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:12
 msgid "The project structure should look like this:"
@@ -264,10 +300,12 @@ msgid ""
 "We can now start checking out the components used to create our Settings "
 "page: the Form Card and its Delegates."
 msgstr ""
+"Vi kan nu börja titta på komponenterna som används för att skapa vår "
+"inställningssida: Form Card och dess delegater."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:94
 msgid "Form Delegates"
-msgstr ""
+msgstr "Formulärdelegater"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:96
 msgid "FormCard and FormCardPage"
@@ -279,6 +317,9 @@ msgid ""
 "classFormCard.html) is the main component we will be using to group all its "
 "child components, the Delegates."
 msgstr ""
+"[FormCard.FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormCard.html) är huvudkomponenten vi använder för att gruppera alla "
+"dess underordnade komponenter, delegaterna."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:100
 msgid ""
@@ -296,7 +337,7 @@ msgstr "Skapa en ny fil, `contents/ui/SettingsPage.qml`:"
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:110
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:114
 msgid "This is where all our delegates go!"
-msgstr ""
+msgstr "Det är här alla våra delegater ska finnas."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:119
 msgid ""
@@ -312,6 +353,8 @@ msgid ""
 "layout, so no additional ColumnLayout is needed and our delegates can be "
 "added directly to it."
 msgstr ""
+"Det fina med form card-sidan är att en intern layout ingår, så ingen "
+"ytterligare ColumnLayout behövs och våra delegater kan läggas till direkt."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:123
 msgid ""
@@ -319,6 +362,9 @@ msgid ""
 "delegates directly with a Kirigami.ScrollablePage, but in that case you will "
 "need to add your own layouts. {{< /alert >}}"
 msgstr ""
+"{{< alert color=\"info\" title=\"Note\" >}} Det är möjligt att använda "
+"FormCard delegater direkt med en Kirigami.ScrollablePage, men i detta fall "
+"måste en egen layout läggas till. {{< /alert >}}"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:127
 msgid "FormHeader"
@@ -336,7 +382,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:140
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:148
 msgid "Our delegates go here..."
-msgstr ""
+msgstr "Våra delegater ska finnas här..."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:153
 msgid "FormTextDelegate and FormSectionText"
@@ -344,13 +390,15 @@ msgstr "FormTextDelegate och FormSectionText"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:155
 msgid "Let's start simple, with plain text."
-msgstr ""
+msgstr "Låt oss börja enkelt, med vanlig text."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:157
 msgid ""
 "`FormSectionText` simply adds a thin delegate containing a label. "
 "`FormTextDelegate` has text and a grayed out description."
 msgstr ""
+"`FormSectionText` lägger helt enkelt till en enkel delegat som innehåller en "
+"beteckning. `FormTextDelegate` har text och en nedtonad beskrivning."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:193
 msgid ""
@@ -380,7 +428,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:199
 msgid "It should end up looking like this:"
-msgstr ""
+msgstr "Slutligen ska det se ut så här:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:203
 msgid "FormButtonDelegate"
@@ -408,6 +456,10 @@ msgid ""
 "space where the `leading` would appear, and before the main content. This is "
 "a common pattern to indicate your button will add something to a list."
 msgstr ""
+"Vi använder dess egenskap `icon.name` för att ange en plusikon (+) som ska "
+"visas efter utrymmet där `leading` skulle visas, och före huvudinnehållet. "
+"Det är ett vanligt mönster för att indikera att knappen lägger till något i "
+"en lista."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:250
 msgid ""
@@ -458,10 +510,12 @@ msgid ""
 "We bind the visibility of each radio button to a switch, so they only appear "
 "when the switch is enabled."
 msgstr ""
+"Vi kopplar synligheten för varje alternativknapp till en omkopplare, så de "
+"bara visas när omkopplaren är aktiverad."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:289
 msgid "Best Practices"
-msgstr ""
+msgstr "Bästa metoder"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:291
 msgid "<details><summary>Click here to read more</summary>\n"
@@ -487,6 +541,8 @@ msgid ""
 "See [this page](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
 "declarative-bindings-over-imperative-assignments) for details."
 msgstr ""
+"Se [den här sidan](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
+"declarative-bindings-over-imperative-assignments) för detaljinformation."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:307
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:72
@@ -511,7 +567,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:340
 msgid "So far our application should look like this:"
-msgstr ""
+msgstr "Hittills ska programmet se ut så här:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:344
 msgid "FormComboBoxDelegate"
@@ -523,12 +579,17 @@ msgid ""
 "(https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormComboBoxDelegate.html)."
 msgstr ""
+"Den vanliga komponenten ComboBox kan skapas med hjälp av en "
+"[FormComboBoxDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
+"classFormComboBoxDelegate.html)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:348
 msgid ""
 "This combobox has several useful properties we can make use of: `editable`, "
 "`displayText` and `displayMode`."
 msgstr ""
+"Kombinationsrutan har flera användbara egenskaper som vi kan använda: "
+"`editable`, `displayText` och `displayMode`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:350
 msgid ""
@@ -575,7 +636,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:385
 msgid "With the checkbox, our Settings page should look like this:"
-msgstr ""
+msgstr "Med kryssrutan ska inställningssidan se ut så här:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:389
 msgid "FormDelegateSeparator"
@@ -619,11 +680,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Introduction to Kirigami Addons"
-msgstr ""
+msgstr "Introduktion av Kirigami Addons"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:0
 msgid "Get acquainted with Kirigami Addons components"
-msgstr ""
+msgstr "Bekanta dig med komponenterna i Kirigami Addons"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:10
 msgid ""
@@ -640,11 +701,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:14
 msgid "Setting up your project"
-msgstr ""
+msgstr "Skapa projektet"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:16
 msgid "The initial project structure will look like so:"
-msgstr ""
+msgstr "Den ursprungliga projektstrukturen ser ut så här:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:28
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:98
@@ -660,15 +721,15 @@ msgstr "Du kan snabbt skapa filstrukturen med:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:40
 msgid "We start by using a very standard `CMakeLists.txt`:"
-msgstr ""
+msgstr "Vi börjar med att använda en mycket vanlig `CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:44
 msgid "A standard `resources.qrc`:"
-msgstr ""
+msgstr "En vanlig `resources.qrc`:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:55
 msgid "The interesting part will be the `main.cpp`:"
-msgstr ""
+msgstr "Den intressanta delen är `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:59
 msgid ""
@@ -722,7 +783,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:73
 msgid "Initially, our `contents/ui/main.qml` should look like this:"
-msgstr ""
+msgstr "Från början ska vår `contents/ui/main.qml` se ut så här:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:77
 msgid ""
@@ -760,6 +821,8 @@ msgid ""
 "We will have only a single section in our main page, so we add a single "
 "FormCard:"
 msgstr ""
+"Vi har bara en enda sektion på vår huvudsida, så vi lägger till ett enda "
+"FormCard:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:89
 msgid ""
@@ -774,7 +837,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:91
 msgid "We can simply add a few buttons inside our FormCard:"
-msgstr ""
+msgstr "Vi kan helt enkelt lägga till några knappar inne i vårt FormCard:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:95
 msgid ""
@@ -784,7 +847,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:97
 msgid "We then build and run it like so:"
-msgstr ""
+msgstr "Vi bygger och kör det sedan så här:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:106
 msgid ""
@@ -795,7 +858,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "About page"
-msgstr ""
+msgstr "Om-sida"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "Informations about your application"
@@ -1156,11 +1219,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
 msgid "Connect models to your QML user interface"
-msgstr ""
+msgstr "Ansluta modeller till QML-användargränssnittet"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
 msgid "Connect models from C++ backend to QML frontend"
-msgstr ""
+msgstr "Ansluta modeller från C++ bakgrundsprogrammet till QML-gränssnittet"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
 msgid ""
@@ -1281,7 +1344,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:82
 msgid "Overriding and Implementing `rowCount()`"
-msgstr ""
+msgstr "Överskrida och implementera `rowCount()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:84
 msgid ""
@@ -1292,10 +1355,12 @@ msgstr ""
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:95
 msgid "Then, let's declare how many rows are in this model in `model.cpp`."
 msgstr ""
+"Låt oss därefter deklarera hur många rader som finns i modellen i `model."
+"cpp`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
 msgid "Overriding and Implementing `roleNames()`"
-msgstr ""
+msgstr "Överskrida och implementera `roleNames()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
 msgid ""
@@ -1329,7 +1394,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:149
 msgid "Overriding and Implementing `data()`"
-msgstr ""
+msgstr "Överskrida och implementera `data()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:151
 msgid ""
@@ -1360,11 +1425,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:194
 msgid "Allow the Class to be Declared in QML"
-msgstr ""
+msgstr "Tillåt att klassen kan deklareras i QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:196
 msgid "Let's not forget to make our class usable in QML."
-msgstr ""
+msgstr "Låt oss inte glömma bort att göra klassen användbar i QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:206
 msgid "Class Usage in QML"
@@ -1411,11 +1476,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:278
 msgid "`index` - The location of the data."
-msgstr ""
+msgstr "`index` - Platsen för data."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
 msgid "`value` - The contents of the new data."
-msgstr ""
+msgstr "`value` - Det nya datainnehållet."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:280
 msgid ""
@@ -1436,12 +1501,16 @@ msgid ""
 "`setData()` does not automatically emit `dataChanged()` and that still has "
 "to be done manually."
 msgstr ""
+"`setData()` skickar inte automatiskt `dataChanged()` så det måste "
+"fortfarande göras manuellt."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:312
 msgid ""
 "Let's update the QML code so that we can open up a prompt that allows us to "
 "edit the model using a Controls.Button attached to the cards."
 msgstr ""
+"Låt oss uppdatera QML-koden så att vi kan öppna en prompt som låter oss "
+"redigera modellen med hjälp av en Controls.Button kopplad till korten."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:376
 msgid ""
@@ -1512,10 +1581,12 @@ msgid ""
 "Let's update the QML code so we are given the ability to add a new key to "
 "the QMap."
 msgstr ""
+"Låt oss uppdatera QML-koden så att vi får möjlighet att lägga till en ny "
+"nyckel till QMap."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:470
 msgid "Clear TextField every time it's done"
-msgstr ""
+msgstr "Rensa TextField varje gång det är klart"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:489
 msgid ""
@@ -1523,6 +1594,9 @@ msgid ""
 "prompt that allows to add a new element to the model, with our own custom "
 "data."
 msgstr ""
+"Nu bör vi få en ny åtgärd längst upp i programmet som ger en prompt som gör "
+"det möjligt att lägga till ett nytt element till modellen, med våra egna "
+"anpassade data."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:496
 msgid "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
@@ -1550,6 +1624,8 @@ msgid ""
 "Now, let's update the application so a \"Delete\" button appears alongside "
 "the edit button, and hook it up to our delete method."
 msgstr ""
+"Låt oss nu uppdatera programmet så att knappen \"Ta bort\" visas bredvid "
+"redigeringsknappen och koppla upp den till vår borttagningsmetod."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:581
 msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
@@ -1587,6 +1663,9 @@ msgid ""
 "qtquick;qtquick-modelviewsdata-cppmodels.html) and [Model/View Programming]"
 "(docs:qtquick;model-view-programming.html)."
 msgstr ""
+"För mer information, se [Using C++ Models with Qt Quick Views](docs:qtquick;"
+"qtquick-modelviewsdata-cppmodels.html) och [Model/View Programming](docs:"
+"qtquick;model-view-programming.html)."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:0
 msgid "Figuring out main.cpp"
@@ -2683,11 +2762,13 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips"
-msgstr ""
+msgstr "Chips"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips are small elements typically used to list out related properties."
 msgstr ""
+"Chips är små element som vanligtvis används för att lista relaterade "
+"egenskaper."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:9
 msgid ""
@@ -2700,7 +2781,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:14
 msgid "![Example Chips in Kirigami Gallery](chips_kirigami_gallery.png)"
-msgstr ""
+msgstr "![Exempel på Chips i Kirigami galleri](chips_kirigami_gallery.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:16
 msgid "Quick Start"
@@ -2711,10 +2792,12 @@ msgid ""
 "Chips can easily be added using the `Kirigami.Chip` component. By assigning "
 "a string to its `text` field, we give chips their name."
 msgstr ""
+"Chips kan enkelt läggas till genom att använda komponenten `Kirigami.Chip`. "
+"Genom att tilldela en sträng till deras fält `text`, ger vi chips sina namn."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:55
 msgid "![Declaring and Displaying Chips](chips_usage.png)"
-msgstr ""
+msgstr "![Deklarera och visa Chips](chips_usage.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:57
 msgid "{{< /section-right >}} {{< /sections >}}"
@@ -2722,7 +2805,7 @@ msgstr "{{< /section-right >}} {{< /sections >}}"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:60
 msgid "With Repeaters (Recommended)"
-msgstr ""
+msgstr "Med Repeaters (rekommenderas)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:62
 msgid ""
@@ -2769,10 +2852,12 @@ msgid ""
 "The example application below showcases how chips can be used in programs "
 "such as to-do lists."
 msgstr ""
+"Exempelprogrammet nedan visar hur chips kan användas i program såsom "
+"uppgiftslistor."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:130
 msgid "![Chips Example Application](chips_example_app.png)"
-msgstr ""
+msgstr "![Chips exempelprogram](chips_example_app.png)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:0
 msgid "Controls and interactive elements"
