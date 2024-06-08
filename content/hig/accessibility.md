@@ -30,7 +30,7 @@ Increase the system-wide font size to 14 and verify that visual relationships ar
 Unplug or mute your speakers and verify that no information is only communicated via audio.
 
 ### Screen Reader
-Turn off your screen and attempt to use the app with the Orca screen reader. It should say something intelligible and distinct for all elements. For GUI elements, it should say the label and type, e.g.: “File, Menu” or “Create New Folder, Button”. Verify that all tooltip text is read by the screen reader via components `Accessible` properties and that no labels are used more than once in the same window.
+Turn off your screen and attempt to use the app with the Orca screen reader. It should say something intelligible and distinct for all elements. For GUI elements, it should say the label and type, e.g.: “File, Menu” or “Create New Folder, Button”. Verify that all tooltip text is read by the screen reader via the `Accessible` attached properties and that no labels are used more than once in the same window.
 
 ### Animations
 Globally disable animations and verify that all animated UI elements either transition instantly (e.g. for a pushing a new page) or display a static image (e.g. for a loading spinner). Avoid blinking UI elements other than the text insertion point.
