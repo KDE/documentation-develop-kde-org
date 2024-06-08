@@ -19,10 +19,10 @@ Together these characteristics embody KDE's central principle: **Simple by defau
 
 Users of KDE apps can be expected to be familiar with common user interface design patterns (windows, buttons, menus, list views and tab views, etc.) and able to perform tasks such as searching for data that isn't immediately visible, or writing an email reply to multiple people. Users below this still level are generally de-prioritized. Don't be afraid to pick your users.
 
-All KDE apps are built with [Qt](https://www.qt.io/) and [KDE Frameworks](https://develop.kde.org/products/frameworks/), plus one of Qt's graphical user interface (GUI) toolkits.
-
-
 ## Development technologies
+
+All KDE apps are built with [Qt](https://www.qt.io/) and [KDE Frameworks](https://develop.kde.org/products/frameworks/), plus one of Qt's graphical user interface (GUI) toolkits:
+
 - [QtWidgets](http://doc.qt.io/qt-5/qtwidgets-index.html) is the original way of writing GUI applications with Qt. It is best suited for traditional desktop applications with complex interfaces, e.g. KDevelop.
 - [QtQuick](https://wiki.qt.io/Introduction_to_Qt_Quick) with [Kirigami](https://develop.kde.org/docs/getting-started/kirigami/) constitute the modern way of developing GUI Qt applications. They feature hardware-accelerated rendering, [declarative](https://en.wikipedia.org/wiki/Declarative_programming) UI design, and better support for animations, touch, and gestures. [Kirigami](https://develop.kde.org/docs/getting-started/kirigami/) is KDE's convergent UI toolkit that extends QtQuick with higher-level controls that conform to KDE's Human Interface Guidelines and adapt to the device's form factor.
 
