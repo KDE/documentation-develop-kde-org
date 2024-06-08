@@ -215,7 +215,7 @@ Kirigami.FormLayout {
 {{< sections >}}
 {{< section-left >}}
 
-A [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html) is used for boolean on/off values. See the [Visual Design Group's tips]({{< ref "checkBox" >}}) on using CheckBoxes.
+A [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html) is used for boolean on/off values.
 
 <div class="filepath">contents/config/main.xml</div>
 

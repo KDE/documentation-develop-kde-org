@@ -81,7 +81,7 @@ For multiple choices, QML ships with [RadioButton](docs:qtquickcontrols;QtQuick.
 
 * [`RadioButton.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/RadioButton.qml)
 
-Note the [KDE Human Interface Guidelines]({{< ref "/hig/components/editing/radiobutton" >}}) suggest using a ComboBox (dropdown menu) when your list is greater than 5 options.
+Note that the [KDE Human Interface Guidelines]({{< ref "/hig/getting_input" >}}) suggest using a ComboBox when there are  more than 3 options.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -159,8 +159,6 @@ To control Integer or Real numbers, QML ships with [SpinBox](docs:qtquickcontrol
 
 * [`Slider.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/Slider.qml)
 
-See the [KDE Human Interface Guidelines]({{< ref "/hig/components/editing/slider" >}}) to determine wither to use a Slider or a SpinBox.
-
 {{< /section-left >}}
 {{< section-right >}}
 <div class="filepath">contents/ui/main.qml</div>
@@ -210,8 +208,6 @@ To control Integer or Real numbers, QML ships with [SpinBox](docs:qtquickcontrol
 
 * [`SpinBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/SpinBox.qml)
 
-See the [KDE Human Interface Guidelines]({{< ref "/hig/components/editing/spinbox" >}}) to determine wither to use a SpinBox or a Slider.
-
 {{< /section-left >}}
 {{< section-right >}}
 <div class="filepath">contents/ui/main.qml</div>
@@ -247,8 +243,6 @@ To enter text, QML ships with [TextField](docs:qtquickcontrols;QtQuick.Controls.
 
 * [`TextField.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/TextField.qml)
 * [`TextArea.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/TextArea.qml)
-
-See the [KDE Human Interface Guidelines]({{< ref "/hig/components/editing/lineedit" >}}) to determine wither to use a TextField (HIG calls it a Line Edit) or a TextArea.
 
 {{< /section-left >}}
 {{< section-right >}}

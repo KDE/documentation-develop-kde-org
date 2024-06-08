@@ -1,78 +1,40 @@
 ---
-title: KDE Human Interface Guidelines
-layout: home
+title: "KDE Human Interface Guidelines"
 menu:
   main:
     weight: 30
+aliases:
+- /hig/introduction/architecture/
+- /hig/style/
+- /hig/style/animations/
+- /hig/style/elevation/
+- /hig/style/imagery/
+- /hig/style/theme/
+- /hig/components/
+- /hig/contribute/
+- /hig/contribute/media/
+- /hig/glossary/
+- /hig/about/
 ---
 
-The **KDE Human Interface Guidelines (HIG)** offer designers and developers
-a set of recommendations for producing beautiful, usable, and consistent
-user interfaces for convergent desktop and mobile applications and
-workspace widgets. Our aim is to improve the experience for users by
-making consistent interfaces for desktop, mobile, and everything in between, more consistent, intuitive and learnable.
+Welcome to the KDE Human Interface Guidelines! Following them will help you build a beautiful and powerful app that feels at home in a KDE environment, and works well outside of it. Users will learn how to use it quickly, accomplish their goals with ease, and encounter fewer issues requiring support.
 
-Design Vision
--------------
+This document covers KDE's design philosophy and culture, common workflows and patterns, standard user interface conventions, and recommendations for platform integration.
 
-Our design vision focuses on two attributes of KDE software that
-connect its future to its history:
 
-![Simple by default, powerful when needed.](/hig/HIGDesignVisionFullBleed.png)
+## Why is good design so important?
+Design determines not only how well something fulfills its functional purpose, but also how enjoyable it is to interact with. If either is lacking, the result will be frustrating. People won't want to use a poorly-designed app, and if forced to, they'll be resentful and spread negativity about it. Avoid this through good design!
 
-### Simple by default...
+Design involves targeted decisions and trade-offs that bring a project closer to its intended goals and usage paradigms. The best apps know which users and use cases they're targeting, and which ones they leave for others. It's better to succeed by focusing on what you can do well than to spread yourself thin and fail. Under-promise and over-deliver, never the reverse.
 
-*Simple and inviting. KDE software is pleasant to experience and easy to
-use.*
 
-**Make it easy to focus on what matters** 
+## Topics not covered
+This document is a set of design guidelines, not instructions for implementing every specific component. While some technical guidance will be provided, much more detail can be found in components' own [usage](https://develop.kde.org/docs/) and [API](https://api.kde.org/) documentation as well as the [source code of existing KDE apps](https://invent.kde.org/explore/groups?sort=name_asc). It's more of a *what* and a *why*, not a *how*.
 
-Remove or minimize
-    elements not crucial to the primary or main task. Use spacing to
-    keep things organized. Use color to draw attention. Reveal
-    additional information or optional functions only when needed.
+This document is not intended to be an ironclad law code. By learning and following the rules, you'll understand how to safely innovate within the guidelines, and when it can be appropriate to break them if it produces a superior result.
 
-**"I know how to do that!"**
 
-Make things easier to learn by
-    reusing design patterns from other applications. Other applications
-    that use good design are a precedent to follow.
+## Contributing
+This is a living document, intended to be updated over time to reflect current KDE design trends and best practices. Contributions are welcome!
 
-**Do the heavy lifting for me**
-
-Make complex tasks simple. Make
-    novices feel like experts. Create ways in which your users can
-    naturally feel empowered by your software.
-
-### ...Powerful when needed
-
-*Power and flexibility. KDE software allows users to be effortlessly
-creative and efficiently productive.*
-
-**Solve a problem** 
-
-Identify and make very clear to the user
-    what need is addressed and how.
-
-**Always in control**
-
-It should always be clear what can be
-    done, what is currently happening, and what has just happened. The
-    user should never feel at the mercy of the tool. Give the user the
-    final say.
-
-**Be flexible**
-
-Provide sensible defaults but consider optional
-    functionality and customization options that don\'t interfere with
-    the primary task.
-
-{{< alert color="info" title="Note" >}}
-
-KDE encourages developing and designing for customization, while
-providing good default settings. Integrating into other desktop
-environments is also a virtue, but ultimately we aim for perfection
-within our own Plasma desktop environment with the default themes and
-settings. This aim should not be compromised.
-
-{{< /alert >}}
+Content is written in [Markdown](https://commonmark.org/help/), and the source files are hosted in a [Git repository](https://invent.kde.org/documentation/develop-kde-org.git). Tasks and changes are organized via https://invent.kde.org. To learn how to submit changes, see the [README file](https://invent.kde.org/documentation/develop-kde-org/-/blob/master/README.md).
