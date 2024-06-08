@@ -67,6 +67,8 @@ Write labels for buttons and menu items to represent *actions* or *locations*:
 - **An action makes something happen,** and begins with a verb in the imperative mood appropriate to describe the action. If the action is complex and requires additional user input before it completes (most commonly because it opens a dialog that prompts the user to make a further decision), end its label with an ellipsis. Use the real “…” ellipsis character (`U+2026` in Unicode), not three periods.
 - **A location is another page, window, or sub-menu** that opens when the user triggers the button or menu item. Match the title of the new page or window in the button or menu item label.
 
+Prefer the “action” form where the label's UI element may not otherwise look interactive—such as a toolbar with only one or two ToolButtons. In this case, the action verb helps to signal interactivity.
+
 Buttons in dialogs also follow these rules. “OK” and “Yes” are never acceptable button labels!
 
 **Good:** Open…
