@@ -123,8 +123,3 @@ Use `setToolTip()` for short explanations, and `setWhatsThis()` for more detaile
 
 </details>
 {{< /alert >}}
-
-
-<!--TODO: move this info into a more general page on style, once we have one -->
-## Signaling interactivity
-Don't use underlined web-style links for internal navigation within your app; only use these for actual URLs. By the same token, only use the pointing finger cursor for hovering over a URL link. Use alternative means of showing that hovered items are clickable, such as changing their background or outline color. Prefer standard controls that include these behaviors automatically.

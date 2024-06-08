@@ -62,10 +62,12 @@ For getting other kinds of input, use one of the Kirigami `Dialog` types:
 Don't display more than one dialog at a time. Never use a dialog to create more dialogs.
 
 
-## Visible interactivity ##
-Standard Breeze styling for controls communicates interactivity primary through hover effects—typically by changing the background or outline color. Keep these guidelines in mind:
+<!--TODO: move this info into a more general page on style, once we have one -->
+## Signaling interactivity ##
+Standard Breeze styling for controls signals interactivity primary through hover effects—typically by changing the background or outline color. Keep these guidelines in mind:
 
 - Use standard controls as much as possible to automatically inherit this style of visual interactivity.
 - When custom controls must be used, prefer to override the `contentItem` property of standard controls so that only the content is custom, and the interactivity and styling of the background effect are preserved.
 - If even that is not possible, re-implement interactivity signaling using hover effects.
 - Only use the pointing finger cursor to signal interactivity for a clickable URL.
+- Only use underlined web-style links for clickable URLs, never for internal navigation within your app.
