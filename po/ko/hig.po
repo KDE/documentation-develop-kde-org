@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:19+0000\n"
+"POT-Creation-Date: 2024-06-08 01:44+0000\n"
 "PO-Revision-Date: 2023-08-08 00:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -19,153 +19,211 @@ msgstr ""
 msgid "KDE Human Interface Guidelines"
 msgstr "KDE 휴먼 인터페이스 가이드라인"
 
-#: content/hig/_index.md:9
+#: content/hig/_index.md:20
 msgid ""
-"The **KDE Human Interface Guidelines (HIG)** offer designers and developers "
-"a set of recommendations for producing beautiful, usable, and consistent "
-"user interfaces for convergent desktop and mobile applications and workspace "
-"widgets. Our aim is to improve the experience for users by making consistent "
-"interfaces for desktop, mobile, and everything in between, more consistent, "
-"intuitive and learnable."
+"Welcome to the KDE Human Interface Guidelines! Following them will help you "
+"build a beautiful and powerful app that feels at home in a KDE environment, "
+"and works well outside of it. Users will learn how to use it quickly, "
+"accomplish their goals with ease, and encounter fewer issues requiring "
+"support."
 msgstr ""
-"**KDE 휴먼 인터페이스 가이드라인(HIG)**은 디자이너와 개발자에게 데스크톱과 모"
-"바일 앱 및 작업 공간 위젯의 아름답고, 사용하기 편하고, 일관적인 사용자 인터페"
-"이스를 개발할 때 필요한 추천 사항을 제공합니다. 가이드라인의 목표는 데스크"
-"톱, 모바일, 그 사이에 있는 것들에서 더 일관적이고, 더 직관적이고, 더 익히기 "
-"쉬운 인터페이스를 제공하여사용자 경험을 개선하는 것입니다."
 
-#: content/hig/_index.md:15
-msgid "Design Vision"
-msgstr "디자인 비전"
-
-#: content/hig/_index.md:18
+#: content/hig/_index.md:22
 msgid ""
-"Our design vision focuses on two attributes of KDE software that connect its "
-"future to its history:"
+"This document covers KDE's design philosophy and culture, common workflows "
+"and patterns, standard user interface conventions, and recommendations for "
+"platform integration."
 msgstr ""
-"우리의 디자인 비전은 KDE 소프트웨어의 과거와 미래를 연결하는 두 가지 속성에 "
-"초점을 맞춥니다."
-
-#: content/hig/_index.md:21
-msgid ""
-"![Simple by default, powerful when needed.](/hig/HIGDesignVisionFullBleed."
-"png)"
-msgstr ""
-"![첫 시작은 간단하게, 필요할 때에는 강력하게.](/hig/HIGDesignVisionFullBleed."
-"png)"
-
-#: content/hig/_index.md:23
-msgid "Simple by default..."
-msgstr "첫 시작은 간단하게..."
 
 #: content/hig/_index.md:25
-msgid ""
-"*Simple and inviting. KDE software is pleasant to experience and easy to use."
-"*"
+msgid "Why is good design so important?"
 msgstr ""
-"*간단함과 첫 인상. KDE 소프트웨어는 향상된 경험을 제공하고 사용하기 쉽습니다."
-"*"
+
+#: content/hig/_index.md:26
+msgid ""
+"Design determines not only how well something fulfills its functional "
+"purpose, but also how enjoyable it is to interact with. If either is "
+"lacking, the result will be frustrating. People won't want to use a poorly-"
+"designed app, and if forced to, they'll be resentful and spread negativity "
+"about it. Avoid this through good design!"
+msgstr ""
 
 #: content/hig/_index.md:28
-msgid "**Make it easy to focus on what matters**"
-msgstr "**중요한 것에 쉽게 집중하기**"
-
-#: content/hig/_index.md:30
 msgid ""
-"Remove or minimize elements not crucial to the primary or main task. Use "
-"spacing to keep things organized. Use color to draw attention. Reveal "
-"additional information or optional functions only when needed."
+"Design involves targeted decisions and trade-offs that bring a project "
+"closer to its intended goals and usage paradigms. The best apps know which "
+"users and use cases they're targeting, and which ones they leave for others. "
+"It's better to succeed by focusing on what you can do well than to spread "
+"yourself thin and fail. Under-promise and over-deliver, never the reverse."
 msgstr ""
-"주 작업과 관련이 없는 구성 요소를 제거하거나 최소화합니다. 공백을 사용하여 사"
-"물을 정리합니다. 색을 사용하여 주의를 끕니다. 필요한 경우에만 추가 정보나 선"
-"택적 기능을 표시합니다."
 
-#: content/hig/_index.md:35
-msgid "**\"I know how to do that!\"**"
-msgstr "**어떻게 하는지 알고 있어요!**"
+#: content/hig/_index.md:31
+msgid "Topics not covered"
+msgstr ""
+
+#: content/hig/_index.md:32
+msgid ""
+"This document is a set of design guidelines, not instructions for "
+"implementing every specific component. While some technical guidance will be "
+"provided, much more detail can be found in components' own [usage](https://"
+"develop.kde.org/docs/) and [API](https://api.kde.org/) documentation as well "
+"as the [source code of existing KDE apps](https://invent.kde.org/explore/"
+"groups?sort=name_asc). It's more of a *what* and a *why*, not a *how*."
+msgstr ""
+
+#: content/hig/_index.md:34
+msgid ""
+"This document is not intended to be an ironclad law code. By learning and "
+"following the rules, you'll understand how to safely innovate within the "
+"guidelines, and when it can be appropriate to break them if it produces a "
+"superior result."
+msgstr ""
 
 #: content/hig/_index.md:37
-msgid ""
-"Make things easier to learn by reusing design patterns from other "
-"applications. Other applications that use good design are a precedent to "
-"follow."
+msgid "Contributing"
 msgstr ""
-"다른 앱의 디자인 패턴을 재사용하여 쉽게 익힐 수 있도록 합니다. 좋은 디자인을 "
-"사용하는 다른 앱의 예시를 따릅니다."
 
-#: content/hig/_index.md:41
-msgid "**Do the heavy lifting for me**"
-msgstr "**중대한 작업을 대신 수행**"
-
-#: content/hig/_index.md:43
+#: content/hig/_index.md:38
 msgid ""
-"Make complex tasks simple. Make novices feel like experts. Create ways in "
-"which your users can naturally feel empowered by your software."
+"This is a living document, intended to be updated over time to reflect "
+"current KDE design trends and best practices. Contributions are welcome!"
 msgstr ""
-"복잡한 작업을 간단하게 만듭니다. 초보자라도 전문가처럼 사용할 수 있습니다. 사"
-"용자가 소프트웨어를 사용하면서 자신감을 얻을 수 있도록 합니다."
 
-#: content/hig/_index.md:47
-msgid "...Powerful when needed"
-msgstr "...필요할 때에는 강력하게"
-
-#: content/hig/_index.md:49
+#: content/hig/_index.md:40
 msgid ""
-"*Power and flexibility. KDE software allows users to be effortlessly "
-"creative and efficiently productive.*"
+"Content is written in [Markdown](https://commonmark.org/help/), and the "
+"source files are hosted in a [Git repository](https://invent.kde.org/"
+"documentation/develop-kde-org.git). Tasks and changes are organized via "
+"https://invent.kde.org. To learn how to submit changes, see the [README file]"
+"(https://invent.kde.org/documentation/develop-kde-org/-/blob/master/README."
+"md)."
 msgstr ""
-"*강력함과 유연함. KDE 소프트웨어를 사용하여 창의성을 발휘하고 효율성을 최대화"
-"합니다.*"
 
-#: content/hig/_index.md:52
-msgid "**Solve a problem**"
-msgstr "**문제 해결**"
+#~ msgid ""
+#~ "The **KDE Human Interface Guidelines (HIG)** offer designers and "
+#~ "developers a set of recommendations for producing beautiful, usable, and "
+#~ "consistent user interfaces for convergent desktop and mobile applications "
+#~ "and workspace widgets. Our aim is to improve the experience for users by "
+#~ "making consistent interfaces for desktop, mobile, and everything in "
+#~ "between, more consistent, intuitive and learnable."
+#~ msgstr ""
+#~ "**KDE 휴먼 인터페이스 가이드라인(HIG)**은 디자이너와 개발자에게 데스크톱"
+#~ "과 모바일 앱 및 작업 공간 위젯의 아름답고, 사용하기 편하고, 일관적인 사용"
+#~ "자 인터페이스를 개발할 때 필요한 추천 사항을 제공합니다. 가이드라인의 목표"
+#~ "는 데스크톱, 모바일, 그 사이에 있는 것들에서 더 일관적이고, 더 직관적이"
+#~ "고, 더 익히기 쉬운 인터페이스를 제공하여사용자 경험을 개선하는 것입니다."
 
-#: content/hig/_index.md:54
-msgid ""
-"Identify and make very clear to the user what need is addressed and how."
-msgstr ""
-"사용자가 해결해야 할 문제점과 해결 방안을 식별하고 명확하게 제시합니다."
+#~ msgid "Design Vision"
+#~ msgstr "디자인 비전"
 
-#: content/hig/_index.md:57
-msgid "**Always in control**"
-msgstr "**항상 통제 하에 있음**"
+#~ msgid ""
+#~ "Our design vision focuses on two attributes of KDE software that connect "
+#~ "its future to its history:"
+#~ msgstr ""
+#~ "우리의 디자인 비전은 KDE 소프트웨어의 과거와 미래를 연결하는 두 가지 속성"
+#~ "에 초점을 맞춥니다."
 
-#: content/hig/_index.md:59
-msgid ""
-"It should always be clear what can be done, what is currently happening, and "
-"what has just happened. The user should never feel at the mercy of the tool. "
-"Give the user the final say."
-msgstr ""
-"무엇을 할 수 있고, 무엇이 일어나고 있고, 방금 무엇이 일어나는지는 명확해야 합"
-"니다. 사용자가 도구에 지배당하고 있다는 느낌을 받으면 안 됩니다. 최종 결정권"
-"은 사용자에게 있습니다."
+#~ msgid ""
+#~ "![Simple by default, powerful when needed.](/hig/HIGDesignVisionFullBleed."
+#~ "png)"
+#~ msgstr ""
+#~ "![첫 시작은 간단하게, 필요할 때에는 강력하게.](/hig/"
+#~ "HIGDesignVisionFullBleed.png)"
 
-#: content/hig/_index.md:64
-msgid "**Be flexible**"
-msgstr "**유연하게** "
+#~ msgid "Simple by default..."
+#~ msgstr "첫 시작은 간단하게..."
 
-#: content/hig/_index.md:66
-msgid ""
-"Provide sensible defaults but consider optional functionality and "
-"customization options that don\\'t interfere with the primary task."
-msgstr ""
-"적당한 기본값을 제시하지만 주 작업과 방해되지 않는 선에서 부가적인 기능과 사"
-"용자 정의 옵션을 제공해야 합니다."
+#~ msgid ""
+#~ "*Simple and inviting. KDE software is pleasant to experience and easy to "
+#~ "use.*"
+#~ msgstr ""
+#~ "*간단함과 첫 인상. KDE 소프트웨어는 향상된 경험을 제공하고 사용하기 쉽습니"
+#~ "다.*"
 
-#: content/hig/_index.md:70
-msgid "Note"
-msgstr "메모"
+#~ msgid "**Make it easy to focus on what matters**"
+#~ msgstr "**중요한 것에 쉽게 집중하기**"
 
-#: content/hig/_index.md:72
-msgid ""
-"KDE encourages developing and designing for customization, while providing "
-"good default settings. Integrating into other desktop environments is also a "
-"virtue, but ultimately we aim for perfection within our own Plasma desktop "
-"environment with the default themes and settings. This aim should not be "
-"compromised."
-msgstr ""
-"KDE는 적당한 기본값을 제공하면서 사용자 정의성을 위해서 개발하고 디자인하기"
-"를 권장합니다. 다른 데스크톱 환경으로 통합되는 것도 고려해야 하지만, 우리의 "
-"Plasma 데스크톱 환경의 기본 테마와 설정 내에서의 완벽을 추구해야 합니다. 이 "
-"목표는 변경될 수 없습니다."
+#~ msgid ""
+#~ "Remove or minimize elements not crucial to the primary or main task. Use "
+#~ "spacing to keep things organized. Use color to draw attention. Reveal "
+#~ "additional information or optional functions only when needed."
+#~ msgstr ""
+#~ "주 작업과 관련이 없는 구성 요소를 제거하거나 최소화합니다. 공백을 사용하"
+#~ "여 사물을 정리합니다. 색을 사용하여 주의를 끕니다. 필요한 경우에만 추가 정"
+#~ "보나 선택적 기능을 표시합니다."
+
+#~ msgid "**\"I know how to do that!\"**"
+#~ msgstr "**어떻게 하는지 알고 있어요!**"
+
+#~ msgid ""
+#~ "Make things easier to learn by reusing design patterns from other "
+#~ "applications. Other applications that use good design are a precedent to "
+#~ "follow."
+#~ msgstr ""
+#~ "다른 앱의 디자인 패턴을 재사용하여 쉽게 익힐 수 있도록 합니다. 좋은 디자인"
+#~ "을 사용하는 다른 앱의 예시를 따릅니다."
+
+#~ msgid "**Do the heavy lifting for me**"
+#~ msgstr "**중대한 작업을 대신 수행**"
+
+#~ msgid ""
+#~ "Make complex tasks simple. Make novices feel like experts. Create ways in "
+#~ "which your users can naturally feel empowered by your software."
+#~ msgstr ""
+#~ "복잡한 작업을 간단하게 만듭니다. 초보자라도 전문가처럼 사용할 수 있습니"
+#~ "다. 사용자가 소프트웨어를 사용하면서 자신감을 얻을 수 있도록 합니다."
+
+#~ msgid "...Powerful when needed"
+#~ msgstr "...필요할 때에는 강력하게"
+
+#~ msgid ""
+#~ "*Power and flexibility. KDE software allows users to be effortlessly "
+#~ "creative and efficiently productive.*"
+#~ msgstr ""
+#~ "*강력함과 유연함. KDE 소프트웨어를 사용하여 창의성을 발휘하고 효율성을 최"
+#~ "대화합니다.*"
+
+#~ msgid "**Solve a problem**"
+#~ msgstr "**문제 해결**"
+
+#~ msgid ""
+#~ "Identify and make very clear to the user what need is addressed and how."
+#~ msgstr ""
+#~ "사용자가 해결해야 할 문제점과 해결 방안을 식별하고 명확하게 제시합니다."
+
+#~ msgid "**Always in control**"
+#~ msgstr "**항상 통제 하에 있음**"
+
+#~ msgid ""
+#~ "It should always be clear what can be done, what is currently happening, "
+#~ "and what has just happened. The user should never feel at the mercy of "
+#~ "the tool. Give the user the final say."
+#~ msgstr ""
+#~ "무엇을 할 수 있고, 무엇이 일어나고 있고, 방금 무엇이 일어나는지는 명확해"
+#~ "야 합니다. 사용자가 도구에 지배당하고 있다는 느낌을 받으면 안 됩니다. 최"
+#~ "종 결정권은 사용자에게 있습니다."
+
+#~ msgid "**Be flexible**"
+#~ msgstr "**유연하게** "
+
+#~ msgid ""
+#~ "Provide sensible defaults but consider optional functionality and "
+#~ "customization options that don\\'t interfere with the primary task."
+#~ msgstr ""
+#~ "적당한 기본값을 제시하지만 주 작업과 방해되지 않는 선에서 부가적인 기능과 "
+#~ "사용자 정의 옵션을 제공해야 합니다."
+
+#~ msgid "Note"
+#~ msgstr "메모"
+
+#~ msgid ""
+#~ "KDE encourages developing and designing for customization, while "
+#~ "providing good default settings. Integrating into other desktop "
+#~ "environments is also a virtue, but ultimately we aim for perfection "
+#~ "within our own Plasma desktop environment with the default themes and "
+#~ "settings. This aim should not be compromised."
+#~ msgstr ""
+#~ "KDE는 적당한 기본값을 제공하면서 사용자 정의성을 위해서 개발하고 디자인하"
+#~ "기를 권장합니다. 다른 데스크톱 환경으로 통합되는 것도 고려해야 하지만, 우"
+#~ "리의 Plasma 데스크톱 환경의 기본 테마와 설정 내에서의 완벽을 추구해야 합니"
+#~ "다. 이 목표는 변경될 수 없습니다."
