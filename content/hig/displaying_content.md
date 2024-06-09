@@ -111,8 +111,7 @@ A well-designed app of low to moderate complexity does not require written docum
 
 Manuals and formal documentation are acceptable for highly technical and specialized professional apps (video editing, image manipulation, CAD, etc.) that may be incomprehensible without any prior technical training. Even then, first attempt to make the app easier to use so no manual is required.
 
-<!-- TODO don't hotlink, it's rude -->
-![](https://imgs.xkcd.com/comics/manuals_2x.png)(https://xkcd.com/1343/)
+![](/hig/xkcd_manuals.png)(https://xkcd.com/1343/)
 
 {{< alert title="" color="info" >}}
 <details>
