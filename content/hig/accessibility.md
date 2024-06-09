@@ -58,12 +58,13 @@ Avoid implicit references to or assumptions about the user with respect to:
 - Etc.
 
 ### Negative language
-Prefer neutral language over language referencing death, crime, prejudice, stereotypes, or evil history. For example:
+Prefer neutral language over language referencing death, violence, crime, prejudice, stereotypes, or evil history. For example:
 - Kill -> Close
 - Execute -> Run
 - Abort -> Exit
 - Fatal -> Critical
 - End of life -> End of support
+- Force -> Require
 - Illegal -> Unauthorized
 - Crippled, gimped -> Broken, nonfunctional
 - Slave -> Worker, job
