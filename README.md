@@ -4,6 +4,16 @@ The [KDE Developer website](https://develop.kde.org) is built using [Hugo](https
 
 It is home to the [development tutorials](https://develop.kde.org/docs/) and the [KDE Human Interface Guidelines](https://develop.kde.org/hig/).
 
+# Contributing to the KDE Developer website
+
+The source code for this website can be found at https://invent.kde.org/documentation/develop-kde-org.
+
+To learn more about the formatting and custom tooling available to start contributing, see the [Formatting Guidelines](https://develop.kde.org/docs/contribute/formatting/).
+
+To learn more about tutorial style and the use cases of the available tools, see the [Style Guidelines](https://develop.kde.org/docs/contribute/style/).
+
+To learn how to submit a contribution, see [Submitting a Merge Request](https://community.kde.org/Infrastructure/GitLab#Submitting_a_merge_request).
+
 ## Before running the website
 
 Download the latest Hugo release (extended version) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
@@ -57,16 +67,6 @@ options:
   -p, --pretty          Pretty write output json metadata (default: False)
   -v, --verbose         Increase logging to debug (default: False)
 ```
-
-# Contributing to the KDE Developer website
-
-The source code for this website can be found at https://invent.kde.org/documentation/develop-kde-org.
-
-To learn more about the formatting and custom tooling available to start contributing, see the [Formatting Guidelines](https://develop.kde.org/docs/contribute/formatting/).
-
-To learn more about tutorial style and the use cases of the available tools, see the [Style Guidelines](https://develop.kde.org/docs/contribute/style/).
-
-To learn how to submit a contribution, see [Submitting a Merge Request](https://community.kde.org/Infrastructure/GitLab#Submitting_a_merge_request).
 
 ## I18n
 The Kirigami tutorials are internationalized and localized using [hugoi18n](https://invent.kde.org/websites/hugo-i18n).
