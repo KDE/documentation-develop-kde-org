@@ -62,7 +62,7 @@ Prefer neutral language over language referencing death, violence, crime, prejud
 - Kill -> Close
 - Execute -> Run
 - Abort -> Exit
-- Fatal -> Critical
+- Fatal -> Critical, major
 - End of life -> End of support
 - Force -> Require
 - Illegal -> Unauthorized
