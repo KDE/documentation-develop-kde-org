@@ -93,16 +93,16 @@ Open up `metadata.json` in your text editor then paste the following. Keep in mi
 Installed KWin scripts can be found in System Settings > Window Management > KWin scripts.
 
 A packaged KWin script can either be installed from there (note: the list
-does not yet reload after installing a script) or with the `kpackagetool5` tool:
+does not yet reload after installing a script) or with the `kpackagetool6` tool:
 
 ```bash
-kpackagetool5 --type=KWin/Script -i ~/Code/myscript/
+kpackagetool6 --type=KWin/Script -i ~/Code/myscript/
 ```
 
-After installing the script, enable it, either from the system settings page or with the `kwriteconfig5` tool:
+After installing the script, enable it, either from the system settings page or with the `kwriteconfig6` tool:
 
 ```bash
-kwriteconfig5 --file kwinrc --group Plugins --key myscriptEnabled true
+kwriteconfig6 --file kwinrc --group Plugins --key myscriptEnabled true
 qdbus org.kde.KWin /KWin reconfigure
 ```
 
@@ -111,10 +111,10 @@ Providing a custom installation shell script that would automatically perform ad
 ## Where can I find example scripts?
 
 A few KWin scripts are shipped directly with the window manager. You can find those in your
-system installation. Just use `kpackagetool5` to get a list of the available scripts:
+system installation. Just use `kpackagetool6` to get a list of the available scripts:
 
 ```bash
-kpackagetool5 --type=KWin/Script --list --global # /usr/share/kwin/scripts/
+kpackagetool6 --type=KWin/Script --list --global # /usr/share/kwin/scripts/
 ```
 
 The default scripts bundled with the window manager can also be
@@ -123,7 +123,7 @@ The default scripts bundled with the window manager can also be
 [Downloaded KWin scripts](https://store.kde.org/browse/cat/210/) can be found in your user's data install path under `kwin/scripts/`. This is where your new script will be installed to.
 
 ```bash
-kpackagetool5 --type=KWin/Script --list # ~/.local/share/kwin/scripts/
+kpackagetool6 --type=KWin/Script --list # ~/.local/share/kwin/scripts/
 ```
 
 ## KWin scripting basics
