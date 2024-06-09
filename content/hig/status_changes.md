@@ -73,7 +73,7 @@ System Tray icons can be annoying to users, who generally expect apps to quit wh
 
 If your app runs primarily as a background service with any UI or window  being of secondary importance, consider writing a Plasma widget instead of a standalone app.
 
-Only implement System Tray icons only be implemented as a last resort, and always follow these rules:
+Only implement System Tray icons as a last resort, and always follow these rules:
 
 - Also implement any of the system integrations mentioned above that make sense.
 - Make the tray icon opt-in, not opt-out.
