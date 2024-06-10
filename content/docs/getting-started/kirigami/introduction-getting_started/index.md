@@ -245,16 +245,15 @@ Then you can build and install it with the command:
 kde-builder kirigami-tutorial
 ```
 
-In case you want to handle building and installation manually, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
+In case you want to handle building and installation manually without kdesrc-build, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
 
 ```bash
-source ~/kde/build/kirigami/prefix.sh # if you also have built kirigami with kde-builder or kdesrc-build
-cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/kde/usr"
+cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/.local"
 cmake --build build/
 cmake --install build/
 ```
 
-The program will be installed to `~/kde/usr/bin` and its desktop entry to `~/kde/usr/share/applications`.
+The program will be installed to `~/.local/bin` and its desktop entry to `~/.local/share/applications`.
 
 ### Windows
 
