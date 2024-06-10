@@ -8,7 +8,7 @@ aliases:
 ---
 
 
-Kirigami offers a wide selection of different interactive elements that you can use in your applications. Each different type has slightly different interaction styles, visual styles, and functionality. Using the right type of control in your application can help make your user interface more responsive and intuitive.
+Kirigami makes use of a wide selection of different interactive elements from Qt that you can use in your applications. Each different type has slightly different interaction styles, visual styles, and functionality. Using the right type of control in your application can help make your user interface more responsive and intuitive.
 
 ## Buttons
 
@@ -19,18 +19,25 @@ In Kirigami apps, we use buttons from QtQuick Controls. Using them is pretty str
 {{< section-left >}}
 
 ```qml
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.15
-import org.kde.kirigami 2.20
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
-Kirigami.Page {
-
-    Controls.Button {
-        text: "Beep!"
-        onClicked: showPassiveNotification("Boop!")
+Kirigami.ApplicationWindow {
+    title: "Controls.Button"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+        ColumnLayout {
+            anchors.fill: parent
+            Controls.Button {
+                Layout.alignment: Qt.AlignCenter
+                text: "Beep!"
+                onClicked: showPassiveNotification("Boop!")
+            }
+        }
     }
-
 }
 ```
 
@@ -38,7 +45,9 @@ Kirigami.Page {
 
 {{< section-right >}}
 
-![A window containing a button "Beep" on the upper left side, which when clicked shows a passive notification "Boop" at the bottom of the window](/docs/getting-started/kirigami/components-controls/controls-button.png)
+<br>
+
+![A window containing a button "Beep" in the center, which when clicked shows a passive notification "Boop" at the bottom of the window](/docs/getting-started/kirigami/components-controls/controls-button.webp)
 
 {{< /section-right >}}
 
@@ -46,9 +55,9 @@ Kirigami.Page {
 
 ### Toggleable buttons
 
-The behavior of buttons can be changed to make them toggleable: in this mode, they will stay pressed until clicked on once more. This mode can be activated by setting their [checkable](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checkable-prop) property to `true`; we can also set buttons to be toggled on by default by setting [checked](https://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton.html#checked-prop) to `true`.
+The behavior of buttons can be changed to make them toggleable: in this mode, they will stay pressed until clicked on once more. This mode can be activated by setting their [checkable](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checkable-prop) property to `true`; we can also set buttons to be toggled on by default by setting [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checked-prop) to `true`.
 
-We can get the most out of toggleable buttons by using the `onCheckedChanged` signal handler which is [automatically generated](https://doc.qt.io/qt-6/qtqml-syntax-signals.html#property-change-signal-handlers) from the [checked](https://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton.html#checked-prop) signal. It works similarly to `onClicked`, except here the assigned action will be executed when the button's state changes. It is a boolean property, which can come in handy for specific use cases.
+We can get the most out of toggleable buttons by using the `onCheckedChanged` signal handler which is [automatically generated](https://doc.qt.io/qt-6/qtqml-syntax-signals.html#property-change-signal-handlers) from the [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#checked-prop) signal. It works similarly to `onClicked`, except here the assigned action will be executed when the button's state changes. It is a boolean property, which can come in handy for specific use cases.
 
 In this example, we set the visibility of an inline drawer according to the status of a toggleable button:
 
@@ -57,20 +66,36 @@ In this example, we set the visibility of an inline drawer according to the stat
 {{< section-left >}}
 
 ```qml
-Controls.Button {
-    text: "Toggle!!"
-    checkable: true
-    checked: true
-    onCheckedChanged: myDrawer.visible = checked
-}
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
-Kirigami.OverlayDrawer {
-    id: myDrawer
-    edge: Qt.BottomEdge
-    modal: false
+Kirigami.ApplicationWindow {
+    title: "Controls.Button (toggleable version)"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+        ColumnLayout {
+            anchors.fill: parent
+            Controls.Button {
+                Layout.alignment: Qt.AlignCenter
+                text: "Hide inline drawer"
+                checkable: true
+                checked: true
+                onCheckedChanged: myDrawer.visible = checked
+            }
 
-    contentItem: Controls.Label {
-        text: "Peekaboo!"
+            Kirigami.OverlayDrawer {
+                id: myDrawer
+                edge: Qt.BottomEdge
+                modal: false
+
+                contentItem: Controls.Label {
+                    text: "Peekaboo!"
+                }
+            }
+        }
     }
 }
 ```
@@ -79,7 +104,9 @@ Kirigami.OverlayDrawer {
 
 {{< section-right >}}
 
-![A window containing a toggleable button "Toggle" which when toggled displays "Peekaboo" in the contentItem area like a status bar](/docs/getting-started/kirigami/components-controls/controls-togglebutton.png)
+<br>
+
+![A window containing a toggleable button "Hide inline drawer" in the center which when toggled hides the "Peekaboo" inline drawer](/docs/getting-started/kirigami/components-controls/controls-togglebutton.webp)
 
 {{< /section-right >}}
 
@@ -100,9 +127,35 @@ There is a specific button type meant for use in toolbars, [Controls.ToolButton]
 {{< section-left >}}
 
 ```qml
-Controls.ToolButton {
-    text: "Tool beep..."
-    onClicked: showPassiveNotification("Tool boop!")
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ApplicationWindow {
+    title: "Controls.ToolButton"
+    width: 600
+    height: 600
+
+    header: Controls.ToolBar {
+        RowLayout {
+            anchors.fill: parent
+            Controls.ToolButton {
+                icon.name: "application-menu-symbolic"
+                onClicked: showPassiveNotification("Kirigami Pages and Actions are better!")
+            }
+            Controls.Label {
+                text: "Global ToolBar"
+                horizontalAlignment: Qt.AlignHCenter
+                verticalAlignment: Qt.AlignVCenter
+                Layout.fillWidth: true
+            }
+            Controls.ToolButton {
+                text: "Beep!"
+                onClicked: showPassiveNotification("ToolButton boop!")
+            }
+        }
+    }
 }
 ```
 
@@ -110,7 +163,9 @@ Controls.ToolButton {
 
 {{< section-right >}}
 
-![A window showing a tool button "Tool beep" which is completely flat](/docs/getting-started/kirigami/components-controls/controls-toolbutton.png)
+<br>
+
+![A window showing a custom toolbar in the window header simulating a Kirigami.globalToolBar, with a left menu icon that shows a passive notification "Kirigami Pages and Actions are better!" and a right toolbutton "Beep" which is completely flat simulating a Kirigami.Action](/docs/getting-started/kirigami/components-controls/controls-toolbutton.webp)
 
 {{< /section-right >}}
 
@@ -129,13 +184,31 @@ A [Controls.CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox) is meant f
 {{< section-left >}}
 
 ```qml
-Controls.CheckBox {
-    text: "Beep!"
-    checked: true
-}
-Controls.CheckBox {
-    text: "Boop!"
-    checked: false
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ApplicationWindow {
+    title: "Controls.CheckBox"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+        ColumnLayout {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            Controls.CheckBox {
+                Layout.alignment: Qt.AlignHCenter
+                text: "This checkbox is checked!"
+                checked: true
+            }
+            Controls.CheckBox {
+                Layout.alignment: Qt.AlignHCenter
+                text: "This checkbox is not checked!"
+                checked: false
+            }
+        }
+    }
 }
 ```
 
@@ -143,7 +216,9 @@ Controls.CheckBox {
 
 {{< section-right >}}
 
-![A window showing a set of checkboxes where more than one checkbox can be ticked at the same time](/docs/getting-started/kirigami/components-controls/controls-checkbox.png)
+<br>
+
+![A window showing two checkboxes where more than one checkbox can be ticked at the same time](/docs/getting-started/kirigami/components-controls/controls-checkbox.webp)
 
 {{< /section-right >}}
 
@@ -164,14 +239,31 @@ Like checkboxes, they can be set to be checked or unchecked by default with the 
 {{< section-left >}}
 
 ```qml
-ColumnLayout {
-    Controls.RadioButton {
-        text: "Tick!"
-        checked: true
-    }
-    Controls.RadioButton {
-        text: "Tock!"
-        checked: false
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ApplicationWindow {
+    title: "Controls.RadioButton"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+
+        ColumnLayout {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            Controls.RadioButton {
+                Layout.alignment: Qt.AlignCenter
+                text: "Tick!"
+                checked: true
+            }
+            Controls.RadioButton {
+                Layout.alignment: Qt.AlignCenter
+                text: "Tock!"
+                checked: false
+            }
+        }
     }
 }
 ```
@@ -180,7 +272,9 @@ ColumnLayout {
 
 {{< section-right >}}
 
-![A window showing a set of radio buttons where only one radio button can be ticked at the same time](/docs/getting-started/kirigami/components-controls/controls-radiobutton.png)
+<br>
+
+![A window showing two radio buttons where only one radio button can be ticked at the same time](/docs/getting-started/kirigami/components-controls/controls-radiobutton.webp)
 
 {{< /section-right >}}
 
@@ -197,13 +291,30 @@ Switches can be toggled between an on and off state. They can be toggled by clic
 {{< section-left >}}
 
 ```qml
-Controls.Switch {
-    text: "Switchy"
-    checked: true
-}
-Controls.Switch {
-    text: "Swootchy"
-    checked: false
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ApplicationWindow {
+    title: "Controls.Switch"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+        ColumnLayout {
+            anchors.fill: parent
+            Controls.Switch {
+                Layout.alignment: Qt.AlignCenter
+                text: "Switchy"
+                checked: true
+            }
+            Controls.Switch {
+                Layout.alignment: Qt.AlignCenter
+                text: "Swootchy"
+                checked: false
+            }
+        }
+    }
 }
 ```
 
@@ -211,7 +322,9 @@ Controls.Switch {
 
 {{< section-right >}}
 
-![A window showing a set of switches that function as toggles](/docs/getting-started/kirigami/components-controls/controls-switch.png)
+<br>
+
+![A window showing two evenly-spaced switches that function as toggles](/docs/getting-started/kirigami/components-controls/controls-switch.webp)
 
 {{< /section-right >}}
 
@@ -232,19 +345,40 @@ The coloration provides a visual indicator of how large the value you are select
 Sliders have a few important properties we must pay attention to:
 
 - [value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-prop): contains the value at which the handle is placed, and can also be set manually to provide a default starting value
-- [to](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html#to-prop): defines the range of the slider by specifying the maximum value it can go to
-- [orientation](https://doc.qt.io/qt-5/qml-qtquick-controls2-slider.html#orientation-prop): allows the slider to be set to a vertical orientation with `Qt.Vertical`
+- [to](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#to-prop): defines the range of the slider by specifying the maximum value it can go to
+- [orientation](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#orientation-prop): allows the slider to be set to a vertical orientation with [Qt.Vertical](https://doc.qt.io/qt-6/qt.html#Orientation-enum)
 
 {{< sections >}}
 
 {{< section-left >}}
 
 ```qml
-Controls.Slider {
-    id: normalSlider
-    orientation: Qt.Vertical
-    value: 5.0
-    to: 10.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ApplicationWindow {
+    title: "Controls.Slider"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+        ColumnLayout {
+            anchors.fill: parent
+            Controls.Slider {
+                id: normalSlider
+                Layout.alignment: Qt.AlignHCenter
+                Layout.fillHeight: true
+                orientation: Qt.Vertical
+                value: 60
+                to: 100
+            }
+            Controls.Label {
+                Layout.alignment: Qt.AlignHCenter
+                text: Math.round(normalSlider.value)
+            }
+        }
+    }
 }
 ```
 
@@ -252,7 +386,9 @@ Controls.Slider {
 
 {{< section-right >}}
 
-![A window showing a set of sliders, one horizontal and one vertical](/docs/getting-started/kirigami/components-controls/controls-sliders.png)
+<br>
+
+![A window showing a vertical slider with its current value underneath it](/docs/getting-started/kirigami/components-controls/controls-slider.webp)
 
 {{< /section-right >}}
 
@@ -265,11 +401,34 @@ Another useful property we can use is [stepSize](https://doc.qt.io/qt-6/qml-qtqu
 {{< section-left >}}
 
 ```qml
-Controls.Slider {
-    id: tickmarkedSlider
-    value: 6.0
-    to: 10.0
-    stepSize: 2.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ApplicationWindow {
+    title: "Controls.Slider (with steps)"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+        ColumnLayout {
+            anchors.fill: parent
+            Controls.Slider {
+                id: tickmarkedSlider
+                Layout.alignment: Qt.AlignHCenter
+                Layout.fillWidth: true
+                orientation: Qt.Horizontal
+                snapMode: Controls.Slider.SnapAlways
+                value: 6.0
+                to: 10.0
+                stepSize: 2.0
+            }
+            Controls.Label {
+                Layout.alignment: Qt.AlignHCenter
+                text: tickmarkedSlider.value
+            }
+        }
+    }
 }
 ```
 
@@ -277,7 +436,9 @@ Controls.Slider {
 
 {{< section-right >}}
 
-![A window showing a set of tickmarked sliders that are symmetrically divided, with each division being called a step](/docs/getting-started/kirigami/components-controls/controls-tickmarkedsliders.png)
+<br>
+
+![A window showing a set of tickmarked sliders that are symmetrically divided, with each division being called a step](/docs/getting-started/kirigami/components-controls/controls-slidersteps.webp)
 
 {{< /section-right >}}
 
@@ -287,18 +448,62 @@ Controls.Slider {
 
 QtQuick Controls also provides [Controls.RangeSliders](docs:qtquickcontrols;QtQuick.Controls.RangeSlider). These have two handles, hence allowing you to define a range of numbers between the two handles.
 
-Two new properties are important to keep in mind: [first.value](https://doc.qt.io/qt-6/qml-qtquick-controls2-rangeslider.html#first-prop) and [second.value](https://doc.qt.io/qt-5/qml-qtquick-controls2-rangeslider.html#second-prop), which hold the values of the two handles. Like the [value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-prop) property of the standard sliders, these can be pre-set.
+Two new properties are important to keep in mind: [first.value](https://doc.qt.io/qt-6/qml-qtquick-controls2-rangeslider.html#first-prop) and [second.value](https://doc.qt.io/qt-6/qml-qtquick-controls2-rangeslider.html#second-prop), which hold the values of the two handles. Like the [value](https://doc.qt.io/qt-6/qml-qtquick-controls2-slider.html#value-prop) property of the standard sliders, these can be pre-set.
 
 {{< sections >}}
 
 {{< section-left >}}
 
 ```qml
-Controls.RangeSlider {
-    id: rangeSlider
-    to: 10.0
-    first.value: 3.0
-    second.value: 6.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ApplicationWindow {
+    title: "Controls.RangeSlider"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+        ColumnLayout {
+            anchors.fill: parent
+            Controls.RangeSlider {
+                id: rangeSlider
+                Layout.alignment: Qt.AlignHCenter
+                to: 10.0
+                first.value: 2.0
+                second.value: 8.0
+                stepSize: 1.0
+                snapMode: Controls.Slider.SnapAlways
+            }
+            RowLayout {
+                Layout.alignment: Qt.AlignHCenter
+                Layout.fillWidth: true
+                Controls.Label {
+                    Layout.fillWidth: true
+                    text: "The slider's first value is: " + Math.round(rangeSlider.first.value)
+                }
+                Controls.Label {
+                    Layout.fillWidth: true
+                    text: "The slider's second value is: " + Math.round(rangeSlider.second.value)
+                }
+            }
+            Controls.Label {
+                Layout.alignment: Qt.AlignHCenter
+                font.bold: true
+                text: "Is the selected range between 2 and 8?"
+            }
+            Controls.Button {
+                Layout.alignment: Qt.AlignHCenter
+                icon.name: {
+                    if (rangeSlider.first.value >= 2 && rangeSlider.second.value <= 8)
+                        return "emblem-checked"
+                    else
+                        return "emblem-error"
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -306,20 +511,10 @@ Controls.RangeSlider {
 
 {{< section-right >}}
 
-![A window showing a set of range sliders with two movable circles used to delimit a certain range](/docs/getting-started/kirigami/components-controls/controls-rangesliders.png)
+<br>
+
+![A window showing a range slider, followed by a few labels underneath and a button with a checkmark icon](/docs/getting-started/kirigami/components-controls/controls-rangeslider.webp)
 
 {{< /section-right >}}
 
 {{< /sections >}}
-
-We can also make it a tickmarked slider by setting the [stepSize](https://doc.qt.io/qt-6/qml-qtquick-controls2-rangeslider.html#stepSize-prop) property value to a number, in the exact same way as a standard slider.
-
-```qml
-Controls.RangeSlider {
-    id: rangeTickmarkedSlider
-    to: 10.0
-    first.value: 4.0
-    second.value: 6.0
-    stepSize: 2.0
-}
-```

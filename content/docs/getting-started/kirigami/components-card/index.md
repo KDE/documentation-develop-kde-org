@@ -14,7 +14,7 @@ Kirigami also offers 3 kinds of [views](https://doc.qt.io/qt-6/qtquick-modelview
 
 ## AbstractCard
 
-A [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) is the simplest type of card. It's just a rectangle with a shadow, which can contain any [Item](docs:qtquick;QtQuick.Item) in it. It can also have Items assigned to its [header](docs:kirigami2;templates::AbstractCard::header) or [footer](docs:kirigami2;templates::AbstractCard::footer) properties. In this case a [Kirigami.Heading](docs:kirigami2;Heading) is its `header` and a [Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) is the card's [contentItem](docs:qtquickcontrols;QtQuick.Controls.Item::contentItem).
+A [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) is the simplest type of card. It's just a rectangle with a shadow, which can contain any [Item](docs:qtquick;QtQuick.Item) in it. It can also have Items assigned to its [header](docs:kirigami2;templates::AbstractCard::header) or [footer](docs:kirigami2;templates::AbstractCard::footer) properties. In this case a [Kirigami.Heading](docs:kirigami2;Heading) is its `header` and a [Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) is the card's [contentItem](https://doc.qt.io/Qt-6/qml-qtquick-controls-control.html#contentItem-prop).
 
 {{< sections >}}
 
@@ -206,6 +206,8 @@ Kirigami.CardsListView {
 
 {{< section-right >}}
 
+<br>
+
 ![Screenshot of a CardsListView, which is a simple vertical list of cards in landscape mode](/docs/getting-started/kirigami/components-card/cardslistview.png)
 
 {{< /section-right >}}
@@ -262,6 +264,8 @@ Kirigami.CardsGridView {
 {{< /section-left >}}
 
 {{< section-right >}}
+
+<br>
 
 ![Screenshot of a CardsGridView where each card occupies the same amount of space in a grid](/docs/getting-started/kirigami/components-card/cardsgridview.png)
 

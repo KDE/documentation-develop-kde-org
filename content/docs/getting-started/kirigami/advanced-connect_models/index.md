@@ -212,16 +212,11 @@ AbstractCard using a Repeater, where the custom model we created acts as the
 model. The data is accessed using word `model`, followed by the roles we
 declared in `roleNames()`.
 
-
-{{< sections >}}
-
-{{< section-left >}}
-
 ```qml
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.15
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 import CustomModel 1.0
 
 Kirigami.ApplicationWindow {
@@ -251,15 +246,7 @@ Kirigami.ApplicationWindow {
 }
 ```
 
-{{< /section-left >}}
-
-{{< section-right >}}
-
 ![App Screenshot](app_screenshot.png)
-
-{{< /section-right >}}
-
-{{< /sections >}}
 
 ## Data Modification
 
@@ -474,13 +461,15 @@ Kirigami.ApplicationWindow {
     }
 
     pageStack.initialPage: Kirigami.ScrollablePage {
-        actions.main: Kirigami.Action {
-            icon.name: "add"
-            text: "Add New Species"
-            onTriggered: {
-                addPrompt.open();
+        actions: [
+            Kirigami.Action {
+                icon.name: "add"
+                text: "Add New Species"
+                onTriggered: {
+                    addPrompt.open();
+                }
             }
-        }
+        ]
         ...
     }
 }
@@ -592,9 +581,25 @@ ColumnLayout {
 
 ## Full Code
 
+<details><summary>Main.qml</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/Main.qml" highlight="qml" >}}
+
+</details>
+<br>
+
+<details><summary>model.h</summary>
+
 {{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model.h" highlight="cpp" >}}
+
+</details>
+<br>
+
+<details><summary>model.cpp</summary>
+
 {{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model.cpp" highlight="cpp" >}}
-{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/main.qml" highlight="qml" >}}
+
+</details>
 
 ## More Information
 

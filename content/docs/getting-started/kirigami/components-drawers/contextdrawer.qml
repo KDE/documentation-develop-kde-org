@@ -1,6 +1,7 @@
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Kirigami.ApplicationWindow {
+    title: "Drawers App"
     height: 600
     width: 1200
     minimumWidth: 500
@@ -19,26 +20,24 @@ Kirigami.ApplicationWindow {
         id: contextDrawerPage
         title: "Context Drawer page"
 
-        actions {
-            main: Kirigami.Action {
+        actions: [
+            Kirigami.Action {
                 icon.name: "media-record"
-            }
-            left: Kirigami.Action {
+            },
+            Kirigami.Action {
                 icon.name: "arrow-left"
-            }
-            right: Kirigami.Action {
+            },
+            Kirigami.Action {
                 icon.name: "arrow-right"
+            },
+            Kirigami.Action {
+                text: "Contextual Action 1"
+                icon.name: "media-playback-start"
+            },
+            Kirigami.Action {
+                text: "Contextual Action 2"
+                icon.name: "media-playback-stop"
             }
-            contextualActions: [
-                Kirigami.Action {
-                    text: "Contextual Action 1"
-                    icon.name: "media-playback-start"
-                },
-                Kirigami.Action {
-                    text: "Contextual Action 2"
-                    icon.name: "media-playback-stop"
-                }
-            ]
-        }
+        ]
     }
 }

@@ -9,7 +9,7 @@ aliases:
 ---
 ## Recap
 
-So far, we have managed to build a simple app that can display cards. However, we don't yet have a way of adding new cards to our card view.
+So far, we built a simple app that can display cards. However, there is currently no way for the user to add new cards to the card view.
 
 In this tutorial, we'll be looking at Kirigami actions. These will help us add interactivity to our app in a consistent, fast, and accessible way.
 
@@ -17,52 +17,67 @@ In this tutorial, we'll be looking at Kirigami actions. These will help us add i
 
 A [Kirigami.Action](docs:kirigami2;Action) encapsulates a user interface action. We can use these to provide our applications with easy-to-reach actions that are essential to their functionality.
 
+If you have used Kirigami apps before, you have certainly interacted with Kirigami actions. In this image, we can see actions to the right of the page title with various icons. Kirigami actions can be displayed in several ways and can do a wide variety of things.
+
 {{< compare >}}
 
-{{< figure class="text-center" caption="Page actions on the desktop" src="actions_desktop_page.webp" >}}
+{{< figure class="text-center mx-auto" src="actions-desktop.webp" >}}
 
-{{< figure class="text-center" caption="Page actions on mobile" src="actions_mobile_page.webp">}}
+{{< figure class="text-center mx-auto" src="actions-mobile.webp" >}}
 
 {{< /compare >}}
 
-
-If you have used Kirigami apps before, you have certainly interacted with Kirigami Actions. In this image, we can see actions to the right of the page title with various icons. Kirigami Actions can be displayed in several ways and can do a wide variety of things.
-
 ## Adding countdowns
+
+A countdown app is pretty useless without the ability to add countdowns. Let's create an action that'll let us do this.
 
 {{< sections >}}
 
 {{< section-left >}}
 
-A countdown app is pretty useless without the ability to add countdowns. Let's create an action that'll let us do this.
-
 ```qml
 
 pageStack.initialPage: Kirigami.ScrollablePage {
-    ...
-    actions.main: Kirigami.Action {
-        id: addAction
-        icon.name: "list-add"
-        text: i18nc("@action:button", "Add kountdown")
-        onTriggered: kountdownModel.append({
-            name: "Kirigami Action added card!",
-            description: "Congratulations, your Kirigami Action works!",
-            date: 1000
-        })
-    }
-    ...
+    // Other page properties...
+    actions: [
+        Kirigami.Action {
+            id: addAction
+            icon.name: "list-add"
+            text: i18nc("@action:button", "Add kountdown")
+            onTriggered: kountdownModel.append({
+                name: "Kirigami Action added card!",
+                description: "Congratulations, your Kirigami Action works!",
+                date: 1000
+            })
+        }
+    ]
+    // ...
 }
 ```
 
-We are placing our Kirigami Action within our main page from our previous tutorials. If we wanted to, we could add more actions to our page (and even nest actions within actions!). [Kirigami.Action](docs:kirigami2;Action) components are used as contextual actions within Kirigami pages. We are setting it specifically to the [actions.main](docs:kirigami2;Page::actions) property of our [Kirigami.Page](docs:kirigami2;Page): the `actions` object has properties that let us set different actions in different positions, but since our "Add kountdown" action is central to our UI we are setting it as the main action of this page.
+We are placing our [Kirigami.Action](docs:kirigami2;Action) within our main page from the previous tutorials. If we wanted to, we could add more actions to our page (and even nest actions within actions!).
 
-The `id` and `text` properties should be familiar from previous tutorials. However, the inherited [Action.icon](https://doc.qt.io/qt-5/qml-qtquick-controls2-action.html#icon-prop) property should be interesting: it is an object with several properties letting you display certain icons for your actions. Fortunately, to use KDE icons all we need to do is provide the name property for the icon property, `icon.name`.
+The brackets `[]` used above are similar to [JavaScript arrays](https://www.w3schools.com/js/js_arrays.asp), which means you can pass one or more things to them, separated by comma:
 
-{{< alert title="Note" color="info" >}}
+```qml
+// General JavaScript array of components:
+variable: [ component1, component2 ]
+// Passing an array of Kirigami actions to QML:
+actions: [ Kirigami.Action {}, Kirigami.Action {} ]
+```
 
-Cuttlefish is a KDE application that lets you view all the icons that you can use for your application. It offers a number of useful features such as previews of their appearance across different installed themes, previews at different sizes, and more. You might find it a useful tool when deciding on which icons to use in your application. 
+The `id` and `text` properties should be familiar from previous tutorials. However, the inherited [Action.icon](https://doc.qt.io/qt-6/qml-qtquick-controls2-action.html#icon-prop) property should be interesting: it is an object with several properties letting you display certain icons for your actions. Fortunately, to use KDE icons all we need to do is provide the name property for the icon property, `icon.name`.
+
+{{< alert title="Viewing the available icons" color="info" >}}
+
+<details>
+<summary>Click here to see how to check the available icons on your system</summary>
+<br>
+Cuttlefish is a KDE application that lets you view all the icons that you can use for your application. It offers a number of useful features such as previews of their appearance across different installed themes, previews at different sizes, and more. You might find it a useful tool when deciding on which icons to use in your application.<br><br>
 
 Many of KDE's icons follow the FreeDesktop Icon Naming specification. Therefore, you might also find it useful to consult The FreeDesktop project's website, [which lists all cross-desktop compatible icon names](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
+
+</details>
 
 {{< /alert >}}
 
@@ -71,6 +86,8 @@ The [onTriggered](docs:qtquickcontrols;QtQuick.Controls.Action::triggered) signa
 {{< /section-left >}}
 
 {{< section-right >}}
+
+<br>
 
 {{< figure class="text-center" caption="Each time we click our \"Add kountdown\" button on the top right, our custom countdown is added" src="action_result.webp" >}}
 
@@ -86,12 +103,12 @@ The [onTriggered](docs:qtquickcontrols;QtQuick.Controls.Action::triggered) signa
 
 {{< section-left >}}
 
-Did you notice those three lines next to the page title on the previous screenshot? That's a hamburger menu that opens a [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer). Global drawers are useful for global navigation and actions: in other words, those things you might need to use throughout your application. We are going to create a simple global drawer that includes a "quit" button.
+The next component is a [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer). It shows up as a [hamburger menu](https://en.wikipedia.org/wiki/Hamburger_button). By default it opens a sidebar, which is especially useful on mobile, as the user can just swipe in a side of the screen to open it. Global drawers are useful for global navigation and actions. We are going to create a simple global drawer that includes a "quit" button.
 
 ```qml
 Kirigami.ApplicationWindow {
     id: root
-    ...
+    // Other window properties...
     globalDrawer: Kirigami.GlobalDrawer {
         isMenu: true
         actions: [
@@ -103,7 +120,7 @@ Kirigami.ApplicationWindow {
             }
         ]
     }
-    ...
+    // ...
 }
 
 ```
@@ -125,12 +142,32 @@ Since we are keeping our global drawer simple for now, we are setting the [Globa
 
 {{< /sections >}}
 
-{{< alert title="Note" color="info" >}}
+{{< alert title="Tip" color="success" >}}
 
 The [Actions based components](/docs/getting-started/kirigami/components-actions/) page of these docs provides further detail on Kirigami Actions and how they can be used.
 
 {{< /alert >}}
 
-### Our app so far
+## Actions are contextual
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-actions/main.qml" highlight="qml" >}}
+Kirigami components are designed in such a way that the place where you put Kirigami Actions is relevant. As seen above, if you add actions to a [Kirigami.Page](docs:kirigami2;Page), [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) or any other derivative Page component, they will show up on the right side of the header in desktop mode, and on the bottom in mobile mode.
+
+Similarly, if Kirigami Actions are added to a [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer), they will show up in the resulting drawer or menu.
+
+Other examples of Kirigami Actions showing up differently depending on their parent component are:
+
+* [Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer) - [ContextDrawer tutorial here](/docs/getting-started/kirigami/components-drawers#context-drawers)
+* [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) and derivatives - [Card tutorial here](/docs/getting-started/kirigami/components-card)
+* [Kirigami.Dialog](docs:kirigami2;Dialog) and derivatives - [Dialog tutorial here](/docs/getting-started/kirigami/components-dialogs)
+* [Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar) - [ActionToolBar tutorial here](/docs/getting-started/kirigami/components-actions#actiontoolbar)
+
+Among other Kirigami components.
+
+## Our app so far
+
+<details>
+<summary><b>Main.qml:</b></summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-actions/Main.qml" highlight="qml" >}}
+
+</details>

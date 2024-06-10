@@ -24,52 +24,59 @@ The layout and location of your [Kirigami.ActionToolBar](docs:kirigami2;ActionTo
 Like most other action-holding components, [Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar) has an [actions](docs:kirigami2;ActionToolBar::actions) property. We can assign an array of [Kirigami.Action](docs:kirigami2;Action) components to this property.
 
 ```qml
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.15
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
-Kirigami.Page {
+Kirigami.ApplicationWindow {
+    id: root
 
-    Kirigami.ActionToolBar {
-        anchors.fill: parent
+    title: "ActionToolBar App"
+    width: 600
+    height: 400
 
-         actions: [
-            Kirigami.Action { 
-                text: "Beep" 
-                icon.name: "notifications" 
-                onTriggered: showPassiveNotification("BEEP!") 
-            },
-            Kirigami.Action { 
-                text: "Action Menu" 
-                icon.name: "overflow-menu"
+    pageStack.initialPage: Kirigami.Page {
+        Kirigami.ActionToolBar {
+            anchors.left: parent.left
+            anchors.right: parent.right
 
-                Kirigami.Action { 
-                    text: "Deet"; 
-                    icon.name: "notifications" 
-                    onTriggered: showPassiveNotification("DEET!") 
+            actions: [
+                Kirigami.Action {
+                    text: "Beep"
+                    icon.name: "notifications"
+                    onTriggered: showPassiveNotification("BEEP!")
+                },
+                Kirigami.Action {
+                    text: "Action Menu"
+                    icon.name: "overflow-menu"
+
+                    Kirigami.Action {
+                        text: "Deet";
+                        icon.name: "notifications"
+                        onTriggered: showPassiveNotification("DEET!")
+                    }
+                    Kirigami.Action {
+                        text: "Doot";
+                        icon.name: "notifications"
+                        onTriggered: showPassiveNotification("DOOT!")
+                    }
+                },
+                Kirigami.Action {
+                    icon.name: "search"
+                    displayComponent: Kirigami.SearchField { }
                 }
-                Kirigami.Action { 
-                    text: "Doot"; 
-                    icon.name: "notifications" 
-                    onTriggered: showPassiveNotification("DOOT!") 
-                }
-            },
-            Kirigami.Action {
-                icon.name: "search"
-                displayComponent: Kirigami.SearchField { }
-            }
-        ]
+            ]
+        }
     }
-
 }
 ```
 
 {{< compare >}}
 
-{{< figure class="text-center" caption="ActionToolBar with enough space for all children" src="actiontoolbar.png" >}}
+{{< figure class="text-center" caption="ActionToolBar with enough space for all children" src="ActionToolBar1.webp" >}}
 
-{{< figure class="text-center" caption="ActionToolBar with overflow menu containing children" src="actiontoolbar-overflow.png" >}}
+{{< figure class="text-center" caption="ActionToolBar with overflow menu containing children" src="ActionToolBar2.webp" >}}
 
 {{< /compare >}}
 
@@ -82,23 +89,38 @@ By default, actions in the [ActionToolBar]([Kirigami.ActionToolBar](docs:kirigam
 {{< section-left >}}
 
 ```qml
-Controls.GroupBox {
-    Layout.fillWidth: true
-        
-    Kirigami.ActionToolBar {
-        anchors.fill: parent
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
-        alignment: Qt.AlignCenter
+Kirigami.ApplicationWindow {
+    id: root
 
-        actions: [
-            Kirigami.Action { 
-                text: "Beep" 
-                icon.name: "notifications" 
-                onTriggered: showPassiveNotification("BEEP!") 
+    title: "ActionToolBar App"
+    width: 600
+    height: 400
+
+    pageStack.initialPage: Kirigami.Page {
+        Controls.GroupBox {
+            anchors.left: parent.left
+            anchors.right: parent.right
+
+            Kirigami.ActionToolBar {
+                anchors.fill: parent
+
+                alignment: Qt.AlignCenter
+
+                actions: [
+                    Kirigami.Action {
+                        text: "Beep"
+                        icon.name: "notifications"
+                        onTriggered: showPassiveNotification("BEEP!")
+                    }
+                ]
             }
-        ]
+        }
     }
-    
 }
 ```
 
@@ -106,7 +128,9 @@ Controls.GroupBox {
 
 {{< section-right >}}
 
-![ActionToolBar with children center-aligned](/docs/getting-started/kirigami/components-actiontoolbar/actiontoolbar-alignment.png)
+<br>
+
+![ActionToolBar with children center-aligned](/docs/getting-started/kirigami/components-actiontoolbar/ActionToolBar-aligned.webp)
 
 {{< /section-right >}}
 

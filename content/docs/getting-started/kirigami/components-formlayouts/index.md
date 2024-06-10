@@ -22,10 +22,10 @@ Children of a [Kirigami.FormLayout](docs:kirigami2;FormLayout) have a property n
 {{< section-left >}}
 
 ```qml
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as Controls
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
 Kirigami.ApplicationWindow {
     pageStack.initialPage: Kirigami.Page {

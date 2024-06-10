@@ -9,10 +9,11 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain("helloworld");
-    QCoreApplication::setOrganizationName(QStringLiteral("KDE"));
-    QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
-    QCoreApplication::setApplicationName(QStringLiteral("Hello World"));
+    KLocalizedString::setApplicationDomain("tutorial");
+    QApplication::setOrganizationName(QStringLiteral("KDE"));
+    QApplication::setOrganizationDomain(QStringLiteral("kde.org"));
+    QApplication::setApplicationName(QStringLiteral("Kirigami Tutorial"));
+    QApplication::setDesktopFileName(QStringLiteral("org.kde.tutorial"));
 
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
         QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    engine.loadFromModule("org.kde.tutorial", "Main");
 
     if (engine.rootObjects().isEmpty()) {
         return -1;

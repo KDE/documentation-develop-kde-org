@@ -88,22 +88,22 @@ We also provide a list of continuously updated resources to learn C++ in [this w
 
 ### Creating classic KDE applications using QtWidgets
 
-If you'd like to work on more complex KDE applications such as Dolphin, Kontact, or Kate, you will need to learn more about how to use QtWidgets, which encompass a completely different way of developing user interfaces with Qt. While not interchangeable with QML/Kirigami—they each have a different set of tradeoffs—older and more complex KDE applications tend to be built with QtWidgets.
+If you'd like to work on KDE applications such as Dolphin, Kontact, or Kate, you will need to learn how to use QtWidgets, which uses a completely different way of developing user interfaces with Qt. More complex KDE applications or applications that follow a traditional design tend to be built with QtWidgets.
 
-QtWidgets are somewhat more daunting to work with than QML (and *much* more C++ intensive!). Luckily, we have [a set of tutorials](/docs/kxmlgui) in the KDE Docs that will help you become more familiar with them.
+QtWidgets is somewhat more daunting to work with than QML (and *much* more C++ intensive!). Luckily, we have [a set of tutorials](/docs/getting-started/kxmlgui) in the KDE Docs that will help you become more familiar with them.
 
 ### More QML and QtQuick
 
 The Qt project is extensive, and so are QML and QtQuick. There is a lot of functionality we haven't covered, but there is a lot of documentation we can pull from to find out more.
 
-- If you want to look up what specific components do, look no further than [Qt's official QML documentation.](https://doc.qt.io/qt-5/qtquick-index.html)
+- If you want to look up what specific components do, look no further than [Qt's official QML documentation.](https://doc.qt.io/qt-6/qtquick-index.html)
 - If you are looking for a more guided approach to learning, [the QMLBook](https://qmlbook.github.io/) is a great place to start.
 
 ### More Kirigami
 
 This documentation includes a lot more about Kirigami. You can poke through some of the Components pages to find out more about some of the QML components that Kirigami provides for you to use.
 
-We recommend you also take a look at [Kirigami Gallery](https://apps.kde.org/kirigami2.gallery/), an application designed by KDE developers to demonstrate Kirigami's tools and capabilities. It provides both interactive examples of Kirigami components as well as links to the source code of these examples so you can see how they were built. You can read more about Kirigami Gallery in our [specific Kirigami Gallery tutorial](/docs/getting-started/kirigami/introduction-kirigami-gallery).
+We recommend you also take a look at [Kirigami Gallery](https://apps.kde.org/kirigami2.gallery/), an application designed by KDE developers to demonstrate Kirigami's tools and capabilities. It provides both interactive examples of Kirigami components as well as links to the source code of these examples so you can see how they were built.
 
 # The sky is the limit!
 

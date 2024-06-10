@@ -9,11 +9,13 @@ aliases:
 ---
 ## Actions
 
-A [Kirigami.Action](docs:kirigami2;Action) encapsulates a user interface action. We can use these to provide our applications with easy-to-reach actions that are essential to their functionality.
+A [Kirigami.Action](docs:kirigami2;Action) consists of a clickable action whose appearance depends on where it is added. Typically it is a button with an icon and text.
+
+We can use these to provide our applications with easy-to-reach actions that are essential to their functionality.
 
 {{< alert title="Note" color="info" >}}
 
-Kirigami actions inherit from [QtQuick Controls Action](docs:qtquickcontrols;QtQuick.Controls.Action) and
+Kirigami Actions inherit from [QtQuick.Controls.Action](docs:qtquickcontrols;QtQuick.Controls.Action) and
 can be assigned shortcuts.
 
 {{< /alert >}}
@@ -22,14 +24,16 @@ Like [QtQuick Controls Actions](docs:qtquickcontrols;QtQuick.Controls.Action), t
 but also to multiple other Kirigami components.
 
 ```qml
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Kirigami.Action {
     id: copyAction
-    text: i18n("&Copy")
+    text: i18n("Copy")
     icon.name: "edit-copy"
     shortcut: StandardKey.Copy
-    onTriggered: { ... }
+    onTriggered: {
+        // ...
+    }
 }
 ```
 
@@ -39,10 +43,10 @@ The [icon.name](https://doc.qt.io/qt-6/qml-qtquick-controls2-action.html#icon.na
 
 {{< /alert >}}
 
-One feature offered by Kirigami Actions on top of [QtQuick Actions](docs:qtquickcontrols;QtQuick.Controls.Action) is the possibility to nest actions.
+One feature offered by Kirigami Actions on top of QtQuick Actions is the possibility to nest actions.
 
 ```qml
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Kirigami.Action {
     text: "View"
@@ -68,7 +72,7 @@ action will be displayed as a [TextField](docs:qtquickcontrols;QtQuick.Controls.
 visible as long as possible.
 
 ```qml
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Kirigami.Action {
     text: "Search"
@@ -82,87 +86,81 @@ Kirigami.Action {
 
 ## Using actions in other components
 
+As mentioned in the [introduction tutorial for actions](/docs/getting-started/kirigami/introduction-actions), Kirigami Actions are [contextual](/docs/getting-started/kirigami/introduction-actions#actions-are-contextual), which means they show up in different places depending on where you put them. In addition to that, they also have different representations for desktop and mobile.
+
 ### Page
 
-One of [Kirigami.Page](docs:kirigami2;Page)'s features is that Actions can be added to it.
-
-You can add a `actions.main` action, a `actions.left` and `actions.right` action and additional [context actions](../components-drawers#context-drawers)
-that are displayed on the toolbar if there is enough place or in a hamburger menu
-on smaller screens.
+A [Kirigami.Page](docs:kirigami2;Page) shows Actions on the right of the top header in desktop mode, and on a footer in mobile mode.
 
 {{< readfile file="/content/docs/getting-started/kirigami/components-actions/pageactions.qml" highlight="qml" >}}
 
 {{< compare >}}
 
-{{< figure class="text-center" caption="Page actions on the desktop" src="desktop_page.webp" >}}
+{{< figure class="text-left mx-auto" caption="Page actions on the desktop" src="desktop_page.webp" >}}
 
-{{< figure class="text-center" caption="Page actions on a mobile device" src="mobile_page.webp" >}}
+{{< figure class="text-right mx-auto" caption="Page actions on a mobile device" src="mobile_page.webp" >}}
 
 {{< /compare >}}
 
-{{< alert color="warning" title="Warning" >}}
+### Global drawer
 
-To make the context actions work on mobile, you need to add a [ContextDrawer](docs:kirigami2;ContextDrawer)
-to your [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow).
-
-```qml
-Kirigami.ApplicationWindow {
-    ...
-    contextDrawer: Kirigami.ContextDrawer {
-        id: contextDrawer
-    }
-    ...
-}
-```
-
-{{< /alert >}}
-
-### Global Drawer
-
-The global drawer provides an action based navigation to your application. This is where nested actions are useful because it is possible to create nested navigation:
+The [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer) is a menu-like sidebar that provides an action based navigation to your application. This is where nested actions are useful because it is possible to create nested navigation:
 
 ```qml
+import org.kde.kirigami as Kirigami
+
 Kirigami.ApplicationWindow {
-    title: i18n("Demo")
+    title: "Actions Demo"
     globalDrawer: Kirigami.GlobalDrawer {
-        title: i18n("Demo")
+        title: "Demo"
         titleIcon: "applications-graphics"
         actions: [
             Kirigami.Action {
-                text: i18n("View")
+                text: "View"
                 icon.name: "view-list-icons"
                 Kirigami.Action {
-                    text: i18n("View Action 1")
-                    onTriggered: showPassiveNotification(i18n("View Action 1 clicked"))
+                    text: "View Action 1"
+                    onTriggered: showPassiveNotification("View Action 1 clicked")
                 }
                 Kirigami.Action {
-                    text: i18n("View Action 2")
-                    onTriggered: showPassiveNotification(i18n("View Action 2 clicked"))
+                    text: "View Action 2"
+                    onTriggered: showPassiveNotification("View Action 2 clicked")
                 }
             },
             Kirigami.Action {
-                text: i18n("Action 1")
-                onTriggered: showPassiveNotification(i18n("Action 1 clicked"))
+                text: "Action 1"
+                onTriggered: showPassiveNotification("Action 1 clicked")
             },
             Kirigami.Action {
-                text: i18n("Action 2")
-                onTriggered: showPassiveNotification(i18n("Action 2 clicked"))
+                text: "Action 2"
+                onTriggered: showPassiveNotification("Action 2 clicked")
             }
         ]
     }
-    ...
+    //...
 }
 ```
 
 {{< compare >}}
 
-{{< figure class="text-center" caption="Global Drawer actions on the desktop" src="desktop_global_drawers.png" >}}
-
-{{< figure class="text-center" caption="Global Drawer actions on a mobile device" src="mobile_global_drawers.png" >}}
+{{< figure class="text-center" caption="Global Drawer actions on the desktop" src="desktop_global_drawers.webp" >}}
 
 {{< /compare >}}
 
 You can read more about Global Drawers in the [documentation page for drawers](../components-drawers#globaldrawer).
+
+### Context drawer
+
+A [Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer) consists of an additional set of actions that are hidden behind a three-dots menu on the top right in desktop mode or on the bottom right in mobile mode if there is no space.
+It is used to display actions that are only relevant to a specific page. You can read more about them in our [Kirigami Drawers](/docs/getting-started/kirigami/components-drawers) tutorial.
+
+{{< compare >}}
+
+{{< figure class="text-center mx-auto" src="contextdrawer-retracted.webp" >}}
+
+{{< figure class="text-center mx-auto" src="contextdrawer-mobile-drawer.webp" >}}
+
+{{< /compare >}}
 
 ### ActionTextFields
 
@@ -187,7 +185,7 @@ Kirigami.ActionTextField {
 
 In this example, we are creating a "clear" button for a search field that is only visible when text is entered.
 
-![Search field with text: "I want ](searchfield.png)
+![Search field with text: "I want ](searchfield.webp)
 
 {{< alert title="Note" color="info" >}}
 
@@ -232,29 +230,36 @@ menu at the end of the toolbar.
 Like [ActionTextField](docs:kirigami2;ActionTextField), you may not need to use [ActionToolBar](docs:kirigami2;ActionToolBar) directly as it is used by page headers and cards to provide their action display.
 
 ```qml
-Kirigami.ActionToolBar {
-    actions: [
-        Kirigami.Action {
-            text: i18n("View Action 1")
-            onTriggered: showPassiveNotification(i18n("View Action 1 clicked"))
-        },
-        Kirigami.Action {
-            text: i18n("View Action 2")
-            onTriggered: showPassiveNotification(i18n("View Action 2 clicked"))
-        },
-        Kirigami.Action {
-            text: i18n("Action 1")
-            onTriggered: showPassiveNotification(i18n("Action 1 clicked"))
-        },
-        Kirigami.Action {
-            text: i18n("Action 2")
-            onTriggered: showPassiveNotification(i18n("Action 2 clicked"))
-        }
-    ]
+import org.kde.kirigami as Kirigami
+
+Kirigami.ApplicationWindow {
+    title: "Actions Demo"
+    width: 350
+    height: 350
+    header: Kirigami.ActionToolBar {
+        actions: [
+            Kirigami.Action {
+                text: i18n("View Action 1")
+                onTriggered: showPassiveNotification(i18n("View Action 1 clicked"))
+            },
+            Kirigami.Action {
+                text: i18n("View Action 2")
+                onTriggered: showPassiveNotification(i18n("View Action 2 clicked"))
+            },
+            Kirigami.Action {
+                text: i18n("Action 1")
+                onTriggered: showPassiveNotification(i18n("Action 1 clicked"))
+            },
+            Kirigami.Action {
+                text: i18n("Action 2")
+                onTriggered: showPassiveNotification(i18n("Action 2 clicked"))
+            }
+        ]
+    }
 }
 ```
 
-{{< figure class="text-center" caption="A horizontal toolbar being displayed at the top of the application" src="action_tool_bar.png" >}}
+{{< figure caption="A horizontal toolbar being displayed at the top of the application" src="action_tool_bar.webp" >}}
 
 You can read more about [ActionToolBar](docs:kirigami2;ActionToolBar) components in their [dedicated documentation page](../components-actiontoolbar/).
 

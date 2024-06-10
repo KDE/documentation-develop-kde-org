@@ -25,18 +25,34 @@ QtQuick Controls provides two useful components that you can use to this end.
 {{< section-left >}}
 
 ```qml
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.15
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
-Kirigami.Page {
-
-    Controls.ProgressBar {
-        from: 0
-        to: 100
-        value: 50
-        indeterminate: false
+Kirigami.ApplicationWindow {
+    title: "Progressbar App"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+        ColumnLayout {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            Controls.ProgressBar {
+                Layout.fillWidth: true
+                from: 0
+                to: 100
+                value: 50
+                indeterminate: false
+            }
+            Controls.ProgressBar {
+                Layout.fillWidth: true
+                from: 0
+                to: 100
+                // value: 50
+                indeterminate: true
+            }
+        }
     }
 }
 ```
@@ -45,7 +61,9 @@ Kirigami.Page {
 
 {{< section-right >}}
 
-{{< figure class="text-center" caption="Above: progress bar at 50%; below: indeterminate progress bar" src="progressbar-both.png" >}}
+<br>
+
+{{< figure class="text-center" caption="Above: progress bar at 50%; below: indeterminate progress bar" src="progressbar-both.webp" >}}
 
 {{< /section-right >}}
 
@@ -55,16 +73,30 @@ Kirigami.Page {
 
 In cases where loading times are shorter or measuring progress is not feasible, you can instead use [Controls.BusyIndicator](docs:qtquickcontrols;QtQuick.Controls.BusyIndicator). This component provides a simple spinning wheel that shows users that something is happening.
 
-```qml
-Controls.BusyIndicator {}
-```
-
-![A busy indicator](/docs/getting-started/kirigami/components-progressbars/busyindicator.png)
-
-If you want the indicator to stop running, you can do so by setting the [running](https://doc.qt.io/qt-6/qml-qtquick-controls2-busyindicator.html#running-prop) property to false.
+If you want the indicator to stop running, you can do so by setting the [running](https://doc.qt.io/qt-6/qml-qtquick-controls2-busyindicator.html#running-prop) property to false, in which case the .
 
 ```qml
-Controls.BusyIndicator {
-    running: false
+import QtQuick
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ApplicationWindow {
+    title: "Progressbar App"
+    width: 400
+    height: 400
+    pageStack.initialPage: Kirigami.Page {
+        actions: [
+            Kirigami.Action {
+                text: "Toggle busy indicator"
+                onTriggered: indicator.running ? indicator.running = false : indicator.running = true
+            }
+        ]
+        Controls.BusyIndicator {
+            id: indicator
+            anchors.centerIn: parent
+        }
+    }
 }
 ```
+
+{{< figure class="text-center" src="busyindicator.webp" >}}

@@ -1,7 +1,7 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
-import QtQuick.Layouts 1.15
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
 import org.kde.example 1.0
 
@@ -69,12 +69,14 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: Kirigami.ScrollablePage {
         title: i18nc("@title", "Kountdown")
 
-        actions.main: Kirigami.Action {
-            id: addAction
-            icon.name: "list-add"
-            text: i18nc("@action:button", "Add kountdown")
-            onTriggered: openPopulatedSheet("add")
-        }
+        actions: [
+            Kirigami.Action {
+                id: addAction
+                icon.name: "list-add"
+                text: i18nc("@action:button", "Add kountdown")
+                onTriggered: openPopulatedSheet("add")
+            }
+        ]
 
         Kirigami.CardsListView {
             id: layout

@@ -39,7 +39,7 @@ Backend::Backend(QObject *parent)
 
 Currently the user interface doesn't know about your backend class. To change that, we need to register the new type in `main.cpp`. The backend will be created as a singleton, that means it will only be created once and exist through the whole time from starting the application to closing it.
 
-Right after creating the [QQmlApplicationEngine](docs:qtqml;QQmlApplicationEngine), add the [type registration](https://doc.qt.io/qt-5/qtqml-cppintegration-definetypes.html) to `main.cpp` as follows:
+Right after creating the [QQmlApplicationEngine](docs:qtqml;QQmlApplicationEngine), add the [type registration](https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html) to `main.cpp` as follows:
 ```C++
     Backend backend;
     qmlRegisterSingletonInstance<Backend>("org.kde.example", 1, 0, "Backend", &backend);
@@ -96,8 +96,9 @@ As you can see, when the setter is called, the signal will be emitted, and infor
 To display the text, add a heading to `main.qml` under the `title` property of the [Kirigami.Page](docs:kirigami2;Page) element already contained in the template.
 
 The resulting code in that part of the file should look like this:
-```
-...
+
+```qml
+// ...
 Kirigami.Page {
     title: i18n("develop.kde.org tutorial")
 
@@ -106,11 +107,11 @@ Kirigami.Page {
         text: Backend.introductionText
     }
 
-    actions {
-        main: Kirigami.Action {
-            ...
+    actions: [
+        Kirigami.Action {
+            // ...
         }
-    }
+    ]
 }
 ```
 
@@ -123,4 +124,4 @@ Congratulations, you learned:
 * How to add properties and what they do
 * What signals are
 
-If you want to know more about the integration between QML and C++, we recommend reading the [official Qt documentation](https://doc.qt.io/qt-5/qtqml-cppintegration-definetypes.html).
+If you want to know more about the integration between QML and C++, we recommend reading the [official Qt documentation](https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html).

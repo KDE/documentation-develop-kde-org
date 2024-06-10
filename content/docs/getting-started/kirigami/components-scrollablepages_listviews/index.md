@@ -25,7 +25,7 @@ Kirigami.ScrollablePage {
 
 In almost every other way, a scrollable page is the same as a normal page.
 
-{{< alert color="danger" title="Warning" >}}
+{{< alert color="warning" title="Warning" >}}
 
 Do not put a [ScrollView](docs:qtquickcontrols;QtQuick.Controls.ScrollView) inside of a [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage); children of a
 `Kirigami.ScrollablePage` are already inside a `ScrollView`.
@@ -65,10 +65,10 @@ Kirigami.ScrollablePage {
             text: i18n("No data found")
             helpfulAction: Kirigami.Action {
             text: i18n("Load data")
-                ...
+                // More code...
             }
         }
-        model: ...
+        model: // Model code...
     }
 }
 ```
@@ -92,7 +92,7 @@ Kirigami.ScrollablePage {
 
     ListView {
         id: listView
-        ...
+        // Rest of listview code...
     }
 }
 ```

@@ -8,9 +8,9 @@ aliases:
 ---
 # Laying out your content
 
-Now that we understand how pages work, it is time to add stuff to ours. We will be going through a number of important layout components and elements that will be useful when designing our app. 
+Now that we understand how pages work, it is time to add stuff to them. We will be going through a number of important layout components and elements that will be useful when designing our app.
 
-Don't be scared by the big chunks of code! We'll be going over everything that we haven't covered before, and by the end of this section you'll have a neat-looking app.
+By the end of this section you'll have a neat-looking app.
 
 ## ListViews
 
@@ -44,7 +44,7 @@ ListModel {
 }
 ```
 
-We add our `kountdownModel` inside our [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow) from the last tutorial.
+We add our `kountdownModel` inside the [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow) from the last tutorial.
 
 A model defines the way that a data entry is structured. Our `kountdownModel` will consist of only one element for now. By looking at our [ListElement](https://doc.qt.io/qt-6/qml-qtqml-models-listelement.html) above, we can see how the data of our `kountdownModel` are structured: it contains a name, a description, and a date. This isn't set in stone, and you may have different sorts of data in your model. The first two are just strings, and the third is a number we're using as a placeholder.
 
@@ -55,27 +55,28 @@ Since QML is built on top of JavaScript, many of this language's features are av
 {{< /alert >}}
 
 Models are also useful in how they can be modified through the use of several methods. Some important ones are:
-- [ListModel.append(yourobject: jsobject)](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel.html#append-method) adds a JavaScript Object `yourobject` to the ListModel, and places it after the last item in the model. For this to happen correctly, you must provide a JavaScript Object with the correct properties and corresponding datatypes.
+- [ListModel.append(yourobject: jsobject)](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel.html#append-method) adds a JavaScript object (JSObject) `yourobject` to the ListModel and places it after the last item in the model. For this to happen correctly, you must provide a JSObject with the correct properties and corresponding datatypes.
 - [ListModel.get(index: int)](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel.html#get-method) returns the JSObject at the index location you provide.
 - [ListModel.remove(index: int, count: int)](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel.html#remove-method) removes the JSObject at the provided `index` location, and as many after that index location as you put in `count` (1 includes only the JSObject at the provided index)
 - [ListModel.set(index: int, yourobject: jsobject)](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel.html#set-method) changes the item at the provided `index` location with the values provided in `yourobject`. Same rules as with `append()`.
 
-### Delegate
+### Delegates
 
-While our `kountdownModel` contains the data that will be displayed, our `kountdownDelegate` will handle how the data will be displayed in the [ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html). [Kirigami.CardsListView](docs:kirigami2;CardsListView) was designed to display card-type delegates, and we have indeed used a [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) element as our delegate in the excerpt above.
+While our `kountdownModel` contains the data that will be displayed, our `kountdownDelegate` will handle how the data will be displayed in the [ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html). For that we use a [Kirigami.CardsListView](docs:kirigami2;CardsListView) designed to display card-type delegates, and those delegates will be visually represented by means of a [Kirigami.AbstractCard](docs:kirigami2;AbstractCard).
 
-Delegates automatically receive the properties of the ListElements that we have specified in our model. We can therefore just refer to the `name`, `description`, and `date` properties of our ListElements as if they were a conventional variable within our delegate.
+Delegates automatically receive the properties of the [ListElements](https://doc.qt.io/qt-6/qml-qtqml-models-listelement.html) that we have specified in our model. We can therefore just refer to their `name`, `description`, and `date` properties as if they were conventional variables within our delegate.
 
-### Building our delegate card
+### Building the delegate card
 
-The [Component](docs:qtqml;QtQml.Component) that will represent our delegate can be added inside our [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow). We will then proceed by checking what each part of our delegate component does.
+The [Component](docs:qtqml;QtQml.Component) that will represent our delegate can be added inside our [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow). We will then check what each part of our delegate component does.
 
 ```qml
 Component {
     id: kountdownDelegate
     Kirigami.AbstractCard {
         contentItem: Item {
-            // implicitWidth/Height define the natural width/height of an item if no width or height is specified.
+            // implicitWidth/Height define the natural width/height
+            // of an item if no width or height is specified.
             // The setting below defines a component's preferred size based on its content
             implicitWidth: delegateLayout.implicitWidth
             implicitHeight: delegateLayout.implicitHeight
@@ -136,13 +137,17 @@ Kirigami.AbstractCard {
         implicitHeight: delegateLayout.implicitHeight
         GridLayout {
             id: delegateLayout
-            ...
+            // ...
         }
     }
 }
 ```
 
-Looking at our [Kirigami.AbstractCard](docs:kirigami2;AbstractCard), the first properties we set are [implicitWidth](https://doc.qt.io/qt-6/qml-qtquick-item.html#implicitWidth-prop) and [implicitHeight](https://doc.qt.io/qt-6/qml-qtquick-item.html#implicitHeight-prop). We have set these to the `delegateLayout.implicitWidth` and `delegateLayout.implicitHeight`, i.e. the `implicitWidth` and `implicitHeight` of the `GridLayout` element. Implicit widths and heights are properties that are set as a default, i.e. if there is no explicit width or height set for these components. We have therefore set the `implicitWidth` and `implicitHeight` of our [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) to that of the [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) below to ensure it does not spill out of the card.
+Looking at our [Kirigami.AbstractCard](docs:kirigami2;AbstractCard), the first properties we set are [implicitWidth](https://doc.qt.io/qt-6/qml-qtquick-item.html#implicitWidth-prop) and [implicitHeight](https://doc.qt.io/qt-6/qml-qtquick-item.html#implicitHeight-prop). We have set these to the `delegateLayout.implicitWidth` and `delegateLayout.implicitHeight`, i.e. the `implicitWidth` and `implicitHeight` of the `GridLayout` element.
+
+Implicit widths and heights are properties available in any [Item](docs:qtquick;QtQuick.Item) that function as hints and are set as a default, or as a fallback, if there is no explicit width or height set for these components. These values default to 0x0, so it is very important that you define those in raw Item components as done above.
+
+Here we have set the `implicitWidth` and `implicitHeight` of our [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) to that of the [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) below to ensure it does not spill out of the card. This way, the card takes as much space is necessary for its contents.
 
 #### Layouts
 
@@ -167,14 +172,14 @@ GridLayout {
     rowSpacing: Kirigami.Units.largeSpacing
     columnSpacing: Kirigami.Units.largeSpacing
     columns: root.wideScreen ? 4 : 2
-    ...
+    // ...
 }
 
 ```
 
 The first thing you see is our `anchors`. [QtQuick's anchoring system](https://doc.qt.io/qt-6/qtquick-positioning-anchors.html) provides a useful way of making sure your components are positioned in certain parts of a parent component. We have anchored our [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) to the left, top, and right of the parent card, ensuring our content stretches across the whole card.
 
-Next we specify the spacing between the rows and columns within our grid, so that our components don't bunch up. Kirigami provides a number of handy [predefined units](docs:kirigami2;Kirigami::Units) to use for this purpose:
+Next we specify the spacing between the rows and columns within our grid, so that our components don't bunch up. Kirigami provides a number of handy [predefined units](docs:kirigami2;Kirigami::Platform::Units) to use for this purpose:
 
 | Kirigami Unit | Pixels |
 | ------------- | ------ |
@@ -188,15 +193,15 @@ KDE's Visual Design Group (VDG) has a lot more information about the different u
 
 {{< /alert >}}
 
-As you might remember, `root` is the id of our [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow). It provides the [wideScreen](docs:kirigami2;AbstractApplicationWindow::wideScreen) property, used to determine whether the current device screen is a widescreen (i.e. a computer monitor or a phone in landscape). We use a ternary conditional here to vary the number of columns in our grid depending on the screen we are using: if it's a widescreen, the grid will have 4 columns, else it will have 2.
+As you might remember, `root` is the id of our [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow). It provides the [wideScreen](docs:kirigami2;AbstractApplicationWindow::wideScreen) property, used to determine whether the current device screen is a widescreen (i.e. a computer monitor or a phone in landscape). We use a [ternary conditional](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) here to vary the number of columns in our grid depending on the screen we are using: if it's a widescreen, the grid will have 4 columns, else it will have 2.
 
 #### Inner components
 
-We could just create three labels within our delegate component and call it a day. But that wouldn't look particularly nice.
+We could just create three labels within our delegate component and call it a day, but that wouldn't look particularly nice. We'll make use of a few more convenient components:
 
 ```qml
 GridLayout {
-    ...
+    // ...
     Kirigami.Heading {
         Layout.fillHeight: true
         level: 1
@@ -231,7 +236,7 @@ GridLayout {
 }
 ```
 
-![Screenshot showing how a Card looks like](CardDesign.png)
+{{< figure caption="How the custom Card looks like" src="CardDesign.webp" >}}
 
 - Left, [Kirigami.Heading](docs:kirigami2;Heading): uses the `ListElement`'s `date` as a level 1 heading.
 
@@ -241,7 +246,12 @@ GridLayout {
 
 # Our app so far
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-listviews/main.qml" highlight="qml" >}}
+<details>
+<summary><b>Main.qml:</b></summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-listviews/Main.qml" highlight="qml" >}}
+
+</details>
 
 ![Screenshot of the app appearance after completing this lesson](Screenshot.webp)
 

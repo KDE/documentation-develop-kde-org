@@ -1,17 +1,29 @@
-add_executable(helloworld)
+add_executable(kirigami-hello)
 
-target_sources(helloworld PRIVATE
+ecm_add_qml_module(kirigami-hello
+    URI
+    org.kde.tutorial
+)
+
+target_sources(kirigami-hello
+    PRIVATE
     main.cpp
-    resources.qrc
 )
 
-target_link_libraries(helloworld
-    Qt${QT_MAJOR_VERSION}::Quick
-    Qt${QT_MAJOR_VERSION}::Qml
-    Qt${QT_MAJOR_VERSION}::Gui
-    Qt${QT_MAJOR_VERSION}::QuickControls2
-    Qt${QT_MAJOR_VERSION}::Widgets
-    KF${QT_MAJOR_VERSION}::I18n
+ecm_target_qml_sources(kirigami-hello
+    SOURCES
+    Main.qml
 )
 
-install(TARGETS helloworld ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+target_link_libraries(kirigami-hello
+    PRIVATE
+    Qt6::Quick
+    Qt6::Qml
+    Qt6::Gui
+    Qt6::QuickControls2
+    Qt6::Widgets
+    KF6::I18n
+    KF6::CoreAddons
+)
+
+install(TARGETS kirigami-hello ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

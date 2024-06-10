@@ -21,12 +21,10 @@ Before getting started, we will need to install Kirigami on our machine. There a
 We need a C++ compiler, Qt development packages, and Kirigami. Open a terminal application and run one of the following, depending on which Linux distribution you are using:
 
 {{< installpackage
-  ubuntu="build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev kirigami2-dev libkf5i18n-dev gettext libkf5coreaddons-dev qml-module-org-kde-qqc2desktopstyle"
-  arch="base-devel extra-cmake-modules cmake qt5-base qt5-declarative qt5-quickcontrols2 kirigami2 ki18n kcoreaddons breeze qqc2-desktop-style"
-  opensuseCommand=`sudo zypper install --type pattern devel_C_C++
-sudo zypper install cmake extra-cmake-modules libQt5Core-devel libqt5-qtdeclarative-devel libQt5QuickControls2-devel kirigami2-devel ki18n-devel kcoreaddons-devel qqc2-desktop-style`
+  arch="base-devel extra-cmake-modules cmake qt6-base qt6-declarative kirigami ki18n kcoreaddons breeze qqc2-desktop-style"
+  opensuse="cmake kf6-extra-cmake-modules kf6-kirigami-devel kf6-ki18n-devel kf6-kcoreaddons-devel qt6-base-devel qt6-declarative-devel qt6-quickcontrols2-devel qqc2-desktop-style"
   fedoraCommand=`sudo dnf groupinstall "Development Tools" "Development Libraries"
-sudo dnf install cmake extra-cmake-modules qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel kf5-kirigami2-devel kf5-ki18n-devel kf5-kcoreaddons-devel qqc2-desktop-style` >}}
+sudo dnf install cmake extra-cmake-modules kf6-kirigami2-devel kf6-ki18n-devel kf6-kcoreaddons-devel qt6-qtbase-devel qt6-qtdeclarative-devel qt6-qtquickcontrols2-devel qqc2-desktop-style` >}}
 
 Further information for other distributions can be found [here](/docs/getting-started/building/help-dependencies).
 
@@ -36,17 +34,13 @@ If you wish to build Kirigami with Qt6, this is currently not possible with only
 
 KDE has a custom tool to easily build all of its libraries and programs: **kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD.
 
-For this tutorial, you will need to follow the [setup instructions for kdesrc-build](/docs/getting-started/building/kdesrc-build-setup) but using a `~/kde5` directory instead, then copy the sample KF5 file to your home:
-
-```bash
-cp ~/kde5/src/kdesrc-build/kdesrc-buildrc-kf5-sample ~/.config/kdesrc-buildrc
-```
+For this tutorial, you will need to follow the [setup instructions for kdesrc-build](/docs/getting-started/building/kdesrc-build-setup).
 
 After that, you may simply run the following on a terminal:
 
 ```bash
 kdesrc-build kirigami kcoreaddons ki18n breeze plasma-integration qqc2-desktop-style
-source ~/kde5/build/kirigami/prefix.sh
+source ~/kde/build/kirigami/prefix.sh
 ```
 
 And then you may compile your Kirigami projects on the same terminal shell you used to source the prefix file. If you close your terminal, you can simply source the file again to compile your app.
@@ -79,47 +73,41 @@ If you close your terminal, you can simply run the environment setup file again 
 
 While there are tools that can easily set up our files, we are going to create them manually. This will let us better understand the pieces that are going to make up our new application.
 
-First we create our project folder. We are going to call ours "helloworld".
+First we create our project folder. We are going to call ours `kirigami-tutorial/`.
 
 ```
-helloworld/
+kirigami-tutorial/
 ├── CMakeLists.txt
+├── org.kde.tutorial.desktop
 └── src/
     ├── CMakeLists.txt
     ├── main.cpp
-    ├── resources.qrc
-    └── contents/
-        └── ui/
-            └── main.qml
+    └── Main.qml
 ```
 
-Within this folder we are going to create a `src/` folder and `CMakeLists.txt`. It is generally considered good practice to place all our main code files in a `src/` folder. Our `src/` folder in turn will contain a folder named `contents/`, which itself contains a folder called `ui/`. Here is where we will create our QML files.
+Within this folder we are going to create a `src/` folder and `CMakeLists.txt`. It is generally considered good practice to place all our main C++ code files in a `src/` folder. We also put the `Main.qml` file in it since it will be run together with the executable.
 
 {{< alert title="Tip" color="info" >}}
 
 You can quickly create this file structure with:
-```bash
-mkdir -p helloworld/src/contents/ui
-touch helloworld/CMakeLists.txt
-touch helloworld/src/{CMakeLists.txt,main.cpp,resources.qrc}
-touch helloworld/src/contents/ui/main.qml
-```
 
-Alternatively, you may want to use the standard Kirigami template provided by [KDevelop](https://apps.kde.org/kdevelop/), KDE's main IDE for coding in C++ and QML. [KAppTemplate](https://apps.kde.org/kapptemplate/) is also available if you only need a quick template to start coding in your favorite IDE or text editor.
+```bash
+mkdir -p kirigami-tutorial/src/qml
+touch kirigami-tutorial/CMakeLists.txt
+touch kirigami-tutorial/src/{CMakeLists.txt,main.cpp,Main.qml}
+```
 
 {{< /alert >}}
 
-This is a KDE convention, but not all KDE projects use this structure. You are free to set things up differently, but you will have to take this into account when creating your `CMakeLists.txt` and `resources.qrc` files.
+### Main.qml
 
-### main.qml
-
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/contents/ui/main.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" >}}
 
 Here's where we will be handling our application's frontend.
 
-If you know some Javascript, then much of QML will seem familiar to you (though it does have its own peculiarities). [Qt's documentation](https://doc.qt.io/qt-5/qtqml-index.html) has an extensive amount of material on this language if you feel like trying something on your own. Over the course of these tutorials we will be focusing much of our attention on our QML code, where we can use Kirigami to get the most out of it.
+If you know some Javascript, then much of QML will seem familiar to you (though it does have its own peculiarities). [Qt's documentation](https://doc.qt.io/qt-6/qtqml-index.html) has an extensive amount of material on this language if you feel like trying something on your own. Over the course of these tutorials we will be focusing much of our attention on our QML code, where we can use Kirigami to get the most out of it.
 
-For now, let's focus on `main.qml`. First we [import](https://doc.qt.io/qt-6/qtqml-syntax-imports.html) a number of important modules:
+For now, let's focus on `Main.qml`. First we [import](https://doc.qt.io/qt-6/qtqml-syntax-imports.html) a number of important modules:
 
 - [QtQuick](https://doc.qt.io/qt-6/qtquick-index.html), the standard library used in QML applications.
 - [QtQuick Controls](https://doc.qt.io/qt-6/qtquickcontrols-index.html), which provides a number of standard controls we can use to make our applications interactive.
@@ -150,66 +138,102 @@ We then set the first page of our page stack. Most Kirigami applications are org
 
 Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) that lets us place text on our page. We use `anchors.centerIn: parent` to center our label horizontally and vertically within our parent element. In this case, the parent component of our label is [Kirigami.Page](docs:kirigami2;Page). The last thing we need to do is set its text: `text: i18n("Hello World!")`.
 
-### main.cpp
+### org.kde.tutorial.desktop
 
-`main.cpp` handles the "business logic" of our application. C++ is handy because it is flexible and fast, even if it is more involved than other programming languages.
+The primary purpose of [Desktop Entry files](https://specifications.freedesktop.org/desktop-entry-spec/latest/) is to show your app on the application launcher on Linux. Another reason to have them is to have window icons on Wayland, as they are required to tell the compositor "this window goes with this icon".
 
-`main.cpp` is also the entrypoint to our application. The two parts of our project, the backend and the user interface, are both set up and started here.
+It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) followed by the `.desktop` extension such as `org.kde.tutorial.desktop`:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/main.cpp" highlight="cpp" >}}
-
-For now, we don't need to go into too much detail regarding what our `main.cpp` code does, but its role will grow significantly more important once we decide to add more complex functionality to our application in the future. If you want to get ahead, you can read more about how this `main.cpp` works in [this page](/docs/getting-started/kirigami/advanced-maincpp).
-
-### resources.qrc
-
-Our `resources.qrc` is a [Qt Resource file](https://doc.qt.io/qt-5/resources.html). It contains the list of all QML files as well as other files (like custom icons) that will be included in the binary.
-
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/resources.qrc" highlight="xml" >}}
-
-Notice the line `<file alias="main.qml">contents/ui/main.qml</file>`. It details which QML files are going to be included in the compilation process. In our case we are only using `main.qml`, but if we were to add more QML files to our code, we'd need to make sure we include it in `resources.qrc` file by adding another line like this one.
-
-This resource file lets us use the "qrc:" + "/main.qml" path in our `main.cpp`, instead of needing to specify the whole "contents/ui/main.qml" path.
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/org.kde.tutorial.desktop" highlight="ini" >}}
 
 ### CMakeLists.txt
 
-`CMakeLists.txt` files are needed to use KDE's build system of choice, [CMake](https://cmake.org/). The `CMakeLists.txt` file in our top-level folder is going to specify some of our application's characteristics. It also includes some of the dependencies we need in order to compile our project.
+`CMakeLists.txt` files are needed to use KDE's build system of choice, [CMake](https://cmake.org/). Our `kirigami-tutorial/CMakeLists.txt` file is going to specify some of our application's characteristics. It also includes some of the dependencies we need in order to compile our project.
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" >}}
 
 The `CMakeLists.txt` defines how to build your projects. Most of the content here is just to bootstrap your project. You can read a line-by-line, in-depth explanation of what this CMakeLists file does [here](/docs/getting-started/kirigami/advanced-understanding_cmakelists/).
 
-The most important thing to keep in mind is that the Qt and KDE Frameworks dependencies are managed with [find_package()](https://cmake.org/cmake/help/latest/command/find_package.html). You will have to modify these lines and include any additional components that you decide to use during the development of your application.
+The most important thing to keep in mind is that the C++ build dependencies of Qt and KDE Frameworks are managed with [find_package()](https://cmake.org/cmake/help/latest/command/find_package.html) and QML runtime dependencies are managed with [ecm_find_qml_module()](https://api.kde.org/ecm/module/ECMFindQmlModule.html). You will have to modify these lines and include any additional components that you decide to use during the development of your application.
 
-The final line, `add_subdirectory(src)`, points CMake to the `helloworld/src/` directory, where our source code is located. Let's delve into the `helloworld/src/CMakeLists.txt` file in there.
+The line with `add_subdirectory(src)` points CMake to the `kirigami-tutorial/src/` directory, where our source code is located.
+
+The line with `install()` tells CMake where to install the desktop file.
+
+Let's delve into the `kirigami-tutorial/src/CMakeLists.txt` file in there.
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/CMakeLists.txt" highlight="cmake" >}}
 
-This one's a lot shorter! Let's go through what it does:
+This file consists of five steps:
 
-- [add_executable()](https://cmake.org/cmake/help/latest/command/add_executable.html) creates an executable from the given source files.
-- [target_link_libraries()](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) links the libraries used in our code to our executable.
+1. create an executable
+2. change the executable into a QML module that accepts QML files
+3. add C++ and QML files to the executable
+4. link the libraries necessary for the executable to run
+5. install the executable to the right place
 
-{{< alert title="Note" color="info" >}}
-
-Note that these libraries should match the components that we included in our previous `CMakeLists.txt` file—otherwise these components will not be included and our application won't compile.
-
-{{< /alert >}}
+Next time you need to add more QML files, add them to the existing `ecm_target_qml_sources()` call. C++ files that use the [QML_ELEMENT](https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html) keyword which we will see later in the tutorial can be added using `target_sources()`.
 
 Now that CMake has been taken care of, let's look at the files we are going to spend the majority of our time working with.
+
+### main.cpp
+
+The file `kirigami-tutorial/src/main.cpp` handles the "business logic" of our application. C++ is handy because it is flexible and fast, even if it is more involved than other programming languages.
+
+It also functions as the entrypoint to our application. The two parts of our project, the backend and the user interface, are both set up and started here.
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/main.cpp" highlight="cpp" >}}
+
+For now, we don't need to go into too much detail regarding what our `main.cpp` code does, but its role will grow significantly more important once we decide to add more complex functionality to our application in the future.
+
+If you want to get ahead, you can read more about how this `main.cpp` works in [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp).
+
+If you want to see a few ways on how the C++ code can be improved, like using [KAboutData](docs:kcoreaddons;KAboutData) for translatable application metadata, be sure to check our [KXmlGui tutorial](/docs/getting-started/kxmlgui).
+
+For now, the part that interests us is this line:
+
+```qml
+engine.loadFromModule("org.kde.tutorial", "Main");
+```
+
+The first argument is the URI set in `kirigami-tutorial/src/CMakeLists.txt`, and the second argument is the name of the QML module we want to use (`Main`, coming from the name of our `Main.qml` file, which needs to start with an uppercase letter).
+
+{{< alert title="The old method" color="info" >}}
+
+<details>
+<summary>You might encounter this alternative way to load QML files in real code!</summary>
+<br>
+
+The old method of loading QML files had some disadvantages and after Qt6 it became excessively verbose:
+
+```cpp
+engine.load(QUrl(QStringLiteral("qrc:/qt/qml/org/kde/tutorial/qml/Main.qml")));
+```
+
+This [Qt resource URI](https://doc.qt.io/qt-6/resources.html) above follows the pattern `<resource_prefix><import_URI><optional_QML_dir><file>`. In this case:
+
+* resource prefix = default / in Qt5, /qt/qml in Qt6
+* import URI = /org/kde/tutorial, which matches the URI org.kde.tutorial
+* optional QML dir = /qml, necessary if the QML files are stored in a directory called qml/
+* file = the QML file
+
+</details>
+
+{{< /alert >}}
 
 ## Compiling and running the application {#build}
 
 We are almost at the finish line. The last thing we need to do is build and run our application. Doing so will depend on which platform you are on.
 
-If you are running your project on Linux, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `helloworld/` folder in our terminal application of choice and run the following commands:
+If you are running your project on Linux, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
 
 ```bash
-cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/kde5/usr"
+cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/.local"
 cmake --build build/
 cmake --install build/
 ```
 
-The program will be installed to `~/kde5/usr/bin`.
+The program will be installed to `~/.local/bin` and its desktop entry to `~/.local/share/applications`.
 
 If you are compiling your project with [Craft](#craft) on Windows, you might need to specify a CMake Generator for the first step, depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) to compile your projects.
 
@@ -231,16 +255,28 @@ cmake --install build/
 
 In both cases, the program will be installed to `C:\CraftRoot\bin`.
 
-You can then run the helloworld program with:
+You can then run the `kirigami-hello` program with:
 
 ```bash
-helloworld # On Linux
-helloworld.exe # On Windows
+kirigami-hello # On Linux
+kirigami-hello.exe # On Windows
 ```
 
 Voilà! Now you will see your very first Kirigami app appear before your very own eyes.
 
-![Screenshot of the generated Kirigami application](hello-kworld.png)
+![Screenshot of the generated Kirigami application](hello-kworld.webp)
+
+To run the new QML application in mobile mode, you can use `QT_QUICK_CONTROLS_MOBILE=1`:
+
+```bash
+QT_QUICK_CONTROLS_MOBILE=1 kirigami-hello
+```
+
+If you ever need to uninstall your application from your system, you can run:
+
+```bash
+cmake --build build --target uninstall
+```
 
 {{< alert title="Note" color="info" >}}
 

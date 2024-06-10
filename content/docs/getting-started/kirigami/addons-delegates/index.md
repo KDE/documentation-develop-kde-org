@@ -32,11 +32,11 @@ Add a new line to our `resources.qrc`:
 And change `main.qml` to include our new Settings page:
 
 ```qml
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kirigamiaddons.formcard 1.0 as FormCard
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.about 1.0
 
@@ -102,8 +102,8 @@ We used a form card in the [Kirigami Addons introduction](/docs/getting-started/
 Create a new `contents/ui/SettingsPage.qml` file:
 
 ```qml
-import QtQuick 2.15
-import org.kde.kirigamiaddons.formcard 1.0 as FormCard
+import QtQuick
+import org.kde.kirigamiaddons.formcard as FormCard
 
 FormCard.FormCardPage {
     FormCard.FormCard {
@@ -129,7 +129,7 @@ It is possible to use FormCard delegates directly with a Kirigami.ScrollablePage
 For every [FormCard](https://api.kde.org/frameworks/kirigami-addons/html/classFormCard.html) you want to create, you can create a [FormHeader](https://api.kde.org/frameworks/kirigami-addons/html/classFormHeader.html) just before it. The header uses bold text and shows up right above the form card.
 
 ```qml
-import org.kde.kirigamiaddons.formcard 1.0 as FormCard
+import org.kde.kirigamiaddons.formcard as FormCard
 
 FormCard.FormCardPage {
     FormCard.FormHeader {
@@ -157,9 +157,9 @@ Let's start simple, with plain text.
 `FormSectionText` simply adds a thin delegate containing a label. `FormTextDelegate` has text and a grayed out description.
 
 ```qml
-import QtQuick 2.15
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kirigamiaddons.formcard 1.0 as FormCard
+import QtQuick
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.formcard as FormCard
 
 FormCard.FormCardPage {
     FormCard.FormHeader {
@@ -207,9 +207,9 @@ The [FormButtonDelegate](https://api.kde.org/frameworks/kirigami-addons/html/cla
 While the FormTextDelegate had the `leading` and `trailing` properties to show an item before and after the main content, the FormButtonDelegate only has the `leading` property, because the right side is occupied by the arrow.
 
 ```qml
-import QtQuick 2.15
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kirigamiaddons.formcard 1.0 as FormCard
+import QtQuick
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.formcard as FormCard
 
 FormCard.FormCardPage {
     FormCard.FormHeader {

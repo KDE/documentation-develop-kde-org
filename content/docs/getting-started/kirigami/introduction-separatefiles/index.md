@@ -1,5 +1,5 @@
 ---
-title: Using separate files and signals
+title: Using separate files
 group: introduction
 weight: 6
 description: >
@@ -8,113 +8,145 @@ aliases:
   - /docs/getting-started/kirigami/introduction-separatefiles/
 ---
 
-## But why?
+## Why and how
 
-For the first time, we will be separating some of our components into their own QML files. If we keep adding things to `main.qml`, it's going to quickly become hard to tell what does what, and we risk muddying our code.
+For the first time, we will be separating some of our components into their own QML files. If we keep adding things to `Main.qml`, it's going to quickly become hard to tell what does what, and we risk muddying our code.
 
-First we need to add our new files into our `resources.qrc` which we created in the first part of this tutorial.
+In this tutorial, we will be splitting the code in `Main.qml` into `Main.qml`, `AddEditDialog.qml` and `KountdownDelegate.qml`.
 
-```qrc
-<RCC>
-    <qresource prefix="/">
-        <file alias="main.qml">contents/ui/main.qml</file>
-        <file alias="AddEditSheet.qml">contents/ui/AddEditSheet.qml</file>
-        <file alias="KountdownDelegate.qml">contents/ui/KountdownDelegate.qml</file>
-    </qresource>
-</RCC>
+Additionally, even when spreading code between multiple QML files, the amount of files in real-life projects can get out of hand. A common solution to this problem is to logically separate files into different folders. We will take a brief look at three common approaches seen in real projects, and implement one of them:
+
+* storing QML files together with C++ files
+* storing QML files in a different directory under the same module
+* storing QML files in a different directory under a different module
+
+After the split, we will have [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) between each file, and [implementation details will be abstracted](https://en.wikipedia.org/wiki/Abstraction_(computer_science)), making the code more readable.
+
+### Storing QML files together with C++ files
+
+This consists of keeping the project's QML files together with C++ files in `src/`. This sort of structure would look like this:
+
+```
+kirigami-tutorial/
+├── CMakeLists.txt
+├── org.kde.tutorial.desktop
+└── src/
+    ├── CMakeLists.txt
+    ├── main.cpp
+    ├── Main.qml
+    ├── AddEditDialog.qml
+    └── KountdownDelegate.qml
 ```
 
-## Using our new files
+This is what we did previously. In the above case, you would just need to keep adding QML files to the existing `kirigami-tutorial/src/CMakeLists.txt`. There's no logical separation at all, and once the project gets more than a couple of QML files (and C++ files that create types to be used in QML), the folder can quickly become crowded.
 
-We'll need to find some way of using our new files in `main.qml`. Thankfully, all we need to do is include a declaration of these components in our `main.qml` like this:
+### Storing QML files in a different directory under the same module
+
+This consists of keeping all QML files in a separate folder, usually `src/qml/`. This sort of structure would look like this:
+
+```
+kirigami-tutorial/
+├── CMakeLists.txt
+├── org.kde.tutorial.desktop
+└── src/
+    ├── CMakeLists.txt
+    ├── main.cpp
+    └── qml/
+        ├── Main.qml
+        ├── AddEditDialog.qml
+        └── KountdownDelegate.qml
+```
+
+This structure is very common in KDE projects, mostly to avoid having an extra CMakeLists.txt file for the `src/qml/` directory and creating a separate module. This method keeps the files themselves in a separate folder, but you would also need to add them in `kirigami-tutorial/src/CMakeLists.txt`. All created QML files would then belong to the same QML module as `Main.qml`.
+
+In practice, once the project gets more than a dozen QML files, while it won't crowd the `src/` directory, it will crowd the `src/CMakeLists.txt` file. It will become difficult to differentiate between traditional C++ files and C++ files that have types exposed to QML.
+
+It will also break the concept of locality (localisation of dependency details), where you would keep the description of your dependencies in the same place as the dependencies themselves.
+
+### Storing QML files in a different directory under a different module
+
+This consists of keeping all QML files in a separate folder with its own CMakeLists.txt and own separate QML module. This sort of structure would look like this:
+
+```
+kirigami-tutorial/
+├── CMakeLists.txt
+├── org.kde.tutorial.desktop
+└── src/
+    ├── CMakeLists.txt
+    ├── main.cpp
+    ├── Main.qml
+    └── components/
+        ├── CMakeLists.txt
+        ├── AddEditDialog.qml
+        └── KountdownDelegate.qml
+```
+
+This structure is not as common in KDE projects and requires writing an additional CMakeLists.txt, but it is the most flexible. In our case, we name our folder "components" since we are creating two new QML components out of our previous `Main.qml` file, and keep information about them in `kirigami-tutorial/src/components/CMakeLists.txt`. The `Main.qml` file itself stays in `src/` so it's automatically used when running the executable, as before.
+
+Later on, it would be possible to create more folders with multiple QML files, all grouped together by function, such as "models" and "settings", and C++ files that have types exposed to QML (like models) could be kept together with other QML files where it makes sense.
+
+We will be using this structure in this tutorial.
+
+## Preparing CMake for the new files
+
+First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` with the following contents:
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/CMakeLists.txt" highlight="cmake" >}}
+
+We create a new target called `kirigami-hello-components` and then turn it into a QML module using [ecm_add_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html) under the import name `org.kde.tutorial.components` and add the relevant QML files.
+
+Because the target is different from the executable, it will function as a different QML module, in which case we will need to *finalize* it (make CMake generate the files needed for the module to be found, namely `qmldir` and `qmltypes`) with [ecm_finalize_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html). We then install it exactly like in previous lessons.
+
+We needed to use [add_library()](https://cmake.org/cmake/help/latest/command/add_library.html) so that we can link `kirigami-hello-components` to the executable in the [target_link_libraries()](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) call in `kirigami-tutorial/src/CMakeLists.txt`:
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/CMakeLists.txt" highlight="cmake" >}}
+
+We also need to use [add_subdirectory()](https://cmake.org/cmake/help/latest/command/add_subdirectory.html) so CMake will find the `kirigami-tutorial/src/components/` directory.
+
+In the previous lessons, we did not need to add the `org.kde.tutorial` import to our `Main.qml` because it was not needed: being the entrypoint for the application, the executable would run the file immediately anyway. Since our components are in a separate QML module, the a new import in `kirigami-tutorial/src/Main.qml` is necessary, the same one defined earlier, `org.kde.tutorial.components`:
 
 ```qml
-AddEditSheet {
-    id: addEditSheet
-}
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.tutorial.components
+
+// The rest of the code...
 ```
 
-## Extending our add sheet into an add/edit sheet
+And we are ready to go.
 
-While in the last tutorial we made our countdown-adding button do something, the edit button on our countdown cards is still inactive. We also created an adding sheet that we could now repurpose to also serve as an edit sheet... but before we get to that, we need to add a couple of extra things to our `main.qml`.
+## Splitting Main.qml
 
-### main.qml
+Let's take a look once again at the original `Main.qml`:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/main.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-dialogs/Main.qml" highlight="qml" >}}
 
-The key changes we have made involve the addition of our component definition `AddEditSheet` (and `KountdownDelegate` further down) and a new function called `openPopulatedSheet()`.
+The custom delegate with `id: kountdownDelegate` can be split completely because it is already enveloped in a [QML Component type](docs:qtqml;QtQml.Component). We use a Component to be able to define it without needing to instantiate it; separate QML files work the same way.
 
-Lets go through our `AddEditSheet` definition:
+If we move the code to a separate files, then, there is no point in leaving it enveloped in a Component: we can split just the [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) in the separate file. Here is the resulting `KountdownDelegate.qml`:
 
-```qml
-AddEditSheet { 
-    id: addEditSheet
-    onEdited: kountdownModel.set(index, {
-        name,
-        description,
-        date,
-    });
-    onAdded: kountdownModel.append({
-        name,
-        description,
-        date,
-    });
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/KountdownDelegate.qml" highlight="qml" >}}
 
-`onAdded` and `onEdited` are signal handlers. Just like `onTriggered` is called when we click an action, we can use handlers that respond to our custom signals.
+Our dialog with `id: addDialog` is not enveloped in a Component, and it is not a component that is visible by default, so the code can be copied as is into the `AddEditDialog.qml`:
 
-### AddEditSheet.qml
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/AddEditDialog.qml" highlight="qml" >}}
 
-Looking at our new `AddEditSheet.qml`—our repurposed adding sheet—we can see how these signals work:
+With the code split, `Main.qml` thus becomes much shorter:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/AddEditSheet.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/Main.qml" highlight="qml" >}}
 
-Signals invoke their handlers when they are called. In this case, we have created two signals, `added` and `edited`, that we can invoke with different outcomes, and to which we can attach information about the countdown we are adding or creating. A neat thing about signals is that they expose the variables defined in them to the functions that are listening to them, which is why we can just call those variable names in our `onEdited` and `onAdded` handlers in `main.qml`. Our signals are invoked by the "Done" button depending on what the `mode` property, defined at the top of our AddEditSheet, is set to.
+We now have two extra QML files, `AddEditDialog.qml` and `KountdownDelegate`, and we need to find some way of using them in `Main.qml`. The way to add the contents of the new files to `Main.qml` is by *instantiating* them.
 
-The `mode` property also controls several other things: mainly what the title of our sheet is set to, and what text is to be included in our textfields. However, by default, our `mode` property is just set to add...
+`AddEditDialog.qml` becomes `AddEditDialog {}`:
 
-Which brings us back to `main.qml` and our new `openPopulatedSheet()` function. You might have noticed that this is what it is called now when the countdown-adding action is triggered. This function takes in several arguments which have been provided with defaults. This is helpful when we simply want to add a new countdown, because we can have the concise function call `openPopulatedSheet("add")`. More importantly, this function sets all the relevant properties in AddEditSheet.
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/Main.qml" highlight="qml" start=28 lines=3 >}}
 
-```qml
-function openPopulatedSheet(mode, index = -1, listName = "", listDesc = "", listDate = "") {
-    addEditSheet.mode = mode
-    addEditSheet.index = index;
-    addEditSheet.name = listName
-    addEditSheet.description = listDesc
-    addEditSheet.kdate = listDate
+`KountdownDelegate.qml` becomes `KountdownDelegate {}`:
 
-    addEditSheet.open()
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/Main.qml" highlight="qml" start=44 lines=5 >}}
 
-- `mode` changes the add/edit sheet depending on whether this argument is set to `"add"` or to `"edit"`
-- `index` is needed so that when we save our edited countdown, the correct one is modified
-- `listName`, `listDesc`, and `listDate` are the relevant countdown details that need to be put in the sheet's fields
+Most cases you have seen of a component started with uppercase and followed by brackets were instantiations of a QML component. This is why our new QML files need to start with an uppercase letter.
 
-Of course, to actually use our sheet for anything besides adding countdowns first we need to make the edit button on our cards work. But if you look at our [Kirigami.CardsListView](docs:kirigami2;CardsListView) in `main.qml`...
-
-```qml
-Kirigami.CardsListView {
-    id: layout
-    model: kountdownModel
-    delegate: KountdownDelegate {}
-}
-```
-
-### KountdownDelegate.qml
-
-We've replaced our [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) with a delegate component definition from `KountdownDelegate.qml`.
-
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/KountdownDelegate.qml" highlight="qml" >}}
-
-The [onClicked](docs:qtquickcontrols;QtQuick.Controls.AbstractButton::clicked) property of the "Edit" button on our cards now calls the `openPopulatedSheet()` function, with the card's fetched list element properties set as the arguments for this function. With these, the sheet can be populated with the correct text.
-
-With that, we have a fully-functional sheet where we can add and edit our countdowns!
-
-![](editsheet.png)
-
-
-
-
-
+Compile the project and run it, and you should have a functional window that behaves exactly the same as before, but with the code split into separate parts, making things much more manageable.

@@ -112,17 +112,17 @@ The only required parameter is **file** for specifying the path of the file to r
 For example, in any content file you can write:
 
 ```html
-{{</* readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/contents/ui/main.qml" highlight="qml" start=17 lines=9 */>}}
+{{</* readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" start=17 lines=9 */>}}
 ```
 
 which will be rendered as:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/contents/ui/main.qml" highlight="qml" start=17 lines=9 >}}
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" start=17 lines=9 >}}
 
 Since `/docs/getting-started/kirigami/introduction-getting_started/` is a bundle, in the file `/content/docs/getting-started/kirigami/introduction-getting_started/index.md` you can also write as below and achieve the same result:
 
 ```html
-{{</* readfile file="src/contents/ui/main.qml" highlight="qml" start=17 lines=9 */>}}
+{{</* readfile file="src/qml/main.qml" highlight="qml" start=17 lines=9 */>}}
 ```
 
 Commonly used highlighting options are:
