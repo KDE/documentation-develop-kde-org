@@ -37,7 +37,7 @@ To add additional content like screenshots or example code for each individual p
 
 It should look like so:
 
-```
+```tree
 content/
 └── docs/
     └── getting-started/
@@ -75,15 +75,15 @@ Normal markdown content
 
 The minimum requirements for a page are:
 
-* **title:**
-* **weight:**
-* **SPDX-FileCopyrightText:**
-* **SPDX-License-Identifier:**
+* `title:`
+* `weight:`
+* `SPDX-FileCopyrightText:`
+* `SPDX-License-Identifier:`
 
 Other available options are:
 
-* **group:**, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](/docs/getting-started/kirigami), with the groups Introduction, Style, Components, and Advanced. The groups need to be listed in the `_index.md` file of the tutorial.
-* **aliases:**, which creates aliases that can be used to shorten links. This is useful when linking to that page from elsewhere, or to keep old links working when content is moved.
+* `group:`, which lists sections with the same name under the same group. It can be seen in action in the [Kirigami tutorial](/docs/getting-started/kirigami), with the groups Introduction, Style, Components, and Advanced. The groups need to be listed in the `_index.md` file of the tutorial.
+* `aliases:`, which creates aliases that can be used to shorten links. This is useful when linking to that page from elsewhere, or to keep old links working when content is moved.
 
 ## Hugo shortcodes
 
@@ -101,9 +101,8 @@ The most important shortcodes are as follows.
 
 Displays the contents of a file and applies syntax highlighting to it. It has three optional parameters:
 
-* **start**: Defines the first line that should be displayed. By default this is 1, which means starting from the first line.
-* **lines**: Defines how many lines should be displayed. By default this is 0, which displays all lines from **start** to the end of the file.
-* **emphasize**: Defines a set of line numbers or line number ranges to be highlighted. Note that they are relative to displayed lines, not to the absolute file line numbers (important in case file is displayed not from start). For example, if start="5" and emphasize="3 6-7", lines 7, 10 and 11 of the file will be highlighted.
+* `start` defines the first line that should be displayed. By default this is 1, which means starting from the first line.
+* `lines` defines how many lines should be displayed. By default this is 0, which displays all lines from **start** to the end of the file.
 
 The only required parameter is **file** for specifying the path of the file to read:
 - If the file is in the [bundle](#creating-a-new-tutorial) of the content file you are writing, you can specify the path starting from the bundle directory;
@@ -127,11 +126,11 @@ Since `/docs/getting-started/kirigami/introduction-getting_started/` is a bundle
 
 Commonly used highlighting options are:
 
-* **cpp**
-* **qml**
-* **cmake**
-* **python**
-* **ini**
+* `cpp`
+* `qml`
+* `cmake`
+* `python`
+* `ini`
 
 This shortcode is used once to display the file, so no closing tag is used.
 
@@ -141,29 +140,29 @@ Displays the contents of a **remote** file and applies syntax highlighting to it
 
 It has mandatory parameters:
 
-* **repo**: The repository as located on [Invent](https://invent.kde.org).
-* **file**: The file in the repository that will be displayed.
-* **part**: The section of the file in the repository that will be displayed. It requires special formatting. If it is not specified, the whole file will be shown.
-* **lang**: The language of the snippet, for syntax highlighting.
+* `repo`: The repository as located on [Invent](https://invent.kde.org).
+* `file`: The file in the repository that will be displayed.
+* `part`: The section of the file in the repository that will be displayed. It requires special formatting. If it is not specified, the whole file will be shown.
+* `lang`: The language of the snippet, for syntax highlighting.
 
 For example:
 
-ThreadWeaver belongs to the Frameworks group, so its **repo** value would be `frameworks/threadweaver`
+ThreadWeaver belongs to the Frameworks group, so its `repo` value would be `frameworks/threadweaver`.
 
-The **file** `helloworld.cpp` which we want to display is located in `examples/HelloWorld/HelloWorld.cpp`
+The `file` *`helloworld.cpp`*, which we want to display, is located in `examples/HelloWorld/HelloWorld.cpp`.
 
 The **part** requires special formatting added to the example code in the remote repository, namely:
 
 * `//@@snippet_begin(the-snippet-name)`
 * `//@@snippet_end`
 
-In the [ThreadWeaver repository](https://invent.kde.org/frameworks/threadweaver/-/blob/master/examples/HelloWorld/HelloWorld.cpp), we can see that the snippet is called "sample-helloworld", and that should be the value passed to the **part**.
+In the [ThreadWeaver repository](https://invent.kde.org/frameworks/threadweaver/-/blob/master/examples/HelloWorld/HelloWorld.cpp), we can see that the snippet is called "sample-helloworld", and that should be the value passed to the `part`.
 
-We can see that the file is written in C++, so the **lang** value should be `cpp`.
+We can see that the file is written in C++, so the `lang` value should be `cpp`.
 
 The shortcode therefore is written like so:
 
-```
+```html
 {{</* snippet repo="frameworks/threadweaver" file="examples/HelloWorld/HelloWorld.cpp" part="sample-helloworld" lang="cpp" */>}}
 ```
 
@@ -187,29 +186,29 @@ The available colors are `info`, `success`, `warning`, and `error`.
 
 Usage suggestions:
 
-* Use `info` to display general information or additional content.
+* Use `info` to display general information or additional content:
 
-{{< alert title="Note" color="info" >}}
-Text you want to display in the alert.
-{{< /alert >}}
+  {{< alert title="Note" color="info" >}}
+  Text you want to display in the alert.
+  {{< /alert >}}
 
-* Use `success` to display advice or important pieces of information, such as tips or best practices.
+* Use `success` to display advice or important pieces of information, such as tips or best practices:
 
-{{< alert title="Tip" color="success" >}}
-Did you know that you can collapse the contents of an alert?
-{{< /alert >}}
+  {{< alert title="Tip" color="success" >}}
+  Did you know that you can collapse the contents of an alert?
+  {{< /alert >}}
 
-* Use `warning` to warn the reader that a certain action can have dangerous results if misused.
+* Use `warning` to warn the reader that a certain action can have dangerous results if misused:
 
-{{< alert title="Warning" color="warning" >}}
-Be careful with what you are doing here! You have been warned!
-{{< /alert >}}
+  {{< alert title="Warning" color="warning" >}}
+  Be careful with what you are doing here! You have been warned!
+  {{< /alert >}}
 
-* Use `error` to display content that is of very high importance.
+* Use `error` to display content that is of very high importance:
 
-{{< alert title="Important" color="error" >}}
-This WILL make your machine explode! 💣
-{{< /alert >}}
+  {{< alert title="Important" color="error" >}}
+  This WILL make your machine explode! 💣
+  {{< /alert >}}
 
 In cases where your alert is too long and might disrupt the flow of the text, you can make it collapsible using [Markdown's details summary](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections).
 
@@ -313,7 +312,7 @@ As a bonus, this improves readability.
 
 Images should be placed in a folder that has the same name as the Markdown file without the `.md` extension. This way, it is possible to link to the image without needing to specify its file path.
 
-```
+```txt
 installation/
     ├── _index.md
     ├── configuring.md  <-- Same name
@@ -330,7 +329,7 @@ Optionally, you can add alt text inside the brackets, e.g. `![Alternative text t
 
 If you need captions or need to position the image in a specific way, like in the horizontal center of the page, you may also use the [figure shortcode](https://gohugo.io/content-management/shortcodes/#figure):
 
-```
+```html
 {{</* figure class="text-center" caption="Caption of the image" alt="Alternative text" src="image.png" */>}}
 ```
 
@@ -394,18 +393,20 @@ An example of the compare shortcode can be seen in [Kirigami Tutorial: Actions b
 
 You can specify the language to be used to highlight code blocks written in Markdown by writing the language name after the three backticks, e.g.:
 
-    ```cmake
-    cmake -B build
-    cmake --build build
-    ```
+~~~markdown
+```cmake
+cmake -B build
+cmake --build build
+```
+~~~
 
 The most commonly used highlighting options are:
 
-* **c++**
-* **qml**
-* **cmake**
-* **python**
-* **ini**
+* `c++`
+* `qml`
+* `cmake`
+* `python`
+* `ini`
 
 ## Code formatting
 
@@ -417,7 +418,7 @@ Do not use tabs.
 
 Links to the [KDE API Documentation](https://api.kde.org) and the [Qt Documentation](https://doc.qt.io) can be generated as follows:
 
-```
+```markdown
 [text](docs:component;link)
 ```
 
@@ -431,8 +432,17 @@ Whenever you need to link to the main page for the documentation of a KDE compon
 
 If the component you want to link to wasn't added to `scripts/doxygen_integration.py` yet, add it to the file and execute `python3 scripts/doxygen_integration.py`. After running the script, make sure to add the generated JSON files in the `_data/` folder and commit them together with your MR.
 
-Examples:
- - `[AbstractCard](docs:kirigami2;AbstractCard)`
- - `[Kirigami.Units.devicePixelRatio](docs:kirigami2;Kirigami::Units::devicePixelRatio)`
- - `[KMessageBox](docs:kwidgetsaddons;KMessageBox)`
- - `[Label](docs:qtquickcontrols;QtQuick.Controls.Label)`
+### Examples
+
+ - ```markdown
+   [AbstractCard](docs:kirigami2;AbstractCard)
+   ```
+ - ```markdown
+   [Kirigami.Units.devicePixelRatio](docs:kirigami2;Kirigami::Units::devicePixelRatio)
+   ```
+ - ```markdown
+   [KMessageBox](docs:kwidgetsaddons;KMessageBox)
+   ```
+ - ```markdown
+   [Label](docs:qtquickcontrols;QtQuick.Controls.Label)
+   ```
