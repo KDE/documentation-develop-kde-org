@@ -59,7 +59,7 @@ Give an [urgency level](https://api.kde.org/frameworks/knotifications/html/class
 
 
 ## Task Manager badges and progress bars
-For infrequent yet long-running tasks, also display the completion percentage on the app's Task Manager background using the [com.canonical.Unity.LauncherEntry D-Bus interface](https://wiki.ubuntu.com/Unity/LauncherAPI#Low_level_DBus_API:_com.canonical.Unity.LauncherEntry). Only use this to show completion percentage for jobs and tasks the user has explicitly initiated.
+For infrequent yet long-running tasks, also display the completion percentage on the app's Task Manager background using [setBadgeNumber](https://doc.qt.io/qt-6/qguiapplication.html#setBadgeNumber) on your `QApplication`/`QGuiApplication`. Only use this to show completion percentage for jobs and tasks the user has explicitly initiated.
 
 Task Manager badges can also display a number using the [same D-Bus interface](https://wiki.ubuntu.com/Unity/LauncherAPI#Low_level_DBus_API:_com.canonical.Unity.LauncherEntry). This can be used to show a count of unread messages or open tasks. Only include actionable tasks in the number; users want to get rid of it!
 
