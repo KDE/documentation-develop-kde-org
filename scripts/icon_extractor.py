@@ -248,7 +248,7 @@ if __name__ == '__main__':
     localCachePath = os.environ.get('KDECI_CACHE_PATH', '/tmp')
     gitlabInstance = os.environ.get('KDECI_GITLAB_SERVER', 'https://invent.kde.org/')
     gitlabToken    = os.environ.get('KDECI_GITLAB_TOKEN')
-    packageProject = os.environ.get('KDECI_PACKAGE_PROJECT', 'teams/ci-artifacts/suse-qt6.6')
+    packageProject = os.environ.get('KDECI_PACKAGE_PROJECT', 'teams/ci-artifacts/suse-qt6.7')
 
     packageRegistry = Package.Registry(localCachePath, gitlabInstance, gitlabToken, packageProject)
 
