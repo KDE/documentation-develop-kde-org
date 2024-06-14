@@ -68,3 +68,18 @@ sudo chattr +i ~/kde/src
 ```
 
 Now you have write permissions to the folder, but you cannot delete it.
+
+## Specifying executable names when running
+
+In some modules, such as `discover`, the build process will result in an executable which does not match the module name. You may specify the executable using the `-e` flag:
+
+```bash
+kdesrc-build --run -e plasma-discover discover
+```
+
+Without this flag, attempting to run the application will result in an error similar to: 
+
+```
+Executable "discover" does not exist.
+Try to set executable name with -e option.
+```

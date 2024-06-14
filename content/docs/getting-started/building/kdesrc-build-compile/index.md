@@ -187,7 +187,7 @@ This will build just KConfig and install the needed build products into `~/kde/u
 
 ```bash
 kdesrc-build kcalc --no-src --no-include-dependencies --refresh-build
-kdesrc-run kcalc
+kdesrc-build --run kcalc
 ```
 
 ## Next Steps
