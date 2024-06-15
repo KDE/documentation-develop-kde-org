@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 01:44+0000\n"
-"PO-Revision-Date: 2024-06-13 19:03+0300\n"
+"PO-Revision-Date: 2024-06-14 23:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -2408,6 +2408,9 @@ msgid ""
 "modules API for ECMQmlModule](https://api.kde.org/ecm/module/ECMQmlModule."
 "html)."
 msgstr ""
+"Документацію з двох команд ECM можна знайти у [програмному інтерфейсі extra-"
+"cmake-modules для ECMQmlModule](https://api.kde.org/ecm/module/ECMQmlModule."
+"html)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:78
 msgid ""
@@ -2419,6 +2422,13 @@ msgid ""
 "files are run directly as part of the application, which is often the case "
 "for applications."
 msgstr ""
+"Виклик `ecm_add_qml_module()` тут було використано, щоб модифікувати "
+"традиційну ціль збирання початкового коду C++, виконуваний файл, і "
+"перетворити її на щось, що може приймати файли QML, і початковий код C++ "
+"буде доступним з QML у межах того, що називається [використання виконуваного "
+"файла як резервної цілі для модуля QML](https://doc.qt.io/qt-6/qt-add-qml-"
+"module.html#executable-as-a-qml-module). Це означає, що файли QML "
+"запускаються безпосередньо як частина програми, що часто буває для програм."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:80
 msgid ""
@@ -2432,6 +2442,17 @@ msgid ""
 "html) so it can generate two files: `qmldir` and `qmltypes`. These files are "
 "used by QtQuick applications to find separate QML modules."
 msgstr ""
+"Ви також можете створити окремий модуль QML, який не використовує "
+"виконуваний файл як резервну ціль, за допомогою `ecm_add_qml_module()`. У "
+"цьому випадку ви могли б створити ціль-бібліотеку з використанням "
+"[add_library()](https://cmake.org/cmake/help/latest/command/add_library."
+"html), скомпонувати її із наявною ціллю — виконуваним файлом — за допомогою "
+"`target_link_libraries()`, і на додачу до встановлення бібліотеки за "
+"допомогою `install()` вам довелося б створити остаточну версію модуля QML за "
+"допомогою [ecm_finalize_qml_module()](https://api.kde.org/ecm/module/"
+"ECMQmlModule.html), так, щоб він міг створити два файли: `qmldir` і "
+"`qmltypes`. Ці файли програми QtQuick використовують для пошуку окремих "
+"модулів QML."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:82
 msgid ""
@@ -2439,6 +2460,9 @@ msgid ""
 "[Using separate files](/content/docs/getting-started/kirigami/introduction-"
 "separatefiles)."
 msgstr ""
+"Спосіб створення окремого модуля QML краще описано у розділі щодо "
+"[використання окремих файлів](/content/docs/getting-started/kirigami/"
+"introduction-separatefiles)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:84
 msgid ""
@@ -2447,6 +2471,10 @@ msgid ""
 "application.html) (the [replacement to Qt resource files](https://doc.qt.io/"
 "qt-5/resources.html)) easier."
 msgstr ""
+"Ці доповнення, які містяться у extra-cmake-modules, призначено для спрощення "
+"використання [декларативної реєстрації Qt](https://doc.qt.io/qt-6.7/cmake-"
+"build-qml-application.html) ([заміни файлів ресурсів Qt](https://doc.qt.io/"
+"qt-5/resources.html))."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:88
 msgid ""
@@ -2464,6 +2492,9 @@ msgid ""
 "modules API for ECMQmlModule](https://api.kde.org/ecm/module/ECMQmlModule."
 "html)."
 msgstr ""
+"Документацію до усіх трьох команд ECM можна знайти у [програмному інтерфейсі "
+"extra-cmake-modules для ECMQmlModule](https://api.kde.org/ecm/module/"
+"ECMQmlModule.html)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:94
 msgid ""
@@ -2474,6 +2505,13 @@ msgid ""
 "separate your code by creating more QML modules with different imports as "
 "needed."
 msgstr ""
+"Наступного разу, коли вам буде потрібно додати файли QML, не забудьте "
+"включити їх до цього файла. Файли C++, які використовують ключове слово "
+"[QML_ELEMENT](https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html), "
+"які ми побачимо набагато пізніше у цьому підручнику, також можна додати саме "
+"тут за допомогою `target_sources()`. Якщо потрібно, ви можете логічно "
+"розділити ваш код створенням додаткових модулів QML із різними "
+"імпортуваннями."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
 msgid "This setup will be useful when developing most Kirigami apps."
@@ -2502,6 +2540,9 @@ msgid ""
 "whose appearance depends on where it is added. Typically it is a button with "
 "an icon and text."
 msgstr ""
+"[Kirigami.Action](docs:kirigami2;Action) складається із придатного до "
+"натискання пункту, вигляд якого залежить від того, де його додано. Типово, "
+"це кнопка із піктограмою та текстом."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:14
 msgid ""
@@ -2591,6 +2632,11 @@ msgid ""
 "them. In addition to that, they also have different representations for "
 "desktop and mobile."
 msgstr ""
+"Як вже було згадано у [вступі щодо дій](/docs/getting-started/kirigami/"
+"introduction-actions), Kirigami Actions є [контекстуальними](/docs/getting-"
+"started/kirigami/introduction-actions#actions-are-contextual), тобто їх буде "
+"показано у різних місцях, залежно від того, де ви їх розмістите. Крім того, "
+"вони матимуть різне представлення для робочих станцій та мобільних пристроїв."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:91
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:69
@@ -2602,6 +2648,9 @@ msgid ""
 "A [Kirigami.Page](docs:kirigami2;Page) shows Actions on the right of the top "
 "header in desktop mode, and on a footer in mobile mode."
 msgstr ""
+"[Kirigami.Page](docs:kirigami2;Page) показує пункти дій праворуч від "
+"верхнього заголовка у режимі робочої станції та на нижній панелі у режимі "
+"мобільного пристрою."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:99
 msgid "Page actions on the desktop"
@@ -2655,6 +2704,14 @@ msgid ""
 "page. You can read more about them in our [Kirigami Drawers](/docs/getting-"
 "started/kirigami/components-drawers) tutorial."
 msgstr ""
+"[Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer) складається з "
+"додаткового набору дій, які приховано за меню з трьох крапок у верхньому "
+"правому куті вікна у режимі робочої станції або у нижньому правому куті у "
+"режимі мобільного пристрою, якщо у вікні недостатньо місця. Його "
+"використовують для показу пунктів дій, які стосуються лише певної сторінки. "
+"Докладніше про такі висувні панелі можна прочитати у нашому [підручнику з "
+"висувних панелей Kirigami](/docs/getting-started/kirigami/components-"
+"drawers)."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:165
 msgid "ActionTextFields"
@@ -3480,6 +3537,10 @@ msgid ""
 "center which when toggled hides the \"Peekaboo\" inline drawer](/docs/"
 "getting-started/kirigami/components-controls/controls-togglebutton.webp)"
 msgstr ""
+"![Вікно, у якому міститься кнопка-перемикач «Приховати вбудовану висувну "
+"панель» у центрі. Якщо натиснути цю кнопку, програма приховає вбудовану "
+"висувну панель «Пікабу»](/docs/getting-started/kirigami/components-controls/"
+"controls-togglebutton.webp)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:117
 msgid ""
@@ -3522,6 +3583,11 @@ msgid ""
 "toolbutton \"Beep\" which is completely flat simulating a Kirigami.Action](/"
 "docs/getting-started/kirigami/components-controls/controls-toolbutton.webp)"
 msgstr ""
+"![Вікно, у якому показано нетипову панель інструментів у заголовку вікна, "
+"які імітує Kirigami.globalToolBar, із лівою піктограмою меню, яка показує "
+"пасивне сповіщення «Сторінки і дії Kirigami — кращі!», і правою кнопкою-"
+"інструментом «Дзинь», яка є повністю плоскою і імітує Kirigami.Action](/docs/"
+"getting-started/kirigami/components-controls/controls-toolbutton.webp)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:174
 msgid "Selection controls"
@@ -3810,6 +3876,9 @@ msgid ""
 "button with a checkmark icon](/docs/getting-started/kirigami/components-"
 "controls/controls-rangeslider.webp)"
 msgstr ""
+"![Вікно, у якому показано повзунок діапазону, піда яким розміщено декілька "
+"міток і кнопку з піктограмою позначки](/docs/getting-started/kirigami/"
+"components-controls/controls-rangeslider.webp)"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:0
 msgid "Dialog types"
@@ -3853,7 +3922,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:64
 msgid "![Simple dialog containing only text](dialog.webp)"
-msgstr ""
+msgstr "![Просте діалогове вікно, у якому міститься лише текст](dialog.webp)"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:70
 msgid ""
@@ -3862,20 +3931,27 @@ msgid ""
 "`standardButton(button)` to assign some behavior to it, like a binding to "
 "enable it only under certain conditions."
 msgstr ""
+"Як показано у [вступній частині підручника щодо діалогових вікон](/docs/"
+"getting-started/kirigami/introduction-dialogs), також можна захопити "
+"`standardButton(button)` для пов'язування з нею певної поведінки, зокрема "
+"прив'язкою її вмикання до певних умов."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:72
 msgid ""
 "This type of dialog is generic and applies to most use cases, and it works "
 "well with complex interactive content (especially views):"
 msgstr ""
+"Цей тип діалогових вікон є загальним і застосовним у більшості випадків. Він "
+"добре працює із складним інтерактивним вмістом (особливо, панелями "
+"перегляду):"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:101
 msgid "hints for the dialog dimensions"
-msgstr ""
+msgstr "підказки щодо розмірів діалогового вікна"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:125
 msgid "![A simple scrollable dialog](scrollabledialog.webp)"
-msgstr ""
+msgstr "![Просте діалогове вікно з гортанням](scrollabledialog.webp)"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:131
 msgid ""
@@ -3883,6 +3959,9 @@ msgid ""
 "types, [Kirigami.PromptDialog](docs:kirigami2;PromptDialog) or [Kirigami."
 "MenuDialog](docs:kirigami2;MenuDialog)."
 msgstr ""
+"Втім, у більшості випадків вам, ймовірно, варто скористатися одним із "
+"похідних типів діалогових вікон, [Kirigami.PromptDialog](docs:kirigami2;"
+"PromptDialog) або [Kirigami.MenuDialog](docs:kirigami2;MenuDialog)."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:133
 msgid "PromptDialog"
@@ -3896,6 +3975,12 @@ msgid ""
 "information. This type of dialog is supposed to be used only for simple yes/"
 "no prompts or brief requests for user input."
 msgstr ""
+"[Kirigami.PromptDialog](docs:kirigami2;PromptDialog) на базовому рівні є "
+"діалоговим вікном із вбудованою міткою та типовим [contentPadding](docs:"
+"kirigami2;PromptDialog::contentPadding), який використовують для надсилання "
+"користувачеві запиту щодо певної інформації. Вважається, що цей тип "
+"діалогових вікон використовується лише для простих запитів із відповіддю "
+"«так» чи «ні» або для коротких запитів із введенням тексту користувачем."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:137
 msgid ""
@@ -3905,18 +3990,25 @@ msgid ""
 "subtitle instead, and this can be explicitly specified with [Kirigami.Dialog."
 "mainItem](docs:kirigami2;Dialog::mainItem)."
 msgstr ""
+"Його головною властивістю є [Kirigami.Dialog.subtitle](docs:kirigami2;"
+"PromptDialog::subtitle). До неї ви маєте додати текст. Якщо як дочірній "
+"елемент діалогового вікна запиту буде додано будь-який компонент QML, цей "
+"компонент займе місце підзаголовка, і це можна явно вказати за допомогою "
+"[Kirigami.Dialog.mainItem](docs:kirigami2;Dialog::mainItem)."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:179
 msgid "![A simple prompt dialog containing only text](promptdialog.webp)"
 msgstr ""
+"![Просте діалогове вікно із запитом, у якому міститься лише текст]"
+"(promptdialog.webp)"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:246
 msgid "![A PromptDialog with a custom TextField](promptdialogtextfield.webp)"
-msgstr ""
+msgstr "![PromptDialog із нетиповим TextField](promptdialogtextfield.webp)"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:252
 msgid "MenuDialog"
-msgstr ""
+msgstr "MenuDialog"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:254
 msgid ""
@@ -3924,12 +4016,18 @@ msgid ""
 "that is used to list a selection of clickable options for the user using its "
 "[actions](docs:kirigami2;MenuDialog::actions) property."
 msgstr ""
+"[Kirigami.MenuDialog](docs:kirigami2;MenuDialog) — спеціалізоване діалогове "
+"вікно, яке використовують для показу користувачеві списку вибору з придатних "
+"до клацання пунктів з використанням властивості [actions](docs:kirigami2;"
+"MenuDialog::actions)."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:321
 msgid ""
 "![A simple MenuDialog listing actions like Play and Pause for media]"
 "(menudialog.webp)"
 msgstr ""
+"![Просте вікно MenuDialog зі списком дій, зокрема «Пуск» і «Пауза» для "
+"мультимедійних даних](menudialog.webp)"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:0
 msgid "Drawers"
@@ -4212,6 +4310,9 @@ msgid ""
 "to use this kind of drawer when you want a small list of options to appear "
 "on a long press or right click."
 msgstr ""
+"Цей тип висувної панелі є відкритим і гнучким, але загалом, ви можете "
+"скористатися тим типом висувної панелі, коли вам потрібно показати невеликий "
+"список пунктів при довгому натисканні або клацанні правою кнопкою миші."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:214
 msgid ""
@@ -4267,7 +4368,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:262
 msgid "Modal drawer not visible"
-msgstr ""
+msgstr "Модальна висувна панель є невидимою"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:264
 msgid "Modal drawer at the bottom edge of the screen"
@@ -4832,7 +4933,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:19
 msgid "Essentials of models and views"
-msgstr ""
+msgstr "Базові дані щодо моделей та панелей перегляду"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:21
 msgid "A list view has two essential properties we must pay attention to:"
@@ -4861,6 +4962,9 @@ msgid ""
 "will be wrapped in a Component so that it is reusable: it serves as a "
 "blueprint for how to instantiate each delegate."
 msgstr ""
+"Модель є невидимою, оскільки вона лише містить дані. Типово, делегат буде "
+"загорнуто до Component, щоб його можна було використати повторно: він слугує "
+"як шаблон того, як створити екземпляр кожного делегата."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:28
 msgid ""
@@ -4868,10 +4972,13 @@ msgid ""
 "delegate, using a [Kirigami.SubtitleDelegate](docs:kirigami2;"
 "SubtitleDelegate):"
 msgstr ""
+"Тут наведено приклад, який містить точно одну панель перегляду списку, одну "
+"модель та один делегат, з використанням [Kirigami.SubtitleDelegate](docs:"
+"kirigami2;SubtitleDelegate):"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:62
 msgid "And the exact same example, inline:"
-msgstr ""
+msgstr "І точно той самий приклад, вбудований:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:92
 msgid "Understanding models"
@@ -4882,6 +4989,9 @@ msgid ""
 "The model contains the data that will be used to populate the list view. "
 "Different ways to use models have different ways to access the data:"
 msgstr ""
+"Модель містить дані, які буде використано для заповнення панелі перегляду "
+"списку. Для різних способів використання моделей передбачено різні способи "
+"доступу до даних:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:96
 msgid "WAY TO USE"
@@ -4897,7 +5007,7 @@ msgstr "УМОВИ ВИКОРИСТАННЯ"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:98
 msgid "Qt models with more than one role"
-msgstr ""
+msgstr "Моделі Qt із декількома ролями"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:98
 msgid "model.index, model.somerole"
@@ -4905,23 +5015,23 @@ msgstr "model.index, model.somerole"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:98
 msgid "In most cases"
-msgstr ""
+msgstr "У більшості випадків"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "Qt models with one role"
-msgstr ""
+msgstr "Моделі Qt з однією роллю"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "model.index, model.somerole, model.modelData"
-msgstr ""
+msgstr "model.index, model.somerole, model.modelData"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "In most cases, for prototyping"
-msgstr ""
+msgstr "У більшості випадків для прототипізації"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 msgid "JavaScript array model"
-msgstr ""
+msgstr "Модель масиву JavaScript"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
@@ -4931,11 +5041,11 @@ msgstr "model.index, model.modelData"
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "For prototyping"
-msgstr ""
+msgstr "Для прототипізації"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "Integer model"
-msgstr ""
+msgstr "Цілочисельна модель"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:103
 msgid ""
@@ -4990,7 +5100,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:179
 msgid "This matches model.software"
-msgstr ""
+msgstr "Це відповідає model.software"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:186
 msgid ""
@@ -5011,7 +5121,7 @@ msgstr "Розбираємося із переглядами і делегата
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:246
 msgid "Let's go back to the original example:"
-msgstr ""
+msgstr "Повернімося до початкового прикладу:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:259
 #: content/docs/getting-started/kirigami/components-listview/index.md:391
@@ -5046,19 +5156,19 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:286
 msgid "Qt's [ListView](docs:qtquick;QtQuick.ListView)"
-msgstr ""
+msgstr "[ListView](docs:qtquick;QtQuick.ListView) Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:287
 msgid "Qt's [GridView](docs:qtquick;QtQuick.GridView)"
-msgstr ""
+msgstr "[GridView](docs:qtquick;QtQuick.GridView) Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:288
 msgid "Qt's [TableView](docs:qtquick;QtQuick.TableView)"
-msgstr ""
+msgstr "[TableView](docs:qtquick;QtQuick.TableView) Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:289
 msgid "Qt's [TreeView](docs:qtquick;QtQuick.TreeView)"
-msgstr ""
+msgstr "[TreeView](docs:qtquick;QtQuick.TreeView) Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:290
 msgid "Kirigami's [CardsListView](docs:kirigami2;CardsListView)"
@@ -5066,7 +5176,7 @@ msgstr "[CardsListView](docs:kirigami2;CardsListView) Kirigami"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:291
 msgid "Kirigami's [ColumnView](docs:kirigami2;ColumnView)"
-msgstr ""
+msgstr "[ColumnView](docs:kirigami2;ColumnView) Kirigami"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:293
 msgid ""
@@ -5606,11 +5716,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:68
 msgid "More code..."
-msgstr ""
+msgstr "Ще код…"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:71
 msgid "Model code..."
-msgstr ""
+msgstr "Код моделі…"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:76
 msgid "Search in the ListView"
