@@ -126,7 +126,7 @@ colors of that brand identity.
 The usage of Android brand colors helps users identify the icon as that
 of an Android package.
 {{< /do >}}
-{{< dont src="/hig/mime-fg-dont.png" >}}
+{{< dont src="/hig/mime-color-dont.png" >}}
 Don't use radically different brand colors---users will not recognise the
 icon as one of a filetype from that brand.
 {{< /dont >}}
