@@ -34,7 +34,7 @@ Ensure that failures originating with 3rd-party software or web services are com
 
 
 ## Color
-Anything colorful will stand out visually, so use it strategically to attract the user's attention. Don't overdo it! When many UI elements are colorful, the user's attention will be pulled in multiple directions. Use color sparingly.
+Anything colorful will stand out visually, so use it strategically to attract the user's attention. Don't overdo it; when many UI elements are colorful, the user's attention will be pulled in multiple directions.
 
 - [HighlightedTextColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#aaaa6079586261ff972afaa8d3495c66d)/[HighlightColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#a2bd2ec37029686d63963d9a686889469) color (blue by default): highlighted list or grid items, checked controls, benign and ignorable text
 - [NeutralTextColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#a0fff6168eb9642a245dfbc7cb7964350)/[NeutralBackgroundColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#a6eaafd30163a444f173cd82fc1356847) (orange by default): warning or alert text/areas, non-default settings states
