@@ -7,8 +7,31 @@
  */
 
 // Search
-.td-search-input {
-  font-family: "icons", "Noto Sans"
+.td-search {
+  position: relative;
+  width: 100%;
+
+  // Search icon
+  &__icon {
+    // Vertically center the content.
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    // Position this on the left of the input.
+    position: absolute;
+    left: 0.5rem;
+
+    // Click-through to the underlying input.
+    pointer-events: none;
+  }
+
+  // Search input element
+  &__input {
+    width: 100%;
+    text-indent: 1.5em;
+  }
 }
 
 .popover.offline-search-result {
@@ -17,5 +40,14 @@
 
   .card {
     margin-bottom: $spacer * .5;
+  }
+
+  @media(prefers-color-scheme: dark) {
+    background-color: $black;
+    border: 1px solid $gray-300 !important;
+
+    .popover-body {
+      color: #fff;
+    }
   }
 }

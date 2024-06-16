@@ -120,7 +120,7 @@
                     )
                     .append(
                         $('<i>')
-                            .addClass('fas fa-times search-result-close-button')
+                            .addClass('icon icon_paint-none search-result-close-button p-1')
                             .css({
                                 cursor: 'pointer',
                             })
@@ -175,7 +175,7 @@
             });
 
             $targetSearchInput
-                .data('content', $html[0].outerHTML)
+                .data('content', $html[0])
                 .popover('show');
         };
     });

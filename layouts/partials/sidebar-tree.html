@@ -4,7 +4,7 @@
   {{ if not .Site.Params.ui.sidebar_search_disable }}
   <form class="td-sidebar__search d-flex align-items-center">
     {{ partial "search-input.html" . }}
-    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 m-0 icon icon_application-menu" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-2 m-0 flex-shrink-0 icon icon_application-menu" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
   {{ end }}
