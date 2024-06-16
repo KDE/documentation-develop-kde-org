@@ -87,11 +87,11 @@ Only use a tree view in an app meant for technical users where the content being
 
 
 ## Inline help and tooltips
-Sometimes complex features require explanation, even for experts. If the text is important for the user to understand and can be kept to the length of a brief sentence, place it inline below the control it affects:
+Sometimes complex features require explanation, even for experts. If the text is important for the user to understand and can be kept to the length of a brief sentence, place it inline below the control it affects.
 
 <!-- TODO: Picture of the single/double click setting -->
 
-If it requires up to two sentences and can broadly describe a whole page's worth of content, place the text inline, at the top of the page:
+If it requires up to two sentences and can broadly describe a whole page's worth of content, place the text inline, at the top of the page.
 
 <!-- TODO: Picture of the Night Color explanation -->
 
