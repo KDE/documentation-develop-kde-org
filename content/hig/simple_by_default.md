@@ -17,7 +17,7 @@ Examples of guided workflows:
 
 - In a content creation app, show a blank canvas if it's obvious how to add content to it. This works well in writing and artistic apps. If the content created in the app is more complex than an untrained user would understand (e.g circuit design or 3D modeling), prompt the user to go through a tutorial or new content creation wizard so they can get up to speed quickly.
 - In a content consumption app, show a placeholder message to open a file, point to a folder full of files, or otherwise get the user's content into the app. If there are no privacy concerns, show a list or grid of recently-accessed content.
-- In an app like a chat or email client that's largely a front-end for an online service, show a placeholder message briefly introducing the service and prompting the user to log into their account for it, or create one. Remember the account's credentials using [KWallet](https://api.kde.org/frameworks/kwallet/html/classKWallet_1_1Wallet.html) and log the user in automatically on subsequent launches.
+- In an app like a chat or email client that's largely a front-end for an online service, show a placeholder message briefly introducing the service and prompting the user to log in to their account for it, or create one. Remember the account's credentials using [KWallet](https://api.kde.org/frameworks/kwallet/html/classKWallet_1_1Wallet.html) and log the user in automatically on subsequent launches.
 - In a utility app, show the UI for the primary function as simply and obviously as possible without making the user configure anything or hunt for the “do it” button.
 
 Use [Kirigami.PlaceholderMessage](https://develop.kde.org/docs/getting-started/kirigami/components-scrollablepages_listviews/#placeholdermessage) to display placeholder messages in empty views. Include an icon, explanation text, and ideally a [helpfulAction](https://api.kde.org/frameworks/kirigami/html/classorg_1_1kde_1_1kirigami_1_1PlaceholderMessage.html#a24e24f7bc94d7bd0ddb6cc708d454c22) button the user can click on to proceed or add content to the view.
@@ -80,9 +80,9 @@ Guide the user towards making good decisions, and either prevent them from makin
 
 The easier something is to remove from the app, the easier it should be to get it back. Use menus or sub-pages to hide features that destroy data or difficult-to-restore content so they can't be triggered by a stray click, or else use a confirmation dialog. Move files to the trash, don't delete them immediately.
 
-Offer an undo for every action that removes content not trivial to re-add. For cases requiring immediate deletion, employ a deferred deletion approach by postponing underlying delete operation until after the user has dismissed the option to undo it.
+Offer an undo for every action that removes content not trivial to re-add. For cases requiring immediate deletion, employ a deferred deletion approach by postponing the underlying delete operation until after the user has dismissed the option to undo it.
 
-Make the UI for undo actions dismissable and non-modal so it doesn't annoy the user. A [Kirigami.PassiveNotification](https://api.kde.org/frameworks/kirigami/html/classAbstractApplicationWindow.html#a8ab455ab09378a016c34f467653760e5) automatically disappears after a few seconds, and is good for cases where losing the option to undo is not catastrophic. [Kirigami.InlineMessage](https://develop.kde.org/docs/getting-started/kirigami/components-inlinemessages/) does not disappear automatically and is better for truly destructive actions such as deleting files.
+Make the UI for undo actions dismissable and non-modal so it doesn't annoy the user. A [Kirigami.PassiveNotification](https://api.kde.org/frameworks/kirigami/html/classAbstractApplicationWindow.html#a8ab455ab09378a016c34f467653760e5) automatically disappears after a few seconds, and is good for cases where losing the option to undo is not catastrophic. A [Kirigami.InlineMessage](https://develop.kde.org/docs/getting-started/kirigami/components-inlinemessages/) does not disappear automatically and is better for truly destructive actions such as deleting files.
 
 Finally, use [standard iconography for destructive actions]({{< relref "icons/#icons-for-destructive-actions" >}}).
 
@@ -93,6 +93,6 @@ Always remember the window size and position (on X11) when your app is re-opened
 In many apps, it also makes sense to remember the active view, set of open files, and scroll positions within documents. For example:
 
 - In large project-based apps where re-creating the project state is time-consuming.
-- In file-based apps where the user is likely to continue using the same file over multiple  multiple sessions (e.g. a word processor or spreadsheet app).
+- In file-based apps where the user is likely to continue using the same file over multiple sessions (e.g. a word processor or spreadsheet app).
 
 Don't remember state and open files in small utility apps or apps where the user is likely to open a different one every time they use it—for example video players and PDF document viewers. In such apps, instead show the user a list or grid of recently-opened files generated using [KRecentDocument](https://api.kde.org/frameworks/kio/html/classKRecentDocument.html) so they can quickly return to them if needed. When allowing the user to open files in ways that bypass the standard Open dialog, manually add them to the recent files list using `KRecentDocument`.
