@@ -72,7 +72,7 @@ Menubar                      | Above the toolbar         | Hamburger menu button
 Navigation tab bar           | Above the content area    | Below the content area
 Status Bar                   | Below the content area    | Omitted
 
-[Kirigami.GlobalDrawer](https://develop.kde.org/docs/getting-started/kirigami/components-drawers/#global-drawer) is a useful component for convergent apps. It looks like a standard sidebar, and can be made always visible in widescreen/desktop mode, and pulled out on-demand in narrow/mobile mode. [Kirigami.ContextDrawer](https://develop.kde.org/docs/getting-started/kirigami/components-drawers/#context-drawers) is the same but for contextual actions relevant only for individual pages.
+[Kirigami.GlobalDrawer](https://develop.kde.org/docs/getting-started/kirigami/components-drawers/#global-drawer) is a useful component for convergent apps. It looks like a standard sidebar, and can be made always visible in widescreen/desktop mode by setting `modal: false`. In narrow/mobile mode, users pull it out on demand. [Kirigami.ContextDrawer](https://develop.kde.org/docs/getting-started/kirigami/components-drawers/#context-drawers) is the same but for contextual actions relevant only for individual pages.
 
 Desktop/laptop apps can be adapted to work on tablets and 2-in-1 laptops in tablet mode by enlarging small UI elements and hiding menubars. Phones (even large ones) need an optimized mobile UI; do not just scale down a desktop UI.
 
@@ -131,11 +131,11 @@ Strive to minimize navigation as a chore for users to succeed at before they can
 
 Linear navigation work works well for apps that have a step-by-step workflow with clear starting and ending points. Use the standard [PageStack](https://develop.kde.org/docs/getting-started/kirigami/components-pagerow_pagestack/) mechanism built into Kirigami for this navigation model, with breadcrumbs and back/forward buttons in the toolbar for navigation.
 
-For apps with multiple destinations not arranged in a linear flow, implement a dedicated navigational control to let the user jump from one destination to another. With 5 or fewer destinations, use a [Kirigami.NavigationTabBar](https://api.kde.org/frameworks/kirigami/html/classNavigationTabBar.html). On mobile, always locate it below the content area so it's thumb-reachable.
+For apps with multiple destinations not arranged in a linear flow, implement a dedicated navigational control to let the user jump from one destination to another. With 5 or fewer destinations, use a [Kirigami.NavigationTabBar](https://api.kde.org/frameworks/kirigami/html/classNavigationTabBar.html).
 
 <!-- TODO: Picture of KClock -->
 
-Otherwise, use a [Kirigami.GlobalDrawer](https://api.kde.org/frameworks/kirigami/html/classGlobalDrawer.html) to display the navigation destinations. On the desktop, make it always-visible as a sidebar by setting `modal: false`.
+Otherwise, use a [Kirigami.GlobalDrawer](https://api.kde.org/frameworks/kirigami/html/classGlobalDrawer.html) to display the navigation destinations.
 
 <!-- TODO: Picture of Discover or Elisa -->
 
