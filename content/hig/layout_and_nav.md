@@ -167,7 +167,7 @@ In addition to layout objects reversing their horizontal positioning, make sure 
 
 Manually reverse any custom controls that show progress of directionality—for example star-rating widgets or sliders with custom visual styling.
 
-When using icons that indicate directionality or depict layouts or textual elements, use the reversed versions have `-rtl` suffixes. Examples include back and forward icons, undo/revert icons, volume icons, and icons depicting things like “close the left sidebar.”
+When using icons that indicate directionality or depict layouts or textual elements, use the reversed versions that are suffixed with `-rtl`. Examples include back and forward icons, undo/revert icons, volume icons, and icons depicting things like “close the left sidebar.”
 
 Don't mirror images.
 
