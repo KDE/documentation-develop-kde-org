@@ -46,7 +46,7 @@ Put spaces around [em-dashes](https://www.merriam-webster.com/grammar/em-dash-en
 
 
 ## Acronyms
-Avoid the use of acronyms, as many users will not know what they mean. Only use an acronym when you have to use the same term multiple times and can expand its acronym form once.
+Avoid the use of acronyms, as many users will not know what they mean. Only use an acronym when you have to use the same term multiple times and can explain the acronym the first time you use it.
 
 This guideline does not apply to highly technical software where the user is expected to be familiar with common terminology, but this is an exception, not the rule.
 
