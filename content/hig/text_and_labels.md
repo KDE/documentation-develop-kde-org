@@ -46,11 +46,16 @@ Put spaces around [em-dashes](https://www.merriam-webster.com/grammar/em-dash-en
 
 
 ## Acronyms
-Avoid the use of acronyms, as many users will not know what they mean. Only use an acronym when you have to use the same term multiple times and can explain the acronym the first time you use it.
+Avoid the use of acronyms, as many users will not know what they mean. Only use an acronym when you have to display the same term multiple times and can explain the acronym the first time it's seen. Strive to use human-readable words instead of acronyms — even those you might assume are commonly understood, for example:
 
-This guideline does not apply to highly technical software where the user is expected to be familiar with common terminology, but this is an exception, not the rule.
+- PC → System/Computer
+- OS → Operating system
+- URL → Link
+- RAM → Memory
 
-When you do use an acronym, capitalize all the letters (e.g. “URL”).
+This guideline does not apply to functionality only ever referred to via its acronym (e.g “USB”), or in highly technical software where the user is expected to be familiar with common terminology. These are exceptions, not the rule.
+
+When you do use an acronym, capitalize all the letters.
 
 
 ## Mood
