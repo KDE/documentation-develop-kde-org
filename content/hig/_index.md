@@ -38,3 +38,7 @@ This document is not intended to be an ironclad law code. By learning and follow
 This is a living document, intended to be updated over time to reflect current KDE design trends and best practices. Contributions are welcome!
 
 Content is written in [Markdown](https://commonmark.org/help/), and the source files are hosted in a [Git repository](https://invent.kde.org/documentation/develop-kde-org.git). To quickly edit a page, the GitLab editor can be opened on any page with the “Edit this page” button in the drawer on the right. Tasks and changes are organized via https://invent.kde.org. To learn how to submit changes, see the [README file](https://invent.kde.org/documentation/develop-kde-org/-/blob/master/README.md).
+
+
+## Read the guidelines
+Click on any of these tiles to jump to a page:
