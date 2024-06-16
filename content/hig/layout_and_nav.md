@@ -57,7 +57,7 @@ Size of icons in list items with subtitles                                      
 
 
 ## Common layouts and responsiveness
-KDE apps commonly consist of layout elements such a main content area, a sidebar used for navigation, a toolbar displaying actions contextually relevant to what's shown in the content view, a menu of globally-scoped actions, and more.
+KDE apps commonly consist of layout elements such as main content area, a sidebar used for navigation, a toolbar displaying actions contextually relevant to what's shown in the content view, a menu of globally-scoped actions, and more.
 
 These layout elements must adapt fluidly to diverse screen sizes and window shapes. Even on the desktop, users may resize your app's window to be small and narrow. Adapt the app's window content in sane and sensible ways when maximized, tiled, or otherwise used at a different size or shape than how it was originally designed.
 
