@@ -175,6 +175,21 @@ In that case, you can avoid building a project by using the `--ignore-modules` f
 kdesrc-build kcalc --ignore-modules gpgme
 ```
 
+### Specifying executable names when running
+
+In some modules, such as `discover`, the build process will result in an executable which does not match the module name. You may specify the executable using the `-e` flag:
+
+```bash
+kdesrc-build --run -e plasma-discover discover
+```
+
+Without this flag, attempting to run the application will result in an error similar to:
+
+```
+Executable "discover" does not exist.
+Try to set executable name with -e option.
+```
+
 ### Running an application after making changes to one of its dependencies
 
 Let's say you want to make a change to the KConfig library that should change a behavior in KCalc. In this case, you don't want kdesrc-build to discard your changes to KConfig. So first build KConfig separately, on its own, without doing a source code update:
