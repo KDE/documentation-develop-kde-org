@@ -134,12 +134,12 @@ For search fields, use [Kirigami.SearchField](https://api.kde.org/frameworks/kir
 ## Translation
 Many or even most users won't be using your software in English, so keep translatability in mind:
 
-- Don't use internet memes or culture-specific colloquialisms, expressions, and references.
-- Respect system-wide locale settings for units, date and time formats, etc.
 - Leave enough room in your UI for strings to become 50% longer or more when translated into languages with longer text than English.
+- Respect system-wide locale settings for units, date and time formats, etc.
 - Use the [i18nc()](https://api.kde.org/frameworks/ki18n/html/prg_guide.html#good_ctxt) function to provide translation context to your strings, and use [KUIT markup](https://api.kde.org/frameworks/ki18n/html/prg_guide.html#kuit_tags) instead of HTML.
 - Use the [i18ncp()](https://api.kde.org/frameworks/ki18n/html/prg_guide.html#gen_usage) function for any text that refers to a number, as plurals are handled differently in different languages.
 - Test your app in right-to-left mode by running it in Arabic with `LANGUAGE=ar_AR [app_executable]`. Even if you can't read the words, make sure everything has reversed properly and there's enough room for the text.
+- Don't use internet memes or culture-specific colloquialisms, expressions, and references.
 
 
 ## Brand names
