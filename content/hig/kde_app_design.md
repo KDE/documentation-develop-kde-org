@@ -17,7 +17,7 @@ aliases:
 
 Together these characteristics embody KDE's central principle: **Simple by default, powerful when needed**. A KDE app's target user group therefore stretches from people with basic technical knowledge all the way to experts and professionals.
 
-Users of KDE apps can be expected to be familiar with common user interface design patterns (windows, buttons, menus, list views and tab views, etc.) and able to perform tasks such as searching for data that isn't immediately visible, or writing an email reply to multiple people. Users below this still level are generally de-prioritized. Don't be afraid to pick your users.
+Users of KDE apps can be expected to be familiar with common user interface design patterns (windows, buttons, menus, list views and tab views, etc.) and able to perform tasks such as searching for data that isn't immediately visible, or writing an email reply to multiple people. Users below this skill level are generally de-prioritized. Don't be afraid to pick your users.
 
 ## Development technologies
 
