@@ -107,11 +107,11 @@ Small or focused apps often need no menu structures at all, because all of their
 
 In small- and medium-sized apps, it's common for a curated set of globally-scoped actions to be visible in a “hamburger menu:” a menu that appears when clicking on a button located on the app's toolbar with the `application-menu-symbolic` icon. Its contents are static and globally-scoped, with contextually irrelevant items disabled rather than being hidden.
 
-Only show a hamburger menu by default if its contents can be kept to about 15 items or fewer. Don't put standard app and window management actions like “Quit” and “Minimize” in a hamburger menu.
+Don't put standard app and window management actions like “Quit” and “Minimize” in a hamburger menu.
 
 <!-- TODO: Picture of medium-sized app with hamburger menu like Dolphin -->
 
-In very powerful and complex desktop apps, a hamburger menu is insufficient, so instead place a real menubar between the titlebar and toolbar. Like the hamburger menu, its contents are static and disabled when not relevant, rather than hidden. The major difference is that the menubar shows all possible actions in the app, so users can access any of them at any time.
+Only show a hamburger menu by default if its contents can be kept to about 15 items or fewer. If you are tempted to add more than this, a hamburger menu is the wrong UI element for your app; instead place a real menubar between the titlebar and toolbar. Like the hamburger menu, its contents are static and disabled when not relevant, rather than hidden. The major difference is that the menubar shows all possible actions in the app, so users can access any of them at any time.
 
 <!--TODO: Picture of large app with big menu like Okular or Merkuro -->
 
