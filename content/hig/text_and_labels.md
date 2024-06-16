@@ -104,13 +104,13 @@ CMakeLists.txt - app
 
 For dialog titles, describe the action being performed starting with an imperative mood verb, just like button and menu item labels. If the dialog was opened from a button or menu item, echo its label in the dialog title.
 
-**Good:** Save… -> Save File
+**Good:** Save… → Save File
 
-**Good:** Properties -> Properties for \[file name\]
+**Good:** Properties → Properties for \[file name\]
 
-**Bad:** Load… -> Open File
+**Bad:** Load… → Open File
 
-**Bad:** About \[app name\]-> Details
+**Bad:** About \[app name\]→ Details
 
 
 ## Line length

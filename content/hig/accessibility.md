@@ -59,13 +59,13 @@ Avoid implicit references to or assumptions about the user with respect to:
 
 ### Negative language
 Prefer neutral language over language referencing death, violence, crime, prejudice, stereotypes, or evil history. For example:
-- Kill -> Close
-- Execute -> Run
-- Abort -> Exit
-- Fatal -> Critical, major
-- End of life -> End of support
-- Force -> Require
-- Illegal -> Unauthorized
-- Crippled, gimped -> Broken, nonfunctional
-- Slave -> Worker, job
-- Wiped out -> Cleared
+- Kill → Close
+- Execute → Run
+- Abort → Exit
+- Fatal → Critical, major
+- End of life → End of support
+- Force → Require
+- Illegal → Unauthorized
+- Crippled, gimped → Broken, nonfunctional
+- Slave → Worker, job
+- Wiped out → Cleared
