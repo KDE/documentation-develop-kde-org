@@ -141,7 +141,7 @@ Otherwise, use a [Kirigami.GlobalDrawer](https://api.kde.org/frameworks/kirigami
 
 <!-- TODO: picture of some PlaMo compatible app with a navigation sidebar or something -->
 
-Regardless of which navigational control is used, on the desktop place the most important or commonly-accessed destinations in the top/leading position. On mobile, place them on the bottom to maintain optimal thumb-reachability.
+Regardless of which navigational control is used, ensure that the view your app shows at launch is represented as its first item so users can easily get there again.
 
 
 ## Tools and functionality
