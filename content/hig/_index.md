@@ -29,7 +29,7 @@ Design involves targeted decisions and trade-offs that bring a project closer to
 
 
 ## Topics not covered
-This document is a set of design guidelines, not instructions for implementing every specific component. While some technical guidance will be provided, much more detail can be found in components' own [usage](https://develop.kde.org/docs/) and [API](https://api.kde.org/) documentation as well as the [source code of existing KDE apps](https://invent.kde.org/explore/groups?sort=name_asc). It's more of a *what* and a *why*, not a *how*.
+This document is a set of design guidelines, not instructions for implementing every specific component. While some technical guidance will be provided, much more detail can be found in the components' own [usage](https://develop.kde.org/docs/) and [API](https://api.kde.org/) documentation as well as the [source code of existing KDE apps](https://invent.kde.org/explore/groups?sort=name_asc). It's more of a *what* and a *why*, not a *how*.
 
 This document is not intended to be an ironclad law code. By learning and following the rules, you'll understand how to safely innovate within the guidelines, and when it can be appropriate to break them if it produces a superior result.
 
