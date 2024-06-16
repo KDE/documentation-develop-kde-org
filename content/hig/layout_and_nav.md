@@ -105,7 +105,7 @@ Small or focused apps often need no menu structures at all, because all of their
 
 <!--TODO: Picture of a focused app like Spectacle -->
 
-In medium-sized apps, it's common for a small number of globally-scoped actions to be visible in a “hamburger menu:” a menu that appears when clicking on a button with the `application-menu-symbolic` icon that's located on the app's toolbar. Its contents are static and globally-scoped, with contextually irrelevant items disabled rather than being hidden.
+In small- and medium-sized apps, it's common for a curated set of globally-scoped actions to be visible in a “hamburger menu:” a menu that appears when clicking on a button located on the app's toolbar with the `application-menu-symbolic` icon. Its contents are static and globally-scoped, with contextually irrelevant items disabled rather than being hidden.
 
 Only show a hamburger menu by default if its contents can be kept to about 15 items or fewer. Don't put standard app and window management actions like “Quit” and “Minimize” in a hamburger menu.
 
