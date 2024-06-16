@@ -19,14 +19,14 @@ Strive to prevent error messages by keeping the user from entering an error or f
 
 See the following table for how to express errors to the user, in decreasing order of preference:
 
-Message type                                                        | When to use
---------------------------------------------------------------------|-------------
-No error message because the error condition is made impossible     | Always preferred
-Description of what went wrong with some kind of of “Fix it” button | When the “Fix it” action is not universally desirable or has consequences the user must be notified about
-Description of what went wrong and how the user can proceed         | When it's technically infeasible to offer a “Fix it” action
-Only a description of what went wrong                               | Never
-Only technical gibberish                                            | Never ever
-Silent failure                                                      | Never ever ever
+Message type                                                                        | When to use
+------------------------------------------------------------------------------------|-------------
+None; the error condition is made impossible or the software recovers automatically | Always preferred
+Description of what went wrong with some kind of of “Fix it” button                 | When the “Fix it” action is not universally desirable or has consequences the user must be notified about
+Description of what went wrong and how the user can proceed                         | When it's technically infeasible to offer a “Fix it” action
+Only a description of what went wrong                                               | Never
+Only technical gibberish                                                            | Never ever
+Silent failure                                                                      | Never ever ever
 
 **All error messages must be actionable.** Tell the user in plain language what happened and what they can do to either fix it, or at least move forward somehow. Be explicit and don't assume knowledge of the system's inner workings or support resources! For example, if you expect the user to visit a support forum or submit a bug report, show a link to the appropriate location into the UI displaying the error message.
 
