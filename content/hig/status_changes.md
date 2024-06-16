@@ -71,7 +71,7 @@ System Tray icons can be annoying to users, who generally expect apps to quit wh
 - Task Manager progress bars and system notifications can show job progress.
 - System notifications can display new messages and status changes.
 
-If your app runs primarily as a background service with any UI or window  being of secondary importance, consider writing a Plasma widget instead of a standalone app.
+If your app runs primarily as a background service with any UI or window  being of secondary importance, consider writing a [Plasma Widget]({{< relref "widget" >}}) instead of a standalone app.
 
 Only implement System Tray icons as a last resort, and always follow these rules:
 
