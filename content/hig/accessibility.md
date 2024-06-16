@@ -7,7 +7,7 @@ aliases:
 ---
 
 ## Accessibility
-Following this guide will already give you an app that's quite accessible. Nonetheless, it's important to test your app in a way that simulates impairments you may not possess yourself. Use the following techniques:
+Following this guide will give you an app that's already quite accessible. Nonetheless, it's important to test your app in a way that simulates sensitivities or impairments you may not possess yourself. Use the following techniques:
 
 ### Keyboard
 Unplug your mouse or disable your touchpad and attempt to interact with every UI element solely with the keyboard. Make sure the item with default focus makes sense, and each item with active focus looks visibly different from selected items in inactive views. Make sure no truly important text is only seen in a hover tooltip.
