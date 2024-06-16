@@ -40,7 +40,7 @@ Group related items together by reducing the spacing between them, and increasin
 ## Spacings and sizes
 Use the Kirigami [standard units](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1Units.html) consistently:
 
-Item                                                                                  | Spacing
+Item                                                                                  | Value to use
 --------------------------------------------------------------------------------------|--------------------------
 Spacing between title and subtitle text                                               | 0
 Spacing between title/subtitle groups and other content below them                    | `smallSpacing`
