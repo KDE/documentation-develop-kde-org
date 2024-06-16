@@ -44,7 +44,7 @@ Don't rely on color alone to convey meaning or invite action; also use different
 
 
 ## In-app notifications
-While your app is running and its main window is in the foreground, avoid sending system notifications, as they can appear where the user is not looking. Instead use one of the following:
+Avoid sending system notifications while your app's main window is in the foreground, as they can appear where the user is not looking. Instead use one of the following:
 
 - For ignorable or low-importance messages, use [Kirigami.PassiveNotification](https://api.kde.org/frameworks/kirigami/html/classAbstractApplicationWindow.html#a8ab455ab09378a016c34f467653760e5).
 - For messages that should get the user's attention but not interrupt their current task, add a [Kirigami.InlineMessage](https://develop.kde.org/docs/getting-started/kirigami/components-inlinemessages/). If the message's scope is specific to the whole page or application, add it into the page header with the [position](https://api.kde.org/frameworks/kirigami/html/classorg_1_1kde_1_1kirigami_1_1templates_1_1InlineMessage.html#a2711f84c2a4c7f984a0be88cd4e95596) property set to `InlineMessage.Position.Header`.
