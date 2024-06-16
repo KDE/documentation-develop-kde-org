@@ -65,7 +65,7 @@ Task Manager badges can also display a number using the [same D-Bus interface](h
 
 
 ## System Tray icons
-System Tray icons can be annoying to users, who generally expect apps to quit when their windows are closed. The status monitoring functions that are typically provided by System Tray icons are better implemented with deeper system integration:
+System Tray icons can be annoying to users, who generally expect apps to quit when their windows are closed. The status monitoring functions typically provided by System Tray icons are better implemented with deeper system integration:
 
 - Task Manager badges can show a count of unread messages.
 - Task Manager progress bars and system notifications can show job progress.
