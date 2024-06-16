@@ -46,12 +46,12 @@ Spacing between title and subtitle text                                         
 Spacing between title/subtitle groups and other content below them                    | `smallSpacing`
 Spacing between other directly related items, or controls sharing a logical group     | `smallSpacing`
 Spacing between groups of controls or text                                            | `largeSpacing`
-Size of icons paired with labels (e.g. in menu items, toolbar buttons, or list items) | `IconSizes.sizeForLabels`
 Spacing between items in a toolbar (e.g. buttons and text fields)                     | `mediumSpacing`
 Padding between window/page edges and “frameless" container views                     | 0
 Padding between window/page edges and all other UI elements                           | `largeSpacing`
 Corner radius for rounded UI elements                                                 | `cornerRadius`
 Fixed-size UI elements, including default and minimum window sizes                    | `gridUnit` multiplied as needed
+Size of icons paired with labels (e.g. in menu items, toolbar buttons, or list items) | `IconSizes.sizeForLabels`
 
 
 ## Common layouts and responsiveness
