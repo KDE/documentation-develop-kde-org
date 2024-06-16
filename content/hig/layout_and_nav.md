@@ -145,9 +145,9 @@ Regardless of which navigational control is used, on the desktop place the most 
 
 
 ## Tools and functionality
-When a content view needs controls specific to it that for some reason cannot be provided by the main toolbar, place them in a secondary toolbar in the page header:
+When a content view needs controls specific to it that for some reason cannot be provided by the main toolbar, place them in a secondary toolbar underneath the main toolbar.
 
-<!-- TODO: Picture of Elisa -->
+<!-- TODO: Picture of Elisa and Okular (showing annotation toolbar) -->
 
 Many KDE apps also feature auxiliary “Contextual Toolviews.” These can show previews or information about what's displayed or selected in the main content area, or extra tools to interact with it.
 
