@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 01:44+0000\n"
-"PO-Revision-Date: 2024-06-14 23:24+0300\n"
+"PO-Revision-Date: 2024-06-15 20:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -5065,6 +5065,12 @@ msgid ""
 "models to QML using QAbstractListModel](/docs/getting-started/kirigami/"
 "advanced-connect_models)."
 msgstr ""
+"У наведеній вище таблиці «Моделі Qt» означають і C++-специфічні моделі, "
+"подібні до [QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel."
+"html), і QML-специфічні моделі, зокрема ListModel. На цій сторінці "
+"підручника акцент зроблено на QML-специфічних моделях. Далі ми наведемо "
+"настанови щодо [з'єднання моделей C++ із QML за допомогою QAbstractListModel]"
+"(/docs/getting-started/kirigami/advanced-connect_models)."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:107
 msgid ""
@@ -5072,6 +5078,9 @@ msgid ""
 "index (the position) of each delegate. It can be shortened to `index` for "
 "convenience."
 msgstr ""
+"Властивість `model.index` зроблено доступною для будь-якої моделі. Вона "
+"містить індекс (позиція) кожного делегата. Її можна скоротити до `index` для "
+"зручності."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:109
 msgid ""
@@ -5082,6 +5091,13 @@ msgid ""
 "roles, which can be accessed with `model.product` and `model.target`, "
 "respectively."
 msgstr ""
+"Властивість `model.якась_роль`, про яку ми згадували вище, є лише "
+"замінником. Це не специфічна властивість, яка надходить від QML: записом "
+"`якась_роль` може бути будь-яка роль, яку визначено моделлю. У першому "
+"прикладі коду на цій сторінці, який показано над таблицею, "
+"модель`plasmaProductsModel` містить ролі `product` і `target`, доступ до "
+"яких можна здійснювати за допомогою `model.product` і `model.target`, "
+"відповідно."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:111
 msgid ""
@@ -5089,6 +5105,10 @@ msgid ""
 "property can be shorted to just `somerole` (like `product`) for convenience, "
 "but it is recommended that they be turned into required properties:"
 msgstr ""
+"Так само, як `model.index` можна скоротити до `index`, кожну властивість "
+"`model.якась_роль` можна скоротити до простого `якась_роль` (наприклад, "
+"`product`) для зручності, але рекомендуємо перетворювати їх до потрібних "
+"властивостей:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:148
 msgid ""
@@ -5097,6 +5117,10 @@ msgid ""
 "also be shortened to `modelData` (and as such would also need to be a "
 "required property):"
 msgstr ""
+"Крім того, якщо модель містить лише одну роль або взагалі не містить ролі, "
+"доступ до даних також можна здійснювати за допомогою властивості `model."
+"modelData`, що можна скоротити до `modelData` (і як така також має бути "
+"обов'язковою властивістю):"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:179
 msgid "This matches model.software"
@@ -5108,12 +5132,17 @@ msgid ""
 "[JavaScript array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
 "Reference/Global_Objects/Array), with no role:"
 msgstr ""
+"Для порівняння, ось як наведених вище код міг би виглядати з [масивом "
+"JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
+"Reference/Global_Objects/Array), без ролі:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:215
 msgid ""
 "Using an integer for the model can be useful for very specific cases, namely "
 "prototyping and tests:"
 msgstr ""
+"Використання цілого числа для моделі може бути корисним для дуже специфічних "
+"випадків, а саме, прототипізації та тестування:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:244
 msgid "Understanding views and delegates"
@@ -5135,6 +5164,11 @@ msgid ""
 "view is a visual component immediately instantiated and so it needs to "
 "either have its dimensions set or use anchors or Layouts."
 msgstr ""
+"На відміну від моделі (яка, в основному, містить дані) і [компонента](docs:"
+"qtqml;QtQml.Component) делегата (який з'являється, лише якщо створено "
+"екземпляр), панель перегляду є візуальним компонентом, екземпляр якого "
+"створюється негайно, і тому потребує або встановлення його розмірностей, або "
+"використання прив'язок чи компонувань."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:282
 msgid ""
@@ -5147,12 +5181,23 @@ msgid ""
 "scrollable page above, `anchors.fill: parent` is not required; if a simple "
 "page was used, it would be required."
 msgstr ""
+"Оскільки панелі перегляду є типово списками вмісту, які користувач міг би "
+"гортати, при їхньому додаванні до [Kirigami.ScrollablePage](docs:kirigami2;"
+"ScrollablePage), панелі перегляду стають переглядами основних даних із "
+"невеличкою фаскою навколо, і немає потреби заповнювати вмістом усю сторінку. "
+"Якщо панель перегляду додано до простої [Kirigami.Page](docs:kirigami2;"
+"Page), доведеться встановлювати її розмірності належним чином, перш ніж її "
+"буде показано. Іншими словами, на панелі із гортанням вище `anchors.fill: "
+"parent` є необов'язковим; якщо було б використано просту сторінку, ця "
+"інструкція була б обов'язковою."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:284
 msgid ""
 "There are multiple views APIs can be used, some from Qt and some from "
 "Kirigami. Here are the most commonly used ones:"
 msgstr ""
+"Можна використовувати декілька програмних інтерфейсів панелей перегляду, "
+"деякі походять з Qt, а деякі — з Kirigami. Ось найпоширеніші:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:286
 msgid "Qt's [ListView](docs:qtquick;QtQuick.ListView)"
@@ -5183,6 +5228,9 @@ msgid ""
 "The delegate on the other hand always need to have its dimensions set. "
 "Generally its dimensions are set to use only the full width of the view."
 msgstr ""
+"Для делегата, з іншого боку, завжди має бути встановлено розмірності. "
+"Загалом, його розмірності буде встановлено лише так, щоб використовувати усю "
+"ширину панелі перегляду."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:295
 msgid "Common mistakes"
@@ -5194,12 +5242,18 @@ msgid ""
 "delegate doesn't need to have the same height as the view. In other words, "
 "you will probably never want to use `anchors.fill: parent`."
 msgstr ""
+"Вище сказане означає, що делегати не повинні мати нижніх прив'язок, оскільки "
+"делегат не повинен мати тієї самої висоти, що і панель перегляду. Іншими "
+"словами, у вас, ймовірно, ніколи не виникатиме потреби використовувати "
+"`anchors.fill: parent`."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:299
 msgid ""
 "Additionally, while it is possible to set its dimensions using the parent "
 "and anchors, which is usually the view's contentItem, like so:"
 msgstr ""
+"Крім того, хоча можна встановити його розмірності за допомогою parent і "
+"прив'язок, яким, зазвичай, є contentItem панелі перегляду, ось так:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:309
 msgid ""
@@ -5208,6 +5262,11 @@ msgid ""
 "qml-qtquick-listview.html#view-attached-prop) attached property to point to "
 "the delegate's parent view:"
 msgstr ""
+"Не гарантовано, що батьківським елементом делегата буде панель перегляду, і "
+"тому такого коду слід уникати. Замість цього, скористайтеся долученою "
+"властивістю [ListView.view](https://doc.qt.io/qt-6/qml-qtquick-listview."
+"html#view-attached-prop) для вказування батьківської панелі перегляду "
+"делегата:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:320
 msgid ""
@@ -5216,6 +5275,10 @@ msgid ""
 "is constructed, the delegate is then used as a blueprint to make each item "
 "in the view."
 msgstr ""
+"Найпоширенішим використанням делегата є використання у межах [Component]"
+"(docs:qtqml;QtQml.Component), що не створює екземпляра делегата негайно. При "
+"побудові панелі перегляду делегат буде використано як шаблон для створення "
+"усіх елементів на панелі перегляду."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:322
 msgid ""
@@ -5223,50 +5286,70 @@ msgid ""
 "without delegate-specific Qt APIs (for example, a Layout containing a few "
 "Items), QtQuick Controls does provide delegate APIs that are simpler to use:"
 msgstr ""
+"Хоча ви ви можете створювати власні нетипові компоненти, які буде "
+"використано як делегати без специфічних для делегата програмних інтерфейсів "
+"Qt (наприклад, компонування, що містить небагато записів Item), QtQuick "
+"Controls надає у ваше розпорядження програмні інтерфейси, якими простіше "
+"скористатися:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:324
 msgid ""
 "[ItemDelegate](docs:qtquickcontrols;QtQuick.Controls.ItemDelegate) "
 "(delegates with only text)"
 msgstr ""
+"[ItemDelegate](docs:qtquickcontrols;QtQuick.Controls.ItemDelegate) "
+"(делегати, які містять лише текст)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:325
 msgid ""
 "[CheckDelegate](docs:qtquickcontrols;QtQuick.Controls.CheckDelegate) "
 "(delegates with a checkbox)"
 msgstr ""
+"[CheckDelegate](docs:qtquickcontrols;QtQuick.Controls.CheckDelegate) "
+"(делегати з пунктом із позначкою)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:326
 msgid ""
 "[RadioDelegate](docs:qtquickcontrols;QtQuick.Controls.RadioDelegate) "
 "(delegates with a radio)"
 msgstr ""
+"[RadioDelegate](docs:qtquickcontrols;QtQuick.Controls.RadioDelegate) "
+"(делегати із варіантом вибору)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:327
 msgid ""
 "[SwitchDelegate](docs:qtquickcontrols;QtQuick.Controls.SwitchDelegate) "
 "(delegates with a switch)"
 msgstr ""
+"[SwitchDelegate](docs:qtquickcontrols;QtQuick.Controls.SwitchDelegate) "
+"(делегати з перемикачем)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:328
 msgid ""
 "[SwipeDelegate](docs:qtquickcontrols;QtQuick.Controls.SwipeDelegate) "
 "(delegates that can be swiped)"
 msgstr ""
+"[SwipeDelegate](docs:qtquickcontrols;QtQuick.Controls.SwipeDelegate) "
+"(делегати, над якими можна проводити пальцем)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:330
 msgid "You should prefer using the upstream Qt delegates where possible."
 msgstr ""
+"Вам слід надавати перевагу використанню делегатів основної бібліотеки Qt "
+"там, де це можливо."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:332
 msgid ""
 "On top of these Qt delegates, Kirigami provides its own equivalents, with "
 "the added functionality of subtitles and icons:"
 msgstr ""
+"Над цими делегатами Qt Kirigami надає у ваше розпорядження власні "
+"еквіваленти із доданими функціональними можливостями підзаголовків і "
+"піктограм:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:334
 msgid "[TitleSubtitle](docs:kirigami2;TitleSubtitle)"
-msgstr ""
+msgstr "[TitleSubtitle](docs:kirigami2;TitleSubtitle)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:335
 msgid "[IconTitleSubtitle](docs:kirigami2;IconTitleSubtitle)"
@@ -5293,12 +5376,17 @@ msgid ""
 "The API ending with \"Delegate\" can be set as a direct delegate of the "
 "view, just like the previous examples that used Controls.ItemDelegate:"
 msgstr ""
+"Елементи програмного інтерфейсу, назви яких завершуються на «Delegate», "
+"можна встановлювати як безпосередні делегати панелі перегляду, як у "
+"попередніх прикладах, де використано Controls.ItemDelegate:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:377
 msgid ""
 "Both TitleSubtitle and IconTitleSubtitle are expected to be used to override "
 "a Qt delegate's contentItem, for example:"
 msgstr ""
+"Обидва, TitleSubtitle і IconTitleSubtitle, вважаються такими, які слід "
+"використовувати для  перевизначення contentItem делегата Qt, приклад:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:417
 msgid ""
@@ -5741,7 +5829,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:95
 msgid "Rest of listview code..."
-msgstr ""
+msgstr "Решта коду listview…"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:100
 msgid "Hint"
@@ -5858,7 +5946,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:40
 msgid "Other page properties..."
-msgstr ""
+msgstr "Інші властивості сторінки…"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:58
 msgid ""
@@ -5876,11 +5964,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:63
 msgid "General JavaScript array of components:"
-msgstr ""
+msgstr "Загальний масив компонентів JavaScript:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:65
 msgid "Passing an array of Kirigami actions to QML:"
-msgstr ""
+msgstr "Передавання масиву дій Kirigami до QML:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:69
 msgid ""
@@ -5985,7 +6073,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:111
 msgid "Other window properties..."
-msgstr ""
+msgstr "Інші властивості вікна…"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:128
 msgid ""
@@ -6049,12 +6137,16 @@ msgid ""
 "Similarly, if Kirigami Actions are added to a [Kirigami.GlobalDrawer](docs:"
 "kirigami2;GlobalDrawer), they will show up in the resulting drawer or menu."
 msgstr ""
+"Так само, якщо дії Kirigami буде додано до [Kirigami.GlobalDrawer](docs:"
+"kirigami2;GlobalDrawer), їх буде показано на висувній панелі або у меню."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:157
 msgid ""
 "Other examples of Kirigami Actions showing up differently depending on their "
 "parent component are:"
 msgstr ""
+"Інші приклади дій Kirigami, які показано по-різному, залежжжно від їхнього "
+"батьківського компонента:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:159
 msgid ""
@@ -6062,18 +6154,25 @@ msgid ""
 "tutorial here](/docs/getting-started/kirigami/components-drawers#context-"
 "drawers)"
 msgstr ""
+"[Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer) — [підручник з "
+"ContextDrawer тут](/docs/getting-started/kirigami/components-drawers#context-"
+"drawers)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:160
 msgid ""
 "[Kirigami.AbstractCard](docs:kirigami2;AbstractCard) and derivatives - [Card "
 "tutorial here](/docs/getting-started/kirigami/components-card)"
 msgstr ""
+"[Kirigami.AbstractCard](docs:kirigami2;AbstractCard) і похідні — [підручник "
+"з карток тут](/docs/getting-started/kirigami/components-card)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:161
 msgid ""
 "[Kirigami.Dialog](docs:kirigami2;Dialog) and derivatives - [Dialog tutorial "
 "here](/docs/getting-started/kirigami/components-dialogs)"
 msgstr ""
+"[Kirigami.Dialog](docs:kirigami2;Dialog) і похідні — [підручник з Dialog тут]"
+"(/docs/getting-started/kirigami/components-dialogs)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:162
 msgid ""
@@ -6159,14 +6258,18 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:33
 msgid "Form layouts help align and structure a layout with several inputs"
 msgstr ""
+"Компонування форми допомагають вирівняти і структурувати компонування із "
+"декількома елементами введення"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:35
 msgid "Textfields let you input text in a thin textbox"
 msgstr ""
+"Об'єкти Textfield надають вам змогу вводити текст у вузькому полі для "
+"введення тексту"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:38
 msgid "Provides a label attached to the textfield"
-msgstr ""
+msgstr "Надає доступ до мітки, яку пов'язано із текстовим полем"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:40
 msgid ""
