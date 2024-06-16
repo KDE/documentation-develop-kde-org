@@ -161,7 +161,7 @@ Show these views in addition to the global-scope navigation UI; don't replace it
 ## Right-to-left languages
 People using the software in right-to-left languages like Arabic and Hebrew expect for layouts to reverse direction.
 
-This works automatically for items using anchor-based positioning or Qt Layout objects such as RowLayout and ColumnLayout, but it's important to check things yourself. For example you can test your app in right-to-left mode by running it in Arabic with `LANGUAGE=ar_AR [app_executable]`. Even if you can't read the words, you can check the layout.
+This works automatically for items using anchor-based positioning or Qt Layout objects such as `RowLayout` and `ColumnLayout`, but it's important to check things yourself. For example you can test your app in right-to-left mode by running it in Arabic with `LANGUAGE=ar_AR [app_executable]`. Even if you can't read the words, you can check the layout.
 
 In addition to layout objects reversing their horizontal positioning, make sure text alignment has reversed too.
 
