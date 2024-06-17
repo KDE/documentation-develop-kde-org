@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 01:44+0000\n"
-"PO-Revision-Date: 2024-06-15 20:47+0300\n"
+"PO-Revision-Date: 2024-06-16 21:17+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -5394,6 +5394,9 @@ msgid ""
 "[ListItemTest file in the Kirigami Repository](https://invent.kde.org/"
 "frameworks/kirigami/-/blob/master/tests/ListItemTest.qml)."
 msgstr ""
+"Із практичним прикладом використання делегатів Kirigami можна ознайомитися у "
+"[файлі ListItemTest у сховищі Kirigami](https://invent.kde.org/frameworks/"
+"kirigami/-/blob/master/tests/ListItemTest.qml)."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:0
 msgid "Page rows and page stacks"
@@ -5954,6 +5957,9 @@ msgid ""
 "page from the previous tutorials. If we wanted to, we could add more actions "
 "to our page (and even nest actions within actions!)."
 msgstr ""
+"Ми розташовуємо нашу [Kirigami.Action](docs:kirigami2;Action) на нашій "
+"основній сторінці з попередніх підручників. Якщо нам потрібно, ми можемо "
+"додати інші кнопки дій на нашій сторінці (і навіть вкласти дії у інші дії!)."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:60
 msgid ""
@@ -5961,6 +5967,9 @@ msgid ""
 "w3schools.com/js/js_arrays.asp), which means you can pass one or more things "
 "to them, separated by comma:"
 msgstr ""
+"Дужки `[]`, які використано вище, є подібними до дужок [масивів JavaScript]"
+"(https://www.w3schools.com/js/js_arrays.asp), що означає, що ви можете "
+"передати їм одну або декілька речей, відокремлених комами:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:63
 msgid "General JavaScript array of components:"
@@ -6070,6 +6079,13 @@ msgid ""
 "it. Global drawers are useful for global navigation and actions. We are "
 "going to create a simple global drawer that includes a \"quit\" button."
 msgstr ""
+"Наступним компонентом є [Kirigami.GlobalDrawer](docs:kirigami2;"
+"GlobalDrawer). Він показує [меню-гамбургер](https://en.wikipedia.org/wiki/"
+"Hamburger_button). Типово, він відкриває бічну панель, яка є особливо "
+"корисною на мобільних пристроях, оскільки користувач може просто провести "
+"пальцем збоку екрана, щоб відкрити його. Загальні висувні панелі корисні для "
+"загальної навігації та кнопок дій. Ми збираємося створити просту загальну "
+"висувну панель, на якій буде показано кнопку «Вийти»."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:111
 msgid "Other window properties..."
@@ -6131,6 +6147,12 @@ msgid ""
 "show up on the right side of the header in desktop mode, and on the bottom "
 "in mobile mode."
 msgstr ""
+"Компоненти Kirigami розроблено так, щоб місце, де ви розташуєте кнопки дій "
+"Kirigami, було відповідним. Як можна бачити вище, якщо ви додаєте кнопки дій "
+"до [Kirigami.Page](docs:kirigami2;Page), [Kirigami.ScrollablePage](docs:"
+"kirigami2;ScrollablePage) або будь-якому іншому похідному від Page "
+"компоненті, їх буде показано у правій частині заголовка у режимі робочої "
+"станції і у нижній частині сторінки у режимі мобільного пристрою."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:155
 msgid ""
@@ -6254,6 +6276,11 @@ msgid ""
 "information relevant to the current content. They can't be moved, but they "
 "adapt their own size to the window."
 msgstr ""
+"Новим компонентом, який ми додаємо є [Kirigami.Dialog](docs:kirigami2;"
+"Dialog). Діалогові вікна з'являються у центрі вікна. Ними можна скористатися "
+"для надання додаткових відомостей, які пов'язано із поточним вмістом вікна. "
+"Їх не можна пересувати, але їхній розмір адаптується до розміру головного "
+"вікна."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:33
 msgid "Form layouts help align and structure a layout with several inputs"
@@ -6276,23 +6303,27 @@ msgid ""
 "What to do after input is accepted (i.e. pressed Enter) In this case, it "
 "moves the focus to the next field"
 msgstr ""
+"Що робити після прийняття вхідних даних (тобто натискання клавіші Enter)? У "
+"цьому випадку фокусування буде пересунуто на наступне поле"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:48
 msgid "Again, it moves the focus to the next field"
-msgstr ""
+msgstr "Знову ж таки, пересуває фокусування до наступного поля"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:54
 msgid ""
 "D means a required number between 1-9, 9 means a required number between 0-9"
 msgstr ""
+"D означає обов'язкове число у діапазоні 1-9, 9 — обов'язкове число у "
+"діапазоні 0-9"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:57
 msgid "Here we confirm the operation just like clicking the OK button"
-msgstr ""
+msgstr "Тут ми підтверджуємо дію, подібно до натискання кнопки «Гаразд»"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:65
 msgid "The dialog logic goes here"
-msgstr ""
+msgstr "Тут маємо логіку діалогового вікна"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:69
 msgid ""
@@ -6301,6 +6332,10 @@ msgid ""
 "qtquick-controls-dialog.html#footer-prop), both inherited from [Controls."
 "Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog)."
 msgstr ""
+"У діалогових вікон, типово, є [заголовок](https://doc.qt.io/qt-6/qml-qtquick-"
+"controls-dialog.html#header-prop) і [підвал](https://doc.qt.io/qt-6/qml-"
+"qtquick-controls-dialog.html#footer-prop), обидва успадковані від [Controls."
+"Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:71
 msgid ""
@@ -6311,6 +6346,12 @@ msgid ""
 "[standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog."
 "html#standardButtons-prop)."
 msgstr ""
+"До заголовка, типово, включають [назву](https://doc.qt.io/qt-6/qml-qtquick-"
+"controls-dialog.html#title-prop) і кнопку закриття, яку можна вимкнути за "
+"допомогою [showCloseButton](docs:kirigami2;Dialog::showCloseButton). До "
+"підвалу, типово, включено кнопку закриття, і цю поведінку можна "
+"перевизначити за допомогою [standardButtons](https://doc.qt.io/qt-6/qml-"
+"qtquick-controls-dialog.html#standardButtons-prop)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:73
 msgid ""
@@ -6320,6 +6361,12 @@ msgid ""
 "dialog, which can increase if needed. We can use standard [Kirigami.Units]"
 "(docs:kirigami2;Kirigami::Platform::Units) that we will revisit later on."
 msgstr ""
+"Спочатку, ми налаштуємо його на показ кнопки «Гаразд» і «Скасувати», додамо "
+"фаски, та додамо прийнятну [preferredWidth](docs:kirigami2;Dialog::"
+"preferredWidth). Пріоритетною шириною є типовий очікуваний розмір "
+"діалогового вікна. Її може бути збільшено, якщо це потрібно. Ми можемо "
+"скористатися стандартним [Kirigami.Units](docs:kirigami2;Kirigami::Platform::"
+"Units), до якого ми ще звернемося пізніше."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:75
 msgid ""
@@ -6374,6 +6421,11 @@ msgid ""
 "labels for them. The form will present the correct labels to the left of "
 "each of these text input fields."
 msgstr ""
+"У кожному з цих елементів [Controls.Textfield](docs:qtquickcontrols;QtQuick."
+"Controls.TextField) ми встановлюємо властивість [Kirigami.FormData.label]"
+"(docs:kirigami2;FormLayoutAttached::label), що надає нам змогу визначити для "
+"них мітки. Форма покаже належні мітки ліворуч від кожного з цих полів для "
+"введення тексту."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:87
 msgid ""
@@ -6384,6 +6436,12 @@ msgid ""
 "switch the active field once the user hits the ENTER key, improving the "
 "usability of the form."
 msgstr ""
+"Нарешті, ми також встановлюємо властивість [onAccepted](https://doc.qt.io/"
+"qt-6/qml-qtquick-textinput.html#accepted-signal) для вмикання методу "
+"[forceActiveFocus()](https://doc.qt.io/qt-6/qml-qtquick-item."
+"html#forceActiveFocus-method) наступного поля; це призведе до перемикання "
+"активного поля, щойно користувач натисне клавішу ENTER, удосконалюючи "
+"зручність форми."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:89
 msgid ""
@@ -6406,10 +6464,12 @@ msgid ""
 "Once the user interface for the dialog is done, we need to change how it "
 "behaves. For this we need three things:"
 msgstr ""
+"Щойно роботу над інтерфейсом користувача діалогового вікна завершено, нам "
+"потрібно змінити поведінку вікна. Для цього нам потрібно три речі:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:93
 msgid "Show the Ok button only when the required fields are filled"
-msgstr ""
+msgstr "Показ кнопки «Гаразд», лише якщо заповнено обов'язкові поля"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:94
 msgid "Add the input information to the model"
@@ -6417,7 +6477,7 @@ msgstr "Додавання вхідних даних до моделі"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:95
 msgid "Clear the input form"
-msgstr ""
+msgstr "Очищення форми введення даних"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:98
 msgid ""
@@ -6425,16 +6485,22 @@ msgid ""
 "to only make the Ok button visible if the required text fields are filled. "
 "For this we use Kirigami.Dialog.standardButton(button):"
 msgstr ""
+"Щойно Kirigami.Dialog буде ініціалізовано, нам потрібно буде створити "
+"нетипову прив'язку такого різновиду, що кнопка «Гаразд» стала видимою, лише "
+"якщо буде заповнено обов'язкові текстові поля. Для цього ми скористаємося "
+"Kirigami.Dialog.standardButton(button):"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:105
 msgid "() => is a JavaScript arrow function"
-msgstr ""
+msgstr "() => є функцією стрілочки JavaScript"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:109
 msgid ""
 "The binding is created, but we still need to make it unclickable unless the "
 "fields are filled"
 msgstr ""
+"Прив'язку створено, але нам усе ще потрібно зробити її непридатною до "
+"клацання, якщо не заповнено поля"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:117
 msgid ""
@@ -6445,12 +6511,18 @@ msgid ""
 "qt-6/qtqml-syntax-propertybinding.html#creating-property-bindings-from-"
 "javascript) in JavaScript. In effect, the line:"
 msgstr ""
+"Першим, що слід зробити, є створення зв'язку між властивістю [enabled]"
+"(https://doc.qt.io/qt-6/qml-qtquick-controls-popup.html#enabled-prop) кнопки "
+"«Гаразд» і перевіркою того, чи заповнено поля, що у цьому випадку слід "
+"зробити за допомогою [Qt.binding()](https://doc.qt.io/qt-6/qtqml-syntax-"
+"propertybinding.html#creating-property-bindings-from-javascript) у "
+"JavaScript. У результаті рядок:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:123
 msgid ""
 "is similar to the QML bindings we have seen so far, like in the following "
 "pseudo-code:"
-msgstr ""
+msgstr "є подібним до прив'язок QML, які ми досі мали, як у такому псевдокоді:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:129
 msgid ""
@@ -6460,12 +6532,19 @@ msgid ""
 "otherwise, it will add the input to the model and clear the dialog for the "
 "next time it is opened."
 msgstr ""
+"Обробником сигналів, який вмикатиме кнопку «Гаразд», є [onAccepted](https://"
+"doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#accepted-signal). Він "
+"лишається порожнім і таким, що не виконуватиме ніяких дій, якщо обов'язкові "
+"поля заповнено; у інших випадках він додаватиме поле введення до моделі і "
+"спорожнятиме діалогове вікно для наступного моменту, коли його буде відкрито."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:132
 msgid ""
 "We check that the nameField is not empty and that the dateField (which has "
 "an inputMask) is completely filled"
 msgstr ""
+"Ми перевіряємо, чи є непорожнім nameField, і що dateField (для якого "
+"визначено inputMask) є повністю заповненим"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:152
 msgid ""
@@ -6475,6 +6554,12 @@ msgid ""
 "textinput.html#acceptableInput-prop) instead, which only becomes true once "
 "the whole field is filled and contains only acceptable characters."
 msgstr ""
+"Для нашого обов'язкового поля name нам достатньо перевірити, чи є текстом "
+"поля порожній рядок. Для поля date, оскільки для нього визначено маску "
+"введення, замість цього, нам слід скористатися [acceptableInput](https://doc."
+"qt.io/qt-6/qml-qtquick-textinput.html#acceptableInput-prop), значенням якого "
+"стане true, щойно усе поле буде заповнено, і у ньому міститимуться лише "
+"прийнятні символи."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:154
 msgid ""
@@ -6493,6 +6578,10 @@ msgid ""
 "an empty string, then [close()](docs:qtquickcontrols;QtQuick.Controls.Popup::"
 "close) it."
 msgstr ""
+"Нарешті, ми спорожняємо текстові поля встановленням для їхніх властивостей "
+"[text](https://doc.qt.io/qt-6/qml-qtquick-textinput.html#text-prop) значення "
+"порожнього рядка, а потім виконуємо [close()](docs:qtquickcontrols;QtQuick."
+"Controls.Popup::close)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:158
 msgid "Opening the dialog"
@@ -6504,6 +6593,9 @@ msgid ""
 "Action](docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
 "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgstr ""
+"Додавання кнопки для відкриття діалогового вікна є набагато простішим: "
+"просте [Kirigami.Action](docs:kirigami2;Action), яка вмикає функцію [open()]"
+"(docs:qtquickcontrols;QtQuick.Controls.Popup::open) діалогового вікна."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:173
 msgid ""
@@ -6511,6 +6603,10 @@ msgid ""
 "custom countdowns! We can make one last touch to improve the interface, "
 "namely remove the dummy countdown we had in the previous lessons:"
 msgstr ""
+"Після зберігання наших файлів і збирання нашої програми ми зможемо додати "
+"наші власні зворотні відліки! Ми можемо додати останній штрих для "
+"удосконалення інтерфейсу, а саме вилучити фіктивний зворотний відлік, який "
+"ми мали у попередніх уроках:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:177
 msgid "Much nicer."
@@ -6730,6 +6826,11 @@ msgid ""
 "customize the `source-dir` or `dest-dir` for the module. We will assume the "
 "path to your `main.cpp` will be `~/kde/src/kirigami-tutorial/src/main.cpp`."
 msgstr ""
+"Якщо ви хочете автоматично збирати проєкт за допомогою kde-builder/kdesrc-"
+"build, нетипова назва модуля має бути такою, як назва кореневої теки проєкту "
+"(у нашому випадку, це буде «kirigami-tutorial»). Якщо це не так, вам слід "
+"змінити `source-dir` або `dest-dir` для модуля. Ми припускатимемо, що шляхом "
+"до вашого `main.cpp` буде `~/kde/src/kirigami-tutorial/src/main.cpp`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:105
 msgid "Main.qml"
@@ -6934,6 +7035,11 @@ msgid ""
 "icons on Wayland, as they are required to tell the compositor \"this window "
 "goes with this icon\"."
 msgstr ""
+"Основним призначенням [файлів стільничних записів](https://specifications."
+"freedesktop.org/desktop-entry-spec/latest/) є показ вашої програми у засобі "
+"запуску програм у Linux. Іншою причиною їхнього існування є визначення "
+"піктограм вікна у Wayland, оскільки вони потрібні для надсилання "
+"повідомлення засобу композиції «піктограмою цього вікна є така»."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:148
 msgid ""
@@ -6941,6 +7047,9 @@ msgid ""
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
 "`org.kde.tutorial.desktop`:"
 msgstr ""
+"Має виконуватися [схема іменування зворотного DNS](https://en.wikipedia.org/"
+"wiki/Reverse_domain_name_notation) з наступним суфіксом назви `.desktop`, "
+"наприклад `org.kde.tutorial.desktop`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:154
 msgid ""
@@ -7037,6 +7146,11 @@ msgid ""
 "(https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html) keyword which "
 "we will see later in the tutorial can be added using `target_sources()`."
 msgstr ""
+"Наступного разу коли ви захочете додати файли QML, додайте їх до наявного "
+"виклику `ecm_target_qml_sources()`. Файли C++, у яких використано ключове "
+"слово [QML_ELEMENT](https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes."
+"html), яке ми побачимо пізніше у підручнику, можна додати за допомогою "
+"`target_sources()`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:180
 msgid ""
@@ -7092,6 +7206,10 @@ msgid ""
 "metadata, be sure to check our [KXmlGui tutorial](/docs/getting-started/"
 "kxmlgui)."
 msgstr ""
+"Якщо вам потрібні ще декілька способів удосконалення коду C++, зокрема "
+"використання [KAboutData](docs:kcoreaddons;KAboutData) для придатних до "
+"перекладу метаданих програми, ознайомтеся із нашим [підручником з KXmlGui](/"
+"docs/getting-started/kxmlgui)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:196
 msgid "For now, the part that interests us is this line:"
@@ -7104,6 +7222,10 @@ msgid ""
 "(`Main`, coming from the name of our `Main.qml` file, which needs to start "
 "with an uppercase letter)."
 msgstr ""
+"Першим аргументом є адреса, яку встановлено у `kirigami-tutorial/src/"
+"CMakeLists.txt`, а другим аргументом є назва модуля QML, яким ми хочемо "
+"скористатися (`Main`, що походить від назви нашого файла `Main.qml`, яка має "
+"починатися з великої літери)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:204
 msgid "The old method"
@@ -7116,12 +7238,18 @@ msgid ""
 "code!</summary>\n"
 "<br>\n"
 msgstr ""
+"<details>\n"
+"<summary>Ви можете зустрітися із цим альтернативним способом завантаження "
+"файлів QML у справжньому коді!</summary>\n"
+"<br>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:210
 msgid ""
 "The old method of loading QML files had some disadvantages and after Qt6 it "
 "became excessively verbose:"
 msgstr ""
+"Старий метод завантаження файлів QML мав недоліки, і після Qt6 він став "
+"суттєво багатослівнішим:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:216
 msgid ""
@@ -7177,6 +7305,9 @@ msgid ""
 "If you want kde-builder to handle building and installation of your project, "
 "you need to specify a custom module in your `~/.config/kdesrc-buildrc`:"
 msgstr ""
+"Якщо ви хочете, щоб збиранням і встановленням вашого проєкту займалася "
+"програма kde-builder, вам слід вказати нетиповий модуль у вашому файлі `~/."
+"config/kdesrc-buildrc`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:242
 msgid "Then you can build and install it with the command:"
@@ -7599,6 +7730,11 @@ msgid ""
 "it does not spill out of the card. This way, the card takes as much space is "
 "necessary for its contents."
 msgstr ""
+"Тут ми встановили значення `implicitWidth` і `implicitHeight` нашого "
+"[Kirigami.AbstractCard](docs:kirigami2;AbstractCard) у значення [GridLayout]"
+"(https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) нижче для того, "
+"щоб вони не вилізли за картку. Таким чином, картка займе стільки місця, "
+"скільки потрібно для її вмісту."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:152
 msgid "Layouts"
@@ -8473,12 +8609,17 @@ msgid ""
 "These tutorials will focus on creating an application that lets the user see "
 "how many days are left until an event of their choice."
 msgstr ""
+"Акцент у цих підручниках зроблено на створенні програми, яка показуватиме "
+"користувачеві, скільки днів лишилося до визначеної ним події."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:15
 msgid ""
 "We also recommend you check out the [Kirigami Gallery](https://apps.kde.org/"
 "en/kirigami2.gallery), which provides a number of useful UI examples."
 msgstr ""
+"Ми також рекомендуємо вам ознайомитися зі [галереєю Kirigami](https://apps."
+"kde.org/en/kirigami2.gallery), де можна знайти декілька корисних прикладів "
+"інтерфейсу користувача."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:17
 msgid ""
@@ -8542,6 +8683,9 @@ msgid ""
 "When looking through QML API documentation, make sure to look into the "
 "functions and properties inherited by the API you are looking at as well."
 msgstr ""
+"При пошуку у документації з програмного інтерфейсу QML не забувайте "
+"ознайомитися із функціями і властивостями, які успадковує програмний "
+"інтерфейс, який вам потрібен."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:41
 msgid ""
@@ -8635,7 +8779,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:11
 msgid "Why and how"
-msgstr ""
+msgstr "Чому і як"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:13
 msgid ""
@@ -8652,6 +8796,8 @@ msgid ""
 "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
 "qml`, `AddEditDialog.qml` and `KountdownDelegate.qml`."
 msgstr ""
+"У цьому підручнику ми поділимо код у `Main.qml` між `Main.qml`, "
+"`AddEditDialog.qml` і `KountdownDelegate.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:17
 msgid ""
@@ -8661,18 +8807,22 @@ msgid ""
 "will take a brief look at three common approaches seen in real projects, and "
 "implement one of them:"
 msgstr ""
+"Крім того, навіть після поділу коду між декількома файлами QML кількість "
+"файлів у реальних проєктах може лишитися незручною. Типовим вирішенням цієї "
+"проблеми є логічний поділ файлів між різними теками. Здійснимо короткий "
+"огляд трьох підходів у реальних проєтках та реалізуймо один з них:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:19
 msgid "storing QML files together with C++ files"
-msgstr ""
+msgstr "зберігання файлів QML разом із файлами C++"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:20
 msgid "storing QML files in a different directory under the same module"
-msgstr ""
+msgstr "зберігання файлів QML у іншому каталозі того самого модуля"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:21
 msgid "storing QML files in a different directory under a different module"
-msgstr ""
+msgstr "зберігання файлів QML у окремому каталозі у іншому модулі"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:23
 msgid ""
@@ -8681,16 +8831,22 @@ msgid ""
 "details will be abstracted](https://en.wikipedia.org/wiki/"
 "Abstraction_(computer_science)), making the code more readable."
 msgstr ""
+"Після поділу ми [поділимо відповідальність](https://en.wikipedia.org/wiki/"
+"Separation_of_concerns) між файлами, а [реалізацію подробиць буде "
+"абстраговано](https://en.wikipedia.org/wiki/Abstraction_(computer_science)), "
+"що зробить код зручнішим для читання."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:25
 msgid "Storing QML files together with C++ files"
-msgstr ""
+msgstr "Зберігання файлів QML разом із файлами C++"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:27
 msgid ""
 "This consists of keeping the project's QML files together with C++ files in "
 "`src/`. This sort of structure would look like this:"
 msgstr ""
+"Це передбачає зберігання файлів QML проєкту разом із файлами C++ у `src/`. "
+"Такий різновид структури може виглядати ось так:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:41
 msgid ""
@@ -8700,16 +8856,23 @@ msgid ""
 "than a couple of QML files (and C++ files that create types to be used in "
 "QML), the folder can quickly become crowded."
 msgstr ""
+"Це те, що ми робили раніше. У наведеному вище випадку вам слід просто "
+"продовжити додавання файлів QML до наявного файла `kirigami-tutorial/src/"
+"CMakeLists.txt`. Логічного поділу взагалі немає, і щойно кількість файлів "
+"QML (і файлів C++, у яких створюватимуться типи, які буде використано у QML) "
+"стане більшою за пару-трійку, тека швидко почне переповнюватися файлами."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:43
 msgid "Storing QML files in a different directory under the same module"
-msgstr ""
+msgstr "Зберігання файлів QML у іншому каталозі того самого модуля"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:45
 msgid ""
 "This consists of keeping all QML files in a separate folder, usually `src/"
 "qml/`. This sort of structure would look like this:"
 msgstr ""
+"Це передбачає зберігання усіх файлів QML в окремій теці, зазвичай, `src/qml/"
+"`. Такий різновид структури може виглядати ось так:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:60
 msgid ""
@@ -8720,6 +8883,12 @@ msgid ""
 "CMakeLists.txt`. All created QML files would then belong to the same QML "
 "module as `Main.qml`."
 msgstr ""
+"Така структура є доволі типовою для проєктів KDE. Здебільшого, причиною є "
+"бажання уникнути використання додаткового файла CMakeLists.txt для каталогу "
+"`src/qml/` і створення окремого модуля. Це метод передбачає зберігання самих "
+"файлів в окремій теці, але вам все одно доведеться додати ці файли до файла "
+"`kirigami-tutorial/src/CMakeLists.txt`. Усі створені файли QML належатимуть "
+"до того самого модуля QML, що і `Main.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:62
 msgid ""
@@ -8728,6 +8897,10 @@ msgid ""
 "file. It will become difficult to differentiate between traditional C++ "
 "files and C++ files that have types exposed to QML."
 msgstr ""
+"На практиці, щойно кількість файлів QML у проєкті перевищить десяток, хоча "
+"каталог `src/` і не буде захаращено, захаращено буде файл `src/CMakeLists."
+"txt`. Стане важко відрізняти традиційні файли C++ і файли C++, у яких "
+"містяться типи, які розкрито для QML."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:64
 msgid ""
@@ -8735,10 +8908,13 @@ msgid ""
 "details), where you would keep the description of your dependencies in the "
 "same place as the dependencies themselves."
 msgstr ""
+"Також це порушує принцип локальності (локалізації подробиць залежностей), за "
+"якого вам слід зберігатти опис ваших залежностей там же, де зберігаються "
+"самі залежності."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:66
 msgid "Storing QML files in a different directory under a different module"
-msgstr ""
+msgstr "Зберігання файлів QML в окремому каталозі в іншому модулі"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:68
 msgid ""
@@ -8746,6 +8922,9 @@ msgid ""
 "CMakeLists.txt and own separate QML module. This sort of structure would "
 "look like this:"
 msgstr ""
+"Це передбачає зберігання усіх файлів QML в окремій теці зі своїм власним "
+"CMakeLists.txt своїм власним модулем QML. Цей різновид структури може "
+"виглядати ось так:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:84
 msgid ""
@@ -8757,6 +8936,13 @@ msgid ""
 "itself stays in `src/` so it's automatically used when running the "
 "executable, as before."
 msgstr ""
+"Ця структура не є аж надто поширеною у проєктах KDE і потребує написання "
+"додаткового файла CMakeLists.txt, але вона є найгнучкішою. У нашому випадку "
+"ми назвали нашу теку «components», оскільки ми створюємо два нових "
+"компоненти QML з нашого попереднього файла `Main.qml` і зберігаємо дані щодо "
+"компонентів у `kirigami-tutorial/src/components/CMakeLists.txt`. Сам файл "
+"`Main.qml` лишається у `src/`, отже його автоматично буде використано при "
+"запуску виконуваного файла, як і раніше."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:86
 msgid ""
@@ -8765,10 +8951,14 @@ msgid ""
 "\", and C++ files that have types exposed to QML (like models) could be kept "
 "together with other QML files where it makes sense."
 msgstr ""
+"Пізніше можна буде створити додаткові теки із декількома файлами QML, "
+"згрупованих разом за призначенням, наприклад, «models» і «settings», і файли "
+"C++, де міститимуться типи, які відкриваються QML (зокрема моделі) можна "
+"зберігати разом із іншими файлами QML там, де це має сенс."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:88
 msgid "We will be using this structure in this tutorial."
-msgstr ""
+msgstr "Ми використаємо цю структуру у нашому підручнику."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:90
 msgid "Preparing CMake for the new files"
@@ -8779,6 +8969,8 @@ msgid ""
 "First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` "
 "with the following contents:"
 msgstr ""
+"Спершу, створимо файл `kirigami-tutorial/src/components/CMakeLists.txt` із "
+"таким вмістом:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:96
 msgid ""
@@ -8787,6 +8979,10 @@ msgid ""
 "module/ECMQmlModule.html) under the import name `org.kde.tutorial."
 "components` and add the relevant QML files."
 msgstr ""
+"Ми створюємо нову ціль із назвою `kirigami-hello-components`, а потім "
+"перетворюємо її на модуль QML за допомогою using [ecm_add_qml_module()]"
+"(https://api.kde.org/ecm/module/ECMQmlModule.html) із назвою імпортування "
+"`org.kde.tutorial.components` і додаємо пов'язані файли QML."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:98
 msgid ""
@@ -8797,6 +8993,12 @@ msgid ""
 "module/ECMQmlModule.html). We then install it exactly like in previous "
 "lessons."
 msgstr ""
+"Оскільки ціль є відмінною від виконуваного файла, вона працюватиме як інший "
+"модуль QML, що означає, що нам потрібно буде *завершити* її (наказати CMake "
+"створити файли, які потрібні для пошуку модуля, а саме `qmldir` і "
+"`qmltypes`) за допомогою [ecm_finalize_qml_module()](https://api.kde.org/ecm/"
+"module/ECMQmlModule.html). Потім ми встановлюємо їх так само, як на "
+"попередніх уроках."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:100
 msgid ""
@@ -8806,6 +9008,11 @@ msgid ""
 "latest/command/target_link_libraries.html) call in `kirigami-tutorial/src/"
 "CMakeLists.txt`:"
 msgstr ""
+"Нам довелося скористатися [add_library()](https://cmake.org/cmake/help/"
+"latest/command/add_library.html), щоб ми могли скомпонувати `kirigami-hello-"
+"components` із виконуваним файлом у виклику [target_link_libraries()]"
+"(https://cmake.org/cmake/help/latest/command/target_link_libraries.html) у "
+"`kirigami-tutorial/src/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:104
 msgid ""
@@ -8813,6 +9020,9 @@ msgid ""
 "command/add_subdirectory.html) so CMake will find the `kirigami-tutorial/src/"
 "components/` directory."
 msgstr ""
+"Нам також потрібно скористатися [add_subdirectory()](https://cmake.org/cmake/"
+"help/latest/command/add_subdirectory.html), щоб CMake знайшов каталог "
+"`kirigami-tutorial/src/components/`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:106
 msgid ""
@@ -8823,6 +9033,12 @@ msgid ""
 "tutorial/src/Main.qml` is necessary, the same one defined earlier, `org.kde."
 "tutorial.components`:"
 msgstr ""
+"На попередніх уроках нам не потрібно було додавати `org.kde.tutorial` до "
+"нашого `Main.qml`, оскільки у цьому не було потреби: будучи вхідною точкою "
+"програми, виконуваний файл за будь-яких умов запустить файл негайно. "
+"Оскільки наші компоненти зберігаються в окремому модулі QML, потрібне нове "
+"імпортування у `kirigami-tutorial/src/Main.qml`, те саме, яке було визначено "
+"раніше, `org.kde.tutorial.components`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:115
 msgid "The rest of the code..."
@@ -8838,7 +9054,7 @@ msgstr "Поділ Main.qml"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:122
 msgid "Let's take a look once again at the original `Main.qml`:"
-msgstr ""
+msgstr "Погляньмо ще раз на початковий `Main.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:126
 msgid ""
@@ -8847,6 +9063,10 @@ msgid ""
 "Component). We use a Component to be able to define it without needing to "
 "instantiate it; separate QML files work the same way."
 msgstr ""
+"Нетиповий делегат з `id: kountdownDelegate` можна поділити повністю, "
+"оскільки його вже загорнуто у [тип Component QML](docs:qtqml;QtQml."
+"Component). Ми використовуємо Component, щоб мати змогу визначити його без "
+"потреби у створенні екземпляра; окремі файли QML працюють так само."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:128
 msgid ""
@@ -8855,6 +9075,9 @@ msgid ""
 "(docs:kirigami2;AbstractCard) in the separate file. Here is the resulting "
 "`KountdownDelegate.qml`:"
 msgstr ""
+"Якщо ми пересуваємо код до окремих файлів, немає сенсу в огортанні у "
+"Component: ми можемо просто вирізати [Kirigami.AbstractCard](docs:kirigami2;"
+"AbstractCard) до окремого файла. Ось результат у `KountdownDelegate.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:132
 msgid ""
@@ -8862,10 +9085,13 @@ msgid ""
 "not a component that is visible by default, so the code can be copied as is "
 "into the `AddEditDialog.qml`:"
 msgstr ""
+"Наше діалогове вікно із `id: addDialog` не загорнуто у Component, і не є "
+"компонентом, який є типово видимим, отже код можна скопіювати без змін до "
+"`AddEditDialog.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:136
 msgid "With the code split, `Main.qml` thus becomes much shorter:"
-msgstr ""
+msgstr "Таким чином, після поділу коду `Main.qml` стане набагато коротшим:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:140
 msgid ""
@@ -8874,6 +9100,10 @@ msgid ""
 "qml`. The way to add the contents of the new files to `Main.qml` is by "
 "*instantiating* them."
 msgstr ""
+"Тепер у нас є два додаткових файли QML, `AddEditDialog.qml` і "
+"`KountdownDelegate`, і нам потрібно винайти спосіб використання їх у `Main."
+"qml`. Способом додавання вмісту нових файлів до `Main.qml` є *створення "
+"екземплярів* цих файлів."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:142
 msgid "`AddEditDialog.qml` becomes `AddEditDialog {}`:"
@@ -8889,6 +9119,9 @@ msgid ""
 "by brackets were instantiations of a QML component. This is why our new QML "
 "files need to start with an uppercase letter."
 msgstr ""
+"Більшість випадків, які ви бачили, з компонентом, що починається з великої "
+"літери і за яким було дописано дужки, були екземплярами компонента QML. Ось "
+"чому назви наших нових файлів QML мають починатися з великої літери."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:152
 msgid ""
@@ -8896,6 +9129,9 @@ msgid ""
 "behaves exactly the same as before, but with the code split into separate "
 "parts, making things much more manageable."
 msgstr ""
+"Скомпілюйте проєкт і запустіть його. Маєте отримати функціональне вікно, які "
+"поводитиметься так само, як і раніше, але код буде поділено між окремим "
+"частинами, що зробить проєкт простішим у керуванні."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"
@@ -9143,10 +9379,13 @@ msgid ""
 "NOTE: regardless of the color set used, it is recommended to replace all "
 "available colors in Theme, to avoid badly contrasting colors"
 msgstr ""
+"ЗАУВАЖЕННЯ: незалежно від використаного набору кольорів, рекомендуємо "
+"замінити усі доступні кольори у Theme, щоб уникнути помилок із контрастністю "
+"кольорів"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:135
 msgid "Redefine all the other colors you want"
-msgstr ""
+msgstr "Перевизначення усіх інших потрібних кольорів"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:137
 msgid "This will be \"#b9d795\""
@@ -9171,6 +9410,10 @@ msgid ""
 "use a [Kirigami Addons FormCard](/docs/getting-started/kirigami/addons-"
 "introduction)."
 msgstr ""
+"З метою демонстрації, у цьому підручнику використано AbstractCard для "
+"спрощення текстових прикладів. Кращим способом досягти тих самих результатів "
+"було б використання [FormCard з додатків Kirigami](/docs/getting-started/"
+"kirigami/addons-introduction)."
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:16
 msgid "Headings"

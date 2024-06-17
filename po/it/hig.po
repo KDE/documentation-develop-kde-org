@@ -1,11 +1,11 @@
 #
-# Vincenzo Reale <smart2128vr@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-12 01:43+0000\n"
-"PO-Revision-Date: 2023-01-18 09:42+0100\n"
+"POT-Creation-Date: 2024-06-17 01:43+0000\n"
+"PO-Revision-Date: 2024-06-12 18:27+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -13,20 +13,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: content/hig/_index.md:0
 msgid "KDE Human Interface Guidelines"
 msgstr "Linee guida di interfaccia umana di KDE"
 
 #: content/hig/_index.md:20
+#, fuzzy
+#| msgid ""
+#| "Welcome to the KDE Human Interface Guidelines! Following them will help "
+#| "you build a beautiful and powerful app that feels at home in a KDE "
+#| "environment, and works well outside of it. Users will learn how to use it "
+#| "quickly, accomplish their goals with ease, and encounter fewer issues "
+#| "requiring support."
 msgid ""
 "Welcome to the KDE Human Interface Guidelines! Following them will help you "
-"build a beautiful and powerful app that feels at home in a KDE environment, "
-"and works well outside of it. Users will learn how to use it quickly, "
-"accomplish their goals with ease, and encounter fewer issues requiring "
-"support."
+"build a beautiful and powerful app that feels at home when run in [KDE "
+"Plasma](https://kde.org/plasma-desktop), and works well outside of it. Users "
+"will learn how to use your app quickly, accomplish their goals with ease, "
+"and encounter fewer issues requiring support."
 msgstr ""
+"Benvenuto nelle linee guida per l'interfaccia umana di KDE! Seguirle ti "
+"aiuterà a creare un'applicazione bella e potente che si senta a casa in un "
+"ambiente KDE e funzioni bene al di fuori di esso. Gli utenti impareranno a "
+"usarla rapidamente, raggiungeranno i loro obiettivi con facilità e "
+"incontreranno meno problemi che richiedono supporto."
 
 #: content/hig/_index.md:22
 msgid ""
@@ -34,10 +46,13 @@ msgid ""
 "and patterns, standard user interface conventions, and recommendations for "
 "platform integration."
 msgstr ""
+"Questo documento tratta la filosofia e la cultura di progettazione di KDE, i "
+"flussi di lavoro e i modelli comuni, le convenzioni dell'interfaccia utente "
+"standard e i consigli per l'integrazione della piattaforma."
 
 #: content/hig/_index.md:25
 msgid "Why is good design so important?"
-msgstr ""
+msgstr "Perché la buona progettazione è così importante?"
 
 #: content/hig/_index.md:26
 msgid ""
@@ -47,6 +62,12 @@ msgid ""
 "designed app, and if forced to, they'll be resentful and spread negativity "
 "about it. Avoid this through good design!"
 msgstr ""
+"La progettazione determina non solo quanto bene qualcosa soddisfa il suo "
+"scopo funzionale, ma anche quanto sia piacevole interagire con esso. Se "
+"manca uno dei due, il risultato sarà frustrante. Le persone non vorranno "
+"utilizzare un'applicazione mal progettata e, se costrette a farlo, "
+"proveranno risentimento e diffonderanno negatività al riguardo. Evitatelo "
+"attraverso un buona progettazione!"
 
 #: content/hig/_index.md:28
 msgid ""
@@ -56,20 +77,43 @@ msgid ""
 "It's better to succeed by focusing on what you can do well than to spread "
 "yourself thin and fail. Under-promise and over-deliver, never the reverse."
 msgstr ""
+"La progettazione implica decisioni mirate e compromessi che avvicinano un "
+"progetto agli obiettivi previsti e ai paradigmi di utilizzo. Le migliori "
+"applicazioni sanno a quali utenti e casi d'uso si rivolgono e quali lasciano "
+"ad altri. È meglio avere successo concentrandoti su ciò che sai fare bene "
+"piuttosto che dilapidarti e non riuscire. Poche promesse e numerosi rilasci, "
+"mai il contrario."
 
 #: content/hig/_index.md:31
 msgid "Topics not covered"
-msgstr ""
+msgstr "Argomenti non trattati"
 
 #: content/hig/_index.md:32
+#, fuzzy
+#| msgid ""
+#| "This document is a set of design guidelines, not instructions for "
+#| "implementing every specific component. While some technical guidance will "
+#| "be provided, much more detail can be found in components' own [usage]"
+#| "(https://develop.kde.org/docs/) and [API](https://api.kde.org/) "
+#| "documentation as well as the [source code of existing KDE apps](https://"
+#| "invent.kde.org/explore/groups?sort=name_asc). It's more of a *what* and a "
+#| "*why*, not a *how*."
 msgid ""
 "This document is a set of design guidelines, not instructions for "
 "implementing every specific component. While some technical guidance will be "
-"provided, much more detail can be found in components' own [usage](https://"
-"develop.kde.org/docs/) and [API](https://api.kde.org/) documentation as well "
-"as the [source code of existing KDE apps](https://invent.kde.org/explore/"
-"groups?sort=name_asc). It's more of a *what* and a *why*, not a *how*."
+"provided, much more detail can be found in the components' own [usage]"
+"(https://develop.kde.org/docs/) and [API](https://api.kde.org/) "
+"documentation as well as the [source code of existing KDE apps](https://"
+"invent.kde.org/explore/groups?sort=name_asc). It's more of a *what* and a "
+"*why*, not a *how*."
 msgstr ""
+"Questo documento è un insieme di linee guida di progettazione, non "
+"istruzioni per l'implementazione di ogni componente specifico. Anche se "
+"saranno fornite alcune indicazioni tecniche, molti più dettagli possono "
+"essere trovati nella documentazione di [utilizzo](https://develop.kde.org/"
+"docs/) e dell'[API](https://api.kde.org/) dei componenti così come il "
+"[codice sorgente delle applicazioni KDE esistenti](https://invent.kde.org/"
+"explore/groups?sort=name_asc). È più un *cosa* e un *perché*, non un *come*."
 
 #: content/hig/_index.md:34
 msgid ""
@@ -78,16 +122,23 @@ msgid ""
 "guidelines, and when it can be appropriate to break them if it produces a "
 "superior result."
 msgstr ""
+"Questo documento non vuole essere un codice di leggi ferree. Imparando e "
+"seguendo le regole, capirai come innovare in sicurezza nel rispetto delle "
+"linee guida e quando può essere opportuno infrangerle se ciò produce un "
+"risultato superiore."
 
 #: content/hig/_index.md:37
 msgid "Contributing"
-msgstr ""
+msgstr "Contribuire"
 
 #: content/hig/_index.md:38
 msgid ""
 "This is a living document, intended to be updated over time to reflect "
 "current KDE design trends and best practices. Contributions are welcome!"
 msgstr ""
+"Questo è un documento vivo, destinato ad essere aggiornato nel tempo per "
+"riflettere le attuali tendenze e le migliori pratiche di progettazione di "
+"KDE. I contributi sono benvenuti!"
 
 #: content/hig/_index.md:40
 msgid ""
@@ -98,6 +149,22 @@ msgid ""
 "drawer on the right. Tasks and changes are organized via https://invent.kde."
 "org. To learn how to submit changes, see the [README file](https://invent."
 "kde.org/documentation/develop-kde-org/-/blob/master/README.md)."
+msgstr ""
+"Il contenuto è scritto in [Markdown](https://commonmark.org/help/) e i file "
+"sorgente sono ospitati in un [deposito Git](https://invent.kde.org/"
+"documentation/develop-kde-org.git). Per modificare rapidamente una pagina, "
+"l'editor di GitLab può essere aperto su qualsiasi pagina con il pulsante "
+"«Edit this page» nel cassetto a destra. Le attività e le modifiche sono "
+"organizzate tramite https://invent.kde.org. Per sapere come inviare "
+"modifiche, vedi il [file README](https://invent.kde.org/documentation/"
+"develop-kde-org/-/blob/master/README.md)."
+
+#: content/hig/_index.md:43
+msgid "Read the guidelines"
+msgstr ""
+
+#: content/hig/_index.md:44
+msgid "Click on any of these tiles to jump to a page:"
 msgstr ""
 
 #~ msgid ""
