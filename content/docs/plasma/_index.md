@@ -104,7 +104,7 @@ A script written in JavaScript or QML that manages windows, allowing to [automat
 
 ## **Login Screen (SDDM)**
 
-The theme used for the screen you see before you log in to Plasma in most KDE distros. Despite the visual similarity of their Breeze themes, [SDDM](https://github.com/sddm/sddm) is not the lock screen. Lock screen themes are included within Plasma Styles.
+The theme used for the screen you see before you log into Plasma in most KDE distros. Despite the visual similarity of their Breeze themes, [SDDM](https://github.com/sddm/sddm) is not the lock screen. Lock screen themes are included within Plasma Styles.
 
 * System/Default: `/usr/share/sddm/themes/` ([Breeze example on GitLab](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/sddm-theme)) ([KDE Store Category](https://store.kde.org/browse?cat=101&ord=latest))
 * Testing: `sddm-greeter --test-mode --theme /usr/share/sddm/themes/breeze`
