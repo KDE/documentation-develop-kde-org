@@ -28,6 +28,39 @@ These are not rules, just a compilation of matters found in technical documentat
 
 Simply by keeping these questions in mind while writing your tutorial, your content will naturally lean towards high quality documentation.
 
+## Use "we" for friendly explanations, "you" for reference content/instructions {#pronouns}
+
+We use the first person plural (we) for general explanations in tutorials and the second person singular (you/[generic you](https://en.wikipedia.org/wiki/Generic_you)) for direct instructions, especially when combined with the imperative.
+
+The use of "we" is known to lower the distance between writer and reader, feeling more welcoming, while the use of "you" is standard in reference documentation and technical texts whose point is to give instructions.
+
+* In this section **we'll** be focusing on layouts.
+* **Compile** the application again. **You** can then run the application with:
+
+The use of "we" is especially advantageous to bring a sense of unity with the KDE community or accomplishment in following the tutorial. For instance:
+
+* In the previous tutorial, **we** have managed to create the interface of **our** application.
+* **Let's** take a look at this file again:
+* In this section, **we** will expose a C++ property to QML.
+
+The pronoun "we" can also be used for the opposite purpose, to distance the writer from the reader. The beginning of this guideline is an example of that:
+
+* **We** use the first person plural for […] and the second person singular for […].
+* **We** recommend you to check the Kirigami Gallery, **our** showcase application for Kirigami controls.
+
+The use of "you" is especially advantageous to talk about the user's experiences, hypotheticals, instructions and for avoiding passive voice. For instance:
+
+* If **you** have ever used Plasma System Settings, **you** will have come across a ListView.
+* **Your** installation path may differ depending on the platform.
+* **You** will also need to change the following in **your** CMakeLists.txt:
+* A dialog can be added using this API. → **You** can add a dialog using this API.
+
+In many cases where "you" is used, it is also possible to shorten the text with the imperative:
+
+* You can then run the application with: → **Run** the application with:
+
+All of the other style guidelines use "you" or imperative as they are meant to provide simple, direct, prescriptive instructions with the same tone as general rules.
+
 ## Use tree to show the project structure {#tree}
 
 The `tree` command is great to show the project structure to the reader.
@@ -35,6 +68,26 @@ The `tree` command is great to show the project structure to the reader.
 To select how many levels in a directory tree you want to expose, you can use the `-L` flag. To achieve three levels, for example:
 
 `tree -L 3`
+
+To showcase the project structure inside a code block, use the `tree` highlight indicator after the three backticks <code>```</code>:
+
+````
+```tree
+app-tutorial/
+├── CMakeLists.txt
+├── org.kde.tutorial.desktop
+└── src/
+    ├── CMakeLists.txt
+    ├── main.cpp
+    └── Main.qml
+```
+````
+
+The general preference for `tree` project structures is:
+
+* project folder at the top, not `.` as in the default output of `tree`
+* directories last
+* CMakeLists.txt first among the list of files in a directory
 
 ## Use sentence case for titles {#titles}
 
@@ -53,18 +106,21 @@ Use Title Case only for project names, compound nouns that are known to be in Ti
 ## Use monospaced text for files, directories, code references, and short code snippets {#monospace}
 
 Use backticks before and after things like:
+
 * `~/.config/examplerc`
 * `~/kde/usr/`
 * `setContext()`
-* `cmake -B build -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr`.
+* `cmake -B build -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr`
 
 If your code snippet has more than one line, use a code block instead.
+
+If you code snippet has only one line, but it needs to be emphasized as a separate step, use a code block instead.
 
 ## Use () to signal functions {#functions}
 
 This applies to both links and monospaced text: `setContext()` or [KXmlGuiWIndow::setupGUI()](#).
 
-Don't use parameters inside the (). The only exception is when you need to differentiate between function overloads. For example:
+Don't use parameters inside the (). The only exception is when you need to differentiate between function overloads or when the parameter itself should be the focus. For example:
 
 * QString()
 * QString(const char *str)
@@ -78,6 +134,20 @@ To avoid ambiguity, refer to directories by ending them with a slash:
 
 * Do: `content/docs/tutorial/`
 * Don't: `content/docs/tutorial`
+
+## Use two or three levels for section titles in Markdown {#section-levels}
+
+Try to section the tutorial content within three heading levels.
+
+Section titles (which start with a select number of `#` characters) should preferably use heading level two (`##`) or three (`###`).
+
+This is for three reasons:
+
+* The first level (`#`) is already in use for the page title.
+* The KDE Developer website currently has a limitation for showing sidebar content. Using four levels (`####`) or more will now show up on the right sidebar.
+* This forces the tutorial writer to not go overboard with content levels.
+
+Use heading level four (`####`) only if strictly necessary. Never use five (`#####`) or more.
 
 ## Use descriptive anchors {#anchors}
 
@@ -107,6 +177,53 @@ Do: `monospaced text`
 
 Don't: [`monospacedLink`](#)
 
+## Use arrows to indicate menu structures or GUI steps {#arrows}
+
+To indicate any menu actions (such as those in an application's menubar, context menu, or hamburger menu) or a certain number of steps to accomplish an action in the application's graphical interface, use arrows:
+
+* File → Export → Export as PDF…
+* Select any text → Copy its contents with Ctrl+C → Open Dolphin → Navigate to this folder → Paste with Ctrl+V
+
+## Prefer Unicode symbols over handmade approximations {#symbols}
+
+Use the following:
+
+* … (U+2026) instead of ...
+* → (U+2192) instead of ->
+* “ (U+201C) and ” (U+201D) instead of " for quotations
+* ’ (U+2019) instead of ' for apostrophes
+* — (U+2014) instead of -, -, or -- for [interjections](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use)
+
+While this will not count as a blocker for a merge request contribution to the KDE Developer website, following this guideline will result in more professional text that is more comprehensible for a screen reader.
+
+This guideline is based on, but does not strictly follow, the [KDE Human Interface Guidelines]({{< ref "hig/text_and_labels#symbols" >}}).
+
+## Avoid abbreviations (e.g., i.e., &, tech terms) {#abbreviations}
+
+Common Latin-based abbreviations might be tempting to use in documentation due to how short they are, but avoiding them makes the text sound more natural in English and removes any potential language barrier for the reader. They also tend to become overused.
+
+Use:
+
+* "for example" / "for instance" instead of e.g.
+* "that is / in other words" instead of i.e.
+
+The abbreviation for et cetera (etc.) can be used.
+
+While not technically an abbreviation, the symbol & used as an abbreviated replacement for "and" should also be avoided.
+
+Most technology terms that are used as abbreviations have simpler English counterparts that should be used instead:
+
+* PC → Computer
+* OS → Operating system
+
+However, terms that are more well known by their abbreviations than their spelled-out counterpart should be written as is. For example:
+
+* USB is more well known than Universal Serial Bus
+* URL is more well known than Uniform Resource Locator
+* HTML is more well known than HyperText Markup Language
+
+This guideline is based on the [KDE Human Interface Guidelines]({{< ref "hig/text_and_labels#acronyms" >}}).
+
 ## Cross-reference most things {#links}
 
 This binds with the question of "Can the reader find what they need without a search field?".
@@ -132,7 +249,7 @@ If it's well understood that the text is talking about QtQuick, you can just say
 
 After that you can start using "Controls Button" or simply "Button" without links, but only if there is no ambiguity. For example, if you have a QtQuick.Controls.Button and a Kirigami.Button, saying "Button" will be ambiguous and the user won't know whether you are talking about Controls or Kirigami.
 
-## Avoid cross-referencing more than once... {#linkonce}
+## Avoid cross-referencing more than once… {#linkonce}
 
 You should avoid providing more than one hyperlink to the same content in the same paragraph. If there is more than one, 90% of the time the paragraph can either be rephrased or split.
 
@@ -157,7 +274,7 @@ can be assigned shortcuts.
 One feature offered by Kirigami Actions on top of QtQuick Actions is the possibility to nest actions.
 ```
 
-## ...but do cross-reference again where convenient {#linkconvenient}
+## …but do cross-reference again where convenient {#linkconvenient}
 
 If the text transitions to a new section, the latest reference to that link was long ago, or linking to the API would suddenly be convenient for the reader, do link again.
 
@@ -166,17 +283,17 @@ A [Kirigami.Action](docs:kirigami2;Action) encapsulates a user interface action.
 We can use these to provide our applications with easy-to-reach actions that are
 essential to their functionality.
 
-...
-...
-...
+…
+…
+…
 
 ## Kirigami Pages
 
-...
+…
 
 You can attach a [Kirigami.Action](docs:kirigami2;Action) to the `actions:` of a [Kirigami.Page](docs:kirigami2;Page).
 
-...
+…
 ```
 
 ## Provide a full example {#fullexample}
@@ -205,6 +322,8 @@ Moreover, if you can see no practical difference between the text being inside a
 ```
 
 Can be used for optional content that really should not be taking space from the page and from the main content, which might be the case for really long lists or [alerts]({{< ref "formatting.md#alert" >}}). Use this rarely.
+
+Note that [alerts can also be made collapsible]({{< ref "docs/contribute/formatting#alert" >}}).
 
 ## Follow standard documentation practices where it makes sense {#standard-documentation-practices}
 
@@ -251,7 +370,3 @@ Here is a list of recommended Write The Docs talks that you should see:
 * [Is it (layer) cake: Thinking in content levels](https://youtu.be/0OKRNQvZbL4)
 * [The power of product screenshots in your documentation](https://youtu.be/eoJh5cu91pw)
 * [The descriptivist manifesto](https://youtu.be/RbFxwuNJjWo)
-* [Don't shoot yourself in the foot with content reuse](https://youtu.be/dxEhvjz3eEY)
-
-
-
