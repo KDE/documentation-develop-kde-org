@@ -1,0 +1,26 @@
+{{ if transform.CanHighlight .Type }}
+  {{/* Supported Chroma Language*/}}
+
+  <div class="highlight">
+  {{ with .Attributes.title }}
+    <pre class="highlight-title" style="margin-bottom: 0; border-bottom:none; padding-top:0.4em; padding-bottom:0.4em;">{{ . }}</pre>
+  {{ end }}
+  <pre tabindex="0" class="chroma" style="margin-top: 0;
+    {{ with .Attributes.title }}
+      border-top-style:dashed; border-top-width: medium;
+    {{ end }}
+    padding-top: 0.4em;"><code class="language-{{ .Type }}" data-lang="{{ .Type }}">
+  {{- with transform.HighlightCodeBlock . -}}
+    {{ .Inner }}
+  {{- end -}}
+  </code></pre></div>
+
+{{ else }}
+  {{/* Unsupported Language */}}
+  <div class="highlight">
+  {{ with .Attributes.title }}
+    <div class="highlight-title"><span>{{ . }}</span></div>
+  {{ end }}
+    <pre tabindex="0"><code class="language-{{ .Type }}" data-lang="{{ .Type }}">{{ .Inner }}</code></pre>
+  </div>
+{{ end }}
