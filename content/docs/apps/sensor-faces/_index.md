@@ -18,7 +18,7 @@ rootdir
 ├── contents
 │   ├── ui
 │   │   ├── FullRepresentation.qml (required)
-│   │   ├── CompactRepresenation.qml (required)
+│   │   ├── CompactRepresentation.qml (required)
 │   │   └── Config.qml (optional)
 │   └── config
 │       └── main.xml (optional)
@@ -168,7 +168,7 @@ Faces.SensorFace {
     contentItem: ColumnLayout {
         Kirigami.Heading {
             Layout.alignment: Qt.AlignHCenter
-            text: i18n("Title: %1, controller.title)
+            text: i18n("Title: %1, controller.title")
             visible: controller.showTitle
             level: 2
         }
