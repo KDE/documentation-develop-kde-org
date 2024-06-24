@@ -37,7 +37,7 @@ Use symbols that evoke the metaphor of your icon's category.
 {{< /do >}}
 {{< dont src="/hig/category-metaphor-dont.png" >}}
 Don't use icons just for the sake of having different visuals per
-categry---use meaningful metaphors that inform the user about their
+category---use meaningful metaphors that inform the user about their
 category.
 {{< /dont >}}
 {{< /compare >}}
