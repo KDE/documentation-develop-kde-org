@@ -21,3 +21,12 @@ akonadi with specific environment variables. For example to debug the EWS resour
   [Hotspot](https://github.com/KDAB/hotspot).
 
 This variables are defined in [akonadicontrol](https://invent.kde.org/pim/akonadi/-/blob/master/src/akonadicontrol/processcontrol.cpp?ref_type=heads#L164)
+
+## Debugging the EWS resource
+
+By using the following logging rules, Akonadi will dump the content of the
+EWS responses to a temporary directory.
+
+```bash
+QT_LOGGING_RULES="*org.kde.pim.ews*=true" akonadictl restart
+```
