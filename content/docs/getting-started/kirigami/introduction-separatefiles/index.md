@@ -95,7 +95,7 @@ First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` with th
 
 We create a new target called `kirigami-hello-components` and then turn it into a QML module using [ecm_add_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html) under the import name `org.kde.tutorial.components` and add the relevant QML files.
 
-Because the target is different from the executable, it will function as a different QML module, in which case we will need to *finalize* it (make CMake generate the files needed for the module to be found, namely `qmldir` and `qmltypes`) with [ecm_finalize_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html). We then install it exactly like in previous lessons.
+Because the target is different from the executable, it will function as a different QML module, in which case we will need to do two things: make it *generate* code for it to work as a Qt plugin with [GENERATE_PLUGIN_SOURCE](https://api.kde.org/ecm/module/ECMQmlModule.html), and *finalize* it with [ecm_finalize_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html). We then install it exactly like in previous lessons.
 
 We needed to use [add_library()](https://cmake.org/cmake/help/latest/command/add_library.html) so that we can link `kirigami-hello-components` to the executable in the [target_link_libraries()](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) call in `kirigami-tutorial/src/CMakeLists.txt`:
 

@@ -13,7 +13,7 @@ In our introductory tutorial, we used [CMake](https://cmake.org/) as the build s
 
 CMake is useful because it allows us to automate much of the stuff that needs to be done before compilation.
 
-## CMakeLists.txt
+## The root CMakeLists.txt
 
 You might remember this `CMakeLists.txt` file from the first tutorial:
 
@@ -60,7 +60,9 @@ The final line lets CMake print out which packages it has found, and it makes co
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" start=34 lines=1 >}}
 
-And above that, `add_subdirectory(src)` points CMake into the `src/` directory, where it finds another `CMakeLists.txt` file:
+And above that, `add_subdirectory(src)` points CMake into the `src/` directory, where it finds another `CMakeLists.txt` file.
+
+## src/CMakeLists.txt
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/CMakeLists.txt" highlight="cmake" >}}
 
@@ -90,6 +92,26 @@ These libraries should match the components that we included in our previous `CM
 {{< /alert >}}
 
 The documentation for all three commands can be found in the [extra-cmake-modules API for ECMQmlModule](https://api.kde.org/ecm/module/ECMQmlModule.html).
+
+## src/components/CMakeLists.txt
+
+In the tutorial about [how to split your code into separate files](/docs/getting-started/kirigami/introduction-separatefiles#preparing-cmake-for-the-new-files), a new CMake file was introduced to allow for separate QML modules:
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/CMakeLists.txt" highlight="cmake" >}}
+
+The requirement for this file to be read by CMake is adding a call to `add_subdirectory()` in the `src/CMakeLists.txt` pointing to it.
+
+We create a new target called `kirigami-hello-components` and then turn it into a QML module using [ecm_add_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html) under the import name `org.kde.tutorial.components` and add the relevant QML files.
+
+The call to [add_library()](https://cmake.org/cmake/help/latest/command/add_library.html) generates a new target called `kirigami-hello-components`. This target will have its own set of source code files, QML files, link its own libraries and so on, but it needs to be linked to the executable, but once it is compiled it needs to be linked to the executable created in the `src/CMakeLists.txt`. This is done by adding the target name to the list of libraries that will be linked to the executable in `target_link_libraries()`.
+
+The call to `ecm_add_qml_module()` changes the library to allow it to accept QML files as before, but this time we need to use [GENERATE_PLUGIN_SOURCE](https://api.kde.org/ecm/module/ECMQmlModule.html). When the executable is used as a backing target (like with `kirigami-hello`) it doesn't need to generate plugin code since it's built into the executable; with separate QML modules like `kirigami-hello-components` the plugin code is necessary.
+
+Upstream Qt's [qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module.html#targets-and-plugin-targets) by default generates a plugin together with the QML module, but KDE's `ecm_add_qml_module()` by default does not for backwards compatibility.
+
+Another thing that is necessary for separate QML modules is to finalize the target. This mainly means CMake generates two files, [qmldir and qmltypes](https://doc.qt.io/qt-6/qtqml-modules-qmldir.html), which describe the QML modules we have and exports their symbols for use in the library. They are important when installing your application so that the executable being run is able to find where the QML files for each module are, so they are automatically added to the target.
+
+You can then just install the target as before.
 
 Next time you need to add more QML files, remember to include them in this file. C++ files that use the [QML_ELEMENT](https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html) keyword which we will see much later in the tutorial can also be added here using `target_sources()`. You can logically separate your code by creating more QML modules with different imports as needed.
 

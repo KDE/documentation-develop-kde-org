@@ -24,7 +24,13 @@ We then create a [QApplication](docs:qtwidgets;QApplication) instance which we c
 
 We also set some metadata relating to the application. These include the organisation that created the application, the organisation's website, and the name of the application. We set these properties by calling [QApplication](docs:qtwidgets;QApplication), instantiating an object that comes from [QCoreApplication](docs:qtcore;QCoreApplication) and provides the [event loop](docs:qtcore;QCoreApplication::exec) for applications regardless of whether they have a GUI or not (so if we ran our program without the GUI, this metadata would still be set).
 
-To make our app look native on non-Plasma environments such as Windows or GNOME, we use [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::setStyle) to make use of [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style), forcing the use of Breeze.
+To make our app look good with KDE's [Breeze icons](https://invent.kde.org/frameworks/breeze-icons) and [Breeze style](https://invent.kde.org/plasma/breeze) on non-Plasma environments such as Windows or GNOME, we need to do three things:
+
+* initialize the theming facilities of [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) on platforms where icon themes aren't part of the system (like Windows or MacOS) with `KIconTheme::initTheme()`
+* set the QStyle with [QApplication::setStyle()](docs:qtwidgets;QApplication::setStyle) to force Breeze instead of the native platform style
+* set the QtQuick Controls style with [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::setStyle) to force Breeze with KDE's [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)
+
+The call to `KIconTheme::initTheme()` needs to be done before creating the QApplication and lets the app find Breeze icons to use. Setting the QStyle to Breeze is needed because we used QApplication for our app instead of [QGuiApplication](docs:qtgui;QGuiApplication). Actual interface controls in the window like buttons and checkboxes will follow Breeze by using `qqc2-desktop-style`.
 
 The [QQmlApplicationEngine](docs:qtqml;QQmlApplicationEngine) lets us load an application from a QML file, which we do in the next line. In `engine.loadFromModule("org.kde.tutorial", "Main");` we load our QML from the URI import defined in CMake.
 

@@ -24,6 +24,7 @@ target_link_libraries(kirigami-hello
     Qt6::Widgets
     KF6::I18n
     KF6::CoreAddons
+    KF6::IconThemes
 )
 
 install(TARGETS kirigami-hello ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

@@ -2,6 +2,7 @@ add_library(kirigami-hello-components)
 
 ecm_add_qml_module(kirigami-hello-components
     URI "org.kde.tutorial.components"
+    GENERATE_PLUGIN_SOURCE
 )
 
 ecm_target_qml_sources(kirigami-hello-components

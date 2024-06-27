@@ -21,10 +21,10 @@ Before getting started, we will need to install Kirigami on our machine. There a
 We need a C++ compiler, Qt development packages, and Kirigami. Open a terminal application and run one of the following, depending on which Linux distribution you are using:
 
 {{< installpackage
-  arch="base-devel extra-cmake-modules cmake qt6-base qt6-declarative kirigami ki18n kcoreaddons breeze qqc2-desktop-style"
-  opensuse="cmake kf6-extra-cmake-modules kf6-kirigami-devel kf6-ki18n-devel kf6-kcoreaddons-devel qt6-base-devel qt6-declarative-devel qt6-quickcontrols2-devel qqc2-desktop-style"
+  arch="base-devel extra-cmake-modules cmake kirigami ki18n kcoreaddons breeze kiconthemes qt6-base qt6-declarative qqc2-desktop-style"
+  opensuse="cmake kf6-extra-cmake-modules kf6-kirigami-devel kf6-ki18n-devel kf6-kcoreaddons-devel kf6-kiconthemes-devel qt6-base-devel qt6-declarative-devel qt6-quickcontrols2-devel qqc2-desktop-style"
   fedoraCommand=`sudo dnf groupinstall "Development Tools" "Development Libraries"
-sudo dnf install cmake extra-cmake-modules kf6-kirigami2-devel kf6-ki18n-devel kf6-kcoreaddons-devel qt6-qtbase-devel qt6-qtdeclarative-devel qt6-qtquickcontrols2-devel qqc2-desktop-style` >}}
+sudo dnf install cmake extra-cmake-modules kf6-kirigami2-devel kf6-ki18n-devel kf6-kcoreaddons-devel kf6-kiconthemes-devel qt6-qtbase-devel qt6-qtdeclarative-devel qt6-qtquickcontrols2-devel qqc2-desktop-style` >}}
 
 Further information for other distributions can be found [here](/docs/getting-started/building/help-dependencies).
 
@@ -39,7 +39,7 @@ For this tutorial, you will need to follow the [setup instructions for kde-build
 After that, you may simply run the following on a terminal:
 
 ```bash
-kde-builder kirigami kcoreaddons ki18n breeze plasma-integration qqc2-desktop-style
+kdesrc-build kirigami kcoreaddons ki18n breeze plasma-integration kiconthemes qqc2-desktop-style
 ```
 
 ### Installing Kirigami with Craft {#craft}
@@ -53,16 +53,6 @@ After that, you may simply run the following on a terminal:
 ```bash
 craft kirigami kcoreaddons ki18n breeze kiconthemes qqc2-desktop-style
 ```
-
-{{< alert title="Theming on Windows" color="info">}}
-
-<details>
-<summary>Click here to read more</summary>
-
-When building the application after installing dependencies with Craft, just installing KIconThemes and Breeze ensures the application will be able to use Breeze icons on platforms like Windows, linking is not necessary. [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style) on the other hand is responsible for the nice looking style we want to enforce on those platforms.
-</details>
-
-{{< /alert >}}
 
 If you close your terminal, you can simply run the environment setup file again to compile your app.
 
@@ -189,6 +179,17 @@ It also functions as the entrypoint to our application. The two parts of our pro
 
 For now, we don't need to go into too much detail regarding what our `main.cpp` code does, but its role will grow significantly more important once we decide to add more complex functionality to our application in the future.
 
+{{< alert title="Theming on Windows" color="info">}}
+
+<details>
+<summary>Click here to read more</summary>
+
+The application needs to set its icon theme, QStyle, and QtQuick Controls style to Breeze in order to show up on Windows. To learn more about it, see [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp/).
+
+</details>
+
+{{< /alert >}}
+
 If you want to get ahead, you can read more about how this `main.cpp` works in [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp).
 
 If you want to see a few ways on how the C++ code can be improved, like using [KAboutData](docs:kcoreaddons;KAboutData) for translatable application metadata, be sure to check our [KXmlGui tutorial](/docs/getting-started/kxmlgui).
@@ -230,7 +231,7 @@ We are almost at the finish line. The last thing we need to do is build and run 
 
 ### Linux or FreeBSD
 
-If you want kde-builder to handle building and installation of your project, you need to specify a custom module in your `~/.config/kdesrc-buildrc`:
+If you want kdesrc-build to handle building and installation of your project, you need to specify a custom module in your `~/.config/kdesrc-buildrc`:
 
 ```
 ...
@@ -242,29 +243,42 @@ end module
 Then you can build and install it with the command:
 
 ```bash
-kde-builder kirigami-tutorial
+kdesrc-build kirigami-tutorial
 ```
 
 In case you want to handle building and installation manually without kde-builder, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
 
 ```bash
-cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/.local"
+cmake -B build/
 cmake --build build/
-cmake --install build/
+cmake --install build/ --prefix "~/.local"
 ```
 
 The program will be installed to `~/.local/bin` and its desktop entry to `~/.local/share/applications`.
 
 ### Windows
 
-If you are compiling your project with [Craft](#craft) on Windows, you might need to specify a CMake Generator for the first step, depending on whether you are using Visual Studio 2019 (msvc) or MinGW (make) to compile your projects.
+If you are compiling your project on Windows after having set up [Craft](#craft), CMake should automatically detect the right compiler:
 
-If Visual Studio:
 
 ```bash
-cmake -B build/ -G "Visual Studio 16 2019"`
+cmake -B build/
 cmake --build build/
 cmake --install build/
+```
+
+Depending on how you installed the compiler, you might need to specify a CMake Generator for the first step, depending on whether you are using Visual Studio (msvc) or MinGW (make) to compile your projects.
+
+If Visual Studio, depending on the compiler you chose to install, it might be:
+
+```bash
+cmake -B build/ -G "Visual Studio 16 2019"
+```
+
+Or:
+
+```bash
+cmake -B build/ -G "Visual Studio 17 2022"
 ```
 
 If MinGW:
@@ -276,6 +290,14 @@ cmake --install build/
 ```
 
 In both cases, the program will be installed to `C:\CraftRoot\bin`.
+
+If you ever get in doubt as to the name of the compiler that should be used in the `cmake` call, run:
+
+```bash
+cmake -G
+```
+
+It will list all available generators.
 
 ## Running the application
 
@@ -298,10 +320,10 @@ To run the new QML application in mobile mode, you can use `QT_QUICK_CONTROLS_MO
 QT_QUICK_CONTROLS_MOBILE=1 kirigami-hello
 ```
 
-If you ever need to uninstall your application from your system, you can run:
+If you have compiled the project manually with CMake and for some reason you'd like to uninstall the project, you can run:
 
 ```bash
-cmake --build build --target uninstall
+cmake --build build/ --target uninstall
 ```
 
 {{< alert title="Note" color="info" >}}

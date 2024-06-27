@@ -5,9 +5,11 @@
 #include <QQuickStyle>
 #include <KLocalizedContext>
 #include <KLocalizedString>
+#include <KIconTheme>
 
 int main(int argc, char *argv[])
 {
+    KIconTheme::initTheme();
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("tutorial");
     QApplication::setOrganizationName(QStringLiteral("KDE"));
@@ -15,6 +17,7 @@ int main(int argc, char *argv[])
     QApplication::setApplicationName(QStringLiteral("Kirigami Tutorial"));
     QApplication::setDesktopFileName(QStringLiteral("org.kde.tutorial"));
 
+    QApplication::setStyle(QStringLiteral("breeze"));
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
         QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
     }
