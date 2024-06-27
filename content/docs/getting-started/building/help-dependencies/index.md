@@ -14,7 +14,8 @@ Often the simplest solution to the problem of missing dependencies is just to in
 
 Because most distributions keep track of package dependencies by using *source packages*, they also provide their own built-in commands to easily install all the build dependencies of each package.
 
-While these commands will not *always* install all dependencies you will need when compiling KDE software (for example, when compiling with [kdesrc-build]({{< ref "kdesrc-build-setup" >}}), where the software is always changing), they will make your dependency resolution faster.
+While these commands will not *always* install all dependencies you will need when compiling KDE software (for example, when compiling with
+[kde-builder]({{< ref "kdesrc-build-setup" >}}), where the software is always changing), they will make your dependency resolution faster.
 
 ### Debian, Ubuntu, Kubuntu, KDE neon
 

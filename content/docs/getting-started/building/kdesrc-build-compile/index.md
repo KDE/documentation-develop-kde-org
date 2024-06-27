@@ -1,18 +1,18 @@
 ---
-title: "Building KDE software with kdesrc-build"
+title: "Building KDE software with kde-builder"
 description: "Compiling with a single command"
 weight: 11
 group: "kdesrc-build"
 ---
 
-On this page, you will learn how to use KDE's `kdesrc-build` tool to build various types of KDE software once you have a development environment set up.
+On this page, you will learn how to use KDE's `kde-builder` tool to build various types of KDE software once you have a development environment set up.
 
-It can take an hour or more to compile a KDE application, Framework, or Plasma itself for the first time. The reason for this is that `kdesrc-build` by default has the option `--include-dependencies` enabled, so it will ignore all KDE packages that were installed using the distribution's package manager and will instead build from source all KDE modules that are dependencies of the module you told it to build. The next time you want to compile that or any other piece of KDE software, it will be much faster since most of the dependencies will have already been compiled.
+It can take an hour or more to compile a KDE application, Framework, or Plasma itself for the first time. The reason for this is that `kde-builder` by default has the option `--include-dependencies` enabled, so it will ignore all KDE packages that were installed using the distribution's package manager and will instead build from source all KDE modules that are dependencies of the module you told it to build. The next time you want to compile that or any other piece of KDE software, it will be much faster since most of the dependencies will have already been compiled.
 
 If you don't want to build all dependencies (for instance if you are using a rolling release distro that provides recent versions of software), you can:
 
 * edit the configuration file `~/.config/kdesrc-buildrc` and set `include-dependencies false`
-* or add the `--no-include-dependencies` option when running `kdesrc-build`
+* or add the `--no-include-dependencies` option when running `kde-builder`
 
 ## Frameworks
 
@@ -20,7 +20,7 @@ If you don't want to build all dependencies (for instance if you are using a rol
 
 There is no reason to build any of the frameworks manually unless you are working on code changes to a specific one.
 
-When you tell kdesrc-build to build a module, kdesrc-build will automatically git clone, configure, build and install the KDE Frameworks that are required by that module.
+When you tell kde-builder to build a module, kde-builder will automatically git clone, configure, build and install the KDE Frameworks that are required by that module.
 
 ## Applications
 
@@ -31,17 +31,17 @@ Note that the Discover app store (git repo name: `plasma-discover`) and System S
 To build a single app like KCalc, all you need to do is run:
 
 ```bash
-kdesrc-build kcalc
+kde-builder kcalc
 ```
 
-This command clones the KDE git repository https://invent.kde.org/utilities/kcalc in the directory `~/kde/src/kcalc`, builds all of KCalc's KDE dependencies, and then builds KCalc itself into `~/kde/build/kcalc`. If the build is successful, the result is installed into `~/kde/usr`. As a result, *there is no need to manually install anything;* `kdesrc-build` installed it for you!
+This command clones the KDE git repository https://invent.kde.org/utilities/kcalc in the directory `~/kde/src/kcalc`, builds all of KCalc's KDE dependencies, and then builds KCalc itself into `~/kde/build/kcalc`. If the build is successful, the result is installed into `~/kde/usr`. As a result, *there is no need to manually install anything;* `kde-builder` installed it for you!
 
 If the build failed for any reason, please see our instructions on how to proceed with [Basic Troubleshooting]({{< ref "kdesrc-build-failure" >}}).
 
-To run it, use the `kdesrc-build --run` command, which launches the built-from-source version of KCalc (from the directory `~/kde/usr`) instead of the version installed using the package manager from your operating system (from the directory `/usr`).
+To run it, use the `kde-builder --run` command, which launches the built-from-source version of KCalc (from the directory `~/kde/usr`) instead of the version installed using the package manager from your operating system (from the directory `/usr`).
 
 ```bash
-kdesrc-build --run kcalc
+kde-builder --run kcalc
 ```
 
 Did it run? If so, then **congratulations, you just compiled your own version of KCalc from source code!** 🎉
@@ -57,7 +57,7 @@ Plasma has multiple *shells*: [Plasma Desktop](https://kde.org/plasma-desktop) f
 To build the Plasma Desktop environment and its related apps, run the following command:
 
 ```bash
-kdesrc-build workspace
+kde-builder workspace
 ```
 
 Once built, you can make an entire built-from-source Plasma session accessible from the SDDM login screen. This is a good way to test core Plasma components. It's also necessary to copy the built-from-source DBus files into a location where they are visible to the system bus. To perform these actions, run the following command:
@@ -94,7 +94,7 @@ Take note of [known issues with built-from-source dev sessions](https://communit
 To build the Plasma Mobile environment, run the following command:
 
 ```
-kdesrc-build mobile
+kde-builder mobile
 ```
 
 You can run your custom-built Plasma Mobile in an emulated phone session using a phone-sized window within your existing desktop.
@@ -128,41 +128,41 @@ Plasma Mobile can also be run on a mobile device itself. For more information, s
 
 Congratulations! You have seen how to:
 
-* compile standalone apps: `kdesrc-build kcalc`
-* compile Plasma Desktop: `kdesrc-build workspace`
-* compile Plasma Mobile: `kdesrc-build mobile`
-* run what you've built: `kdesrc-build --run kcalc`
+* compile standalone apps: `kde-builder kcalc`
+* compile Plasma Desktop: `kde-builder workspace`
+* compile Plasma Mobile: `kde-builder mobile`
+* run what you've built: `kde-builder --run kcalc`
 
 Now it is possible for you to make changes to the code of the program you want to work on, then simply rebuild the project so it displays your changes.
 
-In this case, it's useful to know a few commonly used flags for kdesrc-build.
+In this case, it's useful to know a few commonly used flags for kde-builder.
 
 ### Check the list of things that will be built
 
 To get a general idea of how many and which programs are going to be built for a certain project, you can use the `--pretend` or `--dry-run` flag:
 
 ```bash
-kdesrc-build --pretend kcalc
+kde-builder --pretend kcalc
 ```
 
 ### Rebuild the current project and stay on current branch
 
 Code changes should be done in a separate git branch, not in the `master` branch.
 
-By default, kdesrc-build will always attempt to go back to the `master` branch before rebuilding. To avoid this, you can use the `--no-src` flag:
+By default, kde-builder will always attempt to go back to the `master` branch before rebuilding. To avoid this, you can use the `--no-src` flag:
 
 ```bash
-kdesrc-build --no-src kcalc
+kde-builder --no-src kcalc
 ```
 
 ### Rebuild only a single project without updating the source code
 
 As mentioned above, there are times when you want to rebuild the project in the current branch.
 
-By default, kdesrc-build will rebuild a project and all its dependencies. To avoid this, you can use the `--no-include-dependencies` flag:
+By default, kde-builder will rebuild a project and all its dependencies. To avoid this, you can use the `--no-include-dependencies` flag:
 
 ```bash
-kdesrc-build --no-include-dependencies --no-src kcalc
+kde-builder --no-include-dependencies --no-src kcalc
 ```
 
 ### Build a specific project while skipping certain modules
@@ -172,7 +172,7 @@ Sometimes a particular program somewhere down the dependency chain fails to buil
 In that case, you can avoid building a project by using the `--ignore-modules` flag, which should come after the module name:
 
 ```bash
-kdesrc-build kcalc --ignore-modules gpgme
+kde-builder kcalc --ignore-modules gpgme
 ```
 
 ### Specifying executable names when running
@@ -180,7 +180,7 @@ kdesrc-build kcalc --ignore-modules gpgme
 In some modules, such as `discover`, the build process will result in an executable which does not match the module name. You may specify the executable using the `-e` flag:
 
 ```bash
-kdesrc-build --run -e plasma-discover discover
+kde-builder --run -e plasma-discover discover
 ```
 
 Without this flag, attempting to run the application will result in an error similar to:
@@ -192,17 +192,17 @@ Try to set executable name with -e option.
 
 ### Running an application after making changes to one of its dependencies
 
-Let's say you want to make a change to the KConfig library that should change a behavior in KCalc. In this case, you don't want kdesrc-build to discard your changes to KConfig. So first build KConfig separately, on its own, without doing a source code update:
+Let's say you want to make a change to the KConfig library that should change a behavior in KCalc. In this case, you don't want kde-builder to discard your changes to KConfig. So first build KConfig separately, on its own, without doing a source code update:
 
 ```bash
-kdesrc-build kconfig --no-src --no-include-dependencies --refresh-build
+kde-builder kconfig --no-src --no-include-dependencies --refresh-build
 ```
 
 This will build just KConfig and install the needed build products into `~/kde/usr`. Now we want to run KCalc in such a way that it makes use of those changed files. Do it like so:
 
 ```bash
-kdesrc-build kcalc --no-src --no-include-dependencies --refresh-build
-kdesrc-build --run kcalc
+kde-builder kcalc --no-src --no-include-dependencies --refresh-build
+kde-builder --run kcalc
 ```
 
 ## Next Steps
@@ -217,6 +217,6 @@ If you already know what you want to work on and you are in fact already working
 
 [Submit your new software changes for review](https://community.kde.org/Infrastructure/GitLab#Submitting_a_merge_request)
 
-Or perhaps you'd like to further adapt kdesrc-build to your needs like managing different builds on the same machine or setting up your preferred IDE. If that's what you need, you can visit the advanced section:
+Or perhaps you'd like to further adapt kde-builder to your needs like managing different builds on the same machine or setting up your preferred IDE. If that's what you need, you can visit the advanced section:
 
 [Advanced kdesrc-build features and troubleshooting](https://community.kde.org/Get_Involved/development/More)

@@ -25,12 +25,12 @@ sudo dnf install code`
 
 ## Setup
 
-The KDE build tool [kdesrc-build]({{< ref "kdesrc-build-setup" >}}) can
+The KDE build tool [kde-builder]({{< ref "kdesrc-build-setup" >}}) can
 automatically generate the configuration files needed for VS Code to work with
 KDE projects.
 
-To enable this feature, first ensure that `kdesrc-build` is installed and
-configured; then enable the feature in the `kdesrc-build` configuration file 
+To enable this feature, first ensure that `kde-builder` is installed and
+configured; then enable the feature in the `kde-builder` configuration file 
 (located at `~/.config/kdesrc-buildrc` by default) - ensure these options are in 
 the `global` section and set to `true`:
 
@@ -45,12 +45,12 @@ global
 end global
 ```
 
-With these settings, projects built by `kdesrc-build` will have the hidden
+With these settings, projects built by `kde-builder` will have the hidden
 `.vscode` folder created in their source directory; for example, for KCalc this
 would be `kde/src/kcalc/.vscode`.
 
 The configuration files are generated when a project is built or rebuilt with 
-`kdesrc-build`. If you have already built the project you want to work on 
+`kde-builder`. If you have already built the project you want to work on 
 before enabling the `generate-vscode-project-config` option, make sure to 
 rebuild it before opening it in VS Code.
 
@@ -73,7 +73,7 @@ The project can be opened as a workspace in vs code by opening the src directory
 * `File` -> `Open Folder...`
 * Select the project's source code directory: `~/kde/src/kcalc`
 
-If you have the `kdesrc-build` configuration set up as described above, VS Code
+If you have the `kde-builder` configuration set up as described above, VS Code
 will automatically detect the `.vscode` folder and load the project with the
 correct settings.
 
@@ -206,5 +206,5 @@ loggers:
 ## Notes
 
 The templates for the `.vscode` configuration files are available
-[here](https://invent.kde.org/sdk/kdesrc-build/-/tree/master/data/vscode) if you
+[here](https://invent.kde.org/sdk/kde-builder/-/tree/master/data/vscode) if you
 need to reference them or create them manually.

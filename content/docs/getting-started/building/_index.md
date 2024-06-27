@@ -18,13 +18,13 @@ KDE runs or participates in several mentoring programs to help new developers, i
 
 There are many ways in which you can build KDE software:
 
-* [kdesrc-build]({{< ref "kdesrc-build-compile" >}})
+* [kde-builder]({{< ref "kdesrc-build-compile" >}})
 * [kde-builder (experimental)](https://invent.kde.org/sdk/kde-builder)
 * standalone with distro dependencies
 * [with containers](https://community.kde.org/Get_Involved/development/More#Develop_in_a_Linux_container)
 * with [Craft](https://community.kde.org/Craft)
 
-If you are completely new to KDE development and want to build it on Linux, you will want to [set up a development environment with kdesrc-build]({{< ref "kdesrc-build-setup" >}}) first. This is KDE's most complete and best supported method for building KDE software on Linux.
+If you are completely new to KDE development and want to build it on Linux, you will want to [set up a development environment with kde-builder]({{< ref "kdesrc-build-setup" >}}) first. This is KDE's most complete and best supported method for building KDE software on Linux.
 
 The experimental tool [kde-builder](https://invent.kde.org/sdk/kde-builder) that is planned to succeed kdesrc-build is now [available for testing](https://discuss.kde.org/t/please-start-testing-kde-builder-if-using-kdesrc-build/13698) as well. Most instructions from the kdesrc-build tutorial mentioned above also apply to kde-builder.
 

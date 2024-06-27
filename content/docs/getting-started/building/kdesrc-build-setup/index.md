@@ -1,6 +1,6 @@
 ---
 title: "Set up a development environment"
-description: "Installing and configuring kdesrc-build"
+description: "Installing and configuring kde-builder"
 weight: 10
 group: "kdesrc-build"
 ---
@@ -11,7 +11,7 @@ If you're not familiar with the command line interface, you can [find tutorials 
 
 If you're a visual learner, we also provide [video tutorials about setting up kdesrc-build](https://community.kde.org/Get_Involved/development/Video).
 
-The tool we will be using here for setting up a development environment and building KDE software is [kdesrc-build](https://invent.kde.org/sdk/kdesrc-build). It will let you set up your development environment and compile applications on Linux and FreeBSD.
+The tool we will be using here for setting up a development environment and building KDE software is [kde-builder](https://invent.kde.org/sdk/kde-builder). It will let you set up your development environment and compile applications on Linux and FreeBSD.
 
 {{< alert title="Keep in mind" color=success >}}
 
@@ -51,11 +51,18 @@ For convenience, we can enable a feature that will later become useful when we s
 git config --global push.autoSetupRemote true
 ```
 
-Next, in order to authenticate yourself when pushing code changes, you need to add an ssh key to your GitLab profile as [described here](https://invent.kde.org/help/user/ssh.md). Once you are done, we can start using `kdesrc-build`.
+Next, in order to authenticate yourself when pushing code changes, you need to add an ssh key to your GitLab profile as [described here](https://invent.kde.org/help/user/ssh.md). Once you are done, we can start using `kde-builder`.
 
-## Set up kdesrc-build
+## Install kde-builder or kdesrc-build
 
-`kdesrc-build` is the official KDE meta build system tool. It is used to manage the building of many software repositories in an automated fashion.
+{{< alert title="Note" color="info" >}}
+Currently `kde-builder` did not got official status, but it fully reimplements the `kdesrc-build` (the current official KDE meta build system tool) in python. 
+`kdesrc-build` is no more actively developed, and `kde-builder` gets new features and lots of fixes of kdesrc-build bugs.
+
+Currently, most of the instructions for kde-builder can be applied to kdesrc-build as well.
+{{< /alert >}}
+
+KDE Builder is used to manage the building of many software repositories in an automated fashion.
 
 Its primary purpose is to *manage dependencies*. Every software has dependencies: other pieces of software that provide lower-level functionality they rely on. In order to compile any piece of software, its dependencies must be available.
 
@@ -67,6 +74,12 @@ KDE software has two types of dependencies:
 For example, the KDE application [KCalc](https://apps.kde.org/kcalc/) depends on more than 20 other KDE libraries as well as the Qt toolkit.
 
 Some Linux distributions do not provide development packages for [KDE Frameworks](https://develop.kde.org/products/frameworks/) and of other libraries that are up-to-date enough for us to build from the "main" branch of the KDE git repositories (the branch where the development of the next software versions takes place), so we use `kdesrc-build` to compile them ourselves. The goal is to avoid using KDE binaries, KDE libraries and other KDE files from the operating system where possible (in the Linux case, these files reside in the `/usr` directory).
+
+### Install KDE Builder
+
+See documentation here: https://kde-builder.kde.org/en/getting-started/before-building.html#install-kde-builder
+
+### Install kdesrc-build
 
 Let's set it up now! You will need many gigabytes of free disk space. Budget 50 GB for KDE Frameworks + KDE Plasma, and 10-30 GB more for some apps as well. Then clone the `kdesrc-build` git repository in the following directory:
 
@@ -172,36 +185,36 @@ sudo apt update
 With that done, it's time to run the initial setup program, which will install the necessary binary packages from your Linux operating system:
 
 ```bash
-kdesrc-build --initial-setup
+kde-builder --initial-setup
 ```
 
-The step `kdesrc-build --initial-setup` above installs the Linux binary packages that are needed for kdesrc-build to build all of KDE Frameworks and then creates a default configuration file `~/.config/kdesrc-buildrc`. If you look at that configuration file, you will see that by default kdesrc-build will compile everything inside a new `~/kde` folder for you. You will see that in the next page.
+The step `kde-builder --initial-setup` above installs the Linux binary packages that are needed for kde-builder to build all of KDE Frameworks and then creates a default configuration file `~/.config/kdesrc-buildrc`. If you look at that configuration file, you will see that by default kde-builder will compile everything inside a new `~/kde` folder for you. You will see that in the next page.
 
-### Updating kdesrc-build
+### Updating kde-builder
 
-Once in a while you will want to update kdesrc-build to get its latest changes. To do so, run the following:
+Once in a while you will want to update kde-builder to get its latest changes. To do so, run the following:
 
 ```bash
-# Go to where kdesrc-build was cloned:
-cd ~/.local/share/kdesrc-build
-# Update kdesrc-build itself:
+# Go to where kde-builder was cloned:
+cd ~/.local/share/kde-builder
+# Update kde-builder itself:
 git pull
 # Install new distribution package dependencies, if any:
-kdesrc-build --install-distro-packages
+kde-builder --install-distro-packages
 ```
 
-If you discover any external dependencies needed to build KDE software that were not installed with `kdesrc-build --initial-setup` or `kdesrc-build --install-distro-packages`, then please send a merge request to the [repo-metadata/distro-dependencies](https://invent.kde.org/sysadmin/repo-metadata/-/tree/master/distro-dependencies) repository to include the needed packages in the list.
+If you discover any external dependencies needed to build KDE software that were not installed with `kde-builder --initial-setup` or `kde-builder --install-distro-packages`, then please send a merge request to the [repo-metadata/distro-dependencies](https://invent.kde.org/sysadmin/repo-metadata/-/tree/master/distro-dependencies) repository to include the needed packages in the list.
 
 ### Set up Qt
 
 Qt is the fundamental framework that is needed for pretty much all KDE development. A recent enough version of Qt 6, currently Qt version greater or equal to 6.6, is required to proceed.
 
-The initial setup of kdesrc-build should have installed the required Qt6 packages for you already.
+The initial setup of kde-builder should have installed the required Qt6 packages for you already.
 
 If your Linux distribution does not provide recent versions of Qt packages, you have four options:
 
 * Use one of the alternative build methods mentioned in [Building KDE software]({{< ref "building" >}})
-* [Build Qt6 using kdesrc-build](https://community.kde.org/Get_Involved/development/More#Build_Qt_using_kdesrc-build)
+* [Build Qt6 using kde-builder](https://community.kde.org/Get_Involved/development/More#Build_Qt_using_kdesrc-build)
 * [Install Qt6 using the Qt online installer](https://community.kde.org/Get_Involved/development/More#Qt_6_installed_using_the_Qt_online_installer)
 * Switch distros to something [better suited for building KDE software from source code](https://community.kde.org/Get_Involved/development#Operating_system) either as the primary operating system or in a virtual machine
 
@@ -220,7 +233,7 @@ Your development environment is now set up and ready to build software.
 To recapitulate the essentials:
 
 1. You installed and configured git.
-2. You cloned kdesrc-build using git.
-3. You ran the initial setup for kdesrc-build.
+2. You cloned kde-builder using git.
+3. You ran the initial setup for kde-builder.
 
-Time to learn how to use kdesrc-build to build software from source code!
+Time to learn how to use kde-builder to build software from source code!

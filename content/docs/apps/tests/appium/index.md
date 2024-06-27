@@ -44,12 +44,13 @@ Installation of [Accerciser](https://help.gnome.org/users/accerciser/stable/intr
 
 ### Building from source
 
-[kdesrc-build](https://invent.kde.org/sdk/kdesrc-build) is the recommended tool to build selenium-webdriver-at-spi from source. Learn [how to set up a KDE development environment using kdesrc-build]({{< ref "kdesrc-build-setup" >}}).
+[kde-builder](https://invent.kde.org/sdk/kde-builder) is the recommended tool to build selenium-webdriver-at-spi from source. Learn [how to set up a KDE 
+development environment using kde-builder]({{< ref "kdesrc-build-setup" >}}).
 
 After the development environment is set up, run the command below to build both selenium-webdriver-at-spi and kcalc from source. The command will automatically install all the required dependencies:
 
 ```shell
-kdesrc-build kcalc selenium-webdriver-at-spi
+kde-builder kcalc selenium-webdriver-at-spi
 ```
 
 Run the example test script to check that your installation is working.

@@ -15,7 +15,7 @@ A screen recording version is available https://www.youtube.com/watch?v=ASnDeEaX
 
 Qt Creator is a good choice when starting to contribute to KDE. 
 
-Qt Creator has: support for kdesrc-build, a good debugger, source code navigation, Qt widgets UI designer, basic QML editor, QML debugger, Qt resources editor, Qt project templates, good CMake support, C++ static analyzers.
+Qt Creator has: support for kde-builder, a good debugger, source code navigation, Qt widgets UI designer, basic QML editor, QML debugger, Qt resources editor, Qt project templates, good CMake support, C++ static analyzers.
 
 Additional features:
 * Source code navigation: switch header/source, follow symbol, switch between function declaration/definition, find references, open type hierarchy, open include hierarchy.
@@ -24,9 +24,9 @@ Additional features:
 
 For best results, download Qt Creator from the Qt website. https://www.youtube.com/watch?v=QVgInye6HDA
 
-## kdesrc-build
+## kde-builder
 
-After you configure kdesrc-build and you can correctly build a KDE project such as kcalc.
+After you configure kde-builder and you can correctly build a KDE project such as kcalc.
 
 Edit ~/.config/kdesrc-buildrc . It should look like:
 
@@ -51,7 +51,7 @@ Make sure you have the correct number on the line `num-cores`.
 Build kcalc, make sure there are no errors:
 
 ```bash
-kdesrc-build kcalc
+kde-builder kcalc
 ```
 
 ## Install Qt Creator
@@ -90,10 +90,10 @@ From the Qt Creator main menu > View > Workspaces > Views-All. Close all of the 
 
 ## Load a KDE Git repository in Qt Creator
 
-We'll use kcalc as an example KDE Git repository. First, make sure it was built correctly using `kdesrc-build`.
+We'll use kcalc as an example KDE Git repository. First, make sure it was built correctly using `kde-builder`.
 
 ```bash
-kdesrc-build kcalc
+kde-builder kcalc
 ```
 
 Start Qt Creator (for example, from the KDE Application Launcher).
@@ -110,7 +110,7 @@ Under `Kits > Manual`, remove all kits except "Desktop (default)" or "Qt (defaul
 
 {{< figure alt="Remove all kits, except Desktop" width="500px" src="qt-creator-remove-all-kits-except-desktop.png" >}}
 
-On the `Projects` page, click `Import Existing Build...` and choose the directory `~/kde/build/kcalc` to import the `kcalc` build that the `kdesrc-build` command created.
+On the `Projects` page, click `Import Existing Build...` and choose the directory `~/kde/build/kcalc` to import the `kcalc` build that the `kde-builder` command created.
 
 {{< figure alt="Import Existing Build" width="300px" src="qt-creator-import-existing-build.png" >}}
 

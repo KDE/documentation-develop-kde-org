@@ -1,15 +1,15 @@
 ---
 title: "Tips and tricks"
-description: "Improve your kdesrc-build experience"
+description: "Improve your kde-builder experience"
 weight: 14
-group: "kdesrc-build"
+group: "kde-builder"
 ---
 
 ## Opening logs directly from Konsole / Yakuake {#directlogs}
 
 Konsole and Yakuake, two terminal applications by KDE, have the ability to open files by clicking directly on their path on the screen.
 
-For example, if you build Kirigami using kdesrc-build and you happen to face an error like this:
+For example, if you build Kirigami using kde-builder, and you happen to face an error like this:
 
 ```
 <<<  PACKAGES FAILED TO BUILD  >>>

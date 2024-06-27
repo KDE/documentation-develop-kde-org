@@ -13,7 +13,7 @@ aliases:
 Before getting started, we will need to install Kirigami on our machine. There are three ways to do so:
 
 * [Installing Kirigami from the repositories in your Linux distribution](#linux)
-* [Building Kirigami with kdesrc-build](#kdesrc-build)
+* [Building Kirigami with kde-builder](#kde-builder)
 * [Installing Kirigami with Craft](#craft)
 
 ### Installing Kirigami from the repositories in your Linux distribution {#linux}
@@ -28,13 +28,13 @@ sudo dnf install cmake extra-cmake-modules kf6-kirigami2-devel kf6-ki18n-devel k
 
 Further information for other distributions can be found [here](/docs/getting-started/building/help-dependencies).
 
-If you wish to build Kirigami with Qt6, this is currently not possible with only distribution packages on Linux. You will need to resort to [kdesrc-build](#kdesrc-build) instead.
+If you wish to build Kirigami with Qt6, this is currently not possible with only distribution packages on Linux. You will need to resort to [kde-builder](#kde-builder) instead.
 
-### Building Kirigami with kdesrc-build {#kdesrc-build}
+### Building Kirigami with kde-builder {#kde-builder}
 
-KDE has a custom tool to easily build all of its libraries and programs: **kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD.
+KDE has a custom tool to easily build all of its libraries and programs: **kde-builder**. It can be used to build Kirigami on Linux and FreeBSD.
 
-For this tutorial, you will need to follow the [setup instructions for kdesrc-build](/docs/getting-started/building/kdesrc-build-setup).
+For this tutorial, you will need to follow the [setup instructions for kde-builder](/docs/getting-started/building/kdesrc-build-setup).
 
 After that, you may simply run the following on a terminal:
 
@@ -245,7 +245,7 @@ Then you can build and install it with the command:
 kde-builder kirigami-tutorial
 ```
 
-In case you want to handle building and installation manually without kdesrc-build, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
+In case you want to handle building and installation manually without kde-builder, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
 
 ```bash
 cmake -B build/ -DCMAKE_INSTALL_PREFIX="~/.local"
