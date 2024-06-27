@@ -115,8 +115,7 @@ over them.
 
 The environment script supports sourcing another script. So we need to place our common environment variables to separate file:
 
-`~/kde/qt_logging_environment.sh`:
-```bash
+```bash {title="~/kde/qt_logging_environment.sh"}
 export QT_FORCE_STDERR_LOGGING=1
 export QT_LOGGING_RULES='ark*=true;kf.coreaddons=false;kf.service.services=false;kf.service.sycoca=false;qt.qpa.wayland=false;kf.moretools=false;default=false'
 export QT_MESSAGE_PATTERN='[%{time hh:mm:ss} %{if-debug}D%{endif}%{if-info}I%{endif}%{if-warning}W%{endif}%{if-critical}C%{endif}%{if-fatal}F%{endif}] %{function} %{file}:%{line} %{message}'
@@ -124,8 +123,7 @@ export QT_MESSAGE_PATTERN='[%{time hh:mm:ss} %{if-debug}D%{endif}%{if-info}I%{en
 
 and source it from the first file:
 
-`~/kde/clion_run_environment.sh`:
-```bash
+```bash {title="~/kde/clion_run_environment.sh"}
 ...
 source /home/username/kde/qt_logging_environment.sh
 ```
@@ -137,8 +135,7 @@ But keep in mind, you need to touch the original script for changes to be applie
 
 Take the content of the generated environment script:
 
-`~/kde/build/dolphin/prefix.sh`:
-```bash
+```bash {title="~/kde/build/dolphin/prefix.sh"}
 export PATH=/home/username/kde/usr/bin:$PATH
 
 # LD_LIBRARY_PATH only needed if you are building without rpath
@@ -156,8 +153,7 @@ export QT_QUICK_CONTROLS_STYLE_PATH=/home/username/kde/usr/lib/x86_64-linux-gnu/
 and translate it to the form of variables list that you can paste to CLion. Note that their variables have trailing '$' sign. In order to reuse it when loading
 other KDE projects in CLion, save it to the file:
 
-`~/kde/clion_run_environment.txt`:
-```bash
+```bash {title="~/kde/clion_run_environment.txt"}
 PATH=/home/username/kde/usr/bin:$PATH$
 XDG_DATA_DIRS=/home/username/kde/usr/share:$XDG_DATA_DIRS$:/usr/local/share/:/usr/share/}
 XDG_CONFIG_DIRS=/home/username/kde/usr/etc/xdg:$XDG_CONFIG_DIRS$:/etc/xdg
@@ -215,8 +211,7 @@ the po files clickable.
 
 For example, you search the strings in local language, to find the place in code where it is used, you find it in *.po files. They contain stanzas like this:
 
-`~/kde/src/ark/po/ru/ark.po`:
-```bash
+```bash {title="~/kde/src/ark/po/ru/ark.po"}
 #: part/part.cpp:132
 #, kde-format
 msgid "Comment has been modified."
