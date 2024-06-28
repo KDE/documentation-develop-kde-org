@@ -26,6 +26,12 @@ For specialized apps or features that are unfamiliar to a normal person, write a
 
 <!-- TODO: Picture of explanation messages here -->
 
+Only use a first-run wizard in a complex app, for one of the following:
+- To perform mandatory and unskippable setup actions that must be done before the app can be used.
+- As an optional and skippable teaching tool.
+
+Don't ask the user to express preferences or make decisions about optional settings in a wizard, or implement one for a simple to medium-sized app.
+
 
 ## Optimize common workflows
 Don't make the user do unnecessary work to use your app. Anticipate what the user is likely to do next and offer that. Examples:
