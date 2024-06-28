@@ -57,21 +57,16 @@ The best way to build the program is to use CMake. We add `mainwindow.cpp` to th
 
 {{< readfile file="/content/docs/getting-started/kxmlgui/main_window/CMakeLists.txt" highlight="cmake" emphasize="3 24-25 28 30 33 35 39-40 43" >}}
 
-## Building and running our application
+## Running our application
 
-### With kde-builder
-
-```
-kde-builder kxmlgui-tutorial
-kde-builder --run --exec mainwindow kxmlgui-tutorial
-```
-
-### Manually
-
-For mature projects, the best way to compile, link and run KDE software is to [set up a correct build environment]({{< ref "building" >}}). But for a simple tutorial like this, it's enough to just create a build directory and build from there. Like before:
+You can repeat the same steps provided in the [KXmlGui Hello World]({{< ref "hello_world#kxmlgui-running" >}}) to build and install the application. You can then run the project with:
 
 ```bash
-cmake -B build/
-cmake --build build/
-./build/bin/mainwindow
+kdesrc-build --run --exec mainwindow kxmlgui-tutorial
+```
+
+or
+
+```bash
+mainwindow
 ```

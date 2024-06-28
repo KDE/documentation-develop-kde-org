@@ -55,24 +55,9 @@ We don't need to change anything in here.
 
 {{< readfile file="/content/docs/getting-started/kxmlgui/commandline/CMakeLists.txt" highlight="cmake" >}}
 
-## Compile, Install and Run
+## Running our application
 
-With this, we should be ready to test our application.
-
-As before:
-
-```bash
-kde-builder kxmlgui-tutorial
-```
-
-or
-
-```bash
-cmake -B build/ -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr
-cmake --build build/
-cmake --install build/
-source build/prefix.sh
-```
+Again, you can repeat the same steps provided in {{< ref "hello_world#kxmlgui-running" >}} to build and install the application.
 
 However, we will test if our application handles files from the command line correctly. Create a simple file:
 
@@ -80,10 +65,10 @@ However, we will test if our application handles files from the command line cor
 echo "It works!" > testfile.txt
 ```
 
-Now pass it as argument:
+Now you may pass it as argument with:
 
 ```bash
-kde-builder --run --exec texteditor kxmlgui-tutorial testfile.txt
+kdesrc-build --run --exec texteditor kxmlgui-tutorial testfile.txt
 ```
 
 or

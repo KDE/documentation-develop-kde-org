@@ -20,13 +20,13 @@ To get more information about any class you come across, you can use [KDE's API 
 
 We are going to discuss some basic code, and in the final section we will build it. You will need to set up your development environment (so that you can use the KDE Frameworks) first. You can do that in two ways.
 
-### Option 1: Using kde-builder
+Create a folder `~/kde/src/kxmlgui-tutorial`. In that folder you will place the source code files from this tutorial.
+
+### Option 1: Using kdesrc-build
 
 Go through the [setting up your development environment]({{< ref "building" >}}) part of the *Get Involved* documentation. That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
 
-Create a folder `~/kde/src/kxmlgui-tutorial`. In that folder you will place the source code files from this tutorial.
-
-In your `~/.config/kdesrc-buildrc` add the following stanza:
+In your `~/.config/kdesrc-buildrc` add the following:
 
 ```
 module kxmlgui-tutorial
@@ -36,7 +36,11 @@ end module
 
 ### Option 2: Manually
 
-Install the KDE Frameworks development packages from your operating system or distribution. The names of these packages, and how to install them, varies per distro, so you will need to investigate on your own.
+{{< installpackage
+    fedora="kf6-kcoreaddons-devel kf6-ki18n-devel kf6-kxmlgui-devel kf6-ktextwidgets-devel kf6-kconfigwidgets-devel kf6-kwidgetsaddons-devel kf6-kio-devel kf6-kiconthemes-devel"
+    opensuse="kf6-kcoreaddons-devel kf6-ki18n-devel kf6-kxmlgui-devel kf6-ktextwidgets-devel kf6-kconfigwidgets-devel kf6-kwidgetsaddons-devel kf6-kio-devel kf6-kiconthemes-devel"
+    arch="kcoreaddons ki18n kxmlgui ktextwidgets kconfigwidgets kwidgetsaddons kio kiconthemes"
+>}}
 
 ## The Code
 
@@ -97,19 +101,11 @@ Then we come to [QCommandLineParser](docs:qtcore;QCommandLineParser). This is th
 
 We're all done as far as the code is concerned. Now to build it and try it out.
 
-## Building and running
+## Compiling and running the project {#kxmlgui-running}
 
-In order to run our project, we need a build system in place to compile and link the required libraries; for that, we use the industry standard CMake, together with files in our project folder called `CMakeLists.txt`. CMake uses this file to run mainly three steps: configure, build, and install. During the configure step it will generate a `Makefile` (if using `make`) or a `build.ninja` (if using `ninja`), which is then used to build.
+In order to run our project, we need a build system in place to compile and link the required libraries; for that, we use the industry standard CMake, together with files in our project folder called `CMakeLists.txt`.
 
-You can learn more about why KDE uses CMake in [this article from Alexander Neundorf](https://lwn.net/Articles/188693/).
-
-The Qt Company provides a [good tutorial for using CMake with Qt](https://doc.qt.io/qt-6/cmake-get-started.html).
-
-The CMake website also provides a [tutorial from scratch with examples](https://cmake.org/cmake/help/latest/guide/tutorial/index.html).
-
-And KDAB provides a [YouTube playlist explaining CMake](https://www.youtube.com/playlist?list=PL6CJYn40gN6g1_yY2YkqSym7FWUid926M).
-
-### CMakeLists.txt
+### Writing a CMakeLists.txt
 
 Create a file named `CMakeLists.txt` in the same directory as `main.cpp` with this content: 
 
@@ -121,65 +117,54 @@ Here we try to find the modules for Qt 6 and KDE Frameworks 6 required to build 
 
 Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add_executable.html) to create an executable called `helloworld`. Afterwards, we link our executable to the necessary libraries using the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function. The [`install()`](https://cmake.org/cmake/help/latest/command/install.html) function call creates a default "install" target, putting executables and libraries in the default path using a convenience macro `KDE_INSTALL_TARGETS_DEFAULT_ARGS` provided by ECM. Additionally, just by including ECM, an "uninstall" target automatically gets created based on this "install" target.
 
-### Building our application
+### Compiling and running with kdesrc-build
 
-#### With kde-builder
+Compile your project by running the following command in a terminal:
 
-Run the following command:
-
-```
-kde-builder kxmlgui-tutorial
+```bash
+kdesrc-build kxmlgui-tutorial
 ```
 
-#### Manually
+You can then run the application with:
 
-To compile, link and install your program, you must have the following software installed: `cmake`, `make` or `ninja`, and `gcc-c++`/`g++`, and the Qt 6 and KDE Frameworks development packages. To be sure you have everything, follow [this install guide]({{< ref "building" >}}).
+```bash
+kdesrc-build --run --exec helloworld kxmlgui-tutorial
+```
 
-First we configure our project inside of a `build/` folder:
+### Compiling and running manually
+
+Change directories to the project's root folder, then run the following command in a terminal:
 
 ```bash
 cmake -B build/
-# Alternatively, with ninja instead of make:
-cmake -B build/ -G Ninja
+cmake --build build/ --parallel
+cmake --install build/ --prefix "~/.local"
 ```
 
-Then we compile the project inside the same `build/` folder:
+Each line above matches a step of the compilation process: the configuration, build, and install steps.
+
+The `--parallel` flag lets CMake compile multiple files at the same time, and the `--prefix` flag tells CMake where it will be installed. In this case, the executable `helloworld` will be installed to `~/.local/bin/helloworld`.
+
+You can then run the application with:
 
 ```bash
-cmake --build build/
-```
-
-### Running our application
-
-#### With kde-builder
-
-Run the following command:
-```
-kde-builder --run --exec helloworld kxmlgui-tutorial
-```
-
-#### Manually
-
-Launch can be done with: 
-
-```bash
-./build/helloworld
+helloworld
 ```
 
 You can also run the binary with flags. The flag `--help` is a standard flag added by Qt via [QCommandLineParser](docs:qtcore;QCommandLineParser), and the content of the `--version`, `--author` and `--license` flags should match the information we added with [KAboutData](docs:kcoreaddons;KAboutData).
 
 ```bash
-./build/bin/helloworld --help
-./build/bin/helloworld --version
-./build/bin/helloworld --author
-./build/bin/helloworld --license
+kdesrc-build --run --exec helloworld kxmlgui-tutorial --help
+kdesrc-build --run --exec helloworld kxmlgui-tutorial --version
+kdesrc-build --run --exec helloworld kxmlgui-tutorial --author
+kdesrc-build --run --exec helloworld kxmlgui-tutorial --license
 ```
 
 or
 
 ```bash
-kde-builder --run --exec helloworld kxmlgui-tutorial --help
-kde-builder --run --exec helloworld kxmlgui-tutorial --version
-kde-builder --run --exec helloworld kxmlgui-tutorial --author
-kde-builder --run --exec helloworld kxmlgui-tutorial --license
+helloworld --help
+helloworld --version
+helloworld --author
+helloworld --license
 ```
