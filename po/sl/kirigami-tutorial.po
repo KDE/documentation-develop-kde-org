@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-28 01:48+0000\n"
-"PO-Revision-Date: 2024-06-11 17:10+0200\n"
+"PO-Revision-Date: 2024-06-28 07:49+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -2077,6 +2077,10 @@ msgid ""
 "breeze) on non-Plasma environments such as Windows or GNOME, we need to do "
 "three things:"
 msgstr ""
+"Da bo naša aplikacija videti dobro z [ikonami Sapice](https://invent.kde.org/"
+"frameworks/breeze-icons) in [slogom Sapice](https://invent.kde.org/plasma/"
+"breeze) KDE na okoljih, ki niso Plasma, kot sta Windows ali GNOME, moramo "
+"narediti tri stvari:"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
 msgid ""
@@ -2084,30 +2088,27 @@ msgid ""
 "frameworks/kiconthemes) on platforms where icon themes aren't part of the "
 "system (like Windows or MacOS) with `KIconTheme::initTheme()`"
 msgstr ""
+"inicializirati možnosti tematiziranja [KIconThemes](https://invent.kde.org/"
+"frameworks/kiconthemes) na platformah, kjer teme ikon niso del sistema (na "
+"primer Windows ali MacOS) s `KIconTheme::initTheme()`"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:30
 msgid ""
 "set the QStyle with [QApplication::setStyle()](docs:qtwidgets;QApplication::"
 "setStyle) to force Breeze instead of the native platform style"
 msgstr ""
+"nastaviti QStyle z [QApplication::setStyle()](docs:qtwidgets;QApplication::"
+"setStyle), da vsilite Sapico namesto izvornega sloga platforme"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:31
-#, fuzzy
-#| msgid ""
-#| "To make our app look native on non-Plasma environments such as Windows or "
-#| "GNOME, we use [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::"
-#| "setStyle) to make use of [qqc2-desktop-style](https://invent.kde.org/"
-#| "frameworks/qqc2-desktop-style), forcing the use of Breeze."
 msgid ""
 "set the QtQuick Controls style with [QQuickStyle::setStyle()](docs:"
 "qtquickcontrols;QQuickStyle::setStyle) to force Breeze with KDE's [qqc2-"
 "desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)"
 msgstr ""
-"Da bi bila naša aplikacija videti izvirna v okoljih, ki niso Plasma, kot sta "
-"Windows ali GNOME, uporabljamo [QQuickStyle::setStyle()](docs:"
-"qtquickcontrols;QQuickStyle::setStyle), da uporabimo [qqc2-desktop-style]"
-"(https ://invent.kde.org/frameworks/qqc2-desktop-style), ki vsiljuje uporabo "
-"Breeze."
+"nastavite slog QtQuick Controls z [QQuickStyle::setStyle()](docs:"
+"qtquickcontrols;QQuickStyle::setStyle), da prisilite Breeze s KDE-jevim "
+"[qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:33
 msgid ""
@@ -2118,6 +2119,12 @@ msgid ""
 "the window like buttons and checkboxes will follow Breeze by using `qqc2-"
 "desktop-style`."
 msgstr ""
+"Klic `KIconTheme::initTheme()` je treba opraviti pred ustvarjanjem "
+"QApplication in aplikaciji omogoči najti ikone Sapice za uporabo. Nastavitev "
+"QStyle na Breeze je potrebna, ker smo za našo aplikacijo uporabili "
+"QApplication namesto [QGuiApplication](docs:qtgui;QGuiApplication). Dejanski "
+"kontrolniki vmesnika v oknu, kot so gumbi in potrditvena polja, bodo sledili "
+"Sapici z uporabo `qqc2-desktop-style`."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:35
 msgid ""
@@ -2176,10 +2183,8 @@ msgstr ""
 "treba storiti pred prevajanjem."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:16
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "The root CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "Korenska CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:18
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
@@ -2337,22 +2342,16 @@ msgstr ""
 "povzroči neuspeh prevajanja, če naleti na napako:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:63
-#, fuzzy
-#| msgid ""
-#| "And above that, `add_subdirectory(src)` points CMake into the `src/` "
-#| "directory, where it finds another `CMakeLists.txt` file:"
 msgid ""
 "And above that, `add_subdirectory(src)` points CMake into the `src/` "
 "directory, where it finds another `CMakeLists.txt` file."
 msgstr ""
 "In nad tem `add_subdirectory(src)` usmeri CMake v imenik `src/`, kjer najde "
-"drugo datoteko `CMakeLists.txt`:"
+"drugo datoteko `CMakeLists.txt`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:65
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:69
 msgid ""
@@ -2505,10 +2504,8 @@ msgstr ""
 "za ECMQmlModule](https://api.kde.org/ecm/module/ECMQmlModule.html)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/components/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/components/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:98
 msgid ""
@@ -2517,12 +2514,17 @@ msgid ""
 "new-files), a new CMake file was introduced to allow for separate QML "
 "modules:"
 msgstr ""
+"V učbeniku o [kako svojo kodo razdeliti na ločene datoteke](/docs/getting-"
+"started/kirigami/introduction-separatefiles#preparing-cmake-for-the-new-"
+"files) je bila uvedena nova datoteka CMake, ki omogoča ločene module QML:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:102
 msgid ""
 "The requirement for this file to be read by CMake is adding a call to "
 "`add_subdirectory()` in the `src/CMakeLists.txt` pointing to it."
 msgstr ""
+"Zahteva, da CMake prebere to datoteko, je dodajanje klica "
+"`add_subdirectory()` v `src/CMakeLists.txt`, ki kaže nanjo."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:104
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:96
@@ -2547,6 +2549,13 @@ msgid ""
 "`src/CMakeLists.txt`. This is done by adding the target name to the list of "
 "libraries that will be linked to the executable in `target_link_libraries()`."
 msgstr ""
+"Klic [add_library()](https://cmake.org/cmake/help/latest/command/add_library."
+"html) ustvari nov cilj, imenovan `kirigami-hello-components`. Ta cilj bo "
+"imel lasten nabor datotek izvorne kode, datotek QML, povezal lastne "
+"knjižnice in tako naprej, vendar mora biti povezan z izvedljivo datoteko, ko "
+"pa je preveden, mora biti povezan z izvedljivo datoteko, ustvarjeno v ` src/"
+"CMakeLists.txt`. To storite tako, da ciljno ime dodate na seznam knjižnic, "
+"ki bodo povezane z izvršljivo datoteko v `target_link_libraries()`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:108
 msgid ""
@@ -2557,6 +2566,12 @@ msgid ""
 "generate plugin code since it's built into the executable; with separate QML "
 "modules like `kirigami-hello-components` the plugin code is necessary."
 msgstr ""
+"Klic `ecm_add_qml_module()` spremeni knjižnico, da ji omogoči sprejemanje "
+"datotek QML kot prej, toda tokrat moramo uporabiti [GENERATE_PLUGIN_SOURCE]"
+"(https://api.kde.org/ecm/module/ECMQmlModule.html) . Ko se izvršljiva "
+"datoteka uporablja kot podporni cilj (kot pri `kirigami-hello`), ji ni treba "
+"generirati kode vtičnika, saj je vgrajena v izvršljivo datoteko; z ločenimi "
+"moduli QML, kot je `kirigami-hello-components`, je potrebna koda vtičnika."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:110
 msgid ""
@@ -2565,6 +2580,10 @@ msgid ""
 "the QML module, but KDE's `ecm_add_qml_module()` by default does not for "
 "backwards compatibility."
 msgstr ""
+"Upstream Qt [qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module."
+"html#targets-and-plugin-targets) privzeto ustvari vtičnik skupaj z modulom "
+"QML , vendar KDE-jev `ecm_add_qml_module()` privzeto ne omogoča "
+"združljivosti za nazaj."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:112
 msgid ""
@@ -2576,10 +2595,16 @@ msgid ""
 "is able to find where the QML files for each module are, so they are "
 "automatically added to the target."
 msgstr ""
+"Druga stvar, ki je potrebna za ločene module QML, je dokončanje cilja. To "
+"predvsem pomeni, da CMake ustvari dve datoteki, [qmldir in qmltypes](https://"
+"doc.qt.io/qt-6/qtqml-modules-qmldir.html), ki opisujeta module QML, ki jih "
+"imamo, in izvozi njihove simbole za uporabo v knjižnici. Pomembni so pri "
+"namestitvi vaše aplikacije, tako da lahko izvršljiva datoteka, ki se izvaja, "
+"najde, kje so datoteke QML za vsak modul, tako da so samodejno dodane v cilj."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:114
 msgid "You can then just install the target as before."
-msgstr ""
+msgstr "Nato lahko preprosto namestite cilj kot prej."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:116
 msgid ""
@@ -6646,10 +6671,8 @@ msgid ""
 msgstr "[Namestitev Kirigamija iz skladišč v vaši distribuciji Linuxa](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgid "[Building Kirigami with kde-builder](#kde-builder)"
-msgstr "[Izgradnja Kirigamija s kdesrc-build](#kdesrc-build)"
+msgstr "[Izgradnja Kirigamija s kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6678,49 +6701,34 @@ msgstr ""
 "started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid ""
-#| "If you wish to build Kirigami with Qt6, this is currently not possible "
-#| "with only distribution packages on Linux. You will need to resort to "
-#| "[kdesrc-build](#kdesrc-build) instead."
 msgid ""
 "If you wish to build Kirigami with Qt6, this is currently not possible with "
 "only distribution packages on Linux. You will need to resort to [kde-builder]"
 "(#kde-builder) instead."
 msgstr ""
 "Če želite zgraditi Kirigami s Qt6, to trenutno ni mogoče samo z "
-"distribucijskimi paketi v Linuxu. Namesto tega se boste morali zateči k "
-"[kdesrc-build](#kdesrc-build)."
+"distribucijskimi paketi v Linuxu. Namesto tega se boste morali zateči k [kde-"
+"builder](#kde-builder)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-#, fuzzy
-#| msgid "Building Kirigami with kdesrc-build"
 msgid "Building Kirigami with kde-builder"
-msgstr "Gradnja Kirigami s kdesrc-build"
+msgstr "Gradnja Kirigami s kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
-#, fuzzy
-#| msgid ""
-#| "KDE has a custom tool to easily build all of its libraries and programs: "
-#| "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 "KDE ima orodje po meri za enostavno izgradnjo vseh svojih knjižnic in "
-"programov: **kdesrc-build**. Uporablja se lahko za izdelavo Kirigamija na "
+"programov: **kdesrc-builder**. Uporablja se lahko za izdelavo Kirigamija na "
 "Linuxu in FreeBSD."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
-#, fuzzy
-#| msgid ""
-#| "For this tutorial, you will need to follow the [setup instructions for "
-#| "kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgid ""
 "For this tutorial, you will need to follow the [setup instructions for kde-"
 "builder](/docs/getting-started/building/kdesrc-build-setup)."
 msgstr ""
-"Za ta učbenik boste morali slediti [navodilom za namestitev kdesrc-build](/"
+"Za ta učbenik boste morali slediti [navodilom za namestitev kde-builder](/"
 "docs/getting-started/building/kdesrc-build-setup)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
@@ -7183,19 +7191,15 @@ msgstr ""
 "<summary>Kliknite sem, da bi prebrali več</summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:187
-#, fuzzy
-#| msgid ""
-#| "If you want to get ahead, you can read more about how this `main.cpp` "
-#| "works in [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-"
-#| "maincpp)."
 msgid ""
 "The application needs to set its icon theme, QStyle, and QtQuick Controls "
 "style to Breeze in order to show up on Windows. To learn more about it, see "
 "[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp/)."
 msgstr ""
-"Če želite napredovati, si lahko preberete več o tem, kako ta `main.cpp` "
-"deluje v [Ugotavljanje main.cpp](/docs/getting-started/kirigami/advanced-"
-"maincpp)."
+"Aplikacija mora nastaviti temo ikon, QStyle in QtQuick Controls slog na "
+"Breeze, da se prikaže v sistemu Windows. Če želite izvedeti več o tem, "
+"glejte [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-"
+"maincpp/)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:193
 msgid ""
@@ -7303,17 +7307,12 @@ msgid "Linux or FreeBSD"
 msgstr "Linux ali FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:234
-#, fuzzy
-#| msgid ""
-#| "If you want kde-builder to handle building and installation of your "
-#| "project, you need to specify a custom module in your `~/.config/kdesrc-"
-#| "buildrc`:"
 msgid ""
 "If you want kdesrc-build to handle building and installation of your "
 "project, you need to specify a custom module in your `~/.config/kdesrc-"
 "buildrc`:"
 msgstr ""
-"Če želite, da kde-builder obravnava gradnjo in namestitev vašega projekta, "
+"Če želite, da kdesrc-build obravnava gradnjo in namestitev vašega projekta, "
 "morate določiti modul po meri v vašem `~/.config/kdesrc-buildrc`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:243
@@ -7321,13 +7320,6 @@ msgid "Then you can build and install it with the command:"
 msgstr "Nato ga lahko zgradite in namestite z ukazom:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:249
-#, fuzzy
-#| msgid ""
-#| "In case you want to handle building and installation manually without "
-#| "kdesrc-build, you will need to specify the place where the program will "
-#| "be installed. To do that, we need to change directories to our `kirigami-"
-#| "tutorial/` folder in our terminal application of choice and run the "
-#| "following commands:"
 msgid ""
 "In case you want to handle building and installation manually without kde-"
 "builder, you will need to specify the place where the program will be "
@@ -7335,7 +7327,7 @@ msgid ""
 "tutorial/` folder in our terminal application of choice and run the "
 "following commands:"
 msgstr ""
-"Če želite sestaviti in namestiti ročno brez kdesrc-build, boste morali "
+"Če želite sestaviti in namestiti ročno brez kde-builderja, boste morali "
 "določiti mesto, kjer bo program nameščen. Če želite to narediti, moramo "
 "spremeniti imenike v našo mapo `kirigami-tutorial/` v naši izbrani "
 "terminalski aplikaciji in zagnati naslednje ukaze:"
@@ -7357,33 +7349,30 @@ msgid ""
 "If you are compiling your project on Windows after having set up [Craft]"
 "(#craft), CMake should automatically detect the right compiler:"
 msgstr ""
+"Če prevajate svoj projekt v sistemu Windows, potem ko ste nastavili [Craft]"
+"(#craft), CMake bi moral samodejno zaznati pravi prevajalnik:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:270
-#, fuzzy
-#| msgid ""
-#| "If you are compiling your project with [Craft](#craft) on Windows, you "
-#| "might need to specify a CMake Generator for the first step, depending on "
-#| "whether you are using Visual Studio 2019 (msvc) or MinGW (make) to "
-#| "compile your projects."
 msgid ""
 "Depending on how you installed the compiler, you might need to specify a "
 "CMake Generator for the first step, depending on whether you are using "
 "Visual Studio (msvc) or MinGW (make) to compile your projects."
 msgstr ""
-"Če prevajate svoj projekt z [Craft](#craft\") v sistemu Windows, boste morda "
-"morali določiti CMake Generator za prvi korak, odvisno od tega, ali "
-"uporabljate Visual Studio 2019 (msvc ) ali MinGW (make) za prevajanje vaših "
-"projektov."
+"Odvisno od tega, kako ste namestili prevajalnik, boste morda morali določiti "
+"CMake Generator za prvi korak, odvisno od tega, ali za prevajanje svojih "
+"projektov uporabljate Visual Studio (msvc) ali MinGW (make)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:272
 msgid ""
 "If Visual Studio, depending on the compiler you chose to install, it might "
 "be:"
 msgstr ""
+"Če je Visual Studio, odvisno od prevajalnika, ki ste ga izbrali za "
+"namestitev, je lahko:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
 msgid "Or:"
-msgstr ""
+msgstr "Ali:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:284
 msgid "If MinGW:"
@@ -7398,10 +7387,12 @@ msgid ""
 "If you ever get in doubt as to the name of the compiler that should be used "
 "in the `cmake` call, run:"
 msgstr ""
+"Če ste kdaj v dvomih glede imena prevajalnika, ki bi ga morali uporabiti v "
+"klicu `cmake`, zaženite:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:300
 msgid "It will list all available generators."
-msgstr ""
+msgstr "Navedel bo vse razpoložljive generatorje."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:304
 msgid "You can then run the `kirigami-hello` program with:"
@@ -7448,6 +7439,8 @@ msgid ""
 "If you have compiled the project manually with CMake and for some reason "
 "you'd like to uninstall the project, you can run:"
 msgstr ""
+"Če ste projekt prevedli ročno s CMake in bi iz nekega razloga želeli "
+"odstraniti projekt, lahko zaženete:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:331
 msgid ""
@@ -8988,14 +8981,6 @@ msgstr ""
 "z naslednjo vsebino:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:98
-#, fuzzy
-#| msgid ""
-#| "Because the target is different from the executable, it will function as "
-#| "a different QML module, in which case we will need to *finalize* it (make "
-#| "CMake generate the files needed for the module to be found, namely "
-#| "`qmldir` and `qmltypes`) with [ecm_finalize_qml_module()](https://api.kde."
-#| "org/ecm/module/ECMQmlModule.html). We then install it exactly like in "
-#| "previous lessons."
 msgid ""
 "Because the target is different from the executable, it will function as a "
 "different QML module, in which case we will need to do two things: make it "
@@ -9004,9 +8989,10 @@ msgid ""
 "[ecm_finalize_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule."
 "html). We then install it exactly like in previous lessons."
 msgstr ""
-"Ker se cilj razlikuje od izvršljive datoteke, bo deloval kot drug modul QML, "
-"v tem primeru ga bomo morali *dokončati* (naj CMake ustvari datoteke, "
-"potrebne za iskanje modula, in sicer `qmldir` in `qmltypes` `) z "
+"Ker je cilj drugačen od izvršljive datoteke, bo deloval kot drug modul QML, "
+"v tem primeru bomo morali narediti dve stvari: omogočiti *generiranje* kode, "
+"da bo deloval kot vtičnik Qt z [GENERATE_PLUGIN_SOURCE](https://api.kde.org/"
+"ecm/module/ECMQmlModule.html) in ga *finalizirajte* z "
 "[ecm_finalize_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule."
 "html). Nato ga namestimo natanko tako kot v prejšnjih lekcijah."
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-28 01:48+0000\n"
-"PO-Revision-Date: 2024-06-15 23:44+0200\n"
+"PO-Revision-Date: 2024-06-28 21:02+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -2083,21 +2083,14 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:31
-#, fuzzy
-#| msgid ""
-#| "To make our app look native on non-Plasma environments such as Windows or "
-#| "GNOME, we use [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::"
-#| "setStyle) to make use of [qqc2-desktop-style](https://invent.kde.org/"
-#| "frameworks/qqc2-desktop-style), forcing the use of Breeze."
 msgid ""
 "set the QtQuick Controls style with [QQuickStyle::setStyle()](docs:"
 "qtquickcontrols;QQuickStyle::setStyle) to force Breeze with KDE's [qqc2-"
 "desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)"
 msgstr ""
-"Por ke nia programo aspektu indiĝena sur ne-Plasmaj ĉirkaŭaĵoj kiel Vindozo "
-"aŭ GNOME, ni uzas [QQuickStyle::setStyle()](docs:qtquickcontrols;"
-"QQuickStyle::setStyle()) por uzi [qqc2-desktop-style](https://invent.kde.org/"
-"frameworks/qqc2-desktop-style), devigante la uzon de Breeze."
+"meti la QtQuick-Regilan stilon per [QQuickStyle::setStyle()](docs:"
+"qtquickcontrols;QQuickStyle::setStyle()) por devigi Breeze kun [qqc2-desktop-"
+"style](https://invent.kde.org/frameworks/qqc2-desktop-style) de KDE"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:33
 msgid ""
@@ -2167,10 +2160,8 @@ msgstr ""
 "kiuj devas esti faritaj antaŭ kompilo."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:16
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "The root CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "La radika CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:18
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
@@ -2309,22 +2300,16 @@ msgstr ""
 "kompiladon tuj malsukesi se ĝi renkontas eraron:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:63
-#, fuzzy
-#| msgid ""
-#| "And above that, `add_subdirectory(src)` points CMake into the `src/` "
-#| "directory, where it finds another `CMakeLists.txt` file:"
 msgid ""
 "And above that, `add_subdirectory(src)` points CMake into the `src/` "
 "directory, where it finds another `CMakeLists.txt` file."
 msgstr ""
 "Kaj super tio, add_subdirectory(src)` indikas CMake en la dosierujon `src/`, "
-"kie ĝi trovas alian `CMakeLists.txt` dosieron:"
+"kie ĝi trovas alian `CMakeLists.txt` dosieron."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:65
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:69
 msgid ""
@@ -2445,10 +2430,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/components/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/components/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:98
 msgid ""
@@ -6282,7 +6265,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:177
 msgid "Much nicer."
-msgstr ""
+msgstr "Multe pli bela."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:188
 msgid ""
@@ -6318,10 +6301,8 @@ msgid ""
 msgstr "[Instalante Kirigami el la deponejoj en via Linuksa distribuo](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgid "[Building Kirigami with kde-builder](#kde-builder)"
-msgstr "[Konstruante Kirigami kun kdesrc-build](#kdesrc-build)"
+msgstr "[Konstruante Kirigami per kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6350,49 +6331,34 @@ msgstr ""
 "building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid ""
-#| "If you wish to build Kirigami with Qt6, this is currently not possible "
-#| "with only distribution packages on Linux. You will need to resort to "
-#| "[kdesrc-build](#kdesrc-build) instead."
 msgid ""
 "If you wish to build Kirigami with Qt6, this is currently not possible with "
 "only distribution packages on Linux. You will need to resort to [kde-builder]"
 "(#kde-builder) instead."
 msgstr ""
 "Se vi volas konstrui Kirigami per Qt6, ĉi tio nuntempe ne eblas kun nur "
-"distribuaj pakoj en Linukso. Vi devos uzi [kdesrc-build](#kdesrc-build) "
+"distribuaj pakoj en Linukso. Vi devos uzi [kde-builder](#kde-builder) "
 "anstataŭe."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-#, fuzzy
-#| msgid "Building Kirigami with kdesrc-build"
 msgid "Building Kirigami with kde-builder"
-msgstr "Konstruante Kirigami per kdesrc-build"
+msgstr "Konstruante Kirigami per kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
-#, fuzzy
-#| msgid ""
-#| "KDE has a custom tool to easily build all of its libraries and programs: "
-#| "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 "KDE havas propran ilon por facile konstrui ĉiujn ĝiajn bibliotekojn kaj "
-"programojn: **kdesrc-build**. Ĝi povas esti uzata por konstrui Kirigami sur "
+"programojn: **kde-builder**. Ĝi povas esti uzata por konstrui Kirigami sur "
 "Linukso kaj FreeBSD."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
-#, fuzzy
-#| msgid ""
-#| "For this tutorial, you will need to follow the [setup instructions for "
-#| "kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgid ""
 "For this tutorial, you will need to follow the [setup instructions for kde-"
 "builder](/docs/getting-started/building/kdesrc-build-setup)."
 msgstr ""
-"Por ĉi tiu lernilo, vi devos sekvi la [agordan instrukciojn por kdesrc-build]"
+"Por ĉi tiu lernilo, vi devos sekvi la [agordan instrukciojn por kde-builder]"
 "(/docs/getting-started/building/kdesrc-build-setup)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
@@ -6838,19 +6804,14 @@ msgstr ""
 "<summary>Alklaku ĉi tie por legi pli</summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:187
-#, fuzzy
-#| msgid ""
-#| "If you want to get ahead, you can read more about how this `main.cpp` "
-#| "works in [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-"
-#| "maincpp)."
 msgid ""
 "The application needs to set its icon theme, QStyle, and QtQuick Controls "
 "style to Breeze in order to show up on Windows. To learn more about it, see "
 "[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp/)."
 msgstr ""
-"Se vi volas antaŭeniri, vi povas legi pli pri kiel ĉi tiu `main.cpp` "
-"funkcias en [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-"
-"maincpp)."
+"La aplikaĵo devas meti sian piktogram-etoson, QStyle, kaj QtQuick-Controls-"
+"stilon al Breeze por ke ĝi montriĝu en Vindozo. Por ekscii pli, vidu "
+"[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:193
 msgid ""
@@ -6939,7 +6900,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:232
 msgid "Linux or FreeBSD"
-msgstr ""
+msgstr "Linux aŭ FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:234
 msgid ""
@@ -6950,16 +6911,9 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:243
 msgid "Then you can build and install it with the command:"
-msgstr ""
+msgstr "Tiam vi povas konstrui kaj instali per la komando:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:249
-#, fuzzy
-#| msgid ""
-#| "In case you want to handle building and installation manually without "
-#| "kdesrc-build, you will need to specify the place where the program will "
-#| "be installed. To do that, we need to change directories to our `kirigami-"
-#| "tutorial/` folder in our terminal application of choice and run the "
-#| "following commands:"
 msgid ""
 "In case you want to handle building and installation manually without kde-"
 "builder, you will need to specify the place where the program will be "
@@ -6967,7 +6921,7 @@ msgid ""
 "tutorial/` folder in our terminal application of choice and run the "
 "following commands:"
 msgstr ""
-"Se vi volas manipuli konstruadon kaj instaladon permane sen kdesrc-build, vi "
+"Se vi volas manipuli konstruadon kaj instaladon permane sen kde-builder, vi "
 "devos specifi la lokon kie la programo estos instalita. Por fari tion, ni "
 "devas ŝanĝi dosierujojn al nia `kirigami-tutorial/` dosierujo en nia fina "
 "aplikaĵo elektita kaj ruli la jenajn komandojn:"
@@ -6991,30 +6945,26 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:270
-#, fuzzy
-#| msgid ""
-#| "If you are compiling your project with [Craft](#craft) on Windows, you "
-#| "might need to specify a CMake Generator for the first step, depending on "
-#| "whether you are using Visual Studio 2019 (msvc) or MinGW (make) to "
-#| "compile your projects."
 msgid ""
 "Depending on how you installed the compiler, you might need to specify a "
 "CMake Generator for the first step, depending on whether you are using "
 "Visual Studio (msvc) or MinGW (make) to compile your projects."
 msgstr ""
-"Se vi kompilas vian projekton per [Craft](#craft) en Vindozo, vi eble "
-"bezonos specifi CMake Generatoron por la unua paŝo, depende de ĉu vi uzas "
-"Visual Studio 2019. (msvc) aŭ MinGW (make) por kompili viajn projektojn."
+"Depende de kiel vi instalis la kompililon, vi eble bezonos specifi CMake-"
+"Generatoron por la unua paŝo, depende de ĉu vi uzas Visual Studio (msvc) aŭ "
+"MinGW (make) por kompili viajn projektojn."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:272
 msgid ""
 "If Visual Studio, depending on the compiler you chose to install, it might "
 "be:"
 msgstr ""
+"Se Visual Studio, depende de la kompililo kiun vi elektis instali, povus "
+"esti:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
 msgid "Or:"
-msgstr ""
+msgstr "Aŭ:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:284
 msgid "If MinGW:"
@@ -8893,18 +8843,21 @@ msgid ""
 "NOTE: regardless of the color set used, it is recommended to replace all "
 "available colors in Theme, to avoid badly contrasting colors"
 msgstr ""
+"RIMARKO: sendepende de la koloraro uzita, estas rekomendite antatataŭigi "
+"ĉiujn disponeblajn kolorojn en Etoso por eviti malbone kontrastantajn "
+"kolorojn"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:135
 msgid "Redefine all the other colors you want"
-msgstr ""
+msgstr "Redifini ĉiujn aliajn kolorojn kiejn vi volas"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:137
 msgid "This will be \"#b9d795\""
-msgstr ""
+msgstr "Tio ĉi estos \"#b9d795\""
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:141
 msgid "This will be \"#465c2b\""
-msgstr ""
+msgstr "Tio ĉi estos \"#465c2b\""
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:157
 msgid "Example with custom colors"
@@ -9021,21 +8974,3 @@ msgstr ""
 "La tiparo de la [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::"
 "PlatformTheme) estas disponebla kiel `Kirigami.Theme.defaultFont.pointSize` "
 "en via aplikaĵo."
-
-#~ msgid ""
-#~ "When building the application after installing dependencies with Craft, "
-#~ "just installing KIconThemes and Breeze ensures the application will be "
-#~ "able to use Breeze icons on platforms like Windows, linking is not "
-#~ "necessary. [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-"
-#~ "desktop-style) on the other hand is responsible for the nice looking "
-#~ "style we want to enforce on those platforms."
-#~ msgstr ""
-#~ "Konstruante la aplikaĵon post instalo de dependecoj kun Craft, nur "
-#~ "instali KIconThemes kaj Breeze certigas, ke la aplikaĵo povos uzi Breeze-"
-#~ "piktogramojn sur platformoj kiel Vindozo, ligo ne estas necesa. [qqc2-"
-#~ "desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style) "
-#~ "aliflanke respondecas pri la belaspekta stilo, kiun ni volas plenumi sur "
-#~ "tiuj platformoj."
-
-#~ msgid "If Visual Studio:"
-#~ msgstr "Se Visual Studio:"

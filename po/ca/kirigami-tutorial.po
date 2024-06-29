@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-28 01:48+0000\n"
-"PO-Revision-Date: 2024-06-14 16:44+0200\n"
+"PO-Revision-Date: 2024-06-28 19:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -2206,37 +2206,43 @@ msgid ""
 "breeze) on non-Plasma environments such as Windows or GNOME, we need to do "
 "three things:"
 msgstr ""
+"Per fer que la nostra aplicació es vegi bé amb les [icones Brisa](https://"
+"invent.kde.org/frameworks/breeze-icons) i l'[estil Brisa](https://invent.kde."
+"org/plasma/breeze) de KDE en entorns no Plasma com el Windows o el GNOME, "
+"hem de fer tres coses:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
 msgid ""
 "initialize the theming facilities of [KIconThemes](https://invent.kde.org/"
 "frameworks/kiconthemes) on platforms where icon themes aren't part of the "
 "system (like Windows or MacOS) with `KIconTheme::initTheme()`"
 msgstr ""
+"inicialitzar les funcions de tematització dels [KIconThemes](https://invent."
+"kde.org/frameworks/kiconthemes) a les plataformes on els temes d'icones no "
+"formen part del sistema (com el Windows o el MacOS) amb `withKIconTheme::"
+"initTheme()`"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:30
 msgid ""
 "set the QStyle with [QApplication::setStyle()](docs:qtwidgets;QApplication::"
 "setStyle) to force Breeze instead of the native platform style"
 msgstr ""
+"definir el QStyle amb [QApplication::setStyle()](docs:qtwidgets;"
+"QApplication::setStyle) per a forçar el Brisa en lloc de l'estil natiu de la "
+"plataforma"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:31
-#, fuzzy
-#| msgid ""
-#| "To make our app look native on non-Plasma environments such as Windows or "
-#| "GNOME, we use [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::"
-#| "setStyle) to make use of [qqc2-desktop-style](https://invent.kde.org/"
-#| "frameworks/qqc2-desktop-style), forcing the use of Breeze."
 msgid ""
 "set the QtQuick Controls style with [QQuickStyle::setStyle()](docs:"
 "qtquickcontrols;QQuickStyle::setStyle) to force Breeze with KDE's [qqc2-"
 "desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)"
 msgstr ""
-"Per a fer que la nostra aplicació sembli nativa en entorns no Plasma, com el "
-"Windows o GNOME, utilitzem [QQuickStyle::setStyle()](docs:qtquickcontrols;"
-"QQuickStyle::setStyle()) per a fer ús de [qqc2-desktop-style](https://invent."
-"kde.org/frameworks/qqc2-desktop-style), forçant l'ús de Breeze."
+"definir l'estil del QtQuick Controls amb [QQuickStyle::setStyle()](docs:"
+"qtquickcontrols;QQuickStyle::setStyle) per a forçar el Brisa amb el [qqc2-"
+"desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style) de KDE"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:33
 msgid ""
 "The call to `KIconTheme::initTheme()` needs to be done before creating the "
@@ -2246,6 +2252,12 @@ msgid ""
 "the window like buttons and checkboxes will follow Breeze by using `qqc2-"
 "desktop-style`."
 msgstr ""
+"La crida a `KIconTheme::initTheme()` cal fer-la abans de crear la "
+"QApplication i permetre que l'aplicació trobi les icones Brisa a usar. Cal "
+"establir el QStyle a Brisa perquè usem QApplication per a la nostra "
+"aplicació en lloc de [QGuiApplication](docs:qtgui;QGuiApplication). Els "
+"controls reals de la interfície de la finestra com botons i caselles de "
+"selecció seguiran el Brisa utilitzant `qqc2-desktop-style`."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:35
@@ -2307,10 +2319,8 @@ msgstr ""
 "s'han de fer abans de la compilació."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:16
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "The root CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "El CMakeLists.txt arrel"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:18
@@ -2489,22 +2499,16 @@ msgstr ""
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes,punctuation-simple-quotes
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:63
-#, fuzzy
-#| msgid ""
-#| "And above that, `add_subdirectory(src)` points CMake into the `src/` "
-#| "directory, where it finds another `CMakeLists.txt` file:"
 msgid ""
 "And above that, `add_subdirectory(src)` points CMake into the `src/` "
 "directory, where it finds another `CMakeLists.txt` file."
 msgstr ""
 "I a sobre d'això, `add_subdirectory(src)` a punta el CMake en el directori "
-"`src/`, a on troba un altre fitxer `CMakeLists.txt`:"
+"`src/`, a on troba un altre fitxer `CMakeLists.txt`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:65
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:69
 msgid ""
@@ -2667,10 +2671,8 @@ msgstr ""
 "ECMQmlModule.html)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/components/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/components/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:98
 msgid ""
@@ -2679,12 +2681,19 @@ msgid ""
 "new-files), a new CMake file was introduced to allow for separate QML "
 "modules:"
 msgstr ""
+"A la guia d'aprenentatge sobre [com dividir el codi en fitxers separats](/"
+"docs/getting-started/kirigami/introduction-separatefiles#preparing-cmake-for-"
+"the-new-files), es va introduir un fitxer CMake nou per a permetre mòduls "
+"QML separats:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:102
 msgid ""
 "The requirement for this file to be read by CMake is adding a call to "
 "`add_subdirectory()` in the `src/CMakeLists.txt` pointing to it."
 msgstr ""
+"El requisit perquè aquest fitxer sigui llegit pel CMake és afegir una crida "
+"a `add_subdirectory()` en el `src/CMakeLists.txt` apuntant-hi."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:104
@@ -2700,6 +2709,7 @@ msgstr ""
 "org/ecm/module/ECMQmlModule.html) amb el nom d'importació `org.kde.tutorial."
 "components` i afegim els fitxers QML pertinents."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:106
 msgid ""
 "The call to [add_library()](https://cmake.org/cmake/help/latest/command/"
@@ -2710,7 +2720,16 @@ msgid ""
 "`src/CMakeLists.txt`. This is done by adding the target name to the list of "
 "libraries that will be linked to the executable in `target_link_libraries()`."
 msgstr ""
+"La crida a [add_library()](https://cmake.org/cmake/help/latest/command/"
+"add_library.html) genera un objectiu nou anomenat `kirigami-hello-"
+"components`. Aquest objectiu tindrà el seu conjunt propi de fitxers de codi "
+"font, fitxers en QML, enllaçarà les seves pròpies biblioteques i així "
+"successivament, però necessitarà estar vinculat a l'executable, però una "
+"vegada compilat necessitarà estar vinculat a l'executable creat en el `src/"
+"CMakeLists.txt`. Això es fa afegint el nom de destinació a la llista de "
+"biblioteques que s'enllaçaran a l'executable a `target_link_libraries()`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:108
 msgid ""
 "The call to `ecm_add_qml_module()` changes the library to allow it to accept "
@@ -2720,7 +2739,15 @@ msgid ""
 "generate plugin code since it's built into the executable; with separate QML "
 "modules like `kirigami-hello-components` the plugin code is necessary."
 msgstr ""
+"La crida a `ecm_add_qml_module()` canvia la biblioteca per a permetre que "
+"accepti fitxers QML com abans, però aquesta vegada cal usar "
+"[GENERATE_PLUGIN_SOURCE](https://api.kde.org/ecm/module/ECMQmlModule.html). "
+"Quan l'executable es fa servir com a objectiu de reserva (com amb `kirigami-"
+"hello`) no cal generar codi del connector ja que està construït dins "
+"l'executable; amb mòduls QML separats com `kirigami-hello-components` és "
+"necessari el codi del connector."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:110
 msgid ""
 "Upstream Qt's [qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module."
@@ -2728,6 +2755,10 @@ msgid ""
 "the QML module, but KDE's `ecm_add_qml_module()` by default does not for "
 "backwards compatibility."
 msgstr ""
+"El [qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module."
+"html#targets-and-plugin-targets) de les Qt originals generen de manera "
+"predeterminada un connector junt amb el mòdul QML, però "
+"l'`ecm_add_qml_module()` de KDE no ho fa per compatibilitat cap enrere."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:112
 msgid ""
@@ -2739,10 +2770,17 @@ msgid ""
 "is able to find where the QML files for each module are, so they are "
 "automatically added to the target."
 msgstr ""
+"Una altra cosa que és necessària per als mòduls QML separats és finalitzar "
+"l'objectiu. Això significa principalment que el CMake genera dos fitxers, "
+"[qmldir i qmltypes](https://doc.qt.io/qt-6/qtqml-modules-qmldir.html), que "
+"descriuen els mòduls QML que tenim i exporten els seus símbols per al seu ús "
+"a la biblioteca. Són importants quan s'instal·la l'aplicació perquè "
+"l'executable que s'està executant pugui trobar on són els fitxers QML per a "
+"cada mòdul, de manera que s'afegeixen automàticament a l'objectiu."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:114
 msgid "You can then just install the target as before."
-msgstr ""
+msgstr "A continuació, podeu instal·lar l'objectiu com abans."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:116
@@ -6968,10 +7006,8 @@ msgstr ""
 "Linux](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgid "[Building Kirigami with kde-builder](#kde-builder)"
-msgstr "[Construir el Kirigami amb «kdesrc-build»](#kdesrc-build)"
+msgstr "[Construir el Kirigami amb «kde-builder»](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -7002,11 +7038,6 @@ msgstr ""
 "started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid ""
-#| "If you wish to build Kirigami with Qt6, this is currently not possible "
-#| "with only distribution packages on Linux. You will need to resort to "
-#| "[kdesrc-build](#kdesrc-build) instead."
 msgid ""
 "If you wish to build Kirigami with Qt6, this is currently not possible with "
 "only distribution packages on Linux. You will need to resort to [kde-builder]"
@@ -7014,39 +7045,29 @@ msgid ""
 msgstr ""
 "Si voleu construir el Kirigami amb les Qt6, actualment això no és possible "
 "amb només els paquets de la distribució Linux. En el seu lloc haureu de "
-"recórrer al [«kdesrc-build»](#kdesrc-build)."
+"recórrer al [«kde-builder»](#kde-builder)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-#, fuzzy
-#| msgid "Building Kirigami with kdesrc-build"
 msgid "Building Kirigami with kde-builder"
-msgstr "Construcció del Kirigami amb «kdesrc-build»"
+msgstr "Construcció del Kirigami amb «kde-builder»"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
-#, fuzzy
-#| msgid ""
-#| "KDE has a custom tool to easily build all of its libraries and programs: "
-#| "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 "KDE té una eina personalitzada per a construir fàcilment totes les seves "
-"biblioteques i programes: **kdesrc-build**. Es pot utilitzar per a construir "
+"biblioteques i programes: **kde-builder**. Es pot utilitzar per a construir "
 "el Kirigami al Linux i al FreeBSD."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
-#, fuzzy
-#| msgid ""
-#| "For this tutorial, you will need to follow the [setup instructions for "
-#| "kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgid ""
 "For this tutorial, you will need to follow the [setup instructions for kde-"
 "builder](/docs/getting-started/building/kdesrc-build-setup)."
 msgstr ""
 "Per a aquesta guia d'aprenentatge cal seguir les [instruccions de "
-"configuració del «kdesrc-build»](/docs/getting-started/building/kdesrc-build-"
+"configuració del «kde-builder»](/docs/getting-started/building/kdesrc-build-"
 "setup)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
@@ -7548,17 +7569,13 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:187
-#, fuzzy
-#| msgid ""
-#| "If you want to get ahead, you can read more about how this `main.cpp` "
-#| "works in [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-"
-#| "maincpp)."
 msgid ""
 "The application needs to set its icon theme, QStyle, and QtQuick Controls "
 "style to Breeze in order to show up on Windows. To learn more about it, see "
 "[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp/)."
 msgstr ""
-" Si voleu avançar, podeu llegir més sobre com funciona aquest `main.cpp` a "
+"L'aplicació ha d'establir el seu estil de tema d'icones, QStyle i QtQuick "
+"Controls a Brisa per tal de mostrar-se al Windows. Per a saber-ne més, vegeu "
 "[Descobrir el main.cpp](/docs/getting-started/kirigami/advanced-maincpp/)."
 
 # skip-rule: t-acc_obe
@@ -7675,17 +7692,12 @@ msgstr "Linux o FreeBSD"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:234
-#, fuzzy
-#| msgid ""
-#| "If you want kde-builder to handle building and installation of your "
-#| "project, you need to specify a custom module in your `~/.config/kdesrc-"
-#| "buildrc`:"
 msgid ""
 "If you want kdesrc-build to handle building and installation of your "
 "project, you need to specify a custom module in your `~/.config/kdesrc-"
 "buildrc`:"
 msgstr ""
-"Si voleu que el «kde-builder» gestioni la construcció i la instal·lació del "
+"Si voleu que el «kdesrc-build» gestioni la construcció i la instal·lació del "
 "vostre projecte, haureu d'especificar un mòdul personalitzat en el vostre "
 "`~/.config/kdesrc-buildrc`:"
 
@@ -7695,13 +7707,6 @@ msgstr "A continuació podeu construir-lo i instal·lar-lo amb l'ordre:"
 
 # skip-rule: t-acc_obe, common-tutorial
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:249
-#, fuzzy
-#| msgid ""
-#| "In case you want to handle building and installation manually without "
-#| "kdesrc-build, you will need to specify the place where the program will "
-#| "be installed. To do that, we need to change directories to our `kirigami-"
-#| "tutorial/` folder in our terminal application of choice and run the "
-#| "following commands:"
 msgid ""
 "In case you want to handle building and installation manually without kde-"
 "builder, you will need to specify the place where the program will be "
@@ -7710,7 +7715,7 @@ msgid ""
 "following commands:"
 msgstr ""
 "En cas que vulgueu gestionar la construcció i la instal·lació manualment "
-"sense el «kdesrc-build», haureu d'especificar el lloc on s'instal·larà el "
+"sense el «kde-builder», haureu d'especificar el lloc on s'instal·larà el "
 "programa. Per a fer-ho, necessitem canviar els directoris a la nostra "
 "carpeta `kirigami-tutorial/` a l'aplicació de terminal de la nostra elecció "
 "i executar les ordres següents:"
@@ -7733,33 +7738,30 @@ msgid ""
 "If you are compiling your project on Windows after having set up [Craft]"
 "(#craft), CMake should automatically detect the right compiler:"
 msgstr ""
+"Si esteu compilant el projecte al Windows després d'haver configurat [Craft]"
+"(#craft), el CMake hauria de detectar automàticament el compilador correcte:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:270
-#, fuzzy
-#| msgid ""
-#| "If you are compiling your project with [Craft](#craft) on Windows, you "
-#| "might need to specify a CMake Generator for the first step, depending on "
-#| "whether you are using Visual Studio 2019 (msvc) or MinGW (make) to "
-#| "compile your projects."
 msgid ""
 "Depending on how you installed the compiler, you might need to specify a "
 "CMake Generator for the first step, depending on whether you are using "
 "Visual Studio (msvc) or MinGW (make) to compile your projects."
 msgstr ""
-"Si esteu compilant el projecte amb el [Craft](#craft) en el Windows, potser "
-"necessitareu especificar un generador de CMake per al primer pas, depenent "
-"de si esteu utilitzant el Visual Studio 2019 (msvc) o el MinGW (make) per a "
-"compilar els projectes."
+"En funció de com heu instal·lat el compilador, potser caldrà especificar un "
+"generador de CMake per al primer pas, depenent de si esteu utilitzant el "
+"Visual Studio (msvc) o el MinGW (make) per a compilar els projectes."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:272
 msgid ""
 "If Visual Studio, depending on the compiler you chose to install, it might "
 "be:"
 msgstr ""
+"Si és Visual Studio, depenent del compilador que trieu instal·lar, podria "
+"ser:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
 msgid "Or:"
-msgstr ""
+msgstr "o:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:284
 msgid "If MinGW:"
@@ -7770,15 +7772,18 @@ msgstr "Si és MinGW:"
 msgid "In both cases, the program will be installed to `C:\\CraftRoot\\bin`."
 msgstr "En els dos casos, el programa s'instal·larà a `C:\\CraftRoot\\bin`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:294
 msgid ""
 "If you ever get in doubt as to the name of the compiler that should be used "
 "in the `cmake` call, run:"
 msgstr ""
+"Si alguna vegada dubteu sobre el nom del compilador que s'ha d'utilitzar en "
+"la crida del `cmake`, executeu:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:300
 msgid "It will list all available generators."
-msgstr ""
+msgstr "Llistarà tots els generadors disponibles."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:304
@@ -7829,6 +7834,8 @@ msgid ""
 "If you have compiled the project manually with CMake and for some reason "
 "you'd like to uninstall the project, you can run:"
 msgstr ""
+"Si heu compilat el projecte manualment amb el CMake i per algun motiu voleu "
+"desinstal·lar el projecte, podeu executar:"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:331
@@ -9445,16 +9452,7 @@ msgstr ""
 "Primer, creeu el fitxer `kirigami-tutorial/src/components/CMakeLists.txt` "
 "amb el contingut següent:"
 
-# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:98
-#, fuzzy
-#| msgid ""
-#| "Because the target is different from the executable, it will function as "
-#| "a different QML module, in which case we will need to *finalize* it (make "
-#| "CMake generate the files needed for the module to be found, namely "
-#| "`qmldir` and `qmltypes`) with [ecm_finalize_qml_module()](https://api.kde."
-#| "org/ecm/module/ECMQmlModule.html). We then install it exactly like in "
-#| "previous lessons."
 msgid ""
 "Because the target is different from the executable, it will function as a "
 "different QML module, in which case we will need to do two things: make it "
@@ -9464,11 +9462,11 @@ msgid ""
 "html). We then install it exactly like in previous lessons."
 msgstr ""
 "Com que l'objectiu és diferent de l'executable, funcionarà com un mòdul QML "
-"diferent, en aquest cas el necessitarem *finalitzar* (fent que el CMake "
-"generi els fitxers necessaris per al mòdul que trobi, és a dir, `qmldir` i "
-"`qmltypes`) amb [ecm_finalize_qml_module()](https://api.kde.org/ecm/module/"
-"ECMQmlModule.html). A continuació, l'instal·lem exactament igual que en les "
-"lliçons anteriors."
+"diferent, en aquest cas el necessitarem fer dues coses: fer que *generi* el "
+"codi perquè funcioni com a un connector Qt amb [GENERATE_PLUGIN_SOURCE]"
+"(https://api.kde.org/ecm/module/ECMQmlModule.html), i *finalitzar-lo* amb "
+"[ecm_finalize_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule."
+"html). Després l'instal·lem exactament igual que en les lliçons anteriors."
 
 # skip-rule: t-acc_obe,common-tutorial
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:100
