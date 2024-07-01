@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-28 01:48+0000\n"
-"PO-Revision-Date: 2024-06-22 15:14+0200\n"
+"PO-Revision-Date: 2024-06-30 19:37+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -2099,21 +2099,11 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:31
-#, fuzzy
-#| msgid ""
-#| "To make our app look native on non-Plasma environments such as Windows or "
-#| "GNOME, we use [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::"
-#| "setStyle) to make use of [qqc2-desktop-style](https://invent.kde.org/"
-#| "frameworks/qqc2-desktop-style), forcing the use of Breeze."
 msgid ""
 "set the QtQuick Controls style with [QQuickStyle::setStyle()](docs:"
 "qtquickcontrols;QQuickStyle::setStyle) to force Breeze with KDE's [qqc2-"
 "desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)"
 msgstr ""
-"För att få vårt program att se ut att höra hemma på andra miljöer än Plasma, "
-"såsom Windows eller GNOME använder vi [QQuickStyle::setStyle()](docs:"
-"qtquickcontrols;QQuickStyle::setStyle()) för att utnyttja [qqc2-desktop-"
-"style](https://invent.kde.org/frameworks/qqc2-desktop-style)."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:33
 msgid ""
@@ -2182,10 +2172,8 @@ msgstr ""
 "som måste göras innan kompilering."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:16
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "The root CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "CMakeLists.txt i rotkatalogen"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:18
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
@@ -2331,22 +2319,16 @@ msgstr ""
 "att kompileringen misslyckas omedelbart om den stöter på ett fel:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:63
-#, fuzzy
-#| msgid ""
-#| "And above that, `add_subdirectory(src)` points CMake into the `src/` "
-#| "directory, where it finds another `CMakeLists.txt` file:"
 msgid ""
 "And above that, `add_subdirectory(src)` points CMake into the `src/` "
 "directory, where it finds another `CMakeLists.txt` file."
 msgstr ""
 "Och ovanför den pekar `add_subdirectory(src)` CMake på katalogen 'src/', där "
-"en annan `CMakeLists.txt` finns:"
+"det finns en annan `CMakeLists.txt` fil."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:65
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:69
 msgid ""
@@ -2471,10 +2453,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/components/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/components/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:98
 msgid ""
@@ -2541,7 +2521,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:114
 msgid "You can then just install the target as before."
-msgstr ""
+msgstr "Därefter kan du bara installera målet som tidigare."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:116
 msgid ""
@@ -4955,11 +4935,11 @@ msgstr "Qt-modeller med mer än en roll"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:98
 msgid "model.index, model.somerole"
-msgstr ""
+msgstr "model.index, model.somerole"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:98
 msgid "In most cases"
-msgstr ""
+msgstr "I de flesta fall"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "Qt models with one role"
@@ -4967,11 +4947,11 @@ msgstr "Qt-modeller med en roll"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "model.index, model.somerole, model.modelData"
-msgstr ""
+msgstr "model.index, model.somerole, model.modelData"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "In most cases, for prototyping"
-msgstr ""
+msgstr "I de flesta fall, för prototyper"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 msgid "JavaScript array model"
@@ -4980,7 +4960,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "model.index, model.modelData"
-msgstr ""
+msgstr "model.index, model.modelData"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
@@ -6382,10 +6362,8 @@ msgid ""
 msgstr "[Installera Kirigami från arkiven i Linux-distribution](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgid "[Building Kirigami with kde-builder](#kde-builder)"
-msgstr "[Bygga Kirigami med kdesrc-build](#kdesrc-build)"
+msgstr "[Bygga Kirigami med kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6414,50 +6392,35 @@ msgstr ""
 "started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid ""
-#| "If you wish to build Kirigami with Qt6, this is currently not possible "
-#| "with only distribution packages on Linux. You will need to resort to "
-#| "[kdesrc-build](#kdesrc-build) instead."
 msgid ""
 "If you wish to build Kirigami with Qt6, this is currently not possible with "
 "only distribution packages on Linux. You will need to resort to [kde-builder]"
 "(#kde-builder) instead."
 msgstr ""
 "Om du vill bygga Kirigami med Qt6 är detta för närvarande inte möjligt med "
-"endast distributionspaket på Linux. Du måste ta till [kdesrc-build](#kdesrc-"
-"build) istället."
+"endast distributionspaket på Linux. Du måste ta till [kde-builder](#kde-"
+"builder) istället."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-#, fuzzy
-#| msgid "Building Kirigami with kdesrc-build"
 msgid "Building Kirigami with kde-builder"
-msgstr "Bygga Kirigami med kdesrc-build"
+msgstr "Bygga Kirigami med kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
-#, fuzzy
-#| msgid ""
-#| "KDE has a custom tool to easily build all of its libraries and programs: "
-#| "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 "KDE har ett eget verktyg för att enkelt bygga alla dess bibliotek och "
-"program: **kdesrc-build**. Det kan användas för att bygga Kirigami på Linux "
+"program: **kde-builder**. Det kan användas för att bygga Kirigami på Linux "
 "och FreeBSD."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
-#, fuzzy
-#| msgid ""
-#| "For this tutorial, you will need to follow the [setup instructions for "
-#| "kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgid ""
 "For this tutorial, you will need to follow the [setup instructions for kde-"
 "builder](/docs/getting-started/building/kdesrc-build-setup)."
 msgstr ""
 "För den här handledningen måste du följa [installationsinstruktionerna för "
-"kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
+"kde-builder](/docs/getting-started/building/kdesrc-build-setup)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:51
@@ -6902,18 +6865,11 @@ msgstr ""
 "<summary>Klicka här för att läsa mer</summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:187
-#, fuzzy
-#| msgid ""
-#| "If you want to get ahead, you can read more about how this `main.cpp` "
-#| "works in [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-"
-#| "maincpp)."
 msgid ""
 "The application needs to set its icon theme, QStyle, and QtQuick Controls "
 "style to Breeze in order to show up on Windows. To learn more about it, see "
 "[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp/)."
 msgstr ""
-" Om du vill komma framåt, kan du läsa mer om hur `main.cpp` fungerar i "
-"[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:193
 msgid ""
@@ -7000,7 +6956,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:232
 msgid "Linux or FreeBSD"
-msgstr ""
+msgstr "Linux eller FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:234
 msgid ""
@@ -7011,16 +6967,9 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:243
 msgid "Then you can build and install it with the command:"
-msgstr ""
+msgstr "Därefter kan du bygga och installera det med kommandot:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:249
-#, fuzzy
-#| msgid ""
-#| "In case you want to handle building and installation manually without "
-#| "kdesrc-build, you will need to specify the place where the program will "
-#| "be installed. To do that, we need to change directories to our `kirigami-"
-#| "tutorial/` folder in our terminal application of choice and run the "
-#| "following commands:"
 msgid ""
 "In case you want to handle building and installation manually without kde-"
 "builder, you will need to specify the place where the program will be "
@@ -7028,10 +6977,10 @@ msgid ""
 "tutorial/` folder in our terminal application of choice and run the "
 "following commands:"
 msgstr ""
-"Om du vill hantera att bygga och installera manuellt utan kdesrc-build, "
-"måste du ange platsen där programmet ska installeras. För att göra det måste "
-"vi gå till vår katalog \"kirigami-tutorial/\"-mapp i valfritt "
-"terminalprogram och köra följande kommandon:"
+"Om du vill hantera att bygga och installera manuellt utan kde-builder, måste "
+"du ange platsen där programmet ska installeras. För att göra det måste vi gå "
+"till vår katalog \"kirigami-tutorial/\" i valfritt terminalprogram och köra "
+"följande kommandon:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:257
 msgid ""
@@ -7052,20 +7001,14 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:270
-#, fuzzy
-#| msgid ""
-#| "If you are compiling your project with [Craft](#craft) on Windows, you "
-#| "might need to specify a CMake Generator for the first step, depending on "
-#| "whether you are using Visual Studio 2019 (msvc) or MinGW (make) to "
-#| "compile your projects."
 msgid ""
 "Depending on how you installed the compiler, you might need to specify a "
 "CMake Generator for the first step, depending on whether you are using "
 "Visual Studio (msvc) or MinGW (make) to compile your projects."
 msgstr ""
-"Om du kompilerar ditt projekt med [Craft](#craft) på Windows kan du behöva "
-"ange en CMake Generator för det första steget, beroende på om du använder "
-"Visual Studio 2019 (msvc) eller MinGW (make) för att kompilera dina projekt."
+"Beroende på hur du installerade kompilatorn, kan du behöva ange en CMake "
+"Generator för det första steget, beroende på om du använder Visual Studio "
+"(msvc) eller MinGW (make) för att kompilera dina projekt."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:272
 msgid ""
