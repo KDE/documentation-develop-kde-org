@@ -74,7 +74,11 @@ Write labels for buttons and menu items to represent *actions* or *locations*:
 
 Prefer the “action” form where the label's UI element may not otherwise look interactive—such as a toolbar with only one or two ToolButtons. In this case, the action verb helps to signal interactivity.
 
-Keep text for menu items and especially buttons as short as possible. Aim for three normal-sized words or fewer, or four short ones. Anything longer than "Configure Keyboard Shortcuts" is too long.
+Keep text for menu items and especially buttons as short as possible. Aim for three normal-sized words or fewer, or four short ones. Anything longer than "Configure Keyboard Shortcuts" is too long. A strategy for minimizing length is to omit the subject when the context makes it clear:
+
+{{< figure src="/hig/text-short-button-label-with-nearby-context.png" class="text-center" caption="Nearby “Users” title provides context and makes it obvious what new thing will be added." width="476px">}}
+
+When shortening a button's text in this way, always set `Accessible.name` to the full text including the subject, since blind people won't be able to see the context visually.
 
 Buttons in dialogs also follow these rules. “OK” and “Yes” are never acceptable button labels!
 
