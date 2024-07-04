@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-28 01:48+0000\n"
+"POT-Creation-Date: 2024-07-04 01:38+0000\n"
 "PO-Revision-Date: 2024-06-28 19:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -7006,7 +7006,9 @@ msgstr ""
 "Linux](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-msgid "[Building Kirigami with kde-builder](#kde-builder)"
+#, fuzzy
+#| msgid "[Building Kirigami with kde-builder](#kde-builder)"
+msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgstr "[Construir el Kirigami amb «kde-builder»](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
@@ -7038,23 +7040,34 @@ msgstr ""
 "started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
+#, fuzzy
+#| msgid ""
+#| "If you wish to build Kirigami with Qt6, this is currently not possible "
+#| "with only distribution packages on Linux. You will need to resort to [kde-"
+#| "builder](#kde-builder) instead."
 msgid ""
 "If you wish to build Kirigami with Qt6, this is currently not possible with "
-"only distribution packages on Linux. You will need to resort to [kde-builder]"
-"(#kde-builder) instead."
+"only distribution packages on Linux. You will need to resort to [kdesrc-"
+"build](#kdesrc-build) instead."
 msgstr ""
 "Si voleu construir el Kirigami amb les Qt6, actualment això no és possible "
 "amb només els paquets de la distribució Linux. En el seu lloc haureu de "
 "recórrer al [«kde-builder»](#kde-builder)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-msgid "Building Kirigami with kde-builder"
+#, fuzzy
+#| msgid "Building Kirigami with kde-builder"
+msgid "Building Kirigami with kdesrc-build"
 msgstr "Construcció del Kirigami amb «kde-builder»"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
+#, fuzzy
+#| msgid ""
+#| "KDE has a custom tool to easily build all of its libraries and programs: "
+#| "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
-"**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
+"**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 "KDE té una eina personalitzada per a construir fàcilment totes les seves "
 "biblioteques i programes: **kde-builder**. Es pot utilitzar per a construir "
@@ -7062,9 +7075,13 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
+#, fuzzy
+#| msgid ""
+#| "For this tutorial, you will need to follow the [setup instructions for "
+#| "kde-builder](/docs/getting-started/building/kdesrc-build-setup)."
 msgid ""
-"For this tutorial, you will need to follow the [setup instructions for kde-"
-"builder](/docs/getting-started/building/kdesrc-build-setup)."
+"For this tutorial, you will need to follow the [setup instructions for "
+"kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgstr ""
 "Per a aquesta guia d'aprenentatge cal seguir les [instruccions de "
 "configuració del «kde-builder»](/docs/getting-started/building/kdesrc-build-"
@@ -7707,9 +7724,16 @@ msgstr "A continuació podeu construir-lo i instal·lar-lo amb l'ordre:"
 
 # skip-rule: t-acc_obe, common-tutorial
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:249
+#, fuzzy
+#| msgid ""
+#| "In case you want to handle building and installation manually without kde-"
+#| "builder, you will need to specify the place where the program will be "
+#| "installed. To do that, we need to change directories to our `kirigami-"
+#| "tutorial/` folder in our terminal application of choice and run the "
+#| "following commands:"
 msgid ""
-"In case you want to handle building and installation manually without kde-"
-"builder, you will need to specify the place where the program will be "
+"In case you want to handle building and installation manually without kdesrc-"
+"build, you will need to specify the place where the program will be "
 "installed. To do that, we need to change directories to our `kirigami-"
 "tutorial/` folder in our terminal application of choice and run the "
 "following commands:"

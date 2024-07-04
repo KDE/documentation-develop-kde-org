@@ -4,16 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-28 01:48+0000\n"
-"PO-Revision-Date: 2024-06-13 13:49+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"POT-Creation-Date: 2024-07-04 01:38+0000\n"
+"PO-Revision-Date: 2024-07-03 16:20+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -1645,10 +1645,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:16
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "The root CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:18
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
@@ -1771,10 +1769,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:65
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:69
 msgid ""
@@ -1881,10 +1877,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
-#, fuzzy
-#| msgid "CMakeLists.txt"
 msgid "src/components/CMakeLists.txt"
-msgstr "CMakeLists.txt"
+msgstr "src/components/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:98
 msgid ""
@@ -4992,7 +4986,7 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-msgid "[Building Kirigami with kde-builder](#kde-builder)"
+msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
@@ -5019,24 +5013,24 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
 msgid ""
 "If you wish to build Kirigami with Qt6, this is currently not possible with "
-"only distribution packages on Linux. You will need to resort to [kde-builder]"
-"(#kde-builder) instead."
+"only distribution packages on Linux. You will need to resort to [kdesrc-"
+"build](#kdesrc-build) instead."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-msgid "Building Kirigami with kde-builder"
+msgid "Building Kirigami with kdesrc-build"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
-"**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
+"**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 msgid ""
-"For this tutorial, you will need to follow the [setup instructions for kde-"
-"builder](/docs/getting-started/building/kdesrc-build-setup)."
+"For this tutorial, you will need to follow the [setup instructions for "
+"kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
@@ -5471,8 +5465,8 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:249
 msgid ""
-"In case you want to handle building and installation manually without kde-"
-"builder, you will need to specify the place where the program will be "
+"In case you want to handle building and installation manually without kdesrc-"
+"build, you will need to specify the place where the program will be "
 "installed. To do that, we need to change directories to our `kirigami-"
 "tutorial/` folder in our terminal application of choice and run the "
 "following commands:"
@@ -5509,7 +5503,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
 msgid "Or:"
-msgstr ""
+msgstr "Nebo:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:284
 msgid "If MinGW:"
