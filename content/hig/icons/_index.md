@@ -29,29 +29,21 @@ If you find that your app needs a new icon not present in the Breeze icon theme,
 - Use [standard icon sizes](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1Units.html#a7e729a19d3cdd6107828dcfc14950706) in any context where the icon size is not automatically chosen for you.
 
 
-## Symbolic vs full-color icons
-At small sizes (especially `small` and `smallMedium`), append `-symbolic` to the name of the icon you're asking the icon theme to provide; this gives you a symbolic monochrome icon if the theme has one. At these small sizes, full-color icons can become visual smudges or contribute to a “heavy” appearance when many are shown in a row or column, so we prefer symbolic ones. Full-color icons are better at `medium` size and larger.
-
-Always use symbolic icons for menu items and standard-sized buttons.
-
-Always use symbolic icons for the `small` icon size in list items, and *generally* at the `smallMedium` size too. Context dictates whether this makes sense or not: with only a small number of list items, full-color icons may look better. For large or dense lists, prefer symbolic icons.
-
-
 ## Icons-only buttons
 Most buttons should include text. Only use Icons-only buttons where saving space is critical and their icons use imagery that is common and universal across all operating systems and apps. Examples include:
 
 <!--TODO: Add pictures of these icons -->
 
-- `go-previous-symbolic`
-- `go-home-symbolic`
-- `search-symbolic`
-- `configure-symbolic`
-- `edit-delete-symbolic`
-- `print-symbolic`
-- `player-volume-muted-symbolic`
-- `media-playback-start-symbolic`
-- `documentinfo-symbolic`
-- `open-menu-symbolic`
+- `go-previous`
+- `go-home`
+- `search`
+- `configure`
+- `edit-delete`
+- `print`
+- `player-volume-muted`
+- `media-playback-start`
+- `documentinfo`
+- `open-menu`
 
 It's also acceptable to use icons-only buttons for actions not relevant to the app's core workflow (where it's not a disaster if the user ignores it) or where groups of related icons reveal each other's meaning by proximity. An example would be icons-only buttons to choose text justification in a word processing app:
 
@@ -72,12 +64,20 @@ To make a button icons-only, hide the text using the [display](https://doc.qt.io
 ## Icons for destructive actions
 Destructive actions must be consistently indicated as such using icons that are are red or have red elements (in the Breeze icon theme, at least):
 
-- Use a red trash can via the `edit-delete-symbolic` icon for actions that delete files or destroy content the user has created.
-- Use a red X via the `edit-delete-remove-symbolic` icon for actions that remove abstract or standard items in a way that's possible to restore later.
-- Use one of the more detailed deletion icons (e.g. `delete-comment-symbolic`) only where multiple deletion actions are visible and must be visually disambiguated, or on icons-only buttons where the icon itself has to convey all meaning and the context is not sufficient to indicate what will be deleted.
-- Use a black trash can via the `trash-empty-symbolic` icon for moving an item to the trash, and give its button or menu item a label that includes the “move to trash” phrasing.
+- Use a red trash can via the `edit-delete` icon for actions that delete files or destroy content the user has created.
+- Use a red X via the `edit-delete-remove` icon for actions that remove abstract or standard items in a way that's possible to restore later.
+- Use one of the more detailed deletion icons (e.g. `delete-comment`) only where multiple deletion actions are visible and must be visually disambiguated, or on icons-only buttons where the icon itself has to convey all meaning and the context is not sufficient to indicate what will be deleted.
+- Use a black trash can via the `trash-empty` icon for moving an item to the trash, and give its button or menu item a label that includes the “move to trash” phrasing.
 
 Avoid the use of icons with red elements or X symbols for non-destructive actions.
+
+
+## Symbolic vs full-color
+At small sizes (especially `small` and `smallMedium`), append `-symbolic` to the name of the icon you're asking the icon theme to provide; this gives you a symbolic monochrome icon if the theme has one. At these small sizes, full-color icons can become visual smudges or contribute to a “heavy” appearance when many are shown in a row or column, so we prefer symbolic ones. Full-color icons are better at `medium` size and larger.
+
+Always use symbolic icons for menu items and standard-sized buttons.
+
+Always use symbolic icons for the `small` icon size in list items, and *generally* at the `smallMedium` size too. Context dictates whether this makes sense or not: with only a small number of list items, full-color icons may look better. For large or dense lists, prefer symbolic icons.
 
 
 ## Designing your own icons
