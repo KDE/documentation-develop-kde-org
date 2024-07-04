@@ -13,22 +13,22 @@ KDevelop is an IDE from KDE.
 A screen recording version is available https://www.youtube.com/watch?v=LcSfUNrd3S4
 
 
-## kde-builder
+## kdesrc-build
 
-Make sure kde-builder works correctly. Make sure ~/.config/kdesrc-buildrc contains the lines:
+Make sure kdesrc-build works correctly. Make sure ~/.config/kdesrc-buildrc contains the lines:
 
 ```ini
 cmake-options -DCMAKE_BUILD_TYPE=Debug
 ```
 
-Using kde-builder build a module. E.g.
+Using kdesrc-build build a module. E.g.
 
 ```bash
-kde-builder bluez-qt
+kdesrc-build bluez-qt
 ```
 
 
-## Importing a kde-builder project into KDevelop
+## Importing a kdesrc-build project into KDevelop
 
 E.g. on Kubuntu 22.04.
 
@@ -45,9 +45,7 @@ A dialog is shown: Configure a Build Directory for bluez-qt. It will guess all o
 
 ## Setting environment variables
 
-By default, kde-builder will install everything into separate `usr` directory to avoid messing with the system path. The file that contains these paths is 
-called `prefix.sh` and can be found in the build directory of any project, for example `/home/n/kde/build/bluez-qt/prefix.sh`. By running `source prefix.sh`
-inside a terminal you will set up the environment for running a kde-builder project. By default, the prefix should look something like this:
+By default kdesrc-build will install everything into separate `usr` directory to avoid messing with the system path. The file that contains these paths is called `prefix.sh` and can be found in the build directory of any project, for example `/home/n/kde/build/bluez-qt/prefix.sh`. By running `source prefix.sh` inside a terminal you will set up the environment for running a kdesrc-build project. By default the prefix should look something like this:
 
 ```bash
 export PATH=/home/n/kde/usr/bin:$PATH

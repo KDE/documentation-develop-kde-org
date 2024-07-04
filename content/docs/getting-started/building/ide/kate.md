@@ -13,21 +13,21 @@ Kate is the feature-packed text editor from KDE.
 A screen recording version is available https://www.youtube.com/watch?v=WBWVTKEVkOU
 
 
-## kde-builder
+## kdesrc-build
 
-Make sure kde-builder works correctly. Make sure ~/.config/kdesrc-buildrc contains the lines:
+Make sure kdesrc-build works correctly. Make sure ~/.config/kdesrc-buildrc contains the lines:
 
 ```ini
-cmake-options -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
+cmake-options -G "Kate - Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
 # Build with LSP support for everything that supports it
 compile-commands-linking true
 compile-commands-export true
 ```
 
-Using kde-builder build a module. E.g.
+Using kdesrc-build build a module. E.g.
 
 ```bash
-kde-builder kcalc
+kdesrc-build kcalc
 ```
 
 
