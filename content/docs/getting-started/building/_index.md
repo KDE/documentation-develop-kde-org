@@ -7,6 +7,8 @@ groups:
     key: "help"
   - name: "kdesrc-build"
     key: "kdesrc-build"
+  - name: "Manual builds"
+    key: "cmake-build"
 description: >
   Learn how to build KDE software in multiple ways.
 group: "getting-started"
