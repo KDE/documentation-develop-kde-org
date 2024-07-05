@@ -28,7 +28,7 @@ sudo dnf install cmake extra-cmake-modules kf6-kirigami2-devel kf6-ki18n-devel k
 
 Further information for other distributions can be found [here](/docs/getting-started/building/help-dependencies).
 
-If you wish to build Kirigami with Qt6, this is currently not possible with only distribution packages on Linux. You will need to resort to [kdesrc-build](#kdesrc-build) instead.
+If you wish to build Kirigami with Qt6, it is recommended to use [kdesrc-build](#kdesrc-build) instead, especially for Linux installations using Plasma 5.
 
 ### Building Kirigami with kdesrc-build {#kdesrc-build}
 
