@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 01:38+0000\n"
-"PO-Revision-Date: 2024-06-30 19:37+0200\n"
+"POT-Creation-Date: 2024-07-06 01:42+0000\n"
+"PO-Revision-Date: 2024-07-05 04:21+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -6362,10 +6362,8 @@ msgid ""
 msgstr "[Installera Kirigami från arkiven i Linux-distribution](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kde-builder](#kde-builder)"
 msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
-msgstr "[Bygga Kirigami med kde-builder](#kde-builder)"
+msgstr "[Bygga Kirigami med kdesrc-build](#kdesrc-build)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6394,50 +6392,32 @@ msgstr ""
 "started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid ""
-#| "If you wish to build Kirigami with Qt6, this is currently not possible "
-#| "with only distribution packages on Linux. You will need to resort to [kde-"
-#| "builder](#kde-builder) instead."
 msgid ""
-"If you wish to build Kirigami with Qt6, this is currently not possible with "
-"only distribution packages on Linux. You will need to resort to [kdesrc-"
-"build](#kdesrc-build) instead."
+"If you wish to build Kirigami with Qt6, it is recommended to use [kdesrc-"
+"build](#kdesrc-build) instead, especially for Linux installations using "
+"Plasma 5."
 msgstr ""
-"Om du vill bygga Kirigami med Qt6 är detta för närvarande inte möjligt med "
-"endast distributionspaket på Linux. Du måste ta till [kde-builder](#kde-"
-"builder) istället."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-#, fuzzy
-#| msgid "Building Kirigami with kde-builder"
 msgid "Building Kirigami with kdesrc-build"
-msgstr "Bygga Kirigami med kde-builder"
+msgstr "Bygga Kirigami med kdesrc-build"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
-#, fuzzy
-#| msgid ""
-#| "KDE has a custom tool to easily build all of its libraries and programs: "
-#| "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 "KDE har ett eget verktyg för att enkelt bygga alla dess bibliotek och "
-"program: **kde-builder**. Det kan användas för att bygga Kirigami på Linux "
+"program: **kdesrc-build**. Det kan användas för att bygga Kirigami på Linux "
 "och FreeBSD."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
-#, fuzzy
-#| msgid ""
-#| "For this tutorial, you will need to follow the [setup instructions for "
-#| "kde-builder](/docs/getting-started/building/kdesrc-build-setup)."
 msgid ""
 "For this tutorial, you will need to follow the [setup instructions for "
 "kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgstr ""
 "För den här handledningen måste du följa [installationsinstruktionerna för "
-"kde-builder](/docs/getting-started/building/kdesrc-build-setup)."
+"kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:39
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:51
@@ -6987,13 +6967,6 @@ msgid "Then you can build and install it with the command:"
 msgstr "Därefter kan du bygga och installera det med kommandot:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:249
-#, fuzzy
-#| msgid ""
-#| "In case you want to handle building and installation manually without kde-"
-#| "builder, you will need to specify the place where the program will be "
-#| "installed. To do that, we need to change directories to our `kirigami-"
-#| "tutorial/` folder in our terminal application of choice and run the "
-#| "following commands:"
 msgid ""
 "In case you want to handle building and installation manually without kdesrc-"
 "build, you will need to specify the place where the program will be "
@@ -7001,10 +6974,10 @@ msgid ""
 "tutorial/` folder in our terminal application of choice and run the "
 "following commands:"
 msgstr ""
-"Om du vill hantera att bygga och installera manuellt utan kde-builder, måste "
-"du ange platsen där programmet ska installeras. För att göra det måste vi gå "
-"till vår katalog \"kirigami-tutorial/\" i valfritt terminalprogram och köra "
-"följande kommandon:"
+"Om du vill hantera att bygga och installera manuellt utan kdesrc-build, "
+"måste du ange platsen där programmet ska installeras. För att göra det måste "
+"vi gå till vår katalog \"kirigami-tutorial/\" i valfritt terminalprogram och "
+"köra följande kommandon:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:257
 msgid ""
@@ -9074,6 +9047,19 @@ msgstr ""
 "Teckenstorleken på [Kirigami Theme](docs:kirigami2;Kirigami::Platform::"
 "PlatformTheme)är tillgänglig som `Kirigami.Theme.defaultFont.pointSize` i "
 "ditt program."
+
+#~| msgid ""
+#~| "If you wish to build Kirigami with Qt6, this is currently not possible "
+#~| "with only distribution packages on Linux. You will need to resort to "
+#~| "[kde-builder](#kde-builder) instead."
+#~ msgid ""
+#~ "If you wish to build Kirigami with Qt6, this is currently not possible "
+#~ "with only distribution packages on Linux. You will need to resort to "
+#~ "[kdesrc-build](#kdesrc-build) instead."
+#~ msgstr ""
+#~ "Om du vill bygga Kirigami med Qt6 är detta för närvarande inte möjligt "
+#~ "med endast distributionspaket på Linux. Du måste ta till [kdesrc-build]"
+#~ "(#kdesrc-build) istället."
 
 #~ msgid ""
 #~ "When building the application after installing dependencies with Craft, "
