@@ -23,7 +23,7 @@ it easily. Any other dependencies can be installed from Pip in a
 
 {{< installpackage
     opensuse="python3-qt6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style AppStream-compose"
-    fedora="python3-qt6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style appstream-compose"
+    fedora="python3-pyqt6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style appstream-compose"
     arch="python-pyqt6 kirigami flatpak-builder qqc2-desktop-style appstream"
 >}}
 
