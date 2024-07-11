@@ -47,7 +47,7 @@ Item {
 | `Plasmoid.availableScreenRect` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
 | `Plasmoid.availableScreenRegion` | `QVariantList` |  |
 | `Plasmoid.backgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma-framework;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). Turn off the desktop widget bg. |
-| `Plasmoid.busy` | `bool` | Draw the [`BusyIndicator`]({{ relref "plasma-qml-api#busyindicator" }}) overtop the widget. |
+| `Plasmoid.busy` | `bool` | Draw the [`BusyIndicator`]({{< ref "plasma-qml-api#busyindicator" >}}) overtop the widget. |
 | `Plasmoid.compactRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](#plasmoidcompactrepresentation). The smaller "icon" view view of the widget shown in the panel. |
 | `Plasmoid.compactRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) | The instance of the `compactRepresentation` Component. May be `null` on load if not visible. |
 | `Plasmoid.configuration` | [`KDeclarative::ConfigPropertyMap`](docs:kdeclarative;KDeclarative::ConfigPropertyMap) | [Documentation](#plasmoidconfiguration). Provides access to all user configurable values as sub-properties. |
