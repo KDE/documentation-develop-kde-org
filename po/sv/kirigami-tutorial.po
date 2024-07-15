@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-06 01:42+0000\n"
-"PO-Revision-Date: 2024-07-13 18:47+0200\n"
+"PO-Revision-Date: 2024-07-14 11:05+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -6169,7 +6169,7 @@ msgstr ""
 "vi måste ta hänsyn till är [GlobalDrawer.actions](docs:kirigami2;"
 "GlobalDrawer::actions), som har formen av ett fält av [Kirigami.Action](docs:"
 "kirigami2;Action) komponenter. Åtgärden har en lämplig ikon och kör "
-"funktionen [Qt.quit()](docs:qtqml;QtQml.Qt::quit) när den utlöses, som "
+"funktionen [Qt.quit()](docs:qtqml;QtQml.Qt::quit) när den används, som "
 "stänger programmet."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:131
@@ -6354,34 +6354,38 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:35
 msgid "Textfields let you input text in a thin textbox"
-msgstr ""
+msgstr "Textfält låter dig mata in text i en smal textruta"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:38
 msgid "Provides a label attached to the textfield"
-msgstr ""
+msgstr "Tillhandahåller en beteckning kopplad till textfältet"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:40
 msgid ""
 "What to do after input is accepted (i.e. pressed Enter) In this case, it "
 "moves the focus to the next field"
 msgstr ""
+"Vad du ska göra efter att inmatning har accepterats (dvs. tryckt på "
+"returtangenten), i det här fallet flyttas fokus till nästa fält"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:48
 msgid "Again, it moves the focus to the next field"
-msgstr ""
+msgstr "Återigen flyttar det fokus till nästa fält"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:54
 msgid ""
 "D means a required number between 1-9, 9 means a required number between 0-9"
 msgstr ""
+"D betyder ett obligatoriskt värde mellan 1-9, 9 betyder ett obligatoriskt "
+"värde mellan 0-9"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:57
 msgid "Here we confirm the operation just like clicking the OK button"
-msgstr ""
+msgstr "Här bekräftar vi operationen precis som att klicka på knappen Ok"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:65
 msgid "The dialog logic goes here"
-msgstr ""
+msgstr "Dialogrutans logik ska finnas här"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:69
 msgid ""
@@ -6390,6 +6394,10 @@ msgid ""
 "qtquick-controls-dialog.html#footer-prop), both inherited from [Controls."
 "Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog)."
 msgstr ""
+"Dialogrutor har normalt en [header](https://doc.qt.io/qt-6/qml-qtquick-"
+"controls-dialog.html#header-prop) och en [footer](https://doc.qt .io/qt-6/"
+"qml-qtquick-controls-dialog.html#footer-prop), båda ärvda från [Controls."
+"Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:71
 msgid ""
@@ -6400,6 +6408,12 @@ msgid ""
 "[standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog."
 "html#standardButtons-prop)."
 msgstr ""
+"Header innehåller normalt en [title](https://doc.qt.io/qt-6/qml-qtquick-"
+"controls-dialog.html#title-prop) och en stängningsknapp som kan inaktiveras "
+"med [showCloseButton] (docs:kirigami2;Dialog::showCloseButton). Footer "
+"innehåller normalt en stängningsknapp, och den kan ignoreras med "
+"[standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog."
+"html#standardButtons-prop)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:73
 msgid ""
@@ -6409,6 +6423,12 @@ msgid ""
 "dialog, which can increase if needed. We can use standard [Kirigami.Units]"
 "(docs:kirigami2;Kirigami::Platform::Units) that we will revisit later on."
 msgstr ""
+"Vi ställde först in den för att visa knapparna \"Ok\" och \"Avbryt\", lade "
+"till lite utfyllnad och en rimlig [preferredWidth](docs:kirigami2;Dialog::"
+"preferredWidth). Den föredragna bredden är den förväntade standardstorleken "
+"på dialogrutan, som kan öka vid behov. Vi kan använda standard [Kirigami."
+"Units](docs:kirigami2;Kirigami::Platform::Units) som vi tittar vidare på "
+"igen senare."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:75
 msgid ""
@@ -6463,6 +6483,11 @@ msgid ""
 "labels for them. The form will present the correct labels to the left of "
 "each of these text input fields."
 msgstr ""
+"Inom vart och ett av elementen i [Controls.Textfield](docs:qtquickcontrols;"
+"QtQuick.Controls.TextField) anger vi in egenskapen ​​[Kirigami.FormData.label]"
+"(docs:kirigami2;FormLayoutAttached::label) som låter oss definiera "
+"beteckningar för dem. Formuläret visar rätt beteckning till vänster om vart "
+"och ett av textinmatningsfälten."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:87
 msgid ""
@@ -6473,6 +6498,12 @@ msgid ""
 "switch the active field once the user hits the ENTER key, improving the "
 "usability of the form."
 msgstr ""
+"Slutligen ställer vi också in egenskapen [onAccepted](https://doc.qt.io/qt-6/"
+"qml-qtquick-textinput.html#accepted-signal) för att använda metoden "
+"[forceActiveFocus()](https:/ /doc.qt.io/qt-6/qml-qtquick-item."
+"html#forceActiveFocus-method) för följande fält. Det byter det aktiva fältet "
+"när användaren trycker på returtangenten, vilket förbättrar formulärets "
+"användbarhet."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:89
 msgid ""
@@ -6495,10 +6526,12 @@ msgid ""
 "Once the user interface for the dialog is done, we need to change how it "
 "behaves. For this we need three things:"
 msgstr ""
+"När användargränssnittet för dialogrutan är klart måste vi ändra hur det "
+"beter sig. För att göra det behöver vi tre saker:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:93
 msgid "Show the Ok button only when the required fields are filled"
-msgstr ""
+msgstr "Visa bara knappen Ok när de obligatoriska fälten är ifyllda"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:94
 msgid "Add the input information to the model"
@@ -6506,7 +6539,7 @@ msgstr "Lägga till den inmatade informationen i modellen"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:95
 msgid "Clear the input form"
-msgstr ""
+msgstr "Rensa inmatningsformuläret"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:98
 msgid ""
@@ -6514,16 +6547,21 @@ msgid ""
 "to only make the Ok button visible if the required text fields are filled. "
 "For this we use Kirigami.Dialog.standardButton(button):"
 msgstr ""
+"När Kirigami.Dialog har initierats vill vi skapa en egen bindning för att "
+"endast göra Ok-knappen synlig om de obligatoriska textfälten är ifyllda. För "
+"att göra det använder vi Kirigami.Dialog.standardButton(button):"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:105
 msgid "() => is a JavaScript arrow function"
-msgstr ""
+msgstr "() => är en pilfunktion i Javascript"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:109
 msgid ""
 "The binding is created, but we still need to make it unclickable unless the "
 "fields are filled"
 msgstr ""
+"Bindningen är skapad, men vi måste fortfarande göra den oklickbar om fälten "
+"inte är ifyllda"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:117
 msgid ""
@@ -6534,12 +6572,20 @@ msgid ""
 "qt-6/qtqml-syntax-propertybinding.html#creating-property-bindings-from-"
 "javascript) in JavaScript. In effect, the line:"
 msgstr ""
+"Det första som behöver göras är att skapa en bindning mellan Ok-knappens "
+"egenskap [enabled](https://doc.qt.io/qt-6/qml-qtquick-controls-popup."
+"html#enabled-prop) och en kontroll av om fälten är ifyllda, vilket i detta "
+"fall måste göras med [Qt.binding()](https://doc.qt.io/qt-6/qtqml-syntax-"
+"propertybinding.html#creating- egenskapsbindningar-från-javascript) i "
+"JavaScript. I själva verket är raden:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:123
 msgid ""
 "is similar to the QML bindings we have seen so far, like in the following "
 "pseudo-code:"
 msgstr ""
+"som liknar de QML-bindningar vi har sett hittills, liksom i följande "
+"pseudokod:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:129
 msgid ""
@@ -6549,12 +6595,18 @@ msgid ""
 "otherwise, it will add the input to the model and clear the dialog for the "
 "next time it is opened."
 msgstr ""
+"Signalhanteraren som aktiverar Ok-knappen är [onAccepted](https://doc.qt.io/"
+"qt-6/qml-qtquick-controls-dialog.html#accepted-signal). Den förblir tom och "
+"utan att göra någonting om de obligatoriska fälten är ifyllda. Annars lägger "
+"den till indata i modellen och rensar dialogrutan till nästa gång den öppnas."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:132
 msgid ""
 "We check that the nameField is not empty and that the dateField (which has "
 "an inputMask) is completely filled"
 msgstr ""
+"Vi kontrollerar att namnfältet inte är tomt och att datumfältet (som har en "
+"inputMask) är helt ifyllt"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:152
 msgid ""
@@ -6564,6 +6616,11 @@ msgid ""
 "textinput.html#acceptableInput-prop) instead, which only becomes true once "
 "the whole field is filled and contains only acceptable characters."
 msgstr ""
+"För vårt obligatoriska namnfält är allt vi behöver göra att kontrollera om "
+"fälttexten är en tom sträng. För datumfältet, eftersom det har en "
+"inmatningsmask, behöver vi istället använda [acceptableInput](https://doc.qt."
+"io/qt-6/qml-qtquick-textinput.html#acceptableInput-prop), vilket endast är "
+"sant när hela fältet är ifyllt och endast innehåller acceptabla tecken."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:154
 msgid ""
@@ -6597,6 +6654,9 @@ msgid ""
 "Action](docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
 "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgstr ""
+"Att lägga till knappen för att öppna dialogrutan är mycket enklare: bara en "
+"[Kirigami.Action](docs:kirigami2;Action) som aktiverar dialogens funktion "
+"[open()](docs:qtquickcontrols;QtQuick.Controls.Popup::open)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:173
 msgid ""
@@ -6604,10 +6664,14 @@ msgid ""
 "custom countdowns! We can make one last touch to improve the interface, "
 "namely remove the dummy countdown we had in the previous lessons:"
 msgstr ""
+"När vi har sparat våra filer och byggt vårt program kommer vi att kunna "
+"lägga till våra egna anpassade nedräkningar! Vi kan göra en sista touch för "
+"att förbättra gränssnittet, nämligen ta bort exempelnedräkningen vi hade i "
+"de tidigare lektionerna:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:177
 msgid "Much nicer."
-msgstr ""
+msgstr "Mycket trevligare."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:188
 msgid ""
@@ -6677,6 +6741,9 @@ msgid ""
 "build](#kdesrc-build) instead, especially for Linux installations using "
 "Plasma 5."
 msgstr ""
+"Om du vill bygga Kirigami med Qt6, rekommenderas att använda [kdesrc-build]"
+"(#kdesrc-build) istället, speciellt för Linux-installationer som använder "
+"Plasma 5."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
 msgid "Building Kirigami with kdesrc-build"
@@ -6788,6 +6855,11 @@ msgid ""
 "customize the `source-dir` or `dest-dir` for the module. We will assume the "
 "path to your `main.cpp` will be `~/kde/src/kirigami-tutorial/src/main.cpp`."
 msgstr ""
+"Om projektet ska byggas automatiskt med kde-builder/kdesrc-build, bör det "
+"egna modulnamnet vara detsamma som projektets rotkatalog (i vårt fall är det "
+"\"kirigami-tutorial\"), annars skulle man behöva ange \"source-dir\" eller "
+"\"dest-dir\" för modulen. Vi antar att sökvägen till `main.cpp` är `~/kde/"
+"src/kirigami-tutorial/src/main.cpp`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:95
 msgid "Main.qml"
@@ -6978,7 +7050,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:134
 msgid "org.kde.tutorial.desktop"
-msgstr ""
+msgstr "org.kde.tutorial.desktop"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:136
 msgid ""
@@ -6988,6 +7060,11 @@ msgid ""
 "icons on Wayland, as they are required to tell the compositor \"this window "
 "goes with this icon\"."
 msgstr ""
+"Det primära syftet med [Desktop Entry-filer](https://specifications."
+"freedesktop.org/desktop-entry-spec/latest/) är att visa programmet i "
+"programstart på Linux. En annan anledning att ha dem är att ha fönsterikoner "
+"på Wayland, eftersom de måste tala om för sammansättningen att \"det här "
+"fönstret hör ihop med den här ikonen\"."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:138
 msgid ""
@@ -6995,6 +7072,9 @@ msgid ""
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
 "`org.kde.tutorial.desktop`:"
 msgstr ""
+"Det måste följa ett [omvänt domännamnsschema](https://en.wikipedia.org/wiki/"
+"Reverse_domain_name_notation) följt av tillägget `.desktop` såsom `org.kde."
+"tutorial.desktop`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:142
 msgid "CMakeLists.txt"
@@ -7053,35 +7133,37 @@ msgstr ""
 msgid ""
 "The line with `install()` tells CMake where to install the desktop file."
 msgstr ""
+"Raden med `install()` talar om för CMake var skrivbordsfilen ska installeras."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:156
 msgid ""
 "Let's delve into the `kirigami-tutorial/src/CMakeLists.txt` file in there."
 msgstr ""
+"Låt oss fördjupa oss i filen `kirigami-tutorial/src/CMakeLists.txt` där."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:160
 msgid "This file consists of five steps:"
-msgstr ""
+msgstr "Filen består av fem steg:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:162
 msgid "create an executable"
-msgstr ""
+msgstr "skapa en körbar fil"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:163
 msgid "change the executable into a QML module that accepts QML files"
-msgstr ""
+msgstr "ändra den körbara filen till en QML-modul som accepterar QML-filer"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:164
 msgid "add C++ and QML files to the executable"
-msgstr ""
+msgstr "lägg till C++ och QML-filer i den körbara filen"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:165
 msgid "link the libraries necessary for the executable to run"
-msgstr ""
+msgstr "länka biblioteken som krävs för att körbara filen ska köras"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:166
 msgid "install the executable to the right place"
-msgstr ""
+msgstr "installera den körbara filen på rätt plats"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:168
 msgid ""
@@ -7090,6 +7172,11 @@ msgid ""
 "(https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html) keyword which "
 "we will see later in the tutorial can be added using `target_sources()`."
 msgstr ""
+"Nästa gång fler QML-filer behöver läggas till, gör det i det befintliga "
+"anropet `ecm_target_qml_sources()`. C++ filer som använder nyckelordet "
+"[QML_ELEMENT](https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html), "
+"som vi kommer att se senare i handledningen, kan läggas till med "
+"`target_sources()`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:170
 msgid ""
@@ -7147,6 +7234,9 @@ msgid ""
 "style to Breeze in order to show up on Windows. To learn more about it, see "
 "[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp/)."
 msgstr ""
+"Programmet måste ställa in sitt ikontema, QStyle och QtQuick Controls-stil i "
+"Breeze för att visas på Windows. För att lära dig mer om det, se [Förstå sig "
+"på main.cpp](/docs/getting-started/kirigami/advanced-maincpp/)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:193
 msgid ""
@@ -7163,10 +7253,14 @@ msgid ""
 "metadata, be sure to check our [KXmlGui tutorial](/docs/getting-started/"
 "kxmlgui)."
 msgstr ""
+"Om du vill se några sätt C++ koden kan förbättras, som att använda "
+"[KAboutData](docs:kcoreaddons;KAboutData) för översättbar metadata i "
+"programmet, se till att ta en titt på vår [KXmlGui handledning](/docs/"
+"getting-started) /kxmlgui)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:197
 msgid "For now, the part that interests us is this line:"
-msgstr ""
+msgstr "För tillfället är den del som intresserar oss den här raden:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:203
 msgid ""
@@ -7175,10 +7269,14 @@ msgid ""
 "(`Main`, coming from the name of our `Main.qml` file, which needs to start "
 "with an uppercase letter)."
 msgstr ""
+"Det första argumentet är URI angiven i `kirigami-tutorial/src/CMakeLists."
+"txt`, och det andra argumentet är namnet på QML-modulen vi vill använda "
+"(`Main`, kommer från namnet på vår `Main.qml `-fil, som måste börja med en "
+"stor bokstav)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:205
 msgid "The old method"
-msgstr ""
+msgstr "Den gamla metoden"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:207
 msgid ""
@@ -7187,12 +7285,18 @@ msgid ""
 "code!</summary>\n"
 "<br>\n"
 msgstr ""
+"<details>\n"
+"<summary>Du kan stöta på det här alternativa sättet att ladda QML-filer i "
+"riktig kod!</summary>\n"
+"<br>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:211
 msgid ""
 "The old method of loading QML files had some disadvantages and after Qt6 it "
 "became excessively verbose:"
 msgstr ""
+"Den gamla metoden att ladda QML-filer hade några nackdelar och efter Qt6 "
+"blev den överdrivet omfattande:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:217
 msgid ""
@@ -7200,6 +7304,8 @@ msgid ""
 "the pattern `<resource_prefix><import_URI><optional_QML_dir><file>`. In this "
 "case:"
 msgstr ""
+"Ovanstående [Qt resurs-URI](https://doc.qt.io/qt-6/resources.html) följer "
+"mönstret `<resurs_prefix><import_URI><valfri_QML_kaalog><fil>`. I vårt fall:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:219
 msgid "resource prefix = default / in Qt5, /qt/qml in Qt6"
@@ -7208,12 +7314,15 @@ msgstr "resource prefix = default / i Qt5, /qt/qml i Qt6"
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:220
 msgid "import URI = /org/kde/tutorial, which matches the URI org.kde.tutorial"
 msgstr ""
+"import URI = /org/kde/tutorial, som motsvarar webbadressen org.kde.tutorial"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:221
 msgid ""
 "optional QML dir = /qml, necessary if the QML files are stored in a "
 "directory called qml/"
 msgstr ""
+"optional QML dir = /qml, nödvändigt om QML-filerna lagras i en katalog som "
+"heter qml/"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:222
 msgid "file = the QML file"
@@ -7241,6 +7350,8 @@ msgid ""
 "project, you need to specify a custom module in your `~/.config/kdesrc-"
 "buildrc`:"
 msgstr ""
+"Om du vill att kdesrc-build ska hantera att bygga och installera projektet, "
+"måste du specificera en egen modul i `~/.config/kdesrc-buildrc`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:243
 msgid "Then you can build and install it with the command:"
@@ -7276,6 +7387,8 @@ msgid ""
 "If you are compiling your project on Windows after having set up [Craft]"
 "(#craft), CMake should automatically detect the right compiler:"
 msgstr ""
+"Om du kompilerar projektet på Windows efter att ha ställt in [Craft]"
+"(#craft), ska CMake automatiskt upptäcka rätt kompilator:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:270
 msgid ""
@@ -7292,10 +7405,12 @@ msgid ""
 "If Visual Studio, depending on the compiler you chose to install, it might "
 "be:"
 msgstr ""
+"Om Visual Studio, beroende på kompilatorn du valde att installera, kan det "
+"vara:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
 msgid "Or:"
-msgstr ""
+msgstr "Eller:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:284
 msgid "If MinGW:"
@@ -7310,10 +7425,12 @@ msgid ""
 "If you ever get in doubt as to the name of the compiler that should be used "
 "in the `cmake` call, run:"
 msgstr ""
+"Om du någon gång tvivlar på namnet på kompilatorn som ska användas i 'cme-"
+"anropet', kör:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:300
 msgid "It will list all available generators."
-msgstr ""
+msgstr "Det listar alla tillgängliga generatorer."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:304
 msgid "You can then run the `kirigami-hello` program with:"
@@ -7325,7 +7442,7 @@ msgstr "På Linux, manuellt"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:308
 msgid "On Linux, with kde-builder"
-msgstr ""
+msgstr "På Linux, med kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:309
 msgid "On Linux, with kdesrc-build"
@@ -7351,12 +7468,16 @@ msgid ""
 "To run the new QML application in mobile mode, you can use "
 "`QT_QUICK_CONTROLS_MOBILE=1`:"
 msgstr ""
+"För att köra den nya QML-applikationen i mobilläge kan man använda "
+"`QT_QUICK_CONTROLS_MOBILE=1`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:323
 msgid ""
 "If you have compiled the project manually with CMake and for some reason "
 "you'd like to uninstall the project, you can run:"
 msgstr ""
+"Om du har kompilerat projektet manuellt med CMake och av någon anledning "
+"vill avinstallera projektet kan du köra:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:331
 msgid ""
@@ -7414,7 +7535,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:13
 msgid "By the end of this section you'll have a neat-looking app."
-msgstr ""
+msgstr "I slutet av det här avsnittet har du ett snyggt program."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:15
 msgid "ListViews"
@@ -7862,7 +7983,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:239
 msgid "How the custom Card looks like"
-msgstr ""
+msgstr "Hur ett eget Card ser ut"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:241
 msgid ""
@@ -8544,12 +8665,17 @@ msgid ""
 "These tutorials will focus on creating an application that lets the user see "
 "how many days are left until an event of their choice."
 msgstr ""
+"De här handledningarna fokuserar på att skapa ett program som låter "
+"användaren se hur många dagar som är kvar till en valfri händelse."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:15
 msgid ""
 "We also recommend you check out the [Kirigami Gallery](https://apps.kde.org/"
 "en/kirigami2.gallery), which provides a number of useful UI examples."
 msgstr ""
+"Vi rekommenderar också att du tittar på [Kirigami-galleriet](https://apps."
+"kde.org/en/kirigami2.gallery), som ger ett antal användbara exempel på "
+"användargränssnitt."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:17
 msgid ""
@@ -8612,6 +8738,9 @@ msgid ""
 "When looking through QML API documentation, make sure to look into the "
 "functions and properties inherited by the API you are looking at as well."
 msgstr ""
+"När du tittar igenom QML-programmeringsgränssnittets dokumentation, se till "
+"att också titta på funktionerna och egenskaperna som ärvs av "
+"programmeringsgränssnittet du tittar på."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:41
 msgid ""
@@ -8706,7 +8835,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:11
 msgid "Why and how"
-msgstr ""
+msgstr "Varför och hur"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:13
 msgid ""
@@ -8723,6 +8852,8 @@ msgid ""
 "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
 "qml`, `AddEditDialog.qml` and `KountdownDelegate.qml`."
 msgstr ""
+"I den här handledningen delar vi upp koden i `Main.qml` i `Main.qml`, "
+"`AddEditDialog.qml` och `KountdownDelegate.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:17
 msgid ""
@@ -8732,18 +8863,22 @@ msgid ""
 "will take a brief look at three common approaches seen in real projects, and "
 "implement one of them:"
 msgstr ""
+"Dessutom, även när kod sprids mellan flera QML-filer, kan antalet filer i "
+"verkliga projekt gå överstyr. En vanlig lösning på problemet är att separera "
+"filer logiskt i olika kataloger. Vi tar en snabb titt på tre vanliga "
+"tillvägagångssätt i verkliga projekt och implementera ett av dem:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:19
 msgid "storing QML files together with C++ files"
-msgstr ""
+msgstr "lagra QML-filer tillsammans med C++ filer"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:20
 msgid "storing QML files in a different directory under the same module"
-msgstr ""
+msgstr "lagra QML-filer i en annan katalog under samma modul"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:21
 msgid "storing QML files in a different directory under a different module"
-msgstr ""
+msgstr "lagra QML-filer i en annan katalog under en annan modul"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:23
 msgid ""
@@ -8752,16 +8887,22 @@ msgid ""
 "details will be abstracted](https://en.wikipedia.org/wiki/"
 "Abstraction_(computer_science)), making the code more readable."
 msgstr ""
+"Efter uppdelningen har vi [inkapsling](https://sv.wikipedia.org/wiki/"
+"Inkapsling_(Separation_of_Concerns)) mellan varje fil, och "
+"[implementeringsdetaljer blir abstraherade](https://en.wikipedia.org/wiki/"
+"Abstraction_(computer_science)), vilket gör koden mer läsbar."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:25
 msgid "Storing QML files together with C++ files"
-msgstr ""
+msgstr "Lagra QML-filer tillsammans med C++ filer"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:27
 msgid ""
 "This consists of keeping the project's QML files together with C++ files in "
 "`src/`. This sort of structure would look like this:"
 msgstr ""
+"Det består av att låta projektets QML-filer vara tillsammans med C++-filer i "
+"`src/`. Den här typen av struktur skulle se ut så här:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:41
 msgid ""
@@ -8771,16 +8912,23 @@ msgid ""
 "than a couple of QML files (and C++ files that create types to be used in "
 "QML), the folder can quickly become crowded."
 msgstr ""
+"Det är vad vi gjorde tidigare. I ovanstående fall skulle man bara behöva "
+"fortsätta lägga till QML-filer i den befintliga `kirigami-tutorial/src/"
+"CMakeLists.txt`. Det finns ingen logisk separation alls, och när projektet "
+"väl får fler än ett par QML-filer (och C++-filer som skapar typer som ska "
+"användas i QML), kan katalogen snabbt bli full."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:43
 msgid "Storing QML files in a different directory under the same module"
-msgstr ""
+msgstr "Lagra QML-filer i en annan katalog under samma modul"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:45
 msgid ""
 "This consists of keeping all QML files in a separate folder, usually `src/"
 "qml/`. This sort of structure would look like this:"
 msgstr ""
+"Det består av att hålla alla QML-filer i en separat katalog, vanligtvis `src/"
+"qml/`. Den här typen av struktur skulle se ut så här:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:60
 msgid ""
@@ -8791,6 +8939,11 @@ msgid ""
 "CMakeLists.txt`. All created QML files would then belong to the same QML "
 "module as `Main.qml`."
 msgstr ""
+"Strukturen är mycket vanlig i KDE-projekt, mest för att undvika att ha en "
+"extra CMakeLists.txt-fil för katalogen `src/qml/` och skapa en separat "
+"modul. Metoden har själva filerna i en separat katalog, men man måste också "
+"lägga till dem i `kirigami-tutorial/src/CMakeLists.txt`. Alla skapade QML-"
+"filer tillhör då samma QML-modul som `Main.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:62
 msgid ""
@@ -8799,6 +8952,10 @@ msgid ""
 "file. It will become difficult to differentiate between traditional C++ "
 "files and C++ files that have types exposed to QML."
 msgstr ""
+"I praktiken, när projektet väl får mer än ett dussintal QML-filer, även om "
+"det inte skapar trängsel i katalogen `src/`, leder det till trängsel i filen "
+"`src/CMakeLists.txt`. Det blir svårt att skilja mellan traditionella C++ "
+"filer och C++ filer som har typer exponerade för QML."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:64
 msgid ""
@@ -8806,10 +8963,13 @@ msgid ""
 "details), where you would keep the description of your dependencies in the "
 "same place as the dependencies themselves."
 msgstr ""
+"Det bryter också mot begreppet lokalitet (lokalisering av beroendedetaljer), "
+"där man håller beskrivningen av beroenden på samma plats som beroendena "
+"själva."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:66
 msgid "Storing QML files in a different directory under a different module"
-msgstr ""
+msgstr "Lagra QML-filer i en annan katalog under en annan modul"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:68
 msgid ""
@@ -8817,6 +8977,9 @@ msgid ""
 "CMakeLists.txt and own separate QML module. This sort of structure would "
 "look like this:"
 msgstr ""
+"Det består av att hålla alla QML-filer i en separat katalog med sin egen "
+"CMakeLists.txt och en egen separat QML-modul. Den här typen av struktur "
+"skulle se ut så här:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:84
 msgid ""
@@ -8828,6 +8991,13 @@ msgid ""
 "itself stays in `src/` so it's automatically used when running the "
 "executable, as before."
 msgstr ""
+"Strukturen är inte lika vanlig i KDE-projekt och kräver att man skriver "
+"ytterligare en CMakeLists.txt, men den är den mest flexibla. I vårt fall "
+"kallar vi vår katalog \"components\" eftersom vi skapar två nya QML-"
+"komponenter från vår tidigare `Main.qml`, och behåller information om dem i "
+"`kirigami-tutorial/src/components/CMakeLists.txt`. Själva filen `Main.qml` "
+"förblir i `src/` så den används automatiskt när den körbara filen körs, som "
+"tidigare."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:86
 msgid ""
@@ -8836,20 +9006,26 @@ msgid ""
 "\", and C++ files that have types exposed to QML (like models) could be kept "
 "together with other QML files where it makes sense."
 msgstr ""
+"Senare vore det möjligt att skapa fler kataloger med flera QML-filer, alla "
+"grupperade enligt funktion, såsom \"modeller\" och \"inställningar\", och C+"
+"+ filer som har typer exponerade i QML (som modeller) skulle kunna vara "
+"tillsammans med andra QML-filer när det är vettigt."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:88
 msgid "We will be using this structure in this tutorial."
-msgstr ""
+msgstr "Vi använder den här strukturen i handledningen."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:90
 msgid "Preparing CMake for the new files"
-msgstr ""
+msgstr "Förbereda CMake för de nya filerna"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:92
 msgid ""
 "First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` "
 "with the following contents:"
 msgstr ""
+"Skapa först filen `kirigami-tutorial/src/components/CMakeLists.txt` med "
+"följande innehåll:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:98
 msgid ""
@@ -8860,6 +9036,13 @@ msgid ""
 "[ecm_finalize_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule."
 "html). We then install it exactly like in previous lessons."
 msgstr ""
+"Eftersom målet skiljer sig från den körbara filen fungerar det som en annan "
+"QML-modul, vilket leder till att vi måste göra två saker: få det att "
+"*generera* kod för att det ska fungera som ett Qt-insticksprogram med "
+"[GENERATE_PLUGIN_SOURCE](https: //api.kde.org/ecm/module/ECMQmlModule.html), "
+"och *slutföra* det med [ecm_finalize_qml_module()](https://api.kde.org/ecm/"
+"module/ECMQmlModule.html). Vi installerar det sedan precis som i tidigare "
+"lektioner."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:100
 msgid ""
@@ -8869,6 +9052,11 @@ msgid ""
 "latest/command/target_link_libraries.html) call in `kirigami-tutorial/src/"
 "CMakeLists.txt`:"
 msgstr ""
+"Vi behövde använda [add_library()](https://cmake.org/cmake/help/latest/"
+"command/add_library.html) så att vi kan länka `kirigami-hello-components` "
+"till den körbara filen med anropet [target_link_libraries( )](https://cmake."
+"org/cmake/help/latest/command/target_link_libraries.html) i `kirigami-"
+"tutorial/src/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:104
 msgid ""
@@ -8876,6 +9064,9 @@ msgid ""
 "command/add_subdirectory.html) so CMake will find the `kirigami-tutorial/src/"
 "components/` directory."
 msgstr ""
+"Vi behöver också använda [add_subdirectory()](https://cmake.org/cmake/help/"
+"latest/command/add_subdirectory.html) så CMake hittar katalogen `kirigami-"
+"tutorial/src/components/`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:106
 msgid ""
@@ -8886,6 +9077,12 @@ msgid ""
 "tutorial/src/Main.qml` is necessary, the same one defined earlier, `org.kde."
 "tutorial.components`:"
 msgstr ""
+"I de tidigare lektionerna behövde vi inte lägga till import av `org.kde."
+"tutorial` i vår `Main.qml`, beroende på att det inte behövdes. Eftersom det "
+"är programmets startpunkten startades den körbara filen omedelbart ändå. Nu "
+"när våra komponenter finns i en separat QML-modul, blir en ny import "
+"nödvändig i `kirigami-tutorial/src/Main.qml`, likadan som definierats "
+"tidigare, `org.kde.tutorial.components`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:115
 msgid "The rest of the code..."
@@ -8901,7 +9098,7 @@ msgstr "Dela Main.qml"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:122
 msgid "Let's take a look once again at the original `Main.qml`:"
-msgstr ""
+msgstr "Låt oss återigen ta en titt på den  ursprungliga `Main.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:126
 msgid ""
@@ -8910,6 +9107,10 @@ msgid ""
 "Component). We use a Component to be able to define it without needing to "
 "instantiate it; separate QML files work the same way."
 msgstr ""
+"Den anpassade delegaten med `id: kountdownDelegate` kan delas helt eftersom "
+"den redan är inkapslad i en [QML Component typ](docs:qtqml;QtQml.Component). "
+"Vi använder en komponent för att kunna definiera den utan att behöva "
+"instansiera den. Separata QML-filer fungerar på samma sätt."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:128
 msgid ""
@@ -8918,6 +9119,10 @@ msgid ""
 "(docs:kirigami2;AbstractCard) in the separate file. Here is the resulting "
 "`KountdownDelegate.qml`:"
 msgstr ""
+"Om vi ​​flyttar koden till en separat fil, är det ingen mening att lämna den "
+"inkapslad i en komponent: vi kan bara dela upp [Kirigami.AbstractCard](docs:"
+"kirigami2;AbstractCard) i den separata filen. Här är den resulterande "
+"`KountdownDelegate.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:132
 msgid ""
@@ -8925,10 +9130,13 @@ msgid ""
 "not a component that is visible by default, so the code can be copied as is "
 "into the `AddEditDialog.qml`:"
 msgstr ""
+"Vår dialogruta med `id: addDialog` är inte inkapslad i en komponent, och det "
+"är inte en komponent som är normalt synlig, så koden kan kopieras som den är "
+"till `AddEditDialog.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:136
 msgid "With the code split, `Main.qml` thus becomes much shorter:"
-msgstr ""
+msgstr "Med den delade koden blir `Main.qml` således mycket kortare:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:140
 msgid ""
@@ -8937,6 +9145,9 @@ msgid ""
 "qml`. The way to add the contents of the new files to `Main.qml` is by "
 "*instantiating* them."
 msgstr ""
+"Vi har nu två extra QML-filer, `AddEditDialog.qml` och `KountdownDelegate`, "
+"och vi måste hitta något sätt att använda dem i `Main.qml`. Sättet att lägga "
+"till innehållet i de nya filerna i `Main.qml` är genom att *instansiera* dem."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:142
 msgid "`AddEditDialog.qml` becomes `AddEditDialog {}`:"
@@ -8952,6 +9163,9 @@ msgid ""
 "by brackets were instantiations of a QML component. This is why our new QML "
 "files need to start with an uppercase letter."
 msgstr ""
+"De flesta fall du har sett av en komponent som inleds med stor bokstav och "
+"följs av parenteser var instansieringar av en QML-komponent. Det är därför "
+"våra nya QML-filer måste börja med en stor bokstav."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:152
 msgid ""
@@ -8959,6 +9173,9 @@ msgid ""
 "behaves exactly the same as before, but with the code split into separate "
 "parts, making things much more manageable."
 msgstr ""
+"Kompilera projektet och kör det, så bör ett funktionellt fönster som beter "
+"sig exakt som tidigare visas, men med koden uppdelad i separata delar, "
+"vilket gör saker och ting mycket mer hanterbara."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"
@@ -9199,6 +9416,9 @@ msgid ""
 "NOTE: regardless of the color set used, it is recommended to replace all "
 "available colors in Theme, to avoid badly contrasting colors"
 msgstr ""
+"Observera: Oavsett vilken färguppsättning som används rekommenderas att "
+"ersätta alla tillgängliga färger i Theme, för att undvika färger med dåligt "
+"kontrast"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:135
 msgid "Redefine all the other colors you want"
@@ -9227,6 +9447,10 @@ msgid ""
 "use a [Kirigami Addons FormCard](/docs/getting-started/kirigami/addons-"
 "introduction)."
 msgstr ""
+"I demonstrationssyfte använder handledningen AbstractCard för att göra "
+"textexemplen tydligare. Ett bättre sätt att uppnå samma resultat skulle vara "
+"att använda [Kirigami Addons FormCard](/docs/getting-started/kirigami/addons-"
+"introduction)."
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:16
 msgid "Headings"
