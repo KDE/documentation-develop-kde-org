@@ -45,7 +45,7 @@ layout: framework
             Android ready.
           </dt>
           <!-- space -->
-          <dd class="d-inline">Yes, Kirigami officially supports Android! KDE provides multiple applications on <a href="community.kde.org/Android/FDroid">F-Droid</a> and the <a href="https://play.google.com/store/apps/dev?id=4758894585905287660">Play Store</a>. See our <a href="/docs/build/android/">documentation</a> for more information.</dd>
+          <dd class="d-inline">Yes, Kirigami officially supports Android! KDE provides multiple applications on <a href="https://community.kde.org/Android/FDroid">F-Droid</a> and the <a href="https://play.google.com/store/apps/dev?id=4758894585905287660">Play Store</a>. See our <a href="/docs/build/android/">documentation</a> for more information.</dd>
         </div>
         <div class="position-relative pl-5">
           <dt class="d-inline font-semibold text-gray-900">
