@@ -27,7 +27,7 @@ You can find the installation commands for some distributions below.
 ## Step 00 - Getting Started {#getting-started}
 ---
 
-In this tutorial we will guide you on how to create your very own custom mouse cursor. 
+In this tutorial, we will guide you on how to create your very own custom mouse cursor. 
 
 This guide is compatible with [X11](https://en.wikipedia.org/wiki/X_Window_System) and 
 [Wayland](https://en.wikipedia.org/wiki/Wayland_(protocol)), meaning that it's not mandatory to be using KDE, as long 
@@ -36,7 +36,7 @@ as your machine runs either of them.
 Before continuing, make sure you have all the [requirements]({{< ref "#requirements" >}}) on your machine.
 
 You can check if the required packages are installed by using the `which` command.
-For this tutorial, you can check with the following command: `which xcursorgen` .
+For this tutorial, you can check with the following command: `which xcursorgen`.
 
 If the output says `xcursorgen not found`, then you don't have it installed on your machine,
 and you should follow the installation steps for your distribution.
@@ -56,7 +56,7 @@ Preferably, they should be at least 16x16 pixels in size, but you can also creat
 and bundle those into one cursor file.
 
 Make sure to keep the **transparency layer (alpha information)** on your file when saving,
-otherwise your cursor will have a square background.
+or else your cursor will have a square background.
 
 {{< alert title="Image Size Note" color="info">}}
 
@@ -83,7 +83,7 @@ The structure should follow this pattern: `filename.png`. The `.png` is the exte
 `filename` is the name you choose for your file.
 
 For the sake of simplicity, let's proceed with the name `default` as this will represent the default
-cursor.  After you saved your file, you should have something like `default.png`.
+cursor. After you save your file, you should have something like `default.png`.
 
 {{< alert title="Note" color="info" >}}
 
@@ -100,7 +100,7 @@ This will make things much easier later on, when we get to the symlinking step.
 
 You might be asking yourself: *What is the hotspot?*
 
-The hotspot of a cursor is the point where the click occurs. It's the position on your image where
+The hotspot of a cursor is the point where the click occurs. It's the position on your image that
 the system will interpret and understand as the position of the cursor.
 
 To determine the pixel where the hotspot should sit, it's necessary to use graphic editing 
@@ -108,11 +108,11 @@ software capable of determining the exact pixel for the hotspot. KDE's own
 [Krita](https://krita.org) is well suited for this task but, of course, other software works
 just as well.
 
-The origin point (0,0) it's in the **upper-left corner** of the image. The X axis goes from left to right.
-The Y axis goes from top to bottom.
+The origin point (0,0) it's in the **upper-left corner** of the image. The X-axis goes from left to right.
+The Y-axis goes from top to bottom.
 
-With that in mind, when you add an offset of 10 pixels on the X axis, it will shift the hotspot 
-10 pixels to the right from the upper-left corner. Likewise, an offset of 5 pixels on the Y axis
+With that in mind, when you add an offset of 10 pixels on the X-axis, it will shift the hotspot 
+10 pixels to the right from the upper-left corner. Likewise, an offset of 5 pixels on the Y-axis
 will shift the hotspot 5 pixels down from the upper-left corner.
 
 {{< alert title="Important!" color="warning">}}
@@ -142,7 +142,7 @@ The `.cursor` file is structured as follows: `(resolution) (hotspot-x) (hotspot-
 
 
 There are a couple of ways to create your `.cursor` file. Mainly, any program that allows you to save
-your file with a custom extension should do. For the sake of simplicity, in this example we are going
+your file with a custom extension should do. For the sake of simplicity, in this example, we are going
 to use the [`echo`](https://en.wikipedia.org/wiki/Echo_(command)) command on a terminal.
 
 Let's check an example:
@@ -152,11 +152,11 @@ Let's check an example:
 ```
 When you execute the above command, it will create a `default.cursor` file with the content `32 10 5 default.png`
 in the [working directory](https://en.wikipedia.org/wiki/Working_directory).
-Let's look at it in detail, accordingly to the `.cursor` file structure.
+Let's look at it in detail, according to the `.cursor` file structure.
 
 - *32* is for the **resolution**, so this represents a 32x32 pixels file.
-- *10* is for the **hotspot-x** coordinate, so this represents an offset of 10 pixels in the X axis.
-- *5* is for the **hotspot-y** coordinate, so this represents an offset of 5 pixels in the Y axis.
+- *10* is for the **hotspot-x** coordinate, so this represents an offset of 10 pixels in the X-axis.
+- *5* is for the **hotspot-y** coordinate, so this represents an offset of 5 pixels in the Y-axis.
 - *filename* is for the corresponding **image filename**, including its extension, for this cursor. So in this case, 
 it will be using the `default.png` file. 
 - *>* is for the echo command to dump the result into the following destination.
@@ -189,7 +189,7 @@ each of them in a separate line.
 ## Step 04 - Using xcursorgen {#using-xcursorgen}
 ---
 
-In this step we will use the `xcursorgen` command to generate the cursor for your system.
+In this step, we will use the `xcursorgen` command to generate the cursor for your system.
 
 If you haven't already, open a terminal and navigate to the directory where your cursor image files are stored.
 
@@ -217,8 +217,8 @@ Repeat steps 01 to 04 for all the different cursors you want to create.
 ## Step 05 - Creating a theme folder {#creating-a-theme-folder}
 ---
 
-In order to be able to use your custom cursors, you need to structure your files properly to make then
-available to you at your system settings.
+To be able to use your custom cursors, you need to structure your files properly to make them
+available to you in your system settings.
 
 Let's create a folder with your cursor pack name to put your cursors inside it before moving to the
 proper location. In this tutorial, we will call our cursor pack `KoolKursors`. 
@@ -231,7 +231,7 @@ mkdir KoolKursors
 ```
 
 This will create a new folder called `KoolKursors` in your working directory.
-Once you have done that, change your working directory to the folder your just created.
+Once you have done that, change your working directory to the folder you just created.
 You can do that with the following command:
 
 ```shell
@@ -246,17 +246,17 @@ You can do that with the following command:
 mkdir cursors
 ```
 
-The purporse of the `cursors` folder is to hold all the cursors files and the symlinks necessary for it to work.
-Don't worry about the symlinks now, we will teach you how to create then at the next step.
+The purpose of the `cursors` folder is to hold all the cursors files and the symlinks necessary for it to work.
+Don't worry about the symlinks now, we will teach you how to create them at the next step.
 
 Now that you have your folders ready, move all the cursors that you have created before at [Step 04](#using-xcursorgen) to 
-the `cursors` folder.  In this tutorial, you should have created at least one cursor named `default`, using the `xcursorgen` command.
+the `cursors` folder. In this tutorial, you should have created at least one cursor named `default`, using the `xcursorgen` command.
 
 
 ## Step 06 - Creating the symlinks {#creating-the-symlinks}
 ---
 
-When you hover your mouse over certain elements or perform certain actions on your desktop, you cursor state changes. 
+When you hover your mouse over certain elements or perform certain actions on your desktop, your cursor state changes. 
 For instance, hovering over a text field will show a text cursor, and hovering over a link typically shows a hand cursor.
 
 To make our custom cursors match the cursor states available to the system, we need to create cursor files for each 
@@ -395,7 +395,7 @@ calling it `KoolKursors`. The minimal structure for the `index.theme` file is th
 Name=KoolKursors
 ```
 
-However, you can add more information on your `index.theme` file. For instance, you can add comments or make it inherit 
+However, you can add more information to your `index.theme` file. For instance, you can add comments or make it inherit 
 from other themes.
 
 {{< alert title="Important Requirement" color="error">}}
@@ -405,7 +405,7 @@ that in order to prevent issues.
 
 {{< /alert >}}
 
-The `index.theme` file should be placed at your main theme folder. Please, create an `index.theme` file with the following
+The `index.theme` file should be placed in your main theme folder. Please, create an `index.theme` file with the following
 contents:
 
 ```
