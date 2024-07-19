@@ -58,12 +58,26 @@ This guideline does not apply to functionality only ever referred to via its acr
 When you do use an acronym, capitalize all the letters.
 
 
-## Mood
+## Mood and tone
 Use the imperative mood when providing instructions or suggestions to the user.
+
+Avoid the word “you” in sentences that instruct the user to do something, as it sounds accusatory in English — particularly at the beginning of a sentence. This is less important for questions and descriptions, but try to minimize it anyway.
 
 **Good**: Save the file.
 
-**Bad:** You should save the file.
+**Bad:** Now you must save the file.
+
+**Good**: Restart server to apply changes.
+
+**Bad**: You have to restart the server to apply your changes.
+
+**Good**: Permanently delete all items from the Trash?
+
+**Bad**: Are you sure you want to permanently delete all items from the Trash?
+
+**Good**: Make sure you understand the consequences before proceeding.
+
+**Bad**: You should make sure you understand the consequences before you proceed.
 
 
 ## Buttons and menu items
