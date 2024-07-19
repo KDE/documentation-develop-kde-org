@@ -59,7 +59,7 @@ When you do use an acronym, capitalize all the letters.
 
 
 ## Mood
-Use the imperative mood when providing instructions of suggestions to the user.
+Use the imperative mood when providing instructions or suggestions to the user.
 
 **Good**: Save the file.
 
