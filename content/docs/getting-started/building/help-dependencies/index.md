@@ -88,7 +88,7 @@ The main way to find the package that provides KF6TextWidgets is to grab the nam
 * Debian and derivatives: `sudo apt search textwidgets`
 * openSUSE: `sudo zypper search textwidgets`
 * Fedora: `sudo dnf search textwidgets`
-* Arch: `sudo pacman --sync --query textwidgets`
+* Arch: `sudo pacman -Ss textwidgets`
 * FreeBSD: `sudo pkg search textwidgets`
 
 Just searching for the component usually reveals the right package name, although it ultimately amounts to guessing or trial-and-error.
@@ -167,7 +167,7 @@ To solve this, you can specifically search for the executable in distribution pa
 * Debian and derivatives: `apt-file search /usr/bin/sass`
 * Fedora: `sudo dnf provides sass`
 * openSUSE: `sudo zypper search --provides /usr/bin/sass`
-* Arch: `sudo pacman --file /usr/bin/sass`
+* Arch: `sudo pacman -F /usr/bin/sass`
 * FreeBSD: `sudo pkg provides sass`
 
 {{< alert title="Configuring pkg-provides on FreeBSD" color="info" >}}
