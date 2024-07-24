@@ -88,7 +88,7 @@ touch kirigami-tutorial/src/{CMakeLists.txt,main.cpp,Main.qml}
 
 {{< alert title="Note" color="info" >}}
 
-In case you want to automatically build the project with kde-builder/kdesrc-build, custom module name should be the same as the project root folder (in our case it will be "kirigami-tutorial"), otherwise you would need to customize the `source-dir` or `dest-dir` for the module. We will assume the path to your `main.cpp` will be `~/kde/src/kirigami-tutorial/src/main.cpp`.
+In case you want to automatically build the project with kde-builder/kdesrc-build, custom module name should be the same as the project root folder (in our case it will be "kirigami-tutorial"), otherwise you would need to customize the `source-dir` or `dest-dir` for the module. We will assume the path to your `main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main.cpp`.
 
 {{< /alert >}}
 
@@ -237,7 +237,7 @@ We are almost at the finish line. The last thing we need to do is build and run 
 
 ### Linux or FreeBSD
 
-If you want kdesrc-build to handle building and installation of your project, you need to specify a custom module in your `~/.config/kdesrc-buildrc`:
+If you want kdesrc-build to handle building and installation of your project, you need to specify a custom module in your `$HOME/.config/kdesrc-buildrc`:
 
 ```
 ...
@@ -257,10 +257,10 @@ In case you want to handle building and installation manually without kdesrc-bui
 ```bash
 cmake -B build/
 cmake --build build/
-cmake --install build/ --prefix "~/.local"
+cmake --install build/ --prefix "$HOME/.local"
 ```
 
-The program will be installed to `~/.local/bin` and its desktop entry to `~/.local/share/applications`.
+The program will be installed to `$HOME/.local/bin` and its desktop entry to `$HOME/.local/share/applications`.
 
 ### Windows
 
