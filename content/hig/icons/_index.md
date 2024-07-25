@@ -19,11 +19,16 @@ Many considerations go into choosing the right icon for each button, menu item, 
 ## Universal or specific icons?
 The Breeze icon theme — as well as most others — includes icons consisting of just a base shape with a broad meaning, as well as icons consisting of multiple base shapes and/or emblems that narrow the icon's meaning to only a certain type of object or target. We call these *universal* and *specific* icons. For example:
 
-<!-- HACK: blank column headers to get a horizontal table with fake row headers, which flows better and makes better use of horizontal space. -->
+<center>
+
 &nbsp;        |                                                    |                                                       |
 --------------|----------------------------------------------------|-------------------------------------------------------|------------------------------------------------------------|
 **Universal** | <img src="/hig/icon-list-add.png" width="76px">   | <img src="/hig/icon-edit-entry.png" width="76px">     | <img src="/hig/icon-edit-delete-remove.png" width="76px"> |
 **Specific**  | <img src="/hig/icon-folder-add.png" width="76px"> | <img src="/hig/icon-edit-image.png" width="76px"> | <img src="/hig/icon-bookmark-remove.png" width="76px">    |
+
+</center>
+<br/>
+<br/>
 
 Prefer universal icons where possible, as their simplicity makes them faster to visually parse and understand. But in some cases, specific ones are more appropriate. Here are the rules for when to use each type:
 
