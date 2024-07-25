@@ -63,19 +63,20 @@ Most buttons should also include text. Only use an icons-only button in the foll
 
 In both cases, only proceed with the plan to omit text if an icon can be found that uses instantly recognizable imagery common across all operating systems and apps. Examples include:
 
-<!--TODO: Add pictures of these icons -->
+<center>
 
-- `list-add`
-- `go-previous`
-- `go-home`
-- `search`
-- `configure`
-- `edit-delete`
-- `print`
-- `player-volume-muted`
-- `media-playback-start`
-- `documentinfo`
-- `open-menu`
+&nbsp;                                                           |                        |                                                                  |
+-----------------------------------------------------------------|------------------------|------------------------------------------------------------------|-
+<img src="/hig/icon-only-list-add.png" width="57px">             | `list-add`             | <img src="/hig/icon-only-configure.png" width="57px">            | `configure`
+<img src="/hig/icon-only-go-previous.png" width="57px">          | `go-previous`          | <img src="/hig/icon-only-print.png" width="57px">                | `print`
+<img src="/hig/icon-only-go-home.png" width="57px">              | `go-home`              | <img src="/hig/icon-only-player-volume-muted.png" width="57px">  | `player-volume-muted`
+<img src="/hig/icon-only-search.png" width="57px">               | `search`               | <img src="/hig/icon-only-media-playback-start.png" width="57px"> | `media-playback-start`
+<img src="/hig/icon-only-edit-delete.png" width="57px">          | `edit-delete`          | <img src="/hig/icon-only-documentinfo.png" width="57px">         | `documentinfo`
+<img src="/hig/icon-only-edit-delete-remove.png" width="57px">   | `edit-delete-remove`   | <img src="/hig/icon-only-open-menu.png" width="57px">            | `open-menu`
+
+</center>
+<br/>
+<br/>
 
 If in doubt, show the button's text. If the app has so many buttons visible at once that this looks overwhelming, rethink the UI. For example:
 
