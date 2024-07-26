@@ -63,21 +63,22 @@ Use the imperative mood when providing instructions or suggestions to the user.
 
 Avoid the word “you” in sentences that instruct the user to do something, as it sounds accusatory in English — particularly at the beginning of a sentence. This is less important for questions and descriptions, but try to minimize it anyway.
 
-**Good**: Save the file.
-
 **Bad:** Now you must save the file.
 
-**Good**: Restart server to apply changes.
+**Good**: Save the file.
 
 **Bad**: You have to restart the server to apply your changes.
 
-**Good**: Permanently delete all items from the Trash?
+**Good**: Restart server to apply changes.
 
 **Bad**: Are you sure you want to permanently delete all items from the Trash?
 
-**Good**: Make sure you understand the consequences before proceeding.
+**Good**: Permanently delete all items from the Trash?
 
 **Bad**: You should make sure you understand the consequences before you proceed.
+
+**Good**: Make sure you understand the consequences before proceeding.
+
 
 
 ## Buttons and menu items
@@ -96,12 +97,6 @@ When shortening a button's text in this way, always set `Accessible.name` to the
 
 Buttons in dialogs also follow these rules. “OK” and “Yes” are never acceptable button labels!
 
-**Good:** Open…
-
-**Good:** Show More
-
-**Good:** About \[app name\]
-
 **Bad:** Yes (meaning is unclear)
 
 **Bad:** Re-Assign Key Binding to this Action (too long)
@@ -110,17 +105,25 @@ Buttons in dialogs also follow these rules. “OK” and “Yes” are never acc
 
 **Bad:** Properties… (this is a location, not an action)
 
+**Good:** Open…
+
+**Good:** Show More
+
+**Good:** About \[app name\]
+
+
 
 ## Window titles
 Give every window a distinctive title briefly describing its visible content. This text is shown in multiple parts of the UI where space may be limited, so keep it as short as possible while retaining distinctiveness. Don't include the app's vendor or version number.
 
-**Good:** Inbox - konqi@kde.org
-
-**Good:** Stairway To Heaven, by Led Zeppelin
 
 **Bad:** AppName 5.3.9 Professional Edition, by SquidSoft™
 
 **Bad:** Main Window
+
+**Good:** Inbox - konqi@kde.org
+
+**Good:** Stairway To Heaven, by Led Zeppelin
 
 Avoid showing file paths, which can be long and hard to parse. In a tab-based app that can have multiple files open, disambiguate identically-named files only by their parent folder names, like this:
 
@@ -131,13 +134,14 @@ CMakeLists.txt - app
 
 For dialog titles, describe the action being performed starting with an imperative mood verb, just like button and menu item labels. If the dialog was opened from a button or menu item, echo its label in the dialog title.
 
+**Bad:** Load… → Open File
+
+**Bad:** About \[app name\]→ Details
+
 **Good:** Save… → Save File
 
 **Good:** Properties → Properties for \[file name\]
 
-**Bad:** Load… → Open File
-
-**Bad:** About \[app name\]→ Details
 
 
 ## Line length
