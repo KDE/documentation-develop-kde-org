@@ -255,7 +255,7 @@ Kirigami.ApplicationWindow {
 
 ### Managed Config Module (KCM)
 
-If you want to [develop a KCM]({{< relref "/kcm" >}}), that uses KConfigXT, you
+If you want to [develop a KCM]({{< ref "kcm" >}}), that uses KConfigXT, you
 shouldn't use a singleton config instance. Instead, you should make it a part of
 your `ManagedConfigModule` class and make it accept `parent` argument.
 
