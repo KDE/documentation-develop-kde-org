@@ -28,6 +28,95 @@ These are not rules, just a compilation of matters found in technical documentat
 
 Simply by keeping these questions in mind while writing your tutorial, your content will naturally lean towards high quality documentation.
 
+## Provide a migration plan {#migration}
+
+An extension of the "The reader is everything" guideline is that you should care not only about the people reading the new version of your tutorial, but also the people that have read the previous version. This is analogous to software development.
+
+When writing a software library, the developer needs to mark no longer desirable functions or classes as deprecated so that the library users have a reasonable length of time to get acquainted with the change and switch to the new functions and classes. This is a migration plan.
+
+You should provide a migration plan to the reader of your documentation whenever drastic changes are done to a tutorial. This amounts to four things:
+
+1. Make the change obvious
+
+The change needs to be made obvious so that the reader of the previous version of the tutorial does not get confused when they seek information about the old tool. You should assume that once your reader has already read it once, the next time they will *scan it* for what they seek and they might miss non-obvious changes.
+
+You can do so by changing a page's title, editing the entrypoint section for that topic, adding [alerts]({{< ref "formatting.md#alert" >}}), or a combination of all of these.
+
+It is not uncommon for a reader to follow a significant part of a tutorial only to find that it doesn't work the way they were expecting.
+
+Similarly, if the tutorial has been changed to point to a different tool/tech or if the new tool/tech has more functionality, tell the user that the new instructions will not work with the old tool/tech.
+
+This also has the side effect of better promoting the new tool, as its name will be mentioned more often and meaningfully.
+
+2. Repeat the change with [alerts]({{< ref "formatting.md#alert" >}})
+
+Unlike with code, repeating yourself (to a reasonable extent) is useful for documentation.
+
+In this case, it serves as a fallback to ensure the reader will not encounter the frustrations described in point 1.
+
+3. Avoid partial changes
+
+Partial changes break documentation and result in mixed instructions that confuse readers.
+
+When updating a tutorial, make sure to check that you have no (unintentional) lingering bits of old instructions that might catch the reader by surprise. More often than not, updating a tutorial requires more thought than a simple Find and Replace.
+
+If a partial change needs to be done (for example, so changes are done atomically in multiple merge requests), the interval between that and the remaining changes must be short and planned.
+
+4. Optionally, mention the old method
+
+A change from an old tool/tech to a new one can result in different ways to achieve the same task. Depending on the importance of the change, you may use an [alert]({{< ref "formatting.md#alert" >}}), need to edit a section, or write a whole page with a detailed migration plan.
+
+For example, a slightly different command might need an alert or it may be bundled together with the new method in a separate section, but a major breaking change in a library API will likely need a separate page.
+
+Lastly, there are a few exceptions to this guideline and an immediate update with no migration plan can be done:
+
+* If the change is not drastic enough to warrant a migration plan
+* If a feature referred to in the tutorial is broken/does not exist anymore
+* If the old method is outright broken or unsupported
+
+## Mood and pronouns {#pronouns}
+
+We use the first person plural (we) for general explanations in tutorials, imperative for reference instructions, and the second person singular (you/[generic you](https://en.wikipedia.org/wiki/Generic_you)) for special cases.
+
+The use of "we" is known to lower the distance between writer and reader, feeling more welcoming, while the use of imperative is standard in reference documentation and technical texts whose point is to give instructions, and the use of "you" allows to address the reader directly.
+
+* In this section **we'll** be focusing on layouts.
+* **Compile** the application again. **You** can then run the application with:
+
+The use of "we" is especially useful to bring a sense of unity with the KDE community or accomplishment in following the tutorial. For instance:
+
+* In the previous tutorial, **we** have managed to create the interface of **our** application.
+* **Let's** take a look at this file again:
+* In this section, **we** will expose a C++ property to QML.
+
+The pronoun "we" can also be used for the opposite purpose, to distance the writer from the reader. The beginning of this guideline is an example of that:
+
+* **We** use the first person plural for […] and the second person singular for […].
+* **We** recommend you to check the Kirigami Gallery, **our** showcase application for Kirigami controls.
+
+When providing reference instructions, the imperative is preferred and oftentimes shorter and clearer. Typical imperative phrases that work well are:
+
+* To achieve X, **do** Y.
+* **Type** the following command:
+* If X, then **do** Y.
+* **Prefer** using X instead.
+* A new dialog will appear. **Click** on X and **write**:
+
+The use of "you" is useful to talk about the user's experiences, hypotheticals, instructions, and for avoiding passive voice. For instance:
+
+* If **you** have ever used Plasma System Settings, **you** will have come across a ListView.
+* **Your** installation path may differ depending on the platform.
+* **You** will also need to change the following in **your** CMakeLists.txt:
+* A dialog can be added using this API. → **You** can add a dialog using this API.
+
+However, note that in many cases where "you" is used you may shorten the text with the imperative:
+
+* **You** can then run the application with: → **Run** the application with:
+
+All of the other style guidelines use imperative or "you" as they are meant to provide simple, direct, prescriptive instructions with the same tone as general rules.
+
+Lastly, never use "I", "he" or "she".
+
 ## Use tree to show the project structure {#tree}
 
 The `tree` command is great to show the project structure to the reader.
@@ -36,35 +125,56 @@ To select how many levels in a directory tree you want to expose, you can use th
 
 `tree -L 3`
 
+To showcase the project structure inside a code block, use the `tree` highlight indicator after the three backticks <code>```</code>:
+
+````
+```tree
+app-tutorial/
+├── CMakeLists.txt
+├── org.kde.tutorial.desktop
+└── src/
+    ├── CMakeLists.txt
+    ├── main.cpp
+    └── Main.qml
+```
+````
+
+The general preference for `tree` project structures is:
+
+* project folder at the top, not `.` as in the default output of `tree`
+* directories last
+* CMakeLists.txt first among the list of files in a directory
+
 ## Use sentence case for titles {#titles}
 
 Prefer sentence case where possible:
 
-> Contribute to the documentation
+* Contribute to the documentation
 
 Use Title Case only for project names, compound nouns that are known to be in Title Case, or words that come from acronyms:
 
-> Plasma Mobile
-
-> Hello World!
-
-> Personal Information Management
+* Plasma Mobile
+* Hello World!
+* Personal Information Management
 
 ## Use monospaced text for files, directories, code references, and short code snippets {#monospace}
 
 Use backticks before and after things like:
+
 * `~/.config/examplerc`
 * `~/kde/usr/`
 * `setContext()`
-* `cmake -B build -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr`.
+* `cmake -B build -DCMAKE_INSTALL_PREFIX=$HOME/kde/usr`
 
 If your code snippet has more than one line, use a code block instead.
+
+If you code snippet has only one line, but it needs to be emphasized as a separate step, use a code block instead.
 
 ## Use () to signal functions {#functions}
 
 This applies to both links and monospaced text: `setContext()` or [KXmlGuiWIndow::setupGUI()](#).
 
-Don't use parameters inside the (). The only exception is when you need to differentiate between function overloads. For example:
+Don't use parameters inside the (). The only exception is when you need to differentiate between function overloads or when the parameter itself should be the focus. For example:
 
 * QString()
 * QString(const char *str)
@@ -76,8 +186,22 @@ It is not always clear whenever a file name is pointing to a directory or a plai
 
 To avoid ambiguity, refer to directories by ending them with a slash:
 
+* Avoid: `content/docs/tutorial`
 * Do: `content/docs/tutorial/`
-* Don't: `content/docs/tutorial`
+
+## Use two or three levels for section titles in Markdown {#section-levels}
+
+Try to section the tutorial content within three heading levels.
+
+Section titles (which start with a select number of `#` characters) should preferably use heading level two (`##`) or three (`###`).
+
+This is for three reasons:
+
+* The first level (`#`) is already in use for the page title.
+* The KDE Developer website currently has a limitation for showing sidebar content. Using four levels (`####`) or more will now show up on the right sidebar.
+* This forces the tutorial writer to not go overboard with content levels.
+
+Use heading level four (`####`) only if strictly necessary. Never use five (`#####`) or more.
 
 ## Use descriptive anchors {#anchors}
 
@@ -101,11 +225,59 @@ You can read more about anchors in {{</* ref "markdown#howtoanchors" */>}}.
 
 Monospaced links like [`monospacedLink`](#), when paired with plain [hyperlinks](#) or plain `monospaced text`, can look too busy when the Hugo Markdown is rendered on the website. It's best to simply use plain links for links and plain monospaced text for monospaced text.
 
-Do: [hyperlink](#)
+* Avoid: [`monospacedLink`](#)
 
-Do: `monospaced text`
+* Do: [hyperlink](#)
 
-Don't: [`monospacedLink`](#)
+* Do: `monospaced text`
+
+
+## Use arrows to indicate menu structures or GUI steps {#arrows}
+
+To indicate any menu actions (such as those in an application's menubar, context menu, or hamburger menu) or a certain number of steps to accomplish an action in the application's graphical interface, use arrows:
+
+* File → Export → Export as PDF…
+* Select any text → Copy its contents with Ctrl+C → Open Dolphin → Navigate to this folder → Paste with Ctrl+V
+
+## Prefer Unicode symbols over handmade approximations {#symbols}
+
+Use the following:
+
+* … (U+2026) instead of ...
+* → (U+2192) instead of ->
+* “ (U+201C) and ” (U+201D) instead of " for quotations
+* ’ (U+2019) instead of ' for apostrophes
+* — (U+2014) instead of -, -, or -- for [interjections](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use)
+
+While this will not count as a blocker for a merge request contribution to the KDE Developer website, following this guideline will result in more professional text that is more comprehensible for a screen reader.
+
+This guideline is based on, but does not strictly follow, the [KDE Human Interface Guidelines]({{< ref "hig/text_and_labels#symbols" >}}).
+
+## Avoid abbreviations (e.g., i.e., &, tech terms) {#abbreviations}
+
+Common Latin-based abbreviations might be tempting to use in documentation due to how short they are, but avoiding them makes the text sound more natural in English and removes any potential language barrier for the reader. They also tend to become overused.
+
+Use:
+
+* "for example" / "for instance" instead of e.g.
+* "that is / in other words" instead of i.e.
+
+The abbreviation for et cetera (etc.) can be used.
+
+While not technically an abbreviation, the symbol & used as an abbreviated replacement for "and" should also be avoided.
+
+Most technology terms that are used as abbreviations have simpler English counterparts that should be used instead:
+
+* PC → Computer
+* OS → Operating system
+
+However, terms that are more well known by their abbreviations than their spelled-out counterpart should be written as is. For example:
+
+* USB is more well known than Universal Serial Bus
+* URL is more well known than Uniform Resource Locator
+* HTML is more well known than HyperText Markup Language
+
+This guideline is based on the [KDE Human Interface Guidelines]({{< ref "hig/text_and_labels#acronyms" >}}).
 
 ## Cross-reference most things {#links}
 
@@ -132,7 +304,7 @@ If it's well understood that the text is talking about QtQuick, you can just say
 
 After that you can start using "Controls Button" or simply "Button" without links, but only if there is no ambiguity. For example, if you have a QtQuick.Controls.Button and a Kirigami.Button, saying "Button" will be ambiguous and the user won't know whether you are talking about Controls or Kirigami.
 
-## Avoid cross-referencing more than once... {#linkonce}
+## Avoid cross-referencing more than once… {#linkonce}
 
 You should avoid providing more than one hyperlink to the same content in the same paragraph. If there is more than one, 90% of the time the paragraph can either be rephrased or split.
 
@@ -157,7 +329,7 @@ can be assigned shortcuts.
 One feature offered by Kirigami Actions on top of QtQuick Actions is the possibility to nest actions.
 ```
 
-## ...but do cross-reference again where convenient {#linkconvenient}
+## …but do cross-reference again where convenient {#linkconvenient}
 
 If the text transitions to a new section, the latest reference to that link was long ago, or linking to the API would suddenly be convenient for the reader, do link again.
 
@@ -166,17 +338,17 @@ A [Kirigami.Action](docs:kirigami2;Action) encapsulates a user interface action.
 We can use these to provide our applications with easy-to-reach actions that are
 essential to their functionality.
 
-...
-...
-...
+…
+…
+…
 
 ## Kirigami Pages
 
-...
+…
 
 You can attach a [Kirigami.Action](docs:kirigami2;Action) to the `actions:` of a [Kirigami.Page](docs:kirigami2;Page).
 
-...
+…
 ```
 
 ## Provide a full example {#fullexample}
@@ -205,6 +377,8 @@ Moreover, if you can see no practical difference between the text being inside a
 ```
 
 Can be used for optional content that really should not be taking space from the page and from the main content, which might be the case for really long lists or [alerts]({{< ref "formatting.md#alert" >}}). Use this rarely.
+
+Note that [alerts can also be made collapsible]({{< ref "docs/contribute/formatting#alert" >}}).
 
 ## Follow standard documentation practices where it makes sense {#standard-documentation-practices}
 
@@ -251,7 +425,3 @@ Here is a list of recommended Write The Docs talks that you should see:
 * [Is it (layer) cake: Thinking in content levels](https://youtu.be/0OKRNQvZbL4)
 * [The power of product screenshots in your documentation](https://youtu.be/eoJh5cu91pw)
 * [The descriptivist manifesto](https://youtu.be/RbFxwuNJjWo)
-* [Don't shoot yourself in the foot with content reuse](https://youtu.be/dxEhvjz3eEY)
-
-
-
