@@ -194,7 +194,7 @@ If you discover any external dependencies needed to build KDE software that were
 
 ### Set up Qt
 
-Qt is the fundamental framework that is needed for pretty much all KDE development. A recent enough version of Qt 6, currently Qt version greater or equal to 6.6, is required to proceed.
+Qt is the fundamental framework that is needed for pretty much all KDE development. A recent enough version of Qt 6, currently Qt version greater or equal to 6.7, is required to proceed.
 
 The initial setup of kdesrc-build should have installed the required Qt6 packages for you already.
 
