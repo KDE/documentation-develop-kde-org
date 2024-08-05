@@ -73,3 +73,8 @@
 .chroma .hl {
   background-color: var(--chroma-highlight);
 }
+
+// Force the last column of a chroma block (the code) to fill the rest of the width
+.chroma .lntd:last-child {
+  width: 100%;
+}
