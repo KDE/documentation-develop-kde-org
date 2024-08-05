@@ -11,16 +11,14 @@
   border-top: none;
 }
 .installtable td:first-child {
-  text-align: right;
+  text-align: left;
   vertical-align: middle;
 }
 .installtable td:first-child a {
   vertical-align: middle;
   display: inline-block;
   white-space: nowrap;
-}
-.installtable td:first-child a+a {
-  margin-left: 0.5em;
+  line-height: 2.5;
 }
 .installtable td:nth-child(2) {
   vertical-align: middle;
@@ -29,7 +27,7 @@
   margin-bottom: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-  white-space: pre-wrap;
+  white-space: pre;
 }
 @media (max-width: 800px) {
   table.installtable,
@@ -43,6 +41,9 @@
     text-align: left;
     padding-top: 0.5em;
     padding-bottom: 0.2em;
+  }
+  table.installtable td:first-child a + a {
+    padding-left: 1em;
   }
   table.installtable td:nth-child(2) {
     padding-bottom: 0.5em;
