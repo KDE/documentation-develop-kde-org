@@ -1,0 +1,7 @@
+
+:root {
+  --text-muted: #69737c;  // Result of lighten($black, 30%)
+  @media (prefers-color-scheme: dark) {
+    --text-muted: #babfc4;  // Result of lighten($black, 60%)
+  }
+}
