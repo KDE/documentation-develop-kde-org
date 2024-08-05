@@ -124,3 +124,13 @@
 @each $color, $value in $grays {
     @include box-variant(".td-box", $color, $value);
 }
+
+// Adjust alert link color for dark mode
+@media (prefers-color-scheme: dark) {
+  .alert-info .alert-link {
+    color: $link-color-dark;
+    &:hover {
+      color: $link-hover-color-dark;
+    }
+  }
+}
