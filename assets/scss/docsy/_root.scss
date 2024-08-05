@@ -1,7 +1,9 @@
 
 :root {
+  --chroma-highlight: #ffc;
   --text-muted: #69737c;  // Result of lighten($black, 30%)
   @media (prefers-color-scheme: dark) {
+    --chroma-highlight: #0A2933;
     --text-muted: #babfc4;  // Result of lighten($black, 60%)
   }
 }
