@@ -28,4 +28,4 @@ target_link_libraries(kirigami-hello
 
 install(TARGETS kirigami-hello ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
-add_subdirectory(qml)
+add_subdirectory(components)
