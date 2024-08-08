@@ -1,17 +1,18 @@
 add_executable(kirigami-hello)
 
 ecm_add_qml_module(kirigami-hello
-    URI "org.kde.tutorial"
-)
-
-ecm_target_qml_sources(kirigami-hello
-    SOURCES
-    Main.qml
+    URI
+    org.kde.tutorial
 )
 
 target_sources(kirigami-hello
     PRIVATE
     main.cpp
+)
+
+ecm_target_qml_sources(kirigami-hello
+    SOURCES
+    Main.qml
 )
 
 target_link_libraries(kirigami-hello
