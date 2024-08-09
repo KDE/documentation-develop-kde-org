@@ -23,7 +23,7 @@ This document covers KDE's design philosophy and culture, common workflows and p
 
 
 ## Why is good design so important?
-Design determines not only how well something fulfills its functional purpose, but also how enjoyable it is to interact with. If either is lacking, the result will be frustrating. People won't want to use a poorly-designed app, and if forced to, they'll be resentful and spread negativity about it. Avoid this through good design!
+Design determines how well something fulfills its functional purpose and how enjoyable it is to interact with. If either is lacking, the result will be frustrating. People won't want to use a poorly-designed app, and if forced to, they'll be resentful and spread negativity about it. Avoid this through good design!
 
 Design involves targeted decisions and trade-offs that bring a project closer to its intended goals and usage paradigms. The best apps know which users and use cases they're targeting, and which ones they leave for others. It's better to succeed by focusing on what you can do well than to spread yourself thin and fail. Under-promise and over-deliver, never the reverse.
 
