@@ -16,6 +16,8 @@
             'template',
             '<div class="popover offline-search-result" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
         );
+        // Disable the search input until we have the index
+        $searchInput.prop('disabled', true);
 
         //
         // Register handler
@@ -38,17 +40,44 @@
         //
 
         let idx = null; // Lunr index
-        const resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
+        let resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
 
-        // Set up for an Ajax call to request the JSON data file that is created by Hugo's build process
-        $.ajax($searchInput.data('offline-search-index-json-src')).then(
-            (data) => {
+        /**
+         * Init the lunr index object, either runs a web worker to do it, or does it locally if that fails.
+         * @returns {Promise<void>}
+         */
+        const init = async () => {
+            const response = await fetch($searchInput.data('offline-search-index-json-src'));
+            if (!response.ok) {
+                console.warn('Could not fetch offline search data!');
+                return;
+            }
+            const data = await response.json();
+
+            // Try to run the web worker, if that fails run it normally.
+            try {
+                const lunrWorker = new Worker(window._site.webWorker);
+
+                lunrWorker.onmessage = (event) => {
+                    const { evt, data } = event.data;
+                    if (evt === 'index') {
+                        idx = lunr.Index.load(data[0]);
+                        resultDetails = data[1];
+
+                        $searchInput.prop('disabled', false);
+                        $searchInput.trigger('change');
+                    }
+                };
+
+                lunrWorker.postMessage({'evt': 'init', 'data': data});
+            } catch {
+                console.warn("Web worker was unable to run. Running indexing the slow way!")
                 idx = lunr(function () {
                     this.ref('ref');
                     this.field('title', { boost: 2 });
                     this.field('body');
 
-                    data.forEach((doc) => {
+                    data.forEach( (doc) => {
                         this.add(doc);
 
                         resultDetails.set(doc.ref, {
@@ -56,11 +85,15 @@
                             excerpt: doc.excerpt,
                         });
                     });
-                });
 
-                $searchInput.trigger('change');
+
+                    $searchInput.prop('disabled', false);
+                    $searchInput.trigger('change');
+                });
             }
-        );
+        }
+
+        init();
 
         const render = ($targetSearchInput) => {
             // Dispose the previous result

@@ -11,10 +11,4 @@
 {{- template "_internal/schema.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
 {{ partialCached "head-css.html" . "asdf" }}
-{{ if .Site.Params.offlineSearch }}
-<script
-  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
-  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
-  crossorigin="anonymous"></script>
-{{end}}
 {{ partial "hooks/head-end.html" . }}
