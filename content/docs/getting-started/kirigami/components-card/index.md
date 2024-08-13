@@ -96,7 +96,7 @@ A [Kirigami.CardsLayout](docs:kirigami2;CardsLayout) is most useful when the car
 
 {{< alert title="Note" color="info" >}}
 
-[`CardsListView`](docs:kirigami2;CardsListView) or [`CardsGridView`](docs:kirigami2;CardsGridView) are better suited for larger models.
+[`CardsListView`](docs:kirigami2;CardsListView) is better suited for larger models.
 
 {{< /alert >}}
 
@@ -209,65 +209,6 @@ Kirigami.CardsListView {
 <br>
 
 ![Screenshot of a CardsListView, which is a simple vertical list of cards in landscape mode](/docs/getting-started/kirigami/components-card/cardslistview.png)
-
-{{< /section-right >}}
-
-{{< /sections >}}
-
-## CardsGridView
-
-Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display cards in a grid.
-
-Its behavior is the same as a [CardsLayout](docs:kirigami2;CardsLayout), and it allows cards to be put in one or two columns depending on the available width.
-
-[CardsGridView](docs:kirigami2;CardsGridView) has the limitation that every card must have the same exact height, so [cellHeight](https://doc.qt.io/qt-6/qml-qtquick-gridview.html#cellHeight-prop) must be manually set to a value for which the content must fit for every child card.
-
-If possible use [CardsGridView](docs:kirigami2;CardsGridView) only when you need to instantiate many cards. If you are only going to instantiate a few cards, opt for a [CardsLayout](docs:kirigami2;CardsLayout) with a [Repeater](docs:qtquick;QtQuick.Repeater) instead.
-
-{{< sections >}}
-
-{{< section-left >}}
-
-```qml
-Kirigami.CardsGridView {
-    id: view
-    model: ListModel {
-        id: mainModel
-        // Model with the following roles:
-        // text, actions and image
-    }
-    delegate:Kirigami.Card {
-        id: card
-        banner {
-            title: model.title
-            source: model.image
-        }
-        contentItem: Controls.Label {
-            wrapMode: Text.WordWrap
-            text: model.text
-        }
-        actions: [
-            Kirigami.Action {
-                text: model.actions.get(0).text
-                icon.name: model.actions.get(0).icon
-            },
-            Kirigami.Action {
-                text: model.actions.get(1).text
-                icon.name: model.actions.get(1).icon
-            }
-        ]
-    }
-}
-
-```
-
-{{< /section-left >}}
-
-{{< section-right >}}
-
-<br>
-
-![Screenshot of a CardsGridView where each card occupies the same amount of space in a grid](/docs/getting-started/kirigami/components-card/cardsgridview.png)
 
 {{< /section-right >}}
 
