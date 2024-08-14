@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 01:42+0000\n"
+"POT-Creation-Date: 2024-08-14 01:42+0000\n"
 "PO-Revision-Date: 2024-07-06 06:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -3071,7 +3071,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:131
 #: content/docs/getting-started/kirigami/components-card/index.md:209
-#: content/docs/getting-started/kirigami/components-card/index.md:268
 #: content/docs/getting-started/kirigami/components-controls/index.md:48
 #: content/docs/getting-started/kirigami/components-controls/index.md:107
 #: content/docs/getting-started/kirigami/components-controls/index.md:166
@@ -3235,9 +3234,13 @@ msgstr ""
 "mobilnega telefona."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:99
+#, fuzzy
+#| msgid ""
+#| "[`CardsListView`](docs:kirigami2;CardsListView) or [`CardsGridView`](docs:"
+#| "kirigami2;CardsGridView) are better suited for larger models."
 msgid ""
-"[`CardsListView`](docs:kirigami2;CardsListView) or [`CardsGridView`](docs:"
-"kirigami2;CardsGridView) are better suited for larger models."
+"[`CardsListView`](docs:kirigami2;CardsListView) is better suited for larger "
+"models."
 msgstr ""
 "[`CardsListView`](docs:kirigami2;CardsListView) ali [`CardsGridView`](docs:"
 "kirigami2;CardsGridView) sta bolje prilagojena za večje modele."
@@ -3344,65 +3347,6 @@ msgid ""
 msgstr ""
 "![Posnetek zaslona CardsListView, ki je enostavni navpični seznam kartic v "
 "ležečem načinu](/docs/use/kirigami/components-card/cardslistview.png)"
-
-#: content/docs/getting-started/kirigami/components-card/index.md:217
-msgid "CardsGridView"
-msgstr "CardsGridView"
-
-#: content/docs/getting-started/kirigami/components-card/index.md:219
-msgid ""
-"Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display "
-"cards in a grid."
-msgstr ""
-"Uporabite [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) za prikaz "
-"kartic v mreži."
-
-#: content/docs/getting-started/kirigami/components-card/index.md:221
-msgid ""
-"Its behavior is the same as a [CardsLayout](docs:kirigami2;CardsLayout), and "
-"it allows cards to be put in one or two columns depending on the available "
-"width."
-msgstr ""
-"Njegovo vedenje je enako kot  [CardsLayout](docs:kirigami2;CardsLayout) in "
-"omogoča, da se kartice postavijo v enem ali dveh stolpcih, odvisno od "
-"razpoložljive širine."
-
-#: content/docs/getting-started/kirigami/components-card/index.md:223
-msgid ""
-"[CardsGridView](docs:kirigami2;CardsGridView) has the limitation that every "
-"card must have the same exact height, so [cellHeight](https://doc.qt.io/qt-6/"
-"qml-qtquick-gridview.html#cellHeight-prop) must be manually set to a value "
-"for which the content must fit for every child card."
-msgstr ""
-"[CardsGridView](docs:kirigami2;CardsGridView) ima omejitev, da mora imeti "
-"vsaka kartica natančno enako višino, zato mora biti [cellHeight](https://doc."
-"qt.io/qt-6/qml-qtquick-gridview.html#cellHeight-prop)  ročno nastavljena "
-"vrednost, za katero mora biti vsebina primerna za vsako otroško kartico."
-
-#: content/docs/getting-started/kirigami/components-card/index.md:225
-msgid ""
-"If possible use [CardsGridView](docs:kirigami2;CardsGridView) only when you "
-"need to instantiate many cards. If you are only going to instantiate a few "
-"cards, opt for a [CardsLayout](docs:kirigami2;CardsLayout) with a [Repeater]"
-"(docs:qtquick;QtQuick.Repeater) instead."
-msgstr ""
-"Če je mogoče, uporabite [CardsGridView](docs:kirigami2;CardsGridView) samo, "
-"če morate vzpostaviti veliko kartic. Če želite samo vnašati nekaj kartic, se "
-"raje odločite za [CardsLayout](docs:kirigami2;CardsLayout) s ponovitvijo "
-"[Repeater](docs:qtquick;QtQuick.Repeater)."
-
-#: content/docs/getting-started/kirigami/components-card/index.md:236
-msgid "Model with the following roles: text, actions and image"
-msgstr "Model z naslednjimi vlogami: besedilo, dejanja in slika"
-
-#: content/docs/getting-started/kirigami/components-card/index.md:270
-msgid ""
-"![Screenshot of a CardsGridView where each card occupies the same amount of "
-"space in a grid](/docs/getting-started/kirigami/components-card/"
-"cardsgridview.png)"
-msgstr ""
-"![Posnetek zaslona CardsGridView, kjer vsaka kartica zaseda enako količino "
-"prostora v omrežju](/docs/use/kirigami/components-card/cardsgridview.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips"
@@ -9501,6 +9445,60 @@ msgstr ""
 "Velikost pisave [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::"
 "PlatformTheme) je v vaši aplikaciji na voljo kot `Kirigami.Theme.defaultFont."
 "pointSize`."
+
+#~ msgid "CardsGridView"
+#~ msgstr "CardsGridView"
+
+#~ msgid ""
+#~ "Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display "
+#~ "cards in a grid."
+#~ msgstr ""
+#~ "Uporabite [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) za "
+#~ "prikaz kartic v mreži."
+
+#~ msgid ""
+#~ "Its behavior is the same as a [CardsLayout](docs:kirigami2;CardsLayout), "
+#~ "and it allows cards to be put in one or two columns depending on the "
+#~ "available width."
+#~ msgstr ""
+#~ "Njegovo vedenje je enako kot  [CardsLayout](docs:kirigami2;CardsLayout) "
+#~ "in omogoča, da se kartice postavijo v enem ali dveh stolpcih, odvisno od "
+#~ "razpoložljive širine."
+
+#~ msgid ""
+#~ "[CardsGridView](docs:kirigami2;CardsGridView) has the limitation that "
+#~ "every card must have the same exact height, so [cellHeight](https://doc."
+#~ "qt.io/qt-6/qml-qtquick-gridview.html#cellHeight-prop) must be manually "
+#~ "set to a value for which the content must fit for every child card."
+#~ msgstr ""
+#~ "[CardsGridView](docs:kirigami2;CardsGridView) ima omejitev, da mora imeti "
+#~ "vsaka kartica natančno enako višino, zato mora biti [cellHeight](https://"
+#~ "doc.qt.io/qt-6/qml-qtquick-gridview.html#cellHeight-prop)  ročno "
+#~ "nastavljena vrednost, za katero mora biti vsebina primerna za vsako "
+#~ "otroško kartico."
+
+#~ msgid ""
+#~ "If possible use [CardsGridView](docs:kirigami2;CardsGridView) only when "
+#~ "you need to instantiate many cards. If you are only going to instantiate "
+#~ "a few cards, opt for a [CardsLayout](docs:kirigami2;CardsLayout) with a "
+#~ "[Repeater](docs:qtquick;QtQuick.Repeater) instead."
+#~ msgstr ""
+#~ "Če je mogoče, uporabite [CardsGridView](docs:kirigami2;CardsGridView) "
+#~ "samo, če morate vzpostaviti veliko kartic. Če želite samo vnašati nekaj "
+#~ "kartic, se raje odločite za [CardsLayout](docs:kirigami2;CardsLayout) s "
+#~ "ponovitvijo [Repeater](docs:qtquick;QtQuick.Repeater)."
+
+#~ msgid "Model with the following roles: text, actions and image"
+#~ msgstr "Model z naslednjimi vlogami: besedilo, dejanja in slika"
+
+#~ msgid ""
+#~ "![Screenshot of a CardsGridView where each card occupies the same amount "
+#~ "of space in a grid](/docs/getting-started/kirigami/components-card/"
+#~ "cardsgridview.png)"
+#~ msgstr ""
+#~ "![Posnetek zaslona CardsGridView, kjer vsaka kartica zaseda enako "
+#~ "količino prostora v omrežju](/docs/use/kirigami/components-card/"
+#~ "cardsgridview.png)"
 
 #~ msgid ""
 #~ "If you wish to build Kirigami with Qt6, this is currently not possible "

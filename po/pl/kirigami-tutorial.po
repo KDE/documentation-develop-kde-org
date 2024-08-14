@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 01:42+0000\n"
+"POT-Creation-Date: 2024-08-14 01:42+0000\n"
 "PO-Revision-Date: 2022-09-28 20:47+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -2819,7 +2819,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:131
 #: content/docs/getting-started/kirigami/components-card/index.md:209
-#: content/docs/getting-started/kirigami/components-card/index.md:268
 #: content/docs/getting-started/kirigami/components-controls/index.md:48
 #: content/docs/getting-started/kirigami/components-controls/index.md:107
 #: content/docs/getting-started/kirigami/components-controls/index.md:166
@@ -3018,10 +3017,16 @@ msgstr ""
 "kolumny, tak jak w przypadku ekranów telefonów."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:99
+#, fuzzy
+#| msgid ""
+#| "Use a [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
+#| "CardsGridView) to display cards in a grid."
 msgid ""
-"[`CardsListView`](docs:kirigami2;CardsListView) or [`CardsGridView`](docs:"
-"kirigami2;CardsGridView) are better suited for larger models."
+"[`CardsListView`](docs:kirigami2;CardsListView) is better suited for larger "
+"models."
 msgstr ""
+"Użyj [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
+"CardsGridView), aby wyświetlić karty w siatce."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:103
 msgid "Important"
@@ -3140,81 +3145,6 @@ msgid ""
 "![Screenshot of a CardsListView, which is a simple vertical list of cards in "
 "landscape mode](/docs/getting-started/kirigami/components-card/cardslistview."
 "png)"
-msgstr "![Zrzut ekranu CardsGridView](cardsgridview.png)"
-
-#: content/docs/getting-started/kirigami/components-card/index.md:217
-msgid "CardsGridView"
-msgstr "CardsGridView"
-
-#: content/docs/getting-started/kirigami/components-card/index.md:219
-#, fuzzy
-#| msgid ""
-#| "Use a [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
-#| "CardsGridView) to display cards in a grid."
-msgid ""
-"Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display "
-"cards in a grid."
-msgstr ""
-"Użyj [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
-"CardsGridView), aby wyświetlić karty w siatce."
-
-#: content/docs/getting-started/kirigami/components-card/index.md:221
-#, fuzzy
-#| msgid ""
-#| "Its behavior is the same as a `Kirigami.CardsLayout`, and it allows cards "
-#| "to be put in one or two columns depending on the available width."
-msgid ""
-"Its behavior is the same as a [CardsLayout](docs:kirigami2;CardsLayout), and "
-"it allows cards to be put in one or two columns depending on the available "
-"width."
-msgstr ""
-"Jego zachowanie jest takie same jak `Kirigami.CardsLayout` i umożliwia "
-"umieszczenie kart w jednej lub dwóch kolumnach w zależności od dostępnej "
-"szerokości."
-
-#: content/docs/getting-started/kirigami/components-card/index.md:223
-#, fuzzy
-#| msgid ""
-#| "CardsGridView has the limitation that every card must have the same exact "
-#| "height, so `cellHeight` must be manually set to a value for which the "
-#| "content must fit for every child card."
-msgid ""
-"[CardsGridView](docs:kirigami2;CardsGridView) has the limitation that every "
-"card must have the same exact height, so [cellHeight](https://doc.qt.io/qt-6/"
-"qml-qtquick-gridview.html#cellHeight-prop) must be manually set to a value "
-"for which the content must fit for every child card."
-msgstr ""
-"CardsGridView ma to ograniczenie, że każda karta musi mieć dokładnie tę samą "
-"wysokość, więc `cellHeight` trzeba ustawić ręcznie na wartość, dla której "
-"treść musi zmieścić się dla każdej karty podrzędnej."
-
-#: content/docs/getting-started/kirigami/components-card/index.md:225
-#, fuzzy
-#| msgid ""
-#| "If possible use `Kirigami.CardsGridView` only when you need to "
-#| "instantiate many cards. If you are only going to instantiate a few cards, "
-#| "opt for a `Kirigami.CardsLayout` with a `Repeater` instead."
-msgid ""
-"If possible use [CardsGridView](docs:kirigami2;CardsGridView) only when you "
-"need to instantiate many cards. If you are only going to instantiate a few "
-"cards, opt for a [CardsLayout](docs:kirigami2;CardsLayout) with a [Repeater]"
-"(docs:qtquick;QtQuick.Repeater) instead."
-msgstr ""
-"Jeśli to możliwe, to używaj tylko `Kirigami.CardsGridView`, gdy potrzebujesz "
-"stworzyć wiele kart. Jeśli potrzebujesz tylko kilku kart, to użyj `Kirigami."
-"CardsLayout` ze składnikiem `Repeater`."
-
-#: content/docs/getting-started/kirigami/components-card/index.md:236
-msgid "Model with the following roles: text, actions and image"
-msgstr "Model o następujących rolach: text, actions oraz image"
-
-#: content/docs/getting-started/kirigami/components-card/index.md:270
-#, fuzzy
-#| msgid "![Screenshot of a CardsGridView](cardsgridview.png)"
-msgid ""
-"![Screenshot of a CardsGridView where each card occupies the same amount of "
-"space in a grid](/docs/getting-started/kirigami/components-card/"
-"cardsgridview.png)"
 msgstr "![Zrzut ekranu CardsGridView](cardsgridview.png)"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
@@ -9754,6 +9684,74 @@ msgid ""
 msgstr ""
 "Rozmiar czcionki [wyglądu](docs:kirigami2;Theme) Kirigami jest dostępny jako "
 "`Kirigami.Theme.defaultFont.pointSize` w twojej aplikacji."
+
+#~ msgid "CardsGridView"
+#~ msgstr "CardsGridView"
+
+#, fuzzy
+#~| msgid ""
+#~| "Use a [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
+#~| "CardsGridView) to display cards in a grid."
+#~ msgid ""
+#~ "Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display "
+#~ "cards in a grid."
+#~ msgstr ""
+#~ "Użyj [`Kirigami.CardsGridView`](docs:kirigami2;org::kde::kirigami::"
+#~ "CardsGridView), aby wyświetlić karty w siatce."
+
+#, fuzzy
+#~| msgid ""
+#~| "Its behavior is the same as a `Kirigami.CardsLayout`, and it allows "
+#~| "cards to be put in one or two columns depending on the available width."
+#~ msgid ""
+#~ "Its behavior is the same as a [CardsLayout](docs:kirigami2;CardsLayout), "
+#~ "and it allows cards to be put in one or two columns depending on the "
+#~ "available width."
+#~ msgstr ""
+#~ "Jego zachowanie jest takie same jak `Kirigami.CardsLayout` i umożliwia "
+#~ "umieszczenie kart w jednej lub dwóch kolumnach w zależności od dostępnej "
+#~ "szerokości."
+
+#, fuzzy
+#~| msgid ""
+#~| "CardsGridView has the limitation that every card must have the same "
+#~| "exact height, so `cellHeight` must be manually set to a value for which "
+#~| "the content must fit for every child card."
+#~ msgid ""
+#~ "[CardsGridView](docs:kirigami2;CardsGridView) has the limitation that "
+#~ "every card must have the same exact height, so [cellHeight](https://doc."
+#~ "qt.io/qt-6/qml-qtquick-gridview.html#cellHeight-prop) must be manually "
+#~ "set to a value for which the content must fit for every child card."
+#~ msgstr ""
+#~ "CardsGridView ma to ograniczenie, że każda karta musi mieć dokładnie tę "
+#~ "samą wysokość, więc `cellHeight` trzeba ustawić ręcznie na wartość, dla "
+#~ "której treść musi zmieścić się dla każdej karty podrzędnej."
+
+#, fuzzy
+#~| msgid ""
+#~| "If possible use `Kirigami.CardsGridView` only when you need to "
+#~| "instantiate many cards. If you are only going to instantiate a few "
+#~| "cards, opt for a `Kirigami.CardsLayout` with a `Repeater` instead."
+#~ msgid ""
+#~ "If possible use [CardsGridView](docs:kirigami2;CardsGridView) only when "
+#~ "you need to instantiate many cards. If you are only going to instantiate "
+#~ "a few cards, opt for a [CardsLayout](docs:kirigami2;CardsLayout) with a "
+#~ "[Repeater](docs:qtquick;QtQuick.Repeater) instead."
+#~ msgstr ""
+#~ "Jeśli to możliwe, to używaj tylko `Kirigami.CardsGridView`, gdy "
+#~ "potrzebujesz stworzyć wiele kart. Jeśli potrzebujesz tylko kilku kart, to "
+#~ "użyj `Kirigami.CardsLayout` ze składnikiem `Repeater`."
+
+#~ msgid "Model with the following roles: text, actions and image"
+#~ msgstr "Model o następujących rolach: text, actions oraz image"
+
+#, fuzzy
+#~| msgid "![Screenshot of a CardsGridView](cardsgridview.png)"
+#~ msgid ""
+#~ "![Screenshot of a CardsGridView where each card occupies the same amount "
+#~ "of space in a grid](/docs/getting-started/kirigami/components-card/"
+#~ "cardsgridview.png)"
+#~ msgstr "![Zrzut ekranu CardsGridView](cardsgridview.png)"
 
 #~ msgid ""
 #~ "Since most of the heavy lifting is done by the first file, this one is a "
