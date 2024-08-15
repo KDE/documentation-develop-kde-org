@@ -15,7 +15,7 @@ Show something actionable when the app is first launched, and guide the user thr
 
 Examples of guided workflows:
 
-- In a content creation app, show a blank canvas if it's obvious how to add content to it. This works well in writing and artistic apps. If the content created in the app is more complex than an untrained user would understand (e.g circuit design or 3D modeling), prompt the user to go through a tutorial or new content creation wizard so they can get up to speed quickly.
+- In a content creation app, show a blank canvas if it's obvious how to add content to it. This works well in writing and artistic apps. If the content created in the app is more complex than an untrained user would understand (e.g. circuit design or 3D modeling), prompt the user to go through a tutorial or new content creation wizard so they can get up to speed quickly.
 - In a content consumption app, show a placeholder message to open a file, point to a folder full of files, or otherwise get the user's content into the app. If there are no privacy concerns, show a list or grid of recently-accessed content.
 - In an app like a chat or email client that's largely a front-end for an online service, show a placeholder message briefly introducing the service and prompting the user to log into their account for it, or create one. Remember the account's credentials using [KWallet](https://api.kde.org/frameworks/kwallet/html/classKWallet_1_1Wallet.html) and log the user in automatically on subsequent launches.
 - In a utility app, show the UI for the primary function as simply and obviously as possible without making the user configure anything or hunt for the “do it” button.
@@ -34,7 +34,7 @@ Don't ask the user to express preferences or make decisions about optional setti
 
 
 ## Optimize common workflows
-Don't make the user do unnecessary work to use your app. Anticipate what the user is likely to do next and offer that. Examples:
+Don't make the user do unnecessary work to use your app. Anticipate what the user is likely to do next and offer that. For example:
 
 - In cases where the user needs to choose a device to use from a set of many, pre-select the last-used device or the one most likely to be useful, instead of asking the user to explicitly choose a device every time before they can proceed. If there is only one available device, skip this step entirely.
 - When the user asks to compose a new email, if the clipboard's top item is an email address, pre-populate the “To:” field with that address.
@@ -55,7 +55,7 @@ Determine which functionality is most important to your app and keep it visible 
 
 
 ## Optimize launch time and UI responsiveness
-Make your app lighting fast or new users will lose interest quickly.
+Make your app lightning fast or new users will lose interest quickly.
 
 Display a progress indicator for tasks that take longer than a second. If the progress is inherently indeterminate, use a [QtQuick.Controls.BusyIndicator](https://doc.qt.io/qt-6/qml-qtquick-controls-busyindicator.html); otherwise use [Kirigami.LoadingPlaceholder](https://api.kde.org/frameworks/kirigami/html/classLoadingPlaceholder.html) for progress that is always determinate or can vary between determinate and indeterminate.
 
@@ -63,7 +63,7 @@ Prefer determinate progress indication when an exact count of remaining tasks or
 
 
 ## Be consistent
-New users learn software by relying on consistency-based visual cues from other software: what a button looks like and how it behaves, where menus can be found, what sidebars are used for, and so on. If they use other KDE apps, they've developed a general sense of “how KDE apps work.” Make use of this knowledge! Other similar well-designed apps are a good precedent to follow.
+New users learn software by relying on consistent visual cues from other software: what a button looks like and how it behaves, where menus can be found, what sidebars are used for, and so on. If they use other KDE apps, they've developed a general sense of “how KDE apps work.” Make use of this knowledge! Other similar well-designed apps are a good precedent to follow.
 
 Avoid custom styling and minimize the use of custom components. Adhere to standards:
 
