@@ -46,9 +46,9 @@ And open http://localhost:1313
 
 ## Extract icon metadata
 
-Data for the icon galleries (i.e. `/frameworks/breeze-icons/`) must extracted via `scripts/icon_extractor.py`.
+Data for the icon galleries (i.e. `/frameworks/breeze-icons/`) must be extracted via `scripts/icon_extractor.py`.
 The script is configured with the correct paths for this repository and therefore may be executed without additional arguments.
-It expects breeze-icons and oxygen-icons to be installed on the system (base install path can be configure, see below). If icons are not found, they will be fetched.
+It expects breeze-icons and oxygen-icons to be installed on the system (the base install path can be configured, see below). If icons are not found, they will be fetched.
 
 ```
 usage: icon_extractor.py [-h] [-i INPUT_BASE_DIR] [-j OUTPUT_METADATA_DIR] [-d OUTPUT_ICONS_DIR] [-w WORK_DIR] [-p] [-v]
