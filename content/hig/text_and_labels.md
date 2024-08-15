@@ -167,6 +167,7 @@ Many or even most users won't be using your software in English, so keep transla
 
 - Leave enough room in your UI for strings to become 50% longer or more when translated into languages with longer text than English.
 - Respect system-wide locale settings for units, date and time formats, etc.
+- Use the [ki18n guidelines](https://api.kde.org/frameworks/ki18n/html/prg_guide.html) to write localization-friendly English text.
 - Use the [i18nc()](https://api.kde.org/frameworks/ki18n/html/prg_guide.html#good_ctxt) function to provide translation context to your strings, and use [KUIT markup](https://api.kde.org/frameworks/ki18n/html/prg_guide.html#kuit_tags) instead of HTML.
 - Use the [i18ncp()](https://api.kde.org/frameworks/ki18n/html/prg_guide.html#gen_usage) function for any text that refers to a number, as plurals are handled differently in different languages.
 - Test your app in right-to-left mode by running it in Arabic with `LANGUAGE=ar_AR [app_executable]`. Even if you can't read the words, make sure everything has reversed properly and there's enough room for the text.
@@ -187,10 +188,13 @@ Use appropriate Unicode symbols rather than handmade approximations. This makes 
 
 - `…` (`U+2026`) instead of `...` anywhere ellipses are used
 - `→` (`U+2192`) instead of `->`
-- `÷` (`U+00F7`) and `×` (`U+00D7`) instead of `/` and `x` in mathematical expressions
+- `÷` (`U+00F7`), `×` (`U+00D7`), and `−` (`U+00D7`) instead of `/`, `x`, and `-` in mathematical expressions; e.g. `−1`, `2×`, `2×2`, `10÷5` etc. (applicable for other mathematical operators as well)
+- ` × ` (`U+00D7`) instead of `x` for dimensions; e.g. `1920 × 1080`, instead of `1920x1080`
 - `“` (`U+201C`) and `”` (`U+201D`) instead of `"` for quotations
 - `’` (`U+2019`) instead of `'` for apostrophes
-- ` — ` (`U+2014`) instead of `-`, ` - `, or `--` for [interjections](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use).
+- `–` (`U+2013`) instead of `-` for [date ranges](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use); e.g. `2020–2024`
+- ` — ` (`U+2014`) instead of `-`, ` - `, or `--` for [interjections](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use)
 - `&` (`U+0026`) instead of the word “and” to join sets of exactly two items, e.g. “Input & Output”
+- `©` (`U+00A9`) `™` (`U+2122`), and `®` (`U+00AE`); instead of `(C)`, `TM`, and `(R)`
 
-KDE's [KCharSelect](https://apps.kde.org/kcharselect) app can be used to find these and other symbols.
+KDE’s [KCharSelect](https://apps.kde.org/kcharselect) app can be used to find these and other symbols. If you suspect there might be a dedicated Unicode symbol for the expression you want to include (which there probably is), please look it up first!
