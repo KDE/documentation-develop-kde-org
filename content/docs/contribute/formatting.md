@@ -296,13 +296,21 @@ We have tooling that parses through shortcodes.
 
 Adding a line between shortcodes (for example, two alerts) ensures that no parsing error occurs.
 
+Also, keep a new line around both opening and closing part of shortcode:
+
 ```html
+Some normal text.
+
 {{</* alert title="First note" color="info" */>}}
+
 This is the first alert.
+
 {{</* /alert */>}}
 
 {{</* alert title="Second note" color="info" */>}}
+
 This is the second alert. Notice the line between alerts.
+
 {{</* /alert */>}}
 ```
 
@@ -446,3 +454,26 @@ If the component you want to link to wasn't added to `scripts/doxygen_integratio
  - ```markdown
    [Label](docs:qtquickcontrols;QtQuick.Controls.Label)
    ```
+
+## White space
+
+In the body of the article, separate special blocks (lists, code blocks, alerts, tips, warnings etc.) from normal text with an empty line.
+
+Avoid:
+
+````
+The code to say hello:
+```
+echo "Hello"
+```
+````
+
+Do:
+
+````
+The code to say hello:
+
+```
+echo "Hello"
+```
+````
