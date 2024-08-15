@@ -22,15 +22,15 @@ See the following table for how to express errors to the user, in decreasing ord
 Message type                                                                        | When to use
 ------------------------------------------------------------------------------------|-------------
 None; the error condition is made impossible or the software recovers automatically | Always preferred
-Description of what went wrong with some kind of of “Fix it” button                 | When the “Fix it” action is not universally desirable or has consequences the user must be notified about
+Description of what went wrong with some kind of “Fix it” action                 | When the “Fix it” action is not universally desirable or has consequences the user must be notified about
 Description of what went wrong and how the user can proceed                         | When it's technically infeasible to offer a “Fix it” action
 Only a description of what went wrong                                               | Never
 Only technical gibberish                                                            | Never ever
 Silent failure                                                                      | Never ever ever
 
-**All error messages must be actionable.** Tell the user in plain language what happened and what they can do to either fix it, or at least move forward somehow. Be explicit and don't assume knowledge of the system's inner workings or support resources! For example, if you expect the user to visit a support forum or submit a bug report, show a link to the appropriate location into the UI displaying the error message.
+**All error messages must be actionable.** Tell the user in plain language what happened and what they can do to either fix it, or at least move forward somehow. Be explicit and don't assume knowledge of the system's inner workings or support resources! For example, if you expect the user to visit a support forum or submit a bug report, show a link to the appropriate location in the UI displaying the error message.
 
-Ensure that failures originating with 3rd-party software or web services are communicated to the user as such. Never let the user blame your app for a problem that's outside of your control!
+Ensure that failures originating with third-party software or web services are communicated to the user as such. Never let the user blame your app for a problem that's outside of your control!
 
 
 ## Color
@@ -47,7 +47,7 @@ Don't rely on color alone to convey meaning or invite action; also use different
 Avoid sending system notifications while your app's main window is in the foreground, as they can appear where the user is not looking. Instead use one of the following:
 
 - For ignorable or low-importance messages, use [Kirigami.PassiveNotification](https://api.kde.org/frameworks/kirigami/html/classAbstractApplicationWindow.html#a8ab455ab09378a016c34f467653760e5).
-- For messages that should get the user's attention but not interrupt their current task, add a [Kirigami.InlineMessage](https://develop.kde.org/docs/getting-started/kirigami/components-inlinemessages/). If the message's scope is specific to the whole page or application, add it into the page header with the [position](https://api.kde.org/frameworks/kirigami/html/classorg_1_1kde_1_1kirigami_1_1templates_1_1InlineMessage.html#a2711f84c2a4c7f984a0be88cd4e95596) property set to `InlineMessage.Position.Header`.
+- For messages that should get the user's attention but not interrupt their current task, add a [Kirigami.InlineMessage](https://develop.kde.org/docs/getting-started/kirigami/components-inlinemessages/). If the message's scope is specific to the whole page or application, add it to the page header with the [position](https://api.kde.org/frameworks/kirigami/html/classorg_1_1kde_1_1kirigami_1_1templates_1_1InlineMessage.html#a2711f84c2a4c7f984a0be88cd4e95596) property set to `InlineMessage.Position.Header`.
 
 
 ## System notifications
