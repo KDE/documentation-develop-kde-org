@@ -57,7 +57,7 @@ Size of icons in list items with subtitles                                      
 
 
 ## Common layouts and responsiveness
-KDE apps commonly consist of layout elements such as main content area, a sidebar used for navigation, a toolbar displaying actions contextually relevant to what's shown in the content view, a menu of globally-scoped actions, and more.
+KDE apps commonly consist of layout elements such as a main content area, a sidebar used for navigation, a toolbar displaying actions contextually relevant to what's shown in the content view, a menu of globally-scoped actions, and more.
 
 These layout elements must adapt fluidly to diverse screen sizes and window shapes. Even on the desktop, users may resize your app's window to be small and narrow. Adapt the app's window content in sane and sensible ways when maximized, tiled, or otherwise used at a different size or shape than how it was originally designed.
 
@@ -70,7 +70,7 @@ Sidebar                      | Leading the content area  | Visible on demand in 
 Contextual preview/tool view | Trailing the content area | Visible on demand in the trailing position
 Menubar                      | Above the toolbar         | Hamburger menu button on the toolbar
 Navigation tab bar           | Above the content area    | Below the content area
-Status Bar                   | Below the content area    | Omitted
+Status bar                   | Below the content area    | Omitted
 
 [Kirigami.GlobalDrawer](https://develop.kde.org/docs/getting-started/kirigami/components-drawers/#global-drawer) is a useful component for convergent apps. It looks like a standard sidebar, and can be made always visible in widescreen/desktop mode by setting `modal: false`. In narrow/mobile mode, users pull it out on demand. [Kirigami.ContextDrawer](https://develop.kde.org/docs/getting-started/kirigami/components-drawers/#context-drawers) is the same but for contextual actions relevant only for individual pages.
 
@@ -79,7 +79,7 @@ Desktop/laptop apps can be adapted to work on tablets and 2-in-1 laptops in tabl
 {{< alert title="Note" color="info" >}}
 Detect that the app is running in tablet mode  by reading the value of [Kirigami.Settings.tabletMode](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1Settings.html#ad0e5d3914e8a36983e44a3bd35a9528f). Enable this mode for testing purposes on System Settings' General Behavior page.
 
-Detect that the app is running on a mobile phone by reading the value of [Kirigami.Settings.isMobile](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1Settings.html#abae81b4f287d9a96a44e1953f9833596). Set the `QT_QUICK_CONTROLS_MOBILE=1` environment variable to run your app in a simulated mobile mode.
+Detect that the app is running on a mobile phone by reading the value of [Kirigami.Settings.isMobile](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1Settings.html#abae81b4f287d9a96a44e1953f9833596). Set the `QT_QUICK_CONTROLS_MOBILE=1` environment variable to test your app in a simulated mobile mode.
 {{< /alert >}}
 
 In addition, offer a good experience for laptop users by keeping these points in mind:
@@ -129,9 +129,9 @@ In a QtWidgets app, use [KHamburgerMenu](https://api.kde.org/frameworks/kconfigw
 ## Navigation
 Strive to minimize navigation as a chore for users to succeed at before they can get to what they want. The best navigational flow is nonexistent, because everything is provided to the user as they need it.
 
-Linear navigation work works well for apps that have a step-by-step workflow with clear starting and ending points. Use the standard [PageStack](https://develop.kde.org/docs/getting-started/kirigami/components-pagerow_pagestack/) mechanism built into Kirigami for this navigation model, with breadcrumbs and back/forward buttons in the toolbar for navigation.
+Linear navigation works well for apps that have a step-by-step workflow with clear starting and ending points. Use the standard [PageStack](https://develop.kde.org/docs/getting-started/kirigami/components-pagerow_pagestack/) mechanism built into Kirigami for this navigation model, with breadcrumbs and back/forward buttons in the toolbar for navigation.
 
-For apps with multiple destinations not arranged in a linear flow, implement a dedicated navigational control to let the user jump from one destination to another. With 5 or fewer destinations, use a [Kirigami.NavigationTabBar](https://api.kde.org/frameworks/kirigami/html/classNavigationTabBar.html).
+For apps with multiple destinations not arranged in a linear flow, implement a dedicated navigational control to let the user jump from one destination to another. With five or fewer destinations, use a [Kirigami.NavigationTabBar](https://api.kde.org/frameworks/kirigami/html/classNavigationTabBar.html).
 
 <!-- TODO: Picture of KClock -->
 
