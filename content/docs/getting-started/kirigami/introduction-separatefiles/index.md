@@ -12,7 +12,7 @@ aliases:
 
 For the first time, we will be separating some of our components into their own QML files. If we keep adding things to `Main.qml`, it's going to quickly become hard to tell what does what, and we risk muddying our code.
 
-In this tutorial, we will be splitting the code in `Main.qml` into `Main.qml`, `AddEditDialog.qml` and `KountdownDelegate.qml`.
+In this tutorial, we will be splitting the code in `Main.qml` into `Main.qml`, `AddDialog.qml` and `KountdownDelegate.qml`.
 
 Additionally, even when spreading code between multiple QML files, the amount of files in real-life projects can get out of hand. A common solution to this problem is to logically separate files into different folders. We will take a brief look at three common approaches seen in real projects, and implement one of them:
 
@@ -34,7 +34,7 @@ kirigami-tutorial/
     ├── CMakeLists.txt
     ├── main.cpp
     ├── Main.qml
-    ├── AddEditDialog.qml
+    ├── AddDialog.qml
     └── KountdownDelegate.qml
 ```
 
@@ -53,7 +53,7 @@ kirigami-tutorial/
     ├── main.cpp
     └── qml/
         ├── Main.qml
-        ├── AddEditDialog.qml
+        ├── AddDialog.qml
         └── KountdownDelegate.qml
 ```
 
@@ -77,7 +77,7 @@ kirigami-tutorial/
     ├── Main.qml
     └── components/
         ├── CMakeLists.txt
-        ├── AddEditDialog.qml
+        ├── AddDialog.qml
         └── KountdownDelegate.qml
 ```
 
@@ -129,23 +129,23 @@ If we move the code to a separate files, then, there is no point in leaving it e
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/KountdownDelegate.qml" highlight="qml" >}}
 
-Our dialog with `id: addDialog` is not enveloped in a Component, and it is not a component that is visible by default, so the code can be copied as is into the `AddEditDialog.qml`:
+Our dialog with `id: addDialog` is not enveloped in a Component, and it is not a component that is visible by default, so the code can be copied as is into the `AddDialog.qml`:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/AddEditDialog.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/AddDialog.qml" highlight="qml" >}}
 
 With the code split, `Main.qml` thus becomes much shorter:
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/Main.qml" highlight="qml" >}}
 
-We now have two extra QML files, `AddEditDialog.qml` and `KountdownDelegate`, and we need to find some way of using them in `Main.qml`. The way to add the contents of the new files to `Main.qml` is by *instantiating* them.
+We now have two extra QML files, `AddDialog.qml` and `KountdownDelegate`, and we need to find some way of using them in `Main.qml`. The way to add the contents of the new files to `Main.qml` is by *instantiating* them.
 
-`AddEditDialog.qml` becomes `AddEditDialog {}`:
+`AddDialog.qml` becomes `AddDialog {}`:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/Main.qml" highlight="qml" start=28 lines=3 >}}
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/Main.qml" highlight="qml" start=31 lines=3 >}}
 
 `KountdownDelegate.qml` becomes `KountdownDelegate {}`:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/Main.qml" highlight="qml" start=44 lines=5 >}}
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/Main.qml" highlight="qml" start=47 lines=5 >}}
 
 Most cases you have seen of a component started with uppercase and followed by brackets were instantiations of a QML component. This is why our new QML files need to start with an uppercase letter.
 

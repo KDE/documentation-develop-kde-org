@@ -92,7 +92,7 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 id: addAction
                 // Name of icon associated with the action
-                icon.name: "list-add"
+                icon.name: "list-add-symbolic"
                 // Action text, i18n function returns translated string
                 text: i18nc("@action:button", "Add kountdown")
                 // What to do when triggering the action

@@ -97,6 +97,7 @@ Kirigami.ApplicationWindow {
             Controls.TextField {
                 id: descriptionField
                 Kirigami.FormData.label: i18nc("@label:textbox", "Description:")
+                placeholderText: i18n("Optional")
                 // Again, it moves the focus to the next field
                 onAccepted: dateField.forceActiveFocus()
             }
@@ -159,7 +160,7 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 id: addAction
                 // Name of icon associated with the action
-                icon.name: "list-add"
+                icon.name: "list-add-symbolic"
                 // Action text, i18n function returns translated string
                 text: i18nc("@action:button", "Add kountdown")
                 // What to do when triggering the action

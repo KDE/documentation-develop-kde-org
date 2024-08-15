@@ -7,6 +7,9 @@ import org.kde.tutorial.components
 Kirigami.ApplicationWindow {
     id: root
 
+    width: 600
+    height: 400
+
     title: i18nc("@title:window", "Day Kountdown")
 
     globalDrawer: Kirigami.GlobalDrawer {
@@ -25,8 +28,8 @@ Kirigami.ApplicationWindow {
         id: kountdownModel
     }
 
-    AddEditDialog {
-        id: addEditDialog
+    AddDialog {
+        id: addDialog
     }
 
     pageStack.initialPage: Kirigami.ScrollablePage {
@@ -35,9 +38,9 @@ Kirigami.ApplicationWindow {
         actions: [
             Kirigami.Action {
                 id: addAction
-                icon.name: "list-add"
+                icon.name: "list-add-symbolic"
                 text: i18nc("@action:button", "Add kountdown")
-                onTriggered: addEditDialog.open()
+                onTriggered: addDialog.open()
             }
         ]
 

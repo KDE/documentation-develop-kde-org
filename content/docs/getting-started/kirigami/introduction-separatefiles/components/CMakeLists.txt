@@ -7,7 +7,7 @@ ecm_add_qml_module(kirigami-hello-components
 
 ecm_target_qml_sources(kirigami-hello-components
     SOURCES
-    AddEditDialog.qml
+    AddDialog.qml
     KountdownDelegate.qml
 )
 

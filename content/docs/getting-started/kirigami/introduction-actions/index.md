@@ -42,7 +42,7 @@ pageStack.initialPage: Kirigami.ScrollablePage {
     actions: [
         Kirigami.Action {
             id: addAction
-            icon.name: "list-add"
+            icon.name: "list-add-symbolic"
             text: i18nc("@action:button", "Add kountdown")
             onTriggered: kountdownModel.append({
                 name: "Kirigami Action added card!",
@@ -114,7 +114,7 @@ Kirigami.ApplicationWindow {
         actions: [
             Kirigami.Action {
                 text: i18n("Quit")
-                icon.name: "gtk-quit"
+                icon.name: "application-exit-symbolic"
                 shortcut: StandardKey.Quit
                 onTriggered: Qt.quit()
             }

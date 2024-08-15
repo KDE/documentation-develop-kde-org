@@ -177,6 +177,14 @@ Once we save our files and build our program, we'll be able to add our own custo
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-dialogs/Main.qml" highlight="qml" start=26 lines=3 >}}
 
+Secondly now that we have an actual date to play around with, we can calculate the time until said date:
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-dialogs/Main.qml" highlight="qml" start=47 lines=4 >}}
+
+And thirdly increase the window size so that we have more room for our new cards:
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-dialogs/Main.qml" highlight="qml" start=9 lines=2 >}}
+
 Much nicer.
 
 ## Our app so far
