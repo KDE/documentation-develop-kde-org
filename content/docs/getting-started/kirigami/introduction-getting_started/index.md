@@ -139,6 +139,12 @@ It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Rever
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/org.kde.tutorial.desktop" highlight="ini" >}}
 
+{{< alert title="Note" color="info" >}}
+
+Window and taskbar icons will work in a Wayland session only if apps' desktop files are placed in `~/.local/share/applications` or `/usr/share/applications`. To get icons working in this tutorial, either copy the app's desktop file there or switch to a development session as instructed in [kdesrc-build tutorial](docs/getting-started/building/kdesrc-build-compile/). Some KDE applications might have working icons if they were already installed on the system.
+
+{{< /alert >}}
+
 ### CMakeLists.txt
 
 `CMakeLists.txt` files are needed to use KDE's build system of choice, [CMake](https://cmake.org/). Our `kirigami-tutorial/CMakeLists.txt` file is going to specify some of our application's characteristics. It also includes some of the dependencies we need in order to compile our project.
