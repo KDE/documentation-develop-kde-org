@@ -18,6 +18,24 @@ Instead, we'll be using a dialog.
 
 ![Dialog appearing in the middle of the application](dialog.webp)
 
+## Opening the dialog
+
+```qml
+pageStack.initialPage: Kirigami.ScrollablePage {
+    // ...
+    actions: [
+        Kirigami.Action {
+            id: addAction
+            icon.name: "list-add"
+            text: i18nc("@action:button", "Add kountdown")
+            onTriggered: addDialog.open()
+        }
+    ]
+}
+```
+
+First we edit the action from the previous tutorial: just a [Kirigami.Action](docs:kirigami2;Action) that triggers the dialog's [open()](docs:qtquickcontrols;QtQuick.Controls.Popup::open) function.
+
 ## Countdown-adding dialogs
 
 The new component we add is a [Kirigami.Dialog](docs:kirigami2;Dialog). Dialogs appear at the center of the window and can be used to provide extra information relevant to the current content. They can't be moved, but they adapt their own size to the window.
@@ -154,21 +172,6 @@ For our required name field, all we need to do is to check whether the field tex
 Then, the [append()](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel.html#append-method) method of our `kountdownModel` list model adds a JavaScript object including the properties we have provided.
 
 Lastly, we make sure to clear the text fields by setting their [text](https://doc.qt.io/qt-6/qml-qtquick-textinput.html#text-prop) properties to an empty string, then [close()](docs:qtquickcontrols;QtQuick.Controls.Popup::close) it.
-
-## Opening the dialog
-
-```qml
-actions: [
-    Kirigami.Action {
-        id: addAction
-        icon.name: "list-add"
-        text: i18nc("@action:button", "Add kountdown")
-        onTriggered: addDialog.open()
-    }
-]
-```
-
-Adding the button to open the dialog is much simpler: just a [Kirigami.Action](docs:kirigami2;Action) that triggers the dialog's [open()](docs:qtquickcontrols;QtQuick.Controls.Popup::open) function.
 
 Once we save our files and build our program, we'll be able to add our own custom countdowns! We can make one last touch to improve the interface, namely remove the dummy countdown we had in the previous lessons:
 
