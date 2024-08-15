@@ -141,7 +141,7 @@ It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Rever
 
 {{< alert title="Note" color="info" >}}
 
-Window and taskbar icons will work in a Wayland session only if apps' desktop files are placed in `~/.local/share/applications` or `/usr/share/applications`. To get icons working in this tutorial, either copy the app's desktop file there or switch to a development session as instructed in [kdesrc-build tutorial](docs/getting-started/building/kdesrc-build-compile). Some KDE applications might have working icons if they were already installed on the system.
+Window and taskbar icons will work in a Wayland session only if apps' desktop files are placed in `~/.local/share/applications` or `/usr/share/applications`. To get icons working in this tutorial, either copy the app's desktop file there or switch to a development session as instructed in [kdesrc-build tutorial](/docs/getting-started/building/kdesrc-build-compile). Some KDE applications might have working icons if they were already installed on the system.
 
 {{< /alert >}}
 
