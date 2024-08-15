@@ -53,7 +53,7 @@ Avoid the use of acronyms, as many users will not know what they mean. Only use 
 - URL → Link
 - RAM → Memory
 
-This guideline does not apply to functionality only ever referred to via its acronym (e.g “USB”), or in highly technical software where the user is expected to be familiar with common terminology. These are exceptions, not the rule.
+This guideline does not apply to functionality only ever referred to via its acronym (e.g. “USB”), or in highly technical software where the user is expected to be familiar with common terminology. These are exceptions, not the rule.
 
 When you do use an acronym, capitalize all the letters.
 
@@ -87,7 +87,7 @@ Write labels for buttons and menu items to represent *actions* or *locations*:
 - **An action makes something happen,** and begins with a verb in the imperative mood appropriate to describe the action. If the action is complex and requires additional user input before it completes (most commonly because it opens a dialog that prompts the user to make a further decision), end its label with an ellipsis. Use the real “…” ellipsis character (`U+2026` in Unicode), not three periods. For labeled buttons that directly open a pop-up menu, use a downward-pointing arrow to indicate this instead of an ellipsis.
 - **A location is another page, window, or sub-menu** that opens when the user triggers the button or menu item. Match the title of the new page or window in the button or menu item label.
 
-Prefer the “action” form where the label's UI element may not otherwise look interactive—such as a toolbar with only one or two ToolButtons. In this case, the action verb helps to signal interactivity.
+Prefer the “action” form where the label's UI element may not otherwise look interactive — such as a toolbar with only one or two ToolButtons. In this case, the action verb helps to signal interactivity.
 
 Keep text for menu items and especially buttons as short as possible. Aim for three normal-sized words or fewer, or four short ones. Anything longer than "Configure Keyboard Shortcuts" is too long. A strategy for minimizing length is to omit the topic when the context makes it clear:
 
@@ -175,10 +175,10 @@ Many or even most users won't be using your software in English, so keep transla
 
 
 ## Brand names
-Each app's name is automatically a brand name; Craft it carefully!
+Each app's name is automatically a brand name; craft it carefully!
 
 - Choose something catchy, easy to remember, and fun-sounding. Avoid negative language.
-- Use only a single word, preferably one related to the app's purpose—even just tangentially.
+- Use only a single word, preferably one related to the app's purpose — even just tangentially.
 - Don't simply add a “K” onto the beginning of an existing word. It's acceptable to choose a brand name with a K inside it, or even replace a “C” with a “K” (e.g. Falkon, DigiKam), but don't force it. Not all KDE brand names need to include a K (e.g. Dolphin, Plasma, NeoChat).
 - Don't use common words like “Files” or “Photos.” If your brand name is too generic, its identity will be diluted and users will have a hard time finding it in web searches or describing it to others. It will also be difficult to distinguish from GNOME apps also installed on the system that have similar generic names.
 
