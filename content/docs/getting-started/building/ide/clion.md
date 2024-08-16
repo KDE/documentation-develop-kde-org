@@ -46,6 +46,7 @@ Ensure you have successfully built _kcalc_ following the kde-builder instruction
 
 In case you enabled `generate-clion-project-config` after you have built _kcalc_ previously, or do not want to edit your config, you can generate CLion 
 configs by running:
+
 ```
 kde-builder kcalc --no-include-dependencies --no-src --build-system-only --generate-clion-project-config
 ```
@@ -57,6 +58,7 @@ kde-builder kcalc --no-include-dependencies --no-src --build-system-only --gener
 From the CLion main menu, select **File | Open**.
 
 An "Open File or Project" dialog will show up. Choose `~/kde/src/kcalc` directory and press OK.
+
 {{< figure alt="Selecting directory in Open File or Project window" width="400px" src="open-file-or-project-directory.png" >}}
 
 <details>
@@ -64,6 +66,7 @@ An "Open File or Project" dialog will show up. Choose `~/kde/src/kcalc` director
 
 If you have not yet opened any projects, or you have disabled "Reopen projects on startup" setting, when starting CLion, you will see a "Welcome to Clion"
 window. Press the "Open" button.
+
 {{< figure alt="Open button in Welcome to Clion window" width="400px" src="open-from-welcome-to-clion-window.png" >}}
 
 In "Open or Import Project" dialog, you can also select the root CMakeLists.txt file (i.e. `~/kde/src/kcalc/CMakeLists.txt`) and choose to open it as a 
@@ -71,8 +74,11 @@ project.
 
 {{< compare >}}
 {{< figure alt="Selecting cmakelists in Open File or Project window" width="400px" src="open-file-or-project-cmakelists.png" >}}
+
 &nbsp;&nbsp;&nbsp;&nbsp;
+
 {{< figure alt="open as cmake project" width="500px" src="open-cmakelists-as-project.png" >}}
+
 {{< /compare >}}
 
 </details>
@@ -90,7 +96,7 @@ You can reach these settings later by going to **Settings | Build, Execution, De
 If the project has a `CMakePresets.json` in its root directory (KCalc does), you will see many greyed-out CMake Profiles. They are read only, and 
 disabled by default. You do not need them. Scroll the list down to be able to see the "KDE Builder cmake profile", which you want to select.
 
-The very first time you use a kde-builder generated clion project, you will need to create a toolchain named "KDE Builder toolchain".
+The very first time you use a kde-builder generated CLion project, you will need to create a toolchain named "KDE Builder toolchain".
 Press "Manage toolchains" link, and follow the next section instructions.
 
 If you have done that, proceed by pressing OK.
@@ -109,7 +115,7 @@ The "Toolchains" window will appear:
 You can reach these settings later by going to **Settings | Build, Execution, Deployment | Toolchains**.
 {{< /alert >}}
 
-* Press "+" button, and select "System" from the list.
+* Press "+" icon, and select "System" from the list.
 * In the Name field, enter exactly "KDE Builder toolchain".
 * In the CMake field, enter "cmake".
 * In the Debugger field, select "Custom GDB executable" and enter "gdb".
@@ -137,8 +143,8 @@ You can now start developing. Set a breakpoint, start a debugging session, creat
 You can install it from the store.kde.org (in the _Configure Dolphin_ choose _Context Menu_, then press _Download New Services..._ button. Search for
 _Jetbrains Dolphin Plugin_ by alex1701c).
 
-If you are using Arch Linux, you will prefer to install from
-[AUR](https://aur.archlinux.org/packages/kf6-servicemenus-jetbrains-dolphin-plugin-git).
+If you are using Arch Linux, you will prefer to install from AUR:
+[kf6-servicemenus-jetbrains-dolphin-plugin-git](https://aur.archlinux.org/packages/kf6-servicemenus-jetbrains-dolphin-plugin-git).
 
 {{< figure width="500px" src="jb-dolphin-plugin.png" >}}
 
@@ -193,12 +199,12 @@ Now when you run this configuration, the Ark will be built, but Dolphin will be 
 
 ### Use native titlebar with New UI
 
-It is possible show a normal window titlebar. For this, open the registry (double-tap Shift, search for Registry) and disable the
+It is possible to show a normal window titlebar. For this, open the registry (double-tap Shift, search for "Registry") and disable the
 property `ide.linux.hide.native.title`.
 
 ### Use KWallet for git credentials
 
-You need to enable this key in Registry: `credentialStore.linux.prefer.kwallet`. It allows to use KWallet if KWallet & SecretService are both available.
+You need to enable this key in Registry: `credentialStore.linux.prefer.kwallet`. It allows to use KWallet if KWallet and SecretService are both available.
 
 {{< alert title="Note" color="info" >}}
 See the developer documentation in KDE Builder for details about [config generation for CLion](https://kde-builder.kde.org/en/developer/ide-configs-generation.html#clion).
