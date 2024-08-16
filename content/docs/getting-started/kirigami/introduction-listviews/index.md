@@ -17,10 +17,13 @@ By the end of this section you'll have a neat-looking app.
 If you've ever used [Discover](https://apps.kde.org/discover/), [NeoChat](https://apps.kde.org/neochat/), or Plasma's System Settings, you will have come across a [ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html). Quite simply, it lets you display data on a list.
 
 ```qml
-Kirigami.CardsListView {
-    id: cardsView
-    model: kountdownModel
-    delegate: kountdownDelegate
+pageStack.initialPage: Kirigami.ScrollablePage {
+    // ...
+    Kirigami.CardsListView {
+       id: cardsView
+        model: kountdownModel
+        delegate: kountdownDelegate
+    }
 }
 ```
 
@@ -33,14 +36,18 @@ We're using [Kirigami.CardsListView](docs:kirigami2;CardsListView), which is a [
 ### Model
 
 ```qml
-ListModel {
-    id: kountdownModel
-    // Each ListElement is an element on the list, containing information
-    ListElement {
-        name: "Dog birthday!!"
-        description: "Big doggo birthday blowout."
-        date: 100
+Kirigami.ApplicationWindow {
+    // ...
+    ListModel {
+        id: kountdownModel
+        // Each ListElement is an element on the list, containing information
+        ListElement {
+            name: "Dog birthday!!"
+            description: "Big doggo birthday blowout."
+            date: 100
+        }
     }
+    // ...
 }
 ```
 
@@ -71,26 +78,30 @@ Delegates automatically receive the properties of the [ListElements](https://doc
 The [Component](docs:qtqml;QtQml.Component) that will represent our delegate can be added inside our [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow). We will then check what each part of our delegate component does.
 
 ```qml
-Component {
-    id: kountdownDelegate
-    Kirigami.AbstractCard {
-        contentItem: Item {
-            // implicitWidth/Height define the natural width/height
-            // of an item if no width or height is specified.
-            // The setting below defines a component's preferred size based on its content
-            implicitWidth: delegateLayout.implicitWidth
-            implicitHeight: delegateLayout.implicitHeight
-            GridLayout {
-                id: delegateLayout
-                anchors {
-                    left: parent.left
-                    top: parent.top
-                    right: parent.right
-                }
-                rowSpacing: Kirigami.Units.largeSpacing
-                columnSpacing: Kirigami.Units.largeSpacing
-                columns: root.wideScreen ? 4 : 2
+Kirigami.ApplicationWindow {
+    // ...
+    Component {
+        id: kountdownDelegate
+        Kirigami.AbstractCard {
+            contentItem: Item {
+                // implicitWidth/Height define the natural width/height
+                // of an item if no width or height is specified.
+                // The setting below defines a component's preferred size based on its content
+                implicitWidth: delegateLayout.implicitWidth
+                implicitHeight: delegateLayout.implicitHeight
+                GridLayout {
+                    id: delegateLayout
+                    anchors {
+                        left: parent.left
+                        top: parent.top
+                        right: parent.right
+                    }
+                    rowSpacing: Kirigami.Units.largeSpacing
+                    columnSpacing: Kirigami.Units.largeSpacing
+                    columns: root.wideScreen ? 4 : 2
 
+<<<<<<< HEAD
+=======
                 Kirigami.Heading {
                     Layout.fillHeight: true
                     level: 1
@@ -98,31 +109,41 @@ Component {
                 }
 
                 ColumnLayout {
+>>>>>>> d7ccce02 (Improve consistency between tutorial example versions)
                     Kirigami.Heading {
-                        Layout.fillWidth: true
-                        level: 2
-                        text: name
+                        Layout.fillHeight: true
+                        level: 1
+                        text: (date < 100000) ? date : i18n("%1 days", Math.round((date-Date.now())/86400000))
                     }
-                    Kirigami.Separator {
-                        Layout.fillWidth: true
-                        visible: description.length > 0
+
+                    ColumnLayout {
+                        Kirigami.Heading {
+                            Layout.fillWidth: true
+                            level: 2
+                            text: name
+                        }
+                        Kirigami.Separator {
+                            Layout.fillWidth: true
+                            visible: description.length > 0
+                        }
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            wrapMode: Text.WordWrap
+                            text: description
+                            visible: description.length > 0
+                        }
                     }
-                    Controls.Label {
-                        Layout.fillWidth: true
-                        wrapMode: Text.WordWrap
-                        text: description
-                        visible: description.length > 0
+                    Controls.Button {
+                        Layout.alignment: Qt.AlignRight
+                        Layout.columnSpan: 2
+                        text: i18n("Edit")
+                        // onClicked: to be done... soon!
                     }
-                }
-                Controls.Button {
-                    Layout.alignment: Qt.AlignRight
-                    Layout.columnSpan: 2
-                    text: i18n("Edit")
-                    // onClicked: to be done... soon!
                 }
             }
         }
     }
+    // ...
 }
 ```
 

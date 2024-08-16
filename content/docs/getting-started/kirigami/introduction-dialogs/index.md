@@ -41,46 +41,50 @@ First we edit the action from the previous tutorial: just a [Kirigami.Action](do
 The new component we add is a [Kirigami.Dialog](docs:kirigami2;Dialog). Dialogs appear at the center of the window and can be used to provide extra information relevant to the current content. They can't be moved, but they adapt their own size to the window.
 
 ```qml
-Kirigami.Dialog {
-    id: addDialog
-    title: i18nc("@title:window", "Add kountdown")
-    standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
-    padding: Kirigami.Units.largeSpacing
-    preferredWidth: Kirigami.Units.gridUnit * 20
+Kirigami.ApplicationWindow {
+    // ...
+    Kirigami.Dialog {
+        id: addDialog
+        title: i18nc("@title:window", "Add kountdown")
+        standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+        padding: Kirigami.Units.largeSpacing
+        preferredWidth: Kirigami.Units.gridUnit * 20
 
-    // Form layouts help align and structure a layout with several inputs
-    Kirigami.FormLayout {
-        // Textfields let you input text in a thin textbox
-        Controls.TextField {
-            id: nameField
-            // Provides a label attached to the textfield
-            Kirigami.FormData.label: i18nc("@label:textbox", "Name*:")
-            // What to do after input is accepted (i.e. pressed Enter)
-            // In this case, it moves the focus to the next field
-            onAccepted: descriptionField.forceActiveFocus()
+        // Form layouts help align and structure a layout with several inputs
+        Kirigami.FormLayout {
+            // Textfields let you input text in a thin textbox
+            Controls.TextField {
+                id: nameField
+                // Provides a label attached to the textfield
+                Kirigami.FormData.label: i18nc("@label:textbox", "Name*:")
+                // What to do after input is accepted (i.e. pressed Enter)
+                // In this case, it moves the focus to the next field
+                onAccepted: descriptionField.forceActiveFocus()
+            }
+            Controls.TextField {
+                id: descriptionField
+                Kirigami.FormData.label: i18nc("@label:textbox", "Description:")
+                placeholderText: i18n("Optional")
+                // Again, it moves the focus to the next field
+                onAccepted: dateField.forceActiveFocus()
+            }
+            Controls.TextField {
+                id: dateField
+                Kirigami.FormData.label: i18nc("@label:textbox", "ISO Date*:")
+                // D means a required number between 1-9,
+                // 9 means a required number between 0-9
+                inputMask: "D999-99-99"
+                // Here we confirm the operation just like
+                // clicking the OK button
+                onAccepted: addDialog.onAccepted()
+            }
+            Controls.Label {
+                text: "* = required fields"
+            }
         }
-        Controls.TextField {
-            id: descriptionField
-            Kirigami.FormData.label: i18nc("@label:textbox", "Description:")
-            placeholderText: i18n("Optional")
-            // Again, it moves the focus to the next field
-            onAccepted: dateField.forceActiveFocus()
-        }
-        Controls.TextField {
-            id: dateField
-            Kirigami.FormData.label: i18nc("@label:textbox", "ISO Date*:")
-            // D means a required number between 1-9,
-            // 9 means a required number between 0-9
-            inputMask: "D999-99-99"
-            // Here we confirm the operation just like
-            // clicking the OK button
-            onAccepted: addDialog.onAccepted()
-        }
-        Controls.Label {
-            text: "* = required fields"
-        }
+        // The dialog logic goes here
     }
-    // The dialog logic goes here
+    // ...
 }
 ```
 
@@ -113,22 +117,25 @@ Once the user interface for the dialog is done, we need to change how it behaves
 3. Clear the input form
 
 ```qml
-// Once the Kirigami.Dialog is initialized,
-// we want to create a custom binding to only
-// make the Ok button visible if the required
-// text fields are filled.
-// For this we use Kirigami.Dialog.standardButton(button):
-Component.onCompleted: {
-    const button = standardButton(Kirigami.Dialog.Ok);
-    // () => is a JavaScript arrow function
-    button.enabled = Qt.binding( () => requiredFieldsFilled() );
-}
-onAccepted: {
-    // The binding is created, but we still need to make it
-    // unclickable unless the fields are filled
-    if (!addDialog.requiredFieldsFilled()) return;
-    appendDataToModel();
-    clearFieldsAndClose();
+Kirigami.Dialog {
+    // ...
+    // Once the Kirigami.Dialog is initialized,
+    // we want to create a custom binding to only
+    // make the Ok button visible if the required
+    // text fields are filled.
+    // For this we use Kirigami.Dialog.standardButton(button):
+    Component.onCompleted: {
+        const button = standardButton(Kirigami.Dialog.Ok);
+        // () => is a JavaScript arrow function
+        button.enabled = Qt.binding( () => requiredFieldsFilled() );
+    }
+    onAccepted: {
+        // The binding is created, but we still need to make it
+        // unclickable unless the fields are filled
+        if (!addDialog.requiredFieldsFilled()) return;
+        appendDataToModel();
+        clearFieldsAndClose();
+    }
 }
 ```
 
@@ -147,23 +154,26 @@ enabled: requiredFieldsFilled()
 The signal handler that triggers the Ok button is [onAccepted](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#accepted-signal). It remains empty and without doing anything if the required fields are filled; otherwise, it will add the input to the model and clear the dialog for the next time it is opened.
 
 ```qml
-// We check that the nameField is not empty and that the
-// dateField (which has an inputMask) is completely filled
-function requiredFieldsFilled() {
-    return (nameField.text !== "" && dateField.acceptableInput);
-}
-function appendDataToModel() {
-    kountdownModel.append({
-        name: nameField.text,
-        description: descriptionField.text,
-        date: new Date(dateField.text)
-    });
-}
-function clearFieldsAndClose() {
-    nameField.text = ""
-    descriptionField.text = ""
-    dateField.text = ""
-    addDialog.close();
+Kirigami.Dialog {
+    // ...
+    // We check that the nameField is not empty and that the
+    // dateField (which has an inputMask) is completely filled
+    function requiredFieldsFilled() {
+        return (nameField.text !== "" && dateField.acceptableInput);
+    }
+    function appendDataToModel() {
+        kountdownModel.append({
+            name: nameField.text,
+            description: descriptionField.text,
+            date: new Date(dateField.text)
+        });
+    }
+    function clearFieldsAndClose() {
+        nameField.text = ""
+        descriptionField.text = ""
+        dateField.text = ""
+        addDialog.close();
+    }
 }
 ```
 
