@@ -7,6 +7,8 @@ groups:
     key: "help"
   - name: "kdesrc-build"
     key: "kdesrc-build"
+  - name: "Manual builds"
+    key: "cmake-build"
 description: >
   Learn how to build KDE software in multiple ways.
 group: "getting-started"
@@ -20,7 +22,7 @@ There are many ways in which you can build KDE software:
 
 * [kdesrc-build]({{< ref "kdesrc-build-compile" >}})
 * [kde-builder (experimental)](https://invent.kde.org/sdk/kde-builder)
-* standalone with distro dependencies
+* [standalone with distro dependencies]({{< ref "cmake-build" >}})
 * [with containers](https://community.kde.org/Get_Involved/development/More#Develop_in_a_Linux_container)
 * with [Craft](https://community.kde.org/Craft)
 
