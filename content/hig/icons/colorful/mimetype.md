@@ -35,7 +35,7 @@ pixels.](/hig/mime-margin-32.png)
 
 ### Anatomy
 
-Colorful MIME type icons consist of two elements---the monochromatic
+Colorful MIME type icons consist of two elements — the monochromatic
 counterpart of the colorful MIME type icon overlaid on a background
 relating to the icon's type.
 
@@ -54,7 +54,7 @@ it is.](/hig/mime-base-layer.png)
 ### Base
 
 The base of a MIME type icon serves to give files of a general type a
-shared and recognisable silhouette
+shared and recognizable silhouette.
 
 #### Archives
 
@@ -127,7 +127,7 @@ The usage of Android brand colors helps users identify the icon as that
 of an Android package.
 {{< /do >}}
 {{< dont src="/hig/mime-color-dont.png" >}}
-Don't use radically different brand colors---users will not recognise the
+Don't use radically different brand colors — users will not recognize the
 icon as one of a filetype from that brand.
 {{< /dont >}}
 {{< /compare >}}

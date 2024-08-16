@@ -60,10 +60,10 @@ grid:
 
 {{< compare >}}
 {{< do src="/hig/pixel-align-do.png" >}}
-Make sure your icon is aligned to the pixel grid---use grids and guides to assist you when designing it.
+Make sure your icon is aligned to the pixel grid — use grids and guides to assist you when designing it.
 {{< /do >}}
 {{< dont src="/hig/pixel-align-dont.png" >}}
-Don't misalign your icon to the pixel grid---this makes it look blurry when scaled and can make it look wonky.
+Don't misalign your icon to the pixel grid — this makes it look blurry when scaled and can make it look wonky.
 {{< /dont >}}
 {{< /compare >}}
 

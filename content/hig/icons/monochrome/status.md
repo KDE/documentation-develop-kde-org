@@ -3,7 +3,6 @@ title: Status Icons
 aliases:
 - /hig/style/icons/monochrome/status
 ---
-============
 
 Status icons are used to indicate the status of hardware and software.
 They come in two sizes: 16px, 22px, and use the [monochrome
@@ -33,9 +32,9 @@ state.
 {{< /do >}}
 {{< dont src="/hig/status-base-dont.png" >}}
 Don't use an overly simple
-base---this makes it hard for the user to identify what an icon
+base — this makes it hard for the user to identify what an icon
 represents. Additionally, don't use more details than you need to make
-something recognizable--- this doesn't leave you room for indicating
+something recognizable — this doesn't leave you room for indicating
 states.
 {{< /dont >}}
 {{< /compare >}}
@@ -52,7 +51,7 @@ overlay with appropriately used color to clue in the user to an icon's
 status.
 {{< /do >}}
 {{< dont src="/hig/status-caution.png" >}}
-Some overlays can be hard to identify on their own---provide appropriate context to allow a
+Some overlays can be hard to identify on their own — provide appropriate context to allow a
 user to identify what a simple icon
 represents.
 {{< /dont >}}
@@ -61,11 +60,11 @@ represents.
 {{< compare >}}
 {{< do src="/hig/status-overlay-dont-color.png" >}}
 Don't exclusively rely on
-colour to indicate state---this is an accessibility problem and makes it
+colour to indicate state — this is an accessibility problem and makes it
 hard to discern state.
 {{< /do >}}
 {{< dont src="/hig/status-overlay-dont-detail.png" >}}
-Don't use too-generic details to represent state---this makes it hard for a user to identify
+Don't use too-generic details to represent state — this makes it hard for a user to identify
 what an icon's state represents.
 {{< /dont >}}
 {{< /compare >}}

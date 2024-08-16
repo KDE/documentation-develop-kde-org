@@ -29,13 +29,13 @@ determine the icon\'s corresponding location at a glance.
 {{< compare >}}
 {{< do src="/hig/mono-places-do.png" >}}
 Use a bold, descriptive, and metaphorically recognizable icon to identify
-a user's landmark and guide the user to their desired destination---international
+a user's landmark and guide the user to their desired destination — international
 icons are used instead of regional icons to better serve the diverse array of
 users that use KDE software.
 {{< /do >}}
 {{< dont src="/hig/mono-places-dont.png" >}}
 Don't use places icons based off of real locations or brands unless the
-landmark filesystem location is directly tied to that location or brand---more
-generic icons are meaningful for more users in more usecases.
+landmark filesystem location is directly tied to that location or brand — more
+generic icons are meaningful for more users in more use cases.
 {{< /dont >}}
 {{< /compare >}}

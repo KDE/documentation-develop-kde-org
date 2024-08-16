@@ -24,11 +24,11 @@ can indicate information about an action to a user.
 
 {{< compare >}}
 {{< do src="/hig/action-colour-do.png" >}}
-Use Shade Black as your icon's base--- this color is neutral and has the
+Use Shade Black as your icon's base — this color is neutral and has the
 most contrast against a white background.
 {{< /do >}}
 {{< dont src="/hig/action-colour-dont.png" >}}
-Don’t use a bright color for your icon’s base—this distracts the user
+Don’t use a bright color for your icon’s base — this distracts the user
 without adding extra information to your icon.
 {{< /dont >}}
 {{< /compare >}}
@@ -38,7 +38,7 @@ without adding extra information to your icon.
 Use red to indicate destructive actions.
 {{< /do >}}
 {{< dont src="/hig/action-colour-destructive-dont.png" >}}
-Don't use red to indicate other types of actions--- this will confuse the
+Don't use red to indicate other types of actions — this will confuse the
 user as to what the actions do.
 {{< /dont >}}
 {{< /compare >}}
@@ -57,7 +57,7 @@ about the action an icon represents.
 Use appropriate metaphors to indicate what an action does.
 {{< /do >}}
 {{< dont src="/hig/action-metaphor-dont.png" >}}
-Don't use inaccurate or conflicting metaphors--- this will mislead your
+Don't use inaccurate or conflicting metaphors — this will mislead your
 user and lead to frustration.
 {{< /dont >}}
 {{< /compare >}}
@@ -71,7 +71,7 @@ Screen readers can take advantage of this information to allow more
 people to use your application. Your local jurisdiction may also require
 that your application meet accessibility standards. Care should also be
 taken to reinforce information conveyed by an icon in multiple
-ways---not everyone is able to distinguish between all colors.
+ways — not everyone is able to distinguish between all colors.
 
 {{< compare >}}
 {{< do src="/hig/action-accessibility-do.png" >}}
@@ -79,7 +79,7 @@ Provide a name and description that describe what an icon's action
 does.
 {{< /do >}}
 {{< dont src="/hig/action-accessibility-dont.png" >}}
-Don't describe the icon's appearance---this is useless information that
+Don't describe the icon's appearance — this is useless information that
 will make your application harder to use.
 {{< /dont >}}
 {{< /compare >}}
@@ -90,7 +90,7 @@ Reinforce information in multiple ways to allow users with conditions
 such as colorblindness to get the message.
 {{< /do >}}
 {{< dont src="/hig/action-accessibility-color-dont.png" >}}
-Don't only rely on color to convey information--- this makes it harder
+Don't only rely on color to convey information — this makes it harder
 for users with colorblindness to distinguish two like icons apart.
 {{< /dont >}}
 {{< /compare >}}

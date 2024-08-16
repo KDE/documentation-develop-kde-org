@@ -34,7 +34,7 @@ determine the filetype at a glance.
 Use a bold and recognizable icon.
 {{< /do >}}
 {{< dont src="/hig/mono-mime-dont.png" >}}
-Don't use an overly generic icon--- this makes it hard for users to determine
+Don't use an overly generic icon — this makes it hard for users to determine
 filetype.
 {{< /dont >}}
 {{< /compare >}}

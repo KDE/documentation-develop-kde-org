@@ -23,7 +23,7 @@ Design
 
 ### Anatomy
 
-Colorful places icons consist of two elements---the monochromatic
+Colorful places icons consist of two elements — the monochromatic
 counterpart of the colorful places icon overlaid on a folder background.
 
 ![](/hig/place-anatomy.png)

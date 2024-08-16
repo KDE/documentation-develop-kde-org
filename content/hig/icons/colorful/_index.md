@@ -117,7 +117,7 @@ Don't give icons too many layers.
 
 #### Ambient Lighting
 
-Icon fills should reflect ambient lighting---go from a lighter top to a
+Icon fills should reflect ambient lighting — go from a lighter top to a
 darker bottom.
 
 {{< compare >}}

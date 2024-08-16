@@ -92,7 +92,7 @@ If in doubt, show the button's text. If the app has so many buttons visible at o
 - Reduce the length of the buttons' labels.
 - Condense related buttons into a single one that opens a menu of actions.
 
-To make a button icons-only, hide the text using the [display](https://doc.qt.io/qt-6/qml-qtquick-controls-abstractbutton.html#display-prop) property. Always set the [text](https://doc.qt.io/qt-6/qml-qtquick-controls-abstractbutton.html#text-prop) property.
+To make a button icons-only, hide the text using the [display](https://doc.qt.io/qt-6/qml-qtquick-controls-abstractbutton.html#display-prop) property. Always set the [text](https://doc.qt.io/qt-6/qml-qtquick-controls-abstractbutton.html#text-prop) property, so it can be read by screen readers.
 
 
 ## Icons for menu items and buttons with text
