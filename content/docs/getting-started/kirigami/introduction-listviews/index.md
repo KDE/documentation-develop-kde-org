@@ -100,20 +100,10 @@ Kirigami.ApplicationWindow {
                     columnSpacing: Kirigami.Units.largeSpacing
                     columns: root.wideScreen ? 4 : 2
 
-<<<<<<< HEAD
-=======
-                Kirigami.Heading {
-                    Layout.fillHeight: true
-                    level: 1
-                    text: date
-                }
-
-                ColumnLayout {
->>>>>>> d7ccce02 (Improve consistency between tutorial example versions)
                     Kirigami.Heading {
                         Layout.fillHeight: true
                         level: 1
-                        text: (date < 100000) ? date : i18n("%1 days", Math.round((date-Date.now())/86400000))
+                        text: date
                     }
 
                     ColumnLayout {
