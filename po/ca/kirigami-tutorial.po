@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-16 01:42+0000\n"
-"PO-Revision-Date: 2024-08-14 10:00+0200\n"
+"POT-Creation-Date: 2024-08-17 01:38+0000\n"
+"PO-Revision-Date: 2024-08-16 09:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -668,10 +668,10 @@ msgstr ""
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:602
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:80
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:173
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:197
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:207
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:195
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:230
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:254
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:265
 msgid "</details>\n"
 msgstr "</details>\n"
 
@@ -1456,9 +1456,16 @@ msgstr "El codi resultant en aquesta part del fitxer s'hauria de veure així:"
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:53
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:123
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:25
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:140
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:175
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:204
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:45
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:87
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:21
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:40
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:50
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:82
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:136
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:151
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:186
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:215
 msgid "..."
 msgstr "..."
 
@@ -1587,8 +1594,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:122
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:142
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:335
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:51
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:190
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:58
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:201
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:25
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:33
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:53
@@ -6501,14 +6508,14 @@ msgid "Among other Kirigami components."
 msgstr "Entre altres components del Kirigami."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:166
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:190
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:247
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:200
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:258
 msgid "Our app so far"
 msgstr "La nostra aplicació fins ara"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:168
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:192
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:249
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:202
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:260
 msgid ""
 "<details>\n"
 "<summary><b>Main.qml:</b></summary>\n"
@@ -6561,18 +6568,13 @@ msgid "Opening the dialog"
 msgstr "Obrir el diàleg"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:37
-#, fuzzy
-#| msgid ""
-#| "Adding the button to open the dialog is much simpler: just a [Kirigami."
-#| "Action](docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
-#| "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgid ""
 "First we edit the action from the previous tutorial: just a [Kirigami.Action]"
 "(docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
 "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgstr ""
-"Afegir el botó per a obrir el diàleg és molt més senzill: cal una [Kirigami."
-"Action](docs:kirigami2;Action) que activi la funció [open()](docs:"
+"Primer editarem l'acció de la guia d'aprenentatge anterior: només una "
+"[Kirigami.Action](docs:kirigami2;Action) que activi la funció [open()](docs:"
 "qtquickcontrols;QtQuick.Controls.Popup::open) del diàleg."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:39
@@ -6591,21 +6593,21 @@ msgstr ""
 "proporcionar informació addicional rellevant per al contingut actual. No es "
 "poden moure, però adapten la seva mida a la finestra."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:51
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:53
 msgid "Form layouts help align and structure a layout with several inputs"
 msgstr ""
 "Les disposicions de formulari ajuden a alinear i estructurar una disposició "
 "amb diverses entrades"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:53
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:55
 msgid "Textfields let you input text in a thin textbox"
 msgstr "Els camps de text permeten introduir text en un quadre de text fi"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:56
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:58
 msgid "Provides a label attached to the textfield"
 msgstr "Proporciona una etiqueta adjuntada al camp de text"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:58
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:60
 msgid ""
 "What to do after input is accepted (i.e. pressed Enter) In this case, it "
 "moves the focus to the next field"
@@ -6613,26 +6615,26 @@ msgstr ""
 "Què s'ha de fer després d'acceptar l'entrada (p. ex. es prem Retorn) En "
 "aquest cas, mou el focus al camp següent"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:66
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:68
 msgid "Again, it moves the focus to the next field"
 msgstr "De nou, mou el focus al camp següent"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:72
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:74
 msgid ""
 "D means a required number between 1-9, 9 means a required number between 0-9"
 msgstr ""
 "D significa un nombre necessari entre 1-9, 9 significa un nombre necessari "
 "entre 0-9"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:75
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:77
 msgid "Here we confirm the operation just like clicking the OK button"
 msgstr "Aquí confirmem l'operació igual que fer clic al botó D'acord"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:83
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:85
 msgid "The dialog logic goes here"
 msgstr "La lògica del diàleg va aquí"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:87
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:91
 msgid ""
 "Dialogs by default have a [header](https://doc.qt.io/qt-6/qml-qtquick-"
 "controls-dialog.html#header-prop) and a [footer](https://doc.qt.io/qt-6/qml-"
@@ -6646,7 +6648,7 @@ msgstr ""
 "Dialog)."
 
 # skip-rule: kct-dialog
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:89
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:93
 msgid ""
 "The header by default includes a [title](https://doc.qt.io/qt-6/qml-qtquick-"
 "controls-dialog.html#title-prop) and a close button that can be disabled "
@@ -6662,7 +6664,7 @@ msgstr ""
 "anul·lar amb [standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-"
 "dialog.html#standardButtons-prop)."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:91
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:95
 msgid ""
 "We first set it to show an \"Ok\" button and a \"Cancel\" button, add some "
 "padding, and add a reasonable [preferredWidth](docs:kirigami2;Dialog::"
@@ -6676,7 +6678,7 @@ msgstr ""
 "diàleg, que pot augmentar si cal. Podem utilitzar [Kirigami.Units](docs:"
 "kirigami2;Kirigami::Platform::Units) que tornarem a revisar més endavant."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:93
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:97
 msgid ""
 "Then we come to a [Kirigami.FormLayout](docs:kirigami2;FormLayout). Unlike a "
 "[ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
@@ -6689,7 +6691,7 @@ msgstr ""
 "centrada, amb etiquetes opcionals. Com el nom indica, s'utilitza per crear "
 "formularis d'entrada."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:95
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:99
 msgid ""
 "These form layouts are designed to work with a variety of different input "
 "types, though we're sticking to simple [Controls.Textfield](docs:"
@@ -6701,20 +6703,20 @@ msgstr ""
 "senzilles [Controls.Textfield](docs:qtquickcontrols;QtQuick.Controls."
 "TextField) que ens brinden quadres de text senzills per a escriure-hi."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:97
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:101
 msgid "We have created Textfield elements that act as:"
 msgstr "Hem creat elements Textfield que actuen com:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:99
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:103
 msgid "Input for the name of our countdown"
 msgstr "Entrada per al nom del nostre compte enrere"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:100
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:104
 msgid "Input for the description of our countdown"
 msgstr "Entrada per a la descripció del nostre compte enrere"
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:101
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:105
 msgid ""
 "Input for the date we are counting down towards, which must be provided in a "
 "`YYYY-MM-DD` format"
@@ -6722,7 +6724,7 @@ msgstr ""
 "Entrada per a la data cap a la qual estem comptant cap enrere, la qual s'ha "
 "de proporcionar en el format `YYYY-MM-DD`"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:103
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:107
 msgid ""
 "Within each of these [Controls.Textfield](docs:qtquickcontrols;QtQuick."
 "Controls.TextField) elements, we are setting a [Kirigami.FormData.label]"
@@ -6736,7 +6738,7 @@ msgstr ""
 "permet definir etiquetes per a ells. El formulari presentarà les etiquetes "
 "correctes a l'esquerra de cadascun d'aquests camps d'entrada de text."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:105
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:109
 msgid ""
 "Finally, we are also setting the [onAccepted](https://doc.qt.io/qt-6/qml-"
 "qtquick-textinput.html#accepted-signal) property to trigger the "
@@ -6753,7 +6755,7 @@ msgstr ""
 "formulari."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:107
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:111
 msgid ""
 "We have also set a property called [inputMask](https://doc.qt.io/qt-6/qml-"
 "qtquick-textinput.html#inputMask-prop) on the text field for our date. "
@@ -6769,7 +6771,7 @@ msgstr ""
 "(com ara text), restringint-lo a només la introducció de dígits, després "
 "podrem intentar analitzar-ho en un objecte de data."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:109
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:113
 msgid ""
 "Once the user interface for the dialog is done, we need to change how it "
 "behaves. For this we need three things:"
@@ -6777,34 +6779,39 @@ msgstr ""
 "Un cop feta la interfície d'usuari del diàleg, hem de canviar com es "
 "comporta. Per a això necessitem tres coses:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:111
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:115
 msgid "Show the Ok button only when the required fields are filled"
 msgstr "Mostrar el botó Ok només quan s'omplin els camps requerits"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:112
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:116
 msgid "Add the input information to the model"
 msgstr "Afegir la informació d'entrada al model"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:113
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:117
 msgid "Clear the input form"
 msgstr "Netejar el formulari d'entrada"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:116
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:121
+#, fuzzy
+#| msgid ""
+#| "Once the Kirigami.Dialog is initialized, we want to create a custom "
+#| "binding to only make the Ok button visible if the required text fields "
+#| "are filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgid ""
-"Once the Kirigami.Dialog is initialized, we want to create a custom binding "
-"to only make the Ok button visible if the required text fields are filled. "
-"For this we use Kirigami.Dialog.standardButton(button):"
+"... Once the Kirigami.Dialog is initialized, we want to create a custom "
+"binding to only make the Ok button visible if the required text fields are "
+"filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgstr ""
 "Un cop el Kirigami.Dialog està inicialitzat, volem crear una vinculació "
 "personalitzada per a només fer visible el botó Ok si s'omplen els camps de "
 "text requerits. Per a això utilitzem el Kirigami.Dialog."
 "standardButton(button):"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:123
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:129
 msgid "() => is a JavaScript arrow function"
 msgstr "() => és una funció de fletxa del JavaScript"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:127
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:133
 msgid ""
 "The binding is created, but we still need to make it unclickable unless the "
 "fields are filled"
@@ -6812,7 +6819,7 @@ msgstr ""
 "Es crea el vincle, però encara cal fer-lo no clicable a menys que s'omplin "
 "els camps"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:135
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:142
 msgid ""
 "The first thing that needs to be done is create a binding between the OK "
 "button's [enabled](https://doc.qt.io/qt-6/qml-qtquick-controls-popup."
@@ -6828,7 +6835,7 @@ msgstr ""
 "propertybinding.html#creating-property-bindings-from-javascript) en "
 "JavaScript. En efecte, la línia:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:141
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:148
 msgid ""
 "is similar to the QML bindings we have seen so far, like in the following "
 "pseudo-code:"
@@ -6836,7 +6843,7 @@ msgstr ""
 "és similar a les vinculacions en QML que hem vist fins ara, com en el "
 "pseudocodi següent:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:147
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:154
 msgid ""
 "The signal handler that triggers the Ok button is [onAccepted](https://doc."
 "qt.io/qt-6/qml-qtquick-controls-dialog.html#accepted-signal). It remains "
@@ -6849,15 +6856,19 @@ msgstr ""
 "sense fer res si s'omplen els camps requerits; en cas contrari, afegirà "
 "l'entrada al model i netejarà el diàleg per a la propera vegada que s'obri."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:150
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:158
+#, fuzzy
+#| msgid ""
+#| "We check that the nameField is not empty and that the dateField (which "
+#| "has an inputMask) is completely filled"
 msgid ""
-"We check that the nameField is not empty and that the dateField (which has "
-"an inputMask) is completely filled"
+"... We check that the nameField is not empty and that the dateField (which "
+"has an inputMask) is completely filled"
 msgstr ""
 "Comprovem que el «nameField» no estigui buit i que el «dateField» (que té "
 "una «inputMask») estigui completament omplert"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:170
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:180
 msgid ""
 "For our required name field, all we need to do is to check whether the field "
 "text is an empty string. For the date field, because it has an input mask, "
@@ -6873,7 +6884,7 @@ msgstr ""
 "caràcters acceptables."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:172
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:182
 msgid ""
 "Then, the [append()](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel."
 "html#append-method) method of our `kountdownModel` list model adds a "
@@ -6884,7 +6895,7 @@ msgstr ""
 "afegeix un objecte JavaScript incloent-hi les propietats que hem "
 "proporcionat."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:174
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:184
 msgid ""
 "Lastly, we make sure to clear the text fields by setting their [text]"
 "(https://doc.qt.io/qt-6/qml-qtquick-textinput.html#text-prop) properties to "
@@ -6896,7 +6907,7 @@ msgstr ""
 "html#text-prop) a una cadena buida, després fem un [close()](docs:"
 "qtquickcontrols;QtQuick.Controls.Popup::close)."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:176
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:186
 msgid ""
 "Once we save our files and build our program, we'll be able to add our own "
 "custom countdowns! We can make one last touch to improve the interface, "
@@ -6907,23 +6918,27 @@ msgstr ""
 "la interfície, és a dir, eliminar el compte enrere fictici que teníem a les "
 "lliçons anteriors:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:180
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:190
 msgid ""
 "Secondly now that we have an actual date to play around with, we can "
 "calculate the time until said date:"
 msgstr ""
+"En segon lloc, ara que tenim una data real amb la qual jugar, podem calcular "
+"el temps fins a aquesta data:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:184
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:194
 msgid ""
 "And thirdly increase the window size so that we have more room for our new "
 "cards:"
 msgstr ""
+"I en tercer lloc, augmentar la mida de la finestra perquè tinguem més espai "
+"per a les targetes noves:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:188
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:198
 msgid "Much nicer."
 msgstr "Molt millor."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:199
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:209
 msgid ""
 "![Screenshot of the application with four example cards](addedKountdowns."
 "webp)"
@@ -7358,6 +7373,7 @@ msgstr ""
 "Reverse_domain_name_notation) seguit de l'extensió `.desktop` com ara `org."
 "kde.tutorial.desktop`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:144
 msgid ""
 "Window and taskbar icons will work in a Wayland session only if apps' "
@@ -7368,6 +7384,14 @@ msgid ""
 "compile). Some KDE applications might have working icons if they were "
 "already installed on the system."
 msgstr ""
+"Les icones de les finestres i de la barra de tasques només funcionaran en "
+"una sessió del Wayland si els fitxers «desktop» de les aplicacions es "
+"col·loquen a `~/.local/share/applications` o `/usr/share/applications`. Per "
+"a aconseguir icones que funcionin en aquesta guia d'aprenentatge, copieu el "
+"fitxer «desktop» de l'aplicació o canvieu a una sessió de desenvolupament "
+"com s'indica en la [guia d'aprenentatge de kdesrc-build](/docs/getting-"
+"started/building/kdesrc-build-compile). Algunes aplicacions de KDE podrien "
+"tenir icones funcionant si ja estaven instal·lades al sistema."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:148
 msgid "CMakeLists.txt"
@@ -7880,11 +7904,11 @@ msgstr ""
 "qtquick-listview.html). En poques paraules, les vistes de llista permeten "
 "mostrar les dades en una llista."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:27
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:30
 msgid "That seems cryptic, but don't worry. Let's start from the beginning."
 msgstr "Això sembla críptic, però no us preocupeu. Comencem des del principi."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:29
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:32
 msgid ""
 "We add this component inside our [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage) from the last tutorial."
@@ -7893,7 +7917,7 @@ msgstr ""
 "kirigami2;ScrollablePage) de la darrera guia d'aprenentatge."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:31
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:34
 msgid ""
 "We're using [Kirigami.CardsListView](docs:kirigami2;CardsListView), which is "
 "a [ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html) that allows "
@@ -7910,16 +7934,16 @@ msgstr ""
 "apuntem. Aquí és on entra la propietat `model`: en aquest exemple, apunta a "
 "`kountdownModel`."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:33
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:36
 msgid "Model"
 msgstr "Model"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:38
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:43
 msgid "Each ListElement is an element on the list, containing information"
 msgstr "Cada ListElement és un element en la llista que conté informació"
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:47
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:54
 msgid ""
 "We add our `kountdownModel` inside the [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow) from the last tutorial."
@@ -7928,7 +7952,7 @@ msgstr ""
 "kirigami2;ApplicationWindow) de la darrera guia d'aprenentatge."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:49
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:56
 msgid ""
 "A model defines the way that a data entry is structured. Our "
 "`kountdownModel` will consist of only one element for now. By looking at our "
@@ -7947,7 +7971,7 @@ msgstr ""
 "tercer és un número que utilitzem com a marcador de posició."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:53
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:60
 msgid ""
 "Since QML is built on top of JavaScript, many of this language's features "
 "are available for use in QML files. However, QML variables have to be "
@@ -7961,7 +7985,7 @@ msgstr ""
 "`property`, a menys que estigui dins d'un bloc de codi JS. Podeu llegir-ne "
 "més en [aquesta pàgina](https://doc.qt.io/qt-6/qtqml-javascript-topic.html)."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:57
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:64
 msgid ""
 "Models are also useful in how they can be modified through the use of "
 "several methods. Some important ones are:"
@@ -7970,7 +7994,7 @@ msgstr ""
 "diversos mètodes. Alguns importants són:"
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:58
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:65
 msgid ""
 "[ListModel.append(yourobject: jsobject)](https://doc.qt.io/qt-6/qml-qtqml-"
 "models-listmodel.html#append-method) adds a JavaScript object (JSObject) "
@@ -7985,7 +8009,7 @@ msgstr ""
 "objecte JSObject amb les propietats correctes i els tipus de dades "
 "corresponents."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:59
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:66
 msgid ""
 "[ListModel.get(index: int)](https://doc.qt.io/qt-6/qml-qtqml-models-"
 "listmodel.html#get-method) returns the JSObject at the index location you "
@@ -7996,7 +8020,7 @@ msgstr ""
 "heu proporcionat."
 
 # skip-rule: t-acc_obe, punctuation-period-no
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:60
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:67
 msgid ""
 "[ListModel.remove(index: int, count: int)](https://doc.qt.io/qt-6/qml-qtqml-"
 "models-listmodel.html#remove-method) removes the JSObject at the provided "
@@ -8010,7 +8034,7 @@ msgstr ""
 "proporcionat)."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:61
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:68
 msgid ""
 "[ListModel.set(index: int, yourobject: jsobject)](https://doc.qt.io/qt-6/qml-"
 "qtqml-models-listmodel.html#set-method) changes the item at the provided "
@@ -8022,12 +8046,12 @@ msgstr ""
 "proporcionada de `index` amb els valors proporcionats a `yourobject`. Les "
 "mateixes regles que amb `.append()`."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:63
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:70
 msgid "Delegates"
 msgstr "Delegats"
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:65
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:72
 msgid ""
 "While our `kountdownModel` contains the data that will be displayed, our "
 "`kountdownDelegate` will handle how the data will be displayed in the "
@@ -8046,7 +8070,7 @@ msgstr ""
 "AbstractCard)."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:67
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:74
 msgid ""
 "Delegates automatically receive the properties of the [ListElements](https://"
 "doc.qt.io/qt-6/qml-qtqml-models-listelement.html) that we have specified in "
@@ -8059,11 +8083,11 @@ msgstr ""
 "`name`, `description` i `date` com si fossin variables convencionals dins "
 "del nostre delegat."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:69
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:76
 msgid "Building the delegate card"
 msgstr "Construir la targeta de delegat"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:71
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:78
 msgid ""
 "The [Component](docs:qtqml;QtQml.Component) that will represent our delegate "
 "can be added inside our [Kirigami.ApplicationWindow](docs:kirigami2;"
@@ -8076,7 +8100,7 @@ msgstr ""
 "nostre component delegat."
 
 # skip-rule: punctuation-period-no
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:78
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:87
 msgid ""
 "implicitWidth/Height define the natural width/height of an item if no width "
 "or height is specified. The setting below defines a component's preferred "
@@ -8086,15 +8110,15 @@ msgstr ""
 "n'especifica cap. La configuració següent defineix la mida preferida d'un "
 "component en funció del seu contingut."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:121
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:130
 msgid "onClicked: to be done... soon!"
 msgstr "onClicked: s'ha de fer... aviat!"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:129
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:140
 msgid "implicitWidth and implicitHeight"
 msgstr "implicitWidth i implicitHeight"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:131
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:142
 msgid ""
 "The first part we will take a look at is how to manage the width and height "
 "of our component:"
@@ -8103,7 +8127,7 @@ msgstr ""
 "del nostre component:"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:146
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:157
 msgid ""
 "Looking at our [Kirigami.AbstractCard](docs:kirigami2;AbstractCard), the "
 "first properties we set are [implicitWidth](https://doc.qt.io/qt-6/qml-"
@@ -8119,7 +8143,7 @@ msgstr ""
 "`delegateLayout.implicitWidth` i `delegateLayout.implicitHeight`, és a dir, "
 "les `implicitWidth` i `implicitHeight` de l'element `GridLayout`."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:148
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:159
 msgid ""
 "Implicit widths and heights are properties available in any [Item](docs:"
 "qtquick;QtQuick.Item) that function as hints and are set as a default, or as "
@@ -8135,7 +8159,7 @@ msgstr ""
 "en components Item en brut tal com s'ha fet anteriorment."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:150
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:161
 msgid ""
 "Here we have set the `implicitWidth` and `implicitHeight` of our [Kirigami."
 "AbstractCard](docs:kirigami2;AbstractCard) to that of the [GridLayout]"
@@ -8149,11 +8173,11 @@ msgstr ""
 "assegurar-nos que no desbordi la targeta. D'aquesta manera, la targeta pren "
 "tant espai com sigui necessari per al seu contingut."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:152
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:163
 msgid "Layouts"
 msgstr "Disposicions"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:154
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:165
 msgid ""
 "The [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
 "is inside the [Item](https://doc.qt.io/qt-6/qml-qtquick-item.html) component "
@@ -8169,7 +8193,7 @@ msgstr ""
 "doc.qt.io/qt-6/qml-qtquick-item.html) que conté el que es mostrarà a la "
 "targeta."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:156
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:167
 msgid ""
 "We also need to choose a [layout](https://doc.qt.io/qt-6/qtquicklayouts-"
 "index.html) for our components so that they don't just pile on top of each "
@@ -8180,7 +8204,7 @@ msgstr ""
 "s'apilin un damunt de l'altre. Hi ha tres tipus principals entre les quals "
 "podem triar:"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:157
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:168
 msgid ""
 "[ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html) "
 "lays out your components vertically, in a single column"
@@ -8188,7 +8212,7 @@ msgstr ""
 "[ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html) "
 "distribueix els components verticalment, en una sola columna"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:158
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:169
 msgid ""
 "[RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout.html) lays "
 "out your components horizontally, in a single row"
@@ -8196,7 +8220,7 @@ msgstr ""
 "[RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout.html) "
 "distribueix els components horitzontalment, en una sola fila"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:159
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:170
 msgid ""
 "[GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
 "lays out your components in a grid with a composition of your choosing"
@@ -8205,7 +8229,7 @@ msgstr ""
 "distribueix els components en una quadrícula amb una composició de la vostra "
 "elecció"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:161
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:172
 msgid ""
 "With [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
 "html) and [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout."
@@ -8222,7 +8246,7 @@ msgstr ""
 "mica més de treball manual."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:180
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:191
 msgid ""
 "The first thing you see is our `anchors`. [QtQuick's anchoring system]"
 "(https://doc.qt.io/qt-6/qtquick-positioning-anchors.html) provides a useful "
@@ -8239,7 +8263,7 @@ msgstr ""
 "dreta de la targeta principal, assegurant que el nostre contingut s'estengui "
 "per tota la targeta."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:182
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:193
 msgid ""
 "Next we specify the spacing between the rows and columns within our grid, so "
 "that our components don't bunch up. Kirigami provides a number of handy "
@@ -8251,39 +8275,39 @@ msgstr ""
 "Kirigami proporciona una sèrie d'útils [unitats predefinides](docs:kirigami2;"
 "Kirigami::Platform::Units) per a utilitzar amb aquest propòsit:"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:184
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:195
 msgid "Kirigami Unit"
 msgstr "Unitat de Kirigami"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:184
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:195
 msgid "Pixels"
 msgstr "Píxels"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:186
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:197
 msgid "smallSpacing"
 msgstr "smallSpacing"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:186
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:197
 msgid "4px"
 msgstr "4px"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:187
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:198
 msgid "largeSpacing"
 msgstr "largeSpacing"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:187
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:198
 msgid "8px"
 msgstr "8px"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:188
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:199
 msgid "gridUnit"
 msgstr "gridUnit"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:188
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:199
 msgid "18px"
 msgstr "18px"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:192
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:203
 msgid ""
 "KDE's Visual Design Group (VDG) has a lot more information about the "
 "different units defined within Plasma and Kirigami on the [Human Interface "
@@ -8294,7 +8318,7 @@ msgstr ""
 "d'interfície humana](/hig/layout/units/)."
 
 # skip-rule: t-acc_obe
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:196
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:207
 msgid ""
 "As you might remember, `root` is the id of our [Kirigami.ApplicationWindow]"
 "(docs:kirigami2;ApplicationWindow). It provides the [wideScreen](docs:"
@@ -8317,11 +8341,11 @@ msgstr ""
 "pantalla que utilitzem: si és una pantalla ampla, la quadrícula tindrà 4 "
 "columnes, en cas contrari en tindrà 2."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:198
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:209
 msgid "Inner components"
 msgstr "Components interns"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:200
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:211
 msgid ""
 "We could just create three labels within our delegate component and call it "
 "a day, but that wouldn't look particularly nice. We'll make use of a few "
@@ -8331,12 +8355,12 @@ msgstr ""
 "un dia. Però això no es veuria particularment bonic. Farem ús d'alguns "
 "components més adequats:"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:239
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:250
 msgid "How the custom Card looks like"
 msgstr "Com es veu la targeta personalitzada"
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:241
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:252
 msgid ""
 "Left, [Kirigami.Heading](docs:kirigami2;Heading): uses the `ListElement`'s "
 "`date` as a level 1 heading."
@@ -8345,7 +8369,7 @@ msgstr ""
 "d'un `ListElement` com una capçalera de nivell 1."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:243
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:254
 msgid ""
 "Middle, [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
 "columnlayout.html): has a [Kirigami.Heading](docs:kirigami2;Heading) that "
@@ -8367,7 +8391,7 @@ msgstr ""
 "prop), la qual comprova si la descripció està buida o no, i mostra els "
 "components segons el resultat de `description.length > 0`."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:245
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:256
 msgid ""
 "Right, [Controls.Button](docs:qtquickcontrols;QtQuick.Controls.Button): a "
 "button that will do something... soon!"
@@ -8375,7 +8399,7 @@ msgstr ""
 "A la dreta, [Controls.Button](docs:qtquickcontrols;QtQuick.Controls.Button): "
 "un botó que farà alguna cosa... aviat!"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:256
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:267
 msgid ""
 "![Screenshot of the app appearance after completing this lesson](Screenshot."
 "webp)"
@@ -8383,11 +8407,11 @@ msgstr ""
 "![Captura de pantalla de l'aparença de l'aplicació després de completar "
 "aquesta lliçó](Screenshot.webp)"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:258
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:269
 msgid "So there is our basic card!"
 msgstr "Així que aquí està la nostra targeta bàsica!"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:260
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:271
 msgid ""
 "With these steps, we have now laid the basic groundwork for adding all the "
 "functionality to our app."
@@ -9223,16 +9247,12 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:15
-#, fuzzy
-#| msgid ""
-#| "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
-#| "qml`, `AddEditDialog.qml` and `KountdownDelegate.qml`."
 msgid ""
 "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
 "qml`, `AddDialog.qml` and `KountdownDelegate.qml`."
 msgstr ""
 "En aquesta guia d'aprenentatge, dividirem el codi de `Main.qml` en `Main."
-"qml`, `AddEditDialog.qml` i `KountdownDelegate.qml`."
+"qml`, `AddDialog.qml` i `KountdownDelegate.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:17
 msgid ""
@@ -9528,11 +9548,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:132
-#, fuzzy
-#| msgid ""
-#| "Our dialog with `id: addDialog` is not enveloped in a Component, and it "
-#| "is not a component that is visible by default, so the code can be copied "
-#| "as is into the `AddEditDialog.qml`:"
 msgid ""
 "Our dialog with `id: addDialog` is not enveloped in a Component, and it is "
 "not a component that is visible by default, so the code can be copied as is "
@@ -9540,7 +9555,7 @@ msgid ""
 msgstr ""
 "El nostre diàleg amb `id: addDialog` no està embolcallat en un component, i "
 "no és un component que sigui visible de manera predeterminada, així que el "
-"codi es pot copiar tal com està en el `AddEditDialog.qml`:"
+"codi es pot copiar tal com està en el `AddDialog.qml`:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:136
@@ -9549,28 +9564,20 @@ msgstr "Amb la divisió del codi, `Main.qml` es fa molt més curt:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:140
-#, fuzzy
-#| msgid ""
-#| "We now have two extra QML files, `AddEditDialog.qml` and "
-#| "`KountdownDelegate`, and we need to find some way of using them in `Main."
-#| "qml`. The way to add the contents of the new files to `Main.qml` is by "
-#| "*instantiating* them."
 msgid ""
 "We now have two extra QML files, `AddDialog.qml` and `KountdownDelegate`, "
 "and we need to find some way of using them in `Main.qml`. The way to add the "
 "contents of the new files to `Main.qml` is by *instantiating* them."
 msgstr ""
-"Ara tenim dos fitxers QML addicionals, `AddEditDialog.qml` i "
+"Ara tenim dos fitxers QML addicionals, `AddDialog.qml` i "
 "`KountdownDelegate`, i necessitem trobar alguna manera d'utilitzar-los a "
 "`Main.qml`. La manera d'afegir el contingut dels fitxers nous a `Main.qml` "
 "és *instanciant-los*."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:142
-#, fuzzy
-#| msgid "`AddEditDialog.qml` becomes `AddEditDialog {}`:"
 msgid "`AddDialog.qml` becomes `AddDialog {}`:"
-msgstr "`AddEditDialog.qml` esdevé `AddEditDialog {}`:"
+msgstr "`AddDialog.qml` esdevé `AddEditDialog {}`:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:146

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-16 01:42+0000\n"
-"PO-Revision-Date: 2024-08-14 09:33+0300\n"
+"POT-Creation-Date: 2024-08-17 01:38+0000\n"
+"PO-Revision-Date: 2024-08-16 09:49+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -636,10 +636,10 @@ msgstr ""
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:602
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:80
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:173
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:197
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:207
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:195
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:230
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:254
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:265
 msgid "</details>\n"
 msgstr "</details>\n"
 
@@ -1389,9 +1389,16 @@ msgstr "Код-результат у тій частині файла має в�
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:53
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:123
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:25
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:140
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:175
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:204
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:45
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:87
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:21
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:40
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:50
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:82
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:136
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:151
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:186
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:215
 msgid "..."
 msgstr "..."
 
@@ -1518,8 +1525,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:122
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:142
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:335
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:51
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:190
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:58
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:201
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:25
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:33
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:53
@@ -6309,14 +6316,14 @@ msgid "Among other Kirigami components."
 msgstr "Серед інших компонентів Kirigami."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:166
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:190
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:247
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:200
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:258
 msgid "Our app so far"
 msgstr "Наша програма на поточний момент"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:168
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:192
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:249
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:202
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:260
 msgid ""
 "<details>\n"
 "<summary><b>Main.qml:</b></summary>\n"
@@ -6368,18 +6375,13 @@ msgid "Opening the dialog"
 msgstr "Відкриття діалогового вікна"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:37
-#, fuzzy
-#| msgid ""
-#| "Adding the button to open the dialog is much simpler: just a [Kirigami."
-#| "Action](docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
-#| "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgid ""
 "First we edit the action from the previous tutorial: just a [Kirigami.Action]"
 "(docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
 "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgstr ""
-"Додавання кнопки для відкриття діалогового вікна є набагато простішим: "
-"просте [Kirigami.Action](docs:kirigami2;Action), яка вмикає функцію [open()]"
+"Спочатку внесемо зміни до дії з попереднього розділу підручника — просто "
+"додамо [Kirigami.Action](docs:kirigami2;Action), яка вмикає функцію [open()]"
 "(docs:qtquickcontrols;QtQuick.Controls.Popup::open) діалогового вікна."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:39
@@ -6399,23 +6401,23 @@ msgstr ""
 "Їх не можна пересувати, але їхній розмір адаптується до розміру головного "
 "вікна."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:51
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:53
 msgid "Form layouts help align and structure a layout with several inputs"
 msgstr ""
 "Компонування форми допомагають вирівняти і структурувати компонування із "
 "декількома елементами введення"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:53
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:55
 msgid "Textfields let you input text in a thin textbox"
 msgstr ""
 "Об'єкти Textfield надають вам змогу вводити текст у вузькому полі для "
 "введення тексту"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:56
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:58
 msgid "Provides a label attached to the textfield"
 msgstr "Надає доступ до мітки, яку пов'язано із текстовим полем"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:58
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:60
 msgid ""
 "What to do after input is accepted (i.e. pressed Enter) In this case, it "
 "moves the focus to the next field"
@@ -6423,26 +6425,26 @@ msgstr ""
 "Що робити після прийняття вхідних даних (тобто натискання клавіші Enter)? У "
 "цьому випадку фокусування буде пересунуто на наступне поле"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:66
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:68
 msgid "Again, it moves the focus to the next field"
 msgstr "Знову ж таки, пересуває фокусування до наступного поля"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:72
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:74
 msgid ""
 "D means a required number between 1-9, 9 means a required number between 0-9"
 msgstr ""
 "D означає обов'язкове число у діапазоні 1-9, 9 — обов'язкове число у "
 "діапазоні 0-9"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:75
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:77
 msgid "Here we confirm the operation just like clicking the OK button"
 msgstr "Тут ми підтверджуємо дію, подібно до натискання кнопки «Гаразд»"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:83
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:85
 msgid "The dialog logic goes here"
 msgstr "Тут маємо логіку діалогового вікна"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:87
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:91
 msgid ""
 "Dialogs by default have a [header](https://doc.qt.io/qt-6/qml-qtquick-"
 "controls-dialog.html#header-prop) and a [footer](https://doc.qt.io/qt-6/qml-"
@@ -6454,7 +6456,7 @@ msgstr ""
 "qtquick-controls-dialog.html#footer-prop), обидва успадковані від [Controls."
 "Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog)."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:89
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:93
 msgid ""
 "The header by default includes a [title](https://doc.qt.io/qt-6/qml-qtquick-"
 "controls-dialog.html#title-prop) and a close button that can be disabled "
@@ -6470,7 +6472,7 @@ msgstr ""
 "перевизначити за допомогою [standardButtons](https://doc.qt.io/qt-6/qml-"
 "qtquick-controls-dialog.html#standardButtons-prop)."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:91
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:95
 msgid ""
 "We first set it to show an \"Ok\" button and a \"Cancel\" button, add some "
 "padding, and add a reasonable [preferredWidth](docs:kirigami2;Dialog::"
@@ -6485,7 +6487,7 @@ msgstr ""
 "скористатися стандартним [Kirigami.Units](docs:kirigami2;Kirigami::Platform::"
 "Units), до якого ми ще звернемося пізніше."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:93
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:97
 msgid ""
 "Then we come to a [Kirigami.FormLayout](docs:kirigami2;FormLayout). Unlike a "
 "[ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
@@ -6498,7 +6500,7 @@ msgstr ""
 "центрованим з необов'язковими мітками. Як можна зрозуміти з назви, його "
 "використовують для створення форм введення даних."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:95
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:99
 msgid ""
 "These form layouts are designed to work with a variety of different input "
 "types, though we're sticking to simple [Controls.Textfield](docs:"
@@ -6510,19 +6512,19 @@ msgstr ""
 "qtquickcontrols;QtQuick.Controls.TextField), якщо відповідають простим "
 "текстовим блоками для вписування простих текстових фрагментів."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:97
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:101
 msgid "We have created Textfield elements that act as:"
 msgstr "Нами створено елементи Textfield, які працюють як:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:99
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:103
 msgid "Input for the name of our countdown"
 msgstr "Поле для введення назви нашого відліку"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:100
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:104
 msgid "Input for the description of our countdown"
 msgstr "Поле для введення опису нашого відліку"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:101
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:105
 msgid ""
 "Input for the date we are counting down towards, which must be provided in a "
 "`YYYY-MM-DD` format"
@@ -6530,7 +6532,7 @@ msgstr ""
 "Поле для введення дати, до якої ми ведемо відлік і яка надається у форматі "
 "`YYYY-MM-DD`"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:103
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:107
 msgid ""
 "Within each of these [Controls.Textfield](docs:qtquickcontrols;QtQuick."
 "Controls.TextField) elements, we are setting a [Kirigami.FormData.label]"
@@ -6544,7 +6546,7 @@ msgstr ""
 "них мітки. Форма покаже належні мітки ліворуч від кожного з цих полів для "
 "введення тексту."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:105
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:109
 msgid ""
 "Finally, we are also setting the [onAccepted](https://doc.qt.io/qt-6/qml-"
 "qtquick-textinput.html#accepted-signal) property to trigger the "
@@ -6560,7 +6562,7 @@ msgstr ""
 "активного поля, щойно користувач натисне клавішу ENTER, удосконалюючи "
 "зручність форми."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:107
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:111
 msgid ""
 "We have also set a property called [inputMask](https://doc.qt.io/qt-6/qml-"
 "qtquick-textinput.html#inputMask-prop) on the text field for our date. "
@@ -6576,7 +6578,7 @@ msgstr ""
 "(наприклад, звичайний текст). Користувач зможе вводити лише цифри, які "
 "згодом може бути перетворено на об'єкт дати."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:109
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:113
 msgid ""
 "Once the user interface for the dialog is done, we need to change how it "
 "behaves. For this we need three things:"
@@ -6584,34 +6586,39 @@ msgstr ""
 "Щойно роботу над інтерфейсом користувача діалогового вікна завершено, нам "
 "потрібно змінити поведінку вікна. Для цього нам потрібно три речі:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:111
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:115
 msgid "Show the Ok button only when the required fields are filled"
 msgstr "Показ кнопки «Гаразд», лише якщо заповнено обов'язкові поля"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:112
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:116
 msgid "Add the input information to the model"
 msgstr "Додавання вхідних даних до моделі"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:113
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:117
 msgid "Clear the input form"
 msgstr "Очищення форми введення даних"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:116
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:121
+#, fuzzy
+#| msgid ""
+#| "Once the Kirigami.Dialog is initialized, we want to create a custom "
+#| "binding to only make the Ok button visible if the required text fields "
+#| "are filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgid ""
-"Once the Kirigami.Dialog is initialized, we want to create a custom binding "
-"to only make the Ok button visible if the required text fields are filled. "
-"For this we use Kirigami.Dialog.standardButton(button):"
+"... Once the Kirigami.Dialog is initialized, we want to create a custom "
+"binding to only make the Ok button visible if the required text fields are "
+"filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgstr ""
 "Щойно Kirigami.Dialog буде ініціалізовано, нам потрібно буде створити "
 "нетипову прив'язку такого різновиду, що кнопка «Гаразд» стала видимою, лише "
 "якщо буде заповнено обов'язкові текстові поля. Для цього ми скористаємося "
 "Kirigami.Dialog.standardButton(button):"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:123
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:129
 msgid "() => is a JavaScript arrow function"
 msgstr "() => є функцією стрілочки JavaScript"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:127
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:133
 msgid ""
 "The binding is created, but we still need to make it unclickable unless the "
 "fields are filled"
@@ -6619,7 +6626,7 @@ msgstr ""
 "Прив'язку створено, але нам усе ще потрібно зробити її непридатною до "
 "клацання, якщо не заповнено поля"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:135
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:142
 msgid ""
 "The first thing that needs to be done is create a binding between the OK "
 "button's [enabled](https://doc.qt.io/qt-6/qml-qtquick-controls-popup."
@@ -6635,13 +6642,13 @@ msgstr ""
 "propertybinding.html#creating-property-bindings-from-javascript) у "
 "JavaScript. У результаті рядок:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:141
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:148
 msgid ""
 "is similar to the QML bindings we have seen so far, like in the following "
 "pseudo-code:"
 msgstr "є подібним до прив'язок QML, які ми досі мали, як у такому псевдокоді:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:147
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:154
 msgid ""
 "The signal handler that triggers the Ok button is [onAccepted](https://doc."
 "qt.io/qt-6/qml-qtquick-controls-dialog.html#accepted-signal). It remains "
@@ -6655,15 +6662,19 @@ msgstr ""
 "поля заповнено; у інших випадках він додаватиме поле введення до моделі і "
 "спорожнятиме діалогове вікно для наступного моменту, коли його буде відкрито."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:150
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:158
+#, fuzzy
+#| msgid ""
+#| "We check that the nameField is not empty and that the dateField (which "
+#| "has an inputMask) is completely filled"
 msgid ""
-"We check that the nameField is not empty and that the dateField (which has "
-"an inputMask) is completely filled"
+"... We check that the nameField is not empty and that the dateField (which "
+"has an inputMask) is completely filled"
 msgstr ""
 "Ми перевіряємо, чи є непорожнім nameField, і що dateField (для якого "
 "визначено inputMask) є повністю заповненим"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:170
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:180
 msgid ""
 "For our required name field, all we need to do is to check whether the field "
 "text is an empty string. For the date field, because it has an input mask, "
@@ -6678,7 +6689,7 @@ msgstr ""
 "стане true, щойно усе поле буде заповнено, і у ньому міститимуться лише "
 "прийнятні символи."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:172
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:182
 msgid ""
 "Then, the [append()](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel."
 "html#append-method) method of our `kountdownModel` list model adds a "
@@ -6688,7 +6699,7 @@ msgstr ""
 "html#append-method) нашої моделі списку `kountdownModel` додає об'єкт "
 "JavaScript, включно із наданими нами властивостями."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:174
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:184
 msgid ""
 "Lastly, we make sure to clear the text fields by setting their [text]"
 "(https://doc.qt.io/qt-6/qml-qtquick-textinput.html#text-prop) properties to "
@@ -6700,7 +6711,7 @@ msgstr ""
 "порожнього рядка, а потім виконуємо [close()](docs:qtquickcontrols;QtQuick."
 "Controls.Popup::close)."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:176
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:186
 msgid ""
 "Once we save our files and build our program, we'll be able to add our own "
 "custom countdowns! We can make one last touch to improve the interface, "
@@ -6711,23 +6722,27 @@ msgstr ""
 "удосконалення інтерфейсу, а саме вилучити фіктивний зворотний відлік, який "
 "ми мали у попередніх уроках:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:180
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:190
 msgid ""
 "Secondly now that we have an actual date to play around with, we can "
 "calculate the time until said date:"
 msgstr ""
+"По-друге, тепер, коли у нас є справжня дата, ми можемо обчислити час до цієї "
+"дати:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:184
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:194
 msgid ""
 "And thirdly increase the window size so that we have more room for our new "
 "cards:"
 msgstr ""
+"І по-третє, збільшуємо розмір вікна, щоб у нас було місце для наших нових "
+"карток:"
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:188
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:198
 msgid "Much nicer."
 msgstr "Набагато краще."
 
-#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:199
+#: content/docs/getting-started/kirigami/introduction-dialogs/index.md:209
 msgid ""
 "![Screenshot of the application with four example cards](addedKountdowns."
 "webp)"
@@ -7148,6 +7163,13 @@ msgid ""
 "compile). Some KDE applications might have working icons if they were "
 "already installed on the system."
 msgstr ""
+"Піктограми вікна та панелі завдань працюватимуть у сеансі Wayland, лише якщо "
+"файл desktop програми зберігаються у `~/.local/share/applications` або `/usr/"
+"share/applications`. Щоб працювали піктограми з цього розділу підручника, "
+"або скопіюйте файл desktop до одного з цих каталогів, або перемкніться на "
+"сеанс розробника, як описано у [підручнику з kdesrc-build](/docs/getting-"
+"started/building/kdesrc-build-compile). Піктограми деяких програм KDE "
+"працюватимуть, якщо їх вже встановлено у системі."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:148
 msgid "CMakeLists.txt"
@@ -7637,12 +7659,12 @@ msgstr ""
 "ви вже бачили [ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html). "
 "Доволі прості, ListView надають вам змогу показувати дані у форматі списку."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:27
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:30
 msgid "That seems cryptic, but don't worry. Let's start from the beginning."
 msgstr ""
 "Це може здатися якимось шифром, але не переймайтеся. Розпочнімо з початку."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:29
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:32
 msgid ""
 "We add this component inside our [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage) from the last tutorial."
@@ -7650,7 +7672,7 @@ msgstr ""
 "Ми додаємо цей компонент до нашого [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage) з останньої частини підручника."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:31
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:34
 msgid ""
 "We're using [Kirigami.CardsListView](docs:kirigami2;CardsListView), which is "
 "a [ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html) that allows "
@@ -7666,15 +7688,15 @@ msgstr ""
 "набором даних, які ми вказали. Ось тут нам стане у пригоді властивість "
 "`model` — у нашому прикладі, вона вказує на `kountdownModel`."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:33
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:36
 msgid "Model"
 msgstr "Модель"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:38
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:43
 msgid "Each ListElement is an element on the list, containing information"
 msgstr "Кожне з ListElement є елементом списку, що містить дані"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:47
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:54
 msgid ""
 "We add our `kountdownModel` inside the [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow) from the last tutorial."
@@ -7682,7 +7704,7 @@ msgstr ""
 "Ми додаємо нашу `kountdownModel` до [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow) з останньої частини підручника."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:49
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:56
 msgid ""
 "A model defines the way that a data entry is structured. Our "
 "`kountdownModel` will consist of only one element for now. By looking at our "
@@ -7700,7 +7722,7 @@ msgstr ""
 "два елементи є лише рядками, а третій є числом, яким ми користуємося як "
 "замінником."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:53
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:60
 msgid ""
 "Since QML is built on top of JavaScript, many of this language's features "
 "are available for use in QML files. However, QML variables have to be "
@@ -7714,7 +7736,7 @@ msgstr ""
 "можна дізнатися з [відповідної сторінки](https://doc.qt.io/qt-6/qtqml-"
 "javascript-topic.html)."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:57
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:64
 msgid ""
 "Models are also useful in how they can be modified through the use of "
 "several methods. Some important ones are:"
@@ -7722,7 +7744,7 @@ msgstr ""
 "Крім того, моделі є корисними через те, як їх можна змінювати, "
 "використовуючи декілька методів. Серед важливих методів такі:"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:58
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:65
 msgid ""
 "[ListModel.append(yourobject: jsobject)](https://doc.qt.io/qt-6/qml-qtqml-"
 "models-listmodel.html#append-method) adds a JavaScript object (JSObject) "
@@ -7736,7 +7758,7 @@ msgstr ""
 "Щоб це відбувалося належним чином, вам слід надати JSObject із належними "
 "властивостями і відповідними типами даних."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:59
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:66
 msgid ""
 "[ListModel.get(index: int)](https://doc.qt.io/qt-6/qml-qtqml-models-"
 "listmodel.html#get-method) returns the JSObject at the index location you "
@@ -7746,7 +7768,7 @@ msgstr ""
 "listmodel.html#get-method) повертає JSObject із наданим індексом "
 "розташування."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:60
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:67
 msgid ""
 "[ListModel.remove(index: int, count: int)](https://doc.qt.io/qt-6/qml-qtqml-"
 "models-listmodel.html#remove-method) removes the JSObject at the provided "
@@ -7758,7 +7780,7 @@ msgstr ""
 "розташування і вказану кількість `count` об'єктів після нього (1 включає "
 "лише JSObject із наданим індексом)"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:61
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:68
 msgid ""
 "[ListModel.set(index: int, yourobject: jsobject)](https://doc.qt.io/qt-6/qml-"
 "qtqml-models-listmodel.html#set-method) changes the item at the provided "
@@ -7770,11 +7792,11 @@ msgstr ""
 "індексом розташування значеннями наданого вами об'єкта "
 "`yourobjectваш_об'єкт`. Ті самі правила, що і для `append()`."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:63
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:70
 msgid "Delegates"
 msgstr "Делегати"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:65
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:72
 msgid ""
 "While our `kountdownModel` contains the data that will be displayed, our "
 "`kountdownDelegate` will handle how the data will be displayed in the "
@@ -7791,7 +7813,7 @@ msgstr ""
 "показу делегатів типу карток, і ці делегати буде візуально відтворено за "
 "допомогою [Kirigami.AbstractCard](docs:kirigami2;AbstractCard)."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:67
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:74
 msgid ""
 "Delegates automatically receive the properties of the [ListElements](https://"
 "doc.qt.io/qt-6/qml-qtqml-models-listelement.html) that we have specified in "
@@ -7803,11 +7825,11 @@ msgstr ""
 "можемо просто посилатися на їхні властивості `name`, `description` і `date` "
 "так, наче це була б звичайні змінні у нашому делегаті."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:69
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:76
 msgid "Building the delegate card"
 msgstr "Побудова делегованої картки"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:71
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:78
 msgid ""
 "The [Component](docs:qtqml;QtQml.Component) that will represent our delegate "
 "can be added inside our [Kirigami.ApplicationWindow](docs:kirigami2;"
@@ -7819,7 +7841,7 @@ msgstr ""
 "ApplicationWindow). Далі, ми перевіримо, яке завдання виконує кожна частина "
 "нашого компонента-делегата."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:78
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:87
 msgid ""
 "implicitWidth/Height define the natural width/height of an item if no width "
 "or height is specified. The setting below defines a component's preferred "
@@ -7829,15 +7851,15 @@ msgstr ""
 "або висоту не вказано явним чином. Наведений нижче код визначає бажані "
 "розміри компонента на основі його вмісту."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:121
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:130
 msgid "onClicked: to be done... soon!"
 msgstr "onClicked: буде зроблено… невдовзі!"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:129
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:140
 msgid "implicitWidth and implicitHeight"
 msgstr "implicitWidth та implicitHeight"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:131
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:142
 msgid ""
 "The first part we will take a look at is how to manage the width and height "
 "of our component:"
@@ -7845,7 +7867,7 @@ msgstr ""
 "Перша частина, яку ми розглянемо, полягає у тому, як керувати шириною та "
 "висотою нашого компонента:"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:146
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:157
 msgid ""
 "Looking at our [Kirigami.AbstractCard](docs:kirigami2;AbstractCard), the "
 "first properties we set are [implicitWidth](https://doc.qt.io/qt-6/qml-"
@@ -7861,7 +7883,7 @@ msgstr ""
 "значення `delegateLayout.implicitWidth` і `delegateLayout.implicitHeight`, "
 "тобто `implicitWidth` і `implicitHeight` елемента `GridLayout`."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:148
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:159
 msgid ""
 "Implicit widths and heights are properties available in any [Item](docs:"
 "qtquick;QtQuick.Item) that function as hints and are set as a default, or as "
@@ -7875,7 +7897,7 @@ msgstr ""
 "ширини або висоти. Типовими значеннями цих величин є 0x0, тому дуже важливо "
 "визначати ці значення у простих компонентах Item, як це зроблено вище."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:150
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:161
 msgid ""
 "Here we have set the `implicitWidth` and `implicitHeight` of our [Kirigami."
 "AbstractCard](docs:kirigami2;AbstractCard) to that of the [GridLayout]"
@@ -7889,11 +7911,11 @@ msgstr ""
 "щоб вони не вилізли за картку. Таким чином, картка займе стільки місця, "
 "скільки потрібно для її вмісту."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:152
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:163
 msgid "Layouts"
 msgstr "Компонування"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:154
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:165
 msgid ""
 "The [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
 "is inside the [Item](https://doc.qt.io/qt-6/qml-qtquick-item.html) component "
@@ -7909,7 +7931,7 @@ msgstr ""
 "doc.qt.io/qt-6/qml-qtquick-item.html), який містить те, що буде показано у "
 "вашій картці."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:156
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:167
 msgid ""
 "We also need to choose a [layout](https://doc.qt.io/qt-6/qtquicklayouts-"
 "index.html) for our components so that they don't just pile on top of each "
@@ -7920,7 +7942,7 @@ msgstr ""
 "накопичувалися один над одним. Існує три основних типи, один з яких ми "
 "можемо вибрати:"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:157
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:168
 msgid ""
 "[ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html) "
 "lays out your components vertically, in a single column"
@@ -7928,7 +7950,7 @@ msgstr ""
 "[ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html) "
 "розташовує ваші компоненти вертикально, у один стовпчик"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:158
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:169
 msgid ""
 "[RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout.html) lays "
 "out your components horizontally, in a single row"
@@ -7936,7 +7958,7 @@ msgstr ""
 "[RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout.html) "
 "розкладає ваші компоненти горизонтально у один рядок"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:159
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:170
 msgid ""
 "[GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
 "lays out your components in a grid with a composition of your choosing"
@@ -7944,7 +7966,7 @@ msgstr ""
 "[GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
 "розкладає ваші компоненти у таблицю із вибраним вами компонуванням"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:161
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:172
 msgid ""
 "With [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
 "html) and [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout."
@@ -7960,7 +7982,7 @@ msgstr ""
 "doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html), що потребує додаткового "
 "опису вручну."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:180
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:191
 msgid ""
 "The first thing you see is our `anchors`. [QtQuick's anchoring system]"
 "(https://doc.qt.io/qt-6/qtquick-positioning-anchors.html) provides a useful "
@@ -7976,7 +7998,7 @@ msgstr ""
 "qtquick-layouts-gridlayout.html) ліворуч, згори і праворуч до батьківської "
 "картки, забезпечивши розтягування вмісту на усю картку."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:182
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:193
 msgid ""
 "Next we specify the spacing between the rows and columns within our grid, so "
 "that our components don't bunch up. Kirigami provides a number of handy "
@@ -7988,39 +8010,39 @@ msgstr ""
 "декілька зручних [попередньо визначених одиниць](docs:kirigami2;Kirigami::"
 "Platform::Units) для використання з цією метою:"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:184
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:195
 msgid "Kirigami Unit"
 msgstr "Одиниця Kirigami"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:184
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:195
 msgid "Pixels"
 msgstr "Пікселі"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:186
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:197
 msgid "smallSpacing"
 msgstr "smallSpacing"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:186
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:197
 msgid "4px"
 msgstr "4px"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:187
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:198
 msgid "largeSpacing"
 msgstr "largeSpacing"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:187
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:198
 msgid "8px"
 msgstr "8px"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:188
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:199
 msgid "gridUnit"
 msgstr "gridUnit"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:188
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:199
 msgid "18px"
 msgstr "18px"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:192
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:203
 msgid ""
 "KDE's Visual Design Group (VDG) has a lot more information about the "
 "different units defined within Plasma and Kirigami on the [Human Interface "
@@ -8030,7 +8052,7 @@ msgstr ""
 "інтерфейсу](/hig/layout/units/) щодо різних модулів, які визначено у Плазмі "
 "і Kirigami."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:196
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:207
 msgid ""
 "As you might remember, `root` is the id of our [Kirigami.ApplicationWindow]"
 "(docs:kirigami2;ApplicationWindow). It provides the [wideScreen](docs:"
@@ -8053,11 +8075,11 @@ msgstr ""
 "від використаного екрана: якщо він є широкоформатним, у таблиці буде 4 "
 "стовпчики, інакше їх буде 2."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:198
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:209
 msgid "Inner components"
 msgstr "Внутрішні компоненти"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:200
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:211
 msgid ""
 "We could just create three labels within our delegate component and call it "
 "a day, but that wouldn't look particularly nice. We'll make use of a few "
@@ -8067,11 +8089,11 @@ msgstr ""
 "Але це не виглядало б аж надто привабливо. Ми ж скористаємося декількома "
 "додатковими зручними компонентами:"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:239
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:250
 msgid "How the custom Card looks like"
 msgstr "Як виглядає нетипова картка"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:241
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:252
 msgid ""
 "Left, [Kirigami.Heading](docs:kirigami2;Heading): uses the `ListElement`'s "
 "`date` as a level 1 heading."
@@ -8079,7 +8101,7 @@ msgstr ""
 "Ліворуч, [Kirigami.Heading](docs:kirigami2;Heading): використовує `date` з "
 "`ListElement` як заголовок першого рівня."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:243
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:254
 msgid ""
 "Middle, [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
 "columnlayout.html): has a [Kirigami.Heading](docs:kirigami2;Heading) that "
@@ -8101,7 +8123,7 @@ msgstr ""
 "чи є порожнім опис, — компоненти буде показано, залежно від результату "
 "перевірки`description.length > 0`."
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:245
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:256
 msgid ""
 "Right, [Controls.Button](docs:qtquickcontrols;QtQuick.Controls.Button): a "
 "button that will do something... soon!"
@@ -8109,7 +8131,7 @@ msgstr ""
 "Праворуч, [Controls.Button](docs:qtquickcontrols;QtQuick.Controls.Button): "
 "кнопка, яка щось робитиме… невдовзі!"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:256
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:267
 msgid ""
 "![Screenshot of the app appearance after completing this lesson](Screenshot."
 "webp)"
@@ -8117,11 +8139,11 @@ msgstr ""
 "![Знімок вигляду вікна програми після завершення цього уроку](Screenshot."
 "webp)"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:258
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:269
 msgid "So there is our basic card!"
 msgstr "Отже, маємо нашу базову картку!"
 
-#: content/docs/getting-started/kirigami/introduction-listviews/index.md:260
+#: content/docs/getting-started/kirigami/introduction-listviews/index.md:271
 msgid ""
 "With these steps, we have now laid the basic groundwork for adding all the "
 "functionality to our app."
@@ -8945,16 +8967,12 @@ msgstr ""
 "розбір його частин і збільшить ризик помилок у нашому коді."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:15
-#, fuzzy
-#| msgid ""
-#| "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
-#| "qml`, `AddEditDialog.qml` and `KountdownDelegate.qml`."
 msgid ""
 "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
 "qml`, `AddDialog.qml` and `KountdownDelegate.qml`."
 msgstr ""
-"У цьому підручнику ми поділимо код у `Main.qml` між `Main.qml`, "
-"`AddEditDialog.qml` і `KountdownDelegate.qml`."
+"У цьому підручнику ми поділимо код у `Main.qml` між `Main.qml`, `AddDialog."
+"qml` і `KountdownDelegate.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:17
 msgid ""
@@ -9226,11 +9244,6 @@ msgstr ""
 "AbstractCard) до окремого файла. Ось результат у `KountdownDelegate.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:132
-#, fuzzy
-#| msgid ""
-#| "Our dialog with `id: addDialog` is not enveloped in a Component, and it "
-#| "is not a component that is visible by default, so the code can be copied "
-#| "as is into the `AddEditDialog.qml`:"
 msgid ""
 "Our dialog with `id: addDialog` is not enveloped in a Component, and it is "
 "not a component that is visible by default, so the code can be copied as is "
@@ -9238,34 +9251,26 @@ msgid ""
 msgstr ""
 "Наше діалогове вікно із `id: addDialog` не загорнуто у Component, і не є "
 "компонентом, який є типово видимим, отже код можна скопіювати без змін до "
-"`AddEditDialog.qml`:"
+"`AddDialog.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:136
 msgid "With the code split, `Main.qml` thus becomes much shorter:"
 msgstr "Таким чином, після поділу коду `Main.qml` стане набагато коротшим:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:140
-#, fuzzy
-#| msgid ""
-#| "We now have two extra QML files, `AddEditDialog.qml` and "
-#| "`KountdownDelegate`, and we need to find some way of using them in `Main."
-#| "qml`. The way to add the contents of the new files to `Main.qml` is by "
-#| "*instantiating* them."
 msgid ""
 "We now have two extra QML files, `AddDialog.qml` and `KountdownDelegate`, "
 "and we need to find some way of using them in `Main.qml`. The way to add the "
 "contents of the new files to `Main.qml` is by *instantiating* them."
 msgstr ""
-"Тепер у нас є два додаткових файли QML, `AddEditDialog.qml` і "
+"Тепер у нас є два додаткових файли QML, `AddDialog.qml` і "
 "`KountdownDelegate`, і нам потрібно винайти спосіб використання їх у `Main."
 "qml`. Способом додавання вмісту нових файлів до `Main.qml` є *створення "
 "екземплярів* цих файлів."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:142
-#, fuzzy
-#| msgid "`AddEditDialog.qml` becomes `AddEditDialog {}`:"
 msgid "`AddDialog.qml` becomes `AddDialog {}`:"
-msgstr "`AddEditDialog.qml` стає `AddEditDialog {}`:"
+msgstr "`AddDialog.qml` стає `AddDialog {}`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:146
 msgid "`KountdownDelegate.qml` becomes `KountdownDelegate {}`:"
