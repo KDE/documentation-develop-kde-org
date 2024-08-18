@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 01:38+0000\n"
-"PO-Revision-Date: 2024-08-14 06:22+0200\n"
+"PO-Revision-Date: 2024-08-17 07:27+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -6252,19 +6252,14 @@ msgid "Opening the dialog"
 msgstr "Odpiranje pogovornega okna"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:37
-#, fuzzy
-#| msgid ""
-#| "Adding the button to open the dialog is much simpler: just a [Kirigami."
-#| "Action](docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
-#| "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgid ""
 "First we edit the action from the previous tutorial: just a [Kirigami.Action]"
 "(docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
 "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgstr ""
-"Dodajanje gumba za odpiranje pogovornega okna je veliko preprostejše: samo "
-"[Kirigami.Action](docs:kirigami2;Action), sproži funkcijo odpiranja [open()]"
-"(docs:qtquickcontrols;QtQuick.Controls.Popup::open)."
+"Najprej uredimo dejanje iz prejšnje vadnice: samo [Kirigami.Action](docs:"
+"kirigami2;Action), ki sproži funkcijo pogovornega okna [open()](docs:"
+"qtquickcontrols;QtQuick.Controls.Popup::open)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:39
 msgid "Countdown-adding dialogs"
@@ -6475,18 +6470,13 @@ msgid "Clear the input form"
 msgstr "Počistite obrazec za vnos"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:121
-#, fuzzy
-#| msgid ""
-#| "Once the Kirigami.Dialog is initialized, we want to create a custom "
-#| "binding to only make the Ok button visible if the required text fields "
-#| "are filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgid ""
 "... Once the Kirigami.Dialog is initialized, we want to create a custom "
 "binding to only make the Ok button visible if the required text fields are "
 "filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgstr ""
-"Ko je Kirigami.Dialog inicializiran, želimo ustvariti vezavo po meri, da bo "
-"gumb V redu viden le, če so izpolnjena zahtevana besedilna polja. Za to "
+"... Ko je Kirigami.Dialog inicializiran, želimo ustvariti vezavo po meri, da "
+"bo gumb V redu viden le, če so izpolnjena zahtevana besedilna polja. Za to "
 "uporabljamo Kirigami.Dialog.standardButton(button):"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:129
@@ -6538,16 +6528,12 @@ msgstr ""
 "bo dodal vnos v model in počistil pogovorno okno za naslednje odprtje."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:158
-#, fuzzy
-#| msgid ""
-#| "We check that the nameField is not empty and that the dateField (which "
-#| "has an inputMask) is completely filled"
 msgid ""
 "... We check that the nameField is not empty and that the dateField (which "
 "has an inputMask) is completely filled"
 msgstr ""
-"Preverimo, da nameField ni prazno in da je dateField (ki ima inputMask) v "
-"celoti izpolnjeno"
+"... Preverimo, da nameField ni prazno in da je dateField (ki ima inputMask) "
+"v celoti izpolnjeno"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:180
 msgid ""
@@ -6601,12 +6587,16 @@ msgid ""
 "Secondly now that we have an actual date to play around with, we can "
 "calculate the time until said date:"
 msgstr ""
+"Drugič, zdaj, ko imamo dejanski datum, s katerim se lahko igramo, lahko "
+"izračunamo čas do omenjenega datuma:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:194
 msgid ""
 "And thirdly increase the window size so that we have more room for our new "
 "cards:"
 msgstr ""
+"In tretjič, povečamo velikost okna, da bomo imeli več prostora za naše nove "
+"kartice:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:198
 msgid "Much nicer."
@@ -7023,6 +7013,13 @@ msgid ""
 "compile). Some KDE applications might have working icons if they were "
 "already installed on the system."
 msgstr ""
+"Ikone oken in opravilne vrstice bodo delovale v seji Wayland le, če so "
+"namizne datoteke aplikacij nameščene v `~/.local/share/applications` ali `/"
+"usr/share/applications`. Če želite, da bodo ikone delovale v tem učbeniku, "
+"kopirajte datoteko namizja aplikacije tja ali preklopite na razvojno sejo, "
+"kot je opisano v [učbeniku za kdesrc-build](/docs/getting-started/building/"
+"kdesrc-build-compile). Nekatere aplikacije KDE imajo morda delujoče ikone, "
+"če so že nameščene v sistemu."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:148
 msgid "CMakeLists.txt"
@@ -8787,15 +8784,11 @@ msgstr ""
 "kaj, in tvegamo, da bomo umazali našo kodo."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:15
-#, fuzzy
-#| msgid ""
-#| "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
-#| "qml`, `AddEditDialog.qml` and `KountdownDelegate.qml`."
 msgid ""
 "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
 "qml`, `AddDialog.qml` and `KountdownDelegate.qml`."
 msgstr ""
-"V tem učbaniku bomo kodo v `Main.qml` razdelili na `Main.qml`, "
+"V tem učbeniku bomo razdelili kodo v `Main.qml` na `Main.qml`, "
 "`AddEditDialog.qml` in `KountdownDelegate.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:17
@@ -9065,11 +9058,6 @@ msgstr ""
 "AbstractCard) v ločeno datoteko. Tukaj je nastala `KountdownDelegate.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:132
-#, fuzzy
-#| msgid ""
-#| "Our dialog with `id: addDialog` is not enveloped in a Component, and it "
-#| "is not a component that is visible by default, so the code can be copied "
-#| "as is into the `AddEditDialog.qml`:"
 msgid ""
 "Our dialog with `id: addDialog` is not enveloped in a Component, and it is "
 "not a component that is visible by default, so the code can be copied as is "
@@ -9077,34 +9065,25 @@ msgid ""
 msgstr ""
 "Naše pogovorno okno z `id: addDialog` ni ovito v komponento in ni "
 "komponenta, ki je privzeto vidna, zato je kodo mogoče kopirati takšno, kot "
-"je, v `AddEditDialog.qml`:"
+"je, v `AddDialog.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:136
 msgid "With the code split, `Main.qml` thus becomes much shorter:"
 msgstr "Z razcepom kode postane `Main.qml` tako veliko krajši:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:140
-#, fuzzy
-#| msgid ""
-#| "We now have two extra QML files, `AddEditDialog.qml` and "
-#| "`KountdownDelegate`, and we need to find some way of using them in `Main."
-#| "qml`. The way to add the contents of the new files to `Main.qml` is by "
-#| "*instantiating* them."
 msgid ""
 "We now have two extra QML files, `AddDialog.qml` and `KountdownDelegate`, "
 "and we need to find some way of using them in `Main.qml`. The way to add the "
 "contents of the new files to `Main.qml` is by *instantiating* them."
 msgstr ""
-"Zdaj imamo dve dodatni datoteki QML, `AddEditDialog.qml` in "
-"`KountdownDelegate`, in najti moramo način, kako ju uporabiti v `Main.qml`. "
-"Način dodajanja vsebine novih datotek v `Main.qml` je tako, da jih "
-"*instanciirate*."
+"Zdaj imamo dve dodatni datoteki QML, `AddDialog.qml` in `KountdownDelegate`, "
+"in najti moramo način, kako ju uporabiti v `Main.qml`. Način dodajanja "
+"vsebine novih datotek v `Main.qml` je tako, da jih *instanciiramo*."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:142
-#, fuzzy
-#| msgid "`AddEditDialog.qml` becomes `AddEditDialog {}`:"
 msgid "`AddDialog.qml` becomes `AddDialog {}`:"
-msgstr "`AddEditDialog.qml` postane `AddEditDialog {}``:"
+msgstr "`AddDialog.qml` postane `AddDialog {}``:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:146
 msgid "`KountdownDelegate.qml` becomes `KountdownDelegate {}`:"
