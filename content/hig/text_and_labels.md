@@ -121,15 +121,15 @@ Give every window a distinctive title briefly describing its visible content. Th
 
 **Bad:** Main Window
 
-**Good:** Inbox - konqi@kde.org
+**Good:** Inbox — konqi@kde.org
 
 **Good:** Stairway To Heaven, by Led Zeppelin
 
 Avoid showing file paths, which can be long and hard to parse. In a tab-based app that can have multiple files open, disambiguate identically-named files only by their parent folder names, like this:
 
 ```
-CMakeLists.txt - library
-CMakeLists.txt - app
+CMakeLists.txt — library
+CMakeLists.txt — app
 ```
 
 For dialog titles, describe the action being performed starting with an imperative mood verb, just like button and menu item labels. If the dialog was opened from a button or menu item, echo its label in the dialog title.
