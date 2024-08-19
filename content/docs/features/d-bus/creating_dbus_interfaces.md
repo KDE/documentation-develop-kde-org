@@ -51,7 +51,11 @@ Note how we moved the methods we wish to export to to be public slots and marked
 
 We would then go about creating an implementation of this class as defined above.
 
-{{< alert title="Tip" >}} When exposing an API to other applications via D-Bus, other applications and users, via scripting, may come to rely on the calls available in the interface. Changing the D-Bus interface can therefore cause breakage for others. For this reason it is recommended to keep compatibility with publicly advertised D-Bus APIs over the lifespan of a major release of your application.{{< /alert >}}
+{{< alert title="Tip" color="success" >}}
+
+When exposing an API to other applications via D-Bus, other applications and users, via scripting, may come to rely on the calls available in the interface. Changing the D-Bus interface can therefore cause breakage for others. For this reason it is recommended to keep compatibility with publicly advertised D-Bus APIs over the lifespan of a major release of your application.
+
+{{< /alert >}}
 
 ### Naming The Interface
 
@@ -171,6 +175,9 @@ Since the generated adaptor is a QObject, when we pass the constructor `this` it
 
 We then need to register our object on the bus by calling `QDBusConnection::registerObject` and expose the interface for others to use by calling `QDBusConnection::registerService`.
 
-{{< alert title="Tip" >}} If there will be more than one of the same object created in your application then you will need to register each object with a unique path. If there is no well defined, unique naming scheme for your objects the `this` pointer may come in handy.
+{{< alert title="Tip" color="success" >}}
+
+If there will be more than one of the same object created in your application then you will need to register each object with a unique path. If there is no well defined, unique naming scheme for your objects the `this` pointer may come in handy.
+
 {{< /alert >}}
 
