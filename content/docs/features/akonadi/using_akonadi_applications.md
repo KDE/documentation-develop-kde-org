@@ -309,13 +309,13 @@ Don't forget to register the `KDescendantsProxyModel` in the `main.cpp` file.
 
 In the QML file located at `src/content/ui/main.qml`, we remove the default mainPageComponent and add the following code instead:
 
-{{< snippet file="use/akonadi/using_akonadi_applications/src/contents/ui/main.qml" part="initial" lang="qml" >}}
+{{< snippet file="features/akonadi/using_akonadi_applications/src/contents/ui/main.qml" part="initial" lang="qml" >}}
 
 This will create a small loading page and will react to the loading signal we created previously.
 
 The next component is the actual UI of the mail folder selector page:
 
-{{< snippet file="use/akonadi/using_akonadi_applications/src/contents/ui/main.qml" part="mainPage" lang="qml" >}}
+{{< snippet file="features/akonadi/using_akonadi_applications/src/contents/ui/main.qml" part="mainPage" lang="qml" >}}
 
 ![Screenshot of a tree view of mail folders](folderpage.png)
 
@@ -472,7 +472,7 @@ The list of mail component is a simple `ListView` using the `QuickMail.folderMod
 
 And finally, the last component displays the list of emails.
 
-{{< snippet file="use/akonadi/using_akonadi_applications/src/contents/ui/main.qml" part="maillist" lang="qml" >}}
+{{< snippet file="features/akonadi/using_akonadi_applications/src/contents/ui/main.qml" part="maillist" lang="qml" >}}
 
 ![List of emails](maillist.png)
 
@@ -522,21 +522,21 @@ Instead, we'll need to fetch the email's content on-demand.
 
 To make our code a bit cleaner, we will wrap the mail content inside a new class: `MailWrapper`. This class will be responsible for fetching all the information about the mail we want to display.
 
-{{< snippet file="use/akonadi/using_akonadi_applications/src/messagewrapper.h" part="wrapper" lang="cpp" >}}
+{{< snippet file="features/akonadi/using_akonadi_applications/src/messagewrapper.h" part="wrapper" lang="cpp" >}}
 
 The constructor of the `MessageWrapper` will fetch the content of the message in case the Item is empty. It's using a [Akonadi::ItemFetchJob](docs:akonadi;Akonadi::ItemFetchJob) that is created inside the `createFetchJob` method. When we get the full item, we emit a `loaded` signal to update the UI.
 
-{{< snippet file="use/akonadi/using_akonadi_applications/src/messagewrapper.cpp" part="wrapper" lang="cpp" >}}
+{{< snippet file="features/akonadi/using_akonadi_applications/src/messagewrapper.cpp" part="wrapper" lang="cpp" >}}
 
 In `createFetchJob`, we need to create the [ItemFetchJob](docs:akonadi;Akonadi::ItemFetchJob) and define its scope.
 The scope specifies which parts of an item should be fetched from Akonadi.
 We ask for the full payload, the parent collection, and possible related content.
 
-{{< snippet file="use/akonadi/using_akonadi_applications/src/messagewrapper.cpp" part="createFetchJob" lang="cpp" >}}
+{{< snippet file="features/akonadi/using_akonadi_applications/src/messagewrapper.cpp" part="createFetchJob" lang="cpp" >}}
 
 Reading the content of the mail is then done by calling the appropriate methods from the `KMime::Message`. Similarly, the other properties can be implemented as wrappers around `KMime::Message`. For more details, you can take a look at the [complete implementation](https://invent.kde.org/carlschwan/quickmail/-/blob/master/src/messagewrapper.cpp).
 
-{{< snippet file="use/akonadi/using_akonadi_applications/src/messagewrapper.cpp" part="content" lang="cpp" >}}
+{{< snippet file="features/akonadi/using_akonadi_applications/src/messagewrapper.cpp" part="content" lang="cpp" >}}
 
 To make this work, we need to transform the `QuickMail` class into a singleton, since we need to access the session when creating a job.
 
@@ -586,7 +586,7 @@ In the previously included `folderPageComponent`, we can now fill the `onClicked
 
 The mail viewer component is also a `Kirigami.ScrollablePage`, and we use a TextArea component to display the content.
 
-{{< snippet file="use/akonadi/using_akonadi_applications/src/contents/ui/main.qml" part="mail" lang="qml" >}}
+{{< snippet file="features/akonadi/using_akonadi_applications/src/contents/ui/main.qml" part="mail" lang="qml" >}}
 
 ![Mail view](mailview.png)
 
