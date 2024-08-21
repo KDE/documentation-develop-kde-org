@@ -1,0 +1,17 @@
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        {{ $tabName := .Scratch.Get "tabName" }}
+        {{ $tabID := .Scratch.Get "tabID" }}
+
+        <a class="nav-item nav-link active"
+           id="nav-{{ index $tabID 0 }}" data-toggle="tab" href="#{{ index $tabID 0 }}"
+           role="tab" aria-controls="nav-home" aria-selected="true">{{ replaceRE "(\\s)" "" (index $tabName 0) }}</a>
+
+        <a class="nav-item nav-link"
+           id="nav-{{ index $tabID 1 }}" data-toggle="tab" href="#{{ index $tabID 1 }}"
+           role="tab" aria-controls="nav-profile" aria-selected="false">{{ replaceRE "(\\s)" "" (index $tabName 1) }}</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tab-content">
+    {{ .Inner }}
+</div>

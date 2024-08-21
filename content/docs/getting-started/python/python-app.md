@@ -10,15 +10,16 @@ description: >
 
 For the purposes of this tutorial, we will create the application on Linux.
 
-To use Python together with QML, we will be using
+To use Python together with QML, we can use either [PySide](https://doc.qt.io/qtforpython-6/),
+the official Python bindings for the Qt framework or
 [PyQt](https://riverbankcomputing.com/software/pyqt/intro), a project by
 Riverbank Computing that allows you to write Qt applications using Python.
 
 You will need Python installed, and that will be the case in any major Linux
-distribution. But instead of using Pip to install PyQt and Kirigami, you will
-need to install them from your distribution. This ensures both PyQt and
+distribution. But instead of using `pip` to install PySide/PyQt and Kirigami, you will
+need to install them from your distribution. This ensures PySide/PyQt and
 Kirigami will have been built for the same Qt version, allowing you to package
-it easily. Any other dependencies can be installed from Pip in a
+it easily. Any other dependencies can be installed from `pip` in a
 [Python virtual environment](https://docs.python.org/3/library/venv.html) later.
 
 {{< installpackage
@@ -87,7 +88,7 @@ Create a directory and a virtual environment for the project:
 mkdir simplemdviewer
 cd simplemdviewer
 python3 -m venv --system-site-packages env/
-``` 
+```
 
 Activate it using the activate script:
 
@@ -105,12 +106,19 @@ loads the QML file.
 Create a new directory `simplemdviewer/src/` and add a new
 `simplemdviewer_app.py` file in this directory:
 
+{{< tabset-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app.py" highlight="python" >}}
+{{< /tab-qt >}}
+{{< tab-qt tabName="PySide6" >}}
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app.py" highlight="python" >}}
+{{< /tab-qt >}}
+{{< /tabset-qt >}}
 
 We have just created a
-[QGuiApplication](https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtgui/qguiapplication.html)
+[QGuiApplication](https://doc.qt.io/qtforpython-6/PySide6/QtGui/QGuiApplication.html#PySide6.QtGui.QGuiApplication)
 object that initializes the application and contains the main event loop. The
-[QQmlApplicationEngine](https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtqml/qqmlapplicationengine.html)
+[QQmlApplicationEngine](https://doc.qt.io/qtforpython-6/PySide6/QtQml/QQmlApplicationEngine.html#PySide6.QtQml.QQmlApplicationEngine)
 object loads the `main.qml` file.
 
 Create a new `src/qml/main.qml` file that specifies the UI of the application:
@@ -118,7 +126,7 @@ Create a new `src/qml/main.qml` file that specifies the UI of the application:
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/main.qml" highlight="qml" >}}
 
 {{< alert title="Warning" color="warning">}}
-Older distributions such as Debian or Ubuntu LTS that do not have an up-to-date Kirigami might require lowering the Kirigami import version from `3.20` to `3.15` to run. 
+Older distributions such as Debian or Ubuntu LTS that do not have an up-to-date Kirigami might require lowering the Kirigami import version from `3.20` to `3.15` to run.
 {{< /alert >}}
 
 We have just created a new QML-Kirigami-Python application. Run it:
@@ -142,23 +150,31 @@ unformatted text into a text element.
 {{<figure src="simplemdviewer2.webp" class="text-center">}}
 
 OK, let’s add some Python logic: a simple Markdown converter in a
-Python, [QObject](https://doc.qt.io/qtforpython-5/PySide2/QtCore/QObject.html#qobject) 
+Python, [QObject](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QObject.html)
 derivative class.
 
 - Create a new `md_converter.py` file in the `simplemdviewer` directory:
 
+{{< tabset-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/md_converter.py" highlight="python" >}}
+{{< /tab-qt >}}
+{{< tab-qt tabName="PySide6" >}}
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/md_converter.py" highlight="python" >}}
+{{< /tab-qt >}}
+{{< /tabset-qt >}}
 
 The `MdConverter` class contains the `_source_text` member
 variable. The `sourceText` property exposes `_source_text`
 to the QML system through the `readSourceText()` getter and the
-`setSourceText()` setter functions.
+`setSourceText()` setter functions in PyQt. In PySide, Python-like
+setters and getters are used for this purpose.
 
 When setting the `sourceText` property, the `sourceTextChanged`
-[signal](https://www.riverbankcomputing.com/static/Docs/PyQt6/signals_slots.html#PyQt6.QtCore.pyqtSignal)
+[signal](https://doc.qt.io/qtforpython-6/overviews/signalsandslots.html#signals)
 is emitted to let QML know that the property has changed. The `mdFormat()`
 function returns the Markdown-formatted text and it has been declared as a
-[slot](https://www.riverbankcomputing.com/static/Docs/PyQt6/signals_slots.html#the-pyqtslot-decorator)
+[slot](https://doc.qt.io/qtforpython-6/overviews/signalsandslots.html#slots)
 so as to be invokable by the QML code.
 
 The `markdown` Python package takes care of formatting. Let’s install
@@ -168,18 +184,32 @@ it in our virtual environment:
 python3 -m pip install markdown
 ```
 
-It is time to register the new `MdConverter` type.
+It is worth noting that in PySide, the Python decorator `@QmlElement`, along with
+the `QML_IMPORT_NAME` and `QML_IMPORT_MAJOR_VERSION` takes care of registering the
+class `MdConveter` with QML. In PyQt, this is done through the function
+`qmlRegisterType()` inside `simplemdviewer_app.py` as seen below.
 
 Update the `simplemdviewer_app.py` file to:
 
+{{< tabset-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app-2.py" highlight="python" >}}
+{{< /tab-qt >}}
+{{< tab-qt tabName="PySide6" >}}
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app-2.py" highlight="python" >}}
+{{< /tab-qt >}}
+{{< /tabset-qt >}}
 
-The `qmlRegisterType()` function has registered the `MdConverter` type in the
-QML system, in the library `org.kde.simplemdviewer`, version 1.0.
+In PyQt, the `qmlRegisterType()` function has registered the `MdConverter` type in the
+QML system, in the library `org.kde.simplemdviewer`, version 1.0. In PySide, this registration is done in the
+file where the class is defined i.e. `md_converter.py` through the `@QmlElement` decorator.
+The import name and version of `MdConverter` type is set through the variables `QML_IMPORT_NAME` and
+`QML_IMPORT_MAJOR_VERSION`. Finally, the Python import `from md_converter import MdConverter` in PySide's
+`simplemdviewer_app.py` takes care of making Python and QML engine aware of the `@QmlElement` decorator.
 
 Change `main.qml` to:
 
-{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/main-2.qml" highlight="python" >}}
+{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/main-2.qml" highlight="qml" >}}
 
 The updated QML code:
 

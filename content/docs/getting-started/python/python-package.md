@@ -138,7 +138,14 @@ The last step is to tinker with the way we import modules.
 
 Update `simplemdviewer/src/simplemdviewer_app.py` to:
 
+{{< tabset-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app-3.py" highlight="python" >}}
+{{< /tab-qt >}}
+{{< tab-qt tabName="PySide6" >}}
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app-3.py" highlight="python" >}}
+{{< /tab-qt >}}
+{{< /tabset-qt >}}
 
 Create a `__main__.py` file into the `src/` directory. Now that there's a
 module, this tells the build tools what's the main function, the entrypoint

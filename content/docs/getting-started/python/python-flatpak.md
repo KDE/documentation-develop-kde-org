@@ -21,7 +21,22 @@ flatpak manifest, which describes everything needed to build the package.
 
 Create a new flatpak manifest file `simplemdviewer/org.kde.simplemdviewer.json`:
 
+{{< tabset-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/org.kde.simplemdviewer.json" highlight="json" >}}
+{{< /tab-qt >}}
+{{< tab-qt tabName="PySide6" >}}
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/org.kde.simplemdviewer.json" highlight="json" >}}
+{{< /tab-qt >}}
+{{< /tabset-qt >}}
+
+{{< alert title="Note" color="info" >}}
+
+The Flatpak manifest for PySide uses the version 6.7 for the runtime and the base app, as opposed to PyQt which
+uses the version 6.6. The reason for this is that PySide Flatpak base app is only available from the version
+6.7 and upwards.
+
+{{< /alert >}}
 
 This file reads that we use the `markdown` module and the build info
 is provided by the `python3-markdown.json` manifest file. We are going
@@ -66,6 +81,13 @@ We are using the
 [PyQt Baseapp](https://github.com/flathub/com.riverbankcomputing.PyQt.BaseApp),
 which contains an already built and ready-to-use PyQt we can quickly add on
 top of the KDE Runtime, so we need to install it as well.
+
+For a PyQt Flatpak application, we are using the
+[PyQt Baseapp](https://github.com/flathub/com.riverbankcomputing.PyQt.BaseApp),
+which contains an already built and ready-to-use PyQt we can quickly add on
+top of the KDE Runtime, so we need to install it as well. Alternatively, you can use the
+[PySide Baseapp](https://github.com/flathub/io.qt.PySide.BaseApp),
+which provides a similar ready-to-use PySide6 environment.
 
 ```bash
 flatpak install com.riverbankcomputing.PyQt.BaseApp/x86-64/6.6
