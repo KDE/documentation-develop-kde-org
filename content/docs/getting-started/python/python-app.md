@@ -1,9 +1,9 @@
 ---
-title: Your first PyQt + Kirigami application
+title: Your first Python + Kirigami application
 weight: 1
 group: python
 description: >
-    Learn how to write an application with PyQt.
+    Learn how to write an application with PyQt/PySide.
 ---
 
 ## Prerequisites

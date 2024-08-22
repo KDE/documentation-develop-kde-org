@@ -1,5 +1,5 @@
 ---
-title: Publishing your PyQt app as a Flatpak
+title: Publishing your Python app as a Flatpak
 weight: 3
 group: python
 description: >
