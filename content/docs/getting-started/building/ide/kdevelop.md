@@ -59,7 +59,7 @@ export XDG_CONFIG_DIRS=/home/n/kde/usr/etc/xdg:${XDG_CONFIG_DIRS:-/etc/xdg}
 export QT_PLUGIN_PATH=/home/n/kde/usr/lib/x86_64-linux-gnu/plugins:$QT_PLUGIN_PATH
 export QML2_IMPORT_PATH=/home/n/kde/usr/lib/x86_64-linux-gnu/qml:$QML2_IMPORT_PATH
 
-export QT_QUICK_CONTROLS_STYLE_PATH=/home/n/kde/usr/lib/x86_64-linux-gnu/qml/QtQuick/Controls.2/:$QT_QUICK_CONTROLS_STYLE_PATH</nowiki>}}
+export QT_QUICK_CONTROLS_STYLE_PATH=/home/n/kde/usr/lib/x86_64-linux-gnu/qml/QtQuick/Controls.2/:$QT_QUICK_CONTROLS_STYLE_PATH
 ```
 
 To set up the environment inside KDevelop, first Select "Settings" -> "Configure KDevelop" in the menu bar. Then open the "Environment" settings page. Click the button on the right-hand side called "Batch edit mode" to open a new dialog with an empty text area. Copy and paste the contents of `prefix.sh` into this window and click "OK" to confirm the text dialog. Finally click "OK" to close the settings window.
