@@ -203,6 +203,27 @@ This is for three reasons:
 
 Use heading level four (`####`) only if strictly necessary. Never use five (`#####`) or more.
 
+## Use descriptive links {#descriptive-links}
+
+Descriptive links are a [part of the Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG20/#navigation-mechanisms).
+They provide several benefits:
+
+* They are more readable by screen readers, used by blind or vision-impaired users
+* They are easier to identify and discern among several links
+* They provide better click targets
+
+Don't:
+
+* We recommend the Google Technical Writing course: https://developers.google.com/tech-writing/overview
+* Using kdesrc-build with a custom built Qt is an advanced topic. See the [wiki](#).
+* You need to know about QML property bindings to be able to follow this tutorial. You can read more about it in [this article](#).
+
+Do:
+
+* We recommend the [Google Technical Writing course](https://developers.google.com/tech-writing/overview).
+* Using kdesrc-build with a custom built Qt is an advanced topic. See [Using kdesrc-build with a custom Qt installation](#).
+* You need to know about [QML property bindings](#) to be able to follow this tutorial.
+
 ## Use descriptive anchors {#anchors}
 
 You generally don't really need to define anchors yourself since Hugo does this for you, but sometimes section names can be too long, making links to them equally long.
