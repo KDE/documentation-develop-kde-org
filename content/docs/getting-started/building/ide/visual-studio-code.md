@@ -171,6 +171,88 @@ C++ code. Breakpoints in QML are sadly not possible.
 
 {{< figure alt="Screenshot of kcm running" width="800px" src="kcm-running.png" >}}
 
+### Debugging with external executables
+
+When developing a library, it may be convenient to launch an application that uses it from the current project. For example, working with Ark's libraries used
+in Dolphin context menu actions. You can set your run configuration to launch a custom binary, such as `dolphin`.
+
+To do that, follow these steps:
+1. Open your `launch.json` file (Run -> Open Configurations).
+2. Copy the existing launch configuration from the `configurations` entry in `launch.json` and paste it as a new one.
+3. In the `name` field, use something meaningful; for example "Launch Dolphin" so you will recognize it from the run configuration dialog.
+4. In the `program` field, use the path to the executable to be run. For example, `/home/username/kde/usr/bin/dolphin`.
+5. Save the `launch.json` file.
+
+<details>
+<summary>Example of edited launch.json</summary>
+
+```diff
+         },
++        {
++            "name": "Launch Dolphin",
++            "type": "cppdbg",
++            "request": "launch",
++            "program": "/home/andrew/kde6/usr/bin/dolphin",
++            "args": [],
++            "preLaunchTask": "KDE Builder pre-launch task",
++            "stopAtEntry": false,
++            "cwd": "${workspaceFolder}",
++            "environment": [
++                {
++                    "name": "PATH",
++                    "value": "/home/andrew/kde6/usr/bin:${env:PATH}"
++                },
++                {
++                    "name": "XDG_DATA_DIRS",
++                    "value": "/home/andrew/kde6/usr/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
++                },
++                {
++                    "name": "XDG_CONFIG_DIRS",
++                    "value": "/home/andrew/kde6/usr/etc/xdg:${env:XDG_CONFIG_DIRS}:/etc/xdg"
++                },
++                {
++                    "name": "QT_PLUGIN_PATH",
++                    "value": "/home/andrew/kde6/usr/lib/plugins:${env:QT_PLUGIN_PATH}"
++                },
++                {
++                    "name": "QML2_IMPORT_PATH",
++                    "value": "/home/andrew/kde6/usr/lib/qml:${env:QML2_IMPORT_PATH}"
++                },
++                {
++                    "name": "QT_QUICK_CONTROLS_STYLE_PATH",
++                    "value": "/home/andrew/kde6/usr/lib/qml/QtQuick/Controls.2/:${env:QT_QUICK_CONTROLS_STYLE_PATH}"
++                },
++                {
++                    "name": "MANPATH",
++                    "value": "/home/andrew/kde6/usr/share/man:${MANPATH:-/usr/local/share/man:/usr/share/man}"
++                },
++                {
++                    "name": "SASL_PATH",
++                    "value": "/home/andrew/kde6/usr/lib/sasl2:$SASL_PATH"
++                }
++            ],
++            "envFile": "/home/andrew/kde6/qt_logging_environment.sh", // cannot be a script, see https://github.com/microsoft/vscode-cpptools/issues/9329 feature request.
++            "externalConsole": false,
++            "MIMode": "gdb",
++            "setupCommands": [
++                {
++                    "description": "Enable pretty-printing for gdb",
++                    "text": "-enable-pretty-printing",
++                    "ignoreFailures": true
++                }
++            ]
++        },
+         {
+             // Debug a KCM.
+             "name": "kcm",
+             "type": "cppdbg",
+```
+
+</details>
+
+Now open "Run" [view](https://code.visualstudio.com/docs/getstarted/userinterface#_views) from the Activity Bar. Select newly appeared "Launch Dolphin" configuration.
+
+When you debug with this configuration Ark will be built, but Dolphin will be launched, and the IDE can still hit breakpoints in the Ark code.
 
 ## Troubleshooting
 
@@ -201,7 +283,6 @@ loggers:
   https://code.visualstudio.com/docs.
 - There are first-party video tutorials available at
   https://code.visualstudio.com/docs/getstarted/introvideos.
-
 
 ## Notes
 
