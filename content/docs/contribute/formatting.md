@@ -99,29 +99,28 @@ The most important shortcodes are as follows.
 
 ### readfile
 
-Displays the contents of a file and applies syntax highlighting to it. It has three optional parameters:
+Displays the contents of a file and applies syntax highlighting to it. It has five parameters, two of which are mandatory and three optional:
 
-* `start` defines the first line that should be displayed. By default this is 1, which means starting from the first line.
-* `lines` defines how many lines should be displayed. By default this is 0, which displays all lines from **start** to the end of the file.
-
-The only required parameter is **file** for specifying the path of the file to read:
-- If the file is in the [bundle](#creating-a-new-tutorial) of the content file you are writing, you can specify the path starting from the bundle directory;
-- Otherwise, the path needs to be specified starting from the root of your project directory.
+* `file` (mandatory) is the file to be displayed. If the file is in the [bundle](#creating-a-new-tutorial) of the content file you are writing, you can specify a relative path; otherwise, you need to specify an absolute path starting from the root of your project directory (namely `/content/docs`).
+* `highlight` (mandatory) is the language used for syntax highlighting.
+* `start` (optional) is the first line that should be displayed. By default this is 1, which means starting from the first line.
+* `lines` (optional) is how many lines should be displayed. By default this is 0, which displays all lines from **start** to the end of the file.
+* `emphasize` (optional) is a set of line numbers or line number ranges to be highlighted. Note that they are relative to the displayed lines, not to the absolute file line numbers (important in case file is not displayed from the start). For example, if start="5" and emphasize="3 6-7", lines 7, 10 and 11 of the file will be highlighted. Also note that like `start`, `emphasize` starts from 1, not 0.
 
 For example, in any content file you can write:
 
 ```html
-{{</* readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" start=17 lines=9 */>}}
+{{</* readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" start=17 lines=9 emphasize="1-2 7" */>}}
 ```
 
 which will be rendered as:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" start=17 lines=9 >}}
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" start=17 lines=9 emphasize="1-2 7" >}}
 
-Since `/docs/getting-started/kirigami/introduction-getting_started/` is a bundle, in the file `/content/docs/getting-started/kirigami/introduction-getting_started/index.md` you can also write as below and achieve the same result:
+Since `/content/docs/getting-started/kirigami/introduction-getting_started/` is a bundle, to show the file `/content/docs/getting-started/kirigami/introduction-getting_started/index.md` you can also write as below and achieve the same result:
 
 ```html
-{{</* readfile file="src/qml/main.qml" highlight="qml" start=17 lines=9 */>}}
+{{</* readfile file="src/qml/main.qml" highlight="qml" start=17 lines=9 emphasize="1-2 7" */>}}
 ```
 
 Commonly used highlighting options are:
