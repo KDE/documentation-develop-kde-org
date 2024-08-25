@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 01:42+0000\n"
-"PO-Revision-Date: 2024-08-17 08:57+0300\n"
+"PO-Revision-Date: 2024-08-24 09:28+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -6912,14 +6912,6 @@ msgstr ""
 "разом із виконуваним файлом."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:91
-#, fuzzy
-#| msgid ""
-#| "In case you want to automatically build the project with kde-builder/"
-#| "kdesrc-build, custom module name should be the same as the project root "
-#| "folder (in our case it will be \"kirigami-tutorial\"), otherwise you "
-#| "would need to customize the `source-dir` or `dest-dir` for the module. We "
-#| "will assume the path to your `main.cpp` will be `~/kde/src/kirigami-"
-#| "tutorial/src/main.cpp`."
 msgid ""
 "In case you want to automatically build the project with kde-builder/kdesrc-"
 "build, custom module name should be the same as the project root folder (in "
@@ -6932,7 +6924,7 @@ msgstr ""
 "build, нетипова назва модуля має бути такою, як назва кореневої теки проєкту "
 "(у нашому випадку, це буде «kirigami-tutorial»). Якщо це не так, вам слід "
 "змінити `source-dir` або `dest-dir` для модуля. Ми припускатимемо, що шляхом "
-"до вашого `main.cpp` буде `~/kde/src/kirigami-tutorial/src/main.cpp`."
+"до вашого `main.cpp` буде `$HOME/kde/src/kirigami-tutorial/src/main.cpp`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:95
 msgid "Main.qml"
@@ -7448,19 +7440,14 @@ msgid "Linux or FreeBSD"
 msgstr "Linux або FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:240
-#, fuzzy
-#| msgid ""
-#| "If you want kdesrc-build to handle building and installation of your "
-#| "project, you need to specify a custom module in your `~/.config/kdesrc-"
-#| "buildrc`:"
 msgid ""
 "If you want kdesrc-build to handle building and installation of your "
 "project, you need to specify a custom module in your `$HOME/.config/kdesrc-"
 "buildrc`:"
 msgstr ""
 "Якщо ви хочете, щоб збиранням і встановленням вашого проєкту займалася "
-"програма kdesrc-build, вам слід вказати нетиповий модуль у вашому файлі `~/."
-"config/kdesrc-buildrc`:"
+"програма kdesrc-build, вам слід вказати нетиповий модуль у вашому файлі `"
+"$HOME/.config/kdesrc-buildrc`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:249
 msgid "Then you can build and install it with the command:"
@@ -7480,16 +7467,12 @@ msgstr ""
 "віддати такі команди:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:263
-#, fuzzy
-#| msgid ""
-#| "The program will be installed to `~/.local/bin` and its desktop entry to "
-#| "`~/.local/share/applications`."
 msgid ""
 "The program will be installed to `$HOME/.local/bin` and its desktop entry to "
 "`$HOME/.local/share/applications`."
 msgstr ""
-"Програму буде встановлено до `~/.local/bin`, а її стільничний запис — до `~/."
-"local/share/applications`."
+"Програму буде встановлено до `$HOME/.local/bin`, а її стільничний запис — до "
+"`$HOME/.local/share/applications`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:265
 msgid "Windows"
