@@ -34,7 +34,7 @@ All user interface text is written in either [sentence case](https://apastyle.ap
 - The text ends with a period or colon.
 - The text is clearly a sentence.
 - The text is a subtitle, tooltip, transient status message, or placeholder label.
-- The text is used as a label for a radio button, checkbox, or combobox item.
+- The text is used as a label for a radio button, checkbox, combobox item, or placed in front of a control — for example using `Kirigami.FormData.label`.
 
 Otherwise, use title case.
 
