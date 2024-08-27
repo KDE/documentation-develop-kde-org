@@ -16,7 +16,7 @@
   <ul class="code-nav flex flex-nowrap items-stretch nav nav-tabs">
     {{ range $langs }}
       <li class="nav-item">
-          <a class="nav-link {{ cond (eq . "json") "active" ""}}" id="{{ $prefix }}-{{ . }}-tab" data-toggle="tab" href="#{{ $prefix }}-{{ . }}" role="tab" aria-controls="{{ $prefix }}-{{ . }}" aria-selected="{{ cond (eq . "yaml") "true" "false"}}">{{ . }}</a>
+          <a class="nav-link {{ cond (eq . "json") "active" ""}}" id="{{ $prefix }}-{{ . }}-tab" data-bs-toggle="tab" href="#{{ $prefix }}-{{ . }}" role="tab" aria-controls="{{ $prefix }}-{{ . }}" aria-selected="{{ cond (eq . "yaml") "true" "false"}}">{{ . }}</a>
       </li>
     {{ end }}
   </ul>

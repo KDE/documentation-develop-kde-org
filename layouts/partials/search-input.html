@@ -7,6 +7,7 @@
   <div class="td-search__icon icon icon_edit-find d-flex"></div>
   <input
     type="search"
+    id="search-input"
     class="td-search__input form-control td-search-input"
     placeholder="{{ T "ui_search" }}"
     aria-label="{{ T "ui_search" }}"
@@ -21,5 +22,30 @@
     data-offline-search-index-json-src="{{ $offlineSearchIndexFingerprint.RelPermalink }}"
     data-offline-search-base-href="/"
   >
+  <template id="search-results-template">
+    <div class="search-results-header" style="display: flex; justify-content: space-between; margin-bottom: 1em;">
+      <span style="font-weight: bold">
+        {{ T "ui_search_results" }}
+      </span>
+      <i class="icon icon_paint-none search-result-close-button p-1" style="cursor: pointer;"></i>
+    </div>
+    <div class="search-results-body" style="overflow-y: auto;">
+      <p class="search-no-results" style="display: none;">
+        {{ T "ui_search_no_results" }}
+      </p>
+    </div>
+  </template>
+  <template id="search-results-card-template">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" href="#">Title</a>
+      </div>
+      <div class="card-body">
+        <p class="card-text text-muted">
+          Excerpt
+        </p>
+      </div>
+    </div>
+  </template>
 </div>
 {{ end }}

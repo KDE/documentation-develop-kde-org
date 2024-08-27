@@ -24,10 +24,6 @@
   }
 
   --rim: rgba(0, 0, 0, 0.2);
-  @media (prefers-color-scheme: dark) {
-    --rim: rgba(255, 255, 255, 0.2);
-  }
-
   border-top: 1px solid var(--rim);
 
   &__section {
@@ -51,14 +47,10 @@
   }
 
   ul.active, li.active, li.active > a.active {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  @media (prefers-color-scheme: light) {
-    ul.active, li.active, li.active > a.active {
-      background-color: rgba(0, 0, 0, 0.05);
-    }
+    background-color: rgba(0, 0, 0, 0.05);
   }
 
+  .toc-l0 > .td-sidebar-link,
   .toc-l0 > &__section > &__section-title,
   .toc-l0 > &__page {
     padding-left: 0.5rem;
@@ -90,9 +82,6 @@
 
     a {
       color: $gray-900;
-      @media (prefers-color-scheme: dark) {
-        color: white;
-      }
     }
   }
 
@@ -138,9 +127,6 @@
     background-color: $td-sidebar-bg-color;
     padding-right: 1rem;
     border-right: 1px solid $td-sidebar-border-color;
-    @media (prefers-color-scheme: dark) {
-      border-right: 1px solid rgb(18, 18, 18);
-    }
   }
 
   &__toggle {
@@ -148,9 +134,6 @@
     color: $gray-900;
     margin: 1rem;
     font-size: 1.5rem;
-    @media (prefers-color-scheme: dark) {
-      color: white;
-    }
   }
 
   &__search {
@@ -177,6 +160,30 @@
 
     .td-search-box {
       width: 100%;
+    }
+  }
+}
+
+@include color-mode(dark) {
+  .td-sidebar-nav {
+    --rim: rgba(255, 255, 255, 0.2);
+
+    ul.active, li.active, li.active > a.active {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &__section-title {
+      a {
+        color: white;
+      }
+    }
+  }
+  .td-sidebar {
+    @include media-breakpoint-up(md) {
+      border-right: 1px solid rgb(18, 18, 18);
+    }
+    &__toggle {
+      color: white;
     }
   }
 }

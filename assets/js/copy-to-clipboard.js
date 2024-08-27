@@ -7,26 +7,34 @@ window.addEventListener('load', (event) => {
       return;
     }
 
+    const copyPopovers = new Map();
+
     const highlights = document.getElementsByClassName('highlight');
     for (const node of highlights) {
         const button = document.getElementById('copy-btn-template').cloneNode(true).content;
         // Add the button
         node.prepend(button);
-        node.querySelector('.copy-code-btn').addEventListener('click', async (event) => {
+
+        const btn = node.querySelector('.copy-code-btn');
+        copyPopovers.set(btn, new bootstrap.Popover(btn));
+        btn.addEventListener('click', async (event) => {
             // Icon classes, COPY is the default, and OK shows for a little while after successfully copying
             const ICON_COPY = 'icon_edit-copy';
             const ICON_OK = 'icon_dialog-ok-apply';
 
             const copyBtn = event.target;
             const copyIcon = copyBtn.querySelector('.icon');
-            const copyBtnOriginalContent = copyBtn.dataset.content;
+            const copyBtnClickedContent = copyBtn.dataset.clickedContent;
+            const copyBtnOriginalContent = copyBtn.dataset.bsContent;
+
+            const popover = copyPopovers.get(copyBtn);
 
             // Find the code block with the text we want
             const codeBlock = node.querySelector('pre > code[data-lang]');
 
             // Code block wasn't found then can't continue
-            if (!codeBlock) {
-                console.warn("Could not find code-block for ", node);
+            if (!codeBlock || !popover) {
+                console.warn("Could not find code-block or popover for ", node, copyBtn);
                 return;
             }
 
@@ -35,19 +43,17 @@ window.addEventListener('load', (event) => {
 
             // Change the icon to OK to indicate success
             copyIcon.classList.replace(ICON_COPY, ICON_OK);
-            copyBtn.dataset.content = copyBtn.dataset.clickedContent;
 
             // "Update" the popover to show the new text
-            $(copyBtn).popover('hide');
-            $(copyBtn).popover('show');
+            popover.setContent({'.popover-body': copyBtnClickedContent});
 
             // Flip the icon back to COPY after a short time
             setTimeout(() => {
                 copyIcon.classList.replace(ICON_OK, ICON_COPY);
                 // Reset the original copy
-                copyBtn.dataset.content = copyBtnOriginalContent;
+                popover.setContent({'.popover-body': copyBtnOriginalContent});
                 // Hide the popover as well
-                $(copyBtn).popover('hide');
+                popover.hide();
             }, 3000);
         });
     }

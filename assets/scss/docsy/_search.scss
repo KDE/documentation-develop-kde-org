@@ -35,6 +35,9 @@
   &__input:disabled {
     cursor: wait;
   }
+  ::placeholder {
+    color: var(--text-muted);
+  }
 }
 
 .popover.offline-search-result {
@@ -43,14 +46,5 @@
 
   .card {
     margin-bottom: $spacer * .5;
-  }
-
-  @media(prefers-color-scheme: dark) {
-    background-color: $black;
-    border: 1px solid $gray-300 !important;
-
-    .popover-body {
-      color: #fff;
-    }
   }
 }

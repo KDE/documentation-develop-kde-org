@@ -10,9 +10,6 @@
 //
 .td-toc {
     border-left: 1px solid $border-color;
-    @media (prefers-color-scheme: dark) {
-        border-left: 1px solid rgb(18, 18, 18);
-    }
 
     @supports (position: sticky) {
         position: sticky;
@@ -78,7 +75,7 @@
 
     .td-page-meta + #TableOfContents {
         border-top: 1px solid #bcbebf; /* same as .td-toc */
-        @media (prefers-color-scheme: dark) {
+        @include color-mode(dark) {
             border-top: 1px solid rgb(18, 18, 18);
         }
         padding-top: .25rem;
@@ -99,4 +96,15 @@
     ul {
         padding-left: 0;
     }
+}
+
+@include color-mode(dark) {
+    .td-toc {
+        border-left: 1px solid rgb(18, 18, 18);
+
+        .td-page-meta + #TableOfContents {
+          border-top: 1px solid rgb(18, 18, 18);
+        }
+    }
+
 }

@@ -6,15 +6,32 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+// Import from hugo-kde theme
+@import "../bootstrap";
+
+main {
+  font-size: 1rem;
+}
+@media (min-width: 600px) {
+  main {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 900px) {
+  main {
+    font-size: 1rem;
+  }
+}
+
+
 @import "support/functions";
 @import "variables_project";
 @import "variables";
 @import "support/mixins";
 @import "root";
 
-@import "../bootstrap.scss";
-
 @import "support/utilities";
+@import "card";
 @import "colors";
 @import "boxes";
 @import "blog";
@@ -30,24 +47,54 @@
 @import "section-index";
 @import "pageinfo";
 
+:root {
+  --bs-body-color: #232629;
+  --bs-body-bg: #fcfcfc;
+  --bs-border-color: #eff0f1;
+}
+
+@include color-mode(dark, true) {
+  --bs-body-color: #eff0f1;
+  --bs-body-bg: #232629;
+  --bs-border-color: #16181b;
+}
+
+@include color-mode(dark) {
+  h1, h2, h3, h4, h5, h6 {
+    color: #bdc3c7 !important;
+  }
+}
+
+.alert-error {
+  --bs-alert-color: var(--bs-danger-text);
+  --bs-alert-bg: var(--bs-danger-bg-subtle);
+  --bs-alert-border-color: var(--bs-danger-border-subtle);
+  --bs-alert-link-color: var(--bs-danger-text);
+  color: var(--bs-alert-color);
+  background-color: var(--bs-alert-bg);
+  border-color: var(--bs-alert-border-color);
+}
+
+
 footer {
     min-height: 150px;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
          min-height: 200px;
     }
 }
 
 .navbar .nav-item a.nav-link {
   color: #334545;
-  @media (prefers-color-scheme: dark) {
-    color: #efefef;
-  }
   .active {
     color: white;
   }
 }
-
+@include color-mode(dark) {
+  .navbar .nav-item a.nav-link {
+    color: #efefef;
+  }
+}
 // Adjust anchors vs the fixed menu.
 @include media-breakpoint-up(md) {
   .td-offset-anchor:target {
@@ -66,7 +113,7 @@ footer {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@include color-mode(dark) {
   .highlight span[style*="color:#000"] {
     color: white !important;
   }

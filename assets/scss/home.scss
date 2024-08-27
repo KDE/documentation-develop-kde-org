@@ -1,3 +1,8 @@
+// FIXME: Importing this breaks builds, needed for color-mode though.
+//@import "bootstrap";
+
+@import "includes/variables";
+
 .bottomAlignRow div {
   position: relative;
   padding-bottom: 50px;
@@ -204,7 +209,9 @@ main h3 {
   }
 }
 
-@media(prefers-color-scheme:dark) {
+// FIXME: bootstrap scss import is breaking here, so just use a media-query.
+//@include color-mode(dark) {
+@media (prefers-color-scheme: dark) {
   .tool,
   .block-nav {
     background-color: #31363b;

@@ -1,215 +1,182 @@
 // Adapted from code by Matt Walters https://www.mattwalters.net/posts/hugo-and-lunr/
 
-(function ($) {
-    'use strict';
+window.addEventListener('load', async () => {
+    const searchInput = document.getElementById('search-input');
+    if (!searchInput) {
+        return;
+    }
+    const searchForm = searchInput.closest('form');
+    if (!searchForm) {
+        return;
+    }
 
-    $(document).ready(function () {
-        const $searchInput = $('.td-search-input');
+    const searchResultsTemplate = document.getElementById('search-results-template');
+    const searchResultsCardTemplate = document.getElementById('search-results-card-template')
+    const offlineSearchSrc = searchInput.dataset.offlineSearchIndexJsonSrc;
+    const offlineSearchBase = searchInput.dataset.offlineSearchBaseHref;
 
-        //
-        // Options for popover
-        //
+    if (!searchResultsCardTemplate || !searchResultsTemplate) {
+        return;
+    }
 
-        $searchInput.data('html', true);
-        $searchInput.data('placement', 'bottom');
-        $searchInput.data(
-            'template',
-            '<div class="popover offline-search-result" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
-        );
-        // Disable the search input until we have the index
-        $searchInput.prop('disabled', true);
+    // Start disabled
+    searchInput.setAttribute('disabled', 'true');
 
-        //
-        // Register handler
-        //
+    let popover = null;
 
-        $searchInput.on('change', (event) => {
-            render($(event.target));
+    // Lunr Data
+    let lunrIdx = 0;
+    let resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
 
-            // Hide keyboard on mobile browser
-            $searchInput.blur();
-        });
+    searchInput.addEventListener('change', async (event) => {
+        await render(event.target);
+        searchInput.blur();
+    });
 
-        // Prevent reloading page by enter key on sidebar search.
-        $searchInput.closest('form').on('submit', () => {
-            return false;
-        });
+    searchForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+    });
 
-        //
-        // Lunr
-        //
-
-        let idx = null; // Lunr index
-        let resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
-
-        /**
-         * Init the lunr index object, either runs a web worker to do it, or does it locally if that fails.
-         * @returns {Promise<void>}
-         */
-        const init = async () => {
-            const response = await fetch($searchInput.data('offline-search-index-json-src'));
-            if (!response.ok) {
-                console.warn('Could not fetch offline search data!');
-                return;
-            }
-            const data = await response.json();
-
-            // Try to run the web worker, if that fails run it normally.
-            try {
-                const lunrWorker = new Worker(window._site.webWorker);
-
-                lunrWorker.onmessage = (event) => {
-                    const { evt, data } = event.data;
-                    if (evt === 'index') {
-                        idx = lunr.Index.load(data[0]);
-                        resultDetails = data[1];
-
-                        $searchInput.prop('disabled', false);
-                        $searchInput.trigger('change');
-                    }
-                };
-
-                lunrWorker.postMessage({'evt': 'init', 'data': data});
-            } catch {
-                console.warn("Web worker was unable to run. Running indexing the slow way!")
-                idx = lunr(function () {
-                    this.ref('ref');
-                    this.field('title', { boost: 2 });
-                    this.field('body');
-
-                    data.forEach( (doc) => {
-                        this.add(doc);
-
-                        resultDetails.set(doc.ref, {
-                            title: doc.title,
-                            excerpt: doc.excerpt,
-                        });
-                    });
-
-
-                    $searchInput.prop('disabled', false);
-                    $searchInput.trigger('change');
-                });
-            }
+    const init = async () => {
+        const response = await fetch(offlineSearchSrc);
+        if (!response.ok) {
+            console.warn('Could not fetch offline search data!');
+            return;
         }
 
-        init();
+        const data = await response.json();
 
-        const render = ($targetSearchInput) => {
-            // Dispose the previous result
-            $targetSearchInput.popover('dispose');
+        try {
+          const lunrWorker = new Worker(window._site.webWorker);
 
-            //
-            // Search
-            //
+          lunrWorker.onmessage = (event) => {
+            const { evt, data } = event.data;
+            if (evt === 'index') {
+              lunrIdx = lunr.Index.load(data[0]);
+              resultDetails = data[1];
 
-            if (idx === null) {
-                return;
+              searchInput.removeAttribute('disabled');
+              searchInput.dispatchEvent(new SubmitEvent('change', {submitter: searchInput}));
             }
+          };
 
-            const searchQuery = $targetSearchInput.val();
-            if (searchQuery === '') {
-                return;
-            }
+          lunrWorker.postMessage({'evt': 'init', 'data': data});
+        } catch {
+          lunrIdx = lunr(function () {
+              this.ref('ref');
+              this.field('title', { boost: 2 });
+              this.field('body');
 
-            const results = idx
-                .query((q) => {
-                    const tokens = lunr.tokenizer(searchQuery.toLowerCase());
-                    tokens.forEach((token) => {
-                        const queryString = token.toString();
-                        q.term(queryString, {
-                            boost: 100,
-                        });
-                        q.term(queryString, {
-                            wildcard:
-                                lunr.Query.wildcard.LEADING |
-                                lunr.Query.wildcard.TRAILING,
-                            boost: 10,
-                        });
-                        q.term(queryString, {
-                            editDistance: 2,
-                        });
+              data.forEach((doc) => {
+                  this.add(doc);
+
+                  resultDetails.set(doc.ref, {
+                      title: doc.title,
+                      excerpt: doc.excerpt,
+                  });
+              });
+          });
+          searchInput.removeAttribute('disabled');
+          searchInput.dispatchEvent(new SubmitEvent('change', {submitter: searchInput}));
+        }
+
+    }
+
+    const render = async (element) => {
+        if (popover) {
+            popover.dispose();
+            popover = null;
+        }
+
+        const searchQuery = element.value;
+
+        if (lunrIdx === null || searchQuery === '') {
+            return;
+        }
+
+        const results = lunrIdx
+            .query((q) => {
+                const tokens = lunr.tokenizer(searchQuery.toLowerCase());
+                tokens.forEach((token) => {
+                    const queryString = token.toString();
+                    q.term(queryString, {
+                        boost: 100,
                     });
-                })
-                .slice(0, 10);
-
-            //
-            // Make result html
-            //
-
-            const $html = $('<div>');
-
-            $html.append(
-                $('<div>')
-                    .css({
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        marginBottom: '1em',
-                    })
-                    .append(
-                        $('<span>')
-                            .text('Search results')
-                            .css({ fontWeight: 'bold' })
-                    )
-                    .append(
-                        $('<i>')
-                            .addClass('icon icon_paint-none search-result-close-button p-1')
-                            .css({
-                                cursor: 'pointer',
-                            })
-                    )
-            );
-
-            const $searchResultBody = $('<div>').css({
-                maxHeight: `calc(100vh - ${
-                    $targetSearchInput.offset().top -
-                    $(window).scrollTop() +
-                    180
-                }px)`,
-                overflowY: 'auto',
-            });
-            $html.append($searchResultBody);
-
-            if (results.length === 0) {
-                $searchResultBody.append(
-                    $('<p>').text(`No results found for query "${searchQuery}"`)
-                );
-            } else {
-                results.forEach((r) => {
-                    const $cardHeader = $('<div>').addClass('card-header');
-                    const doc = resultDetails.get(r.ref);
-                    const href =
-                        $searchInput.data('offline-search-base-href') +
-                        r.ref.replace(/^\//, '');
-
-                    $cardHeader.append(
-                        $('<a>').attr('href', href).text(doc.title)
-                    );
-
-                    const $cardBody = $('<div>').addClass('card-body');
-                    $cardBody.append(
-                        $('<p>')
-                            .addClass('card-text text-muted')
-                            .text(doc.excerpt)
-                    );
-
-                    const $card = $('<div>').addClass('card');
-                    $card.append($cardHeader).append($cardBody);
-
-                    $searchResultBody.append($card);
+                    q.term(queryString, {
+                        wildcard:
+                            lunr.Query.wildcard.LEADING |
+                            lunr.Query.wildcard.TRAILING,
+                        boost: 10,
+                    });
+                    q.term(queryString, {
+                        editDistance: 2,
+                    });
                 });
-            }
+            })
+            .slice(0, 10);
 
-            $targetSearchInput.on('shown.bs.popover', () => {
-                $('.search-result-close-button').on('click', () => {
-                    $targetSearchInput.val('');
-                    $targetSearchInput.trigger('change');
-                });
+        const html = document.createElement('div');
+        const searchResultFragment = searchResultsTemplate.content.cloneNode(true);
+        html.appendChild(searchResultFragment);
+
+        const searchResultBody = html.querySelector('.search-results-body');
+        const searchNoResults = html.querySelector('.search-no-results');
+
+        searchResultBody.style.maxHeight = `calc(100vh - ${
+            element.offsetHeight -
+            window.screenTop +
+            180
+        }px)`;
+
+        // Show the no results text and
+        if (results.length === 0) {
+            searchNoResults.style.display = 'block';
+        } else {
+            // Hide the no results text
+            searchNoResults.style.display = 'none';
+
+            results.forEach((r) => {
+               const cardFragment = searchResultsCardTemplate.content.cloneNode(true);
+               const doc = resultDetails.get(r.ref);
+
+               const link = cardFragment.querySelector('.card-link');
+               link.href = offlineSearchBase + r.ref.replace(/^\//, '');
+               link.innerText = doc.title;
+
+               const body = cardFragment.querySelector('.card-body');
+               body.innerText = doc.excerpt;
+
+               searchResultBody.appendChild(cardFragment);
             });
+        }
 
-            $targetSearchInput
-                .data('content', $html[0])
-                .popover('show');
-        };
-    });
-})(jQuery);
+        // Set the data-bs-content with our html
+        element.dataset.bsContent = html.innerHTML;
+
+        // Set the close button event
+        element.addEventListener('shown.bs.popover', () => {
+            document.querySelector('.search-result-close-button').addEventListener('click', () => {
+               searchInput.value = '';
+               searchInput.dispatchEvent(new SubmitEvent('change', {submitter: searchInput}));
+            });
+        })
+
+        // Allow the use of style attribute on some of these elements
+        const allowList = bootstrap.Tooltip.Default.allowList;
+        allowList.div.push('style');
+        allowList.p.push('style');
+        allowList.i.push('style');
+
+        popover = new bootstrap.Popover(element, {
+            html: true,
+            template: '<div class="popover offline-search-result" role="tooltip"><div class="popover-arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>',
+            placement: 'bottom',
+            allowList: allowList,
+        });
+        popover.show();
+
+    };
+
+
+    await init();
+});

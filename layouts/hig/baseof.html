@@ -4,7 +4,7 @@
     {{ partial "head.html" . }}
   </head>
   <body class="td-{{ .Kind }}">
-    <a href="#content" class="sr-only sr-only-focusable p-3 mb-2 bg-primary text-white position-fixed" style="z-index: 100000000">Skip to main content</a>
+    <a href="#content" class="visually-hidden visually-hidden-focusable p-3 mb-2 bg-primary text-white position-fixed" style="z-index: 100000000">Skip to main content</a>
 
     <div class="container-fluid td-outer">
       <header class="header row">
@@ -18,7 +18,7 @@
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
             {{ partial "toc.html" . }}
           </div>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main" id="content">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main" id="content">
             {{ partial "version-banner.html" . }}
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
             {{ block "main" . }}{{ end }}

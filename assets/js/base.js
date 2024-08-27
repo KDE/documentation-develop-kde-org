@@ -14,55 +14,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-(function($) {
-
-    'use strict';
-
-    $(function() {
-        $('[data-toggle="tooltip"]').tooltip();
-        $('[data-toggle="popover"]').popover();
-
-        $('.popover-dismiss').popover({
-            trigger: 'focus'
-        })
-    });
-
-
-    function bottomPos(element) {
-        return element.offset().top + element.outerHeight();
-    }
-
-    // Bootstrap Fixed Header
-    $(function() {
-        var promo = $(".js-td-cover");
-        if (!promo.length) {
-            return
-        }
-
-        var promoOffset = bottomPos(promo);
-        var navbarOffset = $('.js-navbar-scroll').offset().top;
-
-        var threshold = Math.ceil($('.js-navbar-scroll').outerHeight());
-        if ((promoOffset - navbarOffset) < threshold) {
-            $('.js-navbar-scroll').addClass('navbar-bg-onscroll');
-        }
-
-
-        $(window).on('scroll', function() {
-            var navtop = $('.js-navbar-scroll').offset().top - $(window).scrollTop();
-            var promoOffset = bottomPos($('.js-td-cover'));
-            var navbarOffset = $('.js-navbar-scroll').offset().top;
-            if ((promoOffset - navbarOffset) < threshold) {
-                $('.js-navbar-scroll').addClass('navbar-bg-onscroll');
-            } else {
-                $('.js-navbar-scroll').removeClass('navbar-bg-onscroll');
-                $('.js-navbar-scroll').addClass('navbar-bg-onscroll--fade');
-            }
-        });
-    });
-
-
-}(jQuery));
+window.addEventListener('load', () => {
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((element) => element.tooltip());
+    document.querySelectorAll('.popover-dismiss').forEach((element) => element.popover({trigger: 'focus'}));
+});
 
 function getOffsetSum(elem) {
     var top=0, left=0

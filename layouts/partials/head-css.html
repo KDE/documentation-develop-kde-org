@@ -1,6 +1,37 @@
-{{ $style := resources.Get "/scss/docsy/main.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
-<link rel="preload" href="{{ "/fonts/noto-sans.woff2" | absURL }}" as="font" crossorigin="anonymous" />
-<link rel="preload" href="{{ "/fonts/glyph/glyph.ttf" | absURL }}" as="font" crossorigin="anonymous" />
+{{/*
+SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
+SPDX-FileCopyrightText: 2021 Phu Hung Nguyen <phu@kde.org>
+SPDX-License-Identifier: LGPL-3.0-or-later
+*/}}
 
+{{- $toCSSOpts := dict "outputStyle" "compressed" "vars" (partial "fn/color_mode_type") -}}
+{{- $postCSSOpts := dict "use" "rtlcss" "noMap" true -}}
+
+{{ if eq (.Site.Language.LanguageDirection | default "ltr") "rtl" }}
+    {{ $style := resources.Get "/scss/docsy/main.scss" | toCSS $toCSSOpts | resources.PostCSS $postCSSOpts | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}?rtl" integrity="{{ $style.Data.Integrity }}">
+{{ else }}
+    {{ $style := resources.Get "/scss/docsy/main.scss" | toCSS $toCSSOpts | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+<link rel="preload" href="/fonts/noto-sans.woff2" as="font" crossorigin="anonymous" />
+<link rel="preload" href="/fonts/glyph/glyph.ttf?5ea9rb" as="font" crossorigin="anonymous" />
 <link href="https://cdn.kde.org/breeze-icons/icons.css" rel="stylesheet" />
+
+{{/* Stylesheets that go together with shortcodes */}}
+{{- if .HasShortcode "screenshots" }}
+    {{- $swiperCss := resources.Get "css/swiper-bundle.min.css" }}
+  <link rel="stylesheet" href="{{ $swiperCss.RelPermalink }}" />
+    {{- $oldStyle := resources.Get "scss/components/swiper.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $oldStyle.RelPermalink }}" integrity="{{ $oldStyle.Data.Integrity }}" />
+{{- end }}
+
+{{- if .HasShortcode "faq" }}
+    {{- $faqCss := resources.Get "scss/components/faq.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $faqCss.RelPermalink }}" integrity="{{ $faqCss.Data.Integrity }}" />
+{{- end }}
+
+{{/* Equivalent to Docsy's `hooks/head-end` */}}
+{{ if templates.Exists "partials/custom_styles.html" }}
+    {{ partial "custom_styles.html" . }}
+{{ end }}

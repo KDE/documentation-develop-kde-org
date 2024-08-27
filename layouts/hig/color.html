@@ -40,7 +40,7 @@
         <a class="ae-card d-flex w-100 align-items-center"
            href="{{ .Permalink }}">
           <i class="icon icon_go-previous h1"></i>
-          <div class="ml-3">
+          <div class="ms-3">
             <div class="h4">Previous</div>
             {{ .Title }}
           </div>
@@ -51,11 +51,11 @@
       {{with .PrevInSection }}
         <a class="ae-card d-flex w-100 align-items-center"
            href="{{ .Permalink }}">
-          <div class="mr-3">
+          <div class="me-3">
             <div class="h4">Next</div>
             {{ .Title }}
           </div>
-          <i class="icon icon_go-next h1 ml-auto"></i>
+          <i class="icon icon_go-next h1 ms-auto"></i>
         </a>
       {{ end }}
     </div>

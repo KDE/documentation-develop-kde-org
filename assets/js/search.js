@@ -14,30 +14,18 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-(function($) {
+window.addEventListener('load', () => {
+   document.querySelectorAll('.td-search-input').forEach((element) => {
+       element.addEventListener('keypress', (event) => {
+           // If not enter
+           if (event.keyCode !== 13) {
+               return;
+           }
 
-    'use strict';
+           event.preventDefault();
 
-    var Search = {
-        init: function() {
-            $(document).ready(function() {
-               $(document).on('keypress', '.td-search-input', function(e) {
-                    if (e.keyCode !== 13) {
-                        return
-                    }
-
-                    var query = $(this).val();
-                    var searchPage = "{{ "search/" | absURL }}?q=" + query;
-                    document.location = searchPage;
-
-                    return false;
-                });
-
-            });
-        },
-    };
-
-    Search.init();
-
-
-}(jQuery));
+           const query = event.target.value;
+           document.location =  '{{ "search" | absURL }}?q=' + query;
+       });
+   });
+});

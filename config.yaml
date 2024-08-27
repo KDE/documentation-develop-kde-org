@@ -58,9 +58,13 @@ markup:
   highlight:
     noClasses: false
 module:
+  hugoVersion:
+    extended: true
+    min: 0.109.0
   imports:
-  - path: invent.kde.org/websites/aether-sass
+    - path: invent.kde.org/websites/hugo-kde
 params:
+  colorModeType: media-query
   algolia_docsearch: false
   archived_version: false
   copyright: The KDE Community
@@ -82,5 +86,6 @@ params:
   url_latest_version: https://example.com
   version: '0.0'
   version_menu: Releases
+  displayTitle: true
 permalinks:
   blog: /:section/:year/:month/:day/:slug/

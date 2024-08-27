@@ -1,11 +1,32 @@
-
 :root {
   --chroma-highlight: #ffc;
-  --text-muted: #69737c;  // Result of lighten($black, 30%)
-  --text: #232629;
-  @media (prefers-color-scheme: dark) {
+  --text-muted: #69737c; // Result of lighten($black, 30%)
+  --text: #{$black};
+  --highlight-background: #{$highlight-background};
+}
+
+@include color-mode(dark) {
+  :root {
     --chroma-highlight: #0A2933;
-    --text-muted: #babfc4;  // Result of lighten($black, 60%)
-    --text: #eff0f1;
+    --text-muted: #babfc4; // Result of lighten($black, 60%)
+    --text: #{$gray-300};
+    --highlight-background: #{$highlight-background-dark};
+  }
+}
+
+// Bootstrap overrides
+@include color-mode(light) {
+  :root {
+    --bs-body-color-rgb: 35 38 41 !important;
+    --bs-link-color-rgb: 49, 111, 152 !important;
+    --bs-border-color-rgb: 239, 240, 241 !important;
+  }
+}
+
+@include color-mode(dark) {
+  :root {
+    --bs-body-color-rgb: 239, 240, 241 !important;
+    --bs-link-color-rgb: 169, 219, 255 !important;
+    --bs-border-color-rgb: 22 24 27 !important;
   }
 }

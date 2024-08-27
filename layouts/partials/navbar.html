@@ -1,31 +1,30 @@
 {{ $cover := .HasShortcode "blocks/cover" }}
-<nav class="col-12 col-md-9 col-xl-8 offset-md-3 offset-xl-2 js-navbar-scroll navbar navbar-expand {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
-  <a class="navbar-brand kde-logo active d-none d-lg-flex" href="{{ .Site.Home.RelPermalink }}">Developer</a>
-  <div class="td-navbar-nav-scroll" id="main_navbar">
-    <ul class="navbar-nav">
-      {{ $p := . }}
-      <li class="nav-item"><a class="nav-link kde-logo active d-lg-none d-flex" href="{{ .Site.Home.RelPermalink }}">Developer</a></li>
-      {{ range .Site.Menus.main }}
-      <li class="nav-item">
-        {{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
-        {{ with .Page }}
-        {{ $active = or $active ( $.IsDescendant .)  }}
-        {{ end }}
-        {{ $url := urls.Parse .URL }}
-        {{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
-        <a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}"><span{{if $active }} class="active"{{end}}>{{ .Name }}</span></a>
-      </li>
-      {{ end }}
-      {{ if  .Site.Params.versions }}
-      <li class="nav-item dropdown d-none d-lg-block">
-        {{ partial "navbar-version-selector.html" . }}
-      </li>
-      {{ end }}
-      {{ if  (gt (len .Site.Home.Translations) 0) }}
-      <li class="nav-item dropdown d-none d-lg-block">
-        {{ partial "navbar-lang-selector.html" . }}
-      </li>
-      {{ end }}
-    </ul>
-  </div>
+<a class="visually-hidden" href="#main">{{ i18n "skip-to-content" }}</a>
+<nav class="navbar navbar-expand-lg">
+    {{ if $.Site.Params.logo }}
+        <a class="app-logo navbar-brand" href="{{ "/" | relLangURL }}">
+            <img src="{{ $.Site.Params.logo }}" alt="Logo">
+            {{ if $.Site.Params.displayTitle }}
+                <span class="navbar-brand-text">{{ i18n "displayed-title" }}</span>
+            {{ end }}
+        </a>
+    {{ else }}
+        <a class="kde-logo navbar-brand" href="{{ "/" | relLangURL }}">
+            <span class="visually-hidden">{{ i18n "home" }}</span>
+            {{ if $.Site.Params.displayTitle }}
+                {{ i18n "displayed-title" }}
+            {{ end }}
+        </a>
+    {{ end }}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        {{- partial "navbar_nav.html" . -}}
+    </div>
+    {{ if .Site.Params.madeByKde }}
+    <a class="made-by-kde" target="_blank" href="https://kde.org">
+        {{ i18n "made-by-kde" }}
+    </a>
+    {{ end }}
 </nav>
