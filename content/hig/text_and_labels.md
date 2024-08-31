@@ -182,6 +182,16 @@ Each app's name is automatically a brand name; craft it carefully!
 - Don't simply add a “K” onto the beginning of an existing word. It's acceptable to choose a brand name with a K inside it, or even replace a “C” with a “K” (e.g. Falkon, DigiKam), but don't force it. Not all KDE brand names need to include a K (e.g. Dolphin, Plasma, NeoChat).
 - Don't use common words like “Files” or “Photos.” If your brand name is too generic, its identity will be diluted and users will have a hard time finding it in web searches or describing it to others. It will also be difficult to distinguish from GNOME apps also installed on the system that have similar generic names.
 
+Describe Plasma features in your UI with user-friendly descriptive terminology, not their internal codenames.
+
+**Bad:** Powerdevil
+
+**Good:** Power Management
+
+**Bad:** KWin Scripts
+
+**Good:** Window Management Plug-Ins
+
 
 ## Symbols
 Use appropriate Unicode symbols rather than handmade approximations. This makes the text of your app look nicer and more professional, easier to translate, and more comprehensible when read by a screen reader. For example:
