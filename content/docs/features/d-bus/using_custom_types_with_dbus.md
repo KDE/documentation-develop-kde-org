@@ -296,7 +296,7 @@ This section contains the sources for the chat example. The wiki does not allow 
 
 Chat is the interface being published. ChatAdaptor and ChatInterface were generated using Chat.xml.
 
-Put all these files in a directory and run
+Put all these files in a directory and run:
 
 ```bash
 mkdir build
@@ -306,58 +306,98 @@ ninja
 ./dbuschat
 ```
 
-### Chat.hpp
+<details><summary>Chat.hpp</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/Chat.hpp" highlight="cpp" >}}
 
-### Chat.cpp
+</details>
+<br>
+
+<details><summary>Chat.cpp</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/Chat.cpp" highlight="cpp" >}}
 
-### Chat.xml
+</details>
+<br>
+
+<details><summary>Chat.xml</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/Chat.xml" highlight="cpp" >}}
 
-### ChatAdaptor.h
+</details>
+<br>
+
+<details><summary>ChatAdaptor.h</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/ChatAdaptor.h" highlight="cpp" >}}
+</details>
+<br>
 
-### ChatAdaptor.cpp
+<details><summary>ChatAdaptor.cpp</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/ChatAdaptor.cpp" highlight="cpp" >}}
 
-### ChatInterface.h
+</details>
+<br>
+
+<details><summary>ChatInterface.h</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/ChatInterface.h" highlight="cpp" >}}
 
-### ChatInterface.cpp
+</details>
+<br>
+
+<details><summary>ChatInterface.cpp</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/ChatInterface.cpp" highlight="cpp" >}}
 
-### ChatWindow.hpp
+</details>
+<br>
+
+<details><summary>ChatWindow.hpp</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/ChatWindow.hpp" highlight="cpp" >}}
 
-### ChatWindow.cpp
+</details>
+<br>
+
+<details><summary>ChatWindow.cpp</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/ChatWindow.cpp" highlight="cpp" >}}
 
-### ChatWindow.ui
+</details>
+<br>
+
+<details><summary>ChatWindow.ui</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/ChatWindow.ui" highlight="xml" >}}
 
-### Message.hpp
+</details>
+<br>
+
+<details><summary>Message.hpp</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/Message.hpp" highlight="cpp" >}}
 
-### Message.cpp
+</details>
+<br>
+
+<details><summary>Message.cpp</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/Message.cpp" highlight="cpp" >}}
 
-### main.cpp
+</details>
+<br>
+
+<details><summary>main.cpp</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/main.cpp" highlight="cpp" >}}
 
-### CMakeLists.txt
+</details>
+<br>
+
+<details><summary>CMakeLists.txt</summary>
 
 {{< readfile file="/content/docs/features/d-bus/using_custom_types_with_dbus/CMakeLists.txt" highlight="cpp" >}}
+
+</details>

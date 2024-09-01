@@ -190,18 +190,36 @@ Compile and install it. You should now be able to see the preview of markdown fi
 
 ### Full code
 
-#### CMakeLists.txt
+<details><summary>CMakeLists.txt</summary>
+
 {{< readfile file="/content/docs/apps/kate/plugin/CMakeLists.txt" highlight="cmake" >}}
-#### plugin.json
+
+</details>
+<br>
+
+<details><summary>plugin.json</summary>
+
 {{< readfile file="/content/docs/apps/kate/plugin/plugin.json" highlight="json" >}}
-#### plugin.h
+
+</details>
+<br>
+
+<details><summary>plugin.h</summary>
+
 {{< readfile file="/content/docs/apps/kate/plugin/plugin.h" highlight="cpp" >}}
-#### plugin.cpp
+
+</details>
+<br>
+
+<details><summary>plugin.cpp</summary>
+
 {{< readfile file="/content/docs/apps/kate/plugin/plugin.cpp" highlight="cpp" >}}
+
+</details>
+<br>
 
 Since this is a very basic tutorial and likely doesn't explain a lot of things or shows other APIs that we have, the following resources may be of more help:
 
 - https://api.kde.org/frameworks/ktexteditor/html/ - Here you will find the list of all classes and methods available in the API
 - https://invent.kde.org/utilities/kate/-/tree/master/addons - The list of existing plugins can be an extremely useful resource if you want to find how to do a particular thing
 - https://kate-editor.org/support/ - You can find links to our mailing-list, chat here. We also have telegram and matrix groups where you can ask questions
-
