@@ -1,17 +1,16 @@
+{{ $uniqueId := .Ordinal }}
 <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        {{ $tabName := .Scratch.Get "tabName" }}
-        {{ $tabID := .Scratch.Get "tabID" }}
+  <div class="nav nav-tabs" id="tabset-{{ $uniqueId }}" role="tablist">
+      {{ $tabName := .Scratch.Get "tabName" }}
+      {{ $tabID := .Scratch.Get "tabID" }}
 
-        <a class="nav-item nav-link active"
-           id="nav-{{ index $tabID 0 }}" data-toggle="tab" href="#{{ index $tabID 0 }}"
-           role="tab" aria-controls="nav-home" aria-selected="true">{{ replaceRE "(\\s)" "" (index $tabName 0) }}</a>
-
-        <a class="nav-item nav-link"
-           id="nav-{{ index $tabID 1 }}" data-toggle="tab" href="#{{ index $tabID 1 }}"
-           role="tab" aria-controls="nav-profile" aria-selected="false">{{ replaceRE "(\\s)" "" (index $tabName 1) }}</a>
-    </div>
+      {{ range $index, $id := $tabID }}
+        <a class="nav-item nav-link {{ if eq $index 0 }}active{{ end }}"
+           id="tab-{{ $id }}" data-bs-toggle="tab" href="#{{ $id }}"
+           role="tab" aria-controls="{{ $id }}" aria-selected="{{ if eq $index 0 }}true{{ else }}false{{ end }}">{{ trim (index $tabName $index) " " }}</a>
+      {{ end }}
+  </div>
 </nav>
-<div class="tab-content" id="nav-tab-content">
+<div class="tab-content" id="tabset-content-{{ $uniqueId }}">
     {{ .Inner }}
 </div>

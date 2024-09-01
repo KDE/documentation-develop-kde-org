@@ -1,14 +1,9 @@
 {{ $tabName := .Get "tabName" }}
-{{ $tabID := "" }}
-{{ if eq $tabName "PyQt6" }}
-  {{ $tabID = "pyqt6" }}
-{{ else if eq $tabName "PySide6" }}
-  {{ $tabID = "pyside6" }}
-{{ end }}
+{{ $tabID := anchorize $tabName }}
 {{ $randomSuffix := delimit (shuffle (slice "a" "b" "c" "d" "e" "f")) "" }}
-{{ $tabID = printf "%s%s" $tabID $randomSuffix }}
+{{ $tabID = printf "%s-%s" $tabID $randomSuffix }}
 {{ .Parent.Scratch.Add "tabName" (slice $tabName) }}
 {{ .Parent.Scratch.Add "tabID" (slice $tabID) }}
-<div class="tab-pane fade show {{ if eq $tabName "PySide6" }}active {{ end }}" id="{{ $tabID }}" role="tabpanel" aria-labelledby="nav-{{ $tabID }}">
+<div class="tab-pane show {{ if eq .Ordinal 0 }}active {{ end }}" id="{{ $tabID }}" role="tabpanel" aria-labelledby="tab-{{ $tabID }}">
     {{ $.Inner | markdownify }}
 </div>
