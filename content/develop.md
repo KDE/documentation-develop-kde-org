@@ -49,8 +49,8 @@ weight: 20
           <img src="https://apps.kde.org/app-icons/org.kde.heaptrack.svg" alt="icon of app Heaptrack" />
           Heaptrack
         </a>
-        <a href="https://apps.kde.org/massif-visualizer">
-          <img src="https://apps.kde.org/app-icons/org.kde.massif-visualizer.svg" alt="icon of app Massif-Visualizer"/>
+        <a href="https://apps.kde.org/massif_visualizer">
+          <img src="https://apps.kde.org/app-icons/org.kde.massif_visualizer.svg" alt="icon of app Massif-Visualizer"/>
           Massif-Visualizer
         </a>
       </div>
