@@ -114,7 +114,15 @@ def parseConfig(path, plasmoid, keys):
     #abort on other errors so we can find them
 
 def download_file(repo: str, path: str):
-    content = requests.get('https://invent.kde.org/{}/-/raw/master/{}'.format(repo, path)).text
+    url = 'https://invent.kde.org/{}/-/raw/master/{}'.format(repo, path)
+    response = requests.get(url)
+
+    if response.status_code != 200:
+        sys.stderr.write("download_file failed to find {}.\n".format(url))
+        return
+
+    content = response.text
+
     os.makedirs(os.path.dirname('files/{}/{}'.format(repo, path)), exist_ok=True)
     with open('files/{}/{}'.format(repo, path), 'w+', encoding="UTF-8") as f:
         f.write(content)
@@ -132,8 +140,6 @@ if __name__ == "__main__":
     download_file('frameworks/kauth', 'examples/client.cpp')
     download_file('frameworks/kauth', 'examples/helper.cpp')
 
-    download_file('frameworks/kconfig', 'examples/all.cpp')
-
     download_file('frameworks/sonnet', 'examples/textedit.cpp')
     download_file('frameworks/sonnet', 'examples/dialogexample.cpp')
 
@@ -141,11 +147,9 @@ if __name__ == "__main__":
 
     download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/CMakeLists.txt')
     download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/main.cpp')
-    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/resources.qrc')
-    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/contents/ui/main.qml')
-    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/contents/ui/SettingsPage.qml')
-    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/contents/ui/MyAboutPage.qml')
-    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/contents/ui/JsonAboutPage.qml')
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/Main.qml')
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/SettingsPage.qml')
+    download_file('libraries/kirigami-addons', 'examples/FormCardTutorial/JsonAboutPage.qml')
 
     projects = os.listdir("./tmp/")
     keys = []

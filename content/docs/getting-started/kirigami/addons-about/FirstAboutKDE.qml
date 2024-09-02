@@ -13,7 +13,7 @@ Kirigami.ApplicationWindow {
 
     Component {
         id: aboutkde
-        FormCard.AboutKDE {}    // <==========
+        FormCard.AboutKDE {}
     }
 
     pageStack.initialPage: Kirigami.ScrollablePage {
@@ -23,7 +23,7 @@ Kirigami.ApplicationWindow {
                     id: aboutKDEButton
                     icon.name: "kde"
                     text: i18n("About KDE Page")
-                    onClicked: root.pageStack.layers.push(aboutkde)     // <==========
+                    onClicked: root.pageStack.layers.push(aboutkde)
                 }
 
                 FormCard.FormButtonDelegate {

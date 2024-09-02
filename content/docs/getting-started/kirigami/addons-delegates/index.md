@@ -14,22 +14,15 @@ The project structure should look like this:
 ```bash
 addonsexample
 ├── CMakeLists.txt
-├── main.cpp
-├── resources.qrc
-└── contents/
-    └── ui/
-        ├── main.qml
-        ├── MyAboutPage.qml
-        └── SettingsPage.qml
+├── main.cpp 
+├── Main.qml
+├── MyAboutPage.qml
+└── SettingsPage.qml
 ```
 
 ## Needed Changes
 
-Add a new line to our `resources.qrc`:
-
-{{< snippet repo="libraries/kirigami-addons" file="examples/FormCardTutorial/resources.qrc" lang="qrc" >}}
-
-And change `main.qml` to include our new Settings page:
+Change `Main.qml` to include our new Settings page:
 
 ```qml
 import QtQuick
@@ -99,7 +92,7 @@ We can now start checking out the components used to create our Settings page: t
 
 We used a form card in the [Kirigami Addons introduction](/docs/getting-started/kirigami/addons-introduction) before. Its main purpose is to serve as a container for other components while following a color different from the background, in a similar manner to a [Kirigami.Card](docs:kirigami2;Card).
 
-Create a new `contents/ui/SettingsPage.qml` file:
+Create a new `SettingsPage.qml` file:
 
 ```qml
 import QtQuick
@@ -247,7 +240,7 @@ FormCard.FormCardPage {
 
 We use its `icon.name` property to set a plus (+) icon to appear after the space where the `leading` would appear, and before the main content. This is a common pattern to indicate your button will add something to a list.
 
-Since this example is for simple illustrative purposes, we don't delve deep into what would be done once the button is clicked: it just prints "Clicked!" to the terminal. We _could_ make a new page for account creation that adds another user to a model, then push the page into view, similarly to what we did in `main.qml`.
+Since this example is for simple illustrative purposes, we don't delve deep into what would be done once the button is clicked: it just prints "Clicked!" to the terminal. We _could_ make a new page for account creation that adds another user to a model, then push the page into view, similarly to what we did in `Main.qml`.
 
 {{< figure src="formbuttondelegate.webp" >}}
 
@@ -390,7 +383,7 @@ With the checkbox, our Settings page should look like this:
 
 Our Settings page is taking shape, but each section is starting to get long. We can add a few FormDelegateSeparators to make our page tidier:
 
-{{< snippet repo="libraries/kirigami-addons" file="examples/FormCardTutorial/contents/ui/SettingsPage.qml" lang="qml" >}}
+{{< snippet repo="libraries/kirigami-addons" file="examples/FormCardTutorial/SettingsPage.qml" lang="qml" >}}
 
 Generally, you may use separators whenever you see major distinctions between components, although the choice of where to place them is ultimately yours. For example, in the General section, the checkbox differs from its previous components as it doesn't start with text; in the Autosave section, the separator groups the radio buttons together; and in the Accounts section, adding a separator between the last account and the button provides some additional focus to the button.
 

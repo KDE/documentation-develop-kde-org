@@ -18,7 +18,7 @@ Kirigami.ApplicationWindow {
 
     Component {
         id: aboutpage
-        MyAboutPage {}      // <==========
+        FormCard.AboutPage {}
     }
 
     pageStack.initialPage: Kirigami.ScrollablePage {
@@ -35,7 +35,7 @@ Kirigami.ApplicationWindow {
                     id: aboutPageButton
                     icon.name: "applications-utilities"
                     text: i18n("About Addons Example")
-                    onClicked: root.pageStack.layers.push(aboutpage)    // <==========
+                    onClicked: root.pageStack.layers.push(aboutpage)
                 }
 
                 FormCard.FormButtonDelegate {

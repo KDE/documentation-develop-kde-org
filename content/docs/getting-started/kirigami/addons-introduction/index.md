@@ -19,10 +19,7 @@ The initial project structure will look like so:
 addonsexample/
 ├── CMakeLists.txt
 ├── main.cpp
-├── resources.qrc
-└── contents/
-    └── ui/
-        └── main.qml
+└── Main.qml
 ```
 
 {{< alert title="Tip" color="success" >}}
@@ -31,8 +28,8 @@ You can quickly create this file structure with:
 
 ```bash
 mkdir -p addonsexample/contents/ui
-touch addonsexample/{CMakeLists.txt,main.cpp,resources.qrc}
-touch addonsexample/contents/ui/main.qml
+touch addonsexample/{CMakeLists.txt,main.cpp}
+touch addonsexample/Main.qml
 ```
 
 {{< /alert >}}
@@ -40,17 +37,6 @@ touch addonsexample/contents/ui/main.qml
 We start by using a very standard `CMakeLists.txt`:
 
 {{< snippet repo="libraries/kirigami-addons" file="examples/FormCardTutorial/CMakeLists.txt" lang="cmake" >}}
-
-A standard `resources.qrc`:
-
-```
-<!DOCTYPE RCC>
-<RCC version="1.0">
-<qresource prefix="/">
-    <file alias="main.qml">contents/ui/main.qml</file>
-</qresource>
-</RCC>
-```
 
 The interesting part will be the `main.cpp`:
 
@@ -70,7 +56,7 @@ We simply load our QML file from the resource file, and now we just need to take
 
 The idea for our app is to design our own Kirigami Addons gallery, showcasing multiple components, one per page. The main page will contain a simple list of buttons in a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html), each opening a separate page.
 
-Initially, our `contents/ui/main.qml` should look like this:
+Initially, our `Main.qml` should look like this:
 
 {{< readfile file="First.qml" highlight="qml" >}}
 
