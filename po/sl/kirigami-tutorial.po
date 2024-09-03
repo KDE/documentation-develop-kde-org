@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-24 01:42+0000\n"
+"POT-Creation-Date: 2024-09-03 01:41+0000\n"
 "PO-Revision-Date: 2024-08-24 06:22+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -138,11 +138,17 @@ msgid "About KDE"
 msgstr "O namizju KDE"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:14
+#, fuzzy
+#| msgid ""
+#| "Each new button we created in the previous step should open a new page. "
+#| "You can add new pages by instantiating them as [Components](docs:qtqml;"
+#| "QtQml.Component) and then using `pageStack.layers.push()` for each button "
+#| "to load that page in our `main.qml`:"
 msgid ""
 "Each new button we created in the previous step should open a new page. You "
 "can add new pages by instantiating them as [Components](docs:qtqml;QtQml."
 "Component) and then using `pageStack.layers.push()` for each button to load "
-"that page in our `main.qml`:"
+"that page in our `Main.qml`:"
 msgstr ""
 "Vsak nov gumb, ki smo ga ustvarili v prejšnjem koraku, bi moral odpreti novo "
 "stran. Nove strani lahko dodate tako, da jih ustvarite kot [Components](docs:"
@@ -164,73 +170,25 @@ msgstr "Stran o programu"
 #: content/docs/getting-started/kirigami/addons-about/index.md:24
 msgid ""
 "The application's AboutPage is slightly more complex, but it's still very "
-"simple to use. We will be adding a new QML file that will contain the "
-"information needed for our about page. First in our `resources.qrc` file:"
+"simple to use."
 msgstr ""
-"Aplikacija AboutPage je nekoliko bolj zapletena, vendar je še vedno zelo "
-"enostavna za uporabo. Dodali bomo novo datoteko QML, ki bo vsebovala "
-"informacije, potrebne za našo stran o tem. Najprej v naši datoteki "
-"`resources.qrc`:"
 
-#: content/docs/getting-started/kirigami/addons-about/index.md:35
-msgid "And our `contents/ui/MyAboutPage.qml` should have the following:"
-msgstr ""
-"In naša datoteka `contents/ui/MyAboutPage.qml` bi morala imeti naslednje:"
-
-#: content/docs/getting-started/kirigami/addons-about/index.md:39
+#: content/docs/getting-started/kirigami/addons-about/index.md:26
 msgid ""
-"Here we use the information we set using [KAboutData](docs:kcoreaddons;"
-"KAboutData) in our `main.cpp`. Here's a brief reminder of what is in `main."
-"cpp`:"
+"For a simple about page that uses the data set in by `KAboutData::"
+"setApplicationData(aboutData);` in `main.cpp` add the following to your "
+"`Main.qml`:"
 msgstr ""
-"Tu uporabljamo podatke, ki smo jih nastavili z [KAboutData](docs:kcoreaddons;"
-"KAboutData) v našem `main.cpp`. Tukaj je kratek opomnik, kaj je v `main.cpp`:"
 
-#: content/docs/getting-started/kirigami/addons-about/index.md:43
-msgid "<========== used in the import"
-msgstr "<========== uporabljeno pri uvozu"
-
-#: content/docs/getting-started/kirigami/addons-about/index.md:44
-msgid "<========== C++ object exported as a QML type"
-msgstr "<========== C++ predmet izvožen kot vrsta QML"
-
-#: content/docs/getting-started/kirigami/addons-about/index.md:51
-msgid ""
-"The `About` object we exported to the QML side using "
-"[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
-"qmlRegisterSingletonType) contains the data from [KAboutData::"
-"applicationData()](docs:kcoreaddons;KAboutData::applicationData), and that "
-"is what we pass to the `aboutData` property."
-msgstr ""
-"Objekt `About`, ki smo ga izvozili na stran QML z uporabo "
-"[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
-"qmlRegisterSingletonType) vsebuje podatke iz [KAboutData::applicationData()]"
-"(docs:kcoreaddons;KAboutData::applicationData) in to je tisto, kar "
-"posredujemo v lastnost `aboutData`."
-
-#: content/docs/getting-started/kirigami/addons-about/index.md:53
-msgid "Lastly, we add our new MyAboutPage to our `main.qml`:"
-msgstr "Na koncu dodamo našo novo MyAboutPage v naš `main.qml`:"
-
-#: content/docs/getting-started/kirigami/addons-about/index.md:57
+#: content/docs/getting-started/kirigami/addons-about/index.md:30
 msgid "The About page of our application should look like this:"
 msgstr "Stran About page bi morala izgledati takole:"
 
-#: content/docs/getting-started/kirigami/addons-about/index.md:61
+#: content/docs/getting-started/kirigami/addons-about/index.md:34
 msgid "Using JSON instead of KAboutData"
 msgstr "Uporaba JSON namesto KAboutData"
 
-#: content/docs/getting-started/kirigami/addons-about/index.md:63
-msgid ""
-"If you were wondering why the About page was kept separate rather than "
-"embedded in `main.qml`, that is because it allows to set a custom model for "
-"the `aboutData` property."
-msgstr ""
-"Če ste se spraševali, zakaj je bila stran About page ločena, namesto vdelana "
-"v `main.qml`, to je zato, ker omogoča nastavitev modela po meri za lastnost "
-"`aboutData`."
-
-#: content/docs/getting-started/kirigami/addons-about/index.md:65
+#: content/docs/getting-started/kirigami/addons-about/index.md:36
 msgid ""
 "Instead of letting your about page get information from [KAboutData](docs:"
 "kcoreaddons;KAboutData), it is possible to pass a JSON object directly. You "
@@ -244,11 +202,20 @@ msgstr ""
 "setWindowIcon()](docs:qtwidgets;QApplication::setWindowIcon) v vašem `main."
 "cpp`, da se prikaže ikona aplikacije."
 
-#: content/docs/getting-started/kirigami/addons-about/index.md:67
-msgid "Change your `MyAboutPage.json` to something like this:"
+#: content/docs/getting-started/kirigami/addons-about/index.md:38
+#, fuzzy
+#| msgid "Change your `MyAboutPage.json` to something like this:"
+msgid "Create a `MyAboutPage.qml` like this:"
 msgstr "Spremenite svoj `MyAboutPage.json` v nekaj takega:"
 
-#: content/docs/getting-started/kirigami/addons-about/index.md:71
+#: content/docs/getting-started/kirigami/addons-about/index.md:42
+#, fuzzy
+#| msgid "And change `main.qml` to include our new Settings page:"
+msgid "And then adjust your `Main.qml` to include your new about page:"
+msgstr ""
+"In spremenite `main.qml`, da bo vključevala našo novo stran z nastavitvami:"
+
+#: content/docs/getting-started/kirigami/addons-about/index.md:46
 msgid ""
 "The main JSON object here contains the keys `displayName`, `productName`, "
 "`homepage` and so on. The keys `authors`, `credits`, `translators` and "
@@ -266,7 +233,7 @@ msgstr ""
 "ključe`name`, `text` in `spdx` za vsako dodano licenco, saj ni neobičajno, "
 "da je isti projekt za vključenih več licenc."
 
-#: content/docs/getting-started/kirigami/addons-about/index.md:73
+#: content/docs/getting-started/kirigami/addons-about/index.md:48
 msgid ""
 "These keys are optional, but a reasonable minimum amount of keys is expected "
 "to make your application have no empty fields: `displayName`, `version`, "
@@ -300,20 +267,18 @@ msgstr ""
 msgid "The project structure should look like this:"
 msgstr "Struktura projekta bi morala izgledati takole:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:26
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:23
 msgid "Needed Changes"
 msgstr "Potrebne spremembe"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:28
-msgid "Add a new line to our `resources.qrc`:"
-msgstr "Dodajte novo vrstico v naš `resources.qrc`:"
-
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:32
-msgid "And change `main.qml` to include our new Settings page:"
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:25
+#, fuzzy
+#| msgid "And change `main.qml` to include our new Settings page:"
+msgid "Change `Main.qml` to include our new Settings page:"
 msgstr ""
 "In spremenite `main.qml`, da bo vključevala našo novo stran z nastavitvami:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:92
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:85
 msgid ""
 "We can now start checking out the components used to create our Settings "
 "page: the Form Card and its Delegates."
@@ -321,15 +286,15 @@ msgstr ""
 "Zdaj lahko začnemo preverjati komponente, uporabljene za ustvarjanje naše "
 "strani nastavitev: kartica obrazca in njeni delegati."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:94
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:87
 msgid "Form Delegates"
 msgstr "Obrazec Delegati"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:96
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:89
 msgid "FormCard and FormCardPage"
 msgstr "FormCard in FormCardPage"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:98
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:91
 msgid ""
 "[FormCard.FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormCard.html) is the main component we will be using to group all its "
@@ -339,7 +304,7 @@ msgstr ""
 "classFormCard.html) je glavna komponenta, ki jo bomo uporabili za "
 "združevanje vseh svojihpodrejenih komponent, delegatov."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:100
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:93
 msgid ""
 "We used a form card in the [Kirigami Addons introduction](/docs/getting-"
 "started/kirigami/addons-introduction) before. Its main purpose is to serve "
@@ -352,16 +317,18 @@ msgstr ""
 "kot vsebnik zadruge komponente, medtem ko sledi barvi, ki se razlikuje od "
 "ozadja, na podoben način kot [Kirigami.Card](docs:kirigami2;Card)."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:102
-msgid "Create a new `contents/ui/SettingsPage.qml` file:"
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:95
+#, fuzzy
+#| msgid "Create a new `contents/ui/SettingsPage.qml` file:"
+msgid "Create a new `SettingsPage.qml` file:"
 msgstr "Ustvarite novo datoteko `contents/ui/SettingsPage.qml`:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:110
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:114
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:103
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:107
 msgid "This is where all our delegates go!"
 msgstr "Sem gredo vsi naši delegati!"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:119
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:112
 msgid ""
 "Since we are making a separate QML file for our Settings page, and since we "
 "need to prepare for potential scrolling in our page, we use a `FormCard."
@@ -373,7 +340,7 @@ msgstr ""
 "FormCardPage`, ki podeduje [Kirigami.ScrollablePage](docs:kirigami2;"
 "ScrollablePage)."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:121
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:114
 msgid ""
 "The nice thing about the form card page is that it comes with an internal "
 "layout, so no additional ColumnLayout is needed and our delegates can be "
@@ -383,7 +350,7 @@ msgstr ""
 "postavitvijo, tako da ni potreben dodaten ColumnLayout in naši delegati so "
 "lahko dodani neposredno vanjo."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:123
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:116
 msgid ""
 "{{< alert color=\"info\" title=\"Note\" >}} It is possible to use FormCard "
 "delegates directly with a Kirigami.ScrollablePage, but in that case you will "
@@ -393,11 +360,11 @@ msgstr ""
 "FormCard neposredno s Kirigami.ScrollablePage, vendar boste v tem primeru "
 "morate dodati svoje lastne postavitve.  {{< /alert >}}"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:127
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:120
 msgid "FormHeader"
 msgstr "FormHeader"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:129
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:122
 msgid ""
 "For every [FormCard](https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormCard.html) you want to create, you can create a [FormHeader]"
@@ -411,20 +378,20 @@ msgstr ""
 "html)tik pred njo. Glava uporablja krepko besedilo in se prikaže tik nad "
 "obrazcem kartice."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:140
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:148
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:133
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:141
 msgid "Our delegates go here..."
 msgstr "Naši delegati gredo sem..."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:153
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:146
 msgid "FormTextDelegate and FormSectionText"
 msgstr "FormTextDelegate in FormSectionText"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:155
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:148
 msgid "Let's start simple, with plain text."
 msgstr "Začnimo preprosto, z navadnim besedilom."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:157
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:150
 msgid ""
 "`FormSectionText` simply adds a thin delegate containing a label. "
 "`FormTextDelegate` has text and a grayed out description."
@@ -432,7 +399,7 @@ msgstr ""
 "`FormSectionText` preprosto doda tankega delegata, ki vsebuje oznako."
 "`FormTextDelegate` ima besedilo in siv opis."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:193
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:186
 msgid ""
 "We add some dummy text for the hypothetical theme detection. If we wanted to "
 "have actual color scheme detection, in the future it could be done similarly "
@@ -447,7 +414,7 @@ msgstr ""
 "uporablja model C++z [KColorSchemeManager](docs:kconfigwidgets;"
 "KColorSchemeManager)."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:195
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:188
 msgid ""
 "In the Online Accounts section, we see an additional property, `leading`. We "
 "can add an [Item](docs:qtquick;Item) to it so that it appears before the "
@@ -459,7 +426,7 @@ msgstr ""
 "Njegova nasprotna lastnost, `trailing`, bi lahko prikazala element za "
 "njegovim besedilom, vendar ga v našem programu ne bomo uporabili."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:197
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:190
 msgid ""
 "We use a [Kirigami.Icon](docs:kirigami2;Icon) here for simplicity, but this "
 "could also be implemented using a [Kirigami.Avatar](docs:kirigami2;Avatar) "
@@ -473,15 +440,15 @@ msgstr ""
 "invent.kde.org/network/neochat/-/blob/master/src/qml/Settings/AccountsPage."
 "qml)."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:199
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:192
 msgid "It should end up looking like this:"
 msgstr "Na koncu bi moralo videti takole:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:203
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:196
 msgid "FormButtonDelegate"
 msgstr "FormButtonDelegate"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:205
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:198
 msgid ""
 "The [FormButtonDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormButtonDelegate.html) is visually similar to a FormTextDelegate, but "
@@ -495,7 +462,7 @@ msgstr ""
 "[Kirigami Addons introduction](/docs/getting-started/kirigami/addons-"
 "introduction) že prej."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:207
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:200
 msgid ""
 "While the FormTextDelegate had the `leading` and `trailing` properties to "
 "show an item before and after the main content, the FormButtonDelegate only "
@@ -505,7 +472,7 @@ msgstr ""
 "pokaže element pred in za glavno vsebino, samo FormButtonDelegate ima "
 "lastnost `leading`, ker je desna stran zasedena s puščico."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:248
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:241
 msgid ""
 "We use its `icon.name` property to set a plus (+) icon to appear after the "
 "space where the `leading` would appear, and before the main content. This is "
@@ -515,13 +482,20 @@ msgstr ""
 "prikaže za prostorom, kjer bi se pojavil `leading`, in pred glavno vsebino. "
 "To je običajen vzorec, ki označuje vaš gumb, ki bo nekaj dodal na seznam."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:250
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:243
+#, fuzzy
+#| msgid ""
+#| "Since this example is for simple illustrative purposes, we don't delve "
+#| "deep into what would be done once the button is clicked: it just prints "
+#| "\"Clicked!\" to the terminal. We _could_ make a new page for account "
+#| "creation that adds another user to a model, then push the page into view, "
+#| "similarly to what we did in `main.qml`."
 msgid ""
 "Since this example is for simple illustrative purposes, we don't delve deep "
 "into what would be done once the button is clicked: it just prints \"Clicked!"
 "\" to the terminal. We _could_ make a new page for account creation that "
 "adds another user to a model, then push the page into view, similarly to "
-"what we did in `main.qml`."
+"what we did in `Main.qml`."
 msgstr ""
 "Ker je ta primer preproste ilustrativne narave, se ne bomo poglabljali v to, "
 "kaj bi bilo storjeno, ko bi kliknili gumb: samo natisne »Kliknilo!\" na "
@@ -529,11 +503,11 @@ msgstr ""
 "doda drugega uporabnika, nato stran potisne v pogled, podobno kot kar smo "
 "naredili v `main.qml`."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:254
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:247
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
 msgstr "FormRadioDelegate, FormCheckDelegate in FormSwitchDelegate"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:256
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:249
 msgid ""
 "The RadioButton, CheckBox and Switch are very commonly used components in "
 "any user interface. Kirigami Addons provides them as [FormRadioDelegate]"
@@ -550,7 +524,7 @@ msgstr ""
 "[FormSwitchDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormSwitchDelegate.html)."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:258
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:251
 msgid ""
 "Their only main properties are `text` and `description`. They are different "
 "in usage because they all inherit [AbstractButton](docs:qtquickcontrols;"
@@ -564,7 +538,7 @@ msgstr ""
 "obdelovalci: checked in onChecked, preklopno in onToggled, kliknjeno in "
 "onClicked."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:260
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:253
 msgid ""
 "We want to create some autosave functionality in our application, and we "
 "want to only show its settings if the user has enabled this functionality. "
@@ -584,7 +558,7 @@ msgstr ""
 "html/classFormSwitchDelegate.html) in [FormRadioDelegate](https://api.kde."
 "org/frameworks/kirigami-addons/html/classFormRadioDelegate.html)."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:287
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:280
 msgid ""
 "We bind the visibility of each radio button to a switch, so they only appear "
 "when the switch is enabled."
@@ -592,15 +566,15 @@ msgstr ""
 "Vidnost vsakega izbirnega gumba povežemo s stikalom, tako da se le "
 "prikažejoko je stikalo omogočeno."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:289
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:282
 msgid "Best Practices"
 msgstr "Najboljše prakse"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:291
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:284
 msgid "<details><summary>Click here to read more</summary>\n"
 msgstr "<details><summary>Kliknite sem, da bi prebrali več</summary>\n"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:293
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:286
 msgid ""
 "If you have some programming background in imperative languages such as C++, "
 "you might be tempted to set the `checked` property of the switch to turn the "
@@ -611,7 +585,7 @@ msgstr ""
 "zamikalo, da nastavite lastnost `checked` stikala, da obrnete vidnost "
 "izbirnih gumbov na `true` z dodelitvijo JavaScript, npr. kot:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:303
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:296
 msgid ""
 "This is not very efficient for QML's declarative language and its signals "
 "and slots. Try to use QML bindings like in the case of `visible: autosave."
@@ -621,7 +595,7 @@ msgstr ""
 "Poskusite uporabiti vezave QML kot v primeru `visible: autosave.checked` "
 "namesto izrazov JavaScript."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:305
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:298
 msgid ""
 "See [this page](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
 "declarative-bindings-over-imperative-assignments) for details."
@@ -629,7 +603,7 @@ msgstr ""
 "Poglejte [this page](https://doc.qt.io/qt-6/qtquick-bestpractices."
 "html#prefer-declarative-bindings-over-imperative-assignments) za podrobnosti."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:307
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:300
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:602
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:80
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:173
@@ -640,7 +614,7 @@ msgstr ""
 msgid "</details>\n"
 msgstr "</details>\n"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:313
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:306
 msgid ""
 "To test our checkbox, we can add a new [FormCheckDelegate](https://api.kde."
 "org/frameworks/kirigami-addons/html/classFormCheckDelegate.html) to our "
@@ -650,7 +624,7 @@ msgstr ""
 "[FormCheckDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormCheckDelegate.html) v naš Splošni del."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:338
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:331
 msgid ""
 "Here we use the `onToggled` [signal handler](https://doc.qt.io/qt-6/qtqml-"
 "syntax-signals.html) to show some dummy text to simulate a tray icon "
@@ -664,15 +638,15 @@ msgstr ""
 "uresničili kot ikono pladnja z [SystemTrayIcon](https://doc.qt.io/qt-6/qml-"
 "qt-labs-platform-systemtrayicon.html)."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:340
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:333
 msgid "So far our application should look like this:"
 msgstr "Do sem bi morala naša aplikacija videti takole:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:344
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:337
 msgid "FormComboBoxDelegate"
 msgstr "FormComboBoxDelegate"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:346
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:339
 msgid ""
 "The common ComboBox component can be created using a [FormComboBoxDelegate]"
 "(https://api.kde.org/frameworks/kirigami-addons/html/"
@@ -681,7 +655,7 @@ msgstr ""
 "Skupno komponento ComboBox lahko ustvarite z [FormComboBoxDelegate](https://"
 "api.kde.org/frameworks/kirigami-addons/html/classFormComboBoxDelegate.html)."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:348
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:341
 msgid ""
 "This combobox has several useful properties we can make use of: `editable`, "
 "`displayText` and `displayMode`."
@@ -689,7 +663,7 @@ msgstr ""
 "To kombinirano polje ima več uporabnih lastnosti, ki jih lahko uporabimo: "
 "`editable`, `displayText` in `displayMode`."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:350
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:343
 msgid ""
 "Setting `editable: true` allows the user to edit the text of the combobox, "
 "which is useful in case adding new combobox options is needed:"
@@ -698,7 +672,7 @@ msgstr ""
 "kombiniranem polju,kar je uporabno, če je potrebno dodati nove možnosti "
 "kombiniranega polja:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:354
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:347
 msgid ""
 "Whenever you need to show additional text before each option, you can use "
 "something like `displayText: \"Profile: \" + currentText`:"
@@ -706,7 +680,7 @@ msgstr ""
 "Kadarkoli morate prikazati dodatno besedilo pred vsako možnostjo, lahko "
 "uporabitenekaj takega kot `displayText: \"Profil: \" + currentText`:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:358
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:351
 msgid ""
 "And the most interesting one, which we will be using in our example, is "
 "`displayMode`. It can have three options:"
@@ -714,7 +688,7 @@ msgstr ""
 "In najbolj zanimiva, ki jo bomo uporabili v našem primeru, je`displayMode`. "
 "Ima lahko tri možnosti:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:360
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:353
 msgid ""
 "**FormComboBoxDelegate.ComboBox**: the standard small box showing a list of "
 "options."
@@ -722,7 +696,7 @@ msgstr ""
 "**FormComboBoxDelegate.ComboBox**: standardno majhno polje, ki prikazuje "
 "seznam možnosti."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:364
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:357
 msgid ""
 "**FormComboBoxDelegate.Dialog**: a dialog showing a list of options in the "
 "middle of the window, like a [Kirigami.OverlaySheet](docs:kirigami2;"
@@ -732,7 +706,7 @@ msgstr ""
 "možnosti v na sredini okna, kot [Kirigami.OverlaySheet](docs:kirigami2;"
 "OverlaySheet)."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:368
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:361
 msgid ""
 "**FormComboBoxDelegate.Page**: a new page containing a list of options shown "
 "in a separate window."
@@ -740,7 +714,7 @@ msgstr ""
 "**FormComboBoxDelegate.Page**: nova stran s seznamom prikazanih možnosti v "
 "ločenem oknu."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:372
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:365
 msgid ""
 "Add the following between the \"Current Color Scheme\" and \"Show Tray Icon"
 "\" delegates in your \"General\" form card."
@@ -748,16 +722,16 @@ msgstr ""
 "Dodajte naslednje med \"Current Color Scheme\" in \"Show Tray Icon\" "
 "delegatov na vaši kartici obrazca \"General\"."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:385
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:378
 msgid "With the checkbox, our Settings page should look like this:"
 msgstr ""
 "S potrditvenim poljem bi morala biti naša stran z nastavitvami videti takole:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:389
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:382
 msgid "FormDelegateSeparator"
 msgstr "FormDelegateSeparator"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:391
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:384
 msgid ""
 "Our Settings page is taking shape, but each section is starting to get long. "
 "We can add a few FormDelegateSeparators to make our page tidier:"
@@ -766,7 +740,7 @@ msgstr ""
 "daljši. Dodamo lahko nekaj FormDelegateSeparators, da bo naša stran bolj "
 "urejena:"
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:395
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:388
 msgid ""
 "Generally, you may use separators whenever you see major distinctions "
 "between components, although the choice of where to place them is ultimately "
@@ -783,7 +757,7 @@ msgstr ""
 "združuje radijske gumbe; in v Accounts dodajanje ločila med zadnjim računom "
 "in gumbom, ki ga ponuja nekaj dodatnega poudarka na gumbu."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:397
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:390
 msgid ""
 "The `above` and `below` properties are rather self-explanatory when it comes "
 "to their use: you pass the `id` of the components above and below the "
@@ -805,7 +779,7 @@ msgstr ""
 "implementirana, v tem primeruvedno lahko zgrabimo zadnji element v modelu, "
 "da to storimo."
 
-#: content/docs/getting-started/kirigami/addons-delegates/index.md:401
+#: content/docs/getting-started/kirigami/addons-delegates/index.md:394
 msgid ""
 "Notice how the separator above the tray icon setting does not appear while "
 "it is hovered."
@@ -847,30 +821,26 @@ msgstr "Nastavitev vašega projekta"
 msgid "The initial project structure will look like so:"
 msgstr "Začetna struktura projekta bo videti takole:"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:28
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:25
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:145
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:77
 msgid "Tip"
 msgstr "Nasvet"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:30
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:27
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:79
 msgid "You can quickly create this file structure with:"
 msgstr "Hitro lahko ustvarite to datotečno strukturo z:"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:40
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:37
 msgid "We start by using a very standard `CMakeLists.txt`:"
 msgstr "Začnemo z zelo standardnim `CMakeLists.txt`:"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:44
-msgid "A standard `resources.qrc`:"
-msgstr "Standard `resources.qrc`:"
-
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:55
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:41
 msgid "The interesting part will be the `main.cpp`:"
 msgstr "Zanimiv del bo `main.cpp`:"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:59
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:45
 msgid ""
 "If you have read our [KXmlGui tutorial](/docs/getting-started/kxmlgui) or "
 "the last Kirigami tutorial on the [Kirigami About page](/docs/getting-"
@@ -881,7 +851,7 @@ msgstr ""
 "zadnjo vadnico o Kirigami na [strani o Kirigami](/docs/getting-started/"
 "kirigami/advanced-add_about_page), se bo marsikaj od tega zdelo že znano."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:61
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:47
 msgid ""
 "We create our application and use [KAboutData's](docs:kcoreaddons;"
 "KAboutData) default constructor to add the metadata of our application, add "
@@ -895,7 +865,7 @@ msgstr ""
 "kcoreaddons;KAboutData::setApplicationData), da dokončamo postopek. Za "
 "kasneje tudi minastavimo ikono aplikacije, ki prihaja iz sistemske teme."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:63
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:49
 msgid ""
 "We then use a lambda in [qmlRegisterSingletonType](docs:qtqml;QQmlEngine::"
 "qmlRegisterSingletonType) to directly send the metadata of our application "
@@ -905,7 +875,7 @@ msgstr ""
 "qmlRegisterSingletonType) za neposredno pošiljanje metapodatkov naše "
 "aplikacijena stran QML in razkrivamo njene lastnosti."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:65
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:51
 msgid ""
 "We then instantiate our QML engine, and set its [context](docs:qtqml;"
 "QQmlContext) to use KDE's [KLocalizedContext](docs:ki18n;KLocalizedContext), "
@@ -917,7 +887,7 @@ msgstr ""
 "ki18n;KLocalizedContext), ki se uporablja za integracijo prevedenih nizov, "
 "pri čemer posreduje pravkar ustvarjeni stroj kot parameter."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:67
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:53
 msgid ""
 "We simply load our QML file from the resource file, and now we just need to "
 "take care of our initial QML file."
@@ -925,11 +895,11 @@ msgstr ""
 "Preprosto naložimo našo datoteko QML iz datoteke virov in zdaj moramo samo "
 "še poskrbeti za našo začetno datoteko QML."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:69
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:55
 msgid "FormCard and FormButtonDelegate"
 msgstr "FormCard in FormButtonDelegate"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:71
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:57
 msgid ""
 "The idea for our app is to design our own Kirigami Addons gallery, "
 "showcasing multiple components, one per page. The main page will contain a "
@@ -941,11 +911,13 @@ msgstr ""
 "seznam gumbov v [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
 "columnlayout.html), pri čemer vsak odpre ločeno stran."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:73
-msgid "Initially, our `contents/ui/main.qml` should look like this:"
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:59
+#, fuzzy
+#| msgid "Initially, our `contents/ui/main.qml` should look like this:"
+msgid "Initially, our `Main.qml` should look like this:"
 msgstr "Na začetku naj bi naš `contents/ui/main.qml` izgledal takole:"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:77
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:63
 msgid ""
 "We use our handy [pageStack](/docs/getting-started/kirigami/components-"
 "pagerow_pagestack) to set the initial page to a [Kirigami.ScrollablePage]"
@@ -955,7 +927,7 @@ msgstr ""
 "components-pagerow_pagestack), da nastavimo začetno stran na [Kirigami."
 "ScrollablePage](docs:kirigami2;ScrollablePage)."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:79
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:65
 msgid ""
 "While we could use a [FormLayout](/docs/getting-started/kirigami/components-"
 "formlayouts) together with [QtQuick Controls components](components-"
@@ -967,7 +939,7 @@ msgstr ""
 "controls) doseči naš cilj, tukaj se boste predstavili [FormCard](https://api."
 "kde.org/frameworks/kirigami-addons/html/classFormCard.html)."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:81
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:67
 msgid ""
 "The main purpose of a FormCard is to serve as a container for other "
 "components while following a color different from the background, in a "
@@ -982,7 +954,7 @@ msgstr ""
 "aplikaciji lahko imate več kartic FormCard različne razdelke. Pričakuje se "
 "tudi, da bo vaš FormCard neposredni podrejeni element ColumnLayout."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:83
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:69
 msgid ""
 "Importing `org.kde.kirigamiaddons.formcard` makes all FormCard components "
 "available to your QML file."
@@ -990,14 +962,14 @@ msgstr ""
 "Uvažanje `org.kde.kirigamiaddons.formcard` naredi vse komponente FormCard "
 "razpoložljive vaši datoteki QML."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:85
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:71
 msgid ""
 "We will have only a single section in our main page, so we add a single "
 "FormCard:"
 msgstr ""
 "Na glavni strani bomo imeli samo en razdelek, zato dodamo enega FormCard:"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:89
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:75
 msgid ""
 "The great thing about FormCard is that it does automatic layouting for you. "
 "In other words, just the order of its components is enough to indicate their "
@@ -1015,11 +987,11 @@ msgstr ""
 "positioning-anchors.html) ali [pozicionerji](https://doc.qt.io/qt-6/qtquick-"
 "positioning-layouts.html)."
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:91
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:77
 msgid "We can simply add a few buttons inside our FormCard:"
 msgstr "V našo FormCard lahko preprosto dodamo nekaj gumbov:"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:95
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:81
 msgid ""
 "That's it! The buttons are not usable just yet, but we are now set up to "
 "play with our About pages!"
@@ -1027,11 +999,11 @@ msgstr ""
 "To je to! Gumbi še niso uporabni, vendar smo pripravljeniigrajte se z "
 "stranmi O strani!"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:97
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:83
 msgid "We then build and run it like so:"
 msgstr "Nato ga zgradimo in izvajamo takole:"
 
-#: content/docs/getting-started/kirigami/addons-introduction/index.md:106
+#: content/docs/getting-started/kirigami/addons-introduction/index.md:92
 msgid ""
 "To see other ways to build your application (for example, on Windows), see "
 "the [Getting Started with Kirigami](/docs/getting-started/kirigami/"
@@ -9483,6 +9455,66 @@ msgstr ""
 "Velikost pisave [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::"
 "PlatformTheme) je v vaši aplikaciji na voljo kot `Kirigami.Theme.defaultFont."
 "pointSize`."
+
+#~ msgid ""
+#~ "The application's AboutPage is slightly more complex, but it's still very "
+#~ "simple to use. We will be adding a new QML file that will contain the "
+#~ "information needed for our about page. First in our `resources.qrc` file:"
+#~ msgstr ""
+#~ "Aplikacija AboutPage je nekoliko bolj zapletena, vendar je še vedno zelo "
+#~ "enostavna za uporabo. Dodali bomo novo datoteko QML, ki bo vsebovala "
+#~ "informacije, potrebne za našo stran o tem. Najprej v naši datoteki "
+#~ "`resources.qrc`:"
+
+#~ msgid "And our `contents/ui/MyAboutPage.qml` should have the following:"
+#~ msgstr ""
+#~ "In naša datoteka `contents/ui/MyAboutPage.qml` bi morala imeti naslednje:"
+
+#~ msgid ""
+#~ "Here we use the information we set using [KAboutData](docs:kcoreaddons;"
+#~ "KAboutData) in our `main.cpp`. Here's a brief reminder of what is in "
+#~ "`main.cpp`:"
+#~ msgstr ""
+#~ "Tu uporabljamo podatke, ki smo jih nastavili z [KAboutData](docs:"
+#~ "kcoreaddons;KAboutData) v našem `main.cpp`. Tukaj je kratek opomnik, kaj "
+#~ "je v `main.cpp`:"
+
+#~ msgid "<========== used in the import"
+#~ msgstr "<========== uporabljeno pri uvozu"
+
+#~ msgid "<========== C++ object exported as a QML type"
+#~ msgstr "<========== C++ predmet izvožen kot vrsta QML"
+
+#~ msgid ""
+#~ "The `About` object we exported to the QML side using "
+#~ "[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+#~ "qmlRegisterSingletonType) contains the data from [KAboutData::"
+#~ "applicationData()](docs:kcoreaddons;KAboutData::applicationData), and "
+#~ "that is what we pass to the `aboutData` property."
+#~ msgstr ""
+#~ "Objekt `About`, ki smo ga izvozili na stran QML z uporabo "
+#~ "[qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
+#~ "qmlRegisterSingletonType) vsebuje podatke iz [KAboutData::"
+#~ "applicationData()](docs:kcoreaddons;KAboutData::applicationData) in to je "
+#~ "tisto, kar posredujemo v lastnost `aboutData`."
+
+#~ msgid "Lastly, we add our new MyAboutPage to our `main.qml`:"
+#~ msgstr "Na koncu dodamo našo novo MyAboutPage v naš `main.qml`:"
+
+#~ msgid ""
+#~ "If you were wondering why the About page was kept separate rather than "
+#~ "embedded in `main.qml`, that is because it allows to set a custom model "
+#~ "for the `aboutData` property."
+#~ msgstr ""
+#~ "Če ste se spraševali, zakaj je bila stran About page ločena, namesto "
+#~ "vdelana v `main.qml`, to je zato, ker omogoča nastavitev modela po meri "
+#~ "za lastnost `aboutData`."
+
+#~ msgid "Add a new line to our `resources.qrc`:"
+#~ msgstr "Dodajte novo vrstico v naš `resources.qrc`:"
+
+#~ msgid "A standard `resources.qrc`:"
+#~ msgstr "Standard `resources.qrc`:"
 
 #~ msgid "CardsGridView"
 #~ msgstr "CardsGridView"
