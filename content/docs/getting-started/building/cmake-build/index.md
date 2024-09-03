@@ -142,7 +142,7 @@ cmake ..
 There are four common ways to compile a project:
 
 * from the source code folder, putting the generated files in the source code folder
-* from a build folder, putting the generated files in the source code folder
+* from a build folder, putting the generated files in the build folder
 * from the source code folder, putting the generated files in a build folder
 * from outside the source code folder, putting the generated files in a build folder
 
@@ -489,7 +489,7 @@ cmake --install build/ --config Debug
 
 CMake has the concept of targets, usually executables or libraries that have their own properties, source files, and dependencies.
 
-Whenever the project’s `CMakeLists.txt` files have a call to [add_executable()](https://cmake.org/cmake/help/latest/command/add_executable.html), [add_library()](https://cmake.org/cmake/help/latest/command/add_library.html) or [add_custom_target()](https://cmake.org/cmake/help/latest/command/add_custom_target.html), a target is being created. The name of the target is always the first word of such calls: a call to `add_executable(projectbin)` creates an executable target called `projectbin`.
+Whenever the project’s `CMakeLists.txt` files have a call to [add_executable()](https://cmake.org/cmake/help/latest/command/add_executable.html), [add_library()](https://cmake.org/cmake/help/latest/command/add_library.html) or [add_custom_target()](https://cmake.org/cmake/help/latest/command/add_custom_target.html), a CMake target is created. The name of the target is always the first word of such calls: a call to `add_executable(projectbin)` creates an executable target called `projectbin`.
 
 Well-structured desktop applications will usually have a single executable target, and multiple dependent smaller library targets that are linked to it. For example, a library target for settings, a target for models, a target for dialogs, having all these linked as dependencies to the main executable.
 
