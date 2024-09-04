@@ -36,7 +36,7 @@ First create a folder you want to work in. You need a structure like the followi
 ```
 ├── contents
 │   └── code
-│       └── main.js
+│       └── main.es
 ├── icon.png
 └── metadata.json
 ```
@@ -97,7 +97,7 @@ There are different functions that you can use or can (have to) add:
 
 ```js
 function init()
-comic.pageRequest(url, id)
+comic.requestPage(url, id, metadata)
 function pageRetrieved(id, data, metadata)
 comic.combine(image, position)
 ```
@@ -157,7 +157,7 @@ For this you can use `comic.combine(image, position)`. `image` needs to be an im
 * comic.Right
 * comic.Bottom
 
-`image` will be combined with the last downloaded image -- `comic.pageRequest(url, comic.Image)`. The position defines, where `image` will be placed. That way you can combine multiple images.
+`image` will be combined with the last downloaded image -- `comic.requestPage(url, comic.Image)`. The position defines, where `image` will be placed. That way you can combine multiple images.
 
 The following code is taken from the Deo Ignito comic plugin. I removed parts that are not necessary for explaining this function, added some comments and pseudo code.
 
