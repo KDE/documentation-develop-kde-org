@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-03 01:41+0000\n"
-"PO-Revision-Date: 2024-08-24 11:28+0200\n"
+"PO-Revision-Date: 2024-09-03 13:31+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -142,12 +142,6 @@ msgstr "Quant al KDE"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:14
-#, fuzzy
-#| msgid ""
-#| "Each new button we created in the previous step should open a new page. "
-#| "You can add new pages by instantiating them as [Components](docs:qtqml;"
-#| "QtQml.Component) and then using `pageStack.layers.push()` for each button "
-#| "to load that page in our `main.qml`:"
 msgid ""
 "Each new button we created in the previous step should open a new page. You "
 "can add new pages by instantiating them as [Components](docs:qtqml;QtQml."
@@ -157,7 +151,7 @@ msgstr ""
 "Cada botó nou que hem creat en el pas anterior hauria d'obrir una pàgina "
 "nova. Podeu afegir pàgines noves instanciant-les com a [Components](docs:"
 "qtqml;QtQml.Component) i després utilitzant `pageStack.layers.push()` per a "
-"cada botó per a carregar aquesta pàgina en el `main.qml`:"
+"cada botó per a carregar aquesta pàgina en el `Main.qml`:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:18
@@ -177,13 +171,19 @@ msgid ""
 "The application's AboutPage is slightly more complex, but it's still very "
 "simple to use."
 msgstr ""
+"L'AboutPage («Quant al») de l'aplicació és una mica més complexa, però "
+"encara és molt senzilla d'utilitzar."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:26
 msgid ""
 "For a simple about page that uses the data set in by `KAboutData::"
 "setApplicationData(aboutData);` in `main.cpp` add the following to your "
 "`Main.qml`:"
 msgstr ""
+"Per a una pàgina «quant al» que faci servir el conjunt de dades de "
+"`KAboutData::setApplicationData(aboutData);` a `main.cpp` afegiu el següent "
+"al vostre `Main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:30
 msgid "The About page of our application should look like this:"
@@ -210,17 +210,14 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:38
-#, fuzzy
-#| msgid "Change your `MyAboutPage.json` to something like this:"
 msgid "Create a `MyAboutPage.qml` like this:"
-msgstr "Canvieu el `MyAboutPage.json` a alguna cosa així:"
+msgstr "Creeu una `MyAboutPage.qml` com aquesta:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:42
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "And then adjust your `Main.qml` to include your new about page:"
-msgstr "I canvieu el `main.qml` per a incloure la pàgina nova de configuració:"
+msgstr ""
+"I després ajusteu el `Main.qml` per a incloure la pàgina nova «quant al»:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-about/index.md:46
@@ -284,10 +281,8 @@ msgstr "Canvis necessaris"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:25
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "Change `Main.qml` to include our new Settings page:"
-msgstr "I canvieu el `main.qml` per a incloure la pàgina nova de configuració:"
+msgstr "Canvieu el `Main.qml` per a incloure la pàgina nova Settings:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:85
 msgid ""
@@ -331,10 +326,8 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:95
-#, fuzzy
-#| msgid "Create a new `contents/ui/SettingsPage.qml` file:"
 msgid "Create a new `SettingsPage.qml` file:"
-msgstr "Crea un fitxer `contents/ui/SettingsPage.qml` nou:"
+msgstr "Crea un fitxer `SettingsPage.qml` nou:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:103
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:107
@@ -504,13 +497,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:243
-#, fuzzy
-#| msgid ""
-#| "Since this example is for simple illustrative purposes, we don't delve "
-#| "deep into what would be done once the button is clicked: it just prints "
-#| "\"Clicked!\" to the terminal. We _could_ make a new page for account "
-#| "creation that adds another user to a model, then push the page into view, "
-#| "similarly to what we did in `main.qml`."
 msgid ""
 "Since this example is for simple illustrative purposes, we don't delve deep "
 "into what would be done once the button is clicked: it just prints \"Clicked!"
@@ -522,7 +508,7 @@ msgstr ""
 "aprofundim en el que es faria una vegada que es clica el botó: només "
 "imprimeix «Clicked!» al terminal. _Podríem_ crear una pàgina nova per a la "
 "creació de comptes que afegeixi un altre usuari a un model i després empenyi "
-"la pàgina a la vista, de manera similar al que vam fer a `main.qml`."
+"la pàgina a la vista, de manera similar al que vam fer a `Main.qml`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:247
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
@@ -958,10 +944,8 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:59
-#, fuzzy
-#| msgid "Initially, our `contents/ui/main.qml` should look like this:"
 msgid "Initially, our `Main.qml` should look like this:"
-msgstr "Inicialment, el nostre `contents/ui/main.qml` s'hauria de veure així:"
+msgstr "Inicialment, el nostre `Main.qml` s'hauria de veure així:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:63
 msgid ""

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-03 01:41+0000\n"
-"PO-Revision-Date: 2024-08-24 09:28+0300\n"
+"PO-Revision-Date: 2024-09-03 08:37+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -139,12 +139,6 @@ msgid "About KDE"
 msgstr "Про KDE"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:14
-#, fuzzy
-#| msgid ""
-#| "Each new button we created in the previous step should open a new page. "
-#| "You can add new pages by instantiating them as [Components](docs:qtqml;"
-#| "QtQml.Component) and then using `pageStack.layers.push()` for each button "
-#| "to load that page in our `main.qml`:"
 msgid ""
 "Each new button we created in the previous step should open a new page. You "
 "can add new pages by instantiating them as [Components](docs:qtqml;QtQml."
@@ -154,7 +148,7 @@ msgstr ""
 "Кожна нова кнопка, яку ми створили на попередньому кроці, має відкривати "
 "нову сторінку. Ви можете додати нові сторінки, створивши їх як [компоненти]"
 "(docs:qtqml;QtQml.Component), а потім використавши `pageStack.layers.push()` "
-"для кожної кнопки, щоб завантажити цю сторінку до нашого `main.qml`:"
+"для кожної кнопки, щоб завантажити цю сторінку до нашого `Main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:18
 msgid ""
@@ -173,6 +167,8 @@ msgid ""
 "The application's AboutPage is slightly more complex, but it's still very "
 "simple to use."
 msgstr ""
+"Сторінка AboutPage програми є дещо складнішою, але і нею дуже просто "
+"користуватися."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:26
 msgid ""
@@ -180,6 +176,9 @@ msgid ""
 "setApplicationData(aboutData);` in `main.cpp` add the following to your "
 "`Main.qml`:"
 msgstr ""
+"Щоб отримати просту інформаційну сторінку, де використано набір даних "
+"`KAboutData::setApplicationData(aboutData);` у `main.cpp`, додайте таке до "
+"вашого `Main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:30
 msgid "The About page of our application should look like this:"
@@ -204,18 +203,14 @@ msgstr ""
 "cpp`, щоб було показано піктограму вашої програми."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:38
-#, fuzzy
-#| msgid "Change your `MyAboutPage.json` to something like this:"
 msgid "Create a `MyAboutPage.qml` like this:"
-msgstr "Внесіть десь такі зміни до вашого `MyAboutPage.json`:"
+msgstr "Створіть `MyAboutPage.qml` з таким вмістом:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:42
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "And then adjust your `Main.qml` to include your new about page:"
 msgstr ""
-"І внесемо зміни до `main.qml` так, щоб включити до нього нашу нову сторінку "
-"Settings:"
+"І внесіть зміни до `Main.qml` так, щоб включити до нього нашу нову "
+"інформаційну сторінку:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:46
 msgid ""
@@ -274,11 +269,9 @@ msgid "Needed Changes"
 msgstr "Потрібні зміни"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:25
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "Change `Main.qml` to include our new Settings page:"
 msgstr ""
-"І внесемо зміни до `main.qml` так, щоб включити до нього нашу нову сторінку "
+"Внесемо зміни до `Main.qml` так, щоб включити до нього нашу нову сторінку "
 "Settings:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:85
@@ -321,10 +314,8 @@ msgstr ""
 "від кольору тла, подібно до [Kirigami.Card](docs:kirigami2;Card)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:95
-#, fuzzy
-#| msgid "Create a new `contents/ui/SettingsPage.qml` file:"
 msgid "Create a new `SettingsPage.qml` file:"
-msgstr "Створіть файл `contents/ui/SettingsPage.qml`:"
+msgstr "Створіть файл `SettingsPage.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:103
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:107
@@ -488,13 +479,6 @@ msgstr ""
 "щось до списку."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:243
-#, fuzzy
-#| msgid ""
-#| "Since this example is for simple illustrative purposes, we don't delve "
-#| "deep into what would be done once the button is clicked: it just prints "
-#| "\"Clicked!\" to the terminal. We _could_ make a new page for account "
-#| "creation that adds another user to a model, then push the page into view, "
-#| "similarly to what we did in `main.qml`."
 msgid ""
 "Since this example is for simple illustrative purposes, we don't delve deep "
 "into what would be done once the button is clicked: it just prints \"Clicked!"
@@ -506,7 +490,7 @@ msgstr ""
 "те, що буде зроблено після натискання кнопки: він просто друкує \"Clicked!\" "
 "до терміналу. Ми _можемо_ створити нову сторінку для створення облікового "
 "запису, яка додає іншого користувача до моделі, а потім розмістимо сторінку "
-"в полі зору, подібно до того, що ми зробили в `main.qml`."
+"в полі зору, подібно до того, що ми зробили в `Main.qml`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:247
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
@@ -921,10 +905,8 @@ msgstr ""
 "окрему сторінку."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:59
-#, fuzzy
-#| msgid "Initially, our `contents/ui/main.qml` should look like this:"
 msgid "Initially, our `Main.qml` should look like this:"
-msgstr "Спочатку, наш `contents/ui/main.qml` має виглядати так:"
+msgstr "Спочатку, наш `Main.qml` має виглядати так:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:63
 msgid ""

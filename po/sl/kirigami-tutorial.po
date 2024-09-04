@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-03 01:41+0000\n"
-"PO-Revision-Date: 2024-08-24 06:22+0200\n"
+"PO-Revision-Date: 2024-09-03 07:18+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -138,12 +138,6 @@ msgid "About KDE"
 msgstr "O namizju KDE"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:14
-#, fuzzy
-#| msgid ""
-#| "Each new button we created in the previous step should open a new page. "
-#| "You can add new pages by instantiating them as [Components](docs:qtqml;"
-#| "QtQml.Component) and then using `pageStack.layers.push()` for each button "
-#| "to load that page in our `main.qml`:"
 msgid ""
 "Each new button we created in the previous step should open a new page. You "
 "can add new pages by instantiating them as [Components](docs:qtqml;QtQml."
@@ -172,6 +166,8 @@ msgid ""
 "The application's AboutPage is slightly more complex, but it's still very "
 "simple to use."
 msgstr ""
+"AboutPage aplikacije je nekoliko bolj zapletena, vendar je še vedno zelo "
+"preprosta za uporabo."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:26
 msgid ""
@@ -179,6 +175,9 @@ msgid ""
 "setApplicationData(aboutData);` in `main.cpp` add the following to your "
 "`Main.qml`:"
 msgstr ""
+"Za preprosto stran z informacijami, ki uporablja podatke, nastavljene v "
+"`KAboutData::setApplicationData(aboutData);` v `main.cpp`, dodajte naslednje "
+"v svoj `Main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:30
 msgid "The About page of our application should look like this:"
@@ -203,17 +202,14 @@ msgstr ""
 "cpp`, da se prikaže ikona aplikacije."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:38
-#, fuzzy
-#| msgid "Change your `MyAboutPage.json` to something like this:"
 msgid "Create a `MyAboutPage.qml` like this:"
-msgstr "Spremenite svoj `MyAboutPage.json` v nekaj takega:"
+msgstr "Ustvarite `MyAboutPage.qml` takole:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:42
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "And then adjust your `Main.qml` to include your new about page:"
 msgstr ""
-"In spremenite `main.qml`, da bo vključevala našo novo stran z nastavitvami:"
+"In nato prilagodite svoj `Main.qml`, da bo vključeval vašo novo stran o "
+"programu:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:46
 msgid ""
@@ -272,11 +268,9 @@ msgid "Needed Changes"
 msgstr "Potrebne spremembe"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:25
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "Change `Main.qml` to include our new Settings page:"
 msgstr ""
-"In spremenite `main.qml`, da bo vključevala našo novo stran z nastavitvami:"
+"Spremenite `main.qml`, da bo vključevala našo novo stran z nastavitvami:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:85
 msgid ""
@@ -318,10 +312,8 @@ msgstr ""
 "ozadja, na podoben način kot [Kirigami.Card](docs:kirigami2;Card)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:95
-#, fuzzy
-#| msgid "Create a new `contents/ui/SettingsPage.qml` file:"
 msgid "Create a new `SettingsPage.qml` file:"
-msgstr "Ustvarite novo datoteko `contents/ui/SettingsPage.qml`:"
+msgstr "Ustvarite novo datoteko `SettingsPage.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:103
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:107
@@ -483,13 +475,6 @@ msgstr ""
 "To je običajen vzorec, ki označuje vaš gumb, ki bo nekaj dodal na seznam."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:243
-#, fuzzy
-#| msgid ""
-#| "Since this example is for simple illustrative purposes, we don't delve "
-#| "deep into what would be done once the button is clicked: it just prints "
-#| "\"Clicked!\" to the terminal. We _could_ make a new page for account "
-#| "creation that adds another user to a model, then push the page into view, "
-#| "similarly to what we did in `main.qml`."
 msgid ""
 "Since this example is for simple illustrative purposes, we don't delve deep "
 "into what would be done once the button is clicked: it just prints \"Clicked!"
@@ -498,10 +483,10 @@ msgid ""
 "what we did in `Main.qml`."
 msgstr ""
 "Ker je ta primer preproste ilustrativne narave, se ne bomo poglabljali v to, "
-"kaj bi bilo storjeno, ko bi kliknili gumb: samo natisne »Kliknilo!\" na "
+"kaj bi bilo storjeno, ko bi kliknili gumb: samo natisne »Kliknjeno!\" na "
 "terminal. _Lahko_ bi naredili novo stran za ustvarjanje računa, ki modelu "
 "doda drugega uporabnika, nato stran potisne v pogled, podobno kot kar smo "
-"naredili v `main.qml`."
+"naredili v `Main.qml`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:247
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
@@ -912,10 +897,8 @@ msgstr ""
 "columnlayout.html), pri čemer vsak odpre ločeno stran."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:59
-#, fuzzy
-#| msgid "Initially, our `contents/ui/main.qml` should look like this:"
 msgid "Initially, our `Main.qml` should look like this:"
-msgstr "Na začetku naj bi naš `contents/ui/main.qml` izgledal takole:"
+msgstr "Na začetku naj bi naš `Main.qml` izgledal takole:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:63
 msgid ""

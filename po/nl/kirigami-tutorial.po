@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-03 01:41+0000\n"
-"PO-Revision-Date: 2024-08-24 12:56+0200\n"
+"PO-Revision-Date: 2024-09-03 17:49+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -135,12 +135,6 @@ msgid "About KDE"
 msgstr "Over KDE"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:14
-#, fuzzy
-#| msgid ""
-#| "Each new button we created in the previous step should open a new page. "
-#| "You can add new pages by instantiating them as [Components](docs:qtqml;"
-#| "QtQml.Component) and then using `pageStack.layers.push()` for each button "
-#| "to load that page in our `main.qml`:"
 msgid ""
 "Each new button we created in the previous step should open a new page. You "
 "can add new pages by instantiating them as [Components](docs:qtqml;QtQml."
@@ -150,7 +144,7 @@ msgstr ""
 "Elke nieuwe knop die we hebben gemaakt in de vorige stap zou een nieuwe "
 "pagina openen. U kunt nieuwe pagina's toevoegen door ze als [Componenten]"
 "(docs:qtqml;QtQml.Component) aan te maken en daarna `pageStack.layers."
-"push()` voor elke knop te gebruiken om die pagina in onze `main.qml` te "
+"push()` voor elke knop te gebruiken om die pagina in onze `Main.qml` te "
 "gebruiken:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:18
@@ -171,6 +165,8 @@ msgid ""
 "The application's AboutPage is slightly more complex, but it's still very "
 "simple to use."
 msgstr ""
+"De AboutPage van de toepassing is iets complexer, maar het is nog steeds erg "
+"eenvoudig te gebruiken."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:26
 msgid ""
@@ -203,16 +199,13 @@ msgstr ""
 "toepassing het pictogram te laten tonen."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:38
-#, fuzzy
-#| msgid "Change your `MyAboutPage.json` to something like this:"
 msgid "Create a `MyAboutPage.qml` like this:"
-msgstr "Wijzig uw `MyAboutPage.json` in zoiets als dit:"
+msgstr "Maak en `MyAboutPage.qml` zoals deze:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:42
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "And then adjust your `Main.qml` to include your new about page:"
-msgstr "En wijzig `main.qml` om onze nieuwe pagina Instellingen in te voegen:"
+msgstr ""
+"En pas uw `Main.qml` aan om onze nieuwe pagina About-pagina in te voegen:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:46
 msgid ""
@@ -273,10 +266,8 @@ msgid "Needed Changes"
 msgstr "Benodigde wijzigingen"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:25
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "Change `Main.qml` to include our new Settings page:"
-msgstr "En wijzig `main.qml` om onze nieuwe pagina Instellingen in te voegen:"
+msgstr "Wijzig `Main.qml` om onze nieuwe pagina Instellingen in te voegen:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:85
 msgid ""
@@ -320,10 +311,8 @@ msgstr ""
 "[Kirigami.Card](docs:kirigami2;Card)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:95
-#, fuzzy
-#| msgid "Create a new `contents/ui/SettingsPage.qml` file:"
 msgid "Create a new `SettingsPage.qml` file:"
-msgstr "Maak een nieuw bestand `contents/ui/SettingsPage.qml`:"
+msgstr "Maak een nieuw bestand `SettingsPage.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:103
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:107
@@ -487,13 +476,6 @@ msgstr ""
 "aan een lijst wil toevoegen."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:243
-#, fuzzy
-#| msgid ""
-#| "Since this example is for simple illustrative purposes, we don't delve "
-#| "deep into what would be done once the button is clicked: it just prints "
-#| "\"Clicked!\" to the terminal. We _could_ make a new page for account "
-#| "creation that adds another user to a model, then push the page into view, "
-#| "similarly to what we did in `main.qml`."
 msgid ""
 "Since this example is for simple illustrative purposes, we don't delve deep "
 "into what would be done once the button is clicked: it just prints \"Clicked!"
@@ -505,7 +487,7 @@ msgstr ""
 "dieper in wat zou gedaan worden nadat op de knop is geklikt: het print "
 "eenvoudig \"Geklikt!\" op de terminal. We _zouden_ een nieuwe pagina kunnen "
 "maken voor aanmaken van een account die een andere gebruiker toevoegt aan "
-"een model, daarna de pagina laat zien, gelijk aan wat we deden in `main.qml`."
+"een model, daarna de pagina laat zien, gelijk aan wat we deden in `Main.qml`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:247
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
@@ -924,10 +906,8 @@ msgstr ""
 "openend."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:59
-#, fuzzy
-#| msgid "Initially, our `contents/ui/main.qml` should look like this:"
 msgid "Initially, our `Main.qml` should look like this:"
-msgstr "Initieel zou onze `contents/ui/main.qml` er uit moeten zien als deze:"
+msgstr "Initieel zou onze `Main.qml` er uit moeten zien als deze:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:63
 msgid ""
@@ -1091,7 +1071,7 @@ msgid ""
 msgstr ""
 "Daarna maken we een [qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
 "qmlRegisterSingletonType). Deze wordt gebruikt om ons toe te staan de C++ "
-"code als een module in onze `main.qml` met `import org.kde.example 1.0` te "
+"code als een module in onze `Main.qml` met `import org.kde.example 1.0` te "
 "importeren."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:24
