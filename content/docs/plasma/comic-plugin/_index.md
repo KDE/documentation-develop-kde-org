@@ -157,7 +157,7 @@ For this you can use `comic.combine(image, position)`. `image` needs to be an im
 * comic.Right
 * comic.Bottom
 
-`image` will be combined with the last downloaded image -- `comic.requestPage(url, comic.Image)`. The position defines, where `image` will be placed. That way you can combine multiple images.
+`image` will be combined with the last downloaded image -- `comic.requestPage(url, comic.Image, metadata)`. The position defines, where `image` will be placed. That way you can combine multiple images.
 
 The following code is taken from the Deo Ignito comic plugin. I removed parts that are not necessary for explaining this function, added some comments and pseudo code.
 
