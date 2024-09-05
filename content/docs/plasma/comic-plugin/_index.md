@@ -36,7 +36,7 @@ First create a folder you want to work in. You need a structure like the followi
 ```
 ├── contents
 │   └── code
-│       └── main.es
+│       └── main.js
 ├── icon.png
 └── metadata.json
 ```
