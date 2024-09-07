@@ -1,11 +1,12 @@
 #
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2024 Ronald Stroethoff <stroet43@zonnet.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-03 01:41+0000\n"
-"PO-Revision-Date: 2024-09-03 17:49+0200\n"
+"PO-Revision-Date: 2024-09-06 13:12+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -78,7 +79,7 @@ msgstr ""
 "Kirigami is gebouwd bovenop de QML-taal en Qt Quick Controls 2 componenten "
 "geleverd door het Qt-project. QML heeft ingebouwde ondersteuning voor "
 "aanraaksystemen, wat het ideaal maakt voor mobiele toepassingen. Qt Quick "
-"componenten zijn herbruikbare visuele items die we kunnen gebruiken bij "
+"componenten zijn herbruikbare visuele items die we kunnen gebruiken bij het "
 "bouwen van onze interfaces van toepassingen. Kirigami is een set van Qt "
 "Quick componenten ontworpen voor het maken van convergente toepassingen."
 
@@ -174,6 +175,9 @@ msgid ""
 "setApplicationData(aboutData);` in `main.cpp` add the following to your "
 "`Main.qml`:"
 msgstr ""
+"Voor een eenvoudige pagina Info over die de gegevens gebruikt ingesteld door "
+"`KAboutData::setApplicationData(aboutData);` in `main.cpp` voeg het volgende "
+"toe aan uw `Main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:30
 msgid "The About page of our application should look like this:"
@@ -437,7 +441,7 @@ msgstr "Het zou er uiteindelijk als volgt uit moeten zien:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:196
 msgid "FormButtonDelegate"
-msgstr "FormulierKnopGedelegeerde"
+msgstr "FormButtonDelegate"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:198
 msgid ""
@@ -449,7 +453,7 @@ msgid ""
 msgstr ""
 "De [FormButtonDelegate](https://api.kde.org/frameworks/kirigami-addons/html/"
 "classFormButtonDelegate.html) is visueel gelijk aan een FormTextDelegate, "
-"maar er is op  te klikken en toont een pijl wijzend naar rechts. We "
+"maar er is op te klikken en toont een pijl wijzend naar rechts. We "
 "gebruikten het eerder in de [Kirigami Addons introduction](/docs/getting-"
 "started/kirigami/addons-introduction)."
 
@@ -1071,7 +1075,7 @@ msgid ""
 msgstr ""
 "Daarna maken we een [qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::"
 "qmlRegisterSingletonType). Deze wordt gebruikt om ons toe te staan de C++ "
-"code als een module in onze `Main.qml` met `import org.kde.example 1.0` te "
+"code als een module in onze `main.qml` met `import org.kde.example 1.0` te "
 "importeren."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:24
@@ -1508,7 +1512,7 @@ msgstr ""
 "Natuurlijk kunnen we deze klasse niet gewoon tonen zoals deze is. We moeten "
 "aan QML ook vertellen hoe deze gegevens in de klasse te representeren. We "
 "kunnen dit doen door drie virtuele functies te overschrijven die essentieel "
-"zijn om dit te  doen, allen zullen hun eigen taken doen."
+"zijn om dit te doen, allen zullen hun eigen taken doen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:58
 msgid ""
@@ -1722,13 +1726,12 @@ msgid ""
 "arguments. In this tutorial, we can just use the `index` argument of "
 "`setData()`."
 msgstr ""
-"U kunt  een situatie tegenkomen waar u de gegevens in het model wilt "
-"wijzigen en de wijzigingen gereflecteerd wilt zien aan de kant van de "
-"frontend. Elke keer dat we gegevens in het model wijzigen, moeten we het "
-"signaal `dataChanged()` uitzenden die die wijzigingen toepast aan de kant "
-"ven de frontend in de specifieke cellen gespecificeerd in zijn argumenten. "
-"In deze inleiding, kunnen we gewoon het argument `index` van `setData()` "
-"gebruiken."
+"U kunt een situatie tegenkomen waar u de gegevens in het model wilt wijzigen "
+"en de wijzigingen gereflecteerd wilt zien aan de kant van de frontend. Elke "
+"keer dat we gegevens in het model wijzigen, moeten we het signaal "
+"`dataChanged()` uitzenden die die wijzigingen toepast aan de kant van het "
+"frontend in de specifieke cellen gespecificeerd in zijn argumenten. In deze "
+"inleiding, kunnen we gewoon het argument `index` van `setData()` gebruiken."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:261
 msgid ""
@@ -1805,7 +1808,7 @@ msgstr "![app_screenshot_2.png](app_screenshot_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:382
 msgid "Adding Rows"
-msgstr "Rijen worden toegevoegd"
+msgstr "Het toevoegen van rijen"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:384
 msgid ""
@@ -1851,7 +1854,7 @@ msgstr ""
 "beëindigen. We moeten echter nog steeds `dataChanged()` aan het einde "
 "uitsturen. Deze keer gaan we alle rijen bijwerken, vanaf de eerste rij tot "
 "de laatste omdat de QMap zichzelf alfabetisch zal reorganiseren en we dat "
-"moeten vangen over alle rijen."
+"over alle rijen moeten vangen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:414
 msgid ""
@@ -1892,7 +1895,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:457
 msgid "Clear TextField every time it's done"
-msgstr "Het tekstveld wissen elke keer dat het is gedaan"
+msgstr "Wis het tekstveld elke keer dat het is gedaan"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:478
 msgid ""
@@ -1901,8 +1904,8 @@ msgid ""
 "data."
 msgstr ""
 "Nu zouden een nieuwe actie bovenaan de toepassing moeten geven die een "
-"prompt laat verschijnen die een nieuw element aan het model biedt om toe te "
-"voegen, met onze eigen aangepaste gegevens."
+"prompt laat verschijnen waarmee een nieuw element aan het model kan worden "
+"toegevoegd, met onze eigen aangepaste gegevens."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:485
 msgid "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
@@ -2042,7 +2045,7 @@ msgid ""
 "to allow us to read QML files."
 msgstr ""
 "Ten eerste moeten we een aantal Qt [header-bestanden](https://www.learncpp."
-"com/cpp-tutorial/header-files/) invoegen, waarmee we hun functies kunnen "
+"com/cpp-tutorial/header-files/) invoegen, zodat we hun functies kunnen "
 "gebruiken. In dit geval voegen we een aantal Qt headers in die "
 "toepassingslogica behandelen en ons QML-bestanden te laten lezen."
 
@@ -2085,6 +2088,10 @@ msgid ""
 "breeze) on non-Plasma environments such as Windows or GNOME, we need to do "
 "three things:"
 msgstr ""
+"Om ons programma er goed uit te laten zien met KDE's [Breeze pictogrammen]"
+"(https://invent.kde.org/frameworks/breeze-icons) en [Breeze stijl](https://"
+"invent.kde.org/plasma/breeze) in een niet-Plasma omgeving zoals Windows of "
+"GNOME, moeten we drie dingen doen:"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
 msgid ""
@@ -2092,12 +2099,18 @@ msgid ""
 "frameworks/kiconthemes) on platforms where icon themes aren't part of the "
 "system (like Windows or MacOS) with `KIconTheme::initTheme()`"
 msgstr ""
+"De thema-faciliteiten van [KIconThemes](https://invent.kde.org/frameworks/"
+"kiconthemes) initialiseren voor platforms waar icon thema's geen onderdeel "
+"zijn van het systeem (zoals Windows of MacOS) met `KIconTheme::initTheme()`"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:30
 msgid ""
 "set the QStyle with [QApplication::setStyle()](docs:qtwidgets;QApplication::"
 "setStyle) to force Breeze instead of the native platform style"
 msgstr ""
+"De QStyle met [QApplication::setStyle()](docs:qtwidgets;QApplication::"
+"setStyle) zo instellen om te forceren dat Breeze word gebruikt in plaats van "
+"de eigen platform stijl"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:31
 msgid ""
@@ -2105,10 +2118,9 @@ msgid ""
 "qtquickcontrols;QQuickStyle::setStyle) to force Breeze with KDE's [qqc2-"
 "desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)"
 msgstr ""
-"stel de QtQuick Controls-stijl in met [QQuickStyle::setStyle()](docs:"
-"qtquickcontrols;QQuickStyle::setStyle) om het gebruik van Breeze van [qqc2-"
-"desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style) van KDE "
-"af te dwingen."
+"Met [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::setStyle) "
+"QtQuick Controle instellen om met [qqc2-desktop-style](https://invent.kde."
+"org/frameworks/qqc2-desktop-style) het gebruik van Breeze af te dwingen."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:33
 msgid ""
@@ -2119,6 +2131,13 @@ msgid ""
 "the window like buttons and checkboxes will follow Breeze by using `qqc2-"
 "desktop-style`."
 msgstr ""
+"Het aanroepen van `KIconTheme::initTheme()` moet gedaan worden voor de "
+"initialisatie van QApplication zodat het programma de Breeze-pictogrammen "
+"kan vinden die het wil gebruiken. Het omschakelen van de QStyle naar Breeze "
+"is nodig omdat we QApplication voor ons programma gebruiken in plaats van "
+"[QGuiApplication](docs:qtgui;QGuiApplication). De gebruikte interface regelt "
+"dat in het venster dingen zoals knoppen en keuzevakjes de Breeze toepassen "
+"door `qqc2-desktop-style` te gebruiken."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:35
 msgid ""
@@ -2178,7 +2197,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:16
 msgid "The root CMakeLists.txt"
-msgstr "Het hoofd CMakeLists.txt"
+msgstr "De basis CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:18
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
@@ -2348,7 +2367,7 @@ msgid ""
 "directory, where it finds another `CMakeLists.txt` file."
 msgstr ""
 "En bovendien dat `add_subdirectory(src)` CMake laat wijzen naar de map "
-"'src/', waar het een ander bestand `CMakeLists.txt` vindt."
+"'src/', waar het een ander bestand `CMakeLists.txt` vindt:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:65
 msgid "src/CMakeLists.txt"
@@ -2519,12 +2538,18 @@ msgid ""
 "new-files), a new CMake file was introduced to allow for separate QML "
 "modules:"
 msgstr ""
+"In de instructie over [hoe uw code in separate bestanden te splitsen](/docs/"
+"getting-started/kirigami/introduction-separatefiles#preparing-cmake-for-the-"
+"new-files), werd een nieuw CMake-bestand geïntroduceerd om separate QML "
+"modules mogelijk te maken:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:102
 msgid ""
 "The requirement for this file to be read by CMake is adding a call to "
 "`add_subdirectory()` in the `src/CMakeLists.txt` pointing to it."
 msgstr ""
+"Om dit bestand door CMake te laten lezen is het aanroepen (call) van "
+"`add_subdirectory()` vereist in `src/CMakeLists.txt` dat er naar verwijst."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:104
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:96
@@ -2534,6 +2559,10 @@ msgid ""
 "module/ECMQmlModule.html) under the import name `org.kde.tutorial."
 "components` and add the relevant QML files."
 msgstr ""
+"We creëren een nieuw doel `kirigami-hello-components` genaamd en zetten het "
+"om naar een QML module met de hulp van [ecm_add_qml_module()](https://api."
+"kde.org/ecm/module/ECMQmlModule.html) met de importnaam `org.kde.tutorial."
+"components` en voegen daar de relevante QML-bestanden toe."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:106
 msgid ""
@@ -2545,6 +2574,15 @@ msgid ""
 "`src/CMakeLists.txt`. This is done by adding the target name to the list of "
 "libraries that will be linked to the executable in `target_link_libraries()`."
 msgstr ""
+"De aanroep naar [add_library()](https://cmake.org/cmake/help/latest/command/"
+"add_library.html) genereert een nieuw doel genaamd `kirigami-hello-"
+"components`. Dit doel zal zijn eigen set broncode-bestanden, QML-bestanden, "
+"zijn eigen bibliotheken (libraries) aankoppelen enz., maar het moet nog wel "
+"gelinkt worden naar de executable, ook moet het nadat het gecompileerd is "
+"nog gelinkt worden naar de executable gecreëerd aan de hand van `src/"
+"CMakeLists.txt`. Dit wordt gedaan door de doelnaam toe te voegen aan de "
+"lijst van bibliotheken (libraries) die gelinkt worden met de executable in "
+"`target_link_libraries()`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:108
 msgid ""
@@ -2555,6 +2593,13 @@ msgid ""
 "generate plugin code since it's built into the executable; with separate QML "
 "modules like `kirigami-hello-components` the plugin code is necessary."
 msgstr ""
+"De aanroep naar `ecm_add_qml_module()` stelt de bibliotheek zodanig in dat "
+"het net zoals eerder QML-bestanden accepteert, maar deze keer moeten we "
+"[GENERATE_PLUGIN_SOURCE] (https://api.kde.org/ecm/module/ECMQmlModule.html) "
+"gebruiken. Als het programma wordt gebruikt als een achtergronddoel (zoals "
+"bij `kirigami-hello`) dan hoeft het geen plugin code te generen omdat het in "
+"het uitvoerbare bestand is ingebouwd; bij separate QML modules zoals "
+"`kirigami-hello-componenten` is de plugin code noodzakelijk."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:110
 msgid ""
@@ -2563,6 +2608,10 @@ msgid ""
 "the QML module, but KDE's `ecm_add_qml_module()` by default does not for "
 "backwards compatibility."
 msgstr ""
+"Upstream Qt's [qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module."
+"html#targets-and-plugin-targets) genereert standaard samen met de QML module "
+"een plugin, maar KDE's `ecm_add_qml_module()` doet dat standaard niet "
+"vanwege de backwards compatibility."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:112
 msgid ""
@@ -2574,10 +2623,17 @@ msgid ""
 "is able to find where the QML files for each module are, so they are "
 "automatically added to the target."
 msgstr ""
+"Daarnaast is het noodzakelijk om de QML modules te scheiden om het doel af "
+"te maken. Dit houd hoofdzakelijk is dat CMake twee bestanden genereert, "
+"[qmldir en qmltypes] (https://doc.qt.io/qt-6/qtqml-modules-qmldir.html), die "
+"de QML modules beschrijven die we hebben en hun symbolen exporteren om in de "
+"bibliotheek te gebruiken. Ze zijn belangrijk bij het installeren van uw "
+"programma zodat het uitvoerbare bestand voor elke module de QML-bestanden "
+"kan vinden, zodat ze automatisch aan het doel kunnen worden toegevoegd."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:114
 msgid "You can then just install the target as before."
-msgstr ""
+msgstr "Het doel kan dan gewoon net zoals vroeger geïnstalleerd worden."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:116
 msgid ""
@@ -2623,7 +2679,7 @@ msgid ""
 "an icon and text."
 msgstr ""
 "Een [Kirigami.Action](docs:kirigami2;Action) bestaat uit een aan te klikken "
-"actie waarvan het uiterlijk afhangt van waar het is toegevoegd. Typisch is "
+"actie waarvan het uiterlijk afhangt van waar het is toegevoegd. Standaard is "
 "het een knop met een pictogram en tekst."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:14
@@ -2776,7 +2832,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:152
 msgid "Context drawer"
-msgstr "Opvangbak voor context"
+msgstr "Context-lade"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:154
 msgid ""
@@ -2917,7 +2973,7 @@ msgid ""
 msgstr ""
 "Een [Kirigami.Card](docs:kirigami2;Card) wordt gebruikt om een verzameling "
 "informatie of acties tezamen te tonen. Deze acties kunnen toegevoegd worden "
-"aan de groep `actions`, evenals eerdere componenten."
+"aan de groep `actions`, vergelijkbaar met eerdere componenten."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:304
 msgid ""
@@ -2998,7 +3054,8 @@ msgstr ""
 "De indeling en locatie van uw [Kirigami.ActionToolBar](docs:kirigami2;"
 "ActionToolBar) zijn echt aan u, hoewel voor gebruikersvriendelijkheid is het "
 "gewoonlijk een goed idee om bij UI-conventies te blijven en uw werkbalk "
-"boven of onderaan uw pagina te te plaatsen om het in de breedte te spreiden."
+"boven of onderaan uw pagina te te plaatsen in om het in de breedte te "
+"spreiden."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:24
 msgid ""
@@ -3130,7 +3187,7 @@ msgid ""
 "[contentItem](https://doc.qt.io/Qt-6/qml-qtquick-controls-control."
 "html#contentItem-prop)."
 msgstr ""
-"Een [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) is het eenvigste "
+"Een [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) is het eenvoudigste "
 "type kaart. Het is gewoon een rechthoek met een schaduw, die elk [Item](docs:"
 "qtquick;QtQuick.Item) erin kan bevatten. Het kan ook items aan zijn "
 "eigenschappen [header](docs:kirigami2;templates::AbstractCard::header) of "
@@ -3329,7 +3386,7 @@ msgstr "Chips"
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips are small elements typically used to list out related properties."
 msgstr ""
-"Chips zijn kleine elementen typisch gebruikt om een lijst te maken van "
+"Chips zijn kleine elementen standaard gebruikt om een lijst te maken van "
 "gerelateerde eigenschappen."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:9
@@ -3398,8 +3455,9 @@ msgid ""
 msgstr ""
 "Het ListModel wordt gebruikt als opslag voor de chips. Om het ListModel te "
 "bevolken (en daarom chips), declareren we een aantal componenten "
-"ListElement, die een veld bevatten bekend als `text`. We kunnen deze vanhier "
-"aan het `text`-veld toegekende tekenreeks gebruiken voor elke herhaalde chip."
+"ListElement, die een veld bevatten bekend als `text`. We kunnen deze van "
+"hier aan het `text`-veld toegekende tekenreeks gebruiken voor elke herhaalde "
+"chip."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:74
 msgid ""
@@ -3605,6 +3663,12 @@ msgid ""
 "toolbutton \"Beep\" which is completely flat simulating a Kirigami.Action](/"
 "docs/getting-started/kirigami/components-controls/controls-toolbutton.webp)"
 msgstr ""
+"![Een venster dat een aangepaste werkbalk toont aan de bovenkant van het "
+"venster die een Kirigami.globalToolBar simuleert, met links een menu "
+"pictogram dat een passieve melding \"Kirigami Pages and Actions are better!"
+"\" toont en rechts de knop \"Beep\" die compleet plat is die een Kirigami."
+"Action](/docs/getting-started/kirigami/components-controls/controls-"
+"toolbutton.webp) simuleert"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:174
 msgid "Selection controls"
@@ -3664,9 +3728,9 @@ msgid ""
 "is designed for situations where the user must choose one option from a set "
 "of several options."
 msgstr ""
-"Een[Controls.RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton) "
-"is ontworpen voor situaties waar de gebruiker één optie uit een set van "
-"verschillende opties moet kiezen."
+"Een [Controls.RadioButton](docs:qtquickcontrols;QtQuick.Controls."
+"RadioButton) is ontworpen voor situaties waar de gebruiker één optie uit een "
+"set van verschillende opties moet kiezen."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:233
 msgid ""
@@ -3914,7 +3978,7 @@ msgid ""
 "It can display non-interactive content (only text) and interactive content "
 "(forms, listviews and buttons)."
 msgstr ""
-"Een [Kirigami.Dialog](docs:kirigami2;Dialog) is een eenvoudige compdie "
+"Een [Kirigami.Dialog](docs:kirigami2;Dialog) is een eenvoudige component die "
 "gebruikt kan worden om de getoonde inhoud van een pagina van de toepassing "
 "aan te vullen. Deze kan niet-interactieve inhoud (alleen tekst) en "
 "interactieve inhoud tonen (formulieren, lijstweergaven en knoppen)."
@@ -3994,6 +4058,12 @@ msgid ""
 "information. This type of dialog is supposed to be used only for simple yes/"
 "no prompts or brief requests for user input."
 msgstr ""
+"Een [Kirigami.PromptDialog](docs:kirigami2;PromptDialog) is eigenlijk een "
+"dialoogvenster met een ingebouwde label en standaard [contentPadding](docs:"
+"kirigami2;PromptDialog::contentPadding) dat wordt gebruikt om de aandacht "
+"van de gebruiker te vragen voor wat informatie. Dit type dialoogvenster "
+"wordt geacht alleen gebruikt te worden voor eenvoudige ja/nee vragen of "
+"korte vragen aan de gebruiker voor een antwoord."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:137
 msgid ""
@@ -4003,6 +4073,11 @@ msgid ""
 "subtitle instead, and this can be explicitly specified with [Kirigami.Dialog."
 "mainItem](docs:kirigami2;Dialog::mainItem)."
 msgstr ""
+"De belangrijkste eigenschap daarvan is [Kirigami.Dialog.subtitle](docs:"
+"kirigami2;PromptDialog::subtitle), waaraan tekst toegevoegd kan worden. Als "
+"een QML component als kind van het promptdialoog is toegevoegd, dan zal dit "
+"component de plaats van de subtitel innemen, die expliciet kan worden "
+"opgegeven met [Kirigami.Dialog.mainItem](docs:kirigami2;Dialog::mainItem)."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:179
 msgid "![A simple prompt dialog containing only text](promptdialog.webp)"
@@ -4034,6 +4109,8 @@ msgid ""
 "![A simple MenuDialog listing actions like Play and Pause for media]"
 "(menudialog.webp)"
 msgstr ""
+"![Een eenvoudige MenuDialog lijst met acties zoals Afspelen en Pause voor "
+"media](menudialog.webp)"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:0
 msgid "Drawers"
@@ -4152,7 +4229,7 @@ msgid ""
 "property, and it will replace the global drawer's title. This is useful to "
 "add a `Kirigami.SearchField`, for example:"
 msgstr ""
-"Uw gekozen opschriftcomponent kan ingesteld worden met de globale enschap "
+"Uw gekozen opschriftcomponent kan ingesteld worden met de globale eigenschap "
 "van de schuiflade `header` en zal vervangen worden door de titel van de "
 "globale schuiflade. Dit is nuttig om een `Kirigami.SearchField` toe te "
 "voegen, bijvoorbeeld:."
@@ -4320,6 +4397,10 @@ msgid ""
 "to use this kind of drawer when you want a small list of options to appear "
 "on a long press or right click."
 msgstr ""
+"Dit soort schuifladen hebben een open eind en zijn flexibel, maar in het "
+"algemeen zal u dit soort schuiflade willen gebruiken als u een kleine lijst "
+"met keuzes wilt laten verschijnen nadat er langdurig geklikt of rechts "
+"geklikt is."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:214
 msgid ""
@@ -4373,7 +4454,7 @@ msgstr "Modal op false zetten om deze schuiflade inline te maken!"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:262
 msgid "Modal drawer not visible"
-msgstr ""
+msgstr "Modale schuiflade niet zichtbaar"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:264
 msgid "Modal drawer at the bottom edge of the screen"
@@ -4526,7 +4607,7 @@ msgid ""
 "This header text is larger than the normal label text, and provides users "
 "with a nice visual cue of what the form layout section is about."
 msgstr ""
-"Deze koptekst is groter dan de normale labeltekst en levert gebruikers met "
+"Deze koptekst is groter dan de normale labeltekst en geeft aan de gebruikers "
 "een nette visuele aanwijzing waar de sectie formulierindeling over gaat."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:130
@@ -4682,7 +4763,7 @@ msgid ""
 msgstr ""
 "[visible](https://doc.qt.io/qt-6/qml-qtquick-item.html#visible-prop): dit is "
 "standaard gezet op false, zodat het bericht alleen verschijnt wanneer u het "
-"expliciet wilt. Dit kan veranderd worden als u dat wilt door het op true te "
+"expliciet wilt. Indien gewenst kan dit aangepast worden door het op true te "
 "zetten. Wanneer een verborgen inline bericht op zichtbaar is gezet, krijgt u "
 "een leuke animatie."
 
@@ -4811,7 +4892,7 @@ msgid ""
 "their names are."
 msgstr ""
 "U kunt ook het pictogram dat linksboven van uw melding verschijnt aanpassen "
-"door een systeempictogramnaam te leveren voor de eigenschap [icon.source]"
+"door een systeempictogram-naam te leveren voor de eigenschap [icon.source]"
 "(docs:kirigami2;templates::InlineMessage::icon). Deze pictogramnamen zouden "
 "overeen moeten komen met op uw systeem geïnstalleerde pictogrammen; u kunt "
 "een toepassing zoals Cuttlefish, geleverd door [plasma-sdk](https://invent."
@@ -4907,7 +4988,7 @@ msgstr ""
 msgid ""
 "The **model**, which contains the data you want your list view to display"
 msgstr ""
-"Het **model** dat de gegevens bevat die u in uw lijstweergave wilt tonen"
+"Het **model**, dat de gegevens bevat die u in uw lijstweergave wilt tonen"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:14
 msgid ""
@@ -4937,7 +5018,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:19
 msgid "Essentials of models and views"
-msgstr ""
+msgstr "Essenties van modellen en weergaven"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:21
 msgid "A list view has two essential properties we must pay attention to:"
@@ -4968,6 +5049,9 @@ msgid ""
 "will be wrapped in a Component so that it is reusable: it serves as a "
 "blueprint for how to instantiate each delegate."
 msgstr ""
+"Het model wordt niet getoond, omdat het alleen data bevat. Standaard wordt "
+"de delegatie ingepakt in een component zodat het herbruikbaar is: het dient "
+"als blauwdruk voor hoe een delegatie moet worden gecreëerd."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:28
 msgid ""
@@ -4975,10 +5059,13 @@ msgid ""
 "delegate, using a [Kirigami.SubtitleDelegate](docs:kirigami2;"
 "SubtitleDelegate):"
 msgstr ""
+"Hier is een voorbeeld met precies een weergeven lijst, een model en een "
+"delegatie, dat een [Kirigami.SubtitleDelegate](docs:kirigami2;"
+"SubtitleDelegate) gebruikt:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:62
 msgid "And the exact same example, inline:"
-msgstr ""
+msgstr "En precies hetzelfde voorbeeld, inline:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:92
 msgid "Understanding models"
@@ -4989,14 +5076,17 @@ msgid ""
 "The model contains the data that will be used to populate the list view. "
 "Different ways to use models have different ways to access the data:"
 msgstr ""
+"In het model is de data dat wordt gebruikt om dat zal worden gebruikt om de "
+"getoonde lijst te bevolken. De verschillende manieren om de modellen te "
+"gebruiken hebben verschillende manieren om toegang te krijgen tot de data:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:96
 msgid "WAY TO USE"
-msgstr ""
+msgstr "HOE TE GEBRUIKEN"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:96
 msgid "HOW TO ACCESS"
-msgstr ""
+msgstr "HOE TOEGANG TE KRIJGEN"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:96
 msgid "WHEN TO USE"
@@ -5004,45 +5094,45 @@ msgstr "WANNEER TE GEBRUIKEN"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:98
 msgid "Qt models with more than one role"
-msgstr ""
+msgstr "Qt modellen met meer dan een rol"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:98
 msgid "model.index, model.somerole"
-msgstr ""
+msgstr "model.index, model.somerole"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:98
 msgid "In most cases"
-msgstr ""
+msgstr "Voor de meeste gevallen"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "Qt models with one role"
-msgstr ""
+msgstr "Qt modellen met een rol"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "model.index, model.somerole, model.modelData"
-msgstr ""
+msgstr "model.index, model.somerole, model.modelData"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "In most cases, for prototyping"
-msgstr ""
+msgstr "In de meeste gevallen, voor prototyping"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 msgid "JavaScript array model"
-msgstr ""
+msgstr "JavaScript array model"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "model.index, model.modelData"
-msgstr ""
+msgstr "model.index, model.modelData"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "For prototyping"
-msgstr ""
+msgstr "Voor prototyping"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "Integer model"
-msgstr ""
+msgstr "Integer model"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:103
 msgid ""
@@ -5061,6 +5151,13 @@ msgid ""
 "models to QML using QAbstractListModel](/docs/getting-started/kirigami/"
 "advanced-connect_models)."
 msgstr ""
+"In de tabel hierboven,verwijst \"Qt modellen\" naar zowel C++-specifieke "
+"modellen zoals [QAbstractListModel](https://doc.qt.io/qt-6/"
+"qabstractlistmodel.html) als naar QML-specifieke modellen zoals ListModel. "
+"Deze pagina zal zich alleen focussen op QML-specifieke modellen. Verderop "
+"geven we een instructie voor het [verbinden van C++ modellen met QML met "
+"gebruik van QAbstractListModel](/docs/getting-started/kirigami/advanced-"
+"connect_models)."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:107
 msgid ""
@@ -5068,6 +5165,9 @@ msgid ""
 "index (the position) of each delegate. It can be shortened to `index` for "
 "convenience."
 msgstr ""
+"De `model.index`-eigenschap is bij elk model beschikbaar en heeft de index "
+"index (de positie) van elk delegate. Voor de handigheid kan het worden "
+"afgekort naar `index`."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:109
 msgid ""
@@ -5078,6 +5178,13 @@ msgid ""
 "roles, which can be accessed with `model.product` and `model.target`, "
 "respectively."
 msgstr ""
+"De eigenschap `model.somerole` hierboven genoemd is alleen maar een "
+"plaatshouder, het is niet een specifieke eigenschap die uit QML komt : "
+"`somerole` kan elke rol zijn die door het model wordt gedefinieerd. In het "
+"eerste code voorbeeld op deze pagina toont de tabel hierboven, het model "
+"`plasmaProductsModel` heeft de `product` en `target` rollen, waar toe met "
+"respectievelijk `model.product` en `model.target` toegang gekregen kan "
+"worden."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:111
 msgid ""
@@ -5085,6 +5192,10 @@ msgid ""
 "property can be shorted to just `somerole` (like `product`) for convenience, "
 "but it is recommended that they be turned into required properties:"
 msgstr ""
+"Net zoals `model.index` afgekort kan worden tot `index`, kan voor de "
+"handigheid ook elk de `model.somerole`-eigenschap afgekort worden tot alleen "
+"maar `somerole` (zoals `product`), maar het wordt aanbevolen dat ze naar de "
+"betreffende eigenschappen worden omgezet:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:148
 msgid ""
@@ -5093,10 +5204,14 @@ msgid ""
 "also be shortened to `modelData` (and as such would also need to be a "
 "required property):"
 msgstr ""
+"Daarnaast, als het model alleen maar een rol heeft of helemaal geen rol "
+"heeft, dan kan men er ook toegang toe krijgen met de eigenschap `model."
+"modelData`, wat ook afgekort kan worden tot `modelData` (en als zodanig een "
+"vereiste eigenschap moet zijn):"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:179
 msgid "This matches model.software"
-msgstr ""
+msgstr "Dit komt overeen met model.software"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:186
 msgid ""
@@ -5104,12 +5219,17 @@ msgid ""
 "[JavaScript array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
 "Reference/Global_Objects/Array), with no role:"
 msgstr ""
+"Voor vergelijking, is hier hoe de code van boven er uit zou zien met een "
+"[JavaScript array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
+"Reference/Global_Objects/Array), zonder een rol:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:215
 msgid ""
 "Using an integer for the model can be useful for very specific cases, namely "
 "prototyping and tests:"
 msgstr ""
+"Het gebruik van een integer voor de rol kan in zeer specifieke gevallen "
+"bruikbaar zijn, namelijk prototyping en tests:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:244
 msgid "Understanding views and delegates"
@@ -5117,12 +5237,12 @@ msgstr "Weergaven en delegaties begrijpen"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:246
 msgid "Let's go back to the original example:"
-msgstr ""
+msgstr "Laten we terug gaan naar het oorspronkelijke voorbeeld:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:259
 #: content/docs/getting-started/kirigami/components-listview/index.md:391
 msgid "anchors.fill: parent"
-msgstr ""
+msgstr "anchors.fill: parent"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:280
 msgid ""
@@ -5131,6 +5251,12 @@ msgid ""
 "view is a visual component immediately instantiated and so it needs to "
 "either have its dimensions set or use anchors or Layouts."
 msgstr ""
+"In tegenstelling tot het model (wat alleen maar data bevat) en een delegatie "
+"[Component](docs:qtqml;QtQml.Component) (wat alleen verschijnt als het "
+"gecreëerd wordt), is de weergave een visueel component dat onmiddellijk "
+"wordt gecreëerd en er moet daarom daarvan zijn afmetingen ingesteld zijn of "
+"er moeten anchors gebruikt worden of er moeten Layouts (vensterindelingen) "
+"gebruikt worden ."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:282
 msgid ""
@@ -5143,28 +5269,39 @@ msgid ""
 "scrollable page above, `anchors.fill: parent` is not required; if a simple "
 "page was used, it would be required."
 msgstr ""
+"Omdat weergaven meestal lijsten met inhoud zijn waar de gebruiker doorheen "
+"wil scrollen, als ze aan een [Kirigami.ScrollablePage](docs:kirigami2;"
+"ScrollablePage) zijn toegevoegd, dan vormen de weergaven de hoofdinhoud met "
+"weinig ruimte daaromheen, en het is daarom niet noodzakelijk dat het de hele "
+"pagina vult. Als de weergave wordt toegevoegd aan een eenvoudige [Kirigami."
+"Page](docs:kirigami2;Page), dan is het noodzakelijk dat de afmetingen "
+"daarvan correct zijn ingesteld voordat het getoond wordt. Met andere "
+"woorden: in de scrollable pagina hierboven, is `anchors.fill: parent` niet "
+"nodig; maar als een eenvoudige pagina wordt gebruikt dan is het wel vereist."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:284
 msgid ""
 "There are multiple views APIs can be used, some from Qt and some from "
 "Kirigami. Here are the most commonly used ones:"
 msgstr ""
+"Er zijn meerdere weergave-API's die kunnen worden gebruikt, enkele van Qt en "
+"enkele van Kirigami. Hier zijn de meest voorkomende:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:286
 msgid "Qt's [ListView](docs:qtquick;QtQuick.ListView)"
-msgstr ""
+msgstr "Qt's [ListView](docs:qtquick;QtQuick.ListView)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:287
 msgid "Qt's [GridView](docs:qtquick;QtQuick.GridView)"
-msgstr ""
+msgstr "Qt's [GridView](docs:qtquick;QtQuick.GridView)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:288
 msgid "Qt's [TableView](docs:qtquick;QtQuick.TableView)"
-msgstr ""
+msgstr "Qt's [TableView](docs:qtquick;QtQuick.TableView)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:289
 msgid "Qt's [TreeView](docs:qtquick;QtQuick.TreeView)"
-msgstr ""
+msgstr "Qt's [TreeView](docs:qtquick;QtQuick.TreeView)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:290
 msgid "Kirigami's [CardsListView](docs:kirigami2;CardsListView)"
@@ -5172,17 +5309,20 @@ msgstr "Kirigami's [CardsListView](docs:kirigami2;CardsListView)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:291
 msgid "Kirigami's [ColumnView](docs:kirigami2;ColumnView)"
-msgstr ""
+msgstr "Kirigami's [ColumnView](docs:kirigami2;ColumnView)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:293
 msgid ""
 "The delegate on the other hand always need to have its dimensions set. "
 "Generally its dimensions are set to use only the full width of the view."
 msgstr ""
+"Daarentegen moet bij een delegatie altijd de afmetingen opgegeven worden. "
+"Meestal worden de afmetingen daarvan zodanig ingesteld dat het alleen de "
+"volledige breedte van het venster gebruikt."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:295
 msgid "Common mistakes"
-msgstr ""
+msgstr "Vaak gemaakte fouten"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:297
 msgid ""
@@ -5190,12 +5330,19 @@ msgid ""
 "delegate doesn't need to have the same height as the view. In other words, "
 "you will probably never want to use `anchors.fill: parent`."
 msgstr ""
+"Bovengenoemde houdt in dat gedelegeerden geen ankers onderaan zouden moeten "
+"hebben, omdat de gedelegeerde niet dezelfde hoogte hoeft te hebben als het "
+"venster. Met andere woorden, u zal waarschijnlijk nooit `anchors.fill: "
+"parent` willen gebruiken."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:299
 msgid ""
 "Additionally, while it is possible to set its dimensions using the parent "
 "and anchors, which is usually the view's contentItem, like so:"
 msgstr ""
+"Daarbij, ofschoon het mogelijk is om de afmetingen daarvan in te stellen "
+"door gebruik van de parent en ankers, wat is meestal de contentItem van de "
+"weergave, zoals op deze manier:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:309
 msgid ""
@@ -5204,6 +5351,11 @@ msgid ""
 "qml-qtquick-listview.html#view-attached-prop) attached property to point to "
 "the delegate's parent view:"
 msgstr ""
+"Er is geen garantie dat de parent van de gedelegeerde een weergave heeft en "
+"moet daarom vermeden worden. Gebruik in plaats daarvan [ListView.view]"
+"(https://doc.qt.io/qt-6/qml-qtquick-listview.html#view-attached-prop) "
+"verbonden eigenschap dat verwijst naar de weergave van de parent van de "
+"gedelegeerde:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:320
 msgid ""
@@ -5212,6 +5364,10 @@ msgid ""
 "is constructed, the delegate is then used as a blueprint to make each item "
 "in the view."
 msgstr ""
+"Een gedelegeerde word het meest gebruikt in een [Component](docs:qtqml;QtQml."
+"Component), die de gedelegeerde niet onmiddellijk word gecreëerd. Als een "
+"weergave word geconstrueerd, dan word de gedelegeerden gebruikt als een "
+"blauwdruk voor elk item in de weergave."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:322
 msgid ""
@@ -5219,82 +5375,104 @@ msgid ""
 "without delegate-specific Qt APIs (for example, a Layout containing a few "
 "Items), QtQuick Controls does provide delegate APIs that are simpler to use:"
 msgstr ""
+"Ofschoon aangepaste componenten gemaakt kunnen worden die als gedelegeerden "
+"zonder gedelegeerde-specifieke Qt APIs (bijvoorbeeld een Layout met alleen "
+"een paar items) gebruikt kunnen worden, heeft QtQuick Controls gedelegeerde "
+"(delegate)-API's die eenvoudig te gebruiken zijn:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:324
 msgid ""
 "[ItemDelegate](docs:qtquickcontrols;QtQuick.Controls.ItemDelegate) "
 "(delegates with only text)"
 msgstr ""
+"[ItemDelegate](docs:qtquickcontrols;QtQuick.Controls.ItemDelegate) "
+"(delegeert met alleen tekst)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:325
 msgid ""
 "[CheckDelegate](docs:qtquickcontrols;QtQuick.Controls.CheckDelegate) "
 "(delegates with a checkbox)"
 msgstr ""
+"[CheckDelegate](docs:qtquickcontrols;QtQuick.Controls.CheckDelegate) "
+"((delegeert met een keuzevakje)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:326
 msgid ""
 "[RadioDelegate](docs:qtquickcontrols;QtQuick.Controls.RadioDelegate) "
 "(delegates with a radio)"
 msgstr ""
+"[RadioDelegate](docs:qtquickcontrols;QtQuick.Controls.RadioDelegate) "
+"(delegeert met een keuzerondje)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:327
 msgid ""
 "[SwitchDelegate](docs:qtquickcontrols;QtQuick.Controls.SwitchDelegate) "
 "(delegates with a switch)"
 msgstr ""
+"[SwitchDelegate](docs:qtquickcontrols;QtQuick.Controls.SwitchDelegate) "
+"(delegeert met een schakelaar)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:328
 msgid ""
 "[SwipeDelegate](docs:qtquickcontrols;QtQuick.Controls.SwipeDelegate) "
 "(delegates that can be swiped)"
 msgstr ""
+"[SwipeDelegate](docs:qtquickcontrols;QtQuick.Controls.SwipeDelegate) "
+"(gedelegeerde dat weggeveegd kan worden)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:330
 msgid "You should prefer using the upstream Qt delegates where possible."
 msgstr ""
+"Het is raadzaam om waar mogelijk de upstream Qt gedelegeerden te gebruiken."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:332
 msgid ""
 "On top of these Qt delegates, Kirigami provides its own equivalents, with "
 "the added functionality of subtitles and icons:"
 msgstr ""
+"Bovenop deze Qt gedelegeerden heeft Kirigami zijn eigen equivalenten, met de "
+"extra functionaliteit van subtitel en pictogrammen:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:334
 msgid "[TitleSubtitle](docs:kirigami2;TitleSubtitle)"
-msgstr ""
+msgstr "[TitleSubtitle](docs:kirigami2;TitleSubtitle)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:335
 msgid "[IconTitleSubtitle](docs:kirigami2;IconTitleSubtitle)"
-msgstr ""
+msgstr "[IconTitleSubtitle](docs:kirigami2;IconTitleSubtitle)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:336
 msgid "[SubtitleDelegate](docs:kirigami2;SubtitleDelegate)"
-msgstr ""
+msgstr "[SubtitleDelegate](docs:kirigami2;SubtitleDelegate)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:337
 msgid "[CheckSubtitleDelegate](docs:kirigami2;CheckSubtitleDelegate)"
-msgstr ""
+msgstr "[CheckSubtitleDelegate](docs:kirigami2;CheckSubtitleDelegate)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:338
 msgid "[RadioSubtitleDelegate](docs:kirigami2;RadioSubtitleDelegate)"
-msgstr ""
+msgstr "[RadioSubtitleDelegate](docs:kirigami2;RadioSubtitleDelegate)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:339
 msgid "[SwitchSubtitleDelegate](docs:kirigami2;SwitchSubtitleDelegate)"
-msgstr ""
+msgstr "[SwitchSubtitleDelegate](docs:kirigami2;SwitchSubtitleDelegate)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:341
 msgid ""
 "The API ending with \"Delegate\" can be set as a direct delegate of the "
 "view, just like the previous examples that used Controls.ItemDelegate:"
 msgstr ""
+"De API die eindigt met \"Delegate\" kan ingesteld worden als een direct "
+"gedelegeerde van de weergave, net zoals in de vorige voorbeelden die "
+"Controls.ItemDelegate gebruiken:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:377
 msgid ""
 "Both TitleSubtitle and IconTitleSubtitle are expected to be used to override "
 "a Qt delegate's contentItem, for example:"
 msgstr ""
+"Er wordt verwacht dat zowel TitleSubtitle als IconTitleSubtitle worden "
+"gebruikt om een Qt delegate's contentItem te overschrijven, als voorbeeld:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:417
 msgid ""
@@ -5302,6 +5480,9 @@ msgid ""
 "[ListItemTest file in the Kirigami Repository](https://invent.kde.org/"
 "frameworks/kirigami/-/blob/master/tests/ListItemTest.qml)."
 msgstr ""
+"Een praktisch voorbeeld van het gebruik van Kirigami gedelegeerden is te "
+"vinden in het [ListItemTest-bestand in de Kirigami Repository](https://"
+"invent.kde.org/frameworks/kirigami/-/blob/master/tests/ListItemTest.qml)."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:0
 msgid "Page rows and page stacks"
@@ -5456,7 +5637,7 @@ msgstr ""
 "uw toepassing groter wordt en u hebt het nodig om uw componenten aanwezig te "
 "hebben in aparte bestanden. Als u uw venster in uw `Main.qml` aanmaakt met "
 "een [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), kan een "
-"component, die zich in een ander bestand bevindt, nog  steeds direct "
+"component, die zich in een ander bestand bevindt, nog steeds direct "
 "aangeroepen worden in de globale `pageStack` door middel van een oproep naar "
 "het [applicationWindow()](docs:kirigami2;AbstractApplicationWindow::"
 "applicationWindow):"
@@ -5712,11 +5893,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:68
 msgid "More code..."
-msgstr ""
+msgstr "Meer code..."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:71
 msgid "Model code..."
-msgstr ""
+msgstr "Model code..."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:76
 msgid "Search in the ListView"
@@ -5738,7 +5919,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:95
 msgid "Rest of listview code..."
-msgstr ""
+msgstr "De rest van de listview code..."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:100
 msgid "Hint"
@@ -5857,7 +6038,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:40
 msgid "Other page properties..."
-msgstr ""
+msgstr "Andere paginaeigenschappen..."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:58
 msgid ""
@@ -5865,6 +6046,9 @@ msgid ""
 "page from the previous tutorials. If we wanted to, we could add more actions "
 "to our page (and even nest actions within actions!)."
 msgstr ""
+"We plaatsen onze [Kirigami.Action](docs:kirigami2;Action) op onze "
+"hoofdpagina uit de eerdere instructie. Als we het willen, dan kunnen we meer "
+"acties aan onze pagina (en zelfs geneste acties in acties!) toevoegen."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:60
 msgid ""
@@ -5872,14 +6056,17 @@ msgid ""
 "w3schools.com/js/js_arrays.asp), which means you can pass one or more things "
 "to them, separated by comma:"
 msgstr ""
+"De haakjes `[]` hierboven gebruikt zijn vergelijkbaar met [JavaScript arrays]"
+"(https://www.w3schools.com/js/js_arrays.asp), wat inhoud dat u een of meer "
+"argumenten aan ze kan doorgeven, gescheiden door komma's:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:63
 msgid "General JavaScript array of components:"
-msgstr ""
+msgstr "Algemeen JavaScript array met componenten:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:65
 msgid "Passing an array of Kirigami actions to QML:"
-msgstr ""
+msgstr "Het doorgeven van een array met Kirigami acties naar QML:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:69
 msgid ""
@@ -5891,7 +6078,7 @@ msgid ""
 "property for the icon property, `icon.name`."
 msgstr ""
 "De eigenschappen `id` en `text` zouden bekend moeten zijn uit eerdere "
-"inleidingen. De geërfde eigenschap [Action.icon](https://doc.qt.io/qt-6/qml-"
+"instructies. De geërfde eigenschap [Action.icon](https://doc.qt.io/qt-6/qml-"
 "qtquick-controls2-action.html#icon-prop) zou interessant moeten zijn: het is "
 "een object met verschillende eigenschappen die u bepaalde pictogrammen voor "
 "uw acties laat tonen. Gelukkig alles wat we nodig hebben, bij gebruik van "
@@ -5900,7 +6087,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:71
 msgid "Viewing the available icons"
-msgstr ""
+msgstr "De beschikbare pictogrammen weergeven"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:73
 msgid ""
@@ -5915,7 +6102,7 @@ msgid ""
 "which icons to use in your application.<br><br>\n"
 msgstr ""
 "<details>\n"
-"<summary>Click here to see how to check the available ic on your system</"
+"<summary>Click here to see how to check the available icons on your system</"
 "summary>\n"
 "<br>\n"
 "Cuttlefish is een KDE toepassing die u alle pictogrammen laat zien die u "
@@ -5982,10 +6169,17 @@ msgid ""
 "it. Global drawers are useful for global navigation and actions. We are "
 "going to create a simple global drawer that includes a \"quit\" button."
 msgstr ""
+"Het volgende component is een [Kirigami.GlobalDrawer](docs:kirigami2;"
+"GlobalDrawer). Het verschijnt als een [hamburger menu](https://en.wikipedia."
+"org/wiki/Hamburger_button). Standaard opent het een zijbalk, wat met name "
+"zinvol is bij een mobieltje, omdat de gebruiker gewoon langs de zijkant van "
+"het scherm een veegbeweging kan maken om het te openen. Globale schuiflades "
+"zijn erg handig voor de algemene navigatie en de bijbehorende acties. We "
+"gaan een eenvoudige schuiflade creëren met daarop een knop \"afsluiten\"."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:111
 msgid "Other window properties..."
-msgstr ""
+msgstr "Andere venstereigenschappen..."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:128
 msgid ""
@@ -6031,7 +6225,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:151
 msgid "Actions are contextual"
-msgstr "Acties staan in een context"
+msgstr "De context van acties"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:153
 msgid ""
@@ -6042,18 +6236,29 @@ msgid ""
 "show up on the right side of the header in desktop mode, and on the bottom "
 "in mobile mode."
 msgstr ""
+"Kirigami componenten zijn zodanig ontworpen dat de plaats waar de Kirigami "
+"acties geplaatst worden relevant is. Zoals hierboven te zien is, dat als "
+"acties aan een [Kirigami.Page](docs:kirigami2;Page), [Kirigami."
+"ScrollablePage](docs:kirigami2;ScrollablePage) of elke andere afgeleide "
+"pagina-component wordt toegevoegd, dan verschijnen ze aan de rechterzijde "
+"van de titel in de desktop mode, en aan de onderkant in de mobile mode."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:155
 msgid ""
 "Similarly, if Kirigami Actions are added to a [Kirigami.GlobalDrawer](docs:"
 "kirigami2;GlobalDrawer), they will show up in the resulting drawer or menu."
 msgstr ""
+"Daarentegen als if Kirigami acties worden toegevoegd aan een [Kirigami."
+"GlobalDrawer](docs:kirigami2;GlobalDrawer), dan verschijnen ze in de "
+"resulterende lade of menu."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:157
 msgid ""
 "Other examples of Kirigami Actions showing up differently depending on their "
 "parent component are:"
 msgstr ""
+"Andere voorbeelden van Kirigami acties die op andere plekken verschijnen "
+"afhankelijk van hun oudercomponent zijn:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:159
 msgid ""
@@ -6061,18 +6266,25 @@ msgid ""
 "tutorial here](/docs/getting-started/kirigami/components-drawers#context-"
 "drawers)"
 msgstr ""
+"[Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer) - [ContextDrawer "
+"tutorial here](/docs/getting-started/kirigami/components-drawers#context-"
+"drawers)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:160
 msgid ""
 "[Kirigami.AbstractCard](docs:kirigami2;AbstractCard) and derivatives - [Card "
 "tutorial here](/docs/getting-started/kirigami/components-card)"
 msgstr ""
+"[Kirigami.AbstractCard](docs:kirigami2;AbstractCard) and derivatives - "
+"[Instructie over Card hier](/docs/getting-started/kirigami/components-card)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:161
 msgid ""
 "[Kirigami.Dialog](docs:kirigami2;Dialog) and derivatives - [Dialog tutorial "
 "here](/docs/getting-started/kirigami/components-dialogs)"
 msgstr ""
+"[Kirigami.Dialog](docs:kirigami2;Dialog) en afgeleiden - [Instructie over "
+"het dialoogvenster hier](/docs/getting-started/kirigami/components-dialogs)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:162
 msgid ""
@@ -6146,7 +6358,7 @@ msgstr "![Dialoog die verschijnt in het midden van de toepassing](dialog.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:21
 msgid "Opening the dialog"
-msgstr ""
+msgstr "Het dialoogvenster openen"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:37
 msgid ""
@@ -6154,6 +6366,9 @@ msgid ""
 "(docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
 "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgstr ""
+"Als eerste bewerken we de actie uit de vorige inleiding: gewoon een "
+"[Kirigami.Action](docs:kirigami2;Action) die de functie van de dialoog "
+"[open()](docs:qtquickcontrols;QtQuick.Controls.Popup::open) start."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:39
 msgid "Countdown-adding dialogs"
@@ -6175,37 +6390,43 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:53
 msgid "Form layouts help align and structure a layout with several inputs"
 msgstr ""
+"Formulierindelingen helpen met het uitlijnen en structuren van een layout "
+"met meerdere invoervelden"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:55
 msgid "Textfields let you input text in a thin textbox"
-msgstr ""
+msgstr "Tekstvelden laten u tekst invoeren in een tekstvak"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:58
 msgid "Provides a label attached to the textfield"
-msgstr ""
+msgstr "Plaatst een label bij het tekstveld"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:60
 msgid ""
 "What to do after input is accepted (i.e. pressed Enter) In this case, it "
 "moves the focus to the next field"
 msgstr ""
+"Wat te doen nadat de invoer is geaccepteerd (d.w.z. Enter is ingedrukt). In "
+"dit geval wordt de focus verplaatst naar het volgende veld"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:68
 msgid "Again, it moves the focus to the next field"
-msgstr ""
+msgstr "Opnieuw wordt de focus verplaatst naar het volgende veld"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:74
 msgid ""
 "D means a required number between 1-9, 9 means a required number between 0-9"
 msgstr ""
+"D betekent een vereist cijfer tussen 1-9, 9 betekent een vereist cijfer "
+"tussen 0-9"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:77
 msgid "Here we confirm the operation just like clicking the OK button"
-msgstr ""
+msgstr "Hier accepteren we de wijziging door gewoon op de OK-knop te klikken"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:85
 msgid "The dialog logic goes here"
-msgstr ""
+msgstr "De dialoog-code komt hier"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:91
 msgid ""
@@ -6214,6 +6435,10 @@ msgid ""
 "qtquick-controls-dialog.html#footer-prop), both inherited from [Controls."
 "Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog)."
 msgstr ""
+"Standaard hebben dialogen een [Kop (header)](https://doc.qt.io/qt-6/qml-"
+"qtquick-controls-dialog.html#header-prop) en een [Voet (footer)](https://doc."
+"qt.io/qt-6/qml-qtquick-controls-dialog.html#footer-prop), beide geërfd van "
+"[Controls.Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:93
 msgid ""
@@ -6224,6 +6449,12 @@ msgid ""
 "[standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog."
 "html#standardButtons-prop)."
 msgstr ""
+"Standaard heeft de kop een [titel](https://doc.qt.io/qt-6/qml-qtquick-"
+"controls-dialog.html#title-prop) en een sluitknop die uitgeschakeld kan "
+"worden met [showCloseButton](docs:kirigami2;Dialog::showCloseButton). "
+"Standaard heeft de voet een sluitknop, dit is aanpasbaar met "
+"[standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog."
+"html#standardButtons-prop)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:95
 msgid ""
@@ -6233,6 +6464,13 @@ msgid ""
 "dialog, which can increase if needed. We can use standard [Kirigami.Units]"
 "(docs:kirigami2;Kirigami::Platform::Units) that we will revisit later on."
 msgstr ""
+"We stellen het eerst zodanig in dat het een \"Ok\"-knop en een knop "
+"\"Annuleren\" toont, vervolgens voegen we nog wat opvulruimte toe, en voegen "
+"een redelijke [preferredWidth](docs:kirigami2;Dialog::preferredWidth) toe. "
+"De voorkeur breedte is de verwachte standaard afmeting van het "
+"dialoogvenster, die indien nodig nog groter kan worden. We kunnen de "
+"standaard [Kirigami.Units](docs:kirigami2;Kirigami::Platform::Units) "
+"gebruiken die we later opnieuw zullen bezoeken."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:97
 msgid ""
@@ -6241,6 +6479,11 @@ msgid ""
 "html), the layout of its child components is automatic and centered, with "
 "optional labels. As the name implies, it is used to create input forms."
 msgstr ""
+"En dan komen we bij een [Kirigami.FormLayout](docs:kirigami2;FormLayout). In "
+"tegenstelling tot een [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-"
+"layouts-columnlayout.html), is de indeling van zijn kinderen automatisch en "
+"gecentreerd, met optioneel labels. Zoals de naam al aangeeft, wordt het "
+"gebruikt om invul-formulieren te creëren."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:99
 msgid ""
@@ -6250,13 +6493,13 @@ msgid ""
 "boxes to write things in."
 msgstr ""
 "Deze formulierindelingen zijn ontworpen om te werken met een variëteit van "
-"verschillende invoertypen, hoewel we blijven bij eenvoudige [Controls."
+"verschillende invoertypen, maar nu blijven we bij eenvoudige [Controls."
 "Textfield](docs:qtquickcontrols;QtQuick.Controls.TextField) invoer die ons "
 "eenvoudige tekstvelden geeft om dingen in te schrijven."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:101
 msgid "We have created Textfield elements that act as:"
-msgstr "We hebben elementen Textfield gemaakt die acteren als:"
+msgstr "We hebben Textfield-elementen gemaakt die acteren als:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:103
 msgid "Input for the name of our countdown"
@@ -6282,6 +6525,11 @@ msgid ""
 "labels for them. The form will present the correct labels to the left of "
 "each of these text input fields."
 msgstr ""
+"In elk van deze [Controls.Textfield](docs:qtquickcontrols;QtQuick.Controls."
+"TextField)-elementen, voegen we een [Kirigami.FormData.label](docs:kirigami2;"
+"FormLayoutAttached::label)-eigenschap toe waarmee we labels voor elk daarvan "
+"kunnen definiëren. Het formulier zal dan voor elk de correcte label links "
+"van de tekstvelden tonen."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:109
 msgid ""
@@ -6292,6 +6540,13 @@ msgid ""
 "switch the active field once the user hits the ENTER key, improving the "
 "usability of the form."
 msgstr ""
+"En tenslotte voegen we de [onAccepted](https://doc.qt.io/qt-6/qml-qtquick-"
+"textinput.html#accepted-signal)-eigenschap toe om het startsignaal te geven "
+"voor [forceActiveFocus()](https://doc.qt.io/qt-6/qml-qtquick-item."
+"html#forceActiveFocus-method)-methode voor het volgende veld; dit zal het "
+"veld dat actief is omschakelen naar het volgende veld nadat de gebruiker de "
+"ENTER-toets heeft ingedrukt, wat de bruikbaarheid van het formulier "
+"verbetert."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:111
 msgid ""
@@ -6314,10 +6569,12 @@ msgid ""
 "Once the user interface for the dialog is done, we need to change how it "
 "behaves. For this we need three things:"
 msgstr ""
+"Nadat de gebruikersinterface voor het dialoogvenster klaar is, moeten we het "
+"het gedrag ervan wijzigen. Daarvoor hebben we drie dingen nodig:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:115
 msgid "Show the Ok button only when the required fields are filled"
-msgstr ""
+msgstr "De OK-knop is alleen zichtbaar als de vereiste velden ingevuld zijn"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:116
 msgid "Add the input information to the model"
@@ -6325,7 +6582,7 @@ msgstr "Voeg de invoerinformatie toe aan het model"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:117
 msgid "Clear the input form"
-msgstr ""
+msgstr "Formulier wissen"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:121
 msgid ""
@@ -6333,16 +6590,22 @@ msgid ""
 "binding to only make the Ok button visible if the required text fields are "
 "filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgstr ""
+"... Nadat het Kirigami.Dialog is geïnitialiseerd, willen we een aangepaste "
+"binding creëren om ervoor te zorgen dat de Ok-knop pas zichtbaar word als de "
+"vereiste tekstvelden zijn ingevuld. Hiervoor gebruiken we Kirigami.Dialog."
+"standardButton(button):"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:129
 msgid "() => is a JavaScript arrow function"
-msgstr ""
+msgstr "() => is een JavaScript pijl-functie"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:133
 msgid ""
 "The binding is created, but we still need to make it unclickable unless the "
 "fields are filled"
 msgstr ""
+"De binding is gecreëerd, maar we moeten het niet klikbaar maken tenzij de "
+"velden ingevuld zijn"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:142
 msgid ""
@@ -6353,12 +6616,20 @@ msgid ""
 "qt-6/qtqml-syntax-propertybinding.html#creating-property-bindings-from-"
 "javascript) in JavaScript. In effect, the line:"
 msgstr ""
+"Wat als eerste gedaan moet worden is de creatie van een binding tussen de "
+"eigenschap [enabled](https://doc.qt.io/qt-6/qml-qtquick-controls-popup."
+"html#enabled-prop) van de OK-knop en een controle of de velden zijn "
+"ingevuld, wat in dit geval gedaan moet worden met [Qt.binding()](https://doc."
+"qt.io/qt-6/qtqml-syntax-propertybinding.html#creating-property-bindings-from-"
+"javascript) in JavaScript. In feite, is de regel:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:148
 msgid ""
 "is similar to the QML bindings we have seen so far, like in the following "
 "pseudo-code:"
 msgstr ""
+"vergelijkbaar met de QML bindings die we tot nog toe hebben gezien, zoals in "
+"de volgende voorbeeld-code:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:154
 msgid ""
@@ -6368,12 +6639,19 @@ msgid ""
 "otherwise, it will add the input to the model and clear the dialog for the "
 "next time it is opened."
 msgstr ""
+"De signal handler dat de Ok-knop vrijgeeft is [onAccepted](https://doc.qt.io/"
+"qt-6/qml-qtquick-controls-dialog.html#accepted-signal). Het blijft leeg en "
+"zonder dat het iets doet als de vereiste velden zijn gevuld; als dat niet "
+"het geval is dan voert het de invoer naar het model en maakt het "
+"dialoogvenster leeg voor de volgende keer dat het wordt geopend."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:158
 msgid ""
 "... We check that the nameField is not empty and that the dateField (which "
 "has an inputMask) is completely filled"
 msgstr ""
+"... We controleren dat de nameField niet leeg is en dat de dateField (wat "
+"een inputMask heeft) compleet is ingevuld"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:180
 msgid ""
@@ -6383,6 +6661,11 @@ msgid ""
 "textinput.html#acceptableInput-prop) instead, which only becomes true once "
 "the whole field is filled and contains only acceptable characters."
 msgstr ""
+"Voor ons vereiste nameField, is alles wat we moeten doen is controleren of "
+"de veldtekst een lege tekst is. Voor het dateField, omdat het een inputMask "
+"heeft, moeten we in plaats daarvan [acceptableInput](https://doc.qt.io/qt-6/"
+"qml-qtquick-textinput.html#acceptableInput-prop) gebruiken, wat alleen 1 "
+"wordt als het hele veld is ingevuld is en alleen acceptable karakters bevat."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:182
 msgid ""
@@ -6412,22 +6695,30 @@ msgid ""
 "custom countdowns! We can make one last touch to improve the interface, "
 "namely remove the dummy countdown we had in the previous lessons:"
 msgstr ""
+"Nadat we onze bestanden hebben opgeslagen en ons programma hebben gebouwd, "
+"kunnen we onze eigen aftelling toevoegen! We kunnen een laatste wijziging "
+"aanbrengen om de interface te verbeteren, namelijk de dummy aftelling "
+"verwijderen die we in de vorige lessen hadden:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:190
 msgid ""
 "Secondly now that we have an actual date to play around with, we can "
 "calculate the time until said date:"
 msgstr ""
+"Ten tweede nu we een actuele datum hebben om mee te spelen, kunnen we de "
+"tijd tot de vermelde datum berekenen:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:194
 msgid ""
 "And thirdly increase the window size so that we have more room for our new "
 "cards:"
 msgstr ""
+"En ten derde verhoog de venstergrootte zodat we meer ruimte hebben voor onze "
+"nieuwe kaarten:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:198
 msgid "Much nicer."
-msgstr ""
+msgstr "Veel beter"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:209
 msgid ""
@@ -6500,6 +6791,9 @@ msgid ""
 "build](#kdesrc-build) instead, especially for Linux installations using "
 "Plasma 5."
 msgstr ""
+"Als u Kirigami met Qt6 wilt bouwen is het aanbevolen om in plaats daarvan "
+"[kdesrc-build](#kdesrc-build) te gebruiken, speciaal voor Linux installaties "
+"die Plasma 5 gebruiken."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
 msgid "Building Kirigami with kdesrc-build"
@@ -6599,10 +6893,10 @@ msgid ""
 "code files in a `src/` folder. We also put the `Main.qml` file in it since "
 "it will be run together with the executable."
 msgstr ""
-"In deze map gaan we een map `src/` en `CMakeLists.txt` aanmaken. Hetrdt in "
-"het algemeen als een goede praktijk beschouwd om al onze bestanden met hoofd "
-"C++-code in een map `src/` te plaatsen. We zetten ook het bestand `Main.qml` "
-"erin omdat het tegelijk met het uitvoerbare bestand zal draaien."
+"In deze map gaan we een map `src/` en `CMakeLists.txt` aanmaken. Het wordt "
+"in het algemeen als een goede praktijk beschouwd om al onze bestanden met "
+"hoofd C++-code in een map `src/` te plaatsen. We zetten ook het bestand "
+"`Main.qml` erin omdat het tegelijk met het uitvoerbare bestand zal draaien."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:91
 msgid ""
@@ -6613,6 +6907,12 @@ msgid ""
 "path to your `main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main."
 "cpp`."
 msgstr ""
+"In het geval dat u automatisch het project met kde-builder/kdesrc-build wilt "
+"bouwen, dan moet de naam van de eigen module hetzelfde zijn als de basismap "
+"van het project (in ons geval zal dit zijn \"kirigami-tutorial\"), anders "
+"moet u de `source-dir` of `dest-dir` voor de module aanpassen. We nemen aan "
+"dat het pad naar uw hoofd `main.cpp` zal zijn `$HOME/kde/src/kirigami-"
+"tutorial/src/main.cpp`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:95
 msgid "Main.qml"
@@ -6726,7 +7026,7 @@ msgid ""
 "`i18nc()`, where we detail the context of the string as well as the string "
 "itself."
 msgstr ""
-"We stellen ook de eigenschap van het venster `title` in op \"Hello World\". "
+"We stellen ook de eigenschap `title` van het venster in op \"Hello World\". "
 "U zult hebben opgemerkt dat we onze tekenreeks \"Hello World\" hebben "
 "ingepakt in een functie genaamd `i18nc`, waar we de context van de "
 "tekenreeks, evenals de tekenreeks zelf, detailleren."
@@ -6806,7 +7106,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:134
 msgid "org.kde.tutorial.desktop"
-msgstr ""
+msgstr "org.kde.tutorial.desktop"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:136
 msgid ""
@@ -6816,6 +7116,11 @@ msgid ""
 "icons on Wayland, as they are required to tell the compositor \"this window "
 "goes with this icon\"."
 msgstr ""
+"Het hoofddoel van [Desktop Entry bestanden](https://specifications."
+"freedesktop.org/desktop-entry-spec/latest/) is te zorgen dat uw programma in "
+"de toepassingenstarter van Linux verschijnt. Een andere reden om ze te "
+"hebben is om bij Wayland venster-pictogrammen te hebben, omdat ze nodig zijn "
+"om de compositor te vertellen \"dit venster hoort bij dit icon\"."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:138
 msgid ""
@@ -6823,6 +7128,9 @@ msgid ""
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
 "`org.kde.tutorial.desktop`:"
 msgstr ""
+"Het moet een [reverse-DNS naam-schema](https://en.wikipedia.org/wiki/"
+"Reverse_domain_name_notation) volgen gevolgd door de `.desktop` extensie "
+"zoals `org.kde.tutorial.desktop`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:144
 msgid ""
@@ -6834,6 +7142,14 @@ msgid ""
 "compile). Some KDE applications might have working icons if they were "
 "already installed on the system."
 msgstr ""
+"Venster- en werkbalkpictogrammen zullen in een Wayland sessie alleen werken "
+"als bureaublad bestanden van toepassingen geplaatst zijn in `~/.local/share/"
+"applications` of `/usr/share/applications`. Om pictogrammen in deze "
+"handleiding werkend te krijgen, ofwel kopieer het desktop-bestand van de "
+"toepassing daar of schakel om naar een ontwikkelsessie zoals geïnstrueerd in "
+"[inleiding van kdesrc-build](/docs/getting-started/building/kdesrc-build-"
+"compile). Sommige KDE toepassingen zouden werkende pictogrammen kunnen "
+"hebben als ze al zijn geïnstalleerd in het systeem."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:148
 msgid "CMakeLists.txt"
@@ -6894,35 +7210,41 @@ msgstr ""
 msgid ""
 "The line with `install()` tells CMake where to install the desktop file."
 msgstr ""
+"De regel met `install()` geeft aan CMake door waar het desktop-bestand "
+"geïnstalleerd moet worden."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:162
 msgid ""
 "Let's delve into the `kirigami-tutorial/src/CMakeLists.txt` file in there."
 msgstr ""
+"Laten we dieper in het bestand `kirigami-tutorial/src/CMakeLists.txt` duiken."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:166
 msgid "This file consists of five steps:"
-msgstr ""
+msgstr "Dit bestand bestaat uit vijf stappen:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:168
 msgid "create an executable"
-msgstr ""
+msgstr "Creëer een uitvoerbaar bestand"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:169
 msgid "change the executable into a QML module that accepts QML files"
 msgstr ""
+"Wijzig het uitvoerbare bestand in een QML module dat QML-bestanden accepteert"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:170
 msgid "add C++ and QML files to the executable"
-msgstr ""
+msgstr "voeg C++ en QML-bestanden toe aan het uitvoerbare bestand "
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:171
 msgid "link the libraries necessary for the executable to run"
 msgstr ""
+"koppel de bibliotheken die noodzakelijk zijn voor het uitvoerbare bestand om "
+"te kunnen werken"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:172
 msgid "install the executable to the right place"
-msgstr ""
+msgstr "Installeer het uitvoerbare bestand op de juiste plaats"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:174
 msgid ""
@@ -6931,6 +7253,11 @@ msgid ""
 "(https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html) keyword which "
 "we will see later in the tutorial can be added using `target_sources()`."
 msgstr ""
+"De volgende keer dat u meer QML-bestanden moet toevoegen, voeg ze toe aan de "
+"al aanwezige aanroep`ecm_target_qml_sources()`. C++ bestanden die het de "
+"aanroep [QML_ELEMENT](https://doc.qt.io/qt-6/qtqml-cppintegration-"
+"definetypes.html) gebruiken die we later in de instructie zullen behandelen "
+"kunnen door `target_sources()` te gebruiken worden toegevoegd."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:176
 msgid ""
@@ -6989,10 +7316,9 @@ msgid ""
 "style to Breeze in order to show up on Windows. To learn more about it, see "
 "[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp/)."
 msgstr ""
-"De toepassing moet zijn pictogramthema, QStyle en QtQuick Controls -stijl "
-"naar Breeze instellen om op Windows te verschijnen. Om er meer over te weten "
-"te komen, zie [Begrijpen van main.cpp](/docs/getting-started/kirigami/"
-"advanced-maincpp/)."
+"Als wat vooruit wilt lopen dan kunt u meer te lezen over hoe deze `main.cpp` "
+"werkt in [Begrip van main.cpp](/docs/getting-started/kirigami/advanced-"
+"maincpp)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:199
 msgid ""
@@ -7000,7 +7326,7 @@ msgid ""
 "in [Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp)."
 msgstr ""
 "Als wat vooruit wilt lopen dan kunt u meer te lezen over hoe deze `main.cpp` "
-"werkt in [Begrijpen van main.cpp](/docs/getting-started/kirigami/advanced-"
+"werkt in [Begrip van main.cpp](/docs/getting-started/kirigami/advanced-"
 "maincpp)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:201
@@ -7010,10 +7336,14 @@ msgid ""
 "metadata, be sure to check our [KXmlGui tutorial](/docs/getting-started/"
 "kxmlgui)."
 msgstr ""
+"Als u een paar manieren wilt bestuderen over hoe C++ code verbetert kan "
+"worden, zoals het gebruik van [KAboutData](docs:kcoreaddons;KAboutData) voor "
+"vertaalbare metadata van het programma, ga dan naar onze [KXmlGui-instructie]"
+"(/docs/getting-started/kxmlgui)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:203
 msgid "For now, the part that interests us is this line:"
-msgstr ""
+msgstr "Op dit moment interesseert ons deze regel: "
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:209
 msgid ""
@@ -7022,10 +7352,14 @@ msgid ""
 "(`Main`, coming from the name of our `Main.qml` file, which needs to start "
 "with an uppercase letter)."
 msgstr ""
+"Het eerste argument is de ingestelde URI in `kirigami-tutorial/src/"
+"CMakeLists.txt`, en het tweede argument is de naam van de QML module die we "
+"willen gaan gebruiken (`Main`, komend van de naam van ons `Main.qml`-"
+"bestand, wat moet beginnen met een hoofdletter)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:211
 msgid "The old method"
-msgstr ""
+msgstr "De oude methode"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:213
 msgid ""
@@ -7034,12 +7368,18 @@ msgid ""
 "code!</summary>\n"
 "<br>\n"
 msgstr ""
+"<details>\n"
+"<summary>U kan deze alternatieve methode om QML-bestanden te laden tegen "
+"komen in echte code!</summary>\n"
+"<br>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:217
 msgid ""
 "The old method of loading QML files had some disadvantages and after Qt6 it "
 "became excessively verbose:"
 msgstr ""
+"De oude methode voor het laden van QML-bestanden had enkele nadelen en na "
+"Qt6 werd het wel erg spraakzaam:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:223
 msgid ""
@@ -7047,20 +7387,27 @@ msgid ""
 "the pattern `<resource_prefix><import_URI><optional_QML_dir><file>`. In this "
 "case:"
 msgstr ""
+"Dit [Qt resource URI](https://doc.qt.io/qt-6/resources.html) hierboven volgt "
+"het patroon `<resource_prefix><import_URI><optional_QML_dir><file>`. In dit "
+"geval:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:225
 msgid "resource prefix = default / in Qt5, /qt/qml in Qt6"
-msgstr ""
+msgstr "resource prefix = default / in Qt5, /qt/qml in Qt6"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:226
 msgid "import URI = /org/kde/tutorial, which matches the URI org.kde.tutorial"
 msgstr ""
+"importeer URI = /org/kde/tutorial, wat overeenkomt met de URI org.kde."
+"tutorial"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:227
 msgid ""
 "optional QML dir = /qml, necessary if the QML files are stored in a "
 "directory called qml/"
 msgstr ""
+"optioneel QML dir = /qml, noodzakelijk als de QML-bestanden worden "
+"opgeslagen in een map met de naam qml/"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:228
 msgid "file = the QML file"
@@ -7081,7 +7428,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:238
 msgid "Linux or FreeBSD"
-msgstr ""
+msgstr "Linux of FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:240
 msgid ""
@@ -7089,10 +7436,13 @@ msgid ""
 "project, you need to specify a custom module in your `$HOME/.config/kdesrc-"
 "buildrc`:"
 msgstr ""
+"Als u wilt dat kdesrc-build het bouwen en installeren van uw project "
+"afhandelt, dan moet u een aangepaste module in uw `$HOME/.config/kdesrc-"
+"buildrc` opgeven:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:249
 msgid "Then you can build and install it with the command:"
-msgstr ""
+msgstr "Daarna kan u bouwen en installeren met het commando:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:255
 msgid ""
@@ -7125,6 +7475,8 @@ msgid ""
 "If you are compiling your project on Windows after having set up [Craft]"
 "(#craft), CMake should automatically detect the right compiler:"
 msgstr ""
+"Als u uw project op Windows compileert nadat [Craft](#craft) in opgezet, zou "
+"CMake automatisch de juiste compiler detecteren:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:276
 msgid ""
@@ -7132,23 +7484,26 @@ msgid ""
 "CMake Generator for the first step, depending on whether you are using "
 "Visual Studio (msvc) or MinGW (make) to compile your projects."
 msgstr ""
-"Afhankelijk van hoe u de compiler hebt geïnstalleerd, moet u misschien een "
-"CMake-generator specificeren voor de eerste stap, afhankelijk van of u "
-"Visual Studio (msvc) of MinGW (make) gebruikt om uw projecten te compileren."
+"Als u uw project met [Craft](#craft) compileert onder Windows, hebt u "
+"misschien een CMake-generator nodig voor de eerste stap, afhankelijk van of "
+"u Visual Studio (msvc) of MinGW (make) gebruikt om uw projecten te "
+"compileren."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
 msgid ""
 "If Visual Studio, depending on the compiler you chose to install, it might "
 "be:"
 msgstr ""
+"Bij Visual Studio, afhankelijk van de gekozen compiler die is geïnstalleerd, "
+"kan het zijn:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:284
 msgid "Or:"
-msgstr ""
+msgstr "Of:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:290
 msgid "If MinGW:"
-msgstr "Indien MinGW:"
+msgstr "En bij MinGW:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:298
 msgid "In both cases, the program will be installed to `C:\\CraftRoot\\bin`."
@@ -7161,10 +7516,12 @@ msgid ""
 "If you ever get in doubt as to the name of the compiler that should be used "
 "in the `cmake` call, run:"
 msgstr ""
+"Als u twijfels heeft over de naam van de compiler die in `cmake` aangeroepen "
+"moet worden, voer dan het volgende uit:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:306
 msgid "It will list all available generators."
-msgstr ""
+msgstr "Dit zal een lijst met alle beschikbare generators tonen."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:310
 msgid "You can then run the `kirigami-hello` program with:"
@@ -7176,7 +7533,7 @@ msgstr "Op Linux, handmatig"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:314
 msgid "On Linux, with kde-builder"
-msgstr ""
+msgstr "OP Linux, met kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:315
 msgid "On Linux, with kdesrc-build"
@@ -7204,12 +7561,17 @@ msgid ""
 "To run the new QML application in mobile mode, you can use "
 "`QT_QUICK_CONTROLS_MOBILE=1`:"
 msgstr ""
+"Om het nieuwe QML-programma in de modus mobiel op te starten, kan u "
+"`QT_QUICK_CONTROLS_MOBILE=1` gebruiken:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:329
 msgid ""
 "If you have compiled the project manually with CMake and for some reason "
 "you'd like to uninstall the project, you can run:"
 msgstr ""
+"Als u voor een reden het project handmatig met CMake heeft gecompileerd en "
+"voor de een of andere reden het project wilt dëinstalleren, dan kan u het "
+"volgende uitvoeren:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:337
 msgid ""
@@ -7270,7 +7632,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:13
 msgid "By the end of this section you'll have a neat-looking app."
-msgstr ""
+msgstr "Aan het eind van deze sectie zal u een goed uitziend programma hebben."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:15
 msgid "ListViews"
@@ -7439,7 +7801,7 @@ msgstr ""
 "Terwijl ons `kountdownModel` de gegevens bevat die getoond zullen worden, "
 "zal onze `kountdownDelegate` behandelen hoe de gegevens getoond zullen "
 "worden in de [ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html). "
-"Daarvoor gebruiken we  een [Kirigami.CardsListView](docs:kirigami2;"
+"Daarvoor gebruiken we een [Kirigami.CardsListView](docs:kirigami2;"
 "CardsListView) ontworpen om card-type gedelegeerden te tonen en die "
 "gedelegeerden zullen zichtbaar gerepresenteerd worden door middel van een "
 "[Kirigami.AbstractCard](docs:kirigami2;AbstractCard)."
@@ -7524,8 +7886,8 @@ msgid ""
 "components. These values default to 0x0, so it is very important that you "
 "define those in raw Item components as done above."
 msgstr ""
-"Impliciete breedtes en hoogtes zijn eigenschappen die beschikbaar ziin elke "
-"[Item](docs:qtquick;QtQuick.Item) die functioneren als hints en ingesteld "
+"Impliciete breedtes en hoogtes zijn eigenschappen die beschikbaar zijn bij "
+"elk[Item](docs:qtquick;QtQuick.Item) die functioneren als hints en ingesteld "
 "als een set standaarden of als terugvalwaarden, als er geen expliciete "
 "breedte of hoogte in ingesteld voor deze waarden. Deze waarden zijn "
 "standaard 0x0, dus is het belangrijk dat u ze definieert in ruwe Item-"
@@ -7539,6 +7901,11 @@ msgid ""
 "it does not spill out of the card. This way, the card takes as much space is "
 "necessary for its contents."
 msgstr ""
+"Hier hebben we de `implicitWidth` en `implicitHeight` van ons [Kirigami."
+"AbstractCard](docs:kirigami2;AbstractCard) hetzelfde ingesteld als dat van "
+"de [GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html) "
+"eronder zodat het niet uit de kaart loopt. Op deze manier neemt de kaart "
+"zoveel ruimte als nodig is voor zijn inhoud."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:163
 msgid "Layouts"
@@ -7720,7 +8087,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:250
 msgid "How the custom Card looks like"
-msgstr "Hoe de aangepaste kaart er uitzien"
+msgstr "Hoe de aangepaste kaart er uitziet"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:252
 msgid ""
@@ -8287,8 +8654,8 @@ msgid ""
 "applications or applications that follow a traditional design tend to be "
 "built with QtWidgets."
 msgstr ""
-"Als u wilt werken aan KDE toepassingen zoals Dolphin, Kontact of Katdan moet "
-"u weten hoe QtWidgets te gebruiken, die een compleet andere manier van "
+"Als u wilt werken aan KDE toepassingen zoals Dolphin, Kontact of Kate dan "
+"moet u weten hoe QtWidgets te gebruiken, die een compleet andere manier van "
 "ontwikkelen van gebruikersinterfaces met Qt gebruiken. Complexere KDE "
 "toepassingen of toepassingen die een traditioneel ontwerp volgen tenderen "
 "naar het bouwen met QtWidgets."
@@ -8412,12 +8779,18 @@ msgid ""
 "These tutorials will focus on creating an application that lets the user see "
 "how many days are left until an event of their choice."
 msgstr ""
+"In deze instructie zullen we ons voornamelijk richten op de creatie van een "
+"programma waarin de gebruiker kan zien hoeveel dagen het nog duurt tot een "
+"gebeurtenis naar keuze."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:15
 msgid ""
 "We also recommend you check out the [Kirigami Gallery](https://apps.kde.org/"
 "en/kirigami2.gallery), which provides a number of useful UI examples."
 msgstr ""
+"We raden ook aan om eens te kijken in de [Kirigami Gallery](https://apps.kde."
+"org/en/kirigami2.gallery), waar een aantal handige UI voorbeelden te vinden "
+"zijn."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:17
 msgid ""
@@ -8438,12 +8811,12 @@ msgid ""
 "want to have a page dedicated to specific aspects of your app's interaction, "
 "and to make things easier you can create different QML files for each page."
 msgstr ""
-"Kirigami toepassingen zijn typisch georganiseerd in pagina's door [Kirigami."
-"Page](docs:kirigami2;Page) te gebruiken. Pagina's zijn de verschillende "
-"\"schermen\" van een toepassing. U zult een pagina willen hebben gericht op "
-"specifieke aspecten van de interactie met uw toepassing en om de zaken "
-"eenvoudiger te maken kunt u verschillende QML bestanden aanmaken, één voor "
-"elke pagina."
+"Kirigami toepassingen zijn standaard georganiseerd in pagina's door "
+"[Kirigami.Page](docs:kirigami2;Page) te gebruiken. Pagina's zijn de "
+"verschillende \"schermen\" van een toepassing. U zult een pagina willen "
+"hebben gericht op specifieke aspecten van de interactie met uw toepassing en "
+"om de zaken eenvoudiger te maken kunt u verschillende QML bestanden "
+"aanmaken, één voor elke pagina."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:23
 msgid ""
@@ -8482,6 +8855,9 @@ msgid ""
 "When looking through QML API documentation, make sure to look into the "
 "functions and properties inherited by the API you are looking at as well."
 msgstr ""
+"Als u de QML API documentatie bestudeert, zorg er dan voor dat u ook veel "
+"aandacht besteed aan de functies en de eigenschappen die via de API worden "
+"geërfd."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:41
 msgid ""
@@ -8576,7 +8952,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:11
 msgid "Why and how"
-msgstr ""
+msgstr "Hoe en waarom"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:13
 msgid ""
@@ -8593,6 +8969,8 @@ msgid ""
 "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
 "qml`, `AddDialog.qml` and `KountdownDelegate.qml`."
 msgstr ""
+"In deze instructie zullen we de code in `Main.qml` uitsplitsen naar `Main."
+"qml`, `AddDialog.qml` en `KountdownDelegate.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:17
 msgid ""
@@ -8602,18 +8980,23 @@ msgid ""
 "will take a brief look at three common approaches seen in real projects, and "
 "implement one of them:"
 msgstr ""
+"Daarnaast, zelfs als we de code over meerdere QML-bestanden verspreiden, "
+"loopt het aantal bestanden in echte projecten al snel uit de hand. Een veel "
+"voorkomende oplossing voor dit probleem is het logisch opdelen van de "
+"bestanden in meerdere mappen. We kijken kort naar drie voorkomende "
+"oplossingen in echte projecten, en implementeren een daarvan:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:19
 msgid "storing QML files together with C++ files"
-msgstr ""
+msgstr "QML-bestanden samen met C++ bestanden opslaan"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:20
 msgid "storing QML files in a different directory under the same module"
-msgstr ""
+msgstr "QML-bestanden in een andere map in dezelfde module opslaan"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:21
 msgid "storing QML files in a different directory under a different module"
-msgstr ""
+msgstr "QML-bestanden in een andere map in een andere module opslaan"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:23
 msgid ""
@@ -8622,16 +9005,22 @@ msgid ""
 "details will be abstracted](https://en.wikipedia.org/wiki/"
 "Abstraction_(computer_science)), making the code more readable."
 msgstr ""
+"Na het uitsplitsen zullen we [separation of concerns](https://en.wikipedia."
+"org/wiki/Separation_of_concerns) tussen elk bestand hebben, en "
+"[implementation details will be abstracted](https://en.wikipedia.org/wiki/"
+"Abstraction_(computer_science)), wat de code leesbaarder maakt."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:25
 msgid "Storing QML files together with C++ files"
-msgstr ""
+msgstr "QML-bestanden samen met C++ bestanden opslaan"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:27
 msgid ""
 "This consists of keeping the project's QML files together with C++ files in "
 "`src/`. This sort of structure would look like this:"
 msgstr ""
+"Dit bestaat uit bewaren van de QML-bestanden samen met de C++ bestanden in "
+"`src/`. Deze manier van structureren zou er als volgt moeten zien:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:41
 msgid ""
@@ -8641,16 +9030,23 @@ msgid ""
 "than a couple of QML files (and C++ files that create types to be used in "
 "QML), the folder can quickly become crowded."
 msgstr ""
+"Dit is wat we tot nu toe deden. In het geval hierboven, hoefde u alleen QML-"
+"bestanden aan de bestaande `kirigami-tutorial/src/CMakeLists.txt` toe te "
+"voegen. Er is helemaal geen logische separatie, en als het project eenmaal "
+"meer dan een paar QML-bestanden (en C++ bestanden die de typen creëert die "
+"worden gebruikt in QML) krijgt, dan kan de map al snel overbevolkt raken."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:43
 msgid "Storing QML files in a different directory under the same module"
-msgstr ""
+msgstr "QML-bestanden in een andere map in dezelfde module opslaan"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:45
 msgid ""
 "This consists of keeping all QML files in a separate folder, usually `src/"
 "qml/`. This sort of structure would look like this:"
 msgstr ""
+"Dit bestaat uit bewaren van de QML-bestanden in een aparte map, meestal `src/"
+"qml/`. Deze manier van structureren zou er als volgt moeten zien:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:60
 msgid ""
@@ -8661,6 +9057,12 @@ msgid ""
 "CMakeLists.txt`. All created QML files would then belong to the same QML "
 "module as `Main.qml`."
 msgstr ""
+"Deze structuur wordt veel gebruikt bij KDE projecten, voornamelijk om te "
+"voorkomen dat voor de src/qml/`-map een extra CMakeLists.txt-bestand met "
+"daarbij de creatie van een separate module nodig is. Deze methode houd de "
+"bestanden zelf in een separate map, maar ze moeten ook aan  `kirigami-"
+"tutorial/src/CMakeLists.txt` toegevoegd worden. Alle gecreëerde QML-"
+"bestanden horen bij dezelfde QML module als `Main.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:62
 msgid ""
@@ -8669,6 +9071,10 @@ msgid ""
 "file. It will become difficult to differentiate between traditional C++ "
 "files and C++ files that have types exposed to QML."
 msgstr ""
+"In de praktijk, als het project meer dan een dozijn QML-bestanden heeft, zal "
+"het de `src/`-map niet overbevolken, zal het wel de `src/CMakeLists.txt`-map "
+"overbevolken. Het zal moeilijk om nog de traditionele C++ bestanden te "
+"onderscheiden van de C++ bestanden die de typen blootstellen aan QML."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:64
 msgid ""
@@ -8676,10 +9082,13 @@ msgid ""
 "details), where you would keep the description of your dependencies in the "
 "same place as the dependencies themselves."
 msgstr ""
+"Het zal ook het concept van lokaliteit (localisation of dependency details) "
+"breken, waar u de omschrijving van uw afhankelijkheden (dependencies) op "
+"dezelfde plaats als de afhankelijkheden zelf bewaart."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:66
 msgid "Storing QML files in a different directory under a different module"
-msgstr ""
+msgstr "QML-bestanden in een andere map in een andere module opslaan"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:68
 msgid ""
@@ -8687,6 +9096,9 @@ msgid ""
 "CMakeLists.txt and own separate QML module. This sort of structure would "
 "look like this:"
 msgstr ""
+"Dit bestaat uit bewaren van de QML-bestanden in een aparte map met zijn "
+"eigen CMakeLists.txt en zijn eigen QML-module. Deze manier van structureren "
+"zou er als volgt moeten zien:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:84
 msgid ""
@@ -8698,6 +9110,14 @@ msgid ""
 "itself stays in `src/` so it's automatically used when running the "
 "executable, as before."
 msgstr ""
+"Deze structuur wordt niet zoveel veel gebruikt bij KDE projecten en het "
+"vereist de creatie van een extra CMakeLists.txt, maar het is het meest "
+"flexibel. In ons geval noemen we onze map \"components\" omdat we twee "
+"nieuwe QML-componenten uit onze vorig `Main.qml`-bestand creëren, en we "
+"bewaren de informatie daarover in `kirigami-tutorial/src/components/"
+"CMakeLists.txt`. Het bestand `Main.qml` zelf blijft in `src/` zodat het "
+"automatisch net als voorheen word gebruikt als de uitvoerbare bestand "
+"opstarten."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:86
 msgid ""
@@ -8706,10 +9126,14 @@ msgid ""
 "\", and C++ files that have types exposed to QML (like models) could be kept "
 "together with other QML files where it makes sense."
 msgstr ""
+"Later is het mogelijk om meer mappen te creëren met meerdere QML-bestanden, "
+"allen gegroepeerd bij functie, zoals \"models\" en \"settings\", en C++ "
+"bestanden die types blootstellen aan QML (zoals modellen) kunnen waar het "
+"zinvol is samen met andere QML-bestanden worden gehouden."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:88
 msgid "We will be using this structure in this tutorial."
-msgstr ""
+msgstr "We zullen in deze instructie deze structuur gebruiken."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:90
 msgid "Preparing CMake for the new files"
@@ -8720,6 +9144,8 @@ msgid ""
 "First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` "
 "with the following contents:"
 msgstr ""
+"Creëer eerst het bestand `kirigami-tutorial/src/components/CMakeLists.txt` "
+"met de volgende inhoud:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:98
 msgid ""
@@ -8730,6 +9156,13 @@ msgid ""
 "[ecm_finalize_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule."
 "html). We then install it exactly like in previous lessons."
 msgstr ""
+"Omdat het doel afwijkt van het uitvoerbarebestand, zal het functioneren als "
+"een andere QML module, zodat in dat geval we twee dingen moeten doen: er "
+"voor zorgen dat het code *genereert* met [GENERATE_PLUGIN_SOURCE] (https://"
+"api.kde.org/ecm/module/ECMQmlModule.html) zodat het werkt als een Qt plugin, "
+"en het *afmaken* met [ecm_finalize_qml_module()](https://api.kde.org/ecm/"
+"module/ECMQmlModule.html). Daarna installeren we het op precies dezelfde "
+"manier als in de vorige lessen."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:100
 msgid ""
@@ -8739,6 +9172,11 @@ msgid ""
 "latest/command/target_link_libraries.html) call in `kirigami-tutorial/src/"
 "CMakeLists.txt`:"
 msgstr ""
+"We moeten [add_library()](https://cmake.org/cmake/help/latest/command/"
+"add_library.html) gebruiken zodat we `kirigami-hello-components` kunnen "
+"koppelen met het uitvoerbare bestand in de [target_link_libraries()](https://"
+"cmake.org/cmake/help/latest/command/target_link_libraries.html) aanroep call "
+"in `kirigami-tutorial/src/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:104
 msgid ""
@@ -8746,6 +9184,9 @@ msgid ""
 "command/add_subdirectory.html) so CMake will find the `kirigami-tutorial/src/"
 "components/` directory."
 msgstr ""
+"We moeten ook [add_subdirectory()](https://cmake.org/cmake/help/latest/"
+"command/add_subdirectory.html) gebruiken zodat CMake de `kirigami-tutorial/"
+"src/components/` map kan vinden."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:106
 msgid ""
@@ -8756,22 +9197,28 @@ msgid ""
 "tutorial/src/Main.qml` is necessary, the same one defined earlier, `org.kde."
 "tutorial.components`:"
 msgstr ""
+"In de eerdere lessen, hoefden we de `org.kde.tutorial` import naar onze "
+"`Main.qml` toe te voegen omdat dit niet nodig was: omdat dat het startpunt "
+"voor het programma is, zal het uitvoerbare bestand dit bestand toch "
+"onmiddellijk uitvoeren. Omdat onze componenten in een separate QML module "
+"geplaatst zijn, is de nieuwe import in `kirigami-tutorial/src/Main.qml` "
+"noodzakelijk, dezelfde eerder gedefinieerd, `org.kde.tutorial.components`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:115
 msgid "The rest of the code..."
-msgstr ""
+msgstr "De rest van de code..."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:118
 msgid "And we are ready to go."
-msgstr ""
+msgstr "En we zijn klaar."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:120
 msgid "Splitting Main.qml"
-msgstr ""
+msgstr "Main.qml opsplitsen"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:122
 msgid "Let's take a look once again at the original `Main.qml`:"
-msgstr ""
+msgstr "Laten we nog een keer kijken naar de originele `Main.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:126
 msgid ""
@@ -8780,6 +9227,11 @@ msgid ""
 "Component). We use a Component to be able to define it without needing to "
 "instantiate it; separate QML files work the same way."
 msgstr ""
+"De eigengemaakte gedelegeerde met `id: kountdownDelegate` kan compleet "
+"gesplitst worden omdat het al ingepakt is in een [QML Component type](docs:"
+"qtqml;QtQml.Component). We gebruiken een Component zodat we het kunnen "
+"definiëren zonder dat het hoeven te creëren; separate QML-bestanden werken "
+"op dezelfde manier."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:128
 msgid ""
@@ -8788,6 +9240,10 @@ msgid ""
 "(docs:kirigami2;AbstractCard) in the separate file. Here is the resulting "
 "`KountdownDelegate.qml`:"
 msgstr ""
+"Als we de code in separate bestanden verplaatsen, dan is er geen reden om ze "
+"ingepakt in een Component te laten: we kunnen gewoon de [Kirigami."
+"AbstractCard](docs:kirigami2;AbstractCard) in het separate bestand "
+"uitsplitsen. Hier is het resulterende `KountdownDelegate.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:132
 msgid ""
@@ -8795,10 +9251,13 @@ msgid ""
 "not a component that is visible by default, so the code can be copied as is "
 "into the `AddDialog.qml`:"
 msgstr ""
+"Onze dialoogvenster met `id: addDialog` is niet ingepakt in een Component, "
+"en het is niet een component dat standaard zichtbaar is, zodat de code zoals "
+"het gekopieerd kan worden naar `AddDialog.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:136
 msgid "With the code split, `Main.qml` thus becomes much shorter:"
-msgstr ""
+msgstr "Nu de code is uitgesplitst, wordt `Main.qml` dus veel korter:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:140
 msgid ""
@@ -8806,14 +9265,18 @@ msgid ""
 "and we need to find some way of using them in `Main.qml`. The way to add the "
 "contents of the new files to `Main.qml` is by *instantiating* them."
 msgstr ""
+"We hebben nu twee extra QML-bestanden, `AddDialog.qml` en "
+"`KountdownDelegate`, en we moeten een manier vinden om ze in `Main.qml` te "
+"gebruiken. De manier om de inhoud van de nieuwe bestanden aan `Main.qml` toe "
+"te voegen is door ze *aan te roepen*."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:142
 msgid "`AddDialog.qml` becomes `AddDialog {}`:"
-msgstr ""
+msgstr "`AddDialog.qml` wordt `AddDialog {}`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:146
 msgid "`KountdownDelegate.qml` becomes `KountdownDelegate {}`:"
-msgstr ""
+msgstr "`KountdownDelegate.qml` wordt `KountdownDelegate {}`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:150
 msgid ""
@@ -8821,6 +9284,9 @@ msgid ""
 "by brackets were instantiations of a QML component. This is why our new QML "
 "files need to start with an uppercase letter."
 msgstr ""
+"De meeste gevallen die u heeft gezien van een component die startte met een "
+"hoofdletter gevolgd door haakjes waren aanroepingen van een QML component. "
+"Dit is waarom onze nieuwe QML-bestanden met een hoofdletter moeten beginnen."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:152
 msgid ""
@@ -8828,6 +9294,9 @@ msgid ""
 "behaves exactly the same as before, but with the code split into separate "
 "parts, making things much more manageable."
 msgstr ""
+"Compileer het project en start het op, en u zou een werkend venster moeten "
+"hebben dat zich precies hetzelfde gedraagt als voorheen, maar met de code "
+"uitgesplitst in separate stukken, zodat het veel beheersbaar is."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"
@@ -9071,6 +9540,9 @@ msgid ""
 "NOTE: regardless of the color set used, it is recommended to replace all "
 "available colors in Theme, to avoid badly contrasting colors"
 msgstr ""
+"Opmerking: onafhankelijk van welke kleurenset wordt gebruikt, wordt "
+"aanbevolen om alle beschikbare kleuren van het thema te vervangen, om "
+"slechte combinaties van kleuren te vermijden"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:135
 msgid "Redefine all the other colors you want"
@@ -9099,10 +9571,10 @@ msgid ""
 "use a [Kirigami Addons FormCard](/docs/getting-started/kirigami/addons-"
 "introduction)."
 msgstr ""
-"Ter demonstratie gebruikt deze gebruikershandleiding een AbstractCard om de "
-"tekstvoorbeelden helderder te maken. Een betere manier om hetzelfde "
-"resultaat te bereiken zou het gebruik van een [Kirigami Addons FormCard](/"
-"docs/getting-started/kirigami/addons-introduction) zijn."
+"Als demonstratie, gebruiken we in deze instructie een AbstractCard om de "
+"tekst duidelijker te maken. Een betere manier om hetzelfde resultaat te "
+"krijgen is om een [Kirigami Addons FormCard](/docs/getting-started/kirigami/"
+"addons-introduction) te gebruiken."
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:16
 msgid "Headings"
@@ -9319,14 +9791,18 @@ msgstr ""
 #~ "hoeveelheid ruimte inneemt in een raster](/docs/getting-started/kirigami/"
 #~ "components-card/cardsgridview.png)"
 
+#~| msgid ""
+#~| "If you wish to build Kirigami with Qt6, this is currently not possible "
+#~| "with only distribution packages on Linux. You will need to resort to "
+#~| "[kdesrc-build](#kdesrc-build) instead."
 #~ msgid ""
 #~ "If you wish to build Kirigami with Qt6, this is currently not possible "
-#~ "with only distribution packages on Linux. You will need to resort to "
-#~ "[kdesrc-build](#kdesrc-build) instead."
+#~ "with only distribution packages on Linux. You will need to resort to [kde-"
+#~ "builder](#kde-builder) instead."
 #~ msgstr ""
 #~ "Als u Kirigami wilt bouwen met Qt6 dan is dat nu niet mogelijk met alleen "
 #~ "distributiepakketten op Linux. U moet in plaats daarvan uw toevlucht "
-#~ "nemen tot [kdesrc-build](#kdesrc-build)."
+#~ "nemen tot [kde-builder] (#kde-builder)."
 
 #~ msgid ""
 #~ "When building the application after installing dependencies with Craft, "
