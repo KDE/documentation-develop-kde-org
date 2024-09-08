@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-03 01:41+0000\n"
-"PO-Revision-Date: 2024-09-05 04:49+0200\n"
+"PO-Revision-Date: 2024-09-07 18:59+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -173,6 +173,9 @@ msgid ""
 "setApplicationData(aboutData);` in `main.cpp` add the following to your "
 "`Main.qml`:"
 msgstr ""
+"Para una sencilla página «acerca de» que usa los datos definidos por "
+"`KAboutData::setApplicationData(aboutData);` en `main.cpp`, añada lo "
+"siguiente a su `Main.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:30
 msgid "The About page of our application should look like this:"
@@ -197,17 +200,13 @@ msgstr ""
 "icono de la aplicación."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:38
-#, fuzzy
-#| msgid "Change your `MyAboutPage.json` to something like this:"
 msgid "Create a `MyAboutPage.qml` like this:"
-msgstr "Cambie `MyAboutPage.json` a algo similar a esto:"
+msgstr "Cree un `MyAboutPage.qml` como este:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:42
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "And then adjust your `Main.qml` to include your new about page:"
 msgstr ""
-"Y cambie `main.qml` para que incluya nuestra nueva página de preferencias:"
+"Y luego ajuste `Main.qml` para que incluya la nueva página «acerca de»:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:46
 msgid ""
@@ -267,11 +266,9 @@ msgid "Needed Changes"
 msgstr "Cambios necesarios"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:25
-#, fuzzy
-#| msgid "And change `main.qml` to include our new Settings page:"
 msgid "Change `Main.qml` to include our new Settings page:"
 msgstr ""
-"Y cambie `main.qml` para que incluya nuestra nueva página de preferencias:"
+"Cambie `Main.qml` para que incluya nuestra nueva página de preferencias:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:85
 msgid ""
@@ -314,10 +311,8 @@ msgstr ""
 "una [Kirigami.Card](docs:kirigami2;Card)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:95
-#, fuzzy
-#| msgid "Create a new `contents/ui/SettingsPage.qml` file:"
 msgid "Create a new `SettingsPage.qml` file:"
-msgstr "Cree un nuevo archivo `contents/ui/SettingsPage.qml`:"
+msgstr "Cree un nuevo archivo `SettingsPage.qml`:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:103
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:107
@@ -1853,6 +1848,14 @@ msgid ""
 "rows, from the first row to the last one as the QMap may alphabetically "
 "reorganize itself, and we need to catch that across all rows."
 msgstr ""
+"Dentro de este método, necesitamos decirle a Qt que queremos crear más filas "
+"en el modelo. Esto se hace llamando a `beginInsertRows()` para empezar "
+"nuestra operación de añadir filas, seguido por la inserción de lo que "
+"necesitemos; termine la operación usando `endInsertRows()`. No obstante, "
+"todavía necesitamos emitir `dataChanged()` al final. Esta vez vamos a "
+"actualizar todas las filas, desde la primera hasta la última, ya que el QMap "
+"puede reorganizarlas alfabéticamente por sí mismo, y necesitamos capturar "
+"esto de todas las filas."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:414
 msgid ""
@@ -1864,6 +1867,13 @@ msgid ""
 "first and last row number, as we'll just be adding one row at the end of the "
 "model."
 msgstr ""
+"Al llamar a `beginInsertRows()` debemos pasar primero una clase QModelIndex "
+"para indicar la posición donde se deben añadir las nuevas filas, seguido de "
+"los números de la primera y última fila. En este tutorial, el primer "
+"argumento será `QModelIndex()`, puesto que no hay necesidad de usar el "
+"parámetro aquí. Podemos usar el tamaño de la fila actual para los números de "
+"la primera y de la última filas, ya que solo vamos a añadir una fila al "
+"final del modelo."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:432
 msgid ""
@@ -1871,6 +1881,9 @@ msgid ""
 "parameters. However, we can convert integers in QModelIndex data types using "
 "the `index()` function."
 msgstr ""
+"La función `dataChanged()` usa QModelIndex como el tipo de dato para sus "
+"parámetros. No obstante, podemos convertir enteros en QModelIndex usando la "
+"función `index()`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:438
 msgid ""
