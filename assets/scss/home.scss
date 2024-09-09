@@ -253,10 +253,81 @@ main h3 {
 }
 
 #platform-illustration {
-  margin-top: 40px;
+  margin-top: 100px;
+  // Use CSS' min function so we can mix units here
+  height: unquote("min(45vw, 600px)");
+  justify-content: center;
+  --screenshot-radius: 4px;
 
-  img {
+  /*
+   * To move the device around adjust the container class
+   * (i.e. platform-bigscreen to move the large monitor around)
+   * Adjust the -screenshot class to move the screenshot around
+   * And do not touch the -svg class!
+   */
+  .platform-devices {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     max-width: 1300px;
+
+    .platform-svg {
+      width: 100%;
+    }
+
+    .platform-bigscreen {
+      position: absolute;
+      // Device positioning
+      width: 60%;
+      top: 0;
+      right: 5%;
+
+      .platform-bigscreen-screenshot {
+        position: absolute;
+        top: 3%;
+        left: 2.5%;
+        width: 95%;
+        height: auto;
+        border-radius: var(--screenshot-radius);
+      }
+
+    }
+
+    .platform-desktop {
+      position: absolute;
+      display: flex;
+      // Device positioning
+      width: 60%;
+      top: 31%;
+      left: 5%;
+
+      .platform-desktop-screenshot {
+        position: absolute;
+        top: 3%;
+        left: 10%;
+        width: 80%;
+        height: auto;
+        border-radius: var(--screenshot-radius);
+      }
+    }
+
+    .platform-mobile {
+      position: absolute;
+      // Device positioning
+      top: 45%;
+      width: 13%;
+      left: 5%;
+
+      .platform-mobile-screenshot {
+        position: absolute;
+        width: 80%;
+        top: 9%;
+        left: 10%;
+        border-radius: var(--screenshot-radius);
+      }
+    }
   }
 }
 
