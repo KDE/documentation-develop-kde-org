@@ -34,7 +34,7 @@ include:
 This template adds one job to CI/CD pipeline of NeoChat:
 * `craft_windows_qt6_x86_64` which builds the app with MSVC and creates a Windows installer.
 
-When we now run a CI/CD pipeline for NeoChat then, after successful completion, the `craft_windows_qt6_x86_64` job will have created an executable Windows installer (and a few other packages) which we can download by browsing the job artifacts. You'll find the installer in the folder `.kde-ci-packages/`.
+When we now run a CI/CD pipeline for NeoChat then, after successful completion, the `craft_windows_qt6_x86_64` job will have created an executable Windows installer (and a few other packages) which we can download by browsing the job artifacts. You'll find the installer in the folder `kde-ci-packages/`.
 
 By default, the installer is not signed. Windows may refuse to run this installer.
 

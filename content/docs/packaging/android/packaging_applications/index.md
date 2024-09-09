@@ -35,7 +35,7 @@ This template adds four jobs to CI/CD pipeline of Kongress:
 * `craft_android_qt66_arm32`, `craft_android_qt66_arm64`, and `craft_android_qt66_x86_64` which build APKs for three different processor architectures, and
 * `fdroid_apks_qt66` which we will look at a bit later.
 
-When we now run a CI/CD pipeline for Kongress then, after successful completion, the three `craft_android_*` jobs will have created APKs which we can download by browsing the job artifacts. You'll find the APKs in the folder `.kde-ci-packages/`.
+When we now run a CI/CD pipeline for Kongress then, after successful completion, the three `craft_android_*` jobs will have created APKs which we can download by browsing the job artifacts. You'll find the APKs in the folder `kde-ci-packages/`.
 
 By default, the APKs are not signed. If you want to install such an APKs on your device then you have to sign it as described in the
 [previous tutorial]({{< ref "building_applications#signing-apks" >}}).
