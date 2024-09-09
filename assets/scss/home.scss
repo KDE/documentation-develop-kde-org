@@ -245,7 +245,9 @@ main h3 {
 }
 
 #develop-hero {
-  background-image: url(https://kde.org/content/develop/devApps.png)
+  // If image-sets isn't supported it will fall back on the first background-image
+  background-image: url('/img/home/devApps.png');
+  background-image: var(--background-image);
 }
 
 #platform-hero {
@@ -334,6 +336,8 @@ main h3 {
 .kirigami-devices {
   align-self: center;
   height: 500px;
+  // Align with bottom
+  margin-bottom: -3rem;
   @media (max-width: 700px) {
     height: 200px;
   }

@@ -26,7 +26,9 @@
      </div>
   </section>
 
-  <section id="develop-hero" class="p-4" style="height: auto;">
+  {{ $backgroundImage := resources.GetMatch "img/home/devApps.png" }}
+  {{ $backgroundImageWebp := $backgroundImage.Process "webp" }}
+  <section id="develop-hero" class="p-4" style="height: auto; --background-image: image-set(url('{{ $backgroundImageWebp.RelPermalink }}') type('image/webp'),url('{{ $backgroundImage.RelPermalink }}') type('image/png'));">
     <div class="container text-center p-5" style="background-color: #333">
       <h1 class="h2 mt-0" style="color: #EEE;">{{ i18n "home.qt.title" }}</h1>
       <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">{{ i18n "home.qt.description" }}</p>
@@ -35,7 +37,14 @@
   </section>
 
   <section class="d-flex pt-0 py-sm-5">
-    <img src="/frameworks/kirigami/kirigami-devices.png" alt="" class="img-fluid kirigami-devices d-none d-sm-block"/>
+    {{ with resources.GetMatch "img/home/kirigami-devices.png"  }}
+      <picture>
+          {{ with .Process "webp" }}
+            <source srcset="{{ .RelPermalink }}" type="image/webp">
+          {{ end }}
+        <img class="img-fluid kirigami-devices d-none d-sm-block" src="{{ .RelPermalink }}" alt="">
+      </picture>
+    {{ end }}
     <div class="align-self-center container">
       <section class="d-sm-none kirigami-header"><h1><p class="header-logo">K</p>{{ i18n "home.kirigami.title" }}</h1></section>
       <h2 class="h1 mt-5 mt-sm-0">{{ i18n "home.kirigami.name" }}</h2>
@@ -54,7 +63,14 @@
         <p>{{ i18n "home.kdevelop.description" }}</p>
         <p><a href="https://kdevelop.org" class="learn-more">{{ i18n "home.kdevelop.get" }}</a></p> 
       </div>
-      <img class="img-fluid mt-3 mt-md-5" src="https://cdn.kde.org/screenshots/kdevelop/kdevelop.png" alt="{{ i18n "home.kdevelop.alt" }}" />
+      {{ with resources.GetMatch "img/home/kdevelop.png"  }}
+        <picture>
+            {{ with .Process "webp" }}
+              <source srcset="{{ .RelPermalink }}" type="image/webp">
+            {{ end }}
+          <img class="img-fluid mt-3 mt-md-5" src="{{ .RelPermalink }}" alt="{{ i18n "home.kdevelop.alt" }}">
+        </picture>
+      {{ end }}
     </div>
   </section>
 
