@@ -22,7 +22,7 @@
 </script>
 <script src="{{ $jsLunr.RelPermalink }}" integrity="{{ $jsLunr.Data.Integrity }}" crossorigin="anonymous"></script>
 {{end}}
-{{ if .Site.IsServer }}
+{{ if hugo.IsServer }}
 <script src="{{ $js.RelPermalink }}"></script>
 {{ else }}
 {{ $js := $js | minify | fingerprint }}
