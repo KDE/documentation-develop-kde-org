@@ -208,3 +208,15 @@ Use appropriate Unicode symbols rather than handmade approximations. This makes 
 - `©` (`U+00A9`) `™` (`U+2122`), and `®` (`U+00AE`); instead of `(C)`, `TM`, and `(R)`
 
 KDE’s [KCharSelect](https://apps.kde.org/kcharselect) app can be used to find these and other symbols. If you suspect there might be a dedicated Unicode symbol for the expression you want to include (which there probably is), please look it up first!
+
+
+## Units
+Prefer whole words when writing out units, unless space is extremely limited (e.g. graph legends, table views). In this case, use internationally-accepted abbreviations.
+
+**Bad**: 200msec
+
+**Good**: 200 ms
+
+**Better**: 200 milliseconds
+
+See also the lists of accepted abbreviations for [SI units](https://en.wikipedia.org/wiki/International_System_of_Units) and [US customary](https://en.wikipedia.org/wiki/United_States_customary_units) units.
