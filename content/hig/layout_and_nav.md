@@ -50,7 +50,7 @@ Spacing between items in a toolbar (e.g. buttons and text fields)               
 Padding between window/page edges and “frameless" container views                     | 0
 Padding between window/page edges and all other UI elements                           | `largeSpacing`
 Corner radius for rounded UI elements                                                 | `cornerRadius`
-Fixed-size UI elements, including default and minimum window sizes                    | `gridUnit` multiplied as needed
+Fixed-size UI elements, including default and minimum window sizes                    | `gridUnit` (18px) multiplied as needed
 Size of icons in menu items and raised buttons                                        | `IconSizes.small`
 Size of icons in flat/toolbar buttons and list items without subtitles                | `IconSizes.smallMedium`
 Size of icons in list items with subtitles                                            | `IconSizes.medium`
