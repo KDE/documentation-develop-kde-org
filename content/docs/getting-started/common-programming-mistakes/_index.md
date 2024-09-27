@@ -233,6 +233,16 @@ private:
 };
 ```
 
+In Qt 6, if you are using a pointer or reference of a `QObject` as an
+argument or return value of a `Q_INVOKABLE` (including signals and slots)
+function, or a property, in a `QObject`-derived class, you may need to use the 
+[`Q_MOC_INCLUDE()`][q_moc_include] macro if you are forward-declaring
+the types. Learn more about this in Qt's official [documentation on porting
+from Qt 5 to 6][qtcore6-changes].
+
+[q_moc_include]: https://doc.qt.io/qt-6/qobject.html#Q_MOC_INCLUDE
+[qtcore6-changes]: https://doc.qt.io/qt-6/qtcore-changes-qt6.html#type-registration
+
 ## Iterators
 
 ### Prefer const iterators and cache end()
