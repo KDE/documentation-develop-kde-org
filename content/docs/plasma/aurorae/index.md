@@ -93,7 +93,7 @@ The following buttons are supported:
 - `shade` (`L`): shade the window
 - `help` (`H`): show help information
 - (`M`): window menu ("Move to Desktop", "Move to Screen", etc.). This button is not to be provided as an SVG file, but is available for use in the configuration.
-- (`N`): application menu ("File", "Edit", "View" etc.). This button is not to be provided as an SVG file, but is available for use in the configuration.
+- `appmenu` (`N`): application menu ("File", "Edit", "View" etc.). Starting with Plasma 6.3, this button can be provided as an SVG file; if not provided, will fallback to the icon of the window.
 
 Each button SVG file needs to be named after the button type; e.g. the close button has to be named `close.svg`. The letter in brackets is the button name to be used in the configuration (see below).
 
