@@ -23,12 +23,16 @@ If you want to build Qt6 applications, download the `qt67` image:
 
 ```bash
 docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt67 bash
+# or with podman
+podman run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt67 bash
 ```
 
 If the application is using Qt5, use the `qt515` image:
 
 ```bash
 docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt515 bash
+# or with podman
+podman run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt515 bash
 ```
 
 {{< alert color="info" title="Note" >}}
