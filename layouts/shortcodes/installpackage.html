@@ -64,4 +64,18 @@
     </td>
   </tr>
   {{- end -}}
+
+
+  {{- if or (.Get "solus") (.Get "solusCommand") -}}
+  <tr>
+    <td>
+      <a {{ with .Get "solus" }}href="https://repology.org/projects/?inrepo=solus&search={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/solus.svg" alt="logo of Linux operating system Solus" />Solus</a>
+    <td>
+<pre>
+{{- with .Get "solus" }}sudo eopkg install {{ . }}{{ end }}
+{{ with .Get "ubuntuCommand" }}{{ . }}{{ end -}}
+</pre>
+    </td>
+  </tr>
+  {{- end -}}
 </table>

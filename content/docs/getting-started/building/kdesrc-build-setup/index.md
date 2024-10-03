@@ -28,6 +28,7 @@ Setting up your environment on a Linux machine is fairly simple. First you will 
     opensuse="git"
     fedora="git perl perl-IPC-Cmd perl-MD5 perl-FindBin"
     arch="git"
+    solus="git"
 >}}
 
 ## Configure git
