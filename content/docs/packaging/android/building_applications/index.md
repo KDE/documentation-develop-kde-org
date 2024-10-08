@@ -6,6 +6,8 @@ description: >
   Learn how to build your applications for Android
 ---
 
+We assume that the application is already ported to Android. If not then read the tutorial on [porting applications to Android]({{< ref "porting_applications" >}}).
+
 Building .apk files from Qt Applications requires a cross-compiling toolchain, which is hard to setup. To simplify this, there is a ready-to-use Docker container for building KDE applications.
 
 This only applies to applications that have a Craft blueprint in the [craft-blueprints-kde](https://invent.kde.org/packaging/craft-blueprints-kde) repository. If the application you want does not have such a blueprint yet, have a look at [the documentation](https://community.kde.org/Craft/Blueprints).
