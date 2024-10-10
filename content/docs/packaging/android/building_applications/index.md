@@ -27,14 +27,6 @@ docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot invent-regist
 podman run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt67 bash
 ```
 
-If the application is using Qt5, use the `qt515` image:
-
-```bash
-docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt515 bash
-# or with podman
-podman run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt515 bash
-```
-
 {{< alert color="info" title="Note" >}}
 If this fails with an error similar to "Permission denied", you may need to disable SELinux while using craft by running `sudo setenforce 0`.
 {{< /alert >}}
