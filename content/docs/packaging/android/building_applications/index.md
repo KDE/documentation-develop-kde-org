@@ -36,7 +36,7 @@ podman run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot:Z --userns ke
 ```
 
 {{< alert color="info" title="Note" >}}
-If this fails with an error similar to "Permission denied", you may need to disable SELinux while using craft by running `sudo setenforce 0`
+If this fails with an error similar to "Permission denied", you may need to disable SELinux while using craft by running `sudo setenforce 0`.
 {{< /alert >}}
 
 After the image is done downloading, you should be in a new shell which is running inside of the container. Now it's time to initialize Craft:
@@ -118,7 +118,9 @@ You can finally sign the aligned apk with your key using
 apksigner sign -verbose -ks key.keystore <app>.signed.apk
 ```
 
+{{< alert color="info" title="Note" >}}
 The `zipalign` and `apksigner` binaries can be found at `/opt/android-sdk/build-tools/<version>/` inside the Craft container environment.
+{{< /alert >}}
 
 ## Iterating on blueprints
 
