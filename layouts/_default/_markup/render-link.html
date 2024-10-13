@@ -3,70 +3,70 @@ SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
 SPDX-License-Identifier: LGPL-3.0-or-later
 */}}
 {{- if hasPrefix .Destination  "docs:" -}}
-  {{ $dest := substr .Destination 5 }}
-  {{ if in $dest ";" }}
-    {{ $module := (index (split $dest ";") 0) }}
-    {{ $link := (index (split $dest ";") 1) }}
+  {{- $dest := substr .Destination 5 -}}
+  {{- if in $dest ";" -}}
+    {{- $module := (index (split $dest ";") 0) -}}
+    {{- $link := (index (split $dest ";") 1) -}}
 
-    {{ $filename := $link }}
-    {{ $anchor := "" }}
-    
-    {{ $url := printf "_data/%s.json" $module }}
-    {{ $data := getJSON $url }}
-    {{ $dataMap := getJSON "_data/components_map.json" }}
-    {{ $prefix := (index $dataMap $module).default_prefix }}
+    {{- $filename := $link -}}
+    {{- $anchor := "" -}}
 
-    {{ $found := 0 }}
-    {{ $variations := slice (printf "%s%s" $prefix $link) $link }}
+    {{- $url := printf "_data/%s.json" $module -}}
+    {{- $data := getJSON $url -}}
+    {{- $dataMap := getJSON "_data/components_map.json" -}}
+    {{- $prefix := (index $dataMap $module).default_prefix -}}
+
+    {{- $found := 0 -}}
+    {{- $variations := slice (printf "%s%s" $prefix $link) $link -}}
     {{/* Search for complete name first */}}
-    {{ range $data.tagfile.compound }}
-      {{ $name := index .name "$" }}
-      {{ if in $variations $name }}
-        {{ $filename = index .filename "$" }}
-        {{ $found = 1 }}
-      {{ end }}
-    {{ end }}
+    {{- range $data.tagfile.compound -}}
+      {{- $name := index .name "$" -}}
+      {{- if in $variations $name -}}
+        {{- $filename = index .filename "$" -}}
+        {{- $found = 1 -}}
+      {{- end -}}
+    {{- end -}}
 
-    {{ if (and (eq $found 0) (in $link "::")) }}
-      {{ $class := "" }} 
-      {{ $member := "" }}
-      {{ $len := len (split $link "::") }}
-      {{ range $index, $element := (split $link "::") }}
-        {{ if (eq (add $index 1) $len) }}
-          {{ $member = $element }}
-        {{ else }}
-          {{ if eq $class "" }}
-            {{ $class = $element }}
-          {{ else }}
-            {{ $class = printf "%s::%s" $class $element }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-      {{ range $data.tagfile.compound }}
-        {{ if (or (eq (index .name "$") (printf "%s%s" $prefix $class)) (eq (index .name "$") $class)) }}
-          {{ $filename = (index .filename "$") }}
-          {{ if .member }}
-            {{ range .member }}
-              {{ if (eq (index .name "$") $member) }}
-                {{ $anchor = (printf "#%s" (index .anchor "$")) }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
+    {{- if (and (eq $found 0) (in $link "::")) -}}
+      {{- $class := "" -}}
+      {{- $member := "" -}}
+      {{- $len := len (split $link "::") -}}
+      {{- range $index, $element := (split $link "::") -}}
+        {{- if (eq (add $index 1) $len) -}}
+          {{- $member = $element -}}
+        {{- else -}}
+          {{- if eq $class "" -}}
+            {{- $class = $element -}}
+          {{- else -}}
+            {{- $class = printf "%s::%s" $class $element -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- range $data.tagfile.compound -}}
+        {{- if (or (eq (index .name "$") (printf "%s%s" $prefix $class)) (eq (index .name "$") $class)) -}}
+          {{- $filename = (index .filename "$") -}}
+          {{- if .member -}}
+            {{- range .member -}}
+              {{- if (eq (index .name "$") $member) -}}
+                {{- $anchor = (printf "#%s" (index .anchor "$")) -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
 
-    <a href="{{ (index $dataMap $module).url }}{{ $filename }}{{ $anchor }}" class="api-link"> 
-      {{ .Text | safeHTML }}
+    <a href="{{ (index $dataMap $module).url }}{{ $filename }}{{ $anchor }}" class="api-link">
+      {{- .Text | safeHTML -}}
     </a>
-  {{ else }}
-    {{ $url := printf "_data/%s.json" $dest }}
-    {{ $data := getJSON $url }}
-    {{ $dataMap := getJSON "_data/components_map.json" }}
-    <a href="{{ (index $dataMap $dest).url }}" class="api-link"> 
-      {{ .Text | safeHTML }}
+  {{- else -}}
+    {{- $url := printf "_data/%s.json" $dest -}}
+    {{- $data := getJSON $url -}}
+    {{- $dataMap := getJSON "_data/components_map.json" -}}
+    <a href="{{ (index $dataMap $dest).url }}" class="api-link">
+      {{- .Text | safeHTML -}}
     </a>
-  {{ end }}
+  {{- end -}}
 {{- else -}}
   <a href="{{ .Destination | safeURL }}" {{ with .Title}}title="{{ . }}"{{ end }}>
     {{- .Text | safeHTML -}}
