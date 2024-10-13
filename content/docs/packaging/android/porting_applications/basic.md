@@ -8,6 +8,24 @@ description: >
 
 ## Porting Applications to Android
 
+### CMake
+
+Since Qt6, additional CMake code must be added to build APKs:
+
+```cmake
+include(ECMAddAndroidApk)
+ecm_add_android_apk(myapp ANDROID_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android)
+```
+
+`${CMAKE_CURRENT_SOURCE_DIR}/android` is the directory which contains the `AndroidManifest.xml`,
+`splash.xml` and icon files (see following sections):
+
+```
+android/AndroidManifest.xml
+android/res/drawable/alligator.png
+android/res/drawable/splash.xml
+```
+
 ### AndroidManifest.xml
 
 Porting an application to Android requires adding an ```AndroidManifest.xml``` containing basic information about the app.
@@ -109,12 +127,3 @@ To create a splash screen for application startup, a ```splash.xml``` file must 
 ```
 
 The ```android:src``` parameter must be set to the application's icon.
-
-
-The `AndroidManifest.xml`, `splash.xml` and icon files should be stored in the application's source directory like this:
-
-```
-./android/AndroidManifest.xml
-./android/res/drawable/alligator.png
-./android/res/drawable/splash.xml
-```
