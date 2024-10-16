@@ -5,8 +5,10 @@ from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
 class MdConverter(QObject):
     """A simple markdown converter"""
 
+    sourceTextChanged = pyqtSignal()
+
     def __init__(self, _source_text):
-        QObject.__init__(self)
+        super().__init__()
         self._source_text = ""
 
     def readSourceText(self):
@@ -16,10 +18,10 @@ class MdConverter(QObject):
         self._source_text = val
         self.sourceTextChanged.emit()
 
-    sourceTextChanged = pyqtSignal()
+    sourceText = pyqtProperty(
+        str, readSourceText, setSourceText, notify=sourceTextChanged
+    )
 
     @pyqtSlot(result=str)
     def mdFormat(self):
         return markdown(self._source_text)
-
-    sourceText = pyqtProperty(str, readSourceText, setSourceText, notify=sourceTextChanged)
