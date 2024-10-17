@@ -10,7 +10,7 @@ Most functionality should work without large changes. Some topics, for example w
 
 ## Using the org.kde.breeze Style
 
-While Qt includes a QtQuickControls style that is similar to the native style of android, we do not use that for our apps since it doesn't fit well into android. Instead, we use the `org.kde.breeze` style. You can force the app to use it by adding
+While Qt includes a QtQuickControls style that is similar to the native style of Android, we do not use that for our apps since it doesn't fit well into Android. Instead, we use the `org.kde.breeze` style. You can force the app to use it by adding
 
 ```cpp
 #ifdef Q_OS_ANDROID
@@ -23,9 +23,9 @@ to the main function and including `QQuickStyle`.
 ## Not using Qt Widgets
 
 Even if the app does not use qt widgets for its UI, it may use a `QApplication` internally, since that enables a few things on the desktop.
-On android, this not necessary and we should make sure not to link against Qt Widgets, since that would increase the apk's size.
+On Android, this not necessary and we should make sure not to link against Qt Widgets, since that would increase the APK's size.
 
-The first step towards not using Qt Widgets is thus to replace the `QApplication` with a `QGuiApplication`, but only on android. This can be done using `#ifdef` and replacing the old variable with
+The first step towards not using Qt Widgets is thus to replace the `QApplication` with a `QGuiApplication`, but only on Android. This can be done using `#ifdef` and replacing the old variable with
 
 ```cpp
 #ifdef Q_OS_ANDROID
@@ -45,32 +45,32 @@ It's also important to also make sure that the include for `QApplication` is not
 #endif
 ```
 
-Then, we can modify the cmake config in order to not link against Qt Widgets. In the `CMakeLists.txt` that links the libraries to the app (most likely in `src/CMakeLists.txt`), remove `Qt5::Widgets` from `target_link_libraries` and add it in a new line:
+Then, we can modify the cmake config in order to not link against Qt Widgets. In the `CMakeLists.txt` that links the libraries to the app (most likely in `src/CMakeLists.txt`), remove `Qt6::Widgets` from `target_link_libraries` and add it in a new line:
 
 ```cmake
 if(ANDROID)
 else()
-    target_link_libraries(appname PRIVATE Qt5::Widgets)
+    target_link_libraries(appname PRIVATE Qt::Widgets)
 endif()
 ```
 
 This code might look unnecessarily complicated, but we will add more to it later.
 
-Now that we don't need Qt Widgets, we can also stop trying to find it at all. In `CMakeLists.txt`, remove the `find_package` call for Widgets, and put it inside a block that is not run when the target platform is android.
+Now that we don't need Qt Widgets, we can also stop trying to find it at all. In `CMakeLists.txt`, remove the `find_package` call for Widgets, and put it inside a block that is not run when the target platform is Android.
 
 ## Removing unnecessary dependencies
 
-Your app probably has some dependencies that are not required or will not work on android, for example everything related to D-Bus, system tray icons or plasmoids. To make the app compile, make sure not to find and link against those dependencies and remove the necessary code using `#ifndef Q_OS_ANDROID`. If there are whole files that are not required on android, you can change the CMake configuration to not compile those files at all on android.
+Your app probably has some dependencies that are not required or will not work on Android, for example everything related to D-Bus, system tray icons or plasmoids. To make the app compile, make sure not to find and link against those dependencies and remove the necessary code using `#ifndef Q_OS_ANDROID`. If there are whole files that are not required on android, you can change the CMake configuration to not compile those files at all on Android.
 
 ## Linking against Kirigami, QtSvg and OpenSSL
 
-Since android behaves differently than a normal linux platform, the app needs to link against a few dependencies that normally don't need to be linked against.
+Since Android behaves differently than a normal linux platform, the app needs to link against a few dependencies that normally don't need to be linked against.
 To do this, add the following lines in the `if(ANDROID)` block that was previously added:
 
 ```cmake
 target_link_libraries(alligator PRIVATE
-    KF5::Kirigami2
-    Qt5::Svg
+    KF6::Kirigami
+    Qt6::Svg
     OpenSSL::SSL
 )
 ```
@@ -80,7 +80,7 @@ For this to work, cmake needs to find those packages first. Add the following `f
 ```cmake
 if (ANDROID)
     find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Svg)
-    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2)
+    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami)
     find_package(OpenSSL REQUIRED)
 endif()
 ```
@@ -112,42 +112,31 @@ If the icon is not in breeze-icons, add it as a resource in the `.qrc` file and 
 about.setProgramLogo(QVariant(QIcon(QStringLiteral(":/logo.svg"))));
 ```
 
-## Optimizing apk size
+## Optimizing APK size
 
-Ideally, apks should be as small as possible. There are several ways this can be achieved:
+Ideally, APKs should be as small as possible. There are several ways this can be achieved:
 
-First, the apk should be inspected to show the contained files and their sizes. The Android SDK contains two tools that can be used for this:
+First, the APK should be inspected to show the contained files and their sizes. The Android SDK contains two tools that can be used for this:
 
-- `apkanalyzer` is a command line tool that lists apk contents and its size
+- `apkanalyzer` is a command line tool that lists APK contents and its size
 - Android Studio contains a graphical tool for this under `Build > Analyze APK`.
 
-Since apk files are just zip files internally, they can also be opened using normal archive tools like Ark.
+Since APK files are just zip files internally, they can also be opened using normal archive tools like Ark.
 
-Due to the way craft builds apks, they contain many files that are not actually needed for the app to function. This can be improved by not installing those files when the target platform is android - for example desktop or appstream files. Many libraries also build large documentation suites or plugins that are not required. If possible, those files should not be installed at all while building. This can be achieved by, depending on the project and build system, adding build flags like `-DBUILD_DOCS=false` or patching the build scripts.
+Due to the way craft builds APKs, they contain many files that are not actually needed for the app to function. This can be improved by not installing those files when the target platform is Android - for example desktop or appstream files. Many libraries also build large documentation suites or plugins that are not required. If possible, those files should not be installed at all while building. This can be achieved by, depending on the project and build system, adding build flags like `-DBUILD_DOCS=false` or patching the build scripts.
 
-When this is not possible, there is a way of excluding files from being bundled by `androiddeployqt`. This works by editing the application's `build.gradle` and adding
+When this is not possible, there is a way of excluding files via Craft before they get bundled by `androiddeployqt`. This works by adding a `.craftignore` file to the root directory of
+the application repository.
 
-```gradle
-android {
-    ...
-    packagingOptions {
-        exclude 'lib/*/*_Controls.2_Imagine_*'
-        exclude 'lib/*/*_qmltooling_*'
-    }
-}
+```
+# we use the Breeze style, so anything related to Material is unnecessary
+qml/QtQuick/Controls/Material/.*
+lib/qml/org/kde/kirigami/styles/Material/.*
+
+# unused KConfigWidgets assets pulled in via KIconThemes
+share/locale/.*/kf6_entry.desktop
+share/locale/.*/LC_MESSAGES/kconfigwidgets6\.mo
+share/locale/.*/LC_MESSAGES/(kitemviews6|kwidgetsaddons6)_qt\.qm
 ```
 
-with `exclude` lines for all the files that should be excluded.
-
-For excluding assets, a different syntax is needed:
-
-```gradle
-android {
-    ...
-    aaptOptions {
-        ignoreAssetsPattern '!<dir>ECM:<dir>qlogging-categories5:<file>iso_639-2.mo:!<file>iso_639-3.mo'
-    }
-}
-```
-
-Unfortunately, this needs to include all excluded files in a single line.
+Each line is a regular expression that is matched against the path of installed files, matching ones are excluded.
