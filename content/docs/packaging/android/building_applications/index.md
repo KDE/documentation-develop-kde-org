@@ -59,6 +59,10 @@ To build an application and it's dependencies, simply run the craft command with
 craft itinerary
 ```
 
+{{< alert color="info" title="Note" >}}
+To build with a local source folder: `craft --options itinerary.srcDir=/path/to/source itinerary` (also for `--package`).
+{{< /alert >}}
+
 You can search for blueprints using the `--search` command:
 
 ```bash
