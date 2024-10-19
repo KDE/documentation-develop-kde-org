@@ -28,9 +28,9 @@ android/res/drawable/splash.xml
 
 ### AndroidManifest.xml
 
-Porting an application to Android requires adding an ```AndroidManifest.xml``` containing basic information about the app.
+Porting an application to Android requires adding an `AndroidManifest.xml` containing basic information about the app.
 
-A basic AndroidManifest.xml may look like this:
+A basic `AndroidManifest.xml` may look like this:
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -39,12 +39,19 @@ A basic AndroidManifest.xml may look like this:
           android:versionName="0.0.1"
           android:versionCode="1588098483"
           android:installLocation="auto">
-    <application android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="Alligator" android:icon="@drawable/alligator">
+
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
+
+    <!-- %%INSERT_PERMISSIONS -->
+    <!-- %%INSERT_FEATURES -->
+
+    <application android:name="org.qtproject.qt.android.bindings.QtApplication" android:label="Alligator" android:icon="@drawable/alligator">
         <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation"
-                  android:name="org.qtproject.qt5.android.bindings.QtActivity"
+                  android:name="org.qtproject.qt.android.bindings.QtActivity"
                   android:label="Alligator"
                   android:windowSoftInputMode="adjustResize"
-                  android:launchMode="singleTop">
+                  android:launchMode="singleTop"
+                  android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -52,7 +59,6 @@ A basic AndroidManifest.xml may look like this:
             </intent-filter>
 
             <meta-data android:name="android.app.lib_name" android:value="alligator"/>
-            <meta-data android:name="android.app.qt_sources_resource_id" android:resource="@array/qt_sources"/>
             <meta-data android:name="android.app.repository" android:value="default"/>
             <meta-data android:name="android.app.qt_libs_resource_id" android:resource="@array/qt_libs"/>
             <meta-data android:name="android.app.bundled_libs_resource_id" android:resource="@array/bundled_libs"/>
@@ -68,9 +74,8 @@ A basic AndroidManifest.xml may look like this:
             <meta-data android:name="android.app.load_local_jars" android:value="-- %%INSERT_LOCAL_JARS%% --"/>
             <meta-data android:name="android.app.static_init_classes" android:value="-- %%INSERT_INIT_CLASSES%% --"/>
             <!--  Messages maps -->
-            <meta-data android:value="@string/ministro_not_found_msg" android:name="android.app.ministro_not_found_msg"/>
-            <meta-data android:value="@string/ministro_needed_msg" android:name="android.app.ministro_needed_msg"/>
             <meta-data android:value="@string/fatal_error_msg" android:name="android.app.fatal_error_msg"/>
+            <meta-data android:value="@string/unsupported_android_version" android:name="android.app.unsupported_android_version"/>
 
             <!-- Splash screen -->
             <meta-data android:name="android.app.splash_screen_drawable" android:resource="@drawable/splash"/>
@@ -82,13 +87,6 @@ A basic AndroidManifest.xml may look like this:
             <meta-data android:name="android.app.auto_screen_scale_factor" android:value="true"/>
         </activity>
     </application>
-
-    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28"/>
-    <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
 </manifest>
 ```
 
