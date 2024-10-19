@@ -21,12 +21,12 @@ First create a mountable folder used for the image:
 mkdir craft-kde-android
 ```
 
-If you want to build Qt6 applications, download the `qt67` image:
+If you want to build Qt6 applications, download the `qt68` image:
 
 ```bash
-docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt67 bash
+docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt68 bash
 # or with podman
-podman run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt67 bash
+podman run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt68 bash
 ```
 
 {{< alert color="info" title="Note" >}}
