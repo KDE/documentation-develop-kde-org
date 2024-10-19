@@ -31,6 +31,7 @@ For projects which started outside of KDE.
 - [ ] Continuity agreement must be in place with KDE e.V. for domains and trademarks if the authors disappear
 - [ ] Recommended to attend [Akademy](https://akademy.kde.org) or other local KDE events
 - [ ] Code in [KDE Invent](https://invent.kde.org)
+- [ ] Code has license set following the [KDE licensing Policy](https://community.kde.org/Policies/Licensing_Policy)
 - [ ] Passing CI job for reuse linting
 ```
 
