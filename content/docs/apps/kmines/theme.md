@@ -7,7 +7,7 @@ authors:
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 ## Introduction
-This short tutorial will show you how to add a theme to KMines. It is assumed that you already have a working dev environment, you are familiar with building KDE software using [kdesrc-build]({{< ref "kdesrc-build-setup" >}}), and you are able to use a vector editing program such as Inkscape and a raster editing program such as Krita to create and export images. You should already have a local copy of the KMines source via `kdesrc-build kmines`. By the end of this tutorial, you will know what is necessary to create a KMines theme, and how to include them in the KMines source code.
+This short tutorial will show you how to add a theme to KMines. It is assumed that you already have a working dev environment, you are familiar with building KDE software using [kde-builder]({{< ref "kde-builder-setup" >}}), and you are able to use a vector editing program such as Inkscape and a raster editing program such as Krita to create and export images. You should already have a local copy of the KMines source via `kde-builder kmines`. By the end of this tutorial, you will know what is necessary to create a KMines theme, and how to include them in the KMines source code.
 
 ## Components of a KMines theme
 A KMines theme requires the following components:
@@ -18,7 +18,7 @@ A KMines theme requires the following components:
 
 
 ## Step one: Create your SVG theme file
-The easiest way to begin is to edit a copy of an existing theme in the KMines source code. If you have followed the kdesrc-build tutorial, the source code should be in `~/kde/src/kmines`. Existing themes can be found in the `themes/` directory.
+The easiest way to begin is to edit a copy of an existing theme in the KMines source code. If you have followed the [kde-builder]({{< ref "kde-builder-setup" >}}) tutorial, the source code should be in `~/kde/src/kmines`. Existing themes can be found in the `themes/` directory.
 
 Elements of your theme are identified using their IDs. If you are editing your SVG in Inkscape, you can set the ID of an element by right clicking on the element you want to change and then clicking on "Object Properties…".
 

@@ -44,27 +44,31 @@ Installation of [Accerciser](https://help.gnome.org/users/accerciser/stable/intr
 
 ### Building from source
 
-[kdesrc-build](https://invent.kde.org/sdk/kdesrc-build) is the recommended tool to build selenium-webdriver-at-spi from source. Learn [how to set up a KDE development environment using kdesrc-build]({{< ref "kdesrc-build-setup" >}}).
+[kde-builder](https://kde-builder.kde.org/) is the recommended tool to build selenium-webdriver-at-spi from source. Learn [how to set up a KDE development environment using kde-builder]({{< ref "kde-builder-setup" >}}).
 
 After the development environment is set up, run the command below to build both selenium-webdriver-at-spi and kcalc from source. The command will automatically install all the required dependencies:
 
 ```shell
-kdesrc-build kcalc selenium-webdriver-at-spi
+kde-builder kcalc selenium-webdriver-at-spi
 ```
 
 Run the example test script to check that your installation is working.
-
-With kdesrc-build:
-
-```shell
-kdesrc-build --run --exec selenium-webdriver-at-spi-run selenium-webdriver-at-spi ~/kde/src/selenium-webdriver-at-spi/examples/calculatortest.py
-```
 
 With kde-builder:
 
 ```shell
 kde-builder --run selenium-webdriver-at-spi-run ~/kde/src/selenium-webdriver-at-spi/examples/calculatortest.py
 ```
+
+{{< alert title="⏳ With kdesrc-build..." >}}
+
+Because kdesrc-build had no way to associate the name of the project with the executable name, you'll need to use the `--exec` or `-e` flag:
+
+```shell
+kdesrc-build --run --exec selenium-webdriver-at-spi-run selenium-webdriver-at-spi ~/kde/src/selenium-webdriver-at-spi/examples/calculatortest.py
+```
+
+{{< /alert >}}
 
 You will see a black window titled "KDE Wayland Compositor" running a KCalc window and having a few buttons getting highlighted (very fast!) as they're activated.
 

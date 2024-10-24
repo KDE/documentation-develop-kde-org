@@ -57,7 +57,7 @@ We don't need to change anything in here.
 
 ## Running our application
 
-Again, you can repeat the same steps provided in {{< ref "hello_world#kxmlgui-running" >}} to build and install the application.
+Again, you can repeat the same steps provided in [KXmlGui Hello World]({{< ref "hello_world#kxmlgui-running" >}}) to build and install the application.
 
 However, we will test if our application handles files from the command line correctly. Create a simple file:
 
@@ -68,7 +68,7 @@ echo "It works!" > testfile.txt
 Now you may pass it as argument with:
 
 ```bash
-kdesrc-build --run --exec texteditor kxmlgui-tutorial testfile.txt
+kde-builder --run texteditor testfile.txt
 ```
 
 or

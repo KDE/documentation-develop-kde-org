@@ -200,10 +200,10 @@ Since we are now using the [KIO](docs:kio) library, we must tell CMake to link a
 
 ### Running our application
 
-Once again, you can repeat the same steps provided in {{< ref "hello_world#kxmlgui-running" >}} to build and install the application. You can then run the project with:
+Once again, you can repeat the same steps provided in [KXmlGui Hello World]({{< ref "hello_world#kxmlgui-running" >}}) to build and install the application. You can then run the project with:
 
 ```bash
-kdesrc-build --run --exec texteditor kxmlgui-tutorial
+kde-builder --run texteditor
 ```
 
 or

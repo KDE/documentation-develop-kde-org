@@ -5,13 +5,13 @@ weight: 51
 group: "containers"
 ---
 
-If you use a really old Linux distribution that does not have the base system dependencies needed for kdesrc-build like an older long term support distribution such as [RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux), or use an immutable distribution like [openSUSE Kalpa](https://en.opensuse.org/Portal:Kalpa), [Fedora Kinoite](https://fedoraproject.org/atomic-desktops/kinoite/) or the [SteamOS on the Steam Deck](https://store.steampowered.com/steamdeck), you will not be able to build KDE software directly with kdesrc-build or manually with CMake.
+If you use a really old Linux distribution that does not have the base system dependencies needed for kde-builder like an older long term support distribution such as [RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux), or use an immutable distribution like [openSUSE Kalpa](https://en.opensuse.org/Portal:Kalpa), [Fedora Kinoite](https://fedoraproject.org/atomic-desktops/kinoite/) or the [SteamOS on the Steam Deck](https://store.steampowered.com/steamdeck), you will not be able to build KDE software directly with [kde-builder]({{< ref "kde-builder-setup" >}}) or [manually with CMake]({{< ref "cmake-build" >}}).
 
 Instead, you can build KDE software inside a container. Distrobox eases the container development workflow by letting you run commands inside the container while still able to see your home directory by default.
 
 Additionally, distrobox has the ability to run graphical applications from within the container.
 
-You will be able to run [kdesrc-build inside a container]({{< ref "#with-kdesrc-build" >}}) just fine, with the caveat that you won’t be able to run a Plasma Desktop session from the login screen.
+You will be able to run [kde-builder inside a container]({{< ref "#with-kde-builder" >}}) just fine, with the caveat that you won’t be able to run a Plasma Desktop session from the login screen.
 
 You can also build KDE software by [running CMake commands inside the container]({{< ref "cmake-build" >}}) just like you would outside the container.
 
@@ -44,9 +44,9 @@ And add the following to a new file `~/.config/distrobox/distrobox.conf`. It wil
 xhost +si:localuser:deck
 ```
 
-## Building KDE software with distrobox + kdesrc-build {#with-kdesrc-build}
+## Building KDE software with distrobox + kde-builder {#kde-builder}
 
-Since kdesrc-build allows to build the most bleeding edge KDE software and its dependencies, all you need to build is a sufficiently up-to-date distribution. In this case it is sufficient to use standard [openSUSE Tumbleweed](https://hub.docker.com/r/opensuse/tumbleweed/), [Fedora](https://hub.docker.com/_/fedora/), or [Arch Linux](https://hub.docker.com/_/archlinux) containers.
+Since [kde-builder]({{< ref "kde-builder-setup" >}}) allows to build the most bleeding edge KDE software and its dependencies, all you need to build is a sufficiently up-to-date distribution. In this case it is sufficient to use standard [openSUSE Tumbleweed](https://hub.docker.com/r/opensuse/tumbleweed/), [Fedora](https://hub.docker.com/_/fedora/), or [Arch Linux](https://hub.docker.com/_/archlinux) containers.
 
 After having installed distrobox, run *only one* of the following commands to create a new distrobox image:
 
@@ -66,19 +66,19 @@ Distrobox will take some time to configure the container the first time, and the
 
 Inside the container you will now have access to development packages like git, CMake, KDE frameworks libraries and other such things.
 
-Follow the [tutorial for setting up kdesrc-build]({{< ref "kdesrc-build-setup" >}}), including the installation commands that require `sudo`, and the experience should be the same as if you were following the kdesrc-build tutorial in a non-immutable Linux distribution. 
+Follow the [tutorial for setting up kde-builder]({{< ref "kde-builder-setup" >}}) and the experience should be the same as if you were following the kde-builder tutorial in a non-immutable Linux distribution.
 
-Whenever you want to get back to developing with kdesrc-build inside the container, remember to use the above `distrobox enter <containername>` command to enter the container before building or running the application.
+Whenever you want to get back to developing with kde-builder inside the container, remember to use the above `distrobox enter <containername>` command to enter the container *before* building or running the application.
 
-From this point on, the kdesrc-build tutorial should be followed instead.
+From this point on, the [kde-builder tutorial]({{< ref "kde-builder-setup" >}}) should be followed instead.
 
-Note that the container size will stay relatively tiny, but kdesrc-build will require as much disk space as necessary to build the software you specify and all its dependencies.
+Note that the container size will stay relatively tiny, but kde-builder will require as much disk space as necessary to build the software you specify and all its dependencies.
 
 ## Building KDE software with distrobox + manual compilation {#with-cmake}
 
-In certain cases you may find kdesrc-build to be overkill for what you want to do, for example if you just intend on working on a specific desktop application. You might otherwise be restricted by storage space and cannot afford to compile dozens of projects just to build the one project you want.
+In certain cases you may find [kde-builder]({{< ref "kde-builder-setup" >}}) to be overkill for what you want to do, for example if you just intend on working on a specific desktop application. You might otherwise be restricted by storage space and cannot afford to compile dozens of projects just to build the one project you want.
 
-While containers also require a significant amount of storage, they often require much less than kdesrc-build.
+While containers also require a significant amount of storage, they often require much less than kde-builder.
 
 ### For non-bleeding edge software
 
@@ -163,4 +163,4 @@ In addition to this, there are a few pieces of software with very common use cas
 * breeze and breeze-icons, for theme support
 * the QtWayland development library, for applications inside the container to run as native Wayland windows
 
-Another limitation is the inability to [run a full Plasma session built with kdesrc-build]({{< ref "kdesrc-build-compile#plasma" >}}) from inside containers. While this is [theoretically possible](https://distrobox.it/posts/run_latest_gnome_kde_on_distrobox/), it has not been tested or documented and it is unlikely to be supported.
+Another limitation is the inability to [run a full Plasma session built with kde-builder]({{< ref "kde-builder-compile#plasma" >}}) from inside containers. While this is [theoretically possible](https://distrobox.it/posts/run_latest_gnome_kde_on_distrobox/), it has not been tested or documented and it is unlikely to be supported.

@@ -24,15 +24,32 @@ Create a folder `~/kde/src/kxmlgui-tutorial`. In that folder you will place the 
 
 ### Option 1: Using kdesrc-build
 
-Go through the [setting up your development environment]({{< ref "building" >}}) part of the *Get Involved* documentation. That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
+[Set up your development environment with kde-builder]({{< ref "kde-builder-setup" >}}). That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
 
-In your `~/.config/kdesrc-buildrc` add the following:
+Add the folowing at the end of your `~/.config/kde-builder.yaml`:
+
+```yaml
+project kxmlgui-tutorial:
+  no-src: true
+```
+
+{{< alert color="info" title="⏳ With kdesrc-build..." >}}
+
+<details>
+<summary>Click here to know how this was done with kdesrc-build</summary></br>
+
+This step used to be done by writing to `~/.config/kdesrc-buildrc` instead with a different syntax:
 
 ```
+# after include ${module-definitions-dir}/kf6-qt6.ksb
 module kxmlgui-tutorial
   no-src
 end module
 ```
+
+</details>
+
+{{< /alert >}}
 
 ### Option 2: Manually
 
@@ -117,19 +134,34 @@ Here we try to find the modules for Qt 6 and KDE Frameworks 6 required to build 
 
 Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add_executable.html) to create an executable called `helloworld`. Afterwards, we link our executable to the necessary libraries using the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function. The [`install()`](https://cmake.org/cmake/help/latest/command/install.html) function call creates a default "install" target, putting executables and libraries in the default path using a convenience macro `KDE_INSTALL_TARGETS_DEFAULT_ARGS` provided by ECM. Additionally, just by including ECM, an "uninstall" target automatically gets created based on this "install" target.
 
-### Compiling and running with kdesrc-build
+### Compiling and running with kde-builder
 
 Compile your project by running the following command in a terminal:
 
 ```bash
-kdesrc-build kxmlgui-tutorial
+kde-builder kxmlgui-tutorial
 ```
 
 You can then run the application with:
 
 ```bash
+kde-builder --run helloworld
+```
+
+{{< alert color="info" title="⏳ With kdesrc-build..." >}}
+
+<details>
+<summary>Click here to know how this was done with kdesrc-build</summary></br>
+
+In this case, the build process will result in an executable that does not match the project name: for example, the project `kxmlgui-tutorial` does not match the executable `helloworld`. Because kdesrc-build had no way to associate the name of the project with the executable name, you needed to use the `--exec` or `-e` flag:
+
+```bash
 kdesrc-build --run --exec helloworld kxmlgui-tutorial
 ```
+
+</details>
+
+{{< /alert >}}
 
 ### Compiling and running manually
 
@@ -154,10 +186,10 @@ helloworld
 You can also run the binary with flags. The flag `--help` is a standard flag added by Qt via [QCommandLineParser](docs:qtcore;QCommandLineParser), and the content of the `--version`, `--author` and `--license` flags should match the information we added with [KAboutData](docs:kcoreaddons;KAboutData).
 
 ```bash
-kdesrc-build --run --exec helloworld kxmlgui-tutorial --help
-kdesrc-build --run --exec helloworld kxmlgui-tutorial --version
-kdesrc-build --run --exec helloworld kxmlgui-tutorial --author
-kdesrc-build --run --exec helloworld kxmlgui-tutorial --license
+kde-builder --run helloworld --help
+kde-builder --run helloworld --version
+kde-builder --run helloworld --author
+kde-builder --run helloworld --license
 ```
 
 or
