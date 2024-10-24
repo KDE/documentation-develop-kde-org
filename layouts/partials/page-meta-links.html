@@ -1,5 +1,5 @@
 {{ if .File }}
-{{ $pathFormatted := replace .File "\\" "/" }}
+{{ $pathFormatted := strings.TrimPrefix (add hugo.WorkingDir "/") $.File.Filename -}}
 
 {{ $gl_repo := ($.Param "gitlab_repo") }}
 {{ $gl_subdir := ($.Param "gitlab_subdir") }}
@@ -8,15 +8,15 @@
 
 {{ if $gl_repo }}
   <div class="td-page-meta py-1 mb-0">
-    {{ $editURL := printf "%s/-/edit/%s/content/%s" $gl_repo $gl_branch $pathFormatted }}
+    {{ $editURL := printf "%s/-/edit/%s/%s" $gl_repo $gl_branch $pathFormatted }}
     {{ if $gl_subdir }}
-      {{ $editURL = printf "%s/-/edit/%s/%s/content/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
+      {{ $editURL = printf "%s/-/edit/%s/%s/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
     {{ end }}
-    {{ $sourceURL := printf "%s/-/blob/%s/content/%s" $gl_repo $gl_branch $pathFormatted }}
+    {{ $sourceURL := printf "%s/-/blob/%s/%s" $gl_repo $gl_branch $pathFormatted }}
     {{ if $gl_subdir }}
-      {{ $sourceURL = printf "%s/-/tree/%s/%s/content/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
+      {{ $sourceURL = printf "%s/-/tree/%s/%s/%s" $gl_repo $gl_branch $gl_subdir $pathFormatted }}
     {{ end }}
-    {{ $issuesURL := printf "%s/-/issues/new?title=%s" $gl_repo (htmlEscape $.Title )}}
+    {{ $issuesURL := printf "%s/-/issues/new?issue[title]=%s" $gl_repo (htmlEscape $.Title )}}
     <a href="{{ $editURL }}" target="_blank"><i class="icon icon_document-edit me-2"></i>{{ T "post_edit_this" }}</a>
     <a href="{{ $sourceURL }}" target="_blank"><i class="icon icon_redeyes me-2"></i>See source code</a>
     <a href="{{ $issuesURL }}" target="_blank"><i class="icon icon_document-send me-2"></i>{{ T "post_create_issue" }}</a>
