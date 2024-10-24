@@ -5,11 +5,11 @@ weight: 41
 group: "cmake-build"
 ---
 
-While users on older Linux distributions might have to resort to [kdesrc-build]({{< ref "kdesrc-build-setup" >}}) or containers to be able to build KDE software, users of more up-to-date distributions might not need to use them.
+While users on older Linux distributions might have to resort to [kde-builder]({{< ref "kde-builder-setup" >}}) or containers to be able to build KDE software, users of more up-to-date distributions might not need to use them.
 
-The process of building KDE software with kdesrc-build or containers involves builds from the master branch, which includes unreleased code changes. These changes might rely on unreleased changes from other dependencies, so you end up needing to build those dependencies as well. This is often the case with very fast-paced software such as KDE’s [Itinerary](https://apps.kde.org/itinerary/) and [Neochat](https://apps.kde.org/neochat/).
+The process of building KDE software with kde-builder or containers involves builds from the master branch, which includes unreleased code changes. These changes might rely on unreleased changes from other dependencies, so you end up needing to build those dependencies as well. This is often the case with very fast-paced software such as KDE’s [Itinerary](https://apps.kde.org/itinerary/) and [Neochat](https://apps.kde.org/neochat/).
 
-kdesrc-build uniquely also makes it easy to run a whole Plasma Desktop session.
+kde-builder uniquely also makes it easy to run a whole Plasma Desktop session.
 
 If the software you want to contribute to is an application that does not have bleeding edge build dependencies, it is perfectly possible (and faster and easier) to build it manually by running CMake commands on a sufficiently up-to-date Linux distribution, like the latest [Fedora](https://fedoraproject.org/spins/kde/), [openSUSE Tumbleweed](https://get.opensuse.org/tumbleweed/), or [Arch Linux](https://archlinux.org/).
 

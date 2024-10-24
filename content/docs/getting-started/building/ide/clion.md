@@ -8,6 +8,13 @@ authors:
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
+{{< alert color="success" title="💡 This tutorial works ONLY with kde-builder" >}}
+
+This is a kde-builder exclusive feature.
+
+{{< /alert >}}
+
+
 [CLion](https://www.jetbrains.com/clion/) is a proprietary IDE for C++ from JetBrains.
 
 This article will show you how to configure and develop KDE projects in CLion. We will use _KCalc_ as an example project.
@@ -18,10 +25,6 @@ Follow the [Install CLion](https://www.jetbrains.com/help/clion/installation-gui
 
 If you are using Arch Linux, you can install the AUR package [clion](https://aur.archlinux.org/packages/clion)
 or [clion-eap](https://aur.archlinux.org/packages/clion-eap).
-
-{{< alert title="Note" color="info" >}}
-This article assumes you use KDE Builder. The older tool kdesrc-build does not support CLion configuration generation.
-{{< /alert >}}
 
 ## KDE Builder configuration
 

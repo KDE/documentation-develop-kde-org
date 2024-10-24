@@ -8,6 +8,34 @@ authors:
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
+{{< alert color="warning" title="⚠️ kdesrc-build is no longer supported" >}}
+
+</br>
+<details>
+<summary>Click to see more information</summary></br>
+
+[kdesrc-build](https://invent.kde.org/sdk/kdesrc-build),
+the tool that was used previously for this tutorial, is no longer supported.
+
+While the tool is stable and still works for our veteran developers, if you are starting out with KDE development now, we recommend that you switch to
+[kde-builder](https://kde-builder.kde.org/). Once you run it for the first time after installation, it will ask whether you want to migrate your existing `kdesrc-buildrc` configuration file to the new `kde-builder.yaml` file.
+
+Any support questions related to this tutorial can be asked on the
+[KDE New Contributors](https://go.kde.org/matrix/#/#new-contributors:kde.org) group on
+[Matrix](https://community.kde.org/Matrix).
+
+See also [Where to find the development team]({{< ref "help-developers" >}}).
+
+</details>
+
+{{< /alert >}}
+
+{{< alert color="success" title="💡 This tutorial works best with kde-builder" >}}
+
+There used to be documentation for integrating QtCreator with kdesrc-build, but this tutorial currently only supports kde-builder.
+
+{{< /alert >}}
+
 [Qt Creator](https://www.qt.io/product/development-tools) is a cross-platform C++, JavaScript, Python and QML IDE.
 
 This article will show you how to configure and develop KDE projects in Qt Creator. We will use _KCalc_ as an example project.
@@ -19,48 +47,29 @@ This article will show you how to configure and develop KDE projects in Qt Creat
     ubuntu="qtcreator"
 >}}
 
-<details>
-<summary>Alternative methods of installation</summary>
-
 If you want to use a more recent version of Qt Creator than your distribution provides, you can install Qt Creator as a component in the
-"Qt online installer". Go to https://www.qt.io/download-dev to download the installer. Make it executable and run it:
+"Qt online installer". See [Use Qt6 from the online installer]({{< ref "kde-builder-setup#qt6-online" >}}) for details.
 
-```bash
-chmod +x qt-unified-linux-x64-4.6.1-online.run
-./qt-unified-linux-x64-4.6.1-online.run
-```
-
-Note that the Qt online installer requires you to register an account.
-
-Also, you can [build Qt Creator from Git](https://wiki.qt.io/Building_Qt_Creator_from_Git).
-</details>
-
-{{< alert title="Note" color="info" >}}
-This article assumes you use KDE Builder. The older tool kdesrc-build does not support Qt Creator configuration generation.
-{{< /alert >}}
+You may also [build Qt Creator from Git](https://wiki.qt.io/Building_Qt_Creator_from_Git).
 
 ## KDE Builder configuration
 
-To allow kde-builder to generate Qt Creator project files, add the following to your `~/.config/kdesrc-buildrc`:
+To allow kde-builder to generate Qt Creator project files, set the following to your `~/.config/kde-builder.yaml`:
 
 ```
-global
-  # other options
-  generate-qtcreator-project-config true
-end global
+generate-qtcreator-project-config: true
 ```
 
 Instead of enabling the `generate-qtcreator-project-config` option globally, you may choose to enable it only for a single project:
 
 ```
-options kcalc
-  generate-qtcreator-project-config true
-end options
+override kcalc:
+  generate-qtcreator-project-config: true
 ```
 
 Ensure you have successfully built _kcalc_ following the kde-builder instructions.
 
-In case you enabled `generate-qtcreator-project-config` after you have built _kcalc_ previously, or do not want to edit your config, you can generate CLion 
+In case you enabled `generate-qtcreator-project-config` after you have already built _kcalc_, or in case you do not want to edit your config, you can generate QtCreator
 configs by running:
 
 ```
@@ -69,11 +78,11 @@ kde-builder kcalc --no-include-dependencies --no-src --build-system-only --gener
 
 ## Applying project configuration in Qt Creator
 
-Unfortunately, Qt Creator has limited abilities for generating project configuration externally (for more info, see
+Unfortunately, Qt Creator has limited abilities for generating project configuration externally (for more info, see the
 [kde-builder developer documentation](https://kde-builder.kde.org/en/developer/ide-configs-generation.html#qt-creator)).
 So the configuration is made half manually and half automatically.
 
-See official documentation: [Configuring Projects](https://doc.qt.io/qtcreator/creator-configuring-projects.html).
+See the official Qt documentation on [Configuring Projects](https://doc.qt.io/qtcreator/creator-configuring-projects.html).
 
 ### Opening project
 
@@ -83,7 +92,7 @@ From the Qt Creator main menu, select **File | Open File or Project** or press C
 In case you want to start configuration from scratch, just delete the generated `CMakeLists.txt.user` file and reopen a project.
 {{< /alert >}}
 
-See the official documentation: [Open projects](https://doc.qt.io/qtcreator/creator-project-opening.html).
+See the official Qt documentation on [Opening projects](https://doc.qt.io/qtcreator/creator-project-opening.html).
 
 ### Selecting Kit
 

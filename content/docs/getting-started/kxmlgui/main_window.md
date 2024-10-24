@@ -62,7 +62,7 @@ The best way to build the program is to use CMake. We add `mainwindow.cpp` to th
 You can repeat the same steps provided in the [KXmlGui Hello World]({{< ref "hello_world#kxmlgui-running" >}}) to build and install the application. You can then run the project with:
 
 ```bash
-kdesrc-build --run --exec mainwindow kxmlgui-tutorial
+kde-builder --run mainwindow
 ```
 
 or

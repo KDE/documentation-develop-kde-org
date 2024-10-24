@@ -190,16 +190,16 @@ This file is almost identical to the one for the [previous tutorial]({{< relref 
 
 ## Running our application
 
-You can repeat the same steps provided in {{< ref "hello_world#kxmlgui-running" >}} to build and install the application. You can then run the project with:
+You can repeat the same steps provided in [KXmlGui Hello World]({{< ref "hello_world#kxmlgui-running" >}}) to build and install the application. You can then run the project with:
 
 ```bash
-kdesrc-build --run --exec mainwindow kxmlgui-tutorial
+kde-builder --run texteditor
 ```
 
 or
 
 ```bash
-mainwindow
+texteditor
 ```
 
 As you might remember from the [KXmlGui Hello World]{{< ref "hello_world" >}}, when installing the project manually with CMake, we specified the `--prefix` flag:

@@ -13,7 +13,7 @@ aliases:
 Before getting started, we will need to install Kirigami on our machine. There are three ways to do so:
 
 * [Installing Kirigami from the repositories in your Linux distribution](#linux)
-* [Building Kirigami with kdesrc-build](#kdesrc-build)
+* [Building Kirigami with kde-builder](#kde-builder)
 * [Installing Kirigami with Craft](#craft)
 
 ### Installing Kirigami from the repositories in your Linux distribution {#linux}
@@ -28,18 +28,16 @@ sudo dnf install cmake extra-cmake-modules kf6-kirigami2-devel kf6-ki18n-devel k
 
 Further information for other distributions can be found [here](/docs/getting-started/building/help-dependencies).
 
-If you wish to build Kirigami with Qt6, it is recommended to use [kdesrc-build](#kdesrc-build) instead, especially for Linux installations using Plasma 5.
+### Building Kirigami with kde-builder {#kde-builder}
 
-### Building Kirigami with kdesrc-build {#kdesrc-build}
+KDE has a custom tool to easily build all of its libraries and programs: **kde-builder**. It can be used to build Kirigami on Linux and FreeBSD.
 
-KDE has a custom tool to easily build all of its libraries and programs: **kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD.
-
-For this tutorial, you will need to follow the [setup instructions for kdesrc-build](/docs/getting-started/building/kdesrc-build-setup).
+For this tutorial, you will need to follow the [setup instructions for kde-builder](/docs/getting-started/building/kde-builder-setup).
 
 After that, you may simply run the following on a terminal:
 
 ```bash
-kdesrc-build kirigami kcoreaddons ki18n breeze plasma-integration kiconthemes qqc2-desktop-style
+kde-builder kirigami kcoreaddons ki18n breeze plasma-integration kiconthemes qqc2-desktop-style
 ```
 
 ### Installing Kirigami with Craft {#craft}
@@ -88,7 +86,7 @@ touch kirigami-tutorial/src/{CMakeLists.txt,main.cpp,Main.qml}
 
 {{< alert title="Note" color="info" >}}
 
-In case you want to automatically build the project with kde-builder/kdesrc-build, custom module name should be the same as the project root folder (in our case it will be "kirigami-tutorial"), otherwise you would need to customize the `source-dir` or `dest-dir` for the module. We will assume the path to your `main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main.cpp`.
+In case you want to automatically build the project with kde-builder, custom module name should be the same as the project root folder (in our case it will be "kirigami-tutorial"), otherwise you would need to customize the `source-dir` or `dest-dir` for the module. We will assume the path to your `main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main.cpp`.
 
 {{< /alert >}}
 
@@ -141,7 +139,7 @@ It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Rever
 
 {{< alert title="Note" color="info" >}}
 
-Window and taskbar icons will work in a Wayland session only if apps' desktop files are placed in `~/.local/share/applications` or `/usr/share/applications`. To get icons working in this tutorial, either copy the app's desktop file there or switch to a development session as instructed in [kdesrc-build tutorial](/docs/getting-started/building/kdesrc-build-compile). Some KDE applications might have working icons if they were already installed on the system.
+Window and taskbar icons will work in a Wayland session only if apps' desktop files are placed in `~/.local/share/applications` or `/usr/share/applications`. To get icons working in this tutorial, either copy the app's desktop file there or switch to a development session as instructed in [kde-builder tutorial](/docs/getting-started/building/kde-builder-compile). Some KDE applications might have working icons if they were already installed on the system.
 
 {{< /alert >}}
 
@@ -237,22 +235,41 @@ We are almost at the finish line. The last thing we need to do is build and run 
 
 ### Linux or FreeBSD
 
-If you want kdesrc-build to handle building and installation of your project, you need to specify a custom module in your `$HOME/.config/kdesrc-buildrc`:
+If you want kde-builder to handle building and installation of your project, you need to:
+
+* move the project folder to `~/kde/src`, that is, `~/kde/src/kirigami-tutorial`
+* specify a custom module at the end of your `~/.config/kde-builder.yaml`:
 
 ```
-...
+project kirigami-tutorial:
+  no-src: true
+```
+
+{{< alert color="info" title="⏳ With kdesrc-build..." >}}
+
+<details>
+<summary>Click here to know how this was done with kdesrc-build</summary></br>
+
+This step used to be done by writing to `~/.config/kdesrc-buildrc` instead with a different syntax:
+
+```
+# after include ${module-definitions-dir}/kf6-qt6.ksb
 module kirigami-tutorial
     no-src
 end module
 ```
 
+</details>
+
+{{< /alert >}}
+
 Then you can build and install it with the command:
 
 ```bash
-kdesrc-build kirigami-tutorial
+kde-builder kirigami-tutorial
 ```
 
-In case you want to handle building and installation manually without kdesrc-build, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
+In case you want to handle building and installation manually without kde-builder, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
 
 ```bash
 cmake -B build/
