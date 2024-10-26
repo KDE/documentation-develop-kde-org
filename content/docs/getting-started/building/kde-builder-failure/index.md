@@ -34,7 +34,7 @@ Sometimes a project has suffered big enough changes to its code that its cache s
 To clear the cache, you can use the `--refresh-build` flag:
 
 ```
-kde-builder [failing module] --refresh-build
+kde-builder [failing module] --refresh-build --no-include-dependencies
 ```
 
 ### Broken master branch
