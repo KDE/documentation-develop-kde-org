@@ -24,7 +24,7 @@ That page will also tell you how to search for dependencies in your distribution
 When you have the necessary dependencies, you can save time and resume from the failing module with the `--resume-from` flag:
 
 ```
-kde-builder --resume-from [the name of the module that failed]
+kde-builder [module you want to build] --resume-from [the module that failed]
 ```
 
 ### Old cache
