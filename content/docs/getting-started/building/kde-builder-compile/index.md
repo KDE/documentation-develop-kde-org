@@ -206,10 +206,10 @@ kde-builder --no-include-dependencies --no-src kcalc
 
 Sometimes a particular program somewhere down the dependency chain fails to build and isn't strictly required for a certain project to compile properly, or sometimes you want to use the program installed from your distribution.
 
-In that case, you can avoid building a project by using the `--ignore-modules` flag, which should come after the module name:
+In that case, you can avoid building a project by using the `--ignore-projects` flag, which should come after the module name:
 
 ```bash
-kde-builder kcalc --ignore-modules gpgme
+kde-builder kcalc --ignore-projects gpgme
 ```
 
 ### Specifying executable names when running
