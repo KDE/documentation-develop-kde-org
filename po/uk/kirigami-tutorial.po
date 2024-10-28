@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 01:51+0000\n"
-"PO-Revision-Date: 2024-09-03 08:37+0300\n"
+"PO-Revision-Date: 2024-10-27 12:58+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -6726,10 +6726,8 @@ msgstr ""
 "(#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgid "[Building Kirigami with kde-builder](#kde-builder)"
-msgstr "[Збирання Kirigami за допомогою kdesrc-build](#kdesrc-build)"
+msgstr "[Збирання Kirigami за допомогою kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6758,35 +6756,25 @@ msgstr ""
 "started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid "Building Kirigami with kdesrc-build"
 msgid "Building Kirigami with kde-builder"
-msgstr "Збирання Kirigami за допомогою kdesrc-build"
+msgstr "Збирання Kirigami за допомогою kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-#, fuzzy
-#| msgid ""
-#| "KDE has a custom tool to easily build all of its libraries and programs: "
-#| "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 "У KDE передбачено нетиповий інструмент для спрощення збирання усіх бібліотек "
-"і програм: **kdesrc-build**. Ним можна скористатися для збирання Kirigami у "
+"і програм: **kde-builder**. Ним можна скористатися для збирання Kirigami у "
 "Linux і FreeBSD."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
-#, fuzzy
-#| msgid ""
-#| "For this tutorial, you will need to follow the [setup instructions for "
-#| "kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgid ""
 "For this tutorial, you will need to follow the [setup instructions for kde-"
 "builder](/docs/getting-started/building/kde-builder-setup)."
 msgstr ""
-"Для цього підручника вам слід виконати [настанови з налаштовування kdesrc-"
-"build](/docs/getting-started/building/kdesrc-build-setup)."
+"Для цього підручника вам слід виконати [настанови з налаштовування kde-"
+"builder](/docs/getting-started/building/kde-builder-setup)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:49
@@ -6871,14 +6859,6 @@ msgstr ""
 "разом із виконуваним файлом."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:89
-#, fuzzy
-#| msgid ""
-#| "In case you want to automatically build the project with kde-builder/"
-#| "kdesrc-build, custom module name should be the same as the project root "
-#| "folder (in our case it will be \"kirigami-tutorial\"), otherwise you "
-#| "would need to customize the `source-dir` or `dest-dir` for the module. We "
-#| "will assume the path to your `main.cpp` will be `$HOME/kde/src/kirigami-"
-#| "tutorial/src/main.cpp`."
 msgid ""
 "In case you want to automatically build the project with kde-builder, custom "
 "module name should be the same as the project root folder (in our case it "
@@ -6886,11 +6866,11 @@ msgid ""
 "`source-dir` or `dest-dir` for the module. We will assume the path to your "
 "`main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main.cpp`."
 msgstr ""
-"Якщо ви хочете автоматично збирати проєкт за допомогою kde-builder/kdesrc-"
-"build, нетипова назва модуля має бути такою, як назва кореневої теки проєкту "
-"(у нашому випадку, це буде «kirigami-tutorial»). Якщо це не так, вам слід "
-"змінити `source-dir` або `dest-dir` для модуля. Ми припускатимемо, що шляхом "
-"до вашого `main.cpp` буде `$HOME/kde/src/kirigami-tutorial/src/main.cpp`."
+"Якщо ви хочете автоматично збирати проєкт за допомогою kde-builder, нетипова "
+"назва модуля має бути такою, як назва кореневої теки проєкту (у нашому "
+"випадку, це буде «kirigami-tutorial»). Якщо це не так, вам слід змінити "
+"`source-dir` або `dest-dir` для модуля. Ми припускатимемо, що шляхом до "
+"вашого `main.cpp` буде `$HOME/kde/src/kirigami-tutorial/src/main.cpp`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:93
 msgid "Main.qml"
@@ -7112,15 +7092,6 @@ msgstr ""
 "наприклад `org.kde.tutorial.desktop`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:142
-#, fuzzy
-#| msgid ""
-#| "Window and taskbar icons will work in a Wayland session only if apps' "
-#| "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
-#| "applications`. To get icons working in this tutorial, either copy the "
-#| "app's desktop file there or switch to a development session as instructed "
-#| "in [kdesrc-build tutorial](/docs/getting-started/building/kdesrc-build-"
-#| "compile). Some KDE applications might have working icons if they were "
-#| "already installed on the system."
 msgid ""
 "Window and taskbar icons will work in a Wayland session only if apps' "
 "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
@@ -7134,8 +7105,8 @@ msgstr ""
 "файл desktop програми зберігаються у `~/.local/share/applications` або `/usr/"
 "share/applications`. Щоб працювали піктограми з цього розділу підручника, "
 "або скопіюйте файл desktop до одного з цих каталогів, або перемкніться на "
-"сеанс розробника, як описано у [підручнику з kdesrc-build](/docs/getting-"
-"started/building/kdesrc-build-compile). Піктограми деяких програм KDE "
+"сеанс розробника, як описано у [підручнику з kde-builder](/docs/getting-"
+"started/building/kde-builder-compile). Піктограми деяких програм KDE "
 "працюватимуть, якщо їх вже встановлено у системі."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:146
@@ -7415,67 +7386,53 @@ msgid "Linux or FreeBSD"
 msgstr "Linux або FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:238
-#, fuzzy
-#| msgid ""
-#| "If you want kdesrc-build to handle building and installation of your "
-#| "project, you need to specify a custom module in your `$HOME/.config/"
-#| "kdesrc-buildrc`:"
 msgid ""
 "If you want kde-builder to handle building and installation of your project, "
 "you need to:"
 msgstr ""
 "Якщо ви хочете, щоб збиранням і встановленням вашого проєкту займалася "
-"програма kdesrc-build, вам слід вказати нетиповий модуль у вашому файлі `"
-"$HOME/.config/kdesrc-buildrc`:"
+"програма kde-builder, вам слід виконати такі дії:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:240
 msgid ""
 "move the project folder to `~/kde/src`, that is, `~/kde/src/kirigami-"
 "tutorial`"
 msgstr ""
+"пересуньте теку проєкту до `~/kde/src`, тобто, `~/kde/src/kirigami-tutorial`"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:241
 msgid ""
 "specify a custom module at the end of your `~/.config/kde-builder.yaml`:"
 msgstr ""
+"вкажіть нетиповий модуль наприкінці вашого `~/.config/kde-builder.yaml`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:248
-#, fuzzy
-#| msgid "On Linux, with kdesrc-build"
 msgid "⏳ With kdesrc-build..."
-msgstr "У Linux за допомогою kdesrc-build"
+msgstr "⏳ За допомогою kdesrc-build…"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:250
-#, fuzzy
-#| msgid ""
-#| "<details>\n"
-#| "<summary>Click here to read more</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>Click here to know how this was done with kdesrc-build</summary></"
 "br>\n"
 msgstr ""
 "<details>\n"
-"<summary>Натисніть тут, щоб дізнатися більше</summary>\n"
+"<summary>Натисніть, щоб дізнатися про те, як це можна зробити за допомогою "
+"kdesrc-build</summary></br>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:253
 msgid ""
 "This step used to be done by writing to `~/.config/kdesrc-buildrc` instead "
 "with a different syntax:"
 msgstr ""
+"Цей крок виконується записуванням до `~/.config/kdesrc-buildrc` із іншими "
+"синтаксисом:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:266
 msgid "Then you can build and install it with the command:"
 msgstr "Далі, ви можете зібрати і встановити його за допомогою такої команди:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:272
-#, fuzzy
-#| msgid ""
-#| "In case you want to handle building and installation manually without "
-#| "kdesrc-build, you will need to specify the place where the program will "
-#| "be installed. To do that, we need to change directories to our `kirigami-"
-#| "tutorial/` folder in our terminal application of choice and run the "
-#| "following commands:"
 msgid ""
 "In case you want to handle building and installation manually without kde-"
 "builder, you will need to specify the place where the program will be "
@@ -7483,7 +7440,7 @@ msgid ""
 "tutorial/` folder in our terminal application of choice and run the "
 "following commands:"
 msgstr ""
-"Якщо ви захочете виконати збирання і встановлення вручну, без kdesrc-build, "
+"Якщо ви захочете виконати збирання і встановлення вручну, без kde-builder, "
 "вам слід вказати місце, куди буде встановлено програму. Для цього нам слід "
 "перейти до каталогу `kirigami-tutorial/` у нашій програмі-терміналі і "
 "віддати такі команди:"

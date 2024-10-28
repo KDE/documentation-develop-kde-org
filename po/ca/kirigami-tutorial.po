@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 01:51+0000\n"
-"PO-Revision-Date: 2024-10-17 20:01+0200\n"
+"PO-Revision-Date: 2024-10-27 09:48+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -6917,10 +6917,8 @@ msgstr ""
 "Linux](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgid "[Building Kirigami with kde-builder](#kde-builder)"
-msgstr "[Construir el Kirigami amb «kdesrc-build»](#kdesrc-build)"
+msgstr "[Construir el Kirigami amb «kde-builder»](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6951,36 +6949,26 @@ msgstr ""
 "started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid "Building Kirigami with kdesrc-build"
 msgid "Building Kirigami with kde-builder"
-msgstr "Construcció del Kirigami amb «kdesrc-build»"
+msgstr "Construcció del Kirigami amb «kde-builder»"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-#, fuzzy
-#| msgid ""
-#| "KDE has a custom tool to easily build all of its libraries and programs: "
-#| "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 "KDE té una eina personalitzada per a construir fàcilment totes les seves "
-"biblioteques i programes: **kdesrc-build**. Es pot utilitzar per a construir "
+"biblioteques i programes: **kde-builder**. Es pot utilitzar per a construir "
 "el Kirigami al Linux i al FreeBSD."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
-#, fuzzy
-#| msgid ""
-#| "For this tutorial, you will need to follow the [setup instructions for "
-#| "kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgid ""
 "For this tutorial, you will need to follow the [setup instructions for kde-"
 "builder](/docs/getting-started/building/kde-builder-setup)."
 msgstr ""
 "Per a aquesta guia d'aprenentatge cal seguir les [instruccions de "
-"configuració del «kdesrc-build»](/docs/getting-started/building/kdesrc-build-"
+"configuració del «kde-builder»](/docs/getting-started/building/kde-builder-"
 "setup)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
@@ -7071,14 +7059,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe, common-tutorial
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:89
-#, fuzzy
-#| msgid ""
-#| "In case you want to automatically build the project with kde-builder/"
-#| "kdesrc-build, custom module name should be the same as the project root "
-#| "folder (in our case it will be \"kirigami-tutorial\"), otherwise you "
-#| "would need to customize the `source-dir` or `dest-dir` for the module. We "
-#| "will assume the path to your `main.cpp` will be `$HOME/kde/src/kirigami-"
-#| "tutorial/src/main.cpp`."
 msgid ""
 "In case you want to automatically build the project with kde-builder, custom "
 "module name should be the same as the project root folder (in our case it "
@@ -7086,11 +7066,11 @@ msgid ""
 "`source-dir` or `dest-dir` for the module. We will assume the path to your "
 "`main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main.cpp`."
 msgstr ""
-"En cas que vulgueu construir automàticament el projecte amb el kde-builder/"
-"kdesrc-build, el nom del mòdul personalitzat hauria de ser el mateix que la "
-"carpeta arrel del projecte (en el nostre cas serà «kirigami-tutorial»), en "
-"cas contrari hauríeu de personalitzar el `source-dir` o `dest-dir` per al "
-"mòdul. Assumirem que el camí cap al `main.cpp` serà `$HOME/kde/src/kirigami-"
+"En cas que vulgueu construir automàticament el projecte amb el kde-builder, "
+"el nom del mòdul personalitzat hauria de ser el mateix que la carpeta arrel "
+"del projecte (en el nostre cas serà «kirigami-tutorial»), en cas contrari "
+"hauríeu de personalitzar el `source-dir` o `dest-dir` per al mòdul. "
+"Assumirem que el camí cap al `main.cpp` serà `$HOME/kde/src/kirigami-"
 "tutorial/src/main.cpp`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:93
@@ -7325,15 +7305,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:142
-#, fuzzy
-#| msgid ""
-#| "Window and taskbar icons will work in a Wayland session only if apps' "
-#| "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
-#| "applications`. To get icons working in this tutorial, either copy the "
-#| "app's desktop file there or switch to a development session as instructed "
-#| "in [kdesrc-build tutorial](/docs/getting-started/building/kdesrc-build-"
-#| "compile). Some KDE applications might have working icons if they were "
-#| "already installed on the system."
 msgid ""
 "Window and taskbar icons will work in a Wayland session only if apps' "
 "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
@@ -7348,8 +7319,8 @@ msgstr ""
 "col·loquen a `~/.local/share/applications` o `/usr/share/applications`. Per "
 "a aconseguir icones que funcionin en aquesta guia d'aprenentatge, copieu el "
 "fitxer «desktop» de l'aplicació o canvieu a una sessió de desenvolupament "
-"com s'indica en la [guia d'aprenentatge de kdesrc-build](/docs/getting-"
-"started/building/kdesrc-build-compile). Algunes aplicacions de KDE podrien "
+"com s'indica en la [guia d'aprenentatge del «kde-builder»](/docs/getting-"
+"started/building/kde-builder-compile). Algunes aplicacions de KDE podrien "
 "tenir icones funcionant si ja estaven instal·lades al sistema."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:146
@@ -7640,56 +7611,53 @@ msgstr ""
 msgid "Linux or FreeBSD"
 msgstr "Linux o FreeBSD"
 
-# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:238
-#, fuzzy
-#| msgid ""
-#| "If you want kdesrc-build to handle building and installation of your "
-#| "project, you need to specify a custom module in your `$HOME/.config/"
-#| "kdesrc-buildrc`:"
 msgid ""
 "If you want kde-builder to handle building and installation of your project, "
 "you need to:"
 msgstr ""
-"Si voleu que el «kdesrc-build» gestioni la construcció i la instal·lació del "
-"vostre projecte, haureu d'especificar un mòdul personalitzat en el vostre `"
-"$HOME/.config/kdesrc-buildrc`:"
+"Si voleu que el «kde-builder» gestioni la construcció i la instal·lació del "
+"vostre projecte, cal:"
 
+# skip-rule: t-acc_obe, common-tutorial
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:240
 msgid ""
 "move the project folder to `~/kde/src`, that is, `~/kde/src/kirigami-"
 "tutorial`"
 msgstr ""
+"moure la carpeta del projecte a `~/kde/src`, això és, `~/kde/src/kirigami-"
+"tutorial`"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:241
 msgid ""
 "specify a custom module at the end of your `~/.config/kde-builder.yaml`:"
 msgstr ""
+"especificar un mòdul personalitzat al final del vostre `~/.config/kde-"
+"builder.yaml`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:248
-#, fuzzy
-#| msgid "On Linux, with kdesrc-build"
 msgid "⏳ With kdesrc-build..."
-msgstr "Al Linux, amb «kdesrc-build»"
+msgstr "⏳ Amb el «kdesrc-build»..."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:250
-#, fuzzy
-#| msgid ""
-#| "<details>\n"
-#| "<summary>Click here to read more</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>Click here to know how this was done with kdesrc-build</summary></"
 "br>\n"
 msgstr ""
 "<details>\n"
-"<summary>Feu clic aquí per a llegir-ne més</summary>\n"
+"<summary>Feu clic aquí per a conèixer com s'ha fet amb el «kdesrc-build»</"
+"summary>\n"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:253
 msgid ""
 "This step used to be done by writing to `~/.config/kdesrc-buildrc` instead "
 "with a different syntax:"
 msgstr ""
+"Aquest pas es feia escrivint a `~/.config/kdesrc-buildrc` amb una sintaxi "
+"diferent:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:266
 msgid "Then you can build and install it with the command:"
@@ -7697,13 +7665,6 @@ msgstr "A continuació podeu construir-lo i instal·lar-lo amb l'ordre:"
 
 # skip-rule: t-acc_obe, common-tutorial
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:272
-#, fuzzy
-#| msgid ""
-#| "In case you want to handle building and installation manually without "
-#| "kdesrc-build, you will need to specify the place where the program will "
-#| "be installed. To do that, we need to change directories to our `kirigami-"
-#| "tutorial/` folder in our terminal application of choice and run the "
-#| "following commands:"
 msgid ""
 "In case you want to handle building and installation manually without kde-"
 "builder, you will need to specify the place where the program will be "
@@ -7712,7 +7673,7 @@ msgid ""
 "following commands:"
 msgstr ""
 "En cas que vulgueu gestionar la construcció i la instal·lació manualment "
-"sense el «kdesrc-build», haureu d'especificar el lloc on s'instal·larà el "
+"sense el «kde-builder», haureu d'especificar el lloc on s'instal·larà el "
 "programa. Per a fer-ho, necessitem canviar els directoris a la nostra "
 "carpeta `kirigami-tutorial/` a l'aplicació de terminal de la nostra elecció "
 "i executar les ordres següents:"

@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 01:51+0000\n"
-"PO-Revision-Date: 2024-09-06 13:12+0200\n"
+"PO-Revision-Date: 2024-10-27 16:27+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -6757,10 +6757,8 @@ msgstr ""
 "[Kirigami installeren uit de opslagruimte in uw Linux distributie](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgid "[Building Kirigami with kde-builder](#kde-builder)"
-msgstr "[Kirigami bouwen met kdesrc-build](#kdesrc-build)"
+msgstr "[Kirigami bouwen met kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6789,35 +6787,25 @@ msgstr ""
 "building/help-dependencies) te vinden."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid "Building Kirigami with kdesrc-build"
 msgid "Building Kirigami with kde-builder"
-msgstr "Kirigami bouwen met kdesrc-build"
+msgstr "Kirigami bouwen met kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
-#, fuzzy
-#| msgid ""
-#| "KDE has a custom tool to easily build all of its libraries and programs: "
-#| "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
 msgid ""
 "KDE has a custom tool to easily build all of its libraries and programs: "
 "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
 msgstr ""
 "KDE heeft een eigen hulpmiddel om gemakkelijk al zijn bibliotheken en "
-"programma's te bouwen: **kdesrc-build**. Het kan gebruikt worden om Kirigami "
+"programma's te bouwen: **kde-builder**. Het kan gebruikt worden om Kirigami "
 "op Linux en FreeBSD te bouwen."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
-#, fuzzy
-#| msgid ""
-#| "For this tutorial, you will need to follow the [setup instructions for "
-#| "kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
 msgid ""
 "For this tutorial, you will need to follow the [setup instructions for kde-"
 "builder](/docs/getting-started/building/kde-builder-setup)."
 msgstr ""
-"Voor deze inleiding moet u de [opzetinstructies voor kdesrc-build](/docs/"
-"getting-started/building/kdesrc-build-setup) volgen."
+"Voor deze inleiding moet u de [opzetinstructies voor kde-builder](/docs/"
+"getting-started/building/kde-builder-setup) volgen."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:49
@@ -6902,14 +6890,6 @@ msgstr ""
 "`Main.qml` erin omdat het tegelijk met het uitvoerbare bestand zal draaien."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:89
-#, fuzzy
-#| msgid ""
-#| "In case you want to automatically build the project with kde-builder/"
-#| "kdesrc-build, custom module name should be the same as the project root "
-#| "folder (in our case it will be \"kirigami-tutorial\"), otherwise you "
-#| "would need to customize the `source-dir` or `dest-dir` for the module. We "
-#| "will assume the path to your `main.cpp` will be `$HOME/kde/src/kirigami-"
-#| "tutorial/src/main.cpp`."
 msgid ""
 "In case you want to automatically build the project with kde-builder, custom "
 "module name should be the same as the project root folder (in our case it "
@@ -6917,12 +6897,12 @@ msgid ""
 "`source-dir` or `dest-dir` for the module. We will assume the path to your "
 "`main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main.cpp`."
 msgstr ""
-"In het geval dat u automatisch het project met kde-builder/kdesrc-build wilt "
-"bouwen, dan moet de naam van de eigen module hetzelfde zijn als de basismap "
-"van het project (in ons geval zal dit zijn \"kirigami-tutorial\"), anders "
-"moet u de `source-dir` of `dest-dir` voor de module aanpassen. We nemen aan "
-"dat het pad naar uw hoofd `main.cpp` zal zijn `$HOME/kde/src/kirigami-"
-"tutorial/src/main.cpp`."
+"In het geval dat u automatisch het project met kde-builder wilt bouwen, dan "
+"moet de naam van de eigen module hetzelfde zijn als de basismap van het "
+"project (in ons geval zal dit zijn \"kirigami-tutorial\"), anders moet u de "
+"`source-dir` of `dest-dir` voor de module aanpassen. We nemen aan dat het "
+"pad naar uw hoofd `main.cpp` zal zijn `$HOME/kde/src/kirigami-tutorial/src/"
+"main.cpp`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:93
 msgid "Main.qml"
@@ -7143,15 +7123,6 @@ msgstr ""
 "zoals `org.kde.tutorial.desktop`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:142
-#, fuzzy
-#| msgid ""
-#| "Window and taskbar icons will work in a Wayland session only if apps' "
-#| "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
-#| "applications`. To get icons working in this tutorial, either copy the "
-#| "app's desktop file there or switch to a development session as instructed "
-#| "in [kdesrc-build tutorial](/docs/getting-started/building/kdesrc-build-"
-#| "compile). Some KDE applications might have working icons if they were "
-#| "already installed on the system."
 msgid ""
 "Window and taskbar icons will work in a Wayland session only if apps' "
 "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
@@ -7166,7 +7137,7 @@ msgstr ""
 "applications` of `/usr/share/applications`. Om pictogrammen in deze "
 "handleiding werkend te krijgen, ofwel kopieer het desktop-bestand van de "
 "toepassing daar of schakel om naar een ontwikkelsessie zoals geïnstrueerd in "
-"[inleiding van kdesrc-build](/docs/getting-started/building/kdesrc-build-"
+"[inleiding van kde-builder](/docs/getting-started/building/kde-builder-"
 "compile). Sommige KDE toepassingen zouden werkende pictogrammen kunnen "
 "hebben als ze al zijn geïnstalleerd in het systeem."
 
@@ -7450,67 +7421,53 @@ msgid "Linux or FreeBSD"
 msgstr "Linux of FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:238
-#, fuzzy
-#| msgid ""
-#| "If you want kdesrc-build to handle building and installation of your "
-#| "project, you need to specify a custom module in your `$HOME/.config/"
-#| "kdesrc-buildrc`:"
 msgid ""
 "If you want kde-builder to handle building and installation of your project, "
 "you need to:"
 msgstr ""
-"Als u wilt dat kdesrc-build het bouwen en installeren van uw project "
-"afhandelt, dan moet u een aangepaste module in uw `$HOME/.config/kdesrc-"
-"buildrc` opgeven:"
+"Als u wilt dat kde-builder het bouwen en installeren van uw project "
+"afhandelt, dan moet u:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:240
 msgid ""
 "move the project folder to `~/kde/src`, that is, `~/kde/src/kirigami-"
 "tutorial`"
-msgstr ""
+msgstr "de projectmap naar `~/kde/src`, dat is, `~/kde/src/kirigami-tutorial`"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:241
 msgid ""
 "specify a custom module at the end of your `~/.config/kde-builder.yaml`:"
 msgstr ""
+"specificeer een aangepaste module aan het eind van uw `~/.config/kde-builder."
+"yaml`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:248
-#, fuzzy
-#| msgid "On Linux, with kdesrc-build"
 msgid "⏳ With kdesrc-build..."
-msgstr "Op Linux, met kdesrc-build"
+msgstr "⏳ Met kdesrc-build..."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:250
-#, fuzzy
-#| msgid ""
-#| "<details>\n"
-#| "<summary>Click here to read more</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>Click here to know how this was done with kdesrc-build</summary></"
 "br>\n"
 msgstr ""
 "<details>\n"
-"<summary>Klik hier om meer te lezen</summary>\n"
+"<summary>Klik hier om meer te weten hoe dt is gedaan met kdesrc-build</"
+"summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:253
 msgid ""
 "This step used to be done by writing to `~/.config/kdesrc-buildrc` instead "
 "with a different syntax:"
 msgstr ""
+"Deze stap werd gedaan door in plaats daarvan te schrijven naar `~/.config/"
+"kdesrc-buildrc` met een andere syntaxis:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:266
 msgid "Then you can build and install it with the command:"
 msgstr "Daarna kan u bouwen en installeren met het commando:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:272
-#, fuzzy
-#| msgid ""
-#| "In case you want to handle building and installation manually without "
-#| "kdesrc-build, you will need to specify the place where the program will "
-#| "be installed. To do that, we need to change directories to our `kirigami-"
-#| "tutorial/` folder in our terminal application of choice and run the "
-#| "following commands:"
 msgid ""
 "In case you want to handle building and installation manually without kde-"
 "builder, you will need to specify the place where the program will be "
@@ -7518,11 +7475,10 @@ msgid ""
 "tutorial/` folder in our terminal application of choice and run the "
 "following commands:"
 msgstr ""
-"In geval u het bouwen en installeren handmatig wilt doen zonder kdesrc-"
-"build, dan hebt u de plaats nodig waar het programma geïnstalleerd zal "
-"worden. Om dat te doen moeten we de mappen naar onze map `kirigami-tutorial/"
-"` in onze gekozen terminaltoepassing wijzigen en de volgende commando's "
-"uitvoeren:"
+"In geval u het bouwen en installeren handmatig wilt doen zonder kde-builder, "
+"dan hebt u de plaats nodig waar het programma geïnstalleerd zal worden. Om "
+"dat te doen moeten we de mappen naar onze map `kirigami-tutorial/` in onze "
+"gekozen terminaltoepassing wijzigen en de volgende commando's uitvoeren:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:280
 msgid ""
