@@ -243,6 +243,17 @@ To do this, open the file `~/.config/kde-builder.yaml` and uncomment the line co
 qt-install-dir: ~/kde/qt
 ```
 
+Near the end of the file, add an override so you build Qt from the latest release instead of the development branch (the default):
+
+```yaml
+override qt6-set:
+  branch: 6.8
+```
+
+To find out the latest release of Qt, you can visit [KDE's Qt repository mirror](https://invent.kde.org/qt/qt/qt5) and check for the right branch:
+
+{{< figure class="text-center" src="qt-latest-release.png" alt="A screenshot of the main page of the Qt repository mirror showing the branch list that appears once you click on the combobox that has 'dev' written on it." >}}
+
 Then run:
 
 ```bash
