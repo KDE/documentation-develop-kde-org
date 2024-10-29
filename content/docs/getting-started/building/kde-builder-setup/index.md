@@ -239,7 +239,7 @@ If your Linux distribution does NOT provide recent versions of Qt packages, you 
 
 To do this, open the file `~/.config/kde-builder.yaml` and uncomment the line containing:
 
-```
+```yaml
 qt-install-dir: ~/kde/qt
 ```
 
