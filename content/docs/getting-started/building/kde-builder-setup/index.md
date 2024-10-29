@@ -231,11 +231,40 @@ The initial setup of kde-builder should have installed the required Qt6 packages
 If your Linux distribution does NOT provide recent versions of Qt packages, you have four options:
 
 * Use one of the alternative build methods mentioned in [Building KDE software]({{< ref "building" >}})
-* Build Qt6 using kde-builder
 * Install Qt6 using the Qt online installer
-* Switch distros to something [better suited for building KDE software from source code]({{< ref "building#choosing" >}})
+* Build Qt6 using kde-builder
+* Switch to a [more up-to-date distro]({{< ref "building#choosing" >}})
+
+### Use Qt6 from the online installer {#qt6-online}
+
+Instead of letting kde-builder build Qt for you, you may want to use the online installer that comes directly from Qt. To download Qt you will need to make an account.
+
+First, go to the [QtGroup website](https://www.qt.io/) and create an account.
+
+After creating your new Qt account, go to [Qt for Open Source Development](https://www.qt.io/download-open-source), click on "Download the Qt Online Installer", and follow the download process.
+
+Run the downloaded file, log in with your new Qt account, and follow the wizard to install Qt. During the installation, choose the option "Custom installation", and:
+
+* Uncheck "Qt Design Studio"
+* Uncheck "Qt Creator"
+* Click on the collapsible for the latest version of Qt or double-click it
+* Check "Desktop"
+
+This will install only the essential Qt libraries in `~/Qt` by default, occupying a little less than 2 GB of storage.
+
+Once installed, open the file `~/.config/kde-builder.yaml`, uncomment the line with `qt-install-dir: ~/kde/qt`, and change it to point to your Qt installation. The actual path should be similar to this, depending on your Qt version:
+
+```yaml
+qt-install-dir: ~/Qt/6.8.0/gcc_64
+```
+
+Once it is done, kde-builder will know to use the Qt provided by the online installer to build KDE software.
+
+If you ever need to install more Qt components, you can open the newly installed Qt Maintenance Tool available on the menu launcher.
 
 ### Build Qt6 using kde-builder {#build-qt6}
+
+It is possible to build Qt with kde-builder, but it will require a minimum of 30 GB of storage and have a long compilation time that may last up until a few hours depending on your machine.
 
 To do this, open the file `~/.config/kde-builder.yaml` and uncomment the line containing:
 
@@ -261,35 +290,6 @@ kde-builder qt6-set
 ```
 
 It will take quite a while. Once it is done, proceed to [Configure git]({{< ref "#configure-git" >}}).
-
-### Use Qt6 from the online installer {#qt6-online}
-
-Instead of letting kde-builder build Qt for you, you may want to use the online installer that comes directly from Qt. To download Qt you will need to make an account.
-
-First, go to the [QtGroup website](https://www.qt.io/) and create an account.
-
-After creating your new Qt account, go to [Qt for Open Source Development](https://www.qt.io/download-open-source), click on "Download the Qt Online Installer", and follow the download process.
-
-Run the downloaded file, log in with your new Qt account, and follow the wizard to install Qt. It will be installed in `~/Qt` by default.
-
-During the installation, you may deselect the following components that are not used by KDE software:
-
-* Qt Design Studio
-* WebAssembly
-* Android
-* Sources
-* Qt Quick 3D
-* Qt 3D
-* Qt Quick 3D Physics
-* Qt Debug Information Files
-
-Once installed, open the file `~/.config/kde-builder.yaml`, uncomment the line with `qt-install-dir: ~/kde/qt`, and change it to point to your Qt installation. The actual path should be similar to this, depending on your Qt version:
-
-```yaml
-qt-install-dir: ~/Qt/6.7.0/gcc_64
-```
-
-Once it is done, kde-builder will know to use the Qt provided by the online installer to build KDE software.
 
 ## Configure git
 
