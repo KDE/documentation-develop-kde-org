@@ -10,7 +10,6 @@ from PySide6.QtQml import QQmlApplicationEngine
 # from md_converter import MdConverter
 from simplemdviewer.md_converter import MdConverter  # noqa: F401
 
-
 def main():
     """Initializes and manages the application execution"""
     app = QGuiApplication(sys.argv)

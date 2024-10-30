@@ -1,7 +1,6 @@
 from markdown import markdown
 from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot, pyqtProperty
 
-
 class MdConverter(QObject):
     """A simple markdown converter"""
 

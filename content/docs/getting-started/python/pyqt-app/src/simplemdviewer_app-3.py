@@ -9,7 +9,6 @@ from PyQt6.QtQml import QQmlApplicationEngine, qmlRegisterType
 # from md_converter import MdConverter
 from simplemdviewer.md_converter import MdConverter
 
-
 def main():
     """Initializes and manages the application execution"""
     app = QGuiApplication(sys.argv)

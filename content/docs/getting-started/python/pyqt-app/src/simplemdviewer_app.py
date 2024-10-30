@@ -7,7 +7,6 @@ from PyQt6.QtGui import QGuiApplication
 from PyQt6.QtCore import QUrl
 from PyQt6.QtQml import QQmlApplicationEngine
 
-
 def main():
     """Initializes and manages the application execution"""
     app = QGuiApplication(sys.argv)

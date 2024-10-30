@@ -5,7 +5,6 @@ from PySide6.QtQml import QmlElement
 QML_IMPORT_NAME = "org.kde.simplemdviewer"
 QML_IMPORT_MAJOR_VERSION = 1
 
-
 @QmlElement
 class MdConverter(QObject):
     """A simple markdown converter"""

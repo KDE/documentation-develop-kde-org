@@ -11,7 +11,7 @@ description: >
 For the purposes of this tutorial, we will create the application on Linux.
 
 To use Python together with QML, we can use either [PySide](https://doc.qt.io/qtforpython-6/),
-the official Python bindings for the Qt framework or
+the official Python bindings for the Qt framework, or
 [PyQt](https://riverbankcomputing.com/software/pyqt/intro), a project by
 Riverbank Computing that allows you to write Qt applications using Python.
 
@@ -23,10 +23,12 @@ it easily. Any other dependencies can be installed from `pip` in a
 [Python virtual environment](https://docs.python.org/3/library/venv.html) later.
 
 {{< installpackage
-    opensuse="python3-qt6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style AppStream-compose"
-    fedora="python3-pyqt6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style appstream-compose"
-    arch="python-pyqt6 kirigami flatpak-builder qqc2-desktop-style appstream"
+    opensuse="python3-qt6 python3-pyside6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style AppStream-compose"
+    fedora="python3-pyqt6 python3-pyside6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style appstream-compose"
+    arch="python-pyqt6 pyside6 kirigami flatpak-builder qqc2-desktop-style appstream"
 >}}
+
+This tutorial works with our tutorial about [building software with distrobox]({{< ref "containers-distrobox" >}}).
 
 ## Structure
 
@@ -67,13 +69,13 @@ simplemdviewer/
         └── main.qml
 ```
 
-{{< alert title="Tip" color="success" >}}
+{{< alert title="💡 Tip" color="success" >}}
 
 To quickly generate this folder structure, just run: `mkdir -p simplemdviewer/src/qml/`
 
 {{< /alert >}}
 
-## Development
+## Setting up the project
 
 The UI will be created in QML and the logic in Python. Users will write some
 Markdown text, press a button, and the formatted text will be shown below it.
@@ -90,7 +92,7 @@ cd simplemdviewer
 python3 -m venv --system-site-packages env/
 ```
 
-Activate it using the activate script:
+A new virtual environment will be created in `env/`, pulling the required Python modules straight from your distribution packages. Activate it using the activate script:
 
 ```bash
 source env/bin/activate
@@ -107,11 +109,11 @@ Create a new directory `simplemdviewer/src/` and add a new
 `simplemdviewer_app.py` file in this directory:
 
 {{< tabset-qt >}}
-{{< tab-qt tabName="PyQt6" >}}
-{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app.py" highlight="python" >}}
-{{< /tab-qt >}}
 {{< tab-qt tabName="PySide6" >}}
-{{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app.py" highlight="python" >}}
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app.py" highlight="python" emphasize="6-8" >}}
+{{< /tab-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
+{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app.py" highlight="python" emphasize="6-8" >}}
 {{< /tab-qt >}}
 {{< /tabset-qt >}}
 
@@ -129,6 +131,8 @@ Create a new `src/qml/main.qml` file that specifies the UI of the application:
 Older distributions such as Debian or Ubuntu LTS that do not have an up-to-date Kirigami might require lowering the Kirigami import version from `3.20` to `3.15` to run.
 {{< /alert >}}
 
+### First test run
+
 We have just created a new QML-Kirigami-Python application. Run it:
 
 ```bash
@@ -138,7 +142,7 @@ python3 simplemdviewer_app.py
 {{<figure src="simplemdviewer1.webp" class="text-center">}}
 
 At the moment we have not used any interesting Python stuff. In reality,
-the application can also run as a standalone QML one:
+the application can also run as a standalone QML app:
 
 ```bash
 QT_QUICK_CONTROLS_STYLE=org.kde.desktop qml main.qml
@@ -149,31 +153,49 @@ unformatted text into a text element.
 
 {{<figure src="simplemdviewer2.webp" class="text-center">}}
 
-OK, let’s add some Python logic: a simple Markdown converter in a
+### Adding Markdown functionality
+
+Let’s add some Python logic: a simple Markdown converter in a
 Python, [QObject](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QObject.html)
 derivative class.
 
-- Create a new `md_converter.py` file in the `simplemdviewer` directory:
+We need this to be a QObject-derived class in order to make use of Qt's powerful
+[signals and slots](https://doc.qt.io/qtforpython-6/overviews/signalsandslots.html).
+
+Create a new `md_converter.py` file in the `simplemdviewer/src/` directory:
 
 {{< tabset-qt >}}
-{{< tab-qt tabName="PyQt6" >}}
-{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/md_converter.py" highlight="python" >}}
-{{< /tab-qt >}}
 {{< tab-qt tabName="PySide6" >}}
-{{< readfile file="/content/docs/getting-started/python/pyside-app/src/md_converter.py" highlight="python" >}}
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/md_converter.py" highlight="python" emphasize="12 18 22 27" >}}
+{{< /tab-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
+{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/md_converter.py" highlight="python" emphasize="7 20-22 24" >}}
 {{< /tab-qt >}}
 {{< /tabset-qt >}}
 
-The `MdConverter` class contains the `_source_text` member
-variable. The `sourceText` property exposes `_source_text`
-to the QML system through the `readSourceText()` getter and the
-`setSourceText()` setter functions in PyQt. In PySide, Python-like
-setters and getters are used for this purpose.
+The `MdConverter` class contains the `_source_text` member variable.
+The `sourceText` property exposes `_source_text` to the QML system
+by using a getter/accessor and a setter/modifier.
+
+In the PySide6 case, we use a
+[Property decorator](https://realpython.com/python-property/#using-property-as-a-decorator) 
+(beginning with `@`) in lines 18 and 22. Note that the name of the
+function needs to be the same for both getter and setter: the getter
+is marked with `@Property` and the setter is marked as `functionName.setter`.
+
+In the PyQt6 case, we use a
+[Property as a function](https://realpython.com/python-property/#creating-attributes-with-property)
+by creating a property with the `pyqtProperty()` function in lines 20-22.
+Note that the name of the getter and setter needs to be different here.
 
 When setting the `sourceText` property, the `sourceTextChanged`
 [signal](https://doc.qt.io/qtforpython-6/overviews/signalsandslots.html#signals)
-is emitted to let QML know that the property has changed. The `mdFormat()`
-function returns the Markdown-formatted text and it has been declared as a
+is emitted to let QML know that the property has changed. Note that
+the `sourceTextChanged` needs to be marked with `notify=` before it can be
+emitted with `.emit()`.
+
+The `mdFormat()` function returns the Markdown-formatted
+text and it has been declared as a
 [slot](https://doc.qt.io/qtforpython-6/overviews/signalsandslots.html#slots)
 so as to be invokable by the QML code.
 
@@ -184,32 +206,35 @@ it in our virtual environment:
 python3 -m pip install markdown
 ```
 
-It is worth noting that in PySide, the Python decorator `@QmlElement`, along with
-the `QML_IMPORT_NAME` and `QML_IMPORT_MAJOR_VERSION` takes care of registering the
-class `MdConveter` with QML. In PyQt, this is done through the function
-`qmlRegisterType()` inside `simplemdviewer_app.py` as seen below.
-
-Update the `simplemdviewer_app.py` file to:
+Now, update the `simplemdviewer_app.py` file to:
 
 {{< tabset-qt >}}
-{{< tab-qt tabName="PyQt6" >}}
-{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app-2.py" highlight="python" >}}
-{{< /tab-qt >}}
 {{< tab-qt tabName="PySide6" >}}
-{{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app-2.py" highlight="python" >}}
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app-2.py" highlight="python" emphasize="9" >}}
+{{< /tab-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
+{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app-2.py" highlight="python" emphasize="8-9 23" >}}
 {{< /tab-qt >}}
 {{< /tabset-qt >}}
 
-In PyQt, the `qmlRegisterType()` function has registered the `MdConverter` type in the
-QML system, in the library `org.kde.simplemdviewer`, version 1.0. In PySide, this registration is done in the
-file where the class is defined i.e. `md_converter.py` through the `@QmlElement` decorator.
-The import name and version of `MdConverter` type is set through the variables `QML_IMPORT_NAME` and
-`QML_IMPORT_MAJOR_VERSION`. Finally, the Python import `from md_converter import MdConverter` in PySide's
-`simplemdviewer_app.py` takes care of making Python and QML engine aware of the `@QmlElement` decorator.
+The Python import `from md_converter import MdConverter` in
+`simplemdviewer_app.py` takes care of making both Python and the QML engine
+aware of the new `MdConverter`. In PySide we add `# noqa: F401` just so later on
+linters don't complain about the unused import. In PyQt the import is used in line 23.
+
+In PyQt, the `qmlRegisterType()` function registers the `MdConverter` type in the
+QML system, under the import name `org.kde.simplemdviewer`, version 1.0.
+
+In PySide, this registration is done in the file where the class is defined,
+namely through the `@QmlElement` decorator in `md_converter.py`. Let's revisit it:
+
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/md_converter.py" highlight="python" lines="10" emphasize="3 5-6 8" >}}
+
+The import name and version of the `MdConverter` type is set through the variables `QML_IMPORT_NAME` and `QML_IMPORT_MAJOR_VERSION`.
 
 Change `main.qml` to:
 
-{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/main-2.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/main-2.qml" highlight="qml" emphasize="5 25-29 52" >}}
 
 The updated QML code:
 
@@ -218,7 +243,9 @@ The updated QML code:
 3. updates the `onClicked` signal handler of the `Format` button to
 call the `mdFormat()` function of the converter object
 
-Finally, test your new application:
+### Final test run
+
+At last, test your new application:
 
 ```bash
 python3 simplemdviewer_app.py
