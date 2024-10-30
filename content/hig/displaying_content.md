@@ -52,10 +52,11 @@ Use bold text for the selected or actively-used list or grid item.
 
 
 ## Page vs Dialog vs OverlaySheet
-Pages are used for discrete units of content. To display a popup or dialog on top of a page, use [Kirigami.OverlaySheet](https://api.kde.org/frameworks/kirigami/html/classorg_1_1kde_1_1kirigami_1_1templates_1_1OverlaySheet.html) or one of the [Kirigami.Dialog](https://api.kde.org/frameworks/kirigami/html/search.html?query=dialog) classes:
+When everything doesn't fit on one page and some content is only contextually relevant, show it on demand using one of the following user interface elements:
 
-- Use `Kirigami.OverlaySheet` to display auxiliary views of read-only narrow scrollable content. Don't use it for getting input or if the content is not tall enough to be scrollable. And if the content is very wide, put it on a separate page instead.
-- For all other uses, including getting input from the user, use one of the `Kirigami.Dialog` classes.
+- Push a new Page on the page stack if the content will take up all or nearly all of the window or view area.
+- Use a [Kirigami.OverlaySheet](https://api.kde.org/frameworks/kirigami/html/classorg_1_1kde_1_1kirigami_1_1templates_1_1OverlaySheet.html) to display auxiliary views of read-only narrow scrollable content. Don't use it for getting input or if the content is never tall enough to be scrollable.
+- For all other uses — including getting input from the user — use one of the [Kirigami.Dialog](https://api.kde.org/frameworks/kirigami/html/search.html?query=dialog) classes.
 
 <!--TODO: move this info into a more general page on style, once we have one -->
 Whenever overlaying a popup, box, or dialog on top of the app's main content area, add a contrasting outline around the edge of the overlaid element. Without this, visual recognizability suffers when using a dark color scheme, and the popup can appear to blend into the background.
