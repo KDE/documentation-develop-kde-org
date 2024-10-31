@@ -36,6 +36,7 @@ If you're not familiar with the command line interface, you can [find tutorials 
 If you're a visual learner, we also provide [useful video tutorials](https://community.kde.org/Get_Involved/development/Video).
 
 The tool we will be using here for setting up a development environment and building KDE software is [kde-builder](https://kde-builder.kde.org/). It will let you set up your development environment and compile applications on Linux and FreeBSD.
+[Repo](https://invent.kde.org/sdk/kde-builder) [README with basic usage](https://invent.kde.org/sdk/kde-builder/-/blob/master/README.md)
 
 {{< alert title="💡 Keep in mind" color="success" >}}
 
@@ -60,6 +61,12 @@ Some Linux distributions do not provide development packages for [KDE Frameworks
 
 ## Set up kde-builder
 
+{{< alert title="About ~/.local/bin" color="info" >}}
+
+If you've done this before and want the brief step-by-step instructions, have a look at [the README](https://invent.kde.org/sdk/kde-builder/-/blob/master/README.md).
+
+{{< /alert >}}
+
 Let's set it up now! You will need many gigabytes of free disk space. Budget 50 GB of storage space for KDE Frameworks + KDE Plasma, and 10-30 GB more for some apps as well. Then run the following:
 
 ```bash
@@ -68,7 +75,7 @@ curl 'https://invent.kde.org/sdk/kde-builder/-/raw/master/scripts/initial_setup.
 bash initial_setup.sh
 ```
 
-kde-builder will install git, a few runtime packages, and will install its executable in your PATH so you can run it from the terminal, as in the next step.
+`kde-builder` will install git, a few runtime packages, and will install its executable in your PATH so you can run it from the terminal, as in the next step.
 
 After the initial setup, you will need to generate a configuration file for kde-builder. Run:
 
@@ -76,12 +83,12 @@ After the initial setup, you will need to generate a configuration file for kde-
 kde-builder --generate-config
 ```
 
-This will create a new file `~/.config/kde-builder.yaml`.
+This will create a new file `~/.config/kde-builder.yaml`. [Documentation](https://kde-builder.kde.org/en/configuration/config-file-overview.html) is available that lists all possible options and example values.
 
 {{< alert title="About ~/.local/bin" color="info" >}}
 
 <details>
-<summary>Click here if you experience problems with finding kde-builder in your PATH</summary></br>
+<summary>Click here if you experience problems with finding `kde-builder` in your PATH</summary></br>
 
 Some Linux distributions might not follow the [Freedesktop Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) that enforces that the `~/.local/bin` directory be added to the `$PATH`, which is required for an executable to show up in the terminal without its absolute path.
 
@@ -166,13 +173,30 @@ sudo apt update
 
 {{< /alert >}}
 
-While during initial setup kde-builder installed the essentials for itself to run, now, kde-builder will need to install the required distribution packages to build KDE software. To do that, run:
+While during initial setup, `kde-builder` installed the essentials for itself to run, now it will need to install the required distribution packages to build KDE software. To do that, run:
 
 ```bash
 kde-builder --install-distro-packages
 ```
 
-Now kde-builder is set up! 🎉
+Next, you'll want to test that things are set up correctly. Run this to verify kcalc is able to be built:
+
+```bash
+kde-builder --pretend kcalc
+```
+
+Finally, perform your first build.
+
+```shell
+kde-builder dolphin
+```
+
+This will build [Dolphin](https://apps.kde.org/dolphin/),
+the Plasma file manager and its KDE-based dependencies. We choose Dolphin
+since it is a good test case to exercise the whole build process.
+
+Now `kde-builder` is set up! 🎉
+These [common command line flags](https://kde-builder.kde.org/en/cmdline/cmdline-usage.html#commonly-used-command-line-options) may come in handy.
 
 {{< alert color="success" title="💡 A chance to contribute">}}
 
@@ -199,7 +223,7 @@ For details, see: [Install kdesrc-build](https://invent.kde.org/sdk/kdesrc-build
 
 ### Updating kde-builder
 
-Once in a while you will want to update kde-builder to get its latest changes. To do so, run the `initial_setup.sh` file that was created when installing kde-builder:
+Once in a while you will want to update `kde-builder` to get its latest changes. To do so, run the `initial_setup.sh` file that was created when installing kde-builder:
 
 ```bash
 cd ~
@@ -226,7 +250,7 @@ git pull
 
 Qt is the fundamental framework that is needed for pretty much all KDE development. A recent enough version of Qt 6, currently Qt version greater or equal to 6.7, is required to proceed.
 
-The initial setup of kde-builder should have installed the required Qt6 packages for you already, in which case you don't need to do anything and may skip directly to the [Configure git]({{< ref "#configure-git" >}}) section.
+The initial setup of `kde-builder` should have installed the required Qt6 packages for you already, in which case you don't need to do anything and may skip directly to the [Configure git]({{< ref "#configure-git" >}}) section.
 
 If your Linux distribution does NOT provide recent versions of Qt packages, you have four options:
 
@@ -237,7 +261,7 @@ If your Linux distribution does NOT provide recent versions of Qt packages, you 
 
 ### Use Qt6 from the online installer {#qt6-online}
 
-Instead of letting kde-builder build Qt for you, you may want to use the online installer that comes directly from Qt. To download Qt you will need to make an account.
+Instead of letting `kde-builder` build Qt for you, you may want to use the online installer that comes directly from Qt. To download Qt you will need to make an account.
 
 First, go to the [QtGroup website](https://www.qt.io/) and create an account.
 
@@ -258,7 +282,7 @@ Once installed, open the file `~/.config/kde-builder.yaml`, uncomment the line w
 qt-install-dir: ~/Qt/6.8.0/gcc_64
 ```
 
-Once it is done, kde-builder will know to use the Qt provided by the online installer to build KDE software.
+Once it is done, `kde-builder` will know to use the Qt provided by the online installer to build KDE software.
 
 If you ever need to install more Qt components, you can open the newly installed Qt Maintenance Tool available on the menu launcher.
 
@@ -293,7 +317,7 @@ It will take quite a while. Once it is done, proceed to [Configure git]({{< ref 
 
 ## Configure git
 
-The first thing we will need to do after having set up kde-builder is to configure git.
+The first thing we will need to do after having set up `kde-builder` is to configure git.
 
 Set your authorship information properly so that any changes you make to code can be properly attributed to you:
 
@@ -334,10 +358,10 @@ Your development environment is now set up and ready to build software.
 
 To recapitulate the essentials:
 
-1. You installed kde-builder.
-2. You generated a configuration file for it.
+1. You installed [kde-builder](https://kde-builder.kde.org/).
+2. You generated a [configuration file](https://kde-builder.kde.org/en/configuration/config-file-overview.html) for it.
 3. You installed the necessary packages to start building KDE software.
 4. You have set it up to use Qt (optional).
 5. You have set up git so you can start working on code.
 
-Time to learn how to use kde-builder to build software from source code!
+Time to learn how to use `kde-builder` to build software from source code!

@@ -16,7 +16,7 @@ aliases: kdesrc-build-compile
 the tool that was used previously for this tutorial, is no longer supported.
 
 While the tool is stable and still works for our veteran developers, if you are starting out with KDE development now, we recommend that you switch to
-[kde-builder](https://kde-builder.kde.org/). Once you run it for the first time after installation, it will ask whether you want to migrate your existing `kdesrc-buildrc` configuration file to the new `kde-builder.yaml` file.
+[kde-builder](https://kde-builder.kde.org/). Once you run it for the first time after installation, it will ask whether you want to migrate your existing `kdesrc-buildrc` configuration file to the new `kde-builder.yaml` [file](https://kde-builder.kde.org/en/configuration/config-file-overview.html).
 
 Any support questions related to this tutorial can be asked on the
 [KDE New Contributors](https://go.kde.org/matrix/#/#new-contributors:kde.org) group on
@@ -32,12 +32,12 @@ On this page, you will learn how to use KDE's `kde-builder` tool to build variou
 
 If you haven't set up kde-builder already, please follow the steps in [Set up a development environment]({{< ref "kde-builder-setup" >}}) before proceeding.
 
-It can take an hour or more to compile a KDE application, Framework, or Plasma itself for the first time. The reason for this is that `kde-builder` by default has the flag `--include-dependencies` enabled, so it will ignore all KDE packages that were installed using the distribution's package manager and will instead build from source all KDE modules that are dependencies of the module you told it to build. The next time you want to compile that or any other piece of KDE software, it will be much faster since most of the dependencies will have already been compiled.
+It can take an hour or more to compile a KDE application, Framework, or Plasma itself for the first time. The reason for this is that `kde-builder` by default has the [flag](https://kde-builder.kde.org/en/configuration/conf-options-table.html#conf-include-dependencies) `--include-dependencies` enabled, so it will ignore all KDE packages that were installed using the distribution's package manager and will instead build from source all KDE modules that are dependencies of the module you told it to build. The next time you want to compile that or any other piece of KDE software, it will be much faster since most of the dependencies will have already been compiled.
 
 If you don't want to build all dependencies (for instance if you are using a rolling release distro that provides recent versions of software), you can:
 
-* edit the configuration file `~/.config/kde-builder.yaml` and set `include-dependencies: false`
-* or add the `--no-include-dependencies` flag when running `kde-builder`
+* edit the [configuration file](https://kde-builder.kde.org/en/configuration/config-file-overview.html) `~/.config/kde-builder.yaml` and set `include-dependencies: false`
+* or add the `--no-include-dependencies` [flag](https://kde-builder.kde.org/en/cmdline/supported-cmdline-params.html#cmdline-include-dependencies) when running `kde-builder`
 
 ## Frameworks
 
