@@ -1,3 +1,38 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "org.kde.simplemdviewer"
+version = "0.1"
+authors = [{name = "Example Author", email = "example@author.org"}]
+maintainers = [{name = "Example Author", email = "example@author.org"}]
+description = "A simple markdown viewer"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Utilities",
+    "Programming Language :: Python",
+    "Operating System :: POSIX :: Linux",
+]
+keywords = ["viewer converter markdown"]
+urls = {Homepage = "https://mydomain.org/simplemdviewer"}
+dependencies = ["markdown"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.scripts]
+simplemdviewer = "simplemdviewer.simplemdviewer_app:main"
+
+[tool.setuptools]
+packages = ["simplemdviewer"]
+package-dir = {simplemdviewer = "src"}
+include-package-data = true
+
+[tool.setuptools.data-files]
+"share/applications" = ["org.kde.simplemdviewer.desktop"]
+"share/icons/hicolor/scalable/apps" = ["org.kde.simplemdviewer.svg"]
+"share/metainfo" = ["org.kde.simplemdviewer.metainfo.xml"]

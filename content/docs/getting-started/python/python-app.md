@@ -36,14 +36,12 @@ The application will be a simple Markdown viewer called `simplemdviewer`.
 
 By the end of the tutorial, the project will look like this:
 
-```
+```tree
 simplemdviewer/
 ├── README.md
 ├── LICENSE.txt
 ├── MANIFEST.in                        # To add our QML file
-├── pyproject.toml                     # To declare the tools needed to build
-├── setup.py                           # To import setuptools
-├── setup.cfg                          # The setuptools metadata
+├── pyproject.toml                     # The main file to manage the project
 ├── org.kde.simplemdviewer.desktop
 ├── org.kde.simplemdviewer.json
 ├── org.kde.simplemdviewer.svg

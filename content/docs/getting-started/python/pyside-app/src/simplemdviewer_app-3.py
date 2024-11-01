@@ -6,7 +6,6 @@ import signal
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtCore import QUrl
 from PySide6.QtQml import QQmlApplicationEngine
-
 # from md_converter import MdConverter
 from simplemdviewer.md_converter import MdConverter  # noqa: F401
 
