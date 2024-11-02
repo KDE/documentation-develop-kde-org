@@ -58,6 +58,21 @@ The following four sections of the pyproject.toml are fairly straightforward:
 * `[project.readme]` specifies a default README file for the project in Markdown
 * `[tool.setuptools.data-files]` mentions where setuptools should install additional data files that are not typically present in a Python package
 
+{{< alert title="Note" color="info" >}}
+
+Previously, this tutorial used a combination of `setup.py` to initialize setuptools,
+`setup.cfg` to manage metadata and package information, and `pyproject.toml`
+to specify dependencies. However, [PEP 621](https://peps.python.org/pep-0621/)
+has defined `pyproject.toml` as the main way to specify a project's metadata,
+and setuptools has transitioned to
+[using pyproject.toml as a declarative way to define package information](https://setuptools.pypa.io/en/latest/userguide/quickstart.html#transitioning-from-setup-py-to-declarative-config).
+
+It is no longer necessary to initialize setuptools with a `setup.py` script,
+and all metadata, package information, and dependencies are listed
+in the `pyproject.toml` instead.
+
+{{< /alert >}}
+
 ## App metadata
 
 Let's start with the metadata first so we can get it out of the way, namely the ones listed in the sections `[project.readme]` and `[tool.setuptools.data-files]`.
