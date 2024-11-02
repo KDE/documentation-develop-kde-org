@@ -22,21 +22,13 @@ flatpak manifest, which describes everything needed to build the package.
 Create a new flatpak manifest file `simplemdviewer/org.kde.simplemdviewer.json`:
 
 {{< tabset-qt >}}
-{{< tab-qt tabName="PyQt6" >}}
-{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/org.kde.simplemdviewer.json" highlight="json" >}}
-{{< /tab-qt >}}
 {{< tab-qt tabName="PySide6" >}}
-{{< readfile file="/content/docs/getting-started/python/pyside-app/src/org.kde.simplemdviewer.json" highlight="json" >}}
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/org.kde.simplemdviewer.json" highlight="json" emphasize="3-7 17 22 27" >}}
+{{< /tab-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
+{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/org.kde.simplemdviewer.json" highlight="json" emphasize="3-7 17 22 27" >}}
 {{< /tab-qt >}}
 {{< /tabset-qt >}}
-
-{{< alert title="Note" color="info" >}}
-
-The Flatpak manifest for PySide uses the version 6.7 for the runtime and the base app, as opposed to PyQt which
-uses the version 6.6. The reason for this is that PySide Flatpak base app is only available from the version
-6.7 and upwards.
-
-{{< /alert >}}
 
 This file reads that we use the `markdown` module and the build info
 is provided by the `python3-markdown.json` manifest file. We are going
@@ -47,7 +39,6 @@ Download
 and save it into the `simplemdviewer/env/bin/` directory:
 
 ```bash
-#From within the simplemdviewer/ directory
 wget https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/pip/flatpak-pip-generator --directory-prefix env/bin
 ```
 
@@ -71,16 +62,11 @@ More than that, the KDE Runtime is based on the general
 which provides Python. You can read more about runtimes in the
 [Flatpak Runtime Documentation](https://docs.flatpak.org/en/latest/available-runtimes.html).
 
-Install `org.kde.Sdk` and `org.kde.Platform`, version 6.6, from Flathub:
+Install `org.kde.Sdk` and `org.kde.Platform`, version 6.7, from Flathub:
 
 ```bash
-flatpak install org.kde.Platform/x86_64/6.6 org.kde.Sdk/x86_64/6.6
+flatpak install org.kde.Platform/x86_64/6.7 org.kde.Sdk/x86_64/6.7
 ```
-
-We are using the
-[PyQt Baseapp](https://github.com/flathub/com.riverbankcomputing.PyQt.BaseApp),
-which contains an already built and ready-to-use PyQt we can quickly add on
-top of the KDE Runtime, so we need to install it as well.
 
 For a PyQt Flatpak application, we are using the
 [PyQt Baseapp](https://github.com/flathub/com.riverbankcomputing.PyQt.BaseApp),
@@ -89,14 +75,23 @@ top of the KDE Runtime, so we need to install it as well. Alternatively, you can
 [PySide Baseapp](https://github.com/flathub/io.qt.PySide.BaseApp),
 which provides a similar ready-to-use PySide6 environment.
 
+{{< tabset-qt >}}
+{{< tab-qt tabName="PySide6" >}}
 ```bash
-flatpak install com.riverbankcomputing.PyQt.BaseApp/x86-64/6.6
+flatpak install io.qt.PySide.BaseApp/x86-64/6.7
 ```
+{{< /tab-qt >}}
+{{< tab-qt tabName="PyQt6" >}}
+```bash
+flatpak install com.riverbankcomputing.PyQt.BaseApp/x86-64/6.7
+```
+{{< /tab-qt >}}
+{{< /tabset-qt >}}
 
 To attempt a first build of the flatpak, run:
 
 ```bash
-flatpak-builder --verbose --force-clean flatpak-build-dir org.kde.simplemdviewer.json
+flatpak-builder --force-clean flatpak-build-dir org.kde.simplemdviewer.json
 ```
 
 {{< alert title="Tip" color="success" >}}
@@ -107,6 +102,11 @@ them manually.
 If you installed Flathub as a user repository, you will need to add the `--user`
 flag to install the runtime. Otherwise you might see the error "Flatpak system
 operation Deploy not allowed for user".
+
+```bash
+flatpak-builder --user --force-clean --install-deps-from flathub flatpak-build-dir org.kde.simplemdviewer.json
+```
+
 {{< /alert >}}
 
 Test the flatpak build:
@@ -118,7 +118,7 @@ flatpak-builder --run flatpak-build-dir org.kde.simplemdviewer.json simplemdview
 Build a distributable nightly flatpak bundle:
 
 ```bash
-flatpak-builder flatpak-build-dir --repo=simplemdviewer-master --force-clean --ccache org.kde.simplemdviewer.json
+flatpak-builder --repo simplemdviewer-master --force-clean --ccache flatpak-build-dir org.kde.simplemdviewer.json
 flatpak build-bundle simplemdviewer-master simplemdviewer.flatpak org.kde.simplemdviewer
 ```
 
