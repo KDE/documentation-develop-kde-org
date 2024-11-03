@@ -255,9 +255,16 @@ The initial setup of `kde-builder` should have installed the required Qt6 packag
 If your Linux distribution does NOT provide recent versions of Qt packages, you have four options:
 
 * Use one of the alternative build methods mentioned in [Building KDE software]({{< ref "building" >}})
-* Install Qt6 using the Qt online installer
-* Build Qt6 using kde-builder
+* [Install Qt6 using the Qt online installer]({{< ref "#qt6-online" >}})
+* [Install Qt6 using the unofficial aqtinstall installer]({{< ref "#qt6-aqtinstall" >}})
+* [Build Qt6 using kde-builder]({{< ref "#qt6-build" >}})
 * Switch to a [more up-to-date distro]({{< ref "building#choosing" >}})
+
+### Finding the latest Qt version {#qt6-version}
+
+To find out the latest release of Qt, you can visit [KDE's Qt repository mirror](https://invent.kde.org/qt/qt/qt5) and check for the right branch:
+
+{{< figure class="text-center" src="qt-latest-release.png" alt="A screenshot of the main page of the Qt repository mirror showing the branch list that appears once you click on the combobox that has 'dev' written on it." >}}
 
 ### Use Qt6 from the online installer {#qt6-online}
 
@@ -286,7 +293,50 @@ Once it is done, `kde-builder` will know to use the Qt provided by the online in
 
 If you ever need to install more Qt components, you can open the newly installed Qt Maintenance Tool available on the menu launcher.
 
-### Build Qt6 using kde-builder {#build-qt6}
+### Use Qt6 from aqtinstall {#qt6-aqtinstall}
+
+{{< alert title="⚠️ Experimental" color="warning" >}}
+
+This method was not fully battle tested yet.
+
+{{< /alert >}}
+
+If you are bothered by the fact that the Qt online installer requires a Qt account
+or if you don't want to undergo the process of building Qt6 with kde-builder,
+you may try using the unofficial installer `aqtinstall` which simply downloads
+Qt from the same sources as the official installer.
+
+First, install aqtinstall:
+
+```bash
+pipx install --user aqtinstall
+```
+
+If you don't have `pipx` installed, you may need to install it from your distribution.
+
+You can then install Qt with `aqt`. You will need to [find the latest Qt release first]({{< ref "#qt6-version" >}}).
+
+```bash
+aqt install-qt linux desktop 6.8 linux_gcc_64 --outputdir ~/Qt --modules all
+```
+
+This will install all Qt modules available in version 6.8 and will occupy a bit more than 8 GB of storage.
+
+Once installed, open the file `~/.config/kde-builder.yaml`, uncomment the line with `qt-install-dir: ~/kde/qt`, and change it to point to your Qt installation. The actual path should be similar to this, depending on your Qt version:
+
+```yaml
+qt-install-dir: ~/Qt/6.8.0/gcc_64
+```
+
+Once it is done, `kde-builder` will know to use the Qt provided by the online installer to build KDE software.
+
+### Build Qt6 using kde-builder {#qt6-build}
+
+{{< alert title="⚠️ WIP" color="warning" >}}
+
+This method is undergoing testing to make sure it works on most systems.
+
+{{< /alert >}}
 
 It is possible to build Qt with kde-builder, but it will require a minimum of 30 GB of storage and have a long compilation time that may last up until a few hours depending on your machine.
 
@@ -296,16 +346,12 @@ To do this, open the file `~/.config/kde-builder.yaml` and uncomment the line co
 qt-install-dir: ~/kde/qt
 ```
 
-Near the end of the file, add an override so you build Qt from the latest release instead of the development branch (the default):
+Near the end of the file, add an override so you build [Qt from the latest release]({{< ref "#qt6-version" >}}) instead of the development branch (the default):
 
 ```yaml
 override qt6-set:
   branch: 6.8
 ```
-
-To find out the latest release of Qt, you can visit [KDE's Qt repository mirror](https://invent.kde.org/qt/qt/qt5) and check for the right branch:
-
-{{< figure class="text-center" src="qt-latest-release.png" alt="A screenshot of the main page of the Qt repository mirror showing the branch list that appears once you click on the combobox that has 'dev' written on it." >}}
 
 Then run:
 
@@ -313,7 +359,7 @@ Then run:
 kde-builder qt6-set
 ```
 
-It will take quite a while. Once it is done, proceed to [Configure git]({{< ref "#configure-git" >}}).
+It will take quite a while to finish compiling.
 
 ## Configure git
 
