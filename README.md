@@ -16,7 +16,7 @@ To learn how to submit a contribution, see [Submitting a Merge Request](https://
 
 ## Before running the website
 
-Download the latest Hugo release (extended version) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
+Download a Hugo release (extended version, latest supported release: v0.122.0) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
 
 Certain tutorials fetch examples directly from their respective repositories (library-specific ones, like KArchive or KAuth); to display them, you'll need to run a Python script.
 Make sure you have the required dependencies installed on your system. We suggest using `venv` for this:
@@ -43,7 +43,6 @@ hugo server
 
 And open http://localhost:1313
 
-
 ## Extract icon metadata
 
 Data for the icon galleries (i.e. `/frameworks/breeze-icons/`) must be extracted via `scripts/icon_extractor.py`.
@@ -69,7 +68,9 @@ options:
 ```
 
 ## I18n
+
 The Kirigami tutorials are internationalized and localized using [hugoi18n](https://invent.kde.org/websites/hugo-i18n).
 
 ## hugo-kde theme
+
 This website uses a theme shared among KDE websites that are Hugo-based. If you have some issue that you think is not inside this repo, or if you just want to know more about the theme, have a look at [hugo-kde wiki](https://invent.kde.org/websites/hugo-kde/-/wikis/).
