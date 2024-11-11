@@ -22,7 +22,7 @@ We are going to discuss some basic code, and in the final section we will build 
 
 Create a folder `~/kde/src/kxmlgui-tutorial`. In that folder you will place the source code files from this tutorial.
 
-### Option 1: Using kdesrc-build
+### Using kde-builder {#kde-builder}
 
 [Set up your development environment with kde-builder]({{< ref "kde-builder-setup" >}}). That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
 
@@ -51,7 +51,7 @@ end module
 
 {{< /alert >}}
 
-### Option 2: Manually
+### Manually
 
 {{< installpackage
     fedora="kf6-kcoreaddons-devel kf6-ki18n-devel kf6-kxmlgui-devel kf6-ktextwidgets-devel kf6-kconfigwidgets-devel kf6-kwidgetsaddons-devel kf6-kio-devel kf6-kiconthemes-devel"

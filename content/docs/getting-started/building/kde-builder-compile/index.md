@@ -161,6 +161,56 @@ dbus-run-session kwin_wayland --width 360 --height 720 --xwayland "plasmashell -
 
 Plasma Mobile can also be run on a mobile device itself. For more information, see the [Plasma Mobile Development Guide](https://community.kde.org/Plasma/Mobile/DevGuide#Mobile_device_running_plasma_mobile).
 
+## Building custom projects
+
+Sometimes you want to build your own project using kde-builder, or you'd like to build with a fork of an existing KDE project.
+
+To do this, you can use kde-builder's
+[project](https://kde-builder.kde.org/en/configuration/config-file-overview.html#project-configuration) configuration option.
+
+### New projects
+
+If your project is completely new, like in the case of the
+[Kirigami]({{< ref "introduction-getting_started/#kde-builder" >}}) or
+[KXmlGui]({{< ref "hello_world/#kde-builder" >}})
+tutorials, you can create a `project` at the end of your `~/.config/kde-builder.yaml`:
+
+```yaml
+project kirigami-tutorial:
+  no-src: true
+```
+
+Then you may use `kde-builder` to compile the dependencies needed for your project, and after that your project:
+
+```bash
+kde-builder kirigami ki18n kcoreaddons breeze kiconthemes qqc2-desktop-style
+kde-builder kirigami-tutorial
+```
+
+### Project forks
+
+If your project is a fork of an existing KDE project, you can build it with `kde-builder`.
+
+To do so, you need to clone it to `~/kde/src`. For example, if you want to work on Dolphin:
+
+```bash
+git clone git@invent.kde.org:your-user/dolphin.git ~/kde/src/dolphin-fork
+```
+
+Then add a `project` at the end of your `~/.config/kde-builder.yaml`:
+
+```yaml
+project dolphin-fork:
+  no-src: true
+```
+
+After that, you can build the original project just to compile the same build dependencies, and lastly build your fork:
+
+```bash
+kde-builder dolphin
+kde-builder dolphin-fork
+```
+
 ## Useful flags
 
 Congratulations! You have seen how to:

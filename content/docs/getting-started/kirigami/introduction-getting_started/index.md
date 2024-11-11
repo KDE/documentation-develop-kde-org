@@ -13,7 +13,7 @@ aliases:
 Before getting started, we will need to install Kirigami on our machine. There are three ways to do so:
 
 * [Installing Kirigami from the repositories in your Linux distribution](#linux)
-* [Building Kirigami with kde-builder](#kde-builder)
+* [Using kde-builder](#kde-builder)
 * [Installing Kirigami with Craft](#craft)
 
 ### Installing Kirigami from the repositories in your Linux distribution {#linux}
@@ -28,17 +28,36 @@ sudo dnf install cmake extra-cmake-modules kf6-kirigami2-devel kf6-ki18n-devel k
 
 Further information for other distributions can be found [here](/docs/getting-started/building/help-dependencies).
 
-### Building Kirigami with kde-builder {#kde-builder}
+### Using kde-builder {#kde-builder}
 
-KDE has a custom tool to easily build all of its libraries and programs: **kde-builder**. It can be used to build Kirigami on Linux and FreeBSD.
+[Set up your development environment with kde-builder](/docs/getting-started/building/kde-builder-setup/). That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
 
-For this tutorial, you will need to follow the [setup instructions for kde-builder](/docs/getting-started/building/kde-builder-setup).
+Create a folder `~/kde/src/kirigami-tutorial`. In that folder you will place the source code files from this tutorial.
 
-After that, you may simply run the following on a terminal:
+Add the folowing at the end of your `~/.config/kde-builder.yaml`:
 
-```bash
-kde-builder kirigami kcoreaddons ki18n breeze plasma-integration kiconthemes qqc2-desktop-style
+```yaml
+project kirigami-tutorial:
+  no-src: true
 ```
+
+{{< alert color="info" title="⏳ With kdesrc-build..." >}}
+
+<details>
+<summary>Click here to know how this was done with kdesrc-build</summary></br>
+
+This step used to be done by writing to `~/.config/kdesrc-buildrc` instead with a different syntax:
+
+```
+# after include ${module-definitions-dir}/kf6-qt6.ksb
+module kirigami-tutorial
+  no-src
+end module
+```
+
+</details>
+
+{{< /alert >}}
 
 ### Installing Kirigami with Craft {#craft}
 
@@ -235,41 +254,19 @@ We are almost at the finish line. The last thing we need to do is build and run 
 
 ### Linux or FreeBSD
 
-If you want kde-builder to handle building and installation of your project, you need to:
+#### Compiling with kde-builder
 
-* move the project folder to `~/kde/src`, that is, `~/kde/src/kirigami-tutorial`
-* specify a custom module at the end of your `~/.config/kde-builder.yaml`:
+Make sure you have followed the instructions in [Using kde-builder](#kde-builder).
 
-```
-project kirigami-tutorial:
-  no-src: true
-```
-
-{{< alert color="info" title="⏳ With kdesrc-build..." >}}
-
-<details>
-<summary>Click here to know how this was done with kdesrc-build</summary></br>
-
-This step used to be done by writing to `~/.config/kdesrc-buildrc` instead with a different syntax:
-
-```
-# after include ${module-definitions-dir}/kf6-qt6.ksb
-module kirigami-tutorial
-    no-src
-end module
-```
-
-</details>
-
-{{< /alert >}}
-
-Then you can build and install it with the command:
+Compile your project by running the following command in a terminal:
 
 ```bash
 kde-builder kirigami-tutorial
 ```
 
-In case you want to handle building and installation manually without kde-builder, you will need to specify the place where the program will be installed. To do that, we need to change directories to our `kirigami-tutorial/` folder in our terminal application of choice and run the following commands:
+#### Compiling manually
+
+Change directories to the project's root folder, then run the following command in a terminal:
 
 ```bash
 cmake -B build/
@@ -328,8 +325,8 @@ You can then run the `kirigami-hello` program with:
 
 ```bash
 kirigami-hello # On Linux, manually
-kde-builder --run kirigami-hello # On Linux, with kde-builder
-kdesrc-build --run --exec kirigami-hello kirigami-tutorial # On Linux, with kdesrc-build
+kde-builder --run kirigami-hello # With kde-builder
+kdesrc-build --run --exec kirigami-hello kirigami-tutorial # With kdesrc-build
 kirigami-hello.exe # On Windows
 ```
 
