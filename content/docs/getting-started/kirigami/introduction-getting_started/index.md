@@ -258,9 +258,10 @@ We are almost at the finish line. The last thing we need to do is build and run 
 
 Make sure you have followed the instructions in [Using kde-builder](#kde-builder).
 
-Compile your project by running the following command in a terminal:
+Compile the necessary build dependencies with kde-builder, then compile `kirigami-tutorial` by running the following commands in a terminal:
 
 ```bash
+kde-builder kirigami ki18n kcoreaddons breeze kiconthemes qqc2-desktop-style
 kde-builder kirigami-tutorial
 ```
 
