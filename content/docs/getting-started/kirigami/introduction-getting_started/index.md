@@ -34,7 +34,7 @@ Further information for other distributions can be found [here](/docs/getting-st
 
 Create a folder `~/kde/src/kirigami-tutorial`. In that folder you will place the source code files from this tutorial.
 
-Add the folowing at the end of your `~/.config/kde-builder.yaml`:
+Add the following at the end of your `~/.config/kde-builder.yaml`:
 
 ```yaml
 project kirigami-tutorial:
