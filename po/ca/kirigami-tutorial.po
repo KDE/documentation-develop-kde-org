@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2021.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 01:47+0000\n"
-"PO-Revision-Date: 2024-10-27 09:48+0100\n"
+"POT-Creation-Date: 2024-11-13 01:44+0000\n"
+"PO-Revision-Date: 2024-11-12 12:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -1090,7 +1090,7 @@ msgid ""
 "fairly complete default constructor and add author information."
 msgstr ""
 "En el fitxer `main.cpp` incloem [KAboutData](docs:kcoreaddons;KAboutData), "
-"un component central dels Frameworks del KDE que permet emmagatzemar la "
+"un component central dels Frameworks de KDE que permet emmagatzemar la "
 "informació sobre l'aplicació. Aquesta informació després pot ser "
 "reutilitzada per molts altres components dels Frameworks del KDE. Instanciem "
 "un objecte `aboutData` nou amb el seu constructor predeterminat força "
@@ -6917,10 +6917,8 @@ msgstr ""
 "Linux](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kde-builder](#kde-builder)"
 msgid "[Using kde-builder](#kde-builder)"
-msgstr "[Construir el Kirigami amb «kde-builder»](#kde-builder)"
+msgstr "[Utilitzar el «kde-builder»](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6951,10 +6949,8 @@ msgstr ""
 "started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid "On Linux, with kde-builder"
 msgid "Using kde-builder"
-msgstr "Al Linux, amb «kde-builder»"
+msgstr "Utilitzar el «kde-builder»"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
 msgid ""
@@ -6962,22 +6958,26 @@ msgid ""
 "building/kde-builder-setup/). That will give you the necessary development "
 "tools and underlying libraries, and build the KDE Frameworks from scratch."
 msgstr ""
+"[Configureu l'entorn de desenvolupament amb el «kde-builder»](/docs/getting-"
+"started/building/kde-builder-setup/). Això us proporcionarà les eines de "
+"desenvolupament necessàries i les biblioteques subjacents i construirà els "
+"Frameworks de KDE des de zero."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
 msgid ""
 "Create a folder `~/kde/src/kirigami-tutorial`. In that folder you will place "
 "the source code files from this tutorial."
 msgstr ""
+"Creeu una carpeta `~/kde/src/kirigami-tutorial`. En aquesta carpeta situareu "
+"els fitxers de codi font d'aquesta guia d'aprenentatge."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 #, fuzzy
-#| msgid ""
-#| "specify a custom module at the end of your `~/.config/kde-builder.yaml`:"
-msgid "Add the folowing at the end of your `~/.config/kde-builder.yaml`:"
-msgstr ""
-"especificar un mòdul personalitzat al final del vostre `~/.config/kde-"
-"builder.yaml`:"
+#| msgid "Add the folowing at the end of your `~/.config/kde-builder.yaml`:"
+msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
+msgstr "Afegiu el següent al final del vostre `~/.config/kde-builder.yaml`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:44
 msgid "⏳ With kdesrc-build..."
@@ -7396,7 +7396,7 @@ msgid ""
 "application."
 msgstr ""
 "El més important a tenir en compte és que les dependències de construcció C+"
-"+ de les Qt i dels Frameworks del KDE es gestionen amb [find_package()]"
+"+ de les Qt i dels Frameworks de KDE es gestionen amb [find_package()]"
 "(https://cmake.org/cmake/help/latest/command/find_package.html) i les "
 "dependències en temps d'execució del QML es gestionen amb "
 "[ecm_find_qml_module()](https://api.kde.org/ecm/module/ECMFindQmlModule."
@@ -7642,34 +7642,38 @@ msgid "Linux or FreeBSD"
 msgstr "Linux o FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:257
-#, fuzzy
-#| msgid "Building Kirigami with kde-builder"
 msgid "Compiling with kde-builder"
-msgstr "Construcció del Kirigami amb «kde-builder»"
+msgstr "Compilar amb el «kde-builder»"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:259
 msgid ""
 "Make sure you have followed the instructions in [Using kde-builder](#kde-"
 "builder)."
 msgstr ""
+"Assegureu-vos que heu seguit les instruccions d'[Utilitzar el «kde-builder»]"
+"(#kde-builder)."
 
+# skip-rule: t-acc_obe, common-tutorial
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:261
 msgid ""
 "Compile the necessary build dependencies with kde-builder, then compile "
 "`kirigami-tutorial` by running the following commands in a terminal:"
 msgstr ""
+"Compileu les dependències de construcció necessàries amb el «kde-builder», "
+"després compileu `kirigami-tutorial` executant les ordres següents en un "
+"terminal:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:268
-#, fuzzy
-#| msgid "On Linux, manually"
 msgid "Compiling manually"
-msgstr "Al Linux, manualment"
+msgstr "Compilar manualment"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:270
 msgid ""
 "Change directories to the project's root folder, then run the following "
 "command in a terminal:"
 msgstr ""
+"Canvieu els directoris a la carpeta arrel del projecte i executeu l'ordre "
+"següent en un terminal:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
@@ -7746,16 +7750,12 @@ msgid "On Linux, manually"
 msgstr "Al Linux, manualment"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:329
-#, fuzzy
-#| msgid "On Linux, with kde-builder"
 msgid "With kde-builder"
-msgstr "Al Linux, amb «kde-builder»"
+msgstr "Amb el «kde-builder»"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:330
-#, fuzzy
-#| msgid "⏳ With kdesrc-build..."
 msgid "With kdesrc-build"
-msgstr "⏳ Amb el «kdesrc-build»..."
+msgstr "Amb el «kdesrc-build»"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:331
 msgid "On Windows"

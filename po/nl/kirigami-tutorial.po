@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 01:47+0000\n"
-"PO-Revision-Date: 2024-10-27 16:27+0100\n"
+"POT-Creation-Date: 2024-11-13 01:44+0000\n"
+"PO-Revision-Date: 2024-11-12 11:46+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -6757,10 +6757,8 @@ msgstr ""
 "[Kirigami installeren uit de opslagruimte in uw Linux distributie](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kde-builder](#kde-builder)"
 msgid "[Using kde-builder](#kde-builder)"
-msgstr "[Kirigami bouwen met kde-builder](#kde-builder)"
+msgstr "[kde-builder gebruiken](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6789,10 +6787,8 @@ msgstr ""
 "building/help-dependencies) te vinden."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid "On Linux, with kde-builder"
 msgid "Using kde-builder"
-msgstr "OP Linux, met kde-builder"
+msgstr "kde-builder gebruiken"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
 msgid ""
@@ -6800,21 +6796,25 @@ msgid ""
 "building/kde-builder-setup/). That will give you the necessary development "
 "tools and underlying libraries, and build the KDE Frameworks from scratch."
 msgstr ""
+"[Zet uw ontwikkelomgeving op met kde-builder](/docs/getting-started/building/"
+"kde-builder-setup/). Dat zal u de noodzakelijke hulpmiddelen voor "
+"ontwikkeling geven en de onderliggende bibliotheken en het KDE Frameworks "
+"vanuit niets bouwen."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
 msgid ""
 "Create a folder `~/kde/src/kirigami-tutorial`. In that folder you will place "
 "the source code files from this tutorial."
 msgstr ""
+"Maak een map `~/kde/src/kirigami-tutorial` aan. In die map zult u de "
+"broncodebestanden uit deze inleiding plaatsen."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 #, fuzzy
-#| msgid ""
-#| "specify a custom module at the end of your `~/.config/kde-builder.yaml`:"
-msgid "Add the folowing at the end of your `~/.config/kde-builder.yaml`:"
+#| msgid "Add the folowing at the end of your `~/.config/kde-builder.yaml`:"
+msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
 msgstr ""
-"specificeer een aangepaste module aan het eind van uw `~/.config/kde-builder."
-"yaml`:"
+"Voeg het volgende aan het eind van uw `~/.config/kde-builder.yaml` toe:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:44
 msgid "⏳ With kdesrc-build..."
@@ -7451,34 +7451,37 @@ msgid "Linux or FreeBSD"
 msgstr "Linux of FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:257
-#, fuzzy
-#| msgid "Building Kirigami with kde-builder"
 msgid "Compiling with kde-builder"
-msgstr "Kirigami bouwen met kde-builder"
+msgstr "Compileren met kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:259
 msgid ""
 "Make sure you have followed the instructions in [Using kde-builder](#kde-"
 "builder)."
 msgstr ""
+"Ga na dat u de instructions in [Using kde-builder](#kde-builder) hebt "
+"gevolgd."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:261
 msgid ""
 "Compile the necessary build dependencies with kde-builder, then compile "
 "`kirigami-tutorial` by running the following commands in a terminal:"
 msgstr ""
+"Compileer de noodzakelijke bouwafhankelijkheden met kde-builder, compileer "
+"daarna `kirigami-tutorial` door de volgende opdrachten in een terminal uit "
+"te voeren:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:268
-#, fuzzy
-#| msgid "On Linux, manually"
 msgid "Compiling manually"
-msgstr "Op Linux, handmatig"
+msgstr "Handmatig compileren"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:270
 msgid ""
 "Change directories to the project's root folder, then run the following "
 "command in a terminal:"
 msgstr ""
+"Wijzig mappen naar de hoofdmap van het project, voer daarna de volgende "
+"opdracht uit in een terminal:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
 msgid ""
@@ -7554,16 +7557,12 @@ msgid "On Linux, manually"
 msgstr "Op Linux, handmatig"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:329
-#, fuzzy
-#| msgid "On Linux, with kde-builder"
 msgid "With kde-builder"
-msgstr "OP Linux, met kde-builder"
+msgstr "Met kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:330
-#, fuzzy
-#| msgid "⏳ With kdesrc-build..."
 msgid "With kdesrc-build"
-msgstr "⏳ Met kdesrc-build..."
+msgstr "Met kdesrc-build"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:331
 msgid "On Windows"
