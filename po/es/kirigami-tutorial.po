@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:44+0000\n"
-"PO-Revision-Date: 2024-09-07 18:59+0200\n"
+"PO-Revision-Date: 2024-11-14 11:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -1896,7 +1896,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:457
 msgid "Clear TextField every time it's done"
-msgstr ""
+msgstr "Borrar TextField cada vez que termina"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:478
 msgid ""
@@ -1904,6 +1904,9 @@ msgid ""
 "prompt that allows to add a new element to the model, with our own custom "
 "data."
 msgstr ""
+"Ahora deberíamos tener una nueva acción en la parte superior de la "
+"aplicación que muestra un mensaje que permite añadir un nuevo elemento al "
+"modelo con nuestros propios datos personalizados."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:485
 msgid "![app_screenshot_add_1.png](app_screenshot_add_1.png)"
@@ -1925,12 +1928,19 @@ msgid ""
 "delete the key from the QMap, while the row number will be used to delete "
 "the row on the front end."
 msgstr ""
+"La forma de eliminar filas es similar a la de añadirlas. Vamos a crear otro "
+"método que llamaremos en QML. Esta vez, usaremos un parámetro adicional, que "
+"es un entero que representa el número de fila. El nombre de la especie se "
+"usa para eliminar la clave del QMap, mientras que el número de fila se usa "
+"para eliminar la fila en la interfaz."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:526
 msgid ""
 "Now, let's update the application so a \"Delete\" button appears alongside "
 "the edit button, and hook it up to our delete method."
 msgstr ""
+"Ahora, actualicemos la aplicación para que aparezca un botón «Borrar» junto "
+"al botón «Editar» y conectémoslo a nuestro método de borrado."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:570
 msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
@@ -2006,14 +2016,6 @@ msgstr ""
 "crear aplicaciones que sean más útiles de lo que podemos lograr con QML puro."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:15
-#, fuzzy
-#| msgid ""
-#| "Here, we'll be going over the `main.cpp` file we created in the [Getting "
-#| "Started]({{< ref \"introduction-getting_started\" >}}) page so that we "
-#| "can better understand what is going on in the central C++ file of our "
-#| "application. While this is a basic `main.cpp`, the features we will go "
-#| "over will remain essential no matter what kind of application you decide "
-#| "to create."
 msgid ""
 "Here, we'll be going over the `main.cpp` file we created in the [Getting "
 "Started](/docs/getting-started/kirigami/introduction-getting_started) page "
@@ -2023,23 +2025,17 @@ msgid ""
 "create."
 msgstr ""
 "Aquí repasaremos el archivo `main.cpp` que creamos en la página [Primeros "
-"pasos]({{< ref \"introduction-getting_started\" >}})  para que podamos "
-"entender mejor lo que está sucediendo en el archivo central de C++ de "
-"nuestra aplicación. Aunque este es un `main.cpp` básico, las características "
-"que vamos a repasar seguirán siendo esenciales independientemente del tipo "
-"de aplicación que decida crear."
+"pasos](/docs/getting-started/kirigami/introduction-getting_started) para que "
+"podamos entender mejor lo que está sucediendo en el archivo central de C++ "
+"de nuestra aplicación. Aunque este es un `main.cpp` básico, las "
+"características que vamos a repasar seguirán siendo esenciales "
+"independientemente del tipo de aplicación que decida crear."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:17
 msgid "What it does"
 msgstr "Lo que hace"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:21
-#, fuzzy
-#| msgid ""
-#| "First we must include a number of Qt [header files](https://www.learncpp."
-#| "com/cpp-tutorial/header-files/), allowing us to use their functions. In "
-#| "this case, we include a number of Qt headers that handle application "
-#| "logic, reading QML files, and accessing files defined in `resources.qrc`."
 msgid ""
 "First we must include a number of Qt [header files](https://www.learncpp.com/"
 "cpp-tutorial/header-files/), allowing us to use their functions. In this "
@@ -2049,8 +2045,7 @@ msgstr ""
 "Primero debemos incluir una serie de [archivos de cabecera](https://www."
 "learncpp.com/cpp-tutorial/header-files/) de Qt, lo que nos permite usar sus "
 "funciones. En este caso, incluimos una serie de cabeceras Qt que manejan la "
-"lógica de la aplicación, leen archivos QML y acceden a los archivos "
-"definidos en `resources.qrc`."
+"lógica de la aplicación y que nos permiten leer archivos QML."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:23
 msgid ""
@@ -2244,6 +2239,10 @@ msgid ""
 "`, `${KDE_INSTALL_QMLDIR}`, `${KDE_INSTALL_BINDIR}` and `"
 "${KDE_INSTALL_LIBDIR}`."
 msgstr ""
+"[KDEInstallDirs](https://api.kde.org/ecm/kde-module/KDEInstallDirs6.html) "
+"proporciona variables de conveniencia, como `"
+"${KDE_INSTALL_TARGETS_DEFAULT_ARGS}`, `${KDE_INSTALL_QMLDIR}`, `"
+"${KDE_INSTALL_BINDIR}` y `${KDE_INSTALL_LIBDIR}`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:29
 msgid ""
@@ -2251,6 +2250,9 @@ msgid ""
 "provides things like `CMAKE_AUTORCC ON`, an `uninstall` target that can be "
 "used with `cmake --build build/ --target uninstall`, and `ENABLE_CLAZY`."
 msgstr ""
+"[KDECMakeSettings](https://api.kde.org/ecm/kde-module/KDECMakeSettings.html) "
+"proporciona cosas como `CMAKE_AUTORCC ON`, un objetivo `uninstall` que se "
+"puede usar con `cmake --build build/ --target uninstall`, y `ENABLE_CLAZY`."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:30
 msgid ""
@@ -2281,16 +2283,12 @@ msgstr ""
 "necesarias durante la compilación. Veamos la primera:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:38
-#, fuzzy
-#| msgid ""
-#| "[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
-#| "html) finds and loads the external component."
 msgid ""
 "[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
 "html) finds and loads the external library and its components."
 msgstr ""
 "[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
-"html) encuentra y carga el componente externo."
+"html) encuentra y carga la biblioteca externa y sus componentes."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:39
 #, fuzzy
@@ -2443,16 +2441,12 @@ msgstr ""
 "estamos usando solo su módulo QML."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:76
-#, fuzzy
-#| msgid ""
-#| "[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
-#| "html) finds and loads the external component."
 msgid ""
 "[install()](https://cmake.org/cmake/help/latest/command/install.html) "
 "installs the executable to the system."
 msgstr ""
-"[find_package()](https://cmake.org/cmake/help/latest/command/find_package."
-"html) encuentra y carga el componente externo."
+"[install()](https://cmake.org/cmake/help/latest/command/install.html) "
+"instala el ejecutable en el sistema."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:78
 msgid ""
@@ -2586,7 +2580,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:114
 msgid "You can then just install the target as before."
-msgstr ""
+msgstr "Después podrá instalar el objetivo como antes."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:116
 msgid ""
@@ -3988,7 +3982,7 @@ msgstr "Tipos de diálogos"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:0
 msgid "Various ways to serve and input data."
-msgstr ""
+msgstr "Diversos modos de servir e introducir datos."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:10
 #, fuzzy
@@ -5262,33 +5256,27 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:286
 msgid "Qt's [ListView](docs:qtquick;QtQuick.ListView)"
-msgstr ""
+msgstr "[ListView](docs:qtquick;QtQuick.ListView) de Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:287
 msgid "Qt's [GridView](docs:qtquick;QtQuick.GridView)"
-msgstr ""
+msgstr "[GridView](docs:qtquick;QtQuick.GridView) de Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:288
 msgid "Qt's [TableView](docs:qtquick;QtQuick.TableView)"
-msgstr ""
+msgstr "[TableView](docs:qtquick;QtQuick.TableView) de Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:289
 msgid "Qt's [TreeView](docs:qtquick;QtQuick.TreeView)"
-msgstr ""
+msgstr "[TreeView](docs:qtquick;QtQuick.TreeView) de Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:290
-#, fuzzy
-#| msgid ""
-#| "Use a [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) to display "
-#| "cards in a grid."
 msgid "Kirigami's [CardsListView](docs:kirigami2;CardsListView)"
-msgstr ""
-"Use un [Kirigami.CardsGridView](docs:kirigami2;CardsGridView) para mostrar "
-"tarjetas en una cuadrícula."
+msgstr "[CardsListView](docs:kirigami2;CardsListView) de Kirigami"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:291
 msgid "Kirigami's [ColumnView](docs:kirigami2;ColumnView)"
-msgstr ""
+msgstr "[ColumnView](docs:kirigami2;ColumnView) de Kirigami"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:293
 msgid ""
@@ -5971,7 +5959,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:40
 msgid "Other page properties..."
-msgstr ""
+msgstr "Otras propiedades de la página..."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:58
 msgid ""
@@ -6107,7 +6095,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:111
 msgid "Other window properties..."
-msgstr ""
+msgstr "Otras propiedades de la ventana..."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:128
 #, fuzzy
@@ -6169,10 +6157,8 @@ msgstr ""
 "acciones de Kirigami y su uso."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:151
-#, fuzzy
-#| msgid "Actions based components"
 msgid "Actions are contextual"
-msgstr "Componentes basados en acciones"
+msgstr "Las acciones son contextuales"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:153
 msgid ""
