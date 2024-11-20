@@ -267,8 +267,10 @@ kde-builder kcalc --ignore-projects gpgme
 To run an application, simply use the flag `--run`.
 
 ```bash
-kde-builder --run discover
+kde-builder --run plasma-discover
 ```
+
+Note that in Discover's case, the name of the project is `discover`, but the name of the executable is `plasma-discover`.
 
 If a project provides more than one executable, you can specify the executable you want as long as you have built the module that provides it:
 
