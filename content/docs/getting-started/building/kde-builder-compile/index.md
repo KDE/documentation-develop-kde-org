@@ -94,7 +94,7 @@ kde-builder workspace
 Once built, you can make an entire built-from-source Plasma session accessible from the SDDM login screen. This is a good way to test core Plasma components.
 
 It's also necessary for kde-builder to install the necessary session files and D-Bus files into a root directory.
-After the biuld process is finished, kde-builder will prompt you for your password so it can install the session files.
+After the build process is finished, kde-builder will prompt you for your password so it can install the session files.
 
 {{< alert color="info" title="⏳ With kdesrc-build..." >}}
 
