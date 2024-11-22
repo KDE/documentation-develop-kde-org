@@ -350,7 +350,7 @@ Near the end of the file, add an override so you build [Qt from the latest relea
 
 ```yaml
 override qt6-set:
-  branch: 6.8
+  branch: "6.8"
 ```
 
 Then run:
