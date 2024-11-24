@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:44+0000\n"
-"PO-Revision-Date: 2024-09-03 16:11+0200\n"
+"PO-Revision-Date: 2024-11-23 16:47+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -6626,10 +6626,8 @@ msgid ""
 msgstr "[Installera Kirigami från arkiven i Linux-distribution](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgid "[Using kde-builder](#kde-builder)"
-msgstr "[Bygga Kirigami med kdesrc-build](#kdesrc-build)"
+msgstr "[Använda kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6658,10 +6656,8 @@ msgstr ""
 "started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid "On Linux, with kde-builder"
 msgid "Using kde-builder"
-msgstr "På Linux, med kde-builder"
+msgstr "Använda kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:33
 msgid ""
@@ -6669,41 +6665,43 @@ msgid ""
 "building/kde-builder-setup/). That will give you the necessary development "
 "tools and underlying libraries, and build the KDE Frameworks from scratch."
 msgstr ""
+"[Ställ in utvecklingsmiljön med kde-builder](/docs/getting-started/building/"
+"kde-builder-setup/). Det ger nödvändiga utvecklingsverktyg och underliggande "
+"bibliotek, och bygger KDE:s ramverk från grunden."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:35
 msgid ""
 "Create a folder `~/kde/src/kirigami-tutorial`. In that folder you will place "
 "the source code files from this tutorial."
 msgstr ""
+"Skapa katalogen `~/kde/src/kirigami-tutorial`. I den katalogen placeras "
+"källkodsfilerna från handledningen."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:37
 msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
-msgstr ""
+msgstr "Lägg till följande i slutet på `~/.config/kde-builder.yaml`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:44
-#, fuzzy
-#| msgid "On Linux, with kdesrc-build"
 msgid "⏳ With kdesrc-build..."
-msgstr "På Linux, med kdesrc-build"
+msgstr "⏳ Med kdesrc-build..."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:46
-#, fuzzy
-#| msgid ""
-#| "<details>\n"
-#| "<summary>Click here to read more</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>Click here to know how this was done with kdesrc-build</summary></"
 "br>\n"
 msgstr ""
 "<details>\n"
-"<summary>Klicka här för att läsa mer</summary>\n"
+"<summary>Klicka här för att ta reda på hur det gjordes med kdesrc-build</"
+"summary></br>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:49
 msgid ""
 "This step used to be done by writing to `~/.config/kdesrc-buildrc` instead "
 "with a different syntax:"
 msgstr ""
+"Steget gjordes tidigare genom att istället skriva till `~/.config/kdesrc-"
+"buildrc` med en annan syntax:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:62
 msgid "Installing Kirigami with Craft"
@@ -6786,14 +6784,6 @@ msgstr ""
 "eftersom den används tillsammans med det körbara programmet."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:108
-#, fuzzy
-#| msgid ""
-#| "In case you want to automatically build the project with kde-builder/"
-#| "kdesrc-build, custom module name should be the same as the project root "
-#| "folder (in our case it will be \"kirigami-tutorial\"), otherwise you "
-#| "would need to customize the `source-dir` or `dest-dir` for the module. We "
-#| "will assume the path to your `main.cpp` will be `$HOME/kde/src/kirigami-"
-#| "tutorial/src/main.cpp`."
 msgid ""
 "In case you want to automatically build the project with kde-builder, custom "
 "module name should be the same as the project root folder (in our case it "
@@ -6801,8 +6791,8 @@ msgid ""
 "`source-dir` or `dest-dir` for the module. We will assume the path to your "
 "`main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main.cpp`."
 msgstr ""
-"Om projektet ska byggas automatiskt med kde-builder/kdesrc-build, bör det "
-"egna modulnamnet vara detsamma som projektets rotkatalog (i vårt fall är det "
+"Om projektet ska byggas automatiskt med kde-builder, bör det egna "
+"modulnamnet vara detsamma som projektets rotkatalog (i vårt fall är det "
 "\"kirigami-tutorial\"), annars skulle man behöva ange \"source-dir\" eller "
 "\"dest-dir\" för modulen. Vi antar att sökvägen till `main.cpp` är `$HOME/"
 "kde/src/kirigami-tutorial/src/main.cpp`."
@@ -7023,15 +7013,6 @@ msgstr ""
 "tutorial.desktop`:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:161
-#, fuzzy
-#| msgid ""
-#| "Window and taskbar icons will work in a Wayland session only if apps' "
-#| "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
-#| "applications`. To get icons working in this tutorial, either copy the "
-#| "app's desktop file there or switch to a development session as instructed "
-#| "in [kdesrc-build tutorial](/docs/getting-started/building/kdesrc-build-"
-#| "compile). Some KDE applications might have working icons if they were "
-#| "already installed on the system."
 msgid ""
 "Window and taskbar icons will work in a Wayland session only if apps' "
 "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
@@ -7045,8 +7026,8 @@ msgstr ""
 "programmens skrivbordsfiler placeras i `~/.local/share/applications` eller `/"
 "usr/share/applications`. För att få ikoner att fungera i den här "
 "handledningen kopiera antingen programmets skrivbordsfil dit eller byt till "
-"en utvecklingssession enligt instruktionerna i [kdesrc-build tutorial](/docs/"
-"getting-started/building/kdesrc-build-compile). Vissa KDE-program kan ha "
+"en utvecklingssession enligt instruktionerna i [kde-builder tutorial](/docs/"
+"getting-started/building/kde-builder-compile). Vissa KDE-program kan ha "
 "fungerande ikoner om de redan har installerats på systemet."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:165
@@ -7318,34 +7299,36 @@ msgid "Linux or FreeBSD"
 msgstr "Linux eller FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:257
-#, fuzzy
-#| msgid "Building Kirigami with kdesrc-build"
 msgid "Compiling with kde-builder"
-msgstr "Bygga Kirigami med kdesrc-build"
+msgstr "Kompilera med kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:259
 msgid ""
 "Make sure you have followed the instructions in [Using kde-builder](#kde-"
 "builder)."
 msgstr ""
+"Säkerställ att instruktionerna i [Använda kde-builder](#kde-builder) har "
+"följts."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:261
 msgid ""
 "Compile the necessary build dependencies with kde-builder, then compile "
 "`kirigami-tutorial` by running the following commands in a terminal:"
 msgstr ""
+"Kompilera de nödvändiga byggberoendena med kde-builder, kompilera sedan "
+"`kirigami-tutorial` genom att köra följande kommandon i en terminal:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:268
-#, fuzzy
-#| msgid "On Linux, manually"
 msgid "Compiling manually"
-msgstr "På Linux, manuellt"
+msgstr "Kompilera manuellt"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:270
 msgid ""
 "Change directories to the project's root folder, then run the following "
 "command in a terminal:"
 msgstr ""
+"Byt katalog till projektets rotkatalog och kör sedan följande kommando i en "
+"terminal:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
 msgid ""
@@ -7418,16 +7401,12 @@ msgid "On Linux, manually"
 msgstr "På Linux, manuellt"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:329
-#, fuzzy
-#| msgid "On Linux, with kde-builder"
 msgid "With kde-builder"
-msgstr "På Linux, med kde-builder"
+msgstr "Med kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:330
-#, fuzzy
-#| msgid "On Linux, with kdesrc-build"
 msgid "With kdesrc-build"
-msgstr "På Linux, med kdesrc-build"
+msgstr "Med kdesrc-build"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:331
 msgid "On Windows"
