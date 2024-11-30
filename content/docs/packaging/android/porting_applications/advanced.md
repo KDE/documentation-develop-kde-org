@@ -80,7 +80,7 @@ For this to work, cmake needs to find those packages first. Add the following `f
 ```cmake
 if (ANDROID)
     find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Svg)
-    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami)
+    find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami)
     find_package(OpenSSL REQUIRED)
 endif()
 ```

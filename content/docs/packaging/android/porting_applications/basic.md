@@ -90,9 +90,9 @@ A basic `AndroidManifest.xml` may look like this:
 </manifest>
 ```
 
-### Exporting the main function
-
 Most of this file is just boilerplate code that can be pasted directly into your application. Every occurrence of the applications name (in this case `alligator` or `Alligator`) and the package (`org.kde.alligator`) must be changed to the name and package of the application being ported. If the application requires any permissions (for example if it accesses the internet, bluetooth or location services), those must be added here.
+
+### Exporting the main function
 
 For the app to successfully run on android, the `main` function needs to be exported. To do this, add a `Q_DECL_EXPORT` to the function header. Since it's only required on android, you can add an `#ifdef` so that it is only added on android.
 
