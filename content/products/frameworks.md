@@ -136,20 +136,11 @@ scss: "scss/framework.scss"
     </div>
     <div class="p-2 col-12 col-md-4">
       <div class="shadow p-3 h-100">
-        <h2>Find more Qt Addons</h2>
-        <p>
-            The Qt library archive.
-        </p>
-        <a href="https://inqlude.org/" target="_blank">Inqlude</a>
-      </div>
-    </div>
-    <div class="p-2 col-12 col-md-4">
-      <div class="shadow p-3 h-100">
         <h2>Build it Yourself</h2>
         <p>
             Our tool to compile KDE software
         </p>
-        <a href="https://kdesrc-build.kde.org" target="_blank">kdesrc-build</a>
+        <a href="https://develop.kde.org/docs/getting-started/building/kde-builder-setup" target="_blank">kde-builder</a>
       </div>
     </div>
     <div class="p-2 col-12 col-md-4">
