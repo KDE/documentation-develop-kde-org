@@ -4,6 +4,8 @@ linkTitle: "Kirigami"
 weight: 2
 layout: home
 groups:
+  - name: "Setup"
+    key: "setup"
   - name: "Introduction"
     key: "introduction"
   - name: "Style"
@@ -12,6 +14,8 @@ groups:
     key: "components"
   - name: "Advanced"
     key: "advanced"
+  - name: "Manipulating data"
+    key: "data"
   - name: "Kirigami Addons"
     key: "addons"
 description: >
@@ -37,5 +41,13 @@ Quick components designed for creating convergent applications.
 
 While you will use QML to create the visual part of your application, the
 business logic—the code that does the heavy lifting for your application's
-functionality—is usually created in C++ for performance reasons. We will also
+functionality—should be written in a different language. We will also
 explore how to integrate our business logic with our UI in the tutorials below.
+
+First, you will need to set up a new project in a language of your choice. The introduction will show you how to make a small, but functional Kirigami application.
+
+You will be shown the basics of how to deal with colors and text in your application, and you will get acquainted with most QML components. Next, you will get acquainted with most of the QML components you might want to use and how they look like. This section won't touch any business logic at all, only QML code.
+
+You will get a deep dive into more advanced topics that concern manipulating the data that will be shown in your program.
+
+Lastly, you will be presented with Kirigami Addons, a series of quality-of-life components that you can use to, among other things, design the Settings of your application.

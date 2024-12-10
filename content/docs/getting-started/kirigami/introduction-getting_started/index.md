@@ -1,7 +1,7 @@
 ---
-title: Setting up and getting started
+title: Kirigami with C++
 weight: 1
-group: introduction
+group: setup
 description: >
   Getting ready to create our first Kirigami application
 aliases:
