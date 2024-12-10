@@ -1,5 +1,5 @@
 ---
-title: Using separate files
+title: Using separate files in a C++ project
 group: introduction
 weight: 6
 description: >
