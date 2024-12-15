@@ -289,6 +289,48 @@ sudo zypper install cmake extra-cmake-modules libQt5Core-devel libqt5-qtdeclarat
   fedoraCommand=`sudo dnf groupinstall "Development Tools" "Development Libraries"
 sudo dnf install cmake extra-cmake-modules qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel kf5-kirigami2-devel kf5-ki18n-devel kf5-kcoreaddons-devel qqc2-breeze-style` >}}
 
+### tabset/tab {#tabset-and-tab}
+
+The `tabset` and `tab` shortcodes can be used to show equivalent code written in different languages together with [readfile](#readfile). While `tabset` requires no arguments, `tab` requires a single argument, `tabName`, which will become the title of the tab.
+
+Here is an usage example from the flatpak tutorial:
+
+```html
+{{</* tabset */>}}
+
+{{</* tab tabName="PySide6" */>}}
+
+{{</* readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app-3.py" highlight="python" emphasize="9-10 34-35" */>}}
+
+{{</* /tab */>}}
+
+{{</* tab tabName="PyQt6" */>}}
+
+{{</* readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app-3.py" highlight="python" emphasize="9-10 36-37" */>}}
+
+{{</* /tab */>}}
+
+{{</* /tabset */>}}
+```
+
+Which looks like this:
+
+{{< tabset >}}
+
+{{< tab tabName="PySide6" >}}
+
+{{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app-3.py" highlight="python" emphasize="9-10 34-35" >}}
+
+{{< /tab >}}
+
+{{< tab tabName="PyQt6" >}}
+
+{{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app-3.py" highlight="python" emphasize="9-10 36-37" >}}
+
+{{< /tab >}}
+
+{{< /tabset >}}
+
 ## Add a line between shortcodes
 
 We have tooling that parses through shortcodes.
