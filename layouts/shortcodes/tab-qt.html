@@ -1,9 +1,0 @@
-{{ $tabName := .Get "tabName" }}
-{{ $tabID := anchorize $tabName }}
-{{ $randomSuffix := delimit (shuffle (slice "a" "b" "c" "d" "e" "f")) "" }}
-{{ $tabID = printf "%s-%s" $tabID $randomSuffix }}
-{{ .Parent.Scratch.Add "tabName" (slice $tabName) }}
-{{ .Parent.Scratch.Add "tabID" (slice $tabID) }}
-<div class="tab-pane show {{ if eq .Ordinal 0 }}active {{ end }}" id="{{ $tabID }}" role="tabpanel" aria-labelledby="tab-{{ $tabID }}">
-    {{ $.Inner | markdownify }}
-</div>

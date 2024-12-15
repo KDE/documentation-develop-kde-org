@@ -106,14 +106,21 @@ loads the QML file.
 Create a new directory `simplemdviewer/src/` and add a new
 `simplemdviewer_app.py` file in this directory:
 
-{{< tabset-qt >}}
-{{< tab-qt tabName="PySide6" >}}
+{{< tabset >}}
+
+{{< tab tabName="PySide6" >}}
+
 {{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app.py" highlight="python" emphasize="6-8" >}}
-{{< /tab-qt >}}
-{{< tab-qt tabName="PyQt6" >}}
+
+{{< /tab >}}
+
+{{< tab tabName="PyQt6" >}}
+
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app.py" highlight="python" emphasize="6-8" >}}
-{{< /tab-qt >}}
-{{< /tabset-qt >}}
+
+{{< /tab >}}
+
+{{< /tabset >}}
 
 We have just created a
 [QGuiApplication](https://doc.qt.io/qtforpython-6/PySide6/QtGui/QGuiApplication.html#PySide6.QtGui.QGuiApplication)
@@ -162,14 +169,21 @@ We need this to be a QObject-derived class in order to make use of Qt's powerful
 
 Create a new `md_converter.py` file in the `simplemdviewer/src/` directory:
 
-{{< tabset-qt >}}
-{{< tab-qt tabName="PySide6" >}}
+{{< tabset >}}
+
+{{< tab tabName="PySide6" >}}
+
 {{< readfile file="/content/docs/getting-started/python/pyside-app/src/md_converter.py" highlight="python" emphasize="12 18 22 27" >}}
-{{< /tab-qt >}}
-{{< tab-qt tabName="PyQt6" >}}
+
+{{< /tab >}}
+
+{{< tab tabName="PyQt6" >}}
+
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/md_converter.py" highlight="python" emphasize="7 20-22 24" >}}
-{{< /tab-qt >}}
-{{< /tabset-qt >}}
+
+{{< /tab >}}
+
+{{< /tabset >}}
 
 The `MdConverter` class contains the `_source_text` member variable.
 The `sourceText` property exposes `_source_text` to the QML system
@@ -206,14 +220,21 @@ python3 -m pip install markdown
 
 Now, update the `simplemdviewer_app.py` file to:
 
-{{< tabset-qt >}}
-{{< tab-qt tabName="PySide6" >}}
+{{< tabset >}}
+
+{{< tab tabName="PySide6" >}}
+
 {{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app-2.py" highlight="python" emphasize="9" >}}
-{{< /tab-qt >}}
-{{< tab-qt tabName="PyQt6" >}}
+
+{{< /tab >}}
+
+{{< tab tabName="PyQt6" >}}
+
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app-2.py" highlight="python" emphasize="8-9 23" >}}
-{{< /tab-qt >}}
-{{< /tabset-qt >}}
+
+{{< /tab >}}
+
+{{< /tabset >}}
 
 The Python import `from md_converter import MdConverter` in
 `simplemdviewer_app.py` takes care of making both Python and the QML engine

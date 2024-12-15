@@ -156,14 +156,21 @@ Here, the package name is `simplemdviewer`, and its source code is located in `s
 
 Update `simplemdviewer/src/simplemdviewer_app.py` to:
 
-{{< tabset-qt >}}
-{{< tab-qt tabName="PySide6" >}}
+{{< tabset >}}
+
+{{< tab tabName="PySide6" >}}
+
 {{< readfile file="/content/docs/getting-started/python/pyside-app/src/simplemdviewer_app-3.py" highlight="python" emphasize="9-10 34-35" >}}
-{{< /tab-qt >}}
-{{< tab-qt tabName="PyQt6" >}}
+
+{{< /tab >}}
+
+{{< tab tabName="PyQt6" >}}
+
 {{< readfile file="/content/docs/getting-started/python/pyqt-app/src/simplemdviewer_app-3.py" highlight="python" emphasize="9-10 36-37" >}}
-{{< /tab-qt >}}
-{{< /tabset-qt >}}
+
+{{< /tab >}}
+
+{{< /tabset >}}
 
 Create a `__main__.py` file in the `simplemdviewer/src/` directory:
 
