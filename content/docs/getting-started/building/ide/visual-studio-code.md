@@ -343,5 +343,5 @@ After that, run kde-builder as normal, and you will see corresponding debug mess
 ## Notes
 
 The templates for the `.vscode` configuration files are available
-[here](https://invent.kde.org/sdk/kdesrc-build/-/tree/master/data/vscode) if you
+[here](https://invent.kde.org/sdk/kde-builder/-/tree/master/data/vscode) if you
 need to reference them or create them manually.
