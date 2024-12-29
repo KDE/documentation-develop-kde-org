@@ -139,7 +139,7 @@ Then we use [`add_executable()`](https://cmake.org/cmake/help/latest/command/add
 Compile the necessary build dependencies with kde-builder, then compile `kxmlgui-tutorial` by running the following commands in a terminal:
 
 ```bash
-kde-buider kcoreaddons ki18n kxmlgui ktextwidgets kconfigwidgets kwidgetsaddons kio kiconthemes
+kde-builder kcoreaddons ki18n kxmlgui ktextwidgets kconfigwidgets kwidgetsaddons kio kiconthemes
 kde-builder kxmlgui-tutorial
 ```
 
