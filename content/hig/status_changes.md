@@ -51,11 +51,37 @@ Avoid sending system notifications while your app's main window is in the foregr
 
 
 ## System notifications
-Use [system notifications](https://api.kde.org/frameworks/knotifications/html/classKNotification.html) sparingly. Excessive notifications drive users crazy.
-
-Only send notifications when your app is in the background and needs to inform the user about about actionable events such as the progress of ongoing jobs, incoming communications from other people, or hardware issues such as running low on battery power. Never use notifications to bug the user about expected events, advertise new features, or prompt the user to promote the app.
+Send a [system notification](https://api.kde.org/frameworks/knotifications/html/classKNotification.html) when your app is in the background and needs to inform the user about about actionable events such as the progress of ongoing jobs, incoming communications from other people, or hardware issues such as running low on battery power.
 
 Give an [urgency level](https://api.kde.org/frameworks/knotifications/html/classKNotification.html#ae4d50824cf6d70132bf6280ad9357012) to each notification: Low, Normal, or Critical. Strongly consider not sending Low importance notifications in the first place. Give the [persistent](https://api.kde.org/frameworks/knotifications/html/classKNotification.html#a61b63788f43bfad07f6e34b4d768703e) flag to normal-priority notifications that are not critical, but that the user should not miss anyway. Critical notifications always remain visible until dismissed.
+
+
+Use system notifications sparingly. Excessive notifications drive users crazy.
+
+Don't use system notifications to bug the user about expected and ignorable events. For user-initiated system-level changes made within Plasma itself rather than a windowed app, consider using an [OSD]({{< relref "status_changes#on-screen-displays" >}}) instead.
+
+Never use notifications to advertise new features or prompt the user to promote the app.
+
+
+## On-screen displays
+Use an on-screen display (OSD) to communicate in a lightweight fashion that a user-initiated system-level action has taken effect, and also to show the new state of the system.
+
+OSDs are useful in either of these situations:
+
+- When knowledge of the new state is important for the user to know.
+- When an action that is quick but not instant has completed.
+
+Examples include:
+
+- Volume changes
+- Brightness changes
+- Connection to a new network or Bluetooth device has succeeded
+- Active audio device has been switched in response to a hardware change
+- System time zone has been switched in response to traveling somewhere else
+
+Only Plasma components should show OSDs; don't show an OSD from a windowed app. Instead, use an [in-app]({{< relref "status_changes#in-app-notifications" >}}) or [system notification]({{< relref "status_changes#system-notifications" >}}).
+
+Don't show an OSD for an automatic action not initiated or expected by the user in some way.
 
 
 ## Task Manager badges and progress bars
