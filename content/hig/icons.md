@@ -61,8 +61,9 @@ Avoid the use of icons with red elements or X symbols for non-destructive action
 ## Icons-only buttons
 Most buttons should also include text. Only use an icons-only button in the following situations:
 
-- Where it's critical to save horizontal space for user content, text, or other actions.
-- For actions not relevant to the app's core workflow where it's not a disaster if the user ignores it, or where groups of related icons reveal each other's meaning by proximity (e.g. icons-only buttons to choose text justification in a word processing app).
+- When it's critical to save horizontal space for user content, text, or other actions.
+- Where groups of related icons reveal each other's meaning by proximity (e.g. icons-only buttons to choose text justification in a word processing app).
+- For actions not relevant to the app's core workflow where it's not a disaster if the user ignores it.
 
 <!-- TODO: this needs a picture as evidence that it's true -->
 
