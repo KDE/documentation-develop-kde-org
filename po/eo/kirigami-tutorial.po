@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:44+0000\n"
-"PO-Revision-Date: 2024-09-21 22:27+0200\n"
+"PO-Revision-Date: 2025-01-05 23:54+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -460,13 +460,6 @@ msgstr ""
 "ofta ŝablono por indiki ke via butono aldonos ion al listo."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:243
-#, fuzzy
-#| msgid ""
-#| "Since this example is for simple illustrative purposes, we don't delve "
-#| "deep into what would be done once the button is clicked: it just prints "
-#| "\"Clicked!\" to the terminal. We _could_ make a new page for account "
-#| "creation that adds another user to a model, then push the page into view, "
-#| "similarly to what we did in `main.qml`."
 msgid ""
 "Since this example is for simple illustrative purposes, we don't delve deep "
 "into what would be done once the button is clicked: it just prints \"Clicked!"
@@ -478,7 +471,7 @@ msgstr ""
 "pri tio, kio estus farita post kiam la butono estas klakita: ĝi nur presas "
 "\"Klakita!\" al la terminalo. Ni _povus_ fari novan paĝon por kreado de "
 "konto kiu aldonas alian uzanton al modelo, tiam puŝi la paĝon en vido, "
-"simile al tio, kion ni faris en `main.qml`."
+"simile al tio, kion ni faris en `Main.qml`."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:247
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
@@ -647,7 +640,7 @@ msgid ""
 "which is useful in case adding new combobox options is needed:"
 msgstr ""
 "Agordo `redaktebla: vera` permesas al la uzanto redakti la tekston de la "
-"kombokesto, kio estas utila se aldoni novajn kombokeston-opciojn necesas:"
+"kombokesto, kio estas utila se aldoni novajn kombokest-elekteblojn necesas:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:347
 msgid ""
@@ -671,7 +664,7 @@ msgid ""
 "options."
 msgstr ""
 "**FormComboBoxDelegate.ComboBox**: la norma malgranda skatolo montranta "
-"liston de opcioj."
+"liston de elektebloj."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:357
 msgid ""
@@ -3598,7 +3591,7 @@ msgid ""
 "has a clear alternative."
 msgstr ""
 "[Controls.CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox) estas "
-"signifita por opcioj kie la elektoj estas neekskluzivaj kaj kie ĉiu opcio "
+"intencita por opcioj kie la elektoj estas neekskluzivaj kaj kie ĉiu opcio "
 "havas klaran alternativon."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:221
@@ -3633,7 +3626,7 @@ msgid ""
 msgstr ""
 "[Controls.RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton) "
 "estas desegnita por situacioj kie la uzanto devas elekti unu opcion el aro "
-"de pluraj opcioj."
+"de pluraj elektebloj."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:233
 msgid ""
@@ -4284,7 +4277,7 @@ msgid ""
 msgstr ""
 "Ĉi tiu speco de tirkesto estas malfermita kaj fleksebla, sed ĝenerale, vi "
 "eble volas uzi ĉi tiun tian tirkeston kiam vi volas ke malgranda listo de "
-"opcioj aperu per longa premo aŭ dekstra klako."
+"elektebloj aperu per longa premo aŭ dekstra klako."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:214
 msgid ""
@@ -6182,19 +6175,14 @@ msgid "Opening the dialog"
 msgstr "Malfermante la dialogon"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:37
-#, fuzzy
-#| msgid ""
-#| "Adding the button to open the dialog is much simpler: just a [Kirigami."
-#| "Action](docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
-#| "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgid ""
 "First we edit the action from the previous tutorial: just a [Kirigami.Action]"
 "(docs:kirigami2;Action) that triggers the dialog's [open()](docs:"
 "qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgstr ""
-"Aldoni la butonon por malfermi la dialogon estas multe pli simpla: nur "
-"[Kirigami.Action](docs:kirigami2;Action) kiu ekigas la funkcion [open()]"
-"(docs:qtquickcontrols;QtQuick.Controls.Popup::open) de la dialogo."
+"Unue ni redaktas la agon el la antaŭa instruilo: nur [Kirigami.Action](docs:"
+"kirigami2;Action) kiu ekigas la funkcion [open()](docs:qtquickcontrols;"
+"QtQuick.Controls.Popup::open) de la dialogo."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:39
 msgid "Countdown-adding dialogs"
@@ -6404,18 +6392,13 @@ msgid "Clear the input form"
 msgstr "Forigi la enigformularon"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:121
-#, fuzzy
-#| msgid ""
-#| "Once the Kirigami.Dialog is initialized, we want to create a custom "
-#| "binding to only make the Ok button visible if the required text fields "
-#| "are filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgid ""
 "... Once the Kirigami.Dialog is initialized, we want to create a custom "
 "binding to only make the Ok button visible if the required text fields are "
 "filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgstr ""
-"Post kiam la Kirigami.Dialogo estas pravigita, ni volas krei propran ligadon "
-"por nur videbligi la Ok-butonon se la bezonataj tekstkampoj estas "
+"... Post kiam la Kirigami.Dialogo estas pravalorizita, ni volas krei propran "
+"ligadon por nur videbligi la Ok-butonon se la bezonataj tekstkampoj estas "
 "plenigitaj. Por tio ni uzas Kirigami.Dialog.standardButton(butono):"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:129
@@ -6573,10 +6556,8 @@ msgid ""
 msgstr "[Instalante Kirigami el la deponejoj en via Linuksa distribuo](#linux)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:16
-#, fuzzy
-#| msgid "[Building Kirigami with kdesrc-build](#kdesrc-build)"
 msgid "[Using kde-builder](#kde-builder)"
-msgstr "[Konstruante Kirigami per kde-builder](#kdesrc-builder)"
+msgstr "[Konstruante Kirigami per kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:17
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -6605,8 +6586,6 @@ msgstr ""
 "building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
-#, fuzzy
-#| msgid "On Linux, with kde-builder"
 msgid "Using kde-builder"
 msgstr "En Linukso, kun kde-builder"
 
@@ -6628,23 +6607,18 @@ msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:44
-#, fuzzy
-#| msgid "On Linux, with kdesrc-build"
 msgid "⏳ With kdesrc-build..."
-msgstr "En Linukso, kun kdesrc-build"
+msgstr "⏳ Per kdesrc-build..."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:46
-#, fuzzy
-#| msgid ""
-#| "<details>\n"
-#| "<summary>Click here to read more</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>Click here to know how this was done with kdesrc-build</summary></"
 "br>\n"
 msgstr ""
-"<detaloj>\n"
-"<summary>Alklaku ĉi tie por legi pli</summary>\n"
+"<details>\n"
+"<summary>Alklaku ĉi tie por ekscii kiel tio estas farita per kdesrc-build</"
+"summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:49
 msgid ""
@@ -6733,14 +6707,6 @@ msgstr ""
 "ĝi ĉar ĝi estos rulita kune kun la rulebla."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:108
-#, fuzzy
-#| msgid ""
-#| "In case you want to automatically build the project with kde-builder/"
-#| "kdesrc-build, custom module name should be the same as the project root "
-#| "folder (in our case it will be \"kirigami-tutorial\"), otherwise you "
-#| "would need to customize the `source-dir` or `dest-dir` for the module. We "
-#| "will assume the path to your `main.cpp` will be `~/kde/src/kirigami-"
-#| "tutorial/src/main.cpp`."
 msgid ""
 "In case you want to automatically build the project with kde-builder, custom "
 "module name should be the same as the project root folder (in our case it "
@@ -6748,11 +6714,11 @@ msgid ""
 "`source-dir` or `dest-dir` for the module. We will assume the path to your "
 "`main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main.cpp`."
 msgstr ""
-"Se vi volas aŭtomate konstrui la projekton per kde-builder/kdesrc-build, "
-"laŭmenda modulnomo devus esti la sama kiel la projekta radika dosierujo (en "
-"nia kazo ĝi estos \"kirigami-tutorial\"), alie vi bezonus por personecigi la "
-"`source-dir` aŭ `dest-dir` por la modulo. Ni supozos, ke la vojo al via "
-"`main.cpp` estos `~/kde/src/kirigami-tutorial/src/main.cpp`."
+"Se vi volas aŭtomate konstrui la projekton per kde-builder, tajlorita "
+"modulnomo devus esti la sama kiel la projektradika dosierujo (en nia kazo ĝi "
+"estos \"kirigami-tutorial\"), alie vi bezonus adapti la `source-dir` aŭ "
+"`dest-dir` por la modulo. Ni supozos, ke la vojo al via `main.cpp` estos `~/"
+"kde/src/kirigami-tutorial/src/main.cpp`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:112
 msgid "Main.qml"
@@ -7252,10 +7218,8 @@ msgid "Linux or FreeBSD"
 msgstr "Linux aŭ FreeBSD"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:257
-#, fuzzy
-#| msgid "Building Kirigami with kdesrc-build"
 msgid "Compiling with kde-builder"
-msgstr "Konstruante Kirigami per kdesrc-builder"
+msgstr "Kompilante per kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:259
 msgid ""
@@ -7270,10 +7234,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:268
-#, fuzzy
-#| msgid "On Linux, manually"
 msgid "Compiling manually"
-msgstr "En Linukso, permane"
+msgstr "Kompilante permane"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:270
 msgid ""
@@ -7282,16 +7244,12 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:278
-#, fuzzy
-#| msgid ""
-#| "The program will be installed to `~/.local/bin` and its desktop entry to "
-#| "`~/.local/share/applications`."
 msgid ""
 "The program will be installed to `$HOME/.local/bin` and its desktop entry to "
 "`$HOME/.local/share/applications`."
 msgstr ""
-"La programo estos instalita al `~/.local/bin` kaj ĝia labortabla eniro al "
-"`~/.local/share/applications`."
+"La programo estos instalita al `$HOME/.local/bin` kaj ĝia labortabla eniro "
+"al `$HOME/.local/share/applications`."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:280
 msgid "Windows"
@@ -7356,16 +7314,12 @@ msgid "On Linux, manually"
 msgstr "En Linukso, permane"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:329
-#, fuzzy
-#| msgid "On Linux, with kde-builder"
 msgid "With kde-builder"
-msgstr "En Linukso, kun kde-builder"
+msgstr "Per kde-builder"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:330
-#, fuzzy
-#| msgid "On Linux, with kdesrc-build"
 msgid "With kdesrc-build"
-msgstr "En Linukso, kun kdesrc-build"
+msgstr "Per kdesrc-build"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:331
 msgid "On Windows"
@@ -7376,8 +7330,7 @@ msgid ""
 "Voilà! Now you will see your very first Kirigami app appear before your very "
 "own eyes."
 msgstr ""
-"Voila! Nun vi vidos vian unuan Kirigami-aperon aperi antaŭ viaj propraj "
-"okuloj."
+"Jen! Nun vi vidos vian unuan Kirigami-aperon aperi antaŭ viaj propraj okuloj."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:336
 msgid "![Screenshot of the generated Kirigami application](hello-kworld.webp)"
@@ -8751,16 +8704,12 @@ msgstr ""
 "malfacile diri kio faras kion, kaj ni riskas ŝlimigi nian kodon."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:15
-#, fuzzy
-#| msgid ""
-#| "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
-#| "qml`, `AddEditDialog.qml` and `KountdownDelegate.qml`."
 msgid ""
 "In this tutorial, we will be splitting the code in `Main.qml` into `Main."
 "qml`, `AddDialog.qml` and `KountdownDelegate.qml`."
 msgstr ""
-"En ĉi tiu lernilo, ni dividos la kodon en `Main.qml` en `Main.qml`, "
-"`AddEditDialog.qml` kaj `KountdownDelegate.qml`."
+"En ĉi tiu lernilo, ni dividos la kodon de `Main.qml` en `Main.qml`, "
+"`AddDialog.qml` kaj `KountdownDelegate.qml`."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:17
 msgid ""
@@ -9029,11 +8978,6 @@ msgstr ""
 "AbstractCard) en la aparta dosiero. Jen la rezulta `KountdownDelegate.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:132
-#, fuzzy
-#| msgid ""
-#| "Our dialog with `id: addDialog` is not enveloped in a Component, and it "
-#| "is not a component that is visible by default, so the code can be copied "
-#| "as is into the `AddEditDialog.qml`:"
 msgid ""
 "Our dialog with `id: addDialog` is not enveloped in a Component, and it is "
 "not a component that is visible by default, so the code can be copied as is "
@@ -9041,34 +8985,26 @@ msgid ""
 msgstr ""
 "Nia dialogo kun `id: addDialog` ne estas envolvita en Komponento, kaj ĝi ne "
 "estas komponento kiu estas videbla defaŭlte, do la kodo povas esti kopiita "
-"kiel estas en la `AddEditDialog.qml`:"
+"kiel estas en la `AddDialog.qml`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:136
 msgid "With the code split, `Main.qml` thus becomes much shorter:"
 msgstr "Kun la koddivido, `Main.qml` tiel fariĝas multe pli mallonga:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:140
-#, fuzzy
-#| msgid ""
-#| "We now have two extra QML files, `AddEditDialog.qml` and "
-#| "`KountdownDelegate`, and we need to find some way of using them in `Main."
-#| "qml`. The way to add the contents of the new files to `Main.qml` is by "
-#| "*instantiating* them."
 msgid ""
 "We now have two extra QML files, `AddDialog.qml` and `KountdownDelegate`, "
 "and we need to find some way of using them in `Main.qml`. The way to add the "
 "contents of the new files to `Main.qml` is by *instantiating* them."
 msgstr ""
-"Ni nun havas du kromajn QML-dosierojn, `AddEditDialog.qml` kaj "
+"Ni nun havas du kromajn QML-dosierojn, `AddDialog.qml` kaj "
 "`KountdownDelegate`, kaj ni devas trovi ian manieron uzi ilin en `Main.qml`. "
 "La maniero aldoni la enhavon de la novaj dosieroj al `Main.qml` estas "
 "*instanciante* ilin."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:142
-#, fuzzy
-#| msgid "`AddEditDialog.qml` becomes `AddEditDialog {}`:"
 msgid "`AddDialog.qml` becomes `AddDialog {}`:"
-msgstr "`AddEditDialog.qml` fariĝas `AddEditDialog {}`:"
+msgstr "`AddDialog.qml` fariĝas `AddDialog {}`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:146
 msgid "`KountdownDelegate.qml` becomes `KountdownDelegate {}`:"
@@ -9468,73 +9404,3 @@ msgstr ""
 "La tiparo de la [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::"
 "PlatformTheme) estas disponebla kiel `Kirigami.Theme.defaultFont.pointSize` "
 "en via aplikaĵo."
-
-#, fuzzy
-#~| msgid ""
-#~| "KDE has a custom tool to easily build all of its libraries and programs: "
-#~| "**kdesrc-build**. It can be used to build Kirigami on Linux and FreeBSD."
-#~ msgid ""
-#~ "KDE has a custom tool to easily build all of its libraries and programs: "
-#~ "**kde-builder**. It can be used to build Kirigami on Linux and FreeBSD."
-#~ msgstr ""
-#~ "KDE havas propran ilon por facile konstrui ĉiujn ĝiajn bibliotekojn kaj "
-#~ "programojn: **kdesrc-build**. Ĝi povas esti uzata por konstrui Kirigami "
-#~ "sur Linukso kaj FreeBSD."
-
-#, fuzzy
-#~| msgid ""
-#~| "For this tutorial, you will need to follow the [setup instructions for "
-#~| "kdesrc-build](/docs/getting-started/building/kdesrc-build-setup)."
-#~ msgid ""
-#~ "For this tutorial, you will need to follow the [setup instructions for "
-#~ "kde-builder](/docs/getting-started/building/kde-builder-setup)."
-#~ msgstr ""
-#~ "Por ĉi tiu lernilo, vi devos sekvi la [agordajn instrukciojn por kdesrc-"
-#~ "builder](/docs/getting-started/building/kdesrc-build-setup)."
-
-#, fuzzy
-#~| msgid ""
-#~| "If you want kdesrc-build to handle building and installation of your "
-#~| "project, you need to specify a custom module in your `~/.config/kdesrc-"
-#~| "buildrc`:"
-#~ msgid ""
-#~ "If you want kde-builder to handle building and installation of your "
-#~ "project, you need to:"
-#~ msgstr ""
-#~ "Se vi volas ke kdesrc-build pritraktu konstruadon kaj instaladon de via "
-#~ "projekto, vi devas specifi propran modulon en via `~/.config/kdesrc-"
-#~ "buildrc`:"
-
-#~ msgid "Then you can build and install it with the command:"
-#~ msgstr "Tiam vi povas konstrui kaj instali per la komando:"
-
-#, fuzzy
-#~| msgid ""
-#~| "In case you want to handle building and installation manually without "
-#~| "kdesrc-build, you will need to specify the place where the program will "
-#~| "be installed. To do that, we need to change directories to our `kirigami-"
-#~| "tutorial/` folder in our terminal application of choice and run the "
-#~| "following commands:"
-#~ msgid ""
-#~ "In case you want to handle building and installation manually without kde-"
-#~ "builder, you will need to specify the place where the program will be "
-#~ "installed. To do that, we need to change directories to our `kirigami-"
-#~ "tutorial/` folder in our terminal application of choice and run the "
-#~ "following commands:"
-#~ msgstr ""
-#~ "Se vi volas manipuli konstruadon kaj instaladon permane sen kdesrc-"
-#~ "builder, vi devos specifi la lokon kie la programo estos instalita. Por "
-#~ "fari tion, ni devas ŝanĝi dosierujojn al nia `kirigami-tutorial/` "
-#~ "dosierujo en nia fina aplikaĵo elektita kaj ruli la jenajn komandojn:"
-
-#~ msgid "On Linux, with kdesrc-build"
-#~ msgstr "En Linukso, kun kdesrc-build"
-
-#~ msgid ""
-#~ "If you wish to build Kirigami with Qt6, it is recommended to use [kdesrc-"
-#~ "build](#kdesrc-build) instead, especially for Linux installations using "
-#~ "Plasma 5."
-#~ msgstr ""
-#~ "Se vi deziras konstrui Kirigami kun Qt6, estas rekomendita uzi [kdesrc-"
-#~ "build](#kdesrc-build) anstataŭe, specife por Linuks-instaloj uzantaj "
-#~ "Plasma 5."
