@@ -105,7 +105,7 @@ touch kirigami-tutorial/src/{CMakeLists.txt,main.cpp,Main.qml}
 
 {{< alert title="Note" color="info" >}}
 
-In case you want to automatically build the project with kde-builder, custom module name should be the same as the project root folder (in our case it will be "kirigami-tutorial"), otherwise you would need to customize the `source-dir` or `dest-dir` for the module. We will assume the path to your `main.cpp` will be `$HOME/kde/src/kirigami-tutorial/src/main.cpp`.
+In case you want to automatically build the project with kde-builder, custom module name should be the same as the project root folder (in our case it will be "kirigami-tutorial"), otherwise you would need to customize the `source-dir` or `dest-dir` for the module. We will assume the path to your `main.cpp` will be `~/kde/src/kirigami-tutorial/src/main.cpp`.
 
 {{< /alert >}}
 
@@ -272,10 +272,10 @@ Change directories to the project's root folder, then run the following command 
 ```bash
 cmake -B build/
 cmake --build build/
-cmake --install build/ --prefix "$HOME/.local"
+cmake --install build/ --prefix ~/.local
 ```
 
-The program will be installed to `$HOME/.local/bin` and its desktop entry to `$HOME/.local/share/applications`.
+The program will be installed to `~/.local/bin` and its desktop entry to `~/.local/share/applications`.
 
 ### Windows
 
