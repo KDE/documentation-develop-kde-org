@@ -1,6 +1,6 @@
 ---
 title: Monochromatic Icons
-weight: 2
+weight: 12
 aliases:
 - /hig/style/icons/monochrome
 ---

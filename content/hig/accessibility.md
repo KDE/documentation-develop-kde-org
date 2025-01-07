@@ -1,6 +1,6 @@
 ---
 title: "Accessibility and inclusiveness"
-weight: 11
+weight: 13
 aliases:
 - /hig/accessibility/
 - /hig/accessibility/checklist/
