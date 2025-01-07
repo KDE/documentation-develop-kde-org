@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<main class="container">
+<div class="container pt-md-5">
     <h1>{{ .Title }}</h1>
 
     {{ .Content }}
@@ -10,10 +10,10 @@
         {{ $iconTheme = (index $.Site.Data.icons .Params.iconTheme) }}
     {{ end }}
 
-    <div class="d-flex mb-4 mt-5">
-        <h2 id="icons" class="mt-0">{{ T "icons" }}</h2>
+    <div class="d-flex flex-wrap flex-sm-nowrap gap-3 mb-4 mt-5">
+        <h2 id="icons" class="d-flex my-0 me-auto">{{ T "icons" }}</h2>
 
-        <div class="ms-auto dropdown">
+        <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ T "categories" }}
             </button>
@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <form class="d-flex flex-nowrap ms-3">
+        <form class="d-flex flex-nowrap flex-grow-1 flex-sm-grow-0">
             <label for="search" class="visually-hidden">{{ T "search-for-icons" }}</label>
             <input class="form-control search mb-0" id="search" placeholder="{{ T "start-typing-filter" }}" autocomplete="off">
         </form>
@@ -45,7 +45,7 @@
                                 <div class="p-3 py-4 mb-2 bg-light text-center rounded">
                                     <img loading="lazy" width="48em" src='{{ $icon_resource.Permalink }}'>
                                 </div>
-                                <div class="icon-name text-muted text-decoration-none text-center pt-1">
+                                <div class="icon-name text-break text-muted text-center pt-1">
                                     {{ $icon.name }}
                                 </div>
                             </a>
@@ -58,9 +58,9 @@
     <p id="no-result-warning" class="text-center {{ if not (eq (len $iconTheme) 0) }}d-none{{ end }}">
         {{ T "icon-search-no-results" }}
     </p>
-</main>
+</div>
 
-<script type="text/javascript">
+<script>
     const categoryCheckboxes = document.querySelectorAll('input[data-category]');
     for (let checkbox of categoryCheckboxes) {
         checkbox.addEventListener("change", search, false);
