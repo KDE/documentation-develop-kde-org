@@ -1,11 +1,11 @@
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-08 01:51+0000\n"
-"PO-Revision-Date: 2024-12-11 12:37+0100\n"
+"PO-Revision-Date: 2025-01-10 15:36+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -4054,11 +4054,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:101
 msgid "hints for the dialog dimensions"
-msgstr ""
+msgstr "sugerencias para las dimensiones del diálogo"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:125
 msgid "![A simple scrollable dialog](scrollabledialog.webp)"
-msgstr ""
+msgstr "![Un sencillo diálogo que se puede desplazar](scrollabledialog.webp)"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:131
 msgid ""
@@ -4066,6 +4066,9 @@ msgid ""
 "types, [Kirigami.PromptDialog](docs:kirigami2;PromptDialog) or [Kirigami."
 "MenuDialog](docs:kirigami2;MenuDialog)."
 msgstr ""
+"No obstante, en la mayoría de casos tal vez quiera usar uno de los tipos de "
+"diálogo derivados, [Kirigami.PromptDialog](docs:kirigami2;PromptDialog) o "
+"[Kirigami.MenuDialog](docs:kirigami2;MenuDialog)."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:133
 msgid "PromptDialog"
@@ -4232,17 +4235,14 @@ msgstr ""
 "Kirigami que sustituyen la capa actual del cajón global."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:83
-#, fuzzy
-#| msgid ""
-#| "Your chosen header component can be set with the global drawer's `header` "
-#| "property."
 msgid ""
 "Your chosen header component can be set with the global drawer's `header` "
 "property, and it will replace the global drawer's title. This is useful to "
 "add a `Kirigami.SearchField`, for example:"
 msgstr ""
 "Puede definir el componente de cabecera de su elección en la propiedad "
-"`header` del cajón global."
+"`header` del cajón global, con lo que sustituirá el título del cajón global. "
+"Esto resulta útil para añadir un `Kirigami.SearchField`. Por ejemplo:"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:134
 msgid ""
@@ -5071,10 +5071,13 @@ msgid ""
 "delegate, using a [Kirigami.SubtitleDelegate](docs:kirigami2;"
 "SubtitleDelegate):"
 msgstr ""
+"Este es un ejemplo que contiene exactamente una vista de lista, un modelo y "
+"un delegado, usando un [Kirigami.SubtitleDelegate](docs:kirigami2;"
+"SubtitleDelegate):"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:62
 msgid "And the exact same example, inline:"
-msgstr ""
+msgstr "Y exactamente el mismo ejemplo en línea:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:92
 msgid "Understanding models"
@@ -5085,6 +5088,9 @@ msgid ""
 "The model contains the data that will be used to populate the list view. "
 "Different ways to use models have different ways to access the data:"
 msgstr ""
+"El modelo contiene los datos que se usarán para rellenar la vista de lista. "
+"Los distintos modos de usar los modelos tienen diferentes formas de acceder "
+"a los datos:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:96
 msgid "WAY TO USE"
@@ -5120,11 +5126,11 @@ msgstr "model.index, model.somerole, model.modelData"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:99
 msgid "In most cases, for prototyping"
-msgstr ""
+msgstr "En la mayoría de los casos, para la creación de prototipos"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 msgid "JavaScript array model"
-msgstr ""
+msgstr "Modelo de matriz de JavaScript"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
@@ -5134,25 +5140,19 @@ msgstr "model.index, model.modelData"
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "For prototyping"
-msgstr ""
+msgstr "Para la creación de prototipos"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "Integer model"
-msgstr ""
+msgstr "Modelo de enteros"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:103
-#, fuzzy
-#| msgid ""
-#| "If you would like further clarification, the Qt documentation has [an "
-#| "informative page](https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview."
-#| "html) on the topic."
 msgid ""
 "You can read about [other ways to use models in the Qt documentation]"
 "(https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html)."
 msgstr ""
-"Si necesita más aclaraciones, la documentación de Qt tiene [una página "
-"informativa](https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html) "
-"sobre este tema."
+"Puede leer más sobre [otras formas de usar modelos en la documentación de Qt]"
+"(https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html)."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:105
 msgid ""
@@ -5163,6 +5163,12 @@ msgid ""
 "models to QML using QAbstractListModel](/docs/getting-started/kirigami/"
 "advanced-connect_models)."
 msgstr ""
+"En la tabla anterior, «Modelos de Qt» se refiere a modelos específicos de C+"
+"+, como [QAbstractListModel](https://doc.qt.io/qt-6/qabstractlistmodel."
+"html), y a modelos específicos de QML, como ListModel. Esta página del "
+"tutorial se centrará solo en los modelos específicos de QML. Más adelante "
+"ofrecemos un tutorial para [Conectar modelos de C++ a QML usando "
+"QAbstractListModel](/docs/getting-started/kirigami/advanced-connect_models)."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:107
 msgid ""
@@ -5170,6 +5176,9 @@ msgid ""
 "index (the position) of each delegate. It can be shortened to `index` for "
 "convenience."
 msgstr ""
+"La propiedad `model.index` está disponible para todos los modelos y contiene "
+"el índice (la posición) de cada delegado. Se puede abreviar a `index` por "
+"conveniencia."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:109
 msgid ""
@@ -5281,6 +5290,9 @@ msgid ""
 "The delegate on the other hand always need to have its dimensions set. "
 "Generally its dimensions are set to use only the full width of the view."
 msgstr ""
+"Por otra parte, el delegado siempre debe tener definidas sus dimensiones. "
+"Generalmente, estas dimensiones se definen para que usen solo la anchura "
+"completa de la vista."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:295
 msgid "Common mistakes"
@@ -5327,30 +5339,40 @@ msgid ""
 "[ItemDelegate](docs:qtquickcontrols;QtQuick.Controls.ItemDelegate) "
 "(delegates with only text)"
 msgstr ""
+"[ItemDelegate](docs:qtquickcontrols;QtQuick.Controls.ItemDelegate) "
+"(delegados con texto solamente)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:325
 msgid ""
 "[CheckDelegate](docs:qtquickcontrols;QtQuick.Controls.CheckDelegate) "
 "(delegates with a checkbox)"
 msgstr ""
+"[CheckDelegate](docs:qtquickcontrols;QtQuick.Controls.CheckDelegate) "
+"(delegados con una casilla de verificación)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:326
 msgid ""
 "[RadioDelegate](docs:qtquickcontrols;QtQuick.Controls.RadioDelegate) "
 "(delegates with a radio)"
 msgstr ""
+"[RadioDelegate](docs:qtquickcontrols;QtQuick.Controls.RadioDelegate) "
+"(delegados con una casilla de opción exclusiva)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:327
 msgid ""
 "[SwitchDelegate](docs:qtquickcontrols;QtQuick.Controls.SwitchDelegate) "
 "(delegates with a switch)"
 msgstr ""
+"[SwitchDelegate](docs:qtquickcontrols;QtQuick.Controls.SwitchDelegate) "
+"(delegados con un interruptor)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:328
 msgid ""
 "[SwipeDelegate](docs:qtquickcontrols;QtQuick.Controls.SwipeDelegate) "
 "(delegates that can be swiped)"
 msgstr ""
+"[SwipeDelegate](docs:qtquickcontrols;QtQuick.Controls.SwipeDelegate) "
+"(delegados que se pueden deslizar)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:330
 msgid "You should prefer using the upstream Qt delegates where possible."
@@ -5505,6 +5527,8 @@ msgid ""
 "The previous example can be reduced significantly with a `pageStack`, with "
 "the added bonus of navigation actions:"
 msgstr ""
+"El ejemplo anterior se puede reducir significativamente con una `pageStack`, "
+"con el beneficio adicional de tener acciones de navegación:"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:171
 msgid ""
@@ -5629,12 +5653,6 @@ msgid "Busy indicator"
 msgstr "Indicador de ocupado"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:74
-#, fuzzy
-#| msgid ""
-#| "In cases where loading times are shorter or measuring progress is not "
-#| "feasible, you can instead use `Controls.BusyIndicator`. This component "
-#| "provides a simple spinning wheel that shows users that something is "
-#| "happening."
 msgid ""
 "In cases where loading times are shorter or measuring progress is not "
 "feasible, you can instead use [Controls.BusyIndicator](docs:qtquickcontrols;"
@@ -5642,22 +5660,19 @@ msgid ""
 "wheel that shows users that something is happening."
 msgstr ""
 "En los casos en los que los tiempos de carga son más cortos o la medición "
-"del avance no es factible, puede usar un `Controls.BusyIndicator`. Este "
-"componente proporciona una sencilla rueda giratoria que indica al usuario "
-"que está sucediendo algo."
+"del avance no es factible, puede usar un  [Controls.BusyIndicator](docs:"
+"qtquickcontrols;QtQuick.Controls.BusyIndicator). Este componente proporciona "
+"una sencilla rueda giratoria que indica al usuario que está sucediendo algo."
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:76
-#, fuzzy
-#| msgid ""
-#| "If you want the indicator to stop running, you can do so by setting the "
-#| "`running` property to false."
 msgid ""
 "If you want the indicator to stop running, you can do so by setting the "
 "[running](https://doc.qt.io/qt-6/qml-qtquick-controls2-busyindicator."
 "html#running-prop) property to false, in which case the ."
 msgstr ""
 "Si prefiere que el indicador deje de girar, puede definir la propiedad "
-"`running` a `false`."
+"[running](https://doc.qt.io/qt-6/qml-qtquick-controls2-busyindicator."
+"html#running-prop) a `false`."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:0
 msgid "Scrollable pages and list views"
@@ -6171,6 +6186,8 @@ msgid ""
 "Other examples of Kirigami Actions showing up differently depending on their "
 "parent component are:"
 msgstr ""
+"Otros ejemplos de acciones de Kirigami que se muestran de forma distinta "
+"dependiendo del componente padre que tengan son:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:159
 msgid ""
@@ -6178,37 +6195,39 @@ msgid ""
 "tutorial here](/docs/getting-started/kirigami/components-drawers#context-"
 "drawers)"
 msgstr ""
+"[Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer) - [Tutorial de "
+"ContextDrawer](/docs/getting-started/kirigami/components-drawers#context-"
+"drawers)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:160
 msgid ""
 "[Kirigami.AbstractCard](docs:kirigami2;AbstractCard) and derivatives - [Card "
 "tutorial here](/docs/getting-started/kirigami/components-card)"
 msgstr ""
+"[Kirigami.AbstractCard](docs:kirigami2;AbstractCard) and derivatives - "
+"[Tutorial de Card](/docs/getting-started/kirigami/components-card)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:161
 msgid ""
 "[Kirigami.Dialog](docs:kirigami2;Dialog) and derivatives - [Dialog tutorial "
 "here](/docs/getting-started/kirigami/components-dialogs)"
 msgstr ""
+"[Kirigami.Dialog](docs:kirigami2;Dialog) and derivatives - [Tutorial de "
+"Dialog](/docs/getting-started/kirigami/components-dialogs)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:162
-#, fuzzy
-#| msgid ""
-#| "![ActionToolBar with children center-aligned](/docs/getting-started/"
-#| "kirigami/components-actiontoolbar/actiontoolbar-alignment.png)"
 msgid ""
 "[Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar) - [ActionToolBar "
 "tutorial here](/docs/getting-started/kirigami/components-"
 "actions#actiontoolbar)"
 msgstr ""
-"![ActionToolBar con acciones hijas centradas](/docs/getting-started/kirigami/"
-"components-actiontoolbar/actiontoolbar-alignment.png)"
+"[Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar) - [Tutorial de "
+"ActionToolBar](/docs/getting-started/kirigami/components-"
+"actions#actiontoolbar)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:164
-#, fuzzy
-#| msgid "Get acquainted with Kirigami Addons components"
 msgid "Among other Kirigami components."
-msgstr "Familiarícese con los componentes de los complementos de Kirigami"
+msgstr "Entre otros complementos de Kirigami"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:166
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:200
@@ -6263,7 +6282,7 @@ msgstr "En lugar de ello, vamos a usar un diálogo."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:19
 msgid "![Dialog appearing in the middle of the application](dialog.webp)"
-msgstr ""
+msgstr "![Diálogo que aparece en medio de la aplicación](dialog.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:21
 msgid "Opening the dialog"
@@ -6306,11 +6325,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:55
 msgid "Textfields let you input text in a thin textbox"
-msgstr ""
+msgstr "Los Textfields permiten introducir texto en un cuadro"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:58
 msgid "Provides a label attached to the textfield"
-msgstr ""
+msgstr "Proporciona una etiqueta adjunta a un campo de texto"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:60
 msgid ""
@@ -6320,20 +6339,22 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:68
 msgid "Again, it moves the focus to the next field"
-msgstr ""
+msgstr "De nuevo, mueve el foco al siguiente campo"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:74
 msgid ""
 "D means a required number between 1-9, 9 means a required number between 0-9"
 msgstr ""
+"D indica que se requiere un número entre 1 y 9, 9 indica que se requiere un "
+"número entre 0 y 9"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:77
 msgid "Here we confirm the operation just like clicking the OK button"
-msgstr ""
+msgstr "Aquí confirmamos la operación con solo pulsar el botón «Aceptar»"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:85
 msgid "The dialog logic goes here"
-msgstr ""
+msgstr "Aquí va la lógica del diálogo"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:91
 msgid ""
@@ -6477,7 +6498,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:129
 msgid "() => is a JavaScript arrow function"
-msgstr ""
+msgstr "() => es una función flecha de JavaScript"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:133
 msgid ""
@@ -6576,7 +6597,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:198
 msgid "Much nicer."
-msgstr ""
+msgstr "Mucho mejor."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:209
 msgid ""
@@ -6638,18 +6659,12 @@ msgstr ""
 "líneas, dependiendo de la distribución Linux que esté usando:"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:29
-#, fuzzy
-#| msgid ""
-#| "Further information for other distributions can be found [here](https://"
-#| "community.kde.org/Guidelines_and_HOWTOs/Build_from_source/"
-#| "Install_the_dependencies)."
 msgid ""
 "Further information for other distributions can be found [here](/docs/"
 "getting-started/building/help-dependencies)."
 msgstr ""
-"Puede encontrar más información para otras distribuciones [aquí](https://"
-"community.kde.org/Guidelines_and_HOWTOs/Build_from_source/"
-"Install_the_dependencies)."
+"Puede encontrar más información para otras distribuciones [aquí](/docs/"
+"getting-started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:31
 msgid "Using kde-builder"
@@ -6673,23 +6688,18 @@ msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:44
-#, fuzzy
-#| msgid "On Linux, with kdesrc-build"
 msgid "⏳ With kdesrc-build..."
-msgstr "En Linux, con kdesrc-build"
+msgstr "⏳ Con kdesrc-build..."
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:46
-#, fuzzy
-#| msgid ""
-#| "<details>\n"
-#| "<summary>Click here to read more</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>Click here to know how this was done with kdesrc-build</summary></"
 "br>\n"
 msgstr ""
 "<details>\n"
-"<summary>Pulse aquí para leer más</summary>\n"
+"<summary>Pulse aquí para saber cómo se hace esto con kdesrc-build</summary></"
+"br>\n"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:49
 msgid ""
@@ -7111,23 +7121,23 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:185
 msgid "create an executable"
-msgstr ""
+msgstr "crear un ejecutable"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:186
 msgid "change the executable into a QML module that accepts QML files"
-msgstr ""
+msgstr "cambiar el ejecutable a un módulo de QML que acepte archivos QML"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:187
 msgid "add C++ and QML files to the executable"
-msgstr ""
+msgstr "añadir archivos C++ y QML al ejecutable"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:188
 msgid "link the libraries necessary for the executable to run"
-msgstr ""
+msgstr "enlazar las bibliotecas necesarias para poder lanzar el ejecutable"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:189
 msgid "install the executable to the right place"
-msgstr ""
+msgstr "instalar el ejecutable en el lugar correcto"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:191
 msgid ""
