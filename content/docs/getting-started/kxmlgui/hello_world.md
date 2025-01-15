@@ -169,14 +169,14 @@ kdesrc-build --run --exec helloworld kxmlgui-tutorial
 Change directories to the project's root folder, then run the following command in a terminal:
 
 ```bash
-cmake -B build/
+cmake -B build/ --install-prefix ~/.local
 cmake --build build/ --parallel
-cmake --install build/ --prefix "~/.local"
+cmake --install build/
 ```
 
 Each line above matches a step of the compilation process: the configuration, build, and install steps.
 
-The `--parallel` flag lets CMake compile multiple files at the same time, and the `--prefix` flag tells CMake where it will be installed. In this case, the executable `helloworld` will be installed to `~/.local/bin/helloworld`.
+The `--parallel` flag lets CMake compile multiple files at the same time, and the `--install-prefix` flag tells CMake where it will be installed. In this case, the executable `helloworld` will be installed to `~/.local/bin/helloworld`.
 
 You can then run the application with:
 

@@ -202,10 +202,12 @@ or
 texteditor
 ```
 
-As you might remember from the [KXmlGui Hello World]{{< ref "hello_world" >}}, when installing the project manually with CMake, we specified the `--prefix` flag:
+As you might remember from the [KXmlGui Hello World]{{< ref "hello_world" >}}, when installing the project manually with CMake, we specified the `--install-prefix` flag:
 
 ```bash
-cmake --install build/ --prefix "~/.local"
+cmake -B build/ --install-prefix ~/.local
+cmake --build build/ --parallel
+cmake --install build/
 ```
 
-This will create a `/usr`-like directory structure in `~/.local`. Specifically, it will create the directories `$HOME/.local/bin/` and `$HOME/.local/share/`, then install the executable to `$HOME/.local/bin/texteditor` and the `texteditorui.rc` file to `$HOME/.local/share/kxmlgui/texteditor/texteditorui.rc`.
+This will create a `/usr`-like directory structure in `~/.local`. Specifically, it will create the directories `~/.local/bin/` and `~/.local/share/`, then install the executable to `~/.local/bin/texteditor` and the `texteditorui.rc` file to `~/.local/share/kxmlgui/texteditor/texteditorui.rc`.

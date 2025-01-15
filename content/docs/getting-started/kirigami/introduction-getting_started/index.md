@@ -270,9 +270,9 @@ kde-builder kirigami-tutorial
 Change directories to the project's root folder, then run the following command in a terminal:
 
 ```bash
-cmake -B build/
+cmake -B build/ --install-prefix ~/.local
 cmake --build build/
-cmake --install build/ --prefix ~/.local
+cmake --install build/
 ```
 
 The program will be installed to `~/.local/bin` and its desktop entry to `~/.local/share/applications`.

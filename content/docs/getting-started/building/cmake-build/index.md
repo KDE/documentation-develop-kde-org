@@ -26,9 +26,9 @@ This summary is provided in case you are already somewhat familiar with CMake or
 On Linux, do:
 
 ```bash
-cmake -B build/
+cmake -B build/ --install-prefix ~/.local
 cmake --build build/ --parallel
-cmake --install build/ --prefix ~/.local
+cmake --install build/
 ```
 
 On Windows, do:
@@ -71,9 +71,9 @@ The terms “compilation” and “build” are typically used interchangeably, 
 These steps are done in CMake by running the following commands from the root directory of the software project:
 
 ```bash
-cmake -B build/
+cmake -B build/ --install-prefix /place/to/install
 cmake --build build/ --parallel
-cmake --install build/ --prefix placetoinstall/
+cmake --install build/
 ```
 
 ## CMake is a build system generator {#build-system-generator}
@@ -259,6 +259,34 @@ To set a generator for the project you are attempting to build, use the `-G` fla
 cmake -B build/ -G "Ninja - Multi-Config"
 ```
 
+### Defining the install prefix {#install-prefix}
+
+The install prefix is the root (top-most) folder inside of which the software will be installed.
+
+Traditionally, the way one would set the install prefix would be by using a [configuration option]({{< ref "#config-variables" >}}) called `CMAKE_INSTALL_PREFIX` during the configuration step.
+
+Since CMake 3.21, this variable can be replaced with the more convenient `--install-prefix` flag.
+
+So where traditionally you'd run:
+
+```bash
+cmake -B build/ -DCMAKE_INSTALL_PREFIX=/usr
+```
+
+You can now run:
+
+```bash
+cmake -B build/ --install-prefix /usr
+```
+
+Note that `--install-prefix` requires an absolute path, so only options like the following are valid:
+
+* `/usr` (already an absolute path)
+* `~/.local` (expands to `/home/youruser/.local`)
+* `$PWD/test-prefix` (expands to `/home/youruser/currentdir/test-prefix`)
+
+The flag (or configuration option) needs to be set during the configuration step, even though the project is only installed during the install step. See [install step]({{< ref "#install" >}}) for details.
+
 ### Defining configuration options {#config-variables}
 
 You can give instructions to override what CMake does by passing variables to the `-D` flag followed by `=somevalue`.
@@ -296,9 +324,9 @@ KDE has mostly standardized on the ON/OFF pair of values.
 There are two commonly used CMake variables that are found in the wild but have better replacements:
 
 * [CMAKE_BUILD_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html) → `--config` flag for the build and install steps
-* [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html) → `--prefix` for the install step
+* [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html) → `--install-prefix` for the configuration step
 
-See the sections on [multi-configuration]({{< ref "#multi-config" >}}) and the [install step]({{< ref "#install" >}}), respectively.
+See the sections on [multi-configuration]({{< ref "#multi-config" >}}), the [configuration step]({{< ref "#configuration" >}}), and the [install step]({{< ref "#install" >}}), respectively.
 
 ## The build step {#build}
 
@@ -379,30 +407,23 @@ cmake --build build/ --clean-first
 
 ## The install step {#install}
 
-This step installs the contents of the build directory into a certain *install prefix*:
+This step installs the contents of the build directory into a certain *install prefix*, which was previously set during the [configuration step]({{< ref "#install-prefix" >}}):
 
 ```bash
-cmake --install build/ --prefix placetoinstall/
-```
-
-
-The place where you want a project to be installed *for users* is typically `/usr` on Linux and `c:/Program Files/${PROJECT_NAME}` for Windows.
-
-For *local* builds on Linux however it is a better idea to install the project to `~/.local`, as it has the equivalent paths to `/usr`, but in userspace.
-
-To summarize, when building a KDE project manually with CMake, use the following on Linux:
-
-```bash
-cmake --install build/ --prefix ~/.local
-```
-
-And the following on Windows:
-
-```bash
+cmake -B build/ --install-prefix /place/to/install
+cmake --build build/
 cmake --install build/
 ```
 
-### Where the files will be installed {#install-location}
+On Linux, for example, if the prefix is set to `/usr` and the project's executable `myprogram` should be installed to `bin/`, the executable will be installed to `/usr/bin/myprogram`. Similarly, if the prefix is set to `~/.local`, the executable will be installed to `~/.local/bin/myprogram`.
+
+The place where you want a project to be installed *for users* is typically `/usr` on Linux and `c:/Program Files/${PROJECT_NAME}` for Windows. Replace `${PROJECT_NAME}` with the name of your project folder.
+
+For *local* builds on Linux however it is a better idea to install the project to `~/.local`, as it has the equivalent paths to `/usr`, but in userspace.
+
+The reason the install prefix needs to be set during the configuration step instead of the install step is that sometimes projects may prepare the project such that during the configuration step that need to know the install prefix beforehand. See [Changing the install prefix]({{< ref "#changing-prefix" >}}) for details.
+
+### Where the files are installed for KDE projects {#install-location}
 
 KDE projects need to install multiple files:
 
@@ -434,6 +455,73 @@ All of these paths and more are standardized in KDE software that uses the [KDEI
 
 * `EXECROOTDIR` the same as the prefix, so `/usr` or `c:/Program Files/$PROJECT_NAME`
 * `DATAROOTDIR` the same as `/usr/share` on Linux or `c:/Program Files/${PROJECT_NAME}/bin/data` on Windows
+
+### Changing the install prefix {#changing-prefix}
+
+After a project is [configured]({{< ref "#configuration" >}}) and the [install prefix has been set]({{< ref "#install-prefix" >}}), the developer may want to change the install prefix, for example to create a separate build directory to compare the results with certain code changes applied.
+
+There are two ways to do so:
+
+* The `--prefix` flag of the install step
+* By rebuilding the build directory
+
+The `--prefix` flag is used like so:
+
+```bash
+cmake -B build/ --install-prefix ~/.local
+cmake --build build/
+cmake --install build/
+# Some time passes, now I want to install to somewhere else!
+cmake --install build/ --prefix test-prefix
+```
+
+Instead of the project being installed to `~/.local`, it will be installed to `test-prefix` in the current directory where the command is run.
+
+The flag effectively overrides the value of the install prefix and is convenient in many cases since it doesn't require rebuilding the project, but it won't work for projects that prepare their files using the install prefix during the configuration step.
+
+Be careful not to confuse the `--prefix` flag of the install step with the `--install-prefix` flag of the configuration step.
+
+{{< alert title="When not to use --prefix" color="warning" >}}
+
+<details>
+<summary>Click here to read more</summary></br>
+
+Using a practical example, if a project has an input file `org.kde.myapp.desktop.in` with the following line:
+
+```ini
+Exec=@CMAKE_INSTALL_PREFIX/bin/myapp@
+```
+
+If the project is configured to point to `/usr`, the file `org.kde.myapp.desktop` will be seen in the build directory with the following line:
+
+```ini
+Exec=/usr/bin/myapp
+```
+
+Because this is done during the configuration step, even if you use the `--prefix` flag to set the install prefix to `~/.local` during the installation step, the installed `org.kde.myapp.desktop` file will point to `/usr/bin/myapp` instead of `/home/youruser/.local/bin/myapp`.
+
+In some cases this may not matter for the developer, but it is worth keeping this in mind.
+
+Another specific edge case that can bite QML app developers is when the install prefix is never manually set (with either the flag or configuration option) but the `--prefix` flag is used. See [Limitations of using --prefix](https://invent.kde.org/documentation/develop-kde-org/-/issues/195) for details.
+
+</details>
+
+{{< /alert >}}
+
+The second method is guaranteed to always work in all cases, but also requires emptying the build directory and rebuilding the project from scratch, which might not be desirable if a project has long compile times.
+
+Traditionally this is done by deleting the build directory manually and then recreating it:
+
+```bash
+rm -rf build
+cmake -B build --install-prefix $PWD/test-prefix
+```
+
+But since CMake 3.24, it is now possible to empty and reconfigure a project in one go using the `--fresh` flag:
+
+```bash
+cmake -B build --install-prefix $PWD/test-prefix --fresh
+```
 
 ## Multi-configuration builds {#multi-config}
 
