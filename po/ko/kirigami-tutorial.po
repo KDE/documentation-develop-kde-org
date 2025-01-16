@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-08 01:51+0000\n"
+"POT-Creation-Date: 2025-01-16 01:48+0000\n"
 "PO-Revision-Date: 2022-05-08 01:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -24,6 +24,10 @@ msgid "Kirigami"
 msgstr "Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
+msgid "Setup"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:0
 msgid "Introduction"
 msgstr "소개"
 
@@ -40,6 +44,10 @@ msgid "Advanced"
 msgstr "고급"
 
 #: content/docs/getting-started/kirigami/_index.md:0
+msgid "Manipulating data"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:0
 #, fuzzy
 #| msgid "Kirigami"
 msgid "Kirigami Addons"
@@ -49,7 +57,7 @@ msgstr "Kirigami"
 msgid "Learning to create your first applications using Kirigami\n"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/_index.md:24
+#: content/docs/getting-started/kirigami/_index.md:28
 msgid ""
 "This tutorial will guide you through the process of creating your own "
 "convergent application using the [Kirigami framework](/frameworks/kirigami). "
@@ -60,7 +68,7 @@ msgid ""
 "touchscreen and adapt to a smaller portrait screen. And so on."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/_index.md:32
+#: content/docs/getting-started/kirigami/_index.md:36
 msgid ""
 "Kirigami is built on top of the QML language and Qt Quick Controls 2 "
 "components provided by the Qt project. QML has built in support for touch "
@@ -70,13 +78,42 @@ msgid ""
 "applications."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/_index.md:38
+#: content/docs/getting-started/kirigami/_index.md:42
 msgid ""
 "While you will use QML to create the visual part of your application, the "
 "business logic—the code that does the heavy lifting for your application's "
-"functionality—is usually created in C++ for performance reasons. We will "
-"also explore how to integrate our business logic with our UI in the "
-"tutorials below."
+"functionality—should be written in a different language. We will also "
+"explore how to integrate our business logic with our UI in the tutorials "
+"below."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:47
+msgid ""
+"First, you will need to set up a new project in a language of your choice. "
+"The introduction will show you how to make a small, but functional Kirigami "
+"application."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:49
+msgid ""
+"You will be shown the basics of how to deal with colors and text in your "
+"application, and you will get acquainted with most QML components. Next, you "
+"will get acquainted with most of the QML components you might want to use "
+"and how they look like. This section won't touch any business logic at all, "
+"only QML code."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:51
+msgid ""
+"You will get a deep dive into more advanced topics that concern manipulating "
+"the data that will be shown in your program."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:53
+msgid ""
+"Lastly, you will be presented with Kirigami Addons, a series of quality-of-"
+"life components that you can use to, among other things, design the Settings "
+"of your application."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:0
@@ -1047,11 +1084,11 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
-msgid "Connect models to your QML user interface"
+msgid "Connect C++ models to your QML user interface"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
-msgid "Connect models from C++ backend to QML frontend"
+msgid "Data from the C++ backend to the QML frontend"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
@@ -4976,8 +5013,10 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:0
-msgid "Setting up and getting started"
-msgstr ""
+#, fuzzy
+#| msgid "Kirigami"
+msgid "Kirigami with C++"
+msgstr "Kirigami"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:0
 msgid "Getting ready to create our first Kirigami application\n"
@@ -6696,7 +6735,7 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:0
-msgid "Using separate files"
+msgid "Using separate files in a C++ project"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:0

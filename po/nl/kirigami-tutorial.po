@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-08 01:51+0000\n"
+"POT-Creation-Date: 2025-01-16 01:48+0000\n"
 "PO-Revision-Date: 2025-01-09 00:31+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -25,6 +25,10 @@ msgid "Kirigami"
 msgstr "Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
+msgid "Setup"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:0
 msgid "Introduction"
 msgstr "Inleiding"
 
@@ -41,6 +45,10 @@ msgid "Advanced"
 msgstr "Geavanceerd"
 
 #: content/docs/getting-started/kirigami/_index.md:0
+msgid "Manipulating data"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:0
 msgid "Kirigami Addons"
 msgstr "Kirigami-toevoegingen"
 
@@ -48,7 +56,7 @@ msgstr "Kirigami-toevoegingen"
 msgid "Learning to create your first applications using Kirigami\n"
 msgstr "Leren om uw eerste toepassing te maken met Kirigami\n"
 
-#: content/docs/getting-started/kirigami/_index.md:24
+#: content/docs/getting-started/kirigami/_index.md:28
 msgid ""
 "This tutorial will guide you through the process of creating your own "
 "convergent application using the [Kirigami framework](/frameworks/kirigami). "
@@ -67,7 +75,7 @@ msgstr ""
 "gebruikt wordt op een mobiel apparaat, zal het invoer accepteren van een "
 "aanraakscherm en zich aanpassen aan een kleiner portretscherm. Enzovoort."
 
-#: content/docs/getting-started/kirigami/_index.md:32
+#: content/docs/getting-started/kirigami/_index.md:36
 msgid ""
 "Kirigami is built on top of the QML language and Qt Quick Controls 2 "
 "components provided by the Qt project. QML has built in support for touch "
@@ -83,19 +91,55 @@ msgstr ""
 "bouwen van onze interfaces van toepassingen. Kirigami is een set van Qt "
 "Quick componenten ontworpen voor het maken van convergente toepassingen."
 
-#: content/docs/getting-started/kirigami/_index.md:38
+#: content/docs/getting-started/kirigami/_index.md:42
+#, fuzzy
+#| msgid ""
+#| "While you will use QML to create the visual part of your application, the "
+#| "business logic—the code that does the heavy lifting for your "
+#| "application's functionality—is usually created in C++ for performance "
+#| "reasons. We will also explore how to integrate our business logic with "
+#| "our UI in the tutorials below."
 msgid ""
 "While you will use QML to create the visual part of your application, the "
 "business logic—the code that does the heavy lifting for your application's "
-"functionality—is usually created in C++ for performance reasons. We will "
-"also explore how to integrate our business logic with our UI in the "
-"tutorials below."
+"functionality—should be written in a different language. We will also "
+"explore how to integrate our business logic with our UI in the tutorials "
+"below."
 msgstr ""
 "Terwijl u QML zal gebruiken om het visuele deel van uw toepassing te maken, "
 "wordt voor de zakelijke logica - de code die het zware werk doet voor de "
 "functionaliteit van uw toepassing - gewoonlijk aangemaakt in C++ voor "
 "redenen van prestaties. We zullen ook nagaan hoe uw zakelijke logica "
 "integreert met uw UI in de onderstaande inleidingen."
+
+#: content/docs/getting-started/kirigami/_index.md:47
+msgid ""
+"First, you will need to set up a new project in a language of your choice. "
+"The introduction will show you how to make a small, but functional Kirigami "
+"application."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:49
+msgid ""
+"You will be shown the basics of how to deal with colors and text in your "
+"application, and you will get acquainted with most QML components. Next, you "
+"will get acquainted with most of the QML components you might want to use "
+"and how they look like. This section won't touch any business logic at all, "
+"only QML code."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:51
+msgid ""
+"You will get a deep dive into more advanced topics that concern manipulating "
+"the data that will be shown in your program."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:53
+msgid ""
+"Lastly, you will be presented with Kirigami Addons, a series of quality-of-"
+"life components that you can use to, among other things, design the Settings "
+"of your application."
+msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:0
 msgid "FormCard About pages"
@@ -1403,11 +1447,15 @@ msgstr ""
 "cppintegration-definetypes.html) aan."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
-msgid "Connect models to your QML user interface"
+#, fuzzy
+#| msgid "Connect models to your QML user interface"
+msgid "Connect C++ models to your QML user interface"
 msgstr "Modellen verbinden naar uw QML gebruikersinterface"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
-msgid "Connect models from C++ backend to QML frontend"
+#, fuzzy
+#| msgid "Connect models from C++ backend to QML frontend"
+msgid "Data from the C++ backend to the QML frontend"
 msgstr "Modellen verbinden uit de C++-backend naar de QML-frontend"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
@@ -6730,8 +6778,10 @@ msgstr ""
 "webp)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:0
-msgid "Setting up and getting started"
-msgstr "Opzetten en aan de slag gaan"
+#, fuzzy
+#| msgid "Kirigami Unit"
+msgid "Kirigami with C++"
+msgstr "Kirigami-eenheid"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:0
 msgid "Getting ready to create our first Kirigami application\n"
@@ -8962,7 +9012,9 @@ msgstr ""
 "pagerow_pagestack)."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:0
-msgid "Using separate files"
+#, fuzzy
+#| msgid "Using separate files"
+msgid "Using separate files in a C++ project"
 msgstr "Aparte bestanden gebruiken"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:0
@@ -9698,6 +9750,9 @@ msgstr ""
 "De tekengrootte van het [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::"
 "PlatformTheme) is beschikbaar als `Kirigami.Theme.defaultFont.pointSize` in "
 "uw toepassing."
+
+#~ msgid "Setting up and getting started"
+#~ msgstr "Opzetten en aan de slag gaan"
 
 #~ msgid ""
 #~ "KDE has a custom tool to easily build all of its libraries and programs: "
