@@ -179,7 +179,7 @@ While during initial setup, `kde-builder` installed the essentials for itself to
 kde-builder --install-distro-packages
 ```
 
-Next, you'll want to test that things are set up correctly. Run this to verify kcalc is able to be built:
+You can skip ahead and attempt to build a single project as a way to test that your setup is okay. Run this to verify KCalc is able to be built:
 
 ```bash
 kde-builder --pretend kcalc
@@ -188,14 +188,15 @@ kde-builder --pretend kcalc
 Finally, perform your first build.
 
 ```shell
-kde-builder dolphin
+kde-builder kcalc
 ```
 
-This will build [Dolphin](https://apps.kde.org/dolphin/),
-the Plasma file manager and its KDE-based dependencies. We choose Dolphin
-since it is a good test case to exercise the whole build process.
+This will build [KCalc](https://apps.kde.org/kcalc/),
+a calculator app with few dependencies. If you happen to find any build issues, don't fret! That means kde-builder is working.
 
-Now `kde-builder` is set up! 🎉
+In the next section [Building KDE software with kde-builder]({{< ref "kde-builder-compile" >}}) we make a more in-depth dive into the building process, and to solve any build issues you can check out [Installing build dependencies]({{< ref "help-dependencies" >}}).
+
+Now `kde-builder` should be set up! 🎉
 These [common command line flags](https://kde-builder.kde.org/en/cmdline/cmdline-usage.html#commonly-used-command-line-options) may come in handy.
 
 {{< alert color="success" title="💡 A chance to contribute">}}
