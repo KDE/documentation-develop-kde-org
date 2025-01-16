@@ -603,7 +603,21 @@ There are custom targets provided both by CMake and by KDE’s extra-cmake-modul
 * ECM’s [ecm_add_tests()](https://api.kde.org/ecm/module/ECMAddTests.html) provides a new target for each C++ test file based on the filename without the file extension (.cpp)
 * ECM’s [KDECMakeSettings](https://api.kde.org/ecm/kde-module/KDECMakeSettings.html) module provides the `uninstall` target
 
-So to run all tests for a KDE project, you can do the following:
+If you are building a project locally on Linux and later would like to uninstall a project, you can do the following:
+
+```bash
+cmake -B build/ --install-prefix ~/.local
+cmake --build build/ --parallel
+cmake --install build/
+# Later, when you no longer need the program installed
+cmake --build build/ --target uninstall
+```
+
+### Running test targets {#tests}
+
+As mentioned in [Running CMake targets]({{< ref "#targets" >}}), CMake provides an additional `test` target by default and ECM provides one target per test source file.
+
+To run all tests for a KDE project, you can do the following:
 
 ```bash
 cmake -B build/ -D BUILD_TESTING=ON
@@ -619,12 +633,49 @@ cmake -B build -D BUILD_TESTING=ON
 cmake --build build/ --target settings-test
 ```
 
-And if you are building a project locally on Linux and later would like to uninstall a project, you can do the following:
+Running test targets directly with `cmake` can be inconvenient both because the command is very verbose and because no additional options can be passed to modify how the test should behave.
+
+Instead, you can use `ctest` to run tests. CTest is what is actually run under the hood when you call a test target with `cmake`.
+
+To execute all tests, run the following after configuring the project:
 
 ```bash
-cmake -B build/
-cmake --build build/ --parallel
-cmake --install build/ --prefix ~/.local
-# Later, when you no longer need the program installed
-cmake --build build/ --target uninstall
+cmake -B build/ -D BUILD_TESTING=ON
+ctest --test-dir build/
+```
+
+To execute only one test, run the following:
+
+```bash
+# Only run tests that have "app" in the name
+ctest --test-dir build/ -R app
+```
+
+The short flag `-R` (or long flag `--tests-regex`) allows for any regex expression, unlike CMake's `--target` which only accepts matching names. It opposite flag `-E` or `--exclude-regex` allows to only run tests not matching the regex expression:
+
+```bash
+# Only run tests that do not have "window" in the name
+ctest --test-dir build/ -E window
+```
+
+A few common additional options you can pass to `ctest` but cannot to `cmake` include:
+
+The `--verbose`, `--extra-verbose` and `--debug` flags to see more details about the test or which commands are run under the hood:
+
+```bash
+ctest --test-dir build/ --verbose
+ctest --test-dir build/ --debug
+```
+
+The flag `--rerun-failed` to run only failed tests and the flag `--stop-on-failure` to make CTest stop once a single test fails:
+
+```bash
+ctest --test-dir build/ --rerun-failed
+ctest --test-dir build/ --stop-on-failure
+```
+
+The flag `--output-log` to save the test results to a file:
+
+```bash
+ctest --test-dir build/ --output-log test1.txt
 ```
