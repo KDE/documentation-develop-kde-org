@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 01:48+0000\n"
-"PO-Revision-Date: 2025-01-08 08:41+0200\n"
+"PO-Revision-Date: 2025-01-16 14:18+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -26,7 +26,7 @@ msgstr "Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Setup"
-msgstr ""
+msgstr "Налаштовування"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Introduction"
@@ -46,7 +46,7 @@ msgstr "Додатково"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Manipulating data"
-msgstr ""
+msgstr "Робота з даними"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Kirigami Addons"
@@ -94,13 +94,6 @@ msgstr ""
 "Quick, які розроблено для створення універсальних програм."
 
 #: content/docs/getting-started/kirigami/_index.md:42
-#, fuzzy
-#| msgid ""
-#| "While you will use QML to create the visual part of your application, the "
-#| "business logic—the code that does the heavy lifting for your "
-#| "application's functionality—is usually created in C++ for performance "
-#| "reasons. We will also explore how to integrate our business logic with "
-#| "our UI in the tutorials below."
 msgid ""
 "While you will use QML to create the visual part of your application, the "
 "business logic—the code that does the heavy lifting for your application's "
@@ -110,9 +103,9 @@ msgid ""
 msgstr ""
 "Одночасно із використанням QML для створення візуальної частини програми, "
 "робочу логіку — код, який надаватиме вашій програмі функціональних "
-"можливостей — зазвичай, пишуть на C++ з міркувань швидкодії. У наведених "
-"нижче розділах підручника ми також вивчимо питання інтеграції робочої логіки "
-"із інтерфейсом користувача."
+"можливостей — має бути написано іншою мовою. У наведених нижче розділах "
+"підручника ми також вивчимо питання інтеграції робочої логіки із інтерфейсом "
+"користувача."
 
 #: content/docs/getting-started/kirigami/_index.md:47
 msgid ""
@@ -120,6 +113,8 @@ msgid ""
 "The introduction will show you how to make a small, but functional Kirigami "
 "application."
 msgstr ""
+"По-перше, вам потрібно буде налаштувати новий проєкт вибраною вами мовою. У "
+"«Вступі» показано, як створити невелику, але функціональну програму Kirigami."
 
 #: content/docs/getting-started/kirigami/_index.md:49
 msgid ""
@@ -129,12 +124,19 @@ msgid ""
 "and how they look like. This section won't touch any business logic at all, "
 "only QML code."
 msgstr ""
+"Вам ознайомитеся з тим, як працювати з кольорами та текстом у вашій "
+"програмі, і більшістю компонентів QML. Далі ви ознайомитеся з більшістю "
+"компонентів QML, які вам, можливо, захочеться використовувати, і з тим, як "
+"вони виглядають. У цьому розділі взагалі не торкатимемося бізнес-логіки, "
+"лише коду QML."
 
 #: content/docs/getting-started/kirigami/_index.md:51
 msgid ""
 "You will get a deep dive into more advanced topics that concern manipulating "
 "the data that will be shown in your program."
 msgstr ""
+"Ви глибоко зануритеся у більш складні теми, які стосуються роботи з даними, "
+"які буде показано у вікні вашої програми."
 
 #: content/docs/getting-started/kirigami/_index.md:53
 msgid ""
@@ -142,6 +144,9 @@ msgid ""
 "life components that you can use to, among other things, design the Settings "
 "of your application."
 msgstr ""
+"Нарешті, вам буде запропоновано Kirigami Addons, набір зручних компонентів, "
+"якими ви можете скористатися, зокрема, для розробки вікна налаштувань вашої "
+"програми."
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:0
 msgid "FormCard About pages"
@@ -1442,16 +1447,12 @@ msgstr ""
 "cppintegration-definetypes.html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
-#, fuzzy
-#| msgid "Connect models to your QML user interface"
 msgid "Connect C++ models to your QML user interface"
-msgstr "З'єднання моделей з вашим інтерфейсом користувача QML"
+msgstr "З'єднання моделей C++ з вашим інтерфейсом користувача QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:0
-#, fuzzy
-#| msgid "Connect models from C++ backend to QML frontend"
 msgid "Data from the C++ backend to the QML frontend"
-msgstr "З'єднання моделей з модуля обробки на C++ із оболонкою на QML"
+msgstr "Дані з модуля обробки C++ до оболонки QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
 msgid ""
@@ -6746,10 +6747,8 @@ msgstr ""
 "![Знімок вікна програми з чотирма картками-прикладами](addedKountdowns.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:0
-#, fuzzy
-#| msgid "Kirigami Unit"
 msgid "Kirigami with C++"
-msgstr "Одиниця Kirigami"
+msgstr "Kirigami з C++"
 
 #: content/docs/getting-started/kirigami/introduction-getting_started/index.md:0
 msgid "Getting ready to create our first Kirigami application\n"
@@ -8960,10 +8959,8 @@ msgstr ""
 "сторінки."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:0
-#, fuzzy
-#| msgid "Using separate files"
 msgid "Using separate files in a C++ project"
-msgstr "Користування окремими файлами"
+msgstr "Користування окремими файлами у проєкті C++"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:0
 msgid ""
