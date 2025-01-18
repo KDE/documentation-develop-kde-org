@@ -69,3 +69,99 @@ sudo chattr +i ~/kde/src
 ```
 
 Now you have write permissions to the folder, but you cannot delete it.
+
+## Faster compile times
+
+It is possible to change various CMake options globally in kde-builder so that projects will build faster, which is convenient especially for building KDE software on weaker machines. By setting these options globally, if you ever need them enabled for a specific project, you can then use [kde-builder config overrides](https://kde-builder.kde.org/en/configuration/config-file-overview.html#overriding-configuration).
+
+{{< alert title="⚠️ Tread with caution" color="warning" >}}
+
+Disabling certain CMake options, while providing build speed improvements, can make major changes to your build, most notably CMAKE_BUILD_TYPE and BUILD_TESTING. You should be aware of these customizations and mention them whenever you request for assistance from other developers.
+
+{{< /alert >}}
+
+These options can be set in the global section of your `~/.config/kde-builder.yaml`, under `cmake-options`, for example:
+
+```yaml
+cmake-options: -DOPTION=OFF -DANOTHER_OPTION=value2
+```
+
+Or with multiline:
+
+```yaml
+cmake-options: >
+  -DOPTION=OFF
+  -DANOTHER_OPTION=value
+```
+
+Then, at the end of the file, you can set overrides for each individual option that go against the global `cmake-options` values:
+
+```yaml
+override kirigami:
+  cmake-options: -DOPTION=ON
+```
+
+If it is a custom project (not a KDE project), you can use `project` instead:
+
+```yaml
+project kirigami-tutorial:
+  cmake-options: -DOPTION=ON
+```
+
+### Building without debug symbols
+
+By default, kde-builder compiles projects in `RelWithDebInfo` mode, that is, Release with Debug Info. It is not as slow to compile as `Debug`, but it still provides debug symbols, unlike `Release`.
+
+```yaml
+cmake-options: >
+  -DCMAKE_BUILD_TYPE=Release
+```
+
+Not having debug symbols will provide the largest boost in build speeds, but it will also render you unable to debug crashes.
+
+If you happen to be a bug tester, you should NOT set this option to Release.
+
+### Building without tests
+
+All KDE projects that use extra-cmake-modules have [tests set to build by default](https://api.kde.org/ecm/kde-module/KDECMakeSettings.html#testing) together with the main project. This ensures that developers catch bugs easily and quickly, but it also takes significant time when building dozens of modules.
+
+```yaml
+cmake-options: >
+  -DBUILD_TESTING=OFF
+```
+
+### Building without docs
+
+KDE projects can make use of multiple ways of generating documentation: [Qt Help projects (.qhp) and compressed Qt Help files (.qch)](https://doc.qt.io/qt-6/qthelp-framework.html), [Doxygen HTML or manpages](https://www.doxygen.nl/), Sphinx, and recently QDoc. The first two can be globally disabled, although the speed improvements are not as significant as the build type or tests.
+
+```yaml
+cmake-options: >
+  -DBUILD_QTHELP_DOCS=OFF
+  -DBUILD_QCH=OFF
+  -DBUILD_HTML_DOCS=OFF
+  -DBUILD_MAN_DOCS=OFF
+```
+
+### Building with ccache
+
+Compiler cache, or `ccache`, can be used to increase build speed only when recompiling projects.
+
+Running it your first time building KDE projects will not make any difference whatsoever, and even subsequent runs will only see some improvement. Where `ccache` excels at is when switching between different branches, stashes, rebases or bisects and recompiling repeatedly, that is to say, when you are developing a patch.
+
+{{< alert title="⚠️ Tread with caution" color="warning" >}}
+
+There are certain caveats that you must be aware when using `ccache`, most notably that you can have compilation failures caused specifically by ccache, and that lookup in large caches can actually make compilation slower. See [Ccache caveats on the Arch wiki](https://wiki.archlinux.org/title/Ccache#Caveat).
+
+While you will still likely perceive some improvement by setting this globally, you might prefer to override each individual project you are likely to work on instead to minimize these issues.
+
+Before reporting compilation issues, disable this option for the project you are working on.
+
+{{< /alert >}}
+
+To use `ccache` you will first need to install it.
+
+```yaml
+cmake-options: >
+  -DCMAKE_C_COMPILER_LAUNCHER=ccache
+  -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
+```
