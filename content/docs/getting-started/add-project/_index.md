@@ -75,6 +75,7 @@ For any project to become an official part of KDE.
 ```
 **KDE Review checklist**
 - [ ] If from outside KDE, has completed the [Incubator](https://community.kde.org/Incubator) process
+- [ ] Follows the [Android application ID naming rules](https://developer.android.com/build/configure-app-module?hl=en#set-application-id) (only alphanumeric characters and underscore, no hyphen)
 - [ ] The [REUSE Specification - Version 3.0](https://reuse.software/spec/) is applied when stating licenses and when adding license files to a project. Each source file either must contain SPDX identifiers or license headers to state under which terms the software may be used, modified and redistributed. See [Licensing Policy](https://community.kde.org/Policies/Licensing_Policy#License_Statements)
 - [ ] Passing CI job for Reuse linting
 - [ ] A [Messages.sh file](https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems#Writing_a_Messages.sh_script) which extracts all the i18n() translations
