@@ -82,7 +82,9 @@
 
 .td-max-width-on-larger-screens {
     @include media-breakpoint-up(lg) {
-        max-width: 80%;
+        max-width: 95%;
     }
-
+    @media (min-width: 2000px) {
+        max-width: 85%;
+    }
 }
