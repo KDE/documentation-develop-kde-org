@@ -14,15 +14,24 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     {{- $url := printf "_data/%s.json" $module -}}
     {{- $data := dict -}}
     {{ with try (resources.Get $url) }}
-      {{ with .Value }}
+      {{ with .Err }}
+        {{ errorf "%s" . }}
+      {{ else with .Value }}
         {{ $data := . | transform.Unmarshall }}
+      {{ else }}
+        {{ errorf "[data in layouts/_default/_markup/render-link.html:22] Unable to get local resource %q" $url }}
       {{ end }}
     {{ end }}
 
-    {{ $dataMap := dict }}
-    {{ with try (resources.Get "_data/components_map.json") }}
-      {{ with .Value }}
+    {{- $mapUrl := printf "_data/components_map.json" -}}
+    {{- $dataMap := dict -}}
+    {{ with try (resources.Get $mapUrl) }}
+      {{ with .Err }}
+        {{ errorf "%s" . }}
+      {{ else with .Value }}
         {{ $dataMap := . | transform.Unmarshall }}
+      {{ else }}
+        {{ errorf "[dataMap in layouts/_default/_markup/render-link.html:34] Unable to get local resource %q" $mapUrl }}
       {{ end }}
     {{ end }}
 
@@ -72,17 +81,27 @@ SPDX-License-Identifier: LGPL-3.0-or-later
       {{- .Text | safeHTML -}}
     </a>
   {{- else -}}
+    {{- $url := printf "_data/%s.json" $dest -}}
     {{- $data := dict -}}
     {{ with try (resources.Get $url) }}
-      {{ with .Value }}
+      {{ with .Err }}
+        {{ errorf "%s" . }}
+      {{ else with .Value }}
         {{ $data := . | transform.Unmarshall }}
+      {{ else }}
+        {{ errorf "[data in layouts/_default/_markup/render-link.html:92] Unable to get local resource %q" $url }}
       {{ end }}
     {{ end }}
 
-    {{ $dataMap := dict }}
-    {{ with try (resources.Get "_data/components_map.json") }}
-      {{ with .Value }}
+    {{- $mapUrl := printf "_data/components_map.json" -}}
+    {{- $dataMap := dict -}}
+    {{ with try (resources.Get $mapUrl) }}
+      {{ with .Err }}
+        {{ errorf "%s" . }}
+      {{ else with .Value }}
         {{ $dataMap := . | transform.Unmarshall }}
+      {{ else }}
+        {{ errorf "[dataMap in layouts/_default/_markup/render-link.html:104] Unable to get local resource %q" $mapUrl }}
       {{ end }}
     {{ end }}
 
