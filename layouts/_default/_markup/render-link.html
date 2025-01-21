@@ -12,8 +12,20 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     {{- $anchor := "" -}}
 
     {{- $url := printf "_data/%s.json" $module -}}
-    {{- $data := getJSON $url -}}
-    {{- $dataMap := getJSON "_data/components_map.json" -}}
+    {{- $data := dict -}}
+    {{ with try (resources.Get $url) }}
+      {{ with .Value }}
+        {{ $data := . | transform.Unmarshall }}
+      {{ end }}
+    {{ end }}
+
+    {{ $dataMap := dict }}
+    {{ with try (resources.Get "_data/components_map.json") }}
+      {{ with .Value }}
+        {{ $dataMap := . | transform.Unmarshall }}
+      {{ end }}
+    {{ end }}
+
     {{- $prefix := (index $dataMap $module).default_prefix -}}
 
     {{- $found := 0 -}}
@@ -60,9 +72,20 @@ SPDX-License-Identifier: LGPL-3.0-or-later
       {{- .Text | safeHTML -}}
     </a>
   {{- else -}}
-    {{- $url := printf "_data/%s.json" $dest -}}
-    {{- $data := getJSON $url -}}
-    {{- $dataMap := getJSON "_data/components_map.json" -}}
+    {{- $data := dict -}}
+    {{ with try (resources.Get $url) }}
+      {{ with .Value }}
+        {{ $data := . | transform.Unmarshall }}
+      {{ end }}
+    {{ end }}
+
+    {{ $dataMap := dict }}
+    {{ with try (resources.Get "_data/components_map.json") }}
+      {{ with .Value }}
+        {{ $dataMap := . | transform.Unmarshall }}
+      {{ end }}
+    {{ end }}
+
     <a href="{{ (index $dataMap $dest).url }}" class="api-link">
       {{- .Text | safeHTML -}}
     </a>
