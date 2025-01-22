@@ -32,7 +32,7 @@ For projects which started outside of KDE.
 - [ ] Recommended to attend [Akademy](https://akademy.kde.org) or other local KDE events
 - [ ] Code in [KDE Invent](https://invent.kde.org)
 - [ ] Code has license set following the [KDE licensing Policy](https://community.kde.org/Policies/Licensing_Policy)
-- [ ] Passing CI job for reuse linting
+- [ ] Passing CI job for reuse linting as well as JSON, XML and YAML where applicable
 ```
 
 You can learn how to create CI jobs for REUSE compliance following the [Continuous Integration wiki page](https://community.kde.org/Infrastructure/Continuous_Integration_System).
@@ -77,7 +77,7 @@ For any project to become an official part of KDE.
 - [ ] If from outside KDE, has completed the [Incubator](https://community.kde.org/Incubator) process
 - [ ] Follows the [Android application ID naming rules](https://developer.android.com/build/configure-app-module?hl=en#set-application-id) (only alphanumeric characters and underscore, no hyphen)
 - [ ] The [REUSE Specification - Version 3.0](https://reuse.software/spec/) is applied when stating licenses and when adding license files to a project. Each source file either must contain SPDX identifiers or license headers to state under which terms the software may be used, modified and redistributed. See [Licensing Policy](https://community.kde.org/Policies/Licensing_Policy#License_Statements)
-- [ ] Passing CI job for Reuse linting
+- [ ] Passing CI job for Reuse linting as well as JSON, XML and YAML where applicable
 - [ ] A [Messages.sh file](https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems#Writing_a_Messages.sh_script) which extracts all the i18n() translations
 - [ ] A metainfo.xml file (previously appdata.xml) with AppStream data [AppStream Guidelines](https://community.kde.org/Guidelines_and_HOWTOs/AppStream )
 - [ ] A screenshot in [product-screenshots](https://invent.kde.org/websites/product-screenshots)
