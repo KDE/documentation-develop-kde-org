@@ -160,7 +160,7 @@ for tag_file in TAG_FILES:
     tagsURL = tag_file['tags']
     logging.debug("Checking: " + tagsURL)
     component_name = os.path.basename(os.path.splitext(tagsURL)[0]).lower()
-    jsonFile = f'_data/{component_name}.json'
+    jsonFile = f'assets/_data/{component_name}.json'
 
     content = None
     if 'path' in tag_file:
@@ -193,7 +193,7 @@ for tag_file in TAG_FILES:
         components_map[component_name]['default_prefix'] = tag_file['default_prefix']
 
 
-with open('_data/components_map.json', 'w') as destination:
+with open('assets/_data/components_map.json', 'w') as destination:
     dump(components_map, destination)
 
 
