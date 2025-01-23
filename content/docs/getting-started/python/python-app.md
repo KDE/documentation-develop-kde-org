@@ -150,8 +150,16 @@ At the moment we have not used any interesting Python stuff. In reality,
 the application can also run as a standalone QML app:
 
 ```bash
-QT_QUICK_CONTROLS_STYLE=org.kde.desktop qml main.qml
+QT_QUICK_CONTROLS_STYLE=org.kde.desktop qml6 main.qml
 ```
+
+{{< alert title="About the qml binary" color="info" >}}
+
+Some distributions might name the `qml` binary from Qt5 or Qt6 differently: for example, openSUSE and Arch have `qml`, `qt5-qml`, and `qml6`, while Fedora has `qml`, `qml-qt5`, and `qml-qt6`.
+
+Use the explicit Qt6 variant to be sure that your app runs with Qt6.
+
+{{< /alert >}}
 
 It does not format anything; if we click on "Format" it just spits the
 unformatted text into a text element.
