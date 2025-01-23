@@ -16,7 +16,7 @@ To learn how to submit a contribution, see [Submitting a Merge Request](https://
 
 ## Before running the website
 
-Download a Hugo release (extended version, latest supported release: v0.122.0) from [here](https://github.com/gohugoio/hugo/releases) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
+Download a Hugo release (extended version, latest supported release: v0.141.0) from [here](https://github.com/gohugoio/hugo/releases/tag/v0.141.0) and clone this repo. Once you've cloned the site repo, enter the repo root folder.
 
 Certain tutorials fetch examples directly from their respective repositories (library-specific ones, like KArchive or KAuth); to display them, you'll need to run a Python script.
 Make sure you have the required dependencies installed on your system. We suggest using `venv` for this:
