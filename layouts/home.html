@@ -1,13 +1,13 @@
 {{ define "head_extension" }}
   {{ $sass := resources.Get "scss/home.scss" }}
-  {{ $style := $sass | css.Sass }}
+  {{ $style := $sass | css.Sass | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
 {{ end }}
 
 {{ define "main" }}
   <section id="top">
     <div class="container text-center">
-      <span class="kde-logo-big">K</span>
+      <span class="kde-logo-big" aria-hidden="true">K</span>
       <h1>{{ i18n "home.header.title" }}</h1>
       <p>{{ i18n "home.header.subtitle" }}</p>
     </div>
@@ -28,11 +28,11 @@
 
   {{ $backgroundImage := resources.GetMatch "img/home/devApps.png" }}
   {{ $backgroundImageWebp := $backgroundImage.Process "webp" }}
-  <section id="develop-hero" class="p-4" style="height: auto; --background-image: image-set(url('{{ $backgroundImageWebp.RelPermalink }}') type('image/webp'),url('{{ $backgroundImage.RelPermalink }}') type('image/png'));">
-    <div class="container text-center p-5" style="background-color: #333">
+  <section id="develop-hero" class="p-4 h-auto" style="--background-image: image-set(url('{{ $backgroundImageWebp.RelPermalink }}') type('image/webp'),url('{{ $backgroundImage.RelPermalink }}') type('image/png'));">
+    <div class="container text-center p-3 p-sm-5" style="background-color: #333">
       <h1 class="h2 mt-0" style="color: #EEE;">{{ i18n "home.qt.title" }}</h1>
       <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">{{ i18n "home.qt.description" }}</p>
-      <a class="learn-more" href="/products/frameworks/">{{ i18n "learn-more" }}</a>
+      <a class="learn-more link-primary" href="/products/frameworks/">{{ i18n "learn-more" }}</a>
     </div>
   </section>
 
@@ -42,11 +42,13 @@
           {{ with .Process "webp" }}
             <source srcset="{{ .RelPermalink }}" type="image/webp">
           {{ end }}
-        <img class="img-fluid kirigami-devices d-none d-sm-block" src="{{ .RelPermalink }}" alt="">
+        <img class="kirigami-devices d-none d-sm-block" src="{{ .RelPermalink }}" alt="">
       </picture>
     {{ end }}
     <div class="align-self-center container">
-      <section class="d-sm-none kirigami-header"><h1><p class="header-logo">K</p>{{ i18n "home.kirigami.title" }}</h1></section>
+      <section class="d-sm-none kirigami-header">
+        <h2 class="h1"><span class="header-logo d-block" aria-hidden="true">K</span>{{ i18n "home.kirigami.title" }}</h2>
+      </section>
       <h2 class="h1 mt-5 mt-sm-0">{{ i18n "home.kirigami.name" }}</h2>
       <h3>{{ i18n "home.kirigami.subtitle" }}</h3>
       <p>{{ i18n "home.kirigami.description1" }}</p>

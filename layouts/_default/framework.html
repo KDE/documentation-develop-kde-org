@@ -1,6 +1,6 @@
 {{ define "head_extension" }}
   {{ $sass := resources.Get "scss/home.scss" }}
-  {{ $style := $sass | css.Sass }}
+  {{ $style := $sass | css.Sass | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
   {{ with .Params.scss }}
     {{ $sass := resources.Get . }}
