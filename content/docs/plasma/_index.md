@@ -24,7 +24,7 @@ Formerly called a "Look and Feel", it bundles a [Panel Layout Template]({{< ref 
 
 Also called a Desktop Theme or a Plasma Theme, it controls the visual styling of panels, widgets, OSD popups, the lock screen, and the logout screen. Plasma Styles can also include their own color scheme that overrides the systemwide color scheme for Plasma UI elements.
 
-* System/Default: `/usr/share/plasma/desktoptheme/` ([GitLab](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/desktoptheme))
+* System/Default: `/usr/share/plasma/desktoptheme/` ([GitLab](https://invent.kde.org/plasma/libplasma/-/tree/master/src/desktoptheme))
 * User Installed: `~/.local/share/plasma/desktoptheme/` ([KDE Store Category](https://store.kde.org/browse/cat/104/order/latest/))
 * [Tutorial]({{< ref theme >}})
 
@@ -56,7 +56,7 @@ A [Plasma Script]({{< ref "scripting" >}}) written in JavaScript that defines a 
 
 A visual representation of the windows you can switch to with Alt+Tab, written in QML.
 
-* System/Default: `/usr/share/kwin/tabbox/` ([GitLab](https://invent.kde.org/plasma/kdeplasma-addons/-/tree/master/windowswitchers))
+* System/Default: `/usr/share/kwin/tabbox/` ([GitLab](https://invent.kde.org/plasma/kdeplasma-addons/-/tree/master/kwin/windowswitchers))
 * User Installed: `~/.local/share/kwin/tabbox/` ([KDE Store Category](https://store.kde.org/browse/cat/211/order/latest/))
 * Can also be bundled in a Global Theme [like Breeze does](https://invent.kde.org/plasma/plasma-workspace/-/blob/master/lookandfeel/contents/windowswitcher/WindowSwitcher.qml).
 * [Tutorial]({{< ref windowswitcher >}})
@@ -97,7 +97,7 @@ Also known as a Desktop Effect, it applies visual changes to any area of the scr
 
 A script written in JavaScript or QML that manages windows, allowing to [automatically arrange them in a grid](https://store.kde.org/p/1281790/) for example.
 
-* System/Default: `/usr/share/kwin/scripts/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/src/scripts))
+* System/Default: `/usr/share/kwin/scripts/` ([GitLab](https://invent.kde.org/plasma/kwin/-/tree/master/src/plugins))
 * User Installed: `~/.local/share/kwin/scripts/` ([KDE Store Category](https://store.kde.org/browse/cat/210/order/latest/))
 * [Tutorial]({{< ref kwin >}})
 * [KWin Scripting API]({{< ref "kwin/api" >}})
@@ -106,7 +106,7 @@ A script written in JavaScript or QML that manages windows, allowing to [automat
 
 The theme used for the screen you see before you log into Plasma in most KDE distros. Despite the visual similarity of their Breeze themes, [SDDM](https://github.com/sddm/sddm) is not the lock screen. Lock screen themes are included within Plasma Styles.
 
-* System/Default: `/usr/share/sddm/themes/` ([Breeze example on GitLab](https://invent.kde.org/plasma/plasma-workspace/-/tree/master/sddm-theme)) ([KDE Store Category](https://store.kde.org/browse?cat=101&ord=latest))
+* System/Default: `/usr/share/sddm/themes/` ([Breeze example on GitLab](https://invent.kde.org/plasma/plasma-desktop/-/tree/master/sddm-theme)) ([KDE Store Category](https://store.kde.org/browse?cat=101&ord=latest))
 * Testing: `sddm-greeter --test-mode --theme /usr/share/sddm/themes/breeze`
 
 ## **Splash Screen**
