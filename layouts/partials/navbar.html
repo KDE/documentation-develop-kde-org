@@ -1,5 +1,5 @@
 {{ $cover := .HasShortcode "blocks/cover" }}
-<a class="visually-hidden" href="#main">{{ i18n "skip-to-content" }}</a>
+<a href="#main" class="visually-hidden-focusable p-3 mb-2 bg-secondary text-light text-decoration-underline position-fixed w-auto" style="z-index: 1050; outline: revert">{{ i18n "skip-to-content" }}</a>
 <nav class="navbar navbar-expand-lg">
     {{ if $.Site.Params.logo }}
         <a class="app-logo navbar-brand" href="{{ "/" | relLangURL }}">

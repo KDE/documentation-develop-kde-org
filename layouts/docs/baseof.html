@@ -4,13 +4,13 @@
     {{ partial "head.html" . }}
   </head>
   <body class="td-{{ .Kind }}">
-    <a href="#content" class="visually-hidden visually-hidden-focusable p-3 mb-2 bg-primary text-white position-fixed" style="z-index: 100000000">Skip to main content</a>
+    <a href="#content" class="visually-hidden-focusable p-3 mb-2 bg-secondary text-light text-decoration-underline position-fixed" style="z-index: 1050">Skip to main content</a>
 
     <div class="container-fluid td-outer">
       <header class="header row">
         {{ partial "navbar.html" . }}
       </header>
-      <div class="td-main">
+      <div class="td-main" id="main">
         <div class="row flex-xl-nowrap">
           <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
             {{ partial "sidebar.html" . }}
