@@ -8,6 +8,21 @@ aliases:
   - /docs/getting-started/kirigami/introduction-separatefiles/
 ---
 
+{{< alert title="About Kirigami API documentation: use https://api-staging.kde.org/kirigami-index.html for now" color="warning" >}}
+
+<details>
+<summary>Click here to read more</summary></br>
+
+We are aware of issues involving broken links to Kirigami API documentation. We are currently working on a better website to address these issues, porting the API docs where possible.
+
+In its current state, the staging API website under development for Kirigami can be used to access all relevant Kirigami API pages, and it should already work better than the previous API website. You can access the staging API website through https://api-staging.kde.org/kirigami-index.html.
+
+If you'd like to assist us in our efforts to port the API documentation, take a look at our [Port API documentation to QDoc](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/issues/10) metatask.
+
+</details>
+
+{{< /alert >}}
+
 ## Why and how
 
 For the first time, we will be separating some of our components into their own QML files. If we keep adding things to `Main.qml`, it's going to quickly become hard to tell what does what, and we risk muddying our code.

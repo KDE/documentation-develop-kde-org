@@ -7,6 +7,21 @@ aliases:
   - /docs/getting-started/kirigami/components-inlinemessages/
 ---
 
+{{< alert title="About Kirigami API documentation: use https://api-staging.kde.org/kirigami-index.html for now" color="warning" >}}
+
+<details>
+<summary>Click here to read more</summary></br>
+
+We are aware of issues involving broken links to Kirigami API documentation. We are currently working on a better website to address these issues, porting the API docs where possible.
+
+In its current state, the staging API website under development for Kirigami can be used to access all relevant Kirigami API pages, and it should already work better than the previous API website. You can access the staging API website through https://api-staging.kde.org/kirigami-index.html.
+
+If you'd like to assist us in our efforts to port the API documentation, take a look at our [Port API documentation to QDoc](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/issues/10) metatask.
+
+</details>
+
+{{< /alert >}}
+
 Inline messages provide an immediate way for you to notify your users about something that happened while using the application.
 
 ## Basic inline message

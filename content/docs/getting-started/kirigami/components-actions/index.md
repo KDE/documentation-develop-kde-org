@@ -7,6 +7,22 @@ description: >
 aliases:
   - /docs/getting-started/kirigami/components-actions/
 ---
+
+{{< alert title="About Kirigami API documentation: use https://api-staging.kde.org/kirigami-index.html for now" color="warning" >}}
+
+<details>
+<summary>Click here to read more</summary></br>
+
+We are aware of issues involving broken links to Kirigami API documentation. We are currently working on a better website to address these issues, porting the API docs where possible.
+
+In its current state, the staging API website under development for Kirigami can be used to access all relevant Kirigami API pages, and it should already work better than the previous API website. You can access the staging API website through https://api-staging.kde.org/kirigami-index.html.
+
+If you'd like to assist us in our efforts to port the API documentation, take a look at our [Port API documentation to QDoc](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/issues/10) metatask.
+
+</details>
+
+{{< /alert >}}
+
 ## Actions
 
 A [Kirigami.Action](docs:kirigami2;Action) consists of a clickable action whose appearance depends on where it is added. Typically it is a button with an icon and text.

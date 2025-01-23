@@ -8,6 +8,21 @@ aliases:
   - /docs/getting-started/kirigami/components-listview/
 ---
 
+{{< alert title="About Kirigami API documentation: use https://api-staging.kde.org/kirigami-index.html for now" color="warning" >}}
+
+<details>
+<summary>Click here to read more</summary></br>
+
+We are aware of issues involving broken links to Kirigami API documentation. We are currently working on a better website to address these issues, porting the API docs where possible.
+
+In its current state, the staging API website under development for Kirigami can be used to access all relevant Kirigami API pages, and it should already work better than the previous API website. You can access the staging API website through https://api-staging.kde.org/kirigami-index.html.
+
+If you'd like to assist us in our efforts to port the API documentation, take a look at our [Port API documentation to QDoc](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/issues/10) metatask.
+
+</details>
+
+{{< /alert >}}
+
 [Listviews](docs:qtquick;QtQuick.ListView) can help you display objects from a model in an attractive way. To use a list view, you have to keep track of three things:
 
 1. The **model**, which contains the data you want your list view to display

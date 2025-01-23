@@ -6,6 +6,21 @@ description: >
   Chips are small elements typically used to list out related properties.
 ---
 
+{{< alert title="About Kirigami API documentation: use https://api-staging.kde.org/kirigami-index.html for now" color="warning" >}}
+
+<details>
+<summary>Click here to read more</summary></br>
+
+We are aware of issues involving broken links to Kirigami API documentation. We are currently working on a better website to address these issues, porting the API docs where possible.
+
+In its current state, the staging API website under development for Kirigami can be used to access all relevant Kirigami API pages, and it should already work better than the previous API website. You can access the staging API website through https://api-staging.kde.org/kirigami-index.html.
+
+If you'd like to assist us in our efforts to port the API documentation, take a look at our [Port API documentation to QDoc](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/issues/10) metatask.
+
+</details>
+
+{{< /alert >}}
+
 [Kirigami.Chip](docs:kirigami2;Chip) components are small elements inherited from
 [AbstractButton](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html)
 used for displaying common properties or filters of something. These are typically

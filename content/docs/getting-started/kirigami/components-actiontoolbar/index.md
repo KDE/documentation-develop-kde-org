@@ -7,6 +7,21 @@ aliases:
   - /docs/getting-started/kirigami/components-actiontoolbar/
 ---
 
+{{< alert title="About Kirigami API documentation: use https://api-staging.kde.org/kirigami-index.html for now" color="warning" >}}
+
+<details>
+<summary>Click here to read more</summary></br>
+
+We are aware of issues involving broken links to Kirigami API documentation. We are currently working on a better website to address these issues, porting the API docs where possible.
+
+In its current state, the staging API website under development for Kirigami can be used to access all relevant Kirigami API pages, and it should already work better than the previous API website. You can access the staging API website through https://api-staging.kde.org/kirigami-index.html.
+
+If you'd like to assist us in our efforts to port the API documentation, take a look at our [Port API documentation to QDoc](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/issues/10) metatask.
+
+</details>
+
+{{< /alert >}}
+
 While Kirigami pages allow you to easily place a set of actions in the page header, there are times when you might prefer to have something more flexible.
 
 Kirigami provides the component [Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar). It displays a list of [Kirigami.Action](docs:kirigami2;Action) objects and will display as many of them as possible, providing an overflow menu for the ones that don't fit. The ActionToolBar is dynamic and will move actions in and out of the overflow menu depending on the size available to it.
