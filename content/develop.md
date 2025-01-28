@@ -54,7 +54,7 @@ weight: 20
           Massif-Visualizer
         </a>
       </div>
-      <a href="https://apps.kde.org/development" class="learn-more mt-3">See All Tools</a>
+      <a href="https://apps.kde.org/categories/development/" class="learn-more mt-3">See All Tools</a>
     </div>
   </div>
 </section>
