@@ -1,7 +1,7 @@
 ---
 title: "Kate"
 description: "KDE's advanced text editor."
-weight: 3
+weight: 5
 authors:
     - SPDX-FileCopyrightText: 2024 Kristen McWilliam <kmcwilliampublic@gmail.com>
 SPDX-License-Identifier: CC-BY-SA-4.0

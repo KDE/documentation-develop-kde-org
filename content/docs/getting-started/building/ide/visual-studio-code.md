@@ -9,9 +9,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 {{< alert color="warning" title="⚠️ kdesrc-build is no longer supported" >}}
 
-</br>
+<br/>
 <details>
-<summary>Click to see more information</summary></br>
+<summary>Click to see more information</summary><br/>
 
 [kdesrc-build](https://invent.kde.org/sdk/kdesrc-build),
 the tool that was used previously for this tutorial, is no longer supported.
@@ -38,8 +38,6 @@ There used to be documentation for integrating Visual Studio Code with kdesrc-bu
 {{< /alert >}}
 
 Microsoft Visual Studio Code (VS Code) is a popular cross-platform, general-purpose, open source IDE. Thanks to its powerful extensions ecosystem it supports many languages as well as deep customization options for themes, fonts, keyboard controls, and more.
-
-A screen recording version is available https://www.youtube.com/watch?v=BCJhD57GN0Y
 
 ## Installation
 
@@ -79,6 +77,8 @@ sudo dnf install code
 ```bash
 sudo pacman -S vscode
 ```
+
+Also, you may prefer to install VS Codium instead (a variant of VS Code without Microsoft telemetry). See [documentation](https://wiki.archlinux.org/title/Visual_Studio_Code) for more information.  
 
 ## Setup
 
@@ -316,17 +316,11 @@ When you debug with this configuration Ark will be built, but Dolphin will be la
 
 {{< alert title="Note" color="info" >}}
 
-In case something goes wrong in config generation, you can use the `ide_project_configs` logger.
-Create the file `~/.config/kde-builder-logging.yaml` with the following content:
+In case something goes wrong in config generation, you can use the `ide_project_configs` logger
+to show debug messages related to config generation. To enable the debug level for it, add
+`--log-level ide_project_configs=DEBUG` to the command.
 
-```yaml
-loggers:
-  ide_project_configs:
-    level: DEBUG
-    handlers: [console-named]
-```
-
-After that, run kde-builder as normal, and you will see corresponding debug messages.
+See [documentation](https://kde-builder.kde.org/en/cmdline/supported-cmdline-params.html#cmdline-log-level) for more information.
 
 {{< /alert >}}
 

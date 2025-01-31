@@ -1,7 +1,7 @@
 ---
 title: "CLion"
 description: "C++ IDE from JetBrains."
-weight: 5
+weight: 3
 authors:
     - SPDX-FileCopyrightText: 2024 Kristen McWilliam <kmcwilliampublic@gmail.com>
     - SPDX-FileCopyrightText: 2024 Andrew Shark <ashark@linuxcomp.ru>
@@ -28,26 +28,23 @@ or [clion-eap](https://aur.archlinux.org/packages/clion-eap).
 
 ## KDE Builder configuration
 
-To allow kde-builder to generate CLion project files, add the following to your `~/.config/kdesrc-buildrc`:
+To allow kde-builder to generate CLion project files, add the following to your `~/.config/kde-builder.yaml`:
 
-```
-global
-  # other options
-  generate-clion-project-config true
-end global
+```yaml
+global:
+  generate-clion-project-config: true
 ```
 
 Instead of enabling the `generate-clion-project-config` option globally, you may choose to enable it only for a single project:
 
-```
-options kcalc
-  generate-clion-project-config true
-end options
+```yaml
+override kcalc:
+  generate-clion-project-config: true
 ```
 
 Ensure you have successfully built _kcalc_ following the kde-builder instructions.
 
-In case you enabled `generate-clion-project-config` after you have built _kcalc_ previously, or do not want to edit your config, you can generate CLion 
+In case you enabled `generate-clion-project-config` after you have built _kcalc_ previously, or you do not want to edit your config, you can generate CLion 
 configs by running:
 
 ```
@@ -165,6 +162,10 @@ If you are using Arch Linux, you will prefer to install from AUR: [plasma6-runne
 
 Currently, the Qt classes do not support pretty printing in debugger in CLion out of the box.
 See [Bug CPP-605](https://youtrack.jetbrains.com/issue/CPP-605/Qt-types-renderers) for more information.
+
+{{< alert title="Info" color="info" >}}
+The issue is marked as resolved. Should be available in the next release.
+{{< /alert >}}
 
 You can install [Qt6Renderer](https://plugins.jetbrains.com/plugin/19882-qt6-renderer) plugin.
 
