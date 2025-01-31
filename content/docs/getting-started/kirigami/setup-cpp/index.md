@@ -3,9 +3,10 @@ title: Kirigami with C++
 weight: 1
 group: setup
 description: >
-  Getting ready to create our first Kirigami application
+  Create your first Kirigami application with C++
 aliases:
   - /docs/getting-started/kirigami/introduction-getting_started/
+  - /docs/getting-started/kirigami/setup-cpp/
 ---
 
 ## Installing Kirigami

@@ -142,7 +142,7 @@ To do this, you can use kde-builder's
 ### New projects
 
 If your project is completely new, like in the case of the
-[Kirigami]({{< ref "introduction-getting_started/#kde-builder" >}}) or
+[Kirigami]({{< ref "setup-cpp/#kde-builder" >}}) or
 [KXmlGui]({{< ref "hello_world/#kde-builder" >}})
 tutorials, you can create a `project` at the end of your `~/.config/kde-builder.yaml`:
 
