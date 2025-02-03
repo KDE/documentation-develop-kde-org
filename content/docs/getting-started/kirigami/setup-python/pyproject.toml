@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kirigami_python"
+version = "0.1"
+authors = [
+    {name = "Konqi", email = "konqi@example.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Utilities",
+    "Programming Language :: Python",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.scripts]
+kirigami_hello = "kirigami_python.app:main"
+
+[tool.setuptools]
+packages = ["kirigami_python"]
+package-dir = {kirigami_python = "src"}
+include-package-data = true
+
+[tool.setuptools.data-files]
+"share/applications" = ["org.kde.kirigami_python.desktop"]
