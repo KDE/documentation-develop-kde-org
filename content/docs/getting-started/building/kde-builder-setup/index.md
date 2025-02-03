@@ -310,7 +310,7 @@ Qt from the same sources as the official installer.
 First, install aqtinstall:
 
 ```bash
-pipx install --user aqtinstall
+pipx install aqtinstall
 ```
 
 If you don't have `pipx` installed, you may need to install it from your distribution.
