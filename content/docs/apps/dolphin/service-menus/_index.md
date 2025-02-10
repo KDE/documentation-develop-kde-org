@@ -143,7 +143,7 @@ Notice that we didn't include the .png file extension, but just referred to the 
 Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("Image", "%u")}';
 ```
 
-The Exec line defines what is run when the user selects the action from the menu. We can put any command we want there. The magic in this line is the "%u" which gets replaced with the URL of the image file before the command is run. If our command can accept more than one file at a time we can use "%U" instead. There are other special %values but %u and %U are probably the most useful for servicemenus.      
+The Exec line defines what is run when the user selects the action from the menu. We can put any command we want there. The placeholder "%u" gets replaced with the URL of the image file before the command is run. If our command can accept more than one file at a time we can use "%U" instead. There are other special %values, but %u and %U are probably the most useful for servicemenus. You can find all the possible ones on [section 7](https://specifications.freedesktop.org/desktop-entry-spec/latest/exec-variables.html) of freedesktop.org's Desktop Entry Specification.
 
 Our file now looks like this: 
 ```ini
