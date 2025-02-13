@@ -6,29 +6,6 @@ group: "kde-builder"
 aliases: kdesrc-build-setup
 ---
 
-{{< alert color="warning" title="⚠️ kdesrc-build is no longer supported" >}}
-
-</br>
-<details>
-<summary>Click to see more information</summary></br>
-
-[kdesrc-build](https://invent.kde.org/sdk/kdesrc-build),
-the tool that was used previously for this tutorial, is no longer supported.
-
-While the tool is stable and still works for our veteran developers, if you are starting out with KDE development now, we recommend that you switch to
-[kde-builder](https://kde-builder.kde.org/). Once you run it for the first time after installation, it will ask whether you want to migrate your existing `kdesrc-buildrc` configuration file to the new `kde-builder.yaml` file.
-
-Any support questions related to this tutorial can be asked on the
-[KDE New Contributors](https://go.kde.org/matrix/#/#new-contributors:kde.org) group on
-[Matrix](https://community.kde.org/Matrix).
-
-See also [Where to find the development team]({{< ref "help-developers" >}}).
-
-</details>
-
-{{< /alert >}}
-
-
 Source code for KDE software lives on [KDE Invent](https://invent.kde.org). But before you can work on it, you'll need to set up a **development environment**: a set of tools that allows you to access and edit the source code, compile it into a form that the computer can run, and deploy it to a safe location. To accomplish these tasks, you will need to enter commands using a terminal program, such as KDE's [Konsole](https://apps.kde.org/konsole).
 
 If you're not familiar with the command line interface, you can [find tutorials here](https://community.kde.org/Get_Involved/development/Learn#Unix_command_line). However, advanced command line skills are not required, and you will learn what you need along the way!
@@ -205,22 +182,21 @@ If you discover any external dependencies needed to build KDE software that were
 
 {{< /alert >}}
 
-{{< alert color="info" title="⏳ With kdesrc-build..." >}}
-
-<details>
-<summary>Click here to know how this was done with kdesrc-build</summary></br>
+#### kdesrc-build
 
 This step used to be done by cloning the repository into a folder, linking the script, and running the script:
 
 ```bash
 kdesrc-build --initial-setup
 ```
+or the more advanced
+
+```bash
+kdesrc-build --generate-config
+```
+
 
 For details, see: [Install kdesrc-build](https://invent.kde.org/sdk/kdesrc-build#install-kdesrc-build)
-
-</details>
-
-{{< /alert >}}
 
 ### Updating kde-builder
 
@@ -231,21 +207,14 @@ cd ~
 bash initial_setup.sh
 ```
 
-{{< alert color="info" title="⏳ With kdesrc-build..." >}}
-
-<details>
-<summary>Click here to know how this was done with kdesrc-build</summary></br>
+### Updating kdesrc-build
 
 This step used to be done by going to the directory where kdesrc-build was cloned and pulling the new changes:
 
 ```bash
-cd ~/.local/share/kdesrc-build
+cd ~/src/kdesrc-build
 git pull
 ```
-
-</details>
-
-{{< /alert >}}
 
 ## Set up Qt
 

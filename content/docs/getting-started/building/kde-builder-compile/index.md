@@ -6,28 +6,6 @@ group: "kde-builder"
 aliases: kdesrc-build-compile
 ---
 
-{{< alert color="warning" title="⚠️ kdesrc-build is no longer supported" >}}
-
-</br>
-<details>
-<summary>Click to see more information</summary></br>
-
-[kdesrc-build](https://invent.kde.org/sdk/kdesrc-build),
-the tool that was used previously for this tutorial, is no longer supported.
-
-While the tool is stable and still works for our veteran developers, if you are starting out with KDE development now, we recommend that you switch to
-[kde-builder](https://kde-builder.kde.org/). Once you run it for the first time after installation, it will ask whether you want to migrate your existing `kdesrc-buildrc` configuration file to the new `kde-builder.yaml` [file](https://kde-builder.kde.org/en/configuration/config-file-overview.html).
-
-Any support questions related to this tutorial can be asked on the
-[KDE New Contributors](https://go.kde.org/matrix/#/#new-contributors:kde.org) group on
-[Matrix](https://community.kde.org/Matrix).
-
-See also [Where to find the development team]({{< ref "help-developers" >}}).
-
-</details>
-
-{{< /alert >}}
-
 On this page, you will learn how to use KDE's `kde-builder` tool to build various types of KDE software once you have a development environment set up.
 
 If you haven't set up kde-builder already, please follow the steps in [Set up a development environment]({{< ref "kde-builder-setup" >}}) before proceeding.
@@ -82,6 +60,7 @@ Did it run? If so, then **congratulations, you just compiled your own version of
 Plasma has multiple *shells*: [Plasma Desktop](https://kde.org/plasma-desktop) for desktop, laptop, and 2-in-1 computers, [Plasma Mobile](https://www.plasma-mobile.org/) for mobile phones and [Plasma Bigscreen](https://plasma-bigscreen.org/) for televisions. They all share certain common components, such as a window manager, networking stack, basic graphical components, and so on. These shared components are found in [Plasma Workspace](https://invent.kde.org/plasma/plasma-workspace).
 
 ### Plasma Desktop
+#### kdesrc-build
 
 To build the Plasma Desktop environment and all its necessary dependencies, run the following command:
 
@@ -96,20 +75,12 @@ Once built, you can make an entire built-from-source Plasma session accessible f
 It's also necessary for kde-builder to install the necessary session files and D-Bus files into a root directory.
 After the build process is finished, kde-builder will prompt you for your password so it can install the session files.
 
-{{< alert color="info" title="⏳ With kdesrc-build..." >}}
-
-<details>
-<summary>Click here to know how this was done with kdesrc-build</summary></br>
-
+#### kdesrc-build
 This step used to be done by manually running a script in `plasma-workspace`.
 
 ```bash
 bash ~/kde/build/plasma-workspace/login-sessions/install-sessions.sh
 ```
-
-</details>
-
-{{< /alert >}}
 
 {{< alert title="About SELinux" color="info" >}}
 
@@ -264,6 +235,8 @@ kde-builder kcalc --ignore-projects gpgme
 
 ### Specifying executable names when running
 
+#### kde-builder
+
 To run an application, simply use the flag `--run`.
 
 ```bash
@@ -279,10 +252,7 @@ kde-builder kate
 kde-builder --run kate-syntax-highlighter --list-themes
 ```
 
-{{< alert color="info" title="⏳ With kdesrc-build..." >}}
-
-<details>
-<summary>Click to know how this was done with kdesrc-build</summary></br>
+#### kdesrc-build
 
 In some modules, the build process will result in an executable that does not match the module name: for example, the module `discover` does not match the executable `plasma-discover`. Because kdesrc-build had no way to associate the name of the project with the executable name, you needed to use the `--exec` or `-e` flag:
 
@@ -297,9 +267,7 @@ Executable "discover" does not exist.
 Try to set executable name with -e option.
 ```
 
-</details>
-
-{{< /alert >}}
+Alternatively, many applications can be run directly from their build directory
 
 ### Running an application after making changes to one of its dependencies
 

@@ -9,9 +9,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 {{< alert color="info" title="⏳ Outdated" >}}
 
-[kdesrc-build](https://invent.kde.org/sdk/kdesrc-build),
-the tool that was used for this tutorial, is no longer supported.
-
 This tutorial might have inaccuracies or be outdated.
 
 If you'd like to send us fixes for this page, please make a merge request on the [KDE Developer repository](https://invent.kde.org/documentation/develop-kde-org).

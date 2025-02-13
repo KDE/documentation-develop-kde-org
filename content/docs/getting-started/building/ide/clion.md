@@ -8,16 +8,9 @@ authors:
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
-{{< alert color="success" title="💡 This tutorial works ONLY with kde-builder" >}}
-
-This is a kde-builder exclusive feature.
-
-{{< /alert >}}
-
-
 [CLion](https://www.jetbrains.com/clion/) is a proprietary IDE for C++ from JetBrains.
 
-This article will show you how to configure and develop KDE projects in CLion. We will use _KCalc_ as an example project.
+This article will show you how to configure and develop KDE projects in CLion with kde-builder. We will use _KCalc_ as an example project.
 
 ## Install CLion
 

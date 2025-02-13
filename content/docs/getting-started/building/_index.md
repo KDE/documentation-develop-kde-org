@@ -16,29 +16,6 @@ description: >
 group: "getting-started"
 ---
 
-{{< alert color="warning" title="⚠️ kdesrc-build is no longer supported" >}}
-
-</br>
-<details>
-<summary>Click to see more information</summary></br>
-
-[kdesrc-build](https://invent.kde.org/sdk/kdesrc-build),
-the tool that was used previously for this tutorial, is no longer supported.
-
-While the tool is stable and still works for our veteran developers, if you are starting out with KDE development now, we recommend that you switch to
-[kde-builder](https://kde-builder.kde.org/).
-
-Any support questions related to this tutorial can be asked on the
-[KDE New Contributors](https://go.kde.org/matrix/#/#new-contributors:kde.org) group on
-[Matrix](https://community.kde.org/Matrix).
-
-See also [Where to find the development team]({{< ref "help-developers" >}}).
-
-</details>
-
-{{< /alert >}}
-
-
 By joining the ranks of KDE developers, you will get to implement new features and defeat bugs both daunting and simple. Developers collaborate in teams based on what area they are working on. These can be small teams working on a single application, up to large teams working on a group of related pieces of software, or even meta-teams working on broader topics such as QA or automation. Many developers participate in more than one team.
 
 KDE runs or participates in several mentoring programs to help new developers, including an informal list of people who are willing to help newcomers get started. See the [Mentoring page](https://community.kde.org/Mentoring) for more details.
