@@ -1,7 +1,7 @@
 ---
 title: Your first Python + Kirigami application
 weight: 1
-group: python
+group: introduction
 description: >
     Learn how to write an application with PyQt/PySide.
 ---

@@ -1,6 +1,12 @@
 ---
 title: Python with Kirigami
 weight: 4
+layout: home
+groups:
+  - name: "Introduction"
+    key: "introduction"
+  - name: "Bindings"
+    key: "bindings"
 group: getting-started
 description: >
   Create KDE applications using Python.

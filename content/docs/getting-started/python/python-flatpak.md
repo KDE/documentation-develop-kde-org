@@ -1,7 +1,7 @@
 ---
 title: Publishing your Python app as a Flatpak
 weight: 3
-group: python
+group: introduction
 description: >
     Ship your app easily to users.
 ---

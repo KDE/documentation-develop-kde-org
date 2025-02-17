@@ -1,7 +1,7 @@
 ---
 title: Creating a Python package
 weight: 2
-group: python
+group: introduction
 description: >
     Understand the requirements to create your own Python package.
 ---
