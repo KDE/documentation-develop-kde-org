@@ -70,7 +70,7 @@
             {{ with .Process "webp" }}
               <source srcset="{{ .RelPermalink }}" type="image/webp">
             {{ end }}
-          <img class="img-fluid mt-3 mt-md-5" src="{{ .RelPermalink }}" alt="{{ i18n "home.kdevelop.alt" }}">
+          <img class="img-fluid mt-3 mt-md-5 mx-auto d-block" src="{{ .RelPermalink }}" alt="{{ i18n "home.kdevelop.alt" }}">
         </picture>
       {{ end }}
     </div>
@@ -88,7 +88,7 @@
             <p>{{ i18n "home.kxmlgui.subtitle" }}</p>
           </div>
           <div>
-            <img class="img-fluid" src="https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg" alt="{{ i18n "home.kxmlgui.alt" }}" />
+            <img class="img-fluid" src="/develop/kde-logo-white-blue-rounded-source.svg" alt="{{ i18n "home.kxmlgui.alt" }}" />
           </div>
         </a>
         <a class="tool" href="/docs/use/kirigami">
