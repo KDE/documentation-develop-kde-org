@@ -7,6 +7,8 @@ aliases:
   - /docs/getting-started/kirigami/components-drawers/
 ---
 
+{{< kirigami-staging-api >}}
+
 Drawers are panels that slide out of the sides of the application window. They can be populated with interactive elements such as Kirigami Actions, buttons, text, and more.
 
 Drawers come in different types, shapes, and forms. In this page we will go over each type and provide an overview of their characteristics.

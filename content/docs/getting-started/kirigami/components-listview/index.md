@@ -8,6 +8,8 @@ aliases:
   - /docs/getting-started/kirigami/components-listview/
 ---
 
+{{< kirigami-staging-api >}}
+
 [Listviews](docs:qtquick;QtQuick.ListView) can help you display objects from a model in an attractive way. To use a list view, you have to keep track of three things:
 
 1. The **model**, which contains the data you want your list view to display

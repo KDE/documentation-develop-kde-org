@@ -8,6 +8,8 @@ aliases:
   - /docs/getting-started/kirigami/introduction-separatefiles/
 ---
 
+{{< kirigami-staging-api >}}
+
 ## Why and how
 
 For the first time, we will be separating some of our components into their own QML files. If we keep adding things to `Main.qml`, it's going to quickly become hard to tell what does what, and we risk muddying our code.

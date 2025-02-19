@@ -7,6 +7,8 @@ aliases:
   - /docs/getting-started/kirigami/style-typography/
 ---
 
+{{< kirigami-staging-api >}}
+
 {{< alert color="info" >}}
 
 For demonstrative purposes, this tutorial uses an AbstractCard to make the text examples clearer. A better way to achieve the same results would be to use a [Kirigami Addons FormCard](/docs/getting-started/kirigami/addons-introduction).

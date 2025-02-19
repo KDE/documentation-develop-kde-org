@@ -7,6 +7,8 @@ aliases:
   - /docs/getting-started/kirigami/components-inlinemessages/
 ---
 
+{{< kirigami-staging-api >}}
+
 Inline messages provide an immediate way for you to notify your users about something that happened while using the application.
 
 ## Basic inline message

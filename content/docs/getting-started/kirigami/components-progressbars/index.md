@@ -7,6 +7,8 @@ aliases:
   - /docs/getting-started/kirigami/components-progressbars/
 ---
 
+{{< kirigami-staging-api >}}
+
 Whenever your application does something that takes a noticeable amount of time, you will want to use a visual element that tells the user that something is happening in the background. 
 
 QtQuick Controls provides two useful components that you can use to this end.

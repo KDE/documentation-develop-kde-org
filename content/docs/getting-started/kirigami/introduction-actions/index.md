@@ -7,6 +7,9 @@ description: >
 aliases:
   - /docs/getting-started/kirigami/introduction-actions/
 ---
+
+{{< kirigami-staging-api >}}
+
 ## Recap
 
 So far, we built a simple app that can display cards. However, there is currently no way for the user to add new cards to the card view.

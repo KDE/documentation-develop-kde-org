@@ -7,6 +7,8 @@ aliases:
   - /docs/getting-started/kirigami/components-formlayouts/
 ---
 
+{{< kirigami-staging-api >}}
+
 [Kirigami.FormLayout](docs:kirigami2;FormLayout) components make it easy for you to create forms that conform to the [KDE Human Interface Guidelines](https://develop.kde.org/hig/). They are optimal for settings dialogs and for large groups of controls and input fields that are related to each other.
 
 When provided with enough space, form layouts will take up two columns. The column on the left will be occupied by the labels provided for the form's children components, while the right will be taken up by the children components themselves. In more space-constrained windows (or on mobile), forms will consist of a single vertical column with the labels of children components being placed above their respective component.
