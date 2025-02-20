@@ -26,11 +26,17 @@
      </div>
   </section>
 
-  {{ $backgroundImage := resources.GetMatch "img/home/devApps.png" }}
-  {{ $backgroundImageWebp := $backgroundImage.Process "webp" }}
-  <section id="develop-hero" class="p-4 h-auto" style="--background-image: image-set(url('{{ $backgroundImageWebp.RelPermalink }}') type('image/webp'),url('{{ $backgroundImage.RelPermalink }}') type('image/png'));">
-    <div class="container text-center p-3 p-sm-5" style="background-color: #333">
-      <h1 class="h2 mt-0" style="color: #EEE;">{{ i18n "home.qt.title" }}</h1>
+  <section class="position-relative overflow-hidden p-4">
+    {{ with resources.GetMatch "img/home/devApps.png" }}
+    <picture>
+      {{ with .Process "webp" }}
+      <source srcset="{{ .RelPermalink }}" type="image/webp">
+      {{ end }}
+      <img src="{{ .RelPermalink }}" class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover" alt="" loading="lazy">
+    </picture>
+    {{ end }}
+    <div class="position-relative container text-center p-3 p-sm-5" style="background-color: #333">
+      <h2 class="mt-0" style="color: #EEE;">{{ i18n "home.qt.title" }}</h2>
       <p class="my-0 mx-auto p-2" style="color: #CCC; max-width: 500px;">{{ i18n "home.qt.description" }}</p>
       <a class="learn-more link-primary" href="/products/frameworks/">{{ i18n "learn-more" }}</a>
     </div>
