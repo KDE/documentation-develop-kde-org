@@ -8,7 +8,7 @@ description: >
 
 KDE provides Python bindings for some KDE libraries. The current list of available bindings can be seen on [Python support in KDE](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/issues/9). Most notably:
 
-* [KCoreAddons](docs:kcoreaddons)
+* [KCoreAddons](https://api.kde.org/frameworks/kcoreaddons/html/index.html)
   * [KAboutData](https://api.kde.org/frameworks/kcoreaddons/html/classKAboutData.html)
   * [KAboutLicense](https://api.kde.org/frameworks/kcoreaddons/html/classKAboutLicense.html)
   * [KSandbox](https://api.kde.org/frameworks/kcoreaddons/html/namespaceKSandbox.html)
@@ -16,7 +16,7 @@ KDE provides Python bindings for some KDE libraries. The current list of availab
   * [KSystemClipboard](https://api.kde.org/frameworks/kguiaddons/html/classKSystemClipboard.html)
   * [KCursorSaver](https://api.kde.org/frameworks/kguiaddons/html/classKCursorSaver.html)
   * [KColorUtils](https://api.kde.org/frameworks/kguiaddons/html/namespaceKColorUtils.html)
-* [KWidgetsAddons](docs:kwidgetsaddons)
+* [KWidgetsAddons](https://api.kde.org/frameworks/kwidgetsaddons/html/index.html)
   * [KMessageDialog](https://api.kde.org/frameworks/kwidgetsaddons/html/classKMessageDialog.html)
   * [KMessageBox](https://api.kde.org/frameworks/kwidgetsaddons/html/namespaceKMessageBox.html)
   * [KContextualHelpButton](https://api.kde.org/frameworks/kwidgetsaddons/html/classKContextualHelpButton.html)
@@ -28,7 +28,7 @@ KDE provides Python bindings for some KDE libraries. The current list of availab
 * [KNotifications](https://api.kde.org/frameworks/knotifications/html/index.html)
   * [KNotification](https://api.kde.org/frameworks/knotifications/html/classKNotification.html)
 * [KUnitConversion](https://api.kde.org/frameworks/kunitconversion/html/index.html)
-* [KXmlGui](docs:kxmlgui)
+* [KXmlGui](https://api.kde.org/frameworks/kxmlgui/html/index.html)
   * [KXmlGuiWindow](https://api.kde.org/frameworks/kxmlgui/html/classKXmlGuiWindow.html)
   * [KActionCollection](https://api.kde.org/frameworks/kxmlgui/html/classKActionCollection.html)
   * [KBugReport](https://api.kde.org/frameworks/kxmlgui/html/classKBugReport.html)
