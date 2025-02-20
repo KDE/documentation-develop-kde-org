@@ -40,7 +40,7 @@ kirigami_python/
         └── Main.qml
 ```
 
-The package name is going to be `kirigami_python`, the "executable" (console script) will be called `kirigami_hello`, and the entrypoing will be `app`.
+The package name is going to be `kirigami_python`, the "executable" (console script) will be called `kirigami_hello`, and the entrypoint will be `app`.
 
 {{< alert title="Tip" color="info" >}}
 
