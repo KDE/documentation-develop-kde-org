@@ -1,5 +1,5 @@
 ---
-title: Your first Python + Kirigami application
+title: A full Python + Kirigami application
 weight: 1
 group: introduction
 description: >
