@@ -36,11 +36,9 @@ KDE provides Python bindings for some KDE libraries. The current list of availab
 
 ## Bindings installation
 
-To generate the KDE Frameworks bindings, their respective upstream libraries in C++ need to use [ECMGeneratePythonBindings](https://api.kde.org/ecm/module/ECMGeneratePythonBindings.html). When each project is built, it generates a CPython `.so` file that is typically installed under `/usr/lib64/python3.11/site-packages/` by Linux distributions. This makes it available to be used in Python scripts. If the `site-packages` files are installed elsewhere, you can force-use them in Python with `PYTHONPATH`.
+Like with Kirigami and PySide6/PyQt6, the bindings need to be built against the same version of Qt used for PySide6/PyQt6.
 
-In addition to that, the bindings need to be built against the same version of Qt as PySide.
-
-Because of that, currently the easiest way to use KDE bindings is by using a distribution that has built KDE libraries with support for the Python bindings. As the bindings are still new, not all distributions will have bindings, so we recommend you to use [distrobox]({{< ref "containers-distrobox" >}}).
+Because of this, currently the easiest way to use KDE bindings is by using a distribution that has built KDE libraries with support for the Python bindings. As the bindings are still new, not all distributions will have bindings, so we recommend you to use [distrobox]({{< ref "containers-distrobox" >}}).
 
 Currently only one distribution provides these bindings:
 
@@ -51,7 +49,18 @@ sudo pacman -Syu
 sudo pacman -S pyside6 kcoreaddons # Or any other required library
 ```
 
-If you want a specific KDE library to be available as a Python binding, mention your interest in [Python support in KDE](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/issues/9) or on the [KDE Python Matrix group](https://go.kde.org/matrix/#/#kde-python:kde.org). If your distribution doesn't yet provide Python bindings for a KDE library that can already export them, you may request your distribution to do so. Lastly, feel free to contribute and make more libraries available as Python bindings!
+{{< alert color="info" title="Contributing to the bindings" >}}
+
+<details>
+<summary>Click here to read how to contribute or request for bindings</summary></br>
+
+If you want a specific KDE library to be available as a Python binding, mention your interest in [Python support in KDE](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/issues/9) or on the [KDE Python Matrix group](https://go.kde.org/matrix/#/#kde-python:kde.org). If your distribution doesn't yet provide Python bindings for a KDE library that can already export them, you may request your distribution to do so. Lastly, feel free to [Send a merge request](https://community.kde.org/Infrastructure/GitLab) and make more libraries available as Python bindings!
+
+To generate the KDE Frameworks bindings, their respective upstream libraries in C++ need to use [ECMGeneratePythonBindings](https://api.kde.org/ecm/module/ECMGeneratePythonBindings.html). When each project is built, it generates a CPython `.so` file that is typically installed under `/usr/lib64/python3.11/site-packages/` by Linux distributions. This makes it available to be used in Python scripts. If the `site-packages` files are installed elsewhere, you can force-use them in Python with `PYTHONPATH`.
+
+</details>
+
+{{< /alert >}}
 
 ## Reading C++ documentation for use in Python
 
