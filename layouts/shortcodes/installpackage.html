@@ -15,7 +15,7 @@
   {{- if or (.Get "arch") (.Get "archCommand") -}}
   <tr>
     <td>
-      <a {{ with .Get "arch" }}href="https://software.manjaro.org/package/{{ index (split . " ") 0 }}"{{ end }}><img src="/distro/manjaro.svg" alt="logo of Linux operating system Manjaro" />Manjaro</a><a {{ with .Get "arch" }}href="https://archlinux.org/packages/?q={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/archlinux.svg" alt="logo of Linux operating system Arch Linux" />Arch</a>
+      <a {{ with .Get "arch" }}href="https://manjaristas.org/branch_compare?q={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/manjaro.svg" alt="logo of Linux operating system Manjaro" />Manjaro</a><a {{ with .Get "arch" }}href="https://archlinux.org/packages/?q={{ index (split . " ") 0 }}"{{ end }}><img src="/distro/archlinux.svg" alt="logo of Linux operating system Arch Linux" />Arch</a>
     </td>
     <td>
 <pre>
