@@ -44,7 +44,7 @@ Currently only one distribution provides these bindings:
 
 ```bash
 distrobox create --image archlinux --name arch
-distrobox enter
+distrobox enter arch
 sudo pacman -Syu
 sudo pacman -S pyside6 kcoreaddons # Or any other required library
 ```
