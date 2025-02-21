@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-20 01:49+0000\n"
-"PO-Revision-Date: 2025-01-16 18:14+0100\n"
+"POT-Creation-Date: 2025-02-21 01:48+0000\n"
+"PO-Revision-Date: 2025-02-20 20:57+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -8321,10 +8321,8 @@ msgid "Kirigami with C++"
 msgstr "Kirigami med C++"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
-#, fuzzy
-#| msgid "Getting ready to create our first Kirigami application\n"
 msgid "Create your first Kirigami application with C++\n"
-msgstr "Bli redo att skapa vårt första program med Kirigami\n"
+msgstr "Skapa ditt första Kirigami-program med C++\n"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:12
 msgid "Installing Kirigami"
@@ -9206,32 +9204,22 @@ msgstr ""
 "minimal ansträngning."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Kirigami with C++"
 msgid "Kirigami with Python"
-msgstr "Kirigami med C++"
+msgstr "Kirigami med Python"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Getting ready to create our first Kirigami application\n"
 msgid "Create your first Kirigami application with PySide\n"
-msgstr "Bli redo att skapa vårt första program med Kirigami\n"
+msgstr "Skapa ditt första Kirigami-program med PySide\n"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:12
 msgid "Prerequisites"
-msgstr ""
+msgstr "Förutsättningar"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:14
-#, fuzzy
-#| msgid ""
-#| "Before getting started, we will need to install Kirigami on our machine. "
-#| "There are three ways to do so:"
 msgid ""
 "Before getting started, we will need to install Kirigami and PySide on our "
 "machine."
-msgstr ""
-"Innan vi börjar måste vi installera Kirigami på datorn. Det finns tre sätt "
-"att göra det:"
+msgstr "Innan vi börjar måste vi installera Kirigami och PySide på datorn."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:16
 msgid ""
@@ -9241,10 +9229,15 @@ msgid ""
 "desktop-style appstream-compose\" arch=\"python-pipx python-pyqt6 pyside6 "
 "kirigami flatpak-builder qqc2-desktop-style appstream\""
 msgstr ""
+"{{< installpackage opensuse=\"python3-pipx python3-qt6 python3-pyside6 kf6-"
+"kirigami-devel flatpak-builder qqc2-desktop-style AppStream-compose\" fedora="
+"\"pipx python3-pyqt6 python3-pyside6 kf6-kirigami-devel flatpak-builder qqc2-"
+"desktop-style appstream-compose\" arch=\"python-pipx python-pyqt6 pyside6 "
+"kirigami flatpak-builder qqc2-desktop-style appstream\""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:20
 msgid "}}"
-msgstr ""
+msgstr "}}"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:22
 msgid ""
@@ -9252,47 +9245,55 @@ msgid ""
 "tutorial works with [Building software with distrobox]({{< ref \"containers-"
 "distrobox\" >}})."
 msgstr ""
+"Om du använder en distribution med gamla PySide6- eller PyQt6-paket, "
+"fungerar den här handledningen med [Bygga programvara med distrobox]({{< ref "
+"\"containers-distrobox\" >}})."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:26
-#, fuzzy
-#| msgid ""
-#| "First we create our project folder (you can use the commands below). We "
-#| "are going to call ours `kirigami-tutorial/`."
 msgid ""
 "First we create our project folder (you can use the commands below). We are "
 "going to call ours `kirigami_python/`."
 msgstr ""
 "Först skapar vi vår projektkatalog (du kan använda kommandona nedan). Vi "
-"kallar vår `kirigami-tutorial/`."
+"kallar vår `kirigami_python/`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:32
 msgid "To add our QML files"
-msgstr ""
+msgstr "För att lägga till våra QML-filer"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:33
 msgid "The main file to manage the project"
-msgstr ""
+msgstr "Huvudfilen för att hantera projektet"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:36
 msgid "To import the src/ directory as a package"
-msgstr ""
+msgstr "För att importera katalogen src/ som ett paket"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:37
 msgid "To signal app as the entrypoint"
-msgstr ""
+msgstr "För att signalera app som startpunkten"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:43
+#, fuzzy
+#| msgid ""
+#| "The package name is going to be `kirigami_python`, the \"executable"
+#| "\" (console script) will be called `kirigami_hello`, and the entrypoing "
+#| "will be `app`."
 msgid ""
 "The package name is going to be `kirigami_python`, the \"executable"
-"\" (console script) will be called `kirigami_hello`, and the entrypoing will "
+"\" (console script) will be called `kirigami_hello`, and the entrypoint will "
 "be `app`."
 msgstr ""
+"Paketnamnet blir `kirigami_python`, det \"körbara\" (konsolskriptet) kallas "
+"`kirigami_hello`, och startpunkten blir `app`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:47
 msgid ""
 "To quickly generate this folder structure, just run: `mkdir -p "
 "kirigami_python/src/qml/`."
 msgstr ""
+"För att snabbt skapa katalogstrukturen, kör bara: `mkdir -p kirigami_python/"
+"src/qml/`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:51
 msgid ""
@@ -9300,10 +9301,12 @@ msgid ""
 "file structure, see [Full project in Python + Kirigami]({{< ref \"python-app"
 "\" >}})."
 msgstr ""
+"För ett mer omfattande projekt som går in mer i detalj på filstrukturen, se "
+"[Fullständigt projekt i Python + Kirigami]({{< ref \"python-app\" >}})."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:53
 msgid "pyproject.toml"
-msgstr ""
+msgstr "pyproject.toml"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:55
 msgid ""
@@ -9312,6 +9315,10 @@ msgid ""
 "python.org/pep-0621/). The following serves as a good starter for an "
 "application and can be extended later."
 msgstr ""
+"Moderna Python-program behöver bara en enda TOML-fil för att specificera all "
+"metadata, paketinformation och beroenden från och med [PEP 621](https://peps."
+"python.org/pep-0621/). Följande fungerar som en bra start för ett program "
+"och kan utökas senare."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:57
 msgid ""
@@ -9319,6 +9326,9 @@ msgid ""
 "version of it can be seen in [Python with Kirigami: General Structure]({{< "
 "ref \"python-package#general-structure\" >}})."
 msgstr ""
+"Det mesta av innehållet i filen är fördefinierade, och en mer komplett "
+"version av den kan ses i [Python med Kirigami: Allmän struktur]({{< ref "
+"\"python-package#general-structure\" >}})."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:61
 msgid ""
@@ -9327,18 +9337,26 @@ msgid ""
 "the name of the executable is `kirigami_hello`, and the name of the "
 "entrypoint is `app`. In particular, the following should be noted:"
 msgstr ""
+"Observera de markerade linjerna. Som nämnts under [Projektstruktur]({{< ref "
+"\"#project-structure\" >}}), är namnet på paketet `kirigami_python`, namnet "
+"på den körbara filen `kirigami_hello`, och namnet på startpunkten är `app`. "
+"I synnerhet bör följande observeras:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:63
 msgid ""
 "The project script consists of an entrypoint script that will be generated "
 "by setuptools for the application to run, in this case `kirigami_hello`."
 msgstr ""
+"Projektskriptet består av ett startpunktsskript som genereras av setuptools "
+"för programmet att köra, i det här fallet `kirigami_hello`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:64
 msgid ""
 "The generated project script `kirigami_hello` runs the `main()` function in "
 "the `app.py` script in the `kirigami_python` package."
 msgstr ""
+"Det genererade projektskriptet `kirigami_hello` kör funktionen `main()` i "
+"skriptet `app.py` i paketet `kirigami_python`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:65
 msgid ""
@@ -9346,12 +9364,17 @@ msgid ""
 "In this case, this is overridden with the `src/` subdirectory so it acts "
 "like it is the root directory of the package."
 msgstr ""
+"Standardvärdet på `package-dir` för Python-projekt är vanligtvis "
+"rotkatalogen. I det här fallet överskrids det av underkatalogen `src/` så "
+"det fungerar som om den är paketets rotkatalog."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:66
 msgid ""
 "The `package-dir` is why the generated project script does `kirigami_python "
 "→ app` instead of `kirigami_python → src → app`."
 msgstr ""
+"`package-dir` är anledningen till att det genererade projektskriptet "
+"använder `kirigami_python → app` istället för `kirigami_python → src → app`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:67
 msgid ""
@@ -9359,6 +9382,9 @@ msgid ""
 "py]({{< ref \"#app-py\" >}}) does `kirigami_python → qml → Main.qml` instead "
 "of `kirigami_python → src → qml → Main.qml`."
 msgstr ""
+" `package-dir` är också anledningen till att anropet `importlib.resources."
+"files()` i [app.py]({{< ref \"#app-py\" >}}) använder `kirigami_python → qml "
+"→ Main.qml` istället för `kirigami_python → src → qml → Main.qml`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:69
 msgid ""
@@ -9366,19 +9392,15 @@ msgid ""
 "\"python-package#running-directly-as-a-module-and-as-a-console-script\" >}}) "
 "for details."
 msgstr ""
+"Se [Köra direkt, som en modul och som ett terminalskript]({{< ref \"python-"
+"package#running-directly-as-a-module-and-as-a-console-script\" >}}) för "
+"detaljerad information."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:71
-#, fuzzy
-#| msgid "org.kde.tutorial.desktop"
 msgid "org.kde.kirigami_python.desktop"
-msgstr "org.kde.tutorial.desktop"
+msgstr "org.kde.kirigami_python.desktop"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:75
-#, fuzzy
-#| msgid ""
-#| "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/"
-#| "wiki/Reverse_domain_name_notation) followed by the `.desktop` extension "
-#| "such as `org.kde.tutorial.desktop`:"
 msgid ""
 "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
@@ -9386,18 +9408,9 @@ msgid ""
 msgstr ""
 "Det måste följa ett [omvänt domännamnsschema](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) följt av tillägget `.desktop` såsom `org.kde."
-"tutorial.desktop`:"
+"kirigami_python.desktop`:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:81
-#, fuzzy
-#| msgid ""
-#| "Window and taskbar icons will work in a Wayland session only if apps' "
-#| "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
-#| "applications`. To get icons working in this tutorial, either copy the "
-#| "app's desktop file there or switch to a development session as instructed "
-#| "in [kde-builder tutorial](/docs/getting-started/building/kde-builder-"
-#| "compile). Some KDE applications might have working icons if they were "
-#| "already installed on the system."
 msgid ""
 "Window and taskbar icons will work in a Wayland session only if apps' "
 "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
@@ -9407,14 +9420,11 @@ msgstr ""
 "Fönster- och aktivitetsradsikoner fungerar bara i en Wayland-session om "
 "programmens skrivbordsfiler placeras i `~/.local/share/applications` eller `/"
 "usr/share/applications`. För att få ikoner att fungera i den här "
-"handledningen kopiera antingen programmets skrivbordsfil dit eller byt till "
-"en utvecklingssession enligt instruktionerna i [kde-builder tutorial](/docs/"
-"getting-started/building/kde-builder-compile). Vissa KDE-program kan ha "
-"fungerande ikoner om de redan har installerats på systemet."
+"handledningen kopiera programmets skrivbordsfiler dit."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:85
 msgid "MANIFEST.in"
-msgstr ""
+msgstr "MANIFEST.in"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:87
 msgid ""
@@ -9423,10 +9433,14 @@ msgid ""
 "default doesn't include QML files in packages, and they need to be available "
 "in order for the application to run."
 msgstr ""
+"Filen är helt enkelt en deklaration av ytterligare källkodsfiler som ska "
+"finnas i paketet när programmet körs. Python inkluderar normalt inte QML-"
+"filer i paket, och de måste vara tillgängliga för att programmet ska kunna "
+"köras."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:91
 msgid "src/app.py"
-msgstr ""
+msgstr "src/app.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:95
 msgid ""
@@ -9436,6 +9450,12 @@ msgid ""
 "module, and as a console script]({{< ref \"python-package#running-directly-"
 "as-a-module-and-as-a-console-script\" >}}) for details."
 msgstr ""
+"Eftersom det är ett grafiskt användargränssnittsprogram vill vi att "
+"huvudfunktionen endast ska köras när skriptet körs, inte när det importeras, "
+"så vi behöver villkoret `if __name__ == \"__main__\"` i slutet av filen. Se "
+"[Köra direkt, som en modul och som ett terminalskript]({{< ref \"python-"
+"package#running-directly-as-a-module-and-as-a-console-script\" >}}) för "
+"detaljerad information."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:97
 msgid ""
@@ -9445,30 +9465,31 @@ msgid ""
 "in the package, namely our `Main.qml`. With that path, we load the QML file "
 "into the QML engine as the main entrypoint for the application interface."
 msgstr ""
+"Vi skapar en QGuiApplication och initierar QML-gränssnittet, och programmet "
+"fortsätter köra till det stängs med `QGuiApplication.exec()`. Sedan tar "
+"`importlib.resources.files()` sökvägen till en fil som finns i paketet, "
+"nämligen vår `Main.qml`. Med den sökvägen läser vi in ​​QML-filen i QML-"
+"gränssnittet som den huvudsakliga startpunkten för programgränssnittet."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:99
 msgid "src/\\_\\_init\\_\\_.py"
-msgstr ""
+msgstr "src/\\_\\_init\\_\\_.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:101
 msgid ""
 "Create an empty `kirigami_python/src/__init__.py` file. This file just needs "
 "to be present in order to import a directory as a package."
 msgstr ""
+"Skapa en tom fil, `kirigami_python/src/__init__.py`. Filen behöver bara "
+"finnas för att importera en katalog som ett paket."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:107
 msgid "src/\\_\\_main\\_\\_.py"
-msgstr ""
+msgstr "src/\\_\\_main\\_\\_.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:109
-#, fuzzy
-#| msgid ""
-#| "First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` "
-#| "with the following contents:"
 msgid "Create a `kirigami_python/src/__main__.py` with the following contents:"
-msgstr ""
-"Skapa först filen `kirigami-tutorial/src/components/CMakeLists.txt` med "
-"följande innehåll:"
+msgstr "Skapa `kirigami_python/src/__main__.py` med följande innehåll:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:113
 msgid ""
@@ -9476,26 +9497,19 @@ msgid ""
 "it as a module named `app`, then immediately runs the `main()` function of "
 "the application."
 msgstr ""
+"Det lägger helt enkelt till innehållet i den aktuella katalogen (`src/`) och "
+"importerar den som en modul med namnet `app` och kör sedan omedelbart "
+"programmets funktion `main()`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:115
-#, fuzzy
-#| msgid "Main.qml"
 msgid "src/qml/Main.qml"
-msgstr "Main.qml"
+msgstr "src/qml/Main.qml"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:140
 msgid "We also set the window `title` property to \"Hello World\"."
-msgstr ""
+msgstr "Vi ställer också in fönstrets egenskap  `title` till \"Hello World\"."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:144
-#, fuzzy
-#| msgid ""
-#| "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
-#| "QtQuick.Controls.Label) that lets us place text on our page. We use "
-#| "`anchors.centerIn: parent` to center our label horizontally and "
-#| "vertically within our parent element. In this case, the parent component "
-#| "of our label is [Kirigami.Page](docs:kirigami2;Page). The last thing we "
-#| "need to do is set its text: `text: i18n(\"Hello World!\")`."
 msgid ""
 "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
 "QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
@@ -9510,13 +9524,15 @@ msgstr ""
 "vertikalt inom vårt överliggande element. I det här fallet är det "
 "överliggande elementet för `Controls.Label` vår [Kirigami.Page](docs:"
 "kirigami2;Page). Det sista vi behöver göra är att ange texten: `text: "
-"i18n(\"Hello World!\")`."
+"\"Hello World!\"`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:148
 msgid ""
 "You can run the `kirigami_hello` console script without needing to install "
 "it first:"
 msgstr ""
+"Du kan köra terminalskriptet `kirigami_hello` utan att behöva installera det "
+"först:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:154
 msgid ""
@@ -9525,6 +9541,10 @@ msgid ""
 "Kirigami and PySide need to have been built against the same Qt version to "
 "work, which is the case when both of them come from the distribution."
 msgstr ""
+"Väljaren `--system-site-packages` behövs för att Python ska få tillgång till "
+"Python-paketen från distributionen. Det krävs eftersom Kirigami och PySide "
+"måste ha byggts mot samma Qt-version för att fungera, vilket är fallet när "
+"båda kommer från distributionen."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:156
 msgid ""
@@ -9532,12 +9552,12 @@ msgid ""
 "that has the program, and `kirigami_hello` is the executable script to be "
 "run."
 msgstr ""
+"Väljaren `--spec` bestämmer sökvägen till källkoden eller paketet wheel som "
+"har programmet, och `kirigami_hello` är det körbara skriptet som ska köras."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:158
-#, fuzzy
-#| msgid "Then you can build and install it with the command:"
 msgid "To build and install the Python package, run:"
-msgstr "Därefter kan du bygga och installera det med kommandot:"
+msgstr "För att bygga och installera Python-paketet, kör:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:164
 msgid ""
@@ -9545,10 +9565,12 @@ msgid ""
 "python`, and an executable script will be installed to `~/.local/bin/"
 "kirigami_hello`."
 msgstr ""
+"Paketet installeras i `~/.local/share/pipx/venvs/kirigami-python`, och ett "
+"körbart skript installeras i `~/.local/bin/kirigami_hello`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:166
 msgid "Use of pipx versus pip"
-msgstr ""
+msgstr "Användning av pipx eller pip"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:168
 msgid ""
@@ -9557,6 +9579,10 @@ msgid ""
 "and install. The same steps can be done manually with `venv`, `build` and "
 "`pip` as in the more complete tutorial."
 msgstr ""
+"Till skillnad från [Python med Kirigami: Skapa ett Python-paket]({{< ref "
+"\"python-paket\" >}}), använde den här handledningen `pipx` för att göra det "
+"lättare att köra och installera projektet. Samma steg kan göras manuellt med "
+"`venv`, `build` och `pip` som i den mer kompletta handledningen."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:170
 msgid ""
@@ -9564,10 +9590,13 @@ msgid ""
 "pep-0668/) for running Python applications, while `pip` is multi-purpose and "
 "can also be used for importable Python modules."
 msgstr ""
+"`pipx` är användbart och rekommenderas enligt [PEP 668](https://peps.python."
+"org/pep-0668/) för att köra Python-program, medan `pip` är multifunktionellt "
+"och kan även användas för importerbara Python-moduler."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:174
 msgid "After this, the application can be launched by running:"
-msgstr ""
+msgstr "Därefter kan programmet startas genom att köra:"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"

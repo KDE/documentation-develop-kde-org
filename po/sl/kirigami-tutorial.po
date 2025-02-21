@@ -3,13 +3,13 @@
 #
 #
 # Martin Srebotnjak <miles@filmsi.net>, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Matjaž Jeran <matjaz.jeran@amis.net>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-20 01:49+0000\n"
-"PO-Revision-Date: 2025-01-16 07:25+0100\n"
+"POT-Creation-Date: 2025-02-21 01:48+0000\n"
+"PO-Revision-Date: 2025-02-20 10:38+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -8276,10 +8276,8 @@ msgid "Kirigami with C++"
 msgstr "Kirigami s C++"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
-#, fuzzy
-#| msgid "Getting ready to create our first Kirigami application\n"
 msgid "Create your first Kirigami application with C++\n"
-msgstr "Pripravljamo se za ustvarjanje naše prve aplikacije Kirigami\n"
+msgstr "Ustvarite svojo prvo aplikacijo Kirigami s C++\n"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:12
 msgid "Installing Kirigami"
@@ -9159,32 +9157,23 @@ msgstr ""
 "da razvijete to aplikacijo v udobnem okolju z minimalnim naporom."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Kirigami with C++"
 msgid "Kirigami with Python"
-msgstr "Kirigami s C++"
+msgstr "Kirigami s Pytonom"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Getting ready to create our first Kirigami application\n"
 msgid "Create your first Kirigami application with PySide\n"
-msgstr "Pripravljamo se za ustvarjanje naše prve aplikacije Kirigami\n"
+msgstr "Ustvarite svojo prvo aplikacijo Kirigami s PySide\n"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:12
 msgid "Prerequisites"
-msgstr ""
+msgstr "Predpogoji"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:14
-#, fuzzy
-#| msgid ""
-#| "Before getting started, we will need to install Kirigami on our machine. "
-#| "There are three ways to do so:"
 msgid ""
 "Before getting started, we will need to install Kirigami and PySide on our "
 "machine."
 msgstr ""
-"Preden začnemo, bomo morali namestiti Kirigami na naš računalnik. To lahko "
-"storite na tri načine:"
+"Preden začnemo, bomo morali namestiti Kirigami in PySide na naš računalnik."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:16
 msgid ""
@@ -9194,10 +9183,15 @@ msgid ""
 "desktop-style appstream-compose\" arch=\"python-pipx python-pyqt6 pyside6 "
 "kirigami flatpak-builder qqc2-desktop-style appstream\""
 msgstr ""
+"{{< installpackage opensuse=\"python3-pipx python3-qt6 python3-pyside6 kf6-"
+"kirigami-devel flatpak-builder qqc2-desktop-style AppStream-compose\" fedora="
+"\"pipx python3-pyqt6 python3-pyside6 kf6-kirigami-devel flatpak-builder qqc2-"
+"desktop-style appstream-compose\" arch=\"python-pipx python-pyqt6 pyside6 "
+"kirigami flatpak-builder qqc2-desktop-style appstream\""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:20
 msgid "}}"
-msgstr ""
+msgstr "}}"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:22
 msgid ""
@@ -9205,47 +9199,55 @@ msgid ""
 "tutorial works with [Building software with distrobox]({{< ref \"containers-"
 "distrobox\" >}})."
 msgstr ""
+"Če uporabljate distribucijo s starimi paketi PySide6 ali PyQt6, tavadnica "
+"deluje z [Building software with distrobox]({{< ref \"containers-distrobox\" "
+">}})."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:26
-#, fuzzy
-#| msgid ""
-#| "First we create our project folder (you can use the commands below). We "
-#| "are going to call ours `kirigami-tutorial/`."
 msgid ""
 "First we create our project folder (you can use the commands below). We are "
 "going to call ours `kirigami_python/`."
 msgstr ""
 "Najprej ustvarimo našo projektno mapo (uporabite lahko spodnje ukaze). Našo "
-"vadnico bomo imenovali `kirigami-tutorial/`."
+"vadnico bomo imenovali `kirigami_python/`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:32
 msgid "To add our QML files"
-msgstr ""
+msgstr "Za dodajanje naših datotek QML"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:33
 msgid "The main file to manage the project"
-msgstr ""
+msgstr "Glavna datoteka za upravljanje projekta"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:36
 msgid "To import the src/ directory as a package"
-msgstr ""
+msgstr "Za uvoz imenika src/ kot paket"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:37
 msgid "To signal app as the entrypoint"
-msgstr ""
+msgstr "Za signalizacijo aplikacije kot vstopne točke"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:43
+#, fuzzy
+#| msgid ""
+#| "The package name is going to be `kirigami_python`, the \"executable"
+#| "\" (console script) will be called `kirigami_hello`, and the entrypoing "
+#| "will be `app`."
 msgid ""
 "The package name is going to be `kirigami_python`, the \"executable"
-"\" (console script) will be called `kirigami_hello`, and the entrypoing will "
+"\" (console script) will be called `kirigami_hello`, and the entrypoint will "
 "be `app`."
 msgstr ""
+"Ime paketa bo `kirigami_python`, \"izvršljiva datoteka\" (konzolni skript) "
+"se bo imenovala `kirigami_hello`, in vstopna točka bo `app`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:47
 msgid ""
 "To quickly generate this folder structure, just run: `mkdir -p "
 "kirigami_python/src/qml/`."
 msgstr ""
+"Če želite hitro ustvariti to strukturo map, kar zaženite: `mkdir -p "
+"kirigami_python/src/qml/`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:51
 msgid ""
@@ -9253,10 +9255,13 @@ msgid ""
 "file structure, see [Full project in Python + Kirigami]({{< ref \"python-app"
 "\" >}})."
 msgstr ""
+"Za bolj obsežen projekt, ki gre v nadaljnje podrobnosti s to strukturo "
+"datoteke, glejte [Celoten projekt v Python + Kirigami]({{< ref \"python-app"
+"\" >}})."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:53
 msgid "pyproject.toml"
-msgstr ""
+msgstr "pyproject.toml"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:55
 msgid ""
@@ -9265,6 +9270,10 @@ msgid ""
 "python.org/pep-0621/). The following serves as a good starter for an "
 "application and can be extended later."
 msgstr ""
+"Sodobne aplikacije Python potrebujejo samo eno datoteko TOML, da določijo "
+"vsemetapodatke, informacije o paketu in odvisnosti od [PEP 621](https://peps."
+"python.org/pep-0621/). Naslednje služi kot dober začetek za aplikacijo in se "
+"lahko kasneje podaljša."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:57
 msgid ""
@@ -9272,6 +9281,9 @@ msgid ""
 "version of it can be seen in [Python with Kirigami: General Structure]({{< "
 "ref \"python-package#general-structure\" >}})."
 msgstr ""
+"Večina vsebine v tej datoteki je okvirna in njeno bolj popolno različico si "
+"lahko ogledate v [Python with Kirigami: General Structure]({{<ref \"python-"
+"package#general-structure\" >}})."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:61
 msgid ""
@@ -9280,18 +9292,26 @@ msgid ""
 "the name of the executable is `kirigami_hello`, and the name of the "
 "entrypoint is `app`. In particular, the following should be noted:"
 msgstr ""
+"Upoštevajte osvetljene vrstice. Kot je navedeno pod [Project structure]({{< "
+"ref \"#project-structure\" >}}), je ime paketa je `kirigami_python`,ime "
+"izvršljive datoteke je `kirigami_hello`, ime vstopne točke je `app`. Zlasti "
+"je treba opozoriti na naslednje:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:63
 msgid ""
 "The project script consists of an entrypoint script that will be generated "
 "by setuptools for the application to run, in this case `kirigami_hello`."
 msgstr ""
+"Projektni skript je sestavljen iz skripta vstopne točke, ki bo ustvarjens "
+"setuptools za zagon aplikacije, v tem primeru `kirigami_hello`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:64
 msgid ""
 "The generated project script `kirigami_hello` runs the `main()` function in "
 "the `app.py` script in the `kirigami_python` package."
 msgstr ""
+"Ustvarjeni projektni skript `kirigami_hello` zažene funkcijo `main()` v "
+"skriptu `app.py` v paketu `kirigami_python`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:65
 msgid ""
@@ -9299,12 +9319,17 @@ msgid ""
 "In this case, this is overridden with the `src/` subdirectory so it acts "
 "like it is the root directory of the package."
 msgstr ""
+"Privzeti `package-dir` za projekte v Pythonu je običajno korenski imenik.V "
+"tem primeru je to preglašeno s podimenikom `src/`, tako da deluje, kot da je "
+"korenski imenik paketa."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:66
 msgid ""
 "The `package-dir` is why the generated project script does `kirigami_python "
 "→ app` instead of `kirigami_python → src → app`."
 msgstr ""
+"`package-dir` je razlog, zakaj ustvarjeni skript projekta deluje kot "
+"`kirigami_python→ app` namesto `kirigami_python → src → app`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:67
 msgid ""
@@ -9312,6 +9337,9 @@ msgid ""
 "py]({{< ref \"#app-py\" >}}) does `kirigami_python → qml → Main.qml` instead "
 "of `kirigami_python → src → qml → Main.qml`."
 msgstr ""
+"`package-dir` je tudi razlog, zakaj klic `importlib.resources.files()` v "
+"[app.py]({{< ref \"#app-py\" >}}) deluje kot `kirigami_python → qml → Main."
+"qml` namesto kot `kirigami_python → src → qml → Main.qml`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:69
 msgid ""
@@ -9319,55 +9347,39 @@ msgid ""
 "\"python-package#running-directly-as-a-module-and-as-a-console-script\" >}}) "
 "for details."
 msgstr ""
+"Glejte [Running directly, as a module, and as a console script]({{< ref "
+"\"python-package#running-directly-as-a-module-and-as-a-console-script\" >}}) "
+"za podrobnosti."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:71
-#, fuzzy
-#| msgid "org.kde.tutorial.desktop"
 msgid "org.kde.kirigami_python.desktop"
-msgstr "org.kde.tutorial.desktop"
+msgstr "org.kde.kirigami_python.desktop"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:75
-#, fuzzy
-#| msgid ""
-#| "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/"
-#| "wiki/Reverse_domain_name_notation) followed by the `.desktop` extension "
-#| "such as `org.kde.tutorial.desktop`:"
 msgid ""
 "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
 "`org.kde.kirigami_python.desktop`:"
 msgstr ""
-"Slediti mora [shemi poimenovanja povratnega DNS](https://en.wikipedia.org/"
-"wiki/Reverse_domain_name_notation), ki ji sledi končnica `.desktop`, kot je "
-"`org.kde.tutorial.desktop`:"
+"Slediti mora [shemi poimenovanja obratne DNS - reverse-DNS naming scheme]"
+"(https://en.wikipedia.org/wiki/Reverse_domain_name_notation), ki mu sledi "
+"končnica `.desktop`, kot je npr.`org.kde.kirigami_python.desktop`:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:81
-#, fuzzy
-#| msgid ""
-#| "Window and taskbar icons will work in a Wayland session only if apps' "
-#| "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
-#| "applications`. To get icons working in this tutorial, either copy the "
-#| "app's desktop file there or switch to a development session as instructed "
-#| "in [kde-builder tutorial](/docs/getting-started/building/kde-builder-"
-#| "compile). Some KDE applications might have working icons if they were "
-#| "already installed on the system."
 msgid ""
 "Window and taskbar icons will work in a Wayland session only if apps' "
 "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
 "applications`. To get icons working in this tutorial, copy the app's desktop "
 "file there."
 msgstr ""
-"Ikone oken in opravilne vrstice bodo delovale v seji Wayland le, če so "
-"namizne datoteke aplikacij nameščene v `~/.local/share/applications` ali `/"
-"usr/share/applications`. Če želite, da bodo ikone delovale v tem učbeniku, "
-"bodisi kopirajte datoteko namizja aplikacije tja ali preklopite na razvojno "
-"sejo, kot je opisano v [učbeniku za kde-builder - kde-builder tutorial(/docs/"
-"getting-started/building/kde-builder-compile). Nekatere aplikacije KDE imajo "
-"morda delujoče ikone, če so že nameščene v sistemu."
+"Ikone oken in opravilne vrstice bodo delovale v seji Wayland samo, če so "
+"aplikacijenamizne datoteke nameščene v `~/.local/share/applications` ali `/"
+"usr/share/applications`. Če želite, da bodo ikone delovale v tej vadnici, "
+"kopirajte namizje aplikacijedatoteko tja."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:85
 msgid "MANIFEST.in"
-msgstr ""
+msgstr "MANIFEST.in"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:87
 msgid ""
@@ -9376,10 +9388,14 @@ msgid ""
 "default doesn't include QML files in packages, and they need to be available "
 "in order for the application to run."
 msgstr ""
+"Ta datoteka je preprosto deklaracija dodatnih datotek izvorne kode, kimora "
+"biti prisoten v paketu, ko se aplikacija izvaja. Privzeto Python ne "
+"vključuje datotek QML v paketih in morajo biti na voljo da se aplikacija "
+"izvaja."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:91
 msgid "src/app.py"
-msgstr ""
+msgstr "src/app.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:95
 msgid ""
@@ -9389,6 +9405,12 @@ msgid ""
 "module, and as a console script]({{< ref \"python-package#running-directly-"
 "as-a-module-and-as-a-console-script\" >}}) for details."
 msgstr ""
+"Ker je to aplikacija GUI, želimo, da se glavna funkcija izvaja samo, ko se "
+"izvaja skript in ne, ko je uvožen, zato potrebujemo pogoj `if __name__ ==  "
+"\"__main__\"` na koncu datoteke. Glejte [Tek neposredno kot modul in kot "
+"konzolni skript - Running directly, as a module, and as a console script]"
+"({{< ref \"python-package#running-directly-as-a-module-and-as-a-console-"
+"script\" >}}) za podrobnosti."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:97
 msgid ""
@@ -9398,30 +9420,31 @@ msgid ""
 "in the package, namely our `Main.qml`. With that path, we load the QML file "
 "into the QML engine as the main entrypoint for the application interface."
 msgstr ""
+"Ustvarimo aplikacijo QGuiApplication in inicializiramo stroj QML ter "
+"z`QGuiApplication.exec()` aplikacija bo delovala, dokler se ne zapre.Nato "
+"`importlib.resources.files()` zagrabi pot do datoteke, ki je prisotnav "
+"paketu namreč našo `Main.qml`. S to potjo naložimo datoteko QMLv stroj QML "
+"kot glavno vstopno točko za aplikacijski vmesnik."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:99
 msgid "src/\\_\\_init\\_\\_.py"
-msgstr ""
+msgstr "src/\\_\\_init\\_\\_.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:101
 msgid ""
 "Create an empty `kirigami_python/src/__init__.py` file. This file just needs "
 "to be present in order to import a directory as a package."
 msgstr ""
+"Ustvarite prazno datoteko `kirigami_python/src/__init__.py`. Ta datoteka "
+"mora biti samo prisotna, da lahko uvozite imenik kot paket."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:107
 msgid "src/\\_\\_main\\_\\_.py"
-msgstr ""
+msgstr "src/\\_\\_main\\_\\_.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:109
-#, fuzzy
-#| msgid ""
-#| "First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` "
-#| "with the following contents:"
 msgid "Create a `kirigami_python/src/__main__.py` with the following contents:"
-msgstr ""
-"Najprej ustvarite datoteko `kirigami-tutorial/src/components/CMakeLists.txt` "
-"z naslednjo vsebino:"
+msgstr "Ustvarite `kirigami_python/src/__main__.py` z naslednjo vsebino:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:113
 msgid ""
@@ -9429,26 +9452,18 @@ msgid ""
 "it as a module named `app`, then immediately runs the `main()` function of "
 "the application."
 msgstr ""
+"To preprosto doda vsebino trenutnega imenika (`src/`) in jo uvozikot modul z "
+"imenom `app`, nato takoj zažene funkcijo `main()` aplikacije."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:115
-#, fuzzy
-#| msgid "Main.qml"
 msgid "src/qml/Main.qml"
-msgstr "Main.qml"
+msgstr "src/qml/Main.qml"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:140
 msgid "We also set the window `title` property to \"Hello World\"."
-msgstr ""
+msgstr "Nastavili smo tudi lastnost okna `title` na \"Hello World\"."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:144
-#, fuzzy
-#| msgid ""
-#| "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
-#| "QtQuick.Controls.Label) that lets us place text on our page. We use "
-#| "`anchors.centerIn: parent` to center our label horizontally and "
-#| "vertically within our parent element. In this case, the parent component "
-#| "of our label is [Kirigami.Page](docs:kirigami2;Page). The last thing we "
-#| "need to do is set its text: `text: i18n(\"Hello World!\")`."
 msgid ""
 "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
 "QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
@@ -9462,14 +9477,15 @@ msgstr ""
 "Uporabljamo 'anchors.centerIn: parent' za centriranje naše oznake vodoravno "
 "in navpično znotraj našega nadrejenega elementa. V tem primeru je nadrejena "
 "komponenta oznake stran  [Kirigami.Page](docs:kirigami2;Page). Zadnja stvar, "
-"ki jo moramo storiti je, da nastavimo besedilo: `text: i18n(\"Hello World!"
-"\")`."
+"ki jo moramo storiti je, da nastavimo besedilo: `text: \"Hello World!\"`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:148
 msgid ""
 "You can run the `kirigami_hello` console script without needing to install "
 "it first:"
 msgstr ""
+"Konzolni skript `kirigami_hello` lahko zaženete, ne da bi vam ga bilo treba "
+"najprej namestiti:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:154
 msgid ""
@@ -9478,6 +9494,10 @@ msgid ""
 "Kirigami and PySide need to have been built against the same Qt version to "
 "work, which is the case when both of them come from the distribution."
 msgstr ""
+"Zastavica `--system-site-packages` je potrebna, da ima Python dostop do "
+"paketov Pythona iz vaše distribucije. To je potrebno, ker morata biti "
+"Kirigami in PySide zgrajena na isti različici Qt, da bi delovalo, kar oboje "
+"velja takrat, ko oba prihajata iz distribucije."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:156
 msgid ""
@@ -9485,12 +9505,12 @@ msgid ""
 "that has the program, and `kirigami_hello` is the executable script to be "
 "run."
 msgstr ""
+"Zastavica `--spec` določa pot do izvorne kode ali kolesnega paketa, ki ima "
+"program, `kirigami_hello` pa je izvršljivi skript, ki naj bi tekel."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:158
-#, fuzzy
-#| msgid "Then you can build and install it with the command:"
 msgid "To build and install the Python package, run:"
-msgstr "Nato ga lahko zgradite in namestite z ukazom:"
+msgstr "Za izgradnjo in namestitev Pythonovega paketa, zaženite:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:164
 msgid ""
@@ -9498,10 +9518,12 @@ msgid ""
 "python`, and an executable script will be installed to `~/.local/bin/"
 "kirigami_hello`."
 msgstr ""
+"Paket bo nameščen v `~/.local/share/pipx/venvs/kirigami-python` in izvajalni "
+"skript bo nameščen v `~/.local/bin/kirigami_hello`."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:166
 msgid "Use of pipx versus pip"
-msgstr ""
+msgstr "Uporaba pipx v primerjavi s pip"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:168
 msgid ""
@@ -9510,6 +9532,11 @@ msgid ""
 "and install. The same steps can be done manually with `venv`, `build` and "
 "`pip` as in the more complete tutorial."
 msgstr ""
+"Za razliko od [Python s Kirigami: Ustvarjanje paketa Python - Python with "
+"Kirigami: Creating a Python package]({{< ref \"python-paket« >}}), je ta "
+"vadnica uporablja `pipx` za lažjo izvedbo projekta in namestitev. Iste "
+"korake je mogoče izvesti ročno z `venv`, `build` in `pip` kot v popolnejši "
+"vadnici."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:170
 msgid ""
@@ -9517,10 +9544,13 @@ msgid ""
 "pep-0668/) for running Python applications, while `pip` is multi-purpose and "
 "can also be used for importable Python modules."
 msgstr ""
+"`pipx` je uporaben in priporočljiv v skladu s [PEP 668](https://peps.python."
+"org/pep-0668/) za izvajanje aplikacij v Pythonu, medtem ko je `pip` "
+"večnamenski inse lahko uporablja tudi za uvožene module Pythona."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:174
 msgid "After this, the application can be launched by running:"
-msgstr ""
+msgstr "Po tem lahko aplikacijo startate tako, da zaženete:"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"
