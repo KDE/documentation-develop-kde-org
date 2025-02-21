@@ -111,7 +111,7 @@ In case you want to automatically build the project with kde-builder, custom mod
 
 ### Main.qml
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/qml/Main.qml" highlight="qml" >}}
 
 Here's where we will be handling our application's frontend.
 
@@ -154,7 +154,7 @@ The primary purpose of [Desktop Entry files](https://specifications.freedesktop.
 
 It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) followed by the `.desktop` extension such as `org.kde.tutorial.desktop`:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/org.kde.tutorial.desktop" highlight="ini" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/org.kde.tutorial.desktop" highlight="ini" >}}
 
 {{< alert title="Note" color="info" >}}
 
@@ -166,7 +166,7 @@ Window and taskbar icons will work in a Wayland session only if apps' desktop fi
 
 `CMakeLists.txt` files are needed to use KDE's build system of choice, [CMake](https://cmake.org/). Our `kirigami-tutorial/CMakeLists.txt` file is going to specify some of our application's characteristics. It also includes some of the dependencies we need in order to compile our project.
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/CMakeLists.txt" highlight="cmake" >}}
 
 The `CMakeLists.txt` defines how to build your projects. Most of the content here is just to bootstrap your project. You can read a line-by-line, in-depth explanation of what this CMakeLists file does [here](/docs/getting-started/kirigami/advanced-understanding_cmakelists/).
 
@@ -178,7 +178,7 @@ The line with `install()` tells CMake where to install the desktop file.
 
 Let's delve into the `kirigami-tutorial/src/CMakeLists.txt` file in there.
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/CMakeLists.txt" highlight="cmake" >}}
 
 This file consists of five steps:
 
@@ -198,7 +198,7 @@ The file `kirigami-tutorial/src/main.cpp` handles the "business logic" of our ap
 
 It also functions as the entrypoint to our application. The two parts of our project, the backend and the user interface, are both set up and started here.
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/main.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/main.cpp" highlight="cpp" >}}
 
 For now, we don't need to go into too much detail regarding what our `main.cpp` code does, but its role will grow significantly more important once we decide to add more complex functionality to our application in the future.
 
