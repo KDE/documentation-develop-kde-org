@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-21 01:48+0000\n"
-"PO-Revision-Date: 2025-02-18 21:42+0100\n"
+"POT-Creation-Date: 2025-02-22 01:48+0000\n"
+"PO-Revision-Date: 2025-02-20 18:57+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -296,6 +296,9 @@ msgid ""
 "We can now start checking out the components used to create our Settings "
 "page: the Form Card and its Delegates."
 msgstr ""
+"Nous pouvons maintenant commencer à consulter les composants utilisés pour "
+"la création de notre page « Configuration » : la carte de formulaire et ses "
+"délégués."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:87
 msgid "Form Delegates"
@@ -619,6 +622,9 @@ msgid ""
 "Add the following between the \"Current Color Scheme\" and \"Show Tray Icon"
 "\" delegates in your \"General\" form card."
 msgstr ""
+"Ajoutez ce qui suit entre les délégués « Thème courant de couleurs » et "
+"« Afficher la boîte à miniatures » dans votre carte de formulaire "
+"« Général »."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:378
 msgid "With the checkbox, our Settings page should look like this:"
@@ -757,6 +763,9 @@ msgid ""
 "We simply load our QML file from the resource file, and now we just need to "
 "take care of our initial QML file."
 msgstr ""
+"Nous chargeons simplement notre fichier QML à partir du fichier de "
+"ressources. Et maintenant, nous devons simplement prendre soin de notre "
+"fichier QML initial."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:55
 msgid "FormCard and FormButtonDelegate"
@@ -2151,6 +2160,8 @@ msgid ""
 "`ecm_add_qml_module()` creates a QML module target that will be accessible "
 "via the \"org.kde.tutorial\" import."
 msgstr ""
+"`ecm_add_qml_module()` crée une cible de module QML qui sera accessible "
+"grâce l'importation de « org.kde.tutorial »."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:73
 #, fuzzy
@@ -2579,15 +2590,11 @@ msgstr ""
 "par exemple pour effacer le texte ou pour rechercher un texte."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:186
-#, fuzzy
-#| msgid ""
-#| "In this example, we are creating a clear button for a search field only "
-#| "visible when text is entered."
 msgid ""
 "In this example, we are creating a \"clear\" button for a search field that "
 "is only visible when text is entered."
 msgstr ""
-"Dans cet exemple, nous créons un bouton d'effacement pour un champ de "
+"Dans cet exemple, nous créons un bouton « Effacer » pour un champ de "
 "recherche uniquement visible lorsque du texte est saisi."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:188
@@ -4699,13 +4706,12 @@ msgstr ""
 "agréable animation."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:16
-#, fuzzy
-#| msgid "`text`: here is where you set the text of your inline message."
 msgid ""
 "[text](docs:kirigami2;templates::InlineMessage::text): here is where you set "
 "the text of your inline message."
 msgstr ""
-"« text » : c'est ici que vous définissez le texte de votre message intégré."
+"[texte](docs:kirigami2;templates::InlineMessage::text) : c'est ici que vous "
+"définissez le texte de votre message intégré."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:49
 #, fuzzy
@@ -5863,15 +5869,11 @@ msgid "Pull to refresh"
 msgstr "Tirer pour rafraîchir"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:110
-#, fuzzy
-#| msgid ""
-#| "Another function provided by this component is a \"pull to refresh\" "
-#| "action. To use this, activate it as follows:"
 msgid ""
 "Another function provided by this component is a \"pull-to-refresh\" action. "
 "To use this, activate it as follows:"
 msgstr ""
-"Une autre fonction fournie par ce composant est une action « tirer pour "
+"Une autre fonction fournie par ce composant est une action « Tirer pour "
 "rafraîchir ». Pour l'utiliser, il faut l'activer comme ceci :"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:123
@@ -9517,8 +9519,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:22
 msgid ""
 "If you are on a distribution with old PySide6 or PyQt6 packages, this "
-"tutorial works with [Building software with distrobox]({{< ref \"containers-"
-"distrobox\" >}})."
+"tutorial works with [Building software with distrobox](/docs/getting-started/"
+"building/containers-distrobox)."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:26
@@ -9565,8 +9567,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:51
 msgid ""
 "For a more comprehensive project that goes into further detail about this "
-"file structure, see [Full project in Python + Kirigami]({{< ref \"python-app"
-"\" >}})."
+"file structure, see [Full project in Python + Kirigami](/docs/getting-"
+"started/python/python-app)."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:53
@@ -9584,16 +9586,16 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:57
 msgid ""
 "Most of the contents in this file are boilerplate, and a more complete "
-"version of it can be seen in [Python with Kirigami: General Structure]({{< "
-"ref \"python-package#general-structure\" >}})."
+"version of it can be seen in [Python with Kirigami: General Structure](/docs/"
+"getting-started/python/python-package#general-structure)."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:61
 msgid ""
-"Note the highlighted lines. As mentioned under [Project structure]({{< ref "
-"\"#project-structure\" >}}), the name of the package is `kirigami_python`, "
-"the name of the executable is `kirigami_hello`, and the name of the "
-"entrypoint is `app`. In particular, the following should be noted:"
+"Note the highlighted lines. As mentioned under [Project structure](#project-"
+"structure), the name of the package is `kirigami_python`, the name of the "
+"executable is `kirigami_hello`, and the name of the entrypoint is `app`. In "
+"particular, the following should be noted:"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:63
@@ -9624,15 +9626,15 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:67
 msgid ""
 "The `package-dir` is also why the `importlib.resources.files()` call in [app."
-"py]({{< ref \"#app-py\" >}}) does `kirigami_python → qml → Main.qml` instead "
-"of `kirigami_python → src → qml → Main.qml`."
+"py](#app-py) does `kirigami_python → qml → Main.qml` instead of "
+"`kirigami_python → src → qml → Main.qml`."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:69
 msgid ""
-"See [Running directly, as a module, and as a console script]({{< ref "
-"\"python-package#running-directly-as-a-module-and-as-a-console-script\" >}}) "
-"for details."
+"See [Running directly, as a module, and as a console script](/docs/getting-"
+"started/python/python-package#running-directly-as-a-module-and-as-a-console-"
+"script) for details."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:71
@@ -9677,8 +9679,8 @@ msgid ""
 "Since this is a GUI application, we want the main function to only run when "
 "the script is run, not when it's imported, so we need the `if __name__ == "
 "\"__main__\"` condition at the end of the file. See [Running directly, as a "
-"module, and as a console script]({{< ref \"python-package#running-directly-"
-"as-a-module-and-as-a-console-script\" >}}) for details."
+"module, and as a console script](/docs/getting-started/python/python-"
+"package#running-directly-as-a-module-and-as-a-console-script) for details."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:97
@@ -9792,10 +9794,10 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:168
 msgid ""
-"Unlike [Python with Kirigami: Creating a Python package]({{< ref \"python-"
-"package\" >}}), this tutorial used `pipx` to make the project easier to run "
-"and install. The same steps can be done manually with `venv`, `build` and "
-"`pip` as in the more complete tutorial."
+"Unlike [Python with Kirigami: Creating a Python package](/docs/getting-"
+"started/python/python-package), this tutorial used `pipx` to make the "
+"project easier to run and install. The same steps can be done manually with "
+"`venv`, `build` and `pip` as in the more complete tutorial."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:170

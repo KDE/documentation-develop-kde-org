@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-21 01:48+0000\n"
+"POT-Creation-Date: 2025-02-22 01:48+0000\n"
 "PO-Revision-Date: 2021-11-15 17:45+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -7067,8 +7067,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:22
 msgid ""
 "If you are on a distribution with old PySide6 or PyQt6 packages, this "
-"tutorial works with [Building software with distrobox]({{< ref \"containers-"
-"distrobox\" >}})."
+"tutorial works with [Building software with distrobox](/docs/getting-started/"
+"building/containers-distrobox)."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:26
@@ -7109,8 +7109,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:51
 msgid ""
 "For a more comprehensive project that goes into further detail about this "
-"file structure, see [Full project in Python + Kirigami]({{< ref \"python-app"
-"\" >}})."
+"file structure, see [Full project in Python + Kirigami](/docs/getting-"
+"started/python/python-app)."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:53
@@ -7128,16 +7128,16 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:57
 msgid ""
 "Most of the contents in this file are boilerplate, and a more complete "
-"version of it can be seen in [Python with Kirigami: General Structure]({{< "
-"ref \"python-package#general-structure\" >}})."
+"version of it can be seen in [Python with Kirigami: General Structure](/docs/"
+"getting-started/python/python-package#general-structure)."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:61
 msgid ""
-"Note the highlighted lines. As mentioned under [Project structure]({{< ref "
-"\"#project-structure\" >}}), the name of the package is `kirigami_python`, "
-"the name of the executable is `kirigami_hello`, and the name of the "
-"entrypoint is `app`. In particular, the following should be noted:"
+"Note the highlighted lines. As mentioned under [Project structure](#project-"
+"structure), the name of the package is `kirigami_python`, the name of the "
+"executable is `kirigami_hello`, and the name of the entrypoint is `app`. In "
+"particular, the following should be noted:"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:63
@@ -7168,15 +7168,15 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:67
 msgid ""
 "The `package-dir` is also why the `importlib.resources.files()` call in [app."
-"py]({{< ref \"#app-py\" >}}) does `kirigami_python → qml → Main.qml` instead "
-"of `kirigami_python → src → qml → Main.qml`."
+"py](#app-py) does `kirigami_python → qml → Main.qml` instead of "
+"`kirigami_python → src → qml → Main.qml`."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:69
 msgid ""
-"See [Running directly, as a module, and as a console script]({{< ref "
-"\"python-package#running-directly-as-a-module-and-as-a-console-script\" >}}) "
-"for details."
+"See [Running directly, as a module, and as a console script](/docs/getting-"
+"started/python/python-package#running-directly-as-a-module-and-as-a-console-"
+"script) for details."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:71
@@ -7219,8 +7219,8 @@ msgid ""
 "Since this is a GUI application, we want the main function to only run when "
 "the script is run, not when it's imported, so we need the `if __name__ == "
 "\"__main__\"` condition at the end of the file. See [Running directly, as a "
-"module, and as a console script]({{< ref \"python-package#running-directly-"
-"as-a-module-and-as-a-console-script\" >}}) for details."
+"module, and as a console script](/docs/getting-started/python/python-"
+"package#running-directly-as-a-module-and-as-a-console-script) for details."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:97
@@ -7313,10 +7313,10 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:168
 msgid ""
-"Unlike [Python with Kirigami: Creating a Python package]({{< ref \"python-"
-"package\" >}}), this tutorial used `pipx` to make the project easier to run "
-"and install. The same steps can be done manually with `venv`, `build` and "
-"`pip` as in the more complete tutorial."
+"Unlike [Python with Kirigami: Creating a Python package](/docs/getting-"
+"started/python/python-package), this tutorial used `pipx` to make the "
+"project easier to run and install. The same steps can be done manually with "
+"`venv`, `build` and `pip` as in the more complete tutorial."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:170
