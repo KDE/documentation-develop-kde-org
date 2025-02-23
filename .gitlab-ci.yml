@@ -10,18 +10,6 @@ hugo_website:
     KDECI_CACHE_PATH: /mnt/artifacts/suse-qt6.8/
     KDECI_GITLAB_SERVER: https://invent.kde.org/
     KDECI_PACKAGE_PROJECT: teams/ci-artifacts/suse-qt6.8
-  # BEGIN OF WORKAROUND
-  before_script:
-    - git config --global --add safe.directory $CI_PROJECT_DIR
-    - git clone https://invent.kde.org/sysadmin/ci-utilities.git
-    - git clone https://invent.kde.org/sysadmin/ci-notary-service.git
-    # workaround: remove broken translations which break the build
-    - rm po/sv/kirigami-tutorial.po
-    - rm po/ca/kirigami-tutorial.po
-    - rm po/sl/kirigami-tutorial.po
-    - rm po/nl/kirigami-tutorial.po
-    - rm po/uk/kirigami-tutorial.po
-  # END OF WORKAROUND
 
 # broken
 #html_test:
