@@ -14,6 +14,7 @@ window.addEventListener('load', async () => {
     const searchResultsCardTemplate = document.getElementById('search-results-card-template')
     const offlineSearchSrc = searchInput.dataset.offlineSearchIndexJsonSrc;
     const offlineSearchBase = searchInput.dataset.offlineSearchBaseHref;
+    const offlineSearchSection = searchInput.dataset.offlineSearchSection;
 
     if (!searchResultsCardTemplate || !searchResultsTemplate) {
         return;
@@ -44,7 +45,8 @@ window.addEventListener('load', async () => {
             return;
         }
 
-        const data = await response.json();
+        let data = await response.json();
+        data = data.filter(doc => doc.ref.indexOf(`/${offlineSearchSection}/`) === 0); // Index only pages from current section
 
         try {
           const lunrWorker = new Worker(window._site.webWorker);
