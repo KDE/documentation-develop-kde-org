@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 01:48+0000\n"
+"POT-Creation-Date: 2025-02-23 01:46+0000\n"
 "PO-Revision-Date: 2021-11-15 17:45+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -650,7 +650,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:25
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:145
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:94
-#: content/docs/getting-started/kirigami/setup-python/index.md:45
+#: content/docs/getting-started/kirigami/setup-python/index.md:44
 msgid "Tip"
 msgstr ""
 
@@ -884,7 +884,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:44
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:323
-#: content/docs/getting-started/kirigami/setup-python/index.md:146
+#: content/docs/getting-started/kirigami/setup-python/index.md:145
 msgid "Running the application"
 msgstr ""
 
@@ -1155,8 +1155,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:139
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:159
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:350
-#: content/docs/getting-started/kirigami/setup-python/index.md:79
-#: content/docs/getting-started/kirigami/setup-python/index.md:130
+#: content/docs/getting-started/kirigami/setup-python/index.md:78
+#: content/docs/getting-started/kirigami/setup-python/index.md:129
 #: content/docs/getting-started/kirigami/style-colors/index.md:28
 msgid "Note"
 msgstr "Poznámka"
@@ -6480,7 +6480,7 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:76
-#: content/docs/getting-started/kirigami/setup-python/index.md:24
+#: content/docs/getting-started/kirigami/setup-python/index.md:23
 msgid "Project structure"
 msgstr ""
 
@@ -6519,12 +6519,12 @@ msgid "Main.qml"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:116
-#: content/docs/getting-started/kirigami/setup-python/index.md:119
+#: content/docs/getting-started/kirigami/setup-python/index.md:118
 msgid "Here's where we will be handling our application's frontend."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:118
-#: content/docs/getting-started/kirigami/setup-python/index.md:121
+#: content/docs/getting-started/kirigami/setup-python/index.md:120
 msgid ""
 "If you know some Javascript, then much of QML will seem familiar to you "
 "(though it does have its own peculiarities). [Qt's documentation](https://"
@@ -6535,21 +6535,21 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:120
-#: content/docs/getting-started/kirigami/setup-python/index.md:123
+#: content/docs/getting-started/kirigami/setup-python/index.md:122
 msgid ""
 "For now, let's focus on `Main.qml`. First we [import](https://doc.qt.io/qt-6/"
 "qtqml-syntax-imports.html) a number of important modules:"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:122
-#: content/docs/getting-started/kirigami/setup-python/index.md:125
+#: content/docs/getting-started/kirigami/setup-python/index.md:124
 msgid ""
 "[QtQuick](https://doc.qt.io/qt-6/qtquick-index.html), the standard library "
 "used in QML applications."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:123
-#: content/docs/getting-started/kirigami/setup-python/index.md:126
+#: content/docs/getting-started/kirigami/setup-python/index.md:125
 msgid ""
 "[QtQuick Controls](https://doc.qt.io/qt-6/qtquickcontrols-index.html), which "
 "provides a number of standard controls we can use to make our applications "
@@ -6557,21 +6557,21 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:124
-#: content/docs/getting-started/kirigami/setup-python/index.md:127
+#: content/docs/getting-started/kirigami/setup-python/index.md:126
 msgid ""
 "[QtQuick Layouts](https://doc.qt.io/qt-6/qtquicklayouts-index.html), which "
 "provides tools for placing components within the application window."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:125
-#: content/docs/getting-started/kirigami/setup-python/index.md:128
+#: content/docs/getting-started/kirigami/setup-python/index.md:127
 msgid ""
 "[Kirigami](docs:kirigami2), which provides a number of components suited for "
 "creating applications that work across devices of different shapes and sizes."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:129
-#: content/docs/getting-started/kirigami/setup-python/index.md:132
+#: content/docs/getting-started/kirigami/setup-python/index.md:131
 msgid ""
 "Putting the QtQuick Controls and Kirigami imports into separate namespaces "
 "using the `as` keyword is a best practice that ensures no components with "
@@ -6581,7 +6581,7 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:133
-#: content/docs/getting-started/kirigami/setup-python/index.md:136
+#: content/docs/getting-started/kirigami/setup-python/index.md:135
 msgid ""
 "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow), which provides some basic features needed for "
@@ -6590,7 +6590,7 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:135
-#: content/docs/getting-started/kirigami/setup-python/index.md:138
+#: content/docs/getting-started/kirigami/setup-python/index.md:137
 msgid ""
 "We then set the window's `id` property to \"root\". IDs are useful because "
 "they let us uniquely reference a component, even if we have several of the "
@@ -6627,7 +6627,7 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:147
-#: content/docs/getting-started/kirigami/setup-python/index.md:142
+#: content/docs/getting-started/kirigami/setup-python/index.md:141
 msgid ""
 "We then set the first page of our page stack. Most Kirigami applications are "
 "organised as a stack of pages, each page containing related components "
@@ -6655,7 +6655,7 @@ msgid "org.kde.tutorial.desktop"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:153
-#: content/docs/getting-started/kirigami/setup-python/index.md:73
+#: content/docs/getting-started/kirigami/setup-python/index.md:72
 msgid ""
 "The primary purpose of [Desktop Entry files](https://specifications."
 "freedesktop.org/desktop-entry-spec/latest/) is to show your app on the "
@@ -6988,19 +6988,19 @@ msgid "On Windows"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:334
-#: content/docs/getting-started/kirigami/setup-python/index.md:186
+#: content/docs/getting-started/kirigami/setup-python/index.md:185
 msgid ""
 "Voilà! Now you will see your very first Kirigami app appear before your very "
 "own eyes."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:336
-#: content/docs/getting-started/kirigami/setup-python/index.md:188
+#: content/docs/getting-started/kirigami/setup-python/index.md:187
 msgid "![Screenshot of the generated Kirigami application](hello-kworld.webp)"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:338
-#: content/docs/getting-started/kirigami/setup-python/index.md:180
+#: content/docs/getting-started/kirigami/setup-python/index.md:179
 msgid ""
 "To run the new QML application in mobile mode, you can use "
 "`QT_QUICK_CONTROLS_MOBILE=1`:"
@@ -7051,73 +7051,60 @@ msgid ""
 "machine."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:16
-msgid ""
-"{{< installpackage opensuse=\"python3-pipx python3-qt6 python3-pyside6 kf6-"
-"kirigami-devel flatpak-builder qqc2-desktop-style AppStream-compose\" fedora="
-"\"pipx python3-pyqt6 python3-pyside6 kf6-kirigami-devel flatpak-builder qqc2-"
-"desktop-style appstream-compose\" arch=\"python-pipx python-pyqt6 pyside6 "
-"kirigami flatpak-builder qqc2-desktop-style appstream\""
-msgstr ""
-
-#: content/docs/getting-started/kirigami/setup-python/index.md:20
-msgid "}}"
-msgstr ""
-
-#: content/docs/getting-started/kirigami/setup-python/index.md:22
+#: content/docs/getting-started/kirigami/setup-python/index.md:21
 msgid ""
 "If you are on a distribution with old PySide6 or PyQt6 packages, this "
 "tutorial works with [Building software with distrobox](/docs/getting-started/"
 "building/containers-distrobox)."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:26
+#: content/docs/getting-started/kirigami/setup-python/index.md:25
 msgid ""
 "First we create our project folder (you can use the commands below). We are "
 "going to call ours `kirigami_python/`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:32
+#: content/docs/getting-started/kirigami/setup-python/index.md:31
 msgid "To add our QML files"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:33
+#: content/docs/getting-started/kirigami/setup-python/index.md:32
 msgid "The main file to manage the project"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:36
+#: content/docs/getting-started/kirigami/setup-python/index.md:35
 msgid "To import the src/ directory as a package"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:37
+#: content/docs/getting-started/kirigami/setup-python/index.md:36
 msgid "To signal app as the entrypoint"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:43
+#: content/docs/getting-started/kirigami/setup-python/index.md:42
 msgid ""
 "The package name is going to be `kirigami_python`, the \"executable"
 "\" (console script) will be called `kirigami_hello`, and the entrypoint will "
 "be `app`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:47
+#: content/docs/getting-started/kirigami/setup-python/index.md:46
 msgid ""
 "To quickly generate this folder structure, just run: `mkdir -p "
 "kirigami_python/src/qml/`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:51
+#: content/docs/getting-started/kirigami/setup-python/index.md:50
 msgid ""
 "For a more comprehensive project that goes into further detail about this "
 "file structure, see [Full project in Python + Kirigami](/docs/getting-"
 "started/python/python-app)."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:53
+#: content/docs/getting-started/kirigami/setup-python/index.md:52
 msgid "pyproject.toml"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:55
+#: content/docs/getting-started/kirigami/setup-python/index.md:54
 msgid ""
 "Modern Python applications need only a single TOML file to specify all "
 "metadata, package information and dependencies as of [PEP 621](https://peps."
@@ -7125,14 +7112,14 @@ msgid ""
 "application and can be extended later."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:57
+#: content/docs/getting-started/kirigami/setup-python/index.md:56
 msgid ""
 "Most of the contents in this file are boilerplate, and a more complete "
 "version of it can be seen in [Python with Kirigami: General Structure](/docs/"
 "getting-started/python/python-package#general-structure)."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:61
+#: content/docs/getting-started/kirigami/setup-python/index.md:60
 msgid ""
 "Note the highlighted lines. As mentioned under [Project structure](#project-"
 "structure), the name of the package is `kirigami_python`, the name of the "
@@ -7140,57 +7127,57 @@ msgid ""
 "particular, the following should be noted:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:63
+#: content/docs/getting-started/kirigami/setup-python/index.md:62
 msgid ""
 "The project script consists of an entrypoint script that will be generated "
 "by setuptools for the application to run, in this case `kirigami_hello`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:64
+#: content/docs/getting-started/kirigami/setup-python/index.md:63
 msgid ""
 "The generated project script `kirigami_hello` runs the `main()` function in "
 "the `app.py` script in the `kirigami_python` package."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:65
+#: content/docs/getting-started/kirigami/setup-python/index.md:64
 msgid ""
 "The default `package-dir` for Python projects is usually the root directory. "
 "In this case, this is overridden with the `src/` subdirectory so it acts "
 "like it is the root directory of the package."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:66
+#: content/docs/getting-started/kirigami/setup-python/index.md:65
 msgid ""
 "The `package-dir` is why the generated project script does `kirigami_python "
 "→ app` instead of `kirigami_python → src → app`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:67
+#: content/docs/getting-started/kirigami/setup-python/index.md:66
 msgid ""
 "The `package-dir` is also why the `importlib.resources.files()` call in [app."
 "py](#app-py) does `kirigami_python → qml → Main.qml` instead of "
 "`kirigami_python → src → qml → Main.qml`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:69
+#: content/docs/getting-started/kirigami/setup-python/index.md:68
 msgid ""
 "See [Running directly, as a module, and as a console script](/docs/getting-"
 "started/python/python-package#running-directly-as-a-module-and-as-a-console-"
 "script) for details."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:71
+#: content/docs/getting-started/kirigami/setup-python/index.md:70
 msgid "org.kde.kirigami_python.desktop"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:75
+#: content/docs/getting-started/kirigami/setup-python/index.md:74
 msgid ""
 "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
 "`org.kde.kirigami_python.desktop`:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:81
+#: content/docs/getting-started/kirigami/setup-python/index.md:80
 msgid ""
 "Window and taskbar icons will work in a Wayland session only if apps' "
 "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
@@ -7198,11 +7185,11 @@ msgid ""
 "file there."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:85
+#: content/docs/getting-started/kirigami/setup-python/index.md:84
 msgid "MANIFEST.in"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:87
+#: content/docs/getting-started/kirigami/setup-python/index.md:86
 msgid ""
 "This file is simply a declaration of additional source code files that "
 "should be present in the package when the application runs. Python by "
@@ -7210,11 +7197,11 @@ msgid ""
 "in order for the application to run."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:91
+#: content/docs/getting-started/kirigami/setup-python/index.md:90
 msgid "src/app.py"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:95
+#: content/docs/getting-started/kirigami/setup-python/index.md:94
 msgid ""
 "Since this is a GUI application, we want the main function to only run when "
 "the script is run, not when it's imported, so we need the `if __name__ == "
@@ -7223,7 +7210,7 @@ msgid ""
 "package#running-directly-as-a-module-and-as-a-console-script) for details."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:97
+#: content/docs/getting-started/kirigami/setup-python/index.md:96
 msgid ""
 "We create a QGuiApplication and initialize the QML engine, and with "
 "`QGuiApplication.exec()` the application will keep running until closed. "
@@ -7232,40 +7219,40 @@ msgid ""
 "into the QML engine as the main entrypoint for the application interface."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:99
+#: content/docs/getting-started/kirigami/setup-python/index.md:98
 msgid "src/\\_\\_init\\_\\_.py"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:101
+#: content/docs/getting-started/kirigami/setup-python/index.md:100
 msgid ""
 "Create an empty `kirigami_python/src/__init__.py` file. This file just needs "
 "to be present in order to import a directory as a package."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:107
+#: content/docs/getting-started/kirigami/setup-python/index.md:106
 msgid "src/\\_\\_main\\_\\_.py"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:109
+#: content/docs/getting-started/kirigami/setup-python/index.md:108
 msgid "Create a `kirigami_python/src/__main__.py` with the following contents:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:113
+#: content/docs/getting-started/kirigami/setup-python/index.md:112
 msgid ""
 "This simply adds the contents of the current directory (`src/`) and imports "
 "it as a module named `app`, then immediately runs the `main()` function of "
 "the application."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:115
+#: content/docs/getting-started/kirigami/setup-python/index.md:114
 msgid "src/qml/Main.qml"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:140
+#: content/docs/getting-started/kirigami/setup-python/index.md:139
 msgid "We also set the window `title` property to \"Hello World\"."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:144
+#: content/docs/getting-started/kirigami/setup-python/index.md:143
 msgid ""
 "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
 "QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
@@ -7275,13 +7262,13 @@ msgid ""
 "`text: \"Hello World!\"`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:148
+#: content/docs/getting-started/kirigami/setup-python/index.md:147
 msgid ""
 "You can run the `kirigami_hello` console script without needing to install "
 "it first:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:154
+#: content/docs/getting-started/kirigami/setup-python/index.md:153
 msgid ""
 "The flag `--system-site-packages` is needed to make Python have access to "
 "the Python packages from your distribution. This is required because "
@@ -7289,29 +7276,29 @@ msgid ""
 "work, which is the case when both of them come from the distribution."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:156
+#: content/docs/getting-started/kirigami/setup-python/index.md:155
 msgid ""
 "The flag `--spec` determines the path to the source code or wheel package "
 "that has the program, and `kirigami_hello` is the executable script to be "
 "run."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:158
+#: content/docs/getting-started/kirigami/setup-python/index.md:157
 msgid "To build and install the Python package, run:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:164
+#: content/docs/getting-started/kirigami/setup-python/index.md:163
 msgid ""
 "The package will be installed to `~/.local/share/pipx/venvs/kirigami-"
 "python`, and an executable script will be installed to `~/.local/bin/"
 "kirigami_hello`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:166
+#: content/docs/getting-started/kirigami/setup-python/index.md:165
 msgid "Use of pipx versus pip"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:168
+#: content/docs/getting-started/kirigami/setup-python/index.md:167
 msgid ""
 "Unlike [Python with Kirigami: Creating a Python package](/docs/getting-"
 "started/python/python-package), this tutorial used `pipx` to make the "
@@ -7319,14 +7306,14 @@ msgid ""
 "`venv`, `build` and `pip` as in the more complete tutorial."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:170
+#: content/docs/getting-started/kirigami/setup-python/index.md:169
 msgid ""
 "`pipx` is useful and recommended as per [PEP 668](https://peps.python.org/"
 "pep-0668/) for running Python applications, while `pip` is multi-purpose and "
 "can also be used for importable Python modules."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-python/index.md:174
+#: content/docs/getting-started/kirigami/setup-python/index.md:173
 msgid "After this, the application can be launched by running:"
 msgstr ""
 
