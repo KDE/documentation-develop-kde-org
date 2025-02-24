@@ -1,29 +1,13 @@
-// FIXME: Importing this breaks builds, needed for color-mode though.
-//@import "bootstrap";
-
-@import "includes/variables";
-
-.bottomAlignRow div {
-  position: relative;
-  padding-bottom: 50px;
-}
-.bottomAlignRow div>a {
-  position: absolute;
-  bottom: 0px;
-  left: 15px;
-  right: 15px;
-}
-#develop-plateforms {
-  background-color: rgba(61,174,233,.1)
-}
 #kirigami {
   background-color: rgba(218,68,83,.07);
 }
+
 main section {
   margin-top: 0;
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 #top {
   background: rgb(1,212,134);
   background: linear-gradient(128deg, rgba(1,212,134,1) 0%, rgba(61,174,232,1) 100%); 
@@ -97,6 +81,7 @@ p {
 .tool .img {
   vertical-align: middle;  
 }
+
 .tool img {
   width: 128px;
   height: auto;
@@ -171,7 +156,6 @@ main h3 {
   margin-top: 2rem;
 }
 
-
 .more-apps img {
   width: 64px;
   max-widht: 100%;
@@ -191,11 +175,6 @@ main h3 {
     max-width: 90%;
   }
 
-  .phone-with-overlay {
-    width: 30%;
-    left: -70px;
-  }
-
   .tools, .tool-one {
     flex-direction: column;
   }
@@ -209,13 +188,12 @@ main h3 {
   }
 }
 
-// FIXME: bootstrap scss import is breaking here, so just use a media-query.
-//@include color-mode(dark) {
 @media (prefers-color-scheme: dark) {
   .tool,
   .block-nav {
     background-color: #31363b;
   }
+
   main h1,
   .block-nav *,
   .tool * {
@@ -288,7 +266,6 @@ main h3 {
         height: auto;
         border-radius: var(--screenshot-radius);
       }
-
     }
 
     .platform-desktop {
@@ -348,7 +325,7 @@ main h3 {
   flex-direction: column;
 
   background-image: none;
-  background: url('/kirigami/kirigami-icon.svg') no-repeat,
+  background: url('/img/kirigami-icon.svg') no-repeat,
     linear-gradient(144.64deg, #E93A9A 0%, #E9643A 64.86%, #EF973C 100%);
   background-position: bottom left, right;
   background-size: contain;
@@ -375,4 +352,3 @@ main h3 {
     width: 100%
   }
 }
-

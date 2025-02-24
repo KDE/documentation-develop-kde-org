@@ -18,7 +18,7 @@ layout: area
           </p>
         </div>
         <div>
-          <img class="img-fluid" src="/develop/flatpak_logo.png" alt="Flatpak logo" />
+          <img class="img-fluid" src="/distribute/flatpak_logo.png" alt="Flatpak logo" />
         </div>
       </a>
       <a class="tool tool-one" href="https://snapcraft.io/docs/qt5-kde-applications">
@@ -31,7 +31,7 @@ layout: area
           </p>
         </div>
         <div>
-          <img class="img-fluid" src="/develop/snapcraft.png" alt="Snapcraft logo" />
+          <img class="img-fluid" src="/distribute/snapcraft.png" alt="Snapcraft logo" />
         </div>
       </a>
     </div>
@@ -43,7 +43,6 @@ layout: area
     <h2>KNewStuff</h2>
     <p><a href="https://api.kde.org/frameworks/knewstuff/html/index.html">KNewStuff</a> let your users create and distribute addons for your application via <a href="https://store.kde.org">store.kde.org</a></p>
     <a class="d-block learn-more h5" href="https://api.kde.org/frameworks/knewstuff/html/index.html">Learn more</a>
-    <img src="/develop/knewstuff.png" class="img-fluid" alt="screenshot of Download New app"/>
+    <img src="/distribute/knewstuff.png" class="img-fluid" alt="screenshot of Download New app"/>
   </div>
 </section>
-

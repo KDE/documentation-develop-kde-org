@@ -3,7 +3,7 @@ title: KDE Frameworks
 subtitle: The KDE Frameworks are a set of 83 add-on libraries for programming with Qt.
 description: The KDE Frameworks are a set of 83 add-on libraries for programming with Qt.
 layout: products
-logo: https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-source.svg
+logo: /img/kde-logo-white-blue-rounded-source.svg
 scss: "scss/framework.scss"
 ---
 
