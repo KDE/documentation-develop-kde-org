@@ -68,9 +68,9 @@ If you want a more precise description than "search term", you should put the te
 For example `myrunner <files to search for>`.
 
 **Syntax overview of the example file below**:
-![Syntax Overview](/krunner/syntaxoverview.png)
+![Syntax Overview](syntaxoverview.png)
 **KRunner input field when the last syntax is selected**:
-![Example query with placeholder inserted in KRunner](/krunner/placeholderselected.png)
+![Example query with placeholder inserted in KRunner](placeholderselected.png)
 
 **Reduce unneeded querying and DBus activation**: Normally, your runner would get queried for each typed letter, and in case it is DBus activated, it would be activated when the first letter is typed.
 However, many runners have a prefix or pattern that must match.
