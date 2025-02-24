@@ -15,7 +15,7 @@ layout: area
       <img src="https://apps.kde.org/app-icons/org.kde.spectacle.svg" alt="screenshot icon" /> 
       <img src="https://apps.kde.org/app-icons/org.kde.dolphin.svg" alt="dolphin file manager icon" /> 
       <img src="https://apps.kde.org/app-icons/org.kde.kfloppy.svg" alt="floppy icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.kolf.svg" alt="floppy icon" /> 
+      <img src="https://apps.kde.org/app-icons/org.kde.kolf.svg" alt="kolf icon" /> 
       <img src="https://apps.kde.org/app-icons/org.kde.kmousetool.svg" alt="mouse icon" /> 
       <img src="https://apps.kde.org/app-icons/org.kde.khelpcenter.svg" alt="help icon" /> 
       <img src="https://apps.kde.org/app-icons/org.kde.ktimer.svg" alt="timer icon" /> 
@@ -40,7 +40,7 @@ layout: area
      <i class="icon icon_gnumeric-protection-yes"></i>
     </div>
     </div>
-    <div class="text-align"><a href="/frameworks/breeze-icons" class="learn-more">Learn more</a>
+    <div class="text-align"><a href="/frameworks/breeze-icons" class="learn-more">Learn more</a></div>
   </div>
 </section>
 
