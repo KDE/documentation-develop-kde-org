@@ -4,7 +4,7 @@
   {{ if not .Site.Params.ui.sidebar_search_disable }}
   <form class="td-sidebar__search d-flex align-items-center">
     {{ partial "search-input.html" . }}
-    <button class="btn btn-link td-sidebar__toggle d-md-none p-2 m-0 flex-shrink-0 icon icon_application-menu" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-2 m-0 flex-shrink-0 icon icon_application-menu" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
   {{ end }}
@@ -31,20 +31,22 @@
     </div>
   </li>
   {{ end }}
-  <ul>
-    <li class="toc-l{{ $d }} collapse {{ if $show }}show{{ end }} {{ if $active}} active{{ end }}" id="{{ $sid }}">
-      {{ $pages := where (union $s.Pages $s.Sections).ByWeight ".Params.toc_hide" "!=" true }}
-      {{ $pages := $pages | first 50 }}
-      {{ range $pages }}
-      {{ if .IsPage }}
-      {{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
-      {{ $active := eq . $p }}
-      <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-      {{ else }}
-      {{ template "section-tree-nav-section" (dict "page" $p "section" . "depth" (add $d 1) ) }}
-      {{ end }}
-      {{ end }}
-    </li>
-  </ul>
+  <li>
+    <ul>
+      <li class="toc-l{{ $d }} collapse {{ if $show }}show{{ end }} {{ if $active}} active{{ end }}" id="{{ $sid }}">
+        {{ $pages := where (union $s.Pages $s.Sections).ByWeight ".Params.toc_hide" "!=" true }}
+        {{ $pages := $pages | first 50 }}
+        {{ range $pages }}
+        {{ if .IsPage }}
+        {{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
+        {{ $active := eq . $p }}
+        <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{ else }}
+        {{ template "section-tree-nav-section" (dict "page" $p "section" . "depth" (add $d 1) ) }}
+        {{ end }}
+        {{ end }}
+      </li>
+    </ul>
+  </li>
 </ul>
 {{ end }}

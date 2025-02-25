@@ -9,8 +9,8 @@
 // Left side navigation
 //
 .td-sidebar-nav {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
@@ -137,9 +137,9 @@
   }
 
   &__search {
-    padding: 1rem 15px;
-    margin-right: -15px;
-    margin-left: -15px;
+    padding: 1rem calc(var(--bs-gutter-x) * .5);
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
   }
 
   &__inner {
