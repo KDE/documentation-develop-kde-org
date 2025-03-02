@@ -130,3 +130,11 @@ You can quickly iterate on patches for a project by editing it in the source fol
 
 There are much more Craft commands, take a look at the [Craft documentation](https://community.kde.org/Craft) to learn about them.
 
+### Debugging
+
+Use [Logcat](https://developer.android.com/tools/logcat) to view logs on Android:
+1. Open Settings > "About", tap on “Build number” seven times to enable developer mode.
+2. Go back > “Developer options”, check “Android debugging” or “USB debugging” under “Debugging”.
+3. Connect Android device to computer.
+4. Install adb (from your distribution or [Google](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)).
+5. Run `adb logcat`.
