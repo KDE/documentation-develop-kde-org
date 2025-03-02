@@ -1,11 +1,12 @@
+# Translation of kirigami-tutorial.po to Spanish
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2021-2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 01:46+0000\n"
-"PO-Revision-Date: 2025-01-31 19:51+0100\n"
+"PO-Revision-Date: 2025-03-01 11:46+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -2648,6 +2649,13 @@ msgid ""
 "generate plugin code since it's built into the executable; with separate QML "
 "modules like `kirigami-hello-components` the plugin code is necessary."
 msgstr ""
+"La llamada a `ecm_add_qml_module()` cambia la biblioteca para permitirle "
+"aceptar archivos QML como antes, pero esta vez necesitamos usar "
+"[GENERATE_PLUGIN_SOURCE](https://api.kde.org/ecm/module/ECMQmlModule.html). "
+"Cuando el ejecutable se usa como un destino de respaldo (como con `kirigami-"
+"hello`) no necesita generar el código del complemento, ya que está integrado "
+"en el ejecutable; con módulos QML separados, como `kirigami-hello-"
+"components`, el código del complemento es necesario."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:110
 msgid ""
@@ -2656,6 +2664,10 @@ msgid ""
 "the QML module, but KDE's `ecm_add_qml_module()` by default does not for "
 "backwards compatibility."
 msgstr ""
+"De manera predeterminada, el [qt_add_qml_module()](https://doc.qt.io/qt-6/qt-"
+"add-qml-module.html#targets-and-plugin-targets) de Qt genera un complemento "
+"junto al módulo QML, aunque el `ecm_add_qml_module()` de KDE no lo hace de "
+"forma predeterminada por compatibilidad con versiones anteriores."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:112
 msgid ""
@@ -3272,18 +3284,16 @@ msgid "The title can be positioned in the banner"
 msgstr "El título se puede situar en el *banner*"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:87
-#, fuzzy
-#| msgid ""
-#| "![Screenshot of a CardsGridView](/docs/use/kirigami/components-card/"
-#| "cardsgridview.png)"
 msgid ""
 "![Screenshot of a full-fledged Card with a banner background behind its "
 "title, white background behind its text, and two actions with icons and a "
 "hamburger menu at the bottom](/docs/getting-started/kirigami/components-card/"
 "card1.png)"
 msgstr ""
-"![Captura de pantalla de una CardsGridView](/docs/use/kirigami/components-"
-"card/cardsgridview.png)"
+"![Captura de pantalla de una tarjeta completa con un fondo de banner detrás "
+"del título, un fondo blanco detrás del texto y dos acciones con iconos y un "
+"menú de hamburguesa en la parte inferior](/docs/getting-started/kirigami/"
+"components-card/card1.png)"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:93
 msgid "CardsLayout"
@@ -3356,18 +3366,16 @@ msgstr ""
 "de forma predeterminada."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:145
-#, fuzzy
-#| msgid ""
-#| "![Screenshot of a CardsListView](/docs/use/kirigami/components-card/"
-#| "cardslistview.png)"
 msgid ""
 "![Screenshot of a CardsLayout showing two side by side cards in portrait "
 "orientation on top of a card in landscape orientation, all with different "
 "components being used](/docs/getting-started/kirigami/components-card/"
 "cardslayout.png)"
 msgstr ""
-"![Captura de pantalla de una CardsListView](/docs/use/kirigami/components-"
-"card/cardslistview.png)"
+"![Captura de pantalla de un CardsLayout que muestra dos tarjetas una junto "
+"la otra con orientación vertical sobre una tarjeta con orientación "
+"horizontal, todas con diferentes componentes en uso](/docs/getting-started/"
+"kirigami/components-card/cardslayout.png)"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:151
 msgid "CardsListView"
@@ -3761,17 +3769,14 @@ msgstr ""
 "controls/controls-checkbox.png)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:227
-#, fuzzy
-#| msgid ""
-#| "As you can see, they are simple to use. The property `checked` holds a "
-#| "boolean value determining whether or not they have been checked."
 msgid ""
 "As you can see, they are simple to use. The [checked](https://doc.qt.io/qt-6/"
 "qml-qtquick-controls2-abstractbutton.html#checked-prop) property holds a "
 "boolean value determining whether or not they have been checked."
 msgstr ""
-"Como puede ver, son fáciles de usar. La propiedad `checked` tiene un valor "
-"booleano que determina si se han marcado o no."
+"Como puede ver, son fáciles de usar. La propiedad [checked](https://doc.qt."
+"io/qt-6/qml-qtquick-controls2-abstractbutton.html#checked-prop) tiene un "
+"valor booleano que determina si se han marcado o no."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:229
 msgid "Radio buttons"
@@ -3807,17 +3812,14 @@ msgstr ""
 "html#checked-prop)."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:277
-#, fuzzy
-#| msgid ""
-#| "![A set of radio buttons](/docs/use/kirigami/components-controls/controls-"
-#| "radiobutton.png)"
 msgid ""
 "![A window showing two radio buttons where only one radio button can be "
 "ticked at the same time](/docs/getting-started/kirigami/components-controls/"
 "controls-radiobutton.webp)"
 msgstr ""
-"![Un conjunto de botones de opción](/docs/use/kirigami/components-controls/"
-"controls-radiobutton.png)"
+"![Una ventana que muestra dos botones de opción donde solo uno de ellos se "
+"puede marcar](/docs/getting-started/kirigami/components-controls/controls-"
+"radiobutton.webp)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:283
 msgid "Switches"
@@ -3907,6 +3909,11 @@ msgid ""
 "direction. In both modes, sliders in vertical orientation go from the bottom "
 "up."
 msgstr ""
+"En el modo de izquierda a derecha, los controles deslizantes se mueven de "
+"izquierda a derecha para aumentar cuando están en orientación horizontal, "
+"mientras que en el modo de derecha a izquierda se mueven en la dirección "
+"inversa. En ambos modos, los controles deslizantes con orientación vertical "
+"se mueven de abajo hacia arriba."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:343
 msgid ""
@@ -4064,16 +4071,12 @@ msgstr ""
 "ventana de la aplicación."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:12
-#, fuzzy
-#| msgid ""
-#| "They can be dismissed by clicking or tapping outside of their area or by "
-#| "clicking the 'x' icon on sheets' headers."
 msgid ""
 "They can be dismissed by clicking or tapping outside of their area or by "
 "clicking the close button on the header."
 msgstr ""
-"Se pueden descartar haciendo clic o tocando fuera de su área, o pulsando el "
-"icono 'x' que hay en la cabecera de la hoja."
+"Se pueden descartar haciendo clic o tocando fuera de su área o pulsando el "
+"botón de cerrar del encabezado."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:14
 msgid "Dialog"
@@ -4104,6 +4107,9 @@ msgid ""
 "This type of dialog is generic and applies to most use cases, and it works "
 "well with complex interactive content (especially views):"
 msgstr ""
+"Este tipo de diálogo es genérico y se aplica a la mayoría de los casos de "
+"uso, y funciona bien con contenido interactivo complejo (especialmente "
+"vistas):"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:101
 msgid "hints for the dialog dimensions"
@@ -4172,6 +4178,8 @@ msgid ""
 "![A simple MenuDialog listing actions like Play and Pause for media]"
 "(menudialog.webp)"
 msgstr ""
+"![Un sencillo MenuDialog que enumera acciones como Reproducir y Pausar para "
+"multimedia](menudialog.webp)"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:0
 msgid "Drawers"
@@ -4225,6 +4233,9 @@ msgid ""
 "left edge to the middle of the screen in Left to Right mode or from the "
 "right edge in Right to Left mode."
 msgstr ""
+"Se puede activar tocando el menú de hamburguesas o deslizando el dedo desde "
+"el borde izquierdo hacia el centro de la pantalla en el modo de izquierda a "
+"derecha, o desde el borde derecho en el modo de derecha a izquierda."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:20
 msgid ""
@@ -4421,18 +4432,12 @@ msgstr ""
 "interacción del usuario."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:209
-#, fuzzy
-#| msgid ""
-#| "Modal drawers darken the rest of the application and, like [overlay "
-#| "sheets](docs:kirigami2;OverlaySheet), will be dismissed when clicking on "
-#| "a darkened area."
 msgid ""
 "Modal drawers are hidden by default and darken the rest of the application, "
 "being dismissed when clicking on a darkened area."
 msgstr ""
-"Los cajones modales oscurecen el resto de la aplicación y, como las [hojas "
-"superpuestas](docs:kirigami2;OverlaySheet), se descartan al pulsar sobre un "
-"área oscurecida."
+"Los cajones modales están ocultos de forma predeterminada y oscurecen el "
+"resto de la aplicación, desapareciendo al hacer clic en un área oscurecida."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:210
 msgid ""
@@ -4450,6 +4455,9 @@ msgid ""
 "to use this kind of drawer when you want a small list of options to appear "
 "on a long press or right click."
 msgstr ""
+"Este tipo de cajón es abierto y flexible, aunque por lo general querrá usar "
+"este tipo de cajón cuando quiera que aparezca una pequeña lista de opciones "
+"al hacer una pulsación prolongada o un clic derecho."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:214
 #, fuzzy
@@ -5117,6 +5125,9 @@ msgid ""
 "will be wrapped in a Component so that it is reusable: it serves as a "
 "blueprint for how to instantiate each delegate."
 msgstr ""
+"El modelo no es visible, ya que solo contiene datos. Normalmente, el "
+"delegado se envuelve en un componente para ser reutilizable: sirve como "
+"modelo para crear instancias de cada delegado."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:28
 msgid ""
@@ -5260,7 +5271,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:179
 msgid "This matches model.software"
-msgstr ""
+msgstr "Esto coincide con model.software"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:186
 msgid ""
@@ -5268,12 +5279,17 @@ msgid ""
 "[JavaScript array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
 "Reference/Global_Objects/Array), with no role:"
 msgstr ""
+"A modo de comparación, así es como se vería el código anterior con una "
+"[matriz JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
+"Reference/Global_Objects/Array), sin ningún rol:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:215
 msgid ""
 "Using an integer for the model can be useful for very specific cases, namely "
 "prototyping and tests:"
 msgstr ""
+"El uso de un número entero para el modelo puede ser útil para casos muy "
+"específicos, como prototipos y pruebas:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:244
 msgid "Understanding views and delegates"
@@ -5286,7 +5302,7 @@ msgstr "Volvamos al ejemplo original:"
 #: content/docs/getting-started/kirigami/components-listview/index.md:259
 #: content/docs/getting-started/kirigami/components-listview/index.md:391
 msgid "anchors.fill: parent"
-msgstr ""
+msgstr "anchors.fill: padre"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:280
 msgid ""
@@ -5295,6 +5311,10 @@ msgid ""
 "view is a visual component immediately instantiated and so it needs to "
 "either have its dimensions set or use anchors or Layouts."
 msgstr ""
+"A diferencia del modelo (que solo contiene datos) y un delegado [Component]"
+"(docs:qtqml;QtQml.Component) (que solo aparece cuando se instancia), la "
+"vista es un componente visual que se instancia de forma inmediata y, por lo "
+"tanto, necesita tener unas dimensiones establecidas o usar anclas o Layouts."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:282
 msgid ""
@@ -5357,12 +5377,18 @@ msgid ""
 "delegate doesn't need to have the same height as the view. In other words, "
 "you will probably never want to use `anchors.fill: parent`."
 msgstr ""
+"Lo anterior significa que los delegados no deben tener anclas inferiores, ya "
+"que el delegado no necesita tener la misma altura que la vista. En otras "
+"palabras, probablemente nunca querrá usar `anchors.fill: parent`."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:299
 msgid ""
 "Additionally, while it is possible to set its dimensions using the parent "
 "and anchors, which is usually the view's contentItem, like so:"
 msgstr ""
+"Además, aunque se pueden establecer sus dimensiones usando el padre y los "
+"anclajes, que generalmente es el contentItem de la vista, de la siguiente "
+"manera:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:309
 msgid ""
@@ -5371,6 +5397,10 @@ msgid ""
 "qml-qtquick-listview.html#view-attached-prop) attached property to point to "
 "the delegate's parent view:"
 msgstr ""
+"No se garantiza que el padre del delegado sea una vista, por lo que debe "
+"evitarse. En lugar de ello, use la propiedad adjunta [ListView.view](https://"
+"doc.qt.io/qt-6/qml-qtquick-listview.html#view-attached-prop) para apuntar a "
+"la vista padre del delegado:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:320
 msgid ""
@@ -5430,12 +5460,16 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-listview/index.md:330
 msgid "You should prefer using the upstream Qt delegates where possible."
 msgstr ""
+"Debería preferir el uso de los delegados propios de Qt siempre que sea "
+"posible."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:332
 msgid ""
 "On top of these Qt delegates, Kirigami provides its own equivalents, with "
 "the added functionality of subtitles and icons:"
 msgstr ""
+"Además de estos delegados de Qt, Kirigami proporciona sus propios "
+"equivalentes, con la funcionalidad añadida de subtítulos e iconos:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:334
 msgid "[TitleSubtitle](docs:kirigami2;TitleSubtitle)"
