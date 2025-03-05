@@ -1,7 +1,7 @@
 ---
 title: Using separate files in a C++ project
 group: introduction
-weight: 6
+weight: 15
 description: >
   Separating unwieldy code into different files, and attach signals to your components.
 aliases:

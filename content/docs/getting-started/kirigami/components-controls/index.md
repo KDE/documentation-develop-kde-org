@@ -1,6 +1,6 @@
 ---
 title: Controls and interactive elements
-weight: 207
+weight: 38
 description: Make your apps more interactive by using buttons, selection controls, sliders, and text fields.
 group: components
 aliases:

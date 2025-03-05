@@ -1,7 +1,7 @@
 ---
 title: Adding actions
 group: introduction
-weight: 4
+weight: 13
 description: >
   Learning more about Kirigami's Actions will help us make our application more useful.
 aliases:

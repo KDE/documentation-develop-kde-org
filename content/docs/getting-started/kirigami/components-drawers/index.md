@@ -1,6 +1,6 @@
 ---
 title: Drawers
-weight: 205
+weight: 35
 description: Drawers provide applications with quick access to controls and pages of your application.
 group: components
 aliases:

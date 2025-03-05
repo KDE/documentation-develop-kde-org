@@ -1,7 +1,7 @@
 ---
 title: Form delegates in your settings pages
 description: Create elegant custom settings pages.
-weight: 403
+weight: 83
 group: addons
 ---
 

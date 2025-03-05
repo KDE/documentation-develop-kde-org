@@ -1,6 +1,6 @@
 ---
 title: Figuring out main.cpp
-weight: 302
+weight: 62
 group: advanced
 description: >
   Understanding the central file of our backend code

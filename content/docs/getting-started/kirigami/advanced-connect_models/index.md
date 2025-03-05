@@ -1,6 +1,6 @@
 ---
 title: Connect C++ models to your QML user interface
-weight: 303
+weight: 71
 description: Data from the C++ backend to the QML frontend
 group: data
 ---

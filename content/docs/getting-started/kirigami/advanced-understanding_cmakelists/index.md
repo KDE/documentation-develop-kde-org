@@ -1,6 +1,6 @@
 ---
 title: Understanding CMakeLists
-weight: 301
+weight: 61
 group: advanced
 description: > 
   Getting to grips with how CMakeLists.txt files work

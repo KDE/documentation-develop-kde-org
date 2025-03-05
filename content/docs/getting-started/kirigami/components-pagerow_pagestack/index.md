@@ -1,7 +1,7 @@
 ---
 title: Page rows and page stacks
 description: "Add flow to your application: Add, remove and replace pages in different ways"
-weight: 202
+weight: 32
 group: components
 aliases:
   - /docs/getting-started/kirigami/components-pagerow_pagestack/

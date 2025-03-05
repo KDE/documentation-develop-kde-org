@@ -1,6 +1,6 @@
 ---
 title: Explaining pages
-weight: 2
+weight: 11
 group: introduction
 description: Pages allow you to organize your application content
 aliases:

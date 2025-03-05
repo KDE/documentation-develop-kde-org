@@ -1,6 +1,6 @@
 ---
 title: Progress bars and indicators
-weight: 211
+weight: 42
 description: Provide your users with loading state information using progress bars.
 group: components
 aliases:

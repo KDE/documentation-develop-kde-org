@@ -1,7 +1,7 @@
 ---
 title: Adding a dialog
 group: introduction
-weight: 5
+weight: 14
 description: >
   Getting to grips with Kirigami dialogs.
 aliases:

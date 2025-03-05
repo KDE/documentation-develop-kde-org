@@ -1,7 +1,7 @@
 ---
 title: Actions based components
 group: components
-weight: 201
+weight: 31
 description: >
   Kirigami's Actions are used to add functionality to components.
 aliases:

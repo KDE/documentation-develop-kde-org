@@ -1,6 +1,6 @@
 ---
 title: Inline messages
-weight: 209
+weight: 40
 description: Display messages related to the content in your application
 group: components
 aliases:

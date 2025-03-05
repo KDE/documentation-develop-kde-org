@@ -1,6 +1,6 @@
 ---
 title: Form layouts
-weight: 208
+weight: 39
 description: Easily create attractive interaction areas with Kirigami FormLayouts
 group: components
 aliases:

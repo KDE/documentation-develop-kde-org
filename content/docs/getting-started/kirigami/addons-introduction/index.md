@@ -1,7 +1,7 @@
 ---
 title: Introduction to Kirigami Addons
 description: Get acquainted with Kirigami Addons components
-weight: 401
+weight: 81
 group: addons
 ---
 
