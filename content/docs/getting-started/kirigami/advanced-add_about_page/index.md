@@ -1,6 +1,6 @@
 ---
 title: About page
-weight: 304
+weight: 63
 description: Informations about your application
 group: advanced
 aliases:

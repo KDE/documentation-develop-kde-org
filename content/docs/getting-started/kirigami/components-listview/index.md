@@ -1,6 +1,6 @@
 ---
 title: List views
-weight: 212
+weight: 43
 group: "components"
 description: >
   A list view can help you easily display many components dynamically.

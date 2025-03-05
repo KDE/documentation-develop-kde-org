@@ -1,7 +1,7 @@
 ---
 title: Next steps
 group: introduction
-weight: 7
+weight: 16
 description: >
   What to do after finishing your first simple Kirigami application
 aliases:

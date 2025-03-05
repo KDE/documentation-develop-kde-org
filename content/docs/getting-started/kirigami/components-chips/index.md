@@ -1,7 +1,7 @@
 ---
 title: Chips
 group: components
-weight: 206
+weight: 36
 description: >
   Chips are small elements typically used to list out related properties.
 ---

@@ -1,6 +1,6 @@
 ---
 title: Layouts, ListViews, and Cards
-weight: 3
+weight: 12
 group: introduction
 description: Figuring out the different ways of placing things on a page
 aliases:

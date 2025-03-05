@@ -1,6 +1,6 @@
 ---
 title: Typography
-weight: 102
+weight: 22
 group: style
 description: Laying out your content
 aliases:

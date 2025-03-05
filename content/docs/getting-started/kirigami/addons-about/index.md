@@ -1,7 +1,7 @@
 ---
 title: FormCard About pages
 description: Learn to create About pages to credit your application.
-weight: 402
+weight: 82
 group: addons
 ---
 

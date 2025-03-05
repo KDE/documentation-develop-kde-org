@@ -1,6 +1,6 @@
 ---
 title: Kirigami with Python
-weight: 1
+weight: 2
 group: setup
 description: >
   Create your first Kirigami application with PySide

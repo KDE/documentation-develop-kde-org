@@ -1,6 +1,6 @@
 ---
 title: Dialog types
-weight: 206
+weight: 37
 description: Various ways to serve and input data.
 group: components
 aliases:
