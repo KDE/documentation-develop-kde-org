@@ -182,7 +182,10 @@ If you discover any external dependencies needed to build KDE software that were
 
 {{< /alert >}}
 
-#### kdesrc-build
+{{< alert color="info" title="⏳ With kdesrc-build..." >}}
+
+<details>
+<summary>Click here to know how this was done with kdesrc-build</summary></br>
 
 This step used to be done by cloning the repository into a folder, linking the script, and running the script:
 
@@ -195,8 +198,9 @@ or the more advanced
 kdesrc-build --generate-config
 ```
 
-
 For details, see: [Install kdesrc-build](https://invent.kde.org/sdk/kdesrc-build#install-kdesrc-build)
+
+{{< /alert >}}
 
 ### Updating kde-builder
 
@@ -207,7 +211,10 @@ cd ~
 bash initial_setup.sh
 ```
 
-### Updating kdesrc-build
+{{< alert color="info" title="⏳ With kdesrc-build..." >}}
+
+<details>
+<summary>Click here to know how this was done with kdesrc-build</summary></br>
 
 This step used to be done by going to the directory where kdesrc-build was cloned and pulling the new changes:
 
@@ -215,6 +222,8 @@ This step used to be done by going to the directory where kdesrc-build was clone
 cd ~/src/kdesrc-build
 git pull
 ```
+
+{{< /alert >}}
 
 ## Set up Qt
 
