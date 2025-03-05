@@ -60,7 +60,6 @@ Did it run? If so, then **congratulations, you just compiled your own version of
 Plasma has multiple *shells*: [Plasma Desktop](https://kde.org/plasma-desktop) for desktop, laptop, and 2-in-1 computers, [Plasma Mobile](https://www.plasma-mobile.org/) for mobile phones and [Plasma Bigscreen](https://plasma-bigscreen.org/) for televisions. They all share certain common components, such as a window manager, networking stack, basic graphical components, and so on. These shared components are found in [Plasma Workspace](https://invent.kde.org/plasma/plasma-workspace).
 
 ### Plasma Desktop
-#### kdesrc-build
 
 To build the Plasma Desktop environment and all its necessary dependencies, run the following command:
 
@@ -75,8 +74,7 @@ Once built, you can make an entire built-from-source Plasma session accessible f
 It's also necessary for kde-builder to install the necessary session files and D-Bus files into a root directory.
 After the build process is finished, kde-builder will prompt you for your password so it can install the session files.
 
-#### kdesrc-build
-This step used to be done by manually running a script in `plasma-workspace`.
+You can also install these session files manually by running a script that provided by `plasma-workspace`:
 
 ```bash
 bash ~/kde/build/plasma-workspace/login-sessions/install-sessions.sh
@@ -252,7 +250,10 @@ kde-builder kate
 kde-builder --run kate-syntax-highlighter --list-themes
 ```
 
-#### kdesrc-build
+{{< alert color="info" title="⏳ With kdesrc-build..." >}}
+
+<details>
+<summary>Click here to know how this was done with kdesrc-build</summary></br>
 
 In some modules, the build process will result in an executable that does not match the module name: for example, the module `discover` does not match the executable `plasma-discover`. Because kdesrc-build had no way to associate the name of the project with the executable name, you needed to use the `--exec` or `-e` flag:
 
@@ -267,7 +268,9 @@ Executable "discover" does not exist.
 Try to set executable name with -e option.
 ```
 
-Alternatively, many applications can be run directly from their build directory
+{{< /alert >}}
+
+Alternatively, many applications can be run directly from their build directory.
 
 ### Running an application after making changes to one of its dependencies
 
