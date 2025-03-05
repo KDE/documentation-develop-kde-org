@@ -61,7 +61,9 @@ end module
 
 ### Installing Kirigami with Craft {#craft}
 
-KDE has a custom tool to easily install most of its libraries and programs: **Craft**. It can be used to install Kirigami on [Linux](https://community.kde.org/Craft/Linux), [FreeBSD](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/FreeBSD), [Windows](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Windows), [Android](https://community.kde.org/Craft/Android) and [macOS](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Mac).
+KDE has a custom tool to easily install most of its libraries and programs: **Craft**. It can be used to install Kirigami on [Windows](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Windows), [Android](https://community.kde.org/Craft/Android) and [macOS](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Mac).
+
+While Craft is also available for Linux and FreeBSD, its intended use is only for AppImages and packaging.
 
 You will need to follow the [setup instructions for Craft](https://community.kde.org/Craft). By the end of the setup, you should have run an environment setup file (`craftenv.ps1` or `craftenv.sh`), which will give you a terminal shell where you will be compiling your Kirigami application.
 
@@ -71,7 +73,7 @@ After that, you may simply run the following on a terminal:
 craft kirigami kcoreaddons ki18n breeze kiconthemes qqc2-desktop-style
 ```
 
-If you close your terminal, you can simply run the environment setup file again to compile your app.
+This will take a long while to finish on first run. If you close your terminal, you can simply run the environment setup file again to compile your app.
 
 ## Project structure
 
