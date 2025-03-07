@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 01:46+0000\n"
+"POT-Creation-Date: 2025-03-07 01:54+0000\n"
 "PO-Revision-Date: 2023-05-22 22:06+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -621,8 +621,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:207
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:265
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:58
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:212
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:247
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:214
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:249
 msgid "</details>\n"
 msgstr ""
 
@@ -787,13 +787,13 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:25
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:145
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:94
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:96
 #: content/docs/getting-started/kirigami/setup-python/index.md:44
 msgid "Tip"
 msgstr "Sugestão"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:27
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:96
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:98
 msgid "You can quickly create this file structure with:"
 msgstr "Pode criar rapidamente esta estrutura de ficheiros com:"
 
@@ -966,7 +966,7 @@ msgstr ""
 "Primeiro, vamos editar o nosso ficheiro `main.cpp` dos tutoriais anteriores."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:14
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:195
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:197
 msgid "main.cpp"
 msgstr "main.cpp"
 
@@ -1072,7 +1072,7 @@ msgstr ""
 "que instanciámos o `aboutData` no local."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:44
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:323
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:325
 #: content/docs/getting-started/kirigami/setup-python/index.md:145
 msgid "Running the application"
 msgstr "Executar a aplicação"
@@ -1413,11 +1413,11 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:25
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:33
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:53
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:106
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:127
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:139
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:159
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:350
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:108
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:129
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:141
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:161
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:352
 #: content/docs/getting-started/kirigami/setup-python/index.md:78
 #: content/docs/getting-started/kirigami/setup-python/index.md:129
 #: content/docs/getting-started/kirigami/style-colors/index.md:28
@@ -8387,15 +8387,19 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:64
 msgid ""
 "KDE has a custom tool to easily install most of its libraries and programs: "
-"**Craft**. It can be used to install Kirigami on [Linux](https://community."
-"kde.org/Craft/Linux), [FreeBSD](https://community.kde.org/"
-"Guidelines_and_HOWTOs/Build_from_source/FreeBSD), [Windows](https://"
-"community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Windows), [Android]"
-"(https://community.kde.org/Craft/Android) and [macOS](https://community.kde."
-"org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
+"**Craft**. It can be used to install Kirigami on [Windows](https://community."
+"kde.org/Guidelines_and_HOWTOs/Build_from_source/Windows), [Android](https://"
+"community.kde.org/Craft/Android) and [macOS](https://community.kde.org/"
+"Guidelines_and_HOWTOs/Build_from_source/Mac)."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:66
+msgid ""
+"While Craft is also available for Linux and FreeBSD, its intended use is "
+"only for AppImages and packaging."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:68
 msgid ""
 "You will need to follow the [setup instructions for Craft](https://community."
 "kde.org/Craft). By the end of the setup, you should have run an environment "
@@ -8403,22 +8407,23 @@ msgid ""
 "shell where you will be compiling your Kirigami application."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:68
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:70
 msgid "After that, you may simply run the following on a terminal:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:74
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:76
 msgid ""
-"If you close your terminal, you can simply run the environment setup file "
-"again to compile your app."
+"This will take a long while to finish on first run. If you close your "
+"terminal, you can simply run the environment setup file again to compile "
+"your app."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:76
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:78
 #: content/docs/getting-started/kirigami/setup-python/index.md:23
 msgid "Project structure"
 msgstr "Estrutura do projecto"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:78
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:80
 msgid ""
 "While there are tools that can easily set up our files, we are going to "
 "create them manually. This will let us better understand the pieces that are "
@@ -8428,7 +8433,7 @@ msgstr ""
 "ficheiros, vamos criá-los manualmente. Isto permitir-nos-á compreender "
 "melhor as componentes que irão compor a nossa nova aplicação."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:80
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:82
 #, fuzzy
 #| msgid ""
 #| "First we create our project folder. We are going to call ours \"helloworld"
@@ -8440,7 +8445,7 @@ msgstr ""
 "Em primeiro lugar, criamos a pasta do nosso projecto. Iremos chamar ao nosso "
 "\"helloworld\"."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:92
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:94
 #, fuzzy
 #| msgid ""
 #| "Within this folder we are going to create a `src/` folder and `CMakeLists."
@@ -8460,7 +8465,7 @@ msgstr ""
 "pasta chamada `contents/`, que por sua vez irá conter uma pasta chamada `ui/"
 "`. Aqui é onde serão criados os nossos ficheiros em QML."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:108
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:110
 msgid ""
 "In case you want to automatically build the project with kde-builder, custom "
 "module name should be the same as the project root folder (in our case it "
@@ -8469,18 +8474,18 @@ msgid ""
 "`main.cpp` will be `~/kde/src/kirigami-tutorial/src/main.cpp`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:112
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:114
 #, fuzzy
 #| msgid "main.qml"
 msgid "Main.qml"
 msgstr "main.qml"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:116
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:118
 #: content/docs/getting-started/kirigami/setup-python/index.md:118
 msgid "Here's where we will be handling our application's frontend."
 msgstr "Aqui está como será tratada a interface da nossa aplicação."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:118
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:120
 #: content/docs/getting-started/kirigami/setup-python/index.md:120
 #, fuzzy
 #| msgid ""
@@ -8506,7 +8511,7 @@ msgstr ""
 "nosso código em QML, onde poderemos usar o Kirigami para tirar o máximo "
 "partido."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:120
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:122
 #: content/docs/getting-started/kirigami/setup-python/index.md:122
 #, fuzzy
 #| msgid ""
@@ -8519,7 +8524,7 @@ msgstr ""
 "Por agora, vamo-nos focar no `main.qml`. Primeiro iremos [importar](https://"
 "doc.qt.io/qt-6/qtqml-syntax-imports.html) um conjunto de módulos importantes:"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:122
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:124
 #: content/docs/getting-started/kirigami/setup-python/index.md:124
 msgid ""
 "[QtQuick](https://doc.qt.io/qt-6/qtquick-index.html), the standard library "
@@ -8528,7 +8533,7 @@ msgstr ""
 "O [QtQuick](https://doc.qt.io/qt-6/qtquick-index.html), a biblioteca-padrão "
 "usada nas aplicações em QML."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:123
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:125
 #: content/docs/getting-started/kirigami/setup-python/index.md:125
 msgid ""
 "[QtQuick Controls](https://doc.qt.io/qt-6/qtquickcontrols-index.html), which "
@@ -8539,7 +8544,7 @@ msgstr ""
 "oferece um conjunto de controlos-padrão que poderemos usar para tornar as "
 "nossas aplicações interactivas."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:124
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:126
 #: content/docs/getting-started/kirigami/setup-python/index.md:126
 msgid ""
 "[QtQuick Layouts](https://doc.qt.io/qt-6/qtquicklayouts-index.html), which "
@@ -8549,7 +8554,7 @@ msgstr ""
 "oferece ferramentas para colocar os componentes dentro da janela da "
 "aplicação."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:125
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:127
 #: content/docs/getting-started/kirigami/setup-python/index.md:127
 msgid ""
 "[Kirigami](docs:kirigami2), which provides a number of components suited for "
@@ -8559,7 +8564,7 @@ msgstr ""
 "adequados para criar aplicações que funcionam bem entre dispositivos de "
 "formas e tamanhos diferentes."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:129
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:131
 #: content/docs/getting-started/kirigami/setup-python/index.md:131
 msgid ""
 "Putting the QtQuick Controls and Kirigami imports into separate namespaces "
@@ -8575,7 +8580,7 @@ msgstr ""
 "\" ou \"QQC2\". Iremos usar \"Controls\" neste tutorial por questões de "
 "clareza."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:133
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:135
 #: content/docs/getting-started/kirigami/setup-python/index.md:135
 msgid ""
 "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
@@ -8589,7 +8594,7 @@ msgstr ""
 "que irá conter cada uma das nossas páginas, as secções principais da nossa "
 "interface."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:135
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:137
 #: content/docs/getting-started/kirigami/setup-python/index.md:137
 msgid ""
 "We then set the window's `id` property to \"root\". IDs are useful because "
@@ -8600,7 +8605,7 @@ msgstr ""
 "são úteis porque nos ajudam a referenciar um componente de forma unívoca, "
 "mesmo que tenhamos vários do mesmo tipo."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:137
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:139
 msgid ""
 "We also set the window `title` property to \"Hello World\". You'll notice "
 "that we have wrapped our \"Hello World\" string in a function called "
@@ -8612,7 +8617,7 @@ msgstr ""
 "chamada `i18nc()`, onde iremos detalhar o contexto do texto, assim como o "
 "texto propriamente dito."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:141
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:143
 msgid ""
 "[i18n()](https://techbase.kde.org/Development/Tutorials/Localization/"
 "i18n#Translatable_Code_Using_i18n()) functions make your app more easily "
@@ -8628,7 +8633,7 @@ msgstr ""
 "essa língua). Enquanto um utilizador inglês poderá ver o nosso título da "
 "janela como \"Hello World\", um utilizador português iria ver \"Olá Mundo\"."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:143
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:145
 msgid ""
 "[i18nc()](https://techbase.kde.org/Development/Tutorials/Localization/"
 "i18n#Adding_Context_with_i18nc()) builds on the `i18n()` function by "
@@ -8646,7 +8651,7 @@ msgstr ""
 "api.kde.org/frameworks/ki18n/html/prg_guide.html#good_ctxt) para obter mais "
 "detalhes."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:147
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:149
 #: content/docs/getting-started/kirigami/setup-python/index.md:141
 msgid ""
 "We then set the first page of our page stack. Most Kirigami applications are "
@@ -8670,7 +8675,7 @@ msgstr ""
 "aplicação como uma [Kirigami.Page](docs:kirigami2;Page), a qual irá conter "
 "todo o nosso conteúdo."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:149
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:151
 msgid ""
 "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
 "QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
@@ -8687,11 +8692,11 @@ msgstr ""
 "A última coisa que é necessária é definir o texto: `text: i18n(\"Hello World!"
 "\")`."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:151
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:153
 msgid "org.kde.tutorial.desktop"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:153
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:155
 #: content/docs/getting-started/kirigami/setup-python/index.md:72
 msgid ""
 "The primary purpose of [Desktop Entry files](https://specifications."
@@ -8701,14 +8706,14 @@ msgid ""
 "goes with this icon\"."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:155
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:157
 msgid ""
 "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
 "`org.kde.tutorial.desktop`:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:161
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:163
 msgid ""
 "Window and taskbar icons will work in a Wayland session only if apps' "
 "desktop files are placed in `~/.local/share/applications` or `/usr/share/"
@@ -8719,11 +8724,11 @@ msgid ""
 "the system."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:165
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:167
 msgid "CMakeLists.txt"
 msgstr "CMakeLists.txt"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:167
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:169
 #, fuzzy
 #| msgid ""
 #| "`CMakeLists.txt` files are needed to use KDE's build system of choice, "
@@ -8743,7 +8748,7 @@ msgstr ""
 "características da nossa aplicação. Também inclui algumas das dependências "
 "que necessitamos para a compilar."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:171
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:173
 msgid ""
 "The `CMakeLists.txt` defines how to build your projects. Most of the content "
 "here is just to bootstrap your project. You can read a line-by-line, in-"
@@ -8756,7 +8761,7 @@ msgstr ""
 "CMakeLists [aqui](/docs/getting-started/kirigami/advanced-"
 "understanding_cmakelists/)."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:173
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:175
 #, fuzzy
 #| msgid ""
 #| "The most important thing to keep in mind is that the Qt and KDE "
@@ -8779,7 +8784,7 @@ msgstr ""
 "incluir os componentes adicionais que tiver decidido usar durante o "
 "desenvolvimento da sua aplicação."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:175
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:177
 #, fuzzy
 #| msgid ""
 #| "The final line, `add_subdirectory(src)`, points CMake to the `helloworld/"
@@ -8793,41 +8798,41 @@ msgstr ""
 "`helloworld/src/`, onde se encontra o nosso código-fonte. Vamos percorrer o "
 "ficheiro `helloworld/src/CMakeLists.txt` aqui."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:177
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:179
 msgid ""
 "The line with `install()` tells CMake where to install the desktop file."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:179
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:181
 msgid ""
 "Let's delve into the `kirigami-tutorial/src/CMakeLists.txt` file in there."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:183
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:185
 msgid "This file consists of five steps:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:185
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:187
 msgid "create an executable"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:186
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:188
 msgid "change the executable into a QML module that accepts QML files"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:187
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:189
 msgid "add C++ and QML files to the executable"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:188
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:190
 msgid "link the libraries necessary for the executable to run"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:189
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:191
 msgid "install the executable to the right place"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:191
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:193
 msgid ""
 "Next time you need to add more QML files, add them to the existing "
 "`ecm_target_qml_sources()` call. C++ files that use the [QML_ELEMENT]"
@@ -8835,7 +8840,7 @@ msgid ""
 "we will see later in the tutorial can be added using `target_sources()`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:193
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:195
 msgid ""
 "Now that CMake has been taken care of, let's look at the files we are going "
 "to spend the majority of our time working with."
@@ -8843,7 +8848,7 @@ msgstr ""
 "Agora que já tratámos do CMake, vejamos os ficheiros onde iremos gastar a "
 "maior parte do tempo a trabalhar."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:197
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:199
 #, fuzzy
 #| msgid ""
 #| "`main.cpp` handles the \"business logic\" of our application. C++ is "
@@ -8858,7 +8863,7 @@ msgstr ""
 "útil porque é flexível e rápido, mesmo que esteja mais envolvido que outras "
 "linguagens de programação."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:199
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:201
 #, fuzzy
 #| msgid ""
 #| "`main.cpp` is also the entrypoint to our application. The two parts of "
@@ -8873,7 +8878,7 @@ msgstr ""
 "do nosso projecto, a infra-estrutura e a interface de utilizador, são ambas "
 "configuradas e iniciadas aqui."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:203
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:205
 #, fuzzy
 #| msgid ""
 #| "For now, we don't need to go into too much detail regarding what our "
@@ -8894,17 +8899,17 @@ msgstr ""
 "sobre o funcionamento deste `main.cpp` [nesta página](/docs/getting-started/"
 "kirigami/advanced-maincpp)."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:205
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:207
 msgid "Theming on Windows"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:207
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:209
 msgid ""
 "<details>\n"
 "<summary>Click here to read more</summary>\n"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:210
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:212
 #, fuzzy
 #| msgid ""
 #| "[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp)"
@@ -8915,7 +8920,7 @@ msgid ""
 msgstr ""
 "[Descobrir o main.cpp](/docs/getting-started/kirigami/advanced-maincpp)"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:216
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:218
 #, fuzzy
 #| msgid ""
 #| "[Figuring out main.cpp](/docs/getting-started/kirigami/advanced-maincpp)"
@@ -8925,7 +8930,7 @@ msgid ""
 msgstr ""
 "[Descobrir o main.cpp](/docs/getting-started/kirigami/advanced-maincpp)"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:218
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:220
 msgid ""
 "If you want to see a few ways on how the C++ code can be improved, like "
 "using [KAboutData](docs:kcoreaddons;KAboutData) for translatable application "
@@ -8933,11 +8938,11 @@ msgid ""
 "kxmlgui)."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:220
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:222
 msgid "For now, the part that interests us is this line:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:226
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:228
 msgid ""
 "The first argument is the URI set in `kirigami-tutorial/src/CMakeLists.txt`, "
 "and the second argument is the name of the QML module we want to use "
@@ -8945,11 +8950,11 @@ msgid ""
 "with an uppercase letter)."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:228
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:230
 msgid "The old method"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:230
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:232
 msgid ""
 "<details>\n"
 "<summary>You might encounter this alternative way to load QML files in real "
@@ -8957,46 +8962,46 @@ msgid ""
 "<br>\n"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:234
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:236
 msgid ""
 "The old method of loading QML files had some disadvantages and after Qt6 it "
 "became excessively verbose:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:240
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:242
 msgid ""
 "This [Qt resource URI](https://doc.qt.io/qt-6/resources.html) above follows "
 "the pattern `<resource_prefix><import_URI><optional_QML_dir><file>`. In this "
 "case:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:242
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:244
 msgid "resource prefix = default / in Qt5, /qt/qml in Qt6"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:243
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:245
 msgid "import URI = /org/kde/tutorial, which matches the URI org.kde.tutorial"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:244
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:246
 msgid ""
 "optional QML dir = /qml, necessary if the QML files are stored in a "
 "directory called qml/"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:245
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:247
 #, fuzzy
 #| msgid "Add new elements to the QML file"
 msgid "file = the QML file"
 msgstr "Adicionar novos elementos ao ficheiros QML"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:251
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:253
 #, fuzzy
 #| msgid "Compiling and running the application"
 msgid "Compiling and installing the application"
 msgstr "Compilar e executar a aplicação"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:253
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:255
 #, fuzzy
 #| msgid ""
 #| "We are almost at the finish line. The last thing we need to do is build "
@@ -9012,108 +9017,108 @@ msgstr ""
 "pasta `helloworld/` na aplicação de terminal e executar os seguintes "
 "comandos:"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:255
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:257
 msgid "Linux or FreeBSD"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:257
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:259
 msgid "Compiling with kde-builder"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:259
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:261
 msgid ""
 "Make sure you have followed the instructions in [Using kde-builder](#kde-"
 "builder)."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:261
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:263
 msgid ""
 "Compile the necessary build dependencies with kde-builder, then compile "
 "`kirigami-tutorial` by running the following commands in a terminal:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:268
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:270
 msgid "Compiling manually"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:270
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:272
 msgid ""
 "Change directories to the project's root folder, then run the following "
 "command in a terminal:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:278
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:280
 msgid ""
 "The program will be installed to `~/.local/bin` and its desktop entry to `~/."
 "local/share/applications`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:280
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:282
 msgid "Windows"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:282
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:284
 msgid ""
 "If you are compiling your project on Windows after having set up [Craft]"
 "(#craft), CMake should automatically detect the right compiler:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:291
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:293
 msgid ""
 "Depending on how you installed the compiler, you might need to specify a "
 "CMake Generator for the first step, depending on whether you are using "
 "Visual Studio (msvc) or MinGW (make) to compile your projects."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:293
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:295
 msgid ""
 "If Visual Studio, depending on the compiler you chose to install, it might "
 "be:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:299
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:301
 msgid "Or:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:305
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:307
 msgid "If MinGW:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:313
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:315
 msgid "In both cases, the program will be installed to `C:\\CraftRoot\\bin`."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:315
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:317
 msgid ""
 "If you ever get in doubt as to the name of the compiler that should be used "
 "in the `cmake` call, run:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:321
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:323
 msgid "It will list all available generators."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:325
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:327
 msgid "You can then run the `kirigami-hello` program with:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:328
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:330
 msgid "On Linux, manually"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:329
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:331
 msgid "With kde-builder"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:330
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:332
 msgid "With kdesrc-build"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:331
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:333
 msgid "On Windows"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:334
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:336
 #: content/docs/getting-started/kirigami/setup-python/index.md:185
 msgid ""
 "Voilà! Now you will see your very first Kirigami app appear before your very "
@@ -9122,7 +9127,7 @@ msgstr ""
 "Voilá! Agora tem a sua primeira aplicação do Kirigami a funcionar diante dos "
 "seus olhos."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:336
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:338
 #: content/docs/getting-started/kirigami/setup-python/index.md:187
 #, fuzzy
 #| msgid ""
@@ -9130,20 +9135,20 @@ msgstr ""
 msgid "![Screenshot of the generated Kirigami application](hello-kworld.webp)"
 msgstr "![Imagem da aplicação do Kirigami gerada](hello-kworld.png)"
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:338
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:340
 #: content/docs/getting-started/kirigami/setup-python/index.md:179
 msgid ""
 "To run the new QML application in mobile mode, you can use "
 "`QT_QUICK_CONTROLS_MOBILE=1`:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:344
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:346
 msgid ""
 "If you have compiled the project manually with CMake and for some reason "
 "you'd like to uninstall the project, you can run:"
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:352
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:354
 msgid ""
 "Next time you want to create the files and folders needed, you can use "
 "[KAppTemplate](https://apps.kde.org/kapptemplate) or [KDevelop](https://apps."
@@ -9164,7 +9169,7 @@ msgstr ""
 "ficheiro `.desktop` que contém informações sobre como a aplicação deverá ser "
 "apresentada num lançador de aplicações em Linux."
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:354
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:356
 msgid ""
 "Thanks to the magic of CMakeLists, you can also use IDEs such as KDevelop or "
 "[QtCreator](https://www.qt.io/product/development-tools) to develop this "
