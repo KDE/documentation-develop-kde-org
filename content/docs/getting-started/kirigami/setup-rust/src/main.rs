@@ -10,7 +10,7 @@ mod ffi {
 pub struct DummyRustStruct;
 
 use cxx_qt_lib::{QGuiApplication, QQmlApplicationEngine, QQuickStyle, QString, QUrl};
-use cxx_qt_lib_extras::{QApplication};
+use cxx_qt_lib_extras::QApplication;
 
 fn main() {
     let mut app = QApplication::new();
