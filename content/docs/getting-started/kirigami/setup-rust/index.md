@@ -93,7 +93,7 @@ This is necessary to make the QML file available in the entrypoint for our appli
 
 The file `kirigami_rust/src/main.rs` initializes the project and then loads the QML file, which will consist of the user interface for the application.
 
-{{< readfile file="/content/docs/getting-started/kirigami/setup-rust/src/main.rs" highlight="rust" emphasize="12-13 16 24-26" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-rust/src/main.rs" highlight="rust" emphasize="12-13 17 28-30" >}}
 
 The first part that is marked with the [#[cxx_qt::bridge]](https://kdab.github.io/cxx-qt/book/bridge/index.html) Rust macro just creates a dummy QObject out of a dummy Rust struct. This is needed just to complete the use of [QmlModule](https://docs.rs/cxx-qt-build/latest/cxx_qt_build/struct.QmlModule.html) in the previous build script `build.rs`. This will play a larger part in a future tutorial teaching how to expose Rust code to QML, but for now you can ignore it.
 
@@ -101,11 +101,11 @@ After this starts the important part:
 
 Lines 12-13 import the needed Qt libraries exposed through cxx-qt.
 
-We first create a new instance of a `QApplication`, then perform a few integrations in lines 19-22.
+We first create a new instance of a `QApplication`, then perform a few integrations in lines 20-26.
 
 Then comes the part that actually creates the application window:
 
-{{< readfile file="/content/docs/getting-started/kirigami/setup-rust/src/main.rs" highlight="rust" start=24 lines=3 >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-rust/src/main.rs" highlight="rust" start=28 lines=3 >}}
 
 The long URL `qrc:/qt/qml/org/kde/tutorial/src/qml/Main.qml` corresponds to the `Main.qml` file according to the [Qt Resource System](https://doc.qt.io/qt-6/resources.html), and it follows this scheme: `<resource_prefix><import_URI><QML_dir><file>`.
 
