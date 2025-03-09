@@ -201,8 +201,8 @@ windows. It can be passed to various views, `Repeater`, and so on.
 
 The result can be seen here:
 
-<div class="embed-responsive embed-responsive-21by9">
-  <video controls src="effect.webm" class="embed-responsive-item"></video>
+<div class="ratio ratio-16x9 bg-dark">
+  <video controls src="effect.webm"></video>
 </div>
 
 ## Delegates are Per Screen

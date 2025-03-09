@@ -15,12 +15,12 @@ LXR has two search modes:
   * Class names such as `RenameDialog`, `StatJob`, and of course any Qt class (used in KDE code, which is pretty much all of them), `QLatin1String`, `QListWidget`
   * Method names such as `addConfigSources()` (from the KConfig framework) and signal names like `mimeTypeFound()`
 
-{{< figure class="text-center mr-5 pr-5" caption="The LXR identifier search." src="lxr-identifier.webp" >}}
+{{< figure class="text-center" caption="The LXR identifier search." src="lxr-identifier.webp" >}}
 
 2. On the "General search" page you can search for strings:
   * For example, if you'd like to find in which source file the string "Paste Clipboard Contents" from Dolphin's context menu (accessed by right-clicking any empty space) is defined, type "Paste Clipboard Contents" in the `Or containing:` field. This search includes classes/methods/signals names.
 
-{{< figure class="text-center mr-5 pr-5" caption="The LXR general search." src="lxr-general.webp" >}}
+{{< figure class="text-center" caption="The LXR general search." src="lxr-general.webp" >}}
 
 Other ways to search across all of the KDE git repositories:
 

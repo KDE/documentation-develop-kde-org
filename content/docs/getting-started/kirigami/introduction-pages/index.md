@@ -24,9 +24,9 @@ Pages are organized in a [page stack](docs:kirigami2;AbstractApplicationWindow::
 
 {{< compare >}}
 
-{{< figure class="text-left mx-auto" caption="A single page on the phone" src="mobile.webp" >}}
+{{< figure class="w-auto text-center" caption="A single page on the phone" src="mobile.webp" >}}
 
-{{< figure class="text-right mx-auto" caption="Two pages next to each other on the desktop" src="desktop.webp" >}}
+{{< figure class="w-auto text-center" caption="Two pages next to each other on the desktop" src="desktop.webp" >}}
 
 {{< /compare >}}
 
