@@ -33,11 +33,13 @@ mv ./org.kde.plasma.analogclock ./com.github.zren.myanalogclock
 cd ./com.github.zren.myanalogclock
 sed -i 's/Analog Clock/My Analog Clock/' ./metadata.json
 sed -i 's/org.kde.plasma.analogclock/com.github.zren.myanalogclock/' ./metadata.json
-sed -i '/^Name\[/ d' ./metadata.json
-sed -i '/^Comment\[/ d' ./metadata.json
+sed -i '/^\s*"Name\[/ d' ./metadata.json
+sed -i '/^\s*"Description\[/ d' ./metadata.json
 rm ./metadata.desktop
 plasmawindowed com.github.zren.myanalogclock
 ```
 
+Please fix all trailing comma errors in metadata.json. For example, there should be no trailing comma after:  
+`"Name": "Marco Martin",`
 
 {{< readfile file="/content/docs/plasma/widget/snippet/plasma-doc-style.html" >}}
