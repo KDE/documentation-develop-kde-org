@@ -104,7 +104,6 @@ Kirigami.ApplicationWindow {
                     columns: root.wideScreen ? 4 : 2
 
                     Kirigami.Heading {
-                        Layout.fillHeight: true
                         level: 1
                         text: date
                     }
