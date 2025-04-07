@@ -36,7 +36,7 @@ Don't misalign your icon or use margins.
 {{< /dont >}}
 {{< /compare >}}
 
-16px and 22px emblem icons get a 60% text colour outline to ensure
+16px and 22px emblem icons get a 60% opacity text colour outline to ensure
 contrast against various backgrounds. 8px emblems do not recieve an
 outline because of their limited canvas size.
 

@@ -132,7 +132,7 @@ Don't have gradients behave like light is coming from below the icon.
 #### Hard Shadow
 
 Every icon should have a 1px solid hard shadow. A good baseline color to
-overlay is 10% black (#000000).
+overlay is black (#000000) at 10% opacity.
 
 {{< compare >}}
 {{< do src="/hig/hardshadow-do.png" >}}
