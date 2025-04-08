@@ -9,6 +9,8 @@ aliases:
   - /docs/getting-started/kirigami/style-colors/
 ---
 
+{{< kirigami-staging-api >}}
+
 Kirigami has a color palette that follows the system colors to better integrate
 with the platform it is running on (i.e. Plasma Desktop, Plasma Mobile,
 GNOME, Android, etc.).

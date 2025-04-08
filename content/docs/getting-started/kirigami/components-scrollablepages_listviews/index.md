@@ -7,6 +7,8 @@ aliases:
   - /docs/getting-started/kirigami/components-scrollablepages_listviews/
 ---
 
+{{< kirigami-staging-api >}}
+
 ## Kirigami.ScrollablePage
 
 A [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage)

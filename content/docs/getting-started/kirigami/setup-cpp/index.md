@@ -9,6 +9,8 @@ aliases:
   - /docs/getting-started/kirigami/setup-cpp/
 ---
 
+{{< kirigami-staging-api >}}
+
 ## Installing Kirigami
 
 Before getting started, we will need to install Kirigami on our machine. There are three ways to do so:

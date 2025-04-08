@@ -8,6 +8,8 @@ aliases:
   - /docs/getting-started/kirigami/components-card/
 ---
 
+{{< kirigami-staging-api >}}
+
 The Kirigami types [AbstractCard](docs:kirigami2;AbstractCard) and [Card](docs:kirigami2;Card) are used to implement the popular card component used on many mobile and web platforms. Cards can be used to display a collection of information or actions in an attractive and distinctive way.
 
 Kirigami also offers 3 kinds of [views](https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html) and [positioners](https://doc.qt.io/qt-6/qtquick-positioning-layouts.html) to aid you in presenting your cards with beautiful and responsive layouts.

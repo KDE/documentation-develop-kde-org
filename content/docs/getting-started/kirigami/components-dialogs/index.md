@@ -7,6 +7,8 @@ aliases:
   - /docs/getting-started/kirigami/components-overlaysheets/
 ---
 
+{{< kirigami-staging-api >}}
+
 A [Kirigami.Dialog](docs:kirigami2;Dialog) is a simple component that you can use to supplement the content being displayed on an application's page. It can display non-interactive content (only text) and interactive content (forms, listviews and buttons).
 
 They can be dismissed by clicking or tapping outside of their area or by clicking the close button on the header.

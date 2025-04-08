@@ -8,6 +8,8 @@ aliases:
   - /docs/getting-started/kirigami/introduction-overlaysheets/
 ---
 
+{{< kirigami-staging-api >}}
+
 ## Making our app useful
 
 We have a window, we have cards, and we have actions. Yet, we still need to find some way of inputting a name, description, and date of our choice.

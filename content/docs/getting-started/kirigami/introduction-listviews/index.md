@@ -6,6 +6,9 @@ description: Figuring out the different ways of placing things on a page
 aliases:
   - /docs/getting-started/kirigami/introduction-listviews/
 ---
+
+{{< kirigami-staging-api >}}
+
 # Laying out your content
 
 Now that we understand how pages work, it is time to add stuff to them. We will be going through a number of important layout components and elements that will be useful when designing our app.

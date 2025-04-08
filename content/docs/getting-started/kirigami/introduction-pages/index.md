@@ -6,6 +6,9 @@ description: Pages allow you to organize your application content
 aliases:
   - /docs/getting-started/kirigami/introduction-pages/
 ---
+
+{{< kirigami-staging-api >}}
+
 # Our app
 
 In the previous tutorial, we managed to set up, build, and compile our first Kirigami application. With the basics in place, we can begin our journey towards creating a fully-featured application.

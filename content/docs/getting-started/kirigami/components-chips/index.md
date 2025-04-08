@@ -6,6 +6,8 @@ description: >
   Chips are small elements typically used to list out related properties.
 ---
 
+{{< kirigami-staging-api >}}
+
 [Kirigami.Chip](docs:kirigami2;Chip) components are small elements inherited from
 [AbstractButton](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html)
 used for displaying common properties or filters of something. These are typically

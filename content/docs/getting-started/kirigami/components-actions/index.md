@@ -7,6 +7,9 @@ description: >
 aliases:
   - /docs/getting-started/kirigami/components-actions/
 ---
+
+{{< kirigami-staging-api >}}
+
 ## Actions
 
 A [Kirigami.Action](docs:kirigami2;Action) consists of a clickable action whose appearance depends on where it is added. Typically it is a button with an icon and text.

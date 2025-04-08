@@ -7,6 +7,8 @@ aliases:
   - /docs/getting-started/kirigami/components-pagerow_pagestack/
 ---
 
+{{< kirigami-staging-api >}}
+
 ## A row of pages
 
 We have seen so far that one of the core components of a Kirigami window is a [Kirigami.Page](docs:kirigami2;Page). A single page can envelop the whole screen of the application, or it can be shown together with other pages at the same time, if there is space.

@@ -7,6 +7,8 @@ aliases:
   - /docs/getting-started/kirigami/components-actiontoolbar/
 ---
 
+{{< kirigami-staging-api >}}
+
 While Kirigami pages allow you to easily place a set of actions in the page header, there are times when you might prefer to have something more flexible.
 
 Kirigami provides the component [Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar). It displays a list of [Kirigami.Action](docs:kirigami2;Action) objects and will display as many of them as possible, providing an overflow menu for the ones that don't fit. The ActionToolBar is dynamic and will move actions in and out of the overflow menu depending on the size available to it.
