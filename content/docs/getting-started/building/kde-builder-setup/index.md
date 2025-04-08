@@ -204,7 +204,15 @@ For details, see: [Install kdesrc-build](https://invent.kde.org/sdk/kdesrc-build
 
 ### Updating kde-builder
 
-Once in a while you will want to update `kde-builder` to get its latest changes. To do so, run the `initial_setup.sh` file that was created when installing kde-builder:
+Once in a while you will want to update `kde-builder` to get its latest changes.
+
+Since 2025-03-15, kde-builder has gained the ability to update with `--self-update`:
+
+```bash
+kde-builder --self-update
+```
+
+Prior to this version it was necessary to rerun the setup script:
 
 ```bash
 cd ~
