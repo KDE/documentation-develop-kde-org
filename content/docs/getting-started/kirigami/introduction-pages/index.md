@@ -43,7 +43,7 @@ When looking through QML API documentation, make sure to look into the functions
 
 Let's go back to the `Main.qml` file we created in our previous tutorial:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/qml/Main.qml" highlight="qml" >}}
 
 We make our application start to our [Kirigami.Page](docs:kirigami2;Page). All we have included in it is a label containing "Hello World", but we're going to spruce things up a little.
 
