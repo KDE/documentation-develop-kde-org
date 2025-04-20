@@ -24,15 +24,15 @@ In Plasma versions earlier than 5.23 the command is:
 qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.showInteractiveKWinConsole
 ```
 
-The interactive console allows to send a script to the window manager
-which is directly loaded and executed. All debug output is displayed in
-the scripting console. This provides a very easy way to develop and test the
-script to be written. It is important to know that scripts executed from the
+The interactive console allows to send a script to the window manager, where it is directly loaded and executed. 
+
+In Plasma < 5.23, debug output was displayed directly in the scripting console.  
+Since Plasma version 5.23, [the output is no longer visible in the console window](https://bugs.kde.org/show_bug.cgi?id=445058). Instead, you can retrieve it from the journal, as described in the [Output](#output) section below.  
+
+It is important to know that scripts executed from the
 scripting console are only used by the window manager as long as the window
 manager is running. In a new session the script has to be sent to the window
 manager again.
-
-Since Plasma version 5.23, [the output is not visible in the console window](https://bugs.kde.org/show_bug.cgi?id=445058). You can retrieve all KWin scripting output from the journal instead, as described in the section on output below.
 
 ## Packaging KWin scripts
 
