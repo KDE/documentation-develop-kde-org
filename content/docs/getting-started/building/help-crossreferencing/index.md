@@ -26,4 +26,4 @@ LXR has two search modes:
 Other ways to search across all of the KDE git repositories:
 
 * By using [KDE's Gitlab instance](https://invent.kde.org): pressing `/` or clicking on the search bar from the home page will trigger a global search. You can also visit a specific project's repository and use the same mechanism to search in the project's code.
-* By using a local checkout of several repositories with kde-builder: `kde-builder --src-only` will download the source code of more than 300 KDE git repositories in ~/kde/src. You can then search inside this directory using any tool. For example: `grep "search query" --recursive --ignore-case`.
+* By using a local checkout of several repositories with kde-builder: `kde-builder --src-only` will download the source code of more than 300 KDE git repositories in `~/kde/src`. You can then search inside this directory using any tool, e.g., `grep "search query" --recursive --ignore-case`.
