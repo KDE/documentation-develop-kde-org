@@ -17,7 +17,9 @@ If you don't want to build all dependencies (for instance if you are using a rol
 * edit the [configuration file](https://kde-builder.kde.org/en/configuration/config-file-overview.html) at `~/.config/kde-builder.yaml` and set `include-dependencies: false`
 * or add the `--no-include-dependencies` [flag](https://kde-builder.kde.org/en/cmdline/supported-cmdline-params.html#cmdline-include-dependencies) when running `kde-builder`.
 
-To build any project, run
+## Building and running applications {#application}
+
+To build KCalc for example, run:
 
 ```bash
 kde-builder kcalc
@@ -37,7 +39,7 @@ kde-builder --run kcalc
 
 Did it run? If so, then congratulations, you just compiled your own version of KCalc from source code! 🎉
 
-### Building and Running Plasma
+## Building and Running Plasma
 
 `kde-builder` has several aliases for building groups of modules that belong together. These include
 - `workspace`: All projects necessary to run a full Plasma Desktop session.
@@ -70,7 +72,7 @@ source ~/kde/build/plasma-workspace/prefix.sh
 ~/kde/usr/bin/plasmashell --replace
 ```
 
-#### Plasma Mobile
+### Plasma Mobile
 
 You can run your custom-built Plasma Mobile in an emulated phone session using a phone-sized window within your existing desktop.
 To do this, we first set some environment variables that configure the session to behave like a phone and then start a nested KWin session with the mobile shell:
