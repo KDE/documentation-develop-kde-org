@@ -16,9 +16,9 @@ Because most distributions keep track of package dependencies, most also provide
 
 While these commands will not *always* install all dependencies you will need when compiling KDE software (for example, when compiling with [kde-builder]({{< ref "kde-builder-setup" >}}), where the software is always changing), they will make your dependency resolution faster.
 
-### Debian, Ubuntu, Kubuntu, KDE neon
+### Debian, Ubuntu, Kubuntu, and KDE neon
 
-All the build packages known by the package you want to build can be installed with `apt build-dep`:
+All known build dependencies for the package you want to build can be installed with `apt build-dep`:
 
 ```bash
 sudo apt build-dep dolphin
@@ -26,25 +26,21 @@ sudo apt build-dep dolphin
 
 ### openSUSE
 
-All the build packages known by the package you want to build can be installed with `zypper source-install --build-deps-only`:
+All known build dependencies for the package you want to build can be installed with `zypper source-install --build-deps-only`:
 
 ```bash
 sudo zypper --plus-content repo-source source-install --build-deps-only dolphin
 ```
 
-Note that temporarily enabling the source repositories so that build dependencies can be found is *not* automatic.
-
-The `--plus-content` option will make zypper temporarily enable it to get the info it needs.
+The `--plus-content` option is required to temporarily enable the source repositories containing the build dependency information.
 
 ### Fedora
 
-All the build packages known by the package you want to build can be installed with `dnf builddep`:
+All known build dependencies for the package you want to build can be installed with `dnf builddep`:
 
 ```bash
 sudo dnf builddep dolphin
 ```
-
-Note that `builddep` will temporarily enable the source repositories so that build dependencies can be found.
 
 ## Using build errors to find missing dependencies
 
