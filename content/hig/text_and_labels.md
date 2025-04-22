@@ -40,7 +40,7 @@ Otherwise, use title case.
 
 Also use title case for specialized proper nouns such as “the Internet” or “Plasma Widgets”.
 
-Use a [serial comma/Oxford comma](https://apastyle.apa.org/style-grammar-guidelines/punctuation/serial-comma) when mentioning three or more list items in a sentence.
+Use a [serial comma] (also known as an “Oxford comma”) (https://apastyle.apa.org/style-grammar-guidelines/punctuation/serial-comma) when mentioning three or more list items in a sentence.
 
 Put spaces around [em-dashes](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use).
 
