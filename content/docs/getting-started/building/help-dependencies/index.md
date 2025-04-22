@@ -57,7 +57,7 @@ CMake Error at /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:230 
 
 This error is provided by CMake and it means you are missing the KDE Frameworks 6 library KTextWidgets.
 
-And let's say instead you see the following error when compiling a project:
+For projects using [Meson](https://mesonbuild.com/), the error message would like:
 
 ```bash
 Build-time dependency gi-docgen found: NO (tried pkgconfig and cmake)
@@ -65,11 +65,9 @@ Build-time dependency gi-docgen found: NO (tried pkgconfig and cmake)
 docs/api/meson.build:5:15: ERROR: Dependency "gi-docgen" not found, tried pkgconfig and cmake
 ```
 
-This means the project is actually using [Meson](https://mesonbuild.com/) instead of CMake.
-
 Meson projects typically prefer using `pkgconfig` over CMake package configuration files.
 
-The error here states that Meson could not find the pkgconfig for `gi-docgen` (most likely a file with the extension ".pc") or the CMake file (most likely a file with the extension ".cmake") that contains "gi-docgen" case insensitively in name.
+The error here states that Meson could not find the pkgconfig file for `gi-docgen` (most likely a file with the extension `.pc`) or the CMake file (most likely a file with the extension `.cmake`) that contains `gi-docgen` in its name (case insensitively).
 
 ### Generic search
 
