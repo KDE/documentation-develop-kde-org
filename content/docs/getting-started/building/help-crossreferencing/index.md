@@ -12,8 +12,9 @@ By clicking on the "Branch group" menu at the top right, you can select whether 
 LXR has two search modes:
 
 1. On the "Identifier" search page, you can search for:
-  * Class names such as `RenameDialog`, `StatJob`, and of course any Qt class (used in KDE code, which is pretty much all of them), `QLatin1String`, `QListWidget`
-  * Method names such as `addConfigSources()` (from the KConfig framework) and signal names like `mimeTypeFound()`
+  * Class names, e.g., `RenameDialog`, `StatJob`, `QLatin1String`, or `QListWidget`.
+  * Method names, e.g., `addConfigSources`, `setAboutData`, or `deleteLater`.
+  * Signal names, e.g., `mimeTypeFound` or `errorOccurred`.
 
 {{< figure class="text-center" caption="The LXR identifier search." src="lxr-identifier.webp" >}}
 
