@@ -171,7 +171,7 @@ bash initial_setup.sh
 
 ## Setting up Qt
 
-Qt is the fundamental framework that is needed for all KDE development. A recent enough version of Qt 6 - currently usually mean at least version 6.7 - is required to proceed.
+Qt is the fundamental framework that is needed for all KDE development. A recent enough version of Qt 6 (currently version 6.7 or later) is required to proceed.
 
 The initial setup of `kde-builder` should have installed the required Qt6 packages for you already, in which case you don't need to do anything and may skip directly to the [Configure git]({{< ref "#configure-git" >}}) section.
 
@@ -185,7 +185,7 @@ If your Linux distribution does not provide a recent enough versoin of Qt, you h
 
 ### Use Qt6 from the online installer {#qt6-online}
 
-Instead of letting `kde-builder` build Qt for you, you may want to use Qt's official installer
+Instead of letting `kde-builder` build Qt for you, you may want to use Qt's official installer.
 
 First, create an account on [Qt's website](https://www.qt.io/). Then, download the installer from the [Qt for Open Source Development](https://www.qt.io/download-qt-installer-oss) page.
 
@@ -227,7 +227,7 @@ pipx install aqtinstall
 
 If you don't have `pipx` installed, you can install it from your distribution.
 
-You can then install Qt using
+You can then install Qt using:
 
 ```bash
 aqt install-qt linux desktop 6.9 linux_gcc_64 --outputdir ~/Qt --modules all
