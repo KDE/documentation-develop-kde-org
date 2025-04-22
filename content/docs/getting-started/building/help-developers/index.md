@@ -8,9 +8,9 @@ group: "help"
 The KDE developers are here to assist you if you need any help with KDE software development.
 
 There are several ways to get in touch with KDE developers, either generally or for a specific project. The most important communication channels are:
-* **Real-time chat:** [#kde-devel](https://webchat.kde.org/#/room/#kde-devel:kde.org) room on [Matrix](https://community.kde.org/Matrix)
+* **Real-time chat:** [#kde-devel:kde.org](https://webchat.kde.org/#/room/#kde-devel:kde.org) room on [Matrix](https://community.kde.org/Matrix)
 * **Forum:** [Development forum](https://discuss.kde.org/c/development/10) on [KDE Discuss](https://discuss.kde.org)
-* **Mailing list:** : [kde-devel](https://mail.kde.org/mailman/listinfo/kde-devel ) ([Learn more about mailing lists](http://kde.org/support/#mailinglists))
+* **Mailing list:** [kde-devel](https://mail.kde.org/mailman/listinfo/kde-devel ) ([Learn more about mailing lists](http://kde.org/support/#mailinglists))
 
 These are general KDE development communication channels, and you may be directed to a more appropriate place for the project you're interested in.
 
