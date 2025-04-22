@@ -7,7 +7,7 @@ group: "help"
 
 To search for a class, method, signal name or any other sort of code in all KDE repos, including QML and CMake, KDE provides a code referencing tool to index code in the various KDE repositories: the [KDE Source Code Cross Reference (LXR)](https://lxr.kde.org/) website.
 
-By clicking on the "Branch group" menu at the top right, you can select whether you'd like to see KDE software in Qt5 or Qt6, and whether to search for code in the master branches or from the stable (released) branches.
+By clicking on the `Branch group` menu at the top right, you can select whether you'd like to see KDE software in Qt5 or Qt6, and whether to search for code in the master branches or from the stable (released) branches.
 
 LXR has two search modes:
 
