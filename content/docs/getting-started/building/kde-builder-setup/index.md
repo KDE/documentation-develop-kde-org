@@ -78,7 +78,7 @@ deb http://us.archive.ubuntu.com/ubuntu/ noble main restricted
 deb-src http://us.archive.ubuntu.com/ubuntu/ noble main restricted
 ```
 
-Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, e.g., `bookworm` or `jammy`.
+Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, for example `bookworm` or `jammy`.
 
 If the `deb-src` line is commented out with a `#`, remove the `#` character.
 
@@ -112,7 +112,7 @@ Components: main universe restricted multiverse
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 ```
 
-Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, e.g., `bookworm` or `jammy`.
+Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, for example `bookworm` or `jammy`.
 
 Lastly, run:
 

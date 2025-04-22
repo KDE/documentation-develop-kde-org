@@ -12,9 +12,9 @@ By clicking on the `Branch group` menu at the top right, you can select whether 
 LXR has two search modes:
 
 1. On the "Identifier" search page, you can search for:
-  * Class names, e.g., `RenameDialog`, `StatJob`, `QLatin1String`, or `QListWidget`.
-  * Method names, e.g., `addConfigSources`, `setAboutData`, or `deleteLater`.
-  * Signal names, e.g., `mimeTypeFound` or `errorOccurred`.
+  * Class names, for example `RenameDialog`, `StatJob`, `QLatin1String`, or `QListWidget`.
+  * Method names, for example `addConfigSources`, `setAboutData`, or `deleteLater`.
+  * Signal names, for example `mimeTypeFound` or `errorOccurred`.
 
 {{< figure class="text-center" caption="The LXR identifier search." src="lxr-identifier.webp" >}}
 
@@ -26,4 +26,4 @@ LXR has two search modes:
 Other ways to search across all of the KDE git repositories:
 
 * By using [KDE's Gitlab instance](https://invent.kde.org): pressing `/` or clicking on the search bar from the home page will trigger a global search. You can also visit a specific project's repository and use the same mechanism to search in the project's code.
-* By using a local checkout of several repositories with kde-builder: `kde-builder --src-only` will download the source code of more than 300 KDE git repositories in `~/kde/src`. You can then search inside this directory using any tool, e.g., `grep "search query" --recursive --ignore-case`.
+* By using a local checkout of several repositories with kde-builder: `kde-builder --src-only` will download the source code of more than 300 KDE git repositories in `~/kde/src`. You can then search inside this directory using any tool, like `grep "search query" --recursive --ignore-case`.

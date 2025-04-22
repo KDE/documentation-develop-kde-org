@@ -59,7 +59,7 @@ You can also install these files manually by running a script that is provided b
 
 {{< alert title="About SELinux" color="info" >}}
 
-SELinux can interfere with the new D-Bus services working correctly, and the path of least resistance may be to turn off enforcement if you are using a distro that ships with it on by default (e.g., Fedora). To do this, set the value of `SELINUX` to `permissive` in the file `/etc/selinux`.
+SELinux can interfere with the new D-Bus services working correctly, and the path of least resistance may be to turn off enforcement if you are using a distro that ships with it on by default (like Fedora). To do this, set the value of `SELINUX` to `permissive` in the file `/etc/selinux`.
 
 {{< /alert >}}
 
