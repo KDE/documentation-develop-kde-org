@@ -43,6 +43,12 @@ Did it run? If so, then congratulations, you just compiled your own version of K
 - `workspace`: All projects necessary to run a full Plasma Desktop session.
 - `mobile`: All projects required for running a Plasma Mobile session.
 
+You can build these like you would a single project, for example with:
+
+```bash
+kde-builder workspace
+```
+
 After building the `workspace` alias, `kde-builder` will prompt you for password in order to install session files in your system. After this, you can start your self-built Plasma session by choosing it in SDDM before logging in.
 
 You can also install these files manually by running a script that is provided by `plasma-workspace`:
@@ -57,7 +63,7 @@ SELinux can interfere with the new D-Bus services working correctly, and the pat
 
 {{< /alert >}}
 
-Alternatively, you can run the new version of Plasma on top of your existing system for quick testing like so:
+Alternatively, you can run the new instance of Plasma on top of your existing system for quick testing like so:
 
 ```bash
 source ~/kde/build/plasma-workspace/prefix.sh
