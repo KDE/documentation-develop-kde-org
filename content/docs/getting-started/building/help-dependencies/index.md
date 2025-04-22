@@ -10,7 +10,7 @@ If this guide does not manage to solve your compilation problems, be sure to [co
 
 ## How to install all the build dependencies of one package
 
-Often the simplest solution to the problem of missing dependencies is just to install all its required packages at once without needing to search for each dependency individually.
+Often the simplest solution to the problem of missing dependencies is to automatically install all of the project's required dependencies.
 
 Because most distributions keep track of package dependencies by using *source packages*, they also provide their own built-in commands to easily install all the build dependencies of each package.
 
