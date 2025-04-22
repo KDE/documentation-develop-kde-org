@@ -6,18 +6,17 @@ group: "kde-builder"
 aliases: kdesrc-build-setup
 ---
 
-Source code for KDE software lives on [KDE Invent](https://invent.kde.org). But before you can work on it, you'll need to set up a **development environment**: a set of tools that allows you to access and edit the source code, compile it into a form that the computer can run, and deploy it to a safe location. To accomplish these tasks, you will need to enter commands using a terminal program, such as KDE's [Konsole](https://apps.kde.org/konsole).
+Source code for KDE software lives on [KDE Invent](https://invent.kde.org). Before you can work on it, you'll need to set up a **development environment**: a set of tools that allows you to access and edit the source code, compile it into a form that the computer can run, and deploy it to a safe location. To accomplish this, you will need to enter commands using a terminal program.
 
-If you're not familiar with the command line interface, you can [find tutorials here](https://community.kde.org/Get_Involved/development/Learn#Unix_command_line). However, advanced command line skills are not required, and you will learn what you need along the way!
+If you're not familiar with the command line interface, you can [find tutorials here](https://community.kde.org/Get_Involved/development/Learn#Unix_command_line). However, advanced command line skills are not required, and you will learn what you need along the way.
 
 If you're a visual learner, we also provide [useful video tutorials](https://community.kde.org/Get_Involved/development/Video).
 
-The tool we will be using here for setting up a development environment and building KDE software is [kde-builder](https://kde-builder.kde.org/). It will let you set up your development environment and compile applications on Linux and FreeBSD.
-[Repo](https://invent.kde.org/sdk/kde-builder) [README with basic usage](https://invent.kde.org/sdk/kde-builder/-/blob/master/README.md)
+The tool we will be using here for setting up a development environment and building KDE software is [kde-builder](https://kde-builder.kde.org/). It will let you set up your development environment and compile applications on Linux and FreeBSD. You can find out more about it in its [repository](https://invent.kde.org/sdk/kde-builder) and the [README](https://invent.kde.org/sdk/kde-builder/-/blob/master/README.md).
 
 {{< alert title="💡 Keep in mind" color="success" >}}
 
-You only need to set up your environment once, and then you will be able to compile (and recompile) KDE software as often as needed later on!
+You only need to set up your environment once, and then you will be able to compile (and recompile) KDE software as often as needed later on.
 
 {{< /alert >}}
 
@@ -34,17 +33,11 @@ KDE software has two types of dependencies:
 
 For example, the KDE application [KCalc](https://apps.kde.org/kcalc/) depends on more than 20 other KDE libraries as well as the Qt toolkit.
 
-Some Linux distributions do not provide development packages for [KDE Frameworks](https://develop.kde.org/products/frameworks/) and of other libraries that are up-to-date enough for us to build from the "main" branch of the KDE git repositories (the branch where the development of the next software versions takes place), so we use `kde-builder` to compile them ourselves. The goal is to avoid using KDE binaries, KDE libraries and other KDE files from the operating system where possible (in the Linux case, these files reside in the `/usr` directory).
+Some Linux distributions do not provide development packages for [KDE Frameworks](https://develop.kde.org/products/frameworks/) and of other libraries that are up-to-date enough for us to build from the `master` branch of the KDE git repositories (the branch where the development of the next software versions takes place), so we use `kde-builder` to compile them ourselves. The goal is to avoid using KDE binaries, KDE libraries and other KDE files from the operating system where possible.
 
 ## Set up kde-builder
 
-{{< alert title="About ~/.local/bin" color="info" >}}
-
-If you've done this before and want the brief step-by-step instructions, have a look at [the README](https://invent.kde.org/sdk/kde-builder/-/blob/master/README.md).
-
-{{< /alert >}}
-
-Let's set it up now! You will need many gigabytes of free disk space. Budget 50 GB of storage space for KDE Frameworks + KDE Plasma, and 10-30 GB more for some apps as well. Then run the following:
+Before setting it up, you will need some free disk space. Budget 50 GB of storage space for KDE Frameworks + KDE Plasma, and 10-30 GB more for some apps as well. Then run the following:
 
 ```bash
 cd ~
@@ -54,59 +47,40 @@ bash initial_setup.sh
 
 `kde-builder` will install git, a few runtime packages, and will install its executable in your PATH so you can run it from the terminal, as in the next step.
 
+{{< alert color="info" >}}
+
+Dependening on your distribution, you may need to add `~/.local/bin` to the `PATH` environment variable. The kde-builder installer will tell you if this is required.
+
+{{< /alert >}}
+
 After the initial setup, you will need to generate a configuration file for kde-builder. Run:
 
 ```bash
 kde-builder --generate-config
 ```
 
-This will create a new file `~/.config/kde-builder.yaml`. [Documentation](https://kde-builder.kde.org/en/configuration/config-file-overview.html) is available that lists all possible options and example values.
+This will create a new file `~/.config/kde-builder.yaml`. See the [documentation](https://kde-builder.kde.org/en/configuration/config-file-overview.html) for a list of available options.
 
-{{< alert title="About ~/.local/bin" color="info" >}}
+{{< alert title="Debian/Ubuntu-based distributions" color="warning" >}}
 
-<details>
-<summary>Click here if you experience problems with finding `kde-builder` in your PATH</summary></br>
-
-Some Linux distributions might not follow the [Freedesktop Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) that enforces that the `~/.local/bin` directory be added to the `$PATH`, which is required for an executable to show up in the terminal without its absolute path.
-
-To check if `~/.local/bin` is in the `$PATH`, run: `echo $PATH`.
-
-If the directory is not listed, then you will need to add it yourself. You can do so by adding the following to your `~/.bashrc` (or equivalent in your preferred shell):
-
-```bash
-export PATH=$PATH:~/.local/bin
-```
-
-Closing and reopening your terminal window once should be enough for `kde-builder` to appear for the next steps.
-
-Don't forget to warn your distribution to follow the specification.
-
-</details>
-
-{{< /alert >}}
-
-{{< alert title="⚠️ Read this if you use a Debian/Ubuntu-based distro" color="warning" >}}
-
-Some distros need source repositories enabled before you can install the development packages you need. Do that now, *if needed*:
+Some distributions need source repositories enabled before you can install the development packages you need. Do that now, *if needed*:
 
 <details>
 <summary>Click here to see how to enable source repos</summary>
 <br>
 
-**KDE neon/Debian/Ubuntu/Kubuntu/etc:**
-
 **If the file /etc/apt/sources.list exists**
 
-Open the file `/etc/apt/sources.list` with a text editor such as [Kate](https://kate-editor.org/) or `nano`. Each line that starts with "deb " should be followed by a similar line beginning with "deb-src ", for example:
+Open the file `/etc/apt/sources.list` with a text editor such as [Kate](https://kate-editor.org/) or `nano`. Each line that starts with `deb ` should be followed by a similar line beginning with `deb-src `, for example:
 
 ```bash
 deb http://us.archive.ubuntu.com/ubuntu/ noble main restricted
 deb-src http://us.archive.ubuntu.com/ubuntu/ noble main restricted
 ```
 
-Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, like `bookworm` or `jammy`.
+Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, e.g., `bookworm` or `jammy`.
 
-If the deb-src line is commented out with a `#`, remove the `#` character.
+If the `deb-src` line is commented out with a `#`, remove the `#` character.
 
 Lastly, run:
 
@@ -138,7 +112,7 @@ Components: main universe restricted multiverse
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 ```
 
-Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, like `bookworm` or `jammy`.
+Note: The URL might differ depending on your country, and instead of `noble` the name of the Debian or Ubuntu version should appear instead, e.g., `bookworm` or `jammy`.
 
 Lastly, run:
 
@@ -150,182 +124,136 @@ sudo apt update
 
 {{< /alert >}}
 
-While during initial setup, `kde-builder` installed the essentials for itself to run, now it will need to install the required distribution packages to build KDE software. To do that, run:
+During initial setup, `kde-builder` installed the essentials to run the tool itself. To install the distribution packages required to actually build KDE software, run:
 
 ```bash
 kde-builder --install-distro-packages
 ```
 
-You can skip ahead and attempt to build a single project as a way to test that your setup is okay. Run this to verify KCalc is able to be built:
-
-```bash
-kde-builder --pretend kcalc
-```
-
-Finally, perform your first build.
+Finally, perform your first build:
 
 ```shell
 kde-builder kcalc
 ```
 
-This will build [KCalc](https://apps.kde.org/kcalc/),
-a calculator app with few dependencies. If you happen to find any build issues, don't fret! That means kde-builder is working.
+This will build [KCalc](https://apps.kde.org/kcalc/), a calculator app, and its KDE dependencies. If you happen to find any build issues, don't fret! That means kde-builder is working.
 
-In the next section [Building KDE software with kde-builder]({{< ref "kde-builder-compile" >}}) we make a more in-depth dive into the building process, and to solve any build issues you can check out [Installing build dependencies]({{< ref "help-dependencies" >}}).
+In the next section, [Building KDE software with kde-builder]({{< ref "kde-builder-compile" >}}), we have a more in-depth look into the build process. To solve any build issues, you can check out [Installing build dependencies]({{< ref "help-dependencies" >}}).
 
-Now `kde-builder` should be set up! 🎉
-These [common command line flags](https://kde-builder.kde.org/en/cmdline/cmdline-usage.html#commonly-used-command-line-options) may come in handy.
+`kde-builder` is now set up for building! 🎉
 
 {{< alert color="success" title="💡 A chance to contribute">}}
 
-If you discover any external dependencies needed to build KDE software that were not installed with `kde-builder --install-distro-packages`, for example using our guide on [Installing Build Dependencies]({{< ref "help-dependencies" >}}) then please send a merge request to the [repo-metadata/distro-dependencies](https://invent.kde.org/sysadmin/repo-metadata/-/tree/master/distro-dependencies) repository to include the needed packages in the list.
-
-{{< /alert >}}
-
-{{< alert color="info" title="⏳ With kdesrc-build..." >}}
-
-<details>
-<summary>Click here to know how this was done with kdesrc-build</summary></br>
-
-This step used to be done by cloning the repository into a folder, linking the script, and running the script:
-
-```bash
-kdesrc-build --initial-setup
-```
-or the more advanced
-
-```bash
-kdesrc-build --generate-config
-```
-
-For details, see: [Install kdesrc-build](https://invent.kde.org/sdk/kdesrc-build#install-kdesrc-build)
+If you discover any external dependencies needed to build KDE software that were not installed with `kde-builder --install-distro-packages`, for example using our guide on [Installing Build Dependencies]({{< ref "help-dependencies" >}}), please send a merge request to the [repo-metadata/distro-dependencies](https://invent.kde.org/sysadmin/repo-metadata/-/tree/master/distro-dependencies) repository to include the needed packages in the list.
 
 {{< /alert >}}
 
 ### Updating kde-builder
 
-Once in a while you will want to update `kde-builder` to get its latest changes.
+You should occasionally update `kde-builder` to get its latest changes.
 
-Since 2025-03-15, kde-builder has gained the ability to update with `--self-update`:
+This can be done by running
 
 ```bash
 kde-builder --self-update
 ```
 
-Prior to this version it was necessary to rerun the setup script:
+{{< alert color="info" >}}
+
+If this does not work, your version of `kde-builder` does not support updating itself yet. In this case, you can update it by running
 
 ```bash
 cd ~
 bash initial_setup.sh
 ```
 
-{{< alert color="info" title="⏳ With kdesrc-build..." >}}
-
-<details>
-<summary>Click here to know how this was done with kdesrc-build</summary></br>
-
-This step used to be done by going to the directory where kdesrc-build was cloned and pulling the new changes:
-
-```bash
-cd ~/src/kdesrc-build
-git pull
-```
-
 {{< /alert >}}
 
-## Set up Qt
+## Setting up Qt
 
-Qt is the fundamental framework that is needed for pretty much all KDE development. A recent enough version of Qt 6, currently Qt version greater or equal to 6.7, is required to proceed.
+Qt is the fundamental framework that is needed for all KDE development. A recent enough version of Qt 6 - currently usually mean at least version 6.7 - is required to proceed.
 
 The initial setup of `kde-builder` should have installed the required Qt6 packages for you already, in which case you don't need to do anything and may skip directly to the [Configure git]({{< ref "#configure-git" >}}) section.
 
-If your Linux distribution does NOT provide recent versions of Qt packages, you have four options:
+If your Linux distribution does not provide a recent enough versoin of Qt, you have the following options:
 
-* Use one of the alternative build methods mentioned in [Building KDE software]({{< ref "building" >}})
+* Use Craft or containers, as mentioned in [Building KDE software]({{< ref "building" >}})
 * [Install Qt6 using the Qt online installer]({{< ref "#qt6-online" >}})
 * [Install Qt6 using the unofficial aqtinstall installer]({{< ref "#qt6-aqtinstall" >}})
 * [Build Qt6 using kde-builder]({{< ref "#qt6-build" >}})
 * Switch to a [more up-to-date distro]({{< ref "building#choosing" >}})
 
-### Finding the latest Qt version {#qt6-version}
-
-To find out the latest release of Qt, you can visit [KDE's Qt repository mirror](https://invent.kde.org/qt/qt/qt5) and check for the right branch:
-
-{{< figure class="text-center" src="qt-latest-release.png" alt="A screenshot of the main page of the Qt repository mirror showing the branch list that appears once you click on the combobox that has 'dev' written on it." >}}
-
 ### Use Qt6 from the online installer {#qt6-online}
 
-Instead of letting `kde-builder` build Qt for you, you may want to use the online installer that comes directly from Qt. To download Qt you will need to make an account.
+Instead of letting `kde-builder` build Qt for you, you may want to use Qt's official installer
 
-First, go to the [QtGroup website](https://www.qt.io/) and create an account.
+First, create an account on [Qt's website](https://www.qt.io/). Then, download the installer from the [Qt for Open Source Development](https://www.qt.io/download-qt-installer-oss) page.
 
-After creating your new Qt account, go to [Qt for Open Source Development](https://www.qt.io/download-open-source), click on "Download the Qt Online Installer", and follow the download process.
+Run the downloaded file, log in with your Qt account, and follow the wizard. During the installation, choose the option `Custom installation`, and:
 
-Run the downloaded file, log in with your new Qt account, and follow the wizard to install Qt. During the installation, choose the option "Custom installation", and:
-
-* Uncheck "Qt Design Studio"
-* Uncheck "Qt Creator"
-* Click on the collapsible for the latest version of Qt or double-click it
-* Check "Desktop"
+* Uncheck `Qt Design Studio`
+* Uncheck `Qt Creator`
+* Make sure the `Desktop` item for the latest version of Qt is selected
 
 This will install only the essential Qt libraries in `~/Qt` by default, occupying a little less than 2 GB of storage.
 
-Once installed, open the file `~/.config/kde-builder.yaml`, uncomment the line with `qt-install-dir: ~/kde/qt`, and change it to point to your Qt installation. The actual path should be similar to this, depending on your Qt version:
+Once installed, open `~/.config/kde-builder.yaml`, uncomment the line with `qt-install-dir: ~/kde/qt`, and change it to point to your Qt installation. The actual path should be similar to this, depending on your Qt version:
 
 ```yaml
-qt-install-dir: ~/Qt/6.8.0/gcc_64
+qt-install-dir: ~/Qt/6.9.0/gcc_64
 ```
 
-Once it is done, `kde-builder` will know to use the Qt provided by the online installer to build KDE software.
+Once this is done, `kde-builder` will know to use the Qt provided by the online installer to build KDE software.
 
-If you ever need to install more Qt components, you can open the newly installed Qt Maintenance Tool available on the menu launcher.
+If you ever need to install more Qt components, you can do so using the `Qt Maintenance Tool` that was added by the installer.
 
 ### Use Qt6 from aqtinstall {#qt6-aqtinstall}
 
 {{< alert title="⚠️ Experimental" color="warning" >}}
 
-This method was not fully battle tested yet.
+This method was not fully tested yet.
 
 {{< /alert >}}
 
-If you are bothered by the fact that the Qt online installer requires a Qt account
-or if you don't want to undergo the process of building Qt6 with kde-builder,
-you may try using the unofficial installer `aqtinstall` which simply downloads
+If you do not want to create a Qt account to use Qt's official installer and do not want to build Qt yourself,
+you can try using the unofficial installer `aqtinstall` which downloads
 Qt from the same sources as the official installer.
 
-First, install aqtinstall:
+First, install `aqtinstall`:
 
 ```bash
 pipx install aqtinstall
 ```
 
-If you don't have `pipx` installed, you may need to install it from your distribution.
+If you don't have `pipx` installed, you can install it from your distribution.
 
-You can then install Qt with `aqt`. You will need to [find the latest Qt release first]({{< ref "#qt6-version" >}}).
+You can then install Qt using
 
 ```bash
-aqt install-qt linux desktop 6.8 linux_gcc_64 --outputdir ~/Qt --modules all
+aqt install-qt linux desktop 6.9 linux_gcc_64 --outputdir ~/Qt --modules all
 ```
 
-This will install all Qt modules available in version 6.8 and will occupy a bit more than 8 GB of storage.
+replacing `6.9` with the latest Qt version number.
+
+This will install all Qt modules available in the latest version and will occupy a bit more than 8 GB of storage.
 
 Once installed, open the file `~/.config/kde-builder.yaml`, uncomment the line with `qt-install-dir: ~/kde/qt`, and change it to point to your Qt installation. The actual path should be similar to this, depending on your Qt version:
 
 ```yaml
-qt-install-dir: ~/Qt/6.8.0/gcc_64
+qt-install-dir: ~/Qt/6.9.0/gcc_64
 ```
 
-Once it is done, `kde-builder` will know to use the Qt provided by the online installer to build KDE software.
+Once this is done, `kde-builder` will know to use the Qt provided by the online installer to build KDE software.
 
 ### Build Qt6 using kde-builder {#qt6-build}
 
-{{< alert title="⚠️ WIP" color="warning" >}}
+{{< alert title="⚠️ Work in Progress" color="warning" >}}
 
 This method is undergoing testing to make sure it works on most systems.
 
 {{< /alert >}}
 
-It is possible to build Qt with kde-builder, but it will require a minimum of 30 GB of storage and have a long compilation time that may last up until a few hours depending on your machine.
+It is possible to build Qt with kde-builder, but it requires a minimum of 30 GB of storage and has a long compilation time, up to a few hours depending on your machine.
 
 To do this, open the file `~/.config/kde-builder.yaml` and uncomment the line containing:
 
@@ -333,11 +261,11 @@ To do this, open the file `~/.config/kde-builder.yaml` and uncomment the line co
 qt-install-dir: ~/kde/qt
 ```
 
-Near the end of the file, add an override so you build [Qt from the latest release]({{< ref "#qt6-version" >}}) instead of the development branch (the default):
+Near the end of the file, add an override so you build Qt from the latest release instead of the development branch (the default):
 
 ```yaml
 override qt6-set:
-  branch: "6.8"
+  branch: "6.9"
 ```
 
 Then run:
@@ -346,42 +274,35 @@ Then run:
 kde-builder qt6-set
 ```
 
-It will take quite a while to finish compiling.
+This will take a long time.
 
 ## Configure git
 
-The first thing we will need to do after having set up `kde-builder` is to configure git.
-
-Set your authorship information properly so that any changes you make to code can be properly attributed to you:
+To properly track who created a commit, your name and email must be configured in git. If this is not done correctly, [invent.kde.org](https://invent.kde.org) might reject your changes when you push them.
+To configure name and email, run:
 
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@email.com"
 ```
 
+The name given here must be a human name, not the username of your KDE account or similar. The email should be the same as configured in GitLab and for your account on [bugs.kde.org](https://bugs.kde.org), if you have one. This is required for some integrations to work correctly.
+
 You should take the chance to create a [KDE Identity account](https://identity.kde.org) that you can use to access KDE's Gitlab instance where all KDE code resides, [Invent](https://invent.kde.org). Take a look at [Infrastructure: Gitlab](https://community.kde.org/Infrastructure/GitLab) to learn more about this.
 
-{{< alert color="info" title="About username and email" >}}
-
-The `user.name` you provide should be your actual name, not your KDE Identity username or a pseudonym.
-
-The email address must be the same as the email address used for your [KDE Bugzilla](https://bugs.kde.org) account, if you have one. If they don't match, then the `BUG:` and `FEATURE:` keywords won't work (see [Special Keywords in Git](https://community.kde.org/Policies/Commit_Policy#Special_keywords_in_GIT_and_SVN_log_messages) for more information).
-
-{{< /alert >}}
-
-For convenience, we can enable a feature that will later become useful when we start pushing code to a repository branch:
+For convenience, you can enable a feature that will become useful when starting to push code to GitLab:
 
 ```bash
 git config --global push.autoSetupRemote true
 ```
 
-Next, in order to authenticate yourself when pushing code changes, you need to add an SSH key to your Invent profile as described in the [Invent SSH docs](https://invent.kde.org/help/user/ssh.md). Once you are done, we can start using `kde-builder`.
+Next, in order to authenticate yourself when pushing code changes, you need to add an SSH key to your Invent profile as described in the [Invent SSH documentation](https://invent.kde.org/help/user/ssh.md). Once you are done, we can start using `kde-builder`.
 
 ## Disable indexing for your development environment
 
 You'll want to disable indexing for your development-related git repos and the files they will build and install.
 
-To do that, add the `~/kde` directory to the exclusions list in System Settings › Search › File Search > Stop Indexing a Folder...
+To do that, add the `~/kde` directory to the exclusions list in `System Settings` › `Search` › `File Search` > `Stop Indexing a Folder...`
 
 {{< figure class="text-center" caption="The Search field in System Settings." src="search-kdesrc-build.webp" >}}
 
@@ -389,12 +310,10 @@ To do that, add the `~/kde` directory to the exclusions list in System Settings 
 
 Your development environment is now set up and ready to build software.
 
-To recapitulate the essentials:
+- You installed [kde-builder](https://kde-builder.kde.org/).
+- You generated a [configuration file](https://kde-builder.kde.org/en/configuration/config-file-overview.html) for it.
+- You installed the necessary packages to start building KDE software.
+- You have set it up to use Qt (optional).
+- You have set up git so you can start working on code.
 
-1. You installed [kde-builder](https://kde-builder.kde.org/).
-2. You generated a [configuration file](https://kde-builder.kde.org/en/configuration/config-file-overview.html) for it.
-3. You installed the necessary packages to start building KDE software.
-4. You have set it up to use Qt (optional).
-5. You have set up git so you can start working on code.
-
-Time to learn how to use `kde-builder` to build software from source code!
+The next section explains how to use `kde-builder` to build software from source code.
