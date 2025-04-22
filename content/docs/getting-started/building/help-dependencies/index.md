@@ -12,7 +12,7 @@ If this guide does not manage to solve your compilation problems, be sure to [co
 
 Often the simplest solution to the problem of missing dependencies is to automatically install all of the project's required dependencies.
 
-Because most distributions keep track of package dependencies by using *source packages*, they also provide their own built-in commands to easily install all the build dependencies of each package.
+Because most distributions keep track of package dependencies, most also provide their own built-in commands to install all the build dependencies of a package.
 
 While these commands will not *always* install all dependencies you will need when compiling KDE software (for example, when compiling with [kde-builder]({{< ref "kde-builder-setup" >}}), where the software is always changing), they will make your dependency resolution faster.
 
