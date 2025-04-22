@@ -71,13 +71,13 @@ The error here states that Meson could not find the pkgconfig file for `gi-docge
 
 ### Generic search
 
-There are two types of dependencies, build dependencies and runtime dependencies. The distribution package names for build dependencies usually begin with `lib` and/or end in `-dev` or `-devel`, whereas runtime dependencies usually just start with `lib`.
+There are two types of dependencies: build dependencies and runtime dependencies. The distribution package names for build dependencies usually begin with `lib` and/or end in `-dev` or `-devel`, whereas runtime dependencies usually just start with `lib`.
 
-For build dependencies you will likely only need packages that end in `-dev` or `-devel`, but in some rare cases you might need to install packages starting with `lib` too.
+For build dependencies you will likely only need packages that end in `-dev` or `-devel`, but in some cases you might need to install packages starting with `lib` too.
 
-In this case, KF6TextWidgets is a build dependency.
+In the previous cmake example, KTextWidgets is a build dependency.
 
-The main way to find the package that provides KF6TextWidgets is to grab the name of the library, KF6TextWidgets, strip it from the KF6 part, and search for it in your package manager:
+The main way to find the package that provides KTextWidgets is to search for it in your package manager:
 
 * Debian and derivatives: `sudo apt search textwidgets`
 * openSUSE: `sudo zypper search textwidgets`
@@ -85,7 +85,7 @@ The main way to find the package that provides KF6TextWidgets is to grab the nam
 * Arch: `sudo pacman -Ss textwidgets`
 * FreeBSD: `sudo pkg search textwidgets`
 
-Just searching for the component usually reveals the right package name, although it ultimately amounts to guessing or trial-and-error.
+Just searching for the component usually reveals the right package name, although it ultimately amounts to guessing or trial-and-error. KDE frameworks or other libraries often have various, slightly different, names, depending on the context. For example, KTextWidgets might sometimes be called TextWidgets, KF6TextWidgets or similar names. If you can't find anything for one name, try searching for such variations.
 
 The usual pattern you will find for dependency packages looks like this:
 
@@ -110,9 +110,9 @@ A more efficient way is to use the functionality provided by your package manage
 * Fedora: `dnf provides 'cmake(KF6TextWidgets)'`
 * Arch: `pkgfile KF6TextWidgetsConfig.cmake`
 
-Fedora and openSUSE come with this functionality by default. On Debian, you will need to install `apt-file` manually. On Arch, `pkgfile`.
+Fedora and openSUSE come with this functionality by default. On Debian, you will need to install `apt-file` manually. On Arch, install `pkgfile`.
 
-If while using `apt-file` you get an error similar to the following (in this example, Qt6WaylandScanner):
+If while using `apt-file` you get an error similar to the following:
 
 ```bash
 The imported target "Qt6::qtwaylandscanner" references the file
@@ -136,7 +136,7 @@ So the package you need to install is `qt6-wayland-dev-tools`.
 
 ### Finding specific packages using pkgconfig files
 
-Similarly to the above, certain distributions also allow to query for packages using pkgconfig files:
+Similarly to the above, some distributions also allow querying for packages using pkgconfig files:
 
 * openSUSE: `zypper what-provides 'pkgconfig(gi-docgen)'`
 * Fedora: `dnf provides 'pkgconfig(gi-docgen)'`
@@ -154,7 +154,7 @@ Call Stack (most recent call first):
   CMakeLists.txt:31 (find_package)
 ```
 
-The error here states that CMake could not find the executable named "sass" (most likely a file "/usr/bin/sass").
+This is due to CMake not finding the executable named `sass` (most likely a file `/usr/bin/sass`).
 
 To solve this, you can specifically search for the executable in distribution packages:
 
@@ -182,7 +182,7 @@ This means you are missing the provides plugin:
 sudo pkg install pkg-provides
 ```
 
-Uncomment the following lines in `/usr/local/etc/pkg.conf` and add pkg-provides to the supported plugin list:
+Uncomment the following lines in `/usr/local/etc/pkg.conf` and add `provides` to the supported plugin list:
 
 ```ini
 PKG_PLUGINS_DIR = "/usr/local/lib/pkg/";
