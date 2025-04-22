@@ -19,7 +19,7 @@ LXR has two search modes:
 {{< figure class="text-center" caption="The LXR identifier search." src="lxr-identifier.webp" >}}
 
 2. On the "General search" page you can search for strings:
-  * For example, if you'd like to find in which source file the string "Paste Clipboard Contents" from Dolphin's context menu (accessed by right-clicking any empty space) is defined, type "Paste Clipboard Contents" in the `Or containing:` field. This search includes classes/methods/signals names.
+  * For example, if you'd like to find in which source file the string "Paste Clipboard Contents" from Dolphin's context menu is defined, type "Paste Clipboard Contents" in the `Or containing:` field. This search includes classes/methods/signals names.
 
 {{< figure class="text-center" caption="The LXR general search." src="lxr-general.webp" >}}
 
