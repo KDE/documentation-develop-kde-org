@@ -143,6 +143,14 @@ kde-builder dolphin
 kde-builder dolphin-fork
 ```
 
+To summarize, you have now seen how to:
+
+* compile standalone apps, frameworks, or other projects: `kde-builder kcalc`
+* compile Plasma Desktop: `kde-builder workspace`
+* compile Plasma Mobile: `kde-builder mobile`
+* run what you've built: `kde-builder --run kcalc`
+
+
 ## Useful flags
 
 The following sections will show some useful options for `kde-builder`. They're not required for normal operation, but can be useful in some situations. If you want, you can skip this part and get started with developing.
