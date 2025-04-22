@@ -6,87 +6,56 @@ group: "kde-builder"
 aliases: kdesrc-build-compile
 ---
 
-On this page, you will learn how to use KDE's `kde-builder` tool to build various types of KDE software once you have a development environment set up.
+In this section, you will learn how to use KDE's `kde-builder` tool to build KDE software once you have a development environment set up.
 
 If you haven't set up kde-builder already, please follow the steps in [Set up a development environment]({{< ref "kde-builder-setup" >}}) before proceeding.
 
-It can take an hour or more to compile a KDE application, Framework, or Plasma itself for the first time. The reason for this is that `kde-builder` by default has the [flag](https://kde-builder.kde.org/en/configuration/conf-options-table.html#conf-include-dependencies) `--include-dependencies` enabled, so it will ignore all KDE packages that were installed using the distribution's package manager and will instead build from source all KDE modules that are dependencies of the module you told it to build. The next time you want to compile that or any other piece of KDE software, it will be much faster since most of the dependencies will have already been compiled.
+It can take an hour or more to compile a KDE application, Framework, or Plasma itself for the first time. The reason for this is that `kde-builder` also builds all KDE dependencies of a project by default. The next time you want to compile that or any other piece of KDE software, it will be much faster since most of the dependencies will have already been compiled.
 
 If you don't want to build all dependencies (for instance if you are using a rolling release distro that provides recent versions of software), you can:
 
-* edit the [configuration file](https://kde-builder.kde.org/en/configuration/config-file-overview.html) `~/.config/kde-builder.yaml` and set `include-dependencies: false`
-* or add the `--no-include-dependencies` [flag](https://kde-builder.kde.org/en/cmdline/supported-cmdline-params.html#cmdline-include-dependencies) when running `kde-builder`
+* edit the [configuration file](https://kde-builder.kde.org/en/configuration/config-file-overview.html) at `~/.config/kde-builder.yaml` and set `include-dependencies: false`
+* or add the `--no-include-dependencies` [flag](https://kde-builder.kde.org/en/cmdline/supported-cmdline-params.html#cmdline-include-dependencies) when running `kde-builder`.
 
-## Frameworks
-
-[KDE Frameworks](https://community.kde.org/Frameworks) are libraries of tools and features that can be used by any application or Plasma itself. A list of all of the frameworks can be found in the [KDE Frameworks API documentation](https://api.kde.org/frameworks).
-
-If you want to build a certain library from KDE Frameworks, simply run `kde-builder` followed by the name of the library. For example:
-
-```bash
-kde-builder kirigami
-```
-
-When you tell kde-builder to build a module, it will automatically git clone, configure, build and install the KDE Frameworks that are required by that module.
-
-## Applications
-
-[KDE Applications](https://apps.kde.org/) like [KCalc](https://apps.kde.org/kcalc ), [Dolphin](https://apps.kde.org/dolphin/), [Okular](https://apps.kde.org/okular/), [Konsole](https://apps.kde.org/konsole/) and [Gwenview](https://apps.kde.org/gwenview/) are standalone apps that can be run on multiple platforms, such as Plasma, GNOME, even macOS and Windows!
-
-Note that the Discover app store (git repo name: `plasma-discover`) and System Settings app (git repo name: `systemsettings`) are distributed together with Plasma, but they build like standalone apps using the below instructions. A list of all KDE applications can be found in the [KDE Apps website](https://apps.kde.org/).
-
-To build a single app like KCalc, all you need to do is run:
+To build any project, run
 
 ```bash
 kde-builder kcalc
 ```
 
-This command clones the KDE git repository https://invent.kde.org/utilities/kcalc into the directory `~/kde/src/kcalc`, builds all of KCalc's KDE dependencies, and then builds KCalc itself into `~/kde/build/kcalc`. If the build is successful, the result is installed into `~/kde/usr`. As a result, *there is no need to manually install anything;* `kde-builder` installed it for you!
+You can replace `kcalc` with any other project. You can also build more than one project by listing them here.
+When you tell kde-builder to build a module, it will automatically download the sources using git, configure, build, and install them.
 
-If the build failed for any reason, please see our instructions on how to proceed with [Basic Troubleshooting]({{< ref "kde-builder-failure" >}}).
+The project's source code is downloaded to a folder under `~/kde/src`. The build files are stored under `~/kde/build`, and installed to `~/kde/usr`.
+If the build failed for any reason, please see our instructions on how to proceed with [Troubleshooting]({{< ref "kde-builder-failure" >}}).
 
-To run the self-compiled KCalc, use the `kde-builder --run` command, which launches the built-from-source version of KCalc (from the directory `~/kde/usr`) instead of the version installed using the package manager from your operating system (from the directory `/usr`).
+To run the self-compiled KCalc, use the `kde-builder --run` command, which launches the built-from-source version of KCalc (from the directory `~/kde/usr`) instead of the version installed your package manager.
 
 ```bash
 kde-builder --run kcalc
 ```
 
-Did it run? If so, then **congratulations, you just compiled your own version of KCalc from source code!** 🎉
+Did it run? If so, then congratulations, you just compiled your own version of KCalc from source code! 🎉
 
-## Plasma
+### Building and Running Plasma
 
-[KDE Plasma](https://community.kde.org/Plasma) is the environment in which you can run apps. Plasma is responsible for providing a desktop with wallpaper, app launchers, and widgets; displaying notifications; managing wired and wireless networks; and similar operating-system level tasks.
+`kde-builder` has several aliases for building groups of modules that belong together. These include
+- `workspace`: All projects necessary to run a full Plasma Desktop session.
+- `mobile`: All projects required for running a Plasma Mobile session.
 
-Plasma has multiple *shells*: [Plasma Desktop](https://kde.org/plasma-desktop) for desktop, laptop, and 2-in-1 computers, [Plasma Mobile](https://www.plasma-mobile.org/) for mobile phones and [Plasma Bigscreen](https://plasma-bigscreen.org/) for televisions. They all share certain common components, such as a window manager, networking stack, basic graphical components, and so on. These shared components are found in [Plasma Workspace](https://invent.kde.org/plasma/plasma-workspace).
+After building the `workspace` alias, `kde-builder` will prompt you for password in order to install session files in your system. After this, you can start your self-built Plasma session by choosing it in SDDM before logging in.
 
-### Plasma Desktop
-
-To build the Plasma Desktop environment and all its necessary dependencies, run the following command:
-
-```bash
-kde-builder workspace
-```
-
-`workspace` is an alias that lets you automatically build the projects necessary to run a full Plasma Desktop session. It is different from `plasma-workspace`, which is only one component among many necessary to build Plasma.
-
-Once built, you can make an entire built-from-source Plasma session accessible from the SDDM login screen. This is a good way to test core Plasma components.
-
-It's also necessary for kde-builder to install the necessary session files and D-Bus files into a root directory.
-After the build process is finished, kde-builder will prompt you for your password so it can install the session files.
-
-You can also install these session files manually by running a script that provided by `plasma-workspace`:
+You can also install these files manually by running a script that is provided by `plasma-workspace`:
 
 ```bash
-bash ~/kde/build/plasma-workspace/login-sessions/install-sessions.sh
+~/kde/build/plasma-workspace/login-sessions/install-sessions.sh
 ```
 
 {{< alert title="About SELinux" color="info" >}}
 
-SELinux can interfere with the new D-Bus services working correctly, and the path of least resistance may be to simply turn off enforcement if you are using a distro that ships with it on by default (for example, Fedora). To do this, set the value of `SELINUX` to `permissive` in the file `/etc/selinux`.
+SELinux can interfere with the new D-Bus services working correctly, and the path of least resistance may be to turn off enforcement if you are using a distro that ships with it on by default (e.g., Fedora). To do this, set the value of `SELINUX` to `permissive` in the file `/etc/selinux`.
 
 {{< /alert >}}
-
-After this, you can log out and select your new Plasma session in SDDM's session chooser menu (located in the bottom-left corner of the screen if you're using the Breeze SDDM theme).
 
 Alternatively, you can run the new version of Plasma on top of your existing system for quick testing like so:
 
@@ -95,17 +64,10 @@ source ~/kde/build/plasma-workspace/prefix.sh
 ~/kde/usr/bin/plasmashell --replace
 ```
 
-### Plasma Mobile
-
-To build the Plasma Mobile environment, run the following command:
-
-```
-kde-builder mobile
-```
+#### Plasma Mobile
 
 You can run your custom-built Plasma Mobile in an emulated phone session using a phone-sized window within your existing desktop.
-
-Note that you probably want that this emulated phone session does not use the settings of your current user. For example, your emulated phone session should use Angelfish as the default browser, not Mozilla Firefox. To do so, you can run the following on a terminal:
+To do this, we first set some environment variables that configure the session to behave like a phone and then start a nested KWin session with the mobile shell:
 
 ```bash
 export XDG_RUNTIME_DIR=/tmp/
@@ -119,11 +81,6 @@ export KDE_SESSION_VERSION=5
 export QT_QUICK_CONTROLS_MOBILE=1
 export PLASMA_PLATFORM=phone:handheld
 export $(dbus-launch)
-```
-
-Then you can source the Plasma Mobile prefix to load the development environment and run Plasma Mobile in a nested KWin window:
-
-```bash
 source ~/kde/build/plasma-mobile/prefix.sh
 dbus-run-session kwin_wayland --width 360 --height 720 --xwayland "plasmashell -p org.kde.plasma.mobileshell"
 ```
@@ -173,7 +130,7 @@ project dolphin-fork:
   no-src: true
 ```
 
-After that, you can build the original project just to compile the same build dependencies, and lastly build your fork:
+After that, you can build the original project (only required to compile the dependencies), and lastly build your fork:
 
 ```bash
 kde-builder dolphin
@@ -182,26 +139,17 @@ kde-builder dolphin-fork
 
 ## Useful flags
 
-Congratulations! You have seen how to:
-
-* compile standalone apps: `kde-builder kcalc`
-* compile Plasma Desktop: `kde-builder workspace`
-* compile Plasma Mobile: `kde-builder mobile`
-* run what you've built: `kde-builder --run kcalc`
-
-Now it is possible for you to make changes to the code of the program you want to work on, then simply rebuild the project so it displays your changes.
-
-In this case, it's useful to know a few commonly used flags for kde-builder.
+The following sections will show some useful options for `kde-builder`. They're not required for normal operation, but can be useful in some situations. If you want, you can skip this part and get started with developing.
 
 ### Check the list of things that will be built
 
-To get a general idea of how many and which programs are going to be built for a certain project, you can use the `--pretend` or `--dry-run` flag:
+To get a general idea of how many and which dependencies are going to be built for a certain project, you can use the `--pretend` or `--dry-run` flag:
 
 ```bash
 kde-builder --pretend kcalc
 ```
 
-### Rebuild the current project and stay on current branch
+### Rebuild a project and stay on current branch
 
 Code changes should be done in a separate git branch, not in the `master` branch.
 
@@ -233,9 +181,7 @@ kde-builder kcalc --ignore-projects gpgme
 
 ### Specifying executable names when running
 
-#### kde-builder
-
-To run an application, simply use the flag `--run`.
+To run an application, use the flag `--run`.
 
 ```bash
 kde-builder --run plasma-discover
@@ -250,27 +196,7 @@ kde-builder kate
 kde-builder --run kate-syntax-highlighter --list-themes
 ```
 
-{{< alert color="info" title="⏳ With kdesrc-build..." >}}
-
-<details>
-<summary>Click here to know how this was done with kdesrc-build</summary></br>
-
-In some modules, the build process will result in an executable that does not match the module name: for example, the module `discover` does not match the executable `plasma-discover`. Because kdesrc-build had no way to associate the name of the project with the executable name, you needed to use the `--exec` or `-e` flag:
-
-```bash
-kdesrc-build --run --exec plasma-discover discover
-```
-
-Without this flag, attempting to run the application will result in an error similar to:
-
-```
-Executable "discover" does not exist.
-Try to set executable name with -e option.
-```
-
-{{< /alert >}}
-
-Alternatively, many applications can be run directly from their build directory.
+Alternatively, most applications can be run directly from their build directory.
 
 ### Running an application after making changes to one of its dependencies
 
@@ -289,16 +215,12 @@ kde-builder --run kcalc
 
 ## Next Steps
 
-Now you can compile anything in KDE from its source code! Time to think about what to do with this superpower...
+What now?
 
 Perhaps you went through this whole procedure and still have no idea what to work on:
 
-[Choose what to work on]({{< ref "help-choosing" >}})
+In this case, [choose what to work on]({{< ref "help-choosing" >}}).
 
-Or perhaps you'd like to further adapt kde-builder to your needs by setting up your preferred IDE. If that's what you need, you can visit the following section:
+Or perhaps you'd like to further adapt kde-builder to your needs by setting up your preferred IDE. If that's what you need, have a look at [IDE Configuration]({{< ref "ide" >}}).
 
-[IDE Configuration]({{< ref "ide" >}})
-
-If you already know what you want to work on and you are in fact already working on it, then it might be time to learn how to make a merge request and send your changes:
-
-[Submit your new software changes for review](https://community.kde.org/Infrastructure/GitLab#Submitting_a_merge_request)
+If you already know what you want to work on and you are in fact already working on it, then it might be time to learn how to make a merge request and send your changes. See [Submit your new software changes for review](https://community.kde.org/Infrastructure/GitLab#Submitting_a_merge_request) for more information.
