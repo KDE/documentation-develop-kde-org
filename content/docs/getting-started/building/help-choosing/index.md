@@ -25,7 +25,7 @@ There are many other lists of issues you can take a look at:
 
 * The [Bug Triaging team](https://community.kde.org/Guidelines_and_HOWTOs/Bug_triaging) has [many search queries](https://community.kde.org/Guidelines_and_HOWTOs/Bug_triaging#Decide_what_to_work_on) that can be useful to search for bugs.
 
-* The [Gardening team](https://community.kde.org/Gardening) has a [stale merge requests list](https://invent.kde.org/dashboard/merge_requests?draft=no&not%5Blabel_name%5D%5B%5D=Gardening%3A+Stale&scope=all&sort=updated_asc&state=opened) full of old merge requests with interesting but unfinished ideas. You can ask their developers if it's okay to take over the work on them.
+* The [Gardening team](https://community.kde.org/Gardening) has a [stale merge requests list](https://invent.kde.org/dashboard/merge_requests?draft=no&not%5Blabel_name%5D%5B%5D=Gardening%3A+Stale&scope=all&sort=updated_asc&state=opened) full of old merge requests with interesting but unfinished ideas. You can ask their developers if it's okay to take over the work from them.
 
 * The [list of app ideas](https://community.kde.org/App_ideas) is a good entrypoint if you are looking to make a new KDE application from scratch.
 
