@@ -10,7 +10,7 @@ Let's first take a look at our previous manifest to understand what each thing d
 
 {{< code-toggle prefix="kate" >}}id: org.kde.kate
 runtime: org.kde.Platform
-runtime-version: "5.15-21.08"
+runtime-version: "6.8"
 sdk: org.kde.Sdk
 command: kate
 desktop-file-name-suffix: " (Nightly)"

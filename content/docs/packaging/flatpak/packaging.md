@@ -19,6 +19,8 @@ Instead of depending on many other packages and unpacking all of them into one s
 Runtimes are collections of common frameworks and libraries used for specific types of applications. In our case, that's the [KDE Flatpak Runtime](https://invent.kde.org/packaging/flatpak-kde-runtime), which includes KDE Frameworks and Qt libraries.
 Once users install the common KDE runtime, applications make use of its libraries, and can be distributed together with their more special library requirements (like a protocol implementation for an instant messenger) in one flatpak package.
 
+Before building flatpaks, from your Linux operating system, install the binary packages for flatpak, flatpak-builder.
+
 Building flatpaks consists mostly of three steps:
 * Finding and installing the necessary Flatpak SDK and Runtime for your application. Most can be found in the common flatpak repository, Flathub.
 
@@ -37,7 +39,7 @@ To install it, run:
 
 {{< code-toggle prefix="kate" >}}id: org.kde.kate
 runtime: org.kde.Platform
-runtime-version: "5.15-21.08"
+runtime-version: "6.8"
 sdk: org.kde.Sdk
 command: kate
 desktop-file-name-suffix: " (Nightly)"
