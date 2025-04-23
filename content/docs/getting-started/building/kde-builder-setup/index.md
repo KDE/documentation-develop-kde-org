@@ -37,7 +37,15 @@ Some Linux distributions do not provide development packages for [KDE Frameworks
 
 ## Set up kde-builder
 
-Before setting it up, you will need some free disk space. Budget 50 GB of storage space for KDE Frameworks + KDE Plasma, and 10-30 GB more for some apps as well. Then run the following:
+Before setting things up, you will need to make sure you have some free disk space. `kde-builder` itself is a very lightweight tool, but downloading the source code of lots of software, generating build artifacts during compilation, and installing the necessary files takes space.
+
+If you plan on [building an application](/docs/getting-started/building/kde-builder-compile#application) or on following our [Kirigami tutorial](/docs/getting-started/kirigami), you should allocate at least 15 GB of storage space.
+
+If you plan on [building Plasma Desktop](/docs/getting-started/building/kde-builder-compile#plasma), you should allocate at least 50 GB of storage space.
+
+If you cannot afford this storage, you might want to consider [building projects manually](/docs/getting-started/building/cmake-build) or with [distrobox](/docs/getting-started/building/containers-distrobox).
+
+Then run the following:
 
 ```bash
 cd ~

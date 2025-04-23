@@ -53,7 +53,7 @@ on your distribution and how often it updates.
 |                                 | manual CMake compilation  | ⚠️ Possible only inside a container. |
 |                                 | containers                | ✅ The only way to build software in these systems. |
 
-[^1]: "Sufficiently up-to-date" means distributions like the latest non-LTS Ubuntu, Debian Sid, openSUSE Tumbleweed, Fedora, Arch Linux, and their derivatives.
+[^1]: "Sufficiently up-to-date" means distributions like the latest non-LTS Ubuntu, Debian Testing, openSUSE Tumbleweed, Fedora, Arch Linux, and their derivatives.
 [^2]: "Core software" refers to non-standalone software that is essential for Plasma to function like KWin, Plasma Desktop, or KIO.
 [^3]: Currently undocumented.
 [^4]: "Not up-to-date" means distributions such as Debian Stable, Ubuntu LTS or two versions behind current release, or openSUSE Leap.

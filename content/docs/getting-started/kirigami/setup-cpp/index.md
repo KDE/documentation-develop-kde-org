@@ -19,6 +19,10 @@ Before getting started, we will need to install Kirigami on our machine. There a
 * [Using kde-builder](#kde-builder)
 * [Installing Kirigami with Craft](#craft)
 
+If you are on a [sufficiently up-to-date distribution](docs/getting-started/building#choosing) such as Debian Testing, latest non-LTS Ubuntu, Fedora, openSUSE Tumbleweed, or Arch, you may [install Kirigami from your distribution](#linux).
+
+If you are on a [not up-to-date distribution](docs/getting-started/building#choosing) such as Debian Stable or LTS Ubuntu, you should use [kde-builder](#kde-builder) for this tutorial. It should use at most 2 GB of storage.
+
 ### Installing Kirigami from the repositories in your Linux distribution {#linux}
 
 We need a C++ compiler, Qt development packages, and Kirigami. Open a terminal application and run one of the following, depending on which Linux distribution you are using:

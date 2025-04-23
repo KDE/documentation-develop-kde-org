@@ -39,7 +39,7 @@ kde-builder --run kcalc
 
 Did it run? If so, then congratulations, you just compiled your own version of KCalc from source code! 🎉
 
-## Building and Running Plasma
+## Building and Running Plasma {#plasma}
 
 `kde-builder` has several aliases for building groups of modules that belong together. These include
 - `workspace`: All projects necessary to run a full Plasma Desktop session.
