@@ -115,13 +115,13 @@ modules though it is even discouraged in applications. Static objects lead to
 lots of problems such as hard to debug crashes due to undefined order of
 construction/destruction.
 
-Instead, use a static pointer, together with `G_GLOBAL_STATIC` which is defined
+Instead, use a static pointer, together with `Q_GLOBAL_STATIC` which is defined
 in `<QGlobalStatic>` and is used like this:
 
 ```cpp
 class A { ... };
 
-G_GLOBAL_STATIC(A, globalA)
+Q_GLOBAL_STATIC(A, globalA)
 
 void doSomething()
 {
@@ -143,7 +143,7 @@ void installPostRoutine() {
 ```
 
 See the [API documentation](https://doc.qt.io/qt-6/qglobalstatic.html) for
-`G_GLOBAL_STATIC` for more information.
+`Q_GLOBAL_STATIC` for more information.
 
 ### Constant data
 
