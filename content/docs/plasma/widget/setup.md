@@ -14,7 +14,7 @@ aliases:
 
 To start a new widget from scratch, first create a folder for your new widget somewhere in your coding directory (eg: `~/Code/plasmoid-helloworld`).
 
-Inside it create another folder called `package`. Everything inside the `package` folder will be what we eventually install to `~/.local/share/plasma/plasmoids/com.github.zren.helloworld/`. Eventually we will zip the contents of `package` and share them online. We can keep text editor files, build scripts, screenshots, etc outside the `package` directory.
+Inside it create another folder called `package`. Everything inside the `package` folder will be what we eventually install to `~/.local/share/plasma/plasmoids/com.example.helloworld/`. Eventually we will zip the contents of `package` and share them online. We can keep text editor files, build scripts, screenshots, etc outside the `package` directory.
 
 Inside the package folder will be a `metadata.json`. This file will describe the name of the widget, the category it's in, and various other plasma specific keys like the main QML file.
 
@@ -50,13 +50,17 @@ Inside the `metadata.json` file we need to set the `Name` of the widget.
 
 `Icon` is the icon name associated with the widget. You can search for icon names in the `/usr/share/icons` folder. You can also look for an icon name by right-clicking your app launcher widget then editing the icon in its settings. It uses a searchable interface and lists them by category. Plasma's SDK also has the Cuttlefish app ([screenshot](https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png)) which you can install with `sudo apt install plasma-sdk`.
 
-`Id` needs to be a unique name, since it's used for the folder name it's installed into. You could use `com.github.zren.helloworld` if you're on github, or use `org.kde.plasma.helloworld` if you're planning on contributing the widget to KDE.
+`Id` needs to be a unique name, since it's used for the folder name it's installed into. If you are planning to contribute the widget to KDE, you can use `org.kde.helloworld` for example, otherwise you can use any id like `com.example.helloworld` or `com.github.zren.helloworld`.
 
 Widgets installed by the user (without root) like when you "Install New Widgets" will be installed to `~/.local/share/plasma/plasmoids/` (which may not yet exist). The default widgets shipped with KDE are installed to `/usr/share/plasma/plasmoids/`.
 
 `Category` is the category the widget can be filtered with in the widget list. A list of category names can be found [here]({{< ref "properties.md#category" >}}).
 
-`X-Plasma-API` and `KPackageStructure` are also needed to just define that this package is a plasma widget, and where its entry point is.
+`KPackageStructure` is also needed to just define that this package is a plasma widget, and where its entry point is.
+
+`"X-Plasma-API-Minimum-Version" : "6.0"` is required to enable Plasma 6 support. Plasmoids without this key are assumed to only work with Plasma 5 and will not be mad available in the UI.
+
+For Plasma 6 changes, read the [Porting Plasmoids to KF6]({{< ref "porting_kf6.md" >}}) guide.
 
 For the other properties, read the [`metadata.json` section in the Widget Properties page]({{< ref "properties.md#metadatajson" >}}).
 
@@ -76,12 +80,13 @@ For the other properties, read the [`metadata.json` section in the Widget Proper
         "Category": "System Information",
         "Description": "A widget to take over the world!",
         "Icon": "battery",
-        "Id": "com.github.zren.helloworld",
+        "Id": "com.example.helloworld",
         "Name": "Hello World",
         "Version": "1",
-        "Website": "https://github.com/Zren/plasmoid-helloworldplugin"
+        "Website": "https://example.com/user/plasmoid-helloworldplugin",
+        "BugReportUrl": "https://example.com/user/plasmoid-helloworldplugin/bugs"
     },
-    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-API-Minimum-Version": "6.0",
     "KPackageStructure": "Plasma/Applet"
 }
 ```
@@ -100,11 +105,13 @@ This is the entry point. Various properties are available to be set. You should 
 * You can also have the widget inside another widget (a containment) like the system tray or the panel itself.
 * The widget can also be run like an application in its own window (Calculator).
 
-`plasmoid.location` and `plasmoid.formFactor` can tell you how the widget is placed. `plasmoid` is a global variable which is defined when you `import org.kde.plasma.plasmoid 2.0`. Read more below.
+The root of the applet is required to be a `PlasmoidItem` in Plasma 6.
 
-`Plasmoid.compactRepresentation` (with a capital) and `Plasmoid.fullRepresentation` are used to define the layout of the small "icon" view and the full "popup" view. These are both properties of the main `Item`. If neither are set, by default the main `Item` is the full representation.
+`plasmoid.location` and `plasmoid.formFactor` can tell you how the widget is placed. `plasmoid` is a global variable which is defined when you `import org.kde.plasma.plasmoid`.
 
-If you change the compact representation, you will need to use a [`MouseArea`](https://doc.qt.io/qt-5/qml-qtquick-mousearea.html) to toggle the `plasmoid.expanded` property. See the [`DefaultCompactRepresentation.qml`](https://github.com/KDE/plasma-desktop/blob/master/desktoppackage/contents/applet/DefaultCompactRepresentation.qml) for an example.
+`Plasmoid.compactRepresentation` (note the capitalization) and `Plasmoid.fullRepresentation` are used to define the layout of the small "icon" view and the full "popup" view. These are both properties of the main `PlasmoidItem`. If neither are set, by default the main `PlasmoidItem` is the full representation. This behavior can be modified using the `preferredRepresentation` property of the root `PlasmoidItem`
+
+If you change the compact representation, you will need to use a `MouseArea` [QML Item](https://doc.qt.io/qt-6/qml-qtquick-mousearea.html) to toggle the `plasmoid.expanded` property. See the `DefaultCompactRepresentation.qml` [example here](https://github.com/KDE/plasma-desktop/blob/master/desktoppackage/contents/applet/DefaultCompactRepresentation.qml).
 
 `Layout.preferredWidth` can be used to define the default width of a panel widget, or the size of the popup window (unless it is in the system tray). The system tray has a fixed hardcoded size for its popups. `Layout.preferredWidth` can also define the width of the compact "icon" view in the horizontal panel, not just the full "popup" width. Note that the `Layout.preferredWidth`/`Layout.preferredHeight` of the `Plasmoid.compactRepresentation` will automatically scale to the thickness of the panel depending on if it's a vertical or horizontal panel.
 
@@ -115,8 +122,6 @@ If you change the compact representation, you will need to use a [`MouseArea`](h
 You can set the tooltip contents and various other things in the `main.qml`.
 
 ### Examples of `main.qml`
-
-* Various examples in the [Getting Started](https://techbase.kde.org/Development/Tutorials/Plasma5/QML2/GettingStarted#main.qml) tutorial on the KDE wiki.
 * [colorpicker/package/contents/ui/main.qml](https://github.com/KDE/kdeplasma-addons/blob/master/applets/colorpicker/package/contents/ui/main.qml)
 * [fifteenPuzzle/package/contents/ui/main.qml](https://github.com/KDE/kdeplasma-addons/blob/master/applets/fifteenPuzzle/package/contents/ui/main.qml)
 
@@ -125,12 +130,16 @@ You can set the tooltip contents and various other things in the `main.qml`.
 <div class="filepath">contents/ui/main.qml</div>
 
 ```qml
-import QtQuick 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtQuick
+import org.kde.plasma.plasmoid
+import org.kde.plasma.components as PlasmaComponents
 
-PlasmaComponents.Label {
-    text: "Hello World!"
+PlasmoidItem{
+    PlasmaComponents.Label {
+        text: "Hello World!"
+    }
 }
+
 ```
 
 ---
@@ -140,16 +149,18 @@ To show the text in the panel rather than in a popup:
 <div class="filepath">contents/ui/main.qml</div>
 
 ```qml
-import QtQuick 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.plasmoid
 
-PlasmaComponents.Label {
-    text: "Hello World!"
-
+PlasmoidItem{
     // Always display the full view. Never show the compact icon view
     // like it does by default when shown in the panel.
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+
+    PlasmaComponents.Label {
+        text: "Hello World!"
+    }
 }
 ```
 
@@ -167,8 +178,8 @@ To set the popup size:
 {{< /sections >}}
 
 {{< alert title="Note" color="info" >}}
-Plasmoids previously used a metadata.desktop file. This is discouraged, because the conversion to JSON will need to be done at runtime.
-Shipping a JSON file directly is supported for all of Plasma 5.
+Plasmoids previously used a `metadata.desktop` file. This is discouraged, because the conversion to JSON will need to be done at runtime.
+Shipping a JSON file directly is supported for all of Plasma 5/6.
 
 In case you still have a desktop file inside of your project you can convert it to JSON and afterwards remove it.
 
@@ -176,6 +187,11 @@ In case you still have a desktop file inside of your project you can convert it 
 desktoptojson -s plasma-applet.desktop -i metadata.desktop
 rm metadata.desktop
 ```
+
+If you automatically converted the `metadata.json` from a `metadata.desktop`, the `KPlugin` section may still contain the `ServiceTypes` key. This needs to be replaced by a `KPackageStructure` entry in the json's top level.
+
+See the [Porting an existing plasmoid]({{< ref "porting_kf6.md#porting-an-existing-plasmoid" >}}) section of the KF6 porting guide for fixes in the `metadata.json` generated from the desktop file.
+
 {{< /alert >}}
 
 
