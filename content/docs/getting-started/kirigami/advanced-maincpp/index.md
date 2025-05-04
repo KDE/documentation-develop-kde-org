@@ -16,7 +16,7 @@ Here, we'll be going over the `main.cpp` file we created in the [Getting Started
 
 ## What it does
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/main.cpp" highlight="cpp" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/main.cpp" highlight="cpp" >}}
 
 First we must include a number of Qt [header files](https://www.learncpp.com/cpp-tutorial/header-files/), allowing us to use their functions. In this case, we include a number of Qt headers that handle application logic, and to allow us to read QML files.
 
