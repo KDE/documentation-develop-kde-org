@@ -11,7 +11,7 @@ Instead, you can build KDE software inside a container. Distrobox eases the cont
 
 Additionally, distrobox has the ability to run graphical applications from within the container.
 
-You will be able to run [kde-builder inside a container]({{< ref "#with-kde-builder" >}}) just fine, with the caveat that you won’t be able to run a Plasma Desktop session from the login screen.
+You will be able to run [kde-builder inside a container]({{< ref "#kde-builder" >}}) just fine, with the caveat that you won’t be able to run a Plasma Desktop session from the login screen.
 
 You can also build KDE software by [running CMake commands inside the container]({{< ref "cmake-build" >}}) just like you would outside the container.
 
