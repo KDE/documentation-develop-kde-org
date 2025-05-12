@@ -14,8 +14,8 @@ aliases:
 Before getting started, we will need to install Kirigami and PySide on our machine.
 
 {{< installpackage
-    opensuse="python3-pipx python3-qt6 python3-pyside6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style AppStream-compose"
-    fedora="pipx python3-pyqt6 python3-pyside6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style appstream-compose"
+    opensuse="python3-pipx python3-qt6 python3-pyside6 kf6-kirigami-devel flatpak-builder kf6-qqc2-desktop-style AppStream-compose"
+    fedora="pipx python3-pyqt6 python3-pyside6 kf6-kirigami-devel flatpak-builder kf6-qqc2-desktop-style appstream-compose"
     arch="python-pipx python-pyqt6 pyside6 kirigami flatpak-builder qqc2-desktop-style appstream" >}}
 
 If you are on a distribution with old PySide6 or PyQt6 packages, this tutorial works with [Building software with distrobox](/docs/getting-started/building/containers-distrobox).
