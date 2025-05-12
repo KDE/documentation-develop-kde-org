@@ -42,11 +42,11 @@ is provided by the `python3-markdown.json` manifest file. We are going
 to create this manifest automatically using `flatpak-pip-generator`.
 
 Download
-[flatpak-pip-generator](https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/pip/flatpak-pip-generator),
+[flatpak-pip-generator](https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/pip/flatpak-pip-generator.py),
 and save it into the `simplemdviewer/env/bin/` directory:
 
 ```bash
-wget https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/pip/flatpak-pip-generator --directory-prefix env/bin
+wget https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/pip/flatpak-pip-generator.py --directory-prefix env/bin
 ```
 
 The generator has a single dependency to run, `requirements-parser`. After
