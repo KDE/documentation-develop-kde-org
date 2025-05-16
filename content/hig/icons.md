@@ -109,11 +109,17 @@ For inline action buttons in the trailing position, use icons-only buttons with 
 
 
 ## Symbolic or full-color icons?
-Once you've chosen an icon, determine whether it should be *symbolic* or *full-color*. At small sizes (especially `small` and `smallMedium`), full-color icons can become visual smudges or contribute to a “heavy” appearance when many are shown in a row or column. Prefer symbolic ones by appending `-symbolic` to the name of the icon you're asking the icon theme to provide. This causes the icon loader to provide a symbolic monochrome icon if the theme has one. Full-color icons are better at `medium` size and larger.
+Once you've chosen an icon, determine whether it should be *symbolic* or *full-color* based on the size at which it will be displayed:
 
-Always use symbolic icons for menu items and standard-sized buttons.
+Icon size                   | Style to use
+----------------------------|-------------
+`small` (16x16)             | Symbolic
+`smallMedium` (22x22)       | Almost always symbolic, but in list views with very few items, full-color may be acceptable
+`medium` (32x32) and larger | Full-color
 
-Always use symbolic icons for the `small` icon size in list items, and *generally* at the `smallMedium` size too. Context dictates whether this makes sense or not: with only a small number of list items, full-color icons may look better. For large or dense lists, prefer symbolic icons.
+To express the preference for a symbolic icon, append `-symbolic` to the name of the icon you're asking the icon theme to provide. This causes the icon loader to provide a symbolic monochrome icon if the theme has both symbolic and full-color icons at the requested size.
+
+Remember that because KDE apps support icon theming, all you can do is express a preference; ultimately the final choice of icon style is up to the icon theme.
 
 
 ## Overlaying emblems on top of content
