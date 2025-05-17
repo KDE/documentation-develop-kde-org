@@ -76,7 +76,7 @@ Here is where we would put any backend code that changes things behind the scene
 
 In this C++ file we define the constructor for the class in the previous file. We include some basic metadata about this KCM and we provide the buttons that we will want included in our window.
 
-## package/kcm_time.json
+## kcm_time.json
 
 {{< readfile file="/content/docs/features/kcm/src/kcm_time.json" highlight="json" >}}
 
@@ -88,7 +88,7 @@ This `.json` file provides metadata about our KCM. These entries specify the fol
 * `X-KDE-System-Settings-Parent-Category` defines the category systemsettings5 is showing the module in.
 * `X-KDE-Keywords` defines Keywords used for searching modules.
 
-## package/contents/ui/main.qml
+## ui/main.qml
 
 {{< readfile file="/content/docs/features/kcm/src/ui/main.qml" highlight="json" >}}
 
