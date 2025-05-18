@@ -54,7 +54,7 @@ panelIds.forEach((panel) => { //search through the panels
 
 ## Running Scripts
 
-There are three ways that scripts can be executed in plasma-desktop:
+There are four ways that scripts can be executed in plasma-desktop:
 
 - **on first run**: when `plasmashell` is started without any
   pre-existing configuration, the script called `layout.js` in the shell
@@ -118,6 +118,10 @@ There are three ways that scripts can be executed in plasma-desktop:
   `desktop console /path/to/file` or via dbus with:
   ```bash
   qdbus org.kde.plasma-desktop /MainApplication loadScriptInInteractiveConsole /path/to/file
+  ```
+- **programmatically:** run a script file directly from the terminal with:
+  ```bash
+  qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "$(cat /path/to/file.js)"
   ```
 
 ## Global theme dependent default setup for applets
