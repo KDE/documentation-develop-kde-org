@@ -7,6 +7,8 @@ groups:
     key: "help"
   - name: "kde-builder"
     key: "kde-builder"
+  - name: "Craft"
+    key: "craft"
   - name: "Manual builds"
     key: "cmake-build"
   - name: "Containers"
