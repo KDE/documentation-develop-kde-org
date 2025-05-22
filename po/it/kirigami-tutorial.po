@@ -1,23 +1,23 @@
 #
-# Shinjo Park <kde@peremen.name>, 2022.
+# SPDX-FileCopyrightText: 2022, 2025 Paolo Zamponi <zapaolo@email.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-22 01:57+0000\n"
-"PO-Revision-Date: 2022-05-08 01:20+0200\n"
-"Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-kr@kde.org>\n"
-"Language: ko\n"
+"PO-Revision-Date: 2025-05-15 00:01+0200\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
-msgstr ""
+msgstr "Primi passi con Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Kirigami"
@@ -25,37 +25,35 @@ msgstr "Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Setup"
-msgstr ""
+msgstr "Configurazione"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Introduction"
-msgstr "소개"
+msgstr "Introduzione"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Style"
-msgstr "스타일"
+msgstr "Stile"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Components"
-msgstr "구성 요소"
+msgstr "Componenti"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Advanced"
-msgstr "고급"
+msgstr "Avanzate"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Manipulating data"
-msgstr ""
+msgstr "Manipolazione dei dati"
 
 #: content/docs/getting-started/kirigami/_index.md:0
-#, fuzzy
-#| msgid "Kirigami"
 msgid "Kirigami Addons"
-msgstr "Kirigami"
+msgstr "Aggiunte di Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
-msgstr ""
+msgstr "Impara a creare la tua prima applicazione con Kirigami\n"
 
 #: content/docs/getting-started/kirigami/_index.md:30
 msgid ""
@@ -67,6 +65,14 @@ msgid ""
 "if it is being used on a mobile device, it will accept input from a "
 "touchscreen and adapt to a smaller portrait screen. And so on."
 msgstr ""
+"Questa esercitazione ti guiderà nel processo di creazione di una semplice "
+"applicazione usando il [framework Kirigami](/frameworks/kirigami). Una "
+"*semplice applicazione* in questo contesto significa che le persone possono "
+"usare il programma in maniera semplice, indipendentemente dal dispositivo su "
+"cui è in esecuzione. Se è un computer desktop si adatterà ad un grande "
+"schermo, oltre al mouse e alla tastiera; se viene utilizzata su un "
+"dispositivo mobile, accetterà input da uno schermo tattile e si adatterà ad "
+"uno schermo piccolo. E così via."
 
 #: content/docs/getting-started/kirigami/_index.md:38
 msgid ""
@@ -77,6 +83,12 @@ msgid ""
 "Kirigami is a set of Qt Quick components designed for creating convergent "
 "applications."
 msgstr ""
+"Kirigami ha come base il linguaggio QML e i componenti Qt Quick Controls 2 "
+"forniti dal progetto Qt. QML ha un supporto integrato per i sistemi a tocco, "
+"che lo rende la scelta ideale per le applicazioni per smartphone. I "
+"componenti Qt Quick sono elementi visuali riutilizzabili che possiamo usare "
+"nella costruzione dell'interfaccia delle nostre applicazioni. Kirigami è un "
+"insieme di componenti Qt Quick progettato per creare applicazioni semplici."
 
 #: content/docs/getting-started/kirigami/_index.md:44
 msgid ""
@@ -143,7 +155,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:12
 msgid "About KDE"
-msgstr ""
+msgstr "Informazioni su KDE"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:14
 msgid ""
@@ -161,7 +173,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:22
 msgid "About Page"
-msgstr ""
+msgstr "Pagina delle informazioni"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:24
 msgid ""
@@ -179,10 +191,12 @@ msgstr ""
 #: content/docs/getting-started/kirigami/addons-about/index.md:30
 msgid "The About page of our application should look like this:"
 msgstr ""
+"La pagina sulle informazioni della nostra applicazione dovrebbe assomigliare "
+"a questa:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:34
 msgid "Using JSON instead of KAboutData"
-msgstr ""
+msgstr "Uso di JSON invece di KAboutData"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:36
 msgid ""
@@ -195,7 +209,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:38
 msgid "Create a `MyAboutPage.qml` like this:"
-msgstr ""
+msgstr "Crea una `MyAboutPage.qml` come questa:"
 
 #: content/docs/getting-started/kirigami/addons-about/index.md:42
 msgid "And then adjust your `Main.qml` to include your new about page:"
@@ -241,7 +255,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:23
 msgid "Needed Changes"
-msgstr ""
+msgstr "Modifiche necessarie"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:25
 msgid "Change `Main.qml` to include our new Settings page:"
@@ -254,14 +268,12 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:87
-#, fuzzy
-#| msgid "Delegate"
 msgid "Form Delegates"
-msgstr "위임"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:89
 msgid "FormCard and FormCardPage"
-msgstr ""
+msgstr "FormCard e FormCardPage"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:91
 msgid ""
@@ -311,10 +323,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:120
-#, fuzzy
-#| msgid "Header"
 msgid "FormHeader"
-msgstr "머리글"
+msgstr "FormHeader"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:122
 msgid ""
@@ -332,7 +342,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:146
 msgid "FormTextDelegate and FormSectionText"
-msgstr ""
+msgstr "FormTextDelegate e FormSectionText"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:148
 msgid "Let's start simple, with plain text."
@@ -372,13 +382,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:192
 msgid "It should end up looking like this:"
-msgstr ""
+msgstr "L'aspetto finale dovrebbe essere questo:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:196
-#, fuzzy
-#| msgid "Delegate"
 msgid "FormButtonDelegate"
-msgstr "위임"
+msgstr "FormButtonDelegate"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:198
 msgid ""
@@ -414,7 +422,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:247
 msgid "FormRadioDelegate, FormCheckDelegate and FormSwitchDelegate"
-msgstr ""
+msgstr "FormRadioDelegate, FormCheckDelegate e FormSwitchDelegate"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:249
 msgid ""
@@ -455,11 +463,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:282
 msgid "Best Practices"
-msgstr ""
+msgstr "Migliori pratiche"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:284
 msgid "<details><summary>Click here to read more</summary>\n"
-msgstr ""
+msgstr "<details><summary>Fai clic qui per leggere di più</summary>\n"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:286
 msgid ""
@@ -481,6 +489,8 @@ msgid ""
 "See [this page](https://doc.qt.io/qt-6/qtquick-bestpractices.html#prefer-"
 "declarative-bindings-over-imperative-assignments) for details."
 msgstr ""
+"Per i dettagli vedi [questa pagina](https://doc.qt.io/qt-6/qtquick-"
+"bestpractices.html#prefer-declarative-bindings-over-imperative-assignments)"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:300
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:602
@@ -492,7 +502,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:221
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:256
 msgid "</details>\n"
-msgstr ""
+msgstr "</details>\n"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:306
 msgid ""
@@ -512,11 +522,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:333
 msgid "So far our application should look like this:"
-msgstr ""
+msgstr "Alla fine la nostra applicazione dovrebbe assomigliare a questa:"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:337
 msgid "FormComboBoxDelegate"
-msgstr ""
+msgstr "FormComboBoxDelegate"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:339
 msgid ""
@@ -580,7 +590,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:382
 msgid "FormDelegateSeparator"
-msgstr ""
+msgstr "FormDelegateSeparator"
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:384
 msgid ""
@@ -641,31 +651,31 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:14
 msgid "Setting up your project"
-msgstr ""
+msgstr "Configurazione del progetto"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:16
 msgid "The initial project structure will look like so:"
-msgstr ""
+msgstr "La struttura iniziale del progetto assomiglierà a questa:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:25
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:148
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:103
 #: content/docs/getting-started/kirigami/setup-python/index.md:44
 msgid "Tip"
-msgstr ""
+msgstr "Suggerimento"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:27
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:105
 msgid "You can quickly create this file structure with:"
-msgstr ""
+msgstr "Puoi creare rapidamente questa struttura di file con:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:37
 msgid "We start by using a very standard `CMakeLists.txt`:"
-msgstr ""
+msgstr "Abbiamo iniziato usando un `CMakeLists.txt` molto standard:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:41
 msgid "The interesting part will be the `main.cpp`:"
-msgstr ""
+msgstr "La parte interessante sarà nel `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:45
 msgid ""
@@ -707,7 +717,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:55
 msgid "FormCard and FormButtonDelegate"
-msgstr ""
+msgstr "FormCard e FormButtonDelegate"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:57
 msgid ""
@@ -719,7 +729,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:59
 msgid "Initially, our `Main.qml` should look like this:"
-msgstr ""
+msgstr "Inizialmente, il nostro `Main.qml` dovrebbe apparire così:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:63
 msgid ""
@@ -751,12 +761,16 @@ msgid ""
 "Importing `org.kde.kirigamiaddons.formcard` makes all FormCard components "
 "available to your QML file."
 msgstr ""
+"L'importazione di `org.kde.kirigamiaddons.formcard` rende disponibili nel "
+"fine QML tutti i componenti FormCard."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:71
 msgid ""
 "We will have only a single section in our main page, so we add a single "
 "FormCard:"
 msgstr ""
+"Avremo solo una singola sezione nella nostra pagina principale, quindi "
+"aggiungiamo un singolo FormCard:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:75
 msgid ""
@@ -772,6 +786,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:77
 msgid "We can simply add a few buttons inside our FormCard:"
 msgstr ""
+"Possiamo semplicemente aggiungere alcuni pulsanti all'interno della nostra "
+"FormCard:"
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:81
 msgid ""
@@ -792,11 +808,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "About page"
-msgstr ""
+msgstr "Pagina delle informazioni"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
 msgid "Informations about your application"
-msgstr ""
+msgstr "Informazioni sull'applicazione"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:10
 msgid ""
@@ -804,16 +820,22 @@ msgid ""
 "that shows the copyright notice of the application together with the list of "
 "contributors and some information of which platform it's running on."
 msgstr ""
+"La [Kirigami.AboutPage](docs:kirigami2;AboutPage) ti permette di avere un "
+"qualcosa per mostrare la notifica del diritto d'autore dell'applicazione, "
+"insieme all'elenco dei contributori e a qualche informazione su quale "
+"piattaforma l'applicazione è in esecuzione."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:12
 msgid ""
 "First, we are going to edit our `main.cpp` file from previous tutorials."
 msgstr ""
+"Per prima cosa modificheremo il nostro file `main.cpp`, che abbiamo visto "
+"nelle esercitazioni precedenti."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:14
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:204
 msgid "main.cpp"
-msgstr ""
+msgstr "main.cpp"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:18
 msgid ""
@@ -851,7 +873,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:26
 msgid "main.qml"
-msgstr ""
+msgstr "main.qml"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:30
 msgid ""
@@ -865,10 +887,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:33
-#, fuzzy
-#| msgid "CMake"
 msgid "CMakeLists"
-msgstr "CMake"
+msgstr "CMakeLists"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:37
 msgid ""
@@ -888,27 +908,32 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:332
 #: content/docs/getting-started/kirigami/setup-python/index.md:145
 msgid "Running the application"
-msgstr ""
+msgstr "Esecuzione dell'applicazione"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:46
 msgid ""
 "Now if you run your application and trigger the \"About\" action in the "
 "global drawer you should see our about page."
 msgstr ""
+"Se esegui adesso l'applicazione e inneschi l'azione\"About\" nel cassetto "
+"globale, dovresti vedere la pagina con le informazioni."
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:48
 msgid "![Screenshot of the Kirigami About Page](about-page.png)"
 msgstr ""
+"![Schermata della pagina delle informazioni di Kirigami](about-page.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:0
 msgid "Connect logic to your QML user interface"
-msgstr ""
+msgstr "Connettere la logica all'interfaccia in QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:0
 msgid ""
 "Connect a backend to do calculations and supply your user interface with "
 "data to display"
 msgstr ""
+"Connettere un motore per svolgere i calcoli e per fornire all'interfaccia "
+"utente i dati da visualizzare"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:10
 msgid ""
@@ -917,6 +942,11 @@ msgid ""
 "discouraged, so try to move as much as possible to the backend, so QML is "
 "purely used for displaying the user interface, which is what it is best at."
 msgstr ""
+"Per integrare la logica nell'applicazione abbiamo bisogno delle classi del "
+"motore C++, che possono eseguire i calcoli importanti. La logica della "
+"scrittura nei file QML è scoraggiata, quindi cerca di scrivere il motore da "
+"un'altra parte, in modo che il file QML venga usato solamente per "
+"visualizzare l'interfaccia: quello è il suo compito."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:12
 msgid ""
@@ -924,16 +954,22 @@ msgid ""
 "`backend.h`. Don't forget to add the new cpp file to the executable in `src/"
 "CMakeLists.txt`, next to main.cpp."
 msgstr ""
+"Per la tua nuova classe del motore crea due file chiamati `backend.cpp` e "
+"`backend.h`. Non dimenticarti di aggiungere il nuovo file cpp "
+"all'eseguibile, in `src/CMakeLists.txt`, accanto a main.cpp."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:14
 msgid "Add the following content to the new header file (`backend.h`):"
 msgstr ""
+"Aggiungi il seguente contenuto al nuovo file di intestazione (`backend.h`):"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:29
 msgid ""
 "The `backend.cpp` file containing the definitions is similarly empty right "
 "now, it should contain something like the following:"
 msgstr ""
+"Allo stesso modo il file `backend.cpp` contenente le definizioni è "
+"attualmente vuoto. Dovrebbe contenere qualcosa di simile a:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:40
 msgid ""
@@ -942,6 +978,11 @@ msgid ""
 "will be created as a singleton, that means it will only be created once and "
 "exist through the whole time from starting the application to closing it."
 msgstr ""
+"Per adesso l'interfaccia non sa niente della tua classe del motore; per "
+"modificare questa situazione dobbiamo registrare il nuovo tipo in `main."
+"cpp`. Il motore verrà creato come singleton, cioè verrà creato solo una "
+"volta ed esisterà per tutto il tempo, dall'avvio dell'applicazione alla sua "
+"chiusura."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:42
 msgid ""
@@ -953,6 +994,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:48
 msgid "Don't forget to include the new header file at the top of `main.cpp`."
 msgstr ""
+"Non dimenticarti di includere il nuovo file di intestazione all'inizio di "
+"`main.cpp`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:50
 msgid ""
@@ -961,10 +1004,14 @@ msgid ""
 "application, you don't need to worry about versioning it, just stay with "
 "`1.0` and use it consistently throughout the application."
 msgstr ""
+"Da adesso in poi il motore sarà conosciuto da QML come `Backend`: è "
+"contenuto in un modulo chiamato `org.kde.example`. Dal momento che il modulo "
+"è parte dell'applicazione non ti devi preoccupare della versione, rimani "
+"alla `1.0 ed usala costantemente nella tua applicazione."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:52
 msgid "In `main.qml`, import the new module:"
-msgstr ""
+msgstr "Importa il nuovo modulo in `main.qml`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:57
 msgid ""
@@ -973,6 +1020,11 @@ msgid ""
 "the class. Properties are a lot more than a simple variable. They can inform "
 "the UI about changes so it can update the right areas."
 msgstr ""
+"Ora abbiamo connesso la classe che contiene la logica futura "
+"all'applicazione, ma ancora non fa nulla. Per modificare ciò, aggiungiamo "
+"una proprietà alla classe. Le proprietà sono molto di più di una semplice "
+"variabile: possono informare l'interfaccia sulle modifiche, in modo che essa "
+"possa aggiornare le aree giuste."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:59
 msgid ""
@@ -998,7 +1050,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:73
 msgid "To the public section, add"
-msgstr ""
+msgstr "Aggiungi nella sezione public"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:80
 msgid ""
@@ -1014,6 +1066,8 @@ msgid ""
 "As you can see, when the setter is called, the signal will be emitted, and "
 "inform the ui and backend of the change."
 msgstr ""
+"Come puoi vedere, quando viene chiamata la proprietà viene emesso il "
+"segnale, che informa l'interfaccia e il motore delle modifiche."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:96
 msgid ""
@@ -1025,6 +1079,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:98
 msgid "The resulting code in that part of the file should look like this:"
 msgstr ""
+"Il codice risultante in quella parte di file dovrebbe assomigliare a questo:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:101
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:112
@@ -1048,35 +1103,35 @@ msgstr ""
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:188
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:217
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:118
 msgid "Now compile and start your program again."
-msgstr ""
+msgstr "Ora compila e avvia nuovamente il programma."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:120
 msgid "Congratulations, you learned:"
-msgstr ""
+msgstr "Congratulazioni, hai imparato:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:121
 msgid "How to register backend types to QML"
-msgstr ""
+msgstr "Come registrare i tipi di motore in QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:122
 msgid "Add new elements to the QML file"
-msgstr ""
+msgstr "Ad aggiungere nuovi elementi al file QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:123
 msgid "Create new QObject subclasses"
-msgstr ""
+msgstr "A creare nuove sotto-classi QObject"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:124
 msgid "How to add properties and what they do"
-msgstr ""
+msgstr "Come aggiungere delle proprietà, e che cosa fanno"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:125
 msgid "What signals are"
-msgstr ""
+msgstr "Che cosa sono i segnali"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:127
 msgid ""
@@ -1113,7 +1168,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:20
 msgid "Preparing the Class"
-msgstr ""
+msgstr "Preparazione della classe"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:22
 msgid ""
@@ -1161,7 +1216,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:129
 #: content/docs/getting-started/kirigami/style-colors/index.md:30
 msgid "Note"
-msgstr "메모"
+msgstr "Nota"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:34
 msgid ""
@@ -1182,6 +1237,8 @@ msgid ""
 "`rowCount()` - Think of this function as a way to tell QML how many items "
 "are in the model to represent."
 msgstr ""
+"`rowCount()` - Pensa a questa funzione come un modo per dire a QML quanti "
+"elementi sono presenti nel modello da rappresentare."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:60
 msgid ""
@@ -1295,7 +1352,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:196
 msgid "Let's not forget to make our class usable in QML."
-msgstr ""
+msgstr "Non dimentichiamo di rendere la nostra classe utilizzabile in QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:206
 msgid "Class Usage in QML"
@@ -1313,7 +1370,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:249
 msgid "![App Screenshot](app_screenshot.png)"
-msgstr ""
+msgstr "![Schermata del programma](app_screenshot.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:251
 msgid "Data Modification"
@@ -1342,7 +1399,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:265
 msgid "`index` - The location of the data."
-msgstr ""
+msgstr "`index` - la posizione dei dati."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:266
 msgid "`value` - The contents of the new data."
@@ -1389,10 +1446,8 @@ msgid "![app_screenshot_2.png](app_screenshot_2.png)"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:382
-#, fuzzy
-#| msgid "Actions"
 msgid "Adding Rows"
-msgstr "동작"
+msgstr "Aggiungere righe"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:384
 msgid ""
@@ -1494,11 +1549,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:582
 msgid "Full Code"
-msgstr ""
+msgstr "Codice completo"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:584
 msgid "<details><summary>Main.qml</summary>\n"
-msgstr ""
+msgstr "<details><summary>Main.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:588
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:595
@@ -1506,18 +1561,20 @@ msgid ""
 "</details>\n"
 "<br>\n"
 msgstr ""
+"</details>\n"
+"<br>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:591
 msgid "<details><summary>model.h</summary>\n"
-msgstr ""
+msgstr "<details><summary>model.h</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:598
 msgid "<details><summary>model.cpp</summary>\n"
-msgstr ""
+msgstr "<details><summary>model.cpp</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:604
 msgid "More Information"
-msgstr ""
+msgstr "Ulteriori informazioni"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:606
 msgid ""
@@ -1528,15 +1585,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:0
 msgid "Figuring out main.cpp"
-msgstr ""
+msgstr "Capire main.cpp"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:0
 msgid "Understanding the central file of our backend code\n"
-msgstr ""
+msgstr "Comprendere il file centrale del codice del motore\n"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:11
 msgid "The role of main.cpp"
-msgstr ""
+msgstr "Il ruolo di main.cpp"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:13
 msgid ""
@@ -1546,6 +1603,12 @@ msgid ""
 "gain an understanding of our backend C++ code in order to make applications "
 "that are more useful than what we can achieve with pure QML."
 msgstr ""
+"Mentre QML viene usato come interfaccia per applicazioni in Kirigami, di "
+"solito il motore è scritto in C++: questo per poter sfruttare la velocità e "
+"la flessibilità del linguaggio. Sebbene nella pagina precedente abbiamo "
+"trattato QML in modo molto approfondito, dovremo acquisire una comprensione "
+"del codice del motore in C++ se vogliamo creare delle applicazioni che siano "
+"più utili di quelle che potremmo creare solamente con QML."
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:15
 msgid ""
@@ -1559,7 +1622,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:17
 msgid "What it does"
-msgstr ""
+msgstr "Che cosa fa"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:21
 msgid ""
@@ -1644,11 +1707,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:0
 msgid "Understanding CMakeLists"
-msgstr ""
+msgstr "Capire CMakeLists"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:0
 msgid "Getting to grips with how CMakeLists.txt files work\n"
-msgstr ""
+msgstr "Ragioniamo su come funziona CMakeLists.txt\n"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:11
 msgid "CMake"
@@ -1667,16 +1730,17 @@ msgid ""
 "CMake is useful because it allows us to automate much of the stuff that "
 "needs to be done before compilation."
 msgstr ""
+"CMake è utile perché ci permette di automatizzare molte delle cose che "
+"bisogna fare prima della compilazione."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:16
-#, fuzzy
-#| msgid "CMake"
 msgid "The root CMakeLists.txt"
-msgstr "CMake"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:18
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
 msgstr ""
+"Potresti ricordare questo file `CMakeLists.txt` dalla prima esercitazione:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:22
 msgid ""
@@ -1753,6 +1817,8 @@ msgid ""
 "`COMPONENTS` is a parameter that precedes the specific components of the "
 "framework we will include."
 msgstr ""
+"`COMPONENTS`` è un parametro che precede i componenti specifici del "
+"framework che includeremo."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:41
 msgid ""
@@ -1795,10 +1861,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:65
-#, fuzzy
-#| msgid "CMake"
 msgid "src/CMakeLists.txt"
-msgstr "CMake"
+msgstr "src/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:69
 msgid ""
@@ -1828,7 +1892,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:74
 msgid "`ecm_target_qml_sources()` adds QML files to the module."
-msgstr ""
+msgstr "`ecm_target_qml_sources()` aggiunge i file QML al modulo."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:75
 msgid ""
@@ -1905,10 +1969,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
-#, fuzzy
-#| msgid "CMake"
 msgid "src/components/CMakeLists.txt"
-msgstr "CMake"
+msgstr "src/components/CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:98
 msgid ""
@@ -1990,21 +2052,23 @@ msgstr ""
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:118
 msgid "This setup will be useful when developing most Kirigami apps."
 msgstr ""
+"Questa impostazione sarà utile quando svilupperemo la maggior parte dei "
+"programmi con Kirigami."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:0
-#, fuzzy
-#| msgid "Components"
 msgid "Actions based components"
-msgstr "구성 요소"
+msgstr "Componenti basati sulle azioni"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:0
 msgid "Kirigami's Actions are used to add functionality to components.\n"
 msgstr ""
+"Le Azioni di Kirigami vengono utilizzate per aggiungere delle funzionalità "
+"ai componenti.\n"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:13
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:19
 msgid "Actions"
-msgstr "동작"
+msgstr "Azioni"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:15
 msgid ""
@@ -2018,6 +2082,8 @@ msgid ""
 "We can use these to provide our applications with easy-to-reach actions that "
 "are essential to their functionality."
 msgstr ""
+"Possiamo usarle per fornire le nostre applicazioni di azioni facili da "
+"raggiungere, che sono essenzialmente le loro funzionalità."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:21
 msgid ""
@@ -2031,6 +2097,9 @@ msgid ""
 "Action), they can be assigned to menu items and toolbar buttons, but also to "
 "multiple other Kirigami components."
 msgstr ""
+"Come le [azioni dei controlli QtQuick](docs:qtquickcontrols;QtQuick.Controls."
+"Action) possono essere assegnate alle voci di menu e ai pulsanti della barra "
+"degli strumenti, ma anche ad altri componenti Kirigami."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:45
 msgid ""
@@ -2048,6 +2117,8 @@ msgid ""
 "One feature offered by Kirigami Actions on top of QtQuick Actions is the "
 "possibility to nest actions."
 msgstr ""
+"Una funzionalità offerta della azioni di Kirigami sulle azioni di QtQuick è "
+"la possibilità di nidificare le azioni."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:69
 msgid ""
@@ -2066,10 +2137,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:90
-#, fuzzy
-#| msgid "Components"
 msgid "Using actions in other components"
-msgstr "구성 요소"
+msgstr "Usare le azioni in altri componenti"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:92
 msgid ""
@@ -2083,10 +2152,8 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:94
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:69
-#, fuzzy
-#| msgid "Pages"
 msgid "Page"
-msgstr "페이지"
+msgstr "Pagina"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:96
 msgid ""
@@ -2095,10 +2162,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:102
-#, fuzzy
-#| msgid "Components"
 msgid "Page actions on the desktop"
-msgstr "구성 요소"
+msgstr "Azioni delle pagine in un desktop"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:104
 msgid "Page actions on a mobile device"
@@ -2108,10 +2173,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-drawers/index.md:16
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:103
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:140
-#, fuzzy
-#| msgid "Drawers"
 msgid "Global drawer"
-msgstr "서랍"
+msgstr "Cassetto globale"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:110
 msgid ""
@@ -2130,12 +2193,12 @@ msgid ""
 "You can read more about Global Drawers in the [documentation page for "
 "drawers](../components-drawers#globaldrawer)."
 msgstr ""
+"Puoi saperne di più sui cassetti globali nella [pagina della documentazione "
+"dei cassetti](../components-drawers#globaldrawer)."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:155
-#, fuzzy
-#| msgid "Drawers"
 msgid "Context drawer"
-msgstr "서랍"
+msgstr "Cassetto a contesto"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:157
 msgid ""
@@ -2148,10 +2211,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:168
-#, fuzzy
-#| msgid "Actions"
 msgid "ActionTextFields"
-msgstr "동작"
+msgstr "ActionTextFields"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:170
 msgid ""
@@ -2159,6 +2220,9 @@ msgid ""
 "some contextual actions to a text field, for example to clear the text, or "
 "to search for the text."
 msgstr ""
+"Un [ActionTextField in Kirigami](docs:kirigami2;ActionTextField) viene usato "
+"per aggiungere delle azioni contestuali a un campo testuale, ad esempio per "
+"cancellare il testo oppure per cercarci dentro."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:189
 msgid ""
@@ -2180,7 +2244,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:199
 msgid "SwipeListItem"
-msgstr ""
+msgstr "SwipeListItem"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:201
 msgid ""
@@ -2192,21 +2256,19 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:217
 msgid "do something"
-msgstr ""
+msgstr "fai qualcosa"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:224
 msgid "SwipeListItem on a computer"
-msgstr ""
+msgstr "SwipeListItem su un computer"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:226
 msgid "SwipeListItem on a mobile device"
-msgstr ""
+msgstr "SwipeListItem su un dispositivo mobile"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:228
-#, fuzzy
-#| msgid "Actions"
 msgid "ActionToolBar"
-msgstr "동작"
+msgstr "ActionToolBar"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:230
 msgid ""
@@ -2223,6 +2285,10 @@ msgid ""
 "use [ActionToolBar](docs:kirigami2;ActionToolBar) directly as it is used by "
 "page headers and cards to provide their action display."
 msgstr ""
+"Come per le [ActionTextField](docs:kirigami2;ActionTextField), potresti non "
+"aver bisogno di usare direttamente una [ActionToolBar](docs:kirigami2;"
+"ActionToolBar): è infatti usata dalle intestazioni dalla pagina e dalle "
+"schede per fornirgli l'azione per visualizzare."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:265
 msgid "A horizontal toolbar being displayed at the top of the application"
@@ -2234,13 +2300,14 @@ msgid ""
 "components in their [dedicated documentation page](../components-"
 "actiontoolbar/)."
 msgstr ""
+"Puoi saperne di più sul componente [ActionToolBar](docs:kirigami2;"
+"ActionToolBar) nella sua [pagina dedicata della documentazione](../"
+"components-actiontoolbar/)."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:269
 #: content/docs/getting-started/kirigami/components-card/index.md:0
-#, fuzzy
-#| msgid "Card"
 msgid "Cards"
-msgstr "카드"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:271
 msgid ""
@@ -2263,14 +2330,14 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:0
-#, fuzzy
-#| msgid "Actions"
 msgid "Action toolbars"
-msgstr "동작"
+msgstr "Barre degli strumenti delle azioni"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:0
 msgid "Create your own customisable tool bars with the ActionToolBar component"
 msgstr ""
+"Crea la tua barra degli strumenti personalizzabile col componente "
+"ActionToolBar"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:12
 msgid ""
@@ -2278,6 +2345,9 @@ msgid ""
 "header, there are times when you might prefer to have something more "
 "flexible."
 msgstr ""
+"Sebbene le pagine di Kirigami ti permettono di disporre con semplicità un "
+"insieme di azioni nell'intestazione di una pagina, altre volte potresti "
+"volere qualcosa di più flessibile."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:14
 msgid ""
@@ -2299,7 +2369,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:22
 msgid "Creating our first ActionToolBar"
-msgstr ""
+msgstr "Creazione della prima ActionToolBbar"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:24
 msgid ""
@@ -2320,15 +2390,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:79
 msgid "ActionToolBar with enough space for all children"
-msgstr ""
+msgstr "Una ActionToolBar con abbastanza spazio per tutti i figli"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:81
 msgid "ActionToolBar with overflow menu containing children"
-msgstr ""
+msgstr "Una ActionToolBar con il menu a espansione contenente i figli"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:85
 msgid "Alignment"
-msgstr "정렬"
+msgstr "Allineamento"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:87
 msgid ""
@@ -2370,7 +2440,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/style-typography/index.md:317
 #: content/docs/getting-started/kirigami/style-typography/index.md:367
 msgid "<br>\n"
-msgstr ""
+msgstr "<br>\n"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:135
 msgid ""
@@ -2383,6 +2453,9 @@ msgid ""
 "A card serves as an overview and entry point for more detailed information "
 "and can offer direct access to the most important actions of an item.\n"
 msgstr ""
+"Una scheda funge da panoramica e da punto d'ingresso a informazioni più "
+"dettagliate, inoltre può offrire un accesso diretto alle azioni più "
+"importanti su un elemento.\n"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:13
 msgid ""
@@ -2426,7 +2499,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-card/index.md:50
 msgid "Card"
-msgstr "카드"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/components-card/index.md:52
 msgid ""
@@ -2441,7 +2514,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-card/index.md:74
 msgid "The title can be positioned in the banner"
-msgstr ""
+msgstr "Il titolo può essere posizionato nello striscione"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:89
 msgid ""
@@ -2452,10 +2525,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-card/index.md:95
-#, fuzzy
-#| msgid "Layouts"
 msgid "CardsLayout"
-msgstr "레이아웃"
+msgstr "CardsLayout"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:97
 msgid ""
@@ -2475,7 +2546,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-card/index.md:105
 msgid "Important"
-msgstr ""
+msgstr "Importante"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:107
 msgid ""
@@ -2504,13 +2575,16 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-card/index.md:153
 msgid "CardsListView"
-msgstr ""
+msgstr "CardsListView"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:155
 msgid ""
 "A [Kirigami.CardsListView](docs:kirigami2;CardsListView) is a list view that "
 "can be used with [AbstractCard](docs:kirigami2;AbstractCard) components."
 msgstr ""
+"Un [`KirigamiCardsListView`](docs:kirigami2;CardsListView) è una vista a "
+"elenco che può essere usata con i componenti [AbstractCard](docs:kirigami2;"
+"AbstractCard)."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:157
 msgid ""
@@ -2537,7 +2611,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-card/index.md:181
 msgid "IMPORTANT: never put the bottom margin"
-msgstr ""
+msgstr "IMPORTANTE: non mettergli mai il margine inferiore"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:213
 msgid ""
@@ -2569,7 +2643,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:18
 msgid "Quick Start"
-msgstr ""
+msgstr "Avvio rapido"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:20
 msgid ""
@@ -2627,7 +2701,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:125
 msgid "Example Application"
-msgstr ""
+msgstr "Esempio di applicazione"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:127
 msgid ""
@@ -2641,13 +2715,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:0
 msgid "Controls and interactive elements"
-msgstr ""
+msgstr "Controlli ed elementi interattivi"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:0
 msgid ""
 "Make your apps more interactive by using buttons, selection controls, "
 "sliders, and text fields."
 msgstr ""
+"Rendi il tuo programma più interattivo utilizzando pulsanti, controlli di "
+"selezione, cursori e caselle di testo."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:11
 msgid ""
@@ -2660,7 +2736,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:13
 msgid "Buttons"
-msgstr "단추"
+msgstr "Pulsanti"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:15
 msgid ""
@@ -2679,10 +2755,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:56
-#, fuzzy
-#| msgid "Radio buttons"
 msgid "Toggleable buttons"
-msgstr "라디오 단추"
+msgstr "Pulsanti attivabili"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:58
 msgid ""
@@ -2727,12 +2801,15 @@ msgid ""
 "Make sure you take this into account when creating your application: a "
 "different control might be more user friendly."
 msgstr ""
+"Con lo stile predefinito di KDE Plasma, Brezza, può essere difficile capire "
+"se un pulsante è attivato o meno: i pulsanti su cui si è fatto clic vengono "
+"infatti colorati di blu. Assicurati di tener conto di questo fatto mentre "
+"progetti la tua applicazione: un controllo diverso potrebbe risultare più "
+"amichevole."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:121
-#, fuzzy
-#| msgid "Radio buttons"
 msgid "Toolbar buttons"
-msgstr "라디오 단추"
+msgstr "Pulsanti della barra degli strumenti"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:123
 msgid ""
@@ -2755,17 +2832,20 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:174
 msgid "Selection controls"
-msgstr "선택 제어"
+msgstr "Controlli di selezione"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:176
 msgid ""
 "Selection controls let users make a choice or pick an option. There are "
 "different types that are best suited to different situations."
 msgstr ""
+"I controlli di selezione permetto all'utente di fare una scelta o di "
+"scegliere un'opzione. Ne esistono di vari tipi, che meglio si adattano alle "
+"varie situazioni."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:178
 msgid "Checkboxes"
-msgstr "체크 상자"
+msgstr "Caselle"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:180
 msgid ""
@@ -2790,7 +2870,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:229
 msgid "Radio buttons"
-msgstr "라디오 단추"
+msgstr "Pulsanti a scelta singola"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:231
 msgid ""
@@ -2804,6 +2884,8 @@ msgid ""
 "Radio buttons are exclusive by default: only one button can be checked in "
 "the same parent item."
 msgstr ""
+"I pulsanti a scelta singola sono esclusivi per impostazione predefinita: può "
+"essere selezionato solo un pulsante nello stesso elemento genitore."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:235
 msgid ""
@@ -2811,6 +2893,9 @@ msgid ""
 "the [checked](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton."
 "html#checked-prop) property."
 msgstr ""
+"Come per le caselle, essi possono essere selezionato o no per impostazione "
+"predefinita grazie alla proprietà [checked](https://doc.qt.io/qt-6/qml-"
+"qtquick-controls2-abstractbutton.html#checked-prop)."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:277
 msgid ""
@@ -2821,7 +2906,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:283
 msgid "Switches"
-msgstr "스위치"
+msgstr "Interruttori"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:285
 msgid ""
@@ -2848,7 +2933,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:333
 msgid "Sliders"
-msgstr "슬라이더"
+msgstr "Cursori"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:335
 msgid ""
@@ -2859,7 +2944,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:337
 msgid "Standard and tickmarked sliders"
-msgstr ""
+msgstr "Cursori standard e graduati"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:339
 msgid ""
@@ -2867,6 +2952,9 @@ msgid ""
 "provides the user with very fine control over the selection they wish to "
 "make."
 msgstr ""
+"Un [Controls.Slider](docs:qtquickcontrols;QtQuick.Controls.Slider) fornisce "
+"all'utente un controllo molto preciso sulla selezione che desidera "
+"effettuare."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:341
 msgid ""
@@ -2885,6 +2973,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-controls/index.md:345
 msgid "Sliders have a few important properties we must pay attention to:"
 msgstr ""
+"I cursori hanno poche proprietà importanti alle quali devi prestare "
+"attenzione:"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:347
 msgid ""
@@ -2932,10 +3022,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:447
-#, fuzzy
-#| msgid "Sliders"
 msgid "Range sliders"
-msgstr "슬라이더"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:449
 msgid ""
@@ -2963,7 +3051,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:0
 msgid "Dialog types"
-msgstr ""
+msgstr "Tipi di finestra"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:0
 msgid "Various ways to serve and input data."
@@ -2985,7 +3073,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:16
 msgid "Dialog"
-msgstr ""
+msgstr "Finestra"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:18
 msgid ""
@@ -2995,7 +3083,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:66
 msgid "![Simple dialog containing only text](dialog.webp)"
-msgstr ""
+msgstr "![Semplice finestra contenente solo testo](dialog.webp)"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:72
 msgid ""
@@ -3028,7 +3116,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:135
 msgid "PromptDialog"
-msgstr ""
+msgstr "PromptDialog"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:137
 msgid ""
@@ -3051,6 +3139,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:181
 msgid "![A simple prompt dialog containing only text](promptdialog.webp)"
 msgstr ""
+"![Una semplice finestra di richiesta contenente solo testo](promptdialog."
+"webp)"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:248
 msgid "![A PromptDialog with a custom TextField](promptdialogtextfield.webp)"
@@ -3058,7 +3148,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:254
 msgid "MenuDialog"
-msgstr ""
+msgstr "MenuDialog"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:256
 msgid ""
@@ -3075,13 +3165,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:0
 msgid "Drawers"
-msgstr "서랍"
+msgstr "Cassetti"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:0
 msgid ""
 "Drawers provide applications with quick access to controls and pages of your "
 "application."
 msgstr ""
+"I cassetti forniscono le applicazioni di un accesso rapido ai controlli e "
+"alle pagine dell'applicazione."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:12
 msgid ""
@@ -3089,12 +3181,18 @@ msgid ""
 "They can be populated with interactive elements such as Kirigami Actions, "
 "buttons, text, and more."
 msgstr ""
+"I cassetti sono dei pannelli che scivolano fuori dai lati della finestra "
+"dell'applicazione. Possono essere popolati con degli elementi interattivi "
+"quali azioni di Kirigami, pulsanti, testo e altro."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:14
 msgid ""
 "Drawers come in different types, shapes, and forms. In this page we will go "
 "over each type and provide an overview of their characteristics."
 msgstr ""
+"I cassetti arrivano in diversi tipi, forme e moduli. In questa pagina "
+"esamineremo tutti i tipi, e forniremo una panoramica sulle loro "
+"caratteristiche."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:18
 msgid ""
@@ -3104,6 +3202,12 @@ msgid ""
 "specific to the current page but still significant to general navigation or "
 "interaction within the application."
 msgstr ""
+"Il cassetto globale è una funzionalità standard delle applicazioni di KDE "
+"per dispositivi mobili, ma può essere trovata anche nella loro incarnazione "
+"per desktop. Contiene un menu principale dell'applicazione: vengono incluse "
+"qui molte funzioni che non sono specifiche per la pagina corrente ma che "
+"sono sempre significative per la navigazione generale o con l'interazione "
+"dell'applicazione."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:20
 msgid ""
@@ -3139,7 +3243,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:81
 msgid "Header"
-msgstr "머리글"
+msgstr "Intestazione"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:83
 msgid ""
@@ -3160,10 +3264,12 @@ msgstr ""
 msgid ""
 "Our global drawer now shows the search bar component we set as the header"
 msgstr ""
+"Il nostro cassetto globale ora mostra il componente barra di ricerca che "
+"abbiamo impostato come intestazione."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:143
 msgid "Adapting for the desktop"
-msgstr ""
+msgstr "Adattamento al tuo desktop"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:145
 msgid ""
@@ -3182,22 +3288,19 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-drawers/index.md:151
 msgid "In this menu mode, headers and banners are not visible."
 msgstr ""
+"In questa modalità menu le intestazioni e gli striscioni non sono visibili."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:164
-#, fuzzy
-#| msgid "Kirigami"
 msgid "Kirigami Actions here..."
-msgstr "Kirigami"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:173
 msgid "Global drawer in menu mode, without a header or banner"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:179
-#, fuzzy
-#| msgid "Drawers"
 msgid "Context Drawers"
-msgstr "서랍"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:181
 msgid ""
@@ -3253,7 +3356,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:207
 msgid "Modal and Inline drawers"
-msgstr ""
+msgstr "Cassetti modali e in linea"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:209
 msgid ""
@@ -3316,7 +3419,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:243
 msgid "Set modal to false to make this drawer inline!"
-msgstr ""
+msgstr "Imposta modale a falso per rendere questo cassetto in linea!"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:264
 msgid "Modal drawer not visible"
@@ -3327,14 +3430,12 @@ msgid "Modal drawer at the bottom edge of the screen"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:0
-#, fuzzy
-#| msgid "Layouts"
 msgid "Form layouts"
-msgstr "레이아웃"
+msgstr "Disposizioni dei moduli"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:0
 msgid "Easily create attractive interaction areas with Kirigami FormLayouts"
-msgstr ""
+msgstr "Crea facilmente aree di interazione attraenti con Kirigami FormLayouts"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:12
 msgid ""
@@ -3356,7 +3457,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:16
 msgid "Simple form"
-msgstr ""
+msgstr "Modulo semplice"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:18
 msgid ""
@@ -3382,7 +3483,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:62
 msgid "Sections and separators"
-msgstr ""
+msgstr "Sezioni e separatori"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:64
 msgid ""
@@ -3416,7 +3517,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:70
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:30
 msgid "Warning"
-msgstr "경고"
+msgstr "Attenzione"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:72
 msgid ""
@@ -3437,7 +3538,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:139
 msgid "Checkable children"
-msgstr ""
+msgstr "Figli selezionabili"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:141
 msgid ""
@@ -3447,6 +3548,12 @@ msgid ""
 "want the user to provide some extra information in a component such as a "
 "textfield."
 msgstr ""
+"Una funzionalità comoda di [Kirigami.FormLayout](docs:kirigami2;FormLayout) "
+"è che puoi aggiungere delle caselle ai suoi figli. Questo può essere utile "
+"nelle pagine delle impostazioni, dove potresti voler permettere all'utente "
+"di abilitare o di disabilitare un'impostazione, oppure vorresti fornirgli "
+"delle informazioni aggiuntive in un componente, ad esempio in un campo "
+"testuale."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:169
 msgid "A form layout with checkable label."
@@ -3454,7 +3561,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:175
 msgid "Forcing a desktop or mobile layout"
-msgstr ""
+msgstr "Forzare una modalità desktop o mobile"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:177
 msgid ""
@@ -3469,12 +3576,17 @@ msgid ""
 "When set to `true`, the form layout will be structured in a desktop-"
 "optimized widescreen (double-column) layout"
 msgstr ""
+"Quando viene impostato a `vero` la disposizione del modulo sarà strutturata "
+"in uno schermo largo ottimizzato per una disposizione su un desktop (a "
+"doppia colonna)"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:180
 msgid ""
 "When set to `false`, the form layout will be structured in a mobile layout "
 "(single column)"
 msgstr ""
+"Quando viene impostato a `falso` la disposizione del modulo sarà strutturata "
+"in una disposizione per dispositivo mobile (a singola colonna)"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:207
 msgid "A form layout with forced mobile layout"
@@ -3520,23 +3632,23 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:0
 msgid "Inline messages"
-msgstr "인라인 메시지"
+msgstr "Messaggi in linea"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:0
 msgid "Display messages related to the content in your application"
-msgstr ""
+msgstr "Visualizza i messaggi relativi al contenuto della tua applicazione"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:12
 msgid ""
 "Inline messages provide an immediate way for you to notify your users about "
 "something that happened while using the application."
 msgstr ""
+"I messaggi in linea ti forniscono un modo immediato per poter notificare "
+"agli utenti qualcosa che sta accadendo mentre utilizzano l'applicazione."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:14
-#, fuzzy
-#| msgid "Inline messages"
 msgid "Basic inline message"
-msgstr "인라인 메시지"
+msgstr "Messaggi in linea di base"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:16
 msgid ""
@@ -3569,7 +3681,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:57
 msgid "Different types"
-msgstr ""
+msgstr "Tipi diversi"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:59
 msgid ""
@@ -3585,12 +3697,18 @@ msgid ""
 "blue background, an 'i' icon, and is used to announce a result or tell the "
 "user something general. It is not necessary to manually set it."
 msgstr ""
+"**Informazione** (`Kirigami.MessageType.Information`): il predefinito. Ha "
+"uno sfondo blu e un'icona `i`. Viene utilizzato per annunciare un risultato "
+"o per dire all'utente qualcosa di generale. Non è necessario impostarlo "
+"manualmente."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:62
 msgid ""
 "**Positive** (`Kirigami.MessageType.Positive`): has a green background, tick "
 "icon, and indicates that something went well."
 msgstr ""
+"**Positivo** (`Kirigami.MessageType.Positive`): ha uno sfondo verde, "
+"un'icona con un segno di spunta. Indica che qualcosa è andato bene."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:63
 msgid ""
@@ -3598,12 +3716,18 @@ msgid ""
 "exclamation-mark icon, and can be used to warn the user about something they "
 "should be mindful of."
 msgstr ""
+"**Attenzione** (`Kirigami.MessageType.Warning`): ha uno sfondo arancione e "
+"un'icona a punto esclamativo. Può essere utilizzato per avvisare l'utente di "
+"qualcosa di cui dovrebbe essere consapevole."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:64
 msgid ""
 "**Error** (`Kirigami.MessageType.Error`): has a red background, a cross "
 "icon, and can be used to tell the user that something has gone wrong."
 msgstr ""
+"**Errore** (`Kirigami.MessageType.Error`): ha uno sfondo rosso e un'icona a "
+"croce. Può essere utilizzato per dire all'utente che qualcosa è andato "
+"storto."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:107
 msgid ""
@@ -3614,7 +3738,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:113
 msgid "Customising text and icons"
-msgstr ""
+msgstr "Personalizzazione di testo e icone"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:115
 msgid ""
@@ -3622,16 +3746,24 @@ msgid ""
 "like markup. This allows you to add some formatting to your inline message's "
 "text or even include an external web link if you want to."
 msgstr ""
+"I messaggi in linea supportano il testo formattato, che può essere definito "
+"con dei semplici marcatori come nell'HTML. Questo ti permette di aggiungere "
+"una formattazione al testo dei tuoi messaggi in linea, o persino di "
+"includere un collegamento a un sito web esterno, se vuoi."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:124
 msgid "Note that when you use quotes in a string you will have to escape them!"
 msgstr ""
+"Nota che quando in una stringa utilizzi le virgolette, allora devi usare un "
+"carattere di escape!"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:135
 msgid ""
 "![An inline message with rich text and a hyperlink](/docs/getting-started/"
 "kirigami/components-inlinemessages/inlinemessages-richtext.png)"
 msgstr ""
+"![Un messaggio in linea con del testo formattato](/docs/getting-started/"
+"kirigami/components-inlinemessages/inlinemessages-richtext.png)"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:141
 msgid ""
@@ -3651,10 +3783,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:166
-#, fuzzy
-#| msgid "Inline messages"
 msgid "Using actions in inline messages"
-msgstr "인라인 메시지"
+msgstr "Usare le azioni nei messaggi in linea"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:168
 msgid ""
@@ -3670,18 +3800,20 @@ msgid ""
 "![An inline message with two actions](/docs/getting-started/kirigami/"
 "components-inlinemessages/inlinemessages-actions.png)"
 msgstr ""
+"![Un messaggio in linea con due azioni](/docs/getting-started/kirigami/"
+"components-inlinemessages/inlinemessages-actions.png)"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:215
-#, fuzzy
-#| msgid "Radio buttons"
 msgid "Close buttons"
-msgstr "라디오 단추"
+msgstr "Pulsante di chiusura"
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:217
 msgid ""
 "Inline messages provide a close button that can be used to easily dismiss "
 "them."
 msgstr ""
+"I messaggi in linea forniscono un pulsante di chiusura, che può essere usato "
+"per rimuoverli con facilità."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:219
 msgid ""
@@ -3698,11 +3830,13 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:0
 msgid "List views"
-msgstr ""
+msgstr "Viste a elenco"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:0
 msgid "A list view can help you easily display many components dynamically.\n"
 msgstr ""
+"Una vista a elenco può aiutarti a visualizzare facilmente molti componenti "
+"in maniera dinamica.\n"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:13
 msgid ""
@@ -3715,18 +3849,24 @@ msgstr ""
 msgid ""
 "The **model**, which contains the data you want your list view to display"
 msgstr ""
+"Il **modello**, che contiene i dati che vuoi visualizzare nella vista a "
+"elenco"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:16
 msgid ""
 "The **delegate**, which defines how each element in the model will be "
 "displayed"
 msgstr ""
+"Il **delegato**, che definisce come verrà visualizzato ciascun elemento del "
+"modello"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:17
 msgid ""
 "The **list view** itself, which will display information from the model "
 "according to the delegate"
 msgstr ""
+"La **vista a elenco** stessa, che visualizza le informazioni dal modello "
+"secondo il delegato"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:19
 msgid ""
@@ -3742,6 +3882,8 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-listview/index.md:23
 msgid "A list view has two essential properties we must pay attention to:"
 msgstr ""
+"Una vista a elenco ha due proprietà essenziali a cui devi prestare "
+"attenzione:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:25
 msgid ""
@@ -3774,10 +3916,8 @@ msgid "And the exact same example, inline:"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:94
-#, fuzzy
-#| msgid "Warning"
 msgid "Understanding models"
-msgstr "경고"
+msgstr "Capire i modelli"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:96
 msgid ""
@@ -3803,11 +3943,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 msgid "model.index, model.somerole"
-msgstr ""
+msgstr "model.index, model.somerole"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:100
 msgid "In most cases"
-msgstr ""
+msgstr "Nella maggior parte dei casi"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "Qt models with one role"
@@ -3815,7 +3955,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "model.index, model.somerole, model.modelData"
-msgstr ""
+msgstr "model.index, model.somerole, model.modelData"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:101
 msgid "In most cases, for prototyping"
@@ -3828,7 +3968,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-listview/index.md:102
 #: content/docs/getting-started/kirigami/components-listview/index.md:103
 msgid "model.index, model.modelData"
-msgstr ""
+msgstr "model.index, model.modelData"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:102
 #: content/docs/getting-started/kirigami/components-listview/index.md:103
@@ -3906,11 +4046,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:246
 msgid "Understanding views and delegates"
-msgstr ""
+msgstr "Capire le viste e i delegati"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:248
 msgid "Let's go back to the original example:"
-msgstr ""
+msgstr "Torniamo all'esempio iniziale:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:261
 #: content/docs/getting-started/kirigami/components-listview/index.md:393
@@ -4098,16 +4238,18 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:0
 msgid "Page rows and page stacks"
-msgstr ""
+msgstr "Righe e pile di pagine"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:0
 msgid ""
 "Add flow to your application: Add, remove and replace pages in different ways"
 msgstr ""
+"Aggiungi un flusso alla tua applicazione: aggiungi, rimuovi e sostituisci le "
+"pagine in modi diversi"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:12
 msgid "A row of pages"
-msgstr ""
+msgstr "Una riga di pagine"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:14
 msgid ""
@@ -4205,15 +4347,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:176
 msgid "\"Main.qml\""
-msgstr ""
+msgstr "\"Main.qml\""
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:187
 msgid "and"
-msgstr ""
+msgstr "e"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:190
 msgid "\"BasicPage.qml\""
-msgstr ""
+msgstr "\"BasicPage.qml\""
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:216
 msgid "Clicking the button pushes a new page with help of applicationWindow"
@@ -4221,11 +4363,13 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:0
 msgid "Progress bars and indicators"
-msgstr ""
+msgstr "Barre di avanzamento e indicatori"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:0
 msgid "Provide your users with loading state information using progress bars."
 msgstr ""
+"Fornisci ai tuoi utenti le informazioni sullo stato di caricamento "
+"utilizzando le barre di avanzamento."
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:12
 msgid ""
@@ -4233,15 +4377,20 @@ msgid ""
 "time, you will want to use a visual element that tells the user that "
 "something is happening in the background."
 msgstr ""
+"Se la tua applicazione fa qualcosa che impiega una notevole quantità di "
+"tempo, vorrai utilizzare un elemento visivo che dice all'utente che sta "
+"succedendo qualcosa dietro le quinte."
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:14
 msgid ""
 "QtQuick Controls provides two useful components that you can use to this end."
 msgstr ""
+"I controlli di QtQuick forniscono due utili componenti che puoi usare a "
+"questo scopo."
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:16
 msgid "Progress bar"
-msgstr ""
+msgstr "Barra di avanzamento"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:18
 msgid ""
@@ -4279,15 +4428,17 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:54
 msgid "value: 50"
-msgstr ""
+msgstr "valore: 50"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:68
 msgid "Above: progress bar at 50%; below: indeterminate progress bar"
 msgstr ""
+"Sopra: la barra di avanzamento e al 50%; sotto: barra di avanzamento "
+"indeterminata"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:74
 msgid "Busy indicator"
-msgstr ""
+msgstr "Indicatore di occupato"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:76
 msgid ""
@@ -4306,17 +4457,19 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:0
 msgid "Scrollable pages and list views"
-msgstr ""
+msgstr "Pagine scorrevoli e viste a elenco"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:0
 msgid ""
 "Scrollable pages are useful when combined with vertical components or "
 "dynamic components such as List Views."
 msgstr ""
+"Le pagine scorrevoli sono utili se combinate con componenti verticali o "
+"dinamici come le viste a elenco."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:12
 msgid "Kirigami.ScrollablePage"
-msgstr ""
+msgstr "Kirigami.ScrollablePage"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:14
 msgid ""
@@ -4328,12 +4481,14 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:20
 msgid "The rectangle will automatically be scrollable"
-msgstr ""
+msgstr "Il rettangolo sarà automaticamente scorrevole"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:28
 msgid ""
 "In almost every other way, a scrollable page is the same as a normal page."
 msgstr ""
+"In quasi ogni altra modalità, una pagina scorrevole è uguale a una pagina "
+"normale."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:32
 msgid ""
@@ -4344,7 +4499,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:37
 msgid "ListView in a ScrollablePage"
-msgstr ""
+msgstr "ListView in ScrollablePage"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:39
 msgid ""
@@ -4359,6 +4514,8 @@ msgid ""
 "Two scrollable pages, both containing a ListView with custom contents "
 "(screenshot of NeoChat)"
 msgstr ""
+"Due pagine scorrevoli, entrambe contenenti un ListView con contenuti "
+"personalizzati (schermata di NeoChat)"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:45
 msgid ""
@@ -4383,10 +4540,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:54
-#, fuzzy
-#| msgid "Inline messages"
 msgid "PlaceholderMessage"
-msgstr "인라인 메시지"
+msgstr "PlaceholderMessage"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:56
 msgid ""
@@ -4404,7 +4559,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:78
 msgid "Search in the ListView"
-msgstr ""
+msgstr "Cercare nella ListView"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:80
 msgid ""
@@ -4421,7 +4576,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:102
 msgid "Hint"
-msgstr "힌트"
+msgstr "Suggerimento"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:104
 msgid ""
@@ -4429,16 +4584,21 @@ msgid ""
 "[KItemModel](docs:kitemmodels) to easily add filtering capability directly "
 "in QML without any need for C++ code."
 msgstr ""
+"Puoi usare [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) da "
+"[KItemModel](docs:kitemmodels) per aggiungere facilmente la capacità di "
+"filtraggio direttamente in QML senza necessità di codice in C++."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:110
 msgid "Pull to refresh"
-msgstr ""
+msgstr "Tira per ricaricare"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:112
 msgid ""
 "Another function provided by this component is a \"pull-to-refresh\" action. "
 "To use this, activate it as follows:"
 msgstr ""
+"Un'altra funzione fornita da questo componete è l'azione `Tira per "
+"ricaricare`. Per usarla, attivala come segue:"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:125
 msgid ""
@@ -4454,20 +4614,20 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:0
-#, fuzzy
-#| msgid "Actions"
 msgid "Adding actions"
-msgstr "동작"
+msgstr "Aggiungere azioni"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:0
 msgid ""
 "Learning more about Kirigami's Actions will help us make our application "
 "more useful.\n"
 msgstr ""
+"Imparare di più sulle azioni di Kirigami ci aiuterà a rendere la nostra "
+"applicazione più utile.\n"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:13
 msgid "Recap"
-msgstr ""
+msgstr "Ricapitoliamo"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:15
 msgid ""
@@ -4480,6 +4640,9 @@ msgid ""
 "In this tutorial, we'll be looking at Kirigami actions. These will help us "
 "add interactivity to our app in a consistent, fast, and accessible way."
 msgstr ""
+"In questa esercitazione guarderemo le azioni di Kirigami: ci aiuteranno ad "
+"aggiungere l'interattività al nostro programma, in modo coerente, veloce e "
+"accessibile."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:21
 msgid ""
@@ -4487,6 +4650,9 @@ msgid ""
 "action. We can use these to provide our applications with easy-to-reach "
 "actions that are essential to their functionality."
 msgstr ""
+"Una [Kirigami.Action](docs:kirigami2;Action) incapsula un'azione utente con "
+"l'interfaccia. Possiamo usarle per fornire le nostre applicazioni di azioni "
+"facili da raggiungere, che sono essenzialmente le loro funzionalità."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:23
 msgid ""
@@ -4495,18 +4661,23 @@ msgid ""
 "title with various icons. Kirigami actions can be displayed in several ways "
 "and can do a wide variety of things."
 msgstr ""
+"Se hai già usato delle applicazioni in Kirigami avrai certamente interagito "
+"con le azioni di Kirigami. In quest'immagine, alla destra del titolo della "
+"pagina possiamo vedere delle azioni con varie icone. Le azioni di Kirigami "
+"possono essere visualizzate in molti modi e possono fare molte cose."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:33
-#, fuzzy
-#| msgid "Actions"
 msgid "Adding countdowns"
-msgstr "동작"
+msgstr "Aggiunta dei conti alla rovescia"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:35
 msgid ""
 "A countdown app is pretty useless without the ability to add countdowns. "
 "Let's create an action that'll let us do this."
 msgstr ""
+"Un applicazione per il conto alla rovescia è abbastanza inutile senza la "
+"possibilità di aggiungerne qualcuno. Creiamo un'azione che ci permetterà di "
+"farlo."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:43
 msgid "Other page properties..."
@@ -4560,6 +4731,15 @@ msgid ""
 "different sizes, and more. You might find it a useful tool when deciding on "
 "which icons to use in your application.<br><br>\n"
 msgstr ""
+"<details>\n"
+"<summary>Fai clic qui per vedere come controllare le icone disponibili nel "
+"sistema.</summary>\n"
+"<br>\n"
+"Cuttlefish è un'applicazione di KDE che ti permette di vedere le icone che "
+"puoi usare nelle tue applicazioni. Offre delle funzionalità utili, ad "
+"esempio l'anteprima dell'aspetto tra i vari temi installati oppure nelle "
+"varie dimensioni, e altro. Potresti trovarlo un utile strumento se stai "
+"decidendo quale icona utilizzare nella tua applicazione.<br><br>\n"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:81
 msgid ""
@@ -4591,7 +4771,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:97
 msgid "Mobile version"
-msgstr ""
+msgstr "Versione mobile"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:109
 msgid ""
@@ -4626,10 +4806,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:142
-#, fuzzy
-#| msgid "Drawers"
 msgid "Global drawer as a menu"
-msgstr "서랍"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:150
 msgid ""
@@ -4639,10 +4817,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:154
-#, fuzzy
-#| msgid "Components"
 msgid "Actions are contextual"
-msgstr "구성 요소"
+msgstr "Le azioni sono contestuali"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:156
 msgid ""
@@ -4693,16 +4869,14 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:167
-#, fuzzy
-#| msgid "Kirigami"
 msgid "Among other Kirigami components."
-msgstr "Kirigami"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:169
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:202
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:260
 msgid "Our app so far"
-msgstr ""
+msgstr "Il nostro programma finora"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:171
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:204
@@ -4711,28 +4885,29 @@ msgid ""
 "<details>\n"
 "<summary><b>Main.qml:</b></summary>\n"
 msgstr ""
+"<details>\n"
+"<summary><b>Main.qml:</b></summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:0
-#, fuzzy
-#| msgid "Actions"
 msgid "Adding a dialog"
-msgstr "동작"
+msgstr "Aggiungere una finestra"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:0
-#, fuzzy
-#| msgid "Overlay sheets"
 msgid "Getting to grips with Kirigami dialogs.\n"
-msgstr "오버레이 시트"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:13
 msgid "Making our app useful"
-msgstr ""
+msgstr "Rendere utili i programmi"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:15
 msgid ""
 "We have a window, we have cards, and we have actions. Yet, we still need to "
 "find some way of inputting a name, description, and date of our choice."
 msgstr ""
+"Abbiamo una finestra, abbiamo le schede e abbiamo le azioni. Dobbiamo ancora "
+"trovare un modo per inserire un nome, una descrizione e una data a nostra "
+"scelta."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:17
 msgid ""
@@ -4740,6 +4915,10 @@ msgid ""
 "required input elements. However, a whole page dedicated to providing a "
 "name, description, and date seems a bit excessive."
 msgstr ""
+"Un modo potrebbe essere quello di creare una nuova pagina dove mettere gli "
+"elementi gli elementi per l'inserimento. Tuttavia utilizzare una pagina "
+"intera solo per inserire un nome, una descrizione e una data sembra un po' "
+"eccessivo."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:19
 msgid "Instead, we'll be using a dialog."
@@ -4747,11 +4926,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:21
 msgid "![Dialog appearing in the middle of the application](dialog.webp)"
-msgstr ""
+msgstr "![Finestra visualizzata al centro dell'applicazione](dialog.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:23
 msgid "Opening the dialog"
-msgstr ""
+msgstr "Apertura della finestra"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:39
 msgid ""
@@ -4856,17 +5035,19 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:105
 msgid "Input for the name of our countdown"
-msgstr ""
+msgstr "Ingresso per il nome del nostro conto alla rovescia"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:106
 msgid "Input for the description of our countdown"
-msgstr ""
+msgstr "Ingresso per la descrizione del nostro conto alla rovescia"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:107
 msgid ""
 "Input for the date we are counting down towards, which must be provided in a "
 "`YYYY-MM-DD` format"
 msgstr ""
+"Ingresso per le date che stiamo aspettando, che devono essere fornite nel "
+"formato `YYYY-MM-DD`"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:109
 msgid ""
@@ -5008,7 +5189,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:200
 msgid "Much nicer."
-msgstr ""
+msgstr "Molto più bello."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:211
 msgid ""
@@ -5022,12 +5203,12 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:0
 msgid "Figuring out the different ways of placing things on a page"
-msgstr ""
+msgstr "Capire i diversi modi di posizionare le cose in una pagina"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:12
 #: content/docs/getting-started/kirigami/style-typography/index.md:0
 msgid "Laying out your content"
-msgstr ""
+msgstr "Disporre i contenuti"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:14
 msgid ""
@@ -5042,7 +5223,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:18
 msgid "ListViews"
-msgstr ""
+msgstr "Viste a elenco"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:20
 msgid ""
@@ -5074,11 +5255,12 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:39
 msgid "Model"
-msgstr "모델"
+msgstr "Modello"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:46
 msgid "Each ListElement is an element on the list, containing information"
 msgstr ""
+"Ciascun ListElement è un elemento della lista, contenente le informazioni"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:57
 msgid ""
@@ -5111,6 +5293,8 @@ msgid ""
 "Models are also useful in how they can be modified through the use of "
 "several methods. Some important ones are:"
 msgstr ""
+"I modelli sono utili anche nel modo in cui possono essere modificati "
+"mediante l'uso di diversi metodi. Alcuni importanti sono:"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:68
 msgid ""
@@ -5145,10 +5329,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:73
-#, fuzzy
-#| msgid "Delegate"
 msgid "Delegates"
-msgstr "위임"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:75
 msgid ""
@@ -5187,14 +5369,17 @@ msgid ""
 "or height is specified. The setting below defines a component's preferred "
 "size based on its content"
 msgstr ""
+"implicitWidth /Height definiscono la larghezza e l'altezza naturali di un "
+"elemento, se queste non vengono specificate. L'impostazione qui sotto "
+"definisce la dimensione preferita del componente in base al suo contenuto."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:132
 msgid "onClicked: to be done... soon!"
-msgstr ""
+msgstr "onClicked: da fare... presto!!"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:142
 msgid "implicitWidth and implicitHeight"
-msgstr ""
+msgstr "implicitWidth e implicitHeight"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:144
 msgid ""
@@ -5232,7 +5417,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:165
 msgid "Layouts"
-msgstr "레이아웃"
+msgstr "Disposizioni"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:167
 msgid ""
@@ -5298,14 +5483,12 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:197
-#, fuzzy
-#| msgid "Kirigami"
 msgid "Kirigami Unit"
-msgstr "Kirigami"
+msgstr "Unità in Kirigami"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:197
 msgid "Pixels"
-msgstr "픽셀"
+msgstr "Pixel"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:199
 msgid "smallSpacing"
@@ -5352,10 +5535,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:211
-#, fuzzy
-#| msgid "Components"
 msgid "Inner components"
-msgstr "구성 요소"
+msgstr "Componenti interni"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:213
 msgid ""
@@ -5398,28 +5579,34 @@ msgid ""
 "![Screenshot of the app appearance after completing this lesson](Screenshot."
 "webp)"
 msgstr ""
+"![Schermata dell'aspetto del programma al termine di questa lezione]"
+"(Screenshot.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:271
 msgid "So there is our basic card!"
-msgstr ""
+msgstr "Ecco quindi una scheda basilare!"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:273
 msgid ""
 "With these steps, we have now laid the basic groundwork for adding all the "
 "functionality to our app."
 msgstr ""
+"Con questi passaggi, adesso abbiamo gettato le basi per aggiungere tutte le "
+"funzionalità al nostro programma."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:0
 msgid "Next steps"
-msgstr "다음 단계"
+msgstr "Passi successivi"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:0
 msgid "What to do after finishing your first simple Kirigami application\n"
 msgstr ""
+"Che cosa fare dopo aver completato la prima semplice applicazione in "
+"Kirigami\n"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:11
 msgid "What we have built"
-msgstr ""
+msgstr "Cosa abbiamo costruito"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:13
 msgid ""
@@ -5434,16 +5621,20 @@ msgid ""
 "You now have a grasp of the basics that make up many of KDE's most popular "
 "applications. You might be asking yourself: what now?"
 msgstr ""
+"Ora hai una conoscenza sulle basi per creare molte delle applicazioni più "
+"popolari di KDE. Ti starai chiedendo: e adesso?"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:17
 msgid ""
 "Well, don't worry: we have taken the time to provide some pointers as to "
 "where you can go from here."
 msgstr ""
+"OK, non preoccuparti: ci siamo presi del tempo per fornirti alcuni "
+"suggerimenti da cui puoi partire."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:19
 msgid "Contributing to KDE projects"
-msgstr ""
+msgstr "Contribuire ai progetti di KDE"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:21
 msgid ""
@@ -5451,6 +5642,9 @@ msgid ""
 "into practice. KDE's community is welcoming and always looking for more "
 "passionate developers!"
 msgstr ""
+"Uno dei modi migliori per migliorare le tue abilità di programmazione è "
+"quello di metterle in pratica. La comunità KDE è accogliente, ed è sempre "
+"alla ricerca di programmatori appassionati!"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:23
 msgid ""
@@ -5479,100 +5673,95 @@ msgid ""
 "and components are built with this framework. Here are a list of projects "
 "you are welcome to help with."
 msgstr ""
+"Con queste nuove abilità sei in una quasi pronto per iniziare la "
+"contribuzione ai progetti in Kirigami. Per fortuna molte delle applicazioni "
+"e dei componenti più popolari di KDE sono generati con questo framework. Qui "
+"c'è un elenco di progetti in cui puoi dare una mano."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:33
 msgid "Beginner-friendly Kirigami projects"
-msgstr ""
+msgstr "Progetti in Kirigami per principianti"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:35
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:45
 msgid "Project"
-msgstr "프로젝트"
+msgstr "Progetto"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:35
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:45
 msgid "What it is"
-msgstr ""
+msgstr "Che cos'è"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:35
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:45
 msgid "Links"
-msgstr "링크"
+msgstr "Collegamenti"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:37
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.calindori.svg\" width="
-#| "\"50\" height=\"50\"><br />Calindori"
 msgid ""
 "<img src=\"org.kde.calindori.png\" width=\"50\" height=\"50\"><br />Calindori"
 msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.calindori.svg\" width="
-"\"50\" height=\"50\"><br />Calindori"
+"<img src=\"org.kde.calindori.png\" width=\"50\" height=\"50\"><br />Calindori"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:37
 msgid "A touch friendly calendar application designed for mobile devices."
 msgstr ""
+"Un calendario adatto ad interfacce tattili progettato per i dispositivi "
+"mobili."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:37
 msgid ""
 "[KDE Apps page](https://apps.kde.org/en/calindori)<br />[KDE Invent page]"
 "(https://invent.kde.org/plasma-mobile/calindori)"
 msgstr ""
+"[Pagina su KDE Apps](https://apps.kde.org/en/calindori)<br />[Pagina su "
+"Invent](https://invent.kde.org/plasma-mobile/calindori)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:38
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://invent.kde.org/graphics/koko/-/raw/master/logo.png\" "
-#| "width=\"50\" height=\"50\"><br />Koko"
 msgid "<img src=\"org.kde.koko.png\" width=\"50\" height=\"50\"><br />Koko"
-msgstr ""
-"<img src=\"https://invent.kde.org/graphics/koko/-/raw/master/logo.png\" "
-"width=\"50\" height=\"50\"><br />Koko"
+msgstr "<img src=\"org.kde.koko.png\" width=\"50\" height=\"50\"><br />Koko"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:38
 msgid "An image viewer designed for desktop and touch devices."
 msgstr ""
+"Un visore di immagini progettato per i desktop e per i dispositivi a tocco."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:38
 msgid ""
 "[Userbase page](https://userbase.kde.org/Koko)<br />[KDE Invent page]"
 "(https://invent.kde.org/graphics/koko)"
 msgstr ""
+"[Pagina su Userbase](https://userbase.kde.org/Koko)<br />Pagina su [KDE "
+"Invent](https://invent.kde.org/graphics/koko)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:39
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.kontrast.svg\" width="
-#| "\"50\" height=\"50\"><br />Kontrast"
 msgid ""
 "<img src=\"org.kde.kontrast.png\" width=\"50\" height=\"50\"><br />Kontrast"
 msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.kontrast.svg\" width="
-"\"50\" height=\"50\"><br />Kontrast"
+"<img src=\"org.kde.kontrast.png\" width=\"50\" height=\"50\"><br />Kontrast"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:39
 msgid ""
 "A color contrast checker that tells you if your color combinations are "
 "accessible for people with color vision deficiencies."
 msgstr ""
+"Uno strumento di controllo per il contrasto dei colori che ti segnala se le "
+"combinazioni di colore sono accessibili a quelle persone con problemi nella "
+"visione dei colori."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:39
 msgid ""
 "[KDE Apps page](https://apps.kde.org/en/kontrast)<br />[KDE Invent page]"
 "(https://invent.kde.org/accessibility/kontrast)"
 msgstr ""
+"[Pagina su KDE Apps](https://apps.kde.org/en/kontrast)<br />[Pagina su KDE "
+"Invent](https://invent.kde.org/accessibility/kontrast)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:40
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.elisa.svg\" width="
-#| "\"50\" height=\"50\"><br />Elisa"
 msgid ""
 "<img src=\"org.kde.licentia.png\" width=\"50\" height=\"50\"><br />Licentia"
 msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.elisa.svg\" width=\"50\" "
-"height=\"50\"><br />Elisa"
+"<img src=\"org.kde.licentia.png\" width=\"50\" height=\"50\"><br />Licentia"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:40
 msgid "An app to help you choose the license to go with your project."
@@ -5583,18 +5772,16 @@ msgid ""
 "[KDE Apps page](https://apps.kde.org/licentia/)<br />[KDE Invent page]"
 "(https://invent.kde.org/sdk/licentia)"
 msgstr ""
+"[Pagina delle KDE Apps](https://apps.kde.org/licentia/)<br />[Pagina di KDE "
+"Invent](https://invent.kde.org/sdk/licentia)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:41
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.elisa.svg\" width="
-#| "\"50\" height=\"50\"><br />Elisa"
 msgid ""
 "<img src=\"start-here-kde.png\" width=\"50\" height=\"50\"><br />Plasma "
 "Welcome"
 msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.elisa.svg\" width=\"50\" "
-"height=\"50\"><br />Elisa"
+"<img src=\"start-here-kde.png\" width=\"50\" height=\"50\"><br />Plasma "
+"Welcome"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:41
 msgid ""
@@ -5603,30 +5790,25 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:41
 msgid "[KDE Invent page](https://invent.kde.org/plasma/plasma-welcome)"
-msgstr ""
+msgstr "[Pagina di KDE Invent](https://invent.kde.org/plasma/plasma-welcome)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:43
-#, fuzzy
-#| msgid "Kirigami"
 msgid "More complex Kirigami projects"
-msgstr "Kirigami"
+msgstr "Progetti in Kirigami più complessi"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:47
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.discover.svg\" width="
-#| "\"50\" height=\"50\"><br />Discover"
 msgid ""
 "<img src=\"org.kde.discover.png\" width=\"50\" height=\"50\"><br />Discover"
 msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.discover.svg\" width="
-"\"50\" height=\"50\"><br />Discover"
+"<img src=\"org.kde.discover.png\" width=\"50\" height=\"50\"><br />Discover"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:47
 msgid ""
 "An application that helps you find and install applications, games, and "
 "tools."
 msgstr ""
+"Un'applicazione che ti aiuta a trovare e a installare applicazioni, giochi e "
+"strumenti."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:47
 msgid ""
@@ -5634,20 +5816,17 @@ msgid ""
 "(https://userbase.kde.org/Discover)<br />[KDE Invent page](https://invent."
 "kde.org/plasma/discover)"
 msgstr ""
+"[Pagina su KDE Apps](https://apps.kde.org/en/discover)<br />[Pagina su KDE "
+"Userbase](https://userbase.kde.org/Discover)<br />[Pagina su KDE Invent]"
+"(https://invent.kde.org/plasma/discover)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:48
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.elisa.svg\" width="
-#| "\"50\" height=\"50\"><br />Elisa"
 msgid "<img src=\"org.kde.elisa.png\" width=\"50\" height=\"50\"><br />Elisa"
-msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.elisa.svg\" width=\"50\" "
-"height=\"50\"><br />Elisa"
+msgstr "<img src=\"org.kde.elisa.png\" width=\"50\" height=\"50\"><br />Elisa"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:48
 msgid "A music player that strives to be simple and nice to use."
-msgstr ""
+msgstr "Un lettore musicale che cerca di essere semplice e piacevole da usare."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:48
 msgid ""
@@ -5655,24 +5834,26 @@ msgid ""
 "org/en/elisa)<br />[KDE Community Wiki page](https://community.kde.org/"
 "KDEConnect)<br />[KDE Invent page](https://invent.kde.org/multimedia/elisa)"
 msgstr ""
+"[Pagina iniziale](https://elisa.kde.org/)<br />[Pagina su KDE Apps](https://"
+"apps.kde.org/en/elisa)<br />[Pagina sul wiki della Comunità KDE](https://"
+"community.kde.org/KDEConnect)<br />[Pagina su KDE Invent](https://invent.kde."
+"org/multimedia/elisa)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:49
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.kdeconnect.kcm.svg\" "
-#| "width=\"50\" height=\"50\"><br />KDE Connect"
 msgid ""
 "<img src=\"org.kde.kdeconnect.png\" width=\"50\" height=\"50\"><br />KDE "
 "Connect"
 msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.kdeconnect.kcm.svg\" width="
-"\"50\" height=\"50\"><br />KDE Connect"
+"<img src=\"org.kde.kdeconnect.png\" width=\"50\" height=\"50\"><br />KDE "
+"Connect"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:49
 msgid ""
 "A multi-platform app that allows your devices to communicate (eg: your phone "
 "and your computer)."
 msgstr ""
+"Un programma multi piattaforma che permette ai tuoi dispositivi (ad esempio "
+"un telefono e un computer) di comunicare."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:49
 msgid ""
@@ -5680,58 +5861,53 @@ msgid ""
 "(https://community.kde.org/KDEConnect)<br />[KDE Invent page](https://invent."
 "kde.org/network/kdeconnect-kde)"
 msgstr ""
+"Pagina iniziale](https://kdeconnect.kde.org/)<br />[Pagina sul wiki della "
+"Comunità KDE](https://community.kde.org/KDEConnect)<br />[Pagina su KDE "
+"Invent](https://invent.kde.org/network/kdeconnect-kde)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:50
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.kontrast.svg\" width="
-#| "\"50\" height=\"50\"><br />Kontrast"
 msgid ""
 "<img src=\"org.kde.kongress.png\" width=\"50\" height=\"50\"><br />Kongress"
 msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.kontrast.svg\" width="
-"\"50\" height=\"50\"><br />Kontrast"
+"<img src=\"org.kde.kongress.png\" width=\"50\" height=\"50\"><br />Kongress"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:50
 msgid "A companion application for conference attendees."
-msgstr ""
+msgstr "Un'applicazione di supporto per i partecipanti alle conferenze."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:50
 msgid "[KDE Invent page](https://invent.kde.org/utilities/kongress)"
-msgstr ""
+msgstr "[Pagina di KDE Invent](https://invent.kde.org/utilities/kongress)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:51
-#, fuzzy
-#| msgid ""
-#| "<img src=\"https://apps.kde.org/app-icons/org.kde.neochat.svg\" width="
-#| "\"50\" height=\"50\"><br />NeoChat"
 msgid ""
 "<img src=\"org.kde.neochat.png\" width=\"50\" height=\"50\"><br />NeoChat"
 msgstr ""
-"<img src=\"https://apps.kde.org/app-icons/org.kde.neochat.svg\" width=\"50\" "
-"height=\"50\"><br />NeoChat"
+"<img src=\"org.kde.neochat.png\" width=\"50\" height=\"50\"><br />NeoChat"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:51
 msgid ""
 "A client for Matrix, the decentralized communication protocol for instant "
 "messaging."
 msgstr ""
+"Un client per Matrix, il protocollo di comunicazione decentralizzato per la "
+"messaggistica istantanea."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:51
 msgid ""
 "[KDE Apps page](https://apps.kde.org/en/neochat)<br />[KDE Invent page]"
 "(https://invent.kde.org/network/neochat)"
 msgstr ""
+"[Pagina delle KDE Apps](https://apps.kde.org/en/neochat)<br />[Pagina di KDE "
+"Invent](https://invent.kde.org/network/neochat)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:53
-#, fuzzy
-#| msgid "Warning"
 msgid "Learning more"
-msgstr "경고"
+msgstr "Ulteriori informazioni"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:55
 msgid "Not feeling quite ready yet? That's okay too."
-msgstr ""
+msgstr "Non ti senti ancora pronto? Va bene lo stesso."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:57
 msgid ""
@@ -5739,16 +5915,22 @@ msgid ""
 "poke through the code and see how experienced developers have created fully-"
 "featured applications, and use these techniques yourself."
 msgstr ""
+"Molti dei progetti sopra elencati sono delle risorse di apprendimento "
+"inestimabili: puoi sfogliare il codice per vedere come gli degli "
+"sviluppatori esperti hanno creato applicazioni complete e utilizzare tu "
+"stesso queste tecniche."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:59
 msgid ""
 "If you feel you need a more gentle approach, we have also compiled some "
 "resources we think you might find useful."
 msgstr ""
+"Se senti di aver bisogno di un approccio più dolce abbiamo anche compilato "
+"alcune risorse che pensiamo potrai trovare utili."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:61
 msgid "The backend and C++"
-msgstr ""
+msgstr "Il motore e il C++"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:63
 msgid ""
@@ -5756,21 +5938,26 @@ msgid ""
 "handle backend code all that much. This is, however, an essential facet of "
 "KDE application development."
 msgstr ""
+"Mentre abbiamo parlato a lungo di QML, non abbiamo fatto lo stesso su come "
+"gestire il codice del motore. Tuttavia questo è un aspetto essenziale nello "
+"sviluppo di applicazioni di KDE."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:65
 msgid "C++/Qt with Kirigami"
-msgstr ""
+msgstr "C++ e Qt con Kirigami"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:67
 msgid ""
 "In the advanced section of this Kirigami documentation we have some pages "
 "that can help you get started:"
 msgstr ""
+"Nella sezione avanzata di questa documentazione su Kirigami abbiamo alcune "
+"pagine che possono aiutarti a iniziare:"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:69
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:80
 msgid "Topic"
-msgstr "주제"
+msgstr "Argomento"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:71
 msgid ""
@@ -5780,7 +5967,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:71
 msgid "Learn all about CMake and how to compile your applications."
-msgstr ""
+msgstr "Impara tutto su CMake e su come compilare le tue applicazioni."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:72
 msgid ""
@@ -5804,6 +5991,8 @@ msgid ""
 "Add advanced functionality to your Kirigami application and connect it to "
 "your UI."
 msgstr ""
+"Aggiungi funzionalità avanzate alla tua applicazione Kirigami e collegala "
+"all'interfaccia utente."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:74
 msgid "[About Page](/docs/getting-started/kirigami/advanced-add_about_page)"
@@ -5811,29 +6000,31 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:74
 msgid "Add an \"About Page\" to your UI."
-msgstr ""
+msgstr "Aggiungi una \"Pagina delle informazioni\" alla tua interfaccia."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:76
 msgid "Beginner C++ resources"
-msgstr ""
+msgstr "Risorse C++ per principianti"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:78
 msgid ""
 "If you are completely new to C++, there are numerous resources available "
 "throughout the web. Here are some that may be useful."
 msgstr ""
+"Se sei completamente nuovo del C++, sono in rete numerose risorse. Qui ce ne "
+"sono alcune che potrebbero esserti utili."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:80
 msgid "Resource"
-msgstr "자원"
+msgstr "Risorsa"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:82
 msgid "[Wikibooks C++](https://en.wikibooks.org/wiki/C%2B%2B_Programming)"
-msgstr "[위키책 C++](https://en.wikibooks.org/wiki/C%2B%2B_Programming)"
+msgstr "[Wikibooks sul C++](https://en.wikibooks.org/wiki/C%2B%2B_Programming)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:82
 msgid "A comprehensive wikibook with C++ lessons and exercises"
-msgstr ""
+msgstr "Un Wikibook completo con lezioni ed esercizi sul C++"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:83
 msgid "[W3Schools C++](https://www.w3schools.com/cpp/cpp_intro.asp)"
@@ -5841,7 +6032,7 @@ msgstr "[W3Schools C++](https://www.w3schools.com/cpp/cpp_intro.asp)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:83
 msgid "A set of C++ tutorials and other resources aimed at beginners"
-msgstr ""
+msgstr "Un insieme di esercitazioni e altre risorse destinate ai principianti"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:84
 msgid "[LearnCpp](https://www.learncpp.com/)"
@@ -5849,7 +6040,7 @@ msgstr "[LearnCpp](https://www.learncpp.com/)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:84
 msgid "Tutorials to get to grips with C++"
-msgstr ""
+msgstr "Esercitazioni per padroneggiare il C++"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:85
 msgid "[cppreference](https://en.cppreference.com/w/)"
@@ -5857,7 +6048,7 @@ msgstr "[cppreference](https://en.cppreference.com/w/)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:85
 msgid "A reference site for C++"
-msgstr ""
+msgstr "Un sito di riferimento per il C++"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:87
 msgid ""
@@ -5868,7 +6059,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:89
 msgid "Creating classic KDE applications using QtWidgets"
-msgstr ""
+msgstr "Creare applicazioni KDE classiche usando QtWidgets"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:91
 msgid ""
@@ -5888,7 +6079,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:95
 msgid "More QML and QtQuick"
-msgstr ""
+msgstr "Altro su QML e QtQuick"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:97
 msgid ""
@@ -5896,24 +6087,30 @@ msgid ""
 "functionality we haven't covered, but there is a lot of documentation we can "
 "pull from to find out more."
 msgstr ""
+"Il progetto Qt è vasto, così come lo sono QML e QtQuick. Ci sono molte "
+"funzionalità che non abbiamo trattato, ma c'è molta documentazione da cui "
+"possiamo attingere per saperne di più."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:99
 msgid ""
 "If you want to look up what specific components do, look no further than "
 "[Qt's official QML documentation.](https://doc.qt.io/qt-6/qtquick-index.html)"
 msgstr ""
+"Se vuoi cercare cosa fa uno specifico componente, fallo decisamente nella  "
+"[documentazione ufficiale QML di Qt.](https://doc.qt.io/qt-6/qtquick-index."
+"html)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:100
 msgid ""
 "If you are looking for a more guided approach to learning, [the QMLBook]"
 "(https://qmlbook.github.io/) is a great place to start."
 msgstr ""
+"Se stai cercando un approccio più guidato per imparare, [il QMLBook](https://"
+"qmlbook.github.io/) è un bel posto per iniziare."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:102
-#, fuzzy
-#| msgid "Kirigami"
 msgid "More Kirigami"
-msgstr "Kirigami"
+msgstr "Altro su Kirigami"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:104
 msgid ""
@@ -5921,6 +6118,9 @@ msgid ""
 "some of the Components pages to find out more about some of the QML "
 "components that Kirigami provides for you to use."
 msgstr ""
+"Questa documentazione include molto di più su Kirigami: puoi sfogliare "
+"alcune delle pagine dei componenti per saperne di più su alcuni dei "
+"componenti QML che Kirigami ti permette di usare."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:106
 msgid ""
@@ -5933,7 +6133,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:108
 msgid "The sky is the limit!"
-msgstr ""
+msgstr "Non ci sono limiti!"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:110
 msgid ""
@@ -5942,22 +6142,27 @@ msgid ""
 "billion dollar company with a high barrier for entry (we have no five-round "
 "coding interviews!) and as long as you are nice, you will be welcomed."
 msgstr ""
+"Non farti intimidire da tutto il materiale che c'è qui: nessuno inizia "
+"essendo in grado di creare dal nulla qualcosa come Plasma. Ma KDE non è una "
+"compagnia multi miliardaria con un'alta barriera all'ingresso: non abbiamo "
+"interviste di codifica in cinque round! E fintanto che sarai gentile, sarai "
+"accolto."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:112
 msgid "Good luck!"
-msgstr ""
+msgstr "Buona fortuna!"
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:0
 msgid "Explaining pages"
-msgstr ""
+msgstr "Spiegazione delle pagine"
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:0
 msgid "Pages allow you to organize your application content"
-msgstr ""
+msgstr "Le pagine ti permettono di organizzare i contenuti dell'applicazione"
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:12
 msgid "Our app"
-msgstr ""
+msgstr "I nostri programmi"
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:14
 msgid ""
@@ -5965,6 +6170,10 @@ msgid ""
 "Kirigami application. With the basics in place, we can begin our journey "
 "towards creating a fully-featured application."
 msgstr ""
+"Nell'esercitazione precedente siamo riusciti a creare, a costruire e a "
+"compilare la nostra prima applicazione Kirigami. da queste basi possiamo "
+"iniziare il viaggio verso la creazione di un'applicazione piena di "
+"funzionalità."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:16
 msgid ""
@@ -5983,10 +6192,12 @@ msgid ""
 "In this section we'll be focusing on pages, one of the key structural "
 "elements of any Kirigami application."
 msgstr ""
+"In questa sezione ci focalizzeremo sulle pagine, uno degli elementi "
+"strutturali chiave di ogni applicazione Kirigami."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:22
 msgid "Pages"
-msgstr "페이지"
+msgstr "Pagine"
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:24
 msgid ""
@@ -6007,13 +6218,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:30
 msgid "A single page on the phone"
-msgstr ""
+msgstr "Una pagina singola sul telefono"
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:32
-#, fuzzy
-#| msgid "Components"
 msgid "Two pages next to each other on the desktop"
-msgstr "구성 요소"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:38
 msgid ""
@@ -6032,6 +6241,7 @@ msgstr ""
 msgid ""
 "Let's go back to the `Main.qml` file we created in our previous tutorial:"
 msgstr ""
+"Torniamo al file `Main.qml` che abbiamo creato nell'esercitazione precedente:"
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:48
 msgid ""
@@ -6089,10 +6299,12 @@ msgid ""
 "Separating unwieldy code into different files, and attach signals to your "
 "components.\n"
 msgstr ""
+"Separare il codice ingombrante in file diversi e collegare i segnali ai "
+"componenti.\n"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:13
 msgid "Why and how"
-msgstr ""
+msgstr "Perché e come"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:15
 msgid ""
@@ -6100,6 +6312,9 @@ msgid ""
 "own QML files. If we keep adding things to `Main.qml`, it's going to quickly "
 "become hard to tell what does what, and we risk muddying our code."
 msgstr ""
+"Per la prima volta separeremo alcuni dei nostri componenti nei loro file "
+"QML: continuando ad aggiungere delle cose al `main.qml`, presto sarà "
+"difficile dire chi fa cosa. Rischiamo quindi di sporcare il codice."
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:17
 msgid ""
@@ -6326,7 +6541,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:148
 msgid "`KountdownDelegate.qml` becomes `KountdownDelegate {}`:"
-msgstr ""
+msgstr "`KountdownDelegate.qml` diventa `KountdownDelegate {}`:"
 
 #: content/docs/getting-started/kirigami/introduction-separatefiles/index.md:152
 msgid ""
@@ -6343,10 +6558,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
-#, fuzzy
-#| msgid "Kirigami"
 msgid "Kirigami with C++"
-msgstr "Kirigami"
+msgstr "Kirigami con C++"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Create your first Kirigami application with C++\n"
@@ -6354,7 +6567,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:14
 msgid "Installing Kirigami"
-msgstr ""
+msgstr "Installazione di Kirigami"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:16
 msgid ""
@@ -6367,14 +6580,15 @@ msgid ""
 "[Installing Kirigami from the repositories in your Linux distribution]"
 "(#linux)"
 msgstr ""
+"[Installazione di Kirigami dai depositi della tua distribuzione](#linux)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:19
 msgid "[Using kde-builder](#kde-builder)"
-msgstr ""
+msgstr "[Uso di kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:20
 msgid "[Installing Kirigami with Craft](#craft)"
-msgstr ""
+msgstr "[Installazione di Kirigami con Craft](#craft)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:22
 msgid ""
@@ -6394,7 +6608,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:26
 msgid "Installing Kirigami from the repositories in your Linux distribution"
-msgstr ""
+msgstr "Installazione di Kirigami dai depositi della tua distribuzione"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:28
 msgid ""
@@ -6411,7 +6625,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:38
 msgid "Using kde-builder"
-msgstr ""
+msgstr "Usare kde-builder"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:40
 msgid ""
@@ -6428,11 +6642,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:44
 msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
-msgstr ""
+msgstr "Aggiungere quanto segue alla fine di `~/.config/kde-builder.yaml`:"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:51
 msgid "⏳ With kdesrc-build..."
-msgstr ""
+msgstr "⏳ Con kdesrc-build..."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:53
 msgid ""
@@ -6449,7 +6663,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:69
 msgid "Installing Kirigami with Craft"
-msgstr ""
+msgstr "Installazione di Kirigami con Craft"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:71
 msgid ""
@@ -6488,7 +6702,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:85
 #: content/docs/getting-started/kirigami/setup-python/index.md:23
 msgid "Project structure"
-msgstr ""
+msgstr "Struttura del progetto"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:87
 msgid ""
@@ -6496,6 +6710,9 @@ msgid ""
 "create them manually. This will let us better understand the pieces that are "
 "going to make up our new application."
 msgstr ""
+"Sebbene esistano degli strumenti che possono impostare facilmente i file, li "
+"creeremo manualmente. Questo ci consentirà di capire meglio tutti i pezzi "
+"che costituiranno la nostra nuova applicazione."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:89
 msgid ""
@@ -6522,12 +6739,12 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:121
 msgid "Main.qml"
-msgstr ""
+msgstr "Main.qml"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:125
 #: content/docs/getting-started/kirigami/setup-python/index.md:118
 msgid "Here's where we will be handling our application's frontend."
-msgstr ""
+msgstr "Ecco dove gestiremo l'interfaccia della nostra applicazione."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:127
 #: content/docs/getting-started/kirigami/setup-python/index.md:120
@@ -6539,6 +6756,13 @@ msgid ""
 "these tutorials we will be focusing much of our attention on our QML code, "
 "where we can use Kirigami to get the most out of it."
 msgstr ""
+"Se conosci un po' di Javascript, allora la gran parte di QML ti sembrerà "
+"familiare (sebbene abbia delle sue caratteristiche proprie)). Se hai voglia "
+"di provare a fare qualcosa da solo la [documentazione di Qt](https://doc.qt."
+"io/qt-6/qtqml-index.html) ha un'ampia quantità di materiale su questo "
+"linguaggio. In queste esercitazioni focalizzeremo la nostra attenzione "
+"principalmente sul codice QML, nel quale possiamo utilizzare Kirigami per "
+"ottenerne il massimo."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:129
 #: content/docs/getting-started/kirigami/setup-python/index.md:122
@@ -6594,6 +6818,11 @@ msgid ""
 "all Kirigami applications. This is the window that will contain each of our "
 "pages, the main sections of our UI."
 msgstr ""
+"Arriviamo quindi al nostro elemento base, [`Kirigami.ApplicationWindow`]"
+"(docs:kirigami2;ApplicationWindow), che fornisce alcune funzionalità di base "
+"che sono necessarie a tutte le applicazioni in Kirigami. Si tratta della "
+"finestra che contiene le pagine, le sezioni principali della nostra "
+"interfaccia."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:144
 #: content/docs/getting-started/kirigami/setup-python/index.md:137
@@ -6610,6 +6839,10 @@ msgid ""
 "`i18nc()`, where we detail the context of the string as well as the string "
 "itself."
 msgstr ""
+"Abbiamo anche impostato la proprietà `title` a `Hello World`\". Noterai che "
+"abbiamo messo la stringa `Hello World` in una funzione chiamata `i18nc()`, "
+"nella quale abbiamo dettagliato il contesto della stringa e la stringa "
+"stessa."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:150
 msgid ""
@@ -6658,7 +6891,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:160
 msgid "org.kde.tutorial.desktop"
-msgstr ""
+msgstr "org.kde.tutorial.desktop"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:162
 #: content/docs/getting-started/kirigami/setup-python/index.md:72
@@ -6689,10 +6922,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:174
-#, fuzzy
-#| msgid "CMake"
 msgid "CMakeLists.txt"
-msgstr "CMake"
+msgstr "CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:176
 msgid ""
@@ -6743,7 +6974,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:194
 msgid "create an executable"
-msgstr ""
+msgstr "crea un eseguibile"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:195
 msgid "change the executable into a QML module that accepts QML files"
@@ -6774,6 +7005,7 @@ msgid ""
 "Now that CMake has been taken care of, let's look at the files we are going "
 "to spend the majority of our time working with."
 msgstr ""
+"Ora che CMake se n'è preso cura, vediamo i file su cui lavoreremo di più."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:206
 msgid ""
@@ -6805,6 +7037,8 @@ msgid ""
 "<details>\n"
 "<summary>Click here to read more</summary>\n"
 msgstr ""
+"<details>\n"
+"<summary>Fai clic qui per leggere di più</summary>\n"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:219
 msgid ""
@@ -6841,7 +7075,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:237
 msgid "The old method"
-msgstr ""
+msgstr "Il vecchio metodo"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:239
 msgid ""
@@ -6880,11 +7114,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:254
 msgid "file = the QML file"
-msgstr ""
+msgstr "file = il file QML"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:260
 msgid "Compiling and installing the application"
-msgstr ""
+msgstr "Compilazione ed installazione dell'applicazione"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:262
 msgid ""
@@ -6894,7 +7128,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:264
 msgid "Linux or FreeBSD"
-msgstr ""
+msgstr "Linux o FreeBSD"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:266
 msgid "Compiling with kde-builder"
@@ -6914,7 +7148,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:277
 msgid "Compiling manually"
-msgstr ""
+msgstr "Compilazione manuale"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:279
 msgid ""
@@ -6930,7 +7164,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:289
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:291
 msgid ""
@@ -6953,7 +7187,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:308
 msgid "Or:"
-msgstr ""
+msgstr "Oppure:"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:314
 msgid "If MinGW:"
@@ -6975,23 +7209,23 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:334
 msgid "You can then run the `kirigami-hello` program with:"
-msgstr ""
+msgstr "Puoi avviare il programma `kirigami-hello` con:"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:337
 msgid "On Linux, manually"
-msgstr ""
+msgstr "Su Linux, manualmente"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:338
 msgid "With kde-builder"
-msgstr ""
+msgstr "Con kde-builder"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:339
 msgid "With kdesrc-build"
-msgstr ""
+msgstr "Con kdesrc-build"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:340
 msgid "On Windows"
-msgstr ""
+msgstr "In Windows"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:343
 #: content/docs/getting-started/kirigami/setup-python/index.md:185
@@ -7003,7 +7237,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:345
 #: content/docs/getting-started/kirigami/setup-python/index.md:187
 msgid "![Screenshot of the generated Kirigami application](hello-kworld.webp)"
-msgstr ""
+msgstr "![Schermata dell'applicazione in Kirigami generata](hello-kworld.webp)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:347
 #: content/docs/getting-started/kirigami/setup-python/index.md:179
@@ -7038,10 +7272,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Kirigami"
 msgid "Kirigami with Python"
-msgstr "Kirigami"
+msgstr "Kirigami con Python"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
 msgid "Create your first Kirigami application with PySide\n"
@@ -7049,7 +7281,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:12
 msgid "Prerequisites"
-msgstr ""
+msgstr "Prerequisiti"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:14
 msgid ""
@@ -7108,7 +7340,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:52
 msgid "pyproject.toml"
-msgstr ""
+msgstr "pyproject.toml"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:54
 msgid ""
@@ -7174,7 +7406,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:70
 msgid "org.kde.kirigami_python.desktop"
-msgstr ""
+msgstr "org.kde.kirigami_python.desktop"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:74
 msgid ""
@@ -7193,7 +7425,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:84
 msgid "MANIFEST.in"
-msgstr ""
+msgstr "MANIFEST.in"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:86
 msgid ""
@@ -7205,7 +7437,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:90
 msgid "src/app.py"
-msgstr ""
+msgstr "src/app.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:94
 msgid ""
@@ -7227,7 +7459,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:98
 msgid "src/\\_\\_init\\_\\_.py"
-msgstr ""
+msgstr "src/\\_\\_init\\_\\_.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:100
 msgid ""
@@ -7237,11 +7469,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:106
 msgid "src/\\_\\_main\\_\\_.py"
-msgstr ""
+msgstr "src/\\_\\_main\\_\\_.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:108
 msgid "Create a `kirigami_python/src/__main__.py` with the following contents:"
-msgstr ""
+msgstr "Crea un `kirigami_python/src/__main__.py` con il seguente contenuto:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:112
 msgid ""
@@ -7252,7 +7484,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:114
 msgid "src/qml/Main.qml"
-msgstr ""
+msgstr "src/qml/Main.qml"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:139
 msgid "We also set the window `title` property to \"Hello World\"."
@@ -7325,15 +7557,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"
-msgstr ""
+msgstr "Colori e temi in Kirigami"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors "
-msgstr "색상"
+msgstr "Colori "
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Make your app follow your user color scheme\n"
-msgstr ""
+msgstr "Fai in modo che il programma segua il tuo schema di colori\n"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:14
 msgid ""
@@ -7381,7 +7613,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/style-colors/index.md:36
 #: content/docs/getting-started/kirigami/style-typography/index.md:375
 msgid "Theme"
-msgstr "테마"
+msgstr "Tema"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:38
 msgid ""
@@ -7410,7 +7642,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:64
 msgid "Color Set"
-msgstr "색 구성표"
+msgstr "Insieme di colori"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:66
 msgid ""
@@ -7442,6 +7674,8 @@ msgid ""
 "View: Color set for item views, usually the lightest of all (in light color "
 "themes)"
 msgstr ""
+"Vista: l'insieme dei colori per le viste degli elementi, di solito il più "
+"chiaro di tutti (nei temi di colori chiari)"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:78
 msgid ""
@@ -7451,15 +7685,15 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:79
 msgid "Button: Color set used by buttons"
-msgstr ""
+msgstr "Pulsante: l'insieme dei colori usato dai pulsanti"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:80
 msgid "Selection: Color set used by selected areas"
-msgstr ""
+msgstr "Selezione: l'insieme dei colori usato per le aree selezionate"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:81
 msgid "Tooltip: Color set used by tooltips"
-msgstr ""
+msgstr "Suggerimento: l'insieme dei colori usato dai suggerimenti"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:82
 msgid ""
@@ -7485,7 +7719,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:106
 msgid "Using Custom Colors"
-msgstr ""
+msgstr "Uso di colori personalizzati"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:108
 msgid ""
@@ -7515,11 +7749,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:159
 msgid "Example with custom colors"
-msgstr ""
+msgstr "Esempio con colori personalizzati"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:0
 msgid "Typography"
-msgstr ""
+msgstr "Tipografia"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:14
 msgid ""
@@ -7531,7 +7765,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:18
 msgid "Headings"
-msgstr "제목"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:20
 msgid ""
@@ -7545,7 +7779,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:80
 msgid "Labels"
-msgstr "이름표"
+msgstr "Etichette"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:82
 msgid ""
@@ -7555,7 +7789,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:121
 msgid "Text Alignment"
-msgstr "텍스트 정렬"
+msgstr "Allineamento del testo"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:123
 msgid ""
@@ -7587,7 +7821,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:325
 msgid "Rich Text"
-msgstr "서식 있는 텍스트"
+msgstr "Testo formattato"
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:327
 msgid ""
@@ -7595,6 +7829,9 @@ msgid ""
 "controlled via the [textFormat](https://doc.qt.io/qt-6/qml-qtquick-text."
 "html#textFormat-prop) property."
 msgstr ""
+"QML ti permette di visualizzare (e di modificare) il testo formattato. Il "
+"comportamento può essere controllato con la proprietà [textFormat](https://"
+"doc.qt.io/qt-6/qml-qtquick-text.html#textFormat-prop)."
 
 #: content/docs/getting-started/kirigami/style-typography/index.md:369
 msgid ""
@@ -7608,85 +7845,3 @@ msgid ""
 "PlatformTheme) is available as `Kirigami.Theme.defaultFont.pointSize` in "
 "your application."
 msgstr ""
-
-#, fuzzy
-#~| msgid "Resource"
-#~ msgid "A standard `resources.qrc`:"
-#~ msgstr "자원"
-
-#, fuzzy
-#~| msgid "Drawers"
-#~ msgid "Global Drawer"
-#~ msgstr "서랍"
-
-#~ msgid "Banners"
-#~ msgstr "배너"
-
-#, fuzzy
-#~| msgid "Actions"
-#~ msgid "Message actions"
-#~ msgstr "동작"
-
-#, fuzzy
-#~| msgid "Inline messages"
-#~ msgid "Placeholder messages"
-#~ msgstr "인라인 메시지"
-
-#~ msgid "Overlay sheets"
-#~ msgstr "오버레이 시트"
-
-#, fuzzy
-#~| msgid "Overlay sheets"
-#~ msgid "Global sheet"
-#~ msgstr "오버레이 시트"
-
-#, fuzzy
-#~| msgid "Overlay sheets"
-#~ msgid "Non-global overlay sheet"
-#~ msgstr "오버레이 시트"
-
-#, fuzzy
-#~| msgid "Overlay sheets"
-#~ msgid "Global overlay sheet"
-#~ msgstr "오버레이 시트"
-
-#, fuzzy
-#~| msgid "Overlay sheets"
-#~ msgid "Non-fixed width overlay sheet"
-#~ msgstr "오버레이 시트"
-
-#, fuzzy
-#~| msgid "Overlay sheets"
-#~ msgid "Fixed width overlay sheet"
-#~ msgstr "오버레이 시트"
-
-#, fuzzy
-#~| msgid "Resource"
-#~ msgid "resources.qrc"
-#~ msgstr "자원"
-
-#, fuzzy
-#~| msgid "Overlay sheets"
-#~ msgid "Creating overlay sheets"
-#~ msgstr "오버레이 시트"
-
-#, fuzzy
-#~| msgid "Overlay sheets"
-#~ msgid "Using our sheet"
-#~ msgstr "오버레이 시트"
-
-#~ msgid "Example:"
-#~ msgstr "예제:"
-
-#~ msgid "Layers"
-#~ msgstr "레이어"
-
-#~ msgid ""
-#~ "<img src=\"https://invent.kde.org/utilities/kongress/-/raw/master/org.kde."
-#~ "kongress.svg\" width=\"50\" height=\"50\"><br />Kongress"
-#~ msgstr ""
-#~ "<img src=\"https://invent.kde.org/utilities/kongress/-/raw/master/org.kde."
-#~ "kongress.svg\" width=\"50\" height=\"50\"><br />Kongress"
-
-#~ msgid "Heading"
-#~ msgstr "머리글"
