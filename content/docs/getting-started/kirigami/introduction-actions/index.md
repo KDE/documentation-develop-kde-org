@@ -73,7 +73,7 @@ The `id` and `text` properties should be familiar from previous tutorials. Howev
 <details>
 <summary>Click here to see how to check the available icons on your system</summary>
 <br>
-Cuttlefish is a KDE application that lets you view all the icons that you can use for your application. It offers a number of useful features such as previews of their appearance across different installed themes, previews at different sizes, and more. You might find it a useful tool when deciding on which icons to use in your application.<br><br>
+Icon Explorer is a KDE application that lets you view all the icons that you can use for your application. It offers a number of useful features such as previews of their appearance across different installed themes, previews at different sizes, and more. You might find it a useful tool when deciding on which icons to use in your application.<br><br>
 
 Many of KDE's icons follow the FreeDesktop Icon Naming specification. Therefore, you might also find it useful to consult The FreeDesktop project's website, [which lists all cross-desktop compatible icon names](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
 
