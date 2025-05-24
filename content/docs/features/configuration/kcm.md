@@ -55,7 +55,7 @@ the libraries its KCM needs as well.
 
 {{< readfile file="/content/docs/features/kcm/src/CMakeLists.txt" highlight="cmake" >}}
 
-These CMake files contain a few packages of note: [KCMUtils](docs:kcmutils) provides various classes that allow us to work with [KCModules](docs:kconfigwidgets;KCModule), and `Config` includes the [KConfig](docs:kconfig) classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](/docs/getting-started/kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
+These CMake files contain a few packages of note: [KCMUtils](docs:kcmutils) provides various classes that allow us to work with [KCModules](docs:kcmutils;KCModule), and `Config` includes the [KConfig](docs:kconfig) classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](/docs/getting-started/kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
 
 What's different here is that we are using C++ code as a plugin for our QML code. This is why we don't have a `main.cpp`: we only need the class that will provide the backend functionality for our KCM. `kcoreaddons_add_plugin` creates such a plugin and installs it to the right location.
 
@@ -92,13 +92,13 @@ This `.json` file provides metadata about our KCM. These entries specify the fol
 
 {{< readfile file="/content/docs/features/kcm/src/ui/main.qml" highlight="json" >}}
 
-As you can see, this is a very basic KCM QML file. We have used a [SimpleKCM](docs:kdeclarative;org::kde::kcm::SimpleKCM) component as the root component, and we have just included a label inside here.
+As you can see, this is a very basic KCM QML file. We have used a [SimpleKCM](docs:kcmutils;SimpleKCM) component as the root component, and we have just included a label inside here.
 
 More complex layouts will require using a different root component. Each has its own use:
 
- - Use [ScrollViewKCM](docs:kdeclarative;org::kde::kcm::ScrollViewKCM) for content that is vertically scrollable, such as ListView.
- - Use [GridViewKCM](docs:kdeclarative;org::kde::kcm::GridViewKCM) for arranging selectable items in a grid.
- - Use [SimpleKCM](docs:kdeclarative;org::kde::kcm::SimpleKCM) otherwise.
+ - Use [ScrollViewKCM](docs:kcmutils;ScrollViewKCM) for content that is vertically scrollable, such as ListView.
+ - Use [GridViewKCM](docs:kcmutils;GridViewKCM) for arranging selectable items in a grid.
+ - Use [SimpleKCM](docs:kcmutils;SimpleKCM) otherwise.
 
 {{< alert title="Note" color="info" >}}
 KCMs can consist of multiple pages that are dynamically opened and closed. To push another page to the page-stack, we can use:
