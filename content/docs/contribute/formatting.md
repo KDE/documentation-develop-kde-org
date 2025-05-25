@@ -110,14 +110,14 @@ Displays the contents of a file and applies syntax highlighting to it. It has fi
 For example, in any content file you can write:
 
 ```html
-{{</* readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" start=17 lines=9 emphasize="1-2 7" */>}}
+{{</* readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/qml/Main.qml" highlight="qml" start=17 lines=9 emphasize="1-2 7" */>}}
 ```
 
 which will be rendered as:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/qml/Main.qml" highlight="qml" start=17 lines=9 emphasize="1-2 7" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/qml/Main.qml" highlight="qml" start=17 lines=9 emphasize="1-2 7" >}}
 
-Since `/content/docs/getting-started/kirigami/introduction-getting_started/` is a bundle, to show the file `/content/docs/getting-started/kirigami/introduction-getting_started/index.md` you can also write as below and achieve the same result:
+Since `/content/docs/getting-started/kirigami/setup-cpp/` is a bundle, to show the file `/content/docs/getting-started/kirigami/setup-cpp/index.md` you can also write as below and achieve the same result:
 
 ```html
 {{</* readfile file="src/qml/main.qml" highlight="qml" start=17 lines=9 emphasize="1-2 7" */>}}

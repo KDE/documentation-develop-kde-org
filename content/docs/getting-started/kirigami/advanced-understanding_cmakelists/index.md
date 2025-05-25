@@ -17,7 +17,7 @@ CMake is useful because it allows us to automate much of the stuff that needs to
 
 You might remember this `CMakeLists.txt` file from the first tutorial:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/CMakeLists.txt" highlight="cmake" >}}
 
 The first line, `cmake_minimum_required()` sets the version of CMake we will be calling.
 
@@ -33,7 +33,7 @@ Then we get to a section where we include a number of necessary CMake and KDE se
 
 The following section is important, because it specifies which dependencies we'll be bringing in at compile time. Let's look at the first:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" start=13 lines=14 >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/CMakeLists.txt" highlight="cmake" start=13 lines=14 >}}
 
 - [find_package()](https://cmake.org/cmake/help/latest/command/find_package.html) finds and loads the external library and its components.
 - `REQUIRED` tells CMake to exit with an error if the package cannot be found.
@@ -54,17 +54,17 @@ Pay close attention to your included components, as omitting ones used in our co
 
 The install line instructs CMake to install the desktop file in `${KDE_INSTALL_APPDIR}`, which on Linux translates to `$XDG_DATA_DIRS/applications`, usually `/usr/share/applications`, and on Windows translates to `C:/Program Files/${PROJECT_NAME}/bin/data/applications`:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" start=32 lines=1 >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/CMakeLists.txt" highlight="cmake" start=34 lines=1 >}}
 
 The final line lets CMake print out which packages it has found, and it makes compilation fail immediately if it encounters an error:
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/CMakeLists.txt" highlight="cmake" start=34 lines=1 >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/CMakeLists.txt" highlight="cmake" start=36 lines=1 >}}
 
 And above that, `add_subdirectory(src)` points CMake into the `src/` directory, where it finds another `CMakeLists.txt` file.
 
 ## src/CMakeLists.txt
 
-{{< readfile file="/content/docs/getting-started/kirigami/introduction-getting_started/src/CMakeLists.txt" highlight="cmake" >}}
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/CMakeLists.txt" highlight="cmake" >}}
 
 While the first file handled metadata and finding libraries, this one will consist of handling dependencies and installing the application. It has the following CMake calls:
 
