@@ -23,7 +23,7 @@ KDE runs or participates in several mentoring programs to help new developers, i
 There are many ways in which you can build KDE software:
 
 * [kde-builder]({{< ref "kde-builder-setup" >}})
-* [kdesrc-build (unsupported)](https://invent.kde.org/sdk/kdesrc-build)
+* [kdesrc-build](https://invent.kde.org/sdk/kdesrc-build)
 * [manual CMake compilation]({{< ref "cmake-build" >}})
 * with [containers]({{< ref "containers-distrobox" >}})
 * with [Craft](https://community.kde.org/Craft)
