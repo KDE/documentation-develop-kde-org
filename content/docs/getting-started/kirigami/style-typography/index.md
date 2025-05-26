@@ -7,8 +7,6 @@ aliases:
   - /docs/getting-started/kirigami/style-typography/
 ---
 
-{{< kirigami-staging-api >}}
-
 {{< alert color="info" >}}
 
 For demonstrative purposes, this tutorial uses an AbstractCard to make the text examples clearer. A better way to achieve the same results would be to use a [Kirigami Addons FormCard](/docs/getting-started/kirigami/addons-introduction).
@@ -17,7 +15,7 @@ For demonstrative purposes, this tutorial uses an AbstractCard to make the text 
 
 ## Headings
 
-Kirigami provides a [Heading](docs:kirigami2;Heading) that can
+Kirigami provides a [Heading](docs:kirigami;org.kde.kirigami.Heading) that can
 be used for page or section titles.
 
 {{< sections >}}
@@ -374,5 +372,5 @@ Kirigami.ApplicationWindow {
 
 ## Theme
 
-The font size of the [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::PlatformTheme) is available
+The font size of the [Kirigami.Theme](https://api-staging.kde.org/qml-org-kde-kirigami-platform-theme.html) is available
 as `Kirigami.Theme.defaultFont.pointSize` in your application.

@@ -9,7 +9,7 @@ aliases:
 
 ## Intro
 
-KDE Frameworks ships with a number of useful extensions to Qt's QML. The [API documentation](docs:plasma-framework) is a good start if you need to know what a specific property does. If you want to browse any of the sources easier, it's also [available on GitLab](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/declarativeimports).
+KDE Frameworks ships with a number of useful extensions to Qt's QML. The [API documentation](docs:plasma;plasma-index.html) is a good start if you need to know what a specific property does. If you want to browse any of the sources more easily, it's also [available on GitLab](https://invent.kde.org/plasma/libplasma/-/tree/master/src/declarativeimports).
 
 
 ## PlasmaComponents Controls
@@ -378,13 +378,13 @@ You will need to import `PlasmaExtras` to use them.
 
 ### Heading, Paragraph
 
-<!-- TODO change to Kirigami::Heading and remove Paragraph -->
+<!-- TODO change to Kirigami::Heading and remove Paragraph OR fix missing QDoc for those -->
 
 {{< sections >}}
 {{< section-left >}}
 To be consistent with elsewhere in Plasma, Plasma ships with a couple different Label/Text
-types with preset default sizes. The first one is [Heading](docs:plasma-framework;org::kde::plasma::extras::Heading)
-for subsections of texts and the second one is [Paragraph](docs:plasma-framework;org::kde::plasma::extras::Paragraph).
+types with preset default sizes. The first one is [Heading](docs:plasma;org.kde.plasma.extras.Heading)
+for subsections of texts and the second one is [Paragraph](docs:plasma;org.kde.plasma.extras.Paragraph).
 Both wraps by default with `Layout.fillWidth: true`.
 
 ![Screenshot Paragraph and Heading](paragraphs.png)
@@ -426,13 +426,21 @@ ColumnLayout {
 import org.kde.plasma.core 2.0 as PlasmaCore
 ```
 
-* The very useful `Theme` and `Units` singletons.
-* A number of enums listed in [`Types`](docs:plasma-framework;Plasma::Types).
-* [`Icon`](docs:kirigami2;Icon) for drawing icons.
-* [`SvgItem`](docs:plasma-framework;Plasma::SvgItem), [`Svg`](docs:plasma-framework;Plasma::Svg) and [`FrameSvgItem`](docs:plasma-framework;Plasma::FrameSvgItem) for drawing SVGs coloured with the Plasma Style color palette.
-* [`DataSource`](docs:plasma-framework;Plasma::DataSource) for connecting to a Plasma DataEngine.
+<!-- TODO: Add QDoc for KSVG as SvgItem is now part of it: https://invent.kde.org/plasma/libplasma/-/merge_requests/852  -->
 
-[See the API docs](https://api.kde.org/frameworks/plasma-plasma-framework/html/core.html) for the full list of types in `PlasmaCore`. You can also skim the generated [`.../core/plugins.qmltypes`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/core/plugins.qmltypes) file.
+<!-- TODO: What to do with this section since almost all of these have been moved to Kirigami and KSvg? -->
+
+* The very useful `Theme` and `Units` singletons.
+* A number of enums listed in [Plasma::Types](docs:plasma;Plasma::Types).
+* [Kirigami.Icon](docs:kirigami;org.kde.kirigami.primitives.Icon) for drawing icons.
+* [SvgItem](docs:ksvg;KSvg::SvgItem), [Svg](docs:ksvg;KSvg::Svg) and [FrameSvgItem](docs:ksvg;KSvg::FrameSvgItem) for drawing SVGs coloured with the Plasma Style color palette.
+
+<!--
+TODO: How to deal with DataSource which is now missing in Plasma 6?
+* [`DataSource`](docs:plasma-framework;Plasma::DataSource) for connecting to a Plasma DataEngine.
+-->
+
+[See the API docs](docs:plasma;plasma-index.html) for the full list of types in `PlasmaCore`. You can also skim the generated [`.../core/plugins.qmltypes`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/core/plugins.qmltypes) file.
 
 
 ### PlasmaCore.Theme
@@ -472,6 +480,8 @@ The `QuickTheme` class extends `Plasma::Theme` which also contains:
 
 
 ### PlasmaCore.Units.devicePixelRatio
+
+<!-- TODO: replace all of these with Kirigami Units -->
 
 In order to scale an Item by display scaling to support HiDPI monitors, you will need to multiply a pixel value by `PlasmaCore.Units.devicePixelRatio`. Plasma also ships with a few preset values for consistent spacing throughout Plasma.
 

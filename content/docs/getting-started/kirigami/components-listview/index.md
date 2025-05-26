@@ -8,8 +8,6 @@ aliases:
   - /docs/getting-started/kirigami/components-listview/
 ---
 
-{{< kirigami-staging-api >}}
-
 [Listviews](docs:qtquick;QtQuick.ListView) can help you display objects from a model in an attractive way. To use a list view, you have to keep track of three things:
 
 1. The **model**, which contains the data you want your list view to display
@@ -27,7 +25,7 @@ A list view has two essential properties we must pay attention to:
 
 The model is not visible, as it only contains data. Typically the delegate will be wrapped in a Component so that it is reusable: it serves as a blueprint for how to instantiate each delegate.
 
-Here is an example that contains exactly one list view, one model and one delegate, using a [Kirigami.SubtitleDelegate](docs:kirigami2;SubtitleDelegate):
+Here is an example that contains exactly one list view, one model and one delegate, using a [Kirigami.SubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates.SubtitleDelegate):
 
 ```qml
 import QtQuick
@@ -281,7 +279,7 @@ Kirigami.ApplicationWindow {
 
 Unlike the model (which merely contains data) and a delegate [Component](docs:qtqml;QtQml.Component) (which only appears when instantiated), the view is a visual component immediately instantiated and so it needs to either have its dimensions set or use anchors or Layouts.
 
-As views are commonly lists of content the user would want to scroll through, when they are added to a [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage), views become the main content with little padding around them, and there is no need to make it fill the page. When the view is added to a simple [Kirigami.Page](docs:kirigami2;Page), it will require to set its dimensions properly before it will show up. In other words: in the scrollable page above, `anchors.fill: parent` is not required; if a simple page was used, it would be required.
+As views are commonly lists of content the user would want to scroll through, when they are added to a [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage), views become the main content with little padding around them, and there is no need to make it fill the page. When the view is added to a simple [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page), it will require to set its dimensions properly before it will show up. In other words: in the scrollable page above, `anchors.fill: parent` is not required; if a simple page was used, it would be required.
 
 There are multiple views APIs can be used, some from Qt and some from Kirigami. Here are the most commonly used ones:
 
@@ -289,8 +287,8 @@ There are multiple views APIs can be used, some from Qt and some from Kirigami. 
 * Qt's [GridView](docs:qtquick;QtQuick.GridView)
 * Qt's [TableView](docs:qtquick;QtQuick.TableView)
 * Qt's [TreeView](docs:qtquick;QtQuick.TreeView)
-* Kirigami's [CardsListView](docs:kirigami2;CardsListView)
-* Kirigami's [ColumnView](docs:kirigami2;ColumnView)
+* Kirigami's [CardsListView](docs:kirigami;org.kde.kirigami.CardsListView)
+* Kirigami's [ColumnView](docs:kirigami;org.kde.kirigami.layouts.ColumnView)
 
 The delegate on the other hand always need to have its dimensions set. Generally its dimensions are set to use only the full width of the view.
 
@@ -333,12 +331,12 @@ You should prefer using the upstream Qt delegates where possible.
 
 On top of these Qt delegates, Kirigami provides its own equivalents, with the added functionality of subtitles and icons:
 
-* [TitleSubtitle](docs:kirigami2;TitleSubtitle)
-* [IconTitleSubtitle](docs:kirigami2;IconTitleSubtitle)
-* [SubtitleDelegate](docs:kirigami2;SubtitleDelegate)
-* [CheckSubtitleDelegate](docs:kirigami2;CheckSubtitleDelegate)
-* [RadioSubtitleDelegate](docs:kirigami2;RadioSubtitleDelegate)
-* [SwitchSubtitleDelegate](docs:kirigami2;SwitchSubtitleDelegate)
+* [TitleSubtitle](docs:kirigami;org.kde.kirigami.delegates.TitleSubtitle)
+* [IconTitleSubtitle](docs:kirigami;org.kde.kirigami.delegates.IconTitleSubtitle)
+* [SubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates.SubtitleDelegate)
+* [CheckSubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates.CheckSubtitleDelegate)
+* [RadioSubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates.RadioSubtitleDelegate)
+* [SwitchSubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates.SwitchSubtitleDelegate)
 
 The API ending with "Delegate" can be set as a direct delegate of the view, just like the previous examples that used Controls.ItemDelegate:
 

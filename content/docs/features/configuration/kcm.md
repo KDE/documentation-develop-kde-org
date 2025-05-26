@@ -18,7 +18,7 @@ name to the wrapper application, e.g. `systemsettings kcm_accounts`, `plasma-set
 ## Basic KCM
 
 KCMs consist of a KPackage holding the QML UI and a C++ library holding the logic. Some legacy KCMs are based on QtWidgets,
-however this is not recommended for new KCMs and it's not possible to load these in `plasma-settings`. In Plasma, new KCMs should be built using QML and [Kirigami](docs:kirigami2).
+however this is not recommended for new KCMs and it's not possible to load these in `plasma-settings`. In Plasma, new KCMs should be built using QML and [Kirigami](docs:kirigami;kirigami-index.html).
 
 As an example, we are going to create a time settings module that allows us to configure the time in our system.
 The basic structure of this hypothetical time settings module is the following:
@@ -55,7 +55,7 @@ the libraries its KCM needs as well.
 
 {{< readfile file="/content/docs/features/kcm/src/CMakeLists.txt" highlight="cmake" >}}
 
-These CMake files contain a few packages of note: [KCMUtils](docs:kcmutils) provides various classes that allow us to work with [KCModules](docs:kcmutils;KCModule), and `Config` includes the [KConfig](docs:kconfig) classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](/docs/getting-started/kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
+These CMake files contain a few packages of note: [KCMUtils](docs:kcmutils;kcmutils-index.html) provides various classes that allow us to work with [KCModules](docs:kcmutils;KCModule), and `Config` includes the [KConfig](docs:kconfigcore;kconfig-index.html) classes. You are likely to have seen most of the other packages elsewhere in this documentation; if not, [you can read this page](/docs/getting-started/kirigami/advanced-understanding_cmakelists) which goes through a similar CMakeLists file line by line.
 
 What's different here is that we are using C++ code as a plugin for our QML code. This is why we don't have a `main.cpp`: we only need the class that will provide the backend functionality for our KCM. `kcoreaddons_add_plugin` creates such a plugin and installs it to the right location.
 
@@ -64,7 +64,7 @@ What's different here is that we are using C++ code as a plugin for our QML code
 {{< readfile file="/content/docs/features/kcm/src/timesettings.h" highlight="cpp" >}}
 
 Here we are defining the class we will be using for our KCM.
-[KQuickConfigModule](docs:kcmutils;classKQuickConfigModule.html)
+[KQuickConfigModule](docs:kcmutilsquick;KQuickConfigModule)
 serves as the base class for all QML-based KCMs.
 You can read the linked API documentation to get a full description, and the KConfigXT page goes into more detail about how KConfigXT works.
 
@@ -92,13 +92,13 @@ This `.json` file provides metadata about our KCM. These entries specify the fol
 
 {{< readfile file="/content/docs/features/kcm/src/ui/main.qml" highlight="json" >}}
 
-As you can see, this is a very basic KCM QML file. We have used a [SimpleKCM](docs:kcmutils;SimpleKCM) component as the root component, and we have just included a label inside here.
+As you can see, this is a very basic KCM QML file. We have used a [SimpleKCM](docs:kcmutilsqml;org.kde.kcmutils.SimpleKCM) component as the root component, and we have just included a label inside here.
 
 More complex layouts will require using a different root component. Each has its own use:
 
- - Use [ScrollViewKCM](docs:kcmutils;ScrollViewKCM) for content that is vertically scrollable, such as ListView.
- - Use [GridViewKCM](docs:kcmutils;GridViewKCM) for arranging selectable items in a grid.
- - Use [SimpleKCM](docs:kcmutils;SimpleKCM) otherwise.
+ - Use [ScrollViewKCM](docs:kcmutilsqml;org.kde.kcmutils.ScrollView) for content that is vertically scrollable, such as ListView.
+ - Use [GridViewKCM](docs:kcmutilsqml;org.kde.kcmutils.GridViewKCM) for arranging selectable items in a grid.
+ - Use [SimpleKCM](docs:kcmutilsqml;org.kde.kcmutils.SimpleKCM) otherwise.
 
 {{< alert title="Note" color="info" >}}
 KCMs can consist of multiple pages that are dynamically opened and closed. To push another page to the page-stack, we can use:

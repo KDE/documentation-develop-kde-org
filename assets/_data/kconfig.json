@@ -1,7 +1,6 @@
 {
   "tagfile": {
-    "@doxygen_version": "1.10.0",
-    "@doxygen_gitid": "GIT-NOTFOUND",
+    "@doxygen_version": "1.13.2",
     "compound": [
       {
         "@kind": "class",
@@ -5336,6 +5335,24 @@
           {
             "@kind": "function",
             "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "moveValuesTo"
+            },
+            "anchorfile": {
+              "$": "classKConfigGroup.html"
+            },
+            "anchor": {
+              "$": "ad89a557f2d1d0c07ab5c363c2da84b65"
+            },
+            "arglist": {
+              "$": "(KConfigGroup &other, WriteConfigFlags pFlags=Normal)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "QString"
             },
             "name": {
@@ -9718,6 +9735,23 @@
       {
         "@kind": "class",
         "name": {
+          "$": "KWindowStateSaverQuick"
+        },
+        "filename": {
+          "$": "classKWindowStateSaverQuick.html"
+        },
+        "base": [
+          {
+            "$": "QObject"
+          },
+          {
+            "$": "QQmlParserStatus"
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "KStandardShortcut::StandardShortcutWatcher"
         },
         "filename": {
@@ -9827,6 +9861,979 @@
             },
             "arglist": {
               "$": "(const QString &id, const QString &key)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "KStandardActions"
+        },
+        "filename": {
+          "$": "namespaceKStandardActions.html"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "StandardAction"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "New"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a62d6a2a029993446f05ed2cd01a865ab"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Open"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a36bfcfd0b7a3f7c67b7be83758f7c037"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "OpenRecent"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a124e2575be297f7ea53a756b57adf5c4"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Save"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a374e6061da40d5eaf38ca21c0456c61e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SaveAs"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a03f884553a9fea19f104ca340ddd1f28"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Revert"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a04dac0a434cfa6aeacf5113a96aa3a4a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Close"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ac128e1c39af76076f9eb809144cbc6d6"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Print"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a73ecad5ba6e0062cafeb8f4f7d1d4988"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PrintPreview"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ab7d1e0763d3cf837398901e4cddd8b5f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Mail"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a1246d9317dcf89e096d13855d4a4a2e7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Quit"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ae76da04b98f650a43445b8781e9bb413"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Undo"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a684debf2c3a0482effde6aded7e768e7"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Redo"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a9aed0a56d47e62e1a360d2f1ee4a72fd"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Cut"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a91ce96a44e81099c77156c99fa50c063"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Copy"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4aa5195570031868a32e0bd015f57e204d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Paste"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4afba1b97715cbeca49d471fc4cf49c0e4"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SelectAll"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a6482afad0d210f7b0019509141038d36"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Deselect"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a2563e7ec44f6878f11c6534a3f5f3923"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Find"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4af7a74ad8fc35e2573976db05b07ba5d3"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FindNext"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a64ad9b6e123ecb9ab55fbdd41d11c2d4"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FindPrev"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a98c3ed2085499de2ca06d603c39c744c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Replace"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a7b160f84621ac0c49842b735c6188843"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ActualSize"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ac0327b2c586d94845b181ce27299614d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FitToPage"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4acd1f0d92eac34946675956491604099a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FitToWidth"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a61971818fccd1fd8e26d184d16f87288"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FitToHeight"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a2c04d327ff7322c4f621dc8e0cc90c73"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ZoomIn"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a266087f6a5f769b1b94f6a5c4be40aa6"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ZoomOut"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ab63637a25c2f8a58d57ee801bf4dd043"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Zoom"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4abb4289f9ef956cb0af09b225c9a5ad71"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Redisplay"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4afd61075019ca0755bc316b54dc17d9bf"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Up"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a7553843ffbb669a1cd678a5e03441ca3"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Back"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ab15c10101f887a32bbce0d103fa1ad97"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Forward"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ac0e3d3b9b25e34714f9befe01e9717bc"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Home"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a5066b467baa4648a6522a673970017e2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Prior"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a5701bfa8ef077aa34b723da5c29f2a06"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Next"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a4935cf84e90cee8857676b6ac35b180e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Goto"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a1a61038a15437af4a14af87fd43de87f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "GotoPage"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a0e70f6263dd50d90f94d7cac6bca296c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "GotoLine"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a156b4b8f249aa00a2729a17b096c758a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FirstPage"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ad0fe8ce3bff85491ff1523c746e16cb9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "LastPage"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a8eef4480c0294c0a950c92d8d21e3bc9"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "DocumentBack"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ad9a59f914c16c7b485e15370f03ad975"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "DocumentForward"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4aafd0d3c432c654883cbe5ae4ba3347fd"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "AddBookmark"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a76546bb51a3ab11dab67ebe880838244"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "EditBookmarks"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ac9ea87b567aa660f6c1300060ce88997"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Spelling"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a56e6366724d19d45e9abe5e672e41062"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ShowMenubar"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4aa547d73a13ca25d54bf396aff097c896"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ShowToolbar"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a3a9dfc7ebbffc3f31a3c72189161dcea"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ShowStatusbar"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4aebe8df858333d225abdac1e7c882e41d"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "KeyBindings"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a9846ee736b0ca3c1124f4527c0679a07"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Preferences"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4aee0d3810f64f38f7ee7658590376e552"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ConfigureToolbars"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a62e3b24a358ab3968fed5c8517e55ecd"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "HelpContents"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ae340a18d38385a7d4f4ee7135729d5ae"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "WhatsThis"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a4f1551bce5ec8c402ec6cc1b676d88af"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ReportBug"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a42383af3660db526accc0207e331f02a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "AboutApp"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ad651b2cd2e98b6a8b368e8c28d23a75c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "AboutKDE"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a0c16bcbbc49735035abae7c27269001b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ConfigureNotifications"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a641163d131ed94ecdb7c49a5cc41c34a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FullScreen"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a32fc1385e9ac76491eedf2c894ad21ab"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Clear"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a33e1b3d458b657496ae0d9331e8e210c"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SwitchApplicationLanguage"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a5993fd99f148f82b6f685d6a25f95273"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "DeleteFile"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4ac7fb3079c8fdac1aca1e91217f2478d1"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RenameFile"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a561e71a83cb7a6157d6e6c48ea9fa3d4"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MoveToTrash"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4addace7325d6b174daea2a8f372feec8f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Donate"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a69675c521cc6e2e17bf008edffac5b0a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "HamburgerMenu"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3a6be04848890ef30d8506144cc61ae4a39c91e52f494e4dcd95488e1c399f50f"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QAction *"
+            },
+            "name": {
+              "$": "_kgui_createInternal"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a3440c758ec6cddbc45c06a227cfa8fbc"
+            },
+            "arglist": {
+              "$": "(StandardAction id, QObject *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< StandardAction >"
+            },
+            "name": {
+              "$": "actionIds"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "af0be9aa0266eda339ecd4b67486e1807"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QAction *"
+            },
+            "name": {
+              "$": "create"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "acd852a9045a527199169a5bf14104eba"
+            },
+            "arglist": {
+              "$": "(StandardAction id, const Receiver *recvr, Func slot, QObject *parent, std::optional< Qt::ConnectionType > connectionType=std::nullopt)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a2e59ae4340a6a4af0cffb896fddd1f0f"
+            },
+            "arglist": {
+              "$": "(StandardAction id)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KStandardShortcut::StandardShortcut"
+            },
+            "name": {
+              "$": "shortcutForActionId"
+            },
+            "anchorfile": {
+              "$": "namespaceKStandardActions.html"
+            },
+            "anchor": {
+              "$": "a1dc77c34639671de20f7abe9cc19776c"
+            },
+            "arglist": {
+              "$": "(StandardAction id)"
             }
           }
         ]
@@ -12461,7 +13468,7 @@
           "$": "index"
         },
         "title": {
-          "$": "KConfig"
+          "$": "./kconf_update"
         },
         "filename": {
           "$": "index.html"
@@ -12473,12 +13480,7 @@
           {
             "$": "HTMIndexing.html"
           }
-        ],
-        "docanchor": {
-          "@file": "index.html",
-          "@title": "KConfig",
-          "$": "md__2builds_2websites_2api-kde-org_2sources_2kconfig_2README"
-        }
+        ]
       }
     ]
   }

@@ -7,13 +7,11 @@ aliases:
   - /docs/getting-started/kirigami/components-pagerow_pagestack/
 ---
 
-{{< kirigami-staging-api >}}
-
 ## A row of pages
 
-We have seen so far that one of the core components of a Kirigami window is a [Kirigami.Page](docs:kirigami2;Page). A single page can envelop the whole screen of the application, or it can be shown together with other pages at the same time, if there is space.
+We have seen so far that one of the core components of a Kirigami window is a [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). A single page can envelop the whole screen of the application, or it can be shown together with other pages at the same time, if there is space.
 
-Whenever a page gets added, or *pushed*, it appears to the right of the existing page(s), forming a row. This row of pages can be managed with the fittingly named [Kirigami.PageRow](docs:kirigami2;PageRow).
+Whenever a page gets added, or *pushed*, it appears to the right of the existing page(s), forming a row. This row of pages can be managed with the fittingly named [Kirigami.PageRow](docs:kirigami;org.kde.kirigami.PageRow).
 
 A minimal page row with a single page could look like this:
 
@@ -43,7 +41,9 @@ Kirigami.ApplicationWindow {
 
 {{< figure class="text-center" caption="A single page with light blue color to show the page's dimensions" src="singlepage.webp" >}}
 
-There are two improvements that can be done here. The first is that, with [initialPage](docs:kirigami2;PageRow::initialPage), we can both set `mainPage` to be the first page that appears in the page row, and have its dimensions be managed by the page row instead of via manual [anchors](https://doc.qt.io/qt-6/qtquick-positioning-anchors.html), [positioners](https://doc.qt.io/qt-6/qtquick-positioning-layouts.html) or [layouts](https://doc.qt.io/qt-6/layout.html). The second is to have a toolbar, which can be set by defining a toolbar style with [globalToolBar.style](docs:kirigami2;PageRow::globalToolBar). There are a few styles we can choose from, but we'll go with [Kirigami.ApplicationHeaderStyle.Auto](docs:kirigami2;templates::ApplicationHeader::headerStyle) for now.
+There are two improvements that can be done here. The first is that, with [initialPage](https://api-staging.kde.org/qml-org-kde-kirigami-pagerow.html#initialPage-prop), we can both set `mainPage` to be the first page that appears in the page row, and have its dimensions be managed by the page row instead of via manual [anchors](https://doc.qt.io/qt-6/qtquick-positioning-anchors.html), [positioners](https://doc.qt.io/qt-6/qtquick-positioning-layouts.html) or [layouts](https://doc.qt.io/qt-6/layout.html). The second is to have a toolbar, which can be set by defining a toolbar style with [globalToolBar.style](https://api-staging.kde.org/qml-org-kde-kirigami-pagerow.html#globalToolBar-prop). There are a few styles we can choose from, but we'll go with `Kirigami.ApplicationHeaderStyle.Auto` for now.
+
+<!-- TODO: investigate why Kirigami.ApplicationHeaderStyle doesn't show up in the tag file. -->
 
 ```qml
 import QtQuick
@@ -68,7 +68,7 @@ Kirigami.ApplicationWindow {
 
 {{< figure class="text-center" caption="A single page with toolbar and light blue color to show the page's dimensions" src="initialpage.webp" >}}
 
-There are only two ways of adding pages to a page row: by setting its [initialPage](docs:kirigami2;PageRow::initialPage) (which can optionally take an array of pages) or by using [push()](docs:kirigami2;PageRow::push). To delete a page from the page row, you should use [pop()](docs:kirigami2;PageRow::pop), whereas [goBack()](docs:kirigami2;PageRow::goBack) or [goForward()](docs:kirigami2;PageRow::goForward) can be used to navigate between pages.
+There are only two ways of adding pages to a page row: by setting its [initialPage](https://api-staging.kde.org/qml-org-kde-kirigami-pagerow.html#initialPage-prop) (which can optionally take an array of pages) or by using [push()](docs:kirigami;org.kde.kirigami.PageRow::push). To delete a page from the page row, you should use [pop()](docs:kirigami;org.kde.kirigami.PageRow::pop), whereas [goBack()](docs:kirigami;org.kde.kirigami.PageRow::goBack) or [goForward()](docs:kirigami;org.kde.kirigami.PageRow::goForward) can be used to navigate between pages.
 
 ```qml
 import QtQuick
@@ -120,7 +120,7 @@ Kirigami.ApplicationWindow {
 
 ## The application's stack of pages
 
-If a [Kirigami.PageRow](docs:kirigami2;PageRow) with a toolbar looks familiar to you, that is because you have seen it before. An [ApplicationWindow.pageStack](docs:kirigami2;AbstractApplicationWindow::pageStack) is nothing more than a very convenient, global page row. Every function available to a `PageRow` is also available to the `pageStack`.
+If a [Kirigami.PageRow](docs:kirigami;org.kde.kirigami.PageRow) with a toolbar looks familiar to you, that is because you have seen it before. An [ApplicationWindow.pageStack](https://api-staging.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) is nothing more than a very convenient, global page row. Every function available to a `PageRow` is also available to the `pageStack`.
 
 The previous example can be reduced significantly with a `pageStack`, with the added bonus of navigation actions:
 
@@ -170,7 +170,7 @@ Kirigami.ApplicationWindow {
 
 {{< /compare >}}
 
-In general you'll want to use a `pageStack` rather than implement your own [PageRow](docs:kirigami2;PageRow), especially when your application gets bigger and you need your components living in separate files. If you create your window in your `Main.qml` using a [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), a component residing in another file can still directly invoke the global `pageStack` by means of a call to the [applicationWindow()](docs:kirigami2;AbstractApplicationWindow::applicationWindow):
+In general you'll want to use a `pageStack` rather than implement your own [PageRow](docs:kirigami;org.kde.kirigami.PageRow), especially when your application gets bigger and you need your components living in separate files. If you create your window in your `Main.qml` using a [Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow), a component residing in another file can still directly invoke the global `pageStack` by means of a call to the [applicationWindow()](docs:kirigami;org.kde.kirigami.AbstractApplicationWindow::applicationWindow):
 
 ```qml
 // "Main.qml"

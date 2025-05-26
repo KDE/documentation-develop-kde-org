@@ -176,7 +176,7 @@ that will be generated from the .kcfg file. Save this file under yourconfigclass
 This will result in the yourconfigclassname.{h,cpp} files being generated.
 
 {{< alert title="Note" color="info" >}}
-KConfigXT offers a variety of options. The full list can be seen in the [kconfig_compiler documentation](docs:kconfig;kconfig_compiler.html).
+KConfigXT offers a variety of options. The full list can be seen in the [kconfig_compiler documentation](https://api.kde.org/frameworks/kconfig/html/kconfig_compiler.html).
 {{< /alert >}}
 
 ## Adjusting the CMakeLists.txt file
@@ -343,7 +343,7 @@ My::Config *MyKcm::config() const { return m_config; }
 
 Now you can access all your defined configuration using `kcm` property of any
 type, that inherits from
-[AbstractKCM](docs:kdeclarative;org::kde::kcm::AbstractKCM).
+[AbstractKCM](docs:kcmutilsqml;org.kde.kcmutils.AbstractKCM).
 
 ```qml
 import org.kde.kcm 1.5 as KCM
@@ -359,7 +359,7 @@ KCM.SimpleKCM {
 }
 ```
 
-Additionally, you can use [SettingStateBinding](docs:kdeclarative;org::kde::kcm::SettingStateBinding)
+Additionally, you can use [SettingStateBinding](docs:kcmutilsqml;org.kde.kcmutils.SettingStateBinding)
 in your QML code to display correctly if your setting is immutable or isn't using the default value 
 anymore.
 

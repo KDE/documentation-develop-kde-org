@@ -41,6 +41,6 @@ have a loadSettings() type slot to read settings and perform any necessary
 changes.
 
 For dialog appearance options (like buttons, default button, ...) please see
-[KPageDialog](https://api.kde.org/frameworks/kwidgetsaddons/html/classKPageDialog.html).
+[KPageDialog](docs:kwidgetsaddons;KPageDialog).
 
-For more information, consult the [api documentation of KConfigDialog](https://api.kde.org/frameworks/kconfigwidgets/html/classKConfigDialog.html)
+For more information, consult the [api documentation of KConfigDialog](docs:kconfigwidgets;KConfigDialog).

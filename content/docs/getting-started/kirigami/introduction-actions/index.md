@@ -7,9 +7,6 @@ description: >
 aliases:
   - /docs/getting-started/kirigami/introduction-actions/
 ---
-
-{{< kirigami-staging-api >}}
-
 ## Recap
 
 So far, we built a simple app that can display cards. However, there is currently no way for the user to add new cards to the card view.
@@ -18,7 +15,7 @@ In this tutorial, we'll be looking at Kirigami actions. These will help us add i
 
 ## Actions
 
-A [Kirigami.Action](docs:kirigami2;Action) encapsulates a user interface action. We can use these to provide our applications with easy-to-reach actions that are essential to their functionality.
+A [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) encapsulates a user interface action. We can use these to provide our applications with easy-to-reach actions that are essential to their functionality.
 
 If you have used Kirigami apps before, you have certainly interacted with Kirigami actions. In this image, we can see actions to the right of the page title with various icons. Kirigami actions can be displayed in several ways and can do a wide variety of things.
 
@@ -58,7 +55,7 @@ pageStack.initialPage: Kirigami.ScrollablePage {
 }
 ```
 
-We are placing our [Kirigami.Action](docs:kirigami2;Action) within our main page from the previous tutorials. If we wanted to, we could add more actions to our page (and even nest actions within actions!).
+We are placing our [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) within our main page from the previous tutorials. If we wanted to, we could add more actions to our page (and even nest actions within actions!).
 
 The brackets `[]` used above are similar to [JavaScript arrays](https://www.w3schools.com/js/js_arrays.asp), which means you can pass one or more things to them, separated by comma:
 
@@ -106,7 +103,7 @@ The [onTriggered](docs:qtquickcontrols;QtQuick.Controls.Action::triggered) signa
 
 {{< section-left >}}
 
-The next component is a [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer). It shows up as a [hamburger menu](https://en.wikipedia.org/wiki/Hamburger_button). By default it opens a sidebar, which is especially useful on mobile, as the user can just swipe in a side of the screen to open it. Global drawers are useful for global navigation and actions. We are going to create a simple global drawer that includes a "quit" button.
+The next component is a [Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer). It shows up as a [hamburger menu](https://en.wikipedia.org/wiki/Hamburger_button). By default it opens a sidebar, which is especially useful on mobile, as the user can just swipe in a side of the screen to open it. Global drawers are useful for global navigation and actions. We are going to create a simple global drawer that includes a "quit" button.
 
 ```qml
 Kirigami.ApplicationWindow {
@@ -128,10 +125,10 @@ Kirigami.ApplicationWindow {
 
 ```
 
-Here, we put our global drawer inside our application window. The main property we need to pay attention to is [GlobalDrawer.actions](docs:kirigami2;GlobalDrawer::actions), which takes the form of an array of [Kirigami.Action](docs:kirigami2;Action) components. This action has an appropriate icon and executes the [Qt.quit()](docs:qtqml;QtQml.Qt::quit) function when triggered, closing the application.
+Here, we put our global drawer inside our application window. The main property we need to pay attention to is [GlobalDrawer.actions](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#actions-prop), which takes the form of an array of [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) components. This action has an appropriate icon and executes the [Qt.quit()](docs:qtqml;QtQml.Qt::quit) function when triggered, closing the application.
 
 
-Since we are keeping our global drawer simple for now, we are setting the [GlobalDrawer.isMenu](docs:kirigami2;GlobalDrawer::isMenu) property to `true`. This displays our global drawer as a normal application menu, taking up less space than the default global drawer pane.
+Since we are keeping our global drawer simple for now, we are setting the [GlobalDrawer.isMenu](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#isMenu-prop) property to `true`. This displays our global drawer as a normal application menu, taking up less space than the default global drawer pane.
 
 {{< /section-left >}}
 
@@ -153,16 +150,16 @@ The [Actions based components](/docs/getting-started/kirigami/components-actions
 
 ## Actions are contextual
 
-Kirigami components are designed in such a way that the place where you put Kirigami Actions is relevant. As seen above, if you add actions to a [Kirigami.Page](docs:kirigami2;Page), [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) or any other derivative Page component, they will show up on the right side of the header in desktop mode, and on the bottom in mobile mode.
+Kirigami components are designed in such a way that the place where you put Kirigami Actions is relevant. As seen above, if you add actions to a [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page), [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage) or any other derivative Page component, they will show up on the right side of the header in desktop mode, and on the bottom in mobile mode.
 
-Similarly, if Kirigami Actions are added to a [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer), they will show up in the resulting drawer or menu.
+Similarly, if Kirigami Actions are added to a [Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer), they will show up in the resulting drawer or menu.
 
 Other examples of Kirigami Actions showing up differently depending on their parent component are:
 
-* [Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer) - [ContextDrawer tutorial here](/docs/getting-started/kirigami/components-drawers#context-drawers)
-* [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) and derivatives - [Card tutorial here](/docs/getting-started/kirigami/components-card)
-* [Kirigami.Dialog](docs:kirigami2;Dialog) and derivatives - [Dialog tutorial here](/docs/getting-started/kirigami/components-dialogs)
-* [Kirigami.ActionToolBar](docs:kirigami2;ActionToolBar) - [ActionToolBar tutorial here](/docs/getting-started/kirigami/components-actions#actiontoolbar)
+* [Kirigami.ContextDrawer](docs:kirigami;org.kde.kirigami.ContextDrawer) - [ContextDrawer tutorial here](/docs/getting-started/kirigami/components-drawers#context-drawers)
+* [Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) and derivatives - [Card tutorial here](/docs/getting-started/kirigami/components-card)
+* [Kirigami.Dialog](docs:kirigami;org.kde.kirigami.Dialog) and derivatives - [Dialog tutorial here](/docs/getting-started/kirigami/components-dialogs)
+* [Kirigami.ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToolBar) - [ActionToolBar tutorial here](/docs/getting-started/kirigami/components-actions#actiontoolbar)
 
 Among other Kirigami components.
 

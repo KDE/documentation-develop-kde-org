@@ -9,8 +9,6 @@ aliases:
   - /docs/getting-started/kirigami/setup-cpp/
 ---
 
-{{< kirigami-staging-api >}}
-
 ## Installing Kirigami
 
 Before getting started, we will need to install Kirigami on our machine. There are three ways to do so:
@@ -131,7 +129,7 @@ For now, let's focus on `Main.qml`. First we [import](https://doc.qt.io/qt-6/qtq
 - [QtQuick](https://doc.qt.io/qt-6/qtquick-index.html), the standard library used in QML applications.
 - [QtQuick Controls](https://doc.qt.io/qt-6/qtquickcontrols-index.html), which provides a number of standard controls we can use to make our applications interactive.
 - [QtQuick Layouts](https://doc.qt.io/qt-6/qtquicklayouts-index.html), which provides tools for placing components within the application window.
-- [Kirigami](docs:kirigami2), which provides a number of components suited for creating applications that work across devices of different shapes and sizes.
+- [Kirigami](docs:kirigami;kirigami-index.html), which provides a number of components suited for creating applications that work across devices of different shapes and sizes.
 
 {{< alert title="Note" color="info">}}
 
@@ -139,7 +137,7 @@ Putting the QtQuick Controls and Kirigami imports into separate namespaces using
 
 {{< /alert >}}
 
-We then come to our base element, [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), which provides some basic features needed for all Kirigami applications. This is the window that will contain each of our pages, the main sections of our UI.
+We then come to our base element, [Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow), which provides some basic features needed for all Kirigami applications. This is the window that will contain each of our pages, the main sections of our UI.
 
 We then set the window's `id` property to "root". IDs are useful because they let us uniquely reference a component, even if we have several of the same type.
 
@@ -153,9 +151,9 @@ We also set the window `title` property to "Hello World". You'll notice that we 
 
 {{< /alert >}}
 
-We then set the first page of our page stack. Most Kirigami applications are organised as a stack of pages, each page containing related components suited to a specific task. For now, we are keeping it simple, and sticking to a single page. [pageStack](docs:kirigami2;AbstractApplicationWindow::pageStack) is an initially empty stack of pages provided by [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), and with `pageStack.initialPage: Kirigami.Page {...}` we set the first page presented upon loading the application to a [Kirigami.Page](docs:kirigami2;Page). This page will contain all our content.
+We then set the first page of our page stack. Most Kirigami applications are organised as a stack of pages, each page containing related components suited to a specific task. For now, we are keeping it simple, and sticking to a single page. [pageStack](https://api-staging.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) is an initially empty stack of pages provided by [Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow), and with `pageStack.initialPage: Kirigami.Page {...}` we set the first page presented upon loading the application to a [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). This page will contain all our content.
 
-Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) that lets us place text on our page. We use `anchors.centerIn: parent` to center our label horizontally and vertically within our parent element. In this case, the parent component of our label is [Kirigami.Page](docs:kirigami2;Page). The last thing we need to do is set its text: `text: i18n("Hello World!")`.
+Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) that lets us place text on our page. We use `anchors.centerIn: parent` to center our label horizontally and vertically within our parent element. In this case, the parent component of our label is [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). The last thing we need to do is set its text: `text: i18n("Hello World!")`.
 
 ### org.kde.tutorial.desktop
 

@@ -7,8 +7,6 @@ aliases:
   - /docs/getting-started/kirigami/components-drawers/
 ---
 
-{{< kirigami-staging-api >}}
-
 Drawers are panels that slide out of the sides of the application window. They can be populated with interactive elements such as Kirigami Actions, buttons, text, and more.
 
 Drawers come in different types, shapes, and forms. In this page we will go over each type and provide an overview of their characteristics.
@@ -19,7 +17,7 @@ The global drawer is a standard feature in KDE's mobile applications and can som
 
 It can be activated by tapping the hamburger menu or by swiping from the left edge to the middle of the screen in Left to Right mode or from the right edge in Right to Left mode.
 
-[Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer) components are what we use to create such drawers. These are set to the [globalDrawer](docs:kirigami2;AbstractApplicationWindow::globalDrawer) property of the [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow) that forms the basis of our Kirigami application.
+[Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer) components are what we use to create such drawers. These are set to the [globalDrawer](https://api-staging.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#globalDrawer-prop) property of the [Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow) that forms the basis of our Kirigami application.
 
 {{< sections >}}
 
@@ -74,7 +72,7 @@ Kirigami.ApplicationWindow {
 
 {{< alert title="Note" color="info" >}}
 
-The [titleIcon](docs:kirigami2;GlobalDrawer::titleIcon) property takes names for system-wide icons according to the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application which comes with [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk), or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
+The [titleIcon](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#titleIcon-prop) property takes names for system-wide icons according to the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application which comes with [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk), or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
 
 {{< /alert >}}
 
@@ -144,7 +142,7 @@ Kirigami.ApplicationWindow {
 
 While panel-style global drawers can be useful in mobile environments, they might be too large on the desktop, especially when the application has few actions.
 
-Thankfully, Kirigami global drawers provide an [isMenu](docs:kirigami2;GlobalDrawer::isMenu) property. When set to `true`, they turn into more traditional menus only on the desktop.
+Thankfully, Kirigami global drawers provide an [isMenu](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#isMenu-prop) property. When set to `true`, they turn into more traditional menus only on the desktop.
 
 {{< alert title="Note" color="info" >}}
 
@@ -178,9 +176,11 @@ globalDrawer: Kirigami.GlobalDrawer {
 
 ## Context Drawers
 
-While a [Kirigami.GlobalDrawer](docs:kirigami2;GlobalDrawer) displays global actions available throughout your application, a [Kirigami.ContextDrawer](docs:kirigami2;ContextDrawer) should be used to display actions that are only relevant in certain contexts. This is usually used in separate [pages](/docs/getting-started/kirigami/introduction-pages).
+While a [Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer) displays global actions available throughout your application, a [Kirigami.ContextDrawer](docs:kirigami;org.kde.kirigami.ContextDrawer) should be used to display actions that are only relevant in certain contexts. This is usually used in separate [pages](/docs/getting-started/kirigami/introduction-pages).
 
-A context drawer will only show up if any [contextualActions](docs:kirigami2;Page::contextualActions) have been created as part of the [Page.actions group](docs:kirigami2;Page::actions). It also behaves differently depending on whether it is being used on a mobile platform or on a desktop.
+<!-- TODO: mention actions -->
+
+A context drawer will behave differently depending on whether it is being used on a mobile platform or on a desktop.
 
 On a desktop, when a window has enough space, contextual actions show up as part of the `actions` group in the top toolbar. When space is limited, such as on a mobile device or in a narrow window, contextual actions are hidden behind a hamburger menu on the right side. This is different from other actions in the `actions` group, namely `actions.main`, `actions.left` and `actions.right`; these do not get hidden in space-constrained windows, and are instead collapsed into their respective icons.
 
@@ -213,7 +213,7 @@ Kirigami offers two additional types of drawers, modal drawers and inline drawer
 
 This kind of drawer is open ended and flexible, but generally, you may want to use this kind of drawer when you want a small list of options to appear on a long press or right click.
 
-These two drawers are so similar because they can, in fact, be implemented using the same Kirigami component: [Kirigami.OverlayDrawer](docs:kirigami2;OverlayDrawer). Here are a few important inherited properties of this component to keep in mind:
+These two drawers are so similar because they can, in fact, be implemented using the same Kirigami component: [Kirigami.OverlayDrawer](docs:kirigami;org.kde.kirigami.OverlayDrawer). Here are a few important inherited properties of this component to keep in mind:
 
 - [Popup.modal](https://doc.qt.io/qt-6/qml-qtquick-controls2-popup.html#modal-prop) controls whether the drawer will be modal or inline depending on a boolean value.
 - [Drawer.edge](https://doc.qt.io/qt-6/qml-qtquick-controls2-drawer.html#edge-prop) controls which edge of the application window the drawer will appear on; options for this property are part of the [Edge enum](docs:qtcore;Qt::RightEdge), namely `Qt.TopEdge`, `Qt.RightEdge`, `Qt.BottomEdge`, and `Qt.LeftEdge`.

@@ -17,131 +17,114 @@ import sys
 TAG_FILES = [
     # ===== Qt API links ======
     {
-        'tags': 'https://invent.kde.org/websites/api-kde-org/-/raw/master/tags/6.6/qtquick.tags',
+        'tags': 'https://doc.qt.io/qt-6/qtquick.tags',
         'base_url': 'https://doc.qt.io/qt-6/',
     },
     {
-        'tags': 'https://invent.kde.org/websites/api-kde-org/-/raw/master/tags/6.6/qtquickcontrols.tags',
+        'tags': 'https://doc.qt.io/qt-6/qtquickcontrols.tags',
         'base_url': 'https://doc.qt.io/qt-6/',
         'default_prefix': 'QtQuick.Controls',
     },
     {
-        'tags': 'https://invent.kde.org/websites/api-kde-org/-/raw/master/tags/6.6/qtwidgets.tags',
+        'tags': 'https://doc.qt.io/qt-6/qtwidgets.tags',
         'base_url': 'https://doc.qt.io/qt-6/',
     },
     {
-        'tags': 'https://invent.kde.org/websites/api-kde-org/-/raw/master/tags/6.6/qtgui.tags',
+        'tags': 'https://doc.qt.io/qt-6/qtgui.tags',
         'base_url': 'https://doc.qt.io/qt-6/',
     },
     {
-        'tags': 'https://invent.kde.org/websites/api-kde-org/-/raw/master/tags/6.6/qtcore.tags',
+        'tags': 'https://doc.qt.io/qt-6/qtcore.tags',
         'base_url': 'https://doc.qt.io/qt-6/',
     },
     {
-        'tags': 'https://invent.kde.org/websites/api-kde-org/-/raw/master/tags/6.6/qtqml.tags',
+        'tags': 'https://doc.qt.io/qt-6/qtqml.tags',
         'base_url': 'https://doc.qt.io/qt-6/',
     },
     {
-        'tags': 'https://invent.kde.org/websites/api-kde-org/-/raw/master/tags/6.6/qtdbus.tags',
+        'tags': 'https://doc.qt.io/qt-6/qtdbus.tags',
         'base_url': 'https://doc.qt.io/qt-6/',
     },
     # ===== Frameworks API links =====
     {
-        'tags': 'https://api.kde.org/frameworks/kdeclarative/html/KDeclarative.tags',
-        'base_url': 'https://api.kde.org/frameworks/kdeclarative/html/'
+        'tags': 'https://api-staging.kde.org/ki18n.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/ki18n/html/KI18n.tags',
-        'base_url': 'https://api.kde.org/frameworks/ki18n/html/'
+        'tags': 'https://api-staging.kde.org/kcoreaddons.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kcoreaddons/html/KCoreAddons.tags',
-        'base_url': 'https://api.kde.org/frameworks/kcoreaddons/html/'
+        'tags': 'https://api-staging.kde.org/kiocore.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kio/html/KIO.tags',
-        'base_url': 'https://api.kde.org/frameworks/kio/html/'
+        'tags': 'https://api-staging.kde.org/kxmlgui.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kxmlgui/html/KXmlGui.tags',
-        'base_url': 'https://api.kde.org/frameworks/kxmlgui/html/'
+        'tags': 'https://api-staging.kde.org/kconfigwidgets.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kconfigwidgets/html/KConfigWidgets.tags',
-        'base_url': 'https://api.kde.org/frameworks/kconfigwidgets/html/'
+        'tags': 'https://api-staging.kde.org/kwidgetsaddons.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kwidgetsaddons/html/KWidgetsAddons.tags',
-        'base_url': 'https://api.kde.org/frameworks/kwidgetsaddons/html/'
+        'tags': 'https://api-staging.kde.org/ktextwidgets.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/ktextwidgets/html/KTextWidgets.tags',
-        'base_url': 'https://api.kde.org/frameworks/ktextwidgets/html/'
+        'tags': 'https://api-staging.kde.org/ktexteditor.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/ktexteditor/html/KTextEditor.tags',
-        'base_url': 'https://api.kde.org/frameworks/ktexteditor/html/'
+        'tags': 'https://api-staging.kde.org/kconfigcore.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kconfig/html/KConfig.tags',
-        'base_url': 'https://api.kde.org/frameworks/kconfig/html/'
+        'tags': 'https://api-staging.kde.org/krunner.tags',
+        'base_url': 'https://api-staging.kde.org/',
+        'default_prefix': 'KRunner::',
     },
     {
-        'tags': 'https://api.kde.org/frameworks/krunner/html/KRunner.tags',
-        'base_url': 'https://api.kde.org/frameworks/krunner/html/',
-        'default_prefix': 'Plasma::'
+        'tags': 'https://api-staging.kde.org/plasma.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/plasma/libplasma/html/Plasma-framework.tags',
-        'base_url': 'https://api.kde.org/plasma/libplasma/html/'
+        'tags': 'https://api-staging.kde.org/kcmutils.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kcmutils/html/KCMUtils.tags',
-        'base_url': 'https://api.kde.org/frameworks/kcmutils/html/'
+        'tags': 'https://api-staging.kde.org/kcmutilsqml.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kirigami/html/Kirigami2.tags',
-        'base_url': 'https://api.kde.org/frameworks/kirigami/html/',
-        'default_prefix': 'org::kde::kirigami::',
+        'tags': 'https://api-staging.kde.org/kcmutilsquick.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kitemmodels/html/KItemModels.tags',
-        'base_url': 'https://api.kde.org/frameworks/kitemmodels/html/',
+        'tags': 'https://api-staging.kde.org/kirigami.tags',
+        'base_url': 'https://api-staging.kde.org/',
+    },
+    {
+        'tags': 'https://api-staging.kde.org/kitemmodels.tags',
+        'base_url': 'https://api-staging.kde.org/',
     },
     # ===== Plasma API links
     {
-        'tags': 'https://api.kde.org/plasma/kdecoration/html/KDecoration2.tags',
-        'base_url': 'https://api.kde.org/plasma/kdecoration/html/'
+        'tags': 'https://api-staging.kde.org/kdecoration.tags',
+        'base_url': 'https://api-staging.kde.org/'
     },
     {
-        'tags': 'https://api.kde.org/plasma/plasma-workspace/html/Plasma-workspace.tags',
-        'base_url': 'https://api.kde.org/plasma/plasma-workspace/html/'
-    },
-    {
-        'tags': 'https://api.kde.org/plasma/libksysguard/html/Libksysguard.tags',
-        'base_url': 'https://api.kde.org/plasma/libksysguard/html/',
+        'tags': 'https://api-staging.kde.org/plasma/libksysguard.tags',
+        'base_url': 'https://api-staging.kde.org/',
         'default_prefix': 'KSysGuard',
     },
     {
-        'tags': 'https://api.kde.org/frameworks/kpackage/html/KPackage.tags',
-        'base_url': 'https://api.kde.org/frameworks/kpackage/html/',
+        'tags': 'https://api-staging.kde.org/kpackage.tags',
+        'base_url': 'https://api-staging.kde.org/',
         'default_prefix': 'KPackage',
-    },
-    # ===== KDEPim API links
-    {
-        'tags': 'https://api.kde.org/kdepim/akonadi/html/Akonadi.tags',
-        'base_url': 'https://api.kde.org/kdepim/akonadi/html/',
-        'default_prefix': 'Akonadi::',
-    },
-    {
-        'tags': 'https://api.kde.org/kdepim/kmime/html/KMime.tags',
-        'base_url': 'https://api.kde.org/kdepim/kmime/html/',
-        'default_prefix': 'KMime::',
-    },
-    {
-        'tags': 'https://api.kde.org/kdepim/mailcommon/html/Mailcommon.tags',
-        'base_url': 'https://api.kde.org/kdepim/mailcommon/html/',
-        'default_prefix': 'MailCommon::',
     }
 ]
 

@@ -9,8 +9,6 @@ aliases:
   - /docs/getting-started/kirigami/style-colors/
 ---
 
-{{< kirigami-staging-api >}}
-
 Kirigami has a color palette that follows the system colors to better integrate
 with the platform it is running on (i.e. Plasma Desktop, Plasma Mobile,
 GNOME, Android, etc.).
@@ -20,11 +18,11 @@ follow this palette by default, so usually no custom coloring should be needed
 for these controls.
 
 Primitive components such as [Rectangle](docs:qtquick;QtQuick.Rectangle) should always be colored with the
-color palette provided by Kirigami via the [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::PlatformTheme) attached property.
+color palette provided by Kirigami via the [Kirigami.Theme](https://api-staging.kde.org/qml-org-kde-kirigami-platform-theme.html) attached property.
 
 Hardcoded colors in QML, such as `#32b2fa` or `red`, should usually be
 avoided; if it is really necessary to have elements with custom colors, it should be an area where only custom colors are used (usually in the content area of the app, and never in chrome areas such as toolbars or dialogs). For instance, a hardcoded `black` foreground cannot be used over a
-[Kirigami.Theme.backgroundColor](docs:kirigami2;Kirigami::Platform::PlatformTheme::backgroundColor) background, because if the platform uses a
+[Kirigami.Theme.backgroundColor](https://api-staging.kde.org/qml-org-kde-kirigami-platform-theme.html#backgroundColor-attached-prop) background, because if the platform uses a
 dark color scheme the result will have poor contrast with black over almost black. This is an accessibility issue and should be avoided.
 
 {{< alert title="Note" color="info" >}}
@@ -35,8 +33,8 @@ If you really need to use custom colors, check out [Kontrast](https://apps.kde.o
 
 ## Theme
 
-[Kirigami.Theme](docs:kirigami2;Kirigami::Platform::PlatformTheme) is an attached property, and therefore it is available to use for any QML item. Its properties include all the colors available in the
-palette, and what palette to use, such as the [colorSet](docs:kirigami2;Kirigami::Platform::PlatformTheme::colorSet) property.
+[Kirigami.Theme](https://api-staging.kde.org/qml-org-kde-kirigami-platform-theme.html) is an attached property, and therefore it is available to use for any QML item. Its properties include all the colors available in the
+palette, and what palette to use, such as the [colorSet](https://api-staging.kde.org/qml-org-kde-kirigami-platform-theme.html#colorSet-attached-prop) property.
 
 ```qml
 import QtQuick
@@ -57,7 +55,7 @@ Kirigami.ApplicationWindow {
 }
 ```
 
-[Kirigami Gallery](https://apps.kde.org/kirigami2.gallery/) provides a code example showcasing [all colors available for Kirigami](https://invent.kde.org/sdk/kirigami-gallery/-/blob/master/src/data/contents/ui/gallery/ColorsGallery.qml) through [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::PlatformTheme). This includes all their states: if you click outside the window, the colors change to their inactive state, and if you switch your system to a dark theme, the dark variants of the colors should show up in real time.
+[Kirigami Gallery](https://apps.kde.org/kirigami2.gallery/) provides a code example showcasing [all colors available for Kirigami](https://invent.kde.org/sdk/kirigami-gallery/-/blob/master/src/data/contents/ui/gallery/ColorsGallery.qml) through [Kirigami.Theme](https://api-staging.kde.org/qml-org-kde-kirigami-platform-theme.html). This includes all their states: if you click outside the window, the colors change to their inactive state, and if you switch your system to a dark theme, the dark variants of the colors should show up in real time.
 
 {{< figure class="text-center" caption="The Colors component in Kirigami Gallery" src="colors-gallery.webp"  >}}
 
@@ -66,12 +64,12 @@ Kirigami.ApplicationWindow {
 Depending on where a control is located, it should use a different color set: for instance, when the Breeze Light color scheme is used in [Views](https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html), the normal background is almost white, while in other regions, such as toolbars or
 dialogs, the normal background color is gray.
 
-If you define a color set for an item, all of its child items will recursively inherit it automatically (unless the property [inherit](docs:kirigami2;Kirigami::Platform::PlatformTheme::inherit) has
+If you define a color set for an item, all of its child items will recursively inherit it automatically (unless the property [inherit](https://api-staging.kde.org/qml-org-kde-kirigami-platform-theme.html#inherit-attached-prop) has
 explicitly been set to `false`, which should always be done when the developer 
 wants to force a specific color set) so it is easy to change colors for an 
 entire hierarchy of items without touching any of the items themselves.
 
-[Kirigami.Theme](docs:kirigami2;Kirigami::Platform::PlatformTheme) supports 5 different color sets:
+[Kirigami.Theme](https://api-staging.kde.org/qml-org-kde-kirigami-platform-theme.html) supports 5 different color sets:
 
 * View: Color set for item views, usually the lightest of all
   (in light color themes)

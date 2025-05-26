@@ -17,7 +17,7 @@ In the previous tutorial, the program caused a dialog box to pop up. Now we are 
 
 ## KXmlGuiWindow
 
-[KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) provides a full main window view with menubars, toolbars, a statusbar and a main area in the centre for a large widget. For example, the help menu is predefined. Most KDE applications will derive from this class as it provides an easy way to define menu and toolbar layouts through XML files (this technology is called [KXmlGui](docs:kxmlgui)). While we will not be using it in this tutorial, we will use it in the next.
+[KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) provides a full main window view with menubars, toolbars, a statusbar and a main area in the centre for a large widget. For example, the help menu is predefined. Most KDE applications will derive from this class as it provides an easy way to define menu and toolbar layouts through XML files (this technology is called [KXmlGui](docs:kxmlgui;kxmgui-index.html)). While we will not be using it in this tutorial, we will use it in the next.
 
 In order to have a useful [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow), we must subclass it. So we create two files, `mainwindow.cpp` and `mainwindow.h`, which will contain our code.
 

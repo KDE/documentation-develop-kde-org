@@ -6,9 +6,6 @@ description: Pages allow you to organize your application content
 aliases:
   - /docs/getting-started/kirigami/introduction-pages/
 ---
-
-{{< kirigami-staging-api >}}
-
 # Our app
 
 In the previous tutorial, we managed to set up, build, and compile our first Kirigami application. With the basics in place, we can begin our journey towards creating a fully-featured application.
@@ -21,9 +18,9 @@ In this section we'll be focusing on pages, one of the key structural elements o
 
 ## Pages
 
-Kirigami apps are typically organized in pages by using [Kirigami.Page](docs:kirigami2;Page). Pages are the different "screens" of an app. You will want to have a page dedicated to specific aspects of your app's interaction, and to make things easier you can create different QML files for each page.
+Kirigami apps are typically organized in pages by using [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). Pages are the different "screens" of an app. You will want to have a page dedicated to specific aspects of your app's interaction, and to make things easier you can create different QML files for each page.
 
-Pages are organized in a [page stack](docs:kirigami2;AbstractApplicationWindow::pageStack) where they can be pushed and popped. On a phone only the top-most page is shown, whereas on a larger screen (desktop or tablet), if desired, multiple pages can be shown next to each other.
+Pages are organized in a [page stack](https://api-staging.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) where they can be pushed and popped. On a phone only the top-most page is shown, whereas on a larger screen (desktop or tablet), if desired, multiple pages can be shown next to each other.
 
 {{< compare >}}
 
@@ -35,7 +32,7 @@ Pages are organized in a [page stack](docs:kirigami2;AbstractApplicationWindow::
 
 {{< alert title="Note" color="info" >}}
 
-A [Kirigami.Page](docs:kirigami2;Page) inherits from a [Controls.Page](docs:qtquickcontrols;QtQuick.Controls.Page), and as such you can use the latter's properties as well.
+A [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) inherits from a [Controls.Page](docs:qtquickcontrols;QtQuick.Controls.Page), and as such you can use the latter's properties as well.
 
 When looking through QML API documentation, make sure to look into the functions and properties inherited by the API you are looking at as well.
 
@@ -45,13 +42,13 @@ Let's go back to the `Main.qml` file we created in our previous tutorial:
 
 {{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/qml/Main.qml" highlight="qml" >}}
 
-We make our application start to our [Kirigami.Page](docs:kirigami2;Page). All we have included in it is a label containing "Hello World", but we're going to spruce things up a little.
+We make our application start to our [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). All we have included in it is a label containing "Hello World", but we're going to spruce things up a little.
 
-The idea behind our app is that we're going to be able to display a bunch of countdowns to the user. The problem with a normal [Kirigami.Page](docs:kirigami2;Page) is that it has a fixed vertical size, so instead we can use a [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage), which already comes with its own built-in scrollbar.
+The idea behind our app is that we're going to be able to display a bunch of countdowns to the user. The problem with a normal [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) is that it has a fixed vertical size, so instead we can use a [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage), which already comes with its own built-in scrollbar.
 
 {{< readfile file="content/docs/getting-started/kirigami/introduction-pages/Main.qml" highlight="qml" >}}
 
-Kirigami pages also feature neat titles placed within the toolbar, quickly indicating to the user which page they are on. All we need to do is to set a page title using the `title` property of [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage). In this case, we used one of the `i18nc()` functions we explored in our previous tutorial to this end.
+Kirigami pages also feature neat titles placed within the toolbar, quickly indicating to the user which page they are on. All we need to do is to set a page title using the `title` property of [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage). In this case, we used one of the `i18nc()` functions we explored in our previous tutorial to this end.
 
 {{< alert title="Note" color="info" >}}
 

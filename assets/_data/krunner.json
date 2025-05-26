@@ -1,323 +1,64 @@
 {
   "tagfile": {
-    "@doxygen_version": "1.10.0",
-    "@doxygen_gitid": "GIT-NOTFOUND",
     "compound": [
+      {
+        "@kind": "namespace",
+        "name": {
+          "$": "KRunner"
+        },
+        "filename": {
+          "$": "krunner.html"
+        },
+        "class": [
+          {
+            "$": "KRunner::AbstractRunner"
+          },
+          {
+            "$": "KRunner::Action"
+          },
+          {
+            "$": "KRunner::QueryMatch"
+          },
+          {
+            "$": "KRunner::ResultsModel"
+          },
+          {
+            "$": "KRunner::RunnerContext"
+          },
+          {
+            "$": "KRunner::RunnerManager"
+          },
+          {
+            "$": "KRunner::RunnerSyntax"
+          }
+        ]
+      },
       {
         "@kind": "class",
         "name": {
           "$": "KRunner::AbstractRunner"
         },
         "filename": {
-          "$": "classKRunner_1_1AbstractRunner.html"
+          "$": "krunner-abstractrunner.html"
         },
         "base": {
           "$": "QObject"
         },
         "member": [
           {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "prepare"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ac33258346c3778c310b1cadcfaea0f14"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "teardown"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a0b89fd86697cb404f54227eb5a013cf1"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "hasMatchRegex"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ac8293c0eb41b9c884be9acae60a2c892"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "id"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a839efaf055b3fbf4c6c488843fab01f7"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isMatchingSuspended"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ab244d9c7e03f31bbbc13a8d877400716"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "pure",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "match"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "afd5bba2f56f40dc20e241f7ec82d3d25"
-            },
-            "arglist": {
-              "$": "(KRunner::RunnerContext &context)=0"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QRegularExpression"
-            },
-            "name": {
-              "$": "matchRegex"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ad7b0305fc5fbcf5f7ea23ef4058557f5"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KPluginMetaData"
-            },
-            "name": {
-              "$": "metadata"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a4f3bdabd95b79edfebc6191d5de7dfa9"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "minLetterCount"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a1bc6bd308e9e61713bb6193935f2988f"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "name"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a0af02a2d16d2f038fef8475f93e2051e"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "reloadConfiguration"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a2441730b73fd9e191a7fd11a90bece2b"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "run"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a35d508dcadf4bab2dc2477737188d4bd"
-            },
-            "arglist": {
-              "$": "(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setMatchRegex"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "aea91991968f4e067680fb9118cf7942a"
-            },
-            "arglist": {
-              "$": "(const QRegularExpression &regex)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setMinLetterCount"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ae7c01219f18fcf4b2040cf7f8d00520f"
-            },
-            "arglist": {
-              "$": "(int count)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setTriggerWords"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a8543c294acfadc481b3ba4154479ba88"
-            },
-            "arglist": {
-              "$": "(const QStringList &triggerWords)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QList< RunnerSyntax >"
-            },
-            "name": {
-              "$": "syntaxes"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "ad02caa2459a84a8244725441beb2cc0c"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
             "@kind": "function",
             "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {},
             "name": {
               "$": "AbstractRunner"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
+              "$": "krunner-abstractrunner.html"
             },
             "anchor": {
-              "$": "af9210d0b81f4cd6c55db116fafc6a887"
+              "$": "AbstractRunner"
             },
             "arglist": {
               "$": "(QObject *parent, const KPluginMetaData &pluginMetaData)"
@@ -326,103 +67,8 @@
           {
             "@kind": "function",
             "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "addSyntax"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a9525149a884906d70b3fc4c67b5d53da"
-            },
-            "arglist": {
-              "$": "(const QString &exampleQuery, const QString &description)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "addSyntax"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "acea3ff0bdaf3d2dfb8fc8304a00e176e"
-            },
-            "arglist": {
-              "$": "(const QStringList &exampleQueries, const QString &description)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "addSyntax"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "abf5d046bc28378b27e50a817a835946d"
-            },
-            "arglist": {
-              "$": "(const RunnerSyntax &syntax)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "type": {
-              "$": "KConfigGroup"
-            },
-            "name": {
-              "$": "config"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "a19b9d3bd2c82a8162bede5cd01eea8ed"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
             "@virtualness": "virtual",
-            "type": {
-              "$": "virtual void"
-            },
-            "name": {
-              "$": "init"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
-            },
-            "anchor": {
-              "$": "acdc51fcf803ede0ea5a4100f4c82d14a"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "protected",
-            "@virtualness": "virtual",
+            "@static": "no",
             "type": {
               "$": "virtual QMimeData *"
             },
@@ -430,10 +76,10 @@
               "$": "mimeDataForMatch"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
+              "$": "krunner-abstractrunner.html"
             },
             "anchor": {
-              "$": "aea363566604df74361cc3885ec9f7a24"
+              "$": "mimeDataForMatch"
             },
             "arglist": {
               "$": "(const KRunner::QueryMatch &match)"
@@ -442,68 +88,61 @@
           {
             "@kind": "function",
             "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
             "name": {
-              "$": "setSyntaxes"
+              "$": "addSyntax"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
+              "$": "krunner-abstractrunner.html"
             },
             "anchor": {
-              "$": "a3f2bc7c0e2bc0fbb4d068a6486304c3f"
+              "$": "addSyntax"
             },
             "arglist": {
-              "$": "(const QList< RunnerSyntax > &syntaxes)"
+              "$": "(const KRunner::RunnerSyntax &syntax)"
             }
           },
           {
             "@kind": "function",
             "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
             "name": {
-              "$": "suspendMatching"
+              "$": "addSyntax"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunner.html"
+              "$": "krunner-abstractrunner.html"
             },
             "anchor": {
-              "$": "a2bf64b439b41b89f6f7054495c95f95b"
+              "$": "addSyntax-1"
             },
             "arglist": {
-              "$": "(bool suspend)"
+              "$": "(const QString &exampleQuery, const QString &description)"
             }
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "KRunner::AbstractRunnerTest"
-        },
-        "filename": {
-          "$": "classKRunner_1_1AbstractRunnerTest.html"
-        },
-        "base": {
-          "$": "QObject"
-        },
-        "member": [
+          },
           {
             "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "@static": "no",
             "type": {
-              "$": "void"
+              "$": "virtual void"
             },
             "name": {
-              "$": "initProperties"
+              "$": "init"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunnerTest.html"
+              "$": "krunner-abstractrunner.html"
             },
             "anchor": {
-              "$": "acbe8d0327bbf5979d8bc62ac1fba8b19"
+              "$": "init"
             },
             "arglist": {
               "$": "()"
@@ -511,20 +150,380 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
             "type": {
-              "$": "QList< QueryMatch >"
+              "$": "virtual void"
             },
             "name": {
-              "$": "launchQuery"
+              "$": "match"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1AbstractRunnerTest.html"
+              "$": "krunner-abstractrunner.html"
             },
             "anchor": {
-              "$": "acc9baee6432d98309f784feba39b3535"
+              "$": "match"
             },
             "arglist": {
-              "$": "(const QString &query, const QString &runnerName=QString())"
+              "$": "(KRunner::RunnerContext &context) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "prepare"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "prepare"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "reloadConfiguration"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "reloadConfiguration"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "run"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "run"
+            },
+            "arglist": {
+              "$": "(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMatchRegex"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "setMatchRegex"
+            },
+            "arglist": {
+              "$": "(const QRegularExpression &regex)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMinLetterCount"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "setMinLetterCount"
+            },
+            "arglist": {
+              "$": "(int count)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSyntaxes"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "setSyntaxes"
+            },
+            "arglist": {
+              "$": "(const QList<KRunner::RunnerSyntax> &syntaxes)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setTriggerWords"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "setTriggerWords"
+            },
+            "arglist": {
+              "$": "(const QStringList &triggerWords)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "suspendMatching"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "suspendMatching"
+            },
+            "arglist": {
+              "$": "(bool suspend)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "teardown"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "teardown"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigGroup"
+            },
+            "name": {
+              "$": "config"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "config"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KPluginMetaData"
+            },
+            "name": {
+              "$": "metadata"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "metadata"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<KRunner::RunnerSyntax>"
+            },
+            "name": {
+              "$": "syntaxes"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "syntaxes"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QRegularExpression"
+            },
+            "name": {
+              "$": "matchRegex"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "matchRegex"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "id"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "id"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "name"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isMatchingSuspended"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "isMatchingSuspended"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "minLetterCount"
+            },
+            "anchorfile": {
+              "$": "krunner-abstractrunner.html"
+            },
+            "anchor": {
+              "$": "minLetterCount"
+            },
+            "arglist": {
+              "$": "() const const"
             }
           }
         ]
@@ -535,52 +534,23 @@
           "$": "KRunner::Action"
         },
         "filename": {
-          "$": "classKRunner_1_1Action.html"
+          "$": "krunner-action.html"
         },
         "member": [
           {
-            "@kind": "property",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "iconSource"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1Action.html"
-            },
-            "anchor": {
-              "$": "a4fe760c79fe2f3bdafb0d5915049b560"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "text"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1Action.html"
-            },
-            "anchor": {
-              "$": "a1d2657e70b86408d8bdbfa02438e7f48"
-            },
-            "arglist": {}
-          },
-          {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {},
             "name": {
               "$": "Action"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1Action.html"
+              "$": "krunner-action.html"
             },
             "anchor": {
-              "$": "a4f457ccfc8336b565cadca56b36e0271"
+              "$": "Action"
             },
             "arglist": {
               "$": "()"
@@ -588,31 +558,18 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {},
             "name": {
               "$": "Action"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1Action.html"
+              "$": "krunner-action.html"
             },
             "anchor": {
-              "$": "a7bea91180d158f37972314de7f99223b"
-            },
-            "arglist": {
-              "$": "(const KRunner::Action &other)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "Action"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1Action.html"
-            },
-            "anchor": {
-              "$": "a95022cc42d8dadfcc490092072fa3755"
+              "$": "Action-1"
             },
             "arglist": {
               "$": "(const QString &id, const QString &iconSource, const QString &text)"
@@ -620,19 +577,94 @@
           },
           {
             "@kind": "function",
-            "type": {},
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "iconSource"
+            },
+            "anchorfile": {
+              "$": "krunner-action.html"
+            },
+            "anchor": {
+              "$": "iconSource-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "text"
+            },
+            "anchorfile": {
+              "$": "krunner-action.html"
+            },
+            "anchor": {
+              "$": "text-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
             "name": {
               "$": "operator bool"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1Action.html"
+              "$": "krunner-action.html"
             },
             "anchor": {
-              "$": "a7f0fef36e5d2df2d0ed1bf7ebfb2907d"
+              "$": "operator-bool"
             },
             "arglist": {
-              "$": "() const"
+              "$": "() const const"
             }
+          },
+          {
+            "@kind": "property",
+            "@type": "QString",
+            "name": {
+              "$": "iconSource"
+            },
+            "anchorfile": {
+              "$": "krunner-action.html"
+            },
+            "anchor": {
+              "$": "iconSource-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "QString",
+            "name": {
+              "$": "text"
+            },
+            "anchorfile": {
+              "$": "krunner-action.html"
+            },
+            "anchor": {
+              "$": "text-prop"
+            },
+            "arglist": {}
           }
         ]
       },
@@ -642,102 +674,110 @@
           "$": "KRunner::QueryMatch"
         },
         "filename": {
-          "$": "classKRunner_1_1QueryMatch.html"
+          "$": "krunner-querymatch.html"
         },
         "member": [
           {
             "@kind": "enumeration",
-            "type": {},
             "name": {
               "$": "CategoryRelevance"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "ad786997a70214d3be48c0b7267a8eba4"
+              "$": "CategoryRelevance-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Lowest"
             },
-            "arglist": {},
-            "enumvalue": [
-              {
-                "@file": "classKRunner_1_1QueryMatch.html",
-                "@anchor": "ad786997a70214d3be48c0b7267a8eba4ab5b8e20937205384be7b9e0c29a28fdb",
-                "$": "Lowest"
-              },
-              {
-                "@file": "classKRunner_1_1QueryMatch.html",
-                "@anchor": "ad786997a70214d3be48c0b7267a8eba4a28d0edd045e05cf5af64e35ae0c4c6ef",
-                "$": "Low"
-              },
-              {
-                "@file": "classKRunner_1_1QueryMatch.html",
-                "@anchor": "ad786997a70214d3be48c0b7267a8eba4a1eb79d43dbb97d5ceb3c157fdb27fa60",
-                "$": "Moderate"
-              },
-              {
-                "@file": "classKRunner_1_1QueryMatch.html",
-                "@anchor": "ad786997a70214d3be48c0b7267a8eba4a655d20c1ca69519ca647684edbb2db35",
-                "$": "High"
-              },
-              {
-                "@file": "classKRunner_1_1QueryMatch.html",
-                "@anchor": "ad786997a70214d3be48c0b7267a8eba4a582996407922dab08d5cf2b3d2a7c1c9",
-                "$": "Highest"
-              }
-            ]
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "CategoryRelevance-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Low"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "CategoryRelevance-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Moderate"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "CategoryRelevance-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "High"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "CategoryRelevance-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Highest"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "CategoryRelevance-enum"
+            },
+            "arglist": {}
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {},
             "name": {
               "$": "QueryMatch"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "afbb69c14ac34000ed906f6e7cd397c71"
-            },
-            "arglist": {
-              "$": "(AbstractRunner *runner=nullptr)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
               "$": "QueryMatch"
             },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a45fe01f8448216de8ae0504b555914d3"
-            },
             "arglist": {
-              "$": "(const QueryMatch &other)"
+              "$": "(KRunner::AbstractRunner *runner)"
             }
           },
           {
             "@kind": "function",
-            "type": {
-              "$": "QList< KRunner::Action >"
-            },
-            "name": {
-              "$": "actions"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "ae460b2ac31b973a490b54f8a0d47804c"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -745,10 +785,10 @@
               "$": "addAction"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "a50dc6801568e562f94c07fdf181375ec"
+              "$": "addAction"
             },
             "arglist": {
               "$": "(const KRunner::Action &action)"
@@ -756,222 +796,9 @@
           },
           {
             "@kind": "function",
-            "type": {
-              "$": "qreal"
-            },
-            "name": {
-              "$": "categoryRelevance"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a8e6d4e47aaffdda86c3466c87c8e8ac1"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QVariant"
-            },
-            "name": {
-              "$": "data"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "af92c06d2dcde2f8a027dbf2686005e9a"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QIcon"
-            },
-            "name": {
-              "$": "icon"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "ace8969d41fc6c0a3c2ce7d674a98f852"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "iconName"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "ae8123d910409576b97c4bc0856a2d1a2"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "id"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a3844e7f9eb1980066213e05d7334a398"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isEnabled"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a3c495daca5fd9580e042352a10ab78f7"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isMultiLine"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "acd9462356d9c9f3eeaac13d15cc28e5a"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isValid"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a348cdc855b7a96a88765293f29d7e76e"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "matchCategory"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "ae4e34134ab0e0d40437fe945e71bf647"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "qreal"
-            },
-            "name": {
-              "$": "relevance"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "a6975b18c331ba5a8e9d96ad5fc954aec"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "AbstractRunner *"
-            },
-            "name": {
-              "$": "runner"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "af4a9302b7d595483c71f0fe7b25a7365"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KRunner::Action"
-            },
-            "name": {
-              "$": "selectedAction"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "ac0143e25b8909818c42c49ae20d3b326"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -979,17 +806,20 @@
               "$": "setActions"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "a4ac20fb03413c13f75068abfc7eed0e1"
+              "$": "setActions"
             },
             "arglist": {
-              "$": "(const QList< KRunner::Action > &actions)"
+              "$": "(const QList<KRunner::Action> &actions)"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -997,35 +827,20 @@
               "$": "setCategoryRelevance"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "ab67cccf00c27d33834f0c2c7e075fb71"
-            },
-            "arglist": {
-              "$": "(CategoryRelevance relevance)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "setCategoryRelevance"
             },
-            "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
-            },
-            "anchor": {
-              "$": "aa76b36b8e2ae98b38a1ec1a9189843aa"
-            },
             "arglist": {
-              "$": "(qreal relevance)"
+              "$": "(KRunner::QueryMatch::CategoryRelevance relevance)"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1033,10 +848,10 @@
               "$": "setData"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "ab1992b53b3a268117a9093aa885b9e33"
+              "$": "setData"
             },
             "arglist": {
               "$": "(const QVariant &data)"
@@ -1044,6 +859,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1051,10 +869,10 @@
               "$": "setEnabled"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "a1986b6a058ddb171a369811ec1071701"
+              "$": "setEnabled"
             },
             "arglist": {
               "$": "(bool enable)"
@@ -1062,6 +880,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1069,10 +890,10 @@
               "$": "setIcon"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "aa313c42dc38809456e7100f2a59909b2"
+              "$": "setIcon"
             },
             "arglist": {
               "$": "(const QIcon &icon)"
@@ -1080,6 +901,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1087,10 +911,10 @@
               "$": "setIconName"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "ade71a376ca79cbca540c3f4b00ffef3e"
+              "$": "setIconName"
             },
             "arglist": {
               "$": "(const QString &iconName)"
@@ -1098,6 +922,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1105,10 +932,10 @@
               "$": "setId"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "a8bedbe4e01efe03768be499ee9ce88c0"
+              "$": "setId"
             },
             "arglist": {
               "$": "(const QString &id)"
@@ -1116,6 +943,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1123,10 +953,10 @@
               "$": "setMatchCategory"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "abf18f3156c1c36e80a56c4cdc1ab00ef"
+              "$": "setMatchCategory"
             },
             "arglist": {
               "$": "(const QString &category)"
@@ -1134,6 +964,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1141,10 +974,10 @@
               "$": "setMultiLine"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "afd7a90a4c74d5a0310dcd0229abcdd7b"
+              "$": "setMultiLine"
             },
             "arglist": {
               "$": "(bool multiLine)"
@@ -1152,6 +985,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1159,10 +995,10 @@
               "$": "setRelevance"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "a6c3080e30fbb418ee76531d2c1f46d82"
+              "$": "setRelevance"
             },
             "arglist": {
               "$": "(qreal relevance)"
@@ -1170,6 +1006,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1177,10 +1016,10 @@
               "$": "setSubtext"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "ad92a717896b973fd345901025bb46c83"
+              "$": "setSubtext"
             },
             "arglist": {
               "$": "(const QString &text)"
@@ -1188,6 +1027,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1195,10 +1037,10 @@
               "$": "setText"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "a3aaa5f40ee2f3fa634ebbc90d63e04d7"
+              "$": "setText"
             },
             "arglist": {
               "$": "(const QString &text)"
@@ -1206,6 +1048,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1213,17 +1058,188 @@
               "$": "setUrls"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "a1a963564ea7c54f65a25db43e65d199c"
+              "$": "setUrls"
             },
             "arglist": {
-              "$": "(const QList< QUrl > &urls)"
+              "$": "(const QList<QUrl> &urls)"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KRunner::AbstractRunner *"
+            },
+            "name": {
+              "$": "runner"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "runner"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KRunner::Action"
+            },
+            "name": {
+              "$": "selectedAction"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "selectedAction"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QIcon"
+            },
+            "name": {
+              "$": "icon"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "icon"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<KRunner::Action>"
+            },
+            "name": {
+              "$": "actions"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "actions"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<QUrl>"
+            },
+            "name": {
+              "$": "urls"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "urls"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "iconName"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "iconName"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "id"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "id"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "matchCategory"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "matchCategory"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "QString"
             },
@@ -1231,17 +1247,20 @@
               "$": "subtext"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "ab01f178ff468d061ea7a4f9d328f029e"
+              "$": "subtext"
             },
             "arglist": {
-              "$": "() const"
+              "$": "() const const"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "QString"
             },
@@ -1249,31 +1268,139 @@
               "$": "text"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "a38a9dce79b2d5ba7728e135e49712b27"
+              "$": "text"
             },
             "arglist": {
-              "$": "() const"
+              "$": "() const const"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
-              "$": "QList< QUrl >"
+              "$": "QVariant"
             },
             "name": {
-              "$": "urls"
+              "$": "data"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1QueryMatch.html"
+              "$": "krunner-querymatch.html"
             },
             "anchor": {
-              "$": "ad7a512abc367a04c5b9fda2325306042"
+              "$": "data"
             },
             "arglist": {
-              "$": "() const"
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isEnabled"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "isEnabled"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isMultiLine"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "isMultiLine"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isValid"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "isValid"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "qreal"
+            },
+            "name": {
+              "$": "categoryRelevance"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "categoryRelevance"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "qreal"
+            },
+            "name": {
+              "$": "relevance"
+            },
+            "anchorfile": {
+              "$": "krunner-querymatch.html"
+            },
+            "anchor": {
+              "$": "relevance"
+            },
+            "arglist": {
+              "$": "() const const"
             }
           }
         ]
@@ -1284,49 +1411,151 @@
           "$": "KRunner::ResultsModel"
         },
         "filename": {
-          "$": "classKRunner_1_1ResultsModel.html"
+          "$": "krunner-resultsmodel.html"
         },
         "base": {
           "$": "QSortFilterProxyModel"
         },
         "member": [
           {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "FavoriteCountRole"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
-            },
-            "anchor": {
-              "$": "a6d7a8770cd4b7df7b59de3e32beb9afaa4490d85f9e293dc063d1c4c097d10f4d"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "FavoriteIndexRole"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
-            },
-            "anchor": {
-              "$": "a6d7a8770cd4b7df7b59de3e32beb9afaa5dc55c881f678a3cddc3d7b3f2ce7e7a"
-            },
-            "arglist": {}
-          },
-          {
             "@kind": "enumeration",
-            "type": {},
             "name": {
               "$": "Roles"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
+              "$": "krunner-resultsmodel.html"
             },
             "anchor": {
-              "$": "a6d7a8770cd4b7df7b59de3e32beb9afa"
+              "$": "Roles-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "IdRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "CategoryRelevanceRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RelevanceRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "EnabledRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "CategoryRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SubtextRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ActionsRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MultiLineRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "UrlsRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "QueryMatchRole"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "Roles-enum"
             },
             "arglist": {}
           },
@@ -1336,10 +1565,10 @@
               "$": "FavoriteIndexRole"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
+              "$": "krunner-resultsmodel.html"
             },
             "anchor": {
-              "$": "a6d7a8770cd4b7df7b59de3e32beb9afaa5dc55c881f678a3cddc3d7b3f2ce7e7a"
+              "$": "Roles-enum"
             },
             "arglist": {}
           },
@@ -1349,162 +1578,67 @@
               "$": "FavoriteCountRole"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
+              "$": "krunner-resultsmodel.html"
             },
             "anchor": {
-              "$": "a6d7a8770cd4b7df7b59de3e32beb9afaa4490d85f9e293dc063d1c4c097d10f4d"
+              "$": "Roles-enum"
             },
             "arglist": {}
           },
           {
-            "@kind": "property",
-            "type": {
-              "$": "int"
-            },
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
             "name": {
-              "$": "limit"
+              "$": "ResultsModel"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
+              "$": "krunner-resultsmodel.html"
             },
             "anchor": {
-              "$": "a719f55aa1e6bdec712f2f4ea7ecf8d21"
+              "$": "ResultsModel"
             },
-            "arglist": {}
+            "arglist": {
+              "$": "(QObject *parent)"
+            }
           },
           {
-            "@kind": "property",
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "ResultsModel"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "ResultsModel-1"
+            },
+            "arglist": {
+              "$": "(const KConfigGroup &configGroup, const KConfigGroup &stateConfigGroup, QObject *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "bool"
-            },
-            "name": {
-              "$": "querying"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
-            },
-            "anchor": {
-              "$": "a4517832c420655db571a05900a54ee38"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "queryString"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
-            },
-            "anchor": {
-              "$": "aa7da506c1de516dc70325e04417c5792"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "property",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "singleRunner"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
-            },
-            "anchor": {
-              "$": "a088d0fa553192dd868d2e9a4c7c5a9d7"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "queryStringChangeRequested"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
-            },
-            "anchor": {
-              "$": "abf63004da11a4c7c30c08a8736dfa5c4"
-            },
-            "arglist": {
-              "$": "(const QString &queryString, int pos)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Q_INVOKABLE void"
-            },
-            "name": {
-              "$": "clear"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
-            },
-            "anchor": {
-              "$": "a8d2ff76534157be2f010240340e5d643"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Q_INVOKABLE QMimeData *"
-            },
-            "name": {
-              "$": "getMimeData"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
-            },
-            "anchor": {
-              "$": "ade6afcc34d0cde086857856fde32901b"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &idx) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "KRunner::QueryMatch"
-            },
-            "name": {
-              "$": "getQueryMatch"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
-            },
-            "anchor": {
-              "$": "a1956f3e605f8d3c9f9d7f487806618f1"
-            },
-            "arglist": {
-              "$": "(const QModelIndex &idx) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "Q_INVOKABLE bool"
             },
             "name": {
               "$": "run"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
+              "$": "krunner-resultsmodel.html"
             },
             "anchor": {
-              "$": "adc264e09ef40445485bacb8e44cf8570"
+              "$": "run"
             },
             "arglist": {
               "$": "(const QModelIndex &idx)"
@@ -1512,17 +1646,20 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
-              "$": "Q_INVOKABLE bool"
+              "$": "bool"
             },
             "name": {
               "$": "runAction"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
+              "$": "krunner-resultsmodel.html"
             },
             "anchor": {
-              "$": "a22874055953395ed7adfc283f8b125fc"
+              "$": "runAction"
             },
             "arglist": {
               "$": "(const QModelIndex &idx, int actionNumber)"
@@ -1530,6 +1667,177 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "clear"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "clear"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "favoriteIdsChanged"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "favoriteIds-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "limitChanged"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "limit-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "queryStringChangeRequested"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "queryStringChangeRequested"
+            },
+            "arglist": {
+              "$": "(const QString &queryString, int pos)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "queryStringChanged"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "queryString-prop"
+            },
+            "arglist": {
+              "$": "(const QString &queryString)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "queryingChanged"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "querying-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "resetLimit"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "limit-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "runnerManagerChanged"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "runnerManagerChanged"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1537,14 +1845,406 @@
               "$": "setFavoriteIds"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1ResultsModel.html"
+              "$": "krunner-resultsmodel.html"
             },
             "anchor": {
-              "$": "ae3ec8d7e95d01dda4c14368e2078ccb8"
+              "$": "setFavoriteIds"
             },
             "arglist": {
               "$": "(const QStringList &ids)"
             }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setLimit"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "limit-prop"
+            },
+            "arglist": {
+              "$": "(int limit)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setQueryString"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "queryString-prop"
+            },
+            "arglist": {
+              "$": "(const QString &queryString)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setRunnerManager"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "setRunnerManager"
+            },
+            "arglist": {
+              "$": "(KRunner::RunnerManager *manager)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSingleRunner"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "singleRunner-prop"
+            },
+            "arglist": {
+              "$": "(const QString &runner)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "singleRunnerChanged"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "singleRunner-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KPluginMetaData"
+            },
+            "name": {
+              "$": "singleRunnerMetaData"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "singleRunnerMetaData-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KRunner::QueryMatch"
+            },
+            "name": {
+              "$": "getQueryMatch"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "getQueryMatch"
+            },
+            "arglist": {
+              "$": "(const QModelIndex &idx) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KRunner::RunnerManager *"
+            },
+            "name": {
+              "$": "runnerManager"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "runnerManager-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QMimeData *"
+            },
+            "name": {
+              "$": "getMimeData"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "getMimeData"
+            },
+            "arglist": {
+              "$": "(const QModelIndex &idx) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "queryString"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "queryString-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "singleRunner"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "singleRunner-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "favoriteIds"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "favoriteIds-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "querying"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "querying-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "limit"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "limit-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "property",
+            "@type": "QStringList",
+            "name": {
+              "$": "favoriteIds"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "favoriteIds-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "int",
+            "name": {
+              "$": "limit"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "limit-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "QString",
+            "name": {
+              "$": "queryString"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "queryString-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "bool",
+            "name": {
+              "$": "querying"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "querying-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "KRunner::RunnerManager*",
+            "name": {
+              "$": "runnerManager"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "runnerManager-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "QString",
+            "name": {
+              "$": "singleRunner"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "singleRunner-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "KPluginMetaData",
+            "name": {
+              "$": "singleRunnerMetaData"
+            },
+            "anchorfile": {
+              "$": "krunner-resultsmodel.html"
+            },
+            "anchor": {
+              "$": "singleRunnerMetaData-prop"
+            },
+            "arglist": {}
           }
         ]
       },
@@ -1554,27 +2254,33 @@
           "$": "KRunner::RunnerContext"
         },
         "filename": {
-          "$": "classKRunner_1_1RunnerContext.html"
+          "$": "krunner-runnercontext.html"
         },
         "member": [
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {},
             "name": {
               "$": "RunnerContext"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
+              "$": "krunner-runnercontext.html"
             },
             "anchor": {
-              "$": "aa5d9cf8dcdbed1b1137ff98a60a6b90b"
+              "$": "RunnerContext"
             },
             "arglist": {
-              "$": "(const RunnerContext &other)"
+              "$": "(KRunner::RunnerManager *manager)"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "bool"
             },
@@ -1582,17 +2288,20 @@
               "$": "addMatch"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
+              "$": "krunner-runnercontext.html"
             },
             "anchor": {
-              "$": "ab1e445e2a3606acf543652ae4afc6192"
+              "$": "addMatch"
             },
             "arglist": {
-              "$": "(const QueryMatch &match)"
+              "$": "(const KRunner::QueryMatch &match)"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "bool"
             },
@@ -1600,125 +2309,20 @@
               "$": "addMatches"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
+              "$": "krunner-runnercontext.html"
             },
             "anchor": {
-              "$": "adc734eeb984044bcc7b0201a40ca4525"
+              "$": "addMatches"
             },
             "arglist": {
-              "$": "(const QList< QueryMatch > &matches)"
+              "$": "(const QList<KRunner::QueryMatch> &matches)"
             }
           },
           {
             "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "ignoreCurrentMatchForHistory"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "aeeba680c7c6c86c68519bac9dbc4b5a3"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "isValid"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "a487df61c951dd2e762b68b255c78141a"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QList< QueryMatch >"
-            },
-            "name": {
-              "$": "matches"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "a5f938bbf39684dca89c6c869a10b6b10"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "RunnerContext &"
-            },
-            "name": {
-              "$": "operator="
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "a88b7978f2925ee205590279fc9410ba2"
-            },
-            "arglist": {
-              "$": "(const RunnerContext &other)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "query"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "ace9a022290b99fbb56204fe15341d5bf"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "requestQueryStringUpdate"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
-            },
-            "anchor": {
-              "$": "adf9999d21685c2268d77fa0e966e79d3"
-            },
-            "arglist": {
-              "$": "(const QString &text, int cursorPosition) const"
-            }
-          },
-          {
-            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -1726,10 +2330,10 @@
               "$": "setQuery"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
+              "$": "krunner-runnercontext.html"
             },
             "anchor": {
-              "$": "a39d089fc846edce40514d020225e66b2"
+              "$": "setQuery"
             },
             "arglist": {
               "$": "(const QString &term)"
@@ -1737,6 +2341,72 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<KRunner::QueryMatch>"
+            },
+            "name": {
+              "$": "matches"
+            },
+            "anchorfile": {
+              "$": "krunner-runnercontext.html"
+            },
+            "anchor": {
+              "$": "matches"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "query"
+            },
+            "anchorfile": {
+              "$": "krunner-runnercontext.html"
+            },
+            "anchor": {
+              "$": "query"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isValid"
+            },
+            "anchorfile": {
+              "$": "krunner-runnercontext.html"
+            },
+            "anchor": {
+              "$": "isValid"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "bool"
             },
@@ -1744,13 +2414,55 @@
               "$": "singleRunnerQueryMode"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerContext.html"
+              "$": "krunner-runnercontext.html"
             },
             "anchor": {
-              "$": "ace8bda5e4b512dc8b6025c6698223ff4"
+              "$": "singleRunnerQueryMode"
             },
             "arglist": {
-              "$": "() const"
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "ignoreCurrentMatchForHistory"
+            },
+            "anchorfile": {
+              "$": "krunner-runnercontext.html"
+            },
+            "anchor": {
+              "$": "ignoreCurrentMatchForHistory"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "requestQueryStringUpdate"
+            },
+            "anchorfile": {
+              "$": "krunner-runnercontext.html"
+            },
+            "anchor": {
+              "$": "requestQueryStringUpdate"
+            },
+            "arglist": {
+              "$": "(const QString &text, int cursorPosition) const const"
             }
           }
         ]
@@ -1761,273 +2473,28 @@
           "$": "KRunner::RunnerManager"
         },
         "filename": {
-          "$": "classKRunner_1_1RunnerManager.html"
+          "$": "krunner-runnermanager.html"
         },
         "base": {
           "$": "QObject"
         },
         "member": [
           {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "historyEnabledChanged"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "aab3f5c6f9af6c4f5268e7095064d120d"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "matchesChanged"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "aad9d54d6883be03288046ebde5eba46e"
-            },
-            "arglist": {
-              "$": "(const QList< KRunner::QueryMatch > &matches)"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "queryFinished"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "ac69fac8e7cdaf40b2fc6d68fe881ec33"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "signal",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "requestUpdateQueryString"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "aba19f04ca3f3d41eeaa540674a0ed5eb"
-            },
-            "arglist": {
-              "$": "(const QString &term, int cursorPosition)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "launchQuery"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "aec8050b0767a19feece6be1130a9e087"
-            },
-            "arglist": {
-              "$": "(const QString &term, const QString &runnerId=QString())"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "matchSessionComplete"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a92b85c8e1df1031f45eada21c940db53"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "reset"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "aecfcdae292738bbe5df1c839929efd80"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "Q_INVOKABLE void"
-            },
-            "name": {
-              "$": "setHistoryEnvironmentIdentifier"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a5726a4193a385d1a656a40c5267237cd"
-            },
-            "arglist": {
-              "$": "(const QString &identifier)"
-            }
-          },
-          {
-            "@kind": "slot",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "setupMatchSession"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a02b9154f648116680d67cdb55cbd7fe2"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
             "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "RunnerManager"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a2bc8e04aa515c840d91687497136453d"
-            },
-            "arglist": {
-              "$": "(const KConfigGroup &pluginConfigGroup, const KConfigGroup &stateGroup, QObject *parent)"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "RunnerManager"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a3532666ac0b811d138d5165f389c92a8"
-            },
-            "arglist": {
-              "$": "(QObject *parent=nullptr)"
-            }
-          },
-          {
-            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
-              "$": "Q_INVOKABLE QString"
-            },
-            "name": {
-              "$": "getHistorySuggestion"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "ab4cb79dc16b78eaf6a0feb8ac4e02252"
-            },
-            "arglist": {
-              "$": "(const QString &typedQuery) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QStringList"
-            },
-            "name": {
-              "$": "history"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "ae973c24d9d8de648f7de83687f3efbda"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "historyEnabled"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a8e056dae2f4b29cca19b31dce27dc780"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "AbstractRunner *"
+              "$": "KRunner::AbstractRunner *"
             },
             "name": {
               "$": "loadRunner"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "a9195b3073c283c21a1c02e8de1483df7"
+              "$": "loadRunner"
             },
             "arglist": {
               "$": "(const KPluginMetaData &pluginMetaData)"
@@ -2035,71 +2502,20 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
             "type": {
-              "$": "QList< QueryMatch >"
+              "$": "QList<KPluginMetaData>"
             },
             "name": {
-              "$": "matches"
+              "$": "runnerMetaDataList"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "a21f1741a99e8e594fbb1eb921bfe79d0"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QMimeData *"
-            },
-            "name": {
-              "$": "mimeDataForMatch"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a3891bd88dc8f247cdc13f3d1f3ec9c2b"
-            },
-            "arglist": {
-              "$": "(const QueryMatch &match) const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "QString"
-            },
-            "name": {
-              "$": "query"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a652d07db34396657baef2f6771dbb88d"
-            },
-            "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "reloadConfiguration"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
-            },
-            "anchor": {
-              "$": "a4f30db49592b455a8c8c9e48c8da6c5f"
+              "$": "runnerMetaDataList"
             },
             "arglist": {
               "$": "()"
@@ -2107,24 +2523,68 @@
           },
           {
             "@kind": "function",
-            "type": {
-              "$": "Q_INVOKABLE void"
-            },
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
             "name": {
-              "$": "removeFromHistory"
+              "$": "RunnerManager"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "a92755910c942febe8450de02e8268141"
+              "$": "RunnerManager"
             },
             "arglist": {
-              "$": "(int index)"
+              "$": "(QObject *parent)"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "RunnerManager"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "RunnerManager-1"
+            },
+            "arglist": {
+              "$": "(const KConfigGroup &pluginConfigGroup, const KConfigGroup &stateGroup, QObject *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "historyEnabled"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "historyEnabled"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "bool"
             },
@@ -2132,71 +2592,230 @@
               "$": "run"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "a1eacac370541af12b5ac347c6a97da2d"
+              "$": "run"
             },
             "arglist": {
-              "$": "(const QueryMatch &match, const KRunner::Action &action={})"
+              "$": "(const KRunner::QueryMatch &match, const KRunner::Action &action)"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
-              "$": "AbstractRunner *"
+              "$": "void"
             },
             "name": {
-              "$": "runner"
+              "$": "historyEnabledChanged"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "a43d648c0d462a26305ed9f0a3c61d309"
+              "$": "historyEnabledChanged"
             },
             "arglist": {
-              "$": "(const QString &pluginId) const"
+              "$": "()"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
-              "$": "QList< AbstractRunner * >"
+              "$": "void"
             },
             "name": {
-              "$": "runners"
+              "$": "launchQuery"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "af59675828e0c7ae09b8c16d854b85a0c"
+              "$": "launchQuery"
             },
             "arglist": {
-              "$": "() const"
+              "$": "(const QString &term, const QString &runnerId)"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
-              "$": "RunnerContext *"
+              "$": "void"
             },
             "name": {
-              "$": "searchContext"
+              "$": "matchSessionComplete"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "a1836941f7697a9e9a4dea4bc8d8f6913"
+              "$": "matchSessionComplete"
             },
             "arglist": {
-              "$": "() const"
+              "$": "()"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "matchesChanged"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "matchesChanged"
+            },
+            "arglist": {
+              "$": "(const QList<KRunner::QueryMatch> &matches)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "queryFinished"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "queryFinished"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "queryingChanged"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "queryingChanged"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "reloadConfiguration"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "reloadConfiguration"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "removeFromHistory"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "removeFromHistory"
+            },
+            "arglist": {
+              "$": "(int index)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "requestUpdateQueryString"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "requestUpdateQueryString"
+            },
+            "arglist": {
+              "$": "(const QString &term, int cursorPosition)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "reset"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "reset"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -2204,10 +2823,10 @@
               "$": "setAllowedRunners"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "a712d6e59f599ee1521d48678b4870d4d"
+              "$": "setAllowedRunners"
             },
             "arglist": {
               "$": "(const QStringList &runners)"
@@ -2215,6 +2834,9 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "void"
             },
@@ -2222,10 +2844,10 @@
               "$": "setHistoryEnabled"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "a012a3c65738097fe46d2a765afdc10c8"
+              "$": "setHistoryEnabled"
             },
             "arglist": {
               "$": "(bool enabled)"
@@ -2233,22 +2855,255 @@
           },
           {
             "@kind": "function",
-            "@static": "yes",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
-              "$": "static QList< KPluginMetaData >"
+              "$": "void"
             },
             "name": {
-              "$": "runnerMetaDataList"
+              "$": "setupMatchSession"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerManager.html"
+              "$": "krunner-runnermanager.html"
             },
             "anchor": {
-              "$": "a6a6298ca0e1063802667788bd653f3c3"
+              "$": "setupMatchSession"
             },
             "arglist": {
               "$": "()"
             }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KRunner::AbstractRunner *"
+            },
+            "name": {
+              "$": "runner"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "runner"
+            },
+            "arglist": {
+              "$": "(const QString &pluginId) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KRunner::RunnerContext *"
+            },
+            "name": {
+              "$": "searchContext"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "searchContext"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<KRunner::AbstractRunner *>"
+            },
+            "name": {
+              "$": "runners"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "runners"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<KRunner::QueryMatch>"
+            },
+            "name": {
+              "$": "matches"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "matches"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QMimeData *"
+            },
+            "name": {
+              "$": "mimeDataForMatch"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "mimeDataForMatch"
+            },
+            "arglist": {
+              "$": "(const KRunner::QueryMatch &match) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "getHistorySuggestion"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "getHistorySuggestion"
+            },
+            "arglist": {
+              "$": "(const QString &typedQuery) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "query"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "query"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "history"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "history"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "querying"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "querying"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "property",
+            "@type": "QStringList",
+            "name": {
+              "$": "history"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "history-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "bool",
+            "name": {
+              "$": "historyEnabled"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "historyEnabled-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "bool",
+            "name": {
+              "$": "querying"
+            },
+            "anchorfile": {
+              "$": "krunner-runnermanager.html"
+            },
+            "anchor": {
+              "$": "querying-prop"
+            },
+            "arglist": {}
           }
         ]
       },
@@ -2258,20 +3113,23 @@
           "$": "KRunner::RunnerSyntax"
         },
         "filename": {
-          "$": "classKRunner_1_1RunnerSyntax.html"
+          "$": "krunner-runnersyntax.html"
         },
         "member": [
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {},
             "name": {
               "$": "RunnerSyntax"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerSyntax.html"
+              "$": "krunner-runnersyntax.html"
             },
             "anchor": {
-              "$": "a004d8e6b72b320228f462417b7523caf"
+              "$": "RunnerSyntax"
             },
             "arglist": {
               "$": "(const QString &exampleQuery, const QString &description)"
@@ -2279,15 +3137,18 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {},
             "name": {
               "$": "RunnerSyntax"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerSyntax.html"
+              "$": "krunner-runnersyntax.html"
             },
             "anchor": {
-              "$": "a0ec93168bc87a742b105c5d442d940fc"
+              "$": "RunnerSyntax-1"
             },
             "arglist": {
               "$": "(const QStringList &exampleQueries, const QString &description)"
@@ -2295,22 +3156,9 @@
           },
           {
             "@kind": "function",
-            "type": {},
-            "name": {
-              "$": "RunnerSyntax"
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerSyntax.html"
-            },
-            "anchor": {
-              "$": "a1b00d6145116d2e461eb4e9622ba6e40"
-            },
-            "arglist": {
-              "$": "(const RunnerSyntax &other)"
-            }
-          },
-          {
-            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "QString"
             },
@@ -2318,17 +3166,20 @@
               "$": "description"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerSyntax.html"
+              "$": "krunner-runnersyntax.html"
             },
             "anchor": {
-              "$": "ab4e843809553362f45f399d7f9ce0273"
+              "$": "description"
             },
             "arglist": {
-              "$": "() const"
+              "$": "() const const"
             }
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
             "type": {
               "$": "QStringList"
             },
@@ -2336,59 +3187,16 @@
               "$": "exampleQueries"
             },
             "anchorfile": {
-              "$": "classKRunner_1_1RunnerSyntax.html"
+              "$": "krunner-runnersyntax.html"
             },
             "anchor": {
-              "$": "a4bffee2511053bfa038eff9715537d08"
+              "$": "exampleQueries"
             },
             "arglist": {
-              "$": "() const"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "RunnerSyntax &"
-            },
-            "name": {
-              "$": "operator="
-            },
-            "anchorfile": {
-              "$": "classKRunner_1_1RunnerSyntax.html"
-            },
-            "anchor": {
-              "$": "a4ae728c7f50349b07e22c696e00024ca"
-            },
-            "arglist": {
-              "$": "(const RunnerSyntax &rhs)"
+              "$": "() const const"
             }
           }
         ]
-      },
-      {
-        "@kind": "page",
-        "name": {
-          "$": "index"
-        },
-        "title": {
-          "$": "KRunner"
-        },
-        "filename": {
-          "$": "index.html"
-        },
-        "subpage": [
-          {
-            "$": "Stars.html"
-          },
-          {
-            "$": "HTMIndexing.html"
-          }
-        ],
-        "docanchor": {
-          "@file": "index.html",
-          "@title": "KRunner",
-          "$": "md__2builds_2websites_2api-kde-org_2sources_2krunner_2README"
-        }
       }
     ]
   }

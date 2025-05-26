@@ -4,7 +4,7 @@ weight: 2
 description: Essentials of making a Plasma Style
 ---
 
-[Plasma Framework](docs:plasma-framework) provides the [Plasma::Theme](docs:plasma-framework;Plasma::Theme) class so Plasma elements and other
+[Plasma Framework](docs:plasma;plasma-index.html) provides the [Plasma::Theme](docs:plasma;Plasma::Theme) class so Plasma elements and other
 applications, such as KRunner, can graphically hint or theme
 interface elements. This is not a replacement for [QStyle](https://doc.qt.io/qt-6/qstyle.html), but rather
 provides standard elements for things such as box backgrounds.
@@ -186,9 +186,9 @@ The most common use of the `colors` file is to ensure that text is readable on v
 Here is a non-comprehensive list of the main color entries in the `colors` file that are currently actively used in a Plasma Style:
 
 * **[Colors:Window]**
-  * **ForegroundNormal**: the text color applied to text on the standard background elements; maps to [Theme::TextColor](docs:plasma-framework;Plasma::Theme::TextColor)
-  * **BackgroundNormal**: the default background color used for items that paint a background themselves, allowing them to blend in with the theme; maps to [Theme::BackgroundColor](docs:plasma-framework;Plasma::Theme::BackgroundColor)
-  * **DecorationHover**: the color used for text highlighting; maps to [Theme::HighlightColor](docs:plasma-framework;Plasma::Theme::HighlightColor)
+  * **ForegroundNormal**: the text color applied to text on the standard background elements; maps to [Theme::TextColor](docs:plasma;Plasma::Theme::TextColor)
+  * **BackgroundNormal**: the default background color used for items that paint a background themselves, allowing them to blend in with the theme; maps to [Theme::BackgroundColor](docs:plasma;Plasma::Theme::BackgroundColor)
+  * **DecorationHover**: the color used for text highlighting; maps to [Theme::HighlightColor](docs:plasma;Plasma::Theme::HighlightColor)
 
 * **[Colors:Button]**
   * **ForegroundNormal**: the text color to use on push buttons
@@ -229,15 +229,17 @@ The following colors are currently also used by individual plasmoids, which shou
 * **[Colors:Complementary]**
   * Same roles as **Colors:Window**, those are used in areas such as the logout screen, the screen locker, and other areas in order for them to have independent colors compared to normal plasmoids.
 
-Note that some of these may end up folded back into [Plasma::Theme](docs:plasma-framework;Plasma::Theme) properly at some point.
+Note that some of these may end up folded back into [Plasma::Theme](docs:plasma;Plasma::Theme) properly at some point.
 
 ## Image Access from C++
 
 Theme elements can be accessed from C++ code by path. Whether this maps to literal paths on disk
 or not is not guaranteed and considered an implementation detail of
-[Plasma::Theme](docs:plasma-framework;Plasma::Theme).
+[Plasma::Theme](docs:plasma;Plasma::Theme).
 
 For example, to access the dialog background, one might create an SVG in this manner:
+
+<!-- TODO: update examples with KSvg -->
 
 ```c++
 Plasma::Theme theme;
@@ -245,6 +247,6 @@ Plasma::Svg svg("dialogs/background");
 svg.resize(size());
 ```
 
-<!-- TODO change to KSvg::Svg -->
+<!-- TODO port KSvg to QDoc and change to KSvg::Svg -->
 
-By using [Plasma::Svg](docs:plasma-framework;Plasma::Svg), changes to the theme are automatically picked up.
+By using [KSvg::Svg](docs:ksvg;KSvg::Svg), changes to the theme are automatically picked up.

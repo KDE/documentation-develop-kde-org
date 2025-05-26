@@ -1,7 +1,6 @@
 {
   "tagfile": {
-    "@doxygen_version": "1.10.0",
-    "@doxygen_gitid": "GIT-NOTFOUND",
+    "@doxygen_version": "1.13.2",
     "compound": [
       {
         "@kind": "class",
@@ -5870,6 +5869,24 @@
               "$": "bool"
             },
             "name": {
+              "$": "quickFilterMode"
+            },
+            "anchorfile": {
+              "$": "classKCoreDirLister.html"
+            },
+            "anchor": {
+              "$": "af7f181a93c2ebcd17e7817b78348c1da"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
               "$": "requestMimeTypeWhileListing"
             },
             "anchorfile": {
@@ -6024,6 +6041,24 @@
             },
             "arglist": {
               "$": "(const QString &filter)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setQuickFilterMode"
+            },
+            "anchorfile": {
+              "$": "classKCoreDirLister.html"
+            },
+            "anchor": {
+              "$": "ab448b8e660087957856ab020fc6f057b"
+            },
+            "arglist": {
+              "$": "(bool quickFilterMode)"
             }
           },
           {
@@ -8171,10 +8206,10 @@
               "$": "classKDirOperator.html"
             },
             "anchor": {
-              "$": "a8eb282f43ea343d855181abd2a799bee"
+              "$": "a68fd63e4c733df094c3e455e90a5bad6"
             },
             "arglist": {
-              "$": "(const KFileItem &item)"
+              "$": "(const KFileItem &item, bool isKeyNavigation)"
             }
           },
           {
@@ -10271,9 +10306,8 @@
           {
             "@kind": "function",
             "@protection": "protected",
-            "@virtualness": "virtual",
             "type": {
-              "$": "virtual bool"
+              "$": "bool"
             },
             "name": {
               "$": "subSortLessThan"
@@ -11032,6 +11066,24 @@
             },
             "arglist": {
               "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "operator=="
+            },
+            "anchorfile": {
+              "$": "classKFileFilter.html"
+            },
+            "anchor": {
+              "$": "ace508750abba13d9d81d197e75f9ff7b"
+            },
+            "arglist": {
+              "$": "(const KFileFilter &other) const"
             }
           },
           {
@@ -13417,6 +13469,24 @@
           {
             "@kind": "function",
             "type": {
+              "$": "QRect"
+            },
+            "name": {
+              "$": "selectionEmblemRect"
+            },
+            "anchorfile": {
+              "$": "classKFileItemDelegate.html"
+            },
+            "anchor": {
+              "$": "a49c59e635be44971633cb881f269e67f"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "void"
             },
             "name": {
@@ -13484,6 +13554,24 @@
             },
             "arglist": {
               "$": "(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSelectionEmblemRect"
+            },
+            "anchorfile": {
+              "$": "classKFileItemDelegate.html"
+            },
+            "anchor": {
+              "$": "a364cf134a93ad16e731a010fa4a81708"
+            },
+            "arglist": {
+              "$": "(QRect rect, int iconSize)"
             }
           },
           {
@@ -17601,6 +17689,42 @@
               "$": "void"
             },
             "name": {
+              "$": "directoryCreationRejected"
+            },
+            "anchorfile": {
+              "$": "classKNewFileMenu.html"
+            },
+            "anchor": {
+              "$": "a986ea0747fd0ac9f868a02f2b0b00e7c"
+            },
+            "arglist": {
+              "$": "(const QUrl &url)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "directoryCreationStarted"
+            },
+            "anchorfile": {
+              "$": "classKNewFileMenu.html"
+            },
+            "anchor": {
+              "$": "a52446190685060c242bde7d7eaa217c8"
+            },
+            "arglist": {
+              "$": "(const QUrl &url)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "fileCreated"
             },
             "anchorfile": {
@@ -17608,6 +17732,42 @@
             },
             "anchor": {
               "$": "ae5f9b41aae0fba5849918674d11aa27a"
+            },
+            "arglist": {
+              "$": "(const QUrl &url)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "fileCreationRejected"
+            },
+            "anchorfile": {
+              "$": "classKNewFileMenu.html"
+            },
+            "anchor": {
+              "$": "a9fb2d79bfbcd9537bb2aa8658aefcc7c"
+            },
+            "arglist": {
+              "$": "(const QUrl &url)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "fileCreationStarted"
+            },
+            "anchorfile": {
+              "$": "classKNewFileMenu.html"
+            },
+            "anchor": {
+              "$": "af5f3116271234e95aac5538caf0c62cb"
             },
             "arglist": {
               "$": "(const QUrl &url)"
@@ -17715,6 +17875,42 @@
             },
             "arglist": {
               "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isCreateDirectoryRunning"
+            },
+            "anchorfile": {
+              "$": "classKNewFileMenu.html"
+            },
+            "anchor": {
+              "$": "a5b41afa271972945507626211bf1f879"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isCreateFileRunning"
+            },
+            "anchorfile": {
+              "$": "classKNewFileMenu.html"
+            },
+            "anchor": {
+              "$": "aa2e87229bf589b645c1917e5555ff2d6"
+            },
+            "arglist": {
+              "$": "()"
             }
           },
           {
@@ -17841,6 +18037,24 @@
             },
             "arglist": {
               "$": "(const QStringList &mime)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setWindowTitle"
+            },
+            "anchorfile": {
+              "$": "classKNewFileMenu.html"
+            },
+            "anchor": {
+              "$": "ab338dd9f3282f9437988182c1eb37ae7"
+            },
+            "arglist": {
+              "$": "(const QString &title)"
             }
           },
           {
@@ -20395,6 +20609,63 @@
             },
             "arglist": {
               "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static void"
+            },
+            "name": {
+              "$": "removeApplication"
+            },
+            "anchorfile": {
+              "$": "classKRecentDocument.html"
+            },
+            "anchor": {
+              "$": "a971da3da4e8d7ae565d720d77deebd6e"
+            },
+            "arglist": {
+              "$": "(const QString &desktopEntryName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static void"
+            },
+            "name": {
+              "$": "removeBookmarksModifiedSince"
+            },
+            "anchorfile": {
+              "$": "classKRecentDocument.html"
+            },
+            "anchor": {
+              "$": "a4252d96b0203bb568e832c4f87bdc71a"
+            },
+            "arglist": {
+              "$": "(const QDateTime &since)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static void"
+            },
+            "name": {
+              "$": "removeFile"
+            },
+            "anchorfile": {
+              "$": "classKRecentDocument.html"
+            },
+            "anchor": {
+              "$": "af658019f306a1f3b23b143d721e65d80"
+            },
+            "arglist": {
+              "$": "(const QUrl &url)"
             }
           }
         ]
@@ -23611,6 +23882,24 @@
               "$": "void"
             },
             "name": {
+              "$": "layoutChanged"
+            },
+            "anchorfile": {
+              "$": "classKUrlNavigator.html"
+            },
+            "anchor": {
+              "$": "a58e12523d53e0ee2f7f420a1ae99ccc5"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "newWindowRequested"
             },
             "anchorfile": {
@@ -23805,6 +24094,24 @@
               "$": "QWidget *"
             },
             "name": {
+              "$": "badgeWidget"
+            },
+            "anchorfile": {
+              "$": "classKUrlNavigator.html"
+            },
+            "anchor": {
+              "$": "a88e123a20bf342e0ada76cd4a1df53c8"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QWidget *"
+            },
+            "name": {
               "$": "dropWidget"
             },
             "anchorfile": {
@@ -23967,6 +24274,24 @@
               "$": "bool"
             },
             "name": {
+              "$": "isBackgroundEnabled"
+            },
+            "anchorfile": {
+              "$": "classKUrlNavigator.html"
+            },
+            "anchor": {
+              "$": "aa2ef20609c67b0d8ed453540dcf4719e"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
               "$": "isPlacesSelectorVisible"
             },
             "anchorfile": {
@@ -24067,6 +24392,42 @@
             },
             "arglist": {
               "$": "(bool active)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setBackgroundEnabled"
+            },
+            "anchorfile": {
+              "$": "classKUrlNavigator.html"
+            },
+            "anchor": {
+              "$": "a9a8b9d6a67b9d25072fc22b72e87a7de"
+            },
+            "arglist": {
+              "$": "(bool enabled)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setBadgeWidget"
+            },
+            "anchorfile": {
+              "$": "classKUrlNavigator.html"
+            },
+            "anchor": {
+              "$": "a0fffacd60d617ca7a5fbb5ab426e68e6"
+            },
+            "arglist": {
+              "$": "(QWidget *widget)"
             }
           },
           {
@@ -26302,6 +26663,24 @@
           },
           {
             "@kind": "function",
+            "type": {
+              "$": "QUrl"
+            },
+            "name": {
+              "$": "url"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1OpenUrlJob.html"
+            },
+            "anchor": {
+              "$": "aaaf8592244ce62c5478169345623aaed"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
             "@static": "yes",
             "type": {
               "$": "static bool"
@@ -27974,24 +28353,6 @@
               "$": "void"
             },
             "name": {
-              "$": "errorPage"
-            },
-            "anchorfile": {
-              "$": "classKIO_1_1SlaveBase.html"
-            },
-            "anchor": {
-              "$": "a41a60ea8659c176dd0f48f704a4a191c"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "void"
-            },
-            "name": {
               "$": "exit"
             },
             "anchorfile": {
@@ -29231,10 +29592,10 @@
               "$": "classKIO_1_1StatJob.html"
             },
             "anchor": {
-              "$": "a97fc6f69ecdcbaa3a698b580909e1963"
+              "$": "a8199e16a7cd1d7137755bdf6e6121b82"
             },
             "arglist": {
-              "$": "(const QUrl &url, JobFlags flags)"
+              "$": "(const QUrl &url, JobFlags flags=DefaultFlags)"
             }
           }
         ]
@@ -29319,6 +29680,123 @@
             "$": "(const ThumbnailRequest &request)=0"
           }
         }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KIO::ThumbnailRequest"
+        },
+        "filename": {
+          "$": "classKIO_1_1ThumbnailRequest.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "ThumbnailRequest"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ThumbnailRequest.html"
+            },
+            "anchor": {
+              "$": "a19e762826dadfdee428b7ff563b355d5"
+            },
+            "arglist": {
+              "$": "(const QUrl &url, const QSize &targetSize, const QString &mimeType, qreal dpr, float sequenceIndex)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "qreal"
+            },
+            "name": {
+              "$": "devicePixelRatio"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ThumbnailRequest.html"
+            },
+            "anchor": {
+              "$": "ac9e69d3dd6028343112d0ffdff3e9993"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "mimeType"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ThumbnailRequest.html"
+            },
+            "anchor": {
+              "$": "a4e603a763f7b1f0d540efa64e135df6f"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "float"
+            },
+            "name": {
+              "$": "sequenceIndex"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ThumbnailRequest.html"
+            },
+            "anchor": {
+              "$": "afe9a767bbd620c587366e44b3f84b8b1"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QSize"
+            },
+            "name": {
+              "$": "targetSize"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ThumbnailRequest.html"
+            },
+            "anchor": {
+              "$": "a88ca4ac86fba30e91097fdbc7ef01bea"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QUrl"
+            },
+            "name": {
+              "$": "url"
+            },
+            "anchorfile": {
+              "$": "classKIO_1_1ThumbnailRequest.html"
+            },
+            "anchor": {
+              "$": "afa8f0dd7a41821d496ae43e463f5c08a"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          }
+        ]
       },
       {
         "@kind": "class",
@@ -33388,6 +33866,10 @@
           },
           {
             "@kind": "class",
+            "$": "KIO::ThumbnailRequest"
+          },
+          {
+            "@kind": "class",
             "$": "KIO::ThumbnailResult"
           },
           {
@@ -33624,6 +34106,33 @@
             },
             "anchor": {
               "$": "ab5bfb111419deab71b65dce326c73dfaac9b9eefd414118d7af567b642a8ebf5e"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "DndBehavior"
+            },
+            "anchorfile": {
+              "$": "namespaceKIO.html"
+            },
+            "anchor": {
+              "$": "ac8a436664a09dd044c2a98e5802efab6"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MoveIfSameDevice"
+            },
+            "anchorfile": {
+              "$": "namespaceKIO.html"
+            },
+            "anchor": {
+              "$": "ac8a436664a09dd044c2a98e5802efab6adc1037789d300e8f434fd772b46c2b6d"
             },
             "arglist": {}
           },
@@ -35567,6 +36076,42 @@
           {
             "@kind": "function",
             "type": {
+              "$": "KIOCORE_EXPORT bool"
+            },
+            "name": {
+              "$": "operator!="
+            },
+            "anchorfile": {
+              "$": "namespaceKIO.html"
+            },
+            "anchor": {
+              "$": "a32943ba7ce3690214eef22d690cb628f"
+            },
+            "arglist": {
+              "$": "(const UDSEntry &entry, const UDSEntry &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "KIOCORE_EXPORT bool"
+            },
+            "name": {
+              "$": "operator=="
+            },
+            "anchorfile": {
+              "$": "namespaceKIO.html"
+            },
+            "anchor": {
+              "$": "a33524f716bfd7da3a62db30791338eb5"
+            },
+            "arglist": {
+              "$": "(const UDSEntry &entry, const UDSEntry &other)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
               "$": "KIOCORE_EXPORT KIO::CacheControl"
             },
             "name": {
@@ -36335,7 +36880,7 @@
           "$": "index"
         },
         "title": {
-          "$": "KIO"
+          "$": "File Selection Widgets"
         },
         "filename": {
           "$": "index.html"
@@ -36351,16 +36896,11 @@
         "docanchor": [
           {
             "@file": "index.html",
-            "@title": "KIO",
-            "$": "md__2builds_2websites_2api-kde-org_2sources_2kio_2README"
-          },
-          {
-            "@file": "/builds/websites/api-kde-org/sources/kio/src/filewidgets/Mainpage.dox",
             "@title": "Purpose",
             "$": "purpose"
           },
           {
-            "@file": "/builds/websites/api-kde-org/sources/kio/src/filewidgets/Mainpage.dox",
+            "@file": "index.html",
             "@title": "Description",
             "$": "desc"
           }

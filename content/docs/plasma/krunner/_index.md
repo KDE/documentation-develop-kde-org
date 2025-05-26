@@ -14,7 +14,7 @@ This functionality is provided via plugins loaded at runtime called "Runners". T
 ##  Basic Anatomy of a Runner 
 
 
-[Plasma::AbstractRunner](docs:krunner;AbstractRunner)
+[KRunner::AbstractRunner](docs:krunner;AbstractRunner)
 is the base class of all Runners. It provides the basic structure for Runner plugins to:
 
 * Perform one-time setup upon creation
@@ -24,11 +24,11 @@ is the base class of all Runners. It provides the basic structure for Runner plu
 * Take action on a given match registered by the runner
 * Show configuration options
 
-In addition to [Plasma::AbstractRunner](docs:krunner;AbstractRunner) there are three other important classes from the Plasma library that we will be using: 
+In addition to [KRunner::AbstractRunner](docs:krunner;AbstractRunner) there are three other important classes from the Plasma library that we will be using: 
 
-* [Plasma::RunnerContext](docs:krunner;RunnerContext) which gives our plugin information about the current query
-* [Plasma::QueryMatch](docs:krunner;QueryMatch) which represents a single match for a given query
-* [Plasma::RunnerSyntax](docs:krunner;RunnerSyntax) which is used to advertise the query syntax understood by the plugin
+* [KRunner::RunnerContext](docs:krunner;RunnerContext) which gives our plugin information about the current query
+* [KRunner::QueryMatch](docs:krunner;QueryMatch) which represents a single match for a given query
+* [KRunner::RunnerSyntax](docs:krunner;RunnerSyntax) which is used to advertise the query syntax understood by the plugin
 
 Each of these classes will be covered in more detail as we encounter them in the Runner plugin implementation.
 
@@ -131,9 +131,9 @@ The primary purpose of a Runner plugin is to return potential matches for a give
 
 For each letter typed, the plugin's `match()` method gets called in a new thread. This ensures the user interface remains fluid. Old `match()` method calls can run to their completion even when ignored.
 
-Whenever a Runner is asked to perform a match, the `match(Plasma::RunnerContext &context)` method is called. This method **must** be thread safe as it can be called simultaneously from different threads. Ensure that all data used is read only (and thread safe when reading), local to the match method, or protected by a mutex.
+Whenever a Runner is asked to perform a match, the `match(KRunner::RunnerContext &context)` method is called. This method **must** be thread safe as it can be called simultaneously from different threads. Ensure that all data used is read only (and thread safe when reading), local to the match method, or protected by a mutex.
 
-The [Plasma::RunnerContext](docs:krunner;RunnerContext) passed into match offers all the information we'll need about the query being made. The [Plasma::RunnerContext](docs:krunner;RunnerContext) will also take care of accepting matches our Runner generates and collating them with the matches produced by other Runners that may also be in use.
+The [KRunner::RunnerContext](docs:krunner;RunnerContext) passed into match offers all the information we'll need about the query being made. The [KRunner::RunnerContext](docs:krunner;RunnerContext) will also take care of accepting matches our Runner generates and collating them with the matches produced by other Runners that may also be in use.
 
 Let's examine the match method in our example Runner, line by line:
 
@@ -152,7 +152,7 @@ A third technique is to modify the query (or even accept it) based on a minimal 
 Next, a `QDir` object is created. According to the Qt documentation, `QDir` is reentrant but not thread safe. Because of this it is safe to use a `QDir` object in a thread, but not to share one between different threads. So we are forced to create a local object to use in the match method. If `QDir` was thread safe, we could create one in the slot connected to the `prepare` signal, for instance, and potentially gain some extra efficiency.
 
 ```cpp
-    QList<Plasma::QueryMatch> matches;
+    QList<KRunner::QueryMatch> matches;
 ```
 
 Next, a list is defined to hold the matches the Runner creates. This will allow the matches to be queued up and then added all at once at the end. This is slightly more efficient than the alternative of adding matches one at a time as they are created.
@@ -169,10 +169,10 @@ Now to the heart of the matter! We ask the `QDir` object for a list of files in 
 
 Since the query may change while the Runner is processing in another thread, the user may no longer care about the results the Runner in this thread is currently generating. In this case, the context object we received will be marked as invalid. By checking this, particularly before doing expensive processing or spinning in a potentially large loop, the Runner can avoid using more CPU and thread pool time than necessary. This makes the user interface feel snappier.
 
-Next, we create a [Plasma::QueryMatch](docs:krunner;QueryMatch) object and add it to our list of matches:
+Next, we create a [KRunner::QueryMatch](docs:krunner;QueryMatch) object and add it to our list of matches:
 {{< readfile file="/content/docs/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start=85 lines=16 >}}
 
-[Plasma::QueryMatch](docs:krunner;QueryMatch) objects are small data containers, little more than glorified structs really. As such, they are generally created on the stack, are thread safe, and can be copied and assigned without worry.
+[KRunner::QueryMatch](docs:krunner;QueryMatch) objects are small data containers, little more than glorified structs really. As such, they are generally created on the stack, are thread safe, and can be copied and assigned without worry.
 
 We set several of the properties on the match, including the text and icon that will be shown in the user interface. The ID that is set is specific to our Runner and can be used for later saving, ranking and even re-creation of the match. The data associated with the match is also specific to the Runner; any `QVariant` may be associated with the match, making later execution of the match easier. 
 
@@ -191,7 +191,7 @@ That's it! The Runner does not need to worry if the matches are still valid for 
 ##  "Running" a Match 
 
 
-If a match is selected by the user and it is not a `Plasma::QueryMatch::InformationalMatch`, the Runner is once again called into action and the `run()` method is invoked. This method does not need to be thread safe, so we can code with a bit more ease here. Our example Runner has this for its implementation:
+If a match is selected by the user and it is not a `KRunner::QueryMatch::InformationalMatch`, the Runner is once again called into action and the `run()` method is invoked. This method does not need to be thread safe, so we can code with a bit more ease here. Our example Runner has this for its implementation:
 
 {{< readfile file="/content/docs/plasma/krunner/homefilesrunner/homefilesrunner.cpp" highlight="cpp" start=104 lines=8 >}}
 
@@ -217,12 +217,12 @@ Both the trigger word and the path of the directory to look in are read from the
 
 Note that if there was a trigger word provided by default, it should be marked for translation with `i18nc("Note this is a KRunner keyword", "trigger")`. This will both ensure that translators know how to translate it properly (thanks to the comment) and that users will be able to use the runner in their own language.
 
-What you may also notice in the above code snippet is the use of a new class: [Plasma::RunnerSyntax](docs:krunner;RunnerSyntax).
+What you may also notice in the above code snippet is the use of a new class: [KRunner::RunnerSyntax](docs:krunner;RunnerSyntax).
 
 ### Publishing Recognized Syntax 
 
 
-Runners may advertise what sorts of queries they understand by creating [Plasma::RunnerSyntax](docs:krunner;RunnerSyntax). objects. This information can be requested by the user as a form of run-time documentation and may even be used by some applications to decide which Runners to launch or not. Therefore, while creating [Plasma::RunnerSyntax](docs:krunner;RunnerSyntax) objects is optional, it is also highly recommended.
+Runners may advertise what sorts of queries they understand by creating [KRunner::RunnerSyntax](docs:krunner;RunnerSyntax). objects. This information can be requested by the user as a form of run-time documentation and may even be used by some applications to decide which Runners to launch or not. Therefore, while creating [KRunner::RunnerSyntax](docs:krunner;RunnerSyntax) objects is optional, it is also highly recommended.
 
 Let's examine the code in `HomeFilesRunner::reloadConfiguration()` concerning syntax definition a bit closer:
 
@@ -234,7 +234,7 @@ The syntax object is created in lines 2-3 with the first parameter being an exam
 
 One special string in both the query example and the explanatory text is ":q:". This stands for "the variable query text entered by the user" and will be replaced in the user interface with something more meaningful when shown as documentation or as a delimiter to look for when analyzing Runner appropriateness.
 
-If a Runner understands multiple query formulations that result in the same matches being generated (or "query synonyms"), these synonymous queries can be added to the syntax object using [Plasma::RunnerSyntax::addExampleQuery](docs:krunner;Plasma::RunnerSyntax::addExampleQuery).
+If a Runner understands multiple query formulations that result in the same matches being generated (or "query synonyms"), these synonymous queries can be added to the syntax object using [KRunner::RunnerSyntax::addExampleQuery](docs:krunner;KRunner::RunnerSyntax::addExampleQuery).
 
 ### Runner Configuration
 
@@ -266,7 +266,7 @@ This KCM can be launched from the KRunner configuration page or the Help Runner 
 ## Single Runner Mode
 
 
-For some Runners, it can make sense to support being the only Runner being used. Usually an application will use multiple runners at once via `Plasma::RunnerManager`, but it can also use just one runner or put `Plasma::RunnerManager` into a special "single runner" mode.
+For some Runners, it can make sense to support being the only Runner being used. Usually an application will use multiple runners at once via `KRunner::RunnerManager`, but it can also use just one runner or put `KRunner::RunnerManager` into a special "single runner" mode.
 This feature is currently only exposed using the DBus interface. A common usecase is to bind a keyboard shortcut to a Runner. See https://github.com/alex1701c/EmojiRunner/blob/master/EmojiRunnerCommands.khotkeys#L26 for an example.
 
-A Runner can, if desired, detect when it is being used as the sole Runner by calling [Plasma::RunnerContext::singleRunnerQueryMode](docs:krunner;RunnerContext::singleRunnerQueryMode) on the context object passed into the match method. If the return value is `true`, then the Runner may decide to alter its behavior (like not requiring a trigger word).
+A Runner can, if desired, detect when it is being used as the sole Runner by calling [KRunner::RunnerContext::singleRunnerQueryMode](docs:krunner;RunnerContext::singleRunnerQueryMode) on the context object passed into the match method. If the return value is `true`, then the Runner may decide to alter its behavior (like not requiring a trigger word).

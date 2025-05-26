@@ -119,27 +119,6 @@
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "ObjectOwnership"
-            },
-            "name": {
-              "$": "objectOwnership"
-            },
-            "anchorfile": {
-              "$": "qjsengine.html"
-            },
-            "anchor": {
-              "$": "objectOwnership"
-            },
-            "arglist": {
-              "$": "(QObject *object)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
             "@static": "no",
             "type": {
               "$": "QJSEngine *"
@@ -193,6 +172,27 @@
             },
             "arglist": {
               "$": "(QObject *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QJSEngine::ObjectOwnership"
+            },
+            "name": {
+              "$": "objectOwnership"
+            },
+            "anchorfile": {
+              "$": "qjsengine.html"
+            },
+            "anchor": {
+              "$": "objectOwnership"
+            },
+            "arglist": {
+              "$": "(QObject *object)"
             }
           },
           {
@@ -378,7 +378,7 @@
               "$": "qjsengine.html"
             },
             "anchor": {
-              "$": "newQMetaObject-1"
+              "$": "newQMetaObject"
             },
             "arglist": {
               "$": "()"
@@ -399,7 +399,7 @@
               "$": "qjsengine.html"
             },
             "anchor": {
-              "$": "newQMetaObject"
+              "$": "newQMetaObject-1"
             },
             "arglist": {
               "$": "(const QMetaObject *metaObject)"
@@ -633,7 +633,7 @@
               "$": "installExtensions"
             },
             "arglist": {
-              "$": "(Extensions extensions, const QJSValue &object)"
+              "$": "(QJSEngine::Extensions extensions, const QJSValue &object)"
             }
           },
           {
@@ -675,7 +675,7 @@
               "$": "setObjectOwnership"
             },
             "arglist": {
-              "$": "(QObject *object, ObjectOwnership ownership)"
+              "$": "(QObject *object, QJSEngine::ObjectOwnership ownership)"
             }
           },
           {
@@ -714,7 +714,7 @@
               "$": "qjsengine.html"
             },
             "anchor": {
-              "$": "throwError-1"
+              "$": "throwError-2"
             },
             "arglist": {
               "$": "(QJSValue::ErrorType errorType, const QString &message)"
@@ -735,7 +735,7 @@
               "$": "qjsengine.html"
             },
             "anchor": {
-              "$": "throwError-2"
+              "$": "throwError-1"
             },
             "arglist": {
               "$": "(const QJSValue &error)"
@@ -1045,7 +1045,7 @@
               "$": "qjsmanagedvalue.html"
             },
             "anchor": {
-              "$": "operator-eq-1"
+              "$": "operator-eq"
             },
             "arglist": {
               "$": "(QJSManagedValue &&other)"
@@ -1064,7 +1064,7 @@
               "$": "qjsmanagedvalue.html"
             },
             "anchor": {
-              "$": "QJSManagedValue-1"
+              "$": "QJSManagedValue"
             },
             "arglist": {
               "$": "()"
@@ -1083,7 +1083,7 @@
               "$": "qjsmanagedvalue.html"
             },
             "anchor": {
-              "$": "QJSManagedValue-6"
+              "$": "QJSManagedValue-1"
             },
             "arglist": {
               "$": "(QJSManagedValue &&other)"
@@ -1140,7 +1140,7 @@
               "$": "qjsmanagedvalue.html"
             },
             "anchor": {
-              "$": "QJSManagedValue-5"
+              "$": "QJSManagedValue-4"
             },
             "arglist": {
               "$": "(const QString &string, QJSEngine *engine)"
@@ -1159,7 +1159,7 @@
               "$": "qjsmanagedvalue.html"
             },
             "anchor": {
-              "$": "QJSManagedValue-4"
+              "$": "QJSManagedValue-5"
             },
             "arglist": {
               "$": "(const QVariant &variant, QJSEngine *engine)"
@@ -1347,6 +1347,27 @@
             },
             "anchor": {
               "$": "prototype"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QJSManagedValue::Type"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "qjsmanagedvalue.html"
+            },
+            "anchor": {
+              "$": "type"
             },
             "arglist": {
               "$": "() const const"
@@ -1599,27 +1620,6 @@
             },
             "anchor": {
               "$": "toVariant"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "Type"
-            },
-            "name": {
-              "$": "type"
-            },
-            "anchorfile": {
-              "$": "qjsmanagedvalue.html"
-            },
-            "anchor": {
-              "$": "type"
             },
             "arglist": {
               "$": "() const const"
@@ -2408,7 +2408,7 @@
               "$": "qjsprimitivevalue.html"
             },
             "anchor": {
-              "$": "QJSPrimitiveValue-1"
+              "$": "QJSPrimitiveValue"
             },
             "arglist": {
               "$": "()"
@@ -2427,7 +2427,7 @@
               "$": "qjsprimitivevalue.html"
             },
             "anchor": {
-              "$": "QJSPrimitiveValue-3"
+              "$": "QJSPrimitiveValue-1"
             },
             "arglist": {
               "$": "(QJSPrimitiveNull null)"
@@ -2465,7 +2465,7 @@
               "$": "qjsprimitivevalue.html"
             },
             "anchor": {
-              "$": "QJSPrimitiveValue-11"
+              "$": "QJSPrimitiveValue-8"
             },
             "arglist": {
               "$": "(QMetaType type, const void *value)"
@@ -2484,7 +2484,7 @@
               "$": "qjsprimitivevalue.html"
             },
             "anchor": {
-              "$": "QJSPrimitiveValue-7"
+              "$": "QJSPrimitiveValue-3"
             },
             "arglist": {
               "$": "(QString value)"
@@ -2522,7 +2522,7 @@
               "$": "qjsprimitivevalue.html"
             },
             "anchor": {
-              "$": "QJSPrimitiveValue-10"
+              "$": "QJSPrimitiveValue-5"
             },
             "arglist": {
               "$": "(const QVariant &value)"
@@ -2560,7 +2560,7 @@
               "$": "qjsprimitivevalue.html"
             },
             "anchor": {
-              "$": "QJSPrimitiveValue-5"
+              "$": "QJSPrimitiveValue-7"
             },
             "arglist": {
               "$": "(int value)"
@@ -2740,6 +2740,27 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QJSPrimitiveValue::Type"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "qjsprimitivevalue.html"
+            },
+            "anchor": {
+              "$": "type"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "QMetaType"
             },
             "name": {
@@ -2771,27 +2792,6 @@
             },
             "anchor": {
               "$": "toString"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "Type"
-            },
-            "name": {
-              "$": "type"
-            },
-            "anchorfile": {
-              "$": "qjsprimitivevalue.html"
-            },
-            "anchor": {
-              "$": "type"
             },
             "arglist": {
               "$": "() const const"
@@ -3202,7 +3202,7 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue-2"
+              "$": "QJSValue"
             },
             "arglist": {
               "$": "(QJSValue &&other)"
@@ -3221,10 +3221,10 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue"
+              "$": "QJSValue-1"
             },
             "arglist": {
-              "$": "(SpecialValue value)"
+              "$": "(QJSValue::SpecialValue value)"
             }
           },
           {
@@ -3240,7 +3240,7 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue-3"
+              "$": "QJSValue-2"
             },
             "arglist": {
               "$": "(bool value)"
@@ -3259,7 +3259,7 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue-1"
+              "$": "QJSValue-3"
             },
             "arglist": {
               "$": "(const QJSValue &other)"
@@ -3278,7 +3278,7 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue-8"
+              "$": "QJSValue-4"
             },
             "arglist": {
               "$": "(const QLatin1String &value)"
@@ -3297,7 +3297,7 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue-7"
+              "$": "QJSValue-5"
             },
             "arglist": {
               "$": "(const QString &value)"
@@ -3316,7 +3316,7 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue-9"
+              "$": "QJSValue-6"
             },
             "arglist": {
               "$": "(const char *value)"
@@ -3335,7 +3335,7 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue-6"
+              "$": "QJSValue-7"
             },
             "arglist": {
               "$": "(double value)"
@@ -3354,7 +3354,7 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue-4"
+              "$": "QJSValue-8"
             },
             "arglist": {
               "$": "(int value)"
@@ -3373,7 +3373,7 @@
               "$": "qjsvalue.html"
             },
             "anchor": {
-              "$": "QJSValue-5"
+              "$": "QJSValue-9"
             },
             "arglist": {
               "$": "(uint value)"
@@ -3480,27 +3480,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "ErrorType"
-            },
-            "name": {
-              "$": "errorType"
-            },
-            "anchorfile": {
-              "$": "qjsvalue.html"
-            },
-            "anchor": {
-              "$": "errorType"
-            },
-            "arglist": {
-              "$": "() const const"
             }
           },
           {
@@ -3677,6 +3656,27 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QJSValue::ErrorType"
+            },
+            "name": {
+              "$": "errorType"
+            },
+            "anchorfile": {
+              "$": "qjsvalue.html"
+            },
+            "anchor": {
+              "$": "errorType"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "QObject *"
             },
             "name": {
@@ -3752,7 +3752,7 @@
               "$": "toVariant"
             },
             "arglist": {
-              "$": "(ObjectConversionBehavior behavior) const const"
+              "$": "(QJSValue::ObjectConversionBehavior behavior) const const"
             }
           },
           {
@@ -4124,7 +4124,7 @@
               "$": "isVariant"
             },
             "anchorfile": {
-              "$": "qjsvalue.html"
+              "$": "qjsvalue-obsolete.html"
             },
             "anchor": {
               "$": "isVariant"
@@ -4539,7 +4539,7 @@
               "$": "intercept"
             },
             "arglist": {
-              "$": "(const QUrl &url, DataType type) = 0"
+              "$": "(const QUrl &url, QQmlAbstractUrlInterceptor::DataType type) = 0"
             }
           },
           {
@@ -4590,7 +4590,7 @@
               "$": "qqmlapplicationengine.html"
             },
             "anchor": {
-              "$": "QQmlApplicationEngine-2"
+              "$": "QQmlApplicationEngine-3"
             },
             "arglist": {
               "$": "(QAnyStringView uri, QAnyStringView typeName, QObject *parent)"
@@ -4628,7 +4628,7 @@
               "$": "qqmlapplicationengine.html"
             },
             "anchor": {
-              "$": "QQmlApplicationEngine-3"
+              "$": "QQmlApplicationEngine-1"
             },
             "arglist": {
               "$": "(const QString &filePath, QObject *parent)"
@@ -4647,7 +4647,7 @@
               "$": "qqmlapplicationengine.html"
             },
             "anchor": {
-              "$": "QQmlApplicationEngine-1"
+              "$": "QQmlApplicationEngine-2"
             },
             "arglist": {
               "$": "(const QUrl &url, QObject *parent)"
@@ -4668,7 +4668,7 @@
               "$": "qqmlapplicationengine.html"
             },
             "anchor": {
-              "$": "load-1"
+              "$": "load"
             },
             "arglist": {
               "$": "(const QString &filePath)"
@@ -4689,7 +4689,7 @@
               "$": "qqmlapplicationengine.html"
             },
             "anchor": {
-              "$": "load"
+              "$": "load-1"
             },
             "arglist": {
               "$": "(const QUrl &url)"
@@ -5055,25 +5055,6 @@
               "$": "qqmlcomponent.html"
             },
             "anchor": {
-              "$": "QQmlComponent-7"
-            },
-            "arglist": {
-              "$": "(QQmlEngine *engine, QAnyStringView uri, QAnyStringView typeName, CompilationMode mode, QObject *parent)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QQmlComponent"
-            },
-            "anchorfile": {
-              "$": "qqmlcomponent.html"
-            },
-            "anchor": {
               "$": "QQmlComponent-6"
             },
             "arglist": {
@@ -5093,7 +5074,26 @@
               "$": "qqmlcomponent.html"
             },
             "anchor": {
-              "$": "QQmlComponent-1"
+              "$": "QQmlComponent-7"
+            },
+            "arglist": {
+              "$": "(QQmlEngine *engine, QAnyStringView uri, QAnyStringView typeName, QQmlComponent::CompilationMode mode, QObject *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QQmlComponent"
+            },
+            "anchorfile": {
+              "$": "qqmlcomponent.html"
+            },
+            "anchor": {
+              "$": "QQmlComponent"
             },
             "arglist": {
               "$": "(QQmlEngine *engine, QObject *parent)"
@@ -5112,26 +5112,7 @@
               "$": "qqmlcomponent.html"
             },
             "anchor": {
-              "$": "QQmlComponent-3"
-            },
-            "arglist": {
-              "$": "(QQmlEngine *engine, const QString &fileName, CompilationMode mode, QObject *parent)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QQmlComponent"
-            },
-            "anchorfile": {
-              "$": "qqmlcomponent.html"
-            },
-            "anchor": {
-              "$": "QQmlComponent-2"
+              "$": "QQmlComponent-1"
             },
             "arglist": {
               "$": "(QQmlEngine *engine, const QString &fileName, QObject *parent)"
@@ -5150,10 +5131,29 @@
               "$": "qqmlcomponent.html"
             },
             "anchor": {
-              "$": "QQmlComponent-5"
+              "$": "QQmlComponent-3"
             },
             "arglist": {
-              "$": "(QQmlEngine *engine, const QUrl &url, CompilationMode mode, QObject *parent)"
+              "$": "(QQmlEngine *engine, const QString &fileName, QQmlComponent::CompilationMode mode, QObject *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QQmlComponent"
+            },
+            "anchorfile": {
+              "$": "qqmlcomponent.html"
+            },
+            "anchor": {
+              "$": "QQmlComponent-2"
+            },
+            "arglist": {
+              "$": "(QQmlEngine *engine, const QUrl &url, QObject *parent)"
             }
           },
           {
@@ -5172,7 +5172,7 @@
               "$": "QQmlComponent-4"
             },
             "arglist": {
-              "$": "(QQmlEngine *engine, const QUrl &url, QObject *parent)"
+              "$": "(QQmlEngine *engine, const QUrl &url, QQmlComponent::CompilationMode mode, QObject *parent)"
             }
           },
           {
@@ -5277,7 +5277,7 @@
               "$": "loadUrl-1"
             },
             "arglist": {
-              "$": "(const QUrl &url, CompilationMode mode)"
+              "$": "(const QUrl &url, QQmlComponent::CompilationMode mode)"
             }
           },
           {
@@ -5340,7 +5340,7 @@
               "$": "setInitialProperties"
             },
             "arglist": {
-              "$": "(QObject *component, const QVariantMap &properties)"
+              "$": "(QObject *object, const QVariantMap &properties)"
             }
           },
           {
@@ -5412,6 +5412,27 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QQmlComponent::Status"
+            },
+            "name": {
+              "$": "status"
+            },
+            "anchorfile": {
+              "$": "qqmlcomponent.html"
+            },
+            "anchor": {
+              "$": "status-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "QQmlContext *"
             },
             "name": {
@@ -5464,27 +5485,6 @@
             },
             "anchor": {
               "$": "url-prop"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "Status"
-            },
-            "name": {
-              "$": "status"
-            },
-            "anchorfile": {
-              "$": "qqmlcomponent.html"
-            },
-            "anchor": {
-              "$": "status-prop"
             },
             "arglist": {
               "$": "() const const"
@@ -5688,7 +5688,7 @@
               "$": "qqmlcontext.html"
             },
             "anchor": {
-              "$": "QQmlContext-1"
+              "$": "QQmlContext"
             },
             "arglist": {
               "$": "(QQmlContext *parentContext, QObject *parent)"
@@ -5707,7 +5707,7 @@
               "$": "qqmlcontext.html"
             },
             "anchor": {
-              "$": "QQmlContext"
+              "$": "QQmlContext-1"
             },
             "arglist": {
               "$": "(QQmlEngine *engine, QObject *parent)"
@@ -5773,7 +5773,7 @@
               "$": "setContextProperties"
             },
             "arglist": {
-              "$": "(const QList<PropertyPair> &properties)"
+              "$": "(const QList<QQmlContext::PropertyPair> &properties)"
             }
           },
           {
@@ -6052,493 +6052,22 @@
         },
         "member": [
           {
-            "@kind": "enumeration",
-            "name": {
-              "$": "QQmlModuleImportSpecialVersions"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QQmlModuleImportSpecialVersions-enum"
-            }
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "QQmlModuleImportModuleAny"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QQmlModuleImportSpecialVersions-enum"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "QQmlModuleImportLatest"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QQmlModuleImportSpecialVersions-enum"
-            },
-            "arglist": {}
-          },
-          {
-            "@kind": "enumvalue",
-            "name": {
-              "$": "QQmlModuleImportAuto"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QQmlModuleImportSpecialVersions-enum"
-            },
-            "arglist": {}
-          },
-          {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
             "type": {},
             "name": {
-              "$": "QML_ADDED_IN_MINOR_VERSION"
-            },
-            "anchorfile": {
-              "$": "qqmlengine-obsolete.html"
-            },
-            "anchor": {
-              "$": "QML_ADDED_IN_MINOR_VERSION"
-            },
-            "arglist": {
-              "$": "(VERSION)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_ADDED_IN_VERSION"
+              "$": "QML_NAMESPACE_EXTENDED"
             },
             "anchorfile": {
               "$": "qqmlengine.html"
             },
             "anchor": {
-              "$": "QML_ADDED_IN_VERSION"
+              "$": "QML_NAMESPACE_EXTENDED"
             },
             "arglist": {
-              "$": "(MAJOR, MINOR)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_ANONYMOUS"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_ANONYMOUS"
-            },
-            "arglist": {
-              "$": "QML_ANONYMOUS"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_ATTACHED"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_ATTACHED"
-            },
-            "arglist": {
-              "$": "(ATTACHED_TYPE)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_DECLARE_TYPE"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_DECLARE_TYPE"
-            },
-            "arglist": {
-              "$": "QML_DECLARE_TYPE"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_DECLARE_TYPEINFO"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_DECLARE_TYPEINFO"
-            },
-            "arglist": {
-              "$": "(Type, Flags)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_ELEMENT"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_ELEMENT"
-            },
-            "arglist": {
-              "$": "QML_ELEMENT"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_EXTENDED"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_EXTENDED"
-            },
-            "arglist": {
-              "$": "(EXTENDED_TYPE)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_EXTENDED_NAMESPACE"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_EXTENDED_NAMESPACE"
-            },
-            "arglist": {
-              "$": "(EXTENDED_NAMESPACE)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_EXTRA_VERSION"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_EXTRA_VERSION"
-            },
-            "arglist": {
-              "$": "(MAJOR, MINOR)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_FOREIGN"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_FOREIGN"
-            },
-            "arglist": {
-              "$": "(FOREIGN_TYPE)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_FOREIGN_NAMESPACE"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_FOREIGN_NAMESPACE"
-            },
-            "arglist": {
-              "$": "(FOREIGN_NAMESPACE)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_IMPLEMENTS_INTERFACES"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_IMPLEMENTS_INTERFACES"
-            },
-            "arglist": {
-              "$": "(interfaces)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_INTERFACE"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_INTERFACE"
-            },
-            "arglist": {
-              "$": "QML_INTERFACE"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_NAMED_ELEMENT"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_NAMED_ELEMENT"
-            },
-            "arglist": {
-              "$": "(name)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_REMOVED_IN_MINOR_VERSION"
-            },
-            "anchorfile": {
-              "$": "qqmlengine-obsolete.html"
-            },
-            "anchor": {
-              "$": "QML_REMOVED_IN_MINOR_VERSION"
-            },
-            "arglist": {
-              "$": "(VERSION)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_REMOVED_IN_VERSION"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_REMOVED_IN_VERSION"
-            },
-            "arglist": {
-              "$": "(MAJOR, MINOR)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_SEQUENTIAL_CONTAINER"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_SEQUENTIAL_CONTAINER"
-            },
-            "arglist": {
-              "$": "(VALUE_TYPE)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_SINGLETON"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_SINGLETON"
-            },
-            "arglist": {
-              "$": "QML_SINGLETON"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_UNAVAILABLE"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_UNAVAILABLE"
-            },
-            "arglist": {
-              "$": "QML_UNAVAILABLE"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_UNCREATABLE"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_UNCREATABLE"
-            },
-            "arglist": {
-              "$": "(reason)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QML_VALUE_TYPE"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "QML_VALUE_TYPE"
-            },
-            "arglist": {
-              "$": "(name)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "QObject *"
-            },
-            "name": {
-              "$": "qmlAttachedPropertiesObject"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlAttachedPropertiesObject"
-            },
-            "arglist": {
-              "$": "(const QObject *attachee, bool create)"
+              "$": "(EXTENSION_NAMESPACE)"
             }
           },
           {
@@ -6705,342 +6234,6 @@
             },
             "arglist": {
               "$": "(const QString &filePath, const QString &uri, QList<QQmlError> *errors)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "bool"
-            },
-            "name": {
-              "$": "qmlProtectModule"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlProtectModule"
-            },
-            "arglist": {
-              "$": "(const char *uri, int majVersion)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterAnonymousType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterAnonymousType"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterExtendedType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterExtendedType"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *qmlName)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterExtendedUncreatableType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterExtendedUncreatableType"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *qmlName, const QString &reason)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterRevision"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterRevision"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterSingletonInstance"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterSingletonInstance"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *typeName, QObject *cppObject)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterSingletonType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterSingletonType-3"
-            },
-            "arglist": {
-              "$": "(const QUrl &url, const char *uri, int versionMajor, int versionMinor, const char *qmlName)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterSingletonType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterSingletonType"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *typeName, QJSValue (*)(QQmlEngine *, QJSEngine *) callback)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterSingletonType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterSingletonType-1"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *typeName, QObject *(*)(QQmlEngine *, QJSEngine *) callback)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterSingletonType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterSingletonType-2"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *typeName, std::function<QObject *(QQmlEngine *, QJSEngine *)> callback)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterType-1"
-            },
-            "arglist": {
-              "$": "(const QUrl &url, const char *uri, int versionMajor, int versionMinor, const char *qmlName)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterType"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *qmlName)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterTypeNotAvailable"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterTypeNotAvailable"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *qmlName, const QString &message)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterUncreatableMetaObject"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterUncreatableMetaObject"
-            },
-            "arglist": {
-              "$": "(const QMetaObject &staticMetaObject, const char *uri, int versionMajor, int versionMinor, const char *qmlName, const QString &reason)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlRegisterUncreatableType"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterUncreatableType"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *qmlName, const QString &message)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "int"
-            },
-            "name": {
-              "$": "qmlTypeId"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlTypeId"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor, const char *qmlName)"
             }
           },
           {
@@ -7230,90 +6423,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "qmlClearTypeRegistrations"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlClearTypeRegistrations"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "qmlRegisterModule"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterModule"
-            },
-            "arglist": {
-              "$": "(const char *uri, int versionMajor, int versionMinor)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "qmlRegisterModuleImport"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlRegisterModuleImport"
-            },
-            "arglist": {
-              "$": "(const char *uri, int moduleMajor, const char *import, int importMajor, int importMinor)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "qmlUnregisterModuleImport"
-            },
-            "anchorfile": {
-              "$": "qqmlengine.html"
-            },
-            "anchor": {
-              "$": "qmlUnregisterModuleImport"
-            },
-            "arglist": {
-              "$": "(const char *uri, int moduleMajor, const char *import, int importMajor, int importMinor)"
             }
           },
           {
@@ -7945,7 +7054,7 @@
               "$": "qqmlengineextensionplugin.html"
             },
             "anchor": {
-              "$": "QQmlEngineExtensionPlugin-2"
+              "$": "QQmlEngineExtensionPlugin"
             },
             "arglist": {
               "$": "(QObject *parent)"
@@ -8886,6 +7995,101 @@
       {
         "@kind": "class",
         "name": {
+          "$": "QQmlFile"
+        },
+        "filename": {
+          "$": "qqmlfile.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "urlToLocalFileOrQrc"
+            },
+            "anchorfile": {
+              "$": "qqmlfile.html"
+            },
+            "anchor": {
+              "$": "urlToLocalFileOrQrc"
+            },
+            "arglist": {
+              "$": "(const QString &url)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "urlToLocalFileOrQrc"
+            },
+            "anchorfile": {
+              "$": "qqmlfile.html"
+            },
+            "anchor": {
+              "$": "urlToLocalFileOrQrc-1"
+            },
+            "arglist": {
+              "$": "(const QUrl &url)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isLocalFile"
+            },
+            "anchorfile": {
+              "$": "qqmlfile.html"
+            },
+            "anchor": {
+              "$": "isLocalFile"
+            },
+            "arglist": {
+              "$": "(const QString &url)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isLocalFile"
+            },
+            "anchorfile": {
+              "$": "qqmlfile.html"
+            },
+            "anchor": {
+              "$": "isLocalFile-1"
+            },
+            "arglist": {
+              "$": "(const QUrl &url)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "QQmlFileSelector"
         },
         "filename": {
@@ -9141,7 +8345,7 @@
             "@virtualness": "pure",
             "@static": "no",
             "type": {
-              "$": "virtual Flags"
+              "$": "virtual QQmlImageProviderBase::Flags"
             },
             "name": {
               "$": "flags"
@@ -9162,7 +8366,7 @@
             "@virtualness": "pure",
             "@static": "no",
             "type": {
-              "$": "virtual ImageType"
+              "$": "virtual QQmlImageProviderBase::ImageType"
             },
             "name": {
               "$": "imageType"
@@ -9215,7 +8419,7 @@
               "$": "qqmlincubationcontroller.html"
             },
             "anchor": {
-              "$": "QQmlIncubationController-1"
+              "$": "QQmlIncubationController"
             },
             "arglist": {
               "$": "()"
@@ -9465,10 +8669,10 @@
               "$": "qqmlincubator.html"
             },
             "anchor": {
-              "$": "QQmlIncubator-1"
+              "$": "QQmlIncubator"
             },
             "arglist": {
-              "$": "(IncubationMode mode)"
+              "$": "(QQmlIncubator::IncubationMode mode)"
             }
           },
           {
@@ -9573,28 +8777,7 @@
               "$": "statusChanged"
             },
             "arglist": {
-              "$": "(Status status)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "IncubationMode"
-            },
-            "name": {
-              "$": "incubationMode"
-            },
-            "anchorfile": {
-              "$": "qqmlincubator.html"
-            },
-            "anchor": {
-              "$": "incubationMode"
-            },
-            "arglist": {
-              "$": "() const const"
+              "$": "(QQmlIncubator::Status status)"
             }
           },
           {
@@ -9645,7 +8828,28 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "Status"
+              "$": "QQmlIncubator::IncubationMode"
+            },
+            "name": {
+              "$": "incubationMode"
+            },
+            "anchorfile": {
+              "$": "qqmlincubator.html"
+            },
+            "anchor": {
+              "$": "incubationMode"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QQmlIncubator::Status"
             },
             "name": {
               "$": "status"
@@ -9902,7 +9106,7 @@
               "$": "qqmllistproperty-obsolete.html"
             },
             "anchor": {
-              "$": "QQmlListProperty-5"
+              "$": "QQmlListProperty"
             },
             "arglist": {
               "$": "(QObject *object, QList<T *> &list)"
@@ -9940,29 +9144,10 @@
               "$": "qqmllistproperty.html"
             },
             "anchor": {
-              "$": "QQmlListProperty-2"
-            },
-            "arglist": {
-              "$": "(QObject *object, void *data, AppendFunction append, CountFunction count, AtFunction at, ClearFunction clear)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "QQmlListProperty"
-            },
-            "anchorfile": {
-              "$": "qqmllistproperty.html"
-            },
-            "anchor": {
               "$": "QQmlListProperty-3"
             },
             "arglist": {
-              "$": "(QObject *object, void *data, AppendFunction append, CountFunction count, AtFunction at, ClearFunction clear, ReplaceFunction replace, RemoveLastFunction removeLast)"
+              "$": "(QObject *object, void *data, QQmlListProperty<T>::AppendFunction append, QQmlListProperty<T>::CountFunction count, QQmlListProperty<T>::AtFunction at, QQmlListProperty<T>::ClearFunction clear)"
             }
           },
           {
@@ -9981,7 +9166,26 @@
               "$": "QQmlListProperty-4"
             },
             "arglist": {
-              "$": "(QObject *object, void *data, CountFunction count, AtFunction at)"
+              "$": "(QObject *object, void *data, QQmlListProperty<T>::AppendFunction append, QQmlListProperty<T>::CountFunction count, QQmlListProperty<T>::AtFunction at, QQmlListProperty<T>::ClearFunction clear, QQmlListProperty<T>::ReplaceFunction replace, QQmlListProperty<T>::RemoveLastFunction removeLast)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QQmlListProperty"
+            },
+            "anchorfile": {
+              "$": "qqmllistproperty.html"
+            },
+            "anchor": {
+              "$": "QQmlListProperty-2"
+            },
+            "arglist": {
+              "$": "(QObject *object, void *data, QQmlListProperty<T>::CountFunction count, QQmlListProperty<T>::AtFunction at)"
             }
           },
           {
@@ -10132,7 +9336,7 @@
               "$": "qqmllistreference.html"
             },
             "anchor": {
-              "$": "QQmlListReference-4"
+              "$": "QQmlListReference-2"
             },
             "arglist": {
               "$": "(QObject *object, const char *property)"
@@ -10151,7 +9355,7 @@
               "$": "qqmllistreference-obsolete.html"
             },
             "anchor": {
-              "$": "QQmlListReference-2"
+              "$": "QQmlListReference-4"
             },
             "arglist": {
               "$": "(QObject *object, const char *property, QQmlEngine *engine)"
@@ -10170,7 +9374,7 @@
               "$": "qqmllistreference.html"
             },
             "anchor": {
-              "$": "QQmlListReference-3"
+              "$": "QQmlListReference-1"
             },
             "arglist": {
               "$": "(const QVariant &variant)"
@@ -10189,7 +9393,7 @@
               "$": "qqmllistreference-obsolete.html"
             },
             "anchor": {
-              "$": "QQmlListReference-1"
+              "$": "QQmlListReference-3"
             },
             "arglist": {
               "$": "(const QVariant &variant, QQmlEngine *engine)"
@@ -10898,7 +10102,7 @@
               "$": "qqmlproperty.html"
             },
             "anchor": {
-              "$": "QQmlProperty-2"
+              "$": "QQmlProperty-3"
             },
             "arglist": {
               "$": "(QObject *obj, QQmlContext *ctxt)"
@@ -10917,7 +10121,7 @@
               "$": "qqmlproperty.html"
             },
             "anchor": {
-              "$": "QQmlProperty-3"
+              "$": "QQmlProperty-4"
             },
             "arglist": {
               "$": "(QObject *obj, QQmlEngine *engine)"
@@ -10936,7 +10140,7 @@
               "$": "qqmlproperty.html"
             },
             "anchor": {
-              "$": "QQmlProperty-4"
+              "$": "QQmlProperty-5"
             },
             "arglist": {
               "$": "(QObject *obj, const QString &name)"
@@ -10955,7 +10159,7 @@
               "$": "qqmlproperty.html"
             },
             "anchor": {
-              "$": "QQmlProperty-5"
+              "$": "QQmlProperty-6"
             },
             "arglist": {
               "$": "(QObject *obj, const QString &name, QQmlContext *ctxt)"
@@ -10974,7 +10178,7 @@
               "$": "qqmlproperty.html"
             },
             "anchor": {
-              "$": "QQmlProperty-6"
+              "$": "QQmlProperty-7"
             },
             "arglist": {
               "$": "(QObject *obj, const QString &name, QQmlEngine *engine)"
@@ -10993,7 +10197,7 @@
               "$": "qqmlproperty.html"
             },
             "anchor": {
-              "$": "QQmlProperty-7"
+              "$": "QQmlProperty-2"
             },
             "arglist": {
               "$": "(const QQmlProperty &other)"
@@ -11131,27 +10335,6 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "PropertyTypeCategory"
-            },
-            "name": {
-              "$": "propertyTypeCategory"
-            },
-            "anchorfile": {
-              "$": "qqmlproperty.html"
-            },
-            "anchor": {
-              "$": "propertyTypeCategory"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
               "$": "QMetaMethod"
             },
             "name": {
@@ -11236,6 +10419,48 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QQmlProperty::PropertyTypeCategory"
+            },
+            "name": {
+              "$": "propertyTypeCategory"
+            },
+            "anchorfile": {
+              "$": "qqmlproperty.html"
+            },
+            "anchor": {
+              "$": "propertyTypeCategory"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QQmlProperty::Type"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "qqmlproperty.html"
+            },
+            "anchor": {
+              "$": "type"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "QString"
             },
             "name": {
@@ -11267,27 +10492,6 @@
             },
             "anchor": {
               "$": "read"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "Type"
-            },
-            "name": {
-              "$": "type"
-            },
-            "anchorfile": {
-              "$": "qqmlproperty.html"
-            },
-            "anchor": {
-              "$": "type"
             },
             "arglist": {
               "$": "() const const"
@@ -11780,7 +10984,7 @@
               "$": "qqmlpropertymap.html"
             },
             "anchor": {
-              "$": "insert"
+              "$": "insert-1"
             },
             "arglist": {
               "$": "(const QString &key, const QVariant &value)"
@@ -11801,7 +11005,7 @@
               "$": "qqmlpropertymap.html"
             },
             "anchor": {
-              "$": "insert-1"
+              "$": "insert"
             },
             "arglist": {
               "$": "(const QVariantHash &values)"
@@ -13463,7 +12667,7 @@
               "$": "createQmlObject-method"
             },
             "arglist": {
-              "$": "(string qml, object parent, string filepath)"
+              "$": "(string qml, object parent, url url)"
             }
           },
           {
@@ -13588,6 +12792,69 @@
             },
             "arglist": {
               "$": "(real width, real height)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "string"
+            },
+            "name": {
+              "$": "QT_TRANSLATE_NOOP"
+            },
+            "anchorfile": {
+              "$": "qml-qtqml-qt.html"
+            },
+            "anchor": {
+              "$": "QT_TRANSLATE_NOOP-method"
+            },
+            "arglist": {
+              "$": "(string context, string sourceText, string disambiguation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "string"
+            },
+            "name": {
+              "$": "QT_TRID_NOOP"
+            },
+            "anchorfile": {
+              "$": "qml-qtqml-qt.html"
+            },
+            "anchor": {
+              "$": "QT_TRID_NOOP-method"
+            },
+            "arglist": {
+              "$": "(string id)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "string"
+            },
+            "name": {
+              "$": "QT_TR_NOOP"
+            },
+            "anchorfile": {
+              "$": "qml-qtqml-qt.html"
+            },
+            "anchor": {
+              "$": "QT_TR_NOOP-method"
+            },
+            "arglist": {
+              "$": "(string sourceText, string disambiguation)"
             }
           },
           {
@@ -13767,48 +13034,6 @@
               "$": "string"
             },
             "name": {
-              "$": "qsTrIdNoOp"
-            },
-            "anchorfile": {
-              "$": "qml-qtqml-qt.html"
-            },
-            "anchor": {
-              "$": "qsTrIdNoOp-method"
-            },
-            "arglist": {
-              "$": "(string id)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "string"
-            },
-            "name": {
-              "$": "qsTrNoOp"
-            },
-            "anchorfile": {
-              "$": "qml-qtqml-qt.html"
-            },
-            "anchor": {
-              "$": "qsTrNoOp-method"
-            },
-            "arglist": {
-              "$": "(string sourceText, string disambiguation)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "string"
-            },
-            "name": {
               "$": "qsTranslate"
             },
             "anchorfile": {
@@ -13819,27 +13044,6 @@
             },
             "arglist": {
               "$": "(string context, string sourceText, string disambiguation, int n)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "string"
-            },
-            "name": {
-              "$": "qsTranslateNoOp"
-            },
-            "anchorfile": {
-              "$": "qml-qtqml-qt.html"
-            },
-            "anchor": {
-              "$": "qsTranslateNoOp-method"
-            },
-            "arglist": {
-              "$": "(string context, string sourceText, string disambiguation)"
             }
           },
           {
@@ -13966,6 +13170,27 @@
             },
             "arglist": {
               "$": "(real x, real y, real z, real w)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "gc"
+            },
+            "anchorfile": {
+              "$": "qml-qtqml-qt.html"
+            },
+            "anchor": {
+              "$": "gc-method"
+            },
+            "arglist": {
+              "$": "()"
             }
           }
         ]

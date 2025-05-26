@@ -199,6 +199,27 @@
             "arglist": {
               "$": "()"
             }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "announce"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-accessible.html"
+            },
+            "anchor": {
+              "$": "announce-method"
+            },
+            "arglist": {
+              "$": "(string message, AnnouncementPoliteness politeness)"
+            }
           }
         ]
       },
@@ -217,16 +238,16 @@
           "@static": "no",
           "type": {},
           "name": {
-            "$": "affected"
+            "$": "affectParticles"
           },
           "anchorfile": {
             "$": "qml-qtquick-particles-affector.html"
           },
           "anchor": {
-            "$": "affected-signal"
+            "$": "affectParticles-signal"
           },
           "arglist": {
-            "$": "(real x, real y)"
+            "$": "(Array particles, real dt)"
           }
         }
       },
@@ -963,7 +984,7 @@
               "$": "loadImage-method"
             },
             "arglist": {
-              "$": "(url image)"
+              "$": "(url image, size sourceSize)"
             }
           },
           {
@@ -2762,6 +2783,44 @@
             "@static": "no",
             "type": {},
             "name": {
+              "$": "dragEnded"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-flickable.html"
+            },
+            "anchor": {
+              "$": "dragEnded-signal"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "dragStarted"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-flickable.html"
+            },
+            "anchor": {
+              "$": "dragStarted-signal"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
               "$": "flick"
             },
             "anchorfile": {
@@ -3030,6 +3089,15 @@
             }
           }
         ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.FontInfo"
+        },
+        "filename": {
+          "$": "qml-qtquick-fontinfo.html"
+        }
       },
       {
         "@kind": "class",
@@ -3612,6 +3680,25 @@
             "@static": "no",
             "type": {},
             "name": {
+              "$": "pooled"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-gridview.html"
+            },
+            "anchor": {
+              "$": "pooled-signal"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
               "$": "positionViewAtBeginning"
             },
             "anchorfile": {
@@ -3676,6 +3763,25 @@
             },
             "anchor": {
               "$": "remove-signal"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "reused"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-gridview.html"
+            },
+            "anchor": {
+              "$": "reused-signal"
             },
             "arglist": {
               "$": "()"
@@ -5838,6 +5944,34 @@
       {
         "@kind": "class",
         "name": {
+          "$": "QtQuick.Particles.ParticleAffector"
+        },
+        "filename": {
+          "$": "qml-qtquick-particles-particleaffector.html"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "affected"
+          },
+          "anchorfile": {
+            "$": "qml-qtquick-particles-particleaffector.html"
+          },
+          "anchor": {
+            "$": "affected-signal"
+          },
+          "arglist": {
+            "$": "(real x, real y)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "QtQuick.Particles.ParticleExtruder"
         },
         "filename": {
@@ -6141,6 +6275,15 @@
         },
         "filename": {
           "$": "qml-qtquick-pathquad.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.PathRectangle"
+        },
+        "filename": {
+          "$": "qml-qtquick-pathrectangle.html"
         }
       },
       {
@@ -6575,6 +6718,143 @@
             },
             "arglist": {
               "$": "(QVector2D delta)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.PlanarTransform"
+        },
+        "filename": {
+          "$": "qml-qtquick-planartransform.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "matrix4x4"
+            },
+            "name": {
+              "$": "fromAffineMatrix"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-planartransform.html"
+            },
+            "anchor": {
+              "$": "fromAffineMatrix-method"
+            },
+            "arglist": {
+              "$": "(real scaleX, real shearY, real shearX, real scaleY, real translateX, real translateY)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "matrix4x4"
+            },
+            "name": {
+              "$": "fromRotate"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-planartransform.html"
+            },
+            "anchor": {
+              "$": "fromRotate-method"
+            },
+            "arglist": {
+              "$": "(real angle, real originX, real originY)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "matrix4x4"
+            },
+            "name": {
+              "$": "fromScale"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-planartransform.html"
+            },
+            "anchor": {
+              "$": "fromScale-method"
+            },
+            "arglist": {
+              "$": "(real scaleX, real scaleY, real originX, real originY)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "matrix4x4"
+            },
+            "name": {
+              "$": "fromShear"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-planartransform.html"
+            },
+            "anchor": {
+              "$": "fromShear-method"
+            },
+            "arglist": {
+              "$": "(float shearX, float shearY, float originX, float originY)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "matrix4x4"
+            },
+            "name": {
+              "$": "fromTranslate"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-planartransform.html"
+            },
+            "anchor": {
+              "$": "fromTranslate-method"
+            },
+            "arglist": {
+              "$": "(real translateX, real translateY)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "matrix4x4"
+            },
+            "name": {
+              "$": "identity"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-planartransform.html"
+            },
+            "anchor": {
+              "$": "identity-method"
+            },
+            "arglist": {
+              "$": "()"
             }
           }
         ]
@@ -7236,6 +7516,27 @@
           {
             "@kind": "function",
             "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QQuickFramebufferObject::Renderer *"
+            },
+            "name": {
+              "$": "createRenderer"
+            },
+            "anchorfile": {
+              "$": "qquickframebufferobject.html"
+            },
+            "anchor": {
+              "$": "createRenderer"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
             "@virtualness": "virtual",
             "@static": "no",
             "type": {
@@ -7252,27 +7553,6 @@
             },
             "arglist": {
               "$": "() const const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "pure",
-            "@static": "no",
-            "type": {
-              "$": "virtual Renderer *"
-            },
-            "name": {
-              "$": "createRenderer"
-            },
-            "anchorfile": {
-              "$": "qquickframebufferobject.html"
-            },
-            "anchor": {
-              "$": "createRenderer"
-            },
-            "arglist": {
-              "$": "() const const = 0"
             }
           },
           {
@@ -8280,7 +8560,7 @@
               "$": "QQuickImageProvider"
             },
             "arglist": {
-              "$": "(ImageType type, Flags flags)"
+              "$": "(QQmlImageProviderBase::ImageType type, QQmlImageProviderBase::Flags flags)"
             }
           },
           {
@@ -8331,7 +8611,7 @@
             "@virtualness": "virtual",
             "@static": "no",
             "type": {
-              "$": "virtual Flags"
+              "$": "virtual QQmlImageProviderBase::Flags"
             },
             "name": {
               "$": "flags"
@@ -8352,7 +8632,7 @@
             "@virtualness": "virtual",
             "@static": "no",
             "type": {
-              "$": "virtual ImageType"
+              "$": "virtual QQmlImageProviderBase::ImageType"
             },
             "name": {
               "$": "imageType"
@@ -8786,6 +9066,32 @@
             "arglist": {}
           },
           {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ItemScaleHasChanged"
+            },
+            "anchorfile": {
+              "$": "qquickitem.html"
+            },
+            "anchor": {
+              "$": "ItemChange-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ItemTransformHasChanged"
+            },
+            "anchorfile": {
+              "$": "qquickitem.html"
+            },
+            "anchor": {
+              "$": "ItemChange-enum"
+            },
+            "arglist": {}
+          },
+          {
             "@kind": "enumeration",
             "name": {
               "$": "TransformOrigin"
@@ -9077,7 +9383,7 @@
               "$": "updatePaintNode"
             },
             "arglist": {
-              "$": "(QSGNode *oldNode, UpdatePaintNodeData *updatePaintNodeData)"
+              "$": "(QSGNode *oldNode, QQuickItem::UpdatePaintNodeData *updatePaintNodeData)"
             }
           },
           {
@@ -9095,7 +9401,7 @@
               "$": "qquickitem.html"
             },
             "anchor": {
-              "$": "grabToImage-1"
+              "$": "grabToImage"
             },
             "arglist": {
               "$": "(const QSize &targetSize)"
@@ -9497,7 +9803,7 @@
               "$": "focusInEvent"
             },
             "arglist": {
-              "$": "(QFocusEvent *)"
+              "$": "(QFocusEvent *event)"
             }
           },
           {
@@ -9518,7 +9824,28 @@
               "$": "focusOutEvent"
             },
             "arglist": {
-              "$": "(QFocusEvent *)"
+              "$": "(QFocusEvent *event)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "focusPolicyChanged"
+            },
+            "anchorfile": {
+              "$": "qquickitem.html"
+            },
+            "anchor": {
+              "$": "focusPolicy-prop"
+            },
+            "arglist": {
+              "$": "(Qt::FocusPolicy)"
             }
           },
           {
@@ -9791,7 +10118,7 @@
               "$": "itemChange"
             },
             "arglist": {
-              "$": "(ItemChange change, const ItemChangeData &value)"
+              "$": "(QQuickItem::ItemChange change, const QQuickItem::ItemChangeData &value)"
             }
           },
           {
@@ -10379,7 +10706,7 @@
               "$": "setFlag"
             },
             "arglist": {
-              "$": "(Flag flag, bool enabled)"
+              "$": "(QQuickItem::Flag flag, bool enabled)"
             }
           },
           {
@@ -10400,7 +10727,7 @@
               "$": "setFlags"
             },
             "arglist": {
-              "$": "(Flags flags)"
+              "$": "(QQuickItem::Flags flags)"
             }
           },
           {
@@ -10443,6 +10770,27 @@
             },
             "arglist": {
               "$": "(bool)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setFocusPolicy"
+            },
+            "anchorfile": {
+              "$": "qquickitem.html"
+            },
+            "anchor": {
+              "$": "setFocusPolicy"
+            },
+            "arglist": {
+              "$": "(Qt::FocusPolicy policy)"
             }
           },
           {
@@ -10715,7 +11063,7 @@
               "$": "transformOrigin-prop"
             },
             "arglist": {
-              "$": "(TransformOrigin)"
+              "$": "(QQuickItem::TransformOrigin)"
             }
           },
           {
@@ -10967,7 +11315,7 @@
               "$": "transformOrigin-prop"
             },
             "arglist": {
-              "$": "(TransformOrigin)"
+              "$": "(QQuickItem::TransformOrigin)"
             }
           },
           {
@@ -11270,27 +11618,6 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "Flags"
-            },
-            "name": {
-              "$": "flags"
-            },
-            "anchorfile": {
-              "$": "qquickitem.html"
-            },
-            "anchor": {
-              "$": "flags"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
               "$": "QCursor"
             },
             "name": {
@@ -11363,7 +11690,7 @@
               "$": "qquickitem.html"
             },
             "anchor": {
-              "$": "mapFromGlobal-2"
+              "$": "mapFromGlobal"
             },
             "arglist": {
               "$": "(const QPointF &point) const const"
@@ -11384,7 +11711,7 @@
               "$": "qquickitem.html"
             },
             "anchor": {
-              "$": "mapFromItem-1"
+              "$": "mapFromItem"
             },
             "arglist": {
               "$": "(const QQuickItem *item, const QPointF &point) const const"
@@ -11426,7 +11753,7 @@
               "$": "qquickitem.html"
             },
             "anchor": {
-              "$": "mapToGlobal-2"
+              "$": "mapToGlobal"
             },
             "arglist": {
               "$": "(const QPointF &point) const const"
@@ -11447,7 +11774,7 @@
               "$": "qquickitem.html"
             },
             "anchor": {
-              "$": "mapToItem-1"
+              "$": "mapToItem"
             },
             "arglist": {
               "$": "(const QQuickItem *item, const QPointF &point) const const"
@@ -11553,6 +11880,48 @@
             },
             "anchor": {
               "$": "viewportItem"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QQuickItem::Flags"
+            },
+            "name": {
+              "$": "flags"
+            },
+            "anchorfile": {
+              "$": "qquickitem.html"
+            },
+            "anchor": {
+              "$": "flags"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QQuickItem::TransformOrigin"
+            },
+            "name": {
+              "$": "transformOrigin"
+            },
+            "anchorfile": {
+              "$": "qquickitem.html"
+            },
+            "anchor": {
+              "$": "transformOrigin-prop"
             },
             "arglist": {
               "$": "() const const"
@@ -11795,16 +12164,16 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "Qt::MouseButtons"
+              "$": "Qt::FocusPolicy"
             },
             "name": {
-              "$": "acceptedMouseButtons"
+              "$": "focusPolicy"
             },
             "anchorfile": {
               "$": "qquickitem.html"
             },
             "anchor": {
-              "$": "acceptedMouseButtons"
+              "$": "focusPolicy-prop"
             },
             "arglist": {
               "$": "() const const"
@@ -11816,16 +12185,16 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "TransformOrigin"
+              "$": "Qt::MouseButtons"
             },
             "name": {
-              "$": "transformOrigin"
+              "$": "acceptedMouseButtons"
             },
             "anchorfile": {
               "$": "qquickitem.html"
             },
             "anchor": {
-              "$": "transformOrigin-prop"
+              "$": "acceptedMouseButtons"
             },
             "arglist": {
               "$": "() const const"
@@ -12645,6 +13014,20 @@
           },
           {
             "@kind": "property",
+            "@type": "Qt::FocusPolicy",
+            "name": {
+              "$": "focusPolicy"
+            },
+            "anchorfile": {
+              "$": "qquickitem.html"
+            },
+            "anchor": {
+              "$": "focusPolicy-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
             "@type": "qreal",
             "name": {
               "$": "height"
@@ -13166,7 +13549,7 @@
               "$": "updatePaintNode"
             },
             "arglist": {
-              "$": "(QSGNode *oldNode, UpdatePaintNodeData *data) override"
+              "$": "(QSGNode *oldNode, QQuickItem::UpdatePaintNodeData *data) override"
             }
           },
           {
@@ -13250,7 +13633,7 @@
               "$": "itemChange"
             },
             "arglist": {
-              "$": "(ItemChange change, const ItemChangeData &value) override"
+              "$": "(QQuickItem::ItemChange change, const QQuickItem::ItemChangeData &value) override"
             }
           },
           {
@@ -13481,7 +13864,7 @@
               "$": "setPerformanceHint"
             },
             "arglist": {
-              "$": "(PerformanceHint hint, bool enabled)"
+              "$": "(QQuickPaintedItem::PerformanceHint hint, bool enabled)"
             }
           },
           {
@@ -13502,7 +13885,7 @@
               "$": "setPerformanceHints"
             },
             "arglist": {
-              "$": "(PerformanceHints hints)"
+              "$": "(QQuickPaintedItem::PerformanceHints hints)"
             }
           },
           {
@@ -13523,7 +13906,7 @@
               "$": "renderTarget-prop"
             },
             "arglist": {
-              "$": "(RenderTarget target)"
+              "$": "(QQuickPaintedItem::RenderTarget target)"
             }
           },
           {
@@ -13616,7 +13999,28 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "PerformanceHints"
+              "$": "QColor"
+            },
+            "name": {
+              "$": "fillColor"
+            },
+            "anchorfile": {
+              "$": "qquickpainteditem.html"
+            },
+            "anchor": {
+              "$": "fillColor-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QQuickPaintedItem::PerformanceHints"
             },
             "name": {
               "$": "performanceHints"
@@ -13637,16 +14041,16 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "QColor"
+              "$": "QQuickPaintedItem::RenderTarget"
             },
             "name": {
-              "$": "fillColor"
+              "$": "renderTarget"
             },
             "anchorfile": {
               "$": "qquickpainteditem.html"
             },
             "anchor": {
-              "$": "fillColor-prop"
+              "$": "renderTarget-prop"
             },
             "arglist": {
               "$": "() const const"
@@ -13731,27 +14135,6 @@
             },
             "anchor": {
               "$": "textureSize-prop"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "RenderTarget"
-            },
-            "name": {
-              "$": "renderTarget"
-            },
-            "anchorfile": {
-              "$": "qquickpainteditem.html"
-            },
-            "anchor": {
-              "$": "renderTarget-prop"
             },
             "arglist": {
               "$": "() const const"
@@ -14369,6 +14752,31 @@
         },
         "member": [
           {
+            "@kind": "enumeration",
+            "name": {
+              "$": "Flag"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "Flag-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MultisampleResolve"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "Flag-enum"
+            },
+            "arglist": {}
+          },
+          {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
@@ -14387,6 +14795,27 @@
             },
             "arglist": {
               "$": "(void *texture, const QSize &pixelSize, int sampleCount)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QQuickRenderTarget"
+            },
+            "name": {
+              "$": "fromD3D11Texture"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "fromD3D11Texture-2"
+            },
+            "arglist": {
+              "$": "(void *texture, uint format, QSize pixelSize, int sampleCount, QQuickRenderTarget::Flags flags)"
             }
           },
           {
@@ -14440,6 +14869,27 @@
               "$": "QQuickRenderTarget"
             },
             "name": {
+              "$": "fromD3D12Texture"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "fromD3D12Texture-1"
+            },
+            "arglist": {
+              "$": "(void *texture, int resourceState, uint format, uint viewFormat, QSize pixelSize, int sampleCount, int arraySize, QQuickRenderTarget::Flags flags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QQuickRenderTarget"
+            },
+            "name": {
               "$": "fromMetalTexture"
             },
             "anchorfile": {
@@ -14482,6 +14932,27 @@
               "$": "QQuickRenderTarget"
             },
             "name": {
+              "$": "fromMetalTexture"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "fromMetalTexture-2"
+            },
+            "arglist": {
+              "$": "(MTLTexture *texture, uint format, uint viewFormat, QSize pixelSize, int sampleCount, int arraySize, QQuickRenderTarget::Flags flags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QQuickRenderTarget"
+            },
+            "name": {
               "$": "fromOpenGLRenderBuffer"
             },
             "anchorfile": {
@@ -14513,6 +14984,27 @@
             },
             "arglist": {
               "$": "(uint textureId, const QSize &pixelSize, int sampleCount)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QQuickRenderTarget"
+            },
+            "name": {
+              "$": "fromOpenGLTexture"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "fromOpenGLTexture-2"
+            },
+            "arglist": {
+              "$": "(uint textureId, uint format, QSize pixelSize, int sampleCount, int arraySize, QQuickRenderTarget::Flags flags)"
             }
           },
           {
@@ -14576,6 +15068,27 @@
             },
             "arglist": {
               "$": "(QRhiRenderTarget *renderTarget)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QQuickRenderTarget"
+            },
+            "name": {
+              "$": "fromVulkanImage"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "fromVulkanImage-2"
+            },
+            "arglist": {
+              "$": "(VkImage image, VkImageLayout layout, VkFormat format, VkFormat viewFormat, QSize pixelSize, int sampleCount, int arraySize, QQuickRenderTarget::Flags flags)"
             }
           },
           {
@@ -14690,6 +15203,27 @@
               "$": "void"
             },
             "name": {
+              "$": "setDepthTexture"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "setDepthTexture"
+            },
+            "arglist": {
+              "$": "(QRhiTexture *texture)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "setDevicePixelRatio"
             },
             "anchorfile": {
@@ -14740,6 +15274,27 @@
             },
             "arglist": {
               "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QRhiTexture *"
+            },
+            "name": {
+              "$": "depthTexture"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "depthTexture"
+            },
+            "arglist": {
+              "$": "() const const"
             }
           },
           {
@@ -14804,6 +15359,1021 @@
             "arglist": {
               "$": "() const const"
             }
+          },
+          {
+            "@kind": "typedef",
+            "@type": "QQuickRenderTarget::Flag",
+            "name": {
+              "$": "Flags"
+            },
+            "anchorfile": {
+              "$": "qquickrendertarget.html"
+            },
+            "anchor": {
+              "$": "Flag-enum"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QQuickRhiItem"
+        },
+        "filename": {
+          "$": "qquickrhiitem.html"
+        },
+        "base": {
+          "$": "QQuickItem"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QQuickRhiItem"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "QQuickRhiItem"
+            },
+            "arglist": {
+              "$": "(QQuickItem *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QQuickRhiItemRenderer *"
+            },
+            "name": {
+              "$": "createRenderer"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "createRenderer"
+            },
+            "arglist": {
+              "$": "() = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "event"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "event"
+            },
+            "arglist": {
+              "$": "(QEvent *e) override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "alphaBlendingChanged"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "alphaBlending-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "colorBufferFormatChanged"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "colorBufferFormat-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "effectiveColorBufferSizeChanged"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "effectiveColorBufferSize-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "fixedColorBufferHeightChanged"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "fixedColorBufferHeight-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "fixedColorBufferWidthChanged"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "fixedColorBufferWidth-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "geometryChange"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "geometryChange"
+            },
+            "arglist": {
+              "$": "(const QRectF &newGeometry, const QRectF &oldGeometry) override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "mirrorVerticallyChanged"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "mirrorVertically-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "releaseResources"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "releaseResources"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "sampleCountChanged"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "sampleCount-prop"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setAlphaBlending"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "alphaBlending-prop"
+            },
+            "arglist": {
+              "$": "(bool enable)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setAutoRenderTarget"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "setAutoRenderTarget"
+            },
+            "arglist": {
+              "$": "(bool enabled)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setColorBufferFormat"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "colorBufferFormat-prop"
+            },
+            "arglist": {
+              "$": "(QQuickRhiItem::TextureFormat format)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setFixedColorBufferHeight"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "fixedColorBufferHeight-prop"
+            },
+            "arglist": {
+              "$": "(int height)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setFixedColorBufferWidth"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "fixedColorBufferWidth-prop"
+            },
+            "arglist": {
+              "$": "(int width)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMirrorVertically"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "mirrorVertically-prop"
+            },
+            "arglist": {
+              "$": "(bool enable)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSampleCount"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "sampleCount-prop"
+            },
+            "arglist": {
+              "$": "(int samples)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual "
+            },
+            "name": {
+              "$": "~QQuickRhiItem"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "dtor.QQuickRhiItem"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QQuickRhiItem::TextureFormat"
+            },
+            "name": {
+              "$": "colorBufferFormat"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "colorBufferFormat-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual QSGTextureProvider *"
+            },
+            "name": {
+              "$": "textureProvider"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "textureProvider"
+            },
+            "arglist": {
+              "$": "() const const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QSize"
+            },
+            "name": {
+              "$": "effectiveColorBufferSize"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "effectiveColorBufferSize-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "alphaBlending"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "alphaBlending-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isAutoRenderTargetEnabled"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "isAutoRenderTargetEnabled"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isMirrorVerticallyEnabled"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "mirrorVertically-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "isTextureProvider"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "isTextureProvider"
+            },
+            "arglist": {
+              "$": "() const const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "fixedColorBufferHeight"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "fixedColorBufferHeight-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "fixedColorBufferWidth"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "fixedColorBufferWidth-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "sampleCount"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "sampleCount-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "property",
+            "@type": "bool",
+            "name": {
+              "$": "alphaBlending"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "alphaBlending-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "TextureFormat",
+            "name": {
+              "$": "colorBufferFormat"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "colorBufferFormat-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "QSize",
+            "name": {
+              "$": "effectiveColorBufferSize"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "effectiveColorBufferSize-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "int",
+            "name": {
+              "$": "fixedColorBufferHeight"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "fixedColorBufferHeight-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "int",
+            "name": {
+              "$": "fixedColorBufferWidth"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "fixedColorBufferWidth-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "bool",
+            "name": {
+              "$": "mirrorVertically"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "mirrorVertically-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "int",
+            "name": {
+              "$": "sampleCount"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitem.html"
+            },
+            "anchor": {
+              "$": "sampleCount-prop"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QQuickRhiItemRenderer"
+        },
+        "filename": {
+          "$": "qquickrhiitemrenderer.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QQuickRhiItemRenderer"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "QQuickRhiItemRenderer"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "initialize"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "initialize"
+            },
+            "arglist": {
+              "$": "(QRhiCommandBuffer *cb) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "render"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "render"
+            },
+            "arglist": {
+              "$": "(QRhiCommandBuffer *cb) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "synchronize"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "synchronize"
+            },
+            "arglist": {
+              "$": "(QQuickRhiItem *item) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "update"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "update"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual "
+            },
+            "name": {
+              "$": "~QQuickRhiItemRenderer"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "dtor.QQuickRhiItemRenderer"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QRhi *"
+            },
+            "name": {
+              "$": "rhi"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "rhi"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QRhiRenderBuffer *"
+            },
+            "name": {
+              "$": "depthStencilBuffer"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "depthStencilBuffer"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QRhiRenderBuffer *"
+            },
+            "name": {
+              "$": "msaaColorBuffer"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "msaaColorBuffer"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QRhiRenderTarget *"
+            },
+            "name": {
+              "$": "renderTarget"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "renderTarget"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QRhiTexture *"
+            },
+            "name": {
+              "$": "colorTexture"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "colorTexture"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QRhiTexture *"
+            },
+            "name": {
+              "$": "resolveTexture"
+            },
+            "anchorfile": {
+              "$": "qquickrhiitemrenderer.html"
+            },
+            "anchor": {
+              "$": "resolveTexture"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
           }
         ]
       },
@@ -14844,6 +16414,258 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "errorStringChanged"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "errorStringChanged"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "modifiedChanged"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "modifiedChanged"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "save"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "save"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "saveAs"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "saveAs"
+            },
+            "arglist": {
+              "$": "(const QUrl &url)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setModified"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "modified-prop"
+            },
+            "arglist": {
+              "$": "(bool modified)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSource"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "source-prop"
+            },
+            "arglist": {
+              "$": "(const QUrl &url)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setTextDocument"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "setTextDocument"
+            },
+            "arglist": {
+              "$": "(QTextDocument *document)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "sourceChanged"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "sourceChanged"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "statusChanged"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "statusChanged"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "textDocumentChanged"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "textDocumentChanged"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QQuickTextDocument::Status"
+            },
+            "name": {
+              "$": "status"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "status-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "errorString"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "errorString-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "QTextDocument *"
             },
             "name": {
@@ -14858,6 +16680,104 @@
             "arglist": {
               "$": "() const const"
             }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QUrl"
+            },
+            "name": {
+              "$": "source"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "source-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isModified"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "modified-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "property",
+            "@type": "QString",
+            "name": {
+              "$": "errorString"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "errorString-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "bool",
+            "name": {
+              "$": "modified"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "modified-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "QUrl",
+            "name": {
+              "$": "source"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "source-prop"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "Status",
+            "name": {
+              "$": "status"
+            },
+            "anchorfile": {
+              "$": "qquicktextdocument.html"
+            },
+            "anchor": {
+              "$": "status-prop"
+            },
+            "arglist": {}
           }
         ]
       },
@@ -15147,6 +17067,25 @@
               "$": "qquickview.html"
             },
             "anchor": {
+              "$": "QQuickView-3"
+            },
+            "arglist": {
+              "$": "(QAnyStringView uri, QAnyStringView typeName, QWindow *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QQuickView"
+            },
+            "anchorfile": {
+              "$": "qquickview.html"
+            },
+            "anchor": {
               "$": "QQuickView-1"
             },
             "arglist": {
@@ -15231,6 +17170,27 @@
             },
             "arglist": {
               "$": "(QKeyEvent *e) override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "loadFromModule"
+            },
+            "anchorfile": {
+              "$": "qquickview.html"
+            },
+            "anchor": {
+              "$": "loadFromModule"
+            },
+            "arglist": {
+              "$": "(QAnyStringView uri, QAnyStringView typeName)"
             }
           },
           {
@@ -15335,7 +17295,7 @@
               "$": "resizeMode-prop"
             },
             "arglist": {
-              "$": "(ResizeMode)"
+              "$": "(QQuickView::ResizeMode)"
             }
           },
           {
@@ -15491,6 +17451,48 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QQuickView::ResizeMode"
+            },
+            "name": {
+              "$": "resizeMode"
+            },
+            "anchorfile": {
+              "$": "qquickview.html"
+            },
+            "anchor": {
+              "$": "resizeMode-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QQuickView::Status"
+            },
+            "name": {
+              "$": "status"
+            },
+            "anchorfile": {
+              "$": "qquickview.html"
+            },
+            "anchor": {
+              "$": "status-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "QSize"
             },
             "name": {
@@ -15522,48 +17524,6 @@
             },
             "anchor": {
               "$": "source"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "ResizeMode"
-            },
-            "name": {
-              "$": "resizeMode"
-            },
-            "anchorfile": {
-              "$": "qquickview.html"
-            },
-            "anchor": {
-              "$": "resizeMode-prop"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "Status"
-            },
-            "name": {
-              "$": "status"
-            },
-            "anchorfile": {
-              "$": "qquickview.html"
-            },
-            "anchor": {
-              "$": "status-prop"
             },
             "arglist": {
               "$": "() const const"
@@ -15726,6 +17686,25 @@
               "$": "Status-enum"
             },
             "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "QQuickWidget"
+            },
+            "anchorfile": {
+              "$": "qquickwidget.html"
+            },
+            "anchor": {
+              "$": "QQuickWidget-3"
+            },
+            "arglist": {
+              "$": "(QAnyStringView uri, QAnyStringView typeName, QWidget *parent)"
+            }
           },
           {
             "@kind": "function",
@@ -16017,6 +17996,27 @@
           },
           {
             "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "loadFromModule"
+            },
+            "anchorfile": {
+              "$": "qquickwidget.html"
+            },
+            "anchor": {
+              "$": "loadFromModule"
+            },
+            "arglist": {
+              "$": "(QAnyStringView uri, QAnyStringView typeName)"
+            }
+          },
+          {
+            "@kind": "function",
             "@protection": "protected",
             "@virtualness": "virtual",
             "@static": "no",
@@ -16192,6 +18192,27 @@
               "$": "void"
             },
             "name": {
+              "$": "setInitialProperties"
+            },
+            "anchorfile": {
+              "$": "qquickwidget.html"
+            },
+            "anchor": {
+              "$": "setInitialProperties"
+            },
+            "arglist": {
+              "$": "(const QVariantMap &initialProperties)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "setResizeMode"
             },
             "anchorfile": {
@@ -16201,7 +18222,7 @@
               "$": "resizeMode-prop"
             },
             "arglist": {
-              "$": "(ResizeMode)"
+              "$": "(QQuickWidget::ResizeMode)"
             }
           },
           {
@@ -16420,6 +18441,48 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QQuickWidget::ResizeMode"
+            },
+            "name": {
+              "$": "resizeMode"
+            },
+            "anchorfile": {
+              "$": "qquickwidget.html"
+            },
+            "anchor": {
+              "$": "resizeMode-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QQuickWidget::Status"
+            },
+            "name": {
+              "$": "status"
+            },
+            "anchorfile": {
+              "$": "qquickwidget.html"
+            },
+            "anchor": {
+              "$": "status-prop"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "QQuickWindow *"
             },
             "name": {
@@ -16493,48 +18556,6 @@
             },
             "anchor": {
               "$": "source"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "ResizeMode"
-            },
-            "name": {
-              "$": "resizeMode"
-            },
-            "anchorfile": {
-              "$": "qquickwidget.html"
-            },
-            "anchor": {
-              "$": "resizeMode-prop"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "Status"
-            },
-            "name": {
-              "$": "status"
-            },
-            "anchorfile": {
-              "$": "qquickwidget.html"
-            },
-            "anchor": {
-              "$": "status-prop"
             },
             "arglist": {
               "$": "() const const"
@@ -16830,6 +18851,19 @@
             "arglist": {}
           },
           {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "CurveTextRendering"
+            },
+            "anchorfile": {
+              "$": "qquickwindow.html"
+            },
+            "anchor": {
+              "$": "TextRenderType-enum"
+            },
+            "arglist": {}
+          },
+          {
             "@kind": "function",
             "@protection": "public",
             "@virtualness": "non",
@@ -16863,7 +18897,7 @@
               "$": "qquickwindow.html"
             },
             "anchor": {
-              "$": "QQuickWindow-1"
+              "$": "QQuickWindow"
             },
             "arglist": {
               "$": "(QQuickRenderControl *control)"
@@ -16882,10 +18916,31 @@
               "$": "qquickwindow.html"
             },
             "anchor": {
-              "$": "QQuickWindow"
+              "$": "QQuickWindow-1"
             },
             "arglist": {
               "$": "(QWindow *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QQuickWindow::TextRenderType"
+            },
+            "name": {
+              "$": "textRenderType"
+            },
+            "anchorfile": {
+              "$": "qquickwindow.html"
+            },
+            "anchor": {
+              "$": "textRenderType"
+            },
+            "arglist": {
+              "$": "()"
             }
           },
           {
@@ -16925,27 +18980,6 @@
             },
             "anchor": {
               "$": "sceneGraphBackend"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "yes",
-            "type": {
-              "$": "TextRenderType"
-            },
-            "name": {
-              "$": "textRenderType"
-            },
-            "anchorfile": {
-              "$": "qquickwindow.html"
-            },
-            "anchor": {
-              "$": "textRenderType"
             },
             "arglist": {
               "$": "()"
@@ -16999,7 +19033,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "const GraphicsStateInfo &"
+              "$": "const QQuickWindow::GraphicsStateInfo &"
             },
             "name": {
               "$": "graphicsStateInfo"
@@ -17683,7 +19717,7 @@
               "$": "scheduleRenderJob"
             },
             "arglist": {
-              "$": "(QRunnable *job, RenderStage stage)"
+              "$": "(QRunnable *job, QQuickWindow::RenderStage stage)"
             }
           },
           {
@@ -17893,7 +19927,7 @@
               "$": "setTextRenderType"
             },
             "arglist": {
-              "$": "(TextRenderType renderType)"
+              "$": "(QQuickWindow::TextRenderType renderType)"
             }
           },
           {
@@ -18322,6 +20356,27 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QSGTextNode *"
+            },
+            "name": {
+              "$": "createTextNode"
+            },
+            "anchorfile": {
+              "$": "qquickwindow.html"
+            },
+            "anchor": {
+              "$": "createTextNode"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "QSGTexture *"
             },
             "name": {
@@ -18355,7 +20410,7 @@
               "$": "createTextureFromImage"
             },
             "arglist": {
-              "$": "(const QImage &image, CreateTextureOptions options) const const"
+              "$": "(const QImage &image, QQuickWindow::CreateTextureOptions options) const const"
             }
           },
           {
@@ -18376,7 +20431,7 @@
               "$": "createTextureFromRhiTexture"
             },
             "arglist": {
-              "$": "(QRhiTexture *texture, CreateTextureOptions options) const const"
+              "$": "(QRhiTexture *texture, QQuickWindow::CreateTextureOptions options) const const"
             }
           },
           {
@@ -18571,7 +20626,7 @@
               "$": "qsgbasicgeometrynode.html"
             },
             "anchor": {
-              "$": "geometry-1"
+              "$": "geometry"
             },
             "arglist": {
               "$": "()"
@@ -18634,7 +20689,7 @@
               "$": "qsgbasicgeometrynode.html"
             },
             "anchor": {
-              "$": "geometry"
+              "$": "geometry-1"
             },
             "arglist": {
               "$": "() const const"
@@ -19331,48 +21386,6 @@
             "@protection": "public",
             "@virtualness": "non",
             "@static": "no",
-            "type": {
-              "$": "ColoredPoint2D *"
-            },
-            "name": {
-              "$": "vertexDataAsColoredPoint2D"
-            },
-            "anchorfile": {
-              "$": "qsggeometry.html"
-            },
-            "anchor": {
-              "$": "vertexDataAsColoredPoint2D"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "Point2D *"
-            },
-            "name": {
-              "$": "vertexDataAsPoint2D"
-            },
-            "anchorfile": {
-              "$": "qsggeometry.html"
-            },
-            "anchor": {
-              "$": "vertexDataAsPoint2D"
-            },
-            "arglist": {
-              "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
             "type": {},
             "name": {
               "$": "QSGGeometry"
@@ -19393,7 +21406,49 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "TexturedPoint2D *"
+              "$": "QSGGeometry::ColoredPoint2D *"
+            },
+            "name": {
+              "$": "vertexDataAsColoredPoint2D"
+            },
+            "anchorfile": {
+              "$": "qsggeometry.html"
+            },
+            "anchor": {
+              "$": "vertexDataAsColoredPoint2D"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QSGGeometry::Point2D *"
+            },
+            "name": {
+              "$": "vertexDataAsPoint2D"
+            },
+            "anchorfile": {
+              "$": "qsggeometry.html"
+            },
+            "anchor": {
+              "$": "vertexDataAsPoint2D"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QSGGeometry::TexturedPoint2D *"
             },
             "name": {
               "$": "vertexDataAsTexturedPoint2D"
@@ -19414,7 +21469,7 @@
             "@virtualness": "non",
             "@static": "yes",
             "type": {
-              "$": "const AttributeSet &"
+              "$": "const QSGGeometry::AttributeSet &"
             },
             "name": {
               "$": "defaultAttributes_ColoredPoint2D"
@@ -19435,7 +21490,7 @@
             "@virtualness": "non",
             "@static": "yes",
             "type": {
-              "$": "const AttributeSet &"
+              "$": "const QSGGeometry::AttributeSet &"
             },
             "name": {
               "$": "defaultAttributes_Point2D"
@@ -19456,7 +21511,7 @@
             "@virtualness": "non",
             "@static": "yes",
             "type": {
-              "$": "const AttributeSet &"
+              "$": "const QSGGeometry::AttributeSet &"
             },
             "name": {
               "$": "defaultAttributes_TexturedPoint2D"
@@ -19657,7 +21712,7 @@
               "$": "setIndexDataPattern"
             },
             "arglist": {
-              "$": "(DataPattern p)"
+              "$": "(QSGGeometry::DataPattern p)"
             }
           },
           {
@@ -19699,7 +21754,7 @@
               "$": "setVertexDataPattern"
             },
             "arglist": {
-              "$": "(DataPattern p)"
+              "$": "(QSGGeometry::DataPattern p)"
             }
           },
           {
@@ -19792,7 +21847,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "DataPattern"
+              "$": "QSGGeometry::DataPattern"
             },
             "name": {
               "$": "indexDataPattern"
@@ -19813,7 +21868,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "DataPattern"
+              "$": "QSGGeometry::DataPattern"
             },
             "name": {
               "$": "vertexDataPattern"
@@ -19834,7 +21889,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "const Attribute *"
+              "$": "const QSGGeometry::Attribute *"
             },
             "name": {
               "$": "attributes"
@@ -19855,7 +21910,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "const ColoredPoint2D *"
+              "$": "const QSGGeometry::ColoredPoint2D *"
             },
             "name": {
               "$": "vertexDataAsColoredPoint2D"
@@ -19876,7 +21931,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "const Point2D *"
+              "$": "const QSGGeometry::Point2D *"
             },
             "name": {
               "$": "vertexDataAsPoint2D"
@@ -19897,7 +21952,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "const TexturedPoint2D *"
+              "$": "const QSGGeometry::TexturedPoint2D *"
             },
             "name": {
               "$": "vertexDataAsTexturedPoint2D"
@@ -20181,7 +22236,7 @@
             "@virtualness": "non",
             "@static": "yes",
             "type": {
-              "$": "Attribute"
+              "$": "QSGGeometry::Attribute"
             },
             "name": {
               "$": "create"
@@ -20202,7 +22257,7 @@
             "@virtualness": "non",
             "@static": "yes",
             "type": {
-              "$": "Attribute"
+              "$": "QSGGeometry::Attribute"
             },
             "name": {
               "$": "createWithAttributeType"
@@ -20214,7 +22269,7 @@
               "$": "createWithAttributeType"
             },
             "arglist": {
-              "$": "(int pos, int tupleSize, int primitiveType, AttributeType attributeType)"
+              "$": "(int pos, int tupleSize, int primitiveType, QSGGeometry::AttributeType attributeType)"
             }
           }
         ]
@@ -20537,7 +22592,7 @@
               "$": "rebuildGeometry"
             },
             "arglist": {
-              "$": "(QSGGeometry *g, QSGTexture *texture, const QRectF &rect, QRectF sourceRect, TextureCoordinatesTransformMode texCoordMode)"
+              "$": "(QSGGeometry *g, QSGTexture *texture, const QRectF &rect, QRectF sourceRect, QSGImageNode::TextureCoordinatesTransformMode texCoordMode)"
             }
           },
           {
@@ -20747,7 +22802,7 @@
               "$": "setTextureCoordinatesTransform"
             },
             "arglist": {
-              "$": "(TextureCoordinatesTransformMode mode) = 0"
+              "$": "(QSGImageNode::TextureCoordinatesTransformMode mode) = 0"
             }
           },
           {
@@ -20787,6 +22842,27 @@
             },
             "anchor": {
               "$": "sourceRect"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QSGImageNode::TextureCoordinatesTransformMode"
+            },
+            "name": {
+              "$": "textureCoordinatesTransform"
+            },
+            "anchorfile": {
+              "$": "qsgimagenode.html"
+            },
+            "anchor": {
+              "$": "textureCoordinatesTransform"
             },
             "arglist": {
               "$": "() const const = 0"
@@ -20871,27 +22947,6 @@
             },
             "anchor": {
               "$": "mipmapFiltering"
-            },
-            "arglist": {
-              "$": "() const const = 0"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "pure",
-            "@static": "no",
-            "type": {
-              "$": "virtual TextureCoordinatesTransformMode"
-            },
-            "name": {
-              "$": "textureCoordinatesTransform"
-            },
-            "anchorfile": {
-              "$": "qsgimagenode.html"
-            },
-            "anchor": {
-              "$": "textureCoordinatesTransform"
             },
             "arglist": {
               "$": "() const const = 0"
@@ -21023,6 +23078,45 @@
           {
             "@kind": "enumvalue",
             "name": {
+              "$": "MultiView2"
+            },
+            "anchorfile": {
+              "$": "qsgmaterial.html"
+            },
+            "anchor": {
+              "$": "Flag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MultiView3"
+            },
+            "anchorfile": {
+              "$": "qsgmaterial.html"
+            },
+            "anchor": {
+              "$": "Flag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MultiView4"
+            },
+            "anchorfile": {
+              "$": "qsgmaterial.html"
+            },
+            "anchor": {
+              "$": "Flag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
               "$": "CustomCompileStep"
             },
             "anchorfile": {
@@ -21051,7 +23145,7 @@
               "$": "setFlag"
             },
             "arglist": {
-              "$": "(Flags flags, bool on)"
+              "$": "(QSGMaterial::Flags flags, bool on)"
             }
           },
           {
@@ -21136,6 +23230,27 @@
             },
             "arglist": {
               "$": "(const QSGMaterial *other) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "viewCount"
+            },
+            "anchorfile": {
+              "$": "qsgmaterial.html"
+            },
+            "anchor": {
+              "$": "viewCount"
+            },
+            "arglist": {
+              "$": "() const const"
             }
           },
           {
@@ -21233,7 +23348,7 @@
               "$": "updateGraphicsPipelineState"
             },
             "arglist": {
-              "$": "(RenderState &state, GraphicsPipelineState *ps, QSGMaterial *newMaterial, QSGMaterial *oldMaterial)"
+              "$": "(QSGMaterialShader::RenderState &state, QSGMaterialShader::GraphicsPipelineState *ps, QSGMaterial *newMaterial, QSGMaterial *oldMaterial)"
             }
           },
           {
@@ -21254,7 +23369,7 @@
               "$": "updateUniformData"
             },
             "arglist": {
-              "$": "(RenderState &state, QSGMaterial *newMaterial, QSGMaterial *oldMaterial)"
+              "$": "(QSGMaterialShader::RenderState &state, QSGMaterial *newMaterial, QSGMaterial *oldMaterial)"
             }
           },
           {
@@ -21275,7 +23390,7 @@
               "$": "setFlag"
             },
             "arglist": {
-              "$": "(Flags flags, bool on)"
+              "$": "(QSGMaterialShader::Flags flags, bool on)"
             }
           },
           {
@@ -21296,7 +23411,7 @@
               "$": "setFlags"
             },
             "arglist": {
-              "$": "(Flags flags)"
+              "$": "(QSGMaterialShader::Flags flags)"
             }
           },
           {
@@ -21317,7 +23432,7 @@
               "$": "setShader"
             },
             "arglist": {
-              "$": "(Stage stage, const QShader &shader)"
+              "$": "(QSGMaterialShader::Stage stage, const QShader &shader)"
             }
           },
           {
@@ -21338,7 +23453,28 @@
               "$": "setShaderFileName"
             },
             "arglist": {
-              "$": "(Stage stage, const QString &filename)"
+              "$": "(QSGMaterialShader::Stage stage, const QString &filename)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setShaderFileName"
+            },
+            "anchorfile": {
+              "$": "qsgmaterialshader.html"
+            },
+            "anchor": {
+              "$": "setShaderFileName-1"
+            },
+            "arglist": {
+              "$": "(QSGMaterialShader::Stage stage, const QString &filename, int viewCount)"
             }
           },
           {
@@ -21359,7 +23495,7 @@
               "$": "updateSampledImage"
             },
             "arglist": {
-              "$": "(RenderState &state, int binding, QSGTexture **texture, QSGMaterial *newMaterial, QSGMaterial *oldMaterial)"
+              "$": "(QSGMaterialShader::RenderState &state, int binding, QSGTexture **texture, QSGMaterial *newMaterial, QSGMaterial *oldMaterial)"
             }
           },
           {
@@ -21368,7 +23504,7 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "Flags"
+              "$": "QSGMaterialShader::Flags"
             },
             "name": {
               "$": "flags"
@@ -21691,6 +23827,83 @@
           {
             "@kind": "enumeration",
             "name": {
+              "$": "BlendOp"
+            },
+            "anchorfile": {
+              "$": "qsgmaterialshader-graphicspipelinestate.html"
+            },
+            "anchor": {
+              "$": "BlendOp-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Add"
+            },
+            "anchorfile": {
+              "$": "qsgmaterialshader-graphicspipelinestate.html"
+            },
+            "anchor": {
+              "$": "BlendOp-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Subtract"
+            },
+            "anchorfile": {
+              "$": "qsgmaterialshader-graphicspipelinestate.html"
+            },
+            "anchor": {
+              "$": "BlendOp-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ReverseSubtract"
+            },
+            "anchorfile": {
+              "$": "qsgmaterialshader-graphicspipelinestate.html"
+            },
+            "anchor": {
+              "$": "BlendOp-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Min"
+            },
+            "anchorfile": {
+              "$": "qsgmaterialshader-graphicspipelinestate.html"
+            },
+            "anchor": {
+              "$": "BlendOp-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Max"
+            },
+            "anchorfile": {
+              "$": "qsgmaterialshader-graphicspipelinestate.html"
+            },
+            "anchor": {
+              "$": "BlendOp-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "name": {
               "$": "ColorMaskComponent"
             },
             "anchorfile": {
@@ -21999,27 +24212,6 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "DirtyStates"
-            },
-            "name": {
-              "$": "dirtyStates"
-            },
-            "anchorfile": {
-              "$": "qsgmaterialshader-renderstate.html"
-            },
-            "anchor": {
-              "$": "dirtyStates"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
               "$": "QMatrix4x4"
             },
             "name": {
@@ -22114,6 +24306,27 @@
             },
             "anchor": {
               "$": "viewportRect"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QSGMaterialShader::RenderState::DirtyStates"
+            },
+            "name": {
+              "$": "dirtyStates"
+            },
+            "anchorfile": {
+              "$": "qsgmaterialshader-renderstate.html"
+            },
+            "anchor": {
+              "$": "dirtyStates"
             },
             "arglist": {
               "$": "() const const"
@@ -22706,7 +24919,7 @@
               "$": "markDirty"
             },
             "arglist": {
-              "$": "(DirtyState bits)"
+              "$": "(QSGNode::DirtyState bits)"
             }
           },
           {
@@ -22811,7 +25024,7 @@
               "$": "setFlag"
             },
             "arglist": {
-              "$": "(Flag f, bool enabled)"
+              "$": "(QSGNode::Flag f, bool enabled)"
             }
           },
           {
@@ -22832,7 +25045,7 @@
               "$": "setFlags"
             },
             "arglist": {
-              "$": "(Flags f, bool enabled)"
+              "$": "(QSGNode::Flags f, bool enabled)"
             }
           },
           {
@@ -22854,48 +25067,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "Flags"
-            },
-            "name": {
-              "$": "flags"
-            },
-            "anchorfile": {
-              "$": "qsgnode.html"
-            },
-            "anchor": {
-              "$": "flags"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "NodeType"
-            },
-            "name": {
-              "$": "type"
-            },
-            "anchorfile": {
-              "$": "qsgnode.html"
-            },
-            "anchor": {
-              "$": "type"
-            },
-            "arglist": {
-              "$": "() const const"
             }
           },
           {
@@ -23019,6 +25190,48 @@
             },
             "anchor": {
               "$": "previousSibling"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QSGNode::Flags"
+            },
+            "name": {
+              "$": "flags"
+            },
+            "anchorfile": {
+              "$": "qsgnode.html"
+            },
+            "anchor": {
+              "$": "flags"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QSGNode::NodeType"
+            },
+            "name": {
+              "$": "type"
+            },
+            "anchorfile": {
+              "$": "qsgnode.html"
+            },
+            "anchor": {
+              "$": "type"
             },
             "arglist": {
               "$": "() const const"
@@ -23848,7 +26061,7 @@
               "$": "render"
             },
             "arglist": {
-              "$": "(const RenderState *state) = 0"
+              "$": "(const QSGRenderNode::RenderState *state) = 0"
             }
           },
           {
@@ -23941,7 +26154,7 @@
             "@virtualness": "virtual",
             "@static": "no",
             "type": {
-              "$": "virtual RenderingFlags"
+              "$": "virtual QSGRenderNode::RenderingFlags"
             },
             "name": {
               "$": "flags"
@@ -23962,7 +26175,7 @@
             "@virtualness": "virtual",
             "@static": "no",
             "type": {
-              "$": "virtual StateFlags"
+              "$": "virtual QSGRenderNode::StateFlags"
             },
             "name": {
               "$": "changedStates"
@@ -24749,7 +26962,7 @@
               "$": "isApiRhiBased"
             },
             "arglist": {
-              "$": "(GraphicsApi api)"
+              "$": "(QSGRendererInterface::GraphicsApi api)"
             }
           },
           {
@@ -24758,7 +26971,7 @@
             "@virtualness": "pure",
             "@static": "no",
             "type": {
-              "$": "virtual GraphicsApi"
+              "$": "virtual QSGRendererInterface::GraphicsApi"
             },
             "name": {
               "$": "graphicsApi"
@@ -24779,7 +26992,7 @@
             "@virtualness": "pure",
             "@static": "no",
             "type": {
-              "$": "virtual ShaderCompilationTypes"
+              "$": "virtual QSGRendererInterface::ShaderCompilationTypes"
             },
             "name": {
               "$": "shaderCompilationType"
@@ -24800,7 +27013,7 @@
             "@virtualness": "pure",
             "@static": "no",
             "type": {
-              "$": "virtual ShaderSourceTypes"
+              "$": "virtual QSGRendererInterface::ShaderSourceTypes"
             },
             "name": {
               "$": "shaderSourceType"
@@ -24821,7 +27034,7 @@
             "@virtualness": "pure",
             "@static": "no",
             "type": {
-              "$": "virtual ShaderType"
+              "$": "virtual QSGRendererInterface::ShaderType"
             },
             "name": {
               "$": "shaderType"
@@ -24854,7 +27067,7 @@
               "$": "getResource"
             },
             "arglist": {
-              "$": "(QQuickWindow *window, Resource resource) const const"
+              "$": "(QQuickWindow *window, QSGRendererInterface::Resource resource) const const"
             }
           },
           {
@@ -24933,7 +27146,7 @@
               "$": "qsgsimplerectnode.html"
             },
             "anchor": {
-              "$": "QSGSimpleRectNode-1"
+              "$": "QSGSimpleRectNode"
             },
             "arglist": {
               "$": "()"
@@ -24952,7 +27165,7 @@
               "$": "qsgsimplerectnode.html"
             },
             "anchor": {
-              "$": "QSGSimpleRectNode"
+              "$": "QSGSimpleRectNode-1"
             },
             "arglist": {
               "$": "(const QRectF &rect, const QColor &color)"
@@ -25312,7 +27525,7 @@
               "$": "setTextureCoordinatesTransform"
             },
             "arglist": {
-              "$": "(TextureCoordinatesTransformMode mode)"
+              "$": "(QSGSimpleTextureNode::TextureCoordinatesTransformMode mode)"
             }
           },
           {
@@ -25384,6 +27597,27 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "QSGSimpleTextureNode::TextureCoordinatesTransformMode"
+            },
+            "name": {
+              "$": "textureCoordinatesTransform"
+            },
+            "anchorfile": {
+              "$": "qsgsimpletexturenode.html"
+            },
+            "anchor": {
+              "$": "textureCoordinatesTransform"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "QSGTexture *"
             },
             "name": {
@@ -25426,27 +27660,6 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
-              "$": "TextureCoordinatesTransformMode"
-            },
-            "name": {
-              "$": "textureCoordinatesTransform"
-            },
-            "anchorfile": {
-              "$": "qsgsimpletexturenode.html"
-            },
-            "anchor": {
-              "$": "textureCoordinatesTransform"
-            },
-            "arglist": {
-              "$": "() const const"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
               "$": "bool"
             },
             "name": {
@@ -25475,6 +27688,618 @@
               "$": "TextureCoordinatesTransformFlag-enum"
             },
             "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QSGTextNode"
+        },
+        "filename": {
+          "$": "qsgtextnode.html"
+        },
+        "base": {
+          "$": "QSGTransformNode"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "RenderType"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "RenderType-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "QtRendering"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "RenderType-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NativeRendering"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "RenderType-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "CurveRendering"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "RenderType-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "TextStyle"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "TextStyle-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Normal"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "TextStyle-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Outline"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "TextStyle-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Raised"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "TextStyle-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Sunken"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "TextStyle-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QSGTextNode::TextStyle"
+            },
+            "name": {
+              "$": "textStyle"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "textStyle"
+            },
+            "arglist": {
+              "$": "() = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addTextDocument"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "addTextDocument"
+            },
+            "arglist": {
+              "$": "(QPointF position, QTextDocument *document, int selectionStart, int selectionCount)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addTextLayout"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "addTextLayout"
+            },
+            "arglist": {
+              "$": "(QPointF position, QTextLayout *layout, int selectionStart, int selectionCount, int lineStart, int lineCount)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "clear"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "clear"
+            },
+            "arglist": {
+              "$": "() = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setColor"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setColor"
+            },
+            "arglist": {
+              "$": "(QColor color) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setFiltering"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setFiltering"
+            },
+            "arglist": {
+              "$": "(QSGTexture::Filtering filtering) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setLinkColor"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setLinkColor"
+            },
+            "arglist": {
+              "$": "(QColor linkColor) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setRenderType"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setRenderType"
+            },
+            "arglist": {
+              "$": "(QSGTextNode::RenderType renderType) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setRenderTypeQuality"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setRenderTypeQuality"
+            },
+            "arglist": {
+              "$": "(int renderTypeQuality) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setSelectionColor"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setSelectionColor"
+            },
+            "arglist": {
+              "$": "(QColor color) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setSelectionTextColor"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setSelectionTextColor"
+            },
+            "arglist": {
+              "$": "(QColor selectionTextColor) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setStyleColor"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setStyleColor"
+            },
+            "arglist": {
+              "$": "(QColor styleColor) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setTextStyle"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setTextStyle"
+            },
+            "arglist": {
+              "$": "(QSGTextNode::TextStyle textStyle) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setViewport"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "setViewport"
+            },
+            "arglist": {
+              "$": "(const QRectF &viewport) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QColor"
+            },
+            "name": {
+              "$": "color"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "color"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QColor"
+            },
+            "name": {
+              "$": "linkColor"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "linkColor"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QColor"
+            },
+            "name": {
+              "$": "selectionColor"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "selectionColor"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QColor"
+            },
+            "name": {
+              "$": "selectionTextColor"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "selectionTextColor"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QColor"
+            },
+            "name": {
+              "$": "styleColor"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "styleColor"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QRectF"
+            },
+            "name": {
+              "$": "viewport"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "viewport"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QSGTextNode::RenderType"
+            },
+            "name": {
+              "$": "renderType"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "renderType"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QSGTexture::Filtering"
+            },
+            "name": {
+              "$": "filtering"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "filtering"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual int"
+            },
+            "name": {
+              "$": "renderTypeQuality"
+            },
+            "anchorfile": {
+              "$": "qsgtextnode.html"
+            },
+            "anchor": {
+              "$": "renderTypeQuality"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
           }
         ]
       },
@@ -25727,7 +28552,7 @@
               "$": "setAnisotropyLevel"
             },
             "arglist": {
-              "$": "(AnisotropyLevel level)"
+              "$": "(QSGTexture::AnisotropyLevel level)"
             }
           },
           {
@@ -25748,7 +28573,7 @@
               "$": "setFiltering"
             },
             "arglist": {
-              "$": "(Filtering filter)"
+              "$": "(QSGTexture::Filtering filter)"
             }
           },
           {
@@ -25769,7 +28594,7 @@
               "$": "setHorizontalWrapMode"
             },
             "arglist": {
-              "$": "(WrapMode hwrap)"
+              "$": "(QSGTexture::WrapMode hwrap)"
             }
           },
           {
@@ -25790,7 +28615,7 @@
               "$": "setMipmapFiltering"
             },
             "arglist": {
-              "$": "(Filtering filter)"
+              "$": "(QSGTexture::Filtering filter)"
             }
           },
           {
@@ -25811,7 +28636,7 @@
               "$": "setVerticalWrapMode"
             },
             "arglist": {
-              "$": "(WrapMode vwrap)"
+              "$": "(QSGTexture::WrapMode vwrap)"
             }
           },
           {
@@ -26377,6 +29202,15 @@
       {
         "@kind": "class",
         "name": {
+          "$": "QtQuick.Effects.RectangularShadow"
+        },
+        "filename": {
+          "$": "qml-qtquick-effects-rectangularshadow.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "QtQuick.RegularExpressionValidator"
         },
         "filename": {
@@ -26536,6 +29370,15 @@
         },
         "filename": {
           "$": "qml-qtquick-layouts-rowlayout.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.SafeArea"
+        },
+        "filename": {
+          "$": "qml-qtquick-safearea.html"
         }
       },
       {
@@ -26736,6 +29579,15 @@
         },
         "filename": {
           "$": "qml-qtquick-shapes-shapepath.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.Shear"
+        },
+        "filename": {
+          "$": "qml-qtquick-shear.html"
         }
       },
       {
@@ -27173,6 +30025,25 @@
             "@static": "no",
             "type": {},
             "name": {
+              "$": "clearColumnReordering"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-tableview.html"
+            },
+            "anchor": {
+              "$": "clearColumnReordering-method"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
               "$": "clearColumnWidths"
             },
             "anchorfile": {
@@ -27211,6 +30082,25 @@
             "@static": "no",
             "type": {},
             "name": {
+              "$": "clearRowReordering"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-tableview.html"
+            },
+            "anchor": {
+              "$": "clearRowReordering-method"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
               "$": "closeEditor"
             },
             "anchorfile": {
@@ -27221,6 +30111,25 @@
             },
             "arglist": {
               "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "columnMoved"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-tableview.html"
+            },
+            "anchor": {
+              "$": "columnMoved-signal"
+            },
+            "arglist": {
+              "$": "(int logicalIndex, int oldVisualIndex, int newVisualIndex)"
             }
           },
           {
@@ -27339,6 +30248,44 @@
             },
             "arglist": {
               "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "moveColumn"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-tableview.html"
+            },
+            "anchor": {
+              "$": "moveColumn-method"
+            },
+            "arglist": {
+              "$": "(int source, int destination)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "moveRow"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-tableview.html"
+            },
+            "anchor": {
+              "$": "moveRow-method"
+            },
+            "arglist": {
+              "$": "(int source, int destination)"
             }
           },
           {
@@ -27628,6 +30575,25 @@
             "@static": "no",
             "type": {},
             "name": {
+              "$": "rowMoved"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-tableview.html"
+            },
+            "anchor": {
+              "$": "rowMoved-signal"
+            },
+            "arglist": {
+              "$": "(int logicalIndex, int oldVisualIndex, int newVisualIndex)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
               "$": "setColumnWidth"
             },
             "anchorfile": {
@@ -27897,6 +30863,59 @@
             },
             "arglist": {
               "$": "(string link)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.TextDocument"
+        },
+        "filename": {
+          "$": "qml-qtquick-textdocument.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "save"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-textdocument.html"
+            },
+            "anchor": {
+              "$": "save-method"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "saveAs"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-textdocument.html"
+            },
+            "anchor": {
+              "$": "saveAs-method"
+            },
+            "arglist": {
+              "$": "(url url)"
             }
           }
         ]
@@ -28317,6 +31336,25 @@
             },
             "arglist": {
               "$": "(int start, int end)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "textEdited"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-textedit.html"
+            },
+            "anchor": {
+              "$": "textEdited-signal"
+            },
+            "arglist": {
+              "$": "()"
             }
           },
           {
@@ -28789,6 +31827,15 @@
       {
         "@kind": "class",
         "name": {
+          "$": "QtQuick.TextSelection"
+        },
+        "filename": {
+          "$": "qml-qtquick-textselection.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "QtQuick.TouchPoint"
         },
         "filename": {
@@ -29080,6 +32127,15 @@
         },
         "filename": {
           "$": "qml-qtquick-vector3danimation.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.VectorImage.VectorImage"
+        },
+        "filename": {
+          "$": "qml-qtquick-vectorimage-vectorimage.html"
         }
       },
       {
@@ -29441,6 +32497,15 @@
             }
           }
         ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.WindowContainer"
+        },
+        "filename": {
+          "$": "qml-qtquick-windowcontainer.html"
+        }
       },
       {
         "@kind": "class",

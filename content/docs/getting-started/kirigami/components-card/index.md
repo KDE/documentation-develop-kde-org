@@ -8,15 +8,13 @@ aliases:
   - /docs/getting-started/kirigami/components-card/
 ---
 
-{{< kirigami-staging-api >}}
-
-The Kirigami types [AbstractCard](docs:kirigami2;AbstractCard) and [Card](docs:kirigami2;Card) are used to implement the popular card component used on many mobile and web platforms. Cards can be used to display a collection of information or actions in an attractive and distinctive way.
+The Kirigami types [AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) and [Card](docs:kirigami;org.kde.kirigami.Card) are used to implement the popular card component used on many mobile and web platforms. Cards can be used to display a collection of information or actions in an attractive and distinctive way.
 
 Kirigami also offers 3 kinds of [views](https://doc.qt.io/qt-6/qtquick-modelviewsdata-modelview.html) and [positioners](https://doc.qt.io/qt-6/qtquick-positioning-layouts.html) to aid you in presenting your cards with beautiful and responsive layouts.
 
 ## AbstractCard
 
-A [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) is the simplest type of card. It's just a rectangle with a shadow, which can contain any [Item](docs:qtquick;QtQuick.Item) in it. It can also have Items assigned to its [header](docs:kirigami2;templates::AbstractCard::header) or [footer](docs:kirigami2;templates::AbstractCard::footer) properties. In this case a [Kirigami.Heading](docs:kirigami2;Heading) is its `header` and a [Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) is the card's [contentItem](https://doc.qt.io/Qt-6/qml-qtquick-controls-control.html#contentItem-prop).
+A [Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) is the simplest type of card. It's just a rectangle with a shadow, which can contain any [Item](docs:qtquick;QtQuick.Item) in it. It can also have Items assigned to its [header](https://api-staging.kde.org/qml-org-kde-kirigami-abstractcard.html#header-prop) or [footer](https://api-staging.kde.org/qml-org-kde-kirigami-abstractcard.html#footer-prop) properties. In this case a [Kirigami.Heading](docs:kirigami;org.kde.kirigami.Heading) is its `header` and a [Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) is the card's [contentItem](https://doc.qt.io/Qt-6/qml-qtquick-controls-control.html#contentItem-prop).
 
 {{< sections >}}
 
@@ -49,7 +47,7 @@ Kirigami.AbstractCard {
 
 ## Card
 
-A [Kirigami.Card](docs:kirigami2;Card) inherits from [AbstractCard](docs:kirigami2;AbstractCard) and provides more features out of the box. Cards inherit the same [header](docs:kirigami2;templates::AbstractCard::header) and [footer](docs:kirigami2;templates::AbstractCard::footer) from an Abstract Card, but you are encouraged to use a [banner](docs:kirigami2;Card::banner) and a set of [Kirigami.Action](docs:kirigami2;Action) in the `actions` group instead.
+A [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card) inherits from [AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) and provides more features out of the box. Cards inherit the same [header](https://api-staging.kde.org/qml-org-kde-kirigami-abstractcard.html#header-prop) and [footer](https://api-staging.kde.org/qml-org-kde-kirigami-abstractcard.html#footer-prop) from an Abstract Card, but you are encouraged to use a [banner](https://api-staging.kde.org/qml-org-kde-kirigami-card.html#banner-prop) and a set of [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) in the `actions` group instead.
 
 {{< sections >}}
 
@@ -94,21 +92,21 @@ Kirigami.Card {
 
 ## CardsLayout
 
-A [Kirigami.CardsLayout](docs:kirigami2;CardsLayout) is most useful when the cards being presented are either not instantiated by a model or are instantiated by a model that always has very few items. They are presented as a grid of two columns which will remain centered if the application is really wide, or become a single column if there is not enough space for two columns, such as a mobile phone screen.
+A [Kirigami.CardsLayout](docs:kirigami;org.kde.kirigami.CardsLayout) is most useful when the cards being presented are either not instantiated by a model or are instantiated by a model that always has very few items. They are presented as a grid of two columns which will remain centered if the application is really wide, or become a single column if there is not enough space for two columns, such as a mobile phone screen.
 
 {{< alert title="Note" color="info" >}}
 
-[`CardsListView`](docs:kirigami2;CardsListView) is better suited for larger models.
+[`CardsListView`](docs:kirigami;org.kde.kirigami.CardsListView) is better suited for larger models.
 
 {{< /alert >}}
 
 {{< alert title="Important" color="warning" >}}
 
-A [CardsLayout](docs:kirigami2;CardsLayout) should always be contained within a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html).
+A [CardsLayout](docs:kirigami;org.kde.kirigami.CardsLayout) should always be contained within a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html).
 
 {{< /alert >}}
 
-A card can optionally be oriented horizontally. In this case it will be wider than tall, and is better suited to being placed in a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html). If you must put it in a [CardsLayout](docs:kirigami2;CardsLayout), it will have a [maximumColumns](docs:kirigami2;CardsLayout::maximumColumns) of `2` by default.
+A card can optionally be oriented horizontally. In this case it will be wider than tall, and is better suited to being placed in a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html). If you must put it in a [CardsLayout](docs:kirigami;org.kde.kirigami.CardsLayout), it will have a [maximumColumns](https://api-staging.kde.org/qml-org-kde-kirigami-cardslayout.html#maximumColumns-prop) of `2` by default.
 
 {{< sections >}}
 
@@ -152,11 +150,9 @@ ColumnLayout {
 
 ## CardsListView
 
-A [Kirigami.CardsListView](docs:kirigami2;CardsListView) is a list view that can be used with [AbstractCard](docs:kirigami2;AbstractCard) components.
+A [Kirigami.CardsListView](docs:kirigami;org.kde.kirigami.CardsListView) is a list view that can be used with [AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) components.
 
-A [CardsListView](docs:kirigami2;CardsListView) will stretch child cards to its own width. This component should therefore only be used with cards which will look good at any horizontal size. Use of a [Card](docs:kirigami2;Card) component inside it is discouraged, unless it has [Qt.Horizontal](docs:qtcore;Qt::Orientation) as its [headerOrientation](docs:kirigami2;templates::AbstractCard::headerOrientation) property.
-
-The choice between using this view with [AbstractCard](docs:kirigami2;AbstractCard) components or a conventional [ListView](docs:qtquick;QtQuick.ListView) with [AbstractListItem](docs:kirigami2;AbstractListItem)/[BasicListItem](docs:kirigami2;BasicListItem) components is purely an aesthetic one.
+A [CardsListView](docs:kirigami;org.kde.kirigami.CardsListView) will stretch child cards to its own width. This component should therefore only be used with cards which will look good at any horizontal size. Use of a [Card](docs:kirigami;org.kde.kirigami.Card) component inside it is discouraged, unless it has [Qt.Horizontal](docs:qtcore;Qt::Orientation) as its [headerOrientation](https://api-staging.kde.org/qml-org-kde-kirigami-abstractcard.html#headerOrientation-prop) property.
 
 {{< sections >}}
 

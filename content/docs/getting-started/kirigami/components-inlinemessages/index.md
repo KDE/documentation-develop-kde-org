@@ -7,15 +7,13 @@ aliases:
   - /docs/getting-started/kirigami/components-inlinemessages/
 ---
 
-{{< kirigami-staging-api >}}
-
 Inline messages provide an immediate way for you to notify your users about something that happened while using the application.
 
 ## Basic inline message
 
-[Kirigami.InlineMessage](docs:kirigami2;InlineMessage) components have two important properties to be mindful of:
+[Kirigami.InlineMessage](docs:kirigami;org.kde.kirigami.InlineMessage) components have two important properties to be mindful of:
 - [visible](https://doc.qt.io/qt-6/qml-qtquick-item.html#visible-prop): by default this is set to false, so that the message only appears when you explicitly want it to. This can be overridden if you wish by setting it to true. When a hidden inline message is set to be visible, you get a nice animation.
-- [text](docs:kirigami2;templates::InlineMessage::text): here is where you set the text of your inline message.
+- [text](https://api-staging.kde.org/qml-org-kde-kirigami-inlinemessage.html#text-prop): here is where you set the text of your inline message.
 
 {{< sections >}}
 
@@ -56,7 +54,7 @@ Kirigami.Page {
 
 ## Different types
 
-Standard inline messages are like the ones above: they have a blue background and a default icon. We can change that with the [type](docs:kirigami2;templates::InlineMessage::type) property, which lets us set our inline message to a different type. There are four types we can choose from:
+Standard inline messages are like the ones above: they have a blue background and a default icon. We can change that with the [type](https://api-staging.kde.org/qml-org-kde-kirigami-inlinemessage.html#type-prop) property, which lets us set our inline message to a different type. There are four types we can choose from:
 
 - **Information** (`Kirigami.MessageType.Information`): the default. Has a blue background, an 'i' icon, and is used to announce a result or tell the user something general. It is not necessary to manually set it.
 - **Positive** (`Kirigami.MessageType.Positive`): has a green background, tick icon, and indicates that something went well.
@@ -138,7 +136,7 @@ Kirigami.InlineMessage {
 
 {{< /sections >}}
 
-You can also customise the icon that appears on the top left of your message by providing a system icon name for the [icon.source](docs:kirigami2;templates::InlineMessage::icon) property. These icon names should correspond to icons installed on your system; you can use an application such as Cuttlefish provided by [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk) to browse and search the icons available on your system, and see what their names are.
+You can also customise the icon that appears on the top left of your message by providing a system icon name for the [icon.source](https://api-staging.kde.org/qml-org-kde-kirigami-inlinemessage.html#icon.source-prop) property. These icon names should correspond to icons installed on your system; you can use an application such as Cuttlefish provided by [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk) to browse and search the icons available on your system, and see what their names are.
 
 {{< sections >}}
 
@@ -165,7 +163,7 @@ Kirigami.InlineMessage {
 
 ## Using actions in inline messages
 
-If your messages need to be interactive, you can attach Kirigami actions to your inline messages. Like with pages, you can do this by setting the [InlineMessage.actions](docs:kirigami2;templates::InlineMessage::actions) property to either a [Kirigami.Action](docs:kirigami2;Action) or an array containing [Kirigami.Action](docs:kirigami2;Action) components.
+If your messages need to be interactive, you can attach Kirigami actions to your inline messages. Like with pages, you can do this by setting the [InlineMessage.actions](https://api-staging.kde.org/qml-org-kde-kirigami-inlinemessage.html#actions-prop) property to either a [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) or an array containing [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) components.
 
 {{< sections >}}
 
@@ -216,7 +214,7 @@ ColumnLayout {
 
 Inline messages provide a close button that can be used to easily dismiss them. 
 
-By default, this close button is hidden, but this can be overridden by setting the [showCloseButton](docs:kirigami2;templates::InlineMessage::showCloseButton) property to `true`.
+By default, this close button is hidden, but this can be overridden by setting the [showCloseButton](https://api-staging.kde.org/qml-org-kde-kirigami-inlinemessage.html#showCloseButton-prop) property to `true`.
 
 {{< sections >}}
 

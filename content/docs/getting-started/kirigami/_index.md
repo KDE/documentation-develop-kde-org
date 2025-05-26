@@ -25,8 +25,6 @@ aliases:
   - /docs/use/kirigami/
 ---
 
-{{< kirigami-staging-api >}}
-
 This tutorial will guide you through the process of creating your own convergent
 application using the [Kirigami framework](/frameworks/kirigami). A *convergent
 application*, in this context, means people can use the program easily

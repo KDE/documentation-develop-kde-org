@@ -7,7 +7,7 @@ aliases:
   - /docs/getting-started/kirigami/advanced-add_about_page/
 ---
 
-[Kirigami.AboutPage](docs:kirigami2;AboutPage) allows you to have a page that shows the copyright notice of the application together with the list of contributors and some information of which platform it's running on.
+[Kirigami.AboutPage](docs:kirigami;org.kde.kirigami.AboutPage) allows you to have a page that shows the copyright notice of the application together with the list of contributors and some information of which platform it's running on.
 
 First, we are going to edit our `main.cpp` file from previous tutorials.
 
@@ -27,7 +27,7 @@ Its first argument is the URI that will be used for the import, the second and t
 
 {{< readfile file="src/contents/ui/main.qml" highlight="qml" >}}
 
-First, we use the import we defined in the `main.cpp` file, namely `org.kde.example`. We then add a [Kirigami.Action](docs:kirigami2;Action) to our [global drawer](docs:kirigami2;GlobalDrawer) that will send us to the About page, and create a component with a [Kirigami.AboutPage](docs:kirigami2;AboutPage) in it, which expects a [KAboutData::applicationData()](docs:kcoreaddons;KAboutData::applicationData) object. We exposed precisely that in our `main.cpp` and called it `About`, so we can pass it here.
+First, we use the import we defined in the `main.cpp` file, namely `org.kde.example`. We then add a [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) to our [global drawer](docs:kirigami;org.kde.kirigami.GlobalDrawer) that will send us to the About page, and create a component with a [Kirigami.AboutPage](docs:kirigami;org.kde.kirigami.AboutPage) in it, which expects a [KAboutData::applicationData()](docs:kcoreaddons;KAboutData::applicationData) object. We exposed precisely that in our `main.cpp` and called it `About`, so we can pass it here.
 
 
 ### CMakeLists

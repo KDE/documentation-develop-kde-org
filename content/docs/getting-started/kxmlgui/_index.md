@@ -11,10 +11,12 @@ aliases:
 ---
 
 This tutorial will guide you in creating a small text editor using
-[KTextEditor](docs:ktexteditor;index.html)
-, [KXmlGui](docs:kxmlgui;index.html) for
-the window and [KIO](docs:kio;index.html)
+[KTextEditor](docs:ktexteditor;ktexteditor-index.html)
+, [KXmlGui](docs:kxmlgui;kxmlgui-index.html) for
+the window and [KIO](https://api-staging.kde.org/kio-index.html)
 for saving and loading files.
+
+<!-- TODO: investigate why KIO can't be linked with docs: -->
 
 KXmlGui is built on top of QtWidgets and provides several libraries easily create your user interfaces with C++. QtWidgets is a mature technology with several premade components to easily create user interfaces, and it is strongly geared towards non-convergent, traditional desktop interfaces.
 

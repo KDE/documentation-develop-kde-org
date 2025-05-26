@@ -9,7 +9,11 @@ description: >
 
 <!-- TODO either remove AppletInterface or point to PlasmaQuick::Dialog::appletInterface -->
 
-As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contentsuimainqml" >}}), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` [property group](https://doc.qt.io/qt-6/qtqml-syntax-objectattributes.html#grouped-properties) has properties from [`AppletInterface`](docs:plasma-framework;AppletInterface) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/plasma/libplasma/-/blob/master/src/plasmaquick/appletquickitem.h).
+<!-- TODO: investigate why it's not possible to link to AppletInterface (now named PlasmoidItem) with Docs: -->
+
+<!-- TODO: What to do with PlasmaQuick::AppletQuickItem? See https://invent.kde.org/plasma/libplasma/-/blob/master/src/plasmaquick/appletquickitem.h#L39 -->
+
+As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contentsuimainqml" >}}), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` [property group](https://doc.qt.io/qt-6/qtqml-syntax-objectattributes.html#grouped-properties) has properties from [`AppletInterface`](https://api-staging.kde.org/qml-org-kde-plasma-plasmoid-plasmoiditem.html) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/plasma/libplasma/-/blob/master/src/plasmaquick/appletquickitem.h).
 
 
 ### plasmoid context property
@@ -38,6 +42,8 @@ Item {
 
 <!-- TODO remove ConstraintHints -->
 
+<!-- TODO: investigate why it's not possible to link to KConfig::KConfigPropertyMap with docs:  -->
+
 | Property | Type | Notes |
 |-----|-----|-----|
 | `Plasmoid.activationTogglesExpanded` | `bool` | Keyboard shortcut will toggle `Plasmoid.expanded`. [Since KDE Frameworks 5.76](https://invent.kde.org/frameworks/plasma-framework/-/commit/d6a5b10b3b9a4984209f6509a3ed9196b0c1d5d6), this is `true` by default. |
@@ -46,31 +52,31 @@ Item {
 | `Plasmoid.associatedApplicationUrls` | `QList<QUrl>` |  |
 | `Plasmoid.availableScreenRect` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
 | `Plasmoid.availableScreenRegion` | `QVariantList` |  |
-| `Plasmoid.backgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma-framework;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). Turn off the desktop widget bg. |
+| `Plasmoid.backgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). Turn off the desktop widget bg. |
 | `Plasmoid.busy` | `bool` | Draw the [`BusyIndicator`]({{< ref "plasma-qml-api#busyindicator" >}}) overtop the widget. |
 | `Plasmoid.compactRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](#plasmoidcompactrepresentation). The smaller "icon" view view of the widget shown in the panel. |
 | `Plasmoid.compactRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) | The instance of the `compactRepresentation` Component. May be `null` on load if not visible. |
-| `Plasmoid.configuration` | [`KDeclarative::ConfigPropertyMap`](docs:kdeclarative;KDeclarative::ConfigPropertyMap) | [Documentation](#plasmoidconfiguration). Provides access to all user configurable values as sub-properties. |
+| `Plasmoid.configuration` | [`KConfig::KConfigPropertyMap`](https://api-staging.kde.org/kconfigpropertymap.html) | [Documentation](#plasmoidconfiguration). Provides access to all user configurable values as sub-properties. |
 | `Plasmoid.configurationRequired` | `bool` | Wither to show a Configure button on top of the compact/full representation. It may look better to create your own button that calls `plasmoid.action("configure").trigger()`. |
 | `Plasmoid.configurationRequiredReason` | `string` | Not currently implemented to do anything. |
-| `Plasmoid.constraintHints` | [`Plasma::Types::ConstraintHints`](docs:plasma-framework;Plasma::Types::ConstraintHints) |  |
-| `Plasmoid.containmentDisplayHints` | [`Plasma::Types::ContainmentDisplayHints`](docs:plasma-framework;Plasma::Types::ContainmentDisplayHint) |  |
+| `Plasmoid.constraintHints` | [`Plasma::Types::ConstraintHints`](docs:plasma;Plasma::Applet::ConstraintHints) |  |
+| `Plasmoid.containmentDisplayHints` | [`Plasma::Types::ContainmentDisplayHints`](docs:plasma;Plasma::Types::ContainmentDisplayHint) |  |
 | `Plasmoid.contextualActions` | `QList<QObject*>` |  |
 | `Plasmoid.currentActivity` | `string` |  |
 | `Plasmoid.editMode` | `bool` | Only available to Containments like the "panel" widget. Used to toggle the global widget editing mode. |
-| `Plasmoid.effectiveBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma-framework;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). The actual background hints the applet has based on `backgroundHints` and `userBackgroundHints`. |
+| `Plasmoid.effectiveBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). The actual background hints the applet has based on `backgroundHints` and `userBackgroundHints`. |
 | `Plasmoid.expanded` | `bool` |  |
-| `Plasmoid.formFactor` | [`Plasma::Types::FormFactor`](docs:plasma-framework;Plasma::Types::FormFactor) |  |
+| `Plasmoid.formFactor` | [`Plasma::Types::FormFactor`](docs:plasma;Plasma::Types::FormFactor) |  |
 | `Plasmoid.fullRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | [Documentation](#plasmoidfullrepresentation). The full "popup" view of the widget. |
 | `Plasmoid.fullRepresentationItem` | [`Item`](https://doc.qt.io/qt-6/qml-qtquick-item.html) | The instance of the `fullRepresentation` Component. Since widget popup's a lazy loaded, it is `null` until the popup is opened. |
 | `Plasmoid.globalShortcut` | [`QKeySequence`](https://doc.qt.io/qt-5/qkeysequence.html) |  |
 | `Plasmoid.hideOnWindowDeactivate` | `bool ` | Set to `false` to "pin" the widget's full representation dialog open when out of focus. |
 | `Plasmoid.icon` | `string` | [Example](#plasmoidicon) |
 | `Plasmoid.id` | `uint` | This is an integer representing the widget instance. See `Plasmoid.metaData.pluginId` for the widget namespace. |
-| `Plasmoid.immutability` | [`Plasma::Types::ImmutabilityType`](docs:plasma-framework;Plasma::Types::ImmutabilityType) | Detect if Kiosk mode has locked the widgets, or the user Lock Widget mode from Plasma 5.18 and below. |
+| `Plasmoid.immutability` | [`Plasma::Types::ImmutabilityType`](docs:plasma;Plasma::Types::ImmutabilityType) | Detect if Kiosk mode has locked the widgets, or the user Lock Widget mode from Plasma 5.18 and below. |
 | `Plasmoid.immutable` | `bool` | `true` if either `UserImmutable` or `SystemImmutable`. |
 | `Plasmoid.loading` | `bool` | Always `false` when widget is running. |
-| `Plasmoid.location` | [`Plasma::Types::Location`](docs:plasma-framework;Plasma::Types::Location) | Location of widget on the screen. |
+| `Plasmoid.location` | [`Plasma::Types::Location`](docs:plasma;Plasma::Types::Location) | Location of widget on the screen. |
 | `Plasmoid.metaData` | [`KPluginMetaData`](docs:kcoreaddons;KPluginMetaData) | Reads `metadata.json` (or `metadata.desktop`). See the [`AboutPlugin.qml` source code](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/desktoppackage/contents/configuration/AboutPlugin.qml) for examples. |
 | `Plasmoid.metaData.authors` | `QVariantList` |  |
 | `Plasmoid.metaData.category` | `string` |  |
@@ -104,7 +110,7 @@ Item {
 | `Plasmoid.screen` | `int` |  |
 | `Plasmoid.screenGeometry` | [`rect`](https://doc.qt.io/qt-5/qml-rect.html) |  |
 | `Plasmoid.self` | `AppletInterface` |  |
-| `Plasmoid.status` | [`Plasma::Types::ItemStatus`](docs:plasma-framework;Plasma::Types::ItemStatus) |  |
+| `Plasmoid.status` | [`Plasma::Types::ItemStatus`](docs:plasma;Plasma::Types::ItemStatus) |  |
 | `Plasmoid.switchHeight` | `int` | The minimum height required to switch to `fullRepresentation`. |
 | `Plasmoid.switchWidth` | `int` | The minimum width required to switch to `fullRepresentation`. |
 | `Plasmoid.title` | `string` | The translated widget name. |
@@ -112,7 +118,7 @@ Item {
 | `Plasmoid.toolTipMainText` | `string` | The mainText in the default tooltip layout. |
 | `Plasmoid.toolTipSubText` | `string` | The subText in the default tooltip layout. |
 | `Plasmoid.toolTipTextFormat` | `int` | The [`TextFormat`](https://doc.qt.io/qt-5/qml-qtquick-text.html#textFormat-prop) of the subText. Defaults to `PlainText`. |
-| `Plasmoid.userBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma-framework;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). The user specified background hint. |
+| `Plasmoid.userBackgroundHints` | [`Plasma::Types::BackgroundHints`](docs:plasma;Plasma::Types::BackgroundHints) | [Documentation](#plasmoidbackgroundhints). The user specified background hint. |
 | `Plasmoid.userConfiguring` | `bool` |  |
 
 
@@ -121,7 +127,7 @@ Item {
 
 The compact representation uses [`DefaultCompactRepresentation.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/desktoppackage/contents/applet/DefaultCompactRepresentation.qml) by default. To summarize, it:
 
-* Draws the `plasmoid.icon` using a [`Kirigami.Icon`](docs:kirigami2;Icon)
+* Draws the `plasmoid.icon` using a [`Kirigami.Icon`](docs:kirigami;org.kde.kirigami.primitives.Icon)
 * Defines a [`MouseArea`](https://doc.qt.io/qt-5/qml-qtquick-mousearea.html) to toggle the `expanded` property which displays the full representation.
 
 
@@ -141,7 +147,12 @@ Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
 If there isn't enough room, then the widget will display `Plasmoid.compactRepresentation` instead, and the full representation will be visible when [`plasmoid.expanded`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasmaquick/appletquickitem.h#L63-67) is `true`.
 
-In a plasma widget, the full representation will be shown in a [`PlasmaCore.Dialog`](docs:plasma-framework;PlasmaQuick::Dialog) which you cannot access directly. You can manipulate the dialog with:
+<!--
+TODO: investigate why it's not possible to link to PlasmaQuick.Dialog with docs:
+also: https://invent.kde.org/plasma/libplasma/-/issues/16
+-->
+
+In a plasma widget, the full representation will be shown in a [PlasmaQuick.Dialog](https://api-staging.kde.org/plasmaquick-dialog.html) which you cannot access directly. You can manipulate the dialog with:
 
 * Set `Layout.preferredWidth` and `Layout.preferredHeight` in your full representation `Item` to change to dialog size.
 * Set `Plasmoid.hideOnWindowDeactivate` to prevent the dialog from closing. You can use this to have a configurable "pin" [like the digital clock widget does](https://invent.kde.org/plasma/plasma-workspace/-/blob/333e8ef54733bb764d6cebf4b03ab794d139684c/applets/digital-clock/package/contents/ui/CalendarView.qml#L240-244).
@@ -208,6 +219,8 @@ This property provides access to the values user configurable values. You can ea
 Read more about configuration and the config dialog in [it's section of the tutorial]({{< ref "configuration.md" >}}).
 
 The user's configuration is serialized to `~/.config/plasma-org.kde.plasma.desktop-appletsrc` when the `plasmashell` process terminates and is only loaded at startup.
+
+<!-- TODO: drop these sections -->
 
 Since: **KDE Frameworks 5.78**, you can reference the default value of `plasmoid.configuration.varName` with  `plasmoid.configuration.varNameDefault`.
 

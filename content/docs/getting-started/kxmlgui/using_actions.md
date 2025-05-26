@@ -91,7 +91,7 @@ clearAction->setIcon(QIcon::fromTheme(u"document-new-symbolic"_s));
 
 ### Adding to the Collection
 
-In order for the action to be accessed via [KXmlGui](docs:kxmlgui) (explained in depth later) it must be added to the application's action collection.
+In order for the action to be accessed via [KXmlGui](docs:kxmlgui;kxmlgui-index.html) (explained in depth later) it must be added to the application's action collection.
 
 Because our [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) uses the [KXmlGuiClient](docs:kxmlgui;KXMLGUIClient) interface, we can use the utility virtual function [KXmlGuiClient::actionCollection()](docs:kxmlgui;KXMLGUIClient::actionCollection) to retrieve the list of actions in our application, returning a [KActionCollection](docs:kxmlgui;KActionCollection).
 
@@ -103,7 +103,7 @@ The action collection is accessed via the `actionCollection()` function like thi
 actionCollection()->addAction("clear", clearAction);
 ```
 
-Here, our `clearAction` [QAction](docs:qtwidgets;QAction) is added to the collection and given a name of `clear`. This name (clear) is used by the [KXmlGui](docs:kxmlgui) framework to refer to the action, so it is used internally and will not be localized.
+Here, our `clearAction` [QAction](docs:qtwidgets;QAction) is added to the collection and given a name of `clear`. This name (clear) is used by the [KXmlGui](docs:kxmlgui;kxmlgui-index.html) framework to refer to the action, so it is used internally and will not be localized.
 
 ###  Keyboard Shortcuts
 
@@ -144,7 +144,7 @@ In the end, this creates an action with the correct icon, text and shortcut and 
 
 ### Adding the action to menus and toolbars
 
-At the moment, the new "Clear" action has been created but it hasn't been associated with any menus or toolbars. We will be using [KXmlGui's](docs:kxmlgui) capabilities for that, as it does nice things like create movable toolbars for you.
+At the moment, the new "Clear" action has been created but it hasn't been associated with any menus or toolbars. We will be using [KXmlGui's](docs:kxmlgui;kxmlgui-index.html) capabilities for that, as it does nice things like create movable toolbars for you.
 
 ### Defining your own help menu
 
@@ -152,7 +152,7 @@ The Help menu has been standardized to ease the lives of both developers and use
 
 ### XMLGUI
 
-The `setupGUI()` function in [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) depends on the [KXmlGui](docs:kxmlgui) system to construct the GUI, which is done by parsing an XML file description of the interface.
+The `setupGUI()` function in [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) depends on the [KXmlGui](docs:kxmlgui;kxmlgui-index.html) system to construct the GUI, which is done by parsing an XML file description of the interface.
 
 The rule for naming this XML file is `appnameui.rc`, where appname is the name you set in [`KAboutData`](docs:kcoreaddons;KAboutData) (in this case, `TextEditor`). So in our example, the file is called `texteditorui.rc`, and is placed in the same folder as our other files. Where the file will ultimately be placed is handled by CMake.
 
@@ -202,7 +202,7 @@ or
 texteditor
 ```
 
-As you might remember from the [KXmlGui Hello World]{{< ref "hello_world" >}}, when installing the project manually with CMake, we specified the `--install-prefix` flag:
+As you might remember from the [KXmlGui Hello World]({{< ref "hello_world" >}}), when installing the project manually with CMake, we specified the `--install-prefix` flag:
 
 ```bash
 cmake -B build/ --install-prefix ~/.local

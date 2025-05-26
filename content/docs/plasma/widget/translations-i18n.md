@@ -9,7 +9,9 @@ aliases:
 
 ## ki18n
 
-[Ki18n](docs:ki18n) (**K**DE **i**nternationalizatio**n**) is the translation library for KDE. It has a [programmer's guide](docs:ki18n;prg_guide.html) which you can read, but we'll cover the basics here.
+<!-- TODO: port the programmer's guide to QDoc -->
+
+[Ki18n](docs:ki18n;ki18n-index.html) (**K**DE **i**nternationalizatio**n**) is the translation library for KDE. It has a [programmer's guide](https://api.kde.org/frameworks/ki18n/html/prg_guide.html) which you can read, but we'll cover the basics here.
 
 
 ## i18n()
@@ -67,7 +69,7 @@ Item {
 
 In English, a translated sentence is different when there's just 1 item from when there is 2 or more items. `i18np(...)` can be used in such a situation.
 
-An example from the [Ki18n docs](docs:ki18n;prg_guide.html) is:
+An example from the [Ki18n docs](https://api.kde.org/frameworks/ki18n/html/prg_guide.html) is:
 
 ```qml
 i18np("One image in album %2", "%1 images in album %2", numImages, albumName)

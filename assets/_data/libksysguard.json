@@ -1,24 +1,14 @@
 {
   "tagfile": {
-    "@doxygen_version": "1.10.0",
-    "@doxygen_gitid": "GIT-NOTFOUND",
+    "@doxygen_version": "1.13.2",
     "compound": [
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::ksysguard::faces::Choices"
+          "$": "ExtendedLegend"
         },
         "filename": {
-          "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1Choices.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org::kde::ksysguard::faces::ExtendedLegend"
-        },
-        "filename": {
-          "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"
+          "$": "classExtendedLegend.html"
         },
         "member": [
           {
@@ -30,10 +20,10 @@
               "$": "colorSource"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"
+              "$": "classExtendedLegend.html"
             },
             "anchor": {
-              "$": "a8602dde1222f63051d801f49ad1165db"
+              "$": "ae49a18970e46f180610e4b6d36bfebc8"
             },
             "arglist": {}
           },
@@ -46,10 +36,10 @@
               "$": "sensorIds"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"
+              "$": "classExtendedLegend.html"
             },
             "anchor": {
-              "$": "a092a793a0b140fd341f46b02a48ff96a"
+              "$": "a1c2266538402b52ea9c8a48e7540e6c4"
             },
             "arglist": {}
           },
@@ -62,10 +52,10 @@
               "$": "sourceModel"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1ExtendedLegend.html"
+              "$": "classExtendedLegend.html"
             },
             "anchor": {
-              "$": "aa7221249720bac83315cc5e65cf03a72"
+              "$": "ac6754f06f1f5fc6968b937d364dbc8da"
             },
             "arglist": {}
           }
@@ -171,7 +161,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "KSysGuard::SensorFaceController *"
+              "$": "QML_ELEMENTKSysGuard::SensorFaceController *"
             },
             "name": {
               "$": "parentController"
@@ -180,7 +170,7 @@
               "$": "classKSysGuard_1_1FaceLoader.html"
             },
             "anchor": {
-              "$": "aa541262bd976f48d7de578ce28b87979"
+              "$": "ac7632f9d99b23a5a998b6cc1fc61e140"
             },
             "arglist": {}
           },
@@ -215,6 +205,22 @@
               "$": "a57ab8eecb53e3f25e2b470e2ebb23e83"
             },
             "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "updateRateLimit"
+            },
+            "anchorfile": {
+              "$": "classKSysGuard_1_1FaceLoader.html"
+            },
+            "anchor": {
+              "$": "ae9bc93aed3db103126eaede5a1831964"
+            },
+            "arglist": {}
           }
         ]
       },
@@ -240,10 +246,10 @@
               "$": "classKSysGuard_1_1Formatter.html"
             },
             "anchor": {
-              "$": "a87a491da0677242787ab13b49cd3575e"
+              "$": "a12c7eb435497310ba161311ab5ad75d4"
             },
             "arglist": {
-              "$": "(const QVariant &value, Unit unit, MetricPrefix targetPrefix=MetricPrefixAutoAdjust, FormatOptions options=FormatOptionNone)"
+              "$": "(const QVariant &value, Unit unit, MetricPrefix targetPrefix=MetricPrefixAutoAdjust, FormatOptions options=FormatOptionNone, int precision=-1)"
             }
           },
           {
@@ -477,7 +483,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "QString"
+              "$": "QML_ELEMENTQString"
             },
             "name": {
               "$": "sensorId"
@@ -486,7 +492,7 @@
               "$": "classKSysGuard_1_1Sensor.html"
             },
             "anchor": {
-              "$": "ad2b6c8273b0e493ed8f138eaf76aab36"
+              "$": "a0d1e45be0008cd052521cb4b9179957c"
             },
             "arglist": {}
           },
@@ -598,7 +604,7 @@
               "$": "classKSysGuard_1_1Sensor.html"
             },
             "anchor": {
-              "$": "a9d0dabbe8df9638bfbfa7f254f2a6ad2"
+              "$": "a5c7a5e41f0d56396eceec81003556a8c"
             },
             "arglist": {}
           },
@@ -1110,7 +1116,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "QStringList"
+              "$": "QML_ELEMENTQStringList"
             },
             "name": {
               "$": "sensors"
@@ -1119,7 +1125,7 @@
               "$": "classKSysGuard_1_1SensorDataModel.html"
             },
             "anchor": {
-              "$": "af05fd5786e7697f17da4e3e8049d0949"
+              "$": "aaa92c3329f07dac6ba2ff61c586a1f0e"
             },
             "arglist": {}
           },
@@ -1554,7 +1560,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "QString"
+              "$": "QML_ELEMENTQString"
             },
             "name": {
               "$": "title"
@@ -1563,7 +1569,7 @@
               "$": "classKSysGuard_1_1SensorFaceController.html"
             },
             "anchor": {
-              "$": "ad34dd198e8d1b271bc32897d2d58b8b1"
+              "$": "a7da6a3e078ceb4653226e981bcb67757"
             },
             "arglist": {}
           },
@@ -1609,10 +1615,10 @@
               "$": "classKSysGuard_1_1SensorFaceController.html"
             },
             "anchor": {
-              "$": "a3cd7539276150a615aaa8ca17c40afeb"
+              "$": "aa876316601ea3e9cd17f36fd5f066362"
             },
             "arglist": {
-              "$": "(KConfigGroup &config, QQmlEngine *engine)"
+              "$": "(KConfigGroup &config, QQmlEngine *engine, QQmlEngine *configEngine)"
             }
           },
           {
@@ -1868,10 +1874,10 @@
       {
         "@kind": "class",
         "name": {
-          "$": "org::kde::ksysguard::faces::SensorRangeSpinBox"
+          "$": "SensorRangeSpinBox"
         },
         "filename": {
-          "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+          "$": "classSensorRangeSpinBox.html"
         },
         "member": [
           {
@@ -1883,10 +1889,10 @@
               "$": "from"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+              "$": "classSensorRangeSpinBox.html"
             },
             "anchor": {
-              "$": "a76d5c4c7d43349685e9c8e3fec66c4e0"
+              "$": "a75af58e4f521ce7d052519542957d1b1"
             },
             "arglist": {}
           },
@@ -1899,10 +1905,10 @@
               "$": "multiplier"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+              "$": "classSensorRangeSpinBox.html"
             },
             "anchor": {
-              "$": "a1383b01c5d321b0bc4dd33de09e02e9c"
+              "$": "aac58b3f07b95c13aa268110b9c783444"
             },
             "arglist": {}
           },
@@ -1915,10 +1921,10 @@
               "$": "sensors"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+              "$": "classSensorRangeSpinBox.html"
             },
             "anchor": {
-              "$": "a97e40dea0b7a9d5e315f8f3bca78a779"
+              "$": "a6517033b020b97d2e4b6394eb4b81786"
             },
             "arglist": {}
           },
@@ -1931,10 +1937,10 @@
               "$": "to"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+              "$": "classSensorRangeSpinBox.html"
             },
             "anchor": {
-              "$": "a1c623168b8febecadeafeffdff041dd2"
+              "$": "a36c204b66aea71e5f3d64c31f5d425ce"
             },
             "arglist": {}
           },
@@ -1947,10 +1953,10 @@
               "$": "unit"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+              "$": "classSensorRangeSpinBox.html"
             },
             "anchor": {
-              "$": "a714efe65a013f9e88480c44125e4cc5e"
+              "$": "ae66a1e9dab41ec93804757b48c6ab040"
             },
             "arglist": {}
           },
@@ -1963,10 +1969,10 @@
               "$": "value"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+              "$": "classSensorRangeSpinBox.html"
             },
             "anchor": {
-              "$": "ab78e03693236b5d7bbb9bed2706b56c1"
+              "$": "ab56dc4426f3935d9914dfba9b160e5ba"
             },
             "arglist": {}
           },
@@ -1979,10 +1985,10 @@
               "$": "valueModified"
             },
             "anchorfile": {
-              "$": "classorg_1_1kde_1_1ksysguard_1_1faces_1_1SensorRangeSpinBox.html"
+              "$": "classSensorRangeSpinBox.html"
             },
             "anchor": {
-              "$": "ac3d0d4443a7912299d0971ae648273b6"
+              "$": "afa1fc42bf4873083d14ccbf2e22f240f"
             },
             "arglist": {
               "$": "()"
@@ -2033,7 +2039,7 @@
           {
             "@kind": "property",
             "type": {
-              "$": "QStringList"
+              "$": "QML_ELEMENTQStringList"
             },
             "name": {
               "$": "sensors"
@@ -2042,7 +2048,7 @@
               "$": "classKSysGuard_1_1SensorUnitModel.html"
             },
             "anchor": {
-              "$": "aa830caa508df1c9a0ccc7da9f971fbf1"
+              "$": "abff2ec6471160a5abdd461f6fb0fd061"
             },
             "arglist": {}
           }

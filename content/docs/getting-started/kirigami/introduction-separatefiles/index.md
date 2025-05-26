@@ -8,8 +8,6 @@ aliases:
   - /docs/getting-started/kirigami/introduction-separatefiles/
 ---
 
-{{< kirigami-staging-api >}}
-
 ## Why and how
 
 For the first time, we will be separating some of our components into their own QML files. If we keep adding things to `Main.qml`, it's going to quickly become hard to tell what does what, and we risk muddying our code.
@@ -127,7 +125,7 @@ Let's take a look once again at the original `Main.qml`:
 
 The custom delegate with `id: kountdownDelegate` can be split completely because it is already enveloped in a [QML Component type](docs:qtqml;QtQml.Component). We use a Component to be able to define it without needing to instantiate it; separate QML files work the same way.
 
-If we move the code to a separate files, then, there is no point in leaving it enveloped in a Component: we can split just the [Kirigami.AbstractCard](docs:kirigami2;AbstractCard) in the separate file. Here is the resulting `KountdownDelegate.qml`:
+If we move the code to a separate files, then, there is no point in leaving it enveloped in a Component: we can split just the [Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) in the separate file. Here is the resulting `KountdownDelegate.qml`:
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/KountdownDelegate.qml" highlight="qml" >}}
 

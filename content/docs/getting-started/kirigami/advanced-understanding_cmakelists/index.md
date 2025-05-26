@@ -42,7 +42,7 @@ The following section is important, because it specifies which dependencies we'l
 
 {{< alert title="Note" color="info" >}}
 
-If you are looking to add any components listed in the [KDE API documentation](https://api.kde.org/) to your application, you may check the right sidebar for how to add the component with CMake. For instance, for [Kirigami](docs:kirigami2;), you will find something like `find_package(KF6Kirigami)`, which with the addition of ECM becomes:
+If you are looking to add any components listed in the [KDE API documentation](https://api.kde.org/) to your application, you may check the right sidebar for how to add the component with CMake. For instance, for [Kirigami](docs:kirigami;kirigami-index.html), you will find something like `find_package(KF6Kirigami)`, which with the addition of ECM becomes:
 
 ```cmake
 find_package(KF6 COMPONENTS Kirigami)

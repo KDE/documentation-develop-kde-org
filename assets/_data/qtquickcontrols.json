@@ -152,6 +152,48 @@
               "$": "void"
             },
             "name": {
+              "$": "animateClick"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-abstractbutton.html"
+            },
+            "anchor": {
+              "$": "animateClick-method"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "click"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-abstractbutton.html"
+            },
+            "anchor": {
+              "$": "click-method"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "toggle"
             },
             "anchorfile": {
@@ -970,6 +1012,34 @@
             }
           }
         ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.Controls.ContextMenu"
+        },
+        "filename": {
+          "$": "qml-qtquick-controls-contextmenu.html"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "requested"
+          },
+          "anchorfile": {
+            "$": "qml-qtquick-controls-contextmenu.html"
+          },
+          "anchor": {
+            "$": "requested-signal"
+          },
+          "arglist": {
+            "$": "(point position)"
+          }
+        }
       },
       {
         "@kind": "class",
@@ -3349,6 +3419,69 @@
               "$": "Item"
             },
             "name": {
+              "$": "popCurrentItem"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "popCurrentItem-method"
+            },
+            "arglist": {
+              "$": "(operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "popToIndex"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "popToIndex-method"
+            },
+            "arglist": {
+              "$": "(index, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "popToItem"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "popToItem-method"
+            },
+            "arglist": {
+              "$": "(item, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
               "$": "push"
             },
             "anchorfile": {
@@ -3370,6 +3503,90 @@
               "$": "Item"
             },
             "name": {
+              "$": "pushItem"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "pushItem-method"
+            },
+            "arglist": {
+              "$": "(component, properties, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "pushItem"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "pushItem-method"
+            },
+            "arglist": {
+              "$": "(item, properties, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "pushItem"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "pushItem-method"
+            },
+            "arglist": {
+              "$": "(url, properties, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "pushItems"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "pushItems-method"
+            },
+            "arglist": {
+              "$": "(items, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
               "$": "replace"
             },
             "anchorfile": {
@@ -3380,6 +3597,90 @@
             },
             "arglist": {
               "$": "(target, item, properties, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "replaceCurrentItem"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "replaceCurrentItem-method"
+            },
+            "arglist": {
+              "$": "(component, properties, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "replaceCurrentItem"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "replaceCurrentItem-method"
+            },
+            "arglist": {
+              "$": "(item, properties, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "replaceCurrentItem"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "replaceCurrentItem-method"
+            },
+            "arglist": {
+              "$": "(items, operation)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "replaceCurrentItem"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-controls-stackview.html"
+            },
+            "anchor": {
+              "$": "replaceCurrentItem-method"
+            },
+            "arglist": {
+              "$": "(url, properties, operation)"
             }
           },
           {
@@ -3678,6 +3979,15 @@
         },
         "filename": {
           "$": "qml-qtquick-controls-tabbutton.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QtQuick.Controls.TableViewDelegate"
+        },
+        "filename": {
+          "$": "qml-qtquick-controls-tableviewdelegate.html"
         }
       },
       {

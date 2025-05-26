@@ -1,7 +1,6 @@
 {
   "tagfile": {
-    "@doxygen_version": "1.10.0",
-    "@doxygen_gitid": "GIT-NOTFOUND",
+    "@doxygen_version": "1.13.2",
     "compound": [
       {
         "@kind": "class",
@@ -1750,6 +1749,126 @@
       {
         "@kind": "class",
         "name": {
+          "$": "FilterImporterExporter"
+        },
+        "filename": {
+          "$": "classFilterImporterExporter.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "FilterImporterExporter"
+            },
+            "anchorfile": {
+              "$": "classFilterImporterExporter.html"
+            },
+            "anchor": {
+              "$": "a0689bcb17e040b297fee73d315dce6ea"
+            },
+            "arglist": {
+              "$": "(QWidget *parent=nullptr)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@virtualness": "virtual",
+            "type": {
+              "$": "virtual"
+            },
+            "name": {
+              "$": "~FilterImporterExporter"
+            },
+            "anchorfile": {
+              "$": "classFilterImporterExporter.html"
+            },
+            "anchor": {
+              "$": "a24616c90d063bb540d2634ae514247c4"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "exportFilters"
+            },
+            "anchorfile": {
+              "$": "classFilterImporterExporter.html"
+            },
+            "anchor": {
+              "$": "a3b1dc21d2e92fc699a271aea2908b92c"
+            },
+            "arglist": {
+              "$": "(const QList< MailFilter * > &filters, const QUrl &fileName=QUrl(), bool saveAll=false)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QList< MailFilter * >"
+            },
+            "name": {
+              "$": "importFilters"
+            },
+            "anchorfile": {
+              "$": "classFilterImporterExporter.html"
+            },
+            "anchor": {
+              "$": "a8bccb068206f014bec3dce04a95c923b"
+            },
+            "arglist": {
+              "$": "(bool &canceled, FilterImporterExporter::FilterType type=FilterImporterExporter::KMailFilter, const QString &filename=QString())"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static QList< MailFilter * >"
+            },
+            "name": {
+              "$": "readFiltersFromConfig"
+            },
+            "anchorfile": {
+              "$": "classFilterImporterExporter.html"
+            },
+            "anchor": {
+              "$": "ad32b1861c3398dcb1d2a1e099c768c5d"
+            },
+            "arglist": {
+              "$": "(const KSharedConfig::Ptr &config, QStringList &emptyFilter)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static void"
+            },
+            "name": {
+              "$": "writeFiltersToConfig"
+            },
+            "anchorfile": {
+              "$": "classFilterImporterExporter.html"
+            },
+            "anchor": {
+              "$": "ab01171ea89875eb50381542a25041767"
+            },
+            "arglist": {
+              "$": "(const QList< MailFilter * > &filters, KSharedConfig::Ptr config, bool exportFilter=false)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "MailCommon::FilterImporterExporter"
         },
         "filename": {
@@ -1896,6 +2015,488 @@
         "filename": {
           "$": "classMailCommon_1_1FilterImporterThunderbird.html"
         }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "FilterLog"
+        },
+        "filename": {
+          "$": "classFilterLog.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "AppliedAction"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2af2c6449d9fec91b586ddcc2e968ae473"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "type": {},
+            "name": {
+              "$": "ContentType"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Meta"
+            },
+            "anchorfile": {
+              "$": "classMailCommon_1_1FilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2acb758a8d5a0cd5755c2ce29c437dfa3a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PatternDescription"
+            },
+            "anchorfile": {
+              "$": "classMailCommon_1_1FilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2ac4284bd28b07c00ce6864126255e914b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RuleResult"
+            },
+            "anchorfile": {
+              "$": "classMailCommon_1_1FilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2af6e1c0e4035f18dcb8ca8b423aa4c254"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PatternResult"
+            },
+            "anchorfile": {
+              "$": "classMailCommon_1_1FilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2a9ee39c58e03d11b18ae020d691a46f93"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "AppliedAction"
+            },
+            "anchorfile": {
+              "$": "classMailCommon_1_1FilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2af2c6449d9fec91b586ddcc2e968ae473"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Meta"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2acb758a8d5a0cd5755c2ce29c437dfa3a"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PatternDescription"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2ac4284bd28b07c00ce6864126255e914b"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "PatternResult"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2a9ee39c58e03d11b18ae020d691a46f93"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RuleResult"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a626a1a36fc4c54617ae7e33b4c8198d2af6e1c0e4035f18dcb8ca8b423aa4c254"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "logEntryAdded"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a93bd557cd17a26b4c253ad07ad815a16"
+            },
+            "arglist": {
+              "$": "(const QString &entry)"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "logShrinked"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a0ac396c37a12b1b91e7ffd495b917b92"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "signal",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "logStateChanged"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a97b443ac4a0b95e90b2efacd3fa88ca6"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {},
+            "name": {
+              "$": "~FilterLog"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "adff197b9623a5b902d953c9f4c958a07"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "add"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a585f85b588825b8a033cd8377653aa37"
+            },
+            "arglist": {
+              "$": "(const QString &entry, ContentType type)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addSeparator"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a639e9be46250a961cd53b7b2f197f9ea"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "clear"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a219c6d9dae73683f3fafda1d046682d9"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "dump"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "ae18c5fa7f48274a55f9eeef0da286793"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isContentTypeEnabled"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "aa607dd9122f60af1e868ff32bc807f4e"
+            },
+            "arglist": {
+              "$": "(ContentType type) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isLogging"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a28028110c62598d019d87abe67c217e2"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "logEntries"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a9a360d922e8b3c73161b982e0fa37453"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "long"
+            },
+            "name": {
+              "$": "maxLogSize"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "aecca79f27f9cabccfc9076453f833f02"
+            },
+            "arglist": {
+              "$": "() const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "saveToFile"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a14f679afaf78119327f6a5c264e7bd0a"
+            },
+            "arglist": {
+              "$": "(const QString &fileName) const"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setContentTypeEnabled"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a42bab21fb1812fe77369892f0dfa3bb2"
+            },
+            "arglist": {
+              "$": "(ContentType type, bool enabled)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setLogging"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a9a267c78e8f96467b45f37891b874acf"
+            },
+            "arglist": {
+              "$": "(bool active)"
+            }
+          },
+          {
+            "@kind": "function",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMaxLogSize"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "a36976bff0c43739ce3d02b47832f7a31"
+            },
+            "arglist": {
+              "$": "(long size=-1)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static FilterLog *"
+            },
+            "name": {
+              "$": "instance"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "ad58f5bcbce28732f493d64a69dec3c02"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@static": "yes",
+            "type": {
+              "$": "static QString"
+            },
+            "name": {
+              "$": "recode"
+            },
+            "anchorfile": {
+              "$": "classFilterLog.html"
+            },
+            "anchor": {
+              "$": "aa66663f457efd9d1fe2bb889f90e4e32"
+            },
+            "arglist": {
+              "$": "(const QString &plain)"
+            }
+          }
+        ]
       },
       {
         "@kind": "class",
@@ -4670,6 +5271,15 @@
       {
         "@kind": "class",
         "name": {
+          "$": "RuleWidgetHandlerManager"
+        },
+        "filename": {
+          "$": "classRuleWidgetHandlerManager.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "MailCommon::ScheduledExpireTask"
         },
         "filename": {
@@ -5796,24 +6406,6 @@
           {
             "@kind": "function",
             "type": {
-              "$": "virtual bool"
-            },
-            "name": {
-              "$": "matches"
-            },
-            "anchorfile": {
-              "$": "classMailCommon_1_1SearchRuleNumerical.html"
-            },
-            "anchor": {
-              "$": "ab05c16a5f0a402e3e84466ad610b2752"
-            },
-            "arglist": {
-              "$": "(const Akonadi::Item &item) const=0"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
               "$": "bool"
             },
             "name": {
@@ -5913,24 +6505,6 @@
             },
             "arglist": {
               "$": "(const Akonadi::Item &item) const override"
-            }
-          },
-          {
-            "@kind": "function",
-            "type": {
-              "$": "virtual bool"
-            },
-            "name": {
-              "$": "matches"
-            },
-            "anchorfile": {
-              "$": "classMailCommon_1_1SearchRuleStatus.html"
-            },
-            "anchor": {
-              "$": "ab05c16a5f0a402e3e84466ad610b2752"
-            },
-            "arglist": {
-              "$": "(const Akonadi::Item &item) const=0"
             }
           },
           {

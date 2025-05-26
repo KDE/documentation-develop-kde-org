@@ -72,7 +72,7 @@ All the code we need will be in one file, `main.cpp`. We'll start simple and inc
 Our popup box is a [KMessageBox](docs:kwidgetsaddons;KMessageBox), which has primarily two buttons:
 a [PrimaryAction](docs:kwidgetsaddons;KMessageBox::PrimaryAction), which usually serves as a confirmation button, and a [SecondaryAction](docs:kwidgetsaddons;KMessageBox::SecondaryAction), which usually portrays a different action, like a cancel or discard button. The popup box uses the KMessageBox class, the primary action uses a custom [KGuiItem](docs:kwidgetsaddons;KGuiItem) with the text "Hello", and the secondary action uses [KStandardGuiItem::cancel()](docs:kwidgetsaddons;KStandardGuiItem::cancel).
 
-First we need to create a [QApplication](docs:qtwidgets;QApplication) object. It needs to be created exactly once and before any other KDE Frameworks or Qt object, as it is the starting point for creating your application and thus required for other components, like [Ki18n](docs:ki18n) for translations.
+First we need to create a [QApplication](docs:qtwidgets;QApplication) object. It needs to be created exactly once and before any other KDE Frameworks or Qt object, as it is the starting point for creating your application and thus required for other components, like [Ki18n](docs:ki18n;ki18n-index.html) for translations.
 
 The first argument of the [KGuiItem](docs:kwidgetsaddons;KGuiItem) constructor is the text that will appear on the item (in our case, a button object to be used soon). Then we have the option to set an icon for the button, but for now we don't want one so we can pass an empty [QString](docs:qtcore;QString) using `QString()`. We then set the tooltip (the text that appears when you hover over an item), and finally the "What's This?" text (accessed through right-clicking or Shift-F1).
 
@@ -90,7 +90,7 @@ Using a QStringLiteral for strings like `QStringLiteral("Hello World!")` instead
 
 ![](hello_world_complete.webp)
 
-For your application to be localized, we must first prepare our code so that it can be adapted to various languages and regions without engineering changes: this process is called [internationalization](https://doc.qt.io/qt-6/internationalization.html). KDE uses [Ki18n](docs:ki18n) for that, which provides [KLocalizedString](docs:ki18n;KLocalizedString).
+For your application to be localized, we must first prepare our code so that it can be adapted to various languages and regions without engineering changes: this process is called [internationalization](https://doc.qt.io/qt-6/internationalization.html). KDE uses [Ki18n](docs:ki18n;ki18n-index.html) for that, which provides [KLocalizedString](docs:ki18n;KLocalizedString).
 
 We start with a call to [KLocalizedString::setApplicationDomain()](docs:ki18n;KLocalizedString::setApplicationDomain), which is required to properly set the translation catalog and must be done before everything else (except the creation of the [QApplication](docs:qtwidgets;QApplication) instance). After that, we can just start enveloping the relevant user-visible, translatable strings with `i18n()`. The non-user visible strings that do not need to be translated should use a [QStringLiteral](docs:qtcore;QString::QStringLiteral) instead. We'll use those next with [KAboutData](docs:kcoreaddons;KAboutData).
 

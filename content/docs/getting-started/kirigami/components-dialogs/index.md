@@ -7,9 +7,7 @@ aliases:
   - /docs/getting-started/kirigami/components-overlaysheets/
 ---
 
-{{< kirigami-staging-api >}}
-
-A [Kirigami.Dialog](docs:kirigami2;Dialog) is a simple component that you can use to supplement the content being displayed on an application's page. It can display non-interactive content (only text) and interactive content (forms, listviews and buttons).
+A [Kirigami.Dialog](docs:kirigami;org.kde.kirigami.dialogs.Dialog) is a simple component that you can use to supplement the content being displayed on an application's page. It can display non-interactive content (only text) and interactive content (forms, listviews and buttons).
 
 They can be dismissed by clicking or tapping outside of their area or by clicking the close button on the header.
 
@@ -130,13 +128,13 @@ Kirigami.ApplicationWindow {
 
 {{< /sections >}}
 
-In most cases however you will likely want to use one of its derived dialog types, [Kirigami.PromptDialog](docs:kirigami2;PromptDialog) or [Kirigami.MenuDialog](docs:kirigami2;MenuDialog).
+In most cases however you will likely want to use one of its derived dialog types, [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs.PromptDialog) or [Kirigami.MenuDialog](docs:;org.kde.kirigami.dialogs.MenuDialog).
 
 ### PromptDialog
 
-A [Kirigami.PromptDialog](docs:kirigami2;PromptDialog) is essentially a dialog with a built-in label and default [contentPadding](docs:kirigami2;PromptDialog::contentPadding) that is used to prompt the user for some information. This type of dialog is supposed to be used only for simple yes/no prompts or brief requests for user input.
+A [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs.PromptDialog) is essentially a dialog with a built-in label and default [contentPadding](https://api-staging.kde.org/qml-org-kde-kirigami-dialogs-promptdialog.html#contentPadding-prop) that is used to prompt the user for some information. This type of dialog is supposed to be used only for simple yes/no prompts or brief requests for user input.
 
-Its main property is [Kirigami.Dialog.subtitle](docs:kirigami2;PromptDialog::subtitle), to which you would add text. If any QML component is added as a child of the prompt dialog, that component will take the place of the subtitle instead, and this can be explicitly specified with [Kirigami.Dialog.mainItem](docs:kirigami2;Dialog::mainItem).
+Its main property is [Kirigami.Dialog.subtitle](https://api-staging.kde.org/qml-org-kde-kirigami-dialogs-promptdialog.html#subtitle-prop), to which you would add text. If any QML component is added as a child of the prompt dialog, that component will take the place of the subtitle instead.
 
 
 {{< sections >}}
@@ -253,7 +251,7 @@ Kirigami.ApplicationWindow {
 
 ### MenuDialog
 
-The [Kirigami.MenuDialog](docs:kirigami2;MenuDialog) is a specialized dialog that is used to list a selection of clickable options for the user using its [actions](docs:kirigami2;MenuDialog::actions) property.
+The [Kirigami.MenuDialog](docs:kirigami;org.kde.kirigami.dialogs.MenuDialog) is a specialized dialog that is used to list a selection of clickable options for the user using its [actions](https://api-staging.kde.org/qml-org-kde-kirigami-dialogs-menudialog.html#actions-prop) property.
 
 {{< sections >}}
 

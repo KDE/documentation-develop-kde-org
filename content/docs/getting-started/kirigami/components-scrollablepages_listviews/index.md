@@ -7,11 +7,9 @@ aliases:
   - /docs/getting-started/kirigami/components-scrollablepages_listviews/
 ---
 
-{{< kirigami-staging-api >}}
-
 ## Kirigami.ScrollablePage
 
-A [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage)
+A [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage)
 is a page that holds scrollable content, such as a [ListView](docs:qtquick;QtQuick.ListView). Scrolling, as well as scrolling indicators, are automatically managed.
 
 ```qml
@@ -29,31 +27,31 @@ In almost every other way, a scrollable page is the same as a normal page.
 
 {{< alert color="warning" title="Warning" >}}
 
-Do not put a [ScrollView](docs:qtquickcontrols;QtQuick.Controls.ScrollView) inside of a [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage); children of a
+Do not put a [ScrollView](docs:qtquickcontrols;QtQuick.Controls.ScrollView) inside of a [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage); children of a
 `Kirigami.ScrollablePage` are already inside a `ScrollView`.
 
 {{< /alert >}}
 
 ## ListView in a ScrollablePage
 
-When the direct children of a [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) extend vertically beyond the size of the
+When the direct children of a [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage) extend vertically beyond the size of the
 page itself, a scrollbar appears at the right edge of the page and the page
 will be scrollable.
 
 {{< figure src="neochatscrollablepage.webp" caption="Two scrollable pages, both containing a ListView with custom contents (screenshot of NeoChat)" >}}
 
-Often you have more than one child in your [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage), and positioning items
+Often you have more than one child in your [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage), and positioning items
 can be tricky—especially in combination with a [ListView](docs:qtquick;QtQuick.ListView).
 
 * For non-visual components, having them inside the [ListView](docs:qtquick;QtQuick.ListView) component won't change
   the visuals of the page, so we can move them inside the scope of the list view. Same for
   elements anchored to the center of the page, such as placeholder messages for empty list views.
 * For other items, it might make sense to move them to the header or footer
-  of the [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage). This is often the case for search bars.
+  of the [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage). This is often the case for search bars.
 
 ### PlaceholderMessage
 
-It is possible to add a [Kirigami.PlaceholderMessage](docs:kirigami2;PlaceholderMessage)
+It is possible to add a [Kirigami.PlaceholderMessage](docs:kirigami;org.kde.kirigami.PlaceholderMessage)
 with some instructions in case the list view is empty. 
 
 ```qml
@@ -77,9 +75,9 @@ Kirigami.ScrollablePage {
 
 ### Search in the ListView
 
-A search field is often added to a [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage) to filter the [ListView](docs:qtquick;QtQuick.ListView).
-This can be done by changing the default [titleDelegate](docs:kirigami2;Page::titleDelegate) to use a
-[Kirigami.SearchField](docs:kirigami2;SearchField) instead.
+A search field is often added to a [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage) to filter the [ListView](docs:qtquick;QtQuick.ListView).
+This can be done by changing the default [titleDelegate](https://api-staging.kde.org/qml-org-kde-kirigami-page.html#titleDelegate-prop) to use a
+[Kirigami.SearchField](docs:kirigami;org.kde.kirigami.SearchField) instead.
 
 ```qml
 Kirigami.ScrollablePage {
@@ -101,8 +99,8 @@ Kirigami.ScrollablePage {
 
 {{< alert title="Hint" color="info" >}}
 
-You can use [KSortFilterProxyModel](docs:kitemmodels;SortFilterModel) from
-[KItemModel](docs:kitemmodels) to easily add
+You can use [KSortFilterProxyModel](https://api-staging.kde.org/qml-org-kde-kitemmodels-ksortfilterproxymodel.html) from
+[KItemModel](docs:kitemmodels;kitemmodels-index.html) to easily add
 filtering capability directly in QML without any need for C++ code.
 
 {{< /alert >}}

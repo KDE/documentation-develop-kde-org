@@ -7,17 +7,15 @@ aliases:
   - /docs/getting-started/kirigami/components-formlayouts/
 ---
 
-{{< kirigami-staging-api >}}
-
-[Kirigami.FormLayout](docs:kirigami2;FormLayout) components make it easy for you to create forms that conform to the [KDE Human Interface Guidelines](https://develop.kde.org/hig/). They are optimal for settings dialogs and for large groups of controls and input fields that are related to each other.
+[Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) components make it easy for you to create forms that conform to the [KDE Human Interface Guidelines](https://develop.kde.org/hig/). They are optimal for settings dialogs and for large groups of controls and input fields that are related to each other.
 
 When provided with enough space, form layouts will take up two columns. The column on the left will be occupied by the labels provided for the form's children components, while the right will be taken up by the children components themselves. In more space-constrained windows (or on mobile), forms will consist of a single vertical column with the labels of children components being placed above their respective component.
 
 ## Simple form
 
-[Kirigami.FormLayout](docs:kirigami2;FormLayout) components are similar in use to [QtQuick Layout](https://doc.qt.io/qt-6/qtquicklayouts-index.html) components such as [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html) or [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout.html). The child components will be automatically arranged according to the size available to the form layout.
+[Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) components are similar in use to [QtQuick Layout](https://doc.qt.io/qt-6/qtquicklayouts-index.html) components such as [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html) or [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout.html). The child components will be automatically arranged according to the size available to the form layout.
 
-Children of a [Kirigami.FormLayout](docs:kirigami2;FormLayout) have a property named [Kirigami.FormData.label](docs:kirigami2;FormLayoutAttached::label). This property lets you set the label that will be provided for the child component in question.
+Children of a [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) have a property named [Kirigami.FormData.label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop). This property lets you set the label that will be provided for the child component in question.
 
 {{< sections >}}
 
@@ -61,15 +59,15 @@ Kirigami.ApplicationWindow {
 
 ## Sections and separators
 
-FormLayouts can also be divided into sections. Setting where a section starts is as easy as setting a child component's [Kirigami.FormData.isSection](docs:kirigami2;FormLayoutAttached::isSection) to true. This will provide the component with some extra margin at the top to demarcate the start of the new section.
+FormLayouts can also be divided into sections. Setting where a section starts is as easy as setting a child component's [Kirigami.FormData.isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) to true. This will provide the component with some extra margin at the top to demarcate the start of the new section.
 
-[Kirigami.Separator](docs:kirigami2;Separator) components are best suited for starting new sections. Separators are used to draw a thin horizontal line, demarcating the end of a section. If you would rather not have a line drawn between sections, you can use a standard QML [Item](docs:qtquick;QtQuick.Item) property. Alternatively you could use the [Kirigami.FormData.isSection](docs:kirigami2;FormLayoutAttached::isSection) property on any other component.
+[Kirigami.Separator](docs:kirigami;org.kde.kirigami.primitives.Separator) components are best suited for starting new sections. Separators are used to draw a thin horizontal line, demarcating the end of a section. If you would rather not have a line drawn between sections, you can use a standard QML [Item](docs:qtquick;QtQuick.Item) property. Alternatively you could use the [Kirigami.FormData.isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) property on any other component.
 
-However, this is not recommended. On components where [Kirigami.FormData.isSection](docs:kirigami2;FormLayoutAttached::isSection) is set to `true`, the label text provided for this component's [Kirigami.FormData.label](docs:kirigami2;FormLayoutAttached::label) property will be displayed as the section's header text.
+However, this is not recommended. On components where [Kirigami.FormData.isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) is set to `true`, the label text provided for this component's [Kirigami.FormData.label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop) property will be displayed as the section's header text.
 
 {{< alert title="Warning" color="warning" >}}
 
-This does not apply to every component, hence the recommendation that you use [Kirigami.Separator](docs:kirigami2;Separator) or [Item](docs:qtquick;QtQuick.Item) components in places where you would like to use a header text.
+This does not apply to every component, hence the recommendation that you use [Kirigami.Separator](docs:kirigami;org.kde.kirigami.primitives.Separator) or [Item](docs:qtquick;QtQuick.Item) components in places where you would like to use a header text.
 
 {{< /alert >}}
 
@@ -138,7 +136,7 @@ Kirigami.FormLayout {
 
 ## Checkable children
 
-A handy feature of [Kirigami.FormLayout](docs:kirigami2;FormLayout) is that you can add checkboxes to its children. This can be useful in settings pages where you might want to let the user enable or disable a setting, and also want the user to provide some extra information in a component such as a textfield.
+A handy feature of [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) is that you can add checkboxes to its children. This can be useful in settings pages where you might want to let the user enable or disable a setting, and also want the user to provide some extra information in a component such as a textfield.
 
 {{< sections >}}
 
@@ -174,7 +172,7 @@ Kirigami.FormLayout {
 
 ## Forcing a desktop or mobile layout
 
-If you would rather have your form layout stay consistent regardless of your application's environment, you can use the [wideMode](docs:kirigami2;FormLayout::wideMode) property of the [Kirigami.FormLayout](docs:kirigami2;FormLayout) component:
+If you would rather have your form layout stay consistent regardless of your application's environment, you can use the [wideMode](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formlayout.html#wideMode-prop) property of the [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) component:
 
 - When set to `true`, the form layout will be structured in a desktop-optimized widescreen (double-column) layout
 - When set to `false`, the form layout will be structured in a mobile layout (single column)
@@ -212,7 +210,7 @@ Kirigami.FormLayout {
 
 ## Aligning your labels
 
-There are instances when you want a label to be assigned to components that have more than one line or to a list of components. This can be achieved by putting the [Kirigami.FormData.label](docs:kirigami2;FormLayoutAttached::label) in the [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html), as you might have noticed in [Sections and Separators](#sections-and-separators). By default the label is positioned in the vertical center of the layout, which is not always desirable. We can change this with help of [Kirigami.FormData.labelAlignment](docs:kirigami2;FormLayoutAttached::labelAlignment).
+There are instances when you want a label to be assigned to components that have more than one line or to a list of components. This can be achieved by putting the [Kirigami.FormData.label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop) in the [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html), as you might have noticed in [Sections and Separators](#sections-and-separators). By default the label is positioned in the vertical center of the layout, which is not always desirable. We can change this with help of [Kirigami.FormData.labelAlignment](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#labelAlignment-attached-prop).
 
 {{< sections >}}
 

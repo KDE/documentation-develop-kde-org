@@ -18,7 +18,9 @@ Since KDE 2.0, KDE also supports the standard X11R6 session management protocol 
 
 An introductory overview of session management functionality and the Qt API for it is available from [Qt documentation](https://doc.qt.io/qt-5/session.html).
 
-In KDE, the classes [KConfigGui](docs:kconfig;KConfigGui) and [KMainWindow](docs:kxmlgui;KMainWindow) hide all the ugly details from the programmer. Basically, a KConfigGui manages a KConfig configuration object (available trough [KConfigGui::sessionConfig()](docs:kconfig;KConfigGui::sessionConfig)) for you, that your application can use to store session specific data.
+<!-- TODO: investigate why it's not possible to link to KConfigGui with docs:  -->
+
+In KDE, the classes [KConfigGui](https://api-staging.kde.org/kconfiggui.html) and [KMainWindow](docs:kxmlgui;KMainWindow) hide all the ugly details from the programmer. Basically, a KConfigGui manages a KConfig configuration object (available through [KConfigGui::sessionConfig()](https://api-staging.kde.org/kconfiggui.html#sessionConfig)) for you, that your application can use to store session specific data.
 
 Please read the class documentation, especially the one of [KMainWindow](docs:kxmlgui;KMainWindow), for a detailed interface description. With the advanced functionality in [KMainWindow](docs:kxmlgui;KMainWindow), it's really just a matter of a few lines to get even a multi-window application to retains its state between different user sessions.
 
@@ -68,7 +70,7 @@ if (app.isSessionRestored()) {
 return app.exec();
 {{< /highlight >}}
 
-[kRestoreMainWindows<>()](docs:kxmlgui;KXMLGUI_Session::kRestoreMainWindows) will create (on the heap) as many instances of your main windows as have existed in the last session and call [KMainWindow::restore()](docs:kxmlgui;KMainWindow::restore) with the correct arguments. Note that also `QWidget::show()` is called implicitly.
+[kRestoreMainWindows<>()](docs:kxmlgui;KMainWindow::kRestoreMainWindows) will create (on the heap) as many instances of your main windows as have existed in the last session and call [KMainWindow::restore()](docs:kxmlgui;KMainWindow::restore) with the correct arguments. Note that also `QWidget::show()` is called implicitly.
 
 About `setObjectName("MyWindow#")`: For session management and window management to work properly, all main windows in the application should have a different name. If you don't do it, KMainWindow will create a unique name, but it's recommended to explicitly pass a window name that will also describe the type of the window. If there can be several windows of the same type, append '#' (hash) to the name, and KMainWindow will replace it with numbers to make the names unique. For example, for a mail client which has one main window showing the mails and folders, and which can also have one or more windows for composing mails, the name for the folders window should be e.g. "mainwindow" and for the composer windows "composer#". 
 

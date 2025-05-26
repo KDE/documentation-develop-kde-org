@@ -1,0 +1,6825 @@
+{
+  "tagfile": {
+    "compound": [
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KAuthorized"
+        },
+        "filename": {
+          "$": "kauthorized.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "GenericAction"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericAction-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "OPEN_WITH"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericAction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "EDITFILETYPE"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericAction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "OPTIONS_SHOW_TOOLBAR"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericAction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SWITCH_APPLICATION_LANGUAGE"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericAction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "BOOKMARKS"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericAction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "GenericRestriction"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericRestriction-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SHELL_ACCESS"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericRestriction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "GHNS"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericRestriction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "LINEEDIT_REVEAL_PASSWORD"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericRestriction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "LINEEDIT_TEXT_COMPLETION"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericRestriction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "MOVABLE_TOOLBARS"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericRestriction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RUN_DESKTOP_FILES"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "GenericRestriction-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "authorize"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "authorize-1"
+            },
+            "arglist": {
+              "$": "(KAuthorized::GenericRestriction action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "authorize"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "authorize"
+            },
+            "arglist": {
+              "$": "(const QString &action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "authorizeAction"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "authorizeAction-1"
+            },
+            "arglist": {
+              "$": "(KAuthorized::GenericAction action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "authorizeAction"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "authorizeAction"
+            },
+            "arglist": {
+              "$": "(const QString &action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "authorizeControlModule"
+            },
+            "anchorfile": {
+              "$": "kauthorized.html"
+            },
+            "anchor": {
+              "$": "authorizeControlModule"
+            },
+            "arglist": {
+              "$": "(const QString &pluginId)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KConfig"
+        },
+        "filename": {
+          "$": "kconfig.html"
+        },
+        "base": {
+          "$": "KConfigBase"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "OpenFlag"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "OpenFlag-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "IncludeGlobals"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "OpenFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "CascadeConfig"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "OpenFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "SimpleConfig"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "OpenFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NoCascade"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "OpenFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NoGlobals"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "OpenFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "FullConfig"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "OpenFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KConfig"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "KConfig"
+            },
+            "arglist": {
+              "$": "(const QString &file, KConfig::OpenFlags mode, QStandardPaths::StandardLocation type)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KConfig"
+            },
+            "anchorfile": {
+              "$": "kconfig-obsolete.html"
+            },
+            "anchor": {
+              "$": "KConfig-1"
+            },
+            "arglist": {
+              "$": "(const QString &file, const QString &backend, QStandardPaths::StandardLocation type)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "mainConfigName"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "mainConfigName"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isConfigWritable"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "isConfigWritable"
+            },
+            "arglist": {
+              "$": "(bool warnUser)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "setLocale"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "setLocale"
+            },
+            "arglist": {
+              "$": "(const QString &aLocale)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addConfigSources"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "addConfigSources"
+            },
+            "arglist": {
+              "$": "(const QStringList &sources)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "checkUpdate"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "checkUpdate"
+            },
+            "arglist": {
+              "$": "(const QString &id, const QString &updateFile)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "reparseConfiguration"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "reparseConfiguration"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMainConfigName"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "setMainConfigName"
+            },
+            "arglist": {
+              "$": "(const QString &str)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setReadDefaults"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "setReadDefaults"
+            },
+            "arglist": {
+              "$": "(bool b)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfig *"
+            },
+            "name": {
+              "$": "copyTo"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "copyTo"
+            },
+            "arglist": {
+              "$": "(const QString &file, KConfig *config) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfig::OpenFlags"
+            },
+            "name": {
+              "$": "openFlags"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "openFlags"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QMap<QString, QString>"
+            },
+            "name": {
+              "$": "entryMap"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "entryMap"
+            },
+            "arglist": {
+              "$": "(const QString &aGroup) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStandardPaths::StandardLocation"
+            },
+            "name": {
+              "$": "locationType"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "locationType"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "locale"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "locale"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "name"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "additionalConfigSources"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "additionalConfigSources"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isDirty"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "isDirty"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "readDefaults"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "readDefaults"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "typedef",
+            "@type": "KConfig::OpenFlag",
+            "name": {
+              "$": "OpenFlags"
+            },
+            "anchorfile": {
+              "$": "kconfig.html"
+            },
+            "anchor": {
+              "$": "OpenFlag-enum"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KConfigBase"
+        },
+        "filename": {
+          "$": "kconfigbase.html"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "AccessMode"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "AccessMode-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "NoAccess"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "AccessMode-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ReadOnly"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "AccessMode-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ReadWrite"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "AccessMode-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "WriteConfigFlag"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "WriteConfigFlag-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Persistent"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "WriteConfigFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Global"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "WriteConfigFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Localized"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "WriteConfigFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Notify"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "WriteConfigFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Normal"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "WriteConfigFlag-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigGroup"
+            },
+            "name": {
+              "$": "group"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "group"
+            },
+            "arglist": {
+              "$": "(const QString &group)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "sync"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "sync"
+            },
+            "arglist": {
+              "$": "() = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "deleteGroup"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "deleteGroup"
+            },
+            "arglist": {
+              "$": "(const QString &group, KConfigBase::WriteConfigFlags flags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "markAsClean"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "markAsClean"
+            },
+            "arglist": {
+              "$": "() = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual KConfigBase::AccessMode"
+            },
+            "name": {
+              "$": "accessMode"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "accessMode"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QStringList"
+            },
+            "name": {
+              "$": "groupList"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "groupList"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasGroup"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "hasGroup"
+            },
+            "arglist": {
+              "$": "(const QString &group) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isGroupImmutable"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "isGroupImmutable"
+            },
+            "arglist": {
+              "$": "(const QString &group) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "isImmutable"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "isImmutable"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "const KConfigGroup"
+            },
+            "name": {
+              "$": "group"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "group-1"
+            },
+            "arglist": {
+              "$": "(const QString &group) const const"
+            }
+          },
+          {
+            "@kind": "typedef",
+            "@type": "KConfigBase::WriteConfigFlag",
+            "name": {
+              "$": "WriteConfigFlags"
+            },
+            "anchorfile": {
+              "$": "kconfigbase.html"
+            },
+            "anchor": {
+              "$": "WriteConfigFlag-enum"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KConfigGroup"
+        },
+        "filename": {
+          "$": "kconfiggroup.html"
+        },
+        "base": {
+          "$": "KConfigBase"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KCONFIGGROUP_DECLARE_ENUM_QOBJECT"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "KCONFIGGROUP_DECLARE_ENUM_QOBJECT"
+            },
+            "arglist": {
+              "$": "(Class, Enum)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KCONFIGGROUP_DECLARE_FLAGS_QOBJECT"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "KCONFIGGROUP_DECLARE_FLAGS_QOBJECT"
+            },
+            "arglist": {
+              "$": "(Class, Flags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfig *"
+            },
+            "name": {
+              "$": "config"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "config"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KConfigGroup"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "KConfigGroup"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KConfigGroup"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "KConfigGroup-1"
+            },
+            "arglist": {
+              "$": "(KConfigBase *master, const QString &group)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KConfigGroup"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "KConfigGroup-2"
+            },
+            "arglist": {
+              "$": "(const KConfigBase *master, const QString &group)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KConfigGroup"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "KConfigGroup-4"
+            },
+            "arglist": {
+              "$": "(const QExplicitlySharedDataPointer<KSharedConfig> &master, const QString &group)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "sync"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "sync"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "deleteEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "deleteEntry"
+            },
+            "arglist": {
+              "$": "(const QString &pKey, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "deleteEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "deleteEntry-1"
+            },
+            "arglist": {
+              "$": "(const char *key, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "deleteGroup"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "deleteGroup"
+            },
+            "arglist": {
+              "$": "(KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "moveValuesTo"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "moveValuesTo"
+            },
+            "arglist": {
+              "$": "(KConfigGroup &other, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "moveValuesTo"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "moveValuesTo-1"
+            },
+            "arglist": {
+              "$": "(const QList<const char *> &keys, KConfigGroup &other, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "reparent"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "reparent"
+            },
+            "arglist": {
+              "$": "(KConfigBase *parent, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "revertToDefault"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "revertToDefault"
+            },
+            "arglist": {
+              "$": "(const QString &key, KConfigBase::WriteConfigFlags pFlag)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "revertToDefault"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "revertToDefault-1"
+            },
+            "arglist": {
+              "$": "(const char *key, KConfigBase::WriteConfigFlags pFlag)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-1"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QByteArray &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-2"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QList<T> &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-3"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QString &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-4"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QStringList &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QVariant &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-5"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QVariantList &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-6"
+            },
+            "arglist": {
+              "$": "(const QString &key, const T &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-7"
+            },
+            "arglist": {
+              "$": "(const QString &key, const char *value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-8"
+            },
+            "arglist": {
+              "$": "(const char *key, const QByteArray &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-9"
+            },
+            "arglist": {
+              "$": "(const char *key, const QList<T> &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-10"
+            },
+            "arglist": {
+              "$": "(const char *key, const QString &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-11"
+            },
+            "arglist": {
+              "$": "(const char *key, const QStringList &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-12"
+            },
+            "arglist": {
+              "$": "(const char *key, const QVariant &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-13"
+            },
+            "arglist": {
+              "$": "(const char *key, const QVariantList &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-14"
+            },
+            "arglist": {
+              "$": "(const char *key, const T &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeEntry-15"
+            },
+            "arglist": {
+              "$": "(const char *key, const char *value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writePathEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writePathEntry"
+            },
+            "arglist": {
+              "$": "(const QString &pKey, const QString &path, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writePathEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writePathEntry-1"
+            },
+            "arglist": {
+              "$": "(const QString &pKey, const QStringList &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writePathEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writePathEntry-2"
+            },
+            "arglist": {
+              "$": "(const char *Key, const QString &path, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writePathEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writePathEntry-3"
+            },
+            "arglist": {
+              "$": "(const char *key, const QStringList &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeXdgListEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeXdgListEntry"
+            },
+            "arglist": {
+              "$": "(const QString &pKey, const QStringList &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "writeXdgListEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "writeXdgListEntry-1"
+            },
+            "arglist": {
+              "$": "(const char *key, const QStringList &value, KConfigBase::WriteConfigFlags pFlags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigGroup"
+            },
+            "name": {
+              "$": "parent"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "parent"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<T>"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QList<T> &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<T>"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-8"
+            },
+            "arglist": {
+              "$": "(const char *key, const QList<T> &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QMap<QString, QString>"
+            },
+            "name": {
+              "$": "entryMap"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "entryMap"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "name"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-1"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QString &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-7"
+            },
+            "arglist": {
+              "$": "(const QString &key, const char *aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-9"
+            },
+            "arglist": {
+              "$": "(const char *key, const QString &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-13"
+            },
+            "arglist": {
+              "$": "(const char *key, const char *aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readEntryUntranslated"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntryUntranslated"
+            },
+            "arglist": {
+              "$": "(const QString &pKey, const QString &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readEntryUntranslated"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntryUntranslated-1"
+            },
+            "arglist": {
+              "$": "(const char *key, const QString &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readPathEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readPathEntry"
+            },
+            "arglist": {
+              "$": "(const QString &pKey, const QString &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readPathEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readPathEntry-2"
+            },
+            "arglist": {
+              "$": "(const char *key, const QString &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "keyList"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "keyList"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-2"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QStringList &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-10"
+            },
+            "arglist": {
+              "$": "(const char *key, const QStringList &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "readPathEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readPathEntry-1"
+            },
+            "arglist": {
+              "$": "(const QString &pKey, const QStringList &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "readPathEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readPathEntry-3"
+            },
+            "arglist": {
+              "$": "(const char *key, const QStringList &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "readXdgListEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readXdgListEntry"
+            },
+            "arglist": {
+              "$": "(const QString &pKey, const QStringList &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "readXdgListEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readXdgListEntry-1"
+            },
+            "arglist": {
+              "$": "(const char *key, const QStringList &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-3"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QVariant &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-6"
+            },
+            "arglist": {
+              "$": "(const char *key, const QVariant &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QVariantList"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-4"
+            },
+            "arglist": {
+              "$": "(const QString &key, const QVariantList &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QVariantList"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-11"
+            },
+            "arglist": {
+              "$": "(const char *key, const QVariantList &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "T"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-5"
+            },
+            "arglist": {
+              "$": "(const QString &key, const T &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "T"
+            },
+            "name": {
+              "$": "readEntry"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "readEntry-12"
+            },
+            "arglist": {
+              "$": "(const char *key, const T &aDefault) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "exists"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "exists"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasDefault"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "hasDefault"
+            },
+            "arglist": {
+              "$": "(const QString &key) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasDefault"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "hasDefault-1"
+            },
+            "arglist": {
+              "$": "(const char *key) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasKey"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "hasKey"
+            },
+            "arglist": {
+              "$": "(const QString &key) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasKey"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "hasKey-1"
+            },
+            "arglist": {
+              "$": "(const char *key) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isEntryImmutable"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "isEntryImmutable"
+            },
+            "arglist": {
+              "$": "(const QString &key) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isEntryImmutable"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "isEntryImmutable-1"
+            },
+            "arglist": {
+              "$": "(const char *key) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "isImmutable"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "isImmutable"
+            },
+            "arglist": {
+              "$": "() const const override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isValid"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "isValid"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "const KConfig *"
+            },
+            "name": {
+              "$": "config"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "config-1"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "copyTo"
+            },
+            "anchorfile": {
+              "$": "kconfiggroup.html"
+            },
+            "anchor": {
+              "$": "copyTo"
+            },
+            "arglist": {
+              "$": "(KConfigBase *other, KConfigBase::WriteConfigFlags pFlags) const const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "filename": {
+          "$": "kconfigskeletongenericitem.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonItem"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KConfigSkeletonGenericItem"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletongenericitem.html"
+            },
+            "anchor": {
+              "$": "KConfigSkeletonGenericItem"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key, T &reference, T defaultValue)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "T &"
+            },
+            "name": {
+              "$": "value"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletongenericitem.html"
+            },
+            "anchor": {
+              "$": "value"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setDefault"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletongenericitem.html"
+            },
+            "anchor": {
+              "$": "setDefault"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setDefaultValue"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletongenericitem.html"
+            },
+            "anchor": {
+              "$": "setDefaultValue"
+            },
+            "arglist": {
+              "$": "(const T &v)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setValue"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletongenericitem.html"
+            },
+            "anchor": {
+              "$": "setValue"
+            },
+            "arglist": {
+              "$": "(const T &v)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "const T &"
+            },
+            "name": {
+              "$": "value"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletongenericitem.html"
+            },
+            "anchor": {
+              "$": "value-1"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KConfigSkeletonItem"
+        },
+        "filename": {
+          "$": "kconfigskeletonitem.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KConfigSkeletonItem"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "KConfigSkeletonItem"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "readConfig"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "readConfig"
+            },
+            "arglist": {
+              "$": "(KConfig *) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "readDefault"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "readDefault"
+            },
+            "arglist": {
+              "$": "(KConfig *) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "readImmutability"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "readImmutability"
+            },
+            "arglist": {
+              "$": "(const KConfigGroup &group)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setDefault"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setDefault"
+            },
+            "arglist": {
+              "$": "() = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setGroup"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setGroup"
+            },
+            "arglist": {
+              "$": "(const KConfigGroup &cg)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setGroup"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setGroup-1"
+            },
+            "arglist": {
+              "$": "(const QString &_group)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setKey"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setKey"
+            },
+            "arglist": {
+              "$": "(const QString &_key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setLabel"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setLabel"
+            },
+            "arglist": {
+              "$": "(const QString &l)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setName"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setName"
+            },
+            "arglist": {
+              "$": "(const QString &_name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setProperty"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setProperty"
+            },
+            "arglist": {
+              "$": "(const QVariant &p) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setToolTip"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setToolTip"
+            },
+            "arglist": {
+              "$": "(const QString &t)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setWhatsThis"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setWhatsThis"
+            },
+            "arglist": {
+              "$": "(const QString &w)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setWriteFlags"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setWriteFlags"
+            },
+            "arglist": {
+              "$": "(KConfigBase::WriteConfigFlags flags)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "swapDefault"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "swapDefault"
+            },
+            "arglist": {
+              "$": "() = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "writeConfig"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "writeConfig"
+            },
+            "arglist": {
+              "$": "(KConfig *) = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigBase::WriteConfigFlags"
+            },
+            "name": {
+              "$": "writeFlags"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "writeFlags"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigGroup"
+            },
+            "name": {
+              "$": "configGroup"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "configGroup"
+            },
+            "arglist": {
+              "$": "(KConfig *config) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "group"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "group"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "key"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "key"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "label"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "label"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "name"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "toolTip"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "toolTip"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "whatsThis"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "whatsThis"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QVariant"
+            },
+            "name": {
+              "$": "getDefault"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "getDefault"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual QVariant"
+            },
+            "name": {
+              "$": "maxValue"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "maxValue"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual QVariant"
+            },
+            "name": {
+              "$": "minValue"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "minValue"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QVariant"
+            },
+            "name": {
+              "$": "property"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "property"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isDefault"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "isDefault"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "isEqual"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "isEqual"
+            },
+            "arglist": {
+              "$": "(const QVariant &p) const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isImmutable"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "isImmutable"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isSaveNeeded"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "isSaveNeeded"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "typedef",
+            "@type": "",
+            "name": {
+              "$": "Dict"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "Dict-typedef"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "typedef",
+            "@type": "",
+            "name": {
+              "$": "DictIterator"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "DictIterator-typedef"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "typedef",
+            "@type": "",
+            "name": {
+              "$": "List"
+            },
+            "anchorfile": {
+              "$": "kconfigskeletonitem.html"
+            },
+            "anchor": {
+              "$": "List-typedef"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KConfigWatcher"
+        },
+        "filename": {
+          "$": "kconfigwatcher.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "KConfigWatcher::Ptr"
+            },
+            "name": {
+              "$": "create"
+            },
+            "anchorfile": {
+              "$": "kconfigwatcher.html"
+            },
+            "anchor": {
+              "$": "create"
+            },
+            "arglist": {
+              "$": "(const int &config)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "int"
+            },
+            "name": {
+              "$": "config"
+            },
+            "anchorfile": {
+              "$": "kconfigwatcher.html"
+            },
+            "anchor": {
+              "$": "config"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "typedef",
+            "@type": "",
+            "name": {
+              "$": "Ptr"
+            },
+            "anchorfile": {
+              "$": "kconfigwatcher.html"
+            },
+            "anchor": {
+              "$": "Ptr-typedef"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton.html"
+        },
+        "base": {
+          "$": "QObject"
+        },
+        "class": [
+          {
+            "$": "KCoreConfigSkeleton::ItemBool"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemDateTime"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemDouble"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemEnum"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemInt"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemIntList"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemLongLong"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemPassword"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemPath"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemPathList"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemPoint"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemPointF"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemProperty"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemRect"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemRectF"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemSize"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemSizeF"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemString"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemStringList"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemUInt"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemULongLong"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemUrl"
+          },
+          {
+            "$": "KCoreConfigSkeleton::ItemUrlList"
+          }
+        ],
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfig *"
+            },
+            "name": {
+              "$": "config"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "config"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KCoreConfigSkeleton"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "KCoreConfigSkeleton"
+            },
+            "arglist": {
+              "$": "(KSharedConfig::Ptr config, QObject *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KCoreConfigSkeleton"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "KCoreConfigSkeleton-1"
+            },
+            "arglist": {
+              "$": "(const QString &configname, QObject *parent)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemBool *"
+            },
+            "name": {
+              "$": "addItemBool"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemBool"
+            },
+            "arglist": {
+              "$": "(const QString &name, bool &reference, bool defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemDateTime *"
+            },
+            "name": {
+              "$": "addItemDateTime"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemDateTime"
+            },
+            "arglist": {
+              "$": "(const QString &name, QDateTime &reference, const QDateTime &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemDouble *"
+            },
+            "name": {
+              "$": "addItemDouble"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemDouble"
+            },
+            "arglist": {
+              "$": "(const QString &name, double &reference, double defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemInt *"
+            },
+            "name": {
+              "$": "addItemInt"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemInt"
+            },
+            "arglist": {
+              "$": "(const QString &name, qint32 &reference, qint32 defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemIntList *"
+            },
+            "name": {
+              "$": "addItemIntList"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemIntList"
+            },
+            "arglist": {
+              "$": "(const QString &name, QList<int> &reference, const QList<int> &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemLongLong *"
+            },
+            "name": {
+              "$": "addItemLongLong"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemLongLong"
+            },
+            "arglist": {
+              "$": "(const QString &name, qint64 &reference, qint64 defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemPassword *"
+            },
+            "name": {
+              "$": "addItemPassword"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemPassword"
+            },
+            "arglist": {
+              "$": "(const QString &name, QString &reference, const QString &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemPath *"
+            },
+            "name": {
+              "$": "addItemPath"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemPath"
+            },
+            "arglist": {
+              "$": "(const QString &name, QString &reference, const QString &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemPoint *"
+            },
+            "name": {
+              "$": "addItemPoint"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemPoint"
+            },
+            "arglist": {
+              "$": "(const QString &name, QPoint &reference, const QPoint &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemPointF *"
+            },
+            "name": {
+              "$": "addItemPointF"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemPointF"
+            },
+            "arglist": {
+              "$": "(const QString &name, QPointF &reference, const QPointF &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemProperty *"
+            },
+            "name": {
+              "$": "addItemProperty"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemProperty"
+            },
+            "arglist": {
+              "$": "(const QString &name, QVariant &reference, const QVariant &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemRect *"
+            },
+            "name": {
+              "$": "addItemRect"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemRect"
+            },
+            "arglist": {
+              "$": "(const QString &name, QRect &reference, const QRect &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemRectF *"
+            },
+            "name": {
+              "$": "addItemRectF"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemRectF"
+            },
+            "arglist": {
+              "$": "(const QString &name, QRectF &reference, const QRectF &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemSize *"
+            },
+            "name": {
+              "$": "addItemSize"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemSize"
+            },
+            "arglist": {
+              "$": "(const QString &name, QSize &reference, const QSize &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemSizeF *"
+            },
+            "name": {
+              "$": "addItemSizeF"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemSizeF"
+            },
+            "arglist": {
+              "$": "(const QString &name, QSizeF &reference, const QSizeF &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemString *"
+            },
+            "name": {
+              "$": "addItemString"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemString"
+            },
+            "arglist": {
+              "$": "(const QString &name, QString &reference, const QString &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemStringList *"
+            },
+            "name": {
+              "$": "addItemStringList"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemStringList"
+            },
+            "arglist": {
+              "$": "(const QString &name, QStringList &reference, const QStringList &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemUInt *"
+            },
+            "name": {
+              "$": "addItemUInt"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemUInt"
+            },
+            "arglist": {
+              "$": "(const QString &name, quint32 &reference, quint32 defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemULongLong *"
+            },
+            "name": {
+              "$": "addItemULongLong"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemULongLong"
+            },
+            "arglist": {
+              "$": "(const QString &name, quint64 &reference, quint64 defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "save"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "save"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "useDefaults"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "useDefaults"
+            },
+            "arglist": {
+              "$": "(bool b)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "usrSave"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "usrSave"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "usrUseDefaults"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "usrUseDefaults"
+            },
+            "arglist": {
+              "$": "(bool b)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "addItem"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItem"
+            },
+            "arglist": {
+              "$": "(KConfigSkeletonItem *item, const QString &name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "clearItems"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "clearItems"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "configChanged"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "configChanged"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "load"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "load"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "read"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "read"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "removeItem"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "removeItem"
+            },
+            "arglist": {
+              "$": "(const QString &name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setCurrentGroup"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "setCurrentGroup"
+            },
+            "arglist": {
+              "$": "(const QString &group)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "setDefaults"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "setDefaults"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSharedConfig"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "setSharedConfig"
+            },
+            "arglist": {
+              "$": "(KSharedConfig::Ptr pConfig)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "usrRead"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "usrRead"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void"
+            },
+            "name": {
+              "$": "usrSetDefaults"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "usrSetDefaults"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigSkeletonItem *"
+            },
+            "name": {
+              "$": "findItem"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "findItem"
+            },
+            "arglist": {
+              "$": "(const QString &name) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigSkeletonItem::List"
+            },
+            "name": {
+              "$": "items"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "items"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KSharedConfig::Ptr"
+            },
+            "name": {
+              "$": "sharedConfig"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "sharedConfig"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "currentGroup"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "currentGroup"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isDefaults"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "isDefaults"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isImmutable"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "isImmutable"
+            },
+            "arglist": {
+              "$": "(const QString &name) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isSaveNeeded"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "isSaveNeeded"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "const KConfig *"
+            },
+            "name": {
+              "$": "config"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "config-1"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemBool"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itembool.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemBool"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itembool.html"
+          },
+          "anchor": {
+            "$": "ItemBool"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, bool &reference, bool defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemDateTime"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemdatetime.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemDateTime"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemdatetime.html"
+          },
+          "anchor": {
+            "$": "ItemDateTime"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QDateTime &reference, const QDateTime &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemDouble"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemdouble.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "ItemDouble"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemdouble.html"
+            },
+            "anchor": {
+              "$": "ItemDouble"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key, double &reference, double defaultValue)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMaxValue"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemdouble.html"
+            },
+            "anchor": {
+              "$": "setMaxValue"
+            },
+            "arglist": {
+              "$": "(double)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMinValue"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemdouble.html"
+            },
+            "anchor": {
+              "$": "setMinValue"
+            },
+            "arglist": {
+              "$": "(double)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemEnum"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemenum.html"
+        },
+        "base": {
+          "$": "ItemInt"
+        },
+        "class": {
+          "$": "KCoreConfigSkeleton::ItemEnum::Choice"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "ItemEnum"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemenum.html"
+            },
+            "anchor": {
+              "$": "ItemEnum"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key, qint32 &reference, const QList<KCoreConfigSkeleton::ItemEnum::Choice> &choices, qint32 defaultValue)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setValueForChoice"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemenum.html"
+            },
+            "anchor": {
+              "$": "setValueForChoice"
+            },
+            "arglist": {
+              "$": "(const QString &name, const QString &valueForChoice)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<KCoreConfigSkeleton::ItemEnum::Choice>"
+            },
+            "name": {
+              "$": "choices"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemenum.html"
+            },
+            "anchor": {
+              "$": "choices"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "valueForChoice"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemenum.html"
+            },
+            "anchor": {
+              "$": "valueForChoice"
+            },
+            "arglist": {
+              "$": "(const QString &name) const const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemEnum::Choice"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemenum-choice.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemInt"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemint.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "ItemInt"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemint.html"
+            },
+            "anchor": {
+              "$": "ItemInt"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key, qint32 &reference, qint32 defaultValue)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMaxValue"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemint.html"
+            },
+            "anchor": {
+              "$": "setMaxValue"
+            },
+            "arglist": {
+              "$": "(qint32)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMinValue"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemint.html"
+            },
+            "anchor": {
+              "$": "setMinValue"
+            },
+            "arglist": {
+              "$": "(qint32)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemIntList"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemintlist.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemIntList"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemintlist.html"
+          },
+          "anchor": {
+            "$": "ItemIntList"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QList<int> &reference, const QList<int> &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemLongLong"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemlonglong.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemLongLong"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemlonglong.html"
+          },
+          "anchor": {
+            "$": "ItemLongLong"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, qint64 &reference, qint64 defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemPassword"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itempassword.html"
+        },
+        "base": {
+          "$": "ItemString"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemPassword"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itempassword.html"
+          },
+          "anchor": {
+            "$": "ItemPassword"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QString &reference, const QString &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemPath"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itempath.html"
+        },
+        "base": {
+          "$": "ItemString"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemPath"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itempath.html"
+          },
+          "anchor": {
+            "$": "ItemPath"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QString &reference, const QString &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemPathList"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itempathlist.html"
+        },
+        "base": {
+          "$": "ItemStringList"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemPathList"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itempathlist.html"
+          },
+          "anchor": {
+            "$": "ItemPathList"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QStringList &reference, const QStringList &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemPoint"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itempoint.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemPoint"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itempoint.html"
+          },
+          "anchor": {
+            "$": "ItemPoint"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QPoint &reference, const QPoint &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemPointF"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itempointf.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemPointF"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itempointf.html"
+          },
+          "anchor": {
+            "$": "ItemPointF"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QPointF &reference, const QPointF &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemProperty"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemproperty.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemProperty"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemproperty.html"
+          },
+          "anchor": {
+            "$": "ItemProperty"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QVariant &reference, const QVariant &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemRect"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemrect.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemRect"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemrect.html"
+          },
+          "anchor": {
+            "$": "ItemRect"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QRect &reference, const QRect &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemRectF"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemrectf.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemRectF"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemrectf.html"
+          },
+          "anchor": {
+            "$": "ItemRectF"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QRectF &reference, const QRectF &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemSize"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemsize.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemSize"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemsize.html"
+          },
+          "anchor": {
+            "$": "ItemSize"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QSize &reference, const QSize &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemSizeF"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemsizef.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemSizeF"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemsizef.html"
+          },
+          "anchor": {
+            "$": "ItemSizeF"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QSizeF &reference, const QSizeF &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemString"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemstring.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "Type"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemstring.html"
+            },
+            "anchor": {
+              "$": "Type-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Normal"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemstring.html"
+            },
+            "anchor": {
+              "$": "Type-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Password"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemstring.html"
+            },
+            "anchor": {
+              "$": "Type-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Path"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemstring.html"
+            },
+            "anchor": {
+              "$": "Type-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "ItemString"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemstring.html"
+            },
+            "anchor": {
+              "$": "ItemString"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key, QString &reference, const QString &defaultValue, KCoreConfigSkeleton::ItemString::Type type)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemStringList"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemstringlist.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemStringList"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemstringlist.html"
+          },
+          "anchor": {
+            "$": "ItemStringList"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QStringList &reference, const QStringList &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemUInt"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemuint.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "ItemUInt"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemuint.html"
+            },
+            "anchor": {
+              "$": "ItemUInt"
+            },
+            "arglist": {
+              "$": "(const QString &_group, const QString &_key, quint32 &reference, quint32 defaultValue)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMaxValue"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemuint.html"
+            },
+            "anchor": {
+              "$": "setMaxValue"
+            },
+            "arglist": {
+              "$": "(quint32)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setMinValue"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton-itemuint.html"
+            },
+            "anchor": {
+              "$": "setMinValue"
+            },
+            "arglist": {
+              "$": "(quint32)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemULongLong"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemulonglong.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemULongLong"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemulonglong.html"
+          },
+          "anchor": {
+            "$": "ItemULongLong"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, quint64 &reference, quint64 defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemUrl"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemurl.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemUrl"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemurl.html"
+          },
+          "anchor": {
+            "$": "ItemUrl"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QUrl &reference, const QUrl &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemUrlList"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemurllist.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemUrlList"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemurllist.html"
+          },
+          "anchor": {
+            "$": "ItemUrlList"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QList<QUrl> &reference, const QList<QUrl> &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KDesktopFile"
+        },
+        "filename": {
+          "$": "kdesktopfile.html"
+        },
+        "base": {
+          "$": "KConfig"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigGroup"
+            },
+            "name": {
+              "$": "actionGroup"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "actionGroup"
+            },
+            "arglist": {
+              "$": "(const QString &group)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KDesktopFile"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "KDesktopFile-1"
+            },
+            "arglist": {
+              "$": "(QStandardPaths::StandardLocation resourceType, const QString &fileName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KDesktopFile"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "KDesktopFile"
+            },
+            "arglist": {
+              "$": "(const QString &fileName)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "locateLocal"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "locateLocal"
+            },
+            "arglist": {
+              "$": "(const QString &path)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isAuthorizedDesktopFile"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "isAuthorizedDesktopFile"
+            },
+            "arglist": {
+              "$": "(const QString &path)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isDesktopFile"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "isDesktopFile"
+            },
+            "arglist": {
+              "$": "(const QString &path)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual "
+            },
+            "name": {
+              "$": "~KDesktopFile"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "dtor.KDesktopFile"
+            },
+            "arglist": {
+              "$": "() override"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigGroup"
+            },
+            "name": {
+              "$": "actionGroup"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "actionGroup-1"
+            },
+            "arglist": {
+              "$": "(const QString &group) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KConfigGroup"
+            },
+            "name": {
+              "$": "desktopGroup"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "desktopGroup"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KDesktopFile *"
+            },
+            "name": {
+              "$": "copyTo"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "copyTo"
+            },
+            "arglist": {
+              "$": "(const QString &file) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QList<KDesktopFileAction>"
+            },
+            "name": {
+              "$": "actions"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "actions"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "fileName"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "fileName"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readComment"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readComment"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readDocPath"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readDocPath"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readGenericName"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readGenericName"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readIcon"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readIcon"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readName"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readName"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readPath"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readPath"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readType"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readType"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "readUrl"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readUrl"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "readActions"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readActions"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "readMimeTypes"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "readMimeTypes"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasActionGroup"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "hasActionGroup"
+            },
+            "arglist": {
+              "$": "(const QString &group) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasApplicationType"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "hasApplicationType"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasDeviceType"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "hasDeviceType"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "hasLinkType"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "hasLinkType"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "noDisplay"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "noDisplay"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "tryExec"
+            },
+            "anchorfile": {
+              "$": "kdesktopfile.html"
+            },
+            "anchor": {
+              "$": "tryExec"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KDesktopFileAction"
+        },
+        "filename": {
+          "$": "kdesktopfileaction.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KDesktopFileAction"
+            },
+            "anchorfile": {
+              "$": "kdesktopfileaction.html"
+            },
+            "anchor": {
+              "$": "KDesktopFileAction"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KDesktopFileAction"
+            },
+            "anchorfile": {
+              "$": "kdesktopfileaction.html"
+            },
+            "anchor": {
+              "$": "KDesktopFileAction-1"
+            },
+            "arglist": {
+              "$": "(const QString &name, const QString &text, const QString &icon, const QString &exec, const QString &desktopFilePath)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "actionsKey"
+            },
+            "anchorfile": {
+              "$": "kdesktopfileaction.html"
+            },
+            "anchor": {
+              "$": "actionsKey"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "desktopFilePath"
+            },
+            "anchorfile": {
+              "$": "kdesktopfileaction.html"
+            },
+            "anchor": {
+              "$": "desktopFilePath"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "exec"
+            },
+            "anchorfile": {
+              "$": "kdesktopfileaction.html"
+            },
+            "anchor": {
+              "$": "exec"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "icon"
+            },
+            "anchorfile": {
+              "$": "kdesktopfileaction.html"
+            },
+            "anchor": {
+              "$": "icon"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "name"
+            },
+            "anchorfile": {
+              "$": "kdesktopfileaction.html"
+            },
+            "anchor": {
+              "$": "name"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "isSeparator"
+            },
+            "anchorfile": {
+              "$": "kdesktopfileaction.html"
+            },
+            "anchor": {
+              "$": "isSeparator"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KEMailSettings"
+        },
+        "filename": {
+          "$": "kemailsettings.html"
+        },
+        "member": [
+          {
+            "@kind": "enumeration",
+            "name": {
+              "$": "Setting"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "Setting-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ClientProgram"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "Setting-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ClientTerminal"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "Setting-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "RealName"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "Setting-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "EmailAddress"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "Setting-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "ReplyToAddress"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "Setting-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "Organization"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "Setting-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KEMailSettings"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "KEMailSettings"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setDefault"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "setDefault"
+            },
+            "arglist": {
+              "$": "(const QString &def)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setProfile"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "setProfile"
+            },
+            "arglist": {
+              "$": "(const QString &s)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSetting"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "setSetting"
+            },
+            "arglist": {
+              "$": "(KEMailSettings::Setting s, const QString &v)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "defaultProfileName"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "defaultProfileName"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
+              "$": "getSetting"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "getSetting"
+            },
+            "arglist": {
+              "$": "(KEMailSettings::Setting s) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QStringList"
+            },
+            "name": {
+              "$": "profiles"
+            },
+            "anchorfile": {
+              "$": "kemailsettings.html"
+            },
+            "anchor": {
+              "$": "profiles"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KPropertySkeletonItem"
+        },
+        "filename": {
+          "$": "kpropertyskeletonitem.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonItem"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {},
+            "name": {
+              "$": "KPropertySkeletonItem"
+            },
+            "anchorfile": {
+              "$": "kpropertyskeletonitem.html"
+            },
+            "anchor": {
+              "$": "KPropertySkeletonItem"
+            },
+            "arglist": {
+              "$": "(QObject *object, const QByteArray &propertyName, const QVariant &defaultValue)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setNotifyFunction"
+            },
+            "anchorfile": {
+              "$": "kpropertyskeletonitem.html"
+            },
+            "anchor": {
+              "$": "setNotifyFunction"
+            },
+            "arglist": {
+              "$": "(const std::function<void ()> &impl)"
+            }
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KSharedConfig"
+        },
+        "filename": {
+          "$": "ksharedconfig.html"
+        },
+        "base": [
+          {
+            "$": "KConfig"
+          },
+          {
+            "$": "QSharedData"
+          }
+        ],
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "KSharedConfig::Ptr"
+            },
+            "name": {
+              "$": "openConfig"
+            },
+            "anchorfile": {
+              "$": "ksharedconfig.html"
+            },
+            "anchor": {
+              "$": "openConfig"
+            },
+            "arglist": {
+              "$": "(const QString &fileName, KConfig::OpenFlags mode, QStandardPaths::StandardLocation type)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "yes",
+            "type": {
+              "$": "KSharedConfig::Ptr"
+            },
+            "name": {
+              "$": "openStateConfig"
+            },
+            "anchorfile": {
+              "$": "ksharedconfig.html"
+            },
+            "anchor": {
+              "$": "openStateConfig"
+            },
+            "arglist": {
+              "$": "(const QString &fileName)"
+            }
+          },
+          {
+            "@kind": "typedef",
+            "@type": "",
+            "name": {
+              "$": "Ptr"
+            },
+            "anchorfile": {
+              "$": "ksharedconfig.html"
+            },
+            "anchor": {
+              "$": "Ptr-typedef"
+            },
+            "arglist": {}
+          }
+        ]
+      }
+    ]
+  }
+}
