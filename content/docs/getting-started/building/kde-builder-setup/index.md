@@ -57,7 +57,7 @@ bash initial_setup.sh
 
 {{< alert color="info" >}}
 
-Dependening on your distribution, you may need to add `~/.local/bin` to the `PATH` environment variable. The kde-builder installer will tell you if this is required.
+Depending on your distribution, you may need to add `~/.local/bin` to the `PATH` environment variable. The kde-builder installer will tell you if this is required.
 
 {{< /alert >}}
 
@@ -183,7 +183,7 @@ Qt is the fundamental framework that is needed for all KDE development. A recent
 
 The initial setup of `kde-builder` should have installed the required Qt6 packages for you already, in which case you don't need to do anything and may skip directly to the [Configure git]({{< ref "#configure-git" >}}) section.
 
-If your Linux distribution does not provide a recent enough versoin of Qt, you have the following options:
+If your Linux distribution does not provide a recent enough version of Qt, you have the following options:
 
 * Use Craft or containers, as mentioned in [Building KDE software]({{< ref "building" >}})
 * [Install Qt6 using the Qt online installer]({{< ref "#qt6-online" >}})
@@ -296,7 +296,7 @@ git config --global user.email "you@email.com"
 
 The name given here must be a human name, not the username of your KDE account or similar. The email should be the same as configured in GitLab and for your account on [bugs.kde.org](https://bugs.kde.org), if you have one. This is required for some integrations to work correctly.
 
-You should take the chance to create a [KDE Identity account](https://identity.kde.org) that you can use to access KDE's Gitlab instance where all KDE code resides, [Invent](https://invent.kde.org). Take a look at [Infrastructure: Gitlab](https://community.kde.org/Infrastructure/GitLab) to learn more about this.
+You should take the chance to create a [KDE Identity account](https://identity.kde.org) that you can use to access KDE's Gitlab instance where all KDE code resides, [Invent](https://invent.kde.org). Take a look at [Infrastructure: GitLab](https://community.kde.org/Infrastructure/GitLab) to learn more about this.
 
 For convenience, you can enable a feature that will become useful when starting to push code to GitLab:
 
