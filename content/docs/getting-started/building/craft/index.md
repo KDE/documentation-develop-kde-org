@@ -8,7 +8,7 @@ aliases: craft-building
 Craft is a tool with multiple purposes related to packaging:
 
 * It can build for multiple platforms: Windows, Android, macOS
-* It can generate packages in multiple packaging formats: APPX, MSIX, APK, AppImage
+* It can generate packages in multiple packaging formats: APPX, APK, AppImage
 
 Unlike kde-builder (KDE's build tool of choice on Linux), Craft defaults to downloading precompiled cached packages for the dependencies of your application, with the option to compile these packages locally.
 
