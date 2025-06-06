@@ -198,16 +198,14 @@ class Package(CMakePackageBase):
 Navigate to the directory where your project is:
 
 ```powershell
-cd "$env:USERPROFILE\OneDrive\Documents\kirigami-tutorial"
-# or
-cd $HOME\OneDrive\Documents\kirigami-tutorial
+cd $env:USERPROFILE\OneDrive\Documents\kirigami-tutorial
 ```
 
 Then run:
 
 ```bash
-craft --ignoreInstalled --options kirigami-tutorial.srcDir=$(pwd) kirigami-tutorial
-craft --options kirigami-tutorial.srcDir=$(pwd) --run kirigami-hello
+craft --ignoreInstalled --options kirigami-tutorial.srcDir=$(Get-Location) kirigami-tutorial
+craft --options kirigami-tutorial.srcDir=$(Get-Location) --run kirigami-hello
 ```
 
 This will ignore any repository options and branches and just use the current source directory as is.
@@ -247,7 +245,7 @@ By default, Craft will be able to make an executable package installer using [NS
 ```bash
 craft --package kirigami-tutorial
 # Or the following to use the current source directory as is
-craft --options kirigami-tutorial.srcDir=$(pwd) --package kirigami-tutorial
+craft --options kirigami-tutorial.srcDir=$(Get-Location) --package kirigami-tutorial
 ```
 
 The package installer will be created in `C:\CraftRoot\tmp\kirigami-tutorial-latest-master-windows-cl-msvc2022-x86_64.exe`.
