@@ -243,7 +243,7 @@ If you rebuild the project with any other command, it will revert to the master 
 
 {{< /alert >}}
 
-## Making an executable package {#package}
+## Making an installer {#installer}
 
 By default, Craft will be able to make an executable package installer using [NSIS](https://nsis.sourceforge.io):
 
