@@ -21,7 +21,7 @@ This tutorial will teach you how to:
 * [Make changes to existing KDE software](#changes)
 * [Build your own custom projects on Windows](#custom-projects)
 
-If you have any issues regarding Craft, visit the [#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org) group on [Matrix](https://community.kde.org/Matrix).
+If you have any issues regarding Craft, visit the [#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org) room on [Matrix](https://community.kde.org/Matrix).
 
 ## Craft setup on Windows
 
