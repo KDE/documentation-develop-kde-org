@@ -120,14 +120,14 @@ craft --run kcalc
 
 And you should see KCalc now has a new name.
 
-To build on a separate branch:
+To build on a work branch:
 
 ```bash
 craft --set version=master kcoreaddons
 craft --ignoreInstalled --no-cache kcoreaddons
 cs kcoreaddons
-git branch newbranch
-git switch newbranch
+git branch work/yourname/newbranch
+git switch work/yourname/newbranch
 craft --compile kcoreaddons
 ```
 
@@ -229,11 +229,11 @@ craft --ignoreInstalled kirigami-tutorial
 craft --run kirigami-hello
 ```
 
-Or build a specific branch as is:
+Or build a work branch as is:
 
 ```bash
-git branch newbranch
-git switch newbranch
+git branch work/yourname/newbranch
+git switch work/yourname/newbranch
 craft --compile kirigami-tutorial
 ```
 
