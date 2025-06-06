@@ -27,7 +27,7 @@ If you have any issues regarding Craft, visit the [#kde-craft:kde.org](https://g
 
 On Windows 11, open the Terminal. On Windows 10, open Powershell.
 
-Type `python3`. If you don’t have Python installed, it will open the Microsoft Store page for the latest release of Python, which you can then install without needing a Microsoft account.
+Type `python` and press Enter. If you don’t have Python installed, it will open the Microsoft Store page for the latest release of Python, which you can then install without needing a Microsoft account.
 
 Install Microsoft Visual Studio by going to [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) and downloading the installer. Make sure to select the "Desktop development with C++" workload.
 
