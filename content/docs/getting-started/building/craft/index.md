@@ -179,9 +179,6 @@ class subinfo(info.infoclass):
 from Package.CMakePackageBase import CMakePackageBase
 
 class Package(CMakePackageBase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
     def createPackage(self):
         self.defines["kirigami-tutorial"] = "kirigami-hello"
         self.defines["shortcuts"] = [{"name": "Kirigami Tutorial", "target": "bin/kirigami-hello.exe"}]
@@ -261,16 +258,13 @@ To make the installer create a menu launcher entry on Windows, we used this in t
 from Package.CMakePackageBase import CMakePackageBase
 
 class Package(CMakePackageBase):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
     def createPackage(self):
-        self.defines["kirigami-tutorial"] = "kirigami-hello"
+        self.defines["appname"] = "kirigami-hello"
         self.defines["shortcuts"] = [{"name": "Kirigami Tutorial", "target": "bin/kirigami-hello.exe"}]
         return super().createPackage()
 ```
 
-The Kirigami tutorial is designed such that the project name and main directory is called `kirigami-tutorial` and the binary is called `kirigami-hello`. Then we override its shortcut to point to the right place.
+The Kirigami tutorial is designed such that the project name and main directory is called `kirigami-tutorial` and the binary is called `kirigami-hello`, so we set the executable accordingly. Then we override its shortcut to point to the right place.
 
 ## Troubleshooting
 
