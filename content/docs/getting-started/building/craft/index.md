@@ -69,7 +69,7 @@ The first thing you need to do is to install its dependencies as well as kcalc:
 craft kcalc
 ```
 
-The first time you attempt to build any program using Craft, it will take a very long while to download all dependencies from the Craft cache. Depending on your internet connection and the project you want to hack, even just the dependencies might take more than one hour. This is because Windows lacks many of the default libraries that would be present in other operating systems, and because you will be installing cached builds.
+The first time you attempt to build any program using Craft, it will take a very long while to download all dependencies from the Craft cache. Depending on your internet connection and the project you want to hack, even just the dependencies might take more than one hour. This is because Windows lacks many of the default libraries that would be present in other operating systems.
 
 After the command is finished, you should be able to run KCalc using Craft:
 
