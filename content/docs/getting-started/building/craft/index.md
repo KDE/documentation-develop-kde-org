@@ -63,7 +63,7 @@ C:\CraftRoot\craft\craftenv.ps1
 
 Let's attempt to make changes to KCalc with Craft.
 
-The first thing you need to do is to install its dependencies as well as kcalc:
+The first thing you need to do is to install KCalc and its dependencies:
 
 ```bash
 craft kcalc
