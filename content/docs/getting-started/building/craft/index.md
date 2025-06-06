@@ -77,7 +77,7 @@ After the command is finished, you should be able to run KCalc using Craft:
 craft --run kcalc
 ```
 
-But because we downloaded a cached build of KCalc, we can't do modifications to its code just yet. Moreover, the version of KCalc installed will be the latest release rather than master, which is what we want to build.
+Because we downloaded a cached build of KCalc, we can't do modifications to its code just yet. Moreover, the version of KCalc installed will be the latest release rather than master, which is what we want to build.
 
 Set the version to master:
 
