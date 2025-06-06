@@ -53,7 +53,7 @@ iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.co
 
 It will ask you a series of questions. Press Enter for all options to accept the defaults.
 
-Now you should have a new app option called `CraftRoot` in your main menu. You can either use that for everything Craft related, or open Powershell/Terminal and run:
+Now you should have a new app entry called `CraftRoot` in your main menu. You can either use that for everything Craft related, or open Powershell/Terminal and run:
 
 ```powershell
 C:\CraftRoot\craft\craftenv.ps1
