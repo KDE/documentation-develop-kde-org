@@ -253,7 +253,7 @@ craft --package kirigami-tutorial
 craft --options kirigami-tutorial.srcDir=$(pwd) --package kirigami-tutorial
 ```
 
-The package installer will be created in `C:\CraftRoot\tmp\kirigami-tutorial-latest-master-windows-gcc-x86_64.exe`. Its file name will vary depending on the branch and whether you are using MinGW or MSVC.
+The package installer will be created in `C:\CraftRoot\tmp\kirigami-tutorial-latest-master-windows-cl-msvc2022-x86_64.exe`.
 
 To make the installer create a menu launcher entry on Windows, we used this in the above blueprint:
 
