@@ -198,6 +198,16 @@ Navigate to the directory where your project is:
 cd $env:USERPROFILE\OneDrive\Documents\kirigami-tutorial
 ```
 
+{{< alert title="About Windows user directories" color="info" >}}
+
+Windows 10 and 11 come with OneDrive enabled. By default, the `Documents` directory is backed up by OneDrive, so it is stored in `C:\Users\youruser\OneDrive\Documents`.
+
+After installation, if you set OneDrive to not back up this folder, then the new path becomes `C:\Users\youruser\Documents`.
+
+Additionally, the `Documents` directory might be localized into your language. Change the command above accordingly.
+
+{{< /alert >}}
+
 Then run:
 
 ```bash
