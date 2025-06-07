@@ -165,7 +165,7 @@ class subinfo(info.infoclass):
         self.displayName = "Kirigami Tutorial"
         self.description = "A test to run a Kirigami app on Windows with Craft"
         self.webpage = "https://kde.org"
-    def setDependencies( self ):
+    def setDependencies(self):
         self.buildDependencies["kde/frameworks/extra-cmake-modules"] = None
         self.runtimeDependencies["libs/qt/qtdeclarative"] = None
         self.runtimeDependencies["kde/frameworks/tier1/kirigami"] = None
