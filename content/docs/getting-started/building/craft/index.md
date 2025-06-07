@@ -125,7 +125,7 @@ To build on a work branch:
 ```bash
 git branch work/yourname/newbranch
 git switch work/yourname/newbranch
-craft --compile kcalc
+craft --compile --install --qmerge kcalc
 ```
 
 Later on, you can then just `git switch` to the branch you want to build and run the last command.
