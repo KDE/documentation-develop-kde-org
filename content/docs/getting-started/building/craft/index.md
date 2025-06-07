@@ -226,7 +226,7 @@ Or build a work branch as is:
 ```bash
 git branch work/yourname/newbranch
 git switch work/yourname/newbranch
-craft --compile kirigami-tutorial
+craft --compile --install --qmerge kirigami-tutorial
 ```
 
 {{< alert title="" color="danger" >}}
