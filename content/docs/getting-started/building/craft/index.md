@@ -123,12 +123,12 @@ And you should see KCalc now has a new name.
 To build on a work branch:
 
 ```bash
-craft --set version=master kcoreaddons
-craft --ignoreInstalled --no-cache kcoreaddons
-cs kcoreaddons
+craft --set version=master kcalc
+craft --ignoreInstalled --no-cache kcalc
+cs kcalc
 git branch work/yourname/newbranch
 git switch work/yourname/newbranch
-craft --compile kcoreaddons
+craft --compile kcalc
 ```
 
 Later on, you can then just `git switch` to the branch you want to build and run the last command.
