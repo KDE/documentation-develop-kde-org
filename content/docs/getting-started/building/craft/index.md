@@ -287,3 +287,33 @@ Do you want to delete the files and redownload them?
 ```
 
 All you need to do is to confirm `Yes` by pressing Enter.
+
+---
+
+If, when attempting to build a project from master, you get a message like this:
+
+```
+CMake Warning at CMakeLists.txt:7 (find_package):
+  Could not find a configuration file for package "ECM" that is compatible
+  with requested version "6.15.0".
+
+  The following configuration files were considered but not accepted:
+
+    C:/CraftRoot/share/ECM/cmake/ECMConfig.cmake, version: 6.14.0
+```
+
+This means a dependency of the project has a too low version.
+
+You will need to set the dependency to use a valid version or set it to master:
+
+```
+craft --set version=6.15.0
+# or
+craft --set version=master extra-cmake-modules
+```
+
+If the version is invalid, Craft will tell you the available valid options:
+
+```
+You defined an invalid target 6.15.0 for kde/frameworks/extra-cmake-modules, available versions are ['6.10.0', '6.11.0', '6.12.0', '6.13.0', '6.14.0', 'master']
+```
