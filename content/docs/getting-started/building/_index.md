@@ -7,6 +7,8 @@ groups:
     key: "help"
   - name: "kde-builder"
     key: "kde-builder"
+  - name: "Craft"
+    key: "craft"
   - name: "Manual builds"
     key: "cmake-build"
   - name: "Containers"
@@ -26,7 +28,7 @@ There are many ways in which you can build KDE software:
 * [kdesrc-build](https://invent.kde.org/sdk/kdesrc-build)
 * [manual CMake compilation]({{< ref "cmake-build" >}})
 * with [containers]({{< ref "containers-distrobox" >}})
-* with [Craft](https://community.kde.org/Craft)
+* with [Craft]({{< ref "craft" >}})
 
 If you are completely new to KDE development and want to build it on Linux, you will want to [set up a development environment with kde-builder]({{< ref "kde-builder-setup" >}}) first. This is KDE's most complete and best supported method for building KDE software on Linux.
 
@@ -34,7 +36,7 @@ If you are on a rolling release Linux distribution or just want to build a singl
 
 If you are on a Linux distribution that is too old for the previous methods or you use an immutable Linux distribution where development is only possible with containers, it is possible to develop KDE software using [Podman + Distrobox](https://community.kde.org/Get_Involved/development/More#Option_2._distrobox) and [Docker + Distrobox](https://community.kde.org/Neon/Containers).
 
-If you are on Windows or MacOS or want to build an application for Android, KDE also provides the meta build system and package manager [Craft](https://community.kde.org/Craft). Windows users may also be interested in [Packaging KDE Software for Windows]({{< ref "windows" >}}).
+If you are on Windows or MacOS or want to build an application for Android, KDE also provides the meta build system and package manager [Craft](https://community.kde.org/Craft). Windows users may also be interested in [Building KDE software on Windows]({{< ref "craft" >}}) and [Packaging KDE software for Windows]({{< ref "windows" >}}).
 
 ## Choosing the right method for your Linux system {#choosing}
 
