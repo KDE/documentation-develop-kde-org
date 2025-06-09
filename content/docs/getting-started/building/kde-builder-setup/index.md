@@ -312,7 +312,7 @@ You'll want to disable indexing for your development-related git repos and the f
 
 To do that, add the `~/kde` directory to the exclusions list in `System Settings` › `Search` › `File Search` > `Stop Indexing a Folder...`
 
-{{< figure class="text-center" caption="The Search field in System Settings." src="search-kdesrc-build.webp" >}}
+{{< figure class="text-center mr-5 pr-5" caption="The Search field in System Settings." src="search-kdesrc-build.webp" >}}
 
 ## Next Steps
 

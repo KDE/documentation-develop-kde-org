@@ -44,7 +44,7 @@ It is rare, but if the master branch of a project contains faulty code, it will 
 To check, look at the [Invent](https://invent.kde.org), KDE's Gitlab instance where all code is stored.
 If the project has a GitLab build pipeline and the pipeline is broken, then it's not your fault.
 
-{{< figure class="text-center" caption="Where to see if the pipeline is working." src="gitlab-successful.webp" >}}
+{{< figure class="text-center mr-5 pr-5" caption="Where to see if the pipeline is working." src="gitlab-successful.webp" >}}
 
 ## The project has failed to run
 

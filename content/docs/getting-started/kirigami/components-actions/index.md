@@ -96,9 +96,9 @@ A [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) shows Actions on the righ
 
 {{< compare >}}
 
-{{< figure class="w-auto text-center" caption="Page actions on the desktop" src="desktop_page.webp" >}}
+{{< figure class="text-left mx-auto" caption="Page actions on the desktop" src="desktop_page.webp" >}}
 
-{{< figure class="w-auto text-center" caption="Page actions on a mobile device" src="mobile_page.webp" >}}
+{{< figure class="text-right mx-auto" caption="Page actions on a mobile device" src="mobile_page.webp" >}}
 
 {{< /compare >}}
 

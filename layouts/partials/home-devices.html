@@ -1,38 +1,38 @@
 <figure class="platform-devices d-block m-0" aria-label="{{ i18n "home.multiplatform.alt" }}">
   <div class="platform-bigscreen" aria-hidden="true">
-      {{ with resources.GetMatch "img/home/bigscreen.svg"  }}
-        <img class="platform-svg img-fluid col-12 col-lg-10 mx-md-auto" src="{{ .RelPermalink }}" alt=""/>
+      {{ with resources.GetMatch "img/home/bigscreen.svg" }}
+        <img class="platform-svg img-fluid col-12 col-lg-10 mx-md-auto" src="{{ .RelPermalink }}" alt="">
       {{ end }}
-      {{ with resources.GetMatch "img/home/bigscreen.png"  }}
+      {{ with resources.GetMatch "img/home/bigscreen.png" }}
         <picture>
             {{ with .Process "webp" }}
               <source srcset="{{ .RelPermalink }}" type="image/webp">
             {{ end }}
-          <img class="platform-bigscreen-screenshot" src="{{ .RelPermalink }}" alt="">
+          <img class="platform-bigscreen-screenshot" src="{{ .RelPermalink }}" alt="" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
         </picture>
       {{ end }}
   </div>
   <div class="platform-desktop" aria-hidden="true">
-    <img class="platform-svg img-fluid col-12 col-lg-10 mx-md-auto" src="/reusable-assets/laptop.svg" alt=""/>
-    {{ with resources.GetMatch "img/home/desktop.png"  }}
+    <img class="platform-svg img-fluid col-12 col-lg-10 mx-md-auto" src="/reusable-assets/laptop.svg" alt="">
+    {{ with resources.GetMatch "img/home/desktop.png" }}
       <picture>
           {{ with .Process "webp" }}
             <source srcset="{{ .RelPermalink }}" type="image/webp">
           {{ end }}
-        <img class="platform-desktop-screenshot" src="{{ .RelPermalink }}" alt="">
+        <img class="platform-desktop-screenshot" src="{{ .RelPermalink }}" alt="" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
       </picture>
     {{ end }}
   </div>
   <div class="platform-mobile" aria-hidden="true">
-    {{ with resources.GetMatch "img/home/mobile.svg"  }}
-    <img class="platform-svg img-fluid col-12 col-lg-10 mx-md-auto" src="{{ .RelPermalink }}" alt=""/>
+    {{ with resources.GetMatch "img/home/mobile.svg" }}
+    <img class="platform-svg img-fluid col-12 col-lg-10 mx-md-auto" src="{{ .RelPermalink }}" alt="">
     {{ end }}
-    {{ with resources.GetMatch "img/home/mobile.png"  }}
+    {{ with resources.GetMatch "img/home/mobile.png" }}
       <picture>
           {{ with .Process "webp" }}
             <source srcset="{{ .RelPermalink }}" type="image/webp">
           {{ end }}
-        <img class="platform-mobile-screenshot" src="{{ .RelPermalink }}" alt="">
+        <img class="platform-mobile-screenshot" src="{{ .RelPermalink }}" alt="" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
       </picture>
     {{ end }}
   </div>

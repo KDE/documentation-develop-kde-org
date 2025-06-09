@@ -51,7 +51,7 @@ layout: area
     <div class="text-center">
       <img class="w-75 mx-auto img-fluid shadow" src="https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png" alt="screenshot of app Icon Explorer" />
     </div>
-    <a class="noblefir mt-4" id="install-button" href="appstream://org.kde.cuttlefish.desktop" data-windows="">
+    <a class="noblefir ml-auto align-self-center mt-4" id="install-button" href="appstream://org.kde.cuttlefish.desktop" data-windows="">
       <span id="install-msg">Install on Linux</span>
     </a>
   </div>
