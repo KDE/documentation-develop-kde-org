@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kirigami-tutorial\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-28 01:56+0000\n"
+"POT-Creation-Date: 2025-06-13 01:53+0000\n"
 "PO-Revision-Date: 2023-05-22 22:06+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -1442,6 +1442,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:357
 #: content/docs/getting-started/kirigami/setup-python/index.md:78
 #: content/docs/getting-started/kirigami/setup-python/index.md:129
+#: content/docs/getting-started/kirigami/setup-rust/index.md:137
 #: content/docs/getting-started/kirigami/style-colors/index.md:28
 msgid "Note"
 msgstr "Nota"
@@ -8793,6 +8794,7 @@ msgid "Create your first Kirigami application with C++\n"
 msgstr "Preparar a criação da nossa primeira aplicação do Kirigami\n"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:12
+#: content/docs/getting-started/kirigami/setup-rust/index.md:11
 #, fuzzy
 #| msgid "Using Kirigami Gallery"
 msgid "Installing Kirigami"
@@ -8860,6 +8862,7 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:34
+#: content/docs/getting-started/kirigami/setup-rust/index.md:20
 #, fuzzy
 #| msgid ""
 #| "Further information for other distributions can be found [here](https://"
@@ -8951,6 +8954,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:83
 #: content/docs/getting-started/kirigami/setup-python/index.md:23
+#: content/docs/getting-started/kirigami/setup-rust/index.md:22
 msgid "Project structure"
 msgstr "Estrutura do projecto"
 
@@ -9013,11 +9017,13 @@ msgstr "main.qml"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:123
 #: content/docs/getting-started/kirigami/setup-python/index.md:118
+#: content/docs/getting-started/kirigami/setup-rust/index.md:126
 msgid "Here's where we will be handling our application's frontend."
 msgstr "Aqui está como será tratada a interface da nossa aplicação."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:125
 #: content/docs/getting-started/kirigami/setup-python/index.md:120
+#: content/docs/getting-started/kirigami/setup-rust/index.md:128
 #, fuzzy
 #| msgid ""
 #| "If you know some Javascript, then much of QML will seem familiar to you "
@@ -9044,6 +9050,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:127
 #: content/docs/getting-started/kirigami/setup-python/index.md:122
+#: content/docs/getting-started/kirigami/setup-rust/index.md:130
 #, fuzzy
 #| msgid ""
 #| "For now, let's focus on `main.qml`. First we [import](https://doc.qt.io/"
@@ -9057,6 +9064,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:129
 #: content/docs/getting-started/kirigami/setup-python/index.md:124
+#: content/docs/getting-started/kirigami/setup-rust/index.md:132
 msgid ""
 "[QtQuick](https://doc.qt.io/qt-6/qtquick-index.html), the standard library "
 "used in QML applications."
@@ -9066,6 +9074,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:130
 #: content/docs/getting-started/kirigami/setup-python/index.md:125
+#: content/docs/getting-started/kirigami/setup-rust/index.md:133
 msgid ""
 "[QtQuick Controls](https://doc.qt.io/qt-6/qtquickcontrols-index.html), which "
 "provides a number of standard controls we can use to make our applications "
@@ -9077,6 +9086,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:131
 #: content/docs/getting-started/kirigami/setup-python/index.md:126
+#: content/docs/getting-started/kirigami/setup-rust/index.md:134
 msgid ""
 "[QtQuick Layouts](https://doc.qt.io/qt-6/qtquicklayouts-index.html), which "
 "provides tools for placing components within the application window."
@@ -9103,6 +9113,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:136
 #: content/docs/getting-started/kirigami/setup-python/index.md:131
+#: content/docs/getting-started/kirigami/setup-rust/index.md:139
 msgid ""
 "Putting the QtQuick Controls and Kirigami imports into separate namespaces "
 "using the `as` keyword is a best practice that ensures no components with "
@@ -9139,6 +9150,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:142
 #: content/docs/getting-started/kirigami/setup-python/index.md:137
+#: content/docs/getting-started/kirigami/setup-rust/index.md:145
 msgid ""
 "We then set the window's `id` property to \"root\". IDs are useful because "
 "they let us uniquely reference a component, even if we have several of the "
@@ -9262,6 +9274,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:160
 #: content/docs/getting-started/kirigami/setup-python/index.md:72
+#: content/docs/getting-started/kirigami/setup-rust/index.md:58
 msgid ""
 "The primary purpose of [Desktop Entry files](https://specifications."
 "freedesktop.org/desktop-entry-spec/latest/) is to show your app on the "
@@ -9289,6 +9302,7 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:172
+#: content/docs/getting-started/kirigami/setup-rust/index.md:64
 msgid "CMakeLists.txt"
 msgstr "CMakeLists.txt"
 
@@ -9405,6 +9419,7 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:200
+#: content/docs/getting-started/kirigami/setup-rust/index.md:82
 msgid ""
 "Now that CMake has been taken care of, let's look at the files we are going "
 "to spend the majority of our time working with."
@@ -9560,6 +9575,7 @@ msgid "file = the QML file"
 msgstr "Adicionar novos elementos ao ficheiros QML"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:258
+#: content/docs/getting-started/kirigami/setup-rust/index.md:153
 #, fuzzy
 #| msgid "Compiling and running the application"
 msgid "Compiling and installing the application"
@@ -9693,6 +9709,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:343
 #: content/docs/getting-started/kirigami/setup-python/index.md:187
+#: content/docs/getting-started/kirigami/setup-rust/index.md:173
 #, fuzzy
 #| msgid ""
 #| "![Screenshot of the generated Kirigami application](hello-kworld.png)"
@@ -9701,12 +9718,14 @@ msgstr "![Imagem da aplicação do Kirigami gerada](hello-kworld.png)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:345
 #: content/docs/getting-started/kirigami/setup-python/index.md:179
+#: content/docs/getting-started/kirigami/setup-rust/index.md:175
 msgid ""
 "To run the new QML application in mobile mode, you can use "
 "`QT_QUICK_CONTROLS_MOBILE=1`:"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:351
+#: content/docs/getting-started/kirigami/setup-rust/index.md:181
 msgid ""
 "If you have compiled the project manually with CMake and for some reason "
 "you'd like to uninstall the project, you can run:"
@@ -9965,12 +9984,14 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:114
+#: content/docs/getting-started/kirigami/setup-rust/index.md:122
 #, fuzzy
 #| msgid "main.qml"
 msgid "src/qml/Main.qml"
 msgstr "main.qml"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:139
+#: content/docs/getting-started/kirigami/setup-rust/index.md:147
 msgid "We also set the window `title` property to \"Hello World\"."
 msgstr ""
 
@@ -10053,6 +10074,380 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:173
 msgid "After this, the application can be launched by running:"
 msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:0
+#, fuzzy
+#| msgid "Kirigami Unit"
+msgid "Kirigami with Rust"
+msgstr "Unidade do Kirigami"
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:0
+#, fuzzy
+#| msgid "Getting ready to create our first Kirigami application\n"
+msgid "Create your first Kirigami application with Rust\n"
+msgstr "Preparar a criação da nossa primeira aplicação do Kirigami\n"
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:13
+msgid ""
+"Before getting started, we will need to install Kirigami and Rust on our "
+"machine."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:24
+#, fuzzy
+#| msgid ""
+#| "First we create our project folder. We are going to call ours \"helloworld"
+#| "\"."
+msgid ""
+"First we create our project folder (you can use the commands below). We are "
+"going to call ours `kirigami_rust/`. This will be the project's structure:"
+msgstr ""
+"Em primeiro lugar, criamos a pasta do nosso projecto. Iremos chamar ao nosso "
+"\"helloworld\"."
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:38
+msgid ""
+"This project will use CMake to call Cargo, which in turn will build the "
+"project."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:40
+msgid "About CMake and Cargo"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:42
+msgid ""
+"This is **not** the traditional way of building a Rust project: technically, "
+"only Cargo is needed to build it, usually with `cargo build` and `cargo run`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:44
+msgid ""
+"For desktop applications however, CMake (or an equivalent like [Meson]"
+"(https://mesonbuild.com/) used by GNOME or [Just](https://just.systems/man/"
+"en/introduction.html) used by COSMIC) is needed to install because Cargo "
+"lacks the necessary features to install GUI desktop applications."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:48
+msgid ""
+"The project will be called `kirigami_rust` and it will generate an "
+"executable called `kirigami_hello`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:50
+msgid "💡 Tip"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:52
+#, fuzzy
+#| msgid "You can quickly create this file structure with:"
+msgid ""
+"You can quickly create this file structure with: `mkdir -p kirigami_rust/src/"
+"qml/`."
+msgstr "Pode criar rapidamente esta estrutura de ficheiros com:"
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:56
+msgid "org.kde.kirigami_rust.desktop"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:60
+msgid ""
+"It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
+"Reverse_domain_name_notation) followed by the `.desktop` extension such as "
+"`org.kde.kirigami_rust.desktop`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:66
+msgid ""
+"The `CMakeLists.txt` file is going to be used to run Cargo and to install "
+"the necessary files together with our application. It also provides certain "
+"quality of life features, such as making sure that Kirigami is installed "
+"during compilation and to signal Linux distributions to install the "
+"necessary dependencies with the application."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:70
+msgid ""
+"The first thing we do is add KDE's [Extra CMake Modules (ECM)](https://api."
+"kde.org/ecm/manual/ecm.7.html) to our project so we can use "
+"[ecm_find_qml_module](https://api.kde.org/ecm/module/ECMFindQmlModule.html) "
+"to check that Kirigami is installed when trying to build the application, "
+"and if it's not, fail immediately. Another useful ECM feature is "
+"[ECMUninstallTarget](https://api.kde.org/ecm/module/ECMUninstallTarget."
+"html), which allows to easily uninstall the application with CMake if "
+"desired."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:72
+msgid ""
+"We also use CMake's [find_package()](https://cmake.org/cmake/help/latest/"
+"command/find_package.html) to make sure we have [qqc2-desktop-style](https://"
+"invent.kde.org/frameworks/qqc2-desktop-style), KDE's QML style for the "
+"desktop. This is one of the two reasons we use CMake in this tutorial."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:74
+msgid ""
+"Typically Rust projects are built with Cargo, and it won't be different "
+"here. We create a target that will simply run Cargo when run, and mark it "
+"with `ALL` so it builds by default. Cargo will build the executable inside "
+"CMake's binary directory (typically `build/`)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:76
+msgid ""
+"For more information about CMake, targets, and the binary directory, see "
+"[Building KDE software manually](/docs/getting-started/building/cmake-build)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:78
+msgid ""
+"After this, we simply install the `kirigami_rust` executable generated by "
+"Cargo in the binary directory and install it to the `BINDIR`, which is "
+"usually `/usr/bin`, `/usr/local/bin` or `~/.local/bin`. We also install the "
+"necessary desktop file to `APPDIR`, which is usually `/usr/share/"
+"applications` or `~/.local/share/applications`. This is the second reason we "
+"use CMake in this tutorial."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:80
+msgid ""
+"For more information about where KDE software is installed, see [Building "
+"KDE software manually: The install step](/docs/getting-started/building/"
+"cmake-build/#install)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:84
+msgid "Cargo.toml"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:86
+msgid "Next we have a very straightforward `Cargo.toml`:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:90
+msgid ""
+"It consists of project metadata and a list of dependencies that will be "
+"pulled automatically by Cargo, namely `cxx` and `cxx-qt`, which are "
+"necessary to run Qt applications written in Rust."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:92
+msgid "build.rs"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:94
+msgid ""
+"Where in C++ you'd typically register QML elements with [QML_ELEMENT]"
+"(https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html) and "
+"[ecm_add_qml_module](https://api.kde.org/ecm/module/ECMQmlModule.html) using "
+"[declarative registration](https://www.qt.io/blog/qml-type-registration-in-"
+"qt-5.15), with Rust you'll need to declare it in a [build script build.rs]"
+"(https://doc.rust-lang.org/cargo/reference/build-scripts.html) file:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:98
+msgid ""
+"This is necessary to make the QML file available in the entrypoint for our "
+"application, `main.rs`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:100
+#, fuzzy
+#| msgid "main.qml"
+msgid "src/main.rs"
+msgstr "main.qml"
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:102
+msgid ""
+"The file `kirigami_rust/src/main.rs` initializes the project and then loads "
+"the QML file, which will consist of the user interface for the application."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:106
+msgid ""
+"The first part that is marked with the [#[cxx_qt::bridge]](https://kdab."
+"github.io/cxx-qt/book/bridge/index.html) Rust macro just creates a dummy "
+"QObject out of a dummy Rust struct. This is needed just to complete the use "
+"of [QmlModule](https://docs.rs/cxx-qt-build/latest/cxx_qt_build/struct."
+"QmlModule.html) in the previous build script `build.rs`. This will play a "
+"larger part in a future tutorial teaching how to expose Rust code to QML, "
+"but for now you can ignore it."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:108
+msgid "After this starts the important part:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:110
+msgid "Lines 12-13 import the needed Qt libraries exposed through cxx-qt."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:112
+msgid ""
+"We first create a new instance of a `QApplication`, then perform a few "
+"integrations in lines 20-26."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:114
+msgid "Then comes the part that actually creates the application window:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:118
+msgid ""
+"The long URL `qrc:/qt/qml/org/kde/tutorial/src/qml/Main.qml` corresponds to "
+"the `Main.qml` file according to the [Qt Resource System](https://doc.qt.io/"
+"qt-6/resources.html), and it follows this scheme: "
+"`<resource_prefix><import_URI><QML_dir><file>`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:120
+msgid ""
+"In other words: the default resource prefix `qrc:/qt/qml/` + the import URI "
+"`org/kde/tutorial` (set in `build.rs`, separated by slashes instead of dots) "
+"+ the QML dir `src/qml/` + the QML file `Main.qml`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:135
+#, fuzzy
+#| msgid ""
+#| "[Kirigami](docs:kirigami2), which provides a number of components suited "
+#| "for creating applications that work across devices of different shapes "
+#| "and sizes."
+msgid ""
+"[Kirigami](docs:kirigami2), which provides a number of components suited for "
+"creating applications that work across devices of different shapes and sizes."
+msgstr ""
+"O [Kirigami](docs:kirigami2), que oferece um conjunto de componentes "
+"adequados para criar aplicações que funcionam bem entre dispositivos de "
+"formas e tamanhos diferentes."
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:143
+#, fuzzy
+#| msgid ""
+#| "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
+#| "kirigami2;ApplicationWindow), which provides some basic features needed "
+#| "for all Kirigami applications. This is the window that will contain each "
+#| "of our pages, the main sections of our UI."
+msgid ""
+"We then come to our base element, [Kirigami.ApplicationWindow](docs:"
+"kirigami2;ApplicationWindow), which provides some basic features needed for "
+"all Kirigami applications. This is the window that will contain each of our "
+"pages, the main sections of our UI."
+msgstr ""
+"Iremos então voltar ao nosso elemento de base, o [Kirigami.ApplicationWindow]"
+"(docs:kirigami2;ApplicationWindow) que oferece algumas funcionalidades "
+"básicas necessárias para todas as aplicações de Kirigami. Esta é a janela "
+"que irá conter cada uma das nossas páginas, as secções principais da nossa "
+"interface."
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:149
+#, fuzzy
+#| msgid ""
+#| "We then set the first page of our page stack. Most Kirigami applications "
+#| "are organised as a stack of pages, each page containing related "
+#| "components suited to a specific task. For now, we are keeping it simple, "
+#| "and sticking to a single page. [pageStack](docs:kirigami2;"
+#| "AbstractApplicationWindow::pageStack) is an initially empty stack of "
+#| "pages provided by [Kirigami.ApplicationWindow](docs:kirigami2;"
+#| "ApplicationWindow), and with `pageStack.initialPage: Kirigami.Page {...}` "
+#| "we set the first page presented upon loading the application to a "
+#| "[Kirigami.Page](docs:kirigami2;Page). This page will contain all our "
+#| "content."
+msgid ""
+"We then set the first page of our page stack. Most Kirigami applications are "
+"organised as a stack of pages, each page containing related components "
+"suited to a specific task. For now, we are keeping it simple, and sticking "
+"to a single page. [pageStack](docs:kirigami2;AbstractApplicationWindow::"
+"pageStack) is an initially empty stack of pages provided by [Kirigami."
+"ApplicationWindow](docs:kirigami2;ApplicationWindow), and with `pageStack."
+"initialPage: Kirigami.Page {...}` we set the first page presented upon "
+"loading the application to a [Kirigami.Page](docs:kirigami2;Page). This page "
+"will contain all our content."
+msgstr ""
+"Definimos então a primeira página da nossa pilha de páginas. A maioria das "
+"aplicações do Kirigami são organizadas como uma pilha de páginas, contendo "
+"cada uma os componentes relacionados e adequados para uma dada tarefa. Por "
+"agora, iremos mantê-la simples e ficaremos apenas com uma única página. A "
+"[pageStack](docs:kirigami2;AbstractApplicationWindow::pageStack) é uma pilha "
+"inicialmente vazia de páginas fornecidas pelo [Kirigami.ApplicationWindow]"
+"(docs:kirigami2;ApplicationWindow), e com a `pageStack.initialPage: Kirigami."
+"Page {...}`, iremos configurar a primeira página apresentada ao carregar a "
+"aplicação como uma [Kirigami.Page](docs:kirigami2;Page), a qual irá conter "
+"todo o nosso conteúdo."
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:151
+#, fuzzy
+#| msgid ""
+#| "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
+#| "QtQuick.Controls.Label) that lets us place text on our page. We use "
+#| "`anchors.centerIn: parent` to center our label horizontally and "
+#| "vertically within our parent element. In this case, the parent component "
+#| "of our label is [Kirigami.Page](docs:kirigami2;Page). The last thing we "
+#| "need to do is set its text: `text: i18n(\"Hello World!\")`."
+msgid ""
+"Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
+"QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
+"centerIn: parent` to center our label horizontally and vertically within our "
+"parent element. In this case, the parent component of our label is [Kirigami."
+"Page](docs:kirigami2;Page). The last thing we need to do is set its text: "
+"`text: \"Hello World!\"`."
+msgstr ""
+"Finalmente, incluímos na nossa página um [Controls.Label](docs:"
+"qtquickcontrols;QtQuick.Controls.Label) que nos permite colocar texto na "
+"nossa página. Usamos o `anchors.centerIn: parent` para centrar o nosso texto "
+"na horizontal e na vertical dentro do nosso elemento-pai. Neste caso, o "
+"componente-pai do `Controls.Label` é o [Kirigami.Page](docs:kirigami2;Page). "
+"A última coisa que é necessária é definir o texto: `text: i18n(\"Hello World!"
+"\")`."
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:155
+msgid ""
+"You should find the generated executable `kirigami_hello` under `build/debug/"
+"kirigami_hello` and you may run it directly or with `cargo run`, but it will "
+"lack a Window icon. To address this, we'll install the application first."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:157
+#, fuzzy
+#| msgid "add the following:"
+msgid "Run the following:"
+msgstr "adicione o seguinte abaixo:"
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:165
+msgid ""
+"With the first command, CMake will search for Kirigami and qqc2-desktop-"
+"style."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:167
+msgid ""
+"With the second command, CMake will build the `kirigami_rust` target, which "
+"just calls `cargo build --target-dir build/`. This step will take a while to "
+"complete, but the next time you repeat the second CMake command it will be "
+"faster or you will not need to compile at all."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:169
+msgid ""
+"In the third step, CMake will install the executable `kirigami_hello` under "
+"`~/.local/bin/kirigami_hello` and the desktop file under `~/.local/share/"
+"applications`, and a new entry named \"Kirigami Tutorial in Rust\" will "
+"appear on your menu."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-rust/index.md:171
+#, fuzzy
+#| msgid ""
+#| "Voilà! Now you will see your very first Kirigami app appear before your "
+#| "very own eyes."
+msgid ""
+"Open the menu entry and voilà! Now you will see your very first Kirigami app "
+"appear before your very own eyes."
+msgstr ""
+"Voilá! Agora tem a sua primeira aplicação do Kirigami a funcionar diante dos "
+"seus olhos."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 #, fuzzy
@@ -11303,9 +11698,6 @@ msgstr ""
 #~ "Agora vamos preencher o modelo que irá alimentar a nossa grelha com "
 #~ "dados. Na definição do [Kirigami.ScrollablePage](docs:kirigami2;"
 #~ "ScrollablePage), logo a seguir a:"
-
-#~ msgid "add the following:"
-#~ msgstr "adicione o seguinte abaixo:"
 
 #~ msgid ""
 #~ "Notice the `{}` that indicates we are appending a JavaScript object to "
