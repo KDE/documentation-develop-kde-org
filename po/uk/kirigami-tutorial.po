@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-13 01:53+0000\n"
-"PO-Revision-Date: 2025-05-28 08:47+0300\n"
+"PO-Revision-Date: 2025-06-13 11:31+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -9880,55 +9880,47 @@ msgid "After this, the application can be launched by running:"
 msgstr "Після цього програму можна буде запустити так:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with C++"
 msgid "Kirigami with Rust"
-msgstr "Kirigami з C++"
+msgstr "Kirigami з Rust"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Create your first Kirigami application with C++\n"
 msgid "Create your first Kirigami application with Rust\n"
-msgstr "Створіть вашу першу програму Kirigami з використанням C++\n"
+msgstr "Створіть вашу першу програму Kirigami з використанням Rust\n"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:13
-#, fuzzy
-#| msgid ""
-#| "Before getting started, we will need to install Kirigami and PySide on "
-#| "our machine."
 msgid ""
 "Before getting started, we will need to install Kirigami and Rust on our "
 "machine."
 msgstr ""
-"Перш ніж почати, нам потрібно встановити Kirigami і Python у нашій машині."
+"Перш ніж почати, нам потрібно встановити Kirigami і Rust у нашій машині."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:24
-#, fuzzy
-#| msgid ""
-#| "First we create our project folder (you can use the commands below). We "
-#| "are going to call ours `kirigami_python/`."
 msgid ""
 "First we create our project folder (you can use the commands below). We are "
 "going to call ours `kirigami_rust/`. This will be the project's structure:"
 msgstr ""
 "Спочатку ми створимо теку нашого проєкту (ви можете скористатися наведеними "
-"нижче командами). Назвемо цю теку `kirigami_python/`."
+"нижче командами). Назвемо цю теку `kirigami_rust/`. Ось структура проєкту:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:38
 msgid ""
 "This project will use CMake to call Cargo, which in turn will build the "
 "project."
 msgstr ""
+"У цьому проєкті використано CMake для виклику Cargo, системи, яка збере "
+"проєкт."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:40
 msgid "About CMake and Cargo"
-msgstr ""
+msgstr "Про CMake і Cargo"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:42
 msgid ""
 "This is **not** the traditional way of building a Rust project: technically, "
 "only Cargo is needed to build it, usually with `cargo build` and `cargo run`."
 msgstr ""
+"Це **не** є традиційним способом збирання проєкту на Rust: технічно, для "
+"його збирання потрібен лише Cargo, зазвичай, `cargo build` та `cargo run`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:44
 msgid ""
@@ -9937,41 +9929,37 @@ msgid ""
 "en/introduction.html) used by COSMIC) is needed to install because Cargo "
 "lacks the necessary features to install GUI desktop applications."
 msgstr ""
+"Однак для стільничних програм слід встановити CMake (або еквівалент, як-от "
+"[Meson](https://mesonbuild.com/), який використовується GNOME, або [Just]"
+"(https://just.systems/man/en/introduction.html), який використовується "
+"COSMIC), оскільки Cargo не містить необхідних функцій для встановлення "
+"стільничних програм з графічним інтерфейсом."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:48
 msgid ""
 "The project will be called `kirigami_rust` and it will generate an "
 "executable called `kirigami_hello`."
 msgstr ""
+"Проєкт називатиметься `kirigami_rust`, і він створюватиме виконуваний файл "
+"із назвою `kirigami_hello`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:50
 msgid "💡 Tip"
-msgstr ""
+msgstr "💡 Підказка"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:52
-#, fuzzy
-#| msgid ""
-#| "To quickly generate this folder structure, just run: `mkdir -p "
-#| "kirigami_python/src/qml/`."
 msgid ""
 "You can quickly create this file structure with: `mkdir -p kirigami_rust/src/"
 "qml/`."
 msgstr ""
-"Щоб швидко створити цю структуру тек, просто віддайте команду: `mkdir -p "
-"kirigami_python/src/qml/`."
+"Ви можете швидко створити цю структуру такою командою: `mkdir -p "
+"kirigami_rust/src/qml/`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:56
-#, fuzzy
-#| msgid "org.kde.kirigami_python.desktop"
 msgid "org.kde.kirigami_rust.desktop"
-msgstr "org.kde.kirigami_python.desktop"
+msgstr "org.kde.kirigami_rust.desktop"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:60
-#, fuzzy
-#| msgid ""
-#| "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/"
-#| "wiki/Reverse_domain_name_notation) followed by the `.desktop` extension "
-#| "such as `org.kde.kirigami_python.desktop`:"
 msgid ""
 "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
@@ -9979,7 +9967,7 @@ msgid ""
 msgstr ""
 "Має виконуватися [схема іменування зворотного DNS](https://en.wikipedia.org/"
 "wiki/Reverse_domain_name_notation) з наступним суфіксом назви `.desktop`, "
-"наприклад `org.kde.kirigami_python.desktop`:"
+"наприклад `org.kde.kirigami_rust.desktop`:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:66
 msgid ""
@@ -9989,6 +9977,11 @@ msgid ""
 "during compilation and to signal Linux distributions to install the "
 "necessary dependencies with the application."
 msgstr ""
+"Файл `CMakeLists.txt` буде використано для запуску Cargo та встановлення "
+"необхідних файлів разом із нашою програмою. У ньому також реалізовано певні "
+"функції для зручності, такі як забезпечення встановлення Kirigami під час "
+"компіляції та надсилання команд дистрибутивам Linux про необхідність "
+"встановлення необхідних залежностей разом із програмою."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:70
 msgid ""
@@ -10001,6 +9994,14 @@ msgid ""
 "html), which allows to easily uninstall the application with CMake if "
 "desired."
 msgstr ""
+"Перше, що ми зробимо, це додамо до нашого проєкту [Додаткові модулі CMake "
+"(ECM)](https://api.kde.org/ecm/manual/ecm.7.html) від KDE, щоб ми могли "
+"використовувати [ecm_find_qml_module](https://api.kde.org/ecm/module/"
+"ECMFindQmlModule.html) для перевірки встановлення Kirigami під час спроби "
+"зібрати програму, і якщо його не встановлено, то негайно завершити роботу. "
+"Ще однією корисною функцією ECM є [ECMUninstallTarget](https://api.kde.org/"
+"ecm/module/ECMUninstallTarget.html), яка надає змогу легко вилучити програму "
+"за допомогою CMake, якщо це потрібно."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:72
 msgid ""
@@ -10009,6 +10010,11 @@ msgid ""
 "invent.kde.org/frameworks/qqc2-desktop-style), KDE's QML style for the "
 "desktop. This is one of the two reasons we use CMake in this tutorial."
 msgstr ""
+"Ми також скористаємося [find_package()](https://cmake.org/cmake/help/latest/"
+"command/find_package.html) з CMake, щоб переконатися, що у нас є [qqc2-"
+"desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style), стиль "
+"QML KDE для стільниці. Це одна з двох причин, чому ми використовуємо CMake у "
+"цьому підручнику."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:74
 msgid ""
@@ -10017,12 +10023,19 @@ msgid ""
 "with `ALL` so it builds by default. Cargo will build the executable inside "
 "CMake's binary directory (typically `build/`)."
 msgstr ""
+"Зазвичай проєкти Rust збираються за допомогою Cargo, і тут ми теж це "
+"зробимо. Ми створюємо ціль, яка просто запускатиме Cargo під час запуску, і "
+"позначаємо її як `ALL`, щоб вона збиралася типово. Cargo збиратиме "
+"виконуваний файл у каталозі CMake для виконуваних файлів (зазвичай `build/`)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:76
 msgid ""
 "For more information about CMake, targets, and the binary directory, see "
 "[Building KDE software manually](/docs/getting-started/building/cmake-build)."
 msgstr ""
+"Щоб дізнатися більше про CMake, цілі та каталог виконуваних файлів, див. "
+"[Збирання програмного забезпечення KDE вручну](/docs/getting-started/"
+"building/cmake-build)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:78
 msgid ""
@@ -10033,6 +10046,12 @@ msgid ""
 "applications` or `~/.local/share/applications`. This is the second reason we "
 "use CMake in this tutorial."
 msgstr ""
+"Після цього ми просто встановлюємо виконуваний файл `kirigami_rust`, "
+"створений Cargo, у каталозі виконуваних файлів та встановлюємо його до "
+"`BINDIR`, яким зазвичай є `/usr/bin`, `/usr/local/bin` або `~/.local/bin`. "
+"Ми також встановлюємо потрібний файл desktop до `APPDIR`, яким зазвичай є `/"
+"usr/share/applications` або `~/.local/share/applications`. Це друга причина, "
+"чому ми використовуємо CMake у цьому підручнику."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:80
 msgid ""
@@ -10040,14 +10059,17 @@ msgid ""
 "KDE software manually: The install step](/docs/getting-started/building/"
 "cmake-build/#install)."
 msgstr ""
+"Щоб дізнатися більше про те, де встановлено програмне забезпечення KDE, див. "
+"[Збирання програмного забезпечення KDE вручну: крок встановлення](/docs/"
+"getting-started/building/cmake-build/#install)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:84
 msgid "Cargo.toml"
-msgstr ""
+msgstr "Cargo.toml"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:86
 msgid "Next we have a very straightforward `Cargo.toml`:"
-msgstr ""
+msgstr "Далі, у нас є зрозумілий `Cargo.toml`:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:90
 msgid ""
@@ -10055,10 +10077,13 @@ msgid ""
 "pulled automatically by Cargo, namely `cxx` and `cxx-qt`, which are "
 "necessary to run Qt applications written in Rust."
 msgstr ""
+"Він складається з метаданих проєкту та списку залежностей, які будуть "
+"автоматично завантажені Cargo, а саме `cxx` та `cxx-qt`, необхідних для "
+"запуску Qt-програм, написаних на Rust."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:92
 msgid "build.rs"
-msgstr ""
+msgstr "build.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:94
 msgid ""
@@ -10069,24 +10094,33 @@ msgid ""
 "qt-5.15), with Rust you'll need to declare it in a [build script build.rs]"
 "(https://doc.rust-lang.org/cargo/reference/build-scripts.html) file:"
 msgstr ""
+"Якщо у C++ ви зазвичай реєструєте елементи QML за допомогою [QML_ELEMENT]"
+"(https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html) та "
+"[ecm_add_qml_module](https://api.kde.org/ecm/module/ECMQmlModule.html) за "
+"допомогою [декларативної реєстрації](https://www.qt.io/blog/qml-type-"
+"registration-in-qt-5.15), то у Rust вам потрібно буде оголосити їх у файлі "
+"[скрипту збирання build.rs](https://doc.rust-lang.org/cargo/reference/build-"
+"scripts.html):"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:98
 msgid ""
 "This is necessary to make the QML file available in the entrypoint for our "
 "application, `main.rs`."
 msgstr ""
+"Це необхідно для того, щоб QML-файл був доступним у точці входу для нашої "
+"програми, `main.rs`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:100
-#, fuzzy
-#| msgid "src/qml/Main.qml"
 msgid "src/main.rs"
-msgstr "src/qml/Main.qml"
+msgstr "src/main.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:102
 msgid ""
 "The file `kirigami_rust/src/main.rs` initializes the project and then loads "
 "the QML file, which will consist of the user interface for the application."
 msgstr ""
+"Файл `kirigami_rust/src/main.rs` ініціалізує проєкт, а потім завантажує файл "
+"QML, який складатиметься з інтерфейсу користувача для програми."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:106
 msgid ""
@@ -10098,24 +10132,35 @@ msgid ""
 "larger part in a future tutorial teaching how to expose Rust code to QML, "
 "but for now you can ignore it."
 msgstr ""
+"Перша частина, позначена як [#[cxx_qt::bridge]](https://kdab.github.io/cxx-"
+"qt/book/bridge/index.html), створює фіктивний QObject з фіктивної структури "
+"Rust. Це потрібно лише для завершення використання [QmlModule](https://docs."
+"rs/cxx-qt-build/latest/cxx_qt_build/struct.QmlModule.html) у попередньому "
+"скрипті збирання `build.rs`. Це матиме значний вплив на решту підручника, де "
+"ми вивчатимемо, як використовувати код Rust для QML, але поки що ви можете "
+"на це не зважати."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:108
 msgid "After this starts the important part:"
-msgstr ""
+msgstr "Після цього починається важлива частина:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:110
 msgid "Lines 12-13 import the needed Qt libraries exposed through cxx-qt."
 msgstr ""
+"У рядках 12-13 імпортуємо потрібні бібліотеки Qt, які розкриваються через "
+"cxx-qt."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:112
 msgid ""
 "We first create a new instance of a `QApplication`, then perform a few "
 "integrations in lines 20-26."
 msgstr ""
+"Спочатку ми створюємо екземпляр `QApplication`, потім виконуємо декілька "
+"інтеграцій у рядках 20-26."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:114
 msgid "Then comes the part that actually creates the application window:"
-msgstr ""
+msgstr "Потім йде частина, яка створює вікно програми:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:118
 msgid ""
@@ -10124,6 +10169,10 @@ msgid ""
 "qt-6/resources.html), and it follows this scheme: "
 "`<resource_prefix><import_URI><QML_dir><file>`."
 msgstr ""
+"Довга URL-адреса `qrc:/qt/qml/org/kde/tutorial/src/qml/Main.qml` відповідає "
+"файлу `Main.qml` згідно з [Системою ресурсів Qt](https://doc.qt.io/qt-6/"
+"resources.html), у ній використано таку схему:"
+"`<префікс_ресурсів><адреса_імпортування><каталог_QML><файл>`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:120
 msgid ""
@@ -10131,28 +10180,20 @@ msgid ""
 "`org/kde/tutorial` (set in `build.rs`, separated by slashes instead of dots) "
 "+ the QML dir `src/qml/` + the QML file `Main.qml`."
 msgstr ""
+"Іншими словами: типовий префікс ресурсу `qrc:/qt/qml/` + адреса імпортування "
+"`org/kde/tutorial` (встановлена у `build.rs`, відокремлення символами "
+"похилої риски замість крапок) + каталог QML `src/qml/` + файл QML `Main.qml`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:135
-#, fuzzy
-#| msgid ""
-#| "[Kirigami](docs:kirigami;kirigami-index.html), which provides a number of "
-#| "components suited for creating applications that work across devices of "
-#| "different shapes and sizes."
 msgid ""
 "[Kirigami](docs:kirigami2), which provides a number of components suited for "
 "creating applications that work across devices of different shapes and sizes."
 msgstr ""
-"[Kirigami](docs:kirigami;kirigami-index.html), яка містить декілька "
-"компонентів, які пристосовано для створення програм, що можуть працювати на "
-"різних пристроях і екранах з різними формами та розмірами."
+"[Kirigami](docs:kirigami2), яка містить декілька компонентів, які "
+"пристосовано для створення програм, що можуть працювати на різних пристроях "
+"і екранах з різними формами та розмірами."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:143
-#, fuzzy
-#| msgid ""
-#| "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
-#| "kirigami;org.kde.kirigami.ApplicationWindow), which provides some basic "
-#| "features needed for all Kirigami applications. This is the window that "
-#| "will contain each of our pages, the main sections of our UI."
 msgid ""
 "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow), which provides some basic features needed for "
@@ -10165,18 +10206,6 @@ msgstr ""
 "наші сторінки, основні розділи нашого інтерфейсу користувача."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:149
-#, fuzzy
-#| msgid ""
-#| "We then set the first page of our page stack. Most Kirigami applications "
-#| "are organised as a stack of pages, each page containing related "
-#| "components suited to a specific task. For now, we are keeping it simple, "
-#| "and sticking to a single page. [pageStack](https://api-staging.kde.org/"
-#| "qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) is an "
-#| "initially empty stack of pages provided by [Kirigami.ApplicationWindow]"
-#| "(docs:kirigami;org.kde.kirigami.ApplicationWindow), and with `pageStack."
-#| "initialPage: Kirigami.Page {...}` we set the first page presented upon "
-#| "loading the application to a [Kirigami.Page](docs:kirigami;org.kde."
-#| "kirigami.Page). This page will contain all our content."
 msgid ""
 "We then set the first page of our page stack. Most Kirigami applications are "
 "organised as a stack of pages, each page containing related components "
@@ -10191,24 +10220,15 @@ msgstr ""
 "Далі, ми визначаємо першу сторінку нашого стосу сторінок. Більшість програм "
 "Kirigami упорядковано як стос сторінок — кожну сторінку призначено для "
 "виконання окремого завдання. У нашому прикладі ми створимо простий стос, "
-"який складатиметься із однієї сторінки. [pageStack](https://api-staging.kde."
-"org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) є "
-"початково порожнім стосом сторінок, роботу якого забезпечує [Kirigami."
-"ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow), і за "
-"допомогою `pageStack.initialPage: Kirigami.Page{...}` ми задаємо для першої "
-"сторінки, яку буде показано після завантаження програми, значення [Kirigami."
-"Page](docs:kirigami;org.kde.kirigami.Page). Відповідна сторінка міститиме "
-"усі наші дані."
+"який складатиметься із однієї сторінки. [pageStack](docs:kirigami2;"
+"AbstractApplicationWindow::pageStack) є початково порожнім стосом сторінок, "
+"роботу якого забезпечує [Kirigami.ApplicationWindow](docs:kirigami2;"
+"ApplicationWindow), і за допомогою `pageStack.initialPage: Kirigami.Page{...}"
+"` ми задаємо для першої сторінки, яку буде показано після завантаження "
+"програми, значення [Kirigami.Page](docs:kirigami2;Page). Відповідна сторінка "
+"міститиме усі наші дані."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:151
-#, fuzzy
-#| msgid ""
-#| "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
-#| "QtQuick.Controls.Label) that lets us place text on our page. We use "
-#| "`anchors.centerIn: parent` to center our label horizontally and "
-#| "vertically within our parent element. In this case, the parent component "
-#| "of our label is [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). The "
-#| "last thing we need to do is set its text: `text: \"Hello World!\"`."
 msgid ""
 "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
 "QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
@@ -10222,8 +10242,8 @@ msgstr ""
 "нашій сторінці текст. Ми використовуємо `anchors.centerIn: parent` для "
 "центрування нашої мітки горизонтально і вертикально у нашому батьківському "
 "елементі. У цьому випадку батьківським для компонента нашої мітки буде "
-"компонент [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). Нарешті, ми "
-"маємо встановити для мітки текст: `text: \"Hello World!\"`."
+"компонент [Kirigami.Page](docs:kirigami2;Page). Нарешті, ми маємо встановити "
+"для мітки текст: `text: \"Hello World!\"`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:155
 msgid ""
@@ -10231,18 +10251,22 @@ msgid ""
 "kirigami_hello` and you may run it directly or with `cargo run`, but it will "
 "lack a Window icon. To address this, we'll install the application first."
 msgstr ""
+"Ви маєте знайти створений виконуваний файл `kirigami_hello` у `build/debug/"
+"kirigami_hello`, і ви можете запустити його безпосередньо або за допомогою "
+"`cargo run`, але в ньому не буде піктограми вікна. Щоб вирішити цю проблему, "
+"ми спочатку встановимо програму."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:157
-#, fuzzy
-#| msgid "add the following:"
 msgid "Run the following:"
-msgstr "додайте таке:"
+msgstr "Віддайте такі команди:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:165
 msgid ""
 "With the first command, CMake will search for Kirigami and qqc2-desktop-"
 "style."
 msgstr ""
+"За допомогою першої команди наказуємо CMake шукати Kirigami та qqc2-desktop-"
+"style."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:167
 msgid ""
@@ -10251,6 +10275,10 @@ msgid ""
 "complete, but the next time you repeat the second CMake command it will be "
 "faster or you will not need to compile at all."
 msgstr ""
+"За допомогою другої команди наказуємо CMake зібрати ціль `kirigami_rust`, — "
+"просто викликаємо `cargo build --target-dir build/`. Цей крок може бути "
+"досить тривалим, але наступного разу, коли ви повторите другу команду CMake, "
+"це буде швидше або вам взагалі не знадобиться збирання."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:169
 msgid ""
@@ -10259,18 +10287,17 @@ msgid ""
 "applications`, and a new entry named \"Kirigami Tutorial in Rust\" will "
 "appear on your menu."
 msgstr ""
+"На третьому кроці CMake встановить виконуваний файл `kirigami_hello` до `~/."
+"local/bin/kirigami_hello` та файл desktop до `~/.local/share/applications`, "
+"а у вашому меню з'явиться новий запис із назвою «Kirigami Tutorial in Rust»."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:171
-#, fuzzy
-#| msgid ""
-#| "Voilà! Now you will see your very first Kirigami app appear before your "
-#| "very own eyes."
 msgid ""
 "Open the menu entry and voilà! Now you will see your very first Kirigami app "
 "appear before your very own eyes."
 msgstr ""
-"Ось і все! Тепер ви бачите перед собою вашу першу програму Kirigami вашими "
-"власними очима."
+"Виберіть пункт меню, і ось і все! Тепер ви бачите перед собою вашу першу "
+"програму Kirigami вашими власними очима."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"
