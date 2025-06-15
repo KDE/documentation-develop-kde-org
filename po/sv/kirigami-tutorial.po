@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-13 01:53+0000\n"
-"PO-Revision-Date: 2025-06-08 11:15+0200\n"
+"PO-Revision-Date: 2025-06-14 07:44+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -9744,48 +9744,38 @@ msgid "After this, the application can be launched by running:"
 msgstr "Därefter kan programmet startas genom att köra:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with C++"
 msgid "Kirigami with Rust"
-msgstr "Kirigami med C++"
+msgstr "Kirigami med Rust"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Create your first Kirigami application with C++\n"
 msgid "Create your first Kirigami application with Rust\n"
-msgstr "Skapa ditt första Kirigami-program med C++\n"
+msgstr "Skapa ditt första Kirigami-program med Rust\n"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:13
-#, fuzzy
-#| msgid ""
-#| "Before getting started, we will need to install Kirigami and PySide on "
-#| "our machine."
 msgid ""
 "Before getting started, we will need to install Kirigami and Rust on our "
 "machine."
-msgstr "Innan vi börjar måste vi installera Kirigami och PySide på datorn."
+msgstr "Innan vi börjar måste vi installera Kirigami och Rust på datorn."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:24
-#, fuzzy
-#| msgid ""
-#| "First we create our project folder (you can use the commands below). We "
-#| "are going to call ours `kirigami_python/`."
 msgid ""
 "First we create our project folder (you can use the commands below). We are "
 "going to call ours `kirigami_rust/`. This will be the project's structure:"
 msgstr ""
 "Först skapar vi vår projektkatalog (du kan använda kommandona nedan). Vi "
-"kallar vår `kirigami_python/`."
+"kallar vår `kirigami_rust/`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:38
 msgid ""
 "This project will use CMake to call Cargo, which in turn will build the "
 "project."
 msgstr ""
+"Projektet använder CMake för att anropa Cargo, som i sin tur bygger "
+"projektet."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:40
 msgid "About CMake and Cargo"
-msgstr ""
+msgstr "Om CMake och Cargo"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:42
 msgid ""
@@ -9809,32 +9799,21 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:50
 msgid "💡 Tip"
-msgstr ""
+msgstr "💡 Tips"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:52
-#, fuzzy
-#| msgid ""
-#| "To quickly generate this folder structure, just run: `mkdir -p "
-#| "kirigami_python/src/qml/`."
 msgid ""
 "You can quickly create this file structure with: `mkdir -p kirigami_rust/src/"
 "qml/`."
 msgstr ""
-"För att snabbt skapa katalogstrukturen, kör bara: `mkdir -p kirigami_python/"
+"För att snabbt skapa katalogstrukturen, kör bara: `mkdir -p kirigami_rust/"
 "src/qml/`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:56
-#, fuzzy
-#| msgid "org.kde.kirigami_python.desktop"
 msgid "org.kde.kirigami_rust.desktop"
-msgstr "org.kde.kirigami_python.desktop"
+msgstr "org.kde.kirigami_rust.desktop"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:60
-#, fuzzy
-#| msgid ""
-#| "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/"
-#| "wiki/Reverse_domain_name_notation) followed by the `.desktop` extension "
-#| "such as `org.kde.kirigami_python.desktop`:"
 msgid ""
 "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
@@ -9842,7 +9821,7 @@ msgid ""
 msgstr ""
 "Det måste följa ett [omvänt domännamnsschema](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) följt av tillägget `.desktop` såsom `org.kde."
-"kirigami_python.desktop`:"
+"kirigami_rust.desktop`:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:66
 msgid ""
@@ -9906,11 +9885,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:84
 msgid "Cargo.toml"
-msgstr ""
+msgstr "Cargo.toml"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:86
 msgid "Next we have a very straightforward `Cargo.toml`:"
-msgstr ""
+msgstr "Därefter har vi en väldigt enkel `Cargo.toml`:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:90
 msgid ""
@@ -9921,7 +9900,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:92
 msgid "build.rs"
-msgstr ""
+msgstr "build.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:94
 msgid ""
@@ -9940,10 +9919,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:100
-#, fuzzy
-#| msgid "src/qml/Main.qml"
 msgid "src/main.rs"
-msgstr "src/qml/Main.qml"
+msgstr "src/main.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:102
 msgid ""
@@ -9964,21 +9941,25 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:108
 msgid "After this starts the important part:"
-msgstr ""
+msgstr "Efter det börjar den viktiga delen:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:110
 msgid "Lines 12-13 import the needed Qt libraries exposed through cxx-qt."
 msgstr ""
+"Raderna 12-13 importerar de nödvändiga Qt-biblioteken som exponeras via cxx-"
+"qt."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:112
 msgid ""
 "We first create a new instance of a `QApplication`, then perform a few "
 "integrations in lines 20-26."
 msgstr ""
+"Vi skapar först en ny instans av en `QApplication` och utför sedan några "
+"integreringar på raderna 20-26."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:114
 msgid "Then comes the part that actually creates the application window:"
-msgstr ""
+msgstr "Sedan kommer den del som faktiskt skapar programfönstret:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:118
 msgid ""
@@ -9987,6 +9968,10 @@ msgid ""
 "qt-6/resources.html), and it follows this scheme: "
 "`<resource_prefix><import_URI><QML_dir><file>`."
 msgstr ""
+"Den långa webbadressen `qrc:/qt/qml/org/kde/tutorial/src/qml/Main.qml` "
+"motsvarar filen `Main.qml` enligt [Qt:s resurssystem](https://doc.qt.io/qt-6/"
+"resources.html), och följer det här schemat: "
+"`<resurs_prefix><import_webbadress><QML_katalog><fil>`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:120
 msgid ""
@@ -9996,26 +9981,15 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:135
-#, fuzzy
-#| msgid ""
-#| "[Kirigami](docs:kirigami;kirigami-index.html), which provides a number of "
-#| "components suited for creating applications that work across devices of "
-#| "different shapes and sizes."
 msgid ""
 "[Kirigami](docs:kirigami2), which provides a number of components suited for "
 "creating applications that work across devices of different shapes and sizes."
 msgstr ""
-"[Kirigami](docs:kirigami;kirigami-index.html), som tillhandahåller ett antal "
-"komponenter lämpade för att skapa program som fungerar över apparater av "
-"olika form och storlek."
+"[Kirigami](docs:kirigami2), som tillhandahåller ett antal komponenter "
+"lämpade för att skapa program som fungerar över apparater av olika form och "
+"storlek."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:143
-#, fuzzy
-#| msgid ""
-#| "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
-#| "kirigami;org.kde.kirigami.ApplicationWindow), which provides some basic "
-#| "features needed for all Kirigami applications. This is the window that "
-#| "will contain each of our pages, the main sections of our UI."
 msgid ""
 "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow), which provides some basic features needed for "
@@ -10023,23 +9997,11 @@ msgid ""
 "pages, the main sections of our UI."
 msgstr ""
 "Sedan kommer vi till vårt baselement, [Kirigami.ApplicationWindow](docs:"
-"kirigami;org.kde.kirigami.ApplicationWindow) som tillhandahåller några "
-"grundfunktioner nödvändiga för alla Kirigami-program. Det är fönstret som "
-"kommer att innehålla alla våra sidor, huvuddelen av vårt användargränssnitt."
+"kirigami2;ApplicationWindow) som tillhandahåller några grundfunktioner "
+"nödvändiga för alla Kirigami-program. Det är fönstret som kommer att "
+"innehålla alla våra sidor, huvuddelen av vårt användargränssnitt."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:149
-#, fuzzy
-#| msgid ""
-#| "We then set the first page of our page stack. Most Kirigami applications "
-#| "are organised as a stack of pages, each page containing related "
-#| "components suited to a specific task. For now, we are keeping it simple, "
-#| "and sticking to a single page. [pageStack](https://api-staging.kde.org/"
-#| "qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) is an "
-#| "initially empty stack of pages provided by [Kirigami.ApplicationWindow]"
-#| "(docs:kirigami;org.kde.kirigami.ApplicationWindow), and with `pageStack."
-#| "initialPage: Kirigami.Page {...}` we set the first page presented upon "
-#| "loading the application to a [Kirigami.Page](docs:kirigami;org.kde."
-#| "kirigami.Page). This page will contain all our content."
 msgid ""
 "We then set the first page of our page stack. Most Kirigami applications are "
 "organised as a stack of pages, each page containing related components "
@@ -10054,23 +10016,14 @@ msgstr ""
 "Därefter anger vi första sidan i vår sidstapel. Del flesta Kirigami-program "
 "är organiserade som en stapel av sidor, där varje sida innehåller relaterade "
 "komponenter anpassade för en viss uppgift. För närvarande låter vi det vara "
-"enkelt, och håller oss till en enda sida. [pageStack](https://api-staging."
-"kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) "
-"är en sidstapel som initialt är tom som [Kirigami.ApplicationWindow](docs:"
-"kirigami;org.kde.kirigami.ApplicationWindow) tillhandahåller, och med "
-"`pageStack.initialPage: Kirigami.Page {...}` ställer vi in den första sidan "
-"som presenteras när programmet laddas i en [Kirigami.Page](docs:kirigami;org."
-"kde.kirigami.Page). Sidan står för allt vårt innehåll."
+"enkelt, och håller oss till en enda sida. [pageStack](docs:kirigami2;"
+"AbstractApplicationWindow::pageStack) är en sidstapel som initialt är tom "
+"som [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow) "
+"tillhandahåller, och med `pageStack.initialPage: Kirigami.Page {...}` "
+"ställer vi in den första sidan som presenteras när programmet laddas i en "
+"[Kirigami.Page](docs:kirigami2;Page). Sidan står för allt vårt innehåll."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:151
-#, fuzzy
-#| msgid ""
-#| "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
-#| "QtQuick.Controls.Label) that lets us place text on our page. We use "
-#| "`anchors.centerIn: parent` to center our label horizontally and "
-#| "vertically within our parent element. In this case, the parent component "
-#| "of our label is [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). The "
-#| "last thing we need to do is set its text: `text: \"Hello World!\"`."
 msgid ""
 "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
 "QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
@@ -10084,8 +10037,8 @@ msgstr ""
 "`anchors.centerIn: parent` för att centrera vår beteckning horisontellt och "
 "vertikalt inom vårt överliggande element. I det här fallet är det "
 "överliggande elementet för `Controls.Label` vår [Kirigami.Page](docs:"
-"kirigami;org.kde.kirigami.Page). Det sista vi behöver göra är att ange "
-"texten: `text: \"Hello World!\"`."
+"kirigami2;Page). Det sista vi behöver göra är att ange texten: `text: "
+"\"Hello World!\"`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:155
 msgid ""
@@ -10095,10 +10048,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:157
-#, fuzzy
-#| msgid "add the following:"
 msgid "Run the following:"
-msgstr "lägg till följande:"
+msgstr "Kör följande:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:165
 msgid ""
@@ -10123,15 +10074,12 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:171
-#, fuzzy
-#| msgid ""
-#| "Voilà! Now you will see your very first Kirigami app appear before your "
-#| "very own eyes."
 msgid ""
 "Open the menu entry and voilà! Now you will see your very first Kirigami app "
 "appear before your very own eyes."
 msgstr ""
-"Se där! Nu dyker ditt allra första Kirigami-program upp framför dina ögon."
+"Öppna menyalternativet och voilà! Nu dyker ditt allra första Kirigami-"
+"program upp framför dina ögon."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"

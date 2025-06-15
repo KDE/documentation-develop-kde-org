@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-13 01:53+0000\n"
-"PO-Revision-Date: 2025-05-28 11:14+0200\n"
+"PO-Revision-Date: 2025-06-14 11:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -10207,41 +10207,29 @@ msgid "After this, the application can be launched by running:"
 msgstr "Després d'això, l'aplicació es pot llançar executant:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with C++"
 msgid "Kirigami with Rust"
-msgstr "El Kirigami amb C++"
+msgstr "El Kirigami amb Rust"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Create your first Kirigami application with C++\n"
 msgid "Create your first Kirigami application with Rust\n"
-msgstr "Creeu la vostra primera aplicació Kirigami amb C++\n"
+msgstr "Creeu la vostra primera aplicació Kirigami amb Rust\n"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:13
-#, fuzzy
-#| msgid ""
-#| "Before getting started, we will need to install Kirigami and PySide on "
-#| "our machine."
 msgid ""
 "Before getting started, we will need to install Kirigami and Rust on our "
 "machine."
 msgstr ""
-"Abans de començar, haurem d'instal·lar el Kirigami i el PySide a la nostra "
+"Abans de començar, haurem d'instal·lar el Kirigami i el Rust a la nostra "
 "màquina."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:24
-#, fuzzy
-#| msgid ""
-#| "First we create our project folder (you can use the commands below). We "
-#| "are going to call ours `kirigami_python/`."
 msgid ""
 "First we create our project folder (you can use the commands below). We are "
 "going to call ours `kirigami_rust/`. This will be the project's structure:"
 msgstr ""
 "Primer crearem la nostra carpeta de projecte (podeu utilitzar les ordres de "
-"sota). L'anomenarem `kirigami_python/`."
+"sota). L'anomenarem `kirigami_rust/`. Aquesta serà l'estructura del projecte:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:38
 msgid ""
@@ -10275,34 +10263,23 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:50
 msgid "💡 Tip"
-msgstr ""
+msgstr "💡 Consell"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:52
-#, fuzzy
-#| msgid ""
-#| "To quickly generate this folder structure, just run: `mkdir -p "
-#| "kirigami_python/src/qml/`."
 msgid ""
 "You can quickly create this file structure with: `mkdir -p kirigami_rust/src/"
 "qml/`."
 msgstr ""
-"Per a generar ràpidament aquesta estructura de carpetes, simplement "
-"executeu: `mkdir -p kirigami_python/src/qml/`."
+"Podeu generar ràpidament aquesta estructura de fitxers amb: `mkdir -p "
+"kirigami_rust/src/qml/`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:56
-#, fuzzy
-#| msgid "org.kde.kirigami_python.desktop"
 msgid "org.kde.kirigami_rust.desktop"
-msgstr "org.kde.kirigami_python.desktop"
+msgstr "org.kde.kirigami_rust.desktop"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:60
-#, fuzzy
-#| msgid ""
-#| "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/"
-#| "wiki/Reverse_domain_name_notation) followed by the `.desktop` extension "
-#| "such as `org.kde.kirigami_python.desktop`:"
 msgid ""
 "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
@@ -10310,7 +10287,7 @@ msgid ""
 msgstr ""
 "Ha de seguir un [esquema de noms DNS invers](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) seguit de l'extensió `.desktop` com ara `org."
-"kde.kirigami_python.desktop`:"
+"kde.kirigami_rust.desktop`:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:66
 msgid ""
@@ -10374,7 +10351,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:84
 msgid "Cargo.toml"
-msgstr ""
+msgstr "Cargo.toml"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:86
 msgid "Next we have a very straightforward `Cargo.toml`:"
@@ -10389,7 +10366,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:92
 msgid "build.rs"
-msgstr ""
+msgstr "build.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:94
 msgid ""
@@ -10408,10 +10385,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:100
-#, fuzzy
-#| msgid "src/qml/Main.qml"
 msgid "src/main.rs"
-msgstr "src/qml/Main.qml"
+msgstr "src/main.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:102
 msgid ""
@@ -10464,26 +10439,15 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:135
-#, fuzzy
-#| msgid ""
-#| "[Kirigami](docs:kirigami;kirigami-index.html), which provides a number of "
-#| "components suited for creating applications that work across devices of "
-#| "different shapes and sizes."
 msgid ""
 "[Kirigami](docs:kirigami2), which provides a number of components suited for "
 "creating applications that work across devices of different shapes and sizes."
 msgstr ""
-"El [Kirigami](docs:kirigami;kirigami-index.html), que proporciona una sèrie "
-"de components adequats per a crear aplicacions que funcionen en dispositius "
-"de formes i mides diferents."
+"El [Kirigami](docs:kirigami2), que proporciona una sèrie de components "
+"adequats per a crear aplicacions que funcionen en dispositius de formes i "
+"mides diferents."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:143
-#, fuzzy
-#| msgid ""
-#| "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
-#| "kirigami;org.kde.kirigami.ApplicationWindow), which provides some basic "
-#| "features needed for all Kirigami applications. This is the window that "
-#| "will contain each of our pages, the main sections of our UI."
 msgid ""
 "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow), which provides some basic features needed for "
@@ -10491,25 +10455,13 @@ msgid ""
 "pages, the main sections of our UI."
 msgstr ""
 "Després arribem al nostre element base, la [Kirigami.ApplicationWindow](docs:"
-"kirigami;org.kde.kirigami.ApplicationWindow), que proporciona algunes "
-"característiques bàsiques necessàries per a totes les aplicacions escrites "
-"amb el Kirigami. Aquesta és la finestra que contindrà cadascuna de les "
-"nostres pàgines, les seccions principals de la nostra interfície d'usuari."
+"kirigami2;ApplicationWindow), que proporciona algunes característiques "
+"bàsiques necessàries per a totes les aplicacions escrites amb el Kirigami. "
+"Aquesta és la finestra que contindrà cadascuna de les nostres pàgines, les "
+"seccions principals de la nostra interfície d'usuari."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/setup-rust/index.md:149
-#, fuzzy
-#| msgid ""
-#| "We then set the first page of our page stack. Most Kirigami applications "
-#| "are organised as a stack of pages, each page containing related "
-#| "components suited to a specific task. For now, we are keeping it simple, "
-#| "and sticking to a single page. [pageStack](https://api-staging.kde.org/"
-#| "qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) is an "
-#| "initially empty stack of pages provided by [Kirigami.ApplicationWindow]"
-#| "(docs:kirigami;org.kde.kirigami.ApplicationWindow), and with `pageStack."
-#| "initialPage: Kirigami.Page {...}` we set the first page presented upon "
-#| "loading the application to a [Kirigami.Page](docs:kirigami;org.kde."
-#| "kirigami.Page). This page will contain all our content."
 msgid ""
 "We then set the first page of our page stack. Most Kirigami applications are "
 "organised as a stack of pages, each page containing related components "
@@ -10525,24 +10477,15 @@ msgstr ""
 "majoria de les aplicacions escrites amb el Kirigami estan organitzades com "
 "una pila de pàgines, cada pàgina conté els components relacionats adequats "
 "per a una tasca específica. Per ara, el mantenim senzill i ens cenyim a una "
-"sola pàgina. [pageStack](https://api-staging.kde.org/qml-org-kde-kirigami-"
-"abstractapplicationwindow.html#pageStack-prop) és una pila inicialment buida "
-"de pàgines proporcionades per [Kirigami.ApplicationWindow](docs:kirigami;org."
-"kde.kirigami.ApplicationWindow), i amb `pageStack.initialPage: Kirigami.Page "
-"{...}` establim la primera pàgina presentada en carregar l'aplicació a una "
-"[Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). Aquesta pàgina "
-"contindrà tot el nostre contingut."
+"sola pàgina. [pageStack](docs:kirigami2;AbstractApplicationWindow::"
+"pageStack) és una pila inicialment buida de pàgines proporcionades per "
+"[Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow), i amb "
+"`pageStack.initialPage: Kirigami.Page{...}` establim la primera pàgina "
+"presentada en carregar l'aplicació a una [Kirigami.Page](docs:kirigami2;"
+"Page). Aquesta pàgina contindrà tot el nostre contingut."
 
 # skip-rule: t-acc_obe,punctuation-accent-quotes
 #: content/docs/getting-started/kirigami/setup-rust/index.md:151
-#, fuzzy
-#| msgid ""
-#| "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
-#| "QtQuick.Controls.Label) that lets us place text on our page. We use "
-#| "`anchors.centerIn: parent` to center our label horizontally and "
-#| "vertically within our parent element. In this case, the parent component "
-#| "of our label is [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). The "
-#| "last thing we need to do is set its text: `text: \"Hello World!\"`."
 msgid ""
 "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
 "QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
@@ -10556,8 +10499,8 @@ msgstr ""
 "nostra pàgina. Utilitzarem `anchors.centerIn: parent` per a centrar la "
 "nostra etiqueta horitzontalment i verticalment dins de l'element pare. En "
 "aquest cas, el component principal de la nostra etiqueta és [Kirigami.Page]"
-"(docs:kirigami;org.kde.kirigami.Page). L'últim que hem de fer és configurar "
-"el text: `text: \"Hello World!\"`."
+"(docs:kirigami2;Page). L'últim que hem de fer és configurar el text: `text: "
+"\"Hello World!\"`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:155
 msgid ""
@@ -10593,16 +10536,12 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:171
-#, fuzzy
-#| msgid ""
-#| "Voilà! Now you will see your very first Kirigami app appear before your "
-#| "very own eyes."
 msgid ""
 "Open the menu entry and voilà! Now you will see your very first Kirigami app "
 "appear before your very own eyes."
 msgstr ""
-"Heus aquí! Ara veureu aparèixer la vostra primera aplicació escrita amb el "
-"Kirigami."
+"Obriu l'entrada de menu i heus aquí! Ara veureu aparèixer la vostra primera "
+"aplicació escrita amb el Kirigami."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"
