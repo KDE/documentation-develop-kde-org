@@ -84,7 +84,7 @@ def get_dirs(path):
 
 def iterate_icons(icon_theme_path):
     # Size folders are one of the following types: 128x128, 16, 22@2x, symbolic
-    size_folder_matcher = re.compile('^(\d+|\d+x\d+|\d+x?@\d+x|symbolic|scalable)$')
+    size_folder_matcher = re.compile(r'^(\d+|\d+x\d+|\d+x?@\d+x|symbolic|scalable)$')
 
     # Iterate first level under icon_theme_path. Could be size folders or context
     # folders
@@ -123,7 +123,7 @@ def get_printable_name(name):
 
 ICON_LAST_BEST_SIZE = {}
 def is_size_better(category, icon, size):
-    result = re.search('^((\d+)|(\d+)x(\d+)|(\d+)x?@\d+x)$', size)
+    result = re.search(r'^((\d+)|(\d+)x(\d+)|(\d+)x?@\d+x)$', size)
     if result: # we have a numeric match
         if result.group(2): # simple size, take it
             extrapolated_size = int(result.group(2))
@@ -248,7 +248,7 @@ if __name__ == '__main__':
     localCachePath = os.environ.get('KDECI_CACHE_PATH', '/tmp')
     gitlabInstance = os.environ.get('KDECI_GITLAB_SERVER', 'https://invent.kde.org/')
     gitlabToken    = os.environ.get('KDECI_GITLAB_TOKEN')
-    packageProject = os.environ.get('KDECI_PACKAGE_PROJECT', 'teams/ci-artifacts/suse-qt6.8')
+    packageProject = os.environ.get('KDECI_PACKAGE_PROJECT', 'teams/ci-artifacts/suse-qt6.9')
 
     packageRegistry = Package.Registry(localCachePath, gitlabInstance, gitlabToken, packageProject)
 
