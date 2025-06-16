@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-13 01:53+0000\n"
-"PO-Revision-Date: 2025-06-01 09:23+0200\n"
+"PO-Revision-Date: 2025-06-15 15:26+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Poedit 3.6\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -9699,55 +9699,46 @@ msgid "After this, the application can be launched by running:"
 msgstr "Po tem lahko aplikacijo startate tako, da zaženete:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with C++"
 msgid "Kirigami with Rust"
-msgstr "Kirigami s C++"
+msgstr "Kirigami z Rustom"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Create your first Kirigami application with C++\n"
 msgid "Create your first Kirigami application with Rust\n"
-msgstr "Ustvarite svojo prvo aplikacijo Kirigami s C++\n"
+msgstr "Ustvarite svojo prvo aplikacijo Kirigami z Rustom\n"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:13
-#, fuzzy
-#| msgid ""
-#| "Before getting started, we will need to install Kirigami and PySide on "
-#| "our machine."
 msgid ""
 "Before getting started, we will need to install Kirigami and Rust on our "
 "machine."
 msgstr ""
-"Preden začnemo, bomo morali namestiti Kirigami in PySide na naš računalnik."
+"Preden začnemo, bomo morali namestiti Kirigami in Rust na naš računalnik."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:24
-#, fuzzy
-#| msgid ""
-#| "First we create our project folder (you can use the commands below). We "
-#| "are going to call ours `kirigami_python/`."
 msgid ""
 "First we create our project folder (you can use the commands below). We are "
 "going to call ours `kirigami_rust/`. This will be the project's structure:"
 msgstr ""
-"Najprej ustvarimo našo projektno mapo (uporabite lahko spodnje ukaze). Našo "
-"vadnico bomo imenovali `kirigami_python/`."
+"Najprej ustvarimo mapo projekta (lahko uporabite spodnje ukaze). Poimenovali "
+"jo bomo `kirigami_rust/`. To bo struktura projekta:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:38
 msgid ""
 "This project will use CMake to call Cargo, which in turn will build the "
 "project."
 msgstr ""
+"Ta projekt bo uporabil CMake za klic Cargo, ki bo nato zgradil projekt."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:40
 msgid "About CMake and Cargo"
-msgstr ""
+msgstr "O CMake in Cargo"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:42
 msgid ""
 "This is **not** the traditional way of building a Rust project: technically, "
 "only Cargo is needed to build it, usually with `cargo build` and `cargo run`."
 msgstr ""
+"To **ni** tradicionalni način gradnje projekta Rust: tehnično gledano je za "
+"gradnjo potreben le Cargo, običajno z `cargo build` in `cargo run`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:44
 msgid ""
@@ -9756,49 +9747,45 @@ msgid ""
 "en/introduction.html) used by COSMIC) is needed to install because Cargo "
 "lacks the necessary features to install GUI desktop applications."
 msgstr ""
+"Za namizne aplikacije pa je za namestitev potreben CMake (ali enakovreden "
+"program, kot je [Meson](https://mesonbuild.com/), ki ga uporablja GNOME, ali "
+"[Just](https://just.systems/man/en/introduction.html), ki ga uporablja "
+"COSMIC), ker Cargo nima potrebnih funkcij za namestitev namiznih aplikacij z "
+"grafičnim uporabniškim vmesnikom."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:48
 msgid ""
 "The project will be called `kirigami_rust` and it will generate an "
 "executable called `kirigami_hello`."
 msgstr ""
+"Projekt se bo imenoval `kirigami_rust` in ustvaril bo izvedljivo datoteko z "
+"imenom `kirigami_hello`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:50
 msgid "💡 Tip"
-msgstr ""
+msgstr "💡 Namig"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:52
-#, fuzzy
-#| msgid ""
-#| "To quickly generate this folder structure, just run: `mkdir -p "
-#| "kirigami_python/src/qml/`."
 msgid ""
 "You can quickly create this file structure with: `mkdir -p kirigami_rust/src/"
 "qml/`."
 msgstr ""
-"Če želite hitro ustvariti to strukturo map, kar zaženite: `mkdir -p "
-"kirigami_python/src/qml/`."
+"To strukturo datotek lahko hitro ustvarite z: `mkdir -p kirigami_rust/src/"
+"qml/`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:56
-#, fuzzy
-#| msgid "org.kde.kirigami_python.desktop"
 msgid "org.kde.kirigami_rust.desktop"
-msgstr "org.kde.kirigami_python.desktop"
+msgstr "org.kde.kirigami_rust.desktop"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:60
-#, fuzzy
-#| msgid ""
-#| "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/"
-#| "wiki/Reverse_domain_name_notation) followed by the `.desktop` extension "
-#| "such as `org.kde.kirigami_python.desktop`:"
 msgid ""
 "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
 "`org.kde.kirigami_rust.desktop`:"
 msgstr ""
-"Slediti mora [shemi poimenovanja obratne DNS - reverse-DNS naming scheme]"
-"(https://en.wikipedia.org/wiki/Reverse_domain_name_notation), ki mu sledi "
-"končnica `.desktop`, kot je npr.`org.kde.kirigami_python.desktop`:"
+"Slediti mora [shemi poimenovanja z obratnim DNS](https://en.wikipedia.org/"
+"wiki/Reverse_domain_name_notation), ki ji sledi končnica `.desktop`, kot je "
+"`org.kde.kirigami_rust.desktop`:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:66
 msgid ""
@@ -9808,6 +9795,11 @@ msgid ""
 "during compilation and to signal Linux distributions to install the "
 "necessary dependencies with the application."
 msgstr ""
+"Datoteka `CMakeLists.txt` bo uporabljena za zagon programa Cargo in "
+"namestitev potrebnih datotek skupaj z našo aplikacijo. Zagotavlja tudi "
+"določene zmožnosti za zagotavljanje kakovosti življenja, kot je "
+"zagotavljanje namestitve programa Kirigami med prevajanjem in signaliziranje "
+"distribucijam Linuxa, da namestijo potrebne odvisnosti z aplikacijo."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:70
 msgid ""
@@ -9820,6 +9812,13 @@ msgid ""
 "html), which allows to easily uninstall the application with CMake if "
 "desired."
 msgstr ""
+"Najprej dodamo KDE-jeve [Dodatne module CMake (ECM)](https://api.kde.org/ecm/"
+"manual/ecm.7.html) v naš projekt, da lahko s pomočjo [ecm_find_qml_module]"
+"(https://api.kde.org/ecm/module/ECMFindQmlModule.html) preverimo, ali je "
+"Kirigami nameščen, ko poskušamo zgraditi aplikacijo, in če ni, takoj "
+"spodleti. Druga uporabna funkcija ECM je [ECMUninstallTarget](https://api."
+"kde.org/ecm/module/ECMUninstallTarget.html), ki omogoča enostavno "
+"odstranitev aplikacije s CMake, če želimo."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:72
 msgid ""
@@ -9828,6 +9827,11 @@ msgid ""
 "invent.kde.org/frameworks/qqc2-desktop-style), KDE's QML style for the "
 "desktop. This is one of the two reasons we use CMake in this tutorial."
 msgstr ""
+"Uporabljamo tudi CMake-ov [find_package()](https://cmake.org/cmake/help/"
+"latest/command/find_package.html), da zagotovimo, da imamo [qqc2-desktop-"
+"style](https://invent.kde.org/frameworks/qqc2-desktop-style), KDE-jev slog "
+"QML za namizje. To je eden od dveh razlogov, zakaj v tej vadnici uporabljamo "
+"CMake."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:74
 msgid ""
@@ -9836,12 +9840,18 @@ msgid ""
 "with `ALL` so it builds by default. Cargo will build the executable inside "
 "CMake's binary directory (typically `build/`)."
 msgstr ""
+"Običajno se projekti Rust gradijo s Cargom in tukaj ne bo nič drugače. "
+"Ustvarimo cilj, ki bo ob zagonu preprosto zagnal Cargo, in ga označimo z "
+"`ALL`, da se bo gradi privzeto. Cargo bo zgradil izvedljivo datoteko znotraj "
+"binarnega imenika CMake (običajno `build/`)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:76
 msgid ""
 "For more information about CMake, targets, and the binary directory, see "
 "[Building KDE software manually](/docs/getting-started/building/cmake-build)."
 msgstr ""
+"Za več informacij o CMake, ciljih in binarnem imeniku glejte [Ročna gradnja "
+"programske opreme KDE](/docs/getting-started/building/cmake-build)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:78
 msgid ""
@@ -9852,6 +9862,12 @@ msgid ""
 "applications` or `~/.local/share/applications`. This is the second reason we "
 "use CMake in this tutorial."
 msgstr ""
+"Po tem preprosto namestimo izvedljivo datoteko `kirigami_rust`, ki jo "
+"ustvari Cargo, v binarni imenik in jo namestimo v `BINDIR`, ki je običajno `/"
+"usr/bin`, `/usr/local/bin` ali `~/.local/bin`. Prav tako namestimo potrebno "
+"datoteko namizja v `APPDIR`, ki je običajno `/usr/share/applications` ali "
+"`~/.local/share/applications`. To je drugi razlog, zakaj v tej vadnici "
+"uporabljamo CMake."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:80
 msgid ""
@@ -9859,14 +9875,17 @@ msgid ""
 "KDE software manually: The install step](/docs/getting-started/building/"
 "cmake-build/#install)."
 msgstr ""
+"Za več informacij o tem, kje je nameščena programska oprema KDE, glejte "
+"[Ročna gradnja programske opreme KDE: korak namestitve](/docs/getting-"
+"started/building/cmake-build/#install)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:84
 msgid "Cargo.toml"
-msgstr ""
+msgstr "Cargo.toml"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:86
 msgid "Next we have a very straightforward `Cargo.toml`:"
-msgstr ""
+msgstr "Nato imamo zelo preprost `Cargo.toml`:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:90
 msgid ""
@@ -9874,10 +9893,13 @@ msgid ""
 "pulled automatically by Cargo, namely `cxx` and `cxx-qt`, which are "
 "necessary to run Qt applications written in Rust."
 msgstr ""
+"Sestavljen je iz metapodatkov projekta in seznama odvisnosti, ki jih bo "
+"Cargo samodejno prevzel, in sicer `cxx` in `cxx-qt`, ki sta potrebna za "
+"zagon Qt aplikacij, napisanih v Rustu."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:92
 msgid "build.rs"
-msgstr ""
+msgstr "build.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:94
 msgid ""
@@ -9888,24 +9910,33 @@ msgid ""
 "qt-5.15), with Rust you'll need to declare it in a [build script build.rs]"
 "(https://doc.rust-lang.org/cargo/reference/build-scripts.html) file:"
 msgstr ""
+"Medtem ko bi v C++ elemente QML običajno registrirali z [QML_ELEMENT]"
+"(https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html) in "
+"[ecm_add_qml_module](https://api.kde.org/ecm/module/ECMQmlModule.html) z "
+"uporabo [deklarativne registracije](https://www.qt.io/blog/qml-type-"
+"registration-in-qt-5.15), jih boste morali v Rustu deklarirati v datoteki "
+"[build script build.rs](https://doc.rust-lang.org/cargo/reference/build-"
+"scripts.html):"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:98
 msgid ""
 "This is necessary to make the QML file available in the entrypoint for our "
 "application, `main.rs`."
 msgstr ""
+"To je potrebno, da je datoteka QML na voljo v vstopni točki za našo "
+"aplikacijo, `main.rs`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:100
-#, fuzzy
-#| msgid "src/qml/Main.qml"
 msgid "src/main.rs"
-msgstr "src/qml/Main.qml"
+msgstr "src/main.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:102
 msgid ""
 "The file `kirigami_rust/src/main.rs` initializes the project and then loads "
 "the QML file, which will consist of the user interface for the application."
 msgstr ""
+"Datoteka `kirigami_rust/src/main.rs` inicializira projekt in nato naloži "
+"datoteko QML, ki bo vsebovala uporabniški vmesnik za aplikacijo."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:106
 msgid ""
@@ -9917,24 +9948,34 @@ msgid ""
 "larger part in a future tutorial teaching how to expose Rust code to QML, "
 "but for now you can ignore it."
 msgstr ""
+"Prvi del, ki je označen z [#[cxx_qt::bridge]](https://kdab.github.io/cxx-qt/"
+"book/bridge/index.html), ustvari le navidezni objekt QObject iz navidezne "
+"strukture Rust. To je potrebno le za dokončanje uporabe [QmlModule](https://"
+"docs.rs/cxx-qt-build/latest/cxx_qt_build/struct.QmlModule.html) v prejšnjem "
+"skriptu za gradnjo `build.rs`. To bo imelo večjo vlogo v prihodnji vadnici, "
+"ki bo učila, kako izpostaviti kodo Rust v QML, vendar ga zaenkrat lahko "
+"prezrete."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:108
 msgid "After this starts the important part:"
-msgstr ""
+msgstr "Po tem se začne pomemben del:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:110
 msgid "Lines 12-13 import the needed Qt libraries exposed through cxx-qt."
 msgstr ""
+"Vrstici 12-13 uvozita potrebne knjižnice Qt, ki so na voljo prek cxx-qt."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:112
 msgid ""
 "We first create a new instance of a `QApplication`, then perform a few "
 "integrations in lines 20-26."
 msgstr ""
+"Najprej ustvarimo nov pojavek `QApplication`, nato pa v vrsticah 20–26 "
+"izvedemo nekaj integracij."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:114
 msgid "Then comes the part that actually creates the application window:"
-msgstr ""
+msgstr "Nato pride del, ki dejansko ustvari okno aplikacije:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:118
 msgid ""

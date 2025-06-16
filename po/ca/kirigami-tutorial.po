@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-13 01:53+0000\n"
-"PO-Revision-Date: 2025-06-14 11:56+0200\n"
+"PO-Revision-Date: 2025-06-15 10:24+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -10236,16 +10236,22 @@ msgid ""
 "This project will use CMake to call Cargo, which in turn will build the "
 "project."
 msgstr ""
+"Aquest projecte utilitzarà el CMake per cridar el Cargo, que al seu torn "
+"construirà el projecte."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:40
 msgid "About CMake and Cargo"
-msgstr ""
+msgstr "Sobre el CMake i el Cargo"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:42
 msgid ""
 "This is **not** the traditional way of building a Rust project: technically, "
 "only Cargo is needed to build it, usually with `cargo build` and `cargo run`."
 msgstr ""
+"Aquesta és **no** la forma tradicional de construir un projecte Rust: "
+"tècnicament, només es necessita el Cargo per construir-lo, normalment amb "
+"`cargo build` i `cargo run`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:44
 msgid ""
@@ -10254,12 +10260,20 @@ msgid ""
 "en/introduction.html) used by COSMIC) is needed to install because Cargo "
 "lacks the necessary features to install GUI desktop applications."
 msgstr ""
+"Per a aplicacions d'escriptori, però, el CMake (o un equivalent com el "
+"[Meson](https://mesonbuild.com/) utilitzat pel GNOME o el [Just](https://"
+"just.systems/man/en/introduction.html) utilitzat pel COSMIC) és necessari "
+"per instal·lar perquè el Cargo no té les característiques necessàries per a "
+"instal·lar aplicacions IGU d'escriptori."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:48
 msgid ""
 "The project will be called `kirigami_rust` and it will generate an "
 "executable called `kirigami_hello`."
 msgstr ""
+"El projecte s'anomenarà `kirigami_rust` i generarà un executable anomenat "
+"`kirigami_hello`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:50
 msgid "💡 Tip"
@@ -10289,6 +10303,7 @@ msgstr ""
 "Reverse_domain_name_notation) seguit de l'extensió `.desktop` com ara `org."
 "kde.kirigami_rust.desktop`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:66
 msgid ""
 "The `CMakeLists.txt` file is going to be used to run Cargo and to install "
@@ -10297,6 +10312,11 @@ msgid ""
 "during compilation and to signal Linux distributions to install the "
 "necessary dependencies with the application."
 msgstr ""
+"El fitxer `CMakeLists.txt` s'utilitzarà per a executar el Cargo i instal·lar "
+"els fitxers necessaris juntament amb la nostra aplicació. També proporciona "
+"certes característiques de qualitat de vida, com assegurar-se que el "
+"Kirigami s'instal·la durant la compilació i senyalitzar distribucions de "
+"Linux per a instal·lar les dependències necessàries amb l'aplicació."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:70
 msgid ""
@@ -10309,7 +10329,16 @@ msgid ""
 "html), which allows to easily uninstall the application with CMake if "
 "desired."
 msgstr ""
+"El primer que fem és afegir els [Mòduls extres del CMake (ECM) de KDE]"
+"(https://api.kde.org/ecm/manual/ecm.7.html) al nostre projecte perquè puguem "
+"utilitzar el [ecm_find_qml_module](https://api.kde.org/ecm/module/"
+"ECMFindQmlModule.html) per a comprovar que el Kirigami està instal·lat quan "
+"s'intenta construir l'aplicació, i si no ho està, falla immediatament. Una "
+"altra característica útil de l'ECM és [ECMUninstallTarget](https://api.kde."
+"org/ecm/module/ECMUninstallTarget.html), que permet desinstal·lar fàcilment "
+"l'aplicació amb el CMake si es desitja."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:72
 msgid ""
 "We also use CMake's [find_package()](https://cmake.org/cmake/help/latest/"
@@ -10317,7 +10346,13 @@ msgid ""
 "invent.kde.org/frameworks/qqc2-desktop-style), KDE's QML style for the "
 "desktop. This is one of the two reasons we use CMake in this tutorial."
 msgstr ""
+"També utilitzem el [find_package()](https://cmake.org/cmake/help/latest/"
+"command/find_package.html) del CMake per assegurar-nos que tenim l'estil "
+"[qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style), "
+"l'estil QML de KDE per a l'escriptori. Aquesta és una de les dues raons per "
+"les quals utilitzem el CMake en aquesta guia d'aprenentatge."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:74
 msgid ""
 "Typically Rust projects are built with Cargo, and it won't be different "
@@ -10325,13 +10360,22 @@ msgid ""
 "with `ALL` so it builds by default. Cargo will build the executable inside "
 "CMake's binary directory (typically `build/`)."
 msgstr ""
+"Normalment, els projectes Rust es construeixen amb el Cargo, i aquí no serà "
+"diferent. Creem un objectiu que simplement executarà el Cargo quan "
+"s'executi, i el marcarà amb `ALL` perquè es construeixi de manera "
+"predeterminada. El Cargo construirà l'executable dins del directori binari "
+"del CMake (normalment `build/`)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:76
 msgid ""
 "For more information about CMake, targets, and the binary directory, see "
 "[Building KDE software manually](/docs/getting-started/building/cmake-build)."
 msgstr ""
+"Per a més informació sobre el CMake, els objectius i el directori binari, "
+"vegeu [Construir manualment el programari KDE](/docs/getting-started/"
+"building/cmake-build)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:78
 msgid ""
 "After this, we simply install the `kirigami_rust` executable generated by "
@@ -10341,6 +10385,12 @@ msgid ""
 "applications` or `~/.local/share/applications`. This is the second reason we "
 "use CMake in this tutorial."
 msgstr ""
+"Després d'això, simplement instal·lem l'executable `kirigami_rust` generat "
+"pel Cargo al directori binari i l'instal·lem al `BINDIR`, que sol ser `/usr/"
+"bin`, `/usr/local/bin` o `~/.local/bin`. També instal·lem el fitxer "
+"d'escriptori necessari a `APPDIR`, que sol ser `/usr/share/applications` o "
+"`~/.local/share/applications`. Aquesta és la segona raó per la qual "
+"utilitzem el CMake en aquesta guia d'aprenentatge."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:80
 msgid ""
@@ -10348,21 +10398,29 @@ msgid ""
 "KDE software manually: The install step](/docs/getting-started/building/"
 "cmake-build/#install)."
 msgstr ""
+"Per a més informació sobre on s'instal·la el programari de KDE, vegeu "
+"[Construir manualment el programari de KDE: El pas d'instal·lació](/docs/"
+"getting-started/building/cmake-build/#install)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:84
 msgid "Cargo.toml"
 msgstr "Cargo.toml"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:86
 msgid "Next we have a very straightforward `Cargo.toml`:"
-msgstr ""
+msgstr "A continuació tenim un `Cargo.toml` molt senzill:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:90
 msgid ""
 "It consists of project metadata and a list of dependencies that will be "
 "pulled automatically by Cargo, namely `cxx` and `cxx-qt`, which are "
 "necessary to run Qt applications written in Rust."
 msgstr ""
+"Consisteix en metadades del projecte i una llista de dependències que el "
+"Cargo extraurà automàticament, és a dir, `cxx` i `cxx-qt`, que són "
+"necessàries per a executar aplicacions Qt escrites en Rust."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:92
 msgid "build.rs"
@@ -10377,23 +10435,37 @@ msgid ""
 "qt-5.15), with Rust you'll need to declare it in a [build script build.rs]"
 "(https://doc.rust-lang.org/cargo/reference/build-scripts.html) file:"
 msgstr ""
+"On al C++ normalment registrareu elements QML amb [QML_ELEMENT](https://doc."
+"qt.io/qt-6/qtqml-cppintegration-definetypes.html) i el [ecm_add_qml_module]"
+"(https://api.kde.org/ecm/module/ECMQmlModule.html) utilitzant el [registre "
+"declaratiu](https://www.qt.io/blog/qml-type-registration-in-qt-5.15), amb el "
+"Rust haureu de declarar-ho en un fitxer [build script build.rs](https://doc."
+"rust-lang.org/cargo/reference/build-scripts.html):"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:98
 msgid ""
 "This is necessary to make the QML file available in the entrypoint for our "
 "application, `main.rs`."
 msgstr ""
+"Això és necessari per a fer que el fitxer QML estigui disponible en el punt "
+"d'entrada de la nostra aplicació, `main.rs`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:100
 msgid "src/main.rs"
 msgstr "src/main.rs"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:102
 msgid ""
 "The file `kirigami_rust/src/main.rs` initializes the project and then loads "
 "the QML file, which will consist of the user interface for the application."
 msgstr ""
+"El fitxer `kirigami_rust/src/main.rs` inicialitza el projecte i després "
+"carrega el fitxer QML, que consistirà en la interfície d'usuari per a "
+"l'aplicació."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:106
 msgid ""
 "The first part that is marked with the [#[cxx_qt::bridge]](https://kdab."
@@ -10404,25 +10476,39 @@ msgid ""
 "larger part in a future tutorial teaching how to expose Rust code to QML, "
 "but for now you can ignore it."
 msgstr ""
+"La primera part que està marcada amb la macro del Rust [#[cxx_qt::bridge]]"
+"(https://kdab.github.io/cxx-qt/book/bridge/index.html) només crea un QObject "
+"fictici a partir d'una estructura Rust fictícia. Això és necessari només per "
+"a completar l'ús del [QmlModule](https://docs.rs/cxx-qt-build/latest/"
+"cxx_qt_build/struct.QmlModule.html) a l'script de construcció anterior "
+"`build.rs`. Això jugarà un paper més important en una guia d'aprenentatge "
+"futura ensenyant com exposar el codi Rust al QML, però per ara el podeu "
+"ignorar."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:108
 msgid "After this starts the important part:"
-msgstr ""
+msgstr "Després d'això comença la part important:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:110
 msgid "Lines 12-13 import the needed Qt libraries exposed through cxx-qt."
 msgstr ""
+"Les línies 12-13 importen les biblioteques Qt necessàries exposades a través "
+"de cxx-qt."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:112
 msgid ""
 "We first create a new instance of a `QApplication`, then perform a few "
 "integrations in lines 20-26."
 msgstr ""
+"Primer creem una instància nova d'una `QApplication` i després realitzem "
+"algunes integracions en les línies 20-26."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:114
 msgid "Then comes the part that actually creates the application window:"
-msgstr ""
+msgstr "Després ve la part que realment crea la finestra de l'aplicació:"
 
+# skip-rule: t-acc_obe, common-tutorial
 #: content/docs/getting-started/kirigami/setup-rust/index.md:118
 msgid ""
 "The long URL `qrc:/qt/qml/org/kde/tutorial/src/qml/Main.qml` corresponds to "
@@ -10430,13 +10516,21 @@ msgid ""
 "qt-6/resources.html), and it follows this scheme: "
 "`<resource_prefix><import_URI><QML_dir><file>`."
 msgstr ""
+"L'URL llarg `qrc:/qt/qml/org/kde/tutorial/src/qml/Main.qml` correspon al "
+"fitxer `Main.qml` d'acord amb el [Sistema de recursos Qt](https://doc.qt.io/"
+"qt-6/resources.html), i segueix aquest esquema: "
+"`<resource_prefix><import_URI><QML_dir><file>`."
 
+# skip-rule: t-acc_obe, common-tutorial
 #: content/docs/getting-started/kirigami/setup-rust/index.md:120
 msgid ""
 "In other words: the default resource prefix `qrc:/qt/qml/` + the import URI "
 "`org/kde/tutorial` (set in `build.rs`, separated by slashes instead of dots) "
 "+ the QML dir `src/qml/` + the QML file `Main.qml`."
 msgstr ""
+"En altres paraules: el prefix de recurs predeterminat `qrc:/qt/qml/` + l'URI "
+"d'importació `org/kde/tutorial` (establert a `build.rs`, separat per barres "
+"en lloc de punts) + el directori QML `src/qml/` + el fitxer QML `Main.qml`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:135
 msgid ""
@@ -10502,23 +10596,30 @@ msgstr ""
 "(docs:kirigami2;Page). L'últim que hem de fer és configurar el text: `text: "
 "\"Hello World!\"`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:155
 msgid ""
 "You should find the generated executable `kirigami_hello` under `build/debug/"
 "kirigami_hello` and you may run it directly or with `cargo run`, but it will "
 "lack a Window icon. To address this, we'll install the application first."
 msgstr ""
+"Hauríeu de trobar l'executable generat `kirigami_hello` a `build/debug/"
+"kirigami_hello` i podeu executar-lo directament o amb `cargo run`, però no "
+"tindrà una icona de finestra. Per a solucionar-ho, primer instal·larem "
+"l'aplicació."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:157
 msgid "Run the following:"
-msgstr ""
+msgstr "Executeu el següent:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:165
 msgid ""
 "With the first command, CMake will search for Kirigami and qqc2-desktop-"
 "style."
 msgstr ""
+"Amb la primera ordre, el CMake cercarà el Kirigami i el qqc2-desktop-style."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:167
 msgid ""
 "With the second command, CMake will build the `kirigami_rust` target, which "
@@ -10526,7 +10627,12 @@ msgid ""
 "complete, but the next time you repeat the second CMake command it will be "
 "faster or you will not need to compile at all."
 msgstr ""
+"Amb la segona ordre, el CMake construirà l'objectiu `kirigami_rust`, que "
+"només crida `cargo build --target-dir build/`. Aquest pas trigarà una estona "
+"a completar-se, però la propera vegada que repetiu la segona ordre del CMake "
+"serà més ràpida o no caldrà de compilar res."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:169
 msgid ""
 "In the third step, CMake will install the executable `kirigami_hello` under "
@@ -10534,6 +10640,10 @@ msgid ""
 "applications`, and a new entry named \"Kirigami Tutorial in Rust\" will "
 "appear on your menu."
 msgstr ""
+"En el tercer pas, el CMake instal·larà l'executable `kirigami_hello` a `~/."
+"local/bin/kirigami_hello` i el fitxer d'escriptori a `~/.local/share/"
+"applications`, i apareixerà una entrada nova al menú anomenada «Guia "
+"d'aprenentatge del Kirigami en Rust»."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:171
 msgid ""
