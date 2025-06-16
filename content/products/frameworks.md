@@ -34,7 +34,7 @@ scss: "scss/framework.scss"
     <div class="order-1">
       <h1>Features</h1>
       <p>
-          The KDE Frameworks are <?php print $numberOfFrameworks ?> add-on libraries for coding applications with Qt.
+          The KDE Frameworks are 83 add-on libraries for coding applications with Qt.
       </p>
       <p>
           The individual Frameworks are well documented, tested and their API style will be familiar to Qt developers.
@@ -172,7 +172,3 @@ scss: "scss/framework.scss"
     </div>
   </div>
 </article>
-
-</main>
-<?php
-  require('../../aether/footer.php');
