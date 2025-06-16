@@ -12,13 +12,13 @@ layout: area
     <h3 class="mb-4">Colorful icons</h3>
     <div class="mx-auto mb-4">
     <div class="icons-grid">
-      <img src="https://apps.kde.org/app-icons/org.kde.spectacle.svg" alt="screenshot icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.dolphin.svg" alt="dolphin file manager icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.kfloppy.svg" alt="floppy icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.kolf.svg" alt="kolf icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.kmousetool.svg" alt="mouse icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.khelpcenter.svg" alt="help icon" /> 
-      <img src="https://apps.kde.org/app-icons/org.kde.ktimer.svg" alt="timer icon" /> 
+      <img src="app-icons/org.kde.spectacle.svg" alt="screenshot icon" /> 
+      <img src="app-icons/org.kde.dolphin.svg" alt="dolphin file manager icon" /> 
+      <img src="app-icons/org.kde.kfloppy.svg" alt="floppy icon" /> 
+      <img src="app-icons/org.kde.kolf.svg" alt="kolf icon" /> 
+      <img src="app-icons/org.kde.kmousetool.svg" alt="mouse icon" /> 
+      <img src="app-icons/org.kde.khelpcenter.svg" alt="help icon" /> 
+      <img src="app-icons/org.kde.ktimer.svg" alt="timer icon" /> 
     </div>
     </div>
     <h3 class="mb-4">Monochrome action icons</h3>
@@ -51,7 +51,7 @@ layout: area
     <div class="text-center">
       <img class="w-75 mx-auto img-fluid shadow" src="https://cdn.kde.org/screenshots/cuttlefish/cuttlefish.png" alt="screenshot of app Icon Explorer" />
     </div>
-    <a class="noblefir ml-auto align-self-center mt-4" id="install-button" href="appstream://org.kde.cuttlefish.desktop" data-windows="">
+    <a class="noblefir ml-auto align-self-center mt-4" id="install-button" href="appstream://org.kde.plasma.iconexplorer" data-windows="">
       <span id="install-msg">Install on Linux</span>
     </a>
   </div>
