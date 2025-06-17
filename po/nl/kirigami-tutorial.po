@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-13 01:53+0000\n"
-"PO-Revision-Date: 2025-06-03 12:01+0200\n"
+"PO-Revision-Date: 2025-06-14 11:52+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -9942,56 +9942,49 @@ msgid "After this, the application can be launched by running:"
 msgstr "Hierna kan de toepassing gestart worden door uit te voeren:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with C++"
 msgid "Kirigami with Rust"
-msgstr "Kirigami met C++"
+msgstr "Kirigami met Rust"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Create your first Kirigami application with C++\n"
 msgid "Create your first Kirigami application with Rust\n"
-msgstr "Maak uw eerste Kirigami toepassing met C++\n"
+msgstr "Maak uw eerste Kirigami toepassing met Rust\n"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:13
-#, fuzzy
-#| msgid ""
-#| "Before getting started, we will need to install Kirigami and PySide on "
-#| "our machine."
 msgid ""
 "Before getting started, we will need to install Kirigami and Rust on our "
 "machine."
 msgstr ""
-"Alvorens te beginnen moeten we Kirigami en PySide op onze machine "
-"installeren."
+"Alvorens te beginnen moeten we Kirigami en Rust op onze machine installeren."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:24
-#, fuzzy
-#| msgid ""
-#| "First we create our project folder (you can use the commands below). We "
-#| "are going to call ours `kirigami_python/`."
 msgid ""
 "First we create our project folder (you can use the commands below). We are "
 "going to call ours `kirigami_rust/`. This will be the project's structure:"
 msgstr ""
 "Eerst maken we onze projectmap aan (u kunt de onderstaande commando's "
-"gebruiken). De onze gaan we `kirigami_python/` noemen."
+"gebruiken). De onze gaan we `kirigami_rust/` noemen. Dit zal de structuur "
+"van het project worden:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:38
 msgid ""
 "This project will use CMake to call Cargo, which in turn will build the "
 "project."
 msgstr ""
+"Dit project zal CMake gebruiken om Cargo aan te roepen, die op zijn beurt "
+"het project zal bouwen."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:40
 msgid "About CMake and Cargo"
-msgstr ""
+msgstr "over CMake en Cargo"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:42
 msgid ""
 "This is **not** the traditional way of building a Rust project: technically, "
 "only Cargo is needed to build it, usually with `cargo build` and `cargo run`."
 msgstr ""
+"Dit is **geen** traditionele manier van het bouwen van een Rust-project: "
+"technisch is alleen Cargo nodig om het te bouwen, gewoonlijk met `cargo "
+"build` en `cargo run`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:44
 msgid ""
@@ -10000,41 +9993,37 @@ msgid ""
 "en/introduction.html) used by COSMIC) is needed to install because Cargo "
 "lacks the necessary features to install GUI desktop applications."
 msgstr ""
+"Voor bureaubladtoepassingen echter wordt CMake (of een gelijkwaardige zoals "
+"[Meson](https://mesonbuild.com/) gebruikt door GNOME of is [Just](https://"
+"just.systems/man/en/introduction.html) gebruikt door COSMIC) nodig om te "
+"installeren omdat Cargo de noodzakelijke functies mist om GUI "
+"bureaubladtoepassingen te installeren."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:48
 msgid ""
 "The project will be called `kirigami_rust` and it will generate an "
 "executable called `kirigami_hello`."
 msgstr ""
+"Het project zal `kirigami_rust` worden genoemd en het zal een uitvoerbaar "
+"bestand genereren genaamd `kirigami_hello`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:50
 msgid "💡 Tip"
-msgstr ""
+msgstr "💡 Tip"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:52
-#, fuzzy
-#| msgid ""
-#| "To quickly generate this folder structure, just run: `mkdir -p "
-#| "kirigami_python/src/qml/`."
 msgid ""
 "You can quickly create this file structure with: `mkdir -p kirigami_rust/src/"
 "qml/`."
 msgstr ""
-"Om snel deze mappenstructuur te genereren, voer gewoon uit: `mkdir -p "
-"kirigami_python/src/qml/`."
+"U kunt snel deze mappenstructuur aanmaken met: `mkdir -p kirigami_rust/src/"
+"qml/`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:56
-#, fuzzy
-#| msgid "org.kde.kirigami_python.desktop"
 msgid "org.kde.kirigami_rust.desktop"
-msgstr "org.kde.kirigami_python.desktop"
+msgstr "org.kde.kirigami_rust.desktop"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:60
-#, fuzzy
-#| msgid ""
-#| "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/"
-#| "wiki/Reverse_domain_name_notation) followed by the `.desktop` extension "
-#| "such as `org.kde.kirigami_python.desktop`:"
 msgid ""
 "It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) followed by the `.desktop` extension such as "
@@ -10042,7 +10031,7 @@ msgid ""
 msgstr ""
 "Het moet een [reverse-DNS naam-schema](https://en.wikipedia.org/wiki/"
 "Reverse_domain_name_notation) volgen gevolgd door de `.desktop` extensie "
-"zoals `org.kde.kirigami_python.desktop`:"
+"zoals `org.kde.kirigami_rust.desktop`:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:66
 msgid ""
@@ -10140,10 +10129,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:100
-#, fuzzy
-#| msgid "src/qml/Main.qml"
 msgid "src/main.rs"
-msgstr "src/qml/Main.qml"
+msgstr "src/main.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:102
 msgid ""
@@ -10196,26 +10183,15 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:135
-#, fuzzy
-#| msgid ""
-#| "[Kirigami](docs:kirigami;kirigami-index.html), which provides a number of "
-#| "components suited for creating applications that work across devices of "
-#| "different shapes and sizes."
 msgid ""
 "[Kirigami](docs:kirigami2), which provides a number of components suited for "
 "creating applications that work across devices of different shapes and sizes."
 msgstr ""
-"[Kirigami](docs:kirigami;kirigami-index.html), die een aantal componenten "
-"levert geschikt voor het aanmaken van toepassingen die werken over apparaten "
-"met verschillende vormen en groottes."
+"[Kirigami](docs:kirigami2), die een aantal componenten levert geschikt voor "
+"het aanmaken van toepassingen die werken over apparaten met verschillende "
+"vormen en groottes."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:143
-#, fuzzy
-#| msgid ""
-#| "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
-#| "kirigami;org.kde.kirigami.ApplicationWindow), which provides some basic "
-#| "features needed for all Kirigami applications. This is the window that "
-#| "will contain each of our pages, the main sections of our UI."
 msgid ""
 "We then come to our base element, [Kirigami.ApplicationWindow](docs:"
 "kirigami2;ApplicationWindow), which provides some basic features needed for "
@@ -10223,23 +10199,11 @@ msgid ""
 "pages, the main sections of our UI."
 msgstr ""
 "Daarna komen we bij ons basiselement, [Kirigami.ApplicationWindow](docs:"
-"kirigami;org.kde.kirigami.ApplicationWindow) die enige basis functies levert "
-"nodig voor alle Kirigami toepassen. Dit is het venster dat elk van onze "
-"pagina's bevat, de hoofdsecties van onze UI."
+"kirigami2;ApplicationWindow) die enige basis functies levert nodig voor alle "
+"Kirigami toepassen. Dit is het venster dat elk van onze pagina's bevat, de "
+"hoofdsecties van onze UI."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:149
-#, fuzzy
-#| msgid ""
-#| "We then set the first page of our page stack. Most Kirigami applications "
-#| "are organised as a stack of pages, each page containing related "
-#| "components suited to a specific task. For now, we are keeping it simple, "
-#| "and sticking to a single page. [pageStack](https://api-staging.kde.org/"
-#| "qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) is an "
-#| "initially empty stack of pages provided by [Kirigami.ApplicationWindow]"
-#| "(docs:kirigami;org.kde.kirigami.ApplicationWindow), and with `pageStack."
-#| "initialPage: Kirigami.Page {...}` we set the first page presented upon "
-#| "loading the application to a [Kirigami.Page](docs:kirigami;org.kde."
-#| "kirigami.Page). This page will contain all our content."
 msgid ""
 "We then set the first page of our page stack. Most Kirigami applications are "
 "organised as a stack of pages, each page containing related components "
@@ -10254,24 +10218,14 @@ msgstr ""
 "Daarna zetten we de eerste pagina van onze pagina stapel. De meeste Kirigami "
 "toepassingen zijn georganiseerd als een stapel pagina's, elke pagina bevat "
 "gerelateerde componenten passend bij een specifieke taak. Voor nu houden we "
-"het eenvoudig en blijven bij een enkele pagina. [pageStack](https://api-"
-"staging.kde.org/qml-org-kde-kirigami-abstractapplicationwindow."
-"html#pageStack-prop) is een initieel lege stapel pagina's geleverd door "
-"[Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami."
-"ApplicationWindow) en met `pageStack.initialPage: Kirigami.Page {...}` "
-"zetten we de eerste pagina op gepresenteerd bij het laden van de toepassing "
-"op een [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). Deze pagina zal "
-"al onze inhoud zal bevatten."
+"het eenvoudig en blijven bij een enkele pagina. [pageStack](docs:kirigami2;"
+"AbstractApplicationWindow::pageStack) is een initieel lege stapel pagina's "
+"geleverd door [Kirigami.ApplicationWindow](docs:kirigami2;ApplicationWindow) "
+"en met `pageStack.initialPage: Kirigami.Page {...}` zetten we de eerste "
+"pagina op gepresenteerd bij het laden van de toepassing op een [Kirigami."
+"Page](docs:kirigami2;Page). Deze pagina zal al onze inhoud zal bevatten."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:151
-#, fuzzy
-#| msgid ""
-#| "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
-#| "QtQuick.Controls.Label) that lets us place text on our page. We use "
-#| "`anchors.centerIn: parent` to center our label horizontally and "
-#| "vertically within our parent element. In this case, the parent component "
-#| "of our label is [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). The "
-#| "last thing we need to do is set its text: `text: \"Hello World!\"`."
 msgid ""
 "Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;"
 "QtQuick.Controls.Label) that lets us place text on our page. We use `anchors."
@@ -10284,8 +10238,8 @@ msgstr ""
 "QtQuick.Controls.Label) in die ons tekst laat plaatsen op onze pagina. We "
 "gebruiken `anchors.centerIn: parent` om ons label horizontaal en verticaal "
 "te centreren in ons ouderelement. In dit geval is de oudercomponent van "
-"[Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). Het laatste ding dat "
-"we moeten doen is het zetten van zijn tekst: `text: \"Hello World!\"`."
+"[Kirigami.Page](docs:kirigami2;Page). Het laatste ding dat we moeten doen is "
+"het zetten van zijn tekst: `text: \"Hello World!\"`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:155
 msgid ""
@@ -10295,10 +10249,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:157
-#, fuzzy
-#| msgid "add the following:"
 msgid "Run the following:"
-msgstr "voeg het volgende toe:"
+msgstr "Voer het volgende uit:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:165
 msgid ""
@@ -10323,16 +10275,12 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:171
-#, fuzzy
-#| msgid ""
-#| "Voilà! Now you will see your very first Kirigami app appear before your "
-#| "very own eyes."
 msgid ""
 "Open the menu entry and voilà! Now you will see your very first Kirigami app "
 "appear before your very own eyes."
 msgstr ""
-"Voilà! Nu ziet u uw allereerste Kirigami toepassing voor uw eigen ogen "
-"verschijnen."
+"Open het menu-item en voilà! Nu ziet u uw allereerste Kirigami toepassing "
+"voor uw eigen ogen verschijnen."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:0
 msgid "Colors and themes in Kirigami"
