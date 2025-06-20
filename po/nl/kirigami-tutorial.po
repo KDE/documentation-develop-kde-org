@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-13 01:53+0000\n"
-"PO-Revision-Date: 2025-06-14 11:52+0200\n"
+"PO-Revision-Date: 2025-06-19 13:59+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -10075,6 +10075,8 @@ msgid ""
 "For more information about CMake, targets, and the binary directory, see "
 "[Building KDE software manually](/docs/getting-started/building/cmake-build)."
 msgstr ""
+"Voor meer informatie over CMake, doelen en de binaire map, zie [KDE software "
+"handmatig bouwen](/docs/getting-started/building/cmake-build)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:78
 msgid ""
@@ -10092,14 +10094,17 @@ msgid ""
 "KDE software manually: The install step](/docs/getting-started/building/"
 "cmake-build/#install)."
 msgstr ""
+"Voor meer informatie over waar KDE software wordt geïnstalleerd, zie [KDE "
+"software handmatig bouwen: de installatiestap](/docs/getting-started/"
+"building/cmake-build/#install)."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:84
 msgid "Cargo.toml"
-msgstr ""
+msgstr "Cargo.toml"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:86
 msgid "Next we have a very straightforward `Cargo.toml`:"
-msgstr ""
+msgstr "Als volgende hebben we een erg rechttoe-rechtaan `Cargo.toml`:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:90
 msgid ""
@@ -10110,7 +10115,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:92
 msgid "build.rs"
-msgstr ""
+msgstr "build.rs"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:94
 msgid ""
@@ -10127,6 +10132,8 @@ msgid ""
 "This is necessary to make the QML file available in the entrypoint for our "
 "application, `main.rs`."
 msgstr ""
+"Dit is noodzakelijk om het QML-bestand beschikbaar te maken in het "
+"ingangspunt van onze toepassing, `main.rs`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:100
 msgid "src/main.rs"
@@ -10137,6 +10144,9 @@ msgid ""
 "The file `kirigami_rust/src/main.rs` initializes the project and then loads "
 "the QML file, which will consist of the user interface for the application."
 msgstr ""
+"Het bestand `kirigami_rust/src/main.rs` initialiseert het project en laadt "
+"daarna het QML-bestand, die zal bestaan uit het gebruikersinterface van de "
+"toepassing."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:106
 msgid ""
@@ -10151,21 +10161,26 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:108
 msgid "After this starts the important part:"
-msgstr ""
+msgstr "Hierna begint het belangrijke gedeelte:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:110
 msgid "Lines 12-13 import the needed Qt libraries exposed through cxx-qt."
 msgstr ""
+"De regels 12-13 importeren de benodigde Qt-bibliotheken blootgesteld via cxx-"
+"qt."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:112
 msgid ""
 "We first create a new instance of a `QApplication`, then perform a few "
 "integrations in lines 20-26."
 msgstr ""
+"We maken eerst een nieuw exemplaar van een `QApplication`, daarna voeren we "
+"een paar integraties uit in de regels 20-26."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:114
 msgid "Then comes the part that actually creates the application window:"
 msgstr ""
+"Daarna komt het gedeelte dat werkelijk het toepassingsvenster aanmaakt:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:118
 msgid ""
@@ -10174,6 +10189,10 @@ msgid ""
 "qt-6/resources.html), and it follows this scheme: "
 "`<resource_prefix><import_URI><QML_dir><file>`."
 msgstr ""
+"De lange URL `qrc:/qt/qml/org/kde/tutorial/src/qml/Main.qml` komt overeen "
+"met het bestand `Main.qml` volgens het [Qt-hulpbronsysteem](https://doc.qt."
+"io/qt-6/resources.html) en het volgt dit schema: "
+"`<resource_prefix><import_URI><QML_dir><file>`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:120
 msgid ""
@@ -10181,6 +10200,9 @@ msgid ""
 "`org/kde/tutorial` (set in `build.rs`, separated by slashes instead of dots) "
 "+ the QML dir `src/qml/` + the QML file `Main.qml`."
 msgstr ""
+"In andere woorden: de standaard hulpbronprefix `qrc:/qt/qml/` + de import "
+"URI `org/kde/tutorial` (ingezet in `build.rs`, gescheiden door slashes in "
+"plaats van punten) + de QML-map `src/qml/` + het QML-bestand `Main.qml`."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:135
 msgid ""
@@ -10247,6 +10269,10 @@ msgid ""
 "kirigami_hello` and you may run it directly or with `cargo run`, but it will "
 "lack a Window icon. To address this, we'll install the application first."
 msgstr ""
+"U zou het gegenereerde uitvoerbare bestand `kirigami_hello` moeten vinden "
+"onder `build/debug/kirigami_hello` en u zou het direct kunnen uitvoeren of "
+"met `cargo run`, maar er zal geen vensterpictogram zijn. Om dat aan te "
+"pakken zullen we de toepassing eerst installeren."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:157
 msgid "Run the following:"
@@ -10257,6 +10283,7 @@ msgid ""
 "With the first command, CMake will search for Kirigami and qqc2-desktop-"
 "style."
 msgstr ""
+"Met het eerst commando zal CMake zoeken naar Kirigami en qqc2-desktop-style."
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:167
 msgid ""
