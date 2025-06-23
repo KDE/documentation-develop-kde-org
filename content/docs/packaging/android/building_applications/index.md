@@ -18,15 +18,15 @@ This only applies to applications that have a Craft blueprint in the [craft-blue
 First create a mountable folder used for the image:
 
 ```bash
-mkdir craft-kde-android
+mkdir ~/craft-kde-android
 ```
 
 If you want to build Qt6 applications, download the `qt69` image:
 
 ```bash
-docker run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt69 bash
+docker run -ti --rm -v ~/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt69 bash
 # or with podman
-podman run -ti --rm -v $PWD/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt69 bash
+podman run -ti --rm -v ~/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt69 bash
 ```
 
 {{< alert color="info" title="Note" >}}
@@ -96,29 +96,42 @@ craft --package itinerary
 ## Signing APKs
 
 
-The `.apk` file can be found at `/home/user/CraftRoot/tmp`. This folder is also available as `craft-kde-android/tmp` on the host system. Craft does not sign the apks, so you need to do that yourself before being able to install it onto a device. For signing an apk, you need to create a signing key first, which can be done using
+The `.apk` file can be found at `/home/user/CraftRoot/tmp`. This folder is also available as `~/craft-kde-android/tmp` on the host system.
+
+Craft does not sign the apk, so you need to do that yourself before being able to install it onto a device.
+
+For signing an apk, you need to create a signing key first:
 
 ```bash
-keytool -genkey -noprompt -keystore key.keystore -keypass 123456  -dname "CN=None, OU=None, O=None, L=None, S=None, C=XY" -alias mykey -keyalg RSA -keysize 2048 -validity 10000 -storepass 123456
+cd ~/CraftRoot/tmp
+keytool -genkey -noprompt -keystore key.keystore -keypass 123456 -dname "CN=None, OU=None, O=None, L=None, S=None, C=XY" -alias mykey -keyalg RSA -keysize 2048 -validity 10000 -storepass 123456
 ```
 
-This key can be reused to sign all of your development apks.
+The key file `/home/user/CraftRoot/tmp/key.keystore` was generated. The password is `123456`. This key can be reused to sign all your development apks.
 
-Before signing the apk, it might be needed to align it.  This can be done using
+Before signing the apk, zipalign the apk:
 
 ```bash
-zipalign -p -f -v 4 <app>.apk <app>.signed.apk
+$ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS_REVISION/zipalign -p -f -v 4 <app>.apk <app>.signed.apk
 ```
 
-You can finally sign the aligned apk with your key using
+You can finally sign the aligned apk:
 
 ```bash
-apksigner sign -verbose -ks key.keystore <app>.signed.apk
+$ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS_REVISION/apksigner sign --verbose --ks key.keystore <app>.signed.apk
 ```
 
-{{< alert color="info" title="Note" >}}
-The `zipalign` and `apksigner` binaries can be found at `/opt/android-sdk/build-tools/<version>/` inside the Craft container environment.
-{{< /alert >}}
+When asked `Keystore password for signer #1:`, please provide the password specified above.
+
+Now, you can copy the file `/home/user/CraftRoot/tmp/<app>.signed.apk` to your Android device or emulator (for example the Android Emulator from Android Studio IDE or Waydroid). You can install the app and run it.
+
+If you have Google Apps (GAPPS, Google Play) installed on your Andoid device, you might get a warning dialog "Google Play Protect  
+App scan recommended  
+Play Protect hasn't seen this app before.".
+
+Select the "Scan app" button. If the app was scanned successfully, it will say "You can continue to install it", select the "Install" button.
+
+Start the app from the app list on your Android device.
 
 ## Iterating on blueprints
 
