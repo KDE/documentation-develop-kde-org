@@ -1,6 +1,6 @@
 ---
 title: Common programming mistakes
-weight: 5
+weight: 6
 description: >
   Common programming mistakes to avoid
 group: "getting-started"
