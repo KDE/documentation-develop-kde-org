@@ -1,0 +1,40 @@
+{
+  "command": "simplemdviewer",
+  "desktop-file-name-suffix": " (Nightly)",
+  "finish-args": [
+    "--share=ipc",
+    "--device=dri",
+    "--socket=fallback-x11",
+    "--socket=wayland"
+  ],
+  "id": "org.kde.simplemdviewer",
+  "modules": [
+    {
+      "buildsystem": "cmake",
+      "name": "simplemdviewer",
+      "sources": [
+        "cargo-sources.json",
+        {
+          "type": "dir",
+          "path": "."
+        },
+        {
+          "type": "shell",
+          "commands": [
+            "mkdir -p .cargo",
+            "cp -vf cargo/config .cargo/config.toml"
+          ]
+        }
+      ]
+    }
+  ],
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin"
+  },
+  "runtime": "org.kde.Platform",
+  "runtime-version": "6.9",
+  "sdk": "org.kde.Sdk"
+}
