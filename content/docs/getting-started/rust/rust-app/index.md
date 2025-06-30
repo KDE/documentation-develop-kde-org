@@ -54,7 +54,12 @@ simplemdviewer/
 
 {{< alert title="💡 Tip" color="success" >}}
 
-To quickly generate this folder structure, just run: `mkdir -p simplemdviewer/src/qml/`
+To quickly generate this folder structure, just run:
+
+```bash
+cargo new simplemdviewer
+mkdir -p simplemdviewer/src/qml/
+```
 
 {{< /alert >}}
 
