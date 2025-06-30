@@ -357,6 +357,13 @@ cmake --install build/
 simplemdviewer
 ```
 
+You can also try building it with Cargo:
+
+```bash
+cargo build --target-dir build/
+cargo run --target-dir build/
+```
+
 You should now have a new menu entry named "Simple Markdown Viewer in Rust and Kirigami".
 
 TODO alt="A screenshot of the Plasma Kickoff menu showing the menu entry."
