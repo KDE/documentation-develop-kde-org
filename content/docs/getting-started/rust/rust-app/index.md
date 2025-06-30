@@ -14,6 +14,14 @@ To bridge the connection between the C++ API from Qt and our Rust code, we will 
 
 You will need to install Rust, Cargo, CMake, extra-cmake-modules, QtQuick and Kirigami. All other software needed to build the project will be provided via Rust crates from [crates.io](https://crates.io) or directly from a git repository.
 
+Upstream Rust [recommends](https://doc.rust-lang.org/cargo/getting-started/installation.html) using [rustup](https://rustup.rs/) to install Rust and Cargo:
+
+```bash
+curl https://sh.rustup.rs -sSf | sh
+```
+
+You may otherwise install them from your distribution repositories.
+
 {{< installpackage
     opensuse="rust cargo cmake kf6-extra-cmake-modules kf6-kirigami-devel qqc2-desktop-style flatpak-builder AppStream-compose"
     fedora="rust cargo cmake kf6-extra-cmake-modules kf6-kirigami-devel qqc2-desktop-style flatpak-builder appstream-compose"
