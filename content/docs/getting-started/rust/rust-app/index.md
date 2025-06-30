@@ -346,6 +346,16 @@ To show your application on software stores like Plasma Discover, GNOME Software
 
 {{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.metainfo.xml" highlight="xml" >}}
 
+### CMakeLists.txt
+
+Now that we have our final metadata files, we can tell CMake where to install them:
+
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/CMakeLists.txt" highlight="xml" emphasize="24-26" >}}
+
+When a distribution installs these files, they will go to `/usr/share/applications`, `/usr/share/metainfo` and `/usr/share/icons/hicolor/scalable/apps`, respectively. We will be installing them in userspace, so `~/.local/share/applications`, `~/.local/share/metainfo` and `~/.local/share/icons/hicolor/scalable/apps` instead.
+
+To learn more about where files need to be installed, see [Building KDE software manually: The install step]({{< ref "cmake-build#install" >}}).
+
 ## Final test run
 
 At last, build, install and run your new application:
