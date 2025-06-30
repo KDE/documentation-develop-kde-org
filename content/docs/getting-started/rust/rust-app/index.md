@@ -361,7 +361,7 @@ To learn more about where files need to be installed, see [Building KDE software
 At last, build, install and run your new application:
 
 ```bash
-cmake -B build/ --install-prefix build/
+cmake -B build/ --install-prefix ~/.local
 cmake --build build/
 cmake --install build/
 simplemdviewer
