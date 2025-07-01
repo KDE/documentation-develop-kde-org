@@ -48,7 +48,7 @@ python.exe -m pip install --upgrade certifi
 Lastly, install Craft with the following command:
 
 ```powershell
-iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/KDE/craft/master/setup/install\_craft.ps1'))
+iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/KDE/craft/master/setup/install_craft.ps1'))
 ```
 
 It will ask you a series of questions. Press Enter for all options to accept the defaults.
