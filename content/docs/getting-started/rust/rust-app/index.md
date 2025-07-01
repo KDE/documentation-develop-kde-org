@@ -220,9 +220,7 @@ Use the explicit Qt6 variant to be sure that your app runs with Qt6.
 It does not format anything; if we click on "Format" it just spits the
 unformatted text into a text element. It also lacks a window icon.
 
-TODO alt="A screenshot of the application showing a text area with two buttons Format and Clear beneath it. The text area has the text \"# Hello\", yet the text below the buttons shows the same text, unformatted."
-
-{{<figure src="simplemdviewer1.webp" class="text-center">}}
+{{<figure src="simplemdviewer1.webp" class="text-center" alt="A screenshot of the application showing a text area with two buttons Format and Clear beneath it. The text area has the text \"# Hello\", yet the text below the buttons shows the same text, unformatted." >}}
 
 ## Adding Markdown functionality {#adding-markdown}
 
@@ -376,15 +374,11 @@ cargo run --target-dir build/
 
 You should now have a new menu entry named "Simple Markdown Viewer in Rust and Kirigami".
 
-TODO alt="A screenshot of the Plasma Kickoff menu showing the menu entry."
-
-{{< figure src="simplemdviewer-menu.webp" class="text-center" >}}
+{{< figure src="simplemdviewer-menu.webp" class="text-center" alt="A screenshot of the Plasma Kickoff menu showing the menu entry." >}}
 
 Play with adding some Markdown text:
 
-TODO alt="A screenshot of the application showing the custom window icon and the Free Software foundation definition of the four freedoms. Beneath it, the text is fully formatted in Markdown."
-
-{{<figure src="simplemdviewer2.webp" class="text-center">}}
+{{<figure src="simplemdviewer2.webp" class="text-center" alt="A screenshot of the application showing the custom window icon and the Free Software foundation definition of the four freedoms. Beneath it, the text is fully formatted in Markdown." >}}
 
 Hooray!
 
