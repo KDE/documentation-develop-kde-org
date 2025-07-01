@@ -7,7 +7,7 @@ import org.kde.simplemdviewer
 Kirigami.ApplicationWindow {
     id: root
 
-    title: qsTr("Simple Markdown viewer")
+    title: qsTr("Simple Markdown Viewer in Rust 🦀")
     minimumWidth: Kirigami.Units.gridUnit * 20
     minimumHeight: Kirigami.Units.gridUnit * 20
     width: minimumWidth
