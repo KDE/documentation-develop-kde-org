@@ -6,7 +6,7 @@ import org.kde.kirigami as Kirigami
 Kirigami.ApplicationWindow {
     id: root
 
-    title: qsTr("Simple Markdown Viewer in Rust 🦀")
+    title: "Simple Markdown Viewer in Rust 🦀"
 
     minimumWidth: Kirigami.Units.gridUnit * 20
     minimumHeight: Kirigami.Units.gridUnit * 20
@@ -19,7 +19,7 @@ Kirigami.ApplicationWindow {
         id: initPage
 
         Kirigami.Page {
-            title: qsTr("Markdown Viewer")
+            title: "Markdown Viewer"
 
             ColumnLayout {
                 anchors {
@@ -30,7 +30,7 @@ Kirigami.ApplicationWindow {
                 Controls.TextArea {
                     id: sourceArea
 
-                    placeholderText: qsTr("Write some Markdown code here")
+                    placeholderText: "Write some Markdown code here"
                     wrapMode: Text.WrapAnywhere
                     Layout.fillWidth: true
                     Layout.minimumHeight: Kirigami.Units.gridUnit * 5
@@ -40,13 +40,13 @@ Kirigami.ApplicationWindow {
                     Layout.fillWidth: true
 
                     Controls.Button {
-                        text: qsTr("Format")
+                        text: "Format"
 
                         onClicked: formattedText.text = sourceArea.text
                     }
 
                     Controls.Button {
-                        text: qsTr("Clear")
+                        text: "Clear"
 
                         onClicked: {
                             sourceArea.text = ""
