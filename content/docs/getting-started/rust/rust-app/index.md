@@ -282,7 +282,7 @@ Two modifications are needed in `src/main.rs`: removing the dummy QObject and im
 
 ### build.rs
 
-Now that the module is finished, add the new `mdconverter.rs` file to `build.rs`:
+Now that the module is finished, replace `src/main.rs` with the new `src/mdconverter.rs` file in `build.rs`:
 
 {{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/build.rs" highlight="rust" emphasize="8" >}}
 

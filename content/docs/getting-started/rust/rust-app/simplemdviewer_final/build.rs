@@ -5,7 +5,7 @@ fn main() {
         .qml_module(QmlModule {
             uri: "org.kde.simplemdviewer",
             qml_files: &["src/qml/Main.qml"],
-            rust_files: &["src/main.rs", "src/mdconverter.rs"],
+            rust_files: &["src/mdconverter.rs"],
             ..Default::default()
         })
         .build();
