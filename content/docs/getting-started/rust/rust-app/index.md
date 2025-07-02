@@ -121,10 +121,6 @@ Create a new `src/qml/` directory and add a `Main.qml` to it:
 
 This is the file that will manage how the window will look like. For more details about Kirigami, see our [Kirigami Tutorial](/docs/getting-started/kirigami).
 
-{{< alert title="Warning" color="warning">}}
-Older distributions such as Debian or Ubuntu LTS that do not have an up-to-date Kirigami might require lowering the Kirigami import version from `3.20` to `3.15` to run.
-{{< /alert >}}
-
 ### Cargo.toml
 
 Create a new `Cargo.toml` file in the root directory of your project:
