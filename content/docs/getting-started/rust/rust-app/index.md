@@ -10,7 +10,7 @@ description: >
 
 For the purposes of this tutorial, we will create the application on Linux.
 
-To bridge the connection between the C++ API from Qt and our Rust code, we will be using [cxx-qt](https://kdab.github.io/cxx-qt/book/getting-started/index.html), which provides two way communication between the two.
+To bridge the connection between Qt's C++ API and our Rust code, we will be using [cxx-qt](https://kdab.github.io/cxx-qt/book/getting-started/index.html), which provides two way communication between the two.
 
 You will need to install Rust, Cargo, CMake, extra-cmake-modules, QtQuick and Kirigami. All other software needed to build the project will be provided via Rust crates from [crates.io](https://crates.io) or directly from a git repository.
 
@@ -54,7 +54,7 @@ simplemdviewer/
 
 {{< alert title="💡 Tip" color="success" >}}
 
-To quickly generate this folder structure, just run:
+To quickly generate this folder structure, run:
 
 ```bash
 cargo new simplemdviewer
@@ -85,7 +85,7 @@ simplemdviewer/
 
 We need to initialize `cxx-qt` before Cargo builds the project, hence we use a [build script build.rs](https://doc.rust-lang.org/cargo/reference/build-scripts.html) which serves this purpose.
 
-Create a new `build.rs` in the root directory of the project with the following contents:
+Create a new `build.rs` file in the root directory of the project with the following contents:
 
 {{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer/build.rs" highlight="rust" >}}
 
@@ -96,9 +96,9 @@ Create a new directory `src/` and add a new
 
 {{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer/src/main.rs" highlight="rust" >}}
 
-The first part that is marked with the `#[cxx_qt::bridge]` Rust macro just creates a dummy QObject out of a dummy Rust struct. This is needed just to complete the use of QmlModule in the previous build script build.rs, as cxx-qt needs to find at least one QObject exposed to Rust to work. This should no longer be necessary in the future once https://github.com/KDAB/cxx-qt/issues/1137 is addressed. When we start [Adding Markdown functionality]({{< ref "#adding-markdown" >}}) later on, we will use a proper QObject.
+The first part that is marked with the `#[cxx_qt::bridge]` Rust macro creates a dummy QObject out of a dummy Rust struct. This is needed as cxx-qt needs to find at least one QObject exposed to Rust to work. This should no longer be necessary in the future once https://github.com/KDAB/cxx-qt/issues/1137 is addressed. When we start [Adding Markdown functionality]({{< ref "#adding-markdown" >}}) later on, we will use a proper QObject.
 
-We have just created a
+We then created a
 [QGuiApplication](https://doc.qt.io/qtforpython-6/PySide6/QtGui/QGuiApplication.html#PySide6.QtGui.QGuiApplication)
 object that initializes the application and contains the main event loop. The
 [QQmlApplicationEngine](https://doc.qt.io/qtforpython-6/PySide6/QtQml/QQmlApplicationEngine.html#PySide6.QtQml.QQmlApplicationEngine)
@@ -108,7 +108,7 @@ Then comes the part that actually creates the application window:
 
 {{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/src/main.rs" highlight="rust" start=31 lines=4 >}}
 
-The long URL `qrc:/qt/qml/org/kde/simplemdviewer/src/qml/Main.qml` corresponds to the `Main.qml` file according to the [Qt Resource System](https://doc.qt.io/qt-6/resources.html), and it follows this scheme: `<resource_prefix><import_URI><QML_dir><file>`.
+The long URL `qrc:/qt/qml/org/kde/simplemdviewer/src/qml/Main.qml` corresponds to the `Main.qml` file in the [Qt Resource System](https://doc.qt.io/qt-6/resources.html), and it follows this scheme: `<resource_prefix><import_URI><QML_dir><file>`.
 
 In other words: the default resource prefix `qrc:/qt/qml/` + the import URI `org/kde/simplemdviewer` (set in `build.rs`, separated by slashes instead of dots) + the QML dir `src/qml/` + the QML file `Main.qml`.
 
