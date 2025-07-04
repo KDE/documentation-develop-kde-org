@@ -20,8 +20,7 @@ fn main() {
     QGuiApplication::set_desktop_file_name(&QString::from("org.kde.simplemdviewer"));
 
     // To ensure the style is set correctly
-    let style = env::var("QT_QUICK_CONTROLS_STYLE");
-    if style.is_err() {
+    if env::var("QT_QUICK_CONTROLS_STYLE").is_err() {
         QQuickStyle::set_style(&QString::from("org.kde.desktop"));
     }
 
