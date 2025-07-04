@@ -202,7 +202,7 @@ cargo run --target-dir build/
 At the moment we have not used any interesting Rust stuff. In reality, the application can also run as a standalone QML app:
 
 ```bash
-QT_QUICK_CONTROLS_STYLE=org.kde.desktop qml6 src/qml/Main.qml
+QT_QUICK_CONTROLS_STYLE=org.kde.desktop qml6 --apptype widget src/qml/Main.qml
 ```
 
 {{< alert title="About the qml binary" color="info" >}}
