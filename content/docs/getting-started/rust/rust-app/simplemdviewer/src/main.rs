@@ -15,7 +15,6 @@ use std::env;
 
 fn main() {
     let mut app = QApplication::new();
-    let mut engine = QQmlApplicationEngine::new();
 
     // To associate the executable to the installed desktop file
     QGuiApplication::set_desktop_file_name(&QString::from("org.kde.simplemdviewer"));
@@ -26,6 +25,7 @@ fn main() {
         QQuickStyle::set_style(&QString::from("org.kde.desktop"));
     }
 
+    let mut engine = QQmlApplicationEngine::new();
     if let Some(engine) = engine.as_mut() {
         engine.load(&QUrl::from(
             "qrc:/qt/qml/org/kde/simplemdviewer/src/qml/Main.qml",
