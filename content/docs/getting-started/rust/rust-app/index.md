@@ -23,8 +23,8 @@ curl https://sh.rustup.rs -sSf | sh
 You may otherwise install them from your distribution repositories.
 
 {{< installpackage
-    opensuse="rust cargo cmake kf6-extra-cmake-modules kf6-kirigami-devel qqc2-desktop-style flatpak-builder AppStream-compose"
-    fedora="rust cargo cmake kf6-extra-cmake-modules kf6-kirigami-devel qqc2-desktop-style flatpak-builder appstream-compose"
+    opensuse="rust cargo cmake kf6-extra-cmake-modules kf6-kirigami-devel kf6-qqc2-desktop-style-devel qt6-declarative-devel qt6-wayland-devel flatpak-builder AppStream-compose"
+    fedora="rust cargo cmake extra-cmake-modules kf6-kirigami-devel kf6-qqc2-desktop-style qt6-qtdeclarative-devel qt6-qtwayland-devel flatpak-builder appstream-compose"
     arch="rust cargo cmake extra-cmake-modules kirigami flatpak-builder qqc2-desktop-style appstream"
 >}}
 
