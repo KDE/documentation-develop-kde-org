@@ -99,9 +99,9 @@ Create a new directory `src/` and add a new
 The first part that is marked with the `#[cxx_qt::bridge]` Rust macro creates a dummy QObject out of a dummy Rust struct. This is needed as cxx-qt needs to find at least one QObject exposed to Rust to work. This should no longer be necessary in the future once https://github.com/KDAB/cxx-qt/issues/1137 is addressed. When we start [Adding Markdown functionality]({{< ref "#adding-markdown" >}}) later on, we will use a proper QObject.
 
 We then created a
-[QGuiApplication](https://doc.qt.io/qtforpython-6/PySide6/QtGui/QGuiApplication.html#PySide6.QtGui.QGuiApplication)
+[QGuiApplication](https://doc.qt.io/qt-6/qguiapplication.html)
 object that initializes the application and contains the main event loop. The
-[QQmlApplicationEngine](https://doc.qt.io/qtforpython-6/PySide6/QtQml/QQmlApplicationEngine.html#PySide6.QtQml.QQmlApplicationEngine)
+[QQmlApplicationEngine](https://doc.qt.io/qt-6/qqmlapplicationengine.html)
 object loads the `Main.qml` file.
 
 Then comes the part that actually creates the application window:
@@ -221,7 +221,7 @@ unformatted text into a text element. It also lacks a window icon.
 ## Adding Markdown functionality {#adding-markdown}
 
 Let’s add some Rust logic: a simple Markdown converter in a
-Rust [QObject](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QObject.html)
+Rust [QObject](https://doc.qt.io/qt-6/qobject.html)
 derivative struct.
 
 ### src/mdconverter.rs
