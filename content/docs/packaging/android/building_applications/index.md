@@ -151,3 +151,27 @@ Use [Logcat](https://developer.android.com/tools/logcat) to view logs on Android
 3. Connect Android device to computer.
 4. Install adb (from your distribution or [Google](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)).
 5. Run `adb logcat`.
+
+## Troubleshooting
+
+If when building applications using the Craft container you see an error like this:
+
+```
+CMake Warning at /home/user/CraftRoot/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:100 (find_package):
+  Could not find a configuration file for package "Qt6CoreTools" that is
+  compatible with requested version "6.9.1".
+ 
+  The following configuration files were considered but not accepted:
+ 
+    /opt/nativetooling/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake, version: 6.9.0
+```
+
+This means that the Qt version available in the container you are using is outdated.
+
+To fix this issue, update your container:
+
+```bash
+docker pull invent-registry.kde.org/sysadmin/ci-images/android-qt69
+# or with podman
+podman pull invent-registry.kde.org/sysadmin/ci-images/android-qt69
+```
