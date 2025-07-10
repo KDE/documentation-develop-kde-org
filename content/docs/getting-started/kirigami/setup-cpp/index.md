@@ -43,6 +43,7 @@ Add the following at the end of your `~/.config/kde-builder.yaml`:
 
 ```yaml
 project kirigami-tutorial:
+  repository: ""
   no-src: true
 ```
 

@@ -111,6 +111,7 @@ tutorials, you can create a `project` at the end of your `~/.config/kde-builder.
 
 ```yaml
 project kirigami-tutorial:
+  repository: ""
   no-src: true
 ```
 
