@@ -104,7 +104,7 @@ To do this, you can use kde-builder's
 
 ### New projects
 
-If your project is completely new, like in the case of the
+If your project is completely new (not present in the [KDE repo-metadata](https://invent.kde.org/sysadmin/repo-metadata)), like in the case of the
 [Kirigami]({{< ref "setup-cpp/#kde-builder" >}}) or
 [KXmlGui]({{< ref "hello_world/#kde-builder" >}})
 tutorials, you can create a `project` at the end of your `~/.config/kde-builder.yaml`:
@@ -122,28 +122,44 @@ kde-builder kirigami ki18n kcoreaddons breeze kiconthemes qqc2-desktop-style
 kde-builder kirigami-tutorial
 ```
 
-### Project forks
+### Existing projects
 
-If your project is a fork of an existing KDE project, you can build it with `kde-builder`.
+You may want to work on an existing KDE project, for example, KCalc. KDE Builder can handle this case:
+you can build a project with your changes.
 
-To do so, you need to clone it to `~/kde/src`. For example, if you want to work on Dolphin:
-
-```bash
-git clone git@invent.kde.org:your-user/dolphin.git ~/kde/src/dolphin-fork
-```
-
-Then add a `project` at the end of your `~/.config/kde-builder.yaml`:
-
-```yaml
-project dolphin-fork:
-  no-src: true
-```
-
-After that, you can build the original project (only required to compile the dependencies), and lastly build your fork:
+First, build the project as normal.
+This will download the latest source code of the project and its dependencies, and build them.
 
 ```bash
-kde-builder dolphin
-kde-builder dolphin-fork
+kde-builder kcalc
+```
+
+Go to the project directory and create a branch whose name starts with "work/".
+When kde-builder detects a work branch, it will not update the sources of the project.
+
+```bash
+cd ~/kde/src/kcalc
+git branch work/username/cool_feature
+git switch work/username/cool_feature
+```
+
+Make your changes in the source code.
+
+After that, rebuild the project. This time, you can skip building dependencies, as they are already built.
+
+```bash
+kde-builder kcalc --no-include-dependencies
+```
+
+Next, you may want to push your changes for preparing merge request.
+If you have a developer account, you can push your work branch to the original repo.
+If you do not have a KDE developer account, you can add your fork remote, and push changes to it.
+See [wiki page](https://community.kde.org/Infrastructure/GitLab#Submitting_a_merge_request) for more information.
+
+```bash
+cd ~/kde/src/kcalc
+git remote add fork git@invent.kde.org:username/kcalc.git
+git push fork
 ```
 
 To summarize, you have now seen how to:
