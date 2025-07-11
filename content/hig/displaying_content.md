@@ -63,18 +63,23 @@ Whenever overlaying a popup, box, or dialog on top of the app's main content are
 
 
 ## Tabbed views
-It's often useful to let the user open multiple content views at a time and switch between them using a [QtQuick.Controls.TabBar](https://doc.qt.io/qt-6/qml-qtquick-controls-tabbar.html). These are also known as *mutable tabs*, and always have the following characteristics:
+Use tabs to let the user switch between related views sharing the same level of hierarchy within a page or window.
 
-- Located above the content view
-- Hidden when there's only one tab
-- Use [standard keyboard shortcuts for switching](https://api.kde.org/frameworks/kconfig/html/namespaceKStandardShortcut.html#a9262eb609e9ad994d7b913eb715e004e)
+There are 2 broad categories of tabs: **mutable** and **immutable**.
+
+**Mutable** tabs allow the user to open, close, and re-arrange them. They are used for documents or editable views, and implemented with [QtQuick.Controls.TabBar](https://doc.qt.io/qt-6/qml-qtquick-controls-tabbar.html). Always give them the following characteristics:
+
+- Tab bar located above the content view
 - Tabs are re-orderable
 - Tabs span the available width
 - Tabs show visible close buttons
 
-On the desktop, tab views scale poorly beyond 4 or 5 tabs. And on mobile, they can become unworkable with more than just a single tab. Consider a different switching control such as a sidebar if the user is expected to regularly interact with many tabs.
+**Immutable** tabs are not modifiable by the user. They are for grouping settings or Contextual Toolview pages, and implemented with [Kirigami.NavigationTabBar](https://api.kde.org/frameworks/kirigami/html/classNavigationTabBar.html). This control can be located above or below its view, depending on what makes the most visual sense. Make sure every page has unique controls and content.
 
-Only implement a tab bar for mutable tabs used for switching between content views; use an immutable [Kirigami.NavigationTabBar](https://api.kde.org/frameworks/kirigami/html/classNavigationTabBar.html) for switching between settings or Contextual Toolview pages. This control can be located above or below its view, depending on what makes the most visual sense.
+Regardless of the type chosen, all tabbed views should hide the tab bar when there's only one tab and implement [standard keyboard shortcuts for switching](https://api.kde.org/frameworks/kconfig/html/namespaceKStandardShortcut.html#a9262eb609e9ad994d7b913eb715e004e).
+
+On the desktop, tab views scale poorly beyond 4 or 5 tabs. And on mobile, they can become unworkable with more than just two. Consider a different switching control such as a sidebar if the user is expected to regularly interact with many tabs.
+
 
 
 ## Tables and tree views
