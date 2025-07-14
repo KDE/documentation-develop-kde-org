@@ -106,7 +106,7 @@ object loads the `Main.qml` file.
 
 Then comes the part that actually creates the application window:
 
-{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/src/main.rs" highlight="rust" start=31 lines=4 >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer/src/main.rs" highlight="rust" start=27 lines=6 >}}
 
 The long URL `qrc:/qt/qml/org/kde/simplemdviewer/src/qml/Main.qml` corresponds to the `Main.qml` file in the [Qt Resource System](https://doc.qt.io/qt-6/resources.html), and it follows this scheme: `<resource_prefix><import_URI><QML_dir><file>`.
 
@@ -283,8 +283,6 @@ Now that the module is finished, replace `src/main.rs` with the new `src/mdconve
 ### src/qml/Main.qml
 
 Since we are going to actually use code that was exposed to QML, we need to actually import it this time. The module from the file `mdconverter.rs` is made available via the QML module from `build.rs` under the `org.kde.simplemdviewer` import URI.
-
-{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/src/qml/Main.qml" highlight="qml" emphasize="5 23-27 50"  >}}
 
 Then the new QML type `MdConverter` that was exposed to QML needs to be instantiated:
 
