@@ -194,7 +194,7 @@ The new configuration will appear.
 
 Now when you run this configuration, the Ark will be built, but Dolphin will be launched.
 
-### Use native titlebar with New UI
+### Use native titlebar
 
 Initially, the CLion window hides the native titlebar, and looks like this:
 
