@@ -196,8 +196,16 @@ Now when you run this configuration, the Ark will be built, but Dolphin will be 
 
 ### Use native titlebar with New UI
 
-It is possible to show a normal window titlebar. For this, open the registry (double-tap Shift, search for "Registry") and disable the
+Initially, the CLion window hides the native titlebar, and looks like this:
+
+{{< figure alt="CLion window without native titlebar" width="900px" src="clion_csd_window.png" >}}
+
+To use native titlebar, open the registry (double-tap Shift, search for "Registry") and disable the
 property `ide.linux.hide.native.title`.
+
+After restarting CLion, it will look like this:
+
+{{< figure alt="CLion window with native titlebar" width="900px" src="clion_ssd_window.png" >}}
 
 ### Use KWallet for git credentials
 
