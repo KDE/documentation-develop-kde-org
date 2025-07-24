@@ -157,7 +157,7 @@ In order to obtain log information for KWin scripts, `QT_LOGGING_RULES="kwin_*.d
 export QT_LOGGING_RULES="kwin_*.debug=true"
 ```
 
-to your `~/.bash_profile` or `/etc/environent` and relogin.  
+to your `~/.bash_profile` or `/etc/environment` and relogin.  
 
 Depending on your distribution and graphics platform, it may also be necessary to have [Plasma systemd boot](https://invent.kde.org/plasma/plasma-workspace/-/wikis/Plasma-and-the-systemd-boot) enabled (this is the default since Plasma 5.25).
 
