@@ -72,12 +72,13 @@ For example `myrunner <files to search for>`.
 **KRunner input field when the last syntax is selected**:
 ![Example query with placeholder inserted in KRunner](placeholderselected.png)
 
-**Reduce unneeded querying and DBus activation**: Normally, your runner would get queried for each typed letter, and in case it is DBus activated, it would be activated when the first letter is typed.
-However, many runners have a prefix or pattern that must match.
-A minimal length is common too, because some runners cannot provide meaningful results for very short queries.
-To allow DBus runners to utilize the existing KRunner API, `X-Plasma-Runner-Min-Letter-Count` and `X-Plasma-Runner-Match-Regex` can be defined.
-These properties are equivalent to [minLetterCount](docs:krunner;AbstractRunner::minLetterCount) or [matchRegex](docs:krunner;AbstractRunner::matchRegex) and thus prevent unnecessary queries.  
-Another useful property is `X-Plasma-Request-Actions-Once`, which causes KRunner to only query the actions once before the runner is queried.
+**Reduce unneeded querying and DBus activation**: Some runners have a prefix or pattern that must match. Other runners may perform expensive queries that should be minimized for short strings.
+
+In such cases, only return results after a certain number of letters have been typed. Do this by setting an integer as the value of `X-Plasma-Runner-Min-Letter-Count` (equivalent to [minLetterCount](docs:krunner;AbstractRunner::minLetterCount) in KRunner API). Only do this with good reason, and don't set it higher than 2 without *very* good reason. High minimum letter counts can frustrate users who expect results to appear after the first letter typed, and the result can be especially pronounced for people using the system in Chinese, which is highly information-dense and can return good results with 2 characters or less.
+
+Another strategy is to filter out certain text using `X-Plasma-Runner-Match-Regex` (equivalent to [matchRegex](docs:krunner;AbstractRunner::matchRegex) in KRunner API).
+
+Finally, `X-Plasma-Request-Actions-Once`, causes KRunner to only query the actions once before the runner is queried.
 This is prevents lots of unneeded DBus calls and object creations, if the actions stay the same during the lifetime of your runner.
 
 
@@ -98,8 +99,13 @@ X-Plasma-API=DBus
 X-Plasma-DBusRunner-Service=org.kde.myrunner
 X-Plasma-DBusRunner-Path=/runner
 
+# Only set this for a good reason
+X-Plasma-Runner-Min-Letter-Count=2
+
+# Only set this for a good reason
 X-Plasma-Request-Actions-Once=true
-X-Plasma-Runner-Min-Letter-Count=3
+
+# Only set this for a good reason
 # This means that the query must start with one or more lowercase letters
 # To simplify debugging/creating the regex, you can use https://regex101.com/
 X-Plasma-Runner-Match-Regex=^[a-z]+
