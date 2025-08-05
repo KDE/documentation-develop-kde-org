@@ -41,7 +41,7 @@ export PATH=$PATH:~/.local/bin
 And add the following to a new file `~/.config/distrobox/distrobox.conf`. It will allow to run graphical applications directly from the distrobox:
 
 ```bash
-xhost +si:localuser:deck
+xhost +si:localuser:$USER
 ```
 
 ## Building KDE software with distrobox + kde-builder {#kde-builder}
