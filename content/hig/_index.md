@@ -1,8 +1,5 @@
 ---
 title: "KDE Human Interface Guidelines"
-menu:
-  main:
-    weight: 30
 aliases:
 - /hig/introduction/architecture/
 - /hig/style/
@@ -15,6 +12,7 @@ aliases:
 - /hig/contribute/media/
 - /hig/glossary/
 - /hig/about/
+- /design
 ---
 
 Welcome to the KDE Human Interface Guidelines! Following them will help you build a beautiful and powerful app that feels at home when run in [KDE Plasma](https://kde.org/plasma-desktop), and works well outside of it. Users will learn how to use your app quickly, accomplish their goals with ease, and encounter fewer issues requiring support.
