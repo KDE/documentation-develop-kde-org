@@ -23,8 +23,8 @@ it easily. Any other dependencies can be installed from `pip` in a
 [Python virtual environment](https://docs.python.org/3/library/venv.html) later.
 
 {{< installpackage
-    opensuse="python3-qt6 python3-pyside6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style AppStream-compose"
-    fedora="python3-pyqt6 python3-pyside6 kf6-kirigami-devel flatpak-builder qqc2-desktop-style appstream-compose"
+    opensuse="python3-qt6 python3-pyside6 kf6-kirigami-devel flatpak-builder kf6-qqc2-desktop-style AppStream-compose"
+    fedora="python3-pyqt6 python3-pyside6 kf6-kirigami-devel flatpak-builder kf6-qqc2-desktop-style appstream-compose"
     arch="python-pyqt6 pyside6 kirigami flatpak-builder qqc2-desktop-style appstream"
 >}}
 
