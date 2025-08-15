@@ -57,32 +57,3 @@ Don't use inappropriate metaphors for your icon — this will confuse users
 as to what your app does.
 {{< /dont >}}
 {{< /compare >}}
-
-### Third-Party App Icons
-
-When creating a Breeze theme version of an existing app's icon, it
-critically important that the icon's existing brand and visual style be
-preserved. The goal is to create a Breeze version of the icon, not
-something completely new and different.
-
-{{< compare >}}
-{{< do src="/hig/gimp-do.png" >}}
-Retain the silhouette of an app's icon to preserve its core branding and
-recognizability for users.
-{{< /do >}}
-{{< dont src="/hig/gimp-dont-silhouette.png" >}}
-Don't dramatically change the shape of an app's icon — this will make the
-application hard to recognize.
-{{< /dont >}}
-{{< /compare >}}
-
-{{< compare >}}
-{{< do src="/hig/telegram-do.png" >}}
-Retain the general branding colors of an app's icon to preserve branding
-recognizability.
-{{< /do >}}
-{{< dont src="/hig/telegram-dont.png" >}}
-Don't use a radically different color palette from an app's icon — this will
-make it hard to recognize, especially at small sizes.
-{{< /dont >}}
-{{< /compare >}}
