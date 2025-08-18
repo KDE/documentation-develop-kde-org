@@ -1,6 +1,9 @@
 ---
 title: Distribute
 subtitle: Get your applications to your users.
+menu:
+  main:
+    weight: 40
 weight: 30
 layout: area
 ---

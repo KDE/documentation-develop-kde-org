@@ -3,10 +3,12 @@ title: "Documentation"
 linkTitle: "Documentation"
 menu:
   main:
-    weight: 10
-
+    name: Tutorials
+    weight: 20
 layout: home
 recursive: true
+aliases:
+- /develop
 groups:
   - name: "Getting Started"
     key: getting-started
