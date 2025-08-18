@@ -18,6 +18,8 @@ groups:
     key: "data"
   - name: "Kirigami Addons"
     key: "addons"
+  - name: "Platform Support"
+    key: "platforms"
 description: >
   Learning to create your first applications using Kirigami
 group: "getting-started"
