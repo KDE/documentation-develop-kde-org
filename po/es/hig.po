@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hig\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 01:49+0000\n"
+"POT-Creation-Date: 2025-08-19 02:19+0000\n"
 "PO-Revision-Date: 2024-09-05 04:23+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,7 +19,13 @@ msgstr ""
 msgid "KDE Human Interface Guidelines"
 msgstr "Directrices de interfaz humana de KDE"
 
-#: content/hig/_index.md:20
+#: content/hig/_index.md:0
+#, fuzzy
+#| msgid "Design Vision"
+msgid "Design"
+msgstr "Visión de diseño"
+
+#: content/hig/_index.md:23
 msgid ""
 "Welcome to the KDE Human Interface Guidelines! Following them will help you "
 "build a beautiful and powerful app that feels at home when run in [KDE "
@@ -34,7 +40,7 @@ msgstr ""
 "rápidamente, cumpliendo sus objetivos con facilidad, y encontrarán menos "
 "problemas que requieran asistencia."
 
-#: content/hig/_index.md:22
+#: content/hig/_index.md:25
 msgid ""
 "This document covers KDE's design philosophy and culture, common workflows "
 "and patterns, standard user interface conventions, and recommendations for "
@@ -44,11 +50,11 @@ msgstr ""
 "trabajo y patrones comunes, convenciones estándares de la interfaz de "
 "usuario y recomendaciones para la integración con la plataforma."
 
-#: content/hig/_index.md:25
+#: content/hig/_index.md:28
 msgid "Why is good design so important?"
 msgstr "¿Por qué es tan importante un buen diseño?"
 
-#: content/hig/_index.md:26
+#: content/hig/_index.md:29
 msgid ""
 "Design determines how well something fulfills its functional purpose and how "
 "enjoyable it is to interact with. If either is lacking, the result will be "
@@ -62,7 +68,7 @@ msgstr ""
 "diseñada y, si se ven obligadas a hacerlo, se resentirán y difundirán "
 "negatividad al respecto. ¡Evítelo mediante un buen diseño!"
 
-#: content/hig/_index.md:28
+#: content/hig/_index.md:31
 msgid ""
 "Design involves targeted decisions and trade-offs that bring a project "
 "closer to its intended goals and usage paradigms. The best apps know which "
@@ -77,11 +83,11 @@ msgstr ""
 "hacer bien que extenderse y fracasar. Pocas promesas y muchas entregas, "
 "nunca al revés."
 
-#: content/hig/_index.md:31
+#: content/hig/_index.md:34
 msgid "Topics not covered"
 msgstr "Temas no cubiertos"
 
-#: content/hig/_index.md:32
+#: content/hig/_index.md:35
 msgid ""
 "This document is a set of design guidelines, not instructions for "
 "implementing every specific component. While some technical guidance will be "
@@ -99,7 +105,7 @@ msgstr ""
 "aplicaciones de KDE](https://invent.kde.org/explore/groups?sort=name_asc). "
 "Es más un *qué* y un *por qué*, no un *cómo*."
 
-#: content/hig/_index.md:34
+#: content/hig/_index.md:37
 msgid ""
 "This document is not intended to be an ironclad law code. By learning and "
 "following the rules, you'll understand how to safely innovate within the "
@@ -111,11 +117,11 @@ msgstr ""
 "directrices y cuándo puede ser apropiado romperlas si se obtiene un "
 "resultado superior."
 
-#: content/hig/_index.md:37
+#: content/hig/_index.md:40
 msgid "Contributing"
 msgstr "Colaboración"
 
-#: content/hig/_index.md:38
+#: content/hig/_index.md:41
 msgid ""
 "This is a living document, intended to be updated over time to reflect "
 "current KDE design trends and best practices. Contributions are welcome!"
@@ -124,7 +130,7 @@ msgstr ""
 "para reflejar las tendencias y las mejores prácticas de diseño actual de "
 "KDE. ¡Las colaboraciones son bienvenidas!"
 
-#: content/hig/_index.md:40
+#: content/hig/_index.md:43
 msgid ""
 "Content is written in [Markdown](https://commonmark.org/help/), and the "
 "source files are hosted in a [Git repository](https://invent.kde.org/"
@@ -143,11 +149,11 @@ msgstr ""
 "consulte el [archivo README](https://invent.kde.org/documentation/develop-"
 "kde-org/-/blob/master/README.md)."
 
-#: content/hig/_index.md:43
+#: content/hig/_index.md:46
 msgid "Read the guidelines"
 msgstr "Leer las directrices"
 
-#: content/hig/_index.md:44
+#: content/hig/_index.md:47
 msgid "Click on any of these tiles to jump to a page:"
 msgstr "Pulse en cualquiera de esos apartados para ir a una página:"
 
@@ -166,9 +172,6 @@ msgstr "Pulse en cualquiera de esos apartados para ir a una página:"
 #~ "espacio de trabajo. Nuestro propósito es mejorar la experiencia del "
 #~ "usuario creando interfaces más consistentes, intuitivas y fáciles de "
 #~ "aprender a usar para el escritorio, el móvil y cualquier cosa entre ambos."
-
-#~ msgid "Design Vision"
-#~ msgstr "Visión de diseño"
 
 #~ msgid ""
 #~ "Our design vision focuses on two attributes of KDE software that connect "
