@@ -29,7 +29,8 @@ flatpak permission-set kde-authorized remote-desktop "" yes
 ```
 
 Usually the `app_id` is obtained from flatpak/snap metadata.
-For host applications, it is obtained from the systemd unit name:
+For host applications, it is obtained from either the Registry or the systemd unit name:
+* Applications can directly set their app_id in the [XDP Registry system](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.host.portal.Registry.html).
 * For applications that get started by Plasma, those will be set up correctly.
 * For manually created units, the https://systemd.io/DESKTOP_ENVIRONMENTS/
 spec should be followed (i.e. name the unit
@@ -43,4 +44,5 @@ spec should be followed (i.e. name the unit
 # Caveats
 
 * Host applications may impersonate any app_id
-* The empty `app_id` may match too broadly. It's advisable to get the application to provide an `app_id` instead. See https://systemd.io/DESKTOP_ENVIRONMENTS/. In the future possibly also via https://github.com/flatpak/xdg-desktop-portal/pull/1521.
+* The empty `app_id` may match too broadly. It's advisable to get the application to provide an `app_id` instead. See https://systemd.io/DESKTOP_ENVIRONMENTS/.
+  It's also possible to directly register with the xdg-desktop-portal using the [Registry system](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.host.portal.Registry.html)
