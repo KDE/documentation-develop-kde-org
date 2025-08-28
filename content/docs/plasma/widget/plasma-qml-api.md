@@ -16,7 +16,7 @@ KDE Frameworks ships with a number of useful extensions to Qt's QML. The [API do
 
 QML ships with various controls, like [CheckBox](docs:qtquickcontrols;QtQuick.Controls.CheckBox), [RadioButton](docs:qtquickcontrols;QtQuick.Controls.RadioButton), [ComboBox](docs:qtquickcontrols;QtQuick.Controls.ComboBox) (dropdown menu), [SpinBox](docs:qtquickcontrols;QtQuick.Controls.SpinBox), [Slider](docs:qtquickcontrols;QtQuick.Controls.Slider), [TextField](docs:qtquickcontrols;QtQuick.Controls.TextField), [TextArea](docs:qtquickcontrols;QtQuick.Controls.TextArea), [Button](docs:qtquickcontrols;QtQuick.Controls.Button), [ToolButton](docs:qtquickcontrols;QtQuick.Controls.ToolButton). Plasma extends these controls to style them using the SVGs from the [Plasma Style]({{< ref "../theme/_index.md" >}}). It also assigns a number of default settings like setting the text color to follow the panel's color scheme.
 
-PlasmaComponents 3 is a QML library that extends the [Qt Quick Controls 2 components](https://doc.qt.io/qt-5/qtquickcontrols-index.html) with defaults adapted to fit into Plasma widgets. Because PlasmaComponents 3 inherits from Qt Quick Controls 2, they have the same API, so the [Qt documentation](https://doc.qt.io/qt-5/qtquickcontrols-index.html) can be followed. For Plasma's specific behaviour changes, you can read the QML source code for each control in:
+PlasmaComponents 3 is a QML library that extends the [Qt Quick Controls 2 components](https://doc.qt.io/qt-6/qtquickcontrols-index.html) with defaults adapted to fit into Plasma widgets. Because PlasmaComponents 3 inherits from Qt Quick Controls 2, they have the same API, so the [Qt documentation](https://doc.qt.io/qt-6/qtquickcontrols-index.html) can be followed. For Plasma's specific behaviour changes, you can read the QML source code for each control in:
 
 [`plasma-framework`/src/declarativeimports/plasmacomponents3/](https://invent.kde.org/frameworks/plasma-framework/-/tree/master/src/declarativeimports/plasmacomponents3)
 
@@ -118,7 +118,7 @@ For multiple choices, QML also ships with [ComboBox](docs:qtquickcontrols;QtQuic
 
 * [`ComboBox.qml`](https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/declarativeimports/plasmacomponents3/ComboBox.qml)
 
-Note that [`ComboBox.valueRole`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#valueRole-prop) and [`ComboBox.currentValue`](https://doc.qt.io/qt-5/qml-qtquick-controls2-combobox.html#currentValue-prop) was introduced in Qt 5.14. [Ubuntu 20.04 only has Qt 5.12](https://repology.org/project/qt/versions) so you will need to use your own `_valueRole` and `_currentValue` properties until Ubuntu 22.04. Make sure to not define a `valueRole` or `currentValue` property or it will break when your users upgrade to Qt 5.14.
+Note that [`ComboBox.valueRole`](https://doc.qt.io/qt-6/qml-qtquick-controls2-combobox.html#valueRole-prop) and [`ComboBox.currentValue`](https://doc.qt.io/qt-6/qml-qtquick-controls2-combobox.html#currentValue-prop) was introduced in Qt 5.14. [Ubuntu 20.04 only has Qt 5.12](https://repology.org/project/qt/versions) so you will need to use your own `_valueRole` and `_currentValue` properties until Ubuntu 22.04. Make sure to not define a `valueRole` or `currentValue` property or it will break when your users upgrade to Qt 5.14.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -466,7 +466,7 @@ There is also properties for the various color groups using a prefix.
 * `PlasmaCore.Theme.headerTextColor`
 
 The full list of `PlasmaCore.Theme` color properties can be found in the `QuickTheme` class definition:
-[`plasma-framework/src/declarativeimports/core/quicktheme.h`](https://invent.kde.org/frameworks/plasma-framework/blob/master/src/declarativeimports/core/quicktheme.h)
+[`plasma-framework/src/declarativeimports/core/quicktheme.h`](https://invent.kde.org/plasma/libplasma/-/blob/master/src/declarativeimports/core/quicktheme.h)
 
 The `QuickTheme` class extends `Plasma::Theme` which also contains:
 
@@ -485,7 +485,7 @@ The `QuickTheme` class extends `Plasma::Theme` which also contains:
 
 In order to scale an Item by display scaling to support HiDPI monitors, you will need to multiply a pixel value by `PlasmaCore.Units.devicePixelRatio`. Plasma also ships with a few preset values for consistent spacing throughout Plasma.
 
-* `PlasmaCore.Units.devicePixelRatio` `=` [`QScreen::logicalDotsPerInchX`](https://doc.qt.io/qt-5/qscreen.html#logicalDotsPerInchX-prop) `/ 96` (Primary Screen)
+* `PlasmaCore.Units.devicePixelRatio` `=` [`QScreen::logicalDotsPerInchX`](https://doc.qt.io/qt-6/qscreen.html#logicalDotsPerInchX-prop) `/ 96` (Primary Screen)
 * `PlasmaCore.Units.smallSpacing` `= max(2, gridUnit/4)`
 * `PlasmaCore.Units.largeSpacing` `= gridUnit`
 * `PlasmaCore.Units.gridUnit` (width of the capital letter M)
