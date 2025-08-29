@@ -183,11 +183,11 @@ FormCard.FormCardPage {
 }
 ```
 
-We add some dummy text for the hypothetical theme detection. If we wanted to have actual color scheme detection, in the future it could be done similarly to [Neochat](https://apps.kde.org/neochat) ([code here](https://github.com/KDE/neochat/blob/master/src/colorschemer.cpp)), making use of a C++ model with [KColorSchemeManager](docs:kconfigwidgets;KColorSchemeManager).
+We add some dummy text for the hypothetical theme detection. If we wanted to have actual color scheme detection, in the future it could be done similarly to [Neochat](https://apps.kde.org/neochat) ([code here](https://invent.kde.org/network/neochat/-/blob/master/src/settings/colorschemer.cpp)), making use of a C++ model with [KColorSchemeManager](docs:kconfigwidgets;KColorSchemeManager).
 
 In the Online Accounts section, we see an additional property, `leading`. We can add an [Item](docs:qtquick;Item) to it so that it appears before the text. Its opposite property, `trailing`, would be able to show an Item after the text, but we won't use it in our program.
 
-We use a [Kirigami.Icon](docs:kirigami2;Icon) here for simplicity, but this could also be implemented using a [Kirigami.Avatar](docs:kirigami2;Avatar) that grabs the information from a model, as is done in Neochat [here](https://invent.kde.org/network/neochat/-/blob/master/src/qml/Settings/AccountsPage.qml).
+We use a [Kirigami.Icon](docs:kirigami2;Icon) here for simplicity, but this could also be implemented using a [Kirigami.Avatar](docs:kirigami2;Avatar) that grabs the information from a model, as is done in Neochat [here](https://invent.kde.org/network/neochat/-/blob/master/src/settings/AccountsPage.qml).
 
 It should end up looking like this:
 
