@@ -28,9 +28,9 @@ aliases:
 ---
 
 ## Positioning
-Convey importance and grouping by placing items strategically.
+Convey importance, workflow, and grouping by placing items strategically.
 
-People read layouts in the order they read words in their language; users will pay more attention to items near the top-leading position (i.e. top-left in a language like English, and top-right in a language like Arabic). By the same token, users will perceive items in the bottom-trailing position as being the logically last or final thing to do before moving on.
+People read layouts in the order they read words in their language; users will pay more attention to items near the top-leading position (i.e. top-left in a language like English, and top-right in a language like Arabic), and consider them to be the first items to focus on. Similarly, users will perceive items in the bottom-trailing position as being the final thing to do before moving on.
 
 One exception is on a mobile phone, where the most commonly used tools live in a bottom toolbar. This improves acquisition speed by making them thumb-reachable without re-positioning the hand.
 
