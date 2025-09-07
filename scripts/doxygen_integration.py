@@ -47,83 +47,83 @@ TAG_FILES = [
     },
     # ===== Frameworks API links =====
     {
-        'tags': 'https://api-staging.kde.org/ki18n.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/ki18n.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kcoreaddons.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kcoreaddons.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kiocore.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kiocore.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kxmlgui.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kxmlgui.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kconfigwidgets.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kconfigwidgets.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kwidgetsaddons.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kwidgetsaddons.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/ktextwidgets.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/ktextwidgets.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/ktexteditor.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/ktexteditor.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kconfigcore.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kconfigcore.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/krunner.tags',
-        'base_url': 'https://api-staging.kde.org/',
+        'tags': 'https://api.kde.org/krunner.tags',
+        'base_url': 'https://api.kde.org/',
         'default_prefix': 'KRunner::',
     },
     {
-        'tags': 'https://api-staging.kde.org/plasma.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/plasma.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kcmutils.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kcmutils.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kcmutilsqml.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kcmutilsqml.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kcmutilsquick.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kcmutilsquick.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/kirigami.tags',
-        'base_url': 'https://api-staging.kde.org/',
+        'tags': 'https://api.kde.org/kirigami.tags',
+        'base_url': 'https://api.kde.org/',
     },
     {
-        'tags': 'https://api-staging.kde.org/kitemmodels.tags',
-        'base_url': 'https://api-staging.kde.org/',
+        'tags': 'https://api.kde.org/kitemmodels.tags',
+        'base_url': 'https://api.kde.org/',
     },
     # ===== Plasma API links
     {
-        'tags': 'https://api-staging.kde.org/kdecoration.tags',
-        'base_url': 'https://api-staging.kde.org/'
+        'tags': 'https://api.kde.org/kdecoration.tags',
+        'base_url': 'https://api.kde.org/'
     },
     {
-        'tags': 'https://api-staging.kde.org/plasma/libksysguard.tags',
-        'base_url': 'https://api-staging.kde.org/',
+        'tags': 'https://api.kde.org/plasma/libksysguard.tags',
+        'base_url': 'https://api.kde.org/',
         'default_prefix': 'KSysGuard',
     },
     {
-        'tags': 'https://api-staging.kde.org/kpackage.tags',
-        'base_url': 'https://api-staging.kde.org/',
+        'tags': 'https://api.kde.org/kpackage.tags',
+        'base_url': 'https://api.kde.org/',
         'default_prefix': 'KPackage',
     }
 ]

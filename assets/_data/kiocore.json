@@ -6342,16 +6342,16 @@
               "$": "KIO::BatchRenameJob *"
             },
             "name": {
-              "$": "batchRename"
+              "$": "batchRenameWithFunction"
             },
             "anchorfile": {
               "$": "kio-batchrenamejob.html"
             },
             "anchor": {
-              "$": "batchRename"
+              "$": "batchRenameWithFunction"
             },
             "arglist": {
-              "$": "(const QList<QUrl> &src, const QString &newName, int index, QChar placeHolder, KIO::JobFlags flags)"
+              "$": "(const QList<QUrl> &srcList, const KIO::renameFunctionType renameFunction, KIO::JobFlags flags)"
             }
           },
           {
@@ -8969,16 +8969,16 @@
               "$": "KIO::BatchRenameJob *"
             },
             "name": {
-              "$": "batchRename"
+              "$": "batchRenameWithFunction"
             },
             "anchorfile": {
               "$": "kio-batchrenamejob.html"
             },
             "anchor": {
-              "$": "batchRename"
+              "$": "batchRenameWithFunction"
             },
             "arglist": {
-              "$": "(const QList<QUrl> &src, const QString &newName, int index, QChar placeHolder, KIO::JobFlags flags)"
+              "$": "(const QList<QUrl> &srcList, const KIO::renameFunctionType renameFunction, KIO::JobFlags flags)"
             }
           },
           {

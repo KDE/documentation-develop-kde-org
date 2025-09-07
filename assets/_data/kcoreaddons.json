@@ -4369,6 +4369,57 @@
           {
             "@kind": "enumeration",
             "name": {
+              "$": "TimeFormatOption"
+            },
+            "anchorfile": {
+              "$": "kformat.html"
+            },
+            "anchor": {
+              "$": "TimeFormatOption-enum"
+            }
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "DoNotAddTimeZone"
+            },
+            "anchorfile": {
+              "$": "kformat.html"
+            },
+            "anchor": {
+              "$": "TimeFormatOption-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "AddTimezoneAbbreviation"
+            },
+            "anchorfile": {
+              "$": "kformat.html"
+            },
+            "anchor": {
+              "$": "TimeFormatOption-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumvalue",
+            "name": {
+              "$": "AddTimezoneAbbreviationIfNeeded"
+            },
+            "anchorfile": {
+              "$": "kformat.html"
+            },
+            "anchor": {
+              "$": "TimeFormatOption-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "enumeration",
+            "name": {
               "$": "Unit"
             },
             "anchorfile": {
@@ -4916,6 +4967,27 @@
               "$": "QString"
             },
             "name": {
+              "$": "formatTime"
+            },
+            "anchorfile": {
+              "$": "kformat.html"
+            },
+            "anchor": {
+              "$": "formatTime"
+            },
+            "arglist": {
+              "$": "(const QDateTime &dateTime, QLocale::FormatType format, KFormat::TimeFormatOptions options) const const"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QString"
+            },
+            "name": {
               "$": "formatValue"
             },
             "anchorfile": {
@@ -4974,6 +5046,20 @@
             },
             "anchor": {
               "$": "DurationFormatOption-enum"
+            },
+            "arglist": {}
+          },
+          {
+            "@kind": "typedef",
+            "@type": "KFormat::TimeFormatOption",
+            "name": {
+              "$": "TimeFormatOptions"
+            },
+            "anchorfile": {
+              "$": "kformat.html"
+            },
+            "anchor": {
+              "$": "TimeFormatOption-enum"
             },
             "arglist": {}
           }
@@ -11209,6 +11295,27 @@
             },
             "arglist": {
               "$": "(const QString &key, const QByteArray &data)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "remove"
+            },
+            "anchorfile": {
+              "$": "kshareddatacache.html"
+            },
+            "anchor": {
+              "$": "remove"
+            },
+            "arglist": {
+              "$": "(const QString &key)"
             }
           },
           {

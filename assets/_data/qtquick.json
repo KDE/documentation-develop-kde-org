@@ -3858,6 +3858,48 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "childAt"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-item.html"
+            },
+            "anchor": {
+              "$": "childAt-method"
+            },
+            "arglist": {
+              "$": "(real x, real y)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "Item"
+            },
+            "name": {
+              "$": "nextItemInFocusChain"
+            },
+            "anchorfile": {
+              "$": "qml-qtquick-item.html"
+            },
+            "anchor": {
+              "$": "nextItemInFocusChain-method"
+            },
+            "arglist": {
+              "$": "(bool forward)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "bool"
             },
             "name": {
@@ -3892,25 +3934,6 @@
             },
             "arglist": {
               "$": "(callback, targetSize)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "childAt"
-            },
-            "anchorfile": {
-              "$": "qml-qtquick-item.html"
-            },
-            "anchor": {
-              "$": "childAt-method"
-            },
-            "arglist": {
-              "$": "(real x, real y)"
             }
           },
           {
@@ -3968,25 +3991,6 @@
             },
             "arglist": {
               "$": "(Qt::FocusReason reason)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {},
-            "name": {
-              "$": "nextItemInFocusChain"
-            },
-            "anchorfile": {
-              "$": "qml-qtquick-item.html"
-            },
-            "anchor": {
-              "$": "nextItemInFocusChain-method"
-            },
-            "arglist": {
-              "$": "(bool forward)"
             }
           },
           {
@@ -25820,6 +25824,9 @@
         "base": {
           "$": "QSGNode"
         },
+        "class": {
+          "$": "QSGRenderNode::RenderState"
+        },
         "member": [
           {
             "@kind": "enumeration",
@@ -26301,6 +26308,164 @@
               "$": "StateFlag-enum"
             },
             "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "QSGRenderNode::RenderState"
+        },
+        "filename": {
+          "$": "qsgrendernode-renderstate.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual QRect"
+            },
+            "name": {
+              "$": "scissorRect"
+            },
+            "anchorfile": {
+              "$": "qsgrendernode-renderstate.html"
+            },
+            "anchor": {
+              "$": "scissorRect"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "scissorEnabled"
+            },
+            "anchorfile": {
+              "$": "qsgrendernode-renderstate.html"
+            },
+            "anchor": {
+              "$": "scissorEnabled"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual bool"
+            },
+            "name": {
+              "$": "stencilEnabled"
+            },
+            "anchorfile": {
+              "$": "qsgrendernode-renderstate.html"
+            },
+            "anchor": {
+              "$": "stencilEnabled"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual const QMatrix4x4 *"
+            },
+            "name": {
+              "$": "projectionMatrix"
+            },
+            "anchorfile": {
+              "$": "qsgrendernode-renderstate.html"
+            },
+            "anchor": {
+              "$": "projectionMatrix"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual const QRegion *"
+            },
+            "name": {
+              "$": "clipRegion"
+            },
+            "anchorfile": {
+              "$": "qsgrendernode-renderstate.html"
+            },
+            "anchor": {
+              "$": "clipRegion"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "pure",
+            "@static": "no",
+            "type": {
+              "$": "virtual int"
+            },
+            "name": {
+              "$": "stencilValue"
+            },
+            "anchorfile": {
+              "$": "qsgrendernode-renderstate.html"
+            },
+            "anchor": {
+              "$": "stencilValue"
+            },
+            "arglist": {
+              "$": "() const const = 0"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "virtual",
+            "@static": "no",
+            "type": {
+              "$": "virtual void *"
+            },
+            "name": {
+              "$": "get"
+            },
+            "anchorfile": {
+              "$": "qsgrendernode-renderstate.html"
+            },
+            "anchor": {
+              "$": "get"
+            },
+            "arglist": {
+              "$": "(const char *state) const const"
+            }
           }
         ]
       },

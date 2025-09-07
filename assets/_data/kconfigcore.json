@@ -3741,6 +3741,9 @@
             "$": "KCoreConfigSkeleton::ItemStringList"
           },
           {
+            "$": "KCoreConfigSkeleton::ItemTime"
+          },
+          {
             "$": "KCoreConfigSkeleton::ItemUInt"
           },
           {
@@ -4168,6 +4171,27 @@
             },
             "arglist": {
               "$": "(const QString &name, QStringList &reference, const QStringList &defaultValue, const QString &key)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "KCoreConfigSkeleton::ItemTime *"
+            },
+            "name": {
+              "$": "addItemTime"
+            },
+            "anchorfile": {
+              "$": "kcoreconfigskeleton.html"
+            },
+            "anchor": {
+              "$": "addItemTime"
+            },
+            "arglist": {
+              "$": "(const QString &name, QTime &reference, QTime defaultValue, const QString &key)"
             }
           },
           {
@@ -5501,6 +5525,37 @@
           },
           "arglist": {
             "$": "(const QString &_group, const QString &_key, QStringList &reference, const QStringList &defaultValue)"
+          }
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "KCoreConfigSkeleton::ItemTime"
+        },
+        "filename": {
+          "$": "kcoreconfigskeleton-itemtime.html"
+        },
+        "base": {
+          "$": "KConfigSkeletonGenericItem"
+        },
+        "member": {
+          "@kind": "function",
+          "@protection": "public",
+          "@virtualness": "non",
+          "@static": "no",
+          "type": {},
+          "name": {
+            "$": "ItemTime"
+          },
+          "anchorfile": {
+            "$": "kcoreconfigskeleton-itemtime.html"
+          },
+          "anchor": {
+            "$": "ItemTime"
+          },
+          "arglist": {
+            "$": "(const QString &_group, const QString &_key, QTime &reference, QTime defaultValue)"
           }
         }
       },

@@ -4,6 +4,51 @@
       {
         "@kind": "class",
         "name": {
+          "$": "org.kde.kcmutils.AbstractKCM"
+        },
+        "filename": {
+          "$": "qml-org-kde-kcmutils-abstractkcm.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org.kde.kcmutils.ContextualHelpButton"
+        },
+        "filename": {
+          "$": "qml-org-kde-kcmutils-contextualhelpbutton.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org.kde.kcmutils.GridDelegate"
+        },
+        "filename": {
+          "$": "qml-org-kde-kcmutils-griddelegate.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org.kde.kcmutils.GridView"
+        },
+        "filename": {
+          "$": "qml-org-kde-kcmutils-gridview.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org.kde.kcmutils.GridViewKCM"
+        },
+        "filename": {
+          "$": "qml-org-kde-kcmutils-gridviewkcm.html"
+        }
+      },
+      {
+        "@kind": "class",
+        "name": {
           "$": "KAbstractConfigModule"
         },
         "filename": {
@@ -409,6 +454,48 @@
             "@virtualness": "non",
             "@static": "no",
             "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setSupportsInstantApply"
+            },
+            "anchorfile": {
+              "$": "kabstractconfigmodule.html"
+            },
+            "anchor": {
+              "$": "setSupportsInstantApply"
+            },
+            "arglist": {
+              "$": "(bool supported)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "supportsInstantApplyChanged"
+            },
+            "anchorfile": {
+              "$": "kabstractconfigmodule.html"
+            },
+            "anchor": {
+              "$": "supportsInstantApplyChanged"
+            },
+            "arglist": {
+              "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
               "$": "KAbstractConfigModule::Buttons"
             },
             "name": {
@@ -593,6 +680,27 @@
             }
           },
           {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "bool"
+            },
+            "name": {
+              "$": "supportsInstantApply"
+            },
+            "anchorfile": {
+              "$": "kabstractconfigmodule.html"
+            },
+            "anchor": {
+              "$": "supportsInstantApply"
+            },
+            "arglist": {
+              "$": "() const const"
+            }
+          },
+          {
             "@kind": "typedef",
             "@type": "KAbstractConfigModule::Button",
             "name": {
@@ -703,6 +811,94 @@
               "$": "representsDefaults-prop"
             },
             "arglist": {}
+          },
+          {
+            "@kind": "property",
+            "@type": "bool",
+            "name": {
+              "$": "supportsInstantApply"
+            },
+            "anchorfile": {
+              "$": "kabstractconfigmodule.html"
+            },
+            "anchor": {
+              "$": "supportsInstantApply-prop"
+            },
+            "arglist": {}
+          }
+        ]
+      },
+      {
+        "@kind": "class",
+        "name": {
+          "$": "org.kde.kcmutils.KCMLauncher"
+        },
+        "filename": {
+          "$": "qml-org-kde-kcmutils-kcmlauncher.html"
+        },
+        "member": [
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "open"
+            },
+            "anchorfile": {
+              "$": "qml-org-kde-kcmutils-kcmlauncher.html"
+            },
+            "anchor": {
+              "$": "open-method"
+            },
+            "arglist": {
+              "$": "(list<string> names)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "openInfoCenter"
+            },
+            "anchorfile": {
+              "$": "qml-org-kde-kcmutils-kcmlauncher.html"
+            },
+            "anchor": {
+              "$": "openInfoCenter-method"
+            },
+            "arglist": {
+              "$": "(string name)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "openSystemSettings"
+            },
+            "anchorfile": {
+              "$": "qml-org-kde-kcmutils-kcmlauncher.html"
+            },
+            "anchor": {
+              "$": "openSystemSettings-method"
+            },
+            "arglist": {
+              "$": "(string name, list<string> args)"
+            }
           }
         ]
       },
@@ -1048,6 +1244,27 @@
               "$": "void"
             },
             "name": {
+              "$": "auxiliaryActionChanged"
+            },
+            "anchorfile": {
+              "$": "kcmoduledata.html"
+            },
+            "anchor": {
+              "$": "auxiliaryActionChanged"
+            },
+            "arglist": {
+              "$": "(QAction *action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
               "$": "loaded"
             },
             "anchorfile": {
@@ -1084,6 +1301,27 @@
           {
             "@kind": "function",
             "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "relevantChanged"
+            },
+            "anchorfile": {
+              "$": "kcmoduledata.html"
+            },
+            "anchor": {
+              "$": "relevantChanged"
+            },
+            "arglist": {
+              "$": "(bool relevant)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
             "@virtualness": "virtual",
             "@static": "no",
             "type": {
@@ -1100,6 +1338,69 @@
             },
             "arglist": {
               "$": "()"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setAuxiliaryAction"
+            },
+            "anchorfile": {
+              "$": "kcmoduledata.html"
+            },
+            "anchor": {
+              "$": "setAuxiliaryAction"
+            },
+            "arglist": {
+              "$": "(QAction *action)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "protected",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "void"
+            },
+            "name": {
+              "$": "setRelevant"
+            },
+            "anchorfile": {
+              "$": "kcmoduledata.html"
+            },
+            "anchor": {
+              "$": "setRelevant"
+            },
+            "arglist": {
+              "$": "(bool relevant)"
+            }
+          },
+          {
+            "@kind": "function",
+            "@protection": "public",
+            "@virtualness": "non",
+            "@static": "no",
+            "type": {
+              "$": "QAction *"
+            },
+            "name": {
+              "$": "auxiliaryAction"
+            },
+            "anchorfile": {
+              "$": "kcmoduledata.html"
+            },
+            "anchor": {
+              "$": "auxiliaryAction"
+            },
+            "arglist": {
+              "$": "() const const"
             }
           },
           {
@@ -2864,125 +3165,6 @@
             },
             "arglist": {
               "$": "()"
-            }
-          }
-        ]
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org.kde.kcmutils.AbstractKCM"
-        },
-        "filename": {
-          "$": "qml-org-kde-kcmutils-abstractkcm.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org.kde.kcmutils.ContextualHelpButton"
-        },
-        "filename": {
-          "$": "qml-org-kde-kcmutils-contextualhelpbutton.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org.kde.kcmutils.GridDelegate"
-        },
-        "filename": {
-          "$": "qml-org-kde-kcmutils-griddelegate.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org.kde.kcmutils.GridView"
-        },
-        "filename": {
-          "$": "qml-org-kde-kcmutils-gridview.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org.kde.kcmutils.GridViewKCM"
-        },
-        "filename": {
-          "$": "qml-org-kde-kcmutils-gridviewkcm.html"
-        }
-      },
-      {
-        "@kind": "class",
-        "name": {
-          "$": "org.kde.kcmutils.KCMLauncher"
-        },
-        "filename": {
-          "$": "qml-org-kde-kcmutils-kcmlauncher.html"
-        },
-        "member": [
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "open"
-            },
-            "anchorfile": {
-              "$": "qml-org-kde-kcmutils-kcmlauncher.html"
-            },
-            "anchor": {
-              "$": "open-method"
-            },
-            "arglist": {
-              "$": "(list<string> names)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "openInfoCenter"
-            },
-            "anchorfile": {
-              "$": "qml-org-kde-kcmutils-kcmlauncher.html"
-            },
-            "anchor": {
-              "$": "openInfoCenter-method"
-            },
-            "arglist": {
-              "$": "(string name)"
-            }
-          },
-          {
-            "@kind": "function",
-            "@protection": "public",
-            "@virtualness": "non",
-            "@static": "no",
-            "type": {
-              "$": "void"
-            },
-            "name": {
-              "$": "openSystemSettings"
-            },
-            "anchorfile": {
-              "$": "qml-org-kde-kcmutils-kcmlauncher.html"
-            },
-            "anchor": {
-              "$": "openSystemSettings-method"
-            },
-            "arglist": {
-              "$": "(string name, list<string> args)"
             }
           }
         ]
