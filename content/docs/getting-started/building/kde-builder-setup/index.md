@@ -217,12 +217,6 @@ If you ever need to install more Qt components, you can do so using the `Qt Main
 
 ### Use Qt6 from aqtinstall {#qt6-aqtinstall}
 
-{{< alert title="⚠️ Experimental" color="warning" >}}
-
-This method was not fully tested yet.
-
-{{< /alert >}}
-
 If you do not want to create a Qt account to use Qt's official installer and do not want to build Qt yourself,
 you can try using the unofficial installer `aqtinstall` which downloads
 Qt from the same sources as the official installer.
@@ -254,12 +248,6 @@ qt-install-dir: ~/Qt/6.9.0/gcc_64
 Once this is done, `kde-builder` will know to use the Qt provided by the online installer to build KDE software.
 
 ### Build Qt6 using kde-builder {#qt6-build}
-
-{{< alert title="⚠️ Work in Progress" color="warning" >}}
-
-This method is undergoing testing to make sure it works on most systems.
-
-{{< /alert >}}
 
 It is possible to build Qt with kde-builder, but it requires a minimum of 30 GB of storage and has a long compilation time, up to a few hours depending on your machine.
 
