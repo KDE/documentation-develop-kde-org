@@ -133,43 +133,6 @@ Kirigami.FormLayout {
 
 {{< /sections >}}
 
-
-## Checkable children
-
-A handy feature of [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) is that you can add checkboxes to its children. This can be useful in settings pages where you might want to let the user enable or disable a setting, and also want the user to provide some extra information in a component such as a textfield.
-
-{{< sections >}}
-
-{{< section-left >}}
-
-```qml
-Kirigami.FormLayout {
-    anchors.fill: parent
-
-    Controls.TextField {
-        Kirigami.FormData.label: "First name:"
-    }
-    Controls.TextField {
-        Kirigami.FormData.label: "Middle name:"
-        Kirigami.FormData.checkable: true
-        enabled: Kirigami.FormData.checked
-    }
-    Controls.TextField {
-        Kirigami.FormData.label: "Last name:"
-    }
-}
-```
-
-{{< /section-left >}}
-
-{{< section-right >}}
-
-{{< figure class="text-center" caption="A form layout with checkable label." src="formlayouts-checkable.webp" >}}
-
-{{< /section-right >}}
-
-{{< /sections >}}
-
 ## Forcing a desktop or mobile layout
 
 If you would rather have your form layout stay consistent regardless of your application's environment, you can use the [wideMode](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formlayout.html#wideMode-prop) property of the [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) component:
