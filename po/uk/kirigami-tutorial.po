@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-02 02:16+0000\n"
+"POT-Creation-Date: 2025-09-22 01:53+0000\n"
 "PO-Revision-Date: 2025-09-02 18:11+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -4680,34 +4680,11 @@ msgstr ""
 msgid "A form layout with sections"
 msgstr "Компонування форми з розділами"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:137
-msgid "Checkable children"
-msgstr "Дочірній елемент — пункт для позначення"
-
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:139
-msgid ""
-"A handy feature of [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami."
-"layouts.FormLayout) is that you can add checkboxes to its children. This can "
-"be useful in settings pages where you might want to let the user enable or "
-"disable a setting, and also want the user to provide some extra information "
-"in a component such as a textfield."
-msgstr ""
-"Зручною можливістю [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami."
-"layouts.FormLayout)  є можливість додавання пунктів позначок до його "
-"дочірніх елементів. Нею можна скористатися на сторінках параметрів, де у вас "
-"може виникнути потреба у наданні користувачу можливості увімкнути або "
-"вимкнути щось, а також наданні користувачу додаткової інформації у "
-"компонентах, подібних до поля для введення тексту."
-
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:167
-msgid "A form layout with checkable label."
-msgstr "Компонування форми з придатною для позначення міткою."
-
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:173
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:136
 msgid "Forcing a desktop or mobile layout"
 msgstr "Примусове визначення компонування — комп'ютер чи мобільний пристрій"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:175
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:138
 msgid ""
 "If you would rather have your form layout stay consistent regardless of your "
 "application's environment, you can use the [wideMode](https://api-staging."
@@ -4721,7 +4698,7 @@ msgstr ""
 "formlayout.html#wideMode-prop) компонента [Kirigami.FormLayout](docs:"
 "kirigami;org.kde.kirigami.layouts.FormLayout):"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:177
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:140
 msgid ""
 "When set to `true`, the form layout will be structured in a desktop-"
 "optimized widescreen (double-column) layout"
@@ -4729,7 +4706,7 @@ msgstr ""
 "Якщо встановлено значення `true`, компонування форми буде структуровано для "
 "широкоекранного представлення на комп'ютері (у два стовпчики)"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:178
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:141
 msgid ""
 "When set to `false`, the form layout will be structured in a mobile layout "
 "(single column)"
@@ -4737,15 +4714,15 @@ msgstr ""
 "Якщо встановлено значення `false`, компонування форми буде структуровано для "
 "мобільного пристрою (в один стовпчик)"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:205
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:168
 msgid "A form layout with forced mobile layout"
 msgstr "Компонування форми з примусовим мобільним компонуванням"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:211
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:174
 msgid "Aligning your labels"
 msgstr "Вирівнювання ваших міток"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:213
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:176
 msgid ""
 "There are instances when you want a label to be assigned to components that "
 "have more than one line or to a list of components. This can be achieved by "
@@ -4769,11 +4746,11 @@ msgstr ""
 "labelAlignment](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-"
 "formdata.html#labelAlignment-attached-prop)."
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:239
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:202
 msgid "A form layout with top-aligned label"
 msgstr "Компонування форми з вирівняною вгору міткою"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:245
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:208
 msgid ""
 "Setting the label alignment is particularly convenient to manage components "
 "or lists of components whose size you do not know beforehand. [Elisa]"
@@ -4783,7 +4760,7 @@ msgstr ""
 "списками компонентів, чи розмір наперед невідомий. [Elisa](https://apps.kde."
 "org/elisa) є чудовим прикладом цього:"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:247
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:210
 msgid ""
 "The Comment label is only top aligned when its corresponding component has "
 "more than one line"
@@ -4791,7 +4768,7 @@ msgstr ""
 "Мітку Comment буде вирівняно вгору, коли її відповідний компонент "
 "складається з декількох рядків"
 
-#: content/docs/getting-started/kirigami/components-formlayouts/index.md:249
+#: content/docs/getting-started/kirigami/components-formlayouts/index.md:212
 msgid "We can do something similar to this with a JavaScript ternary operator:"
 msgstr ""
 "Ми можемо зробити щось подібне до цього за допомогою тернарного оператора "
@@ -10687,6 +10664,26 @@ msgstr ""
 "Доступ до розміру шрифту [Kirigami.Theme](https://api-staging.kde.org/qml-"
 "org-kde-kirigami-platform-theme.html) у вашій програмі можна отримати за "
 "допомогою `Kirigami.Theme.defaultFont.pointSize`."
+
+#~ msgid "Checkable children"
+#~ msgstr "Дочірній елемент — пункт для позначення"
+
+#~ msgid ""
+#~ "A handy feature of [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami."
+#~ "layouts.FormLayout) is that you can add checkboxes to its children. This "
+#~ "can be useful in settings pages where you might want to let the user "
+#~ "enable or disable a setting, and also want the user to provide some extra "
+#~ "information in a component such as a textfield."
+#~ msgstr ""
+#~ "Зручною можливістю [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami."
+#~ "layouts.FormLayout)  є можливість додавання пунктів позначок до його "
+#~ "дочірніх елементів. Нею можна скористатися на сторінках параметрів, де у "
+#~ "вас може виникнути потреба у наданні користувачу можливості увімкнути або "
+#~ "вимкнути щось, а також наданні користувачу додаткової інформації у "
+#~ "компонентах, подібних до поля для введення тексту."
+
+#~ msgid "A form layout with checkable label."
+#~ msgstr "Компонування форми з придатною для позначення міткою."
 
 #~ msgid ""
 #~ "The choice between using this view with [AbstractCard](docs:kirigami2;"
