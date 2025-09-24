@@ -11,14 +11,20 @@ include(ECMFindQmlModule)
 ecm_find_qmlmodule(org.kde.kirigami REQUIRED)
 find_package(KF6 REQUIRED COMPONENTS QQC2DesktopStyle)
 
+set(CARGO_INNER_TARGET_DIR debug)
+if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
+    set(CARGO_OPTIONS --release)
+    set(CARGO_INNER_TARGET_DIR release)
+endif()
+
 add_custom_target(simplemdviewer
     ALL
-    COMMAND cargo build --target-dir ${CMAKE_CURRENT_BINARY_DIR}
-    BYPRODUCTS ${CMAKE_BINARY_DIR}/debug
+    COMMAND cargo build --target-dir ${CMAKE_CURRENT_BINARY_DIR} ${CARGO_OPTIONS}
+    BYPRODUCTS ${CMAKE_BINARY_DIR}/${CARGO_INNER_TARGET_DIR}
 )
 
 install(
-    PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/debug/simplemdviewer
+    PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${CARGO_INNER_TARGET_DIR}/simplemdviewer
     DESTINATION ${KDE_INSTALL_BINDIR}
 )
 

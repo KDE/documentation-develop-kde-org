@@ -14,6 +14,7 @@ find_package(KF6 REQUIRED COMPONENTS QQC2DesktopStyle)
 add_custom_target(simplemdviewer
     ALL
     COMMAND cargo build --target-dir ${CMAKE_CURRENT_BINARY_DIR}
+    BYPRODUCTS ${CMAKE_BINARY_DIR}/debug
 )
 
 install(
