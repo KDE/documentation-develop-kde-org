@@ -90,7 +90,7 @@ I, [2023-10-17T20:37:55.217687 #32112]  INFO -- : run.rb exiting true
 To build Selenium manually, you will need to install its dependencies first:
 
 {{< installpackage
-    ubuntu="extra-cmake-modules libkf5windowsystem-dev libkf5wayland-dev libkpipewire-dev kwin-dev libwayland-dev"
+    ubuntu="extra-cmake-modules libkf5windowsystem-dev libkf5wayland-dev libkpipewire-dev kwin-dev libwayland-dev kwayland-dev plasma-wayland-protocols"
     opensuse="extra-cmake-modules kwindowsystem-devel kwayland-devel kpipewire-devel kwin5-devel wayland-devel"
     fedora="extra-cmake-modules kf5-kwindowsystem-devel kf5-kwayland-devel kpipewire-devel kwin-devel wayland-devel"
     arch="extra-cmake-modules kwindowsystem5 kwayland5 kpipewire kwin wayland"
