@@ -123,7 +123,7 @@ Faces.SensorFace {
 ### Retrieving the data
 
 The face controller supplies the list of sensor ids. To access more information about those sensors
-and retrieving their current values, there are two options. We can instantiate a [Sensor](docs:libksysguard;KSysGuard::Sensor)
+and to retrieve their current values, there are two options. We can instantiate a [Sensor](docs:libksysguard;KSysGuard::Sensor)
 for each id and query the [formattedValue](docs:libksysguard;KSysGuard::Sensor::formattedValue) or raw
 [value](docs:libksysguard;KSysGuard::Sensor::value) and [unit](docs:libksysguard;KSysGuard::Sensor::unit)
 from it. It also contains the user visible [name](docs:libksysguard;KSysGuard::Sensor::name) of the sensor
@@ -200,7 +200,7 @@ Faces.SensorFace {
 
 A legend is generally useful since it allows matching colors to a chart and precise reading of the
 current value. `ExtendedLegend` is a premade
-Component that displays a legend that is a generated from a `SensorDataModel` assigned to its
+Component that displays a legend that is generated from a `SensorDataModel` assigned to its
 `sourceModel` property. The
 `sensorIds` property holds the ids of additional sensors that should be included in the
 legend. Most sensor faces use this to display the "text only"
@@ -274,7 +274,7 @@ If the face contains configurable elements or display settings, can they be decl
 
 It declares two options. A boolean option `showRectangle` that can either be `true` or `false` and
 an option `rectangleText` that will hold some. By default the rectangle will
-be shown and the text is "Rectangle". Options can have multitude of types like
+be shown and the text is "Rectangle". Options can have a multitude of types like
 `Int, StringList, Double, Color,...`. [The KConfigXT tutorial]({{< ref "docs/features/configuration/kconfig_xt" >}})
 gives a good introduction to the file format and the available data types.
 
@@ -376,7 +376,7 @@ the migration instructions from the [Widget Properties]({{< relref "docs/plasma/
 
 ### faceproperties
 
-Not every face supports displaying of every feature that are exposed as the [properties of
+Not every face supports displaying every feature that is exposed as the [properties of
 the face controller](#controllerProps). A face can indicate this with the file `faceproperties`
 so that UI elements can be hidden for example when configuring the face depending on whether they
 are supported or not. The file format is a first line `[Config]` followed by key-value-pairs.
@@ -400,7 +400,7 @@ low priority sensors because the default is  `false`. It however supports displa
 To enable applications finding a face it needs to be installed into a specific directory. This is typically
 `/usr/share/ksysguard/sensorfaces/` for system installed faces or `~/.local/share/ksysguard/sensorfaces/`.
 Additionally the root folder has to have the same name as the plugin `Id` specified in the metadata.
-If the face is distributed through the kde store
+If the face is distributed through the KDE Store
 and installed using the relevant tools, installation is handled automatically.
 
 ## Further topics

@@ -62,7 +62,7 @@ title: Kirigami UI Framework
             And everything else.
           </dt>
           <!-- space -->
-          <dd class="d-inline">Besides providing high level components, to make it easier to support multiple form factors, Kirigami also provides a wide variety of low level components that can be used in your embedded Linux QML app. For example, check out the high performance <a href="https://api-staging.kde.org/qml-org-kde-kirigami-primitives-shadowedrectangle.html">ShadowedRectangle</a> and an <a href="/docs/getting-started/kirigami/style-colors/">expansible theming API</a>.</dd>
+          <dd class="d-inline">Besides providing high level components, to make it easier to support multiple form factors, Kirigami also provides a wide variety of low level components that can be used in your embedded Linux QML app. For example, check out the high performance <a href="https://api-staging.kde.org/qml-org-kde-kirigami-primitives-shadowedrectangle.html">ShadowedRectangle</a> and an <a href="/docs/getting-started/kirigami/style-colors/">extensible theming API</a>.</dd>
         </div>
       </div>
     </div>

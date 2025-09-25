@@ -125,7 +125,7 @@ In the upper right corner of CLion's window, you will see that "KDE Builder cmak
 
 {{< figure alt="IDE window with selected run configuration" width="900px" src="kb-run-debug-conf-applied.png" >}}
 
-You can now start developing. Set a breakpoint, start a debugging session, create your own run/debug configuration based on original, and so on.
+You can now start developing. Set a breakpoint, start a debugging session, create your own run/debug configuration based on the original, and so on.
 
 ## Tips and Tricks
 

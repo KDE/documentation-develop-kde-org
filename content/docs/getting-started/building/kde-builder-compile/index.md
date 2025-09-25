@@ -31,7 +31,7 @@ When you tell kde-builder to build a module, it will automatically download the 
 The project's source code is downloaded to a folder under `~/kde/src`. The build files are stored under `~/kde/build`, and installed to `~/kde/usr`.
 If the build failed for any reason, please see our instructions on how to proceed with [Troubleshooting]({{< ref "kde-builder-failure" >}}).
 
-To run the self-compiled KCalc, use the `kde-builder --run` command, which launches the built-from-source version of KCalc (from the directory `~/kde/usr`) instead of the version installed your package manager.
+To run the self-compiled KCalc, use the `kde-builder --run` command, which launches the built-from-source version of KCalc (from the directory `~/kde/usr`) instead of the version installed using your package manager.
 
 ```bash
 kde-builder --run kcalc
@@ -151,7 +151,7 @@ After that, rebuild the project. This time, you can skip building dependencies, 
 kde-builder kcalc --no-include-dependencies
 ```
 
-Next, you may want to push your changes for preparing merge request.
+Next, you may want to push your changes to prepare a merge request.
 If you have a developer account, you can push your work branch to the original repo.
 If you do not have a KDE developer account, you can add your fork remote, and push changes to it.
 See [wiki page](https://community.kde.org/Infrastructure/GitLab#Submitting_a_merge_request) for more information.

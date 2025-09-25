@@ -45,7 +45,7 @@ A dialog is shown: Configure a Build Directory for bluez-qt. It will guess all o
 
 ## Configure environment for run and debug
 
-At this point KDevelop can build correctly the project.
+At this point KDevelop can build the project correctly.
 
 KDevelop will be able to run and debug the project if we set environment variables.
 
@@ -110,12 +110,12 @@ From kdevelop main menu > Window > Tool Views > Projects. Expand the treeview to
 
 Navigate to the method "bluezNotRunningTest()", put a breakpoint on the first line of this method that is not "{" (the opening curly bracket of the method), is not whitespace or comment. That is, a line of actual source code. Right click on the line > Toggle Breakpoint.
 
-In Projects view, right click on the CMake target "managertest" > Debug As... > Compiled Binary.
+In the Projects view, right click on the CMake target "managertest" > Debug As... > Compiled Binary.
 
 If the kdevelop debugger does not pause, from the kdevelop main menu > Settings > Configure KDevelop... > Plugins > Debugging > uncheck "LLDB Support" > OK.
 
 Navigate to the method "bluezNotRunningTest()", put a breakpoint on the first line of this method that is not "{" (the opening curly bracket of the method), is not whitespace or comment. That is, a line of actual source code. Right click on the line > Toggle Breakpoint.
 
-In Projects view, right click on the CMake target "managertest" > Debug As... > Compiled Binary.
+In the Projects view, right click on the CMake target "managertest" > Debug As... > Compiled Binary.
 
 The debugger starts and breaks on the first line of C++ source code after the breakpoint. From the main menu > Run > Step Over (F10)/Step Into (F11)/Step Out (F12).

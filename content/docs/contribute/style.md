@@ -168,7 +168,7 @@ Use backticks before and after things like:
 
 If your code snippet has more than one line, use a code block instead.
 
-If you code snippet has only one line, but it needs to be emphasized as a separate step, use a code block instead.
+If your code snippet has only one line, but it needs to be emphasized as a separate step, use a code block instead.
 
 ## Use () to signal functions {#functions}
 

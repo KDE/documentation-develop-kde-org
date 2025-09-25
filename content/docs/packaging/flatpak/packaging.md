@@ -9,7 +9,7 @@ aliases:
 Flatpak is a new package format in the Linux world that works on many Linux
 distributions and gives back control to the application developers. Many Flatpak
 applications are distributed via [Flathub](https://flathub.org), but Flatpak is
-decentralized by nature and applications can be provided using alternatives sources, such as the [KDE nightly repositories](https://userbase.kde.org/Tutorials/Flatpak#Nightly_KDE_Apps).
+decentralized by nature and applications can be provided using alternative sources, such as the [KDE nightly repositories](https://userbase.kde.org/Tutorials/Flatpak#Nightly_KDE_Apps).
 
 Flatpak applications can be downloaded using Discover (KDE Software Center), GNOME
 Software and other software centers compatible with Flatpak.
