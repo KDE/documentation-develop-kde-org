@@ -119,7 +119,9 @@ There are two main ones:
 * [KDE neon Unstable](https://community.kde.org/Neon/Containers), which already comes ready to use
 * [openSUSE Krypton](https://en.opensuse.org/SDB:KDE_repositories), which needs to be manually added to an existing openSUSE Tumbleweed container
 
-KDE neon Unstable is more straightforward to use since there is a container built for it already. At the time of writing, openSUSE Krypton has no such container, but it can be easily created by using an openSUSE Tumbleweed base.
+KDE neon Unstable is more straightforward to use since there is an official container built for it already.
+
+openSUSE Krypton has a simple unofficial image maintained by a contributor, but no official image from upstream.
 
 For KDE neon Unstable, run the following:
 
@@ -128,11 +130,18 @@ distrobox create --image invent-registry.kde.org/neon/docker-images/plasma:unsta
 distrobox enter plasma-unstable
 ```
 
-This will automatically create a distrobox container named `plasma-unstable` and enter it. You can then start building KDE software using our guide on [building KDE software manually with CMake]({{< ref "cmake-build" >}}).
+For openSUSE Krypton, run the following:
 
-Note that the plasma-unstable image size is 5.6 GiB and it can grow over time, so plan your disk space accordingly.
+```bash
+distrobox create --image codeberg.org/herzenschein/tumbleweed-krypton:latest --name krypton
+distrobox enter krypton
+```
 
-For openSUSE Krypton, first create and enter an openSUSE Tumbleweed container. It will be called `krypton` since that will be the end result.
+You can then start building KDE software using our guide on [building KDE software manually with CMake]({{< ref "cmake-build" >}}).
+
+Note that the plasma-unstable image size is 5.6 GiB and the krypton image is 3 GiB and they can grow over time, so plan your disk space accordingly.
+
+If you'd like to build your own openSUSE Krypton image, you can either use the [manifest for the above image](https://codeberg.org/herzenschein/container-manifests/src/branch/master/qt6/tumbleweed-krypton) or manually configure an existing Tumbleweed image:
 
 ```bash
 distrobox create --image docker.io/opensuse/tumbleweed --name krypton
