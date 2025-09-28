@@ -61,3 +61,81 @@ There are multiple ways to address this:
 * You can just always run kde-builder with the `--use-clean-install` flag. This will call the uninstall target of CMake that KDE projects using extra-cmake-modules have, uninstalling previously installed files before installing new ones. This will decrease the speed of installing files built with kde-builder.
 * You can nuke your current installed files with `rm -rf ~/kde/usr` and then rerun kde-builder.
 * You can start with a new and clean kde-builder installation. This can be done by creating a new user and installing kde-builder from scratch. Another possibility is to rename your existing development setup with `mv ~/kde ~/kde~bak` and then rerun kde-builder.
+
+## Common problems in stable distributions
+
+Distributions that are [not sufficiently up-to-date]({{< ref "building#choosing" >}}) may encounter unavoidable problems that will need to be addressed to .
+
+Sometimes lack a required library for building a specific project, and if you have followed our [Qt setup with the online installer]({{< ref "kde-builder-setup#setting-up-qt" >}}), you might have noticed that the default recommended installation is lean by default, which means you might be missing some Qt library.
+
+### Cannot build Python bindings / missing stddef.h
+
+To build the [Python bindings for KDE Frameworks]({{< ref "python-bindings" >}}), the following packages are required:
+
+* python3-build
+* python3-shiboken6 and respective development package
+* python3-pyside6 and respective development package
+* clang
+
+The names may vary according to the distribution.
+
+If you get an error similar to this:
+
+```
+(kcoreaddons) Clang: 1 diagnostic messages:
+  /usr/include/c++/14/cstddef:50:10: fatal: 'stddef.h' file not found
+```
+
+This means you need to install clang.
+
+If you encounter other errors referencing shiboken or pyside, you might be missing some of the other packages.
+
+Note that by default you won't encounter this issue on most major distributions if you have allowed kde-builder to install the necessary distro packages with either `kde-builder --initial-setup` or `kde-builder --install-distro-packages`.
+
+Alternatively, you may disable building the Python bindings altogether by adding the following to the global `cmake-options` section of your `~/.config/kde-builder.yaml`:
+
+```yaml
+cmake-options: >
+  -DBUILD_WITH_PYTHON_BINDINGS=OFF
+```
+
+### Qt online installer: missing libraries
+
+We opt to recommend a leaner installation of Qt with the online installer in our [Qt setup]({{< ref "kde-builder-setup#setting-up-qt" >}}), but sometimes this might mean you will end up missing a major optional Qt library such as QtWebengine, QtTextToSpeech, or QtVirtualKeyboard.
+
+To install the missing libraries, open the "Qt Maintenance Tool" entry in your menu and select the optional library that you need that matches the Qt version you have installed.
+
+Alternatively, many projects offer to disable specific features that require optional libraries. To do this, first attempt to compile them once with kde-builder. Afterwards, run `ccmake` in its respective build directory:
+
+```bash
+ccmake ~/kde/build/ktextwidgets
+```
+
+You will see that in the KTextWidgets case there is a setting to disable building `WITH_TEXT_TO_SPEECH`, which bypasses the need for you to have QtTextToSpeech installed on your system.
+
+You can then override KTextWidgets to disable this option by adding the following to the end of your `~/.config/kde-builder.yaml` file:
+
+```yaml
+override ktextwidgets:
+  cmake-options: >
+    -DWITH_TEXT_TO_SPEECH=OFF
+```
+
+### Missing non-KDE library that is not managed by kde-builder
+
+By default kde-builder does build third-party libraries that are required by bleeding edge KDE applications or libraries, such as gpgme, poppler and wayland-protocols. You can list them with `kde-builder --dry-run workspace | grep third`.
+
+Sometimes a KDE application might require a third-party library that is not managed by kde-builder and is not available on your distribution. For such cases, the only solution is to build that library manually with kde-builder. This makes sure that the library will be accessible by applications compiled and run with kde-builder, as it will be installed in `~/kde/usr` like the rest of the compiled projects.
+
+To achieve this, you may add a `project` to your `~/.config/kde-builder.yaml`, similarly to [Building custom projects]({{< ref "kde-builder-compile#new-projects" >}}):
+
+```yaml
+project outside-project:
+  repository: git@invent.kde.org:youruser/outside-project.git
+```
+
+Thus allowing you to run:
+
+```bash
+kde-builder outside-project
+```
