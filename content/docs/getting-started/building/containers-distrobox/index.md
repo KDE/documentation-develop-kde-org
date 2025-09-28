@@ -74,6 +74,16 @@ From this point on, the [kde-builder tutorial]({{< ref "kde-builder-setup" >}}) 
 
 Note that the container size will stay relatively tiny, but kde-builder will require as much disk space as necessary to build the software you specify and all its dependencies.
 
+{{< alert title="About the Arch container image" color="warning" >}}
+
+By default, Distrobox uses [host-exec](https://distrobox.it/usage/distrobox-host-exec/) in the Arch Linux image to allow to run flatpak applications on the host while inside the container by creating a symlink to flatpak in `/usr/bin/flatpak` in the container. 
+
+This causes kde-builder to fail to install the Arch flatpak binary during initial setup.
+
+To work around this issue, first delete `/usr/bin/flatpak` in the container, then run `kde-builder --install-distro-packages`.
+
+{{< /alert >}}
+
 ## Building KDE software with distrobox + manual compilation {#with-cmake}
 
 In certain cases you may find [kde-builder]({{< ref "kde-builder-setup" >}}) to be overkill for what you want to do, for example if you just intend on working on a specific desktop application. You might otherwise be restricted by storage space and cannot afford to compile dozens of projects just to build the one project you want.
