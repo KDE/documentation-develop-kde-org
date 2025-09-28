@@ -95,7 +95,7 @@ For your application to be localized, we must first prepare our code so that it 
 
 We start with a call to [KLocalizedString::setApplicationDomain()](docs:ki18n;KLocalizedString::setApplicationDomain), which is required to properly set the translation catalog and must be done before everything else (except the creation of the [QApplication](docs:qtwidgets;QApplication) instance). After that, we can just start enveloping the relevant user-visible, translatable strings with `i18n()`. The non-user visible strings that do not need to be translated should use a [QStringLiteral](docs:qtcore;QString::QStringLiteral) instead. We'll use those next with [KAboutData](docs:kcoreaddons;KAboutData).
 
-More information on internalization can be found in the [programmer's guide for internationalization](https://api.kde.org/frameworks/ki18n/html/prg_guide.html).
+More information on internalization can be found in the [programmer's guide for internationalization](https://invent.kde.org/frameworks/ki18n/-/blob/master/docs/programmers-guide.md).
 
 {{< alert title="Important" color="warning" >}}
 

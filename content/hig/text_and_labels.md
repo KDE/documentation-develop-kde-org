@@ -167,9 +167,9 @@ Many or even most users won't be using your software in English, so keep transla
 
 - Leave enough room in your UI for strings to become 50% longer or more when translated into languages with longer text than English.
 - Respect system-wide locale settings for units, date and time formats, etc.
-- Use the [ki18n guidelines](https://api.kde.org/frameworks/ki18n/html/prg_guide.html) to write localization-friendly English text.
-- Use the [i18nc()](https://api.kde.org/frameworks/ki18n/html/prg_guide.html#good_ctxt) function to provide translation context to your strings, and use [KUIT markup](https://api.kde.org/frameworks/ki18n/html/prg_guide.html#kuit_tags) instead of HTML.
-- Use the [i18ncp()](https://api.kde.org/frameworks/ki18n/html/prg_guide.html#gen_usage) function for any text that refers to a number, as plurals are handled differently in different languages.
+- Use the [ki18n guidelines](https://invent.kde.org/frameworks/ki18n/-/blob/master/docs/programmers-guide.md) to write localization-friendly English text.
+- Use the [i18nc()](https://invent.kde.org/frameworks/ki18n/-/blob/master/docs/programmers-guide.md#writing-good-contexts) function to provide translation context to your strings, and use [semantic markup (KUIT)](https://invent.kde.org/frameworks/ki18n/-/blob/master/docs/programmers-guide.md#semantic-markup) instead of HTML.
+- Use the [i18ncp()](https://invent.kde.org/frameworks/ki18n/-/blob/master/docs/programmers-guide.md#general-messages) function for any text that refers to a number, as plurals are handled differently in different languages.
 - Test your app in right-to-left mode by running it in Arabic with `LANGUAGE=ar_AR [app_executable]`. Even if you can't read the words, make sure everything has reversed properly and there's enough room for the text.
 - Don't use internet memes or culture-specific colloquialisms, expressions, and references.
 
