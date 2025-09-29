@@ -61,7 +61,7 @@ Despite Plasma not caring about element placement, it is a good idea to place el
 
 As mentioned above, Plasma does not care about the position of the elements in an SVG file, only whether they exist and have the right attributes. The most important attributes when creating or editing a Plasma theme are the element's ID and label.
 
-An element ID can have multiple parts to it, separated by a hifen (-). Each part may be a prefix, a suffix, or an affix (in the middle). Although most IDs have only one to four parts, there can be at most six parts to an ID.
+An element ID can have multiple parts to it, separated by a hyphen (-). Each part may be a prefix, a suffix, or an affix (in the middle). Although most IDs have only one to four parts, there can be at most six parts to an ID.
 
 For example:
 
