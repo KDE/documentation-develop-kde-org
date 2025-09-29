@@ -47,7 +47,7 @@ Which can be a useful technique whenever you end up needing to edit large SVG fi
 
 {{< /alert >}}
 
-In the above image, the blue rectangle attributes can be seen by clicking on it while having the "Object Properties" pane open. You can open the "Object Properties" pane by pressing `Ctrl+Shift+O`, going to the menu `Object -> Object Properties...`, or by right clicking the element you'd like to inspect and cliking on "Object Properties".
+In the above image, the blue rectangle attributes can be seen by clicking on it while having the "Object Properties" pane open. You can open the "Object Properties" pane by pressing `Ctrl+Shift+O`, going to the menu `Object -> Object Properties...`, or by right clicking the element you'd like to inspect and clicking on "Object Properties".
 
 Once you have more than one element in the same SVG file, you will want to have the "Layers and Objects" pane open as well for easy navigation and for ensuring the element IDs are correct later on.
 
