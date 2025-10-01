@@ -57,6 +57,10 @@ Avoid implicit references to or assumptions about the user with respect to:
 - Level of technical skill
 - Etc.
 
+Icons rely on the user's cultural context to be understood.
+Ensure that icons are changed as necessary for different locales.
+Guidance can be found in the [Icon Localization guidelines]({{< ref "icons/localization" >}}).
+
 ### Negative language
 Prefer neutral language over language referencing death, violence, crime, prejudice, stereotypes, or evil history. For example:
 - Kill → Close

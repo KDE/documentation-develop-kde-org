@@ -1,6 +1,6 @@
 ---
 title: Colorful Icons
-weight: 11
+weight: 1
 aliases:
 - /hig/style/icons/colorful
 ---

@@ -1,9 +1,9 @@
 {{ define "main" }}
   {{ .Render "content" }}
-  {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
+  {{ $pages := .CurrentSection.Pages.ByWeight }}
   <div class="row mt-5">
     <div class="col-6 d-flex">
-      {{with .NextInSection }}
+      {{with $pages.Next . }}
         <a class="ae-card d-flex w-100 align-items-center"
            href="{{ .Permalink }}">
           <i class="icon icon_go-previous h1"></i>
@@ -15,7 +15,7 @@
       {{ end }}
     </div>
     <div class="col-6 d-flex">
-      {{with .PrevInSection }}
+      {{with $pages.Prev . }}
         <a class="ae-card d-flex w-100 align-items-center"
            href="{{ .Permalink }}">
           <div class="me-3">

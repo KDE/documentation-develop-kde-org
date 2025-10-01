@@ -1,7 +1,13 @@
 {{ if gt (len .Inner) 0 }}
   {{ if .Get "src" }}
     <figure {{ with .Parent }}class="col-12 col-md-6 text-center" {{ else }} class="col-12"{{ end }}>
-      <img src="{{ .Get "src" }}" alt="" class="img-fluid" />
+      <picture class="img-fluid">
+        {{ $basename := substr (.Get "src") 0 -4 }}
+        {{ if (fileExists (printf "content%s%s-dark.png" $.Page.RelPermalink $basename)) }}
+          <source srcset="{{ printf "%s-dark.png" $basename }}" media="(prefers-color-scheme: dark)">
+        {{ end }}
+        <img src="{{ .Get "src" }}" alt="" />
+      </picture>
       <figcaption class="alert alert-error">{{ .Inner }}</figcaption>
     </figure>
   {{ else }}
