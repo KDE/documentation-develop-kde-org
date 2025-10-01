@@ -38,7 +38,7 @@ Group related items together by reducing the spacing between them, and increasin
 
 
 ## Spacings and sizes
-Use the Kirigami [standard units](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1Units.html) consistently:
+Use the Kirigami [standard units](https://api.kde.org/qml-org-kde-kirigami-platform-units.html) consistently:
 
 Item                                                                                  | Value to use
 --------------------------------------------------------------------------------------|--------------------------
@@ -77,9 +77,9 @@ Status bar                   | Below the content area    | Omitted
 Desktop/laptop apps can be adapted to work on tablets and 2-in-1 laptops in tablet mode by enlarging small UI elements and hiding menubars. Phones (even large ones) need an optimized mobile UI; do not just scale down a desktop UI.
 
 {{< alert title="Note" color="info" >}}
-Detect that the app is running in tablet mode  by reading the value of [Kirigami.Settings.tabletMode](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1Settings.html#ad0e5d3914e8a36983e44a3bd35a9528f). Enable this mode for testing purposes on System Settings' General Behavior page.
+Detect that the app is running in tablet mode  by reading the value of [Kirigami.Settings.tabletMode](https://api.kde.org/qml-org-kde-kirigami-platform-settings.html#tabletMode-prop). Enable this mode for testing purposes on System Settings' General Behavior page.
 
-Detect that the app is running on a mobile phone by reading the value of [Kirigami.Settings.isMobile](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1Settings.html#abae81b4f287d9a96a44e1953f9833596). Set the `QT_QUICK_CONTROLS_MOBILE=1` environment variable to test your app in a simulated mobile mode.
+Detect that the app is running on a mobile phone by reading the value of [Kirigami.Settings.isMobile](https://api.kde.org/qml-org-kde-kirigami-platform-settings.html#isMobile-prop). Set the `QT_QUICK_CONTROLS_MOBILE=1` environment variable to test your app in a simulated mobile mode.
 {{< /alert >}}
 
 In addition, offer a good experience for laptop users by keeping these points in mind:
@@ -120,7 +120,7 @@ Only show a hamburger menu by default if its contents can be kept to about 15 it
 <summary>Click here to learn about relevant QtWidgets technologies</summary>
 <br/>
 
-In a QtWidgets app, use [KHamburgerMenu](https://api.kde.org/frameworks/kconfigwidgets/html/classKHamburgerMenu.html) to give a medium-to-large app both a menu bar and a hamburger menu. Choose a curated list of the most important actions for the hamburger menu, which will appear when the menubar is hidden.
+In a QtWidgets app, use [KHamburgerMenu](https://api.kde.org/khamburgermenu.html) to give a medium-to-large app both a menu bar and a hamburger menu. Choose a curated list of the most important actions for the hamburger menu, which will appear when the menubar is hidden.
 
 </details>
 {{< /alert >}}
@@ -131,11 +131,11 @@ Strive to minimize navigation as a chore for users to succeed at before they can
 
 Linear navigation works well for apps that have a step-by-step workflow with clear starting and ending points. Use the standard [PageStack](https://develop.kde.org/docs/getting-started/kirigami/components-pagerow_pagestack/) mechanism built into Kirigami for this navigation model, with breadcrumbs and back/forward buttons in the toolbar for navigation.
 
-For apps with multiple destinations not arranged in a linear flow, implement a dedicated navigational control to let the user jump from one destination to another. With five or fewer destinations, use a [Kirigami.NavigationTabBar](https://api.kde.org/frameworks/kirigami/html/classNavigationTabBar.html).
+For apps with multiple destinations not arranged in a linear flow, implement a dedicated navigational control to let the user jump from one destination to another. With five or fewer destinations, use a [Kirigami.NavigationTabBar](https://api.kde.org/qml-org-kde-kirigami-navigationtabbar.html).
 
 <!-- TODO: Picture of KClock -->
 
-Otherwise, use a [Kirigami.GlobalDrawer](https://api.kde.org/frameworks/kirigami/html/classGlobalDrawer.html) to display the navigation destinations.
+Otherwise, use a [Kirigami.GlobalDrawer](https://api.kde.org/qml-org-kde-kirigami-globaldrawer.html) to display the navigation destinations.
 
 <!-- TODO: Picture of Discover or Elisa -->
 
