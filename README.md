@@ -83,6 +83,12 @@ Install the HTML test to a directory in your PATH, like `~/.local/bin`:
 curl https://htmltest.wjdp.uk | bash -s -- -b ~/.local/bin
 ```
 
+Build the latest version of the website so a `public/` directory is generated:
+
+```bash
+hugo build
+```
+
 Enable `EnforceHTTPS: false` in `.htmltest.yml`, then run:
 
 ```bash
