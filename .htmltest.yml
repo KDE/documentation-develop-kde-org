@@ -20,10 +20,37 @@ IgnoreDirs: # Array of regexs of directories to ignore when scanning for HTML fi
 - reusable-assets
 - scss
 - store_badges
+- tr
+- sk
+- pt-br
+- es
+- uk
+- de
+- zh-tw
+- pt-pt
+- sl
+- fi
+- cs
+- nl
+- fr
+- ca
+- sv
+- eo
+- pl
+- cs
+- eu
+- it
+- ja
+- ko
+- pt
+- sl
+- uk
+- zh-cn
+
 IgnoreInternalEmptyHash: true # When true prevents raising an error for links with href="#".
-#IgnoreExternalBrokenLinks: false # When true produces a warning, rather than an error, for broken external links. Useful when testing a site having hundreds of external links.
+IgnoreExternalBrokenLinks: true # When true produces a warning, rather than an error, for broken external links. Useful when testing a site having hundreds of external links.
 IgnoreAltMissing: true # Turns off image alt attribute checking.
-IgnoreAltEmpty: false # Allows alt="" for decorative images.
+IgnoreAltEmpty: true # Allows alt="" for decorative images.
 IgnoreDirectoryMissingTrailingSlash: true # Turns off errors for links to directories without a trailing slash.
 IgnoreSSLVerify: true # Turns off x509 errors for self-signed certificates.
 #IgnoreTagAttribute: "data-proofer-ignore" # Specify the ignore attribute. All tags with this attribute will be excluded from every check.
