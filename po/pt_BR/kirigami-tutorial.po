@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-29 01:56+0000\n"
-"PO-Revision-Date: 2025-10-08 12:30-0300\n"
+"PO-Revision-Date: 2025-10-09 15:10-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -5264,16 +5264,16 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:244
 msgid "Understanding views and delegates"
-msgstr ""
+msgstr "Compreendendo visões e delegados"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:246
 msgid "Let's go back to the original example:"
-msgstr ""
+msgstr "Vamos voltar ao exemplo original:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:259
 #: content/docs/getting-started/kirigami/components-listview/index.md:391
 msgid "anchors.fill: parent"
-msgstr ""
+msgstr "anchors.fill: parent"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:280
 msgid ""
@@ -5282,6 +5282,10 @@ msgid ""
 "view is a visual component immediately instantiated and so it needs to "
 "either have its dimensions set or use anchors or Layouts."
 msgstr ""
+"Ao contrário do modelo (que contém apenas dados) e de um delegado "
+"[Componente](docs:qtqml;QtQml.Component) (que só aparece quando "
+"instanciado), a visão é um componente visual imediatamente instanciado e, "
+"portanto, precisa ter suas dimensões definidas ou usar âncoras ou Layouts."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:282
 msgid ""
@@ -5294,48 +5298,64 @@ msgid ""
 "up. In other words: in the scrollable page above, `anchors.fill: parent` is "
 "not required; if a simple page was used, it would be required."
 msgstr ""
+"Como as visões são comumente listas de conteúdo que o usuário deseja "
+"percorrer, quando são adicionadas a uma [Kirigami.ScrollablePage](docs:"
+"kirigami;org.kde.kirigami.ScrollablePage), as visões se tornam o conteúdo "
+"principal com pouco espaço ao redor delas, e não há necessidade de fazê-las "
+"preencher a página. Quando a visão é adicionada a uma [Kirigami.Page](docs:"
+"kirigami;org.kde.kirigami.Page) simples, será necessário definir suas "
+"dimensões corretamente antes de ser exibida. Em outras palavras: na página "
+"rolável acima, `anchors.fill: parent` não é necessário; se uma página "
+"simples fosse usada, seria necessário."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:284
 msgid ""
 "There are multiple views APIs can be used, some from Qt and some from "
 "Kirigami. Here are the most commonly used ones:"
 msgstr ""
+"Existem diversas APIs de visão que podem ser utilizadas, algumas do Qt e "
+"outras do Kirigami. Aqui estão as mais comumente utilizadas:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:286
 msgid "Qt's [ListView](docs:qtquick;QtQuick.ListView)"
-msgstr ""
+msgstr "[ListView](docs:qtquick;QtQuick.ListView) do Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:287
 msgid "Qt's [GridView](docs:qtquick;QtQuick.GridView)"
-msgstr ""
+msgstr "[GridView](docs:qtquick;QtQuick.GridView) do Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:288
 msgid "Qt's [TableView](docs:qtquick;QtQuick.TableView)"
-msgstr ""
+msgstr "[TableView](docs:qtquick;QtQuick.TableView) do Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:289
 msgid "Qt's [TreeView](docs:qtquick;QtQuick.TreeView)"
-msgstr ""
+msgstr "[TreeView](docs:qtquick;QtQuick.TreeView) do Qt"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:290
 msgid ""
 "Kirigami's [CardsListView](docs:kirigami;org.kde.kirigami.CardsListView)"
 msgstr ""
+"[CardsListView](docs:kirigami;org.kde.kirigami.CardsListView) do Kirigami"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:291
 msgid ""
 "Kirigami's [ColumnView](docs:kirigami;org.kde.kirigami.layouts.ColumnView)"
 msgstr ""
+"[ColumnView](docs:kirigami;org.kde.kirigami.layouts.ColumnView) do Kirigami"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:293
 msgid ""
 "The delegate on the other hand always need to have its dimensions set. "
 "Generally its dimensions are set to use only the full width of the view."
 msgstr ""
+"O delegado, por outro lado, sempre precisa ter suas dimensões definidas. "
+"Geralmente, suas dimensões são definidas para usar apenas a largura total da "
+"visão."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:295
 msgid "Common mistakes"
-msgstr ""
+msgstr "Erros comuns"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:297
 msgid ""
@@ -5343,12 +5363,17 @@ msgid ""
 "delegate doesn't need to have the same height as the view. In other words, "
 "you will probably never want to use `anchors.fill: parent`."
 msgstr ""
+"O acima significa que os delegados não devem ter âncoras inferiores, já que "
+"o delegado não precisa ter a mesma altura que a visão. Em outras palavras, "
+"você provavelmente nunca vai querer usar `anchors.fill: parent`."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:299
 msgid ""
 "Additionally, while it is possible to set its dimensions using the parent "
 "and anchors, which is usually the view's contentItem, like so:"
 msgstr ""
+"Além disso, embora seja possível definir suas dimensões usando o pai e as "
+"âncoras, que geralmente são o contentItem da visão, assim:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:309
 msgid ""
@@ -5357,6 +5382,10 @@ msgid ""
 "qml-qtquick-listview.html#view-attached-prop) attached property to point to "
 "the delegate's parent view:"
 msgstr ""
+"Não há garantia de que o pai do delegado seja uma visão e, portanto, isso "
+"deve ser evitado. Em vez disso, use a propriedade anexada [ListView.view]"
+"(https://doc.qt.io/qt-6/qml-qtquick-listview.html#view-attached-prop) para "
+"apontar para a visão pai do delegado:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:320
 msgid ""
@@ -5365,6 +5394,10 @@ msgid ""
 "is constructed, the delegate is then used as a blueprint to make each item "
 "in the view."
 msgstr ""
+"O uso mais comum de um delegado é dentro de um [Componente](docs:qtqml;QtQml."
+"Component), que não instancia o delegado imediatamente. Quando uma visão é "
+"construída, o delegado é então usado como um modelo para criar cada item na "
+"visão."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:322
 msgid ""
@@ -5372,91 +5405,121 @@ msgid ""
 "without delegate-specific Qt APIs (for example, a Layout containing a few "
 "Items), QtQuick Controls does provide delegate APIs that are simpler to use:"
 msgstr ""
+"Embora você possa criar seus próprios componentes personalizados para serem "
+"usados ​​como delegados sem APIs Qt específicas para delegados (por exemplo, "
+"um Layout contendo alguns Itens), o QtQuick Controls fornece APIs de "
+"delegados que são mais simples de usar:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:324
 msgid ""
 "[ItemDelegate](docs:qtquickcontrols;QtQuick.Controls.ItemDelegate) "
 "(delegates with only text)"
 msgstr ""
+"[ItemDelegate](docs:qtquickcontrols;QtQuick.Controls.ItemDelegate) "
+"(delegados com somente texto)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:325
 msgid ""
 "[CheckDelegate](docs:qtquickcontrols;QtQuick.Controls.CheckDelegate) "
 "(delegates with a checkbox)"
 msgstr ""
+"[CheckDelegate](docs:qtquickcontrols;QtQuick.Controls.CheckDelegate) "
+"(delegados com uma caixa de seleção)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:326
 msgid ""
 "[RadioDelegate](docs:qtquickcontrols;QtQuick.Controls.RadioDelegate) "
 "(delegates with a radio)"
 msgstr ""
+"[RadioDelegate](docs:qtquickcontrols;QtQuick.Controls.RadioDelegate) "
+"(delegados com um botão de opção)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:327
 msgid ""
 "[SwitchDelegate](docs:qtquickcontrols;QtQuick.Controls.SwitchDelegate) "
 "(delegates with a switch)"
 msgstr ""
+"[SwitchDelegate](docs:qtquickcontrols;QtQuick.Controls.SwitchDelegate) "
+"(delegados com um interruptor)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:328
 msgid ""
 "[SwipeDelegate](docs:qtquickcontrols;QtQuick.Controls.SwipeDelegate) "
 "(delegates that can be swiped)"
 msgstr ""
+"[SwipeDelegate](docs:qtquickcontrols;QtQuick.Controls.SwipeDelegate) "
+"(delegados que podem ser passados)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:330
 msgid "You should prefer using the upstream Qt delegates where possible."
-msgstr ""
+msgstr "Você deve preferir usar os delegados Qt upstream sempre que possível."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:332
 msgid ""
 "On top of these Qt delegates, Kirigami provides its own equivalents, with "
 "the added functionality of subtitles and icons:"
 msgstr ""
+"Além desses delegados do Qt, o Kirigami fornece seus próprios equivalentes, "
+"com a funcionalidade adicional de legendas e ícones:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:334
 msgid "[TitleSubtitle](docs:kirigami;org.kde.kirigami.delegates.TitleSubtitle)"
 msgstr ""
+"[TitleSubtitle](docs:kirigami;org.kde.kirigami.delegates.TitleSubtitle)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:335
 msgid ""
 "[IconTitleSubtitle](docs:kirigami;org.kde.kirigami.delegates."
 "IconTitleSubtitle)"
 msgstr ""
+"[IconTitleSubtitle](docs:kirigami;org.kde.kirigami.delegates."
+"IconTitleSubtitle)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:336
 msgid ""
 "[SubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates.SubtitleDelegate)"
 msgstr ""
+"[SubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates.SubtitleDelegate)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:337
 msgid ""
 "[CheckSubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates."
 "CheckSubtitleDelegate)"
 msgstr ""
+"[CheckSubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates."
+"CheckSubtitleDelegate)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:338
 msgid ""
 "[RadioSubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates."
 "RadioSubtitleDelegate)"
 msgstr ""
+"[RadioSubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates."
+"RadioSubtitleDelegate)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:339
 msgid ""
 "[SwitchSubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates."
 "SwitchSubtitleDelegate)"
 msgstr ""
+"[SwitchSubtitleDelegate](docs:kirigami;org.kde.kirigami.delegates."
+"SwitchSubtitleDelegate)"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:341
 msgid ""
 "The API ending with \"Delegate\" can be set as a direct delegate of the "
 "view, just like the previous examples that used Controls.ItemDelegate:"
 msgstr ""
+"A API que termina com \"Delegate\" pode ser definida como um delegado direto "
+"da visão, assim como os exemplos anteriores que usaram Controls.ItemDelegate:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:377
 msgid ""
 "Both TitleSubtitle and IconTitleSubtitle are expected to be used to override "
 "a Qt delegate's contentItem, for example:"
 msgstr ""
+"Espera-se que TitleSubtitle e IconTitleSubtitle sejam usados ​​para substituir "
+"o contentItem de um delegado Qt, por exemplo:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:417
 msgid ""
@@ -5464,19 +5527,24 @@ msgid ""
 "[ListItemTest file in the Kirigami Repository](https://invent.kde.org/"
 "frameworks/kirigami/-/blob/master/tests/ListItemTest.qml)."
 msgstr ""
+"Um exemplo prático do uso de delegados Kirigami pode ser visto no [arquivo "
+"ListItemTest no Repositório Kirigami](https://invent.kde.org/frameworks/"
+"kirigami/-/blob/master/tests/ListItemTest.qml)."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:0
 msgid "Page rows and page stacks"
-msgstr ""
+msgstr "Linhas de páginas e pilhas de páginas"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:0
 msgid ""
 "Add flow to your application: Add, remove and replace pages in different ways"
 msgstr ""
+"Adicione fluxo ao seu aplicativo: adicione, remova e substitua páginas de "
+"diferentes maneiras"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:10
 msgid "A row of pages"
-msgstr ""
+msgstr "Uma linha de páginas"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:12
 msgid ""
@@ -5485,6 +5553,10 @@ msgid ""
 "envelop the whole screen of the application, or it can be shown together "
 "with other pages at the same time, if there is space."
 msgstr ""
+"Vimos até agora que um dos principais componentes de uma janela Kirigami é "
+"uma [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). Uma única página "
+"pode envolver toda a tela do aplicativo ou pode ser exibida junto com outras "
+"páginas ao mesmo tempo, se houver espaço."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:14
 msgid ""
@@ -5492,14 +5564,20 @@ msgid ""
 "existing page(s), forming a row. This row of pages can be managed with the "
 "fittingly named [Kirigami.PageRow](docs:kirigami;org.kde.kirigami.PageRow)."
 msgstr ""
+"Sempre que uma página é adicionada ou *enviada*, ela aparece à direita da(s) "
+"página(s) existente(s), formando uma linha. Essa linha de páginas pode ser "
+"gerenciada com o apropriadamente chamado [Kirigami.PageRow](docs:kirigami;"
+"org.kde.kirigami.PageRow)."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:16
 msgid "A minimal page row with a single page could look like this:"
 msgstr ""
+"Uma linha de página mínima com uma única página poderia ter esta aparência:"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:42
 msgid "A single page with light blue color to show the page's dimensions"
 msgstr ""
+"Uma única página com cor azul claro para mostrar as dimensões da página"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:44
 msgid ""
@@ -5515,17 +5593,33 @@ msgid ""
 "pagerow.html#globalToolBar-prop). There are a few styles we can choose from, "
 "but we'll go with `Kirigami.ApplicationHeaderStyle.Auto` for now."
 msgstr ""
+"Há duas melhorias que podem ser feitas aqui. A primeira é que, com "
+"[initialPage](https://api-staging.kde.org/qml-org-kde-kirigami-pagerow."
+"html#initialPage-prop), podemos definir `mainPage` como a primeira página "
+"que aparece na linha da página e ter suas dimensões gerenciadas pela linha "
+"da página em vez de [âncoras](https://doc.qt.io/qt-6/qtquick-positioning-"
+"anchors.html), [posicionadores](https://doc.qt.io/qt-6/qtquick-positioning-"
+"layouts.html) ou [layouts](https://doc.qt.io/qt-6/layout.html) manuais. A "
+"segunda é ter uma barra de ferramentas, que pode ser definida definindo um "
+"estilo de barra de ferramentas com [globalToolBar.style](https://api-staging."
+"kde.org/qml-org-kde-kirigami-pagerow.html#globalToolBar-prop). Existem "
+"alguns estilos que podemos escolher, mas usaremos `Kirigami."
+"ApplicationHeaderStyle.Auto` por enquanto."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:46
 msgid ""
 "<!-- TODO: investigate why Kirigami.ApplicationHeaderStyle doesn't show up "
 "in the tag file. -->\n"
 msgstr ""
+"<!-- TODO: investigar porque Kirigami.ApplicationHeaderStyle não mostra no "
+"arquivo da etiqueta. -->\n"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:69
 msgid ""
 "A single page with toolbar and light blue color to show the page's dimensions"
 msgstr ""
+"Uma única página com barra de ferramentas e cor azul claro para mostrar as "
+"dimensões da página"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:71
 msgid ""
@@ -5538,19 +5632,28 @@ msgid ""
 "PageRow::goBack) or [goForward()](docs:kirigami;org.kde.kirigami.PageRow::"
 "goForward) can be used to navigate between pages."
 msgstr ""
+"Existem apenas duas maneiras de adicionar páginas a uma linha de página: "
+"definindo sua [initialPage](https://api-staging.kde.org/qml-org-kde-kirigami-"
+"pagerow.html#initialPage-prop) (que pode, opcionalmente, receber um array de "
+"páginas) ou usando [push()](docs:kirigami;org.kde.kirigami.PageRow::push). "
+"Para excluir uma página da linha de página, você deve usar [pop()](docs:"
+"kirigami;org.kde.kirigami.PageRow::pop), enquanto [goBack()](docs:kirigami;"
+"org.kde.kirigami.PageRow::goBack) ou [goForward()](docs:kirigami;org.kde."
+"kirigami.PageRow::goForward) podem ser usados ​​para navegar entre páginas."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:117
 msgid "Initial page with light blue color"
-msgstr ""
+msgstr "Página inicial com cor azul claro"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:119
 msgid ""
 "Upon clicking \\\"Push!\\\", a second page with light green color shows up"
 msgstr ""
+"Ao clicar em \\\"Push!\\\", uma segunda página com cor verde claro aparece"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:121
 msgid "The application's stack of pages"
-msgstr ""
+msgstr "A pilha de páginas do aplicativo"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:123
 msgid ""
@@ -5561,12 +5664,20 @@ msgid ""
 "a very convenient, global page row. Every function available to a `PageRow` "
 "is also available to the `pageStack`."
 msgstr ""
+"Se uma [Kirigami.PageRow](docs:kirigami;org.kde.kirigami.PageRow) com uma "
+"barra de ferramentas lhe parece familiar, é porque você já o viu antes. Um "
+"[ApplicationWindow.pageStack](https://api-staging.kde.org/qml-org-kde-"
+"kirigami-abstractapplicationwindow.html#pageStack-prop) nada mais é do que "
+"uma linha de página global muito conveniente. Todas as funções disponíveis "
+"para um `PageRow` também estão disponíveis para o `pageStack`."
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:125
 msgid ""
 "The previous example can be reduced significantly with a `pageStack`, with "
 "the added bonus of navigation actions:"
 msgstr ""
+"O exemplo anterior pode ser reduzido significativamente com um `pageStack`, "
+"com o bônus adicional de ações de navegação:"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:173
 msgid ""
@@ -5579,30 +5690,41 @@ msgid ""
 "`pageStack` by means of a call to the [applicationWindow()](docs:kirigami;"
 "org.kde.kirigami.AbstractApplicationWindow::applicationWindow):"
 msgstr ""
+"Em geral, você vai querer usar um `pageStack` em vez de implementar seu "
+"próprio [PageRow](docs:kirigami;org.kde.kirigami.PageRow), especialmente "
+"quando seu aplicativo fica maior e você precisa que seus componentes fiquem "
+"em arquivos separados. Se você criar sua janela em `Main.qml` usando um "
+"[Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami."
+"ApplicationWindow), um componente que reside em outro arquivo ainda pode "
+"invocar diretamente o global `pageStack` por meio de uma chamada à função "
+"[applicationWindow()](docs:kirigami;org.kde.kirigami."
+"AbstractApplicationWindow::applicationWindow):"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:176
 msgid "\"Main.qml\""
-msgstr ""
+msgstr "\"Main.qml\""
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:187
 msgid "and"
-msgstr ""
+msgstr "e"
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:190
 msgid "\"BasicPage.qml\""
-msgstr ""
+msgstr "\"BasicPage.qml\""
 
 #: content/docs/getting-started/kirigami/components-pagerow_pagestack/index.md:216
 msgid "Clicking the button pushes a new page with help of applicationWindow"
-msgstr ""
+msgstr "Clicar no botão abre uma nova página com a ajuda do applicationWindow"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:0
 msgid "Progress bars and indicators"
-msgstr ""
+msgstr "Barras de progresso e indicadores"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:0
 msgid "Provide your users with loading state information using progress bars."
 msgstr ""
+"Forneça aos seus usuários informações sobre o estado de carregamento usando "
+"barras de progresso."
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:10
 msgid ""
@@ -5610,15 +5732,20 @@ msgid ""
 "time, you will want to use a visual element that tells the user that "
 "something is happening in the background."
 msgstr ""
+"Sempre que seu aplicativo fizer algo que leve uma quantidade considerável de "
+"tempo, você vai querer usar um elemento visual que informe ao usuário que "
+"algo está acontecendo em segundo plano."
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:12
 msgid ""
 "QtQuick Controls provides two useful components that you can use to this end."
 msgstr ""
+"O QtQuick Controls fornece dois componentes úteis que você pode usar para "
+"essa finalidade."
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:14
 msgid "Progress bar"
-msgstr ""
+msgstr "Barra de progresso"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:16
 msgid ""
@@ -5626,24 +5753,33 @@ msgid ""
 "a component that lets you easily include progress bars in your application. "
 "There are four main properties you will need to use:"
 msgstr ""
+"[Controls.ProgressBar](docs:qtquickcontrols;QtQuick.Controls.ProgressBar) é "
+"um componente que permite incluir facilmente barras de progresso em seu "
+"aplicativo. Há quatro propriedades principais que você precisará usar:"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:18
 msgid ""
 "[from](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#from-"
 "prop): the minimum value represented by the start of the progress bar"
 msgstr ""
+"[from](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#from-"
+"prop): o valor mínimo representado pelo início da barra de progresso"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:19
 msgid ""
 "[to](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#to-prop): "
 "the maximum value represented by the end of the progress bar"
 msgstr ""
+"[to](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#to-prop): "
+"o valor máximo representado pelo final da barra de progresso"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:20
 msgid ""
 "[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#value-"
 "prop): the current value of the action that is in progress (e.g. 50% loaded)"
 msgstr ""
+"[value](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar.html#value-"
+"prop): o valor atual da ação em andamento (por exemplo, 50% carregado)"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:21
 msgid ""
@@ -5653,18 +5789,24 @@ msgid ""
 "that something is happening but its progress is not yet clear (but will be "
 "soon)."
 msgstr ""
+"[indeterminate](https://doc.qt.io/qt-6/qml-qtquick-controls2-progressbar."
+"html#indeterminate-prop): se a ação em andamento não tiver um valor de "
+"progresso claro, você pode definir esta propriedade como `true` para mostrar "
+"ao usuário que algo está acontecendo, mas seu progresso ainda não está claro "
+"(mas estará em breve)."
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:52
 msgid "value: 50"
-msgstr ""
+msgstr "value: 50"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:66
 msgid "Above: progress bar at 50%; below: indeterminate progress bar"
 msgstr ""
+"Acima: barra de progresso em 50%; abaixo: barra de progresso indeterminada"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:72
 msgid "Busy indicator"
-msgstr ""
+msgstr "Indicador de ocupado"
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:74
 msgid ""
@@ -5673,6 +5815,10 @@ msgid ""
 "QtQuick.Controls.BusyIndicator). This component provides a simple spinning "
 "wheel that shows users that something is happening."
 msgstr ""
+"Nos casos em que os tempos de carregamento são mais curtos ou a medição do "
+"progresso não é viável, você pode usar [Controls.BusyIndicator](docs:"
+"qtquickcontrols;QtQuick.Controls.BusyIndicator). Este componente fornece uma "
+"roda giratória simples que mostra aos usuários que algo está acontecendo."
 
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:76
 msgid ""
@@ -5680,20 +5826,25 @@ msgid ""
 "[running](https://doc.qt.io/qt-6/qml-qtquick-controls2-busyindicator."
 "html#running-prop) property to false, in which case the ."
 msgstr ""
+"Se quiser que o indicador pare de funcionar, você pode fazer isso definindo "
+"a propriedade [running](https://doc.qt.io/qt-6/qml-qtquick-controls2-"
+"busyindicator.html#running-prop) como falsa."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:0
 msgid "Scrollable pages and list views"
-msgstr ""
+msgstr "Páginas roláveis ​​e visualizações de lista"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:0
 msgid ""
 "Scrollable pages are useful when combined with vertical components or "
 "dynamic components such as List Views."
 msgstr ""
+"Páginas roláveis ​​são úteis quando combinadas com componentes verticais ou "
+"componentes dinâmicos, como visualizações de lista."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:10
 msgid "Kirigami.ScrollablePage"
-msgstr ""
+msgstr "Kirigami.ScrollablePage"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:12
 msgid ""
@@ -5702,15 +5853,21 @@ msgid ""
 "QtQuick.ListView). Scrolling, as well as scrolling indicators, are "
 "automatically managed."
 msgstr ""
+"Uma [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage) "
+"é uma página que contém conteúdo rolável, como uma [ListView](docs:qtquick;"
+"QtQuick.ListView). A rolagem, assim como os indicadores de rolagem, são "
+"gerenciados automaticamente."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:18
 msgid "The rectangle will automatically be scrollable"
-msgstr ""
+msgstr "O retângulo será automaticamente rolável"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:26
 msgid ""
 "In almost every other way, a scrollable page is the same as a normal page."
 msgstr ""
+"Em quase todos os outros aspectos, uma página rolável é igual a uma página "
+"normal."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:30
 msgid ""
@@ -5719,10 +5876,14 @@ msgid ""
 "ScrollablePage); children of a `Kirigami.ScrollablePage` are already inside "
 "a `ScrollView`."
 msgstr ""
+"Não coloque uma [ScrollView](docs:qtquickcontrols;QtQuick.Controls."
+"ScrollView) dentro de uma [Kirigami.ScrollablePage](docs:kirigami;org.kde."
+"kirigami.ScrollablePage); os filhos de uma `Kirigami.ScrollablePage` já "
+"estão dentro de uma `ScrollView`."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:35
 msgid "ListView in a ScrollablePage"
-msgstr ""
+msgstr "ListView em uma ScrollablePage"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:37
 msgid ""
@@ -5731,12 +5892,18 @@ msgid ""
 "itself, a scrollbar appears at the right edge of the page and the page will "
 "be scrollable."
 msgstr ""
+"Quando os filhos diretos de uma [Kirigami.ScrollablePage](docs:kirigami;org."
+"kde.kirigami.ScrollablePage) se estendem verticalmente além do tamanho da "
+"própria página, uma barra de rolagem aparece na borda direita da página e "
+"ela se torna rolável."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:41
 msgid ""
 "Two scrollable pages, both containing a ListView with custom contents "
 "(screenshot of NeoChat)"
 msgstr ""
+"Duas páginas roláveis, ambas contendo uma ListView com conteúdo "
+"personalizado (captura de tela do NeoChat)"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:43
 msgid ""
@@ -5745,6 +5912,10 @@ msgid ""
 "tricky—especially in combination with a [ListView](docs:qtquick;QtQuick."
 "ListView)."
 msgstr ""
+"Frequentemente, você tem mais de um filho em sua [Kirigami.ScrollablePage]"
+"(docs:kirigami;org.kde.kirigami.ScrollablePage), e posicionar itens pode ser "
+"complicado — especialmente em combinação com uma [ListView](docs:qtquick;"
+"QtQuick.ListView)."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:46
 msgid ""
@@ -5753,6 +5924,11 @@ msgid ""
 "move them inside the scope of the list view. Same for elements anchored to "
 "the center of the page, such as placeholder messages for empty list views."
 msgstr ""
+"Para componentes não visuais, tê-los dentro do componente [ListView](docs:"
+"qtquick;QtQuick.ListView) não alterará os visuais da página, portanto, "
+"podemos movê-los para dentro do escopo da visualização de lista. O mesmo "
+"vale para elementos ancorados no centro da página, como mensagens de espaço "
+"reservado para visualizações de lista vazias."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:49
 msgid ""
@@ -5760,10 +5936,13 @@ msgid ""
 "the [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami."
 "ScrollablePage). This is often the case for search bars."
 msgstr ""
+"Para outros itens, pode fazer sentido movê-los para o cabeçalho ou rodapé da "
+"[Kirigami.Scrollable Page](docs:kirigami;org.kde.kirigami.Scrollable Page). "
+"Este é frequentemente o caso das barras de pesquisa."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:52
 msgid "PlaceholderMessage"
-msgstr ""
+msgstr "PlaceholderMessage"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:54
 msgid ""
@@ -5771,18 +5950,21 @@ msgid ""
 "kirigami.PlaceholderMessage) with some instructions in case the list view is "
 "empty."
 msgstr ""
+"É possível adicionar uma [Kirigami.PlaceholderMessage](docs:kirigami;org.kde."
+"kirigami.PlaceholderMessage) com algumas instruções caso a visualização da "
+"lista esteja vazia."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:68
 msgid "More code..."
-msgstr ""
+msgstr "Mais código..."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:71
 msgid "Model code..."
-msgstr ""
+msgstr "Código modelo..."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:76
 msgid "Search in the ListView"
-msgstr ""
+msgstr "Pesquisar em uma ListView"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:78
 msgid ""
@@ -5793,14 +5975,20 @@ msgid ""
 "prop) to use a [Kirigami.SearchField](docs:kirigami;org.kde.kirigami."
 "SearchField) instead."
 msgstr ""
+"Um campo de busca é frequentemente adicionado a uma [Kirigami.ScrollablePage]"
+"(docs:kirigami;org.kde.kirigami.ScrollablePage) para filtrar a [ListView]"
+"(docs:qtquick;QtQuick.ListView). Isso pode ser feito alterando o "
+"[titleDelegate](https://api-staging.kde.org/qml-org-kde-kirigami-page."
+"html#titleDelegate-prop) padrão para usar um [Kirigami.SearchField](docs:"
+"kirigami;org.kde.kirigami.SearchField)."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:95
 msgid "Rest of listview code..."
-msgstr ""
+msgstr "Resto do código da listview..."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:100
 msgid "Hint"
-msgstr ""
+msgstr "Dica"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:102
 msgid ""
@@ -5809,16 +5997,22 @@ msgid ""
 "kitemmodels-index.html) to easily add filtering capability directly in QML "
 "without any need for C++ code."
 msgstr ""
+"Você pode usar [KSortFilterProxyModel](https://api-staging.kde.org/qml-org-"
+"kde-kitemmodels-ksortfilterproxymodel.html) de [KItemModel](docs:kitemmodels;"
+"kitemmodels-index.html) para adicionar facilmente recursos de filtragem "
+"diretamente em QML sem a necessidade de código C++."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:108
 msgid "Pull to refresh"
-msgstr ""
+msgstr "Puxe para atualizar"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:110
 msgid ""
 "Another function provided by this component is a \"pull-to-refresh\" action. "
 "To use this, activate it as follows:"
 msgstr ""
+"Outra função oferecida por este componente é a ação \"puxar para atualizar"
+"\". Para usá-la, ative-a da seguinte forma:"
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:123
 msgid ""
@@ -5826,38 +6020,50 @@ msgid ""
 "how it can be used together with some application logic that can update the "
 "list model and signals when it's done."
 msgstr ""
+"OBSERVAÇÃO: MyModel não vem dos componentes, é apenas um exemplo de como ele "
+"pode ser usado em conjunto com alguma lógica de aplicativo que pode "
+"atualizar o modelo de lista e sinalizar quando estiver pronto."
 
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:135
 msgid ""
 "By pulling down, you can also activate a special mode with a larger top "
 "margin which makes single-handed use of the application easier."
 msgstr ""
+"Ao puxar para baixo, você também pode ativar um modo especial com uma margem "
+"superior maior, o que facilita o uso do aplicativo com uma só mão."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:0
 msgid "Adding actions"
-msgstr ""
+msgstr "Adicionando ações"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:0
 msgid ""
 "Learning more about Kirigami's Actions will help us make our application "
 "more useful.\n"
 msgstr ""
+"Aprender mais sobre as ações do Kirigami nos ajudará a tornar nosso "
+"aplicativo mais útil.\n"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:10
 msgid "Recap"
-msgstr ""
+msgstr "Recapitulação"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:12
 msgid ""
 "So far, we built a simple app that can display cards. However, there is "
 "currently no way for the user to add new cards to the card view."
 msgstr ""
+"Até agora, criamos um aplicativo simples que pode exibir cartões. No "
+"entanto, atualmente não há como o usuário adicionar novos cartões à "
+"visualização de cartões."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:14
 msgid ""
 "In this tutorial, we'll be looking at Kirigami actions. These will help us "
 "add interactivity to our app in a consistent, fast, and accessible way."
 msgstr ""
+"Neste tutorial, veremos as ações do Kirigami. Elas nos ajudarão a adicionar "
+"interatividade ao nosso aplicativo de forma consistente, rápida e acessível."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:18
 msgid ""
@@ -5865,6 +6071,9 @@ msgid ""
 "user interface action. We can use these to provide our applications with "
 "easy-to-reach actions that are essential to their functionality."
 msgstr ""
+"Uma [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) encapsula uma "
+"ação de interface do usuário. Podemos usá-la para fornecer aos nossos "
+"aplicativos ações fáceis de alcançar, essenciais para sua funcionalidade."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:20
 msgid ""
@@ -5873,20 +6082,27 @@ msgid ""
 "title with various icons. Kirigami actions can be displayed in several ways "
 "and can do a wide variety of things."
 msgstr ""
+"Se você já usou aplicativos Kirigami, certamente já interagiu com ações "
+"Kirigami. Nesta imagem, podemos ver ações à direita do título da página com "
+"vários ícones. As ações Kirigami podem ser exibidas de diversas maneiras e "
+"podem realizar uma ampla variedade de ações."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:30
 msgid "Adding countdowns"
-msgstr ""
+msgstr "Adicionando contagem regressiva"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:32
 msgid ""
 "A countdown app is pretty useless without the ability to add countdowns. "
 "Let's create an action that'll let us do this."
 msgstr ""
+"Um aplicativo de contagem regressiva é praticamente inútil sem a capacidade "
+"de adicionar contagens regressivas. Vamos criar uma ação que nos permita "
+"fazer isso."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:40
 msgid "Other page properties..."
-msgstr ""
+msgstr "Outras propriedades da página..."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:58
 msgid ""
@@ -5894,6 +6110,10 @@ msgid ""
 "within our main page from the previous tutorials. If we wanted to, we could "
 "add more actions to our page (and even nest actions within actions!)."
 msgstr ""
+"Estamos colocando nosso [Kirigami.Action](docs:kirigami;org.kde.kirigami."
+"Action) dentro da nossa página principal dos tutoriais anteriores. Se "
+"quiséssemos, poderíamos adicionar mais ações à nossa página (e até mesmo "
+"aninhar ações dentro de ações!)."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:60
 msgid ""
@@ -5901,14 +6121,17 @@ msgid ""
 "w3schools.com/js/js_arrays.asp), which means you can pass one or more things "
 "to them, separated by comma:"
 msgstr ""
+"Os colchetes `[]` usados ​​acima são semelhantes aos [arrays JavaScript]"
+"(https://www.w3schools.com/js/js_arrays.asp), o que significa que você pode "
+"passar uma ou mais coisas para eles, separadas por vírgula:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:63
 msgid "General JavaScript array of components:"
-msgstr ""
+msgstr "Array de componentes JavaScript:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:65
 msgid "Passing an array of Kirigami actions to QML:"
-msgstr ""
+msgstr "Passando uma série de ações Kirigami para QML:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:69
 msgid ""
@@ -5919,10 +6142,16 @@ msgid ""
 "actions. Fortunately, to use KDE icons all we need to do is provide the name "
 "property for the icon property, `icon.name`."
 msgstr ""
+"As propriedades `id` e `text` devem ser familiares de tutoriais anteriores. "
+"No entanto, a propriedade herdada [Action.icon](https://doc.qt.io/qt-6/qml-"
+"qtquick-controls2-action.html#icon-prop) deve ser interessante: é um objeto "
+"com diversas propriedades que permitem exibir determinados ícones para suas "
+"ações. Felizmente, para usar os ícones do KDE, tudo o que precisamos fazer é "
+"fornecer a propriedade `name` para a propriedade do ícone, `icon.name`."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:71
 msgid "Viewing the available icons"
-msgstr ""
+msgstr "Vendo os ícones disponíveis"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:73
 msgid ""
@@ -5936,6 +6165,16 @@ msgid ""
 "different sizes, and more. You might find it a useful tool when deciding on "
 "which icons to use in your application.<br><br>\n"
 msgstr ""
+"<detais>\n"
+"<summary>Clique aqui para ver como verificar os ícones disponíveis no seu "
+"sistema</summary>\n"
+"<br>\n"
+"O explorador de ícones é um aplicativo do KDE que permite visualizar todos "
+"os ícones que você pode usar no seu aplicativo. Ele oferece diversos "
+"recursos úteis, como visualizações da aparência em diferentes temas "
+"instalados, visualizações em diferentes tamanhos e muito mais. Você pode "
+"considerá-lo uma ferramenta útil ao decidir quais ícones usar no seu "
+"aplicativo.<br><br>\n"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:78
 msgid ""
@@ -5945,6 +6184,11 @@ msgid ""
 "(https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-"
 "latest.html)."
 msgstr ""
+"Muitos dos ícones do KDE seguem a especificação de nomenclatura de ícones do "
+"FreeDesktop. Portanto, você também pode achar útil consultar o site do "
+"projeto FreeDesktop, [que lista todos os nomes de ícones compatíveis com "
+"vários desktops](https://specifications.freedesktop.org/icon-naming-spec/"
+"icon-naming-spec-latest.html)."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:84
 msgid ""
@@ -5958,16 +6202,27 @@ msgid ""
 "relevant properties for our countdowns (`name`, `description`, and a "
 "placeholder `date`)."
 msgstr ""
+"O manipulador de sinais [onTriggered](docs:qtquickcontrols;QtQuick.Controls."
+"Action::triggered) é o mais importante. É isso que nossa ação fará quando "
+"for usada. Você notará que, em nosso exemplo, estamos usando o método "
+"[kountdownModel.append](https://doc.qt.io/qt-6/qml-qtqml-models-listmodel."
+"html#append-method) do `kountdownModel` que criamos em nosso tutorial "
+"anterior. Este método nos permite adicionar um novo elemento ao nosso modelo "
+"de lista. Estamos fornecendo a ele um objeto (indicado por chaves `{}`) que "
+"possui as propriedades relevantes para nossas contagens regressivas (`name`, "
+"`description` e um espaço reservado `date`)."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:92
 msgid ""
 "Each time we click our \\\"Add kountdown\\\" button on the top right, our "
 "custom countdown is added"
 msgstr ""
+"Cada vez que clicamos no botão \\\"Adicionar contagem regressiva\\\" no "
+"canto superior direito, nossa contagem regressiva personalizada é adicionada"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:94
 msgid "Mobile version"
-msgstr ""
+msgstr "Versão para dispositivos móveis"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:106
 msgid ""
@@ -5979,10 +6234,17 @@ msgid ""
 "actions. We are going to create a simple global drawer that includes a \"quit"
 "\" button."
 msgstr ""
+"O próximo componente é uma [Kirigami.GlobalDrawer](docs:kirigami;org.kde."
+"kirigami.GlobalDrawer). Ela aparece como um [menu de hambúrguer](https://en."
+"wikipedia.org/wiki/Hamburger_button). Por padrão, ela abre uma barra "
+"lateral, o que é especialmente útil em dispositivos móveis, pois o usuário "
+"pode simplesmente deslizar um lado da tela para abri-la. Gavetas globais são "
+"úteis para navegação e ações globais. Vamos criar uma gaveta global simples "
+"que inclui um botão \"sair\"."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:111
 msgid "Other window properties..."
-msgstr ""
+msgstr "Outras propriedades da janela..."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:128
 msgid ""
@@ -5994,6 +6256,13 @@ msgid ""
 "executes the [Qt.quit()](docs:qtqml;QtQml.Qt::quit) function when triggered, "
 "closing the application."
 msgstr ""
+"Aqui, colocamos nossa gaveta global dentro da janela do aplicativo. A "
+"principal propriedade à qual precisamos prestar atenção é [GlobalDrawer."
+"actions](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer."
+"html#actions-prop), que assume a forma de um array de componentes [Kirigami."
+"Action](docs:kirigami;org.kde.kirigami.Action). Esta ação tem um ícone "
+"apropriado e executa a função [Qt.quit()](docs:qtqml;QtQml.Qt::quit) quando "
+"acionada, fechando o aplicativo."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:131
 msgid ""
@@ -6003,10 +6272,15 @@ msgid ""
 "drawer as a normal application menu, taking up less space than the default "
 "global drawer pane."
 msgstr ""
+"Como estamos mantendo nossa gaveta global simples por enquanto, estamos "
+"definindo a propriedade [GlobalDrawer.isMenu](https://api-staging.kde.org/"
+"qml-org-kde-kirigami-globaldrawer.html#isMenu-prop) como `true`. Isso exibe "
+"nossa gaveta global como um menu de aplicativo normal, ocupando menos espaço "
+"do que o painel padrão da gaveta global."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:139
 msgid "Global drawer as a menu"
-msgstr ""
+msgstr "Gaveta global como um menu"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:147
 msgid ""
@@ -6014,10 +6288,13 @@ msgid ""
 "actions/) page of these docs provides further detail on Kirigami Actions and "
 "how they can be used."
 msgstr ""
+"A página [Componentes baseados em ações](/docs/getting-started/kirigami/"
+"components-actions/) desta documentação fornece mais detalhes sobre as ações "
+"do Kirigami e como elas podem ser usadas."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:151
 msgid "Actions are contextual"
-msgstr ""
+msgstr "Ações são contextuais"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:153
 msgid ""
@@ -6028,6 +6305,12 @@ msgid ""
 "derivative Page component, they will show up on the right side of the header "
 "in desktop mode, and on the bottom in mobile mode."
 msgstr ""
+"Os componentes Kirigami são projetados de forma que o local onde você insere "
+"as ações do Kirigami seja relevante. Como visto acima, se você adicionar "
+"ações a uma [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page), [Kirigami."
+"ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage) ou qualquer "
+"outro componente derivado de Página, elas serão exibidas no lado direito do "
+"cabeçalho no modo desktop e na parte inferior no modo de dispositivos móveis."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:155
 msgid ""
@@ -6035,12 +6318,17 @@ msgid ""
 "kirigami;org.kde.kirigami.GlobalDrawer), they will show up in the resulting "
 "drawer or menu."
 msgstr ""
+"Da mesma forma, se as ações do Kirigami forem adicionadas a um [Kirigami."
+"GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer), elas aparecerão "
+"na gaveta ou menu resultante."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:157
 msgid ""
 "Other examples of Kirigami Actions showing up differently depending on their "
 "parent component are:"
 msgstr ""
+"Outros exemplos de ações do Kirigami que aparecem de forma diferente "
+"dependendo do seu componente pai são:"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:159
 msgid ""
@@ -6048,6 +6336,9 @@ msgid ""
 "[ContextDrawer tutorial here](/docs/getting-started/kirigami/components-"
 "drawers#context-drawers)"
 msgstr ""
+"[Kirigami.ContextDrawer](docs:kirigami;org.kde.kirigami.ContextDrawer) - "
+"[Tutorial do ContextDrawer aqui](/docs/getting-started/kirigami/components-"
+"drawers#context-drawers)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:160
 msgid ""
@@ -6055,12 +6346,17 @@ msgid ""
 "derivatives - [Card tutorial here](/docs/getting-started/kirigami/components-"
 "card)"
 msgstr ""
+"[Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) de "
+"derivados - [Tutorial de cartão aqui](/docs/getting-started/kirigami/"
+"components-card)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:161
 msgid ""
 "[Kirigami.Dialog](docs:kirigami;org.kde.kirigami.Dialog) and derivatives - "
 "[Dialog tutorial here](/docs/getting-started/kirigami/components-dialogs)"
 msgstr ""
+"[Kirigami.Dialog](docs:kirigami;org.kde.kirigami.Dialog) e derivados - "
+"[Tutorial de diálogo aqui](/docs/getting-started/kirigami/components-dialogs)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:162
 msgid ""
@@ -6068,16 +6364,19 @@ msgid ""
 "[ActionToolBar tutorial here](/docs/getting-started/kirigami/components-"
 "actions#actiontoolbar)"
 msgstr ""
+"[Kirigami.ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToolBar) - "
+"[Tutorial de ActionToolBar aqui](/docs/getting-started/kirigami/components-"
+"actions#actiontoolbar)"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:164
 msgid "Among other Kirigami components."
-msgstr ""
+msgstr "Entre outros componentes do Kirigami."
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:166
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:200
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:257
 msgid "Our app so far"
-msgstr ""
+msgstr "Nosso aplicativo até agora"
 
 #: content/docs/getting-started/kirigami/introduction-actions/index.md:168
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:202
@@ -6086,24 +6385,29 @@ msgid ""
 "<details>\n"
 "<summary><b>Main.qml:</b></summary>\n"
 msgstr ""
+"<details>\n"
+"<summary><b>Main.qml:</b></summary>\n"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:0
 msgid "Adding a dialog"
-msgstr ""
+msgstr "Adicionando um diálogo"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:0
 msgid "Getting to grips with Kirigami dialogs.\n"
-msgstr ""
+msgstr "Familiarizando-se com os diálogos do Kirigami.\n"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:11
 msgid "Making our app useful"
-msgstr ""
+msgstr "Tornando nosso aplicativo útil"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:13
 msgid ""
 "We have a window, we have cards, and we have actions. Yet, we still need to "
 "find some way of inputting a name, description, and date of our choice."
 msgstr ""
+"Temos uma janela, temos cartões e temos ações. No entanto, ainda precisamos "
+"encontrar uma maneira de inserir um nome, uma descrição e uma data de nossa "
+"escolha."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:15
 msgid ""
@@ -6111,18 +6415,21 @@ msgid ""
 "required input elements. However, a whole page dedicated to providing a "
 "name, description, and date seems a bit excessive."
 msgstr ""
+"Uma maneira de fazer isso é criar uma nova página onde colocamos os "
+"elementos de entrada necessários. No entanto, uma página inteira dedicada a "
+"fornecer nome, descrição e data parece um pouco excessiva."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:17
 msgid "Instead, we'll be using a dialog."
-msgstr ""
+msgstr "Em vez disso, usaremos um diálogo."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:19
 msgid "![Dialog appearing in the middle of the application](dialog.webp)"
-msgstr ""
+msgstr "![Caixa de diálogo aparecendo no meio do aplicativo](dialog.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:21
 msgid "Opening the dialog"
-msgstr ""
+msgstr "Abrindo o diálogo"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:37
 msgid ""
@@ -6130,10 +6437,13 @@ msgid ""
 "(docs:kirigami;org.kde.kirigami.Action) that triggers the dialog's [open()]"
 "(docs:qtquickcontrols;QtQuick.Controls.Popup::open) function."
 msgstr ""
+"Primeiro, editamos a ação do tutorial anterior: apenas uma [Kirigami.Action]"
+"(docs:kirigami;org.kde.kirigami.Action) que aciona a função [open()](docs:"
+"qtquickcontrols;QtQuick.Controls.Popup::open) da caixa de diálogo."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:39
 msgid "Countdown-adding dialogs"
-msgstr ""
+msgstr "Caixas de diálogo de adição de contagem regressiva"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:41
 msgid ""
@@ -6142,41 +6452,52 @@ msgid ""
 "be used to provide extra information relevant to the current content. They "
 "can't be moved, but they adapt their own size to the window."
 msgstr ""
+"O novo componente que adicionamos é um [Kirigami.Dialog](docs:kirigami;org."
+"kde.kirigami.dialogs.Dialog). As caixas de diálogo aparecem no centro da "
+"janela e podem ser usadas para fornecer informações extras relevantes ao "
+"conteúdo atual. Elas não podem ser movidas, mas adaptam seu próprio tamanho "
+"à janela."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:53
 msgid "Form layouts help align and structure a layout with several inputs"
 msgstr ""
+"Os layouts de formulário ajudam a alinhar e estruturar um layout com várias "
+"entradas"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:55
 msgid "Textfields let you input text in a thin textbox"
-msgstr ""
+msgstr "Os Textfields permitem que você insira texto em uma textbox fina"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:58
 msgid "Provides a label attached to the textfield"
-msgstr ""
+msgstr "Fornece um rótulo anexado ao textfield"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:60
 msgid ""
 "What to do after input is accepted (i.e. pressed Enter) In this case, it "
 "moves the focus to the next field"
 msgstr ""
+"O que fazer após a entrada ser aceita (por exemplo, pressionar Enter). Neste "
+"caso, ele move o foco para o próximo campo"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:68
 msgid "Again, it moves the focus to the next field"
-msgstr ""
+msgstr "Novamente, ele move o foco para o próximo campo"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:74
 msgid ""
 "D means a required number between 1-9, 9 means a required number between 0-9"
 msgstr ""
+"D significa um número obrigatório entre 1 e 9, 9 significa um número "
+"obrigatório entre 0 e 9"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:77
 msgid "Here we confirm the operation just like clicking the OK button"
-msgstr ""
+msgstr "Aqui confirmamos a operação como se estivéssemos clicando no botão OK"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:85
 msgid "The dialog logic goes here"
-msgstr ""
+msgstr "A lógica do diálogo vai aqui"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:91
 msgid ""
@@ -6185,6 +6506,10 @@ msgid ""
 "qtquick-controls-dialog.html#footer-prop), both inherited from [Controls."
 "Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog)."
 msgstr ""
+"Por padrão, as caixas de diálogo têm um [cabeçalho](https://doc.qt.io/qt-6/"
+"qml-qtquick-controls -dialog.html#header-prop) e um [rodapé](https://doc.qt."
+"io/qt-6/qml-qtquick -controls-dialog.html#footer-prop), ambos herdados de "
+"[Controls.Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:93
 msgid ""
@@ -6195,6 +6520,13 @@ msgid ""
 "close button, and it can be overridden with [standardButtons](https://doc.qt."
 "io/qt-6/qml-qtquick-controls-dialog.html#standardButtons-prop)."
 msgstr ""
+"O cabeçalho, por padrão, inclui um [título](https://doc.qt.io/qt-6/qml-"
+"qtquick-controls-dialog.html#title-prop) e um botão de fechar que pode ser "
+"desabilitado com [showCloseButton](https://api-staging.kde.org/qml-org-kde-"
+"kirigami-dialogs-dialog.html#showCloseButton-prop). O rodapé, por padrão, "
+"inclui um botão de fechar, que pode ser substituído por [standardButtons]"
+"(https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#standardButtons-"
+"prop)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:95
 msgid ""
@@ -6205,6 +6537,13 @@ msgid ""
 "needed. We can use standard [Kirigami.Units](https://api-staging.kde.org/qml-"
 "org-kde-kirigami-platform-units.html) that we will revisit later on."
 msgstr ""
+"Primeiro, configuramos para exibir um botão \"Ok\" e um botão \"Cancelar\", "
+"adicionamos algum preenchimento e uma largura de preferência razoável "
+"(preferredWidth)(https://api-staging.kde.org/qml-org-kde-kirigami-dialogs-"
+"dialog.html#preferredWidth-prop). A largura de preferência é o tamanho "
+"padrão esperado da caixa de diálogo, que pode ser aumentado se necessário. "
+"Podemos usar o [Kirigami.Units](https://api-staging.kde.org/qml-org-kde-"
+"kirigami-platform-units.html) padrão, que revisaremos mais tarde."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:97
 msgid ""
@@ -6214,6 +6553,11 @@ msgid ""
 "automatic and centered, with optional labels. As the name implies, it is "
 "used to create input forms."
 msgstr ""
+"Em seguida, chegamos a um [Kirigami.FormLayout](docs:kirigami;org.kde."
+"kirigami.layouts.FormLayout). Ao contrário de um [ColumnLayout](https://doc."
+"qt.io/qt-6/qml-qtquick-layouts-columnlayout.html), o layout de seus "
+"componentes filhos é automático e centralizado, com rótulos opcionais. Como "
+"o nome indica, ele é usado para criar formulários de entrada."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:99
 msgid ""
@@ -6222,24 +6566,30 @@ msgid ""
 "qtquickcontrols;QtQuick.Controls.TextField) inputs that give us simple text "
 "boxes to write things in."
 msgstr ""
+"Esses layouts de formulário foram projetados para funcionar com uma "
+"variedade de tipos de entrada diferentes, embora estejamos nos atendo a "
+"entradas simples [Controls.Textfield](docs:qtquickcontrols;QtQuick.Controls."
+"TextField) que nos fornecem caixas de texto simples para escrever coisas."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:101
 msgid "We have created Textfield elements that act as:"
-msgstr ""
+msgstr "Criamos elementos Textfield que atuam como:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:103
 msgid "Input for the name of our countdown"
-msgstr ""
+msgstr "Entrada para o nome da nossa contagem regressiva"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:104
 msgid "Input for the description of our countdown"
-msgstr ""
+msgstr "Entrada para a descrição da nossa contagem regressiva"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:105
 msgid ""
 "Input for the date we are counting down towards, which must be provided in a "
 "`YYYY-MM-DD` format"
 msgstr ""
+"Entrada para a data para a qual estamos fazendo a contagem regressiva, que "
+"deve ser fornecida no formato `AAAA-MM-DD`"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:107
 msgid ""
@@ -6250,6 +6600,12 @@ msgid ""
 "form will present the correct labels to the left of each of these text input "
 "fields."
 msgstr ""
+"Dentro de cada um desses elementos [Controls.Textfield](docs:qtquickcontrols;"
+"QtQuick.Controls.TextField), estamos definindo uma propriedade [Kirigami."
+"FormData.label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-"
+"formdata.html#label-attached-prop) que nos permite definir rótulos para "
+"eles. O formulário apresentará os rótulos corretos à esquerda de cada um "
+"desses campos de entrada de texto."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:109
 msgid ""
@@ -6260,6 +6616,12 @@ msgid ""
 "switch the active field once the user hits the ENTER key, improving the "
 "usability of the form."
 msgstr ""
+"Por fim, também estamos definindo a propriedade [onAccepted](https://doc.qt."
+"io/qt-6/qml-qtquick-textinput.html#accepted-signal) para acionar o método "
+"[forceActiveFocus()](https://doc.qt.io/qt-6/qml-qtquick-item."
+"html#forceActiveFocus-method) do campo a seguir; isso alternará o campo "
+"ativo assim que o usuário pressionar a tecla ENTER, melhorando a usabilidade "
+"do formulário."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:111
 msgid ""
@@ -6270,24 +6632,34 @@ msgid ""
 "them to only entering digits which we can then try to parse into a date "
 "object."
 msgstr ""
+"Também definimos uma propriedade chamada [inputMask](https://doc.qt.io/qt-6/"
+"qml-qtquick-textinput.html#inputMask-prop) no campo de texto para nossa "
+"data. Definir como `D999-99-99` impede que os usuários insiram algo que "
+"possa interromper a funcionalidade do aplicativo (como texto), restringindo-"
+"os a inserir apenas dígitos que podemos então tentar analisar em um objeto "
+"de data."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:113
 msgid ""
 "Once the user interface for the dialog is done, we need to change how it "
 "behaves. For this we need three things:"
 msgstr ""
+"Depois que a interface do usuário para o diálogo estiver pronta, precisamos "
+"alterar seu comportamento. Para isso, precisamos de três coisas:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:115
 msgid "Show the Ok button only when the required fields are filled"
 msgstr ""
+"Mostrar o botão Ok somente quando os campos obrigatórios estiverem "
+"preenchidos"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:116
 msgid "Add the input information to the model"
-msgstr ""
+msgstr "Adicionar as informações de entrada ao modelo"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:117
 msgid "Clear the input form"
-msgstr ""
+msgstr "Limpar o formulário de entrada"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:121
 msgid ""
@@ -6295,16 +6667,22 @@ msgid ""
 "binding to only make the Ok button visible if the required text fields are "
 "filled. For this we use Kirigami.Dialog.standardButton(button):"
 msgstr ""
+"... Após a inicialização do Kirigami.Dialog, queremos criar uma vinculação "
+"personalizada para tornar o botão Ok visível apenas se os campos de texto "
+"obrigatórios estiverem preenchidos. Para isso, usamos Kirigami.Dialog."
+"standardButton(button):"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:129
 msgid "() => is a JavaScript arrow function"
-msgstr ""
+msgstr "() => é uma função de seta JavaScript"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:133
 msgid ""
 "The binding is created, but we still need to make it unclickable unless the "
 "fields are filled"
 msgstr ""
+"A ligação foi criada, mas ainda precisamos torná-la não clicável, a menos "
+"que os campos sejam preenchidos"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:142
 msgid ""
@@ -6315,12 +6693,20 @@ msgid ""
 "qt-6/qtqml-syntax-propertybinding.html#creating-property-bindings-from-"
 "javascript) in JavaScript. In effect, the line:"
 msgstr ""
+"A primeira coisa a ser feita é criar uma ligação entre a propriedade "
+"[enabled](https://doc.qt.io/qt-6/qml-qtquick-controls-popup.html#enabled-"
+"prop) do botão OK e uma verificação para verificar se os campos estão "
+"preenchidos, o que, neste caso, precisa ser feito com [Qt.binding()](https://"
+"doc.qt.io/qt-6/qtqml-syntax-propertybinding.html#creating-property-bindings-"
+"from-javascript) em JavaScript. Na prática, a linha:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:148
 msgid ""
 "is similar to the QML bindings we have seen so far, like in the following "
 "pseudo-code:"
 msgstr ""
+"é semelhante às vinculações QML que vimos até agora, como no seguinte "
+"pseudocódigo:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:154
 msgid ""
@@ -6330,12 +6716,19 @@ msgid ""
 "otherwise, it will add the input to the model and clear the dialog for the "
 "next time it is opened."
 msgstr ""
+"O manipulador de sinal que aciona o botão Ok é [onAccepted](https://doc.qt."
+"io/qt-6/qml-qtquick-controls-dialog.html#accepted-signal). Ele permanece "
+"vazio e sem fazer nada se os campos obrigatórios forem preenchidos; caso "
+"contrário, ele adicionará a entrada ao modelo e limpará a caixa de diálogo "
+"para a próxima vez que for aberta."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:158
 msgid ""
 "... We check that the nameField is not empty and that the dateField (which "
 "has an inputMask) is completely filled"
 msgstr ""
+"... Verificamos se o nameField não está vazio e se o dateField (que tem uma "
+"inputMask) está completamente preenchido"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:180
 msgid ""
@@ -6345,6 +6738,12 @@ msgid ""
 "textinput.html#acceptableInput-prop) instead, which only becomes true once "
 "the whole field is filled and contains only acceptable characters."
 msgstr ""
+"Para o nosso campo de nome obrigatório, tudo o que precisamos fazer é "
+"verificar se o campo texto é uma string vazia. Para o campo de data, como "
+"ele tem uma máscara de entrada, precisamos usar [acceptableInput](https://"
+"doc.qt.io/qt-6/qml-qtquick-textinput.html#acceptableInput-prop), que só se "
+"torna verdadeiro quando todo o campo estiver preenchido e contiver apenas "
+"caracteres aceitáveis."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:182
 msgid ""
@@ -6352,6 +6751,9 @@ msgid ""
 "html#append-method) method of our `kountdownModel` list model adds a "
 "JavaScript object including the properties we have provided."
 msgstr ""
+"Em seguida, o método [append()](https://doc.qt.io/qt-6/qml-qtqml-models-"
+"listmodel.html#append-method) do nosso modelo de lista `kountdownModel` "
+"adiciona um objeto JavaScript incluindo as propriedades que fornecemos."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:184
 msgid ""
@@ -6360,6 +6762,10 @@ msgid ""
 "an empty string, then [close()](docs:qtquickcontrols;QtQuick.Controls.Popup::"
 "close) it."
 msgstr ""
+"Por fim, limpamos os campos de texto definindo suas propriedades [text]"
+"(https://doc.qt.io/qt-6/qml-qtquick-textinput.html#text-prop) como uma "
+"string vazia e, em seguida, [close()](docs:qtquickcontrols;QtQuick.Controls."
+"Popup::close)."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:186
 msgid ""
@@ -6367,41 +6773,51 @@ msgid ""
 "custom countdowns! We can make one last touch to improve the interface, "
 "namely remove the dummy countdown we had in the previous lessons:"
 msgstr ""
+"Depois de salvar nossos arquivos e compilar nosso programa, poderemos "
+"adicionar nossas próprias contagens regressivas personalizadas! Podemos dar "
+"um último toque para melhorar a interface, ou seja, remover a contagem "
+"regressiva fictícia que tínhamos nas lições anteriores:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:190
 msgid ""
 "Secondly now that we have an actual date to play around with, we can "
 "calculate the time until said date:"
 msgstr ""
+"Em segundo lugar, agora que temos uma data real para testar, podemos "
+"calcular o tempo até a data especificada:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:194
 msgid ""
 "And thirdly increase the window size so that we have more room for our new "
 "cards:"
 msgstr ""
+"E em terceiro lugar, aumente o tamanho da janela para que tenhamos mais "
+"espaço para nossos novos cartões:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:198
 msgid "Much nicer."
-msgstr ""
+msgstr "Muito melhor."
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:209
 msgid ""
 "![Screenshot of the application with four example cards](addedKountdowns."
 "webp)"
 msgstr ""
+"![Captura de tela do aplicativo com quatro cartas de exemplo]"
+"(addedKountdowns.webp)"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:0
 msgid "Layouts, ListViews, and Cards"
-msgstr ""
+msgstr "Layouts, ListViews e Cards"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:0
 msgid "Figuring out the different ways of placing things on a page"
-msgstr ""
+msgstr "Descobrindo as diferentes maneiras de colocar coisas em uma página"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:9
 #: content/docs/getting-started/kirigami/style-typography/index.md:0
 msgid "Laying out your content"
-msgstr ""
+msgstr "Dispondo seu conteúdo"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:11
 msgid ""
@@ -6409,14 +6825,18 @@ msgid ""
 "will be going through a number of important layout components and elements "
 "that will be useful when designing our app."
 msgstr ""
+"Agora que entendemos como as páginas funcionam, é hora de adicionar "
+"elementos a elas. Abordaremos uma série de componentes e elementos de layout "
+"importantes que serão úteis ao projetar nosso aplicativo."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:13
 msgid "By the end of this section you'll have a neat-looking app."
 msgstr ""
+"Ao final desta seção, você terá um aplicativo com uma aparência bacana."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:15
 msgid "ListViews"
-msgstr ""
+msgstr "ListViews"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:17
 msgid ""
@@ -6425,16 +6845,23 @@ msgid ""
 "come across a [ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html). "
 "Quite simply, it lets you display data on a list."
 msgstr ""
+"Se você já usou o [Discover](https://apps.kde.org/discover/), o [NeoChat]"
+"(https://apps.kde.org/neochat/) ou as Configurações do Sistema do Plasma, "
+"você já deve ter se deparado com uma [ListView](https://doc.qt.io/qt-6/qml-"
+"qtquick-listview.html). Simplificando, ela permite que você exiba dados em "
+"uma lista."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:30
 msgid "That seems cryptic, but don't worry. Let's start from the beginning."
-msgstr ""
+msgstr "Parece enigmático, mas não se preocupe. Vamos começar do começo."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:32
 msgid ""
 "We add this component inside our [Kirigami.ScrollablePage](docs:kirigami;org."
 "kde.kirigami.ScrollablePage) from the last tutorial."
 msgstr ""
+"Adicionamos este componente dentro do nosso [Kirigami.ScrollablePage](docs:"
+"kirigami;org.kde.kirigami.ScrollablePage) do último tutorial."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:34
 msgid ""
@@ -6446,20 +6873,29 @@ msgid ""
 "`model` property comes in: in this example, it's pointing to "
 "`kountdownModel`."
 msgstr ""
+"Estamos usando [Kirigami.CardsListView](docs:kirigami;org.kde.kirigami."
+"CardsListView), que é uma [ListView](https://doc.qt.io/qt-6/qml-qtquick-"
+"listview.html) que nos permite exibir facilmente cartas em uma lista. No "
+"entanto, ListViews são feitas para mostrar dados retirados de um modelo - "
+"para se preencherem automaticamente com um conjunto de dados para o qual "
+"apontamos. É aí que entra a propriedade `model`: neste exemplo, ela aponta "
+"para `kountdownModel`."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:36
 msgid "Model"
-msgstr ""
+msgstr "Modelo"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:43
 msgid "Each ListElement is an element on the list, containing information"
-msgstr ""
+msgstr "Cada ListElement é um elemento da lista, contendo informações"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:54
 msgid ""
 "We add our `kountdownModel` inside the [Kirigami.ApplicationWindow](docs:"
 "kirigami;org.kde.kirigami.ApplicationWindow) from the last tutorial."
 msgstr ""
+"Adicionamos nosso `kountdownModel` dentro do [Kirigami.ApplicationWindow]"
+"(docs:kirigami;org.kde.kirigami.ApplicationWindow) do último tutorial."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:56
 msgid ""
@@ -6471,6 +6907,14 @@ msgid ""
 "may have different sorts of data in your model. The first two are just "
 "strings, and the third is a number we're using as a placeholder."
 msgstr ""
+"Um modelo define a maneira como uma entrada de dados é estruturada. Nosso "
+"`kountdownModel` consistirá em apenas um elemento por enquanto. Observando "
+"nosso [ListElement](https://doc.qt.io/qt-6/qml-qtqml-models-listelement."
+"html) acima, podemos ver como os dados do nosso `kountdownModel` são "
+"estruturados: ele contém um nome, uma descrição e uma data. Isso não é "
+"imutável, e você pode ter diferentes tipos de dados em seu modelo. Os dois "
+"primeiros são apenas strings, e o terceiro é um número que estamos usando "
+"como espaço reservado."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:60
 msgid ""
@@ -6480,6 +6924,11 @@ msgid ""
 "more about it in [this page](https://doc.qt.io/qt-6/qtqml-javascript-topic."
 "html)."
 msgstr ""
+"Como o QML é construído sobre JavaScript, muitos dos recursos dessa "
+"linguagem estão disponíveis para uso em arquivos QML. No entanto, as "
+"variáveis ​​QML precisam ser prefixadas com `property`, a menos que estejam "
+"dentro de um bloco de código JS. Você pode ler mais sobre isso [nesta página]"
+"(https://doc.qt.io/qt-6/qtqml-javascript-topic.html)."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:64
 msgid ""
