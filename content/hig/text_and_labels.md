@@ -21,11 +21,11 @@ Whenever writing text, start by following these guidelines:
 
 And then keep in mind these implementation details:
 
-- Use [QtQuick.Controls.Label](https://doc.qt.io/qt-6/qml-qtquick-controls2-label.html) for normal-sized text, and [Kirigami.Heading](https://api.kde.org/frameworks/kirigami/html/classorg_1_1kde_1_1kirigami_1_1Heading.html) (with a `level` suitable for the context) for larger header text. See [more information here](https://develop.kde.org/docs/getting-started/kirigami/style-typography/).
-- Don't use [QtQuick.Text](https://doc.qt.io/qt-5/qml-qtquick-text.html) directly, as it doesn't respect the system's font settings.
+- Use [QtQuick.Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) for normal-sized text, and [Kirigami.Heading](docs:kirigami;org.kde.kirigami.Heading) (with a `level` suitable for the context) for larger header text. See [more information here](https://develop.kde.org/docs/getting-started/kirigami/style-typography/).
+- Don't use [QtQuick.Text](docs:qtquick;QtQuick.Text) directly, as it doesn't respect the system's font settings.
 - Manually assign [accelerator keys](https://doc.qt.io/qt-6.2/accelerators.html) only for text in buttons, radio buttons, checkboxes, and switches (in other places, they are auto-generated).
-- Assign text for icons-only buttons anyway, so it can be read by screen readers. Hide the text by setting the [display](https://doc.qt.io/qt-5/qml-qtquick-controls2-abstractbutton.html#display-prop) property to `IconOnly` and then manually add a [tooltip](https://doc.qt.io/Qt-6/qml-qtquick-controls-tooltip.html) for the benefit of mouse and touch users.
-- For standard actions, use [KStandardAction](https://api.kde.org/frameworks/kconfigwidgets/html/namespaceKStandardAction.html) so that it gets standard text automatically.
+- Assign text for icons-only buttons anyway, so it can be read by screen readers. Hide the text by setting the [display](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#display-prop) property to `IconOnly` and then manually add a [tooltip](docs:qtquickcontrols;QtQuick.Controls.ToolTip) for the benefit of mouse and touch users.
+- For standard actions, use [KStandardAction](docs:kconfigwidgets;KStandardAction) so that it gets standard text automatically.
 
 
 ## Capitalization and punctuation
@@ -34,7 +34,7 @@ All user interface text is written in either [sentence case](https://apastyle.ap
 - The text ends with a period or colon.
 - The text is clearly a sentence.
 - The text is a subtitle, tooltip, transient status message, or placeholder label.
-- The text is used as a label for a radio button, checkbox, combobox item, or placed in front of a control — for example using `Kirigami.FormData.label`.
+- The text is used as a label for a radio button, checkbox, combobox item, or placed in front of a control — for example using [Kirigami.FormData.label](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop).
 
 Otherwise, use title case.
 
@@ -145,7 +145,7 @@ For dialog titles, describe the action being performed starting with an imperati
 
 
 ## Line length
-For multi-sentence text, try to limit line length to 85 characters or less, which improves readability. This generally works out to about 450px. However if this would cause excessive whitespace in wide windows, consider changing the UI to lay out additional elements to the right of the text area, or even move the long text into a [Kirigami.ContextualHelpButton](https://api.kde.org/frameworks/kirigami/html/classContextualHelpButton.html) or [KWidgetsAddons::KContextualHelpButton](https://api.kde.org/frameworks/kwidgetsaddons/html/classKContextualHelpButton.html), which enforces this length internally.
+For multi-sentence text, try to limit line length to 85 characters or less, which improves readability. This generally works out to about 450px. However if this would cause excessive whitespace in wide windows, consider changing the UI to lay out additional elements to the right of the text area, or even move the long text into a [Kirigami.ContextualHelpButton](docs:kirigami;org.kde.kirigami.ContextualHelpButton) or [KWidgetsAddons::KContextualHelpButton](docs:kwidgetsaddons;KContextualHelpButton), which enforces this length internally.
 
 
 ## Placeholders
@@ -159,7 +159,7 @@ In empty text fields, use the following rules:
 - Otherwise, write the placeholder text as a very short sentence starting with an imperative mood verb that describes what the user should do: “Search”, “Enter file name”, etc.
 - Don't end with an ellipsis character, as it would contradict the meaning of the character in the context of buttons and menu items.
 
-For search fields, use [Kirigami.SearchField](https://api.kde.org/frameworks/kirigami/html/classSearchField.html) which includes standard placeholder text.
+For search fields, use [Kirigami.SearchField](docs:kirigami;org.kde.kirigami.SearchField) which includes standard placeholder text.
 
 
 ## Translation
