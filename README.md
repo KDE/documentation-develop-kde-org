@@ -74,3 +74,17 @@ The Kirigami tutorials are internationalized and localized using [hugoi18n](http
 ## hugo-kde theme
 
 This website uses a theme shared among KDE websites that are Hugo-based. If you have some issue that you think is not inside this repo, or if you just want to know more about the theme, have a look at [hugo-kde wiki](https://invent.kde.org/websites/hugo-kde/-/wikis/).
+
+## Running the HTML test locally
+
+Install the HTML test to a directory in your PATH, like `~/.local/bin`:
+
+```bash
+curl https://htmltest.wjdp.uk | bash -s -- -b ~/.local/bin
+```
+
+Enable `EnforceHTTPS: false` in `.htmltest.yml`, then run:
+
+```bash
+htmltest --conf .htmltest.yml
+```
