@@ -60,9 +60,9 @@ Initially, our `Main.qml` should look like this:
 
 {{< readfile file="First.qml" highlight="qml" >}}
 
-We use our handy [pageStack](/docs/getting-started/kirigami/components-pagerow_pagestack) to set the initial page to a [Kirigami.ScrollablePage](docs:kirigami2;ScrollablePage).
+We use our handy [pageStack](/docs/getting-started/kirigami/components-pagerow_pagestack) to set the initial page to a [Kirigami.ScrollablePage](https://api.kde.org/qml-org-kde-kirigami-scrollablepage.html).
 
-While we could use a [FormLayout](/docs/getting-started/kirigami/components-formlayouts) together with [QtQuick Controls components](components-controls) to achieve our goal, here you will be introduced to [FormCard](https://api.kde.org/frameworks/kirigami-addons/html/classFormCard.html).
+While we could use a [FormLayout](/docs/getting-started/kirigami/components-formlayouts) together with [QtQuick Controls components](components-controls) to achieve our goal, here you will be introduced to [FormCard](https://api.kde.org/qml-org-kde-kirigamiaddons-formcard-formcard.html).
 
 The main purpose of a FormCard is to serve as a container for other components while following a color different from the background, in a similar manner to a [Kirigami.Card](docs:kirigami2;Card), but for settings windows. You can have multiple FormCards in your application to indicate different sections. Your FormCard is also expected to be a direct child of a ColumnLayout.
 
