@@ -8,52 +8,53 @@ IgnoreURLs: # Array of regexs of URLs to ignore.
 - .*livereload.js.*
 - /-/.*
 IgnoreDirs: # Array of regexs of directories to ignore when scanning for HTML files.
-- aether
-- content
-- css
-- docs/plasma/widget/snippet
-- favicons
-- fonts
-- kirigami
-- images
-- js
-- media
-- resources
-- reusable-assets
-- scss
-- store_badges
-- tr
-- sk
-- pt-br
-- es
-- uk
-- de
-- zh-tw
-- pt-pt
-- sl
-- fi
-- cs
-- nl
-- fr
-- ca
-- sv
-- eo
-- pl
-- cs
-- eu
-- it
-- ja
-- ko
-- pt
-- sl
-- uk
-- zh-cn
+- ^aether/
+- ^content/
+- ^css/
+- ^docs/plasma/widget/snippet/
+- ^favicons/
+- ^fonts/
+- ^kirigami/
+- ^images/
+- ^js/
+- ^media/
+- ^resources/
+- ^reusable-assets/
+- ^scss/
+- ^store_badges/
+- ^ca/
+- ^cs/
+- ^de/
+- ^eo/
+- ^es/
+- ^eu/
+- ^fi/
+- ^fr/
+- ^it/
+- ^ja/
+- ^ko/
+- ^lt/
+- ^nl/
+- ^pl/
+- ^pt/
+- ^pt-br/
+- ^pt-pt/
+- ^sk/
+- ^sl/
+- ^sv/
+- ^tr/
+- ^uk/
+- ^zh-cn/
+- ^zh-tw/
 # EnforceHTTPS: false # Use this only locally
 TestFilesConcurrently: true
 IgnoreInternalEmptyHash: true # When true prevents raising an error for links with href="#".
 IgnoreExternalBrokenLinks: true # When true produces a warning, rather than an error, for broken external links. Useful when testing a site having hundreds of external links.
 IgnoreAltMissing: true # Turns off image alt attribute checking.
 IgnoreAltEmpty: true # Allows alt="" for decorative images.
+CheckInternal: false # For broken API links
+CheckInternalHash: false # For broken API links
+IgnoreEmptyHref: true # For broken API links
 IgnoreDirectoryMissingTrailingSlash: true # Turns off errors for links to directories without a trailing slash.
 IgnoreSSLVerify: true # Turns off x509 errors for self-signed certificates.
 #IgnoreTagAttribute: "data-proofer-ignore" # Specify the ignore attribute. All tags with this attribute will be excluded from every check.
