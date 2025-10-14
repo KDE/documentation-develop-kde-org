@@ -242,3 +242,14 @@ If you need more dynamic options please check out [KAbstractFileItemActionPlugin
 This is a list of user contributed service menus. Feel free to add your own custom service menus here, if you feel they could be used by others.
 
 * [KDE Service Menus from Z-Ray Entertainment](https://gitlab.com/z-ray-entertainment/kde-service-menus)
+
+## Troubleshooting
+
+To check the service for errors, use the tool `desktop-file-validate`:
+```bash
+desktop-file-validate /path/to/service.desktop
+```
+Additionally, you can check the systemd journal for errors:
+```bash
+journalctl -r
+```
