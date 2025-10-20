@@ -88,7 +88,7 @@ If in doubt, show the button's text. If the app has so many buttons visible at o
 
 - Only show buttons relevant to the current context.
 - Place buttons in a Contextual Toolview that can be hidden when not relevant.
-- Group buttons by function in the tabs of a [Kirigami.NavigationTabBar](https://api.kde.org/frameworks/kirigami/html/classNavigationTabBar.html).
+- Group buttons by function in the tabs of a [Kirigami.NavigationTabBar](https://api.kde.org/qml-org-kde-kirigami-navigationtabbar.html).
 - Put the buttons on a [Kirigami.ActionToolBar](https://develop.kde.org/docs/getting-started/kirigami/components-actiontoolbar/) so that buttons without sufficient space get moved into an overflow menu.
 - Reduce the length of the buttons' labels.
 - Condense related buttons into a single one that opens a menu of actions.
@@ -129,8 +129,8 @@ When overlaying icons on top of user content or on top of other icons, only use 
 ## Implementation details
 - Don't bundle custom icons with your app or specify pixmaps for your icons. Instead get them from the system's icon theme using [QIcon::IconFromTheme()](https://doc.qt.io/qt-6/qicon.html#fromTheme-1) in C++ code, or using the `icon.name` property for QML components that accept icons.
 - Make the KIconThemes framework a build dependency for your application and call `KIconTheme::initTheme` before creating the `QApplication`. See [more information here]({{< relref "advanced-maincpp" >}}).
-- For standard actions, use [KStandardActions](https://api.kde.org/frameworks/kconfig/html/namespaceKStandardActions.html) so that it gets a standard icon, too.
-- Use [standard icon sizes](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1Units.html#a7e729a19d3cdd6107828dcfc14950706) in any context where the icon size is not automatically chosen for you.
+- For standard actions, use [KStandardActions](https://api.kde.org/kstandardactions.html) so that it gets a standard icon, too.
+- Use [standard icon sizes](https://api.kde.org/qml-org-kde-kirigami-platform-units.html#iconSizes-prop) in any context where the icon size is not automatically chosen for you.
 
 
 ## Designing your own icons
