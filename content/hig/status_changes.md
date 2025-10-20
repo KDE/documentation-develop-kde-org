@@ -36,9 +36,17 @@ Ensure that failures originating with third-party software or web services are c
 ## Color
 Anything colorful will stand out visually, so use it strategically to attract the user's attention. Don't overdo it; when many UI elements are colorful, the user's attention will be pulled in multiple directions.
 
-- [HighlightedTextColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#aaaa6079586261ff972afaa8d3495c66d)/[HighlightColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#a2bd2ec37029686d63963d9a686889469) color (blue by default): highlighted list or grid items, checked controls, benign and ignorable text
-- [NeutralTextColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#a0fff6168eb9642a245dfbc7cb7964350)/[NeutralBackgroundColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#a6eaafd30163a444f173cd82fc1356847) (orange by default): warning or alert text/areas, non-default settings states
-- [NegativeTextColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#a49b47cb9e9ac3cade27e60a7d59fc3b9)/[NegativeBackgroundColor](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#a3dacef3051da2e210d2f65ac5e4b8863) (red by default): error text/areas, dangerous actions
+- Highlighted list or grid items, checked controls, benign and ignorable text color (blue by default):
+  - [Kirigami.Theme.HighlightedTextColor](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#highlightedTextColor-attached-prop)
+  - [Kirigami.Theme.HighlightColor](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#highlightColor-attached-prop)
+  
+- Warning or alert text/areas, non-default settings states (orange by default):
+  - [Kirigami.Theme.NeutralTextColor](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#neutralTextColor-attached-prop)
+  - [Kirigami.Theme.NeutralBackgroundColor](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#neutralBackgroundColor-attached-prop)
+  
+- Error text/areas, dangerous actions (red by default):
+  - [Kirigami.Theme.NegativeTextColor](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#negativeTextColor-attached-prop)
+  - [Kirigami.Theme.NegativeBackgroundColor](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#negativeBackgroundColor-attached-prop)
 
 Don't rely on color alone to convey meaning or invite action; also use different icons, shapes, or text.
 
@@ -46,14 +54,14 @@ Don't rely on color alone to convey meaning or invite action; also use different
 ## In-app notifications
 Avoid sending system notifications while your app's main window is in the foreground, as they can appear where the user is not looking. Instead use one of the following:
 
-- For ignorable or low-importance messages, use [Kirigami.PassiveNotification](https://api.kde.org/frameworks/kirigami/html/classAbstractApplicationWindow.html#a8ab455ab09378a016c34f467653760e5).
-- For messages that should get the user's attention but not interrupt their current task, add a [Kirigami.InlineMessage](https://develop.kde.org/docs/getting-started/kirigami/components-inlinemessages/). If the message's scope is specific to the whole page or application, add it to the page header with the [position](https://api.kde.org/frameworks/kirigami/html/classorg_1_1kde_1_1kirigami_1_1templates_1_1InlineMessage.html#a2711f84c2a4c7f984a0be88cd4e95596) property set to `InlineMessage.Position.Header`.
+- For ignorable or low-importance messages, use [Kirigami.AbstractApplicationWindow.showPassiveNotification](https://api.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#showPassiveNotification-method).
+- For messages that should get the user's attention but not interrupt their current task, add a [Kirigami.InlineMessage](https://develop.kde.org/docs/getting-started/kirigami/components-inlinemessages/). If the message's scope is specific to the whole page or application, add it to the page header with the [position](https://api.kde.org/qml-org-kde-kirigami-inlinemessage.html#position-prop) property set to `InlineMessage.Position.Header`.
 
 
 ## System notifications
-Send a [system notification](https://api.kde.org/frameworks/knotifications/html/classKNotification.html) when your app is in the background and needs to inform the user about about actionable events such as the progress of ongoing jobs, incoming communications from other people, or hardware issues such as running low on battery power.
+Send a [system notification](https://api.kde.org/knotifications-index.html) when your app is in the background and needs to inform the user about about actionable events such as the progress of ongoing jobs, incoming communications from other people, or hardware issues such as running low on battery power.
 
-Give an [urgency level](https://api.kde.org/frameworks/knotifications/html/classKNotification.html#ae4d50824cf6d70132bf6280ad9357012) to each notification: Low, Normal, or Critical. Strongly consider not sending Low importance notifications in the first place. Give the [persistent](https://api.kde.org/frameworks/knotifications/html/classKNotification.html#a61b63788f43bfad07f6e34b4d768703e) flag to normal-priority notifications that are not critical, but that the user should not miss anyway. Critical notifications always remain visible until dismissed.
+Give an [urgency level](https://api.kde.org/knotification.html#setUrgency) to each notification: Low, Normal, or Critical. Strongly consider not sending Low importance notifications in the first place. Use [setFlags()](https://api.kde.org/knotification.html#setFlags) to give the [persistent flag](https://api.kde.org/knotification.html#NotificationFlag-enum) to normal-priority notifications that are not critical, but that the user should not miss anyway. Critical notifications always remain visible until dismissed.
 
 
 Use system notifications sparingly. Excessive notifications drive users crazy.
@@ -85,7 +93,7 @@ Don't show an OSD for an automatic action not initiated or expected by the user 
 
 
 ## Task Manager badges and progress bars
-For infrequent yet long-running tasks, also display the completion percentage on the app's Task Manager background using [setBadgeNumber](https://doc.qt.io/qt-6/qguiapplication.html#setBadgeNumber) on your `QApplication`/`QGuiApplication`. Only use this to show completion percentage for jobs and tasks the user has explicitly initiated.
+For infrequent yet long-running tasks, also display the completion percentage on the app's Task Manager background using [QGuiApplication::setBadgeNumber()](https://doc.qt.io/qt-6/qguiapplication.html#setBadgeNumber). Only use this to show completion percentage for jobs and tasks the user has explicitly initiated.
 
 Task Manager badges can also display a number using the [same D-Bus interface](https://wiki.ubuntu.com/Unity/LauncherAPI#Low_level_DBus_API:_com.canonical.Unity.LauncherEntry). This can be used to show a count of unread messages or open tasks. Only include actionable tasks in the number; users want to get rid of it!
 
