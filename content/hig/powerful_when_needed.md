@@ -21,7 +21,7 @@ Don't use customizability to avoid making design decisions, work around your own
 
 Don't use customizability to override platform settings or styling, with one exception: when the app is used on a non-Plasma platform lacking a global setting that Plasma has, it can be exposed as an app-specific setting.
 
-Use [Kirigami.FormLayout](https://api.kde.org/frameworks/kirigami/html/classFormLayout.html) to build your configuration pages.
+Use [Kirigami.FormLayout](https://api.kde.org/qml-org-kde-kirigami-layouts-formlayout.html) to build your configuration pages.
 
 Apply newly-saved settings immediately; don't require re-launching the app.
 
@@ -29,7 +29,7 @@ Apply newly-saved settings immediately; don't require re-launching the app.
 ## Accelerators for experts
 Expert users love to streamline their tasks with keyboard shortcuts and context menus, so make sure to implement them! Remember that these are *accelerators*; never rely exclusively on keyboard shortcuts or context menus to access functionality. Primary workflows and their controls must be visible by default.
 
-Either assign a keyboard shortcut to every action that can be performed, or at least make shortcuts assignable by the user. For standard actions, use the shortcuts provided by [KStandardShortcut](https://api.kde.org/frameworks/kconfig/html/namespaceKStandardShortcut.html).
+Either assign a keyboard shortcut to every action that can be performed, or at least make shortcuts assignable by the user. For standard actions, use the shortcuts provided by [KStandardShortcut](https://api.kde.org/kstandardshortcut.html).
 
 For both touchpads and touchscreens, only implement two-finger gestures in your app. Three- and four-finger gestures can conflict with gestures provided by the system.
 
@@ -39,7 +39,7 @@ Don't use the `Meta` key for app-specific shortcuts; this is reserved for global
 ## User-driven extensibility
 The best KDE apps are modular, with extra functionality provided through plugins. This allows users to self-satisfy rather than asking the developers for new features.
 
-KDE Frameworks include the [KNewStuff](https://invent.kde.org/frameworks/knewstuff) system for getting and managing user-provided 3rd-party content from https://store.kde.org or any other [Open Collaboration Services](https://en.wikipedia.org/wiki/Open_Collaboration_Services) server. Using KNewStuff, users can download new content and functionality. If you use a custom downloader UI, it is your responsibility to warn users that this content represents a digital Wild West with no assumptions of stability or safety!
+KDE Frameworks include the [KNewStuff](https://invent.kde.org/frameworks/knewstuff) system for getting and managing user-provided 3rd-party content from the [KDE Store](https://store.kde.org) or any other [Open Collaboration Services](https://en.wikipedia.org/wiki/Open_Collaboration_Services) server. Using KNewStuff, users can download new content and functionality. If you use a custom downloader UI, it is your responsibility to warn users that this content represents a digital Wild West with no assumptions of stability or safety!
 
 
 {{< alert title="Explicit “Basic” and “Advanced” settings" color="warning" >}}
