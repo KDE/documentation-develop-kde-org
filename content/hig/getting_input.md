@@ -25,7 +25,7 @@ KDE apps mostly use standard input controls such as [buttons, menus, checkboxes,
 - Use a flat [ToolButton](https://doc.qt.io/qt-6/qml-qtquick-controls-toolbutton.html) on a toolbar in a header or footer position, or in a Contextual Toolview—anywhere users expect to encounter UI elements that look like toolbars.
 - Use a regular raised [Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html) in the main content area, including settings pages and when overlaid on top of content items including list and grid items. In these contexts, the raised outline helps them to be be visibly recognizable as buttons.
 - Use a [RoundButton](https://doc.qt.io/qt-6/qml-qtquick-controls-roundbutton.html) for covering up part of the content area not already covered by any kind of opaque or semi-transparent background. These kinds of buttons never have text, so choose an icon that [conveys the button's action perfectly](../icons/#icons-only-buttons).
-- Use a [Switch](https://doc.qt.io/qt-6/qml-qtquick-controls-switch.html) or [CheckBox](https://doc.qt.io/Qt-6/qml-qtquick-controls-checkbox.html) for settings where both states are obvious without needing to be separately explained. Use a Switch for “Instant apply” settings or state switchers that take effect immediately; otherwise, use a CheckBox.
+- Use a [Switch](https://doc.qt.io/qt-6/qml-qtquick-controls-switch.html) or [CheckBox](https://doc.qt.io/qt-6/qml-qtquick-controls-checkbox.html) for settings where both states are obvious without needing to be separately explained. Use a Switch for “Instant apply” settings or state switchers that take effect immediately; otherwise, use a CheckBox.
 - Use [RadioButtons](https://doc.qt.io/qt-6/qml-qtquick-controls2-radiobutton.html) or a [ComboBox](https://doc.qt.io/qt-6/qml-qtquick-controls-combobox.html) to present mutually-exclusive options where each one benefits from being spelled out textually. For sets of 3 or options with short text where space is plentiful, use RadioButtons. If there will up to 10 items, use a ComboBox. For more than 10 options, use a [list view]({{< relref "displaying_content/#lists-and-grids" >}}). Arrange items in a logical order; if none exists, alphabetical is a good default.
 - Use a [Slider](https://doc.qt.io/qt-6/qml-qtquick-controls-slider.html) for bounded input where fast interaction is more important than precision. Use a [SpinBox](https://doc.qt.io/qt-6/qml-qtquick-controls-spinbox.html) where precision is more important than speed of interaction. If both numerical precision and speed of interaction are important, then use a Slider with a SpinBox trailing it.
 
@@ -39,9 +39,9 @@ If possible, implement an auto-complete feature to help the user enter valid inp
 
 If possible, use one of the pre-made Kirigami text fields:
 
-- Use [Kirigami.ActionTextField](https://api.kde.org/frameworks/kirigami/html/classActionTextField.html) when you need to add inline actions in the trailing position (e.g. a clear button).
-- Use [Kirigami.SearchField](https://api.kde.org/frameworks/kirigami/html/classSearchField.html) to implement a search field.
-- Use [Kirigami.PasswordField](https://api.kde.org/frameworks/kirigami/html/classPasswordField.html) to display password prompts.
+- Use [Kirigami.ActionTextField](https://api.kde.org/qml-org-kde-kirigami-actiontextfield.html) when you need to add inline actions in the trailing position (e.g. a clear button).
+- Use [Kirigami.SearchField](https://api.kde.org/qml-org-kde-kirigami-searchfield.html) to implement a search field.
+- Use [Kirigami.PasswordField](https://api.kde.org/qml-org-kde-kirigami-passwordfield.html) to display password prompts.
 
 
 ## Dialogs
@@ -55,9 +55,9 @@ For opening and saving files, use [QtQuick.Dialogs.FileDialog](https://doc.qt.io
 
 For getting other kinds of input, use one of the Kirigami `Dialog` types:
 
-- Use [Kirigami.PromptDialog](https://api.kde.org/frameworks/kirigami/html/classPromptDialog.html) for a “do it/don't do it” type of choice.
-- Use [Kirigami.PromptDialog](https://api.kde.org/frameworks/kirigami/html/classPromptDialog.html) with a [QtQuick.Controls.TextField](https://doc.qt.io/qt-6/qml-qtquick-controls-textfield.html) inside it to get text input from the user.
-- Use [Kirigami.MenuDialog](https://api.kde.org/frameworks/kirigami/html/classMenuDialog.html) to let the user choose from among a set of actions.
+- Use [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-kirigami-dialogs-promptdialog.html) for a “do it/don't do it” type of choice.
+- Use [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-kirigami-dialogs-promptdialog.html) with a [QtQuick.Controls.TextField](https://doc.qt.io/qt-6/qml-qtquick-controls-textfield.html) inside it to get text input from the user.
+- Use [Kirigami.MenuDialog](https://api.kde.org/qml-org-kde-kirigami-dialogs-menudialog.html) to let the user choose from among a set of actions.
 
 Don't display more than one dialog at a time. Never use a dialog to create more dialogs.
 
