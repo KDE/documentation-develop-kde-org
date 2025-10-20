@@ -36,14 +36,14 @@ Maximize the space available for the app's main content area; it's what users op
 ## Lists and grids
 When a view's content consists of multiple items that can be seen or interacted with, display them in a [QtQuick.ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html) or a [QtQuick.GridView](https://doc.qt.io/qt-6/qml-qtquick-gridview.html). Which one to choose depends on the context:
 
-- Lists are faster to visually scan and handle long text better. They tend to be superior for mostly-textual content. Use [alternating background colors](https://api.kde.org/frameworks/kirigami/html/classKirigami_1_1Platform_1_1PlatformTheme.html#afd4bbd60d2d32ff0c788e95b998889f2) for list items with subtitles or extra items on their right sides.
+- Lists are faster to visually scan and handle long text better. They tend to be superior for mostly-textual content. Use alternating background colors with [Kirigami.Theme](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html) for list items with subtitles or extra items on their right sides.
 - Grids make better use of space when the view is wide, items are large, or scrolling is undesirable. They tend to be superior for mostly-visual content.
 
 Depending on the context, it can be reasonable to let the user pick their preferred representation, or even to automatically switch from one to another based on the width of the window.
 
-Implement list and grid items as instances or subclasses of one of the [standard QtQuick.Controls Delegates](https://doc.qt.io/qt-6/qtquickcontrols-delegates.html), which makes them inherit the common KDE styling automatically. If the content is more complex than what the Qt `Delegate` items provide, use one of the pre-made [Kirigami Delegates](https://api.kde.org/frameworks/kirigami/html/search.html?query=delegate). If none of these are sufficient, override the `contentItem` to create your own layout.
+Implement list and grid items as instances or subclasses of one of the [standard QtQuick.Controls Delegates](https://doc.qt.io/qt-6/qtquickcontrols-delegates.html), which makes them inherit the common KDE styling automatically. If the content is more complex than what the Qt `Delegate` items provide, use one of the pre-made [Kirigami Delegates](https://api.kde.org/org-kde-kirigami-delegates-qmlmodule.html). If none of these are sufficient, override the [ItemDelegate.contentItem](https://doc.qt.io/qt-6/qml-qtquick-controls-control.html#contentItem-prop) to create your own delegates.
 
-Implement controls used to add content to list or grid views as [Kirigami.Actions](https://develop.kde.org/docs/getting-started/kirigami/components-actions/) on a [Kirigami.InlineViewHeader](https://api.kde.org/frameworks/kirigami/html/classInlineViewHeader.html).
+Implement controls used to add content to list or grid views as [Kirigami.Actions](https://develop.kde.org/docs/getting-started/kirigami/components-actions/) on a [Kirigami.InlineViewHeader](https://api.kde.org/qml-org-kde-kirigami-inlineviewheader.html).
 
 Place controls used to remove list or grid items inline, on the items themselves. Make them visible, rather than appearing on hover.
 
@@ -55,8 +55,8 @@ Use bold text for the selected or actively-used list or grid item.
 When everything doesn't fit on one page and some content is only contextually relevant, show it on demand using one of the following user interface elements:
 
 - Push a new Page on the page stack if the content will take up all or nearly all of the window or view area.
-- Use a [Kirigami.OverlaySheet](https://api.kde.org/frameworks/kirigami/html/classorg_1_1kde_1_1kirigami_1_1templates_1_1OverlaySheet.html) to display auxiliary views of read-only narrow scrollable content. Don't use it for getting input or if the content is never tall enough to be scrollable.
-- For all other uses — including getting input from the user — use one of the [Kirigami.Dialog](https://api.kde.org/frameworks/kirigami/html/search.html?query=dialog) classes.
+- Use a [Kirigami.OverlaySheet](https://api.kde.org/qml-org-kde-kirigami-overlaysheet.html) to display auxiliary views of read-only narrow scrollable content. Don't use it for getting input or if the content is never tall enough to be scrollable.
+- For all other uses — including getting input from the user — use one of the [Kirigami.Dialog](https://api.kde.org/org-kde-kirigami-dialogs-qmlmodule.html) classes.
 
 <!--TODO: move this info into a more general page on style, once we have one -->
 Whenever overlaying a popup, box, or dialog on top of the app's main content area, add a contrasting outline around the edge of the overlaid element. Without this, visual recognizability suffers when using a dark color scheme, and the popup can appear to blend into the background.
@@ -74,9 +74,9 @@ There are 2 broad categories of tabs: **mutable** and **immutable**.
 - Tabs span the available width
 - Tabs show visible close buttons
 
-**Immutable** tabs are not modifiable by the user. They are for grouping settings or Contextual Toolview pages, and implemented with [Kirigami.NavigationTabBar](https://api.kde.org/frameworks/kirigami/html/classNavigationTabBar.html). This control can be located above or below its view, depending on what makes the most visual sense. Make sure every page has unique controls and content.
+**Immutable** tabs are not modifiable by the user. They are for grouping settings or Contextual Toolview pages, and implemented with [Kirigami.NavigationTabBar](https://api.kde.org/qml-org-kde-kirigami-navigationtabbar.html). This control can be located above or below its view, depending on what makes the most visual sense. Make sure every page has unique controls and content.
 
-Regardless of the type chosen, all tabbed views should hide the tab bar when there's only one tab and implement [standard keyboard shortcuts for switching](https://api.kde.org/frameworks/kconfig/html/namespaceKStandardShortcut.html#a9262eb609e9ad994d7b913eb715e004e).
+Regardless of the type chosen, all tabbed views should hide the tab bar when there's only one tab and implement standard keyboard shortcuts for switching with [KStandardShortcut](https://api.kde.org/kstandardshortcut.html).
 
 On the desktop, tab views scale poorly beyond 4 or 5 tabs. And on mobile, they can become unworkable with more than just two. Consider a different switching control such as a sidebar if the user is expected to regularly interact with many tabs.
 
@@ -107,11 +107,11 @@ If there is no space in the current context (e.g. for a menu item), place the te
 Don't put any truly important text in a tooltip that appears on hover. This component is either unusable or unintuitive for touchscreen users, and even mouse/touchpad users may not be in the habit of hovering the cursor over everything to see if there's a tooltip.
 {{< /alert >}}
 
-If the tooltip's text is longer than a sentence, or it's important that the user reads it, use a [Kirigami.ContextualHelpButton](https://api.kde.org/frameworks/kirigami/html/classContextualHelpButton.html) or [KWidgetsAddons::KContextualHelpButton](https://api.kde.org/frameworks/kwidgetsaddons/html/classKContextualHelpButton.html). Using this component can also be a good idea even for shorter explanations if the UI would otherwise look overrun with multiple inline descriptions.
+If the tooltip's text is longer than a sentence, or it's important that the user reads it, use a [Kirigami.ContextualHelpButton](https://api.kde.org/qml-org-kde-kirigami-contextualhelpbutton.html) or [KWidgetsAddons::KContextualHelpButton](https://api.kde.org/kcontextualhelpbutton.html). Using this component can also be a good idea even for shorter explanations if the UI would otherwise look overrun with multiple inline descriptions.
 
 <!-- TODO: Picture of the KScreen KCM -->
 
-If it might not be clear from context what the `ContextualHelpButton` refers to, or if the user might want to keep the explanation expanded for longer, put the text in a collapsed section. This should be expandable by clicking on a button labeled “Details”, “Show More”, or whatever makes the most contextual sense.
+If it might not be clear from context what the [Kirigami.ContextualHelpButton](https://api.kde.org/qml-org-kde-kirigami-contextualhelpbutton.html) refers to, or if the user might want to keep the explanation expanded for longer, put the text in a collapsed section. This should be expandable by clicking on a button labeled “Details”, “Show More”, or whatever makes the most contextual sense.
 
 A well-designed app of low to moderate complexity does not require written documentation to use. If an app is too complex to understand even with inline help text, the user will uninstall it and find another one rather than turning to a manual. Spend your time improving the app's UI instead.
 
@@ -124,7 +124,7 @@ Manuals and formal documentation are acceptable for highly technical and special
 <summary>Click here to learn about relevant QtWidgets technologies</summary>
 <br/>
 
-Use `setToolTip()` for short explanations, and `setWhatsThis()` for more detailed help. Make the `whatsThis()` help text discoverable for users by using the [KXmlGui::KToolTipHelper](https://api.kde.org/frameworks/kxmlgui/html/classKToolTipHelper.html) class. `KToolTipHelper` is already used by default if the main window of your application inherits from [KXmlGui::KMainWindow](https://api.kde.org/frameworks/kxmlgui/html/classKMainWindow.html). `KToolTipHelper` also adds keyboard shortcuts of relevant actions to tooltips.
+Use [QWidget::setToolTip()](https://doc.qt.io/qt-6/qwidget.html#toolTip-prop) for short explanations, and [QWidget::setWhatsThis()](https://doc.qt.io/qt-6/qwidget.html#whatsThis-prop) for more detailed help. Make the `whatsThis()` help text discoverable for users by using the [KXmlGui::KToolTipHelper](https://api.kde.org/ktooltiphelper.html) class. `KToolTipHelper` is already used by default if the main window of your application inherits from [KXmlGui::KMainWindow](https://api.kde.org/kmainwindow.html). `KToolTipHelper` also adds keyboard shortcuts of relevant actions to tooltips.
 
 </details>
 {{< /alert >}}
