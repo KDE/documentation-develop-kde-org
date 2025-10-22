@@ -182,3 +182,14 @@ cmake-options: >
   -DCMAKE_C_COMPILER_LAUNCHER=sccache
   -DCMAKE_CXX_COMPILER_LAUNCHER=sccache
 ```
+
+### Building without PO processing
+
+By default, KDE projects will always include translations during compilation. This is ordinarily not a problem, but KDE infrastructure uses an automated script to update translations via commits. It might not be desirable to always recompile a project whenever a new translation gets added or changed.
+
+Whether to process new translations can be disabled globally in the configuration file:
+
+```yaml
+cmake-options: >
+  -DKF_SKIP_PO_PROCESSING=ON
+```
