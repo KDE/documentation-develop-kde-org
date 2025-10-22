@@ -142,6 +142,17 @@ cmake-options: >
   -DBUILD_MAN_DOCS=OFF
 ```
 
+### Building without PO processing
+
+By default, KDE projects will always include translations during compilation. This is ordinarily not a problem, but KDE infrastructure uses an automated script to update translations via commits. It might not be desirable to always recompile a project whenever a new translation gets added or changed.
+
+Whether to process new translations can be disabled globally in the configuration file:
+
+```yaml
+cmake-options: >
+  -DKF_SKIP_PO_PROCESSING=ON
+```
+
 ### Building with ccache
 
 Compiler cache, or `ccache`, can be used to increase build speed only when recompiling projects.
