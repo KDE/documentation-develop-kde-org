@@ -12,15 +12,15 @@ Introduction
 
 This tutorial introduces the concept of actions. Actions are a unified way of supplying the user with ways to interact with your program.
 
-For example, if we wanted to let the user of our [main window tutorial]({{< ref "main_window.md" >}}) clear the text box by clicking a button in the toolbar, from an option in the File menu or through a keyboard shortcut, it could all be done with one [QAction](docs:qtwidgets;QAction).
+For example, if we wanted to let the user of our [main window tutorial]({{< ref "main_window.md" >}}) clear the text box by clicking a button in the toolbar, from an option in the File menu or through a keyboard shortcut, it could all be done with one [QAction](https://doc.qt.io/qt-6/qaction.html).
 
 ![](using_actions.webp)
 
 ## QActions
 
-A [QAction](docs:qtwidgets;QAction) is an object which contains all the information about the icon and shortcuts that are associated with a certain action. With the use of [signals and slots](https://doc.qt.io/qt-6/signalsandslots.html), whenever that action is triggered (like clicking a menu option), a function in a different part of your program is automatically run.
+A [QAction](https://doc.qt.io/qt-6/qaction.html) is an object which contains all the information about the icon and shortcuts that are associated with a certain action. With the use of [signals and slots](https://doc.qt.io/qt-6/signalsandslots.html), whenever that action is triggered (like clicking a menu option), a function in a different part of your program is automatically run.
 
-[QActions](docs:qtwidgets;QAction) are most commonly used in [QMenus](docs:qtwidgets;QMenu) shown in a [QMenuBar](docs:qtwidgets;QMenuBar), a [QToolBar](docs:qtwidgets;QToolBar), or in a right click context menu.
+[QActions](https://doc.qt.io/qt-6/qaction.html) are most commonly used in [QMenus](docs:qtwidgets;QMenu) shown in a [QMenuBar](docs:qtwidgets;QMenuBar), a [QToolBar](docs:qtwidgets;QToolBar), or in a right click context menu.
 
 ## The Code
 
@@ -43,7 +43,7 @@ Don't worry about the .rc file just yet. We will see what it's about by the end 
 
 {{< readfile file="/content/docs/getting-started/kxmlgui/using_actions/mainwindow.h" highlight="cpp" emphasize="15" >}}
 
-Only a function `void setupActions()` has been added which will do all the work setting up the [QActions](docs:qtwidgets;QAction).
+Only a function `void setupActions()` has been added which will do all the work setting up the [QActions](https://doc.qt.io/qt-6/qaction.html).
 
 ### mainwindow.cpp
 
@@ -51,11 +51,11 @@ Only a function `void setupActions()` has been added which will do all the work 
 
 ## Explanation
 
-This builds upon the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) code from our previous [main window]({{< ref "main_window.md" >}}). Most of the changes are to `mainwindow.cpp`, an important structural change being that the constructor for MainWindow now calls `setupActions()` instead of `setupGUI()`. `setupActions()` is where the new [QAction](docs:qtwidgets;QAction) code goes before finally calling `setupGUI()` itself.
+This builds upon the [KXmlGuiWindow](docs:kxmlgui;KXmlGuiWindow) code from our previous [main window]({{< ref "main_window.md" >}}). Most of the changes are to `mainwindow.cpp`, an important structural change being that the constructor for MainWindow now calls `setupActions()` instead of `setupGUI()`. `setupActions()` is where the new [QAction](https://doc.qt.io/qt-6/qaction.html) code goes before finally calling `setupGUI()` itself.
 
 ### Creating the QAction object
 
-The QAction is built up in a number of steps. The first is including the [QAction](docs:qtwidgets;QAction) header and then creating one:
+The QAction is built up in a number of steps. The first is including the [QAction](https://doc.qt.io/qt-6/qaction.html) header and then creating one:
 
 ```c++
 #include <QAction>
@@ -63,11 +63,11 @@ The QAction is built up in a number of steps. The first is including the [QActio
 QAction *clearAction = new QAction(this);
 ```
 
-This creates a new [QAction](docs:qtwidgets;QAction) called `clearAction`.
+This creates a new [QAction](https://doc.qt.io/qt-6/qaction.html) called `clearAction`.
 
 ### Setting QAction Properties
 
-Now that we have our [QAction](docs:qtwidgets;QAction) object, we can start setting its properties. With [QAction::setText()](docs:qtwidgets;QAction::setText), we can set the text that will be displayed in the menu and with an optional [QAction::icon()](docs:qtwidgets;QAction::icon) in the toolbar, depending on the widget style (whether beside or below the icon) or setting (whether to display the action text or not).
+Now that we have our [QAction](https://doc.qt.io/qt-6/qaction.html) object, we can start setting its properties. With [QAction::setText()](https://doc.qt.io/qt-6/qaction.html#text-prop), we can set the text that will be displayed in the menu and with an optional [QAction::icon()](https://doc.qt.io/qt-6/qaction.html#icon-prop) in the toolbar, depending on the widget style (whether beside or below the icon) or setting (whether to display the action text or not).
 
 ```c++
 clearAction->setText(i18n("&Clear"));
@@ -83,7 +83,7 @@ The ampersand is also useful for internationalisation: in non-Latin languages su
 
 ### Icon
 
-If the action is going to be displayed in a toolbar, it is nice to have an icon depicting the action. The icon may also be displayed beside the action in the menus, depending on the widget style. We use a [QIcon::fromTheme()](docs:qtgui;QIcon::fromTheme) to grab the system's default icon for "document-new-symbolic" and use [QAction::setIcon()](docs:qtwidgets;QAction::setIcon) to assign it to our `clearAction`.
+If the action is going to be displayed in a toolbar, it is nice to have an icon depicting the action. The icon may also be displayed beside the action in the menus, depending on the widget style. We use a [QIcon::fromTheme()](docs:qtgui;QIcon::fromTheme) to grab the system's default icon for "document-new-symbolic" and use [QAction::setIcon()](https://doc.qt.io/qt-6/qaction.html#icon-prop) to assign it to our `clearAction`.
 
 ```c++
 clearAction->setIcon(QIcon::fromTheme(u"document-new-symbolic"_s));
@@ -103,7 +103,7 @@ The action collection is accessed via the `actionCollection()` function like thi
 actionCollection()->addAction("clear", clearAction);
 ```
 
-Here, our `clearAction` [QAction](docs:qtwidgets;QAction) is added to the collection and given a name of `clear`. This name (clear) is used by the [KXmlGui](docs:kxmlgui;kxmlgui-index.html) framework to refer to the action, so it is used internally and will not be localized.
+Here, our `clearAction` [QAction](https://doc.qt.io/qt-6/qaction.html) is added to the collection and given a name of `clear`. This name (clear) is used by the [KXmlGui](docs:kxmlgui;kxmlgui-index.html) framework to refer to the action, so it is used internally and will not be localized.
 
 ###  Keyboard Shortcuts
 
@@ -130,7 +130,7 @@ Refer to Qt's documentation on [Signals and Slots](https://doc.qt.io/qt-6/signal
 
 ### KStandardAction
 
-For actions which would likely appear in almost every KDE application such as 'quit', 'save', and 'load' there are pre-created convenience [QActions](docs:qtwidgets;QAction), accessed through [`KStandardAction`](docs:kconfigwidgets;KStandardAction).
+For actions which would likely appear in almost every KDE application such as 'quit', 'save', and 'load' there are pre-created convenience [QActions](https://doc.qt.io/qt-6/qaction.html), accessed through [`KStandardAction`](docs:kconfigwidgets;KStandardAction).
 
 They are very simple to use. Once the library has been included (`#include <KStandardAction>`), simply supply it with what you want the function to do and which QActionCollection to add it to. For example: 
 
