@@ -140,6 +140,17 @@ cmake-options: >
   -DBUILD_MAN_DOCS=OFF
 ```
 
+### Building with a different linker
+
+On Linux, the default linker used for C and C++ is LD (using the GNU BFD library) which is single threaded.
+
+You can take advantage of the multithreaded nature of LLVM's [LLD linker](https://lld.llvm.org/) to speed compile times significantly:
+
+```yaml
+cmake-options: >
+  -DCMAKE_LINKER_TYPE=LLD
+```
+
 ### Building with ccache or sccache
 
 Compiler cache, or `ccache`, can be used to increase build speed only when recompiling projects.
