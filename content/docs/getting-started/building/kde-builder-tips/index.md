@@ -108,18 +108,16 @@ project kirigami-tutorial:
   cmake-options: -DOPTION=ON
 ```
 
-### Building without debug symbols
+### Faster iterative compiling with Debug mode
 
-By default, kde-builder compiles projects in `RelWithDebInfo` mode, that is, Release with Debug Info. It is not as slow to compile as `Debug`, but it still provides debug symbols, unlike `Release`.
+By default, kde-builder compiles projects in `RelWithDebInfo` mode, that is, Release with Debug Info.
+
+You might want to set it to Debug mode which is optimal for iterative compilation:
 
 ```yaml
 cmake-options: >
-  -DCMAKE_BUILD_TYPE=Release
+  -DCMAKE_BUILD_TYPE=Debug
 ```
-
-Not having debug symbols will provide the largest boost in build speeds, but it will also render you unable to debug crashes.
-
-If you happen to be a bug tester, you should NOT set this option to Release.
 
 ### Building without tests
 
