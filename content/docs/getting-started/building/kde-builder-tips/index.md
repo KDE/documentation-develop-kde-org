@@ -140,7 +140,7 @@ cmake-options: >
   -DBUILD_MAN_DOCS=OFF
 ```
 
-### Building with ccache
+### Building with ccache or sccache
 
 Compiler cache, or `ccache`, can be used to increase build speed only when recompiling projects.
 
@@ -162,4 +162,12 @@ To use `ccache` you will first need to install it.
 cmake-options: >
   -DCMAKE_C_COMPILER_LAUNCHER=ccache
   -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
+```
+
+If you prefer, you may also want to experiment with [sccache](https://github.com/mozilla/sccache), a newer alternative to accomplish the same job:
+
+```yaml
+cmake-options: >
+  -DCMAKE_C_COMPILER_LAUNCHER=sccache
+  -DCMAKE_CXX_COMPILER_LAUNCHER=sccache
 ```
