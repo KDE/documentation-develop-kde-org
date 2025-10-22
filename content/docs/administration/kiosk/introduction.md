@@ -68,7 +68,7 @@ known as "cascading configuration". If the same key is defined in more
 than one of the configuration files then the key value read from the
 directory tree with the highest precedence will be used.
 
-Some [environment variables](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
+Some [environment variables](https://specifications.freedesktop.org/basedir-spec)
 are used to indicate which directories should be searched for
 configuration files: `$XDG_CONFIG_DIRS` is a cross-desktop
 environment variable used to locate configuration files globally in the

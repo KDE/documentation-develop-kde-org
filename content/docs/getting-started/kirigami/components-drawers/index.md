@@ -72,7 +72,7 @@ Kirigami.ApplicationWindow {
 
 {{< alert title="Note" color="info" >}}
 
-The [titleIcon](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#titleIcon-prop) property takes names for system-wide icons according to the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application which comes with [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk), or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html).
+The [titleIcon](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#titleIcon-prop) property takes names for system-wide icons according to the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application which comes with [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk), or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec).
 
 {{< /alert >}}
 

@@ -118,7 +118,7 @@ All of those elements have to be put into one SVG file for a button type.
 
 ## Configuration
 
-The configuration file must have as its name the plugin name provided in the metadata file followed by the suffix `rc` ([example](https://github.com/nclarius/Plasma-window-decorations/blob/main/ActiveAccentLight/ActiveAccentLightrc)). The configuration file is a KConfig file following the [Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html).
+The configuration file must have as its name the plugin name provided in the metadata file followed by the suffix `rc` ([example](https://github.com/nclarius/Plasma-window-decorations/blob/main/ActiveAccentLight/ActiveAccentLightrc)). The configuration file is a KConfig file following the [Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec).
 
 In a configuration group with the heading `[General]` the following options can be set:
 
@@ -231,7 +231,7 @@ It is important to remember that the buttons have to be scalable to correctly su
 
 ## Metadata
 
-The theme must contain a `metadata.desktop` file for information about the theme such as name, author, license, etc ([example](https://github.com/nclarius/Plasma-window-decorations/blob/main/ActiveAccentLight/metadata.desktop)). The format follows the [Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html), starting with a group heading `[DesktopEntry]` and supporting the following entries:
+The theme must contain a `metadata.desktop` file for information about the theme such as name, author, license, etc ([example](https://github.com/nclarius/Plasma-window-decorations/blob/main/ActiveAccentLight/metadata.desktop)). The format follows the [Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry-spec), starting with a group heading `[DesktopEntry]` and supporting the following entries:
 
 - `Name`: the name of the theme displayed in theme selection
 - `Comment`: a comment for the theme, e.g. "Aurorae theme inspired by Oxygen decoration"

@@ -99,7 +99,7 @@ Some last pieces and we are ready to start changing the code. We are going to ad
 
 1. The [Appstream](https://www.freedesktop.org/wiki/Distributions/AppStream/)
 metadata used to show the app in software stores.
-2. A [Desktop Entry](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html)
+2. A [Desktop Entry](https://specifications.freedesktop.org/desktop-entry-spec)
 file to add the application to the application launcher.
 3. An application icon.
 

@@ -7,7 +7,7 @@ aliases:
 - /hig/patterns-content/iconandtext/
 ---
 
-KDE apps respect the FreeDesktop [icon theme](https://specifications.freedesktop.org/icon-theme-spec/latest/) and [icon naming](https://specifications.freedesktop.org/icon-naming-spec/latest/) standards, and make extensive use of themable icons.
+KDE apps respect the FreeDesktop [icon theme](https://specifications.freedesktop.org/icon-theme-spec) and [icon naming](https://specifications.freedesktop.org/icon-naming-spec) standards, and make extensive use of themable icons.
 
 KDE's Breeze icon theme complies with the above specifications and contains thousands of icons suitable for a wide range of apps. While the user can change the icon theme to something else, ensure your app looks perfect with Breeze. Browse the library of Breeze icons using Icon Explorer, contained within the `plasma-sdk` package.
 
