@@ -48,7 +48,7 @@ on your distribution and how often it updates.
 | Sufficiently up-to-date[^1]     | kde-builder               | ✅ The preferred method. Works for all purposes. |
 |                                 | manual CMake compilation  | ✅ Works well for standalone apps. Core software[^2] requires extra steps to work[^3]. |
 |                                 | containers                | ✅ Redundant and takes extra setup, but possible. Doesn't work well for core software[^2]. |
-| Not up-to-date distribution[^4] | kde-builder               | ⚠️ If the system is not too outdated, it might work, in which case all benefits of kde-builder apply. If the system is too outdated, it will not work. |
+| Not up-to-date distribution[^4] | kde-builder               | ⚠️ If the system is not too outdated, it might work, in which case all benefits of kde-builder apply. If the system is too outdated, it will not work. See [Common problems in stable distributions](https://develop.kde.org/docs/getting-started/building/kde-builder-failure/#common-problems-in-stable-distributions).|
 |                                 | manual CMake compilation  | ❌ Might work for standalone apps, but not recommended. |
 |                                 | containers                | ✅ Works well for standalone apps, but not core software[^2]. |
 | Immutable distribution[^5]      | kde-builder               | ⚠️ Possible only inside a container. |
