@@ -69,7 +69,7 @@ See [Running directly, as a module, and as a console script](/docs/getting-start
 
 ### org.kde.kirigami_python.desktop {#desktop-file}
 
-The primary purpose of [Desktop Entry files](https://specifications.freedesktop.org/desktop-entry-spec/latest/) is to show your app on the application launcher on Linux. Another reason to have them is to have window icons on Wayland, as they are required to tell the compositor "this window goes with this icon".
+The primary purpose of [Desktop Entry files](https://specifications.freedesktop.org/desktop-entry-spec) is to show your app on the application launcher on Linux. Another reason to have them is to have window icons on Wayland, as they are required to tell the compositor "this window goes with this icon".
 
 It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) followed by the `.desktop` extension such as `org.kde.kirigami_python.desktop`:
 

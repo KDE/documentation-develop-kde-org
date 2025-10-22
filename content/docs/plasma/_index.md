@@ -40,7 +40,7 @@ A list of colors in plain INI format that define the colors to be used for UI el
 
 ## **Icon Theme**
 
-A collection of icon files in different sizes that follows the [Freedesktop specification](https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html).
+A collection of icon files in different sizes that follows the [Freedesktop specification](https://specifications.freedesktop.org/icon-theme-spec).
 
 * System/Default: `/usr/share/icons/` ([GitLab](https://invent.kde.org/frameworks/breeze-icons))
 * User Installed: `~/.local/share/icons/` ([KDE Store Category](https://store.kde.org/browse/cat/132/order/latest/))

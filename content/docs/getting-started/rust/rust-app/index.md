@@ -148,7 +148,7 @@ cargo run --target-dir build/
 Cargo lacks the ability to install more than just executables, which is insufficient for desktop applications. We need to install:
 
 * an application icon
-* a [Desktop Entry file](https://specifications.freedesktop.org/desktop-entry-spec/latest/) to have a menu entry and show the application icon in our window on Wayland
+* a [Desktop Entry file](https://specifications.freedesktop.org/desktop-entry-spec) to have a menu entry and show the application icon in our window on Wayland
 * a [Metainfo file](https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html) to show the application on Linux software stores
 
 More complex and mature projects might also include manpages and manuals, KConfig configuration files, and D-Bus interfaces and services for example.
@@ -330,7 +330,7 @@ We need the icon to be perfectly squared, which can be accomplished with
 
 ### org.kde.simplemdviewer.desktop
 
-The primary purpose of [Desktop Entry files](https://specifications.freedesktop.org/desktop-entry-spec/latest/) is to show your app on the application launcher on Linux. Another reason to have them is to have window icons on Wayland, as they are required to tell the compositor "this window goes with this icon".
+The primary purpose of [Desktop Entry files](https://specifications.freedesktop.org/desktop-entry-spec) is to show your app on the application launcher on Linux. Another reason to have them is to have window icons on Wayland, as they are required to tell the compositor "this window goes with this icon".
 
 It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) followed by the `.desktop` extension such as `org.kde.simplemdviewer.desktop`:
 

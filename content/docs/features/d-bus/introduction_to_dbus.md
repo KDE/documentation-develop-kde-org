@@ -10,7 +10,7 @@ aliases:
 
 ## Abstract
 
-[D-Bus](https://www.freedesktop.org/wiki/Software/dbus/) is a free/open source inter-process communication (IPC) mechanism that is part of the [freedesktop.org](https://freedesktop.org) project. It is used in a wide range of applications and many freedesktop.org standards such as [Desktop Notifications](https://specifications.freedesktop.org/notification-spec/notification-spec-latest.html), [media player control](https://specifications.freedesktop.org/mpris-spec/latest/) and [XDG portals](https://github.com/flatpak/xdg-desktop-portal) are built on it.
+[D-Bus](https://www.freedesktop.org/wiki/Software/dbus/) is a free/open source inter-process communication (IPC) mechanism that is part of the [freedesktop.org](https://freedesktop.org) project. It is used in a wide range of applications and many freedesktop.org standards such as [Desktop Notifications](https://specifications.freedesktop.org/notification-spec), [media player control](https://specifications.freedesktop.org/mpris-spec) and [XDG portals](https://github.com/flatpak/xdg-desktop-portal) are built on it.
 
 The term "IPC" can be used to describe methods of getting information from one process to another. This includes exchanging data, calling methods and listening to events.
 

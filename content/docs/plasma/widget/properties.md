@@ -348,7 +348,7 @@ https://invent.kde.org/frameworks/plasma-framework/-/blob/master/src/plasma/data
 {{< sections >}}
 {{< section-left >}}
 
-These two are based on the standard [XDG desktop file](https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html) properties. You can also translate these properties with `Name[fr]`. The translated `Name` is used in the "Add Widgets" list. The `Description` (previously known as `Comment` in the `metadata.desktop`) is only used for the default tooltip subtext when the widget is added to a panel.
+These two are based on the standard [XDG desktop file](https://specifications.freedesktop.org/desktop-entry-spec/latest/recognized-keys.html) properties. You can also translate these properties with `Name[fr]`. The translated `Name` is used in the "Add Widgets" list. The `Description` (previously known as `Comment` in the `metadata.desktop`) is only used for the default tooltip subtext when the widget is added to a panel.
 
 {{< /section-left >}}
 {{< section-right >}}
