@@ -5,7 +5,7 @@ menu:
   main:
     name: Tutorials
     weight: 20
-layout: home
+layout: frontpage
 recursive: true
 aliases:
 - /develop
