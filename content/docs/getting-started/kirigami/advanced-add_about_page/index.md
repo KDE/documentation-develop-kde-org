@@ -17,7 +17,7 @@ First, we are going to edit our `main.cpp` file from previous tutorials.
 
 In the `main.cpp` file we include [KAboutData](docs:kcoreaddons;KAboutData), a core KDE frameworks component that lets us store information about our application. This information can then be reused by many other KDE Frameworks components. We instantiate a new `aboutData` object with its fairly complete default constructor and add author information.
 
-After all the required information has been set, we call [KAboutData::setApplicationData](docs:kcoreaddons;KAboutData::setApplicationData) to initialize the properties of the [QApplication ](docs:qtwidgets;QApplication) object.
+After all the required information has been set, we call [KAboutData::setApplicationData()](docs:kcoreaddons;KAboutData::setApplicationData) to initialize the properties of the [QApplication ](docs:qtwidgets;QApplication) object.
 
 We then create a [qmlRegisterSingletonType()](docs:qtqml;QQmlEngine::qmlRegisterSingletonType). This is used to allow us to import the C++ code as a module in our `main.qml` with `import org.kde.example 1.0`.
 

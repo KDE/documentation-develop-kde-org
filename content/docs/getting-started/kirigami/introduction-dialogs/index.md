@@ -90,9 +90,9 @@ Kirigami.ApplicationWindow {
 
 Dialogs by default have a [header](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#header-prop) and a [footer](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#footer-prop), both inherited from [Controls.Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog).
 
-The header by default includes a [title](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#title-prop) and a close button that can be disabled with [showCloseButton](https://api-staging.kde.org/qml-org-kde-kirigami-dialogs-dialog.html#showCloseButton-prop). The footer by default includes a close button, and it can be overridden with [standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#standardButtons-prop).
+The header by default includes a [title](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#title-prop) and a close button that can be disabled with [showCloseButton](https://api.kde.org/qml-org-kde-kirigami-dialogs-dialog.html#showCloseButton-prop). The footer by default includes a close button, and it can be overridden with [standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#standardButtons-prop).
 
-We first set it to show an "Ok" button and a "Cancel" button, add some padding, and add a reasonable [preferredWidth](https://api-staging.kde.org/qml-org-kde-kirigami-dialogs-dialog.html#preferredWidth-prop). The preferred width is the default expected size of the dialog, which can increase if needed. We can use standard [Kirigami.Units](https://api-staging.kde.org/qml-org-kde-kirigami-platform-units.html) that we will revisit later on.
+We first set it to show an "Ok" button and a "Cancel" button, add some padding, and add a reasonable [preferredWidth](https://api.kde.org/qml-org-kde-kirigami-dialogs-dialog.html#preferredWidth-prop). The preferred width is the default expected size of the dialog, which can increase if needed. We can use standard [Kirigami.Units](https://api.kde.org/qml-org-kde-kirigami-platform-units.html) that we will revisit later on.
 
 Then we come to a [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout). Unlike a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html), the layout of its child components is automatic and centered, with optional labels. As the name implies, it is used to create input forms.
 
@@ -104,7 +104,7 @@ We have created Textfield elements that act as:
 2. Input for the description of our countdown
 3. Input for the date we are counting down towards, which must be provided in a `YYYY-MM-DD` format
 
-Within each of these [Controls.Textfield](docs:qtquickcontrols;QtQuick.Controls.TextField) elements, we are setting a [Kirigami.FormData.label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop) property that lets us define labels for them. The form will present the correct labels to the left of each of these text input fields.
+Within each of these [Controls.Textfield](docs:qtquickcontrols;QtQuick.Controls.TextField) elements, we are setting a [Kirigami.FormData.label](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop) property that lets us define labels for them. The form will present the correct labels to the left of each of these text input fields.
 
 Finally, we are also setting the [onAccepted](https://doc.qt.io/qt-6/qml-qtquick-textinput.html#accepted-signal) property to trigger the [forceActiveFocus()](https://doc.qt.io/qt-6/qml-qtquick-item.html#forceActiveFocus-method) method of the following field; this will switch the active field once the user hits the ENTER key, improving the usability of the form.
 

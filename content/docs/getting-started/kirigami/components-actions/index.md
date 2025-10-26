@@ -64,8 +64,8 @@ Kirigami.Action {
 ```
 
 Another feature of Kirigami Actions is to provide various hints to items using actions
-about how they should display the action. These are primarily handled by the [displayHint](https://api-staging.kde.org/qml-org-kde-kirigami-action.html#displayHint-prop)
-and [displayComponent](https://api-staging.kde.org/qml-org-kde-kirigami-action.html#displayComponent-prop) properties.
+about how they should display the action. These are primarily handled by the [displayHint](https://api.kde.org/qml-org-kde-kirigami-action.html#displayHint-prop)
+and [displayComponent](https://api.kde.org/qml-org-kde-kirigami-action.html#displayComponent-prop) properties.
 
 These properties will be respected by the item if possible. For example, the following
 action will be displayed as a [TextField](docs:qtquickcontrols;QtQuick.Controls.TextField) with the item trying its best to keep itself
@@ -189,7 +189,7 @@ In this example, we are creating a "clear" button for a search field that is onl
 
 {{< alert title="Note" color="info" >}}
 
-You should rarely use an ActionTextField directly. [SearchField](docs:kirigami;org.kde.kirigami.SearchField) and [PasswordField](docs:kirigami;org.kde.kirigami.PasswordField) both inherit from `ActionTextField` and are likely to cover your desired use-case.
+You should rarely use an ActionTextField directly. [SearchField](docs:kirigami;org.kde.kirigami.SearchField) and [PasswordField](docs:kirigami;org.kde.kirigami.PasswordField) both inherit from [ActionTextField](https://api.kde.org/qml-org-kde-kirigami-actiontextfield.html) and are likely to cover your desired use-case.
 
 {{< /alert >}}
 
@@ -265,7 +265,7 @@ You can read more about [ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToo
 
 ### Cards
 
-A [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card) is used to display a collection of information or actions together. These actions can be added to the `actions` group, similarly to previous components.
+A [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card) is used to display a collection of information or actions together. These actions can be added to the [actions](https://api.kde.org/qml-org-kde-kirigami-card.html#actions-prop) group, similarly to previous components.
 
 {{< sections >}}
 

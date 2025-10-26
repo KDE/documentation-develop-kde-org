@@ -17,7 +17,7 @@ The global drawer is a standard feature in KDE's mobile applications and can som
 
 It can be activated by tapping the hamburger menu or by swiping from the left edge to the middle of the screen in Left to Right mode or from the right edge in Right to Left mode.
 
-[Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer) components are what we use to create such drawers. These are set to the [globalDrawer](https://api-staging.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#globalDrawer-prop) property of the [Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow) that forms the basis of our Kirigami application.
+[Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer) components are what we use to create such drawers. These are set to the [globalDrawer](https://api.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#globalDrawer-prop) property of the [Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow) that forms the basis of our Kirigami application.
 
 {{< sections >}}
 
@@ -72,7 +72,7 @@ Kirigami.ApplicationWindow {
 
 {{< alert title="Note" color="info" >}}
 
-The [titleIcon](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#titleIcon-prop) property takes names for system-wide icons according to the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application which comes with [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk), or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec).
+The [titleIcon](https://api.kde.org/qml-org-kde-kirigami-globaldrawer.html#titleIcon-prop) property takes names for system-wide icons according to the FreeDesktop specification. These icons and icon names can be viewed with KDE's CuttleFish application which comes with [plasma-sdk](https://invent.kde.org/plasma/plasma-sdk), or by visiting [FreeDesktop's icon naming specification](https://specifications.freedesktop.org/icon-naming-spec).
 
 {{< /alert >}}
 
@@ -80,7 +80,7 @@ The [titleIcon](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.ht
 
 Headers can be used to place sticky components at the top of your global drawer. Header components will stay in place even if your global drawer contains nested Kirigami actions that replace the current layer on the global drawer. 
 
-Your chosen header component can be set with the global drawer's `header` property, and it will replace the global drawer's title. This is useful to add a `Kirigami.SearchField`, for example:
+Your chosen header component can be set with the global drawer's [header](https://api.kde.org/qml-org-kde-kirigami-globaldrawer.html#header-prop) property, and it will replace the global drawer's title. This is useful to add a [Kirigami.SearchField](https://api.kde.org/qml-org-kde-kirigami-searchfield.html), for example:
 
 {{< sections >}}
 
@@ -142,7 +142,7 @@ Kirigami.ApplicationWindow {
 
 While panel-style global drawers can be useful in mobile environments, they might be too large on the desktop, especially when the application has few actions.
 
-Thankfully, Kirigami global drawers provide an [isMenu](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#isMenu-prop) property. When set to `true`, they turn into more traditional menus only on the desktop.
+Thankfully, Kirigami global drawers provide an [isMenu](https://api.kde.org/qml-org-kde-kirigami-globaldrawer.html#isMenu-prop) property. When set to `true`, they turn into more traditional menus only on the desktop.
 
 {{< alert title="Note" color="info" >}}
 
@@ -182,7 +182,7 @@ While a [Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer) dis
 
 A context drawer will behave differently depending on whether it is being used on a mobile platform or on a desktop.
 
-On a desktop, when a window has enough space, contextual actions show up as part of the `actions` group in the top toolbar. When space is limited, such as on a mobile device or in a narrow window, contextual actions are hidden behind a hamburger menu on the right side. This is different from other actions in the `actions` group, namely `actions.main`, `actions.left` and `actions.right`; these do not get hidden in space-constrained windows, and are instead collapsed into their respective icons.
+On a desktop, when a window has enough space, contextual actions show up as part of the [actions](https://api.kde.org/qml-org-kde-kirigami-contextdrawer.html#actions-prop) group in the top toolbar. When space is limited, such as on a mobile device or in a narrow window, contextual actions are hidden behind a hamburger menu on the right side. This is different from other actions in the `actions` group, namely `actions.main`, `actions.left` and `actions.right`; these do not get hidden in space-constrained windows, and are instead collapsed into their respective icons.
 
 {{< readfile file="/content/docs/getting-started/kirigami/components-drawers/contextdrawer.qml" highlight="qml" >}}
 

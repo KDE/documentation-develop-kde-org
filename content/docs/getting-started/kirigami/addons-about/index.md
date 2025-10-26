@@ -7,7 +7,7 @@ group: addons
 
 Kirigami Addons is an additional set of visual components that work well on mobile and desktop and are guaranteed to be cross-platform. It uses Kirigami under the hood to create its components.
 
-Some of those components allow you to credit your work and the work of other contributors in your project, as well as mention the frameworks being used in your application: [AboutKDE](https://api.kde.org/frameworks/kirigami-addons/html/classAboutKDE.html) and AboutPage.
+Some of those components allow you to credit your work and the work of other contributors in your project, as well as mention the frameworks being used in your application: [AboutKDE](https://api.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutkdepage.html) and [AboutPage](https://api.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutpage.html).
 
 ## About KDE
 
@@ -15,13 +15,13 @@ Each new button we created in the previous step should open a new page. You can 
 
 {{< readfile file="FirstAboutKDE.qml" highlight="qml" emphasize="16 26" >}}
 
-That's it really! All it takes is instantiating `FormCard.AboutKDE`. You should see something like this after clicking the AboutKDE button:
+That's it really! All it takes is instantiating `FormCard.AboutKDE`. You should see something like this after clicking the [AboutKDE](https://api.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutkdepage.html) button:
 
 {{< figure src="aboutkde.webp" class="text-center" >}}
 
 ## About Page
 
-The application's AboutPage is slightly more complex, but it's still very simple to use.
+The application's [AboutPage](https://api.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutpage.html) is slightly more complex, but it's still very simple to use.
 
 For a simple about page that uses the data set in by `KAboutData::setApplicationData(aboutData);` in `main.cpp` add the following to your `Main.qml`:
 
@@ -33,7 +33,7 @@ The About page of our application should look like this:
 
 ### Using JSON instead of KAboutData
 
-Instead of letting your about page get information from [KAboutData](docs:kcoreaddons;KAboutData), it is possible to pass a JSON object directly. You will still need to use [QApplication::setWindowIcon()](docs:qtwidgets;QApplication::setWindowIcon) in your `main.cpp` in order for your application icon to show up.
+Instead of letting your about page get information from [KAboutData](docs:kcoreaddons;KAboutData), it is possible to pass a JSON object directly. You will still need to use [QApplication::setWindowIcon()](docs:qtgui;QGuiApplication::setWindowIcon) in your `main.cpp` in order for your application icon to show up.
 
 Create a `MyAboutPage.qml` like this:
 

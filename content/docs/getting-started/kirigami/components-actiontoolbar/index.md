@@ -21,7 +21,7 @@ This page assumes you are familiar with [Kirigami.Action](docs:kirigami;org.kde.
 
 The layout and location of your [Kirigami.ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToolBar) are really up to you, though for the sake of user-friendliness it is usually a good idea to stick to UI conventions and put your toolbar near the top or bottom of your page and to have it spread width wise.
 
-Like most other action-holding components, [Kirigami.ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToolBar) has an [actions](https://api-staging.kde.org/qml-org-kde-kirigami-actiontoolbar.html#actions-prop) property. We can assign an array of [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) components to this property.
+Like most other action-holding components, [Kirigami.ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToolBar) has an [actions](https://api.kde.org/qml-org-kde-kirigami-actiontoolbar.html#actions-prop) property. We can assign an array of [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) components to this property.
 
 ```qml
 import QtQuick
@@ -82,7 +82,7 @@ Kirigami.ApplicationWindow {
 
 ### Alignment
 
-By default, actions in the [Kirigami.ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToolBar) will be left aligned. This might not be desirable in all situations. Thankfully we can change this with the [alignment](https://api-staging.kde.org/qml-org-kde-kirigami-actiontoolbar.html#alignment-prop) property. We can set this property to a range of values, but the three most relevant ones are `Qt.AlignLeft`, `Qt.AlignCenter`, and `Qt.AlignRight` (which deal with [horizontal alignment](docs:qtcore;Qt::Alignment)).
+By default, actions in the [Kirigami.ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToolBar) will be left aligned. This might not be desirable in all situations. Thankfully we can change this with the [alignment](https://api.kde.org/qml-org-kde-kirigami-actiontoolbar.html#alignment-prop) property. We can set this property to a range of values, but the three most relevant ones are `Qt.AlignLeft`, `Qt.AlignCenter`, and `Qt.AlignRight` (which deal with [horizontal alignment](docs:qtcore;Qt::Alignment)).
 
 {{< sections >}}
 

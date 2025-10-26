@@ -93,7 +93,7 @@ void Backend::setIntroductionText(const QString &introductionText)
 
 As you can see, when the setter is called, the signal will be emitted, and inform the ui and backend of the change.
 
-To display the text, add a heading to `main.qml` under the `title` property of the [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) element already contained in the template.
+To display the text, add a heading to `main.qml` under the [title](https://doc.qt.io/qt-6/qml-qtquick-controls-page.html#title-prop) property of the [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) element already contained in the template.
 
 The resulting code in that part of the file should look like this:
 

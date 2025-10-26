@@ -372,5 +372,5 @@ Kirigami.ApplicationWindow {
 
 ## Theme
 
-The font size of the [Kirigami.Theme](https://api-staging.kde.org/qml-org-kde-kirigami-platform-theme.html) is available
+The font size of the [Kirigami.Theme](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html) is available
 as `Kirigami.Theme.defaultFont.pointSize` in your application.

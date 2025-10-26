@@ -26,11 +26,11 @@ We also set some metadata relating to the application. These include the organis
 
 To make our app look good with KDE's [Breeze icons](https://invent.kde.org/frameworks/breeze-icons) and [Breeze style](https://invent.kde.org/plasma/breeze) on non-Plasma environments such as Windows or GNOME, we need to do three things:
 
-* initialize the theming facilities of [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) on platforms where icon themes aren't part of the system (like Windows or MacOS) with `KIconTheme::initTheme()`
+* initialize the theming facilities of [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) on platforms where icon themes aren't part of the system (like Windows or MacOS) with [KIconTheme::initTheme()](https://api.kde.org/kicontheme.html#initTheme)
 * set the QStyle with [QApplication::setStyle()](docs:qtwidgets;QApplication::setStyle) to force Breeze instead of the native platform style
 * set the QtQuick Controls style with [QQuickStyle::setStyle()](docs:qtquickcontrols;QQuickStyle::setStyle) to force Breeze with KDE's [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)
 
-The call to `KIconTheme::initTheme()` needs to be done before creating the QApplication and lets the app find Breeze icons to use. Setting the QStyle to Breeze is needed because we used QApplication for our app instead of [QGuiApplication](docs:qtgui;QGuiApplication). Actual interface controls in the window like buttons and checkboxes will follow Breeze by using `qqc2-desktop-style`.
+The call to [KIconTheme::initTheme()](https://api.kde.org/kicontheme.html#initTheme) needs to be done before creating the QApplication and lets the app find Breeze icons to use. Setting the QStyle to Breeze is needed because we used QApplication for our app instead of [QGuiApplication](docs:qtgui;QGuiApplication). Actual interface controls in the window like buttons and checkboxes will follow Breeze by using `qqc2-desktop-style`.
 
 The [QQmlApplicationEngine](docs:qtqml;QQmlApplicationEngine) lets us load an application from a QML file, which we do in the next line. In `engine.loadFromModule("org.kde.tutorial", "Main");` we load our QML from the URI import defined in CMake.
 

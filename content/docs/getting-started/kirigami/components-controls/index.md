@@ -12,7 +12,7 @@ Kirigami makes use of a wide selection of different interactive elements from Qt
 
 ## Buttons
 
-In Kirigami apps, we use buttons from QtQuick Controls. Using them is pretty straightforward: we set the text to the [text](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#text-prop) property and any action we want it to perform is set to the [onClicked](docs:qtquickcontrols;QtQuick.Controls.AbstractButton::clicked) property.
+In Kirigami apps, we use the QtQuick Controls [Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html). Using them is pretty straightforward: we set the [text](https://doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#text-prop) property and any action we want it to perform is set to the [onClicked](docs:qtquickcontrols;QtQuick.Controls.AbstractButton::clicked) property.
 
 {{< sections >}}
 

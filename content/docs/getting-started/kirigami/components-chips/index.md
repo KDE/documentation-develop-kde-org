@@ -15,8 +15,8 @@ text elements, which is also interactable and comes with an optional delete butt
 
 ## Quick Start
 
-Chips can easily be added using the `Kirigami.Chip` component. By assigning a
-string to its `text` field, we give chips their name.
+Chips can easily be added using the [Kirigami.Chip](https://api.kde.org/qml-org-kde-kirigami-chip.html) component. By assigning a
+string to its inherited [AbstractButton.text](https://doc.qt.io/qt-6/qml-qtquick-controls-abstractbutton.html#text-prop) field, we give chips their name.
 
 {{< sections >}}
 

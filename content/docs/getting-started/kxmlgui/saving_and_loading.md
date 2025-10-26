@@ -11,7 +11,7 @@ aliases:
 
 Now that we have a basic text editor interface, it's time to make it do something useful. At the most basic, a text editor needs to be able to load files from data storage, save files that have been created/edited, and create new files.
 
-KDE Frameworks provides a number of classes for working with files that make life a lot easier for developers. [KIO](https://api-staging.kde.org/kio-index.html) allows you to easily access files through network-transparent protocols. Qt also provides standard file dialogs for opening and saving files.
+KDE Frameworks provides a number of classes for working with files that make life a lot easier for developers. [KIO](https://api.kde.org/kio-index.html) allows you to easily access files through network-transparent protocols. Qt also provides standard file dialogs for opening and saving files.
 
 ![](saving_and_loading.webp)
 
@@ -156,13 +156,13 @@ const QUrl fileNameFromDialog = QFileDialog::getOpenFileUrl(this, i18n("Open Fil
 
 Here we use [QUrl](docs:qtcore;QUrl) to handle files from remote locations.
 
-Then we use the [KIO](https://api-staging.kde.org/kio-index.html) library to retrieve our file. This allows us to open the file even if it's stored in a remote location like an SFTP server. We make the following call to the [KIO::storedGet](https://api-staging.kde.org/kio-storedtransferjob.html#storedGet) function with an argument for the file you wish to open or download:
+Then we use the [KIO](https://api.kde.org/kio-index.html) library to retrieve our file. This allows us to open the file even if it's stored in a remote location like an SFTP server. We make the following call to the [KIO::storedGet](https://api.kde.org/kio-storedtransferjob.html#storedGet) function with an argument for the file you wish to open or download:
 
 ```c++
 KIO::Job *job = KIO::storedGet(fileNameFromDialog);
 ```
 
-The function returns a handle to a [KIO::Job](https://api-staging.kde.org/kio-job.html), which we first connect to our `downloadFinished()` slot before "running" the job.
+The function returns a handle to a [KIO::Job](https://api.kde.org/kio-job.html), which we first connect to our `downloadFinished()` slot before "running" the job.
 
 ```c++
 connect(job, &KJob::result, this, &MainWindow::downloadFinished);
@@ -178,7 +178,7 @@ fileName.clear();
 
 Otherwise, we continue with opening the file.
 
-The data that `storedGet()` successfully downloaded, in this case the contents of our text file, is stored in the data member of a [KIO::StoredTransferJob](https://api-staging.kde.org/kio-storedtransferjob.html) class. But in order to display the contents of the file as text, we must use a [QTextStream](docs:qtcore;QTextStream). We create one by passing the data of the [KIO::StoredTransferJob](https://api-staging.kde.org/kio-storedtransferjob.html) to its constructor and then call its [QTextStream::readAll()](docs:qtcore;QTextStream::readAll) function to get the text from the file. This is then passed to the `setPlainText()` function of our text area.
+The data that `storedGet()` successfully downloaded, in this case the contents of our text file, is stored in the data member of a [KIO::StoredTransferJob](https://api.kde.org/kio-storedtransferjob.html) class. But in order to display the contents of the file as text, we must use a [QTextStream](docs:qtcore;QTextStream). We create one by passing the data of the [KIO::StoredTransferJob](https://api.kde.org/kio-storedtransferjob.html) to its constructor and then call its [QTextStream::readAll()](docs:qtcore;QTextStream::readAll) function to get the text from the file. This is then passed to the `setPlainText()` function of our text area.
 
 ```c++
 const KIO::StoredTransferJob *storedJob = qobject_cast<KIO::StoredTransferJob *>(job);
@@ -196,7 +196,7 @@ Again, for simplicity's sake, this tutorial only saves text files to local disk.
 
 {{< readfile file="/content/docs/getting-started/kxmlgui/saving_and_loading/CMakeLists.txt" highlight="cmake" emphasize="27-28 46-47" >}}
 
-Since we are now using the [KIO](https://api-staging.kde.org/kio-job.html) library, we must tell CMake to link against it. We do this by passing `KIO` to the [`find_package()`](https://cmake.org/cmake/help/latest/command/find_package.html) function and `KF6::KIOCore` to the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function.
+Since we are now using the [KIO](https://api.kde.org/kio-job.html) library, we must tell CMake to link against it. We do this by passing `KIO` to the [`find_package()`](https://cmake.org/cmake/help/latest/command/find_package.html) function and `KF6::KIOCore` to the [`target_link_libraries()`](https://cmake.org/cmake/help/latest/command/target_link_libraries.html) function.
 
 ### Running our application
 

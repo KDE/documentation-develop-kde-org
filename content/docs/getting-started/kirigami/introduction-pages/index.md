@@ -20,7 +20,7 @@ In this section we'll be focusing on pages, one of the key structural elements o
 
 Kirigami apps are typically organized in pages by using [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). Pages are the different "screens" of an app. You will want to have a page dedicated to specific aspects of your app's interaction, and to make things easier you can create different QML files for each page.
 
-Pages are organized in a [page stack](https://api-staging.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) where they can be pushed and popped. On a phone only the top-most page is shown, whereas on a larger screen (desktop or tablet), if desired, multiple pages can be shown next to each other.
+Pages are organized in a [page stack](https://api.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) where they can be pushed and popped. On a phone only the top-most page is shown, whereas on a larger screen (desktop or tablet), if desired, multiple pages can be shown next to each other.
 
 {{< compare >}}
 
@@ -48,7 +48,7 @@ The idea behind our app is that we're going to be able to display a bunch of cou
 
 {{< readfile file="content/docs/getting-started/kirigami/introduction-pages/Main.qml" highlight="qml" >}}
 
-Kirigami pages also feature neat titles placed within the toolbar, quickly indicating to the user which page they are on. All we need to do is to set a page title using the `title` property of [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage). In this case, we used one of the `i18nc()` functions we explored in our previous tutorial to this end.
+Kirigami pages also feature neat titles placed within the toolbar, quickly indicating to the user which page they are on. All we need to do is to set a page title using the [title](https://doc.qt.io/qt-6/qml-qtquick-controls-page.html#title-prop) property of [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage). In this case, we used one of the `i18nc()` functions we explored in our previous tutorial to this end.
 
 {{< alert title="Note" color="info" >}}
 

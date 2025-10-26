@@ -44,9 +44,9 @@ The interesting part will be the `main.cpp`:
 
 If you have read our [KXmlGui tutorial](/docs/getting-started/kxmlgui) or the last Kirigami tutorial on the [Kirigami About page](/docs/getting-started/kirigami/advanced-add_about_page), much of this will seem familiar to you.
 
-We create our application and use [KAboutData's](docs:kcoreaddons;KAboutData) default constructor to add the metadata of our application, add ourselves as an author, and then use [setApplicationData()](docs:kcoreaddons;KAboutData::setApplicationData) to finish the process. For later, we also set an application icon that comes from the system theme.
+We create our application and use [KAboutData](docs:kcoreaddons;KAboutData)'s default constructor to add the metadata of our application, add ourselves as an author, and then use [setApplicationData()](docs:kcoreaddons;KAboutData::setApplicationData) to finish the process. For later, we also set an application icon that comes from the system theme.
 
-We then use a lambda in [qmlRegisterSingletonType](docs:qtqml;QQmlEngine::qmlRegisterSingletonType) to directly send the metadata of our application to the QML side, exposing its properties.
+We then use a lambda in [qmlRegisterSingletonType()](https://doc.qt.io/qt-6/qqml-h.html#qmlRegisterSingletonType) to directly send the metadata of our application to the QML side, exposing its properties.
 
 We then instantiate our QML engine, and set its [context](docs:qtqml;QQmlContext) to use KDE's [KLocalizedContext](docs:ki18n;KLocalizedContext), used to integrate translated strings, passing the just created engine as a parameter.
 
@@ -64,7 +64,7 @@ We use our handy [pageStack](/docs/getting-started/kirigami/components-pagerow_p
 
 While we could use a [FormLayout](/docs/getting-started/kirigami/components-formlayouts) together with [QtQuick Controls components](components-controls) to achieve our goal, here you will be introduced to [FormCard](https://api.kde.org/qml-org-kde-kirigamiaddons-formcard-formcard.html).
 
-The main purpose of a FormCard is to serve as a container for other components while following a color different from the background, in a similar manner to a [Kirigami.Card](docs:kirigami2;Card), but for settings windows. You can have multiple FormCards in your application to indicate different sections. Your FormCard is also expected to be a direct child of a ColumnLayout.
+The main purpose of a FormCard is to serve as a container for other components while following a color different from the background, in a similar manner to a [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card), but for settings windows. You can have multiple FormCards in your application to indicate different sections. Your FormCard is also expected to be a direct child of a [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html).
 
 Importing `org.kde.kirigamiaddons.formcard` makes all FormCard components available to your QML file.
 

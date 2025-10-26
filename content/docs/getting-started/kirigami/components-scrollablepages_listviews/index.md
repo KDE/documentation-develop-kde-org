@@ -76,7 +76,7 @@ Kirigami.ScrollablePage {
 ### Search in the ListView
 
 A search field is often added to a [Kirigami.ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage) to filter the [ListView](docs:qtquick;QtQuick.ListView).
-This can be done by changing the default [titleDelegate](https://api-staging.kde.org/qml-org-kde-kirigami-page.html#titleDelegate-prop) to use a
+This can be done by changing the default [titleDelegate](https://api.kde.org/qml-org-kde-kirigami-page.html#titleDelegate-prop) to use a
 [Kirigami.SearchField](docs:kirigami;org.kde.kirigami.SearchField) instead.
 
 ```qml
@@ -99,7 +99,7 @@ Kirigami.ScrollablePage {
 
 {{< alert title="Hint" color="info" >}}
 
-You can use [KSortFilterProxyModel](https://api-staging.kde.org/qml-org-kde-kitemmodels-ksortfilterproxymodel.html) from
+You can use [KSortFilterProxyModel](https://api.kde.org/qml-org-kde-kitemmodels-ksortfilterproxymodel.html) from
 [KItemModel](docs:kitemmodels;kitemmodels-index.html) to easily add
 filtering capability directly in QML without any need for C++ code.
 

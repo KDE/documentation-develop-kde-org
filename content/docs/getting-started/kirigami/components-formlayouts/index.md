@@ -15,7 +15,7 @@ When provided with enough space, form layouts will take up two columns. The colu
 
 [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) components are similar in use to [QtQuick Layout](https://doc.qt.io/qt-6/qtquicklayouts-index.html) components such as [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html) or [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout.html). The child components will be automatically arranged according to the size available to the form layout.
 
-Children of a [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) have a property named [Kirigami.FormData.label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop). This property lets you set the label that will be provided for the child component in question.
+Children of a [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) have a property named [Kirigami.FormData.label](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop). This property lets you set the label that will be provided for the child component in question.
 
 {{< sections >}}
 
@@ -59,11 +59,11 @@ Kirigami.ApplicationWindow {
 
 ## Sections and separators
 
-FormLayouts can also be divided into sections. Setting where a section starts is as easy as setting a child component's [Kirigami.FormData.isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) to true. This will provide the component with some extra margin at the top to demarcate the start of the new section.
+FormLayouts can also be divided into sections. Setting where a section starts is as easy as setting a child component's [Kirigami.FormData.isSection](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) to true. This will provide the component with some extra margin at the top to demarcate the start of the new section.
 
-[Kirigami.Separator](docs:kirigami;org.kde.kirigami.primitives.Separator) components are best suited for starting new sections. Separators are used to draw a thin horizontal line, demarcating the end of a section. If you would rather not have a line drawn between sections, you can use a standard QML [Item](docs:qtquick;QtQuick.Item) property. Alternatively you could use the [Kirigami.FormData.isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) property on any other component.
+[Kirigami.Separator](docs:kirigami;org.kde.kirigami.primitives.Separator) components are best suited for starting new sections. Separators are used to draw a thin horizontal line, demarcating the end of a section. If you would rather not have a line drawn between sections, you can use a standard QML [Item](docs:qtquick;QtQuick.Item) property. Alternatively you could use the [Kirigami.FormData.isSection](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) property on any other component.
 
-However, this is not recommended. On components where [Kirigami.FormData.isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) is set to `true`, the label text provided for this component's [Kirigami.FormData.label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop) property will be displayed as the section's header text.
+However, this is not recommended. On components where [Kirigami.FormData.isSection](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) is set to `true`, the label text provided for this component's [Kirigami.FormData.label](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop) property will be displayed as the section's header text.
 
 {{< alert title="Warning" color="warning" >}}
 
@@ -135,7 +135,7 @@ Kirigami.FormLayout {
 
 ## Forcing a desktop or mobile layout
 
-If you would rather have your form layout stay consistent regardless of your application's environment, you can use the [wideMode](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formlayout.html#wideMode-prop) property of the [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) component:
+If you would rather have your form layout stay consistent regardless of your application's environment, you can use the [wideMode](https://api.kde.org/qml-org-kde-kirigami-layouts-formlayout.html#wideMode-prop) property of the [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts.FormLayout) component:
 
 - When set to `true`, the form layout will be structured in a desktop-optimized widescreen (double-column) layout
 - When set to `false`, the form layout will be structured in a mobile layout (single column)
@@ -173,7 +173,7 @@ Kirigami.FormLayout {
 
 ## Aligning your labels
 
-There are instances when you want a label to be assigned to components that have more than one line or to a list of components. This can be achieved by putting the [Kirigami.FormData.label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop) in the [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html), as you might have noticed in [Sections and Separators](#sections-and-separators). By default the label is positioned in the vertical center of the layout, which is not always desirable. We can change this with help of [Kirigami.FormData.labelAlignment](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#labelAlignment-attached-prop).
+There are instances when you want a label to be assigned to components that have more than one line or to a list of components. This can be achieved by putting the [Kirigami.FormData.label](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop) in the [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html), as you might have noticed in [Sections and Separators](#sections-and-separators). By default the label is positioned in the vertical center of the layout, which is not always desirable. We can change this with help of [Kirigami.FormData.labelAlignment](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#labelAlignment-attached-prop).
 
 {{< sections >}}
 

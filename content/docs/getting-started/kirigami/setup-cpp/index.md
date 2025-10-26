@@ -31,7 +31,7 @@ We need a C++ compiler, Qt development packages, and Kirigami. Open a terminal a
   opensuse="cmake kf6-extra-cmake-modules kf6-kirigami-devel kf6-ki18n-devel kf6-kcoreaddons-devel kf6-kiconthemes-devel qt6-base-devel qt6-declarative-devel qt6-quickcontrols2-devel kf6-qqc2-desktop-style"
   fedora="@development-tools @development-libs cmake extra-cmake-modules kf6-kirigami2-devel kf6-ki18n-devel kf6-kcoreaddons-devel kf6-kiconthemes-devel qt6-qtbase-devel qt6-qtdeclarative-devel qt6-qtquickcontrols2-devel kf6-qqc2-desktop-style" >}}
 
-Further information for other distributions can be found [here](/docs/getting-started/building/help-dependencies).
+Further information for other distributions can be found in [Installing build dependencies](/docs/getting-started/building/help-dependencies).
 
 ### Using kde-builder {#kde-builder}
 
@@ -142,7 +142,7 @@ We then come to our base element, [Kirigami.ApplicationWindow](docs:kirigami;org
 
 We then set the window's `id` property to "root". IDs are useful because they let us uniquely reference a component, even if we have several of the same type.
 
-We also set the window `title` property to "Hello World". You'll notice that we have wrapped our "Hello World" string in a function called `i18nc()`, where we detail the context of the string as well as the string itself.
+We also set the window [title](https://doc.qt.io/qt-6/qml-qtquick-window.html#title-prop) property to "Hello World". You'll notice that we have wrapped our "Hello World" string in a function called `i18nc()`, where we detail the context of the string as well as the string itself.
 
 {{< alert title="Note" color="info" >}}
 
@@ -152,7 +152,7 @@ We also set the window `title` property to "Hello World". You'll notice that we 
 
 {{< /alert >}}
 
-We then set the first page of our page stack. Most Kirigami applications are organised as a stack of pages, each page containing related components suited to a specific task. For now, we are keeping it simple, and sticking to a single page. [pageStack](https://api-staging.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) is an initially empty stack of pages provided by [Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow), and with `pageStack.initialPage: Kirigami.Page {...}` we set the first page presented upon loading the application to a [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). This page will contain all our content.
+We then set the first page of our page stack. Most Kirigami applications are organised as a stack of pages, each page containing related components suited to a specific task. For now, we are keeping it simple, and sticking to a single page. [pageStack](https://api.kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) is an initially empty stack of pages provided by [Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow), and with `pageStack.initialPage: Kirigami.Page {...}` we set the first page presented upon loading the application to a [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). This page will contain all our content.
 
 Finally, we include in our page a [Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) that lets us place text on our page. We use `anchors.centerIn: parent` to center our label horizontally and vertically within our parent element. In this case, the parent component of our label is [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page). The last thing we need to do is set its text: `text: i18n("Hello World!")`.
 

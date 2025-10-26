@@ -8,7 +8,7 @@ aliases:
   - /docs/getting-started/kirigami/components-listview/
 ---
 
-[Listviews](docs:qtquick;QtQuick.ListView) can help you display objects from a model in an attractive way. To use a list view, you have to keep track of three things:
+[List views](docs:qtquick;QtQuick.ListView) can help you display objects from a model in an attractive way. To use a list view, you have to keep track of three things:
 
 1. The **model**, which contains the data you want your list view to display
 2. The **delegate**, which defines how each element in the model will be displayed

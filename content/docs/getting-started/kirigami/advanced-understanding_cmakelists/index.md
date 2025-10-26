@@ -83,7 +83,7 @@ You may also create a separate QML module that does not use the executable as ba
 
 The method for creating a separate QML module is better exemplified in [Using separate files](/content/docs/getting-started/kirigami/introduction-separatefiles).
 
-These are additions provided by extra-cmake-modules to make the use of [Qt declarative registration](https://doc.qt.io/qt-6.7/cmake-build-qml-application.html) (the [replacement to Qt resource files](https://doc.qt.io/qt-5/resources.html)) easier.
+These are additions provided by extra-cmake-modules to make the use of [Qt declarative registration](https://doc.qt.io/qt-6.7/cmake-build-qml-application.html) (the [replacement to Qt resource files](https://doc.qt.io/qt-6/resources.html)) easier.
 
 {{< alert title="Note" color="info" >}}
 

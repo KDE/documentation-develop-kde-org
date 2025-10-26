@@ -17,7 +17,7 @@ Before getting started, we will need to install Kirigami and Rust on our machine
   opensuse="cargo cmake kf6-extra-cmake-modules kf6-kirigami-devel qt6-quickcontrols2-devel kf6-qqc2-desktop-style"
   fedora="cargo cmake extra-cmake-modules kf6-kirigami2-devel kf6-qqc2-desktop-style" >}}
 
-Further information for other distributions can be found [here](/docs/getting-started/building/help-dependencies).
+Further information for other distributions can be found in [Installing build dependencies](/docs/getting-started/building/help-dependencies).
 
 ## Project structure
 

@@ -125,10 +125,10 @@ Kirigami.ApplicationWindow {
 
 ```
 
-Here, we put our global drawer inside our application window. The main property we need to pay attention to is [GlobalDrawer.actions](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#actions-prop), which takes the form of an array of [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) components. This action has an appropriate icon and executes the [Qt.quit()](docs:qtqml;QtQml.Qt::quit) function when triggered, closing the application.
+Here, we put our global drawer inside our application window. The main property we need to pay attention to is [GlobalDrawer.actions](https://api.kde.org/qml-org-kde-kirigami-globaldrawer.html#actions-prop), which takes the form of an array of [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) components. This action has an appropriate icon and executes the [Qt.quit()](docs:qtqml;QtQml.Qt::quit) function when triggered, closing the application.
 
 
-Since we are keeping our global drawer simple for now, we are setting the [GlobalDrawer.isMenu](https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#isMenu-prop) property to `true`. This displays our global drawer as a normal application menu, taking up less space than the default global drawer pane.
+Since we are keeping our global drawer simple for now, we are setting the [GlobalDrawer.isMenu](https://api.kde.org/qml-org-kde-kirigami-globaldrawer.html#isMenu-prop) property to `true`. This displays our global drawer as a normal application menu, taking up less space than the default global drawer pane.
 
 {{< /section-left >}}
 
@@ -158,7 +158,7 @@ Other examples of Kirigami Actions showing up differently depending on their par
 
 * [Kirigami.ContextDrawer](docs:kirigami;org.kde.kirigami.ContextDrawer) - [ContextDrawer tutorial here](/docs/getting-started/kirigami/components-drawers#context-drawers)
 * [Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) and derivatives - [Card tutorial here](/docs/getting-started/kirigami/components-card)
-* [Kirigami.Dialog](docs:kirigami;org.kde.kirigami.Dialog) and derivatives - [Dialog tutorial here](/docs/getting-started/kirigami/components-dialogs)
+* [Kirigami.Dialog](docs:kirigami;org.kde.kirigami.dialogs.Dialog) and derivatives - [Dialog tutorial here](/docs/getting-started/kirigami/components-dialogs)
 * [Kirigami.ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToolBar) - [ActionToolBar tutorial here](/docs/getting-started/kirigami/components-actions#actiontoolbar)
 
 Among other Kirigami components.
