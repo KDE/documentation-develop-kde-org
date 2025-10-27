@@ -86,7 +86,7 @@ Now we can either distribute the `simplemdviewer.flatpak` directly to the
 users, or submit the application to a flatpak repository, like the most popular
 repository, [Flathub](https://flathub.org/).
 See the
-[App Submission Guidelines](https://docs.flathub.org/docs/for-app-authors/submission/).
+[App Submission Guidelines](https://docs.flathub.org/docs/for-app-authors/submission).
 
 Other improvements you can make to your application:
 
