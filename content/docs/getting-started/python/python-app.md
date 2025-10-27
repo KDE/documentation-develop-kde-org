@@ -173,7 +173,7 @@ Python, [QObject](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QObject.html)
 derivative class.
 
 We need this to be a QObject-derived class in order to make use of Qt's powerful
-[signals and slots](https://doc.qt.io/qtforpython-6/overviews/signalsandslots.html).
+[signals and slots](https://doc.qt.io/qtforpython-6/tutorials/basictutorial/signals_and_slots.html).
 
 Create a new `md_converter.py` file in the `simplemdviewer/src/` directory:
 
@@ -209,14 +209,14 @@ by creating a property with the `pyqtProperty()` function in lines 20-22.
 Note that the name of the getter and setter needs to be different here.
 
 When setting the `sourceText` property, the `sourceTextChanged`
-[signal](https://doc.qt.io/qtforpython-6/overviews/signalsandslots.html#signals)
+[signal](https://doc.qt.io/qtforpython-6/tutorials/basictutorial/signals_and_slots.html#the-signal-class)
 is emitted to let QML know that the property has changed. Note that
 the `sourceTextChanged` needs to be marked with `notify=` before it can be
 emitted with `.emit()`.
 
 The `mdFormat()` function returns the Markdown-formatted
 text and it has been declared as a
-[slot](https://doc.qt.io/qtforpython-6/overviews/signalsandslots.html#slots)
+[slot](https://doc.qt.io/qtforpython-6/tutorials/basictutorial/signals_and_slots.html#the-slot-class)
 so as to be invokable by the QML code.
 
 The `markdown` Python package takes care of formatting. Let’s install
