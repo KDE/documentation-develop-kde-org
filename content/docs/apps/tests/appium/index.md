@@ -204,7 +204,7 @@ what is used is
 or [Accessible.description](https://doc.qt.io/qt-6/qml-qtquick-accessible.html#description-prop).
 
 To find that QML element, we'd use the aptly named Appium function
-[find_element()](https://www.selenium.dev/selenium/docs/api/py/webdriver_remote/selenium.webdriver.remote.webelement.html#selenium.webdriver.remote.webelement.WebElement.find_element),
+[find_element()](https://www.selenium.dev/documentation/webdriver/elements/finders/),
 to which we pass a
 [Selenium Locator](https://www.selenium.dev/documentation/webdriver/elements/locators/).
 
@@ -268,7 +268,7 @@ def test_input(self) -> None:
 ```
 
 If you need to enter certain non-typable keys, such as Enter/Return, you can
-use [Selenium Keys](https://www.selenium.dev/selenium/docs/api/py/webdriver/selenium.webdriver.common.keys.html) for that:
+use [Selenium Keys](https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/#keys) for that:
 
 ```python
 from selenium.webdriver.common.keys import Keys
@@ -282,7 +282,7 @@ def test_dialog_confirm(self) -> None:
 ```
 
 Another commonly used function is
-[get_attribute()](https://www.selenium.dev/selenium/docs/api/py/webdriver_remote/selenium.webdriver.remote.webelement.html#selenium.webdriver.remote.webelement.WebElement.get_attribute).
+[get_attribute()](https://www.selenium.dev/documentation/webdriver/elements/information/#fetching-attributes-or-properties).
 It can be used to determine whether an element currently has an `Accessible`
 attribute such as
 [focused](https://doc.qt.io/qt-6/qml-qtquick-accessible.html#focused-prop) or
@@ -374,7 +374,7 @@ Kirigami.Action {
 ```
 
 Then it uses the Selenium function
-[invisibility_of_element_located()](https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html#selenium.webdriver.support.expected_conditions.invisibility_of_element_located)
+[invisibility_of_element_located()](https://www.selenium.dev/documentation/webdriver/support_features/expected_conditions/)
 together with the Selenium locator
 [CLASS_NAME](https://www.selenium.dev/documentation/webdriver/elements/locators/#class-name)
 to be sure the "Loading..." element is no longer there.
