@@ -176,7 +176,7 @@ that will be generated from the .kcfg file. Save this file under yourconfigclass
 This will result in the yourconfigclassname.{h,cpp} files being generated.
 
 {{< alert title="Note" color="info" >}}
-KConfigXT offers a variety of options. The full list can be seen in the [kconfig_compiler documentation](https://api.kde.org/frameworks/kconfig/html/kconfig_compiler.html).
+KConfigXT offers a variety of options. The full list can be seen in the [kconfig_compiler documentation](https://api.kde.org/kconfigcompiler.html).
 {{< /alert >}}
 
 ## Adjusting the CMakeLists.txt file

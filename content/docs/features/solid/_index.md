@@ -231,7 +231,7 @@ the same actions.
 The predicate for each action is specified in the entry
 `X-KDE-Solid-Predicate`. The syntax of the predicate allows to construct an
 object of class
-[Solid::Predicate](https://api.kde.org/frameworks/solid/html/classSolid_1_1Predicate.html)
+[Solid::Predicate](https://api.kde.org/solid-predicate.html)
 out of it.
 
 Atomic predicates can be of the form

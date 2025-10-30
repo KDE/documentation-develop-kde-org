@@ -220,6 +220,6 @@ Compile and install it. You should now be able to see the preview of markdown fi
 
 Since this is a very basic tutorial and likely doesn't explain a lot of things or shows other APIs that we have, the following resources may be of more help:
 
-- https://api.kde.org/frameworks/ktexteditor/html/ - Here you will find the list of all classes and methods available in the API
+- https://api.kde.org/ktexteditor-index.html - Here you will find the list of all classes and methods available in the API
 - https://invent.kde.org/utilities/kate/-/tree/master/addons - The list of existing plugins can be an extremely useful resource if you want to find how to do a particular thing
 - https://kate-editor.org/support/ - You can find links to our mailing-list, chat here. We also have telegram and matrix groups where you can ask questions

@@ -31,7 +31,7 @@ to your zip by using the writeDir call as follows :
 archive.writeDir(QStringLiteral("world dir"));
 ```
 
-Full API docs can be found [here](https://api.kde.org/frameworks/karchive/html/index.html)
+Full API docs can be found [here](https://api.kde.org/karchive-index.html)
 
 ## Advanced usecases
 

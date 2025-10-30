@@ -405,5 +405,5 @@ and installed using the relevant tools, installation is handled automatically.
 
 ## Further topics
 
-- When creating faces that utilize charts the [KQuickCharts](https://api.kde.org/frameworks/kquickcharts/html/index.html)
+- When creating faces that utilize charts the [KQuickCharts](https://api.kde.org/kquickcharts-index.html)
 framework includes facilities to easily create charts from Qml
