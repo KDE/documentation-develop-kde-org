@@ -81,9 +81,9 @@ Qt-based apps should require few if any tweaks to utilize portals, and your app 
 
 Qt without portals already tries to use the native file dialog by default&mdash;meaning the KDE file dialog when the app is run on Plasma, and the GTK file dialog when run on GNOME. This works for portalized Flatpak apps too, as long as you are using the correct APIs: QtWidgets' [QFileDialog](https://doc.qt.io/qt-6/qfiledialog.html) in C++ code, and the QtQuick.Dialogs [FileDialog](https://doc.qt.io/qt-6/qml-qtquick-dialogs-filedialog.html) component in QML code.
 
-For native notifications, you should use [KNotification](https://api.kde.org/frameworks/knotifications/html/classKNotification.html). Use [QDesktopServices::openUrl(const QUrl &url)](https://doc.qt.io/qt-6/qdesktopservices.html#openUrl) or [KIO::OpenUrlJob](https://api.kde.org/frameworks/kio/html/classKIO_1_1OpenUrlJob.html) to open URIs or send an email when using `mailto`.
+For native notifications, you should use [KNotification](https://api.kde.org/knotifications-index.html). Use [QDesktopServices::openUrl(const QUrl &url)](https://doc.qt.io/qt-6/qdesktopservices.html#openUrl) or [KIO::OpenUrlJob](https://api.kde.org/kio-openurljob.html) to open URIs or send an email when using `mailto`.
 
-For global menus to work, you simply use [QMenuBar](https://doc.qt.io/qt-6/qmenubar.html) or a helper class that manages them for you, as is the case with [QMainWindow](https://doc.qt.io/qt-6/qmainwindow.html) and [KXmlGuiWindow](https://api.kde.org/frameworks/kxmlgui/html/classKXmlGuiWindow.html).
+For global menus to work, you simply use [QMenuBar](https://doc.qt.io/qt-6/qmenubar.html) or a helper class that manages them for you, as is the case with [QMainWindow](https://doc.qt.io/qt-6/qmainwindow.html) and [KXmlGuiWindow](https://api.kde.org/kxmlguiwindow.html).
 
 In order to get debug messages related to portals in your application, we first need to make a few changes to the services that manage portals:
 
