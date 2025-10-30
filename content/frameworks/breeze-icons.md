@@ -6,7 +6,7 @@ iconTheme: breeze
 type: "icons"
 ---
 
-Breeze-icons is a freedesktop.org compatible icon theme. It's developed by the KDE Community as part of KDE Frameworks 5 and it's used by default in KDE Plasma 5 and KDE Applications.
+Breeze-icons is a freedesktop.org compatible icon theme. It's developed by the KDE Community as part of KDE Frameworks and it's used by default in KDE Plasma and KDE Applications.
 Its sources are hosted on [KDE Invent](https://invent.kde.org/frameworks/breeze-icons).
 
 ## Design Guidelines

@@ -24,7 +24,7 @@ title: Kirigami UI Framework
       <h2>HIG</h2>
       <p>Discover the design principles that power Kirigami apps</p>
     </a>
-    <a href="https://api-staging.kde.org/kirigami-index.html" class="block-nav">
+    <a href="https://api.kde.org/kirigami-index.html" class="block-nav">
       <i class="icon icon_anchor"></i>
       <h2>API Reference</h2>
       <p>Find out what Kirigami can bring to your apps</p>
@@ -62,7 +62,7 @@ title: Kirigami UI Framework
             And everything else.
           </dt>
           <!-- space -->
-          <dd class="d-inline">Besides providing high level components, to make it easier to support multiple form factors, Kirigami also provides a wide variety of low level components that can be used in your embedded Linux QML app. For example, check out the high performance <a href="https://api-staging.kde.org/qml-org-kde-kirigami-primitives-shadowedrectangle.html">ShadowedRectangle</a> and an <a href="/docs/getting-started/kirigami/style-colors/">extensible theming API</a>.</dd>
+          <dd class="d-inline">Besides providing high level components, to make it easier to support multiple form factors, Kirigami also provides a wide variety of low level components that can be used in your embedded Linux QML app. For example, check out the high performance <a href="https://api.kde.org/qml-org-kde-kirigami-primitives-shadowedrectangle.html">ShadowedRectangle</a> and an <a href="/docs/getting-started/kirigami/style-colors/">extensible theming API</a>.</dd>
         </div>
       </div>
     </div>

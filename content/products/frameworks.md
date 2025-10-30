@@ -11,7 +11,7 @@ scss: "scss/framework.scss"
   <h2 class="h1">Get Started</h2>
   <div class="row">
     <div class="p-3 col-12 col-md-6">
-      <a href="https://api-staging.kde.org/index.html" class="shadow p-3 h-100">
+      <a href="https://api.kde.org/index.html" class="shadow p-3 h-100">
         <h2>Developer Documentation</h2>
         <p>
           Code an application in C++ with Qt and QML.
@@ -85,7 +85,7 @@ scss: "scss/framework.scss"
         <b>ThreadWeaver</b> offers a high-level API to manage threads using job- and queue-based interfaces. It allows easy scheduling of thread execution by specifying dependencies between the threads and executing them satisfying these dependencies, greatly simplifying the use of multiple threads.
       </p>
       <p>
-        <b>Breeze Icons</b>. KDE Frameworks includes two icon themes for your applications.  Breeze icons is a modern, recognisable theme which fits in with all form factors.
+        <b>Breeze Icons</b>. KDE Frameworks includes two icon themes for your applications.  <a href="/frameworks/breeze-icons/">Breeze icons</a> is a modern, recognisable theme which fits in with all form factors.
       </p>
       <p>
         <b>KConfig</b> is a Framework to deal with storing and retrieving configuration settings. It features a group-oriented API. It works with INI files and XDG-compliant cascading directories. It generates code based on XML files.
@@ -105,7 +105,7 @@ scss: "scss/framework.scss"
     <div class="row my-3">
         <div class="col-12 col-sm-4 align-self-center">
           <p>
-            GammaRay is a cross platform (Linux, Windows, Mac) inspection tool for Qt apps from KDAB.  It uses <a href="https://api-staging.kde.org/ksyntaxhighlighting-index.html">KSyntaxHighlighting</a> to colour text it shows.
+            GammaRay is a cross platform (Linux, Windows, Mac) inspection tool for Qt apps from KDAB.  It uses <a href="https://api.kde.org/ksyntaxhighlighting-index.html">KSyntaxHighlighting</a> to colour text it shows.
           </p>
         </div>
         <img class="img-fluid col-12 col-sm-8" src="gammaray.png" alt="screenshot of app GammaRay"/>
@@ -113,7 +113,7 @@ scss: "scss/framework.scss"
     <div class="row my-3">
       <div class="col-12 col-sm-4 order-sm-1 align-self-center">
         <p>
-          LXQt is a simple desktop environment for Linux.  It uses <a href="https://api-staging.kde.org/solid-index.html">Solid</a> for hardware integration, <a href="https://api-staging.kde.org/kwindowsystem-index.html">KWindowSystem</a> for window management and <a href="https://api-staging.kde.org/kidletime-index.html">KIdleTime</a> for power management.
+          LXQt is a simple desktop environment for Linux.  It uses <a href="https://api.kde.org/solid-index.html">Solid</a> for hardware integration, <a href="https://api.kde.org/kwindowsystem-index.html">KWindowSystem</a> for window management and <a href="https://api.kde.org/kidletime-index.html">KIdleTime</a> for power management.
         </p>
         <p>
           Good looks are added with <a href="https://invent.kde.org/frameworks/oxygen-icons">Oxygen Icons</a>, one of our icon theme frameworks.
@@ -167,7 +167,7 @@ scss: "scss/framework.scss"
         <p>
             Use KDE Frameworks on mobile
         </p>
-        <a href="https://community.kde.org/Android" target="_blank">Android Tutorial</a>
+        <a href="https://develop.kde.org/docs/packaging/android/building_applications/" target="_blank">Android Tutorial</a>
       </div>
     </div>
   </div>
