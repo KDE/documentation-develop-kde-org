@@ -185,7 +185,7 @@ The initial setup of `kde-builder` should have installed the required Qt6 packag
 
 If your Linux distribution does not provide a recent enough version of Qt, you have the following options:
 
-* Use Craft or containers, as mentioned in [Building KDE software]({{< ref "building" >}})
+* Use [containers]({{< ref "containers-distrobox" >}})
 * [Install Qt6 using the Qt online installer]({{< ref "#qt6-online" >}})
 * [Install Qt6 using the unofficial aqtinstall installer]({{< ref "#qt6-aqtinstall" >}})
 * [Build Qt6 using kde-builder]({{< ref "#qt6-build" >}})
