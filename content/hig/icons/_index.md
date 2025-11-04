@@ -63,11 +63,11 @@ Most buttons should also include text. Only use an icons-only button in the foll
 
 - When it's critical to save horizontal space for user content, text, or other actions.
 - Where groups of related icons reveal each other's meaning by proximity (e.g. icons-only buttons to choose text justification in a word processing app).
-- For actions not relevant to the app's core workflow where it's not a disaster if the user ignores it.
+- For actions not relevant to the app's core workflow where it's not a disaster if the user ignores them.
 
 <!-- TODO: this needs a picture as evidence that it's true -->
 
-In both cases, only proceed with the plan to omit text if an icon can be found that uses instantly recognizable imagery common across all operating systems and apps. Examples include:
+In all cases, only proceed with the plan to omit text if an icon can be found that uses instantly recognizable imagery common across all operating systems and apps. Examples include:
 
 <center>
 
