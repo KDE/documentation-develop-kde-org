@@ -19,18 +19,48 @@ aliases:
 - /hig/patterns-command/simple/
 ---
 
-## Controls ##
-KDE apps mostly use standard input controls such as [buttons, menus, checkboxes, text fields, and sliders](https://develop.kde.org/docs/getting-started/kirigami/components-controls/). There are some rules to keep in mind beyond the basics:
-
-- Use a flat [ToolButton](https://doc.qt.io/qt-6/qml-qtquick-controls-toolbutton.html) on a toolbar in a header or footer position, or in a Contextual Toolview—anywhere users expect to encounter UI elements that look like toolbars.
-- Use a regular raised [Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html) in the main content area, including settings pages and when overlaid on top of content items including list and grid items. In these contexts, the raised outline helps them to be be visibly recognizable as buttons.
-- Use a [RoundButton](https://doc.qt.io/qt-6/qml-qtquick-controls-roundbutton.html) for covering up part of the content area not already covered by any kind of opaque or semi-transparent background. These kinds of buttons never have text, so choose an icon that [conveys the button's action perfectly](../icons/#icons-only-buttons).
-- Use a [Switch](https://doc.qt.io/qt-6/qml-qtquick-controls-switch.html) or [CheckBox](https://doc.qt.io/qt-6/qml-qtquick-controls-checkbox.html) for settings where both states are obvious without needing to be separately explained. Use a Switch for “Instant apply” settings or state switchers that take effect immediately; otherwise, use a CheckBox.
-- Use [RadioButtons](https://doc.qt.io/qt-6/qml-qtquick-controls2-radiobutton.html) or a [ComboBox](https://doc.qt.io/qt-6/qml-qtquick-controls-combobox.html) to present mutually-exclusive options where each one benefits from being spelled out textually. For sets of up to 3 options with short text where space is plentiful, use RadioButtons. If there will up to 10 items, use a ComboBox. For more than 10 options, use a [list view]({{< relref "displaying_content/#lists-and-grids" >}}). Arrange items in a logical order; if none exists, alphabetical is a good default.
-- Use a [Slider](https://doc.qt.io/qt-6/qml-qtquick-controls-slider.html) for bounded input where fast interaction is more important than precision. Use a [SpinBox](https://doc.qt.io/qt-6/qml-qtquick-controls-spinbox.html) where precision is more important than speed of interaction. If both numerical precision and speed of interaction are important, then use a Slider with a SpinBox trailing it.
+KDE apps mostly use standard input controls such as [buttons, menus, checkboxes, text fields, and sliders](https://develop.kde.org/docs/getting-started/kirigami/components-controls/). Here's how to handle various situations:
 
 
-## Text input
+## Initiating actions ##
+The [Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html), [ToolButton](https://doc.qt.io/qt-6/qml-qtquick-controls-toolbutton.html), and [RoundButton](https://doc.qt.io/qt-6/qml-qtquick-controls-roundbutton.html) controls all initiate a one-time action when pressed. This is where and how to use them:
+
+- Use a ToolButton on a toolbar in the header or footer position or a window, page, or scrollable view.
+- Use a RoundButton when a button needs to be overlaid in a “floating” position above a content view, especially an image view. This kind of button never has text, so choose an icon that [conveys the button's action perfectly](../icons/#icons-only-buttons), with no ambiguity.
+- For all other cases, use a Button.
+
+
+## Choosing between 2 obvious states
+The [Switch](https://doc.qt.io/qt-6/qml-qtquick-controls-switch.html) and [CheckBox](https://doc.qt.io/qt-6/qml-qtquick-controls-checkbox.html) controls are both used for two-state settings where both states are obvious without each one needing its own textual label.
+
+{{< figure src="/hig/checkboxes-with-obvious-opposite-states.png" class="text-center" caption="If you prepended the word “don't” to each CheckBox's label, they would still make sense." width="500px">}}
+
+Use a Switch for “Instant apply” controls that take effect immediately; otherwise, use a CheckBox.
+
+
+## Choosing between 2 or more non-obvious states
+The [Radio Button](https://doc.qt.io/qt-6/qml-qtquick-controls2-radiobutton.html) and [ComboBox](https://doc.qt.io/qt-6/qml-qtquick-controls-combobox.html) controls are both used to present a set of labeled, mutually-exclusive options.
+
+{{< figure src="/hig/radio-buttons-with-non-obvious-opposite-states.png" class="text-center" caption="Each option's opposite state is not obvious without explanation, so Radio Buttons are used." width="350px">}}
+
+- For 3 or fewer options with short text where vertical space is plentiful, use RadioButtons.
+- For up to 10 items, or where vertical space is limited, use a ComboBox.
+- For more than 10 options, use a scrollable [list view]({{< relref "displaying_content/#lists-and-grids" >}}).
+
+In all cases, arrange items in a logical order; if none exists, alphabetical is a good default.
+
+
+## Gross and fine input
+Use a [Slider](https://doc.qt.io/qt-6/qml-qtquick-controls-slider.html) for bounded input where fast interaction is more important than precision.
+
+Use a [SpinBox](https://doc.qt.io/qt-6/qml-qtquick-controls-spinbox.html) where precision is more important than speed of interaction.
+
+If both factors are important at different times, then use a Slider with a SpinBox trailing it:
+
+{{< figure src="/hig/slider-and-spinbox.png" class="text-center" caption="The user can drag the Slider's handle for quick changes, or enter a precise value in the SpinBox for fine adjustments." width="375px">}}
+
+
+## Getting text input
 Only ask for input using a text field when it's not possible to use a control that automatically validates input. For this reason, you must validate the input text yourself.
 
 When the current text is invalid, indicate this using a [Kirigami.InlineMessage](https://develop.kde.org/docs/getting-started/kirigami/components-inlinemessages/) and disable the ability to confirm or send the input.
@@ -44,8 +74,10 @@ If possible, use one of the pre-made Kirigami text fields:
 - Use [Kirigami.PasswordField](https://api.kde.org/qml-org-kde-kirigami-passwordfield.html) to display password prompts.
 
 
-## Dialogs
-Only show a dialog when the normal workflow must be interrupted for one of two reasons:
+## Interrupting the user to ask for input
+Dialog windows interrupt the user to ask for input or confirmation. Minimize their use, as they can be considered annoying; many users click through them without reading anything.
+
+Only interrupt the user with a dialog window for one of two reasons:
 - When the user must make an immediate decision before the app can continue working normally.
 - To display progress information about a task that must complete before the app can continue working normally.
 
