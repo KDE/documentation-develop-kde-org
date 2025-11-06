@@ -125,13 +125,6 @@ cmake --install build/
 simplemdviewer
 ```
 
-You can also try building it with Cargo:
-
-```bash
-cargo build --target-dir build/
-cargo run --target-dir build/
-```
-
 ## Our app so far
 
 <details>
