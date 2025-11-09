@@ -59,7 +59,7 @@ Avoid sending system notifications while your app's main window is in the foregr
 
 
 ## System notifications
-Send a [system notification](https://api.kde.org/knotifications-index.html) when your app is in the background and needs to inform the user about about actionable events such as the progress of ongoing jobs, incoming communications from other people, or hardware issues such as running low on battery power.
+Send a [system notification](https://api.kde.org/knotifications-index.html) when your app is in the background and needs to inform the user about actionable events such as the progress of ongoing jobs, incoming communications from other people, or hardware issues such as running low on battery power.
 
 Give an [urgency level](https://api.kde.org/knotification.html#setUrgency) to each notification: Low, Normal, or Critical. Strongly consider not sending Low importance notifications in the first place. Use [setFlags()](https://api.kde.org/knotification.html#setFlags) to give the [persistent flag](https://api.kde.org/knotification.html#NotificationFlag-enum) to normal-priority notifications that are not critical, but that the user should not miss anyway. Critical notifications always remain visible until dismissed.
 
