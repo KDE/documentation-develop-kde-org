@@ -1,11 +1,11 @@
 ---
 title: Connect C++ models to your QML user interface
-weight: 71
+weight: 72
 description: Data from the C++ backend to the QML frontend
 group: data
 ---
 
-As shown from the [previous
+As shown in the [previous
 tutorial](/docs/getting-started/kirigami/advanced-connect_backend/), you can
 connect C++ code to QML by creating a class that will be treated as just
 another component in QML. However, you may want to represent more complicated
