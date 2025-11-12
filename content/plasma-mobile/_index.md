@@ -6,7 +6,7 @@ linkTitle: Plasma Mobile
 layout: platform
 ---
 
-<div class="ressources text-center container">
+<div class="resources text-center container">
   <h2>Resources</h2>
   <div class="row justify-content-center">
     <div class="col">

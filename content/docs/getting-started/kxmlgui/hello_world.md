@@ -26,7 +26,7 @@ Create a folder `~/kde/src/kxmlgui-tutorial`. In that folder you will place the 
 
 [Set up your development environment with kde-builder]({{< ref "kde-builder-setup" >}}). That will give you the necessary development tools and underlying libraries, and build the KDE Frameworks from scratch.
 
-Add the folowing at the end of your `~/.config/kde-builder.yaml`:
+Add the following to the end of your `~/.config/kde-builder.yaml`:
 
 ```yaml
 project kxmlgui-tutorial:

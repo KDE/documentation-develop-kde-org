@@ -9,7 +9,7 @@ namespace Akonadi {
     class ItemFetchJob;
 }
 
-/// Simple wrapper arround a KMime::Message for QML consumption.
+/// Simple wrapper around a KMime::Message for QML consumption.
 //@@snippet_begin(wrapper)
 class MessageWrapper : public QObject
 {

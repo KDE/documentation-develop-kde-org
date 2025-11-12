@@ -35,7 +35,7 @@ The Plasma 6 LockScreen authentication process is initiated with `authenticator.
 
 ## Changes for custom WindowSwitchers (KWin TabBox)
 
-If your theme uses a WindowSwitcher element (which is called a `TabBox` within KWin), please note that it is also affected by the renaming of QML imports. There are some specific KWin renames that might affect custom WindowSwitchers such as from `KWin.WindowThumbnailItem` to `KWin.WindowThumbnail` which are mostly documented in the [kwin source code repostiory](https://invent.kde.org/plasma/kwin). 
+If your theme uses a WindowSwitcher element (which is called a `TabBox` within KWin), please note that it is also affected by the renaming of QML imports. There are some specific KWin renames that might affect custom WindowSwitchers such as from `KWin.WindowThumbnailItem` to `KWin.WindowThumbnail` which are mostly documented in the [kwin source code repository](https://invent.kde.org/plasma/kwin). 
 
 ## Changes for SDDM Login Themes
 

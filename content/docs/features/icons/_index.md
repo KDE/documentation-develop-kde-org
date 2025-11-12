@@ -12,7 +12,7 @@ When you create your own KDE application you will probably want to have icons in
 
 This is possible with the help of [QIcon::fromTheme](https://doc.qt.io/qt-5/qicon.html#fromTheme) for QtWidgets applications or [Kirigami's Icon](docs:kirigami2;Icon) for QtQuick applications. Both take the name of the icon in the icon theme as an argument.
 
-Plasma and all the other major Linux deskops follow the Freedesktop [icon specification](http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html) and [naming specification](http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html). A fallback mechanism is also present so that if the `document-open-recent` icon is not present, the `document-open` icon will be displayed instead, and if the `document-open` icon is also not present the `document` icon will be displayed.
+Plasma and all the other major Linux desktops follow the Freedesktop [icon specification](http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html) and [naming specification](http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html). A fallback mechanism is also present so that if the `document-open-recent` icon is not present, the `document-open` icon will be displayed instead, and if the `document-open` icon is also not present the `document` icon will be displayed.
 
 ## Finding the right icons
 

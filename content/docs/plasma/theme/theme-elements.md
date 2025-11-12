@@ -157,7 +157,7 @@ This file contains graphical elements used for the standard button and toolbutto
   * **`[state]`** can be:
     * `normal`: default button
     * `pressed`: pressed button
-    * `hover`: element that will be in the background ofthe widget, will act as a border (useful for gloweffects)
+    * `hover`: element that will be in the background of the widget, will act as a border (useful for gloweffects)
     * `focus`: keyboard focus rectangle superimposed to the button graphics
     * `shadow`: a shadow for the button, can be bigger than the button itself
   * **`[position]`** can be:

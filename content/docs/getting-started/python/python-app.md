@@ -217,7 +217,7 @@ emitted with `.emit()`.
 The `mdFormat()` function returns the Markdown-formatted
 text and it has been declared as a
 [slot](https://doc.qt.io/qtforpython-6/tutorials/basictutorial/signals_and_slots.html#the-slot-class)
-so as to be invokable by the QML code.
+so as to be invocable by the QML code.
 
 The `markdown` Python package takes care of formatting. Let’s install
 it in our virtual environment:

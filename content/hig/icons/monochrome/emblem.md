@@ -37,7 +37,7 @@ Don't misalign your icon or use margins.
 {{< /compare >}}
 
 16px and 22px emblem icons get a 60% opacity text colour outline to ensure
-contrast against various backgrounds. 8px emblems do not recieve an
+contrast against various backgrounds. 8px emblems do not receive an
 outline because of their limited canvas size.
 
 {{< compare >}}
@@ -47,7 +47,7 @@ various backgrounds.
 {{< /do >}}
 {{< dont src="/hig/8-emblem-outline.png" >}}
 8px emblem icons need to rely on bold shapes and bright colours for
-visiblity, as they don't have room for an
+visibility, as they don't have room for an
 outline.
 {{< /dont >}}
 {{< /compare >}}

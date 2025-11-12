@@ -36,7 +36,7 @@ Don't ask the user to express preferences or make decisions about optional setti
 ## Optimize common workflows
 Don't make the user do unnecessary work to use your app. Anticipate what the user is likely to do next and offer that. For example:
 
-- In cases where the user needs to choose a device to use from a set of many, pre-select the last-used device or the one most likely to be useful, instead of asking the user to explicitly choose a device every time before they can proceed. If there is only one available device, skip this step entirely.
+- In cases where the user needs to choose a device to use from a set of many, preselect the last-used device or the one most likely to be useful, instead of asking the user to explicitly choose a device every time before they can proceed. If there is only one available device, skip this step entirely.
 - When the user asks to compose a new email, if the clipboard's top item is an email address, pre-populate the “To:” field with that address.
 - Allow the user to rename files and folders inline, rather than with a separate modal dialog box.
 

@@ -2,9 +2,9 @@
 title: "Displaying content"
 weight: 6
 aliases:
-- /hig/components/formating/
-- /hig/components/formating/splitter/
-- /hig/components/formating/groupbox/
+- /hig/components/formatting/
+- /hig/components/formatting/splitter/
+- /hig/components/formatting/groupbox/
 - /hig/components/navigation/navigationtabbar/
 - /hig/components/navigation/scrim/
 - /hig/components/assistance/tooltip/

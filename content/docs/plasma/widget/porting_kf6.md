@@ -261,7 +261,7 @@ There are some key differences. While ``SortFilterModel`` has properties ``sortR
 and ``filterRole`` that take strings as role names, ``KSortFilterProxyModel``
 has the same two properties accepting only integers as the actual role values.
 Usages of role names must be ported to the properties ``sortRoleName``
-and ``filterRoleName`` (``sortRole`` and ``filterRole`` will automatically sync to the coresponding role number)
+and ``filterRoleName`` (``sortRole`` and ``filterRole`` will automatically sync to the corresponding role number)
 
 The ``filterRegExp`` property becomes ``filterRegularExpression`` which will have to be a ``RegExp()``
 type, such as ```filterRegularExpression: RegExp(".*foo.+")```.

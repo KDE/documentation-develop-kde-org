@@ -22,7 +22,7 @@ Even without the 3. step (publish your app) the CI job will create `.flatpak` fi
 If you are not a KDE Developer you can fork the repository, add the manifest (either via web interface or via git), and create a merge request (MR). This process is [described in the wiki](https://community.kde.org/Infrastructure/GitLab), and requires you to create an account over [Identity](https://identity.kde.org/) first. The MR will then undergo a straightforward review process before being added.
 
 {{< alert title="Note" color="info" >}}
-The old way of building nightly Flatpaks on Binary Factory (Jenkins) with manifests hosted in https://invent.kde.org/packaging/flatpak-kde-applications is deprecated and no longer supported. You should move your manifests to the application repository as descriped above.
+The old way of building nightly Flatpaks on Binary Factory (Jenkins) with manifests hosted in https://invent.kde.org/packaging/flatpak-kde-applications is deprecated and no longer supported. You should move your manifests to the application repository as described above.
 {{< /alert >}}
 
 ## Publishing on Flathub

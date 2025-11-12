@@ -154,7 +154,7 @@ cd ~/Code/plasmoid-widgetname
 
 {{< sections >}}
 {{< section-left >}}
-To start off, let's work out what we want in the QML code. For this simple example, we will import a new `WidgetItem` type, which has a property named `number` and has an [invokable function](https://doc.qt.io/qt-6/qtqml-cppintegration-exposecppattributes.html) called `randomize()` which will set the `number` property to a random number.
+To start off, let's work out what we want in the QML code. For this simple example, we will import a new `WidgetItem` type, which has a property named `number` and has a [`Q_INVOKABLE` function](https://doc.qt.io/qt-6/qtqml-cppintegration-exposecppattributes.html) called `randomize()` which will set the `number` property to a random number.
 {{< /section-left >}}
 {{< section-right >}}
 <div class="filepath">package/contents/ui/main.qml</div>

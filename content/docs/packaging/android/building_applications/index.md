@@ -125,7 +125,7 @@ When asked `Keystore password for signer #1:`, please provide the password speci
 
 Now, you can copy the file `/home/user/CraftRoot/tmp/<app>.signed.apk` to your Android device or emulator (for example the Android Emulator from Android Studio IDE or Waydroid). You can install the app and run it.
 
-If you have Google Apps (GAPPS, Google Play) installed on your Andoid device, you might get a warning dialog "Google Play Protect  
+If you have Google Apps (GAPPS, Google Play) installed on your Android device, you might get a warning dialog "Google Play Protect  
 App scan recommended  
 Play Protect hasn't seen this app before.".
 

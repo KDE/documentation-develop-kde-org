@@ -55,7 +55,7 @@ usage: icon_extractor.py [-h] [-i INPUT_BASE_DIR] [-j OUTPUT_METADATA_DIR] [-d O
 options:
   -h, --help            show this help message and exit
   -i INPUT_BASE_DIR, --input-base-dir INPUT_BASE_DIR
-                        Path to directory where the icon themes are installed. Multiple paths with colon (:) as seperator are supported. Default is $XDG_DATA_DIRS (default:
+                        Path to directory where the icon themes are installed. Multiple paths with colon (:) as separator are supported. Default is $XDG_DATA_DIRS (default:
                         /home/konqi/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop)
   -j OUTPUT_METADATA_DIR, --output-metadata-dir OUTPUT_METADATA_DIR
                         Path to directory where to write json metadata (default: data/icons)

@@ -1,7 +1,7 @@
 ---
 title: About page
 weight: 63
-description: Informations about your application
+description: Information about your application
 group: advanced
 aliases:
   - /docs/getting-started/kirigami/advanced-add_about_page/

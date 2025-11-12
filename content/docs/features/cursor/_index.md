@@ -355,7 +355,7 @@ we can use [symlinks](https://en.wikipedia.org/wiki/Symbolic_link#POSIX_and_Unix
 ---
 To create a symlink, you use the `ln` command with the following structure: `ln -s file-path symlink-path`, where:
 
-| Paramenter    | Description                                                                                         |
+| Parameter     | Description                                                                                         |
 |---------------|-----------------------------------------------------------------------------------------------------| 
 | file-path     | The path, relative to your working directory, to the file that will be linked to.                   |
 | symlink-path  | The path, relative to your working directory, to create the symlink that will point to `file-path`. |

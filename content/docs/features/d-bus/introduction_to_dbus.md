@@ -47,7 +47,7 @@ Since multiple applications can be on the same bus, and one application may prov
 
 An **interface** is a set of callable methods and signals that are advertised on the bus. An interface provides a "contract" between the applications passing messages that defines the name, parameters (if any) and return values (if any) of the interface. These methods may not map directly in a one-to-one fashion to methods or API in the application that is advertising the interface, though they often do. This allows multiple applications to provide similar or the same interfaces, regardless of internal implementation, while allowing applications to use these interfaces without worrying about the internal design of the applications.
 
-Interfaces can be described for documentation and code re-use purposes using XML. Not only can users and programmers reference the XML description of the interface, but developers can use classes that are auto-generated from the XML — making using D-Bus much easier and less error-prone (e.g. the compiler can check the syntax of messages at compile time).
+Interfaces can be described for documentation and code reuse purposes using XML. Not only can users and programmers reference the XML description of the interface, but developers can use classes that are auto-generated from the XML — making using D-Bus much easier and less error-prone (e.g. the compiler can check the syntax of messages at compile time).
 
 ### Services
 

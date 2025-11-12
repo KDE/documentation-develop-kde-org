@@ -163,7 +163,7 @@ The following code is taken from the Deo Ignito comic plugin. I removed parts th
 
 ```js
 const firstImage = 0;
-// the variable we will temporaly store the combined images in,
+// the variable we will temporarily store the combined images in,
 // so this is the image that all other pictures will be combined with
 // e.g. 4 different pictures 1,2,3,4
 // 1. 4
@@ -235,7 +235,7 @@ Ask the engine to retrieve the real (redirected) url for `url`. `id` specifies o
 * comic.UserUrl
 Those are for convenience only, you could use any integer you want.
 
-You can also add `metdata` though that is optional. For more information on metadata see [requestpage]({{< relref "#requestpage" >}}).
+You can also add `metadata` though that is optional. For more information on metadata see [requestpage]({{< relref "#requestpage" >}}).
 
 This method will always call `redirected(id, url)`. If there was no redirection, then it will be called with the original url.
 

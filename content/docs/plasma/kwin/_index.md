@@ -241,7 +241,7 @@ myscript
 
 `.ui` widgets are most easily edited with the Qt Designer application.
 
-The object name of each UI element which provides the setting for a configuration value must be `kcfg_keyName`, where `keyName` is the value of the  `name` attribute for the corresponding entry in the xml flie.
+The object name of each UI element which provides the setting for a configuration value must be `kcfg_keyName`, where `keyName` is the value of the  `name` attribute for the corresponding entry in the xml file.
 
 The configuration menu is then accessible through the configuration button in the KWin script KCM. Note that users on Plasma versions <5.23 will have to take [additional steps after installation](https://bugs.kde.org/show_bug.cgi?id=444378#c10) to be able to access the configuration menu.
 
@@ -253,7 +253,7 @@ Configuration values for KWin scripts will be stored in the file `~/.config/kwin
   KWin script. First argument is the config key, second argument is an optional default value
   in case the config key does not exist in the config file.
 
-The `key` to be used is the value of the `name` attribute for the corresponding entry in the xml flie.
+The `key` to be used is the value of the `name` attribute for the corresponding entry in the xml file.
 
 ## Your first (useful) script
 

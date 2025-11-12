@@ -16,7 +16,7 @@ Icons should be localized as needed in order to preserve meaning across locales.
 {{</ compare >}}
 
 Navigational icons are the most important icons in your interface when localizing, as they communicate the basic structure of your user interface.
-If an arrow is pointing in the same direction that people read, people usually interpret it as "fowards." If it points the opposite direction, people usually interpret it as "backwards."
+If an arrow is pointing in the same direction that people read, people usually interpret it as "forwards." If it points the opposite direction, people usually interpret it as "backwards."
 
 {{< compare >}}
 

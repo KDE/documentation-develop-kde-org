@@ -156,7 +156,7 @@ function init() {
     comic.websiteUrl = "http://www.ubersoft.net/comic/hd/";
     comic.shopUrl = "http://www.cafepress.com/evisceratistore";
 
-    //cehck if the comic.identifier is empty, there are other ways as well like checking its length
+    //check if the comic.identifier is empty, there are other ways as well like checking its length
     if (comic.identifier !== new String()) {
         comic.websiteUrl += comic.identifier;
         comic.requestPage(comic.websiteUrl, comic.Page);

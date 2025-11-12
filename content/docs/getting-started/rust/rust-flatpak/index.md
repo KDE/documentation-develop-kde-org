@@ -22,7 +22,7 @@ The most notable additions to the manifest are the rust-stable Sdk (development)
 
 {{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.json" highlight="json" start=31 lines=6 >}}
 
-Flatpak performs a local offline build of the project, so the traditional `cargo build` step cannot fetch crates from crates.io while building the project. To accomodate for that, we need to use [flatpak-cargo-generator](https://github.com/flatpak/flatpak-builder-tools/tree/master/cargo).
+Flatpak performs a local offline build of the project, so the traditional `cargo build` step cannot fetch crates from crates.io while building the project. To accommodate for that, we need to use [flatpak-cargo-generator](https://github.com/flatpak/flatpak-builder-tools/tree/master/cargo).
 
 Download and use `flatpak-cargo-generator.py` to prepare all the dependency crates:
 
