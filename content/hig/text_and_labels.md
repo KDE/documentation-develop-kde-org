@@ -45,6 +45,51 @@ Use a [serial comma](https://apastyle.apa.org/style-grammar-guidelines/punctuati
 Put spaces around [em-dashes](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use).
 
 
+## Mood and tone
+Use the imperative mood when providing instructions or suggestions to the user — especially in the labels for buttons, menu items, checkboxes, and switches.
+
+This means beginning the label with an action verb, and phrasing it as a command:
+
+**Bad:** Yes
+
+**Good:** Apply
+
+**Bad:** Info
+
+**Good:** Show Info
+
+**Bad:** Maximum Volume Raising
+
+**Good:** Raise Maximum Volume
+
+Phrase longer text impersonally. Avoid the word “you” in sentences that instruct the user to do something, as it sounds accusatory in English — particularly at the beginning of a sentence. This is less important for questions and descriptions, but try to minimize it anyway.
+
+**Bad:** You are not authorized to access the file.
+
+**Good**: Missing authorization to access the file.
+
+**Bad**: Are you sure you want to permanently delete all items from the Trash?
+
+**Good**: Permanently delete all items from the Trash?
+
+
+
+## Word ordering and length
+Front-load the most important words and minimize total length. Anything longer than “Configure Keyboard Shortcuts” in an interactive user interface element is too long.
+
+A strategy for minimizing length is to omit the topic when the context makes it clear:
+
+{{< figure src="/hig/text-short-button-label-with-nearby-context.png" class="text-center" caption="Nearby “Users” title provides context and makes it obvious what new thing will be added." width="476px">}}
+
+When shortening a button's text in this way, always set `Accessible.name` to the full text including the topic, since blind people won't be able to see the context visually.
+
+**Bad:** Re-Assign Key Binding to this Action
+
+**Good:** Re-Assign Shortcut
+
+For multi-sentence text, try to limit line length to 85 characters or less, which improves readability. This generally works out to about 450px. However if this would cause excessive whitespace in wide windows, consider changing the layout to move elements to the right of the text area, or even move the long text into a [Kirigami.ContextualHelpButton](https://api.kde.org/qml-org-kde-kirigami-contextualhelpbutton.html) or [KWidgetsAddons::KContextualHelpButton](https://api.kde.org/kcontextualhelpbutton.html), which enforces this length internally.
+
+
 ## Acronyms
 Avoid the use of acronyms, as many users will not know what they mean. Only use an acronym when you have to display the same term multiple times and can explain the acronym the first time it's seen. Strive to use human-readable words instead of acronyms — even those you might assume are commonly understood, for example:
 
@@ -58,63 +103,18 @@ This guideline does not apply to functionality only ever referred to via its acr
 When you do use an acronym, capitalize all the letters.
 
 
-## Mood and tone
-Use the imperative mood when providing instructions or suggestions to the user.
+## Ellipses
+End an action’s label with an ellipsis if it always requires additional user input before it completes. This is common for actions that open a dialog prompting the user to make a further choice.
 
-Avoid the word “you” in sentences that instruct the user to do something, as it sounds accusatory in English — particularly at the beginning of a sentence. This is less important for questions and descriptions, but try to minimize it anyway.
+**Bad:** Save As
 
-**Bad:** Now you must save the file.
+**Good:** Save As…
 
-**Good**: Save the file.
-
-**Bad**: You have to restart the server to apply your changes.
-
-**Good**: Restart server to apply changes.
-
-**Bad**: Are you sure you want to permanently delete all items from the Trash?
-
-**Good**: Permanently delete all items from the Trash?
-
-**Bad**: You should make sure you understand the consequences before you proceed.
-
-**Good**: Make sure you understand the consequences before proceeding.
-
-
-
-## Buttons and menu items
-Write labels for buttons and menu items to represent *actions* or *locations*:
-
-- **An _action_ makes something happen,** and begins with a verb in the imperative mood appropriate to describe the action. If the action is complex and requires additional user input before it completes (most commonly because it opens a dialog that prompts the user to make a further decision), end its label with an ellipsis. Use the real “…” ellipsis character (`U+2026` in Unicode), not three periods. For labeled buttons that directly open a pop-up menu, use a downward-pointing arrow to indicate this instead of an ellipsis.
-- **A _location_ is another page, window, or application** that opens when the user triggers the button or menu item. Match the title of the new page, window, or application in the button or menu item label.
-
-Prefer the “action” form where the label's UI element may not otherwise look interactive — such as a toolbar with only one or two ToolButtons. In this case, the action verb helps to signal interactivity.
-
-Keep text for menu items and especially buttons as short as possible. Aim for three normal-sized words or fewer, or four short ones. Anything longer than "Configure Keyboard Shortcuts" is too long. A strategy for minimizing length is to omit the topic when the context makes it clear:
-
-{{< figure src="/hig/text-short-button-label-with-nearby-context.png" class="text-center" caption="Nearby “Users” title provides context and makes it obvious what new thing will be added." width="476px">}}
-
-When shortening a button's text in this way, always set `Accessible.name` to the full text including the topic, since blind people won't be able to see the context visually.
-
-Buttons in dialogs also follow these rules. “OK” and “Yes” are never acceptable button labels!
-
-**Bad:** Yes (meaning is unclear)
-
-**Bad:** Re-Assign Key Binding to this Action (too long)
-
-**Bad:** Print (always requires additional input)
-
-**Bad:** Properties… (this is a location, not an action)
-
-**Good:** Open…
-
-**Good:** Show More
-
-**Good:** About \[app name\]
-
+Use the real “…” ellipsis character (`U+2026` in Unicode), not three periods. For labeled buttons that directly open a pop-up menu, use a downward-pointing arrow to indicate this instead of an ellipsis.
 
 
 ## Window titles
-Give every window a distinctive title briefly describing its visible content. This text is shown in multiple parts of the UI where space may be limited, so keep it as short as possible while retaining distinctiveness. Don't include the app's vendor or version number.
+Give every window a distinctive title briefly describing its visible content. This text is shown in multiple places where space may be limited, so keep it as short as possible while retaining distinctiveness. Don't include the app's vendor or version number.
 
 
 **Bad:** AppName 5.3.9 Professional Edition, by SquidSoft™
@@ -143,11 +143,6 @@ For dialog titles, describe the action being performed starting with an imperati
 **Good:** Properties → Properties for \[file name\]
 
 
-
-## Line length
-For multi-sentence text, try to limit line length to 85 characters or less, which improves readability. This generally works out to about 450px. However if this would cause excessive whitespace in wide windows, consider changing the UI to lay out additional elements to the right of the text area, or even move the long text into a [Kirigami.ContextualHelpButton](https://api.kde.org/qml-org-kde-kirigami-contextualhelpbutton.html) or [KWidgetsAddons::KContextualHelpButton](https://api.kde.org/kcontextualhelpbutton.html), which enforces this length internally.
-
-
 ## Placeholders
 Placeholder text is used in empty text fields and empty views. Both share a common purpose: to tell users how to get content into it.
 
@@ -165,7 +160,7 @@ For search fields, use [Kirigami.SearchField](https://api.kde.org/qml-org-kde-ki
 ## Translation
 Many or even most users won't be using your software in English, so keep translatability in mind:
 
-- Leave enough room in your UI for strings to become 50% longer or more when translated into languages with longer text than English.
+- Leave enough room for strings to become 50% longer or more when translated into languages with longer text than English.
 - Respect system-wide locale settings for units, date and time formats, etc.
 - Use the [ki18n guidelines](https://invent.kde.org/frameworks/ki18n/-/blob/master/docs/programmers-guide.md) to write localization-friendly English text.
 - Use the [i18nc()](https://invent.kde.org/frameworks/ki18n/-/blob/master/docs/programmers-guide.md#writing-good-contexts) function to provide translation context to your strings, and use [semantic markup (KUIT)](https://invent.kde.org/frameworks/ki18n/-/blob/master/docs/programmers-guide.md#semantic-markup) instead of HTML.
@@ -182,7 +177,7 @@ Each app's name is automatically a brand name; craft it carefully!
 - Don't simply add a “K” onto the beginning of an existing word. It's acceptable to choose a brand name with a K inside it, or even replace a “C” with a “K” (e.g. Falkon, DigiKam), but don't force it. Not all KDE brand names need to include a K (e.g. Dolphin, Plasma, NeoChat).
 - Don't use common words like “Files” or “Photos.” If your brand name is too generic, its identity will be diluted and users will have a hard time finding it in web searches or describing it to others. It will also be difficult to distinguish from GNOME apps also installed on the system that have similar generic names.
 
-Describe Plasma features in your UI with user-friendly descriptive terminology, not their internal codenames.
+Describe Plasma features with user-friendly descriptive terminology, not their internal codenames.
 
 **Bad:** Powerdevil
 
