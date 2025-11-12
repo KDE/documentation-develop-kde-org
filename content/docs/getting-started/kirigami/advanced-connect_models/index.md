@@ -17,23 +17,112 @@ We can create our own [models](docs:qtcore;qabstractlistmodel.html) from
 the C++ side, and declare how the data from that model should be represented on
 the QML frontend.
 
+It is strongly recommended that you read the [List views](/docs/getting-started/kirigami/components-listview) tutorial before this one.
+
+The code used for this tutorial will be based on the previous page, [Connect logic to your QML user interface](/docs/getting-started/kirigami/advanced-connect_backend).
+
+## Project structure
+
+```
+kirigami-tutorial/
+├── CMakeLists.txt
+├── org.kde.tutorial.desktop
+└── src/
+    ├── CMakeLists.txt
+    ├── main.cpp
+    ├── Main.qml ----------------------- # Modified
+    └── components/
+        ├── CMakeLists.txt ------------- # Modified
+        ├── AddDialog.qml
+        ├── KountdownDelegate.qml
+        ├── model.h -------------------- # New
+        ├── model.cpp ------------------ # New
+        ├── backend.h
+        └── backend.cpp
+```
+
+## Creating a new page for the models tutorial
+
+Before doing anything, let's add a new page to our QML code:
+
+```qml
+globalDrawer: Kirigami.GlobalDrawer {
+    isMenu: true
+    actions: [
+        Kirigami.Action {
+            text: i18n("Exposing to QML Tutorial")
+            icon.name: "kde"
+            onTriggered: pageStack.push(exposingToQml)
+        },
+        // Emphasize this
+        Kirigami.Action {
+            text: i18n("C++ models in QML tutorial")
+            icon.name: "kde"
+            onTriggered: pageStack.push(modelsQml)
+        },
+        Kirigami.Action {
+            text: i18n("Quit")
+            icon.name: "application-exit-symbolic"
+            shortcut: StandardKey.Quit
+            onTriggered: Qt.quit()
+        }
+    ]
+}
+
+Component {
+    id: modelsQml
+    Kirigami.Page {
+        title: "C++ models in QML"
+        // ...
+    }
+}
+```
+
+This will serve as the canvas for this tutorial page.
+
 ## Preparing the Class
 
-In this tutorial, we will create a class that contains a QMap, where a QString
-is used as a key and QStringList objects are used as values. The frontend will
-be able to read and display the keys and values and be simple to use just like a
+We will create a class that contains a [QMap](https://doc.qt.io/qt-6/qmap.html),
+where a [QString](https://doc.qt.io/qt-6/qstring.html)
+is used as a key and [QStringList](https://doc.qt.io/qt-6/qstringlist.html) objects are used as values.
+The frontend will be able to read and display the keys and values and be simple to use just like a
 one-dimensional array. It should look similar to a QML ListModel.
 
-To do this, we need to declare a class that inherits from
+To do this, we need to create a class that inherits from
 [QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add in
 some add data to the QMap. These declarations will be located in
 `model.h`.
 
-{{< alert title="Note" color="info" >}}
+Create two new files, `src/components/model.h` and `src/components/model.cpp`.
 
-If you are following along, please remember to update your `CMakeLists.txt` file!
+Add those two new files to `src/components/CMakeLists.txt`:
 
-{{< /alert >}}
+```cmake
+add_library(kirigami-hello-components)
+
+ecm_add_qml_module(kirigami-hello-components
+    URI "org.kde.tutorial.components"
+    GENERATE_PLUGIN_SOURCE
+)
+
+ecm_target_qml_sources(kirigami-hello-components
+    SOURCES
+    AddDialog.qml
+    KountdownDelegate.qml
+)
+
+target_sources(kirigami-hello-components
+    PRIVATE
+    backend.cpp backend.h
+    model.cpp model.h # Needs emphasize
+)
+
+ecm_finalize_qml_module(kirigami-hello-components)
+
+install(TARGETS kirigami-hello-components ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+```
+
+Add the following as the initial contents to `src/components/model.h`:
 
 ```cpp
 #pragma once
@@ -41,6 +130,7 @@ If you are following along, please remember to update your `CMakeLists.txt` file
 #include <QAbstractListModel>
 
 class Model : public QAbstractListModel {
+QML_ELEMENT
 private:
     QMap<QString, QStringList> m_list = {
             {"Feline", {"Tigress",   "Waai Fuu"}},
@@ -50,16 +140,17 @@ private:
 };
 ```
 
-Of course, we can't just display this class as is. We also need to tell QML on
+Of course, we can't just display this class as is. We also need to tell QML
 how to represent this data in the class. We can do this by overriding three
-virtual functions that are essential at doing this, all of which do their own
-tasks.
+essential virtual functions:
 
-- `rowCount()` - Think of this function as a way to tell QML how many items are
-  in the model to represent.
-- `roleNames()` - You can think of role names as property names
-attached to data in QML. This function allows you to create those roles.
-- `data()` - This function is called when you want to retrieve the data
+- [rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) -
+Think of this function as a way to tell QML how many items the model should present.
+- [roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames) -
+You can think of role names as property names attached to data in QML.
+This function allows you to create those roles.
+- [data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data) -
+This function is called when you want to retrieve the data
 that corresponds to the role names from the model.
 
 {{< alert title="Note" color="info" >}}
@@ -81,8 +172,8 @@ can just think of "rows" as "number of elements."
 
 ### Overriding and Implementing `rowCount()`
 
-Let's override the function in the header file. The `rowCount()` comes with its
-own parameter, but will not be used in this example and is excluded.
+Let's override the function in the `src/components/model.h` header file. The [rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) 
+function comes with its own parameter, but it will not be used in this example and so doesn't need to be named.
 
 ```cpp
 class Model : public QAbstractListModel {
@@ -92,7 +183,7 @@ public:
 };
 ```
 
-Then, let's declare how many rows are in this model in `model.cpp`.
+Then, let's declare how many rows are in this model in `src/components/model.cpp`:
 
 ```cpp
 #include "model.h"
@@ -105,12 +196,12 @@ int Model::rowCount(const QModelIndex &) const {
 ### Overriding and Implementing `roleNames()`
 
 Before we override `roleNames()`, we need to declare what the roles are in the
-C++ side using an public `enum` variable. The reason for this is because these
-values from the `enum` variable are passed into `data()` every time QML
+C++ side using a public enum. The reason for this is because these
+enum values are passed into `data()` every time QML
 accesses a corresponding role, and as such we can make `data()` return what we
 want.
 
-Let's begin with creating the `enum` variable for roles, where each value is a
+Let's begin with creating the enum for roles, where each value is a
 role for the C++ side.
 
 ```cpp
@@ -148,8 +239,8 @@ names list.
 
 ### Overriding and Implementing `data()`
 
-There are two parameters that are passed in `data()`: `index` and `role`.
-`index` is the location of where the data is when being delegated. As
+There are two parameters that are passed to `data()`: `index` and `role`.
+The `index` is the position of the data in the model. As
 previously stated, `role` is used by QML to get specific data returned when
 it's accessing a role.
 
@@ -191,18 +282,6 @@ QString Model::formatList(const QStringList& list) {
 }
 ```
 
-### Allow the Class to be Declared in QML
-
-Let's not forget to make our class usable in QML.
-
-```cpp
-int main(int argc, char *argv[]) {
-    ...
-    qmlRegisterType<Model>("CustomModel", 1, 0, "CustomModel");
-    ...
-}
-```
-
 ## Class Usage in QML
 
 The QML file that is used will just contain three
@@ -213,21 +292,10 @@ model. The data is accessed using word `model`, followed by the roles we
 declared in `roleNames()`.
 
 ```qml
-import QtQuick
-import QtQuick.Layouts
-import QtQuick.Controls as Controls
-import org.kde.kirigami as Kirigami
-import CustomModel 1.0
-
-Kirigami.ApplicationWindow {
-    id: root
-    title: "Tutorial"
-
-    CustomModel {
-        id: customModel
-    }
-
-    pageStack.initialPage: Kirigami.ScrollablePage {
+Component {
+    id: modelsQml
+    Kirigami.Page {
+        title: "C++ models in QML"
         ColumnLayout {
             Repeater {
                 model: customModel

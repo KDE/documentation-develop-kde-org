@@ -115,6 +115,7 @@ globalDrawer: Kirigami.GlobalDrawer {
 Component {
     id: exposingToQml
     Kirigami.Page {
+        title: "Exposing to QML Tutorial"
         // Code here...
     }
 }
@@ -123,6 +124,8 @@ Component {
 You should be able to compile and install the project with [the same steps as before](/docs/getting-started/kirigami/setup-cpp/#running-the-application).
 
 ## Making it functional
+
+### src/components/backend.h
 
 Now we have connected the class holding the future logic to the application, but it still doesn't do anything. To change that, let's add a property to the class. Properties are a lot more than a simple variable. They can inform the UI about changes so it can update the right areas.
 
@@ -151,7 +154,13 @@ public:
     void setIntroductionText(const QString &introductionText);
     Q_SIGNAL void introductionTextChanged();
 ```
-The first function is the getter, the second the setter, and the third a signal that is emitted when the property is changed. The signal doesn't need any implementation in the `backend.cpp` file, since it doesn't do much more than being emitted, but the getter and setter need to be implemented similar to the following:
+
+The first function is the getter, the second the setter, and the third a signal that is emitted when the property is changed.
+
+### src/components/backend.cpp
+
+The signal doesn't need any implementation in the `backend.cpp` file, since it doesn't do much more than being emitted, but the getter and setter need to be implemented similar to the following:
+
 ```C++
 QString Backend::introductionText() const
 {
@@ -166,6 +175,8 @@ void Backend::setIntroductionText(const QString &introductionText)
 ```
 
 As you can see, when the setter is called, the signal will be emitted, and inform the ui and backend of the change.
+
+### src/Main.qml
 
 To display the text, add a [Kirigami.Heading](https://api.kde.org/qml-org-kde-kirigami-heading.html) to `src/Main.qml` under the [title](https://doc.qt.io/qt-6/qml-qtquick-controls-page.html#title-prop) property of the [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) component we added to the code.
 
@@ -184,6 +195,8 @@ Component {
 ```
 
 Now [compile](/docs/getting-started/kirigami/setup-cpp/#running-the-application) and start your program again. You'll see that the new page has a centered Heading saying "Hello World!".
+
+{{< figure class="text-center" src="/docs/getting-started/kirigami/advanced-connect_backend/result.webp" >}}
 
 Congratulations, you learned:
 * How to register backend types to QML
