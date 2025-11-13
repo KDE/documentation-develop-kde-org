@@ -99,8 +99,8 @@ globalDrawer: Kirigami.GlobalDrawer {
     isMenu: true
     actions: [
         Kirigami.Action {
-            text: i18n("Exposing to QML Tutorial")
-            icon.name: "kde"
+            text: i18n("Exposing to QML")
+            icon.name: "list-add-symbolic"
             onTriggered: pageStack.push(exposingToQml)
         },
         Kirigami.Action {

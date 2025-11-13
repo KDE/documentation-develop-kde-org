@@ -50,14 +50,14 @@ globalDrawer: Kirigami.GlobalDrawer {
     isMenu: true
     actions: [
         Kirigami.Action {
-            text: i18n("Exposing to QML Tutorial")
-            icon.name: "kde"
+            text: i18n("Exposing to QML")
+            icon.name: "list-add-symbolic"
             onTriggered: pageStack.push(exposingToQml)
         },
         // Emphasize this
         Kirigami.Action {
-            text: i18n("C++ models in QML tutorial")
-            icon.name: "kde"
+            text: i18n("C++ models in QML")
+            icon.name: "list-add-symbolic"
             onTriggered: pageStack.push(modelsQml)
         },
         Kirigami.Action {
@@ -89,8 +89,8 @@ The frontend will be able to read and display the keys and values and be simple 
 one-dimensional array. It should look similar to a QML ListModel.
 
 To do this, we need to create a class that inherits from
-[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add in
-some add data to the QMap. These declarations will be located in
+[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add
+some data to the QMap. These declarations will be located in
 `model.h`.
 
 Create two new files, `src/components/model.h` and `src/components/model.cpp`.
@@ -130,7 +130,9 @@ Add the following as the initial contents to `src/components/model.h`:
 #include <QAbstractListModel>
 
 class Model : public QAbstractListModel {
-QML_ELEMENT
+    QML_ELEMENT
+public:
+
 private:
     QMap<QString, QStringList> m_list = {
             {"Feline", {"Tigress",   "Waai Fuu"}},
@@ -176,10 +178,21 @@ Let's override the function in the `src/components/model.h` header file. The [ro
 function comes with its own parameter, but it will not be used in this example and so doesn't need to be named.
 
 ```cpp
+#pragma once
+
+#include <QAbstractListModel>
+
 class Model : public QAbstractListModel {
-...
+    QML_ELEMENT
 public:
-    int rowCount(const QModelIndex &) const override;
+    int rowCount(const QModelIndex &) const override; // emphasize this
+
+private:
+    QMap<QString, QStringList> m_list = {
+            {"Feline", {"Tigress",   "Waai Fuu"}},
+            {"Fox",    {"Carmelita", "Diane", "Krystal"}},
+            {"Goat",   {"Sybil",     "Toriel"}}
+    };
 };
 ```
 
@@ -205,16 +218,27 @@ Let's begin with creating the enum for roles, where each value is a
 role for the C++ side.
 
 ```cpp
+#pragma once
+
+#include <QAbstractListModel>
+
 class Model : public QAbstractListModel {
-...
+    QML_ELEMENT
 public:
-    enum Roles {
+    enum Roles {                    // emphasize this
         SpeciesRole = Qt::UserRole,
         CharactersRole
     };
 
-    ...
-    QHash<int, QByteArray> roleNames() const override;
+    QHash<int, QByteArray> roleNames() const override; // emphasize this
+    int rowCount(const QModelIndex &) const override;
+
+private:
+    QMap<QString, QStringList> m_list = {
+            {"Feline", {"Tigress",   "Waai Fuu"}},
+            {"Fox",    {"Carmelita", "Diane", "Krystal"}},
+            {"Goat",   {"Sybil",     "Toriel"}}
+    };
 };
 ```
 
@@ -244,22 +268,24 @@ The `index` is the position of the data in the model. As
 previously stated, `role` is used by QML to get specific data returned when
 it's accessing a role.
 
-In `data()`, we can use a `switch` statement to return the appropriate data and
+In `data()`, we can use a switch statement to return the appropriate data and
 data type depending on the role, which is possible as `data()` returns a
 [QVariant](docs:qtcore;qvariant.html). We still need to make sure we get the
 appropriate location of the data, though. In this example below, you can see
 that a new iterator variable is being declared, which is set from the beginning
-of the list plus the row of the index and the data that the iterator is
+of the list plus the row of the index, and the data that the iterator is
 pointing to is what is being returned.
 
 We can't just return whatever data we want though. We may be trying to bind
 data to a property with an incompatible data type, such as a QStringList to a
 QString. You may have to do data conversion in order for the data to be
-displayed properly.
+displayed properly. For this, we create a new private, static function named `formatList()`.
+
+This results in the following code in `src/components/model.cpp`:
 
 ```cpp
 QVariant Model::data(const QModelIndex &index, int role) const {
-    const auto it = m_list.begin() + index.row();
+    const auto it = std::next(m_list.begin(), index.row());
     switch (role) {
         case SpeciesRole:
             return it.key();
@@ -282,6 +308,35 @@ QString Model::formatList(const QStringList& list) {
 }
 ```
 
+And the following code in `src/components/model.h`:
+
+```cpp
+#pragma once
+
+#include <QAbstractListModel>
+#include <QtQmlIntegration/qqmlintegration.h>
+
+class Model : public QAbstractListModel {
+    QML_ELEMENT
+public:
+    enum Roles {
+        SpeciesRole = Qt::UserRole,
+        CharactersRole
+    };
+    int rowCount(const QModelIndex &) const override;
+    QHash<int, QByteArray> roleNames() const override;
+    QVariant data(const QModelIndex &index, int role) const override; // Emphasize this
+
+private:
+    QMap<QString, QStringList> m_list = {
+        {"Feline", {"Tigress",   "Waai Fuu"}},
+        {"Fox",    {"Carmelita", "Diane", "Krystal"}},
+        {"Goat",   {"Sybil",     "Toriel"}}
+    };
+    static QString formatList(const QStringList& list); // Emphasize this
+};
+```
+
 ## Class Usage in QML
 
 The QML file that is used will just contain three
@@ -297,6 +352,8 @@ Component {
     Kirigami.Page {
         title: "C++ models in QML"
         ColumnLayout {
+            anchors.left: parent.left
+            anchors.right: parent.right
             Repeater {
                 model: customModel
                 delegate: Kirigami.AbstractCard {
@@ -324,7 +381,7 @@ You may encounter a situation where you want to modify data in the model, and
 have the changes reflected on the frontend side. Every time we change data in
 the model, we must emit the `dataChanged()` signal which will apply those changes on
 the frontend side at the specific cells specified in its arguments. In this
-tutorial, we can just use the `index` argument of `setData()`.
+tutorial, we can just use the `index` argument of [setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData).
 
 `setData()` is a virtual function you can override so that attempting
 to modify the data from the frontend side automatically reflects those
@@ -333,7 +390,7 @@ changes on the backend side. It requires three parameters:
 - `index` - The location of the data.
 - `value` - The contents of the new data.
 - `role` - In this context, the role here is used to tell views how they
-  should handle data. The role here should be `Qt::EditRole`.
+  should handle data. The role here should be [Qt::EditRole](https://doc.qt.io/qt-6/qt.html#ItemDataRole-enum).
 
 The `role` parameter in this case is used to ensure `setData()` can be
 edited via user input (Qt::EditRole). Using `index`, we
@@ -346,12 +403,12 @@ bool Model::setData(const QModelIndex &index, const QVariant &value, int role) {
         return false;
     }
 
-    auto it = m_list.begin() + index.row();
+    auto it = std::next(m_list.begin(), index.row());
     QString charactersUnformatted = value.toString();
     QStringList characters = charactersUnformatted.split(", ");
 
     m_list[it.key()] = characters;
-    emit dataChanged(index, index);
+    Q_EMIT dataChanged(index, index);
 
     return true;
 }
@@ -359,42 +416,41 @@ bool Model::setData(const QModelIndex &index, const QVariant &value, int role) {
 
 {{< alert title="Note" color="info" >}}
 
-`setData()` does not automatically emit `dataChanged()` and that still has to
+`setData()` does not automatically emit [dataChanged()](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged) and that has to
 be done manually.
 
 {{< /alert >}}
 
 Let's update the QML code so that we can open up a prompt that allows us
-to edit the model using a Controls.Button attached to the cards.
+to edit the model using a [Controls.Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html) attached to the cards.
+
+Add the following Dialog to the root ApplicationWindow as well as the modifications to the modelsQml page:
 
 ```qml
-Kirigami.ApplicationWindow {
-    ...
-
-    Kirigami.OverlaySheet {
-        id: editPrompt
-
-        property var model
-        property alias text: editPromptText.text
-
-        title: "Edit Characters"
-
-        Controls.TextField {
-            id: editPromptText
-        }
-
-        footer: Controls.DialogButtonBox {
-            standardButtons: Controls.DialogButtonBox.Ok
-            onAccepted: {
-                const model = editPrompt.model;
-                model.characters = editPromptText.text;
-                editPrompt.close();
-            }
-        }
+Kirigami.PromptDialog {
+    id: editPrompt
+    property var model
+    property alias text: editPromptText.text
+    title: "Edit Characters"
+    standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+    onAccepted: {
+        const model = editPrompt.model;
+        model.characters = editPromptText.text;
+        editPrompt.close();
     }
+    Controls.TextField {
+        id: editPromptText
+        onAccepted: editPrompt.accept()
+    }
+}
 
-    pageStack.initialPage: Kirigami.ScrollablePage {
+Component {
+    id: modelsQml
+    Kirigami.ScrollablePage {
+        title: "C++ models in QML"
         ColumnLayout {
+            anchors.left: parent.left
+            anchors.right: parent.right
             Repeater {
                 model: customModel
                 delegate: Kirigami.AbstractCard {
@@ -455,26 +511,44 @@ AbstractCards. But what if we need to add a new key entry in the QMap and have t
 reflected on the QML side? Let's do this by creating a new method that is
 callable on the QML side to perform this task.
 
-To make the method visible in QML, we must use the Q_OBJECT macro in the class,
-and begin the method declaration with the Q_INVOKABLE macro. This method will
+To make the method visible in QML, we must use the [Q_OBJECT](https://doc.qt.io/qt-6/qobject.html#Q_OBJECT) macro in the class,
+and begin the method declaration with the [Q_INVOKABLE](https://doc.qt.io/qt-6/qobject.html#Q_INVOKABLE) macro. This method will
 also include a string parameter, which is intended to be the new key in the
 QMap.
 
 ```cpp
-class Model : public QAbstractListModel {
-Q_OBJECT;
+#pragma once
 
-    ...
+#include <QAbstractListModel>
+#include <QtQmlIntegration/qqmlintegration.h>
+
+class Model : public QAbstractListModel {
+    Q_OBJECT // emphasize this
+    QML_ELEMENT
 public:
-    ...
-    Q_INVOKABLE void addSpecies(const QString &species);
+    enum Roles {
+        SpeciesRole = Qt::UserRole,
+        CharactersRole
+    };
+    int rowCount(const QModelIndex &) const override;
+    QHash<int, QByteArray> roleNames() const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    Q_INVOKABLE void addSpecies(const QString &species); // emphasize this
+
+private:
+    QMap<QString, QStringList> m_list = {
+        {"Feline", {"Tigress",   "Waai Fuu"}},
+        {"Fox",    {"Carmelita", "Diane", "Krystal"}},
+        {"Goat",   {"Sybil",     "Toriel"}}
+    };
+    static QString formatList(const QStringList& list);
 };
 ```
 
 Inside of this method, we need to tell Qt that we want to create more rows in
-the model. This is done by calling `beginInsertRows()` to begin our row adding
-operation, followed by inserting whatever we need, then use `endInsertRows()`
-to end the operation. We still need to emit `dataChanged()` at the end,
+the model. This is done by calling [beginInsertRows()](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows) to begin our row adding
+operation, followed by inserting whatever we need, then use [endInsertRows()](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+to end the operation. We still need to emit [dataChanged()](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged) at the end,
 however. This time, we are going to update all rows, from the first row to the
 last one as the QMap may alphabetically reorganize itself, and we need to catch
 that across all rows.
@@ -506,39 +580,36 @@ the `index()` function.
 Let's update the QML code so we are given the ability to add a new key to the QMap.
 
 ```qml
-Kirigami.ApplicationWindow {
-    ...
-
-    Kirigami.OverlaySheet {
-        id: addPrompt
-
-        title: "Add New Species"
-
-        Controls.TextField {
-            id: addPromptText
-        }
-
-        footer: Controls.DialogButtonBox {
-            standardButtons: Controls.DialogButtonBox.Ok
-            onAccepted: {
-                customModel.addSpecies(addPromptText.text);
-                addPromptText.text = ""; // Clear TextField every time it's done
-                addPrompt.close();
-            }
-        }
+Kirigami.PromptDialog {
+    id: addPrompt
+    title: "Add New Species"
+    standardButtons: Kirigami.Dialog.Ok
+    onAccepted: {
+        customModel.addSpecies(addPromptText.text);
+        addPromptText.text = ""; // Clear TextField every time it's done
+        addPrompt.close();
     }
-
-    pageStack.initialPage: Kirigami.ScrollablePage {
-        actions: [
-            Kirigami.Action {
-                icon.name: "add"
-                text: "Add New Species"
-                onTriggered: {
-                    addPrompt.open();
-                }
+    Controls.TextField {
+        id: addPromptText
+        Layout.fillWidth: true
+        onAccepted: addPrompt.accept()
+    }
+}
+Component {
+id: modelsQml
+Kirigami.ScrollablePage {
+    title: "C++ models in QML"
+    actions: [
+        Kirigami.Action {
+            icon.name: "list-add-symbolic"
+            text: "Add New Species"
+            onTriggered: {
+                addPrompt.open();
             }
-        ]
-        ...
+        }
+    ]
+    ColumnLayout {
+    // ...
     }
 }
 ```
@@ -570,24 +641,46 @@ an integer that is the row number. The species name is used to delete the key
 from the QMap, while the row number will be used to delete the row on the front
 end.
 
+Add a new Q_INVOKABLE function named `deleteSpecies()` in `src/components/model.h`:
+
 ```cpp
+#pragma once
+
+#include <QAbstractListModel>
+#include <QtQmlIntegration/qqmlintegration.h>
+
 class Model : public QAbstractListModel {
-Q_OBJECT;
+    Q_OBJECT
+    QML_ELEMENT
+public:
+    enum Roles {
+        SpeciesRole = Qt::UserRole,
+        CharactersRole
+    };
+    int rowCount(const QModelIndex &) const override;
+    QHash<int, QByteArray> roleNames() const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    Q_INVOKABLE void addSpecies(const QString &species);
+    Q_INVOKABLE void deleteSpecies(const QString &speciesName, const int &rowIndex); //emphasize this
 
-...
-    public:
-    ...
-
-    Q_INVOKABLE void deleteSpecies(const QString &speciesName, const int &rowIndex);
-}
+private:
+    QMap<QString, QStringList> m_list = {
+        {"Feline", {"Tigress",   "Waai Fuu"}},
+        {"Fox",    {"Carmelita", "Diane", "Krystal"}},
+        {"Goat",   {"Sybil",     "Toriel"}}
+    };
+    static QString formatList(const QStringList& list);
+};
 ```
+
+With a matching implementation in `src/components/model.cpp`:
 
 ```cpp
 void Model::deleteSpecies(const QString &speciesName, const int& rowIndex) {
     beginRemoveRows(QModelIndex(), rowIndex, rowIndex);
     m_list.remove(speciesName);
     endRemoveRows();
-    emit dataChanged(index(0), index(m_list.size() - 1));
+    Q_EMIT dataChanged(index(0), index(m_list.size() - 1));
 }
 ```
 
@@ -595,34 +688,34 @@ Now, let's update the application so a "Delete" button appears alongside the
 edit button, and hook it up to our delete method.
 
 ```qml
-ColumnLayout {
-    Repeater {
-        model: customModel
-        delegate: Kirigami.AbstractCard {
-            ...
-            contentItem: Item {
-                implicitWidth: delegateLayout.implicitWidth
-                implicitHeight: delegateLayout.implicitHeight
-                ColumnLayout {
-                    id: delegateLayout
-                    Controls.Label {
-                        text: model.characters
+                    // ...
+                    contentItem: Item {
+                        implicitWidth: delegateLayout.implicitWidth
+                        implicitHeight: delegateLayout.implicitHeight
+                        ColumnLayout {
+                            id: delegateLayout
+                            Controls.Label {
+                                text: model.characters
+                            }
+                            RowLayout { //Emphasize
+                                Layout.fillWidth: true // Emphasize
+                                Controls.Button {
+                                    text: "Edit"
+                                    onClicked: {
+                                        editPrompt.text = model.characters;
+                                        editPrompt.model = model;
+                                        editPrompt.open();
+                                    }
+                                }
+                                Controls.Button { // Emphasize
+                                    text: "Delete"
+                                    onClicked: {
+                                        customModel.deleteSpecies(model.species, index);
+                                    }
+                                }
+                            }
+                        }
                     }
-                    RowLayout {
-                        Controls.Button {
-                            text: "Edit"
-                            onClicked: {
-                                editPrompt.text = model.characters;
-                                editPrompt.model = model;
-                                editPrompt.open();
-                            }
-                        }
-                        Controls.Button {
-                            text: "Delete"
-                            onClicked: {
-                                customModel.deleteSpecies(model.species, index);
-                            }
-                        }
                     }
                 }
             }
