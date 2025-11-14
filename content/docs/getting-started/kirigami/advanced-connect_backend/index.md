@@ -11,6 +11,25 @@ To integrate logic into the application, we need C++ backend classes that can do
 
 We will use the [Using separate files in a C++ project](/docs/getting-started/kirigami/introduction-separatefiles) tutorial code as our base.
 
+## Project structure
+
+```
+kirigami-tutorial/
+├── CMakeLists.txt
+├── org.kde.tutorial.desktop
+└── src/
+    ├── CMakeLists.txt
+    ├── main.cpp
+    ├── Main.qml ----------------------- # Modified
+    └── components/
+        ├── CMakeLists.txt ------------- # Modified
+        ├── AddDialog.qml
+        ├── KountdownDelegate.qml
+        ├── ExposePage.qml ------------- # New
+        ├── backend.h ------------------ # New
+        └── backend.cpp ---------------- # New
+```
+
 ## Changes to existing code
 
 ### src/components/backend.h
@@ -52,9 +71,57 @@ Backend::Backend(QObject *parent)
 }
 ```
 
+### src/components/ExposePage.qml
+
+From now on, the backend will be known to QML as the `Backend` QML type. It is contained in a module called `org.kde.tutorial.components`.
+
+This means that just by adding the import in a QML file, it is possible to use the code exposed from C++:
+
+```QML
+import org.kde.tutorial.components
+```
+
+To start from a clean slate using the existent application code, create a new QML component that contains an empty page:
+
+```qml
+import org.kde.kirigami as Kirigami
+import org.kde.tutorial.components
+
+Kirigami.Page {
+    title: "Exposing to QML Tutorial"
+    // ...
+}
+```
+
+### src/Main.qml
+
+To actually show the new page, let's create a menu option that [pushes the new page](/docs/getting-started/kirigami/components-pagerow_pagestack/) to the application, just so we can test the model more easily.
+
+For this, we can use a new [Kirigami.Action](/docs/getting-started/kirigami/components-actions/) together with [Qt.createComponent()](https://doc.qt.io/qt-6/qtqml-javascript-dynamicobjectcreation.html) to generate the page on the fly:
+
+```qml
+globalDrawer: Kirigami.GlobalDrawer {
+    isMenu: true
+    actions: [
+        // emphasize this
+        Kirigami.Action {
+            text: i18n("Exposing to QML")
+            icon.name: "list-add-symbolic"
+            onTriggered: pageStack.push(Qt.createComponent("org.kde.tutorial.components", "ExposePage"))
+        },
+        Kirigami.Action {
+            text: i18n("Quit")
+            icon.name: "application-exit-symbolic"
+            shortcut: StandardKey.Quit
+            onTriggered: Qt.quit()
+        }
+    ]
+}
+```
+
 ### src/components/CMakeLists.txt
 
-The second part to exposing code to QML is in CMake, adding the source files to an existing QML module:
+Lastly, add the newly created `backend.h`, `backend.cpp` and `ExposePage.qml` to CMake:
 
 ```cmake
 add_library(kirigami-hello-components)
@@ -68,6 +135,7 @@ ecm_target_qml_sources(kirigami-hello-components
     SOURCES
     AddDialog.qml
     KountdownDelegate.qml
+    ExposePage.qml # Needs emphasize
 )
 
 target_sources(kirigami-hello-components
@@ -80,48 +148,11 @@ ecm_finalize_qml_module(kirigami-hello-components)
 install(TARGETS kirigami-hello-components ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 ```
 
+Adding the files to an existing QML module in CMake is the second part to exposing code to QML.
+
 Note that the QML module should have been created with either [ecm_add_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html) or [qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module.html), as they are required for [declarative registration](https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html).
 
-### src/Main.qml
-
-From now on, the backend will be known to QML as the `Backend` QML type. It is contained in a module called `org.kde.tutorial.components`.
-
-This means that just by having the import in our `Main.qml`, it is already possible to use the code exposed from C++:
-
-```QML
-import org.kde.tutorial.components
-```
-
-Let's also create a menu option that [pushes a new page](/docs/getting-started/kirigami/components-pagerow_pagestack/) to the application, just so we can test the model more easily:
-
-```qml
-globalDrawer: Kirigami.GlobalDrawer {
-    isMenu: true
-    actions: [
-        Kirigami.Action {
-            text: i18n("Exposing to QML")
-            icon.name: "list-add-symbolic"
-            onTriggered: pageStack.push(exposingToQml)
-        },
-        Kirigami.Action {
-            text: i18n("Quit")
-            icon.name: "application-exit-symbolic"
-            shortcut: StandardKey.Quit
-            onTriggered: Qt.quit()
-        }
-    ]
-}
-
-Component {
-    id: exposingToQml
-    Kirigami.Page {
-        title: "Exposing to QML Tutorial"
-        // Code here...
-    }
-}
-```
-
-You should be able to compile and install the project with [the same steps as before](/docs/getting-started/kirigami/setup-cpp/#running-the-application).
+Now you should be able to compile and install the project with [the same steps as before](/docs/getting-started/kirigami/setup-cpp/#running-the-application).
 
 ## Making it functional
 
@@ -155,7 +186,7 @@ public:
     Q_SIGNAL void introductionTextChanged();
 ```
 
-The first function is the getter, the second the setter, and the third a signal that is emitted when the property is changed.
+The first function is the getter, the second the setter, and the third a signal that is emitted when the property is changed. They match the READ, WRITE and NOTIFY parts of the above `Q_PROPERTY`.
 
 ### src/components/backend.cpp
 
@@ -176,20 +207,21 @@ void Backend::setIntroductionText(const QString &introductionText)
 
 As you can see, when the setter is called, the signal will be emitted, and inform the ui and backend of the change.
 
-### src/Main.qml
+### src/components/ExposePage.qml
 
-To display the text, add a [Kirigami.Heading](https://api.kde.org/qml-org-kde-kirigami-heading.html) to `src/Main.qml` under the [title](https://doc.qt.io/qt-6/qml-qtquick-controls-page.html#title-prop) property of the [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) component we added to the code.
+To display the text, add a [Kirigami.Heading](https://api.kde.org/qml-org-kde-kirigami-heading.html) to `src/components/ExposePage.qml` under the [title](https://doc.qt.io/qt-6/qml-qtquick-controls-page.html#title-prop) property of the [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) component we added to the code.
 
 The resulting code in that part of the file should look like this:
 
 ```qml
-Component {
-    id: exposingToQml
-    Kirigami.Page {
-        Kirigami.Heading {
-            anchors.centerIn: parent
-            text: Backend.introductionText
-        }
+import org.kde.kirigami as Kirigami
+import org.kde.tutorial.components
+
+Kirigami.Page {
+    title: "Exposing to QML Tutorial"
+    Kirigami.Heading {
+        anchors.centerIn: parent
+        text: Backend.introductionText
     }
 }
 ```

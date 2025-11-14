@@ -35,6 +35,8 @@ kirigami-tutorial/
         ├── CMakeLists.txt ------------- # Modified
         ├── AddDialog.qml
         ├── KountdownDelegate.qml
+        ├── ExposePage.qml
+        ├── ModelsPage.qml ------------- # New
         ├── model.h -------------------- # New
         ├── model.cpp ------------------ # New
         ├── backend.h
@@ -43,7 +45,9 @@ kirigami-tutorial/
 
 ## Creating a new page for the models tutorial
 
-Before doing anything, let's add a new page to our QML code:
+Before doing anything, let's add a new page to our QML code.
+
+First, in `src/Main.qml`, add the following action to the global drawer:
 
 ```qml
 globalDrawer: Kirigami.GlobalDrawer {
@@ -52,13 +56,13 @@ globalDrawer: Kirigami.GlobalDrawer {
         Kirigami.Action {
             text: i18n("Exposing to QML")
             icon.name: "list-add-symbolic"
-            onTriggered: pageStack.push(exposingToQml)
+            onTriggered: pageStack.push(Qt.createComponent("org.kde.tutorial.components", "ExposePage"))
         },
         // Emphasize this
         Kirigami.Action {
             text: i18n("C++ models in QML")
             icon.name: "list-add-symbolic"
-            onTriggered: pageStack.push(modelsQml)
+            onTriggered: pageStack.push(Qt.createComponent("org.kde.tutorial.components", "ModelsPage"))
         },
         Kirigami.Action {
             text: i18n("Quit")
@@ -68,14 +72,48 @@ globalDrawer: Kirigami.GlobalDrawer {
         }
     ]
 }
+```
 
-Component {
-    id: modelsQml
-    Kirigami.Page {
-        title: "C++ models in QML"
-        // ...
-    }
+Then, create a new `src/components/ModelsPage.qml` with the following contents:
+
+```qml
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ScrollablePage {
+    title: "C++ models in QML"
+    // ...
 }
+```
+
+And finally add it to CMake:
+
+```cmake
+add_library(kirigami-hello-components)
+
+ecm_add_qml_module(kirigami-hello-components
+    URI "org.kde.tutorial.components"
+    GENERATE_PLUGIN_SOURCE
+)
+
+ecm_target_qml_sources(kirigami-hello-components
+    SOURCES
+    AddDialog.qml
+    KountdownDelegate.qml
+    ExposePage.qml
+    ModelsPage.qml # emphasize this
+)
+
+target_sources(kirigami-hello-components
+    PRIVATE
+    backend.cpp backend.h
+)
+
+ecm_finalize_qml_module(kirigami-hello-components)
+
+install(TARGETS kirigami-hello-components ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 ```
 
 This will serve as the canvas for this tutorial page.
@@ -109,6 +147,8 @@ ecm_target_qml_sources(kirigami-hello-components
     SOURCES
     AddDialog.qml
     KountdownDelegate.qml
+    ExposePage.qml
+    ModelsPage.qml
 )
 
 target_sources(kirigami-hello-components
@@ -347,23 +387,28 @@ model. The data is accessed using word `model`, followed by the roles we
 declared in `roleNames()`.
 
 ```qml
-Component {
-    id: modelsQml
-    Kirigami.Page {
-        title: "C++ models in QML"
-        ColumnLayout {
-            anchors.left: parent.left
-            anchors.right: parent.right
-            Repeater {
-                model: customModel
-                delegate: Kirigami.AbstractCard {
-                    header: Kirigami.Heading {
-                        text: model.species
-                        level: 2
-                    }
-                    contentItem: Controls.Label {
-                        text: model.characters
-                    }
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+
+Kirigami.ScrollablePage {
+    title: "C++ models in QML"
+    Model {
+        id: customModel
+    }
+    ColumnLayout {
+        anchors.left: parent.left
+        anchors.right: parent.right
+        Repeater {
+            model: customModel
+            delegate: Kirigami.AbstractCard {
+                header: Kirigami.Heading {
+                    text: model.species
+                    level: 2
+                }
+                contentItem: Controls.Label {
+                    text: model.characters
                 }
             }
         }
@@ -383,9 +428,9 @@ the model, we must emit the `dataChanged()` signal which will apply those change
 the frontend side at the specific cells specified in its arguments. In this
 tutorial, we can just use the `index` argument of [setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData).
 
-`setData()` is a virtual function you can override so that attempting
-to modify the data from the frontend side automatically reflects those
-changes on the backend side. It requires three parameters:
+[setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
+is a virtual function you can override so that modifying the data from the frontend side
+automatically reflects those changes on the backend side. It requires three parameters:
 
 - `index` - The location of the data.
 - `value` - The contents of the new data.
@@ -424,10 +469,53 @@ be done manually.
 Let's update the QML code so that we can open up a prompt that allows us
 to edit the model using a [Controls.Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html) attached to the cards.
 
-Add the following Dialog to the root ApplicationWindow as well as the modifications to the modelsQml page:
+Add the following [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-kirigami-dialogs-promptdialog.html) to the `src/components/ModelsPage.qml`:
 
 ```qml
-Kirigami.PromptDialog {
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.tutorial.components
+
+Kirigami.ScrollablePage {
+    title: "C++ models in QML"
+    Model {
+        id: customModel
+    }
+    ColumnLayout {
+        anchors.left: parent.left
+        anchors.right: parent.right
+        Repeater {
+            model: customModel
+            delegate: Kirigami.AbstractCard {
+                Layout.fillHeight: true
+                header: Kirigami.Heading {
+                    text: model.species
+                    level: 2
+                }
+                contentItem: Item {
+                    implicitWidth: delegateLayout.implicitWidth
+                    implicitHeight: delegateLayout.implicitHeight
+                    ColumnLayout {
+                        id: delegateLayout
+                        Controls.Label {
+                            text: model.characters
+                        }
+                        Controls.Button {
+                            text: "Edit"
+                            onClicked: {
+                                editPrompt.text = model.characters;
+                                editPrompt.model = model;
+                                editPrompt.open();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    Kirigami.PromptDialog {
     id: editPrompt
     property var model
     property alias text: editPromptText.text
@@ -441,45 +529,6 @@ Kirigami.PromptDialog {
     Controls.TextField {
         id: editPromptText
         onAccepted: editPrompt.accept()
-    }
-}
-
-Component {
-    id: modelsQml
-    Kirigami.ScrollablePage {
-        title: "C++ models in QML"
-        ColumnLayout {
-            anchors.left: parent.left
-            anchors.right: parent.right
-            Repeater {
-                model: customModel
-                delegate: Kirigami.AbstractCard {
-                    Layout.fillHeight: true
-                    header: Kirigami.Heading {
-                        text: model.species
-                        level: 2
-                    }
-                    contentItem: Item {
-                        implicitWidth: delegateLayout.implicitWidth
-                        implicitHeight: delegateLayout.implicitHeight
-                        ColumnLayout {
-                            id: delegateLayout
-                            Controls.Label {
-                                text: model.characters
-                            }
-                            Controls.Button {
-                                text: "Edit"
-                                onClicked: {
-                                    editPrompt.text = model.characters;
-                                    editPrompt.model = model;
-                                    editPrompt.open();
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 ```
@@ -565,7 +614,7 @@ void Model::addSpecies(const QString& species) {
     beginInsertRows(QModelIndex(), m_list.size() - 1, m_list.size() - 1);
     m_list.insert(species, {});
     endInsertRows();
-    emit dataChanged(index(0), index(m_list.size() - 1));
+    Q_EMIT dataChanged(index(0), index(m_list.size() - 1));
 }
 ```
 
@@ -580,7 +629,30 @@ the `index()` function.
 Let's update the QML code so we are given the ability to add a new key to the QMap.
 
 ```qml
-Kirigami.PromptDialog {
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.tutorial.components
+
+Kirigami.ScrollablePage {
+    title: "C++ models in QML"
+    actions: [
+        Kirigami.Action {
+            icon.name: "list-add-symbolic"
+            text: "Add New Species"
+            onTriggered: {
+                addPrompt.open();
+            }
+        }
+    ]
+    Model {
+        id: customModel
+    }
+    ColumnLayout {
+    // ...
+    }
+    Kirigami.PromptDialog {
     id: addPrompt
     title: "Add New Species"
     standardButtons: Kirigami.Dialog.Ok
@@ -593,23 +665,6 @@ Kirigami.PromptDialog {
         id: addPromptText
         Layout.fillWidth: true
         onAccepted: addPrompt.accept()
-    }
-}
-Component {
-id: modelsQml
-Kirigami.ScrollablePage {
-    title: "C++ models in QML"
-    actions: [
-        Kirigami.Action {
-            icon.name: "list-add-symbolic"
-            text: "Add New Species"
-            onTriggered: {
-                addPrompt.open();
-            }
-        }
-    ]
-    ColumnLayout {
-    // ...
     }
 }
 ```
@@ -688,35 +743,29 @@ Now, let's update the application so a "Delete" button appears alongside the
 edit button, and hook it up to our delete method.
 
 ```qml
-                    // ...
-                    contentItem: Item {
-                        implicitWidth: delegateLayout.implicitWidth
-                        implicitHeight: delegateLayout.implicitHeight
-                        ColumnLayout {
-                            id: delegateLayout
-                            Controls.Label {
-                                text: model.characters
-                            }
-                            RowLayout { //Emphasize
-                                Layout.fillWidth: true // Emphasize
-                                Controls.Button {
-                                    text: "Edit"
-                                    onClicked: {
-                                        editPrompt.text = model.characters;
-                                        editPrompt.model = model;
-                                        editPrompt.open();
-                                    }
-                                }
-                                Controls.Button { // Emphasize
-                                    text: "Delete"
-                                    onClicked: {
-                                        customModel.deleteSpecies(model.species, index);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    }
+// ...
+contentItem: Item {
+    implicitWidth: delegateLayout.implicitWidth
+    implicitHeight: delegateLayout.implicitHeight
+    ColumnLayout {
+        id: delegateLayout
+        Controls.Label {
+            text: model.characters
+        }
+        RowLayout { //Emphasize
+            Layout.fillWidth: true // Emphasize
+            Controls.Button {
+                text: "Edit"
+                onClicked: {
+                    editPrompt.text = model.characters;
+                    editPrompt.model = model;
+                    editPrompt.open();
+                }
+            }
+            Controls.Button { // Emphasize
+                text: "Delete"
+                onClicked: {
+                    customModel.deleteSpecies(model.species, index);
                 }
             }
         }
