@@ -100,7 +100,7 @@ Because of the `actionCollection()`'s return type, we can use convenience functi
 The action collection is accessed via the `actionCollection()` function like this:
 
 ```c++
-actionCollection()->addAction("clear", clearAction);
+actionCollection()->addAction(u"clear"_s, clearAction);
 ```
 
 Here, our `clearAction` [QAction](https://doc.qt.io/qt-6/qaction.html) is added to the collection and given a name of `clear`. This name (clear) is used by the [KXmlGui](docs:kxmlgui;kxmlgui-index.html) framework to refer to the action, so it is used internally and will not be localized.
