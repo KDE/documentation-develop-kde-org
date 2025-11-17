@@ -27,12 +27,7 @@ KDE's Kiosk framework is controlled by entries in various configuration
 files. In this article I will discuss the layout of KDE's configuration
 files and how to edit them to enable Kiosk's features. I will also
 discuss the various aspects of the desktop environment that can be
-customized and/or locked using the Kiosk framework. Once the reader
-understands how the Kiosk framework actually works through KDE's
-configuration files, we will discuss the Kiosk Admin Tool for those that
-prefer a GUI interface. This tool also allows administrators to more
-easily set-up Kiosk profiles and assign them system wide, per-user or
-per-group.
+customized and/or locked using the Kiosk framework.
 
 ## KDE's Configuration File Structure and Hierarchy
 
