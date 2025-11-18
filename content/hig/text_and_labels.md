@@ -75,19 +75,30 @@ Phrase longer text impersonally. Avoid the word “you” in sentences that inst
 
 
 ## Word ordering and length
-Front-load the most important words and minimize total length. Anything longer than “Configure Keyboard Shortcuts” in an interactive user interface element is too long.
+Front-load the most important words and minimize total length. Anything longer than “Configure Keyboard Shortcuts” in an interactive control is too long.
 
-A strategy for minimizing length is to omit the topic when the context makes it clear:
+For multi-sentence text, try to limit line length to 85 characters or less, which improves readability. This generally works out to about 450px. However if this would cause excessive whitespace in wide windows, consider changing the layout to move elements to the right of the text area, or even move the long text into a [Kirigami.ContextualHelpButton](https://api.kde.org/qml-org-kde-kirigami-contextualhelpbutton.html) or [KWidgetsAddons::KContextualHelpButton](https://api.kde.org/kcontextualhelpbutton.html), which enforces this length internally.
+
+A strategy for minimizing length is to omit the subject when the context makes it clear:
 
 {{< figure src="/hig/text-short-button-label-with-nearby-context.png" class="text-center" caption="Nearby “Users” title provides context and makes it obvious what new thing will be added." width="476px">}}
-
-When shortening a button's text in this way, always set `Accessible.name` to the full text including the topic, since blind people won't be able to see the context visually.
 
 **Bad:** Re-Assign Key Binding to this Action
 
 **Good:** Re-Assign Shortcut
 
-For multi-sentence text, try to limit line length to 85 characters or less, which improves readability. This generally works out to about 450px. However if this would cause excessive whitespace in wide windows, consider changing the layout to move elements to the right of the text area, or even move the long text into a [Kirigami.ContextualHelpButton](https://api.kde.org/qml-org-kde-kirigami-contextualhelpbutton.html) or [KWidgetsAddons::KContextualHelpButton](https://api.kde.org/kcontextualhelpbutton.html), which enforces this length internally.
+Another strategy is to relocate the verb to the beginning of a shared intoductory label if if would lead to shorter labels, less repetition, or a more natural formulation:
+
+{{< compare >}}
+{{< do src="/hig/multiple-checkboxes-good.png" >}}
+Unique checkbox text, with the common part extracted into the introductory label
+{{< /do >}}
+{{< dont src="/hig/multiple-checkboxes-bad.png" >}}
+Leading text repeated
+{{< /dont >}}
+{{< /compare >}}
+
+When shortening an interactive control’s label like this, always set `Accessible.name` to the full text including the verb and subject, since screen reader users won’t be able to see the context. Don’t do this for a static label.
 
 
 ## Acronyms
