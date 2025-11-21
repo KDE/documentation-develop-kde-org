@@ -29,16 +29,28 @@ The [Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html), [ToolButt
 - Use a RoundButton when a button needs to be overlaid in a “floating” position above a content view, especially an image view. This kind of button never has text, so choose an icon that [conveys the button's action perfectly](../icons/#icons-only-buttons), with no ambiguity.
 - For all other cases, use a Button.
 
-
-## Choosing between 2 obvious states
-The [Switch](https://doc.qt.io/qt-6/qml-qtquick-controls-switch.html) and [CheckBox](https://doc.qt.io/qt-6/qml-qtquick-controls-checkbox.html) controls are both used for two-state settings where both states are obvious without each one needing its own textual label.
-
-{{< figure src="/hig/checkboxes-with-obvious-opposite-states.png" class="text-center" caption="If you prepended the word “don't” to each CheckBox's label, they would still make sense." width="500px">}}
-
-Use a Switch for “Instant apply” controls that take effect immediately; otherwise, use a CheckBox.
+Follow the [standard labeling guidelines](../text_and_labels/#mood-and-tone) for buttons with visible text.
 
 
-## Choosing between 2 or more non-obvious states
+## Choosing between 2 obvious states or settings
+The [Switch](https://doc.qt.io/qt-6/qml-qtquick-controls-switch.html) and [CheckBox](https://doc.qt.io/qt-6/qml-qtquick-controls-checkbox.html) controls are both used for two-state settings where both states are obvious with a single label.
+
+Don’t change the label or icon when the state changes, and follow the [standard labeling guidelines](../text_and_labels/#mood-and-tone).
+
+Use a Switch for “instant apply” controls that take effect immediately; otherwise, use a CheckBox.
+
+{{< figure src="/hig/switch-with-obvious-opposite-state.png" class="text-center" caption="Switches take effect the moment they're clicked." width="500px">}}
+
+{{< figure src="/hig/checkboxes-with-obvious-opposite-states.png" class="text-center" caption="CheckBoxes only take effect when the user clicks “OK” or “Apply”." width="600px">}}
+
+Avoid making buttons checkable (by setting their `checkable` property to `true`), as their checkability isn’t obvious when unchecked (or even when checked, depending on the theme)
+
+If the surrounding context nonetheless dictates that a checkable button is the right control, treat it as a checkbox that happens to look like a button, applying the above guidelines.
+
+Alternatively, use a normal non-checkable button with text indicating what will happen when it’s pressed, and change the text and icon when the state changes. When doing so, follow the standard guidelines for [labels](../text_and_labels/#mood-and-tone) and [icons](../icons/).
+
+
+## Choosing between non-obvious states or settings
 The [Radio Button](https://doc.qt.io/qt-6/qml-qtquick-controls2-radiobutton.html) and [ComboBox](https://doc.qt.io/qt-6/qml-qtquick-controls-combobox.html) controls are both used to present a set of labeled, mutually-exclusive options.
 
 {{< figure src="/hig/radio-buttons-with-non-obvious-opposite-states.png" class="text-center" caption="Each option's opposite state is not obvious without explanation, so Radio Buttons are used." width="350px">}}
