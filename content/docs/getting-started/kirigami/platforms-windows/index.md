@@ -99,11 +99,11 @@ include(ECMFindQmlModule)
 
 The first thing that is needed to make the application use Breeze icons is to include KIconThemes in your project.
 
-Some CMake commands are needed to bundle your application icon with the app.
+After this, some CMake commands are needed to bundle your application icon with the app.
 
 ### KIconThemes
 
-This can be done by:
+This can be done with the following three steps:
 
 * Adding it as a dependency in Craft:
 
@@ -176,7 +176,7 @@ When the application icon is installed on Linux, a PNG icon such as `48-apps-mya
 
 Once the icon is installed in this way, in QML code, it can be called simply with `myapp` or `org.kde.myapp`, as would be called from `QIcon::fromTheme()`. This can be used with any QML control that has an `icon.name` property.
 
-Windows has no such standard directory, and installing the icon has no effect; it has to be bundled with the application. To do so, the PNG can be sent to its own installation directory `ecm_add_app_icon()` and a PNG or SVG file can be embedded into the app as a Qt resource file in `ecm_add_qml_module()` or `ecm_target_qml_sources()`.
+Windows has no such standard directory, and installing the icon has no effect; it has to be bundled with the application. To do so, the PNG can be sent to its own installation directory using `ecm_add_app_icon()` and a PNG or SVG file can be embedded into the app as a Qt resource file in `ecm_add_qml_module()` or `ecm_target_qml_sources()`.
 
 The PNG application icon is installed with:
 
@@ -193,9 +193,9 @@ ecm_target_qml_sources(myapp SOURCES Main.qml RESOURCES ../icons/org.kde.myapp.s
 
 This will make the application icon available as a Qt resource under `qrc:/qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any QML control that has an `icon.source` property.
 
-The RESOURCES path depends on the place where the icons are installed. Traditionally, an `icons/` folder is created at the root of the project for storing all icons, as they don't really count as source files.
+The `RESOURCES` path depends on the place where the icons are installed. Traditionally, an `icons/` folder is created at the root of the project for storing all icons, as they don't really count as source files.
 
-After the icons are installed (for Linux) and bundled (for Windows and Android), you can set it in code. In QML code, for compatibility with both Windows and Android, you should use the bundled icon; in C++ code, notably when setting the window icon, you can use the theme icon by default and the bundled icon as a fallback for `QGuiApplication::setWindowIcon()`:
+After the icons are installed (for Linux) and bundled (for Windows and Android), you can set it in code. In QML code, for compatibility with both Windows and Android, you should use the bundled icon; in C++ code, notably when setting the window icon, you can use the theme icon by default and the bundled icon as a fallback with `QIcon::fromTheme()` in the call to `QGuiApplication::setWindowIcon()`:
 
 ```c++
 QGuiApplication::setWindowIcon(QIcon::fromTheme("org.kde.myapp", QIcon(":/qt/qml/org/kde/myapp/org.kde.myapp.svg")));
@@ -205,11 +205,11 @@ QGuiApplication::setWindowIcon(QIcon::fromTheme("org.kde.myapp", QIcon(":/qt/qml
 
 While Windows does not have a standard directory where to install icons from an icon theme, it is possible to bundle the necessary Breeze icons together with your Windows application.
 
-This is performed by Craft automatically when kiconthemes is correctly set up for the project and the breeze-icons are included as a dependency for your project.
+This is performed by Craft automatically when KIconThemes is correctly set up for the project and Breeze icons are included as a dependency in your project.
 
 To set up KIconThemes, see the above section [KIconThemes](#kiconthemes).
 
-To add breeze-icons as a dependency for your project, add this to your Craft blueprint:
+To add Breeze icons as a dependency for your project, add this to your Craft blueprint:
 
 ```python
 def setDependencies(self):
