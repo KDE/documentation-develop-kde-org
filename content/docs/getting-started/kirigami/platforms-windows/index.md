@@ -8,7 +8,7 @@ description: >
 
 ## Introduction
 
-Qt has great Windows support, and so applications making use of Qt and KDE's extra-cmake-modules will not require many modifications to work properly on Windows.
+Qt has great Windows support, and so applications making use of Qt and KDE's [extra-cmake-modules](https://api.kde.org/ecm/) will not require many modifications to work properly on Windows.
 
 Three things are needed:
 
@@ -34,9 +34,9 @@ The Kirigami tutorial should already be mostly compliant with Windows, but the s
 
 The two modifications that should be done to ensure the Breeze style is used is to set the QStyle to `breeze` and to set the Qt Quick Controls style to `org.kde.desktop`.
 
-A QStyle is what controls the majority of the appearance of a QtWidgets application. This is needed in our QtQuick application because we initialize the application with `QApplication` (traditionally used with QtWidgets).
+A [QStyle](https://doc.qt.io/qt-6/qstyle.html) is what controls the majority of the appearance of a QtWidgets application. This is needed in our QtQuick application because we initialize the application with [QApplication](https://doc.qt.io/qt-6/qapplication.html) (traditionally used with QtWidgets).
 
-A Qt Quick Controls style on the other hand controls the majority of the appearance of a QtQuick application. This affects how QML controls will look like. KDE's `org.kde.desktop` style (otherwise known as `qqc2-desktop-style`) is special and attempts to remove duplication by deriving styling elements from the application's QStyle (hence why a QApplication is used). This way, QtWidgets and QtQuick applications can mostly look the same and reuse style components.
+A [Qt Quick Controls style](https://doc.qt.io/qt-6/qtquickcontrols-styles.html) on the other hand controls the majority of the appearance of a QtQuick application. This affects how QML controls will look like. KDE's `org.kde.desktop` style (otherwise known as [qqc2-desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)) is special and attempts to remove duplication by deriving styling elements from the application's QStyle (hence why a QApplication is used). This way, QtWidgets and QtQuick applications can mostly look the same and reuse style components.
 
 QtQuick / Kirigami applications need to set both in C++ code. To set the QStyle, it needs to be added in two places.
 
@@ -97,7 +97,7 @@ include(ECMFindQmlModule)
 
 ## Shipping icons {#icons}
 
-The first thing that is needed to make the application use Breeze icons is to include KIconThemes in your project.
+The first thing that is needed to make the application use Breeze icons is to include [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) in your project.
 
 After this, some CMake commands are needed to bundle your application icon with the app.
 
@@ -147,7 +147,7 @@ KIconThemes needs to be initialized before the application.
 
 ### Application icon
 
-If your application has an icon, it needs to be added to your project both as a QML resource and as a part of icon installation.
+If your application has an icon, it needs to be added to your project both as a [QML resource](https://doc.qt.io/qt-6/resources.html) and as a part of icon installation.
 
 Ordinarily on Linux the application icon can simply be installed to the correct directory, and the icon will be fetched by the application when needed. Usually the application icon consists of a primary SVG icon, paired with multiple PNG icon sizes.
 
@@ -174,7 +174,9 @@ ecm_install_icons(ICONS
 
 When the application icon is installed on Linux, a PNG icon such as `48-apps-myapp.png` goes to `${INSTALL_PREFIX}/share/icons/hicolor/48x48/apps/myapp.png`, and an SVG icon goes to `${INSTALL_PREFIX}/share/icons/hicolor/scalable/apps/org.kde.myapp.svg`, where `${INSTALL_PREFIX}` usually stands for `/usr`, `/usr/local` or `~/.local`. Note how in the PNGs' case the icon name translates into the path it will have in the filesystem.
 
-Once the icon is installed in this way, in QML code, it can be called simply with `myapp` or `org.kde.myapp`, as would be called from `QIcon::fromTheme()`. This can be used with any QML control that has an `icon.name` property.
+You can read more about installing files in [Building KDE software manually: The install step](/docs/getting-started/building/cmake-build/#install).
+
+Once the icon is installed in this way, in QML code, it can be called simply with `myapp` or `org.kde.myapp`, as would be called from [QIcon::fromTheme()](doc.qt.io/qt-6/qicon.html#fromTheme). This can be used with any QML control that has an [icon.name](https://doc.qt.io/qt-6/qtquickcontrols-icons.html) property.
 
 Windows has no such standard directory, and installing the icon has no effect; it has to be bundled with the application. To do so, the PNG can be sent to its own installation directory using `ecm_add_app_icon()` and a PNG or SVG file can be embedded into the app as a Qt resource file in `ecm_add_qml_module()` or `ecm_target_qml_sources()`.
 
@@ -191,11 +193,11 @@ ecm_add_qml_module(myapp URI org.kde.myapp)
 ecm_target_qml_sources(myapp SOURCES Main.qml RESOURCES ../icons/org.kde.myapp.svg)
 ```
 
-This will make the application icon available as a Qt resource under `qrc:/qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any QML control that has an `icon.source` property.
+This will make the application icon available as a Qt resource under `qrc:/qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any QML control that has an [icon.source](https://doc.qt.io/qt-6/qtquickcontrols-icons.html) property.
 
 The `RESOURCES` path depends on the place where the icons are installed. Traditionally, an `icons/` folder is created at the root of the project for storing all icons, as they don't really count as source files.
 
-After the icons are installed (for Linux) and bundled (for Windows and Android), you can set it in code. In QML code, for compatibility with both Windows and Android, you should use the bundled icon; in C++ code, notably when setting the window icon, you can use the theme icon by default and the bundled icon as a fallback with `QIcon::fromTheme()` in the call to `QGuiApplication::setWindowIcon()`:
+After the icons are installed (for Linux) and bundled (for Windows and Android), you can set it in code. In QML code, for compatibility with both Windows and Android, you should use the bundled icon; in C++ code, notably when setting the window icon, you can use the theme icon by default and the bundled icon as a fallback with [QIcon::fromTheme()](https://doc.qt.io/qt-6/qicon.html#fromTheme) in the call to [QGuiApplication::setWindowIcon()](https://doc.qt.io/qt-6/qguiapplication.html#windowIcon-prop):
 
 ```c++
 QGuiApplication::setWindowIcon(QIcon::fromTheme("org.kde.myapp", QIcon(":/qt/qml/org/kde/myapp/org.kde.myapp.svg")));
