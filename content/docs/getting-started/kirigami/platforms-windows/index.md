@@ -195,7 +195,7 @@ ecm_target_qml_sources(myapp SOURCES Main.qml RESOURCES ../icons/org.kde.myapp.s
 
 This will make the application icon available as a Qt resource under `qrc:/qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any QML control that has an [icon.source](https://doc.qt.io/qt-6/qtquickcontrols-icons.html) property.
 
-The `RESOURCES` path depends on the place where the icons are installed. Traditionally, an `icons/` folder is created at the root of the project for storing all icons, as they don't really count as source files.
+The `RESOURCES` path depends on the place where the icons are located. Traditionally, an `icons/` folder is created at the root of the project for storing all icons, as they don't really count as source files.
 
 After the icons are installed (for Linux) and bundled (for Windows and Android), you can set it in code. In QML code, for compatibility with both Windows and Android, you should use the bundled icon; in C++ code, notably when setting the window icon, you can use the theme icon by default and the bundled icon as a fallback with [QIcon::fromTheme()](https://doc.qt.io/qt-6/qicon.html#fromTheme) in the call to [QGuiApplication::setWindowIcon()](https://doc.qt.io/qt-6/qguiapplication.html#windowIcon-prop):
 
