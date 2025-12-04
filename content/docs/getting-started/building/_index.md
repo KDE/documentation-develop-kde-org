@@ -1,7 +1,7 @@
 ---
 title: "Building KDE software"
 weight: 1
-layout: home
+layout: frontpage
 groups:
   - name: "Finding assistance"
     key: "help"

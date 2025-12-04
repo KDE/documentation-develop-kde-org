@@ -1,7 +1,7 @@
 ---
 title: Python with Kirigami
 weight: 4
-layout: home
+layout: frontpage
 groups:
   - name: "Introduction"
     key: "introduction"

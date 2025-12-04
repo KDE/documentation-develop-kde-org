@@ -1,7 +1,7 @@
 ---
 title: Rust with Kirigami
 weight: 5
-layout: home
+layout: frontpage
 groups:
   - name: "Introduction"
     key: "introduction"

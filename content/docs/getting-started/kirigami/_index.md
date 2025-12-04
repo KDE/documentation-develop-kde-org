@@ -2,7 +2,7 @@
 title: "Getting started with Kirigami"
 linkTitle: "Kirigami"
 weight: 2
-layout: home
+layout: frontpage
 groups:
   - name: "Setup"
     key: "setup"
