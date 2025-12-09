@@ -71,15 +71,15 @@ KDE has a custom tool to easily install most of its libraries and programs: **Cr
 
 While Craft is also available for Linux and FreeBSD, its intended use is only for AppImages and packaging.
 
-You will need to follow the [setup instructions for Craft](https://community.kde.org/Craft). By the end of the setup, you should have run an environment setup file (`craftenv.ps1` or `craftenv.sh`), which will give you a terminal shell where you will be compiling your Kirigami application.
+You will need to follow the [setup instructions for Craft](https://community.kde.org/Craft). By the end of the setup, you should have run an environment setup file (`craftenv.ps1` on windows, or `craftenv.sh` on all other platforms), which will give you a terminal shell where you will be compiling your Kirigami application.
 
-After that, you may simply run the following on a terminal:
+After that, you can run the following on a terminal:
 
 ```bash
 craft kirigami kcoreaddons ki18n breeze kiconthemes qqc2-desktop-style
 ```
 
-This will take a long while to finish on first run. If you close your terminal, you can simply run the environment setup file again to compile your app.
+This will take a while to finish on first run. If you close your terminal, you can run the environment setup file to prepare your terminal again.
 
 ## Project structure
 
