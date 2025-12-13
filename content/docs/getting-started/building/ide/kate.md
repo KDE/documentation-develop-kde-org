@@ -101,6 +101,37 @@ Most of these options should show up on the Kate toolbar.
 
 #### Without the ".kateproject" file
 
-If we do not have a ".kateproject" file. Then:
-* Build. kate main menu > Build > Select Target... > Target Set > Working Directory should be "~/kde/build/kcalc" > OK button. "Build Output" tool view > "Output" is shown. Change to tab "Target Settings" from tool view "Build Output" > double click on cell "Dir:" > select "~/kde/build/kcalc", press Enter. kate main menu > Build > Build Default Target. 
-* Debugger. kate main menu > Debug > Targets > Target 1. kate main menu > View > Tool Views > Show Debug View > Settings tab > Executable > select "~/kde/build/kcalc/bin/kcalc". Click on source code line, from kate main menu > Debug > Toggle Breakpoint. kate main menu > Debug > Start Debugging. kate main menu > Debug > Continue/ Step Over/ Step In/ Step Out.
+If we do not have a `.kateproject` file:
+
+* **Build**
+  1. Open **Kate**
+  2. Go to **Build → Select Target… → Target Set**
+  3. Set **Working Directory** to:
+     ```text
+     ~/kde/build/kcalc
+     ```
+  4. Click **OK**
+  5. Open **Build Output** tool view
+  6. Switch to the **Target Settings** tab
+  7. Double-click the **Dir:** cell and set it to:
+     ```text
+     ~/kde/build/kcalc
+     ```
+  8. Press **Enter**
+  9. Select **Build → Build Default Target**
+
+* **Debugger**
+  1. Go to **Debug → Targets → Target 1**
+  2. Open **View → Tool Views → Show Debug View**
+  3. In the **Settings** tab, set **Executable** to:
+     ```text
+     ~/kde/build/kcalc/bin/kcalc
+     ```
+  4. Click a source code line
+  5. Select **Debug → Toggle Breakpoint**
+  6. Start debugging via **Debug → Start Debugging**
+  7. Use the following controls as needed:
+     - **Continue**
+     - **Step Over**
+     - **Step In**
+     - **Step Out**
