@@ -1,5 +1,5 @@
 ---
-title: Kirigami with Rust
+title: Setup with Rust
 weight: 3
 group: setup
 description: >

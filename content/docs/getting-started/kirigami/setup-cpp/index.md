@@ -1,5 +1,5 @@
 ---
-title: Kirigami with C++
+title: Setup with C++
 weight: 1
 group: setup
 description: >

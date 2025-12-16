@@ -1,5 +1,5 @@
 ---
-title: Kirigami with Python
+title: Setup with Python
 weight: 2
 group: setup
 description: >
