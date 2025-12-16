@@ -10,7 +10,7 @@ description: >
 
 Qt has great Android support, but applications require a substantial amount of modifications to work properly on Android.
 
-Many things are needed:
+A few things are needed:
 
 * [A Craft blueprint](#craft)
 * [Setting qqc2-breeze-style](#qqc2-breeze-style)
