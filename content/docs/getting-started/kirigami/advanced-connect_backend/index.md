@@ -32,26 +32,25 @@ kirigami-tutorial/
 
 ## Changes to existing code
 
+### CMakeLists.txt
+
+To make this and the following tutorials easier to follow, we will be disabling a feature that KDE applications using extra-cmake-modules (ECM) use by default that [optimizes string code](https://doc.qt.io/qt-6/qstring.html#QT_NO_CAST_FROM_ASCII). This allows us to bypass having to write [QStringLiteral()](https://doc.qt.io/qt-6/qstring.html#QStringLiteral) every time a string is introduced in our C++ code.
+
+In the root `CMakeLists.txt` file, add the following:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/CMakeLists-root.txt" highlight="cmake" emphasize="12" >}}
+
+{{< alert title="🚨 Do not do this in production" color="danger" >}}
+
+Disabling this CMake flag is done for didactic purposes *only*. Production code should use QStringLiteral() or the [Qt string literals namespace](https://doc.qt.io/qt-6/qt-literals-stringliterals.html) instead where possible.
+
+{{< /alert >}}
+
 ### src/components/backend.h
 
 First, create the header file that will have code exposed to QML, namely the `Backend` type:
 
-```cpp
-#pragma once
-
-#include <QObject>
-#include <qqmlintegration.h>
-
-class Backend : public QObject
-{
-    Q_OBJECT
-    QML_ELEMENT
-    QML_SINGLETON
-
-public:
-    explicit Backend(QObject *parent = nullptr);
-};
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/backend1.h" highlight="cpp" >}}
 
 There are two things needed to expose C++ code to QML, and one of them is simply using the [QML_ELEMENT](https://doc.qt.io/qt-6/qqmlintegration-h.html#QML_ELEMENT) macro, available in the `<QtQml/qqmlregistration.h>` header.
 
@@ -61,15 +60,7 @@ The backend will be created as a singleton, which means it will only be created 
 
 We can add our initial code for the constructor to `backend.cpp`:
 
-```cpp
-#include "backend.h"
-
-Backend::Backend(QObject *parent)
-    : QObject(parent)
-{
-
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/backend1.cpp" highlight="cpp" >}}
 
 ### src/components/ExposePage.qml
 
@@ -83,15 +74,7 @@ import org.kde.tutorial.components
 
 To start from a clean slate using the existent application code, create a new QML component that contains an empty page:
 
-```qml
-import org.kde.kirigami as Kirigami
-import org.kde.tutorial.components
-
-Kirigami.Page {
-    title: "Exposing to QML Tutorial"
-    // ...
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/ExposePage1.qml" highlight="qml" >}}
 
 ### src/Main.qml
 
@@ -99,54 +82,13 @@ To actually show the new page, let's create a menu option that [pushes the new p
 
 For this, we can use a new [Kirigami.Action](/docs/getting-started/kirigami/components-actions/) together with [Qt.createComponent()](https://doc.qt.io/qt-6/qtqml-javascript-dynamicobjectcreation.html) to generate the page on the fly:
 
-```qml
-globalDrawer: Kirigami.GlobalDrawer {
-    isMenu: true
-    actions: [
-        // emphasize this
-        Kirigami.Action {
-            text: i18n("Exposing to QML")
-            icon.name: "list-add-symbolic"
-            onTriggered: pageStack.push(Qt.createComponent("org.kde.tutorial.components", "ExposePage"))
-        },
-        Kirigami.Action {
-            text: i18n("Quit")
-            icon.name: "application-exit-symbolic"
-            shortcut: StandardKey.Quit
-            onTriggered: Qt.quit()
-        }
-    ]
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/Main.qml" highlight="qml" start=15 lines=16 emphasize="4-8" >}}
 
 ### src/components/CMakeLists.txt
 
 Lastly, add the newly created `backend.h`, `backend.cpp` and `ExposePage.qml` to CMake:
 
-```cmake
-add_library(kirigami-hello-components)
-
-ecm_add_qml_module(kirigami-hello-components
-    URI "org.kde.tutorial.components"
-    GENERATE_PLUGIN_SOURCE
-)
-
-ecm_target_qml_sources(kirigami-hello-components
-    SOURCES
-    AddDialog.qml
-    KountdownDelegate.qml
-    ExposePage.qml # Needs emphasize
-)
-
-target_sources(kirigami-hello-components
-    PRIVATE
-    backend.cpp backend.h # Needs emphasize
-)
-
-ecm_finalize_qml_module(kirigami-hello-components)
-
-install(TARGETS kirigami-hello-components ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/CMakeLists.txt" highlight="cmake" emphasize="12 17" >}}
 
 Adding the files to an existing QML module in CMake is the second part to exposing code to QML.
 
@@ -188,22 +130,15 @@ public:
 
 The first function is the getter, the second the setter, and the third a signal that is emitted when the property is changed. They match the READ, WRITE and NOTIFY parts of the above `Q_PROPERTY`.
 
+The result should look like the following:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/backend2.h" highlight="cpp" emphasize="11 14-16 18">}}
+
 ### src/components/backend.cpp
 
 The signal doesn't need any implementation in the `backend.cpp` file, since it doesn't do much more than being emitted, but the getter and setter need to be implemented similar to the following:
 
-```C++
-QString Backend::introductionText() const
-{
-    return m_introductionText;
-}
-
-void Backend::setIntroductionText(const QString &introductionText)
-{
-    m_introductionText = introductionText;
-    Q_EMIT introductionTextChanged();
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/backend2.cpp" highlight="cpp" emphasize="7-10 12-16">}}
 
 As you can see, when the setter is called, the signal will be emitted, and inform the ui and backend of the change.
 
@@ -213,22 +148,91 @@ To display the text, add a [Kirigami.Heading](https://api.kde.org/qml-org-kde-ki
 
 The resulting code in that part of the file should look like this:
 
-```qml
-import org.kde.kirigami as Kirigami
-import org.kde.tutorial.components
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/ExposePage2.qml" highlight="qml" >}}
 
-Kirigami.Page {
-    title: "Exposing to QML Tutorial"
-    Kirigami.Heading {
-        anchors.centerIn: parent
-        text: Backend.introductionText
-    }
-}
-```
+## Our app so far
+
+Existing code:
+
+<details>
+<summary>src/main.cpp</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/main.cpp" highlight="cpp" >}}
+
+</details>
+
+<details>
+<summary>src/CMakeLists.txt</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/CMakeLists.txt" highlight="cmake" >}}
+
+</details>
+
+<details>
+<summary>src/components/KountdownDelegate.qml</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/KountdownDelegate.qml" highlight="qml" >}}
+
+</details>
+
+<details>
+<summary>src/components/AddDialog.qml</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/AddDialog.qml" highlight="qml" >}}
+
+</details>
+
+<br>
+
+Code written/modified in this page:
+
+<details>
+<summary>CMakeLists.txt</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/CMakeLists-root.txt" highlight="cmake" emphasize="12" >}}
+
+</details>
+
+<details>
+<summary>src/Main.qml</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/Main.qml" highlight="qml" >}}
+
+</details>
+
+<details>
+<summary>src/components/CMakeLists.txt</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/CMakeLists.txt" highlight="cmake" >}}
+
+</details>
+
+<details>
+<summary>src/components/backend.h</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/backend2.h" highlight="cpp" >}}
+
+</details>
+
+<details>
+<summary>src/components/backend.cpp</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/backend2.cpp" highlight="cpp" >}}
+
+</details>
+
+<details>
+<summary>src/components/ExposePage.qml</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/ExposePage2.qml" highlight="qml" >}}
+
+</details>
+
+<br>
 
 Now [compile](/docs/getting-started/kirigami/setup-cpp/#running-the-application) and start your program again. You'll see that the new page has a centered Heading saying "Hello World!".
 
-{{< figure class="text-center" src="/docs/getting-started/kirigami/advanced-connect_backend/result.webp" >}}
+{{< figure class="text-center" src="/docs/getting-started/kirigami/advanced-connect_backend/result1.webp" >}}
 
 Congratulations, you learned:
 * How to register backend types to QML
