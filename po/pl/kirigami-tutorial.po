@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-13 01:58+0000\n"
+"POT-Creation-Date: 2025-12-17 01:55+0000\n"
 "PO-Revision-Date: 2022-09-28 20:47+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -28,6 +28,7 @@ msgid "Setup"
 msgstr ""
 
 #: content/docs/getting-started/kirigami/_index.md:0
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:9
 msgid "Introduction"
 msgstr "Wprowadzenie"
 
@@ -54,10 +55,14 @@ msgid "Kirigami Addons"
 msgstr "Jednostka Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
+msgid "Platform Support"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
 msgstr "Nauka tworzenia swoich pierwszych aplikacji przy użyciu Kirigami\n"
 
-#: content/docs/getting-started/kirigami/_index.md:28
+#: content/docs/getting-started/kirigami/_index.md:30
 #, fuzzy
 #| msgid ""
 #| "This tutorial will guide you through the process of creating your own "
@@ -85,7 +90,7 @@ msgstr ""
 "naciśnięcia ekranu i dostosuje się do mniejszego pionowego ekranu. I tak "
 "dalej."
 
-#: content/docs/getting-started/kirigami/_index.md:36
+#: content/docs/getting-started/kirigami/_index.md:38
 msgid ""
 "Kirigami is built on top of the QML language and Qt Quick Controls 2 "
 "components provided by the Qt project. QML has built in support for touch "
@@ -101,7 +106,7 @@ msgstr ""
 "możemy wykorzystywać w interfejsach naszych aplikacji. Kirigami jest "
 "zestawem składników Qt Quick stworzonym do tworzenia całościowych aplikacji."
 
-#: content/docs/getting-started/kirigami/_index.md:42
+#: content/docs/getting-started/kirigami/_index.md:44
 #, fuzzy
 #| msgid ""
 #| "While you will use QML to create the visual part of your application, the "
@@ -122,14 +127,14 @@ msgstr ""
 "względu na wydajność. Dowiemy się także jak połączyć część logiczną naszego "
 "programu z jego częścią obsługi w poniższym samouczku."
 
-#: content/docs/getting-started/kirigami/_index.md:47
+#: content/docs/getting-started/kirigami/_index.md:49
 msgid ""
 "First, you will need to set up a new project in a language of your choice. "
 "The introduction will show you how to make a small, but functional Kirigami "
 "application."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/_index.md:49
+#: content/docs/getting-started/kirigami/_index.md:51
 msgid ""
 "You will be shown the basics of how to deal with colors and text in your "
 "application, and you will get acquainted with most QML components. Next, you "
@@ -138,13 +143,13 @@ msgid ""
 "only QML code."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/_index.md:51
+#: content/docs/getting-started/kirigami/_index.md:53
 msgid ""
 "You will get a deep dive into more advanced topics that concern manipulating "
 "the data that will be shown in your program."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/_index.md:53
+#: content/docs/getting-started/kirigami/_index.md:55
 msgid ""
 "Lastly, you will be presented with Kirigami Addons, a series of quality-of-"
 "life components that you can use to, among other things, design the Settings "
@@ -1257,6 +1262,9 @@ msgstr "Kod wynikowy w tej części pliku powinien wyglądać następująco:"
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:150
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:185
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:214
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:134
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:140
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:218
 msgid "..."
 msgstr "..."
 
@@ -8498,11 +8506,409 @@ msgid ""
 "parts, making things much more manageable."
 msgstr ""
 
-#: content/docs/getting-started/kirigami/setup-cpp/index.md:0
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:0
+msgid "Windows Setup"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:0
+msgid "Preparing your C++ application for Windows"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:11
+msgid ""
+"Qt has great Windows support, and so applications making use of Qt and KDE's "
+"[extra-cmake-modules](https://api.kde.org/ecm/) will not require many "
+"modifications to work properly on Windows."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:13
+msgid "Three things are needed:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:15
+msgid "[A Craft blueprint](#craft)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:16
+msgid "[Setting the Breeze style](#breeze)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:17
+msgid "[Icons bundled with the app](#icons)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:19
+msgid ""
+"The Craft blueprint is needed to bundle all the dependencies together with "
+"the application to generate an executable."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:21
+msgid ""
+"The preprocessor directive `#ifdef Q_OS_WIN` can be used to write code that "
+"will only apply when the application is built on Windows. This is needed at "
+"least once for forcing the Breeze style to the application so that it looks "
+"good on Windows, but depending on the application it might require more."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:23
+msgid ""
+"Bundling the necessary icons for the app to work on Windows is the most "
+"complex step, but both KDE's extra-cmake-modules (ECM) and Qt provide means "
+"to make this job easier."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:25
+msgid "Craft blueprint"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:27
+msgid ""
+"To get started you must first follow [Building KDE software on Windows with "
+"Craft](/docs/getting-started/building/craft) so that you get a functional "
+"Craft blueprint and can at least build your application on Windows."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:29
+msgid ""
+"Once you are able to build the project you will get compilation and runtime "
+"errors that will help you fix any Windows compatibility issues."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:31
+msgid "Breeze style"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:33
+msgid ""
+"The Kirigami tutorial should already be mostly compliant with Windows, but "
+"the steps needed to achieve this need to be made explicit."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:35
+msgid ""
+"The two modifications that should be done to ensure the Breeze style is used "
+"is to set the QStyle to `breeze` and to set the Qt Quick Controls style to "
+"`org.kde.desktop`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:37
+msgid ""
+"A [QStyle](https://doc.qt.io/qt-6/qstyle.html) is what controls the majority "
+"of the appearance of a QtWidgets application. This is needed in our QtQuick "
+"application because we initialize the application with [QApplication]"
+"(https://doc.qt.io/qt-6/qapplication.html) (traditionally used with "
+"QtWidgets)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:39
+msgid ""
+"A [Qt Quick Controls style](https://doc.qt.io/qt-6/qtquickcontrols-styles."
+"html) on the other hand controls the majority of the appearance of a QtQuick "
+"application. This affects how QML controls will look like. KDE's `org.kde."
+"desktop` style (otherwise known as [qqc2-desktop-style](https://invent.kde."
+"org/frameworks/qqc2-desktop-style)) is special and attempts to remove "
+"duplication by deriving styling elements from the application's QStyle "
+"(hence why a QApplication is used). This way, QtWidgets and QtQuick "
+"applications can mostly look the same and reuse style components."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:41
+msgid ""
+"QtQuick / Kirigami applications need to set both in C++ code. To set the "
+"QStyle, it needs to be added in two places."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:43
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:66
+msgid "In Craft:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:50
+msgid "And in C++:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:56
+msgid ""
+"This is what is used in the Kirigami tutorial. You may otherwise load the "
+"Breeze style only on Windows where this is most relevant using an ifdef:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:64
+msgid "The Qt Quick Controls style needs to be added in three places."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:73
+msgid "In C++, where it needs to be conditional:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:82
+msgid "And optionally in CMake, in one of two ways:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:90
+msgid ""
+"Since it is a runtime dependency, it is not required to be set in CMake "
+"which is used at compile time. However, this can signal to yourself and to "
+"others whether the environment is correct and will be able to run the "
+"resulting application, allowing you to find missing packages or "
+"misconfigurations more easily."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:92
+msgid ""
+"The command `find_package()` specifically searches for the CMake "
+"configuration files for `qqc2-desktop-style`, whereas `ecm_find_qmlmodule()` "
+"is less strict and only searches for the QML module. The latter requires "
+"that you include ECMFindQmlModule:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:98
+msgid "Shipping icons"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:100
+msgid ""
+"The first thing that is needed to make the application use Breeze icons is "
+"to include [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) in "
+"your project."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:102
+msgid ""
+"After this, some CMake commands are needed to bundle your application icon "
+"with the app."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:104
+#, fuzzy
+#| msgid "Theme"
+msgid "KIconThemes"
+msgstr "Wygląd"
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:106
+msgid "This can be done with the following three steps:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:108
+msgid "Adding it as a dependency in Craft:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:115
+msgid "Adding it as a dependency in CMake:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:129
+msgid "Using it in C++ code, in the `main.cpp` file:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:144
+msgid ""
+"Note that although the project name and CMake call uses plural (KIconThemes, "
+"KF6IconThemes), the C++ call uses singular (KIconTheme)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:146
+msgid "KIconThemes needs to be initialized before the application."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:148
+msgid "Application icon"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:150
+msgid ""
+"If your application has an icon, it needs to be added to your project both "
+"as a [QML resource](https://doc.qt.io/qt-6/resources.html) and as a part of "
+"icon installation."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:152
+msgid ""
+"Ordinarily on Linux the application icon can simply be installed to the "
+"correct directory, and the icon will be fetched by the application when "
+"needed. Usually the application icon consists of a primary SVG icon, paired "
+"with multiple PNG icon sizes."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:154
+msgid "Installing the SVG icon is done like this in CMake:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:160
+msgid "And installing the PNG icons is done like this:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:175
+msgid ""
+"When the application icon is installed on Linux, a PNG icon such as `48-apps-"
+"myapp.png` goes to `${INSTALL_PREFIX}/share/icons/hicolor/48x48/apps/myapp."
+"png`, and an SVG icon goes to `${INSTALL_PREFIX}/share/icons/hicolor/"
+"scalable/apps/org.kde.myapp.svg`, where `${INSTALL_PREFIX}` usually stands "
+"for `/usr`, `/usr/local` or `~/.local`. Note how in the PNGs' case the icon "
+"name translates into the path it will have in the filesystem."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:177
+msgid ""
+"You can read more about installing files in [Building KDE software manually: "
+"The install step](/docs/getting-started/building/cmake-build/#install)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:179
+msgid ""
+"Once the icon is installed in this way, in QML code, it can be called simply "
+"with `myapp` or `org.kde.myapp`, as would be called from [QIcon::fromTheme()]"
+"(doc.qt.io/qt-6/qicon.html#fromTheme). This can be used with any QML control "
+"that has an [icon.name](https://doc.qt.io/qt-6/qtquickcontrols-icons.html) "
+"property."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:181
+msgid ""
+"Windows has no such standard directory, and installing the icon has no "
+"effect; it has to be bundled with the application. To do so, the PNG can be "
+"sent to its own installation directory using `ecm_add_app_icon()` and a PNG "
+"or SVG file can be embedded into the app as a Qt resource file in "
+"`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:183
+#, fuzzy
+#| msgid "The application should look like this:"
+msgid "The PNG application icon is installed with:"
+msgstr "Aplikacja powinna wyglądać następująco:"
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:189
+msgid "And the main application icon is bundled as a Qt resource with:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:196
+msgid ""
+"This will make the application icon available as a Qt resource under `qrc:/"
+"qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any QML "
+"control that has an [icon.source](https://doc.qt.io/qt-6/qtquickcontrols-"
+"icons.html) property."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:198
+msgid ""
+"The `RESOURCES` path depends on the place where the icons are located. "
+"Traditionally, an `icons/` folder is created at the root of the project for "
+"storing all icons, as they don't really count as source files."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:200
+msgid ""
+"After the icons are installed (for Linux) and bundled (for Windows and "
+"Android), you can set it in code. In QML code, for compatibility with both "
+"Windows and Android, you should use the bundled icon; in C++ code, notably "
+"when setting the window icon, you can use the theme icon by default and the "
+"bundled icon as a fallback with [QIcon::fromTheme()](https://doc.qt.io/qt-6/"
+"qicon.html#fromTheme) in the call to [QGuiApplication::setWindowIcon()]"
+"(https://doc.qt.io/qt-6/qguiapplication.html#windowIcon-prop):"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:206
 #, fuzzy
 #| msgid "Kirigami Unit"
-msgid "Kirigami with C++"
+msgid "Kirigami icons"
 msgstr "Jednostka Kirigami"
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:208
+msgid ""
+"While Windows does not have a standard directory where to install icons from "
+"an icon theme, it is possible to bundle the necessary Breeze icons together "
+"with your Windows application."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:210
+msgid ""
+"This is performed by Craft automatically when KIconThemes is correctly set "
+"up for the project and Breeze icons are included as a dependency in your "
+"project."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:212
+msgid ""
+"To set up KIconThemes, see the above section [KIconThemes](#kiconthemes)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:214
+msgid ""
+"To add Breeze icons as a dependency for your project, add this to your Craft "
+"blueprint:"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:222
+msgid ""
+"This way, you won't need to manually bundle any Breeze icons into your "
+"application as a resource: you can just use a `QIcon::fromTheme()` name, "
+"such as `kde` or `application-exit-symbolic`."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:224
+msgid "Building"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:226
+msgid ""
+"To build your application on Windows, follow [Building KDE software on "
+"Windows with Craft: Building your own projects on Windows](/docs/getting-"
+"started/building/craft#custom-projects)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:228
+msgid "CI builds"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:230
+msgid ""
+"If the project has been properly configured to build on Windows and is using "
+"KDE infrastructure for its code hosting (KDE Invent), it is possible to "
+"configure Windows CI/CD jobs."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:232
+msgid ""
+"To do this, you will need to add the relevant CI templates for Windows with "
+"a `.gitlab-ci.yaml` file and list your dependencies in a `.kde-ci.yaml` file "
+"as mentioned in [Continuous Integration System](https://community.kde.org/"
+"Infrastructure/Continuous_Integration_System)."
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:234
+msgid "Troubleshooting"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:236
+msgid ""
+"If you have problems adapting your application to Windows, you can visit the "
+"following rooms on [Matrix](https://community.kde.org/Matrix):"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:238
+msgid "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:239
+msgid ""
+"[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
+"kde.org)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:240
+msgid ""
+"[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/platforms-windows/index.md:241
+msgid "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
+msgstr ""
+
+#: content/docs/getting-started/kirigami/setup-cpp/index.md:0
+msgid "Setup with C++"
+msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 #, fuzzy
@@ -9503,7 +9909,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
 #, fuzzy
 #| msgid "Kirigami Unit"
-msgid "Kirigami with Python"
+msgid "Setup with Python"
 msgstr "Jednostka Kirigami"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
@@ -9813,7 +10219,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
 #, fuzzy
 #| msgid "Kirigami Unit"
-msgid "Kirigami with Rust"
+msgid "Setup with Rust"
 msgstr "Jednostka Kirigami"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
@@ -10580,6 +10986,11 @@ msgid ""
 msgstr ""
 "Rozmiar czcionki [wyglądu](docs:kirigami2;Theme) Kirigami jest dostępny jako "
 "`Kirigami.Theme.defaultFont.pointSize` w twojej aplikacji."
+
+#, fuzzy
+#~| msgid "Kirigami Unit"
+#~ msgid "Kirigami with C++"
+#~ msgstr "Jednostka Kirigami"
 
 #~ msgid ""
 #~ "[KDE Apps page](https://apps.kde.org/en/discover)<br />[KDE Userbase page]"
@@ -11611,9 +12022,6 @@ msgstr ""
 #~ "adresem email kontaktu, ułożonym jako [kolumna](https://doc.qt.io/qt-5/"
 #~ "qml-qtquick-column.html) [etykiet](https://doc.qt.io/qt-5/qml-qtquick-"
 #~ "controls2-label.html)."
-
-#~ msgid "The application should look like this:"
-#~ msgstr "Aplikacja powinna wyglądać następująco:"
 
 #~ msgid "![Simple grid of cards](implementation.png)"
 #~ msgstr "![Prosta siatka kart](implementation.png)"
