@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-17 01:55+0000\n"
-"PO-Revision-Date: 2025-12-13 23:01+0200\n"
+"PO-Revision-Date: 2025-12-17 16:38+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -55,7 +55,7 @@ msgstr "Додатки Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Platform Support"
-msgstr ""
+msgstr "Підтримка платформ"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
@@ -8614,14 +8614,12 @@ msgstr ""
 "частинами, що зробить проєкт простішим у керуванні."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
-#, fuzzy
-#| msgid "Windows"
 msgid "Windows Setup"
-msgstr "Windows"
+msgstr "Робота у Windows"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
 msgid "Preparing your C++ application for Windows"
-msgstr ""
+msgstr "Приготування вашої програми на C++ до Windows"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:11
 msgid ""
@@ -8629,28 +8627,33 @@ msgid ""
 "[extra-cmake-modules](https://api.kde.org/ecm/) will not require many "
 "modifications to work properly on Windows."
 msgstr ""
+"У Qt передбачено чудову підтримку Windows, тому програми, що використовують "
+"Qt та модулі [extra-cmake-modules] (https://api.kde.org/ecm/) KDE, не "
+"потребуватимуть значних модифікацій для належної роботи у Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:13
 msgid "Three things are needed:"
-msgstr ""
+msgstr "Потрібно три речі:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:15
 msgid "[A Craft blueprint](#craft)"
-msgstr ""
+msgstr "[План Craft](#craft)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:16
 msgid "[Setting the Breeze style](#breeze)"
-msgstr ""
+msgstr "[Встановлення стилю Breeze](#breeze)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:17
 msgid "[Icons bundled with the app](#icons)"
-msgstr ""
+msgstr "[Піктограми, які пов'язано із програмою](#icons)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:19
 msgid ""
 "The Craft blueprint is needed to bundle all the dependencies together with "
 "the application to generate an executable."
 msgstr ""
+"План Craft потрібен для пов'язування усіх залежностей з програмою для "
+"створення виконуваного файла."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:21
 msgid ""
@@ -8659,6 +8662,11 @@ msgid ""
 "least once for forcing the Breeze style to the application so that it looks "
 "good on Windows, but depending on the application it might require more."
 msgstr ""
+"Директива препроцесора `#ifdef Q_OS_WIN` може бути використана для написання "
+"коду, який застосовуватиметься лише тоді, коли програма зібрана на Windows. "
+"Це потрібно принаймні один раз для примусового застосування стилю Breeze до "
+"програми, щоб вона добре виглядала на Windows, але залежно від програми може "
+"знадобитися більше разів."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:23
 msgid ""
@@ -8666,10 +8674,13 @@ msgid ""
 "complex step, but both KDE's extra-cmake-modules (ECM) and Qt provide means "
 "to make this job easier."
 msgstr ""
+"Дописування до пакета необхідних піктограм для роботи програми у Windows є "
+"найскладнішим кроком, але як модулі extra-cmake (ECM) KDE, так і Qt надають "
+"засоби для спрощення цієї роботи."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:25
 msgid "Craft blueprint"
-msgstr ""
+msgstr "План Craft"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:27
 msgid ""
@@ -8677,22 +8688,31 @@ msgid ""
 "Craft](/docs/getting-started/building/craft) so that you get a functional "
 "Craft blueprint and can at least build your application on Windows."
 msgstr ""
+"Для початку вам слід спочатку ознайомитися з інструкцією щодо [збирання "
+"програмного забезпечення KDE для Windows за допомогою Craft](/docs/getting-"
+"started/building/craft), щоб отримати функціональний план Craft і мати змогу "
+"принаймні зібрати свою програму для Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:29
 msgid ""
 "Once you are able to build the project you will get compilation and runtime "
 "errors that will help you fix any Windows compatibility issues."
 msgstr ""
+"Після того, як ви зможете спробувати зібрати проект, ви отримаєте "
+"повідомлення про помилки компіляції та виконання, які допоможуть вам "
+"виправити будь-які проблеми сумісності з Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:31
 msgid "Breeze style"
-msgstr ""
+msgstr "Стиль Breeze"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:33
 msgid ""
 "The Kirigami tutorial should already be mostly compliant with Windows, but "
 "the steps needed to achieve this need to be made explicit."
 msgstr ""
+"Підручник з Kirigami вже здебільшого сумісний з Windows, але кроки, "
+"необхідні для досягнення цієї мети, мають бути чітко описані."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:35
 msgid ""
@@ -8700,6 +8720,9 @@ msgid ""
 "is to set the QStyle to `breeze` and to set the Qt Quick Controls style to "
 "`org.kde.desktop`."
 msgstr ""
+"Дві зміни, які слід зробити, щоб забезпечити використання стилю Breeze, це "
+"встановити QStyle у значення `breeze` та встановити стиль швидкого керування "
+"Qt на `org.kde.desktop`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:37
 msgid ""
@@ -8790,10 +8813,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:104
-#, fuzzy
-#| msgid "Theme"
 msgid "KIconThemes"
-msgstr "Тема"
+msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:106
 msgid "This can be done with the following three steps:"
@@ -8822,10 +8843,8 @@ msgid "KIconThemes needs to be initialized before the application."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
-#, fuzzy
-#| msgid "Example Application"
 msgid "Application icon"
-msgstr "Приклад програми"
+msgstr "Піктограма програми"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:150
 msgid ""
@@ -8861,18 +8880,13 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:177
-#, fuzzy
-#| msgid ""
-#| "For more information about where KDE software is installed, see [Building "
-#| "KDE software manually: The install step](/docs/getting-started/building/"
-#| "cmake-build/#install)."
 msgid ""
 "You can read more about installing files in [Building KDE software manually: "
 "The install step](/docs/getting-started/building/cmake-build/#install)."
 msgstr ""
-"Щоб дізнатися більше про те, де встановлено програмне забезпечення KDE, див. "
-"[Збирання програмного забезпечення KDE вручну: крок встановлення](/docs/"
-"getting-started/building/cmake-build/#install)."
+"Дізнатися більше про встановлення файлів можна з підручника [Збирання "
+"програмного забезпечення KDE вручну: крок встановлення](/docs/getting-"
+"started/building/cmake-build/#install)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:179
 msgid ""
@@ -8893,10 +8907,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:183
-#, fuzzy
-#| msgid "The application should look like this:"
 msgid "The PNG application icon is installed with:"
-msgstr "Вікно програми має виглядати так:"
+msgstr "Піктограма програми PNG встановлюється за допомогою такого коду:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:189
 msgid "And the main application icon is bundled as a Qt resource with:"
@@ -8929,10 +8941,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:206
-#, fuzzy
-#| msgid "Kirigami Addons"
 msgid "Kirigami icons"
-msgstr "Додатки Kirigami"
+msgstr "Піктограми Kirigami"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:208
 msgid ""
@@ -8968,7 +8978,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:224
 msgid "Building"
-msgstr ""
+msgstr "Збирання"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:226
 msgid ""
@@ -8978,10 +8988,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:228
-#, fuzzy
-#| msgid "build.rs"
 msgid "CI builds"
-msgstr "build.rs"
+msgstr "Збирання у CI"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:230
 msgid ""
@@ -9000,7 +9008,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:234
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Усування проблем"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:236
 msgid ""
@@ -9986,10 +9994,8 @@ msgstr ""
 "середовищі із мінімальними зусиллями."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Python"
 msgid "Setup with Python"
-msgstr "Kirigami з Python"
+msgstr "Робота з Python"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
 msgid "Create your first Kirigami application with PySide\n"
@@ -10365,10 +10371,8 @@ msgid "After this, the application can be launched by running:"
 msgstr "Після цього програму можна буде запустити так:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Rust"
 msgid "Setup with Rust"
-msgstr "Kirigami з Rust"
+msgstr "Робота з Rust"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
 msgid "Create your first Kirigami application with Rust\n"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-17 01:55+0000\n"
-"PO-Revision-Date: 2025-12-13 13:00+0100\n"
+"PO-Revision-Date: 2025-12-17 15:28+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -59,7 +59,7 @@ msgstr "Complements del Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Platform Support"
-msgstr ""
+msgstr "Implementació de la plataforma"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
@@ -8866,14 +8866,12 @@ msgstr ""
 "dividit en parts separades, fent les coses molt més manejables."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
-#, fuzzy
-#| msgid "Windows"
 msgid "Windows Setup"
-msgstr "Windows"
+msgstr "Configuració al Windows"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
 msgid "Preparing your C++ application for Windows"
-msgstr ""
+msgstr "Preparant la vostra aplicació C++ per al Windows"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:11
 msgid ""
@@ -8881,29 +8879,35 @@ msgid ""
 "[extra-cmake-modules](https://api.kde.org/ecm/) will not require many "
 "modifications to work properly on Windows."
 msgstr ""
+"Les Qt tenen un suport gran del Windows, i per tant les aplicacions que fan "
+"ús dels [extra-cmake-modules](https://api.kde.org/ecm/) de les Qt i KDE no "
+"requeriran moltes modificacions per a funcionar correctament al Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:13
 msgid "Three things are needed:"
-msgstr ""
+msgstr "Són necessàries 3 coses:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:15
 msgid "[A Craft blueprint](#craft)"
-msgstr ""
+msgstr "[Un esquema de Craft](#craft)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:16
 msgid "[Setting the Breeze style](#breeze)"
-msgstr ""
+msgstr "[Configuració de l'estil Brisa](#breeze)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:17
 msgid "[Icons bundled with the app](#icons)"
-msgstr ""
+msgstr "[Icones empaquetades amb l'aplicació](#icons)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:19
 msgid ""
 "The Craft blueprint is needed to bundle all the dependencies together with "
 "the application to generate an executable."
 msgstr ""
+"L'esquema de Craft és necessari per a empaquetar totes les dependències "
+"juntament amb l'aplicació per a generar un executable."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:21
 msgid ""
 "The preprocessor directive `#ifdef Q_OS_WIN` can be used to write code that "
@@ -8911,6 +8915,11 @@ msgid ""
 "least once for forcing the Breeze style to the application so that it looks "
 "good on Windows, but depending on the application it might require more."
 msgstr ""
+"La directiva de preprocessador `#ifdef Q_OS_WIN` es pot utilitzar per a "
+"escriure codi que només s'aplicarà quan l'aplicació estigui construïda en el "
+"Windows. Això és necessari almenys una vegada per a forçar l'estil Brisa a "
+"l'aplicació de manera que es vegi bé en el Windows, però depenent de "
+"l'aplicació pot requerir més."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:23
 msgid ""
@@ -8918,10 +8927,13 @@ msgid ""
 "complex step, but both KDE's extra-cmake-modules (ECM) and Qt provide means "
 "to make this job easier."
 msgstr ""
+"Empaquetar les icones necessàries perquè l'aplicació funcioni en el Windows "
+"és el pas més complex, però tant els extra-cmake-modules (ECM) de KDE com "
+"les Qt proporcionen mitjans per a fer més fàcil aquesta feina."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:25
 msgid "Craft blueprint"
-msgstr ""
+msgstr "Esquema de Craft"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:27
 msgid ""
@@ -8929,29 +8941,42 @@ msgid ""
 "Craft](/docs/getting-started/building/craft) so that you get a functional "
 "Craft blueprint and can at least build your application on Windows."
 msgstr ""
+"Per a començar, primer heu de seguir [Construir el programari KDE al Windows "
+"amb Craft](/docs/getting-started/building/craft) perquè obtingueu un esquema "
+"de Craft funcional i almenys pugueu construir la vostra aplicació al Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:29
 msgid ""
 "Once you are able to build the project you will get compilation and runtime "
 "errors that will help you fix any Windows compatibility issues."
 msgstr ""
+"Un cop pugueu construir el projecte, obtindreu errors de compilació i en "
+"temps d'execució que us ajudaran a corregir qualsevol problema de "
+"compatibilitat amb el Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:31
 msgid "Breeze style"
-msgstr ""
+msgstr "Estil Brisa"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:33
 msgid ""
 "The Kirigami tutorial should already be mostly compliant with Windows, but "
 "the steps needed to achieve this need to be made explicit."
 msgstr ""
+"La guia d'aprenentatge del Kirigami ja hauria de ser majoritàriament "
+"compatible amb el Windows, però els passos necessaris per aconseguir-ho han "
+"de ser explícits."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:35
 msgid ""
 "The two modifications that should be done to ensure the Breeze style is used "
 "is to set the QStyle to `breeze` and to set the Qt Quick Controls style to "
 "`org.kde.desktop`."
 msgstr ""
+"Les dues modificacions que s'han de fer per assegurar que s'utilitza l'estil "
+"Brisa és establir el QStyle a `breeze` i establir l'estil dels Qt Quick "
+"Controls a `org.kde.desktop`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:37
 msgid ""
@@ -8961,7 +8986,13 @@ msgid ""
 "(https://doc.qt.io/qt-6/qapplication.html) (traditionally used with "
 "QtWidgets)."
 msgstr ""
+"Un [QStyle](https://doc.qt.io/qt-6/qstyle.html) és el que controla la "
+"majoria de l'aparença d'una aplicació QtWidgets. Això és necessari a la "
+"nostra aplicació QtQuick perquè inicialitzem l'aplicació amb [QApplication]"
+"(https://doc.qt.io/qt-6/qapplication.html) (tradicionalment usada amb "
+"QtWidgets)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:39
 msgid ""
 "A [Qt Quick Controls style](https://doc.qt.io/qt-6/qtquickcontrols-styles."
@@ -8973,39 +9004,53 @@ msgid ""
 "(hence why a QApplication is used). This way, QtWidgets and QtQuick "
 "applications can mostly look the same and reuse style components."
 msgstr ""
+"D'altra banda, un [estil dels Qt Quick Controls](https://doc.qt.io/qt-6/"
+"qtquickcontrols-styles.html) controla la majoria de l'aparença d'una "
+"aplicació QtQuick. Això afecta com es veuran els controls QML. L'estil de "
+"KDE `org.kde.desktop` (altrament conegut com a [qqc2-desktop-style](https://"
+"invent.kde.org/frameworks/qqc2-desktop-style)) és especial i intenta "
+"eliminar la duplicació derivant elements estilístics del QStyle de "
+"l'aplicació (per això s'utilitza una QApplication). D'aquesta manera, les "
+"aplicacions QtWidgets i QtQuick poden veure's majoritàriament de la mateixa "
+"manera i reutilitzar components d'estil."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:41
 msgid ""
 "QtQuick / Kirigami applications need to set both in C++ code. To set the "
 "QStyle, it needs to be added in two places."
 msgstr ""
+"Les aplicacions QtQuick / Kirigami necessiten establir-ho en el codi C++. "
+"Per establir el QStyle, s'ha d'afegir en dos llocs."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:43
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:66
 msgid "In Craft:"
-msgstr ""
+msgstr "En Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:50
 msgid "And in C++:"
-msgstr ""
+msgstr "I en C++:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:56
 msgid ""
 "This is what is used in the Kirigami tutorial. You may otherwise load the "
 "Breeze style only on Windows where this is most relevant using an ifdef:"
 msgstr ""
+"Això és el que s'utilitza a la guia d'aprenentatge del Kirigami. Altrament, "
+"podeu carregar l'estil Brisa només al Windows, on això és més rellevant "
+"utilitzant un «ifdef»:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:64
 msgid "The Qt Quick Controls style needs to be added in three places."
-msgstr ""
+msgstr "L'estil Qt Quick Controls s'ha d'afegir en tres llocs."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:73
 msgid "In C++, where it needs to be conditional:"
-msgstr ""
+msgstr "En C++, on cal que sigui condicional:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:82
 msgid "And optionally in CMake, in one of two ways:"
-msgstr ""
+msgstr "I opcionalment en el CMake, d'una entre dues maneres:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:90
 msgid ""
@@ -9015,7 +9060,13 @@ msgid ""
 "resulting application, allowing you to find missing packages or "
 "misconfigurations more easily."
 msgstr ""
+"Com que és una dependència en temps d'execució, no cal establir-la al CMake "
+"que s'utilitza en temps de compilació. No obstant això, això pot indicar a "
+"si mateix i als altres si l'entorn és correcte i serà capaç d'executar "
+"l'aplicació resultant, permetent-vos trobar amb més facilitat els paquets "
+"que falten o les configuracions errònies."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:92
 msgid ""
 "The command `find_package()` specifically searches for the CMake "
@@ -9023,10 +9074,14 @@ msgid ""
 "is less strict and only searches for the QML module. The latter requires "
 "that you include ECMFindQmlModule:"
 msgstr ""
+"L'ordre `find_package()` cerca específicament `qqc2-desktop-style` als "
+"fitxers de configuració del CMake, mentre que `ecm_find_qmlmodule()` és "
+"menys estricte i només cerca el mòdul QML. Aquest últim requereix que "
+"inclogueu ECMFindQmlModule:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:98
 msgid "Shipping icons"
-msgstr ""
+msgstr "Distribució d'icones"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:100
 msgid ""
@@ -9034,50 +9089,55 @@ msgid ""
 "to include [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) in "
 "your project."
 msgstr ""
+"El primer que cal per a fer que l'aplicació utilitzi les icones Brisa és "
+"incloure [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) en el "
+"projecte."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:102
 msgid ""
 "After this, some CMake commands are needed to bundle your application icon "
 "with the app."
 msgstr ""
+"Després d'això, es necessiten algunes ordres del CMake per afegir la icona "
+"de l'aplicació a l'aplicació."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:104
-#, fuzzy
-#| msgid "Theme"
 msgid "KIconThemes"
-msgstr "Tema"
+msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:106
 msgid "This can be done with the following three steps:"
-msgstr ""
+msgstr "Això es pot fer amb els tres passos següents:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:108
 msgid "Adding it as a dependency in Craft:"
-msgstr ""
+msgstr "Afegir-la com a dependència al Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:115
 msgid "Adding it as a dependency in CMake:"
-msgstr ""
+msgstr "Afegir-la com a dependència al CMake:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:129
 msgid "Using it in C++ code, in the `main.cpp` file:"
-msgstr ""
+msgstr "Usant-la al codi C++, en el fitxer `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:144
 msgid ""
 "Note that although the project name and CMake call uses plural (KIconThemes, "
 "KF6IconThemes), the C++ call uses singular (KIconTheme)."
 msgstr ""
+"Tingueu en compte que encara que el nom del projecte i la crida al CMake fan "
+"servir el plural (KIconThemes, KF6IconThemes), la crida C++ fa servir el "
+"singular (KIconTheme)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:146
 msgid "KIconThemes needs to be initialized before the application."
-msgstr ""
+msgstr "Cal inicialitzar KIconThemes abans de l'aplicació."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
-#, fuzzy
-#| msgid "Example Application"
 msgid "Application icon"
-msgstr "Aplicació d'exemple"
+msgstr "Icona de l'aplicació"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:150
 msgid ""
@@ -9085,6 +9145,9 @@ msgid ""
 "as a [QML resource](https://doc.qt.io/qt-6/resources.html) and as a part of "
 "icon installation."
 msgstr ""
+"Si l'aplicació té una icona, s'ha d'afegir al vostre projecte tant com un "
+"[recurs QML](https://doc.qt.io/qt-6/resources.html) i com a part de la "
+"instal·lació d'icones."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:152
 msgid ""
@@ -9093,15 +9156,20 @@ msgid ""
 "needed. Usually the application icon consists of a primary SVG icon, paired "
 "with multiple PNG icon sizes."
 msgstr ""
+"Habitualment al Linux, la icona de l'aplicació es pot instal·lar al "
+"directori correcte, i l'aplicació recuperarà la icona quan sigui necessari. "
+"Normalment, la icona de l'aplicació consisteix en una icona SVG primària, "
+"aparellada amb diverses mides d'icones PNG."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:154
 msgid "Installing the SVG icon is done like this in CMake:"
-msgstr ""
+msgstr "La instal·lació de la icona SVG es fa així en el CMake:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:160
 msgid "And installing the PNG icons is done like this:"
-msgstr ""
+msgstr "I la instal·lació de les icones PNG es fa així:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:175
 msgid ""
 "When the application icon is installed on Linux, a PNG icon such as `48-apps-"
@@ -9111,21 +9179,24 @@ msgid ""
 "for `/usr`, `/usr/local` or `~/.local`. Note how in the PNGs' case the icon "
 "name translates into the path it will have in the filesystem."
 msgstr ""
+"Quan s'instal·la la icona de l'aplicació al Linux, una icona PNG com `48-"
+"apps-myapp.png` goes to `${INSTALL_PREFIX}/share/icons/hicolor/48x48/apps/"
+"myapp.png`, i una icona SVG va a `${INSTALL_PREFIX}/share/icons/hicolor/"
+"scalable/apps/org.kde.myapp.svg`, on `${INSTALL_PREFIX}` normalment "
+"significa `/usr`, `/usr/local` o `~/.local`. Tingueu en compte com en el cas "
+"dels PNG que el nom de la icona es tradueix al camí que tindrà en el sistema "
+"de fitxers."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:177
-#, fuzzy
-#| msgid ""
-#| "For more information about where KDE software is installed, see [Building "
-#| "KDE software manually: The install step](/docs/getting-started/building/"
-#| "cmake-build/#install)."
 msgid ""
 "You can read more about installing files in [Building KDE software manually: "
 "The install step](/docs/getting-started/building/cmake-build/#install)."
 msgstr ""
-"Per a més informació sobre on s'instal·la el programari de KDE, vegeu "
-"[Construir manualment el programari de KDE: El pas d'instal·lació](/docs/"
-"getting-started/building/cmake-build/#install)."
+"Podeu llegir més sobre la instal·lació de fitxers a [Construir manualment el "
+"programari de KDE: El pas d'instal·lació](/docs/getting-started/building/"
+"cmake-build/#install)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:179
 msgid ""
 "Once the icon is installed in this way, in QML code, it can be called simply "
@@ -9134,7 +9205,13 @@ msgid ""
 "that has an [icon.name](https://doc.qt.io/qt-6/qtquickcontrols-icons.html) "
 "property."
 msgstr ""
+"Una vegada instal·lada la icona d'aquesta manera, en codi QML, es pot cridar "
+"simplement amb `myapp` o `org.kde.myapp`, com es cridaria des de [QIcon::"
+"fromTheme()](doc.qt.io/qt-6/qicon.html#fromTheme). Això es pot utilitzar amb "
+"qualsevol control QML que tingui una propietat [icon.name](https://doc.qt.io/"
+"qt-6/qtquickcontrols-icons.html)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:181
 msgid ""
 "Windows has no such standard directory, and installing the icon has no "
@@ -9143,15 +9220,22 @@ msgid ""
 "or SVG file can be embedded into the app as a Qt resource file in "
 "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgstr ""
+"El Windows no té aquest directori estàndard, i la instal·lació de la icona "
+"no té cap efecte; s'ha d'empaquetar amb l'aplicació. Per a fer-ho, el PNG es "
+"pot enviar al seu propi directori d'instal·lació utilitzant "
+"`ecm_add_app_icon()` i un fitxer PNG o SVG es pot incrustar a l'aplicació "
+"com un fitxer de recursos Qt a `ecm_add_qml_module()` o "
+"`ecm_target_qml_sources()`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:183
 msgid "The PNG application icon is installed with:"
-msgstr ""
+msgstr "La icona de l'aplicació PNG s'instal·la amb:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:189
 msgid "And the main application icon is bundled as a Qt resource with:"
-msgstr ""
+msgstr "I la icona principal de l'aplicació s'empaqueta com a recurs Qt amb:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:196
 msgid ""
 "This will make the application icon available as a Qt resource under `qrc:/"
@@ -9159,13 +9243,21 @@ msgid ""
 "control that has an [icon.source](https://doc.qt.io/qt-6/qtquickcontrols-"
 "icons.html) property."
 msgstr ""
+"Això farà que la icona de l'aplicació estigui disponible com a recurs Qt a "
+"`qrc:/qt/qml/org/kde/myapp/org.kde.myapp.svg`. Això es pot utilitzar amb "
+"qualsevol control QML que tingui una propietat [icon.source](https://doc.qt."
+"io/qt-6/qtquickcontrols-icons.html)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:198
 msgid ""
 "The `RESOURCES` path depends on the place where the icons are located. "
 "Traditionally, an `icons/` folder is created at the root of the project for "
 "storing all icons, as they don't really count as source files."
 msgstr ""
+"El camí `RESOURCES` depèn del lloc on es trobin les icones. Tradicionalment, "
+"es crea una carpeta `icons/` a l'arrel del projecte per a emmagatzemar totes "
+"les icones, ja que realment no compten com a fitxers de codi font."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:200
 msgid ""
@@ -9177,12 +9269,18 @@ msgid ""
 "qicon.html#fromTheme) in the call to [QGuiApplication::setWindowIcon()]"
 "(https://doc.qt.io/qt-6/qguiapplication.html#windowIcon-prop):"
 msgstr ""
+"Després d'instal·lar les icones (per al Linux) i empaquetades (per al "
+"Windows i l'Android), podeu definir-les al codi. Al codi QML, per a la "
+"compatibilitat amb el Windows i l'Android, hauríeu d'utilitzar la icona "
+"empaquetada; en el codi C++, especialment quan establiu la icona de la "
+"finestra, podeu utilitzar la icona del tema predeterminat i la icona "
+"empaquetada com a alternativa amb [QIcon::fromTheme()](https://doc.qt.io/"
+"qt-6/qicon.html#fromTheme) a la crida a [QGuiApplication::setWindowIcon()]"
+"(https://doc.qt.io/qt-6/qguiapplication.html#windowIcon-prop):"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:206
-#, fuzzy
-#| msgid "Kirigami Addons"
 msgid "Kirigami icons"
-msgstr "Complements del Kirigami"
+msgstr "Icones del Kirigami"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:208
 msgid ""
@@ -9190,6 +9288,9 @@ msgid ""
 "an icon theme, it is possible to bundle the necessary Breeze icons together "
 "with your Windows application."
 msgstr ""
+"Tot i que el Windows no té un directori estàndard on instal·lar icones des "
+"d'un tema d'icones, és possible afegir les icones Brisa necessàries "
+"juntament amb la vostra aplicació Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:210
 msgid ""
@@ -9197,28 +9298,39 @@ msgid ""
 "up for the project and Breeze icons are included as a dependency in your "
 "project."
 msgstr ""
+"Això ho fa el Craft automàticament quan KIconThemes està configurat "
+"correctament per al projecte i les icones Breeze s'inclouen com a "
+"dependència en el projecte."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:212
 msgid ""
 "To set up KIconThemes, see the above section [KIconThemes](#kiconthemes)."
 msgstr ""
+"Per a configurar KIconThemes, vegeu la secció anterior [KIconThemes]"
+"(#kiconthemes)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:214
 msgid ""
 "To add Breeze icons as a dependency for your project, add this to your Craft "
 "blueprint:"
 msgstr ""
+"Per a afegir les icones Brisa com a dependència del vostre projecte, afegiu-"
+"ho al vostre esquema de Craft:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:222
 msgid ""
 "This way, you won't need to manually bundle any Breeze icons into your "
 "application as a resource: you can just use a `QIcon::fromTheme()` name, "
 "such as `kde` or `application-exit-symbolic`."
 msgstr ""
+"D'aquesta manera, no necessitareu empaquetar manualment cap icona del Brisa "
+"a la vostra aplicació com a recurs: podeu utilitzar un nom `QIcon::"
+"fromTheme()`, com ara `kde` o `application-exit-symbolic`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:224
 msgid "Building"
-msgstr ""
+msgstr "Construcció"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:226
 msgid ""
@@ -9226,12 +9338,13 @@ msgid ""
 "Windows with Craft: Building your own projects on Windows](/docs/getting-"
 "started/building/craft#custom-projects)."
 msgstr ""
+"Per a construir la vostra aplicació al Windows, seguiu [Construir el "
+"programari KDE al Windows amb Craft: Construcció dels projectes propis al "
+"Windows](/docs/getting-started/building/craft#custom-projects)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:228
-#, fuzzy
-#| msgid "build.rs"
 msgid "CI builds"
-msgstr "build.rs"
+msgstr "Construccions de CI"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:230
 msgid ""
@@ -9239,7 +9352,11 @@ msgid ""
 "KDE infrastructure for its code hosting (KDE Invent), it is possible to "
 "configure Windows CI/CD jobs."
 msgstr ""
+"Si el projecte s'ha configurat correctament per a construir al Windows i "
+"està utilitzant la infraestructura KDE per al seu allotjament de codi (KDE "
+"Invent), és possible configurar els treballs CI/CD del Windows."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:232
 msgid ""
 "To do this, you will need to add the relevant CI templates for Windows with "
@@ -9247,39 +9364,48 @@ msgid ""
 "as mentioned in [Continuous Integration System](https://community.kde.org/"
 "Infrastructure/Continuous_Integration_System)."
 msgstr ""
+"Per a fer-ho, haureu d'afegir les plantilles CI rellevants del Windows amb "
+"un fitxer `.gitlab-ci.yaml` i llistar les vostres dependències en un fitxer "
+"`.kde-ci.yaml` com s'ha esmentat al [Sistema d'integració contínua](https://"
+"community.kde.org/Infrastructure/Continuous_Integration_System)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:234
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solució de problemes"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:236
 msgid ""
 "If you have problems adapting your application to Windows, you can visit the "
 "following rooms on [Matrix](https://community.kde.org/Matrix):"
 msgstr ""
+"Si teniu problemes per a adaptar la vostra aplicació al Windows, podeu "
+"visitar les sales següents a [Matrix](https://community.kde.org/Matrix):"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:238
 msgid "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
-msgstr ""
+msgstr "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:239
 msgid ""
 "[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
 "kde.org)"
 msgstr ""
+"[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
+"kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:240
 msgid ""
 "[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 msgstr ""
+"[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:241
 msgid "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
-msgstr ""
+msgstr "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Setup with C++"
-msgstr ""
+msgstr "Configuració amb el C++"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Create your first Kirigami application with C++\n"
@@ -10281,10 +10407,8 @@ msgstr ""
 "desenvolupar aquesta aplicació dins d'un entorn còmode, amb un esforç mínim."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Python"
 msgid "Setup with Python"
-msgstr "El Kirigami amb Python"
+msgstr "Configuració amb el Python"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
 msgid "Create your first Kirigami application with PySide\n"
@@ -10689,10 +10813,8 @@ msgid "After this, the application can be launched by running:"
 msgstr "Després d'això, l'aplicació es pot llançar executant:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Rust"
 msgid "Setup with Rust"
-msgstr "El Kirigami amb Rust"
+msgstr "Configuració amb el Rust"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
 msgid "Create your first Kirigami application with Rust\n"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-17 01:55+0000\n"
-"PO-Revision-Date: 2025-12-13 08:41+0100\n"
+"PO-Revision-Date: 2025-12-17 09:38+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -59,7 +59,7 @@ msgstr "Kirigami Addons"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Platform Support"
-msgstr ""
+msgstr "Podpora za platformo"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
@@ -8448,14 +8448,12 @@ msgstr ""
 "dele, zaradi česar so stvari veliko bolj obvladljive."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
-#, fuzzy
-#| msgid "Windows"
 msgid "Windows Setup"
-msgstr "Windows"
+msgstr "Nastavitev za Windows"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
 msgid "Preparing your C++ application for Windows"
-msgstr ""
+msgstr "Priprava vaše C++ aplikacije za Windows"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:11
 msgid ""
@@ -8463,28 +8461,33 @@ msgid ""
 "[extra-cmake-modules](https://api.kde.org/ecm/) will not require many "
 "modifications to work properly on Windows."
 msgstr ""
+"Qt ima odlično podporo za Windows, zato aplikacije, ki uporabljajo module "
+"[extra-cmake-modules] (https://api.kde.org/ecm/) Qt in KDE, ne bodo "
+"potrebovale veliko sprememb za pravilno delovanje v sistemu Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:13
 msgid "Three things are needed:"
-msgstr ""
+msgstr "Potrebne so tri stvari:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:15
 msgid "[A Craft blueprint](#craft)"
-msgstr ""
+msgstr "[A Craft blueprint](#craft)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:16
 msgid "[Setting the Breeze style](#breeze)"
-msgstr ""
+msgstr "[Nastavitev sloga Breeze](#breeze)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:17
 msgid "[Icons bundled with the app](#icons)"
-msgstr ""
+msgstr "[Priložene ikone k aplikaciji](#icons)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:19
 msgid ""
 "The Craft blueprint is needed to bundle all the dependencies together with "
 "the application to generate an executable."
 msgstr ""
+"Craft blueprint je potreben za združevanje vseh odvisnosti skupaj z "
+"aplikacijo za ustvarjanje izvedljive datoteke."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:21
 msgid ""
@@ -8493,6 +8496,11 @@ msgid ""
 "least once for forcing the Breeze style to the application so that it looks "
 "good on Windows, but depending on the application it might require more."
 msgstr ""
+"Direktivo predprocesorja `#ifdef Q_OS_WIN` je mogoče uporabiti za pisanje "
+"kode, ki bo veljala le, če je aplikacija zgrajena v sistemu Windows. To je "
+"potrebno vsaj enkrat za vsiljenje sloga Sapica (Breeze) aplikaciji, da bo v "
+"sistemu Windows videti dobro, vendar je odvisno od aplikacije morda "
+"potrebnih več."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:23
 msgid ""
@@ -8500,10 +8508,13 @@ msgid ""
 "complex step, but both KDE's extra-cmake-modules (ECM) and Qt provide means "
 "to make this job easier."
 msgstr ""
+"Združevanje potrebnih ikon za delovanje aplikacije v sistemu Windows je "
+"najzahtevnejši korak, vendar tako KDE-jevi dodatni moduli cmake (ECM) kot Qt "
+"ponujajo načine za olajšanje tega dela."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:25
 msgid "Craft blueprint"
-msgstr ""
+msgstr "Craft blueprint"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:27
 msgid ""
@@ -8511,22 +8522,32 @@ msgid ""
 "Craft](/docs/getting-started/building/craft) so that you get a functional "
 "Craft blueprint and can at least build your application on Windows."
 msgstr ""
+"Za začetek morate najprej slediti navodilom [Gradnja programske opreme KDE v "
+"sistemu Windows s programom Craft](/docs/getting-started/building/craft), da "
+"dobite delujoč Craft blueprint in boste lahko vsaj zgradili svojo aplikacijo "
+"v sistemu Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:29
 msgid ""
 "Once you are able to build the project you will get compilation and runtime "
 "errors that will help you fix any Windows compatibility issues."
 msgstr ""
+"Ko boste lahko sestavili projekt, boste dobili napake pri prevajanju in "
+"izvajanju, ki vam bodo pomagale odpraviti morebitne težave z združljivostjo "
+"sistema Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:31
 msgid "Breeze style"
-msgstr ""
+msgstr "Slog Sapica (Breeze)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:33
 msgid ""
 "The Kirigami tutorial should already be mostly compliant with Windows, but "
 "the steps needed to achieve this need to be made explicit."
 msgstr ""
+"Učbenik za Kirigami bi moral biti večinoma že združljiv z operacijskim "
+"sistemom Windows, vendar je treba korake, potrebne za dosego tega, jasno "
+"navesti."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:35
 msgid ""
@@ -8534,6 +8555,9 @@ msgid ""
 "is to set the QStyle to `breeze` and to set the Qt Quick Controls style to "
 "`org.kde.desktop`."
 msgstr ""
+"Za zagotovitev uporabe sloga Sapica je treba narediti dve spremembi: "
+"nastaviti QStyle na `breeze` in nastaviti slog hitrih kontrolnikov Qt na "
+"`org.kde.desktop`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:37
 msgid ""
@@ -8543,6 +8567,10 @@ msgid ""
 "(https://doc.qt.io/qt-6/qapplication.html) (traditionally used with "
 "QtWidgets)."
 msgstr ""
+"[QStyle](https://doc.qt.io/qt-6/qstyle.html) nadzoruje večino videza "
+"aplikacije QtWidgets. To je potrebno v naši aplikaciji QtQuick, ker "
+"aplikacijo inicializiramo z [QApplication](https://doc.qt.io/qt-6/"
+"qapplication.html) (tradicionalno uporabljeno s QtWidgets)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:39
 msgid ""
@@ -8555,39 +8583,51 @@ msgid ""
 "(hence why a QApplication is used). This way, QtWidgets and QtQuick "
 "applications can mostly look the same and reuse style components."
 msgstr ""
+"Slog [Qt Quick Controls](https://doc.qt.io/qt-6/qtquickcontrols-styles.html) "
+"pa nadzoruje večino videza aplikacije QtQuick. To vpliva na to, kako bodo "
+"videti kontrolniki QML. KDE-jev slog `org.kde.desktop` (znan tudi kot [qqc2-"
+"desktop-style](https://invent.kde.org/frameworks/qqc2-desktop-style)) je "
+"poseben in poskuša odstraniti podvajanje z izpeljavo slogovnih elementov iz "
+"QStyle aplikacije (zato se uporablja QApplication). Na ta način so lahko "
+"aplikacije QtWidgets in QtQuick večinoma videti enako in ponovno uporabljajo "
+"slogovne komponente."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:41
 msgid ""
 "QtQuick / Kirigami applications need to set both in C++ code. To set the "
 "QStyle, it needs to be added in two places."
 msgstr ""
+"Aplikacije QtQuick / Kirigami morajo oboje nastaviti v kodi C++. Za "
+"nastavitev QStyle ga je treba dodati na dveh mestih."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:43
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:66
 msgid "In Craft:"
-msgstr ""
+msgstr "V Craftu:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:50
 msgid "And in C++:"
-msgstr ""
+msgstr "In v C++:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:56
 msgid ""
 "This is what is used in the Kirigami tutorial. You may otherwise load the "
 "Breeze style only on Windows where this is most relevant using an ifdef:"
 msgstr ""
+"To se uporablja v učbeniku za Kirigami. Sicer lahko slog Breeze naložite le "
+"v sistemu Windows, kjer je to najbolj pomembno, z uporabo ukaza ifdef:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:64
 msgid "The Qt Quick Controls style needs to be added in three places."
-msgstr ""
+msgstr "Slog hitrih kontrolnikov Qt je treba dodati na treh mestih."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:73
 msgid "In C++, where it needs to be conditional:"
-msgstr ""
+msgstr "V C++, kjer mora biti pogojno:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:82
 msgid "And optionally in CMake, in one of two ways:"
-msgstr ""
+msgstr "In po izbiri v CMake, na enega od dveh načinov:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:90
 msgid ""
@@ -8597,6 +8637,10 @@ msgid ""
 "resulting application, allowing you to find missing packages or "
 "misconfigurations more easily."
 msgstr ""
+"Ker gre za odvisnost med izvajanjem, je ni treba nastaviti v CMake, ki se "
+"uporablja med prevajanjem. Vendar pa lahko to vam in drugim sporoči, ali je "
+"okolje pravilno in ali bo mogoče zagnati nastalo aplikacijo, kar vam omogoča "
+"lažje iskanje manjkajočih paketov ali napačnih konfiguracij."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:92
 msgid ""
@@ -8605,10 +8649,13 @@ msgid ""
 "is less strict and only searches for the QML module. The latter requires "
 "that you include ECMFindQmlModule:"
 msgstr ""
+"Ukaz `find_package()` posebej išče datoteke konfiguracije CMake za `qqc2-"
+"desktop-style`, medtem ko je `ecm_find_qmlmodule()` manj strog in išče le "
+"modul QML. Slednji zahteva, da vključite ECMFindQmlModule:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:98
 msgid "Shipping icons"
-msgstr ""
+msgstr "Dobavljanje ikon"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:100
 msgid ""
@@ -8616,50 +8663,53 @@ msgid ""
 "to include [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) in "
 "your project."
 msgstr ""
+"Prva stvar, ki jo potrebujete, da aplikacija uporablja ikone Breeze, je, da "
+"v svoj projekt vključite [KIconThemes](https://invent.kde.org/frameworks/"
+"kiconthemes)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:102
 msgid ""
 "After this, some CMake commands are needed to bundle your application icon "
 "with the app."
 msgstr ""
+"Po tem je potrebnih nekaj ukazov CMake, da se ikona aplikacije poveže z "
+"aplikacijo."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:104
-#, fuzzy
-#| msgid "Theme"
 msgid "KIconThemes"
-msgstr "Tema"
+msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:106
 msgid "This can be done with the following three steps:"
-msgstr ""
+msgstr "To je mogoče storiti z naslednjimi tremi koraki:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:108
 msgid "Adding it as a dependency in Craft:"
-msgstr ""
+msgstr "Dodajanje kot odvisnosti v Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:115
 msgid "Adding it as a dependency in CMake:"
-msgstr ""
+msgstr "Dodajanje kot odvisnosti v CMake:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:129
 msgid "Using it in C++ code, in the `main.cpp` file:"
-msgstr ""
+msgstr "Uporaba v kodi C++, v datoteki `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:144
 msgid ""
 "Note that although the project name and CMake call uses plural (KIconThemes, "
 "KF6IconThemes), the C++ call uses singular (KIconTheme)."
 msgstr ""
+"Upoštevajte, da čeprav ime projekta in klic CMake uporablja množino "
+"(KIconThemes, KF6IconThemes), klic C++ uporablja ednino (KIconTheme)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:146
 msgid "KIconThemes needs to be initialized before the application."
-msgstr ""
+msgstr "KIconThemes je treba inicializirati pred uporabo aplikacije."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
-#, fuzzy
-#| msgid "Example Application"
 msgid "Application icon"
-msgstr "Primer aplikacije"
+msgstr "Ikona aplikacije"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:150
 msgid ""
@@ -8667,6 +8717,9 @@ msgid ""
 "as a [QML resource](https://doc.qt.io/qt-6/resources.html) and as a part of "
 "icon installation."
 msgstr ""
+"Če ima vaša aplikacija ikono, jo je treba dodati v vaš projekt tako kot [vir "
+"QML](https://doc.qt.io/qt-6/resources.html) kot tudi kot del namestitve "
+"ikone."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:152
 msgid ""
@@ -8675,14 +8728,18 @@ msgid ""
 "needed. Usually the application icon consists of a primary SVG icon, paired "
 "with multiple PNG icon sizes."
 msgstr ""
+"Običajno je v Linuxu ikono aplikacije mogoče preprosto namestiti v pravilen "
+"imenik, aplikacija pa jo bo po potrebi pridobila. Ikona aplikacije je "
+"običajno sestavljena iz primarne ikone SVG, povezane z ikonami več velikosti "
+"PNG."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:154
 msgid "Installing the SVG icon is done like this in CMake:"
-msgstr ""
+msgstr "Namestitev ikone SVG se v CMake izvede takole:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:160
 msgid "And installing the PNG icons is done like this:"
-msgstr ""
+msgstr "Namestitev ikon PNG pa se izvede takole:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:175
 msgid ""
@@ -8693,20 +8750,21 @@ msgid ""
 "for `/usr`, `/usr/local` or `~/.local`. Note how in the PNGs' case the icon "
 "name translates into the path it will have in the filesystem."
 msgstr ""
+"Ko je ikona aplikacije nameščena v Linuxu, se ikona PNG, kot je `48-apps-"
+"myapp.png`, premakne v `${INSTALL_PREFIX}/share/icons/hicolor/48x48/apps/"
+"myapp.png`, ikona SVG pa v `${INSTALL_PREFIX}/share/icons/hicolor/scalable/"
+"apps/org.kde.myapp.svg`, kjer `${INSTALL_PREFIX}` običajno pomeni `/usr`, `/"
+"usr/local` ali `~/.local`. Upoštevajte, kako se v primeru PNG-jev ime ikone "
+"prevede v pot, ki jo bo imela v datotečnem sistemu."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:177
-#, fuzzy
-#| msgid ""
-#| "For more information about where KDE software is installed, see [Building "
-#| "KDE software manually: The install step](/docs/getting-started/building/"
-#| "cmake-build/#install)."
 msgid ""
 "You can read more about installing files in [Building KDE software manually: "
 "The install step](/docs/getting-started/building/cmake-build/#install)."
 msgstr ""
-"Za več informacij o tem, kje je nameščena programska oprema KDE, glejte "
-"[Ročna gradnja programske opreme KDE: korak namestitve](/docs/getting-"
-"started/building/cmake-build/#install)."
+"Več o nameščanju datotek si lahko preberete v [Ročna gradnja programske "
+"opreme KDE: Korak namestitve](/docs/getting-started/building/cmake-build/"
+"#install)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:179
 msgid ""
@@ -8716,6 +8774,11 @@ msgid ""
 "that has an [icon.name](https://doc.qt.io/qt-6/qtquickcontrols-icons.html) "
 "property."
 msgstr ""
+"Ko je ikona nameščena na ta način, jo lahko v kodi QML preprosto pokličete z "
+"`myapp` ali `org.kde.myapp`, kot bi jo poklicali iz [QIcon::fromTheme()](doc."
+"qt.io/qt-6/qicon.html#fromTheme). To se lahko uporablja s katerim koli "
+"kontrolnikom QML, ki ima lastnost [icon.name](https://doc.qt.io/qt-6/"
+"qtquickcontrols-icons.html)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:181
 msgid ""
@@ -8725,16 +8788,19 @@ msgid ""
 "or SVG file can be embedded into the app as a Qt resource file in "
 "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgstr ""
+"Windows nima takšnega standardnega imenika in namestitev ikone nima učinka; "
+"mora biti priložena aplikaciji. Če želite to narediti, lahko PNG pošljete v "
+"njegov namestitveni imenik z uporabo `ecm_add_app_icon()`, datoteko PNG ali "
+"SVG pa lahko vdelate v aplikacijo kot datoteko virov Qt v "
+"`ecm_add_qml_module()` ali `ecm_target_qml_sources()`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:183
-#, fuzzy
-#| msgid "The application should look like this:"
 msgid "The PNG application icon is installed with:"
-msgstr "Aplikacija bi morala biti takega videza:"
+msgstr "Ikona aplikacije PNG je nameščena z:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:189
 msgid "And the main application icon is bundled as a Qt resource with:"
-msgstr ""
+msgstr "Glavna ikona aplikacije je združena kot vir Qt z:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:196
 msgid ""
@@ -8743,6 +8809,10 @@ msgid ""
 "control that has an [icon.source](https://doc.qt.io/qt-6/qtquickcontrols-"
 "icons.html) property."
 msgstr ""
+"S tem bo ikona aplikacije na voljo kot vir Qt pod `qrc:/qt/qml/org/kde/myapp/"
+"org.kde.myapp.svg`. To se lahko uporablja s katerim koli kontrolnikom QML, "
+"ki ima lastnost [icon.source](https://doc.qt.io/qt-6/qtquickcontrols-icons."
+"html)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:198
 msgid ""
@@ -8750,6 +8820,9 @@ msgid ""
 "Traditionally, an `icons/` folder is created at the root of the project for "
 "storing all icons, as they don't really count as source files."
 msgstr ""
+"Pot `RESOURCES` je odvisna od mesta, kjer se nahajajo ikone. Tradicionalno "
+"se v korenu projekta ustvari mapa `icons/` za shranjevanje vseh ikon, saj se "
+"v resnici ne obravnavajo kot izvorne datoteke."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:200
 msgid ""
@@ -8761,12 +8834,17 @@ msgid ""
 "qicon.html#fromTheme) in the call to [QGuiApplication::setWindowIcon()]"
 "(https://doc.qt.io/qt-6/qguiapplication.html#windowIcon-prop):"
 msgstr ""
+"Ko so ikone nameščene (za Linux) in združene (za Windows in Android), jih "
+"lahko nastavite v kodi. V kodi QML morate za združljivost z operacijskim "
+"sistemom Windows in Android uporabiti združeno ikono; v kodi C++, zlasti pri "
+"nastavljanju ikone okna, lahko privzeto uporabite ikono teme in združeno "
+"ikono kot rezervno možnost z [QIcon::fromTheme()](https://doc.qt.io/qt-6/"
+"qicon.html#fromTheme) v klicu [QGuiApplication::setWindowIcon()](https://doc."
+"qt.io/qt-6/qguiapplication.html#windowIcon-prop):"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:206
-#, fuzzy
-#| msgid "Kirigami Addons"
 msgid "Kirigami icons"
-msgstr "Kirigami Addons"
+msgstr "Ikone Kirigami"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:208
 msgid ""
@@ -8774,6 +8852,8 @@ msgid ""
 "an icon theme, it is possible to bundle the necessary Breeze icons together "
 "with your Windows application."
 msgstr ""
+"Čeprav Windows nima standardnega imenika, kamor bi namestili ikone iz teme "
+"ikon, je mogoče potrebne ikone Breeze združiti z vašo aplikacijo Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:210
 msgid ""
@@ -8781,17 +8861,23 @@ msgid ""
 "up for the project and Breeze icons are included as a dependency in your "
 "project."
 msgstr ""
+"To Craft izvede samodejno, ko je KIconThemes pravilno nastavljen za projekt "
+"in so ikone Breeze vključene kot odvisnost v vašem projektu."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:212
 msgid ""
 "To set up KIconThemes, see the above section [KIconThemes](#kiconthemes)."
 msgstr ""
+"Za nastavitev KIconThemes glejte zgornji razdelek [KIconThemes]"
+"(#kiconthemes)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:214
 msgid ""
 "To add Breeze icons as a dependency for your project, add this to your Craft "
 "blueprint:"
 msgstr ""
+"Če želite dodati ikone Breeze kot odvisnost za svoj projekt, dodajte tole v "
+"svoj Craft blueprint:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:222
 msgid ""
@@ -8799,10 +8885,13 @@ msgid ""
 "application as a resource: you can just use a `QIcon::fromTheme()` name, "
 "such as `kde` or `application-exit-symbolic`."
 msgstr ""
+"Na ta način vam ne bo treba ročno vključevati ikon Breeze v svojo aplikacijo "
+"kot vir: preprosto lahko uporabite ime `QIcon::fromTheme()`, na primer `kde` "
+"ali `application-exit-symbolic`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:224
 msgid "Building"
-msgstr ""
+msgstr "Izgradnja"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:226
 msgid ""
@@ -8810,12 +8899,14 @@ msgid ""
 "Windows with Craft: Building your own projects on Windows](/docs/getting-"
 "started/building/craft#custom-projects)."
 msgstr ""
+"Če želite zgraditi svojo aplikacijo v sistemu Windows, sledite navodilom "
+"[Gradnja programske opreme KDE v sistemu Windows s programom Craft: Gradnja "
+"lastnih projektov v sistemu Windows](/docs/getting-started/building/"
+"craft#custom-projects)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:228
-#, fuzzy
-#| msgid "build.rs"
 msgid "CI builds"
-msgstr "build.rs"
+msgstr "Izgradnje CI"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:230
 msgid ""
@@ -8823,6 +8914,9 @@ msgid ""
 "KDE infrastructure for its code hosting (KDE Invent), it is possible to "
 "configure Windows CI/CD jobs."
 msgstr ""
+"Če je bil projekt pravilno konfiguriran za gradnjo v sistemu Windows in "
+"uporablja infrastrukturo KDE za gostovanje kode (KDE Invent), je mogoče "
+"konfigurirati opravila Windows CI/CD."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:232
 msgid ""
@@ -8831,39 +8925,48 @@ msgid ""
 "as mentioned in [Continuous Integration System](https://community.kde.org/"
 "Infrastructure/Continuous_Integration_System)."
 msgstr ""
+"Če želite to narediti, boste morali dodati ustrezne predloge CI za Windows z "
+"datoteko `.gitlab-ci.yaml` in navesti svoje odvisnosti v datoteki `.kde-ci."
+"yaml`, kot je omenjeno v [Continuous Integration System](https://community."
+"kde.org/Infrastructure/Continuous_Integration_System)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:234
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Odpravljanje težav"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:236
 msgid ""
 "If you have problems adapting your application to Windows, you can visit the "
 "following rooms on [Matrix](https://community.kde.org/Matrix):"
 msgstr ""
+"Če imate težave s prilagajanjem aplikacije za Windows, lahko obiščete "
+"naslednje sobe na [Matrixu](https://community.kde.org/Matrix):"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:238
 msgid "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
-msgstr ""
+msgstr "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:239
 msgid ""
 "[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
 "kde.org)"
 msgstr ""
+"[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
+"kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:240
 msgid ""
 "[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 msgstr ""
+"[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:241
 msgid "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
-msgstr ""
+msgstr "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Setup with C++"
-msgstr ""
+msgstr "Nastavitev s C++"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Create your first Kirigami application with C++\n"
@@ -9803,10 +9906,8 @@ msgstr ""
 "da razvijete to aplikacijo v udobnem okolju z minimalnim naporom."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Python"
 msgid "Setup with Python"
-msgstr "Kirigami s Pytonom"
+msgstr "Nastavitev s Pytonom"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
 msgid "Create your first Kirigami application with PySide\n"
@@ -10181,10 +10282,8 @@ msgid "After this, the application can be launched by running:"
 msgstr "Po tem lahko aplikacijo startate tako, da zaženete:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Rust"
 msgid "Setup with Rust"
-msgstr "Kirigami z Rustom"
+msgstr "Nastavitev z Rustom"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
 msgid "Create your first Kirigami application with Rust\n"

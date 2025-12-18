@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-17 01:55+0000\n"
-"PO-Revision-Date: 2025-12-13 12:14+0100\n"
+"PO-Revision-Date: 2025-12-17 11:35+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -55,7 +55,7 @@ msgstr "Kirigami-toevoegingen"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Platform Support"
-msgstr ""
+msgstr "Platformondersteuning"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
@@ -8664,14 +8664,12 @@ msgstr ""
 "uitgesplitst in separate stukken, zodat het veel beheersbaar is."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
-#, fuzzy
-#| msgid "Windows"
 msgid "Windows Setup"
-msgstr "Windows"
+msgstr "Instellen op Windows"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
 msgid "Preparing your C++ application for Windows"
-msgstr ""
+msgstr "Uw C++ toepassing voorbereiden voor Windows"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:11
 msgid ""
@@ -8679,28 +8677,33 @@ msgid ""
 "[extra-cmake-modules](https://api.kde.org/ecm/) will not require many "
 "modifications to work properly on Windows."
 msgstr ""
+"Qt heeft uitstekende Windows-ondersteuning, waardoor applicaties die "
+"gebruikmaken van Qt en KDE's [extra-cmake-modules](https://api.kde.org/ecm/) "
+"weinig aanpassingen nodig hebben om goed te werken op Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:13
 msgid "Three things are needed:"
-msgstr ""
+msgstr "Er zijn drie zaken nodig:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:15
 msgid "[A Craft blueprint](#craft)"
-msgstr ""
+msgstr "[Een ontwerpblauwdruk](#craft)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:16
 msgid "[Setting the Breeze style](#breeze)"
-msgstr ""
+msgstr "[De stijl van Breeze instelling](#breeze)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:17
 msgid "[Icons bundled with the app](#icons)"
-msgstr ""
+msgstr "[Pictogrammen gebundeld met de toepassing](#icons)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:19
 msgid ""
 "The Craft blueprint is needed to bundle all the dependencies together with "
 "the application to generate an executable."
 msgstr ""
+"De ontwerpblauwdruk is nodig om alle afhankelijkheden samen te bundelen met "
+"de toepassing om een uitvoerbaar bestand te genereren."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:21
 msgid ""
@@ -8709,6 +8712,11 @@ msgid ""
 "least once for forcing the Breeze style to the application so that it looks "
 "good on Windows, but depending on the application it might require more."
 msgstr ""
+"De preprocessor-aanwijzing `#ifdef Q_OS_WIN` kan worden gebruikt om code te "
+"schrijven die alleen van toepassing is wanneer de toepassing op Windows "
+"wordt gebouwd. Dit is minstens één keer nodig om de Breeze-stijl aan de "
+"toepassing op te leggen, zodat deze er goed uitziet op Windows, maar "
+"afhankelijk van de toepassing kan dit vaker nodig zijn."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:23
 msgid ""
@@ -8716,10 +8724,13 @@ msgid ""
 "complex step, but both KDE's extra-cmake-modules (ECM) and Qt provide means "
 "to make this job easier."
 msgstr ""
+"Het bundelen van de benodigde pictogrammen voor de toepassing om op Windows "
+"te werken is de meest complexe stap, maar zowel KDE's extra-cmake-modules "
+"(ECM) als Qt bieden manieren om deze taak te vereenvoudigen."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:25
 msgid "Craft blueprint"
-msgstr ""
+msgstr "Ontwerpblauwdruk"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:27
 msgid ""
@@ -8840,10 +8851,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:104
-#, fuzzy
-#| msgid "Theme"
 msgid "KIconThemes"
-msgstr "Thema"
+msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:106
 msgid "This can be done with the following three steps:"
@@ -8872,10 +8881,8 @@ msgid "KIconThemes needs to be initialized before the application."
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
-#, fuzzy
-#| msgid "Example Application"
 msgid "Application icon"
-msgstr "Voorbeeldtoepassing"
+msgstr "Toepassingspictogram"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:150
 msgid ""
@@ -8911,18 +8918,13 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:177
-#, fuzzy
-#| msgid ""
-#| "For more information about where KDE software is installed, see [Building "
-#| "KDE software manually: The install step](/docs/getting-started/building/"
-#| "cmake-build/#install)."
 msgid ""
 "You can read more about installing files in [Building KDE software manually: "
 "The install step](/docs/getting-started/building/cmake-build/#install)."
 msgstr ""
-"Voor meer informatie over waar KDE software wordt geïnstalleerd, zie [KDE "
-"software handmatig bouwen: de installatiestap](/docs/getting-started/"
-"building/cmake-build/#install)."
+"U kunt meer lezen over het installeren van bestanden in [Handmatig KDE-"
+"software bouwen: De installatiestap](/docs/getting-started/building/cmake-"
+"build/#install)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:179
 msgid ""
@@ -8943,10 +8945,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:183
-#, fuzzy
-#| msgid "The application should look like this:"
 msgid "The PNG application icon is installed with:"
-msgstr "De toepassing zou er als volgt uit moeten zien:"
+msgstr "Het PNG-toepassingspictogram is geïnstalleerd met:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:189
 msgid "And the main application icon is bundled as a Qt resource with:"
@@ -8979,10 +8979,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:206
-#, fuzzy
-#| msgid "Kirigami Addons"
 msgid "Kirigami icons"
-msgstr "Kirigami-toevoegingen"
+msgstr "Kirigami-pictogrammen"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:208
 msgid ""
@@ -9018,7 +9016,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:224
 msgid "Building"
-msgstr ""
+msgstr "Gebouw"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:226
 msgid ""
@@ -9028,10 +9026,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:228
-#, fuzzy
-#| msgid "build.rs"
 msgid "CI builds"
-msgstr "build.rs"
+msgstr "CI-bouwsels"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:230
 msgid ""
@@ -9050,7 +9046,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:234
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Probleemoplossing"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:236
 msgid ""
@@ -9060,26 +9056,29 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:238
 msgid "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
-msgstr ""
+msgstr "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:239
 msgid ""
 "[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
 "kde.org)"
 msgstr ""
+"[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
+"kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:240
 msgid ""
 "[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 msgstr ""
+"[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:241
 msgid "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
-msgstr ""
+msgstr "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Setup with C++"
-msgstr ""
+msgstr "Opzet met C++"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Create your first Kirigami application with C++\n"
@@ -10047,10 +10046,8 @@ msgstr ""
 "ontwikkelen."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Python"
 msgid "Setup with Python"
-msgstr "Kirigami met Python"
+msgstr "Opzet met Python"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
 msgid "Create your first Kirigami application with PySide\n"
@@ -10433,10 +10430,8 @@ msgid "After this, the application can be launched by running:"
 msgstr "Hierna kan de toepassing gestart worden door uit te voeren:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Rust"
 msgid "Setup with Rust"
-msgstr "Kirigami met Rust"
+msgstr "Opzet met Rust"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
 msgid "Create your first Kirigami application with Rust\n"
