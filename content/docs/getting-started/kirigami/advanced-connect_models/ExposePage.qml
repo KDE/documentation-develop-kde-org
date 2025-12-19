@@ -9,5 +9,4 @@ Kirigami.Page {
         anchors.centerIn: parent
         text: Backend.introductionText
     }
-
 }
