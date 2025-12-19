@@ -25,14 +25,14 @@
     data-offline-search-section="{{ .Page.Section }}"
   >
   <template id="search-results-template">
-    <div class="search-results-header" style="display: flex; justify-content: space-between; margin-bottom: 1em;">
-      <span style="font-weight: bold">
+    <div class="search-results-header d-flex justify-content-between mb-3">
+      <span class="fw-bold">
         {{ T "ui_search_results" }}
       </span>
-      <i class="icon icon_paint-none search-result-close-button p-1" style="cursor: pointer;"></i>
+      <i class="icon icon_paint-none search-result-close-button p-1"></i>
     </div>
-    <div class="search-results-body" style="overflow-y: auto;">
-      <p class="search-no-results" style="display: none;">
+    <div class="search-results-body overflow-auto">
+      <p class="search-no-results d-none">
         {{ T "ui_search_no_results" }}
       </p>
     </div>
