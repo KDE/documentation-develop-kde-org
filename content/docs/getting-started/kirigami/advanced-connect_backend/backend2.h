@@ -15,5 +15,5 @@ public:
     void setIntroductionText(const QString &introductionText);
     Q_SIGNAL void introductionTextChanged();
 private:
-    QString m_introductionText = "Hello World!";
+    QString m_introductionText = QStringLiteral("Hello World!");
 };

@@ -25,7 +25,7 @@ The code used for this tutorial will be based on the previous page, [Connect log
 
 ```
 kirigami-tutorial/
-├── CMakeLists.txt
+├── CMakeLists.txt --------------------- # Modified for didactic purposes
 ├── org.kde.tutorial.desktop
 └── src/
     ├── CMakeLists.txt
@@ -60,6 +60,20 @@ And finally add it to `src/components/CMakeLists.txt`:
 {{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/CMakeLists.txt" highlight="cmake" emphasize=13 >}}
 
 This will serve as the canvas for this tutorial page.
+
+## Using raw strings
+
+To make this tutorial easier to understand how the model is populated, we will be disabling a feature that KDE applications using extra-cmake-modules (ECM) use by default that [optimizes string code](https://doc.qt.io/qt-6/qstring.html#QT_NO_CAST_FROM_ASCII). This allows us to bypass having to write [QStringLiteral()](https://doc.qt.io/qt-6/qstring.html#QStringLiteral) every time a string is introduced in our C++ code, which will be useful for the code in the upcoming header file.
+
+In the root `CMakeLists.txt` file, add the following:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/CMakeLists-root.txt" highlight="cmake" emphasize="12" >}}
+
+{{< alert title="🚨 Do not do this in production" color="danger" >}}
+
+Disabling this CMake flag is done for didactic purposes *only*. Production code should use QStringLiteral() or the [Qt string literals namespace](https://doc.qt.io/qt-6/qt-literals-stringliterals.html) instead where possible.
+
+{{< /alert >}}
 
 ## Preparing the Class
 
@@ -358,13 +372,6 @@ edit button inside our AbstractCard, and hook it up to our delete method.
 Existing code:
 
 <details>
-<summary>CMakeLists.txt</summary>
-
-{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/CMakeLists-root.txt" highlight="cmake" >}}
-
-</details>
-
-<details>
 <summary>src/CMakeLists.txt</summary>
 
 {{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/CMakeLists.txt" highlight="cmake" >}}
@@ -417,6 +424,13 @@ Existing code:
 <br>
 
 Code written/modified in this page:
+
+<details>
+<summary>CMakeLists.txt</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/CMakeLists-root.txt" highlight="cmake" emphasize="12" >}}
+
+</details>
 
 <details><summary>src/Main.qml</summary>
 

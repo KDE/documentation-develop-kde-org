@@ -32,20 +32,6 @@ kirigami-tutorial/
 
 ## Changes to existing code
 
-### CMakeLists.txt
-
-To make this and the following tutorials easier to follow, we will be disabling a feature that KDE applications using extra-cmake-modules (ECM) use by default that [optimizes string code](https://doc.qt.io/qt-6/qstring.html#QT_NO_CAST_FROM_ASCII). This allows us to bypass having to write [QStringLiteral()](https://doc.qt.io/qt-6/qstring.html#QStringLiteral) every time a string is introduced in our C++ code.
-
-In the root `CMakeLists.txt` file, add the following:
-
-{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/CMakeLists-root.txt" highlight="cmake" emphasize="12" >}}
-
-{{< alert title="🚨 Do not do this in production" color="danger" >}}
-
-Disabling this CMake flag is done for didactic purposes *only*. Production code should use QStringLiteral() or the [Qt string literals namespace](https://doc.qt.io/qt-6/qt-literals-stringliterals.html) instead where possible.
-
-{{< /alert >}}
-
 ### src/components/backend.h
 
 First, create the header file that will have code exposed to QML, namely the `Backend` type:
@@ -116,7 +102,7 @@ Add a new private section with the following:
 
 ```C++
 private:
-    QString m_introductionText = "Hello World!";
+    QString m_introductionText = QStringLiteral("Hello World!");
 ```
 
 And add the following to the existing public section:
@@ -155,6 +141,13 @@ The resulting code in that part of the file should look like this:
 Existing code:
 
 <details>
+<summary>CMakeLists.txt</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/CMakeLists.txt" highlight="cmake" >}}
+
+</details>
+
+<details>
 <summary>src/main.cpp</summary>
 
 {{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/main.cpp" highlight="cpp" >}}
@@ -185,13 +178,6 @@ Existing code:
 <br>
 
 Code written/modified in this page:
-
-<details>
-<summary>CMakeLists.txt</summary>
-
-{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/CMakeLists-root.txt" highlight="cmake" emphasize="12" >}}
-
-</details>
 
 <details>
 <summary>src/Main.qml</summary>
