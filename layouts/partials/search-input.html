@@ -51,3 +51,14 @@
   </template>
 </div>
 {{ end }}
+{{/* Offline search scripts: loaded only when search input is present */}}
+{{ $jsLunr := resources.Get "js/lunr.min.js" | fingerprint }}
+{{ $jsWorker := resources.Get "js/lunr-worker.js" | minify | resources.ExecuteAsTemplate "js/lunr-worker.min.js" . }}
+{{ $jsWorkerBundle := (slice $jsLunr $jsWorker) | resources.Concat "js/lunr-worker.min.js" }}
+
+<script>
+  window._site = window._site || {};
+  window._site.webWorker = '{{ $jsWorkerBundle.RelPermalink }}';
+</script>
+
+<script src="{{ $jsLunr.RelPermalink }}" integrity="{{ $jsLunr.Data.Integrity }}" crossorigin="anonymous"></script>

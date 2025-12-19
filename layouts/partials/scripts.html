@@ -10,18 +10,6 @@
 {{ $jsSearch = resources.Get "js/offline-search.js" }}
 {{ end }}
 {{ $js := (slice $jsBootstrap $jsBase $jsAnchor $jsSearch $jsCopytoClipboard) | resources.Concat "js/main.js" }}
-{{ if .Site.Params.offlineSearch }}
-{{ $jsLunr := resources.Get "js/lunr.min.js" | fingerprint }}
-{{ $jsWorker := resources.Get "js/lunr-worker.js" | minify | resources.ExecuteAsTemplate "js/lunr-worker.min.js" . }}
-{{/* Bundle lunr and the web worker together so we don't have to do any imports. */}}
-{{ $jsWorkerBundle := (slice $jsLunr $jsWorker) | resources.Concat "js/lunr-worker.min.js" }}
-<script>
-    // Save the path to the web worker, this also saves the file.
-    window._site = {};
-    window._site.webWorker = '{{ $jsWorkerBundle.RelPermalink }}';
-</script>
-<script src="{{ $jsLunr.RelPermalink }}" integrity="{{ $jsLunr.Data.Integrity }}" crossorigin="anonymous"></script>
-{{end}}
 {{ if hugo.IsServer }}
 <script src="{{ $js.RelPermalink }}"></script>
 {{ else }}
