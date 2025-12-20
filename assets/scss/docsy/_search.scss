@@ -46,5 +46,11 @@
 
   .card {
     margin-bottom: $spacer * .5;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+    &.active {
+      background-color: rgba(var(--bs-primary-rgb), 0.1);
+      border-color: var(--bs-primary);
+    }
   }
 }

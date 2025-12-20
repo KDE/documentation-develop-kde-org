@@ -47,6 +47,7 @@ window.addEventListener('load', async () => {
     searchInput.setAttribute('disabled', 'true');
 
     let popover = null;
+    let selectedIndex = -1;
 
     // Lunr Data
     let lunrIdx = 0;
@@ -54,12 +55,83 @@ window.addEventListener('load', async () => {
 
     searchInput.addEventListener('change', async (event) => {
         await render(event.target);
-        searchInput.blur();
     });
 
     searchForm.addEventListener('submit', (event) => {
         event.preventDefault();
     });
+
+    // Keyboard navigation handler - attached to document to catch events even when input loses focus
+    const handleKeyboardNav = (event) => {
+        // Only handle if search input exists and has value
+        if (!searchInput.value) {
+            return;
+        }
+
+        
+        if (!popover || !popover.tip) {
+            return;
+        }
+
+        const results = popover.tip.querySelectorAll('.card-link');
+        
+        if (results.length === 0) {
+            return;
+        }
+
+        let handled = false;
+
+        switch (event.key) {
+            case 'ArrowDown':
+                event.preventDefault();
+                selectedIndex = (selectedIndex + 1) % results.length;
+                updateSelection(results);
+                handled = true;
+                break;
+            case 'ArrowUp':
+                event.preventDefault();
+                selectedIndex = selectedIndex <= 0 ? results.length - 1 : selectedIndex - 1;
+                updateSelection(results);
+                handled = true;
+                break;
+            case 'Enter':
+                if (selectedIndex >= 0 && selectedIndex < results.length) {
+                    event.preventDefault();
+                    results[selectedIndex].click();
+                    handled = true;
+                }
+                break;
+            case 'Escape':
+                event.preventDefault();
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('change'));
+                selectedIndex = -1;
+                handled = true;
+                break;
+        }
+
+        if (handled) {
+            searchInput.focus();
+        }
+    };
+
+    // Attach to document to capture events even when focus moves
+    document.addEventListener('keydown', handleKeyboardNav);
+
+    const updateSelection = (results) => {
+        results.forEach((result, index) => {
+            const card = result.closest('.card');
+            if (!card) {
+                return;
+            }
+            if (index === selectedIndex) {
+                card.classList.add('active');
+                result.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            } else {
+                card.classList.remove('active');
+            }
+        });
+    };
 
     const init = async () => {
         const response = await fetch(offlineSearchSrc);
@@ -86,7 +158,7 @@ window.addEventListener('load', async () => {
           };
 
           lunrWorker.postMessage({'evt': 'init', 'data': data});
-        } catch {
+        } catch (error) {
           lunrIdx = lunr(function () {
               this.ref('ref');
               this.field('title', { boost: 2 });
@@ -112,6 +184,9 @@ window.addEventListener('load', async () => {
             popover.dispose();
             popover = null;
         }
+
+        // Reset selection index when rendering
+        selectedIndex = -1;
 
         const searchQuery = element.value;
 
