@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-17 01:55+0000\n"
-"PO-Revision-Date: 2025-12-18 16:27+0200\n"
+"PO-Revision-Date: 2025-12-19 21:59+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -8749,12 +8749,23 @@ msgid ""
 "(hence why a QApplication is used). This way, QtWidgets and QtQuick "
 "applications can mostly look the same and reuse style components."
 msgstr ""
+"З іншого боку, стиль [Qt Quick Controls](https://doc.qt.io/qt-6/"
+"qtquickcontrols-styles.html) керує більшою частиною зовнішнього вигляду "
+"програми на QtQuick. Це впливає на те, як виглядатимуть елементи керування "
+"QML. Стиль KDE `org.kde.desktop` (інакше відомий як [qqc2-desktop-style]"
+"(https://invent.kde.org/frameworks/qqc2-desktop-style)) є особливим і "
+"призначений для усування дублювання, запозичуючи елементи стилю з QStyle "
+"програми (саме тому використовується QApplication). Таким чином, програми "
+"QtWidgets та QtQuick можуть виглядати здебільшого однаково та повторно "
+"використовувати компоненти стилю."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:41
 msgid ""
 "QtQuick / Kirigami applications need to set both in C++ code. To set the "
 "QStyle, it needs to be added in two places."
 msgstr ""
+"Програми QtQuick / Kirigami мають встановлювати обидва у коді C++. Для "
+"встановлення QStyle, його слід додати у двох місцях."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:43
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:66
@@ -8770,6 +8781,9 @@ msgid ""
 "This is what is used in the Kirigami tutorial. You may otherwise load the "
 "Breeze style only on Windows where this is most relevant using an ifdef:"
 msgstr ""
+"Ось що використовується у покроковому підручнику з Kirigami. Крім того, ви "
+"можете завантажити стиль Breeze лише у вікнах, де це найбільш актуально, "
+"використовуючи ifdef:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:64
 msgid "The Qt Quick Controls style needs to be added in three places."
@@ -8791,6 +8805,11 @@ msgid ""
 "resulting application, allowing you to find missing packages or "
 "misconfigurations more easily."
 msgstr ""
+"Оскільки це залежність середовища виконання, її не потрібно встановлювати в "
+"CMake, який використовується під час збирання. Однак це може сигналізувати "
+"вам та іншим, чи є середовище належним і чи зможе він запустити програму-"
+"результат, що дозволить вам легше знаходити пакети, яких не вистачає, або "
+"неправильні налаштування."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:92
 msgid ""
@@ -8799,10 +8818,13 @@ msgid ""
 "is less strict and only searches for the QML module. The latter requires "
 "that you include ECMFindQmlModule:"
 msgstr ""
+"Команда `find_package()` спеціально шукає у файлах налаштувань CMake `qqc2-"
+"desktop-style`, тоді як `ecm_find_qmlmodule()` є менш суворою та шукає лише "
+"модуль QML. Остання вимагає включення ECMFindQmlModule:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:98
 msgid "Shipping icons"
-msgstr ""
+msgstr "Додавання піктограм"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:100
 msgid ""
@@ -8810,12 +8832,17 @@ msgid ""
 "to include [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) in "
 "your project."
 msgstr ""
+"Перше, що потрібно зробити, щоб програма використовувала піктограми Breeze, "
+"це включити [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) до "
+"вашого проєкту."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:102
 msgid ""
 "After this, some CMake commands are needed to bundle your application icon "
 "with the app."
 msgstr ""
+"Після цього може виникнути потреба у додаванні декількох команд CMake для "
+"пакування піктограми вашої програми разом із програмою."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:104
 msgid "KIconThemes"
@@ -8823,29 +8850,31 @@ msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:106
 msgid "This can be done with the following three steps:"
-msgstr ""
+msgstr "Зробити це можна за допомогою таких трьох кроків:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:108
 msgid "Adding it as a dependency in Craft:"
-msgstr ""
+msgstr "Додавання її як залежності у Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:115
 msgid "Adding it as a dependency in CMake:"
-msgstr ""
+msgstr "Додавання її як залежності у CMake:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:129
 msgid "Using it in C++ code, in the `main.cpp` file:"
-msgstr ""
+msgstr "Використання її у коді C++, у файлі `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:144
 msgid ""
 "Note that although the project name and CMake call uses plural (KIconThemes, "
 "KF6IconThemes), the C++ call uses singular (KIconTheme)."
 msgstr ""
+"Зауважте, що хоча у назві проєкту та виклику CMake використано множину "
+"(KIconThemes, KF6IconThemes), виклик C++ використовує однину (KIconTheme)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:146
 msgid "KIconThemes needs to be initialized before the application."
-msgstr ""
+msgstr "KIconThemes має бути ініціалізовано до самої програми."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
 msgid "Application icon"
@@ -8857,6 +8886,9 @@ msgid ""
 "as a [QML resource](https://doc.qt.io/qt-6/resources.html) and as a part of "
 "icon installation."
 msgstr ""
+"Якщо у вашої програми є піктограма, її слід додати до вашого проєкту як "
+"[ресурс QML](https://doc.qt.io/qt-6/resources.html) і як частину "
+"встановлення піктограм."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:152
 msgid ""
@@ -8865,14 +8897,18 @@ msgid ""
 "needed. Usually the application icon consists of a primary SVG icon, paired "
 "with multiple PNG icon sizes."
 msgstr ""
+"Зазвичай у Linux піктограму програми можна просто встановити у відповідний "
+"каталог, і, якщо потрібно, програма її отримає. Зазвичай піктограма програми "
+"складається з основної піктограми у форматі SVG, поєднаної з піктограмами у "
+"форматі PNG декількох розмірів."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:154
 msgid "Installing the SVG icon is done like this in CMake:"
-msgstr ""
+msgstr "Встановлення піктограми SVG виконується ось так у CMake:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:160
 msgid "And installing the PNG icons is done like this:"
-msgstr ""
+msgstr "А встановлення піктограм PNG виконується десь так:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:175
 msgid ""
@@ -8883,6 +8919,13 @@ msgid ""
 "for `/usr`, `/usr/local` or `~/.local`. Note how in the PNGs' case the icon "
 "name translates into the path it will have in the filesystem."
 msgstr ""
+"При встановленні піктограми у Linux, піктограма у форматі PNG, наприклад `48-"
+"apps-myapp.png`, встановлюється до `${INSTALL_PREFIX}/share/icons/"
+"hicolor/48x48/apps/myapp.png`, а піктограма SVG встановлюється до `"
+"${INSTALL_PREFIX}/share/icons/hicolor/scalable/apps/org.kde.myapp.svg`, де `"
+"${INSTALL_PREFIX}` зазвичай є каталогом `/usr`, `/usr/local` або `~/.local`. "
+"Зауважте, як у випадку PNG назва піктограми перетворюється на шлях, за яким "
+"її буде збережено у файловій системі."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:177
 msgid ""
@@ -8901,6 +8944,11 @@ msgid ""
 "that has an [icon.name](https://doc.qt.io/qt-6/qtquickcontrols-icons.html) "
 "property."
 msgstr ""
+"Після встановлення піктограми таким чином у коді QML її можна викликати "
+"просто за допомогою `myapp` або `org.kde.myapp`, як це було б з [QIcon::"
+"fromTheme()](doc.qt.io/qt-6/qicon.html#fromTheme). Цим можна скористатися у "
+"будь-якому елементі керування QML, який має властивість [icon.name](https://"
+"doc.qt.io/qt-6/qtquickcontrols-icons.html)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:181
 msgid ""
@@ -8910,6 +8958,12 @@ msgid ""
 "or SVG file can be embedded into the app as a Qt resource file in "
 "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgstr ""
+"У Windows немає такого стандартного каталогу, і встановлення піктограми ні "
+"на що не вплине; піктограму слід включити до програми. Для цього файл PNG "
+"можна записати до власного каталогу встановлення за допомогою "
+"`ecm_add_app_icon()`, а файл PNG або SVG можна вбудувати в програму як файл "
+"ресурсів Qt за допомогою `ecm_add_qml_module()` або "
+"`ecm_target_qml_sources()`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:183
 msgid "The PNG application icon is installed with:"
@@ -8918,6 +8972,7 @@ msgstr "Піктограма програми PNG встановлюється �
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:189
 msgid "And the main application icon is bundled as a Qt resource with:"
 msgstr ""
+"А основну піктограму програми можна додати до пакета як ресурс Qt, ось так:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:196
 msgid ""
@@ -8926,6 +8981,10 @@ msgid ""
 "control that has an [icon.source](https://doc.qt.io/qt-6/qtquickcontrols-"
 "icons.html) property."
 msgstr ""
+"Це зробить піктограму програми доступною у формі ресурсу Qt у файлі `qrc:/qt/"
+"qml/org/kde/myapp/org.kde.myapp.svg`. Цим можна скористатися з будь-яким "
+"елементом керування QML, який має властивість [icon.source](https://doc.qt."
+"io/qt-6/qtquickcontrols-icons.html)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:198
 msgid ""
@@ -8933,6 +8992,9 @@ msgid ""
 "Traditionally, an `icons/` folder is created at the root of the project for "
 "storing all icons, as they don't really count as source files."
 msgstr ""
+"Шлях `RESOURCES` залежить від місця зберігання піктограм. Традиційно для "
+"зберігання усіх піктограм створюють теку `icons/` у кореневому каталозі "
+"проєкту, оскільки система не вважає їх справжніми файлами початкового коду."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:200
 msgid ""
@@ -8944,6 +9006,15 @@ msgid ""
 "qicon.html#fromTheme) in the call to [QGuiApplication::setWindowIcon()]"
 "(https://doc.qt.io/qt-6/qguiapplication.html#windowIcon-prop):"
 msgstr ""
+"Після встановлення піктограм (для Linux) та їхнього включення до комплекту "
+"(для Windows та Android) ви можете налаштувати їх у коді. У коді QML, для "
+"сумісності як з Windows, так і з Android, слід використовувати піктограму, "
+"яка входить до комплекту; у коді C++, зокрема під час налаштування "
+"піктограми вікна, можна використовувати типову піктограму теми, а "
+"піктограму, яка входить до комплекту, як резервний варіант за допомогою "
+"[QIcon::fromTheme()](https://doc.qt.io/qt-6/qicon.html#fromTheme) у виклику "
+"[QGuiApplication::setWindowIcon()](https://doc.qt.io/qt-6/qguiapplication."
+"html#windowIcon-prop):"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:206
 msgid "Kirigami icons"
@@ -8955,6 +9026,9 @@ msgid ""
 "an icon theme, it is possible to bundle the necessary Breeze icons together "
 "with your Windows application."
 msgstr ""
+"Хоча у Windows немає стандартного каталогу для встановлення піктограм з теми "
+"піктограм, є можливість скомпонувати необхідні піктограми Breeze із вашою "
+"програмою Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:210
 msgid ""
@@ -8962,17 +9036,23 @@ msgid ""
 "up for the project and Breeze icons are included as a dependency in your "
 "project."
 msgstr ""
+"Це буде виконано Craft автоматично, якщо правильно налаштовано KIconThemes "
+"для проєкту, а значки Breeze включено як залежність до вашого проєкту."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:212
 msgid ""
 "To set up KIconThemes, see the above section [KIconThemes](#kiconthemes)."
 msgstr ""
+"Щодо налаштовування KIconThemes, див. розділ вище щодо [KIconThemes]"
+"(#kiconthemes)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:214
 msgid ""
 "To add Breeze icons as a dependency for your project, add this to your Craft "
 "blueprint:"
 msgstr ""
+"Щоб додати піктограми Breeze як залежність для вашого проєкту, додайте цей "
+"код до вашого плану Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:222
 msgid ""
@@ -8980,6 +9060,9 @@ msgid ""
 "application as a resource: you can just use a `QIcon::fromTheme()` name, "
 "such as `kde` or `application-exit-symbolic`."
 msgstr ""
+"Таким чином, вам не потрібно буде вручну додавати будь-які піктограми Breeze "
+"до вашої програми як ресурс: ви можете просто скористатися назвою `QIcon::"
+"fromTheme()`, такою як `kde` або `application-exit-symbolic`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:224
 msgid "Building"
@@ -8991,6 +9074,9 @@ msgid ""
 "Windows with Craft: Building your own projects on Windows](/docs/getting-"
 "started/building/craft#custom-projects)."
 msgstr ""
+"Щоб зібрати вашу програму у Windows, скористайтеся підручником [Збирання "
+"програм KDE у Windows за допомогою Craft: Збирання ваших власних проєктів у "
+"Windows](/docs/getting-started/building/craft#custom-projects)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:228
 msgid "CI builds"
@@ -9002,6 +9088,9 @@ msgid ""
 "KDE infrastructure for its code hosting (KDE Invent), it is possible to "
 "configure Windows CI/CD jobs."
 msgstr ""
+"Якщо проєкт належним чином налаштовано для збирання у Windows, і у ньому "
+"використано інфраструктуру KDE для розміщення коду (KDE Invent), можна "
+"налаштувати завдання Windows CI/CD."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:232
 msgid ""
@@ -9010,6 +9099,11 @@ msgid ""
 "as mentioned in [Continuous Integration System](https://community.kde.org/"
 "Infrastructure/Continuous_Integration_System)."
 msgstr ""
+"Для цього вам потрібно буде додати відповідні шаблони CI для Windows за "
+"допомогою файла `.gitlab-ci.yaml` та перелічити ваші залежності у файлі `."
+"kde-ci.yaml`, як зазначено у підручнику щодо [Системи безперервної "
+"інтеграції](https://community.kde.org/Infrastructure/"
+"Continuous_Integration_System)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:234
 msgid "Troubleshooting"
@@ -9020,29 +9114,34 @@ msgid ""
 "If you have problems adapting your application to Windows, you can visit the "
 "following rooms on [Matrix](https://community.kde.org/Matrix):"
 msgstr ""
+"Якщо у вас виникли проблеми з адаптацією вашої програми до Windows, ви "
+"можете відвідати такі кімнати у [Matrix](https://community.kde.org/Matrix):"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:238
 msgid "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
-msgstr ""
+msgstr "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:239
 msgid ""
 "[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
 "kde.org)"
 msgstr ""
+"[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
+"kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:240
 msgid ""
 "[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 msgstr ""
+"[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:241
 msgid "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
-msgstr ""
+msgstr "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Setup with C++"
-msgstr ""
+msgstr "Робота з C++"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Create your first Kirigami application with C++\n"
