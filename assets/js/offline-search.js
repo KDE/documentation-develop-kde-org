@@ -10,6 +10,29 @@ window.addEventListener('load', async () => {
         return;
     }
 
+    document.addEventListener('keydown', (event) => {
+        const isMac = navigator.platform.toUpperCase().includes('MAC');
+        const isK = event.key.toLowerCase() === 'k';
+    
+        // Ignore if typing in an input/textarea
+        const tag = document.activeElement?.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    
+        // / hotkey
+        if (event.key === '/') {
+            event.preventDefault();
+            searchInput.focus();
+            return;
+        }
+    
+        // Ctrl+K / Cmd+K
+        if (isK && (event.ctrlKey || (isMac && event.metaKey))) {
+            event.preventDefault();
+            searchInput.focus();
+        }
+    });
+    
+
     const searchResultsTemplate = document.getElementById('search-results-template');
     const searchResultsCardTemplate = document.getElementById('search-results-card-template')
     const offlineSearchSrc = searchInput.dataset.offlineSearchIndexJsonSrc;
