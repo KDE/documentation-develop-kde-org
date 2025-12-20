@@ -1,7 +1,7 @@
 ---
 title: Using Rust bindings for KDE Frameworks
 weight: 4
-group: introduction
+group: bindings
 description: >
     Extend your application with KDE libraries
 ---
