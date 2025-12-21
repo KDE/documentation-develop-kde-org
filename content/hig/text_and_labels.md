@@ -62,6 +62,12 @@ This means beginning the label with an action verb, and phrasing it as a command
 
 **Good:** Raise Maximum Volume
 
+Use positive phrasing; describe what controls will do when enabled, not what they won’t do when disabled:
+
+**Bad:** When disabled, prevent the system from going to sleep.
+
+**Good:** Allow the system to go to sleep.
+
 Phrase longer text impersonally. Avoid the word “you” in sentences that instruct the user to do something, as it sounds accusatory in English — particularly at the beginning of a sentence. This is less important for questions and descriptions, but try to minimize it anyway.
 
 **Bad:** You are not authorized to access the file.
