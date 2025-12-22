@@ -44,13 +44,12 @@
   // Override bootstrap default style (max-width: $popover-max-width;)
   max-width: 90%;
 
-  .card {
-    margin-bottom: $spacer * .5;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  .search-result-item {
+    cursor: pointer;
 
     &.active {
       background-color: rgba(var(--bs-primary-rgb), 0.1);
-      border-color: var(--bs-primary);
+      color: var(--bs-body-color);
     }
   }
 }

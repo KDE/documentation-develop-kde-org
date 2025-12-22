@@ -31,24 +31,19 @@
       </span>
       <i class="icon icon_paint-none search-result-close-button p-1"></i>
     </div>
-    <div class="search-results-body overflow-auto">
+    <div class="search-results-body list-group list-group-flush">
       <p class="search-no-results d-none">
         {{ T "ui_search_no_results" }}
       </p>
     </div>
   </template>
-  <template id="search-results-card-template">
-    <div class="card">
-      <div class="card-header">
-        <a class="card-link" href="#">Title</a>
-      </div>
-      <div class="card-body">
-        <p class="card-text text-muted">
-          Excerpt
-        </p>
-      </div>
-    </div>
-  </template>
+  <template id="search-results-item-template">
+    <a href="#"
+       class="list-group-item list-group-item-action search-result-item">
+      <div class="fw-semibold search-result-title">Title</div>
+      <div class="small text-muted search-result-excerpt">Excerpt</div>
+    </a>
+  </template>  
 </div>
 {{ end }}
 {{/* Offline search scripts: loaded only when search input is present */}}

@@ -34,12 +34,12 @@ window.addEventListener('load', async () => {
     
 
     const searchResultsTemplate = document.getElementById('search-results-template');
-    const searchResultsCardTemplate = document.getElementById('search-results-card-template')
+    const searchResultsItemTemplate = document.getElementById('search-results-item-template')
     const offlineSearchSrc = searchInput.dataset.offlineSearchIndexJsonSrc;
     const offlineSearchBase = searchInput.dataset.offlineSearchBaseHref;
     const offlineSearchSection = searchInput.dataset.offlineSearchSection;
 
-    if (!searchResultsCardTemplate || !searchResultsTemplate) {
+    if (!searchResultsItemTemplate || !searchResultsTemplate) {
         return;
     }
 
@@ -79,7 +79,7 @@ window.addEventListener('load', async () => {
             return;
         }
 
-        const results = popover.tip.querySelectorAll('.card-link');
+        const results = popover.tip.querySelectorAll('.search-result-item');
         
         if (results.length === 0) {
             return;
@@ -125,19 +125,16 @@ window.addEventListener('load', async () => {
     document.addEventListener('keydown', handleKeyboardNav);
 
     const updateSelection = (results) => {
-        results.forEach((result, index) => {
-            const card = result.closest('.card');
-            if (!card) {
-                return;
-            }
+        results.forEach((item, index) => {
             if (index === selectedIndex) {
-                card.classList.add('active');
-                result.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                item.classList.add('active');
+                item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
             } else {
-                card.classList.remove('active');
+                item.classList.remove('active');
             }
         });
     };
+    
 
     const showLoadingSpinner = () => {
         searchInput.setAttribute('disabled', 'true');
@@ -309,17 +306,16 @@ window.addEventListener('load', async () => {
             searchNoResults.style.display = 'none';
 
             results.forEach((r) => {
-               const cardFragment = searchResultsCardTemplate.content.cloneNode(true);
-               const doc = resultDetails.get(r.ref);
-
-               const link = cardFragment.querySelector('.card-link');
-               link.href = offlineSearchBase + r.ref.replace(/^\//, '');
-               link.innerText = doc.title;
-
-               const body = cardFragment.querySelector('.card-body');
-               body.innerText = doc.excerpt;
-
-               searchResultBody.appendChild(cardFragment);
+              const itemFragment = searchResultsItemTemplate.content.cloneNode(true);
+              const doc = resultDetails.get(r.ref);
+              
+              const item = itemFragment.querySelector('.search-result-item');
+              item.href = offlineSearchBase + r.ref.replace(/^\//, '');
+              
+              item.querySelector('.search-result-title').innerText = doc.title;
+              item.querySelector('.search-result-excerpt').innerText = doc.excerpt;
+              
+              searchResultBody.appendChild(itemFragment);              
             });
         }
 
