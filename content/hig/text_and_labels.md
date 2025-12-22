@@ -216,6 +216,7 @@ Use appropriate Unicode symbols rather than handmade approximations. This makes 
 - `’` (`U+2019`) instead of `'` for apostrophes
 - `–` (`U+2013`) instead of `-` for [date ranges](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use); e.g. `2020–2024`
 - ` — ` (`U+2014`) instead of `-`, ` - `, or `--` for [interjections](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use)
+- `‒` (`U+2012`) instead of `-` for [separating number values](https://en.wikipedia.org/wiki/Dash#Figure_dash) like dates or telephone numbers
 - `&` (`U+0026`) instead of the word “and” to join sets of exactly two items, e.g. “Input & Output”
 - `©` (`U+00A9`) `™` (`U+2122`), and `®` (`U+00AE`); instead of `(C)`, `TM`, and `(R)`
 
