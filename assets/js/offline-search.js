@@ -43,19 +43,23 @@ window.addEventListener('load', async () => {
         return;
     }
 
-    // Start disabled
-    searchInput.setAttribute('disabled', 'true');
-
     let popover = null;
     let selectedIndex = -1;
+    let indexInitialized = false;
+    let indexInitializing = false;
 
     // Lunr Data
-    let lunrIdx = 0;
+    let lunrIdx = null;
     let resultDetails = new Map(); // Will hold the data for the search results (titles and summaries)
+    
+    let inputTimeout;
 
-    searchInput.addEventListener('change', async (event) => {
-        await render(event.target);
-    });
+    searchInput.addEventListener('input', (event) => {
+        clearTimeout(inputTimeout);
+        inputTimeout = setTimeout(() => {
+            handleSearchInput(event.target);
+        }, 150);
+    });    
 
     searchForm.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -63,6 +67,8 @@ window.addEventListener('load', async () => {
 
     // Keyboard navigation handler - attached to document to catch events even when input loses focus
     const handleKeyboardNav = (event) => {
+        if (indexInitializing) return;
+
         // Only handle if search input exists and has value
         if (!searchInput.value) {
             return;
@@ -104,7 +110,7 @@ window.addEventListener('load', async () => {
             case 'Escape':
                 event.preventDefault();
                 searchInput.value = '';
-                searchInput.dispatchEvent(new Event('change'));
+                render(searchInput);
                 selectedIndex = -1;
                 handled = true;
                 break;
@@ -133,53 +139,112 @@ window.addEventListener('load', async () => {
         });
     };
 
-    const init = async () => {
-        const response = await fetch(offlineSearchSrc);
-        if (!response.ok) {
-            console.warn('Could not fetch offline search data!');
+    const showLoadingSpinner = () => {
+        searchInput.setAttribute('disabled', 'true');
+        searchInput.classList.add('search-loading')
+    };
+
+    const hideLoadingSpinner = () => {
+        searchInput.removeAttribute('disabled');
+        searchInput.classList.remove('search-loading')
+    };
+
+    const initializeIndex = async () => {
+        // Prevent multiple simultaneous initializations
+        if (indexInitialized || indexInitializing) {
             return;
         }
 
-        let data = await response.json();
-        data = data.filter(doc => doc.ref.indexOf(`/${offlineSearchSection}/`) === 0); // Index only pages from current section
+        indexInitializing = true;
+        showLoadingSpinner();
 
         try {
-          const lunrWorker = new Worker(window._site.webWorker);
-
-          lunrWorker.onmessage = (event) => {
-            const { evt, data } = event.data;
-            if (evt === 'index') {
-              lunrIdx = lunr.Index.load(data[0]);
-              resultDetails = data[1];
-
-              searchInput.removeAttribute('disabled');
-              searchInput.dispatchEvent(new SubmitEvent('change', {submitter: searchInput}));
+            const response = await fetch(offlineSearchSrc);
+            if (!response.ok) {
+                console.warn('Could not fetch offline search data!');
+                hideLoadingSpinner();
+                indexInitializing = false;
+                return;
             }
-          };
 
-          lunrWorker.postMessage({'evt': 'init', 'data': data});
+            let data = await response.json();
+            data = data.filter(doc => doc.ref.indexOf(`/${offlineSearchSection}/`) === 0); // Index only pages from current section
+
+            try {
+                const lunrWorker = new Worker(window._site.webWorker);
+
+                lunrWorker.onmessage = (event) => {
+                    const { evt, data } = event.data;
+                    if (evt === 'index') {
+                        lunrIdx = lunr.Index.load(data[0]);
+                        resultDetails = data[1];
+
+                        indexInitialized = true;
+                        indexInitializing = false;
+                        hideLoadingSpinner();
+                        
+                        // Perform search with current query
+                        render(searchInput);
+                    }
+                };
+
+                lunrWorker.postMessage({'evt': 'init', 'data': data});
+            } catch (error) {
+                lunrIdx = lunr(function () {
+                    this.ref('ref');
+                    this.field('title', { boost: 2 });
+                    this.field('body');
+
+                    data.forEach((doc) => {
+                        this.add(doc);
+
+                        resultDetails.set(doc.ref, {
+                            title: doc.title,
+                            excerpt: doc.excerpt,
+                        });
+                    });
+                });
+                
+                indexInitialized = true;
+                indexInitializing = false;
+                hideLoadingSpinner();
+                
+                // Perform search with current query
+                render(searchInput);
+            }
         } catch (error) {
-          lunrIdx = lunr(function () {
-              this.ref('ref');
-              this.field('title', { boost: 2 });
-              this.field('body');
+            console.error('Error initializing search index:', error);
+            hideLoadingSpinner();
+            indexInitializing = false;
+        }
+    };
 
-              data.forEach((doc) => {
-                  this.add(doc);
+    const handleSearchInput = async (element) => {
+        const searchQuery = element.value;
 
-                  resultDetails.set(doc.ref, {
-                      title: doc.title,
-                      excerpt: doc.excerpt,
-                  });
-              });
-          });
-          searchInput.removeAttribute('disabled');
-          searchInput.dispatchEvent(new SubmitEvent('change', {submitter: searchInput}));
+        // If query is empty, just render (clear results)
+        if (searchQuery === '') {
+            render(element);
+            return;
         }
 
-    }
+        // If index not initialized, initialize it first
+        if (!indexInitialized && !indexInitializing) {
+            await initializeIndex();
+            // render() will be called automatically after initialization completes
+            return;
+        }
 
-    const render = async (element) => {
+        // If index is currently initializing, wait (render will be called after init)
+        if (indexInitializing) {
+            return;
+        }
+
+        // Index is ready, perform search
+        render(element);
+    };
+
+    const render = (element) => {
         if (popover) {
             popover.dispose();
             popover = null;
@@ -190,9 +255,17 @@ window.addEventListener('load', async () => {
 
         const searchQuery = element.value;
 
-        if (lunrIdx === null || searchQuery === '') {
+        if (!indexInitialized || lunrIdx === null) {
             return;
         }
+
+        if (searchQuery === '') {
+            if (popover) {
+                popover.dispose();
+                popover = null;
+            }
+            return;
+        }        
 
         const results = lunrIdx
             .query((q) => {
@@ -257,7 +330,7 @@ window.addEventListener('load', async () => {
         element.addEventListener('shown.bs.popover', () => {
             document.querySelector('.search-result-close-button').addEventListener('click', () => {
                searchInput.value = '';
-               searchInput.dispatchEvent(new SubmitEvent('change', {submitter: searchInput}));
+               render(searchInput);
             });
         })
 
@@ -274,9 +347,6 @@ window.addEventListener('load', async () => {
             allowList: allowList,
         });
         popover.show();
-
     };
 
-
-    await init();
 });
