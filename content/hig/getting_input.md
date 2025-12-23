@@ -26,7 +26,7 @@ KDE apps mostly use standard input controls such as [buttons, menus, checkboxes,
 The [Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html), [ToolButton](https://doc.qt.io/qt-6/qml-qtquick-controls-toolbutton.html), and [RoundButton](https://doc.qt.io/qt-6/qml-qtquick-controls-roundbutton.html) controls all initiate a one-time action when pressed. This is where and how to use them:
 
 - Use a ToolButton on a toolbar in the header or footer position or a window, page, or scrollable view.
-- Use a RoundButton when a button needs to be overlaid in a “floating” position above a content view, especially an image view. This kind of button never has text, so choose an icon that [conveys the button's action perfectly](../icons/#icons-only-buttons), with no ambiguity.
+- Use a RoundButton overlaid in a fixed “floating” position over a scrollable content view, especially an image view. This kind of button never has text, so choose an icon that [conveys the button's action perfectly](../icons/#icons-only-buttons), with no ambiguity.
 - For all other cases, use a Button.
 
 Follow the [standard labeling guidelines](../text_and_labels/#mood-and-tone) for buttons with visible text.
