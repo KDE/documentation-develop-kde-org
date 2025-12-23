@@ -58,7 +58,7 @@ Widgets installed by the user (without root) like when you "Install New Widgets"
 
 `KPackageStructure` is also needed to just define that this package is a plasma widget, and where its entry point is.
 
-`"X-Plasma-API-Minimum-Version" : "6.0"` is required to enable Plasma 6 support. Plasmoids without this key are assumed to only work with Plasma 5 and will not be mad available in the UI.
+`"X-Plasma-API-Minimum-Version" : "6.0"` is required to enable Plasma 6 support. Plasmoids without this key are assumed to only work with Plasma 5 and will not be made available in the UI.
 
 For Plasma 6 changes, read the [Porting Plasmoids to KF6]({{< ref "porting_kf6.md" >}}) guide.
 
