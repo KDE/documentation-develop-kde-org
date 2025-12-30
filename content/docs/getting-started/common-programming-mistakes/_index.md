@@ -60,7 +60,7 @@ You may notice that null pointers are marked variously in one of four ways: 0,
 more type safety is possible due to stricter type checking.  Modern C++11
 implementations (and all C++14 implementations) define NULL to equal the
 special value nullptr. Nullptr can be automatically cast to boolean false, but
-a cast to an integer type will fail.  This is useful to avoid accidentally.
+a cast to an integer type will fail.
 Older C++ implementations before c++11 simply defined NULL to 0L or 0, which
 provides no additional type safety - one could assign it to an integer
 variable, which is obviously wrong. For code which does not need to support
