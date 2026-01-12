@@ -55,10 +55,3 @@ void Model::addSpecies(const QString& species) {
     endInsertRows();
     Q_EMIT dataChanged(index(0), index(m_list.size() - 1));
 }
-
-void Model::deleteSpecies(const QString &speciesName, const int& rowIndex) {
-    beginRemoveRows(QModelIndex(), rowIndex, rowIndex);
-    m_list.remove(speciesName);
-    endRemoveRows();
-    Q_EMIT dataChanged(index(0), index(m_list.size() - 1));
-}

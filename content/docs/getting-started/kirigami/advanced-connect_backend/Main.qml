@@ -16,14 +16,9 @@ Kirigami.ApplicationWindow {
         isMenu: true
         actions: [
             Kirigami.Action {
-                text: i18n("Exposing to QML Tutorial")
+                text: i18n("Exposing to QML")
                 icon.name: "kde"
                 onTriggered: pageStack.push(Qt.createComponent("org.kde.tutorial.components", "ExposePage"))
-            },
-            Kirigami.Action {
-                text: i18n("C++ models in QML tutorial")
-                icon.name: "kde"
-                onTriggered: pageStack.push(Qt.createComponent("org.kde.tutorial.components", "ModelsPage"))
             },
             Kirigami.Action {
                 text: i18n("Quit")

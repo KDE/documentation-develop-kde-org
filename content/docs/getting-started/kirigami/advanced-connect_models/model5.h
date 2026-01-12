@@ -15,8 +15,6 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
-    Q_INVOKABLE void addSpecies(const QString &species);
-    Q_INVOKABLE void deleteSpecies(const QString &speciesName, const int &rowIndex);
 private:
     QMap<QString, QStringList> m_list = {
         {"Feline", {"Tigress",   "Waai Fuu"}},

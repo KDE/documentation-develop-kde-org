@@ -1,11 +1,11 @@
 ---
 title: Connect C++ models to your QML user interface
-weight: 71
+weight: 72
 description: Data from the C++ backend to the QML frontend
 group: data
 ---
 
-As shown from the [previous
+As shown in the [previous
 tutorial](/docs/getting-started/kirigami/advanced-connect_backend/), you can
 connect C++ code to QML by creating a class that will be treated as just
 another component in QML. However, you may want to represent more complicated
@@ -17,49 +17,98 @@ We can create our own [models](docs:qtcore;qabstractlistmodel.html) from
 the C++ side, and declare how the data from that model should be represented on
 the QML frontend.
 
-## Preparing the Class
+It is strongly recommended that you read the [List views](/docs/getting-started/kirigami/components-listview) tutorial before this one.
 
-In this tutorial, we will create a class that contains a QMap, where a QString
-is used as a key and QStringList objects are used as values. The frontend will
-be able to read and display the keys and values and be simple to use just like a
-one-dimensional array. It should look similar to a QML ListModel.
+The code used for this tutorial will be based on the previous page, [Connect logic to your QML user interface](/docs/getting-started/kirigami/advanced-connect_backend).
 
-To do this, we need to declare a class that inherits from
-[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add in
-some add data to the QMap. These declarations will be located in
-`model.h`.
+## Project structure
 
-{{< alert title="Note" color="info" >}}
+```
+kirigami-tutorial/
+├── CMakeLists.txt --------------------- # Modified for didactic purposes
+├── org.kde.tutorial.desktop
+└── src/
+    ├── CMakeLists.txt
+    ├── main.cpp
+    ├── Main.qml ----------------------- # Modified
+    └── components/
+        ├── CMakeLists.txt ------------- # Modified
+        ├── AddDialog.qml
+        ├── KountdownDelegate.qml
+        ├── ExposePage.qml
+        ├── ModelsPage.qml ------------- # New
+        ├── model.h -------------------- # New
+        ├── model.cpp ------------------ # New
+        ├── backend.h
+        └── backend.cpp
+```
 
-If you are following along, please remember to update your `CMakeLists.txt` file!
+## Creating a new page for the models tutorial
+
+Before doing anything, let's add a new page to our QML code.
+
+First, in `src/Main.qml`, add the following action to the global drawer:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/Main1.qml" highlight="qml" start=15 lines=21 emphasize=9-13 >}}
+
+Then, create a new `src/components/ModelsPage.qml` with the following contents:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/ModelsPage1.qml" highlight="qml" >}}
+
+And finally add it to `src/components/CMakeLists.txt`:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/CMakeLists.txt" highlight="cmake" emphasize=13 >}}
+
+This will serve as the canvas for this tutorial page.
+
+## Using raw strings
+
+To make this tutorial easier to understand how the model is populated, we will be disabling a feature that KDE applications using extra-cmake-modules (ECM) use by default that [optimizes string code](https://doc.qt.io/qt-6/qstring.html#QT_NO_CAST_FROM_ASCII). This allows us to bypass having to write [QStringLiteral()](https://doc.qt.io/qt-6/qstring.html#QStringLiteral) every time a string is introduced in our C++ code, which will be useful for the code in the upcoming header file.
+
+In the root `CMakeLists.txt` file, add the following:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/CMakeLists-root.txt" highlight="cmake" emphasize="12" >}}
+
+{{< alert title="🚨 Do not do this in production" color="danger" >}}
+
+Disabling this CMake flag is done for didactic purposes *only*. Production code should use QStringLiteral() or the [Qt string literals namespace](https://doc.qt.io/qt-6/qt-literals-stringliterals.html) instead where possible.
 
 {{< /alert >}}
 
-```cpp
-#pragma once
+## Preparing the Class
 
-#include <QAbstractListModel>
+We will create a class that contains a [QMap](https://doc.qt.io/qt-6/qmap.html),
+where a [QString](https://doc.qt.io/qt-6/qstring.html)
+is used as a key and [QStringList](https://doc.qt.io/qt-6/qstringlist.html) objects are used as values.
+The frontend will be able to read and display the keys and values and be simple to use just like a
+one-dimensional array. It should look similar to a QML ListModel.
 
-class Model : public QAbstractListModel {
-private:
-    QMap<QString, QStringList> m_list = {
-            {"Feline", {"Tigress",   "Waai Fuu"}},
-            {"Fox",    {"Carmelita", "Diane", "Krystal"}},
-            {"Goat",   {"Sybil",     "Toriel"}}
-    };
-};
-```
+To do this, we need to create a class that inherits from
+[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add
+some data to the QMap. These declarations will be located in
+`model.h`.
 
-Of course, we can't just display this class as is. We also need to tell QML on
+Create two new files, `src/components/model.h` and `src/components/model.cpp`.
+
+Add those two new files to `src/components/CMakeLists.txt`:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/CMakeLists2.txt" highlight="cmake" emphasize=19 >}}
+
+Add the following as the initial contents to `src/components/model.h`:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model1.h" highlight="cpp" >}}
+
+Of course, we can't just display this class as is. We also need to tell QML
 how to represent this data in the class. We can do this by overriding three
-virtual functions that are essential at doing this, all of which do their own
-tasks.
+essential virtual functions:
 
-- `rowCount()` - Think of this function as a way to tell QML how many items are
-  in the model to represent.
-- `roleNames()` - You can think of role names as property names
-attached to data in QML. This function allows you to create those roles.
-- `data()` - This function is called when you want to retrieve the data
+- [rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) -
+Think of this function as a way to tell QML how many items the model should present.
+- [roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames) -
+You can think of role names as property names attached to data in QML.
+This function allows you to create those roles.
+- [data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data) -
+This function is called when you want to retrieve the data
 that corresponds to the role names from the model.
 
 {{< alert title="Note" color="info" >}}
@@ -81,65 +130,34 @@ can just think of "rows" as "number of elements."
 
 ### Overriding and Implementing `rowCount()`
 
-Let's override the function in the header file. The `rowCount()` comes with its
-own parameter, but will not be used in this example and is excluded.
+Let's override the function in the `src/components/model.h` header file. The [rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) 
+function comes with its own parameter, but it will not be used in this example and so doesn't need to be named.
 
-```cpp
-class Model : public QAbstractListModel {
-...
-public:
-    int rowCount(const QModelIndex &) const override;
-};
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model2.h" highlight="cpp" emphasize=8 >}}
 
-Then, let's declare how many rows are in this model in `model.cpp`.
+Then, let's declare how many rows are in this model in `src/components/model.cpp`:
 
-```cpp
-#include "model.h"
-
-int Model::rowCount(const QModelIndex &) const {
-    return m_list.count();
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model1.cpp" highlight="cpp" >}}
 
 ### Overriding and Implementing `roleNames()`
 
 Before we override `roleNames()`, we need to declare what the roles are in the
-C++ side using an public `enum` variable. The reason for this is because these
-values from the `enum` variable are passed into `data()` every time QML
+C++ side using a public enum. The reason for this is because these
+enum values are passed into `data()` every time QML
 accesses a corresponding role, and as such we can make `data()` return what we
 want.
 
-Let's begin with creating the `enum` variable for roles, where each value is a
+Let's begin with creating the enum for roles in `src/components/model.h`, where each value is a
 role for the C++ side.
 
-```cpp
-class Model : public QAbstractListModel {
-...
-public:
-    enum Roles {
-        SpeciesRole = Qt::UserRole,
-        CharactersRole
-    };
-
-    ...
-    QHash<int, QByteArray> roleNames() const override;
-};
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model3.h" highlight="cpp" emphasize="8-11 13" >}}
 
 Once we have that settled, we can finally create what these roles are in the
 QML side using a [QHash](docs:qtcore;qhash.html) where the keys are the
-enumerated values paired with [QByteArrays](docs:qtcore;qbytearray.html). The
-text in the QByteArray is what's used in the actual QML code.
+enumerated values paired with [QByteArrays](docs:qtcore;qbytearray.html). This should go to `src/components/model.cpp`.
+The text in the QByteArray is what's used in the actual QML code.
 
-```cpp
-QHash<int, QByteArray> Model::roleNames() const {
-    return {
-        {SpeciesRole,   "species"},
-        {CharactersRole, "characters"}
-    };
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model2.cpp" highlight="cpp" emphasize="7-12" >}}
 
 In our example model, the role "species" can be used to retrieve
 the QString key "Feline", "Fox", "Goat", each in a separate delegate.
@@ -148,60 +166,31 @@ names list.
 
 ### Overriding and Implementing `data()`
 
-There are two parameters that are passed in `data()`: `index` and `role`.
-`index` is the location of where the data is when being delegated. As
+There are two parameters that are passed to `data()`: `index` and `role`.
+The `index` is the position of the data in the model. As
 previously stated, `role` is used by QML to get specific data returned when
 it's accessing a role.
 
-In `data()`, we can use a `switch` statement to return the appropriate data and
+In `data()`, we can use a switch statement to return the appropriate data and
 data type depending on the role, which is possible as `data()` returns a
 [QVariant](docs:qtcore;qvariant.html). We still need to make sure we get the
 appropriate location of the data, though. In this example below, you can see
 that a new iterator variable is being declared, which is set from the beginning
-of the list plus the row of the index and the data that the iterator is
+of the list plus the row of the index, and the data that the iterator is
 pointing to is what is being returned.
 
 We can't just return whatever data we want though. We may be trying to bind
 data to a property with an incompatible data type, such as a QStringList to a
 QString. You may have to do data conversion in order for the data to be
-displayed properly.
+displayed properly. For this, we create a new private, static function named `formatList()`.
 
-```cpp
-QVariant Model::data(const QModelIndex &index, int role) const {
-    const auto it = m_list.begin() + index.row();
-    switch (role) {
-        case SpeciesRole:
-            return it.key();
-        case CharactersRole:
-            return formatList(it.value());
-        default:
-            return {};
-    }
-}
+This results in the following code in `src/components/model.cpp`:
 
-QString Model::formatList(const QStringList& list) {
-    QString result;
-    for (const QString& character : list) {
-        result += character;
-        if (list.last() != character) {
-            result += ", ";
-        }
-    }
-    return result;
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model3.cpp" highlight="cpp" emphasize="14-24 26-36" >}}
 
-### Allow the Class to be Declared in QML
+And the following code in `src/components/model.h`:
 
-Let's not forget to make our class usable in QML.
-
-```cpp
-int main(int argc, char *argv[]) {
-    ...
-    qmlRegisterType<Model>("CustomModel", 1, 0, "CustomModel");
-    ...
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model4.h" highlight="cpp" emphasize="15 23" >}}
 
 ## Class Usage in QML
 
@@ -212,41 +201,9 @@ AbstractCard using a Repeater, where the custom model we created acts as the
 model. The data is accessed using word `model`, followed by the roles we
 declared in `roleNames()`.
 
-```qml
-import QtQuick
-import QtQuick.Layouts
-import QtQuick.Controls as Controls
-import org.kde.kirigami as Kirigami
-import CustomModel 1.0
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/ModelsPage2.qml" highlight="qml"  >}}
 
-Kirigami.ApplicationWindow {
-    id: root
-    title: "Tutorial"
-
-    CustomModel {
-        id: customModel
-    }
-
-    pageStack.initialPage: Kirigami.ScrollablePage {
-        ColumnLayout {
-            Repeater {
-                model: customModel
-                delegate: Kirigami.AbstractCard {
-                    header: Kirigami.Heading {
-                        text: model.species
-                        level: 2
-                    }
-                    contentItem: Controls.Label {
-                        text: model.characters
-                    }
-                }
-            }
-        }
-    }
-}
-```
-
-![App Screenshot](app_screenshot.png)
+{{< figure class="text-center" alt="A screenshot of the C++ models in QML page showing a list of characters organized per species" src="app_screenshot.webp" >}}
 
 ## Data Modification
 
@@ -256,109 +213,41 @@ You may encounter a situation where you want to modify data in the model, and
 have the changes reflected on the frontend side. Every time we change data in
 the model, we must emit the `dataChanged()` signal which will apply those changes on
 the frontend side at the specific cells specified in its arguments. In this
-tutorial, we can just use the `index` argument of `setData()`.
+tutorial, we can just use the `index` argument of [setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData).
 
-`setData()` is a virtual function you can override so that attempting
-to modify the data from the frontend side automatically reflects those
-changes on the backend side. It requires three parameters:
+[setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
+is a virtual function you can override so that modifying the data from the frontend side
+automatically reflects those changes on the backend side. It requires three parameters:
 
 - `index` - The location of the data.
 - `value` - The contents of the new data.
 - `role` - In this context, the role here is used to tell views how they
-  should handle data. The role here should be `Qt::EditRole`.
+  should handle data. The role here should be [Qt::EditRole](https://doc.qt.io/qt-6/qt.html#ItemDataRole-enum).
 
 The `role` parameter in this case is used to ensure `setData()` can be
 edited via user input (Qt::EditRole). Using `index`, we
 can use that to determine the location of where the data should be edited with
 the contents of `value`.
 
-```cpp
-bool Model::setData(const QModelIndex &index, const QVariant &value, int role) {
-    if (!value.canConvert<QString>() && role != Qt::EditRole) {
-        return false;
-    }
-
-    auto it = m_list.begin() + index.row();
-    QString charactersUnformatted = value.toString();
-    QStringList characters = charactersUnformatted.split(", ");
-
-    m_list[it.key()] = characters;
-    emit dataChanged(index, index);
-
-    return true;
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model4.cpp" highlight="cpp" emphasize="37-50" >}}
 
 {{< alert title="Note" color="info" >}}
 
-`setData()` does not automatically emit `dataChanged()` and that still has to
+`setData()` does not automatically emit [dataChanged()](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged) and that has to
 be done manually.
 
 {{< /alert >}}
 
+With the corresponding addition in `src/components/model.h`:
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model5.h" highlight="cpp" emphasize="17" >}}
+
 Let's update the QML code so that we can open up a prompt that allows us
-to edit the model using a Controls.Button attached to the cards.
+to edit the model using a [Controls.Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html) attached to the cards.
 
-```qml
-Kirigami.ApplicationWindow {
-    ...
+Add the following [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-kirigami-dialogs-promptdialog.html) to the `src/components/ModelsPage.qml`, together with a new edit button:
 
-    Kirigami.OverlaySheet {
-        id: editPrompt
-
-        property var model
-        property alias text: editPromptText.text
-
-        title: "Edit Characters"
-
-        Controls.TextField {
-            id: editPromptText
-        }
-
-        footer: Controls.DialogButtonBox {
-            standardButtons: Controls.DialogButtonBox.Ok
-            onAccepted: {
-                const model = editPrompt.model;
-                model.characters = editPromptText.text;
-                editPrompt.close();
-            }
-        }
-    }
-
-    pageStack.initialPage: Kirigami.ScrollablePage {
-        ColumnLayout {
-            Repeater {
-                model: customModel
-                delegate: Kirigami.AbstractCard {
-                    Layout.fillHeight: true
-                    header: Kirigami.Heading {
-                        text: model.species
-                        level: 2
-                    }
-                    contentItem: Item {
-                        implicitWidth: delegateLayout.implicitWidth
-                        implicitHeight: delegateLayout.implicitHeight
-                        ColumnLayout {
-                            id: delegateLayout
-                            Controls.Label {
-                                text: model.characters
-                            }
-                            Controls.Button {
-                                text: "Edit"
-                                onClicked: {
-                                    editPrompt.text = model.characters;
-                                    editPrompt.model = model;
-                                    editPrompt.open();
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/ModelsPage3.qml" highlight="qml" emphasize="23-40 44-58" >}}
 
 Now, whenever the values of the model change in the frontend,
 the changes should automatically update on the backend.
@@ -387,26 +276,16 @@ AbstractCards. But what if we need to add a new key entry in the QMap and have t
 reflected on the QML side? Let's do this by creating a new method that is
 callable on the QML side to perform this task.
 
-To make the method visible in QML, we must use the Q_OBJECT macro in the class,
-and begin the method declaration with the Q_INVOKABLE macro. This method will
+To make the method visible in QML, we must begin the method declaration with the [Q_INVOKABLE](https://doc.qt.io/qt-6/qobject.html#Q_INVOKABLE) macro. This method will
 also include a string parameter, which is intended to be the new key in the
 QMap.
 
-```cpp
-class Model : public QAbstractListModel {
-Q_OBJECT;
-
-    ...
-public:
-    ...
-    Q_INVOKABLE void addSpecies(const QString &species);
-};
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model6.h" highlight="cpp" emphasize="17" >}}
 
 Inside of this method, we need to tell Qt that we want to create more rows in
-the model. This is done by calling `beginInsertRows()` to begin our row adding
-operation, followed by inserting whatever we need, then use `endInsertRows()`
-to end the operation. We still need to emit `dataChanged()` at the end,
+the model. This is done by calling [beginInsertRows()](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows) to begin our row adding
+operation, followed by inserting whatever we need, then use [endInsertRows()](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+to end the operation. We still need to emit [dataChanged()](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged) at the end,
 however. This time, we are going to update all rows, from the first row to the
 last one as the QMap may alphabetically reorganize itself, and we need to catch
 that across all rows.
@@ -418,14 +297,7 @@ argument will just be `QModelIndex()` as there is no need to use the parameter
 here. We can just use the current row size for the first and last row number,
 as we'll just be adding one row at the end of the model.
 
-```cpp
-void Model::addSpecies(const QString& species) {
-    beginInsertRows(QModelIndex(), m_list.size() - 1, m_list.size() - 1);
-    m_list.insert(species, {});
-    endInsertRows();
-    emit dataChanged(index(0), index(m_list.size() - 1));
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model5.cpp" highlight="cpp" emphasize="52-57" >}}
 
 {{< alert title="Note" color="info" >}}
 
@@ -437,43 +309,7 @@ the `index()` function.
 
 Let's update the QML code so we are given the ability to add a new key to the QMap.
 
-```qml
-Kirigami.ApplicationWindow {
-    ...
-
-    Kirigami.OverlaySheet {
-        id: addPrompt
-
-        title: "Add New Species"
-
-        Controls.TextField {
-            id: addPromptText
-        }
-
-        footer: Controls.DialogButtonBox {
-            standardButtons: Controls.DialogButtonBox.Ok
-            onAccepted: {
-                customModel.addSpecies(addPromptText.text);
-                addPromptText.text = ""; // Clear TextField every time it's done
-                addPrompt.close();
-            }
-        }
-    }
-
-    pageStack.initialPage: Kirigami.ScrollablePage {
-        actions: [
-            Kirigami.Action {
-                icon.name: "add"
-                text: "Add New Species"
-                onTriggered: {
-                    addPrompt.open();
-                }
-            }
-        ]
-        ...
-    }
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/ModelsPage4.qml" highlight="qml" emphasize="9-17 24-38" >}}
 
 Now, we should be given a new action at the top of the app that brings up a
 prompt that allows to add a new element to the model, with our own custom data.
@@ -502,66 +338,18 @@ an integer that is the row number. The species name is used to delete the key
 from the QMap, while the row number will be used to delete the row on the front
 end.
 
-```cpp
-class Model : public QAbstractListModel {
-Q_OBJECT;
+Add a new Q_INVOKABLE function named `deleteSpecies()` in `src/components/model.h`:
 
-...
-    public:
-    ...
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model7.h" highlight="cpp" emphasize="18" >}}
 
-    Q_INVOKABLE void deleteSpecies(const QString &speciesName, const int &rowIndex);
-}
-```
+With a matching implementation in `src/components/model.cpp`:
 
-```cpp
-void Model::deleteSpecies(const QString &speciesName, const int& rowIndex) {
-    beginRemoveRows(QModelIndex(), rowIndex, rowIndex);
-    m_list.remove(speciesName);
-    endRemoveRows();
-    emit dataChanged(index(0), index(m_list.size() - 1));
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model6.cpp" highlight="cpp" emphasize="59-64" >}}
 
-Now, let's update the application so a "Delete" button appears alongside the
-edit button, and hook it up to our delete method.
+Now, let's update the application so a "Delete" button appears in a RowLayout alongside the
+edit button inside our AbstractCard, and hook it up to our delete method.
 
-```qml
-ColumnLayout {
-    Repeater {
-        model: customModel
-        delegate: Kirigami.AbstractCard {
-            ...
-            contentItem: Item {
-                implicitWidth: delegateLayout.implicitWidth
-                implicitHeight: delegateLayout.implicitHeight
-                ColumnLayout {
-                    id: delegateLayout
-                    Controls.Label {
-                        text: model.characters
-                    }
-                    RowLayout {
-                        Controls.Button {
-                            text: "Edit"
-                            onClicked: {
-                                editPrompt.text = model.characters;
-                                editPrompt.model = model;
-                                editPrompt.open();
-                            }
-                        }
-                        Controls.Button {
-                            text: "Delete"
-                            onClicked: {
-                                customModel.deleteSpecies(model.species, index);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-```
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/ModelsPage5.qml" highlight="qml" start=24 lines=37 emphasize="3 17-18 27-32" >}}
 
 {{< sections >}}
 
@@ -579,23 +367,96 @@ ColumnLayout {
 
 {{< /sections >}}
 
-## Full Code
+## Our app so far
 
-<details><summary>Main.qml</summary>
+Existing code:
+
+<details>
+<summary>src/CMakeLists.txt</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/CMakeLists.txt" highlight="cmake" >}}
+
+</details>
+
+<details>
+<summary>src/main.cpp</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/setup-cpp/src/main.cpp" highlight="cpp" >}}
+
+</details>
+
+<details>
+<summary>src/components/KountdownDelegate.qml</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/KountdownDelegate.qml" highlight="qml" >}}
+
+</details>
+
+<details>
+<summary>src/components/AddDialog.qml</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/introduction-separatefiles/components/AddDialog.qml" highlight="qml" >}}
+
+</details>
+
+<details>
+<summary>src/components/ExposePage.qml</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/ExposePage2.qml" highlight="qml" >}}
+
+</details>
+
+<details>
+<summary>src/components/backend.h</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/backend2.h" highlight="cpp" >}}
+
+</details>
+
+
+<details>
+<summary>src/components/backend.cpp</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_backend/backend2.cpp" highlight="cpp" >}}
+
+</details>
+
+<br>
+
+Code written/modified in this page:
+
+<details>
+<summary>CMakeLists.txt</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/CMakeLists-root.txt" highlight="cmake" emphasize="12" >}}
+
+</details>
+
+<details><summary>src/Main.qml</summary>
 
 {{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/Main.qml" highlight="qml" >}}
 
 </details>
-<br>
 
-<details><summary>model.h</summary>
+<details><summary>src/components/CMakeLists.txt</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/CMakeLists2.txt" highlight="cmake" >}}
+
+</details>
+
+<details><summary>src/components/ModelsPage.qml</summary>
+
+{{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/ModelsPage5.qml" highlight="qml" >}}
+
+</details>
+
+<details><summary>src/components/model.h</summary>
 
 {{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model.h" highlight="cpp" >}}
 
 </details>
-<br>
 
-<details><summary>model.cpp</summary>
+<details><summary>src/components/model.cpp</summary>
 
 {{< readfile file="/content/docs/getting-started/kirigami/advanced-connect_models/model.cpp" highlight="cpp" >}}
 

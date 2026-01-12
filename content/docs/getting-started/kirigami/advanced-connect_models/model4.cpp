@@ -48,17 +48,3 @@ bool Model::setData(const QModelIndex &index, const QVariant &value, int role) {
 
     return true;
 }
-
-void Model::addSpecies(const QString& species) {
-    beginInsertRows(QModelIndex(), m_list.size() - 1, m_list.size() - 1);
-    m_list.insert(species, {});
-    endInsertRows();
-    Q_EMIT dataChanged(index(0), index(m_list.size() - 1));
-}
-
-void Model::deleteSpecies(const QString &speciesName, const int& rowIndex) {
-    beginRemoveRows(QModelIndex(), rowIndex, rowIndex);
-    m_list.remove(speciesName);
-    endRemoveRows();
-    Q_EMIT dataChanged(index(0), index(m_list.size() - 1));
-}
