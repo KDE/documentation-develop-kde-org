@@ -1,16 +1,16 @@
 # Translation of kirigami-tutorial.po to Catalan
-# Copyright (C) 2021-2025 This_file_is_part_of_KDE
+# Copyright (C) 2021-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2021, 2025 Antoni Bella Pérez <antonibella5@yahoo.com>
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 10:15+0000\n"
-"PO-Revision-Date: 2025-12-17 15:28+0100\n"
+"PO-Revision-Date: 2026-01-13 17:57+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -1362,13 +1362,6 @@ msgstr ""
 "la vostra interfície d'usuari"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:10
-#, fuzzy
-#| msgid ""
-#| "To integrate logic into the application, we need C++ backend classes that "
-#| "can do the important calculations. Writing logic in the QML files is "
-#| "discouraged, so try to move as much as possible to the backend, so QML is "
-#| "purely used for displaying the user interface, which is what it is best "
-#| "at."
 msgid ""
 "To integrate logic into the application, we need C++ backend classes that "
 "can do the important calculations. Writing logic in the QML files is "
@@ -1379,22 +1372,16 @@ msgstr ""
 "dorsal estiguin en C++ perquè puguin fer els càlculs importants. Es "
 "desaconsella escriure la lògica en els fitxers QML, així que intenteu moure "
 "tant com sigui possible cap al dorsal, de manera que el QML s'empri "
-"exclusivament per a mostrar la interfície d'usuari, el qual és el que millor "
-"fa."
+"exclusivament per a mostrar la interfície d'usuari."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:12
-#, fuzzy
-#| msgid ""
-#| "The method for creating a separate QML module is better exemplified in "
-#| "[Using separate files](/content/docs/getting-started/kirigami/"
-#| "introduction-separatefiles)."
 msgid ""
 "We will use the [Using separate files in a C++ project](/docs/getting-"
 "started/kirigami/introduction-separatefiles) tutorial code as our base."
 msgstr ""
-"El mètode per a crear un mòdul QML separat s'exemplifica millor a [Usar "
-"fitxers separats](/content/docs/getting-started/kirigami/introduction-"
-"separatefiles)."
+"Farem servir el codi de la guia d'aprenentatge [Usar fitxers separats en un "
+"projecte C++](/content/docs/getting-started/kirigami/introduction- "
+"separatefiles) com a base."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:14
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:24
@@ -1406,21 +1393,24 @@ msgstr "Estructura del projecte"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:33
 msgid "Changes to existing code"
-msgstr ""
+msgstr "Canvis en el codi existent"
 
+# skip-rule: kct-backend
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:35
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:87
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "src/components/backend.h"
-msgstr "src/components/CMakeLists.txt"
+msgstr "src/components/backend.h"
 
+# skip-rule: kct-backend, t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:37
 msgid ""
 "First, create the header file that will have code exposed to QML, namely the "
 "`Backend` type:"
 msgstr ""
+"Primer, creeu el fitxer de capçalera que tindrà el codi exposat al QML, és a "
+"dir, el tipus `Backend`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:41
 msgid ""
 "There are two things needed to expose C++ code to QML, and one of them is "
@@ -1428,6 +1418,10 @@ msgid ""
 "html#QML_ELEMENT) macro, available in the `<QtQml/qqmlregistration.h>` "
 "header."
 msgstr ""
+"Hi ha dues coses necessàries per a exposar el codi C++ al QML, i una d'elles "
+"és simplement utilitzar la macro [QML_ELEMENT](https://doc.qt.io/qt-6/"
+"qqmlintegration-h.html#QML_ELEMENT), disponible a la capçalera `<QtQml/"
+"qqmlregistration.h>`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:43
 msgid ""
@@ -1436,48 +1430,55 @@ msgid ""
 "For this, we use the [QML_SINGLETON](https://doc.qt.io/qt-6/qqmlintegration-"
 "h.html#QML_SINGLETON) macro."
 msgstr ""
+"El dorsal es crearà com a «singleton», el que significa que només es crearà "
+"una vegada i existirà durant tota la durada de l'aplicació. Per això, fem "
+"servir la macro [QML_SINGLETON](https://doc.qt.io/qt-6/qqmlintegration-h."
+"html#QML_SINGLETON)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:45
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:123
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "src/components/backend.cpp"
-msgstr "src/components/CMakeLists.txt"
+msgstr "src/components/backend.cpp"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:47
 msgid "We can add our initial code for the constructor to `backend.cpp`:"
 msgstr ""
+"Podem afegir el nostre codi inicial per al constructor a `backend.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:51
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:131
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "src/components/ExposePage.qml"
-msgstr "src/components/CMakeLists.txt"
+msgstr "src/components/ExposePage.qml"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:53
 msgid ""
 "From now on, the backend will be known to QML as the `Backend` QML type. It "
 "is contained in a module called `org.kde.tutorial.components`."
 msgstr ""
+"A partir d'ara, el dorsal serà conegut pel QML com el tipus QML `Backend`. "
+"Està contingut en un mòdul anomenat `org.kde.tutorial.components`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:55
 msgid ""
 "This means that just by adding the import in a QML file, it is possible to "
 "use the code exposed from C++:"
 msgstr ""
+"Això significa que només afegint la importació en un fitxer QML, és possible "
+"utilitzar el codi exposat des de C++:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:61
 msgid ""
 "To start from a clean slate using the existent application code, create a "
 "new QML component that contains an empty page:"
 msgstr ""
+"Per a començar des de zero utilitzant el codi d'aplicació existent, creeu un "
+"component QML nou que contingui una pàgina buida:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:65
-#, fuzzy
-#| msgid "src/qml/Main.qml"
 msgid "src/Main.qml"
-msgstr "src/qml/Main.qml"
+msgstr "src/Main.qml"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:67
 msgid ""
@@ -1485,6 +1486,10 @@ msgid ""
 "new page](/docs/getting-started/kirigami/components-pagerow_pagestack/) to "
 "the application, just so we can test the model more easily."
 msgstr ""
+"Per a mostrar realment la pàgina nova, crearem una opció de menú que [enviï "
+"la pàgina nova](/docs/getting-started/kirigami/components-"
+"pagerow_pagestack/) a l'aplicació, només perquè puguem provar el model amb "
+"més facilitat."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:69
 msgid ""
@@ -1493,23 +1498,32 @@ msgid ""
 "qt-6/qtqml-javascript-dynamicobjectcreation.html) to generate the page on "
 "the fly:"
 msgstr ""
+"Per a això, podem utilitzar una [Kirigami.Action](/docs/getting-started/"
+"kirigami/components-actions/) juntament amb [Qt.createComponent()](https://"
+"doc.qt.io/qt-6/qtqml-javascript-dynamicobjectcreation.html) per a generar la "
+"pàgina sobre la marxa:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:73
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
 msgid "src/components/CMakeLists.txt"
 msgstr "src/components/CMakeLists.txt"
 
+# skip-rule: kct-backend, t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:75
 msgid ""
 "Lastly, add the newly created `backend.h`, `backend.cpp` and `ExposePage."
 "qml` to CMake:"
 msgstr ""
+"Finalment, afegim els `backend.h`, `backend.cpp` i `ExposePage.qml` creats "
+"nous al CMake:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:79
 msgid ""
 "Adding the files to an existing QML module in CMake is the second part to "
 "exposing code to QML."
 msgstr ""
+"Afegir els fitxers a un mòdul QML existent en el CMake és la segona part per "
+"a exposar el codi al QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:81
 msgid ""
@@ -1519,6 +1533,11 @@ msgid ""
 "they are required for [declarative registration](https://doc.qt.io/qt-6/"
 "qtqml-cppintegration-definetypes.html)."
 msgstr ""
+"Tingueu en compte que el mòdul QML hauria d'haver estat creat amb "
+"[ecm_add_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html) o "
+"[qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module.html), ja que "
+"es requereixen per al [registre declaratiu](https://doc.qt.io/qt-6/qtqml-"
+"cppintegration-definetypes.html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:83
 msgid ""
@@ -1526,10 +1545,13 @@ msgid ""
 "steps as before](/docs/getting-started/kirigami/setup-cpp/#running-the-"
 "application)."
 msgstr ""
+"Ara hauríeu de poder compilar i instal·lar el projecte amb els [mateixos "
+"passos que abans](/docs/getting-started/kirigami/setup-cpp/#running-the-"
+"application)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:85
 msgid "Making it functional"
-msgstr ""
+msgstr "Fer-ho funcional"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:89
 msgid ""
@@ -1544,17 +1566,14 @@ msgstr ""
 "interfície d'usuari sobre els canvis perquè pugui actualitzar les àrees "
 "correctes."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:91
-#, fuzzy
-#| msgid ""
-#| "Right under the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, add a "
-#| "new [Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY)."
 msgid ""
 "Right under the `QML_SINGLETON` macro, add a new [Q_PROPERTY](docs:qtcore;"
 "QObject::Q_PROPERTY)."
 msgstr ""
-"Just a sota de la macro [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT), afegiu "
-"una [Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY) nova."
+"Just a sota de la macro `QML_SINGLETON`, afegim una [Q_PROPERTY](docs:"
+"qtcore; QObject::Q_PROPERTY) nova."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:97
 msgid ""
@@ -1581,60 +1600,38 @@ msgstr ""
 "funcions capturadora i establidora rellevants."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:101
-#, fuzzy
-#| msgid "This can be done with the following three steps:"
 msgid "Add a new private section with the following:"
-msgstr "Això es pot fer amb els tres passos següents:"
+msgstr "Afegim una secció privada nova amb el següent:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:108
 msgid "And add the following to the existing public section:"
-msgstr ""
+msgstr "I afegim el següent a la secció pública existent:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:117
-#, fuzzy
-#| msgid ""
-#| "The first function is the getter, the second the setter, and the third a "
-#| "signal that is emitted when the property is changed. The signal doesn't "
-#| "need any implementation in `backend.cpp` file, since it doesn't do much "
-#| "more than being emitted, but the getter and setter need to be implemented "
-#| "similar to the following:"
 msgid ""
 "The first function is the getter, the second the setter, and the third a "
 "signal that is emitted when the property is changed. They match the READ, "
 "WRITE and NOTIFY parts of the above `Q_PROPERTY`."
 msgstr ""
 "La primera funció és la capturadora, la segona l'establidora i la tercera un "
-"senyal que s'emet quan es canvia la propietat. El senyal no necessita cap "
-"implementació en el fitxer `backend.cpp`, ja que no fa gaire més que ser "
-"emès, però la capturadora i l'establidora s'han d'implementar de manera "
-"similar a la següent:"
+"senyal que s'emet quan es canvia la propietat. Coincideixen amb les parts "
+"READ, WRITE i NOTIFY de la `Q_PROPERTY` d'abans."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:119
-#, fuzzy
-#| msgid "The project structure should look like this:"
 msgid "The result should look like the following:"
-msgstr "L'estructura del projecte s'hauria de veure així:"
+msgstr "El resultat hauria de ser el següent:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:125
-#, fuzzy
-#| msgid ""
-#| "The first function is the getter, the second the setter, and the third a "
-#| "signal that is emitted when the property is changed. The signal doesn't "
-#| "need any implementation in `backend.cpp` file, since it doesn't do much "
-#| "more than being emitted, but the getter and setter need to be implemented "
-#| "similar to the following:"
 msgid ""
 "The signal doesn't need any implementation in the `backend.cpp` file, since "
 "it doesn't do much more than being emitted, but the getter and setter need "
 "to be implemented similar to the following:"
 msgstr ""
-"La primera funció és la capturadora, la segona l'establidora i la tercera un "
-"senyal que s'emet quan es canvia la propietat. El senyal no necessita cap "
-"implementació en el fitxer `backend.cpp`, ja que no fa gaire més que ser "
-"emès, però la capturadora i l'establidora s'han d'implementar de manera "
-"similar a la següent:"
+"El senyal no necessita cap implementació en el fitxer `backend.cpp`, ja que "
+"no fa gaire més que ser emès, però la capturadora i l'establidora s'han "
+"d'implementar de manera similar a la següent:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:129
 msgid ""
@@ -1646,12 +1643,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:133
-#, fuzzy
-#| msgid ""
-#| "To display the text, add a heading to `main.qml` under the [title]"
-#| "(https://doc.qt.io/qt-6/qml-qtquick-controls-page.html#title-prop) "
-#| "property of the [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) "
-#| "element already contained in the template."
 msgid ""
 "To display the text, add a [Kirigami.Heading](https://api.kde.org/qml-org-"
 "kde-kirigami-heading.html) to `src/components/ExposePage.qml` under the "
@@ -1659,10 +1650,11 @@ msgid ""
 "property of the [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) "
 "component we added to the code."
 msgstr ""
-"Per a mostrar el text, afegiu una capçalera en el `main.qml` sota la "
+"Per a mostrar el text, afegiu una [Kirigami.Heading](https://api.kde.org/qml-"
+"org-kde-kirigami-heading.html) a `src/components/ExposePage.qml` sota la "
 "propietat [title](https://doc.qt.io/qt-6/qml-qtquick-controls-page."
-"html#title-prop) de l'element [Kirigami.Page](docs:kirigami;org.kde.kirigami."
-"Page) que ja està contingut a la plantilla."
+"html#title-prop) del component [Kirigami.Page](docs:kirigami;org.kde."
+"kirigami.Page) que hem afegit al codi."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:135
 msgid "The resulting code in that part of the file should look like this:"
@@ -1679,52 +1671,52 @@ msgstr "La nostra aplicació fins ara"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:141
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:372
 msgid "Existing code:"
-msgstr ""
+msgstr "Codi existent:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:143
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:428
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>CMakeLists.txt</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>CMakeLists.txt</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:150
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:381
-#, fuzzy
-#| msgid "<details><summary>model.cpp</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/main.cpp</summary>\n"
-msgstr "<details><summary>model.cpp</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/main.cpp</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:157
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:374
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/CMakeLists.txt</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/CMakeLists.txt</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:164
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:388
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/KountdownDelegate.qml</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/KountdownDelegate.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:171
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:395
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/AddDialog.qml</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/AddDialog.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:178
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:217
@@ -1763,50 +1755,51 @@ msgstr "<br>\n"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:180
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:426
 msgid "Code written/modified in this page:"
-msgstr ""
+msgstr "Codi escrit/modificat en aquesta pàgina:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:182
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/Main.qml</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/Main.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:189
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/CMakeLists.txt</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/CMakeLists.txt</summary>\n"
 
+# skip-rule: kct-backend
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:196
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:409
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/backend.h</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/backend.h</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:203
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:417
-#, fuzzy
-#| msgid "<details><summary>model.cpp</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/backend.cpp</summary>\n"
-msgstr "<details><summary>model.cpp</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/backend.cpp</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:210
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:402
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/ExposePage.qml</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/ExposePage.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:219
 msgid ""
@@ -1814,6 +1807,9 @@ msgid ""
 "application) and start your program again. You'll see that the new page has "
 "a centered Heading saying \"Hello World!\"."
 msgstr ""
+"Ara [compileu](/docs/getting-started/kirigami/setup-cpp/#running-the-"
+"application) i torneu a iniciar el programa. Veureu que la pàgina nova té un "
+"encapçalament centrat dient «Hola món!»."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:223
 msgid "Congratulations, you learned:"
@@ -1858,15 +1854,6 @@ msgid "Data from the C++ backend to the QML frontend"
 msgstr "Dades des del dorsal C++ a un frontal QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
-#, fuzzy
-#| msgid ""
-#| "As shown from the [previous tutorial](/docs/getting-started/kirigami/"
-#| "advanced-connect_backend/), you can connect C++ code to QML by creating a "
-#| "class that will be treated as just another component in QML. However, you "
-#| "may want to represent more complicated data, such as data that needs to "
-#| "act as a custom [ListModel](docs:qtquick;qml-qtqml-models-listmodel.html) "
-#| "or in some way needs to be delegated from a [Repeater](docs:qtquick;qml-"
-#| "qtquick-repeater.html)."
 msgid ""
 "As shown in the [previous tutorial](/docs/getting-started/kirigami/advanced-"
 "connect_backend/), you can connect C++ code to QML by creating a class that "
@@ -1877,7 +1864,7 @@ msgid ""
 "html)."
 msgstr ""
 "Com es mostra a la [guia d'aprenentatge anterior](/docs/getting-started/"
-"kirigami/advanced-connectbackend/), podeu connectar codi C++ al QML creant "
+"kirigami/advanced-connect_backend/), podeu connectar codi C++ al QML creant "
 "una classe que es tractarà com un altre component en QML. No obstant això, "
 "és possible que vulgueu representar dades més complicades, com ara les dades "
 "que han d'actuar com un [ListModel](docs:qtquick;qml-qtqml-models-listmodel."
@@ -1899,59 +1886,55 @@ msgid ""
 "It is strongly recommended that you read the [List views](/docs/getting-"
 "started/kirigami/components-listview) tutorial before this one."
 msgstr ""
+"És molt recomanable que llegiu la guia d'aprenentatge [Vistes de llista](/"
+"docs/getting-started/kirigami/components-listview) abans d'aquest."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:22
-#, fuzzy
-#| msgid ""
-#| "[Connect logic to your QML user interface](/docs/getting-started/kirigami/"
-#| "advanced-connect_backend)"
 msgid ""
 "The code used for this tutorial will be based on the previous page, [Connect "
 "logic to your QML user interface](/docs/getting-started/kirigami/advanced-"
 "connect_backend)."
 msgstr ""
-"[Connectar la lògica amb la vostra interfície d'usuari en QML](/docs/getting-"
-"started/kirigami/advanced-connect_backend)"
+"El codi utilitzat per a aquesta guia d'aprenentatge es basarà en la pàgina "
+"anterior, [Connectar la lògica amb la vostra interfície d'usuari en QML](/"
+"docs/getting-started/kirigami/advanced-connect_backend)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:46
 msgid "Creating a new page for the models tutorial"
-msgstr ""
+msgstr "Creació d'una pàgina nova per a la guia d'aprenentatge de models"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:48
 msgid "Before doing anything, let's add a new page to our QML code."
-msgstr ""
+msgstr "Abans de fer res, afegim una pàgina nova al nostre codi QML."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:50
 msgid ""
 "First, in `src/Main.qml`, add the following action to the global drawer:"
-msgstr ""
+msgstr "Primer, a `src/Main.qml`, afegim l'acció següent al calaix global:"
 
 # skip-rule: t-acc_obe, common-tutorial
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:54
-#, fuzzy
-#| msgid ""
-#| "First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` "
-#| "with the following contents:"
 msgid ""
 "Then, create a new `src/components/ModelsPage.qml` with the following "
 "contents:"
 msgstr ""
-"Primer, creeu el fitxer `kirigami-tutorial/src/components/CMakeLists.txt` "
-"amb el contingut següent:"
+"Després, creeu un `src/components/ModelsPage.qml` nou amb el contingut "
+"següent:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:58
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "And finally add it to `src/components/CMakeLists.txt`:"
-msgstr "src/components/CMakeLists.txt"
+msgstr "I finalment, afegiu-lo a `src/components/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:62
 msgid "This will serve as the canvas for this tutorial page."
 msgstr ""
+"Això servirà com a llenç per a aquesta pàgina de la guia d'aprenentatge."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:64
 msgid "Using raw strings"
-msgstr ""
+msgstr "Ús de cadenes en brut"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:66
 msgid ""
@@ -1963,20 +1946,23 @@ msgid ""
 "every time a string is introduced in our C++ code, which will be useful for "
 "the code in the upcoming header file."
 msgstr ""
+"Per a fer que aquesta guia d'aprenentatge sigui més fàcil d'entendre com "
+"s'omple el model, desactivarem una característica que les aplicacions KDE "
+"que utilitzen els extra-cmake-modules (ECM) fan servir de manera "
+"predeterminada d'[optimització del codi de cadenes](https://doc.qt.io/qt-6/"
+"qstring.html#QT_NO_CAST_FROM_ASCII). Això ens permet evitar haver d'escriure "
+"[QStringLiteral()](https://doc.qt.io/qt-6/qstring.html#QStringLiteral) cada "
+"vegada que s'introdueixi una cadena en el nostre codi C++, el qual serà útil "
+"per al codi en el fitxer de capçalera proper."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:68
-#, fuzzy
-#| msgid ""
-#| "You might remember this `CMakeLists.txt` file from the first tutorial:"
 msgid "In the root `CMakeLists.txt` file, add the following:"
-msgstr ""
-"És possible que recordeu aquest fitxer `CMakeLists.txt` de la primera guia "
-"d'aprenentatge:"
+msgstr "Al fitxer arrel `CMakeLists.txt`, afegiu el següent:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:72
 msgid "🚨 Do not do this in production"
-msgstr ""
+msgstr "🚨 No feu això a producció"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:74
 msgid ""
@@ -1985,19 +1971,16 @@ msgid ""
 "(https://doc.qt.io/qt-6/qt-literals-stringliterals.html) instead where "
 "possible."
 msgstr ""
+"La desactivació d'aquest indicador del CMake *només* es fa amb finalitats "
+"didàctiques. El codi de producció ha d'utilitzar QStringLiteral() o l'[espai "
+"de noms de literals de cadenes de les Qt](https://doc.qt.io/qt-6/qt-literals-"
+"stringliterals.html) quan sigui possible."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:78
 msgid "Preparing the Class"
 msgstr "Preparant la classe"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:80
-#, fuzzy
-#| msgid ""
-#| "In this tutorial, we will create a class that contains a QMap, where a "
-#| "QString is used as a key and QStringList objects are used as values. The "
-#| "frontend will be able to read and display the keys and values and be "
-#| "simple to use just like a one-dimensional array. It should look similar "
-#| "to a QML ListModel."
 msgid ""
 "We will create a class that contains a [QMap](https://doc.qt.io/qt-6/qmap."
 "html), where a [QString](https://doc.qt.io/qt-6/qstring.html) is used as a "
@@ -2006,56 +1989,44 @@ msgid ""
 "values and be simple to use just like a one-dimensional array. It should "
 "look similar to a QML ListModel."
 msgstr ""
-"En aquesta guia d'aprenentatge, crearem una classe que conté un QMap, on "
-"s'utilitza un QString com a clau i objectes QStringList com a valors. El "
-"frontal podrà llegir i mostrar les claus i els valors i serà senzill "
-"d'utilitzar com una matriu unidimensional. Hauria de ser semblant a un "
-"ListModel en QML."
+"Crearem una classe que conté un [QMap](https://doc.qt.io/qt-6/qmap.html), on "
+"s'utilitza un [QString](https://doc.qt.io/qt-6/qstring.html) com a clau i "
+"objectes [QStringList](https://doc.qt.io/qt-6/qstringlist.html) com a "
+"valors. El frontal podrà llegir i mostrar les claus i els valors i serà "
+"senzill d'utilitzar com una matriu unidimensional. Hauria de ser semblant a "
+"un ListModel en QML."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:86
-#, fuzzy
-#| msgid ""
-#| "To do this, we need to declare a class that inherits from "
-#| "[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add "
-#| "in some add data to the QMap. These declarations will be located in "
-#| "`model.h`."
 msgid ""
 "To do this, we need to create a class that inherits from [QAbstractListModel]"
 "(docs:qtcore;qabstractlistmodel.html). Let's also add some data to the QMap. "
 "These declarations will be located in `model.h`."
 msgstr ""
-"Per a fer-ho, necessitem declarar una classe que hereti de "
-"[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Afegim també "
-"algunes dades addicionals al QMap. Aquestes declaracions s'ubicaran a `model."
-"h`."
+"Per a fer-ho, necessitem crear una classe que hereti de [QAbstractListModel]"
+"(docs:qtcore;qabstractlistmodel.html). Afegim també algunes dades "
+"addicionals al QMap. Aquestes declaracions s'ubicaran a `model.h`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:91
 msgid ""
 "Create two new files, `src/components/model.h` and `src/components/model."
 "cpp`."
 msgstr ""
+"Creeu dos fitxers nous, `src/components/model.h` i `src/components/model."
+"cpp`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:93
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "Add those two new files to `src/components/CMakeLists.txt`:"
-msgstr "src/components/CMakeLists.txt"
+msgstr "Afegiu aquests dos fitxers a `src/components/CMakeLists.txt`:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:97
-#, fuzzy
-#| msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
 msgid "Add the following as the initial contents to `src/components/model.h`:"
-msgstr "Afegiu el següent al final del vostre `~/.config/kde-builder.yaml`:"
+msgstr "Afegiu el següent com a contingut inicial a `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:101
-#, fuzzy
-#| msgid ""
-#| "Of course, we can't just display this class as is. We also need to tell "
-#| "QML on how to represent this data in the class. We can do this by "
-#| "overriding three virtual functions that are essential at doing this, all "
-#| "of which do their own tasks."
 msgid ""
 "Of course, we can't just display this class as is. We also need to tell QML "
 "how to represent this data in the class. We can do this by overriding three "
@@ -2063,50 +2034,40 @@ msgid ""
 msgstr ""
 "Per descomptat, no podem simplement mostrar aquesta classe com és. També hem "
 "de dir-li al QML com representar aquestes dades a la classe. Podem fer-ho "
-"sobreescrivint tres funcions virtuals que són essencials per a fer-ho, totes "
-"les quals fan les seves pròpies tasques."
+"sobreescrivint tres funcions virtuals essencials:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
-#, fuzzy
-#| msgid ""
-#| "`rowCount()` - Think of this function as a way to tell QML how many items "
-#| "are in the model to represent."
 msgid ""
 "[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) - "
 "Think of this function as a way to tell QML how many items the model should "
 "present."
 msgstr ""
-"`rowCount()` - Penseu en aquesta funció com una manera de dir al QML quants "
-"elements hi ha en el model a representar."
+"[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) - "
+"Penseu en aquesta funció com una manera de dir al QML quants elements ha de "
+"representar el model."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
-#, fuzzy
-#| msgid ""
-#| "`roleNames()` - You can think of role names as property names attached to "
-#| "data in QML. This function allows you to create those roles."
 msgid ""
 "[roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames) - "
 "You can think of role names as property names attached to data in QML. This "
 "function allows you to create those roles."
 msgstr ""
-"`roleNames()` - Podeu pensar en els noms dels rols com a noms de propietats "
-"adjunts a les dades en QML. Aquesta funció permet crear aquests rols."
+"[roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames) - "
+"Podeu pensar en els noms dels rols com a noms de propietats adjunts a les "
+"dades en QML. Aquesta funció permet crear aquests rols."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:110
-#, fuzzy
-#| msgid ""
-#| "`data()` - This function is called when you want to retrieve the data "
-#| "that corresponds to the role names from the model."
 msgid ""
 "[data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data) - This "
 "function is called when you want to retrieve the data that corresponds to "
 "the role names from the model."
 msgstr ""
-"`data()`: Aquesta funció es crida quan voleu recuperar les dades que "
-"corresponen als noms dels rols a partir del model."
+"[data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data) - Aquesta "
+"funció es crida quan voleu recuperar les dades que corresponen als noms dels "
+"rols a partir del model."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:114
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:122
@@ -2173,28 +2134,25 @@ msgstr "Sobreescriure i implementar `rowCount()`"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:133
-#, fuzzy
-#| msgid ""
-#| "Let's override the function in the header file. The `rowCount()` comes "
-#| "with its own parameter, but will not be used in this example and is "
-#| "excluded."
 msgid ""
 "Let's override the function in the `src/components/model.h` header file. The "
 "[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) "
 "function comes with its own parameter, but it will not be used in this "
 "example and so doesn't need to be named."
 msgstr ""
-"Sobreescrivim la funció al fitxer de capçalera. El `rowCount()` ve amb el "
-"seu paràmetre propi, però no s'utilitzarà en aquest exemple i s'exclou."
+"Sobreescrivim la funció al fitxer de capçalera `src/components/model.h`. El "
+"[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) ve amb "
+"el seu paràmetre propi, però no s'utilitzarà en aquest exemple i, per tant, "
+"no cal anomenar-lo."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:138
-#, fuzzy
-#| msgid "Then, let's declare how many rows are in this model in `model.cpp`."
 msgid ""
 "Then, let's declare how many rows are in this model in `src/components/model."
 "cpp`:"
-msgstr "Llavors, declarem quantes files hi ha en aquest model a `model.cpp`."
+msgstr ""
+"Llavors, declarem quantes files hi ha en aquest model a `src/components/"
+"model.cpp`:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:142
@@ -2203,13 +2161,6 @@ msgstr "Sobreescriure i implementar `roleNames()`"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:144
-#, fuzzy
-#| msgid ""
-#| "Before we override `roleNames()`, we need to declare what the roles are "
-#| "in the C++ side using an public `enum` variable. The reason for this is "
-#| "because these values from the `enum` variable are passed into `data()` "
-#| "every time QML accesses a corresponding role, and as such we can make "
-#| "`data()` return what we want."
 msgid ""
 "Before we override `roleNames()`, we need to declare what the roles are in "
 "the C++ side using a public enum. The reason for this is because these enum "
@@ -2217,31 +2168,22 @@ msgid ""
 "role, and as such we can make `data()` return what we want."
 msgstr ""
 "Abans de substituir `roleNames()`, necessitem declarar quins són els rols a "
-"la banda del C++ utilitzant una variable pública `enum`. El motiu d'això és "
-"perquè aquests valors de la variable `enum` es passen a `data()` cada vegada "
-"que el QML accedeix a un rol corresponent, i com a tal podem fer que "
+"la banda del C++ utilitzant una enumeració pública. El motiu d'això és "
+"perquè aquests valors de la variable d'enumeració es passen a `data()` cada "
+"vegada que el QML accedeix a un rol corresponent, i com a tal podem fer que "
 "`data()` retorni el que volem."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:150
-#, fuzzy
-#| msgid ""
-#| "Let's begin with creating the `enum` variable for roles, where each value "
-#| "is a role for the C++ side."
 msgid ""
 "Let's begin with creating the enum for roles in `src/components/model.h`, "
 "where each value is a role for the C++ side."
 msgstr ""
-"Comencem per crear la variable `enum` per als rols, a on cada valor és un "
-"rol de la banda del C++."
+"Comencem per crear la variable d'enumeració per als rols a `src/components/"
+"model.h`, a on cada valor és un rol de la banda del C++."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:155
-#, fuzzy
-#| msgid ""
-#| "Once we have that settled, we can finally create what these roles are in "
-#| "the QML side using a [QHash](docs:qtcore;qhash.html) where the keys are "
-#| "the enumerated values paired with [QByteArrays](docs:qtcore;qbytearray."
-#| "html). The text in the QByteArray is what's used in the actual QML code."
 msgid ""
 "Once we have that settled, we can finally create what these roles are in the "
 "QML side using a [QHash](docs:qtcore;qhash.html) where the keys are the "
@@ -2252,8 +2194,8 @@ msgstr ""
 "Una vegada que hàgim resolt això, finalment podrem crear quins són aquests "
 "rols en la banda del QML utilitzant un [QHash](docs:qtcore;qhash.html) on "
 "les claus són els valors enumerats aparellats amb [QByteArrays](docs:qtcore;"
-"qbytearray.html). El text del QByteArray és el que s'utilitza en el codi QML "
-"real."
+"qbytearray.html). Això hauria d'anar a `src/components/model.cpp`. El text "
+"del QByteArray és el que s'utilitza en el codi QML real."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:162
 msgid ""
@@ -2273,34 +2215,19 @@ msgstr "Sobreescriure i implementar `data()`"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:169
-#, fuzzy
-#| msgid ""
-#| "There are two parameters that are passed in `data()`: `index` and `role`. "
-#| "`index` is the location of where the data is when being delegated. As "
-#| "previously stated, `role` is used by QML to get specific data returned "
-#| "when it's accessing a role."
 msgid ""
 "There are two parameters that are passed to `data()`: `index` and `role`. "
 "The `index` is the position of the data in the model. As previously stated, "
 "`role` is used by QML to get specific data returned when it's accessing a "
 "role."
 msgstr ""
-"Hi ha dos paràmetres que es passen a `data()`: `index` i `role`. `index` és "
-"la ubicació d'on es troben les dades quan es deleguen. Com s'ha indicat "
-"anteriorment, el QML utilitza el `role` per a obtenir dades específiques que "
-"es retornen quan s'està accedint a un rol."
+"Hi ha dos paràmetres que es passen a `data()`: `index` i `role`. L'`index` "
+"és la posició de les dades en el model. Com s'ha indicat anteriorment, el "
+"QML utilitza el `role` per a obtenir dades específiques que es retornen quan "
+"s'està accedint a un rol."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:174
-#, fuzzy
-#| msgid ""
-#| "In `data()`, we can use a `switch` statement to return the appropriate "
-#| "data and data type depending on the role, which is possible as `data()` "
-#| "returns a [QVariant](docs:qtcore;qvariant.html). We still need to make "
-#| "sure we get the appropriate location of the data, though. In this example "
-#| "below, you can see that a new iterator variable is being declared, which "
-#| "is set from the beginning of the list plus the row of the index and the "
-#| "data that the iterator is pointing to is what is being returned."
 msgid ""
 "In `data()`, we can use a switch statement to return the appropriate data "
 "and data type depending on the role, which is possible as `data()` returns a "
@@ -2310,22 +2237,17 @@ msgid ""
 "beginning of the list plus the row of the index, and the data that the "
 "iterator is pointing to is what is being returned."
 msgstr ""
-"A `data()`, podem utilitzar una declaració `switch` per a retornar les dades "
-"i el tipus de dades adequats depenent del rol, el qual és possible ja que "
-"`data()` retorna una [QVariant](docs:qtcore;qvariant.html). No obstant això, "
-"encara hem d'assegurar-nos d'aconseguir la ubicació adequada de les dades. "
-"En aquest exemple a continuació, podeu veure que s'està declarant una "
+"A `data()`, podem utilitzar una declaració de commutació per a retornar les "
+"dades i el tipus de dades adequats depenent del rol, el qual és possible ja "
+"que `data()` retorna una [QVariant](docs:qtcore;qvariant.html). No obstant "
+"això, encara hem d'assegurar-nos d'aconseguir la ubicació adequada de les "
+"dades. En aquest exemple a continuació, podeu veure que s'està declarant una "
 "variable nova de l'iterador, que s'estableix des del principi de la llista "
 "més la fila de l'índex i les dades a les quals apunta l'iterador que és el "
 "que s'està retornant."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:182
-#, fuzzy
-#| msgid ""
-#| "We can't just return whatever data we want though. We may be trying to "
-#| "bind data to a property with an incompatible data type, such as a "
-#| "QStringList to a QString. You may have to do data conversion in order for "
-#| "the data to be displayed properly."
 msgid ""
 "We can't just return whatever data we want though. We may be trying to bind "
 "data to a property with an incompatible data type, such as a QStringList to "
@@ -2336,15 +2258,18 @@ msgstr ""
 "Però no podem retornar les dades que vulguem. És possible que estiguem "
 "intentant vincular dades a una propietat amb un tipus de dades incompatible, "
 "com ara una QStringList a una QString. És possible que hàgiu de fer la "
-"conversió de dades perquè les dades es mostrin correctament."
+"conversió de dades perquè les dades es mostrin correctament. Per a això, "
+"creem una funció estàtica privada nova anomenada `formatList()`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:187
 msgid "This results in the following code in `src/components/model.cpp`:"
-msgstr ""
+msgstr "Això dona com a resultat el codi següent a `src/components/model.cpp`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:191
 msgid "And the following code in `src/components/model.h`:"
-msgstr ""
+msgstr "I el codi següent a `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:195
 msgid "Class Usage in QML"
@@ -2372,6 +2297,8 @@ msgid ""
 "A screenshot of the C++ models in QML page showing a list of characters "
 "organized per species"
 msgstr ""
+"Una captura de pantalla dels models C++ a la pàgina QML mostrant una llista "
+"de caràcters organitzats per espècie"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:208
 msgid "Data Modification"
@@ -2384,14 +2311,6 @@ msgstr "Edició de dades utilitzant `dataChanged()` i `setData()`"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:212
-#, fuzzy
-#| msgid ""
-#| "You may encounter a situation where you want to modify data in the model, "
-#| "and have the changes reflected on the frontend side. Every time we change "
-#| "data in the model, we must emit the `dataChanged()` signal which will "
-#| "apply those changes on the frontend side at the specific cells specified "
-#| "in its arguments. In this tutorial, we can just use the `index` argument "
-#| "of `setData()`."
 msgid ""
 "You may encounter a situation where you want to modify data in the model, "
 "and have the changes reflected on the frontend side. Every time we change "
@@ -2405,25 +2324,21 @@ msgstr ""
 "canviem dades en el model, hem d'emetre el senyal `dataChanged()` que "
 "aplicarà aquests canvis a la banda del frontal a les cel·les específiques "
 "especificades en els seus arguments. En aquesta guia d'aprenentatge, només "
-"podem utilitzar l'argument `index` de `setData()`."
+"podem utilitzar l'argument `index` de [setData()](https://doc.qt.io/qt-6/"
+"qabstractitemmodel.html#setData)."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:218
-#, fuzzy
-#| msgid ""
-#| "`setData()` is a virtual function you can override so that attempting to "
-#| "modify the data from the frontend side automatically reflects those "
-#| "changes on the backend side. It requires three parameters:"
 msgid ""
 "[setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData) is a "
 "virtual function you can override so that modifying the data from the "
 "frontend side automatically reflects those changes on the backend side. It "
 "requires three parameters:"
 msgstr ""
-"`setData()` és una funció virtual que podeu sobreescriure de manera que "
-"intentar modificar les dades des de la banda del frontal reflecteix "
-"automàticament aquests canvis a la banda del dorsal. Requereix tres "
-"paràmetres:"
+"[setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData) és una "
+"funció virtual que podeu sobreescriure de manera que modificar les dades des "
+"de la banda del frontal reflecteix automàticament aquests canvis a la banda "
+"del dorsal. Requereix tres paràmetres:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:222
@@ -2437,17 +2352,14 @@ msgstr "`value` - El contingut de les dades noves."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:224
-#, fuzzy
-#| msgid ""
-#| "`role` - In this context, the role here is used to tell views how they "
-#| "should handle data. The role here should be `Qt::EditRole`."
 msgid ""
 "`role` - In this context, the role here is used to tell views how they "
 "should handle data. The role here should be [Qt::EditRole](https://doc.qt.io/"
 "qt-6/qt.html#ItemDataRole-enum)."
 msgstr ""
 "`role` - En aquest context, el rol aquí s'utilitza per a dir a les vistes "
-"com haurien de gestionar les dades. El rol aquí hauria de ser `Qt::EditRole`."
+"com haurien de gestionar les dades. El rol aquí hauria de ser [Qt::EditRole]"
+"(https://doc.qt.io/qt-6/qt.html#ItemDataRole-enum)."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:227
@@ -2464,48 +2376,38 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:236
-#, fuzzy
-#| msgid ""
-#| "`setData()` does not automatically emit `dataChanged()` and that still "
-#| "has to be done manually."
 msgid ""
 "`setData()` does not automatically emit [dataChanged()](https://doc.qt.io/"
 "qt-6/qabstractitemmodel.html#dataChanged) and that has to be done manually."
 msgstr ""
-"`setData()` no emet automàticament `dataChanged()` i això encara s'ha de fer "
-"manualment."
+"`setData()` no emet automàticament [dataChanged()](https://doc.qt.io/qt-6/"
+"qabstractitemmodel.html#dataChanged) i això s'ha de fer manualment."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:241
 msgid "With the corresponding addition in `src/components/model.h`:"
-msgstr ""
+msgstr "Amb l'addició corresponent a `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:245
-#, fuzzy
-#| msgid ""
-#| "Let's update the QML code so that we can open up a prompt that allows us "
-#| "to edit the model using a Controls.Button attached to the cards."
 msgid ""
 "Let's update the QML code so that we can open up a prompt that allows us to "
 "edit the model using a [Controls.Button](https://doc.qt.io/qt-6/qml-qtquick-"
 "controls-button.html) attached to the cards."
 msgstr ""
 "Actualitzem el codi QML de manera que puguem obrir un indicador que ens "
-"permeti editar el model utilitzant un Controls.Button adjunt a les targetes."
+"permeti editar el model utilitzant un [Controls.Button](https://doc.qt.io/"
+"qt-6/qml-qtquick-controls-button.html) adjunt a les targetes."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:248
-#, fuzzy
-#| msgid ""
-#| "A standard [Kirigami.Dialog](https://api.kde.org/qml-org-kde-kirigami-"
-#| "dialogs-dialog.html) is used to create custom dialogs. They are very easy "
-#| "to extend:"
 msgid ""
 "Add the following [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-"
 "kirigami-dialogs-promptdialog.html) to the `src/components/ModelsPage.qml`, "
 "together with a new edit button:"
 msgstr ""
-"S'utilitza un [Kirigami.Dialog](https://api.kde.org/qml-org-kde-kirigami-"
-"dialogs-dialog.html) estàndard per a crear diàlegs personalitzats. Són molt "
-"fàcils d'ampliar:"
+"Afegim el [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-kirigami-"
+"dialogs-promptdialog.html) següent al `src/components/ModelsPage.qml`, junt "
+"amb el botó nou d'edició:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:252
 msgid ""
@@ -2542,35 +2444,19 @@ msgstr ""
 "que es pot cridar a la banda del QML per a realitzar aquesta tasca."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
-#, fuzzy
-#| msgid ""
-#| "To make the method visible in QML, we must use the Q_OBJECT macro in the "
-#| "class, and begin the method declaration with the Q_INVOKABLE macro. This "
-#| "method will also include a string parameter, which is intended to be the "
-#| "new key in the QMap."
 msgid ""
 "To make the method visible in QML, we must begin the method declaration with "
 "the [Q_INVOKABLE](https://doc.qt.io/qt-6/qobject.html#Q_INVOKABLE) macro. "
 "This method will also include a string parameter, which is intended to be "
 "the new key in the QMap."
 msgstr ""
-"Per a fer visible el mètode en el QML, hem d'utilitzar la macro Q_OBJECT a "
-"la classe, i començar la declaració del mètode amb la macro Q_INVOKABLE. "
+"Per a fer visible el mètode en el QML, cal començar la declaració del mètode "
+"amb la macro [Q_INVOKABLE](https://doc.qt.io/qt-6/qobject.html#Q_INVOKABLE). "
 "Aquest mètode també inclourà un paràmetre de cadena, que es pretén que sigui "
 "la clau nova en el QMap."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:285
-#, fuzzy
-#| msgid ""
-#| "Inside of this method, we need to tell Qt that we want to create more "
-#| "rows in the model. This is done by calling `beginInsertRows()` to begin "
-#| "our row adding operation, followed by inserting whatever we need, then "
-#| "use `endInsertRows()` to end the operation. We still need to emit "
-#| "`dataChanged()` at the end, however. This time, we are going to update "
-#| "all rows, from the first row to the last one as the QMap may "
-#| "alphabetically reorganize itself, and we need to catch that across all "
-#| "rows."
 msgid ""
 "Inside of this method, we need to tell Qt that we want to create more rows "
 "in the model. This is done by calling [beginInsertRows()](https://doc.qt.io/"
@@ -2583,12 +2469,15 @@ msgid ""
 "alphabetically reorganize itself, and we need to catch that across all rows."
 msgstr ""
 "Dins d'aquest mètode, hem de dir a les Qt que volem crear més files en el "
-"model. Això es fa cridant a `beginInsertRows()` per a començar la nostra "
-"operació d'addició de files, seguida d'inserir el que necessitem, i després "
-"utilitzeu `endInsertRows()` per a acabar l'operació. No obstant això, encara "
-"hem d'emetre `dataChanged()` al final. Aquesta vegada, actualitzarem totes "
-"les files, des de la primera fila fins a l'última, ja que el QMap pot "
-"reorganitzar-se alfabèticament, i hem d'agafar-ho a totes les files."
+"model. Això es fa cridant a [beginInsertRows()](https://doc.qt.io/qt-6/"
+"qabstractitemmodel.html#beginInsertRows) per a començar la nostra operació "
+"d'addició de files, seguida d'inserir el que necessitem, i després utilitzeu "
+"[endInsertRows()](https://doc.qt.io/qt-6/qabstractitemmodel."
+"html#endInsertRows) per a acabar l'operació. No obstant això, encara cal "
+"emetre [dataChanged()](https://doc.qt.io/qt-6/qabstractitemmodel."
+"html#dataChanged) al final. Aquesta vegada, actualitzarem totes les files, "
+"des de la primera fila fins a l'última, ja que el QMap pot reorganitzar-se "
+"alfabèticament, i hem d'agafar-ho a totes les files."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:293
@@ -2664,28 +2553,29 @@ msgstr ""
 "suprimir la clau del QMap, mentre que el número de fila s'utilitzarà per a "
 "suprimir la fila en el frontal."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:341
 msgid ""
 "Add a new Q_INVOKABLE function named `deleteSpecies()` in `src/components/"
 "model.h`:"
 msgstr ""
+"Afegiu una funció Q_INVOKABLE nova anomenada `deleteSpecies()` a `src/"
+"components/model.h`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:345
 msgid "With a matching implementation in `src/components/model.cpp`:"
-msgstr ""
+msgstr "Amb una implementació coincident a `src/components/model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:349
-#, fuzzy
-#| msgid ""
-#| "Now, let's update the application so a \"Delete\" button appears "
-#| "alongside the edit button, and hook it up to our delete method."
 msgid ""
 "Now, let's update the application so a \"Delete\" button appears in a "
 "RowLayout alongside the edit button inside our AbstractCard, and hook it up "
 "to our delete method."
 msgstr ""
-"Ara, actualitzem l'aplicació de manera que apareixerà un botó «Elimina» al "
-"costat del botó d'edició, i enganxeu-lo al nostre mètode d'eliminació."
+"Ara, actualitzem l'aplicació de manera que apareixerà un botó «Elimina» en "
+"un RowLayout al costat del botó d'edició dins la nostra AbstractCard, i "
+"enganxeu-lo al nostre mètode d'eliminació."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:358
 msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
@@ -2696,34 +2586,24 @@ msgid "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
 msgstr "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:435
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid "<details><summary>src/Main.qml</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr "<details><summary>src/Main.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:441
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid "<details><summary>src/components/CMakeLists.txt</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr "<details><summary>src/components/CMakeLists.txt</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:447
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid "<details><summary>src/components/ModelsPage.qml</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr "<details><summary>src/components/ModelsPage.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:453
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid "<details><summary>src/components/model.h</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr "<details><summary>src/components/model.h</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:459
-#, fuzzy
-#| msgid "<details><summary>model.cpp</summary>\n"
 msgid "<details><summary>src/components/model.cpp</summary>\n"
-msgstr "<details><summary>model.cpp</summary>\n"
+msgstr "<details><summary>src/components/model.cpp</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:465
 msgid "More Information"
