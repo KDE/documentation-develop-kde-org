@@ -82,7 +82,7 @@ For any project to become an official part of KDE.
 - [ ] A metainfo.xml file (previously appdata.xml) with AppStream data [AppStream Guidelines](https://community.kde.org/Guidelines_and_HOWTOs/AppStream )
 - [ ] A screenshot in [product-screenshots](https://invent.kde.org/websites/product-screenshots)
 - [ ] Check the code with some sanity tools like [clazy](https://kde.org/applications/development/org.kde.clazy) or [clang-tidy](https://clang.llvm.org/extra/clang-tidy), if not already done as part of CI runs.
-- [ ] Documentation appropriate to the project: if a library, API documentation (such as [Doxygen](https://www.doxygen.nl/) for C++), if an application, user documentation (such as a README detailing what the application does or is for, how to install/build, and other such useful information)
+- [ ] Documentation appropriate to the project: if a library, API documentation (for C++ and QML using QDoc), if an application, user documentation (such as a README detailing what the application does or is for, how to install/build, and other such useful information)
 - [ ] A [bugs.kde.org](https://bugs.kde.org) product (file a [sysadmin ticket](https://community.kde.org/Sysadmin))
 - [ ] Passing [Gitlab CI build jobs](https://mail.kde.org/pipermail/kde-devel/2021-September/000717.html)
 - [ ] Passing [KDE neon](https://build.neon.kde.org) build
