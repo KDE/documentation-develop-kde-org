@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 10:15+0000\n"
-"PO-Revision-Date: 2026-01-14 02:53+0200\n"
+"PO-Revision-Date: 2026-01-14 04:18+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1314,13 +1314,6 @@ msgstr ""
 "показу"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:10
-#, fuzzy
-#| msgid ""
-#| "To integrate logic into the application, we need C++ backend classes that "
-#| "can do the important calculations. Writing logic in the QML files is "
-#| "discouraged, so try to move as much as possible to the backend, so QML is "
-#| "purely used for displaying the user interface, which is what it is best "
-#| "at."
 msgid ""
 "To integrate logic into the application, we need C++ backend classes that "
 "can do the important calculations. Writing logic in the QML files is "
@@ -1330,22 +1323,16 @@ msgstr ""
 "Щоб інтегрувати логіку до самої програми нам знадобляться класи модуля "
 "обробки мовою C++, які зможуть виконувати важливі обчислення. Не варто "
 "вписувати логіку до самих файлів QML — слід переносити якомога більшу її "
-"частину до модуля обробки, щоб код QML використовувався лише для показу "
-"інтерфейсу користувача — того, для чого його, власне, призначено."
+"частину до модуля обробки так, щоб код QML використовувався лише для показу "
+"інтерфейсу користувача."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:12
-#, fuzzy
-#| msgid ""
-#| "The method for creating a separate QML module is better exemplified in "
-#| "[Using separate files](/content/docs/getting-started/kirigami/"
-#| "introduction-separatefiles)."
 msgid ""
 "We will use the [Using separate files in a C++ project](/docs/getting-"
 "started/kirigami/introduction-separatefiles) tutorial code as our base."
 msgstr ""
-"Спосіб створення окремого модуля QML краще описано у розділі щодо "
-"[використання окремих файлів](/content/docs/getting-started/kirigami/"
-"introduction-separatefiles)."
+"Як основу, ми використаємо код з підручника [Використання окремих файлів у "
+"проєкті C++](/docs/getting-started/kirigami/introduction-separatefiles)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:14
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:24
@@ -1361,7 +1348,6 @@ msgstr "Зміни у наявному коді"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:35
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:87
-#| msgid "src/components/CMakeLists.txt"
 msgid "src/components/backend.h"
 msgstr "src/components/backend.h"
 
@@ -1370,6 +1356,8 @@ msgid ""
 "First, create the header file that will have code exposed to QML, namely the "
 "`Backend` type:"
 msgstr ""
+"Спочатку створіть файл заголовків, який міститиме код, відкритий QML, а саме "
+"типу `Backend`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:41
 msgid ""
@@ -1378,6 +1366,10 @@ msgid ""
 "html#QML_ELEMENT) macro, available in the `<QtQml/qqmlregistration.h>` "
 "header."
 msgstr ""
+"Для доступу до коду C++ до QML потрібні дві речі, і одна з них — це просте "
+"використання макроса [QML_ELEMENT](https://doc.qt.io/qt-6/qqmlintegration-h."
+"html#QML_ELEMENT), доступного з файла заголовків `<QtQml/qqmlregistration."
+"h>`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:43
 msgid ""
@@ -1386,20 +1378,22 @@ msgid ""
 "For this, we use the [QML_SINGLETON](https://doc.qt.io/qt-6/qqmlintegration-"
 "h.html#QML_SINGLETON) macro."
 msgstr ""
+"Модуль обробки буде створено як синглтон, тобто він буде створений лише один "
+"раз та існуватиме протягом усього терміну роботи програми. Для цього ми "
+"використовуємо макрос [QML_SINGLETON](https://doc.qt.io/qt-6/qqmlintegration-"
+"h.html#QML_SINGLETON)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:45
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:123
-#| msgid "src/components/CMakeLists.txt"
 msgid "src/components/backend.cpp"
 msgstr "src/components/backend.cpp"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:47
 msgid "We can add our initial code for the constructor to `backend.cpp`:"
-msgstr ""
+msgstr "Ми можемо додати наш початковий код для конструктора до `backend.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:51
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:131
-#| msgid "src/components/CMakeLists.txt"
 msgid "src/components/ExposePage.qml"
 msgstr "src/components/ExposePage.qml"
 
@@ -1408,21 +1402,26 @@ msgid ""
 "From now on, the backend will be known to QML as the `Backend` QML type. It "
 "is contained in a module called `org.kde.tutorial.components`."
 msgstr ""
+"Відтепер модуль обробки буде відомий QML як тип QML `Backend`. Він міститься "
+"у модулі під назвою `org.kde.tutorial.components`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:55
 msgid ""
 "This means that just by adding the import in a QML file, it is possible to "
 "use the code exposed from C++:"
 msgstr ""
+"Це означає, що просто додавши рядок імпортування у файл QML, можна "
+"використовувати код, розкритий з C++:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:61
 msgid ""
 "To start from a clean slate using the existent application code, create a "
 "new QML component that contains an empty page:"
 msgstr ""
+"Щоб почати з чистого аркуша, використовуючи наявний код програми, створіть "
+"новий компонент QML, який містить порожню сторінку:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:65
-#| msgid "src/qml/Main.qml"
 msgid "src/Main.qml"
 msgstr "src/Main.qml"
 
@@ -1432,6 +1431,9 @@ msgid ""
 "new page](/docs/getting-started/kirigami/components-pagerow_pagestack/) to "
 "the application, just so we can test the model more easily."
 msgstr ""
+"Щоб фактично показати нову сторінку, давайте створимо пункт меню, який "
+"[надсилатиме нову сторінку](/docs/getting-started/kirigami/components-"
+"pagerow_pagestack/) до програми, щоб ми могли легше протестувати модель."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:69
 msgid ""
@@ -1440,6 +1442,10 @@ msgid ""
 "qt-6/qtqml-javascript-dynamicobjectcreation.html) to generate the page on "
 "the fly:"
 msgstr ""
+"Для цього ми можемо скористатися новим [Kirigami.Action](/docs/getting-"
+"started/kirigami/components-actions/) разом з [Qt.createComponent()](https://"
+"doc.qt.io/qt-6/qtqml-javascript-dynamicobjectcreation.html) для створення "
+"сторінки на льоту:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:73
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
@@ -1451,12 +1457,16 @@ msgid ""
 "Lastly, add the newly created `backend.h`, `backend.cpp` and `ExposePage."
 "qml` to CMake:"
 msgstr ""
+"Нарешті, додайте новостворені `backend.h`, `backend.cpp` і `ExposePage.qml` "
+"до CMake:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:79
 msgid ""
 "Adding the files to an existing QML module in CMake is the second part to "
 "exposing code to QML."
 msgstr ""
+"Додавання файлів до наявного модуля QML у CMake — це друга частина розкриття "
+"коду для QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:81
 msgid ""
@@ -1466,6 +1476,11 @@ msgid ""
 "they are required for [declarative registration](https://doc.qt.io/qt-6/"
 "qtqml-cppintegration-definetypes.html)."
 msgstr ""
+"Зверніть увагу, що модуль QML слід було створити за допомогою "
+"[ecm_add_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html) або "
+"[qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module.html), "
+"оскільки вони необхідні для [декларативної реєстрації](https://doc.qt.io/"
+"qt-6/qtqml-cppintegration-definetypes.html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:83
 msgid ""
@@ -1473,10 +1488,12 @@ msgid ""
 "steps as before](/docs/getting-started/kirigami/setup-cpp/#running-the-"
 "application)."
 msgstr ""
+"Тепер ви зможете зібрати і встановити проєкт, виконавши [ті ж кроки, що й "
+"раніше](/docs/getting-started/kirigami/setup-cpp/#running-the-application)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:85
 msgid "Making it functional"
-msgstr ""
+msgstr "Надання функціональності"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:89
 msgid ""
@@ -1492,16 +1509,12 @@ msgstr ""
 "оновлювати належні області."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:91
-#, fuzzy
-#| msgid ""
-#| "Right under the [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) macro, add a "
-#| "new [Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY)."
 msgid ""
 "Right under the `QML_SINGLETON` macro, add a new [Q_PROPERTY](docs:qtcore;"
 "QObject::Q_PROPERTY)."
 msgstr ""
-"Одразу після макроса [Q_OBJECT](docs:qtcore;QObject::Q_OBJECT) додайте новий "
-"макрос [Q_PROPERTY](docs:qtcore;QObject::Q_PROPERTY)."
+"Одразу під макросом `QML_SINGLETON` додайте [Q_PROPERTY](docs:qtcore;"
+"QObject::Q_PROPERTY)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:97
 msgid ""
@@ -1530,58 +1543,36 @@ msgstr ""
 "встановлення значень."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:101
-#, fuzzy
-#| msgid "This can be done with the following three steps:"
 msgid "Add a new private section with the following:"
-msgstr "Зробити це можна за допомогою таких трьох кроків:"
+msgstr "Додайте новий приватний розділ з таким кодом:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:108
 msgid "And add the following to the existing public section:"
-msgstr ""
+msgstr "І додайте наведений нижче код до наявного розділу public:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:117
-#, fuzzy
-#| msgid ""
-#| "The first function is the getter, the second the setter, and the third a "
-#| "signal that is emitted when the property is changed. The signal doesn't "
-#| "need any implementation in `backend.cpp` file, since it doesn't do much "
-#| "more than being emitted, but the getter and setter need to be implemented "
-#| "similar to the following:"
 msgid ""
 "The first function is the getter, the second the setter, and the third a "
 "signal that is emitted when the property is changed. They match the READ, "
 "WRITE and NOTIFY parts of the above `Q_PROPERTY`."
 msgstr ""
 "Перша функція є отримувачем даних, друга — встановлювачем, а третя — "
-"сигналом, який видається, коли змінюється значення властивості. Сигнал не "
-"потребує реалізації у файлі `backend.cpp`, оскільки він не виконує майже "
-"нічого, окрім видання, але функції отримання та встановлення значення має "
-"бути реалізовано десь так:"
+"сигналом, який видається, коли змінюється значення властивості. Вони "
+"відповідають частинам READ, WRITE і NOTIFY для вищої `Q_PROPERTY`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:119
-#, fuzzy
-#| msgid "The project structure should look like this:"
 msgid "The result should look like the following:"
-msgstr "Структура проєкту має виглядати так:"
+msgstr "Результат може виглядати десь так:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:125
-#, fuzzy
-#| msgid ""
-#| "The first function is the getter, the second the setter, and the third a "
-#| "signal that is emitted when the property is changed. The signal doesn't "
-#| "need any implementation in `backend.cpp` file, since it doesn't do much "
-#| "more than being emitted, but the getter and setter need to be implemented "
-#| "similar to the following:"
 msgid ""
 "The signal doesn't need any implementation in the `backend.cpp` file, since "
 "it doesn't do much more than being emitted, but the getter and setter need "
 "to be implemented similar to the following:"
 msgstr ""
-"Перша функція є отримувачем даних, друга — встановлювачем, а третя — "
-"сигналом, який видається, коли змінюється значення властивості. Сигнал не "
-"потребує реалізації у файлі `backend.cpp`, оскільки він не виконує майже "
-"нічого, окрім видання, але функції отримання та встановлення значення має "
-"бути реалізовано десь так:"
+"Сигнал не потребує реалізації у файлі `backend.cpp`, оскільки він не виконує "
+"майже нічого, окрім видання, але функції отримання та встановлення значення "
+"має бути реалізовано десь так:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:129
 msgid ""
@@ -1593,12 +1584,6 @@ msgstr ""
 "обробки."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:133
-#, fuzzy
-#| msgid ""
-#| "To display the text, add a heading to `main.qml` under the [title]"
-#| "(https://doc.qt.io/qt-6/qml-qtquick-controls-page.html#title-prop) "
-#| "property of the [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) "
-#| "element already contained in the template."
 msgid ""
 "To display the text, add a [Kirigami.Heading](https://api.kde.org/qml-org-"
 "kde-kirigami-heading.html) to `src/components/ExposePage.qml` under the "
@@ -1606,10 +1591,11 @@ msgid ""
 "property of the [Kirigami.Page](docs:kirigami;org.kde.kirigami.Page) "
 "component we added to the code."
 msgstr ""
-"Щоб показати текст у `main.qml` додайте заголовок під властивістю [title]"
-"(https://doc.qt.io/qt-6/qml-qtquick-controls-page.html#title-prop) елемента "
-"[Kirigami.Page](docs:kirigami;org.kde.kirigami.Page), який вже міститься у "
-"шаблоні."
+"Щоб показати текст у `main.qml` додайте [Kirigami.Heading](https://api.kde."
+"org/qml-org-kde-kirigami-heading.html) до `src/components/ExposePage.qml під "
+"властивістю [title](https://doc.qt.io/qt-6/qml-qtquick-controls-page."
+"html#title-prop) компонента [Kirigami.Page](docs:kirigami;org.kde.kirigami."
+"Page), який ми додали до коду."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:135
 msgid "The resulting code in that part of the file should look like this:"
@@ -1630,7 +1616,6 @@ msgstr "Наявний код:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:143
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:428
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>CMakeLists.txt</summary>\n"
@@ -1640,7 +1625,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:150
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:381
-#| msgid "<details><summary>model.cpp</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/main.cpp</summary>\n"
@@ -1650,7 +1634,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:157
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:374
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/CMakeLists.txt</summary>\n"
@@ -1660,7 +1643,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:164
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:388
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/KountdownDelegate.qml</summary>\n"
@@ -1670,7 +1652,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:171
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:395
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/AddDialog.qml</summary>\n"
@@ -1718,7 +1699,6 @@ msgid "Code written/modified in this page:"
 msgstr "Код, який дописано або змінено на цій сторінці:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:182
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/Main.qml</summary>\n"
@@ -1727,7 +1707,6 @@ msgstr ""
 "<summary>src/Main.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:189
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/CMakeLists.txt</summary>\n"
@@ -1737,7 +1716,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:196
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:409
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/backend.h</summary>\n"
@@ -1747,7 +1725,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:203
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:417
-#| msgid "<details><summary>model.cpp</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/backend.cpp</summary>\n"
@@ -1757,7 +1734,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:210
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:402
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/ExposePage.qml</summary>\n"
@@ -1771,6 +1747,9 @@ msgid ""
 "application) and start your program again. You'll see that the new page has "
 "a centered Heading saying \"Hello World!\"."
 msgstr ""
+"Тепер [зберіть](/docs/getting-started/kirigami/setup-cpp/#running-the-"
+"application) і знову запустіть свою програму. Ви побачите, що нова сторінка "
+"має заголовок, розташований у центрі, з написом «Hello World!»."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:223
 msgid "Congratulations, you learned:"
@@ -1815,14 +1794,6 @@ msgid "Data from the C++ backend to the QML frontend"
 msgstr "Дані з модуля обробки C++ до оболонки QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
-#| msgid ""
-#| "As shown from the [previous tutorial](/docs/getting-started/kirigami/"
-#| "advanced-connect_backend/), you can connect C++ code to QML by creating a "
-#| "class that will be treated as just another component in QML. However, you "
-#| "may want to represent more complicated data, such as data that needs to "
-#| "act as a custom [ListModel](docs:qtquick;qml-qtqml-models-listmodel.html) "
-#| "or in some way needs to be delegated from a [Repeater](docs:qtquick;qml-"
-#| "qtquick-repeater.html)."
 msgid ""
 "As shown in the [previous tutorial](/docs/getting-started/kirigami/advanced-"
 "connect_backend/), you can connect C++ code to QML by creating a class that "
@@ -1851,29 +1822,22 @@ msgstr ""
 "оболонці QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:20
-#, fuzzy
-#| msgid ""
-#| "![Overlay sheet with a listview](/docs/getting-started/kirigami/"
-#| "components-overlaysheets/sheet_listview.png)"
 msgid ""
 "It is strongly recommended that you read the [List views](/docs/getting-"
 "started/kirigami/components-listview) tutorial before this one."
 msgstr ""
-"![Аркуш-накладка із списком](/docs/getting-started/kirigami/components-"
-"overlaysheets/sheet_listview.png)"
+"Наполегливо рекомендуємо вам ознайомитися перед цим із настановами щодо "
+"[панелей List](/docs/getting-started/kirigami/components-listview)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:22
-#, fuzzy
-#| msgid ""
-#| "[Connect logic to your QML user interface](/docs/getting-started/kirigami/"
-#| "advanced-connect_backend)"
 msgid ""
 "The code used for this tutorial will be based on the previous page, [Connect "
 "logic to your QML user interface](/docs/getting-started/kirigami/advanced-"
 "connect_backend)."
 msgstr ""
-"[З'єднання логіки з вашим інтерфейсом користувача QML](/docs/getting-started/"
-"kirigami/advanced-connect_backend)"
+"Код у цих настановах засновано на коді з попередньої сторінки. [З'єднання "
+"логіки з вашим інтерфейсом користувача QML](/docs/getting-started/kirigami/"
+"advanced-connect_backend)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:46
 msgid "Creating a new page for the models tutorial"
@@ -1881,37 +1845,28 @@ msgstr "Створення сторінки для підручника з мо�
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:48
 msgid "Before doing anything, let's add a new page to our QML code."
-msgstr ""
+msgstr "Перш ніж щось робити, давайте додамо нову сторінку до нашого коду QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:50
 msgid ""
 "First, in `src/Main.qml`, add the following action to the global drawer:"
-msgstr ""
+msgstr "Для початку, додайте у `src/Main.qml` таку дію для загальної панелі:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:54
-#, fuzzy
-#| msgid ""
-#| "First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` "
-#| "with the following contents:"
 msgid ""
 "Then, create a new `src/components/ModelsPage.qml` with the following "
 "contents:"
-msgstr ""
-"Спершу, створимо файл `kirigami-tutorial/src/components/CMakeLists.txt` із "
-"таким вмістом:"
+msgstr "Потім створіть файл `src/components/ModelsPage.qml` з таким вмістом:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:58
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "And finally add it to `src/components/CMakeLists.txt`:"
-msgstr "src/components/CMakeLists.txt"
+msgstr "І нарешті, додайте її до `src/components/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:62
 msgid "This will serve as the canvas for this tutorial page."
-msgstr ""
+msgstr "Це слугуватиме полотном для цієї сторінки покрокових настанов."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:64
-#| msgid "Using our sheet"
 msgid "Using raw strings"
 msgstr "Використання простих рядків"
 
@@ -1925,18 +1880,21 @@ msgid ""
 "every time a string is introduced in our C++ code, which will be useful for "
 "the code in the upcoming header file."
 msgstr ""
+"Щоб спростити розуміння того, як заповнюється модель у цьому підручнику, ми "
+"вимкнемо функцію, яку програми KDE, що використовують extra-cmake-modules "
+"(ECM), використовують типово, що [оптимізує код для рядків](https://doc.qt."
+"io/qt-6/qstring.html#QT_NO_CAST_FROM_ASCII). Це дозволяє нам уникнути "
+"необхідності записувати [QStringLiteral()](https://doc.qt.io/qt-6/qstring."
+"html#QStringLiteral) щоразу, коли рядок вводиться в наш код C++, що буде "
+"корисним для коду в наступному файлі заголовків."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:68
-#, fuzzy
-#| msgid ""
-#| "You might remember this `CMakeLists.txt` file from the first tutorial:"
 msgid "In the root `CMakeLists.txt` file, add the following:"
-msgstr ""
-"Можливо, ви пам'ятаєте цей файл `CMakeLists.txt` з першого підручника:"
+msgstr "До кореневого файла `CMakeLists.txt` додайте таки код:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:72
 msgid "🚨 Do not do this in production"
-msgstr ""
+msgstr "🚨 Не робіть цього у промисловому коді"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:74
 msgid ""
@@ -1945,19 +1903,16 @@ msgid ""
 "(https://doc.qt.io/qt-6/qt-literals-stringliterals.html) instead where "
 "possible."
 msgstr ""
+"Вимкнення цього прапорця CMake ми виконуємо *лише* з навчальною метою. У "
+"робочому коді слід використовувати QStringLiteral() або [простір назв "
+"рядкових літералів Qt](https://doc.qt.io/qt-6/qt-literals-stringliterals."
+"html) там, де це можливо."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:78
 msgid "Preparing the Class"
 msgstr "Приготування класу"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:80
-#, fuzzy
-#| msgid ""
-#| "In this tutorial, we will create a class that contains a QMap, where a "
-#| "QString is used as a key and QStringList objects are used as values. The "
-#| "frontend will be able to read and display the keys and values and be "
-#| "simple to use just like a one-dimensional array. It should look similar "
-#| "to a QML ListModel."
 msgid ""
 "We will create a class that contains a [QMap](https://doc.qt.io/qt-6/qmap."
 "html), where a [QString](https://doc.qt.io/qt-6/qstring.html) is used as a "
@@ -1966,25 +1921,20 @@ msgid ""
 "values and be simple to use just like a one-dimensional array. It should "
 "look similar to a QML ListModel."
 msgstr ""
-"У цих настановах ми створимо клас, який містить QMap, де як ключ буде "
-"використано QString, а як значення буде використано об'єкти QStringList. "
-"Оболонка зможе читати і показувати ключі і значення і буде простою у "
-"використанні, зовсім як одновимірний масив. Усе це має виглядати подібним до "
-"ListModel у QML."
+"Ми створимо клас, який містить [QMap](https://doc.qt.io/qt-6/qmap.html), де "
+"як ключ буде використано [QString](https://doc.qt.io/qt-6/qstring.html), а "
+"як значення буде використано об'єкти [QStringList](https://doc.qt.io/qt-6/"
+"qstringlist.html). Оболонка зможе читати і показувати ключі і значення і "
+"буде простою у використанні, зовсім як одновимірний масив. Усе це має "
+"виглядати подібним до ListModel у QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:86
-#, fuzzy
-#| msgid ""
-#| "To do this, we need to declare a class that inherits from "
-#| "[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add "
-#| "in some add data to the QMap. These declarations will be located in "
-#| "`model.h`."
 msgid ""
 "To do this, we need to create a class that inherits from [QAbstractListModel]"
 "(docs:qtcore;qabstractlistmodel.html). Let's also add some data to the QMap. "
 "These declarations will be located in `model.h`."
 msgstr ""
-"Для цього нам потрібно оголосити клас, який успадковує властивості від "
+"Для цього нам потрібно створити клас, який успадковує властивості від "
 "[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Давайте також "
 "додамо якісь дані до QMap. Ці оголошення будуть зберігатися у `model.h`."
 
@@ -1993,26 +1943,17 @@ msgid ""
 "Create two new files, `src/components/model.h` and `src/components/model."
 "cpp`."
 msgstr ""
+"Створіть два файли, `src/components/model.h` і `src/components/model.cpp`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:93
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "Add those two new files to `src/components/CMakeLists.txt`:"
-msgstr "src/components/CMakeLists.txt"
+msgstr "Додайте ці два нових файли до `src/components/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:97
-#, fuzzy
-#| msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
 msgid "Add the following as the initial contents to `src/components/model.h`:"
-msgstr "Додайте таке наприкінці вашого файла `~/.config/kde-builder.yaml`:"
+msgstr "Додайте такі рядки як початковий вміст до `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:101
-#, fuzzy
-#| msgid ""
-#| "Of course, we can't just display this class as is. We also need to tell "
-#| "QML on how to represent this data in the class. We can do this by "
-#| "overriding three virtual functions that are essential at doing this, all "
-#| "of which do their own tasks."
 msgid ""
 "Of course, we can't just display this class as is. We also need to tell QML "
 "how to represent this data in the class. We can do this by overriding three "
@@ -2021,47 +1962,37 @@ msgstr ""
 "Звичайно ж, ми не можемо показати цей клас без обробки. Нам також слід "
 "повідомити QML про те, як представити ці дані у класі. Зробити це можна "
 "перевизначенням трьох віртуальних функцій, які є критичними для нашого "
-"завдання, і кожна з яких виконує власні завдання."
+"завдання:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
-#, fuzzy
-#| msgid ""
-#| "`rowCount()` - Think of this function as a way to tell QML how many items "
-#| "are in the model to represent."
 msgid ""
 "[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) - "
 "Think of this function as a way to tell QML how many items the model should "
 "present."
 msgstr ""
-"`rowCount()` — цю функцію можна уявляти як спосіб повідомити QML про те, "
-"скільки записів представляє модель."
+"[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) — цю "
+"функцію можна уявляти як спосіб повідомити QML про те, скільки записів "
+"представляє модель."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
-#, fuzzy
-#| msgid ""
-#| "`roleNames()` - You can think of role names as property names attached to "
-#| "data in QML. This function allows you to create those roles."
 msgid ""
 "[roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames) - "
 "You can think of role names as property names attached to data in QML. This "
 "function allows you to create those roles."
 msgstr ""
-"`roleNames()` — назви ролей можна уявляти як назви властивостей, які "
-"пов'язано із даними у QML. За допомогою цієї функції можна створювати такі "
-"ролі."
+"[roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames) — "
+"назви ролей можна уявляти як назви властивостей, які пов'язано із даними у "
+"QML. За допомогою цієї функції можна створювати такі ролі."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:110
-#, fuzzy
-#| msgid ""
-#| "`data()` - This function is called when you want to retrieve the data "
-#| "that corresponds to the role names from the model."
 msgid ""
 "[data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data) - This "
 "function is called when you want to retrieve the data that corresponds to "
 "the role names from the model."
 msgstr ""
-"`data()` — цю функцію буде викликано, коли ви захочете отримати дані, які "
-"відповідають назвам ролей з моделі."
+"[data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data) — цю функцію "
+"буде викликано, коли ви захочете отримати дані, які відповідають назвам "
+"ролей з моделі."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:114
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:122
@@ -2124,42 +2055,30 @@ msgid "Overriding and Implementing `rowCount()`"
 msgstr "Перевизначення і реалізація `rowCount()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:133
-#, fuzzy
-#| msgid ""
-#| "Let's override the function in the header file. The `rowCount()` comes "
-#| "with its own parameter, but will not be used in this example and is "
-#| "excluded."
 msgid ""
 "Let's override the function in the `src/components/model.h` header file. The "
 "[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) "
 "function comes with its own parameter, but it will not be used in this "
 "example and so doesn't need to be named."
 msgstr ""
-"Давайте перевизначимо функцію у файлів заголовків. `rowCount()` має власний "
-"параметр, але його не буде використано у цьому прикладі, і його буде "
-"виключено."
+"Давайте перевизначимо функцію у файлів заголовків `src/components/model.h`. "
+"[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) має "
+"власний параметр, але його не буде використано у цьому прикладі, а тому "
+"потреби в його іменуванні немає."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:138
-#, fuzzy
-#| msgid "Then, let's declare how many rows are in this model in `model.cpp`."
 msgid ""
 "Then, let's declare how many rows are in this model in `src/components/model."
 "cpp`:"
 msgstr ""
-"Тепер, давайте оголосимо, скільки рядків буде у цій моделі у `model.cpp`."
+"Тепер, давайте оголосимо, скільки рядків буде у цій моделі у `src/components/"
+"model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:142
 msgid "Overriding and Implementing `roleNames()`"
 msgstr "Перевизначення і реалізація `roleNames()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:144
-#, fuzzy
-#| msgid ""
-#| "Before we override `roleNames()`, we need to declare what the roles are "
-#| "in the C++ side using an public `enum` variable. The reason for this is "
-#| "because these values from the `enum` variable are passed into `data()` "
-#| "every time QML accesses a corresponding role, and as such we can make "
-#| "`data()` return what we want."
 msgid ""
 "Before we override `roleNames()`, we need to declare what the roles are in "
 "the C++ side using a public enum. The reason for this is because these enum "
@@ -2167,30 +2086,19 @@ msgid ""
 "role, and as such we can make `data()` return what we want."
 msgstr ""
 "До того, як ми перевизначимо `roleNames()`, нами потрібно оголосити ролі на "
-"боці C++ за допомогою відкритої змінної `enum`. Причиною цього є те, що ці "
-"значення зі змінної `enum` буде передано до `data()` під час кожного доступу "
-"QML до відповідної ролі, а тому ми можемо зробити так, що `data()` повертала "
-"потрібні нам дані."
+"боці C++ за допомогою відкритого enum. Причиною цього є те, що ці значення з "
+"enum буде передано до `data()` під час кожного доступу QML до відповідної "
+"ролі, а тому ми можемо зробити так, що `data()` повертала потрібні нам дані."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:150
-#, fuzzy
-#| msgid ""
-#| "Let's begin with creating the `enum` variable for roles, where each value "
-#| "is a role for the C++ side."
 msgid ""
 "Let's begin with creating the enum for roles in `src/components/model.h`, "
 "where each value is a role for the C++ side."
 msgstr ""
-"Почнімо зі створення змінної `enum` для ролей, де кожне значення буде роллю "
-"на боці C++."
+"Почнімо зі створення enum для ролей у `src/components/model.h`, де кожне "
+"значення буде роллю на боці C++."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:155
-#, fuzzy
-#| msgid ""
-#| "Once we have that settled, we can finally create what these roles are in "
-#| "the QML side using a [QHash](docs:qtcore;qhash.html) where the keys are "
-#| "the enumerated values paired with [QByteArrays](docs:qtcore;qbytearray."
-#| "html). The text in the QByteArray is what's used in the actual QML code."
 msgid ""
 "Once we have that settled, we can finally create what these roles are in the "
 "QML side using a [QHash](docs:qtcore;qhash.html) where the keys are the "
@@ -2201,7 +2109,8 @@ msgstr ""
 "Щойно код буде написано, ми нарешті можемо визначити ці ролі на боці QML за "
 "допомогою [QHash](docs:qtcore;qhash.html), де ключі будуть нумерованими "
 "значеннями, які буде пов'язано із [QByteArrays](docs:qtcore;qbytearray."
-"html). Текстом у QByteArray буде те, що буде використано у самому коді QML."
+"html). Цей код має бути у `src/components/model.cpp`. Текстом у QByteArray "
+"буде те, що буде використано у самому коді QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:162
 msgid ""
@@ -2218,12 +2127,6 @@ msgid "Overriding and Implementing `data()`"
 msgstr "Перевизначення і реалізація `data()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:169
-#, fuzzy
-#| msgid ""
-#| "There are two parameters that are passed in `data()`: `index` and `role`. "
-#| "`index` is the location of where the data is when being delegated. As "
-#| "previously stated, `role` is used by QML to get specific data returned "
-#| "when it's accessing a role."
 msgid ""
 "There are two parameters that are passed to `data()`: `index` and `role`. "
 "The `index` is the position of the data in the model. As previously stated, "
@@ -2231,20 +2134,11 @@ msgid ""
 "role."
 msgstr ""
 "У `data()` передаються два параметри: `index` і `role`. `index` — місце, де "
-"перебувають дані, коли їх делеговано. Як ми вже зазначали, `role` "
-"використовується у QML для отримання специфічних даних, які програма "
-"повертає, коли відбувається доступ до ролі."
+"перебувають дані у моделі. Як ми вже зазначали, `role` використовується у "
+"QML для отримання специфічних даних, які програма повертає, коли "
+"відбувається доступ до ролі."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:174
-#, fuzzy
-#| msgid ""
-#| "In `data()`, we can use a `switch` statement to return the appropriate "
-#| "data and data type depending on the role, which is possible as `data()` "
-#| "returns a [QVariant](docs:qtcore;qvariant.html). We still need to make "
-#| "sure we get the appropriate location of the data, though. In this example "
-#| "below, you can see that a new iterator variable is being declared, which "
-#| "is set from the beginning of the list plus the row of the index and the "
-#| "data that the iterator is pointing to is what is being returned."
 msgid ""
 "In `data()`, we can use a switch statement to return the appropriate data "
 "and data type depending on the role, which is possible as `data()` returns a "
@@ -2254,7 +2148,7 @@ msgid ""
 "beginning of the list plus the row of the index, and the data that the "
 "iterator is pointing to is what is being returned."
 msgstr ""
-"У `data()` ми можемо скористатися інструкцією `switch` для повернення "
+"У `data()` ми можемо скористатися інструкцією switch для повернення "
 "відповідних даних, а тип даних залежатиме від ролі, що є можливим, оскільки "
 "`data()` повертає [QVariant](docs:qtcore;qvariant.html). Втім, нам усе ще "
 "потрібно переконатися, що ми отримуємо належне місце у даних. У прикладі "
@@ -2263,12 +2157,6 @@ msgstr ""
 "цей ітератор вказує, — це те, що буде повернуто."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:182
-#, fuzzy
-#| msgid ""
-#| "We can't just return whatever data we want though. We may be trying to "
-#| "bind data to a property with an incompatible data type, such as a "
-#| "QStringList to a QString. You may have to do data conversion in order for "
-#| "the data to be displayed properly."
 msgid ""
 "We can't just return whatever data we want though. We may be trying to bind "
 "data to a property with an incompatible data type, such as a QStringList to "
@@ -2279,15 +2167,16 @@ msgstr ""
 "Втім, ми не можемо просто повернути будь-які бажані дані. Можлива спроба "
 "прив'язування даних до властивості із несумісним типом даних, зокрема "
 "QStringList до QString. Можливо, слід виконати перетворення даних, щоб їх "
-"можна було показати належним чином."
+"можна було показати належним чином. Для цього ми створимо приватну статичну "
+"функцію із назвою `formatList()`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:187
 msgid "This results in the following code in `src/components/model.cpp`:"
-msgstr ""
+msgstr "Результатом є такий код у `src/components/model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:191
 msgid "And the following code in `src/components/model.h`:"
-msgstr ""
+msgstr "І такий код у `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:195
 msgid "Class Usage in QML"
@@ -2314,6 +2203,8 @@ msgid ""
 "A screenshot of the C++ models in QML page showing a list of characters "
 "organized per species"
 msgstr ""
+"Знімок вікна моделей C++ на сторінці QML, у якому показано список символів, "
+"які упорядковано за різновидами"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:208
 msgid "Data Modification"
@@ -2324,14 +2215,6 @@ msgid "Editing Data Using `dataChanged()` and `setData()`"
 msgstr "Редагування даних за допомогою `dataChanged()` і `setData()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:212
-#, fuzzy
-#| msgid ""
-#| "You may encounter a situation where you want to modify data in the model, "
-#| "and have the changes reflected on the frontend side. Every time we change "
-#| "data in the model, we must emit the `dataChanged()` signal which will "
-#| "apply those changes on the frontend side at the specific cells specified "
-#| "in its arguments. In this tutorial, we can just use the `index` argument "
-#| "of `setData()`."
 msgid ""
 "You may encounter a situation where you want to modify data in the model, "
 "and have the changes reflected on the frontend side. Every time we change "
@@ -2344,24 +2227,20 @@ msgstr ""
 "зміни на боці оболонки. Кожного разу, коли ми змінюємо дані у моделі, нам "
 "слід надсилати сигнал `dataChanged()`, який застосує ці зміни на боці "
 "оболонки у вказаних у її аргументах комірках. У цьому підручнику ми можемо "
-"просто скористатися аргументом `index` у `setData()`."
+"просто скористатися аргументом `index` у [setData()](https://doc.qt.io/qt-6/"
+"qabstractitemmodel.html#setData)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:218
-#, fuzzy
-#| msgid ""
-#| "`setData()` is a virtual function you can override so that attempting to "
-#| "modify the data from the frontend side automatically reflects those "
-#| "changes on the backend side. It requires three parameters:"
 msgid ""
 "[setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData) is a "
 "virtual function you can override so that modifying the data from the "
 "frontend side automatically reflects those changes on the backend side. It "
 "requires three parameters:"
 msgstr ""
-"`setData()` є віртуальною функцією, яку ви можете перевизначити так, щоб "
-"спроба внесення змін до даних з боку оболонки автоматично призводила до "
-"внесення цих змін на боці модуля обробки. Функції слід передати три "
-"аргументи:"
+"[setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData) є "
+"віртуальною функцією, яку ви можете перевизначити так, щоб спроба внесення "
+"змін до даних з боку оболонки автоматично призводила до внесення цих змін на "
+"боці модуля обробки. Функції слід передати три аргументи:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:222
 msgid "`index` - The location of the data."
@@ -2372,17 +2251,14 @@ msgid "`value` - The contents of the new data."
 msgstr "`value` — вміст нових даних."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:224
-#, fuzzy
-#| msgid ""
-#| "`role` - In this context, the role here is used to tell views how they "
-#| "should handle data. The role here should be `Qt::EditRole`."
 msgid ""
 "`role` - In this context, the role here is used to tell views how they "
 "should handle data. The role here should be [Qt::EditRole](https://doc.qt.io/"
 "qt-6/qt.html#ItemDataRole-enum)."
 msgstr ""
 "`role` — у цьому контексті роль використовується для повідомлення панелям "
-"перегляду про те, як слід обробляти дані. Роллю тут має бути `Qt::EditRole`."
+"перегляду про те, як слід обробляти дані. Роллю тут має бути [Qt::EditRole]"
+"(https://doc.qt.io/qt-6/qt.html#ItemDataRole-enum)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:227
 msgid ""
@@ -2397,48 +2273,37 @@ msgstr ""
 "місця, де має бути змінено дані за вмістом `value`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:236
-#, fuzzy
-#| msgid ""
-#| "`setData()` does not automatically emit `dataChanged()` and that still "
-#| "has to be done manually."
 msgid ""
 "`setData()` does not automatically emit [dataChanged()](https://doc.qt.io/"
 "qt-6/qabstractitemmodel.html#dataChanged) and that has to be done manually."
 msgstr ""
-"`setData()` не надсилає `dataChanged()` автоматично, це слід зробити вручну."
+"`setData()` не надсилає [dataChanged()](https://doc.qt.io/qt-6/"
+"qabstractitemmodel.html#dataChanged) автоматично, це слід зробити вручну."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:241
 msgid "With the corresponding addition in `src/components/model.h`:"
-msgstr ""
+msgstr "Зі таким додаванням до `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:245
-#, fuzzy
-#| msgid ""
-#| "Let's update the QML code so that we can open up a prompt that allows us "
-#| "to edit the model using a Controls.Button attached to the cards."
 msgid ""
 "Let's update the QML code so that we can open up a prompt that allows us to "
 "edit the model using a [Controls.Button](https://doc.qt.io/qt-6/qml-qtquick-"
 "controls-button.html) attached to the cards."
 msgstr ""
 "Давайте оновимо код QML так, щоб він міг відкривати запит, за допомогою "
-"якого ми зможемо редагувати модель з використанням кнопки Controls.Button, "
-"яку пов'язано із картками."
+"якого ми зможемо редагувати модель з використанням кнопки [Controls.Button]"
+"(https://doc.qt.io/qt-6/qml-qtquick-controls-button.html), яку пов'язано із "
+"картками."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:248
-#, fuzzy
-#| msgid ""
-#| "A standard [Kirigami.Dialog](https://api.kde.org/qml-org-kde-kirigami-"
-#| "dialogs-dialog.html) is used to create custom dialogs. They are very easy "
-#| "to extend:"
 msgid ""
 "Add the following [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-"
 "kirigami-dialogs-promptdialog.html) to the `src/components/ModelsPage.qml`, "
 "together with a new edit button:"
 msgstr ""
-"Стандартний [Kirigami.Dialog](https://api.kde.org/qml-org-kde-kirigami-"
-"dialogs-dialog.html) використовують для створення нетипових діалогових "
-"вікон. Такі вікна дуже просто розширити:"
+"Додайте такий код [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-"
+"kirigami-dialogs-promptdialog.html) до `src/components/ModelsPage.qml`, "
+"разом із новою кнопкою редагування:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:252
 msgid ""
@@ -2475,33 +2340,18 @@ msgstr ""
 "QML для виконання цього завдання."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
-#, fuzzy
-#| msgid ""
-#| "To make the method visible in QML, we must use the Q_OBJECT macro in the "
-#| "class, and begin the method declaration with the Q_INVOKABLE macro. This "
-#| "method will also include a string parameter, which is intended to be the "
-#| "new key in the QMap."
 msgid ""
 "To make the method visible in QML, we must begin the method declaration with "
 "the [Q_INVOKABLE](https://doc.qt.io/qt-6/qobject.html#Q_INVOKABLE) macro. "
 "This method will also include a string parameter, which is intended to be "
 "the new key in the QMap."
 msgstr ""
-"Щоб зробити цей метод видимим у QML, нам слід скористатися у класі макросом "
-"Q_OBJECT і почати оголошення методу за допомогою макроса Q_INVOKABLE. Цей "
-"метод також включатиме рядковий параметр, який має бути новим ключем у QMap."
+"Щоб зробити цей метод видимим у QML, нам слід почати оголошення методу за "
+"допомогою макроса [Q_INVOKABLE](https://doc.qt.io/qt-6/qobject."
+"html#Q_INVOKABLE). Цей метод також включатиме рядковий параметр, який має "
+"бути новим ключем у QMap."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:285
-#, fuzzy
-#| msgid ""
-#| "Inside of this method, we need to tell Qt that we want to create more "
-#| "rows in the model. This is done by calling `beginInsertRows()` to begin "
-#| "our row adding operation, followed by inserting whatever we need, then "
-#| "use `endInsertRows()` to end the operation. We still need to emit "
-#| "`dataChanged()` at the end, however. This time, we are going to update "
-#| "all rows, from the first row to the last one as the QMap may "
-#| "alphabetically reorganize itself, and we need to catch that across all "
-#| "rows."
 msgid ""
 "Inside of this method, we need to tell Qt that we want to create more rows "
 "in the model. This is done by calling [beginInsertRows()](https://doc.qt.io/"
@@ -2515,12 +2365,15 @@ msgid ""
 msgstr ""
 "Всередині цього методу нам слід повідомити Qt про те, що ми хочемо створити "
 "додаткові рядки у моделі. Зробити це можна за допомогою виклику "
-"`beginInsertRows()` для започаткування нашої дії з додавання рядка, після "
+"[beginInsertRows()](https://doc.qt.io/qt-6/qabstractitemmodel."
+"html#beginInsertRows) для започаткування нашої дії з додавання рядка, після "
 "чого слід виконати вставляння потрібного пункту, а потім скористатися "
-"`endInsertRows()` для завершення дії. Наприкінці, нам, як і раніше, слід "
-"надіслати `dataChanged()`. Цього разу ми збираємося оновити усі рядки, від "
-"першого до останнього, оскільки QMap може оновлювати список за абеткою, і "
-"нам потрібно зробити це для усіх рядків."
+"[endInsertRows()](https://doc.qt.io/qt-6/qabstractitemmodel."
+"html#endInsertRows) для завершення дії. Наприкінці, нам, як і раніше, слід "
+"надіслати [dataChanged()](https://doc.qt.io/qt-6/qabstractitemmodel."
+"html#dataChanged). Цього разу ми збираємося оновити усі рядки, від першого "
+"до останнього, оскільки QMap може оновлювати список за абеткою, і нам "
+"потрібно зробити це для усіх рядків."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:293
 msgid ""
@@ -2598,23 +2451,22 @@ msgid ""
 "Add a new Q_INVOKABLE function named `deleteSpecies()` in `src/components/"
 "model.h`:"
 msgstr ""
+"Додайте нову функцію Q_INVOKABLE із назвою `deleteSpecies()` до `src/"
+"components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:345
 msgid "With a matching implementation in `src/components/model.cpp`:"
-msgstr ""
+msgstr "Із відповідною реалізацією у `src/components/model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:349
-#, fuzzy
-#| msgid ""
-#| "Now, let's update the application so a \"Delete\" button appears "
-#| "alongside the edit button, and hook it up to our delete method."
 msgid ""
 "Now, let's update the application so a \"Delete\" button appears in a "
 "RowLayout alongside the edit button inside our AbstractCard, and hook it up "
 "to our delete method."
 msgstr ""
-"Тепер оновімо програму так, щоб з'явилася кнопка «Delete» поряд із кнопкою "
-"редагування, і пов'яжімо цю кнопку із нашим методом вилучення."
+"Тепер оновімо програму так, щоб у RowLayout з'явилася кнопка «Delete» поряд "
+"із кнопкою редагування у нашому AbstractCard, і пов'яжімо цю кнопку із нашим "
+"методом вилучення."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:358
 msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
@@ -2625,34 +2477,24 @@ msgid "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
 msgstr "![app_screenshot_del_2.png](app_screenshot_del_2.png)"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:435
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid "<details><summary>src/Main.qml</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr "<details><summary>src/Main.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:441
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid "<details><summary>src/components/CMakeLists.txt</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr "<details><summary>src/components/CMakeLists.txt</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:447
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid "<details><summary>src/components/ModelsPage.qml</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr "<details><summary>src/components/ModelsPage.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:453
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid "<details><summary>src/components/model.h</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr "<details><summary>src/components/model.h</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:459
-#, fuzzy
-#| msgid "<details><summary>model.cpp</summary>\n"
 msgid "<details><summary>src/components/model.cpp</summary>\n"
-msgstr "<details><summary>model.cpp</summary>\n"
+msgstr "<details><summary>src/components/model.cpp</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:465
 msgid "More Information"
@@ -2882,8 +2724,7 @@ msgstr "Кореневий CMakeLists.txt"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:18
 msgid "You might remember this `CMakeLists.txt` file from the first tutorial:"
-msgstr ""
-"Можливо, ви пам'ятаєте цей файл `CMakeLists.txt` з першого підручника:"
+msgstr "Можливо, ви пам'ятаєте цей файл `CMakeLists.txt` з першого підручника:"
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:22
 msgid ""
@@ -3711,8 +3552,7 @@ msgid "Action toolbars"
 msgstr "Панелі інструментів дій"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:0
-msgid ""
-"Create your own customisable tool bars with the ActionToolBar component"
+msgid "Create your own customisable tool bars with the ActionToolBar component"
 msgstr ""
 "Створення власних налаштовуваних панелей інструментів за допомогою "
 "компонента ActionToolBar"
@@ -4065,8 +3905,7 @@ msgid "Chips"
 msgstr "Чіпси"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
-msgid ""
-"Chips are small elements typically used to list out related properties."
+msgid "Chips are small elements typically used to list out related properties."
 msgstr ""
 "Чіпси — малі елементи, які типово використовують для зберігання списків "
 "пов'язаних властивостей."
@@ -5407,8 +5246,7 @@ msgstr ""
 "складається з декількох рядків"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:212
-msgid ""
-"We can do something similar to this with a JavaScript ternary operator:"
+msgid "We can do something similar to this with a JavaScript ternary operator:"
 msgstr ""
 "Ми можемо зробити щось подібне до цього за допомогою тернарного оператора "
 "JavaScript:"
@@ -5557,8 +5395,7 @@ msgstr ""
 "навіть, якщо хочете, включити зовнішнє інтернет-посилання."
 
 #: content/docs/getting-started/kirigami/components-inlinemessages/index.md:122
-msgid ""
-"Note that when you use quotes in a string you will have to escape them!"
+msgid "Note that when you use quotes in a string you will have to escape them!"
 msgstr ""
 "Зауважте, що якщо ви використовуєте лапки у рядку, вам слід їх екранувати!"
 
@@ -5689,8 +5526,7 @@ msgstr ""
 msgid ""
 "The **delegate**, which defines how each element in the model will be "
 "displayed"
-msgstr ""
-"**Делегата**, який визначає, як буде показано кожне з елементів моделі"
+msgstr "**Делегата**, який визначає, як буде показано кожне з елементів моделі"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:15
 msgid ""
@@ -5997,8 +5833,7 @@ msgstr "[TreeView](docs:qtquick;QtQuick.TreeView) Qt"
 #: content/docs/getting-started/kirigami/components-listview/index.md:290
 msgid ""
 "Kirigami's [CardsListView](docs:kirigami;org.kde.kirigami.CardsListView)"
-msgstr ""
-"[CardsListView](docs:kirigami;org.kde.kirigami.CardsListView) Kirigami"
+msgstr "[CardsListView](docs:kirigami;org.kde.kirigami.CardsListView) Kirigami"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:291
 msgid ""
@@ -6131,8 +5966,7 @@ msgstr ""
 "піктограм:"
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:334
-msgid ""
-"[TitleSubtitle](docs:kirigami;org.kde.kirigami.delegates.TitleSubtitle)"
+msgid "[TitleSubtitle](docs:kirigami;org.kde.kirigami.delegates.TitleSubtitle)"
 msgstr ""
 "[TitleSubtitle](docs:kirigami;org.kde.kirigami.delegates.TitleSubtitle)"
 
@@ -7371,8 +7205,7 @@ msgstr ""
 msgid ""
 "is similar to the QML bindings we have seen so far, like in the following "
 "pseudo-code:"
-msgstr ""
-"є подібним до прив'язок QML, які ми досі мали, як у такому псевдокоді:"
+msgstr "є подібним до прив'язок QML, які ми досі мали, як у такому псевдокоді:"
 
 #: content/docs/getting-started/kirigami/introduction-dialogs/index.md:154
 msgid ""
@@ -7477,8 +7310,7 @@ msgstr "Компонування, панелі списків і картки"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:0
 msgid "Figuring out the different ways of placing things on a page"
-msgstr ""
-"Розбираємося із різними способами розташовування елементів на сторінці"
+msgstr "Розбираємося із різними способами розташовування елементів на сторінці"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:9
 #: content/docs/getting-started/kirigami/style-typography/index.md:0
@@ -8149,8 +7981,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:37
 msgid "A touch friendly calendar application designed for mobile devices."
-msgstr ""
-"Зручна на сенсорних екранах програма-календар для мобільних пристроїв."
+msgstr "Зручна на сенсорних екранах програма-календар для мобільних пристроїв."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:37
 msgid ""
@@ -8235,8 +8066,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:41
 msgid "[KDE Invent page](https://invent.kde.org/plasma/plasma-welcome)"
-msgstr ""
-"[Сторінка на KDE Invent](https://invent.kde.org/plasma/plasma-welcome)"
+msgstr "[Сторінка на KDE Invent](https://invent.kde.org/plasma/plasma-welcome)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:43
 msgid "More complex Kirigami projects"
@@ -10911,8 +10741,7 @@ msgid "src/\\_\\_main\\_\\_.py"
 msgstr "src/\\_\\_main\\_\\_.py"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:108
-msgid ""
-"Create a `kirigami_python/src/__main__.py` with the following contents:"
+msgid "Create a `kirigami_python/src/__main__.py` with the following contents:"
 msgstr "Створіть `kirigami_python/src/__main__.py` з таким вмістом:"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:112
@@ -11640,8 +11469,7 @@ msgstr "Button: набір кольорів, який використовуют
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:78
 msgid "Selection: Color set used by selected areas"
-msgstr ""
-"Selection: набір кольорів, який використовують для позначених областей"
+msgstr "Selection: набір кольорів, який використовують для позначених областей"
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:79
 msgid "Tooltip: Color set used by tooltips"
