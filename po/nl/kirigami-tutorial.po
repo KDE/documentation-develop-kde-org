@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 10:15+0000\n"
-"PO-Revision-Date: 2026-01-14 18:11+0100\n"
+"PO-Revision-Date: 2026-01-15 13:22+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -1388,6 +1388,10 @@ msgid ""
 "For this, we use the [QML_SINGLETON](https://doc.qt.io/qt-6/qqmlintegration-"
 "h.html#QML_SINGLETON) macro."
 msgstr ""
+"De backend wordt als singleton aangemaakt, wat betekent dat deze slechts één "
+"keer wordt aangemaakt en gedurende de hele levensduur van de toepassing "
+"blijft bestaan. Hiervoor gebruiken we de macro [QML_SINGLETON](https://doc."
+"qt.io/qt-6/qqmlintegration-h.html#QML_SINGLETON)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:45
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:123
@@ -1397,6 +1401,7 @@ msgstr "src/components/backend.cpp"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:47
 msgid "We can add our initial code for the constructor to `backend.cpp`:"
 msgstr ""
+"We kunnen onze eerste code voor de constructor toevoegen aan `backend.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:51
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:131
@@ -1408,18 +1413,24 @@ msgid ""
 "From now on, the backend will be known to QML as the `Backend` QML type. It "
 "is contained in a module called `org.kde.tutorial.components`."
 msgstr ""
+"Vanaf nu zal de backend in QML bekendstaan ​​als het QML-type `Backend`. Deze "
+"is opgenomen in een module genaamd `org.kde.tutorial.components`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:55
 msgid ""
 "This means that just by adding the import in a QML file, it is possible to "
 "use the code exposed from C++:"
 msgstr ""
+"Dit betekent dat het mogelijk is om, door simpelweg de import in een QML-"
+"bestand toe te voegen, de code te gebruiken die vanuit C++ beschikbaar is:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:61
 msgid ""
 "To start from a clean slate using the existent application code, create a "
 "new QML component that contains an empty page:"
 msgstr ""
+"Om helemaal opnieuw te beginnen met de bestaande toepassingscode, maakt u "
+"een nieuwe QML-component aan die een lege pagina bevat:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:65
 msgid "src/Main.qml"
@@ -1431,6 +1442,9 @@ msgid ""
 "new page](/docs/getting-started/kirigami/components-pagerow_pagestack/) to "
 "the application, just so we can test the model more easily."
 msgstr ""
+"Om de nieuwe pagina daadwerkelijk weer te geven, maken we een menuoptie die "
+"de nieuwe pagina naar de applicatie pusht, zodat we het model gemakkelijker "
+"kunnen testen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:69
 msgid ""
@@ -1439,6 +1453,10 @@ msgid ""
 "qt-6/qtqml-javascript-dynamicobjectcreation.html) to generate the page on "
 "the fly:"
 msgstr ""
+"Hiervoor kunnen we een nieuwe [Kirigami.Action](/docs/getting-started/"
+"kirigami/components-actions/) gebruiken in combinatie met [Qt."
+"createComponent()](https://doc.qt.io/qt-6/qtqml-javascript-"
+"dynamicobjectcreation.html) om de pagina dynamisch te genereren:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:73
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
@@ -1450,12 +1468,16 @@ msgid ""
 "Lastly, add the newly created `backend.h`, `backend.cpp` and `ExposePage."
 "qml` to CMake:"
 msgstr ""
+"Voeg tot slot de zojuist aangemaakte `backend.h`, `backend.cpp` en "
+"`ExposePage.qml` toe aan CMake:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:79
 msgid ""
 "Adding the files to an existing QML module in CMake is the second part to "
 "exposing code to QML."
 msgstr ""
+"Het toevoegen van de bestanden aan een bestaande QML-module in CMake is het "
+"tweede deel van het proces om code beschikbaar te maken voor QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:81
 msgid ""
@@ -1465,6 +1487,11 @@ msgid ""
 "they are required for [declarative registration](https://doc.qt.io/qt-6/"
 "qtqml-cppintegration-definetypes.html)."
 msgstr ""
+"Merk op dat de QML-module gemaakt had moeten worden met "
+"[ecm_add_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html) of "
+"[qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module.html), "
+"aangezien deze vereist zijn voor [declaratieve registratie](https://doc.qt."
+"io/qt-6/qtqml-cppintegration-definetypes.html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:83
 msgid ""
@@ -1472,10 +1499,13 @@ msgid ""
 "steps as before](/docs/getting-started/kirigami/setup-cpp/#running-the-"
 "application)."
 msgstr ""
+"Nu zou u het project moeten kunnen compileren en installeren met [dezelfde "
+"stappen als eerder](/docs/getting-started/kirigami/setup-cpp/#running-the-"
+"application)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:85
 msgid "Making it functional"
-msgstr ""
+msgstr "Het functioneel maken"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:89
 msgid ""
@@ -1528,7 +1558,7 @@ msgstr "Voeg een nieuwe private sectie toe met het volgende:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:108
 msgid "And add the following to the existing public section:"
-msgstr ""
+msgstr "Voeg het volgende toe aan het bestaande openbare gedeelte:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:117
 msgid ""
@@ -1594,7 +1624,7 @@ msgstr "Onze toepassing (app) tot zover"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:141
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:372
 msgid "Existing code:"
-msgstr ""
+msgstr "Bestaande code:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:143
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:428
@@ -1678,7 +1708,7 @@ msgstr "<br>\n"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:180
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:426
 msgid "Code written/modified in this page:"
-msgstr ""
+msgstr "Code geschreven/gemodificeerd op deze pagina:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:182
 msgid ""
@@ -1729,6 +1759,10 @@ msgid ""
 "application) and start your program again. You'll see that the new page has "
 "a centered Heading saying \"Hello World!\"."
 msgstr ""
+"[Compileer](/docs/getting-started/kirigami/setup-cpp/#running-the-"
+"application) nu het bestand en start uw programma opnieuw. U zult zien dat "
+"de nieuwe pagina een gecentreerde koptekst heeft met de tekst \"Hallo wereld!"
+"\"."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:223
 msgid "Congratulations, you learned:"
@@ -1820,16 +1854,19 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:46
 msgid "Creating a new page for the models tutorial"
-msgstr ""
+msgstr "Een nieuwe pagina maken voor de modelhandleiding"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:48
 msgid "Before doing anything, let's add a new page to our QML code."
 msgstr ""
+"Laten we, voordat we iets anders doen, een nieuwe pagina aan onze QML-code "
+"toevoegen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:50
 msgid ""
 "First, in `src/Main.qml`, add the following action to the global drawer:"
 msgstr ""
+"Voeg eerst in `src/Main.qml` de volgende actie toe aan de globale lade:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:54
 msgid ""
@@ -1845,7 +1882,7 @@ msgstr "En voeg het tenslotte toe aan `src/components/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:62
 msgid "This will serve as the canvas for this tutorial page."
-msgstr ""
+msgstr "Dit dient als werkveld voor deze handleidingpagina."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:64
 msgid "Using raw strings"
@@ -1861,6 +1898,14 @@ msgid ""
 "every time a string is introduced in our C++ code, which will be useful for "
 "the code in the upcoming header file."
 msgstr ""
+"Om deze handleiding gemakkelijker te maken te begrijpen hoe het model wordt "
+"gevuld, schakelen we een functie uit die de KDE-toepassing die extra-cmake-"
+"modules (ECM) standaard gebruiken en die [tekenreekscode optimaliseert]"
+"(https://doc.qt.io/qt-6/qstring.html#QT_NO_CAST_FROM_ASCII). Hierdoor hoeven "
+"we niet telkens [QStringLiteral()](https://doc.qt.io/qt-6/qstring."
+"html#QStringLiteral) te schrijven wanneer een string in onze C++-code wordt "
+"geïntroduceerd, wat handig zal zijn voor de code in het aankomende "
+"headerbestand."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:68
 msgid "In the root `CMakeLists.txt` file, add the following:"
@@ -1868,7 +1913,7 @@ msgstr "In de hoofdmap bestand `CMakeLists.txt`, voeg het volgende toe:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:72
 msgid "🚨 Do not do this in production"
-msgstr ""
+msgstr "🚨 Doe dit niet in productie"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:74
 msgid ""
@@ -1877,6 +1922,10 @@ msgid ""
 "(https://doc.qt.io/qt-6/qt-literals-stringliterals.html) instead where "
 "possible."
 msgstr ""
+"Het uitschakelen van deze CMake-vlag is *uitsluitend* voor didactische "
+"doeleinden. In productiecode moet waar mogelijk QStringLiteral() of de [Qt "
+"string literals namespace](https://doc.qt.io/qt-6/qt-literals-stringliterals."
+"html) worden gebruikt."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:78
 msgid "Preparing the Class"
@@ -1914,6 +1963,8 @@ msgid ""
 "Create two new files, `src/components/model.h` and `src/components/model."
 "cpp`."
 msgstr ""
+"Maak twee nieuwe bestanden aan: `src/components/model.h` en `src/components/"
+"model.cpp`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:93
 msgid "Add those two new files to `src/components/CMakeLists.txt`:"
@@ -2147,11 +2198,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:187
 msgid "This results in the following code in `src/components/model.cpp`:"
-msgstr ""
+msgstr "Dit resulteert in de volgende code in `src/components/model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:191
 msgid "And the following code in `src/components/model.h`:"
-msgstr ""
+msgstr "En de volgende code in `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:195
 msgid "Class Usage in QML"
@@ -2179,6 +2230,8 @@ msgid ""
 "A screenshot of the C++ models in QML page showing a list of characters "
 "organized per species"
 msgstr ""
+"Een schermafbeelding van de C++-modellen in de QML-pagina met een lijst van "
+"kenmerken, georganiseerd per soort"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:208
 msgid "Data Modification"
@@ -2257,7 +2310,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:241
 msgid "With the corresponding addition in `src/components/model.h`:"
-msgstr ""
+msgstr "Met de bijbehorende toevoeging in `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:245
 msgid ""
@@ -2429,10 +2482,12 @@ msgid ""
 "Add a new Q_INVOKABLE function named `deleteSpecies()` in `src/components/"
 "model.h`:"
 msgstr ""
+"Voeg een nieuwe Q_INVOKABLE-functie met de naam `deleteSpecies()` toe in "
+"`src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:345
 msgid "With a matching implementation in `src/components/model.cpp`:"
-msgstr ""
+msgstr "Met een overeenkomstige implementatie in `src/components/model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:349
 msgid ""
