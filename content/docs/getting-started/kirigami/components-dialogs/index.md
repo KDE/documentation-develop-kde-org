@@ -10,6 +10,13 @@ aliases:
 A [Kirigami.Dialog](docs:kirigami;org.kde.kirigami.dialogs.Dialog) is a simple component that you can use to supplement the content being displayed on an application's page. It can display non-interactive content (only text) and interactive content (forms, listviews and buttons).
 
 They can be dismissed by clicking or tapping outside of their area or by clicking the close button on the header.
+{{< alert title="Sandboxed environments" color="info" >}}
+This works out of the box for all Kirigami dialogs in sandboxed environments
+(such as Flatpak) via XDG Desktop Portals. When running in a sandbox, the
+appropriate portal backend is used automatically, allowing user-approved access
+without requiring manual D-Bus handling.
+{{< /alert >}}
+
 
 ### Dialog
 
