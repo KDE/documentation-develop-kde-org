@@ -14,7 +14,7 @@ If the software is not a part of KDE, then it needs to undergo an [Incubation]({
 
 If the software is already using KDE infrastructure, then it can go straight to [KDE Review]({{< ref "review" >}}).
 
-{{< figure src="lifecycle.png" class="text-center" >}}
+{{< figure src="../lifecycle.png" class="text-center" >}}
 
 If the release you plan to do is an alpha, beta or release candidate (RC), then it would use an *unstable branch*. If the release is stable, then it would use a *stable branch*. A branch, in this context, is a line of development, that is, where you would continue to develop your software.
 
