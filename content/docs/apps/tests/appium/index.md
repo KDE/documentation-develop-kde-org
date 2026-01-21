@@ -33,7 +33,7 @@ This tutorial will provide a step-by-step guide to use Selenium AT-SPI to automa
 
 This tutorial requires Python 3.8+ which is included by default in most distributions.
 
-Installation of [Accerciser](https://help.gnome.org/users/accerciser/stable/introduction.html.en) (an interactive accessibility explorer) and [Orca](https://help.gnome.org/users/orca/stable/introduction.html.en) (screen reader) are recommended if you want to test accessibility with Appium tests.
+Installation of [Accerciser](https://gitlab.gnome.org/GNOME/accerciser) (an interactive accessibility explorer) and [Orca](https://help.gnome.org/users/orca/stable/introduction.html.en) (screen reader) are recommended if you want to test accessibility with Appium tests.
 
 {{< installpackage
     ubuntu="accerciser orca"
