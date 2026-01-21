@@ -5,8 +5,8 @@ weight: 5
 group: "help"
 ---
 
-If you have any trouble getting things to build due to missing 3rd-party package dependencies, read on to learn what to do.
-If this guide does not manage to solve your compilation problems, be sure to [contact the developers]({{< ref "help-developers" >}}).
+This page handles the normal issues related to missing dependencies when building with kde-builder. If you have any specific issues, consult our [Troubleshooting page]({{< ref "kde-builder-failure" >}}) or [contact the developers]({{< ref "help-developers" >}}).
+ 
 
 ## How to install all the build dependencies of one package
 
