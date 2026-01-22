@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 10:15+0000\n"
+"POT-Creation-Date: 2026-01-22 02:15+0000\n"
 "PO-Revision-Date: 2025-10-27 22:25+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -1831,11 +1831,11 @@ msgstr "<details><summary>model.h</summary>\n"
 #: content/docs/getting-started/kirigami/components-controls/index.md:389
 #: content/docs/getting-started/kirigami/components-controls/index.md:439
 #: content/docs/getting-started/kirigami/components-controls/index.md:514
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:62
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:123
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:177
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:244
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:319
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:69
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:130
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:184
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:251
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:326
 #: content/docs/getting-started/kirigami/components-drawers/index.md:65
 #: content/docs/getting-started/kirigami/components-drawers/index.md:132
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:64
@@ -4874,16 +4874,19 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:12
 msgid ""
 "They can be dismissed by clicking or tapping outside of their area or by "
-"clicking the close button on the header."
+"clicking the close button on the header. {{< alert title=\"Sandboxed "
+"environments\" color=\"info\" >}} This works out of the box for all Kirigami "
+"dialogs in sandboxed environments (such as Flatpak) via XDG Desktop Portals. "
+"When running in a sandbox, the appropriate portal backend is used "
+"automatically, allowing user-approved access without requiring manual D-Bus "
+"handling. {{< /alert >}}"
 msgstr ""
-"De kan avfärdas genom att klicka eller röra utanför deras område, eller "
-"genom att klicka på stängningsknappen i namnlisten."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:14
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:21
 msgid "Dialog"
 msgstr "Dialogruta"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:16
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:23
 #, fuzzy
 #| msgid ""
 #| "A standard Kirigami.Dialog is used to create custom dialogs. They are "
@@ -4896,11 +4899,11 @@ msgstr ""
 "En vanlig Kirigami.Dialog används för att skapa egna dialogrutor. De är "
 "mycket lätta att utöka:"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:64
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:71
 msgid "![Simple dialog containing only text](dialog.webp)"
 msgstr "![Enkel dialogruta som bara innehåller text](dialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:70
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:77
 msgid ""
 "As shown in the [introduction tutorial about dialogs](/docs/getting-started/"
 "kirigami/introduction-dialogs), it is also possible to capture a "
@@ -4912,7 +4915,7 @@ msgstr ""
 "`standardButton(button)` för att tilldela något beteende till den, som en "
 "bindning för att endast aktivera den under vissa förutsättningar."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:72
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:79
 msgid ""
 "This type of dialog is generic and applies to most use cases, and it works "
 "well with complex interactive content (especially views):"
@@ -4921,15 +4924,15 @@ msgstr ""
 "användarfall, och den fungerar bra med komplext interaktivt innehåll "
 "(särskilt vyer):"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:101
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:108
 msgid "hints for the dialog dimensions"
 msgstr "tips om dialogrutans dimensioner"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:125
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:132
 msgid "![A simple scrollable dialog](scrollabledialog.webp)"
 msgstr "![En enkel rullningsbar dialogruta](scrollabledialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:131
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:138
 #, fuzzy
 #| msgid ""
 #| "In most cases however you will likely want to use one of its derived "
@@ -4947,11 +4950,11 @@ msgstr ""
 "dialogs.PromptDialog) eller [Kirigami.MenuDialog](docs:;org.kde.kirigami."
 "dialogs.MenuDialog)."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:133
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:140
 msgid "PromptDialog"
 msgstr "PromptDialog"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:135
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:142
 #, fuzzy
 #| msgid ""
 #| "A [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs."
@@ -4976,7 +4979,7 @@ msgstr ""
 "endast användas för enkla ja/nej-uppmaningar eller korta frågor om "
 "användarinmatning."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:137
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:144
 #, fuzzy
 #| msgid ""
 #| "Its main property is [Kirigami.Dialog.subtitle](https://api-staging.kde."
@@ -4994,20 +4997,20 @@ msgstr ""
 "man lägger till text med. Om någon QML-komponent läggs till som underordnad "
 "till dialogrutan, ersätter den komponenten istället undertexten."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:179
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:186
 msgid "![A simple prompt dialog containing only text](promptdialog.webp)"
 msgstr ""
 "![En enkel frågedialogruta som bara innehåller text](promptdialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:246
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:253
 msgid "![A PromptDialog with a custom TextField](promptdialogtextfield.webp)"
 msgstr "![En PromptDialog med eget TextField](promptdialogtextfield.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:252
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:259
 msgid "MenuDialog"
 msgstr "Menydialogruta"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:254
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:261
 #, fuzzy
 #| msgid ""
 #| "The [Kirigami.MenuDialog](docs:kirigami;org.kde.kirigami.dialogs."
@@ -5026,7 +5029,7 @@ msgstr ""
 "alternativ för användaren med hjälp av egenskapen [actions](https://api-"
 "staging.kde.org/qml-org-kde-kirigami-dialogs-menudialog.html#actions-prop)."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:321
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:328
 msgid ""
 "![A simple MenuDialog listing actions like Play and Pause for media]"
 "(menudialog.webp)"
@@ -12243,6 +12246,13 @@ msgstr ""
 "Teckenstorleken på [Kirigami Theme](https://api.kde.org/qml-org-kde-kirigami-"
 "platform-theme.html) är tillgänglig som `Kirigami.Theme.defaultFont."
 "pointSize` i ditt program."
+
+#~ msgid ""
+#~ "They can be dismissed by clicking or tapping outside of their area or by "
+#~ "clicking the close button on the header."
+#~ msgstr ""
+#~ "De kan avfärdas genom att klicka eller röra utanför deras område, eller "
+#~ "genom att klicka på stängningsknappen i namnlisten."
 
 #~ msgid ""
 #~ "For your new backend class, create two new files called `backend.cpp` and "

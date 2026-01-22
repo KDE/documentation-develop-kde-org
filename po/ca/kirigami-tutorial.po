@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 10:15+0000\n"
+"POT-Creation-Date: 2026-01-22 02:15+0000\n"
 "PO-Revision-Date: 2026-01-13 17:57+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1732,11 +1732,11 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-controls/index.md:389
 #: content/docs/getting-started/kirigami/components-controls/index.md:439
 #: content/docs/getting-started/kirigami/components-controls/index.md:514
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:62
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:123
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:177
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:244
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:319
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:69
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:130
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:184
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:251
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:326
 #: content/docs/getting-started/kirigami/components-drawers/index.md:65
 #: content/docs/getting-started/kirigami/components-drawers/index.md:132
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:64
@@ -4673,16 +4673,19 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:12
 msgid ""
 "They can be dismissed by clicking or tapping outside of their area or by "
-"clicking the close button on the header."
+"clicking the close button on the header. {{< alert title=\"Sandboxed "
+"environments\" color=\"info\" >}} This works out of the box for all Kirigami "
+"dialogs in sandboxed environments (such as Flatpak) via XDG Desktop Portals. "
+"When running in a sandbox, the appropriate portal backend is used "
+"automatically, allowing user-approved access without requiring manual D-Bus "
+"handling. {{< /alert >}}"
 msgstr ""
-"Es poden descartar fent clic o tocant fora de la seva àrea, o fent clic "
-"sobre la icona del botó de tancament en la capçalera."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:14
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:21
 msgid "Dialog"
 msgstr "Diàleg"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:16
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:23
 msgid ""
 "A standard [Kirigami.Dialog](https://api.kde.org/qml-org-kde-kirigami-"
 "dialogs-dialog.html) is used to create custom dialogs. They are very easy to "
@@ -4692,12 +4695,12 @@ msgstr ""
 "dialogs-dialog.html) estàndard per a crear diàlegs personalitzats. Són molt "
 "fàcils d'ampliar:"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:64
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:71
 msgid "![Simple dialog containing only text](dialog.webp)"
 msgstr "![Diàleg senzill que només conté text](dialog.webp)"
 
 # skip-rule: t-acc_obe, kct-button
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:70
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:77
 msgid ""
 "As shown in the [introduction tutorial about dialogs](/docs/getting-started/"
 "kirigami/introduction-dialogs), it is also possible to capture a "
@@ -4709,7 +4712,7 @@ msgstr ""
 "capturar un `standardButton(button)` per a assignar-li algun comportament, "
 "com una vinculació per a habilitar-lo només sota certes condicions."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:72
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:79
 msgid ""
 "This type of dialog is generic and applies to most use cases, and it works "
 "well with complex interactive content (especially views):"
@@ -4717,15 +4720,15 @@ msgstr ""
 "Aquest tipus de diàleg és genèric i s'aplica a la majoria dels casos d'ús, i "
 "funciona bé amb contingut interactiu complex (especialment vistes):"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:101
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:108
 msgid "hints for the dialog dimensions"
 msgstr "consells per a les dimensions del diàleg"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:125
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:132
 msgid "![A simple scrollable dialog](scrollabledialog.webp)"
 msgstr "![Un diàleg desplaçable senzill](scrollabledialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:131
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:138
 msgid ""
 "In most cases however you will likely want to use one of its derived dialog "
 "types, [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs."
@@ -4737,11 +4740,11 @@ msgstr ""
 "kirigami.dialogs.PromptDialog) o [Kirigami.MenuDialog](docs:kirigami;org.kde."
 "kirigami.dialogs.MenuDialog)."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:133
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:140
 msgid "PromptDialog"
 msgstr "PromptDialog"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:135
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:142
 msgid ""
 "A [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs."
 "PromptDialog) is essentially a dialog with a built-in label and default "
@@ -4758,7 +4761,7 @@ msgstr ""
 "només s'utilitzarà per a indicadors ssenzills sí/no o sol·licituds breus "
 "d'entrada de l'usuari."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:137
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:144
 msgid ""
 "Its main property is [Kirigami.Dialog.subtitle](https://api.kde.org/qml-org-"
 "kde-kirigami-dialogs-promptdialog.html#subtitle-prop), to which you would "
@@ -4770,21 +4773,21 @@ msgstr ""
 "afegireu text. Si s'afegeix qualsevol component QML com a fill del diàleg de "
 "l'indicador, aquest component ocuparà el lloc del subtítol."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:179
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:186
 msgid "![A simple prompt dialog containing only text](promptdialog.webp)"
 msgstr ""
 "![Un diàleg senzill d'indicador que només conté text](promptdialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:246
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:253
 msgid "![A PromptDialog with a custom TextField](promptdialogtextfield.webp)"
 msgstr ""
 "![Un PromptDialog amb un TextField personalitzat](promptdialogtextfield.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:252
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:259
 msgid "MenuDialog"
 msgstr "MenuDialog"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:254
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:261
 msgid ""
 "The [Kirigami.MenuDialog](docs:kirigami;org.kde.kirigami.dialogs.MenuDialog) "
 "is a specialized dialog that is used to list a selection of clickable "
@@ -4797,7 +4800,7 @@ msgstr ""
 "(https://api.kde.org/qml-org-kde-kirigami-dialogs-menudialog.html#actions-"
 "prop)."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:321
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:328
 msgid ""
 "![A simple MenuDialog listing actions like Play and Pause for media]"
 "(menudialog.webp)"
@@ -12047,6 +12050,13 @@ msgstr ""
 "La mida de la lletra del [Kirigami.Theme](https://api.kde.org/qml-org-kde-"
 "kirigami-platform-theme.html) està disponible en la vostra aplicació com una "
 "`Kirigami.Theme.defaultFont.pointSize`."
+
+#~ msgid ""
+#~ "They can be dismissed by clicking or tapping outside of their area or by "
+#~ "clicking the close button on the header."
+#~ msgstr ""
+#~ "Es poden descartar fent clic o tocant fora de la seva àrea, o fent clic "
+#~ "sobre la icona del botó de tancament en la capçalera."
 
 # skip-rule: t-acc_obe
 #~ msgid ""

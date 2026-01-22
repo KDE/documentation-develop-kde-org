@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 10:15+0000\n"
+"POT-Creation-Date: 2026-01-22 02:15+0000\n"
 "PO-Revision-Date: 2025-03-17 21:10+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -1811,11 +1811,11 @@ msgstr "<details><summary>model.h</summary>\n"
 #: content/docs/getting-started/kirigami/components-controls/index.md:389
 #: content/docs/getting-started/kirigami/components-controls/index.md:439
 #: content/docs/getting-started/kirigami/components-controls/index.md:514
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:62
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:123
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:177
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:244
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:319
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:69
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:130
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:184
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:251
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:326
 #: content/docs/getting-started/kirigami/components-drawers/index.md:65
 #: content/docs/getting-started/kirigami/components-drawers/index.md:132
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:64
@@ -4939,16 +4939,19 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:12
 msgid ""
 "They can be dismissed by clicking or tapping outside of their area or by "
-"clicking the close button on the header."
+"clicking the close button on the header. {{< alert title=\"Sandboxed "
+"environments\" color=\"info\" >}} This works out of the box for all Kirigami "
+"dialogs in sandboxed environments (such as Flatpak) via XDG Desktop Portals. "
+"When running in a sandbox, the appropriate portal backend is used "
+"automatically, allowing user-approved access without requiring manual D-Bus "
+"handling. {{< /alert >}}"
 msgstr ""
-"Ili povas esti forigitaj klakante aŭ frapetante ekster sia areo aŭ klakante "
-"la fermbutonon sur la kaplinio."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:14
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:21
 msgid "Dialog"
 msgstr "Dialogo"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:16
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:23
 #, fuzzy
 #| msgid ""
 #| "A standard Kirigami.Dialog is used to create custom dialogs. They are "
@@ -4961,11 +4964,11 @@ msgstr ""
 "Norma Kirigami.Dialog estas uzata por krei proprajn dialogojn. Ili estas tre "
 "facile etendeblaj:"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:64
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:71
 msgid "![Simple dialog containing only text](dialog.webp)"
 msgstr "![Simpla dialogo enhavanta nur tekston](dialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:70
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:77
 msgid ""
 "As shown in the [introduction tutorial about dialogs](/docs/getting-started/"
 "kirigami/introduction-dialogs), it is also possible to capture a "
@@ -4977,7 +4980,7 @@ msgstr ""
 "`standardButton(button)` por atribui iun konduton al ĝi, kiel ligado por "
 "ebligi ĝi nur sub certaj kondiĉoj."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:72
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:79
 msgid ""
 "This type of dialog is generic and applies to most use cases, and it works "
 "well with complex interactive content (especially views):"
@@ -4985,15 +4988,15 @@ msgstr ""
 "Ĉi tiu speco de dialogo estas ĝenerala kaj validas por plej multaj uzkazoj, "
 "kaj ĝi funkcias bone kun kompleksa interaga enhavo (precipe vidoj):"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:101
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:108
 msgid "hints for the dialog dimensions"
 msgstr "sugestoj por la dialogaj dimensioj"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:125
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:132
 msgid "![A simple scrollable dialog](scrollabledialog.webp)"
 msgstr "![Simpla rulebla dialogo](scrollabledialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:131
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:138
 #, fuzzy
 #| msgid ""
 #| "In most cases however you will likely want to use one of its derived "
@@ -5009,11 +5012,11 @@ msgstr ""
 "[Kirigami.PromptDialog](docs:kirigami2;PromptDialog) aŭ [Kirigami.MenuDialog]"
 "(docs:kirigami2;MenuDialog)."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:133
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:140
 msgid "PromptDialog"
 msgstr "PromptDialog"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:135
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:142
 #, fuzzy
 #| msgid ""
 #| "A [Kirigami.PromptDialog](docs:kirigami2;PromptDialog) is essentially a "
@@ -5035,7 +5038,7 @@ msgstr ""
 "informoj. Ĉi tiu tipo de dialogo supozeble estas uzata nur por simplaj jes/"
 "neaj invitoj aŭ mallongaj petoj por uzanta enigo."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:137
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:144
 #, fuzzy
 #| msgid ""
 #| "Its main property is [Kirigami.Dialog.subtitle](docs:kirigami2;"
@@ -5056,19 +5059,19 @@ msgstr ""
 "anstataŭos la subtitolon, kaj ĉi tio povas esti eksplicite specifita per "
 "[Kirigami.Dialog.mainItem](docs:kirigami2;Dialog::mainItem)."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:179
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:186
 msgid "![A simple prompt dialog containing only text](promptdialog.webp)"
 msgstr "![Simpla prompta dialogo enhavanta nur tekston](promptdialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:246
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:253
 msgid "![A PromptDialog with a custom TextField](promptdialogtextfield.webp)"
 msgstr "![PromptDialog kun propra TextField](promptdialogtextfield.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:252
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:259
 msgid "MenuDialog"
 msgstr "MenuDialogo"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:254
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:261
 #, fuzzy
 #| msgid ""
 #| "The [Kirigami.MenuDialog](docs:kirigami2;MenuDialog) is a specialized "
@@ -5084,7 +5087,7 @@ msgstr ""
 "kiu estas uzata por listigi elekton de klakeblaj opcioj por la uzanto uzante "
 "ĝian [actions](docs:kirigami2;MenuDialogo::agoj) proprecon."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:321
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:328
 msgid ""
 "![A simple MenuDialog listing actions like Play and Pause for media]"
 "(menudialog.webp)"
@@ -12374,6 +12377,13 @@ msgstr ""
 "La tiparo de la [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::"
 "PlatformTheme) estas disponebla kiel `Kirigami.Theme.defaultFont.pointSize` "
 "en via aplikaĵo."
+
+#~ msgid ""
+#~ "They can be dismissed by clicking or tapping outside of their area or by "
+#~ "clicking the close button on the header."
+#~ msgstr ""
+#~ "Ili povas esti forigitaj klakante aŭ frapetante ekster sia areo aŭ "
+#~ "klakante la fermbutonon sur la kaplinio."
 
 #~ msgid ""
 #~ "For your new backend class, create two new files called `backend.cpp` and "

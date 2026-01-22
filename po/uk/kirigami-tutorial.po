@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 10:15+0000\n"
+"POT-Creation-Date: 2026-01-22 02:15+0000\n"
 "PO-Revision-Date: 2026-01-14 04:18+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -1673,11 +1673,11 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-controls/index.md:389
 #: content/docs/getting-started/kirigami/components-controls/index.md:439
 #: content/docs/getting-started/kirigami/components-controls/index.md:514
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:62
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:123
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:177
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:244
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:319
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:69
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:130
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:184
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:251
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:326
 #: content/docs/getting-started/kirigami/components-drawers/index.md:65
 #: content/docs/getting-started/kirigami/components-drawers/index.md:132
 #: content/docs/getting-started/kirigami/components-progressbars/index.md:64
@@ -4506,16 +4506,19 @@ msgstr ""
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:12
 msgid ""
 "They can be dismissed by clicking or tapping outside of their area or by "
-"clicking the close button on the header."
+"clicking the close button on the header. {{< alert title=\"Sandboxed "
+"environments\" color=\"info\" >}} This works out of the box for all Kirigami "
+"dialogs in sandboxed environments (such as Flatpak) via XDG Desktop Portals. "
+"When running in a sandbox, the appropriate portal backend is used "
+"automatically, allowing user-approved access without requiring manual D-Bus "
+"handling. {{< /alert >}}"
 msgstr ""
-"Їх можна закривати клацанням або торканням поза областю накладки, а також "
-"натисканням кнопки закриття на панелі заголовка."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:14
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:21
 msgid "Dialog"
 msgstr "Діалогове вікно"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:16
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:23
 msgid ""
 "A standard [Kirigami.Dialog](https://api.kde.org/qml-org-kde-kirigami-"
 "dialogs-dialog.html) is used to create custom dialogs. They are very easy to "
@@ -4525,11 +4528,11 @@ msgstr ""
 "dialogs-dialog.html) використовують для створення нетипових діалогових "
 "вікон. Такі вікна дуже просто розширити:"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:64
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:71
 msgid "![Simple dialog containing only text](dialog.webp)"
 msgstr "![Просте діалогове вікно, у якому міститься лише текст](dialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:70
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:77
 msgid ""
 "As shown in the [introduction tutorial about dialogs](/docs/getting-started/"
 "kirigami/introduction-dialogs), it is also possible to capture a "
@@ -4541,7 +4544,7 @@ msgstr ""
 "`standardButton(button)` для пов'язування з нею певної поведінки, зокрема "
 "прив'язкою її вмикання до певних умов."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:72
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:79
 msgid ""
 "This type of dialog is generic and applies to most use cases, and it works "
 "well with complex interactive content (especially views):"
@@ -4550,15 +4553,15 @@ msgstr ""
 "добре працює із складним інтерактивним вмістом (особливо, панелями "
 "перегляду):"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:101
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:108
 msgid "hints for the dialog dimensions"
 msgstr "підказки щодо розмірів діалогового вікна"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:125
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:132
 msgid "![A simple scrollable dialog](scrollabledialog.webp)"
 msgstr "![Просте діалогове вікно з гортанням](scrollabledialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:131
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:138
 msgid ""
 "In most cases however you will likely want to use one of its derived dialog "
 "types, [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs."
@@ -4570,11 +4573,11 @@ msgstr ""
 "kde.kirigami.PromptDialog) або [Kirigami.MenuDialog](docs:kirigami;org.kde."
 "kirigami.dialogs.MenuDialog)."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:133
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:140
 msgid "PromptDialog"
 msgstr "PromptDialog"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:135
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:142
 msgid ""
 "A [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs."
 "PromptDialog) is essentially a dialog with a built-in label and default "
@@ -4591,7 +4594,7 @@ msgstr ""
 "діалогових вікон використовується лише для простих запитів із відповіддю "
 "«так» чи «ні» або для коротких запитів із введенням тексту користувачем."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:137
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:144
 msgid ""
 "Its main property is [Kirigami.Dialog.subtitle](https://api.kde.org/qml-org-"
 "kde-kirigami-dialogs-promptdialog.html#subtitle-prop), to which you would "
@@ -4603,21 +4606,21 @@ msgstr ""
 "маєте додати текст. Якщо як дочірній елемент діалогового вікна запиту буде "
 "додано будь-який компонент QML, цей компонент займе місце підзаголовка."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:179
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:186
 msgid "![A simple prompt dialog containing only text](promptdialog.webp)"
 msgstr ""
 "![Просте діалогове вікно із запитом, у якому міститься лише текст]"
 "(promptdialog.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:246
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:253
 msgid "![A PromptDialog with a custom TextField](promptdialogtextfield.webp)"
 msgstr "![PromptDialog із нетиповим TextField](promptdialogtextfield.webp)"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:252
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:259
 msgid "MenuDialog"
 msgstr "MenuDialog"
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:254
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:261
 msgid ""
 "The [Kirigami.MenuDialog](docs:kirigami;org.kde.kirigami.dialogs.MenuDialog) "
 "is a specialized dialog that is used to list a selection of clickable "
@@ -4630,7 +4633,7 @@ msgstr ""
 "[actions](https://api.kde.org/qml-org-kde-kirigami-dialogs-menudialog."
 "html#actions-prop)."
 
-#: content/docs/getting-started/kirigami/components-dialogs/index.md:321
+#: content/docs/getting-started/kirigami/components-dialogs/index.md:328
 msgid ""
 "![A simple MenuDialog listing actions like Play and Pause for media]"
 "(menudialog.webp)"
@@ -11660,6 +11663,13 @@ msgstr ""
 "Доступ до розміру шрифту [Kirigami.Theme](https://api.kde.org/qml-org-kde-"
 "kirigami-platform-theme.html) у вашій програмі можна отримати за допомогою "
 "`Kirigami.Theme.defaultFont.pointSize`."
+
+#~ msgid ""
+#~ "They can be dismissed by clicking or tapping outside of their area or by "
+#~ "clicking the close button on the header."
+#~ msgstr ""
+#~ "Їх можна закривати клацанням або торканням поза областю накладки, а також "
+#~ "натисканням кнопки закриття на панелі заголовка."
 
 #~ msgid ""
 #~ "For your new backend class, create two new files called `backend.cpp` and "
