@@ -84,7 +84,7 @@ You may also see unique IDs where you need all parts together with only small di
 
 This semantics is useful for contrasting different characteristics of the same part of Plasma being themed, like in (8), `toolbutton-pressed-hint-left-margin`, where you first have `toolbutton-` in opposition to the default kind of button (which would be simply `pressed-hint-left-margin`); `-pressed-`, as opposed to `-normal-`, `-hover-`, and so on, namely the button state; and `-hint-left-margin`, as opposed to `-hint-right-margin`, `-hint-top-margin` and `-hint-bottom-margin`.
 
-The full list of valid element IDs for each SVG searched by Plasma can be seen in the [Theme Elements Reference]({{< ref "theme-details.md" >}}).
+The full list of valid element IDs for each SVG searched by Plasma can be seen in the [Theme Elements Reference]({{< ref "theme-elements.md" >}}).
 
 When setting an element ID in Inkscape, you will also need to set its label, which is effectively just the element ID preceded by a number sign (#, also called a hash). In other words, if you have an ID `center`, its label should be `#center`.
 
