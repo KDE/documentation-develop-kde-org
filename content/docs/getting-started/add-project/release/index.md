@@ -9,7 +9,7 @@ This guide applies to all software which is not part of a bigger bundle like Fra
 
 KDE provides a collection of scripts to facilitate making a new release called [releaseme](https://invent.kde.org/sdk/releaseme), which will be explained in this page.
 
-## Deciding on a stable or unstable release
+## Deciding on a stable or unstable release {#type-of-release}
 
 The first thing to consider when making a release is whether you want to make an unstable release or a stable release. Unstable releases serve to prepare for a stable release, allowing your users to test your software beforehand.
 
@@ -17,13 +17,15 @@ Projects undergoing [Incubation]({{< ref "incubation" >}}) are only allowed to m
 
 KDE projects typically create up to three unstable releases: alpha, beta, and release candidate. Their versioning scheme ends with `.70`, `.80` and `.90` respectively, with the release candidate `.90` being the final version before a stable release. See [Understanding the software lifecycle]({{< ref "lifecycle" >}}) for details.
 
-This is not a strict versioning scheme: projects like Plasma and KDE Gear for example use `.80` for alpha and `.90` for beta, and arbitrary numbers in-between may be used as well. The only requirement is that only numbers be used, as they are more difficult to compute and may cause issues in downstream packaging.
+This is not a strict versioning scheme: projects like Plasma and KDE Gear for example use `.80` for alpha and `.90` for beta, and arbitrary numbers in-between may be used as well (for example, for a second or third beta). The only requirement is that only numbers be used, as letters are more difficult to compute and may cause issues in downstream packaging.
 
 If you want to make an unstable release, you don't need to branch and may skip to the next section, [Changes in code]({{< ref "#changes-in-code" >}}). If you plan to make a stable release, follow through with the next sections.
 
-## releaseme
+## releaseme {#releaseme}
 
 KDE has a tool that can be used to semi-automate the release process called [releaseme](https://invent.kde.org/sdk/releaseme).
+
+The tool will **only** work with projects that contain an entry in [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata) as detailed in [Updating repo-metadata]({{< ref "#repo-metadata" >}}). This means it cannot be used on non-KDE projects in personal user namespaces in [Invent](https://invent.kde.org), and can only be used on projects that have passed at least [Incubation]({{< ref "incubation" >}}) or [KDE Review]({{< ref "review" >}}).
 
 It consists of a collection of Ruby scripts for each individual step of the process:
 
@@ -39,28 +41,17 @@ git clone https://invent.kde.org/sdk/releaseme.git
 export PATH=$PATH:/path/to/releaseme
 ```
 
-## Branching
+## Updating repo-metadata {#repo-metadata}
 
-Branching is done to allow the developer to make point releases in the future by using tags. For example, you might:
+The central place where projects are defined is in [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata). Upon Incubation, projects should get an entry under `repo-metadata/projects-invent` containing two files: `i18n.json` and `metadata.yaml`.
 
-* create a `6.5` branch
-* make a `6.5.0` tag based on the `6.5` branch, and thus make a `6.5.0` release
-* later develop on the `6.5` branch
-* make a `6.5.1` tag based on the developed `6.5` branch, and thus make a `6.5.1` release
+Among other things, the `metadata.yaml` file specifies in which [Invent](https://invent.kde.org) group  the project belongs and its current state: whether it's in Incubation's `playground`, being `in-review`, or has already been `reviewed`.
 
-<!--{{< figure class="text-center" src="../lifecycle/stable-lifecycle.png" >}}-->
+The `i18n.json` file points to *origins*, namely `trunk` and `stable`. These are used by [releaseme](https://invent.kde.org/sdk/releaseme) during the [tarme]({{< ref "#tarme" >}}) process and used to determine which branches are used for translations, which is relevant for the [freeze]({{< ref "#freeze" >}}) process.
 
-See [Understanding the software lifecycle: The release process in practice]({{< ref "lifecycle#the-release-process-in-practice" >}}) for a practical example and diagram.
+This means making sure repo-metadata is updated with the correct information is *required* for making a release, and [releaseme]({{< ref "#releaseme" >}}) will not work without this step.
 
-Branching is an optional step when making stable releases. You should branch when you effectively intend to make new point releases from a stable branch, as the process of making point releases is more complex than just tagging from the master branch. If your master branch doesn't have much feature development, you might prefer to follow the same steps used for unstable releases.
-
-After having set up [releaseme]({{< ref "#releaseme" >}}), create a new branch with something similar to:
-
-```bash
-branchme.rb --name 6.5
-```
-
-## Changes in code
+## Changes in code {#code}
 
 When you are ready to do a release, make sure the current HEAD in the stable branch has the correct version string set in its source code.
 
@@ -87,9 +78,9 @@ ecm_setup_version(${PROJECT_VERSION}
 )
 ```
 
-This is all that is required for binary applications.
+This is all that is required for *binary* applications.
 
-If you are releasing a library, edit the `CMakeLists.txt` file where the main library target is created with the following:
+If you are releasing a *library*, edit the `CMakeLists.txt` file where the main library target is created with the following:
 
 ```cmake
 set_target_properties(kgraphviewerlib
@@ -133,7 +124,7 @@ For example, as soon as you create a "1.2" branch, ensure master's source code u
 
 {{< /alert >}}
 
-## Feature freeze and freeze for translators
+## Feature freeze and freeze for translators {#freeze}
 
 To prevent regressions early before a release, you *will* have to perform a feature freeze on the branch. From this point on, no new features should be introduced to the stable branch.
 
@@ -141,7 +132,7 @@ Additionally, because your project will ship translations, you will have to perf
 
 Before a release, you'll need to give translators a notification about the upcoming new version.
 
-If you created a stable branch, make a merge request to [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata) to set the "stable i18n branch" to the new stable branch.
+If you created a stable branch, make sure to update [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata) to set the `stable` i18n branch to the planned stable branch.
 
 Send an email about one month before the release or so to the KDE i18n-doc mailing list <kde-i18n-doc@kde.org> notifying translators of the string freeze.
 
@@ -151,7 +142,7 @@ Other feature branches will always be unfrozen, and any kind of strings or featu
 
 If the release is going to be unstable, the string freeze (and all pertinent steps) may be performed on the master branch as well until the day of release.
 
-## Creating a tarball
+## Creating a tarball {#tarball}
 
 A tarball is an archive containing the source code matching the tag, used by downstreams to reproducibly build your software.
 
@@ -171,24 +162,57 @@ If you are not planning to make point releases, you may instead use the trunk or
 tarme.rb --origin trunk --version 6.5.0
 ```
 
-## Tagging
+Creating a tarball is *required* for the next steps, and releaseme will not branch or tag without this step.
 
-After having [set up releaseme]({{< ref "#releaseme" >}}), create a new tag with something similar to:
+After running tarme, you will see a new tarball ending with `tar.xz`, and a signature file ending with `tar.xz.sig`.
+
+## Branching {#branching}
+
+Branching is done to allow the developer to make point releases in the future by using tags. For example, you might:
+
+* create a `6.5` branch
+* make a `6.5.0` tag based on the `6.5` branch, and thus make a `6.5.0` release
+* later develop on the `6.5` branch
+* make a `6.5.1` tag based on the developed `6.5` branch, and thus make a `6.5.1` release
+
+See [Understanding the software lifecycle: The release process in practice]({{< ref "lifecycle#the-release-process-in-practice" >}}) for a practical example and diagram.
+
+Branching is an optional step when making stable releases. You should branch when you effectively intend to make new point releases from a stable branch, as the process of making point releases is more complex than just tagging from the master branch. If your master branch doesn't have much feature development, you might prefer to create releases from the master branch.
+
+After having set up [releaseme]({{< ref "#releaseme" >}}), create a new branch with something similar to:
+
+```bash
+branchme.rb --name 6.5
+```
+
+## Tagging {#tagging}
+
+After having [set up releaseme]({{< ref "#releaseme" >}}) and having made a [tarball]({{< ref "#tarball" >}}), create a new tag with something similar to:
 
 ```bash
 tagme.rb --version 6.5.0
 ```
 
+## Publishing {#publishing}
 
-## Publishing
-
-The instructions on uploading the tarball to the KDE are present in <https://upload.kde.org>:
+The instructions on uploading the tarball are present in [upload.kde.org](https://upload.kde.org):
 
 ```bash
 kate ftp://upload.kde.org/README
 ```
 
-This domain is used only for uploading tarballs. You may upload the tarball with something like:
+The first time you publish KDE software, you will be required to register your GPG key (which you should already have since the [Creating a tarball]({{< ref "#tarball" >}}) step) in [release-keyring](https://invent.kde.org/sysadmin/release-keyring). The file you are required to add is an ASC signature file.
+
+You will also be required to send the SHA256 and SHA1 of the generated tarball and signature files from the [Creating a tarball]({{< ref "#tarball" >}}) step. This should mostly be automated by releaseme, but if you lose its output you may do something similar to the following:
+
+```bash
+sha256sum yourproject-6.0.0.tar.xz
+sha256sum yourproject-6.0.0.tar.xz.sig
+sha1sum yourproject-6.0.0.tar.xz
+sha1sum yourproject-6.0.0.tar.xz.sig
+```
+
+The [upload.kde.org](https://upload.kde.org) domain is used only for uploading tarballs. You may upload the tarball with something like:
 
 ```bash
 curl -T "myapp-0.1.tar.xz{,.sig}" ftp://upload.kde.org/incoming/
@@ -203,12 +227,12 @@ echo put myapp-0.1.tar.xz.sig | ftp ftp://upload.kde.org/incoming/
 
 Then, file a sysadmin ticket to notify about the upload and to provide the checksums for verification: [go.kde.org/u/systickets](https://go.kde.org/u/systickets). The tarball will be moved from the incoming folder to the correct place under [download.kde.org](https://download.kde.org), which is where downstreams like Linux distributions will download the sources of your application.
 
-## Aftersteps
+## Aftersteps {#aftersteps}
 
 The new version should be added to the list of available versions to the component/product.
 If you don't have enough permissions, [create a sysadmin ticket](https://go.kde.org/u/systickets) for that, or ask this a part of the ticket created when uploading the tarballs.
 
-## Release announcement
+## Release announcement {#release}
 
 Once the sysadmins moved the tarball, you can announce the release. First send an e-mail to kde-announce-apps@kde.org and your project's mailing list(s). The mail can be short and link to a longer announcement blog post or news item. If you write a detailed blog post, make sure that that your blog/site is aggregated on [planet.kde.org](https://planet.kde.org). This can be done on the [planet-kde-org repository](https://invent.kde.org/websites/planet-kde-org).
 
