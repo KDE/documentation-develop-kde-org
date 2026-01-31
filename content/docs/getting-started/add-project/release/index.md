@@ -49,6 +49,8 @@ Among other things, the `metadata.yaml` file specifies in which [Invent](https:/
 
 The `i18n.json` file points to *origins*, namely `trunk_kf6` and `stable_kf6`. These are used by [releaseme](https://invent.kde.org/sdk/releaseme) during the [tarme]({{< ref "#tarme" >}}) process and used to determine which branches are used for translations, which is relevant for the [freeze]({{< ref "#freeze" >}}) process.
 
+You must also update the following entries in `repo-metadata/dependencies/logical-module-structure.json` for your project: `kf6-qt6` which should point to the `master` branch, and `stable-kf6-qt6` which should point to the desired stable branch.
+
 This means making sure repo-metadata is updated with the correct information is *required* for making a release, and [releaseme]({{< ref "#releaseme" >}}) will not work without this step.
 
 ## Changes in code {#code}
