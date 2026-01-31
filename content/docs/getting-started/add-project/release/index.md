@@ -47,7 +47,7 @@ The central place where projects are defined is in [repo-metadata](https://inven
 
 Among other things, the `metadata.yaml` file specifies in which [Invent](https://invent.kde.org) group  the project belongs and its current state: whether it's in Incubation's `playground`, being `in-review`, or has already been `reviewed`.
 
-The `i18n.json` file points to *origins*, namely `trunk` and `stable`. These are used by [releaseme](https://invent.kde.org/sdk/releaseme) during the [tarme]({{< ref "#tarme" >}}) process and used to determine which branches are used for translations, which is relevant for the [freeze]({{< ref "#freeze" >}}) process.
+The `i18n.json` file points to *origins*, namely `trunk_kf6` and `stable_kf6`. These are used by [releaseme](https://invent.kde.org/sdk/releaseme) during the [tarme]({{< ref "#tarme" >}}) process and used to determine which branches are used for translations, which is relevant for the [freeze]({{< ref "#freeze" >}}) process.
 
 This means making sure repo-metadata is updated with the correct information is *required* for making a release, and [releaseme]({{< ref "#releaseme" >}}) will not work without this step.
 
@@ -148,7 +148,7 @@ A tarball is an archive containing the source code matching the tag, used by dow
 
 To create the tarball, you will need to generate your own GPG key, which can be easily done with [Kleopatra](https://apps.kde.org/kleopatra/). The subsequent steps will fail if you do not have a GPG key.
 
-Before using releaseme, you will need to make a merge request to [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata) changing your project's `i18n.json` file to point `trunk` to the master branch and `stable` to the created stable branch (if you are planning on making point releases). These will be considered `origin`s for releaseme.
+Before using releaseme, you will need to make a merge request to [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata) changing your project's `i18n.json` file to point `trunk_kf6` to the master branch and `stable_kf6` to the created stable branch (if you are planning on making point releases). These will be considered `origin`s for releaseme.
 
 After having [set up releaseme]({{< ref "#releaseme" >}}), create a new tarball with something similar to:
 
