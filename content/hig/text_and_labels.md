@@ -115,7 +115,7 @@ Avoid the use of acronyms, as many users will not know what they mean. Only use 
 - URL → Link
 - RAM → Memory
 
-This guideline does not apply to functionality only ever referred to via its acronym (e.g. “USB”), or in highly technical software where the user is expected to be familiar with common terminology. These are exceptions, not the rule.
+This guideline does not apply to common functionality only ever referred to via its acronym (e.g. “USB”), or in highly technical software where the user is expected to be familiar with common terminology. These are exceptions, not the rule.
 
 When you do use an acronym, capitalize all the letters.
 
