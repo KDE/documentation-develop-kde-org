@@ -30,7 +30,6 @@ Add the following to the end of your `~/.config/kde-builder.yaml`:
 
 ```yaml
 project kxmlgui-tutorial:
-  repository: ""
   no-src: true
 ```
 
