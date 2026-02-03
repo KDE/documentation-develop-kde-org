@@ -315,38 +315,3 @@ main h3 {
   background-color: #232627;
   color: #fcfcfc;
 }
-
-.kirigami-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  background-image: none;
-  background: url('/img/kirigami-icon.svg') no-repeat,
-    linear-gradient(144.64deg, #E93A9A 0%, #E9643A 64.86%, #EF973C 100%);
-  background-position: bottom left, right;
-  background-size: contain;
-  background-origin: border-box ;
-  min-height: 150px;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  text-align: center;
-  text-shadow: 2px 2px 7px #222;
-  margin-left: calc(var(--bs-gutter-x) * -0.5);
-  margin-right: calc(var(--bs-gutter-x) * -0.5);
-
-  .h1 {
-    color: #fafafa !important;
-    font-size: 32px !important;
-    line-height: 120%;
-    background-image: none !important;
-  }
-
-  .header-logo{
-    font-family: glyph;
-    font-size: 4rem !important;
-    margin-bottom: 1rem;
-    width: 100%
-  }
-}

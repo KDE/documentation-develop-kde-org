@@ -7,8 +7,8 @@ title: Kirigami UI Framework
 
 <div class="container-fluid">
 <section class="kirigami-header">
-  <h1><span class="header-logo d-block" aria-hidden="true">K</span>Kirigami UI Framework</h1>
-  <p>Build beautiful apps that run on computers, phones, TVs and everything in between.</p>
+  <img src="./kirigami-horizontal.svg" alt="Kirigami UI Framework logo">
+  <h2>Build beautiful apps that run on computers, phones, TVs and everything in between.</h2>
 </section>
 </div>
 
