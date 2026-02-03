@@ -17,7 +17,7 @@
 
   <section id="platform-hero">
     <div class="container text-center">
-      <h2>{{ i18n "home.multiplatform.title" }}</h2>
+      <h2 class="display-3">{{ i18n "home.multiplatform.title" }}</h2>
       <p>{{ i18n "home.multiplatform.text1" }}</p>
       <p>{{ i18n "home.multiplatform.text2" }}</p>
      </div>
@@ -42,24 +42,18 @@
     </div>
   </section>
 
-  <section class="d-flex pt-0 py-sm-5">
-    {{ with resources.GetMatch "img/home/kirigami-devices.png"  }}
-      <picture>
-          {{ with .Process "webp" }}
-            <source srcset="{{ .RelPermalink }}" type="image/webp">
-          {{ end }}
-        <img class="kirigami-devices d-none d-sm-block" src="{{ .RelPermalink }}" alt="" loading="lazy" width="{{ .Width }}" height="{{ .Height }}">
-      </picture>
-    {{ end }}
-    <div class="align-self-center container">
-      <section class="d-sm-none kirigami-header">
-        <h2 class="h1"><span class="header-logo d-block" aria-hidden="true">K</span>{{ i18n "home.kirigami.title" }}</h2>
-      </section>
-      <h2 class="h1 mt-5 mt-sm-0">{{ i18n "home.kirigami.name" }}</h2>
-      <h3>{{ i18n "home.kirigami.subtitle" }}</h3>
-      <p>{{ i18n "home.kirigami.description1" }}</p>
-      <p>{{ i18n "home.kirigami.description2" }}</p>
-      <p class="mb-0"><a href="/frameworks/kirigami/" class="learn-more">{{ i18n "home.kirigami.discover" }}</a></p>
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <img src="/frameworks/kirigami/kirigami-horizontal.svg" class="img-fluid w-75" alt="{{ i18n "home.kirigami.name" }}">
+        <h3 class="h2">{{ i18n "home.kirigami.subtitle" }}</h3>
+        <p>{{ i18n "home.kirigami.description1" }}</p>
+        <p>{{ i18n "home.kirigami.description2" }}</p>
+        <p class="mb-0"><a href="/frameworks/kirigami/" class="learn-more">{{ i18n "home.kirigami.discover" }}</a></p>
+      </div>
+      <div class="col-12 col-lg-6 align-self-center">
+        <img src="/frameworks/kirigami/tokodon-desktop.png" class="img-fluid kirigami-devices" alt="the app Tokodon works correctly both on a Linux desktop computer and on a phone running KDE Plasma Mobile">
+      </div>
     </div>
   </section>
 
