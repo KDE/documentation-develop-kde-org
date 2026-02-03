@@ -32,7 +32,11 @@ title: Kirigami UI Framework
   </div>
 </div>
 
-<section class="container mt-5">
+<div class="container-fluid app-grid pt-5">
+  <img src="kirigami-app-grid.svg" class="w-100" alt="Grid of application using Kirigami" />
+</div>
+
+<section class="container my-5">
   <div class="row">
     <div class="col-12 col-lg-6">
       <h2 class="h1">Convergent and everywhere</h2>
@@ -66,18 +70,60 @@ title: Kirigami UI Framework
         </div>
       </div>
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-6 align-self-center">
       <img src="tokodon-desktop.png" class="img-fluid kirigami-devices" alt="the app Tokodon works correctly both on a Linux desktop computer and on a phone running KDE Plasma Mobile">
     </div>
-   </div>
-   <div class="row">
-    <div class="col-12 col-lg-6 mt-5 order-0 order-lg-2">
+  </div>
+</section>
+
+{{< sections class="container" >}}
+
+{{< section-left class="align-self-center" >}}
+```qml
+import org.kde.kirigami
+
+Kirigami.ScrollablePage {
+    actions: Kirigami.Action {
+       icon.name: 'document-info'
+       text: "Information"
+    }
+
+    ListView {
+        id: dragonList
+
+        delegate: DragonItemDelegate {}
+        model: DragonListModel {}
+
+        Kirigami.PlaceholderMessage {
+            visible: dragonList.count === 0
+            text: 'No dragon in the list :('
+        }
+    }
+}
+```
+{{< /section-left >}}
+
+{{< section-right  class="align-self-center" >}}
+<h2 class="h1">Declarative UI, Any Language</h2>
+
+Built on QML, a powerful declarative language, Kirigami makes UI development faster, clearer, and more expressive. Letting you describe what your interface should look like, not how to render it. This results in cleaner code, rapid prototyping, and highly maintainable applications.
+
+Kirigami integrates effortlessly with **C++**, **Rust**, and **Python**, giving developers the freedom to use the language they love while benefiting from KDE’s robust ecosystem and proven cross-platform technologies.
+
+<a href="/docs/getting-started/kirigami/" class="learn-more">Get Started!</a>
+{{< /section-right >}}
+
+{{< /sections >}}
+
+<section class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6  align-self-center">
       <h2 class="h1">Open and trusted</h2>
       <p>Kirigami is developed by the KDE community. We have been around since 1997, and we develop high quality open source software used by millions of people worldwide. Kirigami is released under <a href="https://invent.kde.org/frameworks/kirigami/-/tree/master/LICENSES/LGPL-2.0-or-later.txt">LGPL-2.0-or-later</a>, and, as such, can be used in your open source or commercial project.</p>
       <p>Kirigami is one of the 80 <a href="/products/frameworks">KDE Frameworks</a> produced by KDE, part of a collection of high quality add-on libraries for Qt apps with long ABI and API stability guarantees. And, in case you need support, there is a <a href="https://ev.kde.org/consultants/">network of trusted consultants</a> available to assist you with your project.</p>
     </div>
-    <div class="col-12 col-lg-6 mt-5">
-      <img src="neochat.png" class="img-fluid kirigami-devices" alt="screenshot of the app NeoChat">
+    <div class="col-12 col-lg-6 align-self-center">
+      <img src="https://origin.cdn.kde.org/screenshots/neochat/application.png" class="img-fluid kirigami-devices" alt="screenshot of the app NeoChat">
     </div>
   </div>
 </section>

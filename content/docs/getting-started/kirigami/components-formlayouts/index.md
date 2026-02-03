@@ -49,7 +49,7 @@ Kirigami.ApplicationWindow {
 
 {{< /section-left >}}
 
-{{< section-right >}}
+{{< section-right class="align-self-center" >}}
 
 {{< figure class="text-center" caption="A simple form layout in desktop mode" src="formlayouts-simple.webp" >}}
 
