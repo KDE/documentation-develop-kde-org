@@ -53,7 +53,7 @@ Interfaces can be described for documentation and code reuse purposes using XML.
 
 A **service** represents an application connection to a bus.
 
-**Service** here corresponds to "well-known" [Bus names](https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names) in the D-Bus specification terminology. The term "Bus name" is a bit confusing. Regardless of how it sounds like, **Bus names** are the names of connections(!) on the bus, not names of buses(!). So here the term **service** will be used, as the Qt Documentation calls it.
+**Service** here corresponds to "well-known" [Bus names](https://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names) in the D-Bus specification terminology. The term "Bus name" is a bit confusing. Regardless of how it sounds, **Bus names** are the names of connections(!) on the bus, not names of buses(!). So here the term **service** will be used, as the Qt Documentation calls it.
 
 These are kept unique by using a "reverse domain name" approach, as can be seen in many other systems that need to namespace for multiple components. Most services provided by applications from the KDE project itself use the `org.kde prefix` to their service name. So one may find `org.kde.screensaver` advertised on the session bus.
 
@@ -103,14 +103,18 @@ If this sounds a lot like the signal and slots mechanism in Qt, that's because i
 
 ## Useful Tools
 
-There are several useful tools for exploring the D-Bus buses as well as developing applications that use D-Bus. We will now look briefly at end-user tools as the articles that follow cover the development tools in greater detail and context. 
+There are several useful tools for exploring the D-Bus buses as well as developing applications that use D-Bus. We will now look briefly at end-user tools as the articles that follow cover the development tools in greater detail and context.
 
 ### qdbus
 
 `qdbus` is a command line tool which can be used to list the services, objects and interfaces on a given bus as well as send messages to a given address on the bus. It can be used to explore both the system and the default session bus. If the `--system` switch is passed, qdbus will connect to the system bus, otherwise it uses the session bus.
+
+**Note:** On modern distributions utilizing Qt 6 (such as KDE Plasma 6), this command is often named `qdbus6` to distinguish it from the Qt 5 version.
 
 `qdbus` uses the rest of the supplied arguments on the command as an address and, if any, parameters to pass to a given object. If a full address is not supplied, then it lists all the objects available from that point on the bus. For instance, if no addresses are provided a list of available services is listed. If a service name is provided, object paths will be provided. If a path is also provided all methods in all interfaces will be listed. In this way one can quite easily explore and interact with objects on the bus, making `qdbus` very useful for testing, scripting and even idle exploration.
 
 ### qdbusviewer
 
 `qdbusviewer` is a Qt application that provides a graphical interface to essentially the same set of features that qdbus provides on the command line, thus providing a more user friendly mechanism to interact with the bus. `qdbusviewer` ships with Qt itself and is easy for anyone who is familiar with the basic D-Bus concepts, such as object addresses, to use.
+
+**Note:** Similarly to the command line tool, on Qt 6 systems this application may be named `qdbusviewer6`.
