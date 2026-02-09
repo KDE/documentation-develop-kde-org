@@ -1,14 +1,14 @@
 # Spanish translations for kirigami-tutorial.po package.
-# Copyright (C) 2021-2025 This file is copyright:
+# Copyright (C) 2021-2026 This file is copyright:
 # This file is distributed under the same license as the documentation-develop-kde-org package.
 #
-# SPDX-FileCopyrightText: 2021-2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2021-2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-03 02:06+0000\n"
-"PO-Revision-Date: 2025-09-20 21:09+0100\n"
+"PO-Revision-Date: 2026-02-08 12:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -57,7 +57,7 @@ msgstr "Complementos de Kirigami"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Platform Support"
-msgstr ""
+msgstr "Soporte de la plataforma"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
@@ -502,6 +502,10 @@ msgid ""
 "[FormTextDelegate](https://api.kde.org/qml-org-kde-kirigamiaddons-formcard-"
 "formtextdelegate.html) has text and a grayed out description."
 msgstr ""
+"[FormSectionText](https://api.kde.org/qml-org-kde-kirigamiaddons-formcard-"
+"formsectiontext.html) solo añade un delegado delgado que contiene una "
+"etiqueta. [FormTextDelegate](https://api.kde.org/qml-org-kde-kirigamiaddons-"
+"formcard-formtextdelegate.html) tiene texto y una descripción en gris."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:186
 #, fuzzy
@@ -889,6 +893,12 @@ msgid ""
 "prop) and [displayMode](https://api.kde.org/qml-org-kde-kirigamiaddons-"
 "formcard-formcomboboxdelegate.html#displayMode-prop)."
 msgstr ""
+"Esta lista desplegable tiene varias propiedades útiles que podemos usar: "
+"[editable](https://api.kde.org/qml-org-kde-kirigamiaddons-formcard-"
+"formcomboboxdelegate.html#editable-prop), [displayText](https://api.kde.org/"
+"qml-org-kde-kirigamiaddons-formcard-formcomboboxdelegate.html#displayText-"
+"prop) y [displayMode](https://api.kde.org/qml-org-kde-kirigamiaddons-"
+"formcard-formcomboboxdelegate.html#displayMode-prop)."
 
 #: content/docs/getting-started/kirigami/addons-delegates/index.md:343
 msgid ""
@@ -1116,13 +1126,6 @@ msgstr ""
 "ya debería serle familiar."
 
 #: content/docs/getting-started/kirigami/addons-introduction/index.md:47
-#, fuzzy
-#| msgid ""
-#| "We create our application and use [KAboutData's](docs:kcoreaddons;"
-#| "KAboutData) default constructor to add the metadata of our application, "
-#| "add ourselves as an author, and then use [setApplicationData()](docs:"
-#| "kcoreaddons;KAboutData::setApplicationData) to finish the process. For "
-#| "later, we also set an application icon that comes from the system theme."
 msgid ""
 "We create our application and use [KAboutData](docs:kcoreaddons;"
 "KAboutData)'s default constructor to add the metadata of our application, "
@@ -1131,7 +1134,7 @@ msgid ""
 "later, we also set an application icon that comes from the system theme."
 msgstr ""
 "Creamos nuestra aplicación y usamos el constructor predeterminado de "
-"[KAboutData's](docs:kcoreaddons;KAboutData) para añadir los metadatos de "
+"[KAboutData](docs:kcoreaddons;KAboutData) para añadir los metadatos de "
 "nuestra aplicación, nos añadimos a nosotros mismos como autor y luego usamos "
 "[setApplicationData()](docs:kcoreaddons;KAboutData::setApplicationData) para "
 "terminar el proceso. Para después, también definimos un icono para la "
@@ -1318,8 +1321,6 @@ msgid "About page"
 msgstr "Página acerca de"
 
 #: content/docs/getting-started/kirigami/advanced-add_about_page/index.md:0
-#, fuzzy
-#| msgid "Informations about your application"
 msgid "Information about your application"
 msgstr "Información sobre su aplicación"
 
@@ -1531,20 +1532,20 @@ msgstr "Estructura del proyecto"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:33
 msgid "Changes to existing code"
-msgstr ""
+msgstr "Cambios en el código existente"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:35
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:87
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "src/components/backend.h"
-msgstr "src/components/CMakeLists.txt"
+msgstr "src/components/backend.h"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:37
 msgid ""
 "First, create the header file that will have code exposed to QML, namely the "
 "`Backend` type:"
 msgstr ""
+"Primero, creamos el archivo de cabecera que tendrá el código expuesto a QML, "
+"es decir, el tipo `Backend`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:41
 msgid ""
@@ -1553,6 +1554,9 @@ msgid ""
 "html#QML_ELEMENT) macro, available in the `<QtQml/qqmlregistration.h>` "
 "header."
 msgstr ""
+"Hay dos cosas que necesitan exponer código C++ a QML, y una de ellas solo es "
+"el uso de la macro [QML_ELEMENT](https://doc.qt.io/qt-6/qqmlintegration-h."
+"html#QML_ELEMENT), disponible en la cabecera `<QtQml/qqmlregistration.h>`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:43
 msgid ""
@@ -1561,48 +1565,53 @@ msgid ""
 "For this, we use the [QML_SINGLETON](https://doc.qt.io/qt-6/qqmlintegration-"
 "h.html#QML_SINGLETON) macro."
 msgstr ""
+"El backend se creará como un singleton, lo que significa que solo se creará "
+"una vez y existirá durante toda la vida útil de la aplicación. Para ello, "
+"usamos la macro [QML_SINGLETON](https://doc.qt.io/qt-6/qqmlintegration-h."
+"html#QML_SINGLETON)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:45
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:123
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "src/components/backend.cpp"
-msgstr "src/components/CMakeLists.txt"
+msgstr "src/components/backend.cpp"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:47
 msgid "We can add our initial code for the constructor to `backend.cpp`:"
 msgstr ""
+"Podemos añadir nuestro código inicial para el constructor en `backend.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:51
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:131
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "src/components/ExposePage.qml"
-msgstr "src/components/CMakeLists.txt"
+msgstr "src/components/ExposePage.qml"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:53
 msgid ""
 "From now on, the backend will be known to QML as the `Backend` QML type. It "
 "is contained in a module called `org.kde.tutorial.components`."
 msgstr ""
+"A partir de ahora, el backend se dará a conocer a QML como el tipo QML "
+"`Backend`. Está contenido en un módulo llamado `org.kde.tutorial.components`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:55
 msgid ""
 "This means that just by adding the import in a QML file, it is possible to "
 "use the code exposed from C++:"
 msgstr ""
+"Esto significa que con solo añadir su importación en un archivo QML se podrá "
+"usar el código C++ expuesto."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:61
 msgid ""
 "To start from a clean slate using the existent application code, create a "
 "new QML component that contains an empty page:"
 msgstr ""
+"Para empezar desde cero con el código de la aplicación existente, creamos un "
+"nuevo componente QML que contenga una página vacía:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:65
-#, fuzzy
-#| msgid "src/qml/Main.qml"
 msgid "src/Main.qml"
-msgstr "src/qml/Main.qml"
+msgstr "src/Main.qml"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:67
 msgid ""
@@ -1799,52 +1808,52 @@ msgstr "Nuestra aplicación hasta ahora"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:141
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:372
 msgid "Existing code:"
-msgstr ""
+msgstr "Código existente:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:143
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:428
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>CMakeLists.txt</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>CMakeLists.txt</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:150
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:381
-#, fuzzy
-#| msgid "<details><summary>model.cpp</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/main.cpp</summary>\n"
-msgstr "<details><summary>model.cpp</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/main.cpp</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:157
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:374
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/CMakeLists.txt</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/CMakeLists.txt</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:164
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:388
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/KountdownDelegate.qml</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/KountdownDelegate.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:171
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:395
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/AddDialog.qml</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/AddDialog.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:178
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:217
@@ -1883,50 +1892,50 @@ msgstr "<br>\n"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:180
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:426
 msgid "Code written/modified in this page:"
-msgstr ""
+msgstr "Código escrito/modificado en esta página:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:182
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/Main.qml</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/Main.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:189
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/CMakeLists.txt</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/CMakeLists.txt</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:196
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:409
-#, fuzzy
-#| msgid "<details><summary>model.h</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/backend.h</summary>\n"
-msgstr "<details><summary>model.h</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/backend.h</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:203
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:417
-#, fuzzy
-#| msgid "<details><summary>model.cpp</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/backend.cpp</summary>\n"
-msgstr "<details><summary>model.cpp</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/backend.cpp</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:210
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:402
-#, fuzzy
-#| msgid "<details><summary>Main.qml</summary>\n"
 msgid ""
 "<details>\n"
 "<summary>src/components/ExposePage.qml</summary>\n"
-msgstr "<details><summary>Main.qml</summary>\n"
+msgstr ""
+"<details>\n"
+"<summary>src/components/ExposePage.qml</summary>\n"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:219
 msgid ""
@@ -2093,7 +2102,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:72
 msgid "🚨 Do not do this in production"
-msgstr ""
+msgstr "🚨 No haga esto en producción"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:74
 msgid ""
@@ -2129,18 +2138,12 @@ msgstr ""
 "como una matriz de una dimensión. Debería parecerse a un ListModel de QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:86
-#, fuzzy
-#| msgid ""
-#| "To do this, we need to declare a class that inherits from "
-#| "[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add "
-#| "in some add data to the QMap. These declarations will be located in "
-#| "`model.h`."
 msgid ""
 "To do this, we need to create a class that inherits from [QAbstractListModel]"
 "(docs:qtcore;qabstractlistmodel.html). Let's also add some data to the QMap. "
 "These declarations will be located in `model.h`."
 msgstr ""
-"Para ello, necesitamos declarar una clase que herede de [QAbstractListModel]"
+"Para ello, necesitamos crear una clase que herede de [QAbstractListModel]"
 "(docs:qtcore;qabstractlistmodel.html). También añadiremos datos al QMap. "
 "Estas declaraciones estarán en `model.h`."
 
@@ -2149,26 +2152,18 @@ msgid ""
 "Create two new files, `src/components/model.h` and `src/components/model."
 "cpp`."
 msgstr ""
+"Creamos dos nuevos archivos, `src/components/model.h` y `src/components/"
+"model.cpp`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:93
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "Add those two new files to `src/components/CMakeLists.txt`:"
-msgstr "src/components/CMakeLists.txt"
+msgstr "Añadimos estos dos nuevos archivos a `src/components/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:97
-#, fuzzy
-#| msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
 msgid "Add the following as the initial contents to `src/components/model.h`:"
-msgstr "Añada lo siguiente al final de `~/.config/kde-builder.yaml`:"
+msgstr "Añadimos el siguiente contenido inicial a `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:101
-#, fuzzy
-#| msgid ""
-#| "Of course, we can't just display this class as is. We also need to tell "
-#| "QML on how to represent this data in the class. We can do this by "
-#| "overriding three virtual functions that are essential at doing this, all "
-#| "of which do their own tasks."
 msgid ""
 "Of course, we can't just display this class as is. We also need to tell QML "
 "how to represent this data in the class. We can do this by overriding three "
@@ -2176,48 +2171,37 @@ msgid ""
 msgstr ""
 "Por supuesto, no podemos mostrar esta clase como está. También necesitamos "
 "decirle a QML cómo se representan estos datos en la clase. Podemos hacerlo "
-"sobrescribiendo tres funciones virtuales que son esenciales para ello, cada "
-"una de las cuales realiza su propia tarea."
+"sobrescribiendo tres funciones virtuales esenciales:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
-#, fuzzy
-#| msgid ""
-#| "`rowCount()` - Think of this function as a way to tell QML how many items "
-#| "are in the model to represent."
 msgid ""
 "[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) - "
 "Think of this function as a way to tell QML how many items the model should "
 "present."
 msgstr ""
-"`rowCount()`: Piense en esta función como un modo de decirle a QML cuántos "
-"elementos hay en el modelo que se va a representar."
+"[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount): "
+"Piense en esta función como un modo de decirle a QML cuántos elementos debe "
+"presentar el modelo."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
-#, fuzzy
-#| msgid ""
-#| "`roleNames()` - You can think of role names as property names attached to "
-#| "data in QML. This function allows you to create those roles."
 msgid ""
 "[roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames) - "
 "You can think of role names as property names attached to data in QML. This "
 "function allows you to create those roles."
 msgstr ""
-"`roleNames()`: Se puede decir que los nombres de los roles son nombres de "
-"propiedades adjuntados a los datos en QML. Esta función le permite crear "
-"dichos roles."
+"[roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames): Se "
+"puede decir que los nombres de los roles son nombres de propiedades "
+"adjuntados a los datos en QML. Esta función le permite crear dichos roles."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:110
-#, fuzzy
-#| msgid ""
-#| "`data()` - This function is called when you want to retrieve the data "
-#| "that corresponds to the role names from the model."
 msgid ""
 "[data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data) - This "
 "function is called when you want to retrieve the data that corresponds to "
 "the role names from the model."
 msgstr ""
-"`data()`: Esta función se llama cuando necesite obtener los datos que "
-"corresponden a los nombres de roles del modelo."
+"[data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data): Esta función "
+"se llama cuando necesite obtener los datos que corresponden a los nombres de "
+"roles del modelo."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:114
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:122
@@ -2295,13 +2279,12 @@ msgstr ""
 "su propio parámetro, pero no se usará en este ejemplo, por lo que se excluye."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:138
-#, fuzzy
-#| msgid "Then, let's declare how many rows are in this model in `model.cpp`."
 msgid ""
 "Then, let's declare how many rows are in this model in `src/components/model."
 "cpp`:"
 msgstr ""
-"A continuación declaramos cuántas filas hay en este modelo en `model.cpp`."
+"A continuación declaramos cuántas filas hay en este modelo en `src/"
+"components/model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:142
 msgid "Overriding and Implementing `roleNames()`"
@@ -2340,12 +2323,6 @@ msgstr ""
 "rol para el lado C++."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:155
-#, fuzzy
-#| msgid ""
-#| "Once we have that settled, we can finally create what these roles are in "
-#| "the QML side using a [QHash](docs:qtcore;qhash.html) where the keys are "
-#| "the enumerated values paired with [QByteArrays](docs:qtcore;qbytearray."
-#| "html). The text in the QByteArray is what's used in the actual QML code."
 msgid ""
 "Once we have that settled, we can finally create what these roles are in the "
 "QML side using a [QHash](docs:qtcore;qhash.html) where the keys are the "
@@ -2356,8 +2333,8 @@ msgstr ""
 "Una vez que tengamos esto resuelto, podremos crear lo que son dichos roles "
 "en el lado QML usando un [QHash](docs:qtcore;qhash.html) donde las claves "
 "son los valores de enumeración emparejados con [QByteArrays](docs:qtcore;"
-"qbytearray.html). El texto del QByteArray es lo que se usa en el código QML "
-"real."
+"qbytearray.html). Esto debe ir en `src/components/model.cpp. El texto del "
+"QByteArray es lo que se usa en el código QML real."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:162
 msgid ""
@@ -2375,33 +2352,17 @@ msgid "Overriding and Implementing `data()`"
 msgstr "Sobrescritura e implementación de `data()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:169
-#, fuzzy
-#| msgid ""
-#| "There are two parameters that are passed in `data()`: `index` and `role`. "
-#| "`index` is the location of where the data is when being delegated. As "
-#| "previously stated, `role` is used by QML to get specific data returned "
-#| "when it's accessing a role."
 msgid ""
 "There are two parameters that are passed to `data()`: `index` and `role`. "
 "The `index` is the position of the data in the model. As previously stated, "
 "`role` is used by QML to get specific data returned when it's accessing a "
 "role."
 msgstr ""
-"Existen dos parámetros que se pasan en `data()`: `index` y `role`. `index` "
-"es la posición donde están los datos cuando se delegan. Como se ha dicho "
-"anteriormente, QML usa `role` para devolver datos específicos cuando accede "
-"a un rol."
+"Existen dos parámetros que se pasan a `data()`: `index` y `role`. `index` es "
+"la posición de los datos en el modelo. Como se ha dicho anteriormente, QML "
+"usa `role` para devolver datos específicos cuando accede a un rol."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:174
-#, fuzzy
-#| msgid ""
-#| "In `data()`, we can use a `switch` statement to return the appropriate "
-#| "data and data type depending on the role, which is possible as `data()` "
-#| "returns a [QVariant](docs:qtcore;qvariant.html). We still need to make "
-#| "sure we get the appropriate location of the data, though. In this example "
-#| "below, you can see that a new iterator variable is being declared, which "
-#| "is set from the beginning of the list plus the row of the index and the "
-#| "data that the iterator is pointing to is what is being returned."
 msgid ""
 "In `data()`, we can use a switch statement to return the appropriate data "
 "and data type depending on the role, which is possible as `data()` returns a "
@@ -2411,7 +2372,7 @@ msgid ""
 "beginning of the list plus the row of the index, and the data that the "
 "iterator is pointing to is what is being returned."
 msgstr ""
-"En `data()` podemos usar una sentencia `switch` para devolver los datos "
+"En `data()` podemos usar una sentencia «switch» para devolver los datos "
 "apropiados y el tipo de dato según el rol, lo que es posible porque `data()` "
 "devuelve una [QVariant](docs:qtcore;qvariant.html). No obstante, todavía "
 "tenemos que asegurarnos de que obtenemos la posición apropiada de los datos. "
@@ -2420,12 +2381,6 @@ msgstr ""
 "y los datos a los que apunta el iterador son los que se devuelven."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:182
-#, fuzzy
-#| msgid ""
-#| "We can't just return whatever data we want though. We may be trying to "
-#| "bind data to a property with an incompatible data type, such as a "
-#| "QStringList to a QString. You may have to do data conversion in order for "
-#| "the data to be displayed properly."
 msgid ""
 "We can't just return whatever data we want though. We may be trying to bind "
 "data to a property with an incompatible data type, such as a QStringList to "
@@ -2437,7 +2392,8 @@ msgstr ""
 "posible que estemos intentando asociar datos a una propiedad con un tipo de "
 "datos incompatible, como una QStringList a una QString. Es posible que tenga "
 "que realizar una conversión de datos para que los datos se muestren "
-"correctamente."
+"correctamente. Para ello, creamos una nueva función estática privada con el "
+"nombre `formatList()`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:187
 msgid "This results in the following code in `src/components/model.cpp`:"
@@ -11931,160 +11887,3 @@ msgstr ""
 "El tamaño del texto del [Kirigami.Theme](docs:kirigami2;Kirigami::Platform::"
 "PlatformTheme) está disponible como `Kirigami.Theme.defaultFont.pointSize` "
 "en su aplicación."
-
-#~ msgid ""
-#~ "They can be dismissed by clicking or tapping outside of their area or by "
-#~ "clicking the close button on the header."
-#~ msgstr ""
-#~ "Se pueden descartar haciendo clic o tocando fuera de su área o pulsando "
-#~ "el botón de cerrar del encabezado."
-
-#~ msgid ""
-#~ "For your new backend class, create two new files called `backend.cpp` and "
-#~ "`backend.h`. Don't forget to add the new cpp file to the executable in "
-#~ "`src/CMakeLists.txt`, next to main.cpp."
-#~ msgstr ""
-#~ "Para la nueva clase de motor, cree dos archivos llamados `backend.cpp` y "
-#~ "`backend.h`. No se olvide de añadir el nuevo archivo cpp al ejecutable en "
-#~ "`src/CMakeLists.txt`, junto a `main.cpp`."
-
-#~ msgid "Add the following content to the new header file (`backend.h`):"
-#~ msgstr ""
-#~ "Añada el siguiente contenido al nuevo archivo de cabecera (`backend.h`):"
-
-#~ msgid ""
-#~ "The `backend.cpp` file containing the definitions is similarly empty "
-#~ "right now, it should contain something like the following:"
-#~ msgstr ""
-#~ "El archivo `backend.cpp` que contiene las definiciones también está vacío "
-#~ "ahora; debe contener algo similar a lo siguiente:"
-
-#~ msgid ""
-#~ "Currently the user interface doesn't know about your backend class. To "
-#~ "change that, we need to register the new type in `main.cpp`. The backend "
-#~ "will be created as a singleton, that means it will only be created once "
-#~ "and exist through the whole time from starting the application to closing "
-#~ "it."
-#~ msgstr ""
-#~ "Hasta ahora, la interfaz de usuario no sabe nada sobre la clase del "
-#~ "motor. Para cambiar esto, necesitamos registrar el nuevo tipo en `main."
-#~ "cpp`. El motor se creará como *singleton*, lo que significa que solo se "
-#~ "creará una vez y existirá durante todo el tiempo, desde que se inicia la "
-#~ "aplicación hasta que se cierra."
-
-#~ msgid ""
-#~ "Right after creating the [QQmlApplicationEngine](docs:qtqml;"
-#~ "QQmlApplicationEngine), add the [type registration](https://doc.qt.io/"
-#~ "qt-6/qtqml-cppintegration-definetypes.html) to `main.cpp` as follows:"
-#~ msgstr ""
-#~ "Después de crear el [QQmlApplicationEngine](docs:qtqml;"
-#~ "QQmlApplicationEngine), añada el [registro de tipo](https://doc.qt.io/"
-#~ "qt-6/qtqml-cppintegration-definetypes.html) a `main.cpp` de este modo:"
-
-#~ msgid ""
-#~ "Don't forget to include the new header file at the top of `main.cpp`."
-#~ msgstr ""
-#~ "No olvide incluir el nuevo archivo de cabecera al principio de `main.cpp`."
-
-#~ msgid ""
-#~ "From now on, the backend will be known to QML as `Backend`. It is "
-#~ "contained in a module called `org.kde.example`. Since the module is part "
-#~ "of the application, you don't need to worry about versioning it, just "
-#~ "stay with `1.0` and use it consistently throughout the application."
-#~ msgstr ""
-#~ "A partir de este momento, QML conocerá el motor como `Backend`. Está "
-#~ "contenido en un módulo llamado `org.kde.example`. Como el módulo es parte "
-#~ "de la aplicación, no tiene que preocuparse por su número de versión: solo "
-#~ "tiene que quedarse con `1.0` y usarlo de forma consistente en toda la "
-#~ "aplicación."
-
-#~ msgid "In `main.qml`, import the new module:"
-#~ msgstr "En `main.qml`, importe el nuevo módulo:"
-
-#~ msgid "To the public section, add"
-#~ msgstr "En la sección `public`, añada"
-
-#~ msgid "Now compile and start your program again."
-#~ msgstr "Ahora, vuelva a compilar el programa y ejecútelo."
-
-#~ msgid ""
-#~ "If you are following along, please remember to update your `CMakeLists."
-#~ "txt` file!"
-#~ msgstr ""
-#~ "Si está siguiendo las instrucciones, recuerde actualizar su archivo "
-#~ "`CMakeLists.txt`."
-
-#~ msgid "Allow the Class to be Declared in QML"
-#~ msgstr "Permitir que la clase se declare en QML"
-
-#~ msgid "Let's not forget to make our class usable in QML."
-#~ msgstr "No olvidemos hacer que nuestra clase se pueda usar en QML."
-
-#~ msgid "![App Screenshot](app_screenshot.png)"
-#~ msgstr "![Captura de pantalla de la aplicación](app_screenshot.png)"
-
-#~ msgid "Clear TextField every time it's done"
-#~ msgstr "Borrar TextField cada vez que termina"
-
-#~ msgid "Full Code"
-#~ msgstr "Código completo"
-
-#~ msgid ""
-#~ "</details>\n"
-#~ "<br>\n"
-#~ msgstr ""
-#~ "</details>\n"
-#~ "<br>\n"
-
-#~ msgid "Kirigami with C++"
-#~ msgstr "Kirigami con C++"
-
-#~ msgid ""
-#~ "`FormSectionText` simply adds a thin delegate containing a label. "
-#~ "`FormTextDelegate` has text and a grayed out description."
-#~ msgstr ""
-#~ "`FormSectionText` añade un fino delegado que contiene una etiqueta. "
-#~ "`FormTextDelegate` tiene texto y una descripción desactivada."
-
-#~ msgid ""
-#~ "This combobox has several useful properties we can make use of: "
-#~ "`editable`, `displayText` and `displayMode`."
-#~ msgstr ""
-#~ "Esta lista desplegable tiene varias propiedades útiles que podemos usar: "
-#~ "`editable`, `displayText` y `displayMode`."
-
-#~ msgid ""
-#~ "[KDE Apps page](https://apps.kde.org/en/discover)<br />[KDE Userbase page]"
-#~ "(https://userbase.kde.org/Discover)<br />[KDE Invent page](https://invent."
-#~ "kde.org/plasma/discover)"
-#~ msgstr ""
-#~ "[Página de KDE Apps](https://apps.kde.org/en/discover)<br />[Página de "
-#~ "KDE Userbase](https://userbase.kde.org/Discover)<br />[Página de KDE "
-#~ "Invent](https://invent.kde.org/plasma/discover)"
-
-#~ msgid "Checkable children"
-#~ msgstr "Hijos con casillas de verificación"
-
-#, fuzzy
-#~| msgid ""
-#~| "A handy feature of [Kirigami.FormLayout](docs:kirigami2;FormLayout) is "
-#~| "that you can add checkboxes to its children. This can be useful in "
-#~| "settings pages where you might want to let the user enable or disable a "
-#~| "setting, and also want the user to provide some extra information in a "
-#~| "component such as a textfield."
-#~ msgid ""
-#~ "A handy feature of [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami."
-#~ "layouts.FormLayout) is that you can add checkboxes to its children. This "
-#~ "can be useful in settings pages where you might want to let the user "
-#~ "enable or disable a setting, and also want the user to provide some extra "
-#~ "information in a component such as a textfield."
-#~ msgstr ""
-#~ "Una funcionalidad útil de [Kirigami.FormLayout](docs:kirigami2;"
-#~ "FormLayout) es que puede asignar casillas de verificación a sus hijos. "
-#~ "Esto puede ser de utilidad en las páginas de preferencias donde quiera "
-#~ "permitir que el usuario active o desactive una preferencia y también "
-#~ "quiera que el usuario proporcione información adicional en un componente, "
-#~ "como un campo de texto."
-
-#~ msgid "A form layout with checkable label."
-#~ msgstr "Un diseño de formulario con una etiqueta que se puede marcar."
