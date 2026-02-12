@@ -1,13 +1,22 @@
 {
+  "id": "org.kde.simplemdviewer",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "6.9",
+  "sdk": "org.kde.Sdk",
   "command": "simplemdviewer",
   "desktop-file-name-suffix": " (Nightly)",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin"
+  },
   "finish-args": [
     "--share=ipc",
     "--device=dri",
     "--socket=fallback-x11",
     "--socket=wayland"
   ],
-  "id": "org.kde.simplemdviewer",
   "modules": [
     {
       "buildsystem": "cmake",
@@ -27,14 +36,5 @@
         }
       ]
     }
-  ],
-  "sdk-extensions": [
-    "org.freedesktop.Sdk.Extension.rust-stable"
-  ],
-  "build-options": {
-    "append-path": "/usr/lib/sdk/rust-stable/bin"
-  },
-  "runtime": "org.kde.Platform",
-  "runtime-version": "6.9",
-  "sdk": "org.kde.Sdk"
+  ]
 }
