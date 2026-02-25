@@ -38,7 +38,7 @@ Group related items together by reducing the spacing between them, and increasin
 
 
 ## Spacings and sizes
-Use the Kirigami [standard units](https://api.kde.org/qml-org-kde-kirigami-platform-units.html) consistently:
+Use the Kirigami [standard units](https://api.kde.org/kirigami-platform-units.html) consistently:
 
 Item                                                                                  | Value to use
 --------------------------------------------------------------------------------------|--------------------------
@@ -77,9 +77,9 @@ Status bar                   | Below the content area    | Omitted
 Desktop/laptop apps can be adapted to work on tablets and 2-in-1 laptops in tablet mode by enlarging small UI elements and hiding menubars. Phones (even large ones) need an optimized mobile UI; do not just scale down a desktop UI.
 
 {{< alert title="Note" color="info" >}}
-Detect that the app is running in tablet mode  by reading the value of [Kirigami.Settings.tabletMode](https://api.kde.org/qml-org-kde-kirigami-platform-settings.html#tabletMode-prop). Enable this mode for testing purposes on System Settings' General Behavior page.
+Detect that the app is running in tablet mode  by reading the value of [Kirigami.Settings.tabletMode](https://api.kde.org/kirigami-platform-settings.html#tabletMode-prop). Enable this mode for testing purposes on System Settings' General Behavior page.
 
-Detect that the app is running on a mobile phone by reading the value of [Kirigami.Settings.isMobile](https://api.kde.org/qml-org-kde-kirigami-platform-settings.html#isMobile-prop). Set the `QT_QUICK_CONTROLS_MOBILE=1` environment variable to test your app in a simulated mobile mode.
+Detect that the app is running on a mobile phone by reading the value of [Kirigami.Settings.isMobile](https://api.kde.org/kirigami-platform-settings.html#isMobile-prop). Set the `QT_QUICK_CONTROLS_MOBILE=1` environment variable to test your app in a simulated mobile mode.
 {{< /alert >}}
 
 In addition, offer a good experience for laptop users by keeping these points in mind:
