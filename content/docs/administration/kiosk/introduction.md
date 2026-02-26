@@ -152,6 +152,8 @@ The order of files is loaded as follows:
 * `/etc/xdg/system.kdeglobals`
 * `/etc/kde5rc`
 
+Note that `/etc/kde5rc` is a special case: it is hardcoded to this specific location and is not part of the XDG directory structure (unlike the `/etc/xdg/` paths shown above).
+
 ## KDE Action Restrictions
 
 Many actions in KDE applications and Plasma can be restricted through
@@ -277,7 +279,8 @@ As an example, a way of preventing users from changing their mouse
 settings would be to lock down that system settings module:
 
 Add the following to the global kde5rc file, in the hierarchy listed
-above.
+above. Note that kde5rc is read from the hardcoded location 
+`/etc/kde5rc` (not from the XDG directories).
 
 ```ini
 [KDE Control Module Restrictions][$i]
