@@ -4,10 +4,83 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/*
+// Override CSS values from the theme here
 
-Nothing defined here. The Hugo project that uses this theme can override Bootstrap by adding a file to:
+// This is the page content font override
+// Use smaller text and constrained width for documentation pages
+.td-content {
+    font-size: 0.875rem;
+    max-width: 900px;
+    margin-inline: auto;
 
-assets/scss/_styles_project.scss
+    > h1 { font-size: 1.55rem; font-weight: 700; }
+    > h2 { font-size: 1.25rem; font-weight: 600; }
+    > h3 { font-size: 1.05rem; font-weight: 600; }
+    > h4 { font-size: 0.95rem; font-weight: 600; }
+    > h5 { font-size: 0.875rem; font-weight: 600; }
+    > h6 { font-size: 0.8rem;   font-weight: 600; }
+}
 
-*/
+// Align breadcrumb with the content column (constrained width)
+main > nav[aria-label="breadcrumb"] {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+// Override sidebar styling
+.td-sidebar-nav {
+    --rim: transparent; // No divider lines
+    border-top: none;
+    font-size: 0.9rem;
+
+    // Indentation for headings
+    .toc-l0 a { padding-left: 9px; } // HACK: match the text at top level
+    .toc-l1 a { padding-left: 1.5rem; }
+    .toc-l2 a { padding-left: 3rem; }
+    .toc-l3 a { padding-left: 4.5rem; }
+
+    .td-sidebar-link {
+        padding-block: 0.25rem;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: var(--bs-body-color);
+        }
+        &__page {
+            // Override all font weights
+            font-weight: 400;
+        }
+    }
+
+    // Active background: grey in light mode, primary tint in dark mode
+    li:has(> a.td-sidebar-link__page.active),
+    li:has(> a.td-sidebar-link__section.active) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    // Use primary color for active text in dark mode for contrast
+    @include color-mode(dark) {
+        a.td-sidebar-link__page.active,
+        a.td-sidebar-link__section.active {
+            color: $primary;
+        }
+    }
+
+    &__section-title a {
+        font-size: 0.9rem;
+        color: var(--bs-body-color);
+        padding-top: 1rem;
+    }
+
+    // HACK: top level section title has a left-padding for some reason in the theme, get rid of it
+    .toc-l0 .td-sidebar-nav__section-title { padding-left: 0; }
+
+    // Always bold top level section heading
+    .toc-l0 .td-sidebar-nav__section-title a { font-weight: 600; }
+
+    // Second-level section titles: normal weight, bold only when active
+    .toc-l1 .td-sidebar-nav__section-title a {
+        font-weight: 400;
+        &.active { font-weight: 600; }
+    }
+}
