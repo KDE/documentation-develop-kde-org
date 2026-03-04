@@ -10,6 +10,11 @@ hugo_website:
     KDECI_CACHE_PATH: /mnt/artifacts/suse-qt6.10/
     KDECI_GITLAB_SERVER: https://invent.kde.org/
     KDECI_PACKAGE_PROJECT: teams/ci-artifacts/suse-qt6.10
+  before_script:
+    - git config --global --add safe.directory $CI_PROJECT_DIR
+    - git clone https://invent.kde.org/sysadmin/ci-utilities.git
+    - git clone https://invent.kde.org/sysadmin/ci-notary-service.git
+    - sed -i -e 's/"avviso/"alert/g' po/it/kirigami-tutorial.po
 
 # broken
 html_test:
