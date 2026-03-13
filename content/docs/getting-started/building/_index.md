@@ -22,15 +22,19 @@ By joining the ranks of KDE developers, you will get to implement new features a
 
 KDE runs or participates in several mentoring programs to help new developers, including an informal list of people who are willing to help newcomers get started. See the [Mentoring page](https://community.kde.org/Mentoring) for more details.
 
-There are many ways in which you can build KDE software:
+{{< alert title="💡 Get Started Here" color="success" >}}
+
+If you are completely new to KDE development and want to build it on Linux, you will want to [set up a development environment with kde-builder]({{< ref "kde-builder-setup" >}}) first. This is KDE's most complete and best supported method for building KDE software on Linux.
+
+{{< /alert >}}
+
+You can build KDE software using the following methods:
 
 * [kde-builder]({{< ref "kde-builder-setup" >}})
 * [kdesrc-build](https://invent.kde.org/sdk/kdesrc-build)
 * [manual CMake compilation]({{< ref "cmake-build" >}})
 * with [containers]({{< ref "containers-distrobox" >}})
 * with [Craft]({{< ref "craft" >}})
-
-If you are completely new to KDE development and want to build it on Linux, you will want to [set up a development environment with kde-builder]({{< ref "kde-builder-setup" >}}) first. This is KDE's most complete and best supported method for building KDE software on Linux.
 
 If you are on a rolling release Linux distribution or just want to build a single app, you may also learn how to compile KDE software using [manual CMake compilation]({{< ref "cmake-build" >}}).
 
