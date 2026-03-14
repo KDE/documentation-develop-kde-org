@@ -38,6 +38,19 @@ If you are on a Linux distribution that is too old for the previous methods or y
 
 If you are on Windows or MacOS or want to build an application for Android, KDE also provides the meta build system and package manager [Craft](https://community.kde.org/Craft). Windows users may also be interested in [Building KDE software on Windows]({{< ref "craft" >}}) and [Packaging KDE software for Windows]({{< ref "windows" >}}).
 
+## Recommended Linux distributions
+
+We recommend the following Linux distributions to start developing KDE software:
+
+* [Fedora KDE](https://fedoraproject.org/kde/)
+* [openSUSE Tumbleweed](https://get.opensuse.org/tumbleweed/)
+* [Arch Linux](https://archlinux.org/)
+
+The following distributions are also suitable for use with kde-builder:
+
+* [latest non-LTS Kubuntu](https://kubuntu.org/)
+* [Debian Testing](https://www.debian.org/)
+
 ## Choosing the right method for your Linux system {#choosing}
 
 If you are on Linux, then the method you'll need to use will depend
@@ -45,18 +58,19 @@ on your distribution and how often it updates.
 
 | **Type of distribution**        | **Method**                | **Comment**             |
 | ------------------------------- | ------------------------- | --------------------- |
-| Sufficiently up-to-date[^1]     | kde-builder               | ✅ The preferred method. Works for all purposes. |
+| Recommended distributions[^1]   | kde-builder               | ✅ The preferred method. Works for all purposes. |
 |                                 | manual CMake compilation  | ✅ Works well for standalone apps. Core software[^2] requires extra steps to work[^3]. |
 |                                 | containers                | ✅ Redundant and takes extra setup, but possible. Doesn't work well for core software[^2]. |
-| Not up-to-date distribution[^4] | kde-builder               | ⚠️ If the system is not too outdated, it might work, in which case all benefits of kde-builder apply. If the system is too outdated, it will not work. See [Common problems in stable distributions](https://develop.kde.org/docs/getting-started/building/kde-builder-failure/#common-problems-in-stable-distributions).|
-|                                 | manual CMake compilation  | ❌ Might work for standalone apps, but not recommended. |
+| Not up-to-date distribution[^4] | kde-builder               | ❌ Not recommended. Will require many modifications to work. See [Common problems in stable distributions](https://develop.kde.org/docs/getting-started/building/kde-builder-failure/#common-problems-in-stable-distributions).|
+|                                 | manual CMake compilation  | ⚠️ Might work for standalone apps, but not recommended. |
 |                                 | containers                | ✅ Works well for standalone apps, but not core software[^2]. |
 | Immutable distribution[^5]      | kde-builder               | ⚠️ Possible only inside a container. |
 |                                 | manual CMake compilation  | ⚠️ Possible only inside a container. |
 |                                 | containers                | ✅ The only way to build software in these systems. |
 
-[^1]: "Sufficiently up-to-date" means distributions like the latest non-LTS Ubuntu, Debian Testing, openSUSE Tumbleweed, Fedora, Arch Linux, and their derivatives.
+[^1]: See [Recommended Linux distributions](#recommended-linux-distributions) above.
 [^2]: "Core software" refers to non-standalone software that is essential for Plasma to function like KWin, Plasma Desktop, or KIO.
 [^3]: Currently undocumented.
 [^4]: "Not up-to-date" means distributions such as Debian Stable, Ubuntu LTS or two versions behind current release, or openSUSE Leap.
 [^5]: "Immutable distributions" means distributions like Fedora Kinoite, openSUSE Kalpa, or SteamOS.
+
