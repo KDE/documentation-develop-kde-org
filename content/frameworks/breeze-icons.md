@@ -10,7 +10,7 @@ Breeze-icons is a freedesktop.org compatible icon theme. It's developed by the K
 Its sources are hosted on [KDE Invent](https://invent.kde.org/frameworks/breeze-icons).
 
 ## Design Guidelines
-The Breeze icons guidelines are described at [hig.kde.org](https://hig.kde.org).  To help contribute to KDE design please join [the KDE Visual Design Group](https://community.kde.org/Get_Involved/design).
+The Breeze icons guidelines are described at [hig.kde.org/icons](hig.kde.org/icons). To help contribute to KDE design please join [the KDE Visual Design Group](https://community.kde.org/Get_Involved/design).
 
 ## License
 The icons may be freely shared, modified and copied under the GNU LGPL version 3.  If you use them in your app or website please include a link back to this page and a statement such as:
