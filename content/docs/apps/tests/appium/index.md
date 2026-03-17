@@ -347,8 +347,7 @@ You can view the available roles in an application by using
 [Accerciser](https://gitlab.gnome.org/GNOME/accerciser),
 an application that allows you to explore accessibility properties in other
 programs. KDE also has its own accessibility explorer,
-[Accessibility Inspector](https://apps.kde.org/accessibilityinspector/),
-which has not yet been packaged by distros.
+[Accessibility Inspector](https://apps.kde.org/accessibilityinspector/).
 
 To inspect roles in KDE applications, you first need to open Accerciser, and
 then run the desired KDE application by passing the environment variable
