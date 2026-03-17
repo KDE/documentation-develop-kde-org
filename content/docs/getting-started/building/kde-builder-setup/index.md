@@ -179,98 +179,13 @@ bash initial_setup.sh
 
 ## Setting up Qt
 
-Qt is the fundamental framework that is needed for all KDE development. A recent enough version of Qt 6 (currently version 6.7 or later) is required to proceed.
+Qt is the fundamental framework that is needed for all KDE development. A recent enough version of Qt6 is required to proceed.
 
-The initial setup of `kde-builder` should have installed the required Qt6 packages for you already, in which case you don't need to do anything and may skip directly to the [Configure git]({{< ref "#configure-git" >}}) section.
+Any of the **recommended**, **sufficiently up-to-date** Linux distributions listed in [Building KDE software]({{< ref "building" >}}) should have recent enough Qt6.
 
-If your Linux distribution does not provide a recent enough version of Qt, you have the following options:
+The initial setup of `kde-builder` should have installed the required Qt6 packages for you already, in which case you **DON'T** need to do anything and may skip directly to the [Configure git]({{< ref "#configure-git" >}}) section.
 
-* Use [containers]({{< ref "containers-distrobox" >}})
-* [Install Qt6 using the Qt online installer]({{< ref "#qt6-online" >}})
-* [Install Qt6 using the unofficial aqtinstall installer]({{< ref "#qt6-aqtinstall" >}})
-* [Build Qt6 using kde-builder]({{< ref "#qt6-build" >}})
-* Switch to a [more up-to-date distro]({{< ref "building#choosing" >}})
-
-### Use Qt6 from the online installer {#qt6-online}
-
-Instead of letting `kde-builder` build Qt for you, you may want to use Qt's official installer.
-
-First, create an account on [Qt's website](https://www.qt.io/). Then, download the installer from the [Qt for Open Source Development](https://www.qt.io/download-qt-installer-oss) page.
-
-Run the downloaded file, log in with your Qt account, and follow the wizard. During the installation, choose the option `Custom installation`, and:
-
-* Uncheck `Qt Design Studio`
-* Uncheck `Qt Creator`
-* Make sure the `Desktop` item for the latest version of Qt is selected
-
-This will install only the essential Qt libraries in `~/Qt` by default, occupying a little less than 2 GB of storage.
-
-Once installed, open `~/.config/kde-builder.yaml`, uncomment the line with `qt-install-dir: ~/kde/qt`, and change it to point to your Qt installation. The actual path should be similar to this, depending on your Qt version:
-
-```yaml
-qt-install-dir: ~/Qt/6.9.0/gcc_64
-```
-
-Once this is done, `kde-builder` will know to use the Qt provided by the online installer to build KDE software.
-
-If you ever need to install more Qt components, you can do so using the `Qt Maintenance Tool` that was added by the installer.
-
-### Use Qt6 from aqtinstall {#qt6-aqtinstall}
-
-If you do not want to create a Qt account to use Qt's official installer and do not want to build Qt yourself,
-you can try using the unofficial installer `aqtinstall` which downloads
-Qt from the same sources as the official installer.
-
-First, install `aqtinstall`:
-
-```bash
-pipx install aqtinstall
-```
-
-If you don't have `pipx` installed, you can install it from your distribution.
-
-You can then install Qt using:
-
-```bash
-aqt install-qt linux desktop 6.9 linux_gcc_64 --outputdir ~/Qt --modules all
-```
-
-replacing `6.9` with the latest Qt version number.
-
-This will install all Qt modules available in the latest version and will occupy a bit more than 8 GB of storage.
-
-Once installed, open the file `~/.config/kde-builder.yaml`, uncomment the line with `qt-install-dir: ~/kde/qt`, and change it to point to your Qt installation. The actual path should be similar to this, depending on your Qt version:
-
-```yaml
-qt-install-dir: ~/Qt/6.9.0/gcc_64
-```
-
-Once this is done, `kde-builder` will know to use the Qt provided by the online installer to build KDE software.
-
-### Build Qt6 using kde-builder {#qt6-build}
-
-It is possible to build Qt with kde-builder, but it requires a minimum of 30 GB of storage and has a long compilation time, up to a few hours depending on your machine.
-
-To do this, open the file `~/.config/kde-builder.yaml` and uncomment the line containing:
-
-```yaml
-qt-install-dir: ~/kde/qt
-```
-
-Near the end of the file, add an override so you build Qt from the latest release instead of the development branch (the default):
-
-```yaml
-override qt6-set:
-  branch: "6.9"
-```
-
-Then run:
-
-```bash
-kde-builder qt6-set
-```
-
-This will take a long time.
+If your Linux distribution does **NOT** provide a recent enough version of Qt, see the dedicated page [Setting up Qt]({{< ref "kde-builder-qt6" >}}).
 
 ## Configure git
 
