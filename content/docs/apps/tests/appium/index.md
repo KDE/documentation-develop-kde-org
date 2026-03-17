@@ -344,7 +344,7 @@ would share the same role of "push button", as they are both functionally
 buttons.
 
 You can view the available roles in an application by using
-[Accerciser](https://help.gnome.org/users/accerciser/stable/introduction.html.en),
+[Accerciser](https://gitlab.gnome.org/GNOME/accerciser),
 an application that allows you to explore accessibility properties in other
 programs. KDE also has its own accessibility explorer,
 [Accessibility Inspector](https://apps.kde.org/accessibilityinspector/),
