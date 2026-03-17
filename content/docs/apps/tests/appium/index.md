@@ -174,15 +174,15 @@ The "app" capability points to the application that will be tested, and it can b
 * The relative path to an executable and optionally its command line parameters (used for autotests when the application is being built).
 * The desktop file that runs the application, without the file path and including the `.desktop` extension.
 
-The second class method functions like a destructor that makes sure the driver
-will quit once the tests are done. It also lets you terminate any other
-external processes you might have started for your tests, like a small
-web server.
-
 Next we use some boilerplate code that allows Appium to run at a localhost web
 server at a certain port, passing the options and capabilities we have defined.
 Then, we set a timeout of 10 seconds to allow the test to prepare and run
 the application when it is executed.
+
+The second class method functions like a destructor that makes sure the driver
+will quit once the tests are done. It also lets you terminate any other
+external processes you might have started for your tests, like a small
+web server.
 
 As mentioned before, we need a class method that starts with the name "test_"
 and that will perform the actual test.
