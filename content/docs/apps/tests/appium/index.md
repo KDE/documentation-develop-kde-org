@@ -60,16 +60,6 @@ With kde-builder:
 kde-builder --run selenium-webdriver-at-spi-run ~/kde/src/selenium-webdriver-at-spi/examples/calculatortest.py
 ```
 
-{{< alert title="⏳ With kdesrc-build..." >}}
-
-Because kdesrc-build had no way to associate the name of the project with the executable name, you'll need to use the `--exec` or `-e` flag:
-
-```shell
-kdesrc-build --run --exec selenium-webdriver-at-spi-run selenium-webdriver-at-spi ~/kde/src/selenium-webdriver-at-spi/examples/calculatortest.py
-```
-
-{{< /alert >}}
-
 You will see a black window titled "KDE Wayland Compositor" running a KCalc window and having a few buttons getting highlighted (very fast!) as they're activated.
 
 {{< figure class="text-center" caption="KCalc running in nested KWin" src="kcalc.avif" >}}
