@@ -203,6 +203,13 @@ Initially, the CLion window hides the native titlebar, and looks like this:
 To use native titlebar, open the registry (double-tap Shift, search for "Registry") and disable the
 property `ide.linux.hide.native.title`.
 
+If you are running CLion natively on Wayland, you may want to enable server side decorations for it.
+Open the VM options list **Help | Edit Custom VM Options...**, and add the following line:
+
+```
+-Dsun.awt.wl.WindowDecorationStyle=server
+```
+
 After restarting CLion, it will look like this:
 
 {{< figure alt="CLion window with native titlebar" width="900px" src="clion_ssd_window.png" >}}
