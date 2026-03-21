@@ -210,7 +210,7 @@ Use appropriate Unicode symbols rather than handmade approximations. This makes 
 
 - `…` (`U+2026`) instead of `...` anywhere ellipses are used
 - `→` (`U+2192`) instead of `->`
-- `÷` (`U+00F7`), `×` (`U+00D7`), and `−` (`U+00D7`) instead of `/`, `x`, and `-` in mathematical expressions; e.g. `−1`, `2×`, `2×2`, `10÷5` etc. (applicable for other mathematical operators as well)
+- `÷` (`U+00F7`), `×` (`U+00D7`), and `−` (`U+2212`) instead of `/`, `x`, and `-` in mathematical expressions; e.g. `−1`, `2×`, `2×2`, `10÷5` etc. (applicable for other mathematical operators as well)
 - ` × ` (`U+00D7`) instead of `x` for dimensions; e.g. `1920 × 1080`, instead of `1920x1080`
 - `“` (`U+201C`) and `”` (`U+201D`) instead of `"` for quotations
 - `’` (`U+2019`) instead of `'` for apostrophes
