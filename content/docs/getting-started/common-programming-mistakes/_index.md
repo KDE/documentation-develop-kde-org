@@ -556,7 +556,7 @@ purely historical artifact and new code is discouraged from making use of it.
 If you are reading in a file, it is faster to convert it from the local
 encoding to Unicode ([QString](https://doc.qt.io/qt-6/qstring.html)) in one go,
 rather than line by line. This means that methods like
-[QIODevice::readdAll](https://doc.qt.io/qt-6/qiodevice.html#readAll) are often
+[QIODevice::readAll](https://doc.qt.io/qt-6/qiodevice.html#readAll) are often
 a good solution, followed by a single
 [QString](https://doc.qt.io/qt-6/qstring.html) instantiation.
 
