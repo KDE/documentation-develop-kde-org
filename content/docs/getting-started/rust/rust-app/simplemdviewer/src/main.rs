@@ -1,14 +1,3 @@
-#[cxx_qt::bridge]
-mod ffi {
-    extern "RustQt" {
-        #[qobject]
-        type DummyQObject = super::DummyRustStruct;
-    }
-}
-
-#[derive(Default)]
-pub struct DummyRustStruct;
-
 use cxx_qt_lib::{QGuiApplication, QQmlApplicationEngine, QQuickStyle, QString, QUrl};
 use cxx_qt_lib_extras::QApplication;
 use std::env;

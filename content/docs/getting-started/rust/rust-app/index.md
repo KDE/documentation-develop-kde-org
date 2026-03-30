@@ -96,9 +96,7 @@ Create a new directory `src/` and add a new
 
 {{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer/src/main.rs" highlight="rust" >}}
 
-The first part that is marked with the `#[cxx_qt::bridge]` Rust macro creates a dummy QObject out of a dummy Rust struct. This is needed as cxx-qt needs to find at least one QObject exposed to Rust to work. This should no longer be necessary in the future once https://github.com/KDAB/cxx-qt/issues/1137 is addressed. When we start [Adding Markdown functionality]({{< ref "#adding-markdown" >}}) later on, we will use a proper QObject.
-
-We then created a
+We create a
 [QGuiApplication](https://doc.qt.io/qt-6/qguiapplication.html)
 object that initializes the application and contains the main event loop. The
 [QQmlApplicationEngine](https://doc.qt.io/qt-6/qqmlapplicationengine.html)
@@ -106,7 +104,7 @@ object loads the `Main.qml` file.
 
 Then comes the part that actually creates the application window:
 
-{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer/src/main.rs" highlight="rust" start=27 lines=6 >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer/src/main.rs" highlight="rust" start=16 lines=6 >}}
 
 The long URL `qrc:/qt/qml/org/kde/simplemdviewer/src/qml/Main.qml` corresponds to the `Main.qml` file in the [Qt Resource System](https://doc.qt.io/qt-6/resources.html), and it follows this scheme: `<resource_prefix><import_URI><QML_dir><file>`.
 
@@ -230,6 +228,12 @@ Let’s add some Rust logic: a simple Markdown converter in a
 Rust [QObject](https://doc.qt.io/qt-6/qobject.html)
 derivative struct.
 
+### Cargo.toml
+
+Add the `markdown` crate as a dependency to Cargo.toml:
+
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/Cargo.toml" highlight="rust" emphasize="13"  >}}
+
 ### src/mdconverter.rs
 
 Create a new `mdconverter.rs` file inside `src/`:
@@ -276,9 +280,9 @@ Now the `mdconverter` module exposes everything we need to the QML side:
 
 ### src/main.rs
 
-Two modifications are needed in `src/main.rs`: removing the dummy QObject and importing our new `mdconverter` module:
+A single modification is needed in `src/main.rs`: importing our new `mdconverter` module:
 
-{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/src/main.rs" highlight="rust" emphasize="1-10 16"  >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/src/main.rs" highlight="rust" emphasize="5"  >}}
 
 ### build.rs
 
@@ -334,7 +338,7 @@ The primary purpose of [Desktop Entry files](https://specifications.freedesktop.
 
 It must follow a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) followed by the `.desktop` extension such as `org.kde.simplemdviewer.desktop`:
 
-{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.desktop" highlight="ini" emphasize="4" >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.desktop" highlight="ini" >}}
 
 Note that the icon name should not include its file extension.
 
