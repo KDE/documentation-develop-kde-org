@@ -49,7 +49,7 @@ Avoid implicit references to or assumptions about the user with respect to:
 - Age
 - Gender or sexual orientation
 - Ethnicity or national origin
-- Mode of living
+- Mode of living (for example, say “home” instead of “house” or “apartment”)
 - Life experiences
 - Level of education
 - Religious, political, or philosophical views
