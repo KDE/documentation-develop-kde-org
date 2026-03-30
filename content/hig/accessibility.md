@@ -50,6 +50,7 @@ Avoid implicit references to or assumptions about the user with respect to:
 - Gender or sexual orientation
 - Ethnicity or national origin
 - Mode of living (for example, say “home” instead of “house” or “apartment”)
+- Type of computer (for example, say “system” instead of “computer”, “phone”, or even “device”)
 - Life experiences
 - Level of education
 - Religious, political, or philosophical views
