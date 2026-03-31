@@ -107,11 +107,11 @@ Here, our `clearAction` [QAction](https://doc.qt.io/qt-6/qaction.html) is added 
 
 ###  Keyboard Shortcuts
 
-We can then use one of the utility functions of our action collection, [KActionCollection::setDefaultShortcut()](docs:kxmlgui;KActionCollection::setDefaultShortcut), to attribute a default keyboard shortcut of `Ctrl+W`:
+We can then use one of the utility functions of our action collection, [KActionCollection::setDefaultShortcut()](docs:kxmlgui;KActionCollection::setDefaultShortcut), to attribute a default keyboard shortcut of `Ctrl+L`:
 
 
 ```c++
-actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL + Qt::Key_W);
+actionCollection()->setDefaultShortcut(clearAction, Qt::CTRL + Qt::Key_L);
 ```
 
 The list of available keys can be found in the [Qt namespace Key enum](docs:qtcore;Qt::Key).
