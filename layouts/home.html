@@ -15,6 +15,32 @@
 
   {{ partial "develop_menu.html" . }}
 
+    <section>
+    <div class="container text-center p-4">
+      <br>
+      <div class="tools">
+        <a class="tool" href="/docs/getting-started/building">
+          <div>
+            <h3>{{ i18n "home.development.name" }}</h3>
+            <p>{{ i18n "home.development.subtitle" }}</p>
+          </div>
+          <div>
+            <img class="img-fluid" src="/img/kde-logo-white-blue-rounded-source.svg" alt="{{ i18n "home.kxmlgui.alt" }}" loading="lazy" width="128" height="128">
+          </div>
+        </a>
+        <a class="tool" href="/docs/getting-started/kirigami">
+          <div>
+            <h3>{{ i18n "home.kirigami.name" }}</h3>
+            <p>{{ i18n "home.kirigami.subtitle2" }}</p>
+          </div>
+          <div>
+            <img class="img-fluid" src="/img/kirigami-icon.svg" alt="{{ i18n "home.kirigami.alt" }}" loading="lazy" width="128" height="128">
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section id="platform-hero">
     <div class="container text-center">
       <h2 class="display-3">{{ i18n "home.multiplatform.title" }}</h2>
@@ -76,33 +102,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="container text-center">
-      <h2 class="mt-0">{{ i18n "home.doc.title" }}</h2>
-      <p>{{ i18n "home.doc.description" }}</p>
-      <br>
-      <div class="tools">
-        <a class="tool" href="/docs/getting-started/kxmlgui">
-          <div>
-            <h3>{{ i18n "home.kxmlgui.name" }}</h3>
-            <p>{{ i18n "home.kxmlgui.subtitle" }}</p>
-          </div>
-          <div>
-            <img class="img-fluid" src="/img/kde-logo-white-blue-rounded-source.svg" alt="{{ i18n "home.kxmlgui.alt" }}" loading="lazy" width="128" height="128">
-          </div>
-        </a>
-        <a class="tool" href="/docs/getting-started/kirigami">
-          <div>
-            <h3>{{ i18n "home.kirigami.name" }}</h3>
-            <p>{{ i18n "home.kirigami.subtitle" }}</p>
-          </div>
-          <div>
-            <img class="img-fluid" src="/img/kirigami-icon.svg" alt="{{ i18n "home.kirigami.alt" }}" loading="lazy" width="128" height="128">
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
 
   {{ with .Content }}
     {{ . }}
