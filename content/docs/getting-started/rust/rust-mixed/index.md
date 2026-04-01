@@ -10,7 +10,7 @@ The initial Rust tutorial pages focus on creating an application that uses only 
 
 This is possible by using C++ as the entrypoint for the application and using a custom Rust crate as a library that gets linked to it via cxx-qt CMake integration. This integration is internally provided by [Corrosion](https://github.com/corrosion-rs/corrosion).
 
-As a result, instead of having a simple CMake wrapper on top of Cargo, we will rely on some cxx-qt facilities to generate the library crate.
+As a result, instead of using raw Corrosion, we will rely on some cxx-qt additions on top of Corrosion to generate the library crate.
 
 This tutorial can be skipped if you don't plan on making a project that uses both Rust and C++. It also consists of a slightly modified version of [upstream cxx-qt Building with CMake](https://kdab.github.io/cxx-qt/book/getting-started/5-cmake-integration.html).
 
@@ -86,33 +86,33 @@ The new entrypoint for the application will be a C++ executable, so we need to c
 
 ### CMakeLists.txt
 
-The CMake code will need major modifications to use CxxQt instead of our previous custom Cargo wrapper.
+The CMake code will need major modifications to use CxxQt instead of our previous Corrosion call.
 
 First, since the entrypoint for the application is C++, we need to find the C++ Qt libraries and link them so `main.cpp` compiles:
 
-{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" lines=21 emphasize="13-21" >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" lines=25 emphasize="13-21" >}}
 
-We will no longer need the original Cargo wrapper code, so we can safely remove it:
+We will no longer need the original Corrosion call, so we can safely remove it:
 
-{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" start=52 lines=12 highlight="cmake" >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" start=22 lines=4 highlight="cmake" >}}
 
 We need to add CxxQt to the project. We can use CMake's built-in [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html) functionality to download it from the repository and make it available at configure time:
 
-{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" start=23 lines=11 >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" start=26 lines=11 >}}
 
 And then we import the Rust crate into the project using the manifest path (`Cargo.toml`) and the package name `simplemdviewer_rs`. It **must** link to the same Qt6 libraries specified earlier, otherwise this will result in an ABI incompatibility.
 
-{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" start=35 lines=12 >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" start=38 lines=12 >}}
 
 After having imported the library crate, we can import the QML module exposed in the Rust code. Its first argument will be the name of the new linking target; URI **must** match the URI in `build.rs`; and SOURCE_CRATE **must** match the package name in `Cargo.toml`.
 
-{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" start=47 lines=4 >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" start=50 lines=4 >}}
 
 We now have a CMake library target that points to Rust code called `simplemdviewer_rs_qml_module`. The name can be anything, like `simplemdviewer_rs_plugin` for example.
 
 We can now create the C++ entrypoint executable target, and then link to the newly created QML module target (as well as the necessary Qt6 libraries for C++):
 
-{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" start=64 lines=10 >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-mixed/simplemdviewer/CMakeLists.txt" highlight="cmake" start=68 lines=10 >}}
 
 ## Final test run
 

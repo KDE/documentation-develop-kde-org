@@ -19,6 +19,9 @@ find_package(Qt6 REQUIRED
     Quick
     QuickControls2
 )
+# find_package(Corrosion REQUIRED)
+#
+# corrosion_import_crate(MANIFEST_PATH Cargo.toml)
 
 find_package(CxxQt QUIET)
 if(NOT CxxQt_FOUND)
@@ -48,18 +51,6 @@ cxx_qt_import_qml_module(simplemdviewer_rs_qml_module
     URI "org.kde.simplemdviewer"
     SOURCE_CRATE simplemdviewer_rs
 )
-
-# set(CARGO_INNER_TARGET_DIR debug)
-# if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
-#     set(CARGO_OPTIONS --release)
-#     set(CARGO_INNER_TARGET_DIR release)
-# endif()
-#
-# add_custom_target(simplemdviewer
-#     ALL
-#     COMMAND cargo build --target-dir ${CMAKE_CURRENT_BINARY_DIR} ${CARGO_OPTIONS}
-#     BYPRODUCTS ${CMAKE_BINARY_DIR}/${CARGO_INNER_TARGET_DIR}
-# )
 
 add_executable(simplemdviewer src/main.cpp)
 

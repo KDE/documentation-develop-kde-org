@@ -20,6 +20,17 @@
   "modules": [
     {
       "buildsystem": "cmake",
+      "name": "corrosion",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/corrosion-rs/corrosion.git",
+          "tag": "v0.6.1"
+        }
+      ]
+    },
+    {
+      "buildsystem": "cmake",
       "name": "simplemdviewer",
       "sources": [
         "cargo-sources.json",

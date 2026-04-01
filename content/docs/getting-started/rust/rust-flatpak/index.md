@@ -18,9 +18,19 @@ Create a new flatpak manifest file `org.kde.simplemdviewer.json` in the root dir
 
 {{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.json" highlight="json"  >}}
 
-The most notable additions to the manifest are the rust-stable Sdk (development) extension, and the build option to append Rust binaries like Cargo and rustc, needed for building our application:
+The most notable additions to the manifest are:
 
-{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.json" highlight="json" start=31 lines=6 >}}
+* The use of Corrosion as a manually built dependency:
+
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.json" highlight="json" start=21 lines=11 >}}
+
+* The rust-stable Sdk (development) extension:
+
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.json" highlight="json" start=8 lines=6 >}}
+
+* The build option to append Rust binaries like Cargo and rustc:
+
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.json" highlight="json" start=41 lines=7 >}}
 
 Flatpak performs a local offline build of the project, so the traditional `cargo build` step cannot fetch crates from crates.io while building the project. To accommodate for that, we need to use [flatpak-cargo-generator](https://github.com/flatpak/flatpak-builder-tools/tree/master/cargo).
 
@@ -33,9 +43,9 @@ python3 flatpak-cargo-generator.py Cargo.lock -o cargo-sources.json
 
 You might need to manually install `python3-aiohttp` and `python3-toml` from your distribution to run the script.
 
-This will make the dependencies available in the flatpak manifest as a separate source. We need three sources in total: the cargo dependencies, the actual project in the current directory, and additional shell commands to put the Cargo configuration file in the right place to build inside a flatpak:
+This will make the dependencies available in the flatpak manifest as a separate source. We need three sources for simplemdviewer: the cargo dependencies, the actual project in the current directory, and additional shell commands to put the Cargo configuration file in the right place to build inside a flatpak:
 
-{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.json" highlight="json" start=15 lines=14 >}}
+{{< readfile file="/content/docs/getting-started/rust/rust-app/simplemdviewer_final/org.kde.simplemdviewer.json" highlight="json" start=32 lines=18 emphasize="5 7-8 11-15" >}}
 
 ### Building and running
 
