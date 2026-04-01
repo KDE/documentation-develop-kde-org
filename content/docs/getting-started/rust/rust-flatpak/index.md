@@ -41,7 +41,7 @@ wget https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/refs/heads/
 python3 flatpak-cargo-generator.py Cargo.lock -o cargo-sources.json
 ```
 
-You might need to manually install `python3-aiohttp` and `python3-toml` from your distribution to run the script.
+You might need to manually install `python3-aiohttp`, `python3-pyyaml` and `python3-tomlkit` from your distribution to run the script.
 
 This will make the dependencies available in the flatpak manifest as a separate source. We need three sources for simplemdviewer: the cargo dependencies, the actual project in the current directory, and additional shell commands to put the Cargo configuration file in the right place to build inside a flatpak:
 
