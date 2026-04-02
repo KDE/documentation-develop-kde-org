@@ -2,10 +2,10 @@
 title: Icons
 description: >
   Deliver your application with icons.
-group: features
 weight: 2
 aliases:
   - /docs/plasma-integration/icons/
+  - /docs/features/icons/
 ---
 
 When you create your own KDE application you will probably want to have icons in it respecting your user's icon theme. 

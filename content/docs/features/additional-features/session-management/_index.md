@@ -3,9 +3,9 @@ title: Session management
 description: >
   Make your application aware of X sessions
 weight: 4
-group: "features"
 aliases:
   - /docs/session-managment/
+  - /docs/features/session-managment/
 ---
 
 ## About KDE and X11 session management

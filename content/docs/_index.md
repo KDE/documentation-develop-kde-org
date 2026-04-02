@@ -12,7 +12,7 @@ aliases:
 groups:
   - name: "Getting Started"
     key: getting-started
-  - name: "Features"
+  - name: "Libraries and features"
     key: features
   - name: "Plasma Extensions"
     key: "plasma"

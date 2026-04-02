@@ -1,6 +1,6 @@
 ---
 title: "KNotification"
-weight: 1
+weight: 3
 description: >
   Create platform-independent notifications
 group: "features"

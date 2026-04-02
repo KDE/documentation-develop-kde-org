@@ -1,10 +1,11 @@
 ---
 title: Create your own mouse cursor theme
 linkTitle: Mouse cursor
-group: features
-weight: 4
+weight: 3
 description: >
     Learn how to create custom mouse cursors.
+aliases:
+  - /docs/features/cursor/
 ---
 
 ## Requirements {#requirements}

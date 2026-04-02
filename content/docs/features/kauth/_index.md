@@ -1,7 +1,7 @@
 ---
 title: "KAuth"
 description: KAuth, privilege elevation for your program
-weight: 5
+weight: 6
 group: "features"
 authors:
   - SPDX-FileCopyrightText: 2008 Nicola Gigante <nicola.gigante@gmail.com>

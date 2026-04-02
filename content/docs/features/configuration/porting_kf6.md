@@ -1,7 +1,6 @@
 ---
-title: "KDE Frameworks 6 porting guide"
+title: "KDE Frameworks 6 porting guide for KCMs"
 weight: 3
-group: "features"
 description: "Porting guide for KDE Config Modules to Qt6/KF6"
 authors:
   - SPDX-FileCopyrightText: Alexander Lohnau <alexander.lohnau@gmx.de>

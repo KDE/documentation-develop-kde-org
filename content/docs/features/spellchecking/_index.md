@@ -1,6 +1,7 @@
 ---
 title: Sonnet
 description: Spellchecking made easy
+weight: 9
 group: "features"
 authors:
   - SPDX-FileCopyrightText: 2006 Jacob R Rideout <kde@jacobrideout.net>

@@ -1,7 +1,6 @@
 ---
 title: Desktop file
-weight: 5
-group: features
+weight: 1
 description: >
   Let your application show up in the Launcher and in application menus.
 aliases:

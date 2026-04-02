@@ -1,7 +1,7 @@
 ---
 title: KIdleTime
 description: Detect and handle system idling
-weight: 6
+weight: 10
 group: "features"
 SPDX-License-Identifier: CC-BY-SA-4.0
 SPDX-FileCopyrightText: 2014 Andreas Cord-Landwehr <cordlandwehr@kde.org>

@@ -1,7 +1,7 @@
 ---
 title: Solid
 linkTitle: Solid
-weight: 10
+weight: 4
 group: "features"
 description: >
     Hardware abstraction

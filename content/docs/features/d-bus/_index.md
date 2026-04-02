@@ -1,7 +1,7 @@
 ---
 title: D-Bus
 linkTitle: D-Bus
-weight: 4
+weight: 2
 group: "features"
 description: >
     Inter-Process communication using D-Bus

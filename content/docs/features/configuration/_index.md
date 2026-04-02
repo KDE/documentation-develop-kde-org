@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-weight: 3
+weight: 1
 group: "features"
 description: >
   Add configuration options in your application and Plasma with KConfig and KConfigXT.

@@ -1,4 +1,4 @@
 ---
-title: Features
+title: Libraries and features
 weight: 2
 ---

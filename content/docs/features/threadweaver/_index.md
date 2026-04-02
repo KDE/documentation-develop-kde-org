@@ -1,7 +1,7 @@
 ---
-title: Concurrent programming
+title: ThreadWeaver
 description: Concurrent programming using the ThreadWeaver framework
-weight: 10
+weight: 7
 group: "features"
 authors: 
   - SPDX-FileCopyrightText: 2014 Mirko Boehm <mirko@endocode.com>
