@@ -3,6 +3,7 @@ title: "Porting Plasmoids to KF6"
 weight: 2
 description: >
   Porting guide for Plasmoids to KF6/Plasma6
+group: "plasma"
 aliases:
   - /docs/plasma/porting_kf6/
 authors:
