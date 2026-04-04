@@ -36,7 +36,7 @@ If this fails with an error similar to "Permission denied", you may need to disa
 After the image is done downloading, you should be in a new shell which is running inside of the container. Now it's time to initialize Craft:
 
 ```
-python3 -c "$(curl https://raw.githubusercontent.com/KDE/craft/master/setup/CraftBootstrap.py)" --prefix ~/CraftRoot
+python3 -c "$(curl https://invent.kde.org/packaging/craft/-/raw/master/setup/CraftBootstrap.py)" --prefix ~/CraftRoot
 ```
 
 It will ask several questions such as which Qt version to use, and the target architecture. Once that's complete, enter the Craft environment:
