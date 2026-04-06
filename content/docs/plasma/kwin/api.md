@@ -95,7 +95,7 @@ Methods and properties added to the global JavaScript object.
 
 ### Read-write Properties
 
-* `KWin::VirtualDesktop *` `currentDesktop`
+* `KWin::VirtualDesktop *` `currentDesktop`: The current virtual desktop on the active screen.
 * `KWin::Window *` `activeWindow`
 * `QString` `currentActivity`
 
@@ -113,7 +113,7 @@ Methods and properties added to the global JavaScript object.
 * `activityRemoved(const QString &id)`: This signal is emitted when the activity is removed id id of the removed activity
 * `virtualScreenSizeChanged()`: Emitted whenever the virtualScreenSize changes. virtualScreenSize() 5.0
 * `virtualScreenGeometryChanged()`: Emitted whenever the virtualScreenGeometry changes. virtualScreenGeometry() 5.0
-* `currentDesktopChanged(KWin::VirtualDesktop *previous)`: This signal is emitted when the current virtual desktop changes.
+* `currentDesktopChanged(KWin::VirtualDesktop *previous, KWin::VirtualDesktop *current, KWin::Output *output)`: This signal is emitted when the current virtual desktop changes.
 * `cursorPosChanged()`: This signal is emitted when the cursor position changes. cursorPos()
 
 ### Functions
@@ -187,6 +187,8 @@ Methods and properties added to the global JavaScript object.
 * `showOutline(const QRect &geometry)`: Shows an outline at the specified geometry. If an outline is already shown the outline is moved to the new position. Use hideOutline to remove the outline again.
 * `showOutline(int x, int y, int width, int height)`: Overloaded method for convenience.
 * `hideOutline()`: Hides the outline previously shown by showOutline.
+* `KWin::VirtualDesktop *` `currentDesktopForScreen(KWin::Output *output) const`: Returns the current desktop on the given screen.
+* `setCurrentDesktopForScreen(KWin::VirtualDesktop *desktop, KWin::Output *output)`: Sets the current desktop on the given screen.
 * `KWin::Output *` `screenAt(const QPointF &pos) const`
 * `KWin::TileManager *` `tilingForScreen(const QString &screenName) const`
 * `KWin::TileManager *` `tilingForScreen(KWin::Output *output) const`
@@ -601,15 +603,15 @@ Methods and properties added to the global JavaScript object.
 
 ### Read-write Properties
 
-* `KWin::VirtualDesktop *` `currentDesktop`
+* `KWin::VirtualDesktop *` `currentDesktop`: The current virtual desktop on the active screen.
 * `KWin::EffectWindow *` `activeWindow`
 
 ### Signals
 
 * `screenAdded(KWin::Output *screen)`: This signal is emitted whenever a new screen is added to the system.
 * `screenRemoved(KWin::Output *screen)`: This signal is emitted whenever a screen is removed from the system.
-* `desktopChanged(KWin::VirtualDesktop *oldDesktop, KWin::VirtualDesktop *newDesktop, KWin::EffectWindow *with)`: Signal emitted when the current desktop changed. oldDesktop The previously current desktop newDesktop The new current desktop with The window which is taken over to the new desktop, can be NULL 4.9
-* `desktopChanging(KWin::VirtualDesktop *currentDesktop, QPointF offset, KWin::EffectWindow *with)`: Signal emmitted while desktop is changing for animation. currentDesktop The current desktop untiotherwise. offset The current desktop offset. offset.x() = .6 means 60% of the way to the desktop to the right. Positive Values means Up and Right.
+* `desktopChanged(KWin::VirtualDesktop *oldDesktop, KWin::VirtualDesktop *newDesktop, KWin::EffectWindow *with, KWin::Output *output)`: Signal emitted when the current desktop changed. oldDesktop is the previously current desktop. newDesktop is the new current desktop. with is the window which is taken over to the new desktop, can be NULL (since 4.9). output is the screen where the change happened (since 6.7).
+* `desktopChanging(KWin::VirtualDesktop *currentDesktop, QPointF offset, KWin::EffectWindow *with, KWin::Output *output)`: Signal emmitted while desktop is changing for animation. currentDesktop is the current desktop. offset is the current desktop offset. offset.x() = .6 means 60% of the way to the desktop to the right. Positive Values means Up and Right. output is the screen where the change is happening (since 6.7).
 * `desktopChangingCancelled()`
 * `desktopAdded(KWin::VirtualDesktop *desktop)`
 * `desktopRemoved(KWin::VirtualDesktop *desktop)`
