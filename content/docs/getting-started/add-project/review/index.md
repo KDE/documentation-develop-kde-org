@@ -40,9 +40,11 @@ If you have any translations, notify the [kde-i18n-doc mailing list](https://mai
 
 To initiate KDE Review:
 
-- File an issue in your [KDE Invent](https://invent.kde.org) project and Label it "KDE Review Request" and paste the requirements list above into it without checking anything on it
-- Make a merge request to [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata) to set the `lifecycle` key to `lifecycle: in-review` (alternatively, file a [Sysadmin ticket asking for the move to be done for you](https://go.kde.org/systickets))
-- E-mail [kde-core-devel](https://mail.kde.org/mailman/listinfo/kde-core-devel) and other relevant mailing lists with details of your project and what the expected destination is for the repo
-- Make fixes to issues people bring up or provide explanations why they are not (yet) fixed
-- Wait at least two weeks in KDE Review
-- After two months in KDE Review the repo should be moved back to playground or moved to unmaintained
+- File a [sysadmin ticket](https://go.kde.org/systickets) asking for your repo to be moved from your Gitlab username to a shared namespace (eg: games, network, pim, etc.) and for a metadata file to be added to [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata). Indicate you are doing this to begin KDE Review.
+- Once the above is done, check that the metadata file in [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata) exists and contains a `lifecycle: in-review` entry. Open a MR to change it yourself if not.
+- File an issue in your [KDE Invent](https://invent.kde.org) project and Label it "KDE Review Request" and paste the requirements list above into it without checking anything on it.
+- E-mail [kde-core-devel](https://mail.kde.org/mailman/listinfo/kde-core-devel) asking for review and link the issue created before.
+- Make fixes to issues people bring up or provide explanations why they are not (yet) fixed.
+- Wait at least two weeks in KDE Review.
+- Once all checklist items have been ticked, file another [repo-metadata](https://invent.kde.org/sysadmin/repo-metadata) MR to set the `lifecycle` to `reviewed`. Congrats! You can now consider starting the [release process](https://develop.kde.org/docs/getting-started/add-project/release/) for your approved app.
+- If after two months in KDE Review not all issues have been addressed, the repo should be moved back to playground or moved to unmaintained.
