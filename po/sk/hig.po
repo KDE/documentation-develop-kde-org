@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: hig\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 08:54+0000\n"
-"PO-Revision-Date: 2024-11-12 17:02+0100\n"
+"PO-Revision-Date: 2026-04-10 12:00+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: content/hig/_index.md:0
 msgid "KDE Human Interface Guidelines"
-msgstr ""
+msgstr "Smernice KDE pre ľudské rozhranie"
 
 #: content/hig/_index.md:0
 msgid "Design"
@@ -31,6 +31,11 @@ msgid ""
 "will learn how to use your app quickly, accomplish their goals with ease, "
 "and encounter fewer issues requiring support."
 msgstr ""
+"Vitajte v Smerniciach KDE pre ľudské rozhranie! Ich dodržiavanie vám pomôže "
+"vytvoriť krásnu a výkonnú aplikáciu, ktorá pôsobí prirodzene pri bežaní v "
+"[KDE Plasma](https://kde.org/plasma-desktop) a funguje dobre aj mimo nej. "
+"Používatelia sa naučia používať vašu aplikáciu rýchlo, dosiahnuť svoje ciele "
+"s ľahkosťou a stretnete sa s menej problémami vyžadujúcimi podporu."
 
 #: content/hig/_index.md:25
 msgid ""
@@ -38,10 +43,13 @@ msgid ""
 "and patterns, standard user interface conventions, and recommendations for "
 "platform integration."
 msgstr ""
+"Tento dokument pokrýva dizajnovú filzofiu a kultúru KDE, bežné pracovné "
+"postupy a vzory, štandardné konvencie používateľského rozhrania a "
+"odporúčania pre integráciu s platformou."
 
 #: content/hig/_index.md:28
 msgid "Why is good design so important?"
-msgstr ""
+msgstr "Prečo je dobrý dizajn taký dôležitý?"
 
 #: content/hig/_index.md:29
 msgid ""
@@ -51,6 +59,10 @@ msgid ""
 "to, they'll be resentful and spread negativity about it. Avoid this through "
 "good design!"
 msgstr ""
+"Dizajn určuje, ako dobre niečo spĺňa svoj funkčný účel a aké príjemné je s "
+"tým pracovať. Ak čomuľvek z toho chýba, výsledok bude frustrujúci. Ľudia "
+"nebudú chcieť používať zle navrhnutú aplikáciu a ak budú nútení, budú "
+"nespokojní a budú šíriť negatívne ohlasy. Vyhnite sa tomu dobrým dizajnom!"
 
 #: content/hig/_index.md:31
 msgid ""
@@ -60,10 +72,15 @@ msgid ""
 "It's better to succeed by focusing on what you can do well than to spread "
 "yourself thin and fail. Under-promise and over-deliver, never the reverse."
 msgstr ""
+"Dizajn zahŕňa cielené rozhodnutia a kompromisy, ktoré priblížia projekt k "
+"jeho zamýšľaným cieľom a paradigmám použitia. Najlepšie aplikácie vedia, na "
+"ktorých používateľov a prípady použitia cielia a ktoré nechávajú iným. Je "
+"lepšie uspieť sústredením sa na to, čo dokážete robiť dobre, než sa rozšíriť "
+"a zlyhatt. Sľubujte menej a dodávajte viac, nikdy naopak."
 
 #: content/hig/_index.md:34
 msgid "Topics not covered"
-msgstr ""
+msgstr "Témy, ktoré nie sú pokryté"
 
 #: content/hig/_index.md:35
 msgid ""
@@ -75,6 +92,13 @@ msgid ""
 "invent.kde.org/explore/groups?sort=name_asc). It's more of a *what* and a "
 "*why*, not a *how*."
 msgstr ""
+"Tento dokument je súbor dizajnových smerníc, nie návod na implementáciu "
+"každého konkrétneho komponentu. Hoci bude poskytnuté určité technické "
+"usmernenie, omnoho viac detailov nájdete vo vlastnej dokumentácii "
+"komponentov o [použití](https://develop.kde.org/docs/) a [API](https://api."
+"kde.org/), ako aj v [zdrojovom kóde existujúcich aplikácií KDE](https://"
+"invent.kde.org/explore/groups?sort=name_asc). Je to skôr o tom *čo* a "
+"*prečo*, nie *ako*."
 
 #: content/hig/_index.md:37
 msgid ""
@@ -83,6 +107,9 @@ msgid ""
 "guidelines, and when it can be appropriate to break them if it produces a "
 "superior result."
 msgstr ""
+"Tento dokument nemá byť nezmeniteľným zákonníkom. Učením sa a dodržiavaním "
+"pravidiel pochópíte, ako bezpečne inovať v rámci smerníc a kedy môže byť "
+"vhodné ich porušiť, ak to vedie k lepšiemu výsledku."
 
 #: content/hig/_index.md:40
 msgid "Contributing"
@@ -93,6 +120,8 @@ msgid ""
 "This is a living document, intended to be updated over time to reflect "
 "current KDE design trends and best practices. Contributions are welcome!"
 msgstr ""
+"Toto je živý dokument, určený na priebežnú aktualizáciu, aby odrážal "
+"aktuálne dizajnové trendy a osvedčené postupy KDE. Príspevky sú vítané!"
 
 #: content/hig/_index.md:43
 msgid ""
@@ -104,14 +133,21 @@ msgid ""
 "org. To learn how to submit changes, see the [README file](https://invent."
 "kde.org/documentation/develop-kde-org/-/blob/master/README.md)."
 msgstr ""
+"Obsah je napísaný v [Markdown](https://commonmark.org/help/) a zdrojové "
+"súbory sú hostované v [Git repozitári](https://invent.kde.org/documentation/"
+"develop-kde-org.git). Pre rýchlu úpravu stránky je možné otvoriť editor "
+"GitLab na ľubovoľnej stránke pomocou tlačidla „Upraviť túto stránku“ v "
+"zásuvke vpravo. Úlohy a zmeny sú organizované cez https://invent.kde.org. Ak "
+"sa chcete naučiť, ako odoslať zmeny, pozrite si [súbor README](https://"
+"invent.kde.org/documentation/develop-kde-org/-/blob/master/README.md)."
 
 #: content/hig/_index.md:46
 msgid "Read the guidelines"
-msgstr ""
+msgstr "Prečítajte si smernice"
 
 #: content/hig/_index.md:47
 msgid "Click on any of these tiles to jump to a page:"
-msgstr ""
+msgstr "Kliknutím na ľubovoľnú z týchto dlaždíc prejdete na stránku:"
 
 #~ msgid "Note"
 #~ msgstr "Poznámka"
