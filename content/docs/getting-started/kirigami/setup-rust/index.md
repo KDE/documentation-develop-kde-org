@@ -14,7 +14,7 @@ Before getting started, we will need to install Kirigami and Rust on our machine
 
 {{< installpackage
   arch="cargo cmake extra-cmake-modules kirigami breeze qqc2-desktop-style"
-  opensuse="cargo cmake kf6-extra-cmake-modules kf6-kirigami-devel qt6-quickcontrols2-devel kf6-qqc2-desktop-style"
+  opensuse="cargo cmake kf6-extra-cmake-modules kf6-kirigami-devel qt6-quickcontrols2-devel kf6-qqc2-desktop-style-devel"
   fedora="cargo cmake extra-cmake-modules kf6-kirigami2-devel kf6-qqc2-desktop-style" >}}
 
 Further information for other distributions can be found in [Installing build dependencies](/docs/getting-started/building/help-dependencies).
