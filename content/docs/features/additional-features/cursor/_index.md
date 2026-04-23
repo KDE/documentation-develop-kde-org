@@ -186,6 +186,18 @@ each of them in a separate line.
 
 ---
 
+####  Multiple resolutions
+
+If you want to provide multiple resolutions in your cursor, you can specify each size on a separate line, with 1 PNG per size.
+
+For instance:
+```cursor
+32 10 5 default-32.png
+64 20 10 default-64.png
+```
+
+---
+
 
 ## Step 04 - Using xcursorgen {#using-xcursorgen}
 ---
