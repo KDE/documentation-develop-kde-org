@@ -13,7 +13,7 @@ description: >
 
 <!-- TODO: What to do with PlasmaQuick::AppletQuickItem? See https://invent.kde.org/plasma/libplasma/-/blob/master/src/plasmaquick/appletquickitem.h#L39 -->
 
-As discussed in [the `main.qml` setup widget section]({{< ref "setup.md#contentsuimainqml" >}}), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` [property group](https://doc.qt.io/qt-6/qtqml-syntax-objectattributes.html#grouped-properties) has properties from [`AppletInterface`](https://api-staging.kde.org/qml-org-kde-plasma-plasmoid-plasmoiditem.html) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/plasma/libplasma/-/blob/master/src/plasmaquick/appletquickitem.h).
+As discussed in [the `main.qml` setup widget section](#), when you `import org.kde.plasma.plasmoid 2.0`, the main `Item` in your widget will have the `Plasmoid` (with a capital) property group similar to when you `import QtQuick.Layouts 1.0`. This `Plasmoid` [property group](https://doc.qt.io/qt-6/qtqml-syntax-objectattributes.html#grouped-properties) has properties from [`AppletInterface`](https://api-staging.kde.org/qml-org-kde-plasma-plasmoid-plasmoiditem.html) which inherits a few properties from [`PlasmaQuick::AppletQuickItem`](https://invent.kde.org/plasma/libplasma/-/blob/master/src/plasmaquick/appletquickitem.h).
 
 
 ### plasmoid context property
@@ -176,7 +176,7 @@ The dialog's source code can be found in [`CompactApplet.qml`](https://invent.kd
 {{< sections >}}
 {{< section-left >}}
 
-As mentioned in [the setup widget `metadata.json` section]({{< ref "setup.md#metadatajson" >}}), by default the plasmoid icon is populated with the `Icon` value in `metadata.json`.
+As mentioned in [the setup widget `metadata.json` section](#), by default the plasmoid icon is populated with the `Icon` value in `metadata.json`.
 
 To set a dynamic or user configurable icon, you will need to assign an icon name to `Plasmoid.icon`.
 
@@ -336,7 +336,7 @@ Item {
 
 ## metadata.json
 
-The common `metadata.json` properties are covered in the [setup widget section]({{< ref "setup.md#metadatajson" >}}).
+The common `metadata.json` properties are covered in the [setup widget section](#).
 
 `metadata.desktop` is the older format while `metadata.json` is the newer replacement format. The `.desktop` file is simpler to script using `kreadconfig5` which is the reason why this tutorial prefers it in certain places like translations.
 
