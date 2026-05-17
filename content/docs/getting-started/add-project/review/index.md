@@ -13,6 +13,7 @@ For any project to become an official part of KDE.
 There are plenty of benefits to becoming a part of KDE, many of which are listed under [Benefits of a KDE Project](https://manifesto.kde.org/benefits/) and [Adding a new KDE project]({{< ref "add-project" >}}).
 
 ### Requirements
+
 ```
 **KDE Review checklist**
 - [ ] If from outside KDE, has completed the [Incubation](https://develop.kde.org/docs/getting-started/add-project/incubation/) process
@@ -29,6 +30,20 @@ There are plenty of benefits to becoming a part of KDE, many of which are listed
 - [ ] Passing [KDE neon](https://build.neon.kde.org) build
 - [ ] App packages in [Flatpak](https://develop.kde.org/docs/packaging/flatpak/), [Snap](https://community.kde.org/Guidelines_and_HOWTOs/Snap), [AppImages and Windows](https://community.kde.org/Craft) etc. as appropriate
 ```
+
+{{< alert color="warning" title="🚨 For projects skipping Incubation" >}}
+
+Your project is expected to already be using KDE infrastructure by the time you request a KDE Review, so you should already be following a few other requirements from [Incubation]({{< ref "incubation" >}}):
+
+```
+- [ ] Has a [Developer account](https://community.kde.org/Infrastructure/Get_a_Developer_Account)
+- [ ] Code has license set following the [KDE Licensing Policy](https://community.kde.org/Policies/Licensing_Policy)
+- [ ] [Passing CI job for reuse linting](https://community.kde.org/Infrastructure/Continuous_Integration_System) as well as JSON, XML and YAML where applicable
+- [ ] Compliance with the [KDE Manifesto](https://manifesto.kde.org)
+- [ ] Agree to a continuity plan with KDE e.V. for domains and trademarks if the authors disappear
+```
+
+{{< /alert >}}
 
 ### Process
 
