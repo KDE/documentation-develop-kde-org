@@ -1,10 +1,8 @@
 ---
-title: "Configuration"
-weight: 6
+title: "Configuration for Plasmoids"
+weight: 4
 description: >
-  Adding user configured settings to your widget
-aliases:
-  - /docs/plasma/widget/configuration/
+  Creating a Plasmoid
 ---
 
 ## Configuration Intro
@@ -12,12 +10,14 @@ aliases:
 {{< sections >}}
 {{< section-left >}}
 
-Every widget by default has a configure action when you right click the widget called `MyWidget Settings...`. By default it will contain a form to set a global shortcut to activate your widget.
+Every widget comes with a settings page when you right click the widget, even when you don't make one. By default it includes a Keyboard Shortcuts tab to set a global shortcut to activate your widget and an About page containing the data specified in the `metadata.json` file.
+
+When any setting in a plasmoid stored on the Plasma desktop is modified and saved, the change will be saved to `~/.config/plasma-org.kde.plasma.desktop-appletsrc`. If the plasmoid is being viewed with `plasmoidviewer`, it will instead be stored in `~/.config/plasmoidviewer-appletsrc`.
 
 {{< /section-left >}}
 {{< section-right >}}
 
-![](configwindow.png)
+![](configwindow.webp)
 
 {{< /section-right >}}
 {{< /sections >}}
@@ -28,22 +28,22 @@ Every widget by default has a configure action when you right click the widget c
 {{< sections >}}
 {{< section-left >}}
 
-`main.xml` is where you define the properties that will be serialized into `~/.config/plasma-org.kde.plasma.desktop-appletsrc`. All properties will be accessible with `plasmoid.configuration.variableName` regardless of what group it's in.
+`main.xml` is where you define the default properties of the Plasmoid. All properties will be accessible with `plasmoid.configuration.variableName` in QML code regardless of what group it's in.
 
-[KConfig](docs:kconfig;kconfig-index.html) has a variety of data types:
+[KConfig](docs:kconfigcore;KConfig) has a variety of data types:
 
 * `Int` for an Integer number
 * `Double` for a double precision floating point number (Real)
 * `String` for a string of characters to represent text
 * `Color` for a hexadecimal color. The color defaults to `#000000` (black) if the default is left empty.
-* `Path` is a string that is specially treated as a file-path. In particular paths in the home directory are prefixed with `$HOME` when being stored in the configuration file.
+* `Path` is a string that is specially treated as a filepath. In particular paths in the home directory are prefixed with `$HOME` when being stored in the configuration file.
 * `StringList` for a comma separated list of Strings
 
-I've listed the more common use cases. More can be found in [KConfigXT's documentation]({{< ref "/docs/features/configuration/kconfig_xt" >}}).
+More types can be found in [KConfigXT's documentation]({{< ref "/docs/features/configuration/kconfig_xt" >}}).
 
 ---
 
-I personally don't recommend using `Color` if you want to default to a color from the color scheme (eg: `PlasmaCore.ColorScope.textColor`). I would instead suggest using a `String` that is empty by default. You can then use the following in the QML:
+Don't use `Color` if you want to default to a color from the color scheme (like [Kirigami.Theme.textColor](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#textColor-attached-prop)). Use a `String` that is empty by default instead. You can then use the following in QML:
 
 ```xml
 <entry name="labelColor" type="String">
@@ -53,7 +53,7 @@ I personally don't recommend using `Color` if you want to default to a color fro
 
 ```qml
 PlasmaComponents.Label {
-    color: plasmoid.configuration.labelColor || PlasmaCore.ColorScope.textColor
+    color: plasmoid.configuration.labelColor || Kirigami.Theme.textColor
 }
 ```
 
@@ -101,16 +101,19 @@ PlasmaComponents.Label {
 
 {{< sections >}}
 {{< section-left >}}
-`config.qml` is where we define the tabs in the configuration window.
+`config.qml` (lowercase) is where you define the tabs in the configuration window.
 
-We import the `ConfigModel` and `ConfigCategory`, and define the tab name, icon, and qml file that will be loaded.
+Import the [ConfigModel](https://api.kde.org/qml-org-kde-plasma-configuration-configmodel.html) and [ConfigCategory](https://api.kde.org/qml-org-kde-plasma-configuration-configcategory.html), and define the tab name, icon, and QML file from `contents/ui/` that will be loaded.
+
+Each `ConfigCategory` will correspond to a tab in the configuration window.
+
 {{< /section-left >}}
 {{< section-right >}}
 <div class="filepath">contents/config/config.qml</div>
 
 ```qml
-import QtQuick 2.0
-import org.kde.plasma.configuration 2.0
+import QtQuick
+import org.kde.plasma.configuration
 
 ConfigModel {
     ConfigCategory {
@@ -129,26 +132,32 @@ ConfigModel {
 {{< /sections >}}
 
 
-## contents/ui/configGeneral.qml
+## contents/ui/ConfigGeneral.qml
 
 {{< sections >}}
 {{< section-left >}}
-`configGeneral.qml` is where we can place all the checkboxes and textboxes.
+`ConfigGeneral.qml` is where we can place all the checkboxes and textboxes. The name `ConfigGeneral` is simply a convention; the file *must* be specified as a `ConfigCategory` in `contents/config/config.qml`.
 
-Please note that your should not use `PlasmaComponents.*` controls in the config window, as those are styled and colored for the panel. The normal `QtQuick.Controls` are styled using your application window style + colors.
+The root item for a configuration page must be one of the KCM components from the [org.kde.kcmutils import](https://api.kde.org/org-kde-kcmutils-qmlmodule.html).
 
-`Kirigami.FormLayout` is used to layout the controls in the center of the page. The `Kirigami.FormData.label` attached property is used to place labels in front of the controls. Kirigami labels are optional, so you do not need to use them for CheckBoxes which have their own labels on the right.
+Do not use [PlasmaComponents](https://api.kde.org/org-kde-plasma-components-qmlmodule.html) or [PlasmaExtras](https://api.kde.org/org-kde-plasma-extras-qmlmodule.html) controls in the config window. Use standard [QtQuick](https://doc.qt.io/qt-6/qtquickcontrols-index.html) and [Kirigami](https://api.kde.org/kirigami-index.html) controls instead.
+
+[Kirigami.FormLayout](https://api.kde.org/qml-org-kde-kirigami-layouts-formlayout.html) is used to layout the controls in the center of the page. The [Kirigami.FormData.label](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-prop) attached property is used to place labels in front of the controls. Kirigami labels are optional, so you do not need to use them for CheckBoxes which have their own labels on the right.
+
+You can learn more about this UI design in [Getting started with Kirigami: Form layouts]({{< ref "components-formlayouts" >}}).
 
 ![](configgeneral.png)
+
+TODO update image
 
 {{< /section-left >}}
 {{< section-right >}}
 <div class="filepath">contents/ui/configGeneral.qml</div>
 
 ```qml
-import QtQuick 2.0
-import QtQuick.Controls 2.5 as QQC2
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
     id: page
@@ -179,35 +188,55 @@ Kirigami.FormLayout {
 
 ## configPage.cfg_variableName
 
-{{< sections >}}
-{{< section-left >}}
+By default, all values present in `main.xml` are available under `Plasmoid.configuration`.
 
-By default, all values are copied to the top level `Item` of the file prefixed with `cfg_` like `page.cfg_variableName`. This is so the user can hit discard or apply the changes. You will need to define each `cfg_` property so you can bind the value with a QML control.
+If they are copied to the top level [SimpleKCM](https://api.kde.org/qml-org-kde-kcmutils-simplekcm.html) (or another KCMUtils component) and prefixed with `cfg_` (like `root.cfg_variableName`), the configuration page's `Apply` button will be connected automatically, allowing the user to discard or apply changes.
 
-Note that you can use a property [alias](http://doc.qt.io/qt-5/qtqml-syntax-objectattributes.html#property-aliases) to a control's property like `checkBox.checked` or `textField.text`.
-
-{{< /section-left >}}
-{{< section-right >}}
-<div class="filepath">contents/ui/configGeneral.qml</div>
+You will need to define each `cfg_` property so you can bind the value with a QML control. For example, if you have a config entry called `showIcon` in your `main.xml`, you may get its value from a `Plasmoid.configuration.showIcon` property, store it in a `property bool cfg_showIcon`, and change the `onChecked` signal handler of a checkbox to update the configuration setting:
 
 ```qml
-import QtQuick 2.0
-import QtQuick.Controls 2.5 as QQC2
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
 
-Kirigami.FormLayout {
-    id: page
-    property alias cfg_variableName: variableName.checked
-
-    QQC2.CheckBox {
-        id: variableName
-        Kirigami.FormData.label: i18n("Icon:")
-        text: i18n("Show")
+KCM.SimpleKCM {
+    id: root
+    property bool cfg_showIcon: Plasmoid.configuration.showIcon
+    
+    Kirigami.FormLayout {
+        Controls.CheckBox {
+            id: showIcon
+            text: i18n("Show icon")
+            checked: root.cfg_showIcon
+            onChecked: root.cfg_showIcon = checked
+        }
     }
 }
 ```
-{{< /section-right >}}
-{{< /sections >}}
+
+This provides some indirection that gives you more freedom to manipulate the configuration variables.
+
+For simpler cases you may instead use a [property alias](http://doc.qt.io/qt-6/qtqml-syntax-objectattributes.html#property-aliases) to bind directly without needing to override a signal handler:
+
+```qml
+import QtQuick
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
+
+KCM.SimpleKCM {
+    id: root
+    property alias cfg_showIcon: showIcon.checked
+    
+    Kirigami.FormLayout {
+        Controls.CheckBox {
+            id: showIcon
+            text: i18n("Show icon")
+        }
+    }
+}
+```
 
 
 ## CheckBox - Boolean
@@ -215,7 +244,7 @@ Kirigami.FormLayout {
 {{< sections >}}
 {{< section-left >}}
 
-A [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html) is used for boolean on/off values.
+A [CheckBox](https://doc.qt.io/qt-6/qml-qtquick-controls2-checkbox.html) is used for boolean on/off values.
 
 <div class="filepath">contents/config/main.xml</div>
 
@@ -230,9 +259,9 @@ A [CheckBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-checkbox.html) is used
 <div class="filepath">contents/ui/configGeneral.qml</div>
 
 ```qml
-import QtQuick 2.0
-import QtQuick.Controls 2.5 as QQC2
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
     id: page
@@ -253,9 +282,9 @@ Kirigami.FormLayout {
 {{< sections >}}
 {{< section-left >}}
 
-A [SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls2-spinbox.html) is used for numbers.
+A [SpinBox](https://doc.qt.io/qt-6/qml-qtquick-controls2-spinbox.html) is used for numbers.
 
-If you want decimal places, a [`QtQuick.Controls 1.0` SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls-spinbox.html) is a little easier to use than the `QtQuick.Controls 2.0` version. `QtQuickControls1` has a `SpinBox.decimals` to easily switch from an Integer `decimals: 0` to `decimals: 3` to represent a Real number (the `Double` data type).
+If you'd like to use floats/doubles instead, you may use [DoubleSpinBox](https://doc.qt.io/qt-6/qml-qtquick-controls-doublespinbox.html) instead.
 
 <div class="filepath">contents/config/main.xml</div>
 
@@ -270,9 +299,9 @@ If you want decimal places, a [`QtQuick.Controls 1.0` SpinBox](https://doc.qt.io
 <div class="filepath">contents/ui/configGeneral.qml</div>
 
 ```qml
-import QtQuick 2.0
-import QtQuick.Controls 2.5 as QQC2
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
     id: page
@@ -286,55 +315,12 @@ Kirigami.FormLayout {
 {{< /section-right >}}
 {{< /sections >}}
 
-
-
-## SpinBox - Double/Real
-
-{{< sections >}}
-{{< section-left >}}
-
-If you want decimal places, a [`QtQuick.Controls 1.0` SpinBox](https://doc.qt.io/qt-5/qml-qtquick-controls-spinbox.html) is a little easier to use than the `QtQuick.Controls 2.0` version. `QtControls1` has a `SpinBox.decimals` property to easily switch from an Integer `decimals: 0` to `decimals: 3` to represent a Real number (the `Double` config data type).
-
-<div class="filepath">contents/config/main.xml</div>
-
-```xml
-<entry name="variableName" type="Double">
-    <default>3.1459</default>
-</entry>
-```
-
-If you really want to use `QtQuick.Controls 2.0`, look at Zren's [libconfig/SpinBox.qml](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/SpinBox.qml) for an example on implementing the `decimals` property.
-
-{{< /section-left >}}
-{{< section-right >}}
-<div class="filepath">contents/ui/configGeneral.qml</div>
-
-```qml
-import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls1
-import org.kde.kirigami 2.4 as Kirigami
-
-Kirigami.FormLayout {
-    id: page
-    property alias cfg_variableName: variableName.value
-
-    QtControls1.SpinBox {
-        id: variableName
-        decimals: 2
-    }
-}
-```
-{{< /section-right >}}
-{{< /sections >}}
-
-
-
 ## TextField - String/Text
 
 {{< sections >}}
 {{< section-left >}}
 
-A [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html) is used for a single line of text. It can be used as a base for many other data types as well. You will also want to look at the base [TextInput](https://doc.qt.io/qt-5/qml-qtquick-textinput.html) for more properties.
+A [TextField](https://doc.qt.io/qt-6/qml-qtquick-controls2-textfield.html) is used for a single line of text. It can be used as a base for many other data types as well. You will also want to look at the base [TextInput](https://doc.qt.io/qt-6/qml-qtquick-textinput.html) for more properties.
 
 <div class="filepath">contents/config/main.xml</div>
 
@@ -349,9 +335,9 @@ A [TextField](https://doc.qt.io/qt-5/qml-qtquick-controls2-textfield.html) is us
 <div class="filepath">contents/ui/configGeneral.qml</div>
 
 ```qml
-import QtQuick 2.0
-import QtQuick.Controls 2.5 as QQC2
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
     id: page
@@ -365,14 +351,12 @@ Kirigami.FormLayout {
 {{< /section-right >}}
 {{< /sections >}}
 
-
-
 ## TextArea - Multi-Line String/Text
 
 {{< sections >}}
 {{< section-left >}}
 
-A [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html) is used for paragraphs of text. You will also want to look at the base [TextEdit](https://doc.qt.io/qt-5/qml-qtquick-textedit-members.html) for more properties.
+A [TextArea](https://doc.qt.io/qt-6/qml-qtquick-controls2-textarea.html) is used for paragraphs of text. You will also want to look at the base [TextEdit](https://doc.qt.io/qt-6/qml-qtquick-textedit-members.html) for more properties.
 
 <div class="filepath">contents/config/main.xml</div>
 
@@ -387,9 +371,9 @@ A [TextArea](https://doc.qt.io/qt-5/qml-qtquick-controls2-textarea.html) is used
 <div class="filepath">contents/ui/configGeneral.qml</div>
 
 ```qml
-import QtQuick 2.0
-import QtQuick.Controls 2.5 as QQC2
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
     id: page
@@ -410,7 +394,7 @@ Kirigami.FormLayout {
 {{< sections >}}
 {{< section-left >}}
 
-KDE Frameworks has [`ColorButton`](https://api.kde.org/frameworks/kdeclarative/html/classorg_1_1kde_1_1kquickcontrols_1_1ColorButton.html) which provides a preview of the selected color and will open QtQuick's [`ColorDialog`](https://doc.qt.io/qt-5/qml-qtquick-dialogs-colordialog.html) for selecting a color.
+The KDE Frameworks library KQuickControls has [ColorButton](https://api.kde.org/qml-org-kde-kquickcontrols-colorbutton.html) which provides a preview of the selected color and will open QtQuick's [`ColorDialog`](https://doc.qt.io/qt-6/qml-qtquick-dialogs-colordialog.html) for selecting a color.
 
 <div class="filepath">contents/config/main.xml</div>
 
@@ -420,7 +404,7 @@ KDE Frameworks has [`ColorButton`](https://api.kde.org/frameworks/kdeclarative/h
 </entry>
 ```
 
-I personally don't recommend using the `Color` data type in `main.xml` if you want the default color to be a color from the color scheme (eg: `PlasmaCore.ColorScope.textColor`). I would instead suggest using a `String` that is empty by default. You can then use the following:
+Avoid using the `Color` data type in `main.xml` if you want the default color to be a color from the color scheme (eg: `PlasmaCore.ColorScope.textColor`). Use a `String` that is empty by default. You can then use the following:
 
 ```xml
 <entry name="labelColor" type="String">
@@ -434,7 +418,7 @@ PlasmaComponents.Label {
 }
 ```
 
-Unfortunately KDE Framework's `ColorButton` doesn't easily support this pattern as it stores the value in a QML `color` property which will read the empty string and cast it as the default color `#000000` (black). I worked around this issue in the [No-Apply Control Library]({{< ref "#no-apply-control-library" >}})'s [`libconfig/ColorField.qml`](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/ColorField.qml). I used a `TextField` to store the value as a string, and displayed the default color scheme color as `placeholderText`.
+Unfortunately KDE Framework's `ColorButton` doesn't easily support this pattern as it stores the value in a QML `color` property which will read the empty string and cast it as the default color `#000000` (black). A potential workaround is available in [No-Apply Control Library]({{< ref "#no-apply-control-library" >}})'s [`libconfig/ColorField.qml`](https://github.com/Zren/plasma-applet-lib/blob/master/package/contents/ui/libconfig/ColorField.qml), where a `TextField` stores the value as a string, and the default color scheme color is displayed as `placeholderText`.
 
 {{< /section-left >}}
 {{< section-right >}}
@@ -462,14 +446,13 @@ Kirigami.FormLayout {
 
 ## FileDialog - Path
 
-{{< sections >}}
-{{< section-left >}}
+To store a filepath in the config, use the `Path` or `PathList` config type. It will substitute `/home/user/...` with `$HOME/...`.
 
-When we need to store a filepath in the config, we should use the `Path` or `PathList` config type. It will substitute `/home/user/...` with `$HOME/...`. To properly layout the file selector, we need a `RowLayout` with a `TextField` and `Button` which opens a [`FileDialog`](https://doc.qt.io/qt-5/qml-qtquick-dialogs-filedialog.html). We can specify the default folder the dialog opens to with `FileDialog`'s [`shortcuts` property](https://doc.qt.io/qt-5/qml-qtquick-dialogs-filedialog.html#shortcuts-prop) (eg: `shortcuts.pictures`).
+To properly layout the file selector, the example uses a [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout.html) with a [TextField](https://doc.qt.io/qt-6/qml-qtquick-controls-textfield.html) and [Button](https://doc.qt.io/qt-6/qml-qtquick-controls-button.html) that opens a [FileDialog](https://doc.qt.io/qt-6/qml-qtquick-dialogs-filedialog.html). We can specify the default folder the dialog opens to with `FileDialog`'s [`shortcuts` property](https://doc.qt.io/qt-6/qml-qtquick-dialogs-filedialog.html#shortcuts-prop) (eg: `shortcuts.pictures`).
 
 Note that we place the `Kirigami.FormData.label` in the `RowLayout` as it is the direct child of `Kirigami.FormLayout`.
 
-<div class="filepath">contents/config/main.xml</div>
+`contents/config/main.xml`:
 
 ```xml
 <entry name="variableName" type="Path">
@@ -477,9 +460,7 @@ Note that we place the `Kirigami.FormData.label` in the `RowLayout` as it is the
 </entry>
 ```
 
-{{< /section-left >}}
-{{< section-right >}}
-<div class="filepath">contents/ui/configGeneral.qml</div>
+`contents/ui/configGeneral.qml`:
 
 ```qml
 import QtQuick 2.0
@@ -529,72 +510,27 @@ Kirigami.FormLayout {
     }
 }
 ```
-{{< /section-right >}}
-{{< /sections >}}
-
 
 
 ## IconDialog - Icon
 
-{{< sections >}}
-{{< section-left >}}
+[KIconThemes.IconDialog](https://api.kde.org/qml-org-kde-iconthemes-icondialog.html) makes it easy to search and preview icons. The most common use case for it is to make an icon selector for a panel menu.
 
-[`KQuickAddons.IconDialog`](https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kquickcontrolsaddons/icondialog.h) makes it easy to search and preview icons.
-
-See the [configurable icon example]({{< ref "examples.md#configurable-icon" >}}) for an example of [KQuickAddons.IconDialog](https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kquickcontrolsaddons/icondialog.h) based on the Application Launcher's (aka kickoff) [icon selector code](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/package/contents/ui/ConfigGeneral.qml#L39-87).
-
-{{< /section-left >}}
-{{< section-right >}}
-
-{{< /section-right >}}
-{{< /sections >}}
-
-
-
-## Assigning to plasmoid.configuration.varName
-
-{{< sections >}}
-{{< section-left >}}
-
-You can also assign directly to `plasmoid.configuration.variableName` if necessary in the configuration window or anywhere else in your widget. If you do this in the configuration page, you will skip the "apply" process and the property will be applied right away. I leave this up to the reader whether this is a pro or con.
-
-{{< /section-left >}}
-{{< section-right >}}
-<div class="filepath">contents/ui/configGeneral.qml</div>
-
-```qml
-import QtQuick 2.0
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.0
-import org.kde.kirigami 2.4 as Kirigami
-
-Kirigami.FormLayout {
-    id: page
-
-    QQC2.CheckBox {
-        id: variableName
-        checked: plasmoid.configuration.variableName
-        onCheckedChanged: plasmoid.configuration.variableName = checked
-    }
-}
-```
-{{< /section-right >}}
-{{< /sections >}}
-
+See the [Configurable icon example]({{< ref "examples.md#configurable-icon" >}}) for an example of `IconDialog` based on Plasma's default Application Launcher's (Kickoff) [icon selector code](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/ConfigGeneral.qml#L44-111).
 
 ## Configuration Examples
 
-To learn by example, we can look at a couple widgets:
+To learn by example, look at a couple widgets:
 
-* Application Launcher
-    * [`contents/config/main.xml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/package/contents/config/main.xml)
-    * [`contents/config/config.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/package/contents/config/config.qml)
-    * [`contents/ui/ConfigGeneral.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/package/contents/ui/ConfigGeneral.qml)
-* Task Manager
-    * [`contents/config/main.xml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/package/contents/config/main.xml)
-    * [`contents/config/config.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/package/contents/config/config.qml)
-    * [`contents/ui/ConfigAppearance.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/package/contents/ui/ConfigAppearance.qml)
-    * [`contents/ui/ConfigBehavior.qml`](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/package/contents/ui/ConfigBehavior.qml)
+* Plasma's Kickoff Application Launcher
+    * [contents/config/main.xml](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/main.xml)
+    * [contents/config/config.qml](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/config.qml)
+    * [contents/ui/ConfigGeneral.qml](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/kickoff/ConfigGeneral.qml)
+* Plasma's Task Manager
+    * [contents/config/main.xml](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/main.xml)
+    * [contents/config/config.qml](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/qml/config.qml)
+    * [contents/ui/ConfigAppearance.qml](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/qml/ConfigAppearance.qml)
+    * [contents/ui/ConfigBehavior.qml](https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/qml/ConfigBehavior.qml)
 
 
 ## No-Apply Control Library
