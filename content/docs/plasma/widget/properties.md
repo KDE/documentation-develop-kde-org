@@ -103,7 +103,7 @@ Item {
 | `Plasmoid.metaData.translators` | `QVariantList` |  |
 | `Plasmoid.metaData.version` | `string` | Reads `Version` in `metadata.json` or `X-KDE-PluginInfo-Version` in `metadata.desktop`. |
 | `Plasmoid.metaData.website` | `string` |  |
-| `Plasmoid.nativeInterface` | `QObject` | [Documentation]({{< ref "c-api.md#plasmoidnativeinterface" >}}). Provides access to C++ properties by extending `Plasma::Applet` like the SystemTray. |
+| `Plasmoid.nativeInterface` | `QObject` | [Documentation](#). Provides access to C++ properties by extending `Plasma::Applet` like the SystemTray. |
 | `Plasmoid.pluginName` | `string` | [Documentation](#id). The widget namespace. Alias of `Plasmoid.metaData.pluginId` |
 | `Plasmoid.preferredRepresentation` | [`Component`](https://doc.qt.io/qt-6/qml-qtqml-component.html) | Force a representation and ignore `Plasmoid.switchHeight`. [Example](#plasmoidfullrepresentation) |
 | `Plasmoid.rootItem` | `QObject` | Reference the widget's root item. Cannot be used in the config dialog. |
