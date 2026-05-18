@@ -21,12 +21,12 @@ First create a mountable folder used for the image:
 mkdir ~/craft-kde-android
 ```
 
-If you want to build Qt6 applications, download the `qt69` image:
+If you want to build Qt6 applications, download the `qt611` image:
 
 ```bash
-docker run -ti --rm -v ~/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt69 bash
+docker run -ti --rm -v ~/craft-kde-android:/home/user/CraftRoot invent-registry.kde.org/sysadmin/ci-images/android-qt611 bash
 # or with podman
-podman run -ti --rm -v ~/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt69 bash
+podman run -ti --rm -v ~/craft-kde-android:/home/user/CraftRoot:Z --userns keep-id invent-registry.kde.org/sysadmin/ci-images/android-qt611 bash
 ```
 
 {{< alert color="info" title="Note" >}}
@@ -171,7 +171,7 @@ This means that the Qt version available in the container you are using is outda
 To fix this issue, update your container:
 
 ```bash
-docker pull invent-registry.kde.org/sysadmin/ci-images/android-qt69
+docker pull invent-registry.kde.org/sysadmin/ci-images/android-qt611
 # or with podman
-podman pull invent-registry.kde.org/sysadmin/ci-images/android-qt69
+podman pull invent-registry.kde.org/sysadmin/ci-images/android-qt611
 ```
