@@ -20,7 +20,7 @@ This article will show you how to configure and develop KDE projects in Qt Creat
 >}}
 
 If you want to use a more recent version of Qt Creator than your distribution provides, you can install Qt Creator as a component in the
-"Qt online installer". See [Use Qt6 from the online installer]({{< ref "kde-builder-setup#qt6-online" >}}) for details.
+"Qt online installer". See [Use Qt6 from the online installer]({{< ref "kde-builder-qt6#qt6-online" >}}) for details.
 
 You may also [build Qt Creator from Git](https://wiki.qt.io/Building_Qt_Creator_from_Git).
 
