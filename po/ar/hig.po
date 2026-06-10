@@ -1,0 +1,145 @@
+#
+# SPDX-FileCopyrightText: 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: documentation-develop-kde-org 1.0\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 08:54+0000\n"
+"PO-Revision-Date: 2026-06-09 18:06+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: content/hig/_index.md:0
+msgid "KDE Human Interface Guidelines"
+msgstr "إرشادات واجهة المستخدم البشرية لكيدي"
+
+#: content/hig/_index.md:0
+msgid "Design"
+msgstr "التصميم"
+
+#: content/hig/_index.md:23
+msgid ""
+"Welcome to the KDE Human Interface Guidelines! Following them will help you "
+"build a beautiful and powerful app that feels at home when run in [KDE "
+"Plasma](https://kde.org/plasma-desktop), and works well outside of it. Users "
+"will learn how to use your app quickly, accomplish their goals with ease, "
+"and encounter fewer issues requiring support."
+msgstr ""
+"مرحبًا بك في إرشادات واجهة المستخدم البشرية لكيدي! اتباعها سيساعدك في بناء "
+"تطبيق جميل وقوي يبدو مألوفًا عند تشغيله في [بلازما كيدي](https://kde.org/"
+"plasma-desktop)، ويعمل جيدًا خارجها. سيتعلم المستخدمون استخدام تطبيقك بسرعة، "
+"وتحقيق أهدافهم بسهولة، ومواجهة مشكلات أقل تستدعي الدعم."
+
+#: content/hig/_index.md:25
+msgid ""
+"This document covers KDE's design philosophy and culture, common workflows "
+"and patterns, standard user interface conventions, and recommendations for "
+"platform integration."
+msgstr ""
+"يغطي هذا المستند فلسفة وثقافة تصميم كيدي، وسير العمل والأنماط الشائعة، "
+"واصطلاحات واجهة المستخدم القياسية، وتوصيات التكامل مع المنصة."
+
+#: content/hig/_index.md:28
+msgid "Why is good design so important?"
+msgstr "لماذا التصميم الجيد مهم جدًا؟"
+
+#: content/hig/_index.md:29
+msgid ""
+"Design determines how well something fulfills its functional purpose and how "
+"enjoyable it is to interact with. If either is lacking, the result will be "
+"frustrating. People won't want to use a poorly-designed app, and if forced "
+"to, they'll be resentful and spread negativity about it. Avoid this through "
+"good design!"
+msgstr ""
+"يحدد التصميم مدى نجاح شيء ما في تحقيق غرضه الوظيفي ومدى متعة التفاعل معه. "
+"إذا كان أي منهما ناقصًا، ستكون النتيجة محبطة. لن يرغب الناس في استخدام تطبيق "
+"سيئ التصميم، وإذا أُجبروا على ذلك، فسيشعرون بالاستياء وينشرون السلبية عنه. "
+"تجنب هذا من خلال التصميم الجيد!"
+
+#: content/hig/_index.md:31
+msgid ""
+"Design involves targeted decisions and trade-offs that bring a project "
+"closer to its intended goals and usage paradigms. The best apps know which "
+"users and use cases they're targeting, and which ones they leave for others. "
+"It's better to succeed by focusing on what you can do well than to spread "
+"yourself thin and fail. Under-promise and over-deliver, never the reverse."
+msgstr ""
+"يتضمن التصميم قرارات مستهدفة ومقايضات تقرب المشروع من أهدافه المقصودة ونماذج "
+"الاستخدام. أفضل التطبيقات تعرف أي المستخدمين وحالات الاستخدام تستهدف، وأيها "
+"تترك للآخرين. النجاح بالتركيز على ما يمكنك فعله جيدًا أفضل من التشتت والفشل. "
+"أقلل من الوعود وأكثر من التسليم، ولا تفعل العكس أبدًا."
+
+#: content/hig/_index.md:34
+msgid "Topics not covered"
+msgstr "المواضيع غير مغطاة"
+
+#: content/hig/_index.md:35
+msgid ""
+"This document is a set of design guidelines, not instructions for "
+"implementing every specific component. While some technical guidance will be "
+"provided, much more detail can be found in the components' own [usage]"
+"(https://develop.kde.org/docs/) and [API](https://api.kde.org/) "
+"documentation as well as the [source code of existing KDE apps](https://"
+"invent.kde.org/explore/groups?sort=name_asc). It's more of a *what* and a "
+"*why*, not a *how*."
+msgstr ""
+"هذا المستند هو مجموعة من إرشادات التصميم، وليس تعليمات لتنفيذ كل مكون محدد. "
+"بينما سيُقدم بعض التوجيه التقني، يمكن العثور على تفاصيل أكثر بكثير في وثائق "
+"[الاستخدام](https://develop.kde.org/docs/) و[API](https://api.kde.org/) "
+"الخاصة بالمكونات وكذلك [الكود المصدري لتطبيقات كيدي الحالية](https://invent."
+"kde.org/explore/groups?sort=name_asc). إنه أكثر عن *ماذا* و*لماذا*، وليس "
+"*كيف*."
+
+#: content/hig/_index.md:37
+msgid ""
+"This document is not intended to be an ironclad law code. By learning and "
+"following the rules, you'll understand how to safely innovate within the "
+"guidelines, and when it can be appropriate to break them if it produces a "
+"superior result."
+msgstr ""
+"هذا المستند ليس قانونًا صارمًا. بتعلم واتباع القواعد، ستفهم كيف تبتكر بأمان "
+"ضمن الإرشادات، ومتى يكون من المناسب خرقها إذا أنتج ذلك نتيجة أفضل."
+
+#: content/hig/_index.md:40
+msgid "Contributing"
+msgstr "المساهمة"
+
+#: content/hig/_index.md:41
+msgid ""
+"This is a living document, intended to be updated over time to reflect "
+"current KDE design trends and best practices. Contributions are welcome!"
+msgstr ""
+"هذا مستند حي، يُهدف إلى تحديثه بمرور الوقت ليعكس اتجاهات تصميم كيدي الحالية "
+"وأفضل الممارسات. المساهمات مرحب بها!"
+
+#: content/hig/_index.md:43
+msgid ""
+"Content is written in [Markdown](https://commonmark.org/help/), and the "
+"source files are hosted in a [Git repository](https://invent.kde.org/"
+"documentation/develop-kde-org.git). To quickly edit a page, the GitLab "
+"editor can be opened on any page with the “Edit this page” button in the "
+"drawer on the right. Tasks and changes are organized via https://invent.kde."
+"org. To learn how to submit changes, see the [README file](https://invent."
+"kde.org/documentation/develop-kde-org/-/blob/master/README.md)."
+msgstr ""
+"المحتوى مكتوب بلغة [ماركداون](https://commonmark.org/help/)، وملفات المصدر "
+"مستضافة في [مستودع جيت](https://invent.kde.org/documentation/develop-kde-org."
+"git). لتحرير صفحة بسرعة، يمكن فتح محرر جيت لاب على أي صفحة بزر \"حرر هذه "
+"الصفحة\" في الدرج على اليمين. تُنظم المهام والتغييرات عبر https://invent.kde."
+"org. لتعلم كيفية إرسال التغييرات، انظر [ملف README](https://invent.kde.org/"
+"documentation/develop-kde-org/-/blob/master/README.md)."
+
+#: content/hig/_index.md:46
+msgid "Read the guidelines"
+msgstr "اقرأ الإرشادات"
+
+#: content/hig/_index.md:47
+msgid "Click on any of these tiles to jump to a page:"
+msgstr "انقر على أي من هذه البلاطات للانتقال إلى صفحة:"
