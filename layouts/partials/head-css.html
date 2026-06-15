@@ -8,7 +8,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
 {{- $postCSSOpts := dict "use" "rtlcss" "noMap" true -}}
 
 {{ if eq (.Site.Language.LanguageDirection | default "ltr") "rtl" }}
-    {{ $style := resources.Get "/scss/docsy/main.scss" | toCSS $toCSSOpts | resources.PostCSS $postCSSOpts | fingerprint }}
+    {{ $style := resources.Get "/scss/docsy/main.scss" | toCSS $toCSSOpts | css.PostCSS $postCSSOpts | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}?rtl" integrity="{{ $style.Data.Integrity }}">
 {{ else }}
     {{ $style := resources.Get "/scss/docsy/main.scss" | toCSS $toCSSOpts | fingerprint }}
