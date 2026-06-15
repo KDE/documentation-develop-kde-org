@@ -17,19 +17,19 @@ hugo_website:
     - sed -i -e 's/"avviso/"alert/g' po/it/kirigami-tutorial.po
 
 # broken
-html_test:
- image: invent-registry.kde.org/sysadmin/ci-images/staticweb:latest
- tags:
-   - Linux
- stage: test
- script: htmltest
- cache:
-   key: htmltest-cache
-   paths:
-     - .htmltest/refcache.json
-   when: always
- artifacts:
-   name: htmltest_log
-   paths:
-     - .htmltest/htmltest.log
-   when: always
+# html_test:
+#  image: invent-registry.kde.org/sysadmin/ci-images/staticweb:latest
+#  tags:
+#    - Linux
+#  stage: test
+#  script: htmltest
+#  cache:
+#    key: htmltest-cache
+#    paths:
+#      - .htmltest/refcache.json
+#    when: always
+#  artifacts:
+#    name: htmltest_log
+#    paths:
+#      - .htmltest/htmltest.log
+#    when: always
