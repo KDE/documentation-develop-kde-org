@@ -505,7 +505,7 @@ const reference if at all possible. This includes anything other than the basic
 types such as `char` and `int`.
 
 Take, for instance, [QString](https://doc.qt.io/qt-6/qstring.html). They should always be passed into methods
-as `const [QString](https://doc.qt.io/qt-6/qstring.html)&`. Even though {{qt|QString}} is implicitly shared it
+as `const [QString](https://doc.qt.io/qt-6/qstring.html)&`. Even though [QString](https://doc.qt.io/qt-6/qstring.html) is implicitly shared it
 is still more efficient (and safer) to pass const references as opposed to
 objects by value. 
 
@@ -572,7 +572,7 @@ leads to subtle yet often fatal problems.
 
 While [QString](https://doc.qt.io/qt-6/qstring.html) is the tool of choice for many
 string handling situations, there is one where it is particularly inefficient.
-If you are pushing about and working on data in {{qt|QByteArray}}s, take care
+If you are pushing about and working on data in [QByteArray](https://doc.qt.io/qt-6/qbytearray.html)s, take care
 not to pass it through methods which take [QString](https://doc.qt.io/qt-6/qstring.html) parameters; then make
 QByteArrays from them again.
 
