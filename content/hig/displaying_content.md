@@ -74,7 +74,7 @@ There are 2 broad categories of tabs: **mutable** and **immutable**.
 - Tabs span the available width
 - Tabs show visible close buttons
 
-**Immutable** tabs are not modifiable by the user. They are for grouping settings or Contextual Toolview pages, and implemented with [Kirigami.NavigationTabBar](https://api.kde.org/qml-org-kde-kirigami-navigationtabbar.html). This control can be located above or below its view, depending on what makes the most visual sense. Make sure every page has unique controls and content.
+**Immutable** tabs are not modifiable by the user. They are for grouping settings or Contextual Toolview pages, and implemented with [Kirigami.NavigationTabBar](https://api.kde.org/qml-org-kde-kirigami-navigationtabbar.html). This control can be located above or below its view, depending on what makes the most visual sense. Make sure every page has unique controls and content. In QtWidgets applications, set QTabBars with immutable contents to [expanding](https://doc.qt.io/qt-6/qtabbar.html#expanding-prop), and the containing QTabWidget to [documentMode](https://doc.qt.io/qt-6/qtabwidget.html#documentMode-prop).
 
 Regardless of the type chosen, all tabbed views should hide the tab bar when there's only one tab and implement standard keyboard shortcuts for switching with [KStandardShortcut](https://api.kde.org/kstandardshortcut.html).
 
