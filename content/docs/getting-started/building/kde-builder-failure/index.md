@@ -11,14 +11,14 @@ aliases: kdesrc-build-failure
 Did one or more modules fail to build (displayed in red font) using `kde-builder`?
 This page should tell you the most likely causes and how to fix them.
 
-Remember that you can [contact the development team]({{< ref "help-developers" >}}) to get assistance with kde-builder.
+Remember that you can [contact the development team]({{< ref "developers" >}}) to get assistance with kde-builder.
 
 ### Missing dependencies
 
 The most likely reason is that you are missing the dependencies necessary for the failing module.
 Once `kde-builder` finishes its build and fails, it will display the path to the module's CMake log files (for example: `~/kde/src/log/latest/kwallet/error.log`).
 
-You should take a look at the log files to see if anything is missing: you can read more about how to understand the errors you get from CMake in [Install the dependencies]({{< ref "help-dependencies" >}}).
+You should take a look at the log files to see if anything is missing: you can read more about how to understand the errors you get from CMake in [Install the dependencies]({{< ref "dependencies" >}}).
 That page will also tell you how to search for dependencies in your distribution.
 
 When you have the necessary dependencies, you can save time and resume from the failing module with the `--resume-from` flag:

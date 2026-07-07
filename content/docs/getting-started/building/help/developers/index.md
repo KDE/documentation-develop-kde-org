@@ -3,6 +3,8 @@ title: "Where to find the development team"
 description: "Contacting the development team is the first step to being a part of the community"
 weight: 1
 group: "help"
+aliases:
+  - /docs/getting-started/building/help-developers/
 ---
 
 The KDE developers are here to assist you if you need any help with KDE software development.

@@ -39,7 +39,7 @@ cmake --build build/ --parallel
 cmake --install build/
 ```
 
-If you get stuck while running the first command, be sure to look at our [guide about installing build dependencies for a CMake project]({{< ref "help-dependencies" >}}).
+If you get stuck while running the first command, be sure to look at our [guide about installing build dependencies for a CMake project]({{< ref "dependencies" >}}).
 
 If you get stuck while running the second command, it’s most likely a code issue that is in need of fixing.
 
@@ -108,7 +108,7 @@ The first command prepares the project by trying to find its build dependencies:
 cmake -B build/
 ```
 
-You can read more about it in the [guide about installing build dependencies for a CMake project]({{< ref "help-dependencies" >}}).
+You can read more about it in the [guide about installing build dependencies for a CMake project]({{< ref "dependencies" >}}).
 
 {{< alert title="Note for Windows users" color="info" >}}
 
