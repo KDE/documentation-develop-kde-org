@@ -3,6 +3,8 @@ title: "Building KDE software with distrobox and podman"
 description: "The best solution for immutable distributions"
 weight: 51
 group: "containers"
+aliases:
+  - /docs/getting-started/building/containers-distrobox/
 ---
 
 If you use a really old Linux distribution that does not have the base system dependencies needed for kde-builder like an older long term support distribution such as [RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux), or use an immutable distribution like [openSUSE Kalpa](https://en.opensuse.org/Portal:Kalpa), [Fedora Kinoite](https://fedoraproject.org/atomic-desktops/kinoite/) or the [SteamOS on the Steam Deck](https://store.steampowered.com/steamdeck), you will not be able to build KDE software directly with [kde-builder]({{< ref "kde-builder-setup" >}}) or [manually with CMake]({{< ref "cmake-build" >}}).
