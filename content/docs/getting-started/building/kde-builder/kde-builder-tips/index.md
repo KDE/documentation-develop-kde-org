@@ -3,7 +3,9 @@ title: "Tips and tricks"
 description: "Improve your kde-builder experience"
 weight: 14
 group: "kde-builder"
-aliases: kdesrc-build-tips
+aliases:
+  - kdesrc-build-tips
+  - /docs/getting-started/building/kde-builder-tips/
 ---
 
 ## Opening logs directly from Konsole / Yakuake {#directlogs}

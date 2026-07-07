@@ -3,7 +3,9 @@ title: "Set up a development environment"
 description: "Installing and configuring kde-builder"
 weight: 10
 group: "kde-builder"
-aliases: kdesrc-build-setup
+aliases:
+  - kdesrc-build-setup
+  - /docs/getting-started/building/kde-builder-setup/
 ---
 
 Source code for KDE software lives on [KDE Invent](https://invent.kde.org). Before you can work on it, you'll need to set up a **development environment**: a set of tools that allows you to access and edit the source code, compile it into a form that the computer can run, and deploy it to a safe location. To accomplish this, you will need to enter commands using a terminal program.
