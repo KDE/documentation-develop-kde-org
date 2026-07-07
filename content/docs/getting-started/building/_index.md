@@ -2,6 +2,8 @@
 title: "Building KDE software"
 weight: 1
 layout: frontpage
+recursive: true
+group: "getting-started"
 groups:
   - name: "Finding assistance"
     key: "help"
@@ -15,7 +17,6 @@ groups:
     key: "containers"
 description: >
   Learn how to build KDE software in multiple ways.
-group: "getting-started"
 ---
 
 By joining the ranks of KDE developers, you will get to implement new features and defeat bugs both daunting and simple. Developers collaborate in teams based on what area they are working on. These can be small teams working on a single application, up to large teams working on a group of related pieces of software, or even meta-teams working on broader topics such as QA or automation. Many developers participate in more than one team.

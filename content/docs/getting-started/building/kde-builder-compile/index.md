@@ -251,7 +251,7 @@ What now?
 
 Perhaps you went through this whole procedure and still have no idea what to work on:
 
-In this case, [choose what to work on]({{< ref "help-choosing" >}}).
+In this case, [choose what to work on]({{< ref "choosing" >}}).
 
 Or perhaps you'd like to further adapt kde-builder to your needs by setting up your preferred IDE. If that's what you need, have a look at [IDE Configuration]({{< ref "ide" >}}).
 

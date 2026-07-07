@@ -174,7 +174,7 @@ You can now finally start building KDE software using our [guide on building KDE
 
 Containers are typically designed to be lean, not to provide a full desktop experience. As such, they usually do not come with software that would otherwise come preinstalled in typical desktop systems, and so you will often need to search manually for the missing software.
 
-For that, we have a [tutorial on installing missing build dependencies]({{< ref "help-dependencies" >}}).
+For that, we have a [tutorial on installing missing build dependencies]({{< ref "dependencies" >}}).
 
 In addition to this, there are a few pieces of software with very common use cases that can be missing from containers by default:
 

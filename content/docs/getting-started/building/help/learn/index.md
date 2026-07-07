@@ -3,6 +3,8 @@ title: "Learning more"
 description: "Useful resources to make your development journey easier"
 weight: 2
 group: "help"
+aliases:
+  - /docs/getting-started/building/help-learn/
 ---
 
 Most KDE software is written in C++ using the [Qt toolkit](https://www.qt.io) and [KDE Frameworks](https://develop.kde.org/products/frameworks/). Though prior experience with these technologies or other programming languages is helpful, you don't need to be a C++ programmer to get started! For example, no programming knowledge whatsoever is required to do things like improving text labels.

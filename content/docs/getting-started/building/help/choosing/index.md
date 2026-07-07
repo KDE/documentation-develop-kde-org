@@ -3,6 +3,8 @@ title: "Choose what to work on"
 description: "Get inspired by the work of others"
 weight: 3
 group: "help"
+aliases:
+  - /docs/getting-started/building/help-choosing/
 ---
 
 The best place to start is with something that personally affects you: for example, a small bug or glitch in a piece of KDE software that you use, or an idea you have for a new feature.
@@ -31,4 +33,4 @@ There are many other lists of issues you can take a look at:
 
 Try not to start out by proposing or working on major features or significant design changes. These can be controversial, and the smoothest way to get going is by working on relatively non-controversial bugfixes. Start slowly and build trust!
 
-Once you've got a general idea about what you want to work on, you can [get in touch with the existing developers]({{< ref "help-developers" >}}) and they can help you out by pointing you to the right place in the code and providing advice about how to tackle the problem.
+Once you've got a general idea about what you want to work on, you can [get in touch with the existing developers]({{< ref "developers" >}}) and they can help you out by pointing you to the right place in the code and providing advice about how to tackle the problem.

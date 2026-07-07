@@ -3,9 +3,11 @@ title: "Installing build dependencies"
 description: "What to do when you are missing dependencies"
 weight: 5
 group: "help"
+aliases:
+  - /docs/getting-started/building/help-dependencies/
 ---
 
-This page handles the normal issues related to missing dependencies when building with kde-builder. If you have any specific issues, consult our [Troubleshooting page]({{< ref "kde-builder-failure" >}}) or [contact the developers]({{< ref "help-developers" >}}).
+This page handles the normal issues related to missing dependencies when building with kde-builder. If you have any specific issues, consult our [Troubleshooting page]({{< ref "kde-builder-failure" >}}) or [contact the developers]({{< ref "developers" >}}).
  
 
 ## How to install all the build dependencies of one package

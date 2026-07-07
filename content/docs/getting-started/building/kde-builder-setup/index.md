@@ -146,13 +146,13 @@ kde-builder kcalc
 
 This will build [KCalc](https://apps.kde.org/kcalc/), a calculator app, and its KDE dependencies. If you happen to find any build issues, don't fret! That means kde-builder is working.
 
-In the next section, [Building KDE software with kde-builder]({{< ref "kde-builder-compile" >}}), we have a more in-depth look into the build process. To solve any build issues, you can check out [Installing build dependencies]({{< ref "help-dependencies" >}}).
+In the next section, [Building KDE software with kde-builder]({{< ref "kde-builder-compile" >}}), we have a more in-depth look into the build process. To solve any build issues, you can check out [Installing build dependencies]({{< ref "dependencies" >}}).
 
 `kde-builder` is now set up for building! 🎉
 
 {{< alert color="success" title="💡 A chance to contribute">}}
 
-If you discover any external dependencies needed to build KDE software that were not installed with `kde-builder --install-distro-packages`, for example using our guide on [Installing Build Dependencies]({{< ref "help-dependencies" >}}), please send a merge request to the [repo-metadata/distro-dependencies](https://invent.kde.org/sysadmin/repo-metadata/-/tree/master/distro-dependencies) repository to include the needed packages in the list.
+If you discover any external dependencies needed to build KDE software that were not installed with `kde-builder --install-distro-packages`, for example using our guide on [Installing Build Dependencies]({{< ref "dependencies" >}}), please send a merge request to the [repo-metadata/distro-dependencies](https://invent.kde.org/sysadmin/repo-metadata/-/tree/master/distro-dependencies) repository to include the needed packages in the list.
 
 {{< /alert >}}
 
