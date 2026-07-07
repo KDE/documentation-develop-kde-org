@@ -3,7 +3,6 @@ title: "Building KDE software on Windows with Craft"
 description: "Run and ship your programs on Windows"
 weight: 41
 group: "craft"
-aliases: craft-building
 ---
 Craft is a tool with multiple purposes related to packaging:
 
