@@ -1,8 +1,10 @@
 ---
-title: "Building KDE software manually"
+title: "Building KDE software with CMake"
 description: "Understanding the traditional CMake build process"
 weight: 41
 group: "cmake-build"
+aliases:
+  - /docs/getting-started/building/cmake-build/
 ---
 
 While users on older Linux distributions might have to resort to [kde-builder]({{< ref "kde-builder-setup" >}}) or containers to be able to build KDE software, users of more up-to-date distributions might not need to use them.
