@@ -3,7 +3,9 @@ title: "Building KDE software with kde-builder"
 description: "Compiling with a single command"
 weight: 11
 group: "kde-builder"
-aliases: kdesrc-build-compile
+aliases:
+  - kdesrc-build-compile
+  - /docs/getting-started/building/kde-builder-compile/
 ---
 
 In this section, you will learn how to use KDE's `kde-builder` tool to build KDE software once you have a development environment set up.

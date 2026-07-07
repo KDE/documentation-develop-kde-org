@@ -3,6 +3,9 @@ title: "Setting up Qt"
 description: "For developers without up-to-date Qt"
 weight: 12
 group: "kde-builder"
+aliases:
+  - kdesrc-build-qt6
+  - /docs/getting-started/building/kde-builder-qt6/
 ---
 
 If your Linux distribution does **NOT** provide a recent enough version of Qt, you have the following options:

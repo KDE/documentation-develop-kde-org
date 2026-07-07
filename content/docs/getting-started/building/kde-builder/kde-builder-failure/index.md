@@ -3,7 +3,9 @@ title: "Basic troubleshooting"
 description: "What to do in case of build issues"
 weight: 13
 group: "kde-builder"
-aliases: kdesrc-build-failure
+aliases:
+  - kdesrc-build-failure
+  - /docs/getting-started/building/kde-builder-failure/
 ---
 
 ## The project has failed to build
