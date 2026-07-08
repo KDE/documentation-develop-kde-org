@@ -165,7 +165,7 @@ compiler can help you to find mistakes by doing type checking.
 static constexpr int AnswerToAllQuestions = 42;
 
 // Wrong!
-#define AnswerToAllQuestions 42 ```
+#define AnswerToAllQuestions 42
 ```
 
 If defining a constant array do not use a pointer as data type. Instead use the
