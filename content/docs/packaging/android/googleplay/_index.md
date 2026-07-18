@@ -1,7 +1,7 @@
 ---
 title: Publishing applications on Google Play
 linkTitle: Publishing on Google Play
-weight: 3
+weight: 4
 description: >
   Learn how to publish your applications on Google Play
 authors:

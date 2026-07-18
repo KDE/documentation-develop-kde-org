@@ -1,7 +1,7 @@
 ---
 title: "Packaging and publishing applications for Android"
 linkTitle: "Packaging and publishing"
-weight: 2
+weight: 3
 description: >
   Learn how to package and publish your applications for Android
 authors:

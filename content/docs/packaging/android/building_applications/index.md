@@ -1,7 +1,7 @@
 ---
 title: "Building applications for Android"
 linkTitle: "Building applications for Android"
-weight: 1
+weight: 2
 description: >
   Learn how to build your applications for Android
 ---
