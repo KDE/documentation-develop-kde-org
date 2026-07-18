@@ -132,11 +132,20 @@ sudo apt update
 
 {{< /alert >}}
 
+### Install dependencies
 During initial setup, `kde-builder` installed the essentials to run the tool itself. To install the distribution packages required to actually build KDE software, run:
 
 ```bash
 kde-builder --install-distro-packages
 ```
+
+{{< alert color="success" title="💡 A chance to contribute">}}
+
+If you discover any external dependencies needed to build KDE software that were not installed with `kde-builder --install-distro-packages`, for example using our guide on [Installing Build Dependencies]({{< ref "help-dependencies" >}}), please send a merge request to the [repo-metadata/distro-dependencies](https://invent.kde.org/sysadmin/repo-metadata/-/tree/master/distro-dependencies) repository to include the needed packages in the list.
+
+{{< /alert >}}
+
+### First build – Hello, World!
 
 Finally, perform your first build:
 
@@ -149,12 +158,6 @@ This will build [KCalc](https://apps.kde.org/kcalc/), a calculator app, and its 
 In the next section, [Building KDE software with kde-builder]({{< ref "kde-builder-compile" >}}), we have a more in-depth look into the build process. To solve any build issues, you can check out [Installing build dependencies]({{< ref "help-dependencies" >}}).
 
 `kde-builder` is now set up for building! 🎉
-
-{{< alert color="success" title="💡 A chance to contribute">}}
-
-If you discover any external dependencies needed to build KDE software that were not installed with `kde-builder --install-distro-packages`, for example using our guide on [Installing Build Dependencies]({{< ref "help-dependencies" >}}), please send a merge request to the [repo-metadata/distro-dependencies](https://invent.kde.org/sysadmin/repo-metadata/-/tree/master/distro-dependencies) repository to include the needed packages in the list.
-
-{{< /alert >}}
 
 ### Updating kde-builder
 

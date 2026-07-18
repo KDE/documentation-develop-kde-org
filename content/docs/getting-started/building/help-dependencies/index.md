@@ -6,8 +6,16 @@ group: "help"
 ---
 
 This page handles the normal issues related to missing dependencies when building with kde-builder. If you have any specific issues, consult our [Troubleshooting page]({{< ref "kde-builder-failure" >}}) or [contact the developers]({{< ref "help-developers" >}}).
- 
 
+{{< alert title="⚠️ Before proceeding" color="warning" >}}
+
+Make sure you have followed [Set up kde-builder]({{< ref "kde-builder-setup#set-up-kde-builder" >}}) in full and have installed the default package dependencies:
+
+```bash
+kde-builder --install-distro-packages
+```
+{{< /alert >}}
+ 
 ## How to install all the build dependencies of one package
 
 Often the simplest solution to the problem of missing dependencies is to automatically install all of the project's required dependencies.
