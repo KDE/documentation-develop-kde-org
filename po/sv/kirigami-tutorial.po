@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-07 01:59+0000\n"
-"PO-Revision-Date: 2026-07-22 23:59+0200\n"
+"PO-Revision-Date: 2026-07-24 01:36+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -54,7 +54,7 @@ msgstr "Kirigami-tillägg"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Platform Support"
-msgstr ""
+msgstr "Plattformsstöd"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Learning to create your first applications using Kirigami\n"
@@ -1337,6 +1337,8 @@ msgid ""
 "First, create the header file that will have code exposed to QML, namely the "
 "`Backend` type:"
 msgstr ""
+"Skapa först deklarationsfilen som ska ha kod exponerad till QML, närmare "
+"bestämt typen `Backend`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:41
 msgid ""
@@ -1345,6 +1347,10 @@ msgid ""
 "html#QML_ELEMENT) macro, available in the `<QtQml/qqmlregistration.h>` "
 "header."
 msgstr ""
+"Det finns två saker som behövs för att exponera C++ kod för QML, och en av "
+"dem är helt enkelt att använda makrot [QML_ELEMENT](https://doc.qt.io/qt-6/"
+"qqmlintegration-h.html#QML_ELEMENT), tillgängligt i deklarationsfilen "
+"`<QtQml/qqmlregistration.h>`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:43
 msgid ""
@@ -1353,6 +1359,9 @@ msgid ""
 "For this, we use the [QML_SINGLETON](https://doc.qt.io/qt-6/qqmlintegration-"
 "h.html#QML_SINGLETON) macro."
 msgstr ""
+"Backend skapas som en singleton, vilket innebär att den bara skapas en gång "
+"och existerar under hela programmets livslängd. För det använder vi makrot "
+"[QML_SINGLETON](https://doc.qt.io/qt-6/qqmlintegration-h.html#QML_SINGLETON)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:45
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:123
@@ -1362,6 +1371,7 @@ msgstr "src/components/backend.cpp"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:47
 msgid "We can add our initial code for the constructor to `backend.cpp`:"
 msgstr ""
+"Vi kan lägga till vår ursprungliga kod för konstruktorn i `backend.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:51
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:131
@@ -1373,18 +1383,24 @@ msgid ""
 "From now on, the backend will be known to QML as the `Backend` QML type. It "
 "is contained in a module called `org.kde.tutorial.components`."
 msgstr ""
+"Hädanefter är den känd för QML som QML-typen `Backend`. Den finns i en modul "
+"som kallas `org.kde.tutorial.components`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:55
 msgid ""
 "This means that just by adding the import in a QML file, it is possible to "
 "use the code exposed from C++:"
 msgstr ""
+"Det betyder att bara genom att lägga till importen i en QML-fil är det "
+"möjligt att använda koden som exponerats från C++:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:61
 msgid ""
 "To start from a clean slate using the existent application code, create a "
 "new QML component that contains an empty page:"
 msgstr ""
+"För att börja från början med den befintliga programkoden, skapa en ny QML-"
+"komponent som innehåller en tom sida:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:65
 msgid "src/Main.qml"
@@ -1396,6 +1412,10 @@ msgid ""
 "new page](/docs/getting-started/kirigami/components-pagerow_pagestack/) to "
 "the application, just so we can test the model more easily."
 msgstr ""
+"För att faktiskt visa den nya sidan, låt oss skapa ett menyalternativ som "
+"[skickar den nya sidan](/docs/getting-started/kirigami/components-"
+"pagerow_pagestack/) till programmet, bara så att vi kan testa modellen "
+"enklare."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:69
 msgid ""
@@ -1404,6 +1424,10 @@ msgid ""
 "qt-6/qtqml-javascript-dynamicobjectcreation.html) to generate the page on "
 "the fly:"
 msgstr ""
+"För det kan vi använda en ny [Kirigami.Action](/docs/getting-started/"
+"kirigami/components-actions/) tillsammans med [Qt.createComponent()](https://"
+"doc.qt.io/qt-6/qtqml-javascript-dynamicobjectcreation.html) för att generera "
+"sidan direkt:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:73
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:96
@@ -1415,12 +1439,16 @@ msgid ""
 "Lastly, add the newly created `backend.h`, `backend.cpp` and `ExposePage."
 "qml` to CMake:"
 msgstr ""
+"Lägg till sist till de nyskapade `backend.h`, `backend.cpp` och `ExposePage."
+"qml` i CMake:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:79
 msgid ""
 "Adding the files to an existing QML module in CMake is the second part to "
 "exposing code to QML."
 msgstr ""
+"Att lägga till filerna i en befintlig QML-modul i CMake är den andra delen "
+"av att exponera kod till QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:81
 msgid ""
@@ -1430,6 +1458,11 @@ msgid ""
 "they are required for [declarative registration](https://doc.qt.io/qt-6/"
 "qtqml-cppintegration-definetypes.html)."
 msgstr ""
+"Observera att QML-modulen borde ha skapats med antingen "
+"[ecm_add_qml_module()](https://api.kde.org/ecm/module/ECMQmlModule.html) "
+"eller [qt_add_qml_module()](https://doc.qt.io/qt-6/qt-add-qml-module.html), "
+"eftersom de krävs för [deklarativ registrering](https://doc.qt.io/qt-6/qtqml-"
+"cppintegration-definetypes.html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:83
 msgid ""
@@ -1437,10 +1470,12 @@ msgid ""
 "steps as before](/docs/getting-started/kirigami/setup-cpp/#running-the-"
 "application)."
 msgstr ""
+"Nu borde du kunna kompilera och installera projektet med [samma steg som "
+"tidigare](/docs/getting-started/kirigami/setup-cpp/#running-the-application)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:85
 msgid "Making it functional"
-msgstr ""
+msgstr "Göra det funktionsdugligt"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:89
 msgid ""
@@ -1490,11 +1525,11 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:101
 msgid "Add a new private section with the following:"
-msgstr ""
+msgstr "Lägg till en ny privat sektion med följande:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:108
 msgid "And add the following to the existing public section:"
-msgstr ""
+msgstr "Och lägg till följande i befintliga öppna sektionen:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:117
 msgid ""
@@ -1559,7 +1594,7 @@ msgstr "Vårt program så långt"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:141
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:372
 msgid "Existing code:"
-msgstr ""
+msgstr "Befintlig kod:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:143
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:428
@@ -1643,7 +1678,7 @@ msgstr "<br>\n"
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:180
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:426
 msgid "Code written/modified in this page:"
-msgstr ""
+msgstr "Kod skriven/ändrad på den här sidan:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:182
 msgid ""
@@ -1694,6 +1729,9 @@ msgid ""
 "application) and start your program again. You'll see that the new page has "
 "a centered Heading saying \"Hello World!\"."
 msgstr ""
+"[Kompilera](/docs/getting-started/kirigami/setup-cpp/#running-the-"
+"application) och starta om programmet. Du ser att den nya sidan har en "
+"centrerad rubrik med texten \"Hello World!\"."
 
 #: content/docs/getting-started/kirigami/advanced-connect_backend/index.md:223
 msgid "Congratulations, you learned:"
@@ -1785,28 +1823,25 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:46
 msgid "Creating a new page for the models tutorial"
-msgstr ""
+msgstr "Skapa en ny sida för modellens handledning:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:48
 msgid "Before doing anything, let's add a new page to our QML code."
 msgstr ""
+"Innan vi gör någonting mer, låt oss lägga till en ny sida i vår QML-kod."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:50
 msgid ""
 "First, in `src/Main.qml`, add the following action to the global drawer:"
 msgstr ""
+"Först, i `src/Main.qml`, lägg till följande åtgärd i den globala lådan:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:54
-#, fuzzy
-#| msgid ""
-#| "First, create the file `kirigami-tutorial/src/components/CMakeLists.txt` "
-#| "with the following contents:"
 msgid ""
 "Then, create a new `src/components/ModelsPage.qml` with the following "
 "contents:"
 msgstr ""
-"Skapa först filen `kirigami-tutorial/src/components/CMakeLists.txt` med "
-"följande innehåll:"
+"Skapa sedan en ny `src/components/ModelsPage.qml`med följande innehåll:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:58
 msgid "And finally add it to `src/components/CMakeLists.txt`:"
@@ -1814,7 +1849,7 @@ msgstr "Och till sist lägg till det i `src/components/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:62
 msgid "This will serve as the canvas for this tutorial page."
-msgstr ""
+msgstr "Det fungerar som arbetsyta för den här handledningssidan."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:64
 msgid "Using raw strings"
@@ -1830,6 +1865,13 @@ msgid ""
 "every time a string is introduced in our C++ code, which will be useful for "
 "the code in the upcoming header file."
 msgstr ""
+"För att göra det lättare att förstå hur modellen är ifylld i den här "
+"handledningen inaktiverar vi en funktion som KDE-program som använder extra-"
+"cmake-modules (ECM) normalt använder, vilken [optimerar strängkod](https://"
+"doc.qt.io/qt-6/qstring.html#QT_NO_CAST_FROM_ASCII). Det gör att vi slipper "
+"skriva [QStringLiteral()](https://doc.qt.io/qt-6/qstring."
+"html#QStringLiteral) varje gång en sträng introduceras i vår C++-kod, vilket "
+"är användbart för koden i den kommande deklarationsfilen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:68
 msgid "In the root `CMakeLists.txt` file, add the following:"
@@ -1837,7 +1879,7 @@ msgstr "In rotfilen `CMakeLists.txt`, lägg till följande:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:72
 msgid "🚨 Do not do this in production"
-msgstr ""
+msgstr "🚨 Gör inte det i produktionskod"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:74
 msgid ""
@@ -1846,19 +1888,15 @@ msgid ""
 "(https://doc.qt.io/qt-6/qt-literals-stringliterals.html) instead where "
 "possible."
 msgstr ""
+"Att inaktivera CMake-flaggan görs *bara* i förklaringssyfte. Produktionskod "
+"bör istället använda QStringLiteral() eller [Qt string literals namnrymd]"
+"(https://doc.qt.io/qt-6/qt-literals-stringliterals.html) där det är möjligt."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:78
 msgid "Preparing the Class"
 msgstr "Förbereda klassen"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:80
-#, fuzzy
-#| msgid ""
-#| "In this tutorial, we will create a class that contains a QMap, where a "
-#| "QString is used as a key and QStringList objects are used as values. The "
-#| "frontend will be able to read and display the keys and values and be "
-#| "simple to use just like a one-dimensional array. It should look similar "
-#| "to a QML ListModel."
 msgid ""
 "We will create a class that contains a [QMap](https://doc.qt.io/qt-6/qmap."
 "html), where a [QString](https://doc.qt.io/qt-6/qstring.html) is used as a "
@@ -1867,52 +1905,40 @@ msgid ""
 "values and be simple to use just like a one-dimensional array. It should "
 "look similar to a QML ListModel."
 msgstr ""
-"I den här handledningen skapar vi en klass som innehåller en QMap, där en "
-"QString används som nyckel och ett QStringList-objekt används som värde. "
-"Gränssnittet kan läsa och visa nycklar och värden och vara enkelt att "
-"använda precis som ett endimensionellt fält. Det liknar en ListModel i QML."
+"I den här handledningen skapar vi en klass som innehåller en [QMap](https://"
+"doc.qt.io/qt-6/qmap.html), där en [QString](https://doc.qt.io/qt-6/qstring."
+"html) används som nyckel och ett [QStringList](https://doc.qt.io/qt-6/"
+"qstringlist.html)-objekt används som värde. Gränssnittet kan läsa och visa "
+"nycklar och värden och vara enkelt att använda precis som ett "
+"endimensionellt fält. Det liknar en ListModel i QML."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:86
-#, fuzzy
-#| msgid ""
-#| "To do this, we need to declare a class that inherits from "
-#| "[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Let's also add "
-#| "in some add data to the QMap. These declarations will be located in "
-#| "`model.h`."
 msgid ""
 "To do this, we need to create a class that inherits from [QAbstractListModel]"
 "(docs:qtcore;qabstractlistmodel.html). Let's also add some data to the QMap. "
 "These declarations will be located in `model.h`."
 msgstr ""
-"För att göra det måste vi deklarera en klass som ärver från "
-"[QAbstractListModel](docs:qtcore;qabstractlistmodel.html). Låt oss också "
-"lägga till lite data i vår QMap. Deklarationerna finnas i `model.h`."
+"För att göra det måste vi skapa en klass som ärver från [QAbstractListModel]"
+"(docs:qtcore;qabstractlistmodel.html). Låt oss också lägga till lite data i "
+"vår QMap. Deklarationerna finnas i `model.h`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:91
 msgid ""
 "Create two new files, `src/components/model.h` and `src/components/model."
 "cpp`."
 msgstr ""
+"Skapa två nya filer, `src/components/model.h` och `src/components/model.cpp`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:93
-#, fuzzy
-#| msgid "src/components/CMakeLists.txt"
 msgid "Add those two new files to `src/components/CMakeLists.txt`:"
-msgstr "src/components/CMakeLists.txt"
+msgstr "Lägg till de två nya filerna i `src/components/CMakeLists.txt`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:97
-#, fuzzy
-#| msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
 msgid "Add the following as the initial contents to `src/components/model.h`:"
-msgstr "Lägg till följande i slutet på `~/.config/kde-builder.yaml`:"
+msgstr ""
+"Lägg till följande som det initiala innehållet i `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:101
-#, fuzzy
-#| msgid ""
-#| "Of course, we can't just display this class as is. We also need to tell "
-#| "QML on how to represent this data in the class. We can do this by "
-#| "overriding three virtual functions that are essential at doing this, all "
-#| "of which do their own tasks."
 msgid ""
 "Of course, we can't just display this class as is. We also need to tell QML "
 "how to represent this data in the class. We can do this by overriding three "
@@ -1920,47 +1946,36 @@ msgid ""
 msgstr ""
 "Naturligtvis kan vi inte bara visa klassen som den är. Vi måste också tala "
 "om för QML hur man representerar data i klassen. Vi kan göra det genom att "
-"överskrida tre virtuella funktioner som är viktiga för att göra det, vilka "
-"alla har sina egna uppgifter."
+"överskrida tre väsentliga virtuella funktioner:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:105
-#, fuzzy
-#| msgid ""
-#| "`rowCount()` - Think of this function as a way to tell QML how many items "
-#| "are in the model to represent."
 msgid ""
 "[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) - "
 "Think of this function as a way to tell QML how many items the model should "
 "present."
 msgstr ""
-"`rowCount()`: Se den här funktionen som ett sätt att tala om för QML hur "
-"många objekt som ska representeras i modellen."
+"[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount): Se "
+"den här funktionen som ett sätt att tala om för QML hur många objekt som "
+"modellen ska representera."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:107
-#, fuzzy
-#| msgid ""
-#| "`roleNames()` - You can think of role names as property names attached to "
-#| "data in QML. This function allows you to create those roles."
 msgid ""
 "[roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames) - "
 "You can think of role names as property names attached to data in QML. This "
 "function allows you to create those roles."
 msgstr ""
-"`roleNames()`: Du kan tänka på rollnamn som egenskapsnamn kopplade till data "
-"i QML. Funktionen låter dig skapa dessa roller."
+"[roleNames()](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames): Du "
+"kan tänka på rollnamn som egenskapsnamn kopplade till data i QML. Funktionen "
+"låter dig skapa dessa roller."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:110
-#, fuzzy
-#| msgid ""
-#| "`data()` - This function is called when you want to retrieve the data "
-#| "that corresponds to the role names from the model."
 msgid ""
 "[data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data) - This "
 "function is called when you want to retrieve the data that corresponds to "
 "the role names from the model."
 msgstr ""
-"`data()`: Funktionen anropas när man vill hämta data som motsvarar "
-"rollnamnen från modellen."
+"[data()](https://doc.qt.io/qt-6/qabstractitemmodel.html#data): Funktionen "
+"anropas när man vill hämta data som motsvarar rollnamnen från modellen."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:114
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:122
@@ -2022,42 +2037,30 @@ msgid "Overriding and Implementing `rowCount()`"
 msgstr "Överskrida och implementera `rowCount()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:133
-#, fuzzy
-#| msgid ""
-#| "Let's override the function in the header file. The `rowCount()` comes "
-#| "with its own parameter, but will not be used in this example and is "
-#| "excluded."
 msgid ""
 "Let's override the function in the `src/components/model.h` header file. The "
 "[rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount) "
 "function comes with its own parameter, but it will not be used in this "
 "example and so doesn't need to be named."
 msgstr ""
-"Låt oss överskrida funktionen i deklarationsfilen. `rowCount()` har sin egen "
-"parameter, men användas inte i det här exemplet och exkluderas."
+"Låt oss överskrida funktionen i deklarationsfilen. `src/components/model.h`. "
+"Funktionen [rowCount()](https://doc.qt.io/qt-6/qabstractitemmodel."
+"html#rowCount) har sin egen parameter, men den användas inte i det här "
+"exemplet och behöver inte nämnas."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:138
-#, fuzzy
-#| msgid "Then, let's declare how many rows are in this model in `model.cpp`."
 msgid ""
 "Then, let's declare how many rows are in this model in `src/components/model."
 "cpp`:"
 msgstr ""
-"Låt oss därefter deklarera hur många rader som finns i modellen i `model."
-"cpp`."
+"Låt oss därefter deklarera hur många rader som finns i modellen i `src/"
+"components/model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:142
 msgid "Overriding and Implementing `roleNames()`"
 msgstr "Överskrida och implementera `roleNames()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:144
-#, fuzzy
-#| msgid ""
-#| "Before we override `roleNames()`, we need to declare what the roles are "
-#| "in the C++ side using an public `enum` variable. The reason for this is "
-#| "because these values from the `enum` variable are passed into `data()` "
-#| "every time QML accesses a corresponding role, and as such we can make "
-#| "`data()` return what we want."
 msgid ""
 "Before we override `roleNames()`, we need to declare what the roles are in "
 "the C++ side using a public enum. The reason for this is because these enum "
@@ -2065,29 +2068,20 @@ msgid ""
 "role, and as such we can make `data()` return what we want."
 msgstr ""
 "Innan vi överskrider `roleNames()` måste vi deklarera vad rollerna är på C++ "
-"sidan med hjälp av en öppen `enum`. Anledningen till det är att värdena från "
-"variabeln `enum` skickas till `data()` varje gång QML hämtar en motsvarande "
-"roll, och på så sätt kan vi få `data()` att returnera vad vi vill."
+"sidan med hjälp av en öppen `enum`. Anledningen till det är att "
+"uppräkningsvärdena skickas till `data()` varje gång QML hämtar en "
+"motsvarande roll, och på så sätt kan vi få `data()` att returnera vad vi "
+"vill."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:150
-#, fuzzy
-#| msgid ""
-#| "Let's begin with creating the `enum` variable for roles, where each value "
-#| "is a role for the C++ side."
 msgid ""
 "Let's begin with creating the enum for roles in `src/components/model.h`, "
 "where each value is a role for the C++ side."
 msgstr ""
-"Låt oss börja med att skapa variabeln `enum` för roller, där varje värde är "
-"en roll för C++ sidan."
+"Låt oss börja med att skapa uppräkningsvärden för roller `src/components/"
+"model.h`, där varje värde är en roll för C++ sidan."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:155
-#, fuzzy
-#| msgid ""
-#| "Once we have that settled, we can finally create what these roles are in "
-#| "the QML side using a [QHash](docs:qtcore;qhash.html) where the keys are "
-#| "the enumerated values paired with [QByteArrays](docs:qtcore;qbytearray."
-#| "html). The text in the QByteArray is what's used in the actual QML code."
 msgid ""
 "Once we have that settled, we can finally create what these roles are in the "
 "QML side using a [QHash](docs:qtcore;qhash.html) where the keys are the "
@@ -2098,7 +2092,8 @@ msgstr ""
 "När vi väl har löst det kan vi äntligen skapa vad rollerna är på QML-sidan "
 "med hjälp av  [QHash](docs:qtcore;qhash.html) där nycklarna är "
 "uppräkningsvärdena parade med [QByteArrays](docs:qtcore;qbytearray .html). "
-"Texten i QByteArray är vad som används i den faktiska QML-koden."
+"Det ska finnas i `src/components/model.cpp`. Texten i QByteArray är vad som "
+"används i den faktiska QML-koden."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:162
 msgid ""
@@ -2115,33 +2110,18 @@ msgid "Overriding and Implementing `data()`"
 msgstr "Överskrida och implementera `data()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:169
-#, fuzzy
-#| msgid ""
-#| "There are two parameters that are passed in `data()`: `index` and `role`. "
-#| "`index` is the location of where the data is when being delegated. As "
-#| "previously stated, `role` is used by QML to get specific data returned "
-#| "when it's accessing a role."
 msgid ""
 "There are two parameters that are passed to `data()`: `index` and `role`. "
 "The `index` is the position of the data in the model. As previously stated, "
 "`role` is used by QML to get specific data returned when it's accessing a "
 "role."
 msgstr ""
-"Det finns två parametrar som skickas med `data()`: `index` och `role`. "
-"\"index\" är platsen där data finns vid delegering. Som tidigare nämnts "
+"Det finns två parametrar som skickas till `data()`: `index` och `role`. "
+"\"index\" är positionen där data finns i modellen. Som tidigare nämnts "
 "används `role` av QML för att få specifik data returnerad när en roll "
 "används."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:174
-#, fuzzy
-#| msgid ""
-#| "In `data()`, we can use a `switch` statement to return the appropriate "
-#| "data and data type depending on the role, which is possible as `data()` "
-#| "returns a [QVariant](docs:qtcore;qvariant.html). We still need to make "
-#| "sure we get the appropriate location of the data, though. In this example "
-#| "below, you can see that a new iterator variable is being declared, which "
-#| "is set from the beginning of the list plus the row of the index and the "
-#| "data that the iterator is pointing to is what is being returned."
 msgid ""
 "In `data()`, we can use a switch statement to return the appropriate data "
 "and data type depending on the role, which is possible as `data()` returns a "
@@ -2159,12 +2139,6 @@ msgstr ""
 "data som variabeln pekar på är det som returneras."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:182
-#, fuzzy
-#| msgid ""
-#| "We can't just return whatever data we want though. We may be trying to "
-#| "bind data to a property with an incompatible data type, such as a "
-#| "QStringList to a QString. You may have to do data conversion in order for "
-#| "the data to be displayed properly."
 msgid ""
 "We can't just return whatever data we want though. We may be trying to bind "
 "data to a property with an incompatible data type, such as a QStringList to "
@@ -2175,15 +2149,16 @@ msgstr ""
 "Vi kan dock inte bara returnera vilken data vi vill. Vi kanske försöker "
 "koppla data till en egenskap med en inkompatibel datatyp, till exempel en "
 "QStringList till en QString. Man kan behöva göra datakonvertering för att "
-"data ska visas korrekt."
+"data ska visas korrekt. För det skapar vi en ny privat, statisk funktion vid "
+"namn `formatList()`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:187
 msgid "This results in the following code in `src/components/model.cpp`:"
-msgstr ""
+msgstr "Det resulterar i följande kod i `src/components/model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:191
 msgid "And the following code in `src/components/model.h`:"
-msgstr ""
+msgstr "Och följande kod i `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:195
 msgid "Class Usage in QML"
@@ -2210,6 +2185,8 @@ msgid ""
 "A screenshot of the C++ models in QML page showing a list of characters "
 "organized per species"
 msgstr ""
+"En skärmbild av C++ modellerna på QML-sidan som visar en lista med tecken "
+"organiserade per typ"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:208
 msgid "Data Modification"
@@ -2220,14 +2197,6 @@ msgid "Editing Data Using `dataChanged()` and `setData()`"
 msgstr "Redigera genom att använda `dataChanged()` och `setData()`"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:212
-#, fuzzy
-#| msgid ""
-#| "You may encounter a situation where you want to modify data in the model, "
-#| "and have the changes reflected on the frontend side. Every time we change "
-#| "data in the model, we must emit the `dataChanged()` signal which will "
-#| "apply those changes on the frontend side at the specific cells specified "
-#| "in its arguments. In this tutorial, we can just use the `index` argument "
-#| "of `setData()`."
 msgid ""
 "You may encounter a situation where you want to modify data in the model, "
 "and have the changes reflected on the frontend side. Every time we change "
@@ -2241,23 +2210,19 @@ msgstr ""
 "modellen måste vi skicka signalen `dataChanged()` som verkställer "
 "ändringarna på gränssnittssidan för de specifika cellerna som anges i dess "
 "argument. I den här handledningen kan vi bara använda argumentet `index` i "
-"`setData()`."
+"[setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:218
-#, fuzzy
-#| msgid ""
-#| "`setData()` is a virtual function you can override so that attempting to "
-#| "modify the data from the frontend side automatically reflects those "
-#| "changes on the backend side. It requires three parameters:"
 msgid ""
 "[setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData) is a "
 "virtual function you can override so that modifying the data from the "
 "frontend side automatically reflects those changes on the backend side. It "
 "requires three parameters:"
 msgstr ""
-"`setData()` är en virtuell funktion som går att överskrida så att försök att "
-"modifiera data från gränssnittssidan automatiskt återspeglar ändringarna på "
-"bakgrundssidan. Det kräver tre parametrar:"
+"[setData()](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData) är en "
+"virtuell funktion som går att överskrida så att modifiera data från "
+"gränssnittssidan automatiskt återspeglar ändringarna på bakgrundssidan. Det "
+"kräver tre parametrar:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:222
 msgid "`index` - The location of the data."
@@ -2268,17 +2233,14 @@ msgid "`value` - The contents of the new data."
 msgstr "`value`: Det nya datainnehållet."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:224
-#, fuzzy
-#| msgid ""
-#| "`role` - In this context, the role here is used to tell views how they "
-#| "should handle data. The role here should be `Qt::EditRole`."
 msgid ""
 "`role` - In this context, the role here is used to tell views how they "
 "should handle data. The role here should be [Qt::EditRole](https://doc.qt.io/"
 "qt-6/qt.html#ItemDataRole-enum)."
 msgstr ""
 "`role`: I det här sammanhang används rollen för att tala om för vyer hur de "
-"ska hantera data. Rollen ska vara `Qt::EditRole` här."
+"ska hantera data. Rollen ska vara [Qt::EditRole](https://doc.qt.io/qt-6/qt."
+"html#ItemDataRole-enum) här."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:227
 msgid ""
@@ -2293,46 +2255,36 @@ msgstr ""
 "`value`."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:236
-#, fuzzy
-#| msgid ""
-#| "`setData()` does not automatically emit `dataChanged()` and that still "
-#| "has to be done manually."
 msgid ""
 "`setData()` does not automatically emit [dataChanged()](https://doc.qt.io/"
 "qt-6/qabstractitemmodel.html#dataChanged) and that has to be done manually."
 msgstr ""
-"`setData()` skickar inte automatiskt `dataChanged()` så det måste "
-"fortfarande göras manuellt."
+"`setData()` skickar inte automatiskt [dataChanged()](https://doc.qt.io/qt-6/"
+"qabstractitemmodel.html#dataChanged) så det måste fortfarande göras manuellt."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:241
 msgid "With the corresponding addition in `src/components/model.h`:"
-msgstr ""
+msgstr "Med motsvarande tillägg i `src/components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:245
-#, fuzzy
-#| msgid ""
-#| "Let's update the QML code so that we can open up a prompt that allows us "
-#| "to edit the model using a Controls.Button attached to the cards."
 msgid ""
 "Let's update the QML code so that we can open up a prompt that allows us to "
 "edit the model using a [Controls.Button](https://doc.qt.io/qt-6/qml-qtquick-"
 "controls-button.html) attached to the cards."
 msgstr ""
 "Låt oss uppdatera QML-koden så att vi kan öppna en prompt som låter oss "
-"redigera modellen med hjälp av en Controls.Button kopplad till korten."
+"redigera modellen med hjälp av en [Controls.Button](https://doc.qt.io/qt-6/"
+"qml-qtquick-controls-button.html) kopplad till korten."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:248
-#, fuzzy
-#| msgid ""
-#| "A standard Kirigami.Dialog is used to create custom dialogs. They are "
-#| "very easy to extend:"
 msgid ""
 "Add the following [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-"
 "kirigami-dialogs-promptdialog.html) to the `src/components/ModelsPage.qml`, "
 "together with a new edit button:"
 msgstr ""
-"En vanlig Kirigami.Dialog används för att skapa egna dialogrutor. De är "
-"mycket lätta att utöka:"
+"Lägg till följande [Kirigami.PromptDialog](https://api.kde.org/qml-org-kde-"
+"kirigami-dialogs-promptdialog.html) i `src/components/ModelsPage.qml`, "
+"tillsammans med en ny redigeringsknapp:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:252
 msgid ""
@@ -2369,33 +2321,18 @@ msgstr ""
 "skapa en ny metod som kan anropas på QML-sidan för att utföra uppgiften."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:279
-#, fuzzy
-#| msgid ""
-#| "To make the method visible in QML, we must use the Q_OBJECT macro in the "
-#| "class, and begin the method declaration with the Q_INVOKABLE macro. This "
-#| "method will also include a string parameter, which is intended to be the "
-#| "new key in the QMap."
 msgid ""
 "To make the method visible in QML, we must begin the method declaration with "
 "the [Q_INVOKABLE](https://doc.qt.io/qt-6/qobject.html#Q_INVOKABLE) macro. "
 "This method will also include a string parameter, which is intended to be "
 "the new key in the QMap."
 msgstr ""
-"För att göra metoden synlig i QML måste vi använda makrot Q_OBJECT i klassen "
-"och börja metoddeklarationen med makrot Q_INVOKABLE. Metoden inkluderar "
-"också en strängparameter, som är avsedd att vara den nya nyckeln i QMap."
+"För att göra metoden synlig i QML måste vi börja metoddeklarationen med "
+"makrot [Q_INVOKABLE](https://doc.qt.io/qt-6/qobject.html#Q_INVOKABLE). "
+"Metoden inkluderar också en strängparameter, som är avsedd att vara den nya "
+"nyckeln i QMap."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:285
-#, fuzzy
-#| msgid ""
-#| "Inside of this method, we need to tell Qt that we want to create more "
-#| "rows in the model. This is done by calling `beginInsertRows()` to begin "
-#| "our row adding operation, followed by inserting whatever we need, then "
-#| "use `endInsertRows()` to end the operation. We still need to emit "
-#| "`dataChanged()` at the end, however. This time, we are going to update "
-#| "all rows, from the first row to the last one as the QMap may "
-#| "alphabetically reorganize itself, and we need to catch that across all "
-#| "rows."
 msgid ""
 "Inside of this method, we need to tell Qt that we want to create more rows "
 "in the model. This is done by calling [beginInsertRows()](https://doc.qt.io/"
@@ -2408,12 +2345,15 @@ msgid ""
 "alphabetically reorganize itself, and we need to catch that across all rows."
 msgstr ""
 "Inne i metoden måste vi tala om för Qt att vi vill skapa flera rader i "
-"modellen. Det görs genom att anropa `beginInsertRows()` för att påbörja vår "
-"operation för att lägga till rader, följt av att infoga det vi behöver, och "
-"sedan använda `endInsertRows()` för att avsluta operationen. Vi behöver dock "
-"fortfarande skicka `dataChanged()` i slutet. Den här gången uppdaterar vi "
-"alla rader, från den första raden till den sista eftersom QMap kan ordna om "
-"sig själv alfabetiskt, och vi måste hantera det för alla rader."
+"modellen. Det görs genom att anropa [beginInsertRows()](https://doc.qt.io/"
+"qt-6/qabstractitemmodel.html#beginInsertRows) för att påbörja vår operation "
+"för att lägga till rader, följt av att infoga det vi behöver, och sedan "
+"använda [endInsertRows()](https://doc.qt.io/qt-6/qabstractitemmodel."
+"html#endInsertRows) för att avsluta operationen. Vi behöver dock fortfarande "
+"skicka [dataChanged()](https://doc.qt.io/qt-6/qabstractitemmodel."
+"html#dataChanged) i slutet. Den här gången uppdaterar vi alla rader, från "
+"den första raden till den sista eftersom QMap kan ordna om sig själv "
+"alfabetiskt, och vi måste hantera det för alla rader."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:293
 msgid ""
@@ -2492,23 +2432,22 @@ msgid ""
 "Add a new Q_INVOKABLE function named `deleteSpecies()` in `src/components/"
 "model.h`:"
 msgstr ""
+"Lägg till en ny Q_INVOKABLE funktion kallad `deleteSpecies()` i `src/"
+"components/model.h`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:345
 msgid "With a matching implementation in `src/components/model.cpp`:"
-msgstr ""
+msgstr "Med en matchande implementering i `src/components/model.cpp`:"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:349
-#, fuzzy
-#| msgid ""
-#| "Now, let's update the application so a \"Delete\" button appears "
-#| "alongside the edit button, and hook it up to our delete method."
 msgid ""
 "Now, let's update the application so a \"Delete\" button appears in a "
 "RowLayout alongside the edit button inside our AbstractCard, and hook it up "
 "to our delete method."
 msgstr ""
-"Låt oss nu uppdatera programmet så att knappen \"Ta bort\" visas bredvid "
-"redigeringsknappen och koppla upp den till vår borttagningsmetod."
+"Låt oss nu uppdatera programmet så att knappen \"Ta bort\" visas i en "
+"RowLayout bredvid redigeringsknappen inne i vårt AbstractCard, och koppla "
+"upp den till vår borttagningsmetod."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:358
 msgid "![app_screenshot_del_1.png](app_screenshot_del_1.png)"
@@ -2654,11 +2593,6 @@ msgstr ""
 "måste vi göra tre saker:"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:29
-#, fuzzy
-#| msgid ""
-#| "initialize the theming facilities of [KIconThemes](https://invent.kde.org/"
-#| "frameworks/kiconthemes) on platforms where icon themes aren't part of the "
-#| "system (like Windows or MacOS) with `KIconTheme::initTheme()`"
 msgid ""
 "initialize the theming facilities of [KIconThemes](https://invent.kde.org/"
 "frameworks/kiconthemes) on platforms where icon themes aren't part of the "
@@ -2667,7 +2601,8 @@ msgid ""
 msgstr ""
 "initiera temafunktionerna i [KIconThemes](https://invent.kde.org/frameworks/"
 "kiconthemes) på plattformar där ikonteman inte är en del av systemet (som "
-"Windows eller MacOS) med `KIconTheme::initTheme()`"
+"Windows eller MacOS) med [KIconTheme::initTheme()](https://api.kde.org/"
+"kicontheme.html#initTheme)"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:30
 msgid ""
@@ -2690,14 +2625,6 @@ msgstr ""
 "desktop-style)"
 
 #: content/docs/getting-started/kirigami/advanced-maincpp/index.md:33
-#, fuzzy
-#| msgid ""
-#| "The call to `KIconTheme::initTheme()` needs to be done before creating "
-#| "the QApplication and lets the app find Breeze icons to use. Setting the "
-#| "QStyle to Breeze is needed because we used QApplication for our app "
-#| "instead of [QGuiApplication](docs:qtgui;QGuiApplication). Actual "
-#| "interface controls in the window like buttons and checkboxes will follow "
-#| "Breeze by using `qqc2-desktop-style`."
 msgid ""
 "The call to [KIconTheme::initTheme()](https://api.kde.org/kicontheme."
 "html#initTheme) needs to be done before creating the QApplication and lets "
@@ -2706,10 +2633,11 @@ msgid ""
 "qtgui;QGuiApplication). Actual interface controls in the window like buttons "
 "and checkboxes will follow Breeze by using `qqc2-desktop-style`."
 msgstr ""
-"Anropet till `KIconTheme::initTheme()` måste göras innan QApplication skapas "
-"och låter programmet hitta Breeze-ikoner att använda. Att ställa in QStyle "
-"till Breeze behövs eftersom vi använde QApplication för vårt program "
-"istället för [QGuiApplication](docs:qtgui;QGuiApplication). De verkliga "
+"Anropet till [KIconTheme::initTheme()](https://api.kde.org/kicontheme."
+"html#initTheme) måste göras innan QApplication skapas och låter programmet "
+"hitta Breeze-ikoner att använda. Att ställa in QStyle till Breeze behövs "
+"eftersom vi använde QApplication för vårt program istället för "
+"[QGuiApplication](docs:qtgui;QGuiApplication). De verkliga "
 "gränssnittsobjekten i fönstret som knappar och kryssrutor följer Breeze "
 "genom att använda `qqc2-desktop-style`."
 
@@ -3067,12 +2995,6 @@ msgstr ""
 "separatefiles)."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:86
-#, fuzzy
-#| msgid ""
-#| "These are additions provided by extra-cmake-modules to make the use of "
-#| "[Qt declarative registration](https://doc.qt.io/qt-6.7/cmake-build-qml-"
-#| "application.html) (the [replacement to Qt resource files](https://doc.qt."
-#| "io/qt-5/resources.html)) easier."
 msgid ""
 "These are additions provided by extra-cmake-modules to make the use of [Qt "
 "declarative registration](https://doc.qt.io/qt-6.7/cmake-build-qml-"
@@ -3082,7 +3004,7 @@ msgstr ""
 "De är tillägg som tillhandahålls av extra-cmake-modules för att göra "
 "användning av [Qt deklarativ registrering](https://doc.qt.io/qt-6.7/cmake-"
 "build-qml-application.html) ([ersättning av Qt:s resursfiler](https://doc.qt."
-"io/qt-5/resources.html)) enklare."
+"io/qt-6/resources.html)) enklare."
 
 #: content/docs/getting-started/kirigami/advanced-understanding_cmakelists/index.md:90
 msgid ""
@@ -3328,14 +3250,6 @@ msgstr ""
 "möjligheten att nästla åtgärder."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:66
-#, fuzzy
-#| msgid ""
-#| "Another feature of Kirigami Actions is to provide various hints to items "
-#| "using actions about how they should display the action. These are "
-#| "primarily handled by the [displayHint](https://api-staging.kde.org/qml-"
-#| "org-kde-kirigami-action.html#displayHint-prop) and [displayComponent]"
-#| "(https://api-staging.kde.org/qml-org-kde-kirigami-action."
-#| "html#displayComponent-prop) properties."
 msgid ""
 "Another feature of Kirigami Actions is to provide various hints to items "
 "using actions about how they should display the action. These are primarily "
@@ -3345,9 +3259,9 @@ msgid ""
 msgstr ""
 "En annan funktion för åtgärder i Kirigami är att tillhandahålla olika tips "
 "för objekt som använder åtgärder om hur de ska visa åtgärden. De hanteras i "
-"huvudsak av egenskaperna [displayHint](https://api-staging.kde.org/qml-org-"
-"kde-kirigami-action.html#displayHint-prop) och [displayComponent](https://"
-"api-staging.kde.org/qml-org-kde-kirigami-action.html#displayComponent-prop) ."
+"huvudsak av egenskaperna [displayHint](https://api.kde.org/qml-org-kde-"
+"kirigami-action.html#displayHint-prop) och [displayComponent](https://api."
+"kde.org/qml-org-kde-kirigami-action.html#displayComponent-prop) ."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:70
 msgid ""
@@ -3481,12 +3395,6 @@ msgid "![Search field with text: \"I want ](searchfield.webp)"
 msgstr "![Sökfält med text: \"I want ](searchfield.webp)"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:192
-#, fuzzy
-#| msgid ""
-#| "You should rarely use an ActionTextField directly. [SearchField](docs:"
-#| "kirigami;org.kde.kirigami.SearchField) and [PasswordField](docs:kirigami;"
-#| "org.kde.kirigami.PasswordField) both inherit from `ActionTextField` and "
-#| "are likely to cover your desired use-case."
 msgid ""
 "You should rarely use an ActionTextField directly. [SearchField](docs:"
 "kirigami;org.kde.kirigami.SearchField) and [PasswordField](docs:kirigami;org."
@@ -3496,8 +3404,9 @@ msgid ""
 msgstr ""
 "Du måste sällan använda ActionTextField direkt. [SearchField](docs:kirigami;"
 "org.kde.kirigami.SearchField) och [PasswordField](docs:kirigami;org.kde."
-"kirigami.PasswordField) ärver båda från `ActionTextField` och täcker "
-"troligen önskat användarfall."
+"kirigami.PasswordField) ärver båda från [ActionTextField](https://api.kde."
+"org/qml-org-kde-kirigami-actiontextfield.html) och täcker troligen önskat "
+"användarfall."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:196
 msgid "SwipeListItem"
@@ -3578,11 +3487,6 @@ msgid "Cards"
 msgstr "Kort"
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:268
-#, fuzzy
-#| msgid ""
-#| "A [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card) is used to display "
-#| "a collection of information or actions together. These actions can be "
-#| "added to the `actions` group, similarly to previous components."
 msgid ""
 "A [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card) is used to display a "
 "collection of information or actions together. These actions can be added to "
@@ -3591,7 +3495,8 @@ msgid ""
 msgstr ""
 "En [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card) används för att visa "
 "en samling av information eller åtgärder tillsammans. Åtgärderna kan läggas "
-"till i gruppen `actions`, på liknande sätt som för tidigare komponenter."
+"till i gruppen [actions](https://api.kde.org/qml-org-kde-kirigami-card."
+"html#actions-prop), på liknande sätt som för tidigare komponenter."
 
 #: content/docs/getting-started/kirigami/components-actions/index.md:304
 msgid ""
@@ -3676,13 +3581,6 @@ msgstr ""
 "sidan och låta den sprida sig på bredden."
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:24
-#, fuzzy
-#| msgid ""
-#| "Like most other action-holding components, [Kirigami.ActionToolBar](docs:"
-#| "kirigami;org.kde.kirigami.ActionToolBar) has an [actions](https://api-"
-#| "staging.kde.org/qml-org-kde-kirigami-actiontoolbar.html#actions-prop) "
-#| "property. We can assign an array of [Kirigami.Action](docs:kirigami;org."
-#| "kde.kirigami.Action) components to this property."
 msgid ""
 "Like most other action-holding components, [Kirigami.ActionToolBar](docs:"
 "kirigami;org.kde.kirigami.ActionToolBar) has an [actions](https://api.kde."
@@ -3692,7 +3590,7 @@ msgid ""
 msgstr ""
 "Liksom de flesta andra komponenter som innehåller åtgärder, har  [Kirigami."
 "ActionToolBar](docs:kirigami;org.kde.kirigami.ActionToolBar) egenskapen "
-"[actions](https://api-staging.kde.org/qml-org-kde-kirigami-actiontoolbar."
+"[actions](https://api.kde.org/qml-org-kde-kirigami-actiontoolbar."
 "html#actions-prop). Vi kan tilldela ett fält av [Kirigami.Action](docs:"
 "kirigami;org.kde.kirigami.Action) komponenter till egenskapen."
 
@@ -3709,16 +3607,6 @@ msgid "Alignment"
 msgstr "Justering"
 
 #: content/docs/getting-started/kirigami/components-actiontoolbar/index.md:85
-#, fuzzy
-#| msgid ""
-#| "By default, actions in the [Kirigami.ActionToolBar](docs:kirigami;org.kde."
-#| "kirigami.ActionToolBar) will be left aligned. This might not be desirable "
-#| "in all situations. Thankfully we can change this with the [alignment]"
-#| "(https://api-staging.kde.org/qml-org-kde-kirigami-actiontoolbar."
-#| "html#alignment-prop) property. We can set this property to a range of "
-#| "values, but the three most relevant ones are `Qt.AlignLeft`, `Qt."
-#| "AlignCenter`, and `Qt.AlignRight` (which deal with [horizontal alignment]"
-#| "(docs:qtcore;Qt::Alignment))."
 msgid ""
 "By default, actions in the [Kirigami.ActionToolBar](docs:kirigami;org.kde."
 "kirigami.ActionToolBar) will be left aligned. This might not be desirable in "
@@ -3731,9 +3619,9 @@ msgstr ""
 "Normalt är åtgärder i en [Kirigami.ActionToolBar](docs:kirigami;org.kde."
 "kirigami.ActionToolBar) vänsterjusterade. Det kanske inte är önskvärt i alla "
 "situationer. Som tur är kan vi ändra det med egenskapen [alignment](https://"
-"api-staging.kde.org/qml-org-kde-kirigami-actiontoolbar.html#alignment-prop). "
-"Vi kan ställa in egenskapen till ett intervall av olika värden, men de tre "
-"mest relevanta för ActionToolBar är `Qt.AlignLeft`, `Qt.AlignCenter` och `Qt."
+"api.kde.org/qml-org-kde-kirigami-actiontoolbar.html#alignment-prop). Vi kan "
+"ställa in egenskapen till ett intervall av olika värden, men de tre mest "
+"relevanta för ActionToolBar är `Qt.AlignLeft`, `Qt.AlignCenter` och `Qt."
 "AlignRight` (som hanterar [horisontell justering](docs:qtcore;Qt::"
 "Alignment))."
 
@@ -3785,18 +3673,6 @@ msgid "AbstractCard"
 msgstr "AbstractCard"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:17
-#, fuzzy
-#| msgid ""
-#| "A [Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) is "
-#| "the simplest type of card. It's just a rectangle with a shadow, which can "
-#| "contain any [Item](docs:qtquick;QtQuick.Item) in it. It can also have "
-#| "Items assigned to its [header](https://api-staging.kde.org/qml-org-kde-"
-#| "kirigami-abstractcard.html#header-prop) or [footer](https://api-staging."
-#| "kde.org/qml-org-kde-kirigami-abstractcard.html#footer-prop) properties. "
-#| "In this case a [Kirigami.Heading](docs:kirigami;org.kde.kirigami.Heading) "
-#| "is its `header` and a [Controls.Label](docs:qtquickcontrols;QtQuick."
-#| "Controls.Label) is the card's [contentItem](https://doc.qt.io/Qt-6/qml-"
-#| "qtquick-controls-control.html#contentItem-prop)."
 msgid ""
 "A [Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) is "
 "the simplest type of card. It's just a rectangle with a shadow, which can "
@@ -3812,13 +3688,13 @@ msgstr ""
 "Ett [Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) är "
 "den enklaste sortens kort. Det är bara en rektangel med en skugga, som kan "
 "innehålla vilket [objekt](docs:qtquick;QtQuick.Item) som helst. Det kan "
-"också ha objekt tilldelade till dess [header](https://api-staging.kde.org/"
-"qml-org-kde-kirigami-abstractcard.html#header-prop) eller [footer](https://"
-"api-staging.kde.org/qml-org-kde-kirigami-abstractcard.html#footer-prop)  "
-"egenskaper. I detta fall är [Kirigami.Heading](docs:kirigami;org.kde."
-"kirigami.Heading) dess sidhuvud och [Controls.Label](docs:qtquickcontrols;"
-"QtQuick.Controls.Label) är kortets [contentItem](https://doc.qt.io/Qt-6/qml-"
-"qtquick-controls-control.html#contentItem-prop)."
+"också ha objekt tilldelade till dess [header](https://api.kde.org/qml-org-"
+"kde-kirigami-abstractcard.html#header-prop) eller [footer](https://api.kde."
+"org/qml-org-kde-kirigami-abstractcard.html#footer-prop)  egenskaper. I detta "
+"fall är [Kirigami.Heading](docs:kirigami;org.kde.kirigami.Heading) dess "
+"sidhuvud och [Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) "
+"är kortets [contentItem](https://doc.qt.io/Qt-6/qml-qtquick-controls-control."
+"html#contentItem-prop)."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:41
 msgid ""
@@ -3835,17 +3711,6 @@ msgid "Card"
 msgstr "Card"
 
 #: content/docs/getting-started/kirigami/components-card/index.md:50
-#, fuzzy
-#| msgid ""
-#| "A [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card) inherits from "
-#| "[AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) and provides "
-#| "more features out of the box. Cards inherit the same [header](https://api-"
-#| "staging.kde.org/qml-org-kde-kirigami-abstractcard.html#header-prop) and "
-#| "[footer](https://api-staging.kde.org/qml-org-kde-kirigami-abstractcard."
-#| "html#footer-prop) from an Abstract Card, but you are encouraged to use a "
-#| "[banner](https://api-staging.kde.org/qml-org-kde-kirigami-card."
-#| "html#banner-prop) and a set of [Kirigami.Action](docs:kirigami;org.kde."
-#| "kirigami.Action) in the `actions` group instead."
 msgid ""
 "A [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card) inherits from "
 "[AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) and provides "
@@ -3860,12 +3725,13 @@ msgstr ""
 "Ett [Kirigami.Card](docs:kirigami;org.kde.kirigami.Card) ärver från "
 "[AbstractCard](docs:kirigami;org.kde.kirigami.AbstractCard) och "
 "tillhandahåller fler funktioner från början. Ett kort ärver samma [header]"
-"(https://api-staging.kde.org/qml-org-kde-kirigami-abstractcard.html#header-"
-"prop) and [footer](https://api-staging.kde.org/qml-org-kde-kirigami-"
-"abstractcard.html#footer-prop) från ett abstrakt kort, men du uppmuntras att "
-"använda en [banner](https://api-staging.kde.org/qml-org-kde-kirigami-card."
-"html#banner-prop) och en uppsättning [Kirigami.Action](docs:kirigami;org.kde."
-"kirigami.Action) i gruppen `actions` istället."
+"(https://api.kde.org/qml-org-kde-kirigami-abstractcard.html#header-prop) and "
+"[footer](https://api.kde.org/qml-org-kde-kirigami-abstractcard.html#footer-"
+"prop) från ett abstrakt kort, men du uppmuntras att använda en [banner]"
+"(https://api.kde.org/qml-org-kde-kirigami-card.html#banner-prop) och en "
+"uppsättning [Kirigami.Action](docs:kirigami;org.kde.kirigami.Action) i "
+"gruppen [actions](https://api.kde.org/qml-org-kde-kirigami-card.html#actions-"
+"prop) istället."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:72
 msgid "The title can be positioned in the banner"
@@ -3925,15 +3791,6 @@ msgstr ""
 "columnlayout.html)."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:109
-#, fuzzy
-#| msgid ""
-#| "A card can optionally be oriented horizontally. In this case it will be "
-#| "wider than tall, and is better suited to being placed in a [ColumnLayout]"
-#| "(https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout.html). If you "
-#| "must put it in a [CardsLayout](docs:kirigami;org.kde.kirigami."
-#| "CardsLayout), it will have a [maximumColumns](https://api-staging.kde.org/"
-#| "qml-org-kde-kirigami-cardslayout.html#maximumColumns-prop) of `2` by "
-#| "default."
 msgid ""
 "A card can optionally be oriented horizontally. In this case it will be "
 "wider than tall, and is better suited to being placed in a [ColumnLayout]"
@@ -3946,8 +3803,8 @@ msgstr ""
 "högt, och är bättre ämnat att placeras i en [ColumnLayout](https://doc.qt.io/"
 "qt-6/qml-qtquick-layouts-columnlayout.html). Om du måste placera det i en "
 "[CardsLayout](docs:kirigami;org.kde.kirigami.CardsLayout) har det förvald "
-"[maximumColumns](https://api-staging.kde.org/qml-org-kde-kirigami-"
-"cardslayout.html#maximumColumns-prop) av 2."
+"[maximumColumns](https://api.kde.org/qml-org-kde-kirigami-cardslayout."
+"html#maximumColumns-prop) av 2."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:145
 msgid ""
@@ -3976,15 +3833,6 @@ msgstr ""
 "kirigami.AbstractCard) komponenter."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:155
-#, fuzzy
-#| msgid ""
-#| "A [CardsListView](docs:kirigami;org.kde.kirigami.CardsListView) will "
-#| "stretch child cards to its own width. This component should therefore "
-#| "only be used with cards which will look good at any horizontal size. Use "
-#| "of a [Card](docs:kirigami;org.kde.kirigami.Card) component inside it is "
-#| "discouraged, unless it has [Qt.Horizontal](docs:qtcore;Qt::Orientation) "
-#| "as its [headerOrientation](https://api-staging.kde.org/qml-org-kde-"
-#| "kirigami-abstractcard.html#headerOrientation-prop) property."
 msgid ""
 "A [CardsListView](docs:kirigami;org.kde.kirigami.CardsListView) will stretch "
 "child cards to its own width. This component should therefore only be used "
@@ -3999,8 +3847,8 @@ msgstr ""
 "med kort som ser bra ut med vilken horisontell storlek som helst. Användning "
 "av komponenten [Card](docs:kirigami;org.kde.kirigami.Card) avråds från, om "
 "den inte har [Qt.Horizontal](docs:qtcore;Qt::Orientation) som sin "
-"[headerOrientation](https://api-staging.kde.org/qml-org-kde-kirigami-"
-"abstractcard.html#headerOrientation-prop) egenskap."
+"[headerOrientation](https://api.kde.org/qml-org-kde-kirigami-abstractcard."
+"html#headerOrientation-prop) egenskap."
 
 #: content/docs/getting-started/kirigami/components-card/index.md:167
 msgid "NOTE: never put a Layout as contentItem as it will cause binding loops"
@@ -4055,18 +3903,16 @@ msgid "Quick Start"
 msgstr "Snabbstart"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:18
-#, fuzzy
-#| msgid ""
-#| "Chips can easily be added using the `Kirigami.Chip` component. By "
-#| "assigning a string to its `text` field, we give chips their name."
 msgid ""
 "Chips can easily be added using the [Kirigami.Chip](https://api.kde.org/qml-"
 "org-kde-kirigami-chip.html) component. By assigning a string to its "
 "inherited [AbstractButton.text](https://doc.qt.io/qt-6/qml-qtquick-controls-"
 "abstractbutton.html#text-prop) field, we give chips their name."
 msgstr ""
-"Chips kan enkelt läggas till genom att använda komponenten `Kirigami.Chip`. "
-"Genom att tilldela en sträng till deras fält `text`, ger vi chips sina namn."
+"Chips kan enkelt läggas till genom att använda komponenten  [Kirigami.Chip]"
+"(https://api.kde.org/qml-org-kde-kirigami-chip.html). Genom att tilldela en "
+"sträng till deras ärvda fält [AbstractButton.text](https://doc.qt.io/qt-6/"
+"qml-qtquick-controls-abstractbutton.html#text-prop), ger vi chips sina namn."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:55
 msgid "![Declaring and Displaying Chips](chips_usage.png)"
@@ -4183,13 +4029,6 @@ msgid "Buttons"
 msgstr "Knappar"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:15
-#, fuzzy
-#| msgid ""
-#| "In Kirigami apps, we use buttons from QtQuick Controls. Using them is "
-#| "pretty straightforward: we set the text to the [text](https://doc.qt.io/"
-#| "qt-6/qml-qtquick-controls2-abstractbutton.html#text-prop) property and "
-#| "any action we want it to perform is set to the [onClicked](docs:"
-#| "qtquickcontrols;QtQuick.Controls.AbstractButton::clicked) property."
 msgid ""
 "In Kirigami apps, we use the QtQuick Controls [Button](https://doc.qt.io/"
 "qt-6/qml-qtquick-controls-button.html). Using them is pretty "
@@ -4198,11 +4037,12 @@ msgid ""
 "to perform is set to the [onClicked](docs:qtquickcontrols;QtQuick.Controls."
 "AbstractButton::clicked) property."
 msgstr ""
-"I Kirigami-program använder vi knappar från QtQuick Controls. Att använda "
-"dem är ganska rättframt: vi ställer in texten i egenskapen [text](https://"
-"doc.qt.io/qt-6/qml-qtquick-controls2-abstractbutton.html#text-prop) och alla "
-"åtgärder vi vill utföra ställs in i egenskapen [onClicked](docs:"
-"qtquickcontrols;QtQuick.Controls.AbstractButton::clicked)."
+"I Kirigami-program använder vi knappar från QtQuick Controls [Button]"
+"(https://doc.qt.io/qt-6/qml-qtquick-controls-button.html). Att använda dem "
+"är ganska rättframt: vi ställer in egenskapen [text](https://doc.qt.io/qt-6/"
+"qml-qtquick-controls2-abstractbutton.html#text-prop) och alla åtgärder vi "
+"vill utföra ställs in i egenskapen [onClicked](docs:qtquickcontrols;QtQuick."
+"Controls.AbstractButton::clicked)."
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:50
 msgid ""
@@ -4636,23 +4476,27 @@ msgid ""
 "automatically, allowing user-approved access without requiring manual D-Bus "
 "handling. {{< /alert >}}"
 msgstr ""
+"De kan stängas genom att klicka eller trycka utanför deras område eller "
+"genom att klicka på stängningsknappen i rubriken. {{< alert title="
+"\"Sandboxed environments\" color=\"info\" >}} Det fungerar direkt för alla "
+"Kirigami-dialogrutor i separata miljöer (som Flatpak) via XDG Desktop "
+"Portals. När den körs i separat används lämplig portalgränssnitt "
+"automatiskt, vilket möjliggör användargodkänd åtkomst utan att manuell D-Bus-"
+"hantering krävs. {{< /alert >}}"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:21
 msgid "Dialog"
 msgstr "Dialogruta"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:23
-#, fuzzy
-#| msgid ""
-#| "A standard Kirigami.Dialog is used to create custom dialogs. They are "
-#| "very easy to extend:"
 msgid ""
 "A standard [Kirigami.Dialog](https://api.kde.org/qml-org-kde-kirigami-"
 "dialogs-dialog.html) is used to create custom dialogs. They are very easy to "
 "extend:"
 msgstr ""
-"En vanlig Kirigami.Dialog används för att skapa egna dialogrutor. De är "
-"mycket lätta att utöka:"
+"En vanlig [Kirigami.Dialog](https://api.kde.org/qml-org-kde-kirigami-dialogs-"
+"dialog.html) används för att skapa egna dialogrutor. De är mycket lätta att "
+"utöka:"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:71
 msgid "![Simple dialog containing only text](dialog.webp)"
@@ -4688,12 +4532,6 @@ msgid "![A simple scrollable dialog](scrollabledialog.webp)"
 msgstr "![En enkel rullningsbar dialogruta](scrollabledialog.webp)"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:138
-#, fuzzy
-#| msgid ""
-#| "In most cases however you will likely want to use one of its derived "
-#| "dialog types, [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami."
-#| "dialogs.PromptDialog) or [Kirigami.MenuDialog](docs:;org.kde.kirigami."
-#| "dialogs.MenuDialog)."
 msgid ""
 "In most cases however you will likely want to use one of its derived dialog "
 "types, [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs."
@@ -4702,22 +4540,14 @@ msgid ""
 msgstr ""
 "I de flesta fall vill man dock troligen använda en av de härledda "
 "dialogtyperna, [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami."
-"dialogs.PromptDialog) eller [Kirigami.MenuDialog](docs:;org.kde.kirigami."
-"dialogs.MenuDialog)."
+"dialogs.PromptDialog) eller [Kirigami.MenuDialog](docs:kirigami;org.kde."
+"kirigami.dialogs.MenuDialog)."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:140
 msgid "PromptDialog"
 msgstr "PromptDialog"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:142
-#, fuzzy
-#| msgid ""
-#| "A [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs."
-#| "PromptDialog) is essentially a dialog with a built-in label and default "
-#| "[contentPadding](https://api-staging.kde.org/qml-org-kde-kirigami-dialogs-"
-#| "promptdialog.html#contentPadding-prop) that is used to prompt the user "
-#| "for some information. This type of dialog is supposed to be used only for "
-#| "simple yes/no prompts or brief requests for user input."
 msgid ""
 "A [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs."
 "PromptDialog) is essentially a dialog with a built-in label and default "
@@ -4728,29 +4558,23 @@ msgid ""
 msgstr ""
 "En [Kirigami.PromptDialog](docs:kirigami;org.kde.kirigami.dialogs."
 "PromptDialog) är i huvudsak en dialogruta med en inbyggd beteckning och "
-"normal [contentPadding](https://api-staging.kde.org/qml-org-kde-kirigami-"
-"dialogs-promptdialog.html#contentPadding-prop) som används för att fråga "
-"användaren om viss information. Den här typen av dialogruta är tänkt att "
-"endast användas för enkla ja/nej-uppmaningar eller korta frågor om "
+"normal [contentPadding](https://api.kde.org/qml-org-kde-kirigami-dialogs-"
+"promptdialog.html#contentPadding-prop) som används för att fråga användaren "
+"om viss information. Den här typen av dialogruta är tänkt att endast "
+"användas för enkla ja/nej-uppmaningar eller korta frågor om "
 "användarinmatning."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:144
-#, fuzzy
-#| msgid ""
-#| "Its main property is [Kirigami.Dialog.subtitle](https://api-staging.kde."
-#| "org/qml-org-kde-kirigami-dialogs-promptdialog.html#subtitle-prop), to "
-#| "which you would add text. If any QML component is added as a child of the "
-#| "prompt dialog, that component will take the place of the subtitle instead."
 msgid ""
 "Its main property is [Kirigami.Dialog.subtitle](https://api.kde.org/qml-org-"
 "kde-kirigami-dialogs-promptdialog.html#subtitle-prop), to which you would "
 "add text. If any QML component is added as a child of the prompt dialog, "
 "that component will take the place of the subtitle instead."
 msgstr ""
-"Dess huvudsakliga egenskap är [Kirigami.Dialog.subtitle](https://api-staging."
-"kde.org/qml-org-kde-kirigami-dialogs-promptdialog.html#subtitle-prop), som "
-"man lägger till text med. Om någon QML-komponent läggs till som underordnad "
-"till dialogrutan, ersätter den komponenten istället undertexten."
+"Dess huvudsakliga egenskap är [Kirigami.Dialog.subtitle](https://api.kde.org/"
+"qml-org-kde-kirigami-dialogs-promptdialog.html#subtitle-prop), som man "
+"lägger till text med. Om någon QML-komponent läggs till som underordnad till "
+"dialogrutan, ersätter den komponenten istället undertexten."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:186
 msgid "![A simple prompt dialog containing only text](promptdialog.webp)"
@@ -4766,13 +4590,6 @@ msgid "MenuDialog"
 msgstr "Menydialogruta"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:261
-#, fuzzy
-#| msgid ""
-#| "The [Kirigami.MenuDialog](docs:kirigami;org.kde.kirigami.dialogs."
-#| "MenuDialog) is a specialized dialog that is used to list a selection of "
-#| "clickable options for the user using its [actions](https://api-staging."
-#| "kde.org/qml-org-kde-kirigami-dialogs-menudialog.html#actions-prop) "
-#| "property."
 msgid ""
 "The [Kirigami.MenuDialog](docs:kirigami;org.kde.kirigami.dialogs.MenuDialog) "
 "is a specialized dialog that is used to list a selection of clickable "
@@ -4781,8 +4598,8 @@ msgid ""
 msgstr ""
 "[Kirigami.MenuDialog](docs:kirigami;org.kde.kirigami.dialogs.MenuDialog) är "
 "en specialiserad dialogruta som används för att lista ett urval av klickbara "
-"alternativ för användaren med hjälp av egenskapen [actions](https://api-"
-"staging.kde.org/qml-org-kde-kirigami-dialogs-menudialog.html#actions-prop)."
+"alternativ för användaren med hjälp av egenskapen [actions](https://api.kde."
+"org/qml-org-kde-kirigami-dialogs-menudialog.html#actions-prop)."
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:328
 msgid ""
@@ -4845,14 +4662,6 @@ msgstr ""
 "från höger kant i höger till vänster-läge."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:20
-#, fuzzy
-#| msgid ""
-#| "[Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer) "
-#| "components are what we use to create such drawers. These are set to the "
-#| "[globalDrawer](https://api-staging.kde.org/qml-org-kde-kirigami-"
-#| "abstractapplicationwindow.html#globalDrawer-prop) property of the "
-#| "[Kirigami.ApplicationWindow](docs:kirigami;org.kde.kirigami."
-#| "ApplicationWindow) that forms the basis of our Kirigami application."
 msgid ""
 "[Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer) "
 "components are what we use to create such drawers. These are set to the "
@@ -4863,7 +4672,7 @@ msgid ""
 msgstr ""
 "[Kirigami.GlobalDrawer](docs:kirigami;org.kde.kirigami.GlobalDrawer) "
 "komponenter är vad vi använder för att skapa sådana lådor. De ställs in till "
-"egenskapen [globalDrawer](https://api-staging.kde.org/qml-org-kde-kirigami-"
+"egenskapen [globalDrawer](https://api.kde.org/qml-org-kde-kirigami-"
 "abstractapplicationwindow.html#globalDrawer-prop) från [Kirigami."
 "ApplicationWindow](docs:kirigami;org.kde.kirigami.ApplicationWindow) som "
 "utgör basen för vårt Kirigami-program."
@@ -4877,15 +4686,6 @@ msgstr ""
 "docs/getting-started/kirigami/components-drawers/globaldrawer_simple.webp)"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:75
-#, fuzzy
-#| msgid ""
-#| "The [titleIcon](https://api-staging.kde.org/qml-org-kde-kirigami-"
-#| "globaldrawer.html#titleIcon-prop) property takes names for system-wide "
-#| "icons according to the FreeDesktop specification. These icons and icon "
-#| "names can be viewed with KDE's CuttleFish application which comes with "
-#| "[plasma-sdk](https://invent.kde.org/plasma/plasma-sdk), or by visiting "
-#| "[FreeDesktop's icon naming specification](https://specifications."
-#| "freedesktop.org/icon-naming-spec)."
 msgid ""
 "The [titleIcon](https://api.kde.org/qml-org-kde-kirigami-globaldrawer."
 "html#titleIcon-prop) property takes names for system-wide icons according to "
@@ -4894,13 +4694,13 @@ msgid ""
 "kde.org/plasma/plasma-sdk), or by visiting [FreeDesktop's icon naming "
 "specification](https://specifications.freedesktop.org/icon-naming-spec)."
 msgstr ""
-"Egenskapen [titleIcon](https://api-staging.kde.org/qml-org-kde-kirigami-"
-"globaldrawer.html#titleIcon-prop)  använder namn på systemomfattande ikoner "
-"enligt FreeDesktop-specifikationen. Ikonerna och ikonnamnen kan visas med "
-"KDE:s program CuttleFish som levereras med  [plasma-sdk](https://invent.kde."
-"org/plasma/plasma-sdk), eller genom att besöka [FreeDesktops specifikation "
-"för namngivning av ikoner](https://specifications.freedesktop.org/icon-"
-"naming-spec)."
+"Egenskapen [titleIcon](https://api.kde.org/qml-org-kde-kirigami-globaldrawer."
+"html#titleIcon-prop)  använder namn på systemomfattande ikoner enligt "
+"FreeDesktop-specifikationen. Ikonerna och ikonnamnen kan visas med KDE:s "
+"program CuttleFish som levereras med  [plasma-sdk](https://invent.kde.org/"
+"plasma/plasma-sdk), eller genom att besöka [FreeDesktops specifikation för "
+"namngivning av ikoner](https://specifications.freedesktop.org/icon-naming-"
+"spec)."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:79
 msgid "Header"
@@ -4919,11 +4719,6 @@ msgstr ""
 "den globala lådan."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:83
-#, fuzzy
-#| msgid ""
-#| "Your chosen header component can be set with the global drawer's `header` "
-#| "property, and it will replace the global drawer's title. This is useful "
-#| "to add a `Kirigami.SearchField`, for example:"
 msgid ""
 "Your chosen header component can be set with the global drawer's [header]"
 "(https://api.kde.org/qml-org-kde-kirigami-globaldrawer.html#header-prop) "
@@ -4932,8 +4727,10 @@ msgid ""
 "searchfield.html), for example:"
 msgstr ""
 "Din valda sidhuvudkomponent kan anges med den globala lådans egenskap "
-"`header`, och den ersätter den globala lådans titel. Det är användbart för "
-"att lägga till `Kirigami.SearchField`, till exempel:"
+"[header](https://api.kde.org/qml-org-kde-kirigami-globaldrawer.html#header-"
+"prop) , och den ersätter den globala lådans titel. Det är användbart för att "
+"lägga till [Kirigami.SearchField](https://api.kde.org/qml-org-kde-kirigami-"
+"searchfield.html), till exempel:"
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:134
 msgid ""
@@ -4956,20 +4753,14 @@ msgstr ""
 "fåtal åtgärder."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:145
-#, fuzzy
-#| msgid ""
-#| "Thankfully, Kirigami global drawers provide an [isMenu](https://api-"
-#| "staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#isMenu-prop) "
-#| "property. When set to `true`, they turn into more traditional menus only "
-#| "on the desktop."
 msgid ""
 "Thankfully, Kirigami global drawers provide an [isMenu](https://api.kde.org/"
 "qml-org-kde-kirigami-globaldrawer.html#isMenu-prop) property. When set to "
 "`true`, they turn into more traditional menus only on the desktop."
 msgstr ""
 "Som tur är tillhandahåller Kirigami globala lådor egenskapen [isMenu]"
-"(https://api-staging.kde.org/qml-org-kde-kirigami-globaldrawer.html#isMenu-"
-"prop). När den är inställd till `true`, förvandlas vår globala låda till mer "
+"(https://api.kde.org/qml-org-kde-kirigami-globaldrawer.html#isMenu-prop). "
+"När den är inställd till `true`, förvandlas vår globala låda till mer "
 "traditionella menyer på skrivbordsdatorer."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:149
@@ -5017,15 +4808,6 @@ msgstr ""
 "plattform eller på en dator."
 
 #: content/docs/getting-started/kirigami/components-drawers/index.md:185
-#, fuzzy
-#| msgid ""
-#| "On a desktop, when a window has enough space, contextual actions show up "
-#| "as part of the `actions` group in the top toolbar. When space is limited, "
-#| "such as on a mobile device or in a narrow window, contextual actions are "
-#| "hidden behind a hamburger menu on the right side. This is different from "
-#| "other actions in the `actions` group, namely `actions.main`, `actions."
-#| "left` and `actions.right`; these do not get hidden in space-constrained "
-#| "windows, and are instead collapsed into their respective icons."
 msgid ""
 "On a desktop, when a window has enough space, contextual actions show up as "
 "part of the [actions](https://api.kde.org/qml-org-kde-kirigami-contextdrawer."
@@ -5037,7 +4819,8 @@ msgid ""
 "are instead collapsed into their respective icons."
 msgstr ""
 "På en skrivbordsdator, när ett fönster har tillräckligt med utrymme, visas "
-"sammanhangsberoende åtgärder som en del av gruppen `actions` på det övre "
+"sammanhangsberoende åtgärder som en del av gruppen [actions](https://api.kde."
+"org/qml-org-kde-kirigami-contextdrawer.html#actions-prop) på det övre "
 "verktygsraden. När utrymmet är begränsat, till exempel på en mobil eller i "
 "ett smalt fönster, döljs sammanhangsberoende åtgärder bakom en hamburgermeny "
 "på höger sida. Det skiljer sig från andra åtgärder i gruppen `actions`, "
@@ -5233,13 +5016,6 @@ msgstr ""
 "formulärlayouten."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:18
-#, fuzzy
-#| msgid ""
-#| "Children of a [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami."
-#| "layouts.FormLayout) have a property named [Kirigami.FormData.label]"
-#| "(https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata."
-#| "html#label-attached-prop). This property lets you set the label that will "
-#| "be provided for the child component in question."
 msgid ""
 "Children of a [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts."
 "FormLayout) have a property named [Kirigami.FormData.label](https://api.kde."
@@ -5249,9 +5025,9 @@ msgid ""
 msgstr ""
 "Underliggande komponenter till [Kirigami.FormLayout](docs:kirigami;org.kde."
 "kirigami.layouts.FormLayout) har en egenskap som heter [Kirigami.FormData."
-"label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata."
-"html#label-attached-prop). Egenskapen låter dig ange beteckningen som "
-"tillhandahålls för den underliggande komponenten i fråga."
+"label](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-"
+"attached-prop). Egenskapen låter dig ange beteckningen som tillhandahålls "
+"för den underliggande komponenten i fråga."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:54
 msgid "A simple form layout in desktop mode"
@@ -5262,14 +5038,6 @@ msgid "Sections and separators"
 msgstr "Sektioner och avskiljare"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:62
-#, fuzzy
-#| msgid ""
-#| "FormLayouts can also be divided into sections. Setting where a section "
-#| "starts is as easy as setting a child component's [Kirigami.FormData."
-#| "isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-"
-#| "formdata.html#isSection-attached-prop) to true. This will provide the "
-#| "component with some extra margin at the top to demarcate the start of the "
-#| "new section."
 msgid ""
 "FormLayouts can also be divided into sections. Setting where a section "
 "starts is as easy as setting a child component's [Kirigami.FormData."
@@ -5279,21 +5047,11 @@ msgid ""
 msgstr ""
 "En FormLayout kan också delas upp i sektioner. Att ange var en sektion "
 "börjar är så enkelt som att ställa in en underliggande komponents [Kirigami."
-"FormData.isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-"
+"FormData.isSection](https://api.kde.org/qml-org-kde-kirigami-layouts-"
 "formdata.html#isSection-attached-prop) till true. Det ger komponenten en del "
 "extra marginal längst upp för att avgränsa början på den nya sektionen."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:64
-#, fuzzy
-#| msgid ""
-#| "[Kirigami.Separator](docs:kirigami;org.kde.kirigami.primitives.Separator) "
-#| "components are best suited for starting new sections. Separators are used "
-#| "to draw a thin horizontal line, demarcating the end of a section. If you "
-#| "would rather not have a line drawn between sections, you can use a "
-#| "standard QML [Item](docs:qtquick;QtQuick.Item) property. Alternatively "
-#| "you could use the [Kirigami.FormData.isSection](https://api-staging.kde."
-#| "org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) "
-#| "property on any other component."
 msgid ""
 "[Kirigami.Separator](docs:kirigami;org.kde.kirigami.primitives.Separator) "
 "components are best suited for starting new sections. Separators are used to "
@@ -5309,19 +5067,11 @@ msgstr ""
 "ritar en tunn horisontell linje, som avgränsar slutet på en sektion. Om du "
 "hellre inte vill att en linje ska ritas mellan sektioner, kan du använda den "
 "vanliga QML- egenskapen [Item](docs:qtquick;QtQuick.Item). Som alternativ "
-"skulle du kunna använda egenskapen [Kirigami.FormData.isSection](https://api-"
-"staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-"
-"attached-prop) med vilken annan komponent som helst."
+"skulle du kunna använda egenskapen [Kirigami.FormData.isSection](https://api."
+"kde.org/qml-org-kde-kirigami-layouts-formdata.html#isSection-attached-prop) "
+"med vilken annan komponent som helst."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:66
-#, fuzzy
-#| msgid ""
-#| "However, this is not recommended. On components where [Kirigami.FormData."
-#| "isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-"
-#| "formdata.html#isSection-attached-prop) is set to `true`, the label text "
-#| "provided for this component's [Kirigami.FormData.label](https://api-"
-#| "staging.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-attached-"
-#| "prop) property will be displayed as the section's header text."
 msgid ""
 "However, this is not recommended. On components where [Kirigami.FormData."
 "isSection](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata."
@@ -5334,8 +5084,8 @@ msgstr ""
 "isSection](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata."
 "html#isSection-attached-prop) är inställd till `true`, visas beteckningen "
 "och texten som tillhandahålls för komponentens egenskap [Kirigami.FormData."
-"label](https://api-staging.kde.org/qml-org-kde-kirigami-layouts-formdata."
-"html#label-attached-prop) som sektionens sidhuvudtext."
+"label](https://api.kde.org/qml-org-kde-kirigami-layouts-formdata.html#label-"
+"attached-prop) som sektionens sidhuvudtext."
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:68
 #: content/docs/getting-started/kirigami/components-scrollablepages_listviews/index.md:28
@@ -5372,13 +5122,6 @@ msgid "Forcing a desktop or mobile layout"
 msgstr "Tvinga skrivbords- eller mobillayout"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:138
-#, fuzzy
-#| msgid ""
-#| "If you would rather have your form layout stay consistent regardless of "
-#| "your application's environment, you can use the [wideMode](https://api-"
-#| "staging.kde.org/qml-org-kde-kirigami-layouts-formlayout.html#wideMode-"
-#| "prop) property of the [Kirigami.FormLayout](docs:kirigami;org.kde."
-#| "kirigami.layouts.FormLayout) component:"
 msgid ""
 "If you would rather have your form layout stay consistent regardless of your "
 "application's environment, you can use the [wideMode](https://api.kde.org/"
@@ -5387,9 +5130,9 @@ msgid ""
 "component:"
 msgstr ""
 "Om du hellre vill att din formulärlayout ska förbli konsekvent oberoende av "
-"programmets omgivning, kan du använda egenskapen [wideMode](https://api-"
-"staging.kde.org/qml-org-kde-kirigami-layouts-formlayout.html#wideMode-prop) "
-"i komponenten [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts."
+"programmets omgivning, kan du använda egenskapen [wideMode](https://api.kde."
+"org/qml-org-kde-kirigami-layouts-formlayout.html#wideMode-prop) i "
+"komponenten [Kirigami.FormLayout](docs:kirigami;org.kde.kirigami.layouts."
 "FormLayout):"
 
 #: content/docs/getting-started/kirigami/components-formlayouts/index.md:140
@@ -5785,7 +5528,7 @@ msgid ""
 msgstr ""
 "Modellen är inte synlig, eftersom den endast innehåller data. Vanligtvis "
 "omges delegaten av en komponent så att den är återanvändbar: den fungerar "
-"som en ritning för hur man instansierar varje delegat."
+"som en plan för hur man instansierar varje delegat."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:28
 msgid ""
@@ -6096,8 +5839,8 @@ msgid ""
 msgstr ""
 "Den vanligaste användningen av en delegat är inom en [Component](docs:qtqml;"
 "QtQml.Component), som inte instansierar delegaten omedelbart. När en vy är "
-"konstruerad, används sedan delegaten som en ritning för att skapa varje "
-"objekt i vyn."
+"konstruerad, används sedan delegaten som en plan för att skapa varje objekt "
+"i vyn."
 
 #: content/docs/getting-started/kirigami/components-listview/index.md:322
 msgid ""
@@ -7734,15 +7477,6 @@ msgstr ""
 "hanteras:"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:156
-#, fuzzy
-#| msgid ""
-#| "Looking at our [Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami."
-#| "AbstractCard), the first properties we set are [implicitWidth](https://"
-#| "doc.qt.io/qt-6/qml-qtquick-item.html#implicitWidth-prop) and "
-#| "[implicitHeight](https://doc.qt.io/qt-6/qml-qtquick-item."
-#| "html#implicitHeight-prop). We have set these to the `delegateLayout."
-#| "implicitWidth` and `delegateLayout.implicitHeight`, i.e. the "
-#| "`implicitWidth` and `implicitHeight` of the `GridLayout` element."
 msgid ""
 "Looking at our [Kirigami.AbstractCard](docs:kirigami;org.kde.kirigami."
 "AbstractCard), the first properties we set are [implicitWidth](https://doc."
@@ -7759,8 +7493,10 @@ msgstr ""
 "(https://doc.qt.io/qt-6/qml-qtquick-item.html#implicitWidth-prop) och "
 "[implicitHeight](https://doc.qt.io/qt-6/qml-qtquick-item.html#implicitHeight-"
 "prop). Vi har ställer in dem till `delegateLayout.implicitWidth` och "
-"`delegateLayout.implicitHeight`, dvs. `implicitWidth` och `implicitHeight` i "
-"elementet `GridLayout`."
+"`delegateLayout.implicitHeight`, dvs. [implicitWidth](https://doc.qt.io/qt-6/"
+"qml-qtquick-item.html#implicitWidth-prop) och [implicitHeight](https://doc."
+"qt.io/qt-6/qml-qtquick-item.html#implicitHeight-prop)  i elementet "
+"[GridLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html)."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:158
 msgid ""
@@ -7982,17 +7718,6 @@ msgstr ""
 "html): använder `date` i `ListElement` som första nivåns rubrik."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:253
-#, fuzzy
-#| msgid ""
-#| "Middle, [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
-#| "columnlayout.html): has a [Kirigami.Heading](docs:kirigami2;Heading) that "
-#| "displays the task name; a [Kirigami.Separator](docs:kirigami;org.kde."
-#| "kirigami.Separator), which provides the horizontal line; and a [Controls."
-#| "Label](docs:qtquickcontrols;QtQuick.Controls.Label), that displays a "
-#| "task's optional description. The latter two components have a [visible]"
-#| "(https://doc.qt.io/qt-6/qml-qtquick-item.html#visible-prop) property, "
-#| "which checks if the description is empty or not and displays the "
-#| "components depending on the result of `description.length > 0`."
 msgid ""
 "Middle, [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
 "columnlayout.html): has a [Kirigami.Heading](https://api.kde.org/qml-org-kde-"
@@ -8006,14 +7731,15 @@ msgid ""
 "0`."
 msgstr ""
 "Mitten, [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
-"columnlayout.html): Har en [Kirigami.Heading](docs:kirigami2;Heading) som "
-"visar aktivitetsnamnet, en [Kirigami.Separator](docs:kirigami;org.kde."
-"kirigami.Separator) som tillhandahåller den horisontella linjen, och en "
-"[Controls.Label](docs:qtquickcontrols;QtQuick.Controls.Label) som visar en "
-"uppgifts valfria beskrivning. De senare två komponenterna har egenskapen "
-"[visible](https://doc.qt.io/qt-6/qml-qtquick-item.html#visible-prop) som "
-"kontrollerar om beskrivningen är tom eller inte och visar komponenten "
-"beroende på resultatet av `description.length > 0`."
+"columnlayout.html): Har en  [Kirigami.Heading](https://api.kde.org/qml-org-"
+"kde-kirigami-heading.html) som visar aktivitetsnamnet, en [Kirigami."
+"Separator](docs:kirigami;org.kde.kirigami.primitives.Separator) som "
+"tillhandahåller den horisontella linjen, och en [Controls.Label](docs:"
+"qtquickcontrols;QtQuick.Controls.Label) som visar en uppgifts valfria "
+"beskrivning. De senare två komponenterna har egenskapen [visible](https://"
+"doc.qt.io/qt-6/qml-qtquick-item.html#visible-prop) som kontrollerar om "
+"beskrivningen är tom eller inte och visar komponenten beroende på resultatet "
+"av `description.length > 0`."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:255
 msgid ""
@@ -8101,19 +7827,6 @@ msgstr ""
 "nitiska utvecklare!"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:23
-#, fuzzy
-#| msgid ""
-#| "We have several pieces of documentation that can help guide you towards "
-#| "becoming a contributor. We recommend you take a look at the developer-"
-#| "specific section of our [Development Guide](/docs/getting-started/"
-#| "building/help-dependencies) which can help you learn more about the KDE "
-#| "Community's development workflow. We also recommend you take a look at "
-#| "our documentation for KDE's GitLab instance, called [Invent](https://"
-#| "community.kde.org/Infrastructure/GitLab), as you will likely need to "
-#| "interact with it during the development process. The KDE Community "
-#| "interacts mainly through Matrix, and we also have [a page on the "
-#| "community wiki](https://community.kde.org/Matrix) that will guide you "
-#| "through setting up with your very own account."
 msgid ""
 "We have several pieces of documentation that can help guide you towards "
 "becoming a contributor. We recommend you take a look at our other "
@@ -8127,16 +7840,15 @@ msgid ""
 "up with your very own account."
 msgstr ""
 "Vi har flera delar av dokumentationen som kan hjälpa till att leda dig till "
-"att bli en bidragsgivare. Vi rekommenderar att du tar en titt på den "
-"utvecklarspecifika sektionen av vår [utvecklingshandledning](/docs/getting-"
-"started/building/help-dependencies) som kan hjälpa dig lära dig mer om KDE-"
-"gemenskapens utvecklingsflöde. Vi rekommenderar också att du tar en titt på "
-"vår dokumentation om KDE:s GitLab-instans, benämnd [Invent](https://"
-"community.kde.org/Infrastructure/GitLab), eftersom du troligen behöver "
-"använda dig av den under utvecklingsprocessen. KDE-gemenskapen samarbetar "
-"huvudsakligen via Matrix, och vi har också [en sida på gemenskapens wiki]"
-"(https://community.kde.org/Matrix) som leder dig igenom processen att skapa "
-"ditt eget konto."
+"att bli en bidragsgivare. Vi rekommenderar att du tar en titt på våra andra "
+"[utvecklingssidor](/docs/getting-started/building) som kan hjälpa dig lära "
+"dig mer om KDE-gemenskapens utvecklingsflöde. Vi rekommenderar också att du "
+"tar en titt på vår dokumentation om KDE:s GitLab-instans, benämnd [Invent]"
+"(https://community.kde.org/Infrastructure/GitLab), eftersom du troligen "
+"behöver använda dig av den under utvecklingsprocessen. KDE-gemenskapen "
+"samarbetar huvudsakligen via Matrix, och vi har också [en sida på "
+"gemenskapens wiki](https://community.kde.org/Matrix) som leder dig igenom "
+"processen att skapa ditt eget konto."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:27
 msgid ""
@@ -8369,15 +8081,11 @@ msgstr ""
 "direktmeddelanden."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:51
-#, fuzzy
-#| msgid ""
-#| "[KDE Apps page](https://apps.kde.org/en/neochat)<br />[KDE Invent page]"
-#| "(https://invent.kde.org/network/neochat)"
 msgid ""
 "[KDE Apps page](https://apps.kde.org/neochat)<br />[KDE Invent page](https://"
 "invent.kde.org/network/neochat)"
 msgstr ""
-"[KDE-programsida](https://apps.kde.org/en/neochat)<br />[KDE Invent-sida]"
+"[KDE-programsida](https://apps.kde.org/neochat)<br />[KDE Invent-sida]"
 "(https://invent.kde.org/network/neochat)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:53
@@ -8536,18 +8244,13 @@ msgstr ""
 "En uppsättning C++ handledningar och andra resurser avsedda för nybörjare"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:87
-#, fuzzy
-#| msgid ""
-#| "We also provide a list of continuously updated resources to learn C++ in "
-#| "[this wiki page](https://community.kde.org/Get_Involved/development/"
-#| "Learn#C_and_C++)."
 msgid ""
 "We also provide a list of continuously updated resources to learn C++ in "
 "[Learning more](/docs/getting-started/building/help-learn/)."
 msgstr ""
 "Vi tillhandahåller också en lista över kontinuerligt uppdaterade resurser "
-"för att lära sig C++ på[den här wiki-sidan](https://community.kde.org/"
-"Get_Involved/development/Learn#C_and_C++)."
+"för att lära sig C++ i [Learning more](/docs/getting-started/building/help-"
+"learn/)."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:89
 msgid "Creating classic KDE applications using QtWidgets"
@@ -8602,16 +8305,12 @@ msgstr ""
 "index.html)"
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:100
-#, fuzzy
-#| msgid ""
-#| "If you are looking for a more guided approach to learning, [the QMLBook]"
-#| "(https://qmlbook.github.io/) is a great place to start."
 msgid ""
 "If you are looking for a more guided approach to learning, [the QMLBook]"
 "(https://www.qt.io/product/qt6/qml-book) is a great place to start."
 msgstr ""
-"Om du letar efter en mer guidad metod för lärande, är [QMLBook](https://"
-"qmlbook.github.io/) en utmärkt plats att börja."
+"Om du letar efter en mer guidad metod för lärande, är [QMLBook](https://www."
+"qt.io/product/qt6/qml-book) en utmärkt plats att börja."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:102
 msgid "More Kirigami"
@@ -8727,13 +8426,6 @@ msgstr ""
 "kan du skapa olika QML-filer för varje sida."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:23
-#, fuzzy
-#| msgid ""
-#| "Pages are organized in a [page stack](https://api-staging.kde.org/qml-org-"
-#| "kde-kirigami-abstractapplicationwindow.html#pageStack-prop) where they "
-#| "can be pushed and popped. On a phone only the top-most page is shown, "
-#| "whereas on a larger screen (desktop or tablet), if desired, multiple "
-#| "pages can be shown next to each other."
 msgid ""
 "Pages are organized in a [page stack](https://api.kde.org/qml-org-kde-"
 "kirigami-abstractapplicationwindow.html#pageStack-prop) where they can be "
@@ -8741,10 +8433,10 @@ msgid ""
 "larger screen (desktop or tablet), if desired, multiple pages can be shown "
 "next to each other."
 msgstr ""
-"Sidor organiseras i en [sidstapel](https://api-staging.kde.org/qml-org-kde-"
-"kirigami-abstractapplicationwindow.html#pageStack-prop) där de kan läggas "
-"till eller tas bort. På en telefon visas bara den översta sidan, medan på en "
-"större skärm (skrivbordsdator eller surfplatta) kan flera sidor visas intill "
+"Sidor organiseras i en [sidstapel](https://api.kde.org/qml-org-kde-kirigami-"
+"abstractapplicationwindow.html#pageStack-prop) där de kan läggas till eller "
+"tas bort. På en telefon visas bara den översta sidan, medan på en större "
+"skärm (skrivbordsdator eller surfplatta) kan flera sidor visas intill "
 "varandra om så önskas."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:27
@@ -8807,14 +8499,6 @@ msgstr ""
 "ScrollablePage), som redan levereras med sin egen inbyggda rullningslist."
 
 #: content/docs/getting-started/kirigami/introduction-pages/index.md:51
-#, fuzzy
-#| msgid ""
-#| "Kirigami pages also feature neat titles placed within the toolbar, "
-#| "quickly indicating to the user which page they are on. All we need to do "
-#| "is to set a page title using the `title` property of [Kirigami."
-#| "ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage). In this "
-#| "case, we used one of the `i18nc()` functions we explored in our previous "
-#| "tutorial to this end."
 msgid ""
 "Kirigami pages also feature neat titles placed within the toolbar, quickly "
 "indicating to the user which page they are on. All we need to do is to set a "
@@ -8825,7 +8509,8 @@ msgid ""
 msgstr ""
 "Kirigami-sidor har också snygga titlar placerade inne i verktygsraden, som "
 "snabbt anger för användaren vilken sida de är på. Allt vi behöver göra är "
-"att ställa in en sidtitel genom att använda egenskapen `title` i [Kirigami."
+"att ställa in en sidtitel genom att använda egenskapen [title](https://doc."
+"qt.io/qt-6/qml-qtquick-controls-page.html#title-prop) i [Kirigami."
 "ScrollablePage](docs:kirigami;org.kde.kirigami.ScrollablePage).. Här "
 "använder vi en av `i18nc()` funktionerna som vi utforskade i vår förra "
 "handledning i detta syfte."
@@ -9219,10 +8904,8 @@ msgstr ""
 "vilket gör saker och ting mycket mer hanterbara."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
-#, fuzzy
-#| msgid "Windows"
 msgid "Windows Setup"
-msgstr "Windows"
+msgstr "Inställning för Windows"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
 msgid "Preparing your C++ application for Windows"
@@ -9234,6 +8917,9 @@ msgid ""
 "[extra-cmake-modules](https://api.kde.org/ecm/) will not require many "
 "modifications to work properly on Windows."
 msgstr ""
+"Qt har utmärkt Windows-stöd, så program som använder Qt och KDE:s [extra-"
+"cmake-modules](https://api.kde.org/ecm/) kräver inte många modifieringar för "
+"att fungera korrekt på Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:13
 msgid "Three things are needed:"
@@ -9241,21 +8927,23 @@ msgstr "Tre saker behövs:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:15
 msgid "[A Craft blueprint](#craft)"
-msgstr ""
+msgstr "[En Craft-plan](#craft)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:16
 msgid "[Setting the Breeze style](#breeze)"
-msgstr ""
+msgstr "[Inställning av Breeze-stil](#breeze)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:17
 msgid "[Icons bundled with the app](#icons)"
-msgstr ""
+msgstr "[Ikoner som medföljer programmet](#icons)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:19
 msgid ""
 "The Craft blueprint is needed to bundle all the dependencies together with "
 "the application to generate an executable."
 msgstr ""
+"En Craft-plan behövs för att paketera alla beroenden tillsammans med "
+"programmet för att generera en körbar fil."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:21
 msgid ""
@@ -9264,6 +8952,10 @@ msgid ""
 "least once for forcing the Breeze style to the application so that it looks "
 "good on Windows, but depending on the application it might require more."
 msgstr ""
+"Preprocessordirektivet `#ifdef Q_OS_WIN` kan användas för att skriva kod som "
+"bara gäller när programmet är byggd på Windows. Det behövs minst en gång för "
+"att tvinga programmet att använda Breeze-stilen så att det ser bra ut på "
+"Windows, men beroende på programmet kan det kräva mer."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:23
 msgid ""
@@ -9271,10 +8963,13 @@ msgid ""
 "complex step, but both KDE's extra-cmake-modules (ECM) and Qt provide means "
 "to make this job easier."
 msgstr ""
+"Att samla de nödvändiga ikonerna för att programmet ska fungera på Windows "
+"är det mest komplexa steget, men både KDE:s extra-cmake-moduler (ECM) och Qt "
+"tillhandahåller sätt att göra det här jobbet enklare."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:25
 msgid "Craft blueprint"
-msgstr ""
+msgstr "Craft-plan"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:27
 msgid ""
@@ -9282,22 +8977,29 @@ msgid ""
 "Craft](/docs/getting-started/building/craft) so that you get a functional "
 "Craft blueprint and can at least build your application on Windows."
 msgstr ""
+"För att komma igång måste du först följa [Building KDE software on Windows "
+"with Craft](/docs/getting-started/building/craft) så att du får en "
+"fungerande Craft-plan och åtminstone kan bygga programmet på Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:29
 msgid ""
 "Once you are able to build the project you will get compilation and runtime "
 "errors that will help you fix any Windows compatibility issues."
 msgstr ""
+"När du väl har kunnat bygga projektet får du kompilerings- och körfel som "
+"hjälper dig att åtgärda eventuella kompatibilitetsproblem med Windows."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:31
 msgid "Breeze style"
-msgstr ""
+msgstr "Breeze-stil"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:33
 msgid ""
 "The Kirigami tutorial should already be mostly compliant with Windows, but "
 "the steps needed to achieve this need to be made explicit."
 msgstr ""
+"Kirigami-handledningen borde redan vara i stort sett kompatibel med Windows, "
+"men stegen som behövs för att uppnå det behöver tydliggöras."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:35
 msgid ""
@@ -9305,6 +9007,9 @@ msgid ""
 "is to set the QStyle to `breeze` and to set the Qt Quick Controls style to "
 "`org.kde.desktop`."
 msgstr ""
+"De två modifieringar som bör göras för att säkerställa att Breeze-stilen "
+"används är att ställa in QStyle till `breeze` och att ställa in Qt Quick "
+"Controls-stilen till `org.kde.desktop`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:37
 msgid ""
@@ -9314,6 +9019,10 @@ msgid ""
 "(https://doc.qt.io/qt-6/qapplication.html) (traditionally used with "
 "QtWidgets)."
 msgstr ""
+"En [QStyle](https://doc.qt.io/qt-6/qstyle.html) är det som styr majoriteten "
+"av utseendet på en för ett program med QtWidgets. Det behövs i vårt QtQuick-"
+"program eftersom vi initierar programmet med [QApplication](https://doc.qt."
+"io/qt-6/qapplication.html) (traditionellt använt med QtWidgets)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:39
 msgid ""
@@ -9326,12 +9035,22 @@ msgid ""
 "(hence why a QApplication is used). This way, QtWidgets and QtQuick "
 "applications can mostly look the same and reuse style components."
 msgstr ""
+"En [Qt Quick kontrollstil](https://doc.qt.io/qt-6/qtquickcontrols-styles."
+"html) styr å andra sidan majoriteten av utseendet på ett QtQuick-program. "
+"Det påverkar hur QML-kontrollerna kommer att se ut. KDE:s stil `org.kde."
+"desktop`(även känd som [qqc2-desktop-style](https://invent.kde.org/"
+"frameworks/qqc2-desktop-style)) är speciell och försöker ta bort "
+"dubbelarbete genom att härleda stilelement från programmets QStyle (vilket "
+"är orsaken att QApplication används). På så sätt kan QtWidgets och QtQuick-"
+"program i stort sett se likadana ut och återanvända stilkomponenter."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:41
 msgid ""
 "QtQuick / Kirigami applications need to set both in C++ code. To set the "
 "QStyle, it needs to be added in two places."
 msgstr ""
+"QtQuick/Kirigami-program behöver ange båda i C++ kod. För att ange QStyle "
+"måste den läggas till på två ställen."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:43
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:66
@@ -9347,18 +9066,20 @@ msgid ""
 "This is what is used in the Kirigami tutorial. You may otherwise load the "
 "Breeze style only on Windows where this is most relevant using an ifdef:"
 msgstr ""
+"Det är vad som används i Kirigami-handledningen. Du kan annars bara ladda "
+"Breeze-stilen i Windows där det är mest relevant med hjälp av en ifdef:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:64
 msgid "The Qt Quick Controls style needs to be added in three places."
-msgstr ""
+msgstr "Qt Quick kontrollstilen behöver läggas till på tre ställen."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:73
 msgid "In C++, where it needs to be conditional:"
-msgstr ""
+msgstr "I C++, där den måste vara villkorligt:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:82
 msgid "And optionally in CMake, in one of two ways:"
-msgstr ""
+msgstr "Och valfritt i CMake, på ett av två sätt:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:90
 msgid ""
@@ -9368,6 +9089,10 @@ msgid ""
 "resulting application, allowing you to find missing packages or "
 "misconfigurations more easily."
 msgstr ""
+"Eftersom det är ett körtidsberoende behöver det inte anges i CMake, som "
+"används vid kompilering. Det kan dock signalera till dig själv och andra om "
+"miljön är korrekt och att den resulterande programmet kan köras, vilket gör "
+"att du lättare kan hitta saknade paket eller felaktiga konfigurationer."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:92
 msgid ""
@@ -9376,6 +9101,10 @@ msgid ""
 "is less strict and only searches for the QML module. The latter requires "
 "that you include ECMFindQmlModule:"
 msgstr ""
+"Kommandot `find_package()` söker specifikt efter CMake-konfigurationsfiler "
+"för `qqc2-desktop-style`, medan `ecm_find_qmlmodule()` är mindre strikt och "
+"söker bara efter QML-modulen. Den senare kräver att du inkluderar "
+"ECMFindQmlModule:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:98
 msgid "Shipping icons"
@@ -9387,50 +9116,54 @@ msgid ""
 "to include [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) in "
 "your project."
 msgstr ""
+"Det första som behövs för att programmet ska använda Breeze-ikoner är att "
+"inkludera [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) i "
+"projektet."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:102
 msgid ""
 "After this, some CMake commands are needed to bundle your application icon "
 "with the app."
 msgstr ""
+"Efter det behövs några CMake-kommandon för att paketera programikonen med "
+"programmet."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:104
-#, fuzzy
-#| msgid "Theme"
 msgid "KIconThemes"
-msgstr "Tema"
+msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:106
 msgid "This can be done with the following three steps:"
-msgstr ""
+msgstr "Det kan göras med följande tre steg:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:108
 msgid "Adding it as a dependency in Craft:"
-msgstr ""
+msgstr "Lägga till det som ett beroende i Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:115
 msgid "Adding it as a dependency in CMake:"
-msgstr ""
+msgstr "Lägga till det som ett beroende i CMake:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:129
 msgid "Using it in C++ code, in the `main.cpp` file:"
-msgstr ""
+msgstr "Använda det i C++ kod, i filen `main.cpp`:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:144
 msgid ""
 "Note that although the project name and CMake call uses plural (KIconThemes, "
 "KF6IconThemes), the C++ call uses singular (KIconTheme)."
 msgstr ""
+"Observera att även om projektnamnet och anropet till CMake använder pluralis "
+"(KIconThemes, KF6IconThemes), använder anropet till C++ singularis "
+"(KIconTheme)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:146
 msgid "KIconThemes needs to be initialized before the application."
-msgstr ""
+msgstr "KIconThemes måste initialiseras före programmet."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
-#, fuzzy
-#| msgid "Example Application"
 msgid "Application icon"
-msgstr "Exempelprogram"
+msgstr "Programikon"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:150
 msgid ""
@@ -9438,6 +9171,9 @@ msgid ""
 "as a [QML resource](https://doc.qt.io/qt-6/resources.html) and as a part of "
 "icon installation."
 msgstr ""
+"Om programmet har en ikon måste den läggas till i projektet både som en [QML-"
+"resurs](https://doc.qt.io/qt-6/resources.html) och som en del av "
+"ikoninstallationen."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:152
 msgid ""
@@ -9446,14 +9182,17 @@ msgid ""
 "needed. Usually the application icon consists of a primary SVG icon, paired "
 "with multiple PNG icon sizes."
 msgstr ""
+"Vanligtvis kan programikonen på Linux enkelt installeras i rätt katalog, och "
+"ikonen hämtas av programmet när den behövs. Vanligtvis består programikonen "
+"av en primär SVG-ikon, parad med flera PNG-ikonstorlekar."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:154
 msgid "Installing the SVG icon is done like this in CMake:"
-msgstr ""
+msgstr "Installation av SVG-ikonen görs så här i CMake:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:160
 msgid "And installing the PNG icons is done like this:"
-msgstr ""
+msgstr "Och installation av PNG-ikonerna görs så här:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:175
 msgid ""
@@ -9464,20 +9203,20 @@ msgid ""
 "for `/usr`, `/usr/local` or `~/.local`. Note how in the PNGs' case the icon "
 "name translates into the path it will have in the filesystem."
 msgstr ""
+"När programikonen är installerad på Linux, placeras en PNG-ikon såsom `48-"
+"apps-myapp.png` i `${INSTALL_PREFIX}/share/icons/hicolor/48x48/apps/myapp."
+"png`, och en SVG-ikon placeras i `${INSTALL_PREFIX}/share/icons/hicolor/"
+"scalable/apps/org.kde.myapp.svg`, där `${INSTALL_PREFIX}` oftast står för `/"
+"usr`, `/usr/local` eller `~/.local`. Observera hur ikonnamnet i PNG-fallet "
+"översätts till den sökväg den har i filsystemet."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:177
-#, fuzzy
-#| msgid ""
-#| "For more information about where KDE software is installed, see [Building "
-#| "KDE software manually: The install step](/docs/getting-started/building/"
-#| "cmake-build/#install)."
 msgid ""
 "You can read more about installing files in [Building KDE software manually: "
 "The install step](/docs/getting-started/building/cmake-build/#install)."
 msgstr ""
-"För mer information om var KDE-programvara är installerad, se [Bygga KDE-"
-"programvara manuellt: Installationssteget](/docs/getting-started/building/"
-"cmake-build/#install)."
+"Du kan läsa mer om att installera filer i [Bygga KDE-programvara manuellt: "
+"Installationssteget](/docs/getting-started/building/cmake-build/#install)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:179
 msgid ""
@@ -9487,6 +9226,11 @@ msgid ""
 "that has an [icon.name](https://doc.qt.io/qt-6/qtquickcontrols-icons.html) "
 "property."
 msgstr ""
+"När ikonen är installerad på det sättet, kan den enkelt anropas med `myapp` "
+"eller `org.kde.myapp` i QML-kod, precis som den skulle anropas från [QIcon::"
+"fromTheme()](doc.qt.io/qt-6/qicon.html#fromTheme). Det kan användas med "
+"vilken QML-kontroll som helst som har egenskapen [icon.name](https://doc.qt."
+"io/qt-6/qtquickcontrols-icons.html)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:181
 msgid ""
@@ -9496,16 +9240,19 @@ msgid ""
 "or SVG file can be embedded into the app as a Qt resource file in "
 "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgstr ""
+"Windows har ingen sådan standardkatalog, och installation av ikonen har "
+"ingen effekt. Den måste paketeras med programmet. För att göra det kan PNG-"
+"filen skickas till en egen installationskatalog med hjälp av "
+"`ecm_add_app_icon()` och en PNG- eller SVG-fil kan inbäddas i programmet som "
+"en Qt-resursfil i `ecm_add_qml_module()` eller `ecm_target_qml_sources()`."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:183
-#, fuzzy
-#| msgid "The application should look like this:"
 msgid "The PNG application icon is installed with:"
-msgstr "Programmet ska se ut så här:"
+msgstr "PNG-programikonen installeras med:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:189
 msgid "And the main application icon is bundled as a Qt resource with:"
-msgstr ""
+msgstr "Och huvudprogrammets ikon är paketerad som en Qt-resurs med:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:196
 msgid ""
@@ -9514,6 +9261,10 @@ msgid ""
 "control that has an [icon.source](https://doc.qt.io/qt-6/qtquickcontrols-"
 "icons.html) property."
 msgstr ""
+"Det gör programikonen tillgänglig som en Qt-resurs under `qrc:/qt/qml/org/"
+"kde/myapp/org.kde.myapp.svg`. Det kan användas med vilken QML-kontroll som "
+"helst som har egenskapen [icon.source](https://doc.qt.io/qt-6/"
+"qtquickcontrols-icons.html)."
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:198
 msgid ""
@@ -9534,10 +9285,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:206
-#, fuzzy
-#| msgid "Kirigami Addons"
 msgid "Kirigami icons"
-msgstr "Kirigami-tillägg"
+msgstr "Kirigami-ikoner"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:208
 msgid ""
@@ -9563,6 +9312,8 @@ msgid ""
 "To add Breeze icons as a dependency for your project, add this to your Craft "
 "blueprint:"
 msgstr ""
+"För att lägga till Breeze-ikoner som ett beroende i projektet, lägg till det "
+"i Craft-planen:"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:222
 msgid ""
@@ -9583,10 +9334,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:228
-#, fuzzy
-#| msgid "build.rs"
 msgid "CI builds"
-msgstr "build.rs"
+msgstr "Qt-byggen"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:230
 msgid ""
@@ -9615,26 +9364,29 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:238
 msgid "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
-msgstr ""
+msgstr "[#kde-devel:kde.org](https://go.kde.org/matrix/#/#kde-devel:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:239
 msgid ""
 "[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
 "kde.org)"
 msgstr ""
+"[#new-contributors:kde.org](https://go.kde.org/matrix/#/#new-contributors:"
+"kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:240
 msgid ""
 "[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 msgstr ""
+"[#kde-windows:kde.org](https://go.kde.org/matrix/#/#kde-windows:kde.org)"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:241
 msgid "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
-msgstr ""
+msgstr "[#kde-craft:kde.org](https://go.kde.org/matrix/#/##kde-craft:kde.org)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Setup with C++"
-msgstr ""
+msgstr "Inställning med C++"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:0
 msgid "Create your first Kirigami application with C++\n"
@@ -9707,16 +9459,12 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:34
 #: content/docs/getting-started/kirigami/setup-rust/index.md:20
-#, fuzzy
-#| msgid ""
-#| "Further information for other distributions can be found [here](/docs/"
-#| "getting-started/building/help-dependencies)."
 msgid ""
 "Further information for other distributions can be found in [Installing "
 "build dependencies](/docs/getting-started/building/help-dependencies)."
 msgstr ""
-"Ytterligare information för andra distributioner finns [här](/docs/getting-"
-"started/building/help-dependencies)."
+"Ytterligare information för andra distributioner finns i [Installera "
+"byggberoenden§](/docs/getting-started/building/help-dependencies)."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:36
 msgid "Using kde-builder"
@@ -9794,13 +9542,6 @@ msgstr ""
 "användning endast för AppImages och paketering."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:73
-#, fuzzy
-#| msgid ""
-#| "You will need to follow the [setup instructions for Craft](https://"
-#| "community.kde.org/Craft). By the end of the setup, you should have run an "
-#| "environment setup file (`craftenv.ps1` or `craftenv.sh`), which will give "
-#| "you a terminal shell where you will be compiling your Kirigami "
-#| "application."
 msgid ""
 "You will need to follow the [setup instructions for Craft](https://community."
 "kde.org/Craft). By the end of the setup, you should have run an environment "
@@ -9810,27 +9551,21 @@ msgid ""
 msgstr ""
 "Du måste följa [installationsinstruktionerna för Craft](https://community."
 "kde.org/Craft). I slutet av installationen ska du ha kört en "
-"miljöinstallationsfil (`craftenv.ps1` eller `craftenv.sh`), som ger dig ett "
-"skal i en terminal där du kan kompilera ditt Kirigami-program."
+"miljöinstallationsfil (`craftenv.ps1` på Windows eller `craftenv.sh` på alla "
+"andra plattformar), som ger dig ett skal i en terminal där du kan kompilera "
+"ditt Kirigami-program."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:75
-#, fuzzy
-#| msgid "After that, you may simply run the following on a terminal:"
 msgid "After that, you can run the following on a terminal:"
-msgstr "Därefter kan du helt enkelt köra följande på en terminal:"
+msgstr "Därefter kan du köra följande på en terminal:"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:81
-#, fuzzy
-#| msgid ""
-#| "This will take a long while to finish on first run. If you close your "
-#| "terminal, you can simply run the environment setup file again to compile "
-#| "your app."
 msgid ""
 "This will take a while to finish on first run. If you close your terminal, "
 "you can run the environment setup file to prepare your terminal again."
 msgstr ""
-"Det tar lång tid att slutföra första gången. Om du stänger terminalen kan du "
-"helt enkelt köra miljöinstallationsfilen igen för att kompilera ditt program."
+"Det tar en stund att slutföra den första gången. Om du stänger terminalen "
+"kan du köra miljöinstallationsfilen för att förbereda terminalen igen."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:85
 msgid ""
@@ -9999,22 +9734,16 @@ msgstr ""
 "vi har flera av samma typ."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:144
-#, fuzzy
-#| msgid ""
-#| "We also set the window `title` property to \"Hello World\". You'll notice "
-#| "that we have wrapped our \"Hello World\" string in a function called "
-#| "`i18nc()`, where we detail the context of the string as well as the "
-#| "string itself."
 msgid ""
 "We also set the window [title](https://doc.qt.io/qt-6/qml-qtquick-window."
 "html#title-prop) property to \"Hello World\". You'll notice that we have "
 "wrapped our \"Hello World\" string in a function called `i18nc()`, where we "
 "detail the context of the string as well as the string itself."
 msgstr ""
-"Vi ställer också in fönstrets egenskap `title` till \"Hello World\". Du "
-"märker att vi har omgivit vår \"Hello World\" sträng med en funktion som "
-"heter `i18nc()`, där vi beskriver strängens sammanhang förutom själva "
-"strängen."
+"Vi ställer också in fönstrets egenskap [title](https://doc.qt.io/qt-6/qml-"
+"qtquick-window.html#title-prop) property till \"Hello World\". Du märker att "
+"vi har omgivit vår \"Hello World\" sträng med en funktion som heter "
+"`i18nc()`, där vi beskriver strängens sammanhang förutom själva strängen."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:148
 msgid ""
@@ -10053,18 +9782,6 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:154
 #: content/docs/getting-started/kirigami/setup-python/index.md:141
-#, fuzzy
-#| msgid ""
-#| "We then set the first page of our page stack. Most Kirigami applications "
-#| "are organised as a stack of pages, each page containing related "
-#| "components suited to a specific task. For now, we are keeping it simple, "
-#| "and sticking to a single page. [pageStack](https://api-staging.kde.org/"
-#| "qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) is an "
-#| "initially empty stack of pages provided by [Kirigami.ApplicationWindow]"
-#| "(docs:kirigami;org.kde.kirigami.ApplicationWindow), and with `pageStack."
-#| "initialPage: Kirigami.Page {...}` we set the first page presented upon "
-#| "loading the application to a [Kirigami.Page](docs:kirigami;org.kde."
-#| "kirigami.Page). This page will contain all our content."
 msgid ""
 "We then set the first page of our page stack. Most Kirigami applications are "
 "organised as a stack of pages, each page containing related components "
@@ -10080,13 +9797,13 @@ msgstr ""
 "Därefter anger vi första sidan i vår sidstapel. Del flesta Kirigami-program "
 "är organiserade som en stapel av sidor, där varje sida innehåller relaterade "
 "komponenter anpassade för en viss uppgift. För närvarande låter vi det vara "
-"enkelt, och håller oss till en enda sida. [pageStack](https://api-staging."
-"kde.org/qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) "
-"är en sidstapel som initialt är tom som [Kirigami.ApplicationWindow](docs:"
-"kirigami;org.kde.kirigami.ApplicationWindow) tillhandahåller, och med "
-"`pageStack.initialPage: Kirigami.Page {...}` ställer vi in den första sidan "
-"som presenteras när programmet laddas i en [Kirigami.Page](docs:kirigami;org."
-"kde.kirigami.Page). Sidan står för allt vårt innehåll."
+"enkelt, och håller oss till en enda sida. [pageStack](https://api.kde.org/"
+"qml-org-kde-kirigami-abstractapplicationwindow.html#pageStack-prop) är en "
+"sidstapel som initialt är tom som [Kirigami.ApplicationWindow](docs:kirigami;"
+"org.kde.kirigami.ApplicationWindow) tillhandahåller, och med `pageStack."
+"initialPage: Kirigami.Page {...}` ställer vi in den första sidan som "
+"presenteras när programmet laddas i en [Kirigami.Page](docs:kirigami;org.kde."
+"kirigami.Page). Sidan står för allt vårt innehåll."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:156
 msgid ""
@@ -10603,10 +10320,8 @@ msgstr ""
 "minimal ansträngning."
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Python"
 msgid "Setup with Python"
-msgstr "Kirigami med Python"
+msgstr "Inställning med Python"
 
 #: content/docs/getting-started/kirigami/setup-python/index.md:0
 msgid "Create your first Kirigami application with PySide\n"
@@ -10981,10 +10696,8 @@ msgid "After this, the application can be launched by running:"
 msgstr "Därefter kan programmet startas genom att köra:"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
-#, fuzzy
-#| msgid "Kirigami with Rust"
 msgid "Setup with Rust"
-msgstr "Kirigami med Rust"
+msgstr "Inställning med Rust"
 
 #: content/docs/getting-started/kirigami/setup-rust/index.md:0
 msgid "Create your first Kirigami application with Rust\n"
@@ -11430,12 +11143,6 @@ msgstr ""
 "paletten, så oftast ska ingen egen färgläggning behövas för kontrollerna."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:20
-#, fuzzy
-#| msgid ""
-#| "Primitive components such as [Rectangle](docs:qtquick;QtQuick.Rectangle) "
-#| "should always be colored with the color palette provided by Kirigami via "
-#| "the [Kirigami.Theme](https://api-staging.kde.org/qml-org-kde-kirigami-"
-#| "platform-theme.html) attached property."
 msgid ""
 "Primitive components such as [Rectangle](docs:qtquick;QtQuick.Rectangle) "
 "should always be colored with the color palette provided by Kirigami via the "
@@ -11444,22 +11151,10 @@ msgid ""
 msgstr ""
 "Primitiva komponenter såsom [Rectangle](docs:qtquick;QtQuick.Rectangle) ska "
 "alltid färgläggas med färgpaletten som tillhandahålls av Kirigami via den "
-"bifogade egenskapen [Kirigami.Theme](https://api-staging.kde.org/qml-org-kde-"
+"bifogade egenskapen [Kirigami.Theme](https://api.kde.org/qml-org-kde-"
 "kirigami-platform-theme.html)."
 
 #: content/docs/getting-started/kirigami/style-colors/index.md:23
-#, fuzzy
-#| msgid ""
-#| "Hardcoded colors in QML, such as `#32b2fa` or `red`, should usually be "
-#| "avoided; if it is really necessary to have elements with custom colors, "
-#| "it should be an area where only custom colors are used (usually in the "
-#| "content area of the app, and never in chrome areas such as toolbars or "
-#| "dialogs). For instance, a hardcoded `black` foreground cannot be used "
-#| "over a [Kirigami.Theme.backgroundColor](https://api-staging.kde.org/qml-"
-#| "org-kde-kirigami-platform-theme.html#backgroundColor-attached-prop) "
-#| "background, because if the platform uses a dark color scheme the result "
-#| "will have poor contrast with black over almost black. This is an "
-#| "accessibility issue and should be avoided."
 msgid ""
 "Hardcoded colors in QML, such as `#32b2fa` or `red`, should usually be "
 "avoided; if it is really necessary to have elements with custom colors, it "
@@ -11477,8 +11172,8 @@ msgstr ""
 "område där bara egna färger används (oftast i programmets innehållsområde "
 "och aldrig i omgivningen som verktygsrader eller dialogrutor). Exempelvis "
 "kan inte en hårdkodad `black` förgrund användas över en [Kirigami.Theme."
-"backgroundColor](https://api-staging.kde.org/qml-org-kde-kirigami-platform-"
-"theme.html#backgroundColor-attached-prop) bakgrund, eftersom om plattformen "
+"backgroundColor](https://api.kde.org/qml-org-kde-kirigami-platform-theme."
+"html#backgroundColor-attached-prop) bakgrund, eftersom om plattformen "
 "använder ett mörkt färgschema har resultatet dålig kontrast med svart ovanpå "
 "nästan svart. Det är en tillgänglighetsfråga och bör undvikas."
 
