@@ -125,7 +125,7 @@ Kirigami.ApplicationWindow {
                     Controls.Button {
                         Layout.alignment: Qt.AlignRight
                         Layout.columnSpan: 2
-                        text: i18n("Edit")
+                        text: i18nc("@action:button","Edit")
                         // onClicked: to be done... soon!
                     }
                 }
@@ -213,7 +213,6 @@ We could just create three labels within our delegate component and call it a da
 GridLayout {
     // ...
     Kirigami.Heading {
-        Layout.fillHeight: true
         level: 1
         text: date
     }
@@ -241,7 +240,7 @@ GridLayout {
     Controls.Button {
         Layout.alignment: Qt.AlignRight
         Layout.columnSpan: 2
-        text: i18n("Edit")
+        text: i18nc("@action:button","Edit")
     }
 }
 ```

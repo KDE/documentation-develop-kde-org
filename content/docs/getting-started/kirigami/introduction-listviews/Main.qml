@@ -70,7 +70,7 @@ Kirigami.ApplicationWindow {
                         Layout.alignment: Qt.AlignRight
                         // Column spanning within grid layout (vertically in this case)
                         Layout.columnSpan: 2
-                        text: i18n("Edit")
+                        text: i18nc("@action:button","Edit")
                         //onClicked: to be done...
                     }
                 }
