@@ -45,21 +45,15 @@ If you plan on [building Plasma Desktop](/docs/getting-started/building/kde-buil
 
 If you cannot afford this storage, you might want to consider [building projects manually](/docs/getting-started/building/cmake-build) or with [distrobox](/docs/getting-started/building/containers-distrobox).
 
+Then install `git` and `uv`.
+
 Then run the following:
 
 ```bash
-cd ~
-curl 'https://invent.kde.org/sdk/kde-builder/-/raw/master/scripts/initial_setup.sh' > initial_setup.sh
-bash initial_setup.sh
+uv tool install git+https://invent.kde.org/sdk/kde-builder.git
 ```
 
-`kde-builder` will install git, a few runtime packages, and will install its executable in your PATH so you can run it from the terminal, as in the next step.
-
-{{< alert color="info" >}}
-
-Depending on your distribution, you may need to add `~/.local/bin` to the `PATH` environment variable. The kde-builder installer will tell you if this is required.
-
-{{< /alert >}}
+This will install `kde-builder`, so you can run it from the terminal, as in the next step.
 
 After the initial setup, you will need to generate a configuration file for kde-builder. Run:
 
@@ -166,19 +160,8 @@ You should occasionally update `kde-builder` to get its latest changes.
 This can be done by running
 
 ```bash
-kde-builder --self-update
+uv tool upgrade kde-builder
 ```
-
-{{< alert color="info" >}}
-
-If this does not work, your version of `kde-builder` does not support updating itself yet. In this case, you can update it by running
-
-```bash
-cd ~
-bash initial_setup.sh
-```
-
-{{< /alert >}}
 
 ## Setting up Qt
 
