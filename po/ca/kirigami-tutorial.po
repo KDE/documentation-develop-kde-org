@@ -4,13 +4,13 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2021, 2025 Antoni Bella Pérez <antonibella5@yahoo.com>
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2021-2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-06 02:07+0000\n"
-"PO-Revision-Date: 2026-07-07 10:43+0200\n"
+"PO-Revision-Date: 2026-08-14 18:39+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -4136,7 +4136,7 @@ msgid ""
 "to the `text` field for each repeated chip."
 msgstr ""
 "El ListModel s'utilitza com a emmagatzematge per als chips. Per a poblar el "
-"ListModel (i per tant, els chips), declarem un parell de components de "
+"ListModel (i, per tant, els chips), declarem un parell de components de "
 "ListElement, que conté un camp conegut com a `text`. Podem utilitzar aquesta "
 "cadena assignada des d'aquí al camp `text` per a cada xip repetit."
 
@@ -4685,8 +4685,9 @@ msgstr ""
 "color=\"info\" >}} Això funciona directament per a tots els diàlegs del "
 "Kirigami en entorns d'espai aïllat (com el Flatpak) a través dels XDG "
 "Desktop Portals. Quan s'executa en un entorn d'espai aïllat, s'utilitza "
-"automàticament el dorsal apropiat del portal, permetent l'accés aprovat per "
-"l'usuari sense necessitat de gestió manual del D-Bus. {{< /alert >}}"
+"automàticament el dorsal apropiat del portal, cosa que permet l'accés "
+"aprovat per l'usuari sense necessitat de gestió manual del D-Bus. {{< /alert "
+">}}"
 
 #: content/docs/getting-started/kirigami/components-dialogs/index.md:21
 msgid "Dialog"
@@ -8696,8 +8697,8 @@ msgid ""
 "coding interviews!) and as long as you are nice, you will be welcomed."
 msgstr ""
 "No us deixeu intimidar per tot aquest material! Ningú comença sent capaç de "
-"crear des de zero quelcom com el Plasma. Però, el KDE no és una empresa de "
-"mil milions amb una gran barrera a l'entrada (no tenim entrevistes de "
+"crear des de zero quelcom com el Plasma. Però KDE no és una empresa de mil "
+"milions amb una gran barrera a l'entrada (no tenim entrevistes de "
 "codificació de cinc tandes!). I mentre sigueu us porteu bé, sereu benvingut."
 
 #: content/docs/getting-started/kirigami/introduction-next_steps/index.md:112
@@ -9481,9 +9482,9 @@ msgid ""
 "misconfigurations more easily."
 msgstr ""
 "Com que és una dependència en temps d'execució, no cal establir-la al CMake "
-"que s'utilitza en temps de compilació. No obstant això, això pot indicar a "
-"si mateix i als altres si l'entorn és correcte i serà capaç d'executar "
-"l'aplicació resultant, permetent-vos trobar amb més facilitat els paquets "
+"que s'utilitza en temps de compilació. Tanmateix, això pot indicar a si "
+"mateix i als altres si l'entorn és correcte i serà capaç d'executar "
+"l'aplicació resultant, cosa que permet trobar amb més facilitat els paquets "
 "que falten o les configuracions errònies."
 
 # skip-rule: t-acc_obe
@@ -10979,8 +10980,8 @@ msgid ""
 "The `package-dir` is why the generated project script does `kirigami_python "
 "→ app` instead of `kirigami_python → src → app`."
 msgstr ""
-"El `package-dir` és per què l'script generat del projecte fa "
-"`kirigami_python → app` en lloc de `kirigami_python → src → app`."
+"El `package-dir` és perquè l'script generat del projecte fa `kirigami_python "
+"→ app` en lloc de `kirigami_python → src → app`."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-python/index.md:66
@@ -10989,7 +10990,7 @@ msgid ""
 "py](#app-py) does `kirigami_python → qml → Main.qml` instead of "
 "`kirigami_python → src → qml → Main.qml`."
 msgstr ""
-"El `package-dir` també és per què la crida `importlib.resources.files()` a "
+"El `package-dir` també és perquè la crida `importlib.resources.files()` a "
 "[app.py](#app-py) fa `kirigami_python → qml → Main.qml` en lloc de "
 "`kirigami_python → src → qml → Main.qml`."
 
@@ -11649,8 +11650,8 @@ msgid ""
 msgstr ""
 "Amb la segona ordre, el CMake construirà l'objectiu `kirigami_rust`, que "
 "només crida `cargo build --target-dir build/`. Aquest pas trigarà una estona "
-"a completar-se, però la propera vegada que repetiu la segona ordre del CMake "
-"serà més ràpida o no caldrà de compilar res."
+"a completar-se, però la pròxima vegada que repetiu la segona ordre del CMake "
+"serà més ràpida o no caldrà compilar res."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/setup-rust/index.md:169
