@@ -37,7 +37,7 @@ The [Switch](https://doc.qt.io/qt-6/qml-qtquick-controls-switch.html) and [Check
 
 Don’t change the label or icon when the state changes, and follow the [standard labeling guidelines](../text_and_labels/#mood-and-tone).
 
-Use a Switch for “instant apply” controls that take effect immediately; otherwise, use a CheckBox.
+Use a Switch for “instant apply” controls that take effect immediately. Use a CheckBox for everything else — including for toggle-able list items.
 
 {{< figure src="/hig/switch-with-obvious-opposite-state.png" class="text-center" caption="Switches take effect the moment they're clicked." width="500px">}}
 
