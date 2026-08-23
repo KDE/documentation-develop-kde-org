@@ -43,7 +43,7 @@ Use a Switch for “instant apply” controls that take effect immediately. Use 
 
 {{< figure src="/hig/checkboxes-with-obvious-opposite-states.png" class="text-center" caption="CheckBoxes only take effect when the user clicks “OK” or “Apply”." width="600px">}}
 
-Avoid making buttons checkable (by setting their `checkable` property to `true`), as their checkability isn’t obvious when unchecked (or even when checked, depending on the theme)
+Avoid making buttons checkable (by setting their `checkable` property to `true`), as their checkability isn’t obvious when unchecked (or even when checked, depending on the theme).
 
 If the surrounding context nonetheless dictates that a checkable button is the right control, treat it as a checkbox that happens to look like a button, applying the above guidelines.
 
