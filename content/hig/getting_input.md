@@ -45,7 +45,7 @@ Use a Switch for “instant apply” controls that take effect immediately. Use 
 
 Avoid making buttons checkable (by setting their `checkable` property to `true`), as their checkability isn’t obvious when unchecked (or even when checked, depending on the theme).
 
-If the surrounding context nonetheless dictates that a checkable button is the right control, treat it as a checkbox that happens to look like a button, applying the above guidelines.
+If this is unavoidable because the surrounding context dictates that a button is the right control, treat it as a checkbox that happens to look like a button, applying the above guidelines.
 
 Alternatively, use a normal non-checkable button with text indicating what will happen when it’s pressed, and change the text and icon when the state changes. When doing so, follow the standard guidelines for [labels](../text_and_labels/#mood-and-tone) and [icons](../icons/).
 
