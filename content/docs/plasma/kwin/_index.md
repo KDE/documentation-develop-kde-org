@@ -37,7 +37,7 @@ manager again.
 ## Packaging KWin scripts
 
 In order to have KWin load a script on each session start the script has to
-be packaged. KWin scripts use the [KPackage](https://api.kde.org/frameworks/kpackage/html/)
+be packaged. KWin scripts use the [KPackage](https://api.kde.org/kpackage-index.html)
 format.
 
 ### Package structure
