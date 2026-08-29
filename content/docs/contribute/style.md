@@ -198,7 +198,7 @@ Section titles (which start with a select number of `#` characters) should prefe
 This is for three reasons:
 
 * The first level (`#`) is already in use for the page title.
-* The KDE Developer website currently has a limitation for showing sidebar content. Using four levels (`####`) or more will now show up on the right sidebar.
+* The KDE Developer website currently has a limitation for showing sidebar content. Using four levels (`####`) or more will not show up on the right sidebar.
 * This forces the tutorial writer to not go overboard with content levels.
 
 Use heading level four (`####`) only if strictly necessary. Never use five (`#####`) or more.
