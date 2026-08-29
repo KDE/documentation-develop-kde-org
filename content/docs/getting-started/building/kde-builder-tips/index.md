@@ -193,3 +193,18 @@ Whether to process new translations can be disabled globally in the configuratio
 cmake-options: >
   -DKF_SKIP_PO_PROCESSING=ON
 ```
+
+## Enabling the QML language server
+
+Up until Qt 6.10, the QML language server `qmlls` only works if you write or generate a `.qmlls.ini` file in the source of your project.
+
+It is possible to generate it for all projects built with kde-builder with a CMake option:
+
+```yaml
+cmake-options: >
+  -DQT_QML_GENERATE_QMLLS_INI=ON
+```
+
+It will be located in the same directory where a `qt_add_qml_module()` or `ecm_add_qml_module()` call is made.
+
+After Qt 6.10, `.qmlls.ini` is no longer necessary and you only need the `qmlls` language server to be running. You may still configure its behavior with the INI file.
