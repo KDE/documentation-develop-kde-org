@@ -28,7 +28,7 @@ it easily. Any other dependencies can be installed from `pip` in a
     arch="python-pyqt6 pyside6 kirigami flatpak-builder qqc2-desktop-style appstream"
 >}}
 
-This tutorial works with our tutorial about [building software with distrobox]({{< ref "containers-distrobox" >}}).
+This tutorial works with our tutorial about [building software with distrobox]({{< ref "distrobox" >}}).
 
 ## Structure
 

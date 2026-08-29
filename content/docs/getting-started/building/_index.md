@@ -34,7 +34,7 @@ You can build KDE software using the following methods:
 * [kde-builder]({{< ref "kde-builder-setup" >}})
 * [kdesrc-build](https://invent.kde.org/sdk/kdesrc-build)
 * [manual CMake compilation]({{< ref "cmake-build" >}})
-* with [containers]({{< ref "containers-distrobox" >}})
+* with [containers]({{< ref "distrobox" >}})
 * with [Craft]({{< ref "craft" >}})
 
 If you are on a rolling release Linux distribution or just want to build a single app, you may also learn how to compile KDE software using [manual CMake compilation]({{< ref "cmake-build" >}}).

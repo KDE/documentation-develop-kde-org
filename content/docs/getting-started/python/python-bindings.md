@@ -37,7 +37,7 @@ KDE provides Python bindings for some KDE libraries. The current list of availab
 
 Like with Kirigami and PySide6/PyQt6, the bindings need to be built against the same version of Qt used for PySide6/PyQt6.
 
-Because of this, currently the easiest way to use KDE bindings is by using a distribution that has built KDE libraries with support for the Python bindings. As the bindings are still new, not all distributions will have bindings, so we recommend you to use [distrobox]({{< ref "containers-distrobox" >}}). Use either Fedora **Rawhide**, openSUSE **Tumbleweed**, or Arch Linux.
+Because of this, currently the easiest way to use KDE bindings is by using a distribution that has built KDE libraries with support for the Python bindings. As the bindings are still new, not all distributions will have bindings, so we recommend you to use [distrobox]({{< ref "distrobox" >}}). Use either Fedora **Rawhide**, openSUSE **Tumbleweed**, or Arch Linux.
 
 {{< installpackage
     fedora="python3-kf6-kcoreaddons python3-kf6-kguiaddons python3-kf6-knotifications python3-kf6-kunitconversion python3-kf6-kwidgetsaddons python3-kf6-kxmlgui python3-kf6-kstatusnotifieritem"

@@ -10,7 +10,7 @@ aliases:
 
 If your Linux distribution does **NOT** provide a recent enough version of Qt, you have the following options:
 
-* Use [containers]({{< ref "containers-distrobox" >}})
+* Use [containers]({{< ref "distrobox" >}})
 * [Install Qt6 using the Qt online installer]({{< ref "#qt6-online" >}})
 * [Install Qt6 using the unofficial aqtinstall installer]({{< ref "#qt6-aqtinstall" >}})
 * [Build Qt6 using kde-builder]({{< ref "#qt6-build" >}})
