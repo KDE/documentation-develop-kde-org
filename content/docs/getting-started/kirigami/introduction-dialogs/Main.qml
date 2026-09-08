@@ -109,7 +109,7 @@ Kirigami.ApplicationWindow {
                 inputMask: "D999-99-99"
                 // Here we confirm the operation just like
                 // clicking the OK button
-                onAccepted: addDialog.onAccepted()
+                onAccepted: addDialog.accepted()
             }
             Controls.Label {
                 text: "* = required fields"
