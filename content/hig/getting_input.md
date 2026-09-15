@@ -113,5 +113,5 @@ Standard Breeze styling for controls signals interactivity primary through hover
 - Use standard controls as much as possible to automatically inherit this style of visual interactivity.
 - When custom controls must be used, prefer to override the `contentItem` property of standard controls so that only the content is custom, and the interactivity and styling of the background effect are preserved.
 - If even that is not possible, re-implement interactivity signaling using hover effects.
-- Only use the pointing finger cursor to signal interactivity for a clickable URL.
-- Only use underlined web-style links for clickable URLs, never for internal navigation within your app.
+- To open URLs, use underlined web-style links, not buttons. Don’t use links for internal navigation within your app.
+- Only use the pointing finger cursor to signal interactivity for underlined web-style links.
