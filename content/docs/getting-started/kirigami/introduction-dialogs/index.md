@@ -90,7 +90,7 @@ Kirigami.ApplicationWindow {
 
 Dialogs by default have a [header](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#header-prop) and a [footer](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#footer-prop), both inherited from [Controls.Dialog](docs:qtquickcontrols;QtQuick.Controls.Dialog).
 
-The header by default includes a [title](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#title-prop) and a close button that can be disabled with [showCloseButton](https://api.kde.org/qml-org-kde-kirigami-dialogs-dialog.html#showCloseButton-prop). The footer by default includes a close button, and it can be overridden with [standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#standardButtons-prop).
+The header by default includes a [title](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#title-prop) and a close button that can be disabled with [showCloseButton](https://api.kde.org/qml-org-kde-kirigami-dialogs-dialog.html#showCloseButton-prop). The footer by default doesn't include any buttons. It can be overridden with [standardButtons](https://doc.qt.io/qt-6/qml-qtquick-controls-dialog.html#standardButtons-prop).
 
 We first set it to show an "Ok" button and a "Cancel" button, add some padding, and add a reasonable [preferredWidth](https://api.kde.org/qml-org-kde-kirigami-dialogs-dialog.html#preferredWidth-prop). The preferred width is the default expected size of the dialog, which can increase if needed. We can use standard [Kirigami.Units](https://api.kde.org/qml-org-kde-kirigami-platform-units.html) that we will revisit later on.
 
