@@ -1,11 +1,17 @@
-.ae-card h4, .ae-card .h1 {
-  margin-top: 0;
-}
+.ae-card {
+    border: 2px solid rgba(var(--bs-link-color-rgb), 0.25) !important;
+    box-shadow: none !important;
 
-@include color-mode(dark) {
-    // Adjust the cards to match the Bootstrap 4 appearance
-    .ae-card {
-        border-color: rgba(var(--bs-body-color-rgb), 1.0) !important;
-        box-shadow: 0 .5rem 1rem rgba(var(--bs-border-color-rgb), .15) !important;
+    &:hover {
+        border-color: rgba(var(--bs-link-color-rgb), 1.0) !important;
+
+        .h4, .icon {
+            color: rgba(var(--bs-link-color-rgb), 1.0) !important;
+        }
+
     }
-}
+
+    .h4, .h1  {
+        margin-top: 0;
+    }
+  }
