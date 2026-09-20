@@ -63,6 +63,8 @@ kde-builder --generate-config
 
 This will create a new file `~/.config/kde-builder.yaml`. See the [documentation](https://kde-builder.kde.org/en/configuration/config-file-overview.html) for a list of available options.
 
+<div id="debian-ubuntu-based-distributions"></div>
+
 {{< alert title="Debian/Ubuntu-based distributions" color="warning" >}}
 
 Some distributions need source repositories enabled before you can install the development packages you need. Do that now, *if needed*:

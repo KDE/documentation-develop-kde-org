@@ -26,6 +26,8 @@ While these commands will not *always* install all dependencies you will need wh
 
 ### Debian, Ubuntu, Kubuntu, and KDE neon
 
+Make sure that you have enabled the source repositories for your distribution, as explained in [Debian/Ubuntu-based distributions]({{< ref "kde-builder-setup#debian-ubuntu-based-distributions" >}}). Without them, `apt build-dep` will fail with `E: You must put some 'deb-src' URIs in your sources.list`.
+
 All known build dependencies for the package you want to build can be installed with `apt build-dep`:
 
 ```bash
