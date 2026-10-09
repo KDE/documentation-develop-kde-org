@@ -36,7 +36,7 @@ Maximize the space available for the app's main content area; it's what users op
 ## Lists and grids
 When a view's content consists of multiple items that can be seen or interacted with, display them in a [QtQuick.ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html) or a [QtQuick.GridView](https://doc.qt.io/qt-6/qml-qtquick-gridview.html). Which one to choose depends on the context:
 
-- Lists are faster to visually scan and handle long text better. They tend to be superior for mostly-textual content. Use alternating background colors by setting [`Theme.useAlternateBackgroundColor: true`](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#useAlternateBackgroundColor-attached-prop) on list items with extra items on their right sides; this helps the eye associate content on the right with content on the left.
+- Lists are faster to visually scan and handle long text better. They tend to be superior for mostly-textual content.
 - Grids make better use of space when the view is wide, items are large, or scrolling is undesirable. They tend to be superior for mostly-visual content.
 
 Depending on the context, it can be reasonable to let the user pick their preferred representation, or even to automatically switch from one to another based on the width of the window.
@@ -50,6 +50,7 @@ Place controls used to remove list or grid items inline, on the items themselves
 <!--TODO: move this info into a more general page on style, once we have one -->
 Use bold text for the selected or actively-used list or grid item.
 
+For list items with extra items on their right sides, use alternating background colors by setting [`Theme.useAlternateBackgroundColor: true`](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#useAlternateBackgroundColor-attached-prop) to help the eye associate content on the right with content on the left.
 
 ## Page vs Dialog vs OverlaySheet
 When everything doesn't fit on one page and some content is only contextually relevant, show it on demand using one of the following user interface elements:
