@@ -36,7 +36,7 @@ Maximize the space available for the app's main content area; it's what users op
 ## Lists and grids
 When a view's content consists of multiple items that can be seen or interacted with, display them in a [QtQuick.ListView](https://doc.qt.io/qt-6/qml-qtquick-listview.html) or a [QtQuick.GridView](https://doc.qt.io/qt-6/qml-qtquick-gridview.html). Which one to choose depends on the context:
 
-- Lists are faster to visually scan and handle long text better. They tend to be superior for mostly-textual content. Use alternating background colors with [Kirigami.Theme](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html) for list items with subtitles or extra items on their right sides.
+- Lists are faster to visually scan and handle long text better. They tend to be superior for mostly-textual content. Use alternating background colors by setting [`Theme.useAlternateBackgroundColor: true`](https://api.kde.org/qml-org-kde-kirigami-platform-theme.html#useAlternateBackgroundColor-attached-prop) on list items with subtitles or extra items on their right sides.
 - Grids make better use of space when the view is wide, items are large, or scrolling is undesirable. They tend to be superior for mostly-visual content.
 
 Depending on the context, it can be reasonable to let the user pick their preferred representation, or even to automatically switch from one to another based on the width of the window.
