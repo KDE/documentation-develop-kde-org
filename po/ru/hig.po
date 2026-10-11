@@ -1,0 +1,157 @@
+# Translation of hig into Russian.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: hig\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 08:54+0000\n"
+"PO-Revision-Date: 2026-10-10 14:20+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: content/hig/_index.md:0
+msgid "KDE Human Interface Guidelines"
+msgstr "Рекомендации KDE по пользовательскому интерфейсу"
+
+#: content/hig/_index.md:0
+msgid "Design"
+msgstr "Дизайн"
+
+#: content/hig/_index.md:23
+msgid ""
+"Welcome to the KDE Human Interface Guidelines! Following them will help you "
+"build a beautiful and powerful app that feels at home when run in [KDE "
+"Plasma](https://kde.org/plasma-desktop), and works well outside of it. Users "
+"will learn how to use your app quickly, accomplish their goals with ease, "
+"and encounter fewer issues requiring support."
+msgstr ""
+"Добро пожаловать в рекомендации KDE по пользовательскому интерфейсу! "
+"Следование им поможет создать красивое и мощное приложение, которое будет "
+"органично смотреться в [KDE Plasma](https://kde.org/plasma-desktop) и хорошо "
+"работать вне её. Пользователи быстро научатся работать с приложением, легко "
+"достигнут своих целей и реже столкнутся с проблемами, требующими поддержки."
+
+#: content/hig/_index.md:25
+msgid ""
+"This document covers KDE's design philosophy and culture, common workflows "
+"and patterns, standard user interface conventions, and recommendations for "
+"platform integration."
+msgstr ""
+"В этом документе рассматриваются философия и культура проектирования KDE, "
+"типичные рабочие процессы и шаблоны, стандартные соглашения "
+"пользовательского интерфейса, а также рекомендации по интеграции с "
+"платформой."
+
+#: content/hig/_index.md:28
+msgid "Why is good design so important?"
+msgstr "Почему хороший дизайн так важен?"
+
+#: content/hig/_index.md:29
+msgid ""
+"Design determines how well something fulfills its functional purpose and how "
+"enjoyable it is to interact with. If either is lacking, the result will be "
+"frustrating. People won't want to use a poorly-designed app, and if forced "
+"to, they'll be resentful and spread negativity about it. Avoid this through "
+"good design!"
+msgstr ""
+"Дизайн определяет, насколько хорошо что-либо выполняет своё функциональное "
+"назначение и насколько приятно с ним взаимодействовать. Если чего-то из "
+"этого недостаёт, результат будет разочаровывающим. Люди не захотят "
+"пользоваться плохо продуманным приложением, а если их принудить, они будут "
+"недовольны и станут распространять о нём негатив. Избежать этого поможет "
+"грамотный дизайн!"
+
+#: content/hig/_index.md:31
+msgid ""
+"Design involves targeted decisions and trade-offs that bring a project "
+"closer to its intended goals and usage paradigms. The best apps know which "
+"users and use cases they're targeting, and which ones they leave for others. "
+"It's better to succeed by focusing on what you can do well than to spread "
+"yourself thin and fail. Under-promise and over-deliver, never the reverse."
+msgstr ""
+"Проектирование предполагает целенаправленные решения и компромиссы, "
+"приближающие проект к намеченным целям и парадигмам использования. Лучшие "
+"приложения знают, на каких пользователей и сценарии использования они "
+"рассчитаны, а какие уступают другим. Лучше добиться успеха, сосредоточившись "
+"на том, что получается хорошо, чем распыляться и потерпеть неудачу. Обещать "
+"меньше, а делать больше — и никогда наоборот."
+
+#: content/hig/_index.md:34
+msgid "Topics not covered"
+msgstr "Нерассмотренные темы"
+
+#: content/hig/_index.md:35
+msgid ""
+"This document is a set of design guidelines, not instructions for "
+"implementing every specific component. While some technical guidance will be "
+"provided, much more detail can be found in the components' own [usage]"
+"(https://develop.kde.org/docs/) and [API](https://api.kde.org/) "
+"documentation as well as the [source code of existing KDE apps](https://"
+"invent.kde.org/explore/groups?sort=name_asc). It's more of a *what* and a "
+"*why*, not a *how*."
+msgstr ""
+"Этот документ — свод рекомендаций по проектированию, а не инструкции по "
+"реализации каждого отдельного компонента. Хотя некоторые технические "
+"рекомендации будут приведены, гораздо больше подробностей можно найти в "
+"документации самих компонентов по [использованию](https://develop.kde.org/"
+"docs/) и [API](https://api.kde.org/), а также в [исходном коде существующих "
+"приложений KDE](https://invent.kde.org/explore/groups?sort=name_asc). Это "
+"скорее *что* и *почему*, а не *как*."
+
+#: content/hig/_index.md:37
+msgid ""
+"This document is not intended to be an ironclad law code. By learning and "
+"following the rules, you'll understand how to safely innovate within the "
+"guidelines, and when it can be appropriate to break them if it produces a "
+"superior result."
+msgstr ""
+"Этот документ не претендует на роль незыблемого свода законов. Изучив "
+"правила и следуя им, можно понять, как безопасно внедрять новшества, не "
+"выходя за рамки рекомендаций, и когда их уместно нарушить, если это даёт "
+"лучший результат."
+
+#: content/hig/_index.md:40
+msgid "Contributing"
+msgstr "Как помочь"
+
+#: content/hig/_index.md:41
+msgid ""
+"This is a living document, intended to be updated over time to reflect "
+"current KDE design trends and best practices. Contributions are welcome!"
+msgstr ""
+"Это живой документ, который предполагается обновлять по мере развития, чтобы "
+"отражать текущие тенденции дизайна KDE и лучшие практики. Приветствуются "
+"дополнения!"
+
+#: content/hig/_index.md:43
+msgid ""
+"Content is written in [Markdown](https://commonmark.org/help/), and the "
+"source files are hosted in a [Git repository](https://invent.kde.org/"
+"documentation/develop-kde-org.git). To quickly edit a page, the GitLab "
+"editor can be opened on any page with the “Edit this page” button in the "
+"drawer on the right. Tasks and changes are organized via https://invent.kde."
+"org. To learn how to submit changes, see the [README file](https://invent."
+"kde.org/documentation/develop-kde-org/-/blob/master/README.md)."
+msgstr ""
+"Содержимое написано в формате [Markdown](https://commonmark.org/help/), а "
+"исходные файлы размещены в [репозитории Git](https://invent.kde.org/"
+"documentation/develop-kde-org.git). Чтобы быстро изменить страницу, на любой "
+"странице можно открыть редактор GitLab кнопкой «Редактировать эту страницу» "
+"на выдвижной панели справа. Задачи и изменения организуются через https://"
+"invent.kde.org. Чтобы узнать, как отправить изменения, см. [файл README]"
+"(https://invent.kde.org/documentation/develop-kde-org/-/blob/master/README."
+"md)."
+
+#: content/hig/_index.md:46
+msgid "Read the guidelines"
+msgstr "Читать руководство"
+
+#: content/hig/_index.md:47
+msgid "Click on any of these tiles to jump to a page:"
+msgstr "Чтобы перейти на страницу, щёлкните по любой из этих плиток:"
