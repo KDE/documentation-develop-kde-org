@@ -5,6 +5,8 @@ description: >
   Checking that your internationalization is correct
 ---
 
+This tutorial assumes you have followed the [KI18n tutorial]({{< ref "ki18n" >}})
+
 ## Making a new POT file {#new-pot-file}
 
 Clone the [Scripty repository](https://invent.kde.org/sysadmin/l10n-scripty) and run `extract-messages.sh`:
@@ -51,4 +53,4 @@ The first argument is the existing translated PO file, the second argument is th
 
 Third party applications may use Scripty's extract-messages.sh and merge.sh, as described above. Both of these scripts are simple conveniences on top of `msgfmt` and `msgmerge` that perform the task without boilerplate.
 
-Plasmoids can be prepared and tested differently, especially with [Zren's scripts](https://github.com/Zren/plasma-applet-lib/blob/master/package/translate/). See [Plasmoids and third party software](#).
+Plasmoids can be prepared and tested differently, especially with [Zren's scripts](https://github.com/Zren/plasma-applet-lib/blob/master/package/translate/). See [Plasmoids and third party software]({{< ref "third-party" >}}).
