@@ -25,7 +25,7 @@ To make a KDE project using C++ translatable under KDE infrastructure:
 2. Include the [ki18n_install(po)](https://invent.kde.org/frameworks/ki18n/-/blob/master/cmake/KF6I18nMacros.cmake.in#L80) CMake macro
 3. Initialize the KI18n library in code
 4. Use i18n() functions in code
-5. Create a [Messages.sh](#) file
+5. Create a [Messages.sh]({{< ref "scripty" >}}) file
 
 Linking the library and including its CMake macro is done like so in your project's `CMakeLists.txt` file:
 
@@ -77,7 +77,7 @@ int main(int argc, char* argv[])
 
 It is a good idea to set the KAboutData `yourappname` (the [componentName](https://api.kde.org/kaboutdata.html#componentName-prop)) to the same name used as the KLocalizedString `applicationDomain` for consistency. The former is the internal application name, while the latter will be the name of the translation catalog (POT file).
 
-Lastly, for [Scripty and string extraction](#) to generate POT files, you will need to create a `Messages.sh` file in the root of your project's repository. For a typical QML project, this could look like:
+Lastly, for [Scripty and string extraction]({{< ref "scripty" >}}) to generate POT files, you will need to create a `Messages.sh` file in the root of your project's repository. For a typical QML project, this could look like:
 
 ```bash
 #!/usr/bin/env bash
@@ -209,12 +209,12 @@ For more details, see [KI18n Programmer's Guide: General Messages](https://inven
 
 The [ki18n_install(po)](https://invent.kde.org/frameworks/ki18n/-/blob/master/cmake/KF6I18nMacros.cmake.in#L80) CMake macro mentioned in [Getting started with KI18n]({{< ref "#getting-started-with-ki18n" >}}) is made available once you add KI18n to your CMakeLists.txt with `find_package()`, and its documentation is [available in the KI18n repository](https://invent.kde.org/frameworks/ki18n/-/blob/master/cmake/KF6I18nMacros.cmake.in#L80).
 
-It searches for PO files present in `po/<langcode>/` in the translated project's repository, and then runs gettext's `msgfmt` to turn them into binary MO files. This is a necessary step, as outlined in [Overview: gettext and xgettext](#).
+It searches for PO files present in `po/<langcode>/` in the translated project's repository, and then runs gettext's `msgfmt` to turn them into binary MO files. This is a necessary step, as outlined in [Overview: gettext and xgettext]({{< ref "gettext" >}}).
 
 The list of language codes can be seen in `/usr/share/locale/`.
 
 The MO files get installed to `/usr/share/locale/<langcode>/LC_MESSAGES` or equivalent on your Linux distribution, or `projectdir/data/locale/<langcode>/LC_MESSAGES` on Windows. When your application is run, it will search this path by default, looking for any translations.
 
-If the operating system is using a specific locale, say `fr` (French), the application will load the relevant `fr` MO files and substitute the translatable English strings with French ones at runtime. On Linux, the relevant environment variables used to detect the operating system's locale are `LANG` and `LANGUAGE`, which are useful when [Testing translations locally](#).
+If the operating system is using a specific locale, say `fr` (French), the application will load the relevant `fr` MO files and substitute the translatable English strings with French ones at runtime. On Linux, the relevant environment variables used to detect the operating system's locale are `LANG` and `LANGUAGE`, which are useful when [Testing translations locally]({{< ref "po-and-mo" >}}).
 
 This processing and installation of PO files is enabled by default and will always trigger during compilation/installation. As mentioned in [Building KDE software: Tips and Tricks]({{< ref "kde-builder-tips" >}}), it is possible to disable running `msgfmt` at compile time using the CMake option `-DKF_SKIP_PO_PROCESSING=ON`, but other than that specific use case disabling PO processing should be avoided.

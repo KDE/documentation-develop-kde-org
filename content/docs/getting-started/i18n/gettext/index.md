@@ -41,6 +41,6 @@ To make their software translatable, developers utilizing KDE infrastructure onl
 * Write a simple `Messages.sh` file
 * Make sure that their application's user-facing strings are marked for translation
 
-This is explained in the next pages, [KI18n](#) and [Scripty and string extraction](#).
+This is explained in the next pages, [KI18n]({{< ref "ki18n" >}}) and [Scripty and string extraction]({{< ref "scripty" >}}).
 
-Developers using KI18n but not KDE infrastructure (Scripty) should follow [Plasmoids and third party software](#).
+Developers using KI18n but not KDE infrastructure (Scripty) should follow [Plasmoids and third party software]({{< ref "third-party" >}}).
