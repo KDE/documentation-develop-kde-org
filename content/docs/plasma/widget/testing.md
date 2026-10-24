@@ -1,8 +1,8 @@
 ---
-title: "Testing"
+title: "Advanced testing"
 weight: 6
 description: >
-  How to quickly test a plasma widget
+  How to use plasmawindowed and plasmoidviewer
 aliases:
   - /docs/plasma/widget/testing/
 ---

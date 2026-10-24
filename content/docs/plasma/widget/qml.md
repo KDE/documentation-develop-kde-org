@@ -1,8 +1,8 @@
 ---
-title: "QML"
+title: "QML overview"
 weight: 7
 description: >
-  Learn the basics of QML
+  Essentials and pitfalls
 aliases:
   - /docs/plasma/widget/qml/
 ---

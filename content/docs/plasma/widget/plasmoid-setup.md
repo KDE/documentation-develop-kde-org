@@ -2,7 +2,7 @@
 title: "Plasmoid setup"
 weight: 1
 description: >
-  Creating a Plasmoid
+  Creating a QML plasmoid
 ---
 
 Plasmoids, otherwise called Plasma widgets or applets, are self-contained extensions that are specific to the KDE Plasma desktop.

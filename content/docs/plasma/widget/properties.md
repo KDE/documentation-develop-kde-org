@@ -5,6 +5,14 @@ description: >
   A rundown of the QML Properties in a widget
 ---
 
+{{< alert color="warning" title="🔨 Move to API" >}}
+
+The contents of this page need to be moved to the [Libplasma API documentation](https://api.kde.org/plasma-index.html).
+
+Learn [how to set up QDoc](https://invent.kde.org/teams/goals/streamlined-application-development-experience/-/work_items/10#note_1052720) and help [port this documentation to QDoc](https://invent.kde.org/-/snippets/3206)! The repository is in <https://invent.kde.org/plasma/libplasma>.
+
+{{< /alert >}}
+
 ## Plasmoid property group
 
 <!-- TODO either remove AppletInterface or point to PlasmaQuick::Dialog::appletInterface -->
