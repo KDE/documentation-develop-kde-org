@@ -3,6 +3,8 @@ title: "Configuration for Plasmoids"
 weight: 4
 description: >
   Creating a Plasmoid
+aliases:
+  - /docs/plasma/widget/configuration/
 ---
 
 ## Configuration Intro

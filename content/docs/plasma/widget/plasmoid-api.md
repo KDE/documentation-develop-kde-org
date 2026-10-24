@@ -3,6 +3,8 @@ title: "Using the Plasma API"
 weight: 3
 description: >
   Extending your plasmoid
+aliases:
+  - /docs/plasma/widget/plasma-qml-api/
 ---
 
 In [Plasmoid setup](#) you have learned how to make a simple Hello World plasmoid using a PlasmoidItem and multiple representations, but the Plasma API for making plasmoids is much more extensive and effectively allows you to make a full-blown application inside a plasmoid.

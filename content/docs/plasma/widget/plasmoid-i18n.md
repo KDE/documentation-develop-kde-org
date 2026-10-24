@@ -3,6 +3,8 @@ title: "Making your plasmoid translatable"
 weight: 5
 description: >
   With KI18n
+aliases:
+  - /docs/plasma/widget/translations-i18n/
 ---
 
 This page serves as an outline of what needs to be done to make your plasmoid translatable.

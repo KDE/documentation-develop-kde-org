@@ -3,6 +3,8 @@ title: "Plasmoids compiled to C++"
 weight: 2
 description: >
   For more advanced plasmoids
+aliases:
+  - /docs/plasma/widget/c-api/
 ---
 
 In [Plasmoid setup](#) you were introduced to plasmoids that consist only of QML files. This kind of plasmoid is easy to package and distribute because its files are installed as QML files in `/usr/share/plasma/plasmoids/` or `~/.local/share/plasma/plasmoids/`, which is read by default by Plasma. 
