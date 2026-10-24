@@ -7,7 +7,7 @@ aliases:
   - /docs/plasma/widget/c-api/
 ---
 
-In [Plasmoid setup](#) you were introduced to plasmoids that consist only of QML files. This kind of plasmoid is easy to package and distribute because its files are installed as QML files in `/usr/share/plasma/plasmoids/` or `~/.local/share/plasma/plasmoids/`, which is read by default by Plasma. 
+In [Plasmoid setup]({{< ref "plasmoid-setup" >}}) you were introduced to plasmoids that consist only of QML files. This kind of plasmoid is easy to package and distribute because its files are installed as QML files in `/usr/share/plasma/plasmoids/` or `~/.local/share/plasma/plasmoids/`, which is read by default by Plasma. 
 
 When set up to build with CMake, the QML files are instead compiled to C++ and turned into libraries, which is more performant. This tutorial explains how to do so.
 
@@ -17,7 +17,7 @@ A general understanding of C++ and CMake is required for this page. We recommend
 
 While you can make a QML only project compile to C++, this is usually not desirable because it is less ergonomic to test a compiled project and to distribute it to users. So this is only typically done for projects that require C++ or that are going to become a part of Plasma itself.
 
-Unlike with [Plasmoid setup](#), the file structure of the project doesn't matter as long as the CMake code is correct and pointing to the right places since it will generate a single library `.so` file in the end.
+Unlike with [Plasmoid setup]({{< ref "plasmoid-setup" >}}), the file structure of the project doesn't matter as long as the CMake code is correct and pointing to the right places since it will generate a single library `.so` file in the end.
 
 Because CMake already specifies the URI of the plasmoid, the `Id` key in `metadata.json` is not needed. The presence of the key will trigger a warning when running the plasmoid.
 
@@ -120,7 +120,7 @@ target_link_libraries(org.kde.plasma.plasmoid_cpp PRIVATE
 
 ## src/metadata.json {#metadata}
 
-The `metadata.json` file is kept mostly the same as in [Plasmoid setup](#) except for the lack of the `Id` key, which is not necessary for projects compiled to C++ and will trigger a warning at runtime if present:
+The `metadata.json` file is kept mostly the same as in [Plasmoid setup]({{< ref "plasmoid-setup" >}}) except for the lack of the `Id` key, which is not necessary for projects compiled to C++ and will trigger a warning at runtime if present:
 
 ```json
 {
@@ -146,7 +146,7 @@ The `metadata.json` file is kept mostly the same as in [Plasmoid setup](#) excep
 
 ## src/qml/main.qml {#main-qml}
 
-The example used in [Plasmoid setup](#) that has only a simple `fullRepresentation` will be reused here to showcase how a string message from C++ can be accessed in the QML side of the plasmoid:
+The example used in [Plasmoid setup]({{< ref "plasmoid-setup" >}}) that has only a simple `fullRepresentation` will be reused here to showcase how a string message from C++ can be accessed in the QML side of the plasmoid:
 
 ```qml
 import QtQuick
@@ -209,7 +209,7 @@ private:
 };
 ```
 
-As explained in [Getting started with Kirigami: Connect logic to your QML user interface](#), you need the `QML_ELEMENT` macro to expose the C++ class to QML as an object of the same name as the class, namely `HelloWorld`.
+As explained in [Getting started with Kirigami: Connect logic to your QML user interface]({{< ref "advanced-connect_backend" >}}), you need the `QML_ELEMENT` macro to expose the C++ class to QML as an object of the same name as the class, namely `HelloWorld`.
 
 The `QML_SINGLETON` macro is what turns the class into a singleton that will only ever have one instance in QML, and `Q_PROPERTY()` is the macro that exposes a specific class member (`message()`) to QML under the `HelloWorld` QML object, which is only marked as `CONSTANT` here because it won't be changed while the plasmoid is running.
 

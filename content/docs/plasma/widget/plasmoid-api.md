@@ -7,7 +7,7 @@ aliases:
   - /docs/plasma/widget/plasma-qml-api/
 ---
 
-In [Plasmoid setup](#) you have learned how to make a simple Hello World plasmoid using a PlasmoidItem and multiple representations, but the Plasma API for making plasmoids is much more extensive and effectively allows you to make a full-blown application inside a plasmoid.
+In [Plasmoid setup]({{< ref "plasmoid-setup" >}}) you have learned how to make a simple Hello World plasmoid using a PlasmoidItem and multiple representations, but the Plasma API for making plasmoids is much more extensive and effectively allows you to make a full-blown application inside a plasmoid.
 
 This page explains where to find more useful APIs for plasmoids and when to use them.
 
@@ -23,9 +23,9 @@ Plasmoids mostly consist of a mix of Libplasma, Kirigami, and QtQuick. Prefer us
 * [Plasma Components](https://api.kde.org/org-kde-plasma-components-qmlmodule.html) provides traditional QtQuick controls, but styled specifically for plasmoids
 * [Plasma Extras](https://api.kde.org/org-kde-plasma-extras-qmlmodule.html) provides additional controls like Kirigami, but styled specifically for plasmoids
 
-[Kirigami](https://api.kde.org/kirigami-index.html) provides QML API that is traditionally useful for KDE-styled applications, but its APIs that are most used in plasmoids are [Kirigami.Units](https://api.kde.org/qml-org-kde-kirigami-platform-units.html). Check out our [Kirigami Tutorial](#).
+[Kirigami](https://api.kde.org/kirigami-index.html) provides QML API that is traditionally useful for KDE-styled applications, but its APIs that are most used in plasmoids are [Kirigami.Units](https://api.kde.org/qml-org-kde-kirigami-platform-units.html). Check out our [Kirigami Tutorial]({{< ref "/docs/getting-started/kirigami" >}}).
 
-[QtQuick](#) provides generic QML API, but its APIs that are most used in plasmoids are [Layouts](https://doc.qt.io/qt-6/qtquicklayouts-index.html).
+[QtQuick](https://doc.qt.io/qt-6/qtquick-index.html) provides generic QML API, but its APIs that are most used in plasmoids are [Layouts](https://doc.qt.io/qt-6/qtquicklayouts-index.html).
 
 ## Other QML APIs
 

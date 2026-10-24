@@ -23,9 +23,9 @@ Whereas Plasmoids compiled from QML to C++ are installed to:
 
 In this tutorial, you will first create a QML-only plasmoid with a simple Hello World that you can later publish to the [KDE Store](https://store.kde.org/).
 
-You will then learn how to make your plasmoid compile to C++ and how to test it in [Plasmoids compiled to C++](#), which cannot be published to the KDE Store, but allows you to make more powerful plasmoids.
+You will then learn how to make your plasmoid compile to C++ and how to test it in [Plasmoids compiled to C++]({{< ref "plasmoid-cpp" >}}), which cannot be published to the KDE Store, but allows you to make more powerful plasmoids.
 
-After this, you should be able to follow the [Learning the Plasma API](#) page to make your plasmoid do something interesting.
+After this, you should be able to follow the [Learning the Plasma API]({{< ref "plasmoid-api" >}}) page to make your plasmoid do something interesting.
 
 ## File structure
 
@@ -60,7 +60,7 @@ Your plasmoid should have an `id` that must follow a [reverse-DNS naming scheme]
 
 The entrypoint for the plasmoid will be `org.kde.plasma.tutorial/contents/ui/main.qml` and the metadata containing information about your plasmoid as delivered to users is stored in `org.kde.plasma.tutorial/metadata.json`.
 
-Creating a configuration window is optional and covered in [Configuration for Plasmoids](#).
+Creating a configuration window is optional and covered in [Configuration for Plasmoids]({{< ref "plasmoid-config" >}}).
 
 
 ## metadata.json {#metadata-json}
@@ -90,13 +90,13 @@ The `metadata.json` file should be present in the root directory of your plasmoi
 }
 ```
 
-The contents of this file will show up in stores (like [Discover](https://apps.kde.org/discover/)) in case you release your plasmoid and, if you create a configuration window following [Configuration for Plasmoids](#), it will be reused for the About page of your plasmoid.
+The contents of this file will show up in stores (like [Discover](https://apps.kde.org/discover/)) in case you release your plasmoid and, if you create a configuration window following [Configuration for Plasmoids]({{< ref "plasmoid-config" >}}), it will be reused for the About page of your plasmoid.
 
 For the most part this is boilerplate, but the main keys in the metadata that you should care about are `Name`, `Id`, `Authors` and `Category`.
 
 The `Name` key corresponds to the application name that will be displayed in the plasmoid itself.
 
-The `Id` key is a unique identifier following a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). Without this `Id`, it will not be possible to run the plasmoid later. As a convention, the `Id` should match the root folder name and, if following [Plasmoids compiled to C++](#), it should match the [plasma_add_applet()](https://invent.kde.org/plasma/libplasma/-/blob/master/PlasmaMacros.cmake#L32) entry in `CMakeLists.txt`.
+The `Id` key is a unique identifier following a [reverse-DNS naming scheme](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). Without this `Id`, it will not be possible to run the plasmoid later. As a convention, the `Id` should match the root folder name and, if following [Plasmoids compiled to C++]({{< ref "plasmoid-cpp" >}}), it should match the [plasma_add_applet()](https://invent.kde.org/plasma/libplasma/-/blob/master/PlasmaMacros.cmake#L32) entry in `CMakeLists.txt`.
 
 The `Authors` key is self-explanatory.
 
@@ -202,7 +202,7 @@ PlasmoidItem {
 
 To set the desired size of a representation, you need to use [Layout attached properties](https://doc.qt.io/qt-6/qml-qtquick-layouts-layout.html) inside the representation [Item](https://doc.qt.io/qt-6/qml-qtquick-item.html).
 
-If you are confused about imports or Layout properties, you might want to see our [Kirigami tutorial](#) before proceeding.
+If you are confused about imports or Layout properties, you might want to see our [Kirigami tutorial]({{< ref "/docs/getting-started/kirigami" >}}) before proceeding.
 
 If you set a [switchWidth](https://api.kde.org/qml-org-kde-plasma-plasmoid-plasmoiditem.html#switchWidth-prop) and [switchHeight](https://api.kde.org/qml-org-kde-plasma-plasmoid-plasmoiditem.html#switchHeight-prop), then up until that size the plasmoid will render in `compactRepresentation` and larger than that it will render in `fullRepresentation`.
 
@@ -300,7 +300,7 @@ cp --recursive org.kde.plasma.tutorial/ ~/.local/share/plasma/plasmoids/
 ```
 
 Alternatively, you may create a `.plasmoid` archive for distribution. It is simply a Zip archive with the `.plasmoid` extension.
-This can be done with [Ark](#):
+This can be done with [Ark](https://apps.kde.org/ark/):
 
 ```bash
 ark org.kde.plasma.tutorial/ --add-to org.kde.plasma.tutorial.plasmoid
