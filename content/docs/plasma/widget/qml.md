@@ -1,6 +1,6 @@
 ---
 title: "QML"
-weight: 3
+weight: 7
 description: >
   Learn the basics of QML
 aliases:

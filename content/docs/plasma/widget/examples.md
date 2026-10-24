@@ -1,6 +1,6 @@
 ---
 title: "Examples"
-weight: 8
+weight: 9
 description: >
   Resizable popup, clock, bundle icon and other simple examples
 aliases:

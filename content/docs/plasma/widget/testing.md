@@ -1,6 +1,6 @@
 ---
 title: "Testing"
-weight: 2
+weight: 6
 description: >
   How to quickly test a plasma widget
 aliases:

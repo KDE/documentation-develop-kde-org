@@ -1,6 +1,6 @@
 ---
 title: "Widget Properties"
-weight: 5
+weight: 8
 description: >
   A rundown of the QML Properties in a widget
 ---
