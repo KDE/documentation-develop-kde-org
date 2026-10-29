@@ -10,11 +10,11 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## Introduction
 
-Authentication generally runs through a technology called Pluggable Authentication Modules, or “PAM”. PAM is used in Plasma’s Login Manager, screen locker, and Polkit authentication dialog, as well as many other non-KDE technologies.
+Authentication generally runs through a technology called *Pluggable Authentication Modules*, or “PAM”. PAM is used in Plasma’s Login Manager, screen locker, and Polkit authentication dialog, as well as many other non-KDE technologies.
 
-PAM is configured using configuration files, they are also called services or service files. They describe which plugins to load and how those plugins interact with the control flow of the authentication.
+PAM is configured using configuration files (sometimes referred to as “services” or “service files”) that describe which plugins to load and how those plugins interact with the control flow of the authentication.
 
-For more information about PAM and its service files take a look at the PAM manual pages [PAM](https://man7.org/linux/man-pages/man8/PAM.8.html) and [pam.conf](https://man7.org/linux/man-pages/man5/pam.conf.5.html).
+This page describes how to configure these files to govern how authentication works.
 
 
 ## Multiple prompt services in Plasma Screen Locker
@@ -196,3 +196,7 @@ password   required                    pam_deny.so
 ```
 
 For the most part all other services will follow this example and simply load a different pam module in place of pam_u2f.
+
+
+## More information
+For more information about PAM and its service files take a look at the PAM manual pages [PAM](https://man7.org/linux/man-pages/man8/PAM.8.html) and [pam.conf](https://man7.org/linux/man-pages/man5/pam.conf.5.html).
