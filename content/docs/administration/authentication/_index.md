@@ -19,7 +19,7 @@ For more information about PAM and its service files take a look at the PAM manu
 
 ## Multiple prompt services in Plasma Screen Locker
 
-{{< alert title="Warning" color="warning" >}}
+{{< alert color="warning" >}}
 This feature introduced in Plasma 6.8 is still experimental and may change in the future.
 {{< /alert >}}
 
