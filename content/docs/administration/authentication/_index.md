@@ -1,7 +1,7 @@
 ---
 title: Authentication
 group: administration
-description: Configuration of the PAM stack on Linux
+description: PAM stack Configuration
 
 # SPDX-FileCopyrightText: 2026 Harald Sitter <sitter@kde.org>
 SPDX-License-Identifier: CC-BY-SA-4.0
@@ -10,7 +10,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## Introduction
 
-Authentication on Linux generally runs through a technology called Pluggable Authentication Modules, or “PAM”. This also applies to the Plasma Login Manager, Screen Locker, and Polkit dialog.
+Authentication generally runs through a technology called Pluggable Authentication Modules, or “PAM”. PAM is used in Plasma’s Login Manager, screen locker, and Polkit authentication dialog, as well as many other non-KDE technologies.
 
 PAM is configured using configuration files, they are also called services or service files. They describe which plugins to load and how those plugins interact with the control flow of the authentication.
 
