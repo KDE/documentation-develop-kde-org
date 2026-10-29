@@ -76,13 +76,13 @@ Requirements: PKCS11-compatible device (smart card + reader, Nitrokey with PIV, 
 
 This is by far the most complicated to set up and probably will be replaced with a server-side solution in the future as this type of set up is usually only found in an organizational context with server-backing.
 
-For practical reasons we'll discuss how to set this up using an actual smart card.
+For practical reasons we’ll discuss how to set this up using an actual smart card.
 
 Setting up a Nitrokey or Yubikey is largely the same except that you can easily manage your certificates using the relevant applications for [Nitrokey](https://flathub.org/en/apps/com.nitrokey.nitrokey-app2) or [Yubikey](https://flathub.org/en/apps/com.yubico.yubioath).
 
 #### Setting up a Smart Card
 
-Initialize your smart card if you haven't yet.
+Initialize your smart card if you haven’t yet.
 
 ```sh
 pkcs11-tool \
@@ -104,7 +104,7 @@ pkcs11-tool \
   --keypairgen \
   --key-type EC:prime256v1
 
-# Note the URI of the private key in the output! We'll need it for openssl.
+# Note the URI of the private key in the output! We’ll need it for openssl.
 URI="pkcs11:object=LoginKey;type=private"
 
 # Create a certificate signing request
@@ -138,7 +138,7 @@ The kde-smartcard service will have to contain a line similar to
 auth required pam_pkcs11.so wait_for_card card_only
 ```
 
-This should give you a working prototype. Mind that for a more production viable setup you'll want to tweak all sorts of configuration values in pam_pkcs11. These are largely organization specific. The [pam_pkcs11 user manual](https://opensc.github.io/pam_pkcs11/doc/pam_pkcs11.html) should be a good starting point to find out more.
+This should give you a working prototype. Mind that for a more production viable setup you’ll want to tweak all sorts of configuration values in pam_pkcs11. These are largely organization specific. The [pam_pkcs11 user manual](https://opensc.github.io/pam_pkcs11/doc/pam_pkcs11.html) should be a good starting point to find out more.
 
 ### Overview of services
 
@@ -155,7 +155,7 @@ This should give you a working prototype. Mind that for a more production viable
 
 For the multiple prompts feature to work you first need to have the relevant service files.
 
-Service files are very distribution-specific. We will outline some general examples but for the most part your distribution should be providing these files for you. As a distributor you should first read up on the PAM manpages and then craft service files that match your distribution's PAM configurations.
+Service files are very distribution-specific. We will outline some general examples but for the most part your distribution should be providing these files for you. As a distributor you should first read up on the PAM manpages and then craft service files that match your distribution’s PAM configurations.
 
 The main *kde* service will mostly follow your system core services.
 
