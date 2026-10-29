@@ -7,6 +7,7 @@ description: Configuration of the PAM stack on Linux
 SPDX-License-Identifier: CC-BY-SA-4.0
 ---
 
+
 ## Introduction
 
 Authentication on Linux generally runs through a technology called Pluggable Authentication Modules, or “PAM”. This also applies to the Plasma Login Manager, Screen Locker, and Polkit dialog.
@@ -14,6 +15,7 @@ Authentication on Linux generally runs through a technology called Pluggable Aut
 PAM is configured using configuration files, they are also called services or service files. They describe which plugins to load and how those plugins interact with the control flow of the authentication.
 
 For more information about PAM and its service files take a look at the PAM manual pages [PAM](https://man7.org/linux/man-pages/man8/PAM.8.html) and [pam.conf](https://man7.org/linux/man-pages/man5/pam.conf.5.html).
+
 
 ## Multiple prompt services in Plasma Screen Locker
 
@@ -145,6 +147,7 @@ This should give you a working prototype. Mind that for a more production viable
 - kde-smartcard: Similarly establishes a smart card as sufficient authentication. This is generally implemented using either *pam_pkcs11*.
 - kde-face: Establishes facial recognition as sufficient authentication. This may be implemented by a variety of available facial recognition software. A notable, but not very active, example would be *pam_howdy*.
 - kde-u2f: Establishes a Universal 2nd Factor or FIDO token as sufficient. This is usually implemented using *pam_u2f*.
+
 
 ## Miscellaneous
 
