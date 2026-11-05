@@ -3,7 +3,7 @@
 #include <QtQml>
 #include <QUrl>
 #include <QQuickStyle>
-#include <KLocalizedContext>
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 #include <KIconTheme>
 
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+    KLocalization::setupLocalizedContext(&engine);
     engine.loadFromModule("org.kde.tutorial", "Main");
 
     if (engine.rootObjects().isEmpty()) {
