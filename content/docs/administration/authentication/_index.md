@@ -1,7 +1,7 @@
 ---
 title: Authentication
 group: administration
-description: PAM stack Configuration
+description: Configuration of PAM-based authentication methods
 
 # SPDX-FileCopyrightText: 2026 Harald Sitter <sitter@kde.org>
 SPDX-License-Identifier: CC-BY-SA-4.0
@@ -10,96 +10,98 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## Introduction
 
-Authentication generally runs through a technology called *Pluggable Authentication Modules*, or “PAM”. PAM is used in Plasma’s Login Manager, screen locker, and Polkit authentication dialog, as well as many other non-KDE technologies.
+Authentication generally runs through a technology called *Pluggable Authentication Modules*, or “PAM”. PAM is supported in Plasma’s Login Manager, screen locker, and Polkit authentication dialog, as well as many other non-KDE technologies.
 
-PAM is configured using configuration files (sometimes referred to as “services” or “service files”) that describe which plugins to load and how those plugins interact with the control flow of the authentication.
+PAM uses configuration files (often referred to as “services”) that encode a set of rules that must be met in order for authentication to succeed. PAM services are generally provided by your OS vendor, not KDE.
 
-This page describes how to configure these files to govern how authentication works.
+This page describes how to configure which PAM-enabled authentication methods can be used in KDE software.
 
-
-## Multiple prompt services in Plasma Screen Locker
-
-{{< alert color="warning" >}}
-This feature introduced in Plasma 6.8 is still experimental and may change in the future.
+{{< alert color="info" >}}
+If you only want or need to authenticate with a password, you can stop reading now.
 {{< /alert >}}
 
-PAM configurations are done through so called *"services"*. Where each service encodes a set of rules that need to be met in order to authenticate a user.
 
-Plasma supports a number of extra service defintions that may be supplied by the distributor and enabled by the user.
 
-### Configuration
 
-Assuming all service files are provided by your distribution, the additional services may be enabled selectively in the user specific `~/.config/kscreenlockerrc`. Please beware that the PAM modules often also require individual configuration. The *kscreenlockerrc* only enables the visualization in the UI and may malfunction if the modules are not configured correctly.
+## Enable multiple authentication methods on the lock screen
+{{< alert color="warning" >}}
+This feature is still experimental and may change in the future.
+{{< /alert >}}
+
+The lock screen will always accept a password if the system’s PAM services allow it (most do).
+
+In Plasma 6.8 and later, the lock screen can also be configured to accept secondary authentication methods that the system’s PAM services support. To do this, edit `~/.config/kscreenlockerrc` to include the following:
 
 ```ini
 [Authenticators]
-Face=true
+# Set the ones you want to enable on the lock screen to "true"
+
+# Fingerprint
 Fingerprint=true
-Smartcard=true
+
+# Hardware 2-factor authentication dongle (e.g. Nitrokey or Yubikey)
 Universal2Factor=true
+
+# Smart card
+Smartcard=true
+
+# Facial recognition
+Face=true
 ```
 
-### Fingerprint with fprintd
+**Each enabled secondary authentication method enabled must have its PAM service appropriately configured.** Read on to learn how to do that for each one:
 
-Requirements: fingerprint reader, fprintd
 
-Fingerprint may be enabled as a standalone authentication prompt.
+### Fingerprint authentication
+If the system has an appropriate PAM service for authentication using a fingerprint reader, do the following to turn it on:
 
-Please note that fingerprint is also always available as secondary authentication option regardless of the primary. For example when you have the smart card authenticator enabled you will also be able to use the fingerprint so long as the PAM service is available and you have a fingerprint enrolled.
+- GUI: *System Settings* >  *Users* > *Configure Fingerprint Authentication…*.
+- CLI: Run `fprintd-enroll` in a terminal window
 
-To enable fingerprint login, simply enroll a fingerprint with *Users* system setting. Alternatively you can use the terminal command `fprintd-enroll`.
 
-### Face
+### Hardware 2-factor authentication dongle
+If the system has an appropriate PAM service for authentication using a hardware 2-factor authentication dongle such as a Nitrokey or Yubikey, do the following to turn it on:
 
-Requirements: camera (with infrared sensor)
+- GUI: Download the appropriate app ([Nitrokey](https://flathub.org/en/apps/com.nitrokey.nitrokey-app2) or [Yubikey](https://flathub.org/en/apps/com.yubico.yubioath)), launch it, and follow the instructions for enrolling a new device.
+)
+- CLI: run the following commands in a terminal window:
+  ```sh
+  [ -d ~/.config/Yubico ] || mkdir --parents ~/.config/Yubico
+  pamu2fcfg > ~/.config/Yubico/u2f_keys
+  ```
 
-Face-based authentication generally requires enrolling your face in a database. How this works is depending on the specific facial authentication software. We currently have no recommendations for which software to use. You can find various options available on the internet, but will need to research which best fits your use case with regards to security, reliability, and ease of use.
+{{< alert color="info" >}}
+During this process, your device may illuminate. When it does, touch it.
 
-### U2F / FIDO using pam-u2f
+After setup, touch the device when using it to authenticate.
+{{< /alert >}}
 
-Requirements: U2F device such as Nitrokey or Yubikey
 
-Same as with the others, U2F requires enrolling your device into a database first.
+### Smart Card
+{{< alert color="warning" >}}
+This is by far the most complicated authentication method to set up.
 
-The simplest, and default, way is to use a per-user database. You can enroll your device by running the following commands. Please note that you need to touch your device when it lights up.
+These instructions will probably will be replaced with a server-side solution in the future, as this type of setup is usually only found in an organizational context with server-side support.
 
-```sh
-[ -d ~/.config/Yubico ] || mkdir --parents ~/.config/Yubico
-pamu2fcfg > ~/.config/Yubico/u2f_keys
-```
+**If your organization provide its own instructions for setting up smart cards, follow those instead.**
+{{< /alert >}}
 
-You also need to touch when authenticating using the device.
-
-### Smart Card using pkcs11
-
-Requirements: PKCS11-compatible device (smart card + reader, Nitrokey with PIV, Yubikey with PIV), opensc
-
-This is by far the most complicated to set up and probably will be replaced with a server-side solution in the future as this type of set up is usually only found in an organizational context with server-backing.
-
-For practical reasons we’ll discuss how to set this up using an actual smart card.
-
-Setting up a Nitrokey or Yubikey is largely the same except that you can easily manage your certificates using the relevant applications for [Nitrokey](https://flathub.org/en/apps/com.nitrokey.nitrokey-app2) or [Yubikey](https://flathub.org/en/apps/com.yubico.yubioath).
-
-#### Setting up a Smart Card
-
-Initialize your smart card if you haven’t yet.
+If the system has an appropriate PAM service for authentication using a PKCS11-compatible device (smart card + reader, Nitrokey with PIV, or Yubikey with PIV), do the following to turn it on:
 
 ```sh
+
+# Initialize your smart card if you haven’t yet:
 pkcs11-tool \
   --init-token \
   --init-pin \
-  --so-pin security-officer-123456 \
-  --new-pin 123456 \
+  --new-pin 123456 \ # Replace this with a PIN of your choosing
+  --so-pin security-officer-123456 \ # Replace 123456 with the PIN you chose earlier
   --label MyCard
-```
 
-Once the token is initialized we can prepare our keys and certificate
-
-```sh
 # Generate a key pair for login
 pkcs11-tool \
   --login \
-  --pin 123456 \
+  --pin 123456 \ # Replace 123456 with the PIN you chose earlier
   --label LoginKey \
   --keypairgen \
   --key-type EC:prime256v1
@@ -107,7 +109,7 @@ pkcs11-tool \
 # Note the URI of the private key in the output! We’ll need it for openssl.
 URI="pkcs11:object=LoginKey;type=private"
 
-# Create a certificate signing request
+# Create a certificate signing request (CSR):
 openssl req -new \
   -engine pkcs11 -keyform engine -key $URI \
   -subj "/CN=$(id --user --name)" \
@@ -123,80 +125,27 @@ openssl x509 -req \
 # Write the certificate to the token
 pkcs11-tool \
   --login \
-  --pin 123456 \
+  --pin 123456 \ # Replace 123456 with the PIN you chose earlier
   --label LoginKey \
   --write-object loginkey.crt \
   --type=cert
 
 # Make the certificate a CA certificate
-run0 cp loginkey.crt /etc/pam_pkcs11/cacerts
+sudo cp loginkey.crt /etc/pam_pkcs11/cacerts
 ```
 
-The kde-smartcard service will have to contain a line similar to
+This should provide basic functionality.
 
-```pam
-auth required pam_pkcs11.so wait_for_card card_only
-```
+For a more production-ready setup, you’ll likely need to tweak all sorts of configuration values in the `pam_pkcs11` PAM service provided by your OS to suit your organization’s security needs; follow their instructions to do so, as it is beyond the scope of this document.
 
-This should give you a working prototype. Mind that for a more production viable setup you’ll want to tweak all sorts of configuration values in pam_pkcs11. These are largely organization specific. The [pam_pkcs11 user manual](https://opensc.github.io/pam_pkcs11/doc/pam_pkcs11.html) should be a good starting point to find out more.
-
-### Overview of services
-
-- kde: The main authentication service. It is always available and generally implements the common authentication flow of the system. Usually this will be password authentication, but it could also include multiple factors, such asa password and a smart card.
-- kde-fingerprint: Is a special variant where providing a fingerprint is sufficient for authentication. This is generally implemented using *pam_fprintd*.
-- kde-smartcard: Similarly establishes a smart card as sufficient authentication. This is generally implemented using either *pam_pkcs11*.
-- kde-face: Establishes facial recognition as sufficient authentication. This may be implemented by a variety of available facial recognition software. A notable, but not very active, example would be *pam_howdy*.
-- kde-u2f: Establishes a Universal 2nd Factor or FIDO token as sufficient. This is usually implemented using *pam_u2f*.
+The [pam_pkcs11 user manual](https://opensc.github.io/pam_pkcs11/doc/pam_pkcs11.html) should be a good starting point to find out more.
 
 
-## Miscellaneous
-
-### Writing a service file
-
-For the multiple prompts feature to work you first need to have the relevant service files.
-
-Service files are very distribution-specific. We will outline some general examples but for the most part your distribution should be providing these files for you. As a distributor you should first read up on the PAM manpages and then craft service files that match your distribution’s PAM configurations.
-
-The main *kde* service will mostly follow your system core services.
-
-Here is the one from KDE Linux for illustration:
-
-```pam
-#% PAM - 1.0
-
-# SPDX-License-Identifier: LGPL-2.0-or-later
-# SPDX-FileCopyrightText: 2024 Antonio Rojas <arojas@archlinux.org>
-
-# Everything simply delegates to the common system-local-login service.
-auth       include                     system-local-login
-account    include                     system-local-login
-password   include                     system-local-login
-session    include                     system-local-login
-```
-
-You may find a similar file on your system in either `/usr/lib/pam.d/kde` or `/etc/pam.d/kde`.
-
-The authentication types described on this page follow a common scheme for configuration where the pivotal PAM module will be marked either *required* or *sufficient*
-
-Here is the *kde-u2f* service from KDE Linux:
-
-```pam
-#%PAM-1.0
-
-auth       requisite                   pam_nologin.so
-auth       required                    pam_u2f.so cue # <------- u2f is required
-auth       required                    pam_shells.so
-auth       optional                    pam_permit.so
-auth       required                    pam_env.so
-
-# Only support authentication. Deny all others.
-account    required                    pam_deny.so
-session    required                    pam_deny.so
-password   required                    pam_deny.so
-```
-
-For the most part all other services will follow this example and simply load a different pam module in place of pam_u2f.
+### Face
+If the system has an appropriate PAM service for authentication using an infrared facial recognition camera, turning it on will require setup actions specific to the facial recognition software used. KDE currently has no recommendations for which software to use, as there are multiple options each with their own features and trade-offs.
 
 
-## More information
-For more information about PAM and its service files take a look at the PAM manual pages [PAM](https://man7.org/linux/man-pages/man8/PAM.8.html) and [pam.conf](https://man7.org/linux/man-pages/man5/pam.conf.5.html).
+## Multi-factor authentication or disabling password authentication
+Most PAM services to enable non-password methods of authentication make them secondary and optional, so users can always authenticate with a password in addition to any of the secondary methods.
+
+To disable password authentication or require multiple sources of authentication, the PAM services themselves must be edited accordingly. Instructions for doing so are beyond the scope of this document. To begin learning how to configure PAM services, take a look at the manual pages for [PAM](https://man7.org/linux/man-pages/man8/PAM.8.html) and [pam.conf](https://man7.org/linux/man-pages/man5/pam.conf.5.html).
