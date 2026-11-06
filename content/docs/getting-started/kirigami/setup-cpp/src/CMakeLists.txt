@@ -23,6 +23,7 @@ target_link_libraries(kirigami-hello
     Qt6::QuickControls2
     Qt6::Widgets
     KF6::I18n
+    KF6::I18nQml
     KF6::CoreAddons
     KF6::IconThemes
 )
