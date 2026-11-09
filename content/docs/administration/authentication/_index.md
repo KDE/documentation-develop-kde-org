@@ -12,7 +12,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 Authentication generally runs through a technology called *Pluggable Authentication Modules*, or “PAM”. PAM is supported in Plasma’s Login Manager, screen locker, and Polkit authentication dialog, as well as many other non-KDE technologies.
 
-PAM uses configuration files (often referred to as “services”) that encode a set of rules that must be met in order for authentication to succeed. PAM services are generally provided by your OS vendor, not KDE.
+PAM uses configuration files (often referred to as “services”) that encode a set of rules that must be met in order for authentication to succeed. PAM services typically live in `/etc/pam.d/` or `/usr/lib/pam.d/` and are provided by your OS vendor, not KDE.
 
 This page describes how to configure which PAM-enabled authentication methods can be used in KDE software.
 
@@ -53,14 +53,18 @@ Face=true
 
 
 ### Fingerprint authentication
-If the system has an appropriate PAM service for authentication using a fingerprint reader, do the following to turn it on:
+The system must have an appropriate PAM service for authentication using a fingerprint reader — typically defined in `/etc/pam.d/kde-fingerprint` or `/usr/lib/pam.d/kde-fingerprint`.
+
+If this PAM service exists, do the following to turn on fingerprint authentication:
 
 - GUI: *System Settings* >  *Users* > *Configure Fingerprint Authentication…*.
 - CLI: Run `fprintd-enroll` in a terminal window
 
 
 ### Hardware 2-factor authentication dongle
-If the system has an appropriate PAM service for authentication using a hardware 2-factor authentication dongle such as a Nitrokey or Yubikey, do the following to turn it on:
+The system must have an appropriate PAM service for authentication using a hardware 2-factor authentication dongle such as a Nitrokey or Yubikey — typically defined in `/etc/pam.d/kde-u2f` or `/usr/lib/pam.d/kde-u2f`.
+
+If this PAM service exists, do the following to turn on authentication with a hardware 2-factor authentication dongle:
 
 - GUI: Download the appropriate app ([Nitrokey](https://flathub.org/en/apps/com.nitrokey.nitrokey-app2) or [Yubikey](https://flathub.org/en/apps/com.yubico.yubioath)), launch it, and follow the instructions for enrolling a new device.
 )
@@ -86,7 +90,9 @@ These instructions will probably will be replaced with a server-side solution in
 **If your organization provide its own instructions for setting up smart cards, follow those instead.**
 {{< /alert >}}
 
-If the system has an appropriate PAM service for authentication using a PKCS11-compatible device (smart card + reader, Nitrokey with PIV, or Yubikey with PIV), do the following to turn it on:
+The system must have an appropriate PAM service for authentication using a PKCS11-compatible device (smart card + reader, Nitrokey with PIV, or Yubikey with PIV) — typically defined in `/etc/pam.d/kde-smartcard` or `/usr/lib/pam.d/kde-smartcard`.
+
+If this PAM service exists, do the following to turn on authentication with a smart card:
 
 ```sh
 
