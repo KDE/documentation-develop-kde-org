@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-09 02:12+0000\n"
-"PO-Revision-Date: 2026-09-18 12:02+0200\n"
+"PO-Revision-Date: 2026-11-09 17:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -9294,36 +9294,24 @@ msgstr ""
 "dividit en parts separades, fent les coses molt més manejables."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:0
-#, fuzzy
-#| msgid "Windows Setup"
 msgid "Android Setup"
-msgstr "Configuració al Windows"
+msgstr "Configuració a l'Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:0
-#, fuzzy
-#| msgid "Preparing your C++ application for Windows"
 msgid "Preparing your C++ application for Android"
-msgstr "Preparant la vostra aplicació C++ per al Windows"
+msgstr "Preparant la vostra aplicació C++ per a l'Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:11
-#, fuzzy
-#| msgid ""
-#| "Qt has great Windows support, and so applications making use of Qt and "
-#| "KDE's [extra-cmake-modules](https://api.kde.org/ecm/) will not require "
-#| "many modifications to work properly on Windows."
 msgid ""
 "Qt has great Android support, but applications require a substantial amount "
 "of modifications to work properly on Android."
 msgstr ""
-"Les Qt tenen un suport gran del Windows, i per tant les aplicacions que fan "
-"ús dels [extra-cmake-modules](https://api.kde.org/ecm/) de les Qt i KDE no "
-"requeriran moltes modificacions per a funcionar correctament al Windows."
+"Les Qt tenen un bon suport de l'Android, les aplicacions requereixen un "
+"nombre important de modificacions per a funcionar correctament a l'Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:13
-#, fuzzy
-#| msgid "Three things are needed:"
 msgid "A few things are needed:"
-msgstr "Són necessàries 3 coses:"
+msgstr "Són necessàries poques coses:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:15
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:15
@@ -9331,10 +9319,8 @@ msgid "[A Craft blueprint](#craft)"
 msgstr "[Un esquema de Craft](#craft)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:16
-#, fuzzy
-#| msgid "[Setting the Breeze style](#breeze)"
 msgid "[Setting qqc2-breeze-style](#qqc2-breeze-style)"
-msgstr "[Configuració de l'estil Brisa](#breeze)"
+msgstr "[Definir un qqc2-breeze-style](#qqc2-breeze-style)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:17
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:17
@@ -9343,39 +9329,35 @@ msgstr "[Icones empaquetades amb l'aplicació](#icons)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:18
 msgid "[An Android manifest](#android-manifest)"
-msgstr ""
+msgstr "[Un «manifest» d'Android](#android-manifest)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:19
-#, fuzzy
-#| msgid "[Using kde-builder](#kde-builder)"
 msgid "[Optionally a Gradle build file](#gradle-build)"
-msgstr "[Utilitzar el «kde-builder»](#kde-builder)"
+msgstr "[Un fitxer de construcció Gradle, opcionalment](#gradle-build)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:20
 msgid "[Optionally a splash screen XML file](#splash)"
-msgstr ""
+msgstr "[Un fitxer XML de pantalla de presentació, opcionalment](#splash)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:21
 msgid "[CMake function to package for Android](#build-apk)"
-msgstr ""
+msgstr "[Una funció CMake per a empaquetar per l'Android](#build-apk)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:23
-#, fuzzy
-#| msgid ""
-#| "The Craft blueprint is needed to bundle all the dependencies together "
-#| "with the application to generate an executable."
 msgid ""
 "The Craft blueprint is needed to bundle all the dependencies together with "
 "the application to generate an Android APK package."
 msgstr ""
 "L'esquema de Craft és necessari per a empaquetar totes les dependències "
-"juntament amb l'aplicació per a generar un executable."
+"juntament amb l'aplicació per a generar un paquet APK d'Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:25
 msgid ""
 "The qqc2-breeze-style is an alternative to qqc2-desktop-style that is "
 "especially geared for mobile platforms like Android and Plasma Mobile."
 msgstr ""
+"El «qqc2-breeze-style» és una alternativa a «qqc2-desktop-style» que està "
+"especialment orientat a plataformes mòbils com l'Android i el Plasma Mobile."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:27
 msgid ""
@@ -9384,27 +9366,29 @@ msgid ""
 "wrong configuration for desktop and mobile. The CMake code might optionally "
 "also need conditional code, although it can be avoided."
 msgstr ""
+"L'esquema Craft de l'aplicació necessita un codi condicional per no barrejar "
+"l'estil d'escriptori i mòbil, mentre que el codi C++ necessitarà una cura "
+"especial per no utilitzar la configuració incorrecta per a l'escriptori i el "
+"mòbil. El codi CMake podria necessitar opcionalment també codi condicional, "
+"encara que es pot evitar."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:29
-#, fuzzy
-#| msgid ""
-#| "Bundling the necessary icons for the app to work on Windows is the most "
-#| "complex step, but both KDE's extra-cmake-modules (ECM) and Qt provide "
-#| "means to make this job easier."
 msgid ""
 "Bundling the necessary icons for the app to work is done with the help of "
 "KDE's extra-cmake-modules, Qt resource bundling tools, as well as Kirigami "
 "and Kirigami Addons CMake functions."
 msgstr ""
-"Empaquetar les icones necessàries perquè l'aplicació funcioni en el Windows "
-"és el pas més complex, però tant els extra-cmake-modules (ECM) de KDE com "
-"les Qt proporcionen mitjans per a fer més fàcil aquesta feina."
+"Empaquetar les icones necessàries perquè l'aplicació funcioni es fa amb "
+"l'ajuda dels «extra-cmake-modules». les eines d'empaquetament de recursos de "
+"les Qt, així com de les funciones de Kirigami i Kirigami Addons CMake."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:31
 msgid ""
 "The Android manifest declares the metadata and additional files that need to "
 "be bundled with the Android application."
 msgstr ""
+"El manifest d'Android declara les metadades i fitxers addicionals que s'han "
+"d'empaquetar amb l'aplicació Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:33
 msgid ""
@@ -9413,12 +9397,19 @@ msgid ""
 "Android build, such as the application version, or in case you want special "
 "build options."
 msgstr ""
+"El fitxer de construcció de Gradle és necessari en cas que utilitzeu la "
+"integració «extra-cmake-modules» per aplicar les metadades existents de la "
+"vostra aplicació a la construcció d'Android, com ara la versió de "
+"l'aplicació, o en cas que vulgueu opcions de construcció especials."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:35
 msgid ""
 "The Splash screen XML file is needed in case you want to add a splash screen "
 "with custom icon, background and positioning."
 msgstr ""
+"El fitxer XML de pantalla de presentació és necessari en cas que vulgueu "
+"afegir una pantalla de presentació amb una icona personalitzada, fons i "
+"posicionament."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:37
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:25
@@ -9426,11 +9417,10 @@ msgid "Craft blueprint"
 msgstr "Esquema de Craft"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:39
-#, fuzzy
-#| msgid "[Setting the Breeze style](#breeze)"
 msgid "Setting the qqc2-breeze-style"
-msgstr "[Configuració de l'estil Brisa](#breeze)"
+msgstr "Definició de «qqc2-breeze-style»"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:41
 msgid ""
 "To start using qqc2-breeze-style, you will need to add it to Craft. Because "
@@ -9439,6 +9429,11 @@ msgid ""
 "Linux using qqc2-desktop style. This requires importing the `CraftCore` "
 "module:"
 msgstr ""
+"Per a començar a utilitzar el «qqc2-breeze-style», haureu d'afegir-lo a "
+"Craft. Com que només s'utilitza a l'Android, requerirà una clàusula "
+"condicional, especialment si l'aplicació ja està configurada per a construir "
+"en el Windows i/o Linux utilitzant l'estil «qqc2-desktop». Això requereix "
+"importar el mòdul `CraftCore`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:57
 msgid ""
@@ -9446,10 +9441,13 @@ msgid ""
 "style\" logic needs to be applied to CMake as well, in case either method of "
 "finding qqc2-desktop-style is used:"
 msgstr ""
+"Una lògica similar a «si no és Android, utilitza el qqc2-desktop-style, en "
+"cas contrari utilitza qqc2-breeze-style» també s'ha d'aplicar al CMake, en "
+"cas que s'utilitzi qualsevol mètode per trobar «qqc2-desktop.-style»:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:66
 msgid "Conditional code is also required in C++."
-msgstr ""
+msgstr "El codi condicional també es requereix en el C++."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:68
 msgid ""
@@ -9459,11 +9457,16 @@ msgid ""
 "your application is already compatible with the desktop. This can be "
 "achieved like so:"
 msgstr ""
+"En l'Android, les aplicacions KDE no utilitzen QApplication, sinó "
+"QGuiApplication. A més d'establir «qqc2-breeze-style» només per a Android, "
+"l'ordre d'inicialització s'ha de tractar en el cas molt probable que "
+"l'aplicació ja sigui compatible amb l'escriptori. Això es pot aconseguir "
+"així:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:89
 #: content/docs/getting-started/kirigami/platforms-android/index.md:147
 msgid "KirigamiAppDefaults usage"
-msgstr ""
+msgstr "Ús de KirigamiAppDefaults"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:91
 msgid ""
@@ -9471,6 +9474,8 @@ msgid ""
 "kirigamiappdefaults.html#apply), the above C++ code is already managed for "
 "you."
 msgstr ""
+"Si utilitzeu [KirigamiAppDefaults::Apply()](https://api.kde.org/"
+"kirigamiappdefaults.html#apply), el codi C++ anterior ja ho gestiona."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:95
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:98
@@ -9478,35 +9483,29 @@ msgid "Shipping icons"
 msgstr "Distribució d'icones"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:97
-#, fuzzy
-#| msgid ""
-#| "The first thing that is needed to make the application use Breeze icons "
-#| "is to include [KIconThemes](https://invent.kde.org/frameworks/"
-#| "kiconthemes) in your project."
 msgid ""
 "The first thing that is needed to make the application use Breeze icons is "
 "to include KIconThemes in your project."
 msgstr ""
 "El primer que cal per a fer que l'aplicació utilitzi les icones Brisa és "
-"incloure [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) en el "
-"projecte."
+"incloure KIconThemes en el projecte."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:99
-#, fuzzy
-#| msgid ""
-#| "After this, some CMake commands are needed to bundle your application "
-#| "icon with the app."
 msgid ""
 "Some CMake commands are needed to bundle your application icon with the app."
 msgstr ""
-"Després d'això, es necessiten algunes ordres del CMake per afegir la icona "
-"de l'aplicació a l'aplicació."
+"Es necessiten algunes ordres del CMake per afegir la icona de l'aplicació a "
+"l'aplicació."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:101
 msgid ""
 "Lastly, an extra CMake command coming from Kirigami can be used to bundle "
 "Kirigami icons into your application (and optionally Kirigami Addons icons)."
 msgstr ""
+"Finalment, es pot utilitzar una ordre CMake extra procedent del Kirigami per "
+"a afegir icones del Kirigami a l'aplicació (i opcionalment icones de "
+"Kirigami Addons)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:103
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:104
@@ -9515,17 +9514,17 @@ msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:105
 msgid "This can be done by:"
-msgstr ""
+msgstr "Això es pot fer:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:107
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:108
 msgid "Adding it as a dependency in Craft:"
-msgstr "Afegir-la com a dependència al Craft:"
+msgstr "Afegint-la com a dependència al Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:114
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:115
 msgid "Adding it as a dependency in CMake:"
-msgstr "Afegir-la com a dependència al CMake:"
+msgstr "Afegint-la com a dependència al CMake:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:128
@@ -9554,6 +9553,9 @@ msgid ""
 "kirigamiappdefaults.html#apply), the above KIconThemes initialization in C++ "
 "code is already managed for you."
 msgstr ""
+"Si utilitzeu [KirigamiAppDefaults::Apply()](https://api.kde.org/"
+"kirigamiappdefaults.html#apply), la inicialització de KIconThemes anterior "
+"en el codi C++ ja ho gestiona."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:153
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
@@ -9561,18 +9563,12 @@ msgid "Application icon"
 msgstr "Icona de l'aplicació"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:155
-#, fuzzy
-#| msgid ""
-#| "If your application has an icon, it needs to be added to your project "
-#| "both as a [QML resource](https://doc.qt.io/qt-6/resources.html) and as a "
-#| "part of icon installation."
 msgid ""
 "If your application has an icon, it needs to be added to your project both "
 "as a QML resource and as a part of icon installation."
 msgstr ""
 "Si l'aplicació té una icona, s'ha d'afegir al vostre projecte tant com un "
-"[recurs QML](https://doc.qt.io/qt-6/resources.html) i com a part de la "
-"instal·lació d'icones."
+"recurs QML i com a part de la instal·lació d'icones."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:157
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:152
@@ -9618,13 +9614,6 @@ msgstr ""
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:183
-#, fuzzy
-#| msgid ""
-#| "Once the icon is installed in this way, in QML code, it can be called "
-#| "simply with `myapp` or `org.kde.myapp`, as would be called from [QIcon::"
-#| "fromTheme()](doc.qt.io/qt-6/qicon.html#fromTheme). This can be used with "
-#| "any QML control that has an [icon.name](https://doc.qt.io/qt-6/"
-#| "qtquickcontrols-icons.html) property."
 msgid ""
 "Once the icon is installed in this way, in QML code, it can be called simply "
 "with `myapp` or `org.kde.myapp`, as would be called from `QIcon::"
@@ -9632,20 +9621,12 @@ msgid ""
 "property."
 msgstr ""
 "Una vegada instal·lada la icona d'aquesta manera, en codi QML, es pot cridar "
-"simplement amb `myapp` o `org.kde.myapp`, com es cridaria des de [QIcon::"
-"fromTheme()](doc.qt.io/qt-6/qicon.html#fromTheme). Això es pot utilitzar amb "
-"qualsevol control QML que tingui una propietat [icon.name](https://doc.qt.io/"
-"qt-6/qtquickcontrols-icons.html)."
+"simplement amb `myapp` o `org.kde.myapp`, com es cridaria des de `QIcon::"
+"fromTheme()`. Això es pot utilitzar amb qualsevol control QML que tingui una "
+"propietat `icon.name`."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:185
-#, fuzzy
-#| msgid ""
-#| "Windows has no such standard directory, and installing the icon has no "
-#| "effect; it has to be bundled with the application. To do so, the PNG can "
-#| "be sent to its own installation directory using `ecm_add_app_icon()` and "
-#| "a PNG or SVG file can be embedded into the app as a Qt resource file in "
-#| "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgid ""
 "Android has no such standard directory, and installing the icon has no "
 "effect; it has to be bundled with the application. To do so, the PNG can be "
@@ -9653,12 +9634,11 @@ msgid ""
 "file can be embedded into the app as a Qt resource file in "
 "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgstr ""
-"El Windows no té aquest directori estàndard, i la instal·lació de la icona "
-"no té cap efecte; s'ha d'empaquetar amb l'aplicació. Per a fer-ho, el PNG es "
-"pot enviar al seu propi directori d'instal·lació utilitzant "
-"`ecm_add_app_icon()` i un fitxer PNG o SVG es pot incrustar a l'aplicació "
-"com un fitxer de recursos Qt a `ecm_add_qml_module()` o "
-"`ecm_target_qml_sources()`."
+"L'Android no té aquest directori estàndard, i la instal·lació de la icona no "
+"té cap efecte; s'ha d'empaquetar amb l'aplicació. Per a fer-ho, el PNG es "
+"pot enviar al seu propi directori d'instal·lació d'`ecm_add_app_icon()` i un "
+"fitxer PNG o SVG es pot incrustar a l'aplicació com un fitxer de recursos Qt "
+"a `ecm_add_qml_module()` o `ecm_target_qml_sources()`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:187
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:183
@@ -9672,12 +9652,6 @@ msgstr "I la icona principal de l'aplicació s'empaqueta com a recurs Qt amb:"
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:200
-#, fuzzy
-#| msgid ""
-#| "This will make the application icon available as a Qt resource under "
-#| "`qrc:/qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any "
-#| "QML control that has an [icon.source](https://doc.qt.io/qt-6/"
-#| "qtquickcontrols-icons.html) property."
 msgid ""
 "This will make the application icon available as a Qt resource under `qrc:/"
 "qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any QML "
@@ -9685,36 +9659,22 @@ msgid ""
 msgstr ""
 "Això farà que la icona de l'aplicació estigui disponible com a recurs Qt a "
 "`qrc:/qt/qml/org/kde/myapp/org.kde.myapp.svg`. Això es pot utilitzar amb "
-"qualsevol control QML que tingui una propietat [icon.source](https://doc.qt."
-"io/qt-6/qtquickcontrols-icons.html)."
+"qualsevol control QML que tingui una propietat `icon.source`."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:202
-#, fuzzy
-#| msgid ""
-#| "The `RESOURCES` path depends on the place where the icons are located. "
-#| "Traditionally, an `icons/` folder is created at the root of the project "
-#| "for storing all icons, as they don't really count as source files."
 msgid ""
 "The RESOURCES path depends on the place where the icons are installed. "
 "Traditionally, an `icons/` folder is created at the root of the project for "
 "storing all icons, as they don't really count as source files."
 msgstr ""
-"El camí `RESOURCES` depèn del lloc on es trobin les icones. Tradicionalment, "
-"es crea una carpeta `icons/` a l'arrel del projecte per a emmagatzemar totes "
-"les icones, ja que realment no compten com a fitxers de codi font."
+"El camí `RESOURCES` depèn del lloc on estiguin instal·lades les icones. "
+"Tradicionalment, es crea una carpeta `icons/` a l'arrel del projecte per a "
+"emmagatzemar totes les icones, ja que realment no compten com a fitxers de "
+"codi font."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:204
-#, fuzzy
-#| msgid ""
-#| "After the icons are installed (for Linux) and bundled (for Windows and "
-#| "Android), you can set it in code. In QML code, for compatibility with "
-#| "both Windows and Android, you should use the bundled icon; in C++ code, "
-#| "notably when setting the window icon, you can use the theme icon by "
-#| "default and the bundled icon as a fallback with [QIcon::fromTheme()]"
-#| "(https://doc.qt.io/qt-6/qicon.html#fromTheme) in the call to "
-#| "[QGuiApplication::setWindowIcon()](https://doc.qt.io/qt-6/qguiapplication."
-#| "html#windowIcon-prop):"
 msgid ""
 "After the icons are installed (for Linux) and bundled (for Windows and "
 "Android), you can set it in code. In QML code, for compatibility with both "
@@ -9727,9 +9687,7 @@ msgstr ""
 "compatibilitat amb el Windows i l'Android, hauríeu d'utilitzar la icona "
 "empaquetada; en el codi C++, especialment quan establiu la icona de la "
 "finestra, podeu utilitzar la icona del tema predeterminat i la icona "
-"empaquetada com a alternativa amb [QIcon::fromTheme()](https://doc.qt.io/"
-"qt-6/qicon.html#fromTheme) a la crida a [QGuiApplication::setWindowIcon()]"
-"(https://doc.qt.io/qt-6/qguiapplication.html#windowIcon-prop):"
+"empaquetada com a alternativa amb `QGuiApplication::setWindowIcon()`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:210
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:206
@@ -9737,37 +9695,30 @@ msgid "Kirigami icons"
 msgstr "Icones del Kirigami"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:212
-#, fuzzy
-#| msgid ""
-#| "While Windows does not have a standard directory where to install icons "
-#| "from an icon theme, it is possible to bundle the necessary Breeze icons "
-#| "together with your Windows application."
 msgid ""
 "While Android does not have a standard directory where to install icons from "
 "an icon theme, it is possible to bundle the necessary Kirigami icons "
 "together with your Android application."
 msgstr ""
-"Tot i que el Windows no té un directori estàndard on instal·lar icones des "
-"d'un tema d'icones, és possible afegir les icones Brisa necessàries "
-"juntament amb la vostra aplicació Windows."
+"Tot i que l'Android no té un directori estàndard on instal·lar icones des "
+"d'un tema d'icones, és possible afegir les icones Kirigami necessàries "
+"juntament amb la vostra aplicació Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:214
-#, fuzzy
-#| msgid "link the libraries necessary for the executable to run"
 msgid "Two things are necessary for this to be done:"
-msgstr "enllaça les biblioteques necessàries perquè s'executi l'executable"
+msgstr "Hi ha dues coses necessàries perquè això es faci:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:216
 msgid "Prepare the project with KIconThemes"
-msgstr ""
+msgstr "Prepareu el projecte amb KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:217
 msgid "Include breeze-icons in your Craft blueprint"
-msgstr ""
+msgstr "Inclogueu les «breeze-icons» en l'esquema Craft"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:218
 msgid "kirigami_package_breeze_icons()"
-msgstr ""
+msgstr "kirigami_package_breeze_icons()"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:220
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:212
@@ -9778,15 +9729,11 @@ msgstr ""
 "(#kiconthemes)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:222
-#, fuzzy
-#| msgid ""
-#| "To add Breeze icons as a dependency for your project, add this to your "
-#| "Craft blueprint:"
 msgid ""
 "To add breeze-icons as a dependency for your project, add this to your Craft "
 "blueprint:"
 msgstr ""
-"Per a afegir les icones Brisa com a dependència del vostre projecte, afegiu-"
+"Per a afegir les «breeze-icon» com a dependència del vostre projecte, afegiu-"
 "ho al vostre esquema de Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:230
@@ -9798,12 +9745,22 @@ msgid ""
 "and prepares the icons for bundling. This command needs to come before the "
 "step detailed in [CMake function to package for Android](#build-apk)."
 msgstr ""
+"A causa de la forma en què es fa la construcció d'Android, no és possible "
+"que Craft faci automàticament l'empaquetament d'icones. El Kirigami "
+"proporciona una funció CMake [kirigami_package_breeze_icons()](https://"
+"invent.kde.org/frameworks/kirigami/-/blob/master/KF6KirigamiMacros.cmake) "
+"que, en temps de construcció, clona i prepara les icones per a "
+"l'empaquetament. Aquesta ordre ha d'anar abans del pas detallat a la funció "
+"[CMake per a empaquetar per a Android](#build-apk)."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:232
 msgid ""
 "The CMake command `kirigami_package_breeze_icons()` does not need to be "
 "wrapped behind a conditional, as it only ever runs when on Android."
 msgstr ""
+"L'ordre CMake `kirigami_package_breeze_icons()` no cal que s'embolcalli "
+"darrere d'un condicional, ja que només s'executa quan està a l'Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:234
 msgid ""
@@ -9814,11 +9771,18 @@ msgid ""
 "api-staging.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutpage.html) and "
 "similar."
 msgstr ""
+"A més, si utilitzeu els Kirigami Addons a l'aplicació, podeu passar la "
+"variable [${KIRIGAMI_ADDONS_ICONS}](https://invent.kde.org/libraries/"
+"kirigami-addons/-/blob/master/KirigamiAddonsMacros.cmake) per a enviar també "
+"les icones necessàries per a components com ara [FormCard.AboutPage](https://"
+"api-staging.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutpage.html) i "
+"similars."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:245
 msgid "Android manifest"
-msgstr ""
+msgstr "Manifest d'Android"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:247
 msgid ""
 "An [Android manifest](https://developer.android.com/guide/topics/manifest/"
@@ -9826,6 +9790,10 @@ msgid ""
 "build tools, operating system, and stores. The file *must* be called "
 "`AndroidManifest.xml`."
 msgstr ""
+"Un [manifest d'Android](https://developer.android.com/guide/topics/manifest/"
+"manifest-intro) és un fitxer XML que descriu l'aplicació a les eines de "
+"construcció d'Android, el sistema operatiu i les botigues. El fitxer *cal* "
+"que s'anomeni `AndroidManifest.xml`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:249
 msgid ""
@@ -9833,23 +9801,33 @@ msgid ""
 "doc.qt.io/qt-6/android-manifest-file-configuration.html) to call the "
 "necessary tools to build an APK that can be installed on Android."
 msgstr ""
+"Les Qt usen el manifest d'Android i permeten una [configuració addicional]"
+"(https://doc.qt.io/qt-6/android-manifest-file-configuration.html) per a "
+"cridar les eines necessàries per a construir un APK que es pot instal·lar a "
+"l'Android."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:251
 msgid ""
 "KDE apps keep the manifest stored in an `android/` directory at the root of "
 "the project."
 msgstr ""
+"Les aplicacions KDE mantenen el manifest emmagatzemat en un directori "
+"`android/` a l'arrel del projecte."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:253
 msgid "An Android manifest might look like this:"
-msgstr ""
+msgstr "Un manifest d'Android podria ser així:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:283
 msgid ""
 "It is mostly boilerplate and can be copied and modified to an existing "
 "project, but it is worth learning what parts need to be accounted for."
 msgstr ""
+"Es tracta majoritàriament d'un estàndard i es pot copiar i modificar a un "
+"projecte existent, però val la pena aprendre quines parts cal explicar."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:285
 msgid ""
 "In the `<manifest>` tag, the `package` corresponds to the name that "
@@ -9857,14 +9835,24 @@ msgid ""
 "DNS notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). "
 "It should match the application ID specified in code."
 msgstr ""
+"A l'etiqueta `<manifest>`, el `package` correspon al nom que identifica "
+"l'aplicació internament a l'Android. Cal utilitzar la [notació DNS inversa]"
+"(https://en.wikipedia.org/wiki/Reverse_domain_name_notation). Ha de "
+"coincidir amb l'ID de l'aplicació especificat en el codi."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:287
 msgid ""
 "In the `<application>` and `<activity>` tags, the `android:label` should be "
 "the user-facing name of the application. In the tag `<meta-data>`, `android:"
 "value` should match the target name as specified in CMake."
 msgstr ""
+"A les etiquetes `<application>` i `<activity>`, el `android:label` hauria de "
+"ser el nom de l'aplicació de cara als usuaris. A l'etiqueta `<meta-data>`, "
+"`android:value` hauria de coincidir amb el nom de destinació tal com "
+"s'especifica a CMake."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:289
 msgid ""
 "In the `<application>` tag, the `android:icon=\"@drawable/myapp\"` should be "
@@ -9874,6 +9862,12 @@ msgid ""
 "placeholder icon will be shown in the app menu and on the installation "
 "prompt instead."
 msgstr ""
+"A l'etiqueta `<application>`, la `android:icon=\"@drawable/myapp\"` hauria "
+"de ser una icona emmagatzemada a `android/res/drawable/`, sense l'extensió "
+"de fitxer. En aquest exemple, el fitxer seria `android/res/drawable/myapp."
+"png`. La carpeta `res` significa «recursos». Si no s'especifica, es mostrarà "
+"la icona predeterminada de marcador de posició d'Android al menú de "
+"l'aplicació i a l'indicador d'instal·lació."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:291
 msgid ""
@@ -9883,6 +9877,10 @@ msgid ""
 "while on the background. Typically a Qt/KDE application has only one "
 "activity."
 msgstr ""
+"Una [Activity](https://developer.android.com/reference/android/app/Activity) "
+"vol dir el que farà l'aplicació en estats diferents. Per exemple, pot "
+"realitzar certes accions mentre és en primer pla i altres accions mentre que "
+"és en segon pla. Normalment, una aplicació Qt/KDE només té una activitat."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:293
 msgid ""
@@ -9898,7 +9896,19 @@ msgid ""
 "menu screen and be able to launch. This should generally be sufficient for "
 "most KDE applications."
 msgstr ""
+"Cada Activity pot tenir un o més [Intent Filters](https://developer.android."
+"com/guide/components/intents-filters). Un intent és una cosa que l'activitat "
+"és capaç de fer, que en el cas d'una aplicació KDE sol ser una *acció*, però "
+"també pot ser un *servei*. Per exemple, si l'aplicació *té el propòsit* de "
+"llançar, llavors cal indicar a l'Android que aquesta activitat és el punt "
+"d'entrada de l'aplicació ([android.intent.action.MAIN](https://developer."
+"android.com/reference/android/content/Intent#ACTION_MAIN)) i que el propòsit "
+"és del tipus [LAUNCHER](https://developer.android.com/reference/android/"
+"content/Intent#CATEGORY_LAUNCHER) per a mostrar-se a la pantalla de menú de "
+"l'aplicació i poder llançar-la. En general, això hauria de ser suficient per "
+"a la majoria d'aplicacions KDE."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:295
 msgid ""
 "The `<meta-data>` tag can be repeated multiple times and have multiple "
@@ -9906,7 +9916,12 @@ msgid ""
 "android-manifest-file-configuration.html#qt-specific-meta-data) can be used. "
 "The `android.app.lib_name` metadata is required."
 msgstr ""
+"L'etiqueta `<meta-data>` es pot repetir diverses vegades i té diversos "
+"propòsits, i es poden utilitzar [configuracions específiques de les Qt]"
+"(https://doc.qt.io/qt-6/android-manifest-file-configuration.html#qt-specific-"
+"meta-data) especials. Es requereixen la metadada `android.app.lib_name`."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:297
 msgid ""
 "The `<uses-permission>` tag is straightforward and allows the application to "
@@ -9915,20 +9930,34 @@ msgid ""
 "action related to the activity, while a permission is a request for access "
 "to functionality that is by default not available."
 msgstr ""
+"L'etiqueta `<uses-permission>` és directa i permet a l'aplicació sol·licitar "
+"permís per realitzar una acció específica. Un Permission és diferent d'un "
+"Intent, ja que Intent sol·licita un altre component per realitzar una acció "
+"relacionada amb l'activitat, mentre que un permís és una sol·licitud d'accés "
+"a la funcionalitat que no està disponible de manera predeterminada."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:299
 msgid ""
 "The `<supports-screens>` tag specifies which form factors (screen sizes and "
 "pixel densities, phones or tablets) the application supports. Because QML "
 "applications are convergent, \"any size\" should be a reasonable default."
 msgstr ""
+"L'etiqueta `<supports-screens>` especifica quins factors de forma (mides de "
+"pantalla i densitats de píxels, telèfons o tauletes) admet l'aplicació. Com "
+"que les aplicacions QML són convergents, «any size» hauria de ser un valor "
+"predeterminat raonable."
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:301
 msgid ""
 "The only parts of the above example that are not required are `android:icon="
 "\"@drawable/myapp\"` (used only if your application already has an icon) and "
 "`<uses-permissions>` (which should only be added when actually needed)."
 msgstr ""
+"Les úniques parts de l'exemple anterior que no són necessàries són `android:"
+"icon=\"@drawable/myapp\"` (només s'utilitza si l'aplicació ja té una icona) "
+"i `<uses-permissions>` (que només s'hauria d'afegir quan sigui necessari)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:303
 msgid ""
@@ -9940,10 +9969,17 @@ msgid ""
 "\n"
 "-->\n"
 msgstr ""
+"<!--\n"
+"\n"
+"## Fitxer de construcció de Gradle {#gradle-build}\n"
+"\n"
+"TODO\n"
+"\n"
+"-->\n"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:311
 msgid "Splash screen"
-msgstr ""
+msgstr "Pantalla de presentació"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:313
 msgid ""
@@ -9952,35 +9988,49 @@ msgid ""
 "app to initialize. When no splash screen is specified, the application will "
 "be shown as soon as it is opened, even if not ready."
 msgstr ""
+"Una «Splash Screen» (Pantalla de presentació) és una pantalla opcional que "
+"conté una imatge estàtica o una animació que es mostra quan es llança una "
+"aplicació que es veu durant uns segons perquè l'aplicació s'inicialitzi. Si "
+"no s'especifica cap pantalla de presentació, l'aplicació es mostrarà tan "
+"aviat com s'obri, encara que no estigui llesta."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:315
 msgid ""
 "To add it to your application, you will need to specify it in the "
 "AndroidManifest.xml metadata:"
 msgstr ""
+"Per afegir-la a la vostra aplicació, haureu d'especificar-ho a les metadades "
+"de l'AndroidManifest.xml:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:321
 msgid "In turn, an `android/res/drawable/splash.xml` file must exist:"
-msgstr ""
+msgstr "Al seu torn, ha d'existir un fitxer `android/res/drawable/splash.xml`:"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:336
 msgid ""
 "This simple example commonly used in KDE applications centers the "
 "application icon in an empty background, and so an application icon residing "
 "in `android/res/drawable/` is required."
 msgstr ""
+"Aquest exemple senzill que s'utilitza habitualment a les aplicacions KDE "
+"centra la icona de l'aplicació en un fons buit, i per tant, es requereix una "
+"icona d'aplicació que resideixi a `android/res/drawable/`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:338
-#, fuzzy
-#| msgid "Preparing the Class"
 msgid "Preparing an APK"
-msgstr "Preparant la classe"
+msgstr "Preparant un APK"
 
+# skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:340
 msgid ""
 "The last step needed to actually allow building an APK for Android is a "
 "simple CMake function that uses the files in the `android/` directory:"
 msgstr ""
+"L'últim pas necessari per a permetre la construcció d'un APK per a Android "
+"és una simple funció CMake que utilitza els fitxers en el directori `android/"
+"`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:348
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:224
@@ -9988,18 +10038,12 @@ msgid "Building"
 msgstr "Construcció"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:350
-#, fuzzy
-#| msgid ""
-#| "To build your application on Windows, follow [Building KDE software on "
-#| "Windows with Craft: Building your own projects on Windows](/docs/getting-"
-#| "started/building/craft#custom-projects)."
 msgid ""
 "To build your application on Android, follow [Building applications for "
 "Android](/docs/packaging/android/building_applications/)."
 msgstr ""
-"Per a construir la vostra aplicació al Windows, seguiu [Construir el "
-"programari KDE al Windows amb Craft: Construcció dels projectes propis al "
-"Windows](/docs/getting-started/building/craft#custom-projects)."
+"Per a construir la vostra aplicació a l'Android, seguiu [Construir "
+"aplicacions per a l'Android](/docs/packaging/android/building_applications/)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:352
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:228
@@ -10007,11 +10051,6 @@ msgid "CI builds"
 msgstr "Construccions de CI"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:354
-#, fuzzy
-#| msgid ""
-#| "If the project has been properly configured to build on Windows and is "
-#| "using KDE infrastructure for its code hosting (KDE Invent), it is "
-#| "possible to configure Windows CI/CD jobs."
 msgid ""
 "If the project has been properly configured to build on Windows and is using "
 "KDE infrastructure for its code hosting (KDE Invent), it is possible to "
@@ -10019,7 +10058,7 @@ msgid ""
 msgstr ""
 "Si el projecte s'ha configurat correctament per a construir al Windows i "
 "està utilitzant la infraestructura KDE per al seu allotjament de codi (KDE "
-"Invent), és possible configurar els treballs CI/CD del Windows."
+"Invent), és possible configurar els treballs CI/CD de l'Android."
 
 # skip-rule: t-acc_obe
 #: content/docs/getting-started/kirigami/platforms-android/index.md:356
@@ -10036,15 +10075,18 @@ msgstr ""
 "community.kde.org/Infrastructure/Continuous_Integration_System)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:358
-#, fuzzy
-#| msgid "Troubleshooting"
 msgid ""
 "<!--\n"
 "\n"
 "## Troubleshooting\n"
 "\n"
 "-->\n"
-msgstr "Solució de problemes"
+msgstr ""
+"<!--\n"
+"\n"
+"## Solució de problemes\n"
+"\n"
+"-->\n"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
 msgid "Windows Setup"
@@ -10060,7 +10102,7 @@ msgid ""
 "[extra-cmake-modules](https://api.kde.org/ecm/) will not require many "
 "modifications to work properly on Windows."
 msgstr ""
-"Les Qt tenen un suport gran del Windows, i per tant les aplicacions que fan "
+"Les Qt tenen un bon suport del Windows, i per tant les aplicacions que fan "
 "ús dels [extra-cmake-modules](https://api.kde.org/ecm/) de les Qt i KDE no "
 "requeriran moltes modificacions per a funcionar correctament al Windows."
 

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-09 02:12+0000\n"
-"PO-Revision-Date: 2026-09-18 09:30+0200\n"
+"PO-Revision-Date: 2026-11-09 09:38+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -8853,36 +8853,24 @@ msgstr ""
 "dele, zaradi česar so stvari veliko bolj obvladljive."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:0
-#, fuzzy
-#| msgid "Windows Setup"
 msgid "Android Setup"
-msgstr "Nastavitev za Windows"
+msgstr "Nastavitev za Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:0
-#, fuzzy
-#| msgid "Preparing your C++ application for Windows"
 msgid "Preparing your C++ application for Android"
-msgstr "Priprava vaše C++ aplikacije za Windows"
+msgstr "Priprava vaše C++ aplikacije za Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:11
-#, fuzzy
-#| msgid ""
-#| "Qt has great Windows support, and so applications making use of Qt and "
-#| "KDE's [extra-cmake-modules](https://api.kde.org/ecm/) will not require "
-#| "many modifications to work properly on Windows."
 msgid ""
 "Qt has great Android support, but applications require a substantial amount "
 "of modifications to work properly on Android."
 msgstr ""
-"Qt ima odlično podporo za Windows, zato aplikacije, ki uporabljajo module "
-"[extra-cmake-modules] (https://api.kde.org/ecm/) Qt in KDE, ne bodo "
-"potrebovale veliko sprememb za pravilno delovanje v sistemu Windows."
+"Qt ima odlično podporo za Android, vendar aplikacije zahtevajo precejšnje "
+"spremembe, da na Androidu pravilno delujejo."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:13
-#, fuzzy
-#| msgid "Three things are needed:"
 msgid "A few things are needed:"
-msgstr "Potrebne so tri stvari:"
+msgstr "Potrebnih je nekaj stvari:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:15
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:15
@@ -8890,10 +8878,8 @@ msgid "[A Craft blueprint](#craft)"
 msgstr "[A Craft blueprint](#craft)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:16
-#, fuzzy
-#| msgid "[Setting the Breeze style](#breeze)"
 msgid "[Setting qqc2-breeze-style](#qqc2-breeze-style)"
-msgstr "[Nastavitev sloga Breeze](#breeze)"
+msgstr "[Nastavitev sloga qqc2-breeze-style](#qqc2-breeze-style)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:17
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:17
@@ -8902,39 +8888,36 @@ msgstr "[Priložene ikone k aplikaciji](#icons)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:18
 msgid "[An Android manifest](#android-manifest)"
-msgstr ""
+msgstr "[Android manifest](#android-manifest)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:19
-#, fuzzy
-#| msgid "[Using kde-builder](#kde-builder)"
 msgid "[Optionally a Gradle build file](#gradle-build)"
-msgstr "[Uporaba kde-builder](#kde-builder)"
+msgstr "[Neobvezno datoteka Gradle](#gradle-build)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:20
 msgid "[Optionally a splash screen XML file](#splash)"
-msgstr ""
+msgstr "[Neobvezno datoteka XML za uvodni zaslon](#splash)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:21
 msgid "[CMake function to package for Android](#build-apk)"
-msgstr ""
+msgstr "[Funkcija CMake za pakiranje za Android](#build-apk)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:23
-#, fuzzy
-#| msgid ""
-#| "The Craft blueprint is needed to bundle all the dependencies together "
-#| "with the application to generate an executable."
 msgid ""
 "The Craft blueprint is needed to bundle all the dependencies together with "
 "the application to generate an Android APK package."
 msgstr ""
-"Craft blueprint je potreben za združevanje vseh odvisnosti skupaj z "
-"aplikacijo za ustvarjanje izvedljive datoteke."
+"Načrt Craft je potreben za združevanje vseh odvisnosti z aplikacijo, da se "
+"ustvari paket Android APK."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:25
 msgid ""
 "The qqc2-breeze-style is an alternative to qqc2-desktop-style that is "
 "especially geared for mobile platforms like Android and Plasma Mobile."
 msgstr ""
+"Slog qqc2-breeze je alternativa slogu qqc2-desktop-style za namizne "
+"računalnike, ki je posebej prilagojen mobilnim platformam, kot sta Android "
+"in Plasma Mobile."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:27
 msgid ""
@@ -8943,27 +8926,29 @@ msgid ""
 "wrong configuration for desktop and mobile. The CMake code might optionally "
 "also need conditional code, although it can be avoided."
 msgstr ""
+"Craft-načrt aplikacije zahteva pogojno kodo, da se slogi za namizne in "
+"mobilne naprave ne mešajo, medtem ko bo pri kodi v jeziku C++ potrebna "
+"posebna previdnost, da se za namizne in mobilne naprave ne uporabi napačna "
+"konfiguracija. Tudi koda CMake bo morda zahtevala pogojne elemente, čeprav "
+"se jim je mogoče izogniti."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:29
-#, fuzzy
-#| msgid ""
-#| "Bundling the necessary icons for the app to work on Windows is the most "
-#| "complex step, but both KDE's extra-cmake-modules (ECM) and Qt provide "
-#| "means to make this job easier."
 msgid ""
 "Bundling the necessary icons for the app to work is done with the help of "
 "KDE's extra-cmake-modules, Qt resource bundling tools, as well as Kirigami "
 "and Kirigami Addons CMake functions."
 msgstr ""
-"Združevanje potrebnih ikon za delovanje aplikacije v sistemu Windows je "
-"najzahtevnejši korak, vendar tako KDE-jevi dodatni moduli cmake (ECM) kot Qt "
-"ponujajo načine za olajšanje tega dela."
+"Vključevanje ikon, potrebnih za delovanje aplikacije, poteka s pomočjo KDE-"
+"jevih modulov »extra-cmake-modules«, orodij za vključevanje virov v ogrodju "
+"Qt ter funkcij CMake iz knjižnic Kirigami in Kirigami Addons."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:31
 msgid ""
 "The Android manifest declares the metadata and additional files that need to "
 "be bundled with the Android application."
 msgstr ""
+"Datoteka Android manifest določa metapodatke in dodatne datoteke, ki morajo "
+"biti vključene v aplikacijo za Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:33
 msgid ""
@@ -8972,12 +8957,18 @@ msgid ""
 "Android build, such as the application version, or in case you want special "
 "build options."
 msgstr ""
+"Datoteka za gradnjo Gradle je potrebna, če uporabljate integracijo »extra-"
+"cmake-modules« za prenos obstoječih metapodatkov vaše aplikacije v postopek "
+"gradnje za Android – na primer različice aplikacije – ali če potrebujete "
+"posebne možnosti gradnje."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:35
 msgid ""
 "The Splash screen XML file is needed in case you want to add a splash screen "
 "with custom icon, background and positioning."
 msgstr ""
+"Datoteka XML za uvodni zaslon je potrebna, če želite dodati uvodni zaslon s "
+"prilagojeno ikono, ozadjem in postavitvijo."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:37
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:25
@@ -8985,10 +8976,8 @@ msgid "Craft blueprint"
 msgstr "Craft blueprint"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:39
-#, fuzzy
-#| msgid "[Setting the Breeze style](#breeze)"
 msgid "Setting the qqc2-breeze-style"
-msgstr "[Nastavitev sloga Breeze](#breeze)"
+msgstr "Nastavitev sloga qqc2-breeze-style"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:41
 msgid ""
@@ -8998,6 +8987,10 @@ msgid ""
 "Linux using qqc2-desktop style. This requires importing the `CraftCore` "
 "module:"
 msgstr ""
+"Za začetek uporabe qqc2-breeze-style ga morate dodati v Craft. Ker se "
+"uporablja izključno za Android, je potreben pogojni stavek – še zlasti, če "
+"je aplikacija že nastavljena za gradnjo na sistemih Windows in/ali Linux z "
+"uporabo qqc2-desktop style. To zahteva uvoz modula `CraftCore`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:57
 msgid ""
@@ -9005,10 +8998,13 @@ msgid ""
 "style\" logic needs to be applied to CMake as well, in case either method of "
 "finding qqc2-desktop-style is used:"
 msgstr ""
+"Podobno logiko – »ČE ni Android, uporabi qqc2-desktop-style, SICER pa qqc2-"
+"breeze-style« – je treba uporabiti tudi v sistemu CMake, in sicer za primer, "
+"ko se uporabi kateri koli od načinov za iskanje sloga qqc2-desktop-style:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:66
 msgid "Conditional code is also required in C++."
-msgstr ""
+msgstr "Pogojna koda je potrebna tudi v jeziku C++."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:68
 msgid ""
@@ -9018,11 +9014,16 @@ msgid ""
 "your application is already compatible with the desktop. This can be "
 "achieved like so:"
 msgstr ""
+"V sistemu Android aplikacije KDE ne uporabljajo razreda QApplication, temveč "
+"QGuiApplication. Poleg nastavitve sloga qqc2-breeze-style, ki velja "
+"izključno za Android, je treba poskrbeti tudi za vrstni red inicializacije – "
+"še posebej zato, ker je zelo verjetno, da je vaša aplikacija že združljiva z "
+"namiznim okoljem. To lahko uredite na naslednji način:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:89
 #: content/docs/getting-started/kirigami/platforms-android/index.md:147
 msgid "KirigamiAppDefaults usage"
-msgstr ""
+msgstr "Uporaba KirigamiAppDefaults"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:91
 msgid ""
@@ -9030,6 +9031,9 @@ msgid ""
 "kirigamiappdefaults.html#apply), the above C++ code is already managed for "
 "you."
 msgstr ""
+"Če uporabite [KirigamiAppDefaults::Apply()](https://api.kde.org/"
+"kirigamiappdefaults.html#apply), je zgoraj navedena koda v jeziku C++ že "
+"upravljana namesto vas."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:95
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:98
@@ -9037,35 +9041,28 @@ msgid "Shipping icons"
 msgstr "Dobavljanje ikon"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:97
-#, fuzzy
-#| msgid ""
-#| "The first thing that is needed to make the application use Breeze icons "
-#| "is to include [KIconThemes](https://invent.kde.org/frameworks/"
-#| "kiconthemes) in your project."
 msgid ""
 "The first thing that is needed to make the application use Breeze icons is "
 "to include KIconThemes in your project."
 msgstr ""
-"Prva stvar, ki jo potrebujete, da aplikacija uporablja ikone Breeze, je, da "
-"v svoj projekt vključite [KIconThemes](https://invent.kde.org/frameworks/"
-"kiconthemes)."
+"Prva stvar, ki je potrebna, da aplikacija uporablja ikone Breeze, je "
+"vključitev knjižnice KIconThemes v vaš projekt."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:99
-#, fuzzy
-#| msgid ""
-#| "After this, some CMake commands are needed to bundle your application "
-#| "icon with the app."
 msgid ""
 "Some CMake commands are needed to bundle your application icon with the app."
 msgstr ""
-"Po tem je potrebnih nekaj ukazov CMake, da se ikona aplikacije poveže z "
-"aplikacijo."
+"Za vključitev ikone vaše aplikacije v samo aplikacijo je potrebnih nekaj "
+"ukazov CMake."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:101
 msgid ""
 "Lastly, an extra CMake command coming from Kirigami can be used to bundle "
 "Kirigami icons into your application (and optionally Kirigami Addons icons)."
 msgstr ""
+"Nazadnje lahko uporabite dodaten ukaz CMake, ki ga ponuja Kirigami, za "
+"vključitev ikon Kirigami (in po želji tudi ikon iz paketa Kirigami Addons) v "
+"svojo aplikacijo."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:103
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:104
@@ -9074,7 +9071,7 @@ msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:105
 msgid "This can be done by:"
-msgstr ""
+msgstr "To je mogoče storiti takole:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:107
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:108
@@ -9111,6 +9108,9 @@ msgid ""
 "kirigamiappdefaults.html#apply), the above KIconThemes initialization in C++ "
 "code is already managed for you."
 msgstr ""
+"Če uporabite [KirigamiAppDefaults::Apply()](https://api.kde.org/"
+"kirigamiappdefaults.html#apply), je zgoraj omenjena inicializacija "
+"KIconThemes v kodi C++ že urejena namesto vas."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:153
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
@@ -9118,18 +9118,12 @@ msgid "Application icon"
 msgstr "Ikona aplikacije"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:155
-#, fuzzy
-#| msgid ""
-#| "If your application has an icon, it needs to be added to your project "
-#| "both as a [QML resource](https://doc.qt.io/qt-6/resources.html) and as a "
-#| "part of icon installation."
 msgid ""
 "If your application has an icon, it needs to be added to your project both "
 "as a QML resource and as a part of icon installation."
 msgstr ""
-"Če ima vaša aplikacija ikono, jo je treba dodati v vaš projekt tako kot [vir "
-"QML](https://doc.qt.io/qt-6/resources.html) kot tudi kot del namestitve "
-"ikone."
+"Če ima vaša aplikacija ikono, jo je treba v projekt dodati tako kot vir QML "
+"kot tudi v sklopu namestitve ikon."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:157
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:152
@@ -9172,33 +9166,18 @@ msgstr ""
 "prevede v pot, ki jo bo imela v datotečnem sistemu."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:183
-#, fuzzy
-#| msgid ""
-#| "Once the icon is installed in this way, in QML code, it can be called "
-#| "simply with `myapp` or `org.kde.myapp`, as would be called from [QIcon::"
-#| "fromTheme()](doc.qt.io/qt-6/qicon.html#fromTheme). This can be used with "
-#| "any QML control that has an [icon.name](https://doc.qt.io/qt-6/"
-#| "qtquickcontrols-icons.html) property."
 msgid ""
 "Once the icon is installed in this way, in QML code, it can be called simply "
 "with `myapp` or `org.kde.myapp`, as would be called from `QIcon::"
 "fromTheme()`. This can be used with any QML control that has an `icon.name` "
 "property."
 msgstr ""
-"Ko je ikona nameščena na ta način, jo lahko v kodi QML preprosto pokličete z "
-"`myapp` ali `org.kde.myapp`, kot bi jo poklicali iz [QIcon::fromTheme()](doc."
-"qt.io/qt-6/qicon.html#fromTheme). To se lahko uporablja s katerim koli "
-"kontrolnikom QML, ki ima lastnost [icon.name](https://doc.qt.io/qt-6/"
-"qtquickcontrols-icons.html)."
+"Ko je ikona na ta način nameščena, jo je v kodi QML mogoče priklicati "
+"preprosto z `myapp` ali `org.kde.myapp`, podobno kot bi jo priklicali s "
+"funkcijo `QIcon::fromTheme()`. To je mogoče uporabiti pri katerem koli "
+"gradniku QML, ki ima lastnost `icon.name`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:185
-#, fuzzy
-#| msgid ""
-#| "Windows has no such standard directory, and installing the icon has no "
-#| "effect; it has to be bundled with the application. To do so, the PNG can "
-#| "be sent to its own installation directory using `ecm_add_app_icon()` and "
-#| "a PNG or SVG file can be embedded into the app as a Qt resource file in "
-#| "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgid ""
 "Android has no such standard directory, and installing the icon has no "
 "effect; it has to be bundled with the application. To do so, the PNG can be "
@@ -9206,11 +9185,12 @@ msgid ""
 "file can be embedded into the app as a Qt resource file in "
 "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgstr ""
-"Windows nima takšnega standardnega imenika in namestitev ikone nima učinka; "
-"mora biti priložena aplikaciji. Če želite to narediti, lahko PNG pošljete v "
-"njegov namestitveni imenik z uporabo `ecm_add_app_icon()`, datoteko PNG ali "
-"SVG pa lahko vdelate v aplikacijo kot datoteko virov Qt v "
-"`ecm_add_qml_module()` ali `ecm_target_qml_sources()`."
+"Android nima takšnega standardnega imenika, zato namestitev ikone nima "
+"nobenega učinka; ikona mora biti vključena v paket aplikacije. To lahko "
+"storite tako, da datoteko PNG namestite v njen lastni namestitveni imenik s "
+"pomočjo `ecm_add_app_icon()`, datoteko PNG ali SVG pa v aplikacijo vključite "
+"kot vir Qt (Qt resource file) z uporabo `ecm_add_qml_module()` ali "
+"`ecm_target_qml_sources()`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:187
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:183
@@ -9223,48 +9203,26 @@ msgid "And the main application icon is bundled as a Qt resource with:"
 msgstr "Glavna ikona aplikacije je združena kot vir Qt z:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:200
-#, fuzzy
-#| msgid ""
-#| "This will make the application icon available as a Qt resource under "
-#| "`qrc:/qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any "
-#| "QML control that has an [icon.source](https://doc.qt.io/qt-6/"
-#| "qtquickcontrols-icons.html) property."
 msgid ""
 "This will make the application icon available as a Qt resource under `qrc:/"
 "qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any QML "
 "control that has an `icon.source` property."
 msgstr ""
-"S tem bo ikona aplikacije na voljo kot vir Qt pod `qrc:/qt/qml/org/kde/myapp/"
-"org.kde.myapp.svg`. To se lahko uporablja s katerim koli kontrolnikom QML, "
-"ki ima lastnost [icon.source](https://doc.qt.io/qt-6/qtquickcontrols-icons."
-"html)."
+"S tem bo ikona aplikacije na voljo kot vir Qt na naslovu `qrc:/qt/qml/org/"
+"kde/myapp/org.kde.myapp.svg`. Uporabiti jo je mogoče s katerim koli "
+"gradnikom QML, ki ima lastnost `icon.source`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:202
-#, fuzzy
-#| msgid ""
-#| "The `RESOURCES` path depends on the place where the icons are located. "
-#| "Traditionally, an `icons/` folder is created at the root of the project "
-#| "for storing all icons, as they don't really count as source files."
 msgid ""
 "The RESOURCES path depends on the place where the icons are installed. "
 "Traditionally, an `icons/` folder is created at the root of the project for "
 "storing all icons, as they don't really count as source files."
 msgstr ""
-"Pot `RESOURCES` je odvisna od mesta, kjer se nahajajo ikone. Tradicionalno "
-"se v korenu projekta ustvari mapa `icons/` za shranjevanje vseh ikon, saj se "
-"v resnici ne obravnavajo kot izvorne datoteke."
+"Pot RESOURCES je odvisna od tega, kje so ikone nameščene. Običajno se v "
+"korenskem imeniku projekta ustvari mapa `icons/` za shranjevanje vseh ikon, "
+"saj te dejansko ne štejejo med izvorne datoteke."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:204
-#, fuzzy
-#| msgid ""
-#| "After the icons are installed (for Linux) and bundled (for Windows and "
-#| "Android), you can set it in code. In QML code, for compatibility with "
-#| "both Windows and Android, you should use the bundled icon; in C++ code, "
-#| "notably when setting the window icon, you can use the theme icon by "
-#| "default and the bundled icon as a fallback with [QIcon::fromTheme()]"
-#| "(https://doc.qt.io/qt-6/qicon.html#fromTheme) in the call to "
-#| "[QGuiApplication::setWindowIcon()](https://doc.qt.io/qt-6/qguiapplication."
-#| "html#windowIcon-prop):"
 msgid ""
 "After the icons are installed (for Linux) and bundled (for Windows and "
 "Android), you can set it in code. In QML code, for compatibility with both "
@@ -9272,13 +9230,13 @@ msgid ""
 "when setting the window icon, you can use the theme icon by default and the "
 "bundled icon as a fallback for `QGuiApplication::setWindowIcon()`:"
 msgstr ""
-"Ko so ikone nameščene (za Linux) in združene (za Windows in Android), jih "
-"lahko nastavite v kodi. V kodi QML morate za združljivost z operacijskim "
-"sistemom Windows in Android uporabiti združeno ikono; v kodi C++, zlasti pri "
-"nastavljanju ikone okna, lahko privzeto uporabite ikono teme in združeno "
-"ikono kot rezervno možnost z [QIcon::fromTheme()](https://doc.qt.io/qt-6/"
-"qicon.html#fromTheme) v klicu [QGuiApplication::setWindowIcon()](https://doc."
-"qt.io/qt-6/qguiapplication.html#windowIcon-prop):"
+"Ko so ikone nameščene (za Linux) oziroma vključene v paket (za Windows in "
+"Android), jih lahko določite v kodi. V kodi QML je zaradi združljivosti s "
+"sistemoma Windows in Android priporočljivo uporabiti ikono, ki je del "
+"paketa; v kodi C++ – zlasti pri nastavljanju ikone okna – lahko privzeto "
+"uporabite ikono iz teme, kot nadomestno možnost (če prva ni na voljo) pa "
+"ikono iz paketa, in sicer v okviru funkcije `QGuiApplication::"
+"setWindowIcon()`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:210
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:206
@@ -9286,36 +9244,30 @@ msgid "Kirigami icons"
 msgstr "Ikone Kirigami"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:212
-#, fuzzy
-#| msgid ""
-#| "While Windows does not have a standard directory where to install icons "
-#| "from an icon theme, it is possible to bundle the necessary Breeze icons "
-#| "together with your Windows application."
 msgid ""
 "While Android does not have a standard directory where to install icons from "
 "an icon theme, it is possible to bundle the necessary Kirigami icons "
 "together with your Android application."
 msgstr ""
-"Čeprav Windows nima standardnega imenika, kamor bi namestili ikone iz teme "
-"ikon, je mogoče potrebne ikone Breeze združiti z vašo aplikacijo Windows."
+"Čeprav Android nima standardnega imenika za namestitev ikon iz teme ikon, je "
+"mogoče potrebne ikone Kirigami vključiti v paket skupaj z vašo aplikacijo za "
+"Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:214
-#, fuzzy
-#| msgid "link the libraries necessary for the executable to run"
 msgid "Two things are necessary for this to be done:"
-msgstr "poveži knjižnice, ki so potrebne za delovanje izvršljive datoteke"
+msgstr "Za to sta potrebni dve stvari:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:216
 msgid "Prepare the project with KIconThemes"
-msgstr ""
+msgstr "Pripravite projekt s KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:217
 msgid "Include breeze-icons in your Craft blueprint"
-msgstr ""
+msgstr "Vključite ikone Breeze v svojo predlogo Craft"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:218
 msgid "kirigami_package_breeze_icons()"
-msgstr ""
+msgstr "kirigami_package_breeze_icons()"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:220
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:212
@@ -9326,16 +9278,12 @@ msgstr ""
 "(#kiconthemes)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:222
-#, fuzzy
-#| msgid ""
-#| "To add Breeze icons as a dependency for your project, add this to your "
-#| "Craft blueprint:"
 msgid ""
 "To add breeze-icons as a dependency for your project, add this to your Craft "
 "blueprint:"
 msgstr ""
-"Če želite dodati ikone Breeze kot odvisnost za svoj projekt, dodajte tole v "
-"svoj Craft blueprint:"
+"Če želite dodati breeze-icons kot odvisnost za svoj projekt, v svoj načrt "
+"Craft blueprint dodajte naslednje:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:230
 msgid ""
@@ -9346,12 +9294,21 @@ msgid ""
 "and prepares the icons for bundling. This command needs to come before the "
 "step detailed in [CMake function to package for Android](#build-apk)."
 msgstr ""
+"Zaradi načina, kako poteka gradnja za Android, Craft ne more samodejno "
+"vključiti ikon v paket. Zato Kirigami ponuja funkcijo CMake "
+"[kirigami_package_breeze_icons()](https://invent.kde.org/frameworks/"
+"kirigami/-/blob/master/KF6KirigamiMacros.cmake), ki med postopkom gradnje "
+"kopira in pripravi ikone za vključitev v paket. Ta ukaz mora biti izveden "
+"pred korakom, opisanim v razdelku [Funkcija CMake za pakiranje za Android]"
+"(#build-apk)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:232
 msgid ""
 "The CMake command `kirigami_package_breeze_icons()` does not need to be "
 "wrapped behind a conditional, as it only ever runs when on Android."
 msgstr ""
+"Ukaza CMake `kirigami_package_breeze_icons()` ni treba vključiti v pogojni "
+"stavek, saj se izvede le v okolju Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:234
 msgid ""
@@ -9362,10 +9319,16 @@ msgid ""
 "api-staging.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutpage.html) and "
 "similar."
 msgstr ""
+"Poleg tega lahko, če v svoji aplikaciji uporabljate Kirigami Addons, "
+"posredujete spremenljivko [${KIRIGAMI_ADDONS_ICONS}](https://invent.kde.org/"
+"libraries/kirigami-addons/-/blob/master/KirigamiAddonsMacros.cmake) in s tem "
+"vključite tudi potrebne ikone za komponente, kot sta [FormCard.AboutPage]"
+"(https://api-staging.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutpage."
+"html) in podobne."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:245
 msgid "Android manifest"
-msgstr ""
+msgstr "Android manifest"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:247
 msgid ""
@@ -9374,6 +9337,10 @@ msgid ""
 "build tools, operating system, and stores. The file *must* be called "
 "`AndroidManifest.xml`."
 msgstr ""
+"[Android manifest](https://developer.android.com/guide/topics/manifest/"
+"manifest-intro) je datoteka XML, ki orodjem za gradnjo, operacijskemu "
+"sistemu in trgovinam z aplikacijami podaja opis aplikacije. Datoteka se "
+"*mora* imenovati `AndroidManifest.xml`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:249
 msgid ""
@@ -9381,22 +9348,31 @@ msgid ""
 "doc.qt.io/qt-6/android-manifest-file-configuration.html) to call the "
 "necessary tools to build an APK that can be installed on Android."
 msgstr ""
+"Qt uporablja manifest za Android in podpira [dodatne nastavitve](https://doc."
+"qt.io/qt-6/android-manifest-file-configuration.html) za priklic orodij, "
+"potrebnih za izdelavo datoteke APK, ki jo je mogoče namestiti v sistem "
+"Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:251
 msgid ""
 "KDE apps keep the manifest stored in an `android/` directory at the root of "
 "the project."
 msgstr ""
+"Aplikacije KDE hranijo datoteko manifesta v imeniku `android/` v korenu "
+"projekta."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:253
 msgid "An Android manifest might look like this:"
-msgstr ""
+msgstr "Manifest za Android je bi lahko bil videti takole:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:283
 msgid ""
 "It is mostly boilerplate and can be copied and modified to an existing "
 "project, but it is worth learning what parts need to be accounted for."
 msgstr ""
+"Gre večinoma za standardno predlogo, ki jo je mogoče kopirati in prilagoditi "
+"obstoječemu projektu, vendar se splača spoznati, katere dele je treba "
+"upoštevati."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:285
 msgid ""
@@ -9405,6 +9381,11 @@ msgid ""
 "DNS notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). "
 "It should match the application ID specified in code."
 msgstr ""
+"V oznaki `<manifest>` atribut `package` ustreza imenu, s katerim sistem "
+"Android interno prepozna aplikacijo. Uporabiti je treba [obratni zapis "
+"domenskega imena](https://en.wikipedia.org/wiki/"
+"Reverse_domain_name_notation). Ime se mora ujemati z identifikatorjem "
+"aplikacije, določenim v kodi."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:287
 msgid ""
@@ -9412,6 +9393,9 @@ msgid ""
 "the user-facing name of the application. In the tag `<meta-data>`, `android:"
 "value` should match the target name as specified in CMake."
 msgstr ""
+"V oznakah `<application>` in `<activity>` mora `android:label` predstavljati "
+"ime aplikacije, ki je vidno uporabniku. V oznaki `<meta-data>` se mora "
+"`android:value` ujemati s ciljnim imenom, kot je določeno v sistemu CMake."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:289
 msgid ""
@@ -9422,6 +9406,12 @@ msgid ""
 "placeholder icon will be shown in the app menu and on the installation "
 "prompt instead."
 msgstr ""
+"V oznaki `<application>` mora `android:icon=\"@drawable/myapp\"` "
+"predstavljati ikono, shranjeno v mapi `android/res/drawable/`, pri čemer se "
+"končnica datoteke ne navede. V tem primeru bi bila datoteka `android/res/"
+"drawable/myapp.png`. Mapa `res` je okrajšava za »resources« (viri). Če ikona "
+"ni določena, se v meniju aplikacij in ob pozivu za namestitev namesto nje "
+"prikaže privzeta nadomestna ikona sistema Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:291
 msgid ""
@@ -9431,6 +9421,10 @@ msgid ""
 "while on the background. Typically a Qt/KDE application has only one "
 "activity."
 msgstr ""
+"[Activity](https://developer.android.com/reference/android/app/Activity) "
+"pomeni, kaj bo aplikacija počela v različnih stanjih. Na primer, lahko "
+"izvaja določena dejanja v ospredju in druga dejanja v ozadju. Običajno ima "
+"aplikacija Qt/KDE samo eno dejavnost."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:293
 msgid ""
@@ -9446,6 +9440,17 @@ msgid ""
 "menu screen and be able to launch. This should generally be sufficient for "
 "most KDE applications."
 msgstr ""
+"Vsaka dejavnost ima lahko enega ali več [filtrov namenov](https://developer."
+"android.com/guide/components/intents-filters). Namen predstavlja nekaj, kar "
+"dejavnost lahko izvede; v primeru aplikacij KDE gre običajno za *dejanje* "
+"(action), lahko pa tudi za *storitev* (service). Če se na primer aplikacija "
+"*namerava* zagnati, mora sistemu Android sporočiti, da je ta dejavnost "
+"vstopna točka aplikacije ([android.intent.action.MAIN](https://developer."
+"android.com/reference/android/content/Intent#ACTION_MAIN)) in da je namen "
+"vrste [LAUNCHER](https://developer.android.com/reference/android/content/"
+"Intent#CATEGORY_LAUNCHER) – s tem se aplikacija prikaže v meniju aplikacij "
+"in jo je mogoče zagnati. To bi moralo praviloma zadostovati za večino "
+"aplikacij KDE."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:295
 msgid ""
@@ -9454,6 +9459,10 @@ msgid ""
 "android-manifest-file-configuration.html#qt-specific-meta-data) can be used. "
 "The `android.app.lib_name` metadata is required."
 msgstr ""
+"Oznaka `<meta-data>` se lahko večkrat ponovi in ​​ima različne namene; "
+"uporabiti je mogoče tudi posebne [konfiguracije, značilne za Qt](https://doc."
+"qt.io/qt-6/android-manifest-file-configuration.html#qt-specific-meta-data). "
+"Metapodatki `android.app.lib_name` so obvezni."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:297
 msgid ""
@@ -9463,6 +9472,11 @@ msgid ""
 "action related to the activity, while a permission is a request for access "
 "to functionality that is by default not available."
 msgstr ""
+"Oznaka `<uses-permission>` je preprosta in aplikaciji omogoča, da zahteva "
+"dovoljenje za izvedbo določenega dejanja. Dovoljenje se od namena (angl. "
+"Intent) razlikuje po tem, da namen od druge komponente zahteva izvedbo "
+"dejanja, povezanega z aktivnostjo, medtem ko je dovoljenje zahteva za dostop "
+"do funkcionalnosti, ki privzeto ni na voljo."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:299
 msgid ""
@@ -9470,6 +9484,9 @@ msgid ""
 "pixel densities, phones or tablets) the application supports. Because QML "
 "applications are convergent, \"any size\" should be a reasonable default."
 msgstr ""
+"Oznaka `<supports-screens>` določa, katere oblike naprav (velikosti zaslonov "
+"in gostote slikovnih pik, telefoni ali tablice) aplikacija podpira. Ker so "
+"aplikacije QML konvergentne, je \"any size\" smiselna privzeta nastavitev."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:301
 msgid ""
@@ -9477,6 +9494,9 @@ msgid ""
 "\"@drawable/myapp\"` (used only if your application already has an icon) and "
 "`<uses-permissions>` (which should only be added when actually needed)."
 msgstr ""
+"Edina dela zgornjega primera, ki niso obvezna, so `android:icon=\"@drawable/"
+"myapp\"` (uporabi se le, če ima vaša aplikacija že ikono) in `<uses-"
+"permissions>` (ki ga dodajate le takrat, ko je dejansko potreben)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:303
 msgid ""
@@ -9488,10 +9508,17 @@ msgid ""
 "\n"
 "-->\n"
 msgstr ""
+"<!--\n"
+"\n"
+"## Gradle build file {#gradle-build}\n"
+"\n"
+"TODO\n"
+"\n"
+"-->\n"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:311
 msgid "Splash screen"
-msgstr ""
+msgstr "Zaslon dobrodošlice"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:313
 msgid ""
@@ -9500,16 +9527,22 @@ msgid ""
 "app to initialize. When no splash screen is specified, the application will "
 "be shown as soon as it is opened, even if not ready."
 msgstr ""
+"Zaslon dobrodošlice je neobvezen zaslon s statično sliko ali animacijo, ki "
+"se prikaže ob zagonu aplikacije in omogoči nekaj sekund za njeno "
+"inicializacijo. Če ta uvodni zaslon ni določen, se aplikacija prikaže takoj, "
+"ko jo odprete, tudi če še ni pripravljena na uporabo."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:315
 msgid ""
 "To add it to your application, you will need to specify it in the "
 "AndroidManifest.xml metadata:"
 msgstr ""
+"Če ga želite dodati v svojo aplikacijo, ga morate navesti v metapodatkih "
+"datoteke AndroidManifest.xml:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:321
 msgid "In turn, an `android/res/drawable/splash.xml` file must exist:"
-msgstr ""
+msgstr "Poleg tega mora obstajati datoteka `android/res/drawable/splash.xml`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:336
 msgid ""
@@ -9517,18 +9550,22 @@ msgid ""
 "application icon in an empty background, and so an application icon residing "
 "in `android/res/drawable/` is required."
 msgstr ""
+"Ta preprost primer, ki se pogosto uporablja v aplikacijah KDE, postavi ikono "
+"aplikacije na sredino praznega ozadja, zato je potrebna ikona aplikacije, ki "
+"se nahaja v mapi `android/res/drawable/`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:338
-#, fuzzy
-#| msgid "Preparing the Class"
 msgid "Preparing an APK"
-msgstr "Priprava razreda"
+msgstr "Priprava datoteke APK"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:340
 msgid ""
 "The last step needed to actually allow building an APK for Android is a "
 "simple CMake function that uses the files in the `android/` directory:"
 msgstr ""
+"Zadnji korak, potreben za dejansko omogočanje izdelave datoteke APK za "
+"Android, je preprosta funkcija CMake, ki uporablja datoteke v imeniku "
+"`android/`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:348
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:224
@@ -9536,19 +9573,12 @@ msgid "Building"
 msgstr "Izgradnja"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:350
-#, fuzzy
-#| msgid ""
-#| "To build your application on Windows, follow [Building KDE software on "
-#| "Windows with Craft: Building your own projects on Windows](/docs/getting-"
-#| "started/building/craft#custom-projects)."
 msgid ""
 "To build your application on Android, follow [Building applications for "
 "Android](/docs/packaging/android/building_applications/)."
 msgstr ""
-"Če želite zgraditi svojo aplikacijo v sistemu Windows, sledite navodilom "
-"[Gradnja programske opreme KDE v sistemu Windows s programom Craft: Gradnja "
-"lastnih projektov v sistemu Windows](/docs/getting-started/building/"
-"craft#custom-projects)."
+"Za izdelavo aplikacije za Android sledite navodilom v razdelku [Izdelava "
+"aplikacij za Android](/docs/packaging/android/building_applications/)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:352
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:228
@@ -9556,19 +9586,14 @@ msgid "CI builds"
 msgstr "Izgradnje CI"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:354
-#, fuzzy
-#| msgid ""
-#| "If the project has been properly configured to build on Windows and is "
-#| "using KDE infrastructure for its code hosting (KDE Invent), it is "
-#| "possible to configure Windows CI/CD jobs."
 msgid ""
 "If the project has been properly configured to build on Windows and is using "
 "KDE infrastructure for its code hosting (KDE Invent), it is possible to "
 "configure Android CI/CD jobs."
 msgstr ""
-"Če je bil projekt pravilno konfiguriran za gradnjo v sistemu Windows in "
-"uporablja infrastrukturo KDE za gostovanje kode (KDE Invent), je mogoče "
-"konfigurirati opravila Windows CI/CD."
+"Če je projekt ustrezno konfiguriran za gradnjo v okolju Windows in za "
+"gostovanje kode uporablja infrastrukturo KDE (KDE Invent), je mogoče "
+"konfigurirati opravila CI/CD za Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:356
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:232
@@ -9584,15 +9609,18 @@ msgstr ""
 "kde.org/Infrastructure/Continuous_Integration_System)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:358
-#, fuzzy
-#| msgid "Troubleshooting"
 msgid ""
 "<!--\n"
 "\n"
 "## Troubleshooting\n"
 "\n"
 "-->\n"
-msgstr "Odpravljanje težav"
+msgstr ""
+"<!--\n"
+"\n"
+"## Odpravljanje težav\n"
+"\n"
+"-->\n"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
 msgid "Windows Setup"

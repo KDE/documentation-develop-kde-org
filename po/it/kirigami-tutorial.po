@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-09 02:12+0000\n"
-"PO-Revision-Date: 2026-10-18 22:40+0200\n"
+"PO-Revision-Date: 2026-10-28 18:16+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -1813,15 +1813,6 @@ msgid "Data from the C++ backend to the QML frontend"
 msgstr "Dati dal backend C++ al frontend QML"
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:8
-#, fuzzy
-#| msgid ""
-#| "As shown in the [previous tutorial](/docs/getting-started/kirigami/"
-#| "advanced-connect_backend/), you can connect C++ code to QML by creating a "
-#| "class that will be treated as just another component in QML. However, you "
-#| "may want to represent more complicated data, such as data that needs to "
-#| "act as a custom [ListModel](docs:qtquick;qml-qtqml-models-listmodel.html) "
-#| "or in some way needs to be delegated from a [Repeater](docs:qtquick;qml-"
-#| "qtquick-repeater.html)."
 msgid ""
 "As shown in the [previous tutorial](/docs/getting-started/kirigami/advanced-"
 "connect_backend/), you can connect C++ code to QML by creating a class that "
@@ -1831,13 +1822,13 @@ msgid ""
 "needs to be delegated from a [Repeater](docs:qtquick;qml-qtquick-repeater."
 "html)."
 msgstr ""
-"As shown in the [previous tutorial](/docs/getting-started/kirigami/advanced-"
-"connect_backend/), you can connect C++ code to QML by creating a class that "
-"will be treated as just another component in QML. Tuttavia, potresti voler "
-"rappresentare dati più complicati, come i dati che devono agire come un "
-"[ListModel](docs:qtquick;qml-qtqml-models-listmodel.html) personalizzato o "
-"che in qualche modo devono essere delegati da un [Repeater](docs:qtquick;qml-"
-"qtquick-repeater.html)."
+"Come mostrato nell'[esercitazione precedente](/docs/getting-started/kirigami/"
+"advanced-connect_backend/), puoi connettere il codice C++ code  quello QML "
+"creando una classe, che verrà trattata esattamente come un altro componente "
+"QML. Tuttavia potresti voler rappresentare dati più complicati, come quelli "
+"che devono agire come un [ListModel](docs:qtquick;qml-qtqml-models-listmodel."
+"html) personalizzato, o che in qualche modo devono essere delegati da un "
+"[Repeater](docs:qtquick;qml-qtquick-repeater.html)."
 
 #: content/docs/getting-started/kirigami/advanced-connect_models/index.md:16
 msgid ""
@@ -3964,13 +3955,13 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips"
-msgstr "Patatine fritte"
+msgstr "I chip"
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:0
 msgid "Chips are small elements typically used to list out related properties."
 msgstr ""
-"I chip sono piccoli elementi generalmente utilizzati per elencare le "
-"proprietà correlate."
+"I chip sono piccoli elementi, che vengono generalmente utilizzati per "
+"elencare le proprietà correlate."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:9
 msgid ""
@@ -4028,11 +4019,11 @@ msgid ""
 "html) component."
 msgstr ""
 "Poiché i chip sono pensati per essere utilizzati più di una volta, "
-"probabilmente vorrai utilizzare una sorta di struttura dei dati dell'elenco "
-"e scorrere su di essi per visualizzare i chip. Per fare ciò, abbiamo bisogno "
+"probabilmente vorrai utilizzare una sorta di struttura di dati dell'elenco e "
+"scorrere su di essi per visualizzare i chip. Per fare ciò, abbiamo bisogno "
 "di un componente [ListModel](https://doc.qt.io/qt-6/qml-qtqml-models-"
-"listmodel.html) e un componente [Repeater](https://doc.qt.io/qt-6/qml-"
-"qtquick-repeater.html)."
+"listmodel.html) e di un [Repeater](https://doc.qt.io/qt-6/qml-qtquick-"
+"repeater.html)."
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:69
 msgid ""
@@ -4092,7 +4083,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/components-chips/index.md:130
 msgid "![Chips Example Application](chips_example_app.png)"
-msgstr "![Esempio di applicazione di chip](chips_example_app.png)"
+msgstr "![Esempio di applicazione dei chip](chips_example_app.png)"
 
 #: content/docs/getting-started/kirigami/components-controls/index.md:0
 msgid "Controls and interactive elements"
@@ -7784,14 +7775,6 @@ msgstr ""
 "dispone i tuoi componenti in una griglia con una composizione a tua scelta"
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:171
-#, fuzzy
-#| msgid ""
-#| "With [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-"
-#| "columnlayout.html) and [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-"
-#| "layouts-rowlayout.html), all we have to do is write our components inside "
-#| "the Layout component. As you can see, we went with a [GridLayout](https://"
-#| "doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html), which entails a bit "
-#| "more handiwork."
 msgid ""
 "With [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
 "html) and [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout."
@@ -7800,12 +7783,12 @@ msgid ""
 "qt-6/qml-qtquick-layouts-gridlayout.html), which entails a bit more "
 "handiwork."
 msgstr ""
-"With [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
-"html) and [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout."
-"html), all we have to do is write our components inside the Layout "
-"component. Come puoi vedere, abbiamo optato per un [GridLayout](https://doc."
-"qt.io/qt-6/qml-qtquick-layouts-gridlayout.html), che comporta un po' più di "
-"lavoro manuale."
+"Con [ColumnLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-columnlayout."
+"html) e [RowLayout](https://doc.qt.io/qt-6/qml-qtquick-layouts-rowlayout."
+"html] tutto quello che dobbiamo fare è scrivere i componenti dentro a uno di "
+"disposizione. Come puoi vedere, abbiamo optato per un [GridLayout](https://"
+"doc.qt.io/qt-6/qml-qtquick-layouts-gridlayout.html), che comporta un po' più "
+"di lavoro manuale."
 
 #: content/docs/getting-started/kirigami/introduction-listviews/index.md:190
 msgid ""
@@ -10315,7 +10298,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:17
 msgid "[Using kde-builder](#kde-builder)"
-msgstr "[Uso di kde-builder](#kde-builder)"
+msgstr "[Usando di kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:18
 msgid "[Installing Kirigami with Craft](#craft)"
@@ -10341,9 +10324,9 @@ msgid ""
 "storage."
 msgstr ""
 "Se utilizzi una [distribuzione non aggiornata](docs/getting-started/"
-"building#choosing), come Debian Stable o LTS Ubuntu, dovresti usare [kde-"
-"builder](#kde-builder) per questa esercitazione. Dovrebbe utilizzare al "
-"massimo 2 GB di spazio di archiviazione."
+"building#choosing), come Debian Stable o LTS Ubuntu, per questa "
+"esercitazione dovresti usare [kde-builder](#kde-builder): dovrebbe "
+"utilizzare al massimo 2 GB di spazio di archiviazione."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:24
 msgid "Installing Kirigami from the repositories in your Linux distribution"
@@ -10355,9 +10338,9 @@ msgid ""
 "terminal application and run one of the following, depending on which Linux "
 "distribution you are using:"
 msgstr ""
-"Abbiamo bisogno di un compilatore C++, pacchetti di sviluppo Qt e Kirigami. "
-"Apri un'applicazione terminale ed esegui una delle seguenti operazioni, a "
-"seconda della distribuzione Linux che stai utilizzando:"
+"Abbiamo bisogno di un compilatore C++, dei pacchetti di sviluppo Qt, e di "
+"Kirigami. Apri un'applicazione terminale ed esegui una delle seguenti "
+"operazioni, a seconda della distribuzione Linux che stai utilizzando:"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:34
 #: content/docs/getting-started/kirigami/setup-rust/index.md:20
@@ -10371,7 +10354,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:36
 msgid "Using kde-builder"
-msgstr "Usare kde-builder"
+msgstr "Uso di kde-builder"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:38
 msgid ""
@@ -10381,7 +10364,7 @@ msgid ""
 msgstr ""
 "[Configura il tuo ambiente di sviluppo con kde-builder](/docs/getting-"
 "started/building/kde-builder-setup/). Ciò ti fornirà gli strumenti di "
-"sviluppo necessari e le librerie sottostanti e creerà i framework KDE da "
+"sviluppo necessari e le librerie sottostanti, e creerà i framework KDE da "
 "zero."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:40
@@ -10394,7 +10377,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:42
 msgid "Add the following at the end of your `~/.config/kde-builder.yaml`:"
-msgstr "Aggiungere quanto segue alla fine di `~/.config/kde-builder.yaml`:"
+msgstr "Aggiungi quanto segue alla fine di `~/.config/kde-builder.yaml`:"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:49
 msgid "⏳ With kdesrc-build..."
@@ -10454,23 +10437,23 @@ msgid ""
 "your Kirigami application."
 msgstr ""
 "Dovrai seguire le [istruzioni di configurazione per Craft](https://community."
-"kde.org/Craft). Alla fine della configurazione, dovresti aver eseguito un "
+"kde.org/Craft). Alla fine della configurazione dovresti aver eseguito un "
 "file di configurazione dell'ambiente (`craftenv.ps1` su Windows o `craftenv."
 "sh` su tutte le altre piattaforme), che ti fornirà una shell terminale in "
 "cui compilerai la tua applicazione Kirigami."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:75
 msgid "After that, you can run the following on a terminal:"
-msgstr "Successivamente, puoi eseguire quanto segue su un terminale:"
+msgstr "Successivamente puoi eseguire quanto segue in un terminale:"
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:81
 msgid ""
 "This will take a while to finish on first run. If you close your terminal, "
 "you can run the environment setup file to prepare your terminal again."
 msgstr ""
-"Ci vorrà del tempo per finire alla prima esecuzione. Se chiudi il terminale, "
-"puoi eseguire il file di configurazione dell'ambiente per preparare "
-"nuovamente il terminale."
+"Ci vorrà un po’ di tempo prima che si completi al primo avvio. Se chiudi il "
+"terminale puoi eseguire il file di configurazione dell'ambiente per "
+"preparare nuovamente il terminale."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:85
 msgid ""
@@ -10488,7 +10471,7 @@ msgid ""
 "going to call ours `kirigami-tutorial/`."
 msgstr ""
 "Per prima cosa creiamo la cartella del nostro progetto (puoi utilizzare i "
-"comandi seguenti). Chiameremo il nostro \"kirigami-tutorial/\"."
+"comandi seguenti). Lo chiameremo \"kirigami-tutorial/\"."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:99
 msgid ""
@@ -10500,7 +10483,7 @@ msgstr ""
 "All'interno di questa cartella creeremo una cartella `src/` e `CMakeLists."
 "txt`. Generalmente è considerata una buona pratica posizionare tutti i "
 "nostri principali file di codice C++ in una cartella `src/`. Inseriamo anche "
-"il file `Main.qml` poiché verrà eseguito insieme all'eseguibile."
+"il file `Main.qml`, poiché verrà eseguito insieme all'eseguibile."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:115
 msgid ""
@@ -10510,12 +10493,12 @@ msgid ""
 "`source-dir` or `dest-dir` for the module. We will assume the path to your "
 "`main.cpp` will be `~/kde/src/kirigami-tutorial/src/main.cpp`."
 msgstr ""
-"Nel caso in cui desideri creare automaticamente il progetto con kde-builder, "
-"il nome del modulo personalizzato dovrebbe essere lo stesso della cartella "
-"radice del progetto (nel nostro caso sarà \"kirigami-tutorial\"), altrimenti "
-"dovresti personalizzare la `dir-origine` o la `dir-dest` per il modulo. "
-"Supponiamo che il percorso del tuo `main.cpp` sia `~/kde/src/kirigami-"
-"tutorial/src/main.cpp`."
+"Nel caso in cui tu voglia creare automaticamente il progetto con kde-"
+"builder, il nome del modulo personalizzato dovrebbe essere lo stesso della "
+"cartella radice del progetto (nel nostro caso sarà \"kirigami-tutorial\"), "
+"altrimenti dovresti personalizzare la `dir-origine` o la `dir-dest` per il "
+"modulo. Supponiamo che il percorso del tuo `main.cpp` sia `~/kde/src/"
+"kirigami-tutorial/src/main.cpp`."
 
 #: content/docs/getting-started/kirigami/setup-cpp/index.md:119
 msgid "Main.qml"

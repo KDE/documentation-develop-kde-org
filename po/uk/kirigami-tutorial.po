@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-09 02:12+0000\n"
-"PO-Revision-Date: 2026-09-18 08:44+0300\n"
+"PO-Revision-Date: 2026-11-09 19:08+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -9018,36 +9018,24 @@ msgstr ""
 "частинами, що зробить проєкт простішим у керуванні."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:0
-#, fuzzy
-#| msgid "Windows Setup"
 msgid "Android Setup"
-msgstr "Робота у Windows"
+msgstr "Робота в Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:0
-#, fuzzy
-#| msgid "Preparing your C++ application for Windows"
 msgid "Preparing your C++ application for Android"
-msgstr "Приготування вашої програми на C++ до Windows"
+msgstr "Приготування вашої програми на C++ до Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:11
-#, fuzzy
-#| msgid ""
-#| "Qt has great Windows support, and so applications making use of Qt and "
-#| "KDE's [extra-cmake-modules](https://api.kde.org/ecm/) will not require "
-#| "many modifications to work properly on Windows."
 msgid ""
 "Qt has great Android support, but applications require a substantial amount "
 "of modifications to work properly on Android."
 msgstr ""
-"У Qt передбачено чудову підтримку Windows, тому програми, що використовують "
-"Qt та модулі [extra-cmake-modules] (https://api.kde.org/ecm/) KDE, не "
-"потребуватимуть значних модифікацій для належної роботи у Windows."
+"Qt має чудову підтримку Android, проте для належної роботи програм на цій "
+"платформі потрібна значна кількість змін."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:13
-#, fuzzy
-#| msgid "Three things are needed:"
 msgid "A few things are needed:"
-msgstr "Потрібно три речі:"
+msgstr "Потрібно декілька речей:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:15
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:15
@@ -9055,10 +9043,8 @@ msgid "[A Craft blueprint](#craft)"
 msgstr "[План Craft](#craft)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:16
-#, fuzzy
-#| msgid "[Setting the Breeze style](#breeze)"
 msgid "[Setting qqc2-breeze-style](#qqc2-breeze-style)"
-msgstr "[Встановлення стилю Breeze](#breeze)"
+msgstr "[Встановлення qqc2-breeze-style](#qqc2-breeze-style)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:17
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:17
@@ -9067,39 +9053,35 @@ msgstr "[Піктограми, які пов'язано із програмою]
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:18
 msgid "[An Android manifest](#android-manifest)"
-msgstr ""
+msgstr "[Маніфест Android](#android-manifest)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:19
-#, fuzzy
-#| msgid "[Using kde-builder](#kde-builder)"
 msgid "[Optionally a Gradle build file](#gradle-build)"
-msgstr "[Користування kde-builder](#kde-builder)"
+msgstr "[Необов'язковий файл збирання Gradle](#gradle-build)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:20
 msgid "[Optionally a splash screen XML file](#splash)"
-msgstr ""
+msgstr "[Необов'язковий файл XML вікна вітання](#splash)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:21
 msgid "[CMake function to package for Android](#build-apk)"
-msgstr ""
+msgstr "[Функція CMake для пакування для Android](#build-apk)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:23
-#, fuzzy
-#| msgid ""
-#| "The Craft blueprint is needed to bundle all the dependencies together "
-#| "with the application to generate an executable."
 msgid ""
 "The Craft blueprint is needed to bundle all the dependencies together with "
 "the application to generate an Android APK package."
 msgstr ""
 "План Craft потрібен для пов'язування усіх залежностей з програмою для "
-"створення виконуваного файла."
+"створення пакунка APK для Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:25
 msgid ""
 "The qqc2-breeze-style is an alternative to qqc2-desktop-style that is "
 "especially geared for mobile platforms like Android and Plasma Mobile."
 msgstr ""
+"qqc2-breeze-style — це альтернатива qqc2-desktop-style, розроблена "
+"спеціально для мобільних платформ, таких як Android та Plasma Mobile."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:27
 msgid ""
@@ -9108,27 +9090,30 @@ msgid ""
 "wrong configuration for desktop and mobile. The CMake code might optionally "
 "also need conditional code, although it can be avoided."
 msgstr ""
+"У сценарії Craft програми потрібен умовний код, щоб стилі для настільних і "
+"мобільних версій не змішувалися; водночас у коді на C++ слід бути особливо "
+"уважним, аби не застосувати невідповідну конфігурацію для того чи іншого "
+"типу пристроїв. У файлах CMake також може знадобитися умовний код, хоча "
+"цього можна й уникнути."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:29
-#, fuzzy
-#| msgid ""
-#| "Bundling the necessary icons for the app to work on Windows is the most "
-#| "complex step, but both KDE's extra-cmake-modules (ECM) and Qt provide "
-#| "means to make this job easier."
 msgid ""
 "Bundling the necessary icons for the app to work is done with the help of "
 "KDE's extra-cmake-modules, Qt resource bundling tools, as well as Kirigami "
 "and Kirigami Addons CMake functions."
 msgstr ""
-"Дописування до пакета необхідних піктограм для роботи програми у Windows є "
-"найскладнішим кроком, але як модулі extra-cmake (ECM) KDE, так і Qt надають "
-"засоби для спрощення цієї роботи."
+"Включення необхідних для роботи програми піктограм здійснюється за допомогою "
+"додаткових модулів CMake від KDE (extra-cmake-modules), інструментів Qt для "
+"об’єднання ресурсів, а також функцій CMake із бібліотек Kirigami та Kirigami "
+"Addons."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:31
 msgid ""
 "The Android manifest declares the metadata and additional files that need to "
 "be bundled with the Android application."
 msgstr ""
+"Маніфест Android оголошує метадані та додаткові файли, які мають бути "
+"включені до складу програми для Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:33
 msgid ""
@@ -9137,12 +9122,18 @@ msgid ""
 "Android build, such as the application version, or in case you want special "
 "build options."
 msgstr ""
+"Файл збирання Gradle потрібен, якщо ви використовуєте інтеграцію з extra-"
+"cmake-modules для перенесення наявних метаданих вашої програми (наприклад, "
+"версії програми) у процес збірки для Android, або якщо вам потрібні особливі "
+"параметри збирання."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:35
 msgid ""
 "The Splash screen XML file is needed in case you want to add a splash screen "
 "with custom icon, background and positioning."
 msgstr ""
+"Файл XML вікна вітання потрібен, якщо ви хочете додати вікно вітання з "
+"нетиповою піктограмою, фоном і розташуванням."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:37
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:25
@@ -9150,10 +9141,8 @@ msgid "Craft blueprint"
 msgstr "План Craft"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:39
-#, fuzzy
-#| msgid "[Setting the Breeze style](#breeze)"
 msgid "Setting the qqc2-breeze-style"
-msgstr "[Встановлення стилю Breeze](#breeze)"
+msgstr "Встановлення qqc2-breeze-style"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:41
 msgid ""
@@ -9202,29 +9191,19 @@ msgid "Shipping icons"
 msgstr "Додавання піктограм"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:97
-#, fuzzy
-#| msgid ""
-#| "The first thing that is needed to make the application use Breeze icons "
-#| "is to include [KIconThemes](https://invent.kde.org/frameworks/"
-#| "kiconthemes) in your project."
 msgid ""
 "The first thing that is needed to make the application use Breeze icons is "
 "to include KIconThemes in your project."
 msgstr ""
 "Перше, що потрібно зробити, щоб програма використовувала піктограми Breeze, "
-"це включити [KIconThemes](https://invent.kde.org/frameworks/kiconthemes) до "
-"вашого проєкту."
+"це включити KIconThemes до вашого проєкту."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:99
-#, fuzzy
-#| msgid ""
-#| "After this, some CMake commands are needed to bundle your application "
-#| "icon with the app."
 msgid ""
 "Some CMake commands are needed to bundle your application icon with the app."
 msgstr ""
-"Після цього може виникнути потреба у додаванні декількох команд CMake для "
-"пакування піктограми вашої програми разом із програмою."
+"Може виникнути потреба у додаванні декількох команд CMake для пакування "
+"піктограми вашої програми разом із програмою."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:101
 msgid ""
@@ -9283,18 +9262,12 @@ msgid "Application icon"
 msgstr "Піктограма програми"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:155
-#, fuzzy
-#| msgid ""
-#| "If your application has an icon, it needs to be added to your project "
-#| "both as a [QML resource](https://doc.qt.io/qt-6/resources.html) and as a "
-#| "part of icon installation."
 msgid ""
 "If your application has an icon, it needs to be added to your project both "
 "as a QML resource and as a part of icon installation."
 msgstr ""
 "Якщо у вашої програми є піктограма, її слід додати до вашого проєкту як "
-"[ресурс QML](https://doc.qt.io/qt-6/resources.html) і як частину "
-"встановлення піктограм."
+"ресурс QML і як частину встановлення піктограм."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:157
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:152
@@ -9338,13 +9311,6 @@ msgstr ""
 "її буде збережено у файловій системі."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:183
-#, fuzzy
-#| msgid ""
-#| "Once the icon is installed in this way, in QML code, it can be called "
-#| "simply with `myapp` or `org.kde.myapp`, as would be called from [QIcon::"
-#| "fromTheme()](doc.qt.io/qt-6/qicon.html#fromTheme). This can be used with "
-#| "any QML control that has an [icon.name](https://doc.qt.io/qt-6/"
-#| "qtquickcontrols-icons.html) property."
 msgid ""
 "Once the icon is installed in this way, in QML code, it can be called simply "
 "with `myapp` or `org.kde.myapp`, as would be called from `QIcon::"
@@ -9352,19 +9318,11 @@ msgid ""
 "property."
 msgstr ""
 "Після встановлення піктограми таким чином у коді QML її можна викликати "
-"просто за допомогою `myapp` або `org.kde.myapp`, як це було б з [QIcon::"
-"fromTheme()](doc.qt.io/qt-6/qicon.html#fromTheme). Цим можна скористатися у "
-"будь-якому елементі керування QML, який має властивість [icon.name](https://"
-"doc.qt.io/qt-6/qtquickcontrols-icons.html)."
+"просто за допомогою `myapp` або `org.kde.myapp`, як це було б з `QIcon::"
+"fromTheme()`. Цим можна скористатися у будь-якому елементі керування QML, "
+"який має властивість `icon.name`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:185
-#, fuzzy
-#| msgid ""
-#| "Windows has no such standard directory, and installing the icon has no "
-#| "effect; it has to be bundled with the application. To do so, the PNG can "
-#| "be sent to its own installation directory using `ecm_add_app_icon()` and "
-#| "a PNG or SVG file can be embedded into the app as a Qt resource file in "
-#| "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgid ""
 "Android has no such standard directory, and installing the icon has no "
 "effect; it has to be bundled with the application. To do so, the PNG can be "
@@ -9372,7 +9330,7 @@ msgid ""
 "file can be embedded into the app as a Qt resource file in "
 "`ecm_add_qml_module()` or `ecm_target_qml_sources()`."
 msgstr ""
-"У Windows немає такого стандартного каталогу, і встановлення піктограми ні "
+"В Android немає такого стандартного каталогу, і встановлення піктограми ні "
 "на що не вплине; піктограму слід включити до програми. Для цього файл PNG "
 "можна записати до власного каталогу встановлення за допомогою "
 "`ecm_add_app_icon()`, а файл PNG або SVG можна вбудувати в програму як файл "
@@ -9391,12 +9349,6 @@ msgstr ""
 "А основну піктограму програми можна додати до пакета як ресурс Qt, ось так:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:200
-#, fuzzy
-#| msgid ""
-#| "This will make the application icon available as a Qt resource under "
-#| "`qrc:/qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any "
-#| "QML control that has an [icon.source](https://doc.qt.io/qt-6/"
-#| "qtquickcontrols-icons.html) property."
 msgid ""
 "This will make the application icon available as a Qt resource under `qrc:/"
 "qt/qml/org/kde/myapp/org.kde.myapp.svg`. This can be used with any QML "
@@ -9404,15 +9356,9 @@ msgid ""
 msgstr ""
 "Це зробить піктограму програми доступною у формі ресурсу Qt у файлі `qrc:/qt/"
 "qml/org/kde/myapp/org.kde.myapp.svg`. Цим можна скористатися з будь-яким "
-"елементом керування QML, який має властивість [icon.source](https://doc.qt."
-"io/qt-6/qtquickcontrols-icons.html)."
+"елементом керування QML, який має властивість `icon.source`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:202
-#, fuzzy
-#| msgid ""
-#| "The `RESOURCES` path depends on the place where the icons are located. "
-#| "Traditionally, an `icons/` folder is created at the root of the project "
-#| "for storing all icons, as they don't really count as source files."
 msgid ""
 "The RESOURCES path depends on the place where the icons are installed. "
 "Traditionally, an `icons/` folder is created at the root of the project for "
@@ -9423,16 +9369,6 @@ msgstr ""
 "проєкту, оскільки система не вважає їх справжніми файлами початкового коду."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:204
-#, fuzzy
-#| msgid ""
-#| "After the icons are installed (for Linux) and bundled (for Windows and "
-#| "Android), you can set it in code. In QML code, for compatibility with "
-#| "both Windows and Android, you should use the bundled icon; in C++ code, "
-#| "notably when setting the window icon, you can use the theme icon by "
-#| "default and the bundled icon as a fallback with [QIcon::fromTheme()]"
-#| "(https://doc.qt.io/qt-6/qicon.html#fromTheme) in the call to "
-#| "[QGuiApplication::setWindowIcon()](https://doc.qt.io/qt-6/qguiapplication."
-#| "html#windowIcon-prop):"
 msgid ""
 "After the icons are installed (for Linux) and bundled (for Windows and "
 "Android), you can set it in code. In QML code, for compatibility with both "
@@ -9445,10 +9381,8 @@ msgstr ""
 "сумісності як з Windows, так і з Android, слід використовувати піктограму, "
 "яка входить до комплекту; у коді C++, зокрема під час налаштування "
 "піктограми вікна, можна використовувати типову піктограму теми, а "
-"піктограму, яка входить до комплекту, як резервний варіант за допомогою "
-"[QIcon::fromTheme()](https://doc.qt.io/qt-6/qicon.html#fromTheme) у виклику "
-"[QGuiApplication::setWindowIcon()](https://doc.qt.io/qt-6/qguiapplication."
-"html#windowIcon-prop):"
+"піктограму, яка входить до комплекту, як резервний варіант для "
+"`QGuiApplication::setWindowIcon()`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:210
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:206
@@ -9456,26 +9390,18 @@ msgid "Kirigami icons"
 msgstr "Піктограми Kirigami"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:212
-#, fuzzy
-#| msgid ""
-#| "While Windows does not have a standard directory where to install icons "
-#| "from an icon theme, it is possible to bundle the necessary Breeze icons "
-#| "together with your Windows application."
 msgid ""
 "While Android does not have a standard directory where to install icons from "
 "an icon theme, it is possible to bundle the necessary Kirigami icons "
 "together with your Android application."
 msgstr ""
-"Хоча у Windows немає стандартного каталогу для встановлення піктограм з теми "
+"Хоча в Android немає стандартного каталогу для встановлення піктограм з теми "
 "піктограм, є можливість скомпонувати необхідні піктограми Breeze із вашою "
-"програмою Windows."
+"програмою Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:214
-#, fuzzy
-#| msgid "link the libraries necessary for the executable to run"
 msgid "Two things are necessary for this to be done:"
-msgstr ""
-"компонування з бібліотеками, які потрібні для запуску виконуваного файла"
+msgstr "Для цього потрібно дві речі:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:216
 msgid "Prepare the project with KIconThemes"
@@ -9498,16 +9424,12 @@ msgstr ""
 "(#kiconthemes)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:222
-#, fuzzy
-#| msgid ""
-#| "To add Breeze icons as a dependency for your project, add this to your "
-#| "Craft blueprint:"
 msgid ""
 "To add breeze-icons as a dependency for your project, add this to your Craft "
 "blueprint:"
 msgstr ""
-"Щоб додати піктограми Breeze як залежність для вашого проєкту, додайте цей "
-"код до вашого плану Craft:"
+"Щоб додати breeze-icons як залежність для вашого проєкту, додайте цей код до "
+"вашого плану Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:230
 msgid ""
@@ -9691,10 +9613,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:338
-#, fuzzy
-#| msgid "Preparing the Class"
 msgid "Preparing an APK"
-msgstr "Приготування класу"
+msgstr "Приготування APK"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:340
 msgid ""
@@ -9708,18 +9628,10 @@ msgid "Building"
 msgstr "Збирання"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:350
-#, fuzzy
-#| msgid ""
-#| "To build your application on Windows, follow [Building KDE software on "
-#| "Windows with Craft: Building your own projects on Windows](/docs/getting-"
-#| "started/building/craft#custom-projects)."
 msgid ""
 "To build your application on Android, follow [Building applications for "
 "Android](/docs/packaging/android/building_applications/)."
 msgstr ""
-"Щоб зібрати вашу програму у Windows, скористайтеся підручником [Збирання "
-"програм KDE у Windows за допомогою Craft: Збирання ваших власних проєктів у "
-"Windows](/docs/getting-started/building/craft#custom-projects)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:352
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:228
@@ -9727,11 +9639,6 @@ msgid "CI builds"
 msgstr "Збирання у CI"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:354
-#, fuzzy
-#| msgid ""
-#| "If the project has been properly configured to build on Windows and is "
-#| "using KDE infrastructure for its code hosting (KDE Invent), it is "
-#| "possible to configure Windows CI/CD jobs."
 msgid ""
 "If the project has been properly configured to build on Windows and is using "
 "KDE infrastructure for its code hosting (KDE Invent), it is possible to "
@@ -9739,7 +9646,7 @@ msgid ""
 msgstr ""
 "Якщо проєкт належним чином налаштовано для збирання у Windows, і у ньому "
 "використано інфраструктуру KDE для розміщення коду (KDE Invent), можна "
-"налаштувати завдання Windows CI/CD."
+"налаштувати завдання Android CI/CD."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:356
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:232
@@ -9756,15 +9663,18 @@ msgstr ""
 "Continuous_Integration_System)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:358
-#, fuzzy
-#| msgid "Troubleshooting"
 msgid ""
 "<!--\n"
 "\n"
 "## Troubleshooting\n"
 "\n"
 "-->\n"
-msgstr "Усування проблем"
+msgstr ""
+"<!--\n"
+"\n"
+"## Troubleshooting\n"
+"\n"
+"-->\n"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
 msgid "Windows Setup"
