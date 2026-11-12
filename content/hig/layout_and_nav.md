@@ -28,13 +28,26 @@ aliases:
 ---
 
 ## Positioning
-Convey importance, workflow, and grouping by placing items strategically.
+Convey importance and workflow by placing items in the order that people read words in their language. For example, top-left first in a language like English, and top-right in a language like Arabic.
 
-People read layouts in the order they read words in their language; users will pay more attention to items near the top-leading position (i.e. top-left in a language like English, and top-right in a language like Arabic), and consider them to be the first items to focus on. Similarly, users will perceive items in the bottom-trailing position as being the final thing to do before moving on.
+Users will pay more attention to the leading item, and consider it to be the first thing to focus on. Similarly, users will perceive the trailing item to be the final thing to do before moving on.
 
 One exception is on a mobile phone, where the most commonly used tools live in a bottom toolbar. This improves acquisition speed by making them thumb-reachable without re-positioning the hand.
 
-Group related items together by reducing the spacing between them, and increasing the spacing between groups. Make sure items that _look_ grouped are in fact logically related.
+
+## Grouping
+Group related items together. Here are some examples of related items that benefit from grouping:
+- Titles and subtitles
+- Actions with similar functionality (cut, copy, and paste)
+- Actions and their logical opposites (back/forward, undo/redo)
+- Status icons sharing a container
+
+Communicate grouping visually by:
+- Reducing the spacing between related items
+- Increasing the spacing between groups
+- Separating groups using separator items or frames, if this doesn’t look visually overwhelming
+
+Make sure items that _look_ grouped are in fact logically related.
 
 
 ## Spacings and sizes
