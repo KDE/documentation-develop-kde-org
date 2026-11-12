@@ -24,7 +24,7 @@ And then keep in mind these implementation details:
 - Use [QtQuick.Controls.Label](https://doc.qt.io/qt-6/qml-qtquick-controls2-label.html) for normal-sized text, and [Kirigami.Heading](https://api.kde.org/qml-org-kde-kirigami-heading.html) (with a `level` suitable for the context) for larger header text. See [more information here](https://develop.kde.org/docs/getting-started/kirigami/style-typography/).
 - Don’t use [QtQuick.Text](https://doc.qt.io/qt-6/qml-qtquick-text.html) directly, as it doesn’t respect the system’s font settings.
 - Manually assign [accelerator keys](https://doc.qt.io/qt-6.2/accelerators.html) only for text in buttons, radio buttons, checkboxes, and switches (in other places, they are auto-generated).
-- Assign text for icons-only buttons anyway, so it can be read by screen readers. Hide the text by setting the [AbstractButton.display](https://doc.qt.io/qt-6/qml-qtquick-controls-abstractbutton.html#display-prop) property to `IconOnly` and then manually add a [Tooltip](https://doc.qt.io/Qt-6/qml-qtquick-controls-tooltip.html) for the benefit of mouse and touch users.
+- Assign text for icons-only buttons anyway, so it can be read by screen readers. Hide the text by setting the [AbstractButton.display](https://doc.qt.io/qt-6/qml-qtquick-controls-abstractbutton.html#display-prop) property to `IconOnly` and then manually add a [Tooltip](https://doc.qt.io/Qt-6/qml-qtquick-controls-tooltip.html) for the benefit of mouse and touch users. Set the tooltip to appear on `visualFocus` as well as hover, with the usual delay, so keyboard users can also access it.
 - For standard actions, use [KStandardActions](https://api.kde.org/kstandardactions.html) so that it gets standard text automatically.
 
 
