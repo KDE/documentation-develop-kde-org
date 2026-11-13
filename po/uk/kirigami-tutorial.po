@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-09 02:12+0000\n"
-"PO-Revision-Date: 2026-11-11 08:24+0200\n"
+"PO-Revision-Date: 2026-11-12 20:22+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -9152,6 +9152,11 @@ msgid ""
 "Linux using qqc2-desktop style. This requires importing the `CraftCore` "
 "module:"
 msgstr ""
+"Щоб почати використовувати qqc2-breeze-style, вам потрібно додати його до "
+"Craft. Оскільки цей стиль застосовується лише для Android, знадобиться "
+"використання умовної конструкції — особливо якщо програму вже налаштовано "
+"для збирання у Windows та/або Linux із використанням стилю qqc2-desktop. Для "
+"цього необхідно імпортувати модуль `CraftCore`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:57
 msgid ""
@@ -9159,6 +9164,9 @@ msgid ""
 "style\" logic needs to be applied to CMake as well, in case either method of "
 "finding qqc2-desktop-style is used:"
 msgstr ""
+"Аналогічну логіку — «якщо не Android, використовувати qqc2-desktop-style, "
+"інакше — qqc2-breeze-style» — слід застосувати також у CMake, на випадок, "
+"якщо використовується будь-який із методів пошуку qqc2-desktop-style:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:66
 msgid "Conditional code is also required in C++."
@@ -9172,11 +9180,16 @@ msgid ""
 "your application is already compatible with the desktop. This can be "
 "achieved like so:"
 msgstr ""
+"В Android програми KDE використовують не `QApplication`, а "
+"`QGuiApplication`. Окрім налаштування стилю `qqc2-breeze-style` виключно для "
+"Android, необхідно також подбати про порядок ініціалізації — особливо з "
+"огляду на високу ймовірність того, що ваша програма вже сумісна з робочими "
+"станціями. Це можна реалізувати таким чином:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:89
 #: content/docs/getting-started/kirigami/platforms-android/index.md:147
 msgid "KirigamiAppDefaults usage"
-msgstr ""
+msgstr "Використання KirigamiAppDefaults"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:91
 msgid ""
@@ -9184,6 +9197,9 @@ msgid ""
 "kirigamiappdefaults.html#apply), the above C++ code is already managed for "
 "you."
 msgstr ""
+"Якщо ви використовуєте [KirigamiAppDefaults::Apply()](https://api.kde.org/"
+"kirigamiappdefaults.html#apply), наведений вище код на C++ вже обробляється "
+"автоматично."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:95
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:98
@@ -9210,6 +9226,9 @@ msgid ""
 "Lastly, an extra CMake command coming from Kirigami can be used to bundle "
 "Kirigami icons into your application (and optionally Kirigami Addons icons)."
 msgstr ""
+"Насамкінець, можна скористатися додатковою командою CMake, яку надає "
+"Kirigami, щоб включити піктограми Kirigami (а за бажанням — і піктограми з "
+"Kirigami Addons) до складу вашої програми."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:103
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:104
@@ -9218,7 +9237,7 @@ msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:105
 msgid "This can be done by:"
-msgstr ""
+msgstr "Зробити це можна так:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:107
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:108
@@ -9255,6 +9274,9 @@ msgid ""
 "kirigamiappdefaults.html#apply), the above KIconThemes initialization in C++ "
 "code is already managed for you."
 msgstr ""
+"Якщо ви використовуєте [KirigamiAppDefaults::Apply()](https://api.kde.org/"
+"kirigamiappdefaults.html#apply), наведений вище код ініціалізації "
+"KIconThemes на C++ вже обробляється автоматично."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:153
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
@@ -9405,15 +9427,15 @@ msgstr "Для цього потрібно дві речі:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:216
 msgid "Prepare the project with KIconThemes"
-msgstr ""
+msgstr "Приготування проєкту з KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:217
 msgid "Include breeze-icons in your Craft blueprint"
-msgstr ""
+msgstr "Додайте breeze-icons до свого плану Craft"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:218
 msgid "kirigami_package_breeze_icons()"
-msgstr ""
+msgstr "kirigami_package_breeze_icons()"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:220
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:212
@@ -9440,12 +9462,22 @@ msgid ""
 "and prepares the icons for bundling. This command needs to come before the "
 "step detailed in [CMake function to package for Android](#build-apk)."
 msgstr ""
+"Через особливості процесу збирання для Android, Craft не може автоматично "
+"включити піктограми до пакета. Тому Kirigami надає функцію CMake — "
+"[kirigami_package_breeze_icons()](https://invent.kde.org/frameworks/"
+"kirigami/-/blob/master/KF6KirigamiMacros.cmake), яка під час збирання копіює "
+"та готує піктограми для їх подальшого включення в пакет. Цю команду слід "
+"викликати перед кроком, описаною у розділі [функцією CMake для пакування під "
+"Android](#build-apk)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:232
 msgid ""
 "The CMake command `kirigami_package_breeze_icons()` does not need to be "
 "wrapped behind a conditional, as it only ever runs when on Android."
 msgstr ""
+"Команду CMake `kirigami_package_breeze_icons()` не потрібно розміщувати "
+"всередині умовної конструкції, оскільки вона виконується лише в середовищі "
+"Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:234
 msgid ""
@@ -9456,10 +9488,16 @@ msgid ""
 "api-staging.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutpage.html) and "
 "similar."
 msgstr ""
+"Крім того, якщо ви використовуєте Kirigami Addons у своїй програмі, ви "
+"можете передати змінну [${KIRIGAMI_ADDONS_ICONS}](https://invent.kde.org/"
+"libraries/kirigami-addons/-/blob/master/KirigamiAddonsMacros.cmake), щоб "
+"також включити необхідні піктограми для таких компонентів, як [FormCard."
+"AboutPage](https://api-staging.kde.org/qml-org-kde-kirigamiaddons-formcard-"
+"aboutpage.html) та їм подібних."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:245
 msgid "Android manifest"
-msgstr ""
+msgstr "Маніфест Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:247
 msgid ""
@@ -9468,6 +9506,10 @@ msgid ""
 "build tools, operating system, and stores. The file *must* be called "
 "`AndroidManifest.xml`."
 msgstr ""
+"[Маніфест Android](https://developer.android.com/guide/topics/manifest/"
+"manifest-intro) — це файл XML, який описує програму для інструментів "
+"збирання для Android, операційної системи та крамниць програм. Цей файл "
+"*обов'язково* має називатися `AndroidManifest.xml`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:249
 msgid ""
@@ -9475,22 +9517,31 @@ msgid ""
 "doc.qt.io/qt-6/android-manifest-file-configuration.html) to call the "
 "necessary tools to build an APK that can be installed on Android."
 msgstr ""
+"Qt використовує маніфест Android і підтримує [додаткові налаштування]"
+"(https://doc.qt.io/qt-6/android-manifest-file-configuration.html) для "
+"виклику необхідних інструментів, які надають змогу зібрати файл APK, який "
+"можна встановити на Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:251
 msgid ""
 "KDE apps keep the manifest stored in an `android/` directory at the root of "
 "the project."
 msgstr ""
+"У програмах KDE файл маніфесту зберігається в каталозі `android/` у "
+"кореневій теці проєкту."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:253
 msgid "An Android manifest might look like this:"
-msgstr ""
+msgstr "Маніфест Android може виглядати десь так:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:283
 msgid ""
 "It is mostly boilerplate and can be copied and modified to an existing "
 "project, but it is worth learning what parts need to be accounted for."
 msgstr ""
+"Здебільшого це типовий шаблонний код, який можна скопіювати та адаптувати "
+"для наявного проєкту, проте варто розібратися, які саме частини слід "
+"врахувати."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:285
 msgid ""
@@ -9499,6 +9550,11 @@ msgid ""
 "DNS notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). "
 "It should match the application ID specified in code."
 msgstr ""
+"У тезі `<manifest>` атрибут `package` відповідає назві, за допомогою якого "
+"Android ідентифікує програму всередині системи. Для нього слід "
+"використовувати [зворотний запис доменного імені](https://en.wikipedia.org/"
+"wiki/Reverse_domain_name_notation). Це значення має збігатися з "
+"ідентифікатором програми, вказаним у коді."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:287
 msgid ""
@@ -9506,6 +9562,9 @@ msgid ""
 "the user-facing name of the application. In the tag `<meta-data>`, `android:"
 "value` should match the target name as specified in CMake."
 msgstr ""
+"У теґах `<application>` та `<activity>` атрибут `android:label` має містити "
+"назву програми, яку бачитиме користувач. У тезі `<meta-data>` значення "
+"`android:value` має збігатися з цільовою назвою, визначеною в CMake."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:289
 msgid ""
@@ -9516,6 +9575,12 @@ msgid ""
 "placeholder icon will be shown in the app menu and on the installation "
 "prompt instead."
 msgstr ""
+"У тезі `<application>` параметр `android:icon=\"@drawable/myapp\"` має "
+"вказувати на піктограму, яка зберігається в теці `android/res/drawable/` "
+"(без суфікса назви файла). У цьому прикладі файлом буде `android/res/"
+"drawable/myapp.png`. Назва теки `res` походить від слова "
+"«resources» (ресурси). Якщо цей параметр не вказати, у меню програм і під "
+"час встановлення буде показано стандартну піктограму-замінник Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:291
 msgid ""
@@ -9525,6 +9590,10 @@ msgid ""
 "while on the background. Typically a Qt/KDE application has only one "
 "activity."
 msgstr ""
+"[Activity](https://developer.android.com/reference/android/app/Activity) "
+"(простір дій) визначає поведінку програми в різних станах. Наприклад, вона "
+"може виконувати певні дії, перебуваючи на передньому плані, та інші дії — у "
+"фоновому режимі. Зазвичай програма Qt/KDE має лише один такий «простір дій»."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:293
 msgid ""
@@ -9540,6 +9609,18 @@ msgid ""
 "menu screen and be able to launch. This should generally be sufficient for "
 "most KDE applications."
 msgstr ""
+"Кожен компонент `Activity` може мати один або кілька [фільтрів намірів "
+"(Intent Filters)](https://developer.android.com/guide/components/intents-"
+"filters). «Намір» (Intent) — це опис того, що може виконувати `Activity`; у "
+"контексті програм KDE це зазвичай *дія* (action), хоча це також може бути "
+"*служба* (service). Наприклад, якщо програма має намір запуститися, вона "
+"повинна повідомити Android, що цей `Activity` є точкою входу до програми "
+"([android.intent.action.MAIN](https://developer.android.com/reference/"
+"android/content/Intent#ACTION_MAIN)), а також що цей намір належить до "
+"категорії [LAUNCHER](https://developer.android.com/reference/android/content/"
+"Intent#CATEGORY_LAUNCHER) — це дозволить програмі з'явитися в меню програм і "
+"бути доступною для запуску. Зазвичай цього достатньо для більшості програм "
+"KDE."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:295
 msgid ""
@@ -9548,6 +9629,10 @@ msgid ""
 "android-manifest-file-configuration.html#qt-specific-meta-data) can be used. "
 "The `android.app.lib_name` metadata is required."
 msgstr ""
+"Теґ `<meta-data>` можна використовувати кілька разів з різною метою; також "
+"можна застосовувати спеціальні [конфігурації, притаманні Qt](https://doc.qt."
+"io/qt-6/android-manifest-file-configuration.html#qt-specific-meta-data). "
+"Наявність метаданих `android.app.lib_name` є обов’язковою."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:297
 msgid ""
@@ -9557,6 +9642,11 @@ msgid ""
 "action related to the activity, while a permission is a request for access "
 "to functionality that is by default not available."
 msgstr ""
+"Теґ `<uses-permission>` є досить простим і дозволяє програмі запитувати "
+"дозвіл на виконання певної дії. Дозвіл (Permission) відрізняється від наміру "
+"(Intent) тим, що намір — це запит до іншого компонента виконати дію, "
+"пов'язану з активністю, тоді як дозвіл — це запит на доступ до "
+"функціональних можливостей, які типово є недоступними."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:299
 msgid ""
@@ -9564,6 +9654,10 @@ msgid ""
 "pixel densities, phones or tablets) the application supports. Because QML "
 "applications are convergent, \"any size\" should be a reasonable default."
 msgstr ""
+"Теґ `<supports-screens>` визначає, підтримку яких форм-фактори (розмірів "
+"екранів і щільності пікселів, телефонів або планшетів) передбачено у "
+"програмі. Оскільки QML-програми є конвергентними, «будь-який розмір» — це "
+"цілком доречне типове значення."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:301
 msgid ""
@@ -9571,6 +9665,10 @@ msgid ""
 "\"@drawable/myapp\"` (used only if your application already has an icon) and "
 "`<uses-permissions>` (which should only be added when actually needed)."
 msgstr ""
+"Єдині частини у наведеному вище прикладі, які не є обов'язковими — це "
+"`android:icon=\"@drawable/myapp\"` (використовується, лише якщо ваша "
+"програма уже має піктограму) та `<uses-permissions>` (яку слід додавати, "
+"лише коли в ній справді є потреба)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:303
 msgid ""
@@ -9582,10 +9680,17 @@ msgid ""
 "\n"
 "-->\n"
 msgstr ""
+"<!--\n"
+"\n"
+"## Gradle build file {#gradle-build}\n"
+"\n"
+"TODO\n"
+"\n"
+"-->\n"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:311
 msgid "Splash screen"
-msgstr ""
+msgstr "Вікно вітання"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:313
 msgid ""
@@ -9594,16 +9699,22 @@ msgid ""
 "app to initialize. When no splash screen is specified, the application will "
 "be shown as soon as it is opened, even if not ready."
 msgstr ""
+"Екран вітання — це необов'язкове вікно, яке містить статичне зображення або "
+"анімацію; воно з'являється під час запуску програми, надаючи їй кілька "
+"секунд на ініціалізацію. Якщо вікно вітання не передбачено, програму буде "
+"показано одразу після відкриття — навіть якщо вона ще не готова до роботи."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:315
 msgid ""
 "To add it to your application, you will need to specify it in the "
 "AndroidManifest.xml metadata:"
 msgstr ""
+"Щоб додати це до своєї програми, вам потрібно вказати таке у метаданих файла "
+"AndroidManifest.xml:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:321
 msgid "In turn, an `android/res/drawable/splash.xml` file must exist:"
-msgstr ""
+msgstr "Своєю чергою, має існувати файл `android/res/drawable/splash.xml`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:336
 msgid ""
@@ -9611,6 +9722,9 @@ msgid ""
 "application icon in an empty background, and so an application icon residing "
 "in `android/res/drawable/` is required."
 msgstr ""
+"Цей простий приклад, який часто використовується в програмах KDE, розміщує "
+"піктограму програми у центрі на порожньому тлі; для цього потрібна "
+"піктограма програми, яка зберігається у теці `android/res/drawable/`."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:338
 msgid "Preparing an APK"
@@ -9621,6 +9735,9 @@ msgid ""
 "The last step needed to actually allow building an APK for Android is a "
 "simple CMake function that uses the files in the `android/` directory:"
 msgstr ""
+"Останній крок, необхідний для того, щоб фактично уможливити збирання APK для "
+"Android, — це проста функція CMake, яка використовує файли з каталогу "
+"`android/`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:348
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:224
