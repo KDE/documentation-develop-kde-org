@@ -6,15 +6,15 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-09 02:12+0000\n"
-"PO-Revision-Date: 2026-11-13 16:49+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2026-11-14 17:46+0100\n"
+"Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -9299,7 +9299,7 @@ msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:105
 msgid "This can be done by:"
-msgstr ""
+msgstr "Dit kan gedaan worden door:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:107
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:108
@@ -9338,6 +9338,9 @@ msgid ""
 "kirigamiappdefaults.html#apply), the above KIconThemes initialization in C++ "
 "code is already managed for you."
 msgstr ""
+"Als je [KirigamiAppDefaults::Apply()](https://api.kde.org/"
+"kirigamiappdefaults.html#apply) gebruikt, wordt de bovenstaande "
+"initialisatie van KIconThemes in de C++-code al voor je afgehandeld."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:153
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:148
@@ -9491,15 +9494,15 @@ msgstr "Om dit te kunnen doen, zijn twee dingen nodig:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:216
 msgid "Prepare the project with KIconThemes"
-msgstr ""
+msgstr "Bereid het project voor met KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:217
 msgid "Include breeze-icons in your Craft blueprint"
-msgstr ""
+msgstr "Voeg breeze-pictogrammen toe aan uw Craft-blueprint"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:218
 msgid "kirigami_package_breeze_icons()"
-msgstr ""
+msgstr "kirigami_package_breeze_icons()"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:220
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:212
@@ -9526,12 +9529,22 @@ msgid ""
 "and prepares the icons for bundling. This command needs to come before the "
 "step detailed in [CMake function to package for Android](#build-apk)."
 msgstr ""
+"Vanwege de wijze waarop de Android-build tot stand komt, is het voor Craft "
+"niet mogelijk om het bundelen van pictogrammen automatisch uit te voeren. "
+"Kirigami biedt daarom een ​​CMake-functie, [kirigami_package_breeze_icons()]"
+"(https://invent.kde.org/frameworks/kirigami/-/blob/master/KF6KirigamiMacros."
+"cmake), die tijdens het bouwproces de pictogrammen kloont en voorbereidt "
+"voor bundeling. Dit commando moet worden uitgevoerd vóór de stap die wordt "
+"beschreven in [CMake-functie voor het verpakken voor Android](#build-apk)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:232
 msgid ""
 "The CMake command `kirigami_package_breeze_icons()` does not need to be "
 "wrapped behind a conditional, as it only ever runs when on Android."
 msgstr ""
+"Het CMake-commando `kirigami_package_breeze_icons()` hoeft niet in een "
+"voorwaardelijke constructie te worden geplaatst, aangezien het uitsluitend "
+"wordt uitgevoerd wanneer het op Android wordt gebruikt."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:234
 msgid ""
@@ -9542,6 +9555,12 @@ msgid ""
 "api-staging.kde.org/qml-org-kde-kirigamiaddons-formcard-aboutpage.html) and "
 "similar."
 msgstr ""
+"Als u bovendien Kirigami Addons in uw toepassing gebruikt, kunt u de "
+"variabele [${KIRIGAMI_ADDONS_ICONS}](https://invent.kde.org/libraries/"
+"kirigami-addons/-/blob/master/KirigamiAddonsMacros.cmake) doorgeven om ook "
+"de benodigde pictogrammen mee te leveren voor componenten zoals [FormCard."
+"AboutPage](https://api-staging.kde.org/qml-org-kde-kirigamiaddons-formcard-"
+"aboutpage.html) en soortgelijke onderdelen."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:245
 msgid "Android manifest"
@@ -9554,6 +9573,10 @@ msgid ""
 "build tools, operating system, and stores. The file *must* be called "
 "`AndroidManifest.xml`."
 msgstr ""
+"Een [Android-manifest](https://developer.android.com/guide/topics/manifest/"
+"manifest-intro) is een XML-bestand dat de applicatie beschrijft voor de "
+"Android-bouwhulpmiddelen, het besturingssysteem en de app-winkels. Het "
+"bestand *moet* `AndroidManifest.xml` heten."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:249
 msgid ""
@@ -9561,6 +9584,10 @@ msgid ""
 "doc.qt.io/qt-6/android-manifest-file-configuration.html) to call the "
 "necessary tools to build an APK that can be installed on Android."
 msgstr ""
+"Qt maakt gebruik van het Android-manifest en ondersteunt [aanvullende "
+"configuratie](https://doc.qt.io/qt-6/android-manifest-file-configuration."
+"html) om de benodigde hulpmiddelen aan te roepen voor het bouwen van een APK "
+"die op Android kan worden geïnstalleerd."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:251
 msgid ""
@@ -9579,6 +9606,9 @@ msgid ""
 "It is mostly boilerplate and can be copied and modified to an existing "
 "project, but it is worth learning what parts need to be accounted for."
 msgstr ""
+"Het is grotendeels standaardtekst die kan worden gekopieerd en aangepast "
+"voor een bestaand project, maar het is de moeite waard om te weten met welke "
+"onderdelen rekening moet worden gehouden."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:285
 msgid ""
@@ -9587,6 +9617,11 @@ msgid ""
 "DNS notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). "
 "It should match the application ID specified in code."
 msgstr ""
+"In de tag `<manifest>` komt `package` overeen met de naam waarmee de "
+"toepassing intern door Android wordt geïdentificeerd. Hiervoor moet de "
+"[reverse DNS-notatie](https://en.wikipedia.org/wiki/"
+"Reverse_domain_name_notation) worden gebruikt. Deze moet overeenkomen met de "
+"toepassing-ID die in de code is gespecificeerd."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:287
 msgid ""
@@ -9594,6 +9629,10 @@ msgid ""
 "the user-facing name of the application. In the tag `<meta-data>`, `android:"
 "value` should match the target name as specified in CMake."
 msgstr ""
+"In de tags `<application>` en `<activity>` moet `android:label` de naam van "
+"de toepassing zijn zoals die aan de gebruiker wordt getoond. In de tag "
+"`<meta-data>` moet `android:value` overeenkomen met de doelnaam (target "
+"name) zoals gespecificeerd in CMake."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:289
 msgid ""
@@ -9604,6 +9643,13 @@ msgid ""
 "placeholder icon will be shown in the app menu and on the installation "
 "prompt instead."
 msgstr ""
+"In de tag `<application>` moet `android:icon=\"@drawable/myapp\"` verwijzen "
+"naar een pictogram dat is opgeslagen in `android/res/drawable/`, zonder "
+"bestandsextensie. In dit voorbeeld zou het bestand `android/res/drawable/"
+"myapp.png` zijn. De map `res` staat voor \"resources\" (bronbestanden). Als "
+"dit niet wordt opgegeven, wordt in plaats daarvan het standaard Android-"
+"platshouderpictogram getoond in het toepassingsmenu en bij de "
+"installatiemelding."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:291
 msgid ""
@@ -9613,6 +9659,11 @@ msgid ""
 "while on the background. Typically a Qt/KDE application has only one "
 "activity."
 msgstr ""
+"Een [Activity](https://developer.android.com/reference/android/app/Activity) "
+"staat voor wat de applicatie doet in verschillende toestanden. Zo kan ze "
+"bepaalde acties uitvoeren wanneer ze zich op de voorgrond bevindt, en andere "
+"acties wanneer ze op de achtergrond draait. Doorgaans heeft een Qt/KDE-"
+"toepassing slechts één activity."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:293
 msgid ""
@@ -9628,6 +9679,18 @@ msgid ""
 "menu screen and be able to launch. This should generally be sufficient for "
 "most KDE applications."
 msgstr ""
+"Elke Activity kan een of meer [Intent Filters](https://developer.android.com/"
+"guide/components/intents-filters) bevatten. Een 'Intent' staat voor een "
+"functionaliteit die de activity kan uitvoeren; in het geval van een KDE-"
+"toepassing is dit doorgaans een *actie* (action), maar het kan ook een "
+"*dienst* (service) zijn. Als een toepassing bijvoorbeeld wil opstarten, moet "
+"deze aan Android kenbaar maken dat de betreffende Activity het startpunt van "
+"de app is ([android.intent.action.MAIN](https://developer.android.com/"
+"reference/android/content/Intent#ACTION_MAIN)). Daarnaast moet de intent van "
+"het type [LAUNCHER](https://developer.android.com/reference/android/content/"
+"Intent#CATEGORY_LAUNCHER) zijn, zodat de toepassing in het menu verschijnt "
+"en kan worden opgestart. Voor de meeste KDE-applicaties is dit doorgaans "
+"voldoende."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:295
 msgid ""
@@ -9636,6 +9699,11 @@ msgid ""
 "android-manifest-file-configuration.html#qt-specific-meta-data) can be used. "
 "The `android.app.lib_name` metadata is required."
 msgstr ""
+"De tag `<meta-data>` kan meerdere keren worden herhaald en voor "
+"uiteenlopende doeleinden worden gebruikt; daarnaast kunnen er specifieke [Qt-"
+"gerelateerde configuraties](https://doc.qt.io/qt-6/android-manifest-file-"
+"configuration.html#qt-specific-meta-data) worden toegepast. De metagegevens "
+"`android.app.lib_name` is verplicht."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:297
 msgid ""
@@ -9645,6 +9713,12 @@ msgid ""
 "action related to the activity, while a permission is a request for access "
 "to functionality that is by default not available."
 msgstr ""
+"De tag `<uses-permission>` is eenvoudig en stelt de toepassing in staat om "
+"toestemming te vragen voor het uitvoeren van een specifieke actie. Een "
+"'permission' (toestemming) verschilt van een 'intent' doordat een intent een "
+"ander onderdeel verzoekt om een ​​ actie uit te voeren die verband houdt met "
+"de activiteit, terwijl een permission een verzoek is voor toegang tot "
+"functionaliteit die standaard niet beschikbaar is."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:299
 msgid ""
@@ -9652,6 +9726,10 @@ msgid ""
 "pixel densities, phones or tablets) the application supports. Because QML "
 "applications are convergent, \"any size\" should be a reasonable default."
 msgstr ""
+"De tag `<supports-screens>` geeft aan welke vormfactoren (schermformaten en "
+"pixeldichtheden, telefoons of tablets) de applicatie ondersteunt. Omdat QML-"
+"applicaties convergent zijn, is \"elk formaat\" een redelijke "
+"standaardinstelling."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:301
 msgid ""
@@ -9659,6 +9737,10 @@ msgid ""
 "\"@drawable/myapp\"` (used only if your application already has an icon) and "
 "`<uses-permissions>` (which should only be added when actually needed)."
 msgstr ""
+"De enige onderdelen in het bovenstaande voorbeeld die niet verplicht zijn, "
+"zijn `android:icon=\"@drawable/myapp\"` (alleen te gebruiken als uw "
+"toepassing al over een pictogram beschikt) en `<uses-permissions>` (wat "
+"alleen moet worden toegevoegd wanneer dit daadwerkelijk nodig is)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:303
 msgid ""
@@ -9689,16 +9771,25 @@ msgid ""
 "app to initialize. When no splash screen is specified, the application will "
 "be shown as soon as it is opened, even if not ready."
 msgstr ""
+"Een opstartscherm is een optioneel scherm met een statische afbeelding of "
+"animatie dat verschijnt bij het opstarten van een toepassing, zodat de "
+"toepassing enkele seconden de tijd krijgt om te initialiseren. Als er geen "
+"opstartscherm is ingesteld, wordt de toepassing direct getoond zodra deze "
+"wordt geopend, ook als deze nog niet klaar is voor gebruik."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:315
 msgid ""
 "To add it to your application, you will need to specify it in the "
 "AndroidManifest.xml metadata:"
 msgstr ""
+"Om het aan uw toepassing toe te voegen, moet u het opgeven in de "
+"metagegevens van AndroidManifest.xml:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:321
 msgid "In turn, an `android/res/drawable/splash.xml` file must exist:"
 msgstr ""
+"Daarnaast moet er een bestand genaamd `android/res/drawable/splash.xml` "
+"aanwezig zijn:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:336
 msgid ""
@@ -9706,6 +9797,10 @@ msgid ""
 "application icon in an empty background, and so an application icon residing "
 "in `android/res/drawable/` is required."
 msgstr ""
+"Dit eenvoudige voorbeeld, dat veel wordt gebruikt in KDE-toepassingen, "
+"plaatst het toepassingspictogram in het midden van een lege achtergrond; "
+"hiervoor is een toepassingspictogram vereist dat zich in `android/res/"
+"drawable/` bevindt."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:338
 msgid "Preparing an APK"
@@ -9716,6 +9811,9 @@ msgid ""
 "The last step needed to actually allow building an APK for Android is a "
 "simple CMake function that uses the files in the `android/` directory:"
 msgstr ""
+"De laatste stap die nodig is om daadwerkelijk een APK voor Android te kunnen "
+"bouwen, is een eenvoudige CMake-functie die gebruikmaakt van de bestanden in "
+"de map `android/`:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:348
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:224
