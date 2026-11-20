@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: documentation-develop-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-09 02:12+0000\n"
-"PO-Revision-Date: 2026-10-28 18:16+0100\n"
+"PO-Revision-Date: 2026-11-16 18:40+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: content/docs/getting-started/kirigami/_index.md:0
 msgid "Getting started with Kirigami"
@@ -9119,16 +9119,12 @@ msgstr ""
 "separate, rendendo le cose molto più gestibili."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:0
-#, fuzzy
-#| msgid "Windows Setup"
 msgid "Android Setup"
-msgstr "Installazione di Windows"
+msgstr "Installazione Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:0
-#, fuzzy
-#| msgid "Preparing your C++ application for Windows"
 msgid "Preparing your C++ application for Android"
-msgstr "Preparazione dell'applicazione C++ per Windows"
+msgstr "Preparazione dell'applicazione C++ per Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:11
 #, fuzzy
@@ -9145,10 +9141,8 @@ msgstr ""
 "molte modifiche per funzionare correttamente su Windows."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:13
-#, fuzzy
-#| msgid "Three things are needed:"
 msgid "A few things are needed:"
-msgstr "Sono necessarie tre cose:"
+msgstr "Sono necessarie alcune cose:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:15
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:15
@@ -9168,7 +9162,7 @@ msgstr "[Icone incluse nell'applicazione](#icons)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:18
 msgid "[An Android manifest](#android-manifest)"
-msgstr ""
+msgstr "[Un manifesto Android](#android-manifest)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:19
 #, fuzzy
@@ -9178,11 +9172,12 @@ msgstr "[Uso di kde-builder](#kde-builder)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:20
 msgid "[Optionally a splash screen XML file](#splash)"
-msgstr ""
+msgstr "[Facoltativamente, un file XML della schermata iniziale](#splash)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:21
 msgid "[CMake function to package for Android](#build-apk)"
 msgstr ""
+"[La funzione CMake per la creazione di pacchetti per Android](#build-apk)"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:23
 #, fuzzy
@@ -9274,7 +9269,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:66
 msgid "Conditional code is also required in C++."
-msgstr ""
+msgstr "Anche in C++ è necessario utilizzare il codice condizionale."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:68
 msgid ""
@@ -9288,7 +9283,7 @@ msgstr ""
 #: content/docs/getting-started/kirigami/platforms-android/index.md:89
 #: content/docs/getting-started/kirigami/platforms-android/index.md:147
 msgid "KirigamiAppDefaults usage"
-msgstr ""
+msgstr "Uso di KirigamiAppDefaults"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:91
 msgid ""
@@ -9340,7 +9335,7 @@ msgstr "KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:105
 msgid "This can be done by:"
-msgstr ""
+msgstr "Questo può essere fatto da:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:107
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:108
@@ -9508,20 +9503,15 @@ msgstr ""
 "io/qt-6/qtquickcontrols-icons.html)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:202
-#, fuzzy
-#| msgid ""
-#| "The `RESOURCES` path depends on the place where the icons are located. "
-#| "Traditionally, an `icons/` folder is created at the root of the project "
-#| "for storing all icons, as they don't really count as source files."
 msgid ""
 "The RESOURCES path depends on the place where the icons are installed. "
 "Traditionally, an `icons/` folder is created at the root of the project for "
 "storing all icons, as they don't really count as source files."
 msgstr ""
-"Il percorso \"RISORSE\" dipende dal luogo in cui si trovano le icone. "
-"Tradizionalmente, viene creata una cartella `icons/` alla radice del "
-"progetto per memorizzare tutte le icone, poiché non contano realmente come "
-"file sorgente."
+"Il percorso RESOURCES dipende dal luogo in sono installate le icone. "
+"Tradizionalmente viene creata una cartella `icons/` alla radice del progetto "
+"per memorizzare tutte le icone, poiché non contano realmente come file "
+"sorgente."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:204
 #, fuzzy
@@ -9557,19 +9547,14 @@ msgid "Kirigami icons"
 msgstr "Icone di Kirigami"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:212
-#, fuzzy
-#| msgid ""
-#| "While Windows does not have a standard directory where to install icons "
-#| "from an icon theme, it is possible to bundle the necessary Breeze icons "
-#| "together with your Windows application."
 msgid ""
 "While Android does not have a standard directory where to install icons from "
 "an icon theme, it is possible to bundle the necessary Kirigami icons "
 "together with your Android application."
 msgstr ""
-"Sebbene Windows non disponga di una directory standard in cui installare le "
-"icone da un tema di icone, è possibile raggruppare le icone Brezza "
-"necessarie insieme all'applicazione Windows."
+"Sebbene Android non disponga di una cartella standard in cui installare le "
+"icone da un tema, è possibile raggruppare le icone di Kirigami necessarie "
+"insieme all'applicazione Android."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:214
 #, fuzzy
@@ -9579,7 +9564,7 @@ msgstr "collegare le librerie necessarie per l'esecuzione dell'eseguibile"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:216
 msgid "Prepare the project with KIconThemes"
-msgstr ""
+msgstr "Prepara il progetto con KIconThemes"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:217
 msgid "Include breeze-icons in your Craft blueprint"
@@ -9587,7 +9572,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:218
 msgid "kirigami_package_breeze_icons()"
-msgstr ""
+msgstr "kirigami_package_breeze_icons()"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:220
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:212
@@ -9598,16 +9583,12 @@ msgstr ""
 "(#kiconthemes)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:222
-#, fuzzy
-#| msgid ""
-#| "To add Breeze icons as a dependency for your project, add this to your "
-#| "Craft blueprint:"
 msgid ""
 "To add breeze-icons as a dependency for your project, add this to your Craft "
 "blueprint:"
 msgstr ""
-"Per aggiungere le icone Brezza come dipendenza per il tuo progetto, aggiungi "
-"questo al tuo progetto Craft:"
+"Per aggiungere breeze-icons come dipendenza per il tuo progetto, aggiungi al "
+"tuo progetto Craft:"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:230
 msgid ""
@@ -9637,7 +9618,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:245
 msgid "Android manifest"
-msgstr ""
+msgstr "Manifesto Android"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:247
 msgid ""
@@ -9763,7 +9744,7 @@ msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:311
 msgid "Splash screen"
-msgstr ""
+msgstr "Schermata iniziale"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:313
 msgid ""
@@ -9791,10 +9772,8 @@ msgid ""
 msgstr ""
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:338
-#, fuzzy
-#| msgid "Preparing the Class"
 msgid "Preparing an APK"
-msgstr "Preparazione della classe"
+msgstr "Preparazione di un APK"
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:340
 msgid ""
@@ -9855,15 +9834,18 @@ msgstr ""
 "community.kde.org/Infrastructure/Continuous_Integration_System)."
 
 #: content/docs/getting-started/kirigami/platforms-android/index.md:358
-#, fuzzy
-#| msgid "Troubleshooting"
 msgid ""
 "<!--\n"
 "\n"
 "## Troubleshooting\n"
 "\n"
 "-->\n"
-msgstr "Risoluzione dei problemi"
+msgstr ""
+"<!--\n"
+"\n"
+"## Risoluzione dei problemi\n"
+"\n"
+"-->\n"
 
 #: content/docs/getting-started/kirigami/platforms-windows/index.md:0
 msgid "Windows Setup"
